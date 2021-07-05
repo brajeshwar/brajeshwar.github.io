@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+  {% if page.type == "home" %}
+      {{ page.title }}
+    {% else %}
+      {{ page.title }} - {{ site.title }}
+    {% endif %}
+</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oinam/simple.css/simple.min.css">
+<style type="text/css">
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .page-blog ul,
+  .page-blog ol,
+  .page-blog li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1 class="title"><a href="{{site.baseurl}}">{{site.title}}</a></h1>
+</header>
+
+{{ content }}
+
+<footer>
+  <p>
+    <small>brajeshwar.com since 2001.</small>  
+  </p>
+</footer>
+
+</body>
+</html>
