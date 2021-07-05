@@ -1,0 +1,29 @@
+title: Brajeshwar
+email: brajeshwar@oinam.com
+description: >- # this means to ignore newlines until "baseurl:"
+  I design experiences, opportunities, careers, teams, products, and organizations.
+baseurl: ""
+url: ""
+
+twitter_username: brajeshwar
+github_username:  brajeshwar
+
+theme: null
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+home_post_limit: 7
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - README.*
