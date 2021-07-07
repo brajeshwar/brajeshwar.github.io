@@ -14,39 +14,14 @@
     {% endif %}
 </title>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oinam/simple.css/simple.min.css">
-<style type="text/css">
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  .page-blog ul,
-  .page-blog ol,
-  .page-blog li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-</style>
+{% include styles.html %}
 
 </head>
 <body>
 
-<header>
-  <h1 class="title"><a href="{{ site.baseurl }}/">{{site.title}}</a></h1>
-</header>
-
+{% include header.html %}
 {{ content }}
-
-<footer>
-  <p>
-    <a href="/privacy/">Privacy</a>
-    •
-    <a href="mailto:brajeshwar@oinam.com">Contact</a>
-    •
-    <small>All Rights Reserved. 2001-<script>document.write(new Date().getFullYear())</script>.</small>  
-  </p>
-</footer>
+{% include footer.html %}
 
 </body>
 </html>
