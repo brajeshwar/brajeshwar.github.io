@@ -46,32 +46,32 @@
   /* Default (light) theme */
   --bg: var(--color-nord6);
   --accent-bg: var(--color-nord5);
-  --text: #212121;
-  --text-light: #585858;
+  --text: var(--color-nord1);
+  --text-light: var(--color-nord3);
   --border: var(--color-nord4);
-  --accent: #0e78be;
-  --accent-light: #90caf9;
-  --accent-dark: #0d47a1;
-  --code: #d81b60;
-  --preformatted: #444;
-  --marked: #ffdd33;
-  --disabled: #efefef;
+  --accent: var(--color-nord10);
+  --accent-light: var(--color-nord8);
+  --accent-dark: var(--color-nord3);
+  --code: var(--color-nord10);
+  --preformatted: var(--color-nord10);
+  --marked: var(--color-nord13);
+  --disabled: var(--color-nord4);
 }
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #212121;
-    --accent-bg: #2b2b2b;
-    --text: #dcdcdc;
-    --text-light: #ababab;
-    --border: #666;
-    --accent: #ffb300;
-    --accent-light: #ffecb3;
-    --accent-dark: #0d47a1;
-    --code: #f06292;
-    --preformatted: #ccc;
-    --disabled: #111;
+    --bg: var(--color-nord3);
+    --accent-bg: var(--color-nord1);
+    --text: var(--color-nord4);
+    --text-light: var(--color-nord6);
+    --border: var(--color-nord0);
+    --accent: var(--color-nord12);
+    --accent-light: var(--color-nord13);
+    --accent-dark: var(--color-nord11);
+    --code: var(--color-nord12);
+    --preformatted: var(--color-nord8);
+    --disabled: var(--color-nord4);
   }
 
   img, video {
@@ -522,6 +522,18 @@ pre code {
   background: none;
   margin: 0;
   padding: 0;
+}
+
+.title {
+  font-style: italic;
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.title a:hover, .title a:focus {
+  text-decoration: underline;
 }
 
 </style>
