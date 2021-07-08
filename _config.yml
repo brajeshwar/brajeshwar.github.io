@@ -11,6 +11,8 @@ github_username:  brajeshwar
 theme: null
 markdown: kramdown
 highlighter: rouge
+
+permalink: pretty
 permalink: /:title/
 
 home_post_limit: 7
@@ -18,6 +20,27 @@ home_post_limit: 7
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  # - jekyll-titles-from-headings
+  # - jekyll-optional-front-matter
+
+# # jekyll-titles-from-headings, https://github.com/benbalter/jekyll-titles-from-headings/
+# titles_from_headings:
+#   enabled:     false
+#   strip_title: false
+#   collections: false
+
+# # optional-front-matter, https://github.com/benbalter/jekyll-optional-front-matter
+# optional_front_matter:
+#   remove_originals: true
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/:year/:title/"
 
 # Exclude from processing.
 exclude:
