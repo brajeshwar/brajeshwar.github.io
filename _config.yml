@@ -1,9 +1,9 @@
 title: Brajeshwar
 email: brajeshwar@oinam.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until 'baseurl:'
   I design experiences, opportunities, careers, teams, products, and organizations.
-baseurl: ""
-url: "https://brajeshwar.com"
+baseurl: ''
+url: 'https://brajeshwar.com'
 
 twitter_username: brajeshwar
 github_username:  brajeshwar
@@ -14,8 +14,6 @@ highlighter: rouge
 
 permalink: pretty
 permalink: /:title/
-
-home_post_limit: 7
 
 plugins:
   - jekyll-feed
@@ -33,14 +31,24 @@ plugins:
 # optional_front_matter:
 #   remove_originals: true
 
+# Pages Path
 defaults:
-  -
-    scope:
-      path: "_posts"
-      type: "posts"
+  - scope:
+      path: '_pages'
     values:
-      layout: "post"
-      permalink: "/:year/:title/"
+      permalink: '/:title/'
+
+include:
+  - _pages
+
+# Posts
+defaults:
+  - scope:
+      path: '_posts'
+      type: 'posts'
+    values:
+      layout: 'post'
+      permalink: '/:year/:title/'
 
 # Exclude from processing.
 exclude:

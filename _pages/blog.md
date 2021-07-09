@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: page
 title: Blog
+permalink: /blog/
 ---
 
-<main id="page-blog" class="page-blog">
+<main id="page-blog" class="page-blog list-reset">
   {% for post in site.posts  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}

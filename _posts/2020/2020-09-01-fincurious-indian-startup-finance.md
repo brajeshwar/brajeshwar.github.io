@@ -1,8 +1,6 @@
 ---
 layout: post
 title: Fincurious - Indian Startup Finance
-date: 2020-09-01 01:01:45.000000000 +05:30
-permalink: "/2020/fincurious-indian-startup-finance/"
 ---
 
 This is a short book and can easily be kept aside as a quick reference guide if you are running a Startup or starting one. This book does not teach you to be a financial expert but will help you keep you informed so you have an idea.
