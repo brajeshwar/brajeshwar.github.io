@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA) and spent all my childhood-school-life, teenage-college-life there.
