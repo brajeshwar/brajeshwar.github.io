@@ -6,4 +6,4 @@
 
 ## Changelog
 
-Jul 7, 2021: Moved from WordPress to Jekyll.
+Jul 11, 2021: Moved from WordPress to Jekyll.

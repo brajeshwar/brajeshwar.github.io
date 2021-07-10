@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Brajeshwar Oinam
 type: home
 ---

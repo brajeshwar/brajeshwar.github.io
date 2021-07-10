@@ -14,7 +14,15 @@
     {%- endif -%}
 </title>
 
-{% include styles.html %}
+<style type="text/css">
+{%- capture include_to_scssify -%}
+  {%- include css/settings.css -%}
+  {%- include css/base.css -%}
+  {%- include css/main.css -%}
+  {%- include css/mode-light-dark.css -%}
+{%- endcapture -%}
+{{- include_to_scssify | scssify | strip_newlines  -}}
+</style>
 
 </head>
 <body>
@@ -22,6 +30,11 @@
 {% include header.html %}
 {{ content }}
 {% include footer.html %}
+{% include light-dark.html %}
+
+<script type="text/javascript">
+  {% include js/mode-light-dark.js %}
+</script>
 
 </body>
 </html>

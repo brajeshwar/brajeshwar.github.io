@@ -1,0 +1,105 @@
+:root {
+  --sans-font: system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --serif-font: Georgia, 'Times New Roman', serif;
+  --mono-font: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
+  --cursive-font: cursive;
+
+  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+  /*--base-fontsize: 1.15rem; /*deault*/
+  --base-fontsize: 1.2rem; /*modified*/
+
+  /* Major third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.25;
+
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
+
+  /* Colors (Nord, https://www.nordtheme.com) */
+  /* Polar Night */
+  --color-nord0: #2e3440;
+  --color-nord1: #3b4252;
+  --color-nord2: #434c5e;
+  --color-nord3: #434c5e;
+
+  /* Snow Storm */
+  --color-nord4: #d8dee9;
+  --color-nord5: #e5e9f0;
+  --color-nord6: #eceff4;
+
+  /* Frost */
+  --color-nord7: #8fbcbb;
+  --color-nord8: #88c0d0;
+  --color-nord9: #81a1c1;
+  --color-nord10: #5e81ac;
+
+  /* Aurora */
+  --color-nord11: #bf616a;
+  --color-nord12: #d08770;
+  --color-nord13: #ebcb8b;
+  --color-nord14: #a3be8c;
+  --color-nord15: #b48ead;
+
+  /* Default (light) theme */
+  --bg: var(--color-nord6);
+  --accent-bg: var(--color-nord5);
+  --text: var(--color-nord1);
+  --text-light: var(--color-nord3);
+  --border: var(--color-nord4);
+  --accent: var(--color-nord10);
+  --accent-light: var(--color-nord8);
+  --accent-dark: var(--color-nord3);
+  --code: var(--color-nord10);
+  --preformatted: var(--color-nord10);
+  --marked: var(--color-nord13);
+  --disabled: var(--color-nord4);
+}
+
+[data-theme="dark"] {
+  --bg: var(--color-nord3);
+  --accent-bg: var(--color-nord1);
+  --text: var(--color-nord4);
+  --text-light: var(--color-nord6);
+  --border: var(--color-nord0);
+  --accent: var(--color-nord12);
+  --accent-light: var(--color-nord13);
+  --accent-dark: var(--color-nord11);
+  --code: var(--color-nord12);
+  --preformatted: var(--color-nord8);
+  --disabled: var(--color-nord4);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--color-nord3);
+    --accent-bg: var(--color-nord1);
+    --text: var(--color-nord4);
+    --text-light: var(--color-nord6);
+    --border: var(--color-nord0);
+    --accent: var(--color-nord12);
+    --accent-light: var(--color-nord13);
+    --accent-dark: var(--color-nord11);
+    --code: var(--color-nord12);
+    --preformatted: var(--color-nord8);
+    --disabled: var(--color-nord4);
+  }
+
+  [data-theme="light"] {
+    --bg: var(--color-nord6);
+    --accent-bg: var(--color-nord5);
+    --text: var(--color-nord1);
+    --text-light: var(--color-nord3);
+    --border: var(--color-nord4);
+    --accent: var(--color-nord10);
+    --accent-light: var(--color-nord8);
+    --accent-dark: var(--color-nord3);
+    --code: var(--color-nord10);
+    --preformatted: var(--color-nord10);
+    --marked: var(--color-nord13);
+    --disabled: var(--color-nord4);
+  }
+
+  img, video {
+    opacity: .6;
+  }
+}
