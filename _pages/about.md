@@ -24,7 +24,7 @@ By 2005, I decided it was time to take the plunge and started our first company 
 [STARZ](http://www.starz.com/),
 [Disney](http://disney.com/),
 [Obeo](http://obeo.com/),
-[Ultrashock])(http://www.ultrashock.com/),
+[Ultrashock](http://www.ultrashock.com/),
 [Edition Interactive](http://www.editioninteractive.co.uk/),
 [Cambridge University Entrepreneurs](http://www.cue.org.uk/),
 [Tata Consultancy Services](https://www.tcs.com).
