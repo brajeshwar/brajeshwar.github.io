@@ -372,7 +372,7 @@ figcaption {
 
 blockquote {
   margin: 2rem 0.2rem;
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 2rem 0.5rem 2rem;
   opacity: 0.8;
   font-style: italic;
   background: var(--accent-bg);
