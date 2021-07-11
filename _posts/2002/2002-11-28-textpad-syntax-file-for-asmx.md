@@ -1,8 +1,6 @@
 ---
 layout: post
 title: TextPad syntax file for ASMX
-date: 2002-11-28 22:31:40.000000000 +05:30
-type: post
 ---
 
 [Textpad](http://www.textpad.com/) is my favorite Text Editor so far, and I use it as the external editor for ActionScript. I was happy to see Chak at the Macromedia Seminar here in Mumbai, India, using the same.
