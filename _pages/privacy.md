@@ -6,7 +6,7 @@ permalink: /privacy/
 
 # Privacy
 
-_Last updated: Jul 7, 2021_
+_Last updated: Jul 11, 2021_
 
 Your privacy is important to us. It is Brajeshwar's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, [brajeshwar.com](https://brajeshwar.com), and other sites we own and operate.
 

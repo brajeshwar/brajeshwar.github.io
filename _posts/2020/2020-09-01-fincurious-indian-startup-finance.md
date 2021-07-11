@@ -9,7 +9,7 @@ Rahul Saria is a Chartered Accountant. He has served as heads of many Startups s
 
 The book is written from the lens of starting and running a Startup in India. The book is short at less than 200 pages and you can finish it off in an hour or so.
 
-__Buy it at__
+_Buy it at_
 
 - Amazon: <a href="https://www.amazon.in/dp/1648999891">India</a>, <a href="https://www.amazon.co.uk/dp/1648999891">USA</a>, <a href="https://www.amazon.co.uk/dp/1648999891">UK</a>
 - <a href="https://www.flipkart.com/fincurious-startup-finance/p/itm111e8d3dac0b6">Flipkart</a> (India)
