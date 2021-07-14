@@ -5,9 +5,14 @@ description: >- # this means to ignore newlines until 'baseurl:'
 baseurl: ''
 url: 'https://brajeshwar.com'
 
-twitter_username: brajeshwar
-github_username:  brajeshwar
-
+author:
+  name_first: Brajeshwar
+  name_last: Oinam
+  twitter: brajeshwar
+  github:  brajeshwar
+  linkedin: brajeshwar
+  instagram: oinam
+  
 theme: null
 markdown: kramdown
 highlighter: rouge
@@ -38,9 +43,6 @@ defaults:
     values:
       permalink: '/:title/'
 
-include:
-  - _pages
-
 # Posts
 defaults:
   - scope:
@@ -49,6 +51,10 @@ defaults:
     values:
       layout: 'post'
       permalink: '/:year/:title/'
+
+# include the pages in the custom folder
+include:
+  - _pages
 
 # Exclude from processing.
 exclude:
