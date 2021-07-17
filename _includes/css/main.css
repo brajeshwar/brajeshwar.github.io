@@ -5,8 +5,13 @@
 .title a {
   display: inline-block;
   width: 16rem;
+  max-width: 100%;
   height: auto;
   text-decoration: none;
+}
+
+svg {
+  fill: #fff;
 }
 
 .list-reset ul,
@@ -18,5 +23,3 @@
 .list-reset li {
   list-style: none;
 }
-
-/* form */
