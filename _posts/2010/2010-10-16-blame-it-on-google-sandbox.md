@@ -32,7 +32,7 @@ excerpt: The Google Sandbox Theory has made many website owners paranoid to opti
   suffer Google's wrath.
 ---
 <p><object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/jGjGtOKJTLQ?fs=1&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/jGjGtOKJTLQ?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object></p>
-<p><!--more--></p>
+
 <p>No webmaster wants to offend Google. The God of search engines can permanently ban any webmaster that refuses to play by its rules. This would be catastrophic to almost all online businesses.</p>
 <p>Many new site owners are terrified of the "<a href="http://en.wikipedia.org/wiki/Sandbox_effect">Google Sandbox</a>." Despite claims from staff at Google that such a thing does not exist, these sites insist that new websites are penalized. <a href="http://www.mattcutts.com/blog/">Matt Cutts</a> has stated that Google's algorithm is based off of trust rankings. Trust is something that must be earned. Newer sites may not have earned trust yet, but they have not lost it either.</p>
 <p>Most of the sites at the top of Google are older domains, but that probably has little to do with the fact that they are at the top of the SERP rankings. They have also had time to refine their content, build anchor-rich links and boost their <a href="http://en.wikipedia.org/wiki/PageRank">PageRank</a>. New sites begin with absolutely nothing and must work hard to prove to Google that they deserve to be on the first page for their target keywords.</p>

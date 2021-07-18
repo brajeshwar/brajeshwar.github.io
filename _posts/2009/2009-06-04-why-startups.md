@@ -39,7 +39,7 @@ excerpt: The idea is to sustain a living, escalate a product/service and emerge 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.flickr.com/">Flickr</a></cite></p>
 <p class="caption"><em class="title">Startup</em>Pizza + Work = Success!</p>
 </div>
-<p><!--more--></p>
+
 <p>The start-up ecosystem in India has taken a new height. Today, a lot of talented, fresh graduates from college have an inclination towards entrepreneurship. The case was not the same a few years back. While entrepreneurs are made by both - choice and circumstances, a handful of them have graduated to a full fledged company with a long list of employees, a heavy portfolio of clients or an application that's stuck to the heart and minds of many.</p>
 <p>While trying to find out reasons for this change in India, I could smell several reasons for growth in the Internet based start-ups. Not all may be true for an entrepreneur but somehow the strings are attached to one of these.</p>
 <p><em>Few reasons for the growth in the web based entrepreneurship include;</em> </p>

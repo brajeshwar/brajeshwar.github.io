@@ -29,7 +29,7 @@ excerpt: " I am beginning to really like the idea of a very open community in th
   and being in a very healthy competition."
 ---
 <p>"37signals (37signals)":http://www.37signals.com/ have a very nice "list of tools (The tools they use to run and build 37signals)":http://37signals.com/svn/archives2/the_tools_we_use_to_run_and_build_37signals.php that helped them run and build their team. Do read the comments for more insights on other people's ideas. I am beginning to really like the idea of a very open community in this blog-era-internet. People are virtually opening up almost everything, sharing everything and being in a very healthy competition.</p>
-<p><!--more--></p>
+
 <p>And here are some of the tools that we use day in and day out (or rather very frequently) at "Oinam Software (Oinam Software)":http://www.oinam.com/</p>
 <p>*Online*</p>
 <p>* "CVSDude (CVSDude)":http://www.cvsdude.org/ - CVS, SVN, Trac for Source Version Control<br />

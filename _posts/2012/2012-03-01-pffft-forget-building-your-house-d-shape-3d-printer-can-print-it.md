@@ -33,7 +33,7 @@ permalink: "/2012/pffft-forget-building-your-house-d-shape-3d-printer-can-print-
 ---
 <p>3D printers have been growing in both popularity and scope. Just a short while ago I wrote about 3D printers being used to reproduce human bones with a <a href="http://brajeshwar.wpengine.com/2012/3d-printer-gives-woman-brand-new-jawbone/">3D-printed jaw bone replacement</a>. In typical technological-growth patterns the technology is improving in folds, rapidly -- something predicted long ago by Moore's Law. </p>
 <p>What nobody predicted in the near future though was that the home-building industry would get a MAJOR upgrade, to Home Printing. Yup, home printing. Thanks to the fast growth of 3D printing in additive manufacturing technology it is most-recently being applied to home manufacturing. Thanks to the inventive genius of Enrico Dini, founder of Moonlite UK and inventor of robotic building system D-Shape, we have entered a new era, where printing just got a LOT bigger.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/OzErSh_44ng" frameborder="0" allowfullscreen></iframe></p>
 <p><em>Note: Video is not in English.</em></p>
 <p>The D-Shape system has the potential to create a two-story building, including columns, stairs, domes, piping holes and more -- using just run-of-the-mill sand combined with an inorganic binder. The composite material is said to be interchangeable (and indistinguishable) from materials like marble, due to its similar physical characteristics. The marble-like compound is far superior to most building materials currently in use, like masonry and reinforced concrete. </p>

@@ -34,7 +34,7 @@ excerpt: hover.in is an intext content+ad delivery "platform", that gives publis
   what content or ad to be shown during the interaction.
 ---
 <p><embed src="http://blip.tv/play/Af+gOZSOVQ" type="application/x-shockwave-flash" width="640" height="366" allowscriptaccess="always" allowfullscreen="true"></embed></p>
-<p><!--more--></p>
+
 <p>Recently, <strong>Hover.in</strong> started <a href="http://start.hover.in/">start.hover.in</a>, a library created by for developers and publishers to easily add user engagement and rich media (or hovering widgets called hoverlets) within their webpage.</p>
 <p>Their product demo along with the library, is available on their site, focussing on inviting application developers from facebook, opensocial and other distribution platforms to build compelling contextual applications.</p>
 <p>Start.hover.in are currently aimed at two distinct realms;</p>

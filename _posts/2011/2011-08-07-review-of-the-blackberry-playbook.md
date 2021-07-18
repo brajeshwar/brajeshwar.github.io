@@ -31,7 +31,7 @@ permalink: "/2011/review-of-the-blackberry-playbook/"
 <p>One of the latest entry into the Tablet market is the <a href="http://us.blackberry.com/playbook-tablet/">Blackberry Playbook</a> from <a href="http://www.rim.com/">RIM</a>.</p>
 <p>We know of RIM's primary market to be the Enterprise users and its Blackberry continues to enjoy a strong foothold. However, of late, the rapid adoption of Apple's iPad by Enterprise users have set RIM in motion to come-up with a competitive product, the result being that of the Blackberry 'Playbook'.</p>
 <p>Well, the nomenclature 'Playbook' itself sends a signal that RIM is not solely targeting the Enterprise users but willing to spread out to the more 'playful' crowd vis-a-vis the youth and the younger generation-y.</p>
-<p><!--more--></p>
+
 <p>Today, I'm not going to be biased towards the iPad (I continue to use both the first generation iPad and the second generation iPad 2). I've de-learn what iPad have done to my hands and fingers and have approached the Blackberry as a totally virgin device to me to finger around, caressing ever corner of its beauty with elegant touches, swipes, pull-ups and push-downs. Without getting carried away further, let me tell that this device is a beauty in my hand, very fast and sleek.</p>
 <p>Here is a video of Blackberry Playbook against the Apple iPad.</p>
 <p><iframe width="640" height="390" src="http://www.youtube.com/embed/s72rGDUn2uo?hd=1" frameborder="0" allowfullscreen></iframe></p>

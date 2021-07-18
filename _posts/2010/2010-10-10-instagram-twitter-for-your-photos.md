@@ -42,7 +42,7 @@ excerpt: Instagram app has a several, Lomo-like 'filters' to add fizz to the sho
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite>Instagram</cite></p>
 <p class="caption"><em class="title">Instagram</em>Fast beautiful photo sharing for your iPhone.</p>
 </div>
-<p><!--more--></p>
+
 <p><a href="http://www.apple.com/iphone/">iPhone</a> has been one of the best innovations of all times. Thanks to Steve Jobs and the App Store. It deserves a good credit to the way communication on mobile has been redefined.</p>
 <p>The sheer power and magic of apps on iPhone has taken it to the next level. Let's not forget the ecosystem it has built for our beloved developers to write an app and at the same time, make money off it!</p>
 <blockquote><p>Apple allows 70% of revenues from the store to instantly go to the seller of the app, and 30% go to Apple.</p></blockquote>

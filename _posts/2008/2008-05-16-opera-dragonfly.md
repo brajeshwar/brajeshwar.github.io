@@ -37,7 +37,7 @@ excerpt: Debug JavaScript, inspect CSS and the DOM, and view any errors -- Opera
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite>Opera</cite></p>
 <p class="caption"><em class="title">Opera Dragonfly</em>Developer Tools to debut Javascript, inspect CSS and the DOM, and view errors.</p>
 </div>
-<p><!--more--></p>
+
 <p>Opera released their new Developer Tools -- <a href="http://www.opera.com/products/dragonfly/">Opera Dragonfly</a> -- about a week back. The initial alpha version include</p>
 <p>* JavaScript debugger<br />
 * DOM inspector<br />

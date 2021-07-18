@@ -37,7 +37,7 @@ author:
 permalink: "/2011/microsofts-new-os-mango-finally-catching-up-with-the-crowd/"
 ---
 <p>During their Microsoft's MIX '11 conference in Las Vegas, Microsoft announced their upcoming release of Mango, the new Windows Phone OS. Mango is expected this fall. Mango will be Microsoft's offering to finally compete with the more robust operating systems currently dominating the market -- finally bringing features already popular in the market like multitasking.</p>
-<p><!--more--></p>
+
 <h3>New Features</h3>
 <p>* <em>Multitasking:</em> Finally. Even when Windows Phone 7 was released last year multitasking was already available in the competitive market space, and yet Microsoft's new OS lacked the feature. Finally in fall of this year MS will bring the feature to its users. The new multitasking feature will be able to swap between native and web apps, including multitasking within Spotify, a popular new music streaming app.<br />
 * <em>Apps:</em> Developers will be able to use the phone's hardware features within apps, as they will have access to the camera, accelerometer, Live Tiles, contacts, calendar, and interface controls. Developers will be able to drill-down within features, including being able to change the color of the Tiles.<br />

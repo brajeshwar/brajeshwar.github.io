@@ -26,7 +26,7 @@ author:
 permalink: "/2011/apple-ios5-%e2%80%93-brand-new-features/"
 ---
 <p><a href="http://www.apple.com/">Apple</a> has rolled out its brand new version of its operating system, <a href="http://www.apple.com/ios/ios5/">iOS 5</a>, which will be available Fall 2011. On June 6th, Apple announced the release of the fifth upgraded version iOS5.0 beta version, during the WWDC annual event. Packed with some cool revolutionary features, not few, but around 200 brand new features to it. Well, that's a huge upgrade to its previous versions and a big leap in the family of iOS enabled devices. It's already been said that iOS5 would be fully integrated with <a href="http://www.apple.com/icloud/">iCloud</a>. The major upgrade to it is an overall performance boost and the speed.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/09/ios-5.jpg" alt="Apple iOS 5" /></p>
 <p>Here are some of the brand new features of  iOS 5;</p>
 <p>* <strong>Notifications</strong> Now you can easily keep track of all your text messages, missed calls, all alerts and more sitting anywhere in iOS5 as you get notified through the Notification Centre. You will not get disturbed from whatever you were doing, as it displays the brief message from all of your notifications as and when they arrive on top of your screen and disappear quickly. And you can check all your notifications with just one swipe.<br />

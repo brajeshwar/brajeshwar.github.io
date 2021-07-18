@@ -39,7 +39,7 @@ permalink: "/2014/hello-ruby-programming-book-children/"
 <p>An interesting initiative by Linda Liukas, who teaches programming and makes the world of technology more approachable through a non-profit called <a href="http://railsgirls.com/">Rails Girls</a>.</p>
 <p>She is on a journey to combine software with storytelling. She is writing and illustrating a book for young children about the magical world of technology - <a href="http://helloruby.com/">Hello Ruby</a>.</p>
 <p>She is <a href="http://www.kickstarter.com/projects/lindaliukas/hello-ruby">raising $10,000 on Kickstarter</a> for Hello Ruby (already over-subscribed).</p>
-<p><!--more--></p>
+
 <p>[caption id="attachment_6784" align="alignnone" width="700"]<img src="/static/2014/01/hello-ruby.jpg" alt="Hello Ruby" width="700" height="732" class="size-full wp-image-6784" /> Hello Ruby is a children’s book that teaches programming fundamentals through stories and kid-friendly activities.[/caption]</p>
 <h2>About Ruby</h2>
 <p>Ruby is a small girl with a huge imagination. She stomps and stumbles around her own little world while her dad is traveling. On her adventures, Ruby makes friends with the lonely Snow Leopard, visits castles made of windows, and solves problems with the wise penguins. She bakes gingerbreads with the green robots and throws a garden party with... well, if you like to hear the rest of the story, <a href="http://www.kickstarter.com/projects/lindaliukas/hello-ruby">back the project on Kickstarter</a>.</p>

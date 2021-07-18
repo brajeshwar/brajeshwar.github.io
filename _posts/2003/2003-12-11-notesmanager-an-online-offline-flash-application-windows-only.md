@@ -28,7 +28,7 @@ excerpt: NotesManager allows you manage notes for various projects in your compa
   database.
 ---
 <p>NotesManager allows you manage notes for various projects in your company while maintaining synchronization between the remote database and the local client database. It allows multiple team members to work in tandem from different locations, while maintaining a synchronized set of notes between them. The current application is done using both v1 and v2 components and targetted at Flash Player 7.0.14.0 and above, back end database is powered by MySQL and data porting to and fro by Flash Remoting (CFMX) and the wrapper is done using "Flash Studio Pro (Flash Studio Pro)":http://www.multidmedia.com/.</p>
-<p><!--more--></p>
+
 <p>The NotesManager interface consists of a collapsible menu, the left navigational menu and the right entry and comment menu. In addition to these menus, there are various pop up dialogs that are shown when the user clicks on a button or menu item. You can choose to work in 2 connection modes in NotesManager. Online and Offline mode.</p>
 <p>*Online Mode* will always try to connect to the remote server and send the local database change to the remote server immediately. If an error occurs when trying to do this, the change will get saved locally to be performed during the next synchronization.</p>
 <p>*Offline Mode* will save the local database change action locally, and will publish it remotely when you synchronize the next time. Offline mode is more suited when you are not connected to the internet, and when you wish to make numerous changes locally for the time being, which you will synchronize when you connect to the internet.</p>

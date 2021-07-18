@@ -26,7 +26,7 @@ permalink: "/2011/do-your-business-need-to-have-a-qr-code/"
 ---
 <blockquote>Theo Lagerquist, who loves how easy technology is making communications and business. He also loves using his favorite search engine to find <a href="http://www.soliant.com/">jobs in healthcare</a>, his iPad, and other devices to stay in touch with others. His business is currently developing a QR code!</p></blockquote>
 <p>First off, what's a Quick Response (QR) code? Right?! It's likely you've heard of this latest technological trend, but do you understand what it is, and what it can do for your business? If not, then you may be missing out on a great marketing and customer relations resource, and you should definitely read on.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/B3lrcOhmp9g?hd=1" frameborder="0" allowfullscreen></iframe></p>
 <p><em>This is what you need to know about QR codes:</em></p>
 <h3>What are they?</h3>

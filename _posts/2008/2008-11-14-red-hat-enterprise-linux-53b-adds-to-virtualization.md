@@ -36,7 +36,7 @@ excerpt: The number of processors in RHEL 5.3 beta nearly doubled from 64 to 126
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/existentist/666727475/">Existentist</a></cite></p>
 <p class="caption"><em class="title">RHEL</em>Customized and supported Linux distro for your business.</p>
 </div>
-<p><!--more--></p>
+
 <p>Red Hat Enterprise Linux 5.3 (<a href="http://www.redhat.com/rhel/">RHEL 5.3</a>) beta has been launched by <a href="http://www.redhat.com/">Red Hat Inc.</a> with claims that the companies adopting this shall be able to virtualise out-sized and complex operations with appealing ease. For beginners, RHEL 5.3 beta offers virtualization to run on larger systems with additional memory and with more guests per host. There have been significant improvements in this release, enabling enhancements in features such as clustering, file systems, hardware driver support and virtualization. It will also facilitate the intricate applications to link with disk storage and network support devices. </p>
 <p>According to <strong>Daniel Riek</strong>, an <em>RHEL product manager</em>, </p>
 <blockquote><p>the number of processors in RHEL 5.3 beta nearly doubled from 64 to 126 and memory per host has nearly quadrupled from 256 GB to a 1 TB.</p></blockquote>

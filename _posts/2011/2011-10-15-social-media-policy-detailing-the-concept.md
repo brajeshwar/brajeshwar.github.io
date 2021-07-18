@@ -27,7 +27,7 @@ permalink: "/2011/social-media-policy-detailing-the-concept/"
 ---
 <p><a href="http://en.wikipedia.org/wiki/Social_media">Social Media</a> is a concept; it is efficient, effective and far reaching. Yet, it is just a tool in our hands. Using social media to advance your prospects or connect with your friends and family is the expected use of the tool. However, many enthusiasts go overboard with the idea and in turn reduce the standards of social media networking. In a professional context, this problem can take arbitrary proportions.</p>
 <p>The solution is to <a href="http://www.inc.com/guides/2010/05/writing-a-social-media-policy.html">draft a social media policy for your establishment</a> and make sure it includes all the major points that might prove to be an issue for your work ethics in the future. Considering, not all the details regarding such an elaborate task are easy; you might require some assessment to finish writing a social media policy appropriately.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/10/policy.jpg" alt="Social Media Policy" /></p>
 <p>There are two ways that you can handle this issue. You can either set an evolutionary tone for your social media policy. In this sense, your policy will be flexible to accommodate new changes and adjustments to the social media-networking scene. Another way to go about this is to state all your policy objectives in clear terms from the very beginning of the policy<br />
 drafting. </p>

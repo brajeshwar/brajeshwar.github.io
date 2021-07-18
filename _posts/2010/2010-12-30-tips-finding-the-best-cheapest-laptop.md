@@ -29,7 +29,7 @@ author:
 permalink: "/2010/tips-finding-the-best-cheapest-laptop/"
 ---
 <p>Be it watching a movie, listening to music, watching television, editing pictures, make records and file them, etc., all this and more is now possible by owning a good laptop - Want to watch a movie? Pop in a DVD. Want to listen to music? Try a CD, or play your MP3 collection or stream music from the Internet. Want to watch television? Stream shows from the Web, or get a digital tuner and get local broadcasts for free. Got a digital camera? Use a laptop to preview your pictures and edit them. You can even make phone calls, with an app called Skype. And to top this off all this is available at a price that is easily affordable even for a middle-class audience - less than $400. A dilemma however is that there is a whole lot of choices to opt from (numerous brands to pick from).</p>
-<p><!--more--></p>
+
 <p><img src="/static/2010/12/laptops.jpg" alt="Laptops" class="alignright" /></p>
 <p>To make sure you pick the best one, here are some simple tips:</p>
 <h3>1. Netbook is not a Laptop</h3>

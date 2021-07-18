@@ -31,7 +31,7 @@ excerpt: The Pomodoro Technique is a way to get the most out of time management.
   improvement in the way we do it.
 ---
 <p><a href="http://www.pomodorotechnique.com/"><img src="/static/2010/09/pomodoro-technique.png" alt="Pomodoro Technique" style="float: right; margin: 0 0 1em 1em;" /></a> Time management is an all important and essential skill for all professionals in the business arena today. In this post, I'm going to define a process of splitting up the 24 hours of a day into smaller more manageable moments of time. If you are wondering what a tomato has to do with this, let me dis-pell the mystery. It's called the <a href="http://www.pomodorotechnique.com/">Pomodoro Technique</a>.</p>
-<p><!--more--></p>
+
 <p>In this post, I will provide an overview of this technique of time management. The Pomodoro Technique was founded by Francesco Cirillo, a business consultant, while in university struggling to juggle his studies. Cirillo developed the technique in 1992 and named it after his tomato-shaped timer. "Pomodoro" is the Italian word for "tomato". QED or Quad Errad Demonstratum i.e. hence proved.</p>
 <h3>Increasing Productivity</h3>
 <p>The basic concept entails setting a timer for a specific period of time. Until that timer goes off, focus on one task only, without any interrupting distractions (natural disasters and acts of God not withstanding). When the timer goes off, &nbsp;take a break for a short interval. Time management using this simple technique improves productivity in the following ways:</p>

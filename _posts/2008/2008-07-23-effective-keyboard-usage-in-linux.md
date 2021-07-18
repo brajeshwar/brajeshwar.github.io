@@ -41,7 +41,7 @@ excerpt: Using the keyboard more often than a mouse is not just a trend but a pr
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/opie/2515423894/">Theopie</a></cite></p>
 <p class="caption"><em class="title">Keyboards</em>Get used to them!</p>
 </div>
-<p><!--more--></p>
+
 <p>The Linux pro user community often gives a stress on doing things via the command line interface, often known as CLI. It is not just a trend but a productivity hack for people who live on Linux, all day long. Getting things done using the CLI is much more convenient, once you get used to it.</p>
 <p>Apart from the CLI, various graphical user interfaces(GUI) too have keyboard shortcuts for most of the Linux applications. We shall now put our eyes down to some commonly used key combination to get a handful of the routine tasks accomplished without you having the need to chase your mouse!</p>
 <p>The following set of key combination are known to work on a GNOME desktop environment, with a hope that most of it shall work on alternative desktop environments. I shall be glad to see some more entries added to the list through the comments section.</p>

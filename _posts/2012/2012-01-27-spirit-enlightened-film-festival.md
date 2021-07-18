@@ -29,7 +29,7 @@ author:
 permalink: "/2012/spirit-enlightened-film-festival/"
 ---
 <p>Culture Unplugged Studios' 'Spirit Enlightened' aspires to trace the spirit that has led the humanity and evolutionary consciousness to present form and is in the midst of creating our future. The festival hopes to explore with you, 'That' which envelops to infuse & evolve the individual as well as collective being, expands our vision of time as well as place, enlivens our hearts, and enlightens our species to transcend the present state of being for the mystical new &#8211; the next state of supra-mental self. Lets observe & feel this divine/enlightening spirit in the moment of its performance, in the midst of humanity now and forever, through film-media.</p>
-<p><!--more--></p>
+
 <p><video width="640" height="360" poster="http://cdn.cultureunplugged.com/thumbnails/lg/7700.jpg" controls="controls" preload="none"><source type="video/mp4" src="http://cdn.cultureunplugged.com/ext/lg/BEYOND_ME_7700.mp4" /></video></p>
 <blockquote><p>Spirit Enlightened is an event which aspires to bring a spiritual spark that enlightens & integrates our collective heart & mind and attempts to outline the universal dream that envisions our united future.</p></blockquote>
 <p>If you're an individual film-maker or independent film producer, get involved with the new festival.</p>

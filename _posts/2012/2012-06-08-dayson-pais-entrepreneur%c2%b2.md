@@ -47,7 +47,7 @@ permalink: "/2012/dayson-pais-entrepreneur%c2%b2/"
 ---
 <p>Mumbai-based <a href="http://in.linkedin.com/in/dayson">Dayson Pais</a> is the founder of <a href="http://webly.co/">Webly</a>, of <a href="http://epicwhale.org/about/">Epicwhale</a>, of <a href="http://www.linkedin.com/company/the-womo">The Womo</a> -- and now he is the founder (and janitor) of <a href="http://ontextme.com/">Textme</a>. And all this has been in the past 5 years. </p>
 <p>Dayson's passion is incubating services and products for the web, brand identity, print, mobile & digital field -- hence the creation of his digital agency and cybernated incubator, Webly. His understanding of the "Wild, Wild Web" as he calls it, has built a solid entrepreneurial base for his many endeavors. Finally, his many hats are beginning to pay off -- with the success of many of his ventures, including his most recent, Textme.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="480" src="http://www.youtube.com/embed/bVUchQ-ErUA" frameborder="0" allowfullscreen></iframe></p>
 <p>We got the opportunity for a virtual 'sit down' with Dayson, and picked his brain about Textme, his entrepreneurial journey and what might be in the future for this serial entrepreneur:</p>
 <h3>Can you give me the quick, elevator pitch for Textme?</h3>

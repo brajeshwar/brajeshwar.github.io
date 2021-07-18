@@ -38,7 +38,7 @@ excerpt: You don't need to have a wireless kernel module loaded if you're on Eth
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/udo/241045585/">Udo Herzog</a></cite></p>
 <p class="caption"><em class="title">Boot Times</em>Did you forget that on Linux?</p>
 </div>
-<p><!--more--></p>
+
 <p>We've seen and heard that Linux seldom faces a system halt or crash. Most of the people who have switched to Linux stay happy with the fact that they need not press the 3-button command to get the task manager every now and then, on their old machines. Linux has no doubt proved to be a blessing in disguise for machines which have limited hardware options and are low on resources.</p>
 <p>This might indicate that a lot of geeks keep their boxes turned on for days(may be months in some cases!) However, for a normal use Linux machine, a daily boot would be pretty obvious. </p>
 <p>We have seen a lot of tips and tricks to make Windows boot faster than before. Such recommendations have been popular and remarkably acknowledged across the world wide web. On similar grounds, we shall today try and figure out a few ways in which an average user can help reduce the boot time of a Linux box.</p>

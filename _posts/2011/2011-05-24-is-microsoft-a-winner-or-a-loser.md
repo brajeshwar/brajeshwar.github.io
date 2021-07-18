@@ -34,7 +34,7 @@ permalink: "/2011/is-microsoft-a-winner-or-a-loser/"
 ---
 <p>With any small or large businesses; winning and losing are part of the game. It is really hard to find one company that either steadily grows or steadily decays in growth; there always will be bit of ups and downs on the path. But we are not either worried or talking about all those companies out there, but <a href="http://www.microsoft.com/">Microsoft</a>. Why? Because it is one of the biggies that influences our day to day lives and also is an important part of our business and personal lives.</p>
 <p>Microsoft had recently released many products of which some of them got great applaud from the crowd, but some others didn't make it. You know, it is with all business, when you launch a product not everyone likes it. And not every product you launch goes viral and talked by people.</p>
-<p><!--more--></p>
+
 <p><em>Let's see a few flops from Microsoft.</em></p>
 <p><img src="/static/2011/05/windows-phone-7.jpg" alt="Windows Phone 7" class="alignright" /></p>
 <h3><a href="http://www.microsoft.com/windowsphone/">Windows Phone 7</a></h3>

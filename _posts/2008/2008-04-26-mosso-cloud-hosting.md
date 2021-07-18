@@ -41,7 +41,7 @@ excerpt: Cloud Computing is the simplification of the data center by leveraging 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/johnniewalker/359440369/">Johnnie W@lker</a></cite></p>
 <p class="caption"><em class="title">Cloud Computing</em>The architecture is a massive network of "cloud servers" interconnected as if in a grid running in parallel.</p>
 </div>
-<p><!--more--></p>
+
 <p><strong>Media Temple</strong></p>
 <p><a href="http://mediatemple.net/">Media Temple</a> is a very good Web Host. It is just that <a href="http://www.brajeshwar.com/2007/message-to-mediatemple/">it didn't work out</a> for me. I was with MediaTemple for quite sometime, even returned back twice, gave up on the last one with their VDS after wasting a whole year's payment (they did gave me good discount though). So, I'm not asking people not to try out Media Temple, it seem to work flawlessly for many people and also disastrously for many other people.</p>
 <p><strong>A Dedicated Server</strong></p>

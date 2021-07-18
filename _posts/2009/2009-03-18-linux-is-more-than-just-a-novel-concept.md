@@ -38,7 +38,7 @@ excerpt: Linux is characteristically found to be one of the most unswerving, sta
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/nihonbunka/12849922/">Timtak</a></cite></p>
 <p class="caption"><em class="title"> Linux</em>The choice is yours!</p>
 </div>
-<p><!--more--></p>
+
 <p>It is inevitable that choosing the right operating system is imperative to insure that you have a high performance, security, high delivery and applications that you wish to work with either at home or in office, either on desktop or on laptop. Today, Linux is moving into user space faster than ever before. Distros like Ubuntu and PCLinuxOS compete vividly with the much loved MS Windows. Linux is characteristically found to be one of the most unswerving, stable, secure, cost effective and well-organized system. Thanks to the intuitive GUI support which has come up to serve the young minds with desktop environments like KDE. </p>
 <p>Linux, again is considered the numero uno for the demanding environment of Web, database and mail servers and the demand for Linux has been increasing ever since it was launched, though at a slow pace.</p>
 <p><strong>Few characteristics that differentiates Linux and its distros include;</strong></p>

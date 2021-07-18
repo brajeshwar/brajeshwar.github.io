@@ -36,7 +36,7 @@ excerpt: Open Source provides solutions at the lowest costs possible or at no co
 <p class="credit"><abbr class="type" title="Cartoon">Cartoon</abbr> by <cite>John Klossner</cite></p>
 <p class="caption"><em class="title">Open Source vs Proprietary Software</em>The never ending Battle</p>
 </div>
-<p><!--more--></p>
+
 <p>This could be one battle that could go on for a long time. One that always looks at providing software solutions to business enterprises at the lowest costs possible or at no cost at all -- <a href="http://www.opensource.org/">Open Source Software</a>; and there is another which promises the provision of the best-in-the-business software solutions to large organizations and also the promise of a brand name, but at a higher cost (which is considered worth-it, by many firms) &#8211; <strong>Proprietary Software</strong>. </p>
 <p>On the one hand, there is the belief that proprietary software is famous for stability and easy deployment; and the biggest organizations run after them as they are not only trusted but also believed to bring in improvements in the functioning of business. On the other hand, there is another set of organizations that deem Open Source software will be the next big thing in terms of providing the same software solutions as offered by the proprietary ones, but for free or very low costs. However, there still are zillions of companies that work on either of these software solutions.</p>
 <h3>Why Open Source?</h3>

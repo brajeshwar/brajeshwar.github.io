@@ -37,7 +37,7 @@ excerpt: Machinima is film-making in a virtual environment. A portmanteau of mac
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/photolibraries/3242153904/">HVX Silverstar</a></cite></p>
 <p class="caption"><em class="title">Machinima</em>Real-time 3D graphics rendering engines to generate computer animation.</p>
 </div>
-<p><!--more--></p>
+
 <p>Machinima, a portmanteau of machine cinema or machine animation, is both a collection of associated production techniques and a film genre defined by the following techniques:</p>
 <p>* <em>shooting film</em> -- Cameras record the action going on<br />
 * <em>in realtime 3d</em> -- the time needed for the computer to transform the abstract data into a 3-dimensional visible representation is so little that you do not notice it. The whole calculation takes less than 1/10th of a second. Thus "realtime"<br />

@@ -36,7 +36,7 @@ excerpt: The fact that Google Wave incorporates multiple utilities and extension
 ---
 <p><object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/v_UyVmITiYQ&hl=en&fs=1&fmt=18" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/v_UyVmITiYQ&hl=en&fs=1&fmt=18" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object></p>
 <p><strong>Developer's preview of Google Wave</strong></p>
-<p><!--more--></p>
+
 <p>While <a href="http://www.bing.com">BING</a> created a much expected hype about way we would look at search engines, Google is all set to redefine the mashup ecosystem.</p>
 <p>You might just set aside all you menial mail boxes, and I say this with all due respect for serving the world so sincerely for all these years. It's time for the tides to change. The web might just be swept away by the giant waves of "Walkabout" or as what is evident as -- <a href="http://wave.google.com/">Google Wave</a>.</p>
 <p><strong>Change is good</strong></p>

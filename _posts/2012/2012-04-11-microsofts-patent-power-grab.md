@@ -41,7 +41,7 @@ permalink: "/2012/microsofts-patent-power-grab/"
 ---
 <p>So, Microsoft spent over a billion dollars to out-bid Google on a <a href="http://www.nytimes.com/2012/04/10/technology/microsoft-to-buy-aol-patents-for-more-than-1-billion.html">bunch of patents from AOL</a>. But WHY? AOL isn't exactly a major player in the game anymore and the bulk of their patents haven't been put into practical use for years. </p>
 <p>Many in the industry are assuming that Microsoft did it out of their usual trying-to-beat-Google-to-the-punch philosophy, but it turns out that Microsoft (finally) had an ulterior motive (especially since Google never officially announced an interest in the patents).</p>
-<p><!--more--></p>
+
 <figure><img src="/static/2012/04/netscape.jpg" alt="Netscape" /><br />
 <figcaption>Microsoft buys a bunch of patents from AOL (source : <a href="http://www.flickr.com/photos/oimax/2141263830/">OiMax</a>)</figcaption>
 </figure>

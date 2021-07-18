@@ -37,7 +37,7 @@ excerpt: There are times when the need to switch a job is high on the agenda and
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/cobalt/2807290411/">Cobalt123</a></cite></p>
 <p class="caption"><em class="title">Loving your job</em>Do you love yours like these girls do?</p>
 </div>
-<p><!--more--></p>
+
 <p>There are times when the need to switch a job is high on the agenda and it gets essential to breathe a new air into one's professional life. It's pretty humane to make mistakes, but there are a few concerns which are a strict no-no when one thinks of switching from one organization to another.</p>
 <p><strong>Few of them include;</strong></p>
 <p># <strong>Being location centric.</strong> It is better to keep one's options open and not be too choosy when it comes to the choice of cities. Also, preferably seek a job in a city having a good IT infrastructure.<br />

@@ -32,7 +32,7 @@ permalink: "/2012/more-about-raspberry-pi/"
 <p><a href="http://www.raspberrypi.org/"><img src="/static/2012/05/raspberry-pi.jpg" alt="Raspberry Pi" /></a></p>
 <p>Early in the 1980s, affordable computing was a craze in the market. However, learning about them was a difficult process to the users. Machines such as Atare 400 and early Apples' were already helping people in exploring the whole new world; giving rise to some of the pioneers in the computing world including the gaming industry.</p>
 <p>That continued, till a lot of inventions took place in the tech world. One amongst them, is the -- <a href="http://www.raspberrypi.org/">Raspberry Pi</a>.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/6BbufUp_HNs" frameborder="0" allowfullscreen></iframe></p>
 <p><a href="http://en.wikipedia.org/wiki/Raspberry_Pi">This credit card sized micro-microcomputer</a> was developed by a UK based company. It has low power consumption and an incredibly cheap ARM based Linux system. And, the next big thing is, that it comes for a price of $35 excluding the local taxes. The main motive behind this is to help the new generation kids in learning the programming stuffs.</p>
 <h3>Impact of Raspberry Pi</h3>

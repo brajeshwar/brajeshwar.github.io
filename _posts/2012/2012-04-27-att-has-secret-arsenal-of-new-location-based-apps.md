@@ -49,7 +49,7 @@ permalink: "/2012/att-has-secret-arsenal-of-new-location-based-apps/"
 ---
 <p>The uber-creative minds at the <a href="http://www.research.att.com/editions/201204_home.html">AT&T Labs</a>, AT&amp;T's research contingent, have been busier than Santa's elves. Their new smartphone technologies geared at automobiles might border on intrusive but are nonetheless genius. From a hands-free, cellphone-leveraging car unlocking method to digital teenage driver monitoring to location-based messaging AT&T has got an interesting lineup of new technologies coming out soon. This new batch of cool shiznit is highly focused on location-and speech-recognition-based APIs so expect it to be slightly encroaching.</p>
 <p><em>Let's check them out:</em></p>
-<p><!--more--></p>
+
 <p># A hands-free new method of unlocking your car door, by tapping your cellphone to a car-door sensor. This even works when the smartphone is in your pocket so door-unlocking hip checking might be in order soon.<br />
 # A vibrating steering wheel that takes directions from your GPS navigator and vibrates when your reach the next turn.<br />
 # An app that recognizes if you leave any personal possessions behind.<br />

@@ -34,7 +34,7 @@ permalink: "/2013/how-to-be-a-good-parent-for-the-lesser-mortal-startup-entrepre
 <p>Being a Startup Founder and a parent; while seemingly dissimilar, both require a great deal of time, skill and dedication in order to be successful. It may sound like a daunting task, but is possible to run your startup while still maintaining a good relationship with your children.</p>
 <p>Founding a startup can be an exciting and rewarding endeavor, but it is also a time consuming process. In order to accomplish your goals while still maintaining a healthy home life, it is important to manage your time wisely. It is easy to get caught up in the stress and excitement of your startup and neglect your family. By the same token, the commotion of a busy family life can cause you to neglect your startup. A healthy balance between work and family is absolutely necessary to running a successful startup while still being a good parent to your children.</p>
 <p>Many have written and advocated on effective time management and routines to help you be a super-parent and a hustling Startup Founder. As a Startup Founder, you have to find your 'style' of time management and (un)routine to be omni-present for your startup and your family.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2013/05/brajeshwar-laaija.jpg" alt="brajeshwar-laaija" class="alignnone size-full wp-image-6693" /></p>
 <p>Let's look at few simple changes to your routine to help you achieve that (almost) perfect balance. Good time management is essential to being a good parent while founding a startup. A crucial time management skill is the ability to adhere to a schedule or routine. This skill is especially important when juggling a startup and family life.</p>
 <h2>Planning</h2>

@@ -35,7 +35,7 @@ excerpt: Adobe director James Alexander says, "We thought we went to market with
   not as compelling as we thought it was going to be."
 ---
 <p>Adobe has decided to discontinue its Stock Photos service which integrated into Bridge from April 1, 2008. For ASP users, you can download the <a href="http://www.adobe.com/support/downloads/product.jsp?product=109&platform=Macintosh">Mac</a> and <a href="http://www.adobe.com/support/downloads/product.jsp?product=109&platform=Windows">Windows</a> unstallers that let you remove ASP from Bridge.</p>
-<p><!--more--></p>
+
 <blockquote><p>Adobe Stock Photos is a royalty-free image service introduced with Adobe Creative Suite 2 software in May 2005. Offering one-stop shopping from within Adobe Bridge in Creative Suite 2 and Creative Suite 3 as well as standalone CS2 and CS3 applications, Adobe Stock Photos provides a convenient way for creative professionals to search across multiple image libraries at once and purchase royalty-free images.</p></blockquote>
 <p>Adobe Stock Photos will remain fully operational, including search and comp download, until March 3, 2008. After March 3, 2008, the search feature will be disabled. Comp images downloaded before the search feature is disabled can be purchased through Adobe Stock Photos until March 31, 2008. You can also view your complete Adobe Stock Photos order history from your Adobe Stock Photos account untill March 31, 2008.</p>
 <p>After March 31, 2008, you will no longer be able to purchase images from Adobe Stock Photos. Here are the steps you might need to take before this date:</p>

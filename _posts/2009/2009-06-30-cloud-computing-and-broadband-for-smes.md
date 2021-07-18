@@ -41,7 +41,7 @@ excerpt: This looks to be a perfect solution wherein you pay-as-you-go. Rather t
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/sevenmorris/3005381373/">Seven Morris</a></cite></p>
 <p class="caption"><em class="title">Cloud Computing</em>Have you voted?</p>
 </div>
-<p><!--more--></p>
+
 <p>Amongst a lot of goodies that the fast internet speeds have brought include the ability to work on the clouds. Yes, we're talking about broadband and the post-broadband world and it's hand in bringing up cloud computing. Off late, the ability to cloud-source an organization's data instead of buying self hosted applications has seen a significant rise amongst SMEs. </p>
 <p>One of the prime reasons for the same is the price factor. The ease of scalability and setup is the second. Another significant reason behind the rat race of adopting cloud computing technology is the recession. The companies which have been hit by the wave have realized that by clinging on to the cloud, they can get access to some kick ass business applications and can drastically boost their infrastructure resources, all at a negligible cost.</p>
 <p>Cloud computing incorporates providing <em>software, platform and infrastructure as-a-service</em>. Wikipedia has a classic definition of what is cloud computing.</p>

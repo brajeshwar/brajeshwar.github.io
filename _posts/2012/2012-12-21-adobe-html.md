@@ -39,7 +39,7 @@ permalink: "/2012/adobe-html/"
 <p>Flash is a good solution for the right purpose and still is. Actually, HTML5 is way behind when it comes to lots of capabilities what Flash can do. But that's it, let Flash shine where it can and leave alone where it's not its job anymore.</p>
 <p><a href="http://html.adobe.com/edge/animate/">Edge Animate</a> - really? This brings back unpleasant memories of the Skip Intro days. Do the web need to recreate what Flash did but with CSS? Adobe's Edge Animate can help you create Flash-esque Animation and spit out CSS and Javascript. The very idea of spitting our machine written CSS and Javascript sounds scary to me - a web full of 'blings, bells and whistles' but done in 'html5'?</p>
 <p>I'm of the opinion that you don't really need that bad to animate elements on a website. In case of websites that needs so many moving parts, they'd rather be doing it with specialized tools or Javascript Experts doing the job, not by a tool that spits out JS codes for you!</p>
-<p><!--more--></p>
+
 <h2>Adobe & HTML</h2>
 <p>However, in the same breath, I'd like to appreciate Adobe for their effort with HTML, <a href="http://html.adobe.com/webstandards/">Web Standards</a> and <a href="http://html.adobe.com/opensource/">Open Source</a>. It is too early to say anything concrete but I'll believe that they have very good intentions for the web.</p>
 <h3>Edge Reflow</h3>

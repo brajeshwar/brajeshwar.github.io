@@ -36,7 +36,7 @@ excerpt: Acrobat X shall allow companies and governments to not just convert doc
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.praval.com/">Praval</a></cite></p>
 <p class="caption"><em class="title">Acrobat X</em>Now with custom PDF Portfolios, guided Actions, export to Word, Excel, Sharepoint Integration and more.</p>
 </div>
-<p><!--more--></p>
+
 <p>Adobe Systems India today launched a new range of its Acrobat software called <a href="http://www.adobe.com/products/acrobat.html">Acrobat X</a>. I was glad to be part of the launch event, in New Delhi. </p>
 <p>The new range of products shall allow users to create, share, review and make high quality, interactive content in today's competitive business environments, hence, increasing productivity and a tighter collaboration with co-workers and collaborators. Acrobat X shall allow companies and governments to not just convert documents into PDFs but, build, share and incorporate rich media content within the PDFs while leveraging security and authentication features. </p>
 <p>With Acrobat X, a wide range of file types such as Excels, Word, Flash, Photoshop, etc. can be combined together and put to use. Interactive forms can be used to collect data quickly and export to spreadsheets for analysis.</p>

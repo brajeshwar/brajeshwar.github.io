@@ -30,7 +30,7 @@ excerpt: Adobe MAX 2007 (US) will be held between Sep 30 and Oct 3, 2007 at McCo
 ---
 <p>Adobe MAX, the annual Adobe conference, is the premier educational forum for designers and developers worldwide. <a href="http://adobemax2007.com/">MAX 2007</a> will offer an unprecedented opportunity to learn new skills, explore emerging technologies, and connect with peers in the Adobe user community. At MAX 2007, independent industry leaders, as well as Adobe engineers and developers, will provide intensive and comprehensive training that will help you create truly engaging experiences.</p>
 <p>Visit the Adobe MAX 2007 Blog for more details.</p>
-<p><!--more--></p>
+
 <p>MAX 2007 (US)<br />
 Sep 30 - Oct 3, 2007<br />
 McCormick Place West<br />

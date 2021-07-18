@@ -38,7 +38,7 @@ excerpt: The future of Linux can be predicted based on the fact that it stands t
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/keepthebyte/154140347/">Keepthebyte</a></cite></p>
 <p class="caption"><em class="title">Linux</em>Beating the heat this summer!</p>
 </div>
-<p><!--more--></p>
+
 <p>The trends in the IT market have changed consistently with time. Today, technology becomes obsolete faster than ever before. Open source has become an evolution in itself. The presence of Linux and its role in market is difficult to predict as the computing market is exploding today. Experts like <a href="http://en.wikipedia.org/wiki/Alan_Cox">Alan Cox</a> are sure about its sustainability and say, </p>
 <blockquote><p>Linux has good security features which makes it ideal for things like call center environments. Building a thin client Linux environment with hotdesking, sensible shared file store and good network efficiency is a golden opportunity.</p></blockquote>
 <p><strong>The major advantages that Linux has are;</strong></p>

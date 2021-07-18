@@ -33,7 +33,7 @@ excerpt: Linux is an OS that conjures up images of computer nerds hunched over t
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Anonymous</cite></p>
 <p class="caption"><em class="title">Linux</em>Get Cerfified.</p>
 </div>
-<p><!--more--></p>
+
 <p>Linux is an OS that conjures up images of computer nerds hunched over their keyboards in the quest for digital divinity while following the doctrine of open source and free software for all. Such evangelistic ideals and hallowed images have often paved the way for computer engineering students to follow certifications such as the Microsoft series or even the vendor-specific RedHat certifications amongst those inclined towards certifying their skills in Linux.</p>
 <p><strong>What options does one have?</strong></p>
 <p>To be rather precise, the answer is five -- <a href="http://www.comptia.org/">CompTIA</a> (Computing Technology Industry Association), <a href="http://www.lpi.org/">LPI</a> (Linux Professional Institute), <a href="http://www.linuxcertification.org/">SAIR Linux</a>, <a href="http://www.novell.com/training/certinfo/">Novell Corporation</a> and <a href="http://www.redhat.com/certification/">Red Hat</a>. If you are wondering whether you should go with "Eeenie Meenie Mynie Mo" to chart your career path, allow me to elaborate and educate you on your options.</p>

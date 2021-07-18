@@ -33,7 +33,7 @@ permalink: "/2011/facebook-returns-to-hacker-roots-with-open-source-data-center-
 ---
 <p>In a surprise move Facebook has gone back to their "hacker roots" -- their words not mine, by releasing their data center designs to the public. In a project dubbed the <a href="http://opencompute.org/">Open Compute project</a>, Facebook has busted open the secretive world of data centers by making their designs public and open source.</p>
 <blockquote><p>We decided to honor our hacker roots and challenge convention by custom designing and building our software, servers and data centers from the ground up.</p></blockquote>
-<p><!--more--></p>
+
 <p><iframe width="640" height="390" src="http://www.youtube.com/embed/bCZwgtC_TZA" frameborder="0" allowfullscreen></iframe></p>
 <p>These new data center designs from Facebook cost 24% less to build than traditional data centers and consume 38% less power. Using an evaporative cooling system, versus traditional pushed air, they are able to reduce the carbon footprint of data centers.  </p>
 <p>Facebook's OpenCompute project is encouraging others to be more environmentally conscious in their data center designs, and more open. Many companies are now beginning to follow in step, including <a href="http://www.rackspace.com/">Rackspace</a>, <a href="http://www.zynga.com/">Zynga</a> and others.  Many industry analysts wonder if this will be the push that Google needs to stop being so secretive about their data centers; Google is a critical step to opening the technology as they are the biggest data center users on the planet.</p>

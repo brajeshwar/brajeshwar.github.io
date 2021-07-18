@@ -37,7 +37,7 @@ excerpt: Graphic tablets permits drawing just like one would draw with a pencil 
 ---
 <p>With the iPad taking over newsrooms world over, let us take a look at a different kind of tablet: the graphics tablet. Also known as a digitizing tablet, graphics pad or drawing tablet this is an input device that permits drawing just like one would draw with a pencil and paper. More bland uses include entering handwritten signatures while creative license allows one to create absolute masterpieces that would wake the Renaissance masters from their graves to paint divine masterpieces once again using this amazing tool.</p>
 <p>Ordinarily consisting of a flat surface upon which you are invited to "draw" an image using an attached stylus or pen-like tool, tablets sometimes have a bunch of buttons attached for auxiliary functions. The image is displayed on the screen rather than appearing on the tablet itself. Some tablets however, come as a fully functioning screen that interacts directly using the stylus.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2010/02/wacom-tablet.jpg" alt="Wacom Tablet" style="float: right; margin: 0 0 1em 1em; border: 0 none;" /></p>
 <p><strong>Flavors</strong></p>
 <p>Often used by artists as a general replacement for a mouse as the primary pointing and navigation device, the use of tablets is ubiquitous in the digital artist community. Out of experience, I'm going to suggest <a href="http://www.wacom.com/">Wacom</a> models for different types of users.</p>

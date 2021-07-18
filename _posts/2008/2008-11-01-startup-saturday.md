@@ -44,7 +44,7 @@ excerpt: An initiative by Headstart to provide entrepreneurs in India with a mon
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/williamli1983/258377108/">William</a></cite></p>
 <p class="caption"><em class="title">Startup</em>Are you ready to Stay Hungry, Stay Foolish?</p>
 </div>
-<p><!--more--></p>
+
 <p>Spearheaded by the team behind <a href="http://headstart.in/">HeadStart.in</a>, <a href="http://startupsaturday.in/">Startup Saturday</a> is an innovative and engaging event held across cities in India, aimed at providing budding Entrepreneurs and Startups an opportunity to discuss, present, network and learn from peers, prospective customers, adopters, partners and investors.</p>
 <p>Currently Startup Saturdays are regularly held at -- <a href="http://bangalore.startupsaturday.in/">Bangalore</a>, <a href="http://mumbai.startupsaturday.in/">Mumbai</a>, <a href="http://hyderabad.startupsaturday.in/">Hyderabad</a>, <a href="http://pune.startupsaturday.in/">Pune</a>, <a href="http://delhi.startupsaturday.in/">Delhi</a>, <a href="http://ahmedabad.startupsaturday.in/">Ahmedabad</a>, <a href="http://chennai.startupsaturday.in/">Chennai</a>.</p>
 <blockquote><p>The fundamental idea is to have all parts of the innovation ecosystem interact with each other with high frequency and through rich conversation. We strongly believe that this would lead to faster evolution of the entire ecosystem.</p></blockquote>

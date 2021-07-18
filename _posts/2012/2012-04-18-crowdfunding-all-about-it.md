@@ -29,7 +29,7 @@ permalink: "/2012/crowdfunding-all-about-it/"
 <p>A new chapter has begun with the funding and raising up of startups. The much anticipated <a href="http://brajeshwar.wpengine.com/2012/tech-startups-get-much-needed-funding-boost-with-jobs-act/">JOBS (Jumpstart Our Business Startups) Act</a> was signed by US President, Barack Obama. The new bill gives life to startups to raise money from multiple investors. </p>
 <p>This concept is being called -- <a href="http://en.wikipedia.org/wiki/Crowd_funding">CrowdFunding</a>.</p>
 <p>While CrowdFunding allows taking help from many lending hands, it also increases the risk of managing these many hands. One of the biggest challenges handled by corporate CEOs is managing the interests of major investors. It also poses many questions regarding the source of funding, managing the overall enterprise virtually, etc.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2012/04/crowdfunding.jpg" alt="CrowdFunding" /></p>
 <h3>Why is CrowdFunding Required?</h3>
 <p>* CrowdFunding demands the cooperation and trust among the people who network together to pool financial and non-financial resources to propel startup companies and poorly funded organizations.<br />

@@ -34,7 +34,7 @@ excerpt: The 2009 edition of Great Indian Developer Summit features focused sess
 ---
 <p>I got a Press Release of the upcoming GIDS '09 and here is an excerpt.</p>
 <p>The summit's program covers Java, REST, Unit testing, Groovy, Spring, Struts 2.0, SOA, Cloud Computing, Web Services, JRuby, RoR, Ruby, JVM, JPA, Apache, Grails, Agile, HTML 5, Ajax, ADO .NET, C# 4.0, C# vNext, Visual Studio, ASP .NET Ajax 4.0, T-SQL, Silverlight and more through various interactive discussion formats. High-profile speakers at the summit include Craig McClanahan (Java Studio Creator), Venkat Subramaniam (Agile Developer Founder), Beat Schwegler (S+S, Web 2.0, SOA), Ola Bini (JRuby Core Developer and Ruby), Nikhil Kothari (ASP.NET & .NET, Silverlight), Dr. Jim Weber (SOA, REST), Howard Lewis Ship (Apache Tapestry Creator), Jonas Jacobi (Founder of Kaazing), Chad Hower (Cosmos, ADO .NET).</p>
-<p><!--more--></p>
+
 <p>GIDS is the biggest gathering of software developers from Java/J2EE, Microsoft computing technologies, Rich Internet Applications (RIA), Web 2.0, Ajax, Agile, SOA, and Enterprise IT. Register now to secure your place at this premier learning, networking and deal-making forum.</p>
 <p><strong>DETAILS</strong></p>
 <p>* Summit Dates: April 22-25 2009 (Wed Through Sat)<br />

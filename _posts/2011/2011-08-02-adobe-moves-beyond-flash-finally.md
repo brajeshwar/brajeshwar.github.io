@@ -32,7 +32,7 @@ permalink: "/2011/adobe-moves-beyond-flash-finally/"
 <p>Adobe is finally moving beyond Flash. Sort of.</p>
 <p>Adobe is giving up their sole focus on Flash and entering the exciting world of HTML 5. Before you get too excited -- they are only releasing a first preview of their new HTML 5 tryout -- <a href="http://labs.adobe.com/technologies/edge/">Edge</a>. Could this be Adobe's first foray into the eccentric world of internet web standards? </p>
 <p>Despite their efforts to push Flash on everyone -- including iOS users -- Adobe seems to be recognizing the abilities of programming, outside of their own brainchild Flash. This very likely comes after several technologists describe Adobe's clinging to Flash a "living in the past".</p>
-<p><!--more--></p>
+
 <p><iframe title="AdobeTV Video Player" width="640" height="395" src="http://tv.adobe.com/embed/64/10590/" frameborder="0" allowfullscreen scrolling="no"></iframe></p>
 <p>Or perhaps Adobe simply got sick of being Apple users' punching bag.</p>
 <p>According to Adobe's Web Pro group product manager Devin Fernandez, Flash is not dead, the company is simply diversifying with HTML 5 -- a proven strong web-standard. "What we've seen happening is HTML is getting much richer. We're seeing more workflow previously reserved for Flash being done with Web standards," says Fernandez. </p>

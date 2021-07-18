@@ -57,7 +57,7 @@ excerpt: Proto.in brings together entrepreneurs, aspiring entrepreneurs, veteran
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://www.deviantart.com/">DeviantArt</a></cite></p>
 <p class="caption"><em class="title">Proto.in</em>The Startup Community Event in India.</p>
 </div>
-<p><!--more--></p>
+
 <p>Proto.in is the premier Startup Community Event that happens in India. It is about giving entrepreneurs a platform to express their visions and showcase their imagination, with a working prototype, for the world to see. It's about increasing partnership, collaboration and mindshare among a distinguished, qualified and well-connected audience. Proto.in provides a unique platform for promising startup talent to communicate their creativity and innovation potential.</p>
 <p><a href="http://proto.in/">Proto.in</a> strive by their mantra -- <em>Create, Contribute, Collaborate</em>.</p>
 <p>Proto.in come together once in every six months, bringing together entrepreneurs, aspiring entrepreneurs, veterans, investors, technologists, bloggers, mentors, bankers, media professionals, hackers, mavericks, students, and even folks from the government bodies such as DST, NASSCOM, TiE, IAMAI, to build a cohesive and sensible ecosystem in India.</p>

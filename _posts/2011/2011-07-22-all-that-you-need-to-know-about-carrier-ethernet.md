@@ -27,7 +27,7 @@ author:
 permalink: "/2011/all-that-you-need-to-know-about-carrier-ethernet/"
 ---
 <p>A changing economy cannot always witness a constant growth in any sector. Very few industries have taken a strong place in the market and stood the tests of time. Industry analysts are predicting a great future in - <a href="http://searchtelecom.techtarget.com/definition/Carrier-Ethernet">Carrier Ethernet</a>.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="390" src="http://www.youtube.com/embed/SfXxhnSPBAs" frameborder="0" allowfullscreen></iframe></p>
 <p><strong>History</strong>  </p>
 <p>Carrier Ethernet has become dominant in most Enterprise and Business Networks. It was invented by Bob Metcalfe for the Xerox, Palo Alto laboratories in 1972. It is a fairly simple protocol that has scaled to hundreds of thousands of times faster speeds and consistently been able to adapt to meet the needs and demands of new markets.  Ethernet has become the default standard for the LAN. It has been continuously re-inventing itself.</p>

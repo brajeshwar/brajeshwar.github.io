@@ -29,7 +29,7 @@ author:
 permalink: "/2011/will-appsgeyser-just-add-to-the-clutter-of-useless-android-apps/"
 ---
 <p>A new Android application has just come out that should have a huge impact on the Android community. <a href="http://www.appsgeyser.com/">AppsGeyser</a> is an application that can take any web content and turn transform it into new applications. To many Android developers this sounds like a great tool.</p>
-<p><!--more--></p>
+
 <p>Personally, I am skeptical of the quality AppsGeyser is going to offer.</p>
 <h3>Quantity of Android apps is overwhelming</h3>
 <p>I think Appsgeyser will be a useless application used to create even more useless Android apps. Many people feel that Android apps can be interesting without actually serving a purpose. Well, after seeing thousands of new flashlight apps delivered to the market, I have begun to think that quantity is beginning to take precedence over quality.</p>

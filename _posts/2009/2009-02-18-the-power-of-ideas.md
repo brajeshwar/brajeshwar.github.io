@@ -38,7 +38,7 @@ excerpt: The Power of Ideas, an initiative by the Economic Times, seeks anyone a
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">Capital Idea</em>How entrepreneurs can access capital & bring their business ideas to life.</p>
 </div>
-<p><!--more--></p>
+
 <p>I received an email yesterday for a precursor meet to <a href="http://ideas.economictimes.com/">The Power of Ideas</a>. The Economic Times is behind this initiative and they had organized today's meet with the focus on "Capital Idea" -- How entrepreneurs can access and bring their business ideas to life.</p>
 <p>If not for the fact that it was rush-rush, with not much room for the supposedly free-flowing discussion, the whole thing turned out to be really good and informative. Or maybe, just that being an Entrepreneur, I just had this inkling feeling to ask lots of un-answered questions to VCs and alike.</p>
 <p><em>The Speakers, the bloggers and the Panel moderator discussed about;</em></p>

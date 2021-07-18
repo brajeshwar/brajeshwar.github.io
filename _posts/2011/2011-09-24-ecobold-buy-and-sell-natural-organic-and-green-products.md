@@ -29,7 +29,7 @@ permalink: "/2011/ecobold-buy-and-sell-natural-organic-and-green-products/"
 ---
 <p><a href="http://www.ecobold.com/"><img src="/static/2011/09/ecobold-logo-230x100.png" alt="Ecobold" class="alignright" /></a></p>
 <p><a href="http://www.ecobold.com/">Ecobold</a>, a fresh Startup, is an online marketplace that makes it as easy as possible to buy and sell natural, organic and non-toxic products. Ecobold hand selects products that keep you, your family, and the earth healthy. In addition, Ecobold makes it easier to sell such products by offering merchants the best terms of any similar marketplace.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/rq-wdHqIHnA" frameborder="0" allowfullscreen></iframe></p>
 <p><em>Steffany talks about <a href="http://www.youtube.com/watch?v=rq-wdHqIHnA">Green Cleaning Products</a> in one of <a href="http://www.youtube.com/user/EcoBold">her many videos</a> for Ecobold.</em></p>
 <p>Going green has gone mainstream, with a reported 64% of the population now actively looking for green products - and justifiably so. In fact, prolonged exposure of up to 150 chemicals found in many home cleaning supplies are connected to allergies, birth defects, cancer, and psychological disorders.</p>

@@ -38,7 +38,7 @@ author:
 permalink: "/2010/tech-worlds-top-10-mistakes-series-i/"
 ---
 <p>There can never exist an industry in this world that can survive from making mistakes. And an industry that needs to be very meticulous in fabricating every product, service or solution can also not escape the ugly part of making blunders - I am talking quite obviously of the technology industry. There can be errors made by any and every person in this planet and technologists also cannot get away with a clean chit. Take the beginning of this very financial year for example; there was the counterfeiting of the Apple <a href="http://www.macinspector.com/2010/04/iphone-4-leak-t.html">prototype</a> iPhone. Also, reported during the same month was the blunder made by <a href="http://www.v3.co.uk/v3/news/2261943/mcafee-apologises-update">McCafe</a>. Though it is a cliche statement it is worth mentioning here that 'to err is human' but should we be kind enough so as to 'forgive the blunderers and be divine'.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2010/12/simpson-mistakes.gif" alt="Mistakes" class="alignright" /></p>
 <p>Let's take a look at the list of the top 10 technology mistakes and judge whether they can be forgiven:</p>
 <h3>10. Windows launch of Millennium Edition</h3>

@@ -40,6 +40,6 @@ excerpt: 'The Laundry Warrior: An Asian warrior assassin finds peace, contentmen
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.cultureunplugged.com/">Culture Unplugged</a></cite></p>
 <p class="caption"><em class="title">The Laundry Warrior</em>An Asian warrior assassin finds peace, contentment and perhaps love in a forgotten western town on the edge of the desert.</p>
 </div>
-<p><!--more--></p>
+
 <p><a href="http://www.cultureunplugged.com/">Culture Unplugged</a> have released a new festival -- Green Unplugged -- with over 400 new films and a community site for film makers from the last festival. They've also added a NEWS section -- <a href="http://www.cultureunplugged.com/linktv/">LinkTV</a>.</p>
 <p>Culture Unplugged has also just finished production of a mega Hollywood Movie -- <a href="http://www.imdb.com/title/tt1032751/">The Laundry Warrior</a> -- in partnership with LORD of the RINGs producer, 7 times Oscar, Barrie Osborne. The initiative is non-profit, for films and film makers to make a better world.</p>

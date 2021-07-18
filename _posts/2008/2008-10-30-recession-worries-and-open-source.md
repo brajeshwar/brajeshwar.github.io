@@ -41,7 +41,7 @@ excerpt: The Great October Crash 08 is one of the most important events for all 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/tonythemisfit/2657608264/">Tony the Misfit</a></cite></p>
 <p class="caption"><em class="title">Recession</em>Okay, so it does have something to do with mental abilities!</p>
 </div>
-<p><!--more--></p>
+
 <p>"<em>The Great October Crash 08</em>" is one of the most important events for all economists and financiers across the globe to study and understand the implications on various other sectors of businesses. There are tough times ahead for all businesses and the rock bottom world economy isn't also helping the cause. </p>
 <p>For companies and managers, this might be the toughest time of their careers as they know what to do but unable to understand how to do. It is not practical for companies to reduce budgets as they cannot cut on the promotions, payments of the work force, or for that matter, anything which is important to the company. The most logical thing to do here is to without new servers and new software for a while. Open Source vendors are indeed the saviors at this time as they can keep the companies performing on the IT front without much consideration. </p>
 <p>There have been a lot of innovations of the open source products and services during the last few years. It is very refreshing to see that Open source products can very well be compared to other closed source counterparts on different parameters such as reliability, usage, rich content etc. and the differences between the two is almost nil. Some avid supporters would also believe that the Open source products are better than their counterparts. </p>

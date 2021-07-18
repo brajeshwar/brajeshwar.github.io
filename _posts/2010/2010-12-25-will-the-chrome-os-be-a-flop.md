@@ -33,7 +33,7 @@ permalink: "/2010/will-the-chrome-os-be-a-flop/"
 <p>Google has recently developed the <a href="http://www.google.com/chromeos/">Chrome Operating System</a>. The intention of this technology is to make traditional desktop operating systems obsolete. That's a worthy goal, but the operating system may actually be Google's <a href="http://www.infopackets.com/news/business/google/2010/20101221_more_analysts_dismiss_google_chrome_operating_system.htm">first big flop</a>. Google brags that the system is going to be fast, simple and secure. Unfortunately, many web technologists don't find these cliche statements to be very impressive.</p>
 <h3>Chrome is not for everyone</h3>
 <p>If you were hoping to log into your Google account and download the Chrome Operating System, you are going to be out of luck. The OS is not going to be made available to the public. The open source Chromium software can be available to anyone for compilation. Many users are not happy to use an operating system they can't download. Perhaps they need to adapt to the next generation of web technology, but there are larger concerns for web users.</p>
-<p><!--more--></p>
+
 <p><a href="http://www.google.com/chromeos/"><img src="/static/2010/12/google-chrome-logo.jpg" alt="Chrome OS" class="alignright" /></a></p>
 <h3>The concept of cloud-centric operating systems might be ahead of our time</h3>
 <p>An online operating system is a great idea, but how much computing power would be needed for it operate effectively? Also, the broadband connection would probably only be powerful enough to run the OS itself. What can Google possibly do to address these issues? Not much, unless they want to try their hand at the hardware architecture and utility businesses.</p>

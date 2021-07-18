@@ -27,7 +27,7 @@ excerpt: '"Millions use our software. A chosen few develop it." That is the head
   that I saw on the Macromedia India website.'
 ---
 <p>"Millions use our software. A chosen few develop it." That is the head tagline that I saw on the <a href="http://www.macromedia.com/go/india/" title="Macromdia India">Macromedia India</a> website. I had remained totally silent about the Macromedia Development center at Bangalore, India because none at Macromedia mentioned that officially. But now I think everything is official and open. If you are looking for job opportunities, head over the site and apply for the same. </p>
-<p><!--more--></p>
+
 <p>I remember that phone call (an excerpt);</p>
 <p><em>Lady</em>: Do you want to work for a company which is your dream company?<br />
 <em>Me</em>: May I know the name of the Company?</p>

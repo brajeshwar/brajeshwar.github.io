@@ -32,7 +32,7 @@ author:
 permalink: "/2011/quanik-a-not-for-profit-firm-for-bloggers/"
 ---
 <p>There are several <a href="http://en.wikipedia.org/wiki/Nonprofit_organization">not-for-profit organizations</a> that function in this world and most of them have one primary purpose for which they are formed. To make profits is definitely not their primary purpose. It could be for a social cause, a charitable event, or it could be an organization that educates people for free. There are a plethora of purposes for which a non-profit firm could be started. But this one is unique. <a href="http://www.quanik.com/">Quanik</a> is an online firm that offers anyone with huge passion to make it big in the blogging fraternity. Though their Profile on their website reads as, "A Firm that educates people on the value of self-employment", their major program or service rendered is in 'blogging'.</p>
-<p><!--more--></p>
+
 <h3>What does Quanik do for you?</h3>
 <p>Quanik does not intend to make money out of rendering any of their services, but their primary purpose is to ensure that writers (bloggers) of any kind who cannot afford a web domain of their own to have free domain and unlimited bandwidth web hosting accounts, so they can kick-start their blogging career on high-note. It is a known fact that for beginners and amateur bloggers, it becomes a little difficult to overcome certain hurdles and a achieve successful blogging feat. Quanik helps all you blogging aspirants by reducing the hurdles and the risk of losing focus due to those hurdles, by providing proper guidance and help wherever required.</p>
 <p>This particular service is named -- <a href="http://www.quanik.com/projects.html">Talent Bloggers Program</a> by Quanik and this program has certain restrictions. </p>

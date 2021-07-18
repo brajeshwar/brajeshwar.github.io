@@ -30,7 +30,7 @@ author:
 permalink: "/2012/new-updates-from-google-for-android/"
 ---
 <p>Mobile phones that run on <a href="http://developer.android.com/guide/basics/what-is-android.html">Android OS</a> have the advantage to access innumerable number of Android Applications. Ever since Google has taken control on Android operating system, rapid development has taken place. Smart Android applications have not only enhanced functionalities of mobile phones but also changed the lifestyles of millions of people across the globe. Google has been improving social application, Google+ for Android quite often to ensure that there will be steady and stable growth. Google has delivered updates for <a href="https://market.android.com/details?id=com.google.android.apps.plus">Google+ for Android</a> application. </p>
-<p><!--more--></p>
+
 <p><a href="https://market.android.com/details?id=com.google.android.apps.plus"><img src="/static/2012/02/google%2Bandroid.png" alt="Google+ for Android" /></a></p>
 <p>Let us learn more about these updates:</p>
 <p>* New updates are intended to enhance existing application&rsquo;s features and boost its performance. Now, it is possible to find who has liked (+1'd) your posts or your comments. Earlier it was confined to find the number of +1d's only. As per the new update, you can find the entire list of users who had liked your comments or posts. You can find their names and profile photos as well.<br />

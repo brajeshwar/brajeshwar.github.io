@@ -34,7 +34,7 @@ excerpt: A robust SQL query-building tool that speeds and simplifies the creatio
   and menu-driven interface.
 ---
 <p>A robust SQL query-building tool that speeds and simplifies the creation of dynamic Web pages in Macromedia Dreamweaver&reg; MX, Advanced Query Wizard simplifies Web application development by enabling designers and developers to insert dynamic data, such as information on sales, pricing, or availability, via an intuitive graphical and menu-driven interface.</p>
-<p><!--more--></p>
+
 <p>The extension automatically generates the correct SQL code necessary to perform extracts, joins, filters, groups, summaries, and other complex selection criteria quickly with a simple, click-and-drag process. Advanced Query Wizard is available from <a href="http://www.advancedextensions.com/">http://www.advancedextensions.com/</a> with an introductory price of $99.99 till May 1, 2003, otherwise it is reasonably priced at just $129.95. You may download the installer from their <a href="http://www.advancedextensions.com/downloads.htm">download</a> page.</p>
 <p>Advanced Query Wizard's user-friendly format cuts programming time for novice<br />
 and advanced users alike. Its graphical and menu-driven interface automatically<br />

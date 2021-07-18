@@ -38,7 +38,7 @@ permalink: "/2012/jobs-and-hiring-youre-doing-it-all-wrong/"
 <figcaption>A dying fish.</figcaption>
 </figure>
 <p>On the part of the Online World, I was browsing through <a href="http://hackerstreet.in/">Hackerstreet</a>, I stumbled upon few Job Postings (<a href="http://jobs.hasgeek.com/view/tcv8h">Designers</a>, <a href="http://jobs.hasgeek.com/view/mauqj">RubyonRails</a>) and I'm rather amused by the plight of the hiring and recruiting realm of Internet Companies. So, here is my personal opinion about the state of the Companies trying to hire 'ninjas', 'gurus', 'hackers', 'kick-ass' designers, developers and janitors.</p>
-<p><!--more--></p>
+
 <p>I'll rather classify this as a plea to better our design, development and product community, than a rant to what's currently happening. So, feel free to form your opinion, ignore it, take it with a pinch of salt or hit me with your tantrum of sledgehammer net-slangs. Here we go --</p>
 <h3>You're doing it all wrong.</h3>
 <p>If you've been "cast away" for quite a while, let me tell you - it's a well-known fact that a technical job posting written with an English Literature prose do not work, nor does the overdose of adjectives. If you over-do, over-emphasize and sugar-coat your details, you'll definitely get very matching candidates -- those that over-stretch their skills, over-emphasize their XML, JSON, 'SOAP' expertise. What I interpret from most of these job listings are that they're looking for either the <a href="http://brajeshwar.wpengine.com/2011/desingineer-the-mythical-person-every-startups-are-looking-for/">Mythical Desingineer</a> or the hip <a href="http://www.quora.com/How-does-a-programmer-become-a-brogrammer">Brogrammer</a>.</p>

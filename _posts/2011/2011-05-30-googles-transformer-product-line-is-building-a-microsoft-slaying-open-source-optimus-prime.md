@@ -45,7 +45,7 @@ permalink: "/2011/googles-transformer-product-line-is-building-a-microsoft-slayi
 ---
 <p>If you're a tech geek like me you undoubtedly follow Google - and you also probably know all the transformers by heart. By using Transformers as an allegory we can put Google's transformation into context. </p>
 <p>Google has been acquiring companies, technology and people -- aggressively, and now they are joining them all together to build a super-powered Microsoft fighting machine. And they now have Microsoft's Decepticons in their sights. In fact if you look at Google's product line, you begin to see that Google is purposefully encroaching into Microsoft territory -gearing up for the battle Royale of the decade. </p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/05/google-transformer.jpg" alt="Google Transformer" class="alignright" /></p>
 <p><em>The transforming elements:</em></p>
 <h3>Google Search</h3>

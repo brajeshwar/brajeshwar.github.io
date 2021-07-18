@@ -39,7 +39,7 @@ excerpt: Outsourcing to a virtual assistant will dramatically reduce the time yo
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://georgiavirtualassistants.com/">GeorgiaVirtualAssistants</a></cite></p>
 <p class="caption"><em class="title">Virtual Assistants </em>Helping you get things done.</p>
 </div>
-<p><!--more--></p>
+
 <p>The world of Online Business has picked up leaps and bounds. Having penned down an article on <a href="http://brajeshwar.wpengine.com/2010/virtual-office-services-on-a-high/">Virtual Office Services</a>, there seems to be yet another online service that will facilitate the functioning of entrepreneurs and home-based businesses. Virtual Assistant is a service offered by various online firms wherein professional experts take on jobs of Personal Secretaries/Assistants performing secretarial tasks related to administration, creative (social) and even technological services (computer-related).</p>
 <h3>How does it work then?</h3>
 <p>The working structure of such a service could be perceived as quite tedious, however it needs to be mentioned that it is exactly the opposite of being tedious -- it is in fact quite simple. An entrepreneur or a business professional who is in need to avail the services of a Virtual Assistant is required to log on to any of the web sites offering such virtual assistant services and post a detailed requirement.</p>

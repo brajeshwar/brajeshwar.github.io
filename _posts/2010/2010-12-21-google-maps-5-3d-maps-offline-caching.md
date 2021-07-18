@@ -32,7 +32,7 @@ permalink: "/2010/google-maps-5-3d-maps-offline-caching/"
 * <strong>Rotating</strong>: Twist with two fingers to rotate the map. After tilting to see 3D buildings, rotate around them to gain a new perspective from any direction.<br />
 * <strong>Smooth Zooming</strong>: Slide two fingers together or apart, and see the map and labels continuously scale to any zoom level, stopping when your fingers stop.<br />
 * <strong>Compass Mode</strong>: Center the map on your location, and then tap the compass button in the top right corner. The map will flip into 3D mode and start rotating to match your perspective, while still keeping all the labels upright and readable.</p>
-<p><!--more--></p>
+
 <h3>Offline Caching & Re-routing</h3>
 <p>The new 3D view makes maps more intuitive and easier to use, but the fact that Google no longer has to download map images from its servers and vector-based maps require 100 times less data for all zoom levels means it is now feasible to cache data. Instead of a static set of maps installed locally, Google Maps will automatically start caching the areas you visit the most when your device is plugged in and connected to WiFi/3G/Edge (while charging). At the moment, you cannot manually control caching, but it's an step toward an offline Google Maps.</p>
 <p>Offline rerouting to Google Maps Navigation now allows you to quickly get back on track, if you miss a turn along the way and don't have an Internet connection. Of course you'll still need an Internet connection to start a route. </p>

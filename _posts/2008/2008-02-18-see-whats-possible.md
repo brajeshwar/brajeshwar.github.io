@@ -39,7 +39,7 @@ excerpt: Compose an engaging 15-second or less animation or motion graphic video
 <p class="credit"><abbr class="type" title="Photograph">Illustration</abbr> From <cite>Cut &amp; Paste</cite></p>
 <p class="caption"><em class="title">See What's Possible</em>Compose an engaging 15-second or less animation or motion graphic video of the Photoshop brand logo that illustrates the theme of "See What's Possible."</p>
 </div>
-<p><!--more--></p>
+
 <p>In partnership with Cut&Paste, Adobe offers a challenge to designers, web pros, photographer, animators -- compose an engaging animation or motion graphic video incorporating the Photoshop brand logo that illustrates the them of <a href="http://swp.cutandpaste.com/">See What's Possible</a>.</p>
 <p>The Challenge is looking for work that breaks new ground, work that is visually unbelievable and can be adapted for use in different (shorter) time increments. The emphasis is to look for a visual expression of the idea "Photoshop: See What's Possible." The maximum duration of animation, motion video is <strong>15 seconds</strong>. Your work needs to be created predominantly with Photoshop, Flash, and/or After Effects.</p>
 <p><strong>TIMING</strong></p>

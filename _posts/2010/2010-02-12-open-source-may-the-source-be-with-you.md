@@ -34,7 +34,7 @@ excerpt: The promise of open source is simply better quality, higher reliability
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Anonymous</cite></p>
 <p class="caption"><em class="title">Open Source</em>May the source be with You</p>
 </div>
-<p><!--more--></p>
+
 <p><strong>A primer on "Why Open Source?"</strong></p>
 <p>A development method for software that harnesses the power of distributed peer review and transparency of process is how it is often defined by The Open Source Initiative (OSI). This non-profit corporation was formed to educate about and advocate for the benefits of open source and to build bridges among different constituencies in the open-source community. The promise of open source is simply better quality, higher reliability, more flexibility, lower cost, and an end to predatory vendor lock-in.</p>
 <p><strong>A Case Study: Android</strong></p>

@@ -32,7 +32,7 @@ author:
 permalink: "/2011/5-easy-ways-to-alienate-people-and-screw-up-your-life-with-your-smartphone/"
 ---
 <p>Move over dogs, Smartphone's are officially man's new best friend. Smartphone's are not only there for you when you need them, they also provide countless hours of mind-numbing entertainment via their pointless apps. But, are you giving enough attention to your digital companion? There are 5 critical steps to sealing the matrimonial tie with your smartphone; starting with alienating then eliminating all the frivolous people in your life.</p>
-<p><!--more--></p>
+
 <h3>1. Look at your Smartphone First Thing in the Morning</h3>
 <p>Yawn. Scratch yourself. Check your iPhone. </p>
 <p>If this sounds like your morning routine then you are well on your way to alienating people and screwing your life up. Studies have shown that people who look at their smartphone first thing in the morning are wiring themselves for stress for the day and beginning their daylong process of self-distraction and alienation. This initial interaction will ensure that your day remains fully committed to your phone and that you will ignore distracting elements like family and driving.</p>

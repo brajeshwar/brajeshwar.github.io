@@ -29,7 +29,7 @@ author:
 permalink: "/2010/the-ipad-insanity-continues/"
 ---
 <p>Many technologists felt that a product that was essentially a hybrid of a cell phone and a laptop couldn't possibly take off.  They have to hold their tongues now, as Apple's iPad has clearly taken on a large following. In fact, it's inception marked the largest turnaround for a major corporation in business history. The iPad has been so successful that Apple has racked their brains for every possible idea they can come up with to leverage those sales even further.</p>
-<p><!--more--></p>
+
 <p>Some might think that Apple is going too far. But customers seem to be receptive to their marketing efforts and fanboys have devoured every iPad that has come their way.</p>
 <h3>Do customers need an iPad for every member of the family?</h3>
 <p>One would think that a single tablet could be enough for a house. After all, these families still have their laptops, personal computers and cell phones. Yet, some families have started to buy iPads for every member of the family according to <a href="http://news.carrentals.co.uk/companies-making-a-killing-of-his-and-her-tablets-34230025.html">Companies Making a Killing of His or Her Tablets</a>. In fact, over a fifth of all iPad customers have purchased at least two of the devices.</p>

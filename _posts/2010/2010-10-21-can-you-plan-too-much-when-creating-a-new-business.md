@@ -34,7 +34,7 @@ excerpt: Excessive planning is often procrastination in disguise. Entrepreneurs 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/pretpriemac/4578625094/">Dragan Sutevski</a></cite></p>
 <p class="caption"><em class="title">Business Plan</em>Don't waste too much time on it.</p>
 </div>
-<p><!--more--></p>
+
 <p>We all know that running a successful business means that you must plan your strategy and refine your tactics. The article <a href="http://bsng.lithium.com/t5/The-Industry-Word/5-Dangerous-Business-Planning-Myths/ba-p/5781">5 Dangerous Business Planning Myths</a> describes that all businesses must plan carefully. Regardless of what business you are in, if you fail to plan you might as well plan to fail.</p>
 <p>The problem is that entrepreneurs can often plan too much. Putting too much time and energy into a business plan can actually be dangerous for a couple of reasons.</p>
 <p><a href="http://www.paulstips.com/brainbox/pt/home.nsf/link/31102006-The-problems-of-excessive-planning">The Problems of Excessive Planning</a>, as claimed by the author, is that excessive planning is often procrastination in disguise. Entrepreneurs may be nervous to actually begin their startup and want to justify to themselves that they are being productive.</p>

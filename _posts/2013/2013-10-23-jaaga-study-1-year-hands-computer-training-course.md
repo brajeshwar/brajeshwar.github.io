@@ -27,7 +27,7 @@ permalink: "/2013/jaaga-study-1-year-hands-computer-training-course/"
 ---
 <p><a href="//jaaga.in/">Jaaga</a> is a Bangalore-based evolving community sculpture. They support and connect entrepreneurs, activists and artists. </p>
 <p>Jaaga is starting a new initiative - <a href="//jaaga.in/study">Jaaga Study</a> - an intensive one year program designed to help young people become solid software developers who are financially independent and can create the next generation of web and mobile applications.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="480" src="//www.youtube.com/embed/8qk2GWSeKgo" frameborder="0" allowfullscreen></iframe></p>
 <p><em>What is it?</em></p>
 <p>The formal education part of the program leverages the amazing classes the <a href="//www.edx.org/">worlds top universities</a> have made freely available online. We add to this a local collegiate environment and access to coaches and technical experts who can help them navigate their academic path and overcome problems.</p>

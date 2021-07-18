@@ -41,7 +41,7 @@ permalink: "/2011/entrepreneur-interview-series-a-sit-down-with-screenius-genius
 <p>Screenius is another infotainment tool -- one that helps you funnel your video choices through its 'video valet' services. This video-funnelling tool reduces the ridiculously-large amount of online video choice and whittles it down to  a bearable size to offer you just two choices.</p>
 <p>Quite genius if you think about it. If you were to go to a Ben and Jerry's and stare at their 75+ flavors your eyes would glaze over as you tried to choose. Go to  McDonalds however and your choice between their simplistic Chocolate or Vanilla is practically child's play. "People can be paralyzed by too many choices," points out <a href="http://www.linkedin.com/in/sethmcohen">Seth Cohen</a>, co-founder and CEO of Screenius.</p>
 <p>Screenius is more than just a video-viewing app though. It's an intelligent app that learns your tastes as you go. If you watch TED Talks and The Colbert Report clips regularly, it won't pop-up with Justin Bieber's new Christmas hit or Jersey Shore reruns (both of which YouTube erroneously suggested to me last week, shudder). In addition to learning your likes the app includes review posting, sharing, and short menus for video browsing.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/jd34nW-Mx30" frameborder="0" allowfullscreen></iframe></p>
 <p>I recently got the chance to sit down with the 27-year IT industry veteran Seth Cohen to talk about Screenius, Seth's entrepreneurial experience and everything leading up to it:</p>
 <h3>Can you give me the quick, elevator pitch for Screenius?</h3>

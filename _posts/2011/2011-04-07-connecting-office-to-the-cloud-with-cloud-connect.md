@@ -35,7 +35,7 @@ permalink: "/2011/connecting-office-to-the-cloud-with-cloud-connect/"
 ---
 <p><iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/H12teRzulW0" frameborder="0" allowfullscreen></iframe></p>
 <p>If Microsoft is the evil empire, then their Office Suite is their "Death Star" -- a product of epic proportions. 500 million users just about qualifies the suite as epic. And just like the Death Star it has a huge vulnerability and can be taken down in a swift and calculator attack. </p>
-<p><!--more--></p>
+
 <p>Google may have found the chink in Microsoft's armor, and it comes in the form of an uber-simple app dubbed Cloud Connect. </p>
 <p><a href="http://tools.google.com/dlpage/cloudconnect">Cloud Connect</a> is a plugin-style app that allows users to sync up their Office documents with Google's online office-style suite Google Docs. </p>
 <p>The struggling Google Docs has yet to grab any mainstream appeal, possibly due to corporations' fear of cloud-based computing. But -- finally, Google Docs will begin grabbing the market share they deserve  via Cloud Connect. </p>

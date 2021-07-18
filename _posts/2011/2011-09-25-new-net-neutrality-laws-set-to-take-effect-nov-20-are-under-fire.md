@@ -34,7 +34,7 @@ permalink: "/2011/new-net-neutrality-laws-set-to-take-effect-nov-20-are-under-fi
 <p>In a very uncharacteristically American move the United States has decided to impose new government-meddling regulations on the Internet. These new <a href="http://en.wikipedia.org/wiki/Network_neutrality">Net Neutrality</a> regulations or "open Internet rules" from the FCC will go into effect on November 20, 2011 -- so long as it isn't derailed by the lawsuits in place from Verizon and MetroPCS.  </p>
 <p>Verizon and MetroPCS are both suing the government over the new Net Neutrality laws and feel that the government is over-stepping their bounds, especially for a government that built its reputation on a free-market economy. </p>
 <p>The new open Internet rules being put in place, according to the FCC, are made to define and refine three main categories of the Internet: transparency, blockage, and discrimination.</p>
-<p><!--more--></p>
+
 <h3>Transparency</h3>
 <p>The transparency rules are designed to ensure that fixed and mobile broadband providers are forced to disclose their network management practices, performance diagnostics and to clearly define their terms of commercial services. </p>
 <h3>Blocking</h3>

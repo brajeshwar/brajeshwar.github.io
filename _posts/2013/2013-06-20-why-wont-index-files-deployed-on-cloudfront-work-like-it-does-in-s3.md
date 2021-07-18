@@ -30,7 +30,7 @@ permalink: "/2013/why-wont-index-files-deployed-on-cloudfront-work-like-it-does-
 ---
 <p>I seriously had no clue about this. It was one the most irritating thing while deploying static site hosting on Amazon Cloudfront. I had in-fact stayed with S3 for sites that had folders with "index.html". Here is the solution for those who haven't figured out yet.</p>
 <p>I was recently deploying a Jekyll powered static site for LxiDD - <a href="//pitch.lxidd.com/">pitch.lxidd.com</a>. During the test phase, it all worked fine being deployed on the S3. When I decided that it's ok to move to Cloudfront -- except for the root index, anything else inside a folder won't display without appending the "index.html" at the end.</p>
-<p><!--more--></p>
+
 <p><em>This does not work.</em><br />
 <code>http://pitch.lxidd.com/solution/</code></p>
 <p><em>But with the index.html, it does</em><br />

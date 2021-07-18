@@ -34,7 +34,7 @@ author:
 permalink: "/2011/2010-when-android-ios-became-very-open/"
 ---
 <p>In hindsight, 2010 has definitely been a fantastic year for <a href="http://en.wikipedia.org/wiki/Open_source">Open Source</a>; be it software, hardware, applications, etc. Leveraging the same point of view further, 2010 has also been a brilliant year for open source software projects developed for mobile applications. <a href="http://www.blackducksoftware.com/">Black Duck Software</a> which serves as a good barometer for several open source software projects, showed that <a href="http://www.pcworld.com/article/210384/android_no_2_mobile_os_apple_eats_its_dust.html?tk=rel_news">Google Android provided a fantastic mobile software platform</a> for open source developers to produce superlative applications; followed by Apple's iOS which was also decent in terms of the number of open source applications it owns at present.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/03/android-ios.jpg" alt="Android - iOS" class="alignright" /></p>
 <p>If it were 3 or 4 years ago, this kind of freedom to work on open source codes by developers did not exist. Now, it is completely different, with Open Source gaining the right kind of attention. It must also be noted that developers are considered to be innovative and creative which is why they are seen as artists. So, if a firm gives them whatever they want, they are bound to churn-out unimaginable software applications. This is exactly what happened with Google Android and Apple iOS, more with the former than the latter - The liberty to use open source codes to develop fantastic apps. </p>
 <h3>Some Statistics and Figures</h3>

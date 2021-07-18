@@ -31,7 +31,7 @@ permalink: "/2011/the-importance-of-social-sustainability-in-blogosphere/"
 ---
 <p>When a thought comes to our mind; most of us don't document it - the reasons being aplenty and varied like lack of time, lack of positive energy, lack of communication skills, lack of interest and so on. Some even may shy away from making their thought-pieces published just because they fear public criticism or do not have the right exposure or confidence to handle criticism.</p>
 <p>To me, bloggers are a new genre of curious intellectuals who are, unlike what they have been labeled as, 'inadequate, pimpled and single', by <a href="http://www.bbc.co.uk/">BBC</a> journalist Andrew Man, revolutionizing ideation and creation of digital content.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/02/blog.jpg" alt="Blog" class="alignright" /></p>
 <p>Bloggers do have a passion and blogging for sustainability is unquestionable, yet I do not envisage that they would ever replace journalism. <a href="http://www.naymz.com/ged_carroll_2328920">Ged Carroll</a>, director of <a href="http://www.digitalstrategies.com/">Digital Strategies</a> at Ruder Finn, warns against over compartmentalizing bloggers - 'Labels lead to stereotyping and broad-brush relations campaigns'.</p>
 <p>I don't know whether by serendipity or by meticulous choice bloggers have carved a niche for themselves and are not beyond categorization. On one hand you have bloggers like <a href="http://www.krugman.blogs.nytimes.com/">Paul Krugman</a> or <a href="http://www.gregmankiw.blogspot.com/">Greg Mankiw</a> who are stalwarts in their domains and are individuals, and on the other hand you have expert bloggers' culmination on <a href="http://www.mashable.com/">Mashable</a>.</p>

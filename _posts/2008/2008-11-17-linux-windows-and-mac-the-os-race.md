@@ -34,7 +34,7 @@ excerpt: If you belong to the "Linux Community" bandwagon, you may just have a d
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite><a href="http://ralree.com/">Ralree</a></cite></p>
 <p class="caption"><em><strong>The OS Race: </strong></em>Who's burning out next?</p>
 </div>
-<p><!--more--></p>
+
 <p>If you belong to the "<strong>Linux Community</strong>" bandwagon, you may just have a different opinion on the fact that there are lessons to be learned from Windows and Mac! Linux community does enjoys some real good evangelism despite having a minuscule user base. Just to prove the support statement, statistics by <a href="http://marketshare.hitslink.com/report.aspx?qprid=8">Marketshare</a> show that Windows enjoys a gorilla sized market share of 90%, followed by Mac 8% and Linux users together mount less than 1%. </p>
 <p>Uniqueness about Linux primarily involves <em>diversity</em>, <em>ability to be tailored well</em>, <em>availability and support to open source applications</em> and not to mention some <a href="http://linuxdevices.com/news/NS9527593286.html">real good solutions</a>. Most of the times, for free! </p>
 <p>Still, the Linux community has a few learning outcomes to explore from its competitors, Windows and Mac. Just to list a few;</p>

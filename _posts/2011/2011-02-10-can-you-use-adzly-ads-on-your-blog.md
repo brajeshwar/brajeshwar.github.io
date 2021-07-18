@@ -29,7 +29,7 @@ author:
 permalink: "/2011/can-you-use-adzly-ads-on-your-blog/"
 ---
 <p>Adzly is a new advertising network that many bloggers have taken advantage of. Google Adsense has traditionally been used for bloggers to promote their sites, but new blogs can sometimes be great opportunities to receive traffic that would otherwise have a lot of competition. However, you can't expect to gain anything from Adzly by cutting and pasting a few quotes from your website. You will need to put some thought into your ad and make sure that it is appealing to your target audience. Hopefully, this is already the core of your marketing strategy.</p>
-<p><!--more--></p>
+
 <h3>How to use Adzly effectively</h3>
 <p>A blogger I know says that he hasn't had much success in Adzly yet, but that is his own fault. He prescribes some ideas for <a href="http://www.imfaceplate.com/GTBulmer/how-to-make-the-best-of-adzly-ads">getting the most of their ads</a>. </p>
 <p>Here are some ideas:</p>

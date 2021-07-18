@@ -35,7 +35,7 @@ excerpt: '"Short terms -- the next few weeks -- everyone, whether commercial or 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/yankee6161/3010469323/">Yankee6161</a></cite></p>
 <p class="caption"><em class="title">Recession</em>For some, economics is still doing fine!</p>
 </div>
-<p><!--more--></p>
+
 <p>Terms like "landslide fall" have been heard in abundance this month and it is high time for everyone to realize that we are heading into recession (if we're already not into it). Though some might argue, that we are still not there, the fact of the matter is that the stock market's performance resembles the mountain peaks. The picture looks gloomy for a Linux user too. </p>
 <p>A bad news for these users has been made public by a statement from <strong>Matt Asay</strong> of <em><a href="http://www.alfresco.com/">Alfresco</a></em>; a Linux based open source content management system wherein he states </p>
 <blockquote><p>Short terms -- the next few weeks -- everyone, whether commercial or proprietary, is going to find life unpleasant.</p></blockquote>

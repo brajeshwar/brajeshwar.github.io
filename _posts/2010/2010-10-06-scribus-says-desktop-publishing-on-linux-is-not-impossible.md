@@ -36,7 +36,7 @@ excerpt: Scribus is an Open Source program that brings award-winning professiona
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://www.scribus.net/">Scribus</a></cite></p>
 <p class="caption"><em class="title">Scribus</em>Open Source for Desktop Publishing</p>
 </div>
-<p><!--more--></p>
+
 <p>There has always been resistance from many, especially small business enterprises in using Linux based computer systems. And the major reason that is cited by most or all of them is the issue with <a href="http://en.wikipedia.org/wiki/Desktop_publishing">Desktop Publishing (DTP) application</a>. However, for those who feel pessimistic about using Linux can now relax their apprehensions with <a href="http://www.scribus.net/">Scribus</a>. </p>
 <p>Scribus is apparently a very well known page design feature for Linux users and is referred to as a user-friendly interface with a professional-strength page layout application. Loaded with design and visualizing features like CMYK (Cyan, Magenta, Yellow and Black) color, separations, Spot Colors, ICC (International Color Consortium) color management and versatile PDF creation. </p>
 <h3>What Windows/Mac has and Linux doesn't?</h3>

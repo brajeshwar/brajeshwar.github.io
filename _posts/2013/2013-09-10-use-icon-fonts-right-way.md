@@ -31,7 +31,7 @@ permalink: "/2013/use-icon-fonts-right-way/"
 <p>Icon Fonts are a smart way to deploy scalable icons in your website and web app design projects. They are treated as part of your text and so you can apply all the properties you apply to a text - size, color, text-shadow, transparency, transform, etc.</p>
 <p>You might have used some of the icon fonts, such as - <a href="http://fontawesome.io/">Font Awesome</a>, <a href="http://www.entypo.com/">Entypo</a>, <a href="http://icomoon.io/">IcoMoon</a>, <a href="http://symbolset.com/">Symbolset</a>, <a href="http://typicons.com/">Typicons</a>, <a href="http://somerandomdude.com/work/iconic/">Iconic</a>, <a href="http://zocial.smcllns.com/">Zocial</a>, <a href="http://designmodo.com/linecons-free/">Linecons</a>, <a href="http://shoestrap.org/downloads/elusive-icons-webfont/">Elusive Icons</a> etc.</p>
 <p>The easiest and simplest way to use them is to dump the font variants, drop in the icon style classes and use them in your html with an <code><i class="icon-myicon"></i></code>. However, with this method, you're forcing your users to download the whole font, when you actually use just a few of the icons.</p>
-<p><!--more--></p>
+
 <p>There is a better way of doing it. Create a custom set of icon fonts with one or more fonts and build only the icons that you will need. This will reduce the file size of the custom font and so also a reduced CSS file size.</p>
 <p>Here is how you can do it. Play around and perhaps make it part of your design process.</p>
 <p>There are two good services that will help you achieve this feat - <a href="http://icomoon.io/app/">IcoMoon App</a> and <a href="http://fontello.com/">Fontello</a>. Here are some of the salient features of both services;</p>

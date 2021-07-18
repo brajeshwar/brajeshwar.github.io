@@ -29,7 +29,7 @@ author:
 permalink: "/2011/patent-violation-angry-birds-creator-defamed/"
 ---
 <p>With the development of technology, it is also quite true that instability has also risen in the market. Especially, technology where creativity has an equal contribution, credits and responsibility gets mixed up quite a lot. A recent example could be seen when the popular mobile game - <a href="http://en.wikipedia.org/wiki/Angry_Birds">Angry Birds</a> creator, <a href="http://rovio.com/">Rovio</a>, was sued by Lodsys for patent violations. The claim on which the legal action was based was that Rovio's Finnish company had violated important patent rules regarding the purchase in to the higher levels of the game. The game being quite popular, so much so that people generally download it more than a million times per day, naturally generated quite a value with these new levels.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="510" src="http://www.youtube.com/embed/bMltvlqEM54" frameborder="0" allowfullscreen></iframe></p>
 <h3>What is 'Angry Birds'?</h3>
 <p>The game is a very common name in the mobile gaming market. It is quite possibly the most popular mobile game that is downloaded by gaming enthusiasts. 'Angry Birds' definitely started as a mobile game, however, with the monstrous response that it generated over the time, Rovio had already started putting plans in to action to get the game in to a wider market. Browsers and consoles based on the game have already been launched. The next course of action was an animation movie based on the game and an IPO.</p>

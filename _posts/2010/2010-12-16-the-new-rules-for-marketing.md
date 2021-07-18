@@ -34,7 +34,7 @@ permalink: "/2010/the-new-rules-for-marketing/"
 * The company yells to the customer to buy the product.<br />
 * The company waits to see if the customer ever decides to purchase.</p>
 <p>For years, this process may have worked. Companies just needed to get their message out more often than their competitors. However, in today's world, customers are exposed to a lot of messages every day. A Google Answers thread shows that different sources have come up with different estimates. Some range as low as 247 (Consumer Reports), but the standard estimate is that a customer is exposed to 3,000 ads every day.</p>
-<p><!--more--></p>
+
 <p>After visualizing how a customer can possibly see 3,000 advertisements in a single day, ask yourself how many of those ads lead to actual purchase. I don't know the number myself, but I would probably assume is is far less than 10.</p>
 <p>So how do companies really get their marketing messages out there so that customers will actually buy them? Dr. Robert Cialdini, an American professor of psychology has detailed these strategies in his work which have been extended to social media. In fact, <a href="http://www.socialmediaexaminer.com/6-powerful-social-media-persuasion-techniques/">6 Powerful Social Media Persuasion Techniques</a> summarizes them very well.</p>
 <p>Dr. Cialdini's work centers around building a relationship to a customer. Some of the most important elements of Dr. Cialdini's strategy are:</p>

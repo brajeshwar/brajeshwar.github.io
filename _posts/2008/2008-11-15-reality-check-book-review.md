@@ -37,7 +37,7 @@ excerpt: There's a lot you'll need to learn. How to raise money. How to build a 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/brajeshwar/3026112397/">Brajeshwar</a></cite></p>
 <p class="caption"><em class="title">Reality Check</em>The Irreverent Guide to Outsmarting, Outmanaging, and Outmarketing Your Competition</p>
 </div>
-<p><!--more--></p>
+
 <blockquote><p>Guy Kawasaki's book "Reality Check: The Irreverent Guide to outsmarting, outmanaging, and outmarketing your competition" is an entrepreneur's cheat-sheet. A must-read book for any entrepreneur in general and startup founders and co-founders in particular. If you're not reading it, your competitor will and you'll regret it sooner than later.</p></blockquote>
 <p>I got my <a href="http://flickr.com/photos/brajeshwar/3026111469/">review copy</a> of Guy Kawasaki's book <strong>Reality Check</strong> few days back and I was hooked to it, read it all and I might come back to it later, refer to it occasionally in future. I also checked my EQ (Entrepreneurial Quotient) and scored 17 out of 22 (not bad).</p>
 <p>The book is 474 page thick but don't get intimidated at all. It is separated by short and quick-to-read topics which you will love reading, finishing up and moving on to the next topic. Guy starts quickly with a warning much like a bullet from a double-barrel gun, "I want to provide hardcore information to hardcore people who want to kick ass."</p>

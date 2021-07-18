@@ -34,7 +34,7 @@ excerpt: Why do CEOs leave the company that they've created and raised money for
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite>Anonymous</cite></p>
 <p class="caption"><em class="title">VC</em>Change everything about yourself!</p>
 </div>
-<p><!--more--></p>
+
 <p>There is an interesting article from <strong>Ask the VC</strong> - Do Venture Capitalists Fund A Company With An Intent To Steal It? This is indeed a question most new entrepreneurs would ask, and many would not have the right person to ask these kind of Questions!</p>
 <p>Here is the Question from the article;</p>
 <p><strong>My client is looking for a $5m investment from a VC. What can he do to protect himself if he is worried that the VCs will acquire the rights to his product and then try to fire him and keep those rights? Does this happen often?</strong></p>

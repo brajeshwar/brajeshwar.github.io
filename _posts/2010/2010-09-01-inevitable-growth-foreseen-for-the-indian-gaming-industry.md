@@ -33,7 +33,7 @@ excerpt: The young Indian population, increasing disposable incomes, larger wire
   to the tremendous growth of the Gaming Industry.
 ---
 <p><object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/7iDzvJygtC4?fs=1&amp;hl=en_US&amp;hd=1" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/7iDzvJygtC4?fs=1&amp;hl=en_US&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object></p>
-<p><!--more--></p>
+
 <p>There are numerous reports doing rounds predicting tremendous growth of the <a href="http://www.indiangaming.com/industry/">Indian Gaming Industry</a>. The forecasts are out and the claim is that the industry would grow at a Compounded Annual Growth Rate (CAGR) of 32% by the year 2014 recording an amount of Rs. 3100 crore. I might as well bet all my money on this forecast, since most current facts and details entice me to do so.</p>
 <p>In India, aspects such as young population, increasing disposable incomes, larger wireless user base and rise in the number of game developers and publishers have over a period of time contributed to the tremendous growth of the Indian Gaming Industry.  The magnitude of the Indian gaming industry was evaluated at around Rs. 790 crore in the year 2009 as against Rs. 650 crore in the year 2008, representing a development of 22% from 2008 to 2009. </p>
 <p>Owing to the above mentioned factors and also with the anticipation of the industry to deliver innovative and entertaining games the growth level is speculated to exceed 30% and make money that is equivalent to Rs. 3.9 billion by 2014.</p>

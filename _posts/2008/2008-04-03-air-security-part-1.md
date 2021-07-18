@@ -43,7 +43,7 @@ excerpt: The security model for the HTML application sandbox in AIR varies signi
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/robmcm/1805075589/">Rob</a></cite></p>
 <p class="caption"><em class="title">Security</em>Adobe AIR has an intricate security architecture.</p>
 </div>
-<p><!--more--></p>
+
 <p>I was reading an Adobe article about an upcoming security update for Flash Player in this month of April, 2008. The Flash Player security update provides further mitigations for issues listed in the December 2007 <a href="http://www.adobe.com/support/security/bulletins/apsb07-20.html">Security Bulletin ABSP07-20</a> for DNS rebinding and cross-domain policy file vulnerabilities, and <a href="http://www.adobe.com/support/security/advisories/apsa07-06.html">Security Advisory APSA07-06</a> for cross-site scripting vulnerabilities in SWFs.</p>
 <p>Well, the Adobe AIR shares technology with Flash Player and thus it is likely that Adobe AIR too will get an update with these fixes. This prompted me to do a rather lengthy article on a related topic -- <strong>Adobe AIR and Security</strong> -- which have been lingering in my to-do list for quite a while. Lengthy but this article will still fall short of all the details of AIR security as it is a big subject in itself.</p>
 <p><strong>What is affected? What should AIR developer care about?</strong></p>

@@ -31,7 +31,7 @@ permalink: "/2011/laws-bloggers-should-be-aware-of/"
 ---
 <p>The Internet is the fastest and simplest way to communicate to the rest of the world. As I've mentioned before, this is a double edged sword. The statements we make online can destroy our business image if we are reckless.</p>
 <p>The consequences for not being careful online may be much more serious than we think. In the United States and many other countries, bloggers are now treated as journalists in some regards and can be sued or even prosecuted based on what they say. This article discusses some of the <a href="http://www.blueorchidblog.com/2008/01/12-important-us-laws-about-blogging.html">laws that bloggers need to be aware of</a>.</p>
-<p><!--more--></p>
+
 <p>Keep in mind, these laws may not be enforceable in your home country, but it is wise to follow these guidelines wherever you are.</p>
 <h3>Violating copyrights is more serious than we think</h3>
 <p>Plagiarism is a big problem for bloggers and it is taken very seriously. I know a blogger who got <a href="http://epiclaunch.com/sued-by-the-new-york-times/">almost sued by the New York Times</a>. He made the mistake of including images from the newspaper on his own website, which was dedicated to sharing New York Times articles for free.</p>

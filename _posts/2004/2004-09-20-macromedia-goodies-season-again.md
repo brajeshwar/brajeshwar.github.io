@@ -24,7 +24,7 @@ author:
 permalink: "/2004/macromedia-goodies-season-again/"
 ---
 <p><img src="/static/2004/09/fedexbox.jpg" alt="Macromedia Googies" />The Fedex guy knocked at my door again and gave me that big box seen in the image. One of the cool content that I really adore is the pair of boxes containing "Flash MX 2004 Component Collectible Cards". The main attraction was neverthless, the <strong>Flash Timbuk2 Laptop Messenger Bag</strong> and the Flash T-Shirt (gotoAndPlay). There was also the article discussing the recent update to Flash (Ellipsis), changes to the Flash team and how Macromedia sees Flash evolving in the future, a booklet on "Web Video with Macromedia Flash".</p>
-<p><!--more--></p>
+
 <p>The kit contains the following major components:</p>
 <p>* new extension to Dreamweaver for deploying Flash video<br />
 * lite version of the new Sorenson Squeeze 4.0<br />

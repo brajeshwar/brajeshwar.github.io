@@ -38,7 +38,7 @@ permalink: "/2011/web-browser-battle-royale-turns-dirty/"
 <p>The all-out web browser brawl has competitors throwing dirty punches in a below-the-belt free-for-all fight for market share.</p>
 <p>As Microsoft <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">IE's web browser</a> market share slips to an all time low, the gloves have come off as Microsoft begins to exploit the bugs in their competition. At just 54.3% of market share IE has been steadily declining for years, but Microsoft is recognizing a rare opportunity to outwit their competition, despite their inferior technology. Microsoft executive Ari Bixhorn has begun to  address high-level enterprise-grade customers like IBM, trying to lure them away from IE competition. Bixhorn has been poking a stick into IE's competition by trumping the level of support offered by the likes of Mozilla's Firefox, and pointing out the continued critical-rated security bugs in Google's Chrome browser.</p>
 <p>John Walicki, IBM CIO has openly chastised Mozilla's refusal to support <a href="http://www.mozilla.com/firefox/">Firefox</a> version 4 once they move to version 5, a move that Walicki considers akin to a "kick in the stomach". This sentiment is being felt by many administrator professionals in the IT industry who expect continual multi-version support.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/06/browser-usage-chart-feb-2011.jpg" alt="Browser usage as of 2011 February" /></p>
 <p>Walicki is concerned;</p>
 <blockquote><p>I'm now in the terrible position of choosing to deploy a Firefox 4 release with potentially un-patched vulnerabilities, reset the test cycle for thousands of internal apps to validate Firefox 5 or stay on a patched Firefox 3.6.x.</p></blockquote>

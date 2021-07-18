@@ -36,7 +36,7 @@ excerpt: The ratio of the dynamic range of HDR image is higher than the display 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/vgm8383/2176897085/">vgm8383</a></cite></p>
 <p class="caption"><em class="title">HDR</em>You need to get few things clear before you shoot.</p>
 </div>
-<p><!--more--></p>
+
 <p>After writing about <a href="http://brajeshwar.wpengine.com/2010/hdr-imaging-some-common-creation-techniques/">HDR Image Creation Techniques</a> & <a href="http://brajeshwar.wpengine.com/2010/hdr-imaging-top-10-tutorials/">Top 10 HDRI Tutorials</a>, this article answers the questions that are frequently asked about HDRI.</p>
 <h3>Why does the HDR image look so dark?</h3>
 <p>The ratio of the dynamic range of HDR image is higher than the display resolution properties of a regular monitor. That is why, a HDR image's ratio is of highest intensity value, whereas a monitor screen can display only ratio up to 100:1 to 400:1 (TFT) in a natural way. Therefore, to make the image fit to the monitor and look presentable, it need to be tone mapped. And, hence it looks dark.</p>

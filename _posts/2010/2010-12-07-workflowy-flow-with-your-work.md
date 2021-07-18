@@ -31,7 +31,7 @@ excerpt: Work is a four letter word that is on every body's tongue these days. M
 ---
 <p><object width="640" height="505"><param name="movie" value="http://www.youtube.com/v/CSmbnaPZVHE?fs=1&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/CSmbnaPZVHE?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505"></embed></object></p>
 <p>Work is a four letter word that is on every body's tongue these days. Most of us live to work rather than work to live. You've got a to-do list, a shopping list, a list of goals you want to accomplish and many more lists that dominate your life. If you are looking to ease your life and increase your productivity, try <a href="http://workflowy.com/">WorkFlowy</a> that claims to organize your brain.</p>
-<p><!--more--></p>
+
 <h3>Simplicity</h3>
 <p>Workflowy is a simple web-based application that simply put is a bullet list. You can create high-level categories and nest more lists beneath each one. It support seemingly infinite levels of sub-categories enabling you to map out everything that needs tracking and management. This appears to be overwhelming and unmanageable but what makes the app stand out here is the ability to zoom in to a specific list or project allowing you to focus on specific sections of the main list. The overall experience is ridiculously simple. It is a basic text editor with keyboard shortcuts and its inherent simplicity makes it speedy and easy to use.</p>
 <h3>Efficiency</h3>

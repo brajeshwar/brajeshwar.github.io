@@ -41,7 +41,7 @@ author:
 permalink: "/2012/germans-invent-weed-killing-laser/"
 ---
 <p>Before my pothead readers get all bent out of shape about the German's <a href="http://www.lzh.de/">weed-annihilating laser</a>, know that it isn't designed, specifically, to work on that type of weed. Nope this little gardener's friend from the <a href="http://www.uni-hannover.de">Leibniz University of Hannover</a> is designed to zap the average backyard or farm weed (and no, not THAT type of 'farmer').</p>
-<p><!--more--></p>
+
 <p>The Laser Zentrum Hannover (LZH) is a low-powered, infrared laser that inhibits weed growth in a quasi-natural, chemical-free way. The inventors hope that this eco-friendly weed zapper will be a healthy alternative to costly, toxic and environmentally-damaging herbicides. Thomas Rath, of  Biological Production Systems, who headed the LZH team designed the <a href="http://www.howstuffworks.com/laser.htm">laser</a> to heat the weeds' cells up just enough to damage them and inhibit any further growth. Kind of like a tanning bed for weeds instead of soon-to-be-growth-stunted oompa loompa teens from New Jersey. </p>
 <p>The brilliance of the laser is that it walks a fine line. Too little sunlamp-style heat and the weed growth is encouraged, not inhibited, to grow; and too much? Well, we've all seen lasers blow things up right? The other tricky part of the procedure is locating the weeds' growth centers. </p>
 <p>The REALLY tricky part was figuring out how to use the laser to kill only the weeds and not the healthy plants living side by side. </p>

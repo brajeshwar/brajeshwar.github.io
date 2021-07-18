@@ -31,7 +31,7 @@ permalink: "/2011/indias-software-developer-awards/"
 ---
 <p>Saltmarch Media's annual Great Indian Developer Awards honor technologies that are contributing to the productivity and innovation excellence of the Indian developer ecosystem. The awards recognize the product and innovation excellence of the hundreds of software products and tools that aid developer productivity, across 11 different categories. The selection criteria applied places emphasis on functionality, usability, innovation excellence, bleeding-edge quotient, and feedback from the developer ecosystem. <a href="http://www.developermarch.com/developersummit/awards.html#longlist">Nominations</a> to the 2011 edition of the awards are invited.</p>
 <p>IT professionals are invited to nominate software tools, frameworks and platforms that are not only popular in your development organizations, but also have changed the way you approach your development tasks and ushered in innovation, cost-effectiveness, performance improvements and ease of use.</p>
-<p><!--more--></p>
+
 <h3>Award Categories</h3>
 <p>* Development Environments: nominate from the new breed programming languages, source code editors and integrated development environments (IDEs). Past winners in this category include MS VS 2010 and 2008 and Oracle JDeveloper.<br />
 * Collaboration Solution: nominate from groupware, real-time conferencing and collaboration, and digital communities. Past winners are Citrix GoToMeeting, Adobe Acrobat Connect Professional and Oracle Collaboration Suite.<br />

@@ -30,7 +30,7 @@ permalink: "/2011/adobe-air-app-challenge-win-200000-in-cash-prizes/"
 <figcaption>Adobe AIR App Challenge, Sponsored by Sony (source : <a href="http://www.airappchallenge.com/">Adobe</a>)</figcaption>
 </figure>
 <p>Adobe and Sony are challenging developers to build breakthrough Adobe AIR apps optimized for the new Android-based Sony Tablet S1 and Sony Tablet S2 using Adobe Flash Platform tools for a chance to win $200,000 in total cash prizes and other high-visibility rewards.</p>
-<p><!--more--></p>
+
 <h3><a href="http://www.airappchallenge.com/rules.php">Rules</a></h3>
 <p># Your submission must be created with at least one of the following Adobe tools -- Adobe Flash Professional, Adobe Flash Builder or Flex SDK.<br />
 # Compatible with Android 3.1 or later (Honeycomb).<br />

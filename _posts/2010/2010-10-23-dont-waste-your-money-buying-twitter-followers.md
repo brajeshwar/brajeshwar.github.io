@@ -37,7 +37,7 @@ excerpt: If the path less traveled were the easy path, all would take it, thus m
 <p class="credit"><abbr class="type">Created</abbr> with <cite><a href="http://sxoop.com/twitter/">Twitter Mosaic</a></cite></p>
 <p class="caption"><em class="title">Twitter</em>Friends</p>
 </div>
-<p><!--more--></p>
+
 <p>Every Internet business has a Twitter account. Every Internet entrepreneur wants to create more followers. Followers spread their message and make their business more successful.</p>
 <p>It should be no surprise that a number of programs have sprouted out of the woodwork trying to sell Twitter followers to the gullible. Of course, many entrepreneurs don't know how Twitter really works because the concept hasn't been around all that long. They are still used to the old school ideas about cutting corners to get ahead. The article -- <a href="http://www.businessweek.com/the_thread/blogspotting/archives/2009/11/buying_twitter.html">Buying Twitter followers?</a> -- describes this unscrupulous practice.</p>
 <p>How useful is buying Twitter followers? Basically, the only advantage to buying Twitter followers is the ability to inflate your numbers to make your account look more popular than it actually is. Of course, this is the junior high school equivalent of paying to sit with the popular students. It barely works in the beginning and after that you realize that your money was poorly spent. With Twitter the benefit of buying friends is even shorter lived. People want to follow you because they believe you have something useful to say. The moment they realize that you aren't putting any effort into creating a good account, they are going to feel betrayed and leave for new pastures.</p>

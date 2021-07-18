@@ -33,7 +33,7 @@ permalink: "/2017/free-lectures-videos-princeton-bitcoin-cryptocurrency/"
 <p>Here are the 11 video lectures.</p>
 <h2>1. Intro to Crypto and Cryptocurrencies</h2>
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/fOMVZXLjKYo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></p>
-<p><!--more--></p>
+
 <h2>2. How Bitcoin Achieves Decentralization</h2>
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/q5GWwTgRIT4?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></p>
 <h2>3. Mechanics of Bitcoin</h2>

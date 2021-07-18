@@ -37,7 +37,7 @@ excerpt: There were times in my life when I was unable to stay disconnected from
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/brajeshwar/113603876/">Brajeshwar</a></cite></p>
 <p class="caption"><em class="title">Break Free</em>Plugged in but disconnected.</p>
 </div>
-<p><!--more--></p>
+
 <p>Like you, I like my computer and I find it hard to survive without it. I love the Internet too and I like being totally connected. However, few years back, I began to realize that I'm addicted to it -- the computer, the Internet and my work. You'll say, "That's with everybody. What's the problem?"</p>
 <p><strong>The "No Problem" Problem</strong></p>
 <p>Well, there are no problems at all. I just wanted to stay plugged but be able to remain disconnected. I wanted to reduce the time spent shuffling between Emails, Instant Messaging, the Internet, work and everything else in between. I also wanted to maintain a sane state of connection where I'm not digitally Cast Away. I've been experimenting with various disciplines with my digital life and I'm at a stage where I'm at peace and happy with my life, computers and the Internet.</p>

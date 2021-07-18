@@ -25,7 +25,7 @@ permalink: "/2007/do-you-want-to-be-part-of-the-feedburner-ad-network/"
 ---
 <p>I was searching around for Adobe Products specially Flash Network on the "Feedburner (Feedburner)":http://www.feedburner.com/ Ad Network; unable to find one, I decided to create them. In fact, I created 3 Feedburner Networks - "Adobe Products (Adobe Products)":http://networks.feedburner.com/AdobeProducts, "Flash Designers & Developers (Flash Designers & Developers)":http://networks.feedburner.com/FlashDesDev and "Apple Products (Apple Products)":http://networks.feedburner.com/AppleProducts.</p>
 <p>Well you cannot just go about creating Feedburner Network without you being invited/accepted into a Network. So, here is what I am going to do. I'll be inviting few people I know who uses Adobe Products, Flash and also Apple Products. I'll also be accepting request for invitation for few users who have a good number of Feed Subscribers. If you think you're one and I should invite you, please use the comment or "contact (contact)":http://www.brajeshwar.com/contact/ me directly. Remember to include your desired Feedburner Network.</p>
-<p><!--more--></p>
+
 <table width="200px" border="0" cellpadding="0" cellspacing="5">
 <tr>
 <td width="100px"><script src="http://networks.feedburner.com/AdobeProducts/badge" type="text/javascript"></script><br />

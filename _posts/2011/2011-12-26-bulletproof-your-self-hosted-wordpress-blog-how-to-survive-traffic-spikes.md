@@ -35,7 +35,7 @@ permalink: "/2011/bulletproof-your-self-hosted-wordpress-blog-how-to-survive-tra
 <blockquote><p><em>Note:</em> Recently one of my article, <a href="http://brajeshwar.wpengine.com/2011/desingineer-the-mythical-person-every-startups-are-looking-for/">Desingineer - the mythical person every Startups are looking for</a>, stayed on the frontpage of HackerNews for about 24 hours and it held up without any problem. Here is the <a href="http://brajeshwar.wpengine.com/2011/how-is-it-like-during-the-first-hour-when-your-site-is-on-top-of-hackernews/">video</a> of the traffic onslaught.</p></blockquote>
 <h3>Hosting</h3>
 <p>Host with a service provider who can scale up when you get a traffic spike. These days, there are Wordpress speciality hosting providers. If yours is Wordpress, why not host with them. I've hosted with both WPEngine and Page.ly and they're equally good - go ahead and pick one.</p>
-<p><!--more--></p>
+
 <p><em><a href="http://wpengine.com/">WPEngine</a></em></p>
 <p>I hosted my own blog when they were starting. They're very good. Some of the best tech geeks, I respect, are behind this company. They know the ins and outs of Wordpress. Unfortunately, my site can no longer afford their price of $199 per month. However, the starting price of $49 may be just fit for most blogs.</p>
 <p><em><a href="http://page.ly/">Page.ly</a></em></p>

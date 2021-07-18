@@ -29,7 +29,7 @@ permalink: "/2011/key-tips-for-super-effective-writing/"
 <figcaption>Writing should be enjoyable! (source : <a href="http://www.flickr.com/photos/yourdon/3643024009/">Ed Yourdon</a>)</figcaption>
 </figure>
 <p>Writing is supposed to be an enjoyable experience. Especially, for people who depend on their writing as a source of income, this is the most complicated necessity. While you have to maintain the quality of your written piece, the creativity is also that much important. For the creative flow of the mind to remain unhindered you have to stay loose and enjoy the topic as you write about it. </p>
-<p><!--more--></p>
+
 <p>While there are no set rules for increasing the effectiveness of your writing, here are some vital tips that can allow you to recharge and refuel your writing spirit:</p>
 <h3>Object of Interest</h3>
 <p>It is absolutely necessary that you have an idea about the real interest factor about your topic. This will be your focal point in the write up and also the reason for your curiosity. Being curious about your topic is good; it is also a <a href="http://www.findallanswers.com/enhance-creativity-2/">boost to your creativity</a> as you write what you understand perfectly. </p>

@@ -37,7 +37,7 @@ permalink: "/2011/google-android-vs-apple-ios-who-will-win/"
 ---
 <p>2010 saw just the preview of the smart-phone war. 2011 will see the complete movie.</p>
 <p>It's <strong>Google's Android</strong> vs <strong>Apple's iOS</strong>. Apple's new in-app subscription model vs Google's; Google's competent music service to match iTunes and Apple's <a href="http://www.apple.com/mobileme/">Mobile Me</a> to match <a href="http://www.google.com/buzz">Google Buzz</a>.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/02/google-apple.jpg" alt="Google vs Apple" /></p>
 <p>Here's a lowdown of the major features in the Android vs. iOS turf war:</p>
 <h3>Mobile Hardware</h3>

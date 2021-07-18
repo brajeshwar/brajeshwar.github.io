@@ -34,7 +34,7 @@ permalink: "/2011/nokias-symbian-gets-os-cpr/"
 ---
 <p>Just when we thought that Symbian had joined the technology graveyard -- buried alongside the <a href="http://en.wikipedia.org/wiki/Betamax">Betamax</a> and <a href="http://en.wikipedia.org/wiki/AmigaOS">AmigaOS</a>, it gets OS CPR.</p>
 <p>Symbian gets a revival even after Nokia executive Stephen Elop's internal memo was leaked, a memo in which he pronounced Symbian DOA by comparing it to a platform on fire (and not in the good way). It was expected by most analysts that Nokia would adopt Microsoft's new phone OS on future Nokia hardware.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/04/nokia-symbian-v9.jpg" alt="Nokia Symbian" class="alignright" /></p>
 <p>Nokia was relegated to the cellphone sidelines after the iPhone was released in 2007, and was all but pushed out of the smartphone market. Staying alive primarily via their feature phone offering the company took serious losses. </p>
 <p>A few days ago Nokia pushed back into the smartphone market with the release of two new phones and an updated Symbian OS dubbed Symbian Anna (or Symbian^3 or Symbian^4 -- depending on who you talk to). Their OS update has new icons, better text input capabilities, a faster browser (vitally necessary) and a renewed version of Ovi Maps.</p>

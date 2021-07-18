@@ -37,7 +37,7 @@ excerpt: After the advent of SDKs for Adobe AIR & Microsoft Silverlight and the 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/charlton_b/685839371/">Charlton</a></cite></p>
 <p class="caption"><em class="title">JavaFX</em> Who better than he himself for the demo? </p>
 </div>
-<p><!--more--></p>
+
 <p>After the advent of SDKs for Adobe AIR & Microsoft Silverlight and the considerable amount of market share they already have, Sun Microsystems has finally come up with their SDK preview for <a href="http://www.javafx.com/">JavaFX</a>. This was a result of two years of hard work so as to allow developers to play with the JavaFX technology. This may be a step too late, but it's not bad than never. It reminds me of the Open Source equivalent which also competes as a Rich Internet Application (RIA) development & delivery tool named - <a href="http://www.openlaszlo.org/">OpenLaszlo</a>. It is released under the <a href="http://en.wikipedia.org/wiki/Open_Source_Initiative">Open Source Initiative</a>-certified <a href="http://en.wikipedia.org/wiki/Common_Public_License">Common Public License</a>.</p>
 <p><strong>What is JavaFX SDK?</strong></p>
 <blockquote><p>Java FX is a family of products for creating RIAs with immersive media and content. The JavaFX products include a runtime and tools suite that web scripters, designers and developers can use to quickly build and deliver expressive rich interactive applications for desktop, mobile, TV and other platforms. The freely downloadable <em>JavaFX Preview SDK</em> bundles the JavaFX compiler and runtime, the NetBeans IDE, and a NetBeans plug-in for coding and debugging in the new JavaFX Script language.</p></blockquote>

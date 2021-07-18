@@ -41,7 +41,7 @@ excerpt: Location Based Services are a strategic asset that leverages informatio
   to offer customized services.
 ---
 <p><object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/ZfX_ZQag1BM?fs=1&amp;hl=en_US&amp;rel=0&amp;hd=1" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/ZfX_ZQag1BM?fs=1&amp;hl=en_US&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object></p>
-<p><!--more--></p>
+
 <h3>Introduction</h3>
 <p>A location-based service (LBS) is primarily an information service that has off late crossed over rather successfully into the entertainment arena. Accessible with mobile devices on standard networks they utilize the geographical position of the mobile device. LBS services can be used in a variety of contexts -- health, education, career, social life, etc. Such services identify the location of a person or object, such as discovering the nearest ATM machine or the whereabouts of a dear friend.</p>
 <p>In the corporate sector, LBS services include parcel tracking and vehicle tracking services and coordinating employee movements on field. Mobile commerce adds an exciting new facet when discount coupons or advertising is directed at customers based on their current location. They include personalized weather services and even location-based games. Location Based Services truly epitomize the telecommunication convergence of our times. In a bid to create differentiation and increase profits, companies are offering highly personalized services and the most powerful ways to personalize such services is based on location.</p>

@@ -33,7 +33,7 @@ permalink: "/2017/quit-job-become-freelancer/"
 <p>Start by deciding what it is that you love to do. Once you've identified what it is—writing or photography, graphic design or making videos, throwing parties or organizing spaces—then it's time to figure out how to get paid for it from multiple clients.</p>
 <p>Next, come up with a business plan and fill in as many details as possible. </p>
 <p>Finally, launch the business by building a website. Theoretically, you can launch your freelance business without a website, but it's so much easier to interest clients if you can direct them to a website that explains what you can do for them.</p>
-<p><!--more--></p>
+
 <h2>How to Build a Website</h2>
 <p>If you're hesitating about building a website because you don't know how, you probably have some misconceptions about what it takes to have a great looking website. Perhaps, you think it's expensive to hire someone, or that it will take too long. The good news is that you can start one cheaply and quickly.</p>
 <p><a href="https://www.ipage.com/web-hosting">iPage</a> is one such good hosting provider that will get you with a free drag-and-drop Website Builder and hundreds of mobile-friendly websites. A good deal with them is helping me with my simple and quick webpages requirements.</p>

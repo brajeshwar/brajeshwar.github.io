@@ -29,7 +29,7 @@ permalink: "/2011/the-big-picture-social-networking-in-india-part-i/"
 ---
 <p>After the inception of Internet, the next big thing that has evolved over the years has been the use of social networking websites globally enjoyed not just by youngsters but by all kinds of age groups.  In verity, a <a href="http://en.wikipedia.org/wiki/Social_network">social network</a> is defined as, <em>"A social structure made of individuals (or organizations) called 'nodes', which are tied (connected) by one or more specific types of interdependency, such as friendship, kinship, financial exchange, dislike, sexual relationships, or relationships of beliefs, knowledge or prestige."</em></p>
 <p>India has never fallen behind in adapting the best and latest technological innovations and has always been amongst the first to use it. So too with social networking wherein India has become arguably one of the most potential markets for several popular social networking websites. It has taken very little time for India to move from the establishment stage of social networking to the exploration stage.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/07/social-media.jpg" alt="Social Media" /></p>
 <p>Let's take a look at how few of the best social networking websites entered India, made it big or even suffered downfall due to cut-throat competition.</p>
 <h3>Orkut</h3>

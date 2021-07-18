@@ -32,7 +32,7 @@ permalink: "/2018/what-the-crypto-the-availability-of-cryptocurrency/"
 <p>There are <a href="https://u.today/more-than-2000-cryptocurrencies-already-listed-on-coinmarketcap">more than 2,000 cryptocurrencies</a> available in the crypto market, set at different prices. You can get familiar with the top 25 by taking a look at the infographic provided below.</p>
 <p>The prices are determined by how popular the cryptocurrency is and how many people are trading with it. The more people that trade, the higher the value.</p>
 <p>The most popular and oldest cryptocurrency is Bitcoin. It was created in 2009 by a pseudonymous cryptographer. It has the best value because one Bitcoin sells at over $6,500, making it the most expensive cryptocurrency. At some point in 2017, one Bitcoin sold for as much as $19,000. However, it seems to have stabilized at the current price.</p>
-<p><!--more--></p>
+
 <p>There are over 17 million bitcoins in circulation, but they are not maxed out at that number. The total number of bitcoins that will exist in the future is 21 million.</p>
 <p><a href="https://bitcoinplay.net/what-the-crypto-infographic/">Close behind Bitcoin in popularity is Ethereum</a>. It sells at about $208. There are 1 billion ETH in total supply with approximately the same amount in circulation. With its market value, Ethereum is very popular and marketable.</p>
 <p>Then, there is Ripple. This currency has over 40 billion coins in circulation and almost 100 billion in total supply. Probably because of the huge amount in circulation, the price of Ripple is really low, selling at less than a dollar. That has not adversely affected its market cap, though, as it is still the third most valuable cryptocurrency in the market.</p>

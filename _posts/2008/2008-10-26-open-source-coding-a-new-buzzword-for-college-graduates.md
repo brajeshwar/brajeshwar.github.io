@@ -38,7 +38,7 @@ excerpt: The key to being successful in the IT industry is interning while still
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/marcwathieu/2412755417/">Mark Wathieu</a></cite></p>
 <p class="caption"><em>Open Source</em> ... err Open Course!</p>
 </div>
-<p><!--more--></p>
+
 <p>Looking down the years, technology consistently has helped change the way we program devices. It is of common knowledge to one and all that without technology and perhaps the Internet, earning a college degree may seem quite tough today, if not impossible. It is not just about perception, because if it would have been that way, I would acknowledge a student of a demigod status if s/he would have passed a course without the use of Internet. </p>
 <p>We have published a lot of articles on open source realm with an inclination towards Linux and free software, primarily keeping in mind the college students and the to-be engineers of the world.</p>
 <p>A lot of research has proved the fact that technology usage has increased leaps and bounds. It certainly provides a jumping off point for an investigation into how students use information technology in college and how it can be harnessed to improve the learning experience. </p>

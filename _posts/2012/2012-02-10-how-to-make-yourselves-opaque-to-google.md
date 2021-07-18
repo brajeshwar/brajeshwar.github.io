@@ -30,7 +30,7 @@ author:
 permalink: "/2012/how-to-make-yourselves-opaque-to-google/"
 ---
 <p>Anyone with a Google account will know about Google's <a href="http://googleblog.blogspot.in/2012/01/updating-our-privacy-policies-and-terms.html">new privacy policy</a> by now. I'll refresh the information for the non-google (sounds like an oxymoron?) lot and also to those who have dismissed the new privacy policy without reading. The new privacy policy goes into effect from March 1st, 2012. The policy can be defined in simple terms as, "Whatever you do in any of the Google Websites the other Google Websites will know about it!"</p>
-<p><!--more--></p>
+
 <p>Or you can watch the video below to quickly understand the new Google Privacy Policy.</p>
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/KGghlPmebCY" frameborder="0" allowfullscreen></iframe></p>
 <p>Do you think it's handy? Or do you think it's a menace? Well, it's a fusion of both. While sites like YouTube will automatically load video suggestions based on your chats in GTalk, you might also get suggestions that are irrelevant to you just because of certain chats you've done. Now that not many people (<a href="http://www.washingtonpost.com/business/microsoft-slams-googles-new-policy-on-merging-user-data-with-full-page-ads/2012/02/01/gIQAgeFViQ_story.html">including Microsoft</a>) like this security breach even if it's done by the so called Don of the Web, <strong>we will discuss certain ways on how to make yourself opaque to Google</strong>.</p>

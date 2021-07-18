@@ -38,7 +38,7 @@ excerpt: When a new Linux stumbler decides on switching on to Linux for full-tim
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/susiepie/2269149168/">Susiepie</a></cite></p>
 <p class="caption"><em>Mailing Lists</em>Some facts remain hidden for a while!</p>
 </div>
-<p><!--more--></p>
+
 <p>When a new Linux stumbler decides on switching on to Linux for full-time, s/he is often marred by an array of negative thoughts which intercept his desires of doing things differently. However, the good news is that there are more than just a single avenue where one can gander around for help. These include IRCs, forums, websites/blogs, e-books, etc. But one of the best ways to learn Linux is following the so called mailing lists. </p>
 <p>For a neophyte, <a href="http://en.wikipedia.org/wiki/Electronic_mailing_list">Wikipedia</a> defines e-mailing lists as,</p>
 <blockquote><p>A special usage of e-mail that allows for widespread distribution of information to many Internet users. It is similar to a traditional mailing list - a list of names and addresses - as might be kept by an organization for sending publications to its members or customers, but typically refers to four things: a list of e-mail addresses, the people ("subscribers") receiving mail at those addresses, the publications (e-mail messages) sent to those addresses, and a reflector, which is a single e-mail address that, when designated as the recipient of a message, will send a copy of that message to all of the subscribers.</p></blockquote>

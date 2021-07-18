@@ -32,7 +32,7 @@ author:
 permalink: "/2011/mig33-gree-expectations-galore/"
 ---
 <p>When two stalwarts of the worldwide internet forum come together, there automatically is a lot expected from such an alliance. This alliance between <a href="http://www.mig33.com/">mig33</a> and <a href="http://www.gree.co.jp/en/">GREE Inc</a>. took place this year on April 13th, wherein mig33, the world's largest mobile-first community, announced an agreement with GREE, a major Japanese social networking service provider. The contract signing was made for the purpose of adopting the GREE Platform for smartphone, by which mig33's community would be open to a vast array of social game developers throughout Japan and far beyond.</p>
-<p><!--more--></p>
+
 <h3>Benefits and expectations of the deal</h3>
 <p>* The deal opens up new markets and consumers for game developers who can sell their games which were developed for GREE customers, to mig33's 47 million and more registered customers.<br />
 * Though both <a href="http://online.wsj.com/article/BT-CO-20110126-704474.html">GREE</a> and <a href="http://memeburn.com/2010/11/mobile-giant-mig33-partners-with-sas-blue-leaf-games-for-social-gaming-api/">mig33</a> have had deals struck earlier there is a lot that can be achieved through this alliance - mig33 brings mobile community and entertainment to billions of consumers residing in the emerging, mobile-first markets throughout Southeast Asia, South Asia, the Middle East and Africa.<br />

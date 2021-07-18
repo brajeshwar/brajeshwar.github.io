@@ -39,7 +39,7 @@ excerpt: High Dynamic Range Imaging (HDRI or just HDR) is a set of techniques th
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/stuckincustoms/2035748576/">Trey Ratcliff</a></cite></p>
 <p class="caption"><em class="title">HDR Photography</em>Representing the wide range of intensity levels found in real scenes.</p>
 </div>
-<p><!--more--></p>
+
 <p>Nowadays, <a href="http://brajeshwar.wpengine.com/2006/what-are-hdr-or-high-dynamic-range-images/">High Dynamic Range</a> (HDR) photography has gained immense popularity among photographers. It ain't Rocket Science, but just a technique to capture high dynamic range image by a single click on digital or film camera. The HDR images are 'in demand' as they give a very surreal and distinct look to the image, which is difficult to capture by simple click of the camera shutter. Photographers rely on softwares like <a href="http://www.hdrsoft.com/">Photomatix</a>, which displays the minutest of details viz. light, shadow etc.  and gives satisfying color tones to the image. </p>
 <p>Let's explore the 5 Most Common techniques to create HDR Images:</p>
 <h3>1. Darkroom Technique</h3>

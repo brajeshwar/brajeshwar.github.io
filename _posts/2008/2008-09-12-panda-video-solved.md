@@ -46,7 +46,7 @@ excerpt: By providing an elegant REST API, Panda makes it completely painless to
 * Everything contained within one elegant <a href="http://www.merbivore.com/">Merb</a> application.<br />
 * Support for the numerous encoding profiles <a href="http://ffmpeg.mplayerhq.hu/">FFmpeg</a> supports including FLV, h264 for Flash a iPhone formats.<br />
 * Lovely little admin dashboard for managing your videos.</p>
-<p><!--more--></p>
+
 <p><strong>Runs in the cloud</strong></p>
 <p>Panda runs completely in the cloud computing environment provided by Amazon Web Services. The application runs on a customised EC2 instance with everything pre-installed, including FFmpeg and an plethora of codecs. SimpleDB is used to store all of data for video, encoding, accounts and encoding profiles. Uploaded and encoded video files are then stored on S3.</p>
 <p><strong>Simple to integrate</strong></p>

@@ -42,7 +42,7 @@ excerpt: '"We knew that we had to monitor our enemies. We''ve also come to reali
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://safetyactconsultants.com/">Safety Act Consultants</a></cite></p>
 <p class="caption"><em class="title">Internet Security </em>Are user's privacy at stake?</p>
 </div>
-<p><!--more--></p>
+
 <p>It was always believed that, only the Security Agencies are willing to access the data flowing through the World Wide Web. This belief has been proved wrong, since now the <a href="http://dor.gov.in/">Directorate of Revenue Intelligence</a> (DRI) working under the Ministry of Finance are having plans for accessing the <a href="http://www.workexaminer.com/internet-monitoring-software.html">Internet Monitoring Systems</a>. Recently in a meeting of the Inter-Ministerial Group, this proposal was put by forward DRI, and a discussion was carried out.</p>
 <p>As per the information provided by a top Government official, DRI are willing to have permission to monitor the systems, which are used in bids. They want to have a record of all the deals. The online tracking will also help them to get information of any suspected tax violators.</p>
 <h3>The Way Ahead</h3>

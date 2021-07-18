@@ -38,7 +38,7 @@ permalink: "/2011/is-microsoft-playing-big-brother-with-their-new-skype-acquisit
 ---
 <p>Microsoft <a href="http://about.skype.com/press/2011/05/microsoft_to_acquire_skype.html">bought Skype</a> for $8.5 billion. To put this in perspective, this is 5x what Google <a href="http://www.google.com/press/pressrel/google_youtube.html">paid for YouTube</a>. Many industry analysts believe that Microsoft overpaid for the VoIP giant, especially since Skype was sold in 2009 for just $2.75 billion. Given the huge jump in price there was likely an unannounced bidding war. </p>
 <p>With Microsoft overpaying for a company that does not rake in huge revenues, the question is, what are they going to do with it?</p>
-<p><!--more--></p>
+
 <p>Industry experts are already speculating on what Microsoft is going to do with Skype. Many experts, including Magnus Rehle of the Greenwich Consulting firm, believe that this was a to purchase a large block of customers and to buy a brand but this explanation seems to simplified given that buying customers doesn't seem likely from the world's largest software firm.</p>
 <p>The smart money is on Microsoft simply wanting to break into a new market. Microsoft has the corporate market cornered but lacks any products with real pizazz that appeal to consumers, and it has lacked a sensational product line for some time. And with Apple coming out with super sexy and sleek products, Microsoft is beginning to look like the PC in the Mac commercials.</p>
 <p>"We see a lot of fit between the Microsoft strategy to increase consumer focus and Skype. If this is integrated in the right way, it has a lot of potential to leverage platforms like Xbox and Windows Phone to new heights," says Leif-Olof Wallin, VP of Research at Gartner.</p>

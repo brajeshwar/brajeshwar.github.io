@@ -32,7 +32,7 @@ permalink: "/2011/twusic-tweet-your-music/"
 <p>Actually, there are many tweets containing the <a href="http://twitter.com/#!/search/%23nowplaying">#nowplaying</a> hashtag, thanks to all the music services that allow users to automatically push their music onto their Twitter account.</p>
 <p>Late 2010, Twitter started to include Apple Ping music information for those sharing their music via iTunes but, again, without the possibility to listen to that music, unless you already have it on your computer.</p>
 <p>That was some sort of solution, but not good enough.</p>
-<p><!--more--></p>
+
 <p><iframe src="http://player.vimeo.com/video/26842315?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen allowfullscreen></iframe></p>
 <p>That same year Twitter started to allow "included" videos in tweets too. </p>
 <p>On one hand it was a great improvement but we still needed to search for the right video elsewhere and add the link to it.<br />

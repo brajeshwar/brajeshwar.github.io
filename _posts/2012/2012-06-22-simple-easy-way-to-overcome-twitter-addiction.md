@@ -30,7 +30,7 @@ permalink: "/2012/simple-easy-way-to-overcome-twitter-addiction/"
 ---
 <p>Like most of you, I too am hooked to twitter - it is such a simple but awesome medium where you can talk to, connect with like-minded people and listen to those who you appreciate. I signed up for Twitter on Jan 29, 2007 which makes me amongst the first Million users (725,553rd) on Twitter.</p>
 <p>Well, like many of you, I too have realized that it does take a toll on my time and eventually my productivity. In my ever-happening experiment for self-disciplinary self-imposed habits, I've successfully conquered my craving and yearning to be on Twitter all the time just like <a href="http://brajeshwar.wpengine.com/2010/taking-back-your-life-and-enjoying-it/">I did with emails</a> long back. Of course, I've improvised a lot with email management since - keeping is much leaner, simpler and minimal yet effective and acting on them in a timely manner.</p>
-<p><!--more--></p>
+
 <p>Just like weening a baby of her mothers' milk or of a drug addict from his drugs, there are withdrawal symptoms, sometime fits of sudden urge to "hell with it." Here is how I did it, hoping that it will serve as a template for those who wish to get more things done other than tweeting. This may not work exactly for you, I urge you to try and mould your own rules to suit yours.</p>
 <h3>A Fallback Support - a leaner option to tweet.</h3>
 <p>You just can't suddenly stop using something that you were used to regularly for quite a while. It will be easier to find a way to continue to tweet but reduce it gradually. Stop using your regular, ever-present client (Twitter, TweetDeck).</p>

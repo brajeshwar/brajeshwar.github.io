@@ -41,7 +41,7 @@ excerpt: Together these 6 editions of Creative Suite 3 address virtually every c
   your business, and your creative vision more easily and effectively than ever before.
 ---
 <p>The Adobe Creative Suite 3 family offers you choice - the combination of creative tools you master, the design disciplines you explore, and the richness and scope of content you create. This revolutionary new release includes six editions, each combining tightly integrated, industry-leading components that enable you to handle virtually any creative task.</p>
-<p><!--more--></p>
+
 <p><strong>BROWSE</strong></p>
 <p>* <a href="http://www.flickr.com/photos/brajeshwar/sets/72157600195493141/">Adobe CS3 Wallpapers</a> on Flickr.</p>
 <p><strong>DOWNLOADS</strong></p>
