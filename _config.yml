@@ -36,12 +36,6 @@ plugins:
 # optional_front_matter:
 #   remove_originals: true
 
-# Pages Path
-defaults:
-  - scope:
-      path: '_pages'
-    values:
-      permalink: '/:title/'
 
 # Posts
 defaults:
