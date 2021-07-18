@@ -29,7 +29,7 @@ This chapter deals, how you can use Actionscript to do many things, including ho
 <p><em>Customized and Printable Presentations</em><br />
 PrintJob object, a new thing of Actionscript 2.0, you will be able to get a taste of the same in this section.<br />
 <!--more--><br />
-<img src="{{ site.baseurl }}/assets/2003/10/macromediaFlashMX2004Magic.jpg" alt="Macromedia Flash MX 2004 Magic" height="247" width="247" /><br />
+<img src="/static/2003/10/macromediaFlashMX2004Magic.jpg" alt="Macromedia Flash MX 2004 Magic" height="247" width="247" /><br />
 <em>Macromedia Flash MX 2004 Magic</em></p>
 <p><em>Flash-Driven Ad</em><br />
 So, you have seen those Flash ads swapping across the page on some websites, personally I do not like them though but I know it pays to some developers. This section dives you into how you can integrate Flash advertisemetn with HTML pages. You can create a transparent ad that will overlay existing content for a specified duration.</p>

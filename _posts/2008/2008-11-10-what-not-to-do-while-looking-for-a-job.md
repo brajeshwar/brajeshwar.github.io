@@ -33,7 +33,7 @@ excerpt: There are times when the need to switch a job is high on the agenda and
   to make mistakes, but there are a few concerns which are a strict no-no when we
   think of switching from one organization to another.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/i-heart-my-job.jpg" alt="Loving your job: Do you love yours like these girls do?" />
+<div class="figure"><img src="/static/2008/11/i-heart-my-job.jpg" alt="Loving your job: Do you love yours like these girls do?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/cobalt/2807290411/">Cobalt123</a></cite></p>
 <p class="caption"><em class="title">Loving your job</em>Do you love yours like these girls do?</p>
 </div>

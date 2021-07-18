@@ -28,7 +28,7 @@ excerpt: ColdFusion 8 - it's blazingly fast, packed with new features, integrate
   used for everything from small departmental applications to highly scalable, reliable
   implementations of the most important business applications.
 ---
-<p><a href="http://www.adobe.com/products/coldfusion/"><img src="{{ site.baseurl }}/assets/2007/07/box_coldfusion8_150x150.jpg" alt="ColdFusion 8" style="border: 0 none;" /></a>Adobe <a href="http://www.adobe.com/products/coldfusion/">ColdFusion 8</a>, popular among beta testers as the "Scorpio" was <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200707/073007ColdFusion.html">released</a> today.</p>
+<p><a href="http://www.adobe.com/products/coldfusion/"><img src="/static/2007/07/box_coldfusion8_150x150.jpg" alt="ColdFusion 8" style="border: 0 none;" /></a>Adobe <a href="http://www.adobe.com/products/coldfusion/">ColdFusion 8</a>, popular among beta testers as the "Scorpio" was <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200707/073007ColdFusion.html">released</a> today.</p>
 <p>Besides many other new features, ColdFusion 8 also introduces an Eclipse plug-in debugger. You can use it to set breakpoints, watch variables, and step through code, making it easier to debug application code.<br />
 <!--more--><br />
 With ColdFusion 8, there will be no or rather very minimal need for a third-party plugin to do image manipulation. There are more than 50 new tags and functions for creating and manipulating images, from the simple to the sophisticated ones. The new CFIMAGE tag provides shortcuts to the most common image actions, including reading, writing, resizing, rotating, and converting images.</p>

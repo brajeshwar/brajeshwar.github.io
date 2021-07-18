@@ -41,7 +41,7 @@ excerpt: 3G technology is more about the experience it brings in, rather than th
   speed. Speed may just be an enabler. The services, applications, possibilities,
   emerging devices and reliability is what comes as a bundle.
 ---
-<figure><img src="{{ site.baseurl }}/assets/2010/11/3g-tech.jpg" alt="3G Technology" /><br />
+<figure><img src="/static/2010/11/3g-tech.jpg" alt="3G Technology" /><br />
 <figcaption>Into the future with 3G. (source : <a href="http://on.fb.me/99K0FZ">Praval's Photo Stream</a>)</figcaption>
 </figure>
 <p>Earlier this month, we saw country's first privately held 3G service from <a href="http://www.tatadocomo.com/">Tata Docomo</a>. With large marketing efforts across all possible advertising medium, Tata Docomo established itself as the first private company to roll out commercial 3G services across 9 circles. This was analogous to NTT Docomo, the partners being the first company in the world to provide commercial 3G, a few years back! We've had promises from <a href="http://www.airtel.in/">Airtel</a> and <a href="http://www.vodafone.in/">Vodafone</a> to launch 3G soon.</p>
@@ -57,6 +57,6 @@ excerpt: 3G technology is more about the experience it brings in, rather than th
 <p>* <a href="http://www.youtube.com/watch?v=ej7gJF42S8o">How about watching and controlling a virtual 3D museum?</a><br />
 * <a href="http://www.youtube.com/watch?v=o6cNBqNUJiM">How about accessing your paid lockers at subways?</a><br />
 * <a href="http://www.youtube.com/watch?v=zJxOQ6zQV14">You can buy stuff from vending machines!</a></p>
-<p><img src="{{ site.baseurl }}/assets/2010/11/3g-wifi-router.jpg" alt="3G Wifi Router" class="alignright" /></p>
+<p><img src="/static/2010/11/3g-wifi-router.jpg" alt="3G Wifi Router" class="alignright" /></p>
 <p>Apart from these, there was a lot of exciting stuff we did using the 3G technology. For example, the wireless wifi router we had worked seamlessly on 3G and could host as many as 5 devices for over 6 hours!</p>
 <p>To summarize, what we experienced was not just about speed, but the experience that 3G shall bring along. Staying in India, where 3G has just hit the shore, I am looking forward to some of the best use of 3G technology on the lines of what I experienced in a <a href="http://www.praval.com/land-of-3g-japan/">3 day trip to NTT DOCOMO, in Tokyo, Japan</a></p>

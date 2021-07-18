@@ -39,7 +39,7 @@ author:
   last_name: Wilding
 permalink: "/2011/top-10-cloud-blackout-blunders/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2011/07/cloud-cumulonimbus.jpg" alt="A Cumulonimbus Cloud" /></p>
+<p><img src="/static/2011/07/cloud-cumulonimbus.jpg" alt="A Cumulonimbus Cloud" /></p>
 <p>The big fluffy white hard-drives in the sky are said to be the future of software-but are they as sometimes as unpredictable as naughty-little-brother-like cumulonimbus clouds? The heavenly body of cloud computing has flexed its muscles prematurely as there have been a long string of major outages:</p>
 <h3>Blackout Blunder Number 1: Google's Gmail Gaffe</h3>
 <p>Google let <a href="http://www.gmail.com/">Gmail</a> fail... for a time. In fact some 150,000 Gmail users logged in to their precious account only to see a blank slate. Considering Gmail is one of the cloud's great attempts to throttle Microsoft's stranglehold on Exchange-based enterprise email services, this was a big hit to the cloud. Thankfully Google was able to revert beyond its failed multi-layered backup strategy and reach back to archaic backup tapes-yup tapes.</p>

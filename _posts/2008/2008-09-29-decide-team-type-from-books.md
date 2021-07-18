@@ -36,7 +36,7 @@ excerpt: Many people can be analyzed from the types of books they read. Of cours
   book reading is a good thing. What books do you have with you?
 ---
 <p><strong>What do you think of the "Team-Type" if they got these books recently?</strong></p>
-<p><img src="{{ site.baseurl }}/assets/2008/09/books-wiley-design-challenge.jpg" alt="What type of Team do you think these books suggest?" style="float: none; border: 0 none;" /></p>
+<p><img src="/static/2008/09/books-wiley-design-challenge.jpg" alt="What type of Team do you think these books suggest?" style="float: none; border: 0 none;" /></p>
 <p><script type="text/javascript" language="javascript" src="http://s3.polldaddy.com/p/959805.js"></script></p>
 <noscript> <a href="http://answers.polldaddy.com/poll/959805/">What "Team-Type" do these books suggest?</a><br />
 <span style="font-size:9px;"> (<a href="http://www.polldaddy.com">  surveys</a>)</span></noscript>

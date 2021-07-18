@@ -63,7 +63,7 @@ excerpt: The premiere competition honors the best student graphic designers, pho
   illustrators, animators, digital filmmakers, developers and computer artists from
   accredited higher education institutions worldwide.
 ---
-<div class="figure"><a href="http://adaaentry.com/"><img src="{{ site.baseurl }}/assets/2008/12/adobe-design-achivement-awards.jpg" alt="Adobe Design Achievement Awards 2009" /></a>
+<div class="figure"><a href="http://adaaentry.com/"><img src="/static/2008/12/adobe-design-achivement-awards.jpg" alt="Adobe Design Achievement Awards 2009" /></a>
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://www.adobe.com/">Adobe</a></cite></p>
 <p class="caption"><em class="title"> ADAA </em>The premiere competition - Adobe Design Achievement Awards 2009</p>
 </div>

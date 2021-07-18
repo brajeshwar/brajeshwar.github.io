@@ -41,7 +41,7 @@ permalink: "/2016/great-accelerators-types-startups-work/"
 <p>Most accelerators like to focus on one type of startup. For example, some only work with tech startups. Others work with startups that have a certain structure, like team-based startups.  </p>
 <h2>What to Expect</h2>
 <p>Most accelerators will offer you mentorship, workspace, operational support and access to funding via introductions to angel investors or outright payments. Program durations run anywhere from a few weeks to a few months. Many programs are quite competitive and only accept 2 to 10 startups a year.</p>
-<p><img src="{{ site.baseurl }}/assets/2016/08/accelerator.jpg" alt="Startup Accelerator" width="1190" height="777" class="alignnone size-full wp-image-6856" /></p>
+<p><img src="/static/2016/08/accelerator.jpg" alt="Startup Accelerator" width="1190" height="777" class="alignnone size-full wp-image-6856" /></p>
 <p>Here’s a list of great accelerators and the types of startups they work with.</p>
 <h2>Tech, Web, Mobile, and Science Accelerators</h2>
 <ul>

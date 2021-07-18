@@ -32,7 +32,7 @@ excerpt: The ActionScript 3 API Reference is a free iPhone application that prov
   a quick and convenient method for accessing the ActionScript 3 API class reference
   documentation.
 ---
-<p><a href="http://www.mikechambers.com/as3iphone/"><img src="{{ site.baseurl }}/assets/2009/01/AS3-iPhone.png" alt="ActionScript 3 API Reference for the iPhone" style="float: right;" /></a>Mike Chamber's got a nice iPhone app -- a handy <a href="http://www.mikechambers.com/as3iphone/">ActionScript 3 API reference</a>.</p>
+<p><a href="http://www.mikechambers.com/as3iphone/"><img src="/static/2009/01/AS3-iPhone.png" alt="ActionScript 3 API Reference for the iPhone" style="float: right;" /></a>Mike Chamber's got a nice iPhone app -- a handy <a href="http://www.mikechambers.com/as3iphone/">ActionScript 3 API reference</a>.</p>
 <p>"The ActionScript 3 API Reference is a free iPhone application that provides a quick and convenient method for accessing the ActionScript 3 API class reference documentation."</p>
 <p><strong>From <a href="http://www.mikechambers.com/">Mike Chamber's site</a>;</strong></p>
 <p>* <a href="http://www.mikechambers.com/as3iphone/">ActionScript 3 API Reference</a> for the iPhone<br />

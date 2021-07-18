@@ -40,7 +40,7 @@ permalink: "/2012/respect-for-android-android-app-development/"
 <p>Businesses can hire Android developers to develop an innovative applications. However, enough research should be done in figuring out the kind of application they want to launch & the purpose. </p>
 <p>As technology is growing on a continuous basis, it is very much important to hire knowledgeable developers to accomplish your high end tasks. With over 300 million Android phones available in the market, it is a great opportunity for developers to take advantage of the growing demand for Android devices.</p>
 <p><!--more--></p>
-<figure><img src="{{ site.baseurl }}/assets/2012/04/android-love-of-developers.jpg" alt="Developers love Android" /><br />
+<figure><img src="/static/2012/04/android-love-of-developers.jpg" alt="Developers love Android" /><br />
 <figcaption>Android seeing more Developer love.</figcaption>
 </figure>
 <h3>Examples of 'Who Made it Big' with Android</h3>

@@ -43,7 +43,7 @@ permalink: "/2013/hijacking-developer-tools-optimize-design-grep/"
 <p><em>$ grep -n -r border-radius sass</em></p>
 <p>This shows the files and their corresponding line-numbers of the existence of "border-radius".</p>
 <p>That should get you started. I urge you to look more closely, play with it and read the manual anytime with <em>man grep</em>. The power of grep and regular expression can prove to be a really powerful tool to help designers write codes better.</p>
-<p><img src="{{ site.baseurl }}/assets/2013/11/grep-example1.png" alt="grep example" width="800" height="500" class="alignnone size-full wp-image-6752" /></p>
+<p><img src="/static/2013/11/grep-example1.png" alt="grep example" width="800" height="500" class="alignnone size-full wp-image-6752" /></p>
 <h2>Grep as Part of the Design Workflow</h2>
 <p>Sometime back, I wrote an article on <a href="http://brajeshwar.wpengine.com/2013/use-icon-fonts-right-way/">How to use Icon Fonts the right way</a>. Well, what about improving that design workflow with the help of grep?</p>
 <p>The gist of the article was to select and use only the icons that you'll need in the design project. The goal was to reduce the file size of the font-files. In-fact, for a lesser number of icons, you can embed the whole font-family inside your CSS.</p>

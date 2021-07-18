@@ -26,7 +26,7 @@ author:
   last_name: Oinam
 permalink: "/2011/codeacademy-learn-to-code/"
 ---
-<figure><a href="http://www.codecademy.com/users/Brajeshwar"><img src="{{ site.baseurl }}/assets/2011/08/codeacademy.jpg" alt="Codeacademy" /></a><br />
+<figure><a href="http://www.codecademy.com/users/Brajeshwar"><img src="/static/2011/08/codeacademy.jpg" alt="Codeacademy" /></a><br />
 <figcaption>Codeacademy is the new, easy and fun way to learn programming. (source : <a href="http://www.codecademy.com/">Codeacademy</a>)</figcaption>
 </figure>
 <p>There is a new cool thing in town - a way to easily learn to code and have fun doing it. Today, I took my first lesson and it wasn't bad at all. Get started, write some code at <a href="http://www.codecademy.com/">Codeacademy</a> &rarr;</p>

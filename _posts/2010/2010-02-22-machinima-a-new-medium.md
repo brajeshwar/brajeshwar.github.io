@@ -33,7 +33,7 @@ excerpt: Machinima is film-making in a virtual environment. A portmanteau of mac
   cinema or machine animation, it is both a collection of associated production techniques
   and a film genre.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/02/machinima-booth.jpg" alt="Machinima" />
+<div class="figure"><img src="/static/2010/02/machinima-booth.jpg" alt="Machinima" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/photolibraries/3242153904/">HVX Silverstar</a></cite></p>
 <p class="caption"><em class="title">Machinima</em>Real-time 3D graphics rendering engines to generate computer animation.</p>
 </div>
@@ -48,7 +48,7 @@ excerpt: Machinima is film-making in a virtual environment. A portmanteau of mac
 <p><strong>1. Live Action Machinima</strong></p>
 <p>The action takes place in a networked computer game, mainly using a FPS game. Every player controls a virtual character via mouse and keyboard commands. Each actor uses a headset with a microphone to perform dialogue, if there is any. Though, sometimes the dialogue is added later in 'post-production'.</p>
 <p>One of the players is serving as the cameraman/woman. His/her point of view is recorded to tape (or disc) and represents the "film-footage". Most of the time, the settings and characters are taken from the game that's being used for filming.</p>
-<p><a href="http://www.adobe.com/motion/roosterteeth.html"><img src="{{ site.baseurl }}/assets/2010/02/red-vs-blue.jpg" alt="Red vs Blue" style="border: 0 none;" /></a></p>
+<p><a href="http://www.adobe.com/motion/roosterteeth.html"><img src="/static/2010/02/red-vs-blue.jpg" alt="Red vs Blue" style="border: 0 none;" /></a></p>
 <p>This way of making machinima is easy to learn and feels close to "real-life" filmmaking. It has room for spontaneity and improvisation and adds that human touch to the behavior of your actors. Probably the best known example of "Live Action" machinima is the series <a href="http://www.adobe.com/motion/roosterteeth.html">Red vs. Blue</a>. Using XBOX console, the game Halo and no further technical tricks, the series quickly managed to become the best known machinima piece to date.</p>
 <p><strong>2. Scripted Machinima</strong></p>
 <p>Each actor is controlled through a pre-defined script, telling him what to do and when.</p>

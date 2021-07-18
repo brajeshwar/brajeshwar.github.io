@@ -28,7 +28,7 @@ author:
   last_name: Mukherjee
 permalink: "/2010/att-prepares-to-battle-the-end-of-its-monopoly-in-iphone-exclusivity/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2010/11/att-not-smiling.jpg" alt="AT&T" class="alignright" /></p>
+<p><img src="/static/2010/11/att-not-smiling.jpg" alt="AT&T" class="alignright" /></p>
 <p>Having dominated Smartphone sales for a long time now and in that achieving large revenue from the sale of Apple's iPhones, AT&T could face some problems in the near future. These problems could be the result of alleged <a href="http://blog.wirelessground.com/att%E2%80%99s-iphone-exclusivity-almost-over/">rumours</a> indicating the closure of AT&T's contract of bearing exclusive rights to sell iPhones. Another gossip that is doing rounds is that <a href="http://news.cnet.com/8301-31021_3-20001388-260.html">Verizon Wireless</a> will take over the exclusive rights from the incumbent store AT&T to market and sell iPhones and this will happen from the first quarter of 2011. Keeping this in mind the AT&T store has gone ahead and readied itself by broadening its product portfolio and also struck a new deal that could delight Smartphone users.</p>
 <p><!--more--></p>
 <h3>AT&T's Plan of Action</h3>

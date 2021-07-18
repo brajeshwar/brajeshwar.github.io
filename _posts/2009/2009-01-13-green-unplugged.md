@@ -36,7 +36,7 @@ excerpt: 'The Laundry Warrior: An Asian warrior assassin finds peace, contentmen
   and perhaps love in a forgotten western town on the edge of the desert but is then
   faced with...?'
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/01/laundry-warrior.jpg" alt="The Laundry Warrior" />
+<div class="figure"><img src="/static/2009/01/laundry-warrior.jpg" alt="The Laundry Warrior" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.cultureunplugged.com/">Culture Unplugged</a></cite></p>
 <p class="caption"><em class="title">The Laundry Warrior</em>An Asian warrior assassin finds peace, contentment and perhaps love in a forgotten western town on the edge of the desert.</p>
 </div>

@@ -32,7 +32,7 @@ permalink: "/2008/red-hat-enterprise-linux-53b-adds-to-virtualization/"
 excerpt: The number of processors in RHEL 5.3 beta nearly doubled from 64 to 126 and
   memory per host has nearly quadrupled from 256 GB to a 1 TB.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/rhel-virtualized.jpg" alt="RHEL: Customized and supported Linux distro for your business." />
+<div class="figure"><img src="/static/2008/11/rhel-virtualized.jpg" alt="RHEL: Customized and supported Linux distro for your business." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/existentist/666727475/">Existentist</a></cite></p>
 <p class="caption"><em class="title">RHEL</em>Customized and supported Linux distro for your business.</p>
 </div>

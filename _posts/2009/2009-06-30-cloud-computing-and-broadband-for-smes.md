@@ -37,7 +37,7 @@ excerpt: This looks to be a perfect solution wherein you pay-as-you-go. Rather t
   buying the entire hardware or the software library, they may prefer to pay the service
   provider using a pay per license model.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/cloud-computing-vote.jpg" alt="Cloud Computing: Have you voted?" />
+<div class="figure"><img src="/static/2009/06/cloud-computing-vote.jpg" alt="Cloud Computing: Have you voted?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/sevenmorris/3005381373/">Seven Morris</a></cite></p>
 <p class="caption"><em class="title">Cloud Computing</em>Have you voted?</p>
 </div>

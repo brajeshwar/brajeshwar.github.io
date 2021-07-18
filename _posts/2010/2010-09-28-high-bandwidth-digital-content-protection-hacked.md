@@ -34,7 +34,7 @@ excerpt: The publicized hack unlocks DRMed content by providing the master key, 
   can then strip the encryption, enabling anyone to make unlimited copies of HD content
   rendering copy protection software useless.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/hdcp-hack.png" alt="A tiny portion of the HDCP Code" />
+<div class="figure"><img src="/static/2010/09/hdcp-hack.png" alt="A tiny portion of the HDCP Code" />
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite><a href="http://www.foxnews.com/">Fox News</a></cite></p>
 <p class="caption"><em class="title">The HDCP code fragment</em>Intel confirmed was indeed a "master key" for HD content.</p>
 </div>

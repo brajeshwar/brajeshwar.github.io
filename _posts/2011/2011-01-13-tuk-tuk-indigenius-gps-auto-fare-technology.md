@@ -30,7 +30,7 @@ excerpt: India's first GPS based multi-platform Auto fare calculator that runs t
   smart phones which can be started on getting into the autorickshaw and the meter
   in the phone will run alongside the meter in the rickshaw.
 ---
-<p><a href="http://tuktuk.mindhelix.com/"><img src="{{ site.baseurl }}/assets/2011/01/tuk-tuk-meter.jpg" alt="Tuk Tuk Meter" class="alignright" /></a></p>
+<p><a href="http://tuktuk.mindhelix.com/"><img src="/static/2011/01/tuk-tuk-meter.jpg" alt="Tuk Tuk Meter" class="alignright" /></a></p>
 <h3>GPS to the Rescue!</h3>
 <p>Here is good.. no make that great news for public transport commuters in India and a heaven sent boon for tourists in India. The actual source of this technology is far from heavenly though GPS is an eerily accurate technology which might be contested by conspiracy theory buffs as supernatural in origin. Jokes apart, <a href="http://www.mindhelix.com/">MindHelix Technologies</a>, a Kerala (India) based company formed last month by an engineer and two engineering students launched <a href="http://tuktuk.mindhelix.com/">Tuk Tuk Meter</a>. This claims to be India's first GPS based multi-platform Auto fare calculator that runs through smart phones which can be started on getting into the auto-rickshaw and the meter in the phone will run alongside the meter in the rickshaw. It can also double-check the distance travelled as shown in the auto's meter and the GPS distance calculated by the application, Thomas Antony, Chief Technology Officer of MeindHelix, said.</p>
 <p><!--more--></p>

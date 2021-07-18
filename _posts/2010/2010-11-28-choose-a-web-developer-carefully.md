@@ -32,7 +32,7 @@ author:
   last_name: Smith
 permalink: "/2010/choose-a-web-developer-carefully/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2010/11/3800537699_d4298e59cf_b.jpg" alt="A team of dedicated Developers" /><br />
+<figure><img src="/static/2010/11/3800537699_d4298e59cf_b.jpg" alt="A team of dedicated Developers" /><br />
 <figcaption>A Team of Dedicated Developers (source : <a href="http://www.flickr.com/photos/brajeshwar/3800537699/">Flickr</a>)</figcaption>
 </figure>
 <p>If you were to poll a hundred serious business owners on the street and ask them if a website was a crucial part of starting a business, at least ninety would probably say it is. Yet, if you polled the same hundred people and asked what resources they put into their website, you would probably be shocked with the results.</p>

@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2011/superamit-how-can-we-help-you-from-india/"
 ---
-<figure><a href="http://amitguptaneedsyou.com/" title="Amit Gupta needs a Bone Marrow transplant."><img src="{{ site.baseurl }}/assets/2011/10/amit-gupta.jpg" alt="Amit Gupta" /></a><br />
+<figure><a href="http://amitguptaneedsyou.com/" title="Amit Gupta needs a Bone Marrow transplant."><img src="/static/2011/10/amit-gupta.jpg" alt="Amit Gupta" /></a><br />
 <figcaption>Amit Gupta, an entrepreneur, needs a Bone Marrow transplant. (source : <a href="http://tumblr.amitgupta.com/day/2011/10/06">Amit Gupta</a>)</figcaption>
 </figure>
 <p>I looked around, clicked on every clickable link on your site but there seem to be no way to even see if I can help, unless I'm in the US. Any idea how can the people from South Asian region help out?</p>

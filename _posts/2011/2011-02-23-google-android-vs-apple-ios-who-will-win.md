@@ -38,7 +38,7 @@ permalink: "/2011/google-android-vs-apple-ios-who-will-win/"
 <p>2010 saw just the preview of the smart-phone war. 2011 will see the complete movie.</p>
 <p>It's <strong>Google's Android</strong> vs <strong>Apple's iOS</strong>. Apple's new in-app subscription model vs Google's; Google's competent music service to match iTunes and Apple's <a href="http://www.apple.com/mobileme/">Mobile Me</a> to match <a href="http://www.google.com/buzz">Google Buzz</a>.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2011/02/google-apple.jpg" alt="Google vs Apple" /></p>
+<p><img src="/static/2011/02/google-apple.jpg" alt="Google vs Apple" /></p>
 <p>Here's a lowdown of the major features in the Android vs. iOS turf war:</p>
 <h3>Mobile Hardware</h3>
 <p>This is where the war treads on uneven terrain, because Apple sells just two smartphone models - iPhone 4 and iPhone 3GS. Android, on the other hand, sells nearly 40 Android phones at all 4 major U.S carriers. Apple's smartphones are available only on two U.S terrains. Android has just one iPad like device - <a href="http://www.pcworld.com/article/210376/samsungs_galaxy_tab_tmobile_version_elegant_promising_android_tablet.html">Samsung Galaxy Tab</a> and <a href="http://www.engadget.com/2011/01/31/dell-streak-7-review/">Dell Streak 7</a>. Upcoming devices are <a href="http://www.techradar.com/news/mobile-computing/motorola-xoom-vs-ipad-vs-playbook-924569">Motorola Xoom</a>, <a href="http://www.pcworld.com/article/219659/htc_flyer_gets_official.html">HTC Flyer</a> along with devices from LG, Toshiba, a new Galaxy Tab, and so on. But Apple's iPod Touch and iPad are selling by the dozen. </p>

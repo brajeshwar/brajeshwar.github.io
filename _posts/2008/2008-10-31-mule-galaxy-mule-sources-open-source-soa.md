@@ -32,7 +32,7 @@ excerpt: Mule Galaxy is the open source SOA governance platform which also featu
   a repository. This results in extending its open source SOA middleware to enable
   custom extensions by adding a scripting shell.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/james-governor-circles.jpg" alt="Intersection of technologies: The famous James Governor circles." />
+<div class="figure"><img src="/static/2008/10/james-governor-circles.jpg" alt="Intersection of technologies: The famous James Governor circles." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/cote/576980063/">Cote</a></cite></p>
 <p class="caption"><em class="title">Intersection of technologies</em>The famous James Governor circles.</p>
 </div>

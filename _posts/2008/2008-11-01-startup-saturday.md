@@ -40,7 +40,7 @@ excerpt: An initiative by Headstart to provide entrepreneurs in India with a mon
   provides a forum to discuss, present, network and learn from peers, prospective
   customers, adopters, partners and investors.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/startup-ready.jpg" alt="Are you ready to Startup?" />
+<div class="figure"><img src="/static/2008/11/startup-ready.jpg" alt="Are you ready to Startup?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/williamli1983/258377108/">William</a></cite></p>
 <p class="caption"><em class="title">Startup</em>Are you ready to Stay Hungry, Stay Foolish?</p>
 </div>

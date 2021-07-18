@@ -33,7 +33,7 @@ permalink: "/2009/mac-os-x-snow-leopard-the-cat-is-here/"
 excerpt: Come September and Mac users shall be ready to experience Apple's self proclaimed,
   "The world's most advanced operating system. Finely tuned."
 ---
-<figure><img src="{{ site.baseurl }}/assets/2009/08/snow-leopard.jpg" alt="Snow Leopard" /><br />
+<figure><img src="/static/2009/08/snow-leopard.jpg" alt="Snow Leopard" /><br />
 <figcaption>Snow Leopard - The world's most advanced operating system. Finely tuned.</figcaption>
 </figure>
 <p>One more day before Mac users can rejoice belling the all new cat. Apple releases <a href="http://www.apple.com/macosx/">Mac OS X, Snow Leopard</a> tomorrow, that's <strong>28th of August, 2009</strong>. You may check the <a href="http://www.apple.com/macosx/specs.html">system requirements</a> as laid out by Apple. For the die hard fans, there also exists an option to <a href="http://store.apple.com/us/product/MAC_OS_X_SNGL">pre order</a>! (However, <a href="http://www.amazon.com/Mac-version-10-6-Snow-Leopard/dp/B001AMHWP8">Amazon</a> is selling it much cheaper.)</p>

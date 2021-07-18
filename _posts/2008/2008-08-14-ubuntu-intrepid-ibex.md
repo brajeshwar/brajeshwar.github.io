@@ -32,7 +32,7 @@ excerpt: The key aspect with Ubuntu - Intrepid Ibex shall be to include improvem
   in the arena of mobile computing and desktop scalability along with increased flexibility
   for Internet connectivity.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/08/ubuntu-intrepid-ibex.jpg" alt="Ubuntu 8.10 Intrepid Ibex" />
+<div class="figure"><img src="/static/2008/08/ubuntu-intrepid-ibex.jpg" alt="Ubuntu 8.10 Intrepid Ibex" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/codedragon/2280645846/">Graham Binns</a></cite></p>
 <p class="caption"><em class="title">Intrepid Ibex</em>Keep your fingers crossed!</p>
 </div>

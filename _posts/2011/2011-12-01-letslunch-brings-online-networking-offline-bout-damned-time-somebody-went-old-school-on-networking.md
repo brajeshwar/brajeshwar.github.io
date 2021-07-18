@@ -33,7 +33,7 @@ author:
   last_name: Wilding
 permalink: "/2011/letslunch-brings-online-networking-offline-bout-damned-time-somebody-went-old-school-on-networking/"
 ---
-<p><a href="http://letslunch.com/" title="Let's Lunch"><img src="{{ site.baseurl }}/assets/2011/12/2303999405_cefe5d0ca3_z.jpg" alt="Let's Lunch" /></a></p>
+<p><a href="http://letslunch.com/" title="Let's Lunch"><img src="/static/2011/12/2303999405_cefe5d0ca3_z.jpg" alt="Let's Lunch" /></a></p>
 <p>If you're like me, then your social profiles haven't done anything to your business life other than imploring you to waste valuable working hours looking at random acquaintances' mobile uploads of their cats. Enter <a href="http://letslunch.com/">LetsLunch</a>.</p>
 <p>LetsLunch is a new networking tool that blends the ease of online networking  with the practical use of actual networking. And, its as easy as 1-2-3. Literally!</p>
 <p># If you have a LinkedIn profile already you've got step 1 done (if you don't you can create one or use a LetsLunch account).<br />

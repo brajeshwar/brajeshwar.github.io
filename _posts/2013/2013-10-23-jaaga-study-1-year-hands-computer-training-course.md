@@ -35,7 +35,7 @@ permalink: "/2013/jaaga-study-1-year-hands-computer-training-course/"
 <p>You'll learn to build Web and Mobile applications. You'll learn the basics of UI design and how to use HTML, CSS & JavaScript to make applications that are beautiful and easy to use. On the backend you'll use Python to implement your application logic. You'll use open source databases and SQL to store and manage application data. You'll setup and manage UNIX servers in 'The Cloud'. You'll use GIT to manage source code and collaborate with your team. You'll learn the tools and methods of modern software developers, and gain practical experience developing web and mobile applications.</p>
 <p><em>Why should you enroll for Jaaga Study?</em></p>
 <p>The program leverages the very best of Online Content. Our Team of coaches helps keep you on target and our technical experts help you understand the technical material. At the end of the program we can help you get a job in an internet startup in Bangalore or you can create your own internet business.</p>
-<p><img src="{{ site.baseurl }}/assets/2013/10/jaaga-2012.jpg" alt="Jaaga" class="alignnone size-full wp-image-6743" /></p>
+<p><img src="/static/2013/10/jaaga-2012.jpg" alt="Jaaga" class="alignnone size-full wp-image-6743" /></p>
 <p><em>Where?</em></p>
 <p>You will be spending one year, working full time at <a href="//jaaga.in/contact">Jaaga</a>, Bangalore.</p>
 <p><em>Cost?</em></p>

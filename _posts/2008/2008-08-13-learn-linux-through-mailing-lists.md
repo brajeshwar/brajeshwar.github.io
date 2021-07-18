@@ -34,7 +34,7 @@ excerpt: When a new Linux stumbler decides on switching on to Linux for full-tim
   s/he is often marred by an array of negative thoughts which intercept his desires
   of doing things differently.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/08/no-postage-required.jpg" alt="Some facts remain hidden for a while!" />
+<div class="figure"><img src="/static/2008/08/no-postage-required.jpg" alt="Some facts remain hidden for a while!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/susiepie/2269149168/">Susiepie</a></cite></p>
 <p class="caption"><em>Mailing Lists</em>Some facts remain hidden for a while!</p>
 </div>

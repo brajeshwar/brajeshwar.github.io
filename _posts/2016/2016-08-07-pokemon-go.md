@@ -30,12 +30,12 @@ author:
   last_name: Oinam
 permalink: "/2016/pokemon-go/"
 ---
-<p><a href="http://www.pokemongo.com"><img src="{{ site.baseurl }}/assets/2016/08/pokemon-go-logo-592x360.png" alt="Pokémon Go" width="592" height="360" class="alignnone size-medium wp-image-6840" /></a></p>
+<p><a href="http://www.pokemongo.com"><img src="/static/2016/08/pokemon-go-logo-592x360.png" alt="Pokémon Go" width="592" height="360" class="alignnone size-medium wp-image-6840" /></a></p>
 <p><a href="http://www.pokemongo.com/">Pokémon Go</a> has, no doubt, taken the world by storm. It's estimated that the game has more active users than Snapchat. It's the first widely popular augmented reality game and people have been willing to go to extreme measures to catch 'em all. Pokémon Go uses real-world locations and virtual images to sends users on wild quests in search of the elusive Pokémon. Here are some interesting stories that demonstrate Pokémon Go's influence on its players.</p>
 <p><iframe width="853" height="480" src="https://www.youtube.com/embed/AVWPWYYIcpk" frameborder="0" allowfullscreen></iframe></p>
 <h2>Gotta Catch 'em All</h2>
 <p>To be the very best you have to catch as many Pokémon as possible. The first one is usually located somewhere close by. But after that, you have to leave the comfort of your home if you want to advance in the game. Try going to places that are heavily populated to begin. Pokémon mostly appears in malls, parks, and tourist attractions.</p>
-<p><img src="{{ site.baseurl }}/assets/2016/08/pokemon-indoor-338x600.jpg" alt="Pokémon - Cubone" width="338" height="600" class="alignright size-large wp-image-6841" /></p>
+<p><img src="/static/2016/08/pokemon-indoor-338x600.jpg" alt="Pokémon - Cubone" width="338" height="600" class="alignright size-large wp-image-6841" /></p>
 <h2>How to Track and Catch Pokémon</h2>
 <p>The map on your app will show you all the Pokémon that are near you. You can track one by clicking on it. One track will appear if you are close and more if it’s further away. Once you have found the Pokémon you must catch it with your Poké Ball. Throw it by tapping your Poké Ball and flicking it towards your conquest. Don’t hesitate. Throw it immediately to prevent the Pokémon from escaping.</p>
 <h2>How to Battle</h2>
@@ -49,7 +49,7 @@ permalink: "/2016/pokemon-go/"
 <h2>Dead On</h2>
 <p>Within days of the game's release, Shayla Wiggins <a href="http://money.cnn.com/2016/07/09/technology/pokemon-go-dead-body/">found a dead body</a> while playing Pokémon Go. She said she hoped to find unique Pokémon by a natural water resource. She might have found Pokémon by the river, but she found something else too.</p>
 <p>"I probably would have never gone down there if it weren't for this game," Wiggins told CNNMoney. "But in a way, I'm thankful. I feel like I helped find his body. He could have been there for days."</p>
-<p>[caption id="attachment_6839" align="alignnone" width="1280"]<img src="{{ site.baseurl }}/assets/2016/08/laaija-pokemon.jpg" alt="Laaija&#039;s Pokémon Adventure" width="1280" height="761" class="size-full wp-image-6839" />Laaija's Pokémon Go Adventure.[/caption]</p>
+<p>[caption id="attachment_6839" align="alignnone" width="1280"]<img src="/static/2016/08/laaija-pokemon.jpg" alt="Laaija&#039;s Pokémon Adventure" width="1280" height="761" class="size-full wp-image-6839" />Laaija's Pokémon Go Adventure.[/caption]</p>
 <h2>Pokémon Go in India</h2>
 <p>In the early days of its release, even though it is not officially launched, Indians were fortunate enough to <a href="http://gadgets.ndtv.com/games/features/playing-pokemon-go-in-india-heres-everything-you-need-to-know-858349">play Pokémon Go</a>. Unfortunately, it is no longer playable and Indians have to wait for the official release of Pokémon Go.</p>
 <p>So while you're out there on the search for Mewtwo, remember to <a href="https://thatsweetgift.com/gift-for-geeks-and-nerds/">play responsibly</a>.</p>

@@ -32,7 +32,7 @@ author:
   last_name: Mukherjee
 permalink: "/2010/acer-launches-tablets-smartphones-and-dual-screen-notebooks/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2010/12/acer-iconia.jpg" alt="Acer Iconia" /><br />
+<figure><img src="/static/2010/12/acer-iconia.jpg" alt="Acer Iconia" /><br />
 <figcaption>Acer Iconia: The dual-screen Notebook.</figcaption>
 </figure>
 <p><a href="http://www.acer.com/">Acer</a> which is more often than not known for its efficient Notebooks and its customized production of <a href="http://mobile.acer.com/en/phones/liquidFerrari/">Ferrari Smartphones</a>, now wants to gain a lot of attention. This attention-grabbing stint of Acer will be through the launch of not just one product, but the unveiling of a whole range of new-age hardware products which shall cater to a future-ready consumer audience. In the earlier days (early 2000) it was and even now is to some extent, Apple which regularly comes up with novel products that are termed legendarily as ground-breaking innovations. In the recent past, <a href="http://www.apple.com/">Apple</a> is slowly but steadily facing competition from several players who also seem to have started making headlines with their innovative product-launches.</p>

@@ -31,7 +31,7 @@ permalink: "/2010/hdr-imaging-top-10-tutorials/"
 excerpt: To develop fabulous HDR images, what one needs is a good eye, and a little
   understanding of photo editing software like Photoshop or Photomatix.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/hdr-tutorial.jpg" alt="HDR Tutorial" />
+<div class="figure"><img src="/static/2010/10/hdr-tutorial.jpg" alt="HDR Tutorial" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/yakobusan/434857499/">Jakob Montrasio</a></cite></p>
 <p class="caption"><em class="title">HDR Tutorial</em>Some tutorials on HDR Imaging.</p>
 </div>

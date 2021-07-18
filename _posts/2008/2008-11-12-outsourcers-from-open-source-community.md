@@ -30,7 +30,7 @@ permalink: "/2008/outsourcers-from-open-source-community/"
 excerpt: Open-Source community and Outsourcing are poles apart, but the most striking
   thing they have in common is the dependence on their modes of communication.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/outsource-homework.gif" alt="You may not outsource your homework to India. Do you want to be like Miss South Carolina?" />
+<div class="figure"><img src="/static/2008/11/outsource-homework.gif" alt="You may not outsource your homework to India. Do you want to be like Miss South Carolina?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/inju/1053266775/">Inju</a></cite></p>
 <p class="caption"><em class="title">Outsourcing advice</em>For homework?</p>
 </div>

@@ -28,7 +28,7 @@ permalink: "/2011/adobe-air-2-6-for-android/"
 <p>Adobe AIR 2.6 for Android smartphones and tablets is <a href="http://blogs.adobe.com/air/2011/02/adobe-air-2-6-for-android-is-now-available.html">now available</a>.  AIR 2.6 for Android adds support for Android 3.0 and the latest Android tablet devices - including the Motorola Xoom - as well as improvements to performance and GPU-based rendering, updated Android gesture support, and improved handling of HTML content within AIR apps.</p>
 <p>AIR 2.6 for Android provides the foundation for the new Content Viewer for Android, part of Digital Publishing Suite.  Content Viewer for Android uses AIR 2.6 to enable publishers to author immersive, engaging publications and deploy content across platforms and different devices.  Major publishers using Digital Publishing Suite are on board to create and distribute content using Content Viewer for Android.  Condé Nast, National Geographic and Dennis Publishing are among the first publishers to indicate they will use this new viewer to amplify the reach of their iconic titles.</p>
 <p><!--more--></p>
-<p><a href="http://www.adobe.com/products/air/"><img src="{{ site.baseurl }}/assets/2011/02/adobe-air-logo.jpg" alt="Adobe Air" /></a></p>
+<p><a href="http://www.adobe.com/products/air/"><img src="/static/2011/02/adobe-air-logo.jpg" alt="Adobe Air" /></a></p>
 <p>AIR 2.6 for Android can be downloaded from the Android Marketplace and is available on devices running:</p>
 <p>* Android 2.2 (FroYo)<br />
 * Android 2.3 (Gingerbread)<br />

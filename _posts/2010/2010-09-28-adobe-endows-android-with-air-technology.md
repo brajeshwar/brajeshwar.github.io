@@ -34,7 +34,7 @@ permalink: "/2010/adobe-endows-android-with-air-technology/"
 excerpt: Android's welcoming of Adobe AIR has truly made headlines in the technological
   world, thus instigating Apple to also jump into the picture AGAIN!
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/adobe-air-logo.jpg" alt="Adobe Air" />
+<div class="figure"><img src="/static/2010/09/adobe-air-logo.jpg" alt="Adobe Air" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe Air</em>Deliver engaging applications beyond the browser across screens.</p>
 </div>

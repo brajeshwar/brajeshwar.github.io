@@ -31,7 +31,7 @@ excerpt: The instant message on her computer from Franz had been terrifying. Run
   Strasse, where the Artemisia was located, the hotel that catered to women only.
   I will wait for Franz there and he will explain to me what this is all about."
 ---
-<p><img src="{{ site.baseurl }}/assets/2004/07/AreYouAfraidSS.jpg" alt="Are you afraid of the Dark" class="alignright" /></p>
+<p><img src="/static/2004/07/AreYouAfraidSS.jpg" alt="Are you afraid of the Dark" class="alignright" /></p>
 <p>Sonja Verbrugge had no idea that this was going to be her last day on earth. She was pushing her way through the sea of summer tourists overflowing the busy sidewalks of <em>Unter den Linden</em>. Don't panic, she told herself. <em>You must keep calm</em>.<br />
 The instant message on her computer from Franz had been terrifying.</p>
 <blockquote><p><em>Run, Sonja! Go to the Artemisia Hotel. You will be safe there. Wait until you hear from</em>... The message had ended suddenly. Why had Franz not finished it? What could be happening? The night before, she had heard her husband saying to someone on the telephone that Prima must be stopped at all costs. Who was Prima? Frau Verbrugge was nearing Brandenburgische Strasse, where the Artemisia was located, the hotel that catered to women only. <em>I will wait for Franz there and he will explain to me what this is all about</em>.</p></blockquote>

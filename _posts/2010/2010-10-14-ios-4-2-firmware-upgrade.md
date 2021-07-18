@@ -35,7 +35,7 @@ excerpt: Another new era will be ushered in next month in November, an update fo
   the operating system of the world’s most popular technologies, the iPhone and the
   iPad.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/ios-app-platform.jpg" alt="iOS" />
+<div class="figure"><img src="/static/2010/10/ios-app-platform.jpg" alt="iOS" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Apple</cite></p>
 <p class="caption"><em class="title">iOS</em>The world's most advanced mobile operating system.</p>
 </div>

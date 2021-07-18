@@ -29,7 +29,7 @@ permalink: "/2018/plagiarismcheck-is-it-worth-your-time-and-money/"
 <p>The present-day digital world gains the upper hand when it comes to writing and publishing content online. Everyone can create and share them with the public, so the issue of plagiarism and copyright infringement becomes essential more than ever. To make sure they write original works and no one duplicates them, writers consider plagiarism check tools and services to protect content from copy-pasting.</p>
 <p>One of them has strong chances to become <a href="https://plagiarismcheck.org/">your own plagiarism curation tool</a>, which belongs to a new-generation service complemented with technology and advanced algorithmic solutions.</p>
 <p><!--more--></p>
-<p><a href="https://plagiarismcheck.org/"><img src="{{ site.baseurl }}/assets/2018/03/plagiarismcheck.jpg" alt="PlagiarismCheck" width="1000" height="560" class="alignnone size-full wp-image-6958" /></a></p>
+<p><a href="https://plagiarismcheck.org/"><img src="/static/2018/03/plagiarismcheck.jpg" alt="PlagiarismCheck" width="1000" height="560" class="alignnone size-full wp-image-6958" /></a></p>
 <p>PlagiarismCheck is a web-based and hassle-free plagiarism checker aimed at saving the online world from duplicated content. It helps students and educators to prevent plagiarism in academia. It allows journalists, project managers, professional bloggers, and any other specialists working with texts to protect their works and avoid accusations of plagiarism.</p>
 <p>PlagiarismCheck searches th internet analyzes all available documents, compares them to submittals, and provides a detailed report on any plagiarism issues found.</p>
 <h2>Features</h2>
@@ -48,7 +48,7 @@ permalink: "/2018/plagiarismcheck-is-it-worth-your-time-and-money/"
 <p>The tool can produce a permanent report on each checked documents, allowing users to download it in .pdf format or access it through their accounts.</p>
 <h2>How to Use PlagiarismCheck</h2>
 <p>The tool is web-based and doesn't require any downloads or installations. Start using it by signing up for a free account. The next step is as easy as pasting text or uploading a file with content to check. In few seconds, the results with highlighted duplicated parts and sources of plagiarism can be seen.</p>
-<p><img src="{{ site.baseurl }}/assets/2018/03/plagiarismcheck-how-it-works.png" alt="How to use PlagiarismCheck" width="1269" height="487" class="alignnone size-full wp-image-6959" /></p>
+<p><img src="/static/2018/03/plagiarismcheck-how-it-works.png" alt="How to use PlagiarismCheck" width="1269" height="487" class="alignnone size-full wp-image-6959" /></p>
 <h2>Pricing</h2>
 <p>PlagiarismCheck offers three <a href="https://plagiarismcheck.org/pricing/">upgrading options</a>, depending on the number of pages a user needs to analyze: light, standard, and premium.</p>
 <p>Unlike most services, this one doesn't offer any monthly or yearly subscriptions. Once bought, a chosen pack will not expire until a user decides to use all the available check limits.</p>

@@ -31,7 +31,7 @@ author:
   last_name: Mukherjee
 permalink: "/2011/honeycomb-locked-in-a-box-by-google/"
 ---
-<p><a href="http://www.android.com/"><img src="{{ site.baseurl }}/assets/2011/04/android-honeycomb.png" alt="Android 3.0 Honeycomb" class="alignright" /></a></p>
+<p><a href="http://www.android.com/"><img src="/static/2011/04/android-honeycomb.png" alt="Android 3.0 Honeycomb" class="alignright" /></a></p>
 <p>In times of war, strategy matters. And Google, by limiting access to the source code for <a href="http://googlemobile.blogspot.com/2011/01/sneak-peak-of-android-30-honeycomb.html">Android 3.0, or Honeycomb</a>, is playing the game right. Despite its image as a campaigner of open source, <a href="http://news.cnet.com/8301-30684_3-20030223-265.html">this step</a> was deemed necessary by Google. For the obvious reason being - Business Competition. </p>
 <p>According to <a href="http://www.businessweek.com/technology/content/mar2011/tc20110324_269784.htm">Business Week</a>,</p>
 <blockquote><p>throngs of smaller hardware makers and software developers that will now have to wait for the software. The delay will probably be several months. "To make our schedule to ship the tablet, we made some design tradeoffs", says <a href="http://connect.in.com/andy-rubin/biography-20839.html">Andy Rubin</a>, VP - Engineering at Google and Head of its Android Group. "We didn't want to think about what it would take for the same software to run on phones. It would have required a lot of additional resources and extended our schedule beyond what we thought was reasonable. So we took a shortcut."</p></blockquote>

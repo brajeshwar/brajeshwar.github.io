@@ -35,7 +35,7 @@ excerpt: The probability of using Atheros chipsets for users using Wi-Fi on lapt
   worldwide, including Linksys, D-Link and Netgear who use Atheros chipsets for wireless
   networking.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/12/wi-fi.png" alt="Wi-Fi" />
+<div class="figure"><img src="/static/2008/12/wi-fi.png" alt="Wi-Fi" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://en.wikipedia.org/wiki/Wi-Fi">Wikipedia</a></cite></p>
 <p class="caption"><em class="title">Wi-Fi</em>Making our world a better place to work!</p>
 </div>

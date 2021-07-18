@@ -32,7 +32,7 @@ excerpt: Acrobat X shall allow companies and governments to not just convert doc
   into PDFs but, build, share and incorporate rich media content within the PDFs while
   leveraging security and authentication features.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/adobe-india-unveling-acrobat-x.jpg" alt="Adobe launches Acrobat X" />
+<div class="figure"><img src="/static/2010/10/adobe-india-unveling-acrobat-x.jpg" alt="Adobe launches Acrobat X" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.praval.com/">Praval</a></cite></p>
 <p class="caption"><em class="title">Acrobat X</em>Now with custom PDF Portfolios, guided Actions, export to Word, Excel, Sharepoint Integration and more.</p>
 </div>
@@ -49,7 +49,7 @@ excerpt: Acrobat X shall allow companies and governments to not just convert doc
 * Sticky Notes and Highlighter tools available to all users, for commenting.<br />
 * Ability to extend PDF access to mobile devices with free Adobe Reader X for Android, Windows&reg; Phone 7 and Blackberry Tablet OS.<br />
 * New Protected Mode security capabilities in Reader X for a safer viewing of PDF files.</p>
-<p><img src="{{ site.baseurl }}/assets/2010/10/acrobat-x-pro-swag.jpg" alt="Acrobat X Swag" style="border: 0 none; float: right; margin: 0 0 1em 1em;" /></p>
+<p><img src="/static/2010/10/acrobat-x-pro-swag.jpg" alt="Acrobat X Swag" style="border: 0 none; float: right; margin: 0 0 1em 1em;" /></p>
 <p>Apart from the product range, Acrobat.com now has an interesting service, <a href="http://sendnow.acrobat.com/">Adobe SendNow</a> that enables users to send and receive large files and track them with proof of receipt, avoiding email gateway issues, complicated FTP servers, or the costs of expensive overnight mail. This to me, is a great service for all businesses. However, the website currently says that this feature shall be available sometime in November 2010.</p>
 <p>The website shall also have Adobe CreatePDF for easily converting files to professional PDF documents from within Adobe Reader X or any web browser. </p>
 <p>The company launched three products - Acrobat X Standard, Acrobat X Pro and Acrobat X Suite, each with a different price tag. While Acrobat X Standard shall be <a href="http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayStoreSelector&amp;promoid=FCRWM">priced</a> at about INR 14,000, Acrobat X Pro and Acrobat X Suite shall be available for about INR 22,000 and INR 58,000, respectively.</p>

@@ -27,7 +27,7 @@ excerpt: The definition of optimal performance. 5 megapixels. DVD-like quality f
   Upload photos to Flickr, download movies. It is not one thing; it's many. This is
   what computers have become? The Nokia N95
 ---
-<p><img src="{{ site.baseurl }}/assets/2007/07/nokia-n95.jpg" alt="Nokia N95" style="border: 0 none;" />The <a href="http://www.nseries.com/products/n95/">Nokia N95</a> was released about a week late in India as against the global release, with a price package of about Rs. 36,500 (~ $900) as initial launch price. However, the price dropped almost each week and is currently being sold for about Rs. 28,000 (~ $690). I bought mine at Rs. 31,990 which was the first price cut after the initial launch (in the 2nd week of India's release).<br />
+<p><img src="/static/2007/07/nokia-n95.jpg" alt="Nokia N95" style="border: 0 none;" />The <a href="http://www.nseries.com/products/n95/">Nokia N95</a> was released about a week late in India as against the global release, with a price package of about Rs. 36,500 (~ $900) as initial launch price. However, the price dropped almost each week and is currently being sold for about Rs. 28,000 (~ $690). I bought mine at Rs. 31,990 which was the first price cut after the initial launch (in the 2nd week of India's release).<br />
 <!--more--></p>
 <p>Currently, the Nokia N95 is defined as the ultimate geek phone which some people even considering it as the one that can compete against the <a href="http://www.apple.com/iphone/">iPhone</a>. Well, I will not be doing a comparison of the two; nonetheless, I'll buy an iPhone as soon as it is released in India.</p>
 <p><strong>FEATURES</strong></p>

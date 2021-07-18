@@ -32,7 +32,7 @@ excerpt: GUI allows users to navigate and interact with their computer by using 
   mouse to "point," "click," and "drag" icons and other data around on the screen,
   instead of typing in commands.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/ubunti-gui.jpg" alt="Ubuntu GUI" />
+<div class="figure"><img src="/static/2008/10/ubunti-gui.jpg" alt="Ubuntu GUI" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/dcreeves2000/239245755/">David Reeves</a></cite></p>
 <p class="caption"><em class="title">GUI</em>Linux Beautification</p>
 </div>

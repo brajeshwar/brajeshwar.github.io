@@ -33,7 +33,7 @@ excerpt: There were times in my life when I was unable to stay disconnected from
   Internet. I've come a long way conquering that; being able to stay disconnected
   even though plugged in.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/03/brajeshwar-rajasthan.jpg" alt="Rajasthan" />
+<div class="figure"><img src="/static/2010/03/brajeshwar-rajasthan.jpg" alt="Rajasthan" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/brajeshwar/113603876/">Brajeshwar</a></cite></p>
 <p class="caption"><em class="title">Break Free</em>Plugged in but disconnected.</p>
 </div>
@@ -51,13 +51,13 @@ excerpt: There were times in my life when I was unable to stay disconnected from
 <p><strong>Emails</strong></p>
 <p>For today, let's talk about emails (others will come soon). Like you, I had the habit of constantly monitoring my emails. My email client was set to check emails every 5 minutes and at times wished I can set it to 1 minute. Well, I applied my new-found discipline and rules to it. Btw, I use Apple Mail on Mac OS X but the ways I'm suggesting should be applicable to any email client easily albeit their own respective options.</p>
 <p><em>No Notifications what-so-ever</em></p>
-<p><img src="{{ site.baseurl }}/assets/2010/03/mail-preferences.png" alt="Mail Preferences" style="float: right; border: 0 none; margin: 0 0 1em 1em;" /></p>
+<p><img src="/static/2010/03/mail-preferences.png" alt="Mail Preferences" style="float: right; border: 0 none; margin: 0 0 1em 1em;" /></p>
 <p>The idea is to not allow your tools to disturb you while you're working. They're means to an end and should not hamper your normal flow, the tools should not sideline you while you're in the zone. I've set my email client</p>
 <p>* To check emails hourly. The day Apple Mail allow longer duration, I'll try 3 hours.<br />
 * To NOT disturb me with any form of sound. (Anyway, sound alerts was never my type.)<br />
 * NOT show the count when new emails arrive. The dock-count indication will always tempt you to check your mail.</p>
 <p><em>Smart but no need to push it to me</em></p>
-<p><img src="{{ site.baseurl }}/assets/2010/03/imap-idle.png" alt="IMAP IDLE Command" style="float: right; border: 0 none; margin: 0 0 1em 1em;" /></p>
+<p><img src="/static/2010/03/imap-idle.png" alt="IMAP IDLE Command" style="float: right; border: 0 none; margin: 0 0 1em 1em;" /></p>
 <p>This is an awesome feature if your email server supports it (Gmail and Google Apps for domains does). When enabled, the IDLE command will get your new emails even if you've set your email client to check at some interval (hourly) or even manual.</p>
 <p>I've disabled it. I'm OK with the hourly monitoring routine of my email client.</p>
 <p><strong>Side Effects</strong></p>
@@ -72,7 +72,7 @@ excerpt: There were times in my life when I was unable to stay disconnected from
 * I wanted to be omni-present, always-online and always-replying to my client's question. Giving them feedback as soon as I get them. Wanted to proof that I'm super-efficient.</p>
 <p>Well, if you ponder and look closely, it's not at all correct. It is OK to be the second person to know something, to reply after sometime, you'll always get the client if you are good with your work. Your client will still be happy if you reply within couple of hours. You can even try the vacation settings while you're vacationing. Some wise-men have rightly said, "It is OK to be last in the line."</p>
 <p><strong>Productivity Practices</strong></p>
-<p><img src="{{ site.baseurl }}/assets/2010/03/mail-filters.png" alt="Mail Filters" style="float: right; border: 0 none; margin: 0 0 1em 1em;" /></p>
+<p><img src="/static/2010/03/mail-filters.png" alt="Mail Filters" style="float: right; border: 0 none; margin: 0 0 1em 1em;" /></p>
 <p>I've tried many tools, utilities and options and have settled with a very minimal set of rules for my email. Productivity is not in using many tools but reducing it and getting to the task faster, finishing it quickly.</p>
 <p>In my email client, whenever I'm checking my emails, I focus only on the two filters <strong>"New"</strong> and <strong>"Flag"</strong>.</p>
 <p><em>New</em></p>

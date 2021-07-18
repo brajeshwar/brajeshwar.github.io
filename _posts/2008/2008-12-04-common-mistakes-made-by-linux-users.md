@@ -34,7 +34,7 @@ excerpt: There are a few ubiquitous mistakes which a lot of Linux admins make wh
   administering a Linux box. If kept in mind, these mistakes can be avoided to keep
   a smooth work flow.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/12/everyone-makes-mistakes.jpg" alt="Be human: Make mistakes. Learn from them." />
+<div class="figure"><img src="/static/2008/12/everyone-makes-mistakes.jpg" alt="Be human: Make mistakes. Learn from them." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/gregbiche/324444264/">Greg Biche</a></cite></p>
 <p class="caption"><em class="title">Be human</em>Make mistakes. Learn from them</p>
 </div>

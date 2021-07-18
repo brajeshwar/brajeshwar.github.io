@@ -42,7 +42,7 @@ excerpt: In the proprietary closed source model, the entire development cycle ev
   the customers to use the software. No one ever gets to know how bad the software
   really is!
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/free-beer.jpg" alt="Enjoy Free Beer" /></p>
+<div class="figure"><img src="/static/2008/06/free-beer.jpg" alt="Enjoy Free Beer" /></p>
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/surfstyle/319891486/">SurfStyle</a></cite></p>
 <p class="caption"><em>Free Beer</em>We love free beer as much as we love free softwares.</p>
 </div>
@@ -55,7 +55,7 @@ technology lock-in.</p>
 <p>In the proprietary closed source model, the entire development cycle evolves within a single company. Programmers write code, hide it behind binaries and charge the customers to use the software. Thereafter, they add fee for the after-sales support -- to fix the software if and when it breaks. No one ever gets to know how bad the software really is!</p>
 <p>Taking about Open source, we talk about a large, Internet-connected, worldwide community which backs up the entire project. It involves geeks, students, working-from-home engineers and entrepreneurs, tech savvy moms, and anyone you can think of!</p>
 <p>To have an idea of how has the fan following for FOSS increased, look at the graph below. Apache's Tomcat leads the way. Yes, it's yet another FOSS!</p>
-<p><img style="none;" src="{{ site.baseurl }}/assets/2008/06/webservers-graph.png" alt="WebServer Usage Graph" /></p>
+<p><img style="none;" src="/static/2008/06/webservers-graph.png" alt="WebServer Usage Graph" /></p>
 <p><strong>Why Open Source?</strong></p>
 <p>This is what RedHat has to say on this;</p>
 <blockquote><p>All software is written with source code. With open source software, the code is protected by a special license that ensures everyone has access to that code. That means no one company can fully own it. Freedom means choice. Choice means power.</p></blockquote>

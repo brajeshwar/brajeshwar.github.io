@@ -32,7 +32,7 @@ permalink: "/2008/have-companies-started-moving-towards-linux/"
 excerpt: Linux plays a promising role of delivering higher performance, better security,
   freedom from being locked into a single vendor and ultimately lowering the costs.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/12/dll-hell.jpg" alt="DLL Hell: Haven't you been into this?" />
+<div class="figure"><img src="/static/2008/12/dll-hell.jpg" alt="DLL Hell: Haven't you been into this?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/otacon_85/2902184401/">Otacon_85</a></cite></p>
 <p class="caption"><em class="title">DLL Hell</em>Haven't you been into this?</p>
 </div>

@@ -32,7 +32,7 @@ excerpt: Apple has finally given in to the relentless pursuit by Adobe and all i
   world wide users by allowing developers to build flash iPhone apps using the new
   Flash Professional CS5.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/01/apple-iphone.jpg" alt="Apple iPhone" />
+<div class="figure"><img src="/static/2010/01/apple-iphone.jpg" alt="Apple iPhone" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite>Apple</cite></p>
 <p class="caption"><em class="title">Apple iPhone</em>How about a Flash game?</p>
 </div>
@@ -41,7 +41,7 @@ excerpt: Apple has finally given in to the relentless pursuit by Adobe and all i
 <p>Since its inception, the iPhone has always found ways to impress users around the globe, be it through its exquisite touch screen experience or the simple fact that it graced the stables of Apple. Although iPhone stands out as the mother of all smart-phones with suave looks and flashy functionalities, users always had this qualm that it did not support the very essential <a href="http://www.adobe.com/products/flash/">Adobe Flash</a>.</p>
 <p>Flash player, more often than not plays a substantial role in a lot of websites, it being one of the most preferred platform to deploy animations, advertisements, games and other apps. However, Apple banned Flash player from being used in the iPhone citing performance as an issue and blocks any kind of runtime code to execute on the iPhone according to its SDK license terms.</p>
 <p>This brings us to the fact as to what has changed now. Apple has finally given in to the relentless pursuit by Adobe and all it world wide users by allowing developers to build flash iPhone apps using the new <a href="http://labs.adobe.com/technologies/flashcs5/">Flash Professional CS5</a>. This has seen the addition of a few new iPhone apps such as Just Letters, Finger Paint, Chroma Circuit, and many <a href="http://labs.adobe.com/technologies/flashcs5/appsfor_iphone/">more</a> into the Apple store developed using a private <a href="http://www.adobe.com/go/flashprobetanotify">beta</a> version of Flash Professional CS5.  </p>
-<p><img src="{{ site.baseurl }}/assets/2010/01/adobe-flash-player-icon.jpg" alt="Adobe Flash Player" style="border: 0 none; float: right; margin: 0; width: 300px;" /></p>
+<p><img src="/static/2010/01/adobe-flash-player-icon.jpg" alt="Adobe Flash Player" style="border: 0 none; float: right; margin: 0; width: 300px;" /></p>
 <p><strong>Flash Professional CS5</strong></p>
 <p>* <em>Native apps:</em> Although Apple has given the green signal for the development of flash apps for iPhone, it still restricts the use of an interpreter which is very much essential for loading the Shockwave Flash [SWF] files. For this very reason CS5 houses a Low Level Virtual Machine [LLVM] compiler to understand <a href="http://www.adobe.com/devnet/actionscript/articles/actionscript3_overview.html">ActionScript 3</a> which in turn generates a native ARM assembly code which is run as a native iPhone app and does not include any runtime interpreted code.<br />
 * <em>Ease of Use:</em> Although Xcode, Apple's premier development environment offers a powerful platform for creating interactive contents, it is very complex in nature whereas Flash is a very easier and widely accepted platform for doing the same. Along with this CS5 also allows Flash developers to export files across various platforms with ease definitely adds to the features bandwagon.</p>

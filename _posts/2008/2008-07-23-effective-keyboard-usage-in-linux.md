@@ -37,7 +37,7 @@ excerpt: Using the keyboard more often than a mouse is not just a trend but a pr
   hack for people who live on Linux, all day long. Getting things done using the CLI
   is much more convenient, once you get used to it.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/keyboards.jpg" alt="Keyboards" />
+<div class="figure"><img src="/static/2008/07/keyboards.jpg" alt="Keyboards" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/opie/2515423894/">Theopie</a></cite></p>
 <p class="caption"><em class="title">Keyboards</em>Get used to them!</p>
 </div>

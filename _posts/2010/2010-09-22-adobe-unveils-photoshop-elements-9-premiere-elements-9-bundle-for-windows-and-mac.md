@@ -34,7 +34,7 @@ excerpt: Windows and Mac users can do more with their photos and video with Phot
   Elements 9 and Premiere Elements 9 bundle – a unified solution for all photo and
   video needs.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/ape-ape-9.jpg" alt="Adobe Photoshop Elements 9 & Adobe Premiere Elements 9 Bundle for Windows and Mac" />
+<div class="figure"><img src="/static/2010/09/ape-ape-9.jpg" alt="Adobe Photoshop Elements 9 & Adobe Premiere Elements 9 Bundle for Windows and Mac" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe</em>The all new Photoshop Elements 9 & Premiere Elements 9 Bundle for Windows and Mac.</p>
 </div>

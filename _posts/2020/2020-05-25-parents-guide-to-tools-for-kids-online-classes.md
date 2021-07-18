@@ -29,7 +29,7 @@ If your kid already has a device, use it and gauge the device’s performance be
 
 ## New Device / Computer
 
-<img src="{{ site.baseurl }}/assets/2020/05/IMG_3196-898x600.jpeg" alt="Apple MacMini">
+<img src="/static/2020/05/IMG_3196-898x600.jpeg" alt="Apple MacMini">
 
 If you have to buy new devices, and unless portability is crucial, invest in a desktop computer instead. Desktop computers allow for easier upgrades, have better performance, and are usually more economical.
 

@@ -29,7 +29,7 @@ author:
   last_name: Mukherjee
 permalink: "/2011/cogito-ergo-sum-i-e-i-blog-therefore-i-am/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/03/i-blog-therefore-i-am.gif" alt="I blog there I am" /><br />
+<figure><img src="/static/2011/03/i-blog-therefore-i-am.gif" alt="I blog there I am" /><br />
 <figcaption>I blog therefore I am (source : <a href="http://www.gocomics.com/bobgorrell/2009/07/12/">GoComics</a>)</figcaption>
 </figure>
 <p>It is the generation of the lazy, the people who need their 11am cuppa coffee to even register that they are alive, and the generation of the creatively competent, the ones who are up all night writing about their fantasy alternate worlds. Is <a href="http://www.copyblogger.com/blogging-is-dead-again/">blogging dead</a> then?</p>

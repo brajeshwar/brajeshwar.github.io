@@ -31,7 +31,7 @@ permalink: "/2018/best-phones-apps-elderly/"
 <p><!--more--></p>
 <p>If you know a senior who has just purchased a smartphone and is struggling to figure it out, here are some things you can suggest by way of helpful advice:</p>
 <h2>Pick a Different Phone</h2>
-<p><a href="http://www.jitterbugdirect.com/"><img src="{{ site.baseurl }}/assets/2018/02/jitterbug-phone-colors.jpg" alt="Jitterbug Phones" width="424" height="336" class="alignright size-full wp-image-6953" /></a></p>
+<p><a href="http://www.jitterbugdirect.com/"><img src="/static/2018/02/jitterbug-phone-colors.jpg" alt="Jitterbug Phones" width="424" height="336" class="alignright size-full wp-image-6953" /></a></p>
 <p>Sometimes the problem is the phone and not the person. If a senior in your life is having trouble getting their head around their new smartphone, it may just be that they have the wrong phone. Take advantage of the return policy. And get them something they will be able to figure out more easily. </p>
 <p>Sometimes the smartest phone choice is not a smartphone at all. It may be something more like the <a href="http://www.jitterbugdirect.com/">Jitterbug phones</a> you have heard of that offer basic functionality for seniors. This type of phone usually has large, easy to read numbers, as loud earpiece and speaker that is also compatible with hearing aids, and bright screens with clear information that makes navigation a simpler task.</p>
 <p>So before you give an elderly the latest and greatest Android phone, you have to ask yourself if you are doing what's best for them, or what's best for you. Consider the possibility that a smartphone is not a smart choice for them.</p>

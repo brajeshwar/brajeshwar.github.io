@@ -32,7 +32,7 @@ permalink: "/2010/scribus-says-desktop-publishing-on-linux-is-not-impossible/"
 excerpt: Scribus is an Open Source program that brings award-winning professional
   page layout to Linux/UNIX, Mac OS X, OS/2 Warp 4/eComStation and Windows desktops.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/scribus.jpg" alt="Scribus - Open Source for Desktop Publishing" />
+<div class="figure"><img src="/static/2010/10/scribus.jpg" alt="Scribus - Open Source for Desktop Publishing" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://www.scribus.net/">Scribus</a></cite></p>
 <p class="caption"><em class="title">Scribus</em>Open Source for Desktop Publishing</p>
 </div>

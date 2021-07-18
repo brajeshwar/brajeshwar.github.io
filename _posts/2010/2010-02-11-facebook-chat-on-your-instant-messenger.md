@@ -36,7 +36,7 @@ permalink: "/2010/facebook-chat-on-your-instant-messenger/"
 excerpt: Micro-blogging was an enabler to get real time, user generated content. Twitter,
   Facebook updates and now Google buzz are tools on this layer.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/02/facebook-chat.jpg" alt="Facebook Chat" />
+<div class="figure"><img src="/static/2010/02/facebook-chat.jpg" alt="Facebook Chat" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/nathandarnold/2437117366/">Nate Arnold</a></cite></p>
 <p class="caption"><em class="title">Facebook Chat</em>Connectivity on Steroid!</p>
 </div>

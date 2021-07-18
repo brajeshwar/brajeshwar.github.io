@@ -26,7 +26,7 @@ excerpt: Pownce is a way to send messages, files, links, and events to your frie
   You'll create a network of the people you know  and then you can share stuff with
   all of them, just a few of them, or even just one other person really fast.
 ---
-<p><img src="{{ site.baseurl }}/assets/2007/07/pownce.gif" alt="Pownce" style="border: 0 none;" />Alright, alright, I wasn't taking it that seriously but yes, I got Pownce Invites to give out too. <a href="http://pownce.com/">Pownce</a> is another service like Twitter combined with file sharing and chat. However, the attention it seeks from the community is largely because of the Digg-guy Kevin who started it as <a href="http://kevinrose.com/post/4403240">a fun project</a>.</p>
+<p><img src="/static/2007/07/pownce.gif" alt="Pownce" style="border: 0 none;" />Alright, alright, I wasn't taking it that seriously but yes, I got Pownce Invites to give out too. <a href="http://pownce.com/">Pownce</a> is another service like Twitter combined with file sharing and chat. However, the attention it seeks from the community is largely because of the Digg-guy Kevin who started it as <a href="http://kevinrose.com/post/4403240">a fun project</a>.</p>
 <p>I'm yet to enjoy it to its fullest; just got the invite yesterday from a good smart kid - <a href="http://www.rishiraj.info/">Rishiraj</a>. It has a Pro version and the only attractive feature there is the badge of which I haven't subscribed yet.</p>
 <p><!--more--><br />
 Pownce has an Adobe AIR desktop based version. It is just a simple interface for Pownce and it gives you only a small fraction of its features. Pownce do not even have a designated logo but just text saying "Pownce". Perhaps, it is true that it is just Kevin's weekend project.</p>

@@ -36,7 +36,7 @@ excerpt: Productivity is a term which involves one's personal interest apart fro
   the tools/services which an Operating System can offer. Trifles make perfection
   and perfection is no trifle.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/linux-productivity.jpg" alt="Productivity with Linux" />
+<div class="figure"><img src="/static/2008/07/linux-productivity.jpg" alt="Productivity with Linux" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/pigpogm/157180667/">Pigpogm</a></cite></p>
 <p class="caption"><em class="title">Linux</em>How to be productive with it.</p>
 </div>

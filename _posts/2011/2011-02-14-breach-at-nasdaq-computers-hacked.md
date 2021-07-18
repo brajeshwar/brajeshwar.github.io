@@ -29,7 +29,7 @@ author:
   last_name: Mukherjee
 permalink: "/2011/breach-at-nasdaq-computers-hacked/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2011/02/nasdaq.jpg" alt="Nasdaq" /></p>
+<p><img src="/static/2011/02/nasdaq.jpg" alt="Nasdaq" /></p>
 <p>One of the few places which always has security beefed up round the clock, ensuring there is no breach and leakage of important and confidential information, is the stock market. Well, even such places are not free from cyber attacks and hacking. There was <a href="http://online.wsj.com/article/SB10001424052748704709304576124502351634690.html">one such development</a> last Friday, the 5th of February, wherein the operator of <a href="http://www.nasdaq.com/">NASDAQ</a> Stock market found some suspicious files on US computer services and also qualms rose of hackers affecting one of the internet-based client applications of Nasdaq.</p>
 <p><!--more--></p>
 <p>However, there was no evidence or clues left behind that ensured it was the work of a hacker who tried to access or acquire customer details. Neither was there anything missing as far as the trading platforms of the parent company <a href="http://www.nasdaqomx.com/">Nasdaq OMX Group Inc</a> is concerned (The group functions with equity and derivatives exchanges in the United States and Nordic European countries). This was confirmed by the transatlantic exchange operator. Yet, the investigation is still on with FBI and external forensic firms still helping out in conducting and continuing the investigation. There is no clarity as to when these suspected files were left on the computers at Nasdaq and the files which were apparently called "Directors Desk" has now been removed. </p>

@@ -33,7 +33,7 @@ excerpt: "For those who think they do not have the resources available to them t
   Australia who is on her 4th tech startup  with her newest project dubbed the iPad
   Case Finder.\r\n"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2010/11/the-it-crowd.jpg" alt="The IT Crowd" /><br />
+<figure><img src="/static/2010/11/the-it-crowd.jpg" alt="The IT Crowd" /><br />
 <figcaption>Moss, Jen and Roy from <a href="http://www.channel4.com/programmes/the-it-crowd">The IT Crowd</a></figcaption>
 </figure>
 <p>As we slowly climb out of a global recession the idea of being a corporate drone is becoming less appealing. The truth is that somewhere between 7.2 to 8 million people lost their corporate-level job, most which were from large companies.</p>

@@ -35,7 +35,7 @@ excerpt: The idea is to sustain a living, escalate a product/service and emerge 
   one of the bluechip companies which either continue to get bigger or find a prospective
   buyer and make big money.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/startup-meeting.jpg" alt="Startup: Pizza + Work = Success!" />
+<div class="figure"><img src="/static/2009/06/startup-meeting.jpg" alt="Startup: Pizza + Work = Success!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.flickr.com/">Flickr</a></cite></p>
 <p class="caption"><em class="title">Startup</em>Pizza + Work = Success!</p>
 </div>

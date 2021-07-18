@@ -35,7 +35,7 @@ permalink: "/2010/windows-7-good-bad-ugly/"
 excerpt: One major qualm with Windows 7 is the hit that it takes in terms of performance
   in most aspects in comparison to the veteran Windows XP or Windows Vista.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/01/windows-7-halloween.jpg" alt="Windows 7: What's in?" />
+<div class="figure"><img src="/static/2010/01/windows-7-halloween.jpg" alt="Windows 7: What's in?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/zeusandhera/4043408541/">Zeusandhera</a></cite></p>
 <p class="caption"><em class="title">Windows 7</em>What's in?</p>
 </div>
@@ -44,7 +44,7 @@ excerpt: One major qualm with Windows 7 is the hit that it takes in terms of per
 <p>If <a href="http://www.cnet.com/windows-7/">reviews</a> are to be <a href="http://www.engadget.com/2009/08/12/windows-7-review/">believed</a>, Windows 7 has given its users a never before experience. For close to seven years, <a href="http://www.microsoft.com/windows/windows-xp/default.aspx">Windows XP</a> has been an ardent resource to millions of users across the globe with around 71% users as compared to its successor, Windows Vista with a 19% share before Windows 7 was launched. This pretty much reveals the lack of interest that Windows Vista was able to create among the users in its short span of little below 3 yrs. Microsoft then came up with its latest offering in the Operating systems bandwagon - Microsoft <a href="http://www.microsoft.com/windows/windows-7/">Windows 7</a>. </p>
 <p><a href="http://en.wikipedia.org/wiki/Charlie_Miller_(security_researcher)">Charlie Miller</a>, an award winning security researcher said,</p>
 <blockquote><p>"Hacking into Windows 7 is a much more of a daunting task than hacking into Apple's recently launched Snow Leopard."</p></blockquote>
-<p><img src="{{ site.baseurl }}/assets/2010/01/windows-7-logo.jpg" alt="Windows 7" style="float: right; margin: 0 0 1em 1em; border: 0 none;" /></p>
+<p><img src="/static/2010/01/windows-7-logo.jpg" alt="Windows 7" style="float: right; margin: 0 0 1em 1em; border: 0 none;" /></p>
 <p>Windows 7 predominantly focuses on overcoming the flaws of its predecessor (Vista), and is widely perceived as a much needed upgrade to a resource hogging and sluggish Vista. After using it for more than a month, I decided to come up with its <em>Good, Bad and Ugly</em>:</p>
 <p>* <strong>Design</strong> - The most obvious and noticeable change in Windows 7 is its new shiny and smart design. The taskbar is transparent and loses it Quick launch feature only to be replaced by a new feature which allows the user to pin applications to the taskbar. The taskbar also brings in a new feature known as the <a href="http://windows.microsoft.com/en-IN/windows7/products/features/jump-lists">Jump lists</a>, which allows user, an easy access to documents and commands that can run for a particular application. The show desktop icon on the far right does the obvious, but also hovering on this button makes all the open windows transparent allowing a quick overview, a feature also known as the <a href="http://windows.microsoft.com/en-us/windows7/products/features/peek">Aero Peek</a>.<br />
 * <strong>Install and Boot times</strong> - The installation time is not drastically reduced from that of Vista, but Windows 7 sure is lightweight and fast and can deliver on both 32-bit and 64-bit systems. The startup and shutdown time is definite improvement, making it a smooth &amp; stable contender.<br />

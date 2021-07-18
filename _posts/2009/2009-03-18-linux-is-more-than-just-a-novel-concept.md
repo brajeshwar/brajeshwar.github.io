@@ -34,7 +34,7 @@ permalink: "/2009/linux-is-more-than-just-a-novel-concept/"
 excerpt: Linux is characteristically found to be one of the most unswerving, stable,
   secure, cost effective and well-organized system.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/03/linux-your-choice.jpg" alt="The choice is yours!" />
+<div class="figure"><img src="/static/2009/03/linux-your-choice.jpg" alt="The choice is yours!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/nihonbunka/12849922/">Timtak</a></cite></p>
 <p class="caption"><em class="title"> Linux</em>The choice is yours!</p>
 </div>

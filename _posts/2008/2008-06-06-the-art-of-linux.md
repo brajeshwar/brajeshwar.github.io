@@ -33,7 +33,7 @@ excerpt: Presence of numerous distributions of Linux, each having its own unique
   of characteristics but, basically compatible with each other gives users' a variety.
   This allows users to select the versions which best meet their requirements.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/linux-xp.jpg" alt="We suck more" /></p>
+<div class="figure"><img src="/static/2008/06/linux-xp.jpg" alt="We suck more" /></p>
 <p class="credit"><abbr class="type" title="Photograph">Image</abbr> from <cite><a href="http://listweb.bilkent.edu.tr/Linux/linux-network/2003/Jul/att-0259/Linux_XP.jpg">Linux Network</a></cite></p>
 <p class="caption"><em>Windows</em>We suck more.</p>
 </div>

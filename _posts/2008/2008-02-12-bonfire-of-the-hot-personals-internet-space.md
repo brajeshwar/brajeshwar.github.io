@@ -38,7 +38,7 @@ excerpt: Hot or Not was acquired for $20 million. WooMe recently got $3 million 
   It sure looks like the already HOT Personals space on the Internet is becoming more
   and more hot. Are you prepared to be part of the bonfire?
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/02/dating.jpg" alt="Live Speed Dating" />
+<div class="figure"><img src="/static/2008/02/dating.jpg" alt="Live Speed Dating" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/naixn/2055350268">Naxin</a></cite></p>
 <p class="caption"><em class="title">Live Speed Dating</em>It sure looks like the already <strong>HOT Personals</strong> space on the Internet is becoming more and more hot. Are you prepared to be part of the bonfire?</p>
 </div>

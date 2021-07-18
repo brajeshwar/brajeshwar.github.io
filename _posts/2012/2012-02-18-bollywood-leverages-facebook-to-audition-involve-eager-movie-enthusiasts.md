@@ -26,7 +26,7 @@ author:
   last_name: Oinam
 permalink: "/2012/bollywood-leverages-facebook-to-audition-involve-eager-movie-enthusiasts/"
 ---
-<p>[caption align="alignnone" width="800"]<img src="{{ site.baseurl }}/assets/2012/02/new-star-of-india.jpg" alt="New Star of India" class="size-full" />On the set of the movie "New Star of India".[/caption]</p>
+<p>[caption align="alignnone" width="800"]<img src="/static/2012/02/new-star-of-india.jpg" alt="New Star of India" class="size-full" />On the set of the movie "New Star of India".[/caption]</p>
 <p>An interesting development in Bollywood - use of <a href="https://www.facebook.com/nissanindia">Facebook</a> to approach the common public and involved them in movie making.</p>
 <p>Nissan created the 'New Star of India', a Bollywood movie auditioned on Facebook. It seems, quite a lot of people auditioned for an opportunity to act alongside the Bollywood actor Ranbir Kapoor. From well over 2500 hopefuls, 20 were chosen to be in the movie.</p>
 <p><!--more--></p>

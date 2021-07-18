@@ -33,7 +33,7 @@ permalink: "/2008/nokia-open-source-symbian-mobile-operating-system/"
 excerpt: 'The global telecommunications market leader Nokia has decided to launch
   its own Symbian mobile operating system which will happen to be open sourced. '
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/why-innovate.jpg" alt="Do not re-invent the wheel. We're in the Open Source era!" />
+<div class="figure"><img src="/static/2008/10/why-innovate.jpg" alt="Do not re-invent the wheel. We're in the Open Source era!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/brandonshigeta/1473133645/">Brandon Shigeta</a></cite></p>
 <p class="caption"><em class="title">Do not re-invent the wheel</em>We're in the Open Source era!</p>
 </div>

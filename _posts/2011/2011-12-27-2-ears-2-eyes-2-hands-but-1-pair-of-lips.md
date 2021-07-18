@@ -26,5 +26,5 @@ author:
   last_name: Oinam
 permalink: "/2011/2-ears-2-eyes-2-hands-but-1-pair-of-lips/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2011/12/why-2-ears-1-pair-of-lips.jpg" alt="There is a reason why we've 2 ears, 2 eye, 2 hands but just one pair of lips. So, you talk half as much as you hear, see or do. So, you work, watch and listen twice as much as you talk." /></p>
+<p><img src="/static/2011/12/why-2-ears-1-pair-of-lips.jpg" alt="There is a reason why we've 2 ears, 2 eye, 2 hands but just one pair of lips. So, you talk half as much as you hear, see or do. So, you work, watch and listen twice as much as you talk." /></p>
 <p><em><small>Image Credit: A Japanese manga/character (let me know if you know).</small></em></p>

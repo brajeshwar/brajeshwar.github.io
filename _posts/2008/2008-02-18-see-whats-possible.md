@@ -35,7 +35,7 @@ excerpt: Compose an engaging 15-second or less animation or motion graphic video
   winning work must incorporate and close with the Adobe Photoshop logo and will be
   used by Adobe as part of an upcoming Photoshop marketing campaigns.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/02/swp.jpg" alt="See What's Possible" />
+<div class="figure"><img src="/static/2008/02/swp.jpg" alt="See What's Possible" />
 <p class="credit"><abbr class="type" title="Photograph">Illustration</abbr> From <cite>Cut &amp; Paste</cite></p>
 <p class="caption"><em class="title">See What's Possible</em>Compose an engaging 15-second or less animation or motion graphic video of the Photoshop brand logo that illustrates the theme of "See What's Possible."</p>
 </div>

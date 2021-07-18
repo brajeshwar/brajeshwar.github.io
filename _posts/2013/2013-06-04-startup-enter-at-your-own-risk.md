@@ -28,7 +28,7 @@ author:
   last_name: Oinam
 permalink: "/2013/startup-enter-at-your-own-risk/"
 ---
-<p>[caption id="attachment_6697" align="alignnone" width="800"]<a href="https://github.com/brajeshwar/startup-enter-at-your-own-risk"><img src="{{ site.baseurl }}/assets/2013/06/startup-enter-at-your-own-risk-2980B9.jpg" alt="Enter at your own Risk. Next Stop. Startup." width="800" height="500" class="size-full wp-image-6697" /></a> Enter at your own Risk. Next Stop. Startup.[/caption]</p>
+<p>[caption id="attachment_6697" align="alignnone" width="800"]<a href="https://github.com/brajeshwar/startup-enter-at-your-own-risk"><img src="/static/2013/06/startup-enter-at-your-own-risk-2980B9.jpg" alt="Enter at your own Risk. Next Stop. Startup." width="800" height="500" class="size-full wp-image-6697" /></a> Enter at your own Risk. Next Stop. Startup.[/caption]</p>
 <p>Sleepless Night. Long Hours. So, I came up with this simple poster - <a href="https://github.com/brajeshwar/startup-enter-at-your-own-risk">Enter at your own Risk. Next Stop. Startup.</a> (<a href="https://github.com/brajeshwar/startup-enter-at-your-own-risk/archive/master.zip" download="startup-enter-at-your-own-risk.zip">Download Zip</a>).</p>
 <h2>Usage</h2>
 <p>* Poster<br />

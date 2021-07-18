@@ -33,7 +33,7 @@ excerpt: The tutorial to install Leopard on a PC is very experimental and things
   not work the right way simply because it is still early days in hacking Leopard
   to work on PC's. So, do it at your own risk.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/mac-on-pc.jpg" alt="Install Leopard - Mac OS X on a PC" />
+<div class="figure"><img src="/static/2007/12/mac-on-pc.jpg" alt="Install Leopard - Mac OS X on a PC" />
 <p class="credit"><abbr class="type" title="Wallpaper">Wallpaper</abbr> edited by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">Leopard on a PC</em>Install Leopard on your PC in 3 easy steps!</p>
 </div>

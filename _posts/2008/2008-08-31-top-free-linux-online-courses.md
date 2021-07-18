@@ -32,7 +32,7 @@ excerpt: If you plan to get your Linux knowledge a formal nurturing, an online c
   may be something you would be interested in! These courses would be beneficial for
   people interested to master the art of Linux.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/08/linux-learning-center.jpg" alt="The Learning Resource Center: Back to School!" />
+<div class="figure"><img src="/static/2008/08/linux-learning-center.jpg" alt="The Learning Resource Center: Back to School!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/guhpraset/2547461446/">GuhPraset</a></cite></p>
 <p class="caption"><em class="title">The Learning Resource Center</em>Back to School!</p>
 </div>

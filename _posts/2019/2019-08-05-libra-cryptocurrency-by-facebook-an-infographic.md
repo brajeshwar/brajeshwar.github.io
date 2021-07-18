@@ -35,4 +35,4 @@ permalink: "/2019/libra-cryptocurrency-by-facebook-an-infographic/"
 <p>People have different views on cryptocurrencies, but Libra can be trusted easily as it is backed by a reserve that includes stable liquid assets, which helps in keeping the value of Libra stable.</p>
 <p><!--more--></p>
 <p>Check out <a href="https://libra.org/">Libra</a> - Cryptocurrency by Facebook, an Infographic developed at <a href="https://mrbtc.org/libra/">MrBTC.org</a>.</p>
-<p><a href="https://libra.org/"><img src="{{ site.baseurl }}/assets/2019/08/Libra-Cryptocurrency-By-Facebook.jpg" alt="Libra - Cryptocurrency By Facebook" width="801" height="11231" class="alignnone size-full wp-image-7051" /></a></p>
+<p><a href="https://libra.org/"><img src="/static/2019/08/Libra-Cryptocurrency-By-Facebook.jpg" alt="Libra - Cryptocurrency By Facebook" width="801" height="11231" class="alignnone size-full wp-image-7051" /></a></p>

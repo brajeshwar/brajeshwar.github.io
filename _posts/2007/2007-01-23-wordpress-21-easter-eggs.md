@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2007/wordpress-21-easter-eggs/"
 ---
-<p><a href="http://wordpress.com/tos/treat/"><img src="{{ site.baseurl }}/assets/2007/01/treat.jpg" alt="Wordpress Easter Eggs" /></a>With the release of the new improvised "Wordpress 2.1 (Wordpress 2.1)":http://wordpress.org/development/2007/01/ella-21/, the team have promised us lot of easter eggs. Let's start the hunt for the Wordpress 2.1 Easter Eggs. Here are some Wordpress Easter Eggs :</p>
+<p><a href="http://wordpress.com/tos/treat/"><img src="/static/2007/01/treat.jpg" alt="Wordpress Easter Eggs" /></a>With the release of the new improvised "Wordpress 2.1 (Wordpress 2.1)":http://wordpress.org/development/2007/01/ella-21/, the team have promised us lot of easter eggs. Let's start the hunt for the Wordpress 2.1 Easter Eggs. Here are some Wordpress Easter Eggs :</p>
 <p>* Go to<br />
 http://myBlog.com/wp-admin/options.php?option_group_id=all<br />
 where "myBlog" is your blog and assuming wordpress to be installed in that folder.</p>

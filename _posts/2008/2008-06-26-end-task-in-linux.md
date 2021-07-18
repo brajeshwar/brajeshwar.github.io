@@ -34,7 +34,7 @@ excerpt: More than an operating system Linux is a large community and strong rel
   between its members. A relationship of sharing knowledge and reusing it, unlike
   reinventing the wheel!
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/ctrl-alt-del.jpg" alt="Managing tasks" />
+<div class="figure"><img src="/static/2008/06/ctrl-alt-del.jpg" alt="Managing tasks" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite><a href="http://www.flickr.com/photos/blakeemrys/41448562/">Blakeemrys</a></cite></p>
 <p class="caption"><em class="title">Managing Tasks</em>One thing you'll always wish to know about.</p>
 </div>

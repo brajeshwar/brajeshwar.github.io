@@ -36,7 +36,7 @@ permalink: "/2010/galaxy-s-first-to-get-a-taste-of-gingerbread/"
 ---
 <p>In an <a href="http://brajeshwar.wpengine.com/2010/hungry-for-gingerbread-anyone/">earlier post</a> we had covered the December 16 release of what is the first ever Gingerbread Android phone i.e. the <a href="http://www.google.com/phone/detail/nexus-s">Google Nexus S</a>. Since then the Inter webs have gone into a frenzy with bloggers talking about the virtues of the newest release of Android and developers busy tweaking the released SDK to come up with custom ROMs for various Android phones in the market. If you were already dizzy with the speed at which Android is growing not just as an open OS project but also in terms of market reach. We already read in Kalen's previous post that -- <a href="http://brajeshwar.wpengine.com/2010/android-phones-are-clearly-the-future/">Android phones are selling at a rate of 300,000 a day</a>.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2010/12/samsung-galaxy-s.jpg" alt="Samsung Galaxy S" /></p>
+<p><img src="/static/2010/12/samsung-galaxy-s.jpg" alt="Samsung Galaxy S" /></p>
 <h3>Custom Cooking</h3>
 <p>Of course being in early developments, the custom ROMs do not offer too much, but those interested in aiding the development process can test them out. Developers at XDA-Developers are furiously at work on solutions for phones like the HTC DROID Eris, EVO 4G &amp; Wildfire. Since the modding community moves rapidly, it might not be too long before some usable and stable solutions are made available for download.</p>
 <p>While we wait for these ROMs to evolve to more usable solutions, let's find out which of the manufacturers and carriers have been proactive in preparing to ship official updates.</p>

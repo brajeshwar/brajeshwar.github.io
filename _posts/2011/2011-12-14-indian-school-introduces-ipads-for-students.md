@@ -28,7 +28,7 @@ author:
   last_name: Oinam
 permalink: "/2011/indian-school-introduces-ipads-for-students/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/12/ipad-students.jpg" alt="Students with their iPads" /><br />
+<figure><img src="/static/2011/12/ipad-students.jpg" alt="Students with their iPads" /><br />
 <figcaption>School Students with their iPads (source : <a href="http://www.flickr.com/photos/46097950@N02/6262296086/">BarbaraLN</a>)</figcaption>
 </figure>
 <p><!--more--></p>

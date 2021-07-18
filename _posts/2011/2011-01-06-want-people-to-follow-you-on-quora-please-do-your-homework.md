@@ -29,7 +29,7 @@ author:
   last_name: Oinam
 permalink: "/2011/want-people-to-follow-you-on-quora-please-do-your-homework/"
 ---
-<p><a href="http://www.quora.com/Brajeshwar-Oinam"><img src="{{ site.baseurl }}/assets/2011/01/quora.png" alt="Quora" class="alignright" /></a></p>
+<p><a href="http://www.quora.com/Brajeshwar-Oinam"><img src="/static/2011/01/quora.png" alt="Quora" class="alignright" /></a></p>
 <p>With the recent <a href="http://techcrunch.com/2011/01/05/quora-surge/">growth explosion</a> of Quora, I'm pretty sure everyone is following and being followed by lots of other people. Lots of Quora users <a href="http://twitter.com/#!/search/quora">tweeted</a> about 'turning off email notifications' for new followers as there were lots of 'followings' happening around.</p>
 <p>This would apply to many similar services and so also for Quora. If you follow other people and eventually want people to follow you, please do some homework and complete some basic steps before firing up that 'follow everyone I know' button.</p>
 <p>* Complete your profile. Write a Description. (People need to remember who you are and why they should follow you.)<br />

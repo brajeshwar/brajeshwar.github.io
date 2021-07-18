@@ -24,7 +24,7 @@ author:
   last_name: Oinam
 permalink: "/2006/firefox-20-released-get-the-must-have-magazine-of-add-ons/"
 ---
-<p><a href="http://www.flickr.com/photos/jollyjake/278562314/"><img src="{{ site.baseurl }}/assets/2006/10/Microsoft-internet-explorer-cake-firefox.jpg" alt="Microsoft Congratulates Firefox 2.0 Release" /></a></p>
+<p><a href="http://www.flickr.com/photos/jollyjake/278562314/"><img src="/static/2006/10/Microsoft-internet-explorer-cake-firefox.jpg" alt="Microsoft Congratulates Firefox 2.0 Release" /></a></p>
 <p>Well, the "FTP link (Direct FTP link to Firefox Downloads)":http://releases.mozilla.org/pub/mozilla.org/firefox/releases/ was seen everywhere and almost everybody in the *little-ahead - techno-sphere* were already playing with the "Release (Firefox 2.0 release Note)":http://www.mozilla.com/en-US/press/mozilla-2006-10-24.html Version of Firefox 2.0 from "Mozilla (Mozilla)":http://www.mozilla.com/ even before the official announcement was made.</p>
 <p>Some good points  --</p>
 <p>* I don't really open more than about 10 tabs at max and thus the individual close button is a boon.<br />

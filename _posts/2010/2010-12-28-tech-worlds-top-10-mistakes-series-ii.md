@@ -38,7 +38,7 @@ permalink: "/2010/tech-worlds-top-10-mistakes-series-ii/"
 ---
 <p>Continuing from where I left off in my previous article, <a href="http://brajeshwar.wpengine.com/2010/tech-worlds-top-10-mistakes-series-i/">Tech World's Top 10 Mistakes - Series I</a>, let us now look at the remaining half of the technology world's top ten blunders - counting down from number 5 to number 1:</p>
 <h3>5. IBM PS/2 a little too late</h3>
-<figure><img src="{{ site.baseurl }}/assets/2010/12/ibm-ps2-mca-model-55-sx.jpg" alt="IBM PS2 MCA Model 55 SX" /><br />
+<figure><img src="/static/2010/12/ibm-ps2-mca-model-55-sx.jpg" alt="IBM PS2 MCA Model 55 SX" /><br />
 <figcaption>IBM PS2 MCA Model 55 SX (source : <a href="http://en.wikipedia.org/wiki/IBM_Personal_System/2">Wikipedia</a>)</figcaption>
 </figure>
 <p>IBM was indeed very late to put to action its pro-active idea of counter-attacking its competitors. IBM's break-through concept of bringing a computer to every office desk in the world worked very well until competitors like <a href="http://www.compaq.com/country/index.html">Compaq</a> and others began to hit back during the era of the 3rd generation of the PC market. What the competitors did was they started to fabricate a PC clone of IBM and started to eat away IBM's PC sales whose prices were, as per business consumers, pretty high and hence they did not mind buying working PCs without the IBM logo on them. </p>

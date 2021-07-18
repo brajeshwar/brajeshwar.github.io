@@ -36,7 +36,7 @@ excerpt: While some claim that Microsoft provides value for money, FOSS activist
   been compared to MS Office and Adobe Photoshop, on various grounds. That includes
   price.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/06/microsoft-road-to.jpg" alt="Microsoft - The road to ?" />
+<div class="figure"><img src="/static/2010/06/microsoft-road-to.jpg" alt="Microsoft - The road to ?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/napfisk/2440029659/">Nils Geylen</a></cite></p>
 <p class="caption"><em class="title">Microsoft</em> The road to ?</p>
 </div>

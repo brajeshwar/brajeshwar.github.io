@@ -33,7 +33,7 @@ excerpt: The application features of iPhone have been a hot subject for discussi
   across the globe and not surprisingly even Linux users have something in it which
   can be of their use.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/iphone-apps-on-linux.jpg" alt="iPhone Apps: Now on Linux!" />
+<div class="figure"><img src="/static/2008/11/iphone-apps-on-linux.jpg" alt="iPhone Apps: Now on Linux!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/sigalakos/542155941/">Sigalakos</a></cite></p>
 <p class="caption"><em class="title">iPhone Apps</em>Now on Linux!</p>
 </div>

@@ -32,7 +32,7 @@ author:
   last_name: Mukherjee
 permalink: "/2011/the-global-reach-of-social-media/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/02/social-media-planning.jpg" alt="Social Media Strategy" /><br />
+<figure><img src="/static/2011/02/social-media-planning.jpg" alt="Social Media Strategy" /><br />
 <figcaption>Planning your Social Media Strategy. (source : <a href="http://ahtgroup.com/services/social-media-strategies">Advanced Human Technologies</a>)</figcaption>
 </figure>
 <p>For every requirement such as bonding with friends & sharing life's secrets, articulating strong opinions, analysis & evaluation of a trend, or learning while watching; there are a plethora of social media options to choose from for each of the things that form part of our intent. The year 2011, surely promises to augment this virtual brotherhood, i.e. this optimal representative of a globalizing world.</p>

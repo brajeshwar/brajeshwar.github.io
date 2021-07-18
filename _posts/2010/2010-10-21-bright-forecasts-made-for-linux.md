@@ -31,7 +31,7 @@ permalink: "/2010/bright-forecasts-made-for-linux/"
 excerpt: The most startling revelation that the survey makes is the preference of
   Linux over Windows, wherein Linux is seen as more of a strategic choice.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/linux-future-is-bright.jpg" alt="Linux" />
+<div class="figure"><img src="/static/2010/10/linux-future-is-bright.jpg" alt="Linux" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/mkuhn/76381326/">M Kuhn</a></cite></p>
 <p class="caption"><em class="title">Linux</em>The Future is Bright.</p>
 </div>

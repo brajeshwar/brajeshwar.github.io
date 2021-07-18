@@ -40,7 +40,7 @@ permalink: "/2008/startup-ideas-you-can-steal-and-spawn/"
 excerpt: The key to making a site builder for end-users is to make software that lets
   people with no design ability produce things that look good -- or at least professional.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/startup-meeting.jpg" alt="Startups" />
+<div class="figure"><img src="/static/2008/07/startup-meeting.jpg" alt="Startups" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/eschipul/1464732217/">Eschipul</a></cite></p>
 <p class="caption"><em class="title">Startups</em>Ideas from Paul Graham of YCombinator that can inspire you.</p>
 </div>

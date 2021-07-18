@@ -30,7 +30,7 @@ permalink: "/2012/tips-to-pitch-your-startup/"
 <p>While I was pondering over the most effective ways to pitch a business, I came across <a href="http://itsthisforthat.com/">it's this for that</a>. The startup generators which generate one-sentence pitches can work, but not always. So, let me put this straight, if you need a startup, then all the basic stuff you need is MID or Money, Idea & Determination.</p>
 <p>Many think that if the idea is good, people will discover it somehow and they can move faster with their business. Communication with the public is another important aspect. Though you have the best programmer in the globe, if communication to the outer world fails, the path to success is way too long. Pitching process is one of the most important steps.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2012/01/6530666739_154f4fddef_z.jpg" alt="Pitch your Startup" /></p>
+<p><img src="/static/2012/01/6530666739_154f4fddef_z.jpg" alt="Pitch your Startup" /></p>
 <p>Here are some tips I stumbled along the way and you might find it useful too.</p>
 <h3>KISS</h3>
 <p>Keep it short and simple or it can even mean <a href="http://en.wikipedia.org/wiki/KISS_principle">Keep it Simple, Stupid</a> should be held firm and applied to all pitches. Simplicity is the important aspect. You have to keep the service simple. That is the reason why Twitter has reached the mass and is successful. You have to use the space wisely and explain the concept of your product. An ideal pitch should not contain more than 125 or 150 words. Try to avoid using buzz words. Information that is practical beats buzz words. Stick to the fact and keep it simple.</p>

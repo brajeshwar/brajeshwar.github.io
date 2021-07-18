@@ -30,7 +30,7 @@ permalink: "/2012/blogging-nuances-impacts/"
 <p>A <a href="http://en.wikipedia.org/wiki/Blog">blog</a> is nothing but a journal published on the Web. It is an abbreviation of the term 'Weblog'. Weblogs consists of short distinct entries, frequently updated and usually exhibited in reverse sequential order; so the most recent post appears first. Blogs are often the work of a single individual, although sometimes it can be created by small groups or be themed on a single subject. </p>
 <p>The term was officially coined by <a href="http://en.wikipedia.org/wiki/Jorn_Barger">Jorn Barger</a> in 1997. The trend of weblogs escalated in 1999, when several companies and developers introduced easy blogging software and tools. Since then, till date the number of blogs has gone from a few thousand to over a 100 million.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2012/02/blog.jpg" alt="Blog" /></p>
+<p><img src="/static/2012/02/blog.jpg" alt="Blog" /></p>
 <p>Blogs mainly branch out into two general categories:</p>
 <p># <strong>Personal Blog</strong> -- It is a combination diary of opinion posts and research links. It is a personal journal where the author shares her life and thoughts on a day to day basis.<br />
 # <strong>Business or Corporate Blogs</strong> -- It is a corporate tool for communicating not only with clients but also the employees. It serves as a platform to share knowledge and expertise.</p>

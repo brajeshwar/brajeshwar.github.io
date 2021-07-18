@@ -33,7 +33,7 @@ excerpt: There's a lot you'll need to learn. How to raise money. How to build a 
   How to sell. How to schmooze. How to make presentations. How to influence people
   and make them believe in you.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/book-reality-check.jpg" alt="Reality Check: The Irreverent Guide to Outsmarting, Outmanaging, and Outmarketing Your Competition" />
+<div class="figure"><img src="/static/2008/11/book-reality-check.jpg" alt="Reality Check: The Irreverent Guide to Outsmarting, Outmanaging, and Outmarketing Your Competition" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/brajeshwar/3026112397/">Brajeshwar</a></cite></p>
 <p class="caption"><em class="title">Reality Check</em>The Irreverent Guide to Outsmarting, Outmanaging, and Outmarketing Your Competition</p>
 </div>

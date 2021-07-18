@@ -48,7 +48,7 @@ author:
   last_name: Wilding
 permalink: "/2012/business-intelligence-retailigence/"
 ---
-<p><a href="http://www.retailigence.com/"><img src="{{ site.baseurl }}/assets/2012/05/retailigence.png" alt="Retailigence" class="alignright" /></a></p>
+<p><a href="http://www.retailigence.com/"><img src="/static/2012/05/retailigence.png" alt="Retailigence" class="alignright" /></a></p>
 <p>Peter Christianson's resume, as he tells it, is like a who's who of NASDAQ success stories - so when he lent his talents to new startup, <a href="http://www.retailigence.com/">Retailigence</a>, people paid attention.</p>
 <p>Retailigence and its founder, Jeremy Geiger, are leveraging Peter's thorough portfolio of skills: business development, revenue growth, supply chain management, operations research, statistics, management consulting, business-process re-engineering and mathematics;  skills Peter is using to help turn Retailigence into the next big thing. Retailigence is a hodge podge of all those skills, mashed together to create a data-driven, traffic-management platform that connects the 3 prongs of the retail sector: retailers, brands and developers - all without an app or search engine.</p>
 <p>If you want to know just what that means, read our interview with Peter below:</p>

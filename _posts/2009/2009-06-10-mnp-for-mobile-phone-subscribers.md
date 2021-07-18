@@ -34,7 +34,7 @@ excerpt: " A well known telecom blog owner and digital media evangelist called i
   off. Looking at the repeated extensions of the MNP roll out, the statements appear
   to have a cause."
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/phone-mnp.jpg" alt="Portability: That's what they're waiting for!" />
+<div class="figure"><img src="/static/2009/06/phone-mnp.jpg" alt="Portability: That's what they're waiting for!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/wink/192265445/">Juicyrai</a></cite></p>
 <p class="caption"><em class="title">Portability</em>That's what they're waiting for!</p>
 </div>

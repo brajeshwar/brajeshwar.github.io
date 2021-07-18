@@ -38,7 +38,7 @@ excerpt: The new version of OpenSuse is definitely a step in the right direction
   but how it compares to Fedora 12, Mandriva 2010 and Linux Mint is just a matter
   of reckoning.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/12/opensuse.jpg" alt="" />
+<div class="figure"><img src="/static/2009/12/opensuse.jpg" alt="" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite>OpenSUSE</cite></p>
 <p class="caption"><em class="title">OpenSUSE</em>Free and Linux-based operating system.</p>
 </div>

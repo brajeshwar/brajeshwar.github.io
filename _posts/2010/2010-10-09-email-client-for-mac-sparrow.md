@@ -33,7 +33,7 @@ permalink: "/2010/email-client-for-mac-sparrow/"
 excerpt: My experience with Sparrow has been good in terms of the simplicity and the
   user interface. It makes your job of reading and replying to emails, simple.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/sparrow-mail.jpg" alt="Sparrow Mail" />
+<div class="figure"><img src="/static/2010/10/sparrow-mail.jpg" alt="Sparrow Mail" />
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite>Sparrow Mail</cite></p>
 <p class="caption"><em class="title">Sparrow</em>The new simple mail app for Mac.</p>
 </div>

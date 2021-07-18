@@ -42,7 +42,7 @@ permalink: "/2011/bulletproof-your-self-hosted-wordpress-blog-how-to-survive-tra
 <p>My site is currently hosted on Page.ly. Their support is super awesome. Their recent upgrade to better infrastructure is well noticed and is showing good signs. My site's uptime is awesome - some 99.99% or so for the last couple of months. Most blogs should be able to take advantage of their starting price of $19.95 per month hosting package and their $49.95 per month is pretty good enough for more popular blogs. If you hit any of the ceiling, they will gently ask you to upgrade to a higher plan.</p>
 <p><em>Cache Plugin</em></p>
 <p>A must-have for any self-hosted Wordpress blog. Both of the above hosting providers will take care of installing and maintaining a cache plugin they're comfortable with. You don't even have to worry about that. <em>WP Total Cache</em> is a popular one.</p>
-<p><a href="http://www.cloudflare.com/"><img src="{{ site.baseurl }}/assets/2011/12/cloudflare-brajeshwar.png" alt="Cloudflare saves Brajeshwar" class="alignright" /></a></p>
+<p><a href="http://www.cloudflare.com/"><img src="/static/2011/12/cloudflare-brajeshwar.png" alt="Cloudflare saves Brajeshwar" class="alignright" /></a></p>
 <h3>CloudFlare</h3>
 <p>CloudFlare literally reduces everything in half - the spike, the in-coming hits, threats, bandwidths and even the cost. For any decently trafficked self hosted blog, CloudFlare is a very good solution. The free version is good enough. CloudFlare even comes built-in with a robust DNS Manager.</p>
 <h3>CDN (Optional)</h3>

@@ -31,7 +31,7 @@ permalink: "/2008/can-adoption-of-linux-help-recession/"
 excerpt: '"Short terms -- the next few weeks -- everyone, whether commercial or proprietary,
   is going to find life unpleasant." - Matt Asay.'
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/comic-recession.png" alt="Recession: For some, economics is still doing fine!" />
+<div class="figure"><img src="/static/2008/11/comic-recession.png" alt="Recession: For some, economics is still doing fine!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/yankee6161/3010469323/">Yankee6161</a></cite></p>
 <p class="caption"><em class="title">Recession</em>For some, economics is still doing fine!</p>
 </div>

@@ -32,7 +32,7 @@ excerpt: Possibly the most important invention of the past century, the web is u
   one of the most robust engines of knowledge transfer, political and social change,
   artistic endeavor, and economic growth the world has seen.
 ---
-<p><a href="http://alistapart.com/articles/survey2008"><img src="{{ site.baseurl }}/assets/2008/07/i-took-the-2008-survey.gif" alt="A List Apart 2008 Survey" style="width: 180px; height: 46px; border:0 none;" /></a>It's A List Apart's second annual survey for people who make websites. I took it! And so should you. The Survey for People Who Make Websites.</p>
+<p><a href="http://alistapart.com/articles/survey2008"><img src="/static/2008/07/i-took-the-2008-survey.gif" alt="A List Apart 2008 Survey" style="width: 180px; height: 46px; border:0 none;" /></a>It's A List Apart's second annual survey for people who make websites. I took it! And so should you. The Survey for People Who Make Websites.</p>
 <p>This year's survey corrects many of last year's mistakes, with more detailed and numerous questions for freelance contractors and owners of (or partners in) small web businesses. There are also better international categories, and many other improvements recommended by those who took the survey last year.</p>
 <p>Industry experts have taken the survey;</p>
 <p>* <a href="http://www.zeldman.com/2008/07/29/the-survey-for-people-who-make-websites/">Jeffrey Zeldman</a><br />

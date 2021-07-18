@@ -41,7 +41,7 @@ excerpt: It's a miracle anyone survived filming long enough for Bond to kill the
   in the movie. Quantum of Solace is the first 007 sequel, it picks up directly from
   where Casino Royale left off.
 ---
-<figure><img src="{{ site.baseurl }}/assets/2008/09/james-bond-daniel-craig.jpg" alt="Daniel Craig as James Bond in Quantum of Solace" /><br />
+<figure><img src="/static/2008/09/james-bond-daniel-craig.jpg" alt="Daniel Craig as James Bond in Quantum of Solace" /><br />
 <figcaption>Daniel Craig as James Bond</figcaption>
 </figure>
 <p>Friday is already here initiating the weekend, let's talk a bit about Entertainment (perhaps Movies). Sun UK have a sneak preview  bringing us good entertaining news -- Quantum of Solace will <a href="http://www.thesun.co.uk/sol/homepage/showbiz/film/movie_reviews/article1730883.ece">kick the living daylights</a> out of any rival action-hero franchises.</p>
@@ -51,7 +51,7 @@ excerpt: It's a miracle anyone survived filming long enough for Bond to kill the
 <p><strong>Chase</strong></p>
 <p>A driver had head injuries after crashing into a wall filming the cliff-top chase. Another had a narrow escape after skidding off a cliff into a lake. And Craig needed eight stitches in his face after a fight scene and he had the top of a finger sliced off.</p>
 <blockquote><p>It's a miracle anyone survived filming long enough for Bond to kill them in the movie. Quantum of Solace is the first 007 sequel, it picks up directly from where Casino Royale left off. Bond is out to get revenge for the death of his lover Vesper Lynd (Eva Green) at any cost. But his path of destruction leads him to the discovery of a new threat to the world, crime syndicate Quantum.</p></blockquote>
-<p><img src="{{ site.baseurl }}/assets/2008/09/quantum-of-solace-bond-girls.jpg" alt="Bond Girls: Camille (Olga Kurylenko) and Mi6 agent Fields (Gemma Arterton)" class="alignright" /></p>
+<p><img src="/static/2008/09/quantum-of-solace-bond-girls.jpg" alt="Bond Girls: Camille (Olga Kurylenko) and Mi6 agent Fields (Gemma Arterton)" class="alignright" /></p>
 <p>The story builds up as Quantum's mastermind billionaire-environmentalist Dominic Greene (Mathieu Amalric) uses a campaign to save swathes of rainforest as a cover for his evil plan.</p>
 <p>Meanwhile, M (Judi Dench) is worried, "Bond, if you could avoid killing every lead there is, that would be appreciated." To which, he dryly replies, "I will do my best" then heads off in designer suits to slay some more. Things get so bad that M revokes his licence to kill.</p>
 <p>Here the notches on his gun far outnumber the notches on his bedpost. Nonetheless, there are two sexy Bond girls -- Camille (Olga Kurylenko) and Mi6 agent Fields (Gemma Arterton). But the only flash of flesh in the 105-minute movie (the shortest Bond Movie ever) is a very quick nookie scene with Fields.</p>

@@ -37,7 +37,7 @@ excerpt: Irrespective of the operating system, intrusion is one of the key conce
   for computers connected to a network. Firewalls, as a matter of fact provide a resistance
   to this, if not a fool proof protection.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/rj45.jpg" alt="Firewall" />
+<div class="figure"><img src="/static/2008/10/rj45.jpg" alt="Firewall" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/negatyf/361668397/">UkaszSie</a></cite></p>
 <p class="caption"><em class="title">Firewalls</em>You can never escape them!</p>
 </div>

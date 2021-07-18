@@ -31,7 +31,7 @@ permalink: "/2011/ahead-of-ipo-some-skeptical-of-groupons-value/"
 ---
 <p>Since its inception, <a href="http://www.groupon.com/">Groupon</a> has steadily climbed the success ladder to achieve many accolades. It has shown immense promise and there is a definitive possibility of it being declared as one of the <a href="http://images.businessweek.com/slideshows/20110415/the-next-wave-of-tech-ipos/slides/9">leading Tech IPOs</a> of by the end of 2011. However, the company is not without its set of challenges. Some of these have also led to people wondering about Groupon's value and future ahead.</p>
 <p><!--more--></p>
-<p><a href="http://www.groupon.com/"><img src="{{ site.baseurl }}/assets/2011/06/groupon-logo.jpg" alt="Groupon" class="alignright" /></a></p>
+<p><a href="http://www.groupon.com/"><img src="/static/2011/06/groupon-logo.jpg" alt="Groupon" class="alignright" /></a></p>
 <p>Here is a brief look at some of the reasons and speculations about Groupon's value:</p>
 <h3>Common Business Model</h3>
 <p>Groupon is based on online coupons distribution, which is a fairly imitable business model. In fact, in the three years that Groupon has established itself, there has been quite a rise in similar types of online businesses all over the internet. This definitely poses quite a risk to the company's value. However, the company has made progress in this direction opting for scale. This brings down the possibility of complete copy of the business model.</p>

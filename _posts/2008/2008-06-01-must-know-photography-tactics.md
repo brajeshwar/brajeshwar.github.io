@@ -36,7 +36,7 @@ excerpt: People take good pictures not cameras. It's up to you to compose the sh
   taking as many test shots as you like using various camera settings, compositions,
   etc. "Practice Makes Perfect."
 ---
-<p>[caption id="attachment_7120" align="alignnone" width="700"]<img src="{{ site.baseurl }}/assets/2008/06/colorful-people-delhi.jpg" alt="Ideas" width="700" class="size-large wp-image-7120" /> People with bright colorful attire at Indian Bahai (Lotus) Temple, Delhi (INDIA)[/caption]</p>
+<p>[caption id="attachment_7120" align="alignnone" width="700"]<img src="/static/2008/06/colorful-people-delhi.jpg" alt="Ideas" width="700" class="size-large wp-image-7120" /> People with bright colorful attire at Indian Bahai (Lotus) Temple, Delhi (INDIA)[/caption]</p>
 <p>Photography fascinates many people and it turns out to be a good opportunity when a good blogger told me he wishes to write. Incidentally, <a href="http://www.praval.com/">Praval's</a> first article is something about Photography.</p>
 <p>Digital photography is no more just a professional's job. With a consistent decline in the prices of digital cameras -- point and shoot, photography is becoming a passion. There are a large number of avenues to materialize this infatuation but information about some key concepts can let you have some crisp images.</p>
 <p>Here is a consolidated article on how to take crisp images at varying locations with a digital camera even if you're a newbie!</p>
@@ -60,7 +60,7 @@ excerpt: People take good pictures not cameras. It's up to you to compose the sh
 <p>Anyone can point a digital camera at a subject and get a good quality snapshot. The camera will almost insure that the photo will be sharp and exposed correctly. However, the one thing the camera can't do for you is compose the shot. One of the major differences between average photographers and professionals is that the pros spend a lot of time thinking about composition while amateur's just point and shoot.</p>
 <p>Composition is important because it helps set the mood for the shot and tells a story. It can also be used to evoke an emotional response from the viewer. If you keep composition in mind whenever you look into your viewfinder, it will eventually become second nature to you.</p>
 <p>You will greatly improve the impact of your photos and hopeful move out of the armature ranks by following these few easy tips.</p>
-<div class="figure"><a href="http://upload.wikimedia.org/wikipedia/commons/f/f6/Rivertree_1_md.jpg"><img src="{{ site.baseurl }}/assets/2008/06/thousand-islands-sunset.jpg" alt="Sunset at the Thousand Islands" /></a></p>
+<div class="figure"><a href="http://upload.wikimedia.org/wikipedia/commons/f/f6/Rivertree_1_md.jpg"><img src="/static/2008/06/thousand-islands-sunset.jpg" alt="Sunset at the Thousand Islands" /></a></p>
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite>Wikipedia</cite></p>
 <p class="caption"><em>The law of thirds</em>This photograph of a sunset taken in the <a href="http://en.wikipedia.org/wiki/Thousand_Islands">Thousand Islands</a> region demonstrates the principles of the rule of thirds.</p>
 </div>

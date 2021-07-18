@@ -36,7 +36,7 @@ permalink: "/2010/ping-you-got-music/"
 excerpt: Follow your favorite artists and friends to discover the music they're listening
   about, listening to, and downloading. Ping is a social network for music.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/ping-itunes.jpg" alt="iTunes Ping" />
+<div class="figure"><img src="/static/2010/09/ping-itunes.jpg" alt="iTunes Ping" />
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite>iTunes</cite></p>
 <p class="caption"><em class="title">Ping </em>A social network for music.</p>
 </div>

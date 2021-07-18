@@ -34,7 +34,7 @@ permalink: "/2012/branchout-linkedins-biggest-competitor/"
 <h3>About</h3>
 <p>Launched in July 2010, as of now it has more than 25 million registered users to its credit.  BranchOut is backed by the dedicated team strength of 45 employees. It has grown so smart that <a href="http://www.forbes.com/sites/tomtaulli/2012/04/19/branchout-looks-to-dethrone-linkedin/">it poses a challenge</a> to a professional dedicated network that connects professionals -- LinkedIn. LinkedIn was launched in the year 2003. It has more than 200 million users which are being benefited from more than 200 countries. The site is available in 13 various languages including English.</p>
 <p><!--more--></p>
-<p><a href="http://branchout.com/"><img src="{{ site.baseurl }}/assets/2012/04/branchout-logo.png" alt="BranchOut" class="alignright" /></a></p>
+<p><a href="http://branchout.com/"><img src="/static/2012/04/branchout-logo.png" alt="BranchOut" class="alignright" /></a></p>
 <h3>How Does BranchOut Work?</h3>
 <p>BranchOut lets you check your friends and friends' friends that are working in various organizations which are already registered on Facebook. It is simple to use BranchOut application for Facebook, as the required user data will be graphed from Facebook database. On the other hand, you are required to build professional network by adding new persons one by one. BranchOut has the similar user interface as that of LinkedIn. You will be able to send friend requests and send messages to existing friends as you do through LinkedIn. </p>
 <h3>Achievements</h3>

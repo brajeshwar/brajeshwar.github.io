@@ -33,7 +33,7 @@ excerpt: After the advent of SDKs for Adobe AIR & Microsoft Silverlight and the 
   amount of market share they already have, Sun Microsystems has finally come up with
   their SDK preview for JavaFX.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/08/linux-javafx-mobile.jpg" alt="JavaFX: Who better than he himself for the demo?" />
+<div class="figure"><img src="/static/2008/08/linux-javafx-mobile.jpg" alt="JavaFX: Who better than he himself for the demo?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/charlton_b/685839371/">Charlton</a></cite></p>
 <p class="caption"><em class="title">JavaFX</em> Who better than he himself for the demo? </p>
 </div>

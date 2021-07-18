@@ -32,7 +32,7 @@ excerpt: TonidoPlug is a tiny, low-power, low-cost personal home server and NAS 
   powered by Tonido software that allows you to access your files, music and media
   from anywhere for just $99.
 ---
-<p><a href="http://www.tonidoplug.com/"><img src="{{ site.baseurl }}/assets/2011/02/tonidoplug.jpg" alt="TonidoPlug" class="alignright" /></a></p>
+<p><a href="http://www.tonidoplug.com/"><img src="/static/2011/02/tonidoplug.jpg" alt="TonidoPlug" class="alignright" /></a></p>
 <p>As technology advances in the 21st century, gadgets and devices get smaller, but more and more effective. CodeLathe's <a href="http://www.tonidoplug.com/">TonidoPlug</a> is a fantastic example. TonidoPlug is a tiny server that helps you access all your applications that include files, photos, music, movies, etc. from any place wherein you can access a computer system through a web browser. It is low on power and absolutely low on cost with no hurdles attached and performs the task of a Network Attached Storage device.</p>
 <blockquote><p><a href="http://www.tonidoplug.com/">TonidoPlug</a> is a tiny, low-power, low-cost personal home server and NAS device powered by Tonido software that allows you to access your files, music and media from anywhere for just $99.</p></blockquote>
 <p><!--more--></p>

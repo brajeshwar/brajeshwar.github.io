@@ -32,7 +32,7 @@ excerpt: 'AWS Start-Up Challenge, a contest for entrepreneurs and start-ups that
   award the winner $50,000 in cash, $50,000 in AWS credits, a potential investment
   offer from Amazon.com, and more. Submissions will be accepted until 3 Oct, 2008. '
 ---
-<p>With the <a href="http://aws.amazon.com/startupchallenge/">2008 AWS Start-Up Challenge</a>, Amazon Web Services (AWS) is searching for the next hot start-up that is leveraging AWS to build its infrastructure and business. The grand prize is $100,000 ($50,000 in cash, $50,000 in AWS credits) and a potential investment offer from Amazon.<!--more--><img src="{{ site.baseurl }}/assets/2008/09/aws-logo.gif" alt="AWS" style="border: 0 none; float: right;" /></p>
+<p>With the <a href="http://aws.amazon.com/startupchallenge/">2008 AWS Start-Up Challenge</a>, Amazon Web Services (AWS) is searching for the next hot start-up that is leveraging AWS to build its infrastructure and business. The grand prize is $100,000 ($50,000 in cash, $50,000 in AWS credits) and a potential investment offer from Amazon.<!--more--><img src="/static/2008/09/aws-logo.gif" alt="AWS" style="border: 0 none; float: right;" /></p>
 <p><strong>How to Enter?</strong></p>
 <p>To enter, complete the online application by October 3, 2008. The judges panel will review all applications and choose five finalists based on the following criteria: originality and creativity of the idea, likelihood of long-term success, how well it addresses a need in the marketplace, and implementation of AWS' infrastructure services and/or other paid services.</p>
 <p><strong>The Final Countdown</strong></p>

@@ -30,7 +30,7 @@ excerpt: For most populace, Asia is still considered to be a laggard when it com
   to embracing of new technologies on the Internet. But according to Open Source vendors,
   this trend could well see a change in the near future.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/t-shirt-open-source-asia.jpg" alt="Asia joins the Open Source league" />
+<div class="figure"><img src="/static/2008/11/t-shirt-open-source-asia.jpg" alt="Asia joins the Open Source league" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/x_jamesmorris/3015149645/">x_jamesmorris</a></cite></p>
 <p class="caption"><em class="title">Open Source</em>Asia joins the league</p>
 </div>

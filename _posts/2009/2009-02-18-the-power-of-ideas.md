@@ -34,7 +34,7 @@ excerpt: The Power of Ideas, an initiative by the Economic Times, seeks anyone a
   are reaching out to people who might have great business ideas and are seeking funding
   to put their business idea into practice.
 ---
-<div class="figure"><a href="http://flickr.com/photos/brajeshwar/sets/72157614018678115/"><img src="{{ site.baseurl }}/assets/2009/02/the-power-of-ideas.jpg" alt="The Power of Ideas" /></a>
+<div class="figure"><a href="http://flickr.com/photos/brajeshwar/sets/72157614018678115/"><img src="/static/2009/02/the-power-of-ideas.jpg" alt="The Power of Ideas" /></a>
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">Capital Idea</em>How entrepreneurs can access capital & bring their business ideas to life.</p>
 </div>

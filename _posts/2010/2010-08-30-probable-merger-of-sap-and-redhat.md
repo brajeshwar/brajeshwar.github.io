@@ -33,7 +33,7 @@ excerpt: But buying RedHat, which has apparently earned $748 million in revenue 
   its fiscal 2010 requires SAP to spend a considerably large amount that could even
   be larger than its previous two behemoth deals.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/08/redhat.jpg" alt="Redhat" />
+<div class="figure"><img src="/static/2010/08/redhat.jpg" alt="Redhat" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/afsilva/1127289974/">Anderson Silva</a></cite></p>
 <p class="caption"><em class="title">Redhat </em>Provider of Linux and open source technology.</p>
 </div>

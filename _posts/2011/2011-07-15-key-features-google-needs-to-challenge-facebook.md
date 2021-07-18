@@ -29,7 +29,7 @@ permalink: "/2011/key-features-google-needs-to-challenge-facebook/"
 ---
 <p>Within a month of its launch, <a href="https://plus.google.com/">Google+</a> is considered to be peril to the current social networking don Facebook. However Google+ needs much more enhancements else it may join the Google's flop list (<a href="www.orkut.com/">Orkut</a>, <a href="www.google.com/buzz">Buzz</a> &amp; <a href="http://wave.google.com/">Wave</a>). Albeit, the features of Google+ are stunning and the User Interface is too gorgeous than any existing social network, <a href="http://www.techbuzzonline.com/google-the-pros-and-the-cons/">Google+ is still a half scorched one</a> and it needs striking enhancements to capture the throne from Facebook.</p>
 <p><!--more--></p>
-<figure><img src="{{ site.baseurl }}/assets/2011/07/google-plus-vs-facebook.jpg" alt="Google+ vs Facebook" /></figure>
+<figure><img src="/static/2011/07/google-plus-vs-facebook.jpg" alt="Google+ vs Facebook" /></figure>
 <p>These are some of the enrichments I (the user) require in Google+ (kinda my wishlist):</p>
 <h3>Don of Search Fails</h3>
 <p>It's really pathetic to notice that the Don of all the search engines has failed miserably in providing apt search for its venture Google+. Yes, Google+ offers you to search people only through name but not through graduating college or workplace. This is very frustrating as searching through names couldn't be optimized thereby searches in Google+ consumes lot of time. If the searches are optimized as in Facebook (search by location, education, workplace) then it will be an efficient boon to the users.</p>

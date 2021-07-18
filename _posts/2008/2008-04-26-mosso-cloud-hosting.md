@@ -37,7 +37,7 @@ excerpt: Cloud Computing is the simplification of the data center by leveraging 
   technologies to reduce complexity through homogenizing environments. Consumers are
   concerned with services it can perform rather than the underlying technologies.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/04/cloud-computing.jpg" alt="Cloud Computing" />
+<div class="figure"><img src="/static/2008/04/cloud-computing.jpg" alt="Cloud Computing" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/johnniewalker/359440369/">Johnnie W@lker</a></cite></p>
 <p class="caption"><em class="title">Cloud Computing</em>The architecture is a massive network of "cloud servers" interconnected as if in a grid running in parallel.</p>
 </div>
@@ -47,7 +47,7 @@ excerpt: Cloud Computing is the simplification of the data center by leveraging 
 <p><strong>A Dedicated Server</strong></p>
 <p>I did moved to a dedicated server with some real good juice -- those 2GB RAM, Pentium 4 thingy server -- but it was too costly, at about $250 /mo, for my site and I could never use all its power. It was from <a href="http://www.mediumcube.com/">MediumCube</a> and the technical guy whom I'm in contact with was the best, most fanstastic Sys-Admin ever. Its full power remained untapped during normal traffic but during some of the very few <a href="http://digg.com/">Digg</a> Effects that I had, it could not handle the onslaught.</p>
 <p><strong>Mosso: the Cloud Hosting (My Current Host)</strong></p>
-<p><img src="{{ site.baseurl }}/assets/2008/04/mosso-cluster.png" alt="Scale with Mosso Cluster" style="border: 0 none;" />After desparately looking around for an economical yet better solution, <a href="http://www.mosso.com/">Mosso</a> came highly recommended by coupla friend. I went for it and till the time of writing this article, I'm satisfied and happily hosted with <strong>Mosso</strong>. Yes, it isn't as fast as my earlier Dedicated Server but it is good enough for my site. I particularly like the fact that I'm being part of those early adopters of new Technology, the Cloud Hosting in this case.</p>
+<p><img src="/static/2008/04/mosso-cluster.png" alt="Scale with Mosso Cluster" style="border: 0 none;" />After desparately looking around for an economical yet better solution, <a href="http://www.mosso.com/">Mosso</a> came highly recommended by coupla friend. I went for it and till the time of writing this article, I'm satisfied and happily hosted with <strong>Mosso</strong>. Yes, it isn't as fast as my earlier Dedicated Server but it is good enough for my site. I particularly like the fact that I'm being part of those early adopters of new Technology, the Cloud Hosting in this case.</p>
 <p><em>Mosso's earlier bad repuation</em></p>
 <p>During the early days of Mosso, I think they had acute problems and I assume that was more from the fact that the technology was new and they were more or less in experimentation mode. So, if you <a href="http://www.google.com/search?hl=en&q=mosso&btnG=Search">google around</a>, you'll find more bad opinions than good ones about Mosso.</p>
 <p><em>Mosso is good and easy cloud hosting</em></p>

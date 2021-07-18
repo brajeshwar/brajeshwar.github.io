@@ -39,7 +39,7 @@ permalink: "/2013/why-wont-index-files-deployed-on-cloudfront-work-like-it-does-
 <p>By default, when you deploy a Cloudfront Distribution, it will point to the location of the S3 Origin - <code>pitch.lxidd.com.s3.amazonaws.com</code>. Instead of that origin, your Cloudfront Distribution should have points its origin to S3 Endpoint which looks something like - <code>pitch.lxidd.com.s3-website-us-east-1.amazonaws.com</code></p>
 <h2>Steps</h2>
 <p><strong>1. Look at the "Properties" of the S3 Bucket and copy that link.</strong></p>
-<p><img src="{{ site.baseurl }}/assets/2013/06/s3-static-hosting.png" alt="s3-static-hosting" class="alignnone size-full wp-image-6711" /></p>
+<p><img src="/static/2013/06/s3-static-hosting.png" alt="s3-static-hosting" class="alignnone size-full wp-image-6711" /></p>
 <p><strong>2. Now Add/Edit your Cloudfront Distribution Origin to that link.</strong></p>
-<p><img src="{{ site.baseurl }}/assets/2013/06/cloudfront-s3-origin.png" alt="cloudfront-s3-origin" class="alignnone size-full wp-image-6710" /></p>
+<p><img src="/static/2013/06/cloudfront-s3-origin.png" alt="cloudfront-s3-origin" class="alignnone size-full wp-image-6710" /></p>
 <p>I hope that works for you.</p>

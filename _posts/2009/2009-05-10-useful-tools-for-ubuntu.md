@@ -37,7 +37,7 @@ excerpt: I wonder if a lot of reader know the Ubuntu philosophy which says -- "I
   what I am because of who we all are." Ubuntu, from its birth has focused on providing
   a stable, user friendly and easy to install and up to date operating system.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/05/ubuntu-love.jpg" alt="Ubuntu love: Tools to make your life simple" />
+<div class="figure"><img src="/static/2009/05/ubuntu-love.jpg" alt="Ubuntu love: Tools to make your life simple" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/magicfab/58061283/">Magicfab</a></cite></p>
 <p class="caption"><em class="title">Ubuntu Love</em>Tools to make your life simple.</p>
 </div>

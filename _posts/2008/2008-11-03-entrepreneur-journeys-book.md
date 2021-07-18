@@ -55,7 +55,7 @@ permalink: "/2008/entrepreneur-journeys-book/"
 excerpt: Technology startup success and the knowledge required to achieve it, is out
   there to be leveraged by anyone who is willing to listen.
 ---
-<div class="figure"><a href="http://www.amazon.com/dp/1439206872/"><img src="{{ site.baseurl }}/assets/2008/11/book-entrepreneur-journeys.jpg" alt="Entrepreneur Journeys by Sramana Mitra" /></a>
+<div class="figure"><a href="http://www.amazon.com/dp/1439206872/"><img src="/static/2008/11/book-entrepreneur-journeys.jpg" alt="Entrepreneur Journeys by Sramana Mitra" /></a>
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://www.amazon.com/dp/1439206872/">Amazon</a></cite></p>
 <p class="caption"><em class="title">Entrepreneur Journeys</em>A book by Sramana Mitra</p>
 </div>

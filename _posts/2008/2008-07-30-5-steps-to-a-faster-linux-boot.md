@@ -34,7 +34,7 @@ excerpt: You don't need to have a wireless kernel module loaded if you're on Eth
   LAN. This task is complex and will require a kernel recompilation, which unfortunately
   is not the easiest task to accomplish.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/linux-boot-time.jpg" alt="Efficient Boot Time in Linux" />
+<div class="figure"><img src="/static/2008/07/linux-boot-time.jpg" alt="Efficient Boot Time in Linux" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/udo/241045585/">Udo Herzog</a></cite></p>
 <p class="caption"><em class="title">Boot Times</em>Did you forget that on Linux?</p>
 </div>

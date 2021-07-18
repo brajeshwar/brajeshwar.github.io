@@ -55,7 +55,7 @@ permalink: "/2016/are-you-a-freelancer-an-entrepreneur-or-a-salesperson/"
 <p>Every sale we make, whether we intend to do it or not, follows this process. Sometimes it just happens naturally. Sometimes, (especially online), customers walk themselves through their own sales processes.</p>
 <p>Most experts believe that customers buy for emotional reasons and also because they trust the seller. You will find many marketing gurus, think-tanks and agencies trying to sell you ways to earn potential client trust; many of which are expensive, time-consuming and being done by everyone.</p>
 <p>Large brands and companies with good funding resources can afford to invest in substantial marketing campaigns. However, for most freelancers and entrepreneurs, this type of investment is impossible.</p>
-<p><img src="{{ site.baseurl }}/assets/2016/10/salesperson.jpg" alt="Salesperson" width="490" height="347" class="alignnone size-full wp-image-6865" /></p>
+<p><img src="/static/2016/10/salesperson.jpg" alt="Salesperson" width="490" height="347" class="alignnone size-full wp-image-6865" /></p>
 <h2>How then can you build customer trust and make sales quickly and easily?</h2>
 <p>Researchers Thomas Travisano and William Brooks stumbled on an interesting fact about the emotional triggers that compel people to buy. They interviewed all types of B2B decision-makers and consumer buyers to figure out what makes them buy some products and services and not others for their book - <a href="https://www.amazon.com/Youre-Working-Hard-Make-Sale/dp/0786303956/">You’re Working Too Hard to Make the Sale!</a></p>
 <blockquote><p>They learned that customers buy most frequently from people and brands they feel understand them.</p></blockquote>

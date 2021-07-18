@@ -30,7 +30,7 @@ permalink: "/2008/linux-windows-and-mac-the-os-race/"
 excerpt: If you belong to the "Linux Community" bandwagon, you may just have a different
   opinion on the fact that there are lessons to be learned from Windows and Mac
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/mac-pc-linux-race.jpg" alt="Who's burning out next?" />
+<div class="figure"><img src="/static/2008/11/mac-pc-linux-race.jpg" alt="Who's burning out next?" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite><a href="http://ralree.com/">Ralree</a></cite></p>
 <p class="caption"><em><strong>The OS Race: </strong></em>Who's burning out next?</p>
 </div>

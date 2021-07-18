@@ -38,7 +38,7 @@ excerpt: A penny saved is a penny earned! Why not consider an open source altern
   against purchasing several licensed copies of your favorite operating system or
   getting a pirated copy of the same.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/03/foss-startups.jpg" alt="Startups: Do you have it in you?" />
+<div class="figure"><img src="/static/2009/03/foss-startups.jpg" alt="Startups: Do you have it in you?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/brajeshwar/206550191/" title="Brajeshwar">Brajeshwar</a></cite></p>
 <p class="caption"><em class="title">Startups</em>Do you have it in you?</p>
 </div>

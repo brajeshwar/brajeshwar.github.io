@@ -33,7 +33,7 @@ excerpt: Amazon CloudFront delivers your content using a global network of edge 
   Requests for your objects are automatically routed to the nearest edge location,
   so content is delivered with the best possible performance.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/cloud.jpg" alt="The Cloud" />
+<div class="figure"><img src="/static/2008/11/cloud.jpg" alt="The Cloud" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/liebermann/491036447/">Zeitspuren</a></cite></p>
 <p class="caption"><em class="title">The Cloud</em>Be prepared to move with the clouds.</p>
 </div>

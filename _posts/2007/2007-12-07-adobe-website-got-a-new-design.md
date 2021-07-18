@@ -31,7 +31,7 @@ excerpt: Adobe got a new sparkling wide design. They seem to have focussed more 
   the content and less on those beveled UIs. They've also given more emphasis to widescreen
   format which is more popular these days. The new design is good.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/adobe-redesign.jpg" alt="Adobe got a new design" />
+<div class="figure"><img src="/static/2007/12/adobe-redesign.jpg" alt="Adobe got a new design" />
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe Creative Suite</em>Design across media - print, web, interactive, mobile, video, and film - in the most comprehensive creative environment</p>
 </div>

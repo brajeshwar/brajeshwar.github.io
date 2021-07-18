@@ -33,7 +33,7 @@ permalink: "/2010/collaboration-networks-are-the-next-phase-of-the-internet/"
 excerpt: Many professionals have looked for a network where they could share data
   and technical advice with each other to make their projects work more effectively.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/social-network-nodes.jpg" alt="Social Media Network Maps" />
+<div class="figure"><img src="/static/2010/10/social-network-nodes.jpg" alt="Social Media Network Maps" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/marc_smith/sets/72157622437066929/">Marc Smith</a></cite></p>
 <p class="caption"><em class="title">Networks</em>Stay connected!</p>
 </div>

@@ -32,7 +32,7 @@ excerpt: The Virtual Office fulfills all of the roles of a traditional office, b
   curbs direct cost, such as real estate, furniture, hardware, software and maintenance
   costs, hiring, training, payroll or insurance for an administrative staff.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/virtual-office.jpg" alt="Virtual Office" />
+<div class="figure"><img src="/static/2010/09/virtual-office.jpg" alt="Virtual Office" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/wili/242259195/">Ville Miettinen</a></cite></p>
 <p class="caption"><em class="title">Virtual Office </em>Time to get your own!</p>
 </div>

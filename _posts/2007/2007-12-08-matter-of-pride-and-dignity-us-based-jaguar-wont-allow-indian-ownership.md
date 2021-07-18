@@ -38,7 +38,7 @@ excerpt: However liberal, open-minded and non-racist the Americans have become, 
   would still be a non-palatable choice on the part of the Americans to be ready for
   ownership out of India for a luxury car brand like Jaguar.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/jaguar-xj8-liquid-silver.jpg" alt="Jaguar XJ8 in Liquid Silver" />
+<div class="figure"><img src="/static/2007/12/jaguar-xj8-liquid-silver.jpg" alt="Jaguar XJ8 in Liquid Silver" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.jaguarusa.com/">Jaguar</a></cite></p>
 <p class="caption"><em class="title">Jaguar XJ8</em>The Jaguar XJ8 in Liquid Silver</p>
 </div>

@@ -34,7 +34,7 @@ excerpt: We were indeed eluded by our cosy office, we were unaware of what was h
   followed suit. We had no option but to switch to play *CounterStrike*, but the pleasure
   was short-lived as the power supply went away.
 ---
-<figure><a href="http://www.flickr.com/photos/brajeshwar/113413705/" title="Mumbai Flash Flood 2005 July 26-27"><img src="{{ site.baseurl }}/assets/2005/07/113413705_0236c9dea0_o.jpg" alt="Mumbai Flash Flood 2005 July 26-27" /></a><br />
+<figure><a href="http://www.flickr.com/photos/brajeshwar/113413705/" title="Mumbai Flash Flood 2005 July 26-27"><img src="/static/2005/07/113413705_0236c9dea0_o.jpg" alt="Mumbai Flash Flood 2005 July 26-27" /></a><br />
 <figcaption>The Mumbai (Bombay) Flood of July 26, 2005.</figcaption>
 </figure>
 <p>We were still in our office, finishing off our task for that day (July 26) and were about to upload the last files to the client's FTP. At that moment, the main internet connection went off, then we shifted to the backups which went off too one after the other. The rain had been slashing Mumbai since early morning but we never expected that it will set a record of even breaking Cheerapunji's (rainiest place in the world).</p>

@@ -38,6 +38,6 @@ permalink: "/2018/what-the-crypto-the-availability-of-cryptocurrency/"
 <p>Then, there is Ripple. This currency has over 40 billion coins in circulation and almost 100 billion in total supply. Probably because of the huge amount in circulation, the price of Ripple is really low, selling at less than a dollar. That has not adversely affected its market cap, though, as it is still the third most valuable cryptocurrency in the market.</p>
 <p>Other cryptocurrencies have comfortable numbers in total supply. EOS and Cardano have 906 million and 25.9 billion coins in circulation respectively. And the market capitalization for each one sits above $1 billion, with EOS sitting at about $5 billion.</p>
 <p>The crypto market is a huge one, with more than 2,000 active currencies available. The availability of currencies is dependent on constant trading, swapping, and investing. And with the figures, which keep growing, the market is sustainable.</p>
-<figure class="wp-block-image"><a href="https://bitcoinplay.net/what-the-crypto-infographic/"><img src="{{ site.baseurl }}/assets/2018/11/crypto-what-the.png" alt="What the Crypto" class="wp-image-6971" /></a><br />
+<figure class="wp-block-image"><a href="https://bitcoinplay.net/what-the-crypto-infographic/"><img src="/static/2018/11/crypto-what-the.png" alt="What the Crypto" class="wp-image-6971" /></a><br />
 <figcaption>What the Crypto</figcaption>
 </figure>

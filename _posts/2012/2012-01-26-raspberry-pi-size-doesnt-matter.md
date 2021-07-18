@@ -26,7 +26,7 @@ author:
   last_name: Mukherjee
 permalink: "/2012/raspberry-pi-size-doesnt-matter/"
 ---
-<p><a href="http://www.raspberrypi.org/"><img src="{{ site.baseurl }}/assets/2012/01/raspberry-pi.jpg" alt="Raspberry Pi" /></a></p>
+<p><a href="http://www.raspberrypi.org/"><img src="/static/2012/01/raspberry-pi.jpg" alt="Raspberry Pi" /></a></p>
 <p><a href="http://www.raspberrypi.org/">Raspberry Pi</a>, a newly launched credit-card sized computer, weighing about 45g, can be plugged into your TV and a keyboard. The main purpose of this innovation, by the Raspberry Pi Foundation is a charitable one; by building the cheapest computer at $25, can provide an assured fundamental level of functionality.</p>
 <p><!--more--></p>
 <p>This <a href="http://www.videogamer.com/news/raspberry_pi_the_25_computer_features_twice_the_graphical_performance_of_the_iphone_4s.html">little PC has almost all the features</a> of a desktop PC. It is equipped with spreadsheets, word processing and games. It also plays HD videos, has a SD card slot and connectors, that project over the edges. Mike, keyboards, network adapters and external storage will all connect, via a USB hub. A composite HDMI, out of the board allows you to hook it up, to a digital analogue, television or to a DVI monitor. There are adapters available with a standard 3.5mm jack, or you can use HDMI. It also supports any USB microphone via a hub. It is a $25 computer that is powerful enough to run Quake 3, an incredibly powerful 3D video game.</p>

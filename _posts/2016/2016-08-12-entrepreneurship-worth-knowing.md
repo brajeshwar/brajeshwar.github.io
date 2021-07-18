@@ -29,7 +29,7 @@ permalink: "/2016/entrepreneurship-worth-knowing/"
 ---
 <p>Entrepreneurship is not all glitz and glamor like the movies would have you believe. Contrary to popular belief, entrepreneurs don't work hard for 6 months and then become an overnight success. There is a huge amount of effort that is put forth and sustained for years before success happens.</p>
 <p>Even though there are few things in this world that are more satisfying, challenging, and financially lucrative as entrepreneurship, it's not for everyone. Everyone is not willing to put forth the effort or sacrifice what it takes to make it as an entrepreneur. Here are few thoughts about entrepreneurship that everyone should know. </p>
-<p><img src="{{ site.baseurl }}/assets/2016/08/entrepreneurship-1024x403.jpg" alt="http://" width="600" height="236" class="alignnone size-large wp-image-6846" /></p>
+<p><img src="/static/2016/08/entrepreneurship-1024x403.jpg" alt="http://" width="600" height="236" class="alignnone size-large wp-image-6846" /></p>
 <h2>It takes a long time to become successful</h2>
 <p>When a successful entrepreneur is highlighted, it is usually their success and money that is at the forefront of the story. This leads readers to falsely believing that these tech billionaires and super successful entrepreneurs are merely "lucky". </p>
 <p>What they don't highlight is the struggles and years of hard work and labor. Startup website <a href="http://fundersandfounders.com/">Funders and Founders</a> highlights the hardships of some of the world's most successful billionaire entrepreneurs. </p>

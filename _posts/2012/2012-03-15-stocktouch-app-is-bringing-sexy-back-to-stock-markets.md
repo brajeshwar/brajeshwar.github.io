@@ -42,7 +42,7 @@ permalink: "/2012/stocktouch-app-is-bringing-sexy-back-to-stock-markets/"
 <p>StockTouch enables you to sense the pulse of the market in real time. You can instantly see what sectors are up and down relative to each other and relative to the S&amp;P 500. You can quickly spot outliers - companies that are outperforming or under-performing the overall market. And you can zoom in and get news about a specific company instantly. In this sense the app is also a really powerful news browser.</p>
 <h3>What's your favorite aspect or feature of StockTouch?</h3>
 <p>I love the feature that arranges the view by Winners to see a clear, organized pattern of the companies that have done the best, and worst, over a given time period.</p>
-<p><a href="http://stocktouch.com/"><img src="{{ site.baseurl }}/assets/2012/03/stocktouch.png" alt="StockTouch" /></a></p>
+<p><a href="http://stocktouch.com/"><img src="/static/2012/03/stocktouch.png" alt="StockTouch" /></a></p>
 <h3>The touchscreen, 9-square grid is beautifully designed, was that done more for visual effects or ease of use?</h3>
 <p>Each quadrant in our 3x3 grid contains the 100 largest companies in each of the nine key industry sectors. We've organized the layout of the sectors to reflect different layers of the economy - Services, Consumer Goods and Healthcare are in the top row, Energy, Tech and Financial in the middle row, and Industrial Goods, Materials and Utilities, the underpinnings of raw materials and power, are at the bottom. We believe a symmetrical layout helps your brain create a more easily navigable map, and also gives a sense of the interplay that happens between sectors.</p>
 <h3>How has your entrepreneurial journey progressed since starting StockTouch?</h3>

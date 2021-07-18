@@ -33,7 +33,7 @@ excerpt: E2E Networks is a low latency hosting company in India that specializes
   helping you choose the best application hosting architecture that makes optimal
   use of modern cloud computing concepts.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/05/server-cables.jpg" alt="Servers" />
+<div class="figure"><img src="/static/2010/05/server-cables.jpg" alt="Servers" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://commons.wikimedia.org/wiki/File:Wmf_sdtpa_servers_2009-01-20_36.jpg">Wikimedia</a></cite></p>
 </div>
 <p><!--more--></p>

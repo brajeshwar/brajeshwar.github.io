@@ -36,4 +36,4 @@ Then there is the unexpected. Like smaller countries such as Slovakia, Slovenia,
 
 To hone in on international cities, the team at moveBuddha looked again at GDP. Looking at the highest concentration of bitcoin ATMs per $10 Billion GDP, the city of Tbilisi, Georgia won the #1 spot with only 23 machines. This is largely due to their status as a major hub for crypto mining thanks to inexpensive hydropower.
 
-[![!Crypto Friendly Cities]({{ site.baseurl }}/assets/2021/05/crypto-friendly-cities-768x7190.jpg "Crypto Friendly Cities")](https://brajeshwar.com/wp-content/uploads/2021/05/crypto-friendly-cities.pdf)
+[![!Crypto Friendly Cities](/static/2021/05/crypto-friendly-cities-768x7190.jpg "Crypto Friendly Cities")](https://brajeshwar.com/wp-content/uploads/2021/05/crypto-friendly-cities.pdf)

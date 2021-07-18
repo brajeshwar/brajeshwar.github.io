@@ -35,7 +35,7 @@ excerpt: Differentiate your products from your competitors and be sure to earn m
   revenues. Remember, it is the software support that will yield returns in the future
   and not the base code as it has been in the past.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/developer.jpg" alt="Do they need to remodel strategies?" />
+<div class="figure"><img src="/static/2008/11/developer.jpg" alt="Do they need to remodel strategies?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/kridgway/431653198/">KProgram</a></cite></p>
 <p class="caption"><em>Developers</em>Do they need to remodel strategies?</p>
 </div>

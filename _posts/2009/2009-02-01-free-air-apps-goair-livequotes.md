@@ -32,7 +32,7 @@ excerpt: Being an AIR app, GoAir and Live Quotes work on Windows, Mac and Linux.
   is an offline Gmail Client while Live Quotes shows you relevant information about
   company stocks.
 ---
-<div class="figure"><a href="http://sourcebits.com/livequotes"><img src="{{ site.baseurl }}/assets/2009/02/sourcebits-livequotes.jpg" alt="Sourcebits - Live Quotes" /></a>
+<div class="figure"><a href="http://sourcebits.com/livequotes"><img src="/static/2009/02/sourcebits-livequotes.jpg" alt="Sourcebits - Live Quotes" /></a>
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite><a href="http://sourcebits.com/">Sourcebits</a></cite></p>
 <p class="caption"><em class="title">Live Quotes</em>Live Quotes shows you relevant information about company stocks - stock exchange, closing value, opening value, highest value, lowest value, current value, and change in value.</p>
 </div>

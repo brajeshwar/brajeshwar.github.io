@@ -29,7 +29,7 @@ author:
   last_name: Mukherjee
 permalink: "/2011/does-foss-need-a-boss/"
 ---
-<p><a href="http://en.wikipedia.org/wiki/Richard_Stallman"><img src="{{ site.baseurl }}/assets/2011/03/richard-stallman.jpg" alt="Richard Stallman" /></a></p>
+<p><a href="http://en.wikipedia.org/wiki/Richard_Stallman"><img src="/static/2011/03/richard-stallman.jpg" alt="Richard Stallman" /></a></p>
 <p>Every great country of the world is identified with its pioneering leaders who represent them. It takes a figure head to lead an endeavor to success, be it in a war, in an organization or in technology. The question people are asking now is does a free software need an enigmatic leader? Microsoft has Bill Gates, Apple has Steve Jobs, so does <a href="http://en.wikipedia.org/wiki/FOSS">FOSS</a> need a face for its machines? TuxRadar attempts to answer this question in a recent poll -- <a href="http://www.tuxradar.com/content/open-ballot-does-free-software-need-figurehead">does free software need a figurehead?</a></p>
 <p><!--more--></p>
 <p>This poll asked whether it is helpful having a "strong character at the top keeping us on the right path?" This attracted a substantial number of comments. <a href="http://www.canonical.com/">Canonical</a> and <a href="http://www.novell.com/">Novell</a> are taking large steps towards success, and the force behind this is the entrepreneurial skills of their leaders. Leaders like <a href="http://en.wikipedia.org/wiki/Richard_Stallman">Richard Stallman</a> (RMS) help maintain focus and pace and give us a <a href="http://www.gnu.org/gnu/thegnuproject.html">GNU Project</a>. </p>

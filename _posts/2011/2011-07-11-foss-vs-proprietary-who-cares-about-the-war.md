@@ -28,7 +28,7 @@ permalink: "/2011/foss-vs-proprietary-who-cares-about-the-war/"
 ---
 <p>Free software and open standards have always been a point of debate for the confusing line between hardcore tech world and the whole other world of users. However, very recently, tech pundits have beaten a retreat on the issue, claiming that free software and open standards do not really matter much. This can only be understood better if one understands the factors that have always been taken in to account in the <a href="http://brajeshwar.wpengine.com/2010/open-source-vs-proprietary-software-%E2%80%93-the-never-ending-battle/">face off between free and proprietary software</a> or open and close standard hardware.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2011/07/open-source-software.jpg" alt="Open Source Software" /></p>
+<p><img src="/static/2011/07/open-source-software.jpg" alt="Open Source Software" /></p>
 <h3>Workability of the Technology</h3>
 <p>This is, by far, the most important factor. The end users always depend upon this factor. As a considered factor for this important debate, it does not actually add value to any particular group. The idea is that if the software works, most users will not care about its open or close standards or whether it is free. However, as the proprietary software do get financial backup to constantly develop, it adds to their value for the end users.</p>
 <h3>Convenience and Easy Maintenance of the Software</h3>

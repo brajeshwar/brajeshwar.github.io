@@ -33,7 +33,7 @@ excerpt: Currently, Linux might not have as many games as Windows probably has b
   fact that Linux has a strong community of developers in its periphery shows a better
   future.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/03/linux-gaming.jpg" alt="Gaming: Does Linux have a future in the arcade zone?" />
+<div class="figure"><img src="/static/2009/03/linux-gaming.jpg" alt="Gaming: Does Linux have a future in the arcade zone?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/inajeep/202302470/">inajeep</a></cite></p>
 <p class="caption"><em class="title">Gaming</em>Does Linux have a future in the arcade zone?</p>
 </div>

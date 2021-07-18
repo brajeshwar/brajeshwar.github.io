@@ -36,7 +36,7 @@ excerpt: Adobe Flash Platform Summit 2010 will feature a convergence of thousand
   set of topics ranging from the more technical Flash, Flex, AIR and processing to
   pure design, mobile.
 ---
-<div class="figure"><a href="http://www.adobesummit.com/"><img src="{{ site.baseurl }}/assets/2010/06/afps-2010.jpg" alt="Adobe Flash Platform Summit - 2010" /></a>
+<div class="figure"><a href="http://www.adobesummit.com/"><img src="/static/2010/06/afps-2010.jpg" alt="Adobe Flash Platform Summit - 2010" /></a>
 <p class="credit"><abbr class="type" title="Photograph">Illustration</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title"><span class="caps">AFPS</span> 2010</em>Functional Intent Meets Pixel Perfection</p>
 </div>

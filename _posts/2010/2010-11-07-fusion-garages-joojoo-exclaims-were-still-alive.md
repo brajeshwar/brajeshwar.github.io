@@ -29,7 +29,7 @@ permalink: "/2010/fusion-garages-joojoo-exclaims-were-still-alive/"
 ---
 <p>Nobody would remember anything unless and until there is enough hype hovering around it. Something <a href="http://www.shanzai.com/index.php/market-mayhem/news/1953-joojoo-too-much-too-little-too-late">very similar</a> happened with Fusion Garage's product named <a href="https://thejoojoo.com/">JooJoo</a>. A tablet computer that was launched before Apple's iPad; yet JooJoo did not receive much of the accolades from either the media or the consumer public.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2010/11/joojoo.jpg" alt="JooJoo" /></p>
+<p><img src="/static/2010/11/joojoo.jpg" alt="JooJoo" /></p>
 <h3>Reasoning the Failure</h3>
 <p>There aren't just one or two reasons that have lead to JooJoo's downfall before it could even leverage on a potential market such as the Computer Tablet market. There are several causes for its failure. Let's just take a note a few:</p>
 <p>* The Product's reliability was zero considering the fact that there was not much noise made about the product, its features, etc.<br />

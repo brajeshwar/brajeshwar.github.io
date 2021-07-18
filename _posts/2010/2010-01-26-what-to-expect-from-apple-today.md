@@ -37,7 +37,7 @@ excerpt: While the anxiety and excitement continues to build up, we do a close w
   on what the rumors and expectations have to reveal. The curtain unfolds within hours
   from now!
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/01/macbook-tablet.jpg" alt="The Macbook Tablet from Apple" />
+<div class="figure"><img src="/static/2010/01/macbook-tablet.jpg" alt="The Macbook Tablet from Apple" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.notebooks.com/">Notebooks Blog</a></cite></p>
 <p class="caption"><em class="title">Apple's latest Creation</em>The wait is almost over.</p>
 </div>

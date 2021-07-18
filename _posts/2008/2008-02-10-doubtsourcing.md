@@ -46,7 +46,7 @@ excerpt: An Indian worker says the U.S. firm has changed its business model thre
   times in three months, from online dating to insurance to soft porn. "You just need
   to deal with ambiguity better," the U.S. manager says.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/02/doubtsourcing-agile-flashify.png" alt="" />
+<div class="figure"><img src="/static/2008/02/doubtsourcing-agile-flashify.png" alt="" />
 <p class="credit"><abbr class="type" title="Comic Strip">Comic Strip</abbr> from <cite><a href="http://www.doubtsourcing.com/">Doubtsourcing</a></cite></p>
 <p class="caption"><em class="title">Agile or Senile</em>You went from online dating to insurance to soft porn!</p>
 </div>
@@ -63,7 +63,7 @@ Entrepreneur Sandeep Sood is the creator of the online comic strip -- <a href="h
 <p>Keyur Patel believes that the content of Doubtsourcing will best cater to the Indian diaspora. One has to be on both sides of the divide, it will be difficult to enjoy the fun unless you know both India and the US. Sood is the creative and technical director of the new initiative and the animation work will be done in India.</p>
 <p>I'm yet to hear news of any Animation Studio's acquisitions by Velocity or its allied firms but I'm sure it would be done by one or more studios where Keyur would have taken hold of in form of stake or a buy-out. He won't just outsourced to a third party firm. He know what to take stride of and nurture it.</p>
 <p>While you're at it, head over to LA Times and read the section on Sood's entrepreneurial life story. It is punctuated with failures till he finally gets his break. I personally love reading such life stories where entrepreneurs are never shaken by their failures, which are in fact very hard for the common people to understand.</p>
-<p><img src="{{ site.baseurl }}/assets/2008/02/all-tech-but-cricket.png" alt="India knows all Technology but cannot have a Proper Cricket Team" style="border: 0 none; float: none;" /></p>
+<p><img src="/static/2008/02/all-tech-but-cricket.png" alt="India knows all Technology but cannot have a Proper Cricket Team" style="border: 0 none; float: none;" /></p>
 <p><em>Alright, here is an excerpt of the part of Sood's story;</em></p>
 <p>Straddling it has always been part of Sood's life. His father, a chemical engineer, moved to the U.S. from Uganda. His mother, a loan officer, came from north India. Although the family is Hindu, Sood attended the Christian South Hills Academy in West Covina through middle school. He recalls coming home crying that his family was going to burn in hell for eternity.</p>
 <p>It was at UC Berkeley during the dot-com boom that Sood, an economics major, caught the entrepreneurial bug. After graduating in 1998, he worked at <a href="http://www.peoplesoft.com/">PeopleSoft</a> Inc. and other technology firms before setting out on his own.</p>

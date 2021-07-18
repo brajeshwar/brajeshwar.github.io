@@ -30,7 +30,7 @@ permalink: "/2008/software-installation-on-linux/"
 excerpt: Installing software on Linux is not only easier than most of us think, but
   it also has some special features which help software's to be updated automatically!
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/vista-malice.jpg" alt="Windows Vista Everything Included" />
+<div class="figure"><img src="/static/2008/06/vista-malice.jpg" alt="Windows Vista Everything Included" />
 <p class="credit"><abbr class="type" title="Illustration"> Illustration </abbr> from <cite>Let's Learn Linux</cite></p>
 <p class="caption"><em>Everything Included</em>Microsoft Vista comes built-in with everything!</p>
 </div>

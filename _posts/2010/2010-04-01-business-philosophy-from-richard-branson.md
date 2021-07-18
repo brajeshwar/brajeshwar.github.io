@@ -35,7 +35,7 @@ excerpt: It is impossible to run a business without taking risks. You really do 
   to believe in what you're doing. Devote yourself to it 100% and be prepared to take
   a few hits along the way.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/04/richard-branson.jpg" alt="Richard Branson" />
+<div class="figure"><img src="/static/2010/04/richard-branson.jpg" alt="Richard Branson" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/ianfromblighty/384156756/">ian_fromblighty</a></cite></p>
 <p class="caption"><em class="title">Richard Branson</em>A British industrialist, best known for his Virgin brand of companies.</p>
 </div>

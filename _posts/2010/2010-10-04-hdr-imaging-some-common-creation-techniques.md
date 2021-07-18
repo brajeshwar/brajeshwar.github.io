@@ -35,7 +35,7 @@ excerpt: High Dynamic Range Imaging (HDRI or just HDR) is a set of techniques th
   allow a greater dynamic range of luminance between the lightest and darkest areas
   of an image than standard digital imaging techniques or photographic methods.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/hdr-taj-mahal.jpg" alt="Taj Mahal in HDR" />
+<div class="figure"><img src="/static/2010/10/hdr-taj-mahal.jpg" alt="Taj Mahal in HDR" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/stuckincustoms/2035748576/">Trey Ratcliff</a></cite></p>
 <p class="caption"><em class="title">HDR Photography</em>Representing the wide range of intensity levels found in real scenes.</p>
 </div>

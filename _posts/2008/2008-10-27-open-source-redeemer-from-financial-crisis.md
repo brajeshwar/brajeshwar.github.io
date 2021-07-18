@@ -34,7 +34,7 @@ excerpt: The Great Depression of 1930's have become so common to everyone's ears
   handouts; the picture is a bit similar to today's world, but yes, the times have
   changed.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/market-not-functioning-properly.jpg" alt="Welcome, consumerist readers!" />
+<div class="figure"><img src="/static/2008/10/market-not-functioning-properly.jpg" alt="Welcome, consumerist readers!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/mundane_joy/2891021132/">The Joy of the Mundane</a></cite></p>
 <p class="caption"><em class="title">Consumerist Readers</em>You're Welcome.</p>
 </div>

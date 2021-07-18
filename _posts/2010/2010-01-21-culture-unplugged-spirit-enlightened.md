@@ -30,7 +30,7 @@ permalink: "/2010/culture-unplugged-spirit-enlightened/"
 excerpt: Culture Unplugged's aim is to cater to the innate quest of its audience in
   seeking cultural understanding and to transform and evolve the social sensibilities.
 ---
-<p><img style="visibility:hidden;width:0;height:0;" border="0" width="0" height="0" src="{{ site.baseurl }}/assets/2010/01/YmQzODAzOTk5MjEzYSZvZj*w.gif" /><br />
+<p><img style="visibility:hidden;width:0;height:0;" border="0" width="0" height="0" src="/static/2010/01/YmQzODAzOTk5MjEzYSZvZj*w.gif" /><br />
 <embed src="http://www.cultureunplugged.com/swf/embedplayer.swf" flashvars="video=http://cdn.cultureunplugged.com/lg/GITANJALI_2593.flv&m=2593&u=0&thumb=http://cdn.cultureunplugged.com/thumbnails/lg/2593.jpg&sURL=http://www.cultureunplugged.com&title=Gitanjali&from=Ketki Saxena" width="640" height="480" quality="high" salign="b" allowscriptaccess="always" allowfullscreen="true" name="cultureUnpluggedPlayer" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer"></embed></p>
 <p><!--more--></p>
 <p>With the end of Culture Unplugged's film festival, Humanity Explored, they're already on another one "Spirit Enlightened" -- an Online Film Festival, exploring the consciousness, spiritual, humane, political, unplugged and shared by artists and evolutionaries.</p>

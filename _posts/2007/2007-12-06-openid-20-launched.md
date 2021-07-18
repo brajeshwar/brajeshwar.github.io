@@ -42,7 +42,7 @@ excerpt: If you register with any of the OpenID Providers mentioned above, you c
   accounts from a humungous number of services as an OpenID login - AIM, Bloglines,
   WordPress, et al.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/openid.jpg" alt="OpenID" />
+<div class="figure"><img src="/static/2007/12/openid.jpg" alt="OpenID" />
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite><a href="http://www.openid.net/">OpenID</a></cite></p>
 <p class="caption"><em class="title">OpenID 2.0</em> OpenID is a free and easy way to use a single digital identity across the Internet.</p>
 </div>

@@ -32,7 +32,7 @@ excerpt: In the wake of the Airtel's announcement, talks in the grapevine is tha
   Vodafone will also be releasing the iPhone 3G for its subscribers on the same day
   -- 22nd August, 2008 -- which is about a forthnight away.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/08/iphone-3g.png" alt="iPhone 3G" />
+<div class="figure"><img src="/static/2008/08/iphone-3g.png" alt="iPhone 3G" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite>Apple</cite></p>
 <p class="caption"><em class="title">iPhone 3G</em>India gets it on 22nd August, 2008</p>
 </div>

@@ -34,7 +34,7 @@ excerpt: It is also a blessing in disguise for Linux. It could have no better th
   Google itself starting to promote it. Does it mean more Open Source apps? Free apps?
   Better GUI on Linux games? What else?
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/04/google-linux-marriage.jpg" alt="The Google-Linux Marriage" />
+<div class="figure"><img src="/static/2009/04/google-linux-marriage.jpg" alt="The Google-Linux Marriage" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/rgeorgi/3036414859/">rgeorgi</a></cite></p>
 <p class="caption"><em class="title">Google Linux Desktop</em>The win win situation!</p>
 </div>

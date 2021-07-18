@@ -33,7 +33,7 @@ permalink: "/2011/how-to-be-a-password-ninja-on-a-mac-windows-or-linux/"
 <p>You've heard about it, read about it but very few manage to have complex passwords for all your services - Email, Facebook, Twitter, <em>et al</em>. The consensus to have a safer online experience and hopefully, prevent hackers, crackers and script kiddies from gaining access to your accounts is to have a complex password - <em>UPPERCASE + lowercase + numbers + special characters</em> - and a unique different one for each of your accounts.</p>
 <p>Unfortunately, that's not an easy task at all. Nonetheless, there are solutions that can help you become a Password Ninja with few, easy to remember steps. I've had multiple passwords - complex ones at that for quite sometime - and I don't need to remember any of them.</p>
 <p><!--more--></p>
-<p><a href="http://keepass.info/"><img src="{{ site.baseurl }}/assets/2011/10/keepass.png" alt="Keepass" class="aligncenter" /></a></p>
+<p><a href="http://keepass.info/"><img src="/static/2011/10/keepass.png" alt="Keepass" class="aligncenter" /></a></p>
 <p><a href="http://keepass.info/">Keepass</a> is a FREE and Open Source Password Manager which works on <a href="http://keepass.info/">Windows</a>, <a href="http://www.keepassx.org/">Mac or Linux</a>. It is even <a href="http://portableapps.com/apps/utilities/keepass_portable">portable</a> enough for you to carry around on a pen-drive or a flash-drive.</p>
 <p>The best thing about it is that the File format is the same on all Operating System and thus can be accessed and used by multiple OS - Win, Mac or Linux.</p>
 <p>Here is a typical setup you can follow to sync across platforms/computers:</p>

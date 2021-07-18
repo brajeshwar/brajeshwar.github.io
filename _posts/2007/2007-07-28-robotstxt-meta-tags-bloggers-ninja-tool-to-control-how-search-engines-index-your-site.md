@@ -30,7 +30,7 @@ excerpt: How does Google know what parts of a website the site owner wants to ha
   have a lot of control over which pages should appear in search results - through
   robots.txt and meta tags.
 ---
-<p><img src="{{ site.baseurl }}/assets/2007/07/robots.jpg" alt="Robots" class="alignright" /></p>
+<p><img src="/static/2007/07/robots.jpg" alt="Robots" class="alignright" /></p>
 <p>I've been doing some bit of my own research on how to weed out non-usable contents and show just the good contents to search engines. I began to use robots.txt sometime back but they are limited to just disallow of some folders (like my wordpress installation folder - "wp"). The other day, I was reading the <a href="http://googleblog.blogspot.com/2007/07/robots-exclusion-protocol-now-with-even.html">Robots Exclusion Protocol</a> (REP) on Google's own Blog, and learnt a lot that was missing from my understanding of how you can take control of Search Engines indexing your site's content.</p>
 <p><strong>Meta Tags</strong></p>
 <p><a href="http://www.google.com/">Google</a> have recently introduced a new META tag that will allow us to set when we want the page to be removed from the main Google Web Search results. For instance, if you want to remove a particular page after end of this year, then add the following Meta tag to your page (the date format is <a href="http://www.ietf.org/rfc/rfc0850.txt">RFC 850</a>);</p>

@@ -33,7 +33,7 @@ permalink: "/2010/facebook-founder-forecasts-personalized-sites-are-the-future/"
 excerpt: Personalized websites will be the future of the internet as people willingly
   share more of their information on internet. -- Mark Zuckerberg.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/mark-zuckerberg.jpg" alt="Mark Zuckerberg of Facebook" />
+<div class="figure"><img src="/static/2010/09/mark-zuckerberg.jpg" alt="Mark Zuckerberg of Facebook" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/prospere/2927931984/">Ludovic Toinel</a></cite></p>
 <p class="caption"><em class="title">Mark Zuckerberg</em>Co-founder and CEO of Facebook.</p>
 </div>

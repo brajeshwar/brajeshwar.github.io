@@ -32,7 +32,7 @@ author:
   last_name: Wilding
 permalink: "/2011/why-are-ifans-shocked-with-iphone-4s-release-it-is-standard-apple-operating-procedure/"
 ---
-<p><a href="http://www.apple.com/iphone/"><img src="{{ site.baseurl }}/assets/2011/10/iPhone-4S.jpg" alt="iPhone 4S" /></a></p>
+<p><a href="http://www.apple.com/iphone/"><img src="/static/2011/10/iPhone-4S.jpg" alt="iPhone 4S" /></a></p>
 <p>Millions of loyal iFans held their bated breath while waiting for the release of the much-anticipated iPhone 5, but unfortunately instead of breathing a sigh of relief their expelled air was used to form their favorite curse word as they gazed on the iPhone 4S. Son of a...</p>
 <p>Apple surprised the world, and shocked the hell out of their users, by releasing the <a href="http://www.apple.com/iphone/">iPhone 4S</a>, instead of the more-anticipated iPhone 5 -- but this shouldn't have been a surprise really. The release of the iPhone 4S falls right into the typical release pattern from Apple, which also happens to coincide with the product life-cycle created by cellphone carrier contracts -- two years.</p>
 <p><!--more--></p>

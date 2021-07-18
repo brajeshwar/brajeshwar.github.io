@@ -34,7 +34,7 @@ excerpt: The best part of the Adobe Flash Media Server 3 announcement was that o
   the new pricing options which gives the customers a wide array of choices for broadcasting
   of high quality streaming media experiences.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/flash-platform.jpg" alt="Flash Platform" />
+<div class="figure"><img src="/static/2007/12/flash-platform.jpg" alt="Flash Platform" />
 <p class="credit"><abbr class="type" title="Wallpaper">Wallpaper</abbr> by <cite>Kevin Suttle</cite></p>
 <p class="caption"><em class="title">Flash Platform</em>The Adobe Flash Platform is a lightweight, cross-platform runtime that can be used not just for rich media, but also for enterprise applications, communications, and mobile applications.</p>
 </div>
@@ -51,7 +51,7 @@ The best part of the announcement was that of the new pricing options which give
 <p>This announcements eliminate the barrier to scaling the server-side in terms of connections, bandwidth and licensing cost.</p>
 <p><a href="http://www.onflex.org/ted/">Ted</a> have some good points when he noted;</p>
 <blockquote><p>The explosive growth of web video was ushered in through the use of progressive download and Flash Player. By leveraging the ubiquity of Flash Player, sites like YouTube, VideoEgg, and BrightCove made progressive download the standard for video delivery online. As this market matured so did the demand for higher quality video and content protection. FMS3 provides content protection through encrypting streaming and includes support for streaming HD video online. In lowering the cost of secure HD streaming we will see some amazing growth in the delivery of web video.</p></blockquote>
-<p><img src="{{ site.baseurl }}/assets/2007/12/adobefms3-chart.jpg" alt="FMS3 and FMS2 CPU usage comparison chart" style="border: 0 none;" /></p>
+<p><img src="/static/2007/12/adobefms3-chart.jpg" alt="FMS3 and FMS2 CPU usage comparison chart" style="border: 0 none;" /></p>
 <p>Here is another quote from <a href="http://www.readwriteweb.com/">Read/Write Web</a>;</p>
 <p><em>FMS3 also includes significant performance increases over the previous version. Internal Adobe benchmarks show that at 20% CPU usage, Flash Media Server 3 can support more than double the number of streams as version 2.0.4. At 95% CPU usage, the performance gains become even more pronounced.</em></p>
 <p><strong>Enhanced Features</strong> in Flash Media Server 3</p>

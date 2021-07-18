@@ -30,7 +30,7 @@ excerpt: 'The day is not far where we can see students all over the globe contri
   to the development of open source and also enriching their pedagogy through a number
   of applications. '
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/cambridge-university.jpg" alt="Main lawn and cathedral for Kings College at Cambridge University." />
+<div class="figure"><img src="/static/2008/11/cambridge-university.jpg" alt="Main lawn and cathedral for Kings College at Cambridge University." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/johnmueller/138861483/">Extra Medium</a></cite></p>
 <p class="caption"><em class="title">Open Source</em>Is your university the next to adopt?</p>
 </div>

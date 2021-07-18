@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2011/fotolia-royalty-free-images-vectors-and-videos/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/07/fotolia-taj-mahal.jpg" alt="Fotolia" /><br />
+<figure><img src="/static/2011/07/fotolia-taj-mahal.jpg" alt="Fotolia" /><br />
 <figcaption>Fotolia is an image bank of free and most affordable royalty free photos and illustrations. (source : <a href="http://www.fotolia.com/">Fotolia</a>)</figcaption>
 </figure>
 <p>Started in November 2005, <a href="http://www.fotolia.com/">Fotolia</a> have over 13 million images, vectors and HD Videos in their gallery. Fotolia also have a collection of exceptional images, from well known agencies in the world, in their <a href="http://www.fotolia.com/Info/Collection">Infinite Collection</a>. With Infinite Collection, Fotolia is able to offer both crowd-sourced and professional images on one site.</p>
