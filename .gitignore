@@ -4,9 +4,7 @@
 .bundle
 .jekyll-cache
 .jekyll-metadata
-.obsidian
 _site
-TODO.*
 
 # Ignore hidden folders #
 # This takes care of .tmp, .sass-cache, and many others #
