@@ -34,7 +34,7 @@ excerpt: 'Every class is compiled into a swf in the same way that we used to inc
 ---
 <p>If you wish to read the original article instead of this one which I am archiving for my own reference as I keep scrambling for the link everytime I try to refer to, then head over to Peter Hall's post on How to create classed stage objects with an empty library? Below is the reproduction of my friend, Peter Hall's article;</p>
 <p>Some time back, Peter Hall reported that every class is associated with a library symbol. This means that every class has a corresponding library symbol with a predictable linkage name derived from the full class name. So, we can simply include a component without adding a symbol to the library. Well this help prevent tightly coupling your class codes from your FLA.</p>
-<p><!--more--></p>
+
 <p>Every class is compiled into a swf in the same way that we used to include AS1 classes, by putting them inside an #initclip block of a linked movieclip. The linkage name of the movieclip is <code>"__Packages."</code> followed by the full package and class name. For example the class <code>com.peterjoel.data.XMLLoader</code> would be exported with a movieclip with linkage <code>"__Packages.com.peterjoel.data.XMLLoader"</code></p>
 <p>If you are making a component, you can define it like this:</p>
 <pre name="code" class="as">

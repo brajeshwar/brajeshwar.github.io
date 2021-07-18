@@ -39,7 +39,7 @@ excerpt: It is of utmost importance to rule out the notion that Linux is "the la
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/net2/73566129/">Net2Photos</a></cite></p>
 <p class="caption"><em class="title">Open Source!</em>That's what makes <a href="http://factoryjoe.com/">Chris Messina</a> (guy behind Flock) proud!</p>
 </div>
-<p><!--more--></p>
+
 <p>Open Source Software being cheaper vis-a-vis proprietary software and the low cost reason of the same is one of the primary incentives for people across the globe for Linux adoption. There have been surveys which have revealed low cost as the topmost reason for people to convert from proprietary software to open source. </p>
 <p>There have been reports from all over the world indicating that Linux forms are a very niche market and it needs to be served right. Amazon recently <a href="http://blogs.zdnet.com/open-source/?p=2860">reported</a> that Linux laptops are selling pretty fast and out of the top 12 models, 10 have been Linux based! All this takes us back to our initial discussion point of open source being cheaper and virtualization being the wild card. In today's changing IT scenario, companies virtualize and consolidate as part of their strategy to accommodate change; thereby replacing proprietary software to reduce licensing costs.</p>
 <p>Open source also gives the access to the source code (companies unable to modify it is yet another debate) and this helps in reducing vendor lock-in, which has become a primary concern today. The growth and popularity of the Linux platform is majorly due to Product Marketing and this cannot be achieved without a strong price-to-performance benefit.</p>

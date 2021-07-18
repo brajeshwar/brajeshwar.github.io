@@ -32,7 +32,7 @@ permalink: "/2011/mac-os-x-lion-review-by-arstechnica-graphic-designers-mistakes
 * Before you go ahead and Install, once you have the installer application, do a "Show Package Contents" on the Installer.<br />
 * You should find a 3.74GB disk image (InstallESD.dmg, stored in the Contents/SharedSupport folder).<br />
 * Use that disk image to burn a Lion installation DVD or create an emergency external boot disk.</p>
-<p><!--more--></p>
+
 <h3>10 Mistakes a Graphic Designer Shouldn't be Making</h3>
 <p><a href="http://www.graphicdesignblog.org/">Charlie Johnson</a> shared a nice article on <a href="http://www.designtaxi.com/article/101675/10-Mistakes-a-Graphic-Designer-Shouldn-t-be-Making/">10 Mistakes a Graphic Designer Shouldn't be Making</a> at <a href="http://www.designtaxi.com/">DesignTaxi</a>.</p>
 <p><em>The Mistakes to avoid:</em></p>

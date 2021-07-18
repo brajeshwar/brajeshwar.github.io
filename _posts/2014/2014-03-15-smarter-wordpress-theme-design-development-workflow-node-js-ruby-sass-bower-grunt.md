@@ -32,7 +32,7 @@ permalink: "/2014/smarter-wordpress-theme-design-development-workflow-node-js-ru
 ---
 <p><a href="http://2014.mumbai.wordcamp.org/"><img src="/static/2014/03/wordcamp-mumbai-2014-logo.png" alt="WordCamp Mumbai 2014" width="300" height="300" class="alignright size-full wp-image-6806" /></a></p>
 <p>I was lucky to be one of the <a href="http://2014.mumbai.wordcamp.org/speakers/">speakers</a> at the <a href="http://2014.mumbai.wordcamp.org/">WordCamp Mumbai</a>, Mar 15-16, 2014. When I stumbled upon their Call for Speakers, I was excited with the speaking opportunity and an uncanny chance to visit Bombay after so many years. Thankfully, the organizing team accepted my proposal and thus, presented and spoke on, "A Smarter WordPress Theme Design & Development Workflow with <a href="http://nodejs.org/">node.js</a>, <a href="http://www.ruby-lang.org/">ruby</a>, <a href="http://sass-lang.com/">sass</a>, <a href="http://bower.io/">bower</a> and <a href="http://gruntjs.com/">grunt</a>."</p>
-<p><!--more--></p>
+
 <blockquote class="alignright"><p>Special thanks goes to <a href="http://saneef.com/">Saneef Ansari</a>, my business partner at <a href="http://theme6.com/">Theme6</a> for helping me out iron the kinks and pushing codes so I could release our initial draft framework of <a href="https://github.com/theme6/wp-portkey">WP-Portkey</a>.</p></blockquote>
 <p>The idea behind the presentation was to introduce existing WordPress Designers and Developers to a more automated workflow so they can focus on what they do best - design and develop WordPress themes.</p>
 <h3>Browse, Download Files;</h3>

@@ -38,7 +38,7 @@ excerpt: The ingredients for such a profitable iCulture involve -- innovations t
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite>TheOatMeal</cite></p>
 <p class="caption"><em class="title">Apple </em>Better, and better and better!</p>
 </div>
-<p><!--more--></p>
+
 <p>The ability of <a href="http://www.apple.com/">Apple</a> to consistently deliver innovative products and gratify consumers' needs (mostly latent needs) worldwide has brought them huge success. In continuation of this trend, Apple introduced its latest range of advanced <a href="http://www.apple.com/ipod/">iPods</a> along with the much talked about and sought-after music machine <a href="http://www.apple.com/ipodtouch/">iPod Touch 4</a> which is said to function just like an <a href="http://www.apple.com/iphone/">iPhone 4</a> sans the phone. It is this consistency and the willingness to constantly offer technologically advanced products and services to consumers that makes Apple successful. </p>
 <h3>iPod and the initial Success Story</h3>
 <p>It all began with the launch of the iPod which essentially gave route to the destruction of businesses for companies producing Walkmans. The disruptive innovation called iPod instantly caught the attention of the youth and had Apple stores crowded with youngsters eager to grab on to an iPod of their own. With this, evolved Apple's iCulture wherein the initial versions of iPods like Nano and Shuffle familiarized consumers with the application of <a href="http://www.apple.com/itunes/">iTunes</a>, and hence ruled the portable music market. </p>

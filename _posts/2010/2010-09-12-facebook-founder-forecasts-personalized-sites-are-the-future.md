@@ -37,7 +37,7 @@ excerpt: Personalized websites will be the future of the internet as people will
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/prospere/2927931984/">Ludovic Toinel</a></cite></p>
 <p class="caption"><em class="title">Mark Zuckerberg</em>Co-founder and CEO of Facebook.</p>
 </div>
-<p><!--more--></p>
+
 <p>It's not the times of yore, when most of the users preferred social networks just to socialize and make friends. Many online social networks whizzed past each other, and the most well remembered among all is -- <a href="http://www.orkut.com">Orkut</a>. Over the years, the only site which has maintained to keep users hooked to itself is, of course, <a href="http://www.facebook.com">Facebook</a>. The basics of Facebook are also similar to that of any other social networking site such as -- uploading pictures, chat, leave comments and status updates to inform other users <em>What's on your mind!</em></p>
 <h3>The Difference</h3>
 <p>The difference between Facebook and other sites, which kept increasing user registrations and made it the Numero-Uno Social Networking site globally is, in a way, "User Privacy&rdquo;. Whereas, in other sites, the user's profile and their personal details are in for a public view; Facebook's <a href="http://www.facebook.com/policy.php">privacy policy</a> is gigantic & can be used exactly the way some-one wants it to. It is said, that Facebook's policy has 50 different settings, 170 different options and runs to 5,830 words -- making it longer than the US Constitution.</p>

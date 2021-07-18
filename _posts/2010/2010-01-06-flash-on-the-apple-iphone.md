@@ -36,7 +36,7 @@ excerpt: Apple has finally given in to the relentless pursuit by Adobe and all i
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite>Apple</cite></p>
 <p class="caption"><em class="title">Apple iPhone</em>How about a Flash game?</p>
 </div>
-<p><!--more--></p>
+
 <p>Yesterday, while the world saw the launch of <a href="http://www.google.com/phone/">Nexus One</a>, the perception that Apple's <a href="http://www.apple.com/iphone/">iPhone</a> is one of the most sought for and a part of the Wishlist for a lot of gadget lovers, did not change for many. </p>
 <p>Since its inception, the iPhone has always found ways to impress users around the globe, be it through its exquisite touch screen experience or the simple fact that it graced the stables of Apple. Although iPhone stands out as the mother of all smart-phones with suave looks and flashy functionalities, users always had this qualm that it did not support the very essential <a href="http://www.adobe.com/products/flash/">Adobe Flash</a>.</p>
 <p>Flash player, more often than not plays a substantial role in a lot of websites, it being one of the most preferred platform to deploy animations, advertisements, games and other apps. However, Apple banned Flash player from being used in the iPhone citing performance as an issue and blocks any kind of runtime code to execute on the iPhone according to its SDK license terms.</p>

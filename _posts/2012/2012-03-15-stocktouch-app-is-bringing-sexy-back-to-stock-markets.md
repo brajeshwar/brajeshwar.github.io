@@ -29,7 +29,7 @@ permalink: "/2012/stocktouch-app-is-bringing-sexy-back-to-stock-markets/"
 ---
 <p>The successful build-an-app plan seems to be: take a useful service, make it intuitive and put a shiny veneer on it. Steve deBrun's <a href="http://stocktouch.com/">StockTouch</a> has done that, in spades.  Although if you ask Steve what the entrepreneurial key to app-building success is a top-notch team, the 'classic trio' as he calls it: the "designer, hacker, hustler trio". </p>
 <p>Steve is the self-proclaimed tech/art geek who designed the sharp quadrant interface for the StockTouch app. For anyone not familiar with the app, it puts gargled stock market data into an easily readable format, while breaking it down into scannable sectors. That's the quick pitch anyways; it does some other cool shiznit too, but I don't want to spoil your fun so just <a href="http://itunes.apple.com/us/app/stocktouch/id445170859?mt=8">download it</a>. If you haven't got the $4.99 for download then just keep reading.</p>
-<p><!--more--></p>
+
 <p><iframe src="http://player.vimeo.com/video/34524682?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 <p>I got the opportunity to pick Steve's brain about the app, its features and his experiences as an app-building entrepreneur, and the results were just brilliant:</p>
 <h3>For anyone not familiar with StockTouch could you give us the brief elevator pitch?</h3>

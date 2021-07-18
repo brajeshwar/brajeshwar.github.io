@@ -28,7 +28,7 @@ author:
 permalink: "/2011/the-most-blatant-facebook-injustice-yet/"
 ---
 <p>Facebook has been criticized for their privacy violations for several years. In the United States, they may be investigated by the FTC for stealing user data and selling it to advertisers. Recently, the situation has become even more insulting for the users who have already been exploited. Facebook actually was <a href="http://nakedsecurity.sophos.com/2011/01/28/facebook-awarded-over-360-million-spammer/">given an award</a> after a hacker stole login information on users.</p>
-<p><!--more--></p>
+
 <h3>Who were the real victims?</h3>
 <p>Personally, I am offended that Facebook gets 360 million dollars while the actual victims never got to see a dime. They could have sued this hacker like Facebook did, but any lawsuit they were awarded probably wouldn't even have covered their legal costs. All of these users together probably wouldn't have been given a fraction of $360 million.</p>
 <h3>What were the damages?</h3>

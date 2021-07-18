@@ -32,7 +32,7 @@ permalink: "/2011/bulkr-access-and-backup-your-flickr-photos-mac-windows-linux/"
 <p>Veronica Belmont, at Tekzilla, on the features and awesomeness of Bulkr.</p>
 <p><a href="http://clipyourphotos.com/bulkr/">Bulkr</a> is a no-frill, easy to use backup solution for your Flickr Photos. Flickr, an awesome Photo service from Yahoo!, lacks data liberation -- you cannot download your Photos once uploaded. Of course, you can go to each photo to download them but that isn't the right way to do!</p>
 <blockquote><p><strong>Bulkr PRO</strong> (which sells for $40) is available for just 50% on Brajeshwar.com at just $19.99. <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z3Z4BUCX8SF8S" title="Buy Bulkr PRO">Buy Bulkr PRO</a> by clicking the Bulkr Banner (look at the top right corner). <em>Valid from Sep 1-15, 2011.</em></p></blockquote>
-<p><!--more--></p>
+
 <h3>Some of Bulkr's salient features:</h3>
 <p>* Backup your photo-stream with a click.<br />
 * Download your or any user's sets (albums).<br />

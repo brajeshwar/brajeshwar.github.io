@@ -29,7 +29,7 @@ author:
 permalink: "/2011/5-reasons-the-android-tablets-can-be-a-good-contender-to-the-ipad/"
 ---
 <p>The Android tablet may prove to be better than the iPad in many aspects. Here are the top 5 reasons why Android Tablets will be challenging the iPad stronghold as the consumers' preferred tablet. It's important to keep in mind that some features that don't matter at all to one user, might mean everything to another user. In addition,  since the Android Tablet is newer than the iPad, it was able to function beyond design flaws that existed earlier. All of these devices are bigger than a cellular phone but not as bulky as a notebook computer.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/-F_ke3rxopc?hd=1" frameborder="0" allowfullscreen></iframe></p>
 <p># <strong>Size Matters</strong> - The Android Tablet is available in four different sizes. The smallest is only 5" and the biggest is 10". The iPad comes in only one size, which seems odd when you think about it. Different sizes for different users as opposed to one size fits all.<br />
 # <strong>A Better Notification System</strong> - The pop-ups that occur often on both the iPhone and iPad are not a problem with an Android Tablet. Instead, everything you need to control your usage is tucked discreetly on the bottom of the screen, which is also where messages disappear to as well. A message on the iPad just supersedes whatever else you were doing and causes enough of a disturbance that you might have to quit what you were doing to read the message. For what might be spam, it's not worth it. It may be worth to note that the new iOS 5 have done some dramatic change to the notification system that it mimics the Android one very closely.<br />

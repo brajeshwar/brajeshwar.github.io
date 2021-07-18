@@ -29,7 +29,7 @@ permalink: "/2006/how-to-write-an-effective-resume-how-to-get-your-curriculum-vi
 ---
 <blockquote>A resume or curriculum vitae is a document containing a summary or listing of relevant job experience and education, usually for the purpose of securing a new job. Often the resume is the first item a potential employer encounters regarding the job seeker, and therefore a large amount of importance is often ascribed to it.</p></blockquote>
 <p>It has become a customary thrill on my part to go through resume  to select good (if not the best) developers and designers alike. Something I realized it that it is not just the technical expertize that suffice to do a job; it is also about attitude, personal zeal and eagerness to do something. I have selected many developers based on their yearning to do something and not really on their technical skillset, people who are well informed and have that gut feeling of performing. They are extremely easy to train in the right direction too. Another important lesson I learnt is never to stop hiring and not to hire all at one go, sometimes someone just comes in whom you would just want to hire.</p>
-<p><!--more--></p>
+
 <p>An effective resume is</p>
 <p>* the simplest information about yourself, technical skillsets in our case which pin-points what you are best capable of executing<br />
 * precise, to the point and no-nonsense<br />

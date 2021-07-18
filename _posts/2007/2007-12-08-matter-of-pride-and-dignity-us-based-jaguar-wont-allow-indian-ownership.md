@@ -42,7 +42,7 @@ excerpt: However liberal, open-minded and non-racist the Americans have become, 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.jaguarusa.com/">Jaguar</a></cite></p>
 <p class="caption"><em class="title">Jaguar XJ8</em>The Jaguar XJ8 in Liquid Silver</p>
 </div>
-<p><!--more--></p>
+
 <p>In a recent development over the ownership of Ford's luxury car brand Jaguar, Ken Gorin, the Chairman of the Jaguar Business Operations Council, believes that they should grant the ownership to neither of the Indian Motor Giants - <a href="http://www.tata.com/">Tata Group</a> nor <a href="http://www.mahindra.com/">Mahindra & Mahindra</a>.</p>
 <blockquote><p>He said, "I don't believe the US public is ready for ownership out of India of a luxury car brand such as Jaguar. And I believe it would severely throw a tremendous cast of doubt over the viability of the brand." Jaguar should instead be sold to US-based <a href="http://www.jpmorganchase.com/">JPMorgan Chase & Co</a>, the other contender besides Tata and Mahindra.</p>
 <p>Gorin was however quick to point out that he wasn't judging the management capabilities of Tata or M&M -- "My concern is perception (in the marketplace), and perception is reality. It's about saying there are unique image issues with two of the bidders that the other one doesn't have."</p>

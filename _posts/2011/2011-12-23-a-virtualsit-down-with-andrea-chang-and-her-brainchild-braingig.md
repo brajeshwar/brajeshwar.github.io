@@ -31,7 +31,7 @@ permalink: "/2011/a-virtualsit-down-with-andrea-chang-and-her-brainchild-braingi
 <p>Most entrepreneurs go into business for the incredible experience or with aspirations of financial freedom - but very few go into it with a benevolent agenda like Andrea Chang. OK, quasi-benevolent. The technology/idea Andrea invented, <a href="http://www.braingig.com/">BrainGig</a>, helps connect individuals and teams with much-needed funding opportunities.</p>
 <p>When Andrea saw the disconnect between existing funding opportunities and individuals working on under-funded projects she took the 'Steve Job's'-style approach - "I have an app for that." For the last year her website has been helping individuals studying and working in the arts, sciences and humanities by connecting them with grants, fellowships and residencies.</p>
 <p>Like many individuals breaking into the entrepreneurial business Andrea has an eclectic background; one that includes an education at the Harvard Business School, the University of California and Georgetown, in addition to real-world work experience in business development and as a financial analyst.</p>
-<p><!--more--></p>
+
 <p>We recently got the opportunity to (virtually) sit down with Andrea to pick her brain about why she felt the urge to become an entrepreneur and what that experience has been like:</p>
 <h3>Can you give me the quick, elevator pitch for BrainGig?</h3>
 <p>BrainGig helps individuals find grants, fellowships, and residencies in the arts, sciences and humanities. </p>

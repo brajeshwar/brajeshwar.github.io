@@ -25,7 +25,7 @@ author:
 permalink: "/2011/what-makes-a-great-product-manager/"
 ---
 <p>Edward Ho, an Engineer at Google, have an <a href="http://www.quora.com/Google/What-makes-someone-a-great-product-manager-at-Google/answer/Edward-Ho-1">awesome answer</a> to a Quora Question - <a href="http://www.quora.com/Google/What-makes-someone-a-great-product-manager-at-Google">What makes someone a great product manager at Google?</a> Here is an extract; modified to answer a general question - What makes a great product manager?</p>
-<p><!--more--></p>
+
 <h3>A Great Product Manager:</h3>
 <p># <strong>Takes ownership of the product and all issues related to it.</strong> This goes a long way, if you own the product, you are the first one looking for bugs, first communicating with users and first worrying about whether or not you got it right. You're always first to volunteer to do the many varied tasks that go along with running a product/team like taking notes, sending emails to customers, filling things out, triaging bugs, or doing a quick mockup. Always start with: It's not someone else's responsibility, it's your responsibility.<br />
 # <strong>Be incredibly persuasive.</strong> You need to be convincing, rather than commanding to get things done. If you are already doing #1, this is easier because everyone knows you are going to be in the trenches with everyone else.<br />

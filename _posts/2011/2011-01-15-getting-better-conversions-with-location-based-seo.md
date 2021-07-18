@@ -30,7 +30,7 @@ permalink: "/2011/getting-better-conversions-with-location-based-seo/"
 ---
 <p>Marketers often get a lot of exposure and traffic to their website, but the actual conversions they receive may be much lower than they hope. The problem isn't always the amount of traffic they are receiving, but who is actually coming to their website. One of the most common problems entrepreneurs face is that they are reaching people outside their zone of business.  </p>
 <p>A photographer I know told me that his website gets tens of thousands of visitors a month. Unfortunately, the traffic he is getting is coming from people at least 500 miles away. I told him that he needs to focus on developing a location-based marketing strategy so that he can reach people in the San Francisco area.</p>
-<p><!--more--></p>
+
 <p>Any online business should try to have a good SEO strategy. Customers who come to a website through a search engine are usually looking to buy, as opposed to those who stumbled upon the site randomly. Local businesses should target search terms that are more likely to appeal to their target audience. You need to be much more creative when you are targeting a more specific geographical audience.</p>
 <p><em>Here are a few approaches that should work for you:</em></p>
 <p>* Incorporate the name of the area into your keywords. This is the most obvious localized SEO strategy. Unfortunately, you are likely to find that the competition for these keywords is likely to be very high. Other local businesses probably feel that they don't have many options for optimizing their site online and are likely to choose the same search terms.<br />

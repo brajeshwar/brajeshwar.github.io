@@ -31,7 +31,7 @@ author:
 permalink: "/2012/effects-of-sopa-pipa/"
 ---
 <p><a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">Stop Online Piracy Act</a> (SOPA) is a bill introduced in the United States. House Judiciary Committee Chair and Texas Republican Lamar S Smith, along with 12 co sponsors, introduced SOPA, on October 26th 2011. SOPA's been created to increase the ability of US law enforcement, to fight online trafficking in copyrighted intellectual property and counterfeit goods. The law intends to expand existing criminal laws, by imposing a maximum penalty of five years in prison for unauthorized streaming of copyright material.</p>
-<p><!--more--></p>
+
 <p><iframe src="http://player.vimeo.com/video/31100268?byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 <p>What has given SOPA an impetus is the ability of intellectual property owners, such as movie studios and record labels. They now have an effective control on foreign sites against which they have a copyright claim. For example, if Warner Bros would claim that a site in Italy is perturbing a copy of The Dark Knight, the studio could make the following demands:</p>
 <p>* That Google remove that site from its search results.<br />

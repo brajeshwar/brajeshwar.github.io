@@ -39,7 +39,7 @@ excerpt: oCricket is a user-focussed site, poised to be an instant reflection of
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/ppym1/314855558/">Prescott</a></cite></p>
 <p class="caption"><em class="title">Cricket</em>Cricket civilises people and creates good gentlemen.</p>
 </div>
-<p><!--more--></p>
+
 <p>If you haven't noticed, I'm involved with <a href="http://ocricket.com/">oCricket</a>, a Startup which is trying to bring a new paradigm to the world of Cricket, its fans and followers alike. After our initial hiccups and shake-up in the team, we're finally ready for Public Beta. We lifted the embargo sometime back on 14th Feb, 2009 after a presentational demo at <a href="http://mumbai.startupsaturday.in/">Startup Saturday, Mumbai</a>.</p>
 <p><strong>What is oCricket?</strong></p>
 <p>oCricket is a user-focussed site, poised to be an instant reflection of all cricketing events.  We know there are many popular <a href="http://www.google.com/search?hl=en&q=Cricket">Cricket</a> sites. We also know that Cricket is so popular, that there is always something about Cricket in everything - Cricket-this, Cricket-that. Nonetheless, we felt the need for a site where everyone can get involved unlike other popular Cricket sites where news and information are shoved down the user's way via one-way traffic and medium.</p>

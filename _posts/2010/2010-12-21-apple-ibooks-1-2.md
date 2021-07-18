@@ -27,7 +27,7 @@ permalink: "/2010/apple-ibooks-1-2/"
 <p>E-books take a lot of space in your digital shelves and often start to look cluttered and unorganized unlike the large library shelves that house physical books. Apple's <a href="http://www.apple.com/ipad/features/ibooks.html">iBooks 1.2</a> allows you to enjoy fully-illustrated works, get your notes out of your e-books, and more.</p>
 <h3>Collections</h3>
 <p>Collections lets you organize your titles into separate shelves of your creation. That allows you to dedicate a shelf entirely for science-fiction novels, sort product manual PDFs, self-help books, user guides, business proposals, project plans and more. Tap the Store button and the bookshelf flips around like a secret passageway to reveal the iBookstore, where you can browse thousands of free public-domain books. Browse by title, author or genre and when you download the book, it appears on your bookshelf so you can start reading right away.</p>
-<p><!--more--></p>
+
 <p><a href="http://www.apple.com/ipad/features/ibooks.html"><img src="/static/2010/12/ibooks.jpg" alt="iBooks" class="alignright" /></a></p>
 <h3>Titles</h3>
 <p>Moving titles is as easy by tapping the Edit button in the main bookshelf, selecting the items you want to move, and tapping Move. You are free to mix PDFs and e-books between collections. Switch between collections by tapping the button at the top of any shelf or simply swipe left or right. The iBooks app uses the ePub format -- the most popular open book format in the world. That makes it easy for publishers to create iBooks versions of your favorite reads. So you can also download and add other free ePub titles to iTunes on your Mac or PC and sync them to the iBooks app.</p>

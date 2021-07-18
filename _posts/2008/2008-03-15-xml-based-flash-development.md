@@ -38,7 +38,7 @@ excerpt: So in theory, you might one day edit the images of an XFL file directly
 ---
 <p>Early Pre-Release Adobe Software users have started talking about some of the new features of <strong>Diesel</strong> code-name for the upcoming <a href="http://www.adobe.com/go/flash/">Adobe Flash</a> version 10 aka Adobe Flash CS4.</p>
 <p>I came across <a href="http://www.moock.org/blog/archives/000269.html">an article</a> from <strong>Colin Moock</strong> about a New Source Format that Flash CS4 will flaunt -- XFL -- some sort of an XML-based compressed file which will carry the source material of your Flash Document. Well, don't get really excited yet, we're talking about a pre-release software and Adobe might just decide to remove the feature(s). These features are subject to change, none of this may even happen at all. However, this is a very promising direction for Flash.</p>
-<p><!--more--></p>
+
 <p>Every Flash Designer and Developers alike knows that the binary source file .fla is very closed proprietary format of Macromedia/Adobe. It is thus virtually impossible for third-party software to interchange source with the Flash IDE. Being a binary format, this also proves to be one hell of a concern for most Version Control systems -- CVS, SubVersion.</p>
 <p>Well, as Moock pointed out, this is going to change with the upcoming version of Flash CS4. Flash will now be able to export/import this new source format XFL. The XFL will be comprised of an XML file describing the structure of the Flash Document and a folder with the Document's assets (graphics, sounds, etc). Adobe, when Flash CS4 goes public, will document them allowing third-party tools to import and export XFL.</p>
 <p>In the text of Colin Moock,</p>

@@ -25,7 +25,7 @@ permalink: "/2011/how-to-react-to-youve-been-hacked-for-newbies/"
 ---
 <p>"You've been hacked." This must be the most feared sentence your IT guy can deliver to you, especially if you do most of your business online. It is even worse you hear it from a customer first. Your first reaction should not be panic, but you do need to react quickly. It will cause you some short term harm, but it is not life threatening.</p>
 <p>As an online entrepreneur you will learn many lessons as you build your business from nothing and dealing with hacking is a key one. Being hacked is almost becoming a way of life like auto theft; there's a high chance it will happen to you one day. Even Mark Zuckerberg, CEO of Facebook found his own account hacked in early December 2011. In June 2011, Citbank found that 200,000 customers had their private details passed to a hacker. Sony was hacked earlier this year as was Google in China; even Gmail isn't immune.</p>
-<p><!--more--></p>
+
 <p>Internet criminals can find larger targets, more of a challenge with substantial rewards, but the smaller business is likely to have less IT protection or even a plan of how to react to a successful hacking exercise. There is likely to be less security proficiency and data protection employed by the smaller business.</p>
 <p><strong>These online criminals look for:</strong></p>
 <p>* Bank account passwords.<br />

@@ -40,7 +40,7 @@ permalink: "/2014/making-autochrome-v3/"
 <h2>What we wanted to achieve with Autochrome v3</h2>
 <p>We really wanted to push the limit with <a href="http://theme6.com/autochrome/">Autochrome v3</a>. We knew we needed to do something different so users can achieve more with the third version. There were few interim version of Autochrome which were never published but rather thrown away because they were not good enough, not worthy to be the successor of Autochrome v2.</p>
 <p>While continuing and even pushing the envelope on minimalism and simplicity, we knew Autochrome v3 have to be faster, way faster, and have a laser focus on the Photographs and nothing else.</p>
-<p><!--more--></p>
+
 <h2>Design</h2>
 <p>With Autochrome, we wanted to achieve a photography blog with very minimal graphical elements in the interface; as Dieter Rams put it "Design is as little design as possible." We knew this approach in a way help us to bring more focus the the content -- the photograph. This where we started. We sketched various ideas. Picked one idea which made sense.</p>
 <p>We believe that Design is not just how it looks; Design is also about how it works. We started questioning.</p>

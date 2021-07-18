@@ -46,7 +46,7 @@ excerpt: 'Africa poses unique challenges for tech entrepreneurs as different loc
 ---
 <p>Africa! You are probably envisioning savannas, safaris and political unrest, but amidst the AID projects and Elephants there is a new Africa emerging. Throwing off the shackles of oppressive African stereotypes, the new Africa is experiencing a technology paradigm shift vis-a-vis its high-tech entrepreneurs.</p>
 <p>Africa's technology entrepreneurs may not be catapulting the nation into a tech future like what occurred in India, but they are making incredible grass roots advances. Internet penetration has climbed to 30% in the more developed countries, and numbers continue to grow across the continent.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2010/12/africa-tech.jpg" alt="Africa Technology" /></p>
 <p><em>Consider these budding African tech entrepreneurs helping rebuild Africa one pixel at a time:</em></p>
 <h3>Karanaja Macharia, CEO of Mobile Planet</h3>

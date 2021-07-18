@@ -28,7 +28,7 @@ author:
 permalink: "/2013/hijacking-developer-tools-optimize-design-grep/"
 ---
 <p>Today, let's pick a developer tool to help enhance a designer's workflow - <a href="http://en.wikipedia.org/wiki/Grep">Grep</a>. Grep is a command-line tool for searching plain-text data sets for lines matching a regular expression. Linux and Mac are very likely to have Grep with their OS. Windows user can grab the <a href="http://gnuwin32.sourceforge.net/packages/grep.htm">Grep for Windows</a>.</p>
-<p><!--more--></p>
+
 <h2>Getting Started with Grep</h2>
 <p>Let's learn to use <em>grep</em> to search a single or multiple stylesheets (CSS, LESS or Sass files) and take the right decision on how to optimize, and write better production-ready codes.</p>
 <p>Grep is used via a command-line interface such as Terminal, iTerm or your favorite Windows command-line Program.</p>

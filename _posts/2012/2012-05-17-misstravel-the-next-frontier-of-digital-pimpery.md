@@ -44,7 +44,7 @@ author:
 permalink: "/2012/misstravel-the-next-frontier-of-digital-pimpery/"
 ---
 <p>If you pay a woman for sex, that's illegal -- it's prostitution. If you film it it's legal -- it's porn. If you put a soft lens on the camera -- it's art. What do you call a website that assists rich men in plying attractive young gold diggers with 'free' trips around the world? Digital pimpery? Perhaps. Brandon Wade calls it MissTravel.com.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="360" src="http://www.youtube.com/embed/JLSiy4nUvnc" frameborder="0" allowfullscreen></iframe></p>
 <p>Wade is the founder of <a href="http://www.seekingarrangement.com/">SeekingArrangement.com</a>, <a href="http://www.dateamillionaire.com/">DateaMillionare.com</a> and <a href="http://www.whatsyourprice.com/">WhatsYourPrice.com</a>, and now the like-minded <a href="http://www.misstravel.com/">MissTravel.com</a>; all are websites dedicated to finding rich men for attractive young women, or vice versa. Or both. Think Couch Surfing for gold diggers. It is no strings attached apparently.</p>
 <blockquote><p>"MissTravel.com was built to solve the big travel dilemma, by matching Generous frequent flyers who have the money but lack company with Attractive travel lovers who don't have the financial resources to do so," says the MissTravel.com website. Wade's entrepreneurial spirit combined with his affinity for sugar daddy-style match-ups is yet again striking virtual gold.</p></blockquote>

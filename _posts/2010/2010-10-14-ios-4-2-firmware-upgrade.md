@@ -39,7 +39,7 @@ excerpt: Another new era will be ushered in next month in November, an update fo
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Apple</cite></p>
 <p class="caption"><em class="title">iOS</em>The world's most advanced mobile operating system.</p>
 </div>
-<p><!--more--></p>
+
 <p>The success of the iPad over the last year is changing the face of mobile computing. The tablet revolution was brought about by Apple's revolutionary technology, which has moved them to the forefront of computing. Another new era will be ushered in next month in November, an update for the operating system of the world's most popular technologies, the iPhone and the iPad.</p>
 <p>The firmware update due next month, <a href="http://www.apple.com/iphone/ios4/">iOS 4.2</a> will make some necessary changes and some nice-to-haves:</p>
 <h3>Multitasking</h3>

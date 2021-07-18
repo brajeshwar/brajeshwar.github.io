@@ -36,7 +36,7 @@ excerpt: E2E Networks is a low latency hosting company in India that specializes
 <div class="figure"><img src="/static/2010/05/server-cables.jpg" alt="Servers" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://commons.wikimedia.org/wiki/File:Wmf_sdtpa_servers_2009-01-20_36.jpg">Wikimedia</a></cite></p>
 </div>
-<p><!--more--></p>
+
 <p>If you're targeting primarily Indian audience, you know that the best cloud computing solutions, dedicated servers and other economical VPS outside India is definitely not the best. Server(s) located in India would be a much better choice. However, with the lack of competent hosting solutions and the high cost of bandwidth in India, the sacrificial cost of latency was OK to host outside India.</p>
 <p>However, of late, there has been few hosting services that have come up and are capable of delivering high-quality services that matches the price and bandwidth of most international providers. One being <a href="http://e2enetworks.com/">E2E NEtworks</a>, run by an erstwhile colleague of mine, <a href="http://tarundua.net/">Tarun Dua</a>.</p>
 <p>So, if your Indian traffic reaches at least 70%, the suggestion is to go for an Indian host. Just be careful to do your home-work, research on the customer support, the technical expertise of your provider, the bandwidth ceiling, <em>et al</em>.</p>

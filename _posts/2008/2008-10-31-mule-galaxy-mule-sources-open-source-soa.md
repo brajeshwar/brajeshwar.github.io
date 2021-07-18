@@ -36,7 +36,7 @@ excerpt: Mule Galaxy is the open source SOA governance platform which also featu
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/cote/576980063/">Cote</a></cite></p>
 <p class="caption"><em class="title">Intersection of technologies</em>The famous James Governor circles.</p>
 </div>
-<p><!--more--></p>
+
 <p><a href="http://mulesource.org/display/GALAXY/Home">Mule Galaxy 1.5</a> is the latest version of an open source SOA governance platform from Mule Source which also features a repository. This results in extending its open source SOA middleware to enable custom extensions by adding a scripting shell. An event API has been introduced which would enable changes to services or artifacts to trigger an event by sending notifications or applying remote policies. </p>
 <p>Improvements play an important role in every upgradation and Galaxy query language has been improved to support more sophisticated queries. Helping this is an auto upgrade capability which helps it upgrade from previous versions. </p>
 <p><strong>The new platform will also feature the following:</strong></p>

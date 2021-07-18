@@ -37,7 +37,7 @@ excerpt: The application features of iPhone have been a hot subject for discussi
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/sigalakos/542155941/">Sigalakos</a></cite></p>
 <p class="caption"><em class="title">iPhone Apps</em>Now on Linux!</p>
 </div>
-<p><!--more--></p>
+
 <p>The reason why Apple is such a great example for arrogant innovations is that it believes that it can take the market by storm with its products. Many of Apple's products have done exceedingly well and have created a sensation in the market. The most recent examples being <strong>iPhone</strong> and <strong>iPod</strong>.</p>
 <p>The application features of iPhone have been a hot subject for discussions across the globe and not surprisingly even the Linux users have something in it which can be of their use. There are a few domains in which iPhone applications can touch base with Linux desktop and servers:</p>
 <p># <strong>File Share</strong> - Wi-Fi, EDGE and 3G connectivity are the only built in softwares in iPhone that can enable file transfers effectively between Linux and iPhone. The reason why Linux applications cannot be connected to iPhone applications directly is the absence of a suitable Apple device firmware.<br />

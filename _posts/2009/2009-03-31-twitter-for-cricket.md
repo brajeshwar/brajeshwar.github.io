@@ -35,7 +35,7 @@ excerpt: Cricket Talk is kind of a Twitter on Steroid for Cricket, where user su
 <p class="credit"><abbr class="type" title="Photograph">Graphics</abbr> from <cite><a href="http://www.twitter.com/">Twitter</a></cite></p>
 <p class="caption"><em class="title">Twitter</em>A service for friends, family, and co&#8211;workers to communicate and stay connected. We just made our own Cricket-Twitter version.</p>
 </div>
-<p><!--more--></p>
+
 <p>We, at <a href="http://oCricket.com/" title="oCricket">oCricket</a>, are always about people, the users and how we can make them enjoy their stay at oCricket.</p>
 <p>Everybody loves <a href="http://www.twitter.com/" title="Twitter">Twitter</a> and we've been integrating Twitter with oCricket in a way. Recently, we decided to give it a shot of steroid and we are happy to announce a <a href="http://ocricket.com/talk/">Cricket enhanced Twitter</a> spin-off on oCricket.</p>
 <p><a href="http://ocricket.com/talk/"><img src="/static/2009/03/ocricket-talk-keyword.png" alt="Cricket related keywords on Twitter" style="border: 0 none; float: right; margin: 0 0 5px 5px;" /></a><a href="http://ocricket.com/talk/">The app</a> is powered by the user, which means, users suggest a keyword and is voted by other users. Once a keyword becomes <strong>hot</strong> enough, we track it and is relayed for other users to enjoy the Twitter Experience on a single interface where others can reply there, relayed back to their Twitter timeline. A user can also vote against a keyword and we stop tracking it goes below its hotness level.</p>

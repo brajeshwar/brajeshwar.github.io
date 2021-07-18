@@ -42,7 +42,7 @@ excerpt: 'This year''s event was held on January 6-9 and yielded 4 clear trends 
 <p><img src="/static/2011/01/ces-iluv.jpg" alt="iLuv" /></p>
 <p>Earlier this month the <a href="http://www.ce.org/">Consumer Electronics Association</a> hosted their annual <a href="http://www.cesweb.org/">Consumer Electronics Show</a> -- showcasing upcoming trends in electronics and the newest advancements in geeky gadget technology. After 40 years in the business the trade show has grown to over 2,000 members, all of who are on the cutting edge of electronics research, development, design and distribution. </p>
 <p>This year's event was held on January 6-9 and yielded 4 clear trends in consumer electronics that should be a focus for IT geeks in 2011: that everything will be internet-enabled, the app frenzy will continue, tablets will continue to explode, and we should finally start seeing in 3D.</p>
-<p><!--more--></p>
+
 <h3>Internet Everywhere on Everything</h3>
 <p>All of the most popular gadgets coming out are Internet-enabled -- cell phones, PDAs, tablets and now -- TVs. After last year's 3D TVs became a focus, with their built-in Wifi jacks, even TVs will be Internet-enabled. TV has literally become the final Internet frontier. </p>
 <p>There are an elite few that already have TVs connected to the net that can be used like giant PC screens, but the trend should be coming to the mainstream very soon. As the CES trade show hosts tech-heads from every aspect from R&amp;D to distribution the connections were undoubtedly made that will cement the promise that we will all be watching YouTube on the big screen soon enough. </p>

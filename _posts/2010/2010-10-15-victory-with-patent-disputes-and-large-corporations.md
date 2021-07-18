@@ -38,7 +38,7 @@ excerpt: Making for a grand total of $625.5 million in damages, the ruling repre
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/marcopako/2445580611/">Marco Pakoeningrat</a></cite></p>
 <p class="caption"><em class="title">Apple</em> loses $625-million patent lawsuit.</p>
 </div>
-<p><!--more--></p>
+
 <p>Many of us may have questioned if the patent system is as fair as we would hope. We may speculate that in patent disputes the courts will likely side with large corporations even if they are obviously the guilty party. This pessimism does have some merit. The most obvious concern is that larger corporations have a large legal staff that can easily attack the credibility of a small inventor or find a loophole in the arguments they provide.</p>
 <p>Many have also raised the argument that courts will side with larger corporations because it is for the greater good. They can produce products on an infinitely larger scale so they will have more of a benefit to new entrepreneurs.</p>
 <p>Well, the recent ruling against Apple may put some of these concerns to rest. A jury in Tyler, Texas has decided that Apple <a href="http://business.financialpost.com/2010/10/05/fp-tech-desk-apple-inc-loses-us625-million-patent-lawsuit/">infringed on three of the patents</a> of David Gelertner. The Yale computer science professor says he would have been willing to share the ideas with Apple for no monetary cost. All he wanted was a little credit for his ideas, but a jury decided the infringement on his patent rights entitled him to $625 million.</p>

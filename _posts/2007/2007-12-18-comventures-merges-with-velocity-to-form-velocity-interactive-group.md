@@ -44,7 +44,7 @@ excerpt: Comprised of some of the most experienced and visionary investors, exec
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite>Velocity IG</cite></p>
 <p class="caption"><em class="title">Velocity Interactive Group</em>Comventures merges with Velocity to form the Velocity Interactive Group</p>
 </div>
-<p><!--more--></p>
+
 <p>Ross Levinsohn and Jonathan Miller launched Velocity Investment Group earlier this year with the goal of acquiring and investing in digital and communication media startups. Today, they announced their merger with <a href="http://www.comventures.com/">ComVentures</a> to form their new <a href="http://www.velocityig.com/">Velocity Interactive Group</a>. Ross is former President of Fox Interactive and Jonathan, former Chairman and CEO of America Online.</p>
 <p><!-- adman --></p>
 <p>However, two major ComVentures partners, Michael Rolnick and Jeb Miller, will be <a href="http://www.techcrunch.com/2007/12/17/comventures-merges-with-velocity/">pursing other interests</a>. So, if I can assume correctly, Keyur Patel will be one of the major partner with Velocity IG. To support this assumption, here are few of my personal analysis;</p>

@@ -28,7 +28,7 @@ permalink: "/2018/best-phones-apps-elderly/"
 <p>They see the modern smartphone as yet another unhealthy obsession. They are deeply suspicious of any technology so apparently addictive. They push back by not having anything to do with it.</p>
 <p>Being on fixed incomes, many seniors have a hard time understanding the value proposition. They know what a phone is because they have used one all their lives - a cheap one. They can hardly imagine how the experience is improved by spending hundreds of dollars on a handset that has to be charged every day.</p>
 <p>There is also a matter of trust, they do their banking in person, not on a pocket computer with who knows who's on the other end. Their friends are people they talk to, not people they text to. Smartphones represent one of the biggest hurdles to overcome in the age of the digital divide along generational lines.</p>
-<p><!--more--></p>
+
 <p>If you know a senior who has just purchased a smartphone and is struggling to figure it out, here are some things you can suggest by way of helpful advice:</p>
 <h2>Pick a Different Phone</h2>
 <p><a href="http://www.jitterbugdirect.com/"><img src="/static/2018/02/jitterbug-phone-colors.jpg" alt="Jitterbug Phones" width="424" height="336" class="alignright size-full wp-image-6953" /></a></p>

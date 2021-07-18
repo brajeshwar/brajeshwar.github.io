@@ -30,7 +30,7 @@ permalink: "/2011/why-linkedin-groups-may-not-be-working-for-you/"
 <p>There are a few variables you need to look at while you identify LinkedIn groups that will give you what you are looking for. Keep in mind, you can always leave a group and focus your energy elsewhere if it's not giving you a return on your investment.</p>
 <h3>What is the group's purpose?</h3>
 <p>This is the first filter and probably the most important thing you take into consideration before joining a group on LinkedIn. There is no sense investing weeks in a group that isn't relevant to your goals. Fortunately, the title and description can help you with this. Keep in mind, some groups titles are a little misleading about the niche they are trying to serve and sometimes the group takes on a new direction from what the creator originally intended. That is why you will have to be open to changing your mind later on.</p>
-<p><!--more--></p>
+
 <h3>How many people have joined the group?</h3>
 <p>Obviously, you don't want to join a group with no one in it. You need to mine your prospects and expand your connections as much as you can. On the other hand, many people make the mistake of focusing on joining the largest groups which seem to have more opportunities.</p>
 <p>The problem with larger groups is that members have to work much harder to have their voices heard. It is better to focus on joining moderately sized groups with a few hundred to a few thousand members.</p>

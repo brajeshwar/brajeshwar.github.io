@@ -28,7 +28,7 @@ permalink: "/2010/facebook-and-twitter-are-not-destroying-blogging/"
 <p>I just read one of the most ludicrous articles about the fate of blogging. <a href="http://www.pcmag.com/article2/0,2817,2374448,00.asp?kc=PCRSS03079TX1K0000585">Is Blogging Dead?</a> claims that Facebook and Twitter are going to destroy the blogging industry. It claims that Facebook's own blogging platform is going to completely replace Wordpress and Blogger sites. I'd like to take a few moments to discuss why this article was completely off base.</p>
 <h3>Many people don't trust Facebook</h3>
 <p>Facebook has had a bad reputation for abusing the privacy of its users. No one can be sure how accurate this is. However, whether it's accurate or not isn't relevant. People are afraid to write anything on Facebook that they think may be tracked to them or sold to advertisers. They would rather use an independent blogging platform.</p>
-<p><!--more--></p>
+
 <h3>Facebook's pages are not optimized for search engines</h3>
 <p>Facebook uses the no-index tag to keep search engines from reaching most (but not all) of its content. Even though Facebook is the second most trafficked site in the world, it doesn't have an effective way to share information with the rest of the world. It is only a reliable way of communicating ideas with your own friends and hoping that it can go viral. However, Facebook bloggers have no control over how viral messages spread. </p>
 <p>Most likely, the people who are really interested are the ones who are never going to have a chance to see them. This is why search engine optimization for blogs will always be a better to share niche ideas with strangers.</p>

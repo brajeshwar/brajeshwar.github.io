@@ -37,7 +37,7 @@ excerpt: IE9 will feature hardware acceleration, HTML5 and a JavaScript engine, 
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Google Images</cite></p>
 <p class="caption"><em class="title">IE9</em>Microsoft's latest Browser.</p>
 </div>
-<p><!--more--></p>
+
 <p>Sometime back Microsoft revealed the latest <a href="http://ie.microsoft.com/testdrive/">Internet Explorer 9</a> through various public releases. They are readying to release the IE9 Beta and are anticipating a good response from the community.</p>
 <p>This, of course is done with the desire to recuperate and re-possess the larger market share in the browser market which Microsoft once dominated. I still remember my first days of getting used to the internet world where my first browser tool was Internet Explorer. Back then, the excitement of relishing the newly invented cyberspace was quite significantly driven by the earliest versions of Internet Explorer. However, with the passing of time there <a href="http://www.gadgetell.com/tech/comment/internet-explorer-losing-ground-to-competitors/">emerged several competitors</a> with the offer of features that were far advanced than the IE.</p>
 <p>Though the recently released preview version showcases features such as hardware acceleration, HTML5 and a JavaScript engine that is faster than other browsers, it still isn't portraying the new rendering engine and is without the most basic navigational features such as an address bar or back button. This could well be expected with the Beta Version as well that would be up for grabs from the coming month onwards.</p>

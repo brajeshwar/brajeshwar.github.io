@@ -46,7 +46,7 @@ excerpt: Flash isn't a mere third-party application, like a game or an instant-m
 ---
 <p>[flv:http://media.brajeshwar.com/v/flash/iPhone-no-flash.flv 640 440]<br />
 <strong>Imagine: The Web without Flash?</strong></p>
-<p><!--more--></p>
+
 <p>Apple's iPhone, in recent times, has been the must have <em>uber</em> cool device/phone for those who are style-aware, techno-savvy, geek-cultured, business-professionals and Apple fanboys. It is pehaps one of the most marvellous innovative evolution from Apple, fantastically marketed down the tech-piped throats of the internet-aware civilization.</p>
 <p>Unfortunately, the <a href="http://www.apple.com/iphone/">iPhone</a> is not officially available in India (at least at the time of writing this article) and I don't have one, thus I've always given cursory glance to iPhone related stories. Yes, the cursory glance is more to avoid getting utterly jealous of others who already have one and to avoid tempting myself into yet another Apple induced submission.Adobe</p>
 <p><a href="http://www.joyoftech.com/"><img src="/static/2008/03/awesome-iPhone.png" alt="The Awesome iPhone" style="border: 0 none; float: none;" /></a></p>

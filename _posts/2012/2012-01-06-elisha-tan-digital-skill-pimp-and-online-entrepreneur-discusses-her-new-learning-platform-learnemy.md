@@ -36,7 +36,7 @@ permalink: "/2012/elisha-tan-digital-skill-pimp-and-online-entrepreneur-discusse
 <p><a href="http://www.learnemy.com/"><img src="/static/2012/01/learnemy.png" alt="LearnEmy" class="alignright" /></a></p>
 <p>The greatest inventions develop out of need. Elisha Tan found one. Her new web application, <a href="http://www.learnemy.com/">Learnemy</a> plugs a hole in the marketplace -- for peer-to-peer, formally informal learning. </p>
 <p>Learnemy is a platform for knowledge-thirsty individuals looking to connect with others to learn skills and/or sell/utilize their skills. By providing the platform Elisha is connecting people to learning opportunities that you otherwise couldn't find. For example if you want to learn the violin but the no local music schools offer violin lessons, or they do but its $100 a lesson -- instead you can connect with someone in your community on Learnemy who could teach you the violin, at the agreed upon amount of $25 per lesson. Think of it as a Craigslist for skill learning -- on steroids -- with a built-in payment platform.</p>
-<p><!--more--></p>
+
 <p>I recently got a chance to (virtually) sit down with Learnemy founder, and skill pimp, <a href="http://www.linkedin.com/in/elishatan">Elisha Tan</a> -- who talked about Learnemy and her overall entrepreneurial experience:</p>
 <h3>Can you give me the quick, elevator pitch for Learnemy, your new online learning system?</h3>
 <p>Learnemy is an awesome way to find instructors for anything you want to learn.  </p>

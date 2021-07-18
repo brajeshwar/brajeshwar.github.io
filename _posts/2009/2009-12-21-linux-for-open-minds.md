@@ -42,7 +42,7 @@ excerpt: The new version of OpenSuse is definitely a step in the right direction
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite>OpenSUSE</cite></p>
 <p class="caption"><em class="title">OpenSUSE</em>Free and Linux-based operating system.</p>
 </div>
-<p><!--more--></p>
+
 <p>Once upon a time in a land far away, <a href="http://en.wikipedia.org/wiki/Andrewp_S._Tanenbaum">Andrew Tanenbaum</a>'s 12,000 lines of code served as the start point for a young lad called <a href="http://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> to release Linux version 0.01 in 1991. Since then Linux has come a long way and is only geared for more growth and glory.</p>
 <p>Today that journey continues and <a href="http://www.opensuse.org/">openSUSE</a>, a community project sponsored by Novell has just released version 11.2. What can we expect from this spanking new version?</p>
 <p>At a cursory glance we have the latest 2.6.31 Linux kernel and Ext4 as the default filesystem offering up-to 1EB filesystem size and 16TB file-size. With this version support for desktops and notebooks claims to be improved by the use of a kernel specially tuned for desktop users besides the support for more hardware.</p>

@@ -37,7 +37,7 @@ excerpt: Adobe Photoshop Express allows anyone who snaps a digital photo to easi
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe Photoshop Express</em>A convenient destination where you can store, edit and share photos.</p>
 </div>
-<p><!--more--></p>
+
 <p>Adobe today announced <a href="http://www.photoshop.com/express/">Adobe Photoshop Express</a> public beta, a free Rich Internet Application available to anyone who wants to store, sort and show off digital photos with eye-catching effects.</p>
 <p>As the <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200803/032708PhotoshopExpress.html">newest addition</a> to the Photoshop family line, Photoshop Express has taken much of Adobe's best image editing technology and made it simple and accessible to a new online audience. Photoshop Express allows users to store up to <strong>2GB</strong> of images online for free, make edits to their photos, and share them online, including downloading and uploading photos from popular social networking sites like <a href="http://www.facebook.com/">Facebook</a>, <a href="http://picasa.google.com/">Picasa</a> and <a href="http://www.photobucket.com/">Photobucket</a> to start with. More integration with other online Digital Photo Destinations are expected in future.</p>
 <p><strong>Simple and Easy to Use</strong></p>

@@ -33,7 +33,7 @@ permalink: "/2011/is-advertisement-a-viable-revenue-for-your-blog/"
 </figure>
 <p>You might think that when you invest in your blog, it would do good if it gave you something in return. We all do. But what do you do when the advertisers make more than your blog? You devise a game-plan!</p>
 <p>Bloggers' income is seeing a rough patch along with the world economy. According to Northcliffe Media (the regional newspaper division of Daily Mail and General Trust) recorded a 12% year-on-year slouch in advertising revenue till March 2011. But, this does not mean much for the ever-changing online industry. With tens of thousands of bloggers and millions of readers, there can never be too many or too little.</p>
-<p><!--more--></p>
+
 <p>The only change to be made is how you sell your product. A few of the problems being faced by the blogosphere are - </p>
 <p>* A decrease in the investment of companies into marketing.<br />
 * A rise in the thinking that it pays more to sell your product yourself than through some third source.<br />

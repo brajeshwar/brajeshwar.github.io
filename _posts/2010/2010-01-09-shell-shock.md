@@ -40,7 +40,7 @@ excerpt: Shells are an outer layer of interface between the user and the innards
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Anonymous</cite></p>
 <p class="caption"><em class="title">Shell</em>Communicate to the Machine.</p>
 </div>
-<p><!--more--></p>
+
 <p>Almost everyone who switches on a computer today expects to see a tiny button at the bottom left of the screen that says 'Start'. Apologies to Mac users and Linux aficionados of the Gnome and KDE camps, but the truth remains that majority of computer users are still Windows users. Let's get back to the basics and get shell shocked!</p>
 <p>A shell is an interface for the user to communicate with the machine. Wikipedia says the name <em>shell</em> originates from shells being an outer layer of interface between the user and the innards of the operating system (the kernel). Let's explore some CLI OS shells. Linux offers many choices for shells.</p>
 <p>Discounting the fact that there are as many if not more flavors of Linux, here's a short list:</p>

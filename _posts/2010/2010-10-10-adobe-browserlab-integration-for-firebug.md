@@ -34,7 +34,7 @@ excerpt: BrowserLab is now integrated with Firebug, so users can send the curren
   in Firebug) to BrowserLab.
 ---
 <p><object width="640" height="380"><param name="movie" value="http://images.tv.adobe.com/swf/player.swf" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="FlashVars" value="fileID=5592&context=345&embeded=true&environment=production" /><embed src="http://images.tv.adobe.com/swf/player.swf" flashvars="fileID=5592&context=345&embeded=true&environment=production" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="380"></embed></object></p>
-<p><!--more--></p>
+
 <p>On October 8, Adobe announced new features for <a href="https://browserlab.adobe.com/">BrowserLab</a> that are designed to enhance existing workflows and attract web developers who use <a href="http://getfirebug.com/">Firebug</a>.</p>
 <p>Brief summary of the update:</p>
 <h3>Firebug Add-On</h3>

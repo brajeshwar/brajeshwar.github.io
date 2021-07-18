@@ -35,7 +35,7 @@ permalink: "/2010/osx-lion-make-way-for-the-king/"
 <figure><a href="http://www.apple.com/macosx/lion/"><img src="/static/2010/12/osx-lion.jpg" alt="Apple OS X Lion" /></a><br />
 <figcaption>Apple OS X Lion (source : <a href="http://www.apple.com/macosx/lion/">Apple</a>)</figcaption>
 </figure>
-<p><!--more--></p>
+
 <h3>The Mac App Store</h3>
 <p>Like the iPhone and iPad, soon Mac users will find the best place to discover and buy new apps made just for Mac, right on a Mac. The <a href="http://www.apple.com/mac/app-store/">Mac App Store</a> will offer the possibility of browsing and purchasing apps. And it simplified installation means you just click once, and your new app is downloaded, installed and ready to go.</p>
 <h3>The Launchpad</h3>

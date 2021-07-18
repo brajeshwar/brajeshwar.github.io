@@ -29,7 +29,7 @@ permalink: "/2011/10-open-source-web-fonts-techniques-for-user-friendly-html-tab
 ---
 <p><iframe width="640" height="510" src="http://www.youtube.com/embed/yoN6XfyQsr4" frameborder="0" allowfullscreen></iframe></p>
 <p>A music video that you can just let it in the background while you work.</p>
-<p><!--more--></p>
+
 <h3>Useful Techniques for User-Friendly Tables</h3>
 <p>UX Movement lists <a href="http://uxmovement.com/content/useful-techniques-for-user-friendly-tables/">9 great techniques for a User Friendly Table design</a>. Some of the one that I really like -- Tool Tips for Exact Values, Persistent Column Headers, Invert Arrows for Columns and of course Zebra Stripes.</p>
 <h3>The top 10 open source web fonts</h3>

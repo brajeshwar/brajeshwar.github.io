@@ -28,7 +28,7 @@ permalink: "/2011/wheres-your-mobile-data-going/"
 <p>In today's fast moving world one needs to be connected all the time, the most common tool is the mobile phone. Some people use a mobile phone with a monthly limit whereas some are not even aware of it. </p>
 <p>It is also essential to know the global increase in mobile usage data. </p>
 <p><img src="/static/2011/07/global-mobile-data-traffic-2011.jpg" alt="Mobile Usage Data" /></p>
-<p><!--more--></p>
+
 <p>Further, it is also essential to know on how much data one can use and keep a tab on your usage. Here are some tips on how you can control your phone before it will swallow up your precious megabytes. </p>
 <p>* Usage of Video-Conferencing can be big turn off for one.  Minimum of one minute of YouTube-quality video devours up 2 megabytes. It's advisable to indulge in YouTube and Netflix only if you're on Wi-Fi.<br />
 * Another devourer is the audio streaming and being connected to Internet Radio. It is more of an accompaniment to many activities. It consumes less than half of the data that video does, but ten minutes a day will burn a hole in your pocket. Viewing photos and sending them can consume significant amounts of data. Posting almost ten photos per day will eat up your megabyte plan.<br />

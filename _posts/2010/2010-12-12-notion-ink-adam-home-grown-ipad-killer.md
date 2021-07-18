@@ -29,7 +29,7 @@ permalink: "/2010/notion-ink-adam-home-grown-ipad-killer/"
 <figcaption>Notion Ink's Adam</figcaption>
 </figure>
 <p><a href="http://www.notionink.com/">Notion Ink</a> is an Indian startup or should I say upstart who is gunning for the biggest of them all -- <a href="http://www.apple.com/">Apple</a>. In the very spirit of innovation that has led Steve Job to where he is today, founder Rohan Shravan is confident that their first offering is going to blow the competition away. Notion Ink is dedicated to challenge the norm, question existing ideologies of function and form to create a new breed of intelligent, intuitive devices.</p>
-<p><!--more--></p>
+
 <h3>The Adam</h3>
 <p>This Adam; Notion Ink's first tablet has been in the pipeline for a year now after getting a Slashgear exclusive preview at the CES show. Now we have a <a href="http://www.notionink.com/order.php">Pre-order</a> date of the 10th of January. The surprising news is that the price is the same irrespective of your geographical location, albeit adjusted according to the exchange rates. The LCD Wi-Fi version will start at $375.33 and the 3G version at $425.33. The Transflective version (Pixel Qi) will start at $499.45 for Wi-Fi only and 3G variants at $549.99. Whichever way you calculate, it's very good bang for your buck. </p>
 <h3>Specification</h3>

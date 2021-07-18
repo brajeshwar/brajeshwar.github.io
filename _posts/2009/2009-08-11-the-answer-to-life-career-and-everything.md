@@ -39,7 +39,7 @@ excerpt: Choosing photography, music or media is still a hobby for many. They're
 <p class="credit"><abbr class="type" title="Love what you do or do what you love. The choice is yours.">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/prakaz/3121920134/">Prakaz</a></cite></p>
 <p class="caption"><em class="title">Love what you do or Do what you love</em>The choice is yours.</p>
 </div>
-<p><!--more--></p>
+
 <p>At a point in time, an individual wishes to define his/her career and subsequently the future. This might be fascinating for some and disgusting for several others. By now, a handful of you would have started to build up thoughts around keeping yourselves into the picture. The big question here is that you do what you love or you love what you already do?</p>
 <p>There are various factors that fuel this argument. Let's try and break them down.</p>
 <p><strong>The World</strong></p>

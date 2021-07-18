@@ -28,7 +28,7 @@ author:
 permalink: "/2010/hr-is-now-social-media-savvy/"
 ---
 <p>HR Manager worry about many things like employment rights, policies & practices. They want to know if the personnel are satisfied or not, whether they pose a threat of information leaks, attrition, skill retention and overall productivity at the annual performance reviews. If that isn't enough, how do you inspire the current Generation of personnel who tweet, text and use different tools to communicate such as blogs, podcast, tags, videos and social profiles.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2010/10/twitter-twit.jpg" alt="Someone who does'nt tweet is a twit" class="centered" /></p>
 <h3>Where is Everybody?</h3>
 <p>Over 80% of the new-age workforce work @ home, on the road and are essentially more mobile than employees ever were. With an 800% increase in mobile workers since 5 years, employees now change job roles on average every 2-3 years. The #1 collaborative tool for knowledge sharing and networking; email attracts over 4 hours a day of employee time. As a result we have a HR nightmare -- isolated knowledge workers with limited understanding of organizational expertise! When such vital corporate knowledge is held ransom in information silos; productivity, employee awareness and innovation are crippled by duplicating efforts. </p>

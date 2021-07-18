@@ -31,7 +31,7 @@ permalink: "/2011/adobe-pass-enables-tv-everywhere/"
 ---
 <p><a href="http://www.adobe.com/products/adobepass/"><img src="/static/2011/04/adobe-pass.jpg" alt="Adobe Pass enables TV Everywhere" /></a></p>
 <p><a href="http://www.adobe.com/">Adobe</a> has recently launched a path-breaking innovative solution which essentially enabled the concept of <a href="http://gigaom.com/video/what-you-need-to-know-about-tv-everywhere/">TV Everywhere</a>. <a href="http://www.adobe.com/products/adobepass/">Adobe Pass service</a>, a new authentication solution; one which enables pay TV subscribers to easily access premium content from virtually any Internet-connected device.</p>
-<p><!--more--></p>
+
 <h3>How can this be possible?</h3>
 <p>An integration of some of Adobe's best solutions like the <a href="http://www.adobe.com/flashplatform/">Flash Platform</a> and <a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a> and leveraging these solutions with Adobe Pass has made it possible for pay TV providers and content owners alike to engage and deliver a wider range of content on more platforms and thus promise best in class quality and a secured user experience. These platforms include Windows, Mac OS, Android, iOS, Blackberry and Google TV. Using the concept of TV Everywhere, broadcast and cable industry have started promoting Adobe Pass as a solution which makes it possible for pay TV providers to validate their paying subscribers online. By doing so the solution has hence allowed them to avail the anytime, anywhere content experiences that audiences crave, thus taking TV Everywhere from concept to reality. </p>
 <h3>The Manufacturer</h3>

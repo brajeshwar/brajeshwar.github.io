@@ -38,7 +38,7 @@ excerpt: Kevin's insights and passion for rich Internet applications, and what t
   enable the next generation of innovation for our customers.
 ---
 <p>Earlier in the day, Adobe announced the <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200802/020508KevinLynchCTO.html">promotion of Kevin Lynch to chief technology officer</a> (CTO). As the new CTO, Lynch will oversee Adobe's experience design and core technology across business units. He will continue to drive Adobe's technology platform for designers and developers, which includes -- Adobe Flash Player, Adobe Flex and Adobe AIR.</p>
-<p><!--more--></p>
+
 <p>The <a href="http://www.brajeshwar.com/2007/adobe-names-shantanu-narayen-as-its-new-ceo/">recently named CEO</a> of Adobe, Shantanu Narayen said;</p>
 <blockquote><p>Kevin has made a tremendous impact expanding our technology vision during his time at Adobe. Adobe has transformed itself through several technology waves, from desktop publishing, to multimedia and to the Web. Kevin's insights and passion for rich Internet applications, and what they signify for the future of software across operating systems and devices, will help enable the next generation of innovation for our customers.</p></blockquote>
 <p><img src="/static/2008/02/kevin-lynch.jpg" alt="Kevin Lynch" />Lynch joined Adobe through the company's 2005 <a href="http://www.brajeshwar.com/2005/adobe-and-macromedia/">acquisition of Macromedia</a> where he served as chief software architect and president of product development. He headed up the creation of the company's mobile and devices group and served as general manager of the web publishing group. Lynch also oversaw the initial development of Macromedia Dreamweaver, a leading web development product.</p>

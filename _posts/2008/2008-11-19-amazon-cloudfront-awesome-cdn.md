@@ -37,7 +37,7 @@ excerpt: Amazon CloudFront delivers your content using a global network of edge 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/liebermann/491036447/">Zeitspuren</a></cite></p>
 <p class="caption"><em class="title">The Cloud</em>Be prepared to move with the clouds.</p>
 </div>
-<p><!--more--></p>
+
 <p>Amazon announced <a href="http://aws.amazon.com/cloudfront/">CloudFront</a> just about a day back and <a href="http://ocricket.com/">we were</a> extremely excited that we would be able to serve files faster to our users.</p>
 <p>I won't detail about Amazon CloudFront as their blog have done a good job on that -- <a href="http://aws.typepad.com/aws/2008/11/distribute-your-content-with-amazon-cloudfront.html">Distribute Your Content With Amazon CloudFront</a>.</p>
 <p>What our team did was some simple test to see the speed and response time for our new Amazon CloudFront CDN-ed content.</p>

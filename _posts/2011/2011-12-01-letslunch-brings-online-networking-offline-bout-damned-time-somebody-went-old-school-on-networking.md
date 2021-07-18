@@ -39,7 +39,7 @@ permalink: "/2011/letslunch-brings-online-networking-offline-bout-damned-time-so
 <p># If you have a LinkedIn profile already you've got step 1 done (if you don't you can create one or use a LetsLunch account).<br />
 # Step 2 is to tell the system what days you are free for lunch -- after which it will send you an email with your possible lunch matches and restaurants within a convenient distance for both parties.<br />
 # Take a guess at step 3 (hint: its delicious, entertaining and gives you something to do over your lunch hour).</p>
-<p><!--more--></p>
+
 <p>The simple-to-use system is slightly more advanced than it sounds though as it includes 'reputations', VIPs, and <a href="http://blog.letslunch.com/">tips n' tricks</a> to maximize its potential.</p>
 <p>I recently got the opportunity to (virtually) chat with LetsLunch creator Syed Shuttari, and I picked the creative entrepreneur's brain to create a detailed how-to guide of sorts:</p>
 <p><strong>For anyone not familiar with the service, could you briefly describe how LetsLunch works?</strong><br />

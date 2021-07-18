@@ -37,7 +37,7 @@ excerpt: Many professionals have looked for a network where they could share dat
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/marc_smith/sets/72157622437066929/">Marc Smith</a></cite></p>
 <p class="caption"><em class="title">Networks</em>Stay connected!</p>
 </div>
-<p><!--more--></p>
+
 <p>Social networking sites have become so popular that they have touched our lives in ways we would probably never have conceived. They were originally built to create an environment for people to have lighthearted conversations with close friends, but had to evolve to something more complex when they caught on with the rest of the world. As they reached new demographics, they added additional services to try to appeal to everyone.</p>
 <p>The problem is that audiences have come to expect social networks to provide features that they were never intended for, nor ever will be able to provide. Many professionals have looked for a network where they could share data and technical advice with each other to make their projects work more effectively. Some have tried to use social networking sites for this type of work, but most have come to the realization that social networks are not set up for managing complex projects like this.</p>
 <p>The solution to project management is probably going to come in the form of collaboration networks. Collaboration networks are more specialized than social networks and are built for the sole purpose of exchanging large amounts of data and for professionals to actively provide technical advice to each other.</p>

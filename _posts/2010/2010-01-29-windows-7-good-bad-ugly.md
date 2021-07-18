@@ -39,7 +39,7 @@ excerpt: One major qualm with Windows 7 is the hit that it takes in terms of per
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/zeusandhera/4043408541/">Zeusandhera</a></cite></p>
 <p class="caption"><em class="title">Windows 7</em>What's in?</p>
 </div>
-<p><!--more--></p>
+
 <p>If you're an avid lover of <a href="http://windowslivewriter.spaces.live.com/">Windows Live Writer</a> and <a href="http://www.techsmith.com/screen-capture.asp">SnagIt</a> - the two must have blogging tools to get things done, you got to be running a copy of Windows on your machine. I have always had a similar setup, as in a dual boot with Linux. There is nothing I've come across, that beats these tools in what they're capable of. </p>
 <p>If <a href="http://www.cnet.com/windows-7/">reviews</a> are to be <a href="http://www.engadget.com/2009/08/12/windows-7-review/">believed</a>, Windows 7 has given its users a never before experience. For close to seven years, <a href="http://www.microsoft.com/windows/windows-xp/default.aspx">Windows XP</a> has been an ardent resource to millions of users across the globe with around 71% users as compared to its successor, Windows Vista with a 19% share before Windows 7 was launched. This pretty much reveals the lack of interest that Windows Vista was able to create among the users in its short span of little below 3 yrs. Microsoft then came up with its latest offering in the Operating systems bandwagon - Microsoft <a href="http://www.microsoft.com/windows/windows-7/">Windows 7</a>. </p>
 <p><a href="http://en.wikipedia.org/wiki/Charlie_Miller_(security_researcher)">Charlie Miller</a>, an award winning security researcher said,</p>

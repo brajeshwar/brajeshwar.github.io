@@ -28,7 +28,7 @@ permalink: "/2014/access-clipboard-history-alfred-mac-os-x/"
 ---
 <p>Quite often, one of the suggestions for developers and designers is to have a tool or a utility to access your Clipboard History. There are indeed quite a free few good tools which sits in your menubar that does the job very well. Some of the most recommended free ones are <a href="http://jumpcut.sourceforge.net/">Jumpcut</a> and <a href="http://www.clipmenu.com/">ClipMenu</a>.</p>
 <p>However, if you're one of those <a href="http://www.alfredapp.com/">Alfred</a> user who bought the <a href="https://buy.alfredapp.com/">Powerpack</a> (you should buy it, it's magic), it comes with a nifty Clipboard History Manager. One less menubar app to worry about.</p>
-<p><!--more--></p>
+
 <p>[caption id="attachment_6792" align="alignnone" width="680"]<img src="/static/2014/02/alfred-clipboard-history.png" alt="Alfred Clipboard History" width="680" height="475" class="size-full wp-image-6792" /> Access Alfred Clipboard History with your desired keyword.[/caption]</p>
 <blockquote><p>Before you can start using the Clipboard History feature, you need to enable it by going to the Preferences panel, under "Features > Clipboard". By default the Clipboard is disabled for privacy reasons.</p></blockquote>
 <p>[caption id="attachment_6791" align="alignnone" width="680"]<img src="/static/2014/02/alfred-clipboard-history-list.png" alt="Alfred Clipboard History Snippets" width="680" height="411" class="size-full wp-image-6791" /> Alfred shows you the Clipboard History Snippets.[/caption]</p>

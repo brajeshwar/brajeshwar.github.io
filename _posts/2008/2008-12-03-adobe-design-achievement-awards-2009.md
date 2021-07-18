@@ -67,7 +67,7 @@ excerpt: The premiere competition honors the best student graphic designers, pho
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://www.adobe.com/">Adobe</a></cite></p>
 <p class="caption"><em class="title"> ADAA </em>The premiere competition - Adobe Design Achievement Awards 2009</p>
 </div>
-<p><!--more--></p>
+
 <p>Adobe has issued the Adobe Design Achievement Awards 2009 call for entries. Now in partnership with the International Council of Graphic Design Associations (Icograda), the awards ceremony will be held during the Icograda World Design Congress in Beijing, China in October 2009. The Congress will bring together 2,500 delegates from around the globe at the China National Convention Center, located in the heart of the Beijing Olympic Green.</p>
 <p>As demand increases for talented designers and developers in the interactive design and development fields, the Adobe Design Achievement Awards spotlight the talented work of students in three media categories: Interactive Media, Motion Media, and Traditional Media.</p>
 <p>* Interactive Media categories include Browser-Based Design, Non-Browser Based Design, Application Development, Installation Design and Mobile Design.<br />

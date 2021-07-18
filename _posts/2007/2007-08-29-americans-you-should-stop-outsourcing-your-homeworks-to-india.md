@@ -37,7 +37,7 @@ excerpt: Recent polls have shown that a fifth of the Americans can't locate the 
   on a world map!
 ---
 <p><object width="640" height="505"><param name="movie" value="http://www.youtube.com/v/lj3iNxZ8Dww&amp;hl=en_US&amp;fs=1?rel=0" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/lj3iNxZ8Dww&amp;hl=en_US&amp;fs=1?rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505"></embed></object></p>
-<p><!--more--></p>
+
 <p>"I personally believe that US Americans are unable to do so because some-a people out there in our nation don't have that, and I believe our education, like, such as in South Africa and Iraq everywhere, like, such as, and, I believe that they should, our education over here in the US should help the US, or should help South Africa, and should help Iraq, and should help Asian countries so that we're able to build up our future."</p>
 <p>That was what the Miss Teen USA 2007 (South Carolina) answered when asked, "Recent polls have shown that a fifth of the Americans can't locate the US on a world map. Why do you think this is?"</p>
 <p>See, this is why the Americans should stop outsourcing their school homework to India!</p>

@@ -40,7 +40,7 @@ excerpt: Micro-blogging was an enabler to get real time, user generated content.
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/nathandarnold/2437117366/">Nate Arnold</a></cite></p>
 <p class="caption"><em class="title">Facebook Chat</em>Connectivity on Steroid!</p>
 </div>
-<p><!--more--></p>
+
 <p>Design meets technology. After facebook got a <a href="http://blog.facebook.com/blog.php?post=287459122130">new look</a> last week, we now have a new feature as well. We've already found facebook to be the best of social networks to plug into. But for some reason or the other, people have always criticized that chat feature. Now, after a better placement of facebook chat, it has been made <a href="http://blog.facebook.com/blog.php?post=297991732130">available</a> over the Jabber/XMPP protocols as well.</p>
 <p><strong>What does Jabber/XMPP protocol mean?</strong></p>
 <blockquote><p>In a way, it's an <a href="http://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol">open protocol</a> that allows a chat client or web service to integrate Facebook Chat. Think of Google chat, for that matter.</p></blockquote>

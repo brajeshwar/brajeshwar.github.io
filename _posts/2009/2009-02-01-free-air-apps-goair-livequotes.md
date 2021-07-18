@@ -36,7 +36,7 @@ excerpt: Being an AIR app, GoAir and Live Quotes work on Windows, Mac and Linux.
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite><a href="http://sourcebits.com/">Sourcebits</a></cite></p>
 <p class="caption"><em class="title">Live Quotes</em>Live Quotes shows you relevant information about company stocks - stock exchange, closing value, opening value, highest value, lowest value, current value, and change in value.</p>
 </div>
-<p><!--more--></p>
+
 <p>Rohit Singal from <a href="http://sourcebits.com/">Sourcebits</a> Technologies emailed me to let me know of the release of their two Free AIR Apps -- <a href="http://sourcebits.com/goair/">GoAir</a> and <a href="http://sourcebits.com/livequotes/">Live Quotes</a>.</p>
 <p><strong>GoAir</strong></p>
 <p>GoAir is an offline client for Gmail. Being an Adobe AIR app, GoAIR is platform independent and thus works on Windows, Mac and Linux. GoAir has everything in place which is required to access your gmail. You don't need to configure POP and IMAP settings. <a href="http://mailplaneapp.com/">Mailplane</a> is another such Gmail Mac app but it will set you back by $24.95.</p>

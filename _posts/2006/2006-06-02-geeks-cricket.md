@@ -33,7 +33,7 @@ excerpt: It was around 1:00 am in the night, the team just returned from another
 ---
 <p>[flv:http://www.brajeshwar.com/documents/Geeks-Cricket/Geeks-Cricket.flv 640 400]</p>
 <p>It was around 1:00 am in the night, the team just returned from another rush-hour ordeal of development - actionscript, remoting, hibernate, java, database, <em>et al</em>. Too much of time spent on the keyboard/mouse have tempted the team to try on something different - "Cricket (Wikipedia's definition of Cricket)":http://en.wikipedia.org/wiki/Cricket.</p>
-<p><!--more--></p>
+
 <p>You can see coupla IBM Thinkpads lying around, we were about to use them as *Stumps* but somehow decided against that idea!</p>
 <p>*Update* : </p>
 <p>* I forgot to thank "Abdul Qabiz (Abdul Qabiz)":http://www.abdulqabiz.com/ for being the man behind the camera!<br />

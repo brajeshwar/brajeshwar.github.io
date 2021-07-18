@@ -43,7 +43,7 @@ permalink: "/2012/ever-wanted-to-take-a-supercomputer-for-a-test-drive/"
 ---
 <p>If you've ever wanted to take a supercomputer for a test drive, now is your chance. Solve that probabilistic analysis. Figure out some brute force code breaking. Conduct 3D nuclear testing simulations. Or, if you're more cosmopolitan, do some Molecular Dynamics Simulations. No matter what your supercomputing needs, <a href="http://cyclecomputing.com/">Cycle Computing</a> will get you there. </p>
 <p>Check this out, it's brilliant: Cycle Computing is a 20-employee company leveraging the cloud computing movement by timesharing virtual supercomputers out to small companies and individuals who would never have had access (read: funds) to such technology. They use virtual clusters by virtually lashing together 50,000 processors from Amazon Web Services, in the cloud, via their own software.</p>
-<p><!--more--></p>
+
 <p><iframe width="640" height="480" src="http://www.youtube.com/embed/aJEt3Q8wT0k" frameborder="0" allowfullscreen></iframe></p>
 <p>Cycle Computing's timeshared virtual supercomputer software was recently used by two small drug companies, Schrodinger and Nimbus Discovery, to perform a series of simulations on over 21 million chemical compounds  in an attempt to find a binding protein. By using Cycle Computing's software on timeshared Amazon data center procs the two companies were able to run 12 and a half years worth of calculations in under three hours. </p>
 <p>For a cost of less than $5,000 an hour. </p>

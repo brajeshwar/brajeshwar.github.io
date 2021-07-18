@@ -36,7 +36,7 @@ excerpt: Computer users today have carried a large aspect of their work onto the
 <p class="credit"><abbr class="type" title="Photograph">Illustration</abbr> from <cite><a href="http://onstartups.com/">OnStartups</a></cite></p>
 <p class="caption"><em class="title">Google Chrome OS</em>One size fits all?</p>
 </div>
-<p><!--more--></p>
+
 <p>While <a href="http://microsoft.com/">Microsoft</a> continues to dominate the operating system market, <a href="http://www.google.com/">Google</a> has a high heel with the search engine. There have been several notes where Microsoft and Google are not being mentioned in the same breath. Much has to do with the on going battle between the two in different walks of technology such as search engines, web browsers and the biggest of all the Operating Systems. </p>
 <p>It's no secret that Microsoft has dominated the Operating scene for decades now, and it seems like everyone wants to have a bite of the Operating Systems pie. Google foray into this Operating systems world is through the <a href="http://en.wikipedia.org/wiki/Google_Chrome_OS">Google Chrome OS</a>.</p>
 <p>After a year of the release of <a href="http://www.google.com/chrome">Google Chrome</a>, the web browser which has received mixed reactions from users, Google intends to bring up an operating system for the users living on the web. Computer users today have carried a large aspect of their work onto the web and extensively deal with various web applications. Google intends on revolutionizing the world of Operating Systems with their vision of a lightweight suite of Operating system working exclusively on the web - Google Chrome OS.</p>

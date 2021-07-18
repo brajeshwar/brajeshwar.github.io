@@ -31,7 +31,7 @@ excerpt: Carpal Tunnel Syndrome is associated by symptoms and signs, which are c
   in motor and sensory disturbance of the median nerve.
 ---
 <p><object width="640" height="505"><param name="movie" value="http://www.youtube.com/v/rewDQgqU5Hg?fs=1&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/rewDQgqU5Hg?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505"></embed></object></p>
-<p><!--more--></p>
+
 <p>The pain seems to come and go, sometimes it lingers through the night. Massaging the back of the palm and the fingers with pain-relieve ointments helps a bit but it is there. The fear of course is of the <a href="http://www.ninds.nih.gov/health_and_medical/pubs/carpal_tunnel.htm" title="Carpal Tunnel Syndrome">Carpal Tunnel Syndrome</a>. My fear was aggravated when I discovered that another of my friend was diagnosed with similar symptoms, and his doctor warned him of a very early stage of CTS.</p>
 <p>We laugh off at "no typing for 2 months" advise from the doctor; but then things have to be done to counter the same. Well, I have decided to go and buy some of the best ergonomic keyboard, searching yield me to FingerWorks' TouchStream Keyboards. Here the problem is that the keyboard cost about $339 and the import duty to India will double its cost (that total cost will likely be the typical cost of a Pentium IV Desktop).</p>
 <p>Anybody have suggestions for some good keyboards, please comment or let me know through the contact form. Also suggestions and advise about CTS are welcome too.</p>

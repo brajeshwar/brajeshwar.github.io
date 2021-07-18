@@ -34,7 +34,7 @@ excerpt: Open-Source community and Outsourcing are poles apart, but the most str
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/inju/1053266775/">Inju</a></cite></p>
 <p class="caption"><em class="title">Outsourcing advice</em>For homework?</p>
 </div>
-<p><!--more--></p>
+
 <p>Open-Source community and Outsourcing are poles apart, but the most striking thing they have in common is the dependence on their modes of communication. The Open-Source development communities rely more on the asynchronous modes of communication such as e-mails, online forums, discussion sites, bug trackers as compared to the synchronous modes of communication such as phones, chats etc. used by Outsourcing personnel. </p>
 <p>The key to success in today's scenario rests in the skill management techniques of handling multitasking operations better. That is where the Open-Source communities score over others. The efficiency in handling the asynchronous modes of communication better than the synchronous ones have made Open-Source users all over the world more competent enough to handle a number of operations at one point of time. Another reason is the required presence of the entire team, issues of cultural preferences, creation of record for various events and various other codes of conduct decrease the functionality quotient of Outsourcers who believe in synchronous modes of communication.</p>
 <p><strong>The learning cues which Outsourcers can inherit from Open-Source Communities are</strong>;</p>

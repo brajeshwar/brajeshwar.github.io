@@ -38,7 +38,7 @@ excerpt: To be part of the international 'Search for N' treasure hunt, and join 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/mythoto/1234638761/">Leonard John Matthews</a></cite></p>
 <p class="caption"><em class="title">Search for N</em>Come, join the hunt. The Nokia N97 can be yours.</p>
 </div>
-<p><!--more--></p>
+
 <p>I've been briefed about the rules, regulations and details where Nokia will give out 10 Nokia N97 as part of the <a href="http://brajeshwar.wpengine.com/2009/nokia-search-for-n/">Search for N</a>.</p>
 <p><strong>What is 'Search for N'?</strong></p>
 <p>Nokia have hidden 97 New Nokia N97s Across 13 Countries and is giving them away, for free, before they hit the shelves in-store. The only catch is, they're hidden across 13 countries and the only way to find them is to crack five cryptic clues online.</p>

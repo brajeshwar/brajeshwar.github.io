@@ -38,7 +38,7 @@ excerpt: GetFlashPlayer.org is a small endeavor to push the latest version of th
 ---
 <p>"Adobe (Adobe)":http://www.adobe.com/ have released "Flash Player 9 (Flash Player 9)":http://www.adobe.com/go/flashplayer/ (9.0.16.0) along with "Flex 2 (Flex 2)":http://www.adobe.com/products/flex/.</p>
 <p>Download Flex 2 SDK, Charting Component and Flex Builder 2 from "Adobe Flex Devnet (Adobe Flex Devnet)":http://www.adobe.com/devnet/flex/.</p>
-<p><!--more--></p>
+
 <p><strong>Get the latest Flash Player</strong></p>
 <p>"GetFlashPlayer.org (GetFlashPlayer.org)":http://getflashplayer.org/ is a small endeavor to push the latest version of the Flash player to users through the community. I am hoping to to push this forward so that the community can drive it to make installation of the latest Flash Player as easy as possible.</p>
 <p>Suggest me options for "GetFlashPlayer.org (GetFlashPlayer.org)":http://getflashplayer.org/ to help bloggers/webmasters drive installation of the latest Flash Player. I am thinking of graphic icons, SWFs that has express installers which bloggers/webmasters can use on their site.</p>

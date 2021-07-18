@@ -39,7 +39,7 @@ excerpt: Businesses can offer exciting ways to engage customers with innovative,
 <p class="credit"><abbr class="type" title="Wallpaper">Wallpaper</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe AIR</em>Develop once; run everywhere on every platform.</p>
 </div>
-<p><!--more--></p>
+
 <p>Today, Adobe launched <a href="http://www.adobe.com/go/air">Adobe AIR</a> -- the runtime environment that lets developers use proven web technologies to build rich Internet applications that deploy to the desktop and run across operating systems. Adobe AIR allows developers to use familiar tools such as Adobe Dreamweaver CS3, Flex Builder 3, Flash CS3 Professional, or any text editor to build their applications and easily deliver a single application installer that works across operating systems.</p>
 <p>With Adobe AIR, businesses can offer an exciting new way to engage customers with innovative, branded desktop applications, without requiring changes to existing technology, people, or processes. The best part is that, like Adobe Reader and the Adobe Flash Player runtime, the Adobe AIR application runtime is free. The downloadable <a href="http://www.adobe.com/products/air/tools/">Adobe AIR SDK</a> is free as well.</p>
 <blockquote><p>In what may be the first big wave, several companies are also launching their AIR-based applications today. eBay and NASDAQ will use Adobe AIR to keep customers up-to-date about site news and account status, cable TV children's channel Nickelodeon has created a video jigsaw puzzle application and The New York Times is using AIR to build the desktop component of ShifD, which will allow Times readers to move newspaper content back-and-forth between their computers and their mobile devices.</p></blockquote>

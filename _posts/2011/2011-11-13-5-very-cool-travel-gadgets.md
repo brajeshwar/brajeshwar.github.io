@@ -27,7 +27,7 @@ permalink: "/2011/5-very-cool-travel-gadgets/"
 ---
 <p>Travel has gone high-tech. This is good and bad, depending on perspective. But we're going to say it's mostly good. An argument can definitely be made that technology innovations have no place in travel, but that entirely depends on the reason for traveling in the first place. Sure, if you are looking to escape your regular life for much needed rest and relaxation then, yes, technology may not be your best travel companion.</p>
 <p>But if you're a business traveler, or a vacationer that simply cannot leave communications behind, then the right tech gadgets can be a boon to the experience. Most people would probably fall into this category - it's hard to imagine leaving behind the iPhone for an entire week or other devices like tablets, laptops and iPods for that matter.</p>
-<p><!--more--></p>
+
 <p>To cope with accessibility and convenience issues, a number of innovative companies are developing products at a rapid pace that are quickly eliminating many of the travel challenges that have plagued us for years. And they're doing it in stylish ways &#8211; can't argue that's not an added benefit.</p>
 <p>So that your next trip runs as smoothly as any of the best travel agents could arrange, here's the Top 5 Coolest Travel Gadgets available on the market today:</p>
 <p># <a href="http://www.amazon.com/Targus-Premium-Laptop-Charger-APM69US/dp/B002UAUZQW">Targus Premium Laptop Charger</a>: Less than $60 on Amazon, this standard laptop charger is about the size of a smartphone and designed just as sleekly. Using a wall socket, the Targus can charge a laptop and one other mobile device.<br />

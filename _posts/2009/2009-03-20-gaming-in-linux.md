@@ -37,7 +37,7 @@ excerpt: Currently, Linux might not have as many games as Windows probably has b
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/inajeep/202302470/">inajeep</a></cite></p>
 <p class="caption"><em class="title">Gaming</em>Does Linux have a future in the arcade zone?</p>
 </div>
-<p><!--more--></p>
+
 <p>GNU/Linux has an immense potential, not only because of the fact that it can be ported to myriad of devices and installed on almost any hardware, but also because of the touch of openness and freedom it provides to its users. The question here is, will Linux be ideal to base all games in? Currently, Linux might not have as many games as Windows probably has but fact that Linux has a strong community of developers in its periphery shows a better future. </p>
 <p>Linux games create a separate niche market for its users. Are the gamers, more than just users, are willing to go that extra mile and make an extra effort for a great gaming experience? It isn't strange that a large section of the gaming industry is still not acquainted with the gaming options in Linux, sadly though.</p>
 <p>A large collection of good 3D games may probably lead to a heavy increase in its user base. Linux gaming outcasts the open-source world, as there aren't enough Linux users who believe in Linux gaming and its advertisement. Linux is not yet into competition with Windows, as far as gaming is concerned but there definitely lies a future. The appeal of free games and the exotic open environment experience shall be hard enough to resist, especially for the geeky teenagers.</p>

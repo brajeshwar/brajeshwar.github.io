@@ -44,7 +44,7 @@ excerpt: 'The TATA NEN Hottest Startups Awards are the people''s choice Awards t
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/4nitsirk/2810747884/">4nitsirk</a></cite></p>
 <p class="caption"><em class="title">Cricket</em>Loved and played everywhere.</p>
 </div>
-<p><!--more--></p>
+
 <p>Our Startup <a href="http://ocricket.com/">oCricket</a> is one of the many nominated Startups at the Tata NEN Hottest Startups. We're requesting for Support.</p>
 <p><strong>Please vote for us via;</strong></p>
 <p>* <a href="http://www.hotteststartups.in/viewandvote.do?method=fetch&businessFn=viewandvote&startupId=258">Online</a> (TinyURL: <a href="http://tinyurl.com/ocricket-nen">http://tinyurl.com/ocricket-nen</a>)<br />

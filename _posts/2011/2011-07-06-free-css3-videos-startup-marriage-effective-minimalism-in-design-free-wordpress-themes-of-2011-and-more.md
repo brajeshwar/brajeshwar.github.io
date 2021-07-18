@@ -35,7 +35,7 @@ permalink: "/2011/free-css3-videos-startup-marriage-effective-minimalism-in-desi
 <p>Tara Hornor writes about the strength of Minimalism which can bring forth clarity of form; clean lines, ample white space, and how minimal graphical elements can lend an air of simplicity to even the most confounding subject matter.</p>
 <p>Minimalism is the act of stripping the form to its very basic, necessary elements, the keyword here being "necessary." No true minimalist would approve of those designs that leave the audience confused or unsure. The idea is to make the message more clear, not more hidden.</p>
 <p>Read the article at UXBooth - <a href="http://www.uxbooth.com/blog/effective-minimalism-in-experience-design/">Effective Minimalism in Experience Design</a>.</p>
-<p><!--more--></p>
+
 <h3>How to prevent elements from receiving clicks with pointer-events: none</h3>
 <p>I subscribed to this great blog yesterday and I'm already learning some good tip. There's also a <a href="http://robertnyman.com/css3/pointer-events/pointer-events.html">demo</a> accompanying the article that explains how to <a href="http://bricss.net/post/7261890092/prevent-elements-from-receiving-clicks-with">prevent elements from receiving clicks with pointer-events: none</a>.</p>
 <p>pointer-events, originally a SVG property, it has since been extended for use in HTML content. Setting it to none for an element (or generated content) will simply force it to ignore clicks and pass the event on to the element on the next 'layer'. Works in Firefox, Safari and Chrome.</p>

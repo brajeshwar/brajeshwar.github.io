@@ -28,7 +28,7 @@ permalink: "/2018/3-ways-ai-contributing-businesses-success/"
 ---
 <p>Tech innovations like artificial intelligence are no longer the stuff of science-fiction. Thanks to advancements made in machine learning, we now have AI that can <a href="https://mashable.com/2017/06/12/ai-machine-math/">complete notoriously difficult university entrance exams</a> 12 times faster than the average human. That's just one example of how far this technology has come.</p>
 <p>Luckily, access to these technologies isn't restricted to a few elite individuals or organizations. Machine learning, AI, and automation are all set to revolutionize the way companies do business in the near future, and businesses of nearly all sizes can benefit.</p>
-<p><!--more--></p>
+
 <p>Here are just a few ways companies will soon be able to take advantage of these innovations.</p>
 <h2>Offering Personalized Service</h2>
 <p>Today's sophisticated <a href="http://snaps.io/chatbotplatform/">chatbot platforms</a> demonstrate the power of AI. Brands are <a href="https://www.entrepreneur.com/article/299611">already using chatbots</a> to improve customer service, send potential customers targeted ads, and gather user data.</p>

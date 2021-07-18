@@ -38,7 +38,7 @@ excerpt: 'The newest patch from Microsoft appears to b a Mac vs. PC commercial i
 ---
 <p>The newest patch from Microsoft appears to b a Mac vs. PC commercial in the making. Don't be surprised if the next mocking ad from Mac addresses the 900 million people affected by Microsoft's most recent security patch. The name of the release, Patch "Tuesday" which sounds more like an Irish celebration than a critical software patch, but then again maybe Microsoft was trying to lighten the mood. </p>
 <p>The new patch release deals with <a href="http://pcsupport.about.com/b/2011/02/08/patch-tuesday-february-2011-12-updates-correcting-22-security-issues.htm">22 issues</a> -- 6 of them deemed critical (the higher security issue ranking Microsoft has). Another 9 were ranked as 'Important' (<a href="http://www.microsoft.com/technet/security/bulletin/ms11-feb.mspx">details</a>).</p>
-<p><!--more--></p>
+
 <p><iframe title="YouTube video player" width="640" height="510" src="http://www.youtube.com/embed/VuqZ8AqmLPY" frameborder="0" allowfullscreen></iframe></p>
 <p>With the onslaught of patches, fixes, security loop holes and virus vulnerabilities from Microsoft it seems almost ridiculous that they still currently hold about 90% of OS market share with their Windows product line. Given that this new fix will be difficult for administrators and IT managers to implement (due to a necessary reboot of all systems after the patching is completed) then perhaps this might be the kick in the butt that some MS shops need to explore other operating systems like the ever-increasing-in-popularity Mac OS and open source Linux.</p>
 <h3>Some of the most severe of the critical fixes are:</h3>

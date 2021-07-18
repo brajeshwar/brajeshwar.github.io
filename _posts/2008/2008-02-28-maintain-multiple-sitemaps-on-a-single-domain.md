@@ -34,7 +34,7 @@ excerpt: Google makes it easier for webmasters to place Sitemaps for multiple ho
 ---
 <p>Do you have more than one website, or rather lots of them? You can now reduce one hassle of the many that goes in maintaining lots of websites, blogs -- the ability to place Sitemaps for multiple hosts on a single host through robots.txt.</p>
 <p>We know how to include <a href="http://www.brajeshwar.com/2007/just-add-to-your-robotstxt-no-need-to-submit-sitemap-to-google/">auto-discovery of Sitemaps</a> using robots.txt. Google have <a href="http://googlewebmastercentral.blogspot.com/2008/02/cross-submissions-via-robotstxt-on.html">announced</a> a new way for Sitemap cross-submissions using Google Webmaster Tools, making it possible to submit Sitemaps for multiple hosts on a single dedicated host.</p>
-<p><!--more--></p>
+
 <p><strong>HOW TO DO IT</strong></p>
 <p>For instance, if I want to submit and maintain Sitemaps for each of my blogs --</p>
 <p>* <a href="http://www.brajeshwar.com/">www.brajeshwar.com</a><br />

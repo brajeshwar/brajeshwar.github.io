@@ -25,7 +25,7 @@ author:
 permalink: "/2011/the-new-cat-in-town-apples-new-os-lion/"
 ---
 <p>Apple is one company that's familiar with the word innovative and groundbreaking. Apple has continued to wow customers with its out-of-the-box approach and is one company that's familiar with words like innovative and groundbreaking. It's changed the face of computing and mobile technology and its new operating system, Lion, is keeping in step with Apple's past accomplishments. IT news and <a href="http://laptopreviews.com/">laptop reviews</a> have been all over the news ever since Apple CEO Steve Jobs recently announced that the company, with its new OS, will be implementing features into their computers that will make them run more like mobile devices.</p>
-<p><!--more--></p>
+
 <figure><a href="http://www.apple.com/macosx/"><img src="/static/2011/06/osx-lion.jpg" alt="Apple OS X Lion" /></a><br />
 <figcaption>Apple OS X Lion (source : <a href="http://www.apple.com/macosx/lion/">Apple</a>)</figcaption>
 </figure>

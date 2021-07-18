@@ -39,7 +39,7 @@ excerpt: Stanford have a new online class on iPhone Programming using Cocoa Touc
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://www.apple.com/">Apple</a></cite></p>
 <p class="caption"><em class="title">iPhone</em>The internet-connected multimedia smartphone designed and marketed by Apple.</p>
 </div>
-<p><!--more--></p>
+
 <p>The Fall 2008 quarter will mark the beginning of a new class: <a href="http://www.stanford.edu/class/cs193p/">CS193P iPhone Application Programming</a> from Stanford. The new class is focused on Apple's iPhone application development using Cocoa Touch.</p>
 <p>You will need to have an Intel-based Macintosh in order to take this class. You will need to install the iPhone SDK too. However, there is no need to have an iPhone as the vast majority of the work can be done using the iPhone simulator (included in the iPhone SDK).</p>
 <p>The class is being offered via <a href="http://scpd.stanford.edu/">Stanford Center for Professional Development</a>.</p>

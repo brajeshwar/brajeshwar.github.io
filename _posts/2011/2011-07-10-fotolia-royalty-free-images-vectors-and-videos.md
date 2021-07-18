@@ -31,7 +31,7 @@ permalink: "/2011/fotolia-royalty-free-images-vectors-and-videos/"
 <figcaption>Fotolia is an image bank of free and most affordable royalty free photos and illustrations. (source : <a href="http://www.fotolia.com/">Fotolia</a>)</figcaption>
 </figure>
 <p>Started in November 2005, <a href="http://www.fotolia.com/">Fotolia</a> have over 13 million images, vectors and HD Videos in their gallery. Fotolia also have a collection of exceptional images, from well known agencies in the world, in their <a href="http://www.fotolia.com/Info/Collection">Infinite Collection</a>. With Infinite Collection, Fotolia is able to offer both crowd-sourced and professional images on one site.</p>
-<p><!--more--></p>
+
 <p>You can even get free photos and vectors which are provided via their <a href="https://www.facebook.com/Fotolia">Facebook Page</a>. If you wish to use them royalty free, you can buy from their vast collection. You can eve sell your Photos, videos etc and earn money.</p>
 <p>They have a <a href="http://www.fotolia.com/ribbon2010">Plug-In</a> that can instantly add high-resolution photos, videos and illustrations to your PowerPoint or Word documents. You can also use their  <a href="http://www.fotolia.com/desktop">Desktop Widget</a> to search for stock images, vector and videos on your desktop.</p>
 <p>Photographers and designers constantly update Fotolia with thousands of new photos and illustrations each day, while photographers and designers receive commission from each photo sold and revenue from advertising on the free section.</p>

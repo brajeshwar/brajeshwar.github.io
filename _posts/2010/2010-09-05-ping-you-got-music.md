@@ -40,7 +40,7 @@ excerpt: Follow your favorite artists and friends to discover the music they're 
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite>iTunes</cite></p>
 <p class="caption"><em class="title">Ping </em>A social network for music.</p>
 </div>
-<p><!--more--></p>
+
 <p>Apple has always been well equipped to take on music centered social networks like <a href="http://www.last.fm/">Last.fm</a>, <a href="http://like.fm/">Like.fm</a> and has finally entered the charts with <a href="http://www.apple.com/itunes/ping/">Ping</a> in sync with <a href="http://www.apple.com/itunes/">iTunes 10</a>. As always the inherent simplicity of Apple services isn't lost here in a complex web of functionality. Ping is also available on the iPhone and iPod touch with iTunes 10 for the eternally mobile.</p>
 <h3>Ping Fu!</h3>
 <p>Nothing so complex that it entails mastering a new technological or social skill even. Basically you follow people (friends, family, strangers and of course the artists themselves) thus establishing your own network. Once you have that pat, you are privy to a world of updates, comments, custom song and album charts, concert listings and more musical melody online.</p>

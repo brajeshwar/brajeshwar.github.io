@@ -27,7 +27,7 @@ permalink: "/2012/smart-earphones-invented-finally-a-cool-audio-product-without-
 <p>Cellphones are smart, MP3 players and iPods are smart - and now our smart appliances have a smart companion, earphones. Before you envision white Apple-esque earbuds, there finally comes a cool product to market not invented by the Empire. Nope, these ones were invented in Tokyo by the&nbsp;<a href="http://www.designinterface.jp/en/">Igarashi Design Interfaces Project</a>.</p>
 <p>Igarashi's (they will have to come up with a more marketable name for them-ya know, like the Empire would) new concept are <a href="http://www.designinterface.jp/en/projects/UniversalEarphones/">universal earphones</a> that are smart enough to compensate for incorrect ear insertion by switching audio channels. So if you put your ear bud in the wrong ear (which happens daily with my iPod thanks to those too damned small little white ear buds), it will auto-correct you.</p>
 <p>By placing small proximity sensors in their earphones, they can easily determine incorrect placement by searching their surroundings. If it sits closely next to the back of your ear, it is in correct, but if it points forward, toward the fresh air, then it detects a mismatch and swaps audio circuits.</p>
-<p><!--more--></p>
+
 <p><iframe src="http://player.vimeo.com/video/36062219?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 <p>This of course is minor news for the audiophile community, but the potential purposes these proximity-sensored earphones are proving quite handy indeed.</p>
 <h3>The Sharing-with-a-friend Conundrum</h3>

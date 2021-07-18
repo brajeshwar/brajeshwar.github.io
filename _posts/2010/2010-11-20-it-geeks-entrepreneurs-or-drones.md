@@ -38,7 +38,7 @@ excerpt: "For those who think they do not have the resources available to them t
 </figure>
 <p>As we slowly climb out of a global recession the idea of being a corporate drone is becoming less appealing. The truth is that somewhere between 7.2 to 8 million people lost their corporate-level job, most which were from large companies.</p>
 <p>Researchers are finding that trends are showing that  I.T. professionals  are beginning to work for themselves in higher numbers, securing their futures and allowing them to control their own destinies. Geeks, hackers, and I.T. entrepreneurs have been doing this for years, but not in these numbers. While many people think of IT workers as firefighters who fix the everyday absurdities caused from techno-weenies, this is becoming decreasingly true.</p>
-<p><!--more--></p>
+
 <p>While some I.T. professionals have chosen to toil away in poverty stricken anonymity being I.T. drones for large corporations, others have found ways to become I.T. entrepreneurs.  </p>
 <p><em>Is I.T. then the entrepreneurial career of the future?</em></p>
 <h3>IT Contractors</h3>

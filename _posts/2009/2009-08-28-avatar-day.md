@@ -34,7 +34,7 @@ excerpt: In the future, Jake, a paraplegic war veteran, is brought to another pl
   and culture.
 ---
 <p><object width="640" height="518"><param name="movie" value="http://www.youtube.com/v/j6AAt-oV3wE&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&feature=player_embedded&fs=1" /><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><embed src="http://www.youtube.com/v/j6AAt-oV3wE&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&feature=player_embedded&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="518"></embed></object></p>
-<p><!--more--></p>
+
 <p>It was an awesome experience. India had its Avatar Day today, where few movie theaters preview 20 minutes of <a href="http://www.avatarmovie.com/">Avatar</a> movie in 3D including the theatrical trailer. Avatar is expected to release worldwide on 18th December, 2009.</p>
 <p>Avatar (originally a Hindu term for the incarnation of a higher being) is the latest of James Cameron's dramatic feature since Titanic (1997), displaying the creative possibilities both of 3D and motion-capture production techniques.</p>
 <p><strong>The Avatar Story</strong></p>

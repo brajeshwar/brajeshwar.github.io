@@ -35,7 +35,7 @@ excerpt: New Mobile Phone releases are in abundance and happens almost every wee
   lot.
 ---
 <p><object width="640" height="505"><param name="movie" value="http://www.youtube.com/v/GYs8hteVlMQ&hl=en&fs=1&rel=0&&fmt=18" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/GYs8hteVlMQ&hl=en&fs=1&rel=0&&fmt=18" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505"></embed></object></p>
-<p><!--more--></p>
+
 <p>This came in at the right time. A good friend, <strong>Rishi Raj</strong>,  wanted to write a guest post here and the article is rightly written at a time when everything we buy now depends on budget and affordability.</p>
 <p><strong>Hunch</strong></p>
 <p>Before I start plugging in Rishi Raj's write-up, let me introduce you to <a href="http://www.hunch.com/">Hunch</a>, which takes away the burden of Decision-making and tries to help you decide what to do, which one to buy, <em>et al</em>. So, if you're buying a new phone, try out Hunch and the <a href="http://www.hunch.com/info/the-hunch-team/">clever folks</a> might be of help. If you haven't got an invite yet, try commenting with your email below and I'll see how many I can invite to Hunch.</p>

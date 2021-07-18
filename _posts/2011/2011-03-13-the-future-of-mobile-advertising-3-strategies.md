@@ -45,7 +45,7 @@ permalink: "/2011/the-future-of-mobile-advertising-3-strategies/"
 ---
 <p>Like it or not Mobile Advertising is here to stay. You will see advertisements on your phone -- in increasing quantities -- and in different ways. </p>
 <p>With smartphone market penetration at over 30% the smart mobile devices have already strengthened mobile advertising and will continue to solidify mobile strategies as market penetration increases from users replace their aging handsets.</p>
-<p><!--more--></p>
+
 <p>There are 3 possible directions that the future of mobile advertising might head: SMS text-based advertising, location-based advertising and application embedded advertising.</p>
 <h3>SMS Semantic Advertising</h3>
 <p>Advertisers have been sending out ads via text messages for years but the technology will be more integrated and coy in the future. What we will likely see in the future is a keyword-based hovering ads similar to those currently in use on the Internet. By scanning your text messages advertising companies will be able to place related ads within the keywords so that when you hover over it using your touchscreen you will receive ads related to that keyword. For example if you are texting a friend about going to a cinema you may see ads to purchase tickets to your local theater. </p>

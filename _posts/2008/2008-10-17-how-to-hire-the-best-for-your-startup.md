@@ -40,7 +40,7 @@ excerpt: It's amazing how many people come in and interview for jobs where their
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/glindsay65/75781708/">GLindsay65</a></cite></p>
 <p class="caption"><em class="title">Interview</em>Talk to your candidate and do an evaluation.</p>
 </div>
-<p><!--more--></p>
+
 <p>I came across an old but very well written, relevant article -- <a href="http://blog.pmarca.com/2007/06/howp_to_hire_the.html">How to hire the best people you've ever worked with</a>. The articles talks about two key points (i) <strong>Criteria</strong> for hiring and (ii) the <strong>Process</strong> of hiring, and if necessary the aftermath of making a mistake.</p>
 <p><strong>CRITERIA</strong></p>
 <p><strong>Drive</strong></p>

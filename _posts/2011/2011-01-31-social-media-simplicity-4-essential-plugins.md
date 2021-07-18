@@ -39,7 +39,7 @@ excerpt: My grandmother just friended me on Facebook. So—either hell has froze
 ---
 <p>My grandmother just friended me on Facebook. So, either hell has frozen over, or social media has truly permeated every aspect of life. This multi-generational Zeitgeist is huge and companies are caching in. The best part is it is cheap and easy enough for even the smallest website to take advantage of.</p>
 <p>The lazy approach to social media marketing is to install a bunch of plugins, which is the reason why some websites look like a McDonalds playground of colors and floating boxes.</p>
-<p><!--more--></p>
+
 <p>The best plugin approach is to pick a couple strong elements and stick with them. There are 4 essential plugins that draw the most traffic without being incredibly gaudy:</p>
 <h3>1. Wibiya Toolbar</h3>
 <p>The <a href="http://www.wibiya.com/">Wibiya</a> toolbar is just handy. It is a narrow floating box at the bottom of the screen that allows users to connect to their fav social network sites, without ever leaving yours. They can share content, chat with their friends and 'Facebook', 'Tweet' (funny how those are both verbs now) at the same time. You can also change the color to avoid mismatching color schemes and feng-shui <em>faux pas</em>. </p>

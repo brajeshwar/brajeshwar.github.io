@@ -34,7 +34,7 @@ permalink: "/2010/public-relations-as-an-entrepreneur/"
 * They think about the message<br />
 * They remember the message<br />
 * They decide whether or not to act on it when the time comes</p>
-<p><!--more--></p>
+
 <p>If a customer is exposed to your message, there is a very good chance they don't actually see it. What I mean by this is that customers are exposed to millions of advertisements and news articles every year. Even a great one may be lost to them because there are so many others that are drowning it out. That is why you need to maximize the chance of your customer hearing your message by sending it multiple times.</p>
 <p>Also, even if a customer sees the message, they aren't going to be convinced that they should purchase your product yet. They need to think carefully and they may forget about you before they have the chance. Make sure to remind them again.</p>
 <p>Sooner or later, your customers will be in a situation where they need to make a buying decision. Who do you think they are going to purchase from? The company who they heard of once or the one that took the effort to inform them of their purchase again and again?</p>

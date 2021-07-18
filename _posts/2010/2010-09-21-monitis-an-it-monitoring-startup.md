@@ -37,7 +37,7 @@ excerpt: 50,000 customers spanning small businesses, government agencies, Fortun
   servers and other services.
 ---
 <p><object width="640" height="505"><param name="movie" value="http://www.youtube.com/v/KPTlLjzEOE0?fs=1&amp;hl=en_US&amp;hd=1" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/KPTlLjzEOE0?fs=1&amp;hl=en_US&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505"></embed></object></p>
-<p><!--more--></p>
+
 <p><a href="http://portal.monitis.com/">Monitis</a> was declared as "The Most Innovative Start-up" for the Year 2009 by "<a href="http://clientconference.the451group.com/na/2009/">The 451 Group's Client Conference</a>&rdquo;. Also, it was selected as <strong>One of the Top 100 Private Limited Companies</strong>, by the editorial team of <a href="http://alwayson.goingon.com/">AlwaysOn</a>, along with partners at KPMG, Morgan Stanley, Hewlett-Packard, and a few other industry experts. </p>
 <h3>Idea</h3>
 <p>One of the most important considerations for an enterprise, these days, is tracking the status of their servers. There are various service monitoring  providers in the market, and <strong>Monitis</strong> is one of them. Once enrolled here, Monitis monitors servers, site traffic and the overall performance. These days, IT monitoring tools have become extremely popular and are needed in a small e-shop and in a multi-site empire, both. The web-monitoring and management services of the site are extremely useful to any toolbox. In simple words, it's an easy way of monitoring the web hosting providers.</p>

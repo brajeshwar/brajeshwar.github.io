@@ -35,7 +35,7 @@ excerpt: The iOS software that powers the devices has been so successful that Ap
 <figure><img src="/static/2010/10/osx-lion.jpg" alt="Apple OS X Lion" /><br />
 <figcaption>Apple OS X Lion (source : <a href="http://www.apple.com/macosx/lion/">Apple</a>)</figcaption>
 </figure>
-<p><!--more--></p>
+
 <p>The unbelievable success of the iPhone and iPad are changing the face of computing as we know it. The iOS software that powers the devices has been so successful that Apple is transposing it onto Mac <a href="http://www.apple.com/macosx/lion/">OS X Lion</a>. Each new release of OS X brings us innovative software changes and moves us forward in computing and OS X Lion, the eighth release of the software will be no exception.</p>
 <p>The upcoming OS X Lion is slated to be released mid 2011, but Apple gave users a sneak peak into the new software. Lion will come with the following upgrades:</p>
 <h3>Mac App Store</h3>

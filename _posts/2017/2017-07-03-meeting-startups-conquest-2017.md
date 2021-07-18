@@ -33,7 +33,7 @@ permalink: "/2017/meeting-startups-conquest-2017/"
 <p>Started as a handle on Instagram, <a href="https://trell.co/">Trell</a> went on to become a sensation amongst young travelers, who love to look at pictures of local places to travel to. They leverage the finger-snappy millennials that love photographing places they visit and sharing with their friends and fans.</p>
 <p>The Trell App is a buffet of picture-stories of interest to users who want to explore new places with their friends.</p>
 <p>The team is doing a good job of hustling with the right audience, they have a really good traction. I was able to give them few technical feedback and suggestions, especially with the UI/UX of the app. They were interested in a more in-depth technical discussion on how to scale their image hosting/delivery mechanism to give their users the best picture quality at the most optimized setup. It is a solved problem and they should not worry too much about it.</p>
-<p><!--more--></p>
+
 <h2>Organic Planet</h2>
 <p><a href="http://www.goorganicplanet.com/">Organic Planet</a> is an offline retail chain that sells organic produce. They're local and their current target is the city of Bangalore, delivering daily organic produce to their users directly. They do have few physical stores in the city.</p>
 <p>The major concern the founders of Organic Planet has is that people are not ordering online and their app usage has dropped. People are calling them up on phone to order.</p>

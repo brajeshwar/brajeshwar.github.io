@@ -33,7 +33,7 @@ excerpt: Everyone is moving their favorite desktop applications online. The clou
   day.
 ---
 <p>Recently I have been writing a lot of reviews of web applications and the trend today reflects people's preferences. Everyone is moving their favorite desktop applications online. The cloud is my home, not the desktop! Web applications like <a href="http://www.gmail.com/">Gmail</a>, <a href="http://www.facebook.com/">Facebook</a>, <a href="http://campfirenow.com/">Campfire</a>, <a href="http://workflowy.com/">WorkFlowy</a>, <a href="http://www.freshbooks.com/">Freshbooks</a> and <a href="http://www.pandora.com/">Pandora</a> are becoming more and more like desktop applications every day. However running each of these web apps in an individual tab in your browser can be a real pain. I have twenty five open tabs at any given time in my browser window and while that is not over the top, apps that are AJAX or Flash driven consume too much memory for my browser's liking.</p>
-<p><!--more--></p>
+
 <p><a href="http://fluidapp.com/"><img src="/static/2010/12/fluid.png" alt="Fluid" class="alignright" /></a></p>
 <h3>The Solution</h3>
 <p><a href="http://fluidapp.com/">Fluid</a> lets you create a Site Specific Browser (SSB) out of any website or web application, effectively turning your favorite web apps into desktop apps. Using Fluid to create an SSB out of your favorite website is simple. Enter the website's URL, provide a name, and optionally choose an icon. Click "Create", and within seconds your chosen website has been converted into a fully native Mac desktop application that appears in your Dock. Take Google Reader or Gmail for example, you'll be able to even see unread counts as a dock badge on your dock icon not to mention Growl notifications.</p>

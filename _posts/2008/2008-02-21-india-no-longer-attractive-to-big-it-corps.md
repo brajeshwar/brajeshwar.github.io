@@ -39,7 +39,7 @@ excerpt: India used to be seen as the perfect offshore research and development 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/brajeshwar/">Brajeshwar</a></cite></p>
 <p class="caption"><em class="title">Indian IT</em>Girls with long and exposed legs are needed to attract people to IT & ITES.</p>
 </div>
-<p><!--more--></p>
+
 <p>In a recent Press Conference in Bangalore, India Intel CTO Justin Rattner said, "India used to be seen as the perfect offshore research and development hub for global firms seeking to tap its low-cost and supposedly vast engineering talent pool to devise products for world markets."</p>
 <p>We all know that Indian IT sector is notoriously becoming costlier and the cost advantage is fading, engineers trained in basic research are harder to find, reducing India's appeal in the Outsourcing world. Companies such as Microsoft, IBM, Intel, AMD, Google, Motorola, Yahoo!, Cisco and Siemens have opened RnD centers in India, drawn by payroll costs that were once a quarter of those in the US and Europe but it is <a href="http://www.physorg.com/news122722653.html">losing its sheen</a> as an offshore RnD hub.</p>
 <p>"If this trend continues, the cost advantage of doing RnD in India compared to the US will go away," Zinnov chief executive Pari Natarajan said in an interview, predicting a shakeout in the RnD offshoring market. He added that, some  companies witnessed a 20 percent rise last year in the cost of running their RnD operations in India. There are about 600 RnD facilities setup by overseas firms that invested roughly a combined $6 billion.</p>

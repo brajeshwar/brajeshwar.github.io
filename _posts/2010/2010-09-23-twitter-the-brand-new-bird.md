@@ -34,7 +34,7 @@ excerpt: Twitter has announced a complete multimedia makeover, the new Twitter e
   Twitter's interface.
 ---
 <p><object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/rIpD7hfffQo?fs=1&amp;hl=en_US&amp;rel=0&amp;hd=1" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/rIpD7hfffQo?fs=1&amp;hl=en_US&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object></p>
-<p><!--more--></p>
+
 <p><a href="http://twitter.com/newtwitter">The brand new Bird</a>! Yes, like everyone else on the Internet, we are talking about the redesigned Twitter web interface.  Twitter has announced major changes to the way users can interact with its  interface. A complete multimedia makeover, the new Twitter engages and improves the user experience like never before. There's more to see, more to do and more to engage with, without having to leave Twitter's interface. </p>
 <h3>Life beyond 140 characters?</h3>
 <p>Now tweets can be expanded upon in a second column that opens up next to a users Twitter stream. This will allow for a rich multimedia content display of images and videos and even their location maps. With all the extra ammunition, Twitter now sports a fancy set of keyboard shortcuts which will be a hot feature for Twitter power users who no longer need to be slowed down by mouse interaction. For Gmail keyboard shortcut users, this will be a breeze and a welcome change.</p>

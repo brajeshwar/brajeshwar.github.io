@@ -44,7 +44,7 @@ excerpt: 'The new plan from Vodafone has them partnering up to give banking serv
 ---
 <p>There are so few instances where services for underdeveloped areas are profitable that Vodafone's new phone-based banking program warrants attention.</p>
 <p>Vodafone's Indian sector has recently formed an alliance with one of the major banks in India to create a phone-based banking system designed to boost profits for Vodafone after competition lowered their margins. Recently competition has pushed Vodafone's cell phone rates below $.005 per minute in India, seriously damaging their profit margins. These lowered profits are the motivation behind why the cell phone giant has created this new mobile phone banking program.</p>
-<p><!--more--></p>
+
 <p><img src="/static/2011/01/phones-india.jpg" alt="Mobile Phones" class="alignright" /></p>
 <p>The new plan from <a href="http://www.vodafone.in/">Vodafone</a> has them partnering up to give banking services via mobile phones, a service that (possibly inadvertently) would reach out to the unreachable in India. </p>
 <p>Vodafone has partnered up with <a href="http://icicibank.com/">ICICI Bank</a> (the second largest banking institution in the country) to bring electronics payment capabilities to Vodafone cell phone users. In the works are additional plans to provide other banking services as well, via mobiles. </p>

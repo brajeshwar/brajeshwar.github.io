@@ -41,7 +41,7 @@ excerpt: Irrespective of the operating system, intrusion is one of the key conce
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/negatyf/361668397/">UkaszSie</a></cite></p>
 <p class="caption"><em class="title">Firewalls</em>You can never escape them!</p>
 </div>
-<p><!--more--></p>
+
 <p>The Firestarter Team says;</p>
 <blockquote><p>Linux security does not have to be complex, and simplicity does not have to mean sacrificing power.</p></blockquote>
 <p>Irrespective of the operating system, intrusion is one of the key concerns for computers connected to a network. Black hats and white hats have always had a tug-of-war over intrusion detection techniques. Firewalls, as a matter of fact provide a resistance to this, if not a fool proof protection. Firewalls may be a hardware device or a software program used to filter information coming from within or outside the outside network into your private network or your workstation. Firewall may not be the best and the sole way to be secured on a network, but does act like the first cover against most of the network based attacks. </p>

@@ -36,7 +36,7 @@ author:
 permalink: "/2011/open-sources-7-lucky-forecasts-for-2011/"
 ---
 <p>Well, nobody gets tired of making predictions, or at least thinking of what the future looks like. Predictions were made for several technological categories like <a href="http://www.pcworld.com/businesscenter/article/212347/top_security_predictions_for_2011.html">Security</a>, <a href="http://www.pcworld.com/businesscenter/article/214419/top_erp_predictions_for_2011.html">Enterprise Resource Planning</a> (ERP) and a more generic forecast on <a href="http://www.pcworld.com/businesscenter/article/214214/10_itrelated_predictions_for_2011.html">Information Technology</a> as a whole. Similarly, we can never stop thinking of making forecasts for one of the most loved technology solutions in the world - <em>Open Source</em>.</p>
-<p><!--more--></p>
+
 <p>So, here are 7 lucky predictions that could be made for Linux or the Open Source community as a whole:</p>
 <h3>1. Android here, there &amp; everywhere</h3>
 <p>By the looks of it, <a href="http://www.android.com/">Android</a> seems to not stop growing in terms of its apps and hence nothing will stop it from being the number 1 - sort after Smartphone OS, even with <a href="http://www.apple.com/ios/">Apple's iOS</a> giving it a stiff competition. There is not a doubt in my mind that this will happen sooner than later and one of the major reasons for this would be the involvement of open source in the development of apps in a large way. Therefore, the forecast is that Android will become number 1 by the end of this year.</p>

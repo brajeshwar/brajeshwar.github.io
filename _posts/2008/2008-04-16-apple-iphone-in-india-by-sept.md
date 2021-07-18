@@ -42,7 +42,7 @@ excerpt: Apple iPhone will be available in India through Vodafone by early Septe
 <p>[flv:http://media.brajeshwar.com/v/apple/iphone-ad-amazing.flv 640 480]</p>
 <p><strong>Named "Invention of the Year 2007" by Times Magazine, the iPhone is an "Amazing" Phone. The above ad/video is one of Apple's iPhone Ads.</strong><br />
 <hr />
-<p><!--more--></p>
+
 <p>Indians can rejoice now; <a href="http://www.apple.com/">Apple</a> have promised to bring their iPhone to India by early September this year through <a href="http://www.vodafone.in/">Vodafone</a>. I can predict that, unlike the US, there won't be people lined up in front of the stores to buy the iPhone on its launch day. Nonetheless, many will eventually buy it in due course, if not for the features, but for the sleek-status-symbol, geek's must-have-phone factor.</p>
 <p>Well, the news about the launch of the Apple iPhone in India through Vodafone is all <a href="http://news.google.com/news?hl=en&ned=&q=iphone+in+india&btnG=Search+News">over the wire</a>. By <strong>early September this year</strong>, we should be able to buy the official Apple iPhone. The initial model will be the 8GB iPhone while the 16GB is expected during summer 2009. It is also expected that Apple will be extending universal access for iPhone users to all major telecom carriers in India.</p>
 <p>Business Standard reports that the Indian mobile subscriber base is expected to be roughly about 500 million by 2010. Customer churn has increased across telecom circles from 18% in 2006 to 20% in 2007. Industry Experts opined that Apple's entry into this market could tilt the balance further.</p>

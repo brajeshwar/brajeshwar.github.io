@@ -28,7 +28,7 @@ author:
 permalink: "/2011/super-ssd-technology/"
 ---
 <p>In an effort to infuse more life in my 1-year old Macbook Pro, I began researching SSD technology drives in the market and quite overwhelmed by the choice, I sauntered the Interwebs in an effort to make an educated decision that would skyrocket my productivity and in the process burn a proportionally deep hole in my pocket. During this process of research and analysis, I came across Israeli start-up <a href="http://www.anobit.com/">Anobit Technologies Ltd.</a> that has announced its first product, a multilevel cell (MLC) solid-state drive (SSD) that it claims is as reliable as today's higher-end &amp; higher-cost single-level cell (SLC) enterprise-class flash drives.</p>
-<p><!--more--></p>
+
 <h3>Ready for Relational Databases</h3>
 <p>Anobit said its Genesis SSDs extend standard MLC endurance from about 3,000 to more than 50,000 write/erase cycles, 20 times better than the average consumer-class drive today, making MLC technology suitable for high-duty cycle applications such as relational databases. The drives come in 200GB or 400GB capacities with Serial ATA interfaces. Through the use of an external bridge, they are capable of using the Serial-Attached SCSI (SAS) or Fibre Channel protocol. The drives have a sustained sequential read rate of 220MB/sec. and a sustained sequential write rate of 180MB/sec., according to Anobit.</p>
 <h3>The Genesis of Anobit</h3>
