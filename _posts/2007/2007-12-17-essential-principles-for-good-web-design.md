@@ -32,7 +32,7 @@ excerpt: Web design can be deceptively difficult. Getting a design that is both 
   and pleasing, delivers information and builds brand, is technically sound and visually
   coherent.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/puddle-of-blush-by-smashmethod.jpg" alt="Puddle of Blush" />
+<div class="figure"><img src="/static/2007/12/puddle-of-blush-by-smashmethod.jpg" alt="Puddle of Blush" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite><a href="http://smashmethod.deviantart.com/">SmashMethod</a></cite></p>
 <p class="caption"><em class="title">Puddle Of Blush</em>An awesome <a href="http://smashmethod.deviantart.com/art/Puddle-Of-Blush-25594200">Illustration</a> from SmashMethod</p>
 </div>

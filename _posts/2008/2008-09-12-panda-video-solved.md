@@ -40,7 +40,7 @@ excerpt: By providing an elegant REST API, Panda makes it completely painless to
   full video uploading, encoding and streaming functionality to your web application
   in a matter of hours.
 ---
-<p><a href="http://pandastream.com/"><img src="{{ site.baseurl }}/assets/2008/09/panda_arch.gif" alt="Panda: Video Solved" style="border: 0 none; float: right;" /></a>Panda is an awesome open source solution for video uploading, encoding and streaming.</p>
+<p><a href="http://pandastream.com/"><img src="/static/2008/09/panda_arch.gif" alt="Panda: Video Solved" style="border: 0 none; float: right;" /></a>Panda is an awesome open source solution for video uploading, encoding and streaming.</p>
 <p>By providing an elegant REST API, Panda makes it completely painless to implement full video uploading, encoding and streaming functionality to your web application in a matter of hours.</p>
 <p>* Runs completely within <a href="http://aws.amazon.com/">Amazon's Web Services</a> utilising EC2, S3 and SimpleDB.<br />
 * Everything contained within one elegant <a href="http://www.merbivore.com/">Merb</a> application.<br />

@@ -34,7 +34,7 @@ author:
   last_name: Oinam
 permalink: "/2005/crazy-frog-crazy-hits/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2005/11/crazy-frog-axel-f.jpg" alt="Crazy Frog" /></p>
+<p><img src="/static/2005/11/crazy-frog-axel-f.jpg" alt="Crazy Frog" /></p>
 <p>I finally got my "Crazy Frog Crazy Hits (Crazy Frog Crazy Hits)":http://www.crazyfroghits.com/ music CD. Released in India very recently (rather late), they somehow don't have the enhanced version which have the password to access the site at "Crazy Frog Hits (Crazy Frog Hits)":http://www.crazyfroghits.com/.</p>
 <p>The album consisted of the following tracks along with the <strong>Crazy Frog Axel F Video</strong>.</p>
 <p># Intro<br />

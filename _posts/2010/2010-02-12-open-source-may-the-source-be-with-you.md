@@ -30,7 +30,7 @@ permalink: "/2010/open-source-may-the-source-be-with-you/"
 excerpt: The promise of open source is simply better quality, higher reliability,
   more flexibility, lower cost, and an end to predatory vendor lock-in.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/02/may-the-source-be-with-you.jpg" alt="May the source be with You" />
+<div class="figure"><img src="/static/2010/02/may-the-source-be-with-you.jpg" alt="May the source be with You" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Anonymous</cite></p>
 <p class="caption"><em class="title">Open Source</em>May the source be with You</p>
 </div>

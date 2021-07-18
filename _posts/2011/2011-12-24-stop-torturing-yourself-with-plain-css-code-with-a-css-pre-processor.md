@@ -34,7 +34,7 @@ permalink: "/2011/stop-torturing-yourself-with-plain-css-code-with-a-css-pre-pro
 <p>First, let me tell you, I'm pretty good with CSS. However, I've always hated writing CSS. Writing CSS is like using dried woods, leaves and rocks to lit a fire everything you need to cook something. You may become very good with it, but it's an unforgiving task and you've to do the rigorous feat every time you need the fire. CSS is bland, dumb, linear and it's utter lack of intelligence is derogatory even to the most novice coder.</p>
 <p>Many designers and developers have urged the need for variables, constants or at-least some rudimentary intelligence. But it is unlikely, a far-fetched dream and is not happening anytime soon. And, there is the often dreaded math you have to do every time you write CSS grids/columns.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2011/12/tear-hair-out.jpg" alt="CSS Designer tearing hair out" /></p>
+<p><img src="/static/2011/12/tear-hair-out.jpg" alt="CSS Designer tearing hair out" /></p>
 <p>Nonetheless, help is at hand and I will say with certainty that if you still write CSS without a pre-processor, you're doing it the very hard way. Why not use a CSS pre-processor!</p>
 <p>There are quite a few popular CSS pre-processor available now -- <a href="http://lesscss.org/">LessCSS</a>, <a href="http://sass-lang.com/">Sass</a> and <a href="http://learnboost.github.com/stylus/">Stylus</a>. Personally, I prefer Sass with <code>scss</code> syntax but it is just a preference and you're free to pick a choice of your own.</p>
 <p><strong>Some of the good reasons to use one of these CSS pre-processors are:</strong></p>

@@ -29,7 +29,7 @@ author:
   last_name: Mukherjee
 permalink: "/2012/more-about-raspberry-pi/"
 ---
-<p><a href="http://www.raspberrypi.org/"><img src="{{ site.baseurl }}/assets/2012/05/raspberry-pi.jpg" alt="Raspberry Pi" /></a></p>
+<p><a href="http://www.raspberrypi.org/"><img src="/static/2012/05/raspberry-pi.jpg" alt="Raspberry Pi" /></a></p>
 <p>Early in the 1980s, affordable computing was a craze in the market. However, learning about them was a difficult process to the users. Machines such as Atare 400 and early Apples' were already helping people in exploring the whole new world; giving rise to some of the pioneers in the computing world including the gaming industry.</p>
 <p>That continued, till a lot of inventions took place in the tech world. One amongst them, is the -- <a href="http://www.raspberrypi.org/">Raspberry Pi</a>.</p>
 <p><!--more--></p>

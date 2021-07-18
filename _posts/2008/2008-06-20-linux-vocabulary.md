@@ -47,7 +47,7 @@ excerpt: Remember, more than actually being difficult, Linux has been taught to 
   so. We would like to adhere to a new statement saying, Linux is different and not
   necessarily difficult.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/linux-vocabulary.jpg" alt="Linux Vocabulary" />
+<div class="figure"><img src="/static/2008/06/linux-vocabulary.jpg" alt="Linux Vocabulary" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/thoenieva/2523726585/">Thoenieva</a></cite></p>
 <p class="caption"><em class="title">Brush up your Vocabulary </em>It'll always pay off.</p>
 </div>

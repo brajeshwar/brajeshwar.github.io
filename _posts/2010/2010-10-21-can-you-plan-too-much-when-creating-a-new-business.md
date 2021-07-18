@@ -30,7 +30,7 @@ excerpt: Excessive planning is often procrastination in disguise. Entrepreneurs 
   be nervous to actually begin their startup and want to justify to themselves that
   they are being productive.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/business-plan.jpg" alt="Business Plan" />
+<div class="figure"><img src="/static/2010/10/business-plan.jpg" alt="Business Plan" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/pretpriemac/4578625094/">Dragan Sutevski</a></cite></p>
 <p class="caption"><em class="title">Business Plan</em>Don't waste too much time on it.</p>
 </div>

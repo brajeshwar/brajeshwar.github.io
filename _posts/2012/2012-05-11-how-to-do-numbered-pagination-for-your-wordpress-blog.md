@@ -30,7 +30,7 @@ author:
 permalink: "/2012/how-to-do-numbered-pagination-for-your-wordpress-blog/"
 ---
 <p>There are a bunch of awesome Wordpress Plugins that can do <strong>Numbered Pagination</strong> for your Wordpress powered blog. However, it may be noted that Wordpress have the option to do it without relying on a plugin.</p>
-<p><img src="{{ site.baseurl }}/assets/2012/05/paginate-css3.png" alt="Numbered Pagination in Wordpress" /></p>
+<p><img src="/static/2012/05/paginate-css3.png" alt="Numbered Pagination in Wordpress" /></p>
 <p>Let's do a clean, nice and simple numbered pagination as seen on this blog. You can choose to have either the light or the dark version.</p>
 <p><!--more--></p>
 <p>Here is the code modified from Wordpress <a href="http://codex.wordpress.org/Function_Reference/paginate_links">Reference doc on Pagination</a>. The code is pretty self-explanatory. Just put it where you want your pagination to appear.</p>

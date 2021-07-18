@@ -33,7 +33,7 @@ excerpt: Why is an iPhone more than just a phone whilst a feature packer Nokia p
   doesn't yet qualify for the first choice. Will Nokia be able to get the same buzz
   as iPhone has received amongst the users and not just blogs, tech lovers and geeks?
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/iphone-nokia-n97.jpg" alt="Nokia and iPhone: Looks alike? Oh well, not quite!" />
+<div class="figure"><img src="/static/2009/06/iphone-nokia-n97.jpg" alt="Nokia and iPhone: Looks alike? Oh well, not quite!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">Nokia and iPhone</em>Looks alike? Oh well, not quite!</p>
 </div>

@@ -34,7 +34,7 @@ excerpt: The future of Linux can be predicted based on the fact that it stands t
   provide its users the features they looking for, be it Wi-Fi compatibility, games,
   intuitive UI, et al.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/03/linux-chill.jpg" alt="Linux: Beating the heat this summer!" />
+<div class="figure"><img src="/static/2009/03/linux-chill.jpg" alt="Linux: Beating the heat this summer!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/keepthebyte/154140347/">Keepthebyte</a></cite></p>
 <p class="caption"><em class="title">Linux</em>Beating the heat this summer!</p>
 </div>

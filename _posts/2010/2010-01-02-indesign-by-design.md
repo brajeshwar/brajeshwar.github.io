@@ -29,7 +29,7 @@ excerpt: Adobe's InDesign breaks the barriers between online and offline publish
   by offering everything from newspaper and book publishing for the presses to interactive
   flash magazines and e-books for the web.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/01/adobe-indesign.jpg" alt="Adobe InDesign" />
+<div class="figure"><img src="/static/2010/01/adobe-indesign.jpg" alt="Adobe InDesign" />
 <p class="credit"><abbr class="type" title="Adobe InDesign">Image</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">InDesign</em>The foundation for dynamic publishing -- in both print and digital media.</p>
 </div>

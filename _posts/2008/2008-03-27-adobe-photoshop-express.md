@@ -33,7 +33,7 @@ excerpt: Adobe Photoshop Express allows anyone who snaps a digital photo to easi
   achieve the high-impact results for which Adobe is known. Photoshop Express is a
   convenient, single destination where you can store, edit and share photos.
 ---
-<div class="figure"><a href="http://brajeshwar.photoshop.com/"><img src="{{ site.baseurl }}/assets/2008/03/photoshop-express.jpg" alt="Adobe Photoshop Express" /></a>
+<div class="figure"><a href="http://brajeshwar.photoshop.com/"><img src="/static/2008/03/photoshop-express.jpg" alt="Adobe Photoshop Express" /></a>
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe Photoshop Express</em>A convenient destination where you can store, edit and share photos.</p>
 </div>

@@ -53,7 +53,7 @@ excerpt: Proto.in brings together entrepreneurs, aspiring entrepreneurs, veteran
   mavericks, students, and even folks from the government bodies such as DST, NASSCOM,
   TiE, IAMAI.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/05/proto-in-delhi.jpg" alt="Proto.in Delhi July 18-19, 2008" />
+<div class="figure"><img src="/static/2008/05/proto-in-delhi.jpg" alt="Proto.in Delhi July 18-19, 2008" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://www.deviantart.com/">DeviantArt</a></cite></p>
 <p class="caption"><em class="title">Proto.in</em>The Startup Community Event in India.</p>
 </div>

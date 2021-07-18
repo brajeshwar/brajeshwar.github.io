@@ -34,7 +34,7 @@ excerpt: Making for a grand total of $625.5 million in damages, the ruling repre
   the second-largest jury verdict of the year so far and the fourth-largest patent
   verdict in American legal history.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/steve-jobs-mosaic.jpg" alt="Steve Jobs" />
+<div class="figure"><img src="/static/2010/10/steve-jobs-mosaic.jpg" alt="Steve Jobs" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/marcopako/2445580611/">Marco Pakoeningrat</a></cite></p>
 <p class="caption"><em class="title">Apple</em> loses $625-million patent lawsuit.</p>
 </div>

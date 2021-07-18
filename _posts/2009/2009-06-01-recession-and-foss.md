@@ -33,7 +33,7 @@ excerpt: The key to promote Linux effectively not only lies with Linux enthusias
   but also with Open Source vendors who are yet to find out a way in which it can
   be monetized efficiently to expand recognition amongst its probable user base.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/foss-recession.jpg" alt="Recession is just a Challenge" />
+<div class="figure"><img src="/static/2009/06/foss-recession.jpg" alt="Recession is just a Challenge" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/sumardi/3014082067/">SuMarDi</a></cite></p>
 <p class="caption"><em class="title">Recession</em>Its just a Challenge.</p>
 </div>
@@ -43,6 +43,6 @@ excerpt: The key to promote Linux effectively not only lies with Linux enthusias
 <p>An Open Source product or service will be able to get buyers who are bereft of major cash inflows and the business operations shall hence continue successfully. The best thing that could happen to Linux is its emergence as the top alternative to Microsoft. Open Source tools such as PostgreSQL, Ruby, Perl, Python, and Ubuntu etc. can be used as a substitute to do most work that Microsoft does, of course with a difference in terms of use, installation, features and support. This will probably be of tremendous help to FOSS in retaining its "free aspect" USP. </p>
 <p>However, experts would know that Linux still has miles to go before it becomes a household name as Microsoft is. An <a href="http://www.novell.com/news/press/it-organizations-turn-to-linux-in-economic-downturn">IDC Survey</a> reported, </p>
 <blockquote><p>"55 percent of the 300 IT executives surveyed already had Linux systems in use; a full 97 percent were running Windows."</p></blockquote>
-<p><img src="{{ site.baseurl }}/assets/2009/06/idc.png" alt="Source: IDC" /></p>
+<p><img src="/static/2009/06/idc.png" alt="Source: IDC" /></p>
 <p>The key to promote Linux effectively not only lies with Linux enthusiasts but also with Open Source vendors who are yet to find out a way in which it can be monetized efficiently to expand recognition amongst its probable user base.</p>
 <p>Keeping all considerations in mind, Linux is doing pretty well in the times when the best in other business have shut down. Earlier this year, <strong>Ken Huss</strong> wrote an interesting article on <a href="http://www.daniweb.com/blogs/entry3845.html">five reasons why Linux is recession proof</a> and it surely does instill a hope within the Linux community. Today, when money and not time is the problem with most companies suffering with the recession wave, such initiatives can act as a motivating source to develop a product or service that the world needs; proving to the software fraternity that FOSS shall contribute in overcoming recession and probably stand out as a winner.</p>

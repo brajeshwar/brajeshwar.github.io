@@ -32,7 +32,7 @@ excerpt: SE Linux is the Security-Enhanced Linux project started by the NSA whic
   lets you secure Linux at every echelon from the kernel up. SE Linux is in essence
   a defense against hackers giving users another stratum of protection to online information.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/12/security.jpg" alt="Security: Always an issue. Be it Windows, or Linux." />
+<div class="figure"><img src="/static/2008/12/security.jpg" alt="Security: Always an issue. Be it Windows, or Linux." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/carbonnyc/2294144289/">CarbonNYC</a></cite></p>
 <p class="caption"><em class="title">Security</em>Always an issue. Be it Windows, or Linux.</p>
 </div>

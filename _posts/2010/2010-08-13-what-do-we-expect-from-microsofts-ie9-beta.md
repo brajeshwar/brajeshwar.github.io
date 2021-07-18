@@ -33,7 +33,7 @@ permalink: "/2010/what-do-we-expect-from-microsofts-ie9-beta/"
 excerpt: IE9 will feature hardware acceleration, HTML5 and a JavaScript engine, which
   Microsoft claims, is faster than other browsers.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/08/ie9.jpg" alt="Internet Explorer 9" />
+<div class="figure"><img src="/static/2010/08/ie9.jpg" alt="Internet Explorer 9" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Google Images</cite></p>
 <p class="caption"><em class="title">IE9</em>Microsoft's latest Browser.</p>
 </div>

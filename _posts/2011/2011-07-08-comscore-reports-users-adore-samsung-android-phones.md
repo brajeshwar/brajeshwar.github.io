@@ -29,7 +29,7 @@ permalink: "/2011/comscore-reports-users-adore-samsung-android-phones/"
 ---
 <p>Gadgets rule this generation and the Androids have certainly proved to be the forerunners in this field. Top mobile and technology companies have launched their versions of the Android phones in the market. Although, almost all of them have seen a speedy consumer rate, yet <a href="http://www.comscore.com/">comScore</a> reports say that Samsung Galaxy phones have taken the lead as the top consumer choice.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2011/07/samsung-galaxy-i7500.jpg" alt="Samsung Galaxy phones" class="alignright" /></p>
+<p><img src="/static/2011/07/samsung-galaxy-i7500.jpg" alt="Samsung Galaxy phones" class="alignright" /></p>
 <h3>Samsung Galaxy</h3>
 <p>Demarcating similar products of other brands: Samsung launched their particular Android devices in the market with the specific name of Galaxy. The purpose behind this was to differentiate the brand's Android phones from all the other similar devices by leading brands in the market. So, the consumers relate the Galaxy series to Samsung the brand and all other brands still fall under the generic term.</p>
 <h3>Using recent Windows Phone 7 mobile OS</h3>

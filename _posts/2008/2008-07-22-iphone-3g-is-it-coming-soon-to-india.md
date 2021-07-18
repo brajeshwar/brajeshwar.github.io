@@ -36,7 +36,7 @@ excerpt: iPhone 3G is available now in many countries and coming soon to even mo
   And since iPhone 3G is a UMTS/HSDPA and GSM world phone, it works practically anywhere
   on the planet.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/iphone-3g.png" alt="iPhone 3G" />
+<div class="figure"><img src="/static/2008/07/iphone-3g.png" alt="iPhone 3G" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite>Apple</cite></p>
 <p class="caption"><em class="title">iPhone 3G</em>Will India see the iPhone 3G on 22nd August, 2008?</p>
 </div>

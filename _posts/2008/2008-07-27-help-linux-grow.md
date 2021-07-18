@@ -29,7 +29,7 @@ permalink: "/2008/help-linux-grow/"
 excerpt: It is a matter of fact that you'll find more articles on Linux HOW-TO's than
   for any other operating system! Have you tried to figure out the reason behind this?
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/linux-community.jpg" alt="Linux Community" />
+<div class="figure"><img src="/static/2008/07/linux-community.jpg" alt="Linux Community" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/corsaria/21262401/">Corsanet</a></cite></p>
 <p class="caption"><em class="title">OS Poker</em>Who will win?</p>
 </div>

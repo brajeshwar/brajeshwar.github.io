@@ -35,7 +35,7 @@ excerpt: The Linux desktop more than anything else needs an extensive support of
   die hard proponents which will be helpful in creating a buzz and hence serve the
   purpose by establishing a strong word of mouth.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/05/linux-winning-move.jpg" alt="Linux: The winning moves." />
+<div class="figure"><img src="/static/2009/05/linux-winning-move.jpg" alt="Linux: The winning moves." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/bootbearwdc/20109566/">DBking</a></cite></p>
 <p class="caption"><em class="title">Linux</em>The winning moves.</p>
 </div>

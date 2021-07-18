@@ -39,7 +39,7 @@ excerpt: The Adobe Design Achievement Awards celebrate student achievement refle
   which showcases individual and group projects created with industry-leading Adobe
   creative software.
 ---
-<p><a href="http://www.adaaentry.com/"><img src="{{ site.baseurl }}/assets/2007/11/adaa.gif" alt="Adobe Design Achievement Awards" style="border: 0 none;" /></a>The 2008 Adobe Design Achievement Awards gives higher education students from around the world the creative license to propel their careers in the future. Enter in 12 categories in 3 media areas endorsed by the industry, over US $60,000 in cash prizes will be awarded.</p>
+<p><a href="http://www.adaaentry.com/"><img src="/static/2007/11/adaa.gif" alt="Adobe Design Achievement Awards" style="border: 0 none;" /></a>The 2008 Adobe Design Achievement Awards gives higher education students from around the world the creative license to propel their careers in the future. Enter in 12 categories in 3 media areas endorsed by the industry, over US $60,000 in cash prizes will be awarded.</p>
 <p>Calls for entries to the <a href="http://www.adobe.com/education/adaa/">2008 Adobe Design Achievement Awards</a> was announced early morning today by Adobe (<a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200711/111307ADAAEntries.html">press release</a>).</p>
 <p><!--more--><br />
 <strong>2008 ADAA's Eco-Friendly Approach</strong></p>

@@ -36,7 +36,7 @@ excerpt: Sometimes you can have a frozen window, and there are two fast ways to 
   this problem without turning off your computer or restarting it. The first is the
   traditional key combination of Ctrl + Alt + Backspace.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/01/linux.jpg" alt="Linux" />
+<div class="figure"><img src="/static/2008/01/linux.jpg" alt="Linux" />
 <p class="credit"><abbr class="type" title="Photograph">Wallpaper</abbr> from <cite><a href="http://coronastx.deviantart.com/art/Linux-where-dreams-come-true-60145977">Deviant Art</a></cite></p>
 <p class="caption"><em class="title">Linux</em>Powerful.OpenSource.Secure (Can you name the Distro's in the Picture?)</p>
 </div>
@@ -52,7 +52,7 @@ excerpt: Sometimes you can have a frozen window, and there are two fast ways to 
 <p><strong>3. Most recently used commands</strong> -- Execute the following instruction in the console: </p>
 <p><code>history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -rn|head -10</code></p>
 <p>The history command shows a list of all recently executed commands. You can use the arrow keys to navigate the next and previous commands.</p>
-<p><img src="{{ site.baseurl }}/assets/2008/01/tux.jpg" alt="Tux" style="border: 0 none;" /><strong>4. Kill all the process in a determined application</strong> -- This command will be very useful when you are running programs which tend to drag on the system resources. Open terminal and type: ps aux c. It will show you a complete list of running processes.  The first column contain the user owner of the process, the second one is the PID of the process and if we jump to the last column we will see the name of the application which belong to each processes. If the application you want to kill is, for example, Firefox, then it would be: <code>ps aux c | grep firefox</code> and then write <code>kill -9</code>. The next time you do a <code>ps aux c | grep firefox</code>, this program shouldn't appear anymore.</p>
+<p><img src="/static/2008/01/tux.jpg" alt="Tux" style="border: 0 none;" /><strong>4. Kill all the process in a determined application</strong> -- This command will be very useful when you are running programs which tend to drag on the system resources. Open terminal and type: ps aux c. It will show you a complete list of running processes.  The first column contain the user owner of the process, the second one is the PID of the process and if we jump to the last column we will see the name of the application which belong to each processes. If the application you want to kill is, for example, Firefox, then it would be: <code>ps aux c | grep firefox</code> and then write <code>kill -9</code>. The next time you do a <code>ps aux c | grep firefox</code>, this program shouldn't appear anymore.</p>
 <p><strong>5. Get the basic system information</strong> -- There are some commands you can use to determine basic information of your machine such as kernel version, hardware information and others. The following command lines shows what they'll return when executed;</p>
 <pre>
 $ cat /proc/version  = "It returns a full string of information"

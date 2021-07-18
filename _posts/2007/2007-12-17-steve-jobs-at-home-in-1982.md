@@ -33,7 +33,7 @@ permalink: "/2007/steve-jobs-at-home-in-1982/"
 excerpt: '"This was a very typical time. I was single. All you needed was a cup of
   tea, a light, and your stereo, you know, and that''s what I had." - Steve Jobs'
 ---
-<figure><a href="http://autochrome.brajeshwar.com/steve-jobs-at-home-1982/" title="Steve Jobs at Home (1982)"><img src="{{ site.baseurl }}/assets/2007/12/steve-jobs-at-home-1982.jpg" alt="Steve Jobs at Home in 1982" /></a><br />
+<figure><a href="http://autochrome.brajeshwar.com/steve-jobs-at-home-1982/" title="Steve Jobs at Home (1982)"><img src="/static/2007/12/steve-jobs-at-home-1982.jpg" alt="Steve Jobs at Home in 1982" /></a><br />
 <figcaption> Steve Jobs at Home in 1982. "This was a very typical time. I was single. All you needed was a cup of tea, a light, and your stereo, you know, and that's what I had." - Steve Jobs (source : <a href="http://digitaljournalist.org/issue0712/y_walker08.html">Diana Walker</a>)</figcaption>
 </figure>
 <p>Diana Walker is a photographer who has worked for the White House for five presidential administrations. She has a new book called <a href="http://shop.nationalgeographic.com/product/1062/3978/114.html">The Bigger Picture</a>. The book features photographs of "the world's major movers and shakers".</p>

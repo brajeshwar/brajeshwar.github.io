@@ -33,7 +33,7 @@ excerpt: An attack scenario -- A bank website hosts marketing graphics in the fo
   that cause the customer's authentication cookies or login credentials to be sent
   to the attacker.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/flash-player-bug.jpg" alt="Flash Player Vulnerabilities" />
+<div class="figure"><img src="/static/2007/12/flash-player-bug.jpg" alt="Flash Player Vulnerabilities" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">Flash Player Vulnerabilities</em>Google Researchers have documented serious vulnerabilities in Adobe Flash SWFs.</p>
 </div>

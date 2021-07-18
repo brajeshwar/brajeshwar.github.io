@@ -26,7 +26,7 @@ excerpt: So, this summer, get ready to tickle your Actionscript skill and hone y
   application development skill and catapult to another advanced level. Thanks to
   Colin Moock for the book and his contributions to the Flash Community.
 ---
-<p><a href="http://moock.org/eas2/"><img src="{{ site.baseurl }}/assets/2004/05/eAS2.gif" alt="Essential ActionScript 2.0" /></a>Much like a hollywood flick, <strong>Essential Actionscript 2.0</strong> releases on friday, the 18th June, 2004.<br />
+<p><a href="http://moock.org/eas2/"><img src="/static/2004/05/eAS2.gif" alt="Essential ActionScript 2.0" /></a>Much like a hollywood flick, <strong>Essential Actionscript 2.0</strong> releases on friday, the 18th June, 2004.<br />
 For Flash Developers and Designers alike, I need not re-iterate that it is a must have. Yesterday, as anticipated, the knock on the door from the Fedex guy was my pre-release copy. I will try to write about the book by dividing the review into three parts.<br />
 I started from Part 3 and will go to Part 1 at the end. Well, it is not that I am already through with Actionscript 2.0 or alike but that the later part caught my attention first.</p>
 <p>So, this summer, get ready to tickle your Actionscript skill and hone your application development skill and catapult to another advanced level. Thanks to <a href="http://moock.org/blog/" title="Colin Moock">Colin Moock</a> for the book and his contributions to the Flash Community.</p>

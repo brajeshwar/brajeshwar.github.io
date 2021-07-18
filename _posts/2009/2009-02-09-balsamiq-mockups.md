@@ -35,7 +35,7 @@ excerpt: Balsamiq Mockups intentionally uses hand-drawn UI elements, so that peo
   don't get attached to "that pretty color gradient" or think that your mockup has
   actual code behind it and is "practically done".
 ---
-<p><a href="http://www.balsamiq.com/products/mockups"><img src="{{ site.baseurl }}/assets/2009/02/balsamiq-mockups.jpg" alt="Balsamiq Mockups" style="border: 0 none; float: right;" /></a>Ok, here is how it started. I usually hit the whiteboard or the glass-board or even paper and pen to chalk down plans, ideas and visual elements that goes in any project module. I'm not smart enough to use the fancy tools that does things that makes you look smart.</p>
+<p><a href="http://www.balsamiq.com/products/mockups"><img src="/static/2009/02/balsamiq-mockups.jpg" alt="Balsamiq Mockups" style="border: 0 none; float: right;" /></a>Ok, here is how it started. I usually hit the whiteboard or the glass-board or even paper and pen to chalk down plans, ideas and visual elements that goes in any project module. I'm not smart enough to use the fancy tools that does things that makes you look smart.</p>
 <p>I've heard about <a href="http://www.balsamiq.com/products/mockups">Balsamiq Mockups</a> before but never tried it seriously. Today, I installed it and tried looking for the limitation of the trail, so I can decide if I should buy it or not. As I could not find it easily and quick enough (yes, I'm lazy too), I emailed Peldi asking him, "What are the limitations of the Balsamiq trial?"</p>
 <p>Coupla hours later, I got this reply from Peldi;</p>
 <blockquote><p>Brajeshwar, your money is no good with me! :) </p>

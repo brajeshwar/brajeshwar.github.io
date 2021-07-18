@@ -39,7 +39,7 @@ excerpt: What motivates entrepreneurs? Money? Control? In truth, some entreprene
   would probably answer -- both -- and in the process of mixing the two, ended up
   with neither.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/03/steve-jobs-at-home-1982.jpg" alt="Steve Jobs at Home in 1982 - This was a very typical time. I was single. All you needed was a cup of tea, a light, and your stereo, you know, and that is what I had." />
+<div class="figure"><img src="/static/2008/03/steve-jobs-at-home-1982.jpg" alt="Steve Jobs at Home in 1982 - This was a very typical time. I was single. All you needed was a cup of tea, a light, and your stereo, you know, and that is what I had." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://digitaljournalist.org/issue0712/y_walker08.html">Diana Walker</a></cite></p>
 <p class="caption"><em class="title">Steve Jobs</em>One of the Best Entrepreneurs of our time.</p>
 </div>

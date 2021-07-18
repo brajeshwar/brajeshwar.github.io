@@ -27,7 +27,7 @@ author:
   last_name: Smith
 permalink: "/2011/your-virtual-assistant-is-a-partner-not-an-employee/"
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2011/01/virtual-assistants.jpg" alt="Virtual Assistants" />
+<div class="figure"><img src="/static/2011/01/virtual-assistants.jpg" alt="Virtual Assistants" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://georgiavirtualassistants.com/">GeorgiaVirtualAssistants</a></cite></p>
 <p class="caption"><em class="title">Virtual Assistants </em>Helping you get things done.</p>
 </div>

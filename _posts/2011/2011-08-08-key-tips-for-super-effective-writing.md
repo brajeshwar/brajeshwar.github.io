@@ -25,7 +25,7 @@ author:
   last_name: Mukherjee
 permalink: "/2011/key-tips-for-super-effective-writing/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/08/writing.jpg" alt="Writing" /><br />
+<figure><img src="/static/2011/08/writing.jpg" alt="Writing" /><br />
 <figcaption>Writing should be enjoyable! (source : <a href="http://www.flickr.com/photos/yourdon/3643024009/">Ed Yourdon</a>)</figcaption>
 </figure>
 <p>Writing is supposed to be an enjoyable experience. Especially, for people who depend on their writing as a source of income, this is the most complicated necessity. While you have to maintain the quality of your written piece, the creativity is also that much important. For the creative flow of the mind to remain unhindered you have to stay loose and enjoy the topic as you write about it. </p>

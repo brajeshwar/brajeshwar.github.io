@@ -33,7 +33,7 @@ excerpt: According to Facebook, more than 150 million out of its 500 million act
   members access the social network on mobile devices, operated by more than 200 mobile
   operators in 60 countries.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/star-trek-communicator.jpg" alt="The Future of Phones - Supercomputing in your Palm" />
+<div class="figure"><img src="/static/2010/09/star-trek-communicator.jpg" alt="The Future of Phones - Supercomputing in your Palm" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/mhaithaca/4832279297/">Mark H. Anbinder</a></cite></p>
 <p class="caption"><em class="title">The Future of Phones</em>In your hands.</p>
 </div>

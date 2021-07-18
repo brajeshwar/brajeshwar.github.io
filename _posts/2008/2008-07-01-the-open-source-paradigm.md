@@ -32,7 +32,7 @@ excerpt: There is a lot of information present in bits and nibbles over the web,
   needed for now is an approach, a paradigm to get a neat interface and logical relationship
   to the vast and rich mine of free information.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/brainstorm.jpg" alt="Brainstorm" />
+<div class="figure"><img src="/static/2008/07/brainstorm.jpg" alt="Brainstorm" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://www.tucson-jug.org/">Tucson JUG</a></cite></p>
 <p class="caption"><em class="title">Brainstorm</em>Let's discuss.</p>
 </div>

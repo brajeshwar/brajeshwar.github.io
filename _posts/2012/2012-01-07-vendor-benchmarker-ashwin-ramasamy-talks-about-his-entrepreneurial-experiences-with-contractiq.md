@@ -32,7 +32,7 @@ author:
   last_name: Wilding
 permalink: "/2012/vendor-benchmarker-ashwin-ramasamy-talks-about-his-entrepreneurial-experiences-with-contractiq/"
 ---
-<p><a href="http://contractiq.com/"><img src="{{ site.baseurl }}/assets/2012/01/contractiq.png" alt="ContactIQ" class="alignright" /></a></p>
+<p><a href="http://contractiq.com/"><img src="/static/2012/01/contractiq.png" alt="ContactIQ" class="alignright" /></a></p>
 <p>Ever had a new vendor let you down? Had trouble finding a company that does/sells X? Then ContractIQ has got your back. ContractIQ is a fresh new start-up matching the Small and Medium Enterprise space with top-of-their-class service providers.</p>
 <p>With a continually updated list of benchmarked vendors ContractIQ advises SME business on their vendor selection -- empowering them to make  valuable growth-oriented decisions. </p>
 <p>I got the chance to interview the brain behind the brainchild, Ashwin&nbsp;Ramasamy -- founder of <a href="http://contractiq.com/">ContractIQ</a> and graduate of&nbsp;the <a href="http://fi.co/">Founder Institute</a>. After lead roles in several startups, and now ContractIQ, Ashwin is in a great spot to offer advice to entrepreneurs-to-be, so I asked him about ContractIQ and his entrepreneurial experiences.</p>

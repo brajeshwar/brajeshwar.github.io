@@ -29,7 +29,7 @@ excerpt: Many big corps support Free and Open Source Software in different ways.
   strictly business, just that the company doesn't need to burn down half the Amazon
   Rainforest to do it.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/09/march-of-the-free-software.jpg" alt="The Free Software Movement" />
+<div class="figure"><img src="/static/2008/09/march-of-the-free-software.jpg" alt="The Free Software Movement" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/savatheaggie/2726967657/">SaveTheAggie</a></cite></p>
 <p class="caption"><em class="title">Penguin March</em>The Free Software Movement</p>
 </div>

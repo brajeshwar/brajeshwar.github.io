@@ -35,7 +35,7 @@ excerpt: There would have been one or more reasons which would have tempted each
   turned out to be Linux professionals, while others would still be struggling with
   what's good and what's perfect.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/09/linux-5-practices.png" alt="Practice: The sole key to perfection" />
+<div class="figure"><img src="/static/2008/09/linux-5-practices.png" alt="Practice: The sole key to perfection" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/gruppo_operativo_linux_empoli/1798160879/">Gruppo Operativo Linux Empoli</a></cite></p>
 <p class="caption"><em class="title">Practice</em>The sole key to perfection</p>
 </div>

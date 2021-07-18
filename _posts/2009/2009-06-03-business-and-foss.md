@@ -34,7 +34,7 @@ excerpt: Back at a conference, someone said, "There are no free lunches." I agre
   But how about paying a small amount and you get to have the lunch and dessert as
   an assortment? Above that, you're entertained as a privileged guest.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/foss-business.jpg" alt="Are you a blogger, startup, SME? How about FOSS?" />
+<div class="figure"><img src="/static/2009/06/foss-business.jpg" alt="Are you a blogger, startup, SME? How about FOSS?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/ajabogado/3088794387/ T">Andrew Abogado</a></cite></p>
 <p class="caption"><em class="title">FOSS</em>Are you a blogger, startup, SME? How about FOSS?</p>
 </div>

@@ -27,7 +27,7 @@ author:
   last_name: Mukherjee
 permalink: "/2012/adobe-offers-cloud-storage-plus-monthly-subscription/"
 ---
-<figure><a href="http://www.adobe.com/products/creativecloud.html"><img src="{{ site.baseurl }}/assets/2012/02/adobe-creative-cloud.jpg" alt="Adobe Creative Cloud" /></a><br />
+<figure><a href="http://www.adobe.com/products/creativecloud.html"><img src="/static/2012/02/adobe-creative-cloud.jpg" alt="Adobe Creative Cloud" /></a><br />
 <figcaption>Adobe Creative Cloud is a creative hub where you can explore, create, publish, and share your work using Adobe Creative Suite desktop applications, Adobe Touch Apps, and services together for a complete ideation-to-publishing experience. (source : <a href="http://www.adobe.com/products/creativecloud.html">Adobe</a>)</figcaption>
 </figure>
 <p>Over the years Adobe has pioneered in offering excellent design tools. Applications released by Adobe are integral part of all kinds of computer users worldwide. Adobe has introduced excellent tools that can be used to create stunning visuals by including not only text but also photos and animations.</p>

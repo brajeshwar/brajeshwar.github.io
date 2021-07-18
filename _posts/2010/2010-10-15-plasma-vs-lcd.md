@@ -31,7 +31,7 @@ permalink: "/2010/plasma-vs-lcd/"
 excerpt: Both, LCD and Plasma are two competing technologies. One needs to identify
   the use case before deciding to buy any of these.
 ---
-<p><img src="{{ site.baseurl }}/assets/2010/10/plasma-vs-lcd-comic.jpg" alt="Plama vs LCD" /></p>
+<p><img src="/static/2010/10/plasma-vs-lcd-comic.jpg" alt="Plama vs LCD" /></p>
 <p>It has been a few years since entertainment at home has changed gears. Some of the reasons may possibly include - technology getting cheap and markets getting flooded with options. Festive seasons create good buying pockets as well! However, there are myths which are yet to be answered for people who wish to buy their next TV and are not sure of what shall be their best buy!</p>
 <p>For some people, it is a daunting task trying to choose between a plasma television and an LCD. Color rich plasma televisions with high degrees of contrast cannot miss the eye of any buyer. On the other hand, we have the LCD, always changing for the better. The next generation of televisions, the LED TV, is lighter and extremely thin with bright crystal clear images. They are however LCD HDTVs that use an LED backlight instead of a conventional fluorescent one. The question is, which one should one go for?</p>
 <h3>Contrast</h3>

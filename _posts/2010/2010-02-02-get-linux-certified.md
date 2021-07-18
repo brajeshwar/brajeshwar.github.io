@@ -29,7 +29,7 @@ excerpt: Linux is an OS that conjures up images of computer nerds hunched over t
   source and free software for all. Get Linux certified and wear that badge proudly
   on your chest!
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/02/linux-certified.png" alt="Get Linux Certified" />
+<div class="figure"><img src="/static/2010/02/linux-certified.png" alt="Get Linux Certified" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite>Anonymous</cite></p>
 <p class="caption"><em class="title">Linux</em>Get Cerfified.</p>
 </div>

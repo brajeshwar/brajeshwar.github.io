@@ -25,7 +25,7 @@ author:
   last_name: Oinam
 permalink: "/2011/adobe-indias-social-initiatives/"
 ---
-<figure><a href="http://www.flickr.com/photos/brajeshwar/sets/72157627188858313/" title="Renaun Erickson &amp; Duane Nickull at the Adobe Bloggers' Social"><img src="{{ site.baseurl }}/assets/2011/08/5989976150_6fa79f8bc0_z.jpg" alt="Renaun Erickson &amp; Duane Nickull" /></a><br />
+<figure><a href="http://www.flickr.com/photos/brajeshwar/sets/72157627188858313/" title="Renaun Erickson &amp; Duane Nickull at the Adobe Bloggers' Social"><img src="/static/2011/08/5989976150_6fa79f8bc0_z.jpg" alt="Renaun Erickson &amp; Duane Nickull" /></a><br />
 <figcaption>Renaun Erickson &amp; Duane Nickull at the Adobe Bloggers' Social</figcaption>
 </figure>
 <p>Adobe has always been social and have spear-headed many ways to interact intimately and directly with developers, designers and its users in general. Community engagements was one of the strong point of erstwhile Macromedia and it has sipped down to Adobe in many ways.</p>

@@ -30,7 +30,7 @@ excerpt: Why do CEOs leave the company that they've created and raised money for
   Many CEOs are serial entrepreneurs and prefer starting companies, not running them
   after they become larger and more successful.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/01/vc-change.png" alt="VC - Change everything about yourself" />
+<div class="figure"><img src="/static/2008/01/vc-change.png" alt="VC - Change everything about yourself" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite>Anonymous</cite></p>
 <p class="caption"><em class="title">VC</em>Change everything about yourself!</p>
 </div>

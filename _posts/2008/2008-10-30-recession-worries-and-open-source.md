@@ -37,7 +37,7 @@ excerpt: The Great October Crash 08 is one of the most important events for all 
   and financiers across the globe to study and understand the implications on various
   other sectors of businesses.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/recession-phil-gramm.jpg" alt="Recession: Okay, so it does have something to do with mental abilities!" />
+<div class="figure"><img src="/static/2008/10/recession-phil-gramm.jpg" alt="Recession: Okay, so it does have something to do with mental abilities!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/tonythemisfit/2657608264/">Tony the Misfit</a></cite></p>
 <p class="caption"><em class="title">Recession</em>Okay, so it does have something to do with mental abilities!</p>
 </div>

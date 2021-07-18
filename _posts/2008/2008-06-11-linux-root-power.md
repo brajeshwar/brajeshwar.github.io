@@ -32,7 +32,7 @@ excerpt: "'Root' is the default name for system administrator in a *NIX system -
   a super user who can do anything and everything within the operating system."
 ---
 <p>After our previous recitation -- <a href="http://www.brajeshwar.com/2008/filesystem-file-organization-in-linux/">Filesystem and File Organization in Linux</a> -- we hope the picture of the complete Linux file system would be resident in your minds. We are now equipped enough to try our hands on the beautiful operating system - Linux. But before we take you to the next stage, a very old saying boggled my mind - <em>look before you leap</em>!</p>
-<p><img src="{{ site.baseurl }}/assets/2008/06/linux-root-power.png" alt="The power of root in Linux" class="alignright" /></p>
+<p><img src="/static/2008/06/linux-root-power.png" alt="The power of root in Linux" class="alignright" /></p>
 <p>Let us go a little deep about the access privileges and rights which a root user has on a Linux system. <strong>Root</strong> is the default name for system administrator in a *NIX system - a super user who can do anything and everything within the operating system. As a result, root login should be used with special care. While working with a root login, we can end up doing a lot of harm to our system as well as the data, accidentally.</p>
 <p><strong>Need for the root account</strong></p>
 <p>Root login is required to perform actions which change the settings for all system-wide users or to modify the users' accounts. We shall also have to use the root account for certain system operations.</p>

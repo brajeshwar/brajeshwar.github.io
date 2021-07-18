@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2011/kill-a-background-app-in-ios/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2011/11/ios-multi-task-terminate.jpg" alt="Manually terminate a task in iOS" /></p>
+<p><img src="/static/2011/11/ios-multi-task-terminate.jpg" alt="Manually terminate a task in iOS" /></p>
 <p>Perhaps, I'm one of the last few to discover that I can manually terminate an app running in the background in iOS. This is helpful when an app is acting up or not responsive or just want to kill it while testing your app.</p>
 <p><strong>How?</strong></p>
 <p># Double Click/Tab the Home Button.<br />

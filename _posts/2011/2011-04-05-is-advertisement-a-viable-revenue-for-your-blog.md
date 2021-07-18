@@ -28,7 +28,7 @@ author:
   last_name: Mukherjee
 permalink: "/2011/is-advertisement-a-viable-revenue-for-your-blog/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/04/money.jpg" alt="Money" /><br />
+<figure><img src="/static/2011/04/money.jpg" alt="Money" /><br />
 <figcaption>Money (source : <a href="http://www.flickr.com/photos/amagill/3367543296/in/faves-brajeshwar/">Andrew Magill</a>)</figcaption>
 </figure>
 <p>You might think that when you invest in your blog, it would do good if it gave you something in return. We all do. But what do you do when the advertisers make more than your blog? You devise a game-plan!</p>

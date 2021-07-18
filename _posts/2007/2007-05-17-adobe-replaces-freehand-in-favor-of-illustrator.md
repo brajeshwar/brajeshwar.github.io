@@ -30,7 +30,7 @@ excerpt: 'Adobe does not plan to develop and deliver any new feature-based relea
   Adobe will, however, continue to sell FreeHand MX, and will offer technical and
   customer support according to our support policies. '
 ---
-<p><img src="{{ site.baseurl }}/assets/2007/05/adobe-illustrator.jpg" alt="Adobe Illustrator" style="border: 0 none;" /><a href="http://blogs.adobe.com/jnack/">John Nack</a>, Senior Product Manager, Adobe Photoshop wrote that Adobe will be <a href="http://blogs.adobe.com/jnack/2007/05/freehand_no_lon.html">replacing Freehand with Illustrator</a>. Adobe will continue to sell the current version of FreeHand, but will not do any further development and won't release any updates.<br />
+<p><img src="/static/2007/05/adobe-illustrator.jpg" alt="Adobe Illustrator" style="border: 0 none;" /><a href="http://blogs.adobe.com/jnack/">John Nack</a>, Senior Product Manager, Adobe Photoshop wrote that Adobe will be <a href="http://blogs.adobe.com/jnack/2007/05/freehand_no_lon.html">replacing Freehand with Illustrator</a>. Adobe will continue to sell the current version of FreeHand, but will not do any further development and won't release any updates.<br />
 <!--more--><!-- adman --><br />
 Adobe has <a href="http://www.jnack.com/adobe/illustrator/FreeHand_to_Illustrator_Migration_FAQ.pdf">created an FAQ</a> (PDF) that explains the details of the decision not to rev FreeHand, talks about <a href="http://www.adobe.com/products/illustrator/">Illustrator CS3</a> features added to make FreeHand users more comfortable, and more.</p>
 <p><strong>FreeHand Upgrade Path</strong><br />

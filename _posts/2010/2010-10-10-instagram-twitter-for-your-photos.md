@@ -38,7 +38,7 @@ excerpt: Instagram app has a several, Lomo-like 'filters' to add fizz to the sho
   that allows you to share the pictures with Twitter, Facebook, Foursquare, Flickr
   and Tumblr.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/instagram.jpg" alt="Instagram" />
+<div class="figure"><img src="/static/2010/10/instagram.jpg" alt="Instagram" />
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot</abbr> from <cite>Instagram</cite></p>
 <p class="caption"><em class="title">Instagram</em>Fast beautiful photo sharing for your iPhone.</p>
 </div>

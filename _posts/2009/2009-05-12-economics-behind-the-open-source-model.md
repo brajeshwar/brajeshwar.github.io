@@ -32,7 +32,7 @@ permalink: "/2009/economics-behind-the-open-source-model/"
 excerpt: Open Source and Economics are related in a sense that they require time and
   effort to be quantified and measured by both - producers and consumers.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/05/open-source-economics.jpg" alt="Economics and Open Source: Relationships exist everywhere!" />
+<div class="figure"><img src="/static/2009/05/open-source-economics.jpg" alt="Economics and Open Source: Relationships exist everywhere!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/eschipul/156885054/">Eschipul</a></cite></p>
 <p class="caption"><em class="title">Economics and Open Source</em>Relationships exist everywhere!</p>
 </div>

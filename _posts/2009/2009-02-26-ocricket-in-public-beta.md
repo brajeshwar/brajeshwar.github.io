@@ -35,7 +35,7 @@ excerpt: oCricket is a user-focussed site, poised to be an instant reflection of
   cricketing events. Its refreshed, renewed, reengineered and re-everythinged Cricket;
   with an ultimate aim to make it the funnest way to enjoy Cricket.
 ---
-<div class="figure"><a href="http://ocricket.com/"><img src="{{ site.baseurl }}/assets/2009/02/cricket-manuka-oval-in-canberra.jpg" alt="A Cricket Match at the Manuka Oval in Canberra" /></a>
+<div class="figure"><a href="http://ocricket.com/"><img src="/static/2009/02/cricket-manuka-oval-in-canberra.jpg" alt="A Cricket Match at the Manuka Oval in Canberra" /></a>
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/ppym1/314855558/">Prescott</a></cite></p>
 <p class="caption"><em class="title">Cricket</em>Cricket civilises people and creates good gentlemen.</p>
 </div>
@@ -46,7 +46,7 @@ excerpt: oCricket is a user-focussed site, poised to be an instant reflection of
 <p>We wanted a social network but with just Cricket in mind. <a href="http://ocricket.com/">oCricket</a> is geared towards an environment where everybody can contribute, browse through articles, linked write-ups from other sites, photos, videos etc. We loved the idea of users being able to weigh the importance of news and information bits via voting, ability to plug-in their views, comments and discuss on anything about Cricket. oCricket will allows users to interact with one another easily, be social and meet their Cricketing peers online. It will serve as a Social Network site for Cricket.</p>
 <p><strong>What's more?</strong></p>
 <p>oCricket is always in active development and we've plans for some interesting modules for the immediate future. We believe users will find the upcoming modules enjoyable and worthwhile.</p>
-<p><a href="http://www.thinkgeek.com/tshirts-apparel/miscellaneous/af1b/"><img src="{{ site.baseurl }}/assets/2009/02/jedi-robe.jpg" alt="A Jedi Robe" style="border: 0 none; float: right; margin: 0 0 5px 5px;" /></a></p>
+<p><a href="http://www.thinkgeek.com/tshirts-apparel/miscellaneous/af1b/"><img src="/static/2009/02/jedi-robe.jpg" alt="A Jedi Robe" style="border: 0 none; float: right; margin: 0 0 5px 5px;" /></a></p>
 <p><strong>The Team</strong></p>
 <p>Before starting oCricket, I was involved with Mixercast, another Startup that operates in the Media segment, widgets and advertisement.</p>
 <p><a href="http://freegeek.in/blog/">Baishampayan Ghose</a>, is the Computer Nerd who co-founded oCricket.  He uses & writes <a href="http://github.com/ghoseb/">Free and Open Source Software</a>, microblogs on <a href="http://twitter.com/ghoseb/">Twitter</a>. And oh, <a href="http://www.notadouche.com/users/baishampayan_ghose">he is not a douche</a>.</p>

@@ -36,7 +36,7 @@ excerpt: oCricket comes built-in with a Social Networking feature complete with 
   ability to participate in quality assessment of articles, photos, videos, audio
   and other cricket related contents.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/splash-beta-1.jpg" alt="oCricket Beta 1" />
+<div class="figure"><img src="/static/2008/07/splash-beta-1.jpg" alt="oCricket Beta 1" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://ocricket.com/">oCricket</a></cite></p>
 <p class="caption"><em class="title">oCricket</em>A Cricket world for everyone who loves the game.</p>
 </div>

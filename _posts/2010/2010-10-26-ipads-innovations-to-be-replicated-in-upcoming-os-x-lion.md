@@ -32,7 +32,7 @@ permalink: "/2010/ipads-innovations-to-be-replicated-in-upcoming-os-x-lion/"
 excerpt: The iOS software that powers the devices has been so successful that Apple
   is transposing it onto Mac OS X Lion.
 ---
-<figure><img src="{{ site.baseurl }}/assets/2010/10/osx-lion.jpg" alt="Apple OS X Lion" /><br />
+<figure><img src="/static/2010/10/osx-lion.jpg" alt="Apple OS X Lion" /><br />
 <figcaption>Apple OS X Lion (source : <a href="http://www.apple.com/macosx/lion/">Apple</a>)</figcaption>
 </figure>
 <p><!--more--></p>

@@ -35,7 +35,7 @@ excerpt: With the advent of LiveCDs, the perception for Linux has changed quite 
   What was one believed to be a geek's operating system is now being used by school
   kids, doctors and grandpas too!
 ---
-<figure><img src="{{ site.baseurl }}/assets/2008/08/ubuntu-linux-newbie.jpg" alt="Ubuntu Linux: Why Me?" /><br />
+<figure><img src="/static/2008/08/ubuntu-linux-newbie.jpg" alt="Ubuntu Linux: Why Me?" /><br />
 <figcaption>Ubuntu Linux: Why me? (source : <a href="http://www.flickr.com/photos/beckytwinley/2451754919">Rebecca</a>)</figcaption>
 </figure>
 <p>To quench my thirst of experiencing Linux, I started my journey way back in the year 2000 with RedHat 6. It was not a love at first sight and I had to reinstall Windows 2000 on my machine since I was too young to understand the concept of dual-boot! LiveCD was something I never knew in my dreams even! The very thought of messing up my windows installation while trying to get things fixed with Linux haunted me for days.</p>

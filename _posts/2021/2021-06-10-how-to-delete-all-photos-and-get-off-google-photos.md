@@ -25,11 +25,11 @@ Google Photos was the one taking up most of the storage. It wasn't an easy task 
 
 I found a working script for Google Chrome <a href="https://github.com/mrishab/google-photos-delete-tool">Google Photos Delete All Tool</a>, which helped deletion (working version mentioned ahead). Unfortunately, Google Photos web interface seems to update their HTML tag and CSS classes, which no longer worked. I made a tiny tweak in the Button Labels and DELETE duration between actions. Even then, it was not without flaws. It did not work all the time, and I had to tweak/resize the viewport, retry few times, and when it worked, I just let it do its magic. I have a pretty beefy computer (40GB RAM), and I still needed to pick a longer delay between delete cycles.
 
-<img src="{{ site.baseurl }}/assets/2021/06/activity-monitor.png" alt="Activity Monitor" width="2144" height="1436" class="alignnone size-full wp-image-7262" />
+<img src="/static/2021/06/activity-monitor.png" alt="Activity Monitor" width="2144" height="1436" class="alignnone size-full wp-image-7262" />
 
 I sent a <a href="https://github.com/mrishab/google-photos-delete-tool/pull/36">Pull Request</a> to the source. By the time of writing this article, the Pull Request is yet to be honored. The updated script is at <a href="https://github.com/oinam/google-photos-delete-tool">github.com/oinam/google-photos-delete-tool</a>. This works as of JUN 2021.
 
-<img src="{{ site.baseurl }}/assets/2021/06/iMac-40GB-RAM-2019.png" alt="About iMac" width="1396" height="926" class="alignnone size-full wp-image-7267" />
+<img src="/static/2021/06/iMac-40GB-RAM-2019.png" alt="About iMac" width="1396" height="926" class="alignnone size-full wp-image-7267" />
 
 ## Follow the steps to delete your Google Photos.
 
@@ -42,11 +42,11 @@ It will take hours, even days, if you have lots of photos. Let it run. It took m
 
 ## Google One
 
-<img src="{{ site.baseurl }}/assets/2021/06/google-one-storage-management-scaled.jpg" alt="Google One Storage Management" width="1858" height="2560" class="alignnone size-full wp-image-7261" />
+<img src="/static/2021/06/google-one-storage-management-scaled.jpg" alt="Google One Storage Management" width="1858" height="2560" class="alignnone size-full wp-image-7261" />
 
 Clean up at Google One’s Storage isn’t easy either. The hardest ones are going to be the Large Items. I had no idea where the “Large Files” were stored. So, I cannot delete it from the local synced Drive but have to hunt and peck at the <a href="https://one.google.com/storage/management">Google Storage Management</a> Dashboard. Be careful; you might be deleting important files.
 
-<img src="{{ site.baseurl }}/assets/2021/06/google-one-support-india-rbi-e1623319298791.png" alt="Google One Support Chat" width="610" height="808" class="alignnone size-full wp-image-7265" />
+<img src="/static/2021/06/google-one-support-india-rbi-e1623319298791.png" alt="Google One Support Chat" width="610" height="808" class="alignnone size-full wp-image-7265" />
 
 For Google One Subscribers, you do get the opportunity to talk to an actual person from Google Support. From my interaction, I learned that, in India, due to the new Reserve bank of India eMandate, Google can’t automatically charge you for your subscription and change to a different plan. You’ll have to cancel your current subscription and re-subscribe with the desired Plan.
 

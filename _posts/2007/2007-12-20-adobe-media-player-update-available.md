@@ -31,7 +31,7 @@ excerpt: Adobe Media Player lets you watch your favorite shows, anytime, anywher
   content and advertising through a customizable cross-platform player that supports
   both downloaded and streamed media.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/adobe-media-player.jpg" alt="Adobe Media Player" />
+<div class="figure"><img src="/static/2007/12/adobe-media-player.jpg" alt="Adobe Media Player" />
 <p class="credit"><abbr class="type" title="Image">Splash Image</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe Media Player</em>It lets you watch your favorite shows, anytime, anywhere!</p>
 </div>

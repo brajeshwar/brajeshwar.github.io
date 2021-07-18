@@ -34,7 +34,7 @@ excerpt: The key to being successful in the IT industry is interning while still
   technology company that will provide you with the tools and resources you will need
   to build your career.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/open-course.jpg" alt="Open Course" />
+<div class="figure"><img src="/static/2008/10/open-course.jpg" alt="Open Course" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/marcwathieu/2412755417/">Mark Wathieu</a></cite></p>
 <p class="caption"><em>Open Source</em> ... err Open Course!</p>
 </div>

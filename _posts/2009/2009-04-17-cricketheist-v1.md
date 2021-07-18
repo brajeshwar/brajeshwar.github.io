@@ -39,7 +39,7 @@ permalink: "/2009/cricketheist-v1/"
 excerpt: CricketHEIST  - win iPod Shuffles, Nokia XpressMusic, mini-bean-bag et al.
   Sponsored by Cricket Talk.
 ---
-<div class="figure"><a href="http://cricketheist.com/"><img src="{{ site.baseurl }}/assets/2009/04/cricketheist-v1.jpg" alt="CricketHEIST v1.0" /></a>
+<div class="figure"><a href="http://cricketheist.com/"><img src="/static/2009/04/cricketheist-v1.jpg" alt="CricketHEIST v1.0" /></a>
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">CricketHEIST</em>Let's play Cricket.</p>
 </div>

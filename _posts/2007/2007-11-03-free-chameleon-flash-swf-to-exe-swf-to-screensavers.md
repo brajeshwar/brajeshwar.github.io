@@ -34,7 +34,7 @@ permalink: "/2007/free-chameleon-flash-swf-to-exe-swf-to-screensavers/"
 excerpt: Chameleon Flash is a software program that transforms SWF flash projects
   into EXE applications and SCR screensavers with plenty of features.
 ---
-<p><a href="http://www.chameleonflash.com/"><img src="{{ site.baseurl }}/assets/2007/11/chameleon-flash-box.jpg" alt="Chameleon Flash" style="border: 0 none;" /></a>Good news for Flash developers and designers who wish to get <strong>5 FREE</strong> licenses from <a href="http://www.chameleonflash.com/">Chameleon Flash</a>. They've also offered a <a href="http://www.chameleonflash.com/lp_brajeshwar.php">40% Discount</a> on all purchases for brajeshwar.com readers. You can treat this as a Diwali and/or Thanksgiving gift.</p>
+<p><a href="http://www.chameleonflash.com/"><img src="/static/2007/11/chameleon-flash-box.jpg" alt="Chameleon Flash" style="border: 0 none;" /></a>Good news for Flash developers and designers who wish to get <strong>5 FREE</strong> licenses from <a href="http://www.chameleonflash.com/">Chameleon Flash</a>. They've also offered a <a href="http://www.chameleonflash.com/lp_brajeshwar.php">40% Discount</a> on all purchases for brajeshwar.com readers. You can treat this as a Diwali and/or Thanksgiving gift.</p>
 <p>Chameleon Flash is a software program that transforms SWF flash projects into EXE applications and SCR screensavers with plenty of features.</p>
 <p><!--more--><br />
 <strong>How to win the FREE License?</strong></p>

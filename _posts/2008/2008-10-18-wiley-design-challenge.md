@@ -35,7 +35,7 @@ excerpt: Wiley, a leading publisher of Adobe how-to books, is giving you a shot 
   having your design on a nationally published book. Besides the cash prizes, the
   winner's design will be in thousands of bookstores and will appear in national promotions.
 ---
-<div class="figure"><a href="http://www.wileydesignchallenge.com/"><img src="{{ site.baseurl }}/assets/2008/10/wileydesignchallenge.jpg" alt="Wiley Design Challenge" /></a>
+<div class="figure"><a href="http://www.wileydesignchallenge.com/"><img src="/static/2008/10/wileydesignchallenge.jpg" alt="Wiley Design Challenge" /></a>
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite>Wiley</cite></p>
 <p class="caption"><em class="title">Wiley Design Challenge</em>Win your way onto a Wiley Book Cover!</p>
 </div>

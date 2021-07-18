@@ -31,7 +31,7 @@ excerpt: With rich GUI enabled installation procedures and live-CDs, installing 
   popular Linux distro is very easy. Gone are those days when you needed to compile
   the kernel from the source.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/linux.jpg" alt="Linux Distros" /></p>
+<div class="figure"><img src="/static/2008/06/linux.jpg" alt="Linux Distros" /></p>
 <p class="credit"><abbr class="type" title="Wallpaper">Wallpaper</abbr> from <cite><a href="http://coronastx.deviantart.com/art/Linux-where-dreams-come-true-60145977">Deviant Art</a></cite></p>
 <p class="caption"><em>Linux Distros</em>Which one do you have?</p>
 </div>

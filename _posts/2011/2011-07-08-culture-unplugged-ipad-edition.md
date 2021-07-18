@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2011/culture-unplugged-ipad-edition/"
 ---
-<p><a href="http://www.cultureunplugged.com/film_festival_TV/documentary_ipad/"><img src="{{ site.baseurl }}/assets/2011/07/cultureunplugged-ipad.jpg" alt="Culture Unplugged" /></a></p>
+<p><a href="http://www.cultureunplugged.com/film_festival_TV/documentary_ipad/"><img src="/static/2011/07/cultureunplugged-ipad.jpg" alt="Culture Unplugged" /></a></p>
 <p>Culture Unplugged have released their <a href="http://www.cultureunplugged.com/film_festival_TV/documentary_ipad/">iPad Application</a> where you will discover documentaries and films from around the world from film-makers, activists, grassroots-productions and purpose driven institutions.</p>
 <p>This program is brought to you by all participating film-makers, the festival partners and the organizing team around the world, as a philanthropic offering to uplift our collective consciousness.</p>
 <p>The <a href="http://www.cultureunplugged.com/film_festival_TV/documentary_ipad/">iPad Application</a> allows you to watch their TV Channel Live or the recorded version.</p>

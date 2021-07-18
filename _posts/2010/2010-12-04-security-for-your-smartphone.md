@@ -38,7 +38,7 @@ excerpt: The smartphone has today surpassed the PC as the new and true personal 
 <h3>Security</h3>
 <p>Mobile threats are different and Lookout is uniquely designed for smartphones to protect against malware, spyware threats and apps that violate privacy. Lightweight and efficient, <a href="https://www.mylookout.com/">Lookout</a> stays connected to ensure up-to-date, comprehensive protection. Scans can be initiated real-time or scheduled. The Privacy Advisor provides clear insight into which apps access private data like location, messages and personal information, as well as scan every app you download to see what data it accesses. Lookout also allows you to remotely lock your phone from the web if it's lost or stolen and even offers remotely deleting all personal data from it -- including the SD card.</p>
 <p><!--more--></p>
-<p><a href="https://www.mylookout.com/"><img src="{{ site.baseurl }}/assets/2010/12/my-lookout.jpg" alt="Lookout" class="alignright" /></a></p>
+<p><a href="https://www.mylookout.com/"><img src="/static/2010/12/my-lookout.jpg" alt="Lookout" class="alignright" /></a></p>
 <h3>Backup</h3>
 <p>Safe, secure and seamless backup of your mobile data, automatically over the air! Sounds like your wishlist? Lookout has this covered too. Whether you accidentally delete data, your phone is lost, or even if it's destroyed, your data is safe. Schedule automatic backups of your data and access information at anytime online on the Lookout website from where you can save or restore data to a new or existing phone. Photos and call history in addition to contacts can be backed up allowing you can transfer all your data to a new phone with the click of a mouse.</p>
 <h3>Missing Device</h3>

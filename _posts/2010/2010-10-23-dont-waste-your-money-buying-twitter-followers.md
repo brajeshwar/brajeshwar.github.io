@@ -33,7 +33,7 @@ permalink: "/2010/dont-waste-your-money-buying-twitter-followers/"
 excerpt: If the path less traveled were the easy path, all would take it, thus making
   greatness simply average.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/twitter-friends-mosaic.jpg" alt="Twitter Friends Mosaic" />
+<div class="figure"><img src="/static/2010/10/twitter-friends-mosaic.jpg" alt="Twitter Friends Mosaic" />
 <p class="credit"><abbr class="type">Created</abbr> with <cite><a href="http://sxoop.com/twitter/">Twitter Mosaic</a></cite></p>
 <p class="caption"><em class="title">Twitter</em>Friends</p>
 </div>

@@ -34,7 +34,7 @@ excerpt: To be part of the international 'Search for N' treasure hunt, and join 
   from across India, 2 each from these sites -- Techtree, ThinkDigit, Fonearena, Brajeshwar
   and Digital Inspiration.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/nokia-n97-search-12.jpg" alt="Search for N - the Nokia N97" />
+<div class="figure"><img src="/static/2009/06/nokia-n97-search-12.jpg" alt="Search for N - the Nokia N97" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/mythoto/1234638761/">Leonard John Matthews</a></cite></p>
 <p class="caption"><em class="title">Search for N</em>Come, join the hunt. The Nokia N97 can be yours.</p>
 </div>

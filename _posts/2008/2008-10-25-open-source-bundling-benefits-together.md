@@ -35,7 +35,7 @@ excerpt: It is of utmost importance to rule out the notion that Linux is "the la
   thing" and a "prime money saver", but stress on the fact that application in real
   business to streamline the operations is of more significance.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/chris-messina-world-domination.jpg" alt="What makes Chris Messina of Flock to be proud? Open Source!" />
+<div class="figure"><img src="/static/2008/10/chris-messina-world-domination.jpg" alt="What makes Chris Messina of Flock to be proud? Open Source!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/net2/73566129/">Net2Photos</a></cite></p>
 <p class="caption"><em class="title">Open Source!</em>That's what makes <a href="http://factoryjoe.com/">Chris Messina</a> (guy behind Flock) proud!</p>
 </div>

@@ -33,7 +33,7 @@ excerpt: The Linux Netbooks are cheap, simple and small -- just apt for performi
   the basic tasks. The future for this next wave of personal technology gadgets is
   simple as it doesn't burn a hole in your pocket and has portability advantages.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/03/linux-netbooks.jpg" alt="Netbooks: Sometimes, small is big!" />
+<div class="figure"><img src="/static/2009/03/linux-netbooks.jpg" alt="Netbooks: Sometimes, small is big!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/albonet/3206411911/">Albonet</a></cite></p>
 <p class="caption"><em class="title">Netbooks</em>Sometimes, small is big!</p>
 </div>

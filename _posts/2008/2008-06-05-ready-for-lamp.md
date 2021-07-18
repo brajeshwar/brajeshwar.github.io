@@ -50,7 +50,7 @@ excerpt: The acronym LAMP refers to a solution stack of software, usually free a
 <p>Even though the originators of these programs did not design them all to work specifically in close co-ordination with each other, the combination has become popular due to their great interoperability and low acquisition cost.</p>
 <p>Let's see what each of them are good at:</p>
 <p><strong>Linux</strong>: It is a free Unix-based operating system which was originally created by Linus Torvalds. Gradually it became a combined effort of the developers around the world. It has been developed under the GNU General Public License and the source code for Linux is freely available to everyone. The operating system is built on a kernel which is released from time to time. The current version being 2.6.22. The kernel forms the core of the Linux system and is the result of one of the largest cooperative software projects ever attempted. I'll discuss the complete kernel development in one of my future posts in this series. There are several reasons for linux being powerful. One of them is the presence of command line interface (CLI) with a distinguished access priviledge between super user(root) and other users.</p>
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/kernel-developer-chart.jpg" alt="" /></p>
+<div class="figure"><img src="/static/2008/06/kernel-developer-chart.jpg" alt="" /></p>
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://www.kroah.com/log/diary/2007_06_25.html">Kroah</a></cite></p>
 <p class="caption"><em>Kernel Developer Chart</em>Have a look at the 40 feet long 2.6.22 kernel developer chart!</p>
 </div>

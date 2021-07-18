@@ -38,7 +38,7 @@ permalink: "/2013/stuck-in-a-rut-heres-5-tips-to-land-your-first-freelancing-gig
 <p>Many people tend to think that freelancing is easy-peasy, that they will just fling their resignation letter into their boss' faces one day with a dramatic monologue to accompany it and ride off into the sunset where the land of milk and honey awaits.</p>
 <p>Reality couldn't be more different. Freelancing is a tough career to break into and quitting your job to freelance full-time is a surefire way to the poorhouse. The smart way to begin working as a freelancer is to quietly stick to your day job and begin on the side. Usually it takes a while before you can earn enough money to dramatically resign from your day job.</p>
 <p><!--more--></p>
-<figure><img src="{{ site.baseurl }}/assets/2013/06/freelancers-coffee-break.jpg" alt="Freelancers" /><br />
+<figure><img src="/static/2013/06/freelancers-coffee-break.jpg" alt="Freelancers" /><br />
 <figcaption>Freelancers taking a break.</figcaption>
 </figure>
 <p><strong>Here are a few tips that could help you speed up the process.</strong></p>

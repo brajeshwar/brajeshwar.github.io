@@ -29,7 +29,7 @@ author:
   last_name: Wilding
 permalink: "/2012/social-folders-share-your-social-content-online/"
 ---
-<p><a href="http://socialfolders.me/"><img src="{{ site.baseurl }}/assets/2012/02/social-folders.png" alt="Social Folders" class="alignright" /></a></p>
+<p><a href="http://socialfolders.me/"><img src="/static/2012/02/social-folders.png" alt="Social Folders" class="alignright" /></a></p>
 <p>Ever get irritated that you can't push/pull content between your computer and your social networks and sort it in handy desktop folders? Instead you have to manually update each as new content is added? <a href="http://socialfolders.me/about-us/">Martin Pannier</a> did. In response he created <a href="http://socialfolders.me/">SocialFolders</a>. </p>
 <p>The SocialFolders app allows you to more easily manage content across your desktop and various social networks.  It allows you to centrally manage your content, including backing up your photos, videos and docs. To put it more succinctly, MASHABLE summed it when they said -- <a href="http://mashable.com/2011/12/15/socialfolders/">SocialFolders Is Like Dropbox for Social Media</a>. If you're not a MASHABLE fan, CNET also puts it simply when they say -- <a href="http://news.cnet.com/8301-19882_3-57343266-250/social-folders-its-photo-stream-for-everything/">It's Photo Stream for everything</a>".</p>
 <p><!--more--></p>
@@ -42,7 +42,7 @@ permalink: "/2012/social-folders-share-your-social-content-online/"
 <p>We started working on SocialFolders in August 2011. Until now it's pretty much been an emotional roller-coaster and we fully expect it to stay that way!</p>
 <h3>What are your biggest challenges as an entrepreneur?</h3>
 <p>One of the biggest challenges of an entrepreneur, on a very high level, is to stay in love with the problem, not the solution. The solution is temporary, the problem will probably always be.</p>
-<p><img src="{{ site.baseurl }}/assets/2012/02/social-folders-img.png" alt="Social Folders" class="alignright" /></p>
+<p><img src="/static/2012/02/social-folders-img.png" alt="Social Folders" class="alignright" /></p>
 <h3>What are your plans, hopes and marketing ideas for the future of SocialFolders?</h3>
 <p>Our plan is to focus aggressively on user acquisition and we hope to reach our first 100k users by June. We think we have a valuable solution to the problem that is the accessing and managing of content on a variety of websites and we want to bring it to as many people as possible!</p>
 <p>We hope to be able to quickly release an API to have partners leverage our sync and file distribution technology to efficiently deliver files to their users computers.</p>

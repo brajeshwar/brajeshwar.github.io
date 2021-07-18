@@ -36,7 +36,7 @@ permalink: "/2011/is-microsoft-a-winner-or-a-loser/"
 <p>Microsoft had recently released many products of which some of them got great applaud from the crowd, but some others didn't make it. You know, it is with all business, when you launch a product not everyone likes it. And not every product you launch goes viral and talked by people.</p>
 <p><!--more--></p>
 <p><em>Let's see a few flops from Microsoft.</em></p>
-<p><img src="{{ site.baseurl }}/assets/2011/05/windows-phone-7.jpg" alt="Windows Phone 7" class="alignright" /></p>
+<p><img src="/static/2011/05/windows-phone-7.jpg" alt="Windows Phone 7" class="alignright" /></p>
 <h3><a href="http://www.microsoft.com/windowsphone/">Windows Phone 7</a></h3>
 <p>A great flop that kept Microsoft's mouth shut about sales since December '10. Even though 1.5 million devices had been shipped, no news on how much sold out. Some of the drawbacks reported with the phone are update problems, bugs in hardware and a reported delay in carrier distribution. The major reason for the failure is that Microsoft did not catch up with the market by releasing any updates; indeed there were zero updates in the first three months while at the same time Apple released six updates in the first three months after the release of iOS.</p>
 <h3>Tablets</h3>
@@ -46,7 +46,7 @@ permalink: "/2011/is-microsoft-a-winner-or-a-loser/"
 <p><em>Let's talk some sweet successes too.</em></p>
 <h3><a href="http://www.bing.com/">Bing</a></h3>
 <p>Yes, Bing is turning out to be a success offlate. The loss is with money, but people seem to love Bing a lot more than earlier. It is slowing creeping high to contribute about 30% of US searches; it was just 10% in 2010. Google seems to have been a little bit disturbed by Bing's growth that it has made some vital changes to its own algorithms.</p>
-<p><img src="{{ site.baseurl }}/assets/2011/05/ie9.jpg" alt="Internet Explorer 9" class="alignright" /></p>
+<p><img src="/static/2011/05/ie9.jpg" alt="Internet Explorer 9" class="alignright" /></p>
 <h3>Internet Explorer 9</h3>
 <p>The old days of complaints about the reliability and speed of IE browser is gone and IE 9 is quick, light and has evolved with great HTML standards far better than ever. A couple of <a href="http://www.microsoft.com/windows/ie/IE9.aspx">exciting features</a> are (a) dynamic jumps where you can navigate directly to specific pages inside a site and (b) the option to save web app launch icons in the taskbar.</p>
 <h3><a href="http://www.xbox.com/en-US/kinect">Kinect</a></h3>

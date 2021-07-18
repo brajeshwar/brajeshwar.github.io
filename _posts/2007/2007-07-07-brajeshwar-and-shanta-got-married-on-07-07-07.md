@@ -4,7 +4,7 @@ title: Brajeshwar and Shanta got married on 07-07-07
 ---
 
 <figure>
-  <img src="/assets/2007/07/brajeshwar-shanta.jpg" alt="Brajeshwar and Shanta">
+  <img src="/static/2007/07/brajeshwar-shanta.jpg" alt="Brajeshwar and Shanta">
   <figcaption>Brajeshwar got married to Shanta on 07-07-07</figcaption>
 </figure>
 

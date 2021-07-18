@@ -34,7 +34,7 @@ excerpt: Business intelligence tools are a type of application software designed
   report, analyze and present data. The toolsread data that have been previously stored,
   often, in a data warehouse or data mart.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/08/open-source-cartoon.png" alt="Open Source" />
+<div class="figure"><img src="/static/2010/08/open-source-cartoon.png" alt="Open Source" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://localityswitch.com/">Locality Switch</a> (Via: Google Images)</cite></p>
 <p class="caption"><em class="title">Open Source BI</em>Are you impressed?</p>
 </div>

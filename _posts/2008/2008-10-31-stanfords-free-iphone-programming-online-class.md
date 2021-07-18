@@ -35,7 +35,7 @@ excerpt: Stanford have a new online class on iPhone Programming using Cocoa Touc
   You will need to have an Intel-based Macintosh in order to take this class. You
   will need to install the iPhone SDK too.
 ---
-<div class="figure"><a href="http://www.stanford.edu/class/cs193p/"><img src="{{ site.baseurl }}/assets/2008/10/iphone-640x340.jpg" alt="Apple iPhone" /></a>
+<div class="figure"><a href="http://www.stanford.edu/class/cs193p/"><img src="/static/2008/10/iphone-640x340.jpg" alt="Apple iPhone" /></a>
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://www.apple.com/">Apple</a></cite></p>
 <p class="caption"><em class="title">iPhone</em>The internet-connected multimedia smartphone designed and marketed by Apple.</p>
 </div>

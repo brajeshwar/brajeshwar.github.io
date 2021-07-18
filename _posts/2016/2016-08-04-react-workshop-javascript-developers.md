@@ -25,7 +25,7 @@ author:
   last_name: Oinam
 permalink: "/2016/react-workshop-javascript-developers/"
 ---
-<p><a href="https://facebook.github.io/react/"><img src="{{ site.baseurl }}/assets/2016/08/react-logo-360x360.png" alt="React" width="360" height="360" class="alignright size-medium wp-image-6844" /></a></p>
+<p><a href="https://facebook.github.io/react/"><img src="/static/2016/08/react-logo-360x360.png" alt="React" width="360" height="360" class="alignright size-medium wp-image-6844" /></a></p>
 <p>The <a href="https://alarisprime.com/">Alaris Prime</a> Team, recently, completed a highly performant re-write of the front end visual layer of Aditya Birla's flagship eCommerce site <a href="http://www.abof.com/">ABOF.com</a>. The team was able to make the site exceptionally fast, even on a low 3G Bandwidth connection in India. The CEO of ABOF happily claims their site is the fastest eCommerce site in India. You can <a href="https://blog.alarisprime.com/e-commerce-case-study-building-faster-listing-pages-on-abof-com-part-1-cb99231a1e8a#.osdykisst">read more</a> about our journey, experience, and our learnings during that 5-month stint with ABOF.</p>
 <p>We believe that it is a good practice to teach others what we experienced. We have decided to do an extensive 2-Day hands-on Workshop on React, for JavaScript Developers - <a href="https://www.meetup.com/design-frontend/events/232127251/">React in-depth for JavaScript Developers</a>.</p>
 <p>Seats are limited to a max of 10 developers. Bring your development friendly computers.</p>

@@ -39,7 +39,7 @@ excerpt: A Linux system, just like any *NIX based system doesn't differentiate b
 <blockquote><p>On a UNIX system, everything is a file; if something is not a file, it is a process.</p></blockquote>
 <p>This statement holds good because there are special kind of files that are more than - just files, say - pipes and sockets, for that matter. But, saying that everything is a file is an acceptable generalization, just for simplicity. A Linux system, just like any *NIX based system doesn't differentiate between a file and a directory, since a directory is just another file which contains names of other files. Applications, programs, documents, services, images and just about everything else on a Linux operating system is a file! Even the input and output devices are considered as files, according to the Linux system.</p>
 <p>In order to manage all these files in an organized and orderly fashion, we think of them in a tree-like structure on the hard disk. We shall now continue to use this image of the directory while we shall peep into the roles of each leaf of the tree. The picture below says it all.</p>
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/linux-file-tree.jpg" alt="Linux Filesystem Basics" /></p>
+<div class="figure"><img src="/static/2008/06/linux-file-tree.jpg" alt="Linux Filesystem Basics" /></p>
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite><a href="http://www.linuxconfig.org/Filesystem_Basics">Linux Config</a></cite></p>
 <p class="caption"><em>Linux Filesystem Basics</em>In Linux, everything is a file.</p>
 </div>

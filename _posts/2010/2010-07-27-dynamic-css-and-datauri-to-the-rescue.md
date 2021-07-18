@@ -32,7 +32,7 @@ excerpt: DataURI is a URI scheme that provides a way to include data in-line in 
   pages as if they were external resources. Data URIs are sometimes called Uniform
   Resource Locators, although they do not actually locate anything remote.
 ---
-<div class="figure"><a href="http://paisa.com/"><img src="{{ site.baseurl }}/assets/2010/07/paisa-com.png" alt="Paisa" /></a>
+<div class="figure"><a href="http://paisa.com/"><img src="/static/2010/07/paisa-com.png" alt="Paisa" /></a>
 <p class="caption"><em class="title">Paisa</em> Consumer Finance Redefined.</p>
 </div>
 <p>Source Files available at Github - <a href="http://github.com/Brajeshwar/datauri-dynamic-css">DataURI and Dynamic CSS</a> (<a href="http://github.com/Brajeshwar/datauri-dynamic-css/archives/master">Download</a>)</p>

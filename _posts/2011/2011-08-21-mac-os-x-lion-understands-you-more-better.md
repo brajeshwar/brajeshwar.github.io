@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2011/mac-os-x-lion-understands-you-more-better/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/08/mac-os-x-lion-knows.jpg" alt="" /><br />
+<figure><img src="/static/2011/08/mac-os-x-lion-knows.jpg" alt="" /><br />
 <figcaption>Mac OS X Lion assigns the right icon for your places.</figcaption>
 </figure>
 <p>Another one of the many finer little details that makes the Mac OS X stand apart from everything else. I was tweaking my screensaver when I noticed that the places mentioned in my iPhoto Album are marked with the right icons.</p>

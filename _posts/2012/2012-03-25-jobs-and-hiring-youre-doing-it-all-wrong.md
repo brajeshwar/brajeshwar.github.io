@@ -34,7 +34,7 @@ permalink: "/2012/jobs-and-hiring-youre-doing-it-all-wrong/"
 ---
 <p>My daughter pulled me out of bed to a lazy Sunday morning and we found one of her small fish dead. Well, she's been frantically waving her 'magic' wand to bring it back to life. She even telephoned the 'fish doctor' asking for help. At last, we agreed to let go of the fish and is being currently coffined in a freezer.</p>
 <p>That was the part of the sad family story. I'm not in a good mood today.</p>
-<figure><img src="{{ site.baseurl }}/assets/2012/03/dying-fish.jpg" alt="Dying Fish" /><br />
+<figure><img src="/static/2012/03/dying-fish.jpg" alt="Dying Fish" /><br />
 <figcaption>A dying fish.</figcaption>
 </figure>
 <p>On the part of the Online World, I was browsing through <a href="http://hackerstreet.in/">Hackerstreet</a>, I stumbled upon few Job Postings (<a href="http://jobs.hasgeek.com/view/tcv8h">Designers</a>, <a href="http://jobs.hasgeek.com/view/mauqj">RubyonRails</a>) and I'm rather amused by the plight of the hiring and recruiting realm of Internet Companies. So, here is my personal opinion about the state of the Companies trying to hire 'ninjas', 'gurus', 'hackers', 'kick-ass' designers, developers and janitors.</p>
@@ -61,7 +61,7 @@ permalink: "/2012/jobs-and-hiring-youre-doing-it-all-wrong/"
 <p>* Ask for Javascript, not jQuery. Any good Javascript Programmer can quickly learn jQuery, Dojo, Closure <del>Clojure</del> or any other framework.<br />
 * Ask for experience with a "Version/Source Control" and not "Git". Git can be taught to any programmer in day or weeks.<br />
 * Most Programmer would have dealt with "AJAX" or "JSON". If not, they're either new, else they can read-up and use it in few days.</p>
-<figure><a href="http://hiringhorror.com/dont-mess-with-the-englineers-bother/"><img src="{{ site.baseurl }}/assets/2012/03/hiring-horror.jpg" alt="Hiring Horror" style="border: 1px solid #777;" /></a><br />
+<figure><a href="http://hiringhorror.com/dont-mess-with-the-englineers-bother/"><img src="/static/2012/03/hiring-horror.jpg" alt="Hiring Horror" style="border: 1px solid #777;" /></a><br />
 <figcaption>We once got an email from a candidate who made our day!</figcaption>
 </figure>
 <h3>Bonus: You can even do it better.</h3>

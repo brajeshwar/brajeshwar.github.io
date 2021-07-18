@@ -31,7 +31,7 @@ permalink: "/2017/product-designers-use-big-data-science-make-durable-products/"
 <p><!--more--></p>
 <blockquote><p>This is where the Big Data comes into the picture through which a functional relationship will be formed between the manufacturer, the products, and the customers; while keeping the relation open-ended and continuous. Big Data, as a whole new revolutionary idea, is going to impact a wide set of industries and product design is not left untouched.</p></blockquote>
 <p>The engineers will start developing communication technologies like the sensors to embedded in the products, and it is estimated that by 2020, around 50 billion devices will be connected to the internet. The new data in product design is valuable as it is provided by the product itself and the value has been exponentially increased when it gets integrated with other forms of data say commodity prices, service histories, inventory locations and traffic patterns.</p>
-<p><img src="{{ site.baseurl }}/assets/2017/07/product-design-900x600.jpg" alt="Product Design" width="600" height="400" class="aligncenter size-large wp-image-6914" /></p>
+<p><img src="/static/2017/07/product-design-900x600.jpg" alt="Product Design" width="600" height="400" class="aligncenter size-large wp-image-6914" /></p>
 <p><em>Here, listed are few ways in which product design, as an industry will be changed while taking Big Data into the picture:</em></p>
 <ol>
 <li>By learning how the customers will use the products, there will be much more data that can help in the customization of the product which will make it better informed and better built. However, the question lies in how to modify the features accordingly based on which features they are commonly using and which features they're ignoring.</li>

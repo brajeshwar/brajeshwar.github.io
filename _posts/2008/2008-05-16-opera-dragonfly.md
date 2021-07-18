@@ -33,7 +33,7 @@ excerpt: Debug JavaScript, inspect CSS and the DOM, and view any errors -- Opera
   makes developing using Opera easier than ever, both on your computer and mobile
   phone.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/05/opera-dragonfly.jpg" alt="Opera Dragonfly" />
+<div class="figure"><img src="/static/2008/05/opera-dragonfly.jpg" alt="Opera Dragonfly" />
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite>Opera</cite></p>
 <p class="caption"><em class="title">Opera Dragonfly</em>Developer Tools to debut Javascript, inspect CSS and the DOM, and view errors.</p>
 </div>

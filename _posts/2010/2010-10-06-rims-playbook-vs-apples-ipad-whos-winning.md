@@ -35,7 +35,7 @@ permalink: "/2010/rims-playbook-vs-apples-ipad-whos-winning/"
 excerpt: Potentially, the one edge that PlayBook could have as against the iPad, is
   the specifications of the PlayBook which apparently looks very striking on paper.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/rim-blackberry-playbook.jpg" alt="RIM BlackBerry PlayBook" />
+<div class="figure"><img src="/static/2010/10/rim-blackberry-playbook.jpg" alt="RIM BlackBerry PlayBook" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://www.rim.com/">RIM</a></cite></p>
 <p class="caption"><em class="title">RIM's PlayBook</em>Competing against the Apple iPad.</p>
 </div>

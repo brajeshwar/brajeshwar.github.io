@@ -43,7 +43,7 @@ permalink: "/2013/use-icon-fonts-right-way/"
 * Have quite a large sets of free and open source Icon Fonts.<br />
 * Allow Base64 Encoding and Embedding Fonts in the CSS.</p>
 <p>IcoMoon  does have the added advantage that you can upload your own custom icons or Icon Fonts to the pool of icons you can work with. For instance, if you have purchased a premium Icon Font and want to use it with other Icon Fonts or you want to include a custom set of artworks as icons for your design project. IcoMoon accepts SVG for such custom Icons.</p>
-<p><img src="{{ site.baseurl }}/assets/2013/09/icomoon-icon-428x600.png" alt="IcoMoon Icon Font" width="428" height="600" class="alignright" /></p>
+<p><img src="/static/2013/09/icomoon-icon-428x600.png" alt="IcoMoon Icon Font" width="428" height="600" class="alignright" /></p>
 <p>Let's take a look at the <a href="http://icomoon.io/app/">IconMoon App</a>. Fontello isn't that different. You should be good with whichever service you choose.</p>
 <h2>Import Icons</h2>
 <p>IcoMoon App allows you to import you own custom icon (SVG) and use it as part of your final Icon Font.</p>

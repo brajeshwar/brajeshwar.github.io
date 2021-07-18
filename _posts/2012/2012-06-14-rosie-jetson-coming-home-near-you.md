@@ -39,7 +39,7 @@ author:
   last_name: Wilding
 permalink: "/2012/rosie-jetson-coming-home-near-you/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2012/06/rosie-jetsons.jpg" alt="Rosie Jetson" width="300" height="500" class="alignright size-full wp-image-7168" /></p>
+<p><img src="/static/2012/06/rosie-jetsons.jpg" alt="Rosie Jetson" width="300" height="500" class="alignright size-full wp-image-7168" /></p>
 <p>If you're anything like me when you were a kid you dreamed that in the not-so-distant future you would be driving around in an anti-gravity car, living in an apartment hovering in a space-age bubble in the sky. Oh and with <a href="http://en.wikipedia.org/wiki/List_of_The_Jetsons_characters#Rosey">Rosie Jetson</a> would be your back-talking robot maid. And if you're like me then you are bitterly disappointed with the present epoch's lack of hover jets. Well, to soothe that bitter sting of disappointment you can comfort yourself with the <a href="http://www.news.cornell.edu/stories/May12/PlacingNewObjects.html">new robotic maid</a> that will hopefully come to market soon.</p>
 <p>Shaking your head in disbelief? You should be because this isn't exactly Rosie-caliber as of yet. The <a href="http://www.popsci.com/technology/article/2011-11/controlled-kinect-new-tele-operated-cleaner-bot-picks-clutter">new robotic droid</a> that could soon be playing Rosie -- or Jeeves -- in homes is programmed to scan a disheveled room, identify objects, and is capable of putting them back in their rightful places.</p>
 <p>In addition to being maids, these drones also have practical applications as warehouse workers, manufacturing line assemblers, auto repair shop lackeys, and other manual labor tasks. </p>

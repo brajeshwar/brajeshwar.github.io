@@ -34,7 +34,7 @@ excerpt: Cappuccino is an open source framework that makes it easy to build desk
   applications that run in a web browser. It is built on top of the likes of JavaScript,
   and implements most of the APIs from GNUstep and Apple's Cocoa frameworks.
 ---
-<p><img src="{{ site.baseurl }}/assets/2008/09/cappuccino-icon.png" alt="Cappuccino" style="float: right;" />The guys from <a href="http://280north.com/">280 North</a> did it again. Earlier, it was the awesome Keynote on the Web -- <a href="http://280slides.com/">280 Slides</a>. Now, its -- <a href="http://cappuccino.org/">Cappuccino</a> -- an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.</p>
+<p><img src="/static/2008/09/cappuccino-icon.png" alt="Cappuccino" style="float: right;" />The guys from <a href="http://280north.com/">280 North</a> did it again. Earlier, it was the awesome Keynote on the Web -- <a href="http://280slides.com/">280 Slides</a>. Now, its -- <a href="http://cappuccino.org/">Cappuccino</a> -- an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.</p>
 <p><strong>280 Slides</strong></p>
 <p>280 Slides enables anyone with a web browser to quickly and easily create beautiful presentations. 280 Slides takes advantage of the web by making it trivial to find and include great media in your presentation. There are also built in advanced features like importing and exporting PowerPoint documents, so your data is always portable.</p>
 <p><strong>Cappuccino</strong></p>

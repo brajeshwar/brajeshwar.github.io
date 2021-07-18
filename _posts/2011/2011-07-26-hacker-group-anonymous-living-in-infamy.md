@@ -32,7 +32,7 @@ author:
   last_name: Wilding
 permalink: "/2011/hacker-group-anonymous-living-in-infamy/"
 ---
-<figure><img src="{{ site.baseurl }}/assets/2011/07/anonymous.jpg" alt="Anonymous Group" /><br />
+<figure><img src="/static/2011/07/anonymous.jpg" alt="Anonymous Group" /><br />
 <figcaption>Anonymous is a group initiating active Civil disobedience and spread through the Internet while staying hidden, representing the concept of many online community users simultaneously existing as an anarchic, digitized global brain. (source : <a href="http://en.wikipedia.org/wiki/Anonymous_(group)">Wikipedia</a>)</figcaption>
 </figure>
 <p>After the long string of successful attacks in 2011, <a href="http://en.wikipedia.org/wiki/Anonymous_(group)">Anonymous</a> will live in infamy. Their most recent attacks on America's 13th largest defense contractor Booz Allen pilfered 90,000 military emails and passwords -- an attack that part of their - <a href="http://thepiratebay.org/torrent/6533009">Military Meltdown Monday</a> campaign, an element of their AntiSec movement. And before that <a href="http://uk.ibtimes.com/articles/179905/20110714/anonymous-hackers-hack-monsanto-confirmed-recent-new-attack-hack-hacked-passwords-security-antisec.htm">their attack</a> on international agri-biotech company <a href="http://www.monsanto.com/">Monsanto</a> led to the release of contact info for 2,500 of Monsanto's employees; in retaliation for their use of Bovine Growth Hormones.</p>

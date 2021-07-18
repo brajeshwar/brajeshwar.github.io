@@ -33,7 +33,7 @@ excerpt: Larry Page and his long-time girlfriend Lucy Southworth are getting mar
   today - 8th December, 2007. Larry's partner, Sergey Brin, got married to Anne Wojcicki
   earlier this year.
 ---
-<figure><img src="{{ site.baseurl }}/assets/2007/12/larry-page-lucy-southworth.jpg" alt="Larry Page and Lucy Southworth" /><br />
+<figure><img src="/static/2007/12/larry-page-lucy-southworth.jpg" alt="Larry Page and Lucy Southworth" /><br />
 <figcaption>Larry Page and Lucy Southworth</figcaption>
 </figure>
 <p>This is pretty old news but people still seem to like them. Larry Page and his long-time girlfriend Lucy Southworth are getting married today - 8th December, 2007.</p>

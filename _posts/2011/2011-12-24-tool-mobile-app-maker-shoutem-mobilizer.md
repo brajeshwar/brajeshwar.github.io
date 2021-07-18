@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2011/tool-mobile-app-maker-shoutem-mobilizer/"
 ---
-<p><a href="http://www.shoutem.com/"><img src="{{ site.baseurl }}/assets/2011/12/shoutem_logo.png" alt="ShoutEm" class="alignright" /></a></p>
+<p><a href="http://www.shoutem.com/"><img src="/static/2011/12/shoutem_logo.png" alt="ShoutEm" class="alignright" /></a></p>
 <p>Mobile application revolution is changing business, social and lifestyle landscape. They complement our online and offline presence and enable us new ways of communication and interaction. They are changing the way we live. They become our lifestyle. Where is your app?</p>
 <p><a href="http://www.shoutem.com/">ShoutEm</a> is tech startup located in New York and creator of ShoutEm Mobilizer &#8211; a Mobile App Maker that enables users easy creation of iPhone, iPad and Android apps. It creating new ways for publishers, organizations and businesses to share their content, message and extend their reach.</p>
 <p>We talked to their CEO Croatian entrepreneur Viktor Marohni&#263; who told us about his entrepreneurial venture into mobile app creating for top smartphone and tablet platforms.</p>

@@ -33,7 +33,7 @@ excerpt: Is just being free and open source the reason for increase in its user 
   as compared to its competitors? May be a better reason can be its competitive advantages
   over others.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/12/linux-run-fast.jpg" alt="Linux: Is it ready to run far and wide?" />
+<div class="figure"><img src="/static/2008/12/linux-run-fast.jpg" alt="Linux: Is it ready to run far and wide?" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/tutuwon/2745902664/">TutuWon</a></cite></p>
 <p class="caption"><em class="title">Linux</em>Is it ready to run far and wide?</p>
 </div>

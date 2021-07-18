@@ -37,7 +37,7 @@ excerpt: Adobe Media Player enables businesses to create, deliver, and monetize 
   player leverages existing Adobe Flash technology and supports downloaded and streamed
   media of up to full-screen HD resolution.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/04/amp.jpg" alt="Adobe Media Player" />
+<div class="figure"><img src="/static/2008/04/amp.jpg" alt="Adobe Media Player" />
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot </abbr> of <cite>AMP</cite></p>
 <p class="caption"><em class="title">Adobe Media Player</em>AMP provides control and flexibility to view what you want, when you want -- online or offline.</p>
 </div>

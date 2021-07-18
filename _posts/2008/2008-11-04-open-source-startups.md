@@ -32,7 +32,7 @@ excerpt: Darwin's Theory of evolution comes into today's scenario when open sour
   on Open Source have a wider reach on the web and thus the wealth creation prospects
   are enormous.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/11/entering-startup.jpg" alt="Entering Startups" />
+<div class="figure"><img src="/static/2008/11/entering-startup.jpg" alt="Entering Startups" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/dierken/948171048/">Dierken</a></cite></p>
 <p class="caption"><em class="title">Open Source Startups</em>Enter here!</p>
 </div>

@@ -33,7 +33,7 @@ excerpt: Last night, we saw people storming onto social networks tweeting, updat
   blogging and doing everything they could to publish even the minuscule detail of
   the device as it got revealed by Apple.
 ---
-<p><a href="http://www.apple.com/ipad/"><img src="{{ site.baseurl }}/assets/2010/01/apple-ipad.jpg" alt="Apple iPad" /></a></p>
+<p><a href="http://www.apple.com/ipad/"><img src="/static/2010/01/apple-ipad.jpg" alt="Apple iPad" /></a></p>
 <p>The wait is over. Steve did his job! After the much hyped event, we have a new product from <a href="http://www.apple.com/">Apple</a>. It's an <a href="http://www.apple.com/ipad/">iPad</a>. Yesterday, we wrote about <a href="http://brajeshwar.wpengine.com/2010/what-to-expect-from-apple-today/">what to expect off the event</a>. Steve Jobs made many souls happy!</p>
 <p>Last night, we saw people storming onto social networks -- <a href="http://search.twitter.com/search?q=ipad">Twitter</a>, Facebook, Blogs and everything else they could to publish even the minuscule detail of the device as it got revealed by Apple. Many blogs were covering the event live via pictures and text updates. It was fascinating to see few blogs did a LIVE coverage without having a live presence at the event! All this indicates how social the brand Apple gets to be, despite their silence on the product until it was finally launched, yesterday.</p>
 <p>Topics like Apple and iPad started to trend within minutes of the launch. Few websites had to face <a href="http://mashable.com/2009/09/09/twitter-down-apple/">downtime</a> as well. Thanks to the enormous load that the social network addicts passed on to them!</p>

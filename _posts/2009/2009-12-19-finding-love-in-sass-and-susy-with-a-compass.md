@@ -46,7 +46,7 @@ excerpt: Compass is a stylesheet authoring tool that uses Sass, which comes with
 * Few introductory Best Practices<br />
 * A working Live Demo</p>
 <p>I won't even talk about their integration with other major Application Servers like Merb, Jekyll, Ruby on Rails, etc. I'll assume a standalone CSS-Project to make it easier for you to start off. Integration is the much easier part.</p>
-<p><img src="{{ site.baseurl }}/assets/2009/12/sass.gif" alt="Sass" style="border: 0 none; float: right; margin: 0 0 0 1em;" /></p>
+<p><img src="/static/2009/12/sass.gif" alt="Sass" style="border: 0 none; float: right; margin: 0 0 0 1em;" /></p>
 <h3>Sass</h3>
 <p>Before going ahead, let me say that I like Nathan Borror's article -- <a href="http://nathanborror.com/posts/2009/nov/30/sass-isnt-me/">Sass isn't for me</a> and the reasoning behind it. Fortunately, Sass is for me and will be for most of you. Of course, i'll tell you how we manage 3000+ lines of CSS codes with Sass without having to scroll much and without having to wait for compass to compile those 'ballooning' 10,000+ lines Sass codes.</p>
 <p>Simply put, Sass helps you write CSS in a different syntax, cascade your way through the styles, and use variables, mixins and nested rules.</p>

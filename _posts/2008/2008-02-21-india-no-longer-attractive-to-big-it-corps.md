@@ -35,7 +35,7 @@ excerpt: India used to be seen as the perfect offshore research and development 
   for global firms seeking to tap its low-cost and supposedly vast engineering talent
   pool to devise products for world markets.
 ---
-<div class="figure"><a href="http://www.flickr.com/photos/brajeshwar/sets/72157603403864264/"><img src="{{ site.baseurl }}/assets/2008/02/indian-it.jpg" alt="" /></a>
+<div class="figure"><a href="http://www.flickr.com/photos/brajeshwar/sets/72157603403864264/"><img src="/static/2008/02/indian-it.jpg" alt="" /></a>
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/brajeshwar/">Brajeshwar</a></cite></p>
 <p class="caption"><em class="title">Indian IT</em>Girls with long and exposed legs are needed to attract people to IT & ITES.</p>
 </div>

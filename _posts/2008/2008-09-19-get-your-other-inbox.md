@@ -34,7 +34,7 @@ excerpt: OtherInbox is the cure for email overload -- it provides consumers with
   coupons and receipts from online purchases so that its easy to find the most interesting
   things and ignore the rest.
 ---
-<div class="figure"><a href="http://beta.otherinbox.com/signup/brajeshwar"><img src="{{ site.baseurl }}/assets/2008/09/other-inbox.png" alt="Other Inbox" /></a>
+<div class="figure"><a href="http://beta.otherinbox.com/signup/brajeshwar"><img src="/static/2008/09/other-inbox.png" alt="Other Inbox" /></a>
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://otherinbox.com/">Other Inbox</a></cite></p>
 <p class="caption"><em class="title">Other Inbox</em>A cure for email overload.</p>
 </div>

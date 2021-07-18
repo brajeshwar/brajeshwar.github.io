@@ -29,7 +29,7 @@ author:
   last_name: Oinam
 permalink: "/2011/pagination-css3-style/"
 ---
-<p><img src="{{ site.baseurl }}/assets/2011/07/css3-paginate-956x600.png" alt="CSS3 Paginate" width="700" height="439" class="alignnone size-large wp-image-7209" /></p>
+<p><img src="/static/2011/07/css3-paginate-956x600.png" alt="CSS3 Paginate" width="700" height="439" class="alignnone size-large wp-image-7209" /></p>
 <p>I was working on a Pagination Template/Module when I came across Premium Pixels' nicely done graphics of a <a href="http://www.premiumpixels.com/freebies/light-and-dark-pagination-psd/">Light and Dark Pagination</a> Module. I really liked it and wanted to do a CSS version of it.</p>
 <p>So, here you go <a href="http://brajeshwar.github.io/paginate/">CSS3 Style Pagination</a> (demo).<br />
 <strong>Fork</strong> the <a href="https://github.com/brajeshwar/paginate">source</a> at Github.<br />

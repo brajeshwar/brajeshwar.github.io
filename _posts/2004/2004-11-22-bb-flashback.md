@@ -35,7 +35,7 @@ excerpt: If you are looking for a nominal cheap solution for software demonstrat
   all the enhanced features of Captivate, then BB FlashBack can prove to be a good
   solution.
 ---
-<p><a href="http://www.bbsoftware.co.uk/bbflashback.aspx"><img src="{{ site.baseurl }}/assets/2004/11/bbflashback.gif" alt="BB Flashback" style="border: 0 none;" /></a>A screen, region recorder, BB FlashBack is a cheaper alternative to <a href="http://www.macromedia.com/software/captivate/" title="Macromedia Captivate">Macromedia Captivate</a>, if you are looking for a nominal cheap solution for software demonstrations, presentations, tutorials and training.</p>
+<p><a href="http://www.bbsoftware.co.uk/bbflashback.aspx"><img src="/static/2004/11/bbflashback.gif" alt="BB Flashback" style="border: 0 none;" /></a>A screen, region recorder, BB FlashBack is a cheaper alternative to <a href="http://www.macromedia.com/software/captivate/" title="Macromedia Captivate">Macromedia Captivate</a>, if you are looking for a nominal cheap solution for software demonstrations, presentations, tutorials and training.</p>
 <p>If you are not really looking for the all the enhanced features of Captivate, then this can prove to be a good solution.</p>
 <p><!--more--></p>
 <p><strong>Some of its main features</strong>:</p>

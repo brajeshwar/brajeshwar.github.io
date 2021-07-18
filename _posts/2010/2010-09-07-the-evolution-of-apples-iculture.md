@@ -34,7 +34,7 @@ permalink: "/2010/the-evolution-of-apples-iculture/"
 excerpt: The ingredients for such a profitable iCulture involve -- innovations that
   generate addiction, youngsters, and frequent technological advancements.
 ---
-<div class="figure"><a href="http://theoatmeal.com/comics/apple"><img src="{{ site.baseurl }}/assets/2010/09/owning-an-apple-product-600x333.png" alt="Owning an Apple Product" /></a>
+<div class="figure"><a href="http://theoatmeal.com/comics/apple"><img src="/static/2010/09/owning-an-apple-product-600x333.png" alt="Owning an Apple Product" /></a>
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite>TheOatMeal</cite></p>
 <p class="caption"><em class="title">Apple </em>Better, and better and better!</p>
 </div>

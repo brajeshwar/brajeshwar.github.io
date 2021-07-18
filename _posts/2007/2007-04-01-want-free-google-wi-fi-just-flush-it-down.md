@@ -26,7 +26,7 @@ excerpt: Google have introduced the Google TiSP (beta), the FREE in-home wireles
   broadband service. Sign up today for the free TiSP self-installation kit (includes
   setup guide, fiber-optic cable, spindle, wireless router and installation CD).
 ---
-<p><img src="{{ site.baseurl }}/assets/2007/04/tisp.jpg" alt="Google TiSP" style="border: 0 none;" />Are you sick of paying for broadband that you have to, well, pay for?</p>
+<p><img src="/static/2007/04/tisp.jpg" alt="Google TiSP" style="border: 0 none;" />Are you sick of paying for broadband that you have to, well, pay for?</p>
 <p>Google have introduced the <a href="http://www.google.com/tisp/">Google TiSP</a> (beta), the FREE in-home wireless broadband service. Sign up today for the free TiSP self-installation kit (includes setup guide, fiber-optic cable, spindle, wireless router and installation CD).</p>
 <p>Google's TiSP in-home wireless broadband is:</p>
 <p># Free, fast and highly reliable<br />

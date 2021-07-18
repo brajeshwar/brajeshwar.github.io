@@ -32,7 +32,7 @@ excerpt: The ratio of the dynamic range of HDR image is higher than the display 
   properties of a regular monitor. Therefore, to make the image fit to the monitor
   and look presentable, it need to be tone mapped.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/10/hdr-golden-gate.jpg" alt="Golden Gate in HDR" />
+<div class="figure"><img src="/static/2010/10/hdr-golden-gate.jpg" alt="Golden Gate in HDR" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/vgm8383/2176897085/">vgm8383</a></cite></p>
 <p class="caption"><em class="title">HDR</em>You need to get few things clear before you shoot.</p>
 </div>

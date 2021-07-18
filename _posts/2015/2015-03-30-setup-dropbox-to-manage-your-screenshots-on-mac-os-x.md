@@ -7,7 +7,7 @@ There are quite a lot of Screenshot management apps for Mac OS X. I like most of
 
 First, enable Dropbox to handle your Screenshots.
 
-<img src="{{ site.baseurl }}/assets/2015/03/dropbox-screenshots-707x600.png" alt="Dropbox Screenshots">
+<img src="/static/2015/03/dropbox-screenshots-707x600.png" alt="Dropbox Screenshots">
 
 Second, drop your OS X screenshots automatically into Dropbox's Screenshot folder.
 
@@ -17,7 +17,7 @@ Second, drop your OS X screenshots automatically into Dropbox's Screenshot folde
 
 Or use a utility such as <a href="http://www.titanium.free.fr/onyx.html" title="OnyX">OnyX</a>
 
-<img src="{{ site.baseurl }}/assets/2015/03/onyx-screenshot-665x600.png" alt="OnyX Screenshot">
+<img src="/static/2015/03/onyx-screenshot-665x600.png" alt="OnyX Screenshot">
 
 I'm guessing you can do this on Windows and Linux too if you can automatically drop your screenshots to the Dropbox/Screenshots folder.
 

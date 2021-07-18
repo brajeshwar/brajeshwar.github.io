@@ -29,7 +29,7 @@ permalink: "/2010/2010-ibm-brings-in-the-revenue/"
 <p>An organization which believes in the value of being dedicated to every client's success now has the chance of cherishing its own success. <a href="http://www.ibm.com/">IBM</a> boasts of high revenue earnings for the year 2010 with an impressive <a href="http://www.businesswire.com/news/home/20101018007069/en/IBM-Reports-2010-Third-Quarter-Results">Q - III Result</a>. These revenues are a result of IBM's fantastic business performers like IBM services, IBM mainframes, IBM analytics, etc.</p>
 <p>The net income as per the company's reports came up to 3.6 billion dollars (2.82 dollar per share on revenue of 24.3 billion dollars) which is apparently 3% above last year's statistics. This has beat Wall Street Journal's expected estimation of 2.75 dollar per share on 24.13 billion dollars. Speaking on the various sources of revenue, IBM CEO Samuel Palmisano said "we grew revenue in our hardware, software and services businesses, expanded margins and again increased earnings per share at double digits."</p>
 <p><!--more--></p>
-<figure><img src="{{ site.baseurl }}/assets/2010/10/ibm-servers.jpg" alt="IBM Blue Gene/P" />The IBM Blue Gene/P<br />
+<figure><img src="/static/2010/10/ibm-servers.jpg" alt="IBM Blue Gene/P" />The IBM Blue Gene/P<br />
 <figcaption> (source : <a href="http://www.flickr.com/photos/argonne/3334947628/">Argonne National Laboratory</a>)</figcaption>
 </figure>
 <h3>The Statistics</h3>

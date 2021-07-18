@@ -40,7 +40,7 @@ excerpt: Comprised of some of the most experienced and visionary investors, exec
   and entrepreneurs in digital media and communications, Velocity Interactive Group
   brings human capital, in addition to financial capital, to their portfolio companies.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2007/12/velocity-ig.jpg" alt="Velocity Interactive Group" />
+<div class="figure"><img src="/static/2007/12/velocity-ig.jpg" alt="Velocity Interactive Group" />
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite>Velocity IG</cite></p>
 <p class="caption"><em class="title">Velocity Interactive Group</em>Comventures merges with Velocity to form the Velocity Interactive Group</p>
 </div>

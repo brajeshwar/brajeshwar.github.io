@@ -32,7 +32,7 @@ excerpt: The Nokia N97 is the latest NSeries flagship phone from Nokia, which is
   towards Internet-savvy users. It features tight integration with the Ovi Store,
   is highly customizable via the "widgets".
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/06/nokia-n97-640.jpg" alt="Nokia N97" />
+<div class="figure"><img src="/static/2009/06/nokia-n97-640.jpg" alt="Nokia N97" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Nokia</cite></p>
 <p class="caption"><em class="title">Nokia N97</em>For the always-on Internet-savvy users.</p>
 </div>

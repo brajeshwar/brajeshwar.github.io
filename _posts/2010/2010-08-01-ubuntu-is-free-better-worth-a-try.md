@@ -30,7 +30,7 @@ permalink: "/2010/ubuntu-is-free-better-worth-a-try/"
 excerpt: It's time for a change. Your computer can be better - it can be fun, fast
   and easier to use.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/08/ubuntu-wallpaper.jpg" alt="Ubuntu" />
+<div class="figure"><img src="/static/2010/08/ubuntu-wallpaper.jpg" alt="Ubuntu" />
 <p class="credit"><abbr class="type" title="Wallpaper">Wallpaper</abbr> from <cite><a href="http://www.hongkiat.com/blog/60-most-execellent-ubuntu-wallpapers/">Hongkiat</a></cite></p>
 <p class="caption"><em class="title">Ubuntu</em>Free and Better. It's worth a try.</p>
 </div>

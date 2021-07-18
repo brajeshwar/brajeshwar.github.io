@@ -40,7 +40,7 @@ excerpt: 'The TATA NEN Hottest Startups Awards are the people''s choice Awards t
   recognize the highest-potential startups in India: young companies with great potential
   to grow; with the ability to change their industries.'
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/cricket-played-everywhere-in-india.jpg" alt="Cricket" />
+<div class="figure"><img src="/static/2008/10/cricket-played-everywhere-in-india.jpg" alt="Cricket" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/4nitsirk/2810747884/">4nitsirk</a></cite></p>
 <p class="caption"><em class="title">Cricket</em>Loved and played everywhere.</p>
 </div>

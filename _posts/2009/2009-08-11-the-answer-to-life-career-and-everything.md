@@ -35,7 +35,7 @@ excerpt: Choosing photography, music or media is still a hobby for many. They're
   to wear an alternate suit, unlike the white collar of a physician or a software
   engineer.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/08/answer-to-life.jpg" alt="Love what you do or do what you love. The choice is yours." />
+<div class="figure"><img src="/static/2009/08/answer-to-life.jpg" alt="Love what you do or do what you love. The choice is yours." />
 <p class="credit"><abbr class="type" title="Love what you do or do what you love. The choice is yours.">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/prakaz/3121920134/">Prakaz</a></cite></p>
 <p class="caption"><em class="title">Love what you do or Do what you love</em>The choice is yours.</p>
 </div>

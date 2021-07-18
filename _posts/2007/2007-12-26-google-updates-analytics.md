@@ -33,7 +33,7 @@ excerpt: Google have introduced the new Analytics and urges the use of the new g
 ---
 <p>Very recently, Google <a href="http://analytics.blogspot.com/2007/12/announcing-new-graphing-tools-gajs.html">announced</a> several updates to Google Analytics including the ability to graph multiple data points at once, 6 additional languages and most importantly the ga.js tracking. Google Analytics was using the urchin.js tag earlier (it will still continue to work sans the new features).</p>
 <p>The new update will be immediately available to all current <strong>Google Analytics</strong> users. The newly introduced 6 language options are -- Thai, Filipino, Indonesian, Czech, Hungarian, and Portuguese (Portugal).</p>
-<p><img src="{{ site.baseurl }}/assets/2007/12/urchin-ga.jpg" alt="New Google Analytics" class="alignright" /></p>
+<p><img src="/static/2007/12/urchin-ga.jpg" alt="New Google Analytics" class="alignright" /></p>
 <p>Google is rolling out the new ga.js page and is the recommended usage for your Google Analytics code. Nonetheless, the old urchin.js will continue to work sans the new features. The new migration will allow you to take advantage of the most up-do-date tracking functionality. This also enables tracking of ecommerce transactions in a more readable way.</p>
 <p><strong>So, what are the changes, benefits of the new codes?</strong></p>
 <p>The Google Analytics tracking code snippet and associated function calls have changed in several important ways;</p>

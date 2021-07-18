@@ -32,7 +32,7 @@ permalink: "/2008/meez-got-a-20000-cash-prize-for-flash-game-developers/"
 excerpt: Making money is hard these days. But for Flash Game Developer, Meez got a
   "Avatar Games Contest" with over $20,000 prize in cash.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/meez.jpg" alt="Meez" />
+<div class="figure"><img src="/static/2008/07/meez.jpg" alt="Meez" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Meez</cite></p>
 <p class="caption"><em class="title">Meez</em>Create your own 3D experience.</p>
 </div>

@@ -27,7 +27,7 @@ author:
   last_name: Oinam
 permalink: "/2011/liveshare-from-cooliris/"
 ---
-<figure><a href="http://www.liveshare.com/#&id=1177907&tab=public"><img src="{{ site.baseurl }}/assets/2011/07/paris-live.jpg" alt="Paris Live" /></a><br />
+<figure><a href="http://www.liveshare.com/#&id=1177907&tab=public"><img src="/static/2011/07/paris-live.jpg" alt="Paris Live" /></a><br />
 <figcaption>LiveShare is a new Photo Sharing Site (source : <a href="http://www.liveshare.com/#&id=1177907&tab=public">Paris Live Pics on Liveshare</a>)</figcaption>
 </figure>
 <p>There seem to be no lack of Photo sharing sites these days. <a href="http://www.liveshare.com/">LiveShare</a> is the newest offering from <a href="http://www.cooliris.com/">Cooliris</a>.  LiveShare is available for your phones (<a href="http://itunes.apple.com/us/app/id383848397?mt=8">iPhone</a>, <a href="http://market.android.com/details?id=com.cooliris.app.liveshare">Android</a> or <a href="http://social.zune.net/redirect?type=phoneApp&id=7daafbde-1f2f-e011-854c-00237de2db9e">Windows 7</a>) and also for the Web. LiveShare is targetted towards get-togethers, parties, sporting events, trips, and other experiences with friends and family, as multiple cameras share into the group photo streams you create.</p>

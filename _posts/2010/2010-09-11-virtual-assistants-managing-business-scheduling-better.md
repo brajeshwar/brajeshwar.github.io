@@ -35,7 +35,7 @@ excerpt: Outsourcing to a virtual assistant will dramatically reduce the time yo
   spend on administrative tasks, and increase the time you can commit to growing your
   business.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/virtual-assistants.jpg" alt="Virtual Assistants" />
+<div class="figure"><img src="/static/2010/09/virtual-assistants.jpg" alt="Virtual Assistants" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://georgiavirtualassistants.com/">GeorgiaVirtualAssistants</a></cite></p>
 <p class="caption"><em class="title">Virtual Assistants </em>Helping you get things done.</p>
 </div>

@@ -38,7 +38,7 @@ excerpt: '"We knew that we had to monitor our enemies. We''ve also come to reali
   that we need to monitor the people who are monitoring them." Well, who''s gonna
   monitor the monitors of the monitors?'
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/08/internet-security.jpg" alt="Internet Security - Are user's privacy at stake?" />
+<div class="figure"><img src="/static/2010/08/internet-security.jpg" alt="Internet Security - Are user's privacy at stake?" />
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://safetyactconsultants.com/">Safety Act Consultants</a></cite></p>
 <p class="caption"><em class="title">Internet Security </em>Are user's privacy at stake?</p>
 </div>

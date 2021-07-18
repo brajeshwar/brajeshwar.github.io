@@ -33,7 +33,7 @@ excerpt: The gaming pundits have already initiated an online discussion about th
   launch of this gaming console which is assumed, would certainly create a platform
   for developers who are likely to form a strong community among themselves.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/game-console.jpg" alt="Gaming Consoles: Add more to your collection!" />
+<div class="figure"><img src="/static/2008/10/game-console.jpg" alt="Gaming Consoles: Add more to your collection!" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/paperghost/2630221269/">PaperGhost</a></cite></p>
 <p class="caption"><em class="title">Gaming Consoles</em>Add more to your collection!</p>
 </div>

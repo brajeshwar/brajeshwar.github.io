@@ -33,7 +33,7 @@ excerpt: Windows OS slides down at nearly 89% of the OS share trend followed by 
   and Linux with nearly 10% and 1% respectively. But these OS are moving aggressively
   towards the mobile market which is their market in real sense.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2009/01/buzzwords-2008.jpg" alt="Buzzwords: A flashback into the previous year." />
+<div class="figure"><img src="/static/2009/01/buzzwords-2008.jpg" alt="Buzzwords: A flashback into the previous year." />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/martincrockett/97335809/">Martinc</a></cite></p>
 <p class="caption"><em class="title">Buzzwords</em>A flashback into the previous year.</p>
 </div>

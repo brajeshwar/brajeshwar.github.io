@@ -36,7 +36,7 @@ excerpt: It's amazing how many people come in and interview for jobs where their
   says they're qualified, but ask them basic questions about how to do things in their
   domain, and they fail.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/interview.jpg" alt="Interview" />
+<div class="figure"><img src="/static/2008/10/interview.jpg" alt="Interview" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/glindsay65/75781708/">GLindsay65</a></cite></p>
 <p class="caption"><em class="title">Interview</em>Talk to your candidate and do an evaluation.</p>
 </div>

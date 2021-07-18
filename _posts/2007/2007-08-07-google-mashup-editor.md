@@ -28,7 +28,7 @@ excerpt: The Google Mashup Editor is an incredibly powerful tool for rapid testi
   or products. It's simple, easy and fun to produce something very quickly, but it
   will be much harder to produce fantastic products.
 ---
-<p><a href="http://www.flickr.com/photos/brajeshwar/sets/72157601274137741/"><img src="{{ site.baseurl }}/assets/2007/08/google-mashup-editor.jpg" alt="Google Mashup Editor" /></a>The <a href="http://www.googlemashups.com/">Google Mashup Editor</a> (GME) allows developers to quickly build and deploy compelling web applications. Besides being able to host your mashups on a sub-domain at googlemashups.com, mashups created with GME can also be published to a hosted environment. GME provides simple tools and features that allow you to create mashups in minutes.</p>
+<p><a href="http://www.flickr.com/photos/brajeshwar/sets/72157601274137741/"><img src="/static/2007/08/google-mashup-editor.jpg" alt="Google Mashup Editor" /></a>The <a href="http://www.googlemashups.com/">Google Mashup Editor</a> (GME) allows developers to quickly build and deploy compelling web applications. Besides being able to host your mashups on a sub-domain at googlemashups.com, mashups created with GME can also be published to a hosted environment. GME provides simple tools and features that allow you to create mashups in minutes.</p>
 <p>Familiarity with XML, Javascript, CSS, HTML is all that you need to start some cool mashups. Of course, the are Javascript API for the advanced developers.</p>
 <p><!--more--><!-- adman --><br />
 <strong>The GME - Editor</strong></p>

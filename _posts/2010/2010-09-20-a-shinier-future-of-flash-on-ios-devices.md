@@ -40,7 +40,7 @@ excerpt: Since Apple has lowered restrictions, Adobe Systems has restarted work 
   the 'Packager' for the iPhone that enables developers to make native iOS apps out
   of Flash programs.
 ---
-<div class="figure"><a href="http://www.adobe.com/products/flash/"><img src="{{ site.baseurl }}/assets/2010/09/adobe-flash-cs5.jpg" alt="Adobe Flash CS5" /></a>
+<div class="figure"><a href="http://www.adobe.com/products/flash/"><img src="/static/2010/09/adobe-flash-cs5.jpg" alt="Adobe Flash CS5" /></a>
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe Flash CS5</em>The industry standard for interactive authoring and delivery of immersive experiences.</p>
 </div>

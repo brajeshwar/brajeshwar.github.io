@@ -30,7 +30,7 @@ excerpt: Anxiety on the part of MySQL users may stem from Sun's success with Jav
   and Solaris. Will MySQL's support for other programming languages and operating
   systems now be given less attention?
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/01/sun-acquires-mysql.jpg" alt="Sun acquires MySQL" />
+<div class="figure"><img src="/static/2008/01/sun-acquires-mysql.jpg" alt="Sun acquires MySQL" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://blogs.mysql.com/">MySQL Blog</a></cite></p>
 <p class="caption"><em class="title">Sun acquires MySQL for $1 billion</em>On 16th Jan, 2008 Sun Microsystems announced plans to acquire MySQL AB</p>
 </div>

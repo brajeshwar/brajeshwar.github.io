@@ -38,7 +38,7 @@ excerpt: Be it Noobs or a geeks - computers are indispensable for either of the 
   The amount of data which resides in the form nibbles and bits is enormous. Backing
   up your data is of prime importance from work/business point of view.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/07/map-on-body.jpg" alt="Backup your data" />
+<div class="figure"><img src="/static/2008/07/map-on-body.jpg" alt="Backup your data" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/dmontesi/136770680/">Daniel Montesinos</a></cite></p>
 <p class="caption"><em class="title">Back-up</em>I wish i could have the data *backed* up as<br />
 easily!</p>

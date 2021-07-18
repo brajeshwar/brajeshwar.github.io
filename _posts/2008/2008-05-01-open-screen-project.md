@@ -49,7 +49,7 @@ excerpt: Adobe's initiative uses Technology and Content Innovators to Drive Cons
   to Adobe Flash technology, accelerating the deployment of content and rich Internet
   applications.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/05/flash-mm-old.jpg" alt="Open Screen Project" />
+<div class="figure"><img src="/static/2008/05/flash-mm-old.jpg" alt="Open Screen Project" />
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Open Screen Project</em>A consistent, more open platform for developers to drive rapid innovation, vastly improving the user experience.</p>
 </div>

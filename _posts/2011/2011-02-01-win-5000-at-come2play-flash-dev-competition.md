@@ -34,7 +34,7 @@ permalink: "/2011/win-5000-at-come2play-flash-dev-competition/"
 2nd Place - $3,000<br />
 3rd Place - $1,250<br />
 4th Place - $750</p>
-<p><a href="http://www.come2play.com/dev_inner.asp?f=1&newsid=727"><img src="{{ site.baseurl }}/assets/2011/02/come2play-contest-2.jpg" alt="Come2Play Flash Dev Competition" class="alignright" /></a></p>
+<p><a href="http://www.come2play.com/dev_inner.asp?f=1&newsid=727"><img src="/static/2011/02/come2play-contest-2.jpg" alt="Come2Play Flash Dev Competition" class="alignright" /></a></p>
 <h3>Contest Genre & Judging:</h3>
 <p>The contest genre is 'Casual Games' and submissions will be judged on the following criteria:</p>
 <p>* Multiplayer playability for new and return players<br />

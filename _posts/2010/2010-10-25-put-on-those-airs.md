@@ -30,7 +30,7 @@ excerpt: The new MacBook Air includes flash storage, 802.11-N Wi-Fi and a Core 2
   Wi-Fi and 30 days on standby time. Weighing in at only 2.3 pounds, it costs between
   $1,000 and $1,600.
 ---
-<figure><img src="{{ site.baseurl }}/assets/2010/10/macbook-air-2010.jpg" alt="Macbook Air" /><br />
+<figure><img src="/static/2010/10/macbook-air-2010.jpg" alt="Macbook Air" /><br />
 <figcaption>Apple's new Macbook Air</figcaption>
 </figure>
 <p>What would happen if a MacBook and an iPad hooked up? One of the most amazing things Apple ever created: it is the new <a href="http://www.apple.com/macbookair/">MacBook Air</a>! These slim beauties include flash storage, 802.11-N Wi-Fi and a Core 2 Duo processor. Apple has increased the size of the Air's battery enabling 5-7 hours of battery life when surfing over Wi-Fi and 30 days on standby time just like the iPad.</p>

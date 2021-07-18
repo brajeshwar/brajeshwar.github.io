@@ -39,7 +39,7 @@ excerpt: It is quite hard to unearth a company that has consistently transformed
   way technology is perceived. Apple is all about arrogant innovations, and may be
   that's what reaps the moolah.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/08/apple-wallpaper.jpg" alt="Apple" />
+<div class="figure"><img src="/static/2010/08/apple-wallpaper.jpg" alt="Apple" />
 <p class="credit"><abbr class="type" title="Wallpaper">Wallpaper</abbr> from <cite><a href="http://www.usingmac.com/2008/6/8/90-more-apple-wallpapers">Using Mac</a></cite></p>
 <p class="caption"><em class="title">Apple</em>The cult in Technology.</p>
 </div>

@@ -30,13 +30,13 @@ author:
   last_name: Oinam
 permalink: "/2013/apply-sourcebits-product-studios/"
 ---
-<p><a href="http://www.sourcebits.com/"><img src="{{ site.baseurl }}/assets/2013/12/sourcebits-logo.png" alt="Sourcebits" width="394" height="197" class="alignright size-full wp-image-6757" /></a></p>
+<p><a href="http://www.sourcebits.com/"><img src="/static/2013/12/sourcebits-logo.png" alt="Sourcebits" width="394" height="197" class="alignright size-full wp-image-6757" /></a></p>
 <p>I have known Rohit Singal for a while though we never met in person until last month, to talk about Sourcebits' new initiative - its innovative <a href="http://www.sourcebits.com/product-studio/">Product Studios</a> model.</p>
 <p><a href="http://www.sourcebits.com/">Sourcebits</a> is one of those rare service companies in India, who can churn out beautifully designed products backed by an equally high calibre of engineering. Their primary focus is in mobile strategy, design & development.</p>
 <p>Sourcebits has done work for giants like GE, SAP, Intel, MIT, P&G, Hershey's and Coca-Cola, as well as emerging technology companies such as Skyfire, Knocking, Peel, TwitPic, CloudOn and Sling Media since 2006.</p>
 <p>In May, 2011, Sourcebits raised $10M from Sequoia Capital and IDG Ventures. They are currently head-quartered in San Francisco with design and development centers in Bangalore (India), Niigata (Japan) and Mexico.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2013/12/sourcebits-product-studio.jpg" alt="sourcebits-product-studio" class="alignnone size-full wp-image-6758" /></p>
+<p><img src="/static/2013/12/sourcebits-product-studio.jpg" alt="sourcebits-product-studio" class="alignnone size-full wp-image-6758" /></p>
 <h2>Product Studios</h2>
 <p>Product Studios is a new business model of how Sourcebits works with clients. They are onto something pretty interesting - building more than just products, they focus on building companies for people with interesting ideas. In exchange for building a talented team and working at cost, Sourcebits receives vested interest in the company.</p>
 <p>Product Studios is a program for entrepreneurs with exciting ideas for a product, that want a technical partner to help with refining the idea, developing the product, bringing it to launch and updating as needed. It is a bridge for entrepreneurs to the booming world of Startups.</p>

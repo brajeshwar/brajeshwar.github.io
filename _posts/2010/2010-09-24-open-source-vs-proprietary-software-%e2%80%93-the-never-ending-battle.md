@@ -32,7 +32,7 @@ excerpt: Open Source provides solutions at the lowest costs possible or at no co
   at all while Proprietary Software promises the provision of the best-in-the-business
   solutions at a higher cost.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2010/09/open-vs-proprietary.gif" alt="Open Source vs Proprietary Software" />
+<div class="figure"><img src="/static/2010/09/open-vs-proprietary.gif" alt="Open Source vs Proprietary Software" />
 <p class="credit"><abbr class="type" title="Cartoon">Cartoon</abbr> by <cite>John Klossner</cite></p>
 <p class="caption"><em class="title">Open Source vs Proprietary Software</em>The never ending Battle</p>
 </div>

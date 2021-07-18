@@ -27,7 +27,7 @@ author:
 permalink: "/2011/infographic-a-guide-to-ux-careers/"
 ---
 <p>Here is a nice <a href="http://www.onwardsearch.com/UX-Career-Guide/">Infographic</a> that provides essential information on the different career opportunities within UX, national benchmarks for UX salaries, the hottest metro areas for UX jobs, and tools of the trade for UX professionals.</p>
-<figure><a href="http://www.onwardsearch.com/UX-Career-Guide/"><img src="{{ site.baseurl }}/assets/2011/08/ux-career-guide-infographic.jpg" alt="An infographic guide to UX careers." /></a><br />
+<figure><a href="http://www.onwardsearch.com/UX-Career-Guide/"><img src="/static/2011/08/ux-career-guide-infographic.jpg" alt="An infographic guide to UX careers." /></a><br />
 <figcaption>A guide to UX Careers (source : <a href="http://www.onwardsearch.com/UX-Career-Guide/">Onward Search</a>)</figcaption>
 </figure>
 <p>Read the related article -- <a href="http://www.onwardsearch.com/careers/user-experience-careers-guide/">User Experience Careers Guide</a>.<br />

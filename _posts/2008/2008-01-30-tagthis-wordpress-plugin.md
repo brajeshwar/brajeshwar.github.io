@@ -57,7 +57,7 @@ excerpt: TagThis is a wordpress plugin that allows the community to appropriatel
   tag your posts. The tags are then added automatically to your post, and helps organize
   your blog.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/01/stationery.jpg" alt="Get your writing gears" />
+<div class="figure"><img src="/static/2008/01/stationery.jpg" alt="Get your writing gears" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/audreyrobowen/382619479/">Audreym</a></cite></p>
 <p class="caption"><em class="title">TagThis</em>An effort to allow collective crowd tagging</p>
 </div>

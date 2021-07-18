@@ -29,7 +29,7 @@ permalink: "/2012/is-the-era-of-tech-blogging-coming-to-an-end/"
 ---
 <p>Statistical trends show that the <a href="http://www.readwriteweb.com/enterprise/2011/12/rip-the-golden-age-of-tech-blo.php">golden age of tech blogging</a> has come to an end. This is almost the end of an era, as the tech blogosphere is over. According to famous tech bloggers analysts, there are some valid <a href="http://www.web-strategist.com/blog/2011/12/27/end-of-an-era-the-golden-age-of-tech-blogging-is-over/">reasons for this change</a> and for the extinction of tech blogging.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2012/01/programmer-coder.jpg" alt="Blogger" /></p>
+<p><img src="/static/2012/01/programmer-coder.jpg" alt="Blogger" /></p>
 <p>Here are few reasons that may be the contributor for the beginning of the end.</p>
 <p># For the last years, there has been much of acquisition of organized blogs (very much similar to news sites) particularly, Techcrunch, which supposedly claimed 10 million per year as annual revenue, was acquired by AOL. These are quite common purchases; as in 2005 AOL had purchased Engadget and Huffington Post in 2011. Many other tech blogs have also being purchased in between. These acquisitions have pressured out the star talent or the team of founders and the corporate teams rise to glory. These acquisitions have also led to the decrease of innovation.<br />
 # The tech blogosphere is witnessing great loss of talents. After the acquisition has happened, many tech blogs such as Read Write Web, Techcrunch and others, have experienced resignation of staff on a large scale. These exits have caused further erosion of tech blogging and many talents have deviated to other business models.<br />

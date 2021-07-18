@@ -42,7 +42,7 @@ permalink: "/2012/facebook-fights-back-against-snooping-employers/"
 <p>In response to employers demanding employees force over their Facebook passwords, Facebook has decided to fight back. But of course they are Facebook. And unsurprisingly, they are fighting back in their typical screw-you-I'm-Facebook style response.</p>
 <p>They released a rather <a href="https://www.facebook.com/notes/facebook-and-privacy/protecting-your-passwords-and-your-privacy/326598317390057">fiery indictment</a> of the workplace practice, saying that it violates not only privacy rights but also Facebook's own constitution of guidelines&mdash;you are not allowed to share or solicit Facebook passwords. They even went so far as to call it criminal, saying companies forcing employees or potential employees to pass over information is a violation. "As a user, you shouldn't be forced to share your private information and communications just to get a job," Facebook said in its <a href="https://www.facebook.com/notes/facebook-and-privacy/protecting-your-passwords-and-your-privacy/326598317390057">post</a>.</p>
 <p><!--more--></p>
-<p><img src="{{ site.baseurl }}/assets/2012/03/facebook-login.jpg" alt="Facebook Login" /></p>
+<p><img src="/static/2012/03/facebook-login.jpg" alt="Facebook Login" /></p>
 <p>Facebook, in their very public release said that this practice affects users, 'friends' of users and employers themselves:</p>
 <p><em>Facebook Users</em></p>
 <p>Facebook users who give out their passwords, coerced or not, violate the mammoth's iron-clad privacy policy and guidelines. It also puts them a difficult place in the workplace, with co-worker 'friends' and could open them up to discrimination based on sensitive information. </p>

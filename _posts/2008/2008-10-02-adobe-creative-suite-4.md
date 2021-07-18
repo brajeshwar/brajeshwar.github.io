@@ -36,7 +36,7 @@ excerpt: Adobe Creative Suite 4 delivers tightly integrated software and service
   that measurably improve productivity and enable you to produce richly expressive
   work in print, web, interactive, video, audio, and mobile.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/10/adobe-cs4.jpg" alt="Adobe Creative Suite 4" />
+<div class="figure"><img src="/static/2008/10/adobe-cs4.jpg" alt="Adobe Creative Suite 4" />
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Adobe CS4</em>Shortcut to Brilliant.</p>
 </div>

@@ -32,7 +32,7 @@ author:
   last_name: Wilding
 permalink: "/2011/new-mobile-real-estate-tool-flaretag-an-interview-with-creator-10-year-nokia-veteran-daniel-arroyo/"
 ---
-<p><a href="http://flaretag.com/"><img src="{{ site.baseurl }}/assets/2011/12/flaretag.png" alt="Flaretag" class="alignright" /></a></p>
+<p><a href="http://flaretag.com/"><img src="/static/2011/12/flaretag.png" alt="Flaretag" class="alignright" /></a></p>
 <p>The smartphone revolution is bringing the power of the internet to our daily lives via the powerful apps that are integrating our online and offline worlds. And those apps are being built by techno-geek-entrepreneurs such as <a href="http://www.danielarroyo.net/">Daniel Arroyo</a>.</p>
 <p>Daniel is a mobile-oriented entrepreneur, and creator of <a href="http://www.flaretag.com/">Flaretag</a> -- "a platform to connect web content with the world around you via your mobile phone". Like many mobile entrepreneurs -- this generation's .com-ists -- Daniel is inventing new and exciting ways of leveraging the internet with alternate devices.</p>
 <p><!--more--></p>

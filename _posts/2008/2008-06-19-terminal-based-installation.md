@@ -36,7 +36,7 @@ excerpt: Generally, a source code comes as a bundle which is a compressed file h
   an extension -- .tar, .tar.gz, .tgz, .tar.bz et al. They are often known as tar
   balls.
 ---
-<div class="figure"><img src="{{ site.baseurl }}/assets/2008/06/linux-music.jpg" alt="Music on Tux" />
+<div class="figure"><img src="/static/2008/06/linux-music.jpg" alt="Music on Tux" />
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/pilax/57002123/">Pilax</a></cite></p>
 <p class="caption"><em class="title">Music on tux</em>Installing a software was never so easy.</p>
 </div>

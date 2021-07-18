@@ -25,7 +25,7 @@ author:
   last_name: Reddy
 permalink: "/2010/notion-ink-adam-home-grown-ipad-killer/"
 ---
-<figure><a href="http://www.notionink.com/"><img src="{{ site.baseurl }}/assets/2010/12/notion-ink-adam.jpg" alt="Notio Ink's Adam" /></a><br />
+<figure><a href="http://www.notionink.com/"><img src="/static/2010/12/notion-ink-adam.jpg" alt="Notio Ink's Adam" /></a><br />
 <figcaption>Notion Ink's Adam</figcaption>
 </figure>
 <p><a href="http://www.notionink.com/">Notion Ink</a> is an Indian startup or should I say upstart who is gunning for the biggest of them all -- <a href="http://www.apple.com/">Apple</a>. In the very spirit of innovation that has led Steve Job to where he is today, founder Rohan Shravan is confident that their first offering is going to blow the competition away. Notion Ink is dedicated to challenge the norm, question existing ideologies of function and form to create a new breed of intelligent, intuitive devices.</p>
