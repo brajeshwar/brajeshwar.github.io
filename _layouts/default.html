@@ -14,11 +14,15 @@
     {%- endif -%}
 </title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
 <style type="text/css">
 {%- capture include_to_scssify -%}
-  {%- include settings.css -%}
-  {%- include base.css -%}
-  {%- include main.css -%}
+  {% include settings.css %}
+  {% include base.css %}
+  {% include main.css %}
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines  -}}
 </style>

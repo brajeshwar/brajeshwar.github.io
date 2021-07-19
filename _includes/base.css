@@ -1,5 +1,5 @@
 html {
-  font-family: var(--sans-font);
+  font-family: 'Merriweather', var(--serif-font);
   font-size: 16px;
 }
 
@@ -54,7 +54,8 @@ header p {
 
 /* Fix header line height when title wraps */
 h1, h2, h3 {
-  font-weight: 600;
+  font-family: 'Playfair Display', var(--sans-font);
+  font-weight: 700;
   line-height: 1.2;
 }
 
