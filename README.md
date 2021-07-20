@@ -10,6 +10,7 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
 
 ## T0D0
 
+[] A solarized-ish color theme -- old books with high contrast for easier reading.
 [] /blog/ design
 [] /archives/ a yearly calendar -ish design?
 [] post-template design
