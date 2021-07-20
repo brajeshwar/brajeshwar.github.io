@@ -1,4 +1,6 @@
 .title {
+  margin: 2rem 0 0;
+  padding: 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -7,11 +9,11 @@
   width: 16rem;
   max-width: 100%;
   height: auto;
-  text-decoration: none;
-}
 
-svg {
-  fill: #fff;
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
 }
 
 .list-reset ul,
