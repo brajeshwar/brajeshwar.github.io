@@ -22,6 +22,7 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
     + standard
     + <picture> that stretches wider than content
     + <figure> image with caption
+[] Search - Algolia
 
 Posts Cleanup
 

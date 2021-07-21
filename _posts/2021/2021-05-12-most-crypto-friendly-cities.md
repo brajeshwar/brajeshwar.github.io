@@ -19,7 +19,7 @@ This unique look uncovered some unexpected cities in both the US and globally.
 
 ## Unexpected US Small Towns Stands Out as Fast Adaptors
 
-Retailers and business owners choosing to install bitcoin ATMs allow locals to both purchase Bitcoin and even withdraw it for cash. It could be said that the higher density of bitcoin ATMs is supportive of a community model that encourages digital transactions on a larger scale. If local residents have the ability to purchase Bitcoin, they then have the power to use a digital wallet to make transactions in other businesses that []accept cryptocurrency for payment](https://brajeshwar.com/2019/should-businesses-accept-cryptocurrencies-an-infographic/).
+Retailers and business owners choosing to install bitcoin ATMs allow locals to both purchase Bitcoin and even withdraw it for cash. It could be said that the higher density of bitcoin ATMs is supportive of a community model that encourages digital transactions on a larger scale. If local residents have the ability to purchase Bitcoin, they then have the power to use a digital wallet to make transactions in other businesses that []accept cryptocurrency for payment](/2019/should-businesses-accept-cryptocurrencies-an-infographic/).
 
 So, it was surprising to see two small towns in the US-led the way when taking a closer look at the density of bitcoin ATMs:
 
@@ -36,4 +36,4 @@ Then there is the unexpected. Like smaller countries such as Slovakia, Slovenia,
 
 To hone in on international cities, the team at moveBuddha looked again at GDP. Looking at the highest concentration of bitcoin ATMs per $10 Billion GDP, the city of Tbilisi, Georgia won the #1 spot with only 23 machines. This is largely due to their status as a major hub for crypto mining thanks to inexpensive hydropower.
 
-[![!Crypto Friendly Cities](/static/2021/05/crypto-friendly-cities-768x7190.jpg "Crypto Friendly Cities")](https://brajeshwar.com/wp-content/uploads/2021/05/crypto-friendly-cities.pdf)
+[![!Crypto Friendly Cities](/static/2021/crypto-friendly-cities.jpg "Crypto Friendly Cities")](/static/2021/crypto-friendly-cities.pdf)
