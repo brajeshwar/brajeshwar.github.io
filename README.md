@@ -12,6 +12,7 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
 
 [] A solarized-ish color theme -- old books with high contrast for easier reading.
 [] /blog/ design
+  - https://www.timble.net/blog/2015/05/better-pagination-for-jekyll/
 [] /archives/ a yearly calendar -ish design?
 [] post-template design
   - Metadata - date
@@ -39,8 +40,8 @@ Posts Cleanup
 [] 2013
 [✓] 2014
 [✓] 2015
-[] 2016
-[] 2017
+[✓] 2016
+[✓] 2017
 [✓] 2018
 [✓] 2019
 [✓] 2020

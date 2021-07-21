@@ -5,7 +5,7 @@ title: DD-WRT, VPN and Apple Airport Routers
 
 Apple's Airport <a href="http://www.apple.com/airport-extreme/">Extreme</a> and <a href="http://www.apple.com/airport-express/">Express</a> are brilliant at what they do. They are secure, yet easy to set up and maintain. Well, you do not need to maintain them - they tend to just keep working. It makes it super easy for an Apple product eco-system to co-exist without much hassle and fuss.
 
-![Airport Wireless)](/static/2016/airport-wireless.jpg)]
+![Airport Wireless)](/static/2016/airport-wireless.jpg)
 
 After many Linksys and D-Link Wi-Fi Routers, I started with the first generation Airpot Express and upgraded to the first <a href="http://www.apple.com/airport-time-capsule/">Airport Time Capsule</a> when it was released in 2008. The time capsule (Airport Extreme with Time Machine enabled Drive) lasted for 5 years and the Airport Express, a little over 6 years. Our current Home Network Setup is powered by an Airport Extreme and few Airport Expresses.
 
@@ -50,9 +50,9 @@ This is your primary network where all your devices are connected. As the Intern
 
 Play around with the Airport Router settings of your choices. However, here are a few key important setups that the Apple Airport Router needs to make it work in this setup;
 
-1. In the <strong>Internet</strong> tab, connect using DHCP so it gets its unique IP from the DD-WRT Router. You can change the DNS server either here or in the DD-WRT router. I kept it at the DD-WRT Router.
-1. Now, <strong>Create a wireless network</strong> with the settings of your choice.
-1. For the most important part, turn the <strong>Router Mode Off (Bridge Mode)</strong>. We're not routing anything with the Apple Airport but merely managing the Wireless Internet Network.
+1. In the <mark>Internet</mark> tab, connect using DHCP so it gets its unique IP from the DD-WRT Router. You can change the DNS server either here or in the DD-WRT router. I kept it at the DD-WRT Router.
+1. Now, <mark>Create a wireless network</mark> with the settings of your choice.
+1. For the most important part, turn the <mark>Router Mode Off (Bridge Mode)</mark>. We're not routing anything with the Apple Airport but merely managing the Wireless Internet Network.
 
 Of course, with Apple rumored to be <a href="https://www.bloomberg.com/news/articles/2016-11-21/apple-said-to-abandon-development-of-wireless-routers-ivs0ssec">abandoning the router business</a>, in future, you can just plug off the Apple Router part and move to your DD-WRT router as the primary network manager.
 
