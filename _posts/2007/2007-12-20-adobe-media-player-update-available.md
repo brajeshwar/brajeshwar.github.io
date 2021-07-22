@@ -37,7 +37,7 @@ excerpt: Adobe Media Player lets you watch your favorite shows, anytime, anywher
 </div>
 <p>Have you been waiting for an update to the Adobe Media Player (the old one stopped working long back)? Well, <a href="http://labs.adobe.com/">Adobe Labs</a> have an update available.</p>
 <p>Download <a href="http://labs.adobe.com/technologies/mediaplayer/">Adobe Media Player</a> now!<br />
-<!--more--><br />
+<br />
 <strong>What is Adobe Media Player?</strong></p>
 <p>Adobe Media Player lets you watch your favorite shows, anytime, anywhere -- while enabling new ways for content businesses to create, deliver, and monetize high-quality content and advertising through a customizable cross-platform player that supports both downloaded and streamed media.</p>
 <blockquote><p>Adobe is driving a fusion of TV and the Internet with Adobe Media Player, Flash Media Server, content protection technologies, and a broad and powerful ecosystem of partners providing key solutions from content creation through delivery and monetization. Adobe Media Player gives the user complete control and flexibility to view what they want, when they want&mdash;online and offline.</p></blockquote>

@@ -37,7 +37,7 @@ excerpt: There is talk of a partnership in the works ... it's safe to say we're 
   the waters and things still have to be worked out.
 ---
 <p>"The Business-Simplified" print version from Hindustan Times - <strong>Mint</strong>, carried an article today of Nokia's skeptical view towards investments in mobile startups. <a href="http://www.brv.com/">BlueRun Ventures</a> is a Menlo Park (CA, USA) and is backed by one of the world's largest handset maker - Nokia. Being backed up Nokia, the viable notion is that they will be more towards mobile and mobile startups but the irony is they are indeed backing away from the mobile sector, specially from startups that targets the mobile value-added services (VAS).<br />
-<!--more--><br />
+<br />
 Senior Investment director of Bluerun Ventures (erstwhile Nokia Venture Partners), Sasha Mirchandani says,</p>
 <blockquote><p>We have consciously decided to stay out of the space, as the current revenue share arrangement (between operators and VAS players) does not offer a viable business proposition.</p></blockquote>
 <p>This is in contrast to the interest shown by most venture capital firms investing in this market, which has resulted in mobile VAS being one of the most heavily funded start-up segments in the last two years. VCs like <a href="http://www.canaanpartners.com/">Canaan Partners</a> (New Delhi) and <a href="http://www.nvp.com/">Norwest Venture Partners</a> (Mumbai) are investing heavily in this sector, citing it as a key focus area for 2008.</p>

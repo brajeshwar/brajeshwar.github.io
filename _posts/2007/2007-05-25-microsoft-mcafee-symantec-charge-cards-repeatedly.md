@@ -28,7 +28,7 @@ excerpt: These days, most antivirus and other security products come with a subs
   out.
 ---
 <p>Few days back, I got one of those usual newsletter from <a href="http://www.windowssecrets.com/">Windows Secrets</a> containing an article attachment on how <a href="http://www.windowssecrets.com/comp/070517/#story1">Microsoft, McAfee, Symantec are charging</a> their customer's credit cards repeatedly.<br />
-<!--more--><br />
+<br />
 Being a story that is controversial in nature, I decided to send them a message back to give me more feedbacks, informations to add credibility to their article's claim. The CEO of Windows Secrets, Brian Livingston, did called me to gave me updates, ways on how one can try out and see the truth behind what they have alleged against the aforementioned companies. He asked me if India have laws for/against Credit Cards Auto-Renewal mechanism - well, we don't have that and the company can charge you after you agree to it.</p>
 <p>Well, I haven't experimented on the subscription renewal thingy out for many reason;</p>
 <p>* I do not have a credit card set aside specific for experiments.<br />

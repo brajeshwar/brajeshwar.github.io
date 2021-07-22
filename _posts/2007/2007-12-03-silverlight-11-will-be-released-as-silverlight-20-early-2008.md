@@ -32,6 +32,6 @@ excerpt: Microsoft still has a long way to go before it even stands a chance of 
   to represent a major step forward for Microsoft.
 ---
 <p>Microsoft said that the next release of the "Silverlight 1.1 beta" is now being prepared for release as "Silverlight 2.0 beta" instead. It should be out somewhere in the first quarter of 2008.<br />
-<!--more--><br />
+<br />
 At the top of the list of new features in the new <a href="http://silverlight.net/">Silverlight</a> 2.0 beta is the ability to develop Silverlight applications using Visual Studio and the .NET Framework.  Unlike Silverlight 1.0, which supports only JavaScript, developers will be able to use core development languages such as C# and Visual Basic.net for coding in Silverlight 2.0.</p>
 <p>Read more about the new version of Silverlight on Microsoft's <a href="http://blogs.msdn.com/tims/archive/2007/11/29/silverlight-1-1-is-now-silverlight-2-0.aspx">Tim Sneath</a>'s Blog.</p>

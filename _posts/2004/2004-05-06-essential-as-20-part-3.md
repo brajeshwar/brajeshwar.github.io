@@ -35,7 +35,7 @@ I started from Part 3 and will go to Part 1 at the end. Well, it is not that I a
 <p>* They're extremely well known and relatively easy to understand.<br />
 * They address event architectures, an important part of OOP that affects nearly every application.<br />
 * They demonstrate tangible, practical ways to develop user interfaces in OOP, which is perhaps the most important aspect of Flash Application development.<br />
-<!--more--><br />
+<br />
 Moock repeats history in easing an average user grasp some intimidating subject. The sample codes will carve a good way in making it easy for most coders to understand and implement the same in Flash Application Development. Personally, I like his avoidance of cliche about Actionscript which sets it apart, making the reading experience a smooth glide (did I say slimmy like the June bug?).<br />
 Order/pre-order your copy through <a href="http://moock.org/eas2/" title="Colin's EAS2 Site">Colin's EAS2 Site</a>. You can read <a href="http://www.macromedia.com/devnet/mx/flash/articles/as2_moock.html" title="">Chapter 2; Object-Oriented Actionscript</a> of the book and read <a href="http://moock.org/eas2/eas2VSasdg.html" title="">how this book differs from AS the definitive guide</a>. Read more about <a href="http://www.oreilly.com/catalog/0596006527/desc.html" title="EAS2 book description">what's in the book</a>.</p>
 <p>References that I wish to bookmark from the book:</p>

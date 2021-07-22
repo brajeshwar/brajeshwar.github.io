@@ -29,7 +29,7 @@ excerpt: Smashing Magazine says my site's design is one of the most beautiful Wo
 <p><img src="/static/2007/03/brajeshwar-7.jpg" alt="Brajeshwar Wordpress Theme" style="border: 0 none;" />I've decided to have a dedicated site for the <a href="http://theme.brajeshwar.com/">Brajeshwar Wordpress Theme</a> as people seem to like this theme. Well, well</p>
 <p>* Smashing Magazine calls it one of the <a href="http://www.smashingmagazine.com/2007/02/09/83-beautiful-wordpress-themes-you-probably-havent-seen/">most beautiful</a> Wordpress themes<br />
 * It is also one of the <a href="http://www.hongkiat.com/blog/49-most-downloaded-wordpress-themes-of-all-time/">top most downloaded</a> Wordpress theme (it will cross <a href="http://themes.wordpress.net/columns/3-columns/735/brajeshwar-v70-1/">10,000 downloads</a> very soon just on wordpress.net).<br />
-<!--more--><br />
+<br />
 DETAILS & DOWNLOADS</p>
 <p>* Demo, Preview, Updates & Releases in the future will be through the <a href="http://theme.brajeshwar.com/">theme site</a><br />
 * I would prefer the downloads from either <a href="http://code.google.com/p/brajeshwar-theme/downloads/list">Google CodeBase</a> or <a href="http://themes.wordpress.net/columns/3-columns/735/brajeshwar-v70-1/">Wordpress Themes</a></p>

@@ -25,7 +25,7 @@ permalink: "/2007/watch-your-steps-before-you-upgrade-to-wordpress-21/"
 ---
 <p>I ran into issues while trying to upgrade a Wordpress 2.0.7 installation to the new "Wordpress 2.1 (Wordpress 2.1)":http://wordpress.org/ release. I was upgrading my "Wordpress Labs Install Module (Wordpress Labs Install Module)":http://labs.brajeshwar.com/wp/ and thus there was no damage done. My test WP install stalled; thus I decided to write this article as a warning to those upgrading to Wordpress 2.1.</p>
 <p>So, here is a mild reminder when you upgrade your Wordpress Install to the "Latest Release (Latest Release)":http://wordpress.org/latest.tar.gz (they have the "Zip (Zip)":http://wordpress.org/latest.zip version too). This article assumes that you have a 2.0.x version of Wordpress already installed; if you're looking for a new installation or the official Wordpress installation guide, please read the "Wordpress Docs (Wordpress Docs)":http://codex.wordpress.org/Main_Page.<br />
-<!--more--><br />
+<br />
 "Wordpress 2.1 (Wordpress 2.1)":http://wordpress.org/development/2007/01/ella-21/ is a brand new package complete with more efficient database code, faster than previous versions, more Ajax. It is also bundled with the powerful anti-spam plugin for Wordpress - "Akismet (Akismet)":http://akismet.com/blog/2007/01/version-20/.</p>
 <p>PRE-UPGRADE CHECKLIST</p>
 <p>Let us be prepared before we upgrade from Wordpress 2.0.x to Wordpress 2.1.</p>

@@ -29,5 +29,5 @@ excerpt: Zinc is the industry leading SWF2EXE application - Create, Build and De
 ---
 <p><img src="/static/2007/05/zinc-mac.jpg" alt="Zinc Mac" style="border: 0 none;" /><a href="http://www.multidmedia.com/">Multidmedia Limited the creators of Flash based development software Zinc released a </a>Press Release stating their welcome embrace of Open Souce Flex, "any step towards supporting the open source community has got to be a step for the good."</p>
 <p><a href="http://www.adobe.com/go/flex/">Flex</a> and <a href="http://www.multidmedia.com/software/zinc/">Zinc</a> work hand in hand; Adobe Flex Builder 2 provides an Eclipse-based environment in which developers can easily create richer, more expressive Rich Internet Applications. Zinc ensures that the {mdm} Script API is available for Flex developers and that Flex projects can easily be deployed as Zinc desktop applications for both Windows and Mac OSX systems.</p>
-<p><!--more--><br />
+<p><br />
 [poll=14]</p>

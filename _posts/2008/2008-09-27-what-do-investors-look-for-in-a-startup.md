@@ -31,7 +31,7 @@ excerpt: It's obvious. It's a tautology. Everybody says it. You have to be worki
   with some of the best people in the industry you're in. You've to have a great team.
 ---
 <p><object width="640" height="525"><param name="movie" value="http://www.youtube.com/v/_BwatxQwgNs&hl=en&fs=1&rel=0&border=1" /><param name="allowFullScreen" value="true" /><embed src="http://www.youtube.com/v/_BwatxQwgNs&hl=en&fs=1&rel=0&border=1" type="application/x-shockwave-flash" allowfullscreen="true" width="640" height="525"></embed></object></p>
-<p><!--more-->A great video Interview with Venture Hacker Naval Ravikant answering the age-old question:</p>
+<p>A great video Interview with Venture Hacker Naval Ravikant answering the age-old question:</p>
 <p><strong>What do you look for in a startup?</strong></p>
 <p>Investors look for two things that are paramount above all:</p>
 <p># <strong>Great team:</strong> It's obvious. It's a tautology. Everybody says it. You have to be working with some of the best people in the industry you're in.<br />

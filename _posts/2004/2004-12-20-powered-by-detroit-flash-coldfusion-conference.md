@@ -25,7 +25,7 @@ permalink: "/2004/powered-by-detroit-flash-coldfusion-conference/"
 ---
 <p>The Conference Program Committee is looking for speakers to share their experience and expertise with peers at The <a href="http://poweredbydetroit.org/" title="Powered by Detroit">Powered by Detroit</a> Flash/Coldfusion Conference.</p>
 <p>In addition to a free conference pass, free accommodations, speakers dinner and more, as a speaker, you will have access to industry experts and networking opportunities. Submissions are being sought from innovative technology thinkers, leading academics, Flash and Coldfusion professionals from across USA and worldwide.<br />
-<!--more--><br />
+<br />
 Ben Forta will be one of the keynote speakers, with many other well known names in the Macromedia community are participating as well: Tim Buntel, Michael Dinowitz, Simon Horwith, Jeffry Houser, Angela Buraglia, Justin Kozuch, Oscar Trellis, Michael Smith, Lawrence Cramer  and others.</p>
 <p>Submit your Speakership Request to info(at)poweredbydetroit(d0t)org  no later than January 15, 2004.</p>
 <p>For those interested in sponsoring at the event, it is still open. Here is a <a href="http://www.brajeshwar.com/events/2005_PoweredByDetroit/PoweredByDetroitSponsorsPackage.pdf" title="Sponsorship Package"> copy of the Sponsorship Package</a> (pdf).</p>

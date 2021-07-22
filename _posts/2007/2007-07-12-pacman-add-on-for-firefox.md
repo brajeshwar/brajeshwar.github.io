@@ -28,6 +28,6 @@ excerpt: Pacman add-on for Firefox is a Pacman-clone and has the ascii look and 
 ---
 <p><a href="https://addons.mozilla.org/en-US/firefox/addon/2053">Pacman add-on for Firefox</a> is a Pacman-clone and has the ascii look and feel of the old golden days. With good retro graphics, nice sound effects and a highscore list, this is one nice relaxer from your browsing routine.</p>
 <p>Once installed, restart Firefox and get it from <em>Tools > Pacman</em>. Press either the <strong>UP</strong> or the <strong>DOWN</strong> arrow to start the game.<br />
-<!--more--><br />
+<br />
 There are 4 different speed settings that work as difficulty levels: slow, normal, fast and insane.</p>
 <p>Via: <a href="http://www.redferret.net/?p=8990">Red Ferret</a> and <a href="http://forevergeek.com/games/play_pacman_in_firefox.php">ForeverGeek</a>.</p>

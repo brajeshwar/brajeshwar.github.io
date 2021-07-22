@@ -30,7 +30,7 @@ Grant Skinner: http://www.mxdu.com/go/speakers/brajeshwar-oinam<br />
 Grant Skinner: (not that I look that much better in mine)<br />
 Brajeshwar: lol</em></p>
 <p>MXDU 2005, besides the main event, something to really watch out for is the Hands On Workshops. This is a practical hands-on workshops presented by world-renowned industry specialists, to be held on 16 February 2005, Day Zero of the Conference.<br />
-<!--more--><br />
+<br />
 Day Zero Agenda</p>
 <p>* Get Ready for Blackstone!<br />
 * Best Practices Pattern-Based AS 2 Dev<br />

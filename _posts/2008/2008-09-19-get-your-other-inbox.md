@@ -38,7 +38,7 @@ excerpt: OtherInbox is the cure for email overload -- it provides consumers with
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite><a href="http://otherinbox.com/">Other Inbox</a></cite></p>
 <p class="caption"><em class="title">Other Inbox</em>A cure for email overload.</p>
 </div>
-<p><!--more--><strong>What is OtherInbox?</strong></p>
+<p><strong>What is OtherInbox?</strong></p>
 <p>OtherInbox is a new way to manage email overload. Many people have their "other inbox", probably a Yahoo or Gmail account that they give out because they don't want receipts, newsletters and social networking notifications to clutter their main email.</p>
 <p>This is where <a href="http://otherinbox.com/">OtherInbox</a> comes in. Instead of just having a single email address such as yourname@gmail.com, each user gets assigned their own domain name such as yourname.otherinbox.com or even a custom domain like yourname.com. Any address @yourname.com goes to your OtherInbox, so you can easily give a different email address to every website.</p>
 <p>In fact, I can have some fancy MX records and setup a smarter way to filter my mails. I can continue to have my primary mails delivered at @brajeshwar.com@ and have my "other inbox" at @vipmails.brajeshwar.com@. So, when a marketer ask for an email, I can give her <code>spamme@vipmails.brajeshwar.com@</code>. And I can do that without me managing it but outsourcing it to <a href="http://otherinbox.com/">OtherInbox</a>.</p>

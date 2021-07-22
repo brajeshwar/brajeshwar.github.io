@@ -45,7 +45,7 @@ excerpt: Google makes it easier for webmasters to place Sitemaps for multiple ho
 <p># The robots.txt for brajeshwar.com would include: @Sitemap: http://www.brajeshwar.com/sitemap-www-brajeshwar.xml@<br />
 # Similarly, the robots.txt for odetoapple.com would include: @Sitemap: http://www.brajeshwar.com/sitemap-www-odetoapple.xml@<br />
 # And for the third one, the robots.txt for blog.oinam.com would include: @Sitemap: http://www.brajeshwar.com/sitemap-blog-oinam.xml@</p>
-<p><!-- adman --></p>
+<p></p>
 <p><em>Here are a few other useful notes about the implementation (from Microsoft)</em></p>
 <p>* robots.txt can have multiple "Sitemap:" references.<br />
 * Limit the size of robots.txt file to less than 1 MB.<br />

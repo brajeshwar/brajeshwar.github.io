@@ -56,7 +56,7 @@ In the right-pane, set "Shutdown: Clear virtual memory pagefile" to "Disabled"</
 \Control Panel<br />
 \Desktop</p>
 <p>"AutoEndTasks" value determines whether user processes end automatically when the user either logs off or shuts down Windows 2000/XP.<br />
-<!--more--><br />
+<br />
 *How to Set the Command prompt default path to a certain directory*</p>
 <p>When you type CMD in the RUN box, you will see a Command Prompt Window defaulting to your user profile home directory (%Userprofile%). If you want to set the default path to a different directory, you may do so by editing the registry.</p>
 <p>Start > Run and type "Regedit"</p>

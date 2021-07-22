@@ -40,7 +40,7 @@ excerpt: Thanks to Christian Cantrell, Mike Chambers, Ben Forta, Jonathan Wall, 
 ---
 <p>MXNA's been a good resource site for Adobe Technology with articles being aggregated from many blogs. However, of late, there were lots of uproar from the community as MXNA wasn't able to withstand the traffic onslaught. It was plagued with regular downtimes and slow in serving the aggregated contents.</p>
 <p>MXNA was started, during the times of <a href="http://fullasagoog.com/">Full as a Goog</a>, by Mike Chambers and Christian Cantrell as a simple aggregation site for Macromedia technology related blogs. My website was lucky to be one of those first few which MXNA aggregated during its early days. With the move to Adobe, MXNA grew tremendously, outgrew its infrastructure and it has been really seeking attention for an improvement.<br />
-<!--more--><br />
+<br />
 Well, thanks to Mike Chambers and the team, we can rejoice again as MXNA is now back on as <a href="http://feeds.adobe.com/">Adobe Feeds</a>.</p>
 <p>Currently, <a href="http://feeds.adobe.com/">Adobe Feeds</a> runs on a new architecture;</p>
 <p>* 1 - Load Balancer<br />

@@ -29,7 +29,7 @@ excerpt: The tip here is an outcome of my tweaking and fooling around with Micro
   for lower version(s) of Outlook.
 ---
 <p>The tip here is an outcome of my tweaking and fooling around with Microsoft Outlook for the past coupla days, and applies aptly to Microsoft Outlook 2003 on Windows XP Professional (because that is what I am running). I did look around for few additional information so that I can give a more better information, like details for lower version(s) of Outlook. This is just a small tip which I wish to remind myself through this article, please search around the Internet, it is flooded with tips and tricks on the similar topic. When I refer to Microsoft Outlook datas here, I am refering to the Mail, Calendar, Notes, Task and all other datas that Outlook handles.</p>
-<p><!--more--><br />
+<p><br />
 How to store Outlook Datas outside its install folder, better even, outside the System Program Install Drive (usually C: for me)?</p>
 <p># Close Outlook if it is opened<br />
 # Start > Control Panel > Mail<br />

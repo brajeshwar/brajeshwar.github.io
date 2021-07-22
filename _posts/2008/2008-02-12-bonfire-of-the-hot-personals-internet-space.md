@@ -42,7 +42,7 @@ excerpt: Hot or Not was acquired for $20 million. WooMe recently got $3 million 
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://www.flickr.com/photos/naixn/2055350268">Naxin</a></cite></p>
 <p class="caption"><em class="title">Live Speed Dating</em>It sure looks like the already <strong>HOT Personals</strong> space on the Internet is becoming more and more hot. Are you prepared to be part of the bonfire?</p>
 </div>
-<p><!--more--><br />
+<p><br />
 <strong>Hot or Not acquired for $20 million</strong></p>
 <p>Early today morning, Techcrunch <a href="http://www.techcrunch.com/2008/02/11/hotornot-apparently-very-hot-acquired-for-20-million/">reported</a> the acquisition of <a href="http://www.hotornot.com/">Hot or Not</a> for a reported sum of $20 million allegedly by people related to <a href="http://www.avidlifemedia.com/">Avid Life Media</a>. 'Hot or Not' was founded by James Hong and Jim Young in October 2000. <strong>Hot or Not</strong> never raised outside funding.</p>
 <p>James Hong confirmed the acquisition to TechCrunch but did not disclosed the price. 'Hot or Not' makes money from advertising, virtual flowers and a premium fee when users want to connect. Their annual revenue is estimated to be around $5 million, with $2 million in profit.</p>
@@ -52,7 +52,7 @@ excerpt: Hot or Not was acquired for $20 million. WooMe recently got $3 million 
 <p><strong>WooMe gets $3 million more funds</strong></p>
 <p>Few days back, there were <a href="http://www.somewhatfrank.com/2008/02/woome-attracts.html">reports</a> of WooMe receiving another $3 million funding. The round was led by Mangrove Capital and included previous investor Atomico and a few others as well.  <a href="http://woome.com/">WooMe</a> is an online speed dating site in the line of <a href="http://www.speeddate.com/">SpeedDate.com</a>.</p>
 <blockquote><p>There are a few things that are nearly guaranteed revenue generators on the Web and obviously online dating is one of them so I am not surprised to see WooMe attracting money like online daters.</p></blockquote>
-<p><!-- adman --></p>
+<p></p>
 <p><strong>Live Speed Dating Valentine's Day Special</strong></p>
 <p>Well, unless you're someone who know about an app I'm involved with, it will be surprising why I should be talking about Personals here on my blog! Here is a quickie --</p>
 <p>Well before Mixercast.com happened to the Oinam Team, we've almost completed an awesome Speed Dating Application built on top of ActionScript 2.0, Flash Communication Server (yes, the first version -- well before the new Flash Media Server) and ColdFusion, complete with our in-house Load Balancer for multiple FCS (it works flawlessly even today, though I would love to lay my hands on Adobe's Flash Media Interactive Server 3).</p>

@@ -53,7 +53,7 @@ excerpt: Adobe's initiative uses Technology and Content Innovators to Drive Cons
 <p class="credit"><abbr class="type" title="Image">Image</abbr> from <cite>Adobe</cite></p>
 <p class="caption"><em class="title">Open Screen Project</em>A consistent, more open platform for developers to drive rapid innovation, vastly improving the user experience.</p>
 </div>
-<p><!--more--><br />
+<p><br />
 Today, Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200804/050108AdobeOSP.html">announced</a> the Open Screen Project and with it came the ultimate good news -- the SWF and FLV/F4V formats are now totally open source. Adobe has dropped the licensing restrictions on the formats. So, not only can you create tools that writes SWFs (this was already open) but now you can create tools that plays the formats back (you no longer need to just rely on the Flash Player).</p>
 <p>The <a href="http://www.adobe.com/openscreenproject/">Open Screen Project</a> initiative by Adobe is supported by a group of industry leaders, including ARM, Chunghwa Telecom, Cisco, Intel, LG Electronics Inc., Marvell, Motorola, Nokia, NTT DoCoMo, Qualcomm, Samsung Electronics Co., Sony Ericsson, Toshiba and Verizon Wireless.</p>
 <p>Well, one of the missing name in the list above is that of <a href="http://www.apple.com/">Apple</a>, which feels that <a href="http://www.brajeshwar.com/2008/flash-on-the-iphone/">Flash is not good enough for the iPhone</a>. It may be remembered that CEO Steve Jobs has publicly criticized Flash for being too slow.</p>

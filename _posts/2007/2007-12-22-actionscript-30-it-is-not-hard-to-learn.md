@@ -31,7 +31,7 @@ excerpt: I regularly hear people claim, incorrectly, that to use ActionScript 3.
   be declared, or everything has to be in packages and classes.
 ---
 <p>O'Reilly <a href="http://digitalmedia.oreilly.com/">Digital Media</a> just released an article from <a href="http://moock.org/">Colin Moock</a> titled "<a href="http://digitalmedia.oreilly.com/2007/12/21/is-actionscript-3-hard-or-not.html">ActionScript 3.0: Is It Hard or Not?</a>".<br />
-<!--more--></p>
+</p>
 <p><em>Here is a warning:</em> This article is best suited for ActionScript Beginners.</p>
 <blockquote><p>I regularly hear people claim, incorrectly, that to use ActionScript 3.0, you have to know object-oriented programming, or every variable's datatype must be declared, or everything has to be in packages and classes. In practice, none of those assertions are true. ActionScript 3.0 code can be placed on timelines, exactly as it was in ActionScript 2.0 and ActionScript 1.0. The code doesn't have to reside in classes. Variable datatypes don't have to be declared, even in the strict compilation mode. The language is designed to provide as much or as little structure and flexibility as the task at hand requires. If you prefer to program procedurally with functions and variables declared in frame scripts, you can continue to do so in ActionScript 3.0.</p></blockquote>
 <p>However true and a good motivational statement for developers who're new to ActionScript, I'd say, "Once you're through with it, curve yourself towards writing ActionScript 3.0 the better and the right way - object-oriented programming, declare every variable's datatype, write package and classes."</p>

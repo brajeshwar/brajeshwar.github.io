@@ -28,7 +28,7 @@ permalink: "/2006/progressive-disclosure-by-jakob-nielsen-usability-expert/"
 <p>Interaction designers face a dilemma:</p>
 <p>* Users want power, features and enough options to handle all of their special needs.<br />
 * Users want simplicity; they don't have time learn a profusion of features in enough depth to select the few that are optimal for their needs.<br />
-<!--more--><br />
+<br />
 Progressive disclosure is one of the best ways to satisfy both of these conflicting requirements. It's a simple, yet powerful idea:</p>
 <p># Initially, show users only a few of the most important options.<br />
 # Offer a larger set of specialized options upon request. Disclose these secondary features only if a user asks for them, meaning that most users can proceed with their tasks without worrying about this added complexity.</p>

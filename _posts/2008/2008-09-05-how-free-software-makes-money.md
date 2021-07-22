@@ -33,7 +33,7 @@ excerpt: Many big corps support Free and Open Source Software in different ways.
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://flickr.com/photos/savatheaggie/2726967657/">SaveTheAggie</a></cite></p>
 <p class="caption"><em class="title">Penguin March</em>The Free Software Movement</p>
 </div>
-<p><!--more-->While Microsoft keeps churning out newer and newer versions of Windows at more and more unreasonable prices, the 'Free Software Movement' marches on. Ever wondered why a perfectly respectable system like Ubuntu Linux ships completely free of cost all the way from Africa?</p>
+<p>While Microsoft keeps churning out newer and newer versions of Windows at more and more unreasonable prices, the 'Free Software Movement' marches on. Ever wondered why a perfectly respectable system like Ubuntu Linux ships completely free of cost all the way from Africa?</p>
 <p>While many people focus on this point, it is actually just a consequence of something else -- Ubuntu is only incidentally free of cost. Good people donate to it and sponsor its shipping costs because they like it. What is so special about Ubuntu? Why is it considered noble to donate to Ubuntu but not Microsoft Windows?</p>
 <p>Ubuntu is "Free Software" or "Software Libre." "Free as in Freedom, Not Cost" which gives us 4 fundamental rights;</p>
 <p># The freedom to run the program, for any purpose.<br />

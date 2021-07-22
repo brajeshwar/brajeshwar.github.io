@@ -43,7 +43,7 @@ excerpt: To sharpen your footage is asking for the camera to compress the input,
 <p>Ribbit Films is the leading supplier of pre-keyed, green screen footage. Mr. Navarre Joseph, president of Ribbit Films, has been instrumental in producing and distributing high level, prepared footage for use in commercials, films, and even online programs such as Flash.</p>
 <p>I'm going to reproduce their submission more or less verbatim.<br />
 <em>Disclaimer:</em> I'm neither endorsing Ribbit Films nor was I paid in any manner for this article.</p>
-<p><!-- adman --></p>
+<p></p>
 <p>One of the biggest problems we see in developing seamless productions, no matter what the medium is with the lighting. With the new software suites and technologies that companies like Adobe are developing, managing the technical aspects of lifting keyed figures out and placing them into a new sequence has become an easy task. So we find ourselves at a place where creating a seamless production is less about technical capability, and more about an eye for detail, design and yes, lighting. </p>
 <p>The good thing is, if you're shooting your own green-screen effects, there are some simple steps you can take to ensure it works with your final production. These are things we do every time we pick up the camera, and they've saved more than one production in the end.</p>
 <p>For a motion design project that requires shooting talent against a green, blue or chroma-key background, you should always be aware that it takes more than good lighting to avoid having your project look like a Monty Python title sequence.</p>

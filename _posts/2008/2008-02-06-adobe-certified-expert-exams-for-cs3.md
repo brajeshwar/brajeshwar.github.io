@@ -50,7 +50,7 @@ excerpt: It can be difficult to get ahead in today's market to stand out and be 
 <p>* Find the right person for the job<br />
 * Quickly assess candidate skill level<br />
 * Invest in, and promote, your most promising employees</p>
-<p><!--more--><!-- adman --></p>
+<p></p>
 <p>There are two types of Adobe Certification;</p>
 <p>1. An <strong>Adobe Certified Expert (ACE)</strong> is a person who has demonstrated proficiency with one or more Adobe software products. To become an ACE, you must pass one or more product-specific proficiency exams and agree to the ACE terms and conditions.</p>
 <p>This has three levels of certification:</p>

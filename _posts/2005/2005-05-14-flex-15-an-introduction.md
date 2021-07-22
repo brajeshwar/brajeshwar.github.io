@@ -47,7 +47,7 @@ or
 or a pre-compiled SWC file
 <mx:application rsl="MyRSL.swc">
 </mx:application></mx:application></mx:application></pre>
-<p><!--more--><br />
+<p><br />
 *Remote Object* allows __Remoting__ in Flex, thus allowing us to call methods on Java Objects that is on a Java Application Server, __e.g.__ "JRun (JRun)":http://www.macromedia.com/go/jrun/, where Flex is running. @RemoteObject@ thus allows us to access JavaBeans including __Plain Old Java Objects__ which are in the web application classpath. The bottomline is, @<mx:remoteobject>@ uses AMF, the encoding used Flash Remoting and as we all know, AMF is way faster and native to the Flash Player than other methods of communication like Web-Services, SOAP.</p>
 <p>*History Manager* is another cool feature that have been pending in Flash for eons and when implemented, we still wished that it to be more better. History Manager allows the back and forward browser buttons to go back or forward to its previous/next states and this works beautifully across most modern standard browsers.</p>
 <p>*Bookmarks* for "Flex (Flex)":http://www.macromedia.com/go/flex/ on "Macromedia (Macromedia)":http://www.macromedia.com/</p>

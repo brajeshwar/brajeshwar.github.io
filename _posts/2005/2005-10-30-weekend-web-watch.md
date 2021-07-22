@@ -34,7 +34,7 @@ permalink: "/2005/weekend-web-watch/"
 <p>* Browse, modify, and import your RSS feeds with our integrated RSS/ATOM feedreader. You can easily import an OPML file as well.<br />
 * Import, download and listen to podcasts without any additional software<br />
 * Check your e-mail on one or many Gmail accounts; stick web notes and weather updates etc.<br />
-<!--more--><br />
+<br />
 *How to Interview a Programmer*</p>
 <p>Recognizing good programmers among job applicants is not easy. This article, "How to Interview a Programmer (How to Interview a Programmer)":http://www.artima.com/wbc/interprogP.html, contains interview techniques, garnered from a recent summit on writing better code, that can help you can find the most qualified programmers for your project.</p>
 <p>*Get Slashdotted Tips and Tricks Collection*</p>

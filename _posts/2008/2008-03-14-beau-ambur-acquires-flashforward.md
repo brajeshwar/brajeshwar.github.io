@@ -35,7 +35,7 @@ excerpt: The Flashforward Conference and Film Festival is a historic event as th
   Weinman since 2005.
 ---
 <p>Few days back, Beau Ambur, CEO of Metaliq, announced the acquisition of the Flashforward Conference and Film Festival. Metaliq will be a Flashforward Conference premier sponsor. The next conference is scheduled for August 20-22, 2008 in San Francisco.<br />
-<!--more--><br />
+<br />
 <strong>Metaliq</strong></p>
 <p>Metaliq is a solutions company specializing in industrial strength creative, code, and consulting. As a leading application development firm specializing in data-driven user experiences, Metaliq employs a team of top developers who identify, create, and implement innovative business solutions. Metaliq prides itself in developing industrial strength code and creating usable, intuitive and visually appealing applications. Metaliq works closely with top industry organizations to take their applications further, enhancing existing tools and identifying optimal implementations for our clients.</p>
 <p><strong>Flashforward Conference</strong></p>

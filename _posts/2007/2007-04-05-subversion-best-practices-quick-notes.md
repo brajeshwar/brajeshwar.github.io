@@ -42,12 +42,12 @@ excerpt: This is a quick set of guidelines for making the best use of Subversion
 # COMMIT WISELY: Commit to reflect a <a href="http://svnbook.red-bean.com/svnbook/ch04s03.html">single purpose</a>.<br />
 # ISSUE-TRACKER: Create 2-way links between Subversion changesets and issue-tracking database.<br />
 # TRACK MERGES MANUALLY: Write descriptive log message that explains <a href="http://svnbook.red-bean.com/svnbook/ch04s03.html#svn-ch-4-sect-3.2">your merge</a>.</p>
-<p><!--more--><br />
+<p><br />
 <strong>WHEN, WHAT AND WHY TO BRANCH, TAG</strong></p>
 <p># NEVER BRANCH: Small project, small team. It is easy to follow, have low barrier to entry but this is a chaotic development, might break <em>/trunk</em> often.<br />
 # ALWAYS BRANCH: Big team, Big project, dedicated management and supervision. The <em>/trunk</em> remains safe and is always the stable version but this will isolate coders from one another, sometimes can create conflicts and requires users to know how to use SVN effectively with extra merging lessons.<br />
 # BRANCH WHEN NEEDED: Perhaps the best and my favorite. The <em>/trunk</em> is still the stable version, branches and tags are created as and when required. However, this needs a bit more work in managing the SVN and a sync between developers. Lots of testing before merging, committing.</p>
-<p><!-- adman --><br />
+<p><br />
 <strong>SO ...</strong></p>
 <p>* Main branch is of course the <em>/trunk</em><br />
 * Create branches at <em>/branches/~theBranches</em> to work separately off the main trunk and merge later.<br />

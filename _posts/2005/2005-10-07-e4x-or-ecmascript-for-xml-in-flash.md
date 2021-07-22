@@ -35,7 +35,7 @@ Well, it will make ActionScripting easier, simpler, cool!</p>
 <p>* Simple - E4X makes it easier to write and understand code while working with XML Data<br />
 * Consistent - Methods and reasoning behind E4X is consistent and consistent with other part of ActionScript<br />
 * Same as what we have been doing - You can now manipulate XML data with well-known operators like the dot operator (.)<br />
-<!--more--><br />
+<br />
 Ok, so let us look at something</p>
 <p>bc[as]. // Let us have some XML Data as literals for simplicity sake<br />
 // and for the FlashKnights, I have a big list, what you see here is just the beginning, ;-)<br />

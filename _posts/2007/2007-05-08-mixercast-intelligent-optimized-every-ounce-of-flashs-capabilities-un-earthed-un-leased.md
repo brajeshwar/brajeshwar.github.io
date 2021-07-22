@@ -31,7 +31,7 @@ excerpt: MixerCast is built on Ajax, Flash and other cutting-edge software progr
   and manipulation.
 ---
 <p>Like most usual evening, I was scanning NetNewsWire for RSS Feeds and my Yahoo!'s Search term for "Brajeshwar" pop-up and it was about Mixercast's new deals with many major media companies. Alright, but why would it notify me of my name (Brajeshwar) search feed and viola - Mixercast's PR Team were observant enough to quote some of my phrases.<br />
-<!--more--><!-- adman --><br />
+<br />
 Yahoo! Press Release for MixerCast quotes,</p>
 <p><em>According to Flash Platform Analyst Brajeshwar Oinam, who collaborated on the project, the MixerCast Designer is "one of the most powerful Flash Applications we have ever attempted -- intelligent, optimized and every ounce of Flash's capabilities un-earthed and un-leased. (MixerCast is) an uber tool for online photo, video, audio editing and manipulation."</em></p>
 <p>My special thanks to the MixerCast PR Team. Btw, have you signed up for Mixercast? Yes, it is still in its alpha/beta phase but it is ready to mix and re-mix your media or with all the licensed contents that Mixercast just signed up with.</p>

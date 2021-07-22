@@ -46,7 +46,7 @@ excerpt: Comprised of some of the most experienced and visionary investors, exec
 </div>
 
 <p>Ross Levinsohn and Jonathan Miller launched Velocity Investment Group earlier this year with the goal of acquiring and investing in digital and communication media startups. Today, they announced their merger with <a href="http://www.comventures.com/">ComVentures</a> to form their new <a href="http://www.velocityig.com/">Velocity Interactive Group</a>. Ross is former President of Fox Interactive and Jonathan, former Chairman and CEO of America Online.</p>
-<p><!-- adman --></p>
+<p></p>
 <p>However, two major ComVentures partners, Michael Rolnick and Jeb Miller, will be <a href="http://www.techcrunch.com/2007/12/17/comventures-merges-with-velocity/">pursing other interests</a>. So, if I can assume correctly, Keyur Patel will be one of the major partner with Velocity IG. To support this assumption, here are few of my personal analysis;</p>
 <p>* Velocity IG's fund is investing in <a href="http://www.brajeshwar.com/2007/com-ventures-invest-20-million-in-ndtv/">NDTV Networks</a>, <a href="http://www.brajeshwar.com/2007/comventures-buys-1917-stake-in-india-tv/">IndiaTV</a>, <a href="http://www.fabrik.com/">Fabrik</a>, Doppelganger and Mixercast.<br />
 * Velocity IG's primary areas are digital media and communications of which Media is something Keyur Patel is pursuing rigorously. He started <a href="http://www.brajeshwar.com/2007/fusemedia/">FUSE+Media</a> which targets primarily the Media and Entertainment Industry in India.<br />

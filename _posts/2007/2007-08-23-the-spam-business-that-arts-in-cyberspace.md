@@ -34,8 +34,8 @@ excerpt: The University of Maryland issued a report in 2003, saying that spam co
 ---
 <p>Today there are many types of "electronic-spam", including the most famous "E-mail spam" aka "unsolicited e-mail", "Forum Spam", "Newsgroup Spam" Advertisement and forgery in a newsgroup, "Messaging Spam or Spim" that is spam through instant messaging system for advertisement or even extortion. On the web, there is an important type of spam called "Spamdexing" - the art of manipulating a search engine to create the illusion of popularity of a particular website.</p>
 <p>The University of Maryland issued a report in 2003, saying that spam costs businesses approximately $22 billion in lost productivity each year. There seems to be a no easy ways to deal with spam.  Microsoft Chairman Bill Gates said in 2004: "two years from now, spam will be solved". Well, that is another mis-prediction from Bill Gates.</p>
-<p><!--more--><br />
-<!-- adman --><br />
+<p><br />
+<br />
 In 2005, industry analysts said that spam activity will get worse with a projection of damage 2006 close to $70 billion of lost productivity and network maintenance. Furthermore, in 2007 the spam cost is $712 dollars per employee or $71 billion dollars to all US businesses, according to a <a href="http://www.nucleusresearch.com/press_releases/prspam0307.html">survey</a> by Nucleus Research and Knowledge Storm.</p>
 <p>Here are some tips, techniques and recommendations in order to survive successfully alongside this universal problem of "spam".</p>
 <p># <strong>Use e-mail clients or e-mail services with spam-filtering</strong>: Everybody knows that spam filtering systems are not the ultimate-spam-solution, but at least it helps to reduce it, sometimes to a great extend with the right filter.<br />

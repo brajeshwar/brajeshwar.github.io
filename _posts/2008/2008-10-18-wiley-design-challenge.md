@@ -39,7 +39,7 @@ excerpt: Wiley, a leading publisher of Adobe how-to books, is giving you a shot 
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite>Wiley</cite></p>
 <p class="caption"><em class="title">Wiley Design Challenge</em>Win your way onto a Wiley Book Cover!</p>
 </div>
-<p><!--more-->Wiley, a leading publisher of Adobe how-to books, has launched Wiley Design Challenge, a book cover design contest that will run through October 31, 2008. Artists at all levels of expertise are invited to submit their artwork for consideration in the design contest.</p>
+<p>Wiley, a leading publisher of Adobe how-to books, has launched Wiley Design Challenge, a book cover design contest that will run through October 31, 2008. Artists at all levels of expertise are invited to submit their artwork for consideration in the design contest.</p>
 <p><strong>The Contest</strong></p>
 <p>The grand prize winner of the Wiley Design Challenge will have his or her artwork published on the cover of Photoshop For Right-Brainers: The Art of Photomanipulation, 3rd Edition by Al Ward (Wiley, March 2009, ISBN: 978-0-470-39701-5, $39.99). The grand prize winner will also receive a copy of the book and a lifetime <a href="http://smugmug.com/">SmugMug</a> Pro account that includes free prints.</p>
 <p>Successive winners will be chosen by popular vote. The designer awarded first prize will receive $500 and a free three-year SmugMug Pro membership; the second prize winner will receive $200 worth of Wiley books, plus a free two-year SmugMug Pro account; and third prize winner will receive $100 worth of Wiley books and a free 1-year SmugMug Pro account.</p>

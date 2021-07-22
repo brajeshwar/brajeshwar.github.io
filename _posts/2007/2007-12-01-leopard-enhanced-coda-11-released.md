@@ -32,5 +32,5 @@ excerpt: Coda 1.1 have a bunch of Leopard-specific fixes including better Spaces
   is my de-facto development tool - it is a powerful Web Development Application.
 ---
 <p>Few days ago, Panic released <a href="http://www.panic.com/candybar/">CandyBar 3</a>. I upgraded my copy and got good discounts as I already have Pixadex 2 and Candy Bar 2. Panic seems to be in release mode these days as they continue to upgrade their softwares. Lately, <a href="http://www.panic.com/coda/">Coda</a> was released with lots of bug fixes and enhancements targeted for <a href="http://www.apple.com/macosx/">Leopard</a>.<br />
-<!--more--><br />
+<br />
 Coda 1.1 have a bunch of Leopard-specific fixes including better Spaces support and plenty of UI improvement to bring it in line with Mac OS X 10.5. Coda, of late, is my <em>de-facto</em> development tool - it is a powerful Web Development Application which has Transmit built-in to it, an awesome CSS Editor (though I prefer the Text Editor mode) and a good Reference Book. Read the detailed Coda <a href="http://www.panic.com/coda/releasenotes.html">Release Notes</a>.</p>

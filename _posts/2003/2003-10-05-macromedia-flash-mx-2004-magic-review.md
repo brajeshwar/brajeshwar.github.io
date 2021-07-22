@@ -28,7 +28,7 @@ permalink: "/2003/macromedia-flash-mx-2004-magic-review/"
 This chapter deals, how you can use Actionscript to do many things, including how to load images, text, cascading style sheet and other flash movies into text fields and a main interface. You can get to learn and use the MovieClipLoader, LoadVars and TextField.StyleSheet objects besides learning many other cool tips and tricks.</p>
 <p><em>Customized and Printable Presentations</em><br />
 PrintJob object, a new thing of Actionscript 2.0, you will be able to get a taste of the same in this section.<br />
-<!--more--><br />
+<br />
 <img src="/static/2003/10/macromediaFlashMX2004Magic.jpg" alt="Macromedia Flash MX 2004 Magic" height="247" width="247" /><br />
 <em>Macromedia Flash MX 2004 Magic</em></p>
 <p><em>Flash-Driven Ad</em><br />

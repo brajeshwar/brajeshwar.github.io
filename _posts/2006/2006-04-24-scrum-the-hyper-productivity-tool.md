@@ -31,7 +31,7 @@ excerpt: Scrum is intended for management of software development projects, and 
   has been successfully used to "wrap" Extreme Programming and other development methodologies.
 ---
 <p>"Wikipedia (Scrum on Wikipedia)":http://en.wikipedia.org/wiki/SCRUM describes Scrum as an agile method for project management. It has been called a "hyper-productivity tool", and has been documented to dramatically improve productivity in teams previously paralyzed by heavier methodologies. Scrum was first documented by Takeuchi and Nonaka in "The New New Product Development Game" (Harvard Business Review, Jan-Feb 1986).</p>
-<p><!--more--><!-- adman --></p>
+<p></p>
 <p>Its intended use is for management of software development projects, and it has been successfully used to "wrap" Extreme Programming and other development methodologies. However, it can theoretically be applied to any context where a group of people need to work together to achieve a common goal - such as setting up a small school, scientific research projects or planning a wedding.</p>
 <p>I am thinking of starting off in a simple way for each module/project team members. Spend about 5 minutes to compose a scrum mail circulated amongst the team members with simple topics like - </p>
 <p>* Completed<br />

@@ -37,10 +37,10 @@ excerpt: An attack scenario -- A bank website hosts marketing graphics in the fo
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">Flash Player Vulnerabilities</em>Google Researchers have documented serious vulnerabilities in Adobe Flash SWFs.</p>
 </div>
-<p><!--more--><br />
+<p><br />
 The Register <a href="http://www.theregister.co.uk/2007/12/21/flash_vulnerability_menace/">reports</a> that Google Researchers have documented serious vulnerabilities in <a href="http://www.adobe.com/go/flashplayer/">Adobe Flash</a> content which leave tens of thousands of websites susceptible to attacks that steal the personal details of visitors.</p>
 <p>The security bugs are in the Flash SWFs, the ubiquitous building blocks for graphics, animation, audio, video and high-end (Enterprise) Rich Internet Applications across the web. According to the research findings, the SWFs are vulnerable to attacks in which malicious strings can be injected into the legitimate code through cross-site scripting or XSS. Currently, there are no patches for the vulnerabilities. The latest <a href="http://www.adobe.com/go/flashplayer/">Flash Player</a> (version 9.0.115.0) release do not fix this vulnerabilities.</p>
-<p><!-- adman --><br />
+<p><br />
 The vulnerabilities are laid out in an upcoming book <a href="http://www.amazon.com/Hacking-Exposed-Web-2-0-Solutions/dp/0071494618/">Hacking Exposed Web 2.0: Web 2.0 Security Secrets and Solutions</a>. It is due to hit store shelves soon, but is already in the hands of many security professionals. The book's authors, who work for penetration testing firm iSEC Partners as well as for Google, say a web search reveals more than 500,000 vulnerable applets on major corporate, government and media sites.</p>
 <p>Alex Stamos, one of the book's authors said;</p>
 <blockquote><p>Lots of people are vulnerable, and right now there are no protections available other than to remove those SWFs and wait for the authoring tools and/or Flash player to be updated. In the mean time, people will have to think, "What kind of flash am I using on my site," and manually test for vulnerabilities.</p>

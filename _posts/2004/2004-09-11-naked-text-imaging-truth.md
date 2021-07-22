@@ -26,7 +26,7 @@ permalink: "/2004/naked-text-imaging-truth/"
 <p>When e-mail clients started blocking images, the spammers have already gone ahead and are finding ways around the same. I had been damn too happy that with the introduction of Service Pack 2 on my Windows XP box, I won't be freaking out seeing unduly illicite images while opening my mail client in front of friend, clients, family members and relatives.</p>
 <p>But, that was short lived when I received one particular innovative way among the usual spam bunch. Well, I think I have to appreciate them for their supremacy in the under-ground stuffs. I was skeptical of having this on my site but then I think, it won't harm much having it archived. They have already done it, so I may be way behind anyway.</p>
 <p><span class="codeRed">[Warning: Following content for matured eyes only!]</span><br />
-<!--more--></p>
+</p>
 <pre>
                                   |: |                              
                  .e$$$e.          |: |                              

@@ -26,7 +26,7 @@ excerpt: 'The album was an Indian revised version, so I am not sure if any of th
   are censored but here are the listings that I have on my CD. '
 ---
 <p><img src="/static/2004/10/adamsbryanroomservice.jpg" alt="Bryan Adams Room Service" />I recently bought Bryan Adams, Room Service and will be listening to it for sometime in days to come. I buy authentic music CDs/DVDs if it is one of those which I want to listen to and still not really an MP3 fan. May be this is the reason why I have not really thought of investing in an MP3 Player yet though I have my eyes on one of those sleek <a href="http://www.apple.com/itunes/" title="iPod">iPod</a>. If I am buying an mp3 player it gotta be an iPod, else "I wait", the Navorski's way in <a href="http://www.brajeshwar.com/2004/the-terminal/" title="The Terminal">The Terminal</a>.</p>
-<p><!--more--><br />
+<p><br />
 The album was an Indian revised version, so I am not sure if any of them are censored but here are the listings that I have on my CD. </p>
 <p># EastSideStory<br />
 # ThisSideOfParadise<br />

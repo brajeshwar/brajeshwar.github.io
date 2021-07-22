@@ -24,7 +24,7 @@ author:
 permalink: "/2004/flash-actionscript-flashcom-remoting-jobs/"
 ---
 <p>Are you interested in working on some of the most challenging Flash Projects, Rich Internet Applications, Macromedia Central and Flex Applications? Are you interested in weaving multiple Macromedia Products (ColdFusion, Flash Communication Server, Flash Remoting, Director, Flex, Central)? Are you interested in being part of the team that build Applications that make their mark in the Web Industry? Are you ready to face challenge of precise timelines, pin-point milestone, ultimate adrenaline rush delivery deadlines? Last but not the least, do you want to learn more, improvise your skill in Macromedia Product faster than the average developers/designers?<br />
-<!--more--><br />
+<br />
 <strong>YES</strong><br />
 If you have <em>YES</em> to most of the questions above, then our fast growing company, <a href="http://oinam.com/" title="Oinam Software">Oinam Software</a>, with its dedicated aim of "<strong>Research, Analysis and Development (RAD)</strong>" of Macromedia Technologies is looking for you. Formed recently, Oinam Software is waiting for the paperworks to be finalized and be called "<strong>Oinam Software Pvt. Ltd.</strong>" Be a part of the team who love to push the envelope and much much beyond.</p>
 <p><strong>Server Side Coder(s)</strong></p>

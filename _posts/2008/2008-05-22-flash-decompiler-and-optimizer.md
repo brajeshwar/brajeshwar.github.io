@@ -36,7 +36,7 @@ excerpt: More aptly suited for Flash SWFs with animations and designs, Flash Opt
 <p><strong>Flash Decompiler Trillix for Mac</strong></p>
 <p><a href="http://www.flash-decompiler.com/mac.html">Flash Decompiler Trillix</a> is perhaps the only tool available for the Mac which can help you regain lost FLA source files. It supports up to Flash 9 and ActionScripts 3.0. The people from Eltima were nice enough to send me a review copy of their software.</p>
 <p><a href="http://www.flash-decompiler.com/mac.html">Flash Decompiler Trillix</a> can extract images, sounds, video, shapes, morphs, fonts, texts, buttons, sprites, frames and scripts into various file formats. All objects are extracted separately into flash animation (SWF) and flash sources (FLA) file formats, except scripts which can be saved to AS and TXT file formats.<br />
-<!--more--><br />
+<br />
 <img src="/static/2008/05/flash-decompiler-screen01.jpg" alt="Flash Decompiler for Mac" style="border: 0 none; float: none;" /></p>
 <p>To modify a Flash file, you can simply convert the SWF into an FLA, modify/replace any of the Object and publish it back to SWF. Well, the interface is rather Window like but ported to the Mac, but I guess that's OK.</p>
 <p>Well, if you're on Windows, have a look at <a href="http://www.brajeshwar.com/2003/actionscript-viewer-40-review/">ActionScript Viewer</a> which is an awesome piece of Flash Decompiler for Windows.</p>

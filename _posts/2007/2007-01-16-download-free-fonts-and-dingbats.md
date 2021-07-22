@@ -25,7 +25,7 @@ permalink: "/2007/download-free-fonts-and-dingbats/"
 ---
 <p>A huge collection of "Commercial (Commercial)":http://www.urbanfonts.com/commercialfonts.php, "Free Fonts (Free Fonts)":http://www.urbanfonts.com/free-fonts.htm complete with a good set of "Free Dingbats (Free Dingbats)":http://www.urbanfonts.com/free-dingbats.htm are on this site for you to "Download (Download Free Fonts)":http://www.urbanfonts.com/. It is a free front archive but with a twist - it's organized as a commercial font foundry with plenty of interactive features. There are over 8,000 free fonts and dingbats for the Mac and the PC.</p>
 <p><?php ImgBlog("reviews/urban-fonts.jpg", 1, "Urban Fonts", "http://www.urbanfonts.com/");?>This article is a paid article review sponsored by "RevieMe (RevieMe)":http://www.reviewme.com/. However, I'd have written about this resource for great fonts if I found it earlier to *ReviewMe*. If you have feedbacks, please comment or "mail me (mailme)":http://www.brajeshwar.com/contact/ directly. That will help me decide if I should do *ReviewMe* in future or not.<br />
-<!--more--><br />
+<br />
 Fonts and dingbats are neatly categorized with large custom color previews. The site also has a "blog (Blog)":http://www.urbanfonts.com/blog/, a "forum (forum)":http://forum.urbanfonts.com/, and an articles section where you can read about fonts and typography. It is templated with tags to help you find the "top searched fonts (top 100 fonts)":http://www.urbanfonts.com/fonts/top-100-fonts.htm.</p>
 <p>*Reference Links*</p>
 <p>* "Free Fonts (Free Fonts)":http://www.urbanfonts.com/free-fonts.htm<br />

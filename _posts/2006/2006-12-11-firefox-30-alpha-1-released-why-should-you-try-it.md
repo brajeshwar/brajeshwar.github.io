@@ -24,7 +24,7 @@ author:
 permalink: "/2006/firefox-30-alpha-1-released-why-should-you-try-it/"
 ---
 <p>Till Firefox 2.0, the Gecko engine use the old "Quickdraw (Quickdraw)":http://en.wikipedia.org/wiki/QuickDraw graphics library (originally developed for OS9). With the upcoming new Firefox 3.0, it uses "Quartz (Quartz)":http://developer.apple.com/graphicsimaging/quartz/ or "Cairo (Cairo)":http://en.wikipedia.org/wiki/Cairo_graphics_library, the more recent Core Image libraries. Safari have been using this for a long time. This is one reason why Text looks much crisper, smoother and clear on the new "Firefox 3.0 (Firefox 3.0)":http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/granparadiso/alpha1/ Alpha 1 codenamed "Gran Paradiso (Gran Paradiso)":http://www.mozilla.org/projects/firefox/3.0a1/releasenotes/. Jeffrey Zeldman have a nice article on text render handling at - "Safari better than Firefox? (Safari better than Firefox?)":http://www.zeldman.com/2006/11/27/safari-beats-firefox/.<br />
-<!--more--><br />
+<br />
 It may be noted that the Windows and Linux already enjoys a Cairo enabled Browser long before the Mac. So, get your copy of the Firefox 3.0 Alpha 1 today and see the difference, perhaps report bugs if you see any.</p>
 <p>Try out "Firefox 3.0 Alpha 1 (Firefox 3.0 Alpha 1)":http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/granparadiso/alpha1/ today and enjoy the "new features (New Features)":http://www.mozilla.org/projects/firefox/3.0a1/releasenotes/#new including the Cairo enabled engine and many others.</p>
 <p>*UPDATES*</p>

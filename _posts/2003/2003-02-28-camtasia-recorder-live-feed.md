@@ -24,7 +24,7 @@ author:
 permalink: "/2003/camtasia-recorder-live-feed/"
 ---
 <p>All the way long, I had been thinking that Camtasia Studio Recorder can output only a max of 320 x 240 resolution. But I am wrong, now you can broadcast whatever dimension I wish. As there is no easy way to do an application sharing or a desktop sharing directly with Macromedia Flash Communication Server MX 1.0/1.5, <a href="http://www.techsmith.com/" title="techsmith">Camtasia Studio</a> comes to the rescue with its live record output feature.<br />
-<!--more--><br />
+<br />
 First you may download the <a href="http://brajeshwar.wpengine.com/downloads/flashmx/camtasia/camtasia.zip">file</a> (I was playing with) so that you can skip everything and start playing.</p>
 <p>Steps :<br />
 (a) create a video object on your stage and size it to 640 x 480, give an instance name of say "camtasia_mc".<br />

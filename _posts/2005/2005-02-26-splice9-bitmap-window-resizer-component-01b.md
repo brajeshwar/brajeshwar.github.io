@@ -34,7 +34,7 @@ Splice9 crops a selected bitmap into 9 pieces and put them inside a MovieClip. O
 * publishes it.</p>
 <p>And what you get a ready-made resizeable window!</p>
 <p>"Preview (Preview Splice9)":http://www.brajeshwar.com/downloads/jsfl/splice9/ | "Download (Download Splice9)":http://www.brajeshwar.com/downloads/jsfl/splice9/Splice9.zip (MXP and Sample File)<br />
-<!--more--><br />
+<br />
 __How to use it?__</p>
 <p># Create a reverse oinam.com domain class util package; "com.oinam.util"<br />
 # Install Splice9 class (Splice9.as) in "com.oinam.util" folder<br />

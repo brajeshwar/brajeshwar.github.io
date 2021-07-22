@@ -36,7 +36,7 @@ excerpt: With the surge for invite-only betas everywhere these days, it is only 
 * <a href="http://www.flowchart.com/">FlowChart</a><br />
 * <a href="http://www.imedix.com/">iMedix</a> (Thanks to <a href="http://www.mashable.com/">Mashable</a>)<br />
 * <a href="http://www.iminlikewithyou.com/">I'm in like with you</a></p>
-<p><!--more--><!-- adman --><br />
+<p><br />
 <strong>8Apps</strong></p>
 <p><a href="http://8apps.com/">8Apps</a> is a suite of online applications that help you to work better. At the center there is Handshake, a fully-featured social network for you to make new contacts, strengthen existing relationships and find like-minded entrepreneurs.</p>
 <p><strong>FlowChart</strong></p>

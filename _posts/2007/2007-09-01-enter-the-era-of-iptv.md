@@ -39,7 +39,7 @@ excerpt: IPTV which stands for "Internet Protocol Television", is a Digital Tele
 ---
 <p><img src="/static/2007/09/tv-old.jpg" alt="Television in the old days" />In the past, TV was primarily distributed by a terrestrial system - cable or satellite. With the increasing reach of internet, high bandwidth availability coupled with the decrease of  connection costs; it has become very common for television content to be broadcast over the internet.</p>
 <p>The American Broadcasting Company (ABC) now called World News, in 1994 was the first television channel to stream over the internet, using a software developed by Tim Dorcey at Cornell University. The internet  television use the connection of the internet to deliver video from a source to a target device.</p>
-<p><!--more--><br />
+<p><br />
 Here are some basic ways to get Internet TV;</p>
 <p># Watching on normal or regular TV (via direct connection from a computer or set-top-box; which describes a device that connects to a television and turns the signal into content then displayed on the screen), or on a portable device or on a simple computer.<br />
 # Real time streaming of a TV Channel (like regular TV), or video-on-demand (VOD) in which the user can select a show to watch on demand.</p>

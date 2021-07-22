@@ -24,7 +24,7 @@ author:
 permalink: "/2004/win-bb-flashback-and-mean-tangerine-fonts/"
 ---
 <p>Brajeshwar.com have some licenses to give out for <a href="http://brajeshwar.wpengine.com/archives/2004/11/bb_flashback.php" title="BB FlashBack">BB FlashBack</a> and many fonts from <a href="http://brajeshwar.wpengine.com/archives/2004/11/mean_tangerine.php" title="Mean Tangerine, Pixel Fonts">Mean Tangerine</a>. Read the following contest details and you could be the lucky one.<br />
-<!--more--><br />
+<br />
 <strong>Mean Tangerine, Pixel Fonts</strong></p>
 <p># Apply your Pixel Art technique and design the logo for Mean Tangerine in any dimension so long as it fits inside the enclosed graphics' dimensions (193x193).<br />
 # all submissions must also include the text "mean tangerine" and "pixel fonts".</p>

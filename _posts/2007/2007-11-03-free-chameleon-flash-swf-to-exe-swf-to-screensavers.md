@@ -36,7 +36,7 @@ excerpt: Chameleon Flash is a software program that transforms SWF flash project
 ---
 <p><a href="http://www.chameleonflash.com/"><img src="/static/2007/11/chameleon-flash-box.jpg" alt="Chameleon Flash" style="border: 0 none;" /></a>Good news for Flash developers and designers who wish to get <strong>5 FREE</strong> licenses from <a href="http://www.chameleonflash.com/">Chameleon Flash</a>. They've also offered a <a href="http://www.chameleonflash.com/lp_brajeshwar.php">40% Discount</a> on all purchases for brajeshwar.com readers. You can treat this as a Diwali and/or Thanksgiving gift.</p>
 <p>Chameleon Flash is a software program that transforms SWF flash projects into EXE applications and SCR screensavers with plenty of features.</p>
-<p><!--more--><br />
+<p><br />
 <strong>How to win the FREE License?</strong></p>
 <p>So, let's make it really simple for you to get the license, let have a small competition. Here are 2 ways to win your FREE license --</p>
 <p># Create a ScreenSaver using <a href="http://www.chameleonflash.com/">Chameleon Flash</a> (Trial Version)<br />
@@ -47,7 +47,7 @@ excerpt: Chameleon Flash is a software program that transforms SWF flash project
 * 2 Best ScreenSavers<br />
 * 2 Best Wallpapers</p>
 <p>will win the 5 FREE licenses.</p>
-<p><!-- adman --><br />
+<p><br />
 <strong>Judges</strong></p>
 <p>It will be judged by me, few people from Chameleon Flash and some other reputed Flash Developers and Designers. We might even let the public vote from the final selections.</p>
 <p><strong>Timeline?</strong></p>

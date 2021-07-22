@@ -29,7 +29,7 @@ I just heard myself and things ain't that good, lots and lots of space for impro
 Recording: <a href="http://mmusergroup.breezecentral.com/p91876561/" title="Breeze Recording">http://mmusergroup.breezecentral.com/p91876561/</a><br />
 Download: Files</p>
 <p><em>Comment here or send me mails suggesting topics about the next and subsequent Breeze Presos.</em><br />
-<!--more--><br />
+<br />
 <strong>Note</strong>: If you've never used Macromedia Breeze, get a <a href="http://www.macromedia.com/go/breeze_live_intro_en" title="Breeze Live Overview">quick overview</a>.</p>
 <p><strong>For Indian Sub-Continent</strong><br />
 Date: Wednesday, 13th October, 2004<br />

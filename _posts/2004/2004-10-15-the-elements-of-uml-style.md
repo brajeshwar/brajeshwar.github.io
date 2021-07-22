@@ -25,7 +25,7 @@ permalink: "/2004/the-elements-of-uml-style/"
 ---
 <p>For developers who are into creation of models, architectures using UML, when you want to maintain a standard amongst your team,<br />
 <a href="http://www.amazon.com/exec/obidos/ASIN/0521525470/qid=1097869049/sr=2-1/ref=pd_ka_b_2_1/103-0693146-1938258" title="The Elements of UML Style">The Elements of UML Style</a> (author: <strong>Scott W. Ambler</strong>) is one of those good reference book to have. This is a small booklet with just about 145 page and this can be a very handy reference specially during your initial stage of Application Modeling, before you get fully used to the Class Diagrams, Use Case Diagrams and the other Diagrams.<br />
-<!--more--><br />
+<br />
 <strong>The book provides conventions for</strong>:</p>
 <p>* Class Diagrams<br />
 * Use case Diagrams<br />

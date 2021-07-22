@@ -28,7 +28,7 @@ excerpt: |-
   (i) the underlying technology is broken, (ii) the business case is a proven recipe for failure and (iii) the social aspects are more awkward than a middle school dance
 ---
 <p>Alex Krupp have written <a href="http://alexkrupp.typepad.com/sensemaking/2007/05/cell_phone_soft.html">some factual sense</a> on why it is not just improbable but impossible to create a successful mobile-wireless software startup. I, personally, am up with his discussion and points; let me re-phrase here in a shorter ways. Please read his article for a full detailed reading - <a href="http://alexkrupp.typepad.com/sensemaking/2007/05/cell_phone_soft.html">Cell Phone Software: The Billion-Dollar Sand Trap</a>.<br />
-<!--more--><br />
+<br />
 There has always been huge latency with new software implementations in the Mobile Software world - going from the developer to the carrier's tech to the distribution. By the time, the software lands on the phone, it is already deprecated or badly in need of an update. It has been learnt that such usual cycle goes for over 36 months or 3 years and that's one of the worst turn-around for any business. So, unless it is like a killer application (think SMS or some classic games) softwares on a mobile phone ain't really the playing field for startups.</p>
 <p>Alex gave an avid reason from 3 perspectives - technology, business and social;</p>
 <p>* The underlying technology is broken<br />

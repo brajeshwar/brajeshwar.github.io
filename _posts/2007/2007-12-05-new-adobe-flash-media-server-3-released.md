@@ -38,9 +38,9 @@ excerpt: The best part of the Adobe Flash Media Server 3 announcement was that o
 <p class="credit"><abbr class="type" title="Wallpaper">Wallpaper</abbr> by <cite>Kevin Suttle</cite></p>
 <p class="caption"><em class="title">Flash Platform</em>The Adobe Flash Platform is a lightweight, cross-platform runtime that can be used not just for rich media, but also for enterprise applications, communications, and mobile applications.</p>
 </div>
-<p><!--more--><br />
+<p><br />
 Yesterday, Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200712/120407adobefms3.html">announced</a> the Flash Media Server 3 (FMS3) family of products, which provides a more efficient instant-on video experience virtually anytime, anywhere - to the Web, the desktop with Adobe Media Player and to mobile devices with Adobe Flash Lite 3.</p>
-<p><!-- adman --><br />
+<p><br />
 The best part of the announcement was that of the new pricing options which gives the customers a wide array of choices for broadcasting of high quality streaming media experiences.</p>
 <p>Besides the low cost pricing, some of the other awesome changes to <a href="http://www.adobe.com/products/flashmediaserver/">FMS3</a> are;</p>
 <p>* removal of bandwidth/connection restriction<br />
@@ -64,7 +64,7 @@ The best part of the announcement was that of the new pricing options which give
 * Better out-of-the-box experience -- FMS3 will ship with special prebuilt services to make it easier to stream. The documentation and help systems have also been completely updated to support ActionScript 3 in Adobe Flex and Flash CS3 Professional.<br />
 * New plug-in architecture -- FMS3 will increase its extensibility by introducing powerful new C++ APIs to customize the built-in authentication and file access functionality. These plug-ins can be used to develop geo-filtered content or HTTP-based Origin services.<br />
 * Server-side republish -- This exciting new feature will let developers push either a live stream or a playlist to another Flash Media Server or content delivery network (CDN). A developer can inject cue-point messages into a live stream before it gets distributed, making it easier to develop applications that react to the video events.</p>
-<p><!-- adman --><br />
+<p><br />
 <strong>Pricing and Availability</strong></p>
 <p>FMS3 is expected to be available in January 2008 and will ship with special pre-built services making it easier to stream Flash Player compatible video. Adobe Flash Media Interactive Server 3 (FMSIS 3) will be priced at <strong>$4,500</strong>. For single-server deployments, Adobe Flash Media Streaming Server 3 (FMSS 3) will be priced at just <strong>$995</strong>. FMS3 will also be available through select content distribution network providers for customers who prefer to outsource their media deployments.</p>
 <p><strong>Further Reading</strong></p>

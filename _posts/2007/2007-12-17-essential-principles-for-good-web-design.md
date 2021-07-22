@@ -36,7 +36,7 @@ excerpt: Web design can be deceptively difficult. Getting a design that is both 
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite><a href="http://smashmethod.deviantart.com/">SmashMethod</a></cite></p>
 <p class="caption"><em class="title">Puddle Of Blush</em>An awesome <a href="http://smashmethod.deviantart.com/art/Puddle-Of-Blush-25594200">Illustration</a> from SmashMethod</p>
 </div>
-<p><!--more--><br />
+<p><br />
 I just stumbled on an awesome article from <a href="http://psdtuts.com/">PSDTuts</a> - <a href="http://psdtuts.com/designing-tutorials/9-essential-principles-for-good-web-design/">9 Essential Principles for Good Web Design</a>. In the article, <strong>Collis</strong> talks about the oxymorons that a designer faces while designing a good website - a design that is both usable and pleasing, delivers information and builds brand, is technically sound and visually coherent.</p>
 <p>The article is worth a read, and it links to other resources which are old but golden rules of the design paradigm. The article lays out 9 Essential Principles for Good Web Design;</p>
 <p># Precedence (Guiding the Eye)<br />

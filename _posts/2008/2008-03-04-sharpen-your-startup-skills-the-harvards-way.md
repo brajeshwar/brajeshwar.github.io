@@ -43,7 +43,7 @@ excerpt: What motivates entrepreneurs? Money? Control? In truth, some entreprene
 <p class="credit"><abbr class="type" title="Photograph">Photo</abbr> by <cite><a href="http://digitaljournalist.org/issue0712/y_walker08.html">Diana Walker</a></cite></p>
 <p class="caption"><em class="title">Steve Jobs</em>One of the Best Entrepreneurs of our time.</p>
 </div>
-<p><!--more--><br />
+<p><br />
 Few days back, I read about Harvard Business School's (Working Knowledge) articles that address a number of nagging founder-issues -- ownership and change of control, resource management and getting to profitability, common legal sand traps -- via FoundRead's article on <a href="http://foundread.com/2008/02/25/harvards-kit-for-sharpening-your-startup-skills/">Sharpening Your Startup Skills</a>.</p>
 <p>I understand that the art of successfully staying alive in a startup, moving ahead with achievement of one's goal have varied ways, methodologies and beliefs depending on how and what one is involved with, nonetheless, the handy kit should be a good framework for anybody to learn from. The articles answer few very common questions that one might need to ask to "sharpen business skills".</p>
 <p><strong>Should I keep control of my company?</strong></p>

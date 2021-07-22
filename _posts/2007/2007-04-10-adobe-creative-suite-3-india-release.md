@@ -28,7 +28,7 @@ excerpt: Come join us and scores of sharp creative minds for the launch of Adobe
 <p><a href="http://www.adobe.com/creativesuite/"><img src="/static/2007/04/adobe-cs3.jpg" alt="Adobe Creative Suite 3" style="border: 0 none;" /></a>Adobe Creative Suite 3 will be launched in India with a special event at Mumbai. The event will be on Thursday, April 19, 2007 at 08:30 am in the morning at Hyatt Regency, Sahar, Mumbai. The venue/hotel is located near the International Airport in Andheri (E).</p>
 <p>The Agenda starts at 08:30 am starting with Registration and will last till the end of the day at 05:45 pm. After the tea break starting 11:45 am till 12:00, there is an "Apple Keynote". I am suspecting that it should be Apple Mac's geared agenda for Adobe Creative Suite 3.</p>
 <p><a href="http://events.adobe.co.uk/events/cgi/event.cgi?country=in&amp;eventid=5048">Register</a> today for the event.<br />
-<!--more--><br />
+<br />
 <a href="http://events.adobe.co.uk/events/cgi/event.cgi?country=in&amp;eventid=5053">CreativiT'07</a> - Unleash the 'T' in your creativity</p>
 <p>Just before the Adobe CS3 Release in Mumbai, there is another even for the creative designers and developers on 18th April, 2007 at ITC, Grand Central Sheraton, Parel, Mumbai (INDIA) starting in the evening at 06:00 pm.</p>
 <p><strong>Agenda</strong></p>
