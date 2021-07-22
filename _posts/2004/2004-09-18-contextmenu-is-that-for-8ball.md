@@ -24,7 +24,7 @@ author:
 permalink: "/2004/contextmenu-is-that-for-8ball/"
 ---
 <p><?php ImgBlog("macromediaflash/8ball.jpg", 0, "8Ball", "");?>The introduction of @ContextMenu@ and @ContextMenuItem@ in Flash player 7 was a good move from Macromedia. But, it is still in a very nascent stage and is not really that usable. Every since its early release of the Player, I had always felt that it can be put to good use but never got a project right enough to implement the same. When finally there was a real need for a real *Right Click Menu*, I am sorta stump as a proper implementation was not that possible!<br />
-<!--more--><br />
+<br />
 Personally, I feel the current implementation of the @ContextMenu@ is a bit incomplete. The problem with the player's implementation is it only allows context menus to be added to movieclips that are on the root stage. You cannot have context menu's in nested movieclips.</p>
 <p>In any medium sized application there will be atleast 3 tiers of @MovieClips@. Let us see the below hierarchy for an instance;</p>
 <pre>

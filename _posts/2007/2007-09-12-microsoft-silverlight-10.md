@@ -36,9 +36,9 @@ excerpt: The goal of Silverlight is to get into the game, not to add anything ne
 ---
 <p><a href="http://www.microsoft.com/silverlight/" title="Silverlight"><img src="/static/2007/09/silverlight.png" alt="Silverlight" style="border: 0 none;" /></a>"Light up the web" or "Experience what you're missing" are the slogans of this relatively new product from <a href="http://www.microsoft.com/" title="Microsoft">Microsoft</a>.</p>
 <p>Few days back, Microsoft released their flagship interactive media browser plugin - <a href="http://www.microsoft.com/silverlight/">Silverlight</a>. Microsoft Silverlight, previously called Windows Presentation Foundation Everywhere (WPF/E) is a direct competitor to Adobe's <a href="http://www.adobe.com/go/flashplayer/">FlashPlayer</a>. Pretty much like Flash, Silverlight is a complement and runtime for Internet Web browsers whereby users can view videos, vector graphics, text, 2D animations and render Rich Internet Applications (RIA). According to Microsoft it's a cross-browser, cross-platform plug-in capable of delivering the next generation media experiences.</p>
-<p><!--more--><br />
+<p><br />
 Besides being a direct competitor to "Adobe Flash Player", Silverlight competes with others applications such as the presentation complement of AJAX, The Sun Microsystems JavaFX (launched recently), and others. Silverlight will also provide DRM (Digital Rights Management) with feature parity with Windows and Mac according to the Microsoft's <a href="http://www.microsoft.com/presspass/press/2007/sep07/09-04SilverlightPR.mspx" title="press release">press release</a>.</p>
-<p><!-- adman --><br />
+<p><br />
 Silverlight support compressed video format such as Windows Media Video (WMV), Windows Media Audio (WMA) and MP3 audio content working with all the compatible web browsers (Internet explorer 6 SP2, IE7, Firefox 1.5, Firefox 2.0, Safari) without requiring any media player such as Windows Media Player, Real Player or some browser plug-in.</p>
 <p>The XML (Extensible Markup Language) play very well in this game as Silverlight makes it possible to load content dynamically using XML manipulated through a DOM (Document Object Model).</p>
 <p><strong>FEATURES</strong></p>
@@ -54,7 +54,7 @@ Silverlight support compressed video format such as Windows Media Video (WMV), W
 Will Silverlight prove to be better or be able to come up to the level of the Flash Player?<br />
 What is the differences and similarities between them?</p>
 <p><strong>Let's hear what <a href="http://weblogs.asp.net/jezell/" title="Jesse Ezell">Jesse Ezell</a> says</strong> - Flash was created to develop animations based on frames, Silverlight is an efficient framework with good facilities for animations. So if you want to make animations Flash is a good option but if you want to develop interactive systems with animations Silverlight is better.</p>
-<p><!-- adman --><br />
+<p><br />
 <em>Here is my personal reply to Jesse Ezell.</em></p>
 <p><strong>Your statement is true for Flash 4. Please upgrade your statement, Adobe Flash is currently 5 versions ahead of your statement.</strong><br />
 This makes me feel like we are bringing back the <a href="http://en.wikipedia.org/wiki/Neanderthal" title="Neanderthal">Neanderthal</a> man (by some means) to this modern world and discussing how they made fire, shelters to live, etc. In any case, if that was possible, the Neanderthal man will look around our houses, electricity, automobiles and they'll be shocked and may even go wild, crazy  after seeing e development that we have today. Jesse Ezell, please come to the modern world of Flash Player 9 (or at least 7).<br />

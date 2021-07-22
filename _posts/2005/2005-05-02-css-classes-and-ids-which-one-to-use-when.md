@@ -26,7 +26,7 @@ permalink: "/2005/css-classes-and-ids-which-one-to-use-when/"
 <p>I was trying out a way to float 4 DIVs inside a parent DIV on a quick site design, and this topic came up to my mind. I even explained this to a group of attendees at the "India MAX 2004, Bangalore (India MAX 2005, Bangalore)":http://www.brajeshwar.com/archives/2004/03/macromedia-max-2004-india-chapter/. Many times in the past, I have tried to get this archived but somehow slipped my mind, so, here we go.</p>
 <p>*Classes and IDs, which one to use, when and why*?</p>
 <p>By now, it is rather a common thing, most (x)html/css layout designers know very well where to separate ID selectors from classes in CSS! This article should most aptly apply to newcomers.<br />
-<!--more--><br />
+<br />
 The "W3C (W3C)":http://www.w3.org/ defines that attributes of the type ID cannot have the same value more than once in a document, which means that it is unique for that particular document. Nonthless, as of today, most browsers will not complain even if you violate the same. It may be noted that a CSS ID Selector usually contains a "#" followed by the ID value.</p>
 <pre>
 #myid {

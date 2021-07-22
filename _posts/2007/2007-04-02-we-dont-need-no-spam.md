@@ -29,7 +29,7 @@ excerpt: There are times when you really hated spammers. Here are some replies t
   them.
 ---
 <p>Dear Spam Sender,<br />
-<!-- adman --><br />
+<br />
 Thank you for taking such an interest in me. I regret to inform you the following:</p>
 <p># My penis is just fine, but thank you for asking.<br />
 # I don't own a home, so why the fuck would I need to re-finance my mortgage.<br />

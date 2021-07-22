@@ -27,7 +27,7 @@ excerpt: William Shakespeare, Sonnet, ActionScript
 <p>Everybody have blogged this; it is still too tempting not to re-blog it.</p>
 <p>William Shakespeare's Sonnet - "Shall I Compare Thee to a Summer's Day? (Shall I Compare Thee to a Summer's Day?)":http://www.google.com/search?hl=en&q=Shall+I+compare+thee+to+a+summer%27s+day%3F&btnG=Google+Search told in "ActionScript 2.0 (Shakespeare's sonnet in ActionScript 2.0)":http://www.heavyflash.com/poetry/Shakespeare_Sonnet18.html.</p>
 <p>Via: "Digg ()":http://digg.com/programming/William_Shakespeare_s_Sonnet_18_Ported_to_ActionScript_2.0, "Justin Everett (Justin Everett)":http://justin.everett-church.com/index.php/2006/03/20/actionscript-is-pure-poetry/, "Mike Potter (Mike Potter)":http://blogs.adobe.com/mikepotter/2006/03/shakespeare_and.html<br />
-<!--more--><br />
+<br />
 Reproduced here for the archives;</p>
 <p>bc[as]. // Sonnet 18: Shall I compare thee to a summer's day?<br />
 // by William Shakespeare<br />

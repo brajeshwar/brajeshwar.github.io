@@ -31,7 +31,7 @@ excerpt: Get your startup funded and off the ground while learning from the best
   to angel investors and venture capitalists at the end of the summer.
 ---
 <p><a href="http://www.techstars.org/">TechStars</a> is a Colorado-based initiative which aims at primarily filling in the startup funding gap, thus providing just enough capital to get your idea off the ground. A selected company or a team receives upto $15,000 in seed funding. However, it selects just the 10 best out of all the applicants. They had about 300 applicants last years of which only the <a href="http://www.techstars.org/companies/">creme ones</a> succeed.<br />
-<!--more--><br />
+<br />
 <strong>Advice and Mentoring</strong></p>
 <p>TechStars fills the experience gap by bringing together the best and the brightest in one place and surrounding you with incredible proven mentors for the summer. With this much talent in one place you'll get great advice on your product and strategy, thereby ensuring the best possible start for your new business.</p>
 <p><strong>Connections</strong></p>

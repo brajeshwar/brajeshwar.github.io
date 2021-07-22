@@ -30,7 +30,7 @@ permalink: "/2004/central-adapts-open-distributable-model/"
 * Flash MX 2004 extensions to better integrate Flash authoring with Central during development<br />
 * Support for Flash Player 7, ActionScript 2.0, and the new component architecture<br />
 * Support for instant messaging and presence detection using the AOL AIM and ICQ networks<br />
-<!--more--><br />
+<br />
 The Central licensing have also been distilled down into two very simple models:</p>
 <p># <strong>Open Distribution</strong>: Applications distributed under the Open Distribution model can be installed and used for free, or the developer can choose to handle the financial transaction himself (either way, there is no cost to the developer). Any application that is not a Try/Buy application -- regardless of where it is installed or who the end user is -- is an Open Distribution application.<br />
 # <strong>Try/Buy</strong>:  Try/Buy applications can be installed and evaluated for a limited time by end-users, then optionally purchased.  The Central payment infrastructure will handle the entire financial transaction, and 80% of the revenue goes to the developer.</p>

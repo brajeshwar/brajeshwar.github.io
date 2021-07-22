@@ -24,7 +24,7 @@ author:
 permalink: "/2006/when-how-to-listen-to-podcasts-or-how-to-make-use-of-your-old-ipod/"
 ---
 <p>To me, it is not that practically possible to listen to podcasts while you're at your computer, at work. "Podcast (Podcast)":http://en.wikipedia.org/wiki/Podcast are different from music and thus need to be listened to with concentration, in a way to understand what the podcast is talking about. One can listen to music and still work but not with podcast. So, how can you save your time, not disturb yourself at work but still be able to listen to podcasts.<br />
-<!--more--><br />
+<br />
 I came up with 2 ways to do so - I am though not sure if that would be suitable for others or not; you may experiment it yourself.</p>
 <p>* Burn podcast in a CD and listen to them while you are driving. CDs are cheap these days and burning your podcast in there won't give any dent to your expense.<br />
 * Use your iPod and connect it to your Car Stereo and listen to the podcasts.</p>

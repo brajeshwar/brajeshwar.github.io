@@ -24,7 +24,7 @@ author:
 permalink: "/2004/xml-best-practices/"
 ---
 <p><a href="http://davidbau.com/" title="David Bau">David Bau</a> have a quick, crisp write-up on <a href="http://davidbau.com/archives/2003/11/10/xml_best_practices.html" title="XML Best Practices">XML Best Practices</a>.<br />
-<!--more--><br />
+<br />
 <em>An excerpt</em>:<br />
 <strong>How to Recognize Good XML Technique</strong><br />
 It is not hard to recognize when good XML techniques are being used in a development effort. Here are the two things that you see:</p>

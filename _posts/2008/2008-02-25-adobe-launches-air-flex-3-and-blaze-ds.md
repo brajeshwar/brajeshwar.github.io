@@ -49,7 +49,7 @@ excerpt: Businesses can offer exciting ways to engage customers with innovative,
 <blockquote><p>Today, the XDrive UI is either a classic Java-based Web application or a C++ desktop application. We're basically, building an AIR and Flex application that will either work on your desktop or in a browser to replace the current UI.</p></blockquote>
 <p>Adam Gross, <a href="http://www.salesforce.com/">Salesforce.com</a>'s vice president of platform marketing --</p>
 <blockquote><p>Salesforce.com also plans to use AIR to supplement <a href="http://www.force.com/">Force.com</a>, the company's platform for third parties to develop business applications and run them as a service on Salesforce.com infrastructure. The Force.com Toolkit for Adobe AIR and Flex extends offline capabilities to Force.com applications. Information such as customer data being managed on Force.com can be brought into offline use.</p></blockquote>
-<p><!-- adman --></p>
+<p></p>
 <p>Check out these <a href="http://www.readwriteweb.com/archives/some_adobe_air_apps_worth_a_look.php">Adobe AIR Apps</a>.</p>
 <p>table{border:1px solid #cacaca}.<br />
 |_. Adobe AIR App |_. Download/Install |<br />

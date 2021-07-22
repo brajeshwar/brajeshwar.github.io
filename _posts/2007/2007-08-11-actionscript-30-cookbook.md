@@ -34,7 +34,7 @@ excerpt: ActionScript 3.0 CookBook is very much like any other CookBoook and get
 ---
 <p><a href="http://www.amazon.com/ActionScript-3-0-Cookbook-Application-Developers/dp/0596526954/"><img src="/static/2007/08/actionscript-3-cookbook.jpg" alt="ActionScript 3.0 Cookbook" /></a>I remember starting off beta testing huge bunch of ActionScript codes from Joey Lott which was supposed to be for the ActionScript 2.0 CookBook. However, at that juncture there was an announcement of ActionScript 3.0 from <a href="http://www.macromedia.com/">Macromedia</a> (now part of <a href="http://www.adobe.com/">Adobe</a>) and the whole development shifted to - what is today the ActionScript 3.0 Cookbook by Joey Lott - from O'Reilly.</p>
 <p>ActionScript 3.0 Cookbook is written by Joey Lott along with <a href="http://www.darronschall.com/">Darron Schall</a> and <a href="http://www.bit-101.com/blog/">Keith Peters</a>. It is another must-have book for any beginner to intermediate ActionScript Programmer.<br />
-<!--more--><br />
+<br />
 Very much like any other CookBoook, this book gets to the point right away with over 300+ example codes. It is not a book to teach you ActionScript 3.0 from scratch but assumes that you know AS 3.0 and wanted to get down dirty with codes right away. The book will suit those who wish to get down coding with examples - code it, test it and publish it - at an instant. It is also for those who wish to keep a libray of commonly used examples in AS 3.0.</p>
 <p>The books covers almost all the topics on ActionScript 3.0. Besides the usual ActionScript basic, there are recipes on</p>
 <p>* creation of ActionScript Packages<br />

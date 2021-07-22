@@ -26,7 +26,7 @@ permalink: "/2004/new-flash-new-configuration-folder/"
 ---
 <p>With the release of the new sexy, sensual updater comes many improvements, changes and updates. With all informations floating around, it is easy to just search on some prominent sites and read them, but here is an info that ain't floating around, so let me have it here for me to read later. Lately, I have been experiencing the habit of searching my own site to look up articles that I have writen, tips shared. In order that I can refer to them again, here we go again for the archive.</p>
 <p>With the new Flash Updater, she have change her configuration folder a bit. The user profile size have drastically decrease its size as she have removed some configuration folders and external player from the "First Run" folder to the "Application-Level Configuration" folder. She have also moved the HelpPanel to all-user-level configuration. Now, you will find authplay.dll (file), ComponentFLA, Components, Importers, Libraries and Templates  in the application-level configuration folder.<br />
-<!--more--><br />
+<br />
 <strong>Application-level configuration folder:</strong> This is the configuration folder for the application itself. Typical paths to this folder are:<br />
 Windows: \Program Files\Macromedia\Flash MX 2004\"language"\Configuration\<br />
 Mac: HD/Applications/Macromedia Flash MX 2004/Configuration/ </p>

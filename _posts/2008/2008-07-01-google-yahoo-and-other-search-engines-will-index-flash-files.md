@@ -38,7 +38,7 @@ excerpt: With Adobe's help, Google can now better read the content on sites that
 ---
 <p>This is the beginning of a new phenomena -- Google, the leader in Search -- will now be able to index textual content in Flash files of all kinds -- Flash menus, buttons to banner, to self-contained Flash websites. Google have <a href="http://googleblog.blogspot.com/2008/06/google-learns-to-crawl-flash.html">launched their Flash indexing algorithm</a>, we can expect improved visibility of Flash content, with better search results and snippets.</p>
 <p>People who have once shunned Flash for the lack of visibility on Search Engines can now rejoice. Earlier, it have been very difficult to make Flash contents indexable by Search Engines.<br />
-<!--more--><br />
+<br />
 Ted's got a nice, short and sweet explanation on <a href="http://www.onflex.org/ted/2008/06/searchable-swf.php">how this works</a>; </p>
 <p>With the help of Adobe Flash Player, Search Engines like Google, Yahoo! have their spiders playback SWFs in the Flash Player runtime. The SWF Files actually runs inside the web spiders and allows all contents within an SWF to be indexed.</p>
 <blockquote><p>The cool part is that this also covers dynamic data loaded in from requests to a server, these are typically ignored in both AJAX and SWF applications.</p></blockquote>

@@ -28,7 +28,7 @@ permalink: "/2004/macromedia-director-mx-2004-updater/"
 * the ability to create projectors for the Classic Macintosh operating systems from Windows<br />
 * a new, "slim" Shockwave Player installer resulting in a download size nearly 2MB smaller than before, this includes changes to the Shockwave Player's Xtras auto-downloading mechanism to ensure that existing content continues to function correctly. <strong>Note</strong>: Macromedia is also providing full installers (these contain all Xtras) in both executable form and in CAB file form (for ActiveX auto-installs).<br />
 * reduced number of dialogs during the Shockwave Player installation process for all Windows users and a redesigned installation completion movie<br />
-<!--more--><br />
+<br />
 Currently, Macromedia is only providing updated installers for Macromedia Director (in all languages). They are promising that within the next week or so, the Shockwave Player installers will be available from the Player Download Center and as part of the free-licensing program for distributing on fixed-media or in corporate intranet environments.</p>
 <p><strong>Links</strong>:</p>
 <p>* <a href="http://www.macromedia.com/software/director/special/10_1updater/" title="Download the Macromedia Director MX 2004 Updater">Updater Download</a><br />

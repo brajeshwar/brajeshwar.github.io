@@ -34,5 +34,5 @@ excerpt: The Flash Lite 3 Developer Edition is a standalone player for supported
   devices start shipping with the full version of Flash Lite 3 pre-installed.
 ---
 <p>A Developer Edition of <a href="http://labs.adobe.com/technologies/flashlite3/">Flash Lite 3</a> is now available from Adobe Labs. Adobe Flash Lite 3 Developer Edition is a standalone player for supported mobile phones to allow developers to test their Flash Lite 3 applications before commercial devices start shipping with the full version of Flash Lite 3 pre-installed. This installer only supports standalone content and cannot be used to view SWF files that are embedded in a mobile web browser or to test any type of personalization content such as wallpapers or screensavers.<br />
-<!--more--><br />
+<br />
 This version of the Flash Lite 3 Developer Edition is not locked to the serial number of the device, you don't have to provide your IMEI number to download the installer. This installer has a startup screen indicating that it is the Flash Lite 3 Developer Edition. Devices that will ship with Flash Lite 3 pre-installed will not have this start up screen in their standalone players.</p>

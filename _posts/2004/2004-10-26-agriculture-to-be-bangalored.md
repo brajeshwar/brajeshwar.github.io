@@ -24,7 +24,7 @@ author:
 permalink: "/2004/agriculture-to-be-bangalored/"
 ---
 <p>As if in-sourcing of IT and its related services is not enough, India is planning to do farming for African countries. So, Indian farmers will also start earning in dollars! But then, the Indian farmers will be in competition with the Chinese farmers who have already started this initiative in places like Zambia. So, next time at the Consulate, don't be surprised if you are in Q along with turban clad, white <em>dhoti</em>-ed farmers.<br />
-<!--more--><br />
+<br />
 <?php ImgBlog("offtopic/carrera911.jpg", 1, "Porche Carrera 911", "");?><em>On the side-note</em>:<br />
 A business related news making headlines all across India is that of Laxmi Mittal, the steel business tycoon is the world's largest steelmaker and is also the richest man in Britain. The news hit major channels after the historic merger of his steel conglomerate Ispat with its rival, International Steel Group of USA, on Monday to form the Mittal Steel Coprporation. These people are real source of inspiration; the Tatas, the Ambanis, the Bajaj.</p>
 <p>And two major IT-Service giants, <a href="http://www.iflexsolutions.com/" title="i-Flex">i-Flex</a> and <a href="http://www.satyam.com/" title="Satyam">Satyam</a> have also entered the Forbes 100 best under billion company.</p>

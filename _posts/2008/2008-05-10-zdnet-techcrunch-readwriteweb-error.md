@@ -41,7 +41,7 @@ excerpt: Some-a people out there in our nation don't have that, and I believe RI
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite>Brajeshwar</cite></p>
 <p class="caption"><em class="title">Rich Internet Applications</em>How some high profile sites got it all wrong!</p>
 </div>
-<p><!--more--><br />
+<p><br />
 I was willing to brush it aside as another harmless mistake by some high profile sites, "we all make mistakes". However, Mrinal's second <a href="http://twitter.com/mrinalwadhwa/statuses/807789362">tweet</a> (Mrinal's articles are <a href="http://weblog.mrinalwadhwa.com/2008/05/09/a-list-bloggers-confused-about-rich-internet-application-technologies/">here</a> and <a href="http://weblog.mrinalwadhwa.com/2008/05/10/latest-example-readwriteweb-a-list-bloggers-are-so-confused-about-ria-technologies/">here</a>) got me thinking and wanted to bring forth some clarifications for the Rich Internet Applications (RIA) realm.</p>
 <p><strong>ZDNet</strong></p>
 <p>Recently, Mary Jo Foley at ZDNet wrote an article -- <a href="http://blogs.zdnet.com/microsoft/?p=1382">Microsoft Live Mesh to get more competition from Sun</a>. While talking about JavaOne where Sun unveils their future cloud-computing platform -- Hydrazine -- which will be in direct competition with similar offerings from Microsoft, Google, Amazon and others, she wrote</p>

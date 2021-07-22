@@ -24,7 +24,7 @@ author:
 permalink: "/2003/you-blog-then-better-ask-your-boss/"
 ---
 <p>Do you blog? And are you employed? Be careful your boss may not like what you blog, this guy got fired (<a href="http://www.michaelhanscom.com/eclecticism/2003/10/of_blogging_and.html">read actual thread</a>) because he <a href="http://www.michaelhanscom.com/eclecticism/2003/10/even_microsoft_.html">wrote something</a> on his blog that his company do not like. Similarly, better be careful with your blog content and follow your web-host's rules and regulation. I got a warning of "Abuse-Copyright Infringement" because of some of the comments on this blog. I had to spend half a day reading all comments and deleting many of them. Right now, I am following the Tip No. 6 of of the seven quick steps to spam-free blog.<br />
-<!--more--><br />
+<br />
 For the archive sack, here is the Step No. 6.<br />
 <strong>Reasoning</strong> : One of the reasons that comment spam is such a pain is that it takes several clicks through MT's interface to get rid of a single post. If you could kill a spam easily as soon as it appeared, their effectiveness would be reduced dramatically, with the hopeful aim of deterring spammers entirely.<br />
 <strong>The fix </strong>: This is another Perl insert, this time into the file lib/MT/App/Comments.pm (about line 150):</p>

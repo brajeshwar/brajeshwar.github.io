@@ -32,7 +32,7 @@ permalink: "/2005/what-isisnt-web-20/"
 * featureless Ã‡Æ’?user experiencesÃ‡Æ’?<br />
 * overly friendly and self-important copy<br />
 * acronyms<br />
-<!--more--><br />
+<br />
 __Update__</p>
 <p>Here is another funny "Web 2.0 Checklist (Web 2.0 Checklist)":http://msippey.tadalist.com/lists/public/155420</p>
 <p>It bullets as</p>

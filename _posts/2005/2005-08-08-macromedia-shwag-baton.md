@@ -28,7 +28,7 @@ excerpt: Being an Adobe Community Expert (erstwhile Macromedia Team Member), man
 ---
 <p>In keeping with the Macromedia Shwag baton passing tradition, after I was handed it coupla days back by "Matt Voerman (Matt Voerman)":http://www.rocketboots.com.au/blog/, I am proud to list out mine.</p>
 <p>May be this is akin to my nature, but I am not really comfortable showing them off (well, for anything I possess for that matter) and thus keeps most of them to be used only for the appropriate time/place. Being an <a href="http://www.adobe.com/communities/experts/">Adobe Community Expert</a> (erstwhile Macromedia Team Member), manager of "iGeeks (iGeeks)":http://www.igeeks.org/ and a much pampered developer of Macromedia Technologies, I am lucky to get many if not HUGE Macromedia Collectibles! As for the ones intended for the Macromedia User Groups, I am tired of distributing them as it never finishes. I would like to slip a quick thanks to Edward Sullivan for the same. Mike Chamber is another person responsible for most of my possessions and a heap of thanks goes to him.</p>
-<p><!--more--><br />
+<p><br />
 *Macromedia Shwag in my possession (and everything else that came from Macromedia)*</p>
 <p>* Numerous T-Shirts including that famous "gotoAndPlay"<br />
 * Numerous Pens<br />

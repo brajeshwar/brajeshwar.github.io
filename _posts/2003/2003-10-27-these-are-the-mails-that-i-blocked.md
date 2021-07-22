@@ -24,7 +24,7 @@ author:
 permalink: "/2003/these-are-the-mails-that-i-blocked/"
 ---
 <p>Well, you really cannot stop or protect yourself from spam mails. So, I though I will compile and keep updating a list of mail ids which I am blocking which are basically spammers. I am openly sharing their mail IDs so that, maybe, e-mail harverters may get themselves upon each other too. I had been compiling the list for quite sometime. You may comment and put in your blocked mail IDs to share with other people. You can also look into my frustration from a <a href="http://www.brajeshwar.com/archives/000124.php" title="I will look into spam mails">previous post</a>.<br />
-<!--more--><br />
+<br />
 <a href="mailto:lxginstorenow@desertmail.com">lxginstorenow@desertmail.com</a>,<br />
 <a href="mailto:happy_gal77@lycos.com">happy_gal77@lycos.com</a>,<br />
 <a href="mailto:lxginstorenow@desertmail.com">lxginstorenow@desertmail.com</a>,<br />

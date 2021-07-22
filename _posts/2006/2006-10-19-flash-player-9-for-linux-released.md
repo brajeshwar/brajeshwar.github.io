@@ -24,7 +24,7 @@ author:
 permalink: "/2006/flash-player-9-for-linux-released/"
 ---
 <p>Adobe announced the release of the "Flash Player 9 for Linux (Flash Player 9 for Linux)":http://labs.adobe.com/downloads/flashplayer9.html. Read the "FAQ for Flash Player 9 for Linux (FAQ for Flash Player 9 for Linux)":http://labs.adobe.com/wiki/index.php/Flash_Player#FAQ:_Flash_Player_9_for_Linux_beta and here is the "Release Note (Release Note)":http://labs.adobe.com/technologies/flashplayer9/releasenotes.html.<br />
-<!--more--><br />
+<br />
 <?php DiggButton ("http://digg.com/programming/Flash_Player_9_for_Linux_released");?>*Known issues for Linux*</p>
 <p>* Full-screen mode is not available for the Linux player yet.  SSL support is not available in the Linux Standalone Player.  These features will be implemented for the final release.<br />
 * Artifacts may appear when video initially plays.<br />

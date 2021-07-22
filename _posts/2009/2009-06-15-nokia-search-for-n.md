@@ -36,7 +36,7 @@ excerpt: The Nokia N97 is the latest NSeries flagship phone from Nokia, which is
 <p class="credit"><abbr class="type" title="Graphics">Graphics</abbr> from <cite>Nokia</cite></p>
 <p class="caption"><em class="title">Nokia N97</em>For the always-on Internet-savvy users.</p>
 </div>
-<p><!--more--><strong>The Winners</strong></p>
+<p><strong>The Winners</strong></p>
 <p># <strong>Kabir</strong><br />
 # <strong>Arun Muthuvel</strong></p>
 <p><em>Congratulations! You'll be contacted by Nokia for the formalities.</em></p>

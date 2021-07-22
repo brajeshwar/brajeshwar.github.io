@@ -35,6 +35,6 @@ excerpt: Adobe (INDIA) is in need of a Sales Engineer for its Bangalore Office (
   marketing in Adobe India.
 ---
 <p><a href="http://www.adobe.com/" title="Adobe">Adobe</a> revolutionizes how the world engages with ideas and information. For more than two decades, the company's award-winning software and technologies have redefined business, entertainment, and personal communications by setting new standards for producing and delivering content that engages people virtually anywhere at anytime.</p>
-<p><!--more--><br />
+<p><br />
 From rich images in print, video and film to dynamic digital content for a variety of media, the impact of Adobe solutions is evident across industries and felt by anyone who creates, views, and interacts with information. With a reputation for excellence and a portfolio of many of the most respected and recognizable software brands, Adobe is one of the world's largest and most diversified software companies. </p>
 <p>Apply for the post of Sales Engineer(s) for Adobe, Bangalore (INDIA).</p>

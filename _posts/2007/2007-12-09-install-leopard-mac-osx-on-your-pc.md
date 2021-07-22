@@ -38,7 +38,7 @@ excerpt: The tutorial to install Leopard on a PC is very experimental and things
 <p class="caption"><em class="title">Leopard on a PC</em>Install Leopard on your PC in 3 easy steps!</p>
 </div>
 <p><strong>DailyApps</strong> has a nice hack on how to install Leopard, Apple's latest <a href="http://www.apple.com/macosx/">Mac OS X</a> 10.5.x in 3 simple steps.</p>
-<p><!--more--><!-- adman --></p>
+<p></p>
 <p>Just after few days Leopard was released, hackers have managed to create a patched DVD that everyone can use to install Leopard on PC's without having to buy a Mac. DailyApps warns that the tutorial is very experimental and things might not work the right way simply because it is still early days in hacking Leopard to work on PC's. So, do it at your own risk.</p>
 <p>Make sure you backup all important data before you proceed. Here are the things that you will need before Install Leopard on your PC.</p>
 <p>* The Patched DVD Image<br />

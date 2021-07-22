@@ -40,7 +40,7 @@ excerpt: Sometimes you can have a frozen window, and there are two fast ways to 
 <p class="credit"><abbr class="type" title="Photograph">Wallpaper</abbr> from <cite><a href="http://coronastx.deviantart.com/art/Linux-where-dreams-come-true-60145977">Deviant Art</a></cite></p>
 <p class="caption"><em class="title">Linux</em>Powerful.OpenSource.Secure (Can you name the Distro's in the Picture?)</p>
 </div>
-<p><!--more--><!-- adman --></p>
+<p></p>
 <p>At the onset of this new year - 2008 - I would like to share some Linux tips with you. It won't matter which version are you using because I'll talk mostly about the Linux Console. Most common windows user will probably feel the console in Linux to be a little intimidating, nevertheless when the time comes, you'll notice that it is the best way to be highly productive.</p>
 <p>Read, practice the following instructions to get yourself comfortable with Linux;</p>
 <p><strong>1. Avoid out of the session or close the terminal with the command Ctrl+D</strong></p>
@@ -100,7 +100,7 @@ find -name '*.[ch]' | xargs grep -E 'expr' "Search 'expr' in the current directo
 find -type f ! -perm -444 = "Find files not readable by all"
 locate -r 'file[^/]*\.txt' = "Search cached index for names"
 </pre>
-<p><!-- adman --></p>
+<p></p>
 <p><strong>11. Frozen Windows</strong> -- Sometimes you can have a frozen window, and there are two fast ways to solve this problem without turning off your computer or restarting it. First, you can try the traditional key combination of Ctrl + Alt + Backspace.</p>
 <p>The other way is a little more complicated than the previous one but is more efficient. Hit Ctrl + Alt + F2 to jump to the virtual console. Then log in with your user name, password and type the following: </p>
 <p><code>ps -ax | grep startx</code></p>

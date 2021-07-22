@@ -32,6 +32,6 @@ excerpt: When you lean towards someone and tell them a little bit of information
   on small bits of information to your readers called Asides.
 ---
 <p>I've decided to add a Sidenotes aka Asides section to my site powered by the Wordpress Plugin - <a href="http://wordpress.org/extend/plugins/sideblog/">Sideblog</a>. Many a times, I came across articles that are good which I'd love to point others to it so they can be read and enjoyed. They, however, do not fit into the realm of a blog article and thus have avoided blogging about them unless they are big, interesting and within the paradigm of my Technical interest.<br />
-<!--more--><br />
+<br />
 Well, this is perhaps where this Sidenotes aka Asides comes in. This section will not show up on the regular side (however, I'm including it in the RSS feed for now) but will be part of the footer section of an upcoming release of my new side design - <strong>Brajeshwar v8.x.x</strong>.</p>
 <p><em>Note</em>: Wordpress have a <a href="http://codex.wordpress.org/Adding_Asides">nice article on what are Asides</a> and how to make one for your Wordpress powered Site.</p>

@@ -30,7 +30,7 @@ excerpt: ColdFusion 8 - it's blazingly fast, packed with new features, integrate
 ---
 <p><a href="http://www.adobe.com/products/coldfusion/"><img src="/static/2007/07/box_coldfusion8_150x150.jpg" alt="ColdFusion 8" style="border: 0 none;" /></a>Adobe <a href="http://www.adobe.com/products/coldfusion/">ColdFusion 8</a>, popular among beta testers as the "Scorpio" was <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200707/073007ColdFusion.html">released</a> today.</p>
 <p>Besides many other new features, ColdFusion 8 also introduces an Eclipse plug-in debugger. You can use it to set breakpoints, watch variables, and step through code, making it easier to debug application code.<br />
-<!--more--><br />
+<br />
 With ColdFusion 8, there will be no or rather very minimal need for a third-party plugin to do image manipulation. There are more than 50 new tags and functions for creating and manipulating images, from the simple to the sophisticated ones. The new CFIMAGE tag provides shortcuts to the most common image actions, including reading, writing, resizing, rotating, and converting images.</p>
 <p>ColdFusion 8 introduces Multi-threading with the new CFTHREAD tag, which allows you to create, end, join together, or temporarily suspend the processing of specific ColdFusion threads. ColdFusion 8 makes it possible to specify any .NET object - either local or remote - and use it in your ColdFusion application, just like Java or other object resource.</p>
 <p>ColdFusion 8 includes the Adobe LiveCycle Data Services ES (formerly Flex Data Services) and other data exchange improvements to simplify the data-enabling of rich Internet applications (RIAs) you build with ColdFusion and <a href="http://www.adobe.com/go/flex/">Flex</a>.</p>

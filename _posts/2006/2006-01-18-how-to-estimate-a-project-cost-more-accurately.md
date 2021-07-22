@@ -33,7 +33,7 @@ excerpt: Project Management, Project Cost Estimation
 * An estimate is not a bid<br />
 * Estimates using sound estimating practices, performed by experienced estimators from clear specifications should never be negotiated<br />
 * Ballpark estimates are guesses and should be treated as much by the project team, management, and the project sponsor<br />
-<!--more--><br />
+<br />
 Other items to consider when estimating are:</p>
 <p>* Ensure the statement of work or contract is clear and understood by the person(s) doing the estimates<br />
 * Ensure that a schedule or mandated date doesn't drive the estimating thought process<br />

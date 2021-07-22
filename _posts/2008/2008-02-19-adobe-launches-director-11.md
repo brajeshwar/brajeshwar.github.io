@@ -32,7 +32,7 @@ excerpt: The latest release, Director 11, contains a flexible and easy-to-use au
 ---
 <p>Adobe has announced the availability of the latest version of <a href="http://www.adobe.com/products/director/">Director</a> -- <strong>Adobe Director 11</strong>. With Adobe Director, Multimedia Designers and Developers can author once and publish their content for the web, CD/DVD and the desktop simultaneously. It is expected to be available by March end and international versions in French, German and Japanese by June, 2008.</p>
 <p>It will be priced at <strong>US$999</strong> for the full product and <strong>US$299</strong> for an upgrade from the prior three versions. Of course, the usual discount for students, educational institutions and Non-Profit organizations apply. Adobe Director 11 can be run on multiple Operating Systems -- Microsoft Windows XP SP2 and above, Intel-based Mac OS X 10.4 and above. The Shockwave player, however, runs on most of the systems including the Mac OS X 10.4 PPC.<br />
-<!--more--><br />
+<br />
 Here are some of the <a href="http://www.adobe.com/products/director/features/all_features/">features of the new Director 11</a>;</p>
 <p>* Support for more than 40 video, audio, and image file formats<br />
 * Native 3D rendering with DirectX 9<br />

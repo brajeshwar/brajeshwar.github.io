@@ -34,6 +34,6 @@ HKEY_CURRENT_USER (Current User)<br />
 \Explorer<br />
 \User Shell Folders<br />
 and change the values there.<br />
-<!--more--><br />
+<br />
 This is now pretty useful for me as I can have my global Actionscript Include files and Flash MX base classes without worrying if they will be lost when I format my drive next time. It is advised not to play with the registry and to <strong>create back-ups</strong> before doing anything, I suggest you do the same. There was another entry before just for <a href="http://www.brajeshwar.com/archives/2003/09/damn-i-have-to-share-this-tip/" title="custom favorites folder">favorites</a>.</p>
 <p>(I am sorry that this post is likely to appear twice on aggregators because I change the title as I thought I had textile plug-in installed but it was on my <a href="http://www.brajeshwar.com/archives/2004/07/movable-type-on-localhost/" title="Movable Type on Localhost">local movable type</a> installation and not online.)</p>

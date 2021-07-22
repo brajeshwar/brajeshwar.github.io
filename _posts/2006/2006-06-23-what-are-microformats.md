@@ -35,7 +35,7 @@ excerpt: Microformats are a set of simple, open data formats built upon existing
 * a set of simple open data format standards that many are actively developing and implementing for more/better structured blogging and web microcontent publishing in general<br />
 * "An evolutionary revolution"<br />
 * all the above</p>
-<p><!--more--><br />
+<p><br />
 the microformats principles</p>
 <p>* solve a specific problem<br />
 * start as simple as possible<br />

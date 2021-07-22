@@ -38,8 +38,8 @@ excerpt: If you look at something like Flash, when you get to the much more adva
   it really falls short.
 ---
 <p>I thought <a href="http://www.adobe.com/go/flash/">Flash</a> Bashing, these days, are done only by the Internet's semi-literates! Coming from a respectable person like James Gosling, the creator of Java is rather uncalled for. Nonetheless, it is understandable since his works somewhat relates him to <a href="http://java.sun.com/javafx/">JavaFX</a> (supposedly, a competitor to the client side apps of the <a href="http://www.adobe.com/platform/flash/">Flash Platform</a>). He has all the rights to be on the defensive (rather abusive) perspective towards their extremely successful competitor - Flash.<br />
-<!--more--><br />
-<!-- adman --><br />
+<br />
+<br />
 Redmond Developer News <a href="http://reddevnews.com/qandas/article.aspx?editorialsid=121">published an interview</a> with Sun Microsystems' James Gosling, in which they discussed JavaFX and its competition in the RIA space. Gosling shared some pointed thoughts on how he believes JavaFX compares to the Flash / Flex platform. </p>
 <p>James said, "If you look at something like Flash, when you get to the much more advanced stuff -- richer interfaces, more complex network protocols, more complex APIs -- it really falls short."</p>
 <p>Well, I'm more amused particularly with John Dowdell's response to this particular statement (JD's response indeed made me chuckle). JD responded in a short blog post and right to the point at James Gosling's statement;</p>
@@ -51,7 +51,7 @@ Redmond Developer News <a href="http://reddevnews.com/qandas/article.aspx?editor
 <p><strong>More about James Gosling</strong></p>
 <p>James Gosling was honored as an officer of the Order of Canada last February, the second-highest honor for civilians in his homeland. Gosling did his Ph.D. in computer science at Carnegie Mellon University, where he received his degree in 1983. He joined Sun Microsystems Inc. in 1984 and is still there today as a vice president and Sun fellow.</p>
 <p>James Gosling is best known as the creator of the Java programming language, its original compiler and virtual machine. A bona fide rock star to Java developers, Gosling still travels the world as the ultimate Java road warrior. He took time out of his busy schedule to talk about his past, the software industry's future and Sun's JavaFX initiatives.</p>
-<p><!-- adman --><br />
+<p><br />
 <em>Few note worthy excerpts from the Interview;</em></p>
 <p><strong>Q. How did you get interested in computers and programming early on?</strong><br />
 A. I always liked to build stuff, and when I was 14 my dad took me on a tour of the University of Calgary. I went to the computer department and it was like love at first sight. And it also had the advantage of -- this is going to sound kind of weird -- but at the time I was also trying to learn electronics. We didn't have any money, so finding parts and being able to build stuff was always dumpster diving and was really frustrating. <strong>I discovered that I could break into the university and write computer programs really easily, didn't cost any money.</strong> It was kind of a path of least resistance.</p>

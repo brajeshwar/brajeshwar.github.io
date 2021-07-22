@@ -34,7 +34,7 @@ excerpt: Back in 1995, Harvard Business School professor James McKenney called c
   technology, much of it going to upgrade existing equipment and programmes.
 ---
 <p>I just read an article from <a href="http://www.roughtype.com/">Nicholas Carr</a> and I like it enough to reproduce it here. How to cut on IT budgets and still have the computing capabilities a company needs?</p>
-<p><!--more--><br />
+<p><br />
 Here are the shortened Ten tips for reducing burgeoning IT costs and the move towards a smart IT management to get more for less.</p>
 <p># <strong>Consolidate</strong>: Studies show that about 75% of the power of the average corporate server is wasted. Data storage systems aren't much better, with capacity rarely more than 50% utilised. So, consolidate the servers, databases, and even entire data centres. Think of an optimized set of 2 servers instead of 5.<br />
 # <strong>Virtualise</strong>: Replace hardwares with softwares. Since all modern computing gear, from microprocessors to databases to firewalls, operates through digital instructions, they can often be "emulated" with software code. You can, for instance, use a single server to run many "virtual machines", thus reducing hardware expenditure.<br />

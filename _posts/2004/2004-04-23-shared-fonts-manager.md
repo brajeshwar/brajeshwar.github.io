@@ -24,7 +24,7 @@ author:
 permalink: "/2004/shared-fonts-manager/"
 ---
 <p>A new product, "Shared Fonts Manager (Shared Fonts Manager)":http://www.sharedfonts.com/, which enables the loading of font libraries into Flash movies, was released recently. As the author was not that comfortable with english, here is a translated version of a criss cross of e-mails and the final result. Thanks to the translator and thanks to the author of the project, Ivan Dembicki (aka Iv) for the information.<br />
-<!--more--><br />
+<br />
 __Here is the public consumable excerpt from our talk;__</p>
 <p>*Brajeshwar*: What new possibilities does SFM bring to creating Flash projects and its development?<br />
 *Iv*: With the help of SFM, you can fundamentally change the work with embedded fonts in Flash. It is now possible to create a single font library on a site and load necessary fonts via a program on an as needed basis.</p>

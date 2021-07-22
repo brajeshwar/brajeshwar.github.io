@@ -44,7 +44,7 @@ X-Priority: 3<br />
 X-MSMail-Priority:   Normal<br />
 X-Mailer:  Microsoft Outlook Express 6.00.2600.0000<br />
 X-MimeOLE:    Produced By Microsoft MimeOLE V6.00.2600.0000<br />
-<!--more--><br />
+<br />
 *_Message_*</p>
 <p>Hello,</p>
 <p>My name is Nikola. I live in the small country Moldova. I have found your email in Internet and I write with the purpose to offer to you cooperation. I have the Internet site and I make good money on it. I sell notebook worldwide and monthly my site makes approximately 20000 $. My site have many clients, but unfortunately the site do not have system " Online payment " and consequently my clients cannot pay for purchase of the goods immediately. With online payment will be more convenient to process payments and a site will involve more clients. On statistics sites with Online Payment make in 2-3 times more profit. If connect site and Online Payment the site will make a minimum 40000 $ monthly.<br />

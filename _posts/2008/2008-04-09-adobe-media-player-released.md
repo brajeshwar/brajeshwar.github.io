@@ -41,7 +41,7 @@ excerpt: Adobe Media Player enables businesses to create, deliver, and monetize 
 <p class="credit"><abbr class="type" title="Screenshot">Screenshot </abbr> of <cite>AMP</cite></p>
 <p class="caption"><em class="title">Adobe Media Player</em>AMP provides control and flexibility to view what you want, when you want -- online or offline.</p>
 </div>
-<p><!--more--><br />
+<p><br />
 We have not really calmed down our restless development fingers since the public announcement of <a href="http://www.brajeshwar.com/2008/adobe-launches-air-flex-3-and-blaze-ds/">Adobe AIR</a>, and Adobe have announced yet another awesome utility -- <a href="http://www.adobe.com/products/mediaplayer/">Adobe Media Player</a> -- built on-top of Adobe AIR.</p>
 <p>The best part of the Adobe Media Player (AMP) is that it is like a liquid/flexible wrapper for RSS Video/Media Channels where you can watch streaming, downloaded or local Videos. AMP is simple, sleek and straight to the point.</p>
 <p>Content Owners (like -- MTV, CBS, Nickelodeon <a href="http://www.adobe.com/products/mediaplayer/participating_networks.html">etc</a>) can customize the UI interface to suit their brands and AMP will allow that. A user can also add any video stream through RSS Feeds and other supported video formats -- FLV, etc. You can play streamed, downloaded or locally-stored video in Adobe Flash and can be viewed in 1080p, 720p or 480i resolutions. You can queue up and download your favorite Internet TV content, track and download new episodes automatically, and manage your personal video library for viewing at your convenience. AMP is free and is likely to remain so for users/viewers.</p>

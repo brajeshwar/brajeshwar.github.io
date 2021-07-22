@@ -40,7 +40,7 @@ excerpt: Servlets can be used for handling both the GET Requests and the POST Re
 * doTrace()<br />
 * doHead()</p>
 <p>An individual developing servlets for handling HTTP Requests needs to override one of these methods in order to process the request and generate a response. The servlet is invoked dynamically when an end-user submits a form.<br />
-<!--more--><br />
+<br />
 Let's look at a sample HTML FORM</p>
 <pre name="code" class="html">
 <form name="F1" action="/servlet/ColServlet">

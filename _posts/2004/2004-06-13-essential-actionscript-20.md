@@ -30,7 +30,7 @@ Actionscript 2.0 was introduced along with Flash MX 2004. Though it adds little 
 The components have also matured to the new v2 components, re-written from scratch in Actionscript 2.0 and built atop version 2 of the Macromedia Component Architecture. It is advised not to mix Actionscript 1.0 (the script that existed with Flash 5 and Flash MX) OOP technique with Actionscript 2.0 code.<br />
 <em>Object-Oriented Actionscript</em><br />
 Object-Oriented Programming is a programming approach intended to solve some of the development and maintenance problems commonly associated with large procedural programs. OOP is designed to make complex applications more manageable by breaking down into self-contained, interacting modules. The chapters gives you a summarized view of the core concepts of OOP in Flash. If you are already comfortable with OOP, then most of the other part of the chapter can be just finished off on a cursory glance.<br />
-<!--more--><br />
+<br />
 <em>Datatypes and Type Checking</em><br />
 Chapter 3 of the book talks about Datatypes and Type Checking in Actionscript. With AS 2.0, new datatypes can be added by creating classes besides the inbuilt AS 2.0 datatypes. It is a good programming practice in AS 2.0 to declare the datatype of every variable, property, function parameter, method parameter, function return value and the method return value. Variables, properties, parameters and return values without a declared datatype are not type checked. Type checking is a good way and gaurantee that a program will run the way we intend it to. It may be noted that global variable cannot be typed. So, something like _global.myVariable:String = "something"; will return a syntax error.<br />
 <em>Classes</em><br />

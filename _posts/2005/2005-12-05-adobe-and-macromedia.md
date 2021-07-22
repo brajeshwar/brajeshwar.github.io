@@ -29,7 +29,7 @@ excerpt: Adobe Systems Incorporated announced the completion of its acquisition 
   Macromedia, Inc. The transaction was finalized on Saturday, Dec. 3, 2005.
 ---
 <p>My archives won't be that complete without an article that highlights the completion of the acquisition of "Macromedia (Macromedia)":http://www.macromedia.com/ by "Adobe (Adobe)":http://www.adobe.com/ which was officially closed on the 3rd of December, 2005. One of the interesting outcome of the acquisition at this moment is the announcement that Adobe Reader to be part of the Flash Player.</p>
-<p><!--more--><!-- adman --></p>
+<p></p>
 <p><strong>References</strong></p>
 <p>* "Adobe Completes Acquisition of Macromedia (Adobe Completes Acquisition of Macromedia)":http://www.adobe.com/aboutadobe/pressroom/pressreleases/200512/120505AdobeAcquiresMacromedia.html<br />
 * "Acquisition FAQ (Acquisition FAQ)":http://www.adobe.com/aboutadobe/invrelations/adobeandmacromedia_faq.html<br />

@@ -32,7 +32,7 @@ excerpt: Adobe's launch of a hosted suites of services, not to mention this huge
   best of web office tools with their current set of products.
 ---
 <p>Another major change in Adobe's steer towards their online presence is that of the just launched <a href="http://www.acrobat.com/">Acrobat.com</a>. It is the combination of their online meetings tool -- Adobe Brio, online Word Processor -- Adobe Buzzword and online file sharing -- Adobe Share. This new announcement comes with the release of their latest offering -- Adobe Acrobat 9 -- with Flash built into the PDF experience.<br />
-<!--more--><br />
+<br />
 <strong>Adobe Buzzword</strong></p>
 <p>Buzzword is the word processor from Adobe and sports a sleek and elegant design interface. Of course, Adobe uses Flash/Flex to prove the UI and interaction complete with a WYSISYG tool. Adobe have taken care that your Buzzword document whether on a large screen or small screen or on a printed page, what you see on the screen - fonts, letter spacing, colors, and graphics - are all reproduced perfectly.</p>
 <p>Buzzword documents can be edited by multiple person at a time and it can be commented. There are tabs at the bottom that shows who has accessed the documents recently and it also indicates their status whether they are authors, reviewers, co-author or readers. There are pagination features too.</p>

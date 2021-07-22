@@ -36,7 +36,7 @@ excerpt: The Chinese government has incubated 41,434 fledgling companies, provid
   or computer hardware and software.
 ---
 <p>Recently in China, the Ministry of Science and Technology announced that it has over 548 incubators, the second most in the world next to the United States. They are considered powerful in breeding innovative start-ups. The ministry reported the incubators had helped to raise about 20,000 high technology companies with over 569 garnering an annual revenues of almost $14 million US Dollars. In addition, 53 were listed on either domestic or overseas stock exchanges.<br />
-<!--more--></p>
+</p>
 <p>In 1987, China started its borrowed idea of incubators from the United States. They created convenient and efficient environments for start-ups, provides finance, tax and land-lease incentives. Unlike India, where such start-ups are mostly private, the government funds them and are spreading throughout the country. The government has incubated 41,434 fledgling companies, providing 460,000 jobs in high technologies, such as sophisticated home electronic appliances or computer hardware and software.</p>
 <p>China has been trying to combine homegrown venture capital funds and hi-tech business incubators in a drive to forge a knowledge-driven and energy-efficient economy. The government and state-funded policy banks are now active insetting up funds that aimed at financing smaller venture capital funds. These were primarily for high-tech research and development and seed funds that were provided to help a business develop an idea, create the first product and market the product for the first time.</p>
 <p>Extracted from an article from <a href="http://news.xinhuanet.com/english/">Xinhua News Agency</a>;</p>

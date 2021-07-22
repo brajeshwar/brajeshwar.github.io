@@ -38,7 +38,7 @@ excerpt: SnapGalaxy services are divided into 2 sub-categories -- Printing Servi
 ---
 <p><img src="/static/2008/02/snapgalaxy.jpg" alt="SnapGalaxy" style="border: 0 none;" /><a href="http://www.snapgalaxy.com/">SnapGalaxy</a> was launched in late 2006 with their primary focus of allowing users to send photo prints to friends and relatives. SnapGalaxy services are divided into 2 sub-categories -- Printing Service and Online Service.</p>
 <p>They allow you to send your photos anywhere in the world. They deliver premium quality photo products to their users and their friends, family and relatives. There is unlimited photo storage, photo sharing, PhotoFolio, VirtualPhoto and much more.</p>
-<p><!--more--><!-- adman --></p>
+<p></p>
 <p>They've recently added the ability of users to sell their photos and earn money.</p>
 <p>* <strong>Sell Photos:</strong> All the Pro members at SnapGalaxy can set prices to sell the prints and gift items such as mugs, mousepads, posters using their photos.<br />
 * <strong>Share Photos:</strong> By displaying advertisements on their Photofolio (personal photo homepage), members can generate revenue directly from Google Adsense.</p>

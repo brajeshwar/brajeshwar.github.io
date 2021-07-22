@@ -30,7 +30,7 @@ permalink: "/2005/flash-ads-that-itches/"
 * Why are you forcing the user and not helping them with the information?</p>
 <p>Or was it that the Designer/sDevelopers thought s/he found a cool widget to do that?<br />
 *Comeon! That is so 2003s*.<br />
-<!--more--><br />
+<br />
 That is how some low-rung Flash Developer do to *Flash* to make the misnomer "Flash 99% Bad (Flash 99% Bad)":http://www.useit.com/alertbox/20001029.html true. And they will lament that their Flash Jobs isn't that paying or that lucrative! Did they felt cool doing it? When they looked at their work after finishing that stupid copied-from-google-search-script, what were they thinking?</p>
 <p>Please buy, download and read the "117 design guidelines for Flash usability (117 design guidelines for Flash usability)":http://www.nngroup.com/reports/flash/. *Usability*; It is not being forced to maintain, follow all. Pick the best and the ones that is best suited for a particular situation and use them. They are guidelines, atleast follow the ones that is in mainstream.</p>
 <p>Excerpt from "Jakob Nielsen's (Jakob Nielsen)":http://www.useit.com/jakob/ feeback on *117 design guidelines for Flash usability*. Read the full article about "Flash and Web-Based Applications (Flash and Web-Based Applications)":http://www.useit.com/alertbox/20021125.html</p>

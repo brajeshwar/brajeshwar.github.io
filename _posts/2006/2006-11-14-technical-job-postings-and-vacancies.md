@@ -34,7 +34,7 @@ excerpt: I've blogged about our own team's requirements but never for other peop
 <p>*Fulltime Flash and ActionScript Geeks required*<br />
 _via : recruiting agengy_<br />
 _Brajeshwar.com have no affiliation or so whatever with the recruiter, agency or the firm._<br />
-<!--more--><br />
+<br />
 We are looking for a Flash and Actionscript geek for a FULLTIME position with a large client in Cleveland, OH (USA). Must be creative and have proficiency with ActionScript. The client offers excellent benefits and attractive salary with a highly creative work environment that includes Foosball tables, on-site cafeteria, humongous kitchen area and least structure! </p>
 <p>If you would like to be a part of a well-established firm in over 15 different countries, a world leader in providing Internet Content, and has a growth rate of over 50% (hoovers.com), fast-paced dynamic firm in the creative industry, please contact the agency directly with your resume including your online portfolio.</p>
 <p>Agency's Email - rmardhani[at]claddaghresources(d0t)net<br />

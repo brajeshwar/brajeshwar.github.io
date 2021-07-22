@@ -41,10 +41,10 @@ excerpt: The Adobe Design Achievement Awards celebrate student achievement refle
 ---
 <p><a href="http://www.adaaentry.com/"><img src="/static/2007/11/adaa.gif" alt="Adobe Design Achievement Awards" style="border: 0 none;" /></a>The 2008 Adobe Design Achievement Awards gives higher education students from around the world the creative license to propel their careers in the future. Enter in 12 categories in 3 media areas endorsed by the industry, over US $60,000 in cash prizes will be awarded.</p>
 <p>Calls for entries to the <a href="http://www.adobe.com/education/adaa/">2008 Adobe Design Achievement Awards</a> was announced early morning today by Adobe (<a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200711/111307ADAAEntries.html">press release</a>).</p>
-<p><!--more--><br />
+<p><br />
 <strong>2008 ADAA's Eco-Friendly Approach</strong></p>
 <p>The 2008 ADAA is applying principles of environmental sustainability in its marketing plans. The Call For Entries posters and flyers will be printed on Mohawk Color Copy 100% recycled stock from Mohawk Fine Papers that is manufactured using wind power. Faculty will request posters on-line and they will be printed on-demand in small quantities by Xerox Graphic Arts Premier Partners on the Xerox&reg; iGen3&reg; Digital Production Press in locations near the requesters decreasing waste and fuel consumption for international shipping. The 2008 ADAA encourages student entries that reflect the principles of sustainability and lighten the human impact on our world's resources. We encourage entrants to consider principles of environmental sustainability and highlight how they may have incorporated them into their submissions.</p>
-<p><!-- adman --></p>
+<p></p>
 <p><strong>2008 ADAA's New Categories Addition</strong></p>
 <p>Reflecting the growth in the interactive design field and the importance of the integration between design and development, Adobe has added several new categories in three media areas: Interactive Media, Motion Media, and Traditional Media.</p>
 <p># Interactive Media categories include Browser-Based Design, Non-Browser Based Design, Designer/Developer Collaboration, Installation Design and Mobile Design.<br />
