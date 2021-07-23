@@ -28,6 +28,9 @@ plugins:
 # optional_front_matter:
 #   remove_originals: true
 
+# jekyll-feed config
+feed:
+  posts_limit: 10
 
 # Posts
 defaults:
