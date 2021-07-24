@@ -4,7 +4,7 @@ title: Brajeshwar Oinam
 type: home
 ---
 
-> I design experiences, opportunities, careers, teams, products, and organizations.
+Hi, I am Brajeshwar Oinam.
 
 <section id="home-blog" class="home-blog list-reset">
   <p>I have been writing since 2001. I write about productivity, technology, entrepreneurship, startup life, and design. Here are some of the recent article from the <a href="/blog/">blog</a>.</p>
