@@ -29,4 +29,4 @@ I will listen to your ideas, problems, and I won't judge. The best ideas are fra
 
 You can practice your pitch, ask questions about your product, talk about product design, user-interfaces, and user experiences.
 
-[Schedule a Meeting](https://calendly.com/brajeshwar/entrepreneur-1-1)
+[Schedule a Meeting](https://calendly.com/brajeshwar/oinam)
