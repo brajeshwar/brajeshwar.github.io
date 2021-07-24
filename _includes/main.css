@@ -25,3 +25,7 @@
 .list-reset li {
   list-style: none;
 }
+
+.page {
+  margin-top: 1rem;
+}
