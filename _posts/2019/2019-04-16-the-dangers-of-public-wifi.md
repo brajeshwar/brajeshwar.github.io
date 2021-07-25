@@ -7,7 +7,9 @@ WiFi is a miraculous invention that allows for simple and effective public inter
 
 Of course, there are some dangers that every user should be aware of while using the internet, especially if they are using public wifi. Although many public wifi providers employ stringent security measures to help curb illicit activity over their services, the use of public wifi still poses a very real danger to those who browse on it unawares.
 
-So what kind of things should we be aware of when we're using public wifi? What kinds of risks are we taking when we log on to public wifi hotspots unprotected? And what are some of the ways we can protect ourselves? The solutions can range from simple habit changes to finding the <a href="https://vpnpro.com/best-vpn-services/">best VPN services</a> out there to help protect your connection.
+So what kind of things should we be aware of when we're using public wifi? What kinds of risks are we taking when we log on to public wifi hotspots unprotected? And what are some of the ways we can protect ourselves? The solutions can range from simple habit changes to finding the [best VPN services](https://vpnpro.com/best-vpn-services/) out there to help protect your connection.
+
+[//]: # https://vpnpro.com/best-vpn-services/ is a paid link.
 
 ## What are the risks?
 
