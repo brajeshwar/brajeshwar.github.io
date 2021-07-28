@@ -16,13 +16,15 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
 [] /archives/ a yearly calendar -ish design?
 [] post-template design
   - Metadata - date
-  - cover image?
+  - cover image? (do we really need an extra picture - what does it add)
   - navigation
   - images
-    + standard
+    + <img> standard
     + <picture> that stretches wider than content
     + <figure> image with caption
 [] Search - Algolia
+
++-------------------------------------+
 
 Posts Cleanup
 

@@ -36,9 +36,9 @@ _et al_.
 
 We also worked for many Contractors who sub-contracted their work to us. We were, in fact, one of the best ghost developers to many successful Contractors.
 
-In 2006, our team was acquired to become part of the founding team of [Mixercast, Inc](https://www.linkedin.com/company/167518). It was an exciting experience, being part of a Startup, and learning from it. Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was declared dead on December 31, 2009.
+In 2006, our team was acquired to become part of the founding team of [Mixercast, Inc](https://www.linkedin.com/company/167518). It was an exciting experience, being part of a Startup, and learning from it. Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was declared dead on Dec 31, 2009.
 
-In 2007, after spending a year with Mixercast, I started [oCricket](https://ocricket.com/). After 2 years of operation, oCricket was acquired by InfinitelyBeta in June 2009. I was involved with the team in the making of the flagship product of Infinitely Beta - Paisa.com.
+In 2007, after spending a year with Mixercast, I started [oCricket](https://ocricket.com/). After 2 years of operation, oCricket was acquired by InfinitelyBeta in Jun 2009. I was involved with the team in the making of the flagship product of Infinitely Beta - `Paisa.com`.
 
 I continue to leveraging technology in finding solutions to challenges and problems. For details of my professional timeline, view my [Curriculum Vitae](https://cv.brajeshwar.com).
 
