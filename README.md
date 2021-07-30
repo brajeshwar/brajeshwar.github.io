@@ -23,7 +23,9 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
     + <picture> that stretches wider than content
     + <figure> image with caption
 [] Search - Algolia
-
+[] Integrate Vale or another prose-linter?
+  - https://docs.errata.ai/vale/about
+  - https://alexjs.com
 +-------------------------------------+
 
 Posts Cleanup
@@ -40,7 +42,7 @@ Posts Cleanup
 [] 2010
 [] 2011
 [] 2012
-[] 2013
+[✓] 2013
 [✓] 2014
 [✓] 2015
 [✓] 2016

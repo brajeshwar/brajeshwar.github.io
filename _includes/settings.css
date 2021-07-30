@@ -38,7 +38,7 @@
   --font-family-heading: 'Libre Baskerville', var(--font-serif);
 
   /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
-  --base-fontsize: 1.15rem; /*deault*/
+  --base-fontsize: 1.15rem;
 
   /* Major third scale progression - see https://type-scale.com/ */
   --header-scale: 1.25;

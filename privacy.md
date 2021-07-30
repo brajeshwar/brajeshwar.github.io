@@ -8,7 +8,7 @@ permalink: /privacy/
 
 _Last updated: Jul 11, 2021_
 
-Your privacy is important to us. It is Brajeshwar's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, [brajeshwar.com](https://brajeshwar.com), and other sites we own and operate.
+Your privacy is important to us. It is Brajeshwar's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, `brajeshwar.com`, and other sites we own and operate.
 
 ## Information We Collect
 
@@ -78,5 +78,5 @@ If required by law, we will get your permission or give you the opportunity to o
 
 For any questions or concerns regarding your privacy, you may contact us using the following details:
 
-Brajeshwar Oinam\
-[brajeshwar@oinam.com](mailto:brajeshwar@oinam.com)
+Brajeshwar Oinam
+<mark>legal @ oinam.com</mark>
