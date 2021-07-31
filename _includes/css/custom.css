@@ -1,0 +1,38 @@
+footer {
+  margin-top: 2rem;
+  border-top: var(--border-width) solid var(--border-color);
+  text-align: center;
+}
+
+.title {
+  margin: 2rem 0 0;
+  padding: 0;
+  /*border-bottom: 1px solid var(--border);*/
+}
+
+.title a {
+  display: inline-block;
+  width: 4rem;
+  max-width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+}
+
+.list-reset ul,
+.list-reset ol {
+  margin: 0.6rem 0.2rem;
+  padding: 0;
+}
+
+.list-reset li {
+  list-style: none;
+}
+
+.home,
+.page {
+  margin-top: 1rem;
+}

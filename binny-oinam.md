@@ -42,6 +42,8 @@ My dear friend, I’ll miss you for the remainder of my life and there is nothin
 
 I wish we're the victim of the cruelest prank ever and that this is not happening. I’d still forgive them but I wish I can get my friend back.
 
-_— your friend, Brajeshwar_
-
-![Usharanjan, Binny, Gangalal, and Brajeshwar)](/static/img/people/usharanjan-binny-gangalal-brajeshwar.jpg)
+<picture>
+  <source
+    media="(min-width: 800px)" srcset="/static/img/people/usharanjan-binny-gangalal-brajeshwar.jpg">
+  <img src="/static/img/people/usharanjan-binny-gangalal-brajeshwar.jpg" alt="Usharanjan, Binny, Gangalal, and Brajeshwar">
+</picture>
