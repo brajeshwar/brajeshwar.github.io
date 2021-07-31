@@ -11,12 +11,11 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
 ## T0D0
 
 [] A solarized-ish color theme -- old books with high contrast for easier reading.
-[] /blog/ design
-  - https://www.timble.net/blog/2015/05/better-pagination-for-jekyll/
+[] /blog/ design with pagination
 [] /archives/ a yearly calendar -ish design?
 [] post-template design
   - Metadata - date
-  - cover image? (do we really need an extra picture - what does it add)
+  - cover image? (do we really need an extra picture - what value does it add)
   - navigation
   - images
     + <img> standard
@@ -28,7 +27,7 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
   - https://alexjs.com
 +-------------------------------------+
 
-Posts Cleanup
+Posts Cleanup (Why the hell did I wrote so many blog posts?)
 
 [✓] 2001
 [✓] 2002
