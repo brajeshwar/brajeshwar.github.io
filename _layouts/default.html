@@ -20,9 +20,11 @@
 
 <style type="text/css">
 {%- capture include_to_scssify -%}
-  {% include settings.css %}
-  {% include base.css %}
-  {% include main.css %}
+  {% include css/color-theme-oinam.css %}
+  {% include css/settings.css %}
+  {% include css/style-base.css %}
+  {% include css/custom.css %}
+  {% include css/tool-debug.css %}
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines  -}}
 </style>

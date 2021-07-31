@@ -44,8 +44,12 @@ I continue to leveraging technology in finding solutions to challenges and probl
 
 ## Family
 
-[![Oinam Family (2017)](/static/img/oinam/oinam-family.jpg)](https://oinam.pictures)
-_Shanta Huirem, Laaija, Amara, and Brajeshwar Oinam_
+<figure>
+  <a href="https://oinam.pictures" title="Oinam Family">
+    <img src="/static/img/oinam/oinam-family.jpg" alt="Oinam Family">
+  </a>
+  <figcaption>Shanta Huirem, Laaija, Amara, and Brajeshwar Oinam</figcaption>
+</figure>
 
 I've known Shanta since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
 

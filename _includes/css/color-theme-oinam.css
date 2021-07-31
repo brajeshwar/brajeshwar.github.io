@@ -1,0 +1,53 @@
+/* color theme: oinam --------------------------------------- */
+:root {
+  color-scheme: light dark;
+
+  --background-color: #f9fafb;
+  --background-color-accent: #fff7ed;
+  --background-color-highlight: #f4f4f5;
+  
+  --text-color: #27272a;
+  
+  --border-color: #dbdbdb;
+  --border-color-highlight: #dbeafe;
+
+  --color-mark: #fbbf24;
+  
+  --pre-text-color: #1e3a8a;
+  --pre-background-color: #f1f5f9;
+
+  --text-color-link: #2563eb;
+  --text-color-link-visited: var(--text-color-link);
+  --text-color-link-hover: #1e40af;
+  --text-color-link-active: var(--text-color-link-hover);
+
+  --form-button-text-color: var(--text-color);
+  --form-button-text-color-active: var(--text-color);
+  --form-button-background-color: #3b82f6;
+  --form-button-background-color-disabled: #e4e4e7;
+  --form-button-background-color-active: var(--form-button-background-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    
+    --background-color: #4b5563;
+    --background-color-accent: #ea580c;
+    --highlighted-background-color: #0284c7;
+    
+    --text-color: #f1f5f9;
+    
+		--border-color: #dbdbdb;
+	  --border-hover-color: #b5b5b5;
+
+	  --color-mark: #92400e;
+	  
+	  --pre-text-color: #e2e8f0;
+	  --pre-background-color: #64748b;
+    
+    --text-color-link: #ea580c;
+	  --text-color-link-visited: var(--text-color-link);
+	  --text-color-link-hover: #9a3412;
+	  --text-color-link-active: var(--text-color-link-hover);
+  }
+}

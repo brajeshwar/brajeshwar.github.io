@@ -1,0 +1,39 @@
+:root {
+  --font-family-sans:       system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-serif:      Georgia, 'Times New Roman', serif;
+  --font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-cursive:           cursive;
+
+  /* an ideal reading width */
+  --body-width: 48rem;
+
+  /* default: minor third scale progression*/
+  --typescale-body: 1.2;
+
+  /* headings:  major third scale progression*/
+  --typescale-heading: 1.25;
+
+  /* spacings */
+  --spacing-heading: 1rem;
+
+  --font-family: 'libre baskerville', var(--font-family-sans);
+  --font-family-headings: var(--font-family);
+  --font-size: 16px;
+  --line-height: 1.6;
+  --line-height-heading: 1.2;
+
+  --border-radius: 0.25rem;
+  --border-width: 1px;
+
+  /* color - standard */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-dark:  #222222;
+  --color-light: #efefef;
+}
+
+@media (prefers-color-scheme: dark) {
+  img, video {
+    opacity: .6;
+  }
+}
