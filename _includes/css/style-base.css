@@ -104,8 +104,8 @@ pre,
 pre span,
 kbd,
 samp {
-  font-size: small;
   font-family: var(--font-family-monospace);
+  font-size: 90%;
   color: var(--pre-text-color);
   white-space: pre;
 }
@@ -127,8 +127,6 @@ pre {
   white-space: pre;
 
   background: var(--pre-background-color);
-  color: var(--pre-text-color);
-
   border-radius: var(--border-radius);
 }
 
@@ -141,6 +139,10 @@ pre code {
   white-space: pre-wrap;
 }
 
+code {
+  padding: 0 .5rem;
+  background: var(--background-color-highlight);
+}
 
 abbr {
   cursor: help;
@@ -181,7 +183,7 @@ hr {
 mark {
   padding: 2px 5px;
   border-radius: 4px;
-  background: var(--color-mark);
+  background: var(--background-color-accent);
 }
 
 img {
