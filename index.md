@@ -6,18 +6,19 @@ type: home
 
 Hi, I am Brajeshwar Oinam.
 
+I have been writing since 2001. I write about productivity, technology, entrepreneurship, startup life, and design.
+
+### Recent articles
+
 <section id="home-blog" class="home-blog list-reset">
-  <p>I have been writing since 2001. I write about productivity, technology, entrepreneurship, startup life, and design. Here are some of the recent article from the <a href="/blog/">blog</a>.</p>
-  <p>
-    <ul>
-      {% for post in site.posts limit:5 %}
-      {% unless post.tags contains 'draft' %}
-      <li><a href="{{post.url}}">{{ post.title | escape }}</a></li>
-      {% endunless %}
-      {% endfor %}
-    </ul>
-  </p>
+  <ul>
+    {% for post in site.posts limit:7 %}
+    <li><a href="{{post.url}}">{{ post.title | escape }}</a></li>
+    {% endfor %}
+  </ul>
 </section>
+
+Browse the [blog](/blog/) or the [archives](/archives/) for the whole list of {{site.posts | size}} articles.
 
 ## Work
 

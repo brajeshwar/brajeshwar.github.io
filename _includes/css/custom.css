@@ -63,10 +63,49 @@ footer {
   text-decoration: none;
 }
 
-/*
-  Don't do this. Fix this.
-  Make this part of the styles of the particular module.
-*/
+.page-blog {}
+
+.page-archives {}
+
+.archives-list__title {
+  margin: 0 0 -0.7rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-archives ol {
+  margin: 0; 
+  padding: 0;
+}
+
+.page-archives li {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.page-archives .post-list__meta {
+  opacity: 0.7;
+  margin-right: 0.5rem;
+
+  font-family: var(--font-family-monospace);
+  font-size: 70%;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+
+/* UTILITIES */
+.list-alternate-bg li {
+  padding: 0.1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list-alternate-bg li:nth-child(even) {
+  background: var(--background-color-highlight);
+}
+
 .list-reset ul,
 .list-reset ol {
   margin: 0.6rem 0.2rem;
@@ -77,3 +116,6 @@ footer {
   list-style: none;
 }
 
+.link-reset a {
+  text-decoration: none;
+}

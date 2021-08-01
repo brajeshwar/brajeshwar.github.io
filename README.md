@@ -10,6 +10,7 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
 
 ## T0D0
 
+[] /blog/
 [] /archives/ a yearly calendar -ish design?
 [] Search - Algolia
 [] Integrate Vale or another prose-linter?

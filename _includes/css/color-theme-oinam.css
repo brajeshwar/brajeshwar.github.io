@@ -4,16 +4,14 @@
   color-scheme: light dark;
 
   --background-color: #f9fafb;
-  --background-color-accent: #fff7ed;
+  --background-color-accent: #DBEAFE;
   --background-color-highlight: #f4f4f5;
   
   --text-color: #3f3f46;
   
-  --border-color: #dbdbdb;
-  --border-color-highlight: #3B82F6;
+  --border-color: #E5E5E5;
+  --border-color-highlight: #D4D4D4;
 
-  --color-mark: #fbbf24;
-  
   --pre-text-color: #1e3a8a;
   --pre-background-color: #f1f5f9;
 
@@ -33,15 +31,13 @@
   :root {
     
     --background-color: #334155;
-    --background-color-accent: #404040;
+    --background-color-accent: #94A3B8;
     --background-color-highlight: #1e293b;
     
     --text-color: #f1f5f9;
     
-    --border-color: #dbdbdb;
+    --border-color: #1F2937;
     --border-color-highlight: #18181b;
-
-    --color-mark: #92400e;
     
     --pre-text-color: #e2e8f0;
     --pre-background-color: #64748b;
