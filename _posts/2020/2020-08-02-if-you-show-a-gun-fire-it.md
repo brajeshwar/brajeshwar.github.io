@@ -15,8 +15,7 @@ If you are going to show a gun, be ready to fire it. If we are showing the tools
 
 ## Chekhov’s Gun
 
-
-<a href="https://en.wikipedia.org/wiki/Chekhov%27s_gun">Chekhov’s gun</a> is a dramatic principle stating that every element in a story must be necessary, and unnecessary details removed. A feature should not appear to make “false promises” by never coming into play.
+> <a href="https://en.wikipedia.org/wiki/Chekhov%27s_gun">Chekhov’s gun</a> is a dramatic principle stating that every element in a story must be necessary, and unnecessary details removed. A feature should not appear to make “false promises” by never coming into play.
 
 If you say in the first chapter that there is a rifle hanging on the wall, it absolutely must go off in the second or third chapter. If it’s not going to be fired, it shouldn’t be hanging there.
 

@@ -31,6 +31,10 @@ body {
   overflow-wrap: break-word;
 }
 
+h1, h2, h3 {
+  line-height: var(--line-height-heading);
+}
+
 
 h1 {
   font-size: calc(var(--font-size) * var(--typescale-heading) * var(--typescale-heading) * var(--typescale-heading) * var(--typescale-heading));
@@ -82,10 +86,11 @@ blockquote {
   margin: 2rem 1rem;
   padding: .5rem 1rem .5rem 2rem;
   opacity: .8;
-  font-style: italic;
+
+  font-size: 96%;
 
   background: var(--background-color-highlight);
-  border-left: .5rem solid var(--border-color-highlight);
+  border-left: var(--border-width) solid var(--border-color-highlight);
 }
 
 cite {

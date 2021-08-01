@@ -10,16 +10,7 @@ Jul 11, 2021: Moved from WordPress to Jekyll.
 
 ## T0D0
 
-[] A solarized-ish color theme -- old books with high contrast for easier reading.
-[] /blog/ design with pagination
 [] /archives/ a yearly calendar -ish design?
-[] post-template design
-  - Metadata - date
-  - navigation
-  - images
-    + <img> standard
-    + <picture> that stretches wider than content
-    + <figure> image with caption
 [] Search - Algolia
 [] Integrate Vale or another prose-linter?
   - https://docs.errata.ai/vale/about

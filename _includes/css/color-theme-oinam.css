@@ -1,4 +1,5 @@
 /* color theme: oinam --------------------------------------- */
+/* tailwind colors, https://tailwindcss.com/docs/customizing-colors */
 :root {
   color-scheme: light dark;
 
@@ -6,19 +7,19 @@
   --background-color-accent: #fff7ed;
   --background-color-highlight: #f4f4f5;
   
-  --text-color: #27272a;
+  --text-color: #3f3f46;
   
   --border-color: #dbdbdb;
-  --border-color-highlight: #dbeafe;
+  --border-color-highlight: #3B82F6;
 
   --color-mark: #fbbf24;
   
   --pre-text-color: #1e3a8a;
   --pre-background-color: #f1f5f9;
 
-  --text-color-link: #2563eb;
+  --text-color-link: #3b82f6;
   --text-color-link-visited: var(--text-color-link);
-  --text-color-link-hover: #1e40af;
+  --text-color-link-hover: #1e3a8a;
   --text-color-link-active: var(--text-color-link-hover);
 
   --form-button-text-color: var(--text-color);
@@ -31,23 +32,23 @@
 @media (prefers-color-scheme: dark) {
   :root {
     
-    --background-color: #4b5563;
-    --background-color-accent: #ea580c;
-    --highlighted-background-color: #0284c7;
+    --background-color: #334155;
+    --background-color-accent: #404040;
+    --background-color-highlight: #1e293b;
     
     --text-color: #f1f5f9;
     
-		--border-color: #dbdbdb;
-	  --border-hover-color: #b5b5b5;
+    --border-color: #dbdbdb;
+    --border-color-highlight: #18181b;
 
-	  --color-mark: #92400e;
-	  
-	  --pre-text-color: #e2e8f0;
-	  --pre-background-color: #64748b;
+    --color-mark: #92400e;
     
-    --text-color-link: #ea580c;
-	  --text-color-link-visited: var(--text-color-link);
-	  --text-color-link-hover: #9a3412;
-	  --text-color-link-active: var(--text-color-link-hover);
+    --pre-text-color: #e2e8f0;
+    --pre-background-color: #64748b;
+    
+    --text-color-link: #bfdbfe;
+    --text-color-link-visited: var(--text-color-link);
+    --text-color-link-hover: #60a5fa;
+    --text-color-link-active: var(--text-color-link-hover);
   }
 }

@@ -1,7 +1,12 @@
+header {
+  margin-bottom: 1rem;
+}
+
 footer {
   margin-top: 2rem;
   border-top: var(--border-width) solid var(--border-color);
   text-align: center;
+  font-size: small;
 }
 
 .title {
@@ -22,6 +27,46 @@ footer {
   text-decoration: none;
 }
 
+.home {}
+
+.post {}
+.post-title {}
+
+.post-meta,
+.post-nav {
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  background: var(--background-color-highlight);
+  border-radius: var(--border-radius);
+  
+  font-size: small;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+}
+
+.post-meta__read {
+  display: inline-block;
+  float: right;
+}
+
+.post-nav {
+  padding: 0;
+  text-align: center;
+}
+
+.post-nav a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  
+  text-decoration: none;
+}
+
+/*
+  Don't do this. Fix this.
+  Make this part of the styles of the particular module.
+*/
 .list-reset ul,
 .list-reset ol {
   margin: 0.6rem 0.2rem;
@@ -32,7 +77,3 @@ footer {
   list-style: none;
 }
 
-.home,
-.page {
-  margin-top: 1rem;
-}
