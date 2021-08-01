@@ -4,19 +4,11 @@
 
 [brajeshwar.com](https://brajeshwar.com)
 
-## Changelog
-
-Jul 11, 2021: Moved from WordPress to Jekyll.
-
 ## T0D0
 
-[] /blog/
-[] /archives/ a yearly calendar -ish design?
 [] Search - Algolia
-[] Integrate Vale or another prose-linter?
-  - https://docs.errata.ai/vale/about
-  - https://alexjs.com
-+-------------------------------------+
+[] Nav
+---
 
 Posts Cleanup (Why the hell did I wrote so many blog posts?)
 

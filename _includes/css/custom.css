@@ -65,27 +65,25 @@ footer {
 
 .page-blog {}
 
-.page-archives {}
-
 .archives-list__title {
   margin: 0 0 -0.7rem;
   padding: 0.5rem;
   border-bottom: 1px solid var(--border-color);
 }
 
-.page-archives ol {
+.page-blog ol {
   margin: 0; 
   padding: 0;
 }
 
-.page-archives li {
+.page-blog li {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 
-.page-archives .post-list__meta {
+.page-blog time {
   opacity: 0.7;
   margin-right: 0.5rem;
 
@@ -119,3 +117,5 @@ footer {
 .link-reset a {
   text-decoration: none;
 }
+
+.gallery {}

@@ -8,10 +8,8 @@ Email me at <a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>.
 
 Find me on
 [AngelList](https://angel.co/brajeshwar),
-[Github](http://github.com/brajeshwar?tab=repositories),
+[Github](http://github.com/brajeshwar),
 [Instagram](https://www.instagram.com/oinam/),
 [LinkedIn](https://www.linkedin.com/in/brajeshwar/),
 and
-[Twitter]().
-
-I do [NOT do Phone Calls](https://no.phone.wtf).
+[Twitter](https://twitter.com/brajeshwar).

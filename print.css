@@ -3,6 +3,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 /* brajeshwar.com */
 header,
-footer {
+footer,
+iframe,
+.post-nav {
   display: none;
 }
