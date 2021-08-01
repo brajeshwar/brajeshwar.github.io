@@ -1,13 +1,12 @@
 title: Brajeshwar
 email: brajeshwar@oinam.com
-description: >- # this means to ignore newlines until 'baseurl:'
+description: >-
   I design experiences, opportunities, careers, teams, products, and organizations.
 baseurl: ''
 url: 'https://brajeshwar.com'
   
 theme: null
 markdown: kramdown
-highlighter: rouge
 
 permalink: pretty
 permalink: /:title/

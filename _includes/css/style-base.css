@@ -202,9 +202,11 @@ figure {
   padding: 0;
   background: var(--background-color-highlight);
   border-radius: var(--border-radius);
+  text-align: center;
 }
 
 figure img {
+  border-radius: var(--border-radius);
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -214,13 +216,12 @@ figcaption {
   padding: 0 1rem 0.5rem;
 }
 
-@media (min-width: 768px) {
-  picture {
+@media (min-width: 800px) {
+  figure {
     display: block;
     position: relative;
     left: calc(-50vw + 75%);
     width: 75vw;
-    /*max-height: 100vh;*/
-    text-align: center;
+    max-height: 100vh;
   }
 }

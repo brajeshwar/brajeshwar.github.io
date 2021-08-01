@@ -18,7 +18,7 @@ I have been writing since 2001. I write about productivity, technology, entrepre
   </ul>
 </section>
 
-Browse the [blog](/blog/) or the [archives](/archives/) for the whole list of {{site.posts | size}} articles.
+Browse the [blog](/blog/) for the whole list of {{site.posts | size}} articles.
 
 ## Work
 
