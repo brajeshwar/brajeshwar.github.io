@@ -12,7 +12,7 @@ I have been writing since 2001. I write about productivity, technology, entrepre
 
 <section id="home-blog" class="home-blog list-reset">
   <ul>
-    {% for post in site.posts limit:7 %}
+    {% for post in site.posts limit:5 %}
     <li><a href="{{post.url}}">{{ post.title | escape }}</a></li>
     {% endfor %}
   </ul>
