@@ -74,12 +74,13 @@ small {
 a,
 a:visited {
   color: var(--text-color-link);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover,
 a:active {
   color: var(--text-color-link-hover);
+  text-decoration: underline;
 }
 
 blockquote {

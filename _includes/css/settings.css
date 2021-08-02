@@ -16,11 +16,11 @@
   /* spacings */
   --spacing-heading: 1rem;
 
-  --font-family: var(--font-family-sans);
+  --font-family: 'Libre Baskerville', var(--font-family-sans);
   --font-family-headings: var(--font-family);
   --font-size: 16px;
   --line-height: 1.6;
-  --line-height-heading: 1.2;
+  --line-height-heading: 1.25;
 
   --border-radius: 0.25rem;
   --border-width: 1px;
@@ -37,6 +37,6 @@
 
 @media (prefers-color-scheme: dark) {
   img, video {
-    opacity: .75;
+    opacity: .8;
   }
 }

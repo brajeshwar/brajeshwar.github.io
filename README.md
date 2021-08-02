@@ -6,7 +6,6 @@
 
 ## T0D0
 
-[] Search - Algolia
 [] Nav
 ---
 

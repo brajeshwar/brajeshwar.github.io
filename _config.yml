@@ -28,10 +28,6 @@ plugins:
 # optional_front_matter:
 #   remove_originals: true
 
-algolia:
-  application_id: 'brajeshwar.com'
-  index_name: 'brajeshwar.com'
-
 # jekyll-feed config
 feed:
   posts_limit: 10

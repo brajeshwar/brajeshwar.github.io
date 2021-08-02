@@ -4,6 +4,8 @@ title: Blog
 permalink: /blog/
 ---
 
+{% include google-search.html %}
+
 <section id="page-blog" class="page-blog list-reset list-alternate-bg link-reset">
   {%- for post in site.posts -%}
   {%- assign currentdate = post.date | date: "%Y" -%}
