@@ -4,7 +4,7 @@ layout: default
 
 <div id="post" class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <p class="post-meta">
+  <p class="post-meta font-sans">
     {{ page.date | date: '%Y %b %d %a' }}
     <span class="post-meta__read">
       {% include read-time.html %}
@@ -15,7 +15,7 @@ layout: default
     {{ content }}
   </section>
 
-  <div class="post-nav">
+  <div class="post-nav font-sans">
     {%- if page.previous.url -%} 
       <a
         href="{{ page.previous.url | prepend: site.baseurl }}"

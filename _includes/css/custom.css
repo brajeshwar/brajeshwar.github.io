@@ -9,6 +9,11 @@ footer {
   font-size: small;
 }
 
+/* where the font-family is better off sans, whatever the other fonts are */
+.font-sans {
+  font-family: var(--font-family-sans);
+}
+
 .title {
   margin: 2rem 0 0;
   padding: 0;
