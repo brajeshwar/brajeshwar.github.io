@@ -3,7 +3,7 @@ layout: post
 title: Move an MC around
 ---
 
-```
+```as
 // How to move your MovieClip around
 MovieClip.prototype.moveAround = function(){
  Key.addListener(this);
@@ -14,7 +14,7 @@ MovieClip.prototype.moveAround = function(){
 };
 ```
 
-```
+```as
 // How to apply
 myMC.moveAround();
 ```

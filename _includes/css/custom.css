@@ -6,7 +6,7 @@ footer {
   margin-top: 2rem;
   border-top: var(--border-width) solid var(--border-color);
   text-align: center;
-  font-size: small;
+  font-size: var(--font-size-small);
 }
 
 /* where the font-family is better off sans, whatever the other fonts are */
@@ -138,6 +138,11 @@ footer {
 
 .link-reset a {
   text-decoration: none;
+}
+
+/* rogue syntax highlighter - applies to both the DIV and PRE */
+.highlight {
+  border-radius: var(--border-radius);
 }
 
 .gallery {}

@@ -3,7 +3,7 @@ gem "jekyll", "~> 4.2.0"
 group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-sitemap'
-  # gem 'jekyll-algolia', '~> 1.0'
+  gem 'jekyll-paginate'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

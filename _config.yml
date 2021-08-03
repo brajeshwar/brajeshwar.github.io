@@ -7,6 +7,11 @@ url: 'https://brajeshwar.com'
   
 theme: null
 markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 permalink: pretty
 permalink: /:title/
@@ -14,6 +19,7 @@ permalink: /:title/
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate
   # - jekyll-algolia
   # - jekyll-titles-from-headings
   # - jekyll-optional-front-matter

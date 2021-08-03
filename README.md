@@ -7,7 +7,7 @@
 ## T0D0
 
 - Nav
-- Books Specific Design/Layout?
+- Books Separate Design/Layout?
 ---
 
 Posts Cleanup (Why the hell did I wrote so many blog posts?)
@@ -32,6 +32,8 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [✓] 2018
 [✓] 2019
 [✓] 2020
+
+Static Assets Cleanup
 
 Link Fixes/Cleanup
 
