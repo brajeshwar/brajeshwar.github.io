@@ -46,7 +46,7 @@ It will take hours, even days, if you have lots of photos. Let it run. It took m
 
 Clean up at Google One’s Storage isn’t easy either. The hardest ones are going to be the Large Items. I had no idea where the “Large Files” were stored. So, I cannot delete it from the local synced Drive but have to hunt and peck at the <a href="https://one.google.com/storage/management">Google Storage Management</a> Dashboard. Be careful; you might be deleting important files.
 
-![Google One Support Chat)](/static/2021/google-one-support-india-rbi.png)
+![Google One Support Chat)](/static/2021/google-one-support-india-rbi.jpg)
 
 For Google One Subscribers, you do get the opportunity to talk to an actual person from Google Support. From my interaction, I learned that, in India, due to the new Reserve bank of India eMandate, Google can’t automatically charge you for your subscription and change to a different plan. You’ll have to cancel your current subscription and re-subscribe with the desired Plan.
 

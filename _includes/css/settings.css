@@ -16,9 +16,14 @@
   /* spacings */
   --spacing-heading: 1rem;
 
-  --font-family: var(--font-family-sans);
-  --font-family-headings: var(--font-family);
+  --font-family: var(--font-family-serif);
+  --font-family-headings: var(--font-family-sans);
+  
   --font-size: 16px;
+  --font-size-small: 90%;
+  --font-size-smaller: 80%;
+  --font-size-smallest: 70%;
+  
   --line-height: 1.6;
   --line-height-heading: 1.25;
 
@@ -27,12 +32,19 @@
 
   /* color - standard */
   --color-black: #000000;
-  --color-dark: #222222;
-  --color-darker: #2d2d2b;
   --color-white: #ffffff;
-  --color-light: #efefef;
-  --color-off-white: #f6f5f0;
-  --color-true-white: #f5f6f2;
+
+  /* grays */
+  --color-gray-50:  #f9fafb; /* extra-thin */
+  --color-gray-100: #f3f4f6; /* thin */
+  --color-gray-200: #e5e7eb; /* Extra-Light */
+  --color-gray-300: #d1d5db; /* Light */
+  --color-gray-400: #9ca3af; /* Normal (Regular) */
+  --color-gray-500: #6b7280; /* Medium */
+  --color-gray-600: #4b5563; /* Semi-bold */
+  --color-gray-700: #374151; /* Bold */
+  --color-gray-800: #1f2937; /* Extra-bold (Ultra-bold) */
+  --color-gray-900: #111827; /* Black (Heavy) */
 }
 
 @media (prefers-color-scheme: dark) {

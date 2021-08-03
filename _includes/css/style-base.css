@@ -31,7 +31,8 @@ body {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headings);
   line-height: var(--line-height-heading);
 }
 
@@ -67,7 +68,7 @@ h6 {
 }
 
 small {
-  font-size: 65%;
+  font-size: var(--font-size-small);
 }
 
 
@@ -88,14 +89,14 @@ blockquote {
   padding: .5rem 1rem .5rem 2rem;
   opacity: .8;
 
-  font-size: 96%;
+  font-size: var(--font-size-small);
 
   background: var(--background-color-highlight);
   border-left: var(--border-width) solid var(--border-color-highlight);
 }
 
 cite {
-  font-size: 0.9rem;
+  font-size: var(--font-size-small);
   /*color: var(--text-color-light);*/
   font-style: normal;
 }
@@ -106,7 +107,7 @@ pre span,
 kbd,
 samp {
   font-family: var(--font-family-monospace);
-  font-size: 90%;
+  font-size: var(--font-size-small);
   color: var(--pre-text-color);
   white-space: pre;
 }
@@ -190,6 +191,7 @@ mark {
 img {
   max-width: 100%;
   height: auto;
+  border-radius: var(--border-radius);
 }
 
 main img, main video {
@@ -206,14 +208,9 @@ figure {
   text-align: center;
 }
 
-figure img {
-  border-radius: var(--border-radius);
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 figcaption {
-  font-size: 1rem;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
   padding: 0 1rem 0.5rem;
 }
 
