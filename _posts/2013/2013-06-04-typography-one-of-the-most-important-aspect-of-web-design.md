@@ -24,7 +24,7 @@ If you're already using a CSS Preprocessor (Sass, LESS, Stylus), you should feel
 
 ## Base
 
-Typeplate uses [Modular-Scale](http://modularscale.com/) to calculate and establish a Typographic scale early on. The font-sizes are established and you're advised not to pick random font-sizes anywhere in your design. Font-size should be a relative value to either your root default or it's parent element. Remember to maintain a type hierarchy that is harmonious and consistent.
+Typeplate uses [Modular-Scale](https://www.modularscale.com/) to calculate and establish a Typographic scale early on. The font-sizes are established and you're advised not to pick random font-sizes anywhere in your design. Font-size should be a relative value to either your root default or it's parent element. Remember to maintain a type hierarchy that is harmonious and consistent.
 
 ## Word-wrap, Indentation and Hyphens
 

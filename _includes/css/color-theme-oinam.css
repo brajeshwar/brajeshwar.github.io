@@ -1,14 +1,15 @@
+/* Try not to use color variables from other sources. This should be independent. */
 :root {
   color-scheme: light dark;
 
   --background-color: #f9fafb;
-  --background-color-accent: #DBEAFE;
+  --background-color-accent: #dbeafe;
   --background-color-highlight: #f4f4f5;
   
   --text-color: #3f3f46;
   
-  --border-color: #E5E5E5;
-  --border-color-highlight: #D4D4D4;
+  --border-color: #e5e5e5;
+  --border-color-highlight: #d4d4d4;
 
   --pre-text-color: #1e3a8a;
   --pre-background-color: #f1f5f9;
@@ -29,12 +30,12 @@
   :root {
     
     --background-color: #334155;
-    --background-color-accent: #94A3B8;
+    --background-color-accent: #94a3b8;
     --background-color-highlight: #1e293b;
     
     --text-color: #f1f5f9;
     
-    --border-color: #1F2937;
+    --border-color: #1f2937;
     --border-color-highlight: #18181b;
     
     --pre-text-color: #e2e8f0;

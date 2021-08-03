@@ -6,8 +6,6 @@ permalink: /contact/
 
 Email me at <a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>.
 
-I do not accept emails on this domain, brajeshwar.com, anymore.
-
 Find me on
 [AngelList](https://angel.co/brajeshwar),
 [Github](http://github.com/brajeshwar),

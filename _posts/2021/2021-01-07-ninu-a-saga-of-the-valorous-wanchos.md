@@ -3,8 +3,7 @@ layout: post
 title: Ninu - A Saga of the Valorous Wanchos
 ---
 
-![Ninu - A Saga of the Valorous Wanchos](/static/2021/book-ninu.jpg "Ninu - A Saga of the Valorous Wanchos")
-_Ninu - A Saga of the Valorous Wanchos_
+![Ninu - A Saga of the Valorous Wanchos)](/static/img/books/ninu.jpg)
 
 I find the book a bit hard to have a smooth reading. Perhaps it is the author, Mady Menon's writing style, trying to blend the modern day with the ancient history while being fictitious but punctuated with historical places, facts, and events.
 
