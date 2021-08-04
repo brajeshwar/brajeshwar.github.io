@@ -20,13 +20,11 @@
   {% include css/settings.css %}
   {% include css/style-base.css %}
   {% include css/custom.css %}
-  {% include css/syntax-monokai.css %}
+  {% include css/code.css %}
   {% include css/tool-debug.css %}
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines  -}}
 </style>
-
-<link rel="stylesheet" media="print" href="/print.css" />
 
 </head>
 <body>
@@ -35,6 +33,8 @@
 {{ content }}
 {% include footer.html %}
 {% include script.html %}
+
+<link rel="stylesheet" media="print" href="/print.css">
 
 </body>
 </html>

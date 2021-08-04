@@ -34,13 +34,16 @@ Using the value of a variable as the value or one of the values of a property in
 	oMargin: 1em;
 	oPadding: 1em;
 }
-@variables print { /* applies only to print */
+
+/* applies only to print */
+@variables print {
 	oColor: #000;
 	oBgColor: #fff;
 	oMargin: 2em;
 	oPdding: 2em;
 }
-div#post div.entry {
+
+.entry {
 	border: 1px solid #666;
 	font: normal normal normal 1em/1.6em "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin: var(oMargin);

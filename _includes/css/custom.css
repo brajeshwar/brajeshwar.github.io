@@ -9,6 +9,27 @@ footer {
   font-size: var(--font-size-small);
 }
 
+footer small {
+  font-size: var(--font-size-smaller);
+}
+
+@media (min-width: 50rem) {
+  figure.feature {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    transform: translateX(calc(50vw - 50%));
+    width: 75vw;
+  }
+
+  figure.feature img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
 /* where the font-family is better off sans, whatever the other fonts are */
 .font-sans {
   font-family: var(--font-family-sans);

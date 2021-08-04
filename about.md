@@ -44,7 +44,7 @@ I continue to leveraging technology in finding solutions to challenges and probl
 
 ## Family
 
-<figure>
+<figure class="feature">
   <a href="https://oinam.pictures" title="Oinam Family">
     <img src="/static/img/oinam/oinam-family.jpg" alt="Oinam Family">
   </a>

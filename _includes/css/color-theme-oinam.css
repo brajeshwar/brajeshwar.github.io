@@ -1,10 +1,14 @@
-/* Try not to use color variables from other sources. This should be independent. */
+/*
+ Try not to use color variables from other sources.
+ This should be independent.
+ Refer: Gray and Blue from Tailwind Color, https://tailwindcss.com/docs/customizing-colors
+ */
 :root {
   color-scheme: light dark;
 
   --background-color: #f9fafb;
   --background-color-accent: #dbeafe;
-  --background-color-highlight: #f4f4f5;
+  --background-color-highlight: #F4F4F5;
   
   --text-color: #3f3f46;
   
@@ -14,7 +18,7 @@
   --pre-text-color: #1e3a8a;
   --pre-background-color: #f1f5f9;
 
-  --text-color-link: #3b82f6;
+  --text-color-link: #1D4ED8;
   --text-color-link-visited: var(--text-color-link);
   --text-color-link-hover: #1e3a8a;
   --text-color-link-active: var(--text-color-link-hover);
@@ -31,7 +35,7 @@
     
     --background-color: #334155;
     --background-color-accent: #94a3b8;
-    --background-color-highlight: #1e293b;
+    --background-color-highlight: #3F3F46;
     
     --text-color: #f1f5f9;
     
@@ -41,7 +45,7 @@
     --pre-text-color: #e2e8f0;
     --pre-background-color: #64748b;
     
-    --text-color-link: #bfdbfe;
+    --text-color-link: #93C5FD;
     --text-color-link-visited: var(--text-color-link);
     --text-color-link-hover: #60a5fa;
     --text-color-link-active: var(--text-color-link-hover);

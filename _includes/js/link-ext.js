@@ -1,4 +1,3 @@
-// open external link in a new tab
 function externalLinks() {
   for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
     var b = c[a];

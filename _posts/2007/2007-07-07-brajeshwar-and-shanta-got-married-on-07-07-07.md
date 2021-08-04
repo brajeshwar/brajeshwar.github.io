@@ -3,14 +3,14 @@ layout: post
 title: Brajeshwar and Shanta got married on 07-07-07
 ---
 
-<figure>
+<figure class="feature">
   <a href="https://oinam.pictures" title="Brajeshwar and Shanta">
     <img src="/static/img/oinam/shanta-brajeshwar-wedding-2007.jpg" alt="Brajeshwar and Shanta">
   </a>
   <figcaption>Shanta and Brajeshwar got married on 07-07-07.</figcaption>
 </figure>
 
-I was actually thinking of 11-11-11 as the cool date to get married. However, things don't always happen the way you want, you have to twist things happening around you to make it work for you in the better way. So, today, on this cool numbered date <a href="http://www.flickr.com/photos/brajeshwar/747310966/">07-07-07</a>, me and Shanta got married officially and legally.
+I was actually thinking of 11-11-11 as the cool date to get married. However, things don't always happen the way you want, you have to twist things happening around you to make it work for you in the better way. So, today, on this cool numbered date [07-07-07](http://www.flickr.com/photos/brajeshwar/747310966/), Shanta and I got officially married.
 
 ### The Wedding
 
@@ -24,7 +24,7 @@ Ever since I was in 10th grade, I knew Shanta as the youngest, naughtiest, the m
 
 She was also one of most out-going and well-connected girl, who loves to ride around the town's nook and corner on her bike almost everyday. I saw her, bump on her at most known places - restaurants, ice-cream parlors, soft-drink joints - and cinema houses. That easy access to her made her an ideal cupid for my erstwhile girlfriends. She would happily went in and bring out my girlfriends so I can have my dates.
 
-After I finished high school, there was no connection with my friend and thus never saw her again until early last year (2006) when I was looking for new recruits for the QA team at Mixercast. Co-incidentally, she was looking for a change of job and her brother got in touch with me through <a href="http://www.orkut.com/">Orkut</a>. Shanta got employed with Mixercast and my interaction with her started afresh but things were different this time.
+After I finished high school, there was no connection with my friend and thus never saw her again until early last year (2006) when I was looking for new recruits for the QA team at Mixercast. Co-incidentally, she was looking for a change of job and her brother got in touch with me through [Orkut](http://www.orkut.com/). Shanta got employed with Mixercast and my interaction with her started afresh but things were different this time.
 
 Her hair has grown long and she was more lady-like, of which I was extremely surprised. She had shed her typical trademarked short-pants and she looked more matured in her new attire, dresses and accessories. I honestly do not have a clue when everything started but we remember talking to her mother about marriage dates, plans for engagements, and ceremonial events.
 
