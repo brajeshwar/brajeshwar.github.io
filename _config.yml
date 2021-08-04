@@ -43,6 +43,7 @@ plugins:
 # jekyll-feed config
 feed:
   posts_limit: 10
+  author: Brajeshwar
 
 # Posts
 defaults:
