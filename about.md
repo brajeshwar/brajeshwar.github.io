@@ -45,7 +45,7 @@ I continue to leveraging technology in finding solutions to challenges and probl
 ## Family
 
 <figure class="feature">
-  <a href="https://oinam.pictures" title="Oinam Family">
+  <a href="https://oinam.pictures" title="Oinam Family" loading="lazy">
     <img src="/static/img/oinam/oinam-family.jpg" alt="Oinam Family">
   </a>
   <figcaption>Shanta Huirem, Laaija, Amara, and Brajeshwar Oinam</figcaption>

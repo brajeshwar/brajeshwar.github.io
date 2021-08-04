@@ -10,8 +10,12 @@ At the MetaRefresh 2014, I'm doing a 3+ hours workshop on how designers can leve
 
 Today, the rate at which Front-End Development Tools and Utilities get introduced is mind-boggling. It is indeed quite hard to keep up. Getting familiar with few of these tools and mastering it will help designers get things done quicker, better, produce optimized results and participate with the whole team - contributing to writing production-ready codes and be able to run repeatable task easily. The result will be that designers can concentrate, focus and dedicate more time to designing products, applications, and systems instead of just 'making things work.'
 
-[![MetaRefresh 2014 Workshop)](/static/2014/metarefresh-2014.jpg)](http://www.flickr.com/photos/hasgeek/12483179123/)
-_MetaRefresh 2014 Workshop - The Design Superheroes who use Modern Design Workflows._
+<figure class="feature">
+  <a href="http://www.flickr.com/photos/hasgeek/12483179123/"><img src="/static/2014/metarefresh-2014.jpg" alt="MetaRefresh 2014 Workshop" loading="lazy"></a>
+  <figcaption>
+    MetaRefresh 2014 Workshop - The Design Superheroes who use Modern Design Workflows.
+  </figcaption>
+</figure>
 
 The purpose of this workshop is to initiate and ignite that idea amongst designers who code and breath life into their static designs. Check out the [Workshop's Companion Site](http://brajeshwar.github.io/metarefresh-2014-workshop/) for more details.
 

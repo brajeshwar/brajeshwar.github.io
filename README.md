@@ -17,7 +17,7 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [✓] 2001
 [✓] 2002
 [✓] 2003
-[] 2004 (Q2 DONE)
+[✓] 2004
 [] 2005
 [] 2006
 [] 2007
