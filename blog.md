@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 
-{% include search.html %}
+{% include search-google.html %}
 
 <section id="page-blog" class="page-blog list-reset list-alternate-bg link-reset">
   {%- for post in site.posts -%}

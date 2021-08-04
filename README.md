@@ -7,7 +7,9 @@
 ## T0D0
 
 - Nav
+- Search - Let's do this with Algolia. Google Search Sucks. DDG is too rigid.
 - Books Separate Design/Layout?
+- Look at Google Analytics (2001-2020) and Fix 404s, etc.
 ---
 
 Posts Cleanup (Why the hell did I wrote so many blog posts?)
@@ -15,7 +17,7 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [✓] 2001
 [✓] 2002
 [✓] 2003
-[] 2004 (Q1 DONE)
+[] 2004 (Q2 DONE)
 [] 2005
 [] 2006
 [] 2007

@@ -12,9 +12,15 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  default_lang: html
+  css_class: syntax
 
 permalink: pretty
 permalink: /:title/
+
+sass:
+  style: compressed
+  sourcemap: never
 
 plugins:
   - jekyll-feed

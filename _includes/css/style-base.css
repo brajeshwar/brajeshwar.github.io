@@ -208,18 +208,15 @@ figure {
   text-align: center;
 }
 
-figcaption {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-small);
-  padding: 0 1rem 0.5rem;
+figure img {
+  border-radius: var(--border-radius);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
-@media (min-width: 800px) {
-  figure {
-    display: block;
-    position: relative;
-    left: calc(-50vw + 75%);
-    width: 75vw;
-    max-height: 100vh;
-  }
+figcaption {
+  opacity: 0.8;
+  padding: 0 1rem 0.5rem;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
 }

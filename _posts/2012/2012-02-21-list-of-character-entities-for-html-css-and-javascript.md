@@ -7,7 +7,7 @@ I always had to fiddle and look around multiple sources to get the correct Chara
 
 For instance, in CSS, to add &rarr; in the content of :before, you can write;
 
-```
+```html
 .more:before {
   content: "\2192";
   margin-right: 1em;
