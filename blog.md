@@ -12,7 +12,7 @@ permalink: /blog/
   
   {%- if currentdate != date -%}
     {%- unless forloop.first -%}</ol>{% endunless %}
-    <h2 id="year-{{post.date | date: "%Y"}}" class="archives-list__title">{{ currentdate }}</h2>
+    <h2 id="year-{{post.date | date: "%Y"}}" class="post-list__title">{{ currentdate }}</h2>
     <ol>
       {% assign date = currentdate %}
     {%- endif -%}

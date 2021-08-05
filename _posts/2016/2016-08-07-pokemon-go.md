@@ -39,8 +39,12 @@ Within days of the game's release, Shayla Wiggins [found a dead body](http://mon
 
 "I probably would have never gone down there if it weren't for this game," Wiggins told CNNMoney. "But in a way, I'm thankful. I feel like I helped find his body. He could have been there for days."
 
-![Laaija's Pokémon Go Adventure)](/static/2016/laaija-pokemon.jpg)
-_Laaija's Pokémon Go Adventure._
+<figure class="feature">
+  <img src="/static/2016/laaija-pokemon.jpg" alt="Laaija's Pokémon Go Adventure." loading="lazy">
+  <figcaption>
+    Laaija's Pokémon Go Adventure.
+  </figcaption>
+</figure>
 
 ## Pokémon Go in India
 

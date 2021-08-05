@@ -29,6 +29,11 @@ footer small {
 }
 
 
+/* images */
+img.right {}
+
+.gallery {}
+
 
 /* where the font-family is better off sans, whatever the other fonts are */
 .font-sans {
@@ -108,7 +113,7 @@ footer small {
 
 .page-blog {}
 
-.archives-list__title {
+.post-list__title {
   margin: 0 0 -0.7rem;
   padding: 0.5rem;
   border-bottom: 1px solid var(--border-color);
@@ -124,6 +129,10 @@ footer small {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+.page-blog li:hover {
+  border-bottom-color: var(--text-color-link-hover);
 }
 
 .page-blog time {
@@ -165,5 +174,3 @@ footer small {
 .highlight {
   border-radius: var(--border-radius);
 }
-
-.gallery {}
