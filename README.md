@@ -25,7 +25,7 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [] 2009
 [] 2010
 [] 2011
-[] 2012
+[] 2012 (01 DONE)
 [✓] 2013
 [✓] 2014
 [✓] 2015
