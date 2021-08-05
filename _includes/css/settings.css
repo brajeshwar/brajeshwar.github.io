@@ -16,8 +16,8 @@
   /* spacings */
   --spacing-heading: 1rem;
 
-  --font-family: var(--font-family-sans);
-  --font-family-headings: var(--font-family-sans);
+  --font-family: 'Libre Baskerville', var(--font-family-serif);
+  --font-family-headings: 'Libre Baskerville', var(--font-family-serif);
   
   --font-size: 16px;
   --font-size-small: 85%;

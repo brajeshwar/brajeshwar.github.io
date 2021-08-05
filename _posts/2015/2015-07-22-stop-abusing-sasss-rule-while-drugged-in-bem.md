@@ -3,11 +3,11 @@ layout: post
 title: Stop abusing Sass's '&-rule' while drugged in BEM
 ---
 
-<a href="http://bem.info/">BEM</a> is awesome and we all love it. Our team at Razorfish, India have successfully moved bag-n-baggage to writing BEM style class names. The best benefit so far is that it is easier to work together in larger teams and much faster while fixing bugs. The other advantage I've seen is that we can move and/or switch team members across projects without having to do an extensive knowledge transfer. They feel right at home and in ease with the patterns across projects.
+[BEM](http://bem.info/) is awesome and we all love it. Our team at Razorfish, India have successfully moved bag-n-baggage to writing BEM style class names. The best benefit so far is that it is easier to work together in larger teams and much faster while fixing bugs. The other advantage I've seen is that we can move and/or switch team members across projects without having to do an extensive knowledge transfer. They feel right at home and in ease with the patterns across projects.
 
 So, when Sass 3.4 released with a well-defined `&-rule`, we went crazy and went BEM-BEM with it on everything we wrote. Here is how it goes;
 
-```
+```sass
 .block {
   display: inline-block;
   border: $border-width $border-style $border-color;
@@ -29,7 +29,7 @@ This looks pretty good and harmless. In-fact, you feel that you can now avoid wr
 
 Well, we ended up not using it. Thus,
 
-```
+```sass
 .block {
   display: inline-block;
   border: $border-width $border-style $border-color;
