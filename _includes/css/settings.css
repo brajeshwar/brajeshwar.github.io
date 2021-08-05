@@ -4,7 +4,7 @@
   --font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --font-cursive:           cursive;
 
-  /* an ideal reading width */
+  /* an ideal reading width - 768px based off 16px:1rem */
   --body-width: 48rem;
 
   /* default: minor third scale progression*/
@@ -16,8 +16,8 @@
   /* spacings */
   --spacing-heading: 1rem;
 
-  --font-family: 'Libre Baskerville', var(--font-family-serif);
-  --font-family-headings: 'Libre Baskerville', var(--font-family-serif);
+  --font-family: var(--font-family-sans);
+  --font-family-headings: var(--font-family-sans);
   
   --font-size: 16px;
   --font-size-small: 85%;
@@ -27,9 +27,11 @@
   --line-height: 1.6;
   --line-height-heading: 1.25;
 
-  --border-radius: 0.3rem;
   --border-width: 1px;
-
+  --border-radius: 0.3rem;
+  --border-radius-high: 1rem;
+  --border-radius-round: 100%;
+  
   /* color - standard */
   --color-black: #000000;
   --color-white: #ffffff;
@@ -45,10 +47,14 @@
   --color-gray-700: #374151; /* Bold */
   --color-gray-800: #1f2937; /* Extra-bold (Ultra-bold) */
   --color-gray-900: #111827; /* Black (Heavy) */
+
+  --opacity-low: 0.8;
+  --opacity-lower: 0.65;
+  --opacity-lowest: 0.5;
 }
 
 @media (prefers-color-scheme: dark) {
   img, video {
-    opacity: .8;
+    opacity: var(--opacity-low);
   }
 }
