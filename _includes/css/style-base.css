@@ -97,8 +97,6 @@ blockquote {
 
 cite {
   font-size: var(--font-size-small);
-  /*color: var(--text-color-light);*/
-  font-style: normal;
 }
 
 code,
