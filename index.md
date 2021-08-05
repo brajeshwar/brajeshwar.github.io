@@ -4,21 +4,37 @@ title: Brajeshwar Oinam
 type: home
 ---
 
-Hi, I am Brajeshwar Oinam.
+My name is Brajeshwar Oinam.
 
-I have been writing since 2001. I write about productivity, technology, entrepreneurship, startup life, and design.
+I am an entrepreneur, and technologist, with a deep focus on leadership in products and designs. I have been a developer, designer, and creative product direction with a track record of building products and leading teams.
 
-### Recent articles
+I write about
+design,
+entrepreneurship,
+family,
+parenting,
+productivity,
+startups, and
+technology.
 
-<section id="home-blog" class="home-blog list-reset">
-  <ul>
-    {% for post in site.posts limit:5 %}
-    <li><a href="{{post.url}}">{{ post.title | escape }}</a></li>
+Here are some of the recent articles from the
+__[blog](/blog/)__,
+which started in 2001 and has
+{{site.posts | size}}
+articles.
+
+<section class="blog-articles__list">
+  <ol>
+    {% for post in site.posts limit:7 %}
+    <li>
+      <a href="{{post.url}}">{{ post.title | escape }}</a>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+        {{ post.date | date: '%b %-d, %Y' }}
+      </time>
+    </li>
     {% endfor %}
-  </ul>
+  </ol>
 </section>
-
-Browse the [blog](/blog/) for the whole list of {{site.posts | size}} articles.
 
 ## Work
 
