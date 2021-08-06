@@ -1,12 +1,76 @@
+/*
+ This is the additional styling specific to brajeshwar.com
+ the site should still work visually decent even without this style.
+*/
+
 header {
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  margin-top: var(--space-double);
+  padding: var(--space-base) 0;
+}
+
+@media (min-width: 50rem) {
+  header {
+    margin-left: calc(-1 * 5rem);
+  }
+}
+
+.title {
+  margin: 0 var(--space-base) 0 0;
+  padding: 0;
+}
+
+.title a {
+  display: inline-block;
+  opacity: 0.9;
+  
+  width: 4rem;
+  height: auto;
+  
+  text-decoration: none;
+  border: 0 none;
+}
+
+.title a:hover, .title a:active {
+  opacity: 1;
+}
+
+.title img {
+  vertical-align: middle;
+  border: 0 none;
+  border-radius: 100%;
+}
+
+header nav {
+  flex-wrap: wrap;
+  align-self: center;
+  font-size: var(--font-size-smaller);
+  font-weight: 500;
+}
+
+/* nav links (header/footer) */
+nav a {
+  padding: var(--space-quarter) 0;
+  margin: var(--space-quarter);
+  text-transform: uppercase;
+  font-family: var(--font-family-sans);
+  text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+  text-decoration: none;
+  border-bottom: 2px solid var(--text-color-link-hover);
 }
 
 footer {
-  margin-top: 2rem;
-  border-top: var(--border-width) solid var(--border-color);
+  margin: var(--space-base) 0;
+
   text-align: center;
-  font-size: var(--font-size-small);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-smaller);
 }
 
 footer small {
@@ -35,28 +99,7 @@ img.right {}
 .gallery {}
 
 
-/* where the font-family is better off sans, whatever the other fonts are */
-.font-sans {
-  font-family: var(--font-family-sans);
-}
-
-.title {
-  margin: 2rem 0 0;
-  padding: 0;
-  /*border-bottom: 1px solid var(--border);*/
-}
-
-.title a {
-  display: inline-block;
-  width: 4rem;
-  max-width: 100%;
-  height: auto;
-
-  margin: 0;
-  padding: 0;
-
-  text-decoration: none;
-}
+.home {}
 
 .blog-articles__list {
   background: var(--background-color-highlight);
@@ -191,6 +234,7 @@ img.right {}
 .link-reset a {
   text-decoration: none;
 }
+
 
 /* rogue syntax highlighter - applies to both the DIV and PRE */
 .highlight {
