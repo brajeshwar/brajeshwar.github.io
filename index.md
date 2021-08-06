@@ -11,9 +11,8 @@ I am an entrepreneur, and technologist, with a deep focus on leadership in produ
 I write about
 design,
 entrepreneurship,
-family,
-parenting,
 productivity,
+software,
 startups, and
 technology.
 

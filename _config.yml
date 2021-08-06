@@ -22,13 +22,20 @@ sass:
   style: compressed
   sourcemap: never
 
+
+# Github Pages Plugins Only
+# https://pages.github.com/versions/
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-paginate
-  # - jekyll-algolia
-  # - jekyll-titles-from-headings
-  # - jekyll-optional-front-matter
+  - jekyll-sitemap
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+algolia:
+  application_id: JCOTPOLESP
+  index_name: 'brajeshwar.com'
+  search_only_api_key: b53e2c30ce0512160269fd09b5d03c41
 
 # # jekyll-titles-from-headings, https://github.com/benbalter/jekyll-titles-from-headings/
 # titles_from_headings:

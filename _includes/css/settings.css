@@ -7,15 +7,41 @@
   /* an ideal reading width - 768px based off 16px:1rem */
   --body-width: 48rem;
 
-  /* default: minor third scale progression*/
+  /* default: minor third scale progression */
   --typescale-body: 1.2;
 
-  /* headings:  major third scale progression*/
+  /* headings:  major third scale progression */
   --typescale-heading: 1.25;
 
   /* spacings */
   --spacing-heading: 1rem;
 
+  
+  /* default: minor third scale progression */
+  --space-ratio: 1.2;
+
+  --space-base: 1;
+  --space-base-px: 16px;
+  --space-base-em: 1em;
+  --space-base-rem: 1rem;
+  
+  --spacescale0: 1;
+  --spacescale1: var(--space-ratio);                            /* 1.2   */
+  --spacescale2: calc(var(--space-ratio) * var(--spacescale1)); /* 1.44  */
+  --spacescale3: calc(var(--space-ratio) * var(--spacescale2)); /* 1.728 */
+  --spacescale4: calc(var(--space-ratio) * var(--spacescale3)); /* 2.074 */
+  --spacescale5: calc(var(--space-ratio) * var(--spacescale4)); /* 2.488 */
+  --spacescale6: calc(var(--space-ratio) * var(--spacescale5)); /* 2.986 */
+  --spacescale7: calc(var(--space-ratio) * var(--spacescale6)); /* 3.583 */
+
+  /* space - try to use these */
+  --space-base: var(--space-base-rem);
+  --space-half: calc(var(--space-base-rem) / 2);
+  --space-quarter: calc(var(--space-base-rem) / 4);
+  --space-double: calc(var(--space-base-rem) * 2);
+
+
+  /* typography */
   --font-family: var(--font-family-sans);
   --font-family-headings: var(--font-family-sans);
   
@@ -31,6 +57,7 @@
   --border-radius: 0.3rem;
   --border-radius-high: 1rem;
   --border-radius-round: 100%;
+
   
   /* color - standard */
   --color-black: #000000;

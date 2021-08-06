@@ -5,7 +5,7 @@ permalink: /about/
 update: Jul 24, 2021
 ---
 
-Hi, I'm Brajeshwar Oinam.
+My name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
