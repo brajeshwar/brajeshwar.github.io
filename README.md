@@ -4,7 +4,9 @@
 
 [brajeshwar.com](https://brajeshwar.com)
 
-### House Cleaning
+## TODO
+
+[] Search - Algolia?
 
 Posts Cleanup (Why the hell did I wrote so many blog posts?)
 
