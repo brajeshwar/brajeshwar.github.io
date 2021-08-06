@@ -1,43 +1,21 @@
 ---
 layout: post
 title: New Updates from "Google+ for Android"
-date: 2012-02-29 01:46:42.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Mobile
-tags:
-- android
-- features
-- google
-- Mobile Applications
-- Mobile Technology
-- Updates
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '593142860'
-  onswipe_thumb: http://img.brajeshwar.com/2012/google%2Bandroid.png
-  trx_addons_post_views_count: '60'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2012/new-updates-from-google-for-android/"
 ---
-<p>Mobile phones that run on <a href="http://developer.android.com/guide/basics/what-is-android.html">Android OS</a> have the advantage to access innumerable number of Android Applications. Ever since Google has taken control on Android operating system, rapid development has taken place. Smart Android applications have not only enhanced functionalities of mobile phones but also changed the lifestyles of millions of people across the globe. Google has been improving social application, Google+ for Android quite often to ensure that there will be steady and stable growth. Google has delivered updates for <a href="https://market.android.com/details?id=com.google.android.apps.plus">Google+ for Android</a> application. </p>
 
-<p><a href="https://market.android.com/details?id=com.google.android.apps.plus"><img src="/static/2012/02/google%2Bandroid.png" alt="Google+ for Android" /></a></p>
-<p>Let us learn more about these updates:</p>
-<p>* New updates are intended to enhance existing application&rsquo;s features and boost its performance. Now, it is possible to find who has liked (+1'd) your posts or your comments. Earlier it was confined to find the number of +1d's only. As per the new update, you can find the entire list of users who had liked your comments or posts. You can find their names and profile photos as well.<br />
-* Another change is brought in the 'what is hot' section of video stream. This feature can be compared to <a href="http://support.twitter.com/articles/101125">Twitter trending topics</a>. Trending topics on Twitter are very popular as current highly popular topics are selected and presented to Twitter users. This will ensure that users will be exposed to the most admired topics shared by Twitter community. Through 'what is hot' section from Google+ for Android, you will be able to notice highly circulated posts that are getting the attention of the audience.<br />
-* Videos will be displayed in smaller size so that more number of streams can be accommodated for every scroll. In earlier versions users were very much annoyed with automatic refresh of video streaming. The good news is that, this pain taking process has been annihilated through the current update. The updated application is available for download from the site.</p>
+Mobile phones that run on <a href="http://developer.android.com/guide/basics/what-is-android.html">Android OS</a> have the advantage to access innumerable number of Android Applications. Ever since Google has taken control on Android operating system, rapid development has taken place. Smart Android applications have not only enhanced functionalities of mobile phones but also changed the lifestyles of millions of people across the globe. Google has been improving social application, Google+ for Android quite often to ensure that there will be steady and stable growth. Google has delivered updates for <a href="https://market.android.com/details?id=com.google.android.apps.plus">Google+ for Android</a> application. 
+
+Let us learn more about these updates:
+
+- New updates are intended to enhance existing application's features and boost its performance. Now, it is possible to find who has liked (+1'd) your posts or your comments. Earlier it was confined to find the number of +1d's only. As per the new update, you can find the entire list of users who had liked your comments or posts. You can find their names and profile photos as well.
+- Another change is brought in the 'what is hot' section of video stream. This feature can be compared to <a href="http://support.twitter.com/articles/101125">Twitter trending topics</a>. Trending topics on Twitter are very popular as current highly popular topics are selected and presented to Twitter users. This will ensure that users will be exposed to the most admired topics shared by Twitter community. Through 'what is hot' section from Google+ for Android, you will be able to notice highly circulated posts that are getting the attention of the audience.
+- Videos will be displayed in smaller size so that more number of streams can be accommodated for every scroll. In earlier versions users were very much annoyed with automatic refresh of video streaming. The good news is that, this pain taking process has been annihilated through the current update. The updated application is available for download from the site.
 <h3>Is everything Good for 'Google+ for Android'?</h3>
-<p>There is mixed reaction on the new updates introduced by Google. The application cannot fill the entire screen space when it is loaded on Tablets. This drawback is reflected on both Android Honeycomb and Ice Cream Sandwich versions. Even though Google has announced some new features with respect to mobile applications last month, nothing much was delivered with respect to <a href="http://arstechnica.com/gadgets/news/2011/07/hands-on-google-mobile-client-for-android-and-huddle-group-messaging.ars">applications used on smartphones</a>. The new updates are quite impressive to improve the overall performance of the 'Google+ for Android' application. </p>
-<p>Google is introducing new features on every day basis. The improvements introduced on 'Google+ for Android' will help more users to embrace the application as well as the social networking site, Google+. <a href="http://www.washingtonpost.com/blogs/faster-forward/post/google-plus-could-be-the-fastest-growing-site-in-history/2011/08/03/gIQA9x2vrI_blog.html">Google+ is growing fast</a> and the features are enhanced and extended. On one side, the interface is changing drastically to make it more user-friendly and convenient to use. Secondly, even though new features are added, it is ensured that the overall application access rate is enhanced. </p>
-<p>The updates announced on the mobile application will really help users to depend more on Google+ for sharing information and getting informed about new trends. Google+ enjoys unique advantage of Google's powerful search engine database to offer most accurate results in a very short time. </p>
-<p>What is your experience with the new updates?</p>
+
+There is mixed reaction on the new updates introduced by Google. The application cannot fill the entire screen space when it is loaded on Tablets. This drawback is reflected on both Android Honeycomb and Ice Cream Sandwich versions. Even though Google has announced some new features with respect to mobile applications last month, nothing much was delivered with respect to <a href="http://arstechnica.com/gadgets/news/2011/07/hands-on-google-mobile-client-for-android-and-huddle-group-messaging.ars">applications used on smartphones</a>. The new updates are quite impressive to improve the overall performance of the 'Google+ for Android' application. 
+
+Google is introducing new features on every day basis. The improvements introduced on 'Google+ for Android' will help more users to embrace the application as well as the social networking site, Google+. <a href="http://www.washingtonpost.com/blogs/faster-forward/post/google-plus-could-be-the-fastest-growing-site-in-history/2011/08/03/gIQA9x2vrI_blog.html">Google+ is growing fast</a> and the features are enhanced and extended. On one side, the interface is changing drastically to make it more user-friendly and convenient to use. Secondly, even though new features are added, it is ensured that the overall application access rate is enhanced. 
+
+The updates announced on the mobile application will really help users to depend more on Google+ for sharing information and getting informed about new trends. Google+ enjoys unique advantage of Google's powerful search engine database to offer most accurate results in a very short time. 
+
+What is your experience with the new updates?
