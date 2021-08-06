@@ -4,13 +4,6 @@
 
 [brajeshwar.com](https://brajeshwar.com)
 
-## T0D0
-
-- /contact/ - Form Collection but simple. I don't want to keep dealing with this. Maybe a common contact for all of Oinam Digital Properties?
-- Look at Google Analytics (2001-2020) and Fix 404s, etc.
-- Search - Let's do this with Algolia. Google Search Sucks. DDG is too rigid.
----
-
 ### House Cleaning
 
 Posts Cleanup (Why the hell did I wrote so many blog posts?)
@@ -26,7 +19,7 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [] 2009
 [] 2010
 [] 2011
-[] 2012 (01 DONE)
+[] 2012 (02 DONE)
 [✓] 2013
 [✓] 2014
 [✓] 2015
@@ -35,5 +28,3 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [✓] 2018
 [✓] 2019
 [✓] 2020
-
-[] Use a Broken Link Detector and Clean up most obvious errors.

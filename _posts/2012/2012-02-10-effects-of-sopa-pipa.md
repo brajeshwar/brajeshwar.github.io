@@ -1,45 +1,25 @@
 ---
 layout: post
 title: Effects of SOPA & PIPA
-date: 2012-02-10 10:37:01.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Media
-tags:
-- IT
-- Legal
-- Online Security
-- PIPA
-- Piracy
-- review
-- SOPA
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '570839118'
-  onswipe_thumb: SKIP
-  trx_addons_post_views_count: '48'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2012/effects-of-sopa-pipa/"
 ---
-<p><a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">Stop Online Piracy Act</a> (SOPA) is a bill introduced in the United States. House Judiciary Committee Chair and Texas Republican Lamar S Smith, along with 12 co sponsors, introduced SOPA, on October 26th 2011. SOPA's been created to increase the ability of US law enforcement, to fight online trafficking in copyrighted intellectual property and counterfeit goods. The law intends to expand existing criminal laws, by imposing a maximum penalty of five years in prison for unauthorized streaming of copyright material.</p>
 
-<p><iframe src="http://player.vimeo.com/video/31100268?byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
-<p>What has given SOPA an impetus is the ability of intellectual property owners, such as movie studios and record labels. They now have an effective control on foreign sites against which they have a copyright claim. For example, if Warner Bros would claim that a site in Italy is perturbing a copy of The Dark Knight, the studio could make the following demands:</p>
-<p>* That Google remove that site from its search results.<br />
-* That PayPal may no longer accept payments to and from that site.<br />
-* That Ad services pull out ads and finances from it<br />
-* That the site's ISP would avert people from going there.</p>
-<p>The most infuriating thing about SOPA is that, in its original structure, it permits IP owners to take these actions devoid of a single court appearance or judicial sign-off. It only needs a single letter claiming that the target site has violated its content. Once the notice is sent to Google or PayPal or whoever, the recipient would have five days to either abide or to challenge the claim in court. Right Holders still have the authority to demand that sort of blockade, but in the most recent version of the bill, the five day window has diminished and companies at present would need the court's permission. In addition, the language in SOPA entails that it is directly aimed at foreign offenders. It centers on cutting off sources that finance the websites, instead of directly attacking a targeted site, based out of the US legal jurisdiction.</p>
-<p>In reaction to this, a group of technology companies began an atypical form of protest. The forms shut down or replaced the content on their own popular web sites with protest messages to demonstrate their discontent with the two Internet Regulation bills grinding through Congress. One was SOPA and the other one was <a href="http://en.wikipedia.org/wiki/PROTECT_IP_Act">Protect Intellectual Property Act</a> (PIPA); Both similar to each other. Both these acts are targeted to attack the problem of foreign Websites that sell pirated or forged possessions. They would oblige restrictions, forcing US companies to discontinue selling online ads to alleged pirates, barring the payments, for illegal online sales and refusing to list Web sites suspected of piracy in search engine results.</p>
-<p>The tech tycoons argue that the bills would make them compel to huge regulatory costs and asphyxiate innovation over the Web. So there was no Wikipedia, no Reddit - a hub of links to stories and funny pictures, that attract millions a day and no I Can Has Cheezburger-the world's best known collection of funny cat pictures. Even tycoons like Twitter, Google and Wikipedia came together by using their massive reach into Americans lives to get support from online users. In this fight they were placed against giants like Hollywood and the recording industry.</p>
-<p>Since many years, The Unites States government has been undergoing a great deal of pressure from the entertainment and computer software publishing companies. They have been desperately trying to find a method of stopping online piracy that lets people to own copies for free. It is only reasonable that nobody would want someone else to own something they have worked hard on for free by disrespectfully attaining access to it. Tech tycoons such as Mozilla and Google who initially supported the bills, are now trying to ensure that they never get passed as they believe it is potentially creating a blacklist. </p>
-<p>So what did SOPA lead to? January 18, 2012 was the <a href="http://www.usatoday.com/tech/news/story/2012-01-18/SOPA-PIPA-protest-reaction/52641560/1">largest online protest</a> to stop internet censorship bills. Tech companies and users unanimously protested to defend their freedom. The network rebelled itself. On January 20th Congress shelved the bills until further notice. The final outcome is far from being resolved. But, the Web certainly does not like to be interfered with.</p>
+<a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">Stop Online Piracy Act</a> (SOPA) is a bill introduced in the United States. House Judiciary Committee Chair and Texas Republican Lamar S Smith, along with 12 co sponsors, introduced SOPA, on October 26th 2011. SOPA's been created to increase the ability of US law enforcement, to fight online trafficking in copyrighted intellectual property and counterfeit goods. The law intends to expand existing criminal laws, by imposing a maximum penalty of five years in prison for unauthorized streaming of copyright material.
+
+<iframe src="http://player.vimeo.com/video/31100268?byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+What has given SOPA an impetus is the ability of intellectual property owners, such as movie studios and record labels. They now have an effective control on foreign sites against which they have a copyright claim. For example, if Warner Bros would claim that a site in Italy is perturbing a copy of The Dark Knight, the studio could make the following demands:
+
+- That Google remove that site from its search results.
+- That PayPal may no longer accept payments to and from that site.
+- That Ad services pull out ads and finances from it
+- That the site's ISP would avert people from going there.
+
+The most infuriating thing about SOPA is that, in its original structure, it permits IP owners to take these actions devoid of a single court appearance or judicial sign-off. It only needs a single letter claiming that the target site has violated its content. Once the notice is sent to Google or PayPal or whoever, the recipient would have five days to either abide or to challenge the claim in court. Right Holders still have the authority to demand that sort of blockade, but in the most recent version of the bill, the five day window has diminished and companies at present would need the court's permission. In addition, the language in SOPA entails that it is directly aimed at foreign offenders. It centers on cutting off sources that finance the websites, instead of directly attacking a targeted site, based out of the US legal jurisdiction.
+
+In reaction to this, a group of technology companies began an atypical form of protest. The forms shut down or replaced the content on their own popular web sites with protest messages to demonstrate their discontent with the two Internet Regulation bills grinding through Congress. One was SOPA and the other one was <a href="http://en.wikipedia.org/wiki/PROTECT_IP_Act">Protect Intellectual Property Act</a> (PIPA); Both similar to each other. Both these acts are targeted to attack the problem of foreign Websites that sell pirated or forged possessions. They would oblige restrictions, forcing US companies to discontinue selling online ads to alleged pirates, barring the payments, for illegal online sales and refusing to list Web sites suspected of piracy in search engine results.
+
+The tech tycoons argue that the bills would make them compel to huge regulatory costs and asphyxiate innovation over the Web. So there was no Wikipedia, no Reddit - a hub of links to stories and funny pictures, that attract millions a day and no I Can Has Cheezburger-the world's best known collection of funny cat pictures. Even tycoons like Twitter, Google and Wikipedia came together by using their massive reach into Americans lives to get support from online users. In this fight they were placed against giants like Hollywood and the recording industry.
+
+Since many years, The Unites States government has been undergoing a great deal of pressure from the entertainment and computer software publishing companies. They have been desperately trying to find a method of stopping online piracy that lets people to own copies for free. It is only reasonable that nobody would want someone else to own something they have worked hard on for free by disrespectfully attaining access to it. Tech tycoons such as Mozilla and Google who initially supported the bills, are now trying to ensure that they never get passed as they believe it is potentially creating a blacklist. 
+
+So what did SOPA lead to? January 18, 2012 was the <a href="http://www.usatoday.com/tech/news/story/2012-01-18/SOPA-PIPA-protest-reaction/52641560/1">largest online protest</a> to stop internet censorship bills. Tech companies and users unanimously protested to defend their freedom. The network rebelled itself. On January 20th Congress shelved the bills until further notice. The final outcome is far from being resolved. But, the Web certainly does not like to be interfered with.
