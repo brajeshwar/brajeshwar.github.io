@@ -15,7 +15,6 @@ productivity,
 software,
 startups, and
 technology.
-
 Here are some of the recent articles from the
 __[blog](/blog/)__,
 which started in 2001 and has
@@ -37,4 +36,4 @@ articles.
 
 ## Work
 
-I co-founded <a href="https://valinor.earth">Valinor Earth</a> with two of my close friends, with whom I have worked on multiple projects and companies. We build sustainable and profitable technology practices helping businesses curb climate change.
+I co-founded [Valinor Earth](https://valinor.earth) with two of my close friends, with whom I have worked on multiple projects and companies. We build sustainable and profitable technology practices helping businesses curb climate change.

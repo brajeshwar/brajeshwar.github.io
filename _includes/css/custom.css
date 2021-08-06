@@ -62,11 +62,14 @@ nav a {
 
 nav a:hover, nav a:active {
   text-decoration: none;
-  border-bottom: 2px solid var(--text-color-link-hover);
+  border-bottom: 3px solid var(--text-color-link-hover);
 }
 
 footer {
-  margin: var(--space-base) 0;
+  margin-top: var(--space-double);
+  padding: var(--space-base) 0;
+  
+  border-top: var(--border-width) solid var(--border-color);
 
   text-align: center;
   font-family: var(--font-family-sans);
