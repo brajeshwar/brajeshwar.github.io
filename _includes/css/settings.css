@@ -42,8 +42,8 @@
 
 
   /* typography */
-  --font-family: var(--font-family-sans);
-  --font-family-headings: var(--font-family-sans);
+  --font-family: var(--font-family-serif);
+  --font-family-headings: var(--font-family-serif);
   
   --font-size: 16px;
   --font-size-small: 85%;
