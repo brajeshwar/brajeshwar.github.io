@@ -1,40 +1,18 @@
 ---
 layout: post
 title: Amazing Google Search Tricks You Need to Know
-date: 2012-03-20 22:21:32.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- Fun
-- google
-- Internet Search
-- Tools &amp; Apps
-- tricks
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '618116462'
-  onswipe_thumb: SKIP
-  trx_addons_post_views_count: '47'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2012/amazing-google-search-tricks-you-need-to-know/"
 ---
-<p>Google is a name known to almost everyone, even those who don't use the Internet. Millions of people use this search engine every day for their own purpose. Whatever may be the reason, the possibilities are endless and so are the numbers of result options that Google provides us with. No one can discount the benefits that Google offers to its users. </p>
-<p>However, it seems that there might be more to Google than meets the eye.</p>
 
-<p>Certain tools are integrated in to Google's mainframe which allows it to offer quick and reliable solutions. These <a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">hidden tips and tricks</a> might not all be known to even the most hardcore users of Google. Let us find a bit about these hidden treasures that Google entails:</p>
-<p># <strong>Calculations & Conversions</strong> - What do you do when you're online and need to calculate something fast? Sure, the computer has a calculator. But by the time you go to the Start Menu and run the calculator, Google might have already supplied you with the answer. Simply enter the calculation into the search box and Google does the rest. The best part &#8211; it can handle complex math equations, too. Can your calculator do that? The same rule applies if you need to <a href="http://www.google.com/finance/converter">convert currency</a> or units of measurement like height, weight and volume. Just type in the problem and voila! get your answer immediately thanks to Google's built-in converter.<br />
-# <strong>Public Data</strong> - Not many people are aware that Google possesses a whole directory of public data which can be accessed anytime. All you have to do is punch in the related keyword followed by the region or state. This way you can look up trends without any hassle.<br />
-# <strong>Geographical Locations</strong> - Google can also churn up the latitude / longitude details about a particular location on Mother Earth. Not only that, you can even find out about the time of sunrise or sunset by typing 'sunrise' or 'sunset' followed by the name of that place.<br />
-# <strong>Tracking</strong> - Expecting a package to be delivered through FedEx, UPS or USPS? You can use Google to <a href="http://code.google.com/apis/checkout/developer/checkout_analytics_integration.html">track your delivery status</a>. Type in the tracking number provided in the search box. You can also track the stats of any sports team of your choice when on the move with the help of Google. Enter the name of the team or league into the search box.You can also enter the name of an airline and the flight number to track its flight status. Type in 'flights to' or 'flights from' followed by the city or airport to view schedules to or from specific locations.<br />
-# <strong>Miscellaneous</strong> - If you want to know more about the medicine you've been taking, just go online to Google. Enter the name in the search box and you will find brief summaries and descriptions for almost all generic and brand name prescription drugs available in the United States. Google is also filled with loads of <a href="http://news.cnet.com/8301-30685_3-57318776-264/beyond-the-barrel-roll-googles-easter-eggs/">hidden easter eggs</a> waiting for you to discover. Type in commands like 'let it snow' or 'do a barrel roll' to see for yourselves. Just goes to show that Google developers aren't without their own particular brand of quirky humor. </p>
-<p>However, the best way to master the art of Google search is to follow certain terms and tricks like typing in the main points like title, file type etc. instead of asking an entire question. Gets the job done, saves time too!</p>
+Google is a name known to almost everyone, even those who don't use the Internet. Millions of people use this search engine every day for their own purpose. Whatever may be the reason, the possibilities are endless and so are the numbers of result options that Google provides us with. No one can discount the benefits that Google offers to its users. 
+
+However, it seems that there might be more to Google than meets the eye.
+
+Certain tools are integrated in to Google's mainframe which allows it to offer quick and reliable solutions. These <a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">hidden tips and tricks</a> might not all be known to even the most hardcore users of Google. Let us find a bit about these hidden treasures that Google entails:
+
+- <strong>Calculations & Conversions</strong> - What do you do when you're online and need to calculate something fast? Sure, the computer has a calculator. But by the time you go to the Start Menu and run the calculator, Google might have already supplied you with the answer. Simply enter the calculation into the search box and Google does the rest. The best part &#8211; it can handle complex math equations, too. Can your calculator do that? The same rule applies if you need to <a href="http://www.google.com/finance/converter">convert currency</a> or units of measurement like height, weight and volume. Just type in the problem and voila! get your answer immediately thanks to Google's built-in converter.<br />
+- <strong>Public Data</strong> - Not many people are aware that Google possesses a whole directory of public data which can be accessed anytime. All you have to do is punch in the related keyword followed by the region or state. This way you can look up trends without any hassle.<br />
+- <strong>Geographical Locations</strong> - Google can also churn up the latitude / longitude details about a particular location on Mother Earth. Not only that, you can even find out about the time of sunrise or sunset by typing 'sunrise' or 'sunset' followed by the name of that place.<br />
+- <strong>Tracking</strong> - Expecting a package to be delivered through FedEx, UPS or USPS? You can use Google to <a href="http://code.google.com/apis/checkout/developer/checkout_analytics_integration.html">track your delivery status</a>. Type in the tracking number provided in the search box. You can also track the stats of any sports team of your choice when on the move with the help of Google. Enter the name of the team or league into the search box.You can also enter the name of an airline and the flight number to track its flight status. Type in 'flights to' or 'flights from' followed by the city or airport to view schedules to or from specific locations.<br />
+- <strong>Miscellaneous</strong> - If you want to know more about the medicine you've been taking, just go online to Google. Enter the name in the search box and you will find brief summaries and descriptions for almost all generic and brand name prescription drugs available in the United States. Google is also filled with loads of <a href="http://news.cnet.com/8301-30685_3-57318776-264/beyond-the-barrel-roll-googles-easter-eggs/">hidden easter eggs</a> waiting for you to discover. Type in commands like 'let it snow' or 'do a barrel roll' to see for yourselves. Just goes to show that Google developers aren't without their own particular brand of quirky humor. 
+
+However, the best way to master the art of Google search is to follow certain terms and tricks like typing in the main points like title, file type etc. instead of asking an entire question. Gets the job done, saves time too!
