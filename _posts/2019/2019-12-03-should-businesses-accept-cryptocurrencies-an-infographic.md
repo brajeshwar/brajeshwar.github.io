@@ -28,6 +28,6 @@ Accepting cryptocurrency also comes with some drawbacks. For one thing, business
 
 Cryptocurrency is not backed or insured by governments (unlike traditional currency) and comes with relatively complex tax protocols for small businesses. Businesses will want to understand the ins and outs of cryptocurrency before they start accepting it. 
 
-Thanks to <a href="https://www.fundera.com/blog/should-businesses-accept-cryptocurrency">Fundera</a> for the infographic highlighting the pros and cons of businesses accepting cryptocurrency.
+Thanks to [Fundera](https://www.fundera.com/blog/should-businesses-accept-cryptocurrency) for the infographic highlighting the pros and cons of businesses accepting cryptocurrency.
 
 ![Should your Business Accept Cryptocurrency)](/static/2019/should-your-business-accept-cryptocurrency.jpg)

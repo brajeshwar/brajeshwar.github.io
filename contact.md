@@ -4,8 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-Email me at <a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>.
-
+Email me at <a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>.\
 Find me on
 [AngelList](https://angel.co/brajeshwar),
 [Github](http://github.com/brajeshwar),

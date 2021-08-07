@@ -21,6 +21,4 @@ I write about design, entrepreneurship, productivity, software, startups, and te
   </ol>
 </section>
 
-## Work
-
 I co-founded [Valinor Earth](https://valinor.earth) with two of my close friends, with whom I have worked on multiple projects and companies. We build sustainable and profitable technology practices helping businesses curb climate change.

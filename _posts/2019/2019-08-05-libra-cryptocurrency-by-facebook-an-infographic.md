@@ -17,6 +17,6 @@ A secured and well-written software will help you in protecting the Libra Blockc
 
 People have different views on cryptocurrencies, but Libra can be trusted easily as it is backed by a reserve that includes stable liquid assets, which helps in keeping the value of Libra stable.
 
-Check out <a href="https://libra.org/">Libra</a> - Cryptocurrency by Facebook, an Infographic developed at <a href="https://mrbtc.org/libra/">MrBTC.org</a>.
+Check out [Libra](https://libra.org/) - Cryptocurrency by Facebook, an Infographic developed at [MrBTC.org](https://mrbtc.org/libra/).
 
-![Libra - Cryptocurrency By Facebook)](/static/2019/08/Libra-Cryptocurrency-By-Facebook.jpg)
+![Libra - Cryptocurrency By Facebook)](/static/2019/libra-cryptocurrency-by-facebook.jpg)

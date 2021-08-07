@@ -4,7 +4,7 @@ title: Powered by Detroit, 2005
 ---
 
 <figure class="feature">
-  <img src="/static/img/brajeshwar-powered-by-detroit-hyatt-2005-apr-10.jpg" alt="Brajeshwar" loading="lazy">
+  <img src="/static/2005/brajeshwar-powered-by-detroit-hyatt-2005-apr-10.jpg" alt="Brajeshwar" loading="lazy">
   <figcaption>
     Brajeshwar first ever public speaking at the Powered by Detroit Conference, USA (Apr 10, 2005).
   </figcaption>
