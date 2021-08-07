@@ -9,7 +9,7 @@ This epic advice comes from Right Reverend James Langstaff, Bishop of Rochester,
 
 "The Bible offers a life-long source of new passwords, that can include both upper and lower case letters and numbers to help create memorable, secure passwords," says Reverend Langstaff.
 
-![Holy Bible and Passwords)](/static/img/books/bible-open.jpg)
+![Holy Bible and Passwords)](/static/2012/bible-open.jpg)
 
 To leverage this new advice simply choose your most-read New Testament passage (or any one you know in case you don't exactly have a 'favorite'), take the first letter of every word then add the chapter and verse number to the end. So, your password would end up something like this -- "ETIWTTVOTSODIWFNE234". Just in case this acronym-ish password wasn't clear enough -- or your New Testament knowledge is lacking -- that's the password for Psalms 23:4, "even though I walk through the valley of the shadow of death, I will fear no evil."
 

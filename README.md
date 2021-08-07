@@ -2,7 +2,7 @@
 
 > I design experiences, opportunities, careers, teams, products, and organizations.
 
-[brajeshwar.com](https://brajeshwar.com)
+› [brajeshwar.com](https://brajeshwar.com)
 
 ## TODO
 
@@ -21,7 +21,7 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [] 2009
 [] 2010
 [] 2011
-[] 2012 (03 DONE)
+[✓] 2012
 [✓] 2013
 [✓] 2014
 [✓] 2015
