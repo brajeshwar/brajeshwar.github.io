@@ -75,9 +75,10 @@
   --color-gray-800: #1f2937; /* Extra-bold (Ultra-bold) */
   --color-gray-900: #111827; /* Black (Heavy) */
 
-  --opacity-low: 0.8;
-  --opacity-lower: 0.65;
-  --opacity-lowest: 0.5;
+  --opacity-no: 1;
+  --opacity-low: 0.9;
+  --opacity-lower: 0.75;
+  --opacity-lowest: 0.6;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -18,29 +18,29 @@ header {
   }
 }
 
-.title {
+header h1 {
   margin: 0 var(--space-base) 0 0;
   padding: 0;
 }
 
-.title a {
+header h1 a {
   display: inline-block;
-  opacity: 0.9;
+  opacity: var(--opacity-no);
   
   width: 4rem;
-  height: auto;
+  height: 4rem;
+  
+  vertical-align: middle;
   
   text-decoration: none;
   border: 0 none;
 }
 
-.title a:hover, .title a:active {
-  opacity: 1;
+header h1 a:hover, header h1 a:active {
+  opacity: var(--opacity-lower);
 }
 
-.title img {
-  vertical-align: middle;
-  border: 0 none;
+header h1 img {
   border-radius: 100%;
 }
 
@@ -97,13 +97,19 @@ footer small {
 
 
 /* images */
-img.right {}
+img.small-right,
+img.small-left {
+  max-width: 50%;
+  margin: 0 var(--space-base);
+  padding: 0;
+}
+
+img.small-right { float: right; margin-right: 0; }
+img.small-left  { float: left;  margin-left: 0; }
 
 .gallery {}
 
-
-.home {}
-
+/* blog list on the homepage */
 .blog-articles__list {
   background: var(--background-color-highlight);
   border-radius: var(--border-radius);

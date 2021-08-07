@@ -1,5 +1,5 @@
 /*
- try not to use color variables from other sources.
+ try not to use variables directly from other value.
  this should be independent.
  refer: gray and blue from tailwind color, https://tailwindcss.com/docs/customizing-colors
  */
