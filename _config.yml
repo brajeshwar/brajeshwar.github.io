@@ -8,6 +8,8 @@ url: 'https://brajeshwar.com'
 theme: null
 markdown: kramdown
 highlighter: rouge
+future: false
+show_drafts: false
 
 kramdown:
   input: GFM

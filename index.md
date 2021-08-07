@@ -12,7 +12,7 @@ I write about design, entrepreneurship, productivity, software, startups, and te
 
 <section class="blog-articles__list">
   <ol>
-    {%- for post in site.posts limit:7 -%}
+    {%- for post in site.posts limit:5 -%}
     <li>
       <a href="{{post.url}}">{{ post.title | escape }}</a>
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>

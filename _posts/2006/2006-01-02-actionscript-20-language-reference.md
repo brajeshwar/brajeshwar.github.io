@@ -11,5 +11,5 @@ We have a version hosted for our team at -- [Oinam's ActionScript 2.0](https://a
 
 Note: The ones on Macromedia are now lost after the Adobe acquisition. These are copies I had with me.
 
-- [HTML - Self Hostable](/static/files/AS2-html.zip) (1.4MB Zip)
-- [PDF - Printable](/static/files/AS2-pdf.zip) (5.8MB Zip)
+- [HTML - Self Hostable](//cdn.oinam.com/zip/AS2-html.zip) (1.4MB Zip)
+- [PDF - Printable](//cdn.oinam.com/zip/AS2-pdf.zip) (5.8MB Zip)

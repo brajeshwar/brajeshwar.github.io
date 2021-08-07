@@ -1,38 +1,16 @@
 ---
 layout: post
 title: Mobile Phones – A Catalyst for the Future in Education
-date: 2012-04-22 22:13:06.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Mobile
-- Technology
-tags:
-- Business
-- education
-- mobile phones
-- Technology
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '659804947'
-  onswipe_thumb: SKIP
-  trx_addons_post_views_count: '106'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2012/mobile-phones-a-catalyst-for-the-future-in-education/"
 ---
-<p>Along with million other uses of mobile phones, the latest upcoming advantage of this device is, it is going to create a revolution in education. Mobile phones are going to have the power to digitally impart education globally. Even the most tech-savvy person would have never dreamt in her wildest dreams, that <a href="http://drpfconsults.com/soaring-demand-for-online-k-12-schools-and-mobile-learning/">such a possibility would ever come</a> into being. </p>
-<blockquote><p>A unique <a href="http://www.business-standard.com/india/news/aptech-hungama-join-hands-for-meducation/471623/">partnership between Aptech &amp; Hungama</a> has led to the formation of Aptech Hungama Digital Education.</p></blockquote>
 
-<p>It is being believed that while Aptech will be responsible for coming up with all the content for educational purposes; Hungama will work towards transforming all these study materials to suit various delivery platforms such as the internet and DTH. It should not come as a surprise that the above mentioned companies thought of such an innovative collaboration because all of the top technology companies are focusing their interest on the field of education. Education has been the topic of discussion since the ancient times in India. It is only natural that as the nation advances in the technological fields, the demand to find newer ways of educating people will increase. Even the highly reputed companies like Apple are showing their willingness to be involved in some way in the field of education.</p>
-<p>Hungama has been known to have huge successes by tying up with many well known entertainment companies in India such as T-series, UTV, Eros entertainment, BIG Music and so on. However, this is the first time it has tried it's hand at collaborating for the cause of providing education. Most of the telecom services of the country have a long running relation with this company. This gives considerable leverage to Hungama for executing its plans to launch <a href="http://www.digitalbookworld.com/2012/sourcebooks-cuts-deal-with-digital-education-distributor/">digital education via video content</a> in India.</p>
-<p>This program has been popularly named 'mEducation', which means mobile education. The courses that have been aimed to be transmitted by several digital channels are said to be simple and uncomplicated so that the common mass can benefit from it the most. About 90 devices will be working 24/7 to develop the specially organized educational content. While the market of education in India is said to be worth about $40 billion, the maximum success of this program is estimated to generate a revenue of around $70 billion by 2020 for mobile service providers. The <a href="http://www.irrodl.org/index.php/irrodl/article/view/794/1487">educational content provided by the mobile devices</a> will be updated at a regular interval to include all the latest happenings in the world. This would make sure that the users don't miss out on any vital piece of information.</p>
-<p>In India, topographical complexities do not allow people to access ample education in their own local areas. In a nation where parents prefer private institutions than government educational facilities, making education available to the public at their fingertips does make a lot of sense. As the provision for internet connections improves in India, people are sure to embrace the idea of obtaining education on the move. Thus, it's not long before <a href="http://www.itdl.org/Journal/Sep_07/article03.htm">mobile phones will generate educational content</a> than just being modes of entertaining people.   </p>
-<p>On the contrary, it makes sense to wonder what would traditional education institutions strategize against such ventures. If they sit hand on hand, then the Future in Education belongs to Mobile Phones. But, knowing the kind of people who rule the education market in India, they would not like to lose the race. For sure, I am expecting a "No Holds Barred" battle here.</p>
+Along with million other uses of mobile phones, the latest upcoming advantage of this device is, it is going to create a revolution in education. Mobile phones are going to have the power to digitally impart education globally. Even the most tech-savvy person would have never dreamt in her wildest dreams, that <a href="http://drpfconsults.com/soaring-demand-for-online-k-12-schools-and-mobile-learning/">such a possibility would ever come</a> into being. 
+
+It is being believed that while Aptech will be responsible for coming up with all the content for educational purposes; Hungama will work towards transforming all these study materials to suit various delivery platforms such as the internet and DTH. It should not come as a surprise that the above mentioned companies thought of such an innovative collaboration because all of the top technology companies are focusing their interest on the field of education. Education has been the topic of discussion since the ancient times in India. It is only natural that as the nation advances in the technological fields, the demand to find newer ways of educating people will increase. Even the highly reputed companies like Apple are showing their willingness to be involved in some way in the field of education.
+
+Hungama has been known to have huge successes by tying up with many well known entertainment companies in India such as T-series, UTV, Eros entertainment, BIG Music and so on. However, this is the first time it has tried it's hand at collaborating for the cause of providing education. Most of the telecom services of the country have a long running relation with this company. This gives considerable leverage to Hungama for executing its plans to launch <a href="http://www.digitalbookworld.com/2012/sourcebooks-cuts-deal-with-digital-education-distributor/">digital education via video content</a> in India.
+
+This program has been popularly named 'mEducation', which means mobile education. The courses that have been aimed to be transmitted by several digital channels are said to be simple and uncomplicated so that the common mass can benefit from it the most. About 90 devices will be working 24/7 to develop the specially organized educational content. While the market of education in India is said to be worth about $40 billion, the maximum success of this program is estimated to generate a revenue of around $70 billion by 2020 for mobile service providers. The <a href="http://www.irrodl.org/index.php/irrodl/article/view/794/1487">educational content provided by the mobile devices</a> will be updated at a regular interval to include all the latest happenings in the world. This would make sure that the users don't miss out on any vital piece of information.
+
+In India, topographical complexities do not allow people to access ample education in their own local areas. In a nation where parents prefer private institutions than government educational facilities, making education available to the public at their fingertips does make a lot of sense. As the provision for internet connections improves in India, people are sure to embrace the idea of obtaining education on the move. Thus, it's not long before <a href="http://www.itdl.org/Journal/Sep_07/article03.htm">mobile phones will generate educational content</a> than just being modes of entertaining people.
+
+On the contrary, it makes sense to wonder what would traditional education institutions strategize against such ventures. If they sit hand on hand, then the Future in Education belongs to Mobile Phones. But, knowing the kind of people who rule the education market in India, they would not like to lose the race. For sure, I am expecting a "No Holds Barred" battle here.

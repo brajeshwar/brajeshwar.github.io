@@ -89,8 +89,6 @@ blockquote {
   padding: .5rem 1rem .5rem 2rem;
   opacity: var(--opacity-low);
 
-  font-size: var(--font-size-small);
-
   background: var(--background-color-highlight);
   border-left: var(--border-width) solid var(--border-color-highlight);
 }
