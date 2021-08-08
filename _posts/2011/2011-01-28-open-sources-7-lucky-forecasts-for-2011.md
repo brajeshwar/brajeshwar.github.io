@@ -1,39 +1,6 @@
 ---
 layout: post
 title: Open Source's 7 Lucky Forecasts for 2011
-date: 2011-01-28 08:00:07.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Open Source
-tags:
-- '2011'
-- android
-- Broadcom
-- Business
-- Chips
-- Linuc
-- Open Source
-- OpenOffice
-- Predictions
-- Tablets
-- ubuntu
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '217830552'
-  retweet_cache: '1309560444:5'
-  bitly_short_url: http://j.mp/kTpbX7
-  trx_addons_post_views_count: '105'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/open-sources-7-lucky-forecasts-for-2011/"
 ---
 <p>Well, nobody gets tired of making predictions, or at least thinking of what the future looks like. Predictions were made for several technological categories like <a href="http://www.pcworld.com/businesscenter/article/212347/top_security_predictions_for_2011.html">Security</a>, <a href="http://www.pcworld.com/businesscenter/article/214419/top_erp_predictions_for_2011.html">Enterprise Resource Planning</a> (ERP) and a more generic forecast on <a href="http://www.pcworld.com/businesscenter/article/214214/10_itrelated_predictions_for_2011.html">Information Technology</a> as a whole. Similarly, we can never stop thinking of making forecasts for one of the most loved technology solutions in the world - <em>Open Source</em>.</p>
 

@@ -1,29 +1,6 @@
 ---
 layout: post
 title: Why LinkedIn Groups May Not Be Working for You
-date: 2011-01-10 21:37:15.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags: []
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '206876605'
-  retweet_cache: '1309564551:1'
-  bitly_short_url: http://j.mp/iiTPdt
-  trx_addons_post_views_count: '40'
-author:
-  login: kalens99
-  email: kalens9112@gmail.com
-  display_name: Kalen Smith
-  first_name: Kalen
-  last_name: Smith
-permalink: "/2011/why-linkedin-groups-may-not-be-working-for-you/"
 ---
 <p>We've all heard stories about an Internet millionaire who used LinkedIn to expand their network. Then they actually try joining a variety of LinkedIn groups and fail to create a single connection. After a few weeks of frustration, they throw in the towel.</p>
 <p>If this scenario describes you, then you are probably starting to doubt the effectiveness of <a href="http://www.linkedin.com/">LinkedIn</a>. Instead, you need to come up with a different practice for finding the groups that are actually going to be worth the time you put into them.</p>

@@ -1,33 +1,6 @@
 ---
 layout: post
 title: India's Software Developer Awards
-date: 2011-01-14 19:04:31.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Technology
-tags:
-- Developer
-- Events
-- India
-- Summit
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '209465879'
-  retweet_cache: '1309559857:10'
-  bitly_short_url: http://j.mp/myPj5K
-  trx_addons_post_views_count: '117'
-author:
-  login: Brajeshwar
-  email: brajeshwar@gmail.com
-  display_name: Brajeshwar
-  first_name: Brajeshwar
-  last_name: Oinam
-permalink: "/2011/indias-software-developer-awards/"
 ---
 <p>Saltmarch Media's annual Great Indian Developer Awards honor technologies that are contributing to the productivity and innovation excellence of the Indian developer ecosystem. The awards recognize the product and innovation excellence of the hundreds of software products and tools that aid developer productivity, across 11 different categories. The selection criteria applied places emphasis on functionality, usability, innovation excellence, bleeding-edge quotient, and feedback from the developer ecosystem. <a href="http://www.developermarch.com/developersummit/awards.html#longlist">Nominations</a> to the 2011 edition of the awards are invited.</p>
 <p>IT professionals are invited to nominate software tools, frameworks and platforms that are not only popular in your development organizations, but also have changed the way you approach your development tasks and ushered in innovation, cost-effectiveness, performance improvements and ease of use.</p>

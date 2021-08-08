@@ -1,32 +1,6 @@
 ---
 layout: post
 title: Will AppsGeyser just add to the clutter of useless Android apps?
-date: 2011-01-18 13:10:16.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Mobile
-tags:
-- android
-- Apps
-- Appsgeyser
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '211737691'
-  retweet_cache: '1309521015:3'
-  bitly_short_url: http://j.mp/lWildt
-  trx_addons_post_views_count: '55'
-author:
-  login: kalens99
-  email: kalens9112@gmail.com
-  display_name: Kalen Smith
-  first_name: Kalen
-  last_name: Smith
-permalink: "/2011/will-appsgeyser-just-add-to-the-clutter-of-useless-android-apps/"
 ---
 <p>A new Android application has just come out that should have a huge impact on the Android community. <a href="http://www.appsgeyser.com/">AppsGeyser</a> is an application that can take any web content and turn transform it into new applications. To many Android developers this sounds like a great tool.</p>
 

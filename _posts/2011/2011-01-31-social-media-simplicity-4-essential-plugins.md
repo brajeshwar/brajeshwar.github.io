@@ -1,41 +1,6 @@
 ---
 layout: post
 title: Social Media Simplicity - 4 Essential Plugins
-date: 2011-01-31 10:20:12.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- facebook
-- Gigya
-- open authentication
-- simple social networking
-- social media marketing
-- Social Network
-- Social Networking
-- Wibiya
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '219724618'
-  retweet_cache: '1309563877:1'
-  bitly_short_url: http://j.mp/lUUEWO
-  trx_addons_post_views_count: '48'
-author:
-  login: RobinWilding
-  email: robin_8000@yahoo.com
-  display_name: Robin Wilding
-  first_name: Robin
-  last_name: Wilding
-permalink: "/2011/social-media-simplicity-4-essential-plugins/"
-excerpt: My grandmother just friended me on Facebook. So—either hell has frozen over,
-  or social media has truly permeated every aspect of life. This multi-generational
-  Zeigeist is huge and companies are caching in. The best part is it is cheap and
-  easy enough for even the smallest website to take advantage of.
 ---
 <p>My grandmother just friended me on Facebook. So, either hell has frozen over, or social media has truly permeated every aspect of life. This multi-generational Zeitgeist is huge and companies are caching in. The best part is it is cheap and easy enough for even the smallest website to take advantage of.</p>
 <p>The lazy approach to social media marketing is to install a bunch of plugins, which is the reason why some websites look like a McDonalds playground of colors and floating boxes.</p>

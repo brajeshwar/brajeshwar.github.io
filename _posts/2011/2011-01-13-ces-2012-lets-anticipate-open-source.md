@@ -1,37 +1,6 @@
 ---
 layout: post
 title: CES 2012 - let's anticipate Open Source
-date: 2011-01-13 00:37:35.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Open Source
-- Technology
-tags:
-- Business
-- CES 2011
-- Events
-- Linux
-- OpenSource
-- Tablets
-- Technology
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '208295482'
-  retweet_cache: '1309555824:4'
-  bitly_short_url: http://j.mp/kiO08m
-  trx_addons_post_views_count: '47'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/ces-2012-lets-anticipate-open-source/"
 ---
 <p>I know, it is too early to be thinking of the CES 2012, especially when the <a href="http://www.cesweb.org/">CES 2011</a> has just recently come to an end and we still haven't delved deep into the nitty-gritties of the event's outcome. However, it does not stop us from thinking and talking about the expectations from the next CES event. There were so many innovative products and services that were discussed, introduced and anticipated in this year's event, but there has never been the prominent presence of <a href="http://en.wikipedia.org/wiki/Open-source_software">Open Source Software</a>. This is exactly what the hope shall be for next year's event - A prominent presence of Open Source Software at CES 2012.</p>
 <p>Let us take a look at 5 anticipated Open Source projects to be spoken about in the coming up event.</p>

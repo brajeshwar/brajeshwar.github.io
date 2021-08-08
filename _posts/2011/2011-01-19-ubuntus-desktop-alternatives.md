@@ -1,41 +1,7 @@
 ---
 layout: post
 title: Ubuntu's Desktop Alternatives
-date: 2011-01-19 08:00:51.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Open Source
-- Technology
-tags:
-- Desktop
-- Enlightenment
-- Fluxbox
-- KDE
-- LXDE
-- Open Source
-- Technology Options
-- ubuntu
-- Unity
-- Xfce
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '212272575'
-  retweet_cache: '1309565717:4'
-  bitly_short_url: http://j.mp/jotdPt
-  trx_addons_post_views_count: '60'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/ubuntus-desktop-alternatives/"
 ---
-<p><a href="http://www.ubuntu.com/"><img src="/static/2011/01/ubuntu.jpg" alt="Ubuntu" /></a></p>
 <p><a href="http://www.ubuntu.com/">Ubuntu</a> has always, by default, comprised of <a href="http://www.gnome.org/">GNOME</a> as its desktop environment. The upcoming latest model of Ubuntu (<a href="http://www.pcworld.com/businesscenter/article/212468/natty_narwhal_alpha_offers_peek_at_ubuntu_1104.html">Natty Narwhal version 11.04</a>) will now be using the 3D-enabled <a href="http://www.pcworld.com/businesscenter/article/208818/is_unity_the_right_interface_for_desktop_ubuntu.html">Unity desktop</a> by default which will be accompanied by the <a href="http://www.pcworld.com/businesscenter/article/210018/ubuntu_will_adopt_wayland_graphics_system.html">Wayland graphics system</a>. This one too is based on GNOME thereby it won't be a problem for users to use any of the GNOME applications.</p>
 
 <p>It should be a known fact that desktop environments differ in a lot of ways and hence can affect the efficient use of Ubuntu, but since now it is undergoing a change this would be a good time to view some alternative desktop options for Ubuntu:</p>
