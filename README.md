@@ -7,6 +7,9 @@
 ## TODO
 
 [] Search - Algolia?
+[] /meet/ - a schedular or should I just get 
+
+---
 
 Posts Cleanup (Why the hell did I wrote so many blog posts?)
 
