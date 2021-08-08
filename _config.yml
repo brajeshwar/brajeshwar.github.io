@@ -33,6 +33,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-optional-front-matter
   - jekyll-titles-from-headings
+  - jekyll-redirect-from
 
 algolia:
   application_id: JCOTPOLESP
@@ -62,6 +63,16 @@ defaults:
     values:
       layout: 'post'
       permalink: '/:year/:title/'
+  -
+    scope:
+      path: "_redirect"
+      type: 'pages'
+    values:
+      layout: "redirect"
+
+collections:
+  redirect:
+    output: true
 
 # Exclude from processing.
 exclude:
