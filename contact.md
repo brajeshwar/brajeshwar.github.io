@@ -13,4 +13,4 @@ Find me on
 and
 [Twitter](https://twitter.com/brajeshwar).
 
-Please book a schedule of your choice on my Calendar at [Calendly](https://calendly.com/brajeshwar/).
+Please [Book a Schedule](https://calendly.com/brajeshwar/) of your choice on my Calendar.
