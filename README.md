@@ -7,7 +7,6 @@
 ## TODO
 
 [] Search - Algolia?
-[] /meet/ - a schedular or should I just get 
 
 ---
 
@@ -37,6 +36,9 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 Outsource fixes with a data entry person for 2005-2011. Fix the TextPatten shortcodes.
 
 ### Broken Links
+
+Ignore what can be ignored.
+Use `jekyll-redirect-from` Plugin.
 
 - brajeshwar.com/archives/2006/11/microsoft-windows-vista-wallpaper
 - brajeshwar.com/documents/readme/nishita-v1-wp.html
