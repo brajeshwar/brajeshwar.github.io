@@ -20,7 +20,7 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [] 2008
 [] 2009
 [] 2010
-[] 2011
+[] 2011 (01)
 [✓] 2012
 [✓] 2013
 [✓] 2014
@@ -30,3 +30,13 @@ Posts Cleanup (Why the hell did I wrote so many blog posts?)
 [✓] 2018
 [✓] 2019
 [✓] 2020
+
+Outsource fixes with a data entry person for 2005-2011. Fix the TextPatten shortcodes.
+
+### Broken Links
+
+- brajeshwar.com/archives/2006/11/microsoft-windows-vista-wallpaper
+- brajeshwar.com/documents/readme/nishita-v1-wp.html
+- brajeshwar.com/archives/2006/05/brajeshwar-v70-wordpress-theme/
+- brajeshwar.com/2006/nishita-another-free-photo-blog-wordpress-theme/
+- brajeshwar.com/archives/2006/07/mac-convert-am-i/

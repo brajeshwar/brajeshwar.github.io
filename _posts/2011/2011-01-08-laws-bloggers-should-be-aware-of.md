@@ -1,33 +1,6 @@
 ---
 layout: post
 title: Laws bloggers should be aware of
-date: 2011-01-08 16:55:48.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- Blogging
-- freedom of expression
-- journalism
-- law
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '205502339'
-  retweet_cache: '1309564582:4'
-  bitly_short_url: http://j.mp/mmtXyh
-  trx_addons_post_views_count: '43'
-author:
-  login: kalens99
-  email: kalens9112@gmail.com
-  display_name: Kalen Smith
-  first_name: Kalen
-  last_name: Smith
-permalink: "/2011/laws-bloggers-should-be-aware-of/"
 ---
 <p>The Internet is the fastest and simplest way to communicate to the rest of the world. As I've mentioned before, this is a double edged sword. The statements we make online can destroy our business image if we are reckless.</p>
 <p>The consequences for not being careful online may be much more serious than we think. In the United States and many other countries, bloggers are now treated as journalists in some regards and can be sued or even prosecuted based on what they say. This article discusses some of the <a href="http://www.blueorchidblog.com/2008/01/12-important-us-laws-about-blogging.html">laws that bloggers need to be aware of</a>.</p>

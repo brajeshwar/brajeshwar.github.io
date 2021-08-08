@@ -1,36 +1,6 @@
 ---
 layout: post
 title: Does Open Source have in it to be Numero-Uno?
-date: 2011-01-22 11:36:55.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Open Source
-tags:
-- IBM
-- IT Biggies
-- OpenSource
-- Oracle
-- Revenue
-- SAP
-- Software Developers
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '214144172'
-  retweet_cache: '1309551744:3'
-  bitly_short_url: http://j.mp/jcu1rD
-  trx_addons_post_views_count: '47'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/does-open-source-have-in-it-to-be-numero-uno/"
 ---
 <p>I remember writing an article about 2 months ago, on Open Source's revenue flow and the actual source of the payments that Open Source gets. I stated that the question of <a href="http://brajeshwar.wpengine.com/2010/where-does-open-source-software-get-its-payment-from/">Where does Open Source get its Payment from?</a> is one that could have multiple answers. This question of whether Open Source has it all to be Number 1 also has a similar confusion. It should seem like Open Source does have it all, but there are several instances wherein Open Source has lost out to the Big private players like <a href="http://www.oracle.com/">Oracle</a>, <a href="http://www.ibm.com/">IBM</a>, <a href="http://www.sap.com/">SAP</a>, etc. who easily trade their products in the market for big bucks too. So if you were to ask me what Open Source really lacks, I would say that it falls short in advertising, marketing and selling its products.</p>
 
@@ -42,8 +12,10 @@ permalink: "/2011/does-open-source-have-in-it-to-be-numero-uno/"
 <h3>Absence of Technical Investors</h3>
 <p>The current investors in the technology world involve mostly capitalists, whose major interests lay in driving their respective firms' growth and profits. For Open Source, these kind of investors will not work. What OOS needs is the financial support of technical investors who understand technology and feel that Open Source is one such stream which will drive the future of technology.</p>
 <p>In totality, there are certain areas that need to be worked on as far as Open Source's selling and marketing is concerned, for which here are a few suggestions</p>
-<p># It is not always good to rely on the proposition of being available for 'free'. While this is important, Open Source also needs to pitch itself as a complete and a comprehensive solution for all the technology needs that exist.<br />
-# Developers though are the final users of the product the LoBs must also be kept in mind while marketing the Open Source solutions. The style of pitching Open Source to LoBs definitely is different from selling to a developer.<br />
-# Focus must be on getting financial support from investors who hold good knowledge of technology, and who look at better technological development and improvement than profit-making.<br />
-# All the above mentioned points must be fragmented and streamlined according to the various Open Source product solutions that exist. This will ensure proper alignment of a set marketing strategy for a particular Open Source product and relative to other products.</p>
-<p>There is no question that Open Source has been a revelation in the technology world, but ensuring that it is being marketed and sold well would definitely make Open Source the most sought after product portfolio. Hope so, it happens quick. </p>
+
+- It is not always good to rely on the proposition of being available for 'free'. While this is important, Open Source also needs to pitch itself as a complete and a comprehensive solution for all the technology needs that exist.
+- Developers though are the final users of the product the LoBs must also be kept in mind while marketing the Open Source solutions. The style of pitching Open Source to LoBs definitely is different from selling to a developer.
+- Focus must be on getting financial support from investors who hold good knowledge of technology, and who look at better technological development and improvement than profit-making.
+- All the above mentioned points must be fragmented and streamlined according to the various Open Source product solutions that exist. This will ensure proper alignment of a set marketing strategy for a particular Open Source product and relative to other products.
+
+There is no question that Open Source has been a revelation in the technology world, but ensuring that it is being marketed and sold well would definitely make Open Source the most sought after product portfolio. Hope so, it happens quick.

@@ -1,36 +1,7 @@
 ---
 layout: post
 title: OpenLeaks, a more transparent alternative to WikiLeaks
-date: 2011-01-06 19:28:21.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Technology
-tags:
-- Events
-- Julian Assange
-- OpenLeaks
-- Technology
-- Wikileaks
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '204401465'
-  retweet_cache: '1309577678:3'
-  bitly_short_url: http://j.mp/ka29bl
-  trx_addons_post_views_count: '45'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/openleaks-a-more-transparent-alternative-to-wikileaks/"
 ---
-<p><a href="http://www.openleaks.org/"><img src="/static/2011/01/openleaks.jpg" alt="OpenLeaks" class="alignright" /></a></p>
 <p>After all the hoopla that <a href="http://213.251.145.96/">WikiLeaks</a> went through along with Julian Assange, the founder of WikiLeaks, it was a wonderment as to what would happen to the online whistle-blowing fraternity. Well, there seems no respite yet for the fraternity cause former deputy to Assange, Daniel Domscheit-Berg along with a few more ex-WikiLeaks employees has launched OpenLeaks which promises to be more transparent, better and bigger than WikiLeaks. </p>
 <p>The website will be functional from the summer of 2011, but the <a href="http://www.openleaks.org/">site</a> right now is live only with the OpenLeaks logo and he phrase "Coming soon!". Speaking about the non-proliferation of WikiLeaks and <a href="http://cryptome.org/">Cryptome</a> on the internet Daniel Domscheit-Berg said "the fear of an immense lack of knowledge and the technical know-how to keep these organizations in operation has lead them to failure." He also spoke in detail of his project while he was at the <a href="http://events.ccc.de/congress/2010/wiki/Welcome">27th Chaos Communication Congress</a>, an annual political and technology conference in Berlin on December 30, to an audience of 300 activists and hackers.</p>
 

@@ -1,32 +1,6 @@
 ---
 layout: post
 title: Getting better conversions with location-based SEO
-date: 2011-01-15 15:07:05.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- Location
-- Search
-- SEO
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '209884788'
-  retweet_cache: '1309540660:8'
-  bitly_short_url: http://j.mp/ij032C
-  trx_addons_post_views_count: '37'
-author:
-  login: kalens99
-  email: kalens9112@gmail.com
-  display_name: Kalen Smith
-  first_name: Kalen
-  last_name: Smith
-permalink: "/2011/getting-better-conversions-with-location-based-seo/"
 ---
 <p>Marketers often get a lot of exposure and traffic to their website, but the actual conversions they receive may be much lower than they hope. The problem isn't always the amount of traffic they are receiving, but who is actually coming to their website. One of the most common problems entrepreneurs face is that they are reaching people outside their zone of business.  </p>
 <p>A photographer I know told me that his website gets tens of thousands of visitors a month. Unfortunately, the traffic he is getting is coming from people at least 500 miles away. I told him that he needs to focus on developing a location-based marketing strategy so that he can reach people in the San Francisco area.</p>

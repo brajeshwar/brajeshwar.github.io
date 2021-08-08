@@ -1,36 +1,7 @@
 ---
 layout: post
 title: Your virtual assistant is a partner, not an employee
-date: 2011-01-14 08:00:46.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- business partner
-- Entrepreneur
-- virtual assistant
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '209166258'
-  retweet_cache: '1309579282:2'
-  bitly_short_url: http://j.mp/imJqrA
-  trx_addons_post_views_count: '62'
-author:
-  login: kalens99
-  email: kalens9112@gmail.com
-  display_name: Kalen Smith
-  first_name: Kalen
-  last_name: Smith
-permalink: "/2011/your-virtual-assistant-is-a-partner-not-an-employee/"
 ---
-<div class="figure"><img src="/static/2011/01/virtual-assistants.jpg" alt="Virtual Assistants" />
-<p class="credit"><abbr class="type" title="Photograph">Photo</abbr> from <cite><a href="http://georgiavirtualassistants.com/">GeorgiaVirtualAssistants</a></cite></p>
-<p class="caption"><em class="title">Virtual Assistants </em>Helping you get things done.</p>
-</div>
 <p>Virtual assistants provide professional, administrative or professional assistance to other entrepreneurs. Clearly, they can be some of the best business relationships you can possibly have. Businesses often underestimate the potential of the relationship.</p>
 <p>Many entrepreneurs think of a virtual assistant as a secretary who they can unload projects onto that are too boring and unimportant to merit their own attention. You need to remember that a virtual assistant is an entrepreneur themselves, probably with similar skill sets and qualifications. You should treat them more like a business partner than an employee, because they may know just as much about running your business as you do.</p>
 <p>If you are going to benefit from a virtual assistant, you are going to need to do a few things:</p>

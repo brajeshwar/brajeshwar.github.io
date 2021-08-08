@@ -7,7 +7,7 @@ Apple's [Airport Extreme](http://www.apple.com/airport-extreme/) and [Airport Ex
 
 ![Airport Wireless)](/static/2016/airport-wireless.jpg)
 
-After many Linksys and D-Link Wi-Fi Routers, I started with the first generation Airpot Express and upgraded to the first [Airport Time Capsule](ttp://www.apple.com/airport-time-capsule/) when it was released in 2008. The time capsule (Airport Extreme with Time Machine enabled Drive) lasted for 5 years and the Airport Express, a little over 6 years. Our current Home Network Setup is powered by an Airport Extreme and few Airport Expresses.
+After many Linksys and D-Link Wi-Fi Routers, I started with the first generation Airpot Express and upgraded to the first [Airport Time Capsule](http://www.apple.com/airport-time-capsule/) when it was released in 2008. The time capsule (Airport Extreme with Time Machine enabled Drive) lasted for 5 years and the Airport Express, a little over 6 years. Our current Home Network Setup is powered by an Airport Extreme and few Airport Expresses.
 
 However, the apple routers are limited in their functionality. I wanted a VPN sitting in between the Internet and my home network without disturbing my original setup. I also wanted to have the option to turn the VPN OFF/ON quickly as and when I needed. I researched for a bit and settled on a cheap flashable wi-fi router. I flashed it with [DD-WRT](http://www.dd-wrt.com/).
 

@@ -1,33 +1,6 @@
 ---
 layout: post
 title: A thought, about worldwide adoption of Linux
-date: 2011-01-27 08:00:00.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Open Source
-- Technology
-tags:
-- Business Consequences
-- Linux
-- Technology
-- Worldwide Adoption
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '217141702'
-  retweet_cache: '1309543089:6'
-  bitly_short_url: http://j.mp/ky4N41
-  trx_addons_post_views_count: '58'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/a-thought-about-worldwide-adoption-of-linux/"
 ---
 <p>This is the question that lingers in the minds of many technology enthusiasts; at least for fun, they would have given it a thought - <strong>What would happen if Linux was adopted Worldwide?</strong> An ultimate ambition that the free software community has, is for Linux to be used in the mainstream industry and it has been a goal for the past few years. Several <a href="http://www.pcworld.com/businesscenter/article/207999/desktop_linux_the_dream_is_dead.html">critics have said</a> that the happening of such an event is almost next to impossible especially on the desktop. Now for a moment, let us just keep these critics and their thoughts aside and see what would actually happen if the whole world ran Linux. Shall we?</p>
 

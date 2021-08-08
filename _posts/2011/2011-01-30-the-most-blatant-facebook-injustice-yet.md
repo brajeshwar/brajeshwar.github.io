@@ -1,31 +1,6 @@
 ---
 layout: post
 title: The most blatant Facebook injustice yet
-date: 2011-01-30 11:50:02.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Technology
-tags:
-- facebook
-- Privacy
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '219131035'
-  retweet_cache: '1309542748:7'
-  bitly_short_url: http://j.mp/mkqEk2
-  trx_addons_post_views_count: '47'
-author:
-  login: kalens99
-  email: kalens9112@gmail.com
-  display_name: Kalen Smith
-  first_name: Kalen
-  last_name: Smith
-permalink: "/2011/the-most-blatant-facebook-injustice-yet/"
 ---
 <p>Facebook has been criticized for their privacy violations for several years. In the United States, they may be investigated by the FTC for stealing user data and selling it to advertisers. Recently, the situation has become even more insulting for the users who have already been exploited. Facebook actually was <a href="http://nakedsecurity.sophos.com/2011/01/28/facebook-awarded-over-360-million-spammer/">given an award</a> after a hacker stole login information on users.</p>
 

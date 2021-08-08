@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="utf-8">
+<title>Goto: {{ page.redirect.to }}</title>
+<link rel="canonical" href="{{ page.redirect.to }}">
+<script>location="{{ page.redirect.to }}"</script>
+<meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+<meta name="robots" content="noindex">
+
+<p>
+  Still here?
+  <br>
+  Please GOTO:
+  <a href="{{ page.redirect.to }}">{{ page.redirect.to }}</a>
+</p>
+
+</html>

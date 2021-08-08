@@ -1,45 +1,7 @@
 ---
 layout: post
 title: 4 clear trends to watch in Consumer Electronics for 2011
-date: 2011-01-26 11:03:39.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Mobile
-- Technology
-tags:
-- CEA
-- CES
-- CES 2011
-- consumer electronic trends
-- consumer electronics
-- consumer electronics show
-- consumer trends
-- electronics trend 2011
-- technology trends 2011
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '216591820'
-  retweet_cache: '1309580786:8'
-  bitly_short_url: http://j.mp/lNmcYo
-  trx_addons_post_views_count: '49'
-author:
-  login: RobinWilding
-  email: robin_8000@yahoo.com
-  display_name: Robin Wilding
-  first_name: Robin
-  last_name: Wilding
-permalink: "/2011/4-clear-trends-to-watch-in-consumer-electronics-for-2011/"
-excerpt: 'This year''s event was held on January 6-9 and yielded 4 clear trends in
-  consumer electronics that should be a focus for IT geeks in 2011: that everything
-  will be internet-enabled, the app frenzy will continue, tablets will continue to
-  explode, and we should finally start seeing in 3D. '
 ---
-<p><img src="/static/2011/01/ces-iluv.jpg" alt="iLuv" /></p>
 <p>Earlier this month the <a href="http://www.ce.org/">Consumer Electronics Association</a> hosted their annual <a href="http://www.cesweb.org/">Consumer Electronics Show</a> -- showcasing upcoming trends in electronics and the newest advancements in geeky gadget technology. After 40 years in the business the trade show has grown to over 2,000 members, all of who are on the cutting edge of electronics research, development, design and distribution. </p>
 <p>This year's event was held on January 6-9 and yielded 4 clear trends in consumer electronics that should be a focus for IT geeks in 2011: that everything will be internet-enabled, the app frenzy will continue, tablets will continue to explode, and we should finally start seeing in 3D.</p>
 

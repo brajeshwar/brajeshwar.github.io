@@ -1,32 +1,6 @@
 ---
 layout: post
 title: Great ideas don't get funded by themselves
-date: 2011-01-20 01:10:32.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- financing
-- Funding
-- investors
-- Technology
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '212694473'
-  retweet_cache: '1309520953:1'
-  bitly_short_url: http://j.mp/j8p8Pf
-  trx_addons_post_views_count: '47'
-author:
-  login: kalens99
-  email: kalens9112@gmail.com
-  display_name: Kalen Smith
-  first_name: Kalen
-  last_name: Smith
-permalink: "/2011/great-ideas-dont-get-funded-by-themselves/"
 ---
 <p>Many entrepreneurs have brilliant ideas that could turn into Fortune 500 companies. They deserve the opportunity to prove themselves. Unfortunately, most of them are never given that chance.</p>
 <p>Investors are usually fairly conservative with their money. They hear many business ideas and have to filter some of them out. Remember the quote from Gordon Gekko on Wall St? ""I hear a hundred tips a day and I choose one."</p>
