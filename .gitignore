@@ -5,6 +5,8 @@
 .jekyll-cache
 .jekyll-metadata
 _site
+todo.*
+tmp.md
 
 # Ignore hidden folders #
 # This takes care of .tmp, .sass-cache, and many others #

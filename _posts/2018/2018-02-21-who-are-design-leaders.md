@@ -7,6 +7,8 @@ Design Leaders aren't super-designers. Their role is NOT to 'approve or disappro
 
 Many organizations make the common mistake of confusing design managers with design leaders. Design leaders touch upon the organization, and not just the design department. The role is strategic and needs to align with the organization's strategy and plans.
 
+![Design](https://cdn.oinam.com/img/stock/design-studio-blueprint.jpg)
+
 ## C-suite Design Leaders who can take decisions
 
 Organizations, in search for a competitive advantage over their counterparts, should have more visible acts of advocacy for design leadership. Hiring design leaders such as "Chief Design Officer" or similar C-suite Vice President design roles is a good start.
@@ -27,12 +29,12 @@ It is sad but many organizations try to bring in design leaders who are not desi
 
 A design leader continues to be actively involved in design disciplines, remain driven to design, coaches others, is a team player, always open-minded, is not afraid of change, and is always ready to give actionable feedback. Last, but not the least, a design leader is committed to integrating design and design thinking throughout the organization.
 
-"Design leaders succeed by designing indirectly – through the work of their teams. The key task of a design leader is to become the worst designer on the team." -- <a href="https://www.uxpin.com/studio/blog/persona-great-design-leader/">Marcin Treder</a>
+> "Design leaders succeed by designing indirectly – through the work of their teams. The key task of a design leader is to become the worst designer on the team." -- <a href="https://www.uxpin.com/studio/blog/persona-great-design-leader/">Marcin Treder</a>
 
 ### Here are some good references for further reading;
 
-- <a href="https://www.linkedin.com/pulse/what-does-take-design-leader-michael-ditullo/">What Does it take to be a Design Leader?</a>
-- <a href="http://lockwoodresource.com/ten-characteristics-of-great-design-leaders/">10 characteristics of great design leaders</a> by Thomas Lockwood
-- <a href="http://www.core77.com/posts/9962/the-many-faces-of-design-leadership-by-kevin-mccullagh-9962">The Many Faces of Design Leadership</a> by Kevin McCullagh
-- <a href="https://www.slideshare.net/frogdesign/work-in-progress-thoughts-on-design-leadership">Becoming a Design Leader</a> - a nice slideshow from <a href="https://www.frogdesign.com/">Frog</a>
-- <a href="https://www.designbetter.co/design-leadership-handbook">Design Leadership Handbook</a> from Invision
+- [What Does it take to be a Design Leader?](https://www.linkedin.com/pulse/what-does-take-design-leader-michael-ditullo/)
+- [10 characteristics of great design leaders](http://lockwoodresource.com/ten-characteristics-of-great-design-leaders/) by Thomas Lockwood
+- [The Many Faces of Design Leadership](http://www.core77.com/posts/9962/the-many-faces-of-design-leadership-by-kevin-mccullagh-9962) by Kevin McCullagh
+- [Becoming a Design Leader](https://www.slideshare.net/frogdesign/work-in-progress-thoughts-on-design-leadership) - a nice slideshow from [Frog Design](https://www.frogdesign.com/)
+- [Design Leadership Handbook](https://www.designbetter.co/design-leadership-handbook) from [Invision](https://www.invisionapp.com)
