@@ -1,39 +1,16 @@
 ---
 layout: post
 title: It's Microsoft's "Patch Tuesday" today!
-date: 2011-04-11 20:27:09.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Technology
-tags:
-- Microsoft
-- Patch Tuesday
-- Security
-- Software Security
-- System Vulnerabilities
-- Technology
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '277246663'
-  bitly_short_url: http://j.mp/jr0Uss
-  retweet_cache: '1309578594:2'
-  trx_addons_post_views_count: '49'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/its-microsofts-patch-tuesday-today/"
 ---
-<p>It is going to be a busy week for all the IT professionals since <a href="http://www.microsoft.com/">Microsoft</a> is going to deliver a record patch that addresses 64 security vulnerabilities. There will be patches for bugs in Microsoft Windows, Microsoft Office, Internet Explorer, Visual Studio, GDI+ and .NET framework. In this update, the most frequently used office applications like Excel (2003-2010) and Powerpoint (2002-2010) will also be affected. There will be 17 bulletins, of which more than half, that is nine, are critical. The critical bulletins will affect all Windows systems including Server 2008 and Windows 7 and hence Microsoft urges system administrators to plan for a deployment.</p>
-<p><a href="http://about.me/petevosspr">Pete Voss</a>, a senior response communication manager at Microsoft says that according to the assessment of Microsoft, the vulnerability could theoretically allow remote code execution. However, he adds that such an event is extremely unlikely and no evidence of attacks have been recorded so far. Apart from the 9 critical bulletins out of 17, the other 8 bulletins are marked to be important. Among those rated as important is a fix for the <a href="http://blogs.pcmag.com/securitywatch/2011/01/microsoft_warns_of_windows_scr.php">MHTML script injection vulnerability</a> in Windows. The security bulletins will be released by Microsoft at about 1 pm EDT on 12th April.</p>
 
-<p>The MHTML script injection vulnerability was disclosed in March and the security bulletins also include a Windows browser protocol vulnerability which was disclosed in February this year. <a href="http://blog.lumension.com/?author=17">Paul Henry</a>, forensic and security analyst at Lumension says that the patch is ugly, no matter how we look at it. He points out that more than half of the updates are critical and all but only two of the updates require remote code execution. Henry also pointed out the recent discovery by RSA that the exploit of its tokens began with an <a href="http://help.adobe.com/en_US/flashbuilder/using/WS6f97d7caa66ef6eb1e63e3d11b6c4cffa4-7ff1.html">Adobe Flash module</a> embedded within a Microsoft Excel spreadsheet. </p>
-<p>He says that every time <a href="http://www.microsoft.com/hk/protect/yourself/phishing/spear.mspx">spear-fishing</a> exploits just take advantage of weaknesses in third party applications. He quoted the fall of <a href="http://www.condenast.com/">Conde Nast</a> for a $8 million breach as spear-fishing. The guys involved in spear fishing take advantage of the applications the companies are not patching with the free patching software provided by Microsoft. </p>
-<p>Coming back to the story with the Tuesday patch bulletin, there will be two non-security updates one of which when applied to 64-bit versions of Microsoft Windows Server 2008 R2 and Windows 7 returns an issue that is identified that could allow a user with administrative permissions to load an unsigned driver. Hence, this update seems to be associated with one of the important security measures and hence you should treat it as critical. </p>
-<p>Therefore, let's be prepared for the upcoming big event! One among the upcoming features will include a critical <a href="http://us.generation-nt.com/answer/bug-611303-system-config-printer-smb-browser-not-working-help-201916512.html">SMB browser bug</a> that will involve all versions of Windows. This April patch is therefore a bigger deal when compared with the <a href="http://arstechnica.com/microsoft/news/2010/12/december-2010-patch-tuesday-will-come-with-most-bulletins-ever.ars">December 2010 patch</a> which addressed 40 vulnerabilities and only two out of them were deemed critical. <a href="http://www.qualys.com/">Qualys</a>, a security vulnerability scanning firm, has issued a warning that all supported versions of Office and Windows will need to be updated. System administrators will therefore have to spend a lot of extra time in the process.</p>
+It is going to be a busy week for all the IT professionals since <a href="http://www.microsoft.com/">Microsoft</a> is going to deliver a record patch that addresses 64 security vulnerabilities. There will be patches for bugs in Microsoft Windows, Microsoft Office, Internet Explorer, Visual Studio, GDI+ and .NET framework. In this update, the most frequently used office applications like Excel (2003-2010) and Powerpoint (2002-2010) will also be affected. There will be 17 bulletins, of which more than half, that is nine, are critical. The critical bulletins will affect all Windows systems including Server 2008 and Windows 7 and hence Microsoft urges system administrators to plan for a deployment.
+
+<a href="http://about.me/petevosspr">Pete Voss</a>, a senior response communication manager at Microsoft says that according to the assessment of Microsoft, the vulnerability could theoretically allow remote code execution. However, he adds that such an event is extremely unlikely and no evidence of attacks have been recorded so far. Apart from the 9 critical bulletins out of 17, the other 8 bulletins are marked to be important. Among those rated as important is a fix for the <a href="http://blogs.pcmag.com/securitywatch/2011/01/microsoft_warns_of_windows_scr.php">MHTML script injection vulnerability</a> in Windows. The security bulletins will be released by Microsoft at about 1 pm EDT on 12th April.
+
+The MHTML script injection vulnerability was disclosed in March and the security bulletins also include a Windows browser protocol vulnerability which was disclosed in February this year. <a href="http://blog.lumension.com/?author=17">Paul Henry</a>, forensic and security analyst at Lumension says that the patch is ugly, no matter how we look at it. He points out that more than half of the updates are critical and all but only two of the updates require remote code execution. Henry also pointed out the recent discovery by RSA that the exploit of its tokens began with an <a href="http://help.adobe.com/en_US/flashbuilder/using/WS6f97d7caa66ef6eb1e63e3d11b6c4cffa4-7ff1.html">Adobe Flash module</a> embedded within a Microsoft Excel spreadsheet. 
+
+He says that every time <a href="http://www.microsoft.com/hk/protect/yourself/phishing/spear.mspx">spear-fishing</a> exploits just take advantage of weaknesses in third party applications. He quoted the fall of <a href="http://www.condenast.com/">Conde Nast</a> for a $8 million breach as spear-fishing. The guys involved in spear fishing take advantage of the applications the companies are not patching with the free patching software provided by Microsoft. 
+
+Coming back to the story with the Tuesday patch bulletin, there will be two non-security updates one of which when applied to 64-bit versions of Microsoft Windows Server 2008 R2 and Windows 7 returns an issue that is identified that could allow a user with administrative permissions to load an unsigned driver. Hence, this update seems to be associated with one of the important security measures and hence you should treat it as critical. 
+
+Therefore, let's be prepared for the upcoming big event! One among the upcoming features will include a critical <a href="http://us.generation-nt.com/answer/bug-611303-system-config-printer-smb-browser-not-working-help-201916512.html">SMB browser bug</a> that will involve all versions of Windows. This April patch is therefore a bigger deal when compared with the <a href="http://arstechnica.com/microsoft/news/2010/12/december-2010-patch-tuesday-will-come-with-most-bulletins-ever.ars">December 2010 patch</a> which addressed 40 vulnerabilities and only two out of them were deemed critical. <a href="http://www.qualys.com/">Qualys</a>, a security vulnerability scanning firm, has issued a warning that all supported versions of Office and Windows will need to be updated. System administrators will therefore have to spend a lot of extra time in the process.

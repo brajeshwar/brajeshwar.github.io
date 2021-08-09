@@ -1,33 +1,13 @@
 ---
 layout: post
 title: Get Smart with Small Businesses - 4 useful Cloud Tools
-date: 2011-06-06 19:49:12.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Technology
-tags: []
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '323644611'
-  bitly_short_url: http://j.mp/mRfjJo
-  retweet_cache: '1309584536:4'
-  trx_addons_post_views_count: '46'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/get-smart-with-small-businesses-4-useful-cloud-tools/"
 ---
-<p>Tools or services that help you to run your businesses smarter are always welcome. No matter whether the business is small or big, we all need such kind of tools and services. Here is a small list of tools that will help you to work in a better way to earn faster and better; in short, earn smarter with these tools.</p>
 
-<p># <a href="http://www.dropbox.com/">DropBox</a> -- It may sometimes happen that the files stored on your hard drive get lost for some strange reason, you may forget to save an important presentation file which you should be using tomorrow morning, your laptop or computer may crash leading to the loss of e-mail database and so on. Okay, I am not scaring you but when such things happen you are left helpless and you panic. Fear not, there is a salvation - Dropbox, which is absolutely a free service, helps you to store videos, photos and docs up to 2GB and you can also get more storage space if you want it, with their paid service. With one click you can save your files at the same time to Dropbox, your computer, Dropbox websites and phones automatically. Now you can relax with these backups. It also makes file synching easier and file sharing with others.<br />
-# <a href="http://www.schedulicity.com/">Schedulicity</a> -- It is a web based scheduling cloud tool which is used to keep a check on your schedules. Using this tool you can plug your business instantly into the fastest growing trends like online scheduling, social media and mobile internet. With Schedulicity, you will get the complete control over your calendar and easily access your appointments and schedules from anywhere, anytime. This will also put the calendar to your clients online; therefore your clients can make the appointments anytime with you on the Facebook page, on your website, from iPhone, Blackberry or Android.<br />
-# <a href="http://www.wisestamp.com/">WiseStamp</a> -- Your emails could act as promotional tools for you if you brand them the right way. One of the easiest ways to brand your email is to use a professional signature. Wisestamp can convert your emails into powerful marketing tools by adding a professional customizable signature. You can include more creative colors, logos, images and fonts to make your own signature. This tool can be easily integrated to major browsers including Chrome, Safari, and Firefox with the help of addons. It also integrates with Yahoo, Gmail, Hotmal and AOL. Wisestamp allows you to leave links to your social profiles; this helps your clients and others to connect with you via your social media channels.<br />
-# <a href="http://www.evernote.com/">Evernote</a> -- It is the digital storage tool that enables you to capture and remember anything right from the desktop, laptop and mobile devices. Evernote, makes anything that you capture searchable easily and it will process and index it automatically. The notes can then be searched by using keywords, tags and title. It is also possible to search handwritten and printed text using this tool. </p>
-<p>There are a plethora of cloud tools that can help your Online Businesses. Which of these tools are your favorite?</p>
+Tools or services that help you to run your businesses smarter are always welcome. No matter whether the business is small or big, we all need such kind of tools and services. Here is a small list of tools that will help you to work in a better way to earn faster and better; in short, earn smarter with these tools.
+
+- <a href="http://www.dropbox.com/">DropBox</a> -- It may sometimes happen that the files stored on your hard drive get lost for some strange reason, you may forget to save an important presentation file which you should be using tomorrow morning, your laptop or computer may crash leading to the loss of e-mail database and so on. Okay, I am not scaring you but when such things happen you are left helpless and you panic. Fear not, there is a salvation - Dropbox, which is absolutely a free service, helps you to store videos, photos and docs up to 2GB and you can also get more storage space if you want it, with their paid service. With one click you can save your files at the same time to Dropbox, your computer, Dropbox websites and phones automatically. Now you can relax with these backups. It also makes file synching easier and file sharing with others.
+- <a href="http://www.schedulicity.com/">Schedulicity</a> -- It is a web based scheduling cloud tool which is used to keep a check on your schedules. Using this tool you can plug your business instantly into the fastest growing trends like online scheduling, social media and mobile internet. With Schedulicity, you will get the complete control over your calendar and easily access your appointments and schedules from anywhere, anytime. This will also put the calendar to your clients online; therefore your clients can make the appointments anytime with you on the Facebook page, on your website, from iPhone, Blackberry or Android.
+- <a href="http://www.wisestamp.com/">WiseStamp</a> -- Your emails could act as promotional tools for you if you brand them the right way. One of the easiest ways to brand your email is to use a professional signature. Wisestamp can convert your emails into powerful marketing tools by adding a professional customizable signature. You can include more creative colors, logos, images and fonts to make your own signature. This tool can be easily integrated to major browsers including Chrome, Safari, and Firefox with the help of addons. It also integrates with Yahoo, Gmail, Hotmal and AOL. Wisestamp allows you to leave links to your social profiles; this helps your clients and others to connect with you via your social media channels.
+- <a href="http://www.evernote.com/">Evernote</a> -- It is the digital storage tool that enables you to capture and remember anything right from the desktop, laptop and mobile devices. Evernote, makes anything that you capture searchable easily and it will process and index it automatically. The notes can then be searched by using keywords, tags and title. It is also possible to search handwritten and printed text using this tool. 
+
+There are a plethora of cloud tools that can help your Online Businesses. Which of these tools are your favorite?
