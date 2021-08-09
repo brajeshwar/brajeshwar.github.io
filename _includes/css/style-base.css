@@ -90,7 +90,8 @@ blockquote {
   opacity: var(--opacity-low);
 
   background: var(--background-color-highlight);
-  border-left: var(--border-width) solid var(--border-color-highlight);
+  border-radius: var(--border-radius);
+  border-left: 2px solid var(--background-color-accent);
 }
 
 cite {
