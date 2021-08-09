@@ -12,12 +12,6 @@ header {
   padding: var(--space-base) 0;
 }
 
-@media (min-width: 50rem) {
-  header {
-    margin-left: calc(-1 * 5rem);
-  }
-}
-
 header h1 {
   margin: 0 var(--space-base) 0 0;
   padding: 0;
@@ -80,7 +74,17 @@ footer small {
   font-size: var(--font-size-smaller);
 }
 
+
 @media (min-width: 50rem) {
+  blockquote {
+    margin-left: calc(-1 * var(--space-double));
+    margin-right: calc(-1 * var(--space-double));
+  }
+  
+  header {
+    margin-left: calc(-1 * 5rem);
+  }
+
   figure.feature {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
@@ -108,6 +112,8 @@ img.small-right { float: right; margin-right: 0; }
 img.small-left  { float: left;  margin-left: 0; }
 
 .gallery {}
+
+.home {}
 
 /* blog list on the homepage */
 .blog-articles__list {
@@ -137,6 +143,13 @@ img.small-left  { float: left;  margin-left: 0; }
 
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-smaller);
+}
+
+@media (min-width: 50rem) {
+  .blog-articles__list {
+    margin-left: calc(-1 * var(--space-double));
+    margin-right: calc(-1 * var(--space-double));
+  }
 }
 
 

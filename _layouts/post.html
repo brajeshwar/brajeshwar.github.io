@@ -5,7 +5,7 @@ layout: default
 <div id="post" class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <p class="post-meta font-sans">
-    {{ page.date | date: '%Y %b %d %a' }}
+    {{ page.date | date: '%Y %b %-d %a' }}
     <span class="post-meta__read">
       {% include read-time.html %}
     </span>
