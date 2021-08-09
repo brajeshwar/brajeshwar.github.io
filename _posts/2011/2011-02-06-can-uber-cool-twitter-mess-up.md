@@ -1,38 +1,18 @@
 ---
 layout: post
-title: Can 'Uber Cool' Twitter mess up?
-date: 2011-02-06 08:00:32.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- Media &amp; News
-- Real Life Incident
-- Social Media
-- Twitter
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '223839834'
-  retweet_cache: '1309527486:1'
-  bitly_short_url: http://j.mp/lrRSV8
-  trx_addons_post_views_count: '37'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/can-uber-cool-twitter-mess-up/"
+title: Can `Uber Cool` Twitter mess up?
 ---
-<p><a href="http://twitter.com/">Twitter</a> is understandably a fantastic platform for all users to put forward anything that they want to in the form of tweets. This 'anything' could be what one feels, what one did last night, what one experienced at office on a day or just absolutely anything that a user feels like tweeting about. Another thing that Twitter has gained recognition for lately is that it spreads news stories faster than any media channel on TV does. </p>
-<p>A horrific <a href="http://www.mybangalore.com/article/0210/breaking-news-fire-in-carlton-towers-no-deaths-5-seriously-injured.html">fire incident</a> that took place at Charlton Towers in Bangalore is an example of how Twitter was used to call for help. "The news of the fire break was actively spread with Social Media sites like Twitter which sent out an SOS as well as reported accurately as the fire happened. Social media to the Rescue as Tweets inform the breakout of a massive fire in Carlton Towers on Airport Road." Also incidents like the earthquake in Haiti, Tunisia and the shootout of congresswoman Gabrielle Giffords in Arizona, reported effectively through Twitter makes it easier to believe that Twitter is <a href="http://gigaom.com/2010/09/08/like-it-or-not-twitter-has-become-a-media-outlet/">real-time news medium</a>, just as similar as any other news agency.</p>
 
-<p>It is true that Twitter is a revolutionary tool, and now it is proven to be a great news media too. But when things go horribly wrong, Twitter turns out to be not so effective after all. This is exactly what happened with the Giffords shooting incident. Apparently two different stories were re-tweeted at the same time and one reporter combined both in his tweet which is quite understandably an unknowingly committed mistake. The first incident evidently is the Giffords shooting and the other one which was mixed up with the first was an e-mail about a police training exercise involving a shooting in Oxford Circus, which somehow got into the wrong hands and was posted as though it were the real thing. </p>
-<p>The combination of these two along with a Twitter user posting a tweet about a TV commercial 'shooting', created a fire-like spread of misrepresented news stories and tweets, which went around for quite some time. This caused chaos and fear among people living in the neighborhood as the news spoke about buildings being locked down and police sharpshooters being brought in, etc. The misrepresented news item still continued to be re-tweeted even after TV reporters and journalists confirmed that there was no such incident happening. </p>
-<p>This is how ugly Twitter can get, if things go haywire. There can be two solutions for this kind of mishap caused. One the re-tweets and the actual tweet of the misconceived news must be deleted. Or let it remain and ensure as citizens and patriotic tweeters, everyone who has wrongly tweeted or re-tweeted the wrong news must tweet the right news story and ensure there is no confusion. The problem with the second solution is that since Twitter is a stream of large content, it becomes impossible to let alone track all tweets, but to find one's own tweets takes a hell lot of time.</p>
-<p>Twitter itself could do something about this, which I presume it already had begun with its <a href="http://dev.twitter.com/pages/annotations_overview">Annotations feature</a>. But that came to a stop with Twitter shifting its focus on revamping its website. However, the development of a <a href="http://www.quora.com/How-might-a-Twitter-correction-tool-work">correction mechanism</a> by Poynter Institute along with programmer Adrian Holovaty, founder of <a href="http://www.everyblock.com/">EveryBlock</a>, outside of Twitter could well be on its way. This could be a perfect solution for wrong things happening in Twitter. </p>
-<p>Despite all the mistakes, I still think of Twitter as I did earlier to be a fantast platform to socialize.</p>
+<a href="http://twitter.com/">Twitter</a> is understandably a fantastic platform for all users to put forward anything that they want to in the form of tweets. This 'anything' could be what one feels, what one did last night, what one experienced at office on a day or just absolutely anything that a user feels like tweeting about. Another thing that Twitter has gained recognition for lately is that it spreads news stories faster than any media channel on TV does. 
+
+A horrific <a href="http://www.mybangalore.com/article/0210/breaking-news-fire-in-carlton-towers-no-deaths-5-seriously-injured.html">fire incident</a> that took place at Charlton Towers in Bangalore is an example of how Twitter was used to call for help. "The news of the fire break was actively spread with Social Media sites like Twitter which sent out an SOS as well as reported accurately as the fire happened. Social media to the Rescue as Tweets inform the breakout of a massive fire in Carlton Towers on Airport Road." Also incidents like the earthquake in Haiti, Tunisia and the shootout of congresswoman Gabrielle Giffords in Arizona, reported effectively through Twitter makes it easier to believe that Twitter is <a href="http://gigaom.com/2010/09/08/like-it-or-not-twitter-has-become-a-media-outlet/">real-time news medium</a>, just as similar as any other news agency.
+
+It is true that Twitter is a revolutionary tool, and now it is proven to be a great news media too. But when things go horribly wrong, Twitter turns out to be not so effective after all. This is exactly what happened with the Giffords shooting incident. Apparently two different stories were re-tweeted at the same time and one reporter combined both in his tweet which is quite understandably an unknowingly committed mistake. The first incident evidently is the Giffords shooting and the other one which was mixed up with the first was an e-mail about a police training exercise involving a shooting in Oxford Circus, which somehow got into the wrong hands and was posted as though it were the real thing. 
+
+The combination of these two along with a Twitter user posting a tweet about a TV commercial 'shooting', created a fire-like spread of misrepresented news stories and tweets, which went around for quite some time. This caused chaos and fear among people living in the neighborhood as the news spoke about buildings being locked down and police sharpshooters being brought in, etc. The misrepresented news item still continued to be re-tweeted even after TV reporters and journalists confirmed that there was no such incident happening. 
+
+This is how ugly Twitter can get, if things go haywire. There can be two solutions for this kind of mishap caused. One the re-tweets and the actual tweet of the misconceived news must be deleted. Or let it remain and ensure as citizens and patriotic tweeters, everyone who has wrongly tweeted or re-tweeted the wrong news must tweet the right news story and ensure there is no confusion. The problem with the second solution is that since Twitter is a stream of large content, it becomes impossible to let alone track all tweets, but to find one's own tweets takes a hell lot of time.
+
+Twitter itself could do something about this, which I presume it already had begun with its <a href="http://dev.twitter.com/pages/annotations_overview">Annotations feature</a>. But that came to a stop with Twitter shifting its focus on revamping its website. However, the development of a <a href="http://www.quora.com/How-might-a-Twitter-correction-tool-work">correction mechanism</a> by Poynter Institute along with programmer Adrian Holovaty, founder of <a href="http://www.everyblock.com/">EveryBlock</a>, outside of Twitter could well be on its way. This could be a perfect solution for wrong things happening in Twitter. 
+
+Despite all the mistakes, I still think of Twitter as I did earlier to be a fantast platform to socialize.
