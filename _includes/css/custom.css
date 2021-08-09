@@ -218,13 +218,7 @@ img.small-left  { float: left;  margin-left: 0; }
   padding: 0;
 }
 
-/* limit lists to one line each */
-.page-blog li {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
+.page-blog li {}
 
 .page-blog li:hover {
   border-bottom-color: var(--text-color-link);
@@ -262,6 +256,14 @@ img.small-left  { float: left;  margin-left: 0; }
 
 .link-reset a {
   text-decoration: none;
+}
+
+/* clamp content to one line */
+.one-liner {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 
