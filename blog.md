@@ -16,7 +16,7 @@ permalink: /blog/
     <ol>
       {% assign date = currentdate %}
     {%- endif -%}
-      <li>
+      <li class="one-liner">
         <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>

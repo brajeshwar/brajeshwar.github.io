@@ -29,8 +29,6 @@ I found a working script for Google Chrome [Google Photos Delete All Tool](https
 
 I sent a [Pull Request](https://github.com/mrishab/google-photos-delete-tool/pull/36) to the source. The updated script is at [github.com/oinam/google-photos-delete-tool](https://github.com/oinam/google-photos-delete-tool). This works as of JUN 2021.
 
-![About iMac)](/static/2021/iMac-40GB-RAM-2019.png)
-
 ## Follow the steps to delete your Google Photos.
 
 1. Block images on photos.google.com.
