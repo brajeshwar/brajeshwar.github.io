@@ -3,7 +3,7 @@ layout: post
 title: 10 principles of Good Design
 ---
 
-[Dieter Rams']("Good design" principles) "Good design" principles;
+[Dieter Rams'](https://en.wikipedia.org/wiki/Dieter_Rams) "Good design" principles;
 
 1. Is innovative The possibilities for innovation are not, by any means, exhausted. Technological development is always offering new opportunities for innovative design. But innovative design always develops in tandem with innovative technology, and can never be an end in itself.
 1. Makes a product useful A product is bought to be used. It has to satisfy certain criteria, not only functional, but also psychological and aesthetic. Good design emphasizes the usefulness of a product whilst disregarding anything that could possibly detract from it.

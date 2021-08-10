@@ -1,39 +1,18 @@
 ---
 layout: post
 title: Google Wallet ensures no pick-pocketting for you
-date: 2011-09-23 10:12:32.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Mobile
-- Technology
-tags:
-- Business
-- google
-- Google Wallet
-- Mobile Technology
-- Paypal
-- Service Launch
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '423285026'
-  trx_addons_post_views_count: '48'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/google-wallet-ensures-no-pick-pocketting-for-you/"
 ---
-<p>The way we pay has changed three times in the past few thousand years. From coins to paper notes to plastic cards. Now, a mobile application developed by Google only for Sprint <a href="http://now.sprint.com/nexus/">Nexus S 4G</a> allows the user can make secure payments fast and convenient by simply tapping the phone on a pay-pass enabled terminal checkout. Google plans to develop this application for more mobile phones. <a href="http://www.google.com/wallet/">Google Wallet</a>, allows the user to use the mobile phones and enhance in-store shopping experience and thus helping bridge the gap between online and in-store customer interactions.</p>
 
-<p><iframe width="640" height="360" src="http://www.youtube.com/embed/DsaJMhcLm_A?hd=1" frameborder="0" allowfullscreen></iframe></p>
-<p>So, how does this work? The <a href="http://en.wikipedia.org/wiki/Near_field_communication">NFC</a> (Near field communication) technology allows Google wallet to establish a connection between two devices that are near in range. In this way the details of credit card can be transferred to the phone. Google wallet supports two kinds of cards.  The citi master credit cards and the <a href="http://www.google.com/wallet/how-it-works-payments.html">Google prepaid card</a>. Once the account information is entered, verification is done and the credit card credentials are stored to a secure microchip on the phone. This secure micro chip is like a separate computer and is capable of running programs and storing data. This memory is separate from the Android`s phone memory and there are multiple levels of protection for data stored on secure element. This chip is protected from the hardware level from snooping or tampering. The cashless transaction is much safe since it has an added security with encryption and password found in a smart phone. During the demo, the company previously showed off NFC stickers that can be fixed to android phones making them compatible with wallet.</p>
-<p>As of this moment, some local area in the US already started using the mobile payments as trials particularly in San Francisco and New York. This application is designed and engineered to enable and secure payments. Though a stolen debit card can be used in some situations without a PIN (Personal Identification Number) and signature, this can never happen with a Google wallet as the android device itself can be locked with a PIN and this application requires an additional pin to activate the antenna of NFC chip in order for a transaction to occur. Once the transaction is completed the antenna is turned off and additional transactions require the PIN to be entered again. Also the Google wallet device must touch or be in close to a MasterCard Pay Pass reader. </p>
-<p>Google is working with point of sale systems and some top retail brands to create a new <a href="http://www.businesswire.com/news/home/20110526006211/en/Google-Citi-MasterCard-Data-Sprint-Team-Phone">single tap shopping experience</a>. Users will be able to pay for an item using a credit card or gift card, redeem promotions and earn loyalty points. Currently Google is working with VeriFone, Hepercom, VIVOtech, Ingenico and others to develop the next generation point of sale systems.</p>
-<p>The VP - Commerce for Google, Mr. Stephanie Tilenius said, "We are extending an open invitation to merchants and eco system partners like payment networks, carriers and banks to join us in creating tomorrow's best shopping experience". </p>
-<p>The search company's long awaited mobile payments platform has been <a href="http://venturebeat.com/2011/09/19/google-wallet-launch/">launched</a> on September 19, 2011 with a little fanfare. But paypal has filed a lawsuit alleging "misappropriations of trade secrets" and "breach of fiduciary duty" against two former employees of paypal, who were hired by Google.</p>
+The way we pay has changed three times in the past few thousand years. From coins to paper notes to plastic cards. Now, a mobile application developed by Google only for Sprint <a href="http://now.sprint.com/nexus/">Nexus S 4G</a> allows the user can make secure payments fast and convenient by simply tapping the phone on a pay-pass enabled terminal checkout. Google plans to develop this application for more mobile phones. <a href="http://www.google.com/wallet/">Google Wallet</a>, allows the user to use the mobile phones and enhance in-store shopping experience and thus helping bridge the gap between online and in-store customer interactions.
+
+<iframe width="800" height="450" src="http://www.youtube.com/embed/DsaJMhcLm_A?hd=1" frameborder="0" allowfullscreen></iframe>
+
+So, how does this work? The <a href="http://en.wikipedia.org/wiki/Near_field_communication">NFC</a> (Near field communication) technology allows Google wallet to establish a connection between two devices that are near in range. In this way the details of credit card can be transferred to the phone. Google wallet supports two kinds of cards.  The citi master credit cards and the <a href="http://www.google.com/wallet/how-it-works-payments.html">Google prepaid card</a>. Once the account information is entered, verification is done and the credit card credentials are stored to a secure microchip on the phone. This secure micro chip is like a separate computer and is capable of running programs and storing data. This memory is separate from the Android`s phone memory and there are multiple levels of protection for data stored on secure element. This chip is protected from the hardware level from snooping or tampering. The cashless transaction is much safe since it has an added security with encryption and password found in a smart phone. During the demo, the company previously showed off NFC stickers that can be fixed to android phones making them compatible with wallet.
+
+As of this moment, some local area in the US already started using the mobile payments as trials particularly in San Francisco and New York. This application is designed and engineered to enable and secure payments. Though a stolen debit card can be used in some situations without a PIN (Personal Identification Number) and signature, this can never happen with a Google wallet as the android device itself can be locked with a PIN and this application requires an additional pin to activate the antenna of NFC chip in order for a transaction to occur. Once the transaction is completed the antenna is turned off and additional transactions require the PIN to be entered again. Also the Google wallet device must touch or be in close to a MasterCard Pay Pass reader. 
+
+Google is working with point of sale systems and some top retail brands to create a new <a href="http://www.businesswire.com/news/home/20110526006211/en/Google-Citi-MasterCard-Data-Sprint-Team-Phone">single tap shopping experience</a>. Users will be able to pay for an item using a credit card or gift card, redeem promotions and earn loyalty points. Currently Google is working with VeriFone, Hepercom, VIVOtech, Ingenico and others to develop the next generation point of sale systems.
+
+The VP - Commerce for Google, Mr. Stephanie Tilenius said, "We are extending an open invitation to merchants and eco system partners like payment networks, carriers and banks to join us in creating tomorrow's best shopping experience". 
+
+The search company's long awaited mobile payments platform has been <a href="http://venturebeat.com/2011/09/19/google-wallet-launch/">launched</a> on September 19, 2011 with a little fanfare. But paypal has filed a lawsuit alleging "misappropriations of trade secrets" and "breach of fiduciary duty" against two former employees of paypal, who were hired by Google.

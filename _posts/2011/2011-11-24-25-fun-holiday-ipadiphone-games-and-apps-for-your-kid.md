@@ -1,64 +1,41 @@
 ---
 layout: post
-title: "[Updated] 25+ Fun Holiday iPad/iPhone Games and Apps for your kid"
-date: 2011-11-24 13:00:04.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Reviews
-tags:
-- Fun
-- Games
-- Holidays
-- ipad
-- iphone
-- Kids
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '482219789'
-  trx_addons_post_views_count: '105'
-author:
-  login: Brajeshwar
-  email: brajeshwar@gmail.com
-  display_name: Brajeshwar
-  first_name: Brajeshwar
-  last_name: Oinam
-permalink: "/2011/25-fun-holiday-ipadiphone-games-and-apps-for-your-kid/"
+title: 25+ Fun Holiday iPad/iPhone Games and Apps for your kid
 ---
-<p><a href="http://laaija.com/">My daughter</a> turns three this December (2011). She has had an iPad since her Second Birthday. Here are the top Games and Apps my daughter loves to play. I hope your kid will like it too and keep them happy, while having fun during the Holidays.</p>
-<h3>Here is the list (not in any particular order):</h3>
-<p><em><strong>Note:</strong> (*) indicates apps for both iPad and iPhone.</em></p>
-<p># <a href="http://itunes.apple.com/us/app/abc-food/id460479661?mt=8">ABC Food</a> ($1.99) (*) -- My daughter loves playing around with the foods, peel them, cut them and watch the video. There are over 150 photos and videos on more than 70 delicious foods.<br />
-# <a href="http://itunes.apple.com/us/app/alpha-writer-by-montessorium/id394038232?mt=8">Alpha Writer</a> ($4.99) (*) -- Montessorium's Alpha Writer is an interesting and engaging fun app for kids. It will help your kid learn to read, write and spell phonetically, while composing words and creating stories.<br />
-# <a href="http://itunes.apple.com/us/app/intro-to-letters-by-montessorium/id387232375?mt=8">Intro to Letters</a> ($4.99) (*) -- My Daughter loves tracing through the letters.<br />
-# <a href="http://itunes.apple.com/us/app/intro-to-math-by-montessorium/id381064973?mt=8">Intro to Math</a> ($4.99) (*) -- Another great app from Montessorium, pretty much in the lines of Intro to Letters.<br />
-# <a href="http://itunes.apple.com/us/app/alphatots/id436142340?mt=8">AphaTots</a> ($0.99) (iPad) -- Another fun app for your kid learning the English Alphabets with lots of fun stuffs while she learns.<br />
-# <a href="http://itunes.apple.com/us/app/bean-bag-kids-present-little/id435025920?mt=8">Little Red Riding Hood</a> ($0.99) (*) -- My daughter loves this 3D interactive fable, performed by the Bean Bag Kids. Pea, Pinto, Cocoa, Jack and Vanilla have made a show for your kid. Complete with beautiful scenes of this classic bed time story, it is told in an absolutely new way, that will amaze babies, toddlers, kids and parents.<br />
-# <a href="http://itunes.apple.com/us/app/cookie-doodle/id342128086?mt=8">Cookie Doodle</a> ($0.99) (*) -- My daughter loves baking cookies through this app. She would fancy-play treating us to various cookies and would promptly help herself to her cookies.<br />
-# <a href="http://itunes.apple.com/us/app/frogger-decades/id454370986?mt=8">Frogger Decades</a> ($0.99) (*) -- My daughter loves this game, perhaps because of the frog. In general, she loves animals of all sorts. The idea of winning don't really matter to her but just jumping through the obstacles is what really gets her excited.<br />
-# <a href="http://itunes.apple.com/us/app/grollys-animal-adventures/id473203700?mt=8">Grolly's Animal Adventures</a> (Free, In-App $3.99) (iPad) -- The free version gives you one chapter but you'll feel guilty depriving your kid of the full fun. The In-App purchase of $3.99 is worth it. Another app with animals and my daughter went tapping all over it.<br />
-# <a href="http://itunes.apple.com/us/app/hickory-dickory-dock/id460383510?mt=8">Hickory Dickory Dock</a> ($2.99) (*) -- Anything to do with Rhymes, with well-done graphics is sure to get a kid's attention. Hickory Dickory Dock is another of my daughter's regular app. No, she have no clue on how to read a clock.<br />
-# <a href="http://itunes.apple.com/us/app/itubelist-youtube-playlist/id438991471?mt=8">iTubeList</a> (Free) (*) -- Youtube is a gem for Videos for your kid but there are lots of videos which are not suited for her. The Youtube App that comes with your devices will lead them to those videos which you want to avoid. iTubeList is an app that helps you curate videos for your kid. It comes pre-loaded with some great videos for your kid.<br />
-# <a href="http://itunes.apple.com/us/app/jibjab-jr.-books/id439449113?mt=8">JibJab Jr. Books</a> (Free, Subscription) (iPad) -- Highly interactive and interesting fun app for your kid. The app is free and comes with one book built in for your kid to try it out. You can subscribe to its monthly release of new books or buy each book separately and let your kid take part in the story.<br />
-# <a href="http://itunes.apple.com/us/app/kids-song-machine-2-around/id466724145?mt=8">Kids Song Machine 2 - Around the World</a> ($2.99) (*) -- My daughter loves this colorful, fun app. It offers an interactive tour through the most beautiful places in the world that will delight your kid.<br />
-# <a href="http://itunes.apple.com/us/app/lets-create!-pottery-hd/id380090605?mt=8">Let's Create! Pottery</a> ($4.99) (*) -- Not really a kid's app <em>per se</em> but my daughter can keep herself delighted playing and making pots. She's yet to learn to burn it after the clay work.<br />
-# <a href="http://itunes.apple.com/us/app/make-it-pop/id473528144?mt=8">Make it Pop</a> ($1.99) (*) -- Anything that pops, burst are interesting to kids and this one is not an exception. Your kid can learn shapes, letters, colors, and numbers while popping bubbles, balloons, fireworks and popcorn.<br />
-# <a href="http://itunes.apple.com/us/app/peekaboo-hd/id418475159?mt=8">Peekabo</a> (Free) (*) -- How can a Kids App list be complete without a Peekabo. A simple, easy and fun app for your kid.<br />
-# <a href="http://itunes.apple.com/us/app/racing-penguin-flying-by-top/id443395370?mt=8">Racing Penguin, Flying</a> ($0.99) (*) -- My daughter beat the <a href="http://itunes.apple.com/us/app/racing-penguin-flying-free/id443637419?mt=8">free version</a> in one of her early attempts and I had to buy her the full version. She <a href="http://www.youtube.com/watch?v=qaF6dPiJ-NM">loves helping the Penguin</a> get across without being eaten. However, the levels have become tad difficult and she can't get past many levels. Anyway, she does not really care about winning, she just loves to play.<br />
-# <a href="http://itunes.apple.com/us/app/smoody-hd/id429274014?mt=8">Smoody</a> ($0.99) (iPad) -- She can't get past much but she just loves slicing and cutting through. Nice game.<br />
-# <a href="http://itunes.apple.com/us/app/solipskier/id383281764?mt=8">Solipskier</a> ($0.99) (*) -- It was not really meant for her but she somehow likes it. She <a href="http://www.youtube.com/watch?v=p7q217MEEJg">loves it</a>, though I have never seen her succeeding in the major Hurdle Jump.<br />
-# <a href="http://itunes.apple.com/us/app/sprinkle-water-splashing-fire/id447791438?mt=8">Sprinkle: Water Splashing fire fighting fun!</a> ($1.99) (*) -- Another interesting game, where it needs thinking and motor skills. Fun game for your kid.<br />
-# <a href="http://itunes.apple.com/us/app/spy-mouse-hd/id471112976?mt=8">SPY Mouse</a> ($2.99) (iPad) -- My daughter loves Tom & Jerry. So, it was rather natural for her to like this game. Show your kid the first initial steps and let her take it away.<br />
-# <strong>Talking Ben, Tom and Gina (Free, In-App Purchases)</strong> -- She loves all the talking Ben series - <a href="http://itunes.apple.com/us/app/talking-ben-the-dog-for-ipad/id416345444?mt=8">Talking Ben the Dog</a>, <a href="http://itunes.apple.com/us/app/talking-tom-ben-news-for-ipad/id444947784?mt=8">Talking Tom & Ben News</a>, <a href="http://itunes.apple.com/us/app/talking-tom-cat-for-ipad/id379983299?mt=8">Talking Tom Cat</a>, <a href="http://itunes.apple.com/us/app/talking-tom-cat-2-for-ipad/id421998342?mt=8">Talking Tom Cat 2</a> and <a href="http://itunes.apple.com/us/app/talking-gina-giraffe-for-ipad/id402689790?mt=8">Talking Gina</a>.<br />
-# <a href="http://itunes.apple.com/us/app/wheres-my-water/id449735650?mt=8">Where's my Water?</a> ($0.99) (*) -- A little complex but she just loves muddling for the water to pass through. I'm not sure she even get past through any more levels further.<br />
-# <a href="http://itunes.apple.com/us/app/bord/id398467374?mt=8">Bord</a> ($0.99) (*) -- Let your kid run wild with the chalks, let them draw whatever their finger swipes and taps.<br />
-# <a href="http://itunes.apple.com/us/app/kids-can-drive-virtual-toy/id377392190?mt=8">Kids Can Drive</a> ($0.99) (*) -- Kids love to drive and this app is a fun to drive, honk, change wheels.<br />
-# <a href="http://itunes.apple.com/us/app/toontastic/id404693282?mt=8">Toontastic</a> (Free, In-App Purchases) (iPad) -- A fun app for the family, play with your kid, create stories and let your kid have fun doing it along with you.<br />
-# <a href="http://itunes.apple.com/us/app//id442879358?mt=8">Phone for Kids</a> (Free) (*) -- Well, kids love the phone and this is a fun app for your kid.<br />
-# <a href="http://itunes.apple.com/us/app/real-animals-hd/id445816960?mt=8">Real Animals HD</a> ($4.99) (*) -- Awesome collection of very interactive animals. Your kid will love both the Zoo and the World options. You can also download the free version, try it first and then buy the in-app purchase.<br />
-# <a href="http://itunes.apple.com/us/app/flickpig/id463249899?mt=8">FlickPig</a> ($0.99) (*) -- Help your kid get started with the Pigs racing down the tracks collecting coins, fruits and what not. Let her learn how to flip the pig on top of another to get more collectibles and avoid obstacles. She will love those snorting pigs.<br />
-# <a href="http://itunes.apple.com/us/app/egg-punch/id471970360?mt=8">Egg Punch</a> (Free) (*) -- She'll love this funny looking chick inside an egg bouncing around obstacles trying to get through the holes. Teach her to collect the feathers and bounce of rabbits.</p>
-<p>Which are your kid's favorite apps? What good ones have I missed? Add them in the comments, it might be useful for other parents.</p>
+
+<a href="http://laaija.com/">My daughter</a> turns three this December (2011). She has had an iPad since her Second Birthday. Here are the top Games and Apps my daughter loves to play. I hope your kid will like it too and keep them happy, while having fun during the Holidays.
+
+## Here is the list (not in any particular order):
+
+- <a href="http://itunes.apple.com/us/app/abc-food/id460479661?mt=8">ABC Food</a> ($1.99) -- My daughter loves playing around with the foods, peel them, cut them and watch the video. There are over 150 photos and videos on more than 70 delicious foods.
+- <a href="http://itunes.apple.com/us/app/alpha-writer-by-montessorium/id394038232?mt=8">Alpha Writer</a> ($4.99) -- Montessorium's Alpha Writer is an interesting and engaging fun app for kids. It will help your kid learn to read, write and spell phonetically, while composing words and creating stories.
+- <a href="http://itunes.apple.com/us/app/intro-to-letters-by-montessorium/id387232375?mt=8">Intro to Letters</a> ($4.99) -- My Daughter loves tracing through the letters.
+- <a href="http://itunes.apple.com/us/app/intro-to-math-by-montessorium/id381064973?mt=8">Intro to Math</a> ($4.99) -- Another great app from Montessorium, pretty much in the lines of Intro to Letters.
+- <a href="http://itunes.apple.com/us/app/alphatots/id436142340?mt=8">AphaTots</a> ($0.99) (iPad) -- Another fun app for your kid learning the English Alphabets with lots of fun stuffs while she learns.
+- <a href="http://itunes.apple.com/us/app/bean-bag-kids-present-little/id435025920?mt=8">Little Red Riding Hood</a> ($0.99) -- My daughter loves this 3D interactive fable, performed by the Bean Bag Kids. Pea, Pinto, Cocoa, Jack and Vanilla have made a show for your kid. Complete with beautiful scenes of this classic bed time story, it is told in an absolutely new way, that will amaze babies, toddlers, kids and parents.
+- <a href="http://itunes.apple.com/us/app/cookie-doodle/id342128086?mt=8">Cookie Doodle</a> ($0.99) -- My daughter loves baking cookies through this app. She would fancy-play treating us to various cookies and would promptly help herself to her cookies.
+- <a href="http://itunes.apple.com/us/app/frogger-decades/id454370986?mt=8">Frogger Decades</a> ($0.99) -- My daughter loves this game, perhaps because of the frog. In general, she loves animals of all sorts. The idea of winning don't really matter to her but just jumping through the obstacles is what really gets her excited.
+- <a href="http://itunes.apple.com/us/app/grollys-animal-adventures/id473203700?mt=8">Grolly's Animal Adventures</a> (Free, In-App $3.99) (iPad) -- The free version gives you one chapter but you'll feel guilty depriving your kid of the full fun. The In-App purchase of $3.99 is worth it. Another app with animals and my daughter went tapping all over it.
+- <a href="http://itunes.apple.com/us/app/hickory-dickory-dock/id460383510?mt=8">Hickory Dickory Dock</a> ($2.99) -- Anything to do with Rhymes, with well-done graphics is sure to get a kid's attention. Hickory Dickory Dock is another of my daughter's regular app. No, she have no clue on how to read a clock.
+- <a href="http://itunes.apple.com/us/app/itubelist-youtube-playlist/id438991471?mt=8">iTubeList</a> (Free) -- Youtube is a gem for Videos for your kid but there are lots of videos which are not suited for her. The Youtube App that comes with your devices will lead them to those videos which you want to avoid. iTubeList is an app that helps you curate videos for your kid. It comes pre-loaded with some great videos for your kid.
+- <a href="http://itunes.apple.com/us/app/jibjab-jr.-books/id439449113?mt=8">JibJab Jr. Books</a> (Free, Subscription) (iPad) -- Highly interactive and interesting fun app for your kid. The app is free and comes with one book built in for your kid to try it out. You can subscribe to its monthly release of new books or buy each book separately and let your kid take part in the story.
+- <a href="http://itunes.apple.com/us/app/kids-song-machine-2-around/id466724145?mt=8">Kids Song Machine 2 - Around the World</a> ($2.99) -- My daughter loves this colorful, fun app. It offers an interactive tour through the most beautiful places in the world that will delight your kid.
+- <a href="http://itunes.apple.com/us/app/lets-create!-pottery-hd/id380090605?mt=8">Let's Create! Pottery</a> ($4.99) -- Not really a kid's app per se but my daughter can keep herself delighted playing and making pots. She's yet to learn to burn it after the clay work.
+- <a href="http://itunes.apple.com/us/app/make-it-pop/id473528144?mt=8">Make it Pop</a> ($1.99) -- Anything that pops, burst are interesting to kids and this one is not an exception. Your kid can learn shapes, letters, colors, and numbers while popping bubbles, balloons, fireworks and popcorn.
+- <a href="http://itunes.apple.com/us/app/peekaboo-hd/id418475159?mt=8">Peekabo</a> (Free) -- How can a Kids App list be complete without a Peekabo. A simple, easy and fun app for your kid.
+- <a href="http://itunes.apple.com/us/app/racing-penguin-flying-by-top/id443395370?mt=8">Racing Penguin, Flying</a> ($0.99) -- My daughter beat the <a href="http://itunes.apple.com/us/app/racing-penguin-flying-free/id443637419?mt=8">free version</a> in one of her early attempts and I had to buy her the full version. She <a href="http://www.youtube.com/watch?v=qaF6dPiJ-NM">loves helping the Penguin</a> get across without being eaten. However, the levels have become tad difficult and she can't get past many levels. Anyway, she does not really care about winning, she just loves to play.
+- <a href="http://itunes.apple.com/us/app/smoody-hd/id429274014?mt=8">Smoody</a> ($0.99) (iPad) -- She can't get past much but she just loves slicing and cutting through. Nice game.
+- <a href="http://itunes.apple.com/us/app/solipskier/id383281764?mt=8">Solipskier</a> ($0.99) -- It was not really meant for her but she somehow likes it. She <a href="http://www.youtube.com/watch?v=p7q217MEEJg">loves it</a>, though I have never seen her succeeding in the major Hurdle Jump.
+- <a href="http://itunes.apple.com/us/app/sprinkle-water-splashing-fire/id447791438?mt=8">Sprinkle: Water Splashing fire fighting fun!</a> ($1.99) -- Another interesting game, where it needs thinking and motor skills. Fun game for your kid.
+- <a href="http://itunes.apple.com/us/app/spy-mouse-hd/id471112976?mt=8">SPY Mouse</a> ($2.99) (iPad) -- My daughter loves Tom & Jerry. So, it was rather natural for her to like this game. Show your kid the first initial steps and let her take it away.
+- Talking Ben, Tom and Gina (Free, In-App Purchases) -- She loves all the talking Ben series - <a href="http://itunes.apple.com/us/app/talking-ben-the-dog-for-ipad/id416345444?mt=8">Talking Ben the Dog</a>, <a href="http://itunes.apple.com/us/app/talking-tom-ben-news-for-ipad/id444947784?mt=8">Talking Tom & Ben News</a>, <a href="http://itunes.apple.com/us/app/talking-tom-cat-for-ipad/id379983299?mt=8">Talking Tom Cat</a>, <a href="http://itunes.apple.com/us/app/talking-tom-cat-2-for-ipad/id421998342?mt=8">Talking Tom Cat 2</a> and <a href="http://itunes.apple.com/us/app/talking-gina-giraffe-for-ipad/id402689790?mt=8">Talking Gina</a>.
+- <a href="http://itunes.apple.com/us/app/wheres-my-water/id449735650?mt=8">Where's my Water?</a> ($0.99) -- A little complex but she just loves muddling for the water to pass through. I'm not sure she even get past through any more levels further.
+- <a href="http://itunes.apple.com/us/app/bord/id398467374?mt=8">Bord</a> ($0.99) -- Let your kid run wild with the chalks, let them draw whatever their finger swipes and taps.
+- <a href="http://itunes.apple.com/us/app/kids-can-drive-virtual-toy/id377392190?mt=8">Kids Can Drive</a> ($0.99) -- Kids love to drive and this app is a fun to drive, honk, change wheels.
+- <a href="http://itunes.apple.com/us/app/toontastic/id404693282?mt=8">Toontastic</a> (Free, In-App Purchases) (iPad) -- A fun app for the family, play with your kid, create stories and let your kid have fun doing it along with you.
+- <a href="http://itunes.apple.com/us/app//id442879358?mt=8">Phone for Kids</a> (Free) -- Well, kids love the phone and this is a fun app for your kid.
+- <a href="http://itunes.apple.com/us/app/real-animals-hd/id445816960?mt=8">Real Animals HD</a> ($4.99) -- Awesome collection of very interactive animals. Your kid will love both the Zoo and the World options. You can also download the free version, try it first and then buy the in-app purchase.
+- <a href="http://itunes.apple.com/us/app/flickpig/id463249899?mt=8">FlickPig</a> ($0.99) -- Help your kid get started with the Pigs racing down the tracks collecting coins, fruits and what not. Let her learn how to flip the pig on top of another to get more collectibles and avoid obstacles. She will love those snorting pigs.
+- <a href="http://itunes.apple.com/us/app/egg-punch/id471970360?mt=8">Egg Punch</a> (Free) -- She'll love this funny looking chick inside an egg bouncing around obstacles trying to get through the holes. Teach her to collect the feathers and bounce of rabbits.
+
+Which are your kid's favorite apps? What good ones have I missed? Add them in the comments, it might be useful for other parents.

@@ -13,8 +13,8 @@ The new version is much better one. Lance and the team did some amazing work on 
 
 Some of the salient features of the new Nishita Theme:
 
-- <strong>Theme options</strong> include two layout choices: "Photoblog" at 1024 pixels wide, or "Blog" at 768 pixels wide. The same form also allows choosing the dark or light color scheme.
+- Theme options include two layout choices: "Photoblog" at 1024 pixels wide, or "Blog" at 768 pixels wide. The same form also allows choosing the dark or light color scheme.
 - Reduced Photoblog Look.
-- <strong>Thumbnail Archives:</strong> This photo-loving theme also uses post thumbnails to show a small version of images on your archive pages. Out of the box, the theme will crop the image attached to the post and make a thumbnail for you. If you prefer to crop your own thumbnail-or use a different image-use the Featured Image tool to set the alternate thumbnail image.
+- Thumbnail Archives: This photo-loving theme also uses post thumbnails to show a small version of images on your archive pages. Out of the box, the theme will crop the image attached to the post and make a thumbnail for you. If you prefer to crop your own thumbnail-or use a different image-use the Featured Image tool to set the alternate thumbnail image.
 - Widgets and Sidebar.
 - Customize Nishita even more with the custom background feature, a custom header image, and a custom menu.

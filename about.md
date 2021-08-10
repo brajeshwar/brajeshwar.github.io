@@ -27,9 +27,7 @@ I migrated to [Mumbai](https://en.wikipedia.org/wiki/Mumbai) in Aug 1999 to kick
 
 After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a [Floppy-Disk](https://en.wikipedia.org/wiki/Floppy_disk) which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_café) nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
 
-## brajeshwar.com
-
-This domain, [brajeshwar.com](/about/brajeshwar.com/) was booked on a dare. I'm very happy with my decision.
+> This domain, [brajeshwar.com](/about/brajeshwar.com/) was booked on a dare. I'm very happy with my decision.
 
 ## Internet
 
