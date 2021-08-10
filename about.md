@@ -10,9 +10,14 @@ My name is Brajeshwar Oinam.
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
 <figure class="feature">
-  <img src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg" alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks" loading="lazy">
+  <a  href="https://en.wikipedia.org/wiki/Floppy_disk"
+      title="8-inch, 5¼-inch, and 3½-inch Floppy Disks">
+      <img src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg"
+            alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks"
+            loading="lazy"></a>
   <figcaption>
-    8-inch, 5¼-inch, and 3½-inch <a href="https://en.wikipedia.org/wiki/Floppy_disk">Floppy Disks</a>.
+    8-inch, 5¼-inch, and 3½-inch
+    <a href="https://en.wikipedia.org/wiki/Floppy_disk">Floppy Disks</a>.
   </figcaption>
 </figure>
 
@@ -47,16 +52,28 @@ _et al_.
 
 We also worked for many Contractors who sub-contracted their work to us. We were, in fact, one of the best ghost developers to many successful Contractors.
 
-In 2006, [Mixercast, Inc](https://www.linkedin.com/company/167518) acquired the Oinam Team. It was an exciting experience, being part of a Startup and learning from it. Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was declared dead on Dec 31, 2009.
+In 2006, [Mixercast, Inc](https://www.linkedin.com/company/167518) acquired the Oinam Team. It was an exciting experience, being part of a Startup and learning from it.
+
+[//]: # Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was declared dead on Dec 31, 2009.
+
+In the winter of 2010-2011, I ran off to Silicon Valley to be part of the [Founder Institute](https://fi.co/join/graduate-Brajeshwar_Oinam) accelerator. I forge life-long friends, connections and learned a lot from that experience.
+
+In 2020-2021, I got into the [On Deck](https://www.beondeck.com) Founder Fellowship Program (ODF7). One of the best networks I had ever joined -- the most helpful, fiercely hard-working entrepreneurs, designers, technologists, and all-around brilliant generalists. Use my [Referral Link](https://beondeck.com/r/BrajeshwarOinam) for a better chance at an interview and fee discount.
+
+> On Deck is where the world's top talent comes to connect. Whatever it is you want to do next, our ever-growing community and action-oriented programming will help you get there—fast. If you want to learn something new to uplevel your career, launch and scale your big ideas, or make lifelong friends, this is the place for you.
+
+I had worked with some fantastic companies. I was one of the Creative Directors at [Razorfish](https://www.razorfish.com), and was the Chief Product Officer at [Mobisy](//mobisy.com).
 
 I continue to leveraging technology in finding solutions to challenges and problems. For details of my professional timeline, view my [Curriculum Vitae](https://cv.brajeshwar.com).
 
 ## Family
 
 <figure class="feature">
-  <a href="//oinam.pictures" title="Oinam Family" loading="lazy">
-    <img src="/static/img/oinam-family-2016.jpg" alt="Oinam Family">
-  </a>
+  <a  href="//oinam.pictures"
+      title="Oinam Family">
+    <img  src="/static/img/oinam-family-2016.jpg"
+          alt="Oinam Family"
+          loading="lazy"></a>
   <figcaption>Shanta Huirem, Laaija, Amara, and Brajeshwar Oinam</figcaption>
 </figure>
 
