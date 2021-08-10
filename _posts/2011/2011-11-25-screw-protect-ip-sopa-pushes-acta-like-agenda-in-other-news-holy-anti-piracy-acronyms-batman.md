@@ -1,54 +1,29 @@
 ---
 layout: post
-title: 'Screw Protect IP, SOPA pushes ACTA-like Agenda -- in other news: holy Anti-Piracy
-  acronyms Batman!'
-date: 2011-11-25 20:00:09.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Media
-tags:
-- ACTA
-- america
-- anti-piracy
-- Chamber of Commerce
-- Department of Justice
-- intellectual property
-- law
-- Piracy
-- Protect IP
-- rights
-- SOPA
-- stop online piracy act
-- U.S.
-- US
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '483589503'
-  trx_addons_post_views_count: '45'
-author:
-  login: RobinWilding
-  email: robin_8000@yahoo.com
-  display_name: Robin Wilding
-  first_name: Robin
-  last_name: Wilding
-permalink: "/2011/screw-protect-ip-sopa-pushes-acta-like-agenda-in-other-news-holy-anti-piracy-acronyms-batman/"
+title: Screw Protect IP, SOPA pushes ACTA-like Agenda - in other news - holy Anti-Piracy acronyms Batman!
 ---
-<p>Surprise, surprise -- America is meddling in international affairs, again. The United State's newest pet piracy project, the <a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">Stop Online Piracy Act</a> (SOPA), is looking to bring the uber-American vigilante-style anti-piracy justice beyond its borders.  This newest act in a long string of anti-piracy measures will allow the U.S Department of Justice to force an all-out boycott of websites hosting pirated content, regardless of their international locations.</p>
-<p>As enforcement SOPA will require:</p>
-<p># ISPs to suspend access to their users for offending websites and<br />
-# require payment and ad networks (like Google AdWords, VISA and PayPal) to suspend services to offenders.</p>
-<p>The new law would also force US-based search engines to remove the offending websites from search results. </p>
 
-<p><iframe src="http://player.vimeo.com/video/31100268?byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
-<p>The U.S Chamber of Commerce, backed by Hollywood, is <a href="http://www.washingtonpost.com/blogs/2chambers/post/stop-online-piracy-act-sopa-pits-yahoo-google-against-us-chamber-of-commerce/2011/11/17/gIQAk5XiUN_blog.html">defending</a> the decision by claiming that 19 million American jobs stand to be lost from pirated-content websites from the 53 billion hits they receive a year. Hollywood is leading the piracy witch hunt seeing as it is near-collapse with the newest Twilight movie earning a mere $158,978,162 (in its first five days) and with Johnny Depp earning just $75 million last year (a slow year for the Pirates Of The Caribbean franchise?).</p>
-<p>NOT surprisingly the Internet industry is opposed to the act. Google, Yahoo!, Mozilla, eBay, Facebook, Twitter, LinkedIn and the other Internet glitterati vehemently oppose the bill and wrote a letter to congress noting that SOPA is "a serious risk to our industry's continued track record of innovation and job creation, as well as to our nation's cyber-security." The cyber-security issues the glitterati referred to is the end-to-end security encryption improvements made possible via the domain name system known as <a href="http://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>. SOPA essentially breaks the security-providing DNSSEC chain. </p>
-<p>Even the EU is opposed to the bill, which is a surprising fact considering their tough stance on property right protection. The European Parliament issued a statement addressing SOPA that states that in order to ensure the integrity of the global Internet, freedom and communication unilateral measures like SOPA must be shot down. Perhaps though they simply want in on the action.</p>
-<p>As previously mentioned SOPA is yet another American foray into the world of piracy combat, a move accompanied by the <a href="http://brajeshwar.wpengine.com/2011/the-super-secrective-anti-counterfeiting-trade-agreement-gives-the-finger-to-citizens-ngos-and-international-governing-bodies/">Anti-Counterfeiting Trade Agreement</a> (ACTA) and Protect IP. This anti-piracy trifecta is entrenching American property rights both domestically and internationally -- with each act progressively more aggressive than its predecessor. </p>
-<p>Just in case you are wondering -- well, I don't run an ISP, a pirated-content website or online ad network, so why should I care? -- glad you asked. The brilliant minds over at CNET somehow interpreted the legalese of SOPA and noted that SOPA goes significantly further than Protect IP and more closely lines-up with the intentions of ACTA, in that it would force ISPs to monitor their customers' online behavior and use enforcement tactics like IP blocking and deep packet inspection.</p>
-<p>Again, just in case you are thinking -- I don't care if my ISP and government know what my favorite news, recipe and porn sites are! -- you likely care about access to information. Freedom to information is a pillar of American society; it is why they spent so many years fighting the communists anyways. SOPA has deep-running complications for freedom of speech and access to information -- the New York Times <a href="http://www.nytimes.com/2011/11/16/opinion/firewall-law-could-infringe-on-free-speech.html">called</a> SOPA the "Great Firewall of America". If that term sounds familiar is was the term coined to describe the great abyss that is China's censorship rules. </p>
-<p>If you aren't American you could be thinking, 'this still doesn't apply to me' -- it's just in the U.S. Ya, for now. But hey, it's the U.S, they'll get to you sooner or later.</p>
-<p>The interesting part of this battle though, given the bipartisan split, will be the end result. The American government is split on the issue, with Republican Representatives like Lamar Smith of Texas, Bob Goodlatte of Virginia, Marsha Blackburn of Tennessee and Mary Bono Mack of California all supporting SOPA and Democrats like Zoe Lofgren, Anna Eshoo, Mike Honda and Doris Matsui opposing. Another influence over the political decision-making process comes in the form of political sway by two major lobbies that are going toe-to-toe: Hollywood and Silicon Valley. So, Republicans vs. Democrats and multi-million-dollar-earning movie stars vs. multi-million-dollar-earning tech nerds. Not quite a David and Goliath battle given that David (puny users like you and I) are notedly absent from the discussion -- but, nonetheless an epic battle.</p>
+Surprise, surprise -- America is meddling in international affairs, again. The United State's newest pet piracy project, the <a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">Stop Online Piracy Act</a> (SOPA), is looking to bring the uber-American vigilante-style anti-piracy justice beyond its borders.  This newest act in a long string of anti-piracy measures will allow the U.S Department of Justice to force an all-out boycott of websites hosting pirated content, regardless of their international locations.
+
+As enforcement SOPA will require:
+
+- ISPs to suspend access to their users for offending websites and
+- require payment and ad networks (like Google AdWords, VISA and PayPal) to suspend services to offenders.
+
+The new law would also force US-based search engines to remove the offending websites from search results. 
+
+The U.S Chamber of Commerce, backed by Hollywood, is <a href="http://www.washingtonpost.com/blogs/2chambers/post/stop-online-piracy-act-sopa-pits-yahoo-google-against-us-chamber-of-commerce/2011/11/17/gIQAk5XiUN_blog.html">defending</a> the decision by claiming that 19 million American jobs stand to be lost from pirated-content websites from the 53 billion hits they receive a year. Hollywood is leading the piracy witch hunt seeing as it is near-collapse with the newest Twilight movie earning a mere $158,978,162 (in its first five days) and with Johnny Depp earning just $75 million last year (a slow year for the Pirates Of The Caribbean franchise?).
+
+NOT surprisingly the Internet industry is opposed to the act. Google, Yahoo!, Mozilla, eBay, Facebook, Twitter, LinkedIn and the other Internet glitterati vehemently oppose the bill and wrote a letter to congress noting that SOPA is "a serious risk to our industry's continued track record of innovation and job creation, as well as to our nation's cyber-security." The cyber-security issues the glitterati referred to is the end-to-end security encryption improvements made possible via the domain name system known as <a href="http://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>. SOPA essentially breaks the security-providing DNSSEC chain. 
+
+Even the EU is opposed to the bill, which is a surprising fact considering their tough stance on property right protection. The European Parliament issued a statement addressing SOPA that states that in order to ensure the integrity of the global Internet, freedom and communication unilateral measures like SOPA must be shot down. Perhaps though they simply want in on the action.
+
+As previously mentioned SOPA is yet another American foray into the world of piracy combat, a move accompanied by the <a href="http://brajeshwar.wpengine.com/2011/the-super-secrective-anti-counterfeiting-trade-agreement-gives-the-finger-to-citizens-ngos-and-international-governing-bodies/">Anti-Counterfeiting Trade Agreement</a> (ACTA) and Protect IP. This anti-piracy trifecta is entrenching American property rights both domestically and internationally -- with each act progressively more aggressive than its predecessor. 
+
+Just in case you are wondering -- well, I don't run an ISP, a pirated-content website or online ad network, so why should I care? -- glad you asked. The brilliant minds over at CNET somehow interpreted the legalese of SOPA and noted that SOPA goes significantly further than Protect IP and more closely lines-up with the intentions of ACTA, in that it would force ISPs to monitor their customers' online behavior and use enforcement tactics like IP blocking and deep packet inspection.
+
+Again, just in case you are thinking -- I don't care if my ISP and government know what my favorite news, recipe and porn sites are! -- you likely care about access to information. Freedom to information is a pillar of American society; it is why they spent so many years fighting the communists anyways. SOPA has deep-running complications for freedom of speech and access to information -- the New York Times <a href="http://www.nytimes.com/2011/11/16/opinion/firewall-law-could-infringe-on-free-speech.html">called</a> SOPA the "Great Firewall of America". If that term sounds familiar is was the term coined to describe the great abyss that is China's censorship rules. 
+
+If you aren't American you could be thinking, 'this still doesn't apply to me' -- it's just in the U.S. Ya, for now. But hey, it's the U.S, they'll get to you sooner or later.
+
+The interesting part of this battle though, given the bipartisan split, will be the end result. The American government is split on the issue, with Republican Representatives like Lamar Smith of Texas, Bob Goodlatte of Virginia, Marsha Blackburn of Tennessee and Mary Bono Mack of California all supporting SOPA and Democrats like Zoe Lofgren, Anna Eshoo, Mike Honda and Doris Matsui opposing. Another influence over the political decision-making process comes in the form of political sway by two major lobbies that are going toe-to-toe: Hollywood and Silicon Valley. So, Republicans vs. Democrats and multi-million-dollar-earning movie stars vs. multi-million-dollar-earning tech nerds. Not quite a David and Goliath battle given that David (puny users like you and I) are notedly absent from the discussion -- but, nonetheless an epic battle.

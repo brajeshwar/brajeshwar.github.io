@@ -1,37 +1,14 @@
 ---
 layout: post
 title: Digital Book Rental Service Threatens iPad Services
-date: 2011-09-26 08:00:29.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- Amazon.com
-- apple
-- Business
-- Business Competition
-- Digital Book Rentals
-- iPad Services
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '425799863'
-  trx_addons_post_views_count: '60'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2011/digital-book-rental-service-threatens-ipad-services/"
 ---
-<p><a href="http://www.amazon.com/">Amazon</a>, which initially started as a online book store that shared exclusive non-fiction stories and other short stories, went on to sell CDs, DVDs, softwares, toys, video games, apparels, furniture and MP3 downloads.</p>
-<p>Amazon is <a href="http://news.slashdot.org/story/11/09/12/1312236/Amazon-To-Launch-Digital-Book-Rental-Service">planning to launch</a> a Netflix-like service which allows users to pay an annual fee so that they can get the book for rent. However, Amazon Prime, a premium membership service where the user pays $79 through which they speed up the process of shipping movies and TV shows is in the process of creating a digital library of older books that will be made available exclusively to them. They include aggressively paying off publishers and attaching of subscription plans to Amazon prime. Currently Amazon has planned to offer publishers a substantial fee which is greater than for what Apple pays for access to books. Attaching subscription plans simply attracts users to sign up for Amazon prime membership.</p>
 
-<p><a href="http://www.amazon.com/gp/product/B004HZYA6E/ref=as_li_tf_tl?ie=UTF8&tag=brajeshwar-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=B004HZYA6E"><img src="/static/2011/09/kindle-lady-reading.jpg" alt="Kindle" /></a></p>
-<p>Now, this becomes an open challenge to the <a href="http://www.apple.com/ipad/">iPad</a>. The iPad which is used browsing and email, books, games and applications now has a competitor. Though many tablet devices have failed, Amazon has planned to go boldly over where others have gone before. Charles King, principal of Pund-IT said MacNewsWorld that the challenge will depend upon how well Amazon's iPad can function as a e-reader. Also Amazon needs to strategize effectively if it has to compete with the tablet market against apple.</p>
-<p>It is still unclear whether this idea can catch on to the publishers as it is thought that many publishers feel that renting books may still represent lose of money even if they receive a set of amount for participating. And there is a mystery behind the 'older titles' as the user doesn't know exactly what they mean except the part that they won't be available in the new and hottest section anymore. In addition millions of books are already available for free which include the countless classics, fictions and others.</p>
-<p>But this model can be easily applied to <a href="http://www.rollingstone.com/culture/blogs/gear-up/rent-ebooks-digitally-with-amazons-new-library-lending-service-20110505">kindle e-book store</a>. This can benefit the user in a lot of ways. They are introducing a new concept called whisper sync technology so that the user can highlight and add margin notes to any kindle book that they check from the local library, and if the user checks the book again or if they plan to but the book, the notes will be there just as the user left them. The kindle lending library will let the user to borrow eBooks from more than 11,000 U.S. Libraries and it is compatible with all kinds of kindle applications and models.</p>
+<a href="http://www.amazon.com/">Amazon</a>, which initially started as a online book store that shared exclusive non-fiction stories and other short stories, went on to sell CDs, DVDs, softwares, toys, video games, apparels, furniture and MP3 downloads.
+
+Amazon is <a href="http://news.slashdot.org/story/11/09/12/1312236/Amazon-To-Launch-Digital-Book-Rental-Service">planning to launch</a> a Netflix-like service which allows users to pay an annual fee so that they can get the book for rent. However, Amazon Prime, a premium membership service where the user pays $79 through which they speed up the process of shipping movies and TV shows is in the process of creating a digital library of older books that will be made available exclusively to them. They include aggressively paying off publishers and attaching of subscription plans to Amazon prime. Currently Amazon has planned to offer publishers a substantial fee which is greater than for what Apple pays for access to books. Attaching subscription plans simply attracts users to sign up for Amazon prime membership.
+
+Now, this becomes an open challenge to the <a href="http://www.apple.com/ipad/">iPad</a>. The iPad which is used browsing and email, books, games and applications now has a competitor. Though many tablet devices have failed, Amazon has planned to go boldly over where others have gone before. Charles King, principal of Pund-IT said MacNewsWorld that the challenge will depend upon how well Amazon's iPad can function as a e-reader. Also Amazon needs to strategize effectively if it has to compete with the tablet market against apple.
+
+It is still unclear whether this idea can catch on to the publishers as it is thought that many publishers feel that renting books may still represent lose of money even if they receive a set of amount for participating. And there is a mystery behind the 'older titles' as the user doesn't know exactly what they mean except the part that they won't be available in the new and hottest section anymore. In addition millions of books are already available for free which include the countless classics, fictions and others.
+
+But this model can be easily applied to <a href="http://www.rollingstone.com/culture/blogs/gear-up/rent-ebooks-digitally-with-amazons-new-library-lending-service-20110505">kindle e-book store</a>. This can benefit the user in a lot of ways. They are introducing a new concept called whisper sync technology so that the user can highlight and add margin notes to any kindle book that they check from the local library, and if the user checks the book again or if they plan to but the book, the notes will be there just as the user left them. The kindle lending library will let the user to borrow eBooks from more than 11,000 U.S. Libraries and it is compatible with all kinds of kindle applications and models.

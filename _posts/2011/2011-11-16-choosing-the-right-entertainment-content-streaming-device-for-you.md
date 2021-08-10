@@ -1,33 +1,15 @@
 ---
 layout: post
 title: Choosing the Right Entertainment Content Streaming Device for You
-date: 2011-11-16 10:57:06.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Reviews
-tags:
-- Entertainment
-- Media
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '473521699'
-  trx_addons_post_views_count: '45'
-author:
-  login: Brajeshwar
-  email: brajeshwar@gmail.com
-  display_name: Brajeshwar
-  first_name: Brajeshwar
-  last_name: Oinam
-permalink: "/2011/choosing-the-right-entertainment-content-streaming-device-for-you/"
 ---
-<p>Online media streaming has gone mainstream, and is now available through a variety of devices, both cheap and expensive. Video streaming in particular is eagerly adopted, because of the quality of streaming services such as Netflix, Vudu and Hulu Plus.</p>
-<p>The next four media streaming devices target different groups of users &#8211; which one's the best for you? Find Out:</p>
-<p># <em>If you're unwilling to spend more than $100 - <a href="http://www.roku.com/2xs">Roku 2XS</a>:</em> Online streaming media devices, though increasingly popular, remain somewhat expensive. Roku 2XS is an exception. Priced at $99, it's one of the most affordable yet cool devices of its kind, being capable of streaming video flawlessly. What's more, it features a few fun games which are worth trying when you're bored of watching videos. Roku 2XS works with all the big streaming services, including Video on Demand from Amazon, Hulu Plus, Netlifx, Pandora, NBA Game Time and Crackle. The downside is that it doesn't come with Blu-ray support, and it also doesn't let you to stream files across your home network. But you can't have everything for $99.<br />
-# <em>If you're a gamer - <a href="http://playstation.com/ps3/">Sony PS3</a>:</em> Sony PlayStation 3 is now not only a wonderful gaming console and a capable Blu-ray player, but also a formidable video and music streaming device. Sony has recently introduced a series of firmware updates which made the popular gaming console support media streaming services such as Hulu Plus, Netflix and MBL.TV. Also, don't forget that PS3 can handle home media streaming as well through DLNA. Considering that it now costs $249, PS3 is definitely one of the coolest content streaming devices currently available. Note: Xbox 360 recently extended its media streaming services as well, but remember that Microsoft's console doesn't play Blu-ray.<br />
-# <em>If you want a media player - <a href="http://www.amazon.com/LG-BD670-Wireless-Network-Blu-ray/dp/B004OF9XGO">LG BD670</a>:</em> LG BD670 is a top Blu-ray player, but also a great device for streaming Internet entertainment content. With integrated Wi-Fi, LG BD670 works great with streaming services such as Netflix, YouTube, Pandora, Amazon and MOG. Also, it lets you stream media from a computer through a home network. LG BD670 is the ideal choice if you want a media streaming device that can also play Blu-ray, but which is cheaper than Sony PS3.<br />
-# <em>If you're an Apple fan - <a href="http://www.apple.com/appletv/">Apple TV</a>:</em> Neither the most versatile nor the most complete streaming device, yet definitely one of the coolest, Apple TV is the right choice for Apple fans. Apple TV is the only TV box that works flawless with iTunes and the AirPlay app for sharing media content over your home network. Besides video, you can also stream audio through the AirPlay app, including Pandora. Alternatively you can use your iPad or iPhone to stream video content from the device to the TV screen, though you do have to make some configuration work first. With Apple TV you get video streaming through Vimeo, MLB.TV, iTunes, Netflix, YouTube, Flicker. Additionally, you also get photos through Flicker and Internet Radio. Apple TV is just $99 and despite the fact that it supports fewer services than Roku 2XS, it's worth every dollar.</p>
-<p>Hope you found out that one device for you.</p>
+
+Online media streaming has gone mainstream, and is now available through a variety of devices, both cheap and expensive. Video streaming in particular is eagerly adopted, because of the quality of streaming services such as Netflix, Vudu and Hulu Plus.
+
+The next four media streaming devices target different groups of users which one's the best for you? Find Out:
+
+- If you're unwilling to spend more than $100 - <a href="http://www.roku.com/2xs">Roku 2XS</a>: Online streaming media devices, though increasingly popular, remain somewhat expensive. Roku 2XS is an exception. Priced at $99, it's one of the most affordable yet cool devices of its kind, being capable of streaming video flawlessly. What's more, it features a few fun games which are worth trying when you're bored of watching videos. Roku 2XS works with all the big streaming services, including Video on Demand from Amazon, Hulu Plus, Netlifx, Pandora, NBA Game Time and Crackle. The downside is that it doesn't come with Blu-ray support, and it also doesn't let you to stream files across your home network. But you can't have everything for $99.<br />
+- If you're a gamer - <a href="http://playstation.com/ps3/">Sony PS3</a>: Sony PlayStation 3 is now not only a wonderful gaming console and a capable Blu-ray player, but also a formidable video and music streaming device. Sony has recently introduced a series of firmware updates which made the popular gaming console support media streaming services such as Hulu Plus, Netflix and MBL.TV. Also, don't forget that PS3 can handle home media streaming as well through DLNA. Considering that it now costs $249, PS3 is definitely one of the coolest content streaming devices currently available. Note: Xbox 360 recently extended its media streaming services as well, but remember that Microsoft's console doesn't play Blu-ray.<br />
+- If you want a media player - <a href="http://www.amazon.com/LG-BD670-Wireless-Network-Blu-ray/dp/B004OF9XGO">LG BD670</a>: LG BD670 is a top Blu-ray player, but also a great device for streaming Internet entertainment content. With integrated Wi-Fi, LG BD670 works great with streaming services such as Netflix, YouTube, Pandora, Amazon and MOG. Also, it lets you stream media from a computer through a home network. LG BD670 is the ideal choice if you want a media streaming device that can also play Blu-ray, but which is cheaper than Sony PS3.<br />
+- If you're an Apple fan - <a href="http://www.apple.com/appletv/">Apple TV</a>: Neither the most versatile nor the most complete streaming device, yet definitely one of the coolest, Apple TV is the right choice for Apple fans. Apple TV is the only TV box that works flawless with iTunes and the AirPlay app for sharing media content over your home network. Besides video, you can also stream audio through the AirPlay app, including Pandora. Alternatively you can use your iPad or iPhone to stream video content from the device to the TV screen, though you do have to make some configuration work first. With Apple TV you get video streaming through Vimeo, MLB.TV, iTunes, Netflix, YouTube, Flicker. Additionally, you also get photos through Flicker and Internet Radio. Apple TV is just $99 and despite the fact that it supports fewer services than Roku 2XS, it's worth every dollar.
+
+Hope you found out that one device for you.
