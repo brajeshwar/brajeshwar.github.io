@@ -3,7 +3,7 @@ layout: post
 title: Key features Google+ needs to challenge Facebook
 ---
 
-Within a month of its launch, <a href="https://plus.google.com/">Google+</a> is considered to be peril to the current social networking don Facebook. However Google+ needs much more enhancements else it may join the Google's flop list (<a href="www.orkut.com/">Orkut</a>, <a href="www.google.com/buzz">Buzz</a> &amp; <a href="http://wave.google.com/">Wave</a>). Albeit, the features of Google+ are stunning and the User Interface is too gorgeous than any existing social network, Google+ is still a half scorched one and it needs striking enhancements to capture the throne from Facebook.
+Within a month of its launch, <a href="https://plus.google.com/">Google+</a> is considered to be peril to the current social networking don Facebook. However Google+ needs much more enhancements else it may join the Google's flop list (<a href="www.orkut.com/">Orkut</a>, <a href="www.google.com/buzz">Buzz</a> & <a href="http://wave.google.com/">Wave</a>). Albeit, the features of Google+ are stunning and the User Interface is too gorgeous than any existing social network, Google+ is still a half scorched one and it needs striking enhancements to capture the throne from Facebook.
 
 These are some of the enrichments I (the user) require in Google+ (kinda my wishlist):
 
