@@ -142,7 +142,7 @@ img.small-left  { float: left;  margin-left: 0; }
   opacity: var(--opacity-low);
 
   font-family: var(--font-family-monospace);
-  font-size: var(--font-size-smaller);
+  font-size: var(--font-size-smallest);
 }
 
 @media (min-width: 50rem) {
