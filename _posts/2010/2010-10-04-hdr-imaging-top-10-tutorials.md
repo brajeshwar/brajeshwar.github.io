@@ -5,7 +5,7 @@ title: HDR Imaging - Top 10 Tutorials
 
 The entire procedure of clicking a plethora of pictures with different exposure of the same image and merging it together through softwares to create a High Dynamic Range Image is known as <a href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">HDR (High Dynamic Range) Imaging</a>. Taking shots of different exposure and merging them together, thus gives details of shadow and highlights of the image, making HDR look beautiful and surreal. 
 
-To develop fabulous HDR images, what one needs is a good eye, and a little understanding of photo editing software like Photoshop or Photomatix. There are many diverse techniques, blogs, websites as well as tutorials for <a href="http://brajeshwar.wpengine.com/2010/hdr-imaging-some-common-creation-techniques/">HDR Image Creation Techniques</a>. 
+To develop fabulous HDR images, what one needs is a good eye, and a little understanding of photo editing software like Photoshop or Photomatix. There are many diverse techniques, blogs, websites as well as tutorials for <a href="/2010/hdr-imaging-some-common-creation-techniques/">HDR Image Creation Techniques</a>. 
 
 Let us explore The Top 10 <a href="http://www.stuckincustoms.com/hdr-tutorial/">HDR Tutorials</a>:
 

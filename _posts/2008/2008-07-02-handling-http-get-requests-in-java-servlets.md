@@ -30,7 +30,7 @@ excerpt: Servlets can be used for handling both the GET Requests and the POST Re
   An individual developing servlets for handling HTTP Requests needs to override one
   of these methods in order to process the request and generate a response.
 ---
-<p>Earlier, we've <a href="http://brajeshwar.wpengine.com/2008/java-servlets-an-introduction/">introduced you to Java Servlets</a> -- what they are, life cycle, advantages. Let's move ahead with Java Servlets and get some simple code to handle the HTTP GET Request to show you how to write a servlet.</p>
+<p>Earlier, we've <a href="/2008/java-servlets-an-introduction/">introduced you to Java Servlets</a> -- what they are, life cycle, advantages. Let's move ahead with Java Servlets and get some simple code to handle the HTTP GET Request to show you how to write a servlet.</p>
 <p>Servlets can be used for handling both the GET Requests and the POST Requests. However in this post, let's write the code for handling the GET Request. The HttpServlet class is used for handling HTTP GET Requests as it has some specialized methods that can efficiently handle the HTTP requests. These methods are;</p>
 <p>* doGet()<br />
 * doPost()<br />

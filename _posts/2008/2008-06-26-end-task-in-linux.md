@@ -38,7 +38,7 @@ excerpt: More than an operating system Linux is a large community and strong rel
 <p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> by <cite><a href="http://www.flickr.com/photos/blakeemrys/41448562/">Blakeemrys</a></cite></p>
 <p class="caption"><em class="title">Managing Tasks</em>One thing you'll always wish to know about.</p>
 </div>
-<p>In our previous article -- <a href="http://brajeshwar.wpengine.com/2008/linux-vocabulary/">Sharpen your Linux vocabulary</a> -- we visualized few commonly used terms in context with the Linux  operating system and its surroundings! I thank and appreciate the readers for  adding on a few more words.</p>
+<p>In our previous article -- <a href="/2008/linux-vocabulary/">Sharpen your Linux vocabulary</a> -- we visualized few commonly used terms in context with the Linux  operating system and its surroundings! I thank and appreciate the readers for  adding on a few more words.</p>
 <p>While I was figuring out a way to run Internet using a CDMA wireless modem on  my Linux machine, one of the applications refused to respond due to some rare  error. This very incident reminded me to come up with following article which  elaborates few methods to help you terminate a process or application running on  a Linux distribution - something similar to 'end task' on a windows operating  system.</p>
 <p>Remember, there is no <strong>Ctrl+Alt+Del</strong> key combination on Linux - by default!</p>
 <p>Let us now see some of the interesting ways to kill those stuck and stubborn  processes. A very mundane and primitive way is to use the command <code>ps  aux</code>, look through the process list until you find the PID (process ID) you want and issue the kill command.</p>

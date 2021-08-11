@@ -64,7 +64,7 @@ source and non-free product which does pretty much the same as it's Open Source 
 <p>Today, we shall have a look at a few Open Source Software which may just help you kick start your business.</p>
 <p><strong>Operating System</strong></p>
 <p><img style="float: none; border: 0 none;" src="/static/2008/07/fedora.png" alt="Fedora" /></p>
-<p>The first need shall be to have a robust, secure and customizable operating system, both for the server(s) and the workstation(s). There are a lot of options available when it comes to Linux. Have a look at them at one of our previous posts - <a href="http://brajeshwar.wpengine.com/2008/choice-of-linux-distros/">Which Linux distro is right for you?</a></p>
+<p>The first need shall be to have a robust, secure and customizable operating system, both for the server(s) and the workstation(s). There are a lot of options available when it comes to Linux. Have a look at them at one of our previous posts - <a href="/2008/choice-of-linux-distros/">Which Linux distro is right for you?</a></p>
 <p>I would recommend <a href="http://fedoraproject.org">Fedora</a> for free, or <a href="http://www.redhat.com">RedHat</a>, if you can pay a bit for a great enterprise support. They have a cutting edge robustness and come with a lot of applications like OpenOffice, Firefox, Thunderbird, etc. as pre-loaded, catering your major necessities.</p>
 <p><strong>Office Suite</strong></p>
 <p>The next big thing is an office suite which shall help you with  word processing, spreadsheets, presentation, databases, vector drawing, mathematical formulas, etc. <a href="http://www.openoffice.org">OpenOffice</a> is the best of all under this segment.</p>

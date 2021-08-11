@@ -1,46 +1,21 @@
 ---
 layout: post
 title: It's about time Nokia 'called it a day' for Symbian
-date: 2010-11-25 08:00:03.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Mobile
-- Open Source
-- Technology
-tags:
-- Business
-- Mobile Technology
-- Nokia
-- Smartphones
-- symbian
-- Technology
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '179412140'
-  bitly_short_url: http://j.mp/ijTk4p
-  retweet_cache: '1309551910:0'
-  trx_addons_post_views_count: '54'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2010/its-about-time-nokia-called-it-a-day-for-symbian/"
 ---
-<p>The time has definitely come for Nokia to retire its OS product wing - Symbian and make way for newer and better solutions; which are first and foremost user-friendly and tailor-made for the next-gen consumers. Symbian for many has not been quite able to match up to other competing OS like Google's Android or the infamous Apple iOS. The God-send kind of an <a href="http://www.pcworld.com/businesscenter/article/182471/nokia_ousts_symbian_os_from_highend_handsets.html">announcement</a> to do away with Symbian came from Nokia at the same time last year; however Nokia took a sudden U-turn about 2 weeks ago and <a href="http://www.pcworld.com/article/188521/symbian_os_now_fully_open_source.html">withdrew</a> the closure of Symbian by taking complete control of the open source Symbian project. </p>
-<p>The birth of <a href="http://www.symbian.org/">Symbian</a> happened quite a long time ago and it is seen that since Nokia's inception both have shared a deep camaraderie between each other. There were rumors that the new N8 series of Nokia would incorporate the Linux-based OS named <a href="http://maemo.org/">Maemo</a>. Since that did not happen Nokia had to depend again on its comrade Symbian to step in. Earlier known as EPOC, Symbian was mostly used with various <a href="http://en.wikipedia.org/wiki/Psion">Psion</a> devices like Psion 3 and Psion 5.</p>
 
-<p><img src="/static/2010/11/symbian.jpg" alt="Symbian" class="alignright" /></p>
-<p>Now let's cut to the chase and cite reasons that justify the killing of Symbian: </p>
-<p>* One very common argument made by users is that Symbian is very slow not only in terms of usage but also in the kind of customer service they provide.<br />
-* Symbian is supposedly not user-friendly and very complicated to handle, hence leaving consumers confused and frustrated.<br />
-* A very badly placed and managed networking makes user-life hazardous.<br />
-* Blames are hurled by annoyed users describing it as the 'old-fashioned and creaking Symbian'.</p>
-<p>To elaborate on the above mentioned reasons let's take <a href="http://news.yahoo.com/s/pcworld/20101111/tc_pcworld/killsymbiannowplease;_ylt=AiFEseO19iij_RwJejatdo6or7oF;_ylu=X3oDMTMwNmw3bTZwBGFzc2V0A3Bjd29ybGQvMjAxMDExMTEva2lsbHN5bWJpYW5ub3dwbGVhc2UEcG9zAzEzBHNlYwN5bl9wYWdpbmF0ZV9zdW1tYXJ5X2xpc3QEc2xrA2tpbGxzeW1iaWFubg">excerpts</a> from certain complaints made by few very frustrated consumers -- "My last-but-one mobile phone was a Nokia 6680. For the two years I owned it, it displayed an annoying animated screensaver that I simply could not work out how to deactivate. I quite literally spent hours trying to find this configuration option. I knew it was there because I had found it, once, and managed to deactivate the screensaver. However, a software update had brought back the annoying animation, at which point I had both forgotten where the "OFF" button lived, and lost the will to live."</p>
-<p>Another extract of yet another consumer, who is <a href="http://en.xihalife.com/b/setok/whining-kris/nokia-please-kill-symbian/">extremely disturbed</a> by not just Symbian, but also the working of Nokia as an organization states, "The n97 is a horrific example of how awkward the Symbian approach has become. It is horrendously slow, buggy, difficult to use, has badly managed networking, and has all those Symbian menus we love."</p>
-<p>Having gone through the above described pieces of information, it is needless to stress on the fact that either there needs to be advancement in the existing Symbian OS or the OS simply needs to be killed. If neither is done, there seems very little chance of Nokia succeeding in the Smartphone market let alone surviving amidst dominators like <a href="http://www.apple.com/ios/">Apple iOS</a>, <a href="http://code.google.com/android/">Google Android</a> and the emergence of <a href="http://www.microsoft.com/windowsphone/">Windows Phone 7</a>.</p>
+The time has definitely come for Nokia to retire its OS product wing - Symbian and make way for newer and better solutions; which are first and foremost user-friendly and tailor-made for the next-gen consumers. Symbian for many has not been quite able to match up to other competing OS like Google's Android or the infamous Apple iOS. The God-send kind of an <a href="http://www.pcworld.com/businesscenter/article/182471/nokia_ousts_symbian_os_from_highend_handsets.html">announcement</a> to do away with Symbian came from Nokia at the same time last year; however Nokia took a sudden U-turn about 2 weeks ago and <a href="http://www.pcworld.com/article/188521/symbian_os_now_fully_open_source.html">withdrew</a> the closure of Symbian by taking complete control of the open source Symbian project. 
+
+The birth of <a href="http://www.symbian.org/">Symbian</a> happened quite a long time ago and it is seen that since Nokia's inception both have shared a deep camaraderie between each other. There were rumors that the new N8 series of Nokia would incorporate the Linux-based OS named <a href="http://maemo.org/">Maemo</a>. Since that did not happen Nokia had to depend again on its comrade Symbian to step in. Earlier known as EPOC, Symbian was mostly used with various <a href="http://en.wikipedia.org/wiki/Psion">Psion</a> devices like Psion 3 and Psion 5.
+
+Now let's cut to the chase and cite reasons that justify the killing of Symbian: 
+
+- One very common argument made by users is that Symbian is very slow not only in terms of usage but also in the kind of customer service they provide.
+- Symbian is supposedly not user-friendly and very complicated to handle, hence leaving consumers confused and frustrated.
+- A very badly placed and managed networking makes user-life hazardous.
+- Blames are hurled by annoyed users describing it as the 'old-fashioned and creaking Symbian'.
+
+To elaborate on the above mentioned reasons let's take <a href="http://news.yahoo.com/s/pcworld/20101111/tc_pcworld/killsymbiannowplease;_ylt=AiFEseO19iij_RwJejatdo6or7oF;_ylu=X3oDMTMwNmw3bTZwBGFzc2V0A3Bjd29ybGQvMjAxMDExMTEva2lsbHN5bWJpYW5ub3dwbGVhc2UEcG9zAzEzBHNlYwN5bl9wYWdpbmF0ZV9zdW1tYXJ5X2xpc3QEc2xrA2tpbGxzeW1iaWFubg">excerpts</a> from certain complaints made by few very frustrated consumers -- "My last-but-one mobile phone was a Nokia 6680. For the two years I owned it, it displayed an annoying animated screensaver that I simply could not work out how to deactivate. I quite literally spent hours trying to find this configuration option. I knew it was there because I had found it, once, and managed to deactivate the screensaver. However, a software update had brought back the annoying animation, at which point I had both forgotten where the "OFF" button lived, and lost the will to live."
+
+Another extract of yet another consumer, who is <a href="http://en.xihalife.com/b/setok/whining-kris/nokia-please-kill-symbian/">extremely disturbed</a> by not just Symbian, but also the working of Nokia as an organization states, "The n97 is a horrific example of how awkward the Symbian approach has become. It is horrendously slow, buggy, difficult to use, has badly managed networking, and has all those Symbian menus we love."
+
+Having gone through the above described pieces of information, it is needless to stress on the fact that either there needs to be advancement in the existing Symbian OS or the OS simply needs to be killed. If neither is done, there seems very little chance of Nokia succeeding in the Smartphone market let alone surviving amidst dominators like <a href="http://www.apple.com/ios/">Apple iOS</a>, <a href="http://code.google.com/android/">Google Android</a> and the emergence of <a href="http://www.microsoft.com/windowsphone/">Windows Phone 7</a>.

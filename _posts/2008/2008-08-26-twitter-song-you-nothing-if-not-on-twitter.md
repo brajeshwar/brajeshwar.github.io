@@ -34,7 +34,7 @@ excerpt: You're no one if you're not on Twitter; And if you aren't there already
 ---
 <p><iframe title="YouTube video player" width="640" height="510" src="http://www.youtube.com/embed/dYP-wBaqQAI" frameborder="0" allowfullscreen></iframe></p>
 <p>Here is the awesome Twitter Song from <a href="http://twitter.com/ihatemornings">Ben Walker</a>.</p>
-<p>If you enjoy this, you might like to watch <a href="http://brajeshwar.wpengine.com/2008/the-rise-and-fall-of-twitter/">The Rise and Fall of Twitter</a>.</p>
+<p>If you enjoy this, you might like to watch <a href="/2008/the-rise-and-fall-of-twitter/">The Rise and Fall of Twitter</a>.</p>
 <p><strong>You're No One If You're Not On Twitter</strong> (Lyric)</p>
 <pre name="code" class="css">
 You're no one if you're not on Twitter

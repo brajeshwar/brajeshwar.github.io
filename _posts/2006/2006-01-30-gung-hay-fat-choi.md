@@ -28,5 +28,5 @@ excerpt: A client-turned-business-partner wished me Gung Hay Fat Choi the other 
   and I am told it meant Happy New Year. So, here am I wishing everybody in general
   and the Chinese in partcular Gung Hay Fat Choi.
 ---
-<p>Besides the <a href="http://brajeshwar.wpengine.com/2005/scary-mandarin-nightmare/">spammy development</a>, I realized that I have been having more interactions with Chinese though not necessarily with the people living in China. Be it client, interested business associates or newly-found friends, there have been lots of Asians that I have interacted.</p>
+<p>Besides the <a href="/2005/scary-mandarin-nightmare/">spammy development</a>, I realized that I have been having more interactions with Chinese though not necessarily with the people living in China. Be it client, interested business associates or newly-found friends, there have been lots of Asians that I have interacted.</p>
 <p>A client-turned-business-partner wished me <em>Gung Hay Fat Choi</em> the other day and I am told it meant Happy New Year. So, here am I wishing everybody in general and the Chinese in particular <strong>Gung Hay Fat Choi</strong>.</p>

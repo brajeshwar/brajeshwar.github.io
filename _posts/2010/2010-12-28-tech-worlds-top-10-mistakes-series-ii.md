@@ -36,7 +36,7 @@ author:
   last_name: Mukherjee
 permalink: "/2010/tech-worlds-top-10-mistakes-series-ii/"
 ---
-<p>Continuing from where I left off in my previous article, <a href="http://brajeshwar.wpengine.com/2010/tech-worlds-top-10-mistakes-series-i/">Tech World's Top 10 Mistakes - Series I</a>, let us now look at the remaining half of the technology world's top ten blunders - counting down from number 5 to number 1:</p>
+<p>Continuing from where I left off in my previous article, <a href="/2010/tech-worlds-top-10-mistakes-series-i/">Tech World's Top 10 Mistakes - Series I</a>, let us now look at the remaining half of the technology world's top ten blunders - counting down from number 5 to number 1:</p>
 <h3>5. IBM PS/2 a little too late</h3>
 <figure><img src="/static/2010/12/ibm-ps2-mca-model-55-sx.jpg" alt="IBM PS2 MCA Model 55 SX" /><br />
 <figcaption>IBM PS2 MCA Model 55 SX (source : <a href="http://en.wikipedia.org/wiki/IBM_Personal_System/2">Wikipedia</a>)</figcaption>

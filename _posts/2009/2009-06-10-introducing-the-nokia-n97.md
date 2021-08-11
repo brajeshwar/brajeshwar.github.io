@@ -47,5 +47,5 @@ excerpt: The Nokia N97 is the latest NSeries flagship phone from Nokia, which is
 * Explore the <a href="http://www.nokia.com/n97/">Nokia N97</a>.</p>
 <p><img src="/static/2009/06/nokia-n97-small.jpg" alt="Nokia N97" style="border: 0 none; float: right; margin: 0;" /><strong>Would you like to get a Nokia N97?</strong></p>
 <p>Within a week from now, Nokia will soon be doing some easy yet challenging contest across couple of sites in India including <em>brajeshwar.com</em>. So, watch for updates, perhaps <a href="http://feeds2.feedburner.com/brajeshwar">subscribe to the Feeds</a> or just visit everyday and you can get one of the Nokia N97 (at least 2 devices are confirmed for this site).</p>
-<p><em>Best Wishes in your <a href="http://brajeshwar.wpengine.com/2009/nokia-search-for-n/">Search for N</a> Enjoy your Nokia N97.</em><br />
+<p><em>Best Wishes in your <a href="/2009/nokia-search-for-n/">Search for N</a> Enjoy your Nokia N97.</em><br />
 <strong>Btw, if you get a Nokia N97, how would you use it?</strong></p>
