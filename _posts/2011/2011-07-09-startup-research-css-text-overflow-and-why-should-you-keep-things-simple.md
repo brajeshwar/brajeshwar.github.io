@@ -3,8 +3,6 @@ layout: post
 title: Startup Research, CSS text-overflow and why should you keep things simple
 ---
 
-<iframe src="http://player.vimeo.com/video/12630490?color=c9ff23" width="800" height="450" frameborder="0"></iframe>
-
 One of the early topics in the Founder Institute curriculum is "Startup Research". Here is a video and <a href="http://www.scribd.com/doc/33104662/SVFI-June-15-Start-up-Research-Adeo-Ressi">slides</a> of a Startup Research lesson to the Silicon Valley program by Adeo Ressi, Founder of the Founder Institute.
 
 The talk provides an overview of how the character of different markets affects the reality of operation, how good research is critical to helping a founder understand both the journey and the destination, and how founders cannot escape the realities of the market that they are in. It is a very informative lesson and provides many practical tips for performing diligent market research before diving into a market. Follow <a href="http://twitter.com/#!/@founding">@founding</a> to keep yourself updated.
