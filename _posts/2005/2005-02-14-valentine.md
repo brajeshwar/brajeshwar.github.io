@@ -23,4 +23,4 @@ author:
   last_name: Oinam
 permalink: "/2005/valentine/"
 ---
-<p>Here is a "Valentine e-Card (For your Heart only)":http://brajeshwar.wpengine.com/documents/valentine/ (originally from "USAGreetings (USA Greetings)":http://www.usagreetings.com/) which I really liked, was sent by somebody who is no longer amongst us.</p>
+<p>Here is a "Valentine e-Card (For your Heart only)":/documents/valentine/ (originally from "USAGreetings (USA Greetings)":http://www.usagreetings.com/) which I really liked, was sent by somebody who is no longer amongst us.</p>

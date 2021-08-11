@@ -1,37 +1,18 @@
 ---
 layout: post
 title: Solar Keyboard K750 launched by Logitech at just $80
-date: 2010-11-13 01:00:48.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Technology
-tags:
-- Product Launch
-- Technology
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '171855307'
-  bitly_short_url: http://j.mp/kSpCOA
-  retweet_cache: '1309423956:1'
-  trx_addons_post_views_count: '45'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2010/solar-keyboard-k750-launched-by-logitech-at-just-80/"
 ---
-<p>Logitech has always come up with computer hardware products that change the way people use their Computers. The change in the way Logitech fabricates <a href="http://www.logitech.com/en-us/349/7073">products</a>, seems to be in alignment with changing times and users have always rated the advantages of using those products positively and have not been bothered mostly, by the disadvantages of using them. Its latest product seems to entail more advantages than its previous innovations. </p>
-<p>The <a href="http://www.logitech.com/en-us/keyboards/keyboard/devices/k750-keyboard">K750</a> represents Logitech's latest product and is a Wireless Solar Keyboard that eliminates the requirement of <a href="http://www.logitech.com/en-us/keyboards/keyboard/devices/6007">batteries</a> or electricity for its functioning. It comprises of a series of solar panels that essentially absorb the ambient light from the Sun (like any other solar-enabled product) and recharges itself. It isn't a mandate for users to essentially keep the keyboard under sunlight to recharge it; even the light emerging from your household lights can also do the job.</p>
 
-<p><a href="http://www.logitech.com/en-us/keyboards/keyboard/devices/k750-keyboard"><img src="/static/2010/11/logitech-wireless-solar-keyboard-k750.jpg" alt="Solar Keyboard K750 launched by Logitech" style="alignright" /></a></p>
-<p>Considering the fact that a keyboard is still a vital input device of a computer system for typing emails and IMs, browsing social networking sites, etc. Denis Pavillard, vice president of product marketing for Logitech's keyboards and desktops said "the Logitech Wireless Solar Keyboard K750 is the next big innovation in keyboard technology and though it is powered by light yet it can work in total darkness for up to three months. Plus, with its PVC-free construction and fully recyclable packaging, it's designed to minimize its footprint."</p>
-<p>Along with providing users with a hassle-free and convenient way of typing, the Wireless Solar Keyboard also has the ability to recharge itself through an integrated solar panel (with no power bricks or charging cables needed). The application that enables the solar power recharge can be downloaded <a href="http://www.logitech.com/en-us/434/7454?osid=14&section=downloads">here</a>. A speciality of this application is that there exists in it a <a href="http://en.wikipedia.org/wiki/Lux">lux meter</a> which keeps users updated on battery-levels, when the keyboard would need power next and also with an integrated power-indicator light there are less chances of an unanticipated shut off. </p>
-<p>Another highlight of this keyboard is that it comes with a sleek 1/3-Inch thick body making it look stylish and good. Besides this, the keyboard includes Logitech Incurve keys which is made of a concave design and thus adapts the shape of the users' fingertips directing fingers to the right keys with ease. Another deal that comes embedded with the Logitech Wireless Solar Keyboard K750 is the <a href="http://www.logitech.com/images/pdf/roem/Advanced_24_Unifying_FINAL070709.pdf">Logitech Advanced 2.4 GHz</a> wireless connectivity, which ensures elongated connectivity with zero delays or shut downs. Logitech Advanced 2.4 wireless also includes 128-bit AES encryption with the keyboard - one of the highest levels of security available. </p>
-<p>All of this does come at a cost and it must be noted that Logitech does not only cater to the product needs of consumers but also keeps the pricing in check making K750 affordable to all kinds of users. The current understanding is that the Logitech Wireless Solar Keyboard K750 will hit the US and Europe markets during this month at a retail price of $79.99 (US). </p>
-<p>Consumers shall now be keen on knowing as to what Logitech could have up its sleeve next.</p>
+Logitech has always come up with computer hardware products that change the way people use their Computers. The change in the way Logitech fabricates <a href="http://www.logitech.com/en-us/349/7073">products</a>, seems to be in alignment with changing times and users have always rated the advantages of using those products positively and have not been bothered mostly, by the disadvantages of using them. Its latest product seems to entail more advantages than its previous innovations. 
+
+The <a href="http://www.logitech.com/en-us/keyboards/keyboard/devices/k750-keyboard">K750</a> represents Logitech's latest product and is a Wireless Solar Keyboard that eliminates the requirement of <a href="http://www.logitech.com/en-us/keyboards/keyboard/devices/6007">batteries</a> or electricity for its functioning. It comprises of a series of solar panels that essentially absorb the ambient light from the Sun (like any other solar-enabled product) and recharges itself. It isn't a mandate for users to essentially keep the keyboard under sunlight to recharge it; even the light emerging from your household lights can also do the job.
+
+Considering the fact that a keyboard is still a vital input device of a computer system for typing emails and IMs, browsing social networking sites, etc. Denis Pavillard, vice president of product marketing for Logitech's keyboards and desktops said "the Logitech Wireless Solar Keyboard K750 is the next big innovation in keyboard technology and though it is powered by light yet it can work in total darkness for up to three months. Plus, with its PVC-free construction and fully recyclable packaging, it's designed to minimize its footprint."
+
+Along with providing users with a hassle-free and convenient way of typing, the Wireless Solar Keyboard also has the ability to recharge itself through an integrated solar panel (with no power bricks or charging cables needed). The application that enables the solar power recharge can be downloaded <a href="http://www.logitech.com/en-us/434/7454?osid=14&section=downloads">here</a>. A speciality of this application is that there exists in it a <a href="http://en.wikipedia.org/wiki/Lux">lux meter</a> which keeps users updated on battery-levels, when the keyboard would need power next and also with an integrated power-indicator light there are less chances of an unanticipated shut off. 
+
+Another highlight of this keyboard is that it comes with a sleek 1/3-Inch thick body making it look stylish and good. Besides this, the keyboard includes Logitech Incurve keys which is made of a concave design and thus adapts the shape of the users' fingertips directing fingers to the right keys with ease. Another deal that comes embedded with the Logitech Wireless Solar Keyboard K750 is the <a href="http://www.logitech.com/images/pdf/roem/Advanced_24_Unifying_FINAL070709.pdf">Logitech Advanced 2.4 GHz</a> wireless connectivity, which ensures elongated connectivity with zero delays or shut downs. Logitech Advanced 2.4 wireless also includes 128-bit AES encryption with the keyboard - one of the highest levels of security available. 
+
+All of this does come at a cost and it must be noted that Logitech does not only cater to the product needs of consumers but also keeps the pricing in check making K750 affordable to all kinds of users. The current understanding is that the Logitech Wireless Solar Keyboard K750 will hit the US and Europe markets during this month at a retail price of $79.99 (US). 
+
+Consumers shall now be keen on knowing as to what Logitech could have up its sleeve next.

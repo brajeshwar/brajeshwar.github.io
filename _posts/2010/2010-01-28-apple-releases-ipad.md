@@ -3,7 +3,7 @@ layout: post
 title: Apple releases iPad
 ---
 
-The wait is over. Steve did his job! After the much hyped event, we have a new product from <a href="http://www.apple.com/">Apple</a>. It's an <a href="http://www.apple.com/ipad/">iPad</a>. Yesterday, we wrote about <a href="http://brajeshwar.wpengine.com/2010/what-to-expect-from-apple-today/">what to expect off the event</a>. Steve Jobs made many souls happy!
+The wait is over. Steve did his job! After the much hyped event, we have a new product from <a href="http://www.apple.com/">Apple</a>. It's an <a href="http://www.apple.com/ipad/">iPad</a>. Yesterday, we wrote about <a href="/2010/what-to-expect-from-apple-today/">what to expect off the event</a>. Steve Jobs made many souls happy!
 
 Last night, we saw people storming onto social networks -- <a href="http://search.twitter.com/search?q=ipad">Twitter</a>, Facebook, Blogs and everything else they could to publish even the minuscule detail of the device as it got revealed by Apple. Many blogs were covering the event live via pictures and text updates. It was fascinating to see few blogs did a LIVE coverage without having a live presence at the event! All this indicates how social the brand Apple gets to be, despite their silence on the product until it was finally launched, yesterday.
 

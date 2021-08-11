@@ -9,10 +9,9 @@ It all started with an eagerness to create one of the simplest WordPress Photobl
 
 ## What we wanted to achieve with Autochrome v3
 
-We really wanted to push the limit with <a href="http://theme6.com/autochrome/">Autochrome v3</a>. We knew we needed to do something different so users can achieve more with the third version. There were few interim version of Autochrome which were never published but rather thrown away because they were not good enough, not worthy to be the successor of Autochrome v2.
+We really wanted to push the limit with `Autochrome v3`. We knew we needed to do something different so users can achieve more with the third version. There were few interim version of Autochrome which were never published but rather thrown away because they were not good enough, not worthy to be the successor of Autochrome v2.
 
 While continuing and even pushing the envelope on minimalism and simplicity, we knew Autochrome v3 have to be faster, way faster, and have a laser focus on the Photographs and nothing else.
-
 
 ## Design
 
@@ -20,10 +19,10 @@ With Autochrome, we wanted to achieve a photography blog with very minimal graph
 
 We believe that Design is not just how it looks; Design is also about how it works. We started questioning.
 
-* How can we avoid page loads while going to the next photo?
-* Can we make it faster?
-* Can we make it work on desktop, tablet as well as mobile devices?
-* Can these possible with WordPress?
+- How can we avoid page loads while going to the next photo?
+- Can we make it faster?
+- Can we make it work on desktop, tablet as well as mobile devices?
+- Can these possible with WordPress?
 
 We realize that today's Single Page Web Apps might help solve these problems. So to try out, we prototyped a JSON API over WordPress. We did succeed. From there we considered building the front end which consumes these API endpoints.
 
@@ -42,21 +41,19 @@ We chose our favorites: <a href="http://sass-lang.com/">SASS</a> and <a href="ht
 
 But when the time came to hash the Stylesheets and Javascript files in a WordPress theme, things were not so straight forward.
 
-In order to concatenate and revision the Javascript files while building the distribution archive, we made use of grunt task <code>grunt-usemin</code>. But, in the case of WordPress Stylesheet, we avoided filename based hashing. Since, WordPress looks for the exact filename <code>style.css</code>, and a hashed filenames like <code>style.34d3e234.css</code> didn't work with WordPress. 
+In order to concatenate and revision the Javascript files while building the distribution archive, we made use of grunt task `grunt-usemin`. But, in the case of WordPress Stylesheet, we avoided filename based hashing. Since, WordPress looks for the exact filename `style.css`, and a hashed filenames like `style.34d3e234.css` didn't work with WordPress. 
 
-So we decided to go with using the <code>$ver</code> parameter in the function <code>wp_enqueue_style()</code> in WordPress which conventionally used to include stylesheets in themes. During the build using the grunt task <code>grunt-text-replace</code> we injected the hash of the file as parameter. Some call this method as query based hashing and if you are using <a href="http://www.cloudflare.com/">CloudFlare</a> CDN, you may got ahead and set the "Static Content Caching Level" to Aggressive to cache these query based URLs.
+So we decided to go with using the `$ver` parameter in the function `wp_enqueue_style()` in WordPress which conventionally used to include stylesheets in themes. During the build using the grunt task `grunt-text-replace` we injected the hash of the file as parameter. Some call this method as query based hashing and if you are using <a href="http://www.cloudflare.com/">CloudFlare</a> CDN, you may got ahead and set the "Static Content Caching Level" to Aggressive to cache these query based URLs.
 
-<iframe width="853" height="480" src="//www.youtube.com/embed/4zUnFMUdnvI?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="//www.youtube.com/embed/4zUnFMUdnvI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ## Deployment
 
-Grunt along with Git comes to the rescue during builds and deployments. After tagging and marking our release versions, we can deploy our builds pretty quickly from the command-line to our demo server, without worrying about (S)FTP or doing any of the manual uploads. A <code>grunt build</code> gives us a clean WordPress Theme Installer and a zip file to be sent to our merchant, which is ready to be sold to customers.
+Grunt along with Git comes to the rescue during builds and deployments. After tagging and marking our release versions, we can deploy our builds pretty quickly from the command-line to our demo server, without worrying about (S)FTP or doing any of the manual uploads. A `grunt build` gives us a clean WordPress Theme Installer and a zip file to be sent to our merchant, which is ready to be sold to customers.
 
 ## Autochrome WordPress Theme
 
 > Autochrome is a minimal, photography WordPress theme with special attention to your photos.
-
-Go ahead and get a copy of <a href="http://theme6.com/autochrome/">Autochrome v3</a>, use the discount code -- <strong>ONMBCOM25</strong> -- to get 25% discount. The code is valid till Mar 31, 2014. You can also browse the <a href="http://demo-wp.theme6.com/autochrome/">Autochrome Demo</a>.
 
 ## WP-Portkey
 

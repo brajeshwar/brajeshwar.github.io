@@ -3,7 +3,7 @@ layout: post
 title: Virtual Assistants - Managing Business Scheduling Better
 ---
 
-The world of Online Business has picked up leaps and bounds. Having penned down an article on <a href="http://brajeshwar.wpengine.com/2010/virtual-office-services-on-a-high/">Virtual Office Services</a>, there seems to be yet another online service that will facilitate the functioning of entrepreneurs and home-based businesses. Virtual Assistant is a service offered by various online firms wherein professional experts take on jobs of Personal Secretaries/Assistants performing secretarial tasks related to administration, creative (social) and even technological services (computer-related).
+The world of Online Business has picked up leaps and bounds. Having penned down an article on <a href="/2010/virtual-office-services-on-a-high/">Virtual Office Services</a>, there seems to be yet another online service that will facilitate the functioning of entrepreneurs and home-based businesses. Virtual Assistant is a service offered by various online firms wherein professional experts take on jobs of Personal Secretaries/Assistants performing secretarial tasks related to administration, creative (social) and even technological services (computer-related).
 
 ## How does it work then?
 

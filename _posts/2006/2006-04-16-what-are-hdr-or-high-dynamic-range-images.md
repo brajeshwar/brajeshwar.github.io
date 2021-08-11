@@ -54,7 +54,7 @@ excerpt: Wikipedia defines High Dynamic Range Imaging (HDRI for short) as a set 
 # You can make use of auto-exposure bracketing if your camera supports it and if it allows a stop spacing of 2. Otherwise, just vary the exposure times manually.<br />
 # Use a HDR Imaging capable software to produce your HDR Images</p>
 <h3>Softwares to do HDR Images</h3>
-<p>* "Adobe Photoshop CS2 (Adobe Photoshop CS2)":http://www.adobe.com/products/photoshop/ (you may read my "Review (Brajeshwar on Adobe Photoshop CS2)":http://brajeshwar.wpengine.com/2006/adobe-photoshop-cs2/ of Photoshop CS2) has "32-bit High Dynamic Range support (32-bit High Dynamic Range support)":http://www.adobe.com/products/photoshop/newfeatures.html#nf8.<br />
+<p>* "Adobe Photoshop CS2 (Adobe Photoshop CS2)":http://www.adobe.com/products/photoshop/ (you may read my "Review (Brajeshwar on Adobe Photoshop CS2)":/2006/adobe-photoshop-cs2/ of Photoshop CS2) has "32-bit High Dynamic Range support (32-bit High Dynamic Range support)":http://www.adobe.com/products/photoshop/newfeatures.html#nf8.<br />
 * "Photomatix Pro (Photomatix Pro)":http://www.hdrsoft.com/ is a stand-alone program that runs on Mac OS X and Windows 98/Me/2000/XP.</p>
 <h3>References</h3>
 <p>* "Wikipedia on HDR (Wikipedia on HDR)":http://en.wikipedia.org/wiki/High_dynamic_range_imaging<br />
