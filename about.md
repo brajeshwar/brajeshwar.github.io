@@ -62,7 +62,7 @@ In 2020-2021, I got into the [On Deck](https://www.beondeck.com) Founder Fellows
 
 I had worked with some fantastic companies. I was one of the Creative Directors at [Razorfish](https://www.razorfish.com), and was the Chief Product Officer at [Mobisy](//mobisy.com).
 
-I continue to leveraging technology in finding solutions to challenges and problems. For details of my professional timeline, view my [Curriculum Vitae](https://cv.brajeshwar.com).
+I continue to leveraging technology in finding solutions to challenges and problems. For details of my professional timeline, view my [Curriculum Vitae](https://cv.brajeshwar.com) ([PDF](https://cv.brajeshwar.com/cv.brajeshwar.oinam.pdf)).
 
 ## Family
 

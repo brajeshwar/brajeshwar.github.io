@@ -87,6 +87,7 @@ a:active {
 blockquote {
   margin: 2rem 1rem;
   padding: .5rem 1rem .5rem 2rem;
+  overflow: auto;
   opacity: var(--opacity-low);
 
   background: var(--background-color-alt);
@@ -141,8 +142,9 @@ pre code {
 }
 
 code {
-  padding: 0 0.5rem;
+  padding: var(--space-quarter) var(--space-half);
   background: var(--background-color-alt);
+  border-radius: var(--border-radius);
 }
 
 abbr {
