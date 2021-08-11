@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div id="post" class="post">
+<main id="post" class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <p class="post-meta font-sans">
+  <p class="post-meta">
     {{ page.date | date: '%Y %b %-d %a' }}
     <span class="post-meta__read">
       {% include read-time.html %}
@@ -34,4 +34,4 @@ layout: default
       </a>
     {%- endif -%} 
   </div>
-</div>
+</main>

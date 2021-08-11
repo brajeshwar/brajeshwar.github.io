@@ -89,13 +89,13 @@ blockquote {
   padding: .5rem 1rem .5rem 2rem;
   opacity: var(--opacity-low);
 
-  background: var(--background-color-highlight);
+  background: var(--background-color-alt);
   border-radius: var(--border-radius);
-  border-left: 2px solid var(--background-color-accent);
+  border-left: var(--border-width-alt) solid var(--border-color-highlight);
 }
 
 cite {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-smaller);
   font-style: normal;
 }
 
@@ -106,16 +106,16 @@ kbd,
 samp {
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-small);
-  color: var(--pre-text-color);
+  color: var(--text-color-light);
   white-space: pre;
 }
 
 kbd {
-  color: var(--pre-text-color);
-  border: 1px solid var(--pre-text-color);
-  border-bottom: 3px solid var(--pre-text-color);
-  border-radius: 5px;
-  padding: .1rem;
+  color: var(--text-color-light);
+  border: var(--border-width) solid var(--text-color-light);
+  border-bottom: var(--border-width-alt) solid var(--text-color-light);
+  border-radius: var(--border-radius-high);
+  padding: calc(0.5 * var(--space-quarter)) var(--space-half);
 }
 
 pre {
@@ -126,8 +126,9 @@ pre {
   overflow-x: auto;
   white-space: pre;
 
-  background: var(--pre-background-color);
+  background: var(--background-color-alt);
   border-radius: var(--border-radius);
+  border-left: var(--border-width-alt) solid var(--border-color-highlight);
 }
 
 pre code {
@@ -140,8 +141,8 @@ pre code {
 }
 
 code {
-  padding: 0 .5rem;
-  background: var(--background-color-highlight);
+  padding: 0 0.5rem;
+  background: var(--background-color-alt);
 }
 
 abbr {
@@ -207,7 +208,7 @@ main img, main video {
 figure {
   margin: 1rem 0;
   padding: 0;
-  background: var(--background-color-highlight);
+  background: var(--background-color-alt);
   border-radius: var(--border-radius);
   text-align: center;
 }

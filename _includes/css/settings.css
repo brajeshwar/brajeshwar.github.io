@@ -54,26 +54,15 @@
   --line-height-heading: 1.25;
 
   --border-width: 1px;
+  --border-width-alt: 3px;
   --border-radius: 0.3rem;
-  --border-radius-high: 1rem;
+  --border-radius-high: 0.7rem;
   --border-radius-round: 100%;
 
   
   /* color - standard */
   --color-black: #000000;
   --color-white: #ffffff;
-
-  /* grays */
-  --color-gray-50:  #f9fafb; /* extra-thin */
-  --color-gray-100: #f3f4f6; /* thin */
-  --color-gray-200: #e5e7eb; /* Extra-Light */
-  --color-gray-300: #d1d5db; /* Light */
-  --color-gray-400: #9ca3af; /* Normal (Regular) */
-  --color-gray-500: #6b7280; /* Medium */
-  --color-gray-600: #4b5563; /* Semi-bold */
-  --color-gray-700: #374151; /* Bold */
-  --color-gray-800: #1f2937; /* Extra-bold (Ultra-bold) */
-  --color-gray-900: #111827; /* Black (Heavy) */
 
   --opacity-no: 1;
   --opacity-low: 0.9;

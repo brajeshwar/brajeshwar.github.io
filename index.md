@@ -10,8 +10,8 @@ I am an entrepreneur, and technologist, with a deep focus on leadership in produ
 
 I write about design, entrepreneurship, productivity, software, startups, and technology. Here are some of the recent articles from the __[blog](/blog/)__, which started in 2001 and has {{site.posts | size}} articles.
 
-<section class="blog-articles__list">
-  <ol>
+<div class="content-extend">
+  <ol class="blog-articles__list">
     {%- for post in site.posts limit:5 -%}
     <li>
       <a href="{{post.url}}">{{ post.title | escape }}</a>
@@ -19,6 +19,6 @@ I write about design, entrepreneurship, productivity, software, startups, and te
     </li>
     {%- endfor -%}
   </ol>
-</section>
+</div>
 
 I co-founded [Valinor Earth](https://valinor.earth) with two of my close friends, with whom I have worked on multiple projects and companies. We build sustainable and profitable technology practices helping businesses curb climate change.
