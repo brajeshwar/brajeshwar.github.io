@@ -1,41 +1,16 @@
 ---
 layout: post
 title: Apple bows down to Developers' Demand – Reworks its 'Apps Policy'
-date: 2010-12-13 08:00:16.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Media
-- Mobile
-- Technology
-tags:
-- Adobe
-- android
-- apple
-- Innovation
-- Media
-- Technology
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '190158036'
-  bitly_short_url: http://j.mp/jfC8QU
-  trx_addons_post_views_count: '64'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2010/apple-bows-down-to-developers-demand-%e2%80%93-reworks-its-apps-policy/"
 ---
-<p>There has lately been enough pressure from three corners of the technology world on Apple, which has coerced it to change its policy control over the development of applications for its iPhones and iPads. At one corner of the ring is the developers' community which has been highly dissatisfied with Apple's strict policy on developing application software; at the other two corners are external forces, namely the <a href="http://www.ftc.gov/">Federal Trade Commission</a> conducting a US antitrust investigation on the technology firm and Competition rising from rival <a href="http://www.android.com/">Google's Android software</a> which plays a huge role in powering several mobile devices (Smartphones) other than iPhone.</p>
 
-<p><img src="/static/2010/12/appledoor.jpg" alt="The Apple Door" class="alignright" /></p>
-<p>This move comes as a pleasant surprise for software developers around the world who want to have their names featured in the production list of Apple's iPhone or iPad applications. This will give them more freedom in building their apps, since restrictions on usage of programming technology from Adobe were applicable earlier and is now loosened. Both Apple spokeswoman and the FTC have refused to comment on this latest development.</p>
-<p>Another technology firm that was deeply upset with Apple's earlier rigid policy was <a href="http://www.adobe.com/">Adobe</a> which had constant fights with Apple to reduce restrictions. Now, Apple has responded by allowing developers to use Adobe's Flash-based tool and also removed limitations on what other programming languages developers may use.  Adobe investors embraced the news, driving shares up 12% to $32.86. "We are encouraged to see Apple lifting its restrictions on its licensing terms, giving developers the freedom to choose what tools they use to develop applications for Apple devices," Adobe said in a statement. </p>
-<p>This is also good for mobile advertisers like Google, <a href="http://www.admob.com/">AdMob</a>, <a href="http://www.mobclix.com/">Mobclix Inc</a> and many more firms. Let's take a look at some of their reactions to this move from Apple - "Unlike the previous version, these new terms ensure that Apple's developers have the choice of a variety of advertising solutions (including Google and AdMob's) to earn money and fund their apps," Omar Hamoui, Google's vice president of product management, said in a statement. Krishna Subramanian, co-founder of mobile ad company Mobclix Inc said "They're opening up the platform to a much broader community of development."</p>
-<p>The kind of language used in the new guideline is very similar to the tone that Steve Jobs uses in his infamous speeches; for instance one line reads - "We have over 250,000 apps in the App Store. We don't need any more Fart apps." The document also speaks in light of the overlapping &amp; haphazard applications and says "Apps that look like they were cobbled together in a few days could be rejected. We have lots of serious developers who don't want their quality Apps to be surrounded by amateur hour."</p>
-<p>It is still not great news for consumers of iPhones and iPads who still won't be able to access Flash-based content on the Web. Also, the strict screening of each application will consume a lot of time thereby depriving consumers of enjoying better applications sooner than later. Yet, this move from Apple could see the beginning of a series of changes that could happen in the Apple world owing to several external forces coercing it to change or eventually perish eventually.</p>
+There has lately been enough pressure from three corners of the technology world on Apple, which has coerced it to change its policy control over the development of applications for its iPhones and iPads. At one corner of the ring is the developers' community which has been highly dissatisfied with Apple's strict policy on developing application software; at the other two corners are external forces, namely the <a href="http://www.ftc.gov/">Federal Trade Commission</a> conducting a US antitrust investigation on the technology firm and Competition rising from rival <a href="http://www.android.com/">Google's Android software</a> which plays a huge role in powering several mobile devices (Smartphones) other than iPhone.
+
+This move comes as a pleasant surprise for software developers around the world who want to have their names featured in the production list of Apple's iPhone or iPad applications. This will give them more freedom in building their apps, since restrictions on usage of programming technology from Adobe were applicable earlier and is now loosened. Both Apple spokeswoman and the FTC have refused to comment on this latest development.
+
+Another technology firm that was deeply upset with Apple's earlier rigid policy was <a href="http://www.adobe.com/">Adobe</a> which had constant fights with Apple to reduce restrictions. Now, Apple has responded by allowing developers to use Adobe's Flash-based tool and also removed limitations on what other programming languages developers may use.  Adobe investors embraced the news, driving shares up 12% to $32.86. "We are encouraged to see Apple lifting its restrictions on its licensing terms, giving developers the freedom to choose what tools they use to develop applications for Apple devices," Adobe said in a statement. 
+
+This is also good for mobile advertisers like Google, <a href="http://www.admob.com/">AdMob</a>, <a href="http://www.mobclix.com/">Mobclix Inc</a> and many more firms. Let's take a look at some of their reactions to this move from Apple - "Unlike the previous version, these new terms ensure that Apple's developers have the choice of a variety of advertising solutions (including Google and AdMob's) to earn money and fund their apps," Omar Hamoui, Google's vice president of product management, said in a statement. Krishna Subramanian, co-founder of mobile ad company Mobclix Inc said "They're opening up the platform to a much broader community of development."
+
+The kind of language used in the new guideline is very similar to the tone that Steve Jobs uses in his infamous speeches; for instance one line reads - "We have over 250,000 apps in the App Store. We don't need any more Fart apps." The document also speaks in light of the overlapping & haphazard applications and says "Apps that look like they were cobbled together in a few days could be rejected. We have lots of serious developers who don't want their quality Apps to be surrounded by amateur hour."
+
+It is still not great news for consumers of iPhones and iPads who still won't be able to access Flash-based content on the Web. Also, the strict screening of each application will consume a lot of time thereby depriving consumers of enjoying better applications sooner than later. Yet, this move from Apple could see the beginning of a series of changes that could happen in the Apple world owing to several external forces coercing it to change or eventually perish eventually.

@@ -1,37 +1,12 @@
 ---
 layout: post
 title: Political Pressure on Amazon leads to Wikileaks’ Suffering
-date: 2010-12-08 08:00:40.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Media
-- Technology
-tags:
-- Information Sharing
-- Media
-- Technology
-- US Government
-- Wikileaks
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '187248032'
-  bitly_short_url: http://j.mp/kTWXlK
-  trx_addons_post_views_count: '46'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2010/political-pressure-on-amazon-leads-to-wikileaks%e2%80%99-suffering/"
 ---
-<p>Most of us definitely have an idea of the functioning of <a href="http://en.wikipedia.org/wiki/WikiLeaks">Wikileaks</a> - which is apparently been termed as the online whistle-blowing forum. It is termed so because the website, through the exposure of information related to certain high-profile government officials has revealed a lot more than anyone could have ever expected; and by anyone I mean government officials who claim that Wikileaks has leaked out the most confidential and secured of information.</p>
-<p>In verity, what Wikileaks has done is that it has brought to light some crucial and essential information, which other than bringing out the truth does not really affect the confidentiality of government or military related information. There is nothing really that could cause national damage because of Wikileaks and its actions. However it so happens now, that due to Wikileaks recent Leak on the "<a href="http://www.guardian.co.uk/world/2010/nov/28/us-embassy-cable-leak-diplomacy-crisis">link between the US cable leaks and China's Politburo</a>" Amazon has turned its back to Wikileaks and has <a href="http://www.computerweekly.com/Articles/2010/12/02/244302/Amazon-cloud-kicks-off-WikiLeaks-following-US-pressure.htm">kicked it off</a> Amazon's cloud.</p>
 
-<p><img src="/static/2010/12/wikileaks.png" alt="Wikileaks" class="alignright" /></p>
-<p>This move from Amazon as many reports have stated and in obvious hindsight, has come from deep pressures from the US government on Amazon to not encourage the whistle-blower and ban it from operating online. The founder too seems to be in a soup now, considering the fact that several high authority US government officials and delegates around the world want to take out Wikileaks and <a href="http://en.wikipedia.org/wiki/Julian_Assange">Julian Assange</a> in particular. Joe Lieberman, chairman of the Homeland Security and Governmental Affairs Committee expressing his displeasure with Wikileaks said, "WikiLeaks' illegal, outrageous, and reckless acts have compromised our national security and put lives at risk around the world. No responsible company - whether American or foreign - should assist WikiLeaks in its efforts to disseminate these stolen materials. I will be asking Amazon about the extent of its relationship with WikiLeaks and what it and other Web service providers will do in the future to ensure that their services are not used to distribute stolen, classified information." Owing to all this, Wikileaks now <a href="http://wikileaks.org/">does not</a> have an online platform.</p>
-<p>It is a little complicated to judge as to who is being fair and who is not. Wikileaks is true to its existence and its motive of making crucial national information accessible to general public. However, in doing so the not-for-profit organization could have gone over-board and crossed limits when it comes to the kind of information it is leaking out. There is no real authentic source telling us if Wikileaks is wrong in the whole scenario. And this makes everyone perceive that the government is the bad boy here and Wikileaks deserves only good for helping public gain information on events relative to national security. It also takes quite a bit of courage and boldness to come out and reveal information that is hugely sensitive and secure. Wikileaks in some sense teaches all of us a lesson of fighting for our democratic rights.</p>
+Most of us definitely have an idea of the functioning of <a href="http://en.wikipedia.org/wiki/WikiLeaks">Wikileaks</a> - which is apparently been termed as the online whistle-blowing forum. It is termed so because the website, through the exposure of information related to certain high-profile government officials has revealed a lot more than anyone could have ever expected; and by anyone I mean government officials who claim that Wikileaks has leaked out the most confidential and secured of information.
+
+In verity, what Wikileaks has done is that it has brought to light some crucial and essential information, which other than bringing out the truth does not really affect the confidentiality of government or military related information. There is nothing really that could cause national damage because of Wikileaks and its actions. However it so happens now, that due to Wikileaks recent Leak on the "<a href="http://www.guardian.co.uk/world/2010/nov/28/us-embassy-cable-leak-diplomacy-crisis">link between the US cable leaks and China's Politburo</a>" Amazon has turned its back to Wikileaks and has <a href="http://www.computerweekly.com/Articles/2010/12/02/244302/Amazon-cloud-kicks-off-WikiLeaks-following-US-pressure.htm">kicked it off</a> Amazon's cloud.
+
+This move from Amazon as many reports have stated and in obvious hindsight, has come from deep pressures from the US government on Amazon to not encourage the whistle-blower and ban it from operating online. The founder too seems to be in a soup now, considering the fact that several high authority US government officials and delegates around the world want to take out Wikileaks and <a href="http://en.wikipedia.org/wiki/Julian_Assange">Julian Assange</a> in particular. Joe Lieberman, chairman of the Homeland Security and Governmental Affairs Committee expressing his displeasure with Wikileaks said, "WikiLeaks' illegal, outrageous, and reckless acts have compromised our national security and put lives at risk around the world. No responsible company - whether American or foreign - should assist WikiLeaks in its efforts to disseminate these stolen materials. I will be asking Amazon about the extent of its relationship with WikiLeaks and what it and other Web service providers will do in the future to ensure that their services are not used to distribute stolen, classified information." Owing to all this, Wikileaks now <a href="http://wikileaks.org/">does not</a> have an online platform.
+
+It is a little complicated to judge as to who is being fair and who is not. Wikileaks is true to its existence and its motive of making crucial national information accessible to general public. However, in doing so the not-for-profit organization could have gone over-board and crossed limits when it comes to the kind of information it is leaking out. There is no real authentic source telling us if Wikileaks is wrong in the whole scenario. And this makes everyone perceive that the government is the bad boy here and Wikileaks deserves only good for helping public gain information on events relative to national security. It also takes quite a bit of courage and boldness to come out and reveal information that is hugely sensitive and secure. Wikileaks in some sense teaches all of us a lesson of fighting for our democratic rights.

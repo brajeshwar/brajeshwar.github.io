@@ -1,40 +1,14 @@
 ---
 layout: post
 title: Yogile makes Photo Sharing - Simple, Easy and Collaborative
-date: 2010-12-22 15:47:02.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Reviews
-- Startups
-- Technology
-tags:
-- internet
-- Photo Sharing
-- StartUp Review
-- Technology
-- Tools &amp; Applications
-meta:
-  _edit_last: '67'
-  _wp_old_slug: ''
-  dsq_thread_id: '196170664'
-  retweet_cache: '1309580783:2'
-  bitly_short_url: http://j.mp/lH2cPJ
-  trx_addons_post_views_count: '36'
-author:
-  login: Deeptaman
-  email: d.mukherjee05@gmail.com
-  display_name: Deeptaman Mukherjee
-  first_name: Deeptaman
-  last_name: Mukherjee
-permalink: "/2010/yogile-makes-photo-sharing-simple-easy-and-collaborative/"
 ---
-<p>The beauty of the World Wide Web never stops disappointing users and there is absolutely no end to the number of ways by which one can have fun, socialize, achieve business success, etc. <a href="http://www.yogile.com/">Yogile</a> is one amongst those many ways of having fun, socializing and connecting with friends. Yogile is a photo-sharing website that allows you to upload pictures and share them with your peers and friends. I understand that your mind right now would be thinking "there are so many <a href="http://en.wikipedia.org/wiki/List_of_photo_sharing_websites">websites</a> that cater to my photo-sharing need, how can this be any different?"</p>
 
-<p>Well Yogile, though is similar to other photo-sharing online tools there is particularly one feature that sets itself apart from its competitors. And that is the sharing function and the amazing way of using it. There could be times wherein during an outing all of us friends could have brought her own cameras and could have taken pictures in different angles and when you might want all the pictures of the same event to reflect in the specific album created at Yogile. Now, to get this done the special feature of Yogile allows other people than yourself to contribute and upload their pictures (relevant to the event) either through mail or via direct upload. </p>
-<p>Does it involve a complex process? Absolutely not. After the user creates an album, she is supplied with a customizable URL and an email address which can be shared with anyone. This anyone could be those who would want to either add photos or those who just want to view pictures. The part of how you want to use Yogile is entirely up to the user. Getting started at Yogile is simple, similar to any other photo-sharing web tools like <a href="http://www.flickr.com/tour/fb3">Flickr</a>, <a href="http://picasa.google.com/">Picasa</a>, etc. Signing up with Yogile is free where the user is limited to 100MB per month, while there are charges which are very minimal if one wants to upgrade to an unlimited usage - $24.95 a year. Keeping track of your usage is very easy and it is allowed every time you upload a new picture. </p>
-<p>The one up advantage that Yogile has as against Flickr is that unlike Flickr which allows you to post pictures and share them with specific people only if you are registered member, Yogile allows you to do so without being a registered member. Here, the only simple procedure that needs to be followed is to send the link of the album with the password to peers who can view it without facing the trouble of either signing in or signing up. Another interesting feature that is also a treat to the eyes, is the existence of an option of viewing the pictures in three <a href="http://www.yogile.com/gnf5ird9#0357724l">different sizes</a> - small thumbnails, medium thumbnails or with just one large image per page. </p>
-<p>The one limited factor that can be sighted here is that users do not have the option of not allowing people to upload pictures. Once they share the URL or link (and password) with them, they do not have the choice of restricting peers from uploading pictures or editing the album. Although, this could be seen as a potential area that can be improved upon, Yogile seems to be impressive with its special features and definitely has posed immense competition to its substitutes. Having said this, it needs to be noted that since it is only the beginning for Yogile there is still a long way to go for the photo-sharing website and it must be very careful in making every move.</p>
+The beauty of the World Wide Web never stops disappointing users and there is absolutely no end to the number of ways by which one can have fun, socialize, achieve business success, etc. <a href="http://www.yogile.com/">Yogile</a> is one amongst those many ways of having fun, socializing and connecting with friends. Yogile is a photo-sharing website that allows you to upload pictures and share them with your peers and friends. I understand that your mind right now would be thinking "there are so many <a href="http://en.wikipedia.org/wiki/List_of_photo_sharing_websites">websites</a> that cater to my photo-sharing need, how can this be any different?"
+
+Well Yogile, though is similar to other photo-sharing online tools there is particularly one feature that sets itself apart from its competitors. And that is the sharing function and the amazing way of using it. There could be times wherein during an outing all of us friends could have brought her own cameras and could have taken pictures in different angles and when you might want all the pictures of the same event to reflect in the specific album created at Yogile. Now, to get this done the special feature of Yogile allows other people than yourself to contribute and upload their pictures (relevant to the event) either through mail or via direct upload. 
+
+Does it involve a complex process? Absolutely not. After the user creates an album, she is supplied with a customizable URL and an email address which can be shared with anyone. This anyone could be those who would want to either add photos or those who just want to view pictures. The part of how you want to use Yogile is entirely up to the user. Getting started at Yogile is simple, similar to any other photo-sharing web tools like <a href="http://www.flickr.com/tour/fb3">Flickr</a>, <a href="http://picasa.google.com/">Picasa</a>, etc. Signing up with Yogile is free where the user is limited to 100MB per month, while there are charges which are very minimal if one wants to upgrade to an unlimited usage - $24.95 a year. Keeping track of your usage is very easy and it is allowed every time you upload a new picture. 
+
+The one up advantage that Yogile has as against Flickr is that unlike Flickr which allows you to post pictures and share them with specific people only if you are registered member, Yogile allows you to do so without being a registered member. Here, the only simple procedure that needs to be followed is to send the link of the album with the password to peers who can view it without facing the trouble of either signing in or signing up. Another interesting feature that is also a treat to the eyes, is the existence of an option of viewing the pictures in three <a href="http://www.yogile.com/gnf5ird9#0357724l">different sizes</a> - small thumbnails, medium thumbnails or with just one large image per page. 
+
+The one limited factor that can be sighted here is that users do not have the option of not allowing people to upload pictures. Once they share the URL or link (and password) with them, they do not have the choice of restricting peers from uploading pictures or editing the album. Although, this could be seen as a potential area that can be improved upon, Yogile seems to be impressive with its special features and definitely has posed immense competition to its substitutes. Having said this, it needs to be noted that since it is only the beginning for Yogile there is still a long way to go for the photo-sharing website and it must be very careful in making every move.
