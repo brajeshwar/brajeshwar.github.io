@@ -106,14 +106,14 @@ kbd,
 samp {
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-small);
-  color: var(--text-color-light);
+  color: var(--text-color-alt);
   white-space: pre;
 }
 
 kbd {
-  color: var(--text-color-light);
-  border: var(--border-width) solid var(--text-color-light);
-  border-bottom: var(--border-width-alt) solid var(--text-color-light);
+  color: var(--text-color-alt);
+  border: var(--border-width) solid var(--text-color-alt);
+  border-bottom: var(--border-width-alt) solid var(--text-color-alt);
   border-radius: var(--border-radius-high);
   padding: calc(0.5 * var(--space-quarter)) var(--space-half);
 }

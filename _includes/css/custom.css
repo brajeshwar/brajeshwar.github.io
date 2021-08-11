@@ -144,7 +144,7 @@ img.small-left  { float: left;  margin-left: 0; }
   
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-smallest);
-  color: var(--text-color-light);
+  color: var(--text-color-alt);
 }
 
 /* posts-articles --------------------------------------- */

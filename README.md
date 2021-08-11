@@ -7,6 +7,8 @@
 
 ## TODO
 
+[] Fix BG Color (light / dark) for PRE/CODE
+[] Fix Form COlor  (light / dark)
 [] Search - Algolia?
 
 ## Post Cleanup
