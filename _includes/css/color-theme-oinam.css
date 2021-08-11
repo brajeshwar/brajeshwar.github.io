@@ -1,7 +1,7 @@
 :root {
   /*
-    For Reference. Do not to use variables directly from other value.
-    Copy the HEX Value and use it.
+    for reference. do not to use variables directly from other value.
+    copy the hex value and use it.
     refer: gray and blue from tailwind color, https://tailwindcss.com/docs/customizing-colors
  */
 
@@ -30,17 +30,17 @@
   --color-blue-900: #1e3a8a; /* black (heavy) */
 }
 
-/* Change and play with the settings here */
+/* change and play with the settings here */
 :root {
   color-scheme: light dark;
 
   --background-color: #fafafa; /* gray-50 */
   --background-color-alt: #f4f4f5; /* gray-100 */
-  --background-color-accent: #FDE68A; /* amber-200 */
-  --background-color-highlight: #E4E4E4; /* gray-200 */
+  --background-color-accent: #fde68a; /* amber-200 */
+  --background-color-highlight: #e4e4e4; /* gray-200 */
   
   --text-color: #3f3f46; /* gray-700 */
-  --text-color-light: #71717a; /* gray-500 */
+  --text-color-alt: #71717a; /* gray-500 */
   
   --border-color: #e4e4e7; /* gray-200 */
   --border-color-highlight: #bfdbfe; /* blue-200 */
@@ -59,20 +59,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --background-color: #3f3f46; /* gray-700 */
+    --background-color-alt: #52525b; /* gray-600 */
+    --background-color-accent: #bfdbfe; /* blue-200 */
+    --background-color-highlight: #27272a; /* gray-800 */
     
-    --background-color: #334155;
-    --background-color-alt: #f9fafb;
-    --background-color-accent: #94a3b8;
-    --background-color-highlight: #3f3f46;
+    --text-color: #f4f4f5; /* gray-100 */
+    --text-color-alt: #71717a; /* gray-500 */
     
-    --text-color: #f1f5f9;
-    
-    --border-color: #1f2937;
-    --border-color-highlight: #18181b;
-    
-    --text-color-link: #93c5fd;
+    --border-color: #52525b; /* gray-600 */
+    --border-color-highlight: #fde68a; /* amber-200 */
+
+    --text-color-link: #bfdbfe;
     --text-color-link-visited: var(--text-color-link);
     --text-color-link-hover: #60a5fa;
     --text-color-link-active: var(--text-color-link-hover);
+
+    --form-button-text-color: var(--text-color);
+    --form-button-text-color-active: var(--text-color);
+    --form-button-background-color: #3b82f6;
+    --form-button-background-color-disabled: #e4e4e7;
+    --form-button-background-color-active: var(--form-button-background-color);
   }
 }
