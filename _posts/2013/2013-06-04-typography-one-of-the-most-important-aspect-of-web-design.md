@@ -9,8 +9,12 @@ Recently, I went to a casual gathering of WordPress enthusiasts to mark the [10t
 
 Unfortunately, many were not really concerned about it but curious enough that they wanted to know more. This article is the result of that conversation, hoping that other designers would be able to kick-start on the ideas of Typography - explore it and even master it.
 
-![Printing press, 16th century in Germany)](/static/2013/printing-pressing-16th-century.jpg)
-Printing press, 16th century in Germany
+<figure class="feature">
+  <img src="/static/2013/printing-pressing-16th-century.jpg" alt="Printing press, 16th century in Germany" loading="lazy">
+  <figcaption>
+    Printing press, 16th century in Germany.
+  </figcaption>
+</figure>
 
 I'm not a Typography expert but I've a keen interest and always wanted to know more, learn the tactics of using it effectively to make User Interfaces that are easier and better for users. You do not have to be an expert in Typography to make good use of it in your web design works.
 
@@ -56,6 +60,8 @@ It is interesting that Typeplate has a built-in style for Pull Quotes. Pull Quot
 ## Footnotes
 
 Footnotes are a nice way to give references to your articles, content or blog posts. Typeplate has a footnote style ready to be used.
+
+![Typography)](/static/common/typography-legends.png)
 
 ## More Typography
 
