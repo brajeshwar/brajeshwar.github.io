@@ -4,9 +4,9 @@
   --font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --font-cursive:           cursive;
 
-  /* an ideal reading width - 768px based off 16px:1rem */
+  /* an ideal reading width - 48rem - 768px based off 16px:1rem */
   /* remember to set this to media-queries too */
-  --body-width: 48rem;
+  --body-width: 46rem;
 
   /* default: minor third scale progression */
   --typescale-body: 1.2;

@@ -23,7 +23,7 @@ body {
   flex: 1;
   
   margin: 0 auto;
-  padding: 0 .5rem;
+  padding: 0 var(--space-half);
   max-width: var(--body-width);
   
   overflow-x: hidden;
@@ -231,4 +231,8 @@ figcaption {
 audio {
   width: 100%;
   margin: var(--space-base) 0;
+}
+
+iframe {
+  max-width: 100%;
 }
