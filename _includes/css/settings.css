@@ -5,6 +5,7 @@
   --font-cursive:           cursive;
 
   /* an ideal reading width - 768px based off 16px:1rem */
+  /* remember to set this to media-queries too */
   --body-width: 48rem;
 
   /* default: minor third scale progression */

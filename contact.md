@@ -26,5 +26,6 @@ _Archives_
 - `brajeshwar.blog` & `brajeshwar.me` redirects here.
 - [Blogspot](http://brajeshwar.blogspot.com)
 - [Facebook](https://www.facebook.com/brajeshwar/)
-- [Flickr](https://www.flickr.com/photos/brajeshwar/) `(2004-1015; 11+ million views)`
+- [Flickr](https://www.flickr.com/photos/brajeshwar/) `(2004-2015; 11+ million views)`
+- [Medium](https://medium.com/@brajeshwar)
 - [WordPress](https://profiles.wordpress.org/brajeshwar/)
