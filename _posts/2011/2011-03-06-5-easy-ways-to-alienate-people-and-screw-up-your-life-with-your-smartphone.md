@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 5 Easy Ways to Alienate People and Screw-up your Life with your Smartphone"
+title: 5 Easy Ways to Alienate People and Screw-up your Life with your Smartphone
 ---
 
 Move over dogs, Smartphone's are officially man's new best friend. Smartphone's are not only there for you when you need them, they also provide countless hours of mind-numbing entertainment via their pointless apps. But, are you giving enough attention to your digital companion? There are 5 critical steps to sealing the matrimonial tie with your smartphone; starting with alienating then eliminating all the frivolous people in your life.
@@ -33,4 +33,4 @@ This is the perfect distraction before bedtime as this habit keeps on giving; it
 
 Your smartphone is not only a vibrating companion it can also serve as a valuable distraction during dull dinners and social gatherings. Personal attention is an overrated social convention anyhow.  Every tick, bing and whir from your electronic life mate is worth your undivided attention; your family, friends and colleagues will be there forever but your smartphone has a shelf life.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/ynt5ePyK7EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include video.html videoURL="https://www.youtube.com/embed/ynt5ePyK7EQ" %}

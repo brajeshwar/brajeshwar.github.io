@@ -17,9 +17,9 @@ Recently, while trying to prune and clear up storage, I realize that Google had 
 
 Before doing anything, I strongly suggest creating a full back of your Google content. Follow the instructions at [Google Takeout](https://takeout.google.com) and get a copy of your Backups.
 
-## Deleting Photos
+{% include video.html videoURL="https://www.youtube.com/embed/a4Mfg3Rb_4Y" %}
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/a4Mfg3Rb_4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Deleting Photos
 
 Google Photos was the one taking up most of the storage. It wasn't an easy task to bulk-delete. You have to select photos within your viewport and delete them manually. The best case is going inside an "Album" or Categories and deleting all of them.
 
