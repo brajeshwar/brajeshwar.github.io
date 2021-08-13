@@ -9,12 +9,12 @@ My name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
-<figure class="feature">
-  <a  href="https://en.wikipedia.org/wiki/Floppy_disk"
-      title="8-inch, 5¼-inch, and 3½-inch Floppy Disks">
-      <img src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg"
-            alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks"
-            loading="lazy"></a>
+<figure>
+  <a href="https://en.wikipedia.org/wiki/Floppy_disk"
+    title="8-inch, 5¼-inch, and 3½-inch Floppy Disks">
+    <img src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg"
+      alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks"
+      loading="lazy"></a>
   <figcaption>
     8-inch, 5¼-inch, and 3½-inch
     <a href="https://en.wikipedia.org/wiki/Floppy_disk">Floppy Disks</a>.
@@ -25,7 +25,7 @@ I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https
 
 I migrated to [Mumbai](https://en.wikipedia.org/wiki/Mumbai) in Aug 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
 
-After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a [Floppy-Disk](https://en.wikipedia.org/wiki/Floppy_disk) which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_café) nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
+After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a Floppy-Disk which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_café) nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
 
 > This domain, [brajeshwar.com](/about/brajeshwar.com/) was booked on a dare. I'm very happy with my decision.
 
@@ -66,12 +66,12 @@ I continue to leveraging technology in finding solutions to challenges and probl
 
 ## Family
 
-<figure class="feature">
-  <a  href="//oinam.pictures"
-      title="Oinam Family">
-    <img  src="/static/img/oinam-family-2016.jpg"
-          alt="Oinam Family"
-          loading="lazy"></a>
+<figure>
+  <a href="https://oinam.pictures/"
+    title="Oinam Family">
+    <img  src="https://cdn.oinam.com/img/oinam/oinam-family-2017.jpg"
+      alt="Oinam Family"
+      loading="lazy"></a>
   <figcaption>Shanta Huirem, Laaija, Amara, and Brajeshwar Oinam</figcaption>
 </figure>
 

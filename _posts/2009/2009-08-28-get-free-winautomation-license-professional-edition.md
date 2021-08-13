@@ -7,11 +7,11 @@ I don't use Windows, so I had totally brushed aside the offer of 4 free Professi
 
 ## What do you need to do?
 
-Just comment on how you will use <a href="http://www.winautomation.com/">WinAutomation</a> to help you in your daily Windows Computing.
+Just comment on how you will use WinAutomation to help you in your daily Windows Computing.
 
 ## What is WinAutomation?
 
-<a href="http://www.winautomation.com/">WinAutomation</a> is a powerful automation tool that helps you automate any repetitive task on your computer.
+[WinAutomation](http://www.winautomation.com/) is a powerful automation tool that helps you automate any repetitive task on your computer.
 
 ## UPDATE:
 

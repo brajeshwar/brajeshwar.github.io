@@ -3,7 +3,7 @@ layout: post
 title: Mumbai Marooned (July 26-27, 2005)
 ---
 
-<figure class="feature">
+<figure>
   <a href="http://www.flickr.com/photos/brajeshwar/113413705/" title="Mumbai Flash Flood 2005 July 26-27"><img src="/static/2005/mumbai-flood-jul-2005.jpg" alt="Mumbai Flash Flood 2005 July 26-27" loading="lazy"></a>
   <figcaption>The Mumbai (Bombay) Flood of July 26, 2005.</figcaption>
 </figure>

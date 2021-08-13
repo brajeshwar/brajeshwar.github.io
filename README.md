@@ -4,6 +4,9 @@
 
 › [brajeshwar.com](https://brajeshwar.com)
 
+##
+
+- YouTube `{% include video.html videoURL="https://www.youtube.com/embed/QKEFhH63vg4" %}`
 
 ## TODO
 
@@ -15,10 +18,12 @@
 
 ## Post Cleanup
 
-[] 2005 (01-04)
+Need to Fix TextPatten Codes.
+
 [] 2006
 [] 2007
 [] 2008
 
-[Google Search Console](https://search.google.com/search-console)
+### Tools
 
+- [Google Search Console](https://search.google.com/search-console)
