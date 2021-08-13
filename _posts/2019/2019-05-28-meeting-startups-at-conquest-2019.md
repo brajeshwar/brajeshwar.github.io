@@ -56,4 +56,4 @@ PROI is developing a hardware-based POS system for retailers that aims to build 
 
 There are 10-15 million retail stores in India.  But the retail sector is very traditional and unorganized. There is no  Inventory and Supply Chain Management system, no data-driven In-Store  Management and Forecasting and no large scale retail data provision for the hyperlocal market. In order to organize this industry, PROI will be collecting the data and setting the path for future collaborators. They plan to connect the entire Supply Chain - Retailers, Manufacturers, and Hyper-Local Markets.
 
-PROI aims to help SMEs to compete at the same level as the big players in the industry by providing them the capability to make data-driven decisions and optimize their supply chain. They follow a  bottom-up approach while approaching the Hyperlocal market environment.</h2>
+PROI aims to help SMEs to compete at the same level as the big players in the industry by providing them the capability to make data-driven decisions and optimize their supply chain. They follow a  bottom-up approach while approaching the Hyperlocal market environment.
