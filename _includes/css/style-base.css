@@ -108,7 +108,11 @@ samp {
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-small);
   color: var(--text-color-alt);
-  white-space: pre;
+  white-space: pre-line;
+
+  /* repair edges of wrapped inline elements */
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 kbd {
@@ -125,7 +129,6 @@ pre {
   max-width: 100%;
   overflow: auto;
   overflow-x: auto;
-  white-space: pre;
 
   background: var(--background-color-alt);
   border-radius: var(--border-radius);
@@ -136,9 +139,6 @@ pre code {
   background: none;
   margin: 0;
   padding: 0;
-
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap;
 }
 
 code {

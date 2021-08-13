@@ -11,12 +11,13 @@ Being on fixed incomes, many seniors have a hard time understanding the value pr
 
 There is also a matter of trust, they do their banking in person, not on a pocket computer with who knows who's on the other end. Their friends are people they talk to, not people they text to. Smartphones represent one of the biggest hurdles to overcome in the age of the digital divide along generational lines.
 
-
 If you know a senior who has just purchased a smartphone and is struggling to figure it out, here are some things you can suggest by way of helpful advice:
 
 ## Pick a Different Phone
 
-[![Jitterbug Phones)](/static/2018/jitterbug-phone-colors.jpg)](http://www.jitterbugdirect.com/)
+<a href="http://www.jitterbugdirect.com/">
+<img class="small-right" src="/static/2018/jitterbug-phone-colors.jpg" alt="Jitterbug Phones">
+</a>
 
 Sometimes the problem is the phone and not the person. If a senior in your life is having trouble getting their head around their new smartphone, it may just be that they have the wrong phone. Take advantage of the return policy. And get them something they will be able to figure out more easily. 
 

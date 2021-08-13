@@ -3,6 +3,8 @@ layout: post
 title: Three Things Artificial Intelligence did in 2016
 ---
 
+![Rembrandt Painting with AI)](/static/2017/rembrandt-painting-ai.jpg)
+
 Not long ago artificial intelligence was something found in the pages of science fiction novels. Today it is becoming more and more of a reality. While we don't have computers plotting to take over the world, AI's did manage to do some pretty amazing things in 2016.
 
 1. In March Deepmind's <a href="https://deepmind.com/research/alphago/">AlphaGo</a> was able to beat the world champion 4-1 at Go. <a href="https://en.wikipedia.org/wiki/Go_(game)">Go</a> is a very old Chinese game considered much more complex than Chess. For comparison, an AI beat a master at chess all the way back in 1997. Prior to AlphaGo scientists thought AIs were far from being able to beat human Go competitors as they were struggling in even amateur matches. For its win, AlphaGo received an honorary master title.

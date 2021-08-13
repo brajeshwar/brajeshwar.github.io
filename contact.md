@@ -21,9 +21,10 @@ _[Oinam](https://oinam.com)_
   - [Stories](https://stories.oinam.com)
   - [Unsplash](https://unsplash.com/@oinam)
 
-_Archives_
+---
 
-- `brajeshwar.blog` & `brajeshwar.me` redirects here.
+_Archived_
+
 - [Blogspot](http://brajeshwar.blogspot.com)
 - [Facebook](https://www.facebook.com/brajeshwar/)
 - [Flickr](https://www.flickr.com/photos/brajeshwar/) `(2004-2015; 11+ million views)`

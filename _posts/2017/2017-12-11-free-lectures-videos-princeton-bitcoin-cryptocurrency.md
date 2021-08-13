@@ -13,50 +13,18 @@ After this course, you'll know everything you need to be able to separate fact f
 
 Here are the 11 video lectures.
 
-### 1. Intro to Crypto and Cryptocurrencies
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/fOMVZXLjKYo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 2. How Bitcoin Achieves Decentralization
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/q5GWwTgRIT4?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 3. Mechanics of Bitcoin
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/t3hJsFpPmXs?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 4. How to Store and Use Bitcoin
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/NKqHXoYZvMg?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 5. Bitcoin Mining
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/jXerV3f5jN8?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 6. Bitcoin and Anonymity
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/glyQy_e5LmM?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 7. Community, Politics, and Regulation
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/IRbgZUGHn9g?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 8. Alternative Mining Puzzles
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/TipGy2bOVL4?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 9. Bitcoin as a Platform
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/aM3OP4gazWw?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 10. Altcoins and the Cryptocurrency Ecosystem
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/l-3kOuF0dts?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-### 11. The Fututre of Bitcoin?
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/YG7l0XPtzD4?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+{% include video.html videoURL="https://www.youtube.com/embed/fOMVZXLjKYo" %}
+{% include video.html videoURL="https://www.youtube.com/embed/q5GWwTgRIT4" %}
+{% include video.html videoURL="https://www.youtube.com/embed/t3hJsFpPmXs" %}
+{% include video.html videoURL="https://www.youtube.com/embed/NKqHXoYZvMg" %}
+{% include video.html videoURL="https://www.youtube.com/embed/jXerV3f5jN8" %}
+{% include video.html videoURL="https://www.youtube.com/embed/glyQy_e5LmM" %}
+{% include video.html videoURL="https://www.youtube.com/embed/IRbgZUGHn9g" %}
+{% include video.html videoURL="https://www.youtube.com/embed/TipGy2bOVL4" %}
+{% include video.html videoURL="https://www.youtube.com/embed/aM3OP4gazWw" %}
+{% include video.html videoURL="https://www.youtube.com/embed/l-3kOuF0dts" %}
+{% include video.html videoURL="https://www.youtube.com/embed/YG7l0XPtzD4" %}
 
 ### Bonus: History of Cryptocurrencies
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/1VYs_zZsorU?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+{% include video.html videoURL="https://www.youtube.com/embed/1VYs_zZsorU" %}
