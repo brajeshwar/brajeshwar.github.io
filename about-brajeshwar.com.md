@@ -2,7 +2,7 @@
 layout: page
 title: About this Site
 permalink: /about/brajeshwar.com/
-update: Jul 24, 2021
+update: Jul 11, 2021
 ---
 
 The domain `brajeshwar.com` was booked on `Jun 11, 2001`.
@@ -19,11 +19,11 @@ Quite a few writers contributed to brajeshwar.com. Unfortunately, the website is
 
 So, no writers are highlighted in the articles. However, I will be forever grateful to these awesome people who contributed to the website;
 
-- [Deeptaman Mukherjee](https://www.linkedin.com/in/deeptamanmukherjee/)
-- [Kalen Smith](https://www.linkedin.com/in/kalen-smith-044b9413/)
-- [Praval Singh](https://praval.com)
-- [Ritesh Reddy](https://www.reddy2go.com)
-- [Robin Wilding](https://www.linkedin.com/in/robin-wilding-91456428/)
+1. [Deeptaman Mukherjee](https://about.me/Deeptaman.Mukherjee) was the most un-assuming technical writer. He loves technology but is in an profession afar from it. he works in metal industry and has extensive experience in iron ore & aluminium businesses -- raw material procurement, logistics, sales & operations planning.
+2. [Kalen Smith](https://www.linkedin.com/in/kalen-smith-044b9413/)
+3. [Praval Singh](https://praval.com) wrote extensively about Open Source, and *nix technology. Some of his articles went on to become pretty popular, and shared a lot.
+4. Ritesh Reddy writes at [Reddy2Go](https://www.reddy2go.com) and has contributed quite a bit of interesting articles to my site.
+5. [Robin Wilding](https://www.linkedin.com/in/robin-wilding-91456428/)
 
 ## 20 Years
 

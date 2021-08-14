@@ -1,7 +1,6 @@
 ---
 layout: home
 title: Brajeshwar Oinam
-type: home
 ---
 
 My name is Brajeshwar Oinam.

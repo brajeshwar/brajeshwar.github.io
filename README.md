@@ -4,23 +4,22 @@
 
 › [brajeshwar.com](https://brajeshwar.com)
 
-##
+## Features
 
 - YouTube `{% include video.html videoURL="https://www.youtube.com/embed/QKEFhH63vg4" %}`
 
 ## TODO
 
-[] Fix Google Search in Mobile
 [] Bring Sass in for the media-querries. Don't want to worry about variables.
 [] Fix BG Color (light / dark) for PRE/CODE
-[] Fix Form COlor  (light / dark)
+[] Fix Form Color  (light / dark)
 [] Search - Algolia?
 
 ## Post Cleanup
 
-Need to Fix TextPatten Codes.
+Need to Fix TextPattern Markups.
 
-[] 2006 (01-)
+[] 2006 (01-02)
 [] 2007
 [] 2008
 
