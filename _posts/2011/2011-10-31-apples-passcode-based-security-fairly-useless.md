@@ -13,8 +13,6 @@ Email luckily is not accessible, "the positive thing is that accessing some of t
 
 Users can protect themselves from Siri by manually disabling the option to enable Siri at the password lock. The default setting however makes users vulnerable and should never have been the default to begin with.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/NLgQ22naQhE?hd=1" frameborder="0" allowfullscreen></iframe>
-
 ## iPad Blunder
 
 Seems like these days password protect means absolutely nothing to Apple and they are luring their users into a false sense of security. The <a href="http://www.dailymail.co.uk/sciencetech/article-2052752/iPad-2-iOS-5-password-glitch-means-hackers-gain-access-pulling-cover-off.html">newest blunder</a> is for the iPad, which can be passcode bypassed by using a magnetic smart cover. The smart covers seemingly confuses iOS 5.

@@ -13,4 +13,4 @@ As a Startup Entrepreneur, be ready to build lots of prototypes, never get stuck
 
 Enjoy the Movie.
 
-<iframe width="853" height="480" src="//www.youtube.com/embed/2CzoSeClcw0" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="https://www.youtube.com/embed/2CzoSeClcw0" %}

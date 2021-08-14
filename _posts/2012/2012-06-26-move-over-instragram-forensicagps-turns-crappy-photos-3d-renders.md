@@ -21,4 +21,4 @@ Outside of law enforcement there are a myriad of other issues that the software 
 
 On a lighter note, here is an interesting Video -- Let's Enhance.
 
-<iframe width="800" height="360" src="https://www.youtube.com/embed/Vxq9yj2pVWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include video.html videoURL="https://www.youtube.com/embed/Vxq9yj2pVWk" %}

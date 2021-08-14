@@ -32,8 +32,12 @@ Well, here is our advice for the folks are looking for a Javascript framework, "
 
 With this setup, we were able to achieve roughly over 50 times faster in page rendering in Autochrome v3 than its earlier version.
 
-![Autochrome Grunt)](/static/2014/autochrome-grunt.jpg)
-_Pretty hack-ish at the moment but Grunt helps with WordPress Theme Development._
+<figure>
+  <img src="/static/2014/autochrome-grunt.jpg" alt="Autochrome Grunt" loading="lazy">
+  <figcaption>
+    Pretty hack-ish at the moment but Grunt helps with WordPress Theme Development.
+  </figcaption>
+</figure>
 
 ## Development
 
@@ -45,7 +49,7 @@ In order to concatenate and revision the Javascript files while building the dis
 
 So we decided to go with using the `$ver` parameter in the function `wp_enqueue_style()` in WordPress which conventionally used to include stylesheets in themes. During the build using the grunt task `grunt-text-replace` we injected the hash of the file as parameter. Some call this method as query based hashing and if you are using <a href="http://www.cloudflare.com/">CloudFlare</a> CDN, you may got ahead and set the "Static Content Caching Level" to Aggressive to cache these query based URLs.
 
-<iframe width="800" height="450" src="//www.youtube.com/embed/4zUnFMUdnvI?rel=0" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="https://www.youtube.com/embed/4zUnFMUdnvI" %}
 
 ## Deployment
 
