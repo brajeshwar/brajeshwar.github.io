@@ -78,4 +78,4 @@ If required by law, we will get your permission or give you the opportunity to o
 For any questions or concerns regarding your privacy, you may contact us using the following details:
 
 Brajeshwar Oinam
-<mark>legal @ oinam.com</mark>
+`legal @ oinam.com`

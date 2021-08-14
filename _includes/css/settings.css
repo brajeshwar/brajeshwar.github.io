@@ -5,8 +5,9 @@
   --font-cursive:           cursive;
 
   /* an ideal reading width - 48rem - 768px based off 16px:1rem */
+  /* 42 is an interesting number. ;-) */
   /* remember to set this to media-queries too */
-  --body-width: 46rem;
+  --body-width: 42rem;
 
   /* default: minor third scale progression */
   --typescale-body: 1.2;
@@ -77,4 +78,4 @@
   }
 }
 
-/* Sass Variable */
+/* sass variable */

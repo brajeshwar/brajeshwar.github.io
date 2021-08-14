@@ -9,7 +9,7 @@ Microsoft CEO Steve Ballmer recently announced that the Windows overhaul going o
 
 The large-scale makeover for Microsoft is beginning with their new Windows 8 user face, a drastic break from the traditional Windows theme and from the previous version, Windows 7. For windows 8 Microsoft will be going with the <a href="http://en.wikipedia.org/wiki/Metro_(design_language)">Metro UI interface</a> currently found on Windows Phone instead of the <a href="http://en.wikipedia.org/wiki/Windows_Aero">Aero interface</a> from Windows 7. This new change in the interface is Microsoft bending to market forces of tablets and phone hardware form figures, a significant change to the large-screened home PCs of yore. "If Windows 8 is Windows re-imagined, we're also in the process, and Windows 8 is an important step of that, of remaining Microsoft," Ballmer proclaimed in a keynote address at the BUILD developer conference.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/ctBfEOjGgdc?hd=1" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/ctBfEOjGgdc" %}
 
 Windows Server 8, currently available in developer preview, is in for a like-minded makeover as Microsoft primes their server offering to prepare for the shift from local resources to the cloud -- all the while integrating better with Windows Azure. Windows Azure, according to Windows Server President Satya Nadella, is a core element of the Windows platform and it will provide unbeatable scalability for Windows Server. 
 

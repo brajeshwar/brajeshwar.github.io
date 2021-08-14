@@ -6,24 +6,25 @@ permalink: /contact/
 
 You can call me on my email, <a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>, but absolutely [no phone calls](https://no.phone.wtf).
 
-_Identities;_
+At
+[AngelList](https://angel.co/brajeshwar),
+[Github](http://github.com/brajeshwar),
+[HackerNews](https://news.ycombinator.com/user?id=Brajeshwar),
+[LinkedIn](https://www.linkedin.com/in/brajeshwar/),
+and
+[Twitter](https://twitter.com/brajeshwar).
 
-- [AngelList](https://angel.co/brajeshwar)
-- [Github](http://github.com/brajeshwar)
-- [HackerNews](https://news.ycombinator.com/user?id=Brajeshwar)
-- [LinkedIn](https://www.linkedin.com/in/brajeshwar/)
-- [Twitter](https://twitter.com/brajeshwar)
-
-_[Oinam](https://oinam.com)_
-  - [Digital Garden](https://oinam.fyi)
-  - [Instagram](https://www.instagram.com/oinam/)
-  - [Pictures](https://oinam.pictures/)
-  - [Stories](https://stories.oinam.com)
-  - [Unsplash](https://unsplash.com/@oinam)
+For [Oinam](https://oinam.com) -
+[Digital Garden](https://oinam.fyi),
+[Instagram](https://www.instagram.com/oinam/),
+[Pictures](https://oinam.pictures/),
+[Stories](https://stories.oinam.com),
+[Unsplash](https://unsplash.com/@oinam),
+etc.
 
 ---
 
-_Archived_
+Erstwhile;
 
 - [Blogspot](http://brajeshwar.blogspot.com)
 - [Facebook](https://www.facebook.com/brajeshwar/)

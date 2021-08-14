@@ -101,11 +101,6 @@ footer small {
 /* images --------------------------------------- */
 
 /* images inside post/article are 100% width */
-.post img {
-  width: 100%;
-  height: auto;
-}
-
 img.small-right,
 img.small-left {
   max-width: 60%;

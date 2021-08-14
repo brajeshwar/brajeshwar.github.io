@@ -2,7 +2,6 @@
 layout: page
 title: People
 permalink: /people/
-update: Jul 7, 2021
 ---
 
 I'm indebted to many people. They had helped me when in need, without asking any questions, and guided me in many ways. I'm forever thankful to them. Here are a few of them, whom I will never stop admiring.
