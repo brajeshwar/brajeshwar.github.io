@@ -7,7 +7,7 @@ title: 3D TV Finally gets a boost
 
 Other Japanese projects recently displayed at <a href="http://www.ceatec.com/2011/en/">CEATEC</a> 2011 are bringing 3D TV to a whole another level (thank you Japan) by doing away with the silly Urkel-looking glasses entirely and using just the naked eye for their 3D experiences. BUT, since they are nowhere near as visually impressive as Tsukuba, who cares.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/g4DpXDu72OE?hd=1" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/g4DpXDu72OE" %}
 
 Standard 3D glasses lack the parallax needed for better viewing, with just horizontal parallax. New technology from the project at Tsukuba uses fifty unique viewpoints, ten horizontally and 5 vertically. The effect of these increased viewpoints is a greater range of viewing and significantly increased resolution. 
 

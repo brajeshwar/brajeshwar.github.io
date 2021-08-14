@@ -6,7 +6,7 @@ If you've ever wanted to take a supercomputer for a test drive, now is your chan
 
 Check this out, it's brilliant: Cycle Computing is a 20-employee company leveraging the cloud computing movement by timesharing virtual supercomputers out to small companies and individuals who would never have had access (read: funds) to such technology. They use virtual clusters by virtually lashing together 50,000 processors from Amazon Web Services, in the cloud, via their own software.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/aJEt3Q8wT0k" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/aJEt3Q8wT0k" %}
 
 Cycle Computing's timeshared virtual supercomputer software was recently used by two small drug companies, Schrodinger and Nimbus Discovery, to perform a series of simulations on over 21 million chemical compounds  in an attempt to find a binding protein. By using Cycle Computing's software on timeshared Amazon data center procs the two companies were able to run 12 and a half years worth of calculations in under three hours. 
 

@@ -5,7 +5,7 @@ title: LG Optimus - Unique 3D SmartPhone
 
 <a href="http://www.lg.com/">LG Electronics</a>, the South Korean based company which promotes with the jingle - Life's Good, has many products to its credit. The company has made remarkable presence in the electronic gadget's arena with it's cutting edge technologies. After successful launch of 3D monitor and 3D LCD Television, LG announces the world's first 3D smartphone, flagging off the race of next generation smartphones.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/IcYqzl0XnVI?hd=1" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/IcYqzl0XnVI" %}
 
 LG Optimus 3D lets you experience the real world, absolutely without glasses. The new piece comes with Android (2.3 Gingerbread flavor) OS and has many outstanding features to its credit. On the technology front, it comes with dual channel, dual memory and dual core processor (1GHz) and dual lens camera. It is claimed to offer the best of graphics viewing, browsing and a plethora of software applications. You will be amazed to play 3D games and 3D movies without using glasses. The camera with 5.0 MP comes with dual lens that can capture 3D quality images. It should be a thrilling experience to capture images and videos in 3D. 
 

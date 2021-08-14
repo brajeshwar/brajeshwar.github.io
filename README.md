@@ -10,7 +10,6 @@
 
 ## TODO
 
-[] Bring Sass in for the media-querries. Don't want to worry about variables.
 [] Fix BG Color (light / dark) for PRE/CODE
 [] Fix Form Color  (light / dark)
 [] Search - Algolia?
@@ -19,7 +18,6 @@
 
 Need to Fix TextPattern Markups.
 
-[] 2006 (01-02)
 [] 2007
 [] 2008
 

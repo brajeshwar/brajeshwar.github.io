@@ -7,7 +7,7 @@ Theo Lagerquist, who loves how easy technology is making communications and busi
 
 First off, what's a Quick Response (QR) code? Right?! It's likely you've heard of this latest technological trend, but do you understand what it is, and what it can do for your business? If not, then you may be missing out on a great marketing and customer relations resource, and you should definitely read on.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/B3lrcOhmp9g?hd=1" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/B3lrcOhmp9g" %}
 
 This is what you need to know about QR codes:
 

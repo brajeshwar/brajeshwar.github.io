@@ -22,7 +22,7 @@ No doubt that the new bill will revolutionize the way startup companies will spr
 
 The initiation of the JOBS Act is appreciated to trigger new startup business. It is easy to pool resources. However, startups should ensure that this channel of investment should not be misused by investors to convert black money into white money. For this, it is required to establish the proof for the source of income. It is important to maintain the relationship with investors. The <a href="http://www.crowdsourcing.org/video/columbia-students-take-advantage-of-crowdfunding-sites-/13239">companies utilizing CrowdFunding should also establish</a> what kind of privileges they can extend to investors. The privileges extended to investors should not be detrimental to the very growth or the culture of the company. Businesses should maintain the highest levels of transparency with relation to the investments made by investors. There should not be any ambiguity in the expectations set before the investors. Businesses should also be able to get the confidence from investors that the money invested by them will be utilized properly and should be able to perceive the growth on their investments.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/lz8lxF1Vv6M" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/lz8lxF1Vv6M" %}
 
 ## The Future of CrowdFunding
 

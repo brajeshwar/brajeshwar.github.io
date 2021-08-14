@@ -3,7 +3,7 @@ layout: post
 title: Bulkr - Access and Backup your Flickr Photos (Mac, Windows & Linux)
 ---
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/M9oPjIzb0bk" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/M9oPjIzb0bk" %}
 
 [Bulkr](https://getbulkr.com) is a no-frill, easy to use backup solution for your Flickr Photos. Flickr, an awesome Photo service from Yahoo!, lacks data liberation -- you cannot download your Photos once uploaded. Of course, you can go to each photo to download them but that isn't the right way to do!
 

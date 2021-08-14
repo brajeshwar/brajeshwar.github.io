@@ -7,8 +7,6 @@ IBM took Morpheus' little blue pill and have now discovered exactly how deep the
 
 IBM's new computer chip, the Systems of Neuromorphic Adaptive Plastic Scalable Electronics, or SyNAPSE, was designed to more closely mimic the human brain. More specifically it cognitively understands its surrounding to the point that it can interpret its environment and respond to it with decisive action -- making use of complex data.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/agYJSdMWXYQ?hd=1" frameborder="0" allowfullscreen></iframe>
-
 The chip's creators at  IBM are hoping to launch a new revolution in computing with this new discernible shift in thinking, the first step towards "cognitive computers". This new cognitive computing paradigm will empower computers to not only learn through experience but also to use that experience to form theories about what it means. 
 
 We are still be a few years away from becoming the human plantations pictured in the matrix, but the first step is complete with IBM's two new prototype chips. These two new prototypes are hyped by IBM as the first giant leap forward into computers having the power of "reason", in place of simply following predetermined equations. One prototype's core consists of 262,144 programmable synapses, while the second prototype's core consists of 65,536 learning synapses. All in all the chips, with only a centimeter squared of surface space run with the equivalent of 10 billion synapses and 1 million neurons -- as a point of reference the human brain has an estimated 100 billion neurons and 100 trillion synapses.

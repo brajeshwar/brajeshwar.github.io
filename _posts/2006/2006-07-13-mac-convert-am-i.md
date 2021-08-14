@@ -11,7 +11,7 @@ Some of our team at Mixercast are already Mac Guys!
 - [Bill Lee](http://www.flickr.com/photos/brajeshwar/181518054/)
 - [Soumyadeep Paul](http://www.flickr.com/photos/brajeshwar/165580106/)
 
-<figure class="feature">
+<figure>
   <a href="http://www.flickr.com/photos/brajeshwar/sets/72157600176589151/">
     <img src="/static/2006/apple-macbook.jpg" alt="Apple Mac Powerbook" loading="lazy">
   </a>

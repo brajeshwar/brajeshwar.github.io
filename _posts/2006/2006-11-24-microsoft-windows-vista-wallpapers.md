@@ -11,7 +11,7 @@ After "Longhorn" was named Windows Vista, an unprecedented beta-test program was
 
 Windows Vista was deemed feature-complete with the release of the "February CTP", released on February 22, 2006, and much of the remainder of work between that build and the final release of the product focused on stability, performance, application and driver compatibility, and documentation. Beta 2, released in late May, was the first build to be made available to the general public through Microsoft's Customer Preview Program. It was downloaded by over five million people. Two release candidates followed in September and October, both of which were made available to a large number of users.
 
-<figure class="feature">
+<figure>
   <img src="/static/2006/vista-wallpaper.jpg" alt="Microsoft Vista Wallpapers">
   <figcaption>
     Microsoft Vista Wallpapers (2006)

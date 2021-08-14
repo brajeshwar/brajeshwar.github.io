@@ -193,6 +193,10 @@ mark {
   padding: 2px 5px;
   border-radius: 4px;
   background: var(--background-color-accent);
+
+  /* repair edges of wrapped inline elements */
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 img {
@@ -201,7 +205,8 @@ img {
   border-radius: var(--border-radius);
 }
 
-main img, main video {
+main img,
+main video {
   max-width: 100%;
   height: auto;
   border-radius: var(--border-radius);
@@ -231,8 +236,4 @@ figcaption {
 audio {
   width: 100%;
   margin: var(--space-base) 0;
-}
-
-iframe {
-  max-width: 100%;
 }

@@ -7,7 +7,7 @@ title: Nexercise - gamify and make exercise enjoyable
 
 To play all you need to do is exercise for a minimum of 15 minutes with your smartphone on you. The app measures the motion of the device to prove that you've exercised. Each time you Nexercise you have a chance to win virtual medals, discounts and even free merchandise.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/ycJCoQTtrIs?hd=1" frameborder="0" allowfullscreen></iframe>
+{% include video.html videoURL="http://www.youtube.com/embed/ycJCoQTtrIs" %}
 
 Nexercise's lottery style rewards system acts as an initial carrot for motivation and as a continual feedback loop to encourage habit formation.  Additionally, Nexercise bakes in behavioral psychology techniques like status, accountability and competition into its game mechanics.  The result is fitness experience that is more social, sticky, and engaging.
 

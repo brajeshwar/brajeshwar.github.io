@@ -4,7 +4,9 @@ title: Contact
 permalink: /contact/
 ---
 
-You can call me on my email, <a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>, but absolutely [no phone calls](https://no.phone.wtf).
+Call me on my email -
+<a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>,
+[no phone](https://no.phone.wtf)!
 
 At
 [AngelList](https://angel.co/brajeshwar),
@@ -12,8 +14,7 @@ At
 [HackerNews](https://news.ycombinator.com/user?id=Brajeshwar),
 [LinkedIn](https://www.linkedin.com/in/brajeshwar/),
 and
-[Twitter](https://twitter.com/brajeshwar).
-
+[Twitter](https://twitter.com/brajeshwar).\
 For [Oinam](https://oinam.com) -
 [Digital Garden](https://oinam.fyi),
 [Instagram](https://www.instagram.com/oinam/),
@@ -24,7 +25,7 @@ etc.
 
 ---
 
-Erstwhile;
+_Archived_
 
 - [Blogspot](http://brajeshwar.blogspot.com)
 - [Facebook](https://www.facebook.com/brajeshwar/)

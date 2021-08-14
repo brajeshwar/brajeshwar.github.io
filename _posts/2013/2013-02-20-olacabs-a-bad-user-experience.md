@@ -9,7 +9,7 @@ India is on a 48-hour stand-still with the 'India Bandh' called by the All Trade
 
 Nope, I'm not going to write about the India `Bandh` (general strike) but more of a personal experience with [Olacabs](http://www.olacabs.com/) - an Indian Startup with over $8M in Series-A fund.
 
-![Ola Lies)](/static/2013/ola-cabs-lied.png)
+<img class="small-right" src="/static/2013/ola-cabs-lied.png" alt="Ola Lies" loading="lazy">
 
 With our new office setup in Indiranagar, Bangalore, every day is an excitement being in the office - working, playing, and being with the team. Yesterday, with the `Bandh` announced, I was looking for alternatives to my usual travel medium, the [Auto rickshaw](http://en.wikipedia.org/wiki/Auto_rickshaw) aka the Tuk-Tuk.
 
