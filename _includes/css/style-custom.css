@@ -1,6 +1,5 @@
 /*
- This is the additional styling specific to brajeshwar.com
- the site should still work visually decent even without this style.
+ extended style
 */
 
 header {
@@ -84,24 +83,9 @@ footer small {
   header {
     margin-left: calc(-1 * 5rem);
   }
-
-  figure,
-  .wrap-extend {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
-    width: 75vw;
-  }
-
-  figure img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 /* images --------------------------------------- */
-
-/* images inside post/article are 100% width */
 img.small-right,
 img.small-left {
   max-width: 60%;
@@ -112,7 +96,52 @@ img.small-left {
 img.small-right { float: right; margin-right: 0; }
 img.small-left  { float: left;  margin-left: 0; }
 
+img.large-center {
+  position: relative;
+  
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  width: 100vw;
+  height: auto;
+  max-width: var(--image-width-max);
+  
+  transform: translateX(calc(50vw - 50%));
+}
+
 .gallery {}
+
+/* for smaller screens, have full-width contents but not round corners */
+@media (max-width: $breakpoint-medium) {
+  figure,
+  figure img,
+  main img,
+  img.large-center {
+    border-radius: 0;
+  }
+
+  main img {
+    position: relative;
+  
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    width: 100vw;
+    height: auto;
+    max-width: var(--image-width-max);
+    
+    transform: translateX(calc(50vw - 50%));
+  }
+
+  /* reset images inside figure */
+  figure img {
+   left: 0;
+  }
+}
 
 /* --------------------------------------- */
 
@@ -186,6 +215,7 @@ img.small-left  { float: left;  margin-left: 0; }
 .site-search {
   margin: 0 0 2rem;
   padding: 0.5rem;
+  min-height: 5.5rem;
 
   border-radius: var(--border-radius);
   background: var(--color-white);
@@ -224,7 +254,6 @@ img.small-left  { float: left;  margin-left: 0; }
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: var(--border-radius);
 }
 
 /* rogue syntax highlighter - applies to both the DIV and PRE */
