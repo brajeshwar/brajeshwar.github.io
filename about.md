@@ -9,17 +9,7 @@ My name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
-<figure>
-  <a href="https://en.wikipedia.org/wiki/Floppy_disk"
-    title="8-inch, 5¼-inch, and 3½-inch Floppy Disks">
-    <img src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg"
-      alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks"
-      loading="lazy"></a>
-  <figcaption>
-    8-inch, 5¼-inch, and 3½-inch
-    <a href="https://en.wikipedia.org/wiki/Floppy_disk">Floppy Disks</a>.
-  </figcaption>
-</figure>
+<a href="https://en.wikipedia.org/wiki/Floppy_disk" title="8-inch, 5¼-inch, and 3½-inch Floppy Disks"><img class="large-center" src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg" alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks" loading="lazy"></a>
 
 ## Work
 

@@ -62,6 +62,9 @@
   --border-radius-round: 100%;
 
   
+  --image-width-max: 1200px; /*there is a limit to how wide an image can be*/
+
+  
   /* color - standard */
   --color-black: #000000;
   --color-white: #ffffff;
@@ -80,6 +83,6 @@
 
 /* jekyll supports sass out of the box but stick with plain CSS as much as possible */
 $breakpoint-small: 420px;
-$breakpoint-medium: 600px;
+$breakpoint-medium: 640px;
 $breakpoint-large: 800px;
 $breakpoint-extralarge: 1200px;

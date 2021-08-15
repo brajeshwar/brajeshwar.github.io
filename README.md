@@ -7,19 +7,20 @@
 ## Features
 
 - YouTube `{% include video.html videoURL="https://www.youtube.com/embed/QKEFhH63vg4" %}`
+- Extend any content such as an Image, wider to the content `<img class="large-center" src="">`
 
 ## TODO
 
-[] Fix BG Color (light / dark) for PRE/CODE
-[] Fix Form Color  (light / dark)
-[] Search - Algolia?
+- Video/iFrame to extend full-width in smaller screens
+- Fix BG Color (light / dark) for PRE/CODE
+- Fix Form Color  (light / dark)
+- Search - Algolia?
+- Find as much of the open source, free, downloads and gather them at a place for people to have access to.
 
 ## Post Cleanup
 
-Need to Fix TextPattern Markups.
-
-[] 2007
-[] 2008
+- 2007 (01-03)
+- 2008
 
 ### Tools
 
