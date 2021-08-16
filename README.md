@@ -11,6 +11,7 @@
 
 ## TODO
 
+- Basic Tables Design, 2007/us-outsourcing-implodes-india-looking-for-pastures-overseas-even-though-it-aint-that-green/
 - light/dark mode button?
 - Video/iFrame to extend full-width in smaller screens
 - Fix BG Color (light / dark) for PRE/CODE
@@ -20,7 +21,6 @@
 
 ## Post Cleanup
 
-- 2007 (01-07)
 - 2008
 
 ### Tools
