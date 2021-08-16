@@ -44,6 +44,10 @@ header nav {
   font-weight: 500;
 }
 
+header .header-tool {
+  margin-left: auto;
+}
+
 /* nav links (header/footer) */
 nav a {
   padding: var(--space-quarter) 0;
@@ -66,10 +70,6 @@ footer {
 
   text-align: center;
   font-family: var(--font-family-sans);
-  font-size: var(--font-size-smaller);
-}
-
-footer small {
   font-size: var(--font-size-smaller);
 }
 
@@ -142,8 +142,6 @@ img.large-center {
    left: 0;
   }
 }
-
-/* --------------------------------------- */
 
 /* articles lists --------------------------------------- */
 .blog-articles__list {
@@ -221,6 +219,8 @@ img.large-center {
   background: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
 }
+
+/* theme switcher --------------------------------------- */
 
 
 /* UTILITIES */

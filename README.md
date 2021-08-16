@@ -7,10 +7,11 @@
 ## Features
 
 - YouTube `{% include video.html videoURL="https://www.youtube.com/embed/QKEFhH63vg4" %}`
-- Extend any content such as an Image, wider to the content `<img class="large-center" src="">`
+- Wide image (figure by default) extends beyond content `<img class="large-center" src="">`
 
 ## TODO
 
+- light/dark mode button?
 - Video/iFrame to extend full-width in smaller screens
 - Fix BG Color (light / dark) for PRE/CODE
 - Fix Form Color  (light / dark)
@@ -19,7 +20,7 @@
 
 ## Post Cleanup
 
-- 2007 (01-03)
+- 2007 (01-04)
 - 2008
 
 ### Tools
