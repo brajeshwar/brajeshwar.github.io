@@ -1,47 +1,24 @@
 ---
 layout: post
 title: Indian Tech no longer for startups that does sophisticated Technology
-date: 2007-06-30 16:27:05.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Technology
-tags:
-- google
-- India
-- Riya
-- Startups
-meta:
-  dsq_thread_id: '135616514'
-  bitly_short_url: http://j.mp/mRgPrF
-  retweet_cache: '1309534537:0'
-  _edit_last: '67'
-  _clicky_goal: a:2:{s:2:"id";s:0:"";s:5:"value";s:0:"";}
-  trx_addons_post_views_count: '42'
-author:
-  login: Brajeshwar
-  email: brajeshwar@gmail.com
-  display_name: Brajeshwar
-  first_name: Brajeshwar
-  last_name: Oinam
-permalink: "/2007/indian-tech-no-longer-for-startups-that-does-sophisticated-technology/"
-excerpt: A large swathe of Silicon Valley Startups and Midsize companies that do sophisticated
-  tech work are turning away from India as their premier outsourcing destination.
-  While such companies make up just a fraction of India's outsourcing work, they had
-  been an early catalyst for the growth of India's Information Technolgy Business
-  and helped the country attract other outsourcing clients.
 ---
-<p>I was reading a front page article on <a href="http://www.livemint.com/">Mint</a> and I could feel the extend of the truth in the article. It is a well known fact that American Companies are the major driving force behind the success of outsourcing boom in India. Silicon Valley, in particular, has helped Indian IT companies with a humongous amount of outsourced technology related works. The lure for Indian Technology workers is the low-wage, which is about 1/4th of their counterparts in the Silicon Valley.</p>
-<p>However, of late, the salaries of experienced and highly skilled technical engineers have soared multiple folds. This rise have ranked Indian High Tech Engineers almost at par with their Silicon Valley counterparts in terms of compensation. According to studies, it is revealed that such skilled Indian Computer Engineers are paid almost 3/4th of the American Engineers.</p>
-<p>Thus, looking at the time-difference and the distance (of the clients in United States), not to forget the frustration of the American Investors and higher executives, it makes less and less sense to do sophisticated Technology works in India. It may be noted that such type of sophisticated works are mostly done by Startups and midsize companies, from the Silicon Valley. The earlier advantage of outsourcing such works to India no longer benefits the small quality oriented companies any more. Studies have found that the wage inflation rate for engineers in India is about four times than in the United States.</p>
-<p>As a result of the wage rise of the highly skilled workers in India, many Silicon Valley startups and midsize companies are keeping the tech jobs to themselves instead of outsourcing to India. They are considering bringing in key developers from India to Silicon Valley and have their development done there along with the American Engineers. It is speculated that the rise in wage of the quality oriented high tech workers is perhaps one reason why Apple put off their plan to open a development office in India (Bangalore).</p>
-<p>However, as for the low-tech, low-skill *PO segments (read KPO, BPO, CPO, DPO and all other POs), India is still the desired destination and is still on the rise. United States Tech companies continue to outsource such basic works like <a href="http://www.brajeshwar.com/2007/are-you-a-programmer-or-a-coder/">software coding</a> to Indian outsourcing companies like Infosys, Wipro, TCS etc. Some of the big US giants who are expanding their low-tech work-force in India includes that of <a href="http://www.cisco.com/">Cisco</a>, <a href="http://www.google.com/">Google</a>, <a href="http://www.adobe.com/">Adobe</a>.</p>
-<p>With the huge influx of companies asking for most skilled Indian Computer engineers, the US-India compensation gap reduces as a result of the induced competition. The majority of the not-so-skilled Indian workers still remains which comprises of about 3/4th of Indian Computer Engineers. These low-skilled workers are said to have no proper language proficiency, no cultural fit and no practical skills to work at multinational companies.</p>
-<p>Rafiq Dossani, a scholar at Stanford University's Asia-Pacific Research Centre who recently studied the Indian market, found that while most Indian technology workers' wages remain low -- an average $5,000 (around Rs. 2,00,000) a year for a new engineer with little experience -- the experienced engineers that Silicon Valley companies covet can now cost $60,000 to $100,000 (roughly between Rs. 25 lakh to Rs. 41 Lakh) a year. He concluded, "For the top-level talent, there's an equalization."</p>
-<p>So, for a large swathe of Silicon Valley -- Startups and midsize companies that do sophisticated tech work -- India is no longer the premier outsourcing destination. Though such work contributes just a fraction of the Indian outsourcing cache, they have been the early catalyst for the growth of India's Information Technology.</p>
-<p>Mega-corps like Infosys, Wipro and TCS have braced up to do more of the sophisticated works. However, analysts says that most of these companies derived more than 50% to 60% of their revenues from the basic services such as software coding and tech maintenance and support.</p>
-<p>In a not-so-surprising event, <a href="http://www.riya.com/">Riya</a> had to interview more than 70 candidates just to hire 6 highly skilled developers for their Bangalore (India) office. It may be noted that they have shut down their Bangalore office at the time of writing this article.</p>
-<p>Many Indian-American entrepreneur who tried to do startups in India seem to have bad-taste experiences and have decided to stay back in the States than try to understand the plethora of hiccups that plagued them while setting up a remote office in India.</p>
+
+Of late, salaries of experienced and highly skilled technical engineers have soared multiple folds. This rise have ranked Indian High Tech Engineers almost at par with their Silicon Valley counterparts in terms of compensation. According to studies, it is revealed that such skilled Indian Computer Engineers are paid almost 3/4th of the American Engineers.
+
+Thus, looking at the time-difference and the distance (of the clients in United States), not to forget the frustration of the American Investors and higher executives, it makes less and less sense to do sophisticated Technology works in India. It may be noted that such type of sophisticated works are mostly done by Startups and midsize companies, from the Silicon Valley. The earlier advantage of outsourcing such works to India no longer benefits the small quality oriented companies any more. Studies have found that the wage inflation rate for engineers in India is about four times than in the United States.
+
+As a result of the wage rise of the highly skilled workers in India, many Silicon Valley startups and midsize companies are keeping the tech jobs to themselves instead of outsourcing to India. They are considering bringing in key developers from India to Silicon Valley and have their development done there along with the American Engineers. It is speculated that the rise in wage of the quality oriented high tech workers is perhaps one reason why Apple put off their plan to open a development office in India (Bangalore).
+
+However, as for the low-tech, low-skill *PO segments (read KPO, BPO, CPO, DPO and all other POs), India is still the desired destination and is still on the rise. United States Tech companies continue to outsource such basic works like <a href="/2007/are-you-a-programmer-or-a-coder/">software coding</a> to Indian outsourcing companies like Infosys, Wipro, TCS etc. Some of the big US giants who are expanding their low-tech work-force in India includes that of <a href="http://www.cisco.com/">Cisco</a>, <a href="http://www.google.com/">Google</a>, <a href="http://www.adobe.com/">Adobe</a>.
+
+With the huge influx of companies asking for most skilled Indian Computer engineers, the US-India compensation gap reduces as a result of the induced competition. The majority of the not-so-skilled Indian workers still remains which comprises of about 3/4th of Indian Computer Engineers. These low-skilled workers are said to have no proper language proficiency, no cultural fit and no practical skills to work at multinational companies.
+
+Rafiq Dossani, a scholar at Stanford University's Asia-Pacific Research Centre who recently studied the Indian market, found that while most Indian technology workers' wages remain low -- an average $5,000 (around Rs. 2,00,000) a year for a new engineer with little experience -- the experienced engineers that Silicon Valley companies covet can now cost $60,000 to $100,000 (roughly between Rs. 25 lakh to Rs. 41 Lakh) a year. He concluded, "For the top-level talent, there's an equalization."
+
+So, for a large swathe of Silicon Valley -- Startups and midsize companies that do sophisticated tech work -- India is no longer the premier outsourcing destination. Though such work contributes just a fraction of the Indian outsourcing cache, they have been the early catalyst for the growth of India's Information Technology.
+
+Mega-corps like Infosys, Wipro and TCS have braced up to do more of the sophisticated works. However, analysts says that most of these companies derived more than 50% to 60% of their revenues from the basic services such as software coding and tech maintenance and support.
+
+In a not-so-surprising event, `Riya` had to interview more than 70 candidates just to hire 6 highly skilled developers for their Bangalore (India) office. It may be noted that they have shut down their Bangalore office at the time of writing this article.
+
+Many Indian-American entrepreneur who tried to do startups in India seem to have bad-taste experiences and have decided to stay back in the States than try to understand the plethora of hiccups that plagued them while setting up a remote office in India.
