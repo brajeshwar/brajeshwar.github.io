@@ -1,48 +1,17 @@
 ---
 layout: post
 title: Know when to quit the race
-date: 2008-03-04 16:55:01.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- Business
-- Company
-- Competition
-- Entrepreneur
-- Liquidation
-- Management
-- Money
-meta:
-  adman_disable: 'on'
-  dsq_thread_id: '136444200'
-  bitly_short_url: http://j.mp/jxZDdh
-  retweet_cache: '1309585280:0'
-  trx_addons_post_views_count: '50'
-author:
-  login: Brajeshwar
-  email: brajeshwar@gmail.com
-  display_name: Brajeshwar
-  first_name: Brajeshwar
-  last_name: Oinam
-permalink: "/2008/know-when-to-quit-the-race/"
-excerpt: Serial entrepreneurs are some of the happiest and most productive people
-  on the planet. They recognized early in life that launching new ideas and products
-  is a lot more fun than fighting to increase market share a half percent or protecting
-  an eroding market share.
 ---
-<p><img src="/static/2008/03/vc.jpg" alt="Know when to quit your business" style="float: right;" />Many businesses fail each year. Others are sold. You read about a few in the newspapers, but for each newsworthy event, thousands occur quietly in good economic times and bad. Here are 10 things to focus on when considering whether <a href="http://www.bizjournals.com/extraedge/consultants/growing_pains/2008/03/03/column12.html">you should quit the race</a> and move on.</p>
-<p># Selling a company isn't the same as losing. Some sales are big wins. Others are smaller victories. Redeploying underperforming assets, yourself included, is usually a good decision. Some people quit. Others move on. One of the best reasons to close or sell a business is that you've found something better to do. Businesses take up so much time and energy, there is a lost-opportunity cost of stubbornly sticking around too long.<br />
-# Starting a business is difficult, but closing a company is even harder. Closing the right way is even more difficult. This affects many people, and some will fare worse than others. It's natural to seek to avoid facing tough choices, but postponing the inevitable usually causes greater harm. If it's inevitable, dealing with it now is always the best choice.<br />
-# Campaigns and businesses can be bottomless pits. There's no sense throwing good money after bad. Funding a lost cause or even a decent business with limited upside potential usually doesn't make sense. Ask Mrs. Romney. Even multimillionaires have breaking points.<br />
-# Every company needs a business justification for additional investments of money, time and effort. Each investment decision needs to be justified like the decision to start the company.<br />
-# Even if a company has a reason to exist, there's no reason why you have to continue bearing the burden. Get a partner or hire a CEO if you want to move on to other opportunities.<br />
-# Serial entrepreneurs are some of the happiest and most productive people on the planet. They recognized early in life that launching new ideas and products is a lot more fun than fighting to increase market share a half percent or protecting an eroding market share. Serial entrepreneurs move on when it stops being fun and find something else that gives them the adrenaline rush they crave.<br />
-# Positioning a company to sell at a premium price can take several years. Don't wait until you have to sell to start the process.<br />
-# Companies often invest in things that don't create value on sale. For example, a buyer who already has a great sales team and channel partners won't pay much for these parts of your company. Most people don't add swimming pools to their homes if they intend to sell the house next year because swimming pools are notorious for not recovering investment on resale. Look at your company like a home owner would in deciding where to make pre-sale investments.<br />
-# The best way to capture the most value is to know when to sell. Value is often a function of the head start you have on bigger companies, which are likely to grind you to dust if your lead time shrinks. The longer the lead time you can sell to another company compared to their competitors, the greater your value may be. Big companies can make more money during that lead time than you can.<br />
-# Selling the company usually facilitates wealth diversification. Even if it's a gold-plated basket, having all your eggs in one basket can be risky. If all your wealth is tied up in one company, you may be only one 25-year-old innovator away from losing everything.</p>
+
+Many businesses fail each year. Others are sold. You read about a few in the newspapers, but for each newsworthy event, thousands occur quietly in good economic times and bad. Here are 10 things to focus on when considering whether <a href="http://www.bizjournals.com/extraedge/consultants/growing_pains/2008/03/03/column12.html">you should quit the race</a> and move on.
+
+- Selling a company isn't the same as losing. Some sales are big wins. Others are smaller victories. Redeploying underperforming assets, yourself included, is usually a good decision. Some people quit. Others move on. One of the best reasons to close or sell a business is that you've found something better to do. Businesses take up so much time and energy, there is a lost-opportunity cost of stubbornly sticking around too long.
+- Starting a business is difficult, but closing a company is even harder. Closing the right way is even more difficult. This affects many people, and some will fare worse than others. It's natural to seek to avoid facing tough choices, but postponing the inevitable usually causes greater harm. If it's inevitable, dealing with it now is always the best choice.
+- Campaigns and businesses can be bottomless pits. There's no sense throwing good money after bad. Funding a lost cause or even a decent business with limited upside potential usually doesn't make sense. Ask Mrs. Romney. Even multimillionaires have breaking points.
+- Every company needs a business justification for additional investments of money, time and effort. Each investment decision needs to be justified like the decision to start the company.
+- Even if a company has a reason to exist, there's no reason why you have to continue bearing the burden. Get a partner or hire a CEO if you want to move on to other opportunities.
+- Serial entrepreneurs are some of the happiest and most productive people on the planet. They recognized early in life that launching new ideas and products is a lot more fun than fighting to increase market share a half percent or protecting an eroding market share. Serial entrepreneurs move on when it stops being fun and find something else that gives them the adrenaline rush they crave.
+- Positioning a company to sell at a premium price can take several years. Don't wait until you have to sell to start the process.
+- Companies often invest in things that don't create value on sale. For example, a buyer who already has a great sales team and channel partners won't pay much for these parts of your company. Most people don't add swimming pools to their homes if they intend to sell the house next year because swimming pools are notorious for not recovering investment on resale. Look at your company like a home owner would in deciding where to make pre-sale investments.
+- The best way to capture the most value is to know when to sell. Value is often a function of the head start you have on bigger companies, which are likely to grind you to dust if your lead time shrinks. The longer the lead time you can sell to another company compared to their competitors, the greater your value may be. Big companies can make more money during that lead time than you can.
+- Selling the company usually facilitates wealth diversification. Even if it's a gold-plated basket, having all your eggs in one basket can be risky. If all your wealth is tied up in one company, you may be only one 25-year-old innovator away from losing everything.

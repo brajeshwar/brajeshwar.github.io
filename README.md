@@ -11,17 +11,11 @@
 
 ## TODO
 
-- Basic Tables Design, 2007/us-outsourcing-implodes-india-looking-for-pastures-overseas-even-though-it-aint-that-green/
 - light/dark mode button?
-- Video/iFrame to extend full-width in smaller screens
 - Fix BG Color (light / dark) for PRE/CODE
 - Fix Form Color  (light / dark)
 - Search - Algolia?
 - Find as much of the open source, free, downloads and gather them at a place for people to have access to.
-
-## Post Cleanup
-
-- 2008 (01-02, 12)
 
 ### Tools
 

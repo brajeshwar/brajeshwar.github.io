@@ -244,3 +244,30 @@ audio {
   width: 100%;
   margin: var(--space-base) 0;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--space-double) 0;
+}
+
+td,
+th {
+  border: 1px solid var(--border-color);
+  text-align: left;
+  padding: var(--space-half);
+}
+
+th {
+  background: var(--background-color-highlight);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background: var(--background-color-alt);
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: var(--space-half);
+}

@@ -1,46 +1,20 @@
 ---
 layout: post
 title: The Open Source Paradigm
-date: 2008-07-01 17:00:26.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- General
-tags:
-- freebase
-- knowledgebase
-- Linux
-- Open Source
-- powerset
-meta:
-  _edit_last: '67'
-  dsq_thread_id: '135610181'
-  bitly_short_url: http://j.mp/iidMsf
-  retweet_cache: '1309579957:0'
-  trx_addons_post_views_count: '61'
-author:
-  login: Praval
-  email: catchme@praval.com
-  display_name: Praval Singh
-  first_name: Praval
-  last_name: Singh
-permalink: "/2008/the-open-source-paradigm/"
-excerpt: There is a lot of information present in bits and nibbles over the web, what's
-  needed for now is an approach, a paradigm to get a neat interface and logical relationship
-  to the vast and rich mine of free information.
 ---
-<div class="figure"><img src="/static/2008/07/brainstorm.jpg" alt="Brainstorm" />
-<p class="credit"><abbr class="type" title="Illustration">Illustration</abbr> from <cite><a href="http://www.tucson-jug.org/">Tucson JUG</a></cite></p>
-<p class="caption"><em class="title">Brainstorm</em>Let's discuss.</p>
-</div>
-<p>We've been hitting on Linux <a href="/author/praval/">HOW TO's</a> for quite some time now. Starting from the <a href="/2008/open-source-revolution/">Open Source Revolution</a> to <a href="/2008/ready-for-lamp/">LAMP</a> and <a href="/2008/choice-of-linux-distros/">choosing a Linux distro</a> to <a href="/2008/terminal-based-installation/">understanding the terminal</a>, we've brushed up a lot of Linux related methodologies. It's time now to have an analytical look at the Linux platform . To keep it more generic, I would prefer naming it - the Open Source paradigm.</p>
-<p>Having played a lot with the Linux OS, I realized off late that, there is always an underlying fear of messing up with something we're not sure of! This fear might just let you stray away from the very act of trying things differently or trying different things, for that matter. Here comes the role of Open Source protocol, which if you remember emphasizes on working in collaboration and sharing knowledge with fellow Linux or Open Source Software users. But, how can we eventually exploit this very feature of the Open Source practice?</p>
-<p>The answer lies within you!&#160; More often than not, getting things done at first attempt on Linux may apparently be a nightmare for someone who has had a fear of doing things wrongly. But, if you think otherwise, you'll feel the back up of a strong community behind you. A community which consists of fellow users, evangelists, technocrats, developers, administrators and even doctors, at times! It's not like you have to call up a toll free number, or something similar and speak up to those trained executives during fixed hours in a day! With Linux, you may hang around on IRC channels, forums, websites, etc. at wee hours and get help, at times instantly.</p>
-<p>More than just help, you get to learn how things are moving and what else is related to your specific problem. You might just have a hundred more people facing the very same problem. It's quite possible that by the time you've hit a thread at a forum, it was already closed with a neat solution. Wasn't that cool! Okay, for people who've been spoon fed with with methods and procedures, it might just appear to be a wasted time and effort. But, that's the way you lose the fear I was talking about, minutes back!</p>
-<p>With Open Source, the idea is not to invent the wheel once again but to work on better goals using the currently developed stages and tools from other users. Doing otherwise would be a wasted effort and would be classified as closed-source-thinking. There is absolutely no point working on things which others have already built and shared for you. That's where the difference lies. Open Source is all about doing things in cohesion, differently and intelligently.</p>
-<p>Having said this, it would be pretty unrealistic to expect novice users &#8211; especially the new adopters of this technology, to help others with a solution. But they can certainly help the developers and power users with their questions and problems. Remember, the worst question is the one that's never been asked!</p>
-<p>It's at times very easy to get overwhelmed looking at information resource present in the Open Source world, and pretty hard to find exactly what you're trying to! But we all know that there is a possibility of finding out the correct solution, somewhere in the same world where the problem exists. This may ignite a thought to a lot of minds. A thought about creation of a knowledgebase, a central source of valuable information for all Linux and Open Source users. Something like a wiki, where every new information is added and linked together logically, to the existing content in a layout that helps one and all! This would mean saving time which we generally spend on trying out various keyword combination on search engines to get the perfect source for&#160; the required information. It is not that a step has not been ever taken in this direction. Projects like <a href="http://www.powerset.com">Powerset</a> and <a href="http://www.freebase.com">Freebase</a> have been there, but failed to make a substantial mark about their presence.</p>
-<p>There is a lot of information present in bits and nibbles over the web, what's needed for now is an approach, a paradigm to get a neat interface and logical relationship to the vast and rich mine of free information.</p>
+
+We've been hitting on Linux HOW TO's for quite some time now. Starting from the <a href="/2008/open-source-revolution/">Open Source Revolution</a> to <a href="/2008/ready-for-lamp/">LAMP</a> and <a href="/2008/choice-of-linux-distros/">choosing a Linux distro</a> to <a href="/2008/terminal-based-installation/">understanding the terminal</a>, we've brushed up a lot of Linux related methodologies. It's time now to have an analytical look at the Linux platform . To keep it more generic, I would prefer naming it - the Open Source paradigm.
+
+Having played a lot with the Linux OS, I realized off late that, there is always an underlying fear of messing up with something we're not sure of! This fear might just let you stray away from the very act of trying things differently or trying different things, for that matter. Here comes the role of Open Source protocol, which if you remember emphasizes on working in collaboration and sharing knowledge with fellow Linux or Open Source Software users. But, how can we eventually exploit this very feature of the Open Source practice?
+
+The answer lies within you! More often than not, getting things done at first attempt on Linux may apparently be a nightmare for someone who has had a fear of doing things wrongly. But, if you think otherwise, you'll feel the back up of a strong community behind you. A community which consists of fellow users, evangelists, technocrats, developers, administrators and even doctors, at times! It's not like you have to call up a toll free number, or something similar and speak up to those trained executives during fixed hours in a day! With Linux, you may hang around on IRC channels, forums, websites, etc. at wee hours and get help, at times instantly.
+
+More than just help, you get to learn how things are moving and what else is related to your specific problem. You might just have a hundred more people facing the very same problem. It's quite possible that by the time you've hit a thread at a forum, it was already closed with a neat solution. Wasn't that cool! Okay, for people who've been spoon fed with with methods and procedures, it might just appear to be a wasted time and effort. But, that's the way you lose the fear I was talking about, minutes back!
+
+With Open Source, the idea is not to invent the wheel once again but to work on better goals using the currently developed stages and tools from other users. Doing otherwise would be a wasted effort and would be classified as closed-source-thinking. There is absolutely no point working on things which others have already built and shared for you. That's where the difference lies. Open Source is all about doing things in cohesion, differently and intelligently.
+
+Having said this, it would be pretty unrealistic to expect novice users - especially the new adopters of this technology, to help others with a solution. But they can certainly help the developers and power users with their questions and problems. Remember, the worst question is the one that's never been asked!
+
+It's at times very easy to get overwhelmed looking at information resource present in the Open Source world, and pretty hard to find exactly what you're trying to! But we all know that there is a possibility of finding out the correct solution, somewhere in the same world where the problem exists. This may ignite a thought to a lot of minds. A thought about creation of a knowledgebase, a central source of valuable information for all Linux and Open Source users. Something like a wiki, where every new information is added and linked together logically, to the existing content in a layout that helps one and all! This would mean saving time which we generally spend on trying out various keyword combination on search engines to get the perfect source for the required information. It is not that a step has not been ever taken in this direction. Projects like <a href="http://www.powerset.com">Powerset</a> and <a href="http://www.freebase.com">Freebase</a> have been there, but failed to make a substantial mark about their presence.
+
+There is a lot of information present in bits and nibbles over the web, what's needed for now is an approach, a paradigm to get a neat interface and logical relationship to the vast and rich mine of free information.

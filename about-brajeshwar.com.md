@@ -27,4 +27,4 @@ So, no writers are highlighted in the articles. However, I will be forever grate
 
 ## 20 Years
 
-After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary, Jun 11, 2021, the site is now as plain-text as possible, sprinkled with the spices of some [MarkDown](https://en.wikipedia.org/wiki/Markdown) and translated by [Jekyll](https://jekyllrb.com). [Github](https://github.com) takes care of the Jekyll part to spit out the HTML. I have done away with comments, and dicarded a whole lot of other metadata.
+After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary, Jun 11, 2021, the site is now as plain-text as possible, sprinkled with the spices of some [MarkDown](https://en.wikipedia.org/wiki/Markdown) and translated by [Jekyll](https://jekyllrb.com). [Github](https://github.com) takes care of the Jekyll part to spit out the HTML. I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted over 300+ articles.

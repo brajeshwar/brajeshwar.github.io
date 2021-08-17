@@ -211,13 +211,20 @@ img.large-center {
 
 /* powered by Google Programmable Search, https://programmablesearchengine.google.com/ */
 .site-search {
-  margin: 0 0 2rem;
-  padding: 0.5rem;
-  min-height: 5.5rem;
-
+  margin: 0 0 var(--space-double);
+  padding: var(--space-half);
+  
   border-radius: var(--border-radius);
   background: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+}
+
+.site-search table,
+.site-search table th,
+.site-search table td, {
+  border: 0 none;
+  padding: var(--space-quarter);
+  margin: 0;
 }
 
 /* theme switcher --------------------------------------- */

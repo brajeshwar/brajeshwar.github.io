@@ -3,7 +3,7 @@ layout: post
 title: Shoot a terminal and install a ball
 ---
 
-![Music on Tux)](/static/2008/06/linux-music.jpg)
+![Music on Tux)](/static/2008/linux-music.jpg)
 
 In our last article -- <a href="/2008/software-installation-on-linux/">Software installation woes on Linux</a> -- we proved that installing a software package was as easy as it was rumored otherwise. We saw two pretty common and of course easy ways of software installation.
 

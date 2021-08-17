@@ -2,6 +2,7 @@
 layout: post
 title: Flash SWF and FLV/F4V Video is now Open Source
 ---
+
 Today, Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200804/050108AdobeOSP.html">announced</a> the Open Screen Project and with it came the ultimate good news -- the SWF and FLV/F4V formats are now totally open source. Adobe has dropped the licensing restrictions on the formats. So, not only can you create tools that writes SWFs (this was already open) but now you can create tools that plays the formats back (you no longer need to just rely on the Flash Player).
 
 The <a href="http://www.adobe.com/openscreenproject/">Open Screen Project</a> initiative by Adobe is supported by a group of industry leaders, including ARM, Chunghwa Telecom, Cisco, Intel, LG Electronics Inc., Marvell, Motorola, Nokia, NTT DoCoMo, Qualcomm, Samsung Electronics Co., Sony Ericsson, Toshiba and Verizon Wireless.

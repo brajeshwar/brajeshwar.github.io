@@ -8,19 +8,13 @@ I'm indebted to many people. They had helped me when in need, without asking any
 
 Lokeshwor "Uncle" was my first mentor, who introduced me to some of the most intriguing aspects of computers. I met him for the first time, in 1995, in a Computer Institute where I was working and teaching part-time. We debated the future of computers and the Internet way before we had access to the Internet. He encouraged me to tinker with both the computer software and hardware alike. He is no more. I will miss his talks and enthusiasm.
 
-Sanjay Chugh
-
 Alok Singh
 
 Arindam Biswas
 
 Darshan Sawardekar
 
-Baishampayan Ghosh
-
-Stan Liu
-
-Karthik Kumaramangalam
+[Stan Liu](/2017/stan-liu/)
 
 [Saneef Ansari](https://saneef.com)
 
