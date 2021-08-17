@@ -3,7 +3,6 @@ layout: post
 title: Adobe Flash can modify Router's UPnP Interface
 ---
 
-
 Security firms and Interested Institutes keeps stumbling on security issues and vulnerabilities almost every waking hour of the day. Very recently, Google Researchers documented serious <a href="/2007/google-researchers-found-vulnerabilities-in-flash/">vulnerabilities in Adobe Flash SWFs</a>. Another Flash related security issues surfaced about a weeks ago that the Universal Plug and Play (UPnP) interface of <a href="http://www.gnucitizen.org/blog/hacking-the-interwebs">your Router may be highly vulnerable</a> to use by hackers seeking to modify their settings -- such as choice of DNS Server -- from an external location using Flash.
 
 ## How?
