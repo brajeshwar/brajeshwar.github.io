@@ -7,10 +7,7 @@ My name is Brajeshwar Oinam.
 
 I am an entrepreneur, and technologist, with a deep focus on leadership in products and designs. I have been a developer, designer, and creative product direction with a track record of building products and leading teams.
 
-I write about design, entrepreneurship, productivity, software, startups, and technology. Here are some of the recent articles from the
-__[blog](/blog/)__.
-
-[//]: # {{site.posts | size}}
+I write about design, entrepreneurship, productivity, software, startups, and technology. Here are some of the recent articles;
 
 <div class="content-extend">
   <ol class="blog-articles__list">
@@ -22,5 +19,9 @@ __[blog](/blog/)__.
     {%- endfor -%}
   </ol>
 </div>
+
+Browse all {{site.posts|size}} articles in the [Blog](/blog/).
+
+### Valinor Earth
 
 I co-founded [Valinor Earth](https://valinor.earth) with two of my close friends, with whom I have worked on multiple projects and companies. We build sustainable and profitable technology practices helping businesses curb climate change.

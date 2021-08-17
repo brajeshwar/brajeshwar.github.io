@@ -14,8 +14,7 @@ The book is written from the lens of starting and running a Startup in India. Th
 
 [![Fincurious)](/static/2020/fincurious.jpg)](http://fincurious.com)
 
-_Buy it at_
-
-- [Notion Press](https://notionpress.com/read/fincurious)
-- [Amazon](https://www.amazon.in/dp/1648999891)
-- [Flipkart](https://www.flipkart.com/fincurious-startup-finance/p/itm111e8d3dac0b6)
+Buy it at
+[Notion Press](https://notionpress.com/read/fincurious),
+[Amazon](https://www.amazon.in/dp/1648999891), or 
+[Flipkart](https://www.flipkart.com/fincurious-startup-finance/p/itm111e8d3dac0b6).
