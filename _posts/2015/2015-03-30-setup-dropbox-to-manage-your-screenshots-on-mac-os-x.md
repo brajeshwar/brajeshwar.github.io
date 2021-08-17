@@ -7,17 +7,17 @@ There are quite a lot of Screenshot management apps for Mac OS X. I like most of
 
 First, enable Dropbox to handle your Screenshots.
 
-<img src="/static/2015/03/dropbox-screenshots-707x600.png" alt="Dropbox Screenshots">
+![Dropbox)](/static/2015/dropbox-screenshots.png)
 
 Second, drop your OS X screenshots automatically into Dropbox's Screenshot folder.
 
-<em>Via the Terminal</em>
+<em>Via the Terminal
 
 `$ defaults write com.apple.screencapture location ~/Dropbox/Screenshots/;killall SystemUIServer`
 
 Or use a utility such as <a href="http://www.titanium.free.fr/onyx.html" title="OnyX">OnyX</a>
 
-<img src="/static/2015/03/onyx-screenshot-665x600.png" alt="OnyX Screenshot">
+![OnyX)](/static/2015/onyx-screenshot.png)
 
 I'm guessing you can do this on Windows and Linux too if you can automatically drop your screenshots to the Dropbox/Screenshots folder.
 
@@ -27,6 +27,6 @@ Now, the screenshots you take with your OS X is now in Dropbox and the URL is co
 
 Just in case:
 
-- <strong>CMD + SHFT + 3</strong>: Fullscreen Screenshot.
-- <strong>CMD + SHFT + 4 & drag crosshair</strong>: Screenshot of your desired area.
-- <strong>CMD + SHFT + 4 & Spacebar</strong>: Screenshot specific app, dialog boxes, etc.
+- <kbd>CMD</kbd> + <kbd>SHFT</kbd> + <kbd>3</kbd> Fullscreen Screenshot.
+- <kbd>CMD</kbd> + <kbd>SHFT</kbd> + <kbd>4</kbd>, then drag crosshair - Screenshot of your desired area.
+- <kbd>CMD</kbd> + <kbd>SHFT</kbd> + <kbd>4</kbd>, then <kbd>Spacebar</kbd> - Screenshot specific app, dialog boxes, etc.
