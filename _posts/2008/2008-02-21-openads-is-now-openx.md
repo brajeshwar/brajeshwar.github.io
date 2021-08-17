@@ -15,7 +15,7 @@ However, other than the change in its name, OpenX promises that there will be no
 
 Jon Miller joins OpenX board
 
-The latest news with OpenX is that of Jon Miller, the former CEO of AOL, <a href="http://blog.openx.org/02/jon-miller-joins-openx-board/">joining them as Chairman</a>. Jonathan Miller left AOL and has since been quite active in the Startup realm as an investor and board member. He is a partner in the <a href="http://www.brajeshwar.com/2007/comventures-merges-with-velocity-to-form-velocity-interactive-group/">Velocity Interactive Group</a> with former Fox Interactive Media chief Ross Levinsohn.
+The latest news with OpenX is that of Jon Miller, the former CEO of AOL, <a href="http://blog.openx.org/02/jon-miller-joins-openx-board/">joining them as Chairman</a>. Jonathan Miller left AOL and has since been quite active in the Startup realm as an investor and board member. He is a partner in the <a href="/2007/comventures-merges-with-velocity-to-form-velocity-interactive-group/">Velocity Interactive Group</a> with former Fox Interactive Media chief Ross Levinsohn.
 
 <a href="http://www.openx.org/">OpenX</a> is Open-Source under a GPL license, and so free to use. OpenX will make money by layering services on top of the core software, something MySQL, Wordpress, Zimbra and others have done successfully.
 

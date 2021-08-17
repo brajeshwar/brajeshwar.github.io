@@ -7,7 +7,7 @@ Today, Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/20
 
 The <a href="http://www.adobe.com/openscreenproject/">Open Screen Project</a> initiative by Adobe is supported by a group of industry leaders, including ARM, Chunghwa Telecom, Cisco, Intel, LG Electronics Inc., Marvell, Motorola, Nokia, NTT DoCoMo, Qualcomm, Samsung Electronics Co., Sony Ericsson, Toshiba and Verizon Wireless.
 
-Well, one of the missing name in the list above is that of <a href="http://www.apple.com/">Apple</a>, which feels that <a href="http://www.brajeshwar.com/2008/flash-on-the-iphone/">Flash is not good enough for the iPhone</a>. It may be remembered that CEO Steve Jobs has publicly criticized Flash for being too slow.
+Well, one of the missing name in the list above is that of <a href="http://www.apple.com/">Apple</a>, which feels that <a href="/2008/flash-on-the-iphone/">Flash is not good enough for the iPhone</a>. It may be remembered that CEO Steve Jobs has publicly criticized Flash for being too slow.
 
 The project is dedicated to driving rich Internet experiences across televisions, personal computers, mobile devices, and consumer electronics. Also supporting the Open Screen Project are leading content providers, including BBC, MTV Networks, and NBC Universal, who want to reliably deliver rich Web and video experiences live and on-demand across a variety of devices.
 
