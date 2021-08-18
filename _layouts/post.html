@@ -4,12 +4,7 @@ layout: default
 
 <main id="post" class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <p class="post-meta">
-    {{ page.date | date: '%Y %b %-d %a' }}
-    <span class="post-meta__read">
-      {% include read-time.html %}
-    </span>
-  </p>
+  <p class="post-meta">{{ page.date | date: '%Y %b %-d %a' }} <span class="post-meta__read">{%- include read-time.html -%}</span></p>
   
   <section id="post-content" class="post-content">
     {{ content }}
@@ -17,21 +12,10 @@ layout: default
 
   <div class="post-nav font-sans">
     {%- if page.previous.url -%} 
-      <a
-        href="{{ page.previous.url | prepend: site.baseurl }}"
-        class="post-nav__prev"
-        title="{{ page.previous.title }}">
-        ← Prev
-      </a>
+      <a href="{{ page.previous.url | prepend: site.baseurl }}" class="post-nav__prev" title="{{ page.previous.title }}">← Prev</a>
     {%- endif -%}
-    
     {%- if page.next.url -%}  
-      <a
-        href="{{ page.next.url | prepend: site.baseurl }}"
-        class="post-nav__next"
-        title="{{ page.next.title }}">
-        Next →
-      </a>
+      <a href="{{ page.next.url | prepend: site.baseurl }}" class="post-nav__next" title="{{ page.next.title }}">Next →</a>
     {%- endif -%} 
   </div>
 </main>
