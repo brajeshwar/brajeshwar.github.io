@@ -10,7 +10,6 @@
 ## TODO
 
 - Let's get rid of front-matter for posts
-
 - light/dark mode button?
 - Fix BG Color (light / dark) for PRE/CODE
 - Fix Form Color  (light / dark)

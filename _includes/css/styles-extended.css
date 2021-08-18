@@ -1,6 +1,11 @@
 /*
- extended style
+  jekyll supports sass out of the box.
+  Use only when plain CSS do not suffice.
 */
+$breakpoint-small:  420px;
+$breakpoint-medium: 640px;
+$breakpoint-large:  800px;
+$breakpoint-extralarge: 1200px;
 
 header {
   display: flex;

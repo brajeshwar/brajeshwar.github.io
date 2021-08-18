@@ -226,6 +226,7 @@ figure {
   text-align: center;
   background: var(--background-color-alt);
   border-radius: var(--border-radius);
+  border-bottom: 1px solid var(--border-color);
 }
 
 figure img {

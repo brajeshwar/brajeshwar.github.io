@@ -3,7 +3,7 @@ function externalLinks() {
     var b = c[a];
     b.getAttribute("href")
     && b.hostname !== location.hostname
-    && (b.target = "_brajeshwar")
+    && (b.target = "_new")
     && (b.rel = "noopener")
   }
 }
