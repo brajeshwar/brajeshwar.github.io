@@ -1,8 +1,6 @@
 # Brajeshwar Oinam
 
-> I design experiences, opportunities, careers, teams, products, and organizations.
-
-› [brajeshwar.com](https://brajeshwar.com)
+[brajeshwar.com](https://brajeshwar.com)
 
 ## Features
 
@@ -10,6 +8,8 @@
 - Wide image (figure by default) extends beyond content `<img class="large-center" src="">`
 
 ## TODO
+
+- Let's get rid of front-matter for posts
 
 - light/dark mode button?
 - Fix BG Color (light / dark) for PRE/CODE

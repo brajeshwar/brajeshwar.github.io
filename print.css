@@ -5,6 +5,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 header,
 footer,
 iframe,
+img.large-center,
 figure.feature,
 .post-nav {
   display: none;
