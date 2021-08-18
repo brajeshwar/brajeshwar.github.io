@@ -9,7 +9,7 @@ My name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
-<a href="https://en.wikipedia.org/wiki/Floppy_disk" title="8-inch, 5¼-inch, and 3½-inch Floppy Disks"><img class="large-center" src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg" alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks" loading="lazy"></a>
+[![8-inch, 5¼-inch, and 3½-inch Floppy Disks)](https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg)](https://en.wikipedia.org/wiki/Floppy_disk)
 
 ## Work
 
@@ -55,15 +55,6 @@ I had worked with some fantastic companies. I was one of the Creative Directors 
 I continue to leveraging technology in finding solutions to challenges and problems. For details of my professional timeline, view my [Curriculum Vitae](https://cv.brajeshwar.com) ([PDF](https://cv.brajeshwar.com/cv.brajeshwar.oinam.pdf)).
 
 ## Family
-
-<figure>
-  <a href="https://oinam.pictures/"
-    title="Oinam Family">
-    <img  src="https://cdn.oinam.com/img/oinam/oinam-family-2017.jpg"
-      alt="Oinam Family"
-      loading="lazy"></a>
-  <figcaption>Shanta Huirem, Laaija, Amara, and Brajeshwar Oinam</figcaption>
-</figure>
 
 I've known Shanta since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
 

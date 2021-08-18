@@ -7,10 +7,10 @@
 
 <title>
   {%- if page.type == "home" -%}
-      {{ page.title }}
-    {%- else -%}
-      {{ page.title }} - {{ site.title }}
-    {%- endif -%}
+    {{ page.title }}
+  {%- else -%}
+    {{ page.title }} - {{ site.title }}
+  {%- endif -%}
 </title>
 
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -18,11 +18,10 @@
 
 <style type="text/css">
 {%- capture include_to_scssify -%}
-  {% include css/color-theme-oinam.css %}
   {% include css/settings.css %}
-  {% include css/style-base.css %}
-  {% include css/style-custom.css %}
-  {% include css/code.css %}
+  {% include css/styles.css %}
+  {% include css/styles-extended.css %}
+  {% include css/styles-code.css %}
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines  -}}
 </style>
