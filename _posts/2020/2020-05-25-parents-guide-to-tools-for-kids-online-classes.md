@@ -1,7 +1,4 @@
----
-layout: post
-title: A Non-Technical Parents’ Guide to Digital Tools for Kids Online Classes
----
+# A Non-Technical Parents’ Guide to Digital Tools for Kids Online Classes
 
 A new school season has started, and schools are moving online for the classes. There are lots of changes, and they are happening real fast, and all-at-once. Not all parents are ready to switch to a new lifestyle so fast, but we have to.
 

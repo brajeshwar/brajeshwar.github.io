@@ -45,9 +45,9 @@ feed:
   author: Brajeshwar
 
 titles_from_headings:
-  enabled:     true
+  enabled: true
   strip_title: true
-  collections: false
+  collections: true
 
 # Posts
 defaults:
@@ -57,11 +57,6 @@ defaults:
     values:
       layout: 'post'
       permalink: '/:year/:title/'
-  - scope:
-      path: '_posts'
-      layout: 'posts'
-    values:
-      strip_title: true
   - scope:
       path: '_redirect'
       type: 'pages'
