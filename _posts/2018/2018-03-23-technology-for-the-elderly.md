@@ -1,7 +1,4 @@
----
-layout: post
-title: Technology for the Elderly
----
+# Technology for the Elderly
 
 The population is aging more rapidly than at any point in history. Healthcare improvements along with a better understanding of good nutrition and healthy habits allow us to advance to older ages with greater health than ever before. 
 

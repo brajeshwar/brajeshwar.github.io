@@ -7,7 +7,7 @@ https://www.forbes.com/sites/tomcoughlin/2021/03/31/2021-world-backup-day/
 
 # The Tao of Backup
 
-Original: http://taobackup.com
+http://taobackup.com
 
 A novice wanted to learn the Tao of Backup. The master said, "To become englightened, you must master the seven heads of Backup. He who knows the heads will keep all his data forever. He who knows them not will lose all his data," and with that the lesson began ...
 

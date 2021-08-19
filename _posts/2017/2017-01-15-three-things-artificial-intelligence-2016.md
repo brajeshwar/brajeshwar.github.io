@@ -1,7 +1,4 @@
----
-layout: post
-title: Three Things Artificial Intelligence did in 2016
----
+# Three Things Artificial Intelligence did in 2016
 
 ![Rembrandt Painting with AI)](/static/2017/rembrandt-painting-ai.jpg)
 

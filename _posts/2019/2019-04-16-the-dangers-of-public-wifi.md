@@ -1,7 +1,4 @@
----
-layout: post
-title: The Dangers of Public WiFi
----
+# The Dangers of Public WiFi
 
 WiFi is a miraculous invention that allows for simple and effective public internet usage over a wireless connection. With so many public establishments offering free wifi, it has become very easy to simply log in while you're sitting at your local coffee shop and browse away.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Praise in Public, Criticize in Private
----
+# Praise in Public, Criticize in Private
 
 Recently, I saw an Investor publishing a screenshot of his conversation with an entrepreneur. The investor (VC) was not happy that the entrepreneur texted him at odd hours. He ridiculed and told him not to contact him again. The entrepreneur was not happy and gave references to becoming Jack Ma one day.
 

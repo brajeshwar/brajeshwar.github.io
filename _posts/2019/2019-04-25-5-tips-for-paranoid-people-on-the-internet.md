@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Tips for Paranoid People on the Internet
----
+# 5 Tips for Paranoid People on the Internet
 
 Do you remember that old quote, "Just because you're paranoid doesn't mean they aren't after you?" It seems like it is becoming more and more relevant every day. Almost weekly, a new scandal emerges from Big Tech, detailing the wholesale trading and theft of our personal information. But aside from all the headline-grabbing, one-off incidents, the much bigger concern is the day to day invasions of our privacy that are just standard policy for many of these companies. 
 

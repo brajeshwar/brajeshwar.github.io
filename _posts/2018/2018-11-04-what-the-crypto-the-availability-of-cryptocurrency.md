@@ -1,7 +1,4 @@
----
-layout: post
-title: What the Crypto - The Availability of Cryptocurrency
----
+# What the Crypto - The Availability of Cryptocurrency
 
 Over the past several years, cryptocurrencies have suddenly become quite popular. People from all parts of the world trade and invest in it, and some even make millions. The market value of each cryptocurrency also bolsters the fact that they are not going anywhere soon.
 

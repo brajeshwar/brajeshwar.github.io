@@ -1,7 +1,4 @@
----
-layout: post
-title: Free Lectures (videos) from Princeton on Bitcoin and Cryptocurrency
----
+# Free Lectures (videos) from Princeton on Bitcoin and Cryptocurrency
 
 You have definitely heard of [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin) and wanted to know all the details. Bitcoin is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. It was the first practical implementation and is currently the most prominent triple entry bookkeeping system in existence.
 

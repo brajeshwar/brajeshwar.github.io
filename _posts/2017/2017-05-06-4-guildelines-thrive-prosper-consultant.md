@@ -1,7 +1,4 @@
----
-layout: post
-title: 4 guildelines to thrive and prosper as a consultant
----
+# 4 guildelines to thrive and prosper as a consultant
 
 As a consultant, you give advice on how to solve problems, you provide recommendations on best practices, and you show people how to use specialized software, equipment, or tools. It's a great job but requires hard work to get to the point where people trust your opinion.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Education Centers should think like big businesses when it comes to technology
----
+# Education Centers should think like big businesses when it comes to technology
 
 Education centers, especially higher education centers, should take technology cues from the nation's leading businesses. To be successful, the latest technology has to be leveraged to improve attendance, garner new students, retain current students, and improve the student's overall experience. The following shows how big businesses are driving sales and gaining new customers, and how education centers can follow suit:
 

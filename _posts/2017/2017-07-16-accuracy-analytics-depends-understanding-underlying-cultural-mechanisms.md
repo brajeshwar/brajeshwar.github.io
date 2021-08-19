@@ -1,7 +1,4 @@
----
-layout: post
-title: Accuracy in Analytics depends on understanding underlying cultural mechanisms
----
+# Accuracy in Analytics depends on understanding underlying cultural mechanisms
 
 Former Speaker of the United States House of Representatives Tip O’Neill famously said “all politics is local” when referring to the basic principles of his profession. In many ways, the same can be said of analytics. While the internet as a whole is sprawling and its user base massive, this seemingly singular entity is ultimately made up of thousands of different cultures and sub-cultures.
 

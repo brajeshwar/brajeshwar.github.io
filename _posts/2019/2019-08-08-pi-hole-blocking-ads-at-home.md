@@ -1,7 +1,4 @@
----
-layout: post
-title: Pi-hole - Blocking Ads at Home
----
+# Pi-hole - Blocking Ads at Home
 
 [Pi-hole](https://pi-hole.net/) is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software. The best part of Pi-hole is that it can work off cheap hardware such as a [Raspberry Pi](https://www.raspberrypi.org).
 
