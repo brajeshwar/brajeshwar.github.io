@@ -1,7 +1,4 @@
----
-layout: post
-title: IBM's First PC was Released 40-Years Ago
----
+# IBM's First PC was Released 40-Years Ago
 
 [![IBM Personal Computer Model 5150)](https://cdn.oinam.com/img/computer/IBM-PC-model-5150.webp)](https://en.wikipedia.org/wiki/IBM_Personal_Computer)
 

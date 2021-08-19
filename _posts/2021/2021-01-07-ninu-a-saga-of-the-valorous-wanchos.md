@@ -1,7 +1,4 @@
----
-layout: post
-title: Ninu - A Saga of the Valorous Wanchos
----
+# Ninu - A Saga of the Valorous Wanchos
 
 ![Ninu - A Saga of the Valorous Wanchos)](/static/2021/ninu.jpg)
 

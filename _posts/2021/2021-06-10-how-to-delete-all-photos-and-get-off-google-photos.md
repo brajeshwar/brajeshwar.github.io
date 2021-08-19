@@ -1,7 +1,4 @@
----
-layout: post
-title: How to delete all Photos and get off Google Photos
----
+# How to delete all Photos and get off Google Photos
 
 If you are on the Internet, you might have used one or more of [Google's many products](https://about.google/intl/ALL_us/products/). Sometimes, Google makes decisions that impact the lives of many people. Some of these decisions have a detrimental effect on people.
 

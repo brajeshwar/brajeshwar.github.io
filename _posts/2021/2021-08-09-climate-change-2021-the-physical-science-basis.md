@@ -1,7 +1,4 @@
----
-layout: post
-title: Climate Change 2021 - The Physical Science Basis
----
+# Climate Change 2021 - The Physical Science Basis
 
 The [Intergovernmental Panel on Climate Change](https://www.ipcc.ch) (IPCC) has released the most comprehensive and conclusive "state of the science" on the climate crisis. Why it is happening, how it impacts every region of the planet, how much worse things will get, and what we must do to avoid the worst consequences.
 
