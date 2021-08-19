@@ -8,7 +8,7 @@ The reports states that with the right societal choices these three disruptions 
 
 We already have the energy, transportation and food technologies needed to reduce over 90% of greenhouse gas (GHG) emissions worldwide in the next 15 years. With the right societal choices, we can stop climate pollution at the levels needed to keep global warming well below 2 degrees Celsius.
 
-<figure class="feature">
+<figure>
   <img src="/static/2021/solar-wind-energy.jpg" alt="Wind Power over a Sunset" loading="lazy">
   <figcaption>
     Wind Power over a Sunset.

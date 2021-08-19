@@ -1,7 +1,4 @@
----
-layout: post
-title: If you show a gun, fire it
----
+# If you show a gun, fire it
 
 I tend to be the super-excited founder who will talk and suggest doing things that would likely be years ahead of the current circumstances. My co-founder, and business partner for the last 8+ years, is the one who will help me glide down to earth, all the way to the very [first principle](https://en.wikipedia.org/wiki/First_principle).
 
