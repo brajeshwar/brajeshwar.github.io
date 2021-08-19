@@ -1,7 +1,4 @@
----
-layout: post
-title: Design Leaders
----
+# Design Leaders
 
 Design Leaders aren't super-designers. Their role is NOT to 'approve or disapprove' other designers. Nor is it to dot the final pixel-perfect or sweat the final details to a design.
 

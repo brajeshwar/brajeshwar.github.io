@@ -1,7 +1,4 @@
----
-layout: post
-title: 3 Ways AI is Contributing to Businesses Success
----
+# 3 Ways AI is Contributing to Businesses Success
 
 Tech innovations like artificial intelligence are no longer the stuff of science-fiction. Thanks to advancements made in machine learning, we now have AI that can <a href="https://mashable.com/2017/06/12/ai-machine-math/">complete notoriously difficult university entrance exams</a> 12 times faster than the average human. That's just one example of how far this technology has come.
 

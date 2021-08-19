@@ -1,7 +1,4 @@
----
-layout: post
-title: Some of the Best Phones and Apps for the Elderly
----
+# Some of the Best Phones and Apps for the Elderly
 
 For various reasons, many seniors have been left behind with regard to the digital revolution. They never could get those clocks to stop flashing 12:00. Then they had to figure out how to turn on a computer, and why was important to do so. After that, the internet. And now we have the smartphone, a bridge too far for many seniors.
 

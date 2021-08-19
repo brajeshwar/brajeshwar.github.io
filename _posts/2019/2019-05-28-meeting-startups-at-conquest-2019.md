@@ -1,7 +1,4 @@
----
-layout: post
-title: Meeting Startups at Conquest, 2019
----
+# Meeting Startups at Conquest, 2019
 
 I'm one of the mentors at the <a href="http://conquest.org.in/">Conquest</a>, 2019. I met up with some of the Startups.
 

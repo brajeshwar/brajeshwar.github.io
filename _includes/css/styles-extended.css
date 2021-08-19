@@ -49,8 +49,9 @@ header nav {
   font-weight: 500;
 }
 
-header .header-tool {
-  margin-left: auto;
+.logo {
+  background: var(--background-color-highlight);
+  border-radius: var(--border-radius-round);
 }
 
 /* nav links (header/footer) */

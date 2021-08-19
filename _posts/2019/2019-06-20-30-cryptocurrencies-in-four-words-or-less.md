@@ -1,7 +1,4 @@
----
-layout: post
-title: 30+ Cryptocurrencies in Four Words or Less
----
+# 30+ Cryptocurrencies in Four Words or Less
 
 The word "crypto" in the cryptocurrency is referred to as complicated cryptography which allows for a particular digital token to be generated or stored, and to transact securely, also typically and anonymously. Other than this important "crypto" feature of the currencies, it is a common commitment to the decentralization. The cryptocurrencies are typically developed as a code by teams, which has built-in mechanisms for its issuance which is often, maybe not always through a process called "mining" and few other controls.
 

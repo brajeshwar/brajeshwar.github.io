@@ -1,7 +1,4 @@
----
-layout: post
-title: Libra - Cryptocurrency by Facebook, an Infographic
----
+# Libra - Cryptocurrency by Facebook, an Infographic
 
 Libra is a cryptocurrency designed using blockchain technology. It is built by the most popular social media giant Facebook. The main motive behind developing Libra is to emancipate millions of underbanked and unbanked people by offering them similar financial opportunities.
 

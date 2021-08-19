@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: About this Site
 permalink: /about/brajeshwar.com/
 update: Jul 11, 2021

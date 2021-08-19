@@ -1,7 +1,4 @@
----
-layout: post
-title: BITS Conquest 2019 Finale
----
+# BITS Conquest 2019 Finale
 
 Eleven Startups pitched at the BITS <a href="http://www.conquest.org.in">Conquest</a> 2019 Finale.
 

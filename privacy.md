@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Privacy
 permalink: /privacy/
 update: Jul 11, 2021

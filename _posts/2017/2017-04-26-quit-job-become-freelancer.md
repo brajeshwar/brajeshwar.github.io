@@ -1,7 +1,4 @@
----
-layout: post
-title: How To Quit Your Job And Become A Freelancer
----
+# How To Quit Your Job And Become A Freelancer
 
 The reason you show up day after day at your job is because you need a paycheck. On the surface of it, this looks like a good reason to continue to drag yourself to a place you've quietly come to despise and to associate with people with whom you have little in common. But, when you examine your predicament a little more closely, you can be much happier, freer, and more prosperous by becoming a freelancer.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Should Businesses Accept Cryptocurrencies - an Infographic
----
+# Should Businesses Accept Cryptocurrencies - an Infographic
 
 Plenty of major companies like Subway, AT&T, Expedia, Dish Network, and Microsoft have recently decided to accept cryptocurrency. These are large corporations that have the resources to experiment with relatively new technology.
 

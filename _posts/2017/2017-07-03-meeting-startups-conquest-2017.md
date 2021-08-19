@@ -1,7 +1,4 @@
----
-layout: post
-title: Meeting the Startups at Conquest, 2017
----
+# Meeting the Startups at Conquest, 2017
 
 Last weekend, I was invited to talk and critique some of the Startups at the <a href="http://conquest.org.in/">Conquest</a> International Startup Challenge, 2017. It was short sessions of about 20-30 minutes each with the Startups. Most of them are looking for investments. The generic suggestion I mustered up was not to limit to investors in India but to look outside too. The other key missing piece was that they need to hustle a lot.
 

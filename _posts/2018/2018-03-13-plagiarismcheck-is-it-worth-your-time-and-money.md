@@ -1,7 +1,4 @@
----
-layout: post
-title: PlagiarismCheck - is it worth your time and money
----
+# PlagiarismCheck - is it worth your time and money
 
 The present-day digital world gains the upper hand when it comes to writing and publishing content online. Everyone can create and share them with the public, so the issue of plagiarism and copyright infringement becomes essential more than ever. To make sure they write original works and no one duplicates them, writers consider plagiarism check tools and services to protect content from copy-pasting.
 

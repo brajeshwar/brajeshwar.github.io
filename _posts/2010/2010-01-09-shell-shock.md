@@ -20,4 +20,4 @@ In Linux, bash is default. Other OSs use `csh` or `tcsh` as the default, so use 
 
 GUI shells abound for Windows as well as the X Window System. Even Windows Recovery Console is a shell, albeit a CLI. Want to have fun with shells ASAP? Fire up your browser and go to <a href="http://goosh.org/">goosh.org</a> to test-drive `Google Shell` or `goosh`, an open source browser based command line shell that is actually a front end for Google search. Imagine typing out commands, keywords and search strings to search. Shell shocked?
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/0PxTAn4g20U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include video.html videoURL="https://www.youtube.com/embed/0PxTAn4g20U" %}

@@ -1,7 +1,5 @@
----
-layout: post
-title: New and Interesting Augmented Reality (ARKit) Apps for iPhones and iPads
----
+# New and Interesting Augmented Reality (ARKit) Apps for iPhones and iPads
+
 <a href="http://scobleizer.com/">Robert Scoble</a> published a <a href="https://www.facebook.com/RobertScoble/posts/10155735250559655">list of ARKit Apps</a> (Augmented Reality). I found it interesting and listing it here, in no particular order, for the records. You need an ARKit-enabled iPhone or iPad to play with these apps.
 
 1. <a href="https://itunes.apple.com/us/app/sketchfab/id1201268000?mt=8">Sketchfab</a> - drop 3D objects near you.
