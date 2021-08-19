@@ -1,7 +1,4 @@
----
-layout: post
-title: Rethinking Climate Change
----
+# Rethinking Climate Change
 
 [RethinkX](https://www.rethinkx.com), an independent think-tank that analyzes and forecasts the speed and scale of technology-driven disruption and its implications across society, has released a new report -- [Rethinking Climate Change](https://www.rethinkx.com/climate-implications) - How Humanity Can Choose to Reduce Emissions 90% by 2035 through the Disruption of _Energy, Transportation, and Food_ with Existing Technologies.
 

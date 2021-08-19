@@ -1,7 +1,4 @@
----
-layout: post
-title: Most Crypto-Friendly Cities
----
+# Most Crypto-Friendly Cities
 
 About 3.3 million years ago humans first technology involved shaping and sharpening stones for a variety of uses. Now, thanks to the (comparatively) quite recent technological advancement of computer networks leading us to the modern internet, today data scientists are using blockchain to revolutionalize our worlds and introduce crypto-currencies into the mainstream.
 

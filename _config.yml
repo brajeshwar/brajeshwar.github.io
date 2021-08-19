@@ -32,7 +32,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-optional-front-matter # https://github.com/benbalter/jekyll-optional-front-matter
   - jekyll-titles-from-headings # https://github.com/benbalter/jekyll-titles-from-headings/
-  - jekyll-redirect-from
+  - jekyll-redirect-from # https://github.com/jekyll/jekyll-redirect-from
 
 algolia:
   application_id: JCOTPOLESP
@@ -43,6 +43,11 @@ algolia:
 feed:
   posts_limit: 10
   author: Brajeshwar
+
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+  collections: false
 
 # Posts
 defaults:
@@ -58,12 +63,18 @@ defaults:
       type: 'pages'
     values:
       layout: 'redirect'
-  # jekyll-titles-from-headings
+  # default to post for a
   # - scope:
-  #     path: '_posts'
-  #     layout: 'posts'
+  #     path: "_posts"
+  #     type: "posts"
   #   values:
-  #     strip_title: true
+  #     layout: "post"
+  # jekyll-titles-from-headings
+  - scope:
+      path: '_posts'
+      layout: 'posts'
+    values:
+      strip_title: true
 
 # jekyll-redirect-from
 collections:

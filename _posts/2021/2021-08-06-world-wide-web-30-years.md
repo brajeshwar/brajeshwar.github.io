@@ -1,7 +1,4 @@
----
-layout: post
-title: The World Wide Web - 30 Years
----
+# The World Wide Web - 30 Years
 
 ![WWW - Try It)](/static/2021/www-try-it.jpg)
 
