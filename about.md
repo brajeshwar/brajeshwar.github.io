@@ -2,7 +2,6 @@
 layout: default
 title: About
 permalink: /about/
-update: Jul 11, 2021
 ---
 
 My name is Brajeshwar Oinam.
