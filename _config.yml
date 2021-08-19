@@ -57,24 +57,16 @@ defaults:
     values:
       layout: 'post'
       permalink: '/:year/:title/'
-  # jekyll-redirect-from
-  - scope:
-      path: '_redirect'
-      type: 'pages'
-    values:
-      layout: 'redirect'
-  # default to post for a
-  # - scope:
-  #     path: "_posts"
-  #     type: "posts"
-  #   values:
-  #     layout: "post"
-  # jekyll-titles-from-headings
   - scope:
       path: '_posts'
       layout: 'posts'
     values:
       strip_title: true
+  - scope:
+      path: '_redirect'
+      type: 'pages'
+    values:
+      layout: 'redirect'
 
 # jekyll-redirect-from
 collections:

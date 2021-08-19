@@ -1,4 +1,4 @@
-# Bluesky - Decentralized Social Web
+# Bluesky, a Decentralized Social Web
 
 <a href="https://blueskyweb.org"><img class="small-right" src="/static/logo/bluesky-logo.gif" alt="Bluesky"></a>
 

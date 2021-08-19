@@ -6,6 +6,8 @@ permalink: /blog/
 
 {% include search-google.html %}
 
+> There ar {{site.posts|size}} articles written between 2001 to {{ "now" | date: "%Y" }}. More than 250 articles have been deleted, and pruned.
+
 {%- for post in site.posts -%}
 {%- assign currentdate = post.date | date: "%Y" -%}
 

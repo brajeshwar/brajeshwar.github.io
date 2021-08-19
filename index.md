@@ -9,8 +9,6 @@ I am an entrepreneur, and technologist, with a deep focus on leadership in produ
 
 I write about design, entrepreneurship, productivity, software, startups, and technology. Here are some recent articles from the [Blog](/blog/).
 
-[//]: # {{site.posts|size}}
-
 <div class="content-extend">
   <ul class="blog-articles__list">
     {%- for post in site.posts limit:5 -%}
