@@ -49,10 +49,6 @@ header nav {
   font-weight: 500;
 }
 
-.logo {
-  background: var(--background-color-highlight);
-  border-radius: var(--border-radius-round);
-}
 
 /* nav links (header/footer) */
 nav a {
@@ -181,12 +177,15 @@ img.large-center {
   color: var(--text-color-alt);
 }
 
-/* posts-articles --------------------------------------- */
+/* posts/articles --------------------------------------- */
 
 .post-meta,
 .post-nav {
+  display: flex;
+  justify-content: space-between;
+
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: var(--space-half) var(--space-base);
 
   background: var(--background-color-alt);
   border-radius: var(--border-radius);
@@ -198,20 +197,8 @@ img.large-center {
   opacity: var(--opacity-low);
 }
 
-.post-meta__read {
-  display: inline-block;
-  float: right;
-}
-
-.post-nav {
-  padding: 0;
-  text-align: center;
-}
-
 .post-nav a {
-  display: inline-block;
-  padding: 1rem 2rem;
-  
+  padding: var(--space-half);
   text-decoration: none;
 }
 
