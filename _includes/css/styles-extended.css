@@ -7,6 +7,10 @@ $breakpoint-medium: 640px;
 $breakpoint-large:  800px;
 $breakpoint-extralarge: 1200px;
 
+:root {
+  --logo-size: 4rem;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -25,8 +29,8 @@ header h1 a {
   display: inline-block;
   opacity: var(--opacity-no);
   
-  width: 4rem;
-  height: 4rem;
+  width: var(--logo-size);
+  height: var(--logo-size);
   
   vertical-align: middle;
   
@@ -40,6 +44,8 @@ header h1 a:hover, header h1 a:active {
 
 header h1 img {
   border-radius: 100%;
+  width: var(--logo-size);
+  height: var(--logo-size);
 }
 
 header nav {
