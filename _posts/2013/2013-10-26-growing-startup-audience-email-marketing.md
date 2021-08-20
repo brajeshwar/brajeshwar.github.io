@@ -1,7 +1,4 @@
----
-layout: post
-title: Growing your Startup Audience through Email Marketing
----
+# Growing your Startup Audience through Email Marketing
 
 Online marketing is a whole new world for traditional businesses and entrepreneurs looking for an eCommerce goldmine, and email marketing is at once the most powerful force in this world and also the most maligned one.
 
@@ -11,9 +8,7 @@ You may think that you can get hold of everyone on social media, so why bother w
 
 Secondly, there are more email accounts than social media accounts. Everyone with a social media account has an email, but not everyone with an email is one active on social media. Also, there's a world of difference in how you market your company, brand, product and yourself through email and on social media. Email is a 1-on-1 communication system, and that's always going to be more effective in sales and marketing.
 
-On top of all this, startups are especially in a dire need to reach their audience and prospective customers. Sure you have a brilliant idea and maybe a functional product, but no one knows you exist. You can't go the Mad Men because startups don't have the money to advertise. What you need is a grassroots campaign to introduce your company and product to customers, one at a time if necessary. You'll do social media, of course. But [Email marketing](http://www.salmat.com.au/products-services/email-marketing/) is also an integral component, primarily because it's the only affordable marketing channel for startups short of cash.
-
-[//]: # http://www.salmat.com.au/products-services/email-marketing/ is a paid link.
+On top of all this, startups are especially in a dire need to reach their audience and prospective customers. Sure you have a brilliant idea and maybe a functional product, but no one knows you exist. You can't go the Mad Men because startups don't have the money to advertise. What you need is a grassroots campaign to introduce your company and product to customers, one at a time if necessary. You'll do social media, of course. But Email marketing is also an integral component, primarily because it's the only affordable marketing channel for startups short of cash.
 
 Then there's the question of beta testing, for which again you need people to sign up. Getting a mailing list all set up right from Day 1 means you have the chance to ask every interested visitor on your website to sign up for the beta beforehand. You're killing two or three birds - you get all the beta testers you need, they gin up prelaunch publicity for you by sharing it with their friends, and you now have a mailing list filled with subscribers who are all potential customers after you launch.
 

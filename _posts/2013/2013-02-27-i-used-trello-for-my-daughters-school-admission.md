@@ -1,7 +1,4 @@
----
-layout: post
-title: I used Trello for my daughter's school admission
----
+# I used Trello for my daughter's school admission
 
 In India, we have lots of good schools. The problem is getting to the right one in the right location. Ask any parent and they will tell you their adventurous stories of how they navigated through the chaotic processes of getting their kid admitted to the school of their choice.
 
