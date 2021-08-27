@@ -1,4 +1,7 @@
-/* change and play with the settings here */
+/*
+  default color-theme
+  change and play with the colors
+*/
 :root {
   color-scheme: light dark;
 
@@ -51,6 +54,8 @@
   }
 }
 
+
+/* --------------------------------------- */
 :root {
   --font-family-sans:       system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-family-serif:      Georgia, 'Times New Roman', serif;
@@ -59,7 +64,7 @@
 
   /* an ideal reading width - 48rem - 768px based off 16px:1rem */
   /* 42 is an interesting number. ;-) */
-  /* remember to set this to media-queries too */
+  /* remember to set this to media-queries too if you are not handling it separately */
   --body-width: 42rem;
 
   /* default: minor third scale progression */
@@ -97,6 +102,12 @@
 
 
   /* typography */
+  /*
+    https://fonts.google.com/
+    'PT Serif'
+    'Libre Baskerville'
+    'Merriweather'
+  */
   --font-family: var(--font-family-serif);
   --font-family-headings: var(--font-family-serif);
   
@@ -105,11 +116,12 @@
   --font-size-smaller: 75%;
   --font-size-smallest: 65%;
   
-  --line-height: 1.6;
+  --line-height: 1.618;
   --line-height-heading: 1.25;
 
   --border-width: 1px;
   --border-width-alt: 3px;
+  
   --border-radius: 0.3rem;
   --border-radius-high: 0.7rem;
   --border-radius-round: 100%;

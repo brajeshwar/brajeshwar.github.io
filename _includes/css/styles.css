@@ -85,8 +85,8 @@ a:active {
 }
 
 blockquote {
-  margin: 2rem 1rem;
-  padding: .5rem 1rem .5rem 2rem;
+  margin: var(--space-double) var(--space-base);
+  padding: var(--space-half) var(--space-base) var(--space-half) var(--space-double);
   overflow: auto;
   opacity: var(--opacity-low);
 
@@ -124,8 +124,8 @@ kbd {
 }
 
 pre {
-  margin: 1rem 0;
-  padding: 1rem 2rem;
+  margin: var(--space-base) 0;
+  padding: var(--space-base) var(--space-double);
   max-width: 100%;
   overflow: auto;
   overflow-x: auto;
@@ -152,11 +152,11 @@ abbr {
 }
 
 details {
-  padding: .6rem 1rem;
+  padding: var(--space-half) var(--space-base);
   background: var(--background-color-accent);
   border: 1px solid var(--border-color);
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-base);
 }
 
 summary {
@@ -165,11 +165,11 @@ summary {
 }
 
 details[open] {
-  padding-bottom: .75rem;
+  padding-bottom: var(--space-half);
 }
 
 details[open] summary {
-  margin-bottom: .5rem;
+  margin-bottom: var(--space-half);
 }
 
 details[open]>*:last-child {
@@ -190,8 +190,8 @@ hr {
 }
 
 mark {
-  padding: 2px 5px;
-  border-radius: 4px;
+  padding: calc(0.5 * var(--space-quarter)) var(--space-quarter);
+  border-radius: var(--border-radius);
   background: var(--background-color-accent);
 
   /* repair edges of wrapped inline elements */
@@ -213,30 +213,27 @@ main video {
 }
 
 figure {
-  margin: 1rem 0;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  
   padding: 0;
+  margin: var(--space-base) 0;
 
-  width: 100vw;
-  max-width: var(--image-width-max);
-  transform: translateX(calc(50vw - 50%));
-  
-  text-align: center;
   background: var(--background-color-alt);
   border-radius: var(--border-radius);
   border-bottom: 1px solid var(--border-color);
+
+  text-align: center;
 }
 
 figure img {
+  display: block;
   width: 100%;
   height: auto;
 }
 
 figcaption {
   opacity: var(--opacity-low);
-  padding: 0 1rem 0.5rem;
+  margin: 0;
+  padding: var(--space-half);
+  
   font-family: var(--font-family-sans);
   font-size: var(--font-size-smaller);
 }
@@ -249,23 +246,15 @@ audio {
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: var(--space-double) 0;
 }
 
 td,
 th {
-  border: 1px solid var(--border-color);
   text-align: left;
-  padding: var(--space-half);
 }
 
 th {
-  background: var(--background-color-highlight);
   font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background: var(--background-color-alt);
 }
 
 table caption {

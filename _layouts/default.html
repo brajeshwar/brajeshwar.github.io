@@ -23,7 +23,9 @@
   {% include css/settings.css %}
   {% include css/styles.css %}
   {% include css/styles-extended.css %}
-  {% include css/styles-code.css %}
+    {% if page.type == posts %}
+    {% include css/styles-code.css %}
+    {% endif %}
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines  -}}
 </style>

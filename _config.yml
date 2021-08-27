@@ -70,6 +70,7 @@ collections:
 
 # Exclude from processing.
 exclude:
+  - _drafts
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
