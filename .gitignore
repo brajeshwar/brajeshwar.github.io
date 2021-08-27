@@ -1,6 +1,4 @@
 *.gem
-*.sublime-project
-*.sublime-workspace
 .bundle
 .jekyll-cache
 .jekyll-metadata

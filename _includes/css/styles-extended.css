@@ -81,6 +81,7 @@ footer {
   font-size: var(--font-size-smaller);
 }
 
+/* larger screens */
 @media (min-width: $breakpoint-large) {
   blockquote,
   .content-extend {
@@ -90,6 +91,15 @@ footer {
   
   header {
     margin-left: calc(-1 * 5rem);
+  }
+
+  figure {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    
+    width: 100vw;
+    max-width: var(--image-width-max);
+    transform: translateX(calc(50vw - 50%)); 
   }
 }
 
@@ -118,8 +128,6 @@ img.large-center {
   
   transform: translateX(calc(50vw - 50%));
 }
-
-.gallery {}
 
 /* for smaller screens, have full-width contents but not round corners */
 @media (max-width: $breakpoint-medium) {
@@ -155,6 +163,7 @@ img.large-center {
 .blog-articles__list {
   margin: var(--space-base) 0;
   padding: 0;
+  
   background: var(--background-color);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
@@ -218,27 +227,6 @@ img.large-center {
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
 }
 
-.site-search table,
-.site-search table th,
-.site-search table td, {
-  border: 0 none;
-  padding: var(--space-quarter);
-  margin: 0;
-}
-
-/* theme switcher --------------------------------------- */
-
-
-/* UTILITIES */
-
-/* clamp content to one line */
-.one-liner {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-
 /* responsive video */
 .video-wrap {
   position: relative;
@@ -268,16 +256,22 @@ img.large-center {
 }
 
 
-/* debug */
-/* attach a "?" class to debug with a blinking box */
+
+/* UTILITIES --------------------------------------- */
+
+/* clamp content to one line */
+.one-liner {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/* debug: attach a "?" class to debug with a blinking box */
 .\? {
   animation: \?wobble 0.5s ease-in-out alternate infinite;
 }
 @keyframes \?wobble {
-  0% {
-    box-shadow: inset 2px 2px gold, inset -2px -2px gold;
-  }
-  100% {
-    box-shadow: inset 7px 7px red, inset -7px -7px red;
-  }
+  0% { box-shadow: inset 1px 1px gold, inset -1px -1px gold; }
+  100% { box-shadow: inset 5px 5px red, inset -5px -5px red; }
 }
