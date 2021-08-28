@@ -11,4 +11,3 @@ I am an entrepreneur, and technologist, with a deep focus on leadership in produ
 I co-founded [Valinor Earth](https://valinor.earth) where we build sustainable and profitable technology practices helping businesses curb climate change.
 
 I write about design, entrepreneurship, productivity, software, startups, and technology.
-

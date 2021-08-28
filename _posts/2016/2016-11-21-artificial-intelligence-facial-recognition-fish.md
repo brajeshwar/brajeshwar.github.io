@@ -1,7 +1,4 @@
----
-layout: post
-title: Artificial Intelligence, Facial Recognition, and ... Fish?
----
+# Artificial Intelligence, Facial Recognition, and ... Fish?
 
 ![Faces)](/static/2016/ui-faces.jpg)
 

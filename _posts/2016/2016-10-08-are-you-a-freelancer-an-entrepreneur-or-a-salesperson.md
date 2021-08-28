@@ -1,7 +1,4 @@
----
-layout: post
-title: Are you a Freelancer, an Entrepreneur or a Salesperson?
----
+# Are you a Freelancer, an Entrepreneur or a Salesperson?
 
 Many people enter the world of entrepreneurship and freelancing work because:
 

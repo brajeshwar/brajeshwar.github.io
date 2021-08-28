@@ -1,7 +1,4 @@
----
-layout: post
-title: Great Accelerators and the types of Startups they work with
----
+# Great Accelerators and the types of Startups they work with
 
 In many ways, founding a startup is more challenging than starting a traditional business. Of course, entrepreneurs want to make money when they start a traditional business. However, startup founders must prove that their idea will grow into a large corporation. This is quite a bit of pressure.
 

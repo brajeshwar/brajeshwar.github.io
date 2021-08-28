@@ -1,7 +1,4 @@
----
-layout: post
-title: 3 Essential Steps for New Startups
----
+# 3 Essential Steps for New Startups
 
 Most entrepreneurs truly believe that their ideas have the potential to make them wildly successful. That turns out being true for some. But not all startup ventures reach the level of success their founders expect, and some are complete failures. Adding the 3 steps outlined here to your startup plan will improve your chances of a successful launch.
 

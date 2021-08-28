@@ -1,7 +1,4 @@
----
-layout: post
-title: Lessons Learned from a Lifetime Dedicated to Entrepreneurship
----
+# Lessons Learned from a Lifetime Dedicated to Entrepreneurship
 
 If you're planning to start a business or a startup, it's valuable to learn about life and the flow of business from people who have navigated their own paths to success. Though it's true, no matter who you learn from or what college you attend, ultimately, everyone has to make his or her own way to success. However, no one can make it without borrowing a proven effective strategy or two from someone else.
 

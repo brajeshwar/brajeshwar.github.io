@@ -1,7 +1,4 @@
----
-layout: post
-title: Artificial Intelligence - Elon Musk, Neural Lace and the Apocalypse
----
+# Artificial Intelligence - Elon Musk, Neural Lace and the Apocalypse
 
 If it was anyone besides Elon Musk expressing sincere concerns regarding the threat of Artificial Intelligence achieving the singularity within the <a href="http://mashable.com/2014/11/17/elon-musk-singularity/">next five to ten years</a>, the sentiment may be dismissed with a recommendation to stop watching reruns of <a href="http://www.imdb.com/title/tt0407362/">Battlestar Galactica</a>.
 

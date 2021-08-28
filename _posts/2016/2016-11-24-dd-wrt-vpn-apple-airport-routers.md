@@ -1,7 +1,4 @@
----
-layout: post
-title: DD-WRT, VPN and Apple Airport Routers
----
+# DD-WRT, VPN and Apple Airport Routers
 
 Apple's [Airport Extreme](http://www.apple.com/airport-extreme/) and [Airport Express](http://www.apple.com/airport-express/) are brilliant at what they do. They are secure, yet easy to set up and maintain. Well, you do not need to maintain them - they tend to just keep working. It makes it super easy for an Apple product eco-system to co-exist without much hassle and fuss.
 

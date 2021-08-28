@@ -1,13 +1,10 @@
----
-layout: post
-title: About Entrepreneurship worth knowing
----
+# About Entrepreneurship worth knowing
 
 Entrepreneurship is not all glitz and glamor like the movies would have you believe. Contrary to popular belief, entrepreneurs don't work hard for 6 months and then become an overnight success. There is a huge amount of effort that is put forth and sustained for years before success happens.
 
 Even though there are few things in this world that are more satisfying, challenging, and financially lucrative as entrepreneurship, it's not for everyone. Everyone is not willing to put forth the effort or sacrifice what it takes to make it as an entrepreneur. Here are few thoughts about entrepreneurship that everyone should know. 
 
-![Entrepreneuship)](/static/2016/entrepreneurship-words.jpg)
+<img class="large" src="/static/2016/entrepreneurship-words.jpg" alt="Entrepreneuship" loading="lazy">
 
 ## It takes a long time to become successful
 
