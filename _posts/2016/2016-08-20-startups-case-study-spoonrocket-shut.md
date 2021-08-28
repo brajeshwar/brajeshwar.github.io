@@ -1,7 +1,4 @@
----
-layout: post
-title: Startups Case Study - Why SpoonRocket Shut Down
----
+# Startups Case Study - Why SpoonRocket Shut Down
 
 Although the on-demand industry is highly popular, not all businesses remain successful. Recently the food-delivery service <a href="https://www.crunchbase.com/organization/spoonrocket">SpoonRocket</a> announced it was <a href="https://techcrunch.com/2016/03/15/spoonrocket-shuts-down/">shutting down</a>. Prior to closing, the business accomplished meal sales at a profit, but the cost of operations exceeded the funding they were able to raise. In addition, their business model of cheap, quickly delivered food did not draw in the customer base required to sustain it - many customers reported dissatisfaction with the quality of the meals, preferring to spend more money for tastier alternatives. The management attempted to organize an acquisition instead of terminating the business, but the deal ultimately failed.
 

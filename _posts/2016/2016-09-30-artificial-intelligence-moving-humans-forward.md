@@ -1,7 +1,4 @@
----
-layout: post
-title: Artificial Intelligence - moving humans forward
----
+# Artificial Intelligence - moving humans forward
 
 Ever since we figured out how to put a computer in every home, someone has been asking the question "will robots or artificial intelligence replace humans in the workforce?" The answer, of course, is yes. They have and will continue to do so as we find areas where a robot can do the work better or where a job is unsafe for a human to do. But the typical robot doing a repetitive job is not necessarily "intelligent". Artificial Intelligence, on the other hand, is something entirely different.
 

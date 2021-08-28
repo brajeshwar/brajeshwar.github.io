@@ -1,7 +1,4 @@
----
-layout: post
-title: Manager-Employee Relationships - 6 Ways to Take Growth to the Next Level
----
+# Manager-Employee Relationships - 6 Ways to Take Growth to the Next Level
 
 As negative experiences with supervisors constitute the number one reasons employees leave companies, it is impossible to over-emphasize the importance of maintaining positive relations between managers and employees. Particularly important in small, Startup businesses where managers and employees tend to work extremely closely, building and maintaining strong relationships forms an important part of the company's foundation.
 

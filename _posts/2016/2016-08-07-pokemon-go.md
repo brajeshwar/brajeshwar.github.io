@@ -1,7 +1,4 @@
----
-layout: post
-title: Pokémon Go
----
+# Pokémon Go
 
 ![Pokémon Go)](/static/2016/pokemon-go-logo.png)
 

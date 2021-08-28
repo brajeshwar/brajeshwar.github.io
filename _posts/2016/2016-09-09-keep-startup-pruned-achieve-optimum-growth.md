@@ -1,7 +1,4 @@
----
-layout: post
-title: Keep Your Startup Pruned to Achieve Optimum Growth
----
+# Keep Your Startup Pruned to Achieve Optimum Growth
 
 In his book, <a href="https://www.amazon.com/dp/B0049B1VO0/">Necessary Endings</a>, the management guru, Dr. Henry Cloud, creates an analogy between growing a prize-winning rose bush and developing a successful business. Per Dr. Cloud, one of the keys to success in both endeavors is to "prune" or cut away parts of the rose bush or the business to focus all energy on the strongest and best branches. A startup can follow this advice through all stages of its growth to develop a viable and long-lasting business structure.
 

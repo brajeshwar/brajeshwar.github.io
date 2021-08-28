@@ -1,7 +1,4 @@
----
-layout: post
-title: Partnership on Artifical Intelligence to Benefit People and Society
----
+# Partnership on Artifical Intelligence to Benefit People and Society
 
 Of all the modern demands on Artificial Intelligence, "<a href="https://www.youtube.com/watch?v=dSIKBliboIo">open the pod bay doors</a>" is arguably the most infamous. Years after Kubrick's 2001: A Space Odyssey, you can ask <a href="http://www.pocket-lint.com/news/112443-siri-website-created-iphone-4s">your own pocket AI</a>. Unlike Siri, <a href="https://en.wikipedia.org/wiki/HAL_9000">HAL 9000</a>, the fictional AI who kept the pod bay doors closed, is a revealing reflection of humanity's anxieties regarding technology created in one's own image.
 
