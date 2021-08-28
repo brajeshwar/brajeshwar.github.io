@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 My name is Brajeshwar Oinam.
