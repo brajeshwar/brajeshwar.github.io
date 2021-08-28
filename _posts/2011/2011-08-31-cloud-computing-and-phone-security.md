@@ -3,7 +3,7 @@ layout: post
 title: Cloud Computing and Phone security!
 ---
 
-{% include video.html videoURL="https://www.youtube.com/embed/uLdHnMG4Wlk" %}
+{% include video source="youtube" id="uLdHnMG4Wlk" %}
 
 A hilarious video of an Indian top brass talking crap about Mobile Phone Security and Cloud Computing. The subtitle is an actual .srt and not etched into the video.
 

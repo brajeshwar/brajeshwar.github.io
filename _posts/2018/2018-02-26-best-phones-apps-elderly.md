@@ -13,7 +13,7 @@ If you know a senior who has just purchased a smartphone and is struggling to fi
 ## Pick a Different Phone
 
 <a href="http://www.jitterbugdirect.com/">
-<img class="small-right" src="/static/2018/jitterbug-phone-colors.jpg" alt="Jitterbug Phones">
+<img class="small right" src="/static/2018/jitterbug-phone-colors.jpg" alt="Jitterbug Phones">
 </a>
 
 Sometimes the problem is the phone and not the person. If a senior in your life is having trouble getting their head around their new smartphone, it may just be that they have the wrong phone. Take advantage of the return policy. And get them something they will be able to figure out more easily. 

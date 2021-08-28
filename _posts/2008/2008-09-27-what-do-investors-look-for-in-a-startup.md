@@ -3,7 +3,7 @@ layout: post
 title: What do investors look for in a startup?
 ---
 
-{% include video.html videoURL="https://www.youtube.com/embed/_BwatxQwgNs" %}
+{% include video source="youtube" id="_BwatxQwgNs" %}
 
 A great [video Interview](http://venturehacks.com/articles/investment-criteria) with Venture Hacker Naval Ravikant answering the age-old question:
 

@@ -14,7 +14,7 @@ Recently, while trying to prune and clear up storage, I realize that Google had 
 
 Before doing anything, I strongly suggest creating a full back of your Google content. Follow the instructions at [Google Takeout](https://takeout.google.com) and get a copy of your Backups.
 
-{% include video.html videoURL="https://www.youtube.com/embed/a4Mfg3Rb_4Y" %}
+{% include video source="youtube" id="a4Mfg3Rb_4Y" %}
 
 ## Deleting Photos
 
@@ -41,7 +41,7 @@ It will take hours, even days, if you have lots of photos. Let it run. It took m
 
 Clean up at Google One’s Storage isn’t easy either. The hardest ones are going to be the Large Items. I had no idea where the “Large Files” were stored. So, I cannot delete it from the local synced Drive but have to hunt and peck at the <a href="https://one.google.com/storage/management">Google Storage Management</a> Dashboard. Be careful; you might be deleting important files.
 
-<img class="small-right" src="/static/2021/google-one-support-india-rbi.jpg" alt="Google One Support Chat">
+<img class="small right" src="/static/2021/google-one-support-india-rbi.jpg" alt="Google One Support Chat">
 
 For Google One Subscribers, you do get the opportunity to talk to an actual person from Google Support. From my interaction, I learned that, in India, due to the new Reserve bank of India eMandate, Google can’t automatically charge you for your subscription and change to a different plan. You’ll have to cancel your current subscription and re-subscribe with the desired Plan.
 

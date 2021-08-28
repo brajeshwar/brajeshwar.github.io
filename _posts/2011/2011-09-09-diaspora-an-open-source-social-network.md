@@ -7,7 +7,7 @@ Social Networking has revolutionized the way we communicate in today's fast pace
 
 Many start-ups and businesses are trying to make effective use of these sites to grow their ventures. And, hence they are everywhere. And, if you are not tired or bored of the number of networking sites available today, here comes the news of the launch of another site claiming it to be an open source social network - Diaspora. Most people are not aware of it, but it has created a buzz in and around the social media and early adopters.
 
-{% include video.html videoURL="http://www.youtube.com/embed/qRTzRAtDujU" %}
+{% include video source="youtube" id="qRTzRAtDujU" %}
 
 <a href="https://joindiaspora.com/">Diaspora</a> is an open source and distributed social web (network) as it has no central control. It has multiple nets calling themselves as Seeds. People behind this interesting venture area team of four students from <a href="http://cims.nyu.edu/">NYU's Courant Institute</a> aiming to address the privacy issues concerned with Facebook and the way it handles user information. Facebook has been facing criticism from its users over the Privacy row making its users share information even with people they just know. This made these young students to come up with an idea to deal with the privacy concerns you face with Facebook. 
 

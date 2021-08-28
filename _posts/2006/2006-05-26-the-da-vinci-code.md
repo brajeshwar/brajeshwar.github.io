@@ -3,7 +3,7 @@ layout: post
 title: The Da Vinci Code
 ---
 
-<img class="small-right" src="/static/2006/davincicode.jpg" alt="Cryptex from the DaVinci Code">
+<img class="small right" src="/static/2006/davincicode.jpg" alt="Cryptex from the DaVinci Code">
 
 India was supposed to screen [The Da Vinci Code](https://www.imdb.com/title/tt0382625/) along with the world on May 19, 2006 but due to the controversy, it was decided that the movie can be screened but with a [disclaimer](http://timesofindia.indiatimes.com/articleshow/1539951.cms) at the beginning and at the end of the movie that the characters are fictious, and the movie is a work of fiction. Well, that delayed the movie release by a week. Finally, The Da Vinci Code is being released in India today (May 26, 2006).
 

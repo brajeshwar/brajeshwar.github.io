@@ -27,4 +27,4 @@ Do not go gentle into that good night.
 Rage, rage against the dying of the light.
 ```
 
-> [Do not go gentle into that good night](https://en.wikipedia.org/wiki/Do_not_go_gentle_into_that_good_night) by [Dylan Thomas](https://en.wikipedia.org/wiki/Dylan_Thomas).
+[Do not go gentle into that good night](https://en.wikipedia.org/wiki/Do_not_go_gentle_into_that_good_night) by [Dylan Thomas](https://en.wikipedia.org/wiki/Dylan_Thomas).

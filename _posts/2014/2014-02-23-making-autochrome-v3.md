@@ -49,7 +49,7 @@ In order to concatenate and revision the Javascript files while building the dis
 
 So we decided to go with using the `$ver` parameter in the function `wp_enqueue_style()` in WordPress which conventionally used to include stylesheets in themes. During the build using the grunt task `grunt-text-replace` we injected the hash of the file as parameter. Some call this method as query based hashing and if you are using <a href="http://www.cloudflare.com/">CloudFlare</a> CDN, you may got ahead and set the "Static Content Caching Level" to Aggressive to cache these query based URLs.
 
-{% include video.html videoURL="https://www.youtube.com/embed/4zUnFMUdnvI" %}
+{% include video source="youtube" id="4zUnFMUdnvI" %}
 
 ## Deployment
 

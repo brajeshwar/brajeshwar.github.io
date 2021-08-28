@@ -5,7 +5,7 @@ title: The Babbage Computer Gets Its Marching Orders
 
 [Charles Babbage](http://en.wikipedia.org/wiki/Charles_Babbage) is the man generally acknowledged to be the inventor the first computer. Now the [Science Museum](http://www.sciencemuseum.org.uk/) in London [has agreed](http://blog.jgc.org/2010/09/its-time-to-build-analytical-engine.html) to help a project to build Babbage's Analytical Machine under the aegis of [John Graham-Cumming](http://jgc.org/), a programmer and computer historian.
 
-<figure class="feature">
+<figure>
   <img src="/static/2011/babbage-analytical-engine.jpg" alt="Analytical Engine by Charles Babbage" loading="lazy">
   <figcaption>
     The Analytical Engine, an important step in the history of computers, is a design for a mechanical general-purpose computer first described by English mathematician Charles Babbage in 1837.

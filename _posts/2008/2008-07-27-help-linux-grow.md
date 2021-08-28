@@ -9,7 +9,7 @@ The answer for both the question is probably NO! I would rather justify cause by
 
 One shall understand the fact that any language/technology/service can never be made to reach the common by advocating it to be a rocket science! I'm not sure about other things, but Linux is certainly not even close to rocket science. For a noob to get on with Linux, the most important thing is to understand that more than 50% of the people who talk about Linux do not know what they're talking about, or are themselves confused for that matter! This phenomenon is however common to a lot of technology blogs you'll find in the blog-o-sphere. Linux is no different.
 
-<figure class="feature">
+<figure>
   <img src="/static/2008/linux-installer-floppy.jpg" alt="Linux Floppy Disks Installer" loading="lazy">
   <figcaption>
     5.25-inch floppy disks holding a very early version of Linux.

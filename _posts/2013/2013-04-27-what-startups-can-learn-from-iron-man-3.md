@@ -12,5 +12,3 @@ Through-out the movie, you'll see that lots of Iron Man suits were used, almost 
 As a Startup Entrepreneur, be ready to build lots of prototypes, never get stuck to a single idea, move on to the next until you can get better and better with your product. Be obsess about your product, build it, re-build it, break it and then build it again. Once you have something, bring them to the battle to fight - open them to public in the real world.
 
 Enjoy the Movie.
-
-{% include video.html videoURL="https://www.youtube.com/embed/2CzoSeClcw0" %}

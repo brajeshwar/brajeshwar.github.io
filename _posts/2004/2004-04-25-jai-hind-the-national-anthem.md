@@ -3,7 +3,7 @@ layout: post
 title: Jai Hind, the National Anthem
 ---
 
-{% include video.html videoURL="http://www.youtube.com/embed/Bh26zOjIh9I" %}
+{% include video source="youtube" id="Bh26zOjIh9I" %}
 
 I am really beginning to like the idea of the theaters, cinema houses, multi-plexes and even the Dome, in Mumbai, India in their way of making its cinegoers, citizen remember the National Anthem and be loyal to the country every time they are about to watch a movie.
 

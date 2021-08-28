@@ -7,7 +7,7 @@ Most people choose one college but are always curious about life at others. <a h
 
 Recently, Live on Campus released The Wire (<a href="http://itunes.apple.com/us/app/live-on-campus/id403307134?mt=8">iTunes Link</a>), which allows a person to see a stream of content from any campus in the world almost instantly. Each stream includes videos, images, tweets, Face Book updates and other interesting content related to a university. Students can create their own streams and compare them with their friends. All of this information can easily be filtered so users only see content of interest as well as a history of everything viewed.
 
-{% include video.html videoURL="http://www.youtube.com/embed/7oSlZLXKDQA" %}
+{% include video source="youtube" id="7oSlZLXKDQA" %}
 
 Both a novelty and an intriguing lifelong fascination, people often describe college as being a bubble where students only really know what is happening on their own individual campus. The Wire is able to burst that bubble, creating an ideal method for high school students thinking about college to see what their future college life might look like. It also allows current college students to tune into the highlights of campus life at another school and their friends. It provides alumni and parents a glimpse of life on campus as they remember it, or as they would like to know more about it.
 

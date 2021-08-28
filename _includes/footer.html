@@ -1,12 +1,18 @@
-<footer>
+<footer class="footer">
 	<nav>
-    <a href="/">Home</a>
-    <a href="/feed.xml">RSS</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a>
+    <a href="{{ site.baseurl | prepend: site.url }}/">Home</a>
+    <a href="{{ site.baseurl | prepend: site.url }}/feed.xml">RSS</a>
+
+    {% for menu in site.data.nav -%}
+      <a href="{{ site.baseurl | prepend: site.url }}{{ menu.url }}">{{ menu.title }}</a>
+    {% endfor -%}
   </nav>
   <p>
-    <small>(2001-{{ "now" | date: "%Y" }}) brajeshwar.com</small>
+    <small>
+      2001-{{ "now" | date: "%Y" }}
+      brajeshwar.com
+    </small>
   </p>
 </footer>
+
+<link rel="stylesheet" media="print" href="{{ "/print.css" | relative_url }}">

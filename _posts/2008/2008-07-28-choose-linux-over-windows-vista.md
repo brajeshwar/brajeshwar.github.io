@@ -17,7 +17,7 @@ However, you bet if you can run things seamlessly on a Vista machine with a RAM 
 
 Vista's <a href="http://www.microsoft.com/windows/products/windowsvista/features/experiences/aero.mspx">Aero</a> and the GUI as a whole looks pretty indeed, but somehow it fails to make things simple and easy. Does it help find things any faster than <a href="http://desktop.google.com/">Google Desktop Search</a> app or other alternatives which are available for Windows and Linux both? Or does it make an application run any faster? On the other side, it consumes a lot of memory resources, hence slowing down the system, drastically at times. Just to give you an example of resource utilization, Vista uses 256MB of memory just for screen rendering! That is not a minuscule amount considering just graphics.
 
-<img class="small-right" src="/static/2008/paris-hilton-tux.jpg" alt="Even Paris Hilton loves the Tux">
+<img class="small right" src="/static/2008/paris-hilton-tux.jpg" alt="Even Paris Hilton loves the Tux">
 
 ## Rights & Limitations
 

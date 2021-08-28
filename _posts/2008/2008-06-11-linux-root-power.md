@@ -3,7 +3,7 @@ layout: post
 title: The power of 'root' in Linux
 ---
 
-<img class="small-right" src="/static/2008/linux-root-power.png" alt="The power of root in Linux" loading="lazy">
+<img class="small right" src="/static/2008/linux-root-power.png" alt="The power of root in Linux" loading="lazy">
 
 After our previous recitation -- <a href="/2008/filesystem-file-organization-in-linux/">Filesystem and File Organization in Linux</a> -- we hope the picture of the complete Linux file system would be resident in your minds. We are now equipped enough to try our hands on the beautiful operating system - Linux. But before we take you to the next stage, a very old saying boggled my mind - `look before you leap`!
 

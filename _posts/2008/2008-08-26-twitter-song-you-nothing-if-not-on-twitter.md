@@ -3,7 +3,7 @@ layout: post
 title: The Twitter Song - You're No One If You're Not On Twitter
 ---
 
-{% include video.html videoURL="http://www.youtube.com/embed/dYP-wBaqQAI" %}
+{% include video source="youtube" id="dYP-wBaqQAI" %}
 
 Here is the awesome Twitter Song from <a href="http://twitter.com/ihatemornings">Ben Walker</a>.
 

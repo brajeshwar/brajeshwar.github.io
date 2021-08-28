@@ -18,7 +18,3 @@ So, lookout criminals, suspects of interest, terrorists and the sketch artists w
 The uses of this technology goes far beyond taking surveillance photos captured during the commission of a crime to locate the suspects; the FBI and Homeland Security could combine this with conversation monitoring on social networks to turn tagged Facebook pictures into complete 3D profiles to circulate amongst law enforcement agencies.
 
 Outside of law enforcement there are a myriad of other issues that the software could be used for (if it wasn't earmarked for law enforcement only, as it is currently with Forensica GPS). We're going to see some of them quite soon as indicated by Facebook's facial recognition technology currently in the works and the recent Apple patent on 3D facial recognition, <a href="http://www.itproportal.com/2012/05/11/apple-patents-3d-rendering-system-facial-recognition/">3D Object Recognition</a>.
-
-On a lighter note, here is an interesting Video -- Let's Enhance.
-
-{% include video.html videoURL="https://www.youtube.com/embed/Vxq9yj2pVWk" %}

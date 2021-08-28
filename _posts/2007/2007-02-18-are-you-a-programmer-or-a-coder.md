@@ -11,7 +11,7 @@ During many events, like the one last week in India at the annual fair of the so
 
 It has been an eternal battle between the business cubicles and the programmers box if technology drives the business or vice versa. Well, one compliments the other.
 
-<img class="large-center" src="https://cdn.oinam.com/img/stock/indian-woman-laptop.jpg" alt="Woman in Saree on a Laptop" loading="lazy">
+<img class="large" src="https://cdn.oinam.com/img/stock/indian-woman-laptop.jpg" alt="Woman in Saree on a Laptop" loading="lazy">
 
 In the Indian context, the software professionals aka the programmers aka the coders are the poster boy of Matrimonial classifieds. They are well paid, perceived to be intelligent and travel abroad frequently on software assignments. Or, are they really? Are they paid appropriately for the slogging they do? Are they really intelligent or they follow the directions of the business directives? They travel but do they have a choice, or are they flown and placed like pawns at strategic location by the kings (business tycoons)? Yes, it is an open secret fact which Software Companies won't say/accept -- that Software Professionals specially in India are *not programmers but mere coders*, they are the assembly line workers.
 

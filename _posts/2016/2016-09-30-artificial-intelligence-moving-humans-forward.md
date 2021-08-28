@@ -47,4 +47,4 @@ At the core of our understanding and use of artificial intelligence remains disc
 
 Here is an interesting video from ColdFusion TV - What is Artificial Intelligence Exactly?
 
-{% include video.html videoURL="https://www.youtube.com/embed/kWmX3pd1f10" %}
+{% include video source="youtube" id="kWmX3pd1f10" %}

@@ -19,5 +19,3 @@ Discounting the fact that there are as many if not more flavors of Linux, here's
 In Linux, bash is default. Other OSs use `csh` or `tcsh` as the default, so use your keyboard for more than just chatting and filling online forms and explore. Shells need not be limited to OS interface as I have just explained but also for programming languages. There are shells for Java, Perl, PHP or even Ruby. Also I would be limiting the definition of a shell if I said it's all about the command line.
 
 GUI shells abound for Windows as well as the X Window System. Even Windows Recovery Console is a shell, albeit a CLI. Want to have fun with shells ASAP? Fire up your browser and go to <a href="http://goosh.org/">goosh.org</a> to test-drive `Google Shell` or `goosh`, an open source browser based command line shell that is actually a front end for Google search. Imagine typing out commands, keywords and search strings to search. Shell shocked?
-
-{% include video.html videoURL="https://www.youtube.com/embed/0PxTAn4g20U" %}

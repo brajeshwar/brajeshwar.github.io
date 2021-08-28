@@ -13,7 +13,7 @@ Last month, I bought a Raspberry Pi 3-MODB-1GB and a 16GB MicroSDHC (MicroSD) Me
 1. Plug in the microSD Card, monitor, keyboard, and a mouse. That's it. Power it up.
 1. Follow the on-screen instructions to finish setting up the Raspbian operating system. Restart and the Raspberry Pi is ready to setup Pi-hole.
 
-<a href="https://pi-hole.net/"><img class="small-right" src="/static/2019/pi-hole-logo.png" alt="Pi-hole"></a>
+<a href="https://pi-hole.net/"><img class="small right" src="/static/2019/pi-hole-logo.png" alt="Pi-hole"></a>
 
 ## Pi-Hole
 
