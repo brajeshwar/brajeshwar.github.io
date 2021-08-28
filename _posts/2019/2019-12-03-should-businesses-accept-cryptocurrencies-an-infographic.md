@@ -27,4 +27,4 @@ Cryptocurrency is not backed or insured by governments (unlike traditional curre
 
 Thanks to [Fundera](https://www.fundera.com/blog/should-businesses-accept-cryptocurrency) for the infographic highlighting the pros and cons of businesses accepting cryptocurrency.
 
-![Should your Business Accept Cryptocurrency)](/static/2019/should-your-business-accept-cryptocurrency.jpg)
+<img class="large" src="/static/2019/should-your-business-accept-cryptocurrency.jpg" alt="Should your Business Accept Cryptocurrency" loading="lazy"></a>

@@ -6,7 +6,7 @@ However, even with the best care aging can present problems. Thankfully, technol
 
 ## Aging in Place
 
-![title)](/static/2018/easy-climber-stair-lift-woman-riding-lift.jpg)
+<img class="small right" src="/static/2018/easy-climber-stair-lift-woman-riding-lift.jpg" alt="Stairs Climber" loading="lazy">
 
 Aging in place was often impossible. As people age their mobility becomes more limited and walking up and down a flight of stairs repeatedly simply becomes impossible. Because of this, many elderly homeowners would sell their home and move to a single-story residence or transition into a retirement community. Even if this wasn't what they necessarily wanted, it was frequently the only logical option. 
 
@@ -23,7 +23,7 @@ Many smartphones allow users to control their smartphone from their touchscreen.
 
 Then there are the interpersonal relationships that can benefit from the use of a smartphone. Grandparents can have face-to-face relationships with their children and grandchildren without ever leaving the comfort of their phone with free video conferencing software. Social media sites allow seniors to diversify their personal network by finding like-minded individuals who enjoy the same hobbies even if they are located in a different state or country. 
 
-![Technology for the Elderly)](/static/2018/technology-for-elderly.jpg)
+<img class="medium" src="/static/2018/technology-for-elderly.jpg" alt="Technology for the Elderly" loading="lazy">
 
 ## Digital Health Care
 

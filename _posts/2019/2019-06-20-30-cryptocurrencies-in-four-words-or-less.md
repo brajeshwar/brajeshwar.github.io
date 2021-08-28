@@ -24,4 +24,4 @@ The <a href="https://www.dash.org/">Dash</a> cryptocurrency was created and deve
 
 Check out the following infographic developed at <a href="https://mrbtc.org/">MrBTC.org</a> on the topic, "33 Cryptocurrencies described in four words or less."
 
-![Cryptocurrencies)](/static/2019/33-cryptocurrencies-in-4-words.jpg)
+<img class="large" src="/static/2019/33-cryptocurrencies-in-4-words.jpg" alt="Cryptocurrencies" loading="lazy">

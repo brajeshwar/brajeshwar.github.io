@@ -8,7 +8,7 @@ My name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
-[![8-inch, 5¼-inch, and 3½-inch Floppy Disks)](https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg)](https://en.wikipedia.org/wiki/Floppy_disk)
+<a href="https://en.wikipedia.org/wiki/Floppy_disk"><img class="medium" src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg" alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks" loading="lazy"></a>
 
 ## Work
 
@@ -16,7 +16,7 @@ I migrated to [Mumbai](https://en.wikipedia.org/wiki/Mumbai) in Aug 1999 to kick
 
 After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a Floppy-Disk which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_café) nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
 
-> This domain, [brajeshwar.com](/about/brajeshwar.com/) was booked on a dare. I'm very happy with my decision.
+> [brajeshwar.com](/about/brajeshwar.com/) was booked on a dare and I'm happy with that decision.
 
 ## Internet
 
@@ -55,6 +55,6 @@ I continue to leveraging technology in finding solutions to challenges and probl
 
 ## Family
 
-I've known Shanta since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
+I've known [Shanta](https://oin.am/shanta) since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
 
 We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amara.site/) (Nov 2016).

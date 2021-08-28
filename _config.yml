@@ -15,7 +15,7 @@ feed:
   author: Brajeshwar
 
 layout:
-  home_posts_no: 6
+  home_posts_no: 5
   posts_home: /blog/
 
 styles:
