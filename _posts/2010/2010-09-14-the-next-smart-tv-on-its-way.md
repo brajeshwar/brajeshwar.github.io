@@ -1,7 +1,4 @@
----
-layout: post
-title: The Next Smart TV - On it's Way!
----
+# The Next Smart TV - On it's Way!
 
 Realizing the immense demand for 3D movies among the present Gen-Y populace, how can television manufacturers stay back? With rising trend of internet and convergence of new media, (where gadget like mobile phones should be considered as a good example of convergence), Televisions are now, all set to be the 'Smart Box'. Television manufacturers have come up with new generation LED TV's which can be connected to internet and have access to other applications like Youtube, Flickr, etc. in addition to a plethora of other websites. This new generation TVs will not only give home viewers 3D movies experience, but also makes it -- a big screen LCD PC. So, the need for two different electronic machines (to view movies and to access internet) shall become extinct.
 

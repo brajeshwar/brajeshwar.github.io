@@ -2,7 +2,7 @@
 
 The website has come a long way - well - 20 years. It started as a Flash Site in 2001. I moved on to [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)), later known as [Blogger](https://www.blogger.com/), then to [MovableType](https://movabletype.org) (~2002), and later to [WordPress](https://wordpress.org) (~2003) ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
 
-I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles. Now, articles are just the `# Title` and the content; `no tags`, `no categories`, `no jazz` at all.
+I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles. Now, articles are just Markdown files with a `# Title` and the content; `no tags`, `no categories`, `no jazz` at all.
 
 > In 2001, the domain, `brajeshwar.com` was booked on a dare and I'm happy with that decision. [Read the Story](/about/brajeshwar.com/).
 
