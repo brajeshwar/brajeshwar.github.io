@@ -3,7 +3,7 @@ layout: post
 title: Mélissa Theuriau
 ---
 
-[![Mélissa Theuriau)](https://cdn.oinam.com/img/people/melissa-theuriau-1.jpg)](https://en.wikipedia.org/wiki/Mélissa_Theuriau)
+<a href="https://en.wikipedia.org/wiki/Mélissa_Theuriau"><img class="large" src="https://cdn.oinam.com/img/people/melissa-theuriau-1.jpg" alt="Mélissa Theuriau" loading="lazy"></a>
 
 Little did I realize that my site will crawl to its knees when I uploaded her pictures for the archives. My site crawled to a halt, and my hosting provider warned of gulping up 15GB this month.
 
