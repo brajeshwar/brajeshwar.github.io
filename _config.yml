@@ -4,6 +4,8 @@ remote_theme: oinam/oinam-jekyll
 
 markdown: kramdown
 highlighter: rouge
+future: false
+show_drafts: false
 
 permalink: pretty
 permalink: /:title/
