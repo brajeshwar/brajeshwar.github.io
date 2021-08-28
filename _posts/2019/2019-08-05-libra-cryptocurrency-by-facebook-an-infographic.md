@@ -16,4 +16,4 @@ People have different views on cryptocurrencies, but Libra can be trusted easily
 
 Check out [Libra](https://libra.org/) - Cryptocurrency by Facebook, an Infographic developed at [MrBTC.org](https://mrbtc.org/libra/).
 
-![Libra - Cryptocurrency By Facebook)](/static/2019/libra-cryptocurrency-by-facebook.jpg)
+<img class="large" src="/static/2019/libra-cryptocurrency-by-facebook.jpg" alt="Libra - Cryptocurrency By Facebook" loading="lazy">

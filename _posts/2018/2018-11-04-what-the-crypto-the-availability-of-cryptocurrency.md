@@ -19,4 +19,4 @@ Other cryptocurrencies have comfortable numbers in total supply. EOS and Cardano
 
 The crypto market is a huge one, with more than 2,000 active currencies available. The availability of currencies is dependent on constant trading, swapping, and investing. And with the figures, which keep growing, the market is sustainable.
 
-[![What the Crypto)](/static/2018/crypto-what-the.png)](https://bitcoinplay.net/what-the-crypto-infographic/)
+<img class="large" src="/static/2018/crypto-what-the.png" alt="What the Crypto" loading="lazy">

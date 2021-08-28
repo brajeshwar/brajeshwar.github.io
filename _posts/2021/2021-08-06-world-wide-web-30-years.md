@@ -1,6 +1,6 @@
 # The World Wide Web - 30 Years
 
-<img class="" src="/static/2021/www-try-it.jpg" alt="WWW - Try It" loading="lazy">
+<img class="medium" src="/static/2021/www-try-it.jpg" alt="WWW - Try It" loading="lazy">
 
 Today, we take the `World Wide Web` (the Web) for granted - a utility as ubiquitous as electricity.
 
