@@ -1,7 +1,4 @@
----
-layout: post
-title: Angry Ringtone for iPhone and others
----
+# Angry Ringtone for iPhone and others
 
 <audio controls>
   <source src="https://cdn.oinam.com/audio/angry-ring-ring.mp3" type="audio/mpeg">

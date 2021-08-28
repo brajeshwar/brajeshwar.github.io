@@ -1,6 +1,5 @@
 ---
 layout: page
-type: home
 ---
 
 My name is Brajeshwar Oinam.

@@ -12,3 +12,4 @@
 ### Tools
 
 - [Google Search Console](https://search.google.com/search-console)
+- [Base64 Image Encoder](https://elmah.io/tools/base64-image-encoder/)

@@ -11,14 +11,7 @@ Some of our team at Mixercast are already Mac Guys!
 - [Bill Lee](http://www.flickr.com/photos/brajeshwar/181518054/)
 - [Soumyadeep Paul](http://www.flickr.com/photos/brajeshwar/165580106/)
 
-<figure>
-  <a href="http://www.flickr.com/photos/brajeshwar/sets/72157600176589151/">
-    <img src="/static/2006/apple-macbook.jpg" alt="Apple Mac Powerbook" loading="lazy">
-  </a>
-  <figcaption>
-    Apple Mac Powerbook.
-  </figcaption>
-</figure>
+<a href="http://www.flickr.com/photos/brajeshwar/sets/72157600176589151/"><img class="medium" src="/static/2006/apple-macbook.jpg" alt="Apple Mac Powerbook" loading="lazy"></a>
 
 I am converting to a Mac. I have never used a Mac seriously besides testing for compatibility, browser behavior, etc. and I never felt the need to move. It is not that I am against Mac or that I love Windows; I was just concerned with getting my works done the fastest and the best way possible.
 
