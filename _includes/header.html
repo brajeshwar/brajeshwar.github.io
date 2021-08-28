@@ -1,13 +1,14 @@
-<header class="header">
+<div class="content-full" style="background: var(--background-color-alt); border-bottom: 1px solid var(--border-color); margin-bottom: var(--space-base);">
+  <header class="header" style="margin-bottom: 0; padding: var(--space-base) 0; border: 0 none;">
   <h1>
-    <a style="
-      margin: 1.618rem 0 0;
-      padding: var(--space-quarter) 0;
+    <a style=";
+      padding: var(--space-half) 0;
       text-transform: lowercase;
-      width: auto;
-      height: 4.2rem;
+      font-weight: 700;
+      font-size: 120%;
       font-family: var(--font-family-serif);
       " href="{{ site.baseurl | prepend: site.url }}/" title="{{ site.title }}">{{ site.title }}</a>
   </h1>
   {% include nav.html %}
 </header>
+</div>
