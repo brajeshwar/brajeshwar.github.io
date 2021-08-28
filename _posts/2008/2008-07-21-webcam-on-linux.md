@@ -3,7 +3,7 @@ layout: post
 title: Running a webcam on Linux
 ---
 
-<a href="http://www.gnome.org/projects/cheese/"><img class="small-right" src="/static/2008/cheese-big.png" alt="Cheese"></a>
+<a href="http://www.gnome.org/projects/cheese/"><img class="small right" src="/static/2008/cheese-big.png" alt="Cheese"></a>
 
 You've got a brand new notebook with an in-built webcam and you're in love with Linux. The problem is, your webcam runs only on the pre-installed Windows Vista/XP! This is one of the common hindrances I've found people meddling with. The celebration spree takes a poise when you end up wasting a lot of time on forums, websites, IRCs, etc. looking for the perfect solution to help you get the camera in action.
 

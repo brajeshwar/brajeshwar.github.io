@@ -3,7 +3,7 @@ layout: post
 title: The Continuum, a massive Flash Game
 ---
 
-{% include video.html videoURL="https://www.youtube.com/embed/5Ga7Jy64qE0" %}
+{% include video source="youtube" id="5Ga7Jy64qE0" %}
 
 Saw this at TechCrunch -- <a href="http://www.techcrunch.com/2008/07/11/the-continuum-flash-gaming-goes-hardcore/">The Continuum: Flash Gaming Goes Hardcore</a>.
 

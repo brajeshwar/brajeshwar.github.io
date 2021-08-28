@@ -9,7 +9,7 @@ Recently, I went to a casual gathering of WordPress enthusiasts to mark the [10t
 
 Unfortunately, many were not really concerned about it but curious enough that they wanted to know more. This article is the result of that conversation, hoping that other designers would be able to kick-start on the ideas of Typography - explore it and even master it.
 
-<figure class="feature">
+<figure>
   <img src="/static/2013/printing-pressing-16th-century.jpg" alt="Printing press, 16th century in Germany" loading="lazy">
   <figcaption>
     Printing press, 16th century in Germany.

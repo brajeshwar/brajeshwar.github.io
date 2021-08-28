@@ -1,14 +1,13 @@
-<header>
-	<h1>
-		<a href="{{ site.baseurl }}/" title="{{ site.title }}">
-			{%- include brajeshwar-logo-base64.html -%}
-		</a>
-	</h1>
-	<nav>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-		<a href="/contact/">Contact</a>
-	</nav>
+<header class="header">
+  <h1>
+    <a style="
+      margin: 1.618rem 0 0;
+      padding: var(--space-quarter) 0;
+      text-transform: lowercase;
+      width: auto;
+      height: 4.2rem;
+      font-family: var(--font-family-serif);
+      " href="{{ site.baseurl | prepend: site.url }}/" title="{{ site.title }}">{{ site.title }}</a>
+  </h1>
+  {% include nav.html %}
 </header>
-
-<hr>

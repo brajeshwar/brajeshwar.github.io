@@ -2,11 +2,6 @@
 
 [brajeshwar.com](https://brajeshwar.com)
 
-## Features
-
-- YouTube `{% include video.html videoURL="https://www.youtube.com/embed/QKEFhH63vg4" %}`
-- Wide image (figure by default) extends beyond content `<img class="large-center" src="">`
-
 ## TODO
 
 - Let's get rid of front-matter for posts

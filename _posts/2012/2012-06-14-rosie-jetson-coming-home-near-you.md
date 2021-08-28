@@ -23,4 +23,4 @@ The robots are still more accurate than [Roombas](http://en.wikipedia.org/wiki/R
 
 By the time the Rosie-esque bots get to market, the researchers hope to significantly improve through output with things like high-res cameras and tactile sensors, and with programmable preferences.
 
-{% include video.html videoURL="http://www.youtube.com/embed/9psNh-dJTDU" %}
+{% include video source="youtube" id="9psNh-dJTDU" %}

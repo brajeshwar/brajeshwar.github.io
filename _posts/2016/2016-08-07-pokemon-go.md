@@ -7,7 +7,7 @@ title: Pokémon Go
 
 [Pokémon Go](http://www.pokemongo.com/) has, no doubt, taken the world by storm. It's estimated that the game has more active users than Snapchat. It's the first widely popular augmented reality game and people have been willing to go to extreme measures to catch 'em all. Pokémon Go uses real-world locations and virtual images to sends users on wild quests in search of the elusive Pokémon. Here are some interesting stories that demonstrate Pokémon Go's influence on its players.
 
-{% include video.html videoURL="https://www.youtube.com/embed/AVWPWYYIcpk" %}
+{% include video source="youtube" id="AVWPWYYIcpk" %}
 
 ## Gotta Catch 'em All
 
@@ -39,7 +39,7 @@ Within days of the game's release, Shayla Wiggins [found a dead body](http://mon
 
 "I probably would have never gone down there if it weren't for this game," Wiggins told CNNMoney. "But in a way, I'm thankful. I feel like I helped find his body. He could have been there for days."
 
-<figure class="feature">
+<figure>
   <img src="/static/2016/laaija-pokemon.jpg" alt="Laaija's Pokémon Go Adventure." loading="lazy">
   <figcaption>
     Laaija's Pokémon Go Adventure.

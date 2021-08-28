@@ -3,8 +3,7 @@ layout: post
 title: Americans - you should stop outsourcing your homeworks to India
 ---
 
-{% include video.html videoURL="https://www.youtube.com/embed/lj3iNxZ8Dww" %}
-
+{% include video source="youtube" id="lj3iNxZ8Dww" %}
 
 > I personally believe that US Americans are unable to do so because some-a people out there in our nation don't have that, and I believe our education, like, such as in South Africa and Iraq everywhere, like, such as, and, I believe that they should, our education over here in the US should help the US, or should help South Africa, and should help Iraq, and should help Asian countries so that we're able to build up our future.
 

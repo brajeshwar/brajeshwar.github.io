@@ -24,7 +24,7 @@ This depends a lot on the activities your kid will be involved in. Will it be ju
 
 If your kid already has a device, use it and gauge the device’s performance before spending money on upgrades. Look for performance degradation of the quality of audio and/or video. It is always better to have much better quality audio than video.
 
-<figure class="feature">
+<figure>
   <img src="/static/2020/macmini-2012-model.jpg" alt="A 2012-Model Apple MacMini" loading="lazy">
   <figcaption>
     An old Apple MacMini from 2012.

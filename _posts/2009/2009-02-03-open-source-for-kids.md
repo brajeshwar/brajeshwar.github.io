@@ -5,7 +5,7 @@ title: Open Source for kids?
 
 Ever since school days, I was taught that a good start in programming is a way to become a good software developer. Today, the college students desire to learn programming languages which are easy to implement and has a good portability across various platforms. Something which Java started off. The recent past has witnessed the development of open source programming languages, software, applications and other utilities that are geared towards the younger minds. What can fascinate these fresh minds include games, animations and the new environment of programming languages. When the minds are young and malleable, they can really pick up things fast. An open source environment teaches newbies how to interact with the new world of open and collaborative development.
 
-<a href="http://scratch.mit.edu/"><img class="small-right" src="/static/2009/scratch-logo.png" alt="Scratch"></a>
+<a href="http://scratch.mit.edu/"><img class="small right" src="/static/2009/scratch-logo.png" alt="Scratch"></a>
 
 Scratch is a new programming language that makes it easy for the kids to create their own animations, games, music and art and share them on the web. Here, all the uploaded programs are open source. Scratch is designed to help young people to learn important mathematical and computational ideas, at the same time gain a deeper understanding of the design process. At the same time, it teaches programming fundamentals in the form of 3-D movies and games. <a href="http://www.alice.org/">Alice</a>, one of the oldest and most developed environments is used in most of the schools for teaching programming to the children as a part of their education
 

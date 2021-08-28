@@ -32,5 +32,3 @@ This is the perfect distraction before bedtime as this habit keeps on giving; it
 ## 5. Answer your Smartphone's every Beck and Call
 
 Your smartphone is not only a vibrating companion it can also serve as a valuable distraction during dull dinners and social gatherings. Personal attention is an overrated social convention anyhow.  Every tick, bing and whir from your electronic life mate is worth your undivided attention; your family, friends and colleagues will be there forever but your smartphone has a shelf life.
-
-{% include video.html videoURL="https://www.youtube.com/embed/ynt5ePyK7EQ" %}
