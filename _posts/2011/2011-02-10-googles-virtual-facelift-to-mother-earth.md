@@ -4,7 +4,7 @@
 
 When <a href="http://en.wikipedia.org/wiki/Martin_Luther_King,_Jr.">Martin Luther</a> spoke the above words, he had no idea about the lengths to which Google would go to prove him right. And today we are at the door-step of a revolutionized way of looking at the entire world and beyond, with the launch of <a href="http://www.google.com/earth/explore/showcase/newin6.html">Google Earth 6</a> some time back.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/L6lZzY4wagA" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="L6lZzY4wagA" %}
 
 Google's <a href="http://www.linkedin.com/pub/peter-birch/1/b59/568">Product Manager Peter Birch</a> explains on the company's <a href="http://googleblog.blogspot.com/2010/11/introducing-google-earth-6the-next.html">official blog</a>, "In Google Earth 6, we're taking realism in the virtual globe to the next level with two new features: a truly integrated Street View experience and <a href="http://www.google.com/earth/explore/showcase/newin6.html#3dtrees">3D trees</a>. We've also made it even easier to browse <a href="http://www.google.com/earth/explore/showcase/newin6.html#historicalimagery">historical imagery</a>." 
 

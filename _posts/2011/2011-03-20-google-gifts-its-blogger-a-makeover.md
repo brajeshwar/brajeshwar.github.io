@@ -1,6 +1,6 @@
 # Google gifts its Blogger, a MakeOver
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/hPhFc6GqVdU" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="hPhFc6GqVdU" %}
 
 In the 50th year of internet, when more is less and less is intolerable, where everyone is in a hurry to reach somewhere, and multi-tasking comes naturally, Google is going all out to become the be-all and end-all of the webbed world. With mailing, chatting, documenting, scheduling and searching available on Google, it is now set to turn heads with the Blogger.
 

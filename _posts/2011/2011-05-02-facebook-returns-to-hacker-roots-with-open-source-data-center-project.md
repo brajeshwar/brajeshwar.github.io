@@ -4,7 +4,7 @@ In a surprise move Facebook has gone back to their "hacker roots" -- their words
 
 > We decided to honor our hacker roots and challenge convention by custom designing and building our software, servers and data centers from the ground up.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/bCZwgtC_TZA" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="bCZwgtC_TZA" %}
 
 These new data center designs from Facebook cost 24% less to build than traditional data centers and consume 38% less power. Using an evaporative cooling system, versus traditional pushed air, they are able to reduce the carbon footprint of data centers.
 

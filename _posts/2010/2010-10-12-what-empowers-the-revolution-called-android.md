@@ -27,5 +27,3 @@ A recent report stated that 72% developers were of the feeling that Android is "
 It has been the forte of Google's to only produce devices, software applications, products and services that are primarily innovative. Going by this philosophy Google's Android is only expected to get more innovative and deliver novel applications, features and uses. And to sponsor this it has the backing of the above mentioned manufacturers, telecom players, developers, etc.
 
 Going forward, there's no reason why Android should not over-take Apple's iPhone.
-
-<iframe width="800" height="450" src="http://www.youtube.com/embed/yAZYSVr2Bhc" frameborder="0" allowfullscreen></iframe>

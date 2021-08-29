@@ -1,7 +1,5 @@
 # Google Maps 5 - 3D Maps & Offline Caching
 
-<iframe title="YouTube video player" class="youtube-player" type="text/html" width="800" height="450" src="http://www.youtube.com/embed/TAh4yiCzgKw" frameborder="0"></iframe>
-
 Most of us have used <a href="http://maps.google.com/">Google Maps</a> at some point or the other. Either on the desktop or more often on the mobile platform. <a href="http://www.google.com/mobile/maps/3d/">Google Maps</a> in it's latest avatar uses vector graphics instead of map tiles and it caches some of your most frequently used maps so that they are available offline. The advantage of vector-based maps is multi-fold:
 
 - Tilting: Drag down with two fingers to tilt the map. Tilt while zoomed in on one of the 100+ cities around the world with 3D buildings to see a skyline spring to life.
