@@ -4,7 +4,7 @@ Last November, when I was away to <a href="/2011/the-founder-institute-experienc
 
 Luckily during those days, Manipur was one of the testing ground for 3G internet in India and the speed was very good. With the internet working flawlessly, my wife was able to get my daughter to watch her favorite YouTube videos and she <a href="http://www.youtube.com/watch?v=fNvrHL94Iv4">fell in love</a> with the iPad. Few Barbie apps were the early apps downloaded to the iPad and she loves them. She even begin to called the iPad, "Barbie". Even today she would ask me to put the "Barbie" to charge and sleep at night so she won't die. These days she does say iPad but mixes it quite often with "Barbie", "iPad Barbie", "Barbie iPad".
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/qaF6dPiJ-NM" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="qaF6dPiJ-NM" %}
 
 I would not really say that my daughter <a href="http://www.cultofmac.com/why-every-child-in-america-needs-an-ipad/93887">needed an iPad</a> or that the iPad have really catapulted her study and thinking. Nonetheless, I can say that the iPad have been a good companion for her for the last 6 months or so. I can work hours without her seeking my attention because she is either talking to <a href="http://itunes.apple.com/us/app/talking-ben-the-dog-for-ipad/id416345444?mt=8">Ben</a> or <a href="http://itunes.apple.com/us/app/talking-tom-cat-2-for-ipad/id421998342?mt=8">Tom</a> or <a href="http://itunes.apple.com/us/app/talking-gina-giraffe-for-ipad/id402689790?mt=8">Gina</a>.
 

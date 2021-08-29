@@ -11,5 +11,3 @@ According to Google, the JavaScript performance in the latest version is much fa
 Google's Chrome team wants to achieve its aim, of being the <em>numero-uno</em> browser across the web, and for that, it has adopted an extremely rapid and incremental expansion model. Chrome version 6 is their first release, after which they are planning to push out new stable releases, every six weeks, which is a fast-paced growth vis-a-vis other browsers. Coupled with its aggressive and highly useful background updater, it is expected that the users will get the newest and greatest features.
 
 In the past two years, Google Chrome has made significant progress and has a bright future ahead. The latest Version 6 of <a href="http://www.google.com/chrome/">Chrome</a> is available for immediate download. Existing users of Chrome can have their updates automatically.
-
-<iframe width="800" height="450" src="https://www.youtube.com/embed/0QRO3gKj3qw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
