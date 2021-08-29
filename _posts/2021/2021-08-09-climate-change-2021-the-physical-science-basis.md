@@ -1,5 +1,7 @@
 # Climate Change 2021 - The Physical Science Basis
 
+{% include readit id="ed6d632f-908f-4044-8b93-4e3c2d60e63f" %}
+
 The [Intergovernmental Panel on Climate Change](https://www.ipcc.ch) (IPCC) has released the most comprehensive and conclusive "state of the science" on the climate crisis. Why it is happening, how it impacts every region of the planet, how much worse things will get, and what we must do to avoid the worst consequences.
 
 Some devastating impacts of global warming are now unavoidable. We are now at "Code Red for Humanity."
