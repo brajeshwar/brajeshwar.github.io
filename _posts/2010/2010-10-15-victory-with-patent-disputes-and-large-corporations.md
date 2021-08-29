@@ -1,7 +1,4 @@
----
-layout: post
-title: Victory with Patent Disputes and Large Corporations
----
+# Victory with Patent Disputes and Large Corporations
 
 Many of us may have questioned if the patent system is as fair as we would hope. We may speculate that in patent disputes the courts will likely side with large corporations even if they are obviously the guilty party. This pessimism does have some merit. The most obvious concern is that larger corporations have a large legal staff that can easily attack the credibility of a small inventor or find a loophole in the arguments they provide.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: SimilarGroup improves Web Navigation
----
+# SimilarGroup improves Web Navigation
 
 Earlier known as <a href="http://techcrunch.com/2010/05/31/similarweb-changes-name-to-similargroup-raises-more-funding/">SimilarWeb</a>, the web navigation tool is now called <strong>SimilarGroup</strong>. Considered as a start-up, SimilarGroup plays more than a handy role in enabling web users to find, share, rank and review websites, thereby ensuring that search engine start-ups like <a href="http://blekko.com/">Blekko</a> and <a href="http://duckduckgo.com/">DuckDuckGo</a> can get all of the search results right. A perfect start-up navigation tool for a perfect start-up search engine. It took off in the year 2007 and its most popular product is named after its most recent labeling -- SimilarWeb.
 

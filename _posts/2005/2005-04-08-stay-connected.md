@@ -1,7 +1,4 @@
----
-layout: post
-title: Stay connected
----
+# Stay connected
 
 It was not really a good day to start off. I woke up around 2 in the morning Detroit time may be because my biological clock was taking that time as some afternoon in Mumbai, India. I also found out that the Internet connection was not there in my room. I changed room at that hour to a `High Speed Internet enabled Room`. At day-break, I strolled out of the hotel and the air was cold with about 12°C, I was totally surprised. The last time I checked before leaving for Detroit's Weather was equally similar to Mumbai, so I was expecting a rather hot weather. I did not bring even a warmer cloth.
 

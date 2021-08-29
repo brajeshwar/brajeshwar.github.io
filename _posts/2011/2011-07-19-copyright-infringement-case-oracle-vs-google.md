@@ -1,7 +1,4 @@
----
-layout: post
-title: Copyright Infringement Case - Oracle vs Google
----
+# Copyright Infringement Case - Oracle vs Google
 
 Oracle is seeking hefty damages "in billions of dollars" from Google Inc. over the patent lawsuit, according to the court filing. <a href="http://news.cnet.com/8301-30684_3-20013546-265.html">Oracle had sued Google last year</a>, claiming that Google's Android operating system has violated Oracle's Java patents. Oracle is also pursuing to stop further sales of these Android products and quoted that it was willful and deliberate infringement of seven of their patents and copyrights related to Java Technologies which they acquired from SUN Microsystems in January 2010. Oracle also alleged that the Android platform has explicitly copied elements of Oracle's patented Java's API packages.
 

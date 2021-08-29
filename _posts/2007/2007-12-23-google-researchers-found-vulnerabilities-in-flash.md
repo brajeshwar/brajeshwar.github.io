@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Researchers found vulnerabilities in Flash
----
+# Google Researchers found vulnerabilities in Flash
 
 The Register <a href="http://www.theregister.co.uk/2007/12/21/flash_vulnerability_menace/">reports</a> that Google Researchers have documented serious vulnerabilities in <a href="http://www.adobe.com/go/flashplayer/">Adobe Flash</a> content which leave tens of thousands of websites susceptible to attacks that steal the personal details of visitors.
 

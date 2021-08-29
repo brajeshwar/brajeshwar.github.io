@@ -1,7 +1,4 @@
----
-layout: post
-title: Yogile makes Photo Sharing - Simple, Easy and Collaborative
----
+# Yogile makes Photo Sharing - Simple, Easy and Collaborative
 
 The beauty of the World Wide Web never stops disappointing users and there is absolutely no end to the number of ways by which one can have fun, socialize, achieve business success, etc. <a href="http://www.yogile.com/">Yogile</a> is one amongst those many ways of having fun, socializing and connecting with friends. Yogile is a photo-sharing website that allows you to upload pictures and share them with your peers and friends. I understand that your mind right now would be thinking "there are so many <a href="http://en.wikipedia.org/wiki/List_of_photo_sharing_websites">websites</a> that cater to my photo-sharing need, how can this be any different?"
 

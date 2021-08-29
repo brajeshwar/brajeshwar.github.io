@@ -1,7 +1,4 @@
----
-layout: post
-title: Adbrite introduces InVideo Ads
----
+# Adbrite introduces InVideo Ads
 
 AdBrite recently introduces the their [InVideo Ads](http://www.adbrite.com/video/). Here are some of the feartures (excerpt from their site) :
 

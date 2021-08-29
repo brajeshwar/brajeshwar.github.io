@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 steps to a faster Linux boot
----
+# 5 steps to a faster Linux boot
 
 We've seen and heard that Linux seldom faces a system halt or crash. Most of the people who have switched to Linux stay happy with the fact that they need not press the 3-button command to get the task manager every now and then, on their old machines. Linux has no doubt proved to be a blessing in disguise for machines which have limited hardware options and are low on resources.
 

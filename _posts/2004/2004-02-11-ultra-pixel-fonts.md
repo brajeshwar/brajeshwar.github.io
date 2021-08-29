@@ -1,7 +1,4 @@
----
-layout: post
-title: Ultra Pixel Fonts
----
+# Ultra Pixel Fonts
 
 I got a mail couple of days back about Ultrafonts, a new type foundry which uses a patented technique for making Ultra Pixel Fonts. Ultra Pixel Fonts are fonts which are crystal clear at even the smallest sizes. These fonts stay crisp in pretty much any digital media and setting, from flash on a PDA to Photoshop. Not only does this greatly improve clarity on digital devices, but the size of the fonts allows much more content to be presented in a more readable form. You can look at the comparison graphic for an instant feel of the font.
 

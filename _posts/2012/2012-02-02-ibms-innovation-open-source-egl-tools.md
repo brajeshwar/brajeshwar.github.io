@@ -1,7 +1,4 @@
----
-layout: post
-title: IBM's Innovation - Open Source EGL Tools
----
+# IBM's Innovation - Open Source EGL Tools
 
 IBM announced the release of <a href="http://www.eclipse.org/edt/">Eclipse EGL Web Developer Tool</a> version 0.7. It is the first open source version of its EGL development tool. EGL stands for Enterprise Generation Tools, which is developed by IBM. It is a programming tool deliberated to meet the challenges of new, multi platform application development by providing a common language and programming model across languages, frameworks and runtime podium. The language makes use of concepts familiar to anyone that uses statically typed languages like Java, COBOL, C, etc. On the other hand, the language borrows the notion of Stereotype from Universal Modeling Language, not usually found in statically typed programming languages. 
 

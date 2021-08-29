@@ -1,7 +1,4 @@
----
-layout: post
-title: Political Pressure on Amazon leads to Wikileaks’ Suffering
----
+# Political Pressure on Amazon leads to Wikileaks’ Suffering
 
 Most of us definitely have an idea of the functioning of <a href="http://en.wikipedia.org/wiki/WikiLeaks">Wikileaks</a> - which is apparently been termed as the online whistle-blowing forum. It is termed so because the website, through the exposure of information related to certain high-profile government officials has revealed a lot more than anyone could have ever expected; and by anyone I mean government officials who claim that Wikileaks has leaked out the most confidential and secured of information.
 

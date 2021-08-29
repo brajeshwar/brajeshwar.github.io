@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Very Cool Travel Gadgets
----
+# 5 Very Cool Travel Gadgets
 
 Travel has gone high-tech. This is good and bad, depending on perspective. But we're going to say it's mostly good. An argument can definitely be made that technology innovations have no place in travel, but that entirely depends on the reason for traveling in the first place. Sure, if you are looking to escape your regular life for much needed rest and relaxation then, yes, technology may not be your best travel companion.
 

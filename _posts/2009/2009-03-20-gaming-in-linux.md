@@ -1,7 +1,4 @@
----
-layout: post
-title: Gaming in Linux
----
+# Gaming in Linux
 
 GNU/Linux has an immense potential, not only because of the fact that it can be ported to myriad of devices and installed on almost any hardware, but also because of the touch of openness and freedom it provides to its users. The question here is, will Linux be ideal to base all games in? Currently, Linux might not have as many games as Windows probably has but fact that Linux has a strong community of developers in its periphery shows a better future. 
 

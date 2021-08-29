@@ -1,7 +1,4 @@
----
-layout: post
-title: Using Trendistic for Marketing Research
----
+# Using Trendistic for Marketing Research
 
 <a href="http://trendistic.com/">Trendistic</a> is a great tool that is used to follow activity on Twitter. As you are probably aware, there are about 30 million Twitter users in the world, so Twitter trends are a great tool for market researchers.
 

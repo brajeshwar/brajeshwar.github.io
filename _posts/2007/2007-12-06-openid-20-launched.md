@@ -1,7 +1,4 @@
----
-layout: post
-title: OpenID 2.0 launched
----
+# OpenID 2.0 launched
 
 The open identity system OpenID 2.0 was yesterday <a href="http://openid.net/2007/12/05/openid-2_0-final-ly/">finally launched</a> at the Internet Identity Workshop in Mountain View. The new version improves security and usability -- and will hopefully be the catalyst for more Internet companies to adopt it.
 

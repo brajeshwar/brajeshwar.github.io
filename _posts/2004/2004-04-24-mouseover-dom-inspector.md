@@ -1,7 +1,4 @@
----
-layout: post
-title: Mouseover DOM Inspector
----
+# Mouseover DOM Inspector
 
 A very good friend of mine, infact my `CSS Role Model`, sent me this link of a bookmarklet on [Mouseover DOM Inspector](http://slayeroffice.com/?c=/content/tools/modi.html).
 

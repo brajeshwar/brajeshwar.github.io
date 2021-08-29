@@ -1,7 +1,4 @@
----
-layout: post
-title: Indian Tech no longer for startups that does sophisticated Technology
----
+# Indian Tech no longer for startups that does sophisticated Technology
 
 Of late, salaries of experienced and highly skilled technical engineers have soared multiple folds. This rise have ranked Indian High Tech Engineers almost at par with their Silicon Valley counterparts in terms of compensation. According to studies, it is revealed that such skilled Indian Computer Engineers are paid almost 3/4th of the American Engineers.
 

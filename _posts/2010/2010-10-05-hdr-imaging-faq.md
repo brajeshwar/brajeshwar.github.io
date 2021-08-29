@@ -1,7 +1,4 @@
----
-layout: post
-title: HDR Imaging FAQ
----
+# HDR Imaging FAQ
 
 After writing about <a href="/2010/hdr-imaging-some-common-creation-techniques/">HDR Image Creation Techniques</a> & <a href="/2010/hdr-imaging-top-10-tutorials/">Top 10 HDRI Tutorials</a>, this article answers the questions that are frequently asked about HDRI.
 

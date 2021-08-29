@@ -1,7 +1,4 @@
----
-layout: post
-title: Is Microsoft Playing Big Brother with their new Skype Acquisition?
----
+# Is Microsoft Playing Big Brother with their new Skype Acquisition?
 
 Microsoft <a href="http://about.skype.com/press/2011/05/microsoft_to_acquire_skype.html">bought Skype</a> for $8.5 billion. To put this in perspective, this is 5x what Google <a href="http://www.google.com/press/pressrel/google_youtube.html">paid for YouTube</a>. Many industry analysts believe that Microsoft overpaid for the VoIP giant, especially since Skype was sold in 2009 for just $2.75 billion. Given the huge jump in price there was likely an unannounced bidding war. 
 

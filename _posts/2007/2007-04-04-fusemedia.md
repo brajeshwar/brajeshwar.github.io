@@ -1,7 +1,4 @@
----
-layout: post
-title: FUSE+Media
----
+# FUSE+Media
 
 Independent studies have revealed that the growth of India's Entertainment and Media (E&M) industry will touch a record breaking Rs. 1 trillion mark in the next 4 years (by 2011). The E&M industry is growing at a Compound Annual Growth Rate (CAGR) of 18%. It is currently floating around Rs. 437 billion and is expected to outgrow the country's economy. This growth is party due to the several positive measures taken by the government. It has also been boosted by technological advancements and entry of large corporate players into all segments of the industry.
 

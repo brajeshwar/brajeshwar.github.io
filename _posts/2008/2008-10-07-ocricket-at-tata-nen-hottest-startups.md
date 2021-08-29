@@ -1,7 +1,4 @@
----
-layout: post
-title: Vote for our Startup, oCricket, at Tata NEN Hottest Startups
----
+# Vote for our Startup, oCricket, at Tata NEN Hottest Startups
 
 Our Startup <a href="http://ocricket.com/">oCricket</a> is one of the many nominated Startups at the Tata NEN Hottest Startups. We're requesting for Support.
 

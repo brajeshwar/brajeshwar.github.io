@@ -1,7 +1,4 @@
----
-layout: post
-title: Component Skinning - Scripted Art
----
+# Component Skinning - Scripted Art
 
 Components -- something I do not love much for my projects, though good for demos and fast presentations. It is the lack of flexibility to "skin it with ease and more effectively". Let us pray MM does something in future for this. Well, for me, my view of component is changing. I had been doing a couple of projects together with Darshan, and as you know he is the component guy, so we were clashing on many issues. He wants almost everything to be components and that is where I start hating as it limits my design a lot.
 

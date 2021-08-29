@@ -1,7 +1,4 @@
----
-layout: post
-title: An Indian Newspaper buys a Social Networking site
----
+# An Indian Newspaper buys a Social Networking site
 
 Few hours back, Mint <a href="http://www.livemint.com/2007/11/21001018/HT-Media8217s-net-arm-buys.html">reported</a> that Firefly eVentures Ltd, a wholly owned Internet subsidiary of Hindustan Times Media Ltd., has acquired social networking site - <a href="http://www.desimartini.com/">DesiMartini</a>. Terms and exact price were not disclosed but is believed to be less than $10 million.
 

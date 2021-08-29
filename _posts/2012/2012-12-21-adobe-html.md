@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe & HTML
----
+# Adobe & HTML
 
 Honestly, I'm not really impressed with many things Adobe's been doing lately. Actually, I believe that Adobe is going through some sort of an Identity Crisis. Nonetheless, you cannot really ignore some of the innovative and good things they're spearheading, specially with open standards like HTML.
 

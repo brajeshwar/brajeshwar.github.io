@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft Opens Up with Windows Azure
----
+# Microsoft Opens Up with Windows Azure
 
 Open Source Developers will always have more reasons to smile than curse themselves for using Open Source Softwares. A new reason however is Microsoft's recent declaration at the <a href="http://osidays.com/">Open Source India conference</a>, OSI Days 2010, of the availability of a latest range of developer software tools and Software Development Kits (SDKs) for <a href="http://en.wikipedia.org/wiki/PHP">PHP</a> (Hypertext Preprocessor) developers who exclusively work on the development of <a href="http://www.microsoft.com/windowsazure/windowsazure/">Windows Azure</a>. As stated earlier this announcement comes as a pleasant surprise more so for open source developers (those developing Azure) than anyone else.
 

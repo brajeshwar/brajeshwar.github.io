@@ -1,7 +1,4 @@
----
-layout: post
-title: Move Over Mexican Drug Cartels - Feds say Google is the new Illicit (pharma) Drug Pusher
----
+# Move Over Mexican Drug Cartels - Feds say Google is the new Illicit (pharma) Drug Pusher
 
 Before you get worried that Larry Page is prosecuted for large-scale drug trafficking, leading to a Google shutdown -- you can rest at ease -- they bought their way out of criminal charges -- to the tune of $500,000,000.
 

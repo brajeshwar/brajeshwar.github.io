@@ -1,7 +1,4 @@
----
-layout: post
-title: Review of RIM's Blackberry Playbook
----
+# Review of RIM's Blackberry Playbook
 
 <iframe width="800" height="450" src="http://www.youtube.com/embed/OLDh-6_sHT4?hd=1" frameborder="0" allowfullscreen></iframe>
 

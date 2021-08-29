@@ -1,6 +1,3 @@
----
-layout: post
-title: Upgraded to Leopard - Apple Mac OS X 10.5
----
+# Upgraded to Leopard - Apple Mac OS X 10.5
 
 I just upgraded to Apple's latest OS - the <a href="http://www.apple.com/macosx/">Mac OS X</a> 10.5 aka Leopard and I'm loving every moment of my new environment. This version is worth the upgrade even with just the Time Machine and of course, there are many other new features and enhancements. Time Machine is one awesome piece of Application and NO Mac user should NOT be NOT using it.

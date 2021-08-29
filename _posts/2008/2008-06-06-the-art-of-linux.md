@@ -1,7 +1,4 @@
----
-layout: post
-title: The art of Linux
----
+# The art of Linux
 
 As discussed in our earlier article -- <a href="/2008/ready-for-lamp/">Ready for LAMP</a>, let's move on to our mainstream theme - The art of (tao) Linux!
 

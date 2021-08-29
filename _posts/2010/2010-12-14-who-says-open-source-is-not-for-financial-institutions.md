@@ -1,7 +1,4 @@
----
-layout: post
-title: Who says Open Source is NOT for Financial Institutions?
----
+# Who says Open Source is NOT for Financial Institutions?
 
 A recent news story published by the <a href="http://www.businessweek.com/news/2010-12-11/ex-goldman-sachs-programmer-found-guilty-of-stealing-secrets.html">Bloomberg Businessweek</a> claimed that an Ex-Goldman Sachs programmer was found guilty of stealing certain source codes to use it for his new employer's benefit. During the trial an argument put across by the defendant was that most of the codes that he stole were open source in nature. But the matter that caught most people's attention was the fact that a financial institution like <a href="http://www2.goldmansachs.com/">Goldman Sachs</a> is also one amongst a plethora of open source code users.
 

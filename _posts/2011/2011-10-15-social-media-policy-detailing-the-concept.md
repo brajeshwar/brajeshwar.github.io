@@ -1,7 +1,4 @@
----
-layout: post
-title: Social Media Policy - Detailing the Concept
----
+# Social Media Policy - Detailing the Concept
 
 <a href="http://en.wikipedia.org/wiki/Social_media">Social Media</a> is a concept; it is efficient, effective and far reaching. Yet, it is just a tool in our hands. Using social media to advance your prospects or connect with your friends and family is the expected use of the tool. However, many enthusiasts go overboard with the idea and in turn reduce the standards of social media networking. In a professional context, this problem can take arbitrary proportions.
 

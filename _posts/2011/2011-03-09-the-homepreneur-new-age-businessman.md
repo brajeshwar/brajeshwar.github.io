@@ -1,7 +1,4 @@
----
-layout: post
-title: The Homepreneur - New Age Businessman!
----
+# The Homepreneur - New Age Businessman!
 
 If you think your gardening, cooking, photography, writing skills are more than just a hobby, then you are what is defined as - <strong>The Homepreneur</strong>. In the U.S there are an increasing number of home-based businesspeople, at an estimated 6.6 million home-based enterprises. These businesses are no longer considered less successful or respectful than big companies. In India, the rise of home enterprises can be traced back to <a href="http://www.businessweek.com/magazine/content/08_70/s0810048750962.htm">telecommuting</a> in the 1980s and increasing use of internet in 1990s. These businesses are also employing private sector workers, part-time workers, home-makers, and students, thus making a commercial space out of home. With the new smartphones, tablet PCs this home business trend has received tremendous encouragement.
 

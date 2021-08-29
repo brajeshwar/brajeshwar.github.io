@@ -1,7 +1,4 @@
----
-layout: post
-title: Typography, One of the Most Important Aspect of Web Design
----
+# Typography, One of the Most Important Aspect of Web Design
 
 I say, "your web-design is already half done when you've taken care of the Typography." Typography is such an important aspect of User Interface Designs that it would be total folly to neglect it in the underneaths of font-family, font-size and font-weights.
 
@@ -61,7 +58,7 @@ It is interesting that Typeplate has a built-in style for Pull Quotes. Pull Quot
 
 Footnotes are a nice way to give references to your articles, content or blog posts. Typeplate has a footnote style ready to be used.
 
-![Typography)](/static/common/typography-legends.png)
+![Typography)](/static/2013/typography-legends.png)
 
 ## More Typography
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: MissTravel - the Next Frontier of Digital Pimpery
----
+# MissTravel - the Next Frontier of Digital Pimpery
 
 If you pay a woman for sex, that's illegal -- it's prostitution. If you film it it's legal -- it's porn. If you put a soft lens on the camera -- it's art. What do you call a website that assists rich men in plying attractive young gold diggers with 'free' trips around the world? Digital pimpery? Perhaps. Brandon Wade calls it MissTravel.com.
 

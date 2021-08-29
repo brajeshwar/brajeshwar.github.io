@@ -1,7 +1,4 @@
----
-layout: post
-title: Magic Framerate
----
+# Magic Framerate
 
 A few Flash Designers and developers alike have asked me or rather challenged me why I use a 31 fps in almost all my SWF documents. Let me archived this on my site so that I can refer to it future, just in case. And thanks to the person who once did an explanation on the same (sorry that I have forgotten who it was).
 

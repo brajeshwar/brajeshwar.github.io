@@ -1,7 +1,4 @@
----
-layout: post
-title: EAS 2.0 - Application Development
----
+# EAS 2.0 - Application Development
 
 There are many good books that caters to the need of good Application Development using Object Oriented Programming methodology. Mook's Essential ActionScript 2.0' Part 2 "Application Development" preaches the same  but to the point in an easier way  for the Flash Developers to understand  faster. I particularly like the clear cut explanation to separate the source and the public accessible files for your application. The book advices  to have "ApplicationName" folder which contains two distinct folders for the "source" and the public accessible "deploy".
 

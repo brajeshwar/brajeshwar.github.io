@@ -1,7 +1,4 @@
----
-layout: post
-title: Tussle between GoI and Social Networking Sites
----
+# Tussle between GoI and Social Networking Sites
 
 The GoI, or in other word, Indian Government is in the process of pursuing a mechanism that will ensure provision of clean content on websites. The intension of the government was clarified by Mr. Kapil Sibal, Minister of Telecom that it is not against the freedom of speech as guaranteed by the constitution of India but rather to curtail the objectionable material from being posted on various sites especially on social networking media. Objectionable material is reflected in various forms like defamation, hate speech, privacy & security, impersonation, pornography and national security. The Government has invited the attention of software giants like Google, Microsoft and Facebook to come out with an action plan to avoid <a href="http://articles.timesofindia.indiatimes.com/2011-12-25/social-media/30556311_1_defamation-and-derogation-social-networking-websites-objectionable-content">objectionable online content</a>.
 

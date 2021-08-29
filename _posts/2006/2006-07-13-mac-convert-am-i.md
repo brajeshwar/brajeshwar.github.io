@@ -1,7 +1,4 @@
----
-layout: post
-title: Mac Convert! Am I?
----
+# Mac Convert! Am I?
 
 Guy Watson, aka Flash Guru, recently got converted to a Mac. [Abdul Qabiz](http://www.abdulqabiz.com/) too is a proud owner of a [MacBook](http://www.flickr.com/photos/brajeshwar/183225267/).
 

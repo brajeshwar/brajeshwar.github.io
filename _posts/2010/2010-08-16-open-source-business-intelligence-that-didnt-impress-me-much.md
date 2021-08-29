@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source Business Intelligence - That didn't impress me much!
----
+# Open Source Business Intelligence - That didn't impress me much!
 
 I have always had a liking for the quote -- "All that glitters is not gold." Though it is not exactly what I mean to exemplify about Open source <a href="http://en.wikipedia.org/wiki/Business_intelligence_tools">Business Intelligence Tools</a> in this article, but would want to put forward certain shortcomings about these offerings. Clearly, Open source BI has been at a tipping point in the recent years and has created news of being the next big thing in the Business Intelligence business. 
 

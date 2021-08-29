@@ -1,7 +1,4 @@
----
-layout: post
-title: Integrated Linux Configuration & Build Environment for NetLogic Microsystems' Multi-Core Processors
----
+# Integrated Linux Configuration & Build Environment for NetLogic Microsystems' Multi-Core Processors
 
 Having served global requirements of system software, development tools, and many other system related professional services for 40 years, <a href="http://www.enea.com/">Enea</a> has now <a href="http://www.businesswire.com/news/home/20100920006222/en/Enea-AB-Enea-Announces-Availability-Integrated-Linux">announced</a> the development of an Integrated Linux Configuration and Build Environment. This will serve as an integration of <a href="http://www.netlogicmicro.com/">NetLogic Microsystems</a> Linux software development kit (SDK) with advanced graphical configuration, build, and debug tools.
 

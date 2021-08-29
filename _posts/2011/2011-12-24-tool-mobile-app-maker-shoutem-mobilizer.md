@@ -1,7 +1,4 @@
----
-layout: post
-title: Tool Mobile App Maker ShoutEm Mobilizer
----
+# Tool Mobile App Maker ShoutEm Mobilizer
 
 Mobile application revolution is changing business, social and lifestyle landscape. They complement our online and offline presence and enable us new ways of communication and interaction. They are changing the way we live. They become our lifestyle. Where is your app?
 

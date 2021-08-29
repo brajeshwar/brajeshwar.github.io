@@ -1,7 +1,4 @@
----
-layout: post
-title: Screw Protect IP, SOPA pushes ACTA-like Agenda - in other news - holy Anti-Piracy acronyms Batman!
----
+# Screw Protect IP, SOPA pushes ACTA-like Agenda - in other news - holy Anti-Piracy acronyms Batman!
 
 Surprise, surprise -- America is meddling in international affairs, again. The United State's newest pet piracy project, the <a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">Stop Online Piracy Act</a> (SOPA), is looking to bring the uber-American vigilante-style anti-piracy justice beyond its borders.  This newest act in a long string of anti-piracy measures will allow the U.S Department of Justice to force an all-out boycott of websites hosting pirated content, regardless of their international locations.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple iOS5 – Brand New Features
----
+# Apple iOS5 – Brand New Features
 
 <a href="http://www.apple.com/">Apple</a> has rolled out its brand new version of its operating system, <a href="http://www.apple.com/ios/ios5/">iOS 5</a>, which will be available Fall 2011. On June 6th, Apple announced the release of the fifth upgraded version iOS5.0 beta version, during the WWDC annual event. Packed with some cool revolutionary features, not few, but around 200 brand new features to it. Well, that's a huge upgrade to its previous versions and a big leap in the family of iOS enabled devices. It's already been said that iOS5 would be fully integrated with <a href="http://www.apple.com/icloud/">iCloud</a>. The major upgrade to it is an overall performance boost and the speed.
 

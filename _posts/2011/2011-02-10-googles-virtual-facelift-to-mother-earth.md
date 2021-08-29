@@ -1,7 +1,4 @@
----
-layout: post
-title: Google's Virtual Facelift to Mother Earth
----
+# Google's Virtual Facelift to Mother Earth
 
 > For in the true nature of things, if we rightly consider, every green tree is far more glorious than if it were made of gold or silver.
 

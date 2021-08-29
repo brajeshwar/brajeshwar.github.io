@@ -1,7 +1,4 @@
----
-layout: post
-title: Use a Recession to Create an Edge
----
+# Use a Recession to Create an Edge
 
 Many would-be entrepreneurs would not consider starting a business in the middle of a recession. Understandably, it is a very scary time to begin a venture. Startup capital is low and customers may not be able to afford the products or services you have to offer. On the surface, being an entrepreneur during a recession can be a bone-headed idea.
 

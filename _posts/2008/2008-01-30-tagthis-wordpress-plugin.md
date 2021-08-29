@@ -1,7 +1,4 @@
----
-layout: post
-title: Use of crowd intelligence to tag your Posts - "TagThis" Plugin
----
+# Use of crowd intelligence to tag your Posts - "TagThis" Plugin
 
 Ever since the first public beta of Wordpress 2.3, a nagging itch had kept me worried -- "How and who the hell will tag my old articles?" Tags are awesome but 'are you sure you have tagged your post effectively?', 'will you go back and be able to tag all your older articles?'
 

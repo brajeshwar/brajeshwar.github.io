@@ -1,7 +1,4 @@
----
-layout: post
-title: ZDNet, TechCrunch, ReadWriteWeb; They've got it wrong
----
+# ZDNet, TechCrunch, ReadWriteWeb; They've got it wrong
 I was willing to brush it aside as another harmless mistake by some high profile sites, "we all make mistakes". However, Mrinal's second <a href="http://twitter.com/mrinalwadhwa/statuses/807789362">tweet</a> (Mrinal's articles are <a href="http://weblog.mrinalwadhwa.com/2008/05/09/a-list-bloggers-confused-about-rich-internet-application-technologies/">here</a> and <a href="http://weblog.mrinalwadhwa.com/2008/05/10/latest-example-readwriteweb-a-list-bloggers-are-so-confused-about-ria-technologies/">here</a>) got me thinking and wanted to bring forth some clarifications for the Rich Internet Applications (RIA) realm.
 
 ## ZDNet

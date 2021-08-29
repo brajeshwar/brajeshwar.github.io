@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Ways to Build an Online Community for Your Startup
----
+# 5 Ways to Build an Online Community for Your Startup
 
 There are multiple benefits from building an Online Community to create demand for your product. Unlike marketing campaigns, the efforts placed in building online community will give results in the long run. 
 

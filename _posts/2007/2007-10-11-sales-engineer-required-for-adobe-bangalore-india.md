@@ -1,7 +1,4 @@
----
-layout: post
-title: Sales Engineer required for Adobe, Bangalore (INDIA)
----
+# Sales Engineer required for Adobe, Bangalore (INDIA)
 
 [Adobe](http://www.adobe.com/) revolutionizes how the world engages with ideas and information. For more than two decades, the company's award-winning software and technologies have redefined business, entertainment, and personal communications by setting new standards for producing and delivering content that engages people virtually anywhere at anytime.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Can SELINUX impose a better confidentiality over encryption?
----
+# Can SELINUX impose a better confidentiality over encryption?
 
 One issue that may come to the mind of a Linux user is - How to secure data that comes in from an encrypted file? This critique takes the point that SE Linux is the reply. SE Linux is the Security-Enhanced Linux project started by the NSA which lets you secure Linux at every echelon from the kernel up. SE Linux is in essence a defense against hackers giving users another stratum of protection to online information. 
 

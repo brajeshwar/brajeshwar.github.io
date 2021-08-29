@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Calendar - the best after Google Search & GMail
----
+# Google Calendar - the best after Google Search & GMail
 
 [Google](http://www.google.com/) Search is the _de facto_ search engine for me and almost everybody else on the internet. [Gmail](http://www.gmail.com/) is a good web based email client but have never been able to replace my desktop mail client and will not. I used it extensively for SVN/CVS notifications, mailing lists, newsletters, forum replies and everything else save for my personal & official mails. All other services of Google are good too but personally I don't use any of them on a second to minute basis!
 

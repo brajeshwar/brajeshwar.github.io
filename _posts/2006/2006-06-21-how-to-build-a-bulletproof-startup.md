@@ -1,7 +1,4 @@
----
-layout: post
-title: How to build a bulletproof startup?
----
+# How to build a bulletproof startup?
 
 [How to build a bulletproof startup](http://money.cnn.com/magazines/business2/business2_archive/2006/06/01/8378491/) by Michael V. Copeland and [Om Malik](http://gigaom.com/) ([PDF](http://i.cnn.net/money/magazines/business2/startups/bulletproof.pdf)).
 

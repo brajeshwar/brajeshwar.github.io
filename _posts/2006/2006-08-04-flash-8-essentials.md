@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash 8 Essentials
----
+# Flash 8 Essentials
 
 This is going to be a very belated review on [Flash 8 Essentials](http://www.amazon.com/gp/product/1590595327/104-2916545-1727903). Special Thanks to [Tink](http://www.tink.ws/) (Stephen Downs) for gifting me such a colorful book to review. Stephen is one of the authors along with - *Paul Barnes-Goggett, Glen Rhodes, Craig Swan, Matt Voerman and Todd Yard*.
 

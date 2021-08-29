@@ -1,7 +1,4 @@
----
-layout: post
-title: The most blatant Facebook injustice yet
----
+# The most blatant Facebook injustice yet
 <p>Facebook has been criticized for their privacy violations for several years. In the United States, they may be investigated by the FTC for stealing user data and selling it to advertisers. Recently, the situation has become even more insulting for the users who have already been exploited. Facebook actually was <a href="http://nakedsecurity.sophos.com/2011/01/28/facebook-awarded-over-360-million-spammer/">given an award</a> after a hacker stole login information on users.</p>
 
 <h3>Who were the real victims?</h3>

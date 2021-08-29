@@ -1,7 +1,4 @@
----
-layout: post
-title: A shinier future for Flash (on iOS Devices)
----
+# A shinier future for Flash (on iOS Devices)
 
 <a href="http://www.apple.com/">Apple</a> relaxed its iOS developer rules on Thursday, removing the restriction that had blocked the <a href="http://labs.adobe.com/technologies/packagerforiphone/">Packager for iPhone</a> application and also permitted advertisements supplied by Google's <a href="http://www.admob.com/">AdMob</a> once again. It also detailed the full set of App Store admission rules for the first time. Apple's recent announcement on lifting restrictions on its third-party developer guidelines has resulted in Adobe's Packager for iPhone, a feature in <a href="http://www.adobe.com/products/flash/">Adobe Flash Professional CS5</a> authoring tool. This feature was created to enable Flash developers to quickly and easily deliver applications for iOS devices. Only available for developers to use today in Flash Professional CS5, the community says that Packager apps are already being approved for the <a href="http://www.apple.com/iphone/apps-for-iphone">App Store</a>. 
 

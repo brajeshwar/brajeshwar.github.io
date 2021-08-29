@@ -1,7 +1,4 @@
----
-layout: post
-title: What do we expect from Microsoft's IE9 Beta!
----
+# What do we expect from Microsoft's IE9 Beta!
 
 Sometime back Microsoft revealed the latest <a href="http://ie.microsoft.com/testdrive/">Internet Explorer 9</a> through various public releases. They are readying to release the IE9 Beta and are anticipating a good response from the community.
 

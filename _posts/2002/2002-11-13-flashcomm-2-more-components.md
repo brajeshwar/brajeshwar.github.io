@@ -1,7 +1,4 @@
----
-layout: post
-title: 'Flashcomm : 2 more Components'
----
+# 'Flashcomm : 2 more Components'
 
 <a href="http://www.macromedia.com/software/flashcom/download/components/" target="_blank">Flashcomm Components</a>, they have been upadated and 2 more components (15th Component : VideoPlayback and the 16th : VideoRecord) have been added. Go get your <a href="http://www.macromedia.com/software/flashcom/download/components/" target="_blank">FREE download</a> today. Thanks to <a href="http://samuelwan.com/information/" target="_blank">Sam</a> for the quick info.
 

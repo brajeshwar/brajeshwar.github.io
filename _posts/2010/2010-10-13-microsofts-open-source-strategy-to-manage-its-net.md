@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft's 'Open Source Strategy' to manage its .Net
----
+# Microsoft's 'Open Source Strategy' to manage its .Net
 
 Call it uncanny, strange or unlikely, Microsoft has made the move of going the Open-Source way -- at least to manage some of its resources. In this case the idea is to incorporate one of the first editions (versions) of <a href="http://nupack.codeplex.com/">NuPack</a> which can serve as an open source manager for Microsoft's <a href="http://www.microsoft.com/net/">.Net</a>. Scott Guthrie has exemplified in a detailed manner about the <a href="http://weblogs.asp.net/scottgu/archive/2010/10/06/announcing-nupack-asp-net-mvc-3-beta-and-webmatrix-beta-2.aspx">working of the NuPack</a> in his website. 
 

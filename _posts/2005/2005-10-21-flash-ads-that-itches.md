@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Ads that itches
----
+# Flash Ads that itches
 
 I saw it being done, able to do during the Flash 6 Player days and was really against using it in the wrong manner. If you are using it, have an option for the user to disable it, close it or atleast make it non-intrusive; but TimesJob have their flash pop-up ad without even an option to close leave alone disable it. It is not just their site but I have encountered on coupla other sites, I really hated them.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Nasscom-ICICI KP joins hands for a Rs. 100 crore VC fund
----
+# Nasscom-ICICI KP joins hands for a Rs. 100 crore VC fund
 
 The onslaught of "economical, rapidly deployable" private equity funding in India is growing and it looks like 2008 will see another year of such phenomenal growth. Today, the Economic Times (India) carried a Press Release of a recent formation of a <a href="http://www.nasscom.in/">Nasscom</a>-<a href="http://www.iciciknowledgepark.com/">ICICI Knowledge Park</a> fund of Rs. 100 crore (roughly $25.45 million). The fund is aimed at providing seed capital to startups creating intellectual property.
 

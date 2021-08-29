@@ -1,7 +1,4 @@
----
-layout: post
-title: No Frills ultra portable laptop for under $350
----
+# No Frills ultra portable laptop for under $350
 
 Yes, yes, we all know of yesterday's MacBook Air announcement by Steve Jobs from Apple and it's indeed the thinnest, sleekest and sexiest laptop ever. Let's not go deep into that as everybody is already aware of it by now; let's look at something we missed in the Indian Business scenario with its latest cult of small-cheap-cool products -- the no-frills ultra-portable laptop from <a href="http://www.hclinfosystems.com/">HCL InfoSystems</a>.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Cloud Computing and Phone security!
----
+# Cloud Computing and Phone security!
 
 {% include video source="youtube" id="uLdHnMG4Wlk" %}
 

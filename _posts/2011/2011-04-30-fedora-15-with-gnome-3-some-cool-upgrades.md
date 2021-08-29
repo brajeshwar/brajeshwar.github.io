@@ -1,7 +1,4 @@
----
-layout: post
-title: Fedora 15 with GNOME 3 & some cool upgrades!
----
+# Fedora 15 with GNOME 3 & some cool upgrades!
 
 The next version of <a href="http://fedoraproject.org/wiki/Releases/15/FeatureList">Fedora</a>, Version 15 is available for download as a beta version. The beta version was released and a reworked boot loading system will be featured by this OS. The <a href="http://fedoraproject.org/wiki/Releases/15/FeatureList">major changes for the Linux distribution</a> are hopefully taken care of and the complete release is scheduled for May 2011; it is to be noted that this period of release is approximately a month after the release of Ubuntu 11.04. New releases of Fedora can usually be expected about once every six months.
 

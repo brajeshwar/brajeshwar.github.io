@@ -1,7 +1,4 @@
----
-layout: post
-title: Escaped from a deadly accident
----
+# Escaped from a deadly accident
 
 My brother, Benao, was driving the car. The passengers were Linda, my cousin, Arindam, my business partner, and I. We were returning from Pune on the Pune-Mumbai Expressway on that fateful night of Feb 8, 2006. Along the way on one stretch of the ExpressWay, we saw a huge truck lying on its side and about 5 minutes ahead of it the road followed a concave curve along which he had maneuvered very well just to find that an iron rod have strayed on the right side of the road. Well, instead of doing a sharp turn at 120 km/hr, he slowed down and went over it allowing it to hit the right wheel which eventually saved us an accident by sacrificing the right wheel rubber. While we stood guard at the road's shoulder for incoming vehicles, he quickly changed to the back-up tyre in about 15 minutes and returned home safely.
 

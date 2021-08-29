@@ -1,7 +1,4 @@
----
-layout: post
-title: 10 tips to reduce the burgeoning IT costs, to a cheaper, better IT
----
+# 10 tips to reduce the burgeoning IT costs, to a cheaper, better IT
 
 I just read an article from <a href="http://www.roughtype.com/">Nicholas Carr</a> and I like it enough to reproduce it here. How to cut on IT budgets and still have the computing capabilities a company needs?
 

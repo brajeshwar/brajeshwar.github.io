@@ -1,7 +1,4 @@
----
-layout: post
-title: Twitter-Yandex join hands
----
+# Twitter-Yandex join hands
 
 Social networking site, Twitter is popular with its short messaging tweets. These tweets greet others and let users connect with others on a continuous basis. Twitter has become an attractive source not only for individuals but also for businesses. In fact search engines are also befriending with Twitter. After Microsoft's Bing association with Twitter, another search engine, Yandex has joined hands with Twitter. 
 

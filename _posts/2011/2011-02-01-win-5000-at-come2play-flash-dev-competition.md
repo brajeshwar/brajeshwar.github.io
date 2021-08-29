@@ -1,7 +1,4 @@
----
-layout: post
-title: Win $5000 at Come2Play Flash Dev Competition
----
+# Win $5000 at Come2Play Flash Dev Competition
 
 <a href="http://www.come2play.com/">Come2Play</a> and the <a href="http://www.linkedin.com/groups?gid=121017">Linkedin Flash Game Developers Group</a> are launching the 2nd "<a href="http://www.come2play.com/dev_inner.asp?f=1&newsid=727">Games that Challenge the World Contest</a>" for multiplayer games. Cash prizes totalling $10,000 will be awarded to contest winners!
 

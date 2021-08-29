@@ -1,6 +1,3 @@
----
-layout: post
-title: Download free fonts and Dingbats
----
+# Download free fonts and Dingbats
 
 A huge collection of [Commercial](https://www.urbanfonts.com/commercial-fonts.htm), and [Free Fonts](http://www.urbanfonts.com/free-fonts.htm) complete with a good set of [Free Dingbats](http://www.urbanfonts.com/free-dingbats.htm) are on Urban Fonts for you to Download. It is a free front archive but with a twist - it's organized as a commercial font foundry with plenty of interactive features. There are over 8,000 free fonts and dingbats for the Mac and the PC.

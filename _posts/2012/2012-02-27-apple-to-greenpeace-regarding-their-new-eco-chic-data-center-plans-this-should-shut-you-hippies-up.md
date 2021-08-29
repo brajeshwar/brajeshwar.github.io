@@ -1,8 +1,5 @@
----
-layout: post
-title: Apple to Greenpeace regarding their New Eco-Chic Data Center Plans, "this should
+# Apple to Greenpeace regarding their New Eco-Chic Data Center Plans, "this should
   shut you hippies up"
----
 
 In response to on-going environmental group pressure Apple has decided to go Green. Making it a Green Apple. After years of persecution from groups like Greenpeace (an irony in itself given that many of Greenpeace's dread-lock-sporting, bored-surbubanite-desperately-looking-for-a-cause Macbook owners) Apple is finally bending to group will and greening one of its largest facilities. 
 

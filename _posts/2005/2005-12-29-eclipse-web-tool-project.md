@@ -1,7 +1,4 @@
----
-layout: post
-title: Eclipse Web Tool Project
----
+# Eclipse Web Tool Project
 
 Based on experience, further twisted by personal choice, I have multiple version of "Eclipse (Eclipse)":http://www.eclipse.org/ - Default (test bed), Zorn, Flash. Very recently, I have a new addition *WTP* or the [Eclipse Web Tools Platform](http://www.eclipse.org/webtools/).
 

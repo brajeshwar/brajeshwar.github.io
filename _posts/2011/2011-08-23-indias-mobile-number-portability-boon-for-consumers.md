@@ -1,7 +1,4 @@
----
-layout: post
-title: India's Mobile Number Portability - Boon for Consumers!
----
+# India's Mobile Number Portability - Boon for Consumers!
 
 [Mobile Number Portability](http://en.wikipedia.org/wiki/Mobile_number_portability) (MNP), is finally been implemented in India. MNP provides the consumers and subscribers an opportunity to change their service operators while retaining their existing mobile numbers. It has become an instant success across India with the results showing 13 million subscribers changing their service operators since the day it has been implemented. It's not every day you hear about the end-user getting most of the benefit, do you?
 

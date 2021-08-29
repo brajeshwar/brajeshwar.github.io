@@ -1,7 +1,4 @@
----
-layout: post
-title: Know when to quit the race
----
+# Know when to quit the race
 
 Many businesses fail each year. Others are sold. You read about a few in the newspapers, but for each newsworthy event, thousands occur quietly in good economic times and bad. Here are 10 things to focus on when considering whether <a href="http://www.bizjournals.com/extraedge/consultants/growing_pains/2008/03/03/column12.html">you should quit the race</a> and move on.
 

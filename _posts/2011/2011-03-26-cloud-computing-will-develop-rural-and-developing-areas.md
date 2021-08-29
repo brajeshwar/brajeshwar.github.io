@@ -1,7 +1,4 @@
----
-layout: post
-title: Cloud Computing will develop rural and developing areas
----
+# Cloud Computing will develop rural and developing areas
 
 Cloud computing has the ability to transform the developing world, and bring it into the high tech age at lightning speed via what the NY Times calls '<a href="http://www.nytimes.com/2008/01/07/business/worldbusiness/07iht-car.1.9051152.html">Gandhi engineering</a>'. The challenges previously faced by developing countries over reliable power sources, lack of connectivity and expensive equipment costs that were prohibitive for developing areas to modernize are all being addressed by cloud computing. Cloud computing has the potential to create a paradigm shift in the way IT resources are used and distributed, says P. Sinha, Chief Coordinator for R&D at Pune University, India in the Center for Development of Advanced Computing. In India alone cloud computing is projected to grow from a $50 million a year industry to $15 billion in the next few years.
 

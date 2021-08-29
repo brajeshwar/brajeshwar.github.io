@@ -1,7 +1,4 @@
----
-layout: post
-title: Access Clipboard History with Alfred (Mac OS X)
----
+# Access Clipboard History with Alfred (Mac OS X)
 
 Quite often, one of the suggestions for developers and designers is to have a tool or a utility to access your Clipboard History. There are indeed quite a free few good tools which sits in your menubar that does the job very well. Some of the most recommended free ones are <a href="http://jumpcut.sourceforge.net/">Jumpcut</a> and <a href="http://www.clipmenu.com/">ClipMenu</a>.
 

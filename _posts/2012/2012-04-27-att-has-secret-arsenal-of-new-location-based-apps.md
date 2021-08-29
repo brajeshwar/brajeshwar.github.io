@@ -1,7 +1,4 @@
----
-layout: post
-title: AT&T has Secret Arsenal of new Location-based Apps
----
+# AT&T has Secret Arsenal of new Location-based Apps
 
 The uber-creative minds at the <a href="http://www.research.att.com/editions/201204_home.html">AT&T Labs</a>, AT&amp;T's research contingent, have been busier than Santa's elves. Their new smartphone technologies geared at automobiles might border on intrusive but are nonetheless genius. From a hands-free, cellphone-leveraging car unlocking method to digital teenage driver monitoring to location-based messaging AT&T has got an interesting lineup of new technologies coming out soon. This new batch of cool shiznit is highly focused on location-and speech-recognition-based APIs so expect it to be slightly encroaching.
 

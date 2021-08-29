@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe opens Bug-Database to public
----
+# Adobe opens Bug-Database to public
 
 Saw this off Colin's blog -- <a href="http://www.moock.org/blog/archives/000274.html">Public bug database for flash player</a>.
 

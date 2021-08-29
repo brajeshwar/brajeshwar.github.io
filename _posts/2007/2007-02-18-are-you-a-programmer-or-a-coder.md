@@ -1,7 +1,4 @@
----
-layout: post
-title: Are you a Programmer or a Coder?
----
+# Are you a Programmer or a Coder?
 
 Are programmers and Coders the most neglected link in the Software Development Chain? Coders are like smart assembly line workers as opposed to programmers who are plant engineers. Programmers are the brains, the glorious visionaries who create things. Large software programmers that often run into billions of lines are designed and developed by a handful of programmers. Coders follow instructions of the large program.
 

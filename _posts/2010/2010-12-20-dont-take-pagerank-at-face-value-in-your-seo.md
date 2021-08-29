@@ -1,7 +1,4 @@
----
-layout: post
-title: Don't take pagerank at face value in your SEO
----
+# Don't take pagerank at face value in your SEO
 
 If you are doing SEO for your own or someone else's website, you know what pagerank is. You have heard people claim that they use pagerank as the primary or even the only basis for their ranking. They focus on building links from high page rank sites and use pagerank as one of the only aspects of their keyword research strategy.
 

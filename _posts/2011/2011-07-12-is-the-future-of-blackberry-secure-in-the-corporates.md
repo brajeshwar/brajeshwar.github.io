@@ -1,7 +1,4 @@
----
-layout: post
-title: Is the Future of BlackBerry Secure in the Corporates?
----
+# Is the Future of BlackBerry Secure in the Corporates?
 
 In recent times, the ubiquity of <a href="http://www.rim.com/">RIM's</a> award winning smartphone BlackBerry has been shrinking, thanks to companies providing an option of allowing their employees to add third-party security applications to their own picked up or chosen smart phones. This certainly gives the employees the freedom to opt for their own smart phone and in addition they take on more responsibility for security. Companies offering such applications such as <a href="http://www.good.com/">Good Technology</a> and <a href="http://www.mobileiron.com/">Mobile Iron</a> are thus intruding Blackberry's mainstay in the corporate market. 
 

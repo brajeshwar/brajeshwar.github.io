@@ -1,7 +1,4 @@
----
-layout: post
-title: Dhunio - Music for the Internet's Soul
----
+# Dhunio - Music for the Internet's Soul
 
 ```
 There's music in the sighing of a reed;

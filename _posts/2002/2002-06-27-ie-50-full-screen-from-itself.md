@@ -1,7 +1,4 @@
----
-layout: post
-title: IE 5.0 + full Screen from itself
----
+# IE 5.0 + full Screen from itself
 
 There was some discussion on the Macromedia Flash Forum about Full screen from the page itself. I just thought I will share that too here. You may alternatively have the click to be onLoad of the Body so that the browser goes fullscreen on load itself.
 

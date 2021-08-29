@@ -1,7 +1,4 @@
----
-layout: post
-title: What NOT to do while looking for a job
----
+# What NOT to do while looking for a job
 
 There are times when the need to switch a job is high on the agenda and it gets essential to breathe a new air into one's professional life. It's pretty humane to make mistakes, but there are a few concerns which are a strict no-no when one thinks of switching from one organization to another.
 

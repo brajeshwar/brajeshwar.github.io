@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe launches Free web version of Photoshop
----
+# Adobe launches Free web version of Photoshop
 
 Adobe today announced <a href="http://www.photoshop.com/express/">Adobe Photoshop Express</a> public beta, a free Rich Internet Application available to anyone who wants to store, sort and show off digital photos with eye-catching effects.
 

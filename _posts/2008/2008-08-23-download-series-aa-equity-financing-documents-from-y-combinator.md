@@ -1,7 +1,4 @@
----
-layout: post
-title: Download Series AA Equity Financing Documents from Y Combinator
----
+# Download Series AA Equity Financing Documents from Y Combinator
 
 Y Combinator and Wilson Sonsini Goodrich & Rosati announced the <a href="http://ycombinator.com/seriesaa.html">Series AA Equity Financing Documents</a>. Their goal is to make angel funding rounds for startups easier for both sides.
 

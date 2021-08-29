@@ -1,7 +1,4 @@
----
-layout: post
-title: Phone-banking services in India -- bringing banking to the masses and a tidy profit
----
+# Phone-banking services in India -- bringing banking to the masses and a tidy profit
 <p>There are so few instances where services for underdeveloped areas are profitable that Vodafone's new phone-based banking program warrants attention.</p>
 <p>Vodafone's Indian sector has recently formed an alliance with one of the major banks in India to create a phone-based banking system designed to boost profits for Vodafone after competition lowered their margins. Recently competition has pushed Vodafone's cell phone rates below $.005 per minute in India, seriously damaging their profit margins. These lowered profits are the motivation behind why the cell phone giant has created this new mobile phone banking program.</p>
 

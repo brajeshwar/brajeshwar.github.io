@@ -1,7 +1,4 @@
----
-layout: post
-title: Will love-hate relationship continue with Flash 11?
----
+# Will love-hate relationship continue with Flash 11?
 
 The love-hate relationship that millions of computer geeks around the world have with Flash is about to change. Flash Player has gotten a makeover and released its <a href="http://labs.adobe.com/technologies/flashplatformruntimes/flashplayer11/">version 11</a>. The widely-used browser plug-in from Adobe got an overhaul, undoubtedly due to threats to its monopoly from rapidly-growing web standards competitors like HTML5, Silverlight and Java FX. Web standards coming to market is the only threat to Flash's supremacy though, Adobe's brainchild has also been locked out of iOS devices and has only a small foothold with Android.
 

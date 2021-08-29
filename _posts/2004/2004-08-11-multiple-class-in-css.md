@@ -1,7 +1,4 @@
----
-layout: post
-title: Multiple Class in CSS
----
+# Multiple Class in CSS
 
 Damn! Why was I never told, taught, tiped that this is possible and modern browsers support 'em. The oracle of CSS would be laughing at me for learning this late, yes very late. I had missed an online conference today while trying to get my head around to this trivia, "mutltiple classes" in CSS. I have learnt long back that I can have a class piggybag to an ID but what was troubling me was that I wanted to inherit all properties of a particular class and then apply some sparingly used class to few HTML elements (they appear one or twice in a page while the parent class was appearing many times in a page).
 

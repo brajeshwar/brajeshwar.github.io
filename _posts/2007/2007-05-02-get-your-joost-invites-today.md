@@ -1,7 +1,4 @@
----
-layout: post
-title: Get your Joost Invites today
----
+# Get your Joost Invites today
 
 I've invited all those who commented on my <a href="/2007/joost/">Joost Invite</a> article. As Joost is giving out unlimited invites before their launch, I'd be able to invite all of you. So, if you haven't got your <a href="http://www.joost.com/">Joost</a> yet, comment here or anywhere else and I'll send an invite over to you.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: When, how to listen to Podcasts or how to make use of your old iPod?
----
+# When, how to listen to Podcasts or how to make use of your old iPod?
 
 To me, it is not that practically possible to listen to podcasts while you're at your computer, at work. [Podcast](http://en.wikipedia.org/wiki/Podcast) are different from music and thus need to be listened to with concentration, in a way to understand what the podcast is talking about. One can listen to music and still work but not with podcast. So, how can you save your time, not disturb yourself at work but still be able to listen to podcasts.
 

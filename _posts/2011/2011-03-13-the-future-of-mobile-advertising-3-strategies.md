@@ -1,7 +1,4 @@
----
-layout: post
-title: The Future of Mobile Advertising -- 3 Strategies
----
+# The Future of Mobile Advertising -- 3 Strategies
 
 Like it or not Mobile Advertising is here to stay. You will see advertisements on your phone -- in increasing quantities -- and in different ways. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe design challenge, win $20,000
----
+# Adobe design challenge, win $20,000
 
 In partnership with Cut&Paste, Adobe offers a challenge to designers, web pros, photographer, animators -- compose an engaging animation or motion graphic video incorporating the Photoshop brand logo that illustrates the them of <a href="http://swp.cutandpaste.com/">See What's Possible</a>.
 

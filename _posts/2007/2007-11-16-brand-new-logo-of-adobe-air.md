@@ -1,7 +1,4 @@
----
-layout: post
-title: Brand new Logo of Adobe AIR
----
+# Brand new Logo of Adobe AIR
 
 Mike Chambers <a href="http://www.mikechambers.com/blog/2007/11/15/introducing-the-adobe-air-logo/">posted an article</a> introducing the brand new <a href="http://www.adobe.com/go/air">Adobe AIR</a> Logo.
 

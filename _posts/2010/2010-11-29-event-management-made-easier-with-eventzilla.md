@@ -1,7 +1,4 @@
----
-layout: post
-title: Event Management made easier with Eventzilla
----
+# Event Management made easier with Eventzilla
 
 A recent and a more general web surfing activity of mine lead me into encountering a unique, quick & simple, and a very inexpensive online start-up firm named <a href="http://www.eventzilla.net/">Eventzilla</a>. I say unique, because it is a service that was never before thought of and one which could help event management firms save a lot of time. I say, quick & simple because unlike other online services, this website enables event organizers to take very little lead time and complications in availing event management solutions. I say, very inexpensive because there are very few or no online services existing that cost as reasonable as Eventzilla.
 

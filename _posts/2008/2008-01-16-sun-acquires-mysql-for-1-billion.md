@@ -1,7 +1,4 @@
----
-layout: post
-title: Sun acquires MySQL for $1 billion
----
+# Sun acquires MySQL for $1 billion
 
 Kaj Arnö <a href="http://blogs.mysql.com/kaj/2008/01/16/sun-acquires-mysql/">announced on his blog</a> about <a href="http://www.mysql.com/news-and-events/press-release/release_2008_03.html">the acquisition</a> of MySQL by Sun Microsystems. He wrote that this has taken everybody by surprise - users, community members, customers, partners and MySQL employees. He believes that depending on one's relationship to MySQL, the immediate reaction upon hearing the news may be a mixture of various feelings, including excitement, pride, disbelief and satisfaction, but also anxiety. Most Industry experts <a href="http://money.cnn.com/2008/01/10/markets/ipo/copeland_ipowatch.fortune/">have been speculating</a> that MySQL will likely be a hot IPO for 2008.
 

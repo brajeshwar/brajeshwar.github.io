@@ -1,7 +1,4 @@
----
-layout: post
-title: Vendor Benchmarker Ashwin Ramasamy Talks about his Entrepreneurial Experiences with ContractIQ
----
+# Vendor Benchmarker Ashwin Ramasamy Talks about his Entrepreneurial Experiences with ContractIQ
 
 Ever had a new vendor let you down? Had trouble finding a company that does/sells X? Then ContractIQ has got your back. ContractIQ is a fresh new start-up matching the Small and Medium Enterprise space with top-of-their-class service providers.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Easy Backup Solutions for Linux
----
+# 5 Easy Backup Solutions for Linux
 
 Be it noobs or a geeks - computers are indispensable for either of the clans. With the trend of increasingly high storage devices - both USB and otherwise, the amount of data which resides in the form of nibbles and bits is enormous. Backing up your data is of prime importance from work/business point of view.
 

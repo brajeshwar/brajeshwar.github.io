@@ -1,7 +1,4 @@
----
-layout: post
-title: Software installation woes on Linux
----
+# Software installation woes on Linux
 
 ![Windows Vista Everything Included)](/static/2008/vista-malice.jpg)
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Guys - Want a Gadget that'll tell you when your girlfriend is pissed off?
----
+# Guys - Want a Gadget that'll tell you when your girlfriend is pissed off?
 
 Just imagine walking into the home every day after work wearing a pair of O2Amps, glasses that can warn you of your wife, girlfriend's, female roommate's, sister's, mother's emotions. Most importantly you can detect her emotion BEFORE you say the wrong thing. Brilliant no? By increasing our perception of blood physiology 2AI Labs have come up with the O2Amp glasses, which amplify whether a subject's blood is oxygenated or deoxygenated, and pooled or free-flowing--or in layman's terms determine the general emotions of their viewing subjects.
 

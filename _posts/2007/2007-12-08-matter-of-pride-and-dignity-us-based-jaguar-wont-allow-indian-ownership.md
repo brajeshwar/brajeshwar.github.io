@@ -1,7 +1,4 @@
----
-layout: post
-title: Matter of Pride and Dignity; US-based Jaguar won't allow Indian ownership
----
+# Matter of Pride and Dignity; US-based Jaguar won't allow Indian ownership
 
 In a recent development over the ownership of Ford's luxury car brand Jaguar, Ken Gorin, the Chairman of the Jaguar Business Operations Council, believes that they should grant the ownership to neither of the Indian Motor Giants - <a href="http://www.tata.com/">Tata Group</a> nor <a href="http://www.mahindra.com/">Mahindra & Mahindra</a>.
 

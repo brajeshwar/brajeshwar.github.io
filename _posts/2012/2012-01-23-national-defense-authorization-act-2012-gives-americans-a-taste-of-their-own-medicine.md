@@ -1,7 +1,4 @@
----
-layout: post
-title: National Defense Authorization Act 2012 gives Americans a taste of their own Medicine
----
+# National Defense Authorization Act 2012 gives Americans a taste of their own Medicine
 
 The initial cloud of smoke has cleared on 2012's [National Defense Authorization Act](http://en.wikipedia.org/wiki/National_Defense_Authorization_Act_for_Fiscal_Year_2012) and we are still no better informed about the extent of its newly formed ambiguous power than we were when it was passed two weeks ago. 
 

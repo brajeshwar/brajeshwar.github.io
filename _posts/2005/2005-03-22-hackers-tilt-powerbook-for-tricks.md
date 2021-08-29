@@ -1,7 +1,4 @@
----
-layout: post
-title: Hackers Tilt PowerBook for Tricks
----
+# Hackers Tilt PowerBook for Tricks
 
 Today Wired.com had an article [Hackers Tilt PowerBook for Tricks](http://wired.com/news/mac/0,2125,66936,00.html). The article eventually makes you sit up and read through the finer lines, think over on how things are shaping around the world we live in.
 

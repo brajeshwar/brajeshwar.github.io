@@ -1,7 +1,4 @@
----
-layout: post
-title: The Daily - No Paper, Just News
----
+# The Daily - No Paper, Just News
 
 Most of us are already familiar and used to reading the newspaper on our personal computers with the help of e-papers, with each one of us reading our preferred publication. But this one is definitely a revelation. I am talking about <a href="http://www.thedaily.com/">The Daily</a>. It is a newspaper publication agency which, by the way does not like the word paper being attached to it and it is accessible through an iPad.
 

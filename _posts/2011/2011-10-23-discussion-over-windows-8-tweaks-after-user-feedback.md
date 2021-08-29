@@ -1,7 +1,4 @@
----
-layout: post
-title: Discussion over Windows 8 Tweaks after User Feedback
----
+# Discussion over Windows 8 Tweaks after User Feedback
 
 Windows 8 developer preview generated a large amount of excitement across the globe with its release. Though it's much-vaunted "Metro UI" was considered Marvelous, the final release has been postponed to a year as Microsoft has started to discuss Windows 8<br />
 tweaks after user feedback.

@@ -1,7 +1,4 @@
----
-layout: post
-title: Can Microsoft's SkyDrive compete with iCloud?
----
+# Can Microsoft's SkyDrive compete with iCloud?
 
 There are many competitors to Apple's <a href="http://www.apple.com/icloud/">iCloud</a> - Amazon's Cloud Drive, Box.net, DropBox, Microsoft's SkyDrive and SugarSync. 
 

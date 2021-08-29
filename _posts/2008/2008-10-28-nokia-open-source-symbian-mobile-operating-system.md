@@ -1,7 +1,4 @@
----
-layout: post
-title: Nokia's Open Source Symbian Mobile OS
----
+# Nokia's Open Source Symbian Mobile OS
 
 Apple and then Google. Who could have been next? Most of you would have already figured it out. For the rest, please do not question your general awareness; after we all are human! Yes it's Nokia. The global telecommunications market leader Nokia has decided to launch its own Symbian mobile operating system which will happen to be open sourced. The launch seems to be a desperate attempt by Nokia to maintain its market leader status quo and a proffer to increase its current software developer base. 
 

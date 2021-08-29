@@ -1,7 +1,4 @@
----
-layout: post
-title: Star Wars III, Revenge of the Sith
----
+# Star Wars III, Revenge of the Sith
 
 Wow! The visuals were stunning, very real-like and superb, though I wasn't that surprised after the preparation for such an encounter with all the good reviews floating around. I was finally able to do justice to my movie-thirst after watching "Star Wars Episode III: Revenge of the Sith [Star Wars Episode III: Revenge of the Sith](http://www.starwars.com/episode-iii/) today, I could not make it to the First day as I was plagued all day with a Flash ActionScript Workshop at the [Aptech](http://www.aptech.ac.in/) Training Head Office, Mumbai. 
 

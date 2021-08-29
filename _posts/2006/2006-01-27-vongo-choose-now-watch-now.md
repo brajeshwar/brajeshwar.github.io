@@ -1,7 +1,4 @@
----
-layout: post
-title: Vongo - Choose Now Watch Now
----
+# Vongo - Choose Now Watch Now
 
 I saw the post popped up on [FullAsAGoog](http://fullasagoog.com/) and [MXNA](http://weblogs.macromedia.com/mxna/) coupla days back but it never strike me as much as it should have.
 

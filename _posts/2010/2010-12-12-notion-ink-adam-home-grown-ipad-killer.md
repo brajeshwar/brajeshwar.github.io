@@ -1,7 +1,4 @@
----
-layout: post
-title: Notion Ink Adam - Home Grown iPad Killer
----
+# Notion Ink Adam - Home Grown iPad Killer
 
 <a href="http://www.notionink.com/">Notion Ink</a> is an Indian startup or should I say upstart who is gunning for the biggest of them all -- <a href="http://www.apple.com/">Apple</a>. In the very spirit of innovation that has led Steve Job to where he is today, founder Rohan Shravan is confident that their first offering is going to blow the competition away. Notion Ink is dedicated to challenge the norm, question existing ideologies of function and form to create a new breed of intelligent, intuitive devices.
 

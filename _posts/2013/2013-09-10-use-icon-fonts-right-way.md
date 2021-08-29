@@ -1,7 +1,4 @@
----
-layout: post
-title: How to use Icon Fonts the right way
----
+# How to use Icon Fonts the right way
 
 Icon Fonts are a smart way to deploy scalable icons in your website and web app design projects. They are treated as part of your text and so you can apply all the properties you apply to a text - size, color, text-shadow, transparency, transform, etc.
 
@@ -35,7 +32,7 @@ There are two good services that will help you achieve this feat - [IcoMoon App]
 
 IcoMoon  does have the added advantage that you can upload your own custom icons or Icon Fonts to the pool of icons you can work with. For instance, if you have purchased a premium Icon Font and want to use it with other Icon Fonts or you want to include a custom set of artworks as icons for your design project. IcoMoon accepts SVG for such custom Icons.
 
-![IcoMoon Icon Font)](/static/2013/icomoon-icon.png)
+<img class="small right" src="/static/2013/icomoon-icon.png" alt="IcoMoon Icon Font" loading="lazy">
 
 Let's take a look at the <a href="http://icomoon.io/app/">IconMoon App</a>. Fontello isn't that different. You should be good with whichever service you choose.
 

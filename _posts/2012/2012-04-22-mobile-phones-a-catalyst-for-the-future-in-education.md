@@ -1,7 +1,4 @@
----
-layout: post
-title: Mobile Phones – A Catalyst for the Future in Education
----
+# Mobile Phones – A Catalyst for the Future in Education
 
 Along with million other uses of mobile phones, the latest upcoming advantage of this device is, it is going to create a revolution in education. Mobile phones are going to have the power to digitally impart education globally. Even the most tech-savvy person would have never dreamt in her wildest dreams, that <a href="http://drpfconsults.com/soaring-demand-for-online-k-12-schools-and-mobile-learning/">such a possibility would ever come</a> into being. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Entrepreneur Interview Series - A Sit-Down with Screenius genius co-founder Seth Cohen
----
+# Entrepreneur Interview Series - A Sit-Down with Screenius genius co-founder Seth Cohen
 
 <a href="http://screenius.com/">Screenius</a> may sound like the ominous description of an evil-genius iPad app hell-bent on world domination -- but it's far less maleficent than that. Screenius is a newly-launched iPad <a href="http://screenius.com/screenius/">app</a> that is joining the ranks of Angry Birds, Doodle Jump and Pocket God.
 

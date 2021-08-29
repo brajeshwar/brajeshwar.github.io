@@ -1,7 +1,4 @@
----
-layout: post
-title: India no longer attractive to Big IT Corps?
----
+# India no longer attractive to Big IT Corps?
 
 In a recent Press Conference in Bangalore, India Intel CTO Justin Rattner said, "India used to be seen as the perfect offshore research and development hub for global firms seeking to tap its low-cost and supposedly vast engineering talent pool to devise products for world markets."
 

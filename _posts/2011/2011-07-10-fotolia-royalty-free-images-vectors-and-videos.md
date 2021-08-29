@@ -1,7 +1,4 @@
----
-layout: post
-title: Fotolia - Royalty free Images, Vectors and Videos
----
+# Fotolia - Royalty free Images, Vectors and Videos
 
 Started in November 2005, <a href="http://www.fotolia.com/">Fotolia</a> have over 13 million images, vectors and HD Videos in their gallery. Fotolia also have a collection of exceptional images, from well known agencies in the world, in their <a href="http://www.fotolia.com/Info/Collection">Infinite Collection</a>. With Infinite Collection, Fotolia is able to offer both crowd-sourced and professional images on one site.
 

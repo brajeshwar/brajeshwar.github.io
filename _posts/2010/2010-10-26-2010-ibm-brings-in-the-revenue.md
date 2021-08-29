@@ -1,7 +1,4 @@
----
-layout: post
-title: 2010 - IBM 'Brings In', The Revenue
----
+# 2010 - IBM 'Brings In', The Revenue
 
 An organization which believes in the value of being dedicated to every client's success now has the chance of cherishing its own success. <a href="http://www.ibm.com/">IBM</a> boasts of high revenue earnings for the year 2010 with an impressive <a href="http://www.businesswire.com/news/home/20101018007069/en/IBM-Reports-2010-Third-Quarter-Results">Q - III Result</a>. These revenues are a result of IBM's fantastic business performers like IBM services, IBM mainframes, IBM analytics, etc.
 

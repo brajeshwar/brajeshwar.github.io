@@ -1,7 +1,4 @@
----
-layout: post
-title: Nokia's Symbian gets OS CPR
----
+# Nokia's Symbian gets OS CPR
 
 Just when we thought that Symbian had joined the technology graveyard -- buried alongside the <a href="http://en.wikipedia.org/wiki/Betamax">Betamax</a> and <a href="http://en.wikipedia.org/wiki/AmigaOS">AmigaOS</a>, it gets OS CPR.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Google's Zeitgeist
----
+# Google's Zeitgeist
 
 <a href="http://www.google.com/">Google</a> has permeated this generations Zeitgeist, in ways previously unimaginable. The company's name has become a verb. Google's current holdings are over 36 billion dollars, and they rake in over $23 billion annually. They own two of the three top sites on the web, <a href="http://www.google.com/">Google Search</a> and <a href="http://www.youtube.com/">YouTube</a>. In 2010 alone they have already purchased 25 companies.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Kill a background app in iOS
----
+# Kill a background app in iOS
 
 Perhaps, I'm one of the last few to discover that I can manually terminate an app running in the background in iOS. This is helpful when an app is acting up or not responsive or just want to kill it while testing your app.
 

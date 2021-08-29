@@ -1,7 +1,4 @@
----
-layout: post
-title: Dynamic CSS and DataURI to the rescue
----
+# Dynamic CSS and DataURI to the rescue
 
 We at `Paisa.com` are developing a financial Web Application, trying to make it easier for users to invest their money. We, in fact, have a rather nifty way of allowing users to browse through Stocks without the overhead complexity of trying to calculate the figures and stats.
 

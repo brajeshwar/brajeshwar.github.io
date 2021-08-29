@@ -1,7 +1,4 @@
----
-layout: post
-title: Internet connection through GPRS
----
+# Internet connection through GPRS
 
 So, Mumbai have also come up to a standard where we can say that there is possibility of an "Always On" internet connection. Right now, I am at the airport waiting for my flight to the capital city of India, New Delhi and I am online using my `Orange` (Hutch in other parts of India) internet connection re-directing its connection from its GPRS connection through IrDA to my Thinkpad. The speed is rather good, gets connected at around 38.4 kbps and stays closely around 28 kbps after some usage. This is cool, I can be online, browse, check mails, and do a whole lotta things even while I am traveling or going to a different city as the connection works in other cities where their connection's are covered.
 

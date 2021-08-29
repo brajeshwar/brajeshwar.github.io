@@ -1,7 +1,4 @@
----
-layout: post
-title: del.icio.us direc.tor
----
+# del.icio.us direc.tor
 
 It is best to experience this cool application yourself, so, I will just extract some excerpts from their own words below. 
 

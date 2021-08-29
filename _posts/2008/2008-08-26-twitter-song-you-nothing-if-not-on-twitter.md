@@ -1,7 +1,4 @@
----
-layout: post
-title: The Twitter Song - You're No One If You're Not On Twitter
----
+# The Twitter Song - You're No One If You're Not On Twitter
 
 {% include video source="youtube" id="dYP-wBaqQAI" %}
 

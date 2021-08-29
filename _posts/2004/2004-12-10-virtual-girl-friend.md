@@ -1,7 +1,4 @@
----
-layout: post
-title: Virtual Girl Friend
----
+# Virtual Girl Friend
 
 Do you want a girl friend, a virtual one?
 

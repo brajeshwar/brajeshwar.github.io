@@ -1,7 +1,4 @@
----
-layout: post
-title: Why Startup?
----
+# Why Startup?
 
 The start-up ecosystem in India has taken a new height. Today, a lot of talented, fresh graduates from college have an inclination towards entrepreneurship. The case was not the same a few years back. While entrepreneurs are made by both - choice and circumstances, a handful of them have graduated to a full fledged company with a long list of employees, a heavy portfolio of clients or an application that's stuck to the heart and minds of many.
 

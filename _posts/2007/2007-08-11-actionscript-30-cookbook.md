@@ -1,7 +1,4 @@
----
-layout: post
-title: ActionScript 3.0 Cookbook
----
+# ActionScript 3.0 Cookbook
 
 I remember starting off beta testing huge bunch of ActionScript codes from Joey Lott which was supposed to be for the ActionScript 2.0 CookBook. However, at that juncture there was an announcement of ActionScript 3.0 from <a href="http://www.macromedia.com/">Macromedia</a> (now part of <a href="http://www.adobe.com/">Adobe</a>) and the whole development shifted to - what is today the ActionScript 3.0 Cookbook by Joey Lott - from O'Reilly.
 

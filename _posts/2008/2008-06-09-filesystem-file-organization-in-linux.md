@@ -1,7 +1,4 @@
----
-layout: post
-title: Filesystem & file organization in Linux
----
+# Filesystem & file organization in Linux
 
 Let's hope that our earlier article -- <a href="/2008/choice-of-linux-distros/">Which Linux distro is right for you?</a> -- helped you decide a distro suitable for you. With the assembly of a complete Linux machine, it's time now to look into the architectural design of the operating system and look how robust Linux is with an efficient file management system it has. We shall now dive in to understand the file system and the file hierarchy of a Linux system.
 

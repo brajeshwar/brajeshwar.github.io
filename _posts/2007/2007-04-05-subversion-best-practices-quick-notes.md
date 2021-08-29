@@ -1,7 +1,4 @@
----
-layout: post
-title: Subversion Best Practices - Quick Notes
----
+# Subversion Best Practices - Quick Notes
 
 I was trying to know a bit more about Subversion folder management myself. While looking around, I found a quick and to-the-point article at Subversion Best Practices. I decided to profile a Quick-View version for my reference.
 

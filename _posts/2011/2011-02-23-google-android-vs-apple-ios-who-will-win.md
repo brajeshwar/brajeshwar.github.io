@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Android vs. Apple iOS; Who will win?
----
+# Google Android vs. Apple iOS; Who will win?
 
 2010 saw just the preview of the smart-phone war. 2011 will see the complete movie.
 

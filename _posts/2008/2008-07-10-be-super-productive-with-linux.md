@@ -1,7 +1,4 @@
----
-layout: post
-title: Be super-productive with Linux
----
+# Be super-productive with Linux
 
 It might sound a bit weird but the kind of Operating System you're probably using may affect your productivity at work! Though, a user is a more responsible entity when it comes to productivity, but somewhere down-the-line, we can hold your operating system responsible for the same.
 

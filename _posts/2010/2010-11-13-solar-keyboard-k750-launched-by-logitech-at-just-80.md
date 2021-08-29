@@ -1,7 +1,4 @@
----
-layout: post
-title: Solar Keyboard K750 launched by Logitech at just $80
----
+# Solar Keyboard K750 launched by Logitech at just $80
 
 Logitech has always come up with computer hardware products that change the way people use their Computers. The change in the way Logitech fabricates <a href="http://www.logitech.com/en-us/349/7073">products</a>, seems to be in alignment with changing times and users have always rated the advantages of using those products positively and have not been bothered mostly, by the disadvantages of using them. Its latest product seems to entail more advantages than its previous innovations. 
 

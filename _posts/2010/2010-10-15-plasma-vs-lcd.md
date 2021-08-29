@@ -1,7 +1,4 @@
----
-layout: post
-title: Plasma vs LCD - Demystified
----
+# Plasma vs LCD - Demystified
 
 It has been a few years since entertainment at home has changed gears. Some of the reasons may possibly include - technology getting cheap and markets getting flooded with options. Festive seasons create good buying pockets as well! However, there are myths which are yet to be answered for people who wish to buy their next TV and are not sure of what shall be their best buy!
 

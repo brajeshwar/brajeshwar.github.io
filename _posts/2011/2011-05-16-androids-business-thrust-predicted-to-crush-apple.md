@@ -1,7 +1,4 @@
----
-layout: post
-title: Android's 'Business Thrust' predicted to crush Apple
----
+# Android's 'Business Thrust' predicted to crush Apple
 
 Till last year Apple was a pioneer in the Global mobile market with its patented Apple App Store and was earning good revenue. But now the scenario is getting changed with the entry of another big name Google in the category with its Mobile Platform -- <a href="http://android.com/">Android</a>. Alike Apple, Google is also giving more focus on latest applications to attract the user with their <a href="https://market.android.com/">Android Market</a>.
 

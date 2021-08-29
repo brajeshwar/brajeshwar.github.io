@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft's smart preemptive tactic by buying aQuantive for $6 billion
----
+# Microsoft's smart preemptive tactic by buying aQuantive for $6 billion
 
 In what's termed to be a direct response to <a href="/2007/google-acquires-doubleclick-for-31-billion/">Google's acquisition of DoubleClick</a> for $3.1 billion, Microsoft's purchase of aQuantive for $6 billion is coined by industry experts as a very smart move.
 

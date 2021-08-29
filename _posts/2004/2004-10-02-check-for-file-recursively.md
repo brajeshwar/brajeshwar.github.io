@@ -1,7 +1,4 @@
----
-layout: post
-title: Check for file recursively
----
+# Check for file recursively
 
 Not so long ago in the near past of this year 2004, there was a need for a solution to an issue with one of our Application at Oinam Software. The Application is now successfully deployed but as usual, it is still under clearance-wrapped if we can even say anything about it on the site or public. Ok, currently the issue is resolved by using remoting (ColdFusion) and the application is even entering its version 2.
 

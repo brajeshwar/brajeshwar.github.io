@@ -1,7 +1,4 @@
----
-layout: post
-title: Beau Ambur acquires FlashForward
----
+# Beau Ambur acquires FlashForward
 
 Few days back, Beau Ambur, CEO of Metaliq, announced the acquisition of the Flashforward Conference and Film Festival. Metaliq will be a Flashforward Conference premier sponsor. The next conference is scheduled for August 20-22, 2008 in San Francisco.
 

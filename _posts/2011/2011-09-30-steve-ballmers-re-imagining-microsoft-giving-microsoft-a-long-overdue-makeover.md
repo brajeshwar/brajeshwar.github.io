@@ -1,7 +1,4 @@
----
-layout: post
-title: Steve Ballmer's Re-imagining Microsoft giving Microsoft a long-overdue Makeover
----
+# Steve Ballmer's Re-imagining Microsoft giving Microsoft a long-overdue Makeover
 
 Has hell indeed frozen-over? Quite possibly because Microsoft is giving itself a serious overhaul -- get this -- in response to market forces. 
 

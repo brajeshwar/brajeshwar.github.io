@@ -1,7 +1,4 @@
----
-layout: post
-title: Project Planning, Management
----
+# Project Planning, Management
 
 Learnt few good tips and tricks from many good people in the community during the year gone by. And further from experience, here is a list/quickie of points that one should always remember while planning, managing projects.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Application Configuration (XML) File
----
+# Application Configuration (XML) File
 
 Today as I was doing a round of [Java Blogs](http://www.javablogs.com/), I came across an article, "On Configuration and XML".
 

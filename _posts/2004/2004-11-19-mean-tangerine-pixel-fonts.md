@@ -1,6 +1,3 @@
----
-layout: post
-title: Mean Tangerine, Pixel Fonts
----
+# Mean Tangerine, Pixel Fonts
 
 There is another collection of Pixel Fonts at [Mean Tangerine](http://www.meantangerine.com/). If you are willing to ignore the fact that the site comes in a pop-up (I was assured that the site is being re-launched soon with a non-popup improvised version), then the site indeed have a good library of some cool pixel fonts. There are about 178 pixel fonts in their library, at the time of writing this article.

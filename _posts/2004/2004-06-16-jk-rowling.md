@@ -1,7 +1,4 @@
----
-layout: post
-title: J.K. Rowling
----
+# J.K. Rowling
 
 The wizardry of [LightMaker](http://lightmaker.com/) wield their wand of Macromedia Flash, a `Reparo` on the official site of [J.K. Rowling](http://www.jkrowling.com/).
 

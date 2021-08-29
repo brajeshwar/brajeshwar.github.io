@@ -1,7 +1,4 @@
----
-layout: post
-title: Case Study - Automatic Stream Insertion
----
+# Case Study - Automatic Stream Insertion
 
 Yahoo!'s AdVision automates the process of putting streams into ad spaces. This lets designers focus on what they're best at, instead of on the nuts and bolts of bytes and bitrates.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Plus - Hope, Not a Google Sham!
----
+# Google Plus - Hope, Not a Google Sham!
 
 There are a plethora of social websites available in the virtual world. <a href="http://en.wikipedia.org/wiki/List_of_social_networking_websites">Wikipedia even has a list</a> of them. Despite, Google has taken a bold step by unveiling <a href="http://googleblog.blogspot.com/2011/06/introducing-google-project-real-life.html">Google Plus</a>, one of it's precious projects. If rumors are to be believed, it could give a tough competition to the king of the social networks, <a href="https://www.facebook.com/">Facebook</a>. Few geeks among us would have already figured out the difference between both Facebook &amp; Google Plus. For those who haven't, do read ahead for my take on it.
 

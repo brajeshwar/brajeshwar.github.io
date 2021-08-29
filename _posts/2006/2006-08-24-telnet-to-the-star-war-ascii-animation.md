@@ -1,7 +1,4 @@
----
-layout: post
-title: Telnet to the Star War ASCII Animation
----
+# Telnet to the Star War ASCII Animation
 
 [ASCIImation](http://www.asciimation.co.nz/)
 

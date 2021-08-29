@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source vs Proprietary Software - The never ending Battle
----
+# Open Source vs Proprietary Software - The never ending Battle
 
 This could be one battle that could go on for a long time. One that always looks at providing software solutions to business enterprises at the lowest costs possible or at no cost at all -- <a href="http://www.opensource.org/">Open Source Software</a>; and there is another which promises the provision of the best-in-the-business software solutions to large organizations and also the promise of a brand name, but at a higher cost (which is considered worth-it, by many firms) - Proprietary Software. 
 

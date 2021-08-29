@@ -1,7 +1,4 @@
----
-layout: post
-title: Screenweaver HX - write haXe Desktop Applications
----
+# Screenweaver HX - write haXe Desktop Applications
 
 Screenweaver HX is the [haXe](/2005/haxe-programming-language/) wrapper to develop Desktop Application. With [SWHX](http://www.haxe.org/swhx), you create an application by using two layers;
 

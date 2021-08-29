@@ -1,7 +1,4 @@
----
-layout: post
-title: Ever wanted to take a Supercomputer for a test drive?
----
+# Ever wanted to take a Supercomputer for a test drive?
 If you've ever wanted to take a supercomputer for a test drive, now is your chance. Solve that probabilistic analysis. Figure out some brute force code breaking. Conduct 3D nuclear testing simulations. Or, if you're more cosmopolitan, do some Molecular Dynamics Simulations. No matter what your supercomputing needs, <a href="http://cyclecomputing.com/">Cycle Computing</a> will get you there. 
 
 Check this out, it's brilliant: Cycle Computing is a 20-employee company leveraging the cloud computing movement by timesharing virtual supercomputers out to small companies and individuals who would never have had access (read: funds) to such technology. They use virtual clusters by virtually lashing together 50,000 processors from Amazon Web Services, in the cloud, via their own software.

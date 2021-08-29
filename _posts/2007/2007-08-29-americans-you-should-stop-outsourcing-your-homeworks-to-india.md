@@ -1,7 +1,4 @@
----
-layout: post
-title: Americans - you should stop outsourcing your homeworks to India
----
+# Americans - you should stop outsourcing your homeworks to India
 
 {% include video source="youtube" id="lj3iNxZ8Dww" %}
 

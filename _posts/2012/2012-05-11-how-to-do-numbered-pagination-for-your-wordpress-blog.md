@@ -1,7 +1,4 @@
----
-layout: post
-title: How-to - Numbered Pagination for your Wordpress Blog
----
+# How-to - Numbered Pagination for your Wordpress Blog
 
 There are a bunch of awesome Wordpress Plugins that can do `Numbered Pagination` for your Wordpress powered blog. However, it may be noted that Wordpress have the option to do it without relying on a plugin.
 

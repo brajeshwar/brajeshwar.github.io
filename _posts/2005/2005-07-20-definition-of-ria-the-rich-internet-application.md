@@ -1,7 +1,4 @@
----
-layout: post
-title: Definition of RIA, the Rich Internet Application
----
+# Definition of RIA, the Rich Internet Application
 
 Rich Internet Application is defined as;
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Doomsday Biotech Gene Bank - a redundant server farm protecting biodiversity
----
+# Doomsday Biotech Gene Bank - a redundant server farm protecting biodiversity
 
 Sometimes technology works against nature. Other times it works for it. Now, finally, technology is being used to protect the earth. The Doomsday gene bank in Norway is using modern technology that functions like a back-up server for the world's biodiversity cache. The server-like <a href="http://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault">Svalbard Seed Vault</a> was recently given an infusion of seeds, and cash, that has widely broadened its scope.
 

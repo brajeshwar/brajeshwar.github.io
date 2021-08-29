@@ -1,7 +1,4 @@
----
-layout: post
-title: Free CSS3 Videos, Startup Marriage, Effective Minimalism in Design, Free Wordpress themes of 2011 and more
----
+# Free CSS3 Videos, Startup Marriage, Effective Minimalism in Design, Free Wordpress themes of 2011 and more
 
 Looks like I spend quite a bit of my time reading news and information on the Internet. Here are few good ones that I found today.
 

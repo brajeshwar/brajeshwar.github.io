@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Lite 3 available on Adobe Labs
----
+# Flash Lite 3 available on Adobe Labs
 
 A Developer Edition of <a href="http://labs.adobe.com/technologies/flashlite3/">Flash Lite 3</a> is now available from Adobe Labs. Adobe Flash Lite 3 Developer Edition is a standalone player for supported mobile phones to allow developers to test their Flash Lite 3 applications before commercial devices start shipping with the full version of Flash Lite 3 pre-installed. This installer only supports standalone content and cannot be used to view SWF files that are embedded in a mobile web browser or to test any type of personalization content such as wallpapers or screensavers.
 

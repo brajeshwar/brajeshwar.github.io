@@ -1,7 +1,4 @@
----
-layout: post
-title: New Adobe Flash Media Server 3 released
----
+# New Adobe Flash Media Server 3 released
 
 Yesterday, Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200712/120407adobefms3.html">announced</a> the Flash Media Server 3 (FMS3) family of products, which provides a more efficient instant-on video experience virtually anytime, anywhere - to the Web, the desktop with Adobe Media Player and to mobile devices with Adobe Flash Lite 3.
 

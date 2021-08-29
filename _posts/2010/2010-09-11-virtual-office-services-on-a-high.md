@@ -1,7 +1,4 @@
----
-layout: post
-title: Virtual Office Services - On a High
----
+# Virtual Office Services - On a High
 
 Having known about the existence of <a href="/2008/get-your-virtual-office-in-india/">Virtual Offices in India</a>, it is now essential for us to understand the benefits of availing the services of a virtual office, who are the players in the Industry which offer virtual office services and what range of services that are on display. Before we do this, it becomes important for us to differentiate between Virtual Office services and <a href="http://sify.com/finance/cisco-unveils-virtual-office-solution-news-default-jegxdoafhgi.html">virtual office solutions</a> (the kind that Cisco has recently launched). 
 

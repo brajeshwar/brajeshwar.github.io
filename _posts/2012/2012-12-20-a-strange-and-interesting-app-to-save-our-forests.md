@@ -1,7 +1,4 @@
----
-layout: post
-title: Interesting, strange, weird way to save our forests
----
+# Interesting, strange, weird way to save our forests
 
 Greenpeace India has released an interesting <a href="http://foresthero.org?source=blo">Facebook App</a> where you can add a picture to a video, portraying you as a 'hero' saving the forests in Central India from coal mining.
 

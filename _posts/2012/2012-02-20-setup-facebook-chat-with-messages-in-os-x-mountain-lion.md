@@ -1,7 +1,4 @@
----
-layout: post
-title: Setup Facebook Chat with Messages in OS X Mountain Lion
----
+# Setup Facebook Chat with Messages in OS X Mountain Lion
 
 Apple recently announced <a href="http://www.apple.com/macosx/mountain-lion/">OS X Mountain Lion</a> and is expected to be released this summer 2012. If you're adventurous enough, you can download and try out the <a href="https://developer.apple.com/technologies/mountain-lion/">developer beta</a> release of OS X Mountain Lion.
 

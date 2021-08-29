@@ -1,7 +1,4 @@
----
-layout: post
-title: StockTouch app is Bringing Sexy Back to stock markets
----
+# StockTouch app is Bringing Sexy Back to stock markets
 
 The successful build-an-app plan seems to be: take a useful service, make it intuitive and put a shiny veneer on it. Steve deBrun's <a href="http://stocktouch.com/">StockTouch</a> has done that, in spades.  Although if you ask Steve what the entrepreneurial key to app-building success is a top-notch team, the 'classic trio' as he calls it: the "designer, hacker, hustler trio". 
 

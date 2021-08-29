@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Wallet ensures no pick-pocketting for you
----
+# Google Wallet ensures no pick-pocketting for you
 
 The way we pay has changed three times in the past few thousand years. From coins to paper notes to plastic cards. Now, a mobile application developed by Google only for Sprint <a href="http://now.sprint.com/nexus/">Nexus S 4G</a> allows the user can make secure payments fast and convenient by simply tapping the phone on a pay-pass enabled terminal checkout. Google plans to develop this application for more mobile phones. <a href="http://www.google.com/wallet/">Google Wallet</a>, allows the user to use the mobile phones and enhance in-store shopping experience and thus helping bridge the gap between online and in-store customer interactions.
 

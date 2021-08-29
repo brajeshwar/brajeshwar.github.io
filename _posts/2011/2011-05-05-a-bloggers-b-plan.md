@@ -1,7 +1,4 @@
----
-layout: post
-title: A Blogger's B-Plan
----
+# A Blogger's B-Plan
 
 Ingenuity is a pre-requisite for money-making, but Blogging has not yet acquired the cut-throatness of other business ventures, it still remains a hobby. Most bloggers seem to put on blinders when it comes to monetizing their ventures. They do not see the need to multiply their blogs and turn their one time jackpots into a full-time income. After all, you can't rely on just a whiteboard to be your business log. 
 

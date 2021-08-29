@@ -1,7 +1,4 @@
----
-layout: post
-title: It's Microsoft's "Patch Tuesday" today!
----
+# It's Microsoft's "Patch Tuesday" today!
 
 It is going to be a busy week for all the IT professionals since <a href="http://www.microsoft.com/">Microsoft</a> is going to deliver a record patch that addresses 64 security vulnerabilities. There will be patches for bugs in Microsoft Windows, Microsoft Office, Internet Explorer, Visual Studio, GDI+ and .NET framework. In this update, the most frequently used office applications like Excel (2003-2010) and Powerpoint (2002-2010) will also be affected. There will be 17 bulletins, of which more than half, that is nine, are critical. The critical bulletins will affect all Windows systems including Server 2008 and Windows 7 and hence Microsoft urges system administrators to plan for a deployment.
 

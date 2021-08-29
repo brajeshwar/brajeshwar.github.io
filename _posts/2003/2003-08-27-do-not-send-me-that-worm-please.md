@@ -1,7 +1,4 @@
----
-layout: post
-title: Do not send me that worm, please
----
+# Do not send me that worm, please
 
 Couple of people seem to be infected with `W32.Sobig.F@mm` worm, I have received a bit more than 15 mails with the worm though my Norton Antivirus 2003 was able to block it off at the gate and remove the same. 
 

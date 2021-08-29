@@ -1,7 +1,4 @@
----
-layout: post
-title: Barcamp Bangalore - 2006 December
----
+# Barcamp Bangalore - 2006 December
 
 The second Barcamp Bangalore took off on the 2nd of December, 2006. The camp started off with a fresh presentation giving up tips on how to approach VCs with ideas and innovations, from Sandeep Singhal of Sequoia Capital.
 

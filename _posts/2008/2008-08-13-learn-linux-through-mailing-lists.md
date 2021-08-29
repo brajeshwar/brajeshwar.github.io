@@ -1,7 +1,4 @@
----
-layout: post
-title: Learning Linux the Mailing Lists Way
----
+# Learning Linux the Mailing Lists Way
 
 When a new Linux stumbler decides on switching on to Linux for full-time, s/he is often marred by an array of negative thoughts which intercept his desires of doing things differently. However, the good news is that there are more than just a single avenue where one can gander around for help. These include IRCs, forums, websites/blogs, e-books, etc. But one of the best ways to learn Linux is following the so called mailing lists. 
 

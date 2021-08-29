@@ -1,7 +1,4 @@
----
-layout: post
-title: Steve Jobs' take on his Competitors - RIM, Android, Tablets and Notebooks
----
+# Steve Jobs' take on his Competitors - RIM, Android, Tablets and Notebooks
 
 Steve Jobs who normally is not present during most of Apple's Earnings Conference Call made a special appearance at its recent earnings call with analysts where he spoke majorly about his competitors and was responding to questions posed by analysts on Apple's future growth prospects and his take on the current market trends. 
 

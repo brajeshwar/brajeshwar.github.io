@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Serials and Product Activation
----
+# Flash Serials and Product Activation
 
 Like many others Flash developers, I am getting e-mails and blog comment(s) about Flash 2004/Professional serial numbers. I think these developers and designers alike do not read the Product activation, and read more of Flash blogs around, so let me do a quick run down on the Product activation and why I cannot share my serial number with you.
 

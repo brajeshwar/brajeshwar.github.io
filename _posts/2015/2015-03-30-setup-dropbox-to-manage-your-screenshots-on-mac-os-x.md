@@ -1,7 +1,4 @@
----
-layout: post
-title: Setup Dropbox to manage your screenshots on Mac OS X
----
+# Setup Dropbox to manage your screenshots on Mac OS X
 
 There are quite a lot of Screenshot management apps for Mac OS X. I like most of them but I also like <a href="https://db.tt/Ko3m4LDu" title="Dropbox">Dropbox</a> a lot. With the Screenshot management feature from Dropbox, you can now do away with all those Screenshot apps and use the tool you already have.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Guy Kawasaki's "Reality Check" for Startups
----
+# Guy Kawasaki's "Reality Check" for Startups
 
 Guy Kawasaki's book "Reality Check: The Irreverent Guide to outsmarting, outmanaging, and outmarketing your competition" is an entrepreneur's cheat-sheet. A must-read book for any entrepreneur in general and startup founders and co-founders in particular. If you're not reading it, your competitor will and you'll regret it sooner than later.
 

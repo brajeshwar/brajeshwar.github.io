@@ -1,7 +1,4 @@
----
-layout: post
-title: designer's day out
----
+# designer's day out
 
 So, few of us designers were grumbling when MM was concentrating more and more on the textual monotonous stretches which people called CODES/SCRIPTS. Hmmm, it is time for us now, MM have a whole bunch of new things in the store for us.
 

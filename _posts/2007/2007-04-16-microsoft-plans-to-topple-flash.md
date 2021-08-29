@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft plans to topple Flash
----
+# Microsoft plans to topple Flash
 
 Press Releases and news have already hit the wires that Microsoft is planning to releases its new browser plugin - <strong>Silverlight</strong>; in direct challenge to the widely used browser plugin - <a href="http://www.adobe.com/go/getflashplayer/">Flash</a>.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: RegExr - Free Online RegEx Testing Tool
----
+# RegExr - Free Online RegEx Testing Tool
 
 Grant Skinner [released](http://www.gskinner.com/blog/archives/2008/03/regexr_free_onl.html) a Utility Tool -- <a href="http://gskinner.com/RegExr/">RegExr</a>, built with Flex 3, and uses ActionScript 3's built in RegExp engine.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Air App Challenge, Win $200,000 in cash prizes
----
+# Adobe Air App Challenge, Win $200,000 in cash prizes
 
 Adobe and Sony are challenging developers to build breakthrough Adobe AIR apps optimized for the new Android-based Sony Tablet S1 and Sony Tablet S2 using Adobe Flash Platform tools for a chance to win $200,000 in total cash prizes and other high-visibility rewards.
 

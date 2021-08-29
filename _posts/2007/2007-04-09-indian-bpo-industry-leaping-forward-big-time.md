@@ -1,7 +1,4 @@
----
-layout: post
-title: Indian BPO industry leaping forward big time
----
+# Indian BPO industry leaping forward big time
 
 India Inc in its fury to become big and developed, is going on a frenzy overseas buy-outs and acquisitions. Some of them are Power and Energy (Reliance Energy, Tata Power and Lanco eyeing after Global power company - Globeleq with a valuation of over $2 billion), in Healthcare - Ranbaxy and Cipla are eyeing for Merck's generic business, expected to be valued at $5,2 billion, Tata Power eyeing coal in Indonesia which will cost about a billion dollar and Suzlon's hunt for REpower which might cost about $1.3 billion.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Quanik - A 'not for profit' firm for Bloggers
----
+# Quanik - A 'not for profit' firm for Bloggers
 
 There are several <a href="http://en.wikipedia.org/wiki/Nonprofit_organization">not-for-profit organizations</a> that function in this world and most of them have one primary purpose for which they are formed. To make profits is definitely not their primary purpose. It could be for a social cause, a charitable event, or it could be an organization that educates people for free. There are a plethora of purposes for which a non-profit firm could be started. But this one is unique. <a href="http://www.quanik.com/">Quanik</a> is an online firm that offers anyone with huge passion to make it big in the blogging fraternity. Though their Profile on their website reads as, "A Firm that educates people on the value of self-employment", their major program or service rendered is in 'blogging'.
 

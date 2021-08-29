@@ -1,7 +1,4 @@
----
-layout: post
-title: Doubtsourcing the misunderstandings of two worlds
----
+# Doubtsourcing the misunderstandings of two worlds
 
 Entrepreneur Sandeep Sood is the creator of the online comic strip -- <a href="http://www.doubtsourcing.com/">Doubtsourcing</a> -- inspired by the misunderstandings of two worlds. Of course, the ideas are his but the actual illustration work is outsourced to China. Set mostly in an office in India, <a href="http://www.doubtsourcing.com/">Doubtsourcing</a> aims to be to the outsourcing world what <a href="http://www.dilbert.com/">Dilbert</a> has been to the U.S. cubicle set.
 

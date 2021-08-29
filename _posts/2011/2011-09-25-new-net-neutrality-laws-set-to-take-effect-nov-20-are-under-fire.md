@@ -1,7 +1,4 @@
----
-layout: post
-title: New Net Neutrality Laws set to take effect Nov 20 are Under Fire
----
+# New Net Neutrality Laws set to take effect Nov 20 are Under Fire
 
 In a very uncharacteristically American move the United States has decided to impose new government-meddling regulations on the Internet. These new <a href="http://en.wikipedia.org/wiki/Network_neutrality">Net Neutrality</a> regulations or "open Internet rules" from the FCC will go into effect on November 20, 2011 -- so long as it isn't derailed by the lawsuits in place from Verizon and MetroPCS.
 

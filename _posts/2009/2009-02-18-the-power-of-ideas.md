@@ -1,7 +1,4 @@
----
-layout: post
-title: The Power of Ideas
----
+# The Power of Ideas
 
 I received an email yesterday for a precursor meet to <a href="http://ideas.economictimes.com/">The Power of Ideas</a>. The Economic Times is behind this initiative and they had organized today's meet with the focus on "Capital Idea" -- How entrepreneurs can access and bring their business ideas to life.
 

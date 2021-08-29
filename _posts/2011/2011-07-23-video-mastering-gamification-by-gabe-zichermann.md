@@ -1,7 +1,4 @@
----
-layout: post
-title: Mastering Gamification by Gabe Zichermann
----
+# Mastering Gamification by Gabe Zichermann
 
 <iframe src="http://player.vimeo.com/video/15673973?color=c9ff23" width="800" height="450" frameborder="0"></iframe>
 

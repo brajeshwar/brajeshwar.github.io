@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Flash Platform Summit - 2010
----
+# Adobe Flash Platform Summit - 2010
 
 Known earlier as the Adobe DevSummit, <a href="http://www.adobesummit.com/">Adobe Flash Platform Summit</a> (AFPS) 2010 will be held at the <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Nimhans+convention+center&amp;sll=19.017656,72.856178&amp;sspn=0.763414,1.292267&amp;ie=UTF8&amp;hq=Nimhans+convention+center&amp;hnear=&amp;radius=15000&amp;ll=12.937896,77.599697&amp;spn=0.049187,0.080767&amp;z=14&amp;iwloc=A">NIMHANS Convention Center</a>, Bangalore (INDIA). AFPS recognizes the blurring dynamic of the designer/developer workflow, and features the latest developments on the Adobe Flash Platform that is of utmost importance to both developers, as well as designers.
 

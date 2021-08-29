@@ -1,7 +1,4 @@
----
-layout: post
-title: Character Entities Cheat Sheet for HTML, CSS and Javascript
----
+# Character Entities Cheat Sheet for HTML, CSS and Javascript
 
 I always had to fiddle and look around multiple sources to get the correct Character Entity with their named or numeric entity for HTML, the unicode entity for CSS, or the Octal-encoded character for Javascript.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft - "Oops we did it again" 6 More Critical Security Vulnerabilities'
----
+# Microsoft - "Oops we did it again" 6 More Critical Security Vulnerabilities'
 
 The newest patch from Microsoft appears to b a Mac vs. PC commercial in the making. Don't be surprised if the next mocking ad from Mac addresses the 900 million people affected by Microsoft's most recent security patch. The name of the release, Patch "Tuesday" which sounds more like an Irish celebration than a critical software patch, but then again maybe Microsoft was trying to lighten the mood. 
 

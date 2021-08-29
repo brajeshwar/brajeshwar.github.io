@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe replaces FreeHand in favor of Illustrator
----
+# Adobe replaces FreeHand in favor of Illustrator
 
 <a href="http://blogs.adobe.com/jnack/">John Nack</a>, Senior Product Manager, Adobe Photoshop wrote that Adobe will be <a href="http://blogs.adobe.com/jnack/2007/05/freehand_no_lon.html">replacing Freehand with Illustrator</a>. Adobe will continue to sell the current version of FreeHand, but will not do any further development and won't release any updates.
 

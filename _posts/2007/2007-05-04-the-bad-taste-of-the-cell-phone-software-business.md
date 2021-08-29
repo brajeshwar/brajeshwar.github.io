@@ -1,7 +1,4 @@
----
-layout: post
-title: The bad taste of the Cell Phone Software Business
----
+# The bad taste of the Cell Phone Software Business
 
 Alex Krupp have written <a href="http://alexkrupp.typepad.com/sensemaking/2007/05/cell_phone_soft.html">some factual sense</a> on why it is not just improbable but impossible to create a successful mobile-wireless software startup. I, personally, am up with his discussion and points; let me re-phrase here in a shorter ways. Please read his article for a full detailed reading - <a href="http://alexkrupp.typepad.com/sensemaking/2007/05/cell_phone_soft.html">Cell Phone Software: The Billion-Dollar Sand Trap</a>.
 

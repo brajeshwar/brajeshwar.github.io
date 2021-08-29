@@ -1,7 +1,4 @@
----
-layout: post
-title: JustRemindIt App is a helpful Band-Aid solution for Alzheimer Epidemic
----
+# JustRemindIt App is a helpful Band-Aid solution for Alzheimer Epidemic
 
 Some creative Silicon Valley professionals branch off on their own to become entrepreneurs by starting their own tech venture. <a href="http://adityakothadiya.com/">Aditya Kothadiya</a> did exactly that, twice. 
 

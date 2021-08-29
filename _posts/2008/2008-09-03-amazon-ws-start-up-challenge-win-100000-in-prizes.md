@@ -1,7 +1,4 @@
----
-layout: post
-title: Amazon WS Start-Up Challenge - Win $100,000 in Prizes
----
+# Amazon WS Start-Up Challenge - Win $100,000 in Prizes
 
 With the <a href="http://aws.amazon.com/startupchallenge/">2008 AWS Start-Up Challenge</a>, Amazon Web Services (AWS) is searching for the next hot start-up that is leveraging AWS to build its infrastructure and business. The grand prize is $100,000 ($50,000 in cash, $50,000 in AWS credits) and a potential investment offer from Amazon.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Hello Ruby - Programming Book for Children
----
+# Hello Ruby - Programming Book for Children
 
 Hello Ruby is a children's book that teaches programming fundamentals through stories and kid-friendly activities.
 
@@ -12,7 +9,6 @@ She is on a journey to combine software with storytelling. She is writing and il
 She is <a href="http://www.kickstarter.com/projects/lindaliukas/hello-ruby">raising $10,000 on Kickstarter</a> for Hello Ruby (already over-subscribed).
 
 ![Hello Ruby)](/static/2014/hello-ruby.jpg)
-_Hello Ruby is a children’s book that teaches programming fundamentals through stories and kid-friendly activities._
 
 ## About Ruby
 

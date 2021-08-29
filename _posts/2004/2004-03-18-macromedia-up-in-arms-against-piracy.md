@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia up in arms against piracy
----
+# Macromedia up in arms against piracy
 
 "I was wondering if you can throw any light on Macromedia's anti-piracy initiative in India. I believe some users (in Mumbai atleast) have received letters from Macromedia urging them to purchase licences." This was an e-mail I received from a person few days back. And early today morning one of my friend called me up saying he just got a Notification letter from Macromedia, India to start buying licences of Macromedia Softwares if they haven't already. About a year ago or so, I was called up by some representative of Macromedia, India and told me I am using pirated copies because my name was not listed in their book where they keep records of persons/companies who bought softwares from them. Well, I told them nicely that I got my copies from Macromedia HQ itself and what I used are all legal ones. And all software bought by me so far are all online and I have never bought anything from India itself.
 

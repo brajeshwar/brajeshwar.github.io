@@ -1,7 +1,4 @@
----
-layout: post
-title: Phone-y Matters - Is there a Downside?
----
+# Phone-y Matters - Is there a Downside?
 
 We have all gone wireless and de-cluttered life, but it is essential to stop and smell the grass, and test it for poison. These wireless devices might cause irreparable damage to us humans who are inseparable from it. And the list of ailments is much beyond a crick in the neck from constant bending.
 

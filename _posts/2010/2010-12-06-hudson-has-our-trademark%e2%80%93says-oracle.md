@@ -1,7 +1,4 @@
----
-layout: post
-title: Hudson has Our Trademark - says Oracle
----
+# Hudson has Our Trademark - says Oracle
 
 It seems as though there is some confusion with regards to the patenting (trademark issue) of <a href="http://wiki.hudson-ci.org/">Hudson</a>, an Open-source project which <a href="http://www.oracle.com/">Oracle</a> apparently claims to own through the <a href="http://news.cnet.com/8301-30685_3-20000019-264.html">acquisition</a> of <a href="http://en.wikipedia.org/wiki/Sun_Microsystems">Sun Microsystems</a>. The hotchpotch is basically over whether Hudson needs to undergo a trademark process or not. Evidently, Sun Microsystems had decided not to trademark the name Hudson, when it initiated the project and now after having been bought out by Oracle, the project needs to be patented either with the same name -- Hudson or some other name.
 

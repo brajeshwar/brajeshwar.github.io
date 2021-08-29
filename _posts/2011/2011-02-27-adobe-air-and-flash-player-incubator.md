@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe AIR and Flash Player Incubator
----
+# Adobe AIR and Flash Player Incubator
 
 The Adobe Flash Platform runtimes team launches the <a href="http://www.adobe.com/go/runtimes_incubator">Adobe AIR and Flash Player Incubator program</a>. The Incubator is a new place on Adobe Labs where Adobe will share with developers features that are under development or under consideration for inclusion in future versions of the runtimes. It is different from the existing runtimes beta program. The Incubator program allows Adobe to involve and engage earlier with community of developers and customers.
 

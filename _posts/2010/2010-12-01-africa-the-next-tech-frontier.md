@@ -1,7 +1,4 @@
----
-layout: post
-title: Africa - the Next Tech Frontier
----
+# Africa - the Next Tech Frontier
 
 Africa! You are probably envisioning savannas, safaris and political unrest, but amidst the AID projects and Elephants there is a new Africa emerging. Throwing off the shackles of oppressive African stereotypes, the new Africa is experiencing a technology paradigm shift vis-a-vis its high-tech entrepreneurs.
 

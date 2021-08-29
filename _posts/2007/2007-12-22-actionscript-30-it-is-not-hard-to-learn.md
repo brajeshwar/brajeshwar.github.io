@@ -1,7 +1,4 @@
----
-layout: post
-title: ActionScript 3.0 - It is NOT hard to learn
----
+# ActionScript 3.0 - It is NOT hard to learn
 
 O'Reilly <a href="http://digitalmedia.oreilly.com/">Digital Media</a> just released an article from <a href="http://moock.org/">Colin Moock</a> titled "<a href="http://digitalmedia.oreilly.com/2007/12/21/is-actionscript-3-hard-or-not.html">ActionScript 3.0: Is It Hard or Not?</a>".
 

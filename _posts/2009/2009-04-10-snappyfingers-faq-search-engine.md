@@ -1,7 +1,4 @@
----
-layout: post
-title: SnappyFingers - FAQ Search Engine
----
+# SnappyFingers - FAQ Search Engine
 
 Recently I was in talk with the founder of <a href="http://www.snappyfingers.com/">SnappyFingers</a>, talking mostly about their Technology usage - Python, AWS, etc. It's interesting and nice that many startups are now taking advantage of readily available high-end infrastructures via the Cloud.
 

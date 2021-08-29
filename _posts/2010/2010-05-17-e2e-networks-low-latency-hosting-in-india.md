@@ -1,7 +1,4 @@
----
-layout: post
-title: E2E Networks - Low Latency hosting in India
----
+# E2E Networks - Low Latency hosting in India
 
 If you're targeting primarily Indian audience, you know that the best cloud computing solutions, dedicated servers and other economical VPS outside India is definitely not the best. Server(s) located in India would be a much better choice. However, with the lack of competent hosting solutions and the high cost of bandwidth in India, the sacrificial cost of latency was OK to host outside India.
 

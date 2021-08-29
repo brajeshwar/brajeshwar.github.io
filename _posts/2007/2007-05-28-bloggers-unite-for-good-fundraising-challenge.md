@@ -1,7 +1,4 @@
----
-layout: post
-title: Bloggers unite for Good Fundraising Challenge
----
+# Bloggers unite for Good Fundraising Challenge
 
 This Monday, May 28th, 2007 join thousands of bloggers and use your blog to benefit <a href="http://www.donorschoose.org/donors/viewChallenge.html?id=16793">DonorsChoose</a>, a non-profit Web site that brings teachers and donors together to fund specific student projects that range from "Magical Math Centers" to "Cooking Across the Curriculum". Join the blogging community and use your blog to draw attention to and raise funds for this underserved non-profit organization that does so much good for children and schools. 
 

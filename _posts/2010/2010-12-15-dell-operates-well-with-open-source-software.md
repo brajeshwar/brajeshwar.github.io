@@ -1,7 +1,4 @@
----
-layout: post
-title: Dell 'Operates Well' with Open Source Software
----
+# Dell 'Operates Well' with Open Source Software
 
 Though there has been much written, spoken, discussed and reported about open source software, there still seems to be a very small portion of the world that is using the open source software systems. It seems as though there is an apprehension amongst PC users to switch from the familiar <a href="http://www.microsoft.com/windows/">Microsoft operating systems</a> to GNU/Linux FOSS. However, lately the launch of the <a href="/2010/linux-mint-10/">latest versions</a> of several Open Source distributions has changed the scenario making the open source OS to be very similar to the Microsoft OS and sometimes even more convenient. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux Community - Are we really helping it grow?
----
+# Linux Community - Are we really helping it grow?
 
 [Linux](https://en.wikipedia.org/wiki/Linux) is known to be one of the most robust, complete and customizable operating system. It is a matter of fact that you'll find more articles on Linux HOW-TO's than for any other operating system! Have you tried to figure out the reason behind this? Is it that most Linux users are dumb and they need a lot of HOW-TO articles? Or is it that Linux is magically tough and you need a lot of lectureship?
 

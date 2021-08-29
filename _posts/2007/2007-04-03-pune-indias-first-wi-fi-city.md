@@ -1,7 +1,4 @@
----
-layout: post
-title: Pune - India's first Wi-Fi City
----
+# Pune - India's first Wi-Fi City
 
 Leaving Bangalore and Hyderabad behind, which are respectively known as India's Silicon Valley and Cyber City, Pune becomes India's first Wi-Fi city. Pune will have a high-speed wireless internet network even before the central government of India announces its Spectrum policy. This will enable people to access the internet from anywhere in Pune city, wirelessly through their Laptops and PDAs. The project "Unwiring Pune" was jointly announced by global chipmaker Intel Corp and Pune Municipal Corporation in March 2006 and is starting operation from this month of April, 2007. Intel, along with Chennai-based Microsense, will establish infrastructure for a wireless communication network covering the entire 280 km of Pune within the next coupla of years.
 

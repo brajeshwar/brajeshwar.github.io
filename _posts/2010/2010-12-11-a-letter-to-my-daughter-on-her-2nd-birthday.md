@@ -1,7 +1,4 @@
----
-layout: post
-title: A letter to my daughter on her 2nd birthday
----
+# A letter to my daughter on her 2nd birthday
 
 Today, my daughter is 2-years old, and I’m unfortunate that I won’t be by her side.
 

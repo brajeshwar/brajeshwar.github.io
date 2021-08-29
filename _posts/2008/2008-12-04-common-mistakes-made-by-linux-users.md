@@ -1,7 +1,4 @@
----
-layout: post
-title: 10 common mistakes made by Linux users
----
+# 10 common mistakes made by Linux users
 
 Working on a Linux machine is a matter of proud and gravity for a lot of geeks. I could never know why! But there are a few ubiquitous mistakes which a lot of them make while administering a Linux box. If kept in mind, these mistakes can be avoided to keep a smooth work flow in a Linux environment.
 

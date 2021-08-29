@@ -1,7 +1,4 @@
----
-layout: post
-title: Where does Open Source Software get its Payment from?
----
+# Where does Open Source Software get its Payment from?
 
 It always seems like a question that could have multiple answers. And it is actually true that the question of 'Who really pays for Open Source Software?' does not comprise of just one answer, in that there is not just one source of revenue for Open Source. It really is a tough task to track the fund flow for Open Source Software, especially when it is available at zero cost and when it cannot be sold. 
 

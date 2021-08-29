@@ -1,7 +1,4 @@
----
-layout: post
-title: Tips for those who make websites, quality websites
----
+# Tips for those who make websites, quality websites
 
 I have been trying hard during weekends to make this site a bit more easy to navigate, more usable and more toward standards. I think the [quality tips](http://www.w3.org/QA/Tips/) for webmasters from w3.org would be a useful read for many who maintains blogs.
 

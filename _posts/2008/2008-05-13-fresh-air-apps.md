@@ -1,7 +1,4 @@
----
-layout: post
-title: FreshAIRApps
----
+# FreshAIRApps
 
 <a href="http://www.jameswhittaker.com/">James Whittaker</a>'s FreshAIRApps is not just a website that showcase some of the best and popular Adobe AIR Applications but also provides the community with AIR updates, tutorials and other resources.
 

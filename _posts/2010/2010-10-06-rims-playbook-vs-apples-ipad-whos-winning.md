@@ -1,7 +1,4 @@
----
-layout: post
-title: RIM's PlayBook vs Apple's iPad - Who's Winning!
----
+# RIM's PlayBook vs Apple's iPad - Who's Winning!
 
 This could mark the beginning of another battle in the world of technology. <a href="http://www.rim.com/">Research In Motion</a> is all geared up to launch its latest PlayBook which supposedly stands as a threat to <a href="http://www.apple.com/ipad/">Apple iPad</a>. The iPad has for a long time been catering to users' needs of enjoying audio and visual media such as books, periodicals, movies, music, and games, as well as web content in a tablet computer format.
 

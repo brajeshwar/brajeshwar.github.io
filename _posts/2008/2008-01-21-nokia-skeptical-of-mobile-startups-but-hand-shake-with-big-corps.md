@@ -1,7 +1,4 @@
----
-layout: post
-title: Nokia skeptical of mobile-startups but hand-shake with big Corps
----
+# Nokia skeptical of mobile-startups but hand-shake with big Corps
 
 Senior Investment director of Bluerun Ventures (erstwhile Nokia Venture Partners), Sasha Mirchandani says, "We have consciously decided to stay out of the space, as the current revenue share arrangement (between operators and VAS players) does not offer a viable business proposition."
 

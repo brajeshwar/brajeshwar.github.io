@@ -1,7 +1,4 @@
----
-layout: post
-title: The Super-Secrective Anti-Counterfeiting Trade Agreement Gives the Finger to Citizens, NGOs and International Governing Bodies
----
+# The Super-Secrective Anti-Counterfeiting Trade Agreement Gives the Finger to Citizens, NGOs and International Governing Bodies
 
 In a rather ludicrous display of backdoor shenanigans several high-profile countries have created and signed a new trade <a href="https://www.ige.ch/fileadmin/user_upload/Juristische_Infos/e/acta_text.pdf">agreement</a> aimed at stomping-out the $250-billion counterfeiting <a href="http://www.ipo.gov.uk/pro-policy/pro-crime/pro-crime-acta.htm">market</a>. The <a href="https://www.ige.ch/fileadmin/user_upload/Juristische_Infos/e/acta_text.pdf">Anti-Counterfeiting Trade Agreement</a> (ACTA) is a new international trade agreement created by G8-led countries (representing 50% of world trade) was conceived under a veil of secrecy, without democratic vote or process.
 

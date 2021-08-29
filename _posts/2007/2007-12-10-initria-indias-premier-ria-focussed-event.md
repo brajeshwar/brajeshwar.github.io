@@ -1,7 +1,4 @@
----
-layout: post
-title: initRIA, India's Premier RIA-focussed event
----
+# initRIA, India's Premier RIA-focussed event
 
 The <a href="http://bangalorefx.org/">Bangalore-based Flex User Group</a> is organizing the first of its kind RIA event in India - <a href="http://initRIA.org">initRIA</a>. It is an event focussed specific to Rich Internet Application Development with an aim to provide a platform for RIA enthusiasts in India to interact and learn.
 

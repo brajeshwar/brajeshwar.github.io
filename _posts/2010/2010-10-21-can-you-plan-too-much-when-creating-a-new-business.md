@@ -1,7 +1,4 @@
----
-layout: post
-title: Can you plan too much when creating a new business?
----
+# Can you plan too much when creating a new business?
 
 We all know that running a successful business means that you must plan your strategy and refine your tactics. The article <a href="http://bsng.lithium.com/t5/The-Industry-Word/5-Dangerous-Business-Planning-Myths/ba-p/5781">5 Dangerous Business Planning Myths</a> describes that all businesses must plan carefully. Regardless of what business you are in, if you fail to plan you might as well plan to fail.
 

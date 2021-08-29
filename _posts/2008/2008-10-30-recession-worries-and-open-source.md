@@ -1,7 +1,4 @@
----
-layout: post
-title: Recession Worries and Open Source
----
+# Recession Worries and Open Source
 
 "The Great October Crash 08" is one of the most important events for all economists and financiers across the globe to study and understand the implications on various other sectors of businesses. There are tough times ahead for all businesses and the rock bottom world economy isn't also helping the cause. 
 

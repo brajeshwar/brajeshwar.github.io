@@ -1,7 +1,4 @@
----
-layout: post
-title: FlashClash (India's Flash Competition)
----
+# FlashClash (India's Flash Competition)
 
 Indian Flash Developers and Designers alike will for the first time have a chance to flaunt their designing and development skill in Flash. And yes, the winning entries will get awards worth more than ₹3,40,000.
 

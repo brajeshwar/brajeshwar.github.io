@@ -1,7 +1,4 @@
----
-layout: post
-title: Top 5 Cloud Blackout Blunders
----
+# Top 5 Cloud Blackout Blunders
 
 The big fluffy white hard-drives in the sky are said to be the future of software-but are they as sometimes as unpredictable as naughty-little-brother-like cumulonimbus clouds? The heavenly body of cloud computing has flexed its muscles prematurely as there have been a long string of major outages:
 

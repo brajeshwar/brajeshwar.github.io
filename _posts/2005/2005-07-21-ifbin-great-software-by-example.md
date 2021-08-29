@@ -1,7 +1,4 @@
----
-layout: post
-title: IFBIN, Great Software by Example
----
+# IFBIN, Great Software by Example
 
 Learn Macromedia Flash and Flex from Industry Experts at [IFBIN](http://www.ifbin.com/). 
 

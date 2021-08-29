@@ -1,7 +1,4 @@
----
-layout: post
-title: Your virtual assistant is a partner, not an employee
----
+# Your virtual assistant is a partner, not an employee
 <p>Virtual assistants provide professional, administrative or professional assistance to other entrepreneurs. Clearly, they can be some of the best business relationships you can possibly have. Businesses often underestimate the potential of the relationship.</p>
 <p>Many entrepreneurs think of a virtual assistant as a secretary who they can unload projects onto that are too boring and unimportant to merit their own attention. You need to remember that a virtual assistant is an entrepreneur themselves, probably with similar skill sets and qualifications. You should treat them more like a business partner than an employee, because they may know just as much about running your business as you do.</p>
 <p>If you are going to benefit from a virtual assistant, you are going to need to do a few things:</p>

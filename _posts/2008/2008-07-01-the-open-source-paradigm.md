@@ -1,7 +1,4 @@
----
-layout: post
-title: The Open Source Paradigm
----
+# The Open Source Paradigm
 
 We've been hitting on Linux HOW TO's for quite some time now. Starting from the <a href="/2008/open-source-revolution/">Open Source Revolution</a> to <a href="/2008/ready-for-lamp/">LAMP</a> and <a href="/2008/choice-of-linux-distros/">choosing a Linux distro</a> to <a href="/2008/terminal-based-installation/">understanding the terminal</a>, we've brushed up a lot of Linux related methodologies. It's time now to have an analytical look at the Linux platform . To keep it more generic, I would prefer naming it - the Open Source paradigm.
 

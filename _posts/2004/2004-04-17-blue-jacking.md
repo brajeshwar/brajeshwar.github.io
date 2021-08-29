@@ -1,6 +1,3 @@
----
-layout: post
-title: Blue Jacking
----
+# Blue Jacking
 
 Have you ever wished that you could send a quick message to the hot girl next to you in a bus, local train, local metro without knowing her number? Well, you can do it if you both have bluetooth enabled phone. `Bluejack1.com`, the erstwhile `BlueJacking.com`, is the place if you want to know details or learn about Blue Jacking. This is not illegal as bluejacking do not steal or destroy any data or whatsoever. Using a bluetooth enabled phone, you can create a phonebook contact and write a message, in the 'Name' field. Then you can search for other phones with Bluetooth and send that phonebook contact to them. On their phone, a message will popup with your message.

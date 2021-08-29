@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Easy Ways to Alienate People and Screw-up your Life with your Smartphone
----
+# 5 Easy Ways to Alienate People and Screw-up your Life with your Smartphone
 
 Move over dogs, Smartphone's are officially man's new best friend. Smartphone's are not only there for you when you need them, they also provide countless hours of mind-numbing entertainment via their pointless apps. But, are you giving enough attention to your digital companion? There are 5 critical steps to sealing the matrimonial tie with your smartphone; starting with alienating then eliminating all the frivolous people in your life.
 

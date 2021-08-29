@@ -1,7 +1,4 @@
----
-layout: post
-title: Why Outlook is preferred by Business Professionals?
----
+# Why Outlook is preferred by Business Professionals?
 
 On the afternoon of 15th March, 2005, I was at the Mumbai Domestic Airport to leave for Bangalore, I had about half an hour before I finally boarded the craft, so I flipped open my Notebook to do a last minute mail-check, things to do, task at hand and appointments for the next 24-48 hrs.
 

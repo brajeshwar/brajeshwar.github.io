@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux is more than just a Novel Concept
----
+# Linux is more than just a Novel Concept
 
 It is inevitable that choosing the right operating system is imperative to insure that you have a high performance, security, high delivery and applications that you wish to work with either at home or in office, either on desktop or on laptop. Today, Linux is moving into user space faster than ever before. Distros like Ubuntu and PCLinuxOS compete vividly with the much loved MS Windows. Linux is characteristically found to be one of the most unswerving, stable, secure, cost effective and well-organized system. Thanks to the intuitive GUI support which has come up to serve the young minds with desktop environments like KDE. 
 

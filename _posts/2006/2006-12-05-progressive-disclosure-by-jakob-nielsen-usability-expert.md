@@ -1,7 +1,4 @@
----
-layout: post
-title: Progressive Disclosure by Jakob Nielsen (Usability Expert)
----
+# Progressive Disclosure by Jakob Nielsen (Usability Expert)
 
 I just read an article from Jakob Nielsen, a usability expert. The amazing article -- [Progressive Disclosure](http://www.useit.com/alertbox/progressive-disclosure.html) states that Progressive disclosure defers advanced or rarely used features to a secondary screen, making applications easier to learn and less error-prone.
 

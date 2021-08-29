@@ -1,7 +1,4 @@
----
-layout: post
-title: Is Nokia trying to fit in there?
----
+# Is Nokia trying to fit in there?
 
 Despite being the world leader in mobile phones for several years and with every 1/3 mobile phones being sold is known to come off Nokia's couch, the brand is being taken for a ride by Apple's iPhone. With the new <a href="http://www.apple.com/iphone/">iPhone 3G S</a> coming up, Nokia just found another competition to what was already a chaos.
 

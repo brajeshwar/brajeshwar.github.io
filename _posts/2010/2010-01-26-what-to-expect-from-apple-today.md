@@ -1,7 +1,4 @@
----
-layout: post
-title: What to expect from Apple today?
----
+# What to expect from Apple today?
 
 Within a couple of hours from now, the curtain shall finally get raised over the rumors, discussions and debates which have lasted for a couple of weeks. The latest technology news that is coming out from <a href="http://www.apple.com/">Apple</a> is shrouded with mysteries and confusions adding onto the eagerness of consumers, technology experts, media and press. Today, Apple fans might hear something that's kept all of us anxious for past few weeks. Ones who were earlier saying that there is no fire to this smoke are now coming out with a viewpoint that something is there for sure.
 

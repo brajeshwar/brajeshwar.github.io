@@ -1,7 +1,4 @@
----
-layout: post
-title: Don't let your email marketing campaign get mistaken for spam
----
+# Don't let your email marketing campaign get mistaken for spam
 
 Having an aggressive email marketing campaign is one of the most powerful ways to grow your business over the Internet. However, it is easy to accidentally become too aggressive and be flagged for spam. There are a few principles you should keep  in mind when you are setting your campaign up so that you can maintain an ethical marketing strategy.
 

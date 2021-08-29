@@ -1,7 +1,4 @@
----
-layout: post
-title: Amazon CloudFront, an Awesome CDN
----
+# Amazon CloudFront, an Awesome CDN
 
 Amazon announced <a href="http://aws.amazon.com/cloudfront/">CloudFront</a> just about a day back and we were extremely excited that we would be able to serve files faster to our users.
 

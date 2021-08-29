@@ -1,7 +1,4 @@
----
-layout: post
-title: Bond will kick the living daylights out of everyone
----
+# Bond will kick the living daylights out of everyone
 
 Friday is already here initiating the weekend, let's talk a bit about Entertainment (perhaps Movies). Sun UK have a sneak preview  bringing us good entertaining news -- Quantum of Solace will <a href="http://www.thesun.co.uk/sol/homepage/showbiz/film/movie_reviews/article1730883.ece">kick the living daylights</a> out of any rival action-hero franchises.
 

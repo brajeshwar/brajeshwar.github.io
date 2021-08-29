@@ -1,7 +1,4 @@
----
-layout: post
-title: Does Google Enjoy Rights to Delete Copyrighted MP3s from Gmail?
----
+# Does Google Enjoy Rights to Delete Copyrighted MP3s from Gmail?
 
 Amongst the million controversies that raise questions about the various rights that Google can exercise in the world of internet, which it presently dominates; the latest rumor has enraged people to a great degree. Just as Google uses its unique power to scan through innumerable YouTube content and discard those, which are illegally posted or are alleged of copyright issues, Google has been accused by an anonymous user, of <a href="http://gmail-music.sourceforge.net/">removing music files from Gmail</a> under the charge that those files have conflicting copyright affairs. However, the extent of truth in this rumor is still under debate.
 

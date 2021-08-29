@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Image Labeler - real Game or a Game to collect metadata for their images?
----
+# Google Image Labeler - real Game or a Game to collect metadata for their images?
 
 I went to [Google Image Labeler](http://images.google.com/imagelabeler/) through [Matt Cutt's Article](http://www.mattcutts.com/blog/google-image-labeler-game/). This is something similar to that of Flickr's Tag Game - [Fastr](http://randomchaos.com/games/fastr/).
 

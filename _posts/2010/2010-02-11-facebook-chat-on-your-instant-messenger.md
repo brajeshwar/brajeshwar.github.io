@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook Chat on your Instant Messenger
----
+# Facebook Chat on your Instant Messenger
 
 Design meets technology. After facebook got a <a href="http://blog.facebook.com/blog.php?post=287459122130">new look</a> last week, we now have a new feature as well. We've already found facebook to be the best of social networks to plug into. But for some reason or the other, people have always criticized that chat feature. Now, after a better placement of facebook chat, it has been made <a href="http://blog.facebook.com/blog.php?post=297991732130">available</a> over the Jabber/XMPP protocols as well.
 

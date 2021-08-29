@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Chrome 6 launched on its 2nd Anniversary!
----
+# Google Chrome 6 launched on its 2nd Anniversary!
 
 Recently Google Chrome celebrated its <a href="http://googleblog.blogspot.com/2010/09/back-to-future-two-years-of-google.html">second anniversary</a>. On the same day, this popular web browser has released its new version to millions of users. From the hay days, Chrome has been very popular and currently ranks third among the top web browsers. Chrome is successful in attracting the attention of millions of web users, due to its lightning speed as well as clutter-free and minimal interface. 
 

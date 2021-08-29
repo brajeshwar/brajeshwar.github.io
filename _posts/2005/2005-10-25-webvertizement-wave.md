@@ -1,7 +1,4 @@
----
-layout: post
-title: Webvertizement Wave
----
+# Webvertizement Wave
 
 Is it just me or the World Wide Web is gaining on the advertizement momentum in a bigger way again. Coupla days back, I saw an article in the aggregators about the [Million Dollar Homepage](http://www.milliondollarhomepage.com/) which consists of 1 million individual pixels. Each pixel is valued at $1 a piece with a minimum purchase requirement of a 100 pixel block (10 x 10 pixels).
 

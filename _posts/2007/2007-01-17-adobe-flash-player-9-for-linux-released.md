@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Flash Player 9 for Linux Released
----
+# Adobe Flash Player 9 for Linux Released
 
 Adobe today announced the availability of Flash Player 9 for Linux. Senior Product Manager at Adobe, [Emmy Huang](http://weblogs.macromedia.com/emmy/), says -- "With the proliferation of video on the Web, Adobe Flash Player is quickly becoming the de facto industry standard for delivering engaging interactive content and applications. Now the Linux community has full access to the high volume of Flash content and applications available on the Internet today, bringing Linux developers and users to the forefront of the Web 2.0 experience."
 

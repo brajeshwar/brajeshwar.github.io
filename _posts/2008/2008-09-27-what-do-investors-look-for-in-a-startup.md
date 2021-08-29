@@ -1,7 +1,4 @@
----
-layout: post
-title: What do investors look for in a startup?
----
+# What do investors look for in a startup?
 
 {% include video source="youtube" id="_BwatxQwgNs" %}
 

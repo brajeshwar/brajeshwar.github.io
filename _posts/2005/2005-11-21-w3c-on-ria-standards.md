@@ -1,7 +1,4 @@
----
-layout: post
-title: W3C on RIA standards
----
+# W3C on RIA standards
 
 The W3C Web API Working Group is chartered to develop standard APIs for client-side Web Application development. This work will include both documenting existing APIs such as `XMLHttpRequest` and developing new APIs in order to enable richer Web Applications.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Monitis - an IT monitoring StartUp
----
+# Monitis - an IT monitoring StartUp
 
 <a href="http://portal.monitis.com/">Monitis</a> was declared as "The Most Innovative Start-up" for the Year 2009 by "<a href="http://clientconference.the451group.com/na/2009/">The 451 Group's Client Conference</a>. Also, it was selected as One of the Top 100 Private Limited Companies, by the editorial team of <a href="http://alwayson.goingon.com/">AlwaysOn</a>, along with partners at KPMG, Morgan Stanley, Hewlett-Packard, and a few other industry experts. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Textually Transmitted Diseases on the Rise
----
+# Textually Transmitted Diseases on the Rise
 
 Yes -- we have officially entered the age of the Textually Transmitted Disease. Last September a virus spread across China, infecting more than 1 million smartphones. This virus dubbed '<a href="http://www.mobiledia.com/news/76694.html">Zombie</a>' infiltrated phones and began sending spam messages using the phone's address book. While this is still shy of being a full-blown TTD, we are well on our way. 
 

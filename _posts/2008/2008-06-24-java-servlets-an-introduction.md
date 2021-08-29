@@ -1,7 +1,4 @@
----
-layout: post
-title: Java Servlets, an introduction
----
+# Java Servlets, an introduction
 
 We've been talking a lot about Linux lately. Let's break out a bit from that and talk about another topic -- the Java Servlet Technology. We'll try to cover some basic aspects of <a href="http://java.sun.com/products/servlet/">Java Servlet Technology</a> and may be a little more.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: C/C++ to Flash Compiler
----
+# C/C++ to Flash Compiler
 
 While browsing around Flash/Flex blogs, I stumbled on an interesting article from Ted -- <a href="http://www.onflex.org/ted/2008/02/extending-adobe-flash-player-and-adobe.php">Extending Adobe Flash Player and Adobe AIR with C and C++</a> via ActionScript 3.
 

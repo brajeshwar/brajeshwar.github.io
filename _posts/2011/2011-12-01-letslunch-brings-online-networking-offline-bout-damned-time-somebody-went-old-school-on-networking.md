@@ -1,7 +1,4 @@
----
-layout: post
-title: LetsLunch brings Online Networking OFFLINE -- bout damned time somebody went old school on networking
----
+# LetsLunch brings Online Networking OFFLINE -- bout damned time somebody went old school on networking
 
 If you're like me, then your social profiles haven't done anything to your business life other than imploring you to waste valuable working hours looking at random acquaintances' mobile uploads of their cats. Enter <a href="http://letslunch.com/">LetsLunch</a>.
 

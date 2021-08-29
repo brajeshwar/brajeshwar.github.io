@@ -1,7 +1,4 @@
----
-layout: post
-title: Indian IT Company close to $1 bn contract
----
+# Indian IT Company close to $1 bn contract
 
 The <a href="http://hindustantimes.in/">Hindustan Times</a> reported a billion dollar punch by an Indian IT firm - Tata Consultancy Services (TCS). TCS is close bagging a billion dollar outsourcing contrast from T-Systems, a unit of Deutsche Telekom. This would be the first $1 billion contract coming to an individual Indian IT company. Industry experts speculates that this barter deal will give TCS a company stake in T-Systems, equivalent to the value of service contract. TVS might end up acquiring around 10% equity in T-Systems. Such stock-in-service barter deals provide predictability in long-term contract for TCS and gives T-Systems the comfort of getting adequate attention in terms of manpower for the job.
 

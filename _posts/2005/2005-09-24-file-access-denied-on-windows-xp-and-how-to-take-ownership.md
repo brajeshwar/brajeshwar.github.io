@@ -1,7 +1,4 @@
----
-layout: post
-title: File Access Denied on Windows XP and how to take ownership
----
+# File Access Denied on Windows XP and how to take ownership
 
 In a recent hard disk crash, I had to do a restore from my back-up. Some of the files on a back-up drive was somehow avoiding me with an "Access Denied" even though I was logged in as the Administrator. I looked around and finally got the solution on how to take ownership of a file or folder in Windows.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Get Linux Certified!
----
+# Get Linux Certified!
 
 Linux is an OS that conjures up images of computer nerds hunched over their keyboards in the quest for digital divinity while following the doctrine of open source and free software for all. Such evangelistic ideals and hallowed images have often paved the way for computer engineering students to follow certifications such as the Microsoft series or even the vendor-specific RedHat certifications amongst those inclined towards certifying their skills in Linux.
 

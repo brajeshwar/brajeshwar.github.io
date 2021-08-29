@@ -1,7 +1,4 @@
----
-layout: post
-title: Instagram - Twitter for your photos
----
+# Instagram - Twitter for your photos
 
 <a href="http://www.apple.com/iphone/">iPhone</a> has been one of the best innovations of all times. Thanks to Steve Jobs and the App Store. It deserves a good credit to the way communication on mobile has been redefined.
 

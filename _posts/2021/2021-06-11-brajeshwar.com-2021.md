@@ -6,6 +6,14 @@ I have done away with comments, and dicarded a whole lot of other metadata. I ha
 
 > In 2001, the domain, `brajeshwar.com` was booked on a dare and I'm happy with that decision. [Read the Story](/about/brajeshwar.com/).
 
+## WordPress to Jekyll
+
+<div class="content-medium">{% include video source="youtube" id="xlwn1hFa5QI" %}</div>
+
+I needed quite a bit of manual cleaning as there were codes alongside constent, TextPatten shortcodes, WordPress shortcodes, and lots of metadata. There are WordPress Plugins such as the [Jekyll Exporter](https://wordpress.org/plugins/jekyll-exporter/) that can make it easier.
+
+I had ported the static parts to AWS S3 long back and that made life easier. [Sublime Text](https://www.sublimetext.com) made it easy to do a `Find & Replace` across folders to fix a lot of references, links, etc. I was able to do sweeping replacements across 1200+ files easily in matter of seconds.
+
 <a href="https://oinam.github.io/oinam-jekyll/">
   <img class="medium" src="/static/2021/oinam-jekyll-cover.png" alt="Oinam Jekyll" loading="lazy">
 </a>

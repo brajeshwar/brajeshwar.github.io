@@ -1,7 +1,4 @@
----
-layout: post
-title: Running a webcam on Linux
----
+# Running a webcam on Linux
 
 <a href="http://www.gnome.org/projects/cheese/"><img class="small right" src="/static/2008/cheese-big.png" alt="Cheese"></a>
 

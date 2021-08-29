@@ -1,7 +1,4 @@
----
-layout: post
-title: Android Honeycomb's Going Gets Tough
----
+# Android Honeycomb's Going Gets Tough
 
 Of late, Android developers are in a fix. It has been six months since the launch of the Android Honeycomb Tablet in the Market and it has not garnered a potential user base. The problem clearly lies in the dearth in apps optimized for the Android Tablets and analysts are of the view that an evident lack of these Honeycomb aka Android 3.0 Applications is what makes it a less chosen Tablet as opposed to the Apple's iPad. But any new technology faces such non-acceptance in the beginning; the Honeycomb tablet also had its share of tough criticism and rejection from the global consumers with Apple being the dominant competitor today in the market. Android developers are trying their best to convince their consumers that the Android optimized apps will see a rise by the end of 2011 despite its sluggish start.
 

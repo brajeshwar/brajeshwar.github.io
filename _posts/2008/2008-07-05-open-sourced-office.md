@@ -1,7 +1,4 @@
----
-layout: post
-title: How about an Open Sourced office?
----
+# How about an Open Sourced office?
 
 If you're looking forward to start up a small business enterprise, investment happens to be a key concern. How much, how less and where exactly; these are the preliminary encounters.
 

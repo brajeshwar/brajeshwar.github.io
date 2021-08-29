@@ -1,7 +1,4 @@
----
-layout: post
-title: Dev Tools - The tools they use to run and build 37signals
----
+# Dev Tools - The tools they use to run and build 37signals
 
 [37signals](http://www.37signals.com/) has a very nice [list of tools](http://37signals.com/svn/archives2/the_tools_we_use_to_run_and_build_37signals.php) that helped them run and build their team. Do read the comments for more insights on other people's ideas. I am beginning to really like the idea of a very open community in this blog-era-internet. People are virtually opening up almost everything, sharing everything and being in a very healthy competition.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Watch your steps before you upgrade to Wordpress 2.1
----
+# Watch your steps before you upgrade to Wordpress 2.1
 
 I ran into issues while trying to upgrade a Wordpress 2.0.7 installation to the new Wordpress 2.1 release.
 

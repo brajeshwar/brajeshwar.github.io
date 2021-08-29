@@ -1,7 +1,4 @@
----
-layout: post
-title: The Da Vinci Code
----
+# The Da Vinci Code
 
 <img class="small right" src="/static/2006/davincicode.jpg" alt="Cryptex from the DaVinci Code">
 

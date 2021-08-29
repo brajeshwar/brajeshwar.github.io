@@ -1,7 +1,4 @@
----
-layout: post
-title: Twusic - Tweet your Music
----
+# Twusic - Tweet your Music
 
 <a href="http://twusic.com/">Twusic</a> is Twitter meet Music.
 

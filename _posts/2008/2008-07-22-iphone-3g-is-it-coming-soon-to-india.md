@@ -1,9 +1,6 @@
----
-layout: post
-title: iPhone 3G, is it coming soon to India
----
+# iPhone 3G, is it coming soon to India
 
-![Apple iPhone 3G)](/static/2008/iphone-3g.png)
+<img class="medium" src="/static/2008/iphone-3g.png" alt="Apple iPhone 3G" loading="lazy">
 
 Macworld Associate Editor Dan Moren has the <a href="http://www.macworld.com/article/134594/2008/07/liveupdate.html">play-by-play of Apple's Q3 2008 financial results</a>. Apple COO Tim Cook and CFO Peter Oppenheimer were discussing Apple's results for the fiscal third quarter.
 

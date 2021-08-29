@@ -1,7 +1,4 @@
----
-layout: post
-title: Quantity vs. Quality - The Google Algorithm!
----
+# Quantity vs. Quality - The Google Algorithm!
 
 You can search for anyone and their uncle on <a href="http://www.google.com/">Google</a>, and it won't disappoint you, and now with the new algorithm the search results will be cleaner and more focused. Google has updated its algorithm to remove the rankings of sites it considers "content farms" and upgrade search results. 
 

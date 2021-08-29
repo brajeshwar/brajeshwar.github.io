@@ -1,7 +1,4 @@
----
-layout: post
-title: Django 1.0 alpha released
----
+# Django 1.0 alpha released
 
 Django Project have <a href="http://www.djangoproject.com/weblog/2008/jul/21/10-alpha/">released Django 1.0 Alpha</a> today (22nd Jul, 2008 IST). If this is the timeline Django would stick to; then, Django 1.0 final release should hit the web on 2nd Sep, 2008. Alpha 1.0 release includes all of the major features due for inclusion in the final Django 1.0.
 

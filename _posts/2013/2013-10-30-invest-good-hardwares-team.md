@@ -1,7 +1,4 @@
----
-layout: post
-title: Why Startups should invest in Good Hardwares for the Team
----
+# Why Startups should invest in Good Hardwares for the Team
 
 According to [Gartner](http://www.gartner.com/), global IT spending is poised to hit $3.8 trillion by 2014. But how much of it should come from your startup? Big corporate giants have massive IT budgets that help them upgrade and keep up with the latest cutting-edge technology that gives the company a competitive edge and enhances productivity. Startups, sadly enough, often have very little or nothing in terms of an IT budget. 
 

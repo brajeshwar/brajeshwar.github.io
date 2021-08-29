@@ -1,7 +1,4 @@
----
-layout: post
-title: A personalized Open Source Time Machine takes you 'Back to the Future'
----
+# A personalized Open Source Time Machine takes you 'Back to the Future'
 
 Considered to be a project work for graduation at <a href="http://www.hdk.gu.se/en">HDK Design School</a> in Gothenburg, Sweden - <a href="http://www.danhenriksson.com">Dan Henriksson's</a> Time Machine has brought him huge amounts of accolades. The concept though does not fittingly give users the experience of going back in time or into the future, yet provides a visual treat to the users in alignment with the time that they choose to be in. 
 

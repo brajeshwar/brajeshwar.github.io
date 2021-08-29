@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe School Innovation Awards
----
+# Adobe School Innovation Awards
 
 The theme of 2008's <a href="http://www.adobe.com/education/solutions/k12/awards/">Adobe School Innovation Awards</a> is My Community -- My Planet -- My 21st Century. High school students in grades 9-12 (ages 14-19) can submit entries in three categories: Web Design and Development, Film and Video, and Graphic and Print Design. Category award winners as well as one grand prize winner for best overall submission will be chosen. Prizes include software, cash, a laptop computer, and a trip to NECC being held in San Antonio, Texas. 
 

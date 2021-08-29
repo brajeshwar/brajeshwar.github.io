@@ -1,7 +1,4 @@
----
-layout: post
-title: My Father Expired
----
+# My Father Expired
 
 My Father, Brojendro Oinam, expired on Mar 22, 2005. He was born on February 13, 1953. He is survived by his three sons and a daughter.
 

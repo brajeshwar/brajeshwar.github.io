@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash to iOS - Journey of a Video
----
+# Flash to iOS - Journey of a Video
 
 Earlier this month, Apple previewed <a href="http://www.youtube.com/watch?v=f6Cl9h7dmfM">Final Cut Pro X</a>; the newest version of the company's professional non-linear video editing software and <a href="http://www.razorianfly.com/2011/04/11/photoshop-remote-gets-demoed-video/">Photoshop Touch SDK</a>. But, the next biggest announcement was that of Adobe's declaration to add support for <a href="http://developer.apple.com/resources/http-streaming/">HTTP Live streaming</a> (HLS) to its Flash Media Server. 
 

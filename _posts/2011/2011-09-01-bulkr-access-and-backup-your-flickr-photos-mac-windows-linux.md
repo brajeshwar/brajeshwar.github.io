@@ -1,7 +1,4 @@
----
-layout: post
-title: Bulkr - Access and Backup your Flickr Photos (Mac, Windows & Linux)
----
+# Bulkr - Access and Backup your Flickr Photos (Mac, Windows & Linux)
 
 {% include video source="youtube" id="M9oPjIzb0bk" %}
 

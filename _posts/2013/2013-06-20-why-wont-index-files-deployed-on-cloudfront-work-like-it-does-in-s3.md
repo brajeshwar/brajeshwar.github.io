@@ -1,7 +1,4 @@
----
-layout: post
-title: Why won't index files deployed on Cloudfront work like it does in S3?
----
+# Why won't index files deployed on Cloudfront work like it does in S3?
 
 I seriously had no clue about this. It was one the most irritating thing while deploying static site hosting on Amazon Cloudfront. I had in-fact stayed with S3 for sites that had folders with `index.html`. Here is the solution for those who haven't figured out yet.
 

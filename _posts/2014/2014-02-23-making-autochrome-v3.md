@@ -1,7 +1,4 @@
----
-layout: post
-title: The Making of Autochrome v3
----
+# The Making of Autochrome v3
 
 ## Autochrome v2
 

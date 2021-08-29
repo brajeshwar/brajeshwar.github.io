@@ -1,7 +1,4 @@
----
-layout: post
-title: comScore Reports - Users Adore Samsung Android Phones
----
+# comScore Reports - Users Adore Samsung Android Phones
 
 Gadgets rule this generation and the Androids have certainly proved to be the forerunners in this field. Top mobile and technology companies have launched their versions of the Android phones in the market. Although, almost all of them have seen a speedy consumer rate, yet <a href="http://www.comscore.com/">comScore</a> reports say that Samsung Galaxy phones have taken the lead as the top consumer choice.
 

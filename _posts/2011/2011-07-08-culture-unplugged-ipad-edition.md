@@ -1,7 +1,4 @@
----
-layout: post
-title: Culture Unplugged iPad Edition
----
+# Culture Unplugged iPad Edition
 
 Culture Unplugged have released their <a href="http://www.cultureunplugged.com/film_festival_TV/documentary_ipad/">iPad Application</a> where you will discover documentaries and films from around the world from film-makers, activists, grassroots-productions and purpose driven institutions.
 

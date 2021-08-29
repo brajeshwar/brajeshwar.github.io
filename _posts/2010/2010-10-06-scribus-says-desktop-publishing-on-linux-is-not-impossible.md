@@ -1,7 +1,4 @@
----
-layout: post
-title: Scribus says Desktop Publishing on Linux is 'Not Impossible'
----
+# Scribus says Desktop Publishing on Linux is 'Not Impossible'
 
 There has always been resistance from many, especially small business enterprises in using Linux based computer systems. And the major reason that is cited by most or all of them is the issue with <a href="http://en.wikipedia.org/wiki/Desktop_publishing">Desktop Publishing (DTP) application</a>. However, for those who feel pessimistic about using Linux can now relax their apprehensions with <a href="http://www.scribus.net/">Scribus</a>. 
 

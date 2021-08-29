@@ -1,7 +1,4 @@
----
-layout: post
-title: How to make yourselves opaque to Google
----
+# How to make yourselves opaque to Google
 
 Anyone with a Google account will know about Google's <a href="http://googleblog.blogspot.in/2012/01/updating-our-privacy-policies-and-terms.html">new privacy policy</a> by now. I'll refresh the information for the non-google (sounds like an oxymoron?) lot and also to those who have dismissed the new privacy policy without reading. The new privacy policy goes into effect from March 1st, 2012. The policy can be defined in simple terms as, "Whatever you do in any of the Google Websites the other Google Websites will know about it!"
 

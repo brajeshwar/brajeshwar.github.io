@@ -1,7 +1,4 @@
----
-layout: post
-title: Cogito Ergo Sum - I blog, therefore I am
----
+# Cogito Ergo Sum - I blog, therefore I am
 
 It is the generation of the lazy, the people who need their 11am cuppa coffee to even register that they are alive, and the generation of the creatively competent, the ones who are up all night writing about their fantasy alternate worlds. Is <a href="http://www.copyblogger.com/blogging-is-dead-again/">blogging dead</a> then?
 

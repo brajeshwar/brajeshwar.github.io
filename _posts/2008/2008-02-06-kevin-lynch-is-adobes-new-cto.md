@@ -1,7 +1,4 @@
----
-layout: post
-title: Kevin Lynch is Adobe's new CTO
----
+# Kevin Lynch is Adobe's new CTO
 
 Earlier in the day, Adobe announced the <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200802/020508KevinLynchCTO.html">promotion of [Kevin Lynch](http://www.klynch.com/) to chief technology officer</a> (CTO). As the new CTO, Lynch will oversee Adobe's experience design and core technology across business units. He will continue to drive Adobe's technology platform for designers and developers, which includes -- Adobe Flash Player, Adobe Flex and Adobe AIR.
 

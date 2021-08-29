@@ -1,7 +1,4 @@
----
-layout: post
-title: CSS's "hasLayout" and the devil within
----
+# CSS's "hasLayout" and the devil within
 
 We'll know of many CSS dysfunction in Internet Explorer; even the latest version 7.x release from Microsoft is not spared. <a href="http://www.satzansatz.de/cssd/onhavinglayout.html">HasLayout</a> can a be way to fix such CSS dysfunction in both IE 6 and 7.
 

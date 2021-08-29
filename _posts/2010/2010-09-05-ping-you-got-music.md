@@ -1,7 +1,4 @@
----
-layout: post
-title: Ping! You got music
----
+# Ping! You got music
 
 Apple has always been well equipped to take on music centered social networks like <a href="http://www.last.fm/">Last.fm</a>, <a href="http://like.fm/">Like.fm</a> and has finally entered the charts with <a href="http://www.apple.com/itunes/ping/">Ping</a> in sync with <a href="http://www.apple.com/itunes/">iTunes 10</a>. As always the inherent simplicity of Apple services isn't lost here in a complex web of functionality. Ping is also available on the iPhone and iPod touch with iTunes 10 for the eternally mobile.
 

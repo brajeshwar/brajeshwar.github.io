@@ -1,7 +1,4 @@
----
-layout: post
-title: Nestoria - A property search engine, launched in India
----
+# Nestoria - A property search engine, launched in India
 
 A player that already has its presence in 7 other countries should naturally be thrilled to be unveiled in a country like India. Especially, when the country shows huge potential for growth and prosperity. <a href="http://www.nestoria.in/">Nestoria</a> is now in India, and they call themselves - Nestoria India in the sub-continent. After having launched their services in France, Australia and Brazil last year, the property search engine firm has set foot in India. This move must be a very exciting one for the team considering the fact that the population here is larger than any of the other countries they operate in and the fact that there are so many people who are on the lookout for new and furnished homes.
 

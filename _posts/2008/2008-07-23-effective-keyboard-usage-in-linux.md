@@ -1,7 +1,4 @@
----
-layout: post
-title: Effective keyboard usage in Linux
----
+# Effective keyboard usage in Linux
 
 The Linux pro user community often gives a stress on doing things via the command line interface, often known as CLI. It is not just a trend but a productivity hack for people who live on Linux, all day long. Getting things done using the CLI is much more convenient, once you get used to it.
 

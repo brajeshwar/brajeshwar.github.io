@@ -1,7 +1,4 @@
----
-layout: post
-title: Ubuntu is Free, Better & Worth a Try
----
+# Ubuntu is Free, Better & Worth a Try
 
 Well, let's face the fact that most of the populace on the web actually works on <a href="http://www.microsoft.com/windows/">Windows</a>. The rationale of their doing so in verity differs from individual to individual. Sometimes, it's the way how a kid is brought up at schools, and for others, it's the ease of working or may be the sheer ignorance of trying to explore and use something which can be termed as "better".
 

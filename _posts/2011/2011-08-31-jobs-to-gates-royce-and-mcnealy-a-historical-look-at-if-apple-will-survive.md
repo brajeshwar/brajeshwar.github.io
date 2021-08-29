@@ -1,7 +1,4 @@
----
-layout: post
-title: Jobs to Gates, Royce and McNealy - A Historical Look at if Apple Will Survive
----
+# Jobs to Gates, Royce and McNealy - A Historical Look at if Apple Will Survive
 
 <a href="http://www.apple.com/pr/library/2011/08/24Steve-Jobs-Resigns-as-CEO-of-Apple.html">Steve Jobs has left Apple</a>. I have expected to see stock prices crumble, Apple Geniuses to go rogue and iPhones to fall out of the sky; but despite the near-panic of nearly every Internet news station -- its really not that big a deal, we will be fine (unless you own large amounts of Apple stock, in which case it is time to panic).
 

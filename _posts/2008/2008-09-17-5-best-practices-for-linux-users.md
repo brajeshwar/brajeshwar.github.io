@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 best-practices of a successful Linux user
----
+# 5 best-practices of a successful Linux user
 
 Were you a born Linux user? I mean did you dirty your hands with Linux before you happened to stumble on any other Operating System? I doubt! I am no exception. Most of us have migrated to -- part time or full time -- a tux box. There would have been one or more reasons which would have tempted each one of us to try this operating system and some of us, never looked back. Few would have probably turned out to be Linux professionals, while others would still be struggling with what's good and what's perfect.
 

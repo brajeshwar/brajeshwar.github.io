@@ -1,7 +1,4 @@
----
-layout: post
-title: Technology, Internet Services, BPO, Call-Center Honeymoon in India about to turn sour?
----
+# Technology, Internet Services, BPO, Call-Center Honeymoon in India about to turn sour?
 
 You don't have to be a rocket surgeon to know that India is the place where many jobs are bangalored and thus India have been earning huge international investment in the past few years. However, it seem to have reached a stagnation point. Study revealed that the attrition rate have reached around 50%. The salary of the BPO, Call-Center workers have increased tremendously because there is a huge demand. One company is buying out employees from another and vice versa. The demand for skilled workforce in this sector is not being met by enough supply.
 

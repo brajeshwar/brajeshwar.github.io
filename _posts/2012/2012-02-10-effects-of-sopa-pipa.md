@@ -1,7 +1,4 @@
----
-layout: post
-title: Effects of SOPA & PIPA
----
+# Effects of SOPA & PIPA
 
 <a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">Stop Online Piracy Act</a> (SOPA) is a bill introduced in the United States. House Judiciary Committee Chair and Texas Republican Lamar S Smith, along with 12 co sponsors, introduced SOPA, on October 26th 2011. SOPA's been created to increase the ability of US law enforcement, to fight online trafficking in copyrighted intellectual property and counterfeit goods. The law intends to expand existing criminal laws, by imposing a maximum penalty of five years in prison for unauthorized streaming of copyright material.
 

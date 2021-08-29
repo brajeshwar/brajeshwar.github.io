@@ -1,7 +1,4 @@
----
-layout: post
-title: Useful Tools for your Ubuntu installation
----
+# Useful Tools for your Ubuntu installation
 
 With the advent of the latest release of probably the most preferred Linux distro, <a href="http://www.ubuntu.com/getubuntu/releasenotes/904overview">Ubuntu 9.04</a> (Jaunty Jackalope), life for a lot of has become simpler. I have been loving the changelog that Ubuntu team works on. With their six-monthly release schedule they come back with better UI, support for new technologies, newer kernel, etc. You may wish to check out the <a href="http://www.ubuntu.com/products/whatisubuntu/904features/">scintillating features</a> of the latest release.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Dude, version it with CVSDude
----
+# Dude, version it with CVSDude
 
 I am not trying to endorse their service but these guys at [CVSDude](http://www.cvsdude.org/) are cool. I have been saved twice (serious cases) through their service. I really love this SVN thingy that I got one of their unlimited users with 5 Gigs of disc space for our development and research team.
 

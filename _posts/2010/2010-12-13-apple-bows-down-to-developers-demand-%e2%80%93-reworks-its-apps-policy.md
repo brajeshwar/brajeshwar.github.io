@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple bows down to Developers' Demand – Reworks its 'Apps Policy'
----
+# Apple bows down to Developers' Demand – Reworks its 'Apps Policy'
 
 There has lately been enough pressure from three corners of the technology world on Apple, which has coerced it to change its policy control over the development of applications for its iPhones and iPads. At one corner of the ring is the developers' community which has been highly dissatisfied with Apple's strict policy on developing application software; at the other two corners are external forces, namely the <a href="http://www.ftc.gov/">Federal Trade Commission</a> conducting a US antitrust investigation on the technology firm and Competition rising from rival <a href="http://www.android.com/">Google's Android software</a> which plays a huge role in powering several mobile devices (Smartphones) other than iPhone.
 

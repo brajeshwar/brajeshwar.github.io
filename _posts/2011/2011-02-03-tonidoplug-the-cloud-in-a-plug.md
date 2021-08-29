@@ -1,7 +1,4 @@
----
-layout: post
-title: TonidoPlug - the cloud-in-a-plug
----
+# TonidoPlug - the cloud-in-a-plug
 
 As technology advances in the 21st century, gadgets and devices get smaller, but more and more effective. CodeLathe's <a href="http://www.tonidoplug.com/">TonidoPlug</a> is a fantastic example. TonidoPlug is a tiny server that helps you access all your applications that include files, photos, music, movies, etc. from any place wherein you can access a computer system through a web browser. It is low on power and absolutely low on cost with no hurdles attached and performs the task of a Network Attached Storage device.
 

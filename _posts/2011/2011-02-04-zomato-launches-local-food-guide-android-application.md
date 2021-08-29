@@ -1,7 +1,4 @@
----
-layout: post
-title: Zomato launches local Food Guide android application
----
+# Zomato launches local Food Guide android application
 
 <a href="http://www.zomato.com/">Zomato</a>, an Indian online Food Guides and restaurant directories has launched its mobile application for Android phones. It allows users to search for nearby restaurants based on the user's location. Available in the Android market for free, the application replicates all features of the website and lets the user look at the menus, contact details, reviews, photographs, location and discounts for restaurants on the phone itself. The application recorded over 200 downloads within the first couple of days after the launch.
 

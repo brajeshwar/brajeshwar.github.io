@@ -1,7 +1,4 @@
----
-layout: post
-title: Why are iFans shocked with iPhone 4S Release -- it is standard Apple operating procedure
----
+# Why are iFans shocked with iPhone 4S Release -- it is standard Apple operating procedure
 
 Millions of loyal iFans held their bated breath while waiting for the release of the much-anticipated iPhone 5, but unfortunately instead of breathing a sigh of relief their expelled air was used to form their favorite curse word as they gazed on the iPhone 4S. Son of a...
 

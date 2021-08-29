@@ -1,7 +1,4 @@
----
-layout: post
-title: Google acquires DoubleClick for $3.1 billion
----
+# Google acquires DoubleClick for $3.1 billion
 
 DoubleClick,a global leader in digital marketing, advertising technology and services is being acquired by Google for a whooping $3.1 Billion in cash. The all-cash buy-out is about twice the amount Google spent to buy <a href="http://www.youtube.com/">YouTube</a>. Well, it is now pretty clear who will dominate the online advertising market. With this acquisition, Google have easily sidelined <a href="http://www.yahoo.com/">Yahoo</a> and <a href="http://www.microsoft.com/">Microsoft</a>. Google says that the acquisition is a big win for the publishers, as well as for advertisers and Internet users. Later in a conference, Google promises that user privacy will be handled as top priority among all the different integration challenges.
 

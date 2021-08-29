@@ -1,7 +1,4 @@
----
-layout: post
-title: Carpal Tunnel Syndrome
----
+# Carpal Tunnel Syndrome
 
 The pain seems to come and go, sometimes it lingers through the night. Massaging the back of the palm and the fingers with pain-relieve ointments helps a bit but it is there. The fear of course is of the Carpal Tunnel Syndrome My fear was aggravated when I discovered that another of my friend was diagnosed with similar symptoms, and his doctor warned him of a very early stage of CTS.
 

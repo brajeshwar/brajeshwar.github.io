@@ -1,7 +1,4 @@
----
-layout: post
-title: CrowdFunding - All about it!
----
+# CrowdFunding - All about it!
 
 A new chapter has begun with the funding and raising up of startups. The much anticipated <a href="/2012/tech-startups-get-much-needed-funding-boost-with-jobs-act/">JOBS (Jumpstart Our Business Startups) Act</a> was signed by US President, Barack Obama. The new bill gives life to startups to raise money from multiple investors. 
 

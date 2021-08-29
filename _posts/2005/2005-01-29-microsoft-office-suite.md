@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft Office Suite
----
+# Microsoft Office Suite
 
 I always have a belief that, the first thing a computer (PC) user know is [Microsoft Office](http://office.microsoft.com/) and that it is a really easy one to catch up with, open-it and use-it. But, there are lots to the suite than just meets the eye. The software is not THAT easy to use, you have to get used to it, master its tit-bits and nourish your skill in making things work better, faster and intelligently. Today, I went out to the wilderness of the Internet to search for Tips, Tricks, Must-Knows about Powerpoint, Word.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Digging deep into 3D Smartphones - Do they really work?
----
+# Digging deep into 3D Smartphones - Do they really work?
 
 Most, or at-least <a href="http://www.businessinsider.com/3d-smartphones-2011-3">some of the best 3D smartphones</a> you can ditch your glasses and still watch the 3D effect on your mobile phone. These smartphones have a layer in front of the screen that allows visualization of Stereographic 3D images. The layer is comprised of <a href="http://en.wikipedia.org/wiki/Parallax_barrier">parallax barriers</a>, a series of tiny slits that helps each eye to view different sets of pixels.
 

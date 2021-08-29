@@ -1,7 +1,4 @@
----
-layout: post
-title: Can Mangoes thrash Androids?
----
+# Can Mangoes thrash Androids?
 
 Android-powered based mobile phones are dominating the world of smartphones. Smartphones built on Windows OS are trying their level best to beat this trend. The lead in this direction was taken by Taiwan based mobile phone manufacturing company - <a href="http://www.htc.com/">HTC</a>. HTC having many firsts to its credit has launched Windows based smartphones labeled HTC Titan and HTC Radar. These are launched in UK market loaded with Windows 7.5 OS. HTC had unveiled this line up in last August and made its way well ahead of global mobile phone manufacturing major, <a href="http://www.nokia.com/">Nokia</a>. We may expect similar range of phones from Nokia by the end of this year.
 

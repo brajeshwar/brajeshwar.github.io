@@ -1,7 +1,4 @@
----
-layout: post
-title: Lean Software Development; Make More Money
----
+# Lean Software Development; Make More Money
 
 [Make More Money](http://www.javalobby.org/av/javapolis/21/poppendieck-moremoney) is a very informative and interesting presentation from [Mary Poppendieck](http://www.poppendieck.com/). Download the slides from [JavaPolis Media](http://www.javapolis.com/confluence/display/JP04Pres/JavaPolis+Media).
 

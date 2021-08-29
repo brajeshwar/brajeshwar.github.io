@@ -1,7 +1,4 @@
----
-layout: post
-title: New Updates from "Google+ for Android"
----
+# New Updates from "Google+ for Android"
 
 Mobile phones that run on <a href="http://developer.android.com/guide/basics/what-is-android.html">Android OS</a> have the advantage to access innumerable number of Android Applications. Ever since Google has taken control on Android operating system, rapid development has taken place. Smart Android applications have not only enhanced functionalities of mobile phones but also changed the lifestyles of millions of people across the globe. Google has been improving social application, Google+ for Android quite often to ensure that there will be steady and stable growth. Google has delivered updates for <a href="https://market.android.com/details?id=com.google.android.apps.plus">Google+ for Android</a> application. 
 

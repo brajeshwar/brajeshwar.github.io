@@ -1,8 +1,5 @@
----
-layout: post
-title: TestFreaks
+# TestFreaks
 permalink: /2007/testfreaks-a-way-to-find-products-and-prices-through-reviews-forums-blogs/
----
 
 I was looking for reviews, price list, comparisons while I was planning to buy my first DSLR. I settled for the Nikon D40x as it came under my budget and I think I made a good choice for an entry level, hobby photography DSLR.
 

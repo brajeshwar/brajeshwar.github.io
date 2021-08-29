@@ -1,7 +1,4 @@
----
-layout: post
-title: Recession and FOSS
----
+# Recession and FOSS
 
 Over the last several months, majority of businesses have been hit brutally by the recession wave. However, it has served as a blessing in disguise for Linux and the FOSS world. A lot of large organizations have found Linux as a pillar to operate upon and migrate to, in today's cost cutting scenario. This change is pretty much functional in the BPO sector as well. There have been numerous news on them shifting to OpenOffice and Ubuntu, leaving behind their MS counterparts. Free and Open Source movement has traditionally proved to be beneficial for innovation or research related work.
 

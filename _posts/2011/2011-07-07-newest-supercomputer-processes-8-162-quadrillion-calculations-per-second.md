@@ -1,7 +1,4 @@
----
-layout: post
-title: Newest Supercomputer Processes 8.162 quadrillion Calculations Per Second
----
+# Newest Supercomputer Processes 8.162 quadrillion Calculations Per Second
 
 As if rivalries between Japan and China weren't strong enough with the Olympics and the nuclear arms race -- now they are in a computer arms race -- and Japan just stole the title of the world's fastest supercomputer.
 

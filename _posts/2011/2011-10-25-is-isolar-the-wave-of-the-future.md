@@ -1,7 +1,4 @@
----
-layout: post
-title: Is iSolar the Wave of the Future?
----
+# Is iSolar the Wave of the Future?
 
 <a href="http://www.apple.com/">Apple</a> sure has given us a lot of funky and awesome tech. And the surprises certainly ain't over, even after the untimely demise of <a href="http://www.apple.com/stevejobs/">Steve Jobs</a>, Apple still has trick up its iSleeve. The future innovation from the innovation king is coming in the form of uber-chic, solar-powered Apple products (including laptops, tablets and smartphones). New patents filed with the US Patent and Trademark office clearly state plans to use an "apparatus and methods for harnessing external light to illuminate a display screen of an electronic device."
 

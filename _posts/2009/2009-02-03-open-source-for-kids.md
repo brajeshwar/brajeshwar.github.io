@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source for kids?
----
+# Open Source for kids?
 
 Ever since school days, I was taught that a good start in programming is a way to become a good software developer. Today, the college students desire to learn programming languages which are easy to implement and has a good portability across various platforms. Something which Java started off. The recent past has witnessed the development of open source programming languages, software, applications and other utilities that are geared towards the younger minds. What can fascinate these fresh minds include games, animations and the new environment of programming languages. When the minds are young and malleable, they can really pick up things fast. An open source environment teaches newbies how to interact with the new world of open and collaborative development.
 

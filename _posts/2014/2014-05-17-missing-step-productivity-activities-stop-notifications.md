@@ -1,7 +1,4 @@
----
-layout: post
-title: The missing step to all Productivity Advice - Disable Notifications
----
+# The missing step to all Productivity Advice - Disable Notifications
 
 We all want to boost our productivity and avoid procrastination. The problem is that we live in a world where it's a norm to check our phones as soon as we wake up, read and send email at the breakfast table, catch up on Twitter and Facebook in the Bathroom. It is no longer surprising to hear terms like "screen-off days", "no phones at the dinner table", "no devices in the bedroom", "screen-time for kids", "phone jammers in the classroom", etc.
 

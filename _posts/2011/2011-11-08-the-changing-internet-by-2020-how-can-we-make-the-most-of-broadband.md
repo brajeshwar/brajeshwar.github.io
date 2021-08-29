@@ -1,7 +1,4 @@
----
-layout: post
-title: The changing internet by 2020 - how can we make the most of broadband?
----
+# The changing internet by 2020 - how can we make the most of broadband?
 
 With technology changing by the day it seems likely that come the year 2020 we'll all be making much more use of the internet in our daily lives. Even today, things have changed immeasurably compared to just a few short years ago when people had to endure the snails-pace Internet delivery of dial-up connections.
 

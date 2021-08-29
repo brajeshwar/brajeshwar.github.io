@@ -1,7 +1,4 @@
----
-layout: post
-title: Audio for Flash - Useful Tutorials
----
+# Audio for Flash - Useful Tutorials
 
 It seem to have been there for quite sometime, but as I was looking around for some tips and tricks on audio for flash, I tumbled upon this link at killersound.com about tutorials/tips on audio for flash. It will be a good bookmark for anyone doing Flash development. Out of the many articles, I particularly like the "layering audio in flash", this particular technique was there in some books I read long back during the hay days of Flash 5.0 but then reading it again have refreshed my memory a bit more on understanding the whole scenario. Well, I used to remember that as "Kicker Layer" technique for audio. A similar situation was raised by some developers during a conference in Juhu, Mumbai, India and I am glad that I was able to explain and refer to this technique as a tip for them.
 

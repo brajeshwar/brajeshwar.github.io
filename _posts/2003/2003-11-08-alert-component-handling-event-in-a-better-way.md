@@ -1,7 +1,4 @@
----
-layout: post
-title: Alert Component, handling event in a better way
----
+# Alert Component, handling event in a better way
 
 Something around the mid September, there was a post on using [Alert Component](/2003/alert-component-in-flash-mx-2004/) for Flash MX 2004 Pro.
 

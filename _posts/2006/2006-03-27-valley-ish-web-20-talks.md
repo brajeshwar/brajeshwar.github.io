@@ -1,7 +1,4 @@
----
-layout: post
-title: Valley-ish, Web 2.0 talks?
----
+# Valley-ish, Web 2.0 talks?
 
 It was a refreshing talk, challenging discussions - let's change the society, let us revolutionize technology further, make things easy to use for the common folks. No, we were not talking about ActionScript, Java, *nix syntax but technology, the way technology is used in our life, how people react to technology. We discussed about Web 2.0, new ideas, how to execute the ideas.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: ContextMenu, is that for 8Ball?
----
+# ContextMenu, is that for 8Ball?
 
 The introduction of `@ContextMenu@` and `@ContextMenuItem@` in Flash player 7 was a good move from Macromedia. But, it is still in a very nascent stage and is not really that usable. Every since its early release of the Player, I had always felt that it can be put to good use but never got a project right enough to implement the same. When finally there was a real need for a real *Right Click Menu*, I am sorta stump as a proper implementation was not that possible!
 

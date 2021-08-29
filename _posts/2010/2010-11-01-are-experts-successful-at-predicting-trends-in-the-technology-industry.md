@@ -1,7 +1,4 @@
----
-layout: post
-title: Are "experts" successful at predicting trends in the technology industry?
----
+# Are "experts" successful at predicting trends in the technology industry?
 
 If you are a smart businessperson, you know to do your research. You probably use <a href="http://www.reddit.com/">Reddit</a>, <a href="http://www.google.com/alerts">Google Alerts</a>, Trade magazines and reputable blogs to follow trends in the industry and technology environments to know how to make your business more successful. Experts have made numerous predictions that seem critical to understanding the changing environment of your startup.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: One Step Closer to the Matrix with IBM's New Brain-Mimicking Computer Chip SyNAPSE
----
+# One Step Closer to the Matrix with IBM's New Brain-Mimicking Computer Chip SyNAPSE
 
 IBM took Morpheus' little blue pill and have now discovered exactly how deep the rabbit hole goes with their SyNAPSE computer chip. With this new chip IBM has brought us closer to artificial intelligence than we have ever been.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Where's your Mobile Data Going?
----
+# Where's your Mobile Data Going?
 
 In today's fast moving world one needs to be connected all the time, the most common tool is the mobile phone. Some people use a mobile phone with a monthly limit whereas some are not even aware of it. 
 

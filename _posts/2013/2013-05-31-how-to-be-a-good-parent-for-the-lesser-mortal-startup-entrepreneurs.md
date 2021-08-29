@@ -1,7 +1,4 @@
----
-layout: post
-title: How to be a Good Parent, for the Lesser Mortal Startup Entrepreneurs
----
+# How to be a Good Parent, for the Lesser Mortal Startup Entrepreneurs
 
 Yes, for those Startup Entrepreneurs, who cannot fly around the world with their kids, who cannot hire nannies at lavish hotels, and for those who do not have superhero, super-dad, super-mom tricks up their sleeves.
 

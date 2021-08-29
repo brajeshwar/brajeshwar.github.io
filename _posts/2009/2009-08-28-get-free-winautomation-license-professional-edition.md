@@ -1,7 +1,4 @@
----
-layout: post
-title: Get free WinAutomation License Professional Edition
----
+# Get free WinAutomation License Professional Edition
 
 I don't use Windows, so I had totally brushed aside the offer of 4 free Professional licenses of WinAutomation. However, I felt it should be useful to Windows users who visit my site. So, here you go -- stand a chance to win a WinAutomation license Professional Edition (I've got 4 licenses to give away).
 

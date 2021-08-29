@@ -1,7 +1,4 @@
----
-layout: post
-title: Developer Summit 2008, India
----
+# Developer Summit 2008, India
 
 The Indian <a href="http://www.developersummit.com/">Developer Summit 2008</a> Features Co-located Conferences on Bleeding-edge .NET, Rich Web, Daring Java. The Call for Proposals are now Open and Nominations are invited for the Awards.
 

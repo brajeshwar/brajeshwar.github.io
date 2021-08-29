@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar v6.0
----
+# Brajeshwar v6.0
 
 I have been planning a revamp for almost a year and when I finally did one, it looks like it needed a revamp tomorrow. But then, let me put that tomorrow for another year! I just saw [Joshuaink](http://joshuaink.com/blog/), that kept me pondering if that is a website or a nicely well-kept, mowed garden where beautiful flowers grow. The site is so nice, clean and wierdly beautiful that made my site look like a rectangular match-box with steel frames. Nothing more can I do than just be jealous and admire that site design.
 

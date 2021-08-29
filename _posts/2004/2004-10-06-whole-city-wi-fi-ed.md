@@ -1,7 +1,4 @@
----
-layout: post
-title: Whole city WI-FI-ed
----
+# Whole city WI-FI-ed
 
 I have been using this for the internet connection when I am out of my home. It is a bit cumbersome and there is power limitation as it is tightly coupled with the phone connection from Reliance, and this is an addition to my already existing Orange connection. The phone's battery also last for only about half an hour when connected to the internet. But there is good news from Reliance and Mumbai is the best place to start off the new innovation being the home of the Ambanis.
 

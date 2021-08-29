@@ -1,7 +1,4 @@
----
-layout: post
-title: Scenes in Flash
----
+# Scenes in Flash
 
 All along the way while answering many questions, I came across quite a few post concerning scenes and the confusion circling around the same. Well, first of all, this topic is not for the advanced Flash users. I will put in my small effort to clear a bit about scenes in Macromedia Flash MX.
 

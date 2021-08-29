@@ -1,7 +1,4 @@
----
-layout: post
-title: Twitter - short, sweet and sleek - Let's get started
----
+# Twitter - short, sweet and sleek - Let's get started
 
 Twitter has suddenly attained the status of a notoriously popular Application. After being fueled by <a href="http://sxsw.com/">SXSW</a>, everybody else is talking about Twitter including those <a href="http://manwithnoblog.com/2007/03/10/twitter-explosion/">who don't even have a blog</a>. Talks in the Blogosphere have spit out stats that Twitter got 1 million messages sent recently. Finally after about a year of its launch, Twitter has won. 
 

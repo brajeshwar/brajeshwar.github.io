@@ -1,7 +1,4 @@
----
-layout: post
-title: TiE Entrepreneurial Summit - 2007
----
+# TiE Entrepreneurial Summit - 2007
 
 TiE Entrepreneurial Summit - 2007  will cover various sessions on the Entrepreneurial Ecosystem, the Investment Ecosystem, VC/PE trends in various sectors such as technology, consumer businesses, media, entertainment, communications etc.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Web Browser Battle Royale turns Dirty
----
+# Web Browser Battle Royale turns Dirty
 
 The all-out web browser brawl has competitors throwing dirty punches in a below-the-belt free-for-all fight for market share.
 

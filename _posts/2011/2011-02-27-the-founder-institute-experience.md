@@ -1,7 +1,4 @@
----
-layout: post
-title: The Founder Institute Experience
----
+# The Founder Institute Experience
 
 Those 101 days at the Winter 2010 Bay Area semester, <a href="http://fi.co/">Founder Institute</a> was one hell of an action-packed, fast-paced learning experience. Some of the who's who of the Startup world, who mentored us delivered some of the best sessions, which taught us a lot more than we anticipated. Thanks a million to <a href="http://www.linkedin.com/in/adeoressi/">Adeo Ressi</a>.
 

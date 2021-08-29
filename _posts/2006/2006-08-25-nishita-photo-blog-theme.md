@@ -1,7 +1,4 @@
----
-layout: post
-title: Nishita - another Free Photo Blog Wordpress Theme
----
+# Nishita - another Free Photo Blog Wordpress Theme
 
 I have a bunch of [Photos on Flickr](http://www.flickr.com/photos/brajeshwar/). Even though I was beta testing Flickr ever since it came up and had a pro account gifted by them, I really never used it for my photos until now. I moved to Flickr from my own Gallery hosted Photo Section (I lost all the photo comments eventually), somewhere late February 2006. Since then online Photo Management and storage have become a pleasant experience for me. A couple of days back, my photo collection hit 50,000 views.
 

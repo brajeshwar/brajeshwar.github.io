@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Reasons the Android Tablet is Better than the iPad
----
+# 5 Reasons the Android Tablet is Better than the iPad
 
 The Android tablet may prove to be better than the iPad in many aspects. Here are the top 5 reasons why Android Tablets will be challenging the iPad stronghold as the consumers' preferred tablet. It's important to keep in mind that some features that don't matter at all to one user, might mean everything to another user. In addition,  since the Android Tablet is newer than the iPad, it was able to function beyond design flaws that existed earlier. All of these devices are bigger than a cellular phone but not as bulky as a notebook computer.
 

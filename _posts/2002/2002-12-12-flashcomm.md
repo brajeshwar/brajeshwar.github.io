@@ -1,7 +1,4 @@
----
-layout: post
-title: Flashcomm
----
+# Flashcomm
 
 Macromedia Flash Communication Server MX
 

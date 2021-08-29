@@ -1,7 +1,4 @@
----
-layout: post
-title: Cloud computing and broadband for SMEs
----
+# Cloud computing and broadband for SMEs
 
 Amongst a lot of goodies that the fast internet speeds have brought include the ability to work on the clouds. Yes, we're talking about broadband and the post-broadband world and it's hand in bringing up cloud computing. Off late, the ability to cloud-source an organization's data instead of buying self hosted applications has seen a significant rise amongst SMEs. 
 

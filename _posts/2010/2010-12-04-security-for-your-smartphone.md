@@ -1,7 +1,4 @@
----
-layout: post
-title: Look Out! Security for your Smartphone
----
+# Look Out! Security for your Smartphone
 
 The smartphone has today surpassed the PC as the new and true personal computer. This has brought of course concerns over privacy and security. Lookout is an application that protects your phone from mobile threats with award-winning security that's easy to use and available on multiple platforms.
 

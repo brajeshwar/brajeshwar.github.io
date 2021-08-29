@@ -1,7 +1,4 @@
----
-layout: post
-title: Hackers find new Cybercrime Currency
----
+# Hackers find new Cybercrime Currency
 
 If 90s hacker movies taught us anything it's that hackers are benevolent human beings looking not to corporate espionage but solely for freedom of information. But -- the 90s are over.
 

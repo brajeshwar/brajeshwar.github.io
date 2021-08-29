@@ -1,6 +1,4 @@
----
-layout: post
-title: A Simple and Easy way to overcome your Twitter Addiction
+# A Simple and Easy way to overcome your Twitter Addiction
 date: 2012-06-22 09:57:01.000000000 +05:30
 type: post
 parent_id: '0'
@@ -27,7 +25,6 @@ author:
   first_name: Brajeshwar
   last_name: Oinam
 permalink: "/2012/simple-easy-way-to-overcome-twitter-addiction/"
----
 <p>Like most of you, I too am hooked to twitter - it is such a simple but awesome medium where you can talk to, connect with like-minded people and listen to those who you appreciate. I signed up for Twitter on Jan 29, 2007 which makes me amongst the first Million users (725,553rd) on Twitter.</p>
 <p>Well, like many of you, I too have realized that it does take a toll on my time and eventually my productivity. In my ever-happening experiment for self-disciplinary self-imposed habits, I've successfully conquered my craving and yearning to be on Twitter all the time just like <a href="/2010/taking-back-your-life-and-enjoying-it/">I did with emails</a> long back. Of course, I've improvised a lot with email management since - keeping is much leaner, simpler and minimal yet effective and acting on them in a timely manner.</p>
 

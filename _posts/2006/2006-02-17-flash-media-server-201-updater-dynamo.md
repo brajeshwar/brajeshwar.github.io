@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Media Server 2.01 Updater, Dynamo
----
+# Flash Media Server 2.01 Updater, Dynamo
 
 Adobe had promised about easing the licensing scheme of Flash Media Server with [Dynamo](http://www.flashcomguru.com/index.cfm/2006/1/25/dynamo/), which brings Flash Media Server's license to more or less like that we had with FlashCom Server, with a bit more flexible option here.
 

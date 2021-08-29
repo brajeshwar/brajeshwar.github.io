@@ -1,7 +1,4 @@
----
-layout: post
-title: Rosie Jetson - Coming to a home near YOU?
----
+# Rosie Jetson - Coming to a home near YOU?
 
 If you're anything like me when you were a kid you dreamed that in the not-so-distant future you would be driving around in an anti-gravity car, living in an apartment hovering in a space-age bubble in the sky. Oh and with [Rosie Jetson](http://en.wikipedia.org/wiki/List_of_The_Jetsons_characters#Rosey) would be your back-talking robot maid. And if you're like me then you are bitterly disappointed with the present epoch's lack of hover jets. Well, to soothe that bitter sting of disappointment you can comfort yourself with the [new robotic maid](http://www.news.cornell.edu/stories/May12/PlacingNewObjects.html) that will hopefully come to market soon.
 

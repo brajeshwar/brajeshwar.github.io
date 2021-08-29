@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Design Achievement Awards 2009
----
+# Adobe Design Achievement Awards 2009
 
 Adobe has issued the Adobe Design Achievement Awards 2009 call for entries. Now in partnership with the International Council of Graphic Design Associations (Icograda), the awards ceremony will be held during the Icograda World Design Congress in Beijing, China in October 2009. The Congress will bring together 2,500 delegates from around the globe at the China National Convention Center, located in the heart of the Beijing Olympic Green.
 

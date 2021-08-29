@@ -1,7 +1,4 @@
----
-layout: post
-title: Thinking about career in Linux? Part 1
----
+# Thinking about career in Linux? Part 1
 
 The other night, a good question popped out of my head -- How many of the geek teenagers wish to work on closed source technology today? It's been pretty ubiquitous for the computer freaks to turn to Linux/OSS, for that matter. This may not be a good sign for the closed source community and people who love closed source technologies. But that is how the perception is getting transformed amongst the engineering graduates.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Invention Network justifies Oracle's dispute with Google
----
+# Open Invention Network justifies Oracle's dispute with Google
 
 It was about two months ago when the news of Google being <a href="http://news.cnet.com/8301-30684_3-20013546-265.html">sued by Oracle</a> broke out. The row between the two technology stalwarts was with regard to Google's violation of copyrights and patents related to Java; which was <a href="http://www.zdnet.com/blog/btl/oracle-buys-sun-now-owns-java-becomes-a-hardware-player/16598">acquired</a> by Oracle along with Sun Microsystems during the initial months of this year. The terse claimed that Google "knowingly, directly and repeatedly infringed Oracle's Java-related intellectual property." 
 

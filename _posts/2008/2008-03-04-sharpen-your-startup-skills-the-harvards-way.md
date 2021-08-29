@@ -1,7 +1,4 @@
----
-layout: post
-title: Sharpen your Startup Skills, the Harvard's Way
----
+# Sharpen your Startup Skills, the Harvard's Way
 
 Few days back, I read about Harvard Business School's (Working Knowledge) articles that address a number of nagging founder-issues -- ownership and change of control, resource management and getting to profitability, common legal sand traps -- via FoundRead's article on <a href="http://foundread.com/2008/02/25/harvards-kit-for-sharpening-your-startup-skills/">Sharpening Your Startup Skills</a>.
 

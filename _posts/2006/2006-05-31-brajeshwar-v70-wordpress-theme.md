@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar v7.0 WordPress Theme
----
+# Brajeshwar v7.0 WordPress Theme
 
 [Christian Nelson](http://www.nelson.to/) currently runs the KISS WordPress Theme and he prompted me to reproduce [Brajeshwar v7.0](http://www.cssreboot.com/reboot/show/1318) for [WordPress](http://wordpress.org/). He gave me a good reason to do it, he dropped $500 into my paypal account so that I can have it developed for him and also make it free for any interested blogger to use with their WordPress setup.
 

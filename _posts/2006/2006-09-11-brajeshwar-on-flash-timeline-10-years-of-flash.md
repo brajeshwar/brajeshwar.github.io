@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar on Flash Timeline - 10 Years of Flash
----
+# Brajeshwar on Flash Timeline - 10 Years of Flash
 
 <figure>
   <a href="http://www.flickr.com/photos/brajeshwar/240589819/"><img src="/static/2006/brajeshwar-flash-timeline.jpg" alt="Brajeshwar on Flash Timeline - 10 years of Flash." loading="lazy"></a>

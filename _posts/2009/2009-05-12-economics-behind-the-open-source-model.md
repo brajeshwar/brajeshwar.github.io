@@ -1,7 +1,4 @@
----
-layout: post
-title: Economics behind the Open Source Model
----
+# Economics behind the Open Source Model
 
 Economics is often linked with a rationale of understanding the flow of money. This can be considered analogous to amateurs linking open source paradigm to free software! Both economics and open source software have a wider horizon. 
 

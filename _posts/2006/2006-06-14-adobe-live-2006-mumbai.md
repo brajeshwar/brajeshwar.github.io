@@ -1,6 +1,3 @@
----
-layout: post
-title: Adobe Live 2006 - Mumbai
----
+# Adobe Live 2006 - Mumbai
 
 Adobe is hosting its [Adobe Live 2006 - Mumbai](http://events.adobe.co.uk/events/cgi/event.cgi?country=in&eventid=3467) Chapter on 11th and 12th July, 2006 at Taj Lands End, Bandstand, Bandra (W)  Mumbai. The event is for those creative professional in Web Design & Development, Film, Broadcast and Video Production, Photography & Digital Imaging and Design & Print Publishing.

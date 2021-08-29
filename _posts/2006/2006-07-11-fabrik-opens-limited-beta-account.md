@@ -1,7 +1,4 @@
----
-layout: post
-title: Fabrik opens limited beta account
----
+# Fabrik opens limited beta account
 
 [Techcrunch](http://www.techcrunch.com/2006/07/10/fabrik-media-storage-opens-limited-beta-accounts-today/) reported of the limited beta account opening at [Fabrik](http://www.myfabrik.com/).
 

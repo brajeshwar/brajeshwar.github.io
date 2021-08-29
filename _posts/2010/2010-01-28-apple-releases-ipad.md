@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple releases iPad
----
+# Apple releases iPad
 
 The wait is over. Steve did his job! After the much hyped event, we have a new product from <a href="http://www.apple.com/">Apple</a>. It's an <a href="http://www.apple.com/ipad/">iPad</a>. Yesterday, we wrote about <a href="/2010/what-to-expect-from-apple-today/">what to expect off the event</a>. Steve Jobs made many souls happy!
 

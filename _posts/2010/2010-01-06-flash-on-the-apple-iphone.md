@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash on the Apple iPhone
----
+# Flash on the Apple iPhone
 
 Yesterday, while the world saw the launch of <a href="http://www.google.com/phone/">Nexus One</a>, the perception that Apple's <a href="http://www.apple.com/iphone/">iPhone</a> is one of the most sought for and a part of the Wishlist for a lot of gadget lovers, did not change for many. 
 

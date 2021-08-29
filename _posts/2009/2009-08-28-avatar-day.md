@@ -1,7 +1,4 @@
----
-layout: post
-title: Avatar Day
----
+# Avatar Day
 
 It was an awesome experience. India had its Avatar Day today, where few movie theaters preview 20 minutes of [Avatar](https://en.wikipedia.org/wiki/Avatar_(2009_film)) movie in 3D including the theatrical trailer. Avatar is expected to release worldwide on 18th December, 2009.
 

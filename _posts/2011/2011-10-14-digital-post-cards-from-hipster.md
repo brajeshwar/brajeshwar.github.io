@@ -1,7 +1,4 @@
----
-layout: post
-title: Digital Post-Cards from Hipster
----
+# Digital Post-Cards from Hipster
 
 <a href="http://www.hipster.com/">Hipster</a> is the newest in line of popular brands that have developed new ideas to improve upon the social media mobile photo sharing in the local market scene. Hipster has developed an iPhone app for this purpose. The difference with this app is that it is geared towards sending in digital postcards. 
 

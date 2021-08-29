@@ -1,7 +1,4 @@
----
-layout: post
-title: Crystal gazing with Flash
----
+# Crystal gazing with Flash
 
 Nice use of Flash Video, [Ask Crystal](http://www.ask-crystal.com/); ask something and get it answered. You can repeat the same question and still get different answers. The application is intelligently executed with load queue management of the swf videos.
 

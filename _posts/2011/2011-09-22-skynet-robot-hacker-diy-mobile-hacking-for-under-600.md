@@ -1,7 +1,4 @@
----
-layout: post
-title: SkyNET Robot Hacker - DIY Mobile Hacking for under $600
----
+# SkyNET Robot Hacker - DIY Mobile Hacking for under $600
 
 It was only a matter of time before bored DIY geeks began combining fun toys with dangerous snooping technology; which is exactly what someone did when they combined a DIY remote-control toy helicopter with wireless-network-hacking computer. The end result is the ominous sounding <a href="https://db.usenix.org/events/woot11/tech/final_files/Reed.pdf">SkyNET</a> bot, a menacing hacker drone with an even more dubious-sounding name. 
 

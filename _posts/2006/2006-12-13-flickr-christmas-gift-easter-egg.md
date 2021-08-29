@@ -1,7 +1,4 @@
----
-layout: post
-title: Flickr Christmas Gift, Easter Egg
----
+# Flickr Christmas Gift, Easter Egg
 
 Saw this off [Boing Boing](http://www.boingboing.net/2006/12/12/flickrs_excellent_xm.html). If you post a Note on your Flickr Photo, it will show you the corresponding object - hat, beard. Find the Easter Egg; type the following words in the Note (without the quotes)
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Have companies started moving towards Linux?
----
+# Have companies started moving towards Linux?
 
 As the organizations are hit badly by recession, they are looking towards their goal of high performance and delivery; while cutting down on costs. To secure a stable stand in a highly competitive environment they are required to enhance their profitability by increasing productivity. Various companies have successfully made a move to replace their operations from Windows to Linux. Linux plays a promising role of delivering higher performance, better security, freedom from being locked into a single vendor and ultimately lowering the costs. If I consider on the various benefits offered by Linux over its competitors, you will be thrilled to know how fast Linux has taken itself on rolls and has been playing an ever-increasing role to meet the business challenges. The Linux users will know the literal meaning of being blessed with the flexibility and diversity in running of Linux.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: 10 Myths of Free & Open Source Software
----
+# 10 Myths of Free & Open Source Software
 
 It does not require immense general knowledge to know that all those things that have been successful irrespective of their fields have had lots of myths attached to them. FOSS (Free and Open Source Software) being one of them and it is the responsibility of people like you and me to make others know that these logics are just plain and jane myths and nothing more than that. I feel honored to enlist few of the top myths we have in the society regarding FOSS:
 

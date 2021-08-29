@@ -1,7 +1,4 @@
----
-layout: post
-title: 11 Free Softwares from Microsoft!
----
+# 11 Free Softwares from Microsoft!
 
 <a href="http://www.microsoft.com/">Microsoft</a> has been known for the proprietary softwares and need no introduction! There has always been a conflict of views across communities. While some claim that Microsoft provides value for money, <a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">FOSS</a> activists have often denied it. Suites and programs like <a href="http://www.openoffice.org/">Open Office</a> and <a href="http://www.gimp.org/">GIMP</a> have often been compared to <a href="http://office.microsoft.com/">MS Office</a> and <a href="http://www.adobe.com/products/photoshop/compare/">Adobe Photoshop</a>, on various grounds. One of the factors being the price.
 

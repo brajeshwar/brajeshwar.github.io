@@ -1,7 +1,4 @@
----
-layout: post
-title: SCORM, the Sharable Courseware Object Reference Model
----
+# SCORM, the Sharable Courseware Object Reference Model
 
 E-learning, an area where I have never ventured so far, seem to share a sizeable chunk of the usage of Flash these days. There are many Flash developers and designers alike, even dedicated companies, who are solely into this business and are deeply into it; they do it day in and day out. And I should accept their statistics that this area of the business also contributes a good market in Flash Application Development. The most widely accepted standard in this CBT or the Computer Based Training for educational and instructional medium is the SCORM, short for Sharable Courseware Object Reference Model.
 

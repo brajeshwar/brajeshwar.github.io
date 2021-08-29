@@ -1,7 +1,4 @@
----
-layout: post
-title: Olacabs, a bad User Experience
----
+# Olacabs, a bad User Experience
 
 ![Ola)](/static/2013/ola-cabs.jpg)
 

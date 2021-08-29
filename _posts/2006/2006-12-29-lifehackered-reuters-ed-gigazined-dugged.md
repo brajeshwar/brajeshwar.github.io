@@ -1,7 +1,4 @@
----
-layout: post
-title: LifeHackered, Reuters-ed, Gigazined, Dugged
----
+# LifeHackered, Reuters-ed, Gigazined, Dugged
 
 Alright, I had stopped looking at referrers that goes to the [Microsoft Windows Vista Wallpapers](/2006/microsoft-windows-vista-wallpapers/) but today I saw something strange at the analytics' `Unique Referrer`.
 

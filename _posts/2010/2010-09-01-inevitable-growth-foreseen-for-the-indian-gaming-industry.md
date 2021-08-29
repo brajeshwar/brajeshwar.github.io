@@ -1,7 +1,4 @@
----
-layout: post
-title: Inevitable Growth foreseen for the Indian Gaming Industry
----
+# Inevitable Growth foreseen for the Indian Gaming Industry
 
 There are numerous reports doing rounds predicting tremendous growth of the <a href="http://www.indiangaming.com/industry/">Indian Gaming Industry</a>. The forecasts are out and the claim is that the industry would grow at a Compounded Annual Growth Rate (CAGR) of 32% by the year 2014 recording an amount of Rs. 3100 crore. I might as well bet all my money on this forecast, since most current facts and details entice me to do so.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Shoot a terminal and install a ball
----
+# Shoot a terminal and install a ball
 
 ![Music on Tux)](/static/2008/linux-music.jpg)
 

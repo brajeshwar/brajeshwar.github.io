@@ -1,7 +1,4 @@
----
-layout: post
-title: I'm Getting Arrested - App perfect for Occupy Wallstreeters or pill-popping, drunk-driving, shoplifting celebrities
----
+# I'm Getting Arrested - App perfect for Occupy Wallstreeters or pill-popping, drunk-driving, shoplifting celebrities
 
 Getting arrested? There's <a href="https://market.android.com/details?id=us.quadrant2.arrested">an app</a> for that. Yes, it is official, there is an app for everything now. Inspired by the arrests of peaceful protesters in the <a href="http://occupywallst.org/">Occupy Wall street</a> movement the "<a href="https://market.android.com/details?id=us.quadrant2.arrested">I'm Getting Arrested</a>" app was created to let loved ones, lawyers, or the media aware that you are currently getting arrested. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Movable Type Style Generator
----
+# Movable Type Style Generator
 
 Arvind Satyanarayan have a nifty tool, the [Movable Type Style Generator](http://styles.movalog.com/generator/). The amazing part to me was more of the intelligently cool usage of Javascript.
 

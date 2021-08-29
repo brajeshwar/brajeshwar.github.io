@@ -1,7 +1,4 @@
----
-layout: post
-title: Is advertisement a viable revenue for your blog?
----
+# Is advertisement a viable revenue for your blog?
 
 You might think that when you invest in your blog, it would do good if it gave you something in return. We all do. But what do you do when the advertisers make more than your blog? You devise a game-plan!
 

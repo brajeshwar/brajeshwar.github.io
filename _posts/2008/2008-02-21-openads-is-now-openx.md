@@ -1,7 +1,4 @@
----
-layout: post
-title: Openads rebrands as OpenX; Jon Miller joins board as Chairman
----
+# Openads rebrands as OpenX; Jon Miller joins board as Chairman
 
 Open Source Ad-Server company Openads has been in the news recently for many good things -- it got a <a href="http://blog.openx.org/01/openads-announces-155m-funding-and-a-free-hosted-ad-server/">$15.5 million Series B fund</a>. Earlier, <a href="http://redeye.firstround.com/2007/06/in_and_out.html">it got a $5 million in Series A capital fund</a>, led by Index Ventures, with participation from  First Round Capital, Mangrove Capital Partners, and O'Reilly AlphaTech Ventures.
 

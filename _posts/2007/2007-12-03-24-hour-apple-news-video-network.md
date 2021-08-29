@@ -1,7 +1,4 @@
----
-layout: post
-title: 24-hour Apple news video network
----
+# 24-hour Apple news video network
 
 The <a href="http://www.thedigitallifestyle.tv/">Digital Lifestyle</a> launched a new 24-hour online network dedicated to Apple followers. The site mixes original programs with popular Apple/tech-related podcasts and YouTube material, as well as daily news updates and live coverage of breaking tech news events.
 

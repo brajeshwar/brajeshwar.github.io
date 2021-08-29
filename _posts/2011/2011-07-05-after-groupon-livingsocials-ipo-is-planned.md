@@ -1,7 +1,4 @@
----
-layout: post
-title: After Groupon, LivingSocial's IPO is Planned
----
+# After Groupon, LivingSocial's IPO is Planned
 
 An American based e-commerce company - <a href="http://www.livingsocial.com/">LivingSocial</a>, has grown swiftly in the past 4 years. Started in 2007 as a deal of the day company with just 4 employees, it gained reputation and has reached greater heights. Initially it had been doing services like `PickYourFive` & `BuyYourFriendADrink` daily deals which were launched in 2009, and these services became the top grossing venture of LivingSocial. Since then, there was no turning back for the company.
 

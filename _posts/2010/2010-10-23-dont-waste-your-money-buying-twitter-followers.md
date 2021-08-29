@@ -1,7 +1,4 @@
----
-layout: post
-title: Don't waste your money buying Twitter followers
----
+# Don't waste your money buying Twitter followers
 
 Every Internet business has a Twitter account. Every Internet entrepreneur wants to create more followers. Followers spread their message and make their business more successful.
 

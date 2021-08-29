@@ -1,7 +1,4 @@
----
-layout: post
-title: ContextMenu; selective menu items
----
+# ContextMenu; selective menu items
 
 With Flash MX 2004, it is now known that you can play around with the context menu that you get when you right click (win) and Control click (mac). The ContextMenu can be attached to a Button, MovieClip or a TextField and to the Flash Movie itself. For Buttons, MovieClips and TextField, this can be used with the newly introduced "menu"; Button.menu, MovieClip.menu and TextField.menu respectively.
 

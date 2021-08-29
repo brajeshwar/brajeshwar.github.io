@@ -1,7 +1,4 @@
----
-layout: post
-title: Windows 7 - The Good, Bad and Ugly
----
+# Windows 7 - The Good, Bad and Ugly
 
 If you're an avid lover of <a href="http://windowslivewriter.spaces.live.com/">Windows Live Writer</a> and <a href="http://www.techsmith.com/screen-capture.asp">SnagIt</a> - the two must have blogging tools to get things done, you got to be running a copy of Windows on your machine. I have always had a similar setup, as in a dual boot with Linux. There is nothing I've come across, that beats these tools in what they're capable of. 
 

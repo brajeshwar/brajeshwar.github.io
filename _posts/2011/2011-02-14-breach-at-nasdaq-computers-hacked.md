@@ -1,7 +1,4 @@
----
-layout: post
-title: Breach at NASDAQ; Computers hacked?
----
+# Breach at NASDAQ; Computers hacked?
 
 One of the few places which always has security beefed up round the clock, ensuring there is no breach and leakage of important and confidential information, is the stock market. Well, even such places are not free from cyber attacks and hacking. There was <a href="http://online.wsj.com/article/SB10001424052748704709304576124502351634690.html">one such development</a> last Friday, the 5th of February, wherein the operator of <a href="http://www.nasdaq.com/">NASDAQ</a> Stock market found some suspicious files on US computer services and also qualms rose of hackers affecting one of the internet-based client applications of Nasdaq.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe’s Digital Publishing Suite for Tablets
----
+# Adobe’s Digital Publishing Suite for Tablets
 
 The recently launched <a href="http://www.adobe.com/products/digitalpublishingsuite/">Digital Enterprise Edition</a> from <a href="http://www.adobe.com">Adobe</a> is "a turnkey set of hosted software services and viewer technologies to create, distribute, monetize and analyze digital magazines, newspapers and publications." The primary objective of this new edition is to ensure that large publishers can implement a customary tablet-publishing solution without apparently creating any hazards for the existing publishing process and infrastructure. Having said that, another one of this new Digital Publishing Suite's goals includes enabling publishers to monetize content on a subscription basis via two mediums namely, <a href="http://www.apple.com/iphone/apps-for-iphone/">Apple App Store</a> and <a href="http://www.google.com/landing/onepass/">Google's One Pass</a> service for magazine and newspaper publishers.
 

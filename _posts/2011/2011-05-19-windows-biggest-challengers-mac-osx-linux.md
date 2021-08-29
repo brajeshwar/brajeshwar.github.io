@@ -1,7 +1,4 @@
----
-layout: post
-title: Windows' biggest challengers - Mac OSX & Linux
----
+# Windows' biggest challengers - Mac OSX & Linux
 
 According to <a href="http://www.gartner.com/it/page.jsp?id=1654914">Gartner</a>'s new released data - <strong>One of the toughest challenges that Microsoft windows has to face is, the new growing market for <a href="http://www.apple.com/macosx/">Mac OSX</a> and <a href="http://en.wikipedia.org/wiki/Linux">Linux OS</a></strong>. Statistically, the revenues from global operating systems was estimated to be $30.4 billion in 2010 out of which Microsoft asserts their first position with a 78.6 percent market share.
 

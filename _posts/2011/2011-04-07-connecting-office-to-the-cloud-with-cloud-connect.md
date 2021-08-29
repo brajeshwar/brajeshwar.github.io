@@ -1,7 +1,4 @@
----
-layout: post
-title: Connecting Office to the cloud with Cloud Connect
----
+# Connecting Office to the cloud with Cloud Connect
 
 If Microsoft is the evil empire, then their Office Suite is their "Death Star" -- a product of epic proportions. 500 million users just about qualifies the suite as epic. And just like the Death Star it has a huge vulnerability and can be taken down in a swift and calculator attack. 
 

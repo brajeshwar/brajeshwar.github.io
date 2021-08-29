@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple's Passcode-Based Security Fairly Useless
----
+# Apple's Passcode-Based Security Fairly Useless
 
 Apple's security as of late is as effective as a one-armed man clapping. Not only can anyone access a password-protected iPad if it has a Smart Cover, Apple's new brainchild Siri can be used to pilfer personal information despite a passcode lock. 
 

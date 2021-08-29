@@ -1,7 +1,4 @@
----
-layout: post
-title: Gung Hay Fat Choi
----
+# Gung Hay Fat Choi
 
 Besides the <a href="/2005/scary-mandarin-nightmare/">spammy development</a>, I realized that I have been having more interactions with Chinese though not necessarily with the people living in China. Be it client, interested business associates or newly-found friends, there have been lots of Asians that I have interacted.
 

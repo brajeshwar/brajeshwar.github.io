@@ -1,7 +1,4 @@
----
-layout: post
-title: Which Linux distro is right for you?
----
+# Which Linux distro is right for you?
 
 In our earlier article -- <a href="/2008/the-art-of-linux/">the Art of Linux</a> -- we saw some prominent features of the *NIX based operating system - Linux. The actual power of Linux can only be unleashed once we have an installation at our disposal. So before we move ahead in our quest of mastering Linux, we shall have to to make sure that each one of us have at least a copy of Linux installed on their machines. This shall allow you to have a hands-on experience with stuffs we discuss over here. I am sure most of you would already be having a Linux distro on their desktops/notebooks, but we shall not lose out on the newbies too!
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: 3D, enhanced 2D and gaming takes center-stage in Flash Player 11 and AIR 3
----
+# 3D, enhanced 2D and gaming takes center-stage in Flash Player 11 and AIR 3
 
 Adobe <a href="http://blogs.adobe.com/flashplatform/2011/09/announcing-flash-player-11-and-air-3.html">announces</a> the immediate availability of Adobe Flash Player 11 and Adobe AIR 3. This release pushes the boundaries of what's possible on the web, and helps customers deliver innovative games, data-driven and rich media apps consistently across multiple devices and platforms including Android, iOS, BlackBerry Tablet, Smart TVs, Internet-connected Blu-Ray players and set-top boxes, Windows, Mac and Linux.
 

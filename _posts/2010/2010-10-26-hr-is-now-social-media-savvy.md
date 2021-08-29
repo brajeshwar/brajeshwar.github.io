@@ -1,7 +1,4 @@
----
-layout: post
-title: HR is now Social Media Savvy!
----
+# HR is now Social Media Savvy!
 
 HR Manager worry about many things like employment rights, policies & practices. They want to know if the personnel are satisfied or not, whether they pose a threat of information leaks, attrition, skill retention and overall productivity at the annual performance reviews. If that isn't enough, how do you inspire the current Generation of personnel who tweet, text and use different tools to communicate such as blogs, podcast, tags, videos and social profiles.
 

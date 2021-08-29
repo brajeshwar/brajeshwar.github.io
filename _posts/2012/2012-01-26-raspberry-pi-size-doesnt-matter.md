@@ -1,7 +1,4 @@
----
-layout: post
-title: Raspberry Pi - Size doesn't Matter
----
+# Raspberry Pi - Size doesn't Matter
 
 [Raspberry Pi](http://www.raspberrypi.org/), a newly launched credit-card sized computer, weighing about 45g, can be plugged into your TV and a keyboard. The main purpose of this innovation, by the Raspberry Pi Foundation is a charitable one; by building the cheapest computer at $25, can provide an assured fundamental level of functionality.
 

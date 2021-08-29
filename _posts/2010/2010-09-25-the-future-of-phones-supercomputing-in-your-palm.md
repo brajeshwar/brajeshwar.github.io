@@ -1,7 +1,4 @@
----
-layout: post
-title: The Future of Phones - Supercomputing in your Palm
----
+# The Future of Phones - Supercomputing in your Palm
 
 Let us pause our frantic pace for a moment and consider those ancient times when supercomputers occupied entire rooms. If you are curious as to the future of computing, well rest assured, the future is safe -- in your hands! With everyone and their pets on <a href="http://www.facebook.com/">Facebook</a> today, is it any surprise that Facebook might choose to foray into the world of mobile computing with their very own handheld device? No, it's not going to be called the FacePad or FacePhone (or it just might). Though it just might find itself a place in every teenage girl's handbag right next to her compact. I'm pretty certain the killer app on such a device would be a mirror!
 

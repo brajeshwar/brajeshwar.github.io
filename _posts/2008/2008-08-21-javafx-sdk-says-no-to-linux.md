@@ -1,7 +1,4 @@
----
-layout: post
-title: JavaFX SDK says NO to Linux?
----
+# JavaFX SDK says NO to Linux?
 
 After the advent of SDKs for Adobe AIR & Microsoft Silverlight and the considerable amount of market share they already have, Sun Microsystems has finally come up with their SDK preview for <a href="http://www.javafx.com/">JavaFX</a>. This was a result of two years of hard work so as to allow developers to play with the JavaFX technology. This may be a step too late, but it's not bad than never. It reminds me of the Open Source equivalent which also competes as a Rich Internet Application (RIA) development & delivery tool named - <a href="http://www.openlaszlo.org/">OpenLaszlo</a>. It is released under the <a href="http://en.wikipedia.org/wiki/Open_Source_Initiative">Open Source Initiative</a>-certified <a href="http://en.wikipedia.org/wiki/Common_Public_License">Common Public License</a>.
 

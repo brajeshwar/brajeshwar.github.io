@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux Netbooks - Cheap is good
----
+# Linux Netbooks - Cheap is good
 
 The perfect fit for low-cost miniature laptops - "<a href="http://en.wikipedia.org/wiki/Netbook">netbooks</a>" or "<a href="http://gizmodo.com/5123712/hp-mini-2140-netbook-outdoes-the-2133-with-atom-processor-and-169-led-screen">mini-notebooks</a>" is under lime light for quite some time now. One of the prime reasons for their sale is price, apart from the size of course. Linux plays an important role in keeping the price to the minimal and is known to work quite well on netbooks. Most manufacturers are offering netbook models with pre-installed Linux. These netbooks have low memory and are largely meant for web browsing. Lightweight Linux distros works smartly over these machines delivering better performance with mini laptops' low-configuration hardware.
 

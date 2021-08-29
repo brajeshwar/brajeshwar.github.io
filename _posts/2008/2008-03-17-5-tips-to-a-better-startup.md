@@ -1,7 +1,4 @@
----
-layout: post
-title: 5+ tips to a better Startup
----
+# 5+ tips to a better Startup
 
 Here are [few tips to a better startup](http://www.thefunded.com/funds/item/3050), which sounds more like 'Startup Paranoia on Steroid'. Pitching, Raising Funds is indeed a game.
 

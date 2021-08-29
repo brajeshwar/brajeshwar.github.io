@@ -1,7 +1,4 @@
----
-layout: post
-title: Who or what the hell is a Hacker?
----
+# Who or what the hell is a Hacker?
 
 {% include video source="youtube" id="0PxTAn4g20U" %}
 

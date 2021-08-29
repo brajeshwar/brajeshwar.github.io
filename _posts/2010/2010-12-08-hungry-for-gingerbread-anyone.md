@@ -1,7 +1,4 @@
----
-layout: post
-title: Hungry for Gingerbread Anyone?
----
+# Hungry for Gingerbread Anyone?
 
 <a href="http://www.google.com/nexus/">Google Nexus S</a> is the first phone to run <a href="http://developer.android.com/sdk/android-2.3.html">Gingerbread</a>, the fastest version of Android yet. Gingerbread builds on some of the most popular Android features like multi-tasking and Wi-Fi hotspot and adds a refreshed user interface, an improved keyboard, near field communication (NFC) support, and more. 
 

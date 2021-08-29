@@ -1,7 +1,4 @@
----
-layout: post
-title: Dynamic background color
----
+# Dynamic background color
 
 Peter Hall posted a solution to setting the background color using Actionscript, actually drawing a rectangle on the background below any other elements on the document. Someone on the Macromedia Flash Forum re-iterated that question, so I thought some of you may still would like to have a look at a modified version.
 

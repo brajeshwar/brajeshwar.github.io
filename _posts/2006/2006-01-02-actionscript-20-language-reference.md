@@ -1,7 +1,4 @@
----
-layout: post
-title: ActionScript 2.0 Language Reference
----
+# ActionScript 2.0 Language Reference
 
 Macromedia published a downloadable Reference for ActionScript 2.0 Language. There is a HTML version, which you can host it yourself and a PDF version that you can print.
 

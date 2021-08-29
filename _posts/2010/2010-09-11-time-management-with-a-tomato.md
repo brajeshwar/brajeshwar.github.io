@@ -1,7 +1,4 @@
----
-layout: post
-title: Time Management with a Tomato
----
+# Time Management with a Tomato
 
 Time management is an all important and essential skill for all professionals in the business arena today. In this post, I'm going to define a process of splitting up the 24 hours of a day into smaller more manageable moments of time. If you are wondering what a tomato has to do with this, let me dis-pell the mystery. It's called the <a href="http://www.pomodorotechnique.com/">Pomodoro Technique</a>.
 

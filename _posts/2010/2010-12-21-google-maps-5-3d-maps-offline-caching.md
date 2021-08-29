@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Maps 5 - 3D Maps & Offline Caching
----
+# Google Maps 5 - 3D Maps & Offline Caching
 
 <iframe title="YouTube video player" class="youtube-player" type="text/html" width="800" height="450" src="http://www.youtube.com/embed/TAh4yiCzgKw" frameborder="0"></iframe>
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: How to Hire a Great Web Designer
----
+# How to Hire a Great Web Designer
 
 [Garry Tan](https://en.wikipedia.org/wiki/Garry_Tan), designer-in-residence for YCombinator, shares some insights on <a href="http://www.openforum.com/idea-hub/topics/technology/article/how-to-hire-a-great-web-designer-with-y-combinators-garry-tan-jolie-odell">how to hire Great Web</a> Designers for your Startup/Company. 
 

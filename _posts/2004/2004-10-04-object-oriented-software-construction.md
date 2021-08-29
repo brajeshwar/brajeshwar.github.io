@@ -1,7 +1,4 @@
----
-layout: post
-title: Object-Oriented Software Construction
----
+# Object-Oriented Software Construction
 
 First, this book ain't for total beginners into the world of Object Oriented Programming, second it is not for the utterly good OO Programmers (though they can enjoy the book to re-shake and freshen up their already good knowledge) but they are for mediocre/intermediate like me. Nonthless, this is another book that would be a good asset to dorn the library of your Object Oriented Programming books. I started with the book around April, 2004 and haven't finished reading it totally as I prefer to read it off and on. The good thing about this kinda book is that you can pick the topic of your choise and read them whenever you wish without really following a reading flow.
 

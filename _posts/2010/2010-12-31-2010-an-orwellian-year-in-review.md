@@ -1,7 +1,4 @@
----
-layout: post
-title: 2010 - An Orwellian Year in Review
----
+# 2010 - An Orwellian Year in Review
 
 2010 might very well have been the year that we dipped further into an <a href="http://en.wikipedia.org/wiki/Orwellian">Orwellian</a> nightmare as we lost all sense of privacy and dominion. This passing year we have experienced less privacy than ever before with changing Facebook privacy controls and the independence of the press has been obliterated after the persecution of <a href="http://wikileaks.org">WikiLeaks</a> and Julian Assange.  Consider the following main tenets of Orwell's 1984 in juxtaposition with the major waves in 2010:
 

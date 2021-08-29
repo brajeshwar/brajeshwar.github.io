@@ -1,7 +1,4 @@
----
-layout: post
-title: Mein Kampf
----
+# Mein Kampf
 
 I have seen Mein Kampf before but never thought of buying it, may be because of the history that I learnt as a kid, where Hitler was the evil geniuse of his time. But then a book is never bad if you can read it with a fair judgement in your mind. [Mein Kampf](https://en.wikipedia.org/wiki/Mein_Kampf) gives an insight into Adolf Hitler, his political ideas, his beliefs, his motivations and his struggle to consolidate Germany into one great nation.
 

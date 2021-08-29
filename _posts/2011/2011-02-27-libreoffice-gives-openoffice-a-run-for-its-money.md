@@ -1,7 +1,4 @@
----
-layout: post
-title: LibreOffice gives OpenOffice a run for its Money
----
+# LibreOffice gives OpenOffice a run for its Money
 
 <a href="http://www.openoffice.org/">OpenOffice</a> and its curiously similarly named counterpart <a href="http://www.libreoffice.org/">LibreOffice</a> are officially neck-in-neck. Despite Oracle's backing of OpenOffice, LibreOffice is still kicking, and recently <a href="http://blog.documentfoundation.org/2011/02/25/thousands-of-donors-contribute-e50000-in-just-eight-days-to-the-document-foundation/">received over $68,000 in funding</a> -- in just eight days. 
 

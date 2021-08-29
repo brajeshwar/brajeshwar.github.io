@@ -1,7 +1,4 @@
----
-layout: post
-title: 10 open source web fonts, Techniques for User-Friendly HTML Tables, Music while you work
----
+# 10 open source web fonts, Techniques for User-Friendly HTML Tables, Music while you work
 
 <iframe width="800" height="450" src="http://www.youtube.com/embed/yoN6XfyQsr4" frameborder="0" allowfullscreen></iframe>
 

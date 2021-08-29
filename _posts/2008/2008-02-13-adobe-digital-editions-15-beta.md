@@ -1,7 +1,4 @@
----
-layout: post
-title: Digital Editions 1.5 Beta
----
+# Digital Editions 1.5 Beta
 
 Adobe announced the release of the first Beta version of <a href="http://labs.adobe.com/technologies/digitaleditions/">Digital Editions 1.5</a> and is available for downloads from Adobe Labs. The Beta gives an opportunity to early users and customers alike to test and provide feedback to Adobe on new features and compatibility with their digital publications.
 

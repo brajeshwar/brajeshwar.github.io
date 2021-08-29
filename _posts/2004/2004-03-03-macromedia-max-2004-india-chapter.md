@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia MAX 2004, India Chapter
----
+# Macromedia MAX 2004, India Chapter
 
 The Macromedia MAX 2004, India Chapter kicks off in Bangalore today.
 

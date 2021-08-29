@@ -1,7 +1,4 @@
----
-layout: post
-title: Scrum - the Hyper Productivity Tool?
----
+# Scrum - the Hyper Productivity Tool?
 
 [Scrum](http://en.wikipedia.org/wiki/SCRUM) is an agile method for project management. It has been called a "hyper-productivity tool", and has been documented to dramatically improve productivity in teams previously paralyzed by heavier methodologies. Scrum was first documented by Takeuchi and Nonaka in "The New New Product Development Game" (Harvard Business Review, Jan-Feb 1986).
 

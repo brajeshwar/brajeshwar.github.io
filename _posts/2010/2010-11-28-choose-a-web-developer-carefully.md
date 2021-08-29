@@ -1,7 +1,4 @@
----
-layout: post
-title: Choose a web developer carefully
----
+# Choose a web developer carefully
 
 If you were to poll a hundred serious business owners on the street and ask them if a website was a crucial part of starting a business, at least ninety would probably say it is. Yet, if you polled the same hundred people and asked what resources they put into their website, you would probably be shocked with the results.
 

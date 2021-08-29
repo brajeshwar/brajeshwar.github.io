@@ -1,7 +1,4 @@
----
-layout: post
-title: A Tremulous Terrain - Energy DashBoards
----
+# A Tremulous Terrain - Energy DashBoards
 
 In an era of energy independence and increased global warming, using electricity smartly is as important as using it sparsely. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia Flash MX 2004 Magic
----
+# Macromedia Flash MX 2004 Magic
 
 <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0735713774/ref=cm_huwp_sim_1_3/103-2792170-9616632?v=glance" title="Macromedia Flash MX 2004 Magic">Macromedia Flash MX 2004 Magic</a> is a sequel to the Book; Macromedia Flash MX 2004 series, if I am not mistaken it started since Version 4 of Macromedia Flash. If you are already an advanced Actionscript coder and a pro in using Flash, this book is definitely not much of a help. But this book is definitely a must have for the newbies and the intermediate alike.
 

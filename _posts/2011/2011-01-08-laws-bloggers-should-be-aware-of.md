@@ -1,7 +1,4 @@
----
-layout: post
-title: Laws bloggers should be aware of
----
+# Laws bloggers should be aware of
 <p>The Internet is the fastest and simplest way to communicate to the rest of the world. As I've mentioned before, this is a double edged sword. The statements we make online can destroy our business image if we are reckless.</p>
 <p>The consequences for not being careful online may be much more serious than we think. In the United States and many other countries, bloggers are now treated as journalists in some regards and can be sued or even prosecuted based on what they say. This article discusses some of the <a href="http://www.blueorchidblog.com/2008/01/12-important-us-laws-about-blogging.html">laws that bloggers need to be aware of</a>.</p>
 

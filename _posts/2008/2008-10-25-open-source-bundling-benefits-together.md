@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source - Bundling benefits together
----
+# Open Source - Bundling benefits together
 
 Open Source Software being cheaper vis-a-vis proprietary software and the low cost reason of the same is one of the primary incentives for people across the globe for Linux adoption. There have been surveys which have revealed low cost as the topmost reason for people to convert from proprietary software to open source. 
 

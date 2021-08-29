@@ -1,7 +1,4 @@
----
-layout: post
-title: Flex is now Open Source - one of the sweetest announcement from Adobe
----
+# Flex is now Open Source - one of the sweetest announcement from Adobe
 
 Adobe is announcing that <a href="http://www.adobe.com/go/flex/">Flex</a> will be released under the <a href="http://opensource.org/licenses/mozilla1.1.php">Mozilla Public License</a> (MPL). Along with <a href="http://www.mozilla.org/projects/tamarin/">Tamarin</a>, Adobe will make Rich Internet Application Development an Open Source Experience. Developers can use the Flex SDK to freely develop and deploy Flex applications using either Adobe Flex Builder or an IDE of their choice.
 

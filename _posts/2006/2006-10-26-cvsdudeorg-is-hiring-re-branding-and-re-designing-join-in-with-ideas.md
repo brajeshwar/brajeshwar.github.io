@@ -1,6 +1,3 @@
----
-layout: post
-title: CVSDude.org is hiring, re-branding and re-designing, join in with ideas
----
+# CVSDude.org is hiring, re-branding and re-designing, join in with ideas
 
 I got a mail from Mark Bathie informing that CVSDude.org is re-branding. I think many of their clients must have got the information too. I've been with CVSDude for quite a while starting from my Freelance Days starting with their CVS Personal Free Account to the current Corporate SVN Project Development Account. I'm rephrasing some of the information from them. By the way, if you apply for any of the jobs and tell them that you were referred by me or this article, they are gonna give me some credit to the tune of $500. I would love to have that to extend our account for the next 2 years. Commenting on this article should also do the trick.

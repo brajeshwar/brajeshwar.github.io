@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar on Flash 8 Credit Roll
----
+# Brajeshwar on Flash 8 Credit Roll
 
 [![Brajeshwar on Flash 8 Credit Roll)](/static/2005/brajeshwar-flash-8-credit-roll.png)](http://www.flickr.com/photos/brajeshwar/142644683/)
 

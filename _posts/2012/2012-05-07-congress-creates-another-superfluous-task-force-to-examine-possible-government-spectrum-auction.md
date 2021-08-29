@@ -1,7 +1,4 @@
----
-layout: post
-title: Congress creates (another) superfluous Task Force to examine possible Government
----
+# Congress creates (another) superfluous Task Force to examine possible Government
 
 After being told so repeatedly, the U.S House of Representatives thinks they might not be using their wireless spectrum block to its full potential, so like any good bureaucracy -- they formed a task force. They assuredly hope it will be more effective than pretty much every other task force the government has ever made, or maybe not. The U.S congress is aiming to <a href="http://thehill.com/blogs/hillicon-valley/technology/223645-congressional-task-force-to-study-governments-use-of-spectrum">free-up government-owned spectrum</a> for airwave-hogging 3G and 4G consumer networks and appliances as wireless spectrum availability becomes a strong issue in the country as available spectrum wanes despite less than half the population having upgraded to high-speed 3G and 4G networks.
 

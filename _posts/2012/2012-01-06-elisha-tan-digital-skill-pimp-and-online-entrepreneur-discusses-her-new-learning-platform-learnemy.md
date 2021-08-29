@@ -1,8 +1,5 @@
----
-layout: post
-title: Elisha Tan, digital skill Pimp and online Entrepreneur discusses her new learning
+# Elisha Tan, digital skill Pimp and online Entrepreneur discusses her new learning
   platform Learnemy
----
 
 The greatest inventions develop out of need. Elisha Tan found one. Her new web application, [Learnemy](http://www.learnemy.com/) plugs a hole in the marketplace -- for peer-to-peer, formally informal learning. 
 

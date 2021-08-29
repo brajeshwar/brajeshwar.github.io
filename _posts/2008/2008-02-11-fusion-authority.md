@@ -1,7 +1,4 @@
----
-layout: post
-title: Fusion Authority Quarterly Update Magazine
----
+# Fusion Authority Quarterly Update Magazine
 
 The <a href="http://www.fusionauthority.com/">Fusion Authority</a> Quarterly Update (FAQ-U) is a print publication dedicated to collecting the best and most useful technical articles of high interest to <a href="http://www.adobe.com/products/coldfusion/">ColdFusion</a> developers. Each issue is based on a theme. The journal is designed to be clear, easy to read and highly informative.
 

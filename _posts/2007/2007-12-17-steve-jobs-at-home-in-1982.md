@@ -1,7 +1,4 @@
----
-layout: post
-title: Steve Jobs at home in 1982
----
+# Steve Jobs at home in 1982
 
 <figure>
   <img src="https://cdn.oinam.com/img/people/steve-jobs-at-home-in-1982.jpg" alt="Steve Jobs at Home (1982)" loading="lazy">

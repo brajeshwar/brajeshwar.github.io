@@ -1,7 +1,4 @@
----
-layout: post
-title: The Big Picture - Social Networking in India (Part II)
----
+# The Big Picture - Social Networking in India (Part II)
 
 In continuation to <a href="/2011/the-big-picture-social-networking-in-india-part-i/">The Big Picture - Social Networking in India (Part I)</a>; here is the Part II of the post.
 

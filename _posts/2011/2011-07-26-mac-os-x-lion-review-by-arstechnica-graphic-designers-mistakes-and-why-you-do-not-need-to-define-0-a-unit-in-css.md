@@ -1,7 +1,4 @@
----
-layout: post
-title: Mac OS X Lion review by Arstechnica, Graphic Designer's mistakes and Why you do not need to define "0" a unit in CSS
----
+# Mac OS X Lion review by Arstechnica, Graphic Designer's mistakes and Why you do not need to define "0" a unit in CSS
 
 ## Mac OS X Lion
 

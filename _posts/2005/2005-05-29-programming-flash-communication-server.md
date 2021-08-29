@@ -1,7 +1,4 @@
----
-layout: post
-title: Programming Flash Communication Server
----
+# Programming Flash Communication Server
 
 I have been trying hard to read all the chapters of Programming Flash Communication Server but have never been able to finish off all 800+ pages of the book. I have finally finished reading almost the entire book. Now, that I would rather use the book as a complete reference for Flash Communication Server Application development, its time to write a review! The authors are those whom I have, well we all have, looked upon as the best in the industry, especially with Flash and related technologies. Well before the book hit shelves, I knew that this was going to be THE book for Flash Communication Server. With authors like Peldi and Brian Lesser, there can be no mistake in saying that this is the must-have book if you are into application development for Flash Communication Server.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Social Media Simplicity - 4 Essential Plugins
----
+# Social Media Simplicity - 4 Essential Plugins
 <p>My grandmother just friended me on Facebook. So, either hell has frozen over, or social media has truly permeated every aspect of life. This multi-generational Zeitgeist is huge and companies are caching in. The best part is it is cheap and easy enough for even the smallest website to take advantage of.</p>
 <p>The lazy approach to social media marketing is to install a bunch of plugins, which is the reason why some websites look like a McDonalds playground of colors and floating boxes.</p>
 

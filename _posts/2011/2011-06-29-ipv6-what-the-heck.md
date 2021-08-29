@@ -1,7 +1,4 @@
----
-layout: post
-title: IPv6 - What the Heck?
----
+# IPv6 - What the Heck?
 
 <iframe width="800" height="450" src="http://www.youtube.com/embed/2wa7y3W2DI0" frameborder="0" allowfullscreen></iframe>
 

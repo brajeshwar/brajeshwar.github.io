@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft's Patent power-grab
----
+# Microsoft's Patent power-grab
 
 So, Microsoft spent over a billion dollars to out-bid Google on a <a href="http://www.nytimes.com/2012/04/10/technology/microsoft-to-buy-aol-patents-for-more-than-1-billion.html">bunch of patents from AOL</a>. But WHY? AOL isn't exactly a major player in the game anymore and the bulk of their patents haven't been put into practical use for years. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Bulletproof your self-hosted Wordpress blog - how to survive traffic spikes
----
+# Bulletproof your self-hosted Wordpress blog - how to survive traffic spikes
 
 There is a rather complex, long and detailed article on how to <a href="http://www.maxmasnick.com/guides/bulletproof_your_blog/">Bulletproof your blog: a guide for surviving traffic spikes</a>, but for all the other self-hosted Wordpress blogs out there, here is a simple non-geeky solution suited for most of us. You don't need to edit anything, pull or push anything - you've to just worry about your actual writing/blogging.
 

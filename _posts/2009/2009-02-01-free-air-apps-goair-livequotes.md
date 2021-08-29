@@ -1,7 +1,4 @@
----
-layout: post
-title: Free AIR apps for Gmail and Stock Quotes
----
+# Free AIR apps for Gmail and Stock Quotes
 
 Rohit Singal from <a href="http://sourcebits.com/">Sourcebits</a> Technologies emailed me to let me know of the release of their two Free AIR Apps -- <a href="http://sourcebits.com/goair/">GoAir</a> and <a href="http://sourcebits.com/livequotes/">Live Quotes</a>.
 

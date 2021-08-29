@@ -1,7 +1,4 @@
----
-layout: post
-title: A blog article knocks $4 billion off Apple Market Cap
----
+# A blog article knocks $4 billion off Apple Market Cap
 
 A supposedly false-alarm that Apple's Leopard (their next OS) and their much-talked-gadget-phone iPhone being delayed, caused their stock to nose-dive knocking over $4 billion off their Market Cap. This is indeed a phenomenal development in the Blogosphere - a blog article can have that fundamental effect in the real work and real money.
 

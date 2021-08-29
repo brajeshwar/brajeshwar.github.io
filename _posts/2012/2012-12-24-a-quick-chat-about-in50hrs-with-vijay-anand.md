@@ -1,7 +1,4 @@
----
-layout: post
-title: A quick chat about "In50Hrs" with Vijay Anand
----
+# A quick chat about "In50Hrs" with Vijay Anand
 
 Many in the Indian Startup scene knows Vijay Anand or have heard of him. Vijay Anand run [The Startup Centre](http://thestartupcentre.com/) and is very involved with Startups and Entrepreneurs in India.
 

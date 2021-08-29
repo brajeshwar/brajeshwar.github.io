@@ -1,7 +1,4 @@
----
-layout: post
-title: Respect for Android & Android App Development
----
+# Respect for Android & Android App Development
 
 Over the years & for various reasons, Android is not treated at par with Apple applications by prominent application developers. Apple was the preferred destination to showcase new applications. And, there definitely were available all reasons & justifications about why Apple was the front-runner for App Development.
 

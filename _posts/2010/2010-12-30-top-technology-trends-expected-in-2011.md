@@ -1,7 +1,4 @@
----
-layout: post
-title: Top Technology Trends - Expected in 2011
----
+# Top Technology Trends - Expected in 2011
 
 It has always been a practice to think, talk and write about innovative technology that either directly or indirectly has something to do with the world of computing and it always has to be a major news only if stalwarts like <a href="http://www.microsoft.com/">Microsoft</a>, <a href="http://www.google.org/">Google</a>, or <a href="http://www.apple.com/">Apple</a> come up with these tech trends. My last article for the year 2010, I wanted to focus on something entirely different. Hence I will highlight on a topic that hovers around on some of the most unique technological trends. These trends were supposedly set to take off during 2010. While we cannot really authenticate their success rate yet, we can surely expect them to pick up in the coming year - 2011. Let us take a look at some of these trends:
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Debarred from MXDU 2005
----
+# Debarred from MXDU 2005
 
 I never thought that something that would come up against my going to the 'MXDU 2005' would be a VISA issue. I have been debarred from entering Australia questioning the `authenticity of my purpose of visit`. The Australian Consulate believes that my pupose of visit Australia to speak at the conference is not genuine. All this inspite submitting the VISA application twice, submitting all paperworks, and the MXDU organizers faxing, calling up the Australian Consulate in New Delhi, India.
 

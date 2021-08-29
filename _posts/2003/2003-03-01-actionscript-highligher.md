@@ -1,7 +1,4 @@
----
-layout: post
-title: Actionscript Highligher
----
+# Actionscript Highligher
 
 Ah! I discovered this damn too late. I am trying to use Actionscript highligher, and yes an easy one to implement at that and Arul was kind enough to point me to the right url for my requirement, AS highlighter for PHP (an ASP version is also available there). There is also a good one [beautifier](https://beautifier.org).
 

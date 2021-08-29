@@ -1,7 +1,4 @@
----
-layout: post
-title: Super SSD Technology
----
+# Super SSD Technology
 <p>In an effort to infuse more life in my 1-year old Macbook Pro, I began researching SSD technology drives in the market and quite overwhelmed by the choice, I sauntered the Interwebs in an effort to make an educated decision that would skyrocket my productivity and in the process burn a proportionally deep hole in my pocket. During this process of research and analysis, I came across Israeli start-up <a href="http://www.anobit.com/">Anobit Technologies Ltd.</a> that has announced its first product, a multilevel cell (MLC) solid-state drive (SSD) that it claims is as reliable as today's higher-end &amp; higher-cost single-level cell (SLC) enterprise-class flash drives.</p>
 
 <h3>Ready for Relational Databases</h3>

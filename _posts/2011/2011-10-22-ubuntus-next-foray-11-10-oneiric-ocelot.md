@@ -1,7 +1,4 @@
----
-layout: post
-title: Ubuntu's Next Foray - 11.10 Oneiric Ocelot
----
+# Ubuntu's Next Foray - 11.10 Oneiric Ocelot
 
 The amazing thing about technology is that the curiosity and spirit of a new system does not depend solely on the expense of the product. This fact is upheld repeatedly when open source technologies launch their impressive additions to existing technology, in the market. The latest to join this impressive line is <a href="http://releases.ubuntu.com/11.10/">Ubuntu's 11.10 Oneiric Ocelot</a>.
 

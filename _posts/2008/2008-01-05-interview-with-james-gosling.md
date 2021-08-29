@@ -1,7 +1,4 @@
----
-layout: post
-title: Java creator, James Gosling does his part of Flash Bashing
----
+# Java creator, James Gosling does his part of Flash Bashing
 
 I thought <a href="http://www.adobe.com/go/flash/">Flash</a> Bashing, these days, are done only by the Internet's semi-literates! Coming from a respectable person like James Gosling, the creator of Java is rather uncalled for. Nonetheless, it is understandable since his works somewhat relates him to <a href="http://java.sun.com/javafx/">JavaFX</a> (supposedly, a competitor to the client side apps of the <a href="http://www.adobe.com/platform/flash/">Flash Platform</a>). He has all the rights to be on the defensive (rather abusive) perspective towards their extremely successful competitor - Flash.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Green-Screen Video Tips,  Tricks and Techniques
----
+# Green-Screen Video Tips,  Tricks and Techniques
 
 Green Screen: A technique for mixing two images together, in which a color from one image is removed, revealing another image behind it.
 

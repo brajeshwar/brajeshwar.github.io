@@ -1,7 +1,4 @@
----
-layout: post
-title: Cracking the Da Vinci Code
----
+# Cracking the Da Vinci Code
 
 After reading [Dan Brown](http://www.danbrown.com/)'s The Da Vinci Code, [Cracking the Da Vinci Code](www.crackingdavinci.com/) was the next book that caught my eye and yes I bought it, read it and I like it.
 

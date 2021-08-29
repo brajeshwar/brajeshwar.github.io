@@ -1,7 +1,4 @@
----
-layout: post
-title: Startup Oktoberfest UnPluggd 2010
----
+# Startup Oktoberfest UnPluggd 2010
 
 <a href="http://www.unpluggd.org/">UnPluGGd</a>, India's premiere startup event's second edition is scheduled for October 30th, 2010 Bangalore and will be a host to some of the most amazing technology startups and entrepreneurial stories.
 

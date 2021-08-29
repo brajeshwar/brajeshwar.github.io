@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe AIR 2.6 for Android
----
+# Adobe AIR 2.6 for Android
 
 Adobe AIR 2.6 for Android smartphones and tablets is <a href="http://blogs.adobe.com/air/2011/02/adobe-air-2-6-for-android-is-now-available.html">now available</a>.  AIR 2.6 for Android adds support for Android 3.0 and the latest Android tablet devices - including the Motorola Xoom - as well as improvements to performance and GPU-based rendering, updated Android gesture support, and improved handling of HTML content within AIR apps.
 

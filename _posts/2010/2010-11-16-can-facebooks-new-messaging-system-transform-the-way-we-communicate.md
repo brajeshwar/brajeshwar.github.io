@@ -1,7 +1,4 @@
----
-layout: post
-title: Can Facebook's New Messaging System transform the way we communicate?
----
+# Can Facebook's New Messaging System transform the way we communicate?
 
 As many <a href="http://news.cnet.com/8301-30685_3-20022625-264.html">waited</a> the unveiling of a quintessential @facebook.com kind of an email service from Facebook, CEO Mark Zuckerberg thought it would be more fitting to launch his latest service as the "<a href="http://www.timesoftheinternet.com/briefs/facebook-introduces-modern-messaging-system/">Modern Messaging System</a>". He started his product launch presentation speech by referring to a bunch of school kids he spoke to who, according to him, considered the email communications system that exists right now to be very 'slow' and 'too formal'. And this has provoked a need gap that Mark wants to fill in; hence the launch of a messaging system.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe launches Acrobat X
----
+# Adobe launches Acrobat X
 
 Adobe Systems India today launched a new range of its Acrobat software called <a href="http://www.adobe.com/products/acrobat.html">Acrobat X</a>. I was glad to be part of the launch event, in New Delhi. 
 

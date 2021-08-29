@@ -1,7 +1,4 @@
----
-layout: post
-title: A sneak peak into Ubuntu 8.10 Intrepid Ibex
----
+# A sneak peak into Ubuntu 8.10 Intrepid Ibex
 
 
 Come October and Ubuntu fans shall cherish yet another release of the next <a href="http://www.ubuntu.com/testing/intrepid/alpha1">Ubuntu - Intrepid Ibex</a> (along with its derivatives - Kubuntu, Xubuntu, etc.) If you're aware, Ubuntu is known to adhere to a six-month release cycle and gets its version numbers from scheduled release dates. Interesting! While an Ubuntu release is in its development cycle, it is referred to by its code name.

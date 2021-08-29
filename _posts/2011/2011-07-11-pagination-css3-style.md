@@ -1,7 +1,4 @@
----
-layout: post
-title: Pagination CSS3 Style
----
+# Pagination CSS3 Style
 
 ![CSS3 Paginate)](/static/2011/css3-paginate.jpg)
 

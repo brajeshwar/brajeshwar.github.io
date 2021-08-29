@@ -1,7 +1,4 @@
----
-layout: post
-title: The Importance of Social Sustainability in Blogosphere
----
+# The Importance of Social Sustainability in Blogosphere
 
 When a thought comes to our mind; most of us don't document it - the reasons being aplenty and varied like lack of time, lack of positive energy, lack of communication skills, lack of interest and so on. Some even may shy away from making their thought-pieces published just because they fear public criticism or do not have the right exposure or confidence to handle criticism.
 

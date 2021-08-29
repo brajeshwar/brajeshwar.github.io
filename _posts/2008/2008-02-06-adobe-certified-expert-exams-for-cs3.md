@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Certified Expert CS3 exams
----
+# Adobe Certified Expert CS3 exams
 
 There are updates for Adobe Certified Expert exams for CS3 for trainers, authors and others who wishes to document their proficienty in Adobe Tools. Such certifications are very useful specially for new professionals who wish to get a better job.
 

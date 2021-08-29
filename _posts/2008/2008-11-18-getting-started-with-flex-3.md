@@ -1,7 +1,4 @@
----
-layout: post
-title: Getting started with Flex 3
----
+# Getting started with Flex 3
 
 Jack D. Herrington is an engineer, author and presenter whose mission is to expose his fellow engineers to new technologies. That covers a broad spectrum, from demonstrating programs that write other programs in the book Code Generation in Action. Providing techniques for building customer centered web sites in PHP Hacks. All the way writing a how-to on audio blogging called Podcasting Hacks. All of which make great holiday gifts and are available online here, and at your local bookstore. Jack also writes articles for O'Reilly, DevX and IBM Developerworks.
 

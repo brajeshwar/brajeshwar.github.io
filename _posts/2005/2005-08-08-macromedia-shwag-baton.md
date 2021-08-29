@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia Shwag Baton
----
+# Macromedia Shwag Baton
 
 In keeping with the Macromedia Shwag baton passing tradition, after I was handed it coupla days back by [Matt Voerman](http://www.rocketboots.com.au/), I am proud to list out mine.
 

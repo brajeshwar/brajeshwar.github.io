@@ -1,7 +1,4 @@
----
-layout: post
-title: CSS Changes in Internet Explorer 7
----
+# CSS Changes in Internet Explorer 7
 
 [IE Blog](http://blogs.msdn.com/ie/) has a detailed listing of the [CSS Changes](http://blogs.msdn.com/ie/archive/2006/08/22/712830.aspx) in the new Internet Explorer 7. Some of the notable points;
 

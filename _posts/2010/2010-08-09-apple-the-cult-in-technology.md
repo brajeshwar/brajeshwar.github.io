@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple - The Cult in Technology
----
+# Apple - The Cult in Technology
 
 It took quite a long yet worthwhile journey for Apple, to earn the tag of being the Cult in Technology. It was not long ago when <a href="http://www.reuters.com/article/idUSTRE64P5PE20100526">Apple overtakes Microsoft as biggest tech company</a>, personifying Apple to be the biggest Technology Company of today.
 

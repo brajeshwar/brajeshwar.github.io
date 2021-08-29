@@ -1,7 +1,4 @@
----
-layout: post
-title: The Tablet Truth
----
+# The Tablet Truth
 
 With the iPad taking over newsrooms world over, let us take a look at a different kind of tablet: the graphics tablet. Also known as a digitizing tablet, graphics pad or drawing tablet this is an input device that permits drawing just like one would draw with a pencil and paper. More bland uses include entering handwritten signatures while creative license allows one to create absolute masterpieces that would wake the Renaissance masters from their graves to paint divine masterpieces once again using this amazing tool.
 

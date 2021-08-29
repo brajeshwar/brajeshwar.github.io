@@ -1,7 +1,4 @@
----
-layout: post
-title: Build your lists and direct marketing strategy
----
+# Build your lists and direct marketing strategy
 
 Most Internet marketers will define their marketing campaign by discussing their SEO or social media strategies. They have developed tunnel vision and have forgotten that they can sometimes pursue another promotional strategy that was been used long before the dawn of the Internet: direct marketing.
 

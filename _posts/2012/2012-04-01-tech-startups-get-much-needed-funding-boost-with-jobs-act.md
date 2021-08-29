@@ -1,7 +1,4 @@
----
-layout: post
-title: Tech Startups get much-needed Funding Boost with JOBS act
----
+# Tech Startups get much-needed Funding Boost with JOBS act
 
 Tech startups just got a much-needed boost in processing power, with the new <a href="http://en.wikipedia.org/wiki/Jumpstart_Our_Business_Startups_Act">JOBS legislation</a> passed in congress. The Jumpstart our Business Startups (JOBS) initiative currently being legislated into the US economy passed by a landslide and will vastly alter the startup entrepreneurial and investment landscape.
 

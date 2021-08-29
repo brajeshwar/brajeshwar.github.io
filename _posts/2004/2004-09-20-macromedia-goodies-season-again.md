@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia Goodies Season, again
----
+# Macromedia Goodies Season, again
 
 The Fedex guy knocked at my door again and gave me that big box seen in the image. One of the cool content that I really adore is the pair of boxes containing "Flash MX 2004 Component Collectible Cards". The main attraction was neverthless, the Flash Timbuk2 Laptop Messenger Bag and the Flash T-Shirt (gotoAndPlay). There was also the article discussing the recent update to Flash (Ellipsis), changes to the Flash team and how Macromedia sees Flash evolving in the future, a booklet on "Web Video with Macromedia Flash".
 

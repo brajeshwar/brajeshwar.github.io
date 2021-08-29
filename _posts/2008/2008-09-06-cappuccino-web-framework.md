@@ -1,7 +1,4 @@
----
-layout: post
-title: Cappuccino
----
+# Cappuccino
 
 The guys from <a href="http://280north.com/">280 North</a> did it again. Earlier, it was the awesome Keynote on the Web -- <a href="http://280slides.com/">280 Slides</a>. Now, its -- <a href="http://cappuccino.org/">Cappuccino</a> -- an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Download Free book - The Photoshop Anthology
----
+# Download Free book - The Photoshop Anthology
 
 Sitepoint is giving away an entire 278 page Photoshop book for free (pdf). It will only be up for grabs for 30 days. The entire 278 page book, yours to keep, forever! <a href="http://photoshop.aws.sitepoint.com/">The Photoshop Anthology: 101 Web Design Tips, Tricks & Techniques</a> is the ultimate Photoshop compendium for web designers.
 

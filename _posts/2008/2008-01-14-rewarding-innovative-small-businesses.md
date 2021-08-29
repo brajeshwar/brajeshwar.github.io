@@ -1,7 +1,4 @@
----
-layout: post
-title: Dell to reward $50,000 to businesses that use Technology to better serve customers
----
+# Dell to reward $50,000 to businesses that use Technology to better serve customers
 
 Saw this over at <a href="http://www.startupspark.com/dell-offering-small-business-excellence-award/">Starup Spark</a> - Dell is offering Small Business Excellence Award, a sum of $50,000 for those that use technology to better serve the customers.
 

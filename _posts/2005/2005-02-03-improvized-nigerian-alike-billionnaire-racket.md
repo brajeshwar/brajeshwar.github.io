@@ -1,7 +1,4 @@
----
-layout: post
-title: Improvized Nigerian alike Billionnaire racket
----
+# Improvized Nigerian alike Billionnaire racket
 
 Today, I received a mail which looked pretty much like a project proposal initiation. But I realize it is another, a bit cleverer, way of that `will-make-you-a-billionnaire` mails which tried to fool you into sending them some small amount to get the big amount.
 
@@ -12,8 +9,7 @@ X-UIDL:  1107444683.22189.mail.MyMailServer.com
 X-Mozilla-Status: 0005
 X-Mozilla-Status2: 00000000
 Return-Path:   <faisal@aa.mbn.or.jp>
-Delivered-To:   ----MyMailID----
-Received:   (qmail 22140 invoked from network); 3 Feb 2005 15:31:19 -0000
+Delivered-To:   ----MyMailID-Received:   (qmail 22140 invoked from network); 3 Feb 2005 15:31:19 -0000
 Received:   from unknown (HELO 236.Red-83-36-187.pooles.rima-tde.net) (83.36.187.236)  by mailserver with SMTP; 3 Feb 2005 15:31:19 -0000
 Message-ID:    <951501c50a02$04e24b33$c081e7ec@aa.mbn.or.jp>
 MIME-Version:    1.0

@@ -1,7 +1,4 @@
----
-layout: post
-title: Should you upgrade to Eclipse 3.2M5?
----
+# Should you upgrade to Eclipse 3.2M5?
 
 [Eclipse Grand Challenge](http://www.eclipsezone.com/eclipse/forums/t20738.html) cuts the memory footprint in half with the upcoming 3.2M5 Eclipse SDK milestone.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: The iPad 2 - just round the corner?
----
+# The iPad 2 - just round the corner?
 
 According to <a href="http://www.digitimes.com/news/a20101206PD224.html">DigiTimes</a>, the Chinese company that makes Apple's iPad - <a href="http://www.foxconn.com/">Foxconn</a> has been told to ship the iPad 2 in the next 100 days with initial shipments of 400,000 to 600,000 units. This translates as expected shipment of Apple's next-gen iPad in February followed by a launch in April. While this report may be true there is no guarantee since it doesn't make sense for Apple to launch a new improved iPad just months after the holiday season. Foxconn has declined to comment on its products or clients.
 

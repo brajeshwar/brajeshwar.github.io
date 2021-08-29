@@ -1,7 +1,6 @@
----
-layout: post
-title: Startup Saturday
----
+# Startup Saturday
+
+<img class="medium" src="/static/2008/gul-panag-startup-saturday.jpg" alt="Gul Panag at Startup Saturday" loading="lazy">
 
 Spearheaded by the team behind <a href="http://headstart.in/">HeadStart.in</a>, <a href="http://startupsaturday.in/">Startup Saturday</a> is an innovative and engaging event held across cities in India, aimed at providing budding Entrepreneurs and Startups an opportunity to discuss, present, network and learn from peers, prospective customers, adopters, partners and investors.
 

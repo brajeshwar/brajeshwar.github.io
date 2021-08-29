@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Most Useful Computing Tools for Small Businesses
----
+# 5 Most Useful Computing Tools for Small Businesses
 
 It is often seen in the business world that small enterprises are constantly bombarded with several problems. And these are problems that hit these micro business firms quite frequently, eventually tripping the entire business into a large predicament which many entrepreneurs find it difficult to solve. But this does not seem to be the problem with Larger and financially well-endowed firms, cause they can easily afford to purchase, install and run efficient business tools and programs, hence enabling the smooth functioning of operations.
 

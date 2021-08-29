@@ -1,7 +1,4 @@
----
-layout: post
-title: Live Speed Dating
----
+# Live Speed Dating
 
 This application have gone through many phases; from ActionScript 1.0 to Actionscript 2.0, FCS Clustering from Delphi to ColdFusion/Flash combo, MS SQL 2000 to MySQL to PostGreSQL, changes coupla developers' hand. The Team is finally able to bring this out in a fully functional application.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Nokia N95 - the ultimate geek phone
----
+# Nokia N95 - the ultimate geek phone
 
 The [Nokia N95](https://en.wikipedia.org/wiki/Nokia_N95) was released about a week late in India as against the global release, with a price package of about ₹36,500 (~$900) as initial launch price. However, the price dropped almost each week and is currently being sold for about ₹28,000 (~$690). I bought mine at ₹31,990 which was the first price cut after the initial launch (in the 2nd week of India's release).
 

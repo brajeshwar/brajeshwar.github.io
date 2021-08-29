@@ -1,7 +1,4 @@
----
-layout: post
-title: Five Top Errors made by First-time Linux Users
----
+# Five Top Errors made by First-time Linux Users
 
 The new <a href="/2010/linux-mint-10/">Linux Mint 10</a> and <a href="http://www.pcworld.com/businesscenter/article/207283/12_reasons_to_try_ubuntu_1010_now.html">Ubuntu 10.10</a> have recently made their presence felt in the open software operating system market and with every latest edition of an open source OS product hitting the marketplace, there is advancement and an upgrade that surely goes into them making them more user-friendly and beneficial in terms of costs and efforts. Of course, it is a smart move to make when a user shifts from windows or Mac OS X to becoming a full-time Linux user since there is not much of cost involved in using the latter.
 

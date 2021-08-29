@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar v7.0 is a "Beautiful" Wordpress theme
----
+# Brajeshwar v7.0 is a "Beautiful" Wordpress theme
 
 No, it is not me saying that but Smashing Magazine -- [83 Beautiful Wordpress Themes You Haven't Seen](http://www.smashingmagazine.com/2007/02/09/83-beautiful-wordpress-themes-you-probably-havent-seen/). My other WordPress Theme, KISS, was another of our Wordpress Themes that they coined it "Beautiful". We like to remind you that both KISS and Brajeshwar v7.0 are not just for Wordpress but for Movable Type, Typepad, LiveJournal and Blogger. There is yet another nice Wordpress Photoblog theme with over 300+ installations so far - [Nishita](/2006/nishita-photo-blog-theme/).
 

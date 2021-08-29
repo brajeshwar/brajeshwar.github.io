@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Development, e-Learning, Usability
----
+# Flash Development, e-Learning, Usability
 
 Some of the comments, discussions, notes here are old, addressed and rectified but still it is worth the re-read. This is rather an excerpt  from a discussion between a Flash Developer and some Top-Decision-Maker (the discussion is more biased towards e-learning but then it is applicable to most Flash development work).
 

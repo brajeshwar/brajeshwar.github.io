@@ -1,7 +1,4 @@
----
-layout: post
-title: On meeting Baris Karadogan
----
+# On meeting Baris Karadogan
 
 <a href="http://baris.typepad.com/" title="Baris Karadogan"><img class="small right" src="/static/2006/bariskaradogan.jpg" alt="Baris Karadogan"></a>
 

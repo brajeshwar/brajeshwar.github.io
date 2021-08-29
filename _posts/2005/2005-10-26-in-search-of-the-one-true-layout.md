@@ -1,7 +1,4 @@
----
-layout: post
-title: In search of the One True Layout
----
+# In search of the One True Layout
 
 [Position is Everything](http://www.positioniseverything.net/) has a comprehensive, exhaustive, detailed article on [In search of the One True Layout](http://www.positioniseverything.net/articles/onetruelayout/).
 

@@ -1,6 +1,3 @@
----
-layout: post
-title: Flash as a Tool for Web Application Development
----
+# Flash as a Tool for Web Application Development
 
 Despite the slowed economy and IT cutbacks, the drive toward web-based applications continues to have enormous momentum. The software industry, in general, is lured by the Web's ubiquitous connectivity. IT departments are enamored with the potential for controlling deployment costs. The set of standards developed by the World Wide Consortium (W3C) has certainly changed the software landscape in a very short time.

@@ -1,7 +1,4 @@
----
-layout: post
-title: WorkFlowy - Flow with your Work
----
+# WorkFlowy - Flow with your Work
 
 Work is a four letter word that is on every body's tongue these days. Most of us live to work rather than work to live. You've got a to-do list, a shopping list, a list of goals you want to accomplish and many more lists that dominate your life. If you are looking to ease your life and increase your productivity, try <a href="http://workflowy.com/">WorkFlowy</a> that claims to organize your brain.
 

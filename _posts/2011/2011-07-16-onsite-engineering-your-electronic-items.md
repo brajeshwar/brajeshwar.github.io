@@ -1,7 +1,4 @@
----
-layout: post
-title: OnSite - Engineering Your Electronic Items
----
+# OnSite - Engineering Your Electronic Items
 
 Like its name, <a href="http://www.onsite.co.in/">OnSite</a>, founded by <a href="http://twitter.com/kunalmahipal">Kunal Mahipal</a> and <a href="http://www.linkedin.com/pub/amar-desai/23/869/330">Amar Desai</a> in 2010, serves as a pick up and drop facility for portable electronic devices that need repair, in Mumbai, Delhi and Bangalore (INDIA). An innovative initiative into the After-Sales service sector; however, the level of success remains to be verified. 
 

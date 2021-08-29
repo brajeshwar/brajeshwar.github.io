@@ -1,7 +1,4 @@
----
-layout: post
-title: Take risks, calculated risks
----
+# Take risks, calculated risks
 
 Being an entrepreneur involves taking many risks. As much as most people hate taking risks, they can't be avoided. But taking risks doesn't have to be a bad thing. You just have to do it carefully.
 

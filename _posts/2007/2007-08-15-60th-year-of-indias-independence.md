@@ -1,7 +1,4 @@
----
-layout: post
-title: 60th year of India's Independence
----
+# 60th year of India's Independence
 
 {% include video source="youtube" id="Bh26zOjIh9I" %}
 

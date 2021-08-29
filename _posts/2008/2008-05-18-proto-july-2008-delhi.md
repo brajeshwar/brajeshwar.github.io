@@ -1,7 +1,4 @@
----
-layout: post
-title: Proto.in 2008 Startup event in Delhi
----
+# Proto.in 2008 Startup event in Delhi
 
 ![Proto India)](/static/2008/proto-in-delhi.jpg)
 

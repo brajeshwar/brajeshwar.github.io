@@ -1,7 +1,4 @@
----
-layout: post
-title: Will the Commonwealth Games 2010 be Technologically Superior!
----
+# Will the Commonwealth Games 2010 be Technologically Superior!
 
 There is enough chaos and drama over the last few months that surround <a href="http://www.cwgdelhi2010.org/">Commonwealth Games 2010</a> to be held in New Delhi, India especially on whether the games would begin on time. Such negative speculations have been doing rounds due to several failed inspections and audits along with the involvement of the organizers in scam related activities. 
 

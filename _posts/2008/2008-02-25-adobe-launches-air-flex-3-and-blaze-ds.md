@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe launches AIR, Flex 3 and Blaze DS
----
+# Adobe launches AIR, Flex 3 and Blaze DS
 
 Today, Adobe launched <a href="http://www.adobe.com/go/air">Adobe AIR</a> -- the runtime environment that lets developers use proven web technologies to build rich Internet applications that deploy to the desktop and run across operating systems. Adobe AIR allows developers to use familiar tools such as Adobe Dreamweaver CS3, Flex Builder 3, Flash CS3 Professional, or any text editor to build their applications and easily deliver a single application installer that works across operating systems.
 

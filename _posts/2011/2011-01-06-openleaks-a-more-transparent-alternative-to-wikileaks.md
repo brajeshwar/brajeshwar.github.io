@@ -1,7 +1,4 @@
----
-layout: post
-title: OpenLeaks, a more transparent alternative to WikiLeaks
----
+# OpenLeaks, a more transparent alternative to WikiLeaks
 <p>After all the hoopla that <a href="http://213.251.145.96/">WikiLeaks</a> went through along with Julian Assange, the founder of WikiLeaks, it was a wonderment as to what would happen to the online whistle-blowing fraternity. Well, there seems no respite yet for the fraternity cause former deputy to Assange, Daniel Domscheit-Berg along with a few more ex-WikiLeaks employees has launched OpenLeaks which promises to be more transparent, better and bigger than WikiLeaks. </p>
 <p>The website will be functional from the summer of 2011, but the <a href="http://www.openleaks.org/">site</a> right now is live only with the OpenLeaks logo and he phrase "Coming soon!". Speaking about the non-proliferation of WikiLeaks and <a href="http://cryptome.org/">Cryptome</a> on the internet Daniel Domscheit-Berg said "the fear of an immense lack of knowledge and the technical know-how to keep these organizations in operation has lead them to failure." He also spoke in detail of his project while he was at the <a href="http://events.ccc.de/congress/2010/wiki/Welcome">27th Chaos Communication Congress</a>, an annual political and technology conference in Berlin on December 30, to an audience of 300 activists and hackers.</p>
 

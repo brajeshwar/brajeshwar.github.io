@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Copernicus Center is hiring
----
+# Google Copernicus Center is hiring
 
 Google is interviewing candidates for engineering positions at their lunar hosting and research center, opening late in the spring of 2007. The opportunity is available only to highly-qualified individuals who are willing to relocate for an extended period of time, are in top physical condition and are capable of surviving with limited access to such modern conveniences as soy low-fat lattes, The Sopranos and a steady supply of oxygen.
 

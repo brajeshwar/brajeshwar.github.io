@@ -1,7 +1,4 @@
----
-layout: post
-title: Replacing Linux with Windows saves £1 million! "Is it true?"
----
+# Replacing Linux with Windows saves £1 million! "Is it true?"
 
 While reading about Linux, randomly over the Internet cloud, I came across a news about a UK company specializing in tool and equipment hiring - <a href="http://www.speedyhire.co.uk/">Speedy Hire</a>, which expects that switching from Linux to Windows will lead to a total savings of £1 million over five years. Microsoft has also published in a case study stating that Speedy Hire has junked the Linux and OpenOffice based systems running in its depots in favor of Windows and Microsoft Office. They found that personal computers were cheaper that required Windows XP Embedded OS using Citrix than the ones which required running Linux. But there still lies confusion when we talk of the hardware costs. You cannot save money by switching on Windows; unless you are running on very specialized software and hardware. It is comprehensible that standardizing on one system will bring vast cost savings.
 

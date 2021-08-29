@@ -1,9 +1,6 @@
----
-layout: post
-title: Apple iPhone 3G in India on 22nd August
----
+# Apple iPhone 3G in India on 22nd August
 
-![Apple iPhone 3G)](/static/2008/iphone-3g.png)
+<img class="medium" src="/static/2008/iphone-3g.png" alt="Apple iPhone 3G" loading="lazy">
 
 Looks like my deduction of the <a href="/2008/iphone-3g-is-it-coming-soon-to-india/">timeline of Apple iPhone 3G</a> release in India was indeed correct.
 

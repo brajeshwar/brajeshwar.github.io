@@ -1,7 +1,4 @@
----
-layout: post
-title: The New Cat In Town - Apple's New OS Lion
----
+# The New Cat In Town - Apple's New OS Lion
 
 Apple is one company that's familiar with the word innovative and groundbreaking. Apple has continued to wow customers with its out-of-the-box approach and is one company that's familiar with words like innovative and groundbreaking. It's changed the face of computing and mobile technology and its new operating system, Lion, is keeping in step with Apple's past accomplishments. IT news and <a href="http://laptopreviews.com/">laptop reviews</a> have been all over the news ever since Apple CEO Steve Jobs recently announced that the company, with its new OS, will be implementing features into their computers that will make them run more like mobile devices.
 

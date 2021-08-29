@@ -1,7 +1,4 @@
----
-layout: post
-title: Balsamiq Mockups - Smart tool for those who wants to chill
----
+# Balsamiq Mockups - Smart tool for those who wants to chill
 
 Ok, here is how it started. I usually hit the whiteboard or the glass-board or even paper and pen to chalk down plans, ideas and visual elements that goes in any project module. I'm not smart enough to use the fancy tools that does things that makes you look smart.
 

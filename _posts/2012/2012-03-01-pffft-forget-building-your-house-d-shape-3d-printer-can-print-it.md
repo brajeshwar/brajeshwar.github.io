@@ -1,7 +1,4 @@
----
-layout: post
-title: Pffft Forget BUILDING your House; D-Shape 3D Printer can PRINT it
----
+# Pffft Forget BUILDING your House; D-Shape 3D Printer can PRINT it
 
 3D printers have been growing in both popularity and scope. Just a short while ago I wrote about 3D printers being used to reproduce human bones with a [3D-printed jaw bone replacement](/2012/3d-printer-gives-woman-brand-new-jawbone/). In typical technological-growth patterns the technology is improving in folds, rapidly -- something predicted long ago by Moore's Law. 
 

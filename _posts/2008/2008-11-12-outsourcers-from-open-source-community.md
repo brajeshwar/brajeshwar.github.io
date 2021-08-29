@@ -1,7 +1,4 @@
----
-layout: post
-title: To - The Outsourcers; From - The Open Source Community
----
+# To - The Outsourcers; From - The Open Source Community
 
 Open-Source community and Outsourcing are poles apart, but the most striking thing they have in common is the dependence on their modes of communication. The Open-Source development communities rely more on the asynchronous modes of communication such as e-mails, online forums, discussion sites, bug trackers as compared to the synchronous modes of communication such as phones, chats etc. used by Outsourcing personnel. 
 

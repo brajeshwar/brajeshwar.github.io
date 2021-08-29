@@ -1,7 +1,4 @@
----
-layout: post
-title: Startup Ideas you can steal and spawn
----
+# Startup Ideas you can steal and spawn
 
 What more better time than to read something to inspire, to steal and to spawn. So, I dugg up one of Paul Graham's recently popular article about the <a href="http://ycombinator.com/ideas.html">Startup Ideas they'd Like to Fund</a>. If you're startup-ing or thinking to innovate (pun intended), head over there and spend sometime.
 

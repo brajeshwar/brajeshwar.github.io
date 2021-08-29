@@ -1,7 +1,4 @@
----
-layout: post
-title: Empty Spaces
----
+# Empty Spaces
 
 The Wanderer is [Philippe Wittenbergh](http://emps.l-c-n.com/), image poet, wanderer, web designer. He is currently living in the eastern part of the world, timezones ahead of most people, surrounded by tea fields, a cat, a partner and some more. He loves Jazz, avantguarde music and books, fine wine and some beers should not be forgotten.
 

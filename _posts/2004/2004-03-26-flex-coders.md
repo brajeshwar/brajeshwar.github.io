@@ -1,6 +1,3 @@
----
-layout: post
-title: Flex Coders
----
+# Flex Coders
 
 <a href="http://www.flexcoders.org/" title="Flex Coders">FlexCoders</a>, that is the new site around and just as the name suggests, it is about <a href="http://www.macromedia.com/software/flex" title="Flex">Flex</a> Coding. Get Prepared! You can sign up for the mailing list through the <a href="http://groups.yahoo.com/group/flexcoders/" title="FlexCoders Mailing List">YahooGroup Flex Mailing list</a>. There are about 27 members already.

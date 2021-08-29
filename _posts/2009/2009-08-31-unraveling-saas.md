@@ -1,7 +1,4 @@
----
-layout: post
-title: Unraveling SaaS
----
+# Unraveling SaaS
 
 Earlier this week, I was fortunate to be teamed up as an official blogger/social media evangelist for <a href="http://www.nasscom.in/nasscom/templates/flagshipEvents.aspx?id=56935">EMERGEOUT conclave</a>, the annual event organized by <a href="http://en.wikipedia.org/wiki/NASSCOM">NASSCOM</a> at N. Delhi. The theme was -- The Future of Software as a Service and Cloud Computing. <a href="http://www.crunchbase.com/person/sridhar-vembu">Dr. Sridhar Vembu</a>, CEO - Zoho Corp. delivered the keynote wherein he shared his insights on how and why shall cloud computing change the way we do businesses.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft Uses Pirated Software
----
+# Microsoft Uses Pirated Software
 
 > Members of a former software cracking group have discovered that audio files created with one of its cracked programs are distributed with each copy of the Windows XP.
 

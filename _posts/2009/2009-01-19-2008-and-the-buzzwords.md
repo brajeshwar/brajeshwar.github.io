@@ -1,7 +1,4 @@
----
-layout: post
-title: 2008, the Buzzwords that were
----
+# 2008, the Buzzwords that were
 
 The common buzzwords heard in the year 2008 were recession, credit-crunch, bankruptcy, bailout and others related to the financial markets as it was a year when the global economy faced huge downturn. Amidst this economic meltdown, Linux was another buzz. The open source market share did show quite interesting trends which is a good sign for it to hit better scores in the markets in 2009. Open Source projects are considered to be more viable and are being used on a broader platform. Open Source is doing well because it  not only targets to provide products, but in addition provides services that are worth having as well. Most open-source companies make the bulk of their revenues from subscriptions, which are considered to be highly profitable.  Some traditional OSS companies that have now started aggressively to obtain patents (e.g. Red Hat) are examples of profitable businesses.
 

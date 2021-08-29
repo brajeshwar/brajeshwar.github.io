@@ -1,7 +1,4 @@
----
-layout: post
-title: Public Relations as an Entrepreneur
----
+# Public Relations as an Entrepreneur
 
 When you are trying to develop a presence in the marketplace, you will find that it is a long term process. We are often deceived by the advance of a new App that creates instant exposure for a business. The problem is that exposure does not equal success in business.
 

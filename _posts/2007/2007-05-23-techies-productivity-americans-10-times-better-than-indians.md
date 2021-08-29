@@ -1,7 +1,4 @@
----
-layout: post
-title: Techies Productivity - Americans 10 times better than Indians
----
+# Techies Productivity - Americans 10 times better than Indians
 
 I was reading this glaring article in <a href="http://www.mumbaimirror.com/">Mumbai Mirror</a>, a Mumbai based Newspaper from Times of India. If it of course, an undeniable fact that India is emerging as the global back-office of the Internet-Technology Industry and the backbone to this is the skilled yet economical workforce it has in abundance. However, industry experts opine that it will take ages before it can catch up with the global giants in terms of productivity. Research and Studies have revealed that, an American Techie is about 10 times more productive than their Indian counterparts.
 

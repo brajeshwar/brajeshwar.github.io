@@ -1,7 +1,4 @@
----
-layout: post
-title: Spirit Enlightened Film Festival
----
+# Spirit Enlightened Film Festival
 
 Culture Unplugged Studios' 'Spirit Enlightened' aspires to trace the spirit that has led the humanity and evolutionary consciousness to present form and is in the midst of creating our future. The festival hopes to explore with you, 'That' which envelops to infuse & evolve the individual as well as collective being, expands our vision of time as well as place, enlivens our hearts, and enlightens our species to transcend the present state of being for the mystical new the next state of supra-mental self. Lets observe & feel this divine/enlightening spirit in the moment of its performance, in the midst of humanity now and forever, through film-media.
 

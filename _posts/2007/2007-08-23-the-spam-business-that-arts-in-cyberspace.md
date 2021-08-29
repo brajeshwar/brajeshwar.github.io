@@ -1,7 +1,4 @@
----
-layout: post
-title: The spam business that arts in cyberspace
----
+# The spam business that arts in cyberspace
 
 Today there are many types of "electronic-spam", including the most famous "E-mail spam" aka "unsolicited e-mail", "Forum Spam", "Newsgroup Spam" Advertisement and forgery in a newsgroup, "Messaging Spam or Spim" that is spam through instant messaging system for advertisement or even extortion. On the web, there is an important type of spam called "Spamdexing" - the art of manipulating a search engine to create the illusion of popularity of a particular website.
 

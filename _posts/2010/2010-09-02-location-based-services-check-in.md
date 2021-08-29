@@ -1,7 +1,4 @@
----
-layout: post
-title: Location Based Services "Check-In"
----
+# Location Based Services "Check-In"
 
 A location-based service (LBS) is primarily an information service that has off late crossed over rather successfully into the entertainment arena. Accessible with mobile devices on standard networks they utilize the geographical position of the mobile device. LBS services can be used in a variety of contexts -- health, education, career, social life, etc. Such services identify the location of a person or object, such as discovering the nearest ATM machine or the whereabouts of a dear friend.
 

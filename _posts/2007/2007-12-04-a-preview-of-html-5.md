@@ -1,7 +1,4 @@
----
-layout: post
-title: A Preview of HTML 5
----
+# A Preview of HTML 5
 
 <strong>A List Apart</strong> has a nice article on a <a href="http://www.alistapart.com/articles/previewofhtml5">Preview of HTML 5</a> and should be a good informative read for anybody who is in the web business. The articles takes us inside on how HTML 5 will liberate us from the pseudo semantics that we have followed with HTML 4. HTML 4 has been around for nearly a decade and web publishers are seeking new techniques to provide enhanced functionality. Looks like hope is round the corner with HTML 5.
 

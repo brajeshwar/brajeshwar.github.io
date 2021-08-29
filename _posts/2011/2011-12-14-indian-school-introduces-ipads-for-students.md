@@ -1,7 +1,4 @@
----
-layout: post
-title: Indian School introduces iPads for Students
----
+# Indian School introduces iPads for Students
 
 I was flipping through the Newspaper and something caught my attention. It was a small insertion in some middle page but it was intriguing enough for me to give it a thorough read. And for the love of my life, I've never been successful searching effectively on many popular Indian Websites, go figure - <a href="http://timesofindia.indiatimes.com/">Times of India</a>.
 

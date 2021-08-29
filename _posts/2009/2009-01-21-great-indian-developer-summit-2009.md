@@ -1,7 +1,4 @@
----
-layout: post
-title: Great Indian Developer Summit 2009
----
+# Great Indian Developer Summit 2009
 
 I got a Press Release of the upcoming GIDS '09 and here is an excerpt.
 

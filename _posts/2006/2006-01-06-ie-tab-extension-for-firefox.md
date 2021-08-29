@@ -1,7 +1,4 @@
----
-layout: post
-title: IE Tab Extension for FireFox
----
+# IE Tab Extension for FireFox
 
 [IE Tab](http://ietab.mozdev.org/) is one really cool extension for [Firefox](http://www.mozilla.com/firefox/).
 

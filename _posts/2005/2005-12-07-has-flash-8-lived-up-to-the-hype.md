@@ -1,7 +1,4 @@
----
-layout: post
-title: Has Flash 8 lived up to the hype?
----
+# Has Flash 8 lived up to the hype?
 
 [Stefan Kjartansson](http://www.armchairmedia.com/) has a question, [Has Flash 8 lived up to the hype?](http://www.say-so.org/view/zuvujw3x/)
 

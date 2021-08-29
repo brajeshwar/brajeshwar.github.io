@@ -1,7 +1,4 @@
----
-layout: post
-title: Why LinkedIn Groups May Not Be Working for You
----
+# Why LinkedIn Groups May Not Be Working for You
 <p>We've all heard stories about an Internet millionaire who used LinkedIn to expand their network. Then they actually try joining a variety of LinkedIn groups and fail to create a single connection. After a few weeks of frustration, they throw in the towel.</p>
 <p>If this scenario describes you, then you are probably starting to doubt the effectiveness of <a href="http://www.linkedin.com/">LinkedIn</a>. Instead, you need to come up with a different practice for finding the groups that are actually going to be worth the time you put into them.</p>
 <p>There are a few variables you need to look at while you identify LinkedIn groups that will give you what you are looking for. Keep in mind, you can always leave a group and focus your energy elsewhere if it's not giving you a return on your investment.</p>

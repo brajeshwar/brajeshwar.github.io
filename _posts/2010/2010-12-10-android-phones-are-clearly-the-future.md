@@ -1,7 +1,4 @@
----
-layout: post
-title: Android phones are clearly the future
----
+# Android phones are clearly the future
 
 Many technologists believe that mobile technology is going to take over our lives in the near future.
 

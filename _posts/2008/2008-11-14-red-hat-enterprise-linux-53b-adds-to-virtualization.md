@@ -1,7 +1,4 @@
----
-layout: post
-title: Red Hat Enterprise Linux 5.3b adds to virtualization
----
+# Red Hat Enterprise Linux 5.3b adds to virtualization
 
 Red Hat Enterprise Linux 5.3 (<a href="http://www.redhat.com/rhel/">RHEL 5.3</a>) beta has been launched by <a href="http://www.redhat.com/">Red Hat Inc.</a> with claims that the companies adopting this shall be able to virtualise out-sized and complex operations with appealing ease. For beginners, RHEL 5.3 beta offers virtualization to run on larger systems with additional memory and with more guests per host. There have been significant improvements in this release, enabling enhancements in features such as clustering, file systems, hardware driver support and virtualization. It will also facilitate the intricate applications to link with disk storage and network support devices. 
 

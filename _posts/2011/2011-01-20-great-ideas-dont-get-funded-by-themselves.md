@@ -1,7 +1,4 @@
----
-layout: post
-title: Great ideas don't get funded by themselves
----
+# Great ideas don't get funded by themselves
 <p>Many entrepreneurs have brilliant ideas that could turn into Fortune 500 companies. They deserve the opportunity to prove themselves. Unfortunately, most of them are never given that chance.</p>
 <p>Investors are usually fairly conservative with their money. They hear many business ideas and have to filter some of them out. Remember the quote from Gordon Gekko on Wall St? ""I hear a hundred tips a day and I choose one."</p>
 <p>Unfortunately, the metrics you use to determine if an idea is brilliant or not are probably completely different than those an investor would use. Here are some things you may need to work on to improve the odds of getting funding.</p>

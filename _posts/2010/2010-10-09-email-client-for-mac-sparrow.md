@@ -1,7 +1,4 @@
----
-layout: post
-title: A new email client for Mac - Sparrow
----
+# A new email client for Mac - Sparrow
 
 Email has been by far the most used of all the internet technologies. Hotmail changed the way we looked at internet communication. Gmail altered it to perfection with conversational view, integrated chat, video, sms and <a href="http://gmailblog.blogspot.com/2010/08/call-phones-from-gmail.html">now phone calls</a>. Microsoft Exchange has held a strong hold at large businesses in the way they communicate internally.
 

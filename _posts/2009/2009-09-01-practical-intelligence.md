@@ -1,7 +1,4 @@
----
-layout: post
-title: Practical Intelligence
----
+# Practical Intelligence
 
 Success is the most flaunted word in this ever so mean, competitive world and every individual strives to achieve it, but only a handful have been able to savor the sweet taste of success. Every individual has the potential to succeed, yet it escapes our imagination as to why it eludes most of them. There are instances of people who work hard and excel in academics, yet struggle to find success in their careers. On the contrary, there are legendary instances of people who are high school dropouts reaching iconic status.
 

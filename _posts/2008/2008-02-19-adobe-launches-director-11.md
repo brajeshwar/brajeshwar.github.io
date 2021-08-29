@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Launches Director 11
----
+# Adobe Launches Director 11
 
 Adobe has announced the availability of the latest version of <a href="http://www.adobe.com/products/director/">Director</a> -- Adobe Director 11. With Adobe Director, Multimedia Designers and Developers can author once and publish their content for the web, CD/DVD and the desktop simultaneously. It is expected to be available by March end and international versions in French, German and Japanese by June, 2008.
 

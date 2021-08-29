@@ -1,7 +1,4 @@
----
-layout: post
-title: Vodafone takes over Hutchison Essar
----
+# Vodafone takes over Hutchison Essar
 
 [Vodafone](http://www.vodafone.co.uk/), the world's largest mobile phone group by revenue, put in a bid for Hutchison Essar that gave it an enterprise value of ~$19 Billion. It made an indicative offer of $16.5bn for Hutch around Christmas to Hutchison Telecommunications International, which owns 67 per cent of the Indian mobile operator.
 

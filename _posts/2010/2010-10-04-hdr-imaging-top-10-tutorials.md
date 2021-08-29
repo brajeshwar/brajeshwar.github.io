@@ -1,7 +1,4 @@
----
-layout: post
-title: HDR Imaging - Top 10 Tutorials
----
+# HDR Imaging - Top 10 Tutorials
 
 The entire procedure of clicking a plethora of pictures with different exposure of the same image and merging it together through softwares to create a High Dynamic Range Image is known as <a href="http://en.wikipedia.org/wiki/High_dynamic_range_imaging">HDR (High Dynamic Range) Imaging</a>. Taking shots of different exposure and merging them together, thus gives details of shadow and highlights of the image, making HDR look beautiful and surreal. 
 
@@ -13,7 +10,7 @@ Let us explore The Top 10 <a href="http://www.stuckincustoms.com/hdr-tutorial/">
 
 This HDR Photoshop tutorial shows an easy way to take HDR photos in Photoshop by just using one jpeg file, which saves time in clicking and merging many photos. 
 
-Author: Roman Fl&ouml;ssler\
+Author: Roman Flössler
 Tool: Adobe Photoshop
 
 2. <a href="http://backingwinds.blogspot.com/2006/10/how-to-create-professional-hdr-images.html">How to Create Professional HDR Images</a>
