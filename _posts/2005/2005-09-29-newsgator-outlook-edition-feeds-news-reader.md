@@ -1,7 +1,4 @@
----
-layout: post
-title: Newsgator Outlook Edition - Feeds, News Reader
----
+# Newsgator Outlook Edition - Feeds, News Reader
 
 I am surprised why haven't I come across "Newsgator Outlook Edition (Newsgator Outlook Edition)":http://www.newsgator.com/ before? I had my newsgator subscription account after it "acquired (NewsGator Technologies Acquires FeedDemon)":http://www.newsgator.com/news/archive.aspx?post=58 FeedDemon but I never used the same. I had been searching for a newsreader (NNTP) plug-in for Outlook 2003 for quite sometime, I even found some but none live up to their promise. I went out today again on Google to do a search and stumble upon "NewsGator Outlook Edition 2.5 (NewsGator Outlook Edition 2.5)":http://www.newsgator.com/.
 

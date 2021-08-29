@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft, desperately putting 'The Best Tablet-Foot Forward'
----
+# Microsoft, desperately putting 'The Best Tablet-Foot Forward'
 
 It can only be a company of the stature as Microsoft that can continue battling and trying real hard to make it big in every field that it enters. No matter how much competition it faces from stalwarts like Apple, Google, etc. in the Tablet market (<a href="http://www.readwriteweb.com/archives/tablet_market_95_ipad_5_everyone_else.php">which is dominated by iPads</a>) Microsoft is bent on making it big here too. This time the idea is to run a demo on using the <a href="http://windows.microsoft.com/en-US/windows7/products/features/tablet-pc">Windows 7 Tablet</a> at <a href="http://www.cesweb.org/">CES 2011</a>, wherein Steve Ballmer is reportedly said to showcase Samsung and Dell devices along with other manufacturers. The focus this time would be to encourage partners of Microsoft to develop apps that emphasizes on <a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a> and these apps will be hosted on Microsoft's website rather than being sold through specific agents. 
 

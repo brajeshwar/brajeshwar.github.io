@@ -1,7 +1,4 @@
----
-layout: post
-title: Looking to God for Uber-Secure Internet Passwords?
----
+# Looking to God for Uber-Secure Internet Passwords?
 
 While "God" itself is one of the least-secure passwords, men of the cloth have come up with some of the most secure passwords on the internet today -- by choosing <a href="http://venturebeat.com/2012/03/30/bible-secure-passwords/">Bible-based passwords</a>.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: A Linux Game Console
----
+# A Linux Game Console
 
 Linux based <a href="http://www.evo-phase1.com/">EVO gaming console</a> is set to be launched on November 18 by <strong>Envizons Computer Entertainment</strong>. Play Station 3 is an out-and-out gaming console and therefore would be able to run Linux based applications effortlessly. The target market of this gaming system would be the hardcore software developers and the early adopters. Linux would mainly act as a liaison which would be used to control the EVO system and make it look more like a home computer than just a gaming gadget.
 

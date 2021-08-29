@@ -1,7 +1,4 @@
----
-layout: post
-title: LG Optimus - Unique 3D SmartPhone
----
+# LG Optimus - Unique 3D SmartPhone
 
 <a href="http://www.lg.com/">LG Electronics</a>, the South Korean based company which promotes with the jingle - Life's Good, has many products to its credit. The company has made remarkable presence in the electronic gadget's arena with it's cutting edge technologies. After successful launch of 3D monitor and 3D LCD Television, LG announces the world's first 3D smartphone, flagging off the race of next generation smartphones.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: iPad's Innovations to be replicated in upcoming OS X Lion
----
+# iPad's Innovations to be replicated in upcoming OS X Lion
 
 The unbelievable success of the iPhone and iPad are changing the face of computing as we know it. The iOS software that powers the devices has been so successful that Apple is transposing it onto Mac <a href="http://www.apple.com/macosx/lion/">OS X Lion</a>. Each new release of OS X brings us innovative software changes and moves us forward in computing and OS X Lion, the eighth release of the software will be no exception.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: MX DownUnder 2005, Me too in Flash
----
+# MX DownUnder 2005, Me too in Flash
 
 I was on a quick ICQ session with [Grant Skinner](http://www.gskinner.com/);
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: The Answer to Life, Career and Everything
----
+# The Answer to Life, Career and Everything
 
 At a point in time, an individual wishes to define his/her career and subsequently the future. This might be fascinating for some and disgusting for several others. By now, a handful of you would have started to build up thoughts around keeping yourselves into the picture. The big question here is that you do what you love or you love what you already do?
 

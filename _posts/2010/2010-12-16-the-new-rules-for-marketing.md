@@ -1,7 +1,4 @@
----
-layout: post
-title: The new rules for marketing
----
+# The new rules for marketing
 
 Marketing has been used the same way for years. The strategy that marketers have used has gone something like this:
 

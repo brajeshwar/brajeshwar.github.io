@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux Shines from Silverlight to Moonlight
----
+# Linux Shines from Silverlight to Moonlight
 
 If I were to inquire Linux users about how would they scrutinize various applications on the Web if the functionality gets closer to that of Microsoft; their answer would perhaps be Moonlight 1.0 which had been released to provide them the feature parity with Microsoft's Silverlight 1.0.
 

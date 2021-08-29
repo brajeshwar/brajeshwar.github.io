@@ -1,7 +1,4 @@
----
-layout: post
-title: Mac OS X - Snow Leopard - The Cat is here
----
+# Mac OS X - Snow Leopard - The Cat is here
 
 One more day before Mac users can rejoice belling the all new cat. Apple releases <a href="http://www.apple.com/macosx/">Mac OS X, Snow Leopard</a> tomorrow, that's 28th of August, 2009. You may check the <a href="http://www.apple.com/macosx/specs.html">system requirements</a> as laid out by Apple. For the die hard fans, there also exists an option to <a href="http://store.apple.com/us/product/MAC_OS_X_SNGL">pre order</a>! (However, <a href="http://www.amazon.com/Mac-version-10-6-Snow-Leopard/dp/B001AMHWP8">Amazon</a> is selling it much cheaper.)
 

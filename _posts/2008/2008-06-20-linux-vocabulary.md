@@ -1,7 +1,4 @@
----
-layout: post
-title: Sharpen your Linux Vocabulary
----
+# Sharpen your Linux Vocabulary
 
 ![Linux Vocabulary)](/static/2008/linux-vocabulary.jpg)
 

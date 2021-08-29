@@ -1,7 +1,4 @@
----
-layout: post
-title: Google locks Honeycomb in a box
----
+# Google locks Honeycomb in a box
 
 In times of war, strategy matters. And Google, by limiting access to the source code for <a href="http://googlemobile.blogspot.com/2011/01/sneak-peak-of-android-30-honeycomb.html">Android 3.0, or Honeycomb</a>, is playing the game right. Despite its image as a campaigner of open source, <a href="http://news.cnet.com/8301-30684_3-20030223-265.html">this step</a> was deemed necessary by Google. For the obvious reason being - Business Competition. 
 

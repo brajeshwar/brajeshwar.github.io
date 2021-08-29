@@ -1,7 +1,4 @@
----
-layout: post
-title: How to make Meetings Successful and Useful
----
+# How to make Meetings Successful and Useful
 
 I knew that the meetings that we had are all successful ones with to-the-point discussions, coming out with objectives which we know what to do, when to do and who will do. So, I was always on the look-out for how to express that all Meetings are not that harmful.
 

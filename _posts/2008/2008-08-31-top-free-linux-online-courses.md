@@ -1,7 +1,4 @@
----
-layout: post
-title: Top Free Linux Online Courses
----
+# Top Free Linux Online Courses
 
 So you've been playing around with your tux box for quite some time now. Experimenting with tar balls, the terminal, packages, distros, etc. may now be a part for your daily routine. If you remember, we talked about the existing <a href="/2008/career-in-linux-1/">career opportunities with Linux</a> in a <a href="/2008/career-in-linux-2/">two-post</a> article, few days back. A lot of youngsters admired that nibble of information. Keeping them in mind, I decided to come up with something that would emphasize more on learning the concepts rather than just trying things out randomly. (I know it's fun though!)
 

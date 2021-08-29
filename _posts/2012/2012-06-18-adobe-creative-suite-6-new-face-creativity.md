@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Creative Suite 6 - the new face of creativity
----
+# Adobe Creative Suite 6 - the new face of creativity
 
 Adobe recently released its latest version of Creative Suite - Adobe Creative Suite 6, introducing a slew of features and enhancement to their software line-ups.
 

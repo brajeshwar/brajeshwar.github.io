@@ -1,7 +1,4 @@
----
-layout: post
-title: FBI seeks Private-Sector companies to build Global Social-Network Monitoring System
----
+# FBI seeks Private-Sector companies to build Global Social-Network Monitoring System
 
 The top intelligence bureau in the US, the FBI, plans on expanding its cyber-spying toolset by inquiring to private-sector, social-app-building companies about the feasibility of building a [world-wide social-network-monitoring spy network](http://www.infosecurity-us.com/view/23520/outhoover-hoover-fbi-wants-massive-datamining-capability-for-social-media/). Their foray into social-network monitoring is no surprise of course -- given that the FBI, amongst other American intelligence agencies, have been intelligence-gathering via social networks for some time. Their new system will undoubtedly increase their online spying capabilities, social-network-monitoring capabilities that have already been used to build cases and arrest warrants for over 40 noted New York gangsters. The FBI also used social-network spying to spy WikiLeaks supporters, like the case with Icelandic MP, Birgitta Jónsdóttir.
 

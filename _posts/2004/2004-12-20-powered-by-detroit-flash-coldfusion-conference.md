@@ -1,7 +1,4 @@
----
-layout: post
-title: Powered by Detroit, Flash, ColdFusion Conference
----
+# Powered by Detroit, Flash, ColdFusion Conference
 
 The Conference Program Committee is looking for speakers to share their experience and expertise with peers at The Powered by Detroit Flash/Coldfusion Conference.
 

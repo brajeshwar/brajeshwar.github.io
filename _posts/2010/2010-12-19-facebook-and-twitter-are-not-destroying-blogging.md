@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook and Twitter are not destroying blogging
----
+# Facebook and Twitter are not destroying blogging
 
 I just read one of the most ludicrous articles about the fate of blogging. <a href="http://www.pcmag.com/article2/0,2817,2374448,00.asp?kc=PCRSS03079TX1K0000585">Is Blogging Dead?</a> claims that Facebook and Twitter are going to destroy the blogging industry. It claims that Facebook's own blogging platform is going to completely replace Wordpress and Blogger sites. I'd like to take a few moments to discuss why this article was completely off base.
 

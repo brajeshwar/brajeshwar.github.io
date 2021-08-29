@@ -1,7 +1,4 @@
----
-layout: post
-title: High-bandwidth Digital Content Protection hacked
----
+# High-bandwidth Digital Content Protection hacked
 
 Hackers have successfully <a href="http://www.foxnews.com/scitech/2010/09/16/intel-confirms-hdtv-code-cracked/">cracked</a> the anti-piracy code used in set-top boxes, Blu-ray and DVD players. The <a href="http://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection">High-bandwidth Digital Content Protection (HDCP)</a> technology has been compromised and these reports have been confirmed by <a href="http://www.intel.com/">Intel</a>, who's spokesman has revealed further details stating that the code published by the hackers "appears" to be a master key. Keys derived from this master will work on all devices that use this copy protection technology.
 

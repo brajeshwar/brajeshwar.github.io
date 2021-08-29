@@ -1,7 +1,4 @@
----
-layout: post
-title: 4 clear trends to watch in Consumer Electronics for 2011
----
+# 4 clear trends to watch in Consumer Electronics for 2011
 
 Earlier this month the <a href="http://www.ce.org/">Consumer Electronics Association</a> hosted their annual <a href="http://www.cesweb.org/">Consumer Electronics Show</a> -- showcasing upcoming trends in electronics and the newest advancements in geeky gadget technology. After 40 years in the business the trade show has grown to over 2,000 members, all of who are on the cutting edge of electronics research, development, design and distribution. 
 

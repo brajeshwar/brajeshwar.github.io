@@ -1,7 +1,4 @@
----
-layout: post
-title: Funambol - An Open Source alternative to MobileMe
----
+# Funambol - An Open Source alternative to MobileMe
 
 If you're lucky enough to have grabbed an <a href="http://www.apple.com/iphone/">iPhone 3G</a>, <a href="http://www.me.com/">MobileMe</a> would certainly be one of the apps you'd be considering to dirty your hands with, if at all you need the sync-everything-everywhere service. Though you can use it with an iPod, Mac or PC, but having an hands on with it over an iPhone would be sheer fun! For the Indians, the day for <a href="/2008/iphone-3g-india-22-august/">iPhone 3G launch</a> is not far! 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: 10 principles of Good Design
----
+# 10 principles of Good Design
 
 [Dieter Rams'](https://en.wikipedia.org/wiki/Dieter_Rams) "Good design" principles;
 

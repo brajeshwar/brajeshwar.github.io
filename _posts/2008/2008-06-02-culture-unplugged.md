@@ -1,7 +1,4 @@
----
-layout: post
-title: Culture Unplugged Film Festival
----
+# Culture Unplugged Film Festival
 
 <a href="http://www.cultureunplugged.com/">Culture Unplugged</a> is a production/distribution company committed to contemplate and contribute to personal as well as collective spiritual need of the time. They intend to create and bring "indie" content presenting human stories of current times, to audiences worldwide.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Cooliris for the iPhone
----
+# Cooliris for the iPhone
 
 {% include video source="youtube" id="0LV8Ixeg90I" %}
 

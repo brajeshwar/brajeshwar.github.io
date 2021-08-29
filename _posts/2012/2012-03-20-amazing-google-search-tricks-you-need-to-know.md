@@ -1,7 +1,4 @@
----
-layout: post
-title: Amazing Google Search Tricks You Need to Know
----
+# Amazing Google Search Tricks You Need to Know
 
 Google is a name known to almost everyone, even those who don't use the Internet. Millions of people use this search engine every day for their own purpose. Whatever may be the reason, the possibilities are endless and so are the numbers of result options that Google provides us with. No one can discount the benefits that Google offers to its users. 
 

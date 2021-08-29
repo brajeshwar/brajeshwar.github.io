@@ -1,7 +1,4 @@
----
-layout: post
-title: Don't Let Facebook ruin your Brand Image
----
+# Don't Let Facebook ruin your Brand Image
 
 Many entrepreneurs are eager to grab some publicity off of the social networking model and Facebook is obviously the most obvious place to begin. However, just because Facebook is the most successful social networking site does not mean that it is the easiest to work into your business model. Facebook is NOT for Business - says other social networks can already do everything that Facebook is capable of.
 

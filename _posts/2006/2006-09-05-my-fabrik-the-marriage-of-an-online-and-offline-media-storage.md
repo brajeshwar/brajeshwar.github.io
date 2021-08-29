@@ -1,6 +1,3 @@
----
-layout: post
-title: My Fabrik - the marriage of an online and offline media storage
----
+# My Fabrik - the marriage of an online and offline media storage
 
 The web interface is powered by Ajax, making it easy to organize your media files - photos, audio, videos and other documents. The application have smart ways of tagging and organization through folders. Besides the impressive online mechanism that they have, [My Fabrik](http://www.myfabrik.com/) have the ability to tie the online storage with your local storage. If you have own network connected storage device, you can subscribe to the Fabrik Media service and avail of the same.

@@ -1,7 +1,4 @@
----
-layout: post
-title: Mobile Developer Summit 2010 (India)
----
+# Mobile Developer Summit 2010 (India)
 
 Mobile phones are poised to overtake PCs as the most-ubiquitous Web access device worldwide. As the ecosystem pushes the pedal to transition to a mobile-centric computing world, developers will find a greater need to distribute their products and services via mobile platforms, whether they are pursuing projects on behalf of their companies or innovating on their own.
 

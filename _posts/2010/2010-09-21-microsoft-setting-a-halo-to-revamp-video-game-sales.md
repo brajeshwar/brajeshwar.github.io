@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft Setting a Halo to Revamp Video Game Sales
----
+# Microsoft Setting a Halo to Revamp Video Game Sales
 
 After successfully launching 3 of its hit video game series -- <a href="http://en.wikipedia.org/wiki/Halo:_Combat_Evolved">Halo 1: Combat Evolved</a>, <a href="http://en.wikipedia.org/wiki/Halo_2">Halo 2</a> and <a href="http://en.wikipedia.org/wiki/Halo_3">Halo 3</a>, Microsoft now looks at reigniting its video game sales with it latest market offering - <a href="http://www.welcometonobleteam.com/">Halo ~ Reach</a>.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Future of tweeting about unfamiliar subjects!
----
+# Future of tweeting about unfamiliar subjects!
 
 There's a subtle mystery behind why James Bond has always been portrayed as the savior of the <a href="http://en.wikipedia.org/wiki/Capitalism">capitalist economy</a>. He is the messiah of the British superpower whose villains are essentially from socialistic nations - Cuba, North Korea, Russia, Hungary, etc.
 

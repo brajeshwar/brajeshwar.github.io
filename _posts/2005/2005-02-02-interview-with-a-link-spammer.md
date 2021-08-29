@@ -1,7 +1,4 @@
----
-layout: post
-title: Interview with a link spammer
----
+# Interview with a link spammer
 
 Here is a nice article - [An interview with a Link Spammer](http://www.theregister.co.uk/2005/01/31/link_spamer_interview/).
 

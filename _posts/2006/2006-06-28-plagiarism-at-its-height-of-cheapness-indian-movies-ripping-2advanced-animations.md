@@ -1,7 +1,4 @@
----
-layout: post
-title: Plagiarism at its height of cheapness - Indian movies ripping 2Advanced animations
----
+# Plagiarism at its height of cheapness - Indian movies ripping 2Advanced animations
 
 Coupla days back, I wrote about [How Opal Mehta Got Kissed, Got Wild and Got a life](/2006/how-opal-mehta-got-kissed-got-wild-and-got-a-life/), a book which I read because of the Plagiarism Controversy. Little did I realize that, today I would be treated to another surprise about the extend of plagiarism in Indian cinema.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: IIM Ahmedabad's Leverage 2009
----
+# IIM Ahmedabad's Leverage 2009
 
 Leverage, the Venture Capital and Private Equity Club of IIM Ahmedabad and the Centre for Innovation Incubation and Entrepreneurship bring to you the 1st edition of the Venture Capital and Private Equity Conference on the 6th and 7th of February, 2009. The theme for the first edition of the Conference, <a href="http://www.ciieindia.org/?page_id=107">Leverage 2009</a> is "Venture Capital and Private Equity: Investing and Managing Portfolios in Distressed Times".
 

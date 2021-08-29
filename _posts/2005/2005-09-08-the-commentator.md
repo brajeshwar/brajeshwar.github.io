@@ -1,7 +1,4 @@
----
-layout: post
-title: The Commentator
----
+# The Commentator
 
 I really liked their opening lines;
 

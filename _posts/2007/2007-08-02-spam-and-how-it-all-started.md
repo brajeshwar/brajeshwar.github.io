@@ -1,7 +1,4 @@
----
-layout: post
-title: Spam and how it all started
----
+# Spam and how it all started
 
 "We invite you to come see the 2020 and hear about the DECSystem-20 family", wrote Gary Thuerk of the Digital Equipment Corporation in an effort to let people in the technology field to know about his company. That email written in 1978 <a href="http://www.newyorker.com/reporting/2007/08/06/070806fa_fact_specter">marked the beginning</a> of the unsolicited junk emails which is notoriously known in the internet term as SPAM.
 

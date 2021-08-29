@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Decompiler and Optimizer
----
+# Flash Decompiler and Optimizer
 
 ![Flash Decompiler)](/static/2008/flash-decompiler-screen01.jpg)
 

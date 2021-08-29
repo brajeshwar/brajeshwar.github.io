@@ -1,7 +1,4 @@
----
-layout: post
-title: Powered by Detroit CF/Flash Conference
----
+# Powered by Detroit CF/Flash Conference
 
 I had been preparing myself for another rejection of VISA, this time the US. Somewhere in early February this year, the Australian Consulate <a href="/2005/debarred-from-mxdu-2005/">rejected my VISA application</a> regarding my MXDU Speakership. It did not look so favorable this time too with the US Consulate. I applied late, went off to <a href="/2005/singapore-in-2005-march/">Singapore</a>. And I had the same old documents that I used during the Australian VISA request.
 

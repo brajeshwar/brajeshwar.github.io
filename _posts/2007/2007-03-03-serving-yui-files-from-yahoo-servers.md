@@ -1,7 +1,4 @@
----
-layout: post
-title: Serving YUI Files from Yahoo! Servers
----
+# Serving YUI Files from Yahoo! Servers
 
 Why should you [serve YUI files from Yahoo! servers](http://developer.yahoo.com/yui/articles/hosting/)
 

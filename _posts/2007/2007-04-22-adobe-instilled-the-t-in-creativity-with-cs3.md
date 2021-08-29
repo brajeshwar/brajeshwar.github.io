@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe instilled the "T" in Creativity with CS3
----
+# Adobe instilled the "T" in Creativity with CS3
 
 On Wednesday 18th April, 2007, I went to the evening commercial launch of the Adobe Creative Suite 3 at ITDC, Grand Central Sheraton, Parel, Mumbai (INDIA). Adobe called it the <a href="http://www.flickr.com/photos/brajeshwar/sets/72157600090606966/">Creativi-T '07</a>. We saw Sandeep Mehrotra, the country sales Manager of Adobe speaking, later followed by an engaging advertisement filled creativity show by noted creativity veteran - Piyush Pandey (Executive Chairman, National Creative Director, India and South Asia, Ogilby & Mather). He talked, in fact, he showed us how technology helped and is an enabler for creativity. We also had talks from Mark Phibbs, Director Marketing APAC, Adobe all about the details of the Adobe Creative Suite 3.
 

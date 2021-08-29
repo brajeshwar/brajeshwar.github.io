@@ -1,7 +1,4 @@
----
-layout: post
-title: Do Venture Capitalists fund a company with an intent to steal
----
+# Do Venture Capitalists fund a company with an intent to steal
 
 There is an interesting article from Ask the VC, "Do Venture Capitalists Fund A Company With An Intent To Steal It?"" This is indeed a question most new entrepreneurs would ask, and many would not have the right person to ask these kind of Questions!
 

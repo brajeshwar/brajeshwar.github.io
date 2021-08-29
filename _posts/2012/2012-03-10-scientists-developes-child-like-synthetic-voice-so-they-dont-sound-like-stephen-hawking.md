@@ -1,8 +1,5 @@
----
-layout: post
-title: Scientists developes Child-like Synthetic Voice so they don't sound like Stephen
+# Scientists developes Child-like Synthetic Voice so they don't sound like Stephen
   Hawking
----
 
 Science truly does amazing things when combined with technology. <a href="http://www.forskningsradet.no/en/Newsarticle/Norwegian_success_in_creating_an_artificial_childs_voice/1253973194004">Researchers at the Norwegian University of Science and Technology</a> are extrapolating child voices from a few key phrases for synthetic voice devices. Their goal: to ensure that children around the world using assistive speech devices no longer sound like Stephen Hawking. 
 

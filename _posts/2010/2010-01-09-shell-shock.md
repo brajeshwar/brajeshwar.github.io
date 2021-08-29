@@ -1,7 +1,4 @@
----
-layout: post
-title: Shell Shock
----
+# Shell Shock
 
 Almost everyone who switches on a computer today expects to see a tiny button at the bottom left of the screen that says 'Start'. Apologies to Mac users and Linux aficionados of the Gnome and KDE camps, but the truth remains that majority of computer users are still Windows users. Let's get back to the basics and get shell shocked!
 

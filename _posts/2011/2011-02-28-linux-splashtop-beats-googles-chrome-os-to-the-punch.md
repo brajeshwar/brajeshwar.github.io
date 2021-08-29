@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux Splashtop beats Google's Chrome OS to the Punch
----
+# Linux Splashtop beats Google's Chrome OS to the Punch
 
 With all the Buzz about Google's upcoming Chrome OS -- Buzz... get it... a little Google joke, but with all the buzz about Google's upcoming release of cloud-based operating system Chrome, people aren't taking much interest in Linux's already released cloud OS -- <a href="http://www.splashtop.com/">Splashtop</a>.
 

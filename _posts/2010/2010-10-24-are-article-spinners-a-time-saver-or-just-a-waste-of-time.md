@@ -1,7 +1,4 @@
----
-layout: post
-title: Are article spinners a time saver or just a waste of time?
----
+# Are article spinners a time saver or just a waste of time?
 
 Rewriting content is one of the most efficient ways of creating a presence on the Internet. It gives Internet entrepreneurs the opportunity to submit their content to multiple directories, other blogs and social networks. The whole time, they can offer something fresh and original that every audience will learn to appreciate.
 

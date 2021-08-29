@@ -1,7 +1,4 @@
----
-layout: post
-title: NotesManager - an online-offline Flash Application - Windows Only
----
+# NotesManager - an online-offline Flash Application - Windows Only
 
 NotesManager allows you manage notes for various projects in your company while maintaining synchronization between the remote database and the local client database. It allows multiple team members to work in tandem from different locations, while maintaining a synchronized set of notes between them. The current application is done using both v1 and v2 components and targetted at Flash Player 7.0.14.0 and above, back end database is powered by MySQL and data porting to and fro by Flash Remoting (CFMX) and the wrapper is done using [Flash Studio Pro](http://www.multidmedia.com/)
 

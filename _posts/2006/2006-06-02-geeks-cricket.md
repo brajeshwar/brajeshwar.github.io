@@ -1,7 +1,4 @@
----
-layout: post
-title: Geeks & Cricket
----
+# Geeks & Cricket
 
 It was around 1:00 am in the night, the team just returned from another rush-hour ordeal of development - actionscript, remoting, hibernate, java, database, etc. Too much of time spent on the keyboard/mouse have tempted the team to try on something different - [Cricket](http://en.wikipedia.org/wiki/Cricket).
 

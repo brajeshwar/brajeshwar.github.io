@@ -1,7 +1,4 @@
----
-layout: post
-title: Choosing the Right Entertainment Content Streaming Device for You
----
+# Choosing the Right Entertainment Content Streaming Device for You
 
 Online media streaming has gone mainstream, and is now available through a variety of devices, both cheap and expensive. Video streaming in particular is eagerly adopted, because of the quality of streaming services such as Netflix, Vudu and Hulu Plus.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Naked Text-Imaging truth
----
+# Naked Text-Imaging truth
 
 When e-mail clients started blocking images, the spammers have already gone ahead and are finding ways around the same. I had been damn too happy that with the introduction of Service Pack 2 on my Windows XP box, I won't be freaking out seeing unduly illicite images while opening my mail client in front of friend, clients, family members and relatives.
 

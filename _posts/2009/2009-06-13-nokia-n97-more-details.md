@@ -1,7 +1,4 @@
----
-layout: post
-title: More about Nokia N97 (this can be yours)
----
+# More about Nokia N97 (this can be yours)
 
 I've been briefed about the rules, regulations and details where Nokia will give out 10 Nokia N97 as part of the <a href="/2009/nokia-search-for-n/">Search for N</a>.
 

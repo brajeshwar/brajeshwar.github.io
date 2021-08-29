@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook Fights back against Snooping Employers
----
+# Facebook Fights back against Snooping Employers
 
 In response to employers demanding employees force over their Facebook passwords, Facebook has decided to fight back. But of course they are Facebook. And unsurprisingly, they are fighting back in their typical screw-you-I'm-Facebook style response.
 

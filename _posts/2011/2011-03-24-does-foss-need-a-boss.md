@@ -1,7 +1,4 @@
----
-layout: post
-title: Does FOSS need a Boss?
----
+# Does FOSS need a Boss?
 
 Every great country of the world is identified with its pioneering leaders who represent them. It takes a figure head to lead an endeavor to success, be it in a war, in an organization or in technology. The question people are asking now is does a free software need an enigmatic leader? Microsoft has Bill Gates, Apple has Steve Jobs, so does <a href="http://en.wikipedia.org/wiki/FOSS">FOSS</a> need a face for its machines? TuxRadar attempts to answer this question in a recent poll -- <a href="http://www.tuxradar.com/content/open-ballot-does-free-software-need-figurehead">does free software need a figurehead?</a>
 

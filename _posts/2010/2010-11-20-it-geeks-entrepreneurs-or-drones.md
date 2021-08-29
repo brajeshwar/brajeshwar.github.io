@@ -1,7 +1,4 @@
----
-layout: post
-title: IT Geeks - Entrepreneurs or Drones?
----
+# IT Geeks - Entrepreneurs or Drones?
 
 As we slowly climb out of a global recession the idea of being a corporate drone is becoming less appealing. The truth is that somewhere between 7.2 to 8 million people lost their corporate-level job, most which were from large companies.
 

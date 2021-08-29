@@ -1,7 +1,4 @@
----
-layout: post
-title: Were-Here shuts down
----
+# Were-Here shuts down
 
 `Were-Here`, which was once used to be a must-visit resource site for Flash and related developed, is shutting down. They are now concentrating on their software development rather than running the site.
 

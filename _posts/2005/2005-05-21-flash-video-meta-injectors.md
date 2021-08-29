@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Video Meta Injectors
----
+# Flash Video Meta Injectors
 
 I was looking for simple way to find out the width and height of FLVs. I found two good tools which does lot more than what I wished for, [FLV MetaData Injector](http://www.buraks.com/flvmdi/) and [FLVTool2](http://inlet-media.de/flvtool2/).
 

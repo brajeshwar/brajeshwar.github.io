@@ -1,7 +1,4 @@
----
-layout: post
-title: haXe Programming Language
----
+# haXe Programming Language
 
 Here is something that you should keep a tap on! [haXe](http://haxe.org/) is a programming language from the [mtasc](http://mtasc.org/) guy and I would really be interested into looking closely at something that comes from him. The haXe programming language is one supposedly a common language for the different technologies; server side, client side and rich clients (read Flash, Flex here).
 

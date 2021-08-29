@@ -1,7 +1,4 @@
----
-layout: post
-title: XML-based Flash Development
----
+# XML-based Flash Development
 
 Early Pre-Release Adobe Software users have started talking about some of the new features of Diesel code-name for the upcoming <a href="http://www.adobe.com/go/flash/">Adobe Flash</a> version 10 aka Adobe Flash CS4.
 

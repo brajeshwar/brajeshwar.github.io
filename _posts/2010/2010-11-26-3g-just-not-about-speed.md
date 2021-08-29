@@ -1,7 +1,4 @@
----
-layout: post
-title: Is 3G just about speed?
----
+# Is 3G just about speed?
 
 Earlier this month, we saw country's first privately held 3G service from <a href="http://www.tatadocomo.com/">Tata Docomo</a>. With large marketing efforts across all possible advertising medium, Tata Docomo established itself as the first private company to roll out commercial 3G services across 9 circles. This was analogous to NTT Docomo, the partners being the first company in the world to provide commercial 3G, a few years back! We've had promises from <a href="http://www.airtel.in/">Airtel</a> and <a href="http://www.vodafone.in/">Vodafone</a> to launch 3G soon.
 

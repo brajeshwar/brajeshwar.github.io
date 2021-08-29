@@ -1,7 +1,4 @@
----
-layout: post
-title: Can adoption of GNU/Linux help recession?
----
+# Can adoption of GNU/Linux help recession?
 
 Terms like "landslide fall" have been heard in abundance this month and it is high time for everyone to realize that we are heading into recession (if we're already not into it). Though some might argue, that we are still not there, the fact of the matter is that the stock market's performance resembles the mountain peaks. The picture looks gloomy for a Linux user too. 
 

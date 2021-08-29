@@ -1,7 +1,4 @@
----
-layout: post
-title: Search Marketing Industry - in a 'Make or Break' State
----
+# Search Marketing Industry - in a 'Make or Break' State
 
 Everyone wants to be at the top of their game, and will go to any lengths for it. Then why blame <a href="http://en.wikipedia.org/wiki/Search_engine_optimization">SEOs</a> (Search Engine Optimizers) who make the game more interesting, by introducing players you would not expect to find on the field. The thought worth pondering over is; when Google is asked a question, and it shows up results that don't quite make sense to you; it is natural to wonder what happened to the optimization of search results. 
 

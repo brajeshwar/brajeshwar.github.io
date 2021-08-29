@@ -1,7 +1,4 @@
----
-layout: post
-title: Search Engine Decoder
----
+# Search Engine Decoder
 
 Mark Angeletti emailed me about [Search Engine Decoder](http://www.search-this.com/search_engine_decoder.asp) long back but never got a chance to play around with it. This is kinda cool application whereby the buttons, when clicked, activate colored arrows that chart who supplies who with what.
 

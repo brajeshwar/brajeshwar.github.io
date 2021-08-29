@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook Commerce - Concept, Present Lack of Sheen & Reasons
----
+# Facebook Commerce - Concept, Present Lack of Sheen & Reasons
 
 F-Commerce launched with hyper-ambition is losing its sheen. Buoyed by Facebook's successful track record in the promotion of products and services, it has attracted leading businesses to gamble with F-Commerce in the form of Facebook stores. However, due to negative results there is growing dismay on these stores and the establishments are winding off at a much quicker pace than the pace taken to demonstrate their identity on Facebook stores.
 

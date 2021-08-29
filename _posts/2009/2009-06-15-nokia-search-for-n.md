@@ -1,7 +1,4 @@
----
-layout: post
-title: The "Search for N" - Win a Nokia N97
----
+# The "Search for N" - Win a Nokia N97
 
 The Winners
 

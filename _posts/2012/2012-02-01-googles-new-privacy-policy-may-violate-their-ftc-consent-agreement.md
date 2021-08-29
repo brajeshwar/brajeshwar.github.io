@@ -1,7 +1,4 @@
----
-layout: post
-title: Google's new Privacy Policy may Violate their FTC Consent Agreement
----
+# Google's new Privacy Policy may Violate their FTC Consent Agreement
 
 Google's new fascist-like <a href="http://www.google.com/policies/privacy/preview/" title="Google's New Privacy Policy, effective March 01, 2012">privacy policy</a> has many up in arms, and will likely face an investigation from the Federal Trade Commission (FTC) -- with whom they have a pre-established consent order since in March of 2011 -- forbidding the forcible waiver of user privacy rights.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Invoicera's new billing service for Magento
----
+# Invoicera's new billing service for Magento
 
 Sending invoices to a client or a customer every time they place an order on your online store can be quite a daunting task. The same activity can consume the productive time of your business. But, guess what? Here comes the good news. A Company well-known for its online software for invoicing and billing service - <a href="http://www.invoicera.com/">Invoicera</a> has launched its services on online invoicing in real time to <a href="http://www.magentocommerce.com/">Magento</a>, an Open source based ecommerce webcart for online businesses. Henceforth, it will not be a tedious process anymore of sending manual invoices every time you receive an order in your online store.
 

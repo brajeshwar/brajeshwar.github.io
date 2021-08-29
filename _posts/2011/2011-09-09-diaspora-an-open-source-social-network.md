@@ -1,7 +1,4 @@
----
-layout: post
-title: Diaspora - an Open Source Social Network
----
+# Diaspora - an Open Source Social Network
 
 Social Networking has revolutionized the way we communicate in today's fast paced world. With more and more people with constant access to the internet, nearly everyone you know has an account with popular networking sites - Facebook, Twitter, LinkedIn, etc. It has become a way of life today and makes for easy sharing and communication between friends and relatives. 
 

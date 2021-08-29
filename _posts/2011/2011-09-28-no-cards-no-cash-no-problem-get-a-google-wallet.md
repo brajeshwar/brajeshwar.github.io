@@ -1,7 +1,4 @@
----
-layout: post
-title: No cards, no cash? no problem! Get a Google Wallet
----
+# No cards, no cash? no problem! Get a Google Wallet
 
 First Google was after search engine domination, then world domination, and now? YOUR WALLET! But they're not going to steal it -- trust me, they don't need the money. They want to replace it.
 

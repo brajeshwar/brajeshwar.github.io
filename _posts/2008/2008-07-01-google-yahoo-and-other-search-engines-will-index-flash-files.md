@@ -1,7 +1,4 @@
----
-layout: post
-title: Google, Yahoo! and other Search Engines will index Flash Files
----
+# Google, Yahoo! and other Search Engines will index Flash Files
 
 This is the beginning of a new phenomena -- Google, the leader in Search -- will now be able to index textual content in Flash files of all kinds -- Flash menus, buttons to banner, to self-contained Flash websites. Google have <a href="http://googleblog.blogspot.com/2008/06/google-learns-to-crawl-flash.html">launched their Flash indexing algorithm</a>, we can expect improved visibility of Flash content, with better search results and snippets.
 

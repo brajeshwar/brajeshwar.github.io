@@ -1,7 +1,4 @@
----
-layout: post
-title: SMART Earphones Invented - Finally a cool audio product without the Apple logo
----
+# SMART Earphones Invented - Finally a cool audio product without the Apple logo
 
 Cellphones are smart, MP3 players and iPods are smart - and now our smart appliances have a smart companion, earphones. Before you envision white Apple-esque earbuds, there finally comes a cool product to market not invented by the Empire. Nope, these ones were invented in Tokyo by the <a href="http://www.designinterface.jp/en/">Igarashi Design Interfaces Project</a>.
 

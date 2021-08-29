@@ -1,7 +1,4 @@
----
-layout: post
-title: The Babbage Computer Gets Its Marching Orders
----
+# The Babbage Computer Gets Its Marching Orders
 
 [Charles Babbage](http://en.wikipedia.org/wiki/Charles_Babbage) is the man generally acknowledged to be the inventor the first computer. Now the [Science Museum](http://www.sciencemuseum.org.uk/) in London [has agreed](http://blog.jgc.org/2010/09/its-time-to-build-analytical-engine.html) to help a project to build Babbage's Analytical Machine under the aegis of [John Graham-Cumming](http://jgc.org/), a programmer and computer historian.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: The magic of Google
----
+# The magic of Google
 
 If we try to find out internet users who would manage to do their job without using a service from Google, it would be a tough search. Today, several product names from Google are vividly used as an adjective amongst the internet users, esp. the kids and teens.
 

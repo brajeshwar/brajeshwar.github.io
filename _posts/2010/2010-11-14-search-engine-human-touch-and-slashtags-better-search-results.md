@@ -1,7 +1,4 @@
----
-layout: post
-title: Search Engine + Human Touch and Slashtags = Better Search Results
----
+# Search Engine + Human Touch and Slashtags = Better Search Results
 
 How often have users complained and cribbed about the failure of best of the business Search Engine sites like <a href="https://www.google.com/">Google</a>, <a href="http://www.bing.com/">Bing</a>, <a href="http://www.yahoo.com/">Yahoo!</a>, etc's failure of not producing perfectly relevant search results has left many users annoyed. The new search engine - <a href="http://blekko.com/">BLEKKO</a> comes with new and improved promises of bringing out relevant search results; results that completely depend on human input more than the mundane and conventional search engines like Google and Bing.
 

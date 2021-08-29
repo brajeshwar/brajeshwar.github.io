@@ -1,7 +1,4 @@
----
-layout: post
-title: Flashing at the age of six
----
+# Flashing at the age of six
 
 Adarsh Rao mailed me, "I want to appear for Macromedia Flash MX Designer Exam". No, there is nothing funny or surprising about that until I realize he is "I am Adarsh Rao (6 years old)studying in 2nd class, vidya vinayalaya school, Hyderabad". At that early age he had Macromedia Flash MX besides Adobe products like Illustrator, Photoshop, Premier, Sound forge. He may definitely not be a good Flash Designer but his work is worth a look. If his works are really authentic and his own then, I really want to wish him all the best in his life ahead. 
 

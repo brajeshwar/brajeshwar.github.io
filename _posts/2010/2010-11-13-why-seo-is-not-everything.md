@@ -1,7 +1,4 @@
----
-layout: post
-title: Why SEO is not everything
----
+# Why SEO is not everything
 
 Many entrepreneurs have gotten so caught up in the mystique Google has created with their search algorithms that they have based their entire business around it. They believe that the success of their online business begins and ends with their search rankings.
 

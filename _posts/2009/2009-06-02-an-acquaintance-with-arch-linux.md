@@ -1,7 +1,4 @@
----
-layout: post
-title: An acquaintance with Arch Linux
----
+# An acquaintance with Arch Linux
 
 After drooling around with the biannual release of <a href="http://www.ubuntu.com/">Ubuntu</a>, I got a chance to caress an <a href="http://www.archlinux.org/">Arch Linux distribution</a>. Arch Linux is a simple, flexible and lightweight distribution system. The developers of Arch Linux have decided to concentrate on three very significant things code accuracy, elegance and simplicity.
 

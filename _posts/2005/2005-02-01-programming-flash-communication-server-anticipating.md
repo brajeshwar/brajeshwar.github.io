@@ -1,7 +1,4 @@
----
-layout: post
-title: Programming Flash Communication Server, anticipating
----
+# Programming Flash Communication Server, anticipating
 
 I once attended a Breeze Live Presentation on Flashcom. Before the actual presentation started, there was a Questionnaire, the options was about ones expertise level in Flash Communication Server;
 

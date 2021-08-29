@@ -1,7 +1,4 @@
----
-layout: post
-title: New Amazon EC2 Micro Instances
----
+# New Amazon EC2 Micro Instances
 
 To make this article more comprehendible it is important for us to know what Amazon EC2 does. Amazon Elastic Compute Cloud, or EC2 in short, is essentially a web service that enables flexibility in resizing the compute capacity in the cloud. Amazon EC2 functions as a sub-brand of <a href="http://aws.amazon.com/">Amazon Web Services</a> (AWS), which caters to companies' requirements of an infrastructure web services platform in the cloud that is available in a plethora of sizes.
 

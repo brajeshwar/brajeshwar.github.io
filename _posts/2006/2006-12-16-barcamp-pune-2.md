@@ -1,7 +1,4 @@
----
-layout: post
-title: Barcamp Pune 2
----
+# Barcamp Pune 2
 
 The event was awesome, the organizers were helpful and have done a good job. With the startup boom happening around each and every corner of India, it is fun and cool to see many enterprising developers, budding entrepreneur, dedicated geeks, tech freaks and all the other smart people.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Occupy the Internet creates virtual tent city with The Global Square
----
+# Occupy the Internet creates virtual tent city with The Global Square
 
 In a digital cry Occupy Wall Street is screaming 'Viva la Revolución!' with their new Facebook-like virtual stomping ground, The Global Square. The Global Square is the movement's new virtual Zuccotti Park, a place where Occupiers can squat virtually -- free from state and corporate intervention, they hope.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Tech World's Top 10 Mistakes - Series II
----
+# Tech World's Top 10 Mistakes - Series II
 
 Continuing from where I left off in my previous article, <a href="/2010/tech-worlds-top-10-mistakes-series-i/">Tech World's Top 10 Mistakes - Series I</a>, let us now look at the remaining half of the technology world's top ten blunders - counting down from number 5 to number 1:
 

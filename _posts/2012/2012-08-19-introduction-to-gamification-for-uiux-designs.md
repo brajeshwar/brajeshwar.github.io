@@ -1,7 +1,4 @@
----
-layout: post
-title: Introduction to Gamification for UI/UX Designs
----
+# Introduction to Gamification for UI/UX Designs
 
 At the <a href="//www.siliconindia.com/events-agenda/webapps-conference-Bangalore-WebApps_Blore_2012.html">WebApp 2012</a>, organized by <a href="//www.siliconindia.com/">SiliconIndia</a>, I spoke on <strong>"Gamification in UI/UX Designs"</strong>.
 

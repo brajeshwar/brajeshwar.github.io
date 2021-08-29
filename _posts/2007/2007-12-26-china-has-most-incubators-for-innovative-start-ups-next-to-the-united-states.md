@@ -1,7 +1,4 @@
----
-layout: post
-title: China has most incubators for innovative start-ups, next to the United States
----
+# China has most incubators for innovative start-ups, next to the United States
 
 Recently in China, the Ministry of Science and Technology announced that it has over 548 incubators, the second most in the world next to the United States. They are considered powerful in breeding innovative start-ups. The ministry reported the incubators had helped to raise about 20,000 high technology companies with over 569 garnering an annual revenues of almost $14 million US Dollars. In addition, 53 were listed on either domestic or overseas stock exchanges.
 

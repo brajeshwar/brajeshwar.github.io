@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar part of 9rules Network
----
+# Brajeshwar part of 9rules Network
 
 <img class="small right" src="/static/2008/9rules-logo.png" alt="9rules">
 

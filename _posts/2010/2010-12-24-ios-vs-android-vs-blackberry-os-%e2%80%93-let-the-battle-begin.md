@@ -1,7 +1,4 @@
----
-layout: post
-title: iOS vs Android vs Blackberry OS – Let 'The Battle' begin
----
+# iOS vs Android vs Blackberry OS – Let 'The Battle' begin
 
 A recent survey of <a href="http://www.nielsen.com/content/corporate/global/en.html">Nielsen Company</a> has made <a href="http://en.wikipedia.org/wiki/Smartphone">Smartphones</a> - the talk of the town. Every blog and news website is publishing and writing about this sudden rise in demand for the Smartphone and the mass populace of United States now has to reconsider which OS is the best and serves as the best for their individual needs. In the fiscal quarterly results, at the end of Q2 2010, U.S. Smartphone market share was ruled by Blackberry but the survey done in October by Nielson company completely turned the table upside down.
 

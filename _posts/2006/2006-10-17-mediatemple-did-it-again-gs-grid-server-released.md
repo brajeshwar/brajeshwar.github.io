@@ -1,7 +1,4 @@
----
-layout: post
-title: MediaTemple did it again, (gs) Grid Server released
----
+# MediaTemple did it again, (gs) Grid Server released
 
 My site <del datetime="2007-12-09T08:29:41+00:00">is</del> was hosted with MediaTemple and I've been happy so far. Well the story is funny as I went off and on coupla times in the past but then I decided to stick with them. They're perhaps one of the most professional Hosting Provider I've ever interacted.
 

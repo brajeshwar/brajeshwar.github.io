@@ -1,7 +1,4 @@
----
-layout: post
-title: No British Visa to Young and Single
----
+# No British Visa to Young and Single
 
 It looks vaguely official, the standard wording used in Indian Visa Clearing posts, that Indian applicants were often refused entry for being of "marriageable age". Young and single Indians stand less chances of getting a visa to enter Britain than the married ones. This is the revelation of a leading British immigration lawyer, who is the UK's official independent watchdog of visa refusals.
 

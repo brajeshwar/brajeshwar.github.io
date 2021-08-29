@@ -1,7 +1,4 @@
----
-layout: post
-title: Startup Research, CSS text-overflow and why should you keep things simple
----
+# Startup Research, CSS text-overflow and why should you keep things simple
 
 One of the early topics in the Founder Institute curriculum is "Startup Research". Here is a video and <a href="http://www.scribd.com/doc/33104662/SVFI-June-15-Start-up-Research-Adeo-Ressi">slides</a> of a Startup Research lesson to the Silicon Valley program by Adeo Ressi, Founder of the Founder Institute.
 

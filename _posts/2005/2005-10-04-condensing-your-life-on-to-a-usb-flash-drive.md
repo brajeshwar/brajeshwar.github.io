@@ -1,7 +1,4 @@
----
-layout: post
-title: Condensing Your Life on to a USB Flash Drive?
----
+# Condensing Your Life on to a USB Flash Drive?
 
 Everybody reads "Slashdot (Slashdot)":http://slashdot.org/, so I won't really repeat the article but this one caught my attention. The articles talks about, "How to Prepare for One Really Quick Getaway (How to Prepare for One Really Quick Getaway)":http://www.nytimes.com/2005/10/01/business/01docs.ready.html?pagewanted=print which appeared in "New York Times (New York Times)":http://www.nytimes.com/ on the first of October.
 

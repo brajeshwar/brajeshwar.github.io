@@ -1,7 +1,4 @@
----
-layout: post
-title: 15 Must-Know Photography Tactics
----
+# 15 Must-Know Photography Tactics
 
 Photography fascinates many people and it turns out to be a good opportunity when a good blogger told me he wishes to write. Incidentally, <a href="http://www.praval.com/">Praval's</a> first article is something about Photography.
 

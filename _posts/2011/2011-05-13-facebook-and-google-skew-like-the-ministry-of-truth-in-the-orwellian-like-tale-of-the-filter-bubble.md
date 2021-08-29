@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook and Google skew like the Ministry of Truth in the Orwellian-Like Tale of the Filter Bubble
----
+# Facebook and Google skew like the Ministry of Truth in the Orwellian-Like Tale of the Filter Bubble
 
 There is a new form of self-indulgent online unaware narcissism going on -- news filtering. Many of the most popular internet sites are skewing the information that you see online, to your likes and habits. And while some argue that this helpful tool personalizes the web, <a href="http://elipariser.com/">Eli Pariser</a> thinks that it is turning us all into The Bubble Boy. Have the likes of Facebook and Google and the Filter Bubble they creatd become the new Ministry of Truth, manufacturing the news feeds as they see fit?
 

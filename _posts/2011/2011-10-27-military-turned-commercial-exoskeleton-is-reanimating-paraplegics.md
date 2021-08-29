@@ -1,7 +1,4 @@
----
-layout: post
-title: Military-turned Commercial Exoskeleton is Reanimating Paraplegics
----
+# Military-turned Commercial Exoskeleton is Reanimating Paraplegics
 
 Part paraplegic-lifesaver, part sci-fi-inspired-robotic-device-of-the-future, the new Bionic Exoskeleton from <a href="http://www.eksobionics.com/">Ekso Bionics</a> is bad-ass. Despite being initially funded by the US military, engineer extraordinaire Thomas Dwyer's Skynet-inspired design isn't aimed at world domination by a robotic race, but instead the less malevolent intention of re-animating paraplegics. The device seems to have come full circle though as the machine may be used by many of the wheelchair-confined vets who were injured, then released by the US military.
 

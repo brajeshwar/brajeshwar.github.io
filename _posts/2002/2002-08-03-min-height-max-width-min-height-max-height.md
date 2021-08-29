@@ -1,7 +1,4 @@
----
-layout: post
-title: min-height, max-width, min-height, max-height
----
+# min-height, max-width, min-height, max-height
 
 A dreamweaver list friend of mine, ask me to test a page of his on my IE 5+ on a Windows OS and I learn something very useful. You must have seen and designed some or the other form of liquid (stretchable) design. You would have successfully done liquid table layouts but you must have the itchy feeling that you should also do this with text, so that they become stretchable according to the dimension of the browser.
 

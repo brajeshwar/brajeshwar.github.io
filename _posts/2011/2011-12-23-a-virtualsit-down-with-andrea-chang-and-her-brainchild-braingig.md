@@ -1,7 +1,4 @@
----
-layout: post
-title: A (Virtual) sit-down with Andrea Chang and her brainchild BrainGig
----
+# A (Virtual) sit-down with Andrea Chang and her brainchild BrainGig
 
 Most entrepreneurs go into business for the incredible experience or with aspirations of financial freedom - but very few go into it with a benevolent agenda like Andrea Chang. OK, quasi-benevolent. The technology/idea Andrea invented, [BrainGig](http://www.braingig.com/), helps connect individuals and teams with much-needed funding opportunities.
 

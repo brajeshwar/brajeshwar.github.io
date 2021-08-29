@@ -1,7 +1,4 @@
----
-layout: post
-title: How to react to "You've Been Hacked!" for newbies
----
+# How to react to "You've Been Hacked!" for newbies
 
 "You've been hacked." This must be the most feared sentence your IT guy can deliver to you, especially if you do most of your business online. It is even worse you hear it from a customer first. Your first reaction should not be panic, but you do need to react quickly. It will cause you some short term harm, but it is not life threatening.
 

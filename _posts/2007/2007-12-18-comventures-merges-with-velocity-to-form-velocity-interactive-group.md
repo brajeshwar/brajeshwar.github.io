@@ -1,7 +1,4 @@
----
-layout: post
-title: ComVentures merges with Velocity to form Velocity Interactive Group
----
+# ComVentures merges with Velocity to form Velocity Interactive Group
 
 Ross Levinsohn and Jonathan Miller launched Velocity Investment Group earlier this year with the goal of acquiring and investing in digital and communication media startups. Today, they announced their merger with <a href="http://www.comventures.com/">ComVentures</a> to form their new <a href="http://www.velocityig.com/">Velocity Interactive Group</a>. Ross is former President of Fox Interactive and Jonathan, former Chairman and CEO of America Online.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Jajah, the low cost global phone utility, comes to India
----
+# Jajah, the low cost global phone utility, comes to India
 
 The low-cost global phone call utility - <a href="http://www.jajah.com/">Jajah</a> - have landed in India. They're curring running a special promotion for <a href="http://www.jajahindia.com/">Indian users</a>. You can use either your landline or your mobile phone to connect to the person you wish to call.
 

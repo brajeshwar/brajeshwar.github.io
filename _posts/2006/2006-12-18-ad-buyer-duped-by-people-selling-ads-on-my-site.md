@@ -1,7 +1,4 @@
----
-layout: post
-title: Ad buyer duped by people selling ads on my site
----
+# Ad buyer duped by people selling ads on my site
 
 I would not put screenshots of the paypal receipt, the email nor the name of the person who have sold Text Link Ads on my site without me even knowing about it at all. It came to light only after the person buying the ad space contacted me. He is filing a *Buyer Complaint* report with Paypal.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: InDesign by Design
----
+# InDesign by Design
 
 Pondering over a topic for an article on Adobe, I found myself rejecting ideas one after another only to be left with none! Now it's not that Adobe has no arrows left in its quiver for me to play with, truth be told I'm gonna write about one particular arrow that is quite under utilized and almost unknown in Indian print circles. Yes, I'm talking about <a href="http://www.adobe.com/go/indesign/">InDesign</a>; Adobe's publishing software that claims to break the barriers between online and offline publishing.
 

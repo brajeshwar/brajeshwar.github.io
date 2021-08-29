@@ -1,7 +1,4 @@
----
-layout: post
-title: Maxivista
----
+# Maxivista
 
 Couple of months back, I downloaded the demo version of [Maxivista](http://www.maxivista.com/) and I loved it for many reasons. It includes a virtual graphics adapter which fools your primary PC into thinking that there is an additional monitor display installed. Windows enables its multi monitor capabilities and extend the desktop to an additional screen. The content of this extra screen is transmitted to your secondary PC via a standard network connection and displayed by the MaxiVista Viewer program.
 

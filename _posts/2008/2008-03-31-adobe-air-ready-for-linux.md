@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe AIR ready for Linux
----
+# Adobe AIR ready for Linux
 
 Adobe AIR for Linux Alpha-Release is available on Adobe Labs. It is a pre-release version and is alpha-ish at best.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook Under Scanner - Timeline Privacy
----
+# Facebook Under Scanner - Timeline Privacy
 
 Facebook seems to have gotten itself into yet another controversy. 
 

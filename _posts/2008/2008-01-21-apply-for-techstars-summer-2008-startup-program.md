@@ -1,7 +1,4 @@
----
-layout: post
-title: Apply for TechStars' Summer 2008 Startup Program
----
+# Apply for TechStars' Summer 2008 Startup Program
 
 <a href="http://www.techstars.org/">TechStars</a> is a Colorado-based initiative which aims at primarily filling in the startup funding gap, thus providing just enough capital to get your idea off the ground. A selected company or a team receives upto $15,000 in seed funding. However, it selects just the 10 best out of all the applicants. They had about 300 applicants last years of which only the <a href="http://www.techstars.org/companies/">creme ones</a> succeed.
 

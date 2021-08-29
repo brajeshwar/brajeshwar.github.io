@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe announced BlazeDS, AMF Specification goes Open Source
----
+# Adobe announced BlazeDS, AMF Specification goes Open Source
 
 On December 13th, Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200712/121307BlazeDS.html">announced</a> plans to release source code for its remoting and messaging technologies under a new open source product named <a href="http://www.adobe.com/go/blazeds/">BlazeDS</a>. BlazeDS is currently available as <a href="http://labs.adobe.com/technologies/blazeds/">beta</a> on Adobe Labs.
 

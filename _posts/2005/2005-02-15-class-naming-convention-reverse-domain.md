@@ -1,7 +1,4 @@
----
-layout: post
-title: Class naming convention, Reverse domain
----
+# Class naming convention, Reverse domain
 
 Well, there are still questions that we consider understood and took no further discussion. Today, a friend asked me why most people use the reverse domain name for class package naming convention; `com.oinam.util.MyClass`.
 

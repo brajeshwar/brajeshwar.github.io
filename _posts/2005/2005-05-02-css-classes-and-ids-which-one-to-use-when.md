@@ -1,7 +1,4 @@
----
-layout: post
-title: CSS classes and IDs, Which one to use when?
----
+# CSS classes and IDs, Which one to use when?
 
 I was trying out a way to float 4 DIVs inside a parent DIV on a quick site design, and this topic came up to my mind. I even explained this to a group of attendees at the [India MAX 2004](/2004/macromedia-max-2004-india-chapter/), Bangalore. Many times in the past, I have tried to get this archived but somehow slipped my mind, so, here we go.
 

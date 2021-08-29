@@ -1,7 +1,4 @@
----
-layout: post
-title: Paperless Journeys with Mobile Technology
----
+# Paperless Journeys with Mobile Technology
 
 We are already mobile while traveling, but that cannot be enough for the technologically enhanced world, and so there comes the advent of "Mobile Technology into the Travel Sector." <a href="http://www.abacus.com.sg/AboutAbacus/default.aspx">Abacus International</a> tells us more about the mobile trends of 2011. 
 

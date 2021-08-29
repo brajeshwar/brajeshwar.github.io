@@ -1,7 +1,4 @@
----
-layout: post
-title: BranchOut – LinkedIn's Biggest Competitor
----
+# BranchOut – LinkedIn's Biggest Competitor
 
 <a href="http://branchout.com/">BranchOut</a> is a popular Facebook application that is used to search new jobs and can connect with professionals across the globe. The <a href="http://apps.facebook.com/branchout/">BranchOut App</a> is used to recruit employees as well. 
 

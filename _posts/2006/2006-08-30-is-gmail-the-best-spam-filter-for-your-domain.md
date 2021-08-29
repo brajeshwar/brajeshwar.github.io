@@ -1,7 +1,4 @@
----
-layout: post
-title: Is Gmail the Best Spam Filter for your Domain?
----
+# Is Gmail the Best Spam Filter for your Domain?
 
 Very recently our domain `oinam.com` went in for [Gmail for Domains](/2006/gmail-for-domains-overactive-with-spams/) and we're currently using their [Google Apps for Your Domain](http://www.google.com/a/). Besides the security and privacy concerns that many user have, Google Apps for Domains is a very viable solution for a small to mid-size company. Currently, Google offers Gmail (for email), GTalk (Instant Messenger), Google Calendar and a simple web page creation tool.
 

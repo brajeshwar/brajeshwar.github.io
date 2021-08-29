@@ -1,7 +1,4 @@
----
-layout: post
-title: Boomerang - Assuring Email Delivery at Gmail
----
+# Boomerang - Assuring Email Delivery at Gmail
 
 If you are one of those with a cluttered mailbox and overstuffed folders with some of the drafts waiting to be sent and some mails awaiting a reply from you later, you are not to be blamed as we understand that having a clean tidy inbox is a rare sight. But you can now heave a sigh of relief and cheer. <a href="http://www.boomeranggmail.com/">Boomerang for Gmail</a> has arrived to conquer your inbox. It is a Firefox/Chrome plug-in exclusively meant for Gmail users which allows you to take control of when you send/receive your email messages. It will become a lot easier to manage the thousands of emails buried in your inbox, isn't it?
 

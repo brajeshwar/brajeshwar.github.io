@@ -1,7 +1,4 @@
----
-layout: post
-title: LiveShare from Cooliris
----
+# LiveShare from Cooliris
 There seem to be no lack of Photo sharing sites these days. <a href="http://www.liveshare.com/">LiveShare</a> is the newest offering from <a href="http://www.cooliris.com/">Cooliris</a>.  LiveShare is available for your phones (<a href="http://itunes.apple.com/us/app/id383848397?mt=8">iPhone</a>, <a href="http://market.android.com/details?id=com.cooliris.app.liveshare">Android</a> or <a href="http://social.zune.net/redirect?type=phoneApp&id=7daafbde-1f2f-e011-854c-00237de2db9e">Windows 7</a>) and also for the Web. LiveShare is targetted towards get-togethers, parties, sporting events, trips, and other experiences with friends and family, as multiple cameras share into the group photo streams you create.
 
 <iframe width="800" height="450" src="http://www.youtube.com/embed/FD6vfU5okuI" frameborder="0" allowfullscreen></iframe>

@@ -1,7 +1,4 @@
----
-layout: post
-title: New tool for fighting Internet censorship likely ineffective
----
+# New tool for fighting Internet censorship likely ineffective
 
 International electronic communications are essential to global trade and relations. Censorship programs of some countries can make this seem impossible. Fortunately, they are developing ways to overcome these barriers.
 

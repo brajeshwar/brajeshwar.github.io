@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft plans on showing off its 'Cloud Power'
----
+# Microsoft plans on showing off its 'Cloud Power'
 
 The time has arrived for Microsoft to start 'showing off' it's much talked about 'cloud power'. There were quite a few technology <a href="http://www.advertisertalk.com/microsoft-outlines-opportunity-in-the-cloud-and-on-devices-at-professional-developers-conference-2010-2-16606.zhtml">news articles</a> that were focused on Microsoft venturing into the Cloud Computing arena; and it is about time for them to make some noise which shall enable them to fetch some business. By noise, I mean advertising campaigns. 
 

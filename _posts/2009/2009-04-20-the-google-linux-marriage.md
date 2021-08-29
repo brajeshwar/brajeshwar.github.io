@@ -1,7 +1,4 @@
----
-layout: post
-title: The Google-Linux Marriage
----
+# The Google-Linux Marriage
 
 It has been quite a while now that stories of Google's Linux supported desktop have been doing rounds over the technology news websites across the world. This has been an interesting move by Google. From providing the support for <a href="http://desktop.google.com/linux/index.html">Google gadgets</a> on Linux to now providing an entire Google desktop for Linux users!
 

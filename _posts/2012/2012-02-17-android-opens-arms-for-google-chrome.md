@@ -1,7 +1,4 @@
----
-layout: post
-title: Android 'Opens Arms' for Google Chrome
----
+# Android 'Opens Arms' for Google Chrome
 
 Google Chrome is one of the most suave and user friendly browsers. This browser is mostly used as a style statement due to its vogue user interface and themes. The good news for Chrome lovers and Android owners is that google has started offering the beta version of the <a href="http://chrome.blogspot.com/2012/02/introducing-chrome-for-android.html">chrome browser for the android users</a>. On the flip side, the chrome browser is only available for the android devices that use Android version 4.0 or popularly known as the Ice Cream Sandwich. Currently only 1% of the Android population are on <a href="https://market.android.com/details?id=com.android.chrome">Ice Cream Sandwich Android devices</a>.
 

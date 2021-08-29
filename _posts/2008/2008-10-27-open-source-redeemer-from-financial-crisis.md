@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source - The Redeemer from the Financial Crisis
----
+# Open Source - The Redeemer from the Financial Crisis
 
 The stories of the Great Depression of 1930's have become so common to everyone's ears nowadays. The economic slump of the 1930's took almost 15 years to completely restore back to the original condition of the economy. We should be considered lucky that we do have some alternative source to earn money as compared to the bread earners of that era. Today's common man in his leisure time as a result of "The October 08 Crash" will be sitting in front of their computers uploading his limited knowledge on the net which allows him to do so.
 

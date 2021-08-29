@@ -1,7 +1,4 @@
----
-layout: post
-title: Multiple Sitemaps on a single Domain
----
+# Multiple Sitemaps on a single Domain
 
 Do you have more than one website, or rather lots of them? You can now reduce one hassle of the many that goes in maintaining lots of websites, blogs -- the ability to place Sitemaps for multiple hosts on a single host through robots.txt.
 

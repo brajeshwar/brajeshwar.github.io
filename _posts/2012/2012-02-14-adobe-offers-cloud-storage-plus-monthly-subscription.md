@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Offers Cloud Storage Plus Monthly Subscription
----
+# Adobe Offers Cloud Storage Plus Monthly Subscription
 
 Over the years Adobe has pioneered in offering excellent design tools. Applications released by Adobe are integral part of all kinds of computer users worldwide. Adobe has introduced excellent tools that can be used to create stunning visuals by including not only text but also photos and animations.
 

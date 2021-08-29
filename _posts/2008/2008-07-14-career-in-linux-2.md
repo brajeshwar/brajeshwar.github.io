@@ -1,7 +1,4 @@
----
-layout: post
-title: Thinking about career in Linux? Part 2
----
+# Thinking about career in Linux? Part 2
 
 ![Career in Linux)](/static/2008/linux-career-2.jpg)
 

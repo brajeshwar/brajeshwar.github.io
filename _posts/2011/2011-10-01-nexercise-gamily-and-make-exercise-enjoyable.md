@@ -1,7 +1,4 @@
----
-layout: post
-title: Nexercise - gamify and make exercise enjoyable
----
+# Nexercise - gamify and make exercise enjoyable
 
 <a href="http://www.nexercise.com/">Nexercise</a> is a free iPhone game that encourages people to exercise more frequently and consistently, by making the experience of exercising more fun and rewarding.
 

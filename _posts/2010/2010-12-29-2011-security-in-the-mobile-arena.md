@@ -1,7 +1,4 @@
----
-layout: post
-title: 2011 - Security in the Mobile Arena
----
+# 2011 - Security in the Mobile Arena
 
 Security organization McAfee has professed that 2011 will see increased attacks on Apple merchandise like the iPhone and iPad, largely due to their in the business sector. McAfee said that Macs had thus far not been often targeted by malicious attackers, because they are not widely deployed.
 

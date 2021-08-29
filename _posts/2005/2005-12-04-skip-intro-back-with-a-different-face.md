@@ -1,7 +1,4 @@
----
-layout: post
-title: Skip Intro back with a different Face?
----
+# Skip Intro back with a different Face?
 
 Blame it on *Skip Intro* for the Flash 99% Bad name. But honestly, I feel that history is being repeated here. If you look around, you will see bold experiments, wild prototypes done in ActionScript 3.0 and post Flash Player 8, which were not doable in Flash before. I am not trying to point fingers are anybody, nobody at all and the remaining part of this article is purely my presonal speculation.
 

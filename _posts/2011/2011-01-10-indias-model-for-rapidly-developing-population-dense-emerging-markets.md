@@ -1,7 +1,4 @@
----
-layout: post
-title: India's Model for Rapidly Developing Population Dense Emerging Markets
----
+# India's Model for Rapidly Developing Population Dense Emerging Markets
 <p>India has been on the cutting edge of technology and emerging trends since the 1990s and they have created a customizable system for other population dense countries looking to rapidly develop to bring the bulk of their population into the new technological revolution. </p>
 <p>Since India's rapid development started in the 1990s it has become the 11th largest economy in the world and has the 4th largest purchasing power parity.  It also has approximately 1/6th of the worlds 6 billion+ people, 80% of who are barely accounted for statistically.</p>
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Known Issues with Flash Player 9 for Linux
----
+# Known Issues with Flash Player 9 for Linux
 
 Adobe released the Flash Player 9 for Linux 2 days ago. Here are the list of known issues;
 

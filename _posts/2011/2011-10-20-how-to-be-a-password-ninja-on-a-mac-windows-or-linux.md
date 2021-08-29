@@ -1,7 +1,4 @@
----
-layout: post
-title: How to be a Password Ninja on a Mac, Windows or Linux
----
+# How to be a Password Ninja on a Mac, Windows or Linux
 
 You've heard about it, read about it but very few manage to have complex passwords for all your services - Email, Facebook, Twitter, _et al_. The consensus to have a safer online experience and hopefully, prevent hackers, crackers and script kiddies from gaining access to your accounts is to have a complex password - _UPPERCASE + lowercase + numbers + special characters_ - and a unique different one for each of your accounts.
 

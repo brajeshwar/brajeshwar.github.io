@@ -1,7 +1,4 @@
----
-layout: post
-title: Stop the Window Animation in Mac OS X Lion
----
+# Stop the Window Animation in Mac OS X Lion
 
 You can get rid of the Window Opening Animation in Lion. Run this command in your Terminal.
 

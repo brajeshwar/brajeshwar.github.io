@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe will get Macromedia Development centre
----
+# Adobe will get Macromedia Development centre
 
 Some of the fallouts happening in India, as global Tech Giants consolidate, are the mergers. The business circle is ripe with the fact that it is only logical that Macromedia Development centre in Bangalore will be merged with the Adobe Development Centre in India. It is also learnt that Macromedia's 8.1% stake in Mumbai-based mobile gaming company, Indiagames, is moving to [Adobe India](http://www.adobe.co.in/) too. A combined stake of 18.2% in [Indiagames](http://www.indiagames.com/) was acquired by [Macromedia](https://www.macromedia.com/) and [Cisco Systems](http://www.cisco.com/) for $4m from existing Investor [TOM Online](http://www.tom.com/) recently.
 

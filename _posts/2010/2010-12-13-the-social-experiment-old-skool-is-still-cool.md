@@ -1,7 +1,4 @@
----
-layout: post
-title: The Social Experiment - Old Skool is Still Cool
----
+# The Social Experiment - Old Skool is Still Cool
 
 In today's connected world, have you ever looked back at the times when we had conversations with loved ones face to face, hand in hand or if that wasn't possible we wrote them hand written letters on hand made paper adorned with hand crafted insignia or memorabilia? Nostalgic isn't it? Today I'd rather meet people on Facebook, exchange notes on Twitter and read/send mail on my Blackberry. In fact I almost loathe having to make a telephonic conversation. Why can't you just email/txt/IM me instead? And I'm no teeny bopper, I'm a man entering middle age mind you. So imagine today's youth doomed with the prospect of no connectivity. How would they respond to such a world?
 

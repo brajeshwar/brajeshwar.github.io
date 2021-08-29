@@ -1,7 +1,4 @@
----
-layout: post
-title: Getting better conversions with location-based SEO
----
+# Getting better conversions with location-based SEO
 <p>Marketers often get a lot of exposure and traffic to their website, but the actual conversions they receive may be much lower than they hope. The problem isn't always the amount of traffic they are receiving, but who is actually coming to their website. One of the most common problems entrepreneurs face is that they are reaching people outside their zone of business.  </p>
 <p>A photographer I know told me that his website gets tens of thousands of visitors a month. Unfortunately, the traffic he is getting is coming from people at least 500 miles away. I told him that he needs to focus on developing a location-based marketing strategy so that he can reach people in the San Francisco area.</p>
 

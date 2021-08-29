@@ -1,7 +1,4 @@
----
-layout: post
-title: Entrepreneur Journeys by Sramana Mitra
----
+# Entrepreneur Journeys by Sramana Mitra
 
 Using her own intimate knowledge of the entrepreneurial world, in this book renowned strategist and Forbes columnist Sramana Mitra captures the stories of entrepreneurs that have come before to help those who are looking to learn. Offering readers an inside view of how to navigate an entrepreneurial path, Mitra synthesizes candid conversations with her own incisive analysis, to create a unique set of case studies.
 

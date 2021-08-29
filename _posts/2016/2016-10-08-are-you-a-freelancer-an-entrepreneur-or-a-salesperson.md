@@ -25,7 +25,7 @@ Most experts believe that customers buy for emotional reasons and also because t
 
 Large brands and companies with good funding resources can afford to invest in substantial marketing campaigns. However, for most freelancers and entrepreneurs, this type of investment is impossible.
 
-![Salesperson)](/static/2016/salesperson.jpg)
+<img class="small right" src="/static/2016/salesperson.jpg" alt="Salesperson" loading="lazy">
 
 ## How then can you build customer trust and make sales quickly and easily?
 

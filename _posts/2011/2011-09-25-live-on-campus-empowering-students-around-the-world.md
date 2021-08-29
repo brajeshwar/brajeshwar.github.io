@@ -1,7 +1,4 @@
----
-layout: post
-title: Live On Campus Empowering Students Around The World
----
+# Live On Campus Empowering Students Around The World
 
 Most people choose one college but are always curious about life at others. <a href="http://liveoncampus.com/">Live On Campus</a> allows a person to indulge their curiosity and live vicariously through the content from other campuses. Live On Campus hopes to bring the world a little closer in helping everyone appreciate the diversity of campuses around the world.
 

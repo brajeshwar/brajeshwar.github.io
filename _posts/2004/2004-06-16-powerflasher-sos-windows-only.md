@@ -1,7 +1,4 @@
----
-layout: post
-title: PowerFlasher SOS (Windows Only)
----
+# PowerFlasher SOS (Windows Only)
 
 Power Flasher SOS (SocketOutputServer) is a XML Socket server with a graphic user interface. Connected clients can send messages to SOS. These messages are shown in SOS. Further on commands from SOS to Client can be sent. These are freely configurable.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Chrome Browser - On a High
----
+# Google Chrome Browser - On a High
 
 After the <a href="http://www.thesitewizard.com/webdesign/decline-and-fall-of-ie-6.shtml">downfall of the Internet Explorer 6</a> in the browser market, Microsoft didn't faced only the clamouring of the web developers and proprietor but also had to come up with a new upgraded browser as soon as possible. According to the Net Application, IE has always been foremost runner up in the race of the Net Market and then comes Firefox and chrome. Though IE owns more than a half of the market share, it lost one point of share from October's 59.26% to November's 58.26% and <a href="http://www.google.com/chrome/">Chrome</a> gained from 8.47% to 9.27%. Firefox is losing its market share by just insignificant number in points and; it should be worried as the new upgraded browser of IE and chrome are luring its users.
 

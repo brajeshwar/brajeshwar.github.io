@@ -1,7 +1,4 @@
----
-layout: post
-title: Harry Potter and the Half-Blood Prince
----
+# Harry Potter and the Half-Blood Prince
 
 The much anticipated 6th book of [J.K. Rowling](http://www.jkrowling.com/), Harry Potter and the Half-Blood Prince was released on Jul 16, 2005. The release was synchronized all across the globe, including India. I got my copy on the very first day!
 

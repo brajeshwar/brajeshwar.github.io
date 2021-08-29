@@ -1,7 +1,4 @@
----
-layout: post
-title: Opera 11 Browser maintains its Small Cult-like Following after 15 years
----
+# Opera 11 Browser maintains its Small Cult-like Following after 15 years
 
 Longtime underdog <a href="http://www.opera.com/">Opera</a> Software has released its browser Opera 11. Opera's browser has developed a small cult-like following since its inception in 1996, its following based primarily on its speed, innovation and open-source ideals. In a series of browser firsts, Opera was the first browser to introduce tabbed browsing which has now become the industry standard.
 

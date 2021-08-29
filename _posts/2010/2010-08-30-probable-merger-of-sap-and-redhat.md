@@ -1,7 +1,4 @@
----
-layout: post
-title: Probable merger of SAP and RedHat - a slim chance
----
+# Probable merger of SAP and RedHat - a slim chance
 
 Though there seemed to be quite a few <a href="http://localtechwire.com/business/local_tech_wire/opinion/blogpost/8180415/">rumors</a> of a possible buyout plan being staged by <a href="http://www.sap.com/index.epx">SAP</a> to takeover <a href="http://www.redhat.com/">RedHat</a>. Various industry executives believe otherwise; stating that the likelihood of such an acquisition to take place are quite slim.
 

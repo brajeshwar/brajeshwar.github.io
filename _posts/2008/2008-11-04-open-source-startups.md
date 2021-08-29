@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source Startups
----
+# Open Source Startups
 
 It is indeed a very gratifying feeling for open source advocates like us to know that there exists an immense business potential in this venture. Given a chance,  a lot of employees would opt for a startup as it is normal human psyche to pay more attention to a business which is private owned as compared to others. It is the same with Open Source hackers who do the stuff they do because they enjoy doing it; so what if professionals call them amateurs? The point here is that if an open source user enjoys his work, he (considering the masculine) should seriously consider a new business venture out of it.
 

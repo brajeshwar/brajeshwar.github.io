@@ -1,7 +1,4 @@
----
-layout: post
-title: brajeshwar (at) yahoo (d0t) com
----
+# brajeshwar (at) yahoo (d0t) com
 
 I signed up for a [Yahoo!](http://www.yahoo.com/) and a [Hotmail](http://www.hotmail.com/) account in 1999. I have the Hotmail account under my control but I forgot my password for Yahoo!
 

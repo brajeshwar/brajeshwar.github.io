@@ -1,7 +1,4 @@
----
-layout: post
-title: Customized Corporate Courses in Flash-Actionscript
----
+# Customized Corporate Courses in Flash-Actionscript
 
 Very recently, I had the opportunity to interact with the CEO (Himanshu Mody) of [Tekno Point](http://teknopoint.info/). This centre provides Advanced Flash-Actionscript courses, corporate courses, on-site courses besides its regular course at their centre at Andheri (west), Mumbai, India. With their quality oriented approach, I was more than happy to be related to them. Some of their prominent clients includes that of ICICI infotech, Mahindra British Telecom, L&T Infotech. They have recently launched their Advanced Flash MX 2004/Actionscript 2.0 Advanced courses.
 

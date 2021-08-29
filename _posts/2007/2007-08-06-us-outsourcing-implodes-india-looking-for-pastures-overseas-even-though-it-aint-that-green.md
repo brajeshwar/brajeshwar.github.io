@@ -1,7 +1,4 @@
----
-layout: post
-title: US outsourcing implodes, India looking for pastures overseas even though it ain't that green
----
+# US outsourcing implodes, India looking for pastures overseas even though it ain't that green
 
 It wasn't a total surprise but I felt a little awkward when I read <a href="http://money.cnn.com/magazines/fortune/fortune_archive/2007/08/06/100141303/">the news</a> about a big Indian Outsourcing giant setting up a customer-service call center in Reno, Ohio (US). This is at a juncture when the western and the european world feels India and China like itches that you can't really scratch; and when a tangent of love-hate relationship is growing organically on its own.
 

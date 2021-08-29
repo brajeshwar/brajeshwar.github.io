@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 Reasons Why a Newbie should try Ubuntu
----
+# 5 Reasons Why a Newbie should try Ubuntu
 
 To quench my thirst of experiencing Linux, I started my journey way back in the year 2000 with RedHat 6. It was not a love at first sight and I had to reinstall Windows 2000 on my machine since I was too young to understand the concept of dual-boot! LiveCD was something I never knew in my dreams even! The very thought of messing up my windows installation while trying to get things fixed with Linux haunted me for days.
 

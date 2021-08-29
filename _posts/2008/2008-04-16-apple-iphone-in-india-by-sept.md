@@ -1,7 +1,4 @@
----
-layout: post
-title: Official Apple iPhone in India by September
----
+# Official Apple iPhone in India by September
 
 Named "Invention of the Year 2007" by Times Magazine, the iPhone is an "Amazing" Phone. The above ad/video is one of Apple's iPhone Ads.
 

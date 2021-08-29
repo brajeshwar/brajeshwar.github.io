@@ -1,7 +1,4 @@
----
-layout: post
-title: Oracle, thus spake the
----
+# Oracle, thus spake the
 
 Ok, let me not do the prediction part but let us see some few things that is likely to happen in the future of Flash Development, or should be better called it web development. For the past couple of months, there had been many a project proposals for Rich Internet Applications and near-RIAs, couple of which really fit into the realm of what Macromedia Central is most likely to do. Until Macromedia Central becomes public, `Screenweaver MX`, Flash Studio Pro and SWF Studio are the solutions which can be use to mimic a bit of what is expected of such applications.
 

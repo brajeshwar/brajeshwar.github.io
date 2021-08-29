@@ -1,7 +1,4 @@
----
-layout: post
-title: The only social networking strategy that works
----
+# The only social networking strategy that works
 
 There is a lot of debate in the entrepreneurial community on the effectiveness of social networking. The reason why they are in disagreement over the return they can receive from social networking is because only the ones who do it right understand how well it can work.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: TemplateBrowser is pirating your Wordpress Themes
----
+# TemplateBrowser is pirating your Wordpress Themes
 
 Few days back, I read <a href="http://5thirtyone.com/archives/837">5thirtyOne</a> reporting about `TemplateBrowser` re-distributing Wordpress Themes (and Joomla Templates) and adding malware links. Templates Browser have modified the public blog themes in such a way as to exploit the end user by inserting hidden spam or malware links and removing the Author credits.
 

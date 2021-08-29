@@ -1,7 +1,4 @@
----
-layout: post
-title: Bring your Web App Home - Get Fluid
----
+# Bring your Web App Home - Get Fluid
 
 Recently I have been writing a lot of reviews of web applications and the trend today reflects people's preferences. Everyone is moving their favorite desktop applications online. The cloud is my home, not the desktop! Web applications like <a href="http://www.gmail.com/">Gmail</a>, <a href="http://www.facebook.com/">Facebook</a>, <a href="http://campfirenow.com/">Campfire</a>, <a href="http://workflowy.com/">WorkFlowy</a>, <a href="http://www.freshbooks.com/">Freshbooks</a> and <a href="http://www.pandora.com/">Pandora</a> are becoming more and more like desktop applications every day. However running each of these web apps in an individual tab in your browser can be a real pain. I have twenty five open tabs at any given time in my browser window and while that is not over the top, apps that are AJAX or Flash driven consume too much memory for my browser's liking.
 

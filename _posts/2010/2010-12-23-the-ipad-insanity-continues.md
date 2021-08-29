@@ -1,7 +1,4 @@
----
-layout: post
-title: The iPad insanity continues
----
+# The iPad insanity continues
 
 Many technologists felt that a product that was essentially a hybrid of a cell phone and a laptop couldn't possibly take off.  They have to hold their tongues now, as Apple's iPad has clearly taken on a large following. In fact, it's inception marked the largest turnaround for a major corporation in business history. The iPad has been so successful that Apple has racked their brains for every possible idea they can come up with to leverage those sales even further.
 

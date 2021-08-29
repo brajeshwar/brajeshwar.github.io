@@ -1,7 +1,4 @@
----
-layout: post
-title: Wondershare Photo Recovery for Mac
----
+# Wondershare Photo Recovery for Mac
 
 Data recovery has been one of the most talked about aspects of computing, ever since we realized the importance of data storage. Irrespective of a file format or the operating system we work on, it becomes a dire need to be able to recover files which might have been deleted accidentally.
 

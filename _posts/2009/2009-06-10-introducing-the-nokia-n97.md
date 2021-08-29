@@ -1,7 +1,4 @@
----
-layout: post
-title: Introducing the Nokia N97
----
+# Introducing the Nokia N97
 
 <a href="http://www.linkedin.com/pub/axel-meyer/4/b6b/569">Axel Meyer</a>, the Nokia NSeries Head of Design, was in India to do a showcase preview of the new <a href="http://www.nokia.com/n97/">Nokia N97</a>. Meyer was convinced about people relate to one another, how the Nokia N97 can be a natural part of sharing, be it text, photos or videos over the currently available social mediums like the Facebook, Flickr or just plain blogging.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Venture Capitalist prefer investing in Startups to Stock Market
----
+# Venture Capitalist prefer investing in Startups to Stock Market
 
 I was reading the Business & World section of the <a href="http://www.hindustantimes.com/">Hindustan Times</a> and something caught my fancy - VCs prefer start-ups to stock market. The realm of VCs, Angel-funding, Startups is rather new in India and more importantly weird to most of the common Indian masses - be it IT, ITES, Programmers and budding entrepreneurs.
 

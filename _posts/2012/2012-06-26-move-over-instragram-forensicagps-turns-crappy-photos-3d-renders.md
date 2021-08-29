@@ -1,7 +1,4 @@
----
-layout: post
-title: Move Over Instragram - ForensicaGPS turns crappy photos into 3D Renders
----
+# Move Over Instragram - ForensicaGPS turns crappy photos into 3D Renders
 
 Rarely are thieves, animators and illustrators frightened by the same technology -- but all of the above should be on the lookout for Animetrics' new software - [Forensica GPS](http://animetrics.com/?content=products/forensicaGPS). This new software-based technology is able to turn low-res photos into stunning 3D renders. 
 

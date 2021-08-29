@@ -1,7 +1,4 @@
----
-layout: post
-title: Practical Typography - a must-read free book
----
+# Practical Typography - a must-read free book
 
 I just finished reading Matthew Butterick's online book - [Practical Typography](http://practicaltypography.com/). It's an awesome book with an equally impressive design.
 

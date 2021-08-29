@@ -1,7 +1,4 @@
----
-layout: post
-title: Is Open Source killing small developers?
----
+# Is Open Source killing small developers?
 
 What comes to your mind if you ever think of the future of software prices?  Experts have often predicted that software in the future will be available for free. One would need to pay just for the support. <a href="http://www.briangardner.com">Brian Gardner</a>'s famous <a href="http://www.revolutiontwo.com">WP themes</a> is just an example! This would result in the reduction in business profits of millions of software developers across the globe. One of the prime reasons for this is the Open Source technology. It actually should give all Open Source lovers a reason to smile as most of the software may be available to all for free in the future.
 

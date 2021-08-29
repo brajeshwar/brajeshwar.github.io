@@ -1,7 +1,4 @@
----
-layout: post
-title: Love LibreOffice for Four Special Reasons
----
+# Love LibreOffice for Four Special Reasons
 
 LibreOffice comes as <a href="http://www.pcworld.com/businesscenter/article/206434/libreoffice_is_good_news_for_openoffice.html">good news</a> for those worried about Oracle's recent decision to unplug <a href="http://opensolaris.org/">OpenSolaris</a>. OpenOffice.org users who have been worried could finally breathe a sigh of relief after a community of independent developers gave birth to their latest open source project named LibreOffice. Known as <a href="http://www.documentfoundation.org/">The Document Foundation</a>, the independent OpenOffice.org community declared the first release candidate of LibreOffice which could well be the beginning of a brand new open source productivity suite.
 

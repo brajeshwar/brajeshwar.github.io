@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia Central, Flashcomm 1.5 & Flash player 6 for Device
----
+# Macromedia Central, Flashcomm 1.5 & Flash player 6 for Device
 
 Now some more good news from Macromedia and some of the best news at that. Take them one by one (a) Macromedia Flash communication Server MX 1.5 is released (b) Macromedia Flash Player 6 plug-in for device is released and (c) Macromedia Central & Royal are born.
 

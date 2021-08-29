@@ -1,7 +1,4 @@
----
-layout: post
-title: Valuable Tips to Project a Startup's Financial Performance
----
+# Valuable Tips to Project a Startup's Financial Performance
 
 Every start-up firm that takes birth initially is very enthusiastic about putting every plan into place, 75% of them end up executing everything that is planned too. But this only lasts for about one year or maximum two years. Post which, they get complacent and see that everything is falling into place on its own; hence stop forecasting the company's financial future on a regular basis. Another argument put forward by most start-up entrepreneurs is that no one can predict the future. Honestly, yes no one can actually predict the exact future. But surely people can speculate what could go right or wrong in the future as far as the company's finances are concerned.
 

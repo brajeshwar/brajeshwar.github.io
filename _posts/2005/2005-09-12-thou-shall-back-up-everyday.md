@@ -1,7 +1,4 @@
----
-layout: post
-title: Thou shall back-up everyday
----
+# Thou shall back-up everyday
 
 Whoever, whatever you are; if you use a computer, the first and foremost rule you should follow is *backup* your data all the time! I was out to Bangalore (INDIA) as our team is planning to spread our research wing there. But when I returned to Mumbai, I realized that the Hard Disc of my IBM Thinkpad R51 have crashed!
 

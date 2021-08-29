@@ -1,7 +1,4 @@
----
-layout: post
-title: Damn! I have to share this tip
----
+# Damn! I have to share this tip
 
 The way I organize my files, folders and everything else on my desktop, including my laptop, is that I keep all data files and everything else on a different drive than the operating system / program files. This definitely helps me in doing a very easy, click-clack-click format of my primary installation drive and be up and running fast enough with every of my data intact and all setting in place in a considerable quick time. Actually, I have a whole drive just for the program installation and another separate drive for my data files (40 GB for the Programs/OS + 80 GB for the data drive, with my current desktop configuration).
 

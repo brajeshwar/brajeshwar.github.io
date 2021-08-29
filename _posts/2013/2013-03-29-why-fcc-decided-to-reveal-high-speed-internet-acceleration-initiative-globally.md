@@ -1,7 +1,4 @@
----
-layout: post
-title: Why FCC decided to Reveal High Speed Internet Acceleration Initiative Globally
----
+# Why FCC decided to Reveal High Speed Internet Acceleration Initiative Globally
 
 Technological advancements are being introduced at increasingly fast rates around the world. Several companies, especially those operating in the Information Technology industry, have had to make adjustments to their strategies because being there first can identify you as a revolutionary organization that is known for innovation. Whereas getting there a bit late can label you a follower, which is a label that is extremely hard to shrug off. 
 

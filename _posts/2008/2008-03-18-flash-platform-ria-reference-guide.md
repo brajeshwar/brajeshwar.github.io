@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe technology platform ActionScript reference for RIA development
----
+# Adobe technology platform ActionScript reference for RIA development
 
 Mike Chamber got a nice BIG printable PDF reference guide -- <a href="http://www.adobe.com/devnet/actionscript/articles/atp_ria_guide.html">Adobe technology platform ActionScript reference for RIA development</a>, and it provides a complete ActionScript 3 API listing for Flash Player, Adobe AIR and Flex 3.
 

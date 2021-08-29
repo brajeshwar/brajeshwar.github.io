@@ -1,7 +1,4 @@
----
-layout: post
-title: Size DOES matter - Just Ask IBM About Their New 120 PETABYTE Storage system
----
+# Size DOES matter - Just Ask IBM About Their New 120 PETABYTE Storage system
 
 In the never-ending race to build the biggest and most bitchin' hardware on the planet, IBM has taken the lead. Again!
 

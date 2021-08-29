@@ -1,7 +1,4 @@
----
-layout: post
-title: Free Apple Developer Guides for X'mas
----
+# Free Apple Developer Guides for X'mas
 
 For all those Mac or iOS developers hard at work coding ceaselessly, lest Santa thinks you've been naughty here's some good news! Santa's coming early, bringing with him <a href="http://www.apple.com/">Apple's</a> latest offering of a bunch of iOS and Mac development books in the iBookstore for Free!
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: UnPluggd 3 coming this July 9 (Bangalore)
----
+# UnPluggd 3 coming this July 9 (Bangalore)
 
 One of the very popular Startup and Entrepreneur event, <a href="http://www.pluggd.in/unpluggd/">Unpluggd</a> is being held this July 9th in Bangalore.
 

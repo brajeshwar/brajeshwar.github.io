@@ -1,7 +1,4 @@
----
-layout: post
-title: History Panel - Flash MX 2004/Professional
----
+# History Panel - Flash MX 2004/Professional
 
 You can now save the steps that you do in Flash authoring environment, replay them for your active Flash document. "The history panel can be used to undo or redo individual or multiple steps at once. You can apply steps from the history panel to the same object or to a different object in the document. However, you can't re-arrange the order of steps in the History panel. The History panel is a record of steps in the order in which they are performed".
 

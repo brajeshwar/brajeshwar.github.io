@@ -1,7 +1,4 @@
----
-layout: post
-title: Handling HTTP GET Requests in Java Servlets
----
+# Handling HTTP GET Requests in Java Servlets
 
 Earlier, we've <a href="/2008/java-servlets-an-introduction/">introduced you to Java Servlets</a> -- what they are, life cycle, advantages. Let's move ahead with Java Servlets and get some simple code to handle the HTTP GET Request to show you how to write a servlet.
 

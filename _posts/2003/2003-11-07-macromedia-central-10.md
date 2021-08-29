@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia Central
----
+# Macromedia Central
 
 Hope, I am not so late on posting something for Central, I am infact posting this as an inauguration of my category archive for "Macromedia Central" and a reminder/reference for me and everyone else. <a href="http://www.macromedia.com/software/central/" title="macromedia central">Macromedia Central</a> is an environment, a special browser made just for flash.
 

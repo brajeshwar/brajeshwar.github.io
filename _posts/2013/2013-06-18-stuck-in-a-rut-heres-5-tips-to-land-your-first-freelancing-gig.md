@@ -1,7 +1,4 @@
----
-layout: post
-title: Stuck in a rut? 5 tips to get your first freelancing gig
----
+# Stuck in a rut? 5 tips to get your first freelancing gig
 
 Many people tend to think that freelancing is easy-peasy, that they will just fling their resignation letter into their boss' faces one day with a dramatic monologue to accompany it and ride off into the sunset where the land of milk and honey awaits.
 

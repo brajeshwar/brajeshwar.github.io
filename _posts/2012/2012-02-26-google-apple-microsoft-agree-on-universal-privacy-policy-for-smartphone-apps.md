@@ -1,8 +1,5 @@
----
-layout: post
-title: Google, Apple & Microsoft agree on Universal Privacy Policy for Smartphone
+# Google, Apple & Microsoft agree on Universal Privacy Policy for Smartphone
   Apps
----
 
 Apparently the U.S. Government hasn't heard that privacy is dead.
 

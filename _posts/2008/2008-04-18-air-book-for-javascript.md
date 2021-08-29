@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe AIR for JavaScript Developers
----
+# Adobe AIR for JavaScript Developers
 
 Reading Mike Chambers <a href="http://www.mikechambers.com/blog/2008/04/17/download-adobe-air-10-for-javascript-developers-book/">latest post</a> let me to Ajaxian's article on the release of the free eBook -- <a href="http://ajaxian.com/archives/adobe-air-for-javascript-developers-pocketguide">Adobe AIR for JavaScript Developers Pocketguide</a>.
 

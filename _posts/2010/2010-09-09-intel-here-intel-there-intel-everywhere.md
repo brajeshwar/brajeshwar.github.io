@@ -1,7 +1,4 @@
----
-layout: post
-title: Intel here; Intel there; Intel everywhere.
----
+# Intel here; Intel there; Intel everywhere.
 
 Apart from Intel's big <a href="http://online.wsj.com/article/SB10001424052748703453804575480012132581550.html">acquisition plans</a> to expand its business, the <a href="http://www.intel.com/">Sponsors of Tomorrow</a> also have intentions of coming up with new uses for its Atom processor. The idea is for the Atom processor to be present in as many products (electronic devices other than computers or mobile phones). It is this very idea that has prompted Intel to <a href="http://stocks.investopedia.com/stock-analysis/2010/Intel-Buys-Its-Way-Into-Wireless-INTC-IFNNY-AAPL-QCOM-ARMH-QCOM-BRCM0831.aspx">buyout Infineon</a> with the aim of paving its way into the wireless business; whereby the mobile phone market has been a weak link for Intel. 
 

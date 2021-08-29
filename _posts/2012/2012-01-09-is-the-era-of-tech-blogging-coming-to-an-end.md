@@ -1,7 +1,4 @@
----
-layout: post
-title: Is the era of Tech Blogging coming to an end?
----
+# Is the era of Tech Blogging coming to an end?
 
 Statistical trends show that the <a href="http://www.readwriteweb.com/enterprise/2011/12/rip-the-golden-age-of-tech-blo.php">golden age of tech blogging</a> has come to an end. This is almost the end of an era, as the tech blogosphere is over. According to famous tech bloggers analysts, there are some valid <a href="http://www.web-strategist.com/blog/2011/12/27/end-of-an-era-the-golden-age-of-tech-blogging-is-over/">reasons for this change</a> and for the extinction of tech blogging.
 

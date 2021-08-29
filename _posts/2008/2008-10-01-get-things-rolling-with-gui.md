@@ -1,7 +1,4 @@
----
-layout: post
-title: Get things rolling with GUI
----
+# Get things rolling with GUI
 
 We've been advocating the use of command line interface since day one of our Linux adventure. This was not meant to make it sound 'geeky'; nor does it make you stand out and sophisticated. The idea was clear -- to make things more apt and generic. However, if you're still afraid of trying things out on a terminal and wish to have a ride with all-things-graphic, we've come up with a few measures which get things done via a GUI.
 

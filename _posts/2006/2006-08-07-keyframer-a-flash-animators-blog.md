@@ -1,6 +1,3 @@
----
-layout: post
-title: Keyframer - a Flash Animator's Blog
----
+# Keyframer - a Flash Animator's Blog
 
 Well, I wasn't aware that [Chris Georgenes](http://www.mudbubble.com/) was blogging. Chris is one of the best Flash animators of the world. Today, I saw a hit-back to my site from [Keyframer](http://www.keyframer.com/) and well, Chris had been blogging since March 2006. I once did asked if there are any more Flash Designers and Developers who are not blogging and he commented he was not.

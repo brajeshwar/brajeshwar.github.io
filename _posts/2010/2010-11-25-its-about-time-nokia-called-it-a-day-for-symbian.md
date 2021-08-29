@@ -1,7 +1,4 @@
----
-layout: post
-title: It's about time Nokia 'called it a day' for Symbian
----
+# It's about time Nokia 'called it a day' for Symbian
 
 The time has definitely come for Nokia to retire its OS product wing - Symbian and make way for newer and better solutions; which are first and foremost user-friendly and tailor-made for the next-gen consumers. Symbian for many has not been quite able to match up to other competing OS like Google's Android or the infamous Apple iOS. The God-send kind of an <a href="http://www.pcworld.com/businesscenter/article/182471/nokia_ousts_symbian_os_from_highend_handsets.html">announcement</a> to do away with Symbian came from Nokia at the same time last year; however Nokia took a sudden U-turn about 2 weeks ago and <a href="http://www.pcworld.com/article/188521/symbian_os_now_fully_open_source.html">withdrew</a> the closure of Symbian by taking complete control of the open source Symbian project. 
 

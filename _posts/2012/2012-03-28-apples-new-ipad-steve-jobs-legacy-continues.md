@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple's New iPad - Steve Jobs' Legacy Continues
----
+# Apple's New iPad - Steve Jobs' Legacy Continues
 
 Realize it or not, a bit of an Apple a day, keeps the techie in you happy!
 

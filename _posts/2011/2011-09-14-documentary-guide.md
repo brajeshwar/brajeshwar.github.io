@@ -1,7 +1,4 @@
----
-layout: post
-title: Documentary Guide
----
+# Documentary Guide
 
 Are you into Documentaries? Do you love to learn about facts, dive deeper into controversies and get to the bottom of news that makes surface headlines?
 

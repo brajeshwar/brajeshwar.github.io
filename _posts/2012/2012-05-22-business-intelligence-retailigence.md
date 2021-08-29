@@ -1,7 +1,4 @@
----
-layout: post
-title: Business Intelligence with Retailigence
----
+# Business Intelligence with Retailigence
 
 Peter Christianson's resume, as he tells it, is like a who's who of NASDAQ success stories - so when he lent his talents to new startup, <a href="http://www.retailigence.com/">Retailigence</a>, people paid attention.
 

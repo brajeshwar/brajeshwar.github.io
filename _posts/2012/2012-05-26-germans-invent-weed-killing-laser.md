@@ -1,7 +1,4 @@
----
-layout: post
-title: Germans Invent Weed-Killing Laser
----
+# Germans Invent Weed-Killing Laser
 
 Before my pothead readers get all bent out of shape about the German's <a href="http://www.lzh.de/">weed-annihilating laser</a>, know that it isn't designed, specifically, to work on that type of weed. Nope this little gardener's friend from the <a href="http://www.uni-hannover.de">Leibniz University of Hannover</a> is designed to zap the average backyard or farm weed (and no, not THAT type of 'farmer').
 

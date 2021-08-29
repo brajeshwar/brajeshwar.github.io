@@ -1,7 +1,4 @@
----
-layout: post
-title: Nokia Sinks - Is there hope?
----
+# Nokia Sinks - Is there hope?
 
 <a href="http://www.nokia.com/">Nokia</a> is no longer the king of the market, and its market share has declined to 25%, what it was in 1997. Even though it is the world's leading handset maker, its popularity has hit a new low, according to the new global phone handset figures. "Its market share declined 5.5% points year-on-year, and its share has reached its lowest since 1997", <a href="http://www.gartner.com/it/page.jsp?id=1689814">Gartner</a> said in a study.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: The 'end task' procedure for Linux
----
+# The 'end task' procedure for Linux
 
 In our previous article -- <a href="/2008/linux-vocabulary/">Sharpen your Linux vocabulary</a> -- we visualized few commonly used terms in context with the Linux  operating system and its surroundings! I thank and appreciate the readers for  adding on a few more words.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Most Popular Open Source Platform Isn't
----
+# Most Popular Open Source Platform Isn't
 
 Out of a survey done of eight major open source mobile platforms, Android was dead last. <a href="http://www.android.com/">Android</a>, the open-source underdog, scored just 23% on an openness survey - making it not only the lowest scorer but also the only platform to score less than 58%. Bazinga!
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Platform, Zorn-Eclipse, Deuce-FlashLite 2.0
----
+# Flash Platform, Zorn-Eclipse, Deuce-FlashLite 2.0
 
 Macromedia's Flash Platform is a lightweight, cross-platform runtime that can be used not just for rich media, but also for enterprise applications, communications and mobile applications. No matter how it's used, the Flash Platform is designed so that organizations of all kinds can deliver the most effective experiences imagination will allow.
 

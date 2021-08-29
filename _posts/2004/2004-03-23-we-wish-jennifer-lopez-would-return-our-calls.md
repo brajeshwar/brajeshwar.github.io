@@ -1,7 +1,4 @@
----
-layout: post
-title: We wish Jennifer Lopez would return our calls
----
+# We wish Jennifer Lopez would return our calls
 
 I have seen this long back but then when I saw it again today, I smiled at those punchy words, see it for yourself at Jeffrey Zeldman's [contact](http://zeldman.com/contact/) page. And if you are developing, learning, working on CSS, then his site should definitely be in your favorites bookmark.
 

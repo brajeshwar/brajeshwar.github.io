@@ -1,7 +1,4 @@
----
-layout: post
-title: VALUE-able Facebook is now worth $50 Billion
----
+# VALUE-able Facebook is now worth $50 Billion
 <p>The end of last week seemed pretty worthy for <a href="http://www.facebook.com/">Facebook</a>, as it raised a whopping amount of $1.5 Billion on Friday taking its financial valuation to a net worth of $50 Billion. This should definitely make <a href="http://en.wikipedia.org/wiki/Mark_Zuckerberg">Mark Zuckerberg</a> smile ear-to-ear as his baby project, Facebook has grown to become the third largest online service in terms of financial worth. <a href="http://www.google.com/">Google</a> leads the charts with <a href="http://www.amazon.com/">Amazon.com</a> at second position in this list.</p>
 <p>Facebook has over-taken <a href="http://www.yahoo.com/">Yahoo!</a> and <a href="http://www.ebay.com/">eBay</a> in financial standings. All thanks to the recent investment deals Facebook had with non-US investors through <a href="http://www.goldmansachs.com/">Goldmans Sachs</a> which was worth $1 Billion. In addition to this Russia's <a href="http://www.dst-global.com/">Digital Sky Technologies</a> had also <a href="http://www.facebook.com/press/releases.php?p=103711">invested</a> half a billion dollars in Facebook during the month of December.</p>
 

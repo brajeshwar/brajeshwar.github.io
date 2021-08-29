@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe and Macromedia
----
+# Adobe and Macromedia
 
 My blog won't be that complete without an article that highlights the completion of the acquisition of [Macromedia](http://www.macromedia.com/) by [Adobe](http://www.adobe.com/) which was officially closed on Dec 3, 2005. One of the interesting outcome of the acquisition at this moment is the announcement that Adobe Reader to be part of the Flash Player.
 

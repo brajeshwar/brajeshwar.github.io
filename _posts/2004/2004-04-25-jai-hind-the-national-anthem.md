@@ -1,7 +1,4 @@
----
-layout: post
-title: Jai Hind, the National Anthem
----
+# Jai Hind, the National Anthem
 
 {% include video source="youtube" id="Bh26zOjIh9I" %}
 

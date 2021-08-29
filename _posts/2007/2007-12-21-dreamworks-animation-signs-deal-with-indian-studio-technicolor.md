@@ -1,7 +1,4 @@
----
-layout: post
-title: DreamWorks Animation signs deal with Indian studio, Technicolor
----
+# DreamWorks Animation signs deal with Indian studio, Technicolor
 
 <a href="http://www.dreamworks.com/">DreamWorks</a> Animation, USA will soon be in India. They have <a href="http://www.ft.com/cms/s/0/51b7ece4-af74-11dc-880f-0000779fd2ac.html">signed a deal</a> with <a href="http://www.technicolor.com/">Technicolor</a>, India to develop an animation facility in India. This is another good sign of Hollywood's interest to harness the talent in International markets.
 

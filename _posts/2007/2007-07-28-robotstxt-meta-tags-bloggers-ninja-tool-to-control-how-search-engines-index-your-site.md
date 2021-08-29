@@ -1,7 +1,4 @@
----
-layout: post
-title: Robots.txt, meta tags; Blogger's Ninja Tool to control how search engines index your sit
----
+# Robots.txt, meta tags; Blogger's Ninja Tool to control how search engines index your sit
 
 I've been doing some bit of my own research on how to weed out non-usable contents and show just the good contents to search engines. I began to use robots.txt sometime back but they are limited to just disallow of some folders (like my wordpress installation folder - "wp"). The other day, I was reading the <a href="http://googleblog.blogspot.com/2007/07/robots-exclusion-protocol-now-with-even.html">Robots Exclusion Protocol</a> (REP) on Google's own Blog, and learnt a lot that was missing from my understanding of how you can take control of Search Engines indexing your site's content.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Opera Dragonfly, Easy web apps debugging
----
+# Opera Dragonfly, Easy web apps debugging
 
 Opera released their new Developer Tools -- <a href="http://www.opera.com/products/dragonfly/">Opera Dragonfly</a> -- about a week back. The initial alpha version include
 

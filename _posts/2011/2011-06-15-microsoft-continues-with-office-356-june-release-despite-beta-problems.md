@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft Continues with Office 365 June Release Despite Beta Problems
----
+# Microsoft Continues with Office 365 June Release Despite Beta Problems
 
 Despite on-going issues in beta, <a href="http://office365.com/">Office 365</a> will still be released this month says Microsoft CEO Steve Ballmer. 
 

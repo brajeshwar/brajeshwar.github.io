@@ -1,7 +1,4 @@
----
-layout: post
-title: Nishita Photo theme on Wordpress.com
----
+# Nishita Photo theme on Wordpress.com
 
 About a month ago, I got an email from <a href="http://simpledream.net/">Lance Willett</a> of Automattic that they would be launching <a href="/2006/nishita-photo-blog-theme/">Nishita Wordpress theme</a> on Wordpress.com. That was great news!
 

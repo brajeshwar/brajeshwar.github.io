@@ -1,7 +1,4 @@
----
-layout: post
-title: Successful financing in a recession
----
+# Successful financing in a recession
 
 Running a successful business in a recession is not always easy. You must be creative in order to save money. In these times, it is merely about following Darwin's principle "survival of the fittest".
 

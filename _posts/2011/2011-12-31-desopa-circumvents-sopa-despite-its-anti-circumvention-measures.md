@@ -1,7 +1,4 @@
----
-layout: post
-title: DeSopa Circumvents SOPA -- Despite its Anti-Circumvention Measures
----
+# DeSopa Circumvents SOPA -- Despite its Anti-Circumvention Measures
 
 Leave it to the internet to find a way to circumvent impending laws designed solely to control it. 
 

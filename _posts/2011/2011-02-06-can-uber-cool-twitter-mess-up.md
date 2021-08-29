@@ -1,7 +1,4 @@
----
-layout: post
-title: Can `Uber Cool` Twitter mess up?
----
+# Can `Uber Cool` Twitter mess up?
 
 <a href="http://twitter.com/">Twitter</a> is understandably a fantastic platform for all users to put forward anything that they want to in the form of tweets. This 'anything' could be what one feels, what one did last night, what one experienced at office on a day or just absolutely anything that a user feels like tweeting about. Another thing that Twitter has gained recognition for lately is that it spreads news stories faster than any media channel on TV does. 
 

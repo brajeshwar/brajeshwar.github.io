@@ -1,7 +1,4 @@
----
-layout: post
-title: Google gifts its Blogger, a MakeOver
----
+# Google gifts its Blogger, a MakeOver
 
 <iframe width="800" height="450" src="http://www.youtube.com/embed/hPhFc6GqVdU" frameborder="0" allowfullscreen></iframe>
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe introduces Acrobat XI
----
+# Adobe introduces Acrobat XI
 
 In a small, focussed and quite gathering, Adobe unveiled their new <a href="http://www.adobe.com/in/products/acrobat.html">Acrobat XI</a>. Acrobat is Adobe's product suite for creating, editing, and viewing PDFs. It is literally used by all big corps, government institutions, and many non-profit organizations.
 

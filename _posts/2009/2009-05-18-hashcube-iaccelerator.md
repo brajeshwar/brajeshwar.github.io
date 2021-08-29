@@ -1,7 +1,4 @@
----
-layout: post
-title: Startup Review - iAccelerator's HashCube
----
+# Startup Review - iAccelerator's HashCube
 
 Got an email from the <a href="http://iaccelerator.org/">iAccelerator</a> guys and felt good to learnt about HashCube doing well at the iAccelerator Program. <a href="http://www.hashcube.com/">HashCube</a> is a start-up supported by the iAccelerator program at IIM Ahmedabad's Centre for Innovation Incubation and Entrepreneurship (CIIE).
 

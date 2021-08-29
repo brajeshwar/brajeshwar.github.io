@@ -1,7 +1,4 @@
----
-layout: post
-title: iOS Battery Life Quick Fix - As usual Apple users, not Apple, fix the problem
----
+# iOS Battery Life Quick Fix - As usual Apple users, not Apple, fix the problem
 
 With the rash of <a href="http://arstechnica.com/tech-policy/news/2011/10/rim-facing-class-action-lawsuits-over-blackberry-outages.ars">Blackberry blunders</a> the iPhone really has an opportunity to steal the smartphone limelight -- and what does it do? -- screws it up. In the face of the global Blackberry service shortage, Apple released the iPhone 4S, and iOS 5. iOS 5 however has been coming under attack due to it draining the battery on iPhones and iPods, drastically undoing the leverage Apple could have gained over Canadian-based RIM, makers of the currently unsuccessful Blackberry. 
 

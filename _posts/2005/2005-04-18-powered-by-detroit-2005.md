@@ -1,7 +1,4 @@
----
-layout: post
-title: Powered by Detroit, 2005
----
+# Powered by Detroit, 2005
 
 <figure>
   <img src="/static/2005/brajeshwar-powered-by-detroit-hyatt-2005-apr-10.jpg" alt="Brajeshwar" loading="lazy">

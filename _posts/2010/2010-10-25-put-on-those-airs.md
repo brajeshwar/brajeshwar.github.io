@@ -1,7 +1,4 @@
----
-layout: post
-title: Put on those Airs!
----
+# Put on those Airs!
 
 What would happen if a MacBook and an iPad hooked up? One of the most amazing things Apple ever created: it is the new <a href="http://www.apple.com/macbookair/">MacBook Air</a>! These slim beauties include flash storage, 802.11-N Wi-Fi and a Core 2 Duo processor. Apple has increased the size of the Air's battery enabling 5-7 hours of battery life when surfing over Wi-Fi and 30 days on standby time just like the iPad.
 

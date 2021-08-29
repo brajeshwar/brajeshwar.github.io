@@ -1,8 +1,5 @@
----
-layout: post
-title: It was an evening of laughter at the Black Dog Comedy Evenings - Uncensored
+# It was an evening of laughter at the Black Dog Comedy Evenings - Uncensored
   And Unleashed
----
 
 Recently, I was invited to attend an event - a Standup Comedy. Well, it was a surprising invitation. I had been invited to lots of events, but there were either technical, blog-related, startups, entrepreneurship and alike, but a Standup Comedy Event! I'm sure the other 'bloggers' were equally surprised.
 

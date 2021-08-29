@@ -1,7 +1,4 @@
----
-layout: post
-title: Is Phishing Gone? Maybe they've just gone Vishing
----
+# Is Phishing Gone? Maybe they've just gone Vishing
 
 <a href="http://www.anywho.com/reverse-lookup">Reverse phone lookup</a> services have been around for years. While people have been historically skeptical about what is in reality a database no more invasive of privacy than a traditional telephone directory, these fears might take a new form in the art of vishing.
 

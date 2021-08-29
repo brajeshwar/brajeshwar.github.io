@@ -1,7 +1,4 @@
----
-layout: post
-title: Y Combinator's new Gambit is the ultimate founder dating & recruiting manna
----
+# Y Combinator's new Gambit is the ultimate founder dating & recruiting manna
 
 There's been quite an array of reactions to the new move by Y Combinator when they announced the application for startup entrepreneurs [sans the idea](http://ycombinator.com/noidea.html) of a Business or a Product. As a 'Startup Entrepreneur', my spontaneous reaction, wrapped in [a tweet](http://twitter.com/Brajeshwar/status/179801822804967424) was, "any entrepreneur or founder eager to do a Startup will be brimming with ideas."
 

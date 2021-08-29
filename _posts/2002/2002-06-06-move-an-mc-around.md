@@ -1,7 +1,4 @@
----
-layout: post
-title: Move an MC around
----
+# Move an MC around
 
 ```as
 // How to move your MovieClip around

@@ -1,7 +1,4 @@
----
-layout: post
-title: Pownce; I got invites
----
+# Pownce; I got invites
 
 <img class="small right" src="/static/logo/pownce.gif" alt="Pownce">
 

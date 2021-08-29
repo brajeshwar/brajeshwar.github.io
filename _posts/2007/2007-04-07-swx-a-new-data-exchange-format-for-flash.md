@@ -1,7 +1,4 @@
----
-layout: post
-title: SWX - A new data exchange format for Flash
----
+# SWX - A new data exchange format for Flash
 
 <a href="http://swxformat.org/">SWX</a> is designed to provide Flash developers with a simple and enjoyable experience when building data-driven applications. The key words here are simple, enjoyable and experience. SWX is compatible with Flash 6 r65+ to Flash 8 (ActionScript 1 and ActionScript 2). On the server-side, it has been tested and works well with PHP 5. At the time of its alpha release, SWX does not support ActionScript 3 and Flash 9.
 

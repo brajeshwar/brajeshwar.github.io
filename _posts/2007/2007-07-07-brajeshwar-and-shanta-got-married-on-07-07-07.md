@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar and Shanta got married on 07-07-07
----
+# Brajeshwar and Shanta got married on 07-07-07
 
 I was thinking of 11-11-11 as the cool date to get married. However, things don't always happen the way you want. You have to twist things happening around you to make it work for you in a better way. So, today, on this cool, numbered date [07-07-07](http://www.flickr.com/photos/brajeshwar/747310966/), Shanta and I got officially married.
 

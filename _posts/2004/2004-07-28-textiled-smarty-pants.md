@@ -1,7 +1,4 @@
----
-layout: post
-title: Textiled Smarty Pants
----
+# Textiled Smarty Pants
 
 [SmartyPants](http://daringfireball.net/projects/smartypants/) is a free web publishing plug-in for Movable Type that easily translates plain ASCII punctuation characters into smart typographic punctuation HTML entities. 
 

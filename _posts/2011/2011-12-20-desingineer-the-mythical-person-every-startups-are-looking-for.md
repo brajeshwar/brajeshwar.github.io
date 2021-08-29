@@ -1,7 +1,4 @@
----
-layout: post
-title: Desingineer - the mythical person every Startups are looking for
----
+# Desingineer - the mythical person every Startups are looking for
 
 > "Desingineer" - mythical person startups are looking for who can do UI, UX and also excellent front-and back-end coding. -- Chris Dixon (@cdixon) [Dec 19, 2011](https://twitter.com/cdixon/statuses/148896542462455808)
 

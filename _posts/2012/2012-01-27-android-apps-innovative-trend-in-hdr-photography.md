@@ -1,7 +1,4 @@
----
-layout: post
-title: Android Apps - Innovative Trend in HDR Photography
----
+# Android Apps - Innovative Trend in HDR Photography
 
 Today, most Android Devices have the best of cameras possible. In fact, your default [Android](http://www.android.com/) device may not have a good app to take photos and share them. However, with a little help from some of the latest apps, you can transform it into a useful photographic escort. It can handle a wide range of photography related tasks. Android is the hottest mobile innovation by Google that is taking the mobile market by storm. This mobile platform is totally unlocked, allowing application developers a free rein to display their creativity; at the same time it gives the users the advantage to experience freedom of playing with new possibilities. There has been an overabundance of android phones in the mobile market recently and that effectively increases the [amount of great photography apps](http://www.hongkiat.com/blog/top-20-android-photography-apps/) in the marketplace.
 

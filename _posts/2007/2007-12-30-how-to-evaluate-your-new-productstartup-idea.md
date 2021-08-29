@@ -1,7 +1,4 @@
----
-layout: post
-title: How to evaluate your new Product/Startup idea
----
+# How to evaluate your new Product/Startup idea
 
 <a href="http://evhead.com/">Evan Williams</a> is one of those many entrepreneurs that I admire. Well, he is one of the team behind two hugely successful web applications - <a href="http://www.blogger.com/">Blogger</a> and <a href="http://twitter.com/">Twitter</a>. Here, I'm going to re-phrase and re-think over one of his recent article - <a href="https://web.archive.org/web/20160322105954/http://evhead.com/2007/12/how-to-evaluate-new-product-idea.asp">Will it fly? How to Evaluate a New Product Idea</a> (original at <em>http://evhead.com/2007/12/how-to-evaluate-new-product-idea.asp</em>).
 

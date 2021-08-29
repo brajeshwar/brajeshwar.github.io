@@ -1,7 +1,4 @@
----
-layout: post
-title: Collaboration Networks are the Next Phase of the Internet
----
+# Collaboration Networks are the Next Phase of the Internet
 
 Social networking sites have become so popular that they have touched our lives in ways we would probably never have conceived. They were originally built to create an environment for people to have lighthearted conversations with close friends, but had to evolve to something more complex when they caught on with the rest of the world. As they reached new demographics, they added additional services to try to appeal to everyone.
 

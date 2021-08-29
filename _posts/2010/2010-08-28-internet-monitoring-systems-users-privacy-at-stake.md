@@ -1,7 +1,4 @@
----
-layout: post
-title: Internet Monitoring Systems - User's Privacy at Stake
----
+# Internet Monitoring Systems - User's Privacy at Stake
 
 It was always believed that, only the Security Agencies are willing to access the data flowing through the World Wide Web. This belief has been proved wrong, since now the <a href="http://dor.gov.in/">Directorate of Revenue Intelligence</a> (DRI) working under the Ministry of Finance are having plans for accessing the <a href="http://www.workexaminer.com/internet-monitoring-software.html">Internet Monitoring Systems</a>. Recently in a meeting of the Inter-Ministerial Group, this proposal was put by forward DRI, and a discussion was carried out.
 

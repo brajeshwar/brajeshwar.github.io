@@ -1,7 +1,4 @@
----
-layout: post
-title: Open.org an Open Source for your Open queries. Is that all?
----
+# Open.org an Open Source for your Open queries. Is that all?
 
 A week ago, a question was raised by the latest owners of <a href="http://www.open.org/">Open.org</a> who go by the name Linux Fund organization, and we are still unsure if we have an answer to that question yet. The question was "What do we do with Open.org?" The question came up on the evening February 25th during a <a href="http://www.blogher.com/node/8150">Birds of a Feather session</a> at the <a href="http://www.socallinuxexpo.org/scale9x/">Southern California Linux Expo</a>. By now, most of the Open Source followers and enthusiasts know that the domain name of Open.org was recently acquired by <a href="http://www.linuxfund.org/">Linux Fund</a> from the <a href="http://www.cityofsalem.net/">City of Salem</a>, Orgeon. The primary purpose for which the domain was used by Salem was for a kids-to-internet program named <a href="http://www.open.k12.or.us/">The Orgeon Public Education Network</a>. The amount of money that was spent to acquire it is not disclosed yet and it was an auction at which the domain was purchased by Linux Fund.
 

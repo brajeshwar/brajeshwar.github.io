@@ -1,7 +1,4 @@
----
-layout: post
-title: Key Tips for Super Effective Writing
----
+# Key Tips for Super Effective Writing
 
 Writing is supposed to be an enjoyable experience. Especially, for people who depend on their writing as a source of income, this is the most complicated necessity. While you have to maintain the quality of your written piece, the creativity is also that much important. For the creative flow of the mind to remain unhindered you have to stay loose and enjoy the topic as you write about it. 
 

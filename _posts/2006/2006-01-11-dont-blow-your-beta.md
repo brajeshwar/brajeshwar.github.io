@@ -1,7 +1,4 @@
----
-layout: post
-title: Don't Blow Your Beta
----
+# Don't Blow Your Beta
 
 [Don't Blow Your Beta](http://www.techcrunch.com/2006/01/09/dont-blow-your-beta/) is a nice article from TechCrunch.
 

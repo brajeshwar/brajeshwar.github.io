@@ -1,7 +1,4 @@
----
-layout: post
-title: When the going gets tough for IT employees, they exclaim - Tough gets Going!
----
+# When the going gets tough for IT employees, they exclaim - Tough gets Going!
 
 It does seem as though the going will get tougher for people who are struggling to make it big in the IT industry, especially for those residing in developed nations like America and England. Aspirations to build a career in IT, could demand you to move to regions like Jonesboro, Ark., Sebeka, Minn., or Macon, Mo. Thanks to the new trend called <a href="http://en.wikipedia.org/wiki/Rural_outsourcing">Rural Outsourcing</a> employees are having to choose to settle in such rural areas in order to make their mark in the technology field. 
 

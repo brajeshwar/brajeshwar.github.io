@@ -1,7 +1,4 @@
----
-layout: post
-title: Enjoy the Adobe MAX 2008 Experience
----
+# Enjoy the Adobe MAX 2008 Experience
 
 ![Adobe MAX 2008 banner by 2Advanced)](/static/2008/adobemax-2008-2a.jpg)
 

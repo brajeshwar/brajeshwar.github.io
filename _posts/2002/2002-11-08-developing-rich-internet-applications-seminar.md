@@ -1,7 +1,4 @@
----
-layout: post
-title: Developing Rich Internet Applications Seminar
----
+# Developing Rich Internet Applications Seminar
 
 "You will experience firsthand power of Macromedia Cold Fusion MX, see how to integrate rich Macromedia Flash content with applications built using ColdFusion MX, .NET, Java and SOAP-based web services using Flash Remoting MX and as well as learn how to easily integrate streaming, bidirectional audio, video and data with Macromedia Flash Communication Server.
 

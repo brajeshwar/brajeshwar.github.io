@@ -1,6 +1,3 @@
----
-layout: post
-title: Grid - a minimal CSS Grid utility
----
+# Grid - a minimal CSS Grid utility
 
 [Grid](https://github.com/brajeshwar/grid) a simple and minimal fluid grid system that can flow inside any fluid or fixed container or play well with another Grid system. I found this to be particularly useful while working on liquid/fluid designs. "Grid" can also be used in conjunction with any other heavyweight CSS Grid Framework, particularly, in places where you do not want to calculate which portion of the grid does a design piece fall into or how many gutters should it have.

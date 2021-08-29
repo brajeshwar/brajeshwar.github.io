@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple, along with Oracle to launch Java SE 7 for Mac OS X
----
+# Apple, along with Oracle to launch Java SE 7 for Mac OS X
 
 All Apple fans, followers and especially its close Java community associates would have definitely been disturbed and shocked by Apple's recent announcement that it would <a href="http://www.digitaltrends.com/computing/apple-omits-flash-from-new-macbook-airs-deprecates-java/">deprecate and denounce the including of the Java runtime in its Mac OS X</a>. It was almost as though Apple was warning developers of the fact that Java would henceforth not be entailed in future versions of the <a href="http://www.apple.com/macosx/">Mac OS X</a>; and by this there hovered a depressed and uncertain cloud over Java's future associations with Apple's Mac. 
 

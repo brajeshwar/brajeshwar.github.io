@@ -1,7 +1,4 @@
----
-layout: post
-title: Fusion Garage's JooJoo exclaims - We're Still Alive
----
+# Fusion Garage's JooJoo exclaims - We're Still Alive
 
 Nobody would remember anything unless and until there is enough hype hovering around it. Something <a href="http://www.shanzai.com/index.php/market-mayhem/news/1953-joojoo-too-much-too-little-too-late">very similar</a> happened with Fusion Garage's product named <a href="https://thejoojoo.com/">JooJoo</a>. A tablet computer that was launched before Apple's iPad; yet JooJoo did not receive much of the accolades from either the media or the consumer public.
 

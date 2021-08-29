@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux for Open Minds
----
+# Linux for Open Minds
 
 Once upon a time in a land far away, <a href="http://en.wikipedia.org/wiki/Andrewp_S._Tanenbaum">Andrew Tanenbaum</a>'s 12,000 lines of code served as the start point for a young lad called <a href="http://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> to release Linux version 0.01 in 1991. Since then Linux has come a long way and is only geared for more growth and glory.
 

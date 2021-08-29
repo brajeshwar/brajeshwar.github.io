@@ -1,7 +1,4 @@
----
-layout: post
-title: Nokia 9500 Communicator
----
+# Nokia 9500 Communicator
 
 Nokia floated a press release during the early first quarter of this year regarding the introduction (last quarter of this year, 2004) of <a href="http://www.nokia.com/nokia/0,,54106,00.html" title="Nokia 9500 Communicator">Nokia 9500 Communicator</a> among many other models. According to Nokia, this model offers high memory capacity, a full set of business critical applications, and versatile network connecctions. This model is not that bulky as the earlier 9600i and its families.
 

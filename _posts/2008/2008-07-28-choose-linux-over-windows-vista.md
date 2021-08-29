@@ -1,7 +1,4 @@
----
-layout: post
-title: 5 simple reasons to choose Linux over Vista
----
+# 5 simple reasons to choose Linux over Vista
 
 Linux enthusiasts have always touted for Linux to be one of the best operating systems ever. Their voice grew shriller with the advent of Microsoft Windows Vista in the market. There have been quite a few times that a serious problem, posted in some of the forums by a Windows system admin is responded by some enthusiasts in a single phrase -- "Install Linux"! This may not be the right solution for the concerned person but it indicates the evangelism aura, Linux has in its periphery.
 

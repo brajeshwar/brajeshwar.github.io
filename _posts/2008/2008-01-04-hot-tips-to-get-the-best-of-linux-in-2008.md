@@ -1,7 +1,4 @@
----
-layout: post
-title: Hot tips to get the best of Linux in 2008
----
+# Hot tips to get the best of Linux in 2008
 
 At the onset of this new year - 2008 - I would like to share some Linux tips with you. It won't matter which version are you using because I'll talk mostly about the Linux Console. Most common windows user will probably feel the console in Linux to be a little intimidating, nevertheless when the time comes, you'll notice that it is the best way to be highly productive.
 

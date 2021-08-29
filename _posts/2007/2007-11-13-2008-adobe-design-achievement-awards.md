@@ -1,7 +1,4 @@
----
-layout: post
-title: 2008 Adobe Design Achievement Awards
----
+# 2008 Adobe Design Achievement Awards
 
 The 2008 Adobe Design Achievement Awards gives higher education students from around the world the creative license to propel their careers in the future. Enter in 12 categories in 3 media areas endorsed by the industry, over US $60,000 in cash prizes will be awarded.
 

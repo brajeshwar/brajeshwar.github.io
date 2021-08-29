@@ -1,7 +1,4 @@
----
-layout: post
-title: Spammers, the scum of Internet
----
+# Spammers, the scum of Internet
 
 Spammers are indeed the real scum of the internet and are directly responsible for losses that we suffer on the internet, the bandwidth, the time taken to delete them, block them, un-subscribe from them. I spend more than 30% of my bandwidth deleting spams, blocking them and doing whatever possible to get away from the them. And I pay for every bandwidth I use. I always have a notion that you do not bark back at the dogs that barks at you or the cow on the street at mows at you.
 

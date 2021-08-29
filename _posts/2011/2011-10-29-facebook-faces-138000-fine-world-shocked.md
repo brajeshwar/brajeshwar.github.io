@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook Faces $138,000 Fine; World Shocked!
----
+# Facebook Faces $138,000 Fine; World Shocked!
 
 Facebook is facing a possible fine of €100,000 ($138,000) for storing data of the users even after their account data was deleted. In one of the latest developments to shock the social networking world, Facebook's Ireland offices are being audited after a 24 year old Austrian law student, Max Schrems; who filed <a href="http://www.theinquirer.net/inquirer/news/2119045/facebook-fines-audits-ireland">22 individual claims</a> about Facebook's practices. 
 

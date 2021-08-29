@@ -1,7 +1,4 @@
----
-layout: post
-title: A thought, about worldwide adoption of Linux
----
+# A thought, about worldwide adoption of Linux
 <p>This is the question that lingers in the minds of many technology enthusiasts; at least for fun, they would have given it a thought - <strong>What would happen if Linux was adopted Worldwide?</strong> An ultimate ambition that the free software community has, is for Linux to be used in the mainstream industry and it has been a goal for the past few years. Several <a href="http://www.pcworld.com/businesscenter/article/207999/desktop_linux_the_dream_is_dead.html">critics have said</a> that the happening of such an event is almost next to impossible especially on the desktop. Now for a moment, let us just keep these critics and their thoughts aside and see what would actually happen if the whole world ran Linux. Shall we?</p>
 
 <h3>Malware will be Hit </h3>

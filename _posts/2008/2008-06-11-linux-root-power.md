@@ -1,7 +1,4 @@
----
-layout: post
-title: The power of 'root' in Linux
----
+# The power of 'root' in Linux
 
 <img class="small right" src="/static/2008/linux-root-power.png" alt="The power of root in Linux" loading="lazy">
 

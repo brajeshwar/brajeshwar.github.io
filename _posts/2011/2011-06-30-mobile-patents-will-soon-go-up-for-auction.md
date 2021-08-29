@@ -1,7 +1,4 @@
----
-layout: post
-title: Mobile patents will soon go up for auction
----
+# Mobile patents will soon go up for auction
 
 We've all seen the world of mobile technology explode in recent years. Everything's getting faster, better, and smaller with every attempt and with models like a <a href="http://htc.t-mobile.com/sensation">HTC 4G Android Phone</a>, it's become a big business that's finding its way into our huge economy. It's a field where progress is measured in gigabytes and features and any edge is worth a lot. How much? Is the question on many people's minds as Nortel Networks is being prepared to be auctioned off.
 

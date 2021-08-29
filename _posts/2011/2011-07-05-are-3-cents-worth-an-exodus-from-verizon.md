@@ -1,7 +1,4 @@
----
-layout: post
-title: Are 3 cents worth an exodus from Verizon?
----
+# Are 3 cents worth an exodus from Verizon?
 
 A few years in the technology world have made me believe that there is no such thing as a 'happy customer'. There may be a temporarily satisfied one, but never happy. And that is exactly what <a href="http://www.verizon.com/">Verizon</a> realized, which has made them charge an increased 'regulatory fee' for their outgoing customers. It may just be a paltry 3 cents, from $0.13 to $0.16, but that allows you to get out of the Verizon contract early and not pay the dreaded Early Termination Fee (ETF).
 

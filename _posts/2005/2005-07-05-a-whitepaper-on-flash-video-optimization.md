@@ -1,6 +1,3 @@
----
-layout: post
-title: A WhitePaper on Flash Video Optimization
----
+# A WhitePaper on Flash Video Optimization
 
 [Fabio Sonnati](http://flashvideo.progettosinergia.com) have a detailed study of some important video format and their relation to Flash Video. There are two good optimization technique he explained in his [Technical Whitepaper](http://www.progettosinergia.com/flashvideo/FlashVideoTechnologyAndOptimizations.zip) (zip), which he claimed can improve real-time flash video encoding by around 20-30%. For a video rookie like me, it was a good read. Helped understood lotta things which I was unaware of.

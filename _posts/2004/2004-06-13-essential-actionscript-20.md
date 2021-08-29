@@ -1,7 +1,4 @@
----
-layout: post
-title: Essential ActionScript 2.0
----
+# Essential ActionScript 2.0
 
 This book is another must have for any Flash-Actionscript Application Developer. Visit the [official book site](http://moock.org/eas2/). Neverthless, if you are looking for something like "Actionscript 2.0: The Definitive Guide", then this is not the book. It talks less or very little about Actionscript 2.0 syntax per se.
 

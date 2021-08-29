@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Developers can do More
----
+# Flash Developers can do More
 
 [Jonathan Boutelle](http://www.jonathanboutelle.com/) has an interesting article about the [current boom of collaboration tools](http://www.jonathanboutelle.com/mt/archives/2005/06/the_coming_boom.html). The eye-catching phrase that came up was - his concern for Flash Developers who are concentrating more on doing e-learning projects and not really harnessing the power of Flash, FlashCom, Flash Remoting and Flex.
 

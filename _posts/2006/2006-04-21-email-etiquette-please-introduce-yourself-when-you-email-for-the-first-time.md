@@ -1,7 +1,4 @@
----
-layout: post
-title: Email Etiquette - Please introduce yourself when you email for the first time
----
+# Email Etiquette - Please introduce yourself when you email for the first time
 
 In a social culture, just as we introduce ourselves when starting a conversation; it would be highly appropriate to introduce oneself when one initiate an email conversation. It helps the recipient to decide how to reply, know who you are so that the recipient knows how to treat you better with an equally appropriate reply.
 

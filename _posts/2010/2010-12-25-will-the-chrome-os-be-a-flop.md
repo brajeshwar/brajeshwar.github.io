@@ -1,7 +1,4 @@
----
-layout: post
-title: Will the Chrome OS be a flop?
----
+# Will the Chrome OS be a flop?
 
 Google has been the father of innovation in cyberspace. They have developed so many advanced web technologies that we have begun to believe that they would never develop a technology that wouldn't catch on with the web community.
 

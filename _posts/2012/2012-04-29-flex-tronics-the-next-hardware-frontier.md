@@ -1,7 +1,4 @@
----
-layout: post
-title: Flex-tronics - The Next Hardware Frontier
----
+# Flex-tronics - The Next Hardware Frontier
 If you're reading this then you're likely a techie; if you're a techie then you've likely already heard of <a href="http://en.wikipedia.org/wiki/Flexible_electronics">flexible electronics</a>, aka flex circuits, aka flexible printed circuits. And you surely already know that flex-tronics will be one of the next big things, but did you know that as of 2012 they are a $10B business? Yup, they are a multi-billion dollar industry thanks to the support and start-up capital injected by the <a href="http://www.flextech.org/">Flex Tech Alliance</a> (alliance members include Fujifilm, HP, Qualcomm, Lockheed Martin), "it is an industry that is nascent but will grow rapidly. We're already starting to see new kinds of applications in plastic memory for toys and sensors for aircraft," <a href="http://venturebeat.com/2012/04/16/the-age-of-flexible-electronics-is-upon-us/">says Flex Tech Alliance chief Dr. Malcolm Thomas</a>.
 
 For any techno-n00bs out there, flex-tronics are electronic devices that are flexible and bendy in nature due to their electronic circuits being printed/painted on with flexible plastic substrates. These substrates are created via photolithographic technology using materials like <a href="http://en.wikipedia.org/wiki/Polyimide">polyimide</a>, <a href="http://en.wikipedia.org/wiki/PEEK">PEEK</a> or a simple transparent conductive polyester film. In simple terms a sort-of printer sprays circuit cells onto a flexible substances, in the same way that a printer sprays ink onto a page to print.

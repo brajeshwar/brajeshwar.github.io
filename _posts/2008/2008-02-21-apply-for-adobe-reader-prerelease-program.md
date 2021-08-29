@@ -1,7 +1,4 @@
----
-layout: post
-title: Apply for Adobe Reader PreRelease
----
+# Apply for Adobe Reader PreRelease
 
 Adobe is currently accepting applications for their upcoming Adobe Reader PreRelease Program. Well, if you're not familiar with Adobe's PreRelease program, think of it like the typical Beta Program but a little more of a pre-cursor to a beta.
 

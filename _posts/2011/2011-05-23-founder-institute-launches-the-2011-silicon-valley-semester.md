@@ -1,7 +1,4 @@
----
-layout: post
-title: Founder Institute launches the 2011 Silicon Valley Semester
----
+# Founder Institute launches the 2011 Silicon Valley Semester
 
 <a href="http://www.founderinstitute.com/">Founder Institute</a> launches the next Silicon Valley semester, running from Jun 27 to Sep 27, 2011. <a href="http://www.founderinstitute.com/join/graduate-Brajeshwar_Oinam">Apply today</a> and the $50 admissions test processing fee will be waived.
 

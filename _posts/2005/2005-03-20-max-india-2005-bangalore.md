@@ -1,7 +1,4 @@
----
-layout: post
-title: MAX India 2005, Bangalore
----
+# MAX India 2005, Bangalore
 
 I was able to sneak in for the Second day session of the Asia MAX 2005 routine going on; at the India MAX 2005, Bangalore. Bill Perry's session on Mobile Flashlite Development and its potential was one of the attractive highlight of that day.
 

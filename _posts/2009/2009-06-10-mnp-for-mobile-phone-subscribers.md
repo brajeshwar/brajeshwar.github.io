@@ -1,7 +1,4 @@
----
-layout: post
-title: MNP for Mobile Phone Subscribers
----
+# MNP for Mobile Phone Subscribers
 
 Today, mobile phones have become inevitable in one's life. We've seen it grow from a mere luxury to now a necessity. The transformation in the lifestyle of we, the people is a major reason for this change. What started with a several bucks for incoming call has moved on to a plethora of plans which have free outgoing calls today.
 

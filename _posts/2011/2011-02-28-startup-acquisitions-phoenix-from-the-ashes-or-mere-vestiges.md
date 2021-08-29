@@ -1,7 +1,4 @@
----
-layout: post
-title: Startup Acquisitions - Phoenix from the Ashes or Mere Vestiges
----
+# Startup Acquisitions - Phoenix from the Ashes or Mere Vestiges
 
 We often ignore the simple rules of a pond - the big fish will try to devour the small ones. And in the world of technology, the big companies will try to (in the garb of supporting and mentoring) acquire new ventures. But experience tells us, that not all of these mergers are a success. 
 

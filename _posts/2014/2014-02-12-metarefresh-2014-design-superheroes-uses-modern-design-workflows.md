@@ -1,8 +1,5 @@
----
-layout: post
-title: MetaRefresh (2014) - The Design Superheroes who uses Modern Design Workflows
+# MetaRefresh (2014) - The Design Superheroes who uses Modern Design Workflows
 permalink: /2014/metarefresh-2014-design-superheroes-uses-modern-design-workflows/
----
 
 [//]: # https://sleeklens.com/product-category/lightroom-presets/ is a paid link.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Panda - Video Solved
----
+# Panda - Video Solved
 
 Panda is an awesome open source solution for video uploading, encoding and streaming.
 

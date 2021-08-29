@@ -1,7 +1,4 @@
----
-layout: post
-title: Google's Updated Privacy Policy Angers Europe
----
+# Google's Updated Privacy Policy Angers Europe
 
 People are not unaware of Google's Privacy Policy being updated every now and then. The latest version of its privacy policy that was unleashed on March 1st, 2012, has made it the centre of a huge controversy amongst the European nations. Some of the rules that have been included in this policy have fallen under severe scrutiny and are being investigated by the EU data verification authorities. France has accused these rules of Google's Privacy Policy to be a violation of the European Laws.
 

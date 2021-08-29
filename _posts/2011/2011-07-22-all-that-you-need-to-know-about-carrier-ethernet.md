@@ -1,7 +1,4 @@
----
-layout: post
-title: What you need to know about Carrier Ethernet
----
+# What you need to know about Carrier Ethernet
 
 A changing economy cannot always witness a constant growth in any sector. Very few industries have taken a strong place in the market and stood the tests of time. Industry analysts are predicting a great future in - <a href="http://searchtelecom.techtarget.com/definition/Carrier-Ethernet">Carrier Ethernet</a>.
 

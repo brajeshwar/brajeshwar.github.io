@@ -1,7 +1,4 @@
----
-layout: post
-title: Enter the era of IPTV
----
+# Enter the era of IPTV
 
 ![First Mass-Produced TV - RCA-630-TS)](https://cdn.oinam.com/img/technology/tv-1st-RCA-630-TS.webp)
 

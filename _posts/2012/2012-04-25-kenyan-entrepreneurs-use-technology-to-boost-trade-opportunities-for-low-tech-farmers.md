@@ -1,8 +1,5 @@
----
-layout: post
-title: Kenyan Entrepreneurs use technology to boost Trade Opportunities for Low-Tech
+# Kenyan Entrepreneurs use technology to boost Trade Opportunities for Low-Tech
   Farmers
----
 
 It's been known for quite some time that the Global South's, and its people's, biggest hindrance is not legacies of colonialism or anesthetizing malaise but a lack of substantive trade opportunities caused by an inability to access global markets on any meaningful scale. So when we hear about endeavors like  <a href="http://mfarm.co.ke/">M-Farm</a>, where developing-world entrepreneurs use available technologies to create meaningful trade opportunities for themselves and their compatriots -- we should damn well pay attention.
 

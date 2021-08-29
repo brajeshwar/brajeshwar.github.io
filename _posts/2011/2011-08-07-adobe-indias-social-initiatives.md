@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe India's social initiatives
----
+# Adobe India's social initiatives
 
 Adobe has always been social and have spear-headed many ways to interact intimately and directly with developers, designers and its users in general. Community engagements was one of the strong point of erstwhile Macromedia and it has sipped down to Adobe in many ways.
 

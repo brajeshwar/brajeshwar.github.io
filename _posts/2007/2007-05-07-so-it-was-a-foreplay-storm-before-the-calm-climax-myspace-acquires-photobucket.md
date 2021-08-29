@@ -1,7 +1,4 @@
----
-layout: post
-title: So, it was a foreplay storm before the calm climax - MySpace acquires PhotoBucket
----
+# So, it was a foreplay storm before the calm climax - MySpace acquires PhotoBucket
 
 Wasn't it last month that <a href="http://www.myspace.com/">MySpace</a> blocked <a href="http://www.photobucket.com/">PhotoBucket</a> for infringement of the Terms of Use - <a href="http://gigaom.com/2007/04/12/photobucket-ceo-our-videos-dont-have-ads/">Photobucket CEO: Our videos don't have ads</a>?
 

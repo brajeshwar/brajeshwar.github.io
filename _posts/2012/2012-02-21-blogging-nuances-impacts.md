@@ -1,7 +1,4 @@
----
-layout: post
-title: Blogging - Nuances & Impacts
----
+# Blogging - Nuances & Impacts
 
 A <a href="http://en.wikipedia.org/wiki/Blog">blog</a> is nothing but a journal published on the Web. It is an abbreviation of the term 'Weblog'. Weblogs consists of short distinct entries, frequently updated and usually exhibited in reverse sequential order; so the most recent post appears first. Blogs are often the work of a single individual, although sometimes it can be created by small groups or be themed on a single subject. 
 

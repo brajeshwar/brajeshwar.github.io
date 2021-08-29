@@ -1,7 +1,4 @@
----
-layout: post
-title: Wink - free screen capture software
----
+# Wink - free screen capture software
 
 [Wink](http://www.debugmode.com/wink/) is a free and an easy to use screen capture software. It takes specific number of screenshots of the specified window, area or screen including keyboard and mouse events. Infact, one can capture anything in wink. Once a capture is done, the user can edit the thumbnails (key frames), add text, shapes, audio, navigation buttons and/or hyperliks.
 

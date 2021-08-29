@@ -1,7 +1,4 @@
----
-layout: post
-title: Vulcan Mind Meld for Locked-In Syndrome patients
----
+# Vulcan Mind Meld for Locked-In Syndrome patients
 
 Anybody who read the classic American tale <a href="http://en.wikipedia.org/wiki/Johnny_Got_His_Gun">Johnny Got His Gun</a> has a slight comprehension of what it's like to live trapped within your own body, incapable to move, nod, speak or even blink. The mind reels; the body does nothing. Unfortunately, this form of communication-stripped torture isn't a fictional tale but a reality for many with Locked-in Syndrome (it was featured in the House episode with <a href="http://www.imdb.com/name/nm0080049/">Mos Def</a> guest starring), which is why the new <a href="http://www.scientificamerican.com/article.cfm?id=fmri-spelling-device">functional Magnetic Resonance Imaging</a> (fMRI) scanner, Brain Bee, that can translate brain waves into words -- is a big deal. 
 

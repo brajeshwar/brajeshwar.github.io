@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe moves beyond Flash -- finally
----
+# Adobe moves beyond Flash -- finally
 
 Adobe is giving up their sole focus on Flash and entering the exciting world of HTML 5. Before you get too excited -- they are only releasing a first preview of their new HTML 5 tryout -- <a href="http://labs.adobe.com/technologies/edge/">Edge</a>. Could this be Adobe's first foray into the eccentric world of internet web standards? 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Krassimir Fotev scoffs at SEO with his brainchild, Peer Belt
----
+# Krassimir Fotev scoffs at SEO with his brainchild, Peer Belt
 
 If you're like me then you are sick of SEO. These cookie-cutter predictive patterns that create a myopic filter for the content we see online make as much sense as casting a rapper in a film noir, or taking a three-year old to a fine china shop. 
 

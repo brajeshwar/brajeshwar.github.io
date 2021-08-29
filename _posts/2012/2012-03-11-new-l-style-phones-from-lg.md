@@ -1,7 +1,4 @@
----
-layout: post
-title: New L-Style phones from LG
----
+# New L-Style phones from LG
 
 From basic phones to smartphones, LG offers a wide range of models. Each model offers a specific set of features in proportion to the budget opted by users. Along-with other mobile phone manufacturing majors such as Samsung, HTC and Nokia, LG launches attractive new models with new features quite often. Recently, LG announced a new set of 3 phones - "L" series. These new models have close resemblance to HTC and Samsung. Through L series, LG offers simplified versions of smartphones. L Styles will fit in between budget and high-end models of LG. 
 

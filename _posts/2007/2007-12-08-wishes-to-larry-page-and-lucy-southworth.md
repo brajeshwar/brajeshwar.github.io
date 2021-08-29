@@ -1,7 +1,4 @@
----
-layout: post
-title: Wishes to Larry Page and Lucy Southworth
----
+# Wishes to Larry Page and Lucy Southworth
 
 ![Larry Page and Lucy Southworth)](/static/2007/larry-page-lucy-southworth.jpg)
 Larry Page and Lucy Southworth

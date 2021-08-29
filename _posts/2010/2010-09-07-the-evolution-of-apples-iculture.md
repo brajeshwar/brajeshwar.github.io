@@ -1,7 +1,4 @@
----
-layout: post
-title: The evolution of Apple's iCulture
----
+# The evolution of Apple's iCulture
 
 The ability of <a href="http://www.apple.com/">Apple</a> to consistently deliver innovative products and gratify consumers' needs (mostly latent needs) worldwide has brought them huge success. In continuation of this trend, Apple introduced its latest range of advanced <a href="http://www.apple.com/ipod/">iPods</a> along with the much talked about and sought-after music machine <a href="http://www.apple.com/ipodtouch/">iPod Touch 4</a> which is said to function just like an <a href="http://www.apple.com/iphone/">iPhone 4</a> sans the phone. It is this consistency and the willingness to constantly offer technologically advanced products and services to consumers that makes Apple successful. 
 

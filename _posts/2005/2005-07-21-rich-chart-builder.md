@@ -1,7 +1,4 @@
----
-layout: post
-title: Rich Chart Builder
----
+# Rich Chart Builder
 
 [Rich Chart Builder](http://blue-pacific.com/products/richchartbuilder/) from Blue Pacific is an easy to use chart builder which outputs to SWFs.
 

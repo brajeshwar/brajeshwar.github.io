@@ -1,7 +1,4 @@
----
-layout: post
-title: Bright Forecasts made for Linux
----
+# Bright Forecasts made for Linux
 
 It shall not come as a surprise when Linux will be preferred over Windows by some of the world's largest enterprises. This is exactly what a recent report named <a href="http://www.marketwire.com/press-release/New-Linux-Foundation-User-Survey-Shows-Enterprise-Linux-to-Achieve-Significant-Gains-1333030.htm">New Foundation User Survey</a> portrays, by showcasing the kind of gains that Enterprise Linux is set to achieve in the future. However, a more <a href="http://www.linuxfoundation.org/lp/page/download-the-free-linux-adoption-trends-report">interesting claim</a> was made about Linux that personifies Linux to be the most sought after system software for Strategic Infrastructure and Development of Internal Applications, whilst Windows servers considered more ideal for consolidation purposes.
 

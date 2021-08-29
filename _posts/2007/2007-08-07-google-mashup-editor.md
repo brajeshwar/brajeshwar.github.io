@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Mashup Editor
----
+# Google Mashup Editor
 
 The [Google Mashup Editor](http://www.googlemashups.com/) (GME) allows developers to quickly build and deploy compelling web applications. Besides being able to host your mashups on a sub-domain at googlemashups.com, mashups created with GME can also be published to a hosted environment. GME provides simple tools and features that allow you to create mashups in minutes.
 

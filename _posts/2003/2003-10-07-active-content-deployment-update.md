@@ -1,7 +1,4 @@
----
-layout: post
-title: Active Content deployment Update
----
+# Active Content deployment Update
 
 This message is more for my clients, present, past and future, that I have geared up and updated all present projects to be ready for the future issues with Active Content. For past clients, I have contacted most of them, for those whom I have missed, please mail me and I will update for free. For future clients, do not worry, things are in shape.
 

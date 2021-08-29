@@ -1,7 +1,4 @@
----
-layout: post
-title: Flashcom Video Player Source
----
+# Flashcom Video Player Source
 
 The title would have been much better if I can have a full sentence; "A Flashcom Application coded with OOP patterned to MVP, to detect user bandwidth and play specific FLV".
 

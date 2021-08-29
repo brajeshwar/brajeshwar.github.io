@@ -1,7 +1,4 @@
----
-layout: post
-title: Mac OS X Lion knows you!
----
+# Mac OS X Lion knows you!
 
 Another one of the many finer little details that makes the Mac OS X stand apart from everything else. I was tweaking my screensaver when I noticed that the places mentioned in my iPhoto Album are marked with the right icons.
 

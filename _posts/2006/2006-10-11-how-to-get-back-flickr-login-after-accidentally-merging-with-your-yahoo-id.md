@@ -1,7 +1,4 @@
----
-layout: post
-title: How to get back Flickr Login after accidentally merging with your Yahoo ID?
----
+# How to get back Flickr Login after accidentally merging with your Yahoo ID?
 
 Or how to un-merge your Flickr ID from your Yahoo ID?
 

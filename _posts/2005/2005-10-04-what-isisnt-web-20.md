@@ -1,7 +1,4 @@
----
-layout: post
-title: What is/isn't Web 2.0?
----
+# What is/isn't Web 2.0?
 
 O'Reilly have a nice article on [What is Web 2.0](http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html) and Jason point out [The top 10 things that aren't Web 2.0](http://37signals.com/svn/archives2/the_top_10_things_that_arent_web_20.php).
 

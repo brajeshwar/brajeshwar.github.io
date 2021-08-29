@@ -1,7 +1,4 @@
----
-layout: post
-title: Caesars Box
----
+# Caesars Box
 
 Here is the ActionScript code to break the code [128-10-93-85-10-128-98-112-6-6-25-126-39-1-68-78](/2004/128-10-93-85-10-128-98-112-6-6-25-126-39-1-68-78/).
 

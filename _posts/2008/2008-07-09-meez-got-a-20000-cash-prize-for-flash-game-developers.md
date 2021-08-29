@@ -1,7 +1,4 @@
----
-layout: post
-title: Meez got a $20,000 cash prize for Flash Game Developers
----
+# Meez got a $20,000 cash prize for Flash Game Developers
 
 <a href="http://www.meez.com/">Meez</a> is organizing a Avatar Games contest for Flash Game Developer. There's $20,000 worth of cash in prize money. Meez has partnered with <a href="http://www.flashgamelicense.com/">FlashGameLicense</a> to run this contest starting today through September 8, 2008.
 

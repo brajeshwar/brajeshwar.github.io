@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Delivers Flash Player 9 with H.264 Video Support
----
+# Adobe Delivers Flash Player 9 with H.264 Video Support
 
 Adobe today <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200712/120407adobemoviestar.html">announced</a> the immediate availability of Flash Player 9 Update 3(version number 9.0.115.0), previously code named Moviestar. Adobe <a href="http://www.adobe.com/go/flashplayer/">Flash Player</a> 9 now includes H.264 standard video support, the same standard deployed in Blu-Ray and HD-DVD high definition video players, and High Efficiency AAC (HE-AAC) audio capabilities. The latest update also features hardware accelerated, multi-core enhanced, full-screen video playback for high-resolution viewing across major operating systems and browsers.
 

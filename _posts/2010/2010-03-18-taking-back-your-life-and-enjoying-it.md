@@ -1,7 +1,4 @@
----
-layout: post
-title: Taking back your life and enjoying it
----
+# Taking back your life and enjoying it
 
 Like you, I like my computer and I find it hard to survive without it. I love the Internet too and I like being totally connected. However, few years back, I began to realize that I'm addicted to it -- the computer, the Internet and my work. You'll say, "That's with everybody. What's the problem?"
 

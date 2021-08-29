@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe AIR and Security
----
+# Adobe AIR and Security
 
 I was reading an Adobe article about an upcoming security update for Flash Player in this month of April, 2008. The Flash Player security update provides further mitigations for issues listed in the December 2007 <a href="http://www.adobe.com/support/security/bulletins/apsb07-20.html">Security Bulletin ABSP07-20</a> for DNS rebinding and cross-domain policy file vulnerabilities, and <a href="http://www.adobe.com/support/security/advisories/apsa07-06.html">Security Advisory APSA07-06</a> for cross-site scripting vulnerabilities in SWFs.
 

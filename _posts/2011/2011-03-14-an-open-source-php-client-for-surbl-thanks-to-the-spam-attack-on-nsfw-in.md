@@ -1,7 +1,4 @@
----
-layout: post
-title: An open source PHP client for SURBL; thanks to the spam attack on nsfw.in
----
+# An open source PHP client for SURBL; thanks to the spam attack on nsfw.in
 
 Couple of days back, I got an email from Amazon Abuse Desk, that botnet spammers were abusing <a href="http://nsfw.in">NSFW.in</a>. Our IP on the AWS EC2 was added to <a href="http://www.spamhaus.org/sbl/">The Spamhaus Block List</a>. Some Russian botnet spam gangs were creating automates short url at NSFW.in.
 

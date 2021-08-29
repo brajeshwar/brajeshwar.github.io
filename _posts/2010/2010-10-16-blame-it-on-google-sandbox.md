@@ -1,7 +1,4 @@
----
-layout: post
-title: Blame It on Google Sandbox
----
+# Blame It on Google Sandbox
 
 No webmaster wants to offend Google. The God of search engines can permanently ban any webmaster that refuses to play by its rules. This would be catastrophic to almost all online businesses.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Picasa, and Red Eye Reduction
----
+# Picasa, and Red Eye Reduction
 
 I had been hunting around for a software that is either free or cheap (under $20); unluckily, I could not find one good enough for the task. But then I just saw that [Picasa](http://www.picasa.com/) have an option to reduce Red Eye from Digital Photographs besides the other kick-ass options from a free Photograph Album Collection/Maintenance software. And let me tell you, the Red Eye Reduction tool of Picasa is way too cool and works great.
 

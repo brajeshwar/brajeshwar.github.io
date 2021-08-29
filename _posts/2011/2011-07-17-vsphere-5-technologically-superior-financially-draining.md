@@ -1,7 +1,4 @@
----
-layout: post
-title: vSphere 5 - Technologically Superior, Financially Draining
----
+# vSphere 5 - Technologically Superior, Financially Draining
 
 Vmware's new vSphere 5 is technologically superior, but financially draining. Vsphere's new licensing model has the virtualization community, and Vmware's online community up in arms -- and for good reason.
 

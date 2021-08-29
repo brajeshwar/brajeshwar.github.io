@@ -1,7 +1,4 @@
----
-layout: post
-title: Apollo - the next Killer App?
----
+# Apollo - the next Killer App?
 
 Today, Apollo caught my undivided attention when I saw the post from a *Rich Inter Application Mountaineer*, [Ryan Stewart](http://blog.digitalbackcountry.com/). Ryan wrote about How eBay is developing with Adobe's Apollo. Ryan talks about *San Dimas*, an experimental Apollo powered project from the eBay Developers and [EffectiveUI](http://www.effectiveui.com/).
 

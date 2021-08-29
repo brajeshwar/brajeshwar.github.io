@@ -1,7 +1,4 @@
----
-layout: post
-title: Digital Book Rental Service Threatens iPad Services
----
+# Digital Book Rental Service Threatens iPad Services
 
 <a href="http://www.amazon.com/">Amazon</a>, which initially started as a online book store that shared exclusive non-fiction stories and other short stories, went on to sell CDs, DVDs, softwares, toys, video games, apparels, furniture and MP3 downloads.
 

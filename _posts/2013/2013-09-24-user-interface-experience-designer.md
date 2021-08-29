@@ -1,7 +1,4 @@
----
-layout: post
-title: How to be a User Interface & Experience Designer
----
+# How to be a User Interface & Experience Designer
 
 First, let's look at what are User Interface and Experience Designs.
 

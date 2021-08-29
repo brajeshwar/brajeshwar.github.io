@@ -1,7 +1,4 @@
----
-layout: post
-title: Nightmares through the Net
----
+# Nightmares through the Net
 
 First, I am extremely sorry if I have hurt anybody online on web-forums or on mailing list, I never intended to hurt anyone but believe more in helping aspiring developers and designer alike in using Macromedia Technologies like Macromedia Flash, Flash Communication Server, Flash Remoting and Macromedia Central alike.
 

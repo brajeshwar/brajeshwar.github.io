@@ -1,7 +1,4 @@
----
-layout: post
-title: Finding love in Sass and Susy with a Compass
----
+# Finding love in Sass and Susy with a Compass
 
 I've dabbled, played and tinkered with HTML/CSS for quite sometime but never took it seriously. Neither did I enjoyed doing them that much to relish the awesomeness of CSS. Of late, I've involved knee deep in some serious and heavy duty CSS. For some odd reason, I liked the way things worked out and am intrigued enough that I want to know more and go deeper, improvise and do it more better, and efficiently.
 

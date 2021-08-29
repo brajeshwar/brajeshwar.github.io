@@ -1,7 +1,4 @@
----
-layout: post
-title: Asia set to contribute to Open Source
----
+# Asia set to contribute to Open Source
 
 For most populace, Asia is still considered to be a laggard when it comes to embracing of new technologies on the Internet. But according to Open Source vendors, this trend could well see a change in the near future. If they are to be believed, then Asia could well be in midst of a revolution which supports adoption of Open Source technology and the usage could well become very widespread in the next two-three years.
 

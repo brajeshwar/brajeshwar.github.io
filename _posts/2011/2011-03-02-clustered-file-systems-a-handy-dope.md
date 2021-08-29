@@ -1,7 +1,4 @@
----
-layout: post
-title: Clustered File Systems - a handy dope!
----
+# Clustered File Systems - a handy dope!
 
 There exists a handful of options to choose from as far as <a href="http://en.wikipedia.org/wiki/Clustered_file_system">clustered and high storage files</a> are concerned, but in order to understand the functioning of each file system there needs to be some research conducted. Each option of storage architecture and file system is essential as each have their own limitations that are severe and hence require meticulous design work. Here, I will try elaborating on a few common physical storage configurations, as well as clustered and distributed file system options. This should be a good beginning which will help us in looking into the best of technology.
 

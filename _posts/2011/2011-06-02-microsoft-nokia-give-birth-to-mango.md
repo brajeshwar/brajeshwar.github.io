@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft & Nokia give birth to 'Mango'
----
+# Microsoft & Nokia give birth to 'Mango'
 
 It is always advantageous for the all concerned populace, when two champions with different related fields join hands to work constructively. This has been proved with two giants <a href="http://www.microsoft.com/">Microsoft</a> and <a href="http://www.nokia.com/">Nokia</a>. They have <a href="http://news.bbc.co.uk/2/hi/programmes/click_online/9495570.stm">joined hands to create</a> new and sensational <a href="http://conversations.nokia.com/2011/05/24/microsoft-announces-details-of-windows-phone-mango/">Nokia Windows Phone 7</a> and the release is just around the corner. 
 

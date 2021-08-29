@@ -1,7 +1,4 @@
----
-layout: post
-title: 25+ Fun Holiday iPad/iPhone Games and Apps for your kid
----
+# 25+ Fun Holiday iPad/iPhone Games and Apps for your kid
 
 <a href="http://laaija.com/">My daughter</a> turns three this December (2011). She has had an iPad since her Second Birthday. Here are the top Games and Apps my daughter loves to play. I hope your kid will like it too and keep them happy, while having fun during the Holidays.
 

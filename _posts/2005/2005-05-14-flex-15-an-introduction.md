@@ -1,7 +1,4 @@
----
-layout: post
-title: Flex 1.5, an Introduction
----
+# Flex 1.5, an Introduction
 
 Here is a brief write-up about my take on Flex 1.5. Not very exhaustive but highlights few features I like best. More to follow in eventual post along with my development phases. Out of the many [features](http://www.macromedia.com/support/documentation/en/flex/1_5/releasenotes.html#whatsnew) of Flex 1.5, I particularly liked RSL or the Runtime Shared Library, Remote Object and the History Manager the best.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: ActionScript Garbage Collection, a Best Practice
----
+# ActionScript Garbage Collection, a Best Practice
 
 At the end of last month, I posted an article about [Cleansing your ActionScript codes](/2005//cleansing-your-actionscript-codes/); somewhere there seem I can still add a few more to it.
 

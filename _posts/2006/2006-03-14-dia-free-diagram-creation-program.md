@@ -1,7 +1,4 @@
----
-layout: post
-title: Dia - Free Diagram Creation Program
----
+# Dia - Free Diagram Creation Program
 
 [Gmodeler](http://www.gmodeler.com/) from [Grant Skinner](http://www.gskinner.com/) is a fantastic tool for UML for ActionScript Classes/Packages. I am pretty sure anybody using it would be really happy with the same.
 

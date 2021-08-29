@@ -1,7 +1,4 @@
----
-layout: post
-title: The Continuum, a massive Flash Game
----
+# The Continuum, a massive Flash Game
 
 {% include video source="youtube" id="5Ga7Jy64qE0" %}
 

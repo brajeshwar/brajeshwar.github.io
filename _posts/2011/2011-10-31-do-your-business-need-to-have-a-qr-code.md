@@ -1,7 +1,4 @@
----
-layout: post
-title: Do your Business need to have a QR Code?
----
+# Do your Business need to have a QR Code?
 
 Theo Lagerquist, who loves how easy technology is making communications and business. He also loves using his favorite search engine to find <a href="http://www.soliant.com/">jobs in healthcare</a>, his iPad, and other devices to stay in touch with others. His business is currently developing a QR code!
 

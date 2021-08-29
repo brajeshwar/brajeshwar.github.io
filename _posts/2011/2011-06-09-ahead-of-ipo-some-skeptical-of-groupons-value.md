@@ -1,7 +1,4 @@
----
-layout: post
-title: Ahead of IPO, Some Skeptical of Groupon's Value!
----
+# Ahead of IPO, Some Skeptical of Groupon's Value!
 
 Since its inception, <a href="http://www.groupon.com/">Groupon</a> has steadily climbed the success ladder to achieve many accolades. It has shown immense promise and there is a definitive possibility of it being declared as one of the <a href="http://images.businessweek.com/slideshows/20110415/the-next-wave-of-tech-ipos/slides/9">leading Tech IPOs</a> of by the end of 2011. However, the company is not without its set of challenges. Some of these have also led to people wondering about Groupon's value and future ahead.
 

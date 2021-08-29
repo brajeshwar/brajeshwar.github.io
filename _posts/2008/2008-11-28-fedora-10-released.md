@@ -1,7 +1,4 @@
----
-layout: post
-title: Fedora 10 Released
----
+# Fedora 10 Released
 
 Let's talk history! <a href="http://fedoraproject.org/">Fedora</a> was created in late 2003 as a Linux based Operating System which gives the users an admittance from anywhere in the world to the most up-to-date free and open source software with user friendliness being the key. It also aspires to the creation of a community for everyone where developers across the globe can contribute with their knowledge and make the OS a superior coded platform. Fedora is sponsored by <a href="http://en.wikipedia.org/wiki/Red_Hat_Linux">Red Hat</a> and is built over the Linux kernel which is again supported by the Fedora project.
 

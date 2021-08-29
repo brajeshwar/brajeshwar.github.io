@@ -1,7 +1,4 @@
----
-layout: post
-title: Screen Sharing in Flash Media Server 2 Public Beta
----
+# Screen Sharing in Flash Media Server 2 Public Beta
 
 Macromedia's "Flash Media Server 2 (Flash Media Server 2)":http://www.macromedia.com/software/flashmediaserver/public_beta/ goes public but restricted to USA, Europe and Japan. Well, looks like it is already time for a vacation to the United States!
 

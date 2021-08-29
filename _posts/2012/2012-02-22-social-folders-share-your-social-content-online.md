@@ -1,7 +1,4 @@
----
-layout: post
-title: Social Folders - share your social content online
----
+# Social Folders - share your social content online
 
 Ever get irritated that you can't push/pull content between your computer and your social networks and sort it in handy desktop folders? Instead you have to manually update each as new content is added? <a href="http://socialfolders.me/about-us/">Martin Pannier</a> did. In response he created <a href="http://socialfolders.me/">SocialFolders</a>. 
 

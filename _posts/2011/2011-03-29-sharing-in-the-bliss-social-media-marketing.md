@@ -1,7 +1,4 @@
----
-layout: post
-title: Sharing in the Bliss - Social Media Marketing
----
+# Sharing in the Bliss - Social Media Marketing
 
 The birds and bees of the social world are fighting it out in the marketing world to see who is leading. It is an all pertinent question - Which is better for marketing, Facebook or Twitter? And there are many answers to it.
 

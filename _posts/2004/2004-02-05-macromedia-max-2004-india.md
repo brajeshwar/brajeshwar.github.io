@@ -1,7 +1,4 @@
----
-layout: post
-title: Macromedia MAX 2004, India
----
+# Macromedia MAX 2004, India
 
 Macromedia MAX 2004-India, "the premier conference for developers & designers using macromedia products", is perhaps the first in India to be given the status of something like MAX and I am all delighted that things are shaping up well for Flash enthusiast in India. But the bummer this time is that it is being just targetted at the capital city, New Delhi and Bangalore.
 

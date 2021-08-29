@@ -1,7 +1,4 @@
----
-layout: post
-title: Enjoy Full Screen Video with the new Full Screen mode in Flash Player 9
----
+# Enjoy Full Screen Video with the new Full Screen mode in Flash Player 9
 
 With the release of the new updates for Windows and Mac, besides fixing a bunch of bugs, Flash Player 9 will support Full Screen Mode on the web straight out of the browser.
 

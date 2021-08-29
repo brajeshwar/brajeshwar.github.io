@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux and iPhone application solutions
----
+# Linux and iPhone application solutions
 
 The reason why Apple is such a great example for arrogant innovations is that it believes that it can take the market by storm with its products. Many of Apple's products have done exceedingly well and have created a sensation in the market. The most recent examples being iPhone and iPod.
 

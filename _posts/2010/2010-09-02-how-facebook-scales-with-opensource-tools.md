@@ -1,7 +1,4 @@
----
-layout: post
-title: How Facebook Scales with OpenSource tools
----
+# How Facebook Scales with OpenSource tools
 
 Everyone knows about the humble (and not so ethical) beginnings of Facebook. From a poor man's version of `Hot or Not` for Harvard students to the current-day Facebook, they grew to more than 500 million active users. The growth sure is, exponential; and the reach is, unparalleled. Coupled with over 900 million objects (pages, groups, events and community pages) that the users interact with and more than 30 billion pieces of content -- web links, news stories, blog posts, notes, photo albums, etc., shared each month; Facebook is a nightmare (pun intended), both in terms of the storage and the delivery of this huge data content to members across the globe interconnected -- to each other in unimaginable ways.
 

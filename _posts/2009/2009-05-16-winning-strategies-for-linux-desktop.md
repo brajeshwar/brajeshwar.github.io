@@ -1,7 +1,4 @@
----
-layout: post
-title: Winning Strategies for Linux Desktop
----
+# Winning Strategies for Linux Desktop
 
 There has been a lot of debate over several blogs on why Linux desktop would score over others and <a href="http://education.zdnet.com/?p=1969">why would it not</a>. The discussion is undoubtedly going to last long. The Linux desktop has also undergone many a polls, criticisms and appreciations alongside. <a href="https://www.linuxfoundation.org/en/Desktop_Linux">Unique features</a> and robustness over old hardware along with performance benchmarks that this desktop provides has always led to Linux enthusiasts being very optimistic about the advantages of the same and is a reason for a strong belief in the operating system.
 

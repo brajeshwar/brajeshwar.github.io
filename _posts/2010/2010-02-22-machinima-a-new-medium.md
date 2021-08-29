@@ -1,7 +1,4 @@
----
-layout: post
-title: Machinima - A New Medium
----
+# Machinima - A New Medium
 
 Machinima, a portmanteau of machine cinema or machine animation, is both a collection of associated production techniques and a film genre defined by the following techniques:
 

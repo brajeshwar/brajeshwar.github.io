@@ -1,7 +1,4 @@
----
-layout: post
-title: Dayson Pais
----
+# Dayson Pais
 
 Mumbai-based [Dayson Pais](http://in.linkedin.com/in/dayson) is the founder of `Webly`, `Epicwhale`, `Womo` -- and now he is the founder of `Textme`. And all this has been in the past 5 years. 
 

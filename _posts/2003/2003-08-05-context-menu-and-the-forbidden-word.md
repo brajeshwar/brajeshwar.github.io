@@ -1,7 +1,4 @@
----
-layout: post
-title: Context Menu and the forbidden word
----
+# Context Menu and the forbidden word
 
 Well, I have been out of my development table and in another city so I had unsubscribed myself out of all mailing list but then I was tempted to go to the flashcoders list at <a href="http://chattyfig.figleaf.com" title="Flashcoder list at chattyfig">http://chattyfig.figleaf.com</a> and saw all the talks about the new public beta <a href="http://www.macromedia.com/software/flashplayer/public_beta/" title="Flash player 7,0,0,249 public beta">flash player 7,0,0,249</a> and saw many things, including a good listing of the features. Besides many others, Context Menu is one good addition that Flash 7 has bestowed us.
 

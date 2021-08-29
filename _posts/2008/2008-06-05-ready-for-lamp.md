@@ -1,7 +1,4 @@
----
-layout: post
-title: Ready for LAMP?
----
+# Ready for LAMP?
 
 I promised about LAMP in my earlier article -- <a href="/2008/open-source-revolution/">The Open Source Revolution</a> and so here am I with the details on LAMP.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Galaxy S - First to get a taste of Gingerbread?
----
+# Galaxy S - First to get a taste of Gingerbread?
 
 In an <a href="/2010/hungry-for-gingerbread-anyone/">earlier post</a> we had covered the December 16 release of what is the first ever Gingerbread Android phone i.e. the <a href="http://www.google.com/phone/detail/nexus-s">Google Nexus S</a>. Since then the Inter webs have gone into a frenzy with bloggers talking about the virtues of the newest release of Android and developers busy tweaking the released SDK to come up with custom ROMs for various Android phones in the market. If you were already dizzy with the speed at which Android is growing not just as an open OS project but also in terms of market reach. We already read in Kalen's previous post that -- <a href="/2010/android-phones-are-clearly-the-future/">Android phones are selling at a rate of 300,000 a day</a>.
 

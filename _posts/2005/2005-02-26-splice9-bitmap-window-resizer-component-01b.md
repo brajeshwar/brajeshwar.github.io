@@ -1,7 +1,4 @@
----
-layout: post
-title: Splice9 - Bitmap Window Resizer Component 0.1b
----
+# Splice9 - Bitmap Window Resizer Component 0.1b
 
 "Wow! This is so nice. I finish my 2 weeks work in a day", was from a phrase of one happy e-mail we received long back during the early third quarter of the year 2004. The e-mail was from a client who doubles up as a Graphic UI Layout Designer. We did a JSFL command panel for chopping and resizing windows for a heavy windows intensive Enterprise Flash Application. Its basic function was to chop up a selected bitmap into desired slices of 3x3, 3x1, 1x3 according to the type of windows our code was to apply resizing to graphically themed windows.
 

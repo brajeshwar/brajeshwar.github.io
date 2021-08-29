@@ -1,7 +1,4 @@
----
-layout: post
-title: Selectoracle / CSS 3
----
+# Selectoracle / CSS 3
 
 Have you ever wondered and be amazed at other people's cool, geeky css selectors, attributes and surprised that you have missed many of them, specially those new CSS 3 thingy which is around for quite sometime? Well, I found a url that exactly does some explanation for what those geeky slectors mean, have a look at SelectORable, just paste your (or other people's for that matter) css and let it do the explanation.
 

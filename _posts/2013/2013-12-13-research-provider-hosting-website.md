@@ -1,7 +1,4 @@
----
-layout: post
-title: Research your provider before hosting your website
----
+# Research your provider before hosting your website
 
 Many people, especially those who are just starting off with a new online website and/or business, go straight for the cheapest web hosting provider they can find. It's actually important to look for established and reputed providers such as
 [Mediatemple](http://mediatemple.net/),

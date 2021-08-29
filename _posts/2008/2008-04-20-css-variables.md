@@ -1,7 +1,4 @@
----
-layout: post
-title: CSS Variables
----
+# CSS Variables
 
 CSS Variables can define stylesheet-wide values identified by a token and usable in all CSS declarations. A recurring value, like colors or background-color in a stylesheet, will be way easier to update across the stylesheet if a developer has to modify at just one single place or value instead of modifying all style rules applying the `property: value` pair.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: More about Raspberry Pi
----
+# More about Raspberry Pi
 
 Early in the 1980s, affordable computing was a craze in the market. However, learning about them was a difficult process to the users. Machines such as Atare 400 and early Apples' were already helping people in exploring the whole new world; giving rise to some of the pioneers in the computing world including the gaming industry.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Get your Virtual Office in India
----
+# Get your Virtual Office in India
 
 Today morning, something caught my fancy with the Hindustan Times print, something about setting up a cheap virtual office for startups who need a physical address, phones number and assistants. I googled around to find one such service -- the <a href="http://www.servcorp.net/imperialservcorp/">Imperial Servcorp</a>.
 

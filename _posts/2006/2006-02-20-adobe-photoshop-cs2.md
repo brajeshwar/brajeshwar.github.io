@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Photoshop CS2
----
+# Adobe Photoshop CS2
 
 Many Thanks to [Adobe](http://www.adobe.com/) for the Photoshop CS2 Review Copy. I have been stealing time in between my schedules to test this out for the past one month. Personally, I never felt the need to compare Photoshop with any other Image Editors. Maybe, my exposure to the variety of image editors are conservative but then the few that I tried never matched up to what Photoshop does. My review here may be rather vague and not that professional as I am not a professional Graphic/UI Designer, I tried out the features after reading about them and after consulting our Designer Team.
 

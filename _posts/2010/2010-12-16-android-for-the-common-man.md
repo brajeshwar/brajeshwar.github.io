@@ -1,7 +1,4 @@
----
-layout: post
-title: Android for The Common Man
----
+# Android for The Common Man
 
 R.K. Laxman's 'The Common Man' has been around watching India grow since her post Independence days and his never wavering gaze at the state of the country's economy and harsh realities juxtapose daily living in this smorgasbord of cultures called India. Any technology that is open and allows more myriad transformations into various forms is warmly embraced in this part of the world since that flexibility allows it to filter down to the lower stratas of society. And so it is with <a href="http://www.android.com/">Android</a> as it is now being embraced by various manufacturers to power their low-cost phones.
 

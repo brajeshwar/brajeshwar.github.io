@@ -1,8 +1,5 @@
----
-layout: post
-title: How free software makes money!
+# How free software makes money!
 
----
 
 While Microsoft keeps churning out newer and newer versions of Windows at more and more unreasonable prices, the 'Free Software Movement' marches on. Ever wondered why a perfectly respectable system like Ubuntu Linux ships completely free of cost all the way from Africa?
 

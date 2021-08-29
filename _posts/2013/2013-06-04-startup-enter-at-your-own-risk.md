@@ -1,7 +1,4 @@
----
-layout: post
-title: Enter at your own Risk. Next Stop. Startup.
----
+# Enter at your own Risk. Next Stop. Startup.
 
 [![Enter at your own Risk. Next Stop. Startup.)](/static/2013/startup-enter-at-your-own-risk.jpg)](https://github.com/brajeshwar/startup-enter-at-your-own-risk)
 

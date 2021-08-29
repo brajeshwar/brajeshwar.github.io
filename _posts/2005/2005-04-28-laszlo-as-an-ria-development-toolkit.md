@@ -1,7 +1,4 @@
----
-layout: post
-title: Laszlo as an RIA Development Toolkit
----
+# Laszlo as an RIA Development Toolkit
 
 Recently [Laszlo Systems](http://www.laszlosystems.com/) announced their flagship product [OpenLaszlo 3.0](http://www.laszlosystems.com/company/press/press_releases/pr_apr_05d.php). OpenLaszlo is an XML-native foundation for building Rich Internet Applications and technically falls straight as a competitor for Flex.
 

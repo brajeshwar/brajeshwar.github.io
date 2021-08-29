@@ -1,7 +1,4 @@
----
-layout: post
-title: Get the latest Flash Player
----
+# Get the latest Flash Player
 
 Adobe has released Flash Player 9 along with Flex 2.
 

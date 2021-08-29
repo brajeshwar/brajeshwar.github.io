@@ -1,7 +1,4 @@
----
-layout: post
-title: Mixercast
----
+# Mixercast
 
 After many major iterations, including the name change from Nanocast to Mixercast, it's time for our application to finally see the light of the Public Beta crowd. Words have been officially spread and today, Tom Foremski of <a href="http://www.siliconvalleywatcher.com/">Silicon Valley Watcher</a> wrote an article how Jennifer Cooper, <a href="http://www.flickr.com/photos/brajeshwar/sets/72157594513498997/">the current CEO</a> at Mixercast (erstwhile Nanocast) is able to finally bring out MixerCast out of its Stealth-Mode.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Spawning does Django
----
+# Spawning does Django
 
 Our team had a discussion yesterday why Spawning might be a good solution for our Python-Django specific Web server. The discussion is still hot on the table and have not come to a conclusion; nonetheless, Spawning does look really promising if we are to extract every ounce of power from a server and utilize its full power. We were questioning if using Apache is like using a "sledgehammer to swat flies".
 

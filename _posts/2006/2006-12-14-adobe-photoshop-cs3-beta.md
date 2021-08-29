@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Photoshop CS3 Beta
----
+# Adobe Photoshop CS3 Beta
 
 Adobe have been working to deliver native performance to customers using Intel-based Macs as soon as possible. Now that they believed that their beta, popularly known as Red Pill, is running well on these and other systems, Adobe have decided that it is time to share it with all current Photoshop customers.
 

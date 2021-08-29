@@ -1,7 +1,4 @@
----
-layout: post
-title: Emails to Google Wave - the expected shift
----
+# Emails to Google Wave - the expected shift
 
 While <a href="http://www.bing.com">BING</a> created a much expected hype about way we would look at search engines, Google is all set to redefine the mashup ecosystem.
 

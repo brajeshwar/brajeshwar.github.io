@@ -1,7 +1,4 @@
----
-layout: post
-title: Golden Seeds plans Angel investment for women entrepreneurs in India
----
+# Golden Seeds plans Angel investment for women entrepreneurs in India
 
 <a href="http://www.goldenseeds.com/">Golden Seeds</a>, a U.S based angel investing group that promotes women entrepreneurs, is exploring opportunities in India. A delegation of 14 will be visiting Delhi, Bangalore and Mumbai, meeting with the early stage investing community and entrepreneurs. As part of this, 10 entrepreneurs are being selected from a call for business plans to pitch for funding from Golden Seeds as well as investors based in India on March 5th, 2011 at a day-long event to be held at the Bombay Stock Exchange.
 

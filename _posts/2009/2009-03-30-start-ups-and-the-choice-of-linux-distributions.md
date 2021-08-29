@@ -1,7 +1,4 @@
----
-layout: post
-title: Startups and the choice of Linux Distributions
----
+# Startups and the choice of Linux Distributions
 
 Are you a budding entrepreneur and the very thought of having a start-up of yours has just tickled your head? After the initial thought process of the product/service niche you're willing to plant yourself in, the next steps would include setting up your budgets. A penny saved is a penny earned! Why not consider an open source alternative against purchasing several licensed copies of your favorite operating system or getting a pirated copy of the same!
 

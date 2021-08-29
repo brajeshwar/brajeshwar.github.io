@@ -1,7 +1,4 @@
----
-layout: post
-title: Apple eyeing Hulu?
----
+# Apple eyeing Hulu?
 
 What did I say about Apple in my previous articles? I always say that the name Apple itself sounds like King. Be it either of the Apples (fruit and smartphones), both of them are enticing. I guess Apple products get enticed day by day. Now the recent enticement to its throne is <a href="http://www.hulu.com/">Hulu</a>. Hulu is an on-demand streaming source for movies and TV shows or soap operas on desktop PCs and mobile phones.
 

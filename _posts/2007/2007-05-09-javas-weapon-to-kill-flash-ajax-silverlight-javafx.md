@@ -1,7 +1,4 @@
----
-layout: post
-title: Java's weapon to kill Flash, Ajax, SilverLight - JavaFX
----
+# Java's weapon to kill Flash, Ajax, SilverLight - JavaFX
 
 Java have long failed to woo Internet users on the client front-end. Flash was ruling it for years; but wit the recent announcement of <a href="/2007/microsoft-plans-to-topple-flash/">SilverLight</a> from Microsoft, Sun could no longer stay behind. So, they are trying again with a consumer-flavored Java - JavaFX.
 

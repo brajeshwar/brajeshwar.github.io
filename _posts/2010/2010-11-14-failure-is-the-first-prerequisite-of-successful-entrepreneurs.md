@@ -1,7 +1,4 @@
----
-layout: post
-title: Failure is the first prerequisite of successful entrepreneurs
----
+# Failure is the first prerequisite of successful entrepreneurs
 
 Every entrepreneur is preoccupied with success.  But to succeed, we must first understand failure.
 

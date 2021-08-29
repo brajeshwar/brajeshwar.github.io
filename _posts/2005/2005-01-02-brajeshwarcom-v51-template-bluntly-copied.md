@@ -1,7 +1,4 @@
----
-layout: post
-title: Brajeshwar.com v5.1 template bluntly copied!
----
+# Brajeshwar.com v5.1 template bluntly copied!
 
 Well, well, I have no problem with that but don't claim "this site is an orginial design of my own. ....... . Currently version 4.0 is on display constructed with HTML/CSS. I am pleased with the outcome". I don't deny the fact that I too get lotta inspiration from other people but I request the authors if I can use/modify the same. Look at this website, stickrod.com, it even uses my meta description tagline "Brajeshwar is dedicated to web development using Macromedia technologies".
 

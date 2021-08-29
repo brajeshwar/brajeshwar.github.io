@@ -1,7 +1,4 @@
----
-layout: post
-title: Wiley Design Challenge
----
+# Wiley Design Challenge
 
 Wiley, a leading publisher of Adobe how-to books, has launched Wiley Design Challenge, a book cover design contest that will run through October 31, 2008. Artists at all levels of expertise are invited to submit their artwork for consideration in the design contest.
 

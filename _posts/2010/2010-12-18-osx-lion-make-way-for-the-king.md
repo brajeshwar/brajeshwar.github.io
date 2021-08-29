@@ -1,7 +1,4 @@
----
-layout: post
-title: OSX Lion - Make way for the King
----
+# OSX Lion - Make way for the King
 
 Steve Jobs says that the <a href="http://www.apple.com/macosx/lion/">Lion</a> has been inspired by their efforts with iOS, resulting in an expanded use of multitouch gestures, an emphasis on iPad-like full screen applications and an App Store for OS X (which will also be coming to Snow Leopard). The Launchpad application launcher will give an iPad-like grid of icons allowing you to create iOS-style folders for applications and finally the all-new Mission Control will offer a unified view of all open windows, apps and dock. Expect the eighth major release of the world's most advanced operating system; Lion to roll out in the summer of 2011.
 

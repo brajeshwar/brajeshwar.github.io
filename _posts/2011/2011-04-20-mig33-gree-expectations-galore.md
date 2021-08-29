@@ -1,7 +1,4 @@
----
-layout: post
-title: mig33 + GREE = Expectations Galore
----
+# mig33 + GREE = Expectations Galore
 
 When two stalwarts of the worldwide internet forum come together, there automatically is a lot expected from such an alliance. This alliance between <a href="http://www.mig33.com/">mig33</a> and <a href="http://www.gree.co.jp/en/">GREE Inc</a>. took place this year on April 13th, wherein mig33, the world's largest mobile-first community, announced an agreement with GREE, a major Japanese social networking service provider. The contract signing was made for the purpose of adopting the GREE Platform for smartphone, by which mig33's community would be open to a vast array of social game developers throughout Japan and far beyond.
 

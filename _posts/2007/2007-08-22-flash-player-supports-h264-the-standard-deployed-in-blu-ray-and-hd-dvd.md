@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Player supports H.264 - the standard deployed in Blu-Ray and HD-DVD
----
+# Flash Player supports H.264 - the standard deployed in Blu-Ray and HD-DVD
 
 Adobe announced the availability of Adobe Flash Player 9, code-named Moviestar, which includes H.264 standard video support - the same standard deployed in Blu-Ray and HD-DVD high definition video players - and High Efficiency AAC (HE-AAC) audio support, as well as hardware accelerated, multi-core enhanced full screen video playback.
 

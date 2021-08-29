@@ -1,7 +1,4 @@
----
-layout: post
-title: PrimalScript 3.1
----
+# PrimalScript 3.1
 
 Someone have rightly said that your Text Editor is like your shoes! I just got my new one, Sapien's <a href="http://www.sapien.com/primalscript.aspx" title="PrimalScript">PrimalScript</a> 3.1. Initially I had to do a little way-finding as I was too coupled with my previous Text Editor (almost 3 years). I am not really a fan of Microsoft Outlook Look-ALike feel with its interface (Nexus Window), but then it was easy for me to just assign a shortcut key to swap that to on-off (I used Ctrl+F3, like I had for my previous editor). Neverthless, it is very helpful, just bring it up when you want to use it. You also have the ability to do the switching toggle with <em>View > Next Window</em>. The additional browser inside is also nice to give you a quick access to a browser and still work on your codes. It even allows you to assign Multiple Classpath for Actionscript 2.0.
 

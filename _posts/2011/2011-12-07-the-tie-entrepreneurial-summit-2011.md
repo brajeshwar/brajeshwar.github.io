@@ -1,7 +1,4 @@
----
-layout: post
-title: The TiE Entrepreneurial Summit, 2011
----
+# The TiE Entrepreneurial Summit, 2011
 
 With the theme, "Celebrating the EntrepreneurTrip", the TiE Entrepreneurial Summit 2011 will drive their focus on the entrepreneurial journey - trials, tribulations, challenges and exhilaration - from ideation to creation to growth and scaling. Entrepreneurship experiences and lessons from across this spectrum will be discussed, debated and shared through multiple panels and sessions including Guru Talks. The Guru Talk is where Gurus from the world of entrepreneurship share their experiences in an informal Q&A session with the audience. The event will be a good one to network with the likes of budding entrepreneurs, seasoned and experienced ones.
 

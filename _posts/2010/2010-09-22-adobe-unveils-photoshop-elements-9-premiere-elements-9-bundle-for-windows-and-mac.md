@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe unveils Photoshop Elements 9 & Premiere Elements 9 Bundle for Windows and Mac
----
+# Adobe unveils Photoshop Elements 9 & Premiere Elements 9 Bundle for Windows and Mac
 
 Adobe always keeps up the good job of offering users with state-of-the-art products and solutions and each time ensures that the lives of the users is made easier and uncomplicated with the fabrication of simple and user friendly products and solutions. Continuing this trend, Adobe has added yet another upgrade to it's existing large array of <a href="http://www.adobe.com/products/">product offerings</a>. This time the addition is <a href="http://www.adobe.com/products/psprelements/">Photoshop Elements 9 & Premiere Elements 9 Bundle</a> which is considered one of the best consumer photo and video editing software. Both softwares are available in one retail package (bundle) at a very reasonable price of $149.99 (or $99.99 for each) and the Premiere Elements comes to Mac for the first time.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: How to estimate a Project Cost more Accurately?
----
+# How to estimate a Project Cost more Accurately?
 
 Project Steps has a nice [list of points](http://projectsteps.blogspot.com/2006/01/estimates-are-always-wrong_17.html) one should keep in mind while estimating the cost of a project.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: 3D Printer gives woman brand new Jawbone
----
+# 3D Printer gives woman brand new Jawbone
 
 Don't you just love it when random technology advances non-technocratic fields? I do, which is why I got excited when I heard that they used a 3D printer to create an 83-year-old Belgian woman's <a href="http://www.uhasselt.be/UH/Tijdschriften/ToonPersmededeling.html?i=482">jawbone replacement</a>. 
 

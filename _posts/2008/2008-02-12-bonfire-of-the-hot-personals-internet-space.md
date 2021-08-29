@@ -1,7 +1,4 @@
----
-layout: post
-title: Are you prepared for the bonfire of the already hot Personals Internet Space
----
+# Are you prepared for the bonfire of the already hot Personals Internet Space
 
 Hot or Not acquired for $20 million
 

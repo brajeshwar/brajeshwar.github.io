@@ -1,7 +1,4 @@
----
-layout: post
-title: Resign Patterns; Ailments of Unsuitable Project-Disoriented Software
----
+# Resign Patterns; Ailments of Unsuitable Project-Disoriented Software
 
 ## Resign Patterns
 

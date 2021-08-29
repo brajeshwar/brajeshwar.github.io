@@ -1,7 +1,4 @@
----
-layout: post
-title: Successful Enterprise Complaints Management by UsefulFeedback
----
+# Successful Enterprise Complaints Management by UsefulFeedback
 
 Think about a hypothetical situation - You get a text message from your mobile phone service provider stating that you would have to submit a few documents, for verification of your identity, to the nearest customer service center. Before you would have realized the brevity or the urgency of the submission your service provider disables the Caller Identification Presentation (CLIP) facility on your phone. You get a call, but unable to answer it somehow & you haven't been able to be authorized to dial any number yet. You call up your customer service and they remind you of submitting your valid documents. You rush to the nearest store and submit all duly signed documents and are happy that you have done your job and the service would be activated within the next 48 hours. You are intelligent, and you did not even forget to note down the Customer Information Form (CIF).
 

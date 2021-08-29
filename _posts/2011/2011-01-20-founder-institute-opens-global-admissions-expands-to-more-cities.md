@@ -1,7 +1,4 @@
----
-layout: post
-title: Founder Institute opens Global Admissions, expands to more cities
----
+# Founder Institute opens Global Admissions, expands to more cities
 
 If you're starting a new company or planning to start one, <a href="http://www.founderinstitute.com/">Founder Institute</a>, may be just the right one for you. In short, Founder Institute will help you cross your t's and dot your i's to help reduce the cost and increase the quality of starting an enduring and meaningful technology company.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Access and Manage apps with AppDok on IE, Firefox & Chrome
----
+# Access and Manage apps with AppDok on IE, Firefox & Chrome
 
 The Internet is alive with a multitude of apps for every niche. Each day, a variety of new apps are constructed. These apps find their way in to our lives via our browsers and they exist to make our lives easier in a variety of ways. It is only natural that you would be interested in trying new and unique apps. However, managing and accessing these apps on your browser can get a little tedious over time. 
 

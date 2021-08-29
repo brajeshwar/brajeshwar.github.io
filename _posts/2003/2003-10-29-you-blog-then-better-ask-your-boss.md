@@ -1,7 +1,4 @@
----
-layout: post
-title: You blog? then better ask your boss
----
+# You blog? then better ask your boss
 
 Do you blog? And are you employed? Be careful your boss may not like what you blog, this guy got fired (<a href="http://www.michaelhanscom.com/eclecticism/2003/10/of_blogging_and.html">read actual thread</a>) because he <a href="http://www.michaelhanscom.com/eclecticism/2003/10/even_microsoft_.html">wrote something</a> on his blog that his company do not like. Similarly, better be careful with your blog content and follow your web-host's rules and regulation. I got a warning of "Abuse-Copyright Infringement" because of some of the comments on this blog. I had to spend half a day reading all comments and deleting many of them. Right now, I am following the Tip No. 6 of of the seven quick steps to spam-free blog.
 

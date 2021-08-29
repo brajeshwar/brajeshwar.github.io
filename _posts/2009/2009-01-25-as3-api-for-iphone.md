@@ -1,7 +1,4 @@
----
-layout: post
-title: ActionScript 3 API Reference for the iPhone
----
+# ActionScript 3 API Reference for the iPhone
 
 Mike Chamber's got a nice iPhone app -- a handy <a href="http://www.mikechambers.com/as3iphone/">ActionScript 3 API reference</a>.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft Silverlight 1.0
----
+# Microsoft Silverlight 1.0
 
 <a href="http://www.microsoft.com/silverlight/" title="Silverlight"><img src="/static/2007/09/silverlight.png" alt="Silverlight" style="border: 0 none;" /></a>"Light up the web" or "Experience what you're missing" are the slogans of this relatively new product from <a href="http://www.microsoft.com/" title="Microsoft">Microsoft</a>.
 

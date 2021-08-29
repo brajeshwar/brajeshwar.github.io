@@ -1,7 +1,4 @@
----
-layout: post
-title: Ubuntu's Desktop Alternatives
----
+# Ubuntu's Desktop Alternatives
 <p><a href="http://www.ubuntu.com/">Ubuntu</a> has always, by default, comprised of <a href="http://www.gnome.org/">GNOME</a> as its desktop environment. The upcoming latest model of Ubuntu (<a href="http://www.pcworld.com/businesscenter/article/212468/natty_narwhal_alpha_offers_peek_at_ubuntu_1104.html">Natty Narwhal version 11.04</a>) will now be using the 3D-enabled <a href="http://www.pcworld.com/businesscenter/article/208818/is_unity_the_right_interface_for_desktop_ubuntu.html">Unity desktop</a> by default which will be accompanied by the <a href="http://www.pcworld.com/businesscenter/article/210018/ubuntu_will_adopt_wayland_graphics_system.html">Wayland graphics system</a>. This one too is based on GNOME thereby it won't be a problem for users to use any of the GNOME applications.</p>
 
 <p>It should be a known fact that desktop environments differ in a lot of ways and hence can affect the efficient use of Ubuntu, but since now it is undergoing a change this would be a good time to view some alternative desktop options for Ubuntu:</p>

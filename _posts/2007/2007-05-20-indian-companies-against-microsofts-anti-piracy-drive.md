@@ -1,7 +1,4 @@
----
-layout: post
-title: Indian companies against Microsoft's anti-piracy drive
----
+# Indian companies against Microsoft's anti-piracy drive
 
 Gujarat (INDIA) is the land of Mahatma Gandhi who took to <a href="http://en.wikipedia.org/wiki/Satyagraha">Satyagraha</a>, the non-violence movement, as a weapon against the British to demand India's freedom. This land saw another movement on the 16th May, 2007, however a weird one at that - Anti-Piracy Antagonism Movement! The reseller community of Gujarat declared a one-day General Strike (notoriously known as Bandh in India) to protest against <a href="http://www.microsoft.com/">Microsoft</a> for serving an anti-piracy notice to them.
 

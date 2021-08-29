@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe BrowserLab integration for Firebug
----
+# Adobe BrowserLab integration for Firebug
 
 On October 8, Adobe announced new features for <a href="https://browserlab.adobe.com/">BrowserLab</a> that are designed to enhance existing workflows and attract web developers who use <a href="http://getfirebug.com/">Firebug</a>.
 

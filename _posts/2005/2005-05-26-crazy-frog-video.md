@@ -1,7 +1,4 @@
----
-layout: post
-title: Crazy Frog
----
+# Crazy Frog
 
 {% include video source="youtube" id="k85mRPqvMbE" %}
 

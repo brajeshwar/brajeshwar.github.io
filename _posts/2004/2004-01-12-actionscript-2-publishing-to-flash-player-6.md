@@ -1,7 +1,4 @@
----
-layout: post
-title: Actionscript 2 publishing to Flash player 6
----
+# Actionscript 2 publishing to Flash player 6
 
 First, let me thank Mike Chambers, Peter Hall and Darshan for their help in getting me along on this topic. I will update this further in future when more things are discovered doing something along the way. You can also read something in the similar line at [Jesse Warden](http://www.jessewarden.com/)'s blog entry - Shared Libraries only work within same version SWF.
 

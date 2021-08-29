@@ -1,7 +1,4 @@
----
-layout: post
-title: How to write an effective Resume How to get your Curriculum Vitae right
----
+# How to write an effective Resume How to get your Curriculum Vitae right
 
 A resume or curriculum vitae is a document containing a summary or listing of relevant job experience and education, usually for the purpose of securing a new job. Often the resume is the first item a potential employer encounters regarding the job seeker, and therefore a large amount of importance is often ascribed to it.
 

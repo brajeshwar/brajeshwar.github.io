@@ -1,7 +1,4 @@
----
-layout: post
-title: nsfw-ish Responsive b**bs, err, responsive content with html/css
----
+# nsfw-ish Responsive b**bs, err, responsive content with html/css
 
 Working on a website that needs to be responsive.
 

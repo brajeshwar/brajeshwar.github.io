@@ -1,7 +1,4 @@
----
-layout: post
-title: Scary Mandarin Nightmare
----
+# Scary Mandarin Nightmare
 
 While I was talking to a friend, we agreed on a fact that Mandarin is the language spoken by the most populous country, China and that means lot of people.
 

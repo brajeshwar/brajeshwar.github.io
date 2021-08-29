@@ -1,7 +1,4 @@
----
-layout: post
-title: The Smallest Battery has a Big Future!
----
+# The Smallest Battery has a Big Future!
 <p>Though the advancement of electronic devices & breakthrough gadgets has been advancing progressively; the battery technology still is a few steps behind the other. In the coming years, one can expect their laptops, cars, mobile phones and any other devices running on battery to be replaced by something which is more handy & small in size. This dream is possible to envisage due to a group of researchers engaged in creating new evolution in the battery technology domain. </p>
 <p>They have successfully produced the World's Tiniest Battery. A team headed by <a href="http://cint.lanl.gov/jianyu_huang.shtml">Jianyu Huang</a>, a researcher at <a href="http://www.sandia.gov/">Sandia National Laboratories</a>, carried out the experiment at the <a href="http://cint.lanl.gov/">Center for Integrated Nanotecnologies</a> (CINT), where they already got insight of a working battery, which holds key to the future smaller and efficient battery.</p>
 

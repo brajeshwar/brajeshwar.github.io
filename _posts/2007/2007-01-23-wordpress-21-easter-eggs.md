@@ -1,7 +1,4 @@
----
-layout: post
-title: Wordpress 2.1 Easter Eggs
----
+# Wordpress 2.1 Easter Eggs
 
 With the release of the new improvised [Wordpress 2.1](http://wordpress.org/development/2007/01/ella-21/), the team have promised us lot of easter eggs. Let's start the hunt for the Wordpress 2.1 Easter Eggs. Here are some Wordpress Easter Eggs;
 

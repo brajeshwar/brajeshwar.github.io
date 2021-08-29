@@ -1,7 +1,4 @@
----
-layout: post
-title: How is it like during the first hour when your site is on top of Hackernews
----
+# How is it like during the first hour when your site is on top of Hackernews
 
 {% include video source="youtube" id="o3nXaGxHq6w" %}
 

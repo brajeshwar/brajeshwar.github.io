@@ -1,6 +1,3 @@
----
-layout: post
-title: Over to Flash 8, Studio 8
----
+# Over to Flash 8, Studio 8
 
 Finally, we got our Studio 8 licenses and we are ready to rock and roll with 8th incarnation of Flash, Dreaamweaver. Personally, I have not re-installed Studio MX 2004/Flash 7 ever since my [Notebook crashed](/2005/thou-shall-back-up-everyday/) and have been on Flash 8 for quite somtime (or rather a very long time). Our Team will very soon be using Studio 8 and move away from Studio MX 2004 altogether. I would like to thank Macromedia again.

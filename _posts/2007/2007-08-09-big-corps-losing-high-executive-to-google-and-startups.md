@@ -1,7 +1,4 @@
----
-layout: post
-title: Big Corps losing high executive to Google and Startups
----
+# Big Corps losing high executive to Google and Startups
 
 Very recently, <a href="http://venturebeat.com/">Venture Beat</a> carried an <a href="http://venturebeat.com/2007/08/06/roundup-six-aparts-memo-vcs-and-sex-toys-wimax-in-2008-newsercom-more/">article</a> - Chief Architect Brad Fitzpatrick left <a href="http://www.sixapart.com/">Six Apart</a> - a Silicon Valley start-up that offers several blogging software platforms, including Movable Type, Typepad, LiveJournal etc.
 

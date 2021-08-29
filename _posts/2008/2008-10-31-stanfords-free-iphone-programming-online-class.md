@@ -1,7 +1,4 @@
----
-layout: post
-title: Stanford's FREE iPhone programming online class
----
+# Stanford's FREE iPhone programming online class
 
 The Fall 2008 quarter will mark the beginning of a new class: <a href="http://www.stanford.edu/class/cs193p/">CS193P iPhone Application Programming</a> from Stanford. The new class is focused on Apple's iPhone application development using Cocoa Touch.
 

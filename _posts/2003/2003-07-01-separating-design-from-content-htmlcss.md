@@ -1,7 +1,4 @@
----
-layout: post
-title: Separating Design from Content (HTML/CSS)
----
+# Separating Design from Content (HTML/CSS)
 
 More and more people are turning to CSS to separate as much as of their design from the content and more importantly to free their html layout from the shackles of tables. Tables are thus best left for tabular data display. I had nurtured myself a layout done purely through CSS 2.0 and a doctype of XHTML 1.0 transitional a few weeks back, [Philippe Wittenbergh](http://www.l-c-n.com/) was helping me with the layout, trying to get around to it using many hacks. But in due course of hacks over hacks, one day my site get caught in the ALA cut of bug, or the "guillotine bug".
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Tune your site for Windows SP 2
----
+# Tune your site for Windows SP 2
 
 I just upgraded to Service Pack 2 on my Windows XP Professional Box and when logged in back after a successful installation, suddenly the Flash Interface I was working on is no longer displayed. IE 6.0 told me that it had blocked the content (Active X) "to help protect your security, Internet Explorer has restricted this file from showing active content that could access your computer. Click here for options..."
 

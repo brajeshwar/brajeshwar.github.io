@@ -1,7 +1,4 @@
----
-layout: post
-title: Tranfer from Paypal
----
+# Tranfer from Paypal
 
 There is good news for [Paypal](http://www.paypal.com/) user in India. You can now transfer money through check and without going through the acrobatic feat of transfer through relatives and friends where you waste money on the transfer fee. Unlike the US where you can add a bank and have the money transferred, Indians have to be content with a check that Paypal will issue in your favor (take care that the name is same as the one in your bank account). And the current limitation is withdrawal of only $2,500 per month.
 

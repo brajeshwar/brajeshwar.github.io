@@ -1,7 +1,4 @@
----
-layout: post
-title: FOSS vs Proprietary - Who cares about 'The War'
----
+# FOSS vs Proprietary - Who cares about 'The War'
 
 Free software and open standards have always been a point of debate for the confusing line between hardcore tech world and the whole other world of users. However, very recently, tech pundits have beaten a retreat on the issue, claiming that free software and open standards do not really matter much. This can only be understood better if one understands the factors that have always been taken in to account in the <a href="/2010/open-source-vs-proprietary-software-%E2%80%93-the-never-ending-battle/">face off between free and proprietary software</a> or open and close standard hardware.
 

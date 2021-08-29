@@ -1,7 +1,4 @@
----
-layout: post
-title: Tiny Link - a Wordpress plugin to create a TinyURL for your articles
----
+# Tiny Link - a Wordpress plugin to create a TinyURL for your articles
 
 I was in search of a way to automagically get an alternate short link for the lengthy URL of my articles. I tried a plugin but somehow went kaput and never worked for me. I decided to write one for myself and came up with a very simple solution.
 

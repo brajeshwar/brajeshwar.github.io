@@ -1,7 +1,4 @@
----
-layout: post
-title: An online film festival - We Speak, Here
----
+# An online film festival - We Speak, Here
 
 Culture Unplugged Studios have launched a new film festival -- <a href="http://www.cultureunplugged.com/festival/">We Speak, Here</a>. This festival is an effort to share personal stories of us as an individual being, our physical & spiritual existence, our myriad expressions, dark & light, of human mind, body & soul, as a response to life within & without. The festival hopes to inspire us all to reflect on human life & its journey so far, and search for our individual purpose that can guide the legend we are to create & contribute to our humanity. The festival invites you to explore 'we', in need to know you, him or her as 'me'.
 

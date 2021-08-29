@@ -1,7 +1,4 @@
----
-layout: post
-title: Linux, 'At the End' of its PLC – Is that a Joke?
----
+# Linux, 'At the End' of its PLC – Is that a Joke?
 
 There have been several occasions where I have written about Linux and I remember most of the stuff that I have written reflects on how good Linux has been and the kind revelation it has brought about in the software world. Some have been on latest open source products like the <a href="/2010/linux-mint-10/">New Linux Mint 10</a> and some other on <a href="/2010/bright-forecasts-made-for-linux/">bright forecasts made for Linux</a>; some on its innovative ways of <a href="/2010/integrated-linux-configuration-build-environment-for-netlogic-microsystems-multi-core-processors/">collaborating with private proprietary firms</a> and some on the <a href="/2010/open-source-vs-proprietary-software-e2-80-93-the-never-ending-battle/">battle</a> between Open Source and Proprietary Software companies. There seems to be enough proof that Linux has thrown up huge competition to the private proprietary firms.
 

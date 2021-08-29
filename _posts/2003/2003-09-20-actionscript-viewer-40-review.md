@@ -1,7 +1,4 @@
----
-layout: post
-title: Actionscript Viewer 4.0
----
+# Actionscript Viewer 4.0
 
 Well, the weekend seems to be a good time to look at new softwares; this time I got [ActionScript Viewer 4.0](http://buraks.com/asv/) and the first thing that came to my mind is "Wow! every teenagers dream is here". Had James Bond been a Flash Developer, he would have been presented ASV 4.0 by "G" long back. On first looking into it, I could see that it had totally stripped the well dressed SWFs naked; I could see everything, the audio files, the bitmaps and more importantly the Actionscript.
 

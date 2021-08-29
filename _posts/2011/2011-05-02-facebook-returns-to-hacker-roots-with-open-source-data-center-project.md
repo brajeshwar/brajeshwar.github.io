@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook Returns to "Hacker Roots" with Open-Source Data Center Project
----
+# Facebook Returns to "Hacker Roots" with Open-Source Data Center Project
 
 In a surprise move Facebook has gone back to their "hacker roots" -- their words not mine, by releasing their data center designs to the public. In a project dubbed the <a href="http://opencompute.org/">Open Compute project</a>, Facebook has busted open the secretive world of data centers by making their designs public and open source.
 

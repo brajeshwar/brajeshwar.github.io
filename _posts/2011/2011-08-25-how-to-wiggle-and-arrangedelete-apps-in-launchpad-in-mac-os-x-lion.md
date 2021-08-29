@@ -1,7 +1,4 @@
----
-layout: post
-title: How to wiggle and arrange/delete apps in Launchpad in Mac OS X Lion
----
+# How to wiggle and arrange/delete apps in Launchpad in Mac OS X Lion
 
 {% include video source="youtube" id="ggxORMUm8fQ" %}
 

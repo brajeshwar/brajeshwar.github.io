@@ -1,7 +1,4 @@
----
-layout: post
-title: Personal Time Management for Busy Managers
----
+# Personal Time Management for Busy Managers
 
 Effective - having a definite or desired effect.
 Efficient - productive with minimum waste or effort.

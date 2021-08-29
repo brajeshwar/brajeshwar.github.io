@@ -1,7 +1,4 @@
----
-layout: post
-title: Culture Unplugged - Spirit Enlightened
----
+# Culture Unplugged - Spirit Enlightened
 
 With the end of Culture Unplugged's film festival, Humanity Explored, they're already on another one "Spirit Enlightened" -- an Online Film Festival, exploring the consciousness, spiritual, humane, political, unplugged and shared by artists and evolutionaries.
 

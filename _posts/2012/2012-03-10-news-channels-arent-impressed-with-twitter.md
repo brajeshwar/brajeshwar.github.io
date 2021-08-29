@@ -1,7 +1,4 @@
----
-layout: post
-title: News Channels aren't impressed with Twitter
----
+# News Channels aren't impressed with Twitter
 
 Social media has attracted not only individuals and businesses but also the reporting media. Social networking sites such as Facebook, Twitter and Google+ together with the use of some <a href="http://www.socilab.net/">effective social media tools</a> are spreading the news faster than that can happen through other sources. It is simple, fast and efficient. 
 

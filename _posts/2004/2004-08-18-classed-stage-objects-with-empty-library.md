@@ -1,7 +1,4 @@
----
-layout: post
-title: Classed stage objects with empty library
----
+# Classed stage objects with empty library
 
 If you wish to read the original article instead of this one which I am archiving for my own reference as I keep scrambling for the link everytime I try to refer to, then head over to Peter Hall's post on How to create classed stage objects with an empty library? Below is the reproduction of my friend, Peter Hall's article;
 

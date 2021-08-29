@@ -1,7 +1,4 @@
----
-layout: post
-title: Yahoo! opts for Downsizing again, to Revive Business
----
+# Yahoo! opts for Downsizing again, to Revive Business
 <p>Yes, Yahoo! has done it again. In less than 4 years the company has gone ahead and issued the pink slip to as many as 2,700 employees. History says that the Sunnyvale, California based company had sacked <a href="http://www.thefreelibrary.com/Yahoo+to+cut+1,400+jobs-a01611678420">around 1,400 jobs</a> in the year 2008 during the time of recession and then <a href="http://www.theglobeandmail.com/news/technology/yahoo-cuts-700-jobs-as-ad-slump-worsens/article986648/">up to 700 job holders were shown the gate</a> in the very next year 2009.</p>
 <p>Following this is yet another lot of 600 people who now have to look for other job opportunities. The downsizing saga continued with Yahoo! chopping of 600 jobs during December mid-month of 2010, but the number supposedly higher than the real deal. There were <a href="http://techcrunch.com/2010/11/11/yahoos-freaking-out-over-20-layoff-rumors/">speculations</a> of at least a 20% layoff which in real-time has reduced to a 4% layoff.</p>
 

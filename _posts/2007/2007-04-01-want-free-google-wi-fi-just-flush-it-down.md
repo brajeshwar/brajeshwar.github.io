@@ -1,7 +1,4 @@
----
-layout: post
-title: Want Free Google Wi-Fi? Just flush it down!
----
+# Want Free Google Wi-Fi? Just flush it down!
 
 Google have introduced the <a href="http://www.google.com/tisp/">Google TiSP</a> (beta), the FREE in-home wireless broadband service. Sign up today for the free TiSP self-installation kit (includes setup guide, fiber-optic cable, spindle, wireless router and installation CD).
 

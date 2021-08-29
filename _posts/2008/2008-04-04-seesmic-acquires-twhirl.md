@@ -1,7 +1,4 @@
----
-layout: post
-title: Twitter client Twhirl acquired by Seesmic
----
+# Twitter client Twhirl acquired by Seesmic
 
 The acquisition of Twhirl, for an undisclosed amount, by <a href="http://www.seesmic.com/">Seesmic</a> is an interesting news from many angle, the most interesting being Twhirl an AIR application which can run on both Windows and Mac, and of course on Linux.
 

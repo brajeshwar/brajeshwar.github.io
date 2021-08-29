@@ -1,7 +1,4 @@
----
-layout: post
-title: Companies Hiring Entrepreneurs for Innovation!
----
+# Companies Hiring Entrepreneurs for Innovation!
 
 Innovation is a term which comes naturally to <a href="http://en.wikipedia.org/wiki/Entrepreneur">Entrepreneurs</a>. Needless to mention, today there is a rapid growth in start-ups and small companies. Leading organizations and big corporations though, are at a loss of innovating new products and services on a comparative note. A long time ago, entrepreneurs were taken so lightly and entrepreneurship was considered to be one for losers. Times have changed and changed for the good. A recent study came with a report of innovations coming from small companies of about 84%, the rest (16%) from large companies. These large companies miss out on a particular type of individual, the one who drives change, make things happen, pushes the boundaries and challenges the organization.
 

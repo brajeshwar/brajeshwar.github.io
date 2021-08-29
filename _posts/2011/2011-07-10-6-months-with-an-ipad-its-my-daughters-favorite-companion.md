@@ -1,7 +1,4 @@
----
-layout: post
-title: 6 months with an iPad & its my daughter's favorite companion
----
+# 6 months with an iPad & its my daughter's favorite companion
 
 Last November, when I was away to <a href="/2011/the-founder-institute-experience/">be part of the Founder Institute</a>, my wife and daughter went to stay with the in-laws in our hometown - Manipur, a north-eastern state of India. My daughter have a very fuzzy eating habit and have to be watching something while she eats her breakfast, lunch and dinner. With no Internet in that part of the country and frequent power-outages, she was having a hard-time. I sent them an iPad (3G) and had a BSNL SIM <a href="http://www.techradar.com/news/computing/apple/how-to-make-your-own-ipad-or-iphone-4-micro-sim-681020">carved out to fit</a> into the MicroSIM Slot of the iPad.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source -- May the source be with You
----
+# Open Source -- May the source be with You
 
 ## A primer on "Why Open Source?"
 

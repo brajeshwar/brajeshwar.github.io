@@ -1,7 +1,4 @@
----
-layout: post
-title: Facebook Founder forecasts - Personalized Sites are the Future
----
+# Facebook Founder forecasts - Personalized Sites are the Future
 
 It's not the times of yore, when most of the users preferred social networks just to socialize and make friends. Many online social networks whizzed past each other, and the most well remembered among all is -- <a href="http://www.orkut.com">Orkut</a>. Over the years, the only site which has maintained to keep users hooked to itself is, of course, <a href="http://www.facebook.com">Facebook</a>. The basics of Facebook are also similar to that of any other social networking site such as -- uploading pictures, chat, leave comments and status updates to inform other users What's on your mind!
 

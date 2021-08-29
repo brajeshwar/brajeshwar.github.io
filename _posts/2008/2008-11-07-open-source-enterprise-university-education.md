@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source enterprise to facilitate University Education
----
+# Open Source enterprise to facilitate University Education
 
 The entire university education fraternity is lending their voice about the benefits open source enterprise applications will have on students. The day is not far where we can see students all over the globe contributing to the development of open source and also enriching their pedagogy through a number of applications. 
 

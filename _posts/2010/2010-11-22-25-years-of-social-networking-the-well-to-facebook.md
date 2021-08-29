@@ -1,7 +1,6 @@
----
-layout: post
-title: 25 years of Social Networking - The WELL to Facebook
----
+# 25 years of Social Networking - The WELL to Facebook
+
+![The Well)](/static/2010/well-logo-real-blue.png)
 
 The year is 2010 and social networking site <a href="http://www.well.com/">The Well</a> celebrates its 25th anniversary, providing us with the perfect opportunity to look back in retrospective, and look forward with bleak hope. Currently there are over 500 million users on <a href="http://www.facebook.com/">Facebook</a>, and if Facebook were a country it would be the 3rd largest country on the planet. The news is plastered with daily reports of people using Facebook pedophile rings, twisted acts of cyber bullying, and other signs of a decaying society. Thankfully there is little talk about the millions of hours logged daily by Facebook users on the <a href="http://www.farmville.com/">Farmville</a> app. This was perhaps not the intention of the fathers of social networking Stewart Brand and Larry Brilliant.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Firefox 5 Preview - More Social, UI & Tab Updates
----
+# Firefox 5 Preview - More Social, UI & Tab Updates
 
 <a href="http://www.mozilla.com/en-US/firefox/fx/">Firefox 4</a> is still in beta. It is still a kid, while the people at <a href="http://www.mozilla.com/">Mozilla</a> are planning to launch the next version. It seems that Mozilla is really speeding up in developing the next version this time. <a href="http://www.techspot.com/news/43184-mozilla-firefox-5-coming-on-june-21-firefox-6-on-august-18.html">Firefox 5 is to be launched</a> by the end of June this year. That is already cool; the fast consecutive launch. And, there are yet cooler stuff too. Firefox 5 is gonna be feature packed.
 

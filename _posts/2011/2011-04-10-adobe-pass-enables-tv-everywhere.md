@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe Pass enables TV Everywhere
----
+# Adobe Pass enables TV Everywhere
 
 <a href="http://www.adobe.com/">Adobe</a> has recently launched a path-breaking innovative solution which essentially enabled the concept of <a href="http://gigaom.com/video/what-you-need-to-know-about-tv-everywhere/">TV Everywhere</a>. <a href="http://www.adobe.com/products/adobepass/">Adobe Pass service</a>, a new authentication solution; one which enables pay TV subscribers to easily access premium content from virtually any Internet-connected device.
 

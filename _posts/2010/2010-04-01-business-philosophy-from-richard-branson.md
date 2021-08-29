@@ -1,7 +1,4 @@
----
-layout: post
-title: Business Philosophy from Richard Branson
----
+# Business Philosophy from Richard Branson
 
 Today morning, while reading the newspaper <a href="http://www.livemint.com/">Mint</a>, I came across an article -- Five rapid-fire questions about business philosophy from <a href="http://www.virgin.com/richard-branson/">Richard Branson</a> of the <a href="http://www.virgin.com/">Virgin</a> brand.
 

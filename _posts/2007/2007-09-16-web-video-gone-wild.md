@@ -1,7 +1,4 @@
----
-layout: post
-title: Web video gone wild
----
+# Web video gone wild
 
 Recently, Adobe <a href="/2007/flash-player-supports-h264-the-standard-deployed-in-blu-ray-and-hd-dvd/">announced</a> the availability of the beta version of their latest Flash Player. With it came the good news about the future of high quality video on the Internet - support for H.264 video, ACC Audio, etc. Of course, the superior quality that <a href="http://en.wikipedia.org/wiki/H.264">H.264</a> will bring is definitely going to be a key factor in the future. However, what tagged along with the good news were some caveats and strings that will make you to think and ponder upon what it will cost you.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Get Smart with Small Businesses - 4 useful Cloud Tools
----
+# Get Smart with Small Businesses - 4 useful Cloud Tools
 
 Tools or services that help you to run your businesses smarter are always welcome. No matter whether the business is small or big, we all need such kind of tools and services. Here is a small list of tools that will help you to work in a better way to earn faster and better; in short, earn smarter with these tools.
 

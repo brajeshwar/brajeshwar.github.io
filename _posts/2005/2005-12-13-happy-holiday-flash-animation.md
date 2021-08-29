@@ -1,7 +1,4 @@
----
-layout: post
-title: Happy Holiday Flash Animation
----
+# Happy Holiday Flash Animation
 
 Chris Georgenes; I love his works.
 

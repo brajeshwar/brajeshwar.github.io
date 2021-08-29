@@ -1,7 +1,4 @@
----
-layout: post
-title: Business and FOSS
----
+# Business and FOSS
 
 Open Source has substantially altered the dynamics of the software business that runs in the competitive world. It is not just a strong competition in the web-servers' business, but a reason for Microsoft to cut down the cost of its propriety software. Microsoft shall not be scared of Linux taking it for a ride but there certainly is a price check. The areas for operations in Open Source have increased phenomenally and it is used in sectors where proprietary software once dictated the ethos. The increasing use of OpenOffice in organizations is just an example.
 

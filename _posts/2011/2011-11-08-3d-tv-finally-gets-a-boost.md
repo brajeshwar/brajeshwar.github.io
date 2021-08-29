@@ -1,7 +1,4 @@
----
-layout: post
-title: 3D TV Finally gets a boost
----
+# 3D TV Finally gets a boost
 
 3D glasses, despite making you look horrifically like an 80s-movie nerd, do an OK job. That's what researchers at the Tsukuba University in Japan thought too. So they made them better -- much better.  This new project from Tsukuba is prototyping a different kind of 3D display that focuses on multiple layers of depth that give enhanced depth perception and better focus. 
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Start.hover.in
----
+# Start.hover.in
 
 Recently, Hover.in started <a href="http://start.hover.in/">start.hover.in</a>, a library created by for developers and publishers to easily add user engagement and rich media (or hovering widgets called hoverlets) within their webpage.
 

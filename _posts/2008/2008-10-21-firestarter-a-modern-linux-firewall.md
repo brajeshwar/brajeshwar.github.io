@@ -1,7 +1,4 @@
----
-layout: post
-title: Firestarter - A modern Linux Firewall
----
+# Firestarter - A modern Linux Firewall
 
 The Firestarter Team says - "Linux security does not have to be complex, and simplicity does not have to mean sacrificing power."
 

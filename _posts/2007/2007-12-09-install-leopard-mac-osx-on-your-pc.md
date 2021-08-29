@@ -1,7 +1,4 @@
----
-layout: post
-title: Install Leopard on your PC, a hack to
----
+# Install Leopard on your PC, a hack to
 
 Install Leopard on your PC in 3 easy steps!
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Huge record intake by Flash!
----
+# Huge record intake by Flash!
 
 Mike Downey had once said, "I was even asked by one team of developers how they could solve a performance problem they encounter when loading 700,000 complex data records into the Flash player via Remoting! OMG!", at the MAX India 2004. Well, I was also there and I tried to reply with a rather surprised notion of, "Why so much record at a time?".
 

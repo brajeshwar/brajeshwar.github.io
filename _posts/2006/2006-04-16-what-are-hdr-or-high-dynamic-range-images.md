@@ -1,7 +1,4 @@
----
-layout: post
-title: What are HDR or High Dynamic Range Images?
----
+# What are HDR or High Dynamic Range Images?
 
 [![Baby Elephant at the Bannerghatta National Park (Bangalore))](/static/2006/hdr-baby-elephant.jpg)](http://www.flickr.com/photos/brajeshwar/6126993228/)
 

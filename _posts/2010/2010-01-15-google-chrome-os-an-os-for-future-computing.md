@@ -1,7 +1,4 @@
----
-layout: post
-title: Google Chrome OS - An OS for future computing?
----
+# Google Chrome OS - An OS for future computing?
 
 While <a href="http://microsoft.com/">Microsoft</a> continues to dominate the operating system market, <a href="http://www.google.com/">Google</a> has a high heel with the search engine. There have been several notes where Microsoft and Google are not being mentioned in the same breath. Much has to do with the on going battle between the two in different walks of technology such as search engines, web browsers and the biggest of all the Operating Systems. 
 

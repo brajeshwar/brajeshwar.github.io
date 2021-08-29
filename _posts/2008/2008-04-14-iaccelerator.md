@@ -1,7 +1,4 @@
----
-layout: post
-title: iAccelerator Summer Start-up Camp (India)
----
+# iAccelerator Summer Start-up Camp (India)
 
 I've heard of the term, <a href="http://www.ciieindia.org/?page_id=93">iAccelerator</a>, before but never cared to look further until today when I read <a href="http://tarundua.net/summers/ahmedabad">an article</a> from Tarun about this YCombinator style Summer Startup Camp.
 

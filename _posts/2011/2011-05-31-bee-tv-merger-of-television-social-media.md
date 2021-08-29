@@ -1,7 +1,4 @@
----
-layout: post
-title: Bee TV - Merger of Television & Social Media
----
+# Bee TV - Merger of Television & Social Media
 
 Have you ever imagined what fun it would be, if you could share your views and comments with friends and near ones, while you are watching your favorite television show? This is no longer a distant dream, as <a href="http://www.bee.tv/">Bee TV</a> has perfectly connected television viewing with social networking. So, for the first time in the history of technology, sharing the best moments of television watching with your friends has been enabled by this excellent application. To start off, the Bee TV can be used by you either on your iPad or you can also use it on the website of Bee TV on the internet. It will, however, be soon available with a host of other devices like the Androids, according to the assurance of <a href="http://www.crunchbase.com/person/yaniv-solnik">Yaniv Solnik</a>, the Founder & CEO of Bee TV.
 

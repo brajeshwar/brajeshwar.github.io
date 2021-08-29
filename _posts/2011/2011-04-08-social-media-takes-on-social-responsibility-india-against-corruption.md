@@ -1,7 +1,4 @@
----
-layout: post
-title: Social Media takes on Social Responsibility - India against Corruption!
----
+# Social Media takes on Social Responsibility - India against Corruption!
 
 Now this is social networking in the real world. People from all across India and the world have joined hands with <a href="http://en.wikipedia.org/wiki/Anna_Hazare">Anna Hazare</a>, in his <a href="http://www.thehindu.com/news/national/article1607789.ece">fast undo death</a> against corruption. The distance notwithstanding, and in a clear contrast to Benedict Anderson's concept of the nation as an imagined community, India has come together to celebrate something in additon to a <a href="http://www.youtube.com/watch?v=lUSIaGE_0LY">Cricket World Cup win</a>.
 

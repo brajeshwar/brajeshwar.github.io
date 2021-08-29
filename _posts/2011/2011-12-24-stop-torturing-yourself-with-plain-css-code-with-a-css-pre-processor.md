@@ -1,7 +1,4 @@
----
-layout: post
-title: Stop torturing yourself with plain CSS, code with a CSS pre-processor
----
+# Stop torturing yourself with plain CSS, code with a CSS pre-processor
 
 First, let me tell you, I'm pretty good with CSS. However, I've always hated writing CSS. Writing CSS is like using dried woods, leaves and rocks to lit a fire everything you need to cook something. You may become very good with it, but it's an unforgiving task and you've to do the rigorous feat every time you need the fire. CSS is bland, dumb, linear and it's utter lack of intelligence is derogatory even to the most novice coder.
 

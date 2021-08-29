@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe shuts down Stock Photos
----
+# Adobe shuts down Stock Photos
 
 Adobe has decided to discontinue its Stock Photos service which integrated into Bridge from April 1, 2008. For ASP users, you can download the <a href="http://www.adobe.com/support/downloads/product.jsp?product=109&platform=Macintosh">Mac</a> and <a href="http://www.adobe.com/support/downloads/product.jsp?product=109&platform=Windows">Windows</a> unstallers that let you remove ASP from Bridge.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe's ColdFusion 8 released
----
+# Adobe's ColdFusion 8 released
 
 Besides many other new features, ColdFusion 8 also introduces an Eclipse plug-in debugger. You can use it to set breakpoints, watch variables, and step through code, making it easier to debug application code.
 

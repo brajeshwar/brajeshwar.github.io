@@ -1,7 +1,4 @@
----
-layout: post
-title: Financial Institutions' approach against Groupon
----
+# Financial Institutions' approach against Groupon
 
 <a href="http://www.groupon.com/">Groupon</a> is a popular website that offers gift coupons which can be used at local and national companies. Established in November, 2008 with initial promotions based at Chicago, spread to many more cities and countries worldwide. At present, it has its presence in 4 continents with more than 35 million registered users with unprecedented growth in any business ever. Except <a href="http://livingsocial.com/">LivingSocial</a>, the company is not facing any major competitors so far.
 

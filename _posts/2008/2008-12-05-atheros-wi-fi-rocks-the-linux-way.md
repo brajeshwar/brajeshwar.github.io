@@ -1,7 +1,4 @@
----
-layout: post
-title: Atheros Wi-Fi rocks the Linux way
----
+# Atheros Wi-Fi rocks the Linux way
 
 Internet has become pretty imperative. Especially amongst people using laptops who would often get crazy with the absence of a Wi-Fi. The probability of using Atheros chipsets for users using Wi-Fi on laptops, for wireless freedom is very high. There are over 30 different wireless device vendors worldwide, including Linksys, D-Link and Netgear who use Atheros chipsets for wireless networking.
 

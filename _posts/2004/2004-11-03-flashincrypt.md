@@ -1,7 +1,4 @@
----
-layout: post
-title: FlashInCrypt
----
+# FlashInCrypt
 
 A very cool tool was found recently and it went away with a thumbs up on all tested counts. Even [ASV](http://buraks.com/asv/) and [Flasm](http://flasm.sourceforge.net/) were left bewildered and they cannot open the file obfuscated with FlashInCrypt. No obfuscater was able to escape ASV or Flasm before but this one is proving to be a must-have, real obfuscater.
 

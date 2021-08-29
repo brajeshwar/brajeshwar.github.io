@@ -1,7 +1,4 @@
----
-layout: post
-title: Truth Seekers - an Online Publishing Venue
----
+# Truth Seekers - an Online Publishing Venue
 
 Movies, Cinemas have always kept me interested and I would never tire being involved with them in a way or the other. <a href="http://www.cultureunplugged.com/">Culture Unplugged</a> is a initiative of expression via the medium of Videos and Cinemas. Being in an extended part of the circle who knows and are friends with the Founders and Funders of Culture Unplugged, I'm lucky to be amongst those who knows what's happening with them and the interesting, weird things they do.
 

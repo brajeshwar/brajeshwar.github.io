@@ -1,7 +1,4 @@
----
-layout: post
-title: Flash Plugin Switcher is now Plugin Switcher
----
+# Flash Plugin Switcher is now Plugin Switcher
 
 I just got an email from Alexander Blum that Flash [Plugin Switcher](http://www.pluginswitcher.de/) have been updated and is in beta. The application is currently available just for windows with the following features;
 

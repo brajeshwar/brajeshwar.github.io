@@ -1,7 +1,4 @@
----
-layout: post
-title: Prevent HotLinking with .htaccess
----
+# Prevent HotLinking with .htaccess
 
 It is fine for people to take images, css, js and other medias from your site as long as they re-host it on their own server after making a copy. Also, known as HotLinking, stealing people's bandwidth by linking directly to other site's images, js, css files is a bad thing. If you are a site owner and want to prevent hotlinking or serve an alternate content, here is an easy solution using <a href="http://httpd.apache.org/docs/1.3/howto/htaccess.html">.htaccess</a>.
 

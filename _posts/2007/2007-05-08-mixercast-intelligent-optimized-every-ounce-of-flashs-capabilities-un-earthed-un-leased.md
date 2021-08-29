@@ -1,7 +1,4 @@
----
-layout: post
-title: Mixercast - intelligent, optimized, every ounce of Flash's capabilities un-earthed, un-leased
----
+# Mixercast - intelligent, optimized, every ounce of Flash's capabilities un-earthed, un-leased
 
 Yahoo! Press Release for MixerCast quotes,
 

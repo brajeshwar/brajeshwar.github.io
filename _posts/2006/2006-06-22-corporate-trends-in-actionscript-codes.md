@@ -1,7 +1,4 @@
----
-layout: post
-title: Corporate trends in ActionScript codes?
----
+# Corporate trends in ActionScript codes?
 
 We were reviewing few ActionScript codes of bunch of developers. It so happened while looking at a group of codes from about 4-5 developers; they looked very similar. We realized that;
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Google's Transformer product line is building a Microsoft-slaying open-source Optimus Prime
----
+# Google's Transformer product line is building a Microsoft-slaying open-source Optimus Prime
 
 If you're a tech geek like me you undoubtedly follow Google - and you also probably know all the transformers by heart. By using Transformers as an allegory we can put Google's transformation into context. 
 

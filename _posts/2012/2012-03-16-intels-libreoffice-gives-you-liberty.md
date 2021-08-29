@@ -1,7 +1,4 @@
----
-layout: post
-title: Intel's LibreOffice gives you Liberty
----
+# Intel's LibreOffice gives you Liberty
 
 Intel - the iconic name in the computer industry has delivered a wide range of processors over the eons. As a matter of fact, processor plays key role in the performance of desktop or laptop. Processors developed by Intel are used by the majority of computer manufacturers all over the world. 
 

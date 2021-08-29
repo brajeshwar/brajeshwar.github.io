@@ -1,7 +1,4 @@
----
-layout: post
-title: Business Intelligence & Analytics enjoy sales up by 13.5%
----
+# Business Intelligence & Analytics enjoy sales up by 13.5%
 
 Business Intelligence, analytics and performance management applications seem to have enjoyed a good amount of revenue through sales. Business Intelligence as quoted in <a href="http://en.wikipedia.org/wiki/Business_intelligence">Wikipedia</a> "refers to computer-based techniques used in identifying, extracting, and analyzing business data, such as sales revenue by products and/ or departments, or by associated costs and incomes. BI technologies provide historical, current and predictive views of business operations. Common functions of business intelligence technologies are reporting, online analytical processing, analytics, data mining, business performance management, benchmarking, and text mining & predictive analytics."
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: CISPA - SOPA in a Trojan Horse
----
+# CISPA - SOPA in a Trojan Horse
 
 Changing a couple of letters isn't fooling anybody; <a href="http://en.wikipedia.org/wiki/Cyber_Intelligence_Sharing_and_Protection_Act">CISPA</a> is <a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">SOPA</a> hidden in a Trojan Horse. If this sounds familiar, think SOPA and PIPA.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Your Android could be Exposing YOU!
----
+# Your Android could be Exposing YOU!
 
 The private eye has discovered that <a href="http://android.com/">Android</a> devices are no longer a safe haven for your personal information. The private eye is a German University - <a href="http://www.uni-ulm.de/en/in/mi/staff/koenings/catching-authtokens.html">University of Ulm</a>, which claims that more than 99% of all smartphones that run Google's Android operating system are susceptible to mobile hackers. An unencrypted Wi-Fi network is the little window needed by mobile hackers to gain access to everything that is important in your life. 
 

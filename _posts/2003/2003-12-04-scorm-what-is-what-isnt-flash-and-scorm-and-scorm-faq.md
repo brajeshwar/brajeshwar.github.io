@@ -1,7 +1,4 @@
----
-layout: post
-title: SCORM, what is, what isn't, Flash and scorm and SCORM FAQ
----
+# SCORM, what is, what isn't, Flash and scorm and SCORM FAQ
 
 ## What is SCORM?
 

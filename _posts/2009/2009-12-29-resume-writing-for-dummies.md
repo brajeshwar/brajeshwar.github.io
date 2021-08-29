@@ -1,7 +1,4 @@
----
-layout: post
-title: Resume writing for Dummies
----
+# Resume writing for Dummies
 
 Many have written innumerable articles on 'Resume writing tips and tricks' and the internet is abundant with a plethora of resources on how you can land a job with a sparkling new resume. So, I won't be emphasizing on the methods and ways to fool recruiters and your prospective employers with spiced-up resumes. I will focus on addressing some concerns we faced recently while trying to recruit interns and noobs/freshers.
 

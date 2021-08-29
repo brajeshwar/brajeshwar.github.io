@@ -1,7 +1,4 @@
----
-layout: post
-title: E4X or ECMAScript for XML in Flash
----
+# E4X or ECMAScript for XML in Flash
 
 Somewhere around the second quarter of this year, [RichInternet.de](http://www.richinternet.de/blog/index.cfm?mode=entry&entry=EE964A78-AB13-4064-4EE3927DD33888B6) mentioned about one of their [message about E4X ](http://groups.yahoo.com/group/flexcoders/message/15305) on FlexCoders. With the announcement of Flash Player 8.5, Flex Builder 2 and eventually the next Flash IDE, version 9 that will support the much anticipated ActionScript 3.0, it is about time we look back to that topic.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: Microsoft's New OS Mango Finally Catching up with the Crowd
----
+# Microsoft's New OS Mango Finally Catching up with the Crowd
 
 During their Microsoft's MIX '11 conference in Las Vegas, Microsoft announced their upcoming release of Mango, the new Windows Phone OS. Mango is expected this fall. Mango will be Microsoft's offering to finally compete with the more robust operating systems currently dominating the market -- finally bringing features already popular in the market like multitasking.
 

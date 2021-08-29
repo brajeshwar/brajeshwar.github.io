@@ -1,7 +1,4 @@
----
-layout: post
-title: Titanium or Black?
----
+# Titanium or Black?
 
 I voted Titanium. At the time of my vote, all other countries are on that side - the Titanium - except for Africa. [Cast your vote](http://www.whichsideareyouon.com/) today for Lenovo's new Thinkpad (Widescreen Z60 series).
 

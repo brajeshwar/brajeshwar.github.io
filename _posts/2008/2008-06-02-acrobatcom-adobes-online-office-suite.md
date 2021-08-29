@@ -1,7 +1,4 @@
----
-layout: post
-title: Acrobat.com - Adobe's Online Office Suite
----
+# Acrobat.com - Adobe's Online Office Suite
 
 Another major change in Adobe's steer towards their online presence is that of the just launched <a href="http://www.acrobat.com/">Acrobat.com</a>. It is the combination of their online meetings tool -- Adobe Brio, online Word Processor -- Adobe Buzzword and online file sharing -- Adobe Share. This new announcement comes with the release of their latest offering -- Adobe Acrobat 9 -- with Flash built into the PDF experience.
 

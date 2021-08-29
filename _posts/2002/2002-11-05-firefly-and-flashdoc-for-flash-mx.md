@@ -1,7 +1,4 @@
----
-layout: post
-title: Firefly and FlashDoc for Flash MX
----
+# Firefly and FlashDoc for Flash MX
 
 <a href="http://www.cybersage.com/firefly.asp" target="_blank">Firefly for Flash</a> is a professional suite of components that let you manage data within Flash MX applications. Visual property editors unique to Firefly make writing ActionScript to manage data a thing of the past. Firefly's architecture includes an extensive API that gives developers total control over managing data. Firefly Plug-ins currently available include XML, Remoting and SQL Server.
 

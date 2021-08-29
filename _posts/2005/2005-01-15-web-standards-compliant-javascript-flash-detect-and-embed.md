@@ -1,7 +1,4 @@
----
-layout: post
-title: Web standards compliant Javascript Flash detect and embed
----
+# Web standards compliant Javascript Flash detect and embed
 
 There was an uproar during late 2002 when [alistapart](http://www.alistapart.com/) came up with an article [Flash Satay](http://www.alistapart.com/articles/flashsatay/). Nonthless, few limitations came as a package deal and one need to hack around the same. During the days of the [Eolas Patent](http://news.com.com/2100-1032_3-5106129.html), the workaround where Javascript was used to embed Flash, was indeed serving up a dual role to attain Web Standard compliancy. But then that the Patent is no more a worry, the tiresome work-around is thus better left alone.
 

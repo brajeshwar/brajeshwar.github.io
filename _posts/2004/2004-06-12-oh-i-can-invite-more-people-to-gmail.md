@@ -1,7 +1,4 @@
----
-layout: post
-title: oh! I can invite more people to gMail
----
+# oh! I can invite more people to gMail
 
 I just realized that I can invite people to [gMail](https://www.gmail.com/) from my current gMail account.
 

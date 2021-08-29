@@ -1,7 +1,4 @@
----
-layout: post
-title: Is Linux ready for the masses?
----
+# Is Linux ready for the masses?
 
 Linux is not just used by a particular segment or group of people in a society. Today, it used by people from almost all communities - students, software developers, employees, web designers, system administrators and even users with basic OS requirements of multimedia and entertainment. Is just being free and open source the reason for increase in its user share as compared to its competitors? May be a better reason can be its competitive advantages over others.
 

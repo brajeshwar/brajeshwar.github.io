@@ -1,7 +1,4 @@
----
-layout: post
-title: Adobe endows Android with AIR Technology
----
+# Adobe endows Android with AIR Technology
 
 Adobe continues to impress the technological world with consistent advancements. In the recent 2 months, Adobe has been in the news, majorly for doing good technological deeds. First, they joined hands with Microsoft in the project -- <a href="/2010/microsoft-and-adobe-join-hands-in-vulnerability-sharing/">Vulnerability Sharing</a> and secondly Adobe unveiled <a href="/2010/adobe-unveils-photoshop-elements-9-premiere-elements-9-bundle-for-windows-and-mac/">Photoshop Elements 9 and Premiere Elements 9 Bundle</a> for Windows and Mac. Having achieved such innovations in the computer world, Adobe now seeks to innovate in the mobile phone industry with its latest solution <a href="http://www.adobe.com/products/air/">Adobe AIR</a>.
 

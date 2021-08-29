@@ -1,7 +1,4 @@
----
-layout: post
-title: Cool droid phones you should absolutely consider
----
+# Cool droid phones you should absolutely consider
 
 Android phones have revolutionized our lives. From searching for a nearest hotel to stay while traveling, to meet emergencies like admitting into a nearest best hospital for medical care; Androids have touched every sphere of life. You have images, movies, music, games and applications and what not, everything on it! For many younger generations it has become a way of life. There are some strong addicts too. There are some teens that can stay away from their girlfriends and boyfriends but not from androids. The sleek hand-held device is able to perform most of the tasks instead of performing the same from your laptop. Android OS's (Operating System) capability in developing powerful mobile applications helps you perform many tasks instead of going for a desktop or laptop. 
 

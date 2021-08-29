@@ -1,7 +1,4 @@
----
-layout: post
-title: FLMX 2004 - export to first frame & preloading
----
+# FLMX 2004 - export to first frame & preloading
 
 Proper `preloading from 0%` was always a question with the introduction of components as they are "exported in first frame" thus making it rather impossible to have the preloader in the same document with the components and do a proper preloader.
 

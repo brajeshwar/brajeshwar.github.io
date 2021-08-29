@@ -1,7 +1,4 @@
----
-layout: post
-title: Movable Type on Localhost
----
+# Movable Type on Localhost
 
 Though the aim is to have Movable Type running on your local computer, but then we will have to go through two important (may be more) installations, namely an Apache/PHP/mySQL server and Perl. Let me tell you that this is more of my own experience, I am sure you can use your preferred installations though adhearing to the necessary requisites. This are the downloads that you will need;
 

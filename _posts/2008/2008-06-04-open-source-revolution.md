@@ -1,7 +1,4 @@
----
-layout: post
-title: The Open Source Revolution - all you need to know!
----
+# The Open Source Revolution - all you need to know!
 
 Most of us admire free beer and free softwares? The former might not be true for all, but I'm sure you all would agree to the software thing! Has it not been true, more than 60% of the internet users would have not been hitting the websites offering cracks and serials (and they would have not mushroomed to an such an extent. Thanks to Google's Adsense!)
 

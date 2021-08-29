@@ -1,7 +1,4 @@
----
-layout: post
-title: Is Microsoft a Winner or a Loser?
----
+# Is Microsoft a Winner or a Loser?
 
 With any small or large businesses; winning and losing are part of the game. It is really hard to find one company that either steadily grows or steadily decays in growth; there always will be bit of ups and downs on the path. But we are not either worried or talking about all those companies out there, but <a href="http://www.microsoft.com/">Microsoft</a>. Why? Because it is one of the biggies that influences our day to day lives and also is an important part of our business and personal lives.
 

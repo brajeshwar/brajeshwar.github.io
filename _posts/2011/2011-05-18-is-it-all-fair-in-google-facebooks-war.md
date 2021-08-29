@@ -1,7 +1,4 @@
----
-layout: post
-title: Is it "All Fair" in Google & Facebook's War?
----
+# Is it "All Fair" in Google & Facebook's War?
 
 The big difference in modus-operandi are, that, <a href="http://facebook.com/">Facebook</a> is a social networking website that is operated and privately owned by Facebook Inc; whereas <a href="http://www.google.com/">Google</a> is a search engine for any information. On prima-facie, there shouldn't be any competition, as the businesses are different. But, it's definitely not the case. 
 

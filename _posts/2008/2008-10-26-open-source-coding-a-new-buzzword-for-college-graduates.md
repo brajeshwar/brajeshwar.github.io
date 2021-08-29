@@ -1,7 +1,4 @@
----
-layout: post
-title: Open Source Coding - A new buzzword for college graduates
----
+# Open Source Coding - A new buzzword for college graduates
 
 Looking down the years, technology consistently has helped change the way we program devices. It is of common knowledge to one and all that without technology and perhaps the Internet, earning a college degree may seem quite tough today, if not impossible. It is not just about perception, because if it would have been that way, I would acknowledge a student of a demigod status if s/he would have passed a course without the use of Internet. 
 

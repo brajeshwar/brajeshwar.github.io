@@ -1,7 +1,4 @@
----
-layout: post
-title: Hungarian Notation, No purpose in ActionScript 2.0?
----
+# Hungarian Notation, No purpose in ActionScript 2.0?
 
 [Hungarian Notation](http://ootips.org/hungarian-notation.html) is a naming convention invented by Charles Simonyi from Microsoft. Here, one writes things like m_nSize, hwndParent and lpszFile."
 
