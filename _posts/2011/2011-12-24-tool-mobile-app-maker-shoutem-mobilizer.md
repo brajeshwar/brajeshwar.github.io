@@ -30,4 +30,4 @@ ShoutEm's plans are to continue to provide quality apps for our customers, with 
 
 Take the <a href="http://www.shoutem.com/tour">product tour</a> to know more insights about ShoutEm Mobilizer.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/daD6GgRGDBg?hd=1" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="daD6GgRGDBg" %}
