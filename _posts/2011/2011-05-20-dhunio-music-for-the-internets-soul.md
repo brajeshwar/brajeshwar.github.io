@@ -10,7 +10,7 @@ Their earth is but an echo of the spheres.
 ```
 And to carry to this echo further into the world unimaginable without computers are websites for online music and online videos. A new entrant in this field is -- <a href="http://www.dhunio.com/">Dhunio</a>, catering to Indian Bollywood music lovers' needs.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/cwI-PsOzcBI" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="cwI-PsOzcBI" %}
 
 An obvious amalgamation of the words "dhun" and "suniyo", Dhunio asks you to listen to music, as simple and epiphanic as that. The website resembles <a href="http://www.free-iphone-apps.com/Entertainment/MeraMood.com+-+Add+Music+to+your+Mood,+iPhone+Desi+Bollywood+Indian+Online+Radio+Music+Songs+Live+MP3+,+Desi+Radio,+Bollywood+Radio/3864.htm">MeraMood</a> in some ways, as the basic structure and function of being an entirely Indian music website, and the arrangement of playlists.  The major difference (and advantage to Dhunio) is the inclusion of videos along with the music. The videos are linked to Youtube, and act as a major attraction, but also take a little longer for the songs to load. But the videos definitely make listening to music a better experience. Then there is the more than obvious resemblance to Youtube, you would wonder why you will go to this website and not Youtube; that is because this is exclusive in its contribution, it only caters to lovers of Hindi Bollywood music, and hence the songs take less time to load.
 

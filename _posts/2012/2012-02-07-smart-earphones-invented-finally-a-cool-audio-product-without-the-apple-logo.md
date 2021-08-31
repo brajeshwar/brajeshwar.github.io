@@ -6,7 +6,7 @@ Igarashi's (they will have to come up with a more marketable name for them-ya kn
 
 By placing small proximity sensors in their earphones, they can easily determine incorrect placement by searching their surroundings. If it sits closely next to the back of your ear, it is in correct, but if it points forward, toward the fresh air, then it detects a mismatch and swaps audio circuits.
 
-<iframe src="http://player.vimeo.com/video/36062219?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+{% include video source="vimeo" id="36062219" %}
 
 This of course is minor news for the audiophile community, but the potential purposes these proximity-sensored earphones are proving quite handy indeed.
 

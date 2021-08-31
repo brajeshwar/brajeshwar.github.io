@@ -4,7 +4,7 @@ Google's new fascist-like <a href="http://www.google.com/policies/privacy/previe
 
 > If you want the gist of the new Privacy Policy as stated by Google, here is the video.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/KGghlPmebCY" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="KGghlPmebCY" %}
 
 Google's new privacy policy, or rather anti-privacy policy changes their privacy paradigm from one of informed, optional consent to obligatory subjugation. The new policy forces their users to consent to Google collecting their personal information, across all of its myriad of services (including: Gmail, YouTube, Google+, Google Calendar, Google Wallet, Google Maps, Google Reader, Google search and viewing history, Google-based Android apps, and all other current and future Google services). The only way for users to opt out will be to permanently delete, one-by-one, their Google-owned profiles.
 

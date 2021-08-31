@@ -1,5 +1,4 @@
-# A Smarter WordPress Theme Design & Development Workflow with node.js, ruby,
-  sass, bower and grunt
+# A Smarter WordPress Theme Design & Development Workflow with node.js, ruby, sass, bower and grunt
 
 I was lucky to be one of the <a href="http://2014.mumbai.wordcamp.org/speakers/">speakers</a> at the <a href="http://2014.mumbai.wordcamp.org/">WordCamp Mumbai</a>, Mar 15-16, 2014. When I stumbled upon their Call for Speakers, I was excited with the speaking opportunity and an uncanny chance to visit Bombay after so many years. Thankfully, the organizing team accepted my proposal and thus, presented and spoke on, "A Smarter WordPress Theme Design & Development Workflow with <a href="http://nodejs.org/">node.js</a>, <a href="http://www.ruby-lang.org/">ruby</a>, <a href="http://sass-lang.com/">sass</a>, <a href="http://bower.io/">bower</a> and <a href="http://gruntjs.com/">grunt</a>."
 

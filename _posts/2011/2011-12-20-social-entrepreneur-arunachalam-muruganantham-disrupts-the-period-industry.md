@@ -4,4 +4,4 @@ Arunachalam Muruganantham is a social Entrepreneur who decided to disrupt the pe
 
 Here is a Interview, by BlogAdda, of awesome man.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/qIXW-7StQcg?hd=1" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="qIXW-7StQcg" %}

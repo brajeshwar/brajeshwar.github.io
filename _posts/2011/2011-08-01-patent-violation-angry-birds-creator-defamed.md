@@ -2,7 +2,7 @@
 
 With the development of technology, it is also quite true that instability has also risen in the market. Especially, technology where creativity has an equal contribution, credits and responsibility gets mixed up quite a lot. A recent example could be seen when the popular mobile game - <a href="http://en.wikipedia.org/wiki/Angry_Birds">Angry Birds</a> creator, <a href="http://rovio.com/">Rovio</a>, was sued by Lodsys for patent violations. The claim on which the legal action was based was that Rovio's Finnish company had violated important patent rules regarding the purchase in to the higher levels of the game. The game being quite popular, so much so that people generally download it more than a million times per day, naturally generated quite a value with these new levels.
 
-<iframe width="800" height="450" src="http://www.youtube.com/embed/bMltvlqEM54" frameborder="0" allowfullscreen></iframe>
+{% include video source="youtube" id="bMltvlqEM54" %}
 
 ## What is 'Angry Birds'?
 
