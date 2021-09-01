@@ -6,12 +6,17 @@
       <a href="{{ site.baseurl | prepend: site.url }}{{ menu.url }}">{{ menu.title }}</a>
     {% endfor -%}
   </nav>
-  <p>
-    <small>
-      (2001-{{ "now" | date: "%Y" }})
-      brajeshwar.com
-      •
-      Theme by <a href="https://oinam.github.io/oinam-jekyll/">Oinam Jekyll</a>
-    </small>
-  </p>
+  <div class="footer__credit">
+    <div>
+      <p>
+        <small>
+          (2001-{{ "now" | date: "%Y" }})
+          brajeshwar.com
+          •
+          Theme by <a href="https://oinam.github.io/oinam-jekyll/">Oinam Jekyll</a>
+        </small>
+      </p>
+    </div>
+    {% include appearance.html %}
+  </div>  
 </footer>
