@@ -12,7 +12,7 @@ The Lord of the Rings is an epic high-fantasy novel by English author and schola
 ```
 </div>
 
-After 20 years, as of Jun 2021, I have done away with comments and discarded a whole lot of other metadata. I have also pruned over 250 articles. Now, articles are just Markdown files with a `# Title` and the content. There are NO `tags`, `categories`, `SEO`, or any other `jazz` at all. The Markdown files don’t even have [front matter](https://jekyllrb.com/docs/front-matter/) and are as human-readable as possible and will likely be readable on any system now and ever. I have decided to stay as plain-text as possible while using Markdown syntax for a minimal visual guide to differentiate content variations such as `headings`, `code`, and sometimes to add aesthetically relevant media — audio, video, and images.
+After 20 years, as of Jun 2021, I have done away with comments and discarded a whole lot of other metadata. I have also pruned over 250 articles. Now, articles are just Markdown files with a `# Title` and the content. There are NO `tags`, `categories`, `SEO`, `analytics` or any other `jazz` at all. The Markdown files don’t even have [front matter](https://jekyllrb.com/docs/front-matter/) and are as human-readable as possible and will likely be readable on any system now and ever. I have decided to stay as plain-text as possible while using Markdown syntax for a minimal visual guide to differentiate content variations such as `headings`, `code`, and sometimes to add aesthetically relevant media — audio, video, and images.
 
 Plain-Text makes life much simpler. I can write in tools that focus on writing without worrying about Static Site Generators like [Jekyll](https://jekyllrb.com), [Hugo](https://gohugo.io), [11ty](https://www.11ty.dev) or any other [Jamstack](https://en.wikipedia.org/wiki/Jamstack) to render the website.
 
@@ -64,7 +64,7 @@ _Q. What about Static Assets from WordPress's wp-content?_
 
 I had ported the static parts to AWS S3 long back, and that made life easier. It made it easy for me to switch and try out hosting providers. I had to worry about the WordPress Posts part; all the static contents were already on AWS S3 with Cloudfront. The other reason was, once when my website was rather popular, I spent a lot on hosting and bandwidth were capped. With AWS, I spent less than double-digit dollars a month even when I was serving over 100GBs month bandwidth with the static sites (including open source downloads).
 
-It had its own problem. My articles were littered with `https://media.brajeshwar.com`, and `https://media.brajeshwar.com` references to the static files. However, to the readers and website visitors, it continues to work. Now, I'm serving all static files alongside the website, which are also just static HTML. Of course, it took less than 5-sec to do a `Find & Replace` and `Save All` in Sublime Text to convert all of that.
+But it was not without its own problem. My articles were littered with `https://media.brajeshwar.com`, and `https://downloads.brajeshwar.com` references to the static files. However, to the readers and website visitors, it continues to work. Now, I'm serving all static files alongside the website, which are also just static HTML. Of course, it took less than 5-sec to do a `Find & Replace` and `Save All` in Sublime Text to convert all of that.
 
 Even if you have your WordPress content inside the default `wp-content`, it should still be easy to transform your WordPress blog into a Static Site. It is up to you to name your static folder to anything -- stick with the `wp-content` inherited from WordPress, rename it to something like Jekyll's `assets`, or stick to a more generic `static` (Hugo uses static).
 
@@ -72,7 +72,7 @@ Even if you have your WordPress content inside the default `wp-content`, it shou
 
 <a href="https://oinam.github.io/oinam-jekyll/"><img class="medium" src="/static/2021/oinam-jekyll-cover.png" alt="Oinam Jekyll" loading="lazy"></a>
 
-With still a lingering 1200 posts, Jekyll Server was really slow. It took north of `10sec` to reflect the changes. I even tried [Hugo](https://gohugo.io) which is super-fast. However, I wanted a simpler solution. I stuck out with Jekyll and deployed on [Github Pages](https://pages.github.com). Well, once the design was done, I <mark>DO NOT</mark> have to run Jekyll while writing; if I want to preview, a MarkDown previewer is enough. Better yet -- take a break, make tea or coffee and come back for the rendered site. ;-)
+With still a lingering 1200 posts, Jekyll Server was really slow. It took north of `10sec` to reflect the changes. I also tried [Hugo](https://gohugo.io) which turns out to be super-fast. However, I wanted a simpler solution. I stuck out with Jekyll and deployed on [Github Pages](https://pages.github.com). Well, once the design was done, I <mark>DO NOT</mark> have to run Jekyll while writing; if I want to preview, a MarkDown previewer is enough. Better yet -- take a break, make tea or coffee and come back for the rendered site. ;-)
 
 During the early days, I wrote all sorts of crap. Many a blog post could have been a tweet but then, there was no [Twitter](https://twitter.com/brajeshwar).
 
