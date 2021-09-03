@@ -6,7 +6,6 @@
 
 ## TODO
 
-- Let's get rid of front-matter for posts
 - Search - Algolia?
 
 ### Tools
