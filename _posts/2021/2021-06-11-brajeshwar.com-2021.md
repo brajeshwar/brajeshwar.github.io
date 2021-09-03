@@ -46,15 +46,13 @@ My whole aim was to get all posts (articles) as Markdown files.
 
 [Jekyll Exporter](https://wordpress.org/plugins/jekyll-exporter/) can convert your content to Jekyll compatible content. Unfortunately, it always died on me while converting my site (1500+ posts, pages, etc.) on the live server.
 
-I ended up importing my WordPress content using the [Jekyll Import](https://github.com/jekyll/jekyll-import) gem. You can read the [official documentation](https://import.jekyllrb.com) to get started. If I remember correctly, for some reason, I chose the [wordpress.com](https://import.jekyllrb.com/docs/wordpressdotcom/) version instead of the suggested self-hosted [wordpress](https://import.jekyllrb.com/docs/wordpress/) version (my website is self-hosted.
-
-I believed, I got the final files as `.html` with quite a lot of HTML markup left-overs from WordPress, [Textile](https://textile-lang.com), and other custom codes forgotten over the years. Pandoc was a life-saver.
+I ended up importing my WordPress content using the [Jekyll Import](https://github.com/jekyll/jekyll-import) gem. You can read the [official documentation](https://import.jekyllrb.com) to get started. If I remember correctly, for some reason, I chose the [wordpress.com](https://import.jekyllrb.com/docs/wordpressdotcom/) version instead of the suggested self-hosted [wordpress](https://import.jekyllrb.com/docs/wordpress/) version (my website is self-hosted).
 
 I believed I got the final files as `.html` with many HTML markup left-overs from WordPress, [Textile](https://textile-lang.com), and custom codes that were forgotten over the years. I used [Pandoc](https://pandoc.org) to selectively convert a lot of the HTML markup to their Markdown equivalent.
 
 I was happy with the final result, and the website was already running. However,  the files needed some manual cleaning as there were remnants of shortcodes (WordPress, Textile, custom plugins) and a few other metadata.
 
-Almost every day, I spent about 10 to 15 minutes each day cleaning up the posts -- one year at a time (2001-2020). [Sublime Text](https://www.sublimetext.com) made it easy to do a `Find & Replace` across folders to fix many references, links, etc. I was able to do sweeping replacements across 1500+ text files quickly in a matter of seconds.
+Almost every day, during the months of July and August of 2021, I spent about 10-15 minutes cleaning up the posts -- one year at a time -- from 2001 to 2020. I have too many posts to handle, so I separated each year into their own folders. [Sublime Text](https://www.sublimetext.com) made it easy to do a `Find & Replace` across folders to fix many references, links, etc. I was able to do sweeping replacements across 1500+ text files quickly in a matter of seconds.
 
 Here are some references that I read while importing WordPress content to Jekyll;
 
@@ -64,9 +62,9 @@ Here are some references that I read while importing WordPress content to Jekyll
 
 _Q. What about Static Assets from WordPress's wp-content?_
 
-I had ported the static parts to AWS S3 long back, and that made life easier. It made it easy for me to switch and try out hosting providers. I had to worry about the WordPress Posts part; all the static contents were AWS S3 with Cloudfront.
+I had ported the static parts to AWS S3 long back, and that made life easier. It made it easy for me to switch and try out hosting providers. I had to worry about the WordPress Posts part; all the static contents were already on AWS S3 with Cloudfront. The other reason was, once when my website was rather popular, I spent a lot on hosting and bandwidth were capped. With AWS, I spent less than double-digit dollars a month even when I was serving over 100GBs month bandwidth with the static sites (including open source downloads).
 
-It had its own problem. My articles were littered with `https://media.brajeshwar.com` to all the static files. However, to the readers and website visitors, it continues to work. Now, I'm serving all static files alongside the website, which are now just static HTML. Of course, it took less than 5-sec to do a `Find & Replace` and `Save All` in Sublime Text to convert all of that.
+It had its own problem. My articles were littered with `https://media.brajeshwar.com`, and `https://media.brajeshwar.com` references to the static files. However, to the readers and website visitors, it continues to work. Now, I'm serving all static files alongside the website, which are also just static HTML. Of course, it took less than 5-sec to do a `Find & Replace` and `Save All` in Sublime Text to convert all of that.
 
 Even if you have your WordPress content inside the default `wp-content`, it should still be easy to transform your WordPress blog into a Static Site. It is up to you to name your static folder to anything -- stick with the `wp-content` inherited from WordPress, rename it to something like Jekyll's `assets`, or stick to a more generic `static` (Hugo uses static).
 
@@ -74,7 +72,7 @@ Even if you have your WordPress content inside the default `wp-content`, it shou
 
 <a href="https://oinam.github.io/oinam-jekyll/"><img class="medium" src="/static/2021/oinam-jekyll-cover.png" alt="Oinam Jekyll" loading="lazy"></a>
 
-With over 1200 posts, Jekyll Server was really slow. It took north of `10sec` to reflect the changes. I even tried [Hugo](https://gohugo.io) which is super-fast. However, I wanted a simpler solution. I stuck out with Jekyll and deployed on [Github Pages](https://pages.github.com). Well, once the design was done, I <mark>DO NOT</mark> have to run Jekyll while writing; if I want to preview, a MarkDown previewer is enough. Better yet -- take a break, make tea or coffee and come back for the rendered site. ;-)
+With still a lingering 1200 posts, Jekyll Server was really slow. It took north of `10sec` to reflect the changes. I even tried [Hugo](https://gohugo.io) which is super-fast. However, I wanted a simpler solution. I stuck out with Jekyll and deployed on [Github Pages](https://pages.github.com). Well, once the design was done, I <mark>DO NOT</mark> have to run Jekyll while writing; if I want to preview, a MarkDown previewer is enough. Better yet -- take a break, make tea or coffee and come back for the rendered site. ;-)
 
 During the early days, I wrote all sorts of crap. Many a blog post could have been a tweet but then, there was no [Twitter](https://twitter.com/brajeshwar).
 
@@ -82,9 +80,9 @@ I ended up designing a clean, simple, and minimal Jekyll Theme. The theme is ope
 
 It has the must-have and minimal [plugins](https://pages.github.com/versions/) to get the basics of writing and blogging work. Anything beyond what is there must be added after careful consideration.
 
-As always, my website is [open source](https://github.com/brajeshwar/brajeshwar.github.io). Feel free to comment, raise issues, or fix up a pull request.
+As always, this website is [open source](https://github.com/brajeshwar/brajeshwar.github.io). Feel free to comment, raise issues, or fix up a pull request.
 
-> Tip: In your website repository on Github, hit <kbd>.</kbd> (that is a period), and you get yourself an excellent editor (VS Code). Now, you can write from anywhere on anything that has a browser.
+> Tip: In your website repository on Github, hit the key <kbd>.</kbd> (that is a period), and you get yourself an excellent editor (VS Code). Now, you can write from anywhere on anything that has a browser.
 
 ## Onwards
 
