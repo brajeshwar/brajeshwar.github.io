@@ -2,15 +2,16 @@
 layout: default
 title: About this Site
 permalink: /about/brajeshwar.com/
+update: Sep 6, 2021
 ---
 
 The domain `brajeshwar.com` was booked on `Jun 11, 2001`.
 
 I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash tips, tricks, and things I was doing. That's how it all started. `brajeshwar.com` started as Flash-Website.
 
-I moved on to [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)), later known as [Blogger](https://www.blogger.com/), then to [MovableType](https://movabletype.org) (2002), and later to [WordPress](https://wordpress.org) (2003) ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
+I moved on to Blogspot, later known as Blogger[^Blogger], then to MovableType[^MovableType] in 2002, and later to WordPress[^WordPress] by 2003-2004, ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
 
-Initially, the site was hosted on few local shared servers. The site really did grew in popularity after Macromedia's recognition. It was cared for by [Media Temple](https://mediatemple.net), [Medium Cube](https://mediumcube.com) (special thanks to [Tamouh Hakmi](https://www.linkedin.com/in/tamouh/)), [Pagely](https://pagely.com), and [WPEngine](https://wpengine.com) (grandfathered me in a free tier forever).
+Initially, the site was hosted on few local shared servers. The site really did grew in popularity after Macromedia's recognition. Later, it was cared for by [Media Temple](https://mediatemple.net), [Medium Cube](https://mediumcube.com) (special thanks to [Tamouh Hakmi](https://www.linkedin.com/in/tamouh/)), [Pagely](https://pagely.com), and [WPEngine](https://wpengine.com) (grandfathered me in a free tier forever).
 
 ## Writers
 
@@ -27,6 +28,18 @@ So, no writers are highlighted in the articles. However, I will be forever grate
 
 ## 20 Years
 
-After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary, Jun 11, 2021, the site is now as plain-text as possible, sprinkled with the spices of some [MarkDown](https://en.wikipedia.org/wiki/Markdown) and translated by [Jekyll](https://jekyllrb.com). [Github](https://github.com) takes care of the Jekyll part to spit out the HTML ([view source](https://github.com/brajeshwar/brajeshwar.github.io)).
+After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary, Jun 11, 2021, the site is now as plain-text as possible, sprinkled with the spices of some MarkDown[^MarkDown] and translated by Jekyll[^Jekyll]. [Github](https://github.com) takes care of the Jekyll part to spit out the HTML ([view source](https://github.com/brajeshwar/brajeshwar.github.io)).
 
 I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles.
+
+_This article was updated on {{ page.update }}._
+
+[^Blogger]: [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)) later known as [Blogger](https://www.blogger.com/) is an online content management system (CMS) which enables multi-user blogs with time-stamped entries. [Pyra Labs](https://en.wikipedia.org/wiki/Pyra_Labs) developed it before being acquired by Google in 2003. Google hosts the blogs, which can be accessed through a subdomain of blogspot.com. Blogs can also be accessed from a user-owned custom domain (such as www.example.com) by using DNS facilities to direct a domain to Google's servers.
+
+[^MovableType]: [MovableType](https://movabletype.org) was created by a husband and wife team with a single purpose: to create a powerful solution for the creation and management of web content. An originator of the blogging field, Movable Type offers stability, a user-friendly interface, and beautifully extensive visual customization for websites and blogs.
+
+[^WordPress]: [WordPress](https://wordpress.org) is open source software you can use to create a beautiful website, blog, or app.
+
+[^MarkDown]: [Markdown](https://en.wikipedia.org/wiki/Markdown) is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+
+[^Jekyll]: [Jekyll](https://jekyllrb.com) is a simple, blog-aware, static site generator for personal, project, or organization sites.

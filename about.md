@@ -2,19 +2,20 @@
 layout: default
 title: About
 permalink: /about/
+update: Sep 6, 2021
 ---
 
 My name is Brajeshwar Oinam.
 
-I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
+I was born in a quiet and serene, hill-surrounded green valley of Imphal[^Imphal], Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
 <a href="https://en.wikipedia.org/wiki/Floppy_disk"><img class="medium" src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg" alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks" loading="lazy"></a>
 
 ## Work
 
-I migrated to [Mumbai](https://en.wikipedia.org/wiki/Mumbai) in Aug 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
+I migrated to Mumbai[^Mumbai] in Aug 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
 
-After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a Floppy-Disk which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_café) nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
+After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a Floppy-Disk which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an Internet café[^InternetCafe] nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
 
 > [brajeshwar.com](/about/brajeshwar.com/) was booked on a dare and I'm happy with that decision.
 
@@ -58,3 +59,11 @@ I continue to leveraging technology in finding solutions to challenges and probl
 I've known [Shanta](https://oin.am/shanta) since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
 
 We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amara.site/) (Nov 2016).
+
+_This article was updated on {{ page.update }}._
+
+[^Imphal]: [Imphal](https://en.wikipedia.org/wiki/Imphal) is the capital city of Manipur, India. Spread over parts of the districts of Imphal West and Imphal East, the former contains the majority of the city's area and population.
+
+[^Mumbai]: [Mumbai](https://en.wikipedia.org/wiki/Mumbai), erstwhile Bombay, is the capital city of Maharashtra, India. According to the United Nations, as of 2018, Mumbai is the second-most populous city in the country after Delhi and the seventh-most populous city in the world with a population of roughly 20 million.
+
+[^InternetCafe]: [Internet café](https://en.wikipedia.org/wiki/Internet_café), also known as a cybercafé, is a place that provides Internet access to the public. The fee for using a computer is generally charged as a time-based rate. The first Internet Café was opened in South Korea.

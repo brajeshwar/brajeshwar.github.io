@@ -15,25 +15,22 @@ feed:
   author: Brajeshwar
 
 layout:
-  home_posts_no: 5
+  theme: default # default, nord
+  home_posts_no: 7
   posts_home: /blog/
 
 styles:
   font_family: serif
 
-sass:
-  style: compressed
-  sourcemap: never
-
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-optional-front-matter
-  - jekyll-paginate
-  - jekyll-redirect-from
-  - jekyll-sitemap
   - jekyll-titles-from-headings
-  - jekyll-remote-theme
-
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from  
+  
 algolia:
   application_id: JCOTPOLESP
   index_name: 'brajeshwar.com'
