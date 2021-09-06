@@ -20,36 +20,6 @@ Text Files are Future-Proof.
 The User Experience is not that good. It is entirely dependent on the tools that can support.
 No Rules. Harder to be disciplined in maintenance.
 
-## Tools
-
-[The Archive](https://zettelkasten.de/the-archive/) - It has a generous 60 day trial, after which you can buy it for $19.99 and is worth it. It cannot parse sub-folders. I hope it is coming soon.
-[LightPaper](https://getlightpaper.com) 14 day free trial, cost $17.69
-
-MacDown, Typora, Bear
-
-## Todo.txt
-
-Simplicity is [todo.txt](http://todotxt.org)'s core value.
-
-You're not going to find many checkboxes, drop-downs, reminders, or date pickers here.
-
-Todo.txt apps are minimal, todo.txt-focused editors which help you manage your tasks with as few keystrokes and taps possible.
-
-Sync it up via iCloud, Dropbox, or any other file sharing software and you’re set to use todo.txt anywhere, be it on the Desktop, the web or a mobile device.
-
-Learn the very few, [simple set of rules](https://github.com/todotxt/todo.txt) and you’ll be all set to have a blissful todo.txt life.
-
-A todo.txt can also be a default files in your project for groups/teams to share a common todo list. There are IDE plugins that parses the todo.txt for a better visual representation.
-
-[https://github.com/mjdescy/TodoTxtMac/releases]
-
-## Tools
-
-- [Texts](http://www.texts.io/)
-- [Pandoc](https://pandoc.org)
-- [MkDocs](https://www.mkdocs.org)
-- [PDSite](http://pdsite.org)
-
 My effort is to evolve to a much simpler life, either digital or otherwise, try to use the least number of tools, just stay with the essentials.
 
 ## Evernote
@@ -70,8 +40,4 @@ https://usefyi.com/evernote-history/
 - [How To Take Smart Notes: 10 Principles to Revolutionize Your Note-Taking and Writing](https://fortelabs.co/blog/how-to-take-smart-notes/)
 - [Org Mode - Organize Your Life In Plain Text!](http://doc.norang.ca/org-mode.html)
 - How to: Achieve a text-only work-flow, http://donlelek.github.io/2015-03-09-text-only-workflow/
-- How Google Drive Can Make Every Corner of Your Life Easier, https://forge.medium.com/how-google-drive-can-make-every-corner-of-your-life-easier-9f3cc1acbb68
-
-Tools / Template
-
 - [Plain Text Life](https://github.com/jukil/plain-text-life)
