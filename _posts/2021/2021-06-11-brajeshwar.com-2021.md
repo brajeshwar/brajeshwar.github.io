@@ -1,16 +1,14 @@
-# brajeshwar.com (2021), Converting a 20-year old WordPress to a Static Site
+# brajeshwar.com - 20+ years old site - WordPress to Static
 
 The website has come a long way - well - 20 years. It started as a Flash Site in 2001. I moved on to [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)), later known as [Blogger](https://www.blogger.com/), then to [MovableType](https://movabletype.org) (2002), and later to [WordPress](https://wordpress.org) (2003-ish or so) ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
 
 I had spent enough hobby time with WordPress that I published quite a few themes, plugins, and some went on to become pretty popular. Every design iterations were themed and open sourced. One theme even went to be acquired by [Automattic](https://automattic.com), the company behind WordPress.
 
-<div class="content-medium" markdown="1">
 ```
 # A title for the Article
 
 The Lord of the Rings is an epic high-fantasy novel by English author and scholar J. R. R. Tolkien. Set in Middle-earth, a place like Earth at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written.
 ```
-</div>
 
 After 20 years, as of Jun 2021, I have done away with comments and discarded a whole lot of other metadata. I have also pruned over 250 articles. Now, articles are just Markdown files with a `# Title` and the content. There are NO `tags`, `categories`, `SEO`, `analytics` or any other `jazz` at all. The Markdown files don’t even have [front matter](https://jekyllrb.com/docs/front-matter/) and are as human-readable as possible and will likely be readable on any system now and ever. I have decided to stay as plain-text as possible while using Markdown syntax for a minimal visual guide to differentiate content variations such as `headings`, `code`, and sometimes to add aesthetically relevant media — audio, video, and images.
 
@@ -36,9 +34,9 @@ It is one of the simplest and the first few originals of Static Site Generators.
 
 It is the default tool at [Github Pages](https://pages.github.com) to generate static websites. One less thing to worry about is hosting your website.
 
-_Q. How did I do it?_
+{% include video source="youtube" id="xlwn1hFa5QI" %}
 
-<div class="content-medium">{% include video source="youtube" id="xlwn1hFa5QI" %}</div>
+_Q. How did I do it?_
 
 Your mileage may vary, and I did stumble on few hiccups. However, it was easy, and people have solved many other complex problems when converting WordPress to Jekyll. In my case, I was not worried about neither the design nor the comments. 
 
@@ -70,7 +68,7 @@ Even if you have your WordPress content inside the default `wp-content`, it shou
 
 ## Jekyll + Github Pages
 
-<a href="https://oinam.github.io/oinam-jekyll/"><img class="medium" src="/static/2021/oinam-jekyll-cover.png" alt="Oinam Jekyll" loading="lazy"></a>
+[![Oinam Jekyll Theme)](/static/2021/oinam-jekyll-cover.png)](https://oinam.github.io/oinam-jekyll/)
 
 With still a lingering 1200 posts, Jekyll Server was really slow. It took north of `10sec` to reflect the changes. I also tried [Hugo](https://gohugo.io) which turns out to be super-fast. However, I wanted a simpler solution. I stuck out with Jekyll and deployed on [Github Pages](https://pages.github.com). Well, once the design was done, I <mark>DO NOT</mark> have to run Jekyll while writing; if I want to preview, a MarkDown previewer is enough. Better yet -- take a break, make tea or coffee and come back for the rendered site. ;-)
 
