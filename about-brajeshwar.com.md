@@ -1,8 +1,8 @@
 ---
 layout: default
-title: About this Site
+title: About brajeshwar.com
 permalink: /about/brajeshwar.com/
-update: Sep 6, 2021
+update: Sep 7, 2021
 ---
 
 The domain `brajeshwar.com` was booked on `Jun 11, 2001`.
