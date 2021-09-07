@@ -15,7 +15,8 @@ feed:
   author: Brajeshwar
 
 layout:
-  theme: default # default, nord
+  theme: default
+  theme_highlighter: perldoc
   home_posts_no: 7
   posts_home: /blog/
 
