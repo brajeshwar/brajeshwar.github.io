@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: page
 title: Privacy
 permalink: /privacy/
+update: Jul 11, 2021
 ---
-
-# Privacy
 
 Your privacy is important to us. It is Brajeshwar's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, `brajeshwar.com`, and other sites we own and operate.
 

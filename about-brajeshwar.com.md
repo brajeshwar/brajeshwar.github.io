@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: page
 title: About brajeshwar.com
 permalink: /about/brajeshwar.com/
-update: Sep 7, 2021
+update: Jul 11, 2021
 ---
 
 The domain `brajeshwar.com` was booked on `Jun 11, 2001`.
@@ -32,7 +32,7 @@ After being neglected for many years, I decided to rebuild my website and simpli
 
 I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles.
 
-_This article was updated on {{ page.update }}._
+[//]: # Footnote
 
 [^Blogger]: [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)) later known as [Blogger](https://www.blogger.com/) is an online content management system (CMS) which enables multi-user blogs with time-stamped entries. [Pyra Labs](https://en.wikipedia.org/wiki/Pyra_Labs) developed it before being acquired by Google in 2003. Google hosts the blogs, which can be accessed through a subdomain of blogspot.com. Blogs can also be accessed from a user-owned custom domain (such as www.example.com) by using DNS facilities to direct a domain to Google's servers.
 
