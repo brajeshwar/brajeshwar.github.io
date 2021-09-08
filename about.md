@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: /about/
-update: Sep 6, 2021
+update: Jul 11, 2021
 ---
 
 My name is Brajeshwar Oinam.
@@ -60,7 +60,7 @@ I've known [Shanta](https://oin.am/shanta) since 1993. We met again in 2006 whil
 
 We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amara.site/) (Nov 2016).
 
-_This article was updated on {{ page.update }}._
+[//]: # Footnote
 
 [^Imphal]: [Imphal](https://en.wikipedia.org/wiki/Imphal) is the capital city of Manipur, India. Spread over parts of the districts of Imphal West and Imphal East, the former contains the majority of the city's area and population.
 
