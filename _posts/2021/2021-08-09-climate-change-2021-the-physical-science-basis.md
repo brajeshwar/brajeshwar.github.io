@@ -1,7 +1,5 @@
 # Climate Change 2021 - The Physical Science Basis
 
-{% include readit id="ed6d632f-908f-4044-8b93-4e3c2d60e63f" %}
-
 The [Intergovernmental Panel on Climate Change](https://www.ipcc.ch) (IPCC) has released the most comprehensive and conclusive "state of the science" on the climate crisis. Why it is happening, how it impacts every region of the planet, how much worse things will get, and what we must do to avoid the worst consequences.
 
 Some devastating impacts of global warming are now unavoidable. We are now at "Code Red for Humanity."
@@ -10,7 +8,7 @@ More than 200 scientists from over 60 countries contributed to the Report - [Cli
 
 Humans have already heated the planet by roughly 1.1°Celsius, since the 19th century. The warming is happening even faster than scientists previously thought. The latest projections have us reaching or exceeding the 1.5°C threshold scientists say is critical to stay below -- within the next decade or two.
 
-<figure>
+<figure class="content-large">
   <img src="/static/2021/climate-change.jpg" alt="Climate Change" loading="lazy">
   <figcaption>
     "As we witness our planet transforming around us we watch, listen, measure … respond."
