@@ -7,7 +7,9 @@ I had spent enough hobby time with WordPress that I published quite a few themes
 ```
 # A title for the Article
 
-The Lord of the Rings is an epic high-fantasy novel by English author and scholar J. R. R. Tolkien. Set in Middle-earth, a place like Earth at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written.
+The Lord of the Rings is an epic high-fantasy novel by English author and scholar J. R. R. Tolkien.
+
+Set in Middle-earth, a place like Earth at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.
 ```
 
 After 20 years, as of Jun 2021, I have done away with comments and discarded a whole lot of other metadata. I have also pruned over 250 articles. Now, articles are just Markdown files with a `# Title` and the content. There are NO `tags`, `categories`, `SEO`, `analytics` or any other `jazz` at all.
