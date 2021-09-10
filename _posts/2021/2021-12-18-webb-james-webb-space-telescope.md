@@ -4,7 +4,7 @@ The [James Webb Space Telescope](https://en.wikipedia.org/wiki/James_Webb_Space_
 
 Webb will be the largest, most powerful telescope ever launched into space. It follows in the footsteps of the Hubble Space Telescope as the next great space science observatory, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy.
 
-In this lifetime, we are entering another era of learning more about the Universe. The Hubble changed how we saw the Universe and how humans understand the Universe around us. The Webb telescope will bring in the next unprecedented wave of information, and we are ready to blow our minds.
+In this lifetime, we are entering another era of learning more about the Universe. The Hubble changed how we saw and understand the Universe around us. The Webb telescope will bring in the next unprecedented wave of information, and we are ready to blow our minds.
 
 <figure class="content-large">
   <a href="https://www.flickr.com/photos/nasawebbtelescope/"><img src="https://cdn.oinam.com/img/science/webb-rendering-03.webp" alt="The James Webb Space Telescope" loading="lazy"></a>
