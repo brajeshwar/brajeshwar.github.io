@@ -48,7 +48,9 @@ My whole aim was to get all posts (articles) as Markdown files.
 
 [Jekyll Exporter](https://wordpress.org/plugins/jekyll-exporter/) can convert your content to Jekyll compatible content. Unfortunately, it always died on me while converting my site (1500+ posts, pages, etc.) on the live server.
 
-I ended up importing my WordPress content using the [Jekyll Import](https://github.com/jekyll/jekyll-import) gem. You can read the [official documentation](https://import.jekyllrb.com) to get started. If I remember correctly, for some reason, I chose the [wordpress.com](https://import.jekyllrb.com/docs/wordpressdotcom/) version instead of the suggested self-hosted [wordpress](https://import.jekyllrb.com/docs/wordpress/) version (my website is self-hosted).
+I ended up importing my WordPress content using the [Jekyll Import](https://github.com/jekyll/jekyll-import) gem. You can read the [official documentation](https://import.jekyllrb.com) to get started. I chose the [wordpress.com](https://import.jekyllrb.com/docs/wordpressdotcom/) version instead of the suggested self-hosted [wordpress](https://import.jekyllrb.com/docs/wordpress/) version (my website is self-hosted) because the Wordpress version requires access to the database, whereas, with the Wordpress.com version, you can just export and run this locally on your computer without the database.
+
+This will take time. Mine had lots of images, audio, and video files being referenced from the articles. I waited for about 30-min.
 
 I believed I got the final files as `.html` with many HTML markup left-overs from WordPress, [Textile](https://textile-lang.com), and custom codes that were forgotten over the years. I used [Pandoc](https://pandoc.org) to selectively convert a lot of the HTML markup to their Markdown equivalent.
 
@@ -58,6 +60,7 @@ Almost every day, during the months of July and August of 2021, I spent about 10
 
 Here are some references that I read while importing WordPress content to Jekyll;
 
+- [How to Convert a Wordpress Site to Jekyll with Github Pages](https://adam.garrett-harris.com/2015-02-26-how-to-convert-a-wordpress-site-to-jekyll-with-github-pages/)
 - [Migrating WordPress blog to Jekyll](https://nts.strzibny.name/migrating-wordpress-to-jekyll/)
 - [How To: WordPress to Jekyll](https://paulstamatiou.com/how-to-wordpress-to-jekyll/)
 - [From Wordpress To Jekyll](https://www.bawbgale.com/from-wordpress-to-jekyll/)
