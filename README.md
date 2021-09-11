@@ -1,8 +1,4 @@
-# Brajeshwar Oinam
-
-- [brajeshwar.com](https://brajeshwar.com)
-- [Source](https://github.com/brajeshwar/brajeshwar.github.io)
-- Theme by [Oinam-Jekyll](https://oinam.github.io/oinam-jekyll/)
+[brajeshwar.com](https://brajeshwar.com) ([Source](https://github.com/brajeshwar/brajeshwar.github.io)) is powered by [Oinam Jekyll](https://oinam.github.io/oinam-jekyll/) Theme.
 
 ## TODO
 
