@@ -9,7 +9,7 @@ permalink: /calendar/
 - [usemotion.com/meet/brajeshwar/oinam](https://usemotion.com/meet/brajeshwar/oinam) (Default)
 - [usemotion.com/meet/brajeshwar/startups](https://usemotion.com/meet/brajeshwar/startups) (Startup Entrepreneurs)
 - [usemotion.com/meet/brajeshwar/on-deck](https://usemotion.com/meet/brajeshwar/on-deck) ([On Deck](https://beondeck.com/r/BrajeshwarOinam))
-- [usemotion.com/meet/brajeshwar/investor](https://usemotion.com/meet/brajeshwar/investor) (Invest in [Valinor Earth](https://valinor.earth))
+- [usemotion.com/meet/brajeshwar/investor](https://usemotion.com/meet/brajeshwar/investor)
 
 </div>
 
