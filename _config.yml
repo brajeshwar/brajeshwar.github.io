@@ -16,7 +16,7 @@ feed:
 
 layout:
   theme: default
-  theme_highlighter: perldoc
+  theme_highlighter: emacs
   home_posts_no: 7
   posts_home: /blog/
 
