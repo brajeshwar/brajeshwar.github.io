@@ -7,7 +7,7 @@ update: Jul 11, 2021
 
 The domain `brajeshwar.com` was booked on `Jun 11, 2001`.
 
-I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash tips, tricks, and things I was doing. That's how it all started. `brajeshwar.com` started as Flash-Website.
+I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash tips, tricks, and things I was doing. That's how it all started. `brajeshwar.com` started as a Flash-Website.
 
 I moved on to Blogspot, later known as Blogger[^Blogger], then to MovableType[^MovableType] in 2002, and later to WordPress[^WordPress] by 2003-2004, ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
 
@@ -19,9 +19,9 @@ Quite a few writers contributed to brajeshwar.com. Unfortunately, the website is
 
 So, no writers are highlighted in the articles. However, I will be forever grateful to these awesome people who contributed to the website;
 
-1. [Deeptaman Mukherjee](https://about.me/Deeptaman.Mukherjee) was the most un-assuming technical writer. He loves technology but is in an profession afar from it. he works in metal industry and has extensive experience in iron ore & aluminium businesses -- raw material procurement, logistics, sales & operations planning.
+1. [Deeptaman Mukherjee](https://about.me/Deeptaman.Mukherjee) was the most un-assuming technical writer. He loves technology but is in an profession afar from it. He works in metal industry and has extensive experience in iron ore & aluminium businesses -- raw material procurement, logistics, sales & operations planning.
 2. [Kalen Smith](https://www.linkedin.com/in/kalen-smith-044b9413/)
-3. [Praval Singh](https://praval.com) wrote extensively about Open Source, and *nix technology. Some of his articles went on to become pretty popular, and shared a lot.
+3. [Praval Singh](https://praval.com) wrote extensively about Open Source, and unix technologies. Some of his articles went on to become quite popular, and shared a lot.
 4. Ritesh Reddy writes at [Reddy2Go](https://www.reddy2go.com) and has contributed quite a bit of interesting articles to my site.
 5. [Robin Wilding](https://www.linkedin.com/in/robin-wilding-91456428/)
 6. Many other Guest Writers and Contributors.
