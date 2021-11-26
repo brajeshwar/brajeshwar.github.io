@@ -15,6 +15,12 @@ Trying out [Motion](https://usemotion.com), whose founders are nice people.
   - [usemotion.com/meet/brajeshwar/investor](https://usemotion.com/meet/brajeshwar/investor)
 </div>
 
-If you prefer __Calendly__, my default one still works at [calendly.com/brajeshwar](https://calendly.com/brajeshwar/oinam).
+If you prefer Calendly, my default one still works at [calendly.com/brajeshwar](https://calendly.com/brajeshwar/oinam).
 
 I would really love to be able to use the Open Source, [Calenso](https://github.com/calendso/calendso) (now Cal.com) but it is a bit buggy for my usage.
+
+---------------------------------------
+
+- I prefer emails, DMs, texts, and other forms of asynchronous communications more than synchronous meetings, wherever possible.
+- I generally enjoy unscheduled synchronous conversations if they have significant context.
+- I'm NOT very good with [phone calls](https://no.phone.wtf).

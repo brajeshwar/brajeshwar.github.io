@@ -13,7 +13,7 @@ I was born in a quiet and serene, hill-surrounded green valley of Imphal[^Imphal
 
 ## Work
 
-I migrated to Mumbai[^Mumbai] in Aug 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
+I migrated and reached Mumbai[^Mumbai] on Aug 2, 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
 
 After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a Floppy-Disk which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an Internet café[^InternetCafe] nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
 
