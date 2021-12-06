@@ -48,7 +48,7 @@ Try out other good VPN providers;
 
 [//]: # https://thatoneprivacysite.net/ is a paid link.
 
-Have a look at [That One Privacy Site](https://thatoneprivacysite.net/) to do a thorough research that fits your requirements. More VPN reviews can be found on [TheBestVPN](https://thebestvpn.com/).
+Have a look at [That One Privacy Site](https://thatoneprivacysite.net/) to do a thorough research that fits your requirements.
 
 ## DD-WRT Router + Apple Airport
 
