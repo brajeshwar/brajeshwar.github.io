@@ -10,6 +10,8 @@ However, even with the best care aging can present problems. Thankfully, technol
 
 Aging in place was often impossible. As people age their mobility becomes more limited and walking up and down a flight of stairs repeatedly simply becomes impossible. Because of this, many elderly homeowners would sell their home and move to a single-story residence or transition into a retirement community. Even if this wasn't what they necessarily wanted, it was frequently the only logical option. 
 
+[//]: # paid link - https://www.easyclimber.com/
+
 Fortunately, technology has made <a href="https://www.easyclimber.com/">elevators and lifts for elderly</a> homeowners a possibility for an increasing number of individuals. Originally, this technology was cost prohibitive for the average person but it has been refined extensively over the past decades and is now an affordable option for many more retirees.
 
 Another innovation which has made aging in place a more viable solution for homeowners is the ability to work from home. In the past, many retirees would find their decreased income made it impossible to remain in the larger home they had once easily afforded. Working outside of the home in lower paying jobs was an option, but not as enjoyable or rewarding in many ways as their previous careers. The internet has made it possible for retirees, and anyone else, to create a business they love from the comfort of their own home which can provide the needed financial resources to age in place while continuing to do meaningful work.
