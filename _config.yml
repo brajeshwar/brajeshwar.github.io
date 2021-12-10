@@ -61,11 +61,11 @@ collections:
 
 exclude:
   - .jekyll-cache/
+  - .obsidian
   - .sass-cache/
+  - _archived
   - _drafts
   - Gemfile
   - Gemfile.lock
   - gemfiles/
   - README.*
-  - tmp.*
-  - todo.*
