@@ -19,5 +19,3 @@ Darshan Sawardekar
 [Saneef Ansari](https://saneef.com)
 
 [Saurabh Chandra](https://www.linkedin.com/in/saurabhchandra/) was my erstwhile boss when he was the CEO of Razorfish, Bangalore (INDIA). He is currently the co-founder, CEO of Ati Motors -- a robotic company. I learned a lot from him, especially how to be patient and make the extremes work together.
-
-[Dr. Mahmoud Rajablu](https://www.linkedin.com/in/mahmoud-rajablu/) is my executive coach, mentor, and guide. He is a global business leader with over two decades of leadership in Canada, the USA, Europe, Asia-Pacific, the Middle East, and Africa. He is currently the CEO of Pars Capital International Inc.
