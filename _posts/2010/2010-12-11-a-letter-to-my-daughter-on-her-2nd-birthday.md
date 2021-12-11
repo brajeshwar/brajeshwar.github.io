@@ -2,7 +2,7 @@
 
 Today, my daughter is 2-years old, and I’m unfortunate that I won’t be by her side.
 
-Now that she’s two years old, understand separation and the very fact that I’m not there had been making her hate the words “Bye Bye.” She would be angry at her mother – “No Bye Bye! No Bye Bye!” These days, she cries, “No Bye Bye” when anyone dear to her says “Bye Bye.”
+Now that she’s two years old, understanding separation and the very fact that I’m not there had been making her hate the words “Bye Bye.” She would be angry at her mother – “No Bye Bye! No Bye Bye!” These days, she cries, “No Bye Bye” when anyone dear to her says “Bye Bye.”
 
 Those words used to be something she likes saying, knowing that I’d return home and watch TV together, play around, sing & dance all night, swing in the garden whenever she wants. The last gleeful “Bye Bye” for her was when I left her early this November. She felt it was routine until she realized I was not returning for quite a while.
 
