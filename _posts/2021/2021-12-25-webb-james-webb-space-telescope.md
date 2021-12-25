@@ -1,4 +1,4 @@
-#  James Webb Space Telescope (JWST or "Webb")
+# James Webb Space Telescope (JWST or "Webb")
 
 The [James Webb Space Telescope](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope) (JWST or "Webb") is a joint NASA–ESA–CSA space telescope that is planned to succeed the Hubble Space Telescope as NASA's flagship astrophysics mission. The JWST will provide improved infrared resolution and sensitivity over Hubble[^Hubble], and will enable a broad range of investigations across the fields of astronomy and cosmology, including observing some of the most distant events and objects in the universe, such as the formation of the first galaxies.
 
@@ -13,7 +13,9 @@ In this lifetime, we are entering another era of learning more about the Univers
   </figcaption>
 </figure>
 
-The telescope will launch on an Ariane 5 rocket from Europe’s Spaceport in French Guiana. From there it embarks on a month-long journey to its destination orbit around the second Lagrange point (L2), about 1,500,000 kilometres from Earth. In the first month after launch, Webb will unfold its sunshield, and then deploy its 6.5-metre primary mirror that can detect the faint light of distant stars and galaxies with a sensitivity a hundred times greater than that of Hubble.
+On Dec 25, 2021, the telescope is being launched on an Ariane 5 rocket from Europe’s Spaceport in French Guiana. From there it embarks on a month-long journey to its destination orbit around the second Lagrange point (L2), about 1,500,000 kilometres from Earth. In the first month after launch, Webb will unfold its sunshield, and then deploy its 6.5-metre primary mirror that can detect the faint light of distant stars and galaxies with a sensitivity a hundred times greater than that of Hubble.
+
+{% include video source="youtube" id="7nT7JGZMbtM" %}
 
 Objects near this point can orbit the Sun synchronously with the Earth, allowing Webb to remain at a roughly constant distance and use a single sun-shield to block heat and light from the Sun and Earth. Unfortunately, the distance makes it impossible to do post-launch repair or upgrades. In the case of Hubble, the mirror had to be repaired later as it was wrongly fixed on launch.
 
