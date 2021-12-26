@@ -15,7 +15,7 @@ In this lifetime, we are entering another era of learning more about the Univers
 
 On Dec 25, 2021, the telescope is being launched on an Ariane 5 rocket from Europe’s Spaceport in French Guiana. From there it embarks on a month-long journey to its destination orbit around the second Lagrange point (L2), about 1,500,000 kilometres from Earth. In the first month after launch, Webb will unfold its sunshield, and then deploy its 6.5-metre primary mirror that can detect the faint light of distant stars and galaxies with a sensitivity a hundred times greater than that of Hubble.
 
-{% include video source="youtube" id="7nT7JGZMbtM" %}
+[Dashboard Status for the Webb](https://jwst.nasa.gov/content/webbLaunch/whereIsWebb.html).
 
 Objects near this point can orbit the Sun synchronously with the Earth, allowing Webb to remain at a roughly constant distance and use a single sun-shield to block heat and light from the Sun and Earth. Unfortunately, the distance makes it impossible to do post-launch repair or upgrades. In the case of Hubble, the mirror had to be repaired later as it was wrongly fixed on launch.
 
