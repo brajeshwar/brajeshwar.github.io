@@ -4,18 +4,14 @@ title: Contact
 permalink: /contact/
 ---
 
-<p>
-  Call me on my email
-  <a href="mailto:brajeshwar@oinam.com">brajeshwar@oinam.com</a>
-  or find me at
-  <a href="http://github.com/brajeshwar">Github</a>,
-  <a href="https://news.ycombinator.com/user?id=Brajeshwar">HackerNews</a>,
-  <a href="https://www.linkedin.com/in/brajeshwar/">LinkedIn</a>,
-  and
-  <a href="https://twitter.com/brajeshwar">Twitter</a>.
-</p>
+Call me on my email [brajeshwar@oinam.com](mailto:brajeshwar@oinam.com)\
+or find me at
+[Github](http://github.com/brajeshwar),
+[HackerNews](https://news.ycombinator.com/user?id=Brajeshwar),
+and
+[Twitter](https://twitter.com/brajeshwar).
 
-<hr>
+---
 
 <form id="contact-form" action="https://formspree.io/f/mrgrrljj" method="POST">
   <fieldset>
@@ -65,7 +61,6 @@ form.addEventListener("submit", handleSubmit)
 
 
 {% comment %}
-  
 _Archived_
 
 - [Blogspot](http://brajeshwar.blogspot.com)
@@ -73,5 +68,4 @@ _Archived_
 - [Flickr](https://www.flickr.com/photos/brajeshwar/) `(2004-2015; 11+ million views)`
 - [Medium](https://medium.com/@brajeshwar)
 - [WordPress](https://profiles.wordpress.org/brajeshwar/)
-
 {% endcomment %}
