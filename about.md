@@ -27,7 +27,7 @@ It was the Internet boom in India, and the proliferation of the Internet was pro
 
 In early 2003, I resigned from a very lucrative job and started freelancing full-time. During those freelance days, I did much exciting work and enjoyed every moment of it. I learned a lot from those experiences, made many friends, and hitch some of the most rewarding relationships.
 
-By 2005, I decided to take the plunge and started our first company - [Oinam Software](https://oinam.software). We undertook some of the most innovative, sometimes very experimental work for clients, such as
+By 2005, I decided to take the plunge and started our first company - Oinam Software. We undertook some of the most innovative, sometimes very experimental work for clients, such as
 [Adobe](https://www.adobe.com),
 [Cambridge University Entrepreneurs](http://www.cue.org.uk/),
 [Disney](http://disney.com/),
