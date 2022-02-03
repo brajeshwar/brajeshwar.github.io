@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-Call me on my email [brajeshwar@oinam.com](mailto:brajeshwar@oinam.com)\
+Say [hi@brajeshwar.com](mailto:hi@brajeshwar.com)\
 or find me at
 [Github](http://github.com/brajeshwar),
 [HackerNews](https://news.ycombinator.com/user?id=Brajeshwar),
