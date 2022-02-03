@@ -87,11 +87,11 @@ It has the must-have and minimal [plugins](https://pages.github.com/versions/) t
 
 As always, this website is [open source](https://github.com/brajeshwar/brajeshwar.github.io). Feel free to comment, raise issues, or fix up a pull request.
 
-> Tip: In your website repository on Github, hit the key <kbd>.</kbd> (that is a period), and you get yourself an excellent editor (VS Code). Now, you can write from anywhere on anything that has a browser.
+> Tip: In your website repository on [Github](https://github.com), hit the key <kbd>.</kbd> (that is a period), and you get yourself an excellent editor (VS Code). Now, you can write from anywhere on anything that has a browser.
 
 ## Onwards
 
-I'm not in a hurry, but I'm still looking for an even simpler setup. Not just for this website but most of my text-based content. I want to write in the most plain-text possible, parse and translate them to other formats with something like Pandoc. Links (hyperlinks) inside the content are a tad of an eye-sore, but I'm not too keen on Footnotes either unless I can think of or find a better way to treat and represent them.
+I'm not in a hurry, but I'm still looking for an even simpler setup. Not just for this website but most of my text-based content. I want to write in the most plain-text possible, parse and translate them to other formats with something like Pandoc.
 
 My rule is that any tools I use are treated as just tools and not depend on them. The contents should not be coupled or part of any tooling. I should be able to swap out any tool to interact with the contents.
 
