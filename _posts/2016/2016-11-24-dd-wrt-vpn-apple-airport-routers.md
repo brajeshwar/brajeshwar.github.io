@@ -31,20 +31,20 @@ The features and functionalities of DD-WRT are humongous. Pick the ones you want
 
 I really liked the simplicity of ExpressVPN, and it just worked for me. If you are shopping for one, most of the VPN Providers have a trial period - from 2 days to a week, or even sometimes a month. A 2-day trial should be enough for you to make a choice. I once got a good deal on CactusVPN and I subscribe to their VPN + SmartDNS.
 
-Try out other good VPN providers;
+Here are some VPN providers to try;
 
-- [Anonymizer](https://www.anonymizer.com/),
 - [Black VPN](https://www.blackvpn.com/),
-- [Buffered](https://buffered.com/),
+- [ExpressVPN](https://www.expressvpn.com),
 - [IPVanish](https://www.ipvanish.com/),
 - [MullVad](https://mullvad.net/),
-- [NordVPN](http://nordvpn.com/?ref=144199368),
+- [NordVPN](http://nordvpn.com/),
 - [Private Internet Access](https://www.privateinternetaccess.com/),
 - [Private VPN](https://privatevpn.com/),
 - [Slick VPN](https://www.slickvpn.com/),
 - [Smart VPN](https://www.smartvpn.com/),
 - [Tor Guard](https://torguard.net/),
-- [VyprRVPN](https://www.goldenfrog.com/vyprvpn), etc.
+- [VyprRVPN](https://www.goldenfrog.com/vyprvpn),
+etc.
 
 [//]: # https://thatoneprivacysite.net/ is a paid link.
 

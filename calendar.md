@@ -4,4 +4,5 @@ title: Calendar
 permalink: /calendar/
 ---
 
-[calendly.com/brajeshwar](https://calendly.com/brajeshwar/oinam)
+Please pick a schedule suitable to you from the options at\
+[calendly.com/brajeshwar](https://calendly.com/brajeshwar).
