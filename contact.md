@@ -13,6 +13,15 @@ and
 
 ---
 
+Email is perhaps the best communication medium, and I'm happy to get cold emails. I love thoughtful cold emails and would definitely reply. Here are a few tips;
+
+
+- Short and grabs attention.
+- Be clear on who you are.
+- Either has a specific ask, an offer, or an actionable item.
+
+---
+
 <form id="contact-form" action="https://formspree.io/f/mrgrrljj" method="POST">
   <fieldset>
     <p id="contact-form-status" style="font-weight: bold;"></p>
