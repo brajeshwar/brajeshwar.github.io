@@ -1,6 +1,6 @@
 # Pownce; I got invites
 
-<img class="small right" src="/static/logo/pownce.gif" alt="Pownce">
+<img class="small right" src="/static/2007/pownce.gif" alt="Pownce">
 
 [Pownce](http://pownce.com/) is a Twitter-esque service combined with file sharing and chat. However, the attention it seeks from the community is largely because of the Digg-guy [Kevin Rose](https://www.kevinrose.com) who started it as a fun project.
 
