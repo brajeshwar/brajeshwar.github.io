@@ -41,3 +41,5 @@ https://usefyi.com/evernote-history/
 - [Org Mode - Organize Your Life In Plain Text!](http://doc.norang.ca/org-mode.html)
 - How to: Achieve a text-only work-flow, http://donlelek.github.io/2015-03-09-text-only-workflow/
 - [Plain Text Life](https://github.com/jukil/plain-text-life)
+- https://sive.rs/plaintext
+- https://blog.miris.design/not-just-plain-text

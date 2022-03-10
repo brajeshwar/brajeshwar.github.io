@@ -13,7 +13,11 @@ and
 
 ---
 
-Email is perhaps the best communication medium, and I'm happy to get cold emails. I love thoughtful cold emails and would definitely reply. Here are a few tips;
+[Please pick a schedule](https://meet.brajeshwar.com) appropriate to you, and let's meet/talk.
+
+---
+
+Of course, email is always the first and best communication medium, and I'm happy to get cold emails. I love thoughtful cold emails and would definitely reply. Here are a few tips;
 
 
 - Short and grabs attention.
