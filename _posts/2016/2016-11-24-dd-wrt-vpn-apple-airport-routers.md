@@ -1,10 +1,10 @@
 # DD-WRT, VPN and Apple Airport Routers
 
-Apple's [Airport Extreme](http://www.apple.com/airport-extreme/) and [Airport Express](http://www.apple.com/airport-express/) are brilliant at what they do. They are secure, yet easy to set up and maintain. Well, you do not need to maintain them - they tend to just keep working. It makes it super easy for an Apple product eco-system to co-exist without much hassle and fuss.
+Apple's Airport Extreme[^AirportExtreme] and Airport Express[^AirportExpress] are brilliant at what they do. They are secure, yet easy to set up and maintain. Well, you do not need to maintain them - they tend to just keep working. It makes it super easy for an Apple product eco-system to co-exist without much hassle and fuss.
 
 ![Airport Wireless)](/static/2016/airport-wireless.jpg)
 
-After many Linksys and D-Link Wi-Fi Routers, I started with the first generation Airpot Express and upgraded to the first [Airport Time Capsule](http://www.apple.com/airport-time-capsule/) when it was released in 2008. The time capsule (Airport Extreme with Time Machine enabled Drive) lasted for 5 years and the Airport Express, a little over 6 years. Our current Home Network Setup is powered by an Airport Extreme and few Airport Expresses.
+After many Linksys and D-Link Wi-Fi Routers, I started with the first generation Airpot Express and upgraded to the first Airport Time Capsule[^AirportTimeCapsule] when it was released in 2008. The time capsule (Airport Extreme with Time Machine enabled Drive) lasted for 5 years and the Airport Express, a little over 6 years. Our current Home Network Setup is powered by an Airport Extreme and few Airport Expresses.
 
 However, the apple routers are limited in their functionality. I wanted a VPN sitting in between the Internet and my home network without disturbing my original setup. I also wanted to have the option to turn the VPN OFF/ON quickly as and when I needed. I researched for a bit and settled on a cheap flashable wi-fi router. I flashed it with [DD-WRT](http://www.dd-wrt.com/).
 
@@ -68,8 +68,16 @@ Play around with the Airport Router settings of your choices. However, here are 
 1. Now, <mark>Create a wireless network</mark> with the settings of your choice.
 1. For the most important part, turn the <mark>Router Mode Off (Bridge Mode)</mark>. We're not routing anything with the Apple Airport but merely managing the Wireless Internet Network.
 
-Of course, with Apple rumored to be [abandoning the router business](https://www.bloomberg.com/news/articles/2016-11-21/apple-said-to-abandon-development-of-wireless-routers-ivs0ssec), in future, you can just plug off the Apple Router part and move to your DD-WRT router as the primary network manager.
+Of course, with Apple rumored to be abandoning the router business, in future, you can just plug off the Apple Router part and move to your DD-WRT router as the primary network manager.
 
-![Oinam Home Network)](/static/2016/oinam-home-network.png)
+![Oinam Home Network in 2016)](/static/2016/oinam-home-network.png)
 
 That's it. You can now have the flexibility, security of a DD-WRT Router and Wireless Network managed by an Apple Router to easily and consistently connect all your devices. All your devices, from phones to laptops to the connected TV, can connect to the Internet encapsulated via a VPN. I'm still experimenting and will continue to play with my setup. The current setup has been running for a year or so, without any issues.
+
+[//]: # Footnote
+
+[^AirportExtreme]: The [AirPort Extreme](https://en.wikipedia.org/wiki/AirPort_Extreme) is a residential gateway combining the functions of a router, network switch, wireless access point and NAS as well as varied other functions, and one of Apple's former AirPort products.
+
+[^AirportExpress]: The [AirPort Express](https://en.wikipedia.org/wiki/AirPort_Express) is a Wi-Fi base station product from Apple Inc., part of the AirPort product line. While more compact and in some ways simpler than another Apple Wi-Fi base station, the AirPort Extreme, the Express offers audio output capability the Extreme lacks. The AirPort Express was the first AirPlay device to receive streamed audio from a computer running iTunes on the local network.
+
+[^AirportTimeCapsule]: The [AirPort Time Capsule](https://en.wikipedia.org/wiki/AirPort_Time_Capsule) is a wireless router which was sold by Apple Inc., featuring network-attached storage (NAS) and a residential gateway router, and is one of Apple's AirPort products. They are, essentially, versions of the AirPort Extreme with an internal hard drive. Apple describes it as a "Backup Appliance", designed to work in tandem with the Time Machine backup software utility introduced in MacOS X 10.5.
