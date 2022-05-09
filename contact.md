@@ -11,9 +11,10 @@ or find me at
 and
 [Twitter](https://twitter.com/brajeshwar).
 
----
-
-[Please pick a schedule](https://meet.brajeshwar.com) appropriate to you, and let's meet/talk.
+> Old profiles, which I no longer actively maintain --
+> [Facebook](https://www.facebook.com/brajeshwar),
+> [LinkedIn](https://www.linkedin.com/in/brajeshwar/),
+> _et al_.
 
 ---
 
