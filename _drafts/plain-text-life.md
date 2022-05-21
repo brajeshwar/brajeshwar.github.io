@@ -52,7 +52,7 @@ https://usefyi.com/evernote-history/
 - [http://www.markwk.com/plain-text-life.html]
 - [https://georgecoghill.wordpress.com/plain-text/]
 - [http://danlucraft.com/blog/2008/04/plain-text-organizer/]
-- [http://plaintext-productivity.net]
+- PlainText Productivity, http://plaintext-productivity.net
 - [https://plaintextproject.online/links.html]
 - [http://bettermess.com/a-plain-text-primer/]
 - [My productivity app for the past 12 years has been a single .txt file](https://jeffhuang.com/productivity_text_file/)
@@ -61,3 +61,4 @@ https://usefyi.com/evernote-history/
 - [Plain Text Life](https://github.com/jukil/plain-text-life)
 - https://sive.rs/plaintext
 - https://blog.miris.design/not-just-plain-text
+- todotxt, http://todotxt.org/
