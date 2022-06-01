@@ -12,7 +12,6 @@ _site
 # Ignore OS generated files #
 .DS_Store*
 ehthumbs.db
-Icon?
 Thumbs.db
 
 # Ignore packages #
