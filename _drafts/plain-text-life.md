@@ -2,6 +2,8 @@
 
 "data-first with tools on top"
 
+Plain text is a very powerful universal tool that is almost zero cost, work across platforms, are light enough to work remotely over poor connections, don't go out of date, quick to learn.
+
 I’ve developed patterns to streamline and simplify, pretty much everything in my life.
 
 I’m always on the look-out to simplify my digital activities and usage. I’m on a Mac, so this article will reflect a macOS language but the philosophy and ideas should be applicable to other Operating Systems too.
