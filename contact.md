@@ -8,22 +8,13 @@ Say [hi@brajeshwar.com](mailto:hi@brajeshwar.com)\
 or find me at
 [Github](http://github.com/brajeshwar),
 [HackerNews](https://news.ycombinator.com/user?id=Brajeshwar),
+[LinkedIn](https://www.linkedin.com/in/brajeshwar/),
 and
 [Twitter](https://twitter.com/brajeshwar).
 
-> Old profiles, which I no longer actively maintain --
-> [Facebook](https://www.facebook.com/brajeshwar),
-> [LinkedIn](https://www.linkedin.com/in/brajeshwar/),
-> _et al_.
-
 ---
 
-Of course, email is always the first and best communication medium, and I'm happy to get cold emails. I love thoughtful cold emails and would definitely reply. Here are a few tips;
-
-
-- Short and grabs attention.
-- Be clear on who you are.
-- Either has a specific ask, an offer, or an actionable item.
+Email is always the first and best communication medium, and I'm happy to get cold emails. I love thoughtful cold emails and would definitely reply. Please, tell me know who you are and your message be clear, and short that grabs attention with a specific ask, an offer, or an actionable item.
 
 ---
 
@@ -81,5 +72,7 @@ _Archived_
 - [Facebook](https://www.facebook.com/brajeshwar/)
 - [Flickr](https://www.flickr.com/photos/brajeshwar/) `(2004-2015; 11+ million views)`
 - [Medium](https://medium.com/@brajeshwar)
+- [Reddit](https://www.reddit.com/user/Brajeshwar/)
 - [WordPress](https://profiles.wordpress.org/brajeshwar/)
+- Find more at https://discoverprofile.com/brajeshwar/
 {% endcomment %}
