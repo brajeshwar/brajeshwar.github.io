@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-Email [b@oin.am](mailto:brajeshwar@oinam.com)\
+Email ```“brajeshwar”``` at our family domain ```oinam.com```\
 or find me at
 [Github](http://github.com/brajeshwar),
 [HackerNews](https://news.ycombinator.com/user?id=Brajeshwar),

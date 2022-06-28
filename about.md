@@ -25,7 +25,7 @@ It was the Internet boom in India, and the proliferation of the Internet was pro
 
 ## Startup
 
-In early 2003, I resigned from a very lucrative job and started freelancing full-time. During those freelance days, I did much exciting work and enjoyed every moment of it. I learned a lot from those experiences, made many friends, and hitch some of the most rewarding relationships.
+In early 2003, I resigned from a very lucrative job and started freelancing full-time. During those freelance days, I did many exciting work and enjoyed every moment of it. I learned a lot from those experiences, made many friends, and hitch some of the most rewarding relationships.
 
 By 2005, I decided to take the plunge and started our first company - Oinam Software. We undertook some of the most innovative, sometimes very experimental work for clients, such as
 [Adobe](https://www.adobe.com),
@@ -38,13 +38,11 @@ By 2005, I decided to take the plunge and started our first company - Oinam Soft
 [Tata Consultancy Services](https://www.tcs.com),
 _et al_.
 
-We also worked for many Contractors who sub-contracted their work to us. We were, in fact, one of the best ghost developers to many successful Contractors.
+We also worked for many contractors who sub-contracted their work to us. We were, in fact, one of the best ghost developers to many successful Contractors.
 
-In 2006, [Mixercast, Inc](https://www.linkedin.com/company/167518) acquired the Oinam Team. It was an exciting experience, being part of a Startup and learning from it.
+In 2006, [Mixercast, Inc](https://www.linkedin.com/company/167518) acquired the Oinam Team. It was an exciting experience, being part of a Startup and learning from it. Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was dissolved on Dec 31, 2009 after selling its IP (Intellectual Property) to erstwhile Google (now Alphabet).
 
-[//]: # Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was declared dead on Dec 31, 2009.
-
-In the winter of 2010-2011, I ran off to Silicon Valley to be part of the [Founder Institute](https://fi.co/join/graduate-Brajeshwar_Oinam) accelerator. I forge life-long friends, connections and learned a lot from that experience.
+In 2010-2011, I relocated to Silicon Valley to be part of the [Founder Institute](https://fi.co/join/graduate-Brajeshwar_Oinam) accelerator. I forge life-long friends, connections and learned a lot from that experience.
 
 In 2020-2021, I got into the [On Deck](https://www.beondeck.com) Founder Fellowship Program (ODF7). One of the best networks I had ever joined -- the most helpful, fiercely hard-working entrepreneurs, designers, technologists, and all-around brilliant generalists. Use my [Referral Link](https://beondeck.com/r/BrajeshwarOinam) for a better chance at an interview and fee discount.
 
