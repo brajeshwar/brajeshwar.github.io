@@ -2,6 +2,7 @@
 	<nav>
     <a href="{{ site.baseurl | prepend: site.url }}/">Home</a>
     <a href="{{ site.baseurl | prepend: site.url }}/feed.xml">RSS</a>
+    <a href="{{ site.baseurl | prepend: site.url }}/privacy">Privacy</a>
     {% for menu in site.data.nav -%}
       <a href="{{ site.baseurl | prepend: site.url }}{{ menu.url }}">{{ menu.title }}</a>
     {% endfor -%}
