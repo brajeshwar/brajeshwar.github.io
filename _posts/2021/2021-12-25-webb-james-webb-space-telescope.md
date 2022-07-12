@@ -28,6 +28,21 @@ ESA[^ESA] has a nicely done [Webb Launch Kit](https://esamultimedia.esa.int/docs
   <a href="https://cdn.oinam.com/img/science/webb-study-the-universe-in-infrared-original.jpg"><img src="https://cdn.oinam.com/img/science/webb-study-the-universe-in-infrared.webp" title="Webb Infrared" loading="lazy"></a>
 </div>
 
+## First Image (Jul 12, 2022)
+
+On TUE, Jul 12, 2022, JWT delivers the deepest infrared image of the Universe yet. The image covers a patch of sky approximately the size of a grain of sand held at arm’s length by someone on the ground that reveals thousands of galaxies in a tiny sliver of vast universe. The near-infrared view brought out faint structures in extremely distant galaxies, offering the most detailed view of the early universe to date. [The Image](https://webbtelescope.org/news/first-images) is of the galaxy cluster __SMACS 0723__.
+
+<figure>
+  <a href="https://cdn.oinam.com/img/science/james-webb-space-telescope-first-image-2022JUL12.png"><img src="https://cdn.oinam.com/img/science/james-webb-space-telescope-first-image-2022JUL12-low.jpg" alt="JWT's First Image on Jul 12, 2022" loading="lazy"></a>
+  <figcaption>
+    JWST delivers its first image on Jul 12, 2022. View <a href="https://cdn.oinam.com/img/science/james-webb-space-telescope-first-image-2022JUL12.png">High-Res Version</a> (30MB).
+  </figcaption>
+</figure>
+
+This deep field, taken by Webb’s [Near-Infrared Camera](https://www.jwst.nasa.gov/content/observatory/instruments/nircam.html) (NIRCam), is a composite made from images at different wavelengths, totaling 12.5 hours – achieving depths at infrared wavelengths beyond the Hubble Space Telescope’s deepest fields, which took weeks.
+
+The image shows the galaxy cluster SMACS 0723 as it appeared 4.6 billion years ago. The combined mass of this galaxy cluster acts as a gravitational lens, magnifying much more distant galaxies behind it. Webb’s NIRCam has brought those distant galaxies into sharp focus – they have tiny, faint structures that have never been seen before, including star clusters and diffuse features. Researchers will soon begin to learn more about the galaxies’ masses, ages, histories, and compositions, as Webb seeks the earliest galaxies in the universe.
+
 [//]: # Footnote
 
 [^Hubble]: [Hubble Space Telescope](https://en.wikipedia.org/wiki/Hubble_Space_Telescope) (Hubble) is a space telescope that was launched into low Earth orbit in 1990 and remains in operation. It is one of the largest and most versatile, renowned both as a vital research tool and as a public relations boon for astronomy. The Hubble telescope is named after astronomer Edwin Hubble and is one of NASA's Great Observatories, along with the Compton Gamma Ray Observatory (1991–2000), the Chandra X-ray Observatory, and the Spitzer Space Telescope (2003–2020). The Space Telescope Science Institute (STScI) selects Hubble's targets and processes the resulting data, while the Goddard Space Flight Center (GSFC) controls the spacecraft.
