@@ -4,20 +4,15 @@ title: Books
 permalink: /books/
 ---
 
-> This is a Work-in-Progress.
-
 I love to read books. Here are some of the all-time favorites I have read, re-read, and would recommend.
 
 T0D0: Book Images, Description, and Personal Review
 
-- Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by James Clear
-- Can't Hurt Me: Master Your Mind and Defy the Odds by David Goggins
 - How to Win Friends and Influence People by Dale Carnegie
 - The Psychology of Money by Morgan Housel
 - The Lord of the Rings by J.R.R. Tolkien
 
----
-
+<!---
 Should I recommend the following (Rethink, Reread)?
 
 - Mindset: The New Psychology of Success by Carol S. Dweck
@@ -34,3 +29,6 @@ Should I recommend the following (Rethink, Reread)?
 - Things Hidden Since the Foundation of the World by René Girard
 - 1984 by George Orwell
 - Ego Is the Enemy by Ryan Holiday
+- Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by James Clear
+- Can't Hurt Me: Master Your Mind and Defy the Odds by David Goggins
+-->
