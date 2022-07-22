@@ -4,13 +4,13 @@ title: Books
 permalink: /books/
 ---
 
-I love to read books. Here are some of the all-time favorites I have read, re-read, and would recommend.
+I love reading. Here are some of the all-time favorite books I have read, re-read, and would recommend.
 
 T0D0: Book Images, Description, and Personal Review
 
-- How to Win Friends and Influence People by Dale Carnegie
+- [How to Win Friends and Influence People](https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People) by [Dale Carnegie](https://en.wikipedia.org/wiki/Dale_Carnegie)
 - The Psychology of Money by Morgan Housel
-- The Lord of the Rings by J.R.R. Tolkien
+- [The Lord of the Rings](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings) by [J.R.R. Tolkien](https://en.wikipedia.org/wiki/J._R._R._Tolkien)
 
 <!---
 Should I recommend the following (Rethink, Reread)?

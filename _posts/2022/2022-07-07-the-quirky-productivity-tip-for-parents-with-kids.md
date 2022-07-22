@@ -4,7 +4,7 @@ As more and more parents work remotely, they have kids punctuating their work wi
 
 Out of the plethora of productivity tips for parents working remotely, here is one exciting ritual that I have realized bears a meaningful parental success.
 
-<img src="/static/2022/vintage-alarm-clock-and-teddy-bear.jpg" alt="Vintage Alarm Clock with Teddy Bear" loading="lazy">
+<img class="medium" src="/static/2022/vintage-alarm-clock-and-teddy-bear.jpg" alt="Vintage Alarm Clock with Teddy Bear" loading="lazy">
 
 ## The Kid Pomodoro
 
