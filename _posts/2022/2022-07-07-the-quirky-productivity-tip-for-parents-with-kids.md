@@ -4,7 +4,12 @@ As more and more parents work remotely, they have kids punctuating their work wi
 
 Out of the plethora of productivity tips for parents working remotely, here is one exciting ritual that I have realized bears a meaningful parental success.
 
-<img class="medium" src="/static/2022/vintage-alarm-clock-and-teddy-bear.jpg" alt="Vintage Alarm Clock with Teddy Bear" loading="lazy">
+<figure class="content-medium">
+  <img src="/static/2022/parenting-kids-timer-pomodoro-DALL·E-20220815.jpg" alt="Timer Clock Parenting - Generated with DALL·E 2 on Aug 15, 2022" loading="lazy">
+  <figcaption>
+    Timer Clock Parenting (generated with <a href="https://openai.com/dall-e-2/">DALL·E 2</a>).
+  </figcaption>
+</figure>
 
 ## The Kid Pomodoro
 
