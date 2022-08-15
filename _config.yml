@@ -33,11 +33,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
   
-algolia:
-  application_id: JCOTPOLESP
-  index_name: 'brajeshwar.com'
-  search_only_api_key: b53e2c30ce0512160269fd09b5d03c41
-
 optional_front_matter:
   remove_originals: true
 
@@ -68,9 +63,7 @@ exclude:
   - .obsidian
   - .sass-cache/
   - _archived
-  - _drafts
   - Gemfile
   - Gemfile.lock
   - gemfiles/
   - README.*
-  - server
