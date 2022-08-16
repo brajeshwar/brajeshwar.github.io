@@ -4,7 +4,7 @@ I never thought that something that would come up against my going to the 'MXDU 
 
 The refusal letter states,
 
-> You have not provided acceptable evidence of invitation from Australia. You seem to have few strong family commitments or other obvious incentive to return to your country of usual residence.
+> You have not provided acceptable evidence of invitation from Australia. You seem to have very little family commitments or other obvious incentive to return to your country of usual residence.
 
 If you let me re-phrase that in our own words that the Agent explained and everybody here in India accepts is that, People from Third-world countries like India go to these countries and stay there and do not return to their country. And the scary version for them is `A Bachelor with IT (Information Technology) proficiency` are the ones to be screened out as much as possible.
 
