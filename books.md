@@ -9,10 +9,11 @@ I love reading. Here are some of the all-time favorite books I have read, re-rea
 T0D0: Book Images, Description, and Personal Review
 
 - [How to Win Friends and Influence People](https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People) by [Dale Carnegie](https://en.wikipedia.org/wiki/Dale_Carnegie)
-- The Psychology of Money by Morgan Housel
+- [The Psychology of Money](https://www.amazon.com/Psychology-Money-Morgan-Housel-ebook/dp/B08FHZ5L47/) by Morgan Housel
 - [The Lord of the Rings](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings) by [J.R.R. Tolkien](https://en.wikipedia.org/wiki/J._R._R._Tolkien)
 
-<!---
+{% comment %}
+
 Should I recommend the following (Rethink, Reread)?
 
 - Mindset: The New Psychology of Success by Carol S. Dweck
@@ -31,4 +32,5 @@ Should I recommend the following (Rethink, Reread)?
 - Ego Is the Enemy by Ryan Holiday
 - Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by James Clear
 - Can't Hurt Me: Master Your Mind and Defy the Odds by David Goggins
--->
+
+{% endcomment %}
