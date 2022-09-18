@@ -6,7 +6,7 @@ Daniel is a mobile-oriented entrepreneur, and creator of <a href="http://www.fla
 
 This mobile entrepreneur isn't some kid in his basement developing an app though, he has a much geekier pedigree than that. Daniel was previously a Solutions Architect, R&D Software Manager, Integration Engineer and Chief Forum Consultant at Nokia.
 
-I recently got a chance to (virtually) sit down with Daniel to talk about his new entrepreneurial venture into <a href="https://realestate.flaretag.com">mobile Real Estate</a> marketing:
+I recently got a chance to (virtually) sit down with Daniel to talk about his new entrepreneurial venture into mobile Real Estate marketing:
 
 Q. Can you give me the brief elevator pitch on Flaretag and its uses?
 

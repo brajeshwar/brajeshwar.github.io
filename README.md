@@ -1,6 +1,6 @@
 # Brajeshwar
 
-This is the repository and source that powers my personal website - [brajeshwar.com](https://brajeshwar.com). The domain [brajeshwar.com](https://brajeshwar.com/about/brajeshwar.com/) was booked on Jun 11, 2001.
+This is the repository and source that runs my personal website - [brajeshwar.com](https://brajeshwar.com). The domain [brajeshwar.com](https://brajeshwar.com/about/brajeshwar.com/) was booked on Jun 11, 2001.
 
 ## Tool
 

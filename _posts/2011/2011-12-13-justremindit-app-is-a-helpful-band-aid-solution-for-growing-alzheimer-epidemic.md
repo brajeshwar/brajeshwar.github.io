@@ -2,9 +2,7 @@
 
 Some creative Silicon Valley professionals branch off on their own to become entrepreneurs by starting their own tech venture. <a href="http://adityakothadiya.com/">Aditya Kothadiya</a> did exactly that, twice. 
 
-As a founder of <a href="http://shopalize.com/">Shopalize</a> and <a href="http://justremindit.com/">JustRemindIt</a>, Aditya is riding entrepreneurial journey twice. This enterprising individual's newest venture JustRemindIt has created a simple and yet brilliant application: a service that sends automatic reminders via Phone call and SMS to others. It also provides recurring reminders, contact lists, templates, an iPhone app and lot more functionalities.
-
-If your interest is piqued - our readers have a special coupon code "<a href="https://justremindit.com/content/pricing">BRAJ20OFF</a>" to get 20% off on the first three months of billing periods. The coupon will expire on Tuesday 20th December 2011.I recently got the opportunity to talk with Aditya about his newest venture and the difficulties of being an entrepreneur:
+As a founder of `Shopalize` and `JustRemindIt`, Aditya is riding entrepreneurial journey twice. This enterprising individual's newest venture JustRemindIt has created a simple and yet brilliant application: a service that sends automatic reminders via Phone call and SMS to others. It also provides recurring reminders, contact lists, templates, an iPhone app and lot more functionalities.
 
 Q. Can you give me the quick elevator pitch for JustRemindIt?
 

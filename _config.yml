@@ -10,6 +10,11 @@ show_drafts: false
 permalink: pretty
 permalink: /:title/
 
+algolia:
+  application_id: W87KPA9T2D
+  index_name: brajeshwar.com
+  search_only_api_key: 70b80cbdd15e92f6469d27c16790c531
+
 feed:
   posts_limit: 10
   author: Brajeshwar
@@ -32,6 +37,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-titles-from-headings
+  - jekyll-browsersync
   
 optional_front_matter:
   remove_originals: true
