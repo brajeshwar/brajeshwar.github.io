@@ -11,6 +11,7 @@ T0D0: Book Images, Description, and Personal Review
 - [How to Win Friends and Influence People](https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People) by [Dale Carnegie](https://en.wikipedia.org/wiki/Dale_Carnegie)
 - [The Psychology of Money](https://www.amazon.com/Psychology-Money-Morgan-Housel-ebook/dp/B08FHZ5L47/) by Morgan Housel
 - [The Lord of the Rings](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings) by [J.R.R. Tolkien](https://en.wikipedia.org/wiki/J._R._R._Tolkien)
+- [The Story of My Experiments with Truth](https://en.wikipedia.org/wiki/The_Story_of_My_Experiments_with_Truth) is the autobiography of [Mohandas K. Gandhi](https://en.wikipedia.org/wiki/Mahatma_Gandhi), covering his life from early childhood through to 1921. It was written in weekly installments and published in his journal Navjivan from 1925 to 1929. The English version was translated by [Mahadev Desai](https://en.wikipedia.org/wiki/Mahadev_Desai) from the Original Gujarati writing.
 
 {% comment %}
 
