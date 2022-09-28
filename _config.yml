@@ -1,6 +1,7 @@
 title: Brajeshwar
 
 remote_theme: oinam/oinam-jekyll
+incremental: true
 
 markdown: kramdown
 highlighter: rouge

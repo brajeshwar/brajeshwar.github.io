@@ -14,6 +14,6 @@ I’m active on [Twitter](https://twitter.com/brajeshwar), and available for [di
 
 ---
 
-### T0D0
+### Todo
 
 - [ ] Newsletter
