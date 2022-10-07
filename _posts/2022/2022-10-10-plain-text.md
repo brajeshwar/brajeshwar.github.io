@@ -1,6 +1,6 @@
 # Plain Text
 
-I was once an Evernote user since its early days and a premium subscriber for many years. I have used many notetaking apps and bought enough of them -- [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
+I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many notetaking apps and bought enough of them -- [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
 
 I have moved to a simpler notetaking and writing habit for my notes. I have chosen a simple plain-text life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the folders.
 
