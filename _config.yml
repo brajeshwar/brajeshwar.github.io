@@ -1,4 +1,5 @@
 title: Brajeshwar
+description: 'I’m on an adventure learning to build beautiful and meaningful products to improve the world for my daughters.'
 
 remote_theme: oinam/oinam-jekyll
 incremental: true
@@ -47,9 +48,6 @@ titles_from_headings:
   enabled: true
   strip_title: true
   collections: true
-
-include:
-  - _pages
 
 defaults:
   - scope:
