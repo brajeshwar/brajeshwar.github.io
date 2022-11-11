@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Books
 permalink: /books/
 ---
@@ -10,7 +10,7 @@ Here are some of the all-time favorite books I have read, re-read, and would rec
 - [The Psychology of Money](https://www.amazon.com/Psychology-Money-Morgan-Housel-ebook/dp/B08FHZ5L47/) by Morgan Housel
 - [The Lord of the Rings](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings) by [J.R.R. Tolkien](https://en.wikipedia.org/wiki/J._R._R._Tolkien)
 - [The Story of My Experiments with Truth](https://en.wikipedia.org/wiki/The_Story_of_My_Experiments_with_Truth) is the autobiography of [Mohandas K. Gandhi](https://en.wikipedia.org/wiki/Mahatma_Gandhi), covering his life from early childhood through to 1921. It was written in weekly installments and published in his journal Navjivan from 1925 to 1929. The English version was translated by [Mahadev Desai](https://en.wikipedia.org/wiki/Mahadev_Desai) from the Original Gujarati writing.
-- [The Design of Everyday Things](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) by [Donald Norman](https://en.wikipedia.org/wiki/Don_Norman) is a book for anyone interested in everyday objects, and their design. One does not have to be a, in the traditional sense, to understand and appreciate designs of the world around us.
+- [The Design of Everyday Things](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) by [Donald Norman](https://en.wikipedia.org/wiki/Don_Norman) is a book for anyone interested in everyday objects, and their design. One does not have to be a designer, in the traditional sense, to understand and appreciate designs of the world around us.
 
 ---
 Since 2018, I maintain a list of interesting books that I read each year --
