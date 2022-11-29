@@ -33,3 +33,7 @@ Pi-hole has a really nice web-enabled Admin dashboard which can be accessed insi
 Pi-hole works pretty well without much fanfare that you might be left with a feeling that you're missing something. I've been running Pi-hole as the Ad-Blocker for my home and seems to be working good so far.
 
 Go, have fun.
+
+#### References & Updates
+
+- [A comprehensive Pi-hole Tutorial](https://www.crosstalksolutions.com/the-worlds-greatest-pi-hole-and-unbound-tutorial-2023/) ([video](https://www.youtube.com/watch?v=cE21YjuaB6o))from Crosstalk Solutions appeared on Nov 29, 2022. This is one of the most detailed covering  every details needed for you to start  running your own Pi-Hole server.
