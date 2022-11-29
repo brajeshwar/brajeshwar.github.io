@@ -13,6 +13,6 @@ Today, the rate at which Front-End Development Tools and Utilities get introduce
   </figcaption>
 </figure>
 
-The purpose of this workshop is to initiate and ignite that idea amongst designers who code and breath life into their static designs. Check out the [Workshop's Companion Site](http://brajeshwar.github.io/metarefresh-2014-workshop/) for more details.
+The purpose of this workshop is to initiate and ignite that idea amongst designers who code and breath life into their static designs. Check out the [Workshop's Companion Site](https://github.com/brajeshwar/metarefresh-2014-workshop/) for more details.
 
 It will be a long way from this workshop for a designer to become a 'superhero' in design but it should be a good start.

@@ -33,7 +33,7 @@ Once you get through the teething problems and have the basics working properly,
 
 Split-testing, again one of the features all the tools offer, allows you to test what works best by pitting multiple choices against each other and showing you the results. You can fiddle around with everything from the core message to the location of the opt-in form, the fonts and the colors used.
 
-Scrubbing removes unwanted subscribers. These 	may be duplicates, invalid emails and others who are no longer active, in the sense that anything you send is deleted goes straight to their trash. Some may even have marked your emails as spam.  Removing these people reduces the overall cost of sending newsletters and improves your ROI. Make it a point to scrub your list every now and then using tools such as [Scrubbly](http://www.scrubbly.com/) or [ListWise](http://www.listwisehq.com/).
+Scrubbing removes unwanted subscribers. These 	may be duplicates, invalid emails and others who are no longer active, in the sense that anything you send is deleted goes straight to their trash. Some may even have marked your emails as spam.  Removing these people reduces the overall cost of sending newsletters and improves your ROI. Make it a point to scrub your list every now and then using tools such as [Scrubbly](http://www.scrubbly.com/).
 
 At the end of every blog post or on your product landing page, you could write something like "Oh, and don't forget to subscribe to tour mailing list to get amazing stuff In your inbox." This request asking you to subscribe is a call to action (CTA), without which your newsletter and everything else described above is pretty much a wasted effort.
 
