@@ -18,6 +18,7 @@ Since 2018, I maintain a list of interesting books that I read each year --
 [2019](/2019/books/),
 [2020](/2020/books/),
 [2021](/2021/books/),
+[2022](/2022/books/),
 …
 
 

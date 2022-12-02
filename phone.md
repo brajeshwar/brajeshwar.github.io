@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Phone Home
+title: Phone
 ---
 
 An evolution of my phone's homescreen over the years, operating systems, and phones. Unfortunately, I didn't take photos of the Nokia 3310, Motorola Razr, and many others.
