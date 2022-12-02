@@ -2,7 +2,7 @@
 
 I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many notetaking apps and bought enough of them -- [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
 
-I have moved to a simpler notetaking and writing habit for my notes. I have chosen a simple plain-text life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the folders.
+I have moved to a simpler notetaking and writing habit for my notes. I have chosen a simple plain-text life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
 
 > Every device, including ones long gone, and ones not invented yet, can read and edit plain text. - [Derek Sivers](https://sive.rs/plaintext)
 
@@ -18,7 +18,7 @@ The only additional formatting I'm comfortable adding is Markdown[^Markdown]. It
 
 Of course, Plain Text has its limitations and disadvantages. The User Experience is not that good. It is entirely dependent on the tools that can support it. It has no rules and makes it harder to be disciplined in maintaining them.
 
-> You are only truly digitally free when your notes can stand alone, independent of any one app.
+> You are only truly be digitally free when your notes can stand alone, independent of any one app.
 
 ### References
 
@@ -32,7 +32,7 @@ _Our tools and techniques are only as valuable as the workflow._
 - [Dendron](https://github.com/dendronhq/dendron) is a local-first, markdown based, hierarchical note-taking application built on top of VSCode.
 - [Foam](https://github.com/foambubble/foam) is a personal knowledge management and sharing system inspired by Roam Research, built on [Visual Studio Code](https://code.visualstudio.com) and GitHub.
 - [I Still Use Plain Text for Everything, and I Love it](https://lifehacker.com/i-still-use-plain-text-for-everything-and-i-love-it-1758380840)
-- [Logseq](https://logseq.com) is hugely inspired by Roam Research, Org Mode, Tiddlywiki and Workflowy.
+- [Logseg](https://logseq.com) is another open source knowledge base that works on top of local plain-text Markdown and Org-mode files. Use it to write, organize and share your thoughts, keep your to-do list, and build your own digital garden. It is hugely inspired by Roam Research, Org Mode, Tiddlywiki and Workflowy.
 - [My productivity app for the past 12 years has been a single .txt file](https://jeffhuang.com/productivity_text_file/)
 - [nb](https://xwmx.github.io/nb/) is a command line and local web note‑taking, bookmarking, archiving, and knowledge base application.
 - [Note Taking, Writing and Life Organization Using Plain Text Files](http://www.markwk.com/plain-text-life.html)
@@ -44,7 +44,6 @@ _Our tools and techniques are only as valuable as the workflow._
 - [Zettelkasten](https://zettelkasten.de/introduction/) is a personal tool for thinking and writing. It has hypertextual features to make a web of thought possible. The difference to other systems is that you create a web of thoughts instead of notes of arbitrary size and form, and emphasize connection, not a collection.
 - A list of [Online text to diagram tools](https://xosh.org/text-to-diagram/).
 - Comparision of tools with support for [Wikilink or/and Backlink or/and Graph view](https://www.notion.so/db13644f08144495ad9877f217a161a1)
-- [Logseg](https://logseq.com) is another open source knowledge base that works on top of local plain-text Markdown and Org-mode files. Use it to write, organize and share your thoughts, keep your to-do list, and build your own digital garden.
 
 [//]: # Footnote
 
