@@ -13,6 +13,7 @@ Here are some of the all-time favorite books I have read, re-read, and would rec
 - [The Design of Everyday Things](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) by [Donald Norman](https://en.wikipedia.org/wiki/Don_Norman) is a book for anyone interested in everyday objects, and their design. One does not have to be a designer, in the traditional sense, to understand and appreciate designs of the world around us.
 
 ---
+
 Since 2018, I maintain a list of interesting books that I read each year --
 [2018](/2018/books/),
 [2019](/2019/books/),
@@ -21,10 +22,11 @@ Since 2018, I maintain a list of interesting books that I read each year --
 [2022](/2022/books/),
 …
 
+> My life's mission is to be eventually free enough to escape into a world of solitude and read all of my [Books Wishlist](https://www.amazon.in/hz/wishlist/ls/26U9UE2WQ2WTI).
 
 {% comment %}
 
-T0D0: Book Images, Description, and Personal Review
+TBD: Book Images, Description, and Personal Review
 
 Should I recommend the following (Rethink, Reread)?
 
@@ -34,7 +36,6 @@ Should I recommend the following (Rethink, Reread)?
 - Man's Search for Meaning by Viktor E. Frankl and Harold S. Kushner
 - The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living by Ryan Holiday and Stephen Hanselman
 - The One Thing: The Surprisingly Simple Truth Behind Extraordinary Results by Gary Keller and Jay Papasan
-- The Third Door: The Wild Quest to Uncover How the World's Most Successful People Launched Their Careers by Alex Banayan
 - How to Stop Worrying and Start Living by Dale Carnegie
 - How We Got to Now: Six Innovations That Made the Modern World by Steven Johnson
 - Things Hidden Since the Foundation of the World by René Girard
