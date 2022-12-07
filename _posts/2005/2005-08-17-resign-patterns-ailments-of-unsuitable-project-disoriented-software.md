@@ -2,7 +2,7 @@
 
 ## Resign Patterns
 
-Anyone familiar with the book of patterns by the Gang of Four [1] knows that the patterns presented in the book represent elegant solutions that have evolved over time. Unfortunately, extracting these patterns from legacy code is impossible, because nobody knew that they were supposed to be using these patterns when they wrote the legacy code. Hence, this work is a catalog of patterns for the masses. The patterns presented here represent abundant solutions that have endured over time. Enjoy reading the patterns, but please don't use them!
+Anyone familiar with the book of patterns by the [Gang of Four](https://en.wikipedia.org/wiki/Design_Patterns) knows that the patterns presented in the book represent elegant solutions that have evolved over time. Unfortunately, extracting these patterns from legacy code is impossible, because nobody knew that they were supposed to be using these patterns when they wrote the legacy code. Hence, this work is a catalog of patterns for the masses. The patterns presented here represent abundant solutions that have endured over time. Enjoy reading the patterns, but please don't use them!
 
 - Cremational Patterns
   + Abject Poverty - The Abject Poverty Pattern is evident in software that is so difficult to test and maintain that doing so results in massive budget overruns.

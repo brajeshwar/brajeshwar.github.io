@@ -20,6 +20,7 @@ Since 2018, I maintain a list of interesting books that I read each year --
 [2020](/2020/books/),
 [2021](/2021/books/),
 [2022](/2022/books/),
+[2023](/2023/books/),
 …
 
 > My life's mission is to be eventually free enough to escape into a world of solitude and read all of my [Books Wishlist](https://www.amazon.in/hz/wishlist/ls/26U9UE2WQ2WTI).
