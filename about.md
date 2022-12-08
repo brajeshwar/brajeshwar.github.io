@@ -56,8 +56,6 @@ I've known [Shanta](https://shanta.oinam.com) since 1993. We met again in 2006 w
 
 We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amara.site/) (Nov 2016).
 
-[//]: # Footnote
-
 [^Imphal]: [Imphal](https://en.wikipedia.org/wiki/Imphal) is the capital city of Manipur, India. Spread over parts of the districts of Imphal West and Imphal East, the former contains the majority of the city's area and population.
 
 [^Mumbai]: [Mumbai](https://en.wikipedia.org/wiki/Mumbai), erstwhile Bombay, is the capital city of Maharashtra, India. According to the United Nations, as of 2018, Mumbai is the second-most populous city in the country after Delhi and the seventh-most populous city in the world with a population of roughly 20 million.

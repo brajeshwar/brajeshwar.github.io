@@ -43,8 +43,6 @@ This deep field, taken by Webb’s [Near-Infrared Camera](https://www.jwst.nasa.
 
 The image shows the galaxy cluster SMACS 0723 as it appeared 4.6 billion years ago. The combined mass of this galaxy cluster acts as a gravitational lens, magnifying much more distant galaxies behind it. Webb’s NIRCam has brought those distant galaxies into sharp focus – they have tiny, faint structures that have never been seen before, including star clusters and diffuse features. Researchers will soon begin to learn more about the galaxies’ masses, ages, histories, and compositions, as Webb seeks the earliest galaxies in the universe.
 
-[//]: # Footnote
-
 [^Hubble]: [Hubble Space Telescope](https://en.wikipedia.org/wiki/Hubble_Space_Telescope) (Hubble) is a space telescope that was launched into low Earth orbit in 1990 and remains in operation. It is one of the largest and most versatile, renowned both as a vital research tool and as a public relations boon for astronomy. The Hubble telescope is named after astronomer Edwin Hubble and is one of NASA's Great Observatories, along with the Compton Gamma Ray Observatory (1991–2000), the Chandra X-ray Observatory, and the Spitzer Space Telescope (2003–2020). The Space Telescope Science Institute (STScI) selects Hubble's targets and processes the resulting data, while the Goddard Space Flight Center (GSFC) controls the spacecraft.
 
 [^ESA]: [ESA](https://www.esa.int/), the European Space Agency, is an intergovernmental organisation of 22 member states dedicated to the exploration of space. Established in 1975 and headquartered in Paris, ESA.

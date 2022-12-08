@@ -74,8 +74,6 @@ Of course, with Apple rumored to be abandoning the router business, in future, y
 
 That's it. You can now have the flexibility, security of a DD-WRT Router and Wireless Network managed by an Apple Router to easily and consistently connect all your devices. All your devices, from phones to laptops to the connected TV, can connect to the Internet encapsulated via a VPN. I'm still experimenting and will continue to play with my setup. The current setup has been running for a year or so, without any issues.
 
-[//]: # Footnote
-
 [^AirportExtreme]: The [AirPort Extreme](https://en.wikipedia.org/wiki/AirPort_Extreme) is a residential gateway combining the functions of a router, network switch, wireless access point and NAS as well as varied other functions, and one of Apple's former AirPort products.
 
 [^AirportExpress]: The [AirPort Express](https://en.wikipedia.org/wiki/AirPort_Express) is a Wi-Fi base station product from Apple Inc., part of the AirPort product line. While more compact and in some ways simpler than another Apple Wi-Fi base station, the AirPort Extreme, the Express offers audio output capability the Extreme lacks. The AirPort Express was the first AirPlay device to receive streamed audio from a computer running iTunes on the local network.
