@@ -45,8 +45,6 @@ _Our tools and techniques are only as valuable as the workflow._
 - A list of [Online text to diagram tools](https://xosh.org/text-to-diagram/).
 - Comparision of tools with support for [Wikilink or/and Backlink or/and Graph view](https://www.notion.so/db13644f08144495ad9877f217a161a1)
 
-[//]: # Footnote
-
 [^Obsidian]: [Obsidian](https://obsidian.md) is a powerful knowledge base on top of a local folder of plain text Markdown files. With Obsidian, your data sits in a local folder. Obsidian works completely offline, internet or service issues will never be your problem.
 
 [^Markdown]: [Markdown](https://en.wikipedia.org/wiki/Markdown) is a lightweight markup language for creating formatted text using a plain-text editor. [John Gruber](https://en.wikipedia.org/wiki/John_Gruber) and [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) created Markdown in 2004 as a markup language that is appealing to human readers in its source code form. It is well established, open, and easy to jump in.
