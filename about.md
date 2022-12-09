@@ -42,7 +42,7 @@ We also worked for many contractors who sub-contracted their work to us. We were
 
 In 2006, [Mixercast, Inc](https://www.linkedin.com/company/167518) acquired the Oinam Team. It was an exciting experience, being part of a Startup and learning from it. Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was dissolved on Dec 31, 2009 after selling its IP (Intellectual Property) to erstwhile Google (now Alphabet).
 
-In 2010-2011, I relocated to Silicon Valley to be part of the [Founder Institute](https://fi.co/join/graduate-Brajeshwar_Oinam) accelerator. I forge life-long friends, connections and learned a lot from that experience.
+In 2010-2011, I went to Silicon Valley to be part of the [Founder Institute](https://fi.co/join/graduate-Brajeshwar_Oinam) accelerator. I forge life-long friends, connections and learned a lot from that experience.
 
 In 2020-2021, I got into the [On Deck](https://www.beondeck.com) Founder Fellowship Program (ODF7). One of the best networks I had ever joined -- the most helpful, fiercely hard-working entrepreneurs, designers, technologists, and all-around brilliant generalists. Use my [Referral Link](https://beondeck.com/r/BrajeshwarOinam) for a better chance at an interview and fee discount.
 
