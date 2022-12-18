@@ -27,6 +27,9 @@ layout:
   posts_home: /blog/
   link_new_tab: false # should external links open in a new tab (true) or in the current tab (false)
 
+styles:
+  font_family: serif # serif, sans (default)
+
 plugins:
   - jekyll-feed
   - jekyll-optional-front-matter
