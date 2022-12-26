@@ -9,5 +9,4 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings'
   gem 'jekyll-redirect-from'
   gem 'jekyll-remote-theme'
-  gem "jekyll-browsersync"
 end
