@@ -1,4 +1,8 @@
-# Calendar
+---
+layout: page
+title: Calendar
+permalink: /calendar/
+---
 
 I'm splits between Calendly and Cal. Both are awesome. Please your choice and they work.
 

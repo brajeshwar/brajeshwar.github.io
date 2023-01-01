@@ -1,8 +1,4 @@
 *.gem
-.bundle
-.jekyll-cache
-.jekyll-metadata
-.obsidian
 _site
 
 # Ignore hidden folders #

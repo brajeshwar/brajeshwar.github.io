@@ -14,4 +14,4 @@ To this day, many government departments continue to rely on fortified and modif
 
 I continued the love-hate relationship with Internet Explorer until [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) came along. Except for visual testing, I have not seen or used Internet Explorer in over a decade. However, the nostalgic feeling remained and it will be loved for what it was.
 
-Goodbye, Dear Old Friend.
+Goodbye, Dear old friend. You will be missed.

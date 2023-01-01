@@ -11,3 +11,8 @@ The design, theme, and its source is at [Oinam Jekyll](https://oinam.github.io/o
 ## Connect
 
 I’m active on [Twitter](https://twitter.com/brajeshwar), and available for [direct contact](https://brajeshwar.com/contact/) (email).
+
+
+### Todo
+
+- [ ] Create a sitemap hierarchy tree that spits out every link on the website `/archives/`.
