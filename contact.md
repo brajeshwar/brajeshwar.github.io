@@ -22,5 +22,5 @@ and
 - [Medium](https://medium.com/@brajeshwar)
 - [Reddit](https://www.reddit.com/user/Brajeshwar/)
 - [WordPress](https://profiles.wordpress.org/brajeshwar/)
-- Find more at https://discoverprofile.com/brajeshwar/
+- More at https://discoverprofile.com/brajeshwar/
 {% endcomment %}

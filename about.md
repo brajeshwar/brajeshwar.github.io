@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-update: Jul 11, 2021
+update: Jan 1, 2023
 ---
 
 My name is Brajeshwar Oinam.
@@ -55,6 +55,7 @@ I had worked with some fantastic companies. I was one of the Creative Directors 
 I've known [Shanta](https://shanta.oinam.com) since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
 
 We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amara.site/) (Nov 2016).
+
 
 [^Imphal]: [Imphal](https://en.wikipedia.org/wiki/Imphal) is the capital city of Manipur, India. Spread over parts of the districts of Imphal West and Imphal East, the former contains the majority of the city's area and population.
 

@@ -2,10 +2,10 @@
 layout: page
 title: About brajeshwar.com
 permalink: /about/brajeshwar.com/
-update: Jul 11, 2021
+update: Jan 1, 2023
 ---
 
-The domain `brajeshwar.com` was booked on `Jun 11, 2001`.
+The domain `brajeshwar.com` was registered on `2001-JUN-11`.
 
 I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash tips, tricks, and things I was doing. That's how it all started. `brajeshwar.com` started as a Flash-Website.
 
@@ -28,7 +28,7 @@ So, no writers are highlighted in the articles. However, I will be forever grate
 
 ## 20 Years
 
-After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary, Jun 11, 2021, the site is now as plain-text as possible, sprinkled with the spices of some MarkDown[^MarkDown] and translated by Jekyll[^Jekyll]. [Github](https://github.com) takes care of the Jekyll part to spit out the HTML ([view source](https://github.com/brajeshwar/brajeshwar.github.io)).
+After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary (2021-JUN-11), the site is now as plain-text as possible, sprinkled with the spices of some MarkDown[^MarkDown] and translated by Jekyll[^Jekyll]. [Github](https://github.com) takes care of the Jekyll part to spit out the HTML ([view source](https://github.com/brajeshwar/brajeshwar.github.io)).
 
 I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles.
 

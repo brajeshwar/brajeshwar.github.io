@@ -1,12 +1,9 @@
 title: Brajeshwar
 
 remote_theme: oinam/oinam-jekyll
-incremental: true
 
 markdown: kramdown
 highlighter: rouge
-future: false
-show_drafts: false
 
 permalink: pretty
 permalink: /:title/
@@ -65,10 +62,6 @@ collections:
     output: true
 
 exclude:
-  - .jekyll-cache/
-  - .obsidian
-  - .sass-cache/
-  - _archived
   - Gemfile
   - Gemfile.lock
   - gemfiles/
