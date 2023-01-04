@@ -1,7 +1,6 @@
 # Wishes to Larry Page and Lucy Southworth
 
-![Larry Page and Lucy Southworth)](/static/2007/larry-page-lucy-southworth.jpg)
-Larry Page and Lucy Southworth
+![Larry Page and Lucy Southworth](/static/2007/larry-page-lucy-southworth.jpg)
 
 This is pretty old news but people still seem to like them. Larry Page and his long-time girlfriend Lucy Southworth are getting married today - 8th December, 2007.
 
