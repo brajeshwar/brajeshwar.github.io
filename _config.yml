@@ -18,7 +18,7 @@ feed:
   author: Brajeshwar
 
 layout:
-  theme: default
+  theme: nord
   theme_highlighter: emacs
   home_posts_no: 7
   posts_home: /blog/
