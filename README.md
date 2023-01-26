@@ -16,3 +16,6 @@ I’m active on [Twitter](https://twitter.com/brajeshwar), and available for [di
 ### Todo
 
 - [ ] Create a sitemap hierarchy tree that spits out every link on the website `/archives/`.
+- [ ] Contact: Find a way to get form submission with spam protection.
+- [ ] About Redesign inspiration
+	- [Brett Adcock](https://www.brettadcock.com/bio)
