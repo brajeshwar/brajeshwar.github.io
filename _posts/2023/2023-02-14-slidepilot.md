@@ -4,11 +4,11 @@
 
 [SlidePilot](https://slidepilotapp.com/) is a powerful native macOS tool for presenting PDF slides with support for LaTeX Beamer[^LaTeXBeamer].
 
-I was struggling with presenting PDFs with the built-in macOS Preview[^Preview] App. I was trying quite a few options on how to optimize the Preview setup so I can present easily. But I realized I can just looked around to see if someone had solved the problem. Well they did. I stumbled on SlidePilot and is one of the best finds in recent times. It is free and [open source](https://github.com/SlidePilot).
+I was struggling with presenting PDFs with the built-in macOS Preview[^Preview] App. I tried several options to optimize Preview's setup so I could present it easily. But I realized I could look around to see if someone had solved the problem. Well, they did. I stumbled on SlidePilot and is one of the best finds in recent times. It is free and [open source](https://github.com/SlidePilot).
 
-Use the Beamer class notes slides or add your own notes in RTF[^RTF] format. For notes, SlidePilot supports the note function of the LaTeX Beamer class on the one hand, and on the other hand you can easily add notes in RTF format to any PDF with the built-in text editor.
+Use the Beamer class notes slides or add your notes in RTF[^RTF] format. For notes, SlidePilot supports the note function of the LaTeX Beamer class. On the other hand, you can easily add notes in RTF format to any PDF with the built-in text editor.
 
-The canvas function will also let you draw on the current slide while presenting. You can also have Stopwatch, Timer, Clock - things that you need for a smooth presentation. The layout options are just there that makes perfect sense. If you have a secondary/tertiary display, then it just works the way it should.
+The canvas function will let you draw on the current slide while presenting. You can also have Stopwatch, Timer, and Clock - things you need for a smooth presentation. The layout options are just there; that makes perfect sense. If you have a secondary/tertiary display, it just works the way it should.
 
 It comes with a companion [iOS Remote Control App](https://apps.apple.com/app/id1535769714) to remotely control presentations that you are holding on your Mac with SlidePilot via your iPhone.
 
