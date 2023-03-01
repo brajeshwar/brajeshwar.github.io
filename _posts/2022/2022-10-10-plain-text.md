@@ -22,28 +22,31 @@ Of course, Plain Text has its limitations and disadvantages. The User Experience
 
 ### References
 
+“Our tools and techniques are only as valuable as the workflow.”
+
 Here are a few set of tools, articles, and references that will get you started, stay productive, and lead a simpler, plain-text lifestyle. Read a lot, admire other people's work, and then form your style, methods, and workflows.
 
-_Our tools and techniques are only as valuable as the workflow._
-
-- [A Plain Text Personal Organizer](https://danlucraft.com/blog/2008/04/plain-text-organizer/)
-- [A template to organise life in plain text](https://github.com/jukil/plain-text-life)
-- [Achieve a text-only work-flow](http://donlelek.github.io/2015-03-09-text-only-workflow/)
-- [Dendron](https://github.com/dendronhq/dendron) is a local-first, markdown based, hierarchical note-taking application built on top of VSCode.
-- [Foam](https://github.com/foambubble/foam) is a personal knowledge management and sharing system inspired by Roam Research, built on [Visual Studio Code](https://code.visualstudio.com) and GitHub.
-- [I Still Use Plain Text for Everything, and I Love it](https://lifehacker.com/i-still-use-plain-text-for-everything-and-i-love-it-1758380840)
-- [Logseg](https://logseq.com) is another open source knowledge base that works on top of local plain-text Markdown and Org-mode files. Use it to write, organize and share your thoughts, keep your to-do list, and build your own digital garden. It is hugely inspired by Roam Research, Org Mode, Tiddlywiki and Workflowy.
-- [My productivity app for the past 12 years has been a single .txt file](https://jeffhuang.com/productivity_text_file/)
-- [nb](https://xwmx.github.io/nb/) is a command line and local web note‑taking, bookmarking, archiving, and knowledge base application.
-- [Note Taking, Writing and Life Organization Using Plain Text Files](http://www.markwk.com/plain-text-life.html)
-- [Plain Text Journaling System](https://georgecoghill.wordpress.com/plain-text/)
-- [Plain Text Project](https://plaintextproject.online/)
-- [PlainText Productivity](http://plaintext-productivity.net)
-- [Todo.txt](http://todotxt.org/) is a plain text todo workflow, where one can get things done with few keystrokes and taps possible.
-- [Writing Plain Text](https://sive.rs/plaintext) by Derek Sivers
-- [Zettelkasten](https://zettelkasten.de/introduction/) is a personal tool for thinking and writing. It has hypertextual features to make a web of thought possible. The difference to other systems is that you create a web of thoughts instead of notes of arbitrary size and form, and emphasize connection, not a collection.
-- A list of [Online text to diagram tools](https://xosh.org/text-to-diagram/).
-- Comparision of tools with support for [Wikilink or/and Backlink or/and Graph view](https://www.notion.so/db13644f08144495ad9877f217a161a1)
+- Articles (Documentation, Methodologies, & Philosophies)
+	- [A Plain Text Personal Organizer](https://danlucraft.com/blog/2008/04/plain-text-organizer/)
+	- [A template to organise life in plain text](https://github.com/jukil/plain-text-life)
+	- [Achieve a text-only work-flow](http://donlelek.github.io/2015-03-09-text-only-workflow/)
+	- [I Still Use Plain Text for Everything, and I Love it](https://lifehacker.com/i-still-use-plain-text-for-everything-and-i-love-it-1758380840)
+	- [My productivity app for the past 12 years has been a single .txt file](https://jeffhuang.com/productivity_text_file/)
+	- [Note Taking, Writing and Life Organization Using Plain Text Files](http://www.markwk.com/plain-text-life.html)
+	- [Plain Text Journaling System](https://georgecoghill.wordpress.com/plain-text/)
+	- [Plain Text Project](https://plaintextproject.online/)
+	- [PlainText Productivity](http://plaintext-productivity.net)
+	- [Todo.txt](http://todotxt.org/) is a plain text todo workflow, where one can get things done with few keystrokes and taps possible.
+	- [Writing Plain Text](https://sive.rs/plaintext) by Derek Sivers
+	- [Zettelkasten](https://zettelkasten.de/introduction/) is a personal tool for thinking and writing. It has hypertextual features to make a web of thought possible. The difference to other systems is that you create a web of thoughts instead of notes of arbitrary size and form, and emphasize connection, not a collection.
+- Collectives
+	- A list of [Online text to diagram tools](https://xosh.org/text-to-diagram/).
+	- Comparision of tools with support for [Wikilink or/and Backlink or/and Graph view](https://www.notion.so/db13644f08144495ad9877f217a161a1)
+- Tools (Apps, Utilities)
+	- [Dendron](https://github.com/dendronhq/dendron) is a local-first, markdown based, hierarchical note-taking application built on top of VSCode.
+	- [Foam](https://github.com/foambubble/foam) is a personal knowledge management and sharing system inspired by Roam Research, built on [Visual Studio Code](https://code.visualstudio.com) and GitHub.
+	- [Logseg](https://logseq.com) is another open source knowledge base that works on top of local plain-text Markdown and Org-mode files. Use it to write, organize and share your thoughts, keep your to-do list, and build your own digital garden. It is hugely inspired by Roam Research, Org Mode, Tiddlywiki and Workflowy.
+	- [nb](https://xwmx.github.io/nb/) is a command line and local web note‑taking, bookmarking, archiving, and knowledge base application.
 
 [^Obsidian]: [Obsidian](https://obsidian.md) is a powerful knowledge base on top of a local folder of plain text Markdown files. With Obsidian, your data sits in a local folder. Obsidian works completely offline, internet or service issues will never be your problem.
 
