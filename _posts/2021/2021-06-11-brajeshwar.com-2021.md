@@ -4,14 +4,6 @@ The website has come a long way - well - 20 years. It started as a Flash Site in
 
 I had spent enough hobby time with WordPress that I published quite a few themes, plugins, and some went on to become pretty popular. Every design iterations were themed and open sourced. One theme even went to be acquired by [Automattic](https://automattic.com), the company behind WordPress.
 
-```
-# A title for the Article
-
-The Lord of the Rings is an epic high-fantasy novel by English author and scholar J. R. R. Tolkien.
-
-Set in Middle-earth, a place like Earth at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.
-```
-
 After 20 years, as of Jun 2021, I have done away with comments and discarded a whole lot of other metadata. I have also pruned over 250 articles. Now, articles are just Markdown files with a `# Title` and the content. There are NO `tags`, `categories`, `SEO`, `analytics` or any other `jazz` at all.
 
 The Markdown files don’t even have front matter[^frontmatter] and are as human-readable as possible and will likely be readable on any system now and ever. I have decided to stay as plain-text as possible while using Markdown syntax for a minimal visual guide to differentiate content variations such as `headings`, `code`, and sometimes to add aesthetically relevant media — audio, video, and images.
