@@ -2,7 +2,7 @@
 
 Mobile application revolution is changing business, social and lifestyle landscape. They complement our online and offline presence and enable us new ways of communication and interaction. They are changing the way we live. They become our lifestyle. Where is your app?
 
-<a href="http://www.shoutem.com/">ShoutEm</a> is tech startup located in New York and creator of ShoutEm Mobilizer a Mobile App Maker that enables users easy creation of iPhone, iPad and Android apps. It creating new ways for publishers, organizations and businesses to share their content, message and extend their reach.
+[ShoutEm](http://www.shoutem.com/) is tech startup located in New York and creator of ShoutEm Mobilizer a Mobile App Maker that enables users easy creation of iPhone, iPad and Android apps. It creating new ways for publishers, organizations and businesses to share their content, message and extend their reach.
 
 We talked to their CEO Croatian entrepreneur Viktor Marohni who told us about his entrepreneurial venture into mobile app creating for top smartphone and tablet platforms.
 
@@ -27,7 +27,3 @@ Our customers love it! They love to be able to show others their hard work, or t
 ## What are the plans for the future?
 
 ShoutEm's plans are to continue to provide quality apps for our customers, with the help of the Mobilizer. We believe transparency before publishing is important, and the Mobilizer allows our customers to be satisfied with their final product. Look for some interesting Mobilizer developments in 2012!
-
-Take the <a href="http://www.shoutem.com/tour">product tour</a> to know more insights about ShoutEm Mobilizer.
-
-{% include video source="youtube" id="daD6GgRGDBg" %}
