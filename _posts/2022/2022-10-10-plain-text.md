@@ -36,6 +36,7 @@ Here are a few set of tools, articles, and references that will get you started,
 	- [Plain Text Journaling System](https://georgecoghill.wordpress.com/plain-text/)
 	- [Plain Text Project](https://plaintextproject.online/)
 	- [PlainText Productivity](http://plaintext-productivity.net)
+	- [The Plain Text Life: Note Taking, Writing and Life Organization Using Plain Text Files](http://www.markwk.com/plain-text-life.html)
 	- [Todo.txt](http://todotxt.org/) is a plain text todo workflow, where one can get things done with few keystrokes and taps possible.
 	- [Writing Plain Text](https://sive.rs/plaintext) by Derek Sivers
 	- [Zettelkasten](https://zettelkasten.de/introduction/) is a personal tool for thinking and writing. It has hypertextual features to make a web of thought possible. The difference to other systems is that you create a web of thoughts instead of notes of arbitrary size and form, and emphasize connection, not a collection.
