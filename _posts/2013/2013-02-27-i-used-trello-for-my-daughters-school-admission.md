@@ -6,7 +6,7 @@ Like any other established institutions in India, the Schools follow a rather bu
 
 Anyway, without going into the details of the discrepancies in the schools in India, let me tell you the story of how I used technology to streamline my daughter's admission. I wanted to involve relatives, friends, and family without overwhelming them, so I needed a solution that is an easy, simple, and no-learning-needed approach to keep track of the progress.
 
-[![Laaija)](/static/2013/laaija-pose-for-new-school.jpg)](http://laaija.com/)
+<a href="https://laaija.com"><img class="medium" src="/static/2013/laaija-pose-for-new-school.jpg" alt="Laaija" loading="lazy"></a>
 
 Yes, I went to lots of 'Education Fair', stood in lines for hours in the hot Indian Summer, visited a hell lot of schools to check them out, met with teachers, roam around the campus, even talked to few students. Besides that, I tracked, labeled, and measured my actions and outcomes with [Trello](http://trello.com/) and mapped the locations with Google Maps. The mobile version of Trello (iOS and Android) is an awesome app and everyone involved really liked it.
 
