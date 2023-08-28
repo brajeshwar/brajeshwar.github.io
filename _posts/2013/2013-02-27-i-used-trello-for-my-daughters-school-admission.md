@@ -12,7 +12,7 @@ Yes, I went to lots of 'Education Fair', stood in lines for hours in the hot Ind
 
 ## My daughter outgrew her playgroup.
 
-My daughter, [Laaija](http://laaija.com/), celebrated her 4th birthday on Dec 11, 2012. She is now ready for a 'real' school. She has already outlined the kind of school she would like to go to. It is a list of strange, funny, and cute (at least to us) criteria and we know what she meant. No, you won't want to know that list.
+My daughter, [Laaija](http://laaija.com/), celebrated her 4th birthday in 2012-DEC. She is now ready for a 'real' school. She has already outlined the kind of school she would like to go to. It is a list of strange, funny, and cute (at least to us) criteria and we know what she meant. No, you won't want to know that list.
 
 Last October, I had initialized the quest for her school. We wanted a good established one and not necessarily some fancy 'international' school (without explicitly excluding them), should not be very far from our residence. I should be able to get there within 30 minutes in the typical Bangalore Traffic. It should also not be next-door so she can learn to be independent, travel, and enjoy her school.
 
