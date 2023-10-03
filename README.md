@@ -28,3 +28,6 @@ These websites are beautiful, bold, different, and awe-inspiring.
 - [ ] Contact: Find a way to get form submission with spam protection.
 - [ ] Get Search working with Algolia.
 - [ ] Highlight Top Articles on the Homepage.
+- [ ] Move to a simpler build solution, perhaps with Make and Pandoc.
+	+ [make as a Static Site Generator](https://www.karl.berlin/static-site.html)
+	+ [Writing a Book with Pandoc, Make, and Vim](https://keleshev.com/my-book-writing-setup/)
