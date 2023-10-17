@@ -27,7 +27,7 @@ These websites are beautiful, bold, different, and awe-inspiring.
 - [ ] Create a sitemap hierarchy tree that spits out every link on the website `/archives/`. I do not want to be managing this with anything that needs maintainenace. Stay with something well proven or even needed define a pattern that I can follow manually. Can Pandoc be tamed to do this?
 - [ ] Contact: Find a way to get form submission with spam protection.
 - [ ] Get Search working with Algolia.
-- [ ] Highlight Top Articles on the Homepage.
+- [ ] Highlight Top Articles on the Homepage?
 - [ ] Move to a simpler build solution, perhaps with Make and Pandoc.
 	+ [make as a Static Site Generator](https://www.karl.berlin/static-site.html)
 	+ [Writing a Book with Pandoc, Make, and Vim](https://keleshev.com/my-book-writing-setup/)
