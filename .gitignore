@@ -1,8 +1,6 @@
+.jekyll-cache
+.sass-cache
 _site
-
-# Ignore hidden folders #
-# This takes care of .tmp, .sass-cache, and many others #
-.*/
 
 # Ignore OS generated files #
 .DS_Store*
