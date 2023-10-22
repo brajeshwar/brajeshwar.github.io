@@ -41,6 +41,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-titles-from-headings
+  - jekyll-algolia
   
 optional_front_matter:
   remove_originals: true
