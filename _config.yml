@@ -9,10 +9,14 @@ highlighter: rouge
 permalink: pretty
 permalink: /:title/
 
+# https://abhimanbhau.github.io/github/setup-aloglia-jekyll-blog/
+search_provider: algolia
 algolia:
   application_id: W87KPA9T2D
   index_name: brajeshwar.com
   search_only_api_key: 70b80cbdd15e92f6469d27c16790c531
+  files_to_exclude:
+    - README.md
 
 feed:
   posts_limit: 10
