@@ -1,0 +1,6 @@
+# Algolia-Crawler-Verif: 2ADB4F2ABE2A9675
+
+User-agent: *
+Allow: /
+
+Sitemap: http://brajeshwar.com/sitemap.xml

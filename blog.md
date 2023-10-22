@@ -4,4 +4,4 @@ title: Blog
 permalink: /blog/
 ---
 
-{% include search-google.html %}
+{% include search-netlify-algolia.html %}
