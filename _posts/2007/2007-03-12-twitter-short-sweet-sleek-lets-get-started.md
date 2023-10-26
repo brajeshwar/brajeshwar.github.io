@@ -14,7 +14,7 @@ Ah! I got another Twitter from <a href="http://digg.com/">Digg</a> - The Pirate 
 
 At the time of writing this article, here are the Twitters that I follow (and perhaps you might be interested)
 
-- <a href="http://twitter.com/Mols">Molly E. Holzschlag</a>
+- <a href="http://twitter.com/mholzschlag">Molly E. Holzschlag</a>
 - <a href="http://twitter.com/emeyer">Eric Meyer</a>
 - <a href="http://twitter.com/anildash">Anil Dash</a>
 - <a href="http://twitter.com/JasonCalacanis">Jason Calacanis</a>
@@ -27,7 +27,7 @@ At the time of writing this article, here are the Twitters that I follow (and pe
 - <a href="http://twitter.com/emilychang">Emily Chang</a>
 - <a href="http://twitter.com/Ross">Ross Mayfield</a>
 - <a href="http://twitter.com/defamer">Defamer</a>
-- FlashGuru
+- <a href="http://twitter.com/_appbuzz">FlashGuru</a>
 - <a href="http://twitter.com/jesterxl">Jesse Warden</a>
 - <a href="http://twitter.com/bit101">Keith Peters</a> (Adobe)
 - <a href="http://twitter.com/apollocamp">Apollo</a> (Adobe)
