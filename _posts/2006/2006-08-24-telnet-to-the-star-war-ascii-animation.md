@@ -1,21 +1,11 @@
 # Telnet to the Star War ASCII Animation
 
-[ASCIImation](http://www.asciimation.co.nz/)
-
-## Mac
-
-Open Application > Utilities > Terminal
+via [ASCIImation](http://www.asciimation.co.nz/)
 
 `telnet towel.blikenlights.nl`
 
-## Windows
+Run the command in your Terminal/Shell.
 
-Start > Run > Cmd
-
-`telnet towel.blikenlights.nl`
-
-## Unix
-
-Terminal
-
-`telnet towel.blikenlights.nl`
+- Mac: Open Application > Utilities > Terminal
+- Windows: Start > Run > Cmd
+- Unix: <who am I to teach!>
