@@ -2,7 +2,7 @@
 
 Guy Watson (Flash Guru) recently got converted to a Mac. [Abdul Qabiz](http://www.abdulqabiz.com/) too is a proud owner of a [MacBook](http://www.flickr.com/photos/brajeshwar/183225267/).
 
-Some of our team at Mixercast are already on MacBooks - [Freeman Murray](http://www.flickr.com/photos/brajeshwar/182305644/),[Bill Lee](http://www.flickr.com/photos/brajeshwar/181518054/), [Soumyadeep Paul](http://www.flickr.com/photos/brajeshwar/165580106/).
+Some of our team at Mixercast are already on MacBooks - [Freeman Murray](http://www.flickr.com/photos/brajeshwar/182305644/), [Bill Lee](http://www.flickr.com/photos/brajeshwar/181518054/), [Soumyadeep Paul](http://www.flickr.com/photos/brajeshwar/165580106/).
 
 <a href="http://www.flickr.com/photos/brajeshwar/sets/72157600176589151/"><img class="medium" src="/static/2006/apple-macbook.jpg" alt="Apple Mac Powerbook" loading="lazy"></a>
 
