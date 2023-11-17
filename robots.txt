@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://brajeshwar.com/sitemap.xml
+Sitemap: https://brajeshwar.com/sitemap.xml
