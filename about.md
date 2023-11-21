@@ -1,8 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
-update: Jan 1, 2023
 ---
 
 My name is Brajeshwar Oinam.

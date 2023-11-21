@@ -2,7 +2,6 @@
 layout: page
 title: About brajeshwar.com
 permalink: /about/brajeshwar.com/
-update: Jan 1, 2023
 ---
 
 The domain `brajeshwar.com` was registered on `2001-JUN-11`.
