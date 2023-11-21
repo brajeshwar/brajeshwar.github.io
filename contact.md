@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Contact
-permalink: /contact/
 ---
 
 [Email](mailto:brajeshwar@oinam.com) is always the first and best communication medium, and I'm happy to get cold emails. I love thoughtful cold emails and would definitely reply. Please, tell me know who you are and your message be clear, and short that grabs attention with a specific ask, an offer, an actionable item, or, well perhaps just a “Hi”.

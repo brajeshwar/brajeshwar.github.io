@@ -1,8 +1,8 @@
 # Hacker News
 
 Lists [https://news.ycombinator.com/lists](https://news.ycombinator.com/lists)
-Guidelines, https://news.ycombinator.com/newsguidelines.html
-FAQ, https://news.ycombinator.com/newsfaq.html
+Guidelines https://news.ycombinator.com/newsguidelines.html
+FAQ https://news.ycombinator.com/newsfaq.html
 http://ycombinator.com/newswelcome.html
 
 Content First
@@ -17,4 +17,6 @@ Sources
 - Random but interesting
 
 Gather interesting links during the day.
-When the west coast wakes up and before I retire for the day, I start either a 5-min or a 10-min timer that repeats until I finish submitting all the articles or I’m tired or gets bored.
+When the west coast wakes up and before I retire for the day.
+Don't get emotional - the same links you submitted will die but someone else submitting it after a day or two will get voted.
+Submission of a single article every 10-15 minute interval (timer) or burst of 4-article each every 20-25min. Sleep and wake up the next day, an article or two gets in the front.

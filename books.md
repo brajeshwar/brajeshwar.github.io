@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Books
-permalink: /books/
-update: Jan 1, 2023
 ---
 
 Here are some of the all-time favorite books I have read, re-read, and would recommend.
