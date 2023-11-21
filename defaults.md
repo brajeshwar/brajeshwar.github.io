@@ -14,7 +14,7 @@ The default apps & programs that I use regularly on macOS, iOS, and iPadOS.
 | Contacts | Contacts |
 | Editing | [Grammarly](https://www.grammarly.com/referrals/redeem?key=x838610kme0m8skw), ChatGPT, Hemingway |
 | Email | Mail |
-| Game | [Chess](https://www.chess.com/member/01nchess) |
+| Game | [Chess](https://www.chess.com/) |
 | Media | Plex |
 | Music | Music, Spotify |
 | Network | AdGuard (DNS, AdBlock, VPN), Little Snitch |
