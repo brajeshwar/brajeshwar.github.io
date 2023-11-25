@@ -12,6 +12,7 @@ This is the repository and source that runs my personal website - [brajeshwar.co
 
 ## Todo
 
+- [ ] Embed TinyLetter Newsletter.
 - [ ] Move all YouTube Embeds to be plain embeds and stay away from the Jekyll Snippet I wrote.
 - [ ] Create a sitemap hierarchy tree that spits out every link on the website `/archives/`. I do not want to be managing this with anything that needs maintainenace. Stay with something well proven or even needed define a pattern that I can follow manually. Can Pandoc be tamed to do this?
 - [ ] Get Search working with Algolia.

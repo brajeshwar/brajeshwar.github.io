@@ -36,7 +36,6 @@ Should I recommend the following (Rethink, Reread)?
 - How We Got to Now: Six Innovations That Made the Modern World by Steven Johnson
 - Things Hidden Since the Foundation of the World by René Girard
 - 1984 by George Orwell
-- Ego Is the Enemy by Ryan Holiday
 - Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by James Clear
 - Can't Hurt Me: Master Your Mind and Defy the Odds by David Goggins
 
