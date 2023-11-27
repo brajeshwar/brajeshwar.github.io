@@ -2,6 +2,6 @@
 layout: redirect
 sitemap: false
 title: Blog
-permalink: /blog
+permalink: /blog/
 redirect_to: /archives
 ---
