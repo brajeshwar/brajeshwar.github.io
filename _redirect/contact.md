@@ -2,6 +2,6 @@
 layout: redirect
 sitemap: false
 title: Contact
-permalink: /contact
+permalink: /contact/
 redirect_to: /
 ---
