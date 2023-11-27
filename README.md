@@ -10,12 +10,26 @@ This is the repository and source that runs my personal website - [brajeshwar.co
 
 ---
 
+### Archived / Elsewhere
+
+- [Blogspot](http://brajeshwar.blogspot.com)
+- [Facebook](https://www.facebook.com/brajeshwar/)
+- [Flickr](https://www.flickr.com/photos/brajeshwar/) `(2004-2015; 11+ million views)`
+- [Github](http://github.com/brajeshwar)
+- [Medium](https://medium.com/@brajeshwar)
+- [Reddit](https://www.reddit.com/user/Brajeshwar/)
+- [WordPress](https://profiles.wordpress.org/brajeshwar/)
+- More at https://discoverprofile.com/brajeshwar/
+
+---
+
 ## Todo
 
-- [ ] Embed TinyLetter Newsletter.
-- [ ] Move all YouTube Embeds to be plain embeds and stay away from the Jekyll Snippet I wrote.
-- [ ] Create a sitemap hierarchy tree that spits out every link on the website `/archives/`. I do not want to be managing this with anything that needs maintainenace. Stay with something well proven or even needed define a pattern that I can follow manually. Can Pandoc be tamed to do this?
-- [ ] Get Search working with Algolia.
+- [ ] Embed TinyLetter Newsletter in the homepage.
+- [ ] Move all YouTube Embeds to be plain embeds and stay away from the Jekyll Snippet I wrote. There are `77 matches across 64 files` as of the end of 2023.
+- [ ] Replace Google Search with something simpler.
+- [ ] `/archives` needs a better interface treatment — a table of content! Perhaps a sitemap hierarchy tree that spits out every link on the website.
+- [ ] Breadcrumbs `brajeshwar.com → About`
 - [ ] Move to a simpler build solution, perhaps with Make and Pandoc.
 	+ [make as a Static Site Generator](https://www.karl.berlin/static-site.html)
 	+ [Writing a Book with Pandoc, Make, and Vim](https://keleshev.com/my-book-writing-setup/)

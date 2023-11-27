@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Blog
+title: Archives
 ---
 
 {% include search-google.html %}
