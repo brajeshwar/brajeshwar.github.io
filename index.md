@@ -16,10 +16,12 @@ I co-founded [Valinor Earth](https://valinor.earth) where we build sustainable a
 
 ---
 
-[Email](mailto:brajeshwar@oinam.com) is my preferred choice of communication, and I’m happy to get cold emails. I love thoughtful emails and would reply. Please let me know who you are: a clear and short message with a specific ask, an offer, an actionable item, or perhaps just a “Hi.”
-
-Find me at
-[HackerNews](https://news.ycombinator.com/user?id=Brajeshwar),
+[Email](mailto:brajeshwar@oinam.com) is my preferred choice of communication, and I’m happy to get cold emails. I love thoughtful emails and would reply. Please let me know who you are: a clear and short message with a specific ask, an offer, an actionable item, or perhaps just a “Hi.” Find me at
+[Hacker News](https://news.ycombinator.com/user?id=Brajeshwar),
 [LinkedIn](https://www.linkedin.com/in/brajeshwar/),
 and
 [Twitter](https://twitter.com/brajeshwar).
+
+<div class="newsletter">
+  {% include newsletter.html %}
+</div>
