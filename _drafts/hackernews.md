@@ -5,17 +5,17 @@ Guidelines https://news.ycombinator.com/newsguidelines.html
 FAQ https://news.ycombinator.com/newsfaq.html
 http://ycombinator.com/newswelcome.html
 
-Content First
-
 Hacker News started on [Feb 19, 2007](https://news.ycombinator.com/front?day=2007-02-19).
-After 551 days, I signed up on [Aug 23, 2008](https://news.ycombinator.com/front?day=2008-08-23)
+After 551 days, I signed up on [Aug 23, 2008](https://news.ycombinator.com/front?day=2008-08-23) at (Unix Time: 1219467182)
 Saw some activity around [2010-NOV-17](https://web.archive.org/web/20101117063322/https://news.ycombinator.com/user?id=Brajeshwar)
 Started actively participating since the COVID-19 Pandemic, [2020-APR-06](https://web.archive.org/web/20200406075341/https://news.ycombinator.com/user?id=Brajeshwar) saw some good Karma (11,738).
 Oct 21, 2023: Began appearing on the leaderboard for the first time. I knew only after someone, a graduate student from Georgia Tech, contacted me for an interview for her research work.
 
+Brajeshwar-JSON: https://hacker-news.firebaseio.com/v0/user/Brajeshwar.json?print=pretty
+
 Sources
 
-- List of sources
+- List of Sources bookmarked that I spend about 30-min everyday.
 - Random interesting finds during the day
 - RSS feeds from my core readings (weekends)
 
