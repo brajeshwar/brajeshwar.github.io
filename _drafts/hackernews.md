@@ -4,6 +4,7 @@ Lists [https://news.ycombinator.com/lists](https://news.ycombinator.com/lists)
 Guidelines https://news.ycombinator.com/newsguidelines.html
 FAQ https://news.ycombinator.com/newsfaq.html
 http://ycombinator.com/newswelcome.html
+[HackerNews Undocumented](https://github.com/minimaxir/hacker-news-undocumented) by [Max Woolf](https://minimaxir.com) [@minimaxir](https://news.ycombinator.com/user?id=minimaxir) on HackerNews
 
 Hacker News started on [Feb 19, 2007](https://news.ycombinator.com/front?day=2007-02-19).
 After 551 days, I signed up on [Aug 23, 2008](https://news.ycombinator.com/front?day=2008-08-23) at (Unix Time: 1219467182)
