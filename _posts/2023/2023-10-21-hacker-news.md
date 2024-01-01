@@ -27,6 +27,7 @@ Try to have curious participation — be kind. Don’t be snarky. Converse curio
 	- Read the [FAQ](https://news.ycombinator.com/newsfaq.html).
 	- Official [Front Page RSS](https://news.ycombinator.com/rss) and the [Show HN RSS](https://news.ycombinator.com/showrss).
 - Unofficial RSS Feeds at [Hacker News RSS](https://hnrss.github.io) has a lot of options.
+- Unofficial but fun [HN Badges](https://hnbadges.netlify.app/?user=Brajeshwar).
 
 [^HackerNews]: [Hacker News](https://en.wikipedia.org/wiki/Hacker_News) (HN) is a website focusing on computer science and entrepreneurship. It is run by [Y Combinator](https://www.ycombinator.com). In general, content that can be submitted is defined as “anything that gratifies one’s intellectual curiosity.” The word hacker in “Hacker News” is used in its original meaning and refers to the hacker culture which consists of people who enjoy tinkering with technology.
 
