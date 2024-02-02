@@ -1,6 +1,6 @@
 # Alert Component, handling event in a better way
 
-Something around the mid September, there was a post on using [Alert Component](/2003/alert-component-in-flash-mx-2004/) for Flash MX 2004 Pro.
+Something around the mid September, there was a post on using Alert Component for Flash MX 2004 Pro.
 
 There had been a project (classified as of now) here where Alert Component was commissioned to be used for all Alerts (that is what they are for). Then couple of issues arose, of which, I am not sure if people have already known that, solved through a better way or have better ways of handling the issue. Like the examples in the doc and like the one in the recent post for the Alert component, a need arises to do something similar but from nested classes. If the function reference are specified like a normal callback, the scope in which the function is called becomes undefined. The need was to pass the handler object and the string callback function, so that callback is in the correct scope.
 

@@ -18,7 +18,7 @@ Quite a few writers contributed to brajeshwar.com. Unfortunately, the website is
 
 So, no writers are highlighted in the articles. However, I will be forever grateful to these awesome people who contributed to the website;
 
-1. [Deeptaman Mukherjee](https://www.linkedin.com/in/deeptamanmukherjee/) was the most un-assuming technical writer. He loves technology but is in an profession afar from it. He works in metal industry and has extensive experience in iron ore & aluminium businesses -- raw material procurement, logistics, sales & operations planning.
+1. [Deeptaman Mukherjee](https://www.linkedin.com/in/deeptamanmukherjee/) was the most un-assuming technical writer. He loves technology but is in a profession afar from it. He works in metal industry and has extensive experience in Iron Ore & Aluminium businesses -- raw material procurement, logistics, sales & operations planning.
 2. [Kalen Smith](https://www.linkedin.com/in/kalen-smith-044b9413/)
 3. [Praval Singh](https://praval.com) wrote extensively about Open Source, and unix technologies. Some of his articles went on to become quite popular, and shared a lot.
 4. Ritesh Reddy writes at [Reddy2Go](https://www.reddy2go.com) and has contributed quite a bit of interesting articles to my site.

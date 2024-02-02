@@ -21,13 +21,14 @@ It is advised to avoid stories about politics, crime, sports, and celebrities un
 Try to have curious participation — be kind. Don’t be snarky. Converse curiously; don’t cross-examine. I love one of the best lines of humanity on their guidelines, “Please respond to the strongest plausible interpretation of what someone says, not a weaker one that’s easier to criticize. Assume good faith.”
 
 - My Profile is [Brajeshwar](https://news.ycombinator.com/user?id=Brajeshwar) on Hacker News.
-- Hacker News user [@minimaxir](https://news.ycombinator.com/user?id=minimaxir) ([Max Woolf](https://minimaxir.com)) has a well-maintained document — the [HackerNews Undocumented](https://github.com/minimaxir/hacker-news-undocumented).
+- Hacker News user [minimaxir](https://news.ycombinator.com/user?id=minimaxir) ([Max Woolf](https://minimaxir.com)) has a well-maintained document — the [HackerNews Undocumented](https://github.com/minimaxir/hacker-news-undocumented).
 - Hacker News’ [Official List](https://news.ycombinator.com/lists) all the details.
 	- [Read the Guidelines](https://news.ycombinator.com/newsguidelines.html) to have a meaningful participation.
 	- Read the [FAQ](https://news.ycombinator.com/newsfaq.html).
 	- Official [Front Page RSS](https://news.ycombinator.com/rss) and the [Show HN RSS](https://news.ycombinator.com/showrss).
 - Unofficial RSS Feeds at [Hacker News RSS](https://hnrss.github.io) has a lot of options.
 - Unofficial but fun [HN Badges](https://hnbadges.netlify.app/?user=Brajeshwar).
+- [Hacker News Rankings](https://hnrankings.info) visualize the movement and trends of Hacker News.
 
 [^HackerNews]: [Hacker News](https://en.wikipedia.org/wiki/Hacker_News) (HN) is a website focusing on computer science and entrepreneurship. It is run by [Y Combinator](https://www.ycombinator.com). In general, content that can be submitted is defined as “anything that gratifies one’s intellectual curiosity.” The word hacker in “Hacker News” is used in its original meaning and refers to the hacker culture which consists of people who enjoy tinkering with technology.
 
