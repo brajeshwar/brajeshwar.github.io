@@ -1,13 +1,14 @@
----
+***
+
 layout: page
 title: About
----
+------------
 
 My name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of Imphal[^Imphal], Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
-<a href="https://en.wikipedia.org/wiki/Floppy_disk"><img class="medium" src="https://cdn.oinam.com/img/computer/floppy-disk-8-5.25-3.5-inch.jpg" alt="8-inch, 5¼-inch, and 3½-inch Floppy Disks" loading="lazy"></a>
+
 
 ## Work
 
@@ -34,7 +35,7 @@ By 2005, I decided to take the plunge and started our first company - Oinam Soft
 [Pearson](https://www.pearson.com/us/),
 [STARZ](http://www.starz.com/),
 [Tata Consultancy Services](https://www.tcs.com),
-_et al_.
+*et al*.
 
 We also worked for many contractors who sub-contracted their work to us. We were, in fact, one of the best ghost developers to many successful Contractors.
 
@@ -47,7 +48,6 @@ I had worked with some fantastic companies. I was one of the Creative Directors 
 I've known [Shanta](https://oinam.mom) since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
 
 We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amara.oinam.com/) (Nov 2016).
-
 
 [^Imphal]: [Imphal](https://en.wikipedia.org/wiki/Imphal) is the capital city of Manipur, India. Spread over parts of the districts of Imphal West and Imphal East, the former contains the majority of the city's area and population.
 
