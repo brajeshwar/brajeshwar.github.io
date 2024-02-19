@@ -6,7 +6,9 @@ I have moved to a simpler notetaking and writing habit for my notes. I have chos
 
 > Every device, including ones long gone, and ones not invented yet, can read and edit plain text. - [Derek Sivers](https://sive.rs/plaintext)
 
-My default is to start with Apple’s Notes to add quicknotes, share common family notes,  and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all of my notes in my __Notebook__. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime, while my notes remain free of any dependency.
+For short, quick notes, I tend to start with Apple’s Notes, share common family notes,  and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all of my notes in my __Notebook__. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime, while my notes remain free of any dependency.
+
+The simplicity of storing plain-text files as individual files is much more useful than storing them in a database and having an export format. The direct manipulation of files allows multiple apps to coexist, change or migrate to other apps, and do useful things on top of the same files.
 
 For team writing, I'd be happy to use whatever helps the team write better and easier for everyone.
 

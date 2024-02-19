@@ -12,6 +12,13 @@ Take ownership of what apps are allowed to be on your phone.
 
 My solution: choose what notifications you get for every single app on your phone. This might seem like a daunting task, but it’s very rewarding. Similar to deleting apps that you don’t need of your phone, choosing notifications helps you take charge of what’s allowed to take your attention.
 
+Social Media
+
+People who turned to social media for news were less likely to know what was going on in the world – and more likely to have heard false, or unproven, claims and conspiracy theories.
+
+— https://www.bbc.com/future/article/20240207-the-one-simple-change-that-will-improve-your-media-diet-in-2024
+
+
 
 ### References
 
