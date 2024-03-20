@@ -45,6 +45,6 @@ Clean up at Google One’s Storage isn’t easy either. The hardest ones are goi
 
 For Google One Subscribers, you do get the opportunity to talk to an actual person from Google Support. From my interaction, I learned that, in India, due to the new Reserve bank of India eMandate, Google can’t automatically charge you for your subscription and change to a different plan. You’ll have to cancel your current subscription and re-subscribe with the desired Plan.
 
-Block of Images in your Browser Settings, and try the List View instead of Thumbnails. It will make it faster for you to select and delete. Best of luck and I hope it goes well for you.
+Tip: Block images in your Browser Settings, and try the `List View` instead of `Thumbnails`. It will make it faster for you to select and delete. Best of luck and I hope it goes well for you.
 
 As of Jun, 2021, I have decided to stay with the [Google One](https://one.google.com) Plan of 100GB and stay within that limit.
