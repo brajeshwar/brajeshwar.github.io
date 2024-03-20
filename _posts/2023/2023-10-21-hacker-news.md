@@ -1,8 +1,8 @@
 # Hacker News
 
-[Hacker News](https://news.ycombinator.com)[^HackerNews] is a link aggregator website started by [Paul Graham](https://paulgraham.com)[^PaulGraham] on [Feb 19, 2007](https://news.ycombinator.com/front?day=2007-02-19) and officially launched the next day as [Startup News](https://news.ycombinator.com/announcingnews.html). After 550 days, I signed up on [Aug 23, 2008](https://news.ycombinator.com/front?day=2008-08-23) at [Unix Time: 1219467182](https://hacker-news.firebaseio.com/v0/user/Brajeshwar.json?print=pretty).
+[Hacker News](https://news.ycombinator.com)[^HackerNews] is a link aggregator website started by [Paul Graham](https://paulgraham.com)[^PaulGraham] on [Feb 19, 2007](https://news.ycombinator.com/front?day=2007-02-19) and officially launched the next day as [Startup News](https://news.ycombinator.com/announcingnews.html). Six months later, it was renamed from Startup News to [Hacker News](https://news.ycombinator.com/hackernews.html) on Aug 14, 2007. After about a year, I signed up on [Aug 23, 2008](https://news.ycombinator.com/front?day=2008-08-23) at [Unix Time: 1219467182](https://hacker-news.firebaseio.com/v0/user/Brajeshwar.json?print=pretty).
 
-It ran on stealth mode from [Oct-9](https://news.ycombinator.com/front?day=2006-10-09) to [Oct-22](https://news.ycombinator.com/front?day=2006-10-22), 2006. Six months later, it was renamed from Startup News to [Hacker News](https://news.ycombinator.com/hackernews.html) on Aug 14, 2007.
+> It ran on stealth mode from [Oct-9](https://news.ycombinator.com/front?day=2006-10-09) to [Oct-22](https://news.ycombinator.com/front?day=2006-10-22), 2006.
 
 WebArchive has the copies of the [last of Startup News](https://web.archive.org/web/20070713212949/http://news.ycombinator.com/) and the [first of Hacker News](https://web.archive.org/web/20070830111558/http://news.ycombinator.com/).
 
