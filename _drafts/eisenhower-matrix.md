@@ -14,3 +14,5 @@ Original Assets (need an update)
 
 British Accent https://www.youtube.com/watch?v=tT89OZ7TNwc
 Beginner’s Guide to the Eisenhower Matrix (ToDoist) https://www.youtube.com/watch?v=tLLyi50M5KM
+
+Eventually, this becomes more of a pattern your process and you can have your own list or calendars the way it is categorized without being bound within a four-quadrant visualization.
