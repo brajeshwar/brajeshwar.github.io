@@ -37,6 +37,7 @@ Try to have curious participation — be kind. Don’t be snarky. Converse curio
 	- [Hacker News Rankings](https://hnrankings.info) visualize the movement and trends of Hacker News.
 	- [Hacker News Title Edit Tracker](https://hackernewstitles.netlify.app)
 	- [HackerNewsRemovals](https://github.com/vitoplantamura/HackerNewsRemovals) List of stories removed from the Hacker News Front Page, updated in real time.
+	- [Comprehensive Analysis of Hacker News Community Trends](https://dupeless.com/yc-analysis), provides an in-depth look at the latest trends and insights over the past 24 hours.
 
 [^HackerNews]: [Hacker News](https://en.wikipedia.org/wiki/Hacker_News) (HN) is a website focusing on computer science and entrepreneurship. It is run by [Y Combinator](https://www.ycombinator.com). In general, content that can be submitted is defined as “anything that gratifies one’s intellectual curiosity.” The word hacker in “Hacker News” is used in its original meaning and refers to the hacker culture which consists of people who enjoy tinkering with technology.
 
