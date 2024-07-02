@@ -21,7 +21,3 @@ I co-founded [Valinor Earth](https://valinor.earth) where we build sustainable a
 [LinkedIn](https://www.linkedin.com/in/brajeshwar/),
 and
 [Twitter](https://twitter.com/brajeshwar).
-
-<div class="newsletter">
-  {% include newsletter.html %}
-</div>
