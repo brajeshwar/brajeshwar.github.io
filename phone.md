@@ -5,12 +5,12 @@ title: Phone
 
 I got my first personal phone number in 1999 when I migrated from Manipur to Bombay. Here is the evolution of my phone and the phone home screen over the years.
 
-- Nokia 5110 (1999)
+- [Nokia 5110](https://en.wikipedia.org/wiki/Nokia_5110) (1999)
 - [Nokia 8210](https://en.wikipedia.org/wiki/Nokia_8210) (2000)
 - [Nokia 8310](https://en.wikipedia.org/wiki/Nokia_8310) (2001)
 - [What was it?] (2003)
 - [Motorola Razr v3](https://en.wikipedia.org/wiki/Motorola_Razr_V3) (2005)
-- [Nokia N95](https://en.wikipedia.org/wiki/Nokia_N95) (Adobe Swag) (2007)
+- [Nokia N95](https://en.wikipedia.org/wiki/Nokia_N95) (Adobe’s Swag) (2007)
 
 ## iPhone 3G (2008)
 
