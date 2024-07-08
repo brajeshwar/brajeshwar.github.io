@@ -6,7 +6,7 @@ According to Neovise analyst and 20-year veteran software engineer for HP Paul B
 
 After beta-testing Office 365 Burns strongly noted that Office 365 isn't ready for release due to common complaints like the cloud-based software's lack of contact importing. Burns' pointed out additional problems, including non-delivery of email, a status dashboard that lacks information, bounced-back emails, a lack of notifications when sending errors occur and issues with format when importing Word docs to Office Web Apps. This last issue is an especially hot button for Microsoft seeing as they openly criticized Google Docs, Office 365's main competitor for having the same formatting issues.
 
-{% include video source="youtube" id="7SGp9pA9cAY" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/7SGp9pA9cAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Burn's primary complaint is that Office 365 lacks an ability to import contacts from other common MS programs like Outlook, which normally has the ability to export global address lists via exchange servers. Beta testers have been manually importing contacts one-by-one or have had to upgrade to Office 365's Enterprise version where users can import contacts via Windows PowerShell. 
 

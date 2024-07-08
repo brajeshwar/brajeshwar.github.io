@@ -2,7 +2,7 @@
 
 A changing economy cannot always witness a constant growth in any sector. Very few industries have taken a strong place in the market and stood the tests of time. Industry analysts are predicting a great future in - <a href="http://searchtelecom.techtarget.com/definition/Carrier-Ethernet">Carrier Ethernet</a>.
 
-{% include video source="youtube" id="SfXxhnSPBAs" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/SfXxhnSPBAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## History
 

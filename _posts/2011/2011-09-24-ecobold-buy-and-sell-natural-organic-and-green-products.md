@@ -2,7 +2,7 @@
 
 <a href="http://www.ecobold.com/">Ecobold</a>, a fresh Startup, is an online marketplace that makes it as easy as possible to buy and sell natural, organic and non-toxic products. Ecobold hand selects products that keep you, your family, and the earth healthy. In addition, Ecobold makes it easier to sell such products by offering merchants the best terms of any similar marketplace.
 
-{% include video source="youtube" id="rq-wdHqIHnA" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/rq-wdHqIHnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Going green has gone mainstream, with a reported 64% of the population now actively looking for green products - and justifiably so. In fact, prolonged exposure of up to 150 chemicals found in many home cleaning supplies are connected to allergies, birth defects, cancer, and psychological disorders.
 

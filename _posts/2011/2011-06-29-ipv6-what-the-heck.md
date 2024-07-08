@@ -1,6 +1,6 @@
 # IPv6 - What the Heck?
 
-{% include video source="youtube" id="2wa7y3W2DI0" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/2wa7y3W2DI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 First came <a href="http://en.wikipedia.org/wiki/IPv4">IPv4</a> -- an interesting story in itself given that the original protocol for the internet was named TCP, and entered into its third version before IP came about -- giving birth to Internet Protocol version 4 (IPv4).
 

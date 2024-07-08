@@ -2,7 +2,7 @@
 
 If you are one of those with a cluttered mailbox and overstuffed folders with some of the drafts waiting to be sent and some mails awaiting a reply from you later, you are not to be blamed as we understand that having a clean tidy inbox is a rare sight. But you can now heave a sigh of relief and cheer. <a href="http://www.boomeranggmail.com/">Boomerang for Gmail</a> has arrived to conquer your inbox. It is a Firefox/Chrome plug-in exclusively meant for Gmail users which allows you to take control of when you send/receive your email messages. It will become a lot easier to manage the thousands of emails buried in your inbox, isn't it?
 
-{% include video source="youtube" id="4KmsqYjB9j4" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/4KmsqYjB9j4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Boomerang has already gained immense popularity as more and more people are putting it to use in their Gmail inbox. It can manage most of your problems you usually deal with in your busy scheduled day helping you not to miss an important mail or sending a mail at the prescribed time which might have gone out of your mind or follow up a reminder about an important meeting. Yes, it helps you to get more organized and planned with your email behavior and at work. It was <a href="http://baydin.com/blog/2010/09/from-55-to-70000-downloads-in-30-days/">launched by Baydin</a> and saw the growth from 55 downloads on the launch date to over 70,000 downloads recently. It shows clearly that it is gaining momentum at a fast pace.
 

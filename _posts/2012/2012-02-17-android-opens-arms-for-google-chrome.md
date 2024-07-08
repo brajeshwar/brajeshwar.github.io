@@ -2,7 +2,7 @@
 
 Google Chrome is one of the most suave and user friendly browsers. This browser is mostly used as a style statement due to its vogue user interface and themes. The good news for Chrome lovers and Android owners is that google has started offering the beta version of the <a href="http://chrome.blogspot.com/2012/02/introducing-chrome-for-android.html">chrome browser for the android users</a>. On the flip side, the chrome browser is only available for the android devices that use Android version 4.0 or popularly known as the Ice Cream Sandwich. Currently only 1% of the Android population are on <a href="https://market.android.com/details?id=com.android.chrome">Ice Cream Sandwich Android devices</a>.
 
-{% include video source="youtube" id="lVjw7n_U37A" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/lVjw7n_U37A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This measure of Google is to provide a common browser for all three of the computer, tablet and mobile phones. Using google chrome on all your devices will have following advantages - 
 

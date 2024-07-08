@@ -4,7 +4,7 @@ Anyone with a Google account will know about Google's <a href="http://googleblog
 
 Or you can watch the video below to quickly understand the new Google Privacy Policy.
 
-{% include video source="youtube" id="KGghlPmebCY" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/KGghlPmebCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Do you think it's handy? Or do you think it's a menace? Well, it's a fusion of both. While sites like YouTube will automatically load video suggestions based on your chats in GTalk, you might also get suggestions that are irrelevant to you just because of certain chats you've done. Now that not many people (<a href="http://www.washingtonpost.com/business/microsoft-slams-googles-new-policy-on-merging-user-data-with-full-page-ads/2012/02/01/gIQAgeFViQ_story.html">including Microsoft</a>) like this security breach even if it's done by the so called Don of the Web, <strong>we will discuss certain ways on how to make yourself opaque to Google</strong>.
 

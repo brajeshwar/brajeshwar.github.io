@@ -4,7 +4,7 @@
 
 [Pokémon Go](http://www.pokemongo.com/) has, no doubt, taken the world by storm. It's estimated that the game has more active users than Snapchat. It's the first widely popular augmented reality game and people have been willing to go to extreme measures to catch 'em all. Pokémon Go uses real-world locations and virtual images to sends users on wild quests in search of the elusive Pokémon. Here are some interesting stories that demonstrate Pokémon Go's influence on its players.
 
-{% include video source="youtube" id="AVWPWYYIcpk" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/AVWPWYYIcpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Gotta Catch 'em All
 

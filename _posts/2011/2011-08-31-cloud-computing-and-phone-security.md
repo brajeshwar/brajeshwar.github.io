@@ -1,6 +1,6 @@
 # Cloud Computing and Phone security!
 
-{% include video source="youtube" id="uLdHnMG4Wlk" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/uLdHnMG4Wlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 A hilarious video of an Indian top brass talking crap about Mobile Phone Security and Cloud Computing. The subtitle is an actual .srt and not etched into the video.
 

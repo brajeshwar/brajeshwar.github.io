@@ -8,7 +8,7 @@ The [Federal Trade Commission](http://www.ftc.gov/bcp/) has been asked to invest
 
 When [EPIC](http://epic.org/) solicited the FTC to look into Facebook's privacy settings, it produced a two year scuffle that ended last year with an illustrious settlement between the two parties involved.
 
-{% include video source="youtube" id="_Sk-9jgNuug" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/_Sk-9jgNuug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 The first complaint was made by EPIC in 2009. EPIC initially asked the FTC to investigate why Facebook would alter its users setting and make available his personal information like Friend List and Apps usage, more available to other users and FB's business partners. It was later resolved in 2011, on the condition that Facebook would keep users information private. But the user information was made available to third parties and in some instances; the site even permitted advertisers to obtain personal information from users who clicked on ads. Facebook was accused of unjust and deceiving performance. 
 

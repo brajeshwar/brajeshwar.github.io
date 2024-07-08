@@ -1,5 +1,5 @@
 # Badmash behind Amitabh's US Prime Minister candidacy
-{% include video source="youtube" id="nLVaRD0-VSY" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/nLVaRD0-VSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Dishoom 2008 is about Amitabh as the American Prime Minister candidate.
 

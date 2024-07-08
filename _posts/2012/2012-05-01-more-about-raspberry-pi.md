@@ -4,7 +4,7 @@ Early in the 1980s, affordable computing was a craze in the market. However, lea
 
 That continued, till a lot of inventions took place in the tech world. One amongst them, is the -- <a href="http://www.raspberrypi.org/">Raspberry Pi</a>.
 
-{% include video source="youtube" id="6BbufUp_HNs" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/6BbufUp_HNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <a href="http://en.wikipedia.org/wiki/Raspberry_Pi">This credit card sized micro-microcomputer</a> was developed by a UK based company. It has low power consumption and an incredibly cheap ARM based Linux system. And, the next big thing is, that it comes for a price of $35 excluding the local taxes. The main motive behind this is to help the new generation kids in learning the programming stuffs.
 
