@@ -1,7 +1,5 @@
 # It Depends
 
-`A work-in-progress. Thinking out loud.`
-
 During my tenure at Razorfish[^Razorfish] (2014-16), I worked closely with [Saneef](https://saneef.com) on many exciting and impactful products for some of the who’s who brands of the world. We came to the realization of one key aspect of working with clients, customers, the team, and other service providers. Almost all of why, how, and what of getting things done comes down to;
 
 “It depends.”

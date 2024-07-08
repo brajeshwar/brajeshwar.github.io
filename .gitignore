@@ -1,4 +1,5 @@
 .jekyll-cache
+.jekyll-metadata
 .obsidian
 .sass-cache
 _site
