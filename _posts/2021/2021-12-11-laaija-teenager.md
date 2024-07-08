@@ -6,6 +6,6 @@ It is an entirely different world out there for the digital-native kids - their 
 
 For instance, a Gen-Z humor can change real fast that by the time you read this, something might have changed. Here is a video trying to explain Gen-Z humor sometime in 2020.
 
-{% include video source="youtube" id="oVlspd9hxFA" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/oVlspd9hxFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 _A WIP article. Will see how this first teenage-year plays out._

@@ -8,7 +8,7 @@ Quite genius if you think about it. If you were to go to a Ben and Jerry's and s
 
 Screenius is more than just a video-viewing app though. It's an intelligent app that learns your tastes as you go. If you watch TED Talks and The Colbert Report clips regularly, it won't pop-up with Justin Bieber's new Christmas hit or Jersey Shore reruns (both of which YouTube erroneously suggested to me last week, shudder). In addition to learning your likes the app includes review posting, sharing, and short menus for video browsing.
 
-{% include video source="youtube" id="jd34nW-Mx30" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/jd34nW-Mx30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I recently got the chance to sit down with the 27-year IT industry veteran Seth Cohen to talk about Screenius, Seth's entrepreneurial experience and everything leading up to it:
 

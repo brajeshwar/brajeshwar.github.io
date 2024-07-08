@@ -2,7 +2,7 @@
 
 If you pay a woman for sex, that's illegal -- it's prostitution. If you film it it's legal -- it's porn. If you put a soft lens on the camera -- it's art. What do you call a website that assists rich men in plying attractive young gold diggers with 'free' trips around the world? Digital pimpery? Perhaps. Brandon Wade calls it MissTravel.com.
 
-{% include video source="youtube" id="JLSiy4nUvnc" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/JLSiy4nUvnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Wade is the founder of <a href="http://www.seekingarrangement.com/">SeekingArrangement.com</a>, <a href="http://www.dateamillionaire.com/">DateaMillionare.com</a> and <a href="http://www.whatsyourprice.com/">WhatsYourPrice.com</a>, and now the like-minded <a href="http://www.misstravel.com/">MissTravel.com</a>; all are websites dedicated to finding rich men for attractive young women, or vice versa. Or both. Think Couch Surfing for gold diggers. It is no strings attached apparently.
 

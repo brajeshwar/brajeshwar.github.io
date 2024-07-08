@@ -2,7 +2,7 @@
 
 There are a plethora of social websites available in the virtual world. <a href="http://en.wikipedia.org/wiki/List_of_social_networking_websites">Wikipedia even has a list</a> of them. Despite, Google has taken a bold step by unveiling <a href="http://googleblog.blogspot.com/2011/06/introducing-google-project-real-life.html">Google Plus</a>, one of it's precious projects. If rumors are to be believed, it could give a tough competition to the king of the social networks, <a href="https://www.facebook.com/">Facebook</a>. Few geeks among us would have already figured out the difference between both Facebook &amp; Google Plus. For those who haven't, do read ahead for my take on it.
 
-{% include video source="youtube" id="xwnJ5Bl4kLI" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/xwnJ5Bl4kLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Google has already had two big disappointments previously after launching <a href="http://www.google.com/buzz">Buzz</a> and <a href="http://wave.google.com/">Wave</a>.  Google Plus is the third ball which Google is hoping to make a home run. If we keep the satire aside, Google has tried to play it safe, as they are surely uncertain about Plus being a hit. Note, Google deliberately calls Google Plus as a 'Project' rather than a 'Product' because, it wants people to be ready for changes in Google Plus, in near future. Plus, it has deliberately limited access to approximately 200,000 users. And also, the famous, 'Only Invite' approach.
 

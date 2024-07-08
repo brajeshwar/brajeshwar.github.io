@@ -2,7 +2,7 @@
 
 In a rather ludicrous display of backdoor shenanigans several high-profile countries have created and signed a new trade <a href="https://www.ige.ch/fileadmin/user_upload/Juristische_Infos/e/acta_text.pdf">agreement</a> aimed at stomping-out the $250-billion counterfeiting <a href="http://www.ipo.gov.uk/pro-policy/pro-crime/pro-crime-acta.htm">market</a>. The <a href="https://www.ige.ch/fileadmin/user_upload/Juristische_Infos/e/acta_text.pdf">Anti-Counterfeiting Trade Agreement</a> (ACTA) is a new international trade agreement created by G8-led countries (representing 50% of world trade) was conceived under a veil of secrecy, without democratic vote or process.
 
-{% include video source="youtube" id="citzRjwk-sQ" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/citzRjwk-sQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 One of the many, many groups opposing the agreement is the Electronic Frontier Foundation (EFF), a citizen watch-dog group that feels that civil society, developing nations  and international organizations -- tasked with anti-counterfeiting -- have been intentionally excluded from negotiations. "ACTA is being negotiated by a select group of industrialized countries outside of existing international multilateral venues for creating new IP norms such as the World Intellectual Property Organization and (since TRIPs) the World Trade Organization," states a <a href="https://www.eff.org/issues/acta">release</a> on the EFF website. 
 

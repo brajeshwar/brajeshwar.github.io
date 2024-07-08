@@ -4,7 +4,7 @@ The love-hate relationship that millions of computer geeks around the world have
 
 With this new release of Flash Adobe seems to be forgetting the iOS lockout and other cellphone and tablet platforms, and instead is targeting high-end technology -- specifically within gaming, high-end video, in-house application building and the growing 64-bit world.
 
-{% include video source="youtube" id="tgwi0lWgX8w" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/tgwi0lWgX8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Here are some of the few, besides the many note-worthy, feature of Flash Player 11;
 

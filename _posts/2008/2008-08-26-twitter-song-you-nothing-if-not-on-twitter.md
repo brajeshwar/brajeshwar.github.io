@@ -1,6 +1,6 @@
 # The Twitter Song - You're No One If You're Not On Twitter
 
-{% include video source="youtube" id="dYP-wBaqQAI" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/dYP-wBaqQAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Here is the awesome Twitter Song from <a href="http://twitter.com/ihatemornings">Ben Walker</a>.
 

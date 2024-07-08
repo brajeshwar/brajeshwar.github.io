@@ -1,6 +1,6 @@
 # Who or what the hell is a Hacker?
 
-{% include video source="youtube" id="0PxTAn4g20U" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/0PxTAn4g20U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Do we really understand the term "hacker"? There is a thin digital line that divides the hacker that most digerati knows and the hacker (who are more aptly termed as crackers) that other common technical people refer too.
 

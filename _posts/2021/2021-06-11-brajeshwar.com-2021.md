@@ -30,7 +30,7 @@ It is one of the simplest and the first few originals of Static Site Generators.
 
 It is the default tool at [Github Pages](https://pages.github.com) to generate static websites. One less thing to worry about is hosting your website.
 
-{% include video source="youtube" id="xlwn1hFa5QI" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/xlwn1hFa5QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 _Q. How did I do it?_
 

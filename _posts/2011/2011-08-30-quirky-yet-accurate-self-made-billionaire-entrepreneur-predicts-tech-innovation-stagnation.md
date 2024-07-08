@@ -2,7 +2,7 @@
 
 <a href="http://en.wikipedia.org/wiki/Peter_Thiel">Peter Thiel</a>, quirky billionaire tech mogul, PayPal founder and original Facebook investor has done so many things right. So, when he recently predicted that the United States is in a post-recession Great Stagnation of science and technology -- people listened. At this year's <a href="http://freedomfest.com/">FreedomFest</a> Peter Thiel announced in his debate with <a href="http://en.wikipedia.org/wiki/George_Gilder">George Gilder</a>, entitled "Future Shock: Has Technology Stalled in America?", that technological innovation has essentially flat-lined. "There's been insane progress in computers, Internet, and all things related to it," Thiel said during his debate at FreedomFest. "It's been offset by incredible failure in energy. To a first order, the two things have cancelled each other out."
 
-{% include video source="youtube" id="tu4VkOBq4NE" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/tu4VkOBq4NE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Thiel qualified his predictions with four examples of how tech has already stagnated:
 

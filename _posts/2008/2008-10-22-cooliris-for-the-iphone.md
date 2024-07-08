@@ -1,6 +1,6 @@
 # Cooliris for the iPhone
 
-{% include video source="youtube" id="0LV8Ixeg90I" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/0LV8Ixeg90I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Cooliris is the browser extension that revolutionizes the way you view media on your computer. It is now available as an application for your iPhone! <a href="http://blog.cooliris.com/2008/10/18/iphone-meet-cooliris/">Cooliris for the iPhone</a> allows you to search the web for media and news in an intuitive, easy-to-navigate way. Your results are displayed on an endlessly streaming 3D Wall that is a breeze to browse with your iPhone touchscreen.
 

@@ -4,7 +4,7 @@ There is a new form of self-indulgent online unaware narcissism going on -- news
 
 Pariser coined the term "the filter bubble" for this new phenomenon of social and skewed searching -- a way of enclosing yourself into your own world. But "you don't choose it" says Pariser, your bubble is chosen for you by news aggregators based on their opinions are of what you want to see -- based on your past browsing history.
 
-{% include video source="youtube" id="B8ofWFx525s" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/B8ofWFx525s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This new form of skewed searching is supposed to give people what they want, but the ramifications for culture, politics and the news itself run deep.
 

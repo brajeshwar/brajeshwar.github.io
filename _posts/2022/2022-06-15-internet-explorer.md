@@ -1,6 +1,6 @@
 # Internet Explorer
 
-{% include video source="youtube" id="4q7onWcS8Ac" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/4q7onWcS8Ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <img class="small right" src="https://cdn.oinam.com/img/technology/internet-explorer-logo.png" alt="Internet Explorer" loading="lazy">
 

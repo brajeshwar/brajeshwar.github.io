@@ -1,6 +1,6 @@
 # Review of RIM's Blackberry Playbook
 
-{% include video source="youtube" id="OLDh-6_sHT4" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/OLDh-6_sHT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 One of the latest entry into the Tablet market is the <a href="http://us.blackberry.com/playbook-tablet/">Blackberry Playbook</a> from <a href="http://www.rim.com/">RIM</a>.
 
@@ -12,7 +12,7 @@ Today, I'm not going to be biased towards the iPad (I continue to use both the f
 
 Here is a video of Blackberry Playbook against the Apple iPad.
 
-{% include video source="youtube" id="s72rGDUn2uo" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/s72rGDUn2uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Features and Highlights
 

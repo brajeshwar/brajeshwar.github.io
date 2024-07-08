@@ -1,7 +1,7 @@
 # 60th year of India's Independence
 
-{% include video source="youtube" id="Bh26zOjIh9I" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Bh26zOjIh9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 There were many incidents, revolutions that erupted before the First War of Independence in 1857. However, that particular movement in 1857, which also goes by the term "Indian Mutiny" or the "Sepoy Mutiny", really ignited the [Indian independence movement](https://en.wikipedia.org/wiki/Indian_independence_movement) which eventually got its Independence on Aug 15, 1947 from the British and foreign rules. The movement involved many political and social organizations and armed and unarmed struggle. Many political ideas also added to the movement.
 
-{% include video source="youtube" id="c6PHJg9D_Sk" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/c6PHJg9D_Sk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

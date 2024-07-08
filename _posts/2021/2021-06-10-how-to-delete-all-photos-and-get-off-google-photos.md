@@ -14,7 +14,7 @@ Recently, while trying to prune and clear up storage, I realize that Google had 
 
 Before doing anything, I strongly suggest creating a full back of your Google content. Follow the instructions at [Google Takeout](https://takeout.google.com) and get a copy of your Backups.
 
-{% include video source="youtube" id="a4Mfg3Rb_4Y" %}
+<iframe width="800" height="450" src="https://www.youtube.com/embed/a4Mfg3Rb_4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Deleting Photos
 
