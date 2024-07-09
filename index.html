@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<main class="container">
+
+  <article>
+    <p class="text-alt intro">
+      <strong>I’m Brajeshwar.</strong>
+      I’m on an adventure to create beautiful and meaningful products to improve the world for my daughters and their friends.
+    </p>
+    <p>
+      I write about design, entrepreneurship, productivity, software, startups, and technology.
+    </p>
+    <p>
+      I co-founded <a href="https://valinor.earth/">Valinor Earth</a> where we build sustainable and profitable technology practices helping businesses curb climate change.
+    </p>
+  </article>
+
+  <article class="home--blog">
+    <p>
+      I’ve been writing since 2001.
+      View all the articles in the <a href="/archives/">Archives</a>.
+    </p>
+    <ul>
+      {%- for post in site.posts limit: 7 -%}
+      <li>
+        <a href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </article>
+
+  <article>
+    <p>
+      <a href="mailto:brajeshwar@oinam.com">Email</a> is my preferred choice of communication, and I’m happy to get cold emails. I love thoughtful emails and would reply. Please let me know who you are: a clear and short message with a specific ask, an offer, an actionable item, or perhaps just a “Hi.” Find me at
+      <a href="https://news.ycombinator.com/user?id=Brajeshwar">Hacker News</a>,
+      <a href="https://www.linkedin.com/in/brajeshwar/">LinkedIn</a>,
+      and
+      <a href="https://twitter.com/brajeshwar">Twitter</a>.
+    </p>
+  </article>
+
+</main>

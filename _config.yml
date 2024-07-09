@@ -3,8 +3,6 @@ description: ''
 
 url: 'https://brajeshwar.com'
 
-remote_theme: oinam/oinam-jekyll
-
 markdown: kramdown
 highlighter: rouge
 
@@ -15,23 +13,11 @@ feed:
   posts_limit: 10
   author: Brajeshwar
 
-layout:
-  theme: default # default, vintage, nord
-  theme_highlighter: emacs
-  home_posts_no: 7
-  posts_home: /blog/
-  link_new_tab: false # should external links open in a new tab (true) or in the current tab (false)
-
-styles:
-  # sans (default), serif, mixed-sans (sans-head, serif-body), mixed-serif (serif-head, sans-body)
-  font_family: mixed-serif
-
 plugins:
   - jekyll-feed
   - jekyll-optional-front-matter
   - jekyll-paginate
   - jekyll-redirect-from  
-  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-titles-from-headings
   

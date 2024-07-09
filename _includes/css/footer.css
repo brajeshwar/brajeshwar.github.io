@@ -1,0 +1,16 @@
+footer {
+	text-align: center;
+	color: var(--text-color-light);
+	padding: var(--space-small);
+	margin-top: var(--space-large);
+	border-top: 1px solid var(--border-color);
+}
+
+footer nav {
+	text-transform: uppercase;
+	font-size: small;
+}
+
+footer nav a {
+	padding: 0 var(--space-smallest);
+}
