@@ -4,23 +4,27 @@ title: Archives
 ---
 
 <main class="container">
-  {% include search-google.html %}
+  
+  <div class="search">
+    {% include search-google.html %}
+  </div>
 
-  <article>
+  <article class="archives">
     {%- for post in site.posts -%}
     {%- assign currentdate = post.date | date: "%Y" -%}
 
     {%- if currentdate != date -%}
       {%- unless forloop.first -%}</ul>{% endunless %}
-      <h2 id="year-{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
-      <ul>
+      <h2 class="archives__year" id="year-{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
+      <ul class="archives__items">
         {% assign date = currentdate %}
       {%- endif -%}
-        <li>
-          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
-          <a href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a>
+        <li class="archives__item">
+          <time class="archives__item--date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
+          <a class="archives__item--title" href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a>
         </li>
-      {%- if forloop.last -%}</ul>{% endif %}
+      {%- if forloop.last -%}
+      </ul>{% endif %}
     {% endfor %}
   </article>
 </main>
