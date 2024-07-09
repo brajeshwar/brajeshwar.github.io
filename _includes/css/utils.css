@@ -1,0 +1,23 @@
+img {
+	border-radius: var(--border-radius);
+}
+
+img.small {
+	width: 40%;
+	height: auto;
+}
+
+img.medium {
+	width: 60%;
+	height: auto;
+}
+
+img.left {
+	float: left;
+	margin: 0 var(--space-small) var(--space-small) 0;
+}
+
+img.right {
+	float: right;
+	margin: 0 0 var(--space-small) var(--space-small);
+}

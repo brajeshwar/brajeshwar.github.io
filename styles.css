@@ -10,8 +10,10 @@
 {% include css/forms.css %}
 {% include css/layout.css %}
 {% include css/home.css %}
+{% include css/archives.css %}
 {% include css/header.css %}
 {% include css/footer.css %}
+{% include css/utils.css %}
 
 {% include css/debug.css %}
 
