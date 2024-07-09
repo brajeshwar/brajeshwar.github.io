@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<main role="main" class="container-ideal">
+
+  <div class="post-meta">
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
+  </div>
+
+  <article>
+    <h1 class="text-alt">{{ page.title }}</h1>
+    {{ content }}
+  </article>
+
+  {%- if page.previous.url or page.next.url -%}
+  <nav class="post-nav">
+    <div class="post-nav__prev">
+      {%- if page.previous.url -%}
+      <a href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" class="post-nav__prev" title="{{ page.previous.title }}"> ← Prev</a>
+      {%- endif -%}
+    </div>
+    <div class="post-nav__next">
+      {%- if page.next.url -%}
+      <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}" class="post-nav__next" title="{{ page.next.title }}">Next → </a>
+      {%- endif -%}
+    </div>
+  </nav>
+  {%- endif -%}
+
+</main>
+

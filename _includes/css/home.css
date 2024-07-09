@@ -1,0 +1,12 @@
+.intro {
+  font-size: 2rem;
+}
+
+.intro strong {
+  display: block;
+}
+
+.home--blog time {
+  font-size: small;
+  padding-left: 0.5rem;
+}

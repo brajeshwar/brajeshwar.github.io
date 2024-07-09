@@ -1,0 +1,50 @@
+html {}
+
+body {
+  font-size: 18px;
+  font-family: var(--font-family-sans);
+  line-height: var(--scale-golden);
+  color: var(--text-color);
+  background: var(--gray-50);
+}
+
+a {
+  color: var(--text-color-link);
+}
+a:visited {
+  color: var(--text-color-link-visited);
+}
+a:hover, a:active {
+  color: var(--text-color-link-active);
+}
+
+.text-alt {
+  font-family: var(--font-family-serif);
+}
+
+/* Restrict sizing to the page width. */
+:where(iframe, img, input, video, select, textarea) {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Reduced Motion; Remove
+ * animations
+ * fixed background attachments
+ * timed scrolling behaviors
+ * transitions
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important; /* 1 */
+    animation-duration: 1ms !important; /* 1 */
+    animation-iteration-count: 1 !important; /* 1 */
+    background-attachment: initial !important; /* 2 */
+    scroll-behavior: auto !important; /* 3 */
+    transition-delay: 0s !important; /* 4 */
+    transition-duration: 0s !important; /* 4 */
+  }
+}
