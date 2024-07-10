@@ -79,9 +79,9 @@
   --text-color-dark:    var(--gray-800);
   --text-color-darker:  var(--gray-950);
 
-  --text-color-link:          var(--blue-500);
-  --text-color-link-visited:  var(--blue-600);
-  --text-color-link-active:   var(--blue-900);
+  --text-color-link:          var(--gray-500);
+  --text-color-link-visited:  var(--gray-600);
+  --text-color-link-active:   var(--gray-950);
   
   --space-default:  calc(var(--scale) * 1rem);
   --space-large:    calc(var(--scale) * 2rem);
