@@ -1,6 +1,6 @@
 .archives {
 	margin: var(--space-default) auto;
-	color: var(--text-color-mid);
+	color: var(--text-color-medium);
 }
 
 .archives a {
