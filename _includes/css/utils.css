@@ -21,3 +21,9 @@ img.right {
 	float: right;
 	margin: 0 0 var(--space-small) var(--space-small);
 }
+
+/* fix youtube and other video embeds */
+iframe, object, embed {
+	height: var(--embed-video-height);
+  border-radius: var(--border-radius);
+}
