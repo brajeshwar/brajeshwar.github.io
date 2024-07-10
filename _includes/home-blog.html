@@ -1,14 +1,20 @@
-<article class="home--blog">
-  <p>
+<article class="home__blog">
+  <p class="home__blog--context">
     I’ve been writing since 2001.
-    View all the articles in the <a href="/archives/">Archives</a>.
+    I write about design, entrepreneurship, productivity, software, startups, and technology.  
   </p>
-  <ul>
-    {%- for post in site.posts limit: 7 -%}
-    <li>
-      <a href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a>
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+  <ul class="home__blog--items">
+    {%- for post in site.posts limit: 9 -%}
+    <li class="home__blog--item">
+      <a class="home__blog--title" href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">
+        {{ post.title }}
+        <time class="home__blog--meta" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      </a>
     </li>
     {%- endfor -%}
   </ul>
+  <p class="home__blog--footer">
+    ›
+    View all the articles in the <a href="/archives/">archives</a>.
+  </p>
 </article>
