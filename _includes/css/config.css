@@ -46,10 +46,6 @@
 
   --embed-video-height: calc(0.5625 * var(--body-width-ideal)); /* manual height based on the ideal width against the video ratio, mostly youtube which is 315/560=0.5625 */
 
-  /* forgotten how to have this dynamic - for now, refer this and copy-paste */
-  --display-small: 480px;
-  
-
   /* modular scale */
   --double-octave    : 4                 ;
   --pi               : 3.14159265359     ;
@@ -114,6 +110,17 @@
   --border-color: var(--gray-200);
   --logo-size: 42px;
 }
+
+/*
+  jekyll supports sass out of the box.
+  Use only when plain CSS do not suffice.
+*/
+$breakpoint-small:  581px;
+$breakpoint-medium: 800px;
+$breakpoint-large:  1024px;
+$breakpoint-extralarge: 1600px;
+
+/* themes (auto/light | dark) */
 
 :root,
 ::backdrop {
