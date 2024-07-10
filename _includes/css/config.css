@@ -6,6 +6,7 @@
   --font-family-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   --font-family-monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   --font-family-cursive: cursive;
+  --font-family-alt: var(--font-family-serif);
 
   /* Color: 'Neutral' and 'Blue' from https://tailwindcss.com/docs/customizing-colors */
   --gray-50:  #fafafa;
@@ -68,14 +69,14 @@
   --minor-second     : 1.066666667       ;
   
   /* chosen scale for brajeshwar.com*/
-  --scale: var(--minor-third);
-  --scale-small: var(--minor-second);
+  --scale: var(--major-third);
+  --scale-small: var(--major-second);
   --scale-golden: var(--golden);
 
   --text-color:         var(--gray-700);
   --text-color-medium:  var(--gray-500);
   --text-color-light:   var(--gray-400);
-  --text-color-lighter: var(--gray-200);
+  --text-color-lighter: var(--gray-300);
   --text-color-dark:    var(--gray-800);
   --text-color-darker:  var(--gray-950);
 

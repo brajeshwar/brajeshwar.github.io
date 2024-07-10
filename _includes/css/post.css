@@ -1,0 +1,6 @@
+.post {}
+
+.post__title {
+	font-family: var(--font-family-alt);
+	line-height: var(--scale);
+}
