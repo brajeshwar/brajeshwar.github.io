@@ -95,13 +95,13 @@
   --space-smallest: calc(var(--scale-small) * 0.2rem);
 
   --size-default:   calc(var(--scale) * 1.2rem);
-  --size-small:     calc(var(--scale) * 1rem);
-  --size-smaller:   calc(var(--scale) * 0.5rem);
-  --size-smallest:  calc(var(--scale) * 0.2rem);
-  --size-medium:    calc(var(--scale) * 1.5rem);
-  --size-large:     calc(var(--scale) * 2rem);
-  --size-larger:    calc(var(--scale) * 2.5rem);
-  --size-largest:   calc(var(--scale) * 4rem);
+  --size-small:     calc(var(--scale) * 0.9rem);
+  --size-smaller:   calc(var(--scale) * 0.8rem);
+  --size-smallest:  calc(var(--scale) * 0.6rem);
+  --size-medium:    calc(var(--scale) * 1.3rem);
+  --size-large:     calc(var(--scale) * 1.4rem);
+  --size-larger:    calc(var(--scale) * 1.6rem);
+  --size-largest:   calc(var(--scale) * 2rem);
 
   --opacity-reset: 1;
   --opacity-low: 0.8;
