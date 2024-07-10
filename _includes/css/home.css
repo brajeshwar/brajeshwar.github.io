@@ -44,11 +44,12 @@
   border-radius: var(--border-radius);
   background: var(--color-white);
   border: 1px solid var(--color-white);
+  border-bottom-color: var(--gray-200);
 }
 .home__blog--item:hover, .home__blog--item:active {
   cursor: pointer;
   background: var(--gray-100);
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--gray-200);
 }
 .home__blog--item a, .home__blog--item a:visited {
   display: block;
