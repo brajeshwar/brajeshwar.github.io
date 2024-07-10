@@ -18,6 +18,7 @@ a:hover, a:active {
   color: var(--text-color-link-active);
 }
 
+.title,
 .text-alt {
   font-family: var(--font-family-serif);
 }

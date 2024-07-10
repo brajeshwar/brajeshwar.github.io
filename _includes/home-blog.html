@@ -1,0 +1,14 @@
+<article class="home--blog">
+  <p>
+    I’ve been writing since 2001.
+    View all the articles in the <a href="/archives/">Archives</a>.
+  </p>
+  <ul>
+    {%- for post in site.posts limit: 7 -%}
+    <li>
+      <a href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+    </li>
+    {%- endfor -%}
+  </ul>
+</article>

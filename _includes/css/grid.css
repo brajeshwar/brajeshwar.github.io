@@ -1,20 +1,18 @@
 .grid {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(12, 1fr);
-    margin: 0 auto;
-    width: 100%;
+  display: grid;
+  grid-gap: var(--space-default);
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .grid__c1, .grid__c2, .grid__c3, .grid__c4, .grid__c5, .grid__c6,
 .grid__c7, .grid__c8, .grid__c9, .grid__c10, .grid__c11, .grid__c12 {
-    grid-column-end: span 12;
+  grid-column-end: span 12;
 }
 
 .grid__nested {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(12, 1fr);
+  display: grid;
+  grid-gap: var(--space-default);
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .grid__merge-two-rows { grid-row-end: span 2 }
@@ -23,16 +21,16 @@
 .grid__merge-five-rows { grid-row-end: span 5 }
 .grid__merge-six-rows { grid-row-end: span 6 }
 
-@media only screen and (min-width: 481px) {
-    .grid__c1  { grid-column-end: span 1 }
-    .grid__c2  { grid-column-end: span 2 }
-    .grid__c3  { grid-column-end: span 3 }
-    .grid__c4  { grid-column-end: span 4 }
-    .grid__c5  { grid-column-end: span 5 }
-    .grid__c6  { grid-column-end: span 6 }
-    .grid__c7  { grid-column-end: span 7 }
-    .grid__c8  { grid-column-end: span 8 }
-    .grid__c9  { grid-column-end: span 9 }
-    .grid__c10 { grid-column-end: span 10 }
-    .grid__c11 { grid-column-end: span 11 }
+@media only screen and (min-width: 600px) {
+  .grid__c1  { grid-column-end: span 1 }
+  .grid__c2  { grid-column-end: span 2 }
+  .grid__c3  { grid-column-end: span 3 }
+  .grid__c4  { grid-column-end: span 4 }
+  .grid__c5  { grid-column-end: span 5 }
+  .grid__c6  { grid-column-end: span 6 }
+  .grid__c7  { grid-column-end: span 7 }
+  .grid__c8  { grid-column-end: span 8 }
+  .grid__c9  { grid-column-end: span 9 }
+  .grid__c10 { grid-column-end: span 10 }
+  .grid__c11 { grid-column-end: span 11 }
 }

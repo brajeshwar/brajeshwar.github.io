@@ -77,7 +77,7 @@
   --scale-golden: var(--golden);
 
   --text-color:         var(--gray-700);
-  --text-color-mid:     var(--gray-500);
+  --text-color-medium:  var(--gray-500);
   --text-color-light:   var(--gray-400);
   --text-color-lighter: var(--gray-200);
   --text-color-dark:    var(--gray-800);
@@ -93,6 +93,19 @@
   --space-small:    calc(var(--scale-small) * 1rem);
   --space-smaller:  calc(var(--scale-small) * 0.5rem);
   --space-smallest: calc(var(--scale-small) * 0.2rem);
+
+  --size-default:   calc(var(--scale) * 1.2rem);
+  --size-small:     calc(var(--scale) * 1rem);
+  --size-smaller:   calc(var(--scale) * 0.5rem);
+  --size-smallest:  calc(var(--scale) * 0.2rem);
+  --size-medium:    calc(var(--scale) * 1.5rem);
+  --size-large:     calc(var(--scale) * 2rem);
+  --size-larger:    calc(var(--scale) * 2.5rem);
+  --size-largest:   calc(var(--scale) * 4rem);
+
+  --opacity-reset: 1;
+  --opacity-low: 0.8;
+  --opacity-lower: 0.7;
 
   --border-radius: 5px;
   --border-radius-small: 3px;
