@@ -44,6 +44,8 @@
   --body-width-max: 76rem; /* visual width */
   --body-width-ideal: 46rem; /* ideal reading width */
 
+  --embed-video-height: calc(0.5625 * var(--body-width-ideal)); /* manual height based on the ideal width against the video ratio, mostly youtube which is 315/560=0.5625 */
+
   /* forgotten how to have this dynamic - for now, refer this and copy-paste */
   --display-small: 480px;
   
