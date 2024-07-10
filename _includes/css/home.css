@@ -1,9 +1,15 @@
-.hero {
+.intro {
+  font-family: var(--font-family-alt);
   font-size: var(--size-medium);
+  line-height: var(--scale);
   max-width: var(--body-width-ideal);
 }
 
-.hero strong {
+.intro__title {
+  font-size: var(--size-large);
+}
+
+.intro strong {
   display: block;
 }
 
@@ -55,10 +61,10 @@
   display: block;
   height: 100%;
   text-decoration: none;
-  color: var(--text-color-medium);
+  color: var(--text-color);
 }
 .home__blog--item a:hover, .home__blog--item a:active {
-  color: var(--text-color-dark);
+  color: var(--text-color-darker);
 }
 .home__blog--title {
   line-height: var(--scale);

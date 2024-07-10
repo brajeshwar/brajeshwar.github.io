@@ -18,9 +18,21 @@ a:hover, a:active {
   color: var(--text-color-link-active);
 }
 
+hr {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  
+  margin: var(--space-default) auto;
+  background-size: contain;
+  background: var(--border-color);
+  border: 0 none;
+}
+
 .title,
 .text-alt {
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-alt);
 }
 
 /* Restrict sizing to the page width. */
