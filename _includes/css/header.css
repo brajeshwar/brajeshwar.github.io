@@ -9,6 +9,7 @@ header {
 	grid-template-columns: 1fr 3fr;
 }
 
+/* logo */
 .logo {
 	width: var(--logo-size);
 	height: var(--logo-size);
@@ -24,7 +25,11 @@ header {
 .logo a:hover, .logo a:active {
 	background: var(--text-color-lighter);
 }
+.logo__img, .logo__img--path {
+	fill: var(--logo-color);
+}
 
+/* menu */
 .menu {
 	text-align: right;
 	text-transform: uppercase;
