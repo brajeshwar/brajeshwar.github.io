@@ -109,6 +109,9 @@
   --border-radius-large: 10px;
   --border-radius-larger: 25px;
   --border-color: var(--gray-200);
+  --border-color-light: var(--gray-100);
+  --border-color-dark: var(--gray-300);
+  --border-color-darker: var(--gray-400);
   --border-size: 1px;
   --border-size-small: 3px;
   --border-size-medium: 5px;

@@ -12,10 +12,14 @@ blockquote {
 	margin: 0 var(--space-default);
 	padding: var(--space-smallest) var(--space-large);
 	font-family: var(--font-family-alt);
-	font-size: var(--size-default);
+	font-size: var(--size-small);
 	font-style: italic;
 	color: var(--text-color-medium);
 
 	background: var(--gray-100);
 	border-radius: var(--border-radius);
+}
+
+pre {
+	padding: var(--space-default);
 }

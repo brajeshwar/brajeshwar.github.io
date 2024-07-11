@@ -10,7 +10,7 @@
 {% include css/typography.css %}
 {% include css/forms.css %}
 {% include css/grid.css %}
-{% include css/utils.css %}
+{% include css/code-vs.css %}
 
 {% include css/layout.css %}
 {% include css/header.css %}
@@ -19,6 +19,7 @@
 {% include css/archives.css %}
 {% include css/post.css %}
 
+{% include css/utils.css %}
 {% include css/debug.css %}
 
 {%- endcapture -%}

@@ -4,7 +4,7 @@ Peter Hall posted a solution to setting the background color using Actionscript,
 
 This one will only fill the viewable stage and not the whole maximum allowable space of 5760 px of the Flash Document Scene.
 
-```
+```as
 //define a var for sh and sw
 //let us add 2 px each as flash eats them
 //in the Stage Object from the actual flash dimension

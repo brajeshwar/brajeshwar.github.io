@@ -4,3 +4,8 @@
 	font-family: var(--font-family-alt);
 	line-height: var(--scale);
 }
+
+.post img {
+	width: 100%;
+	height: auto;
+}
