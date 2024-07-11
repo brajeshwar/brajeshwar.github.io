@@ -99,7 +99,6 @@
   font-weight: 200;
   text-transform: lowercase;
   border-bottom: 1px solid var(--gray-200);
-  border-radius: var(--border-radius);
   margin: 0 0 var(--space-default);
   padding: 0;
 }
@@ -124,6 +123,14 @@
   background: var(--gray-100);
   padding: var(--space-smaller) var(--space-small);
   line-height: var(--scale);
+}
+
+/* connect */
+.connect__title {
+  font-weight: 200;
+  text-transform: lowercase;
+  margin: 0 0 var(--space-default);
+  padding: 0;
 }
 
 /* Books */
