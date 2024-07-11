@@ -45,3 +45,15 @@
 	border-bottom-right-radius: var(--border-radius-larger);
 	text-align: right;
 }
+
+/* footnotes */
+.footnotes {
+	margin: var(--space-default) 0;
+	padding: var(--space-default);
+	font-size: var(--size-smaller);
+	border-top: 1px solid var(--border-color);
+}
+
+.reversefootnote {
+	text-decoration: none;
+}

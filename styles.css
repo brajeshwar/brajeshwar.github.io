@@ -7,6 +7,7 @@
 {% include css/config.css %}
 {% include css/sanitize.css %}
 {% include css/base.css %}
+{% include css/typography.css %}
 {% include css/forms.css %}
 {% include css/grid.css %}
 {% include css/utils.css %}

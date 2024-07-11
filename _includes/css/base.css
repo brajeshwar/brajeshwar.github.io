@@ -8,16 +8,6 @@ body {
   background: var(--gray-50);
 }
 
-a {
-  color: var(--text-color-link);
-}
-a:visited {
-  color: var(--text-color-link-visited);
-}
-a:hover, a:active {
-  color: var(--text-color-link-active);
-}
-
 hr {
   display: block;
   position: relative;
@@ -34,6 +24,8 @@ hr {
 .text-alt {
   font-family: var(--font-family-alt);
 }
+
+figure {}
 
 /* Restrict sizing to the page width. */
 :where(iframe, img, input, video, select, textarea) {

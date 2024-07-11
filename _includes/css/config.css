@@ -73,11 +73,11 @@
   --scale-small: var(--major-second);
   --scale-golden: var(--golden);
 
-  --text-color:         var(--gray-700);
-  --text-color-medium:  var(--gray-500);
-  --text-color-light:   var(--gray-400);
-  --text-color-lighter: var(--gray-300);
-  --text-color-dark:    var(--gray-800);
+  --text-color:         var(--gray-800);
+  --text-color-medium:  var(--gray-600);
+  --text-color-light:   var(--gray-500);
+  --text-color-lighter: var(--gray-400);
+  --text-color-dark:    var(--gray-900);
   --text-color-darker:  var(--gray-950);
 
   --text-color-link:          var(--gray-500);
@@ -109,6 +109,11 @@
   --border-radius-large: 10px;
   --border-radius-larger: 25px;
   --border-color: var(--gray-200);
+  --border-size: 1px;
+  --border-size-small: 3px;
+  --border-size-medium: 5px;
+  --border-size-large: 10px;
+
   --logo-size: 42px;
 }
 
