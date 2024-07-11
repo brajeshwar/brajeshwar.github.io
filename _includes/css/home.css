@@ -125,6 +125,13 @@
   line-height: var(--scale);
 }
 
+/* home: grid item ordering */
+@media (max-width: $breakpoint-small) {
+  .home__order {}
+  .home__order--primary { order: 1; }
+  .home__order--secondary { order: 2; } 
+}
+
 /* connect */
 .connect__title {
   font-weight: 200;
