@@ -133,10 +133,26 @@
 }
 
 /* connect */
+.connect {}
+.connect ul {
+  padding: 0;
+  margin: 0;
+  font-size: var(--size-smaller);
+  color: var(--text-color-light);
+}
 .connect__title {
   font-weight: 200;
+  font-size: var(--size-medium);
   text-transform: lowercase;
   margin: 0 0 var(--space-default);
+  padding: 0;
+}
+
+.connect__title--sub {
+  font-weight: 200;
+  font-size: var(--size-small);
+  text-transform: lowercase;
+  margin: 0;
   padding: 0;
 }
 
