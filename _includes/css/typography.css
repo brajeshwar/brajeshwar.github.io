@@ -1,0 +1,21 @@
+a {
+  color: var(--text-color-link);
+}
+a:visited {
+  color: var(--text-color-link-visited);
+}
+a:hover, a:active {
+  color: var(--text-color-link-active);
+}
+
+blockquote {
+	margin: 0 var(--space-default);
+	padding: var(--space-smallest) var(--space-large);
+	font-family: var(--font-family-alt);
+	font-size: var(--size-default);
+	font-style: italic;
+	color: var(--text-color-medium);
+
+	background: var(--gray-100);
+	border-radius: var(--border-radius);
+}
