@@ -1,5 +1,3 @@
-<div id="search-searchbar"></div>
-
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
@@ -11,15 +9,6 @@ const search = instantsearch({
   appId: '{{ site.algolia.application_id }}',
   apiKey: '{{ site.algolia.search_only_api_key }}',
   indexName: '{{ site.algolia.index_name }}'
-
-  searchFunction: function (helper) {
-    var searchResults = document.getElementById("search-hits-wrapper");
-    if (helper.state.query === "" && searchResults.style.display === "none") {
-      return;
-    }
-    searchResults.style.display = helper.state.query ? "block" : "none";
-    helper.search();
-  },
 });
 
 const hitTemplate = function(hit) {
@@ -52,15 +41,9 @@ const hitTemplate = function(hit) {
 
 search.addWidget(
   instantsearch.widgets.searchBox({
-    container: "#search-searchbar",
-    placeholder: "Search into posts...",
-    poweredBy: false,
-    autofocus: false,
-    showLoadingIndicator: true,
-    queryHook(query, refine) {
-      clearTimeout(timerId);
-      timerId = setTimeout(() => refine(query), 500);
-    },
+    container: '#search-searchbar',
+    placeholder: 'Search into posts...',
+    poweredBy: true
   })
 );
 
@@ -80,6 +63,7 @@ search.start();
 .ais-search-box {
   max-width: 100%;
   margin-bottom: 15px;
+  border: 1px solid red;
 }
 .post-item {
   margin-bottom: 30px;
