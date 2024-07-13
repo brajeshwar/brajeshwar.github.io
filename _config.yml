@@ -9,6 +9,16 @@ highlighter: rouge
 permalink: pretty
 permalink: /:title/
 
+search_provider: algolia
+algolia:
+  application_id: TLHGGYA9QZ
+  index_name: brajeshwar.com
+  search_only_api_key: 17f090a9f2b6488a3cbd09abdb3040ae # YOUR_SEARCH_ONLY_API_KEY
+  files_to_exclude:
+    - _redirect/*.*
+    - backups
+    - static
+
 feed:
   posts_limit: 10
   author: Brajeshwar
