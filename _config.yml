@@ -29,10 +29,11 @@ sass:
 
 plugins:
   - jekyll-feed
-  - jekyll-optional-front-matter
-  - jekyll-paginate
-  - jekyll-redirect-from  
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-algolia
+  - jekyll-redirect-from  
+  - jekyll-optional-front-matter
   - jekyll-titles-from-headings
   
 optional_front_matter:
