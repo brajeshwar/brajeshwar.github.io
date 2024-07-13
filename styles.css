@@ -24,4 +24,4 @@
 {% include css/debug.css %}
 
 {%- endcapture -%}
-{{- include_to_scssify | scssify | strip_newlines  -}}
+{{- include_to_scssify | scssify | strip_newlines -}}
