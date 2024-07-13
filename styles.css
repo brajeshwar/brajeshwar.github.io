@@ -17,6 +17,7 @@
 {% include css/footer.css %}
 {% include css/home.css %}
 {% include css/archives.css %}
+{% include css/search.css %}
 {% include css/post.css %}
 
 {% include css/switch.css %}

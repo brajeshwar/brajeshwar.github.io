@@ -1,0 +1,118 @@
+.search__provider {
+}
+
+.gcse-search {}
+.gsc-control-cse, .gsc-control-cse-en {
+	margin: 0 !important;
+	padding: var(--space-small) !important;
+	border-radius: var(--border-radius);
+	background: var(--color-bg-alt) !important;
+}
+
+.gsc-control-wrapper-cse {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+	border-radius: var(--border-radius);
+}
+
+table.gsc-search-box {
+	width: 100% !important;
+}
+td.gsc-input {
+	width: 80% !important;
+}
+td.gsc-search-button {
+	width: 20% !important;
+}
+
+.gsc-input-box {
+	height: var(--space-large) !important;
+}
+
+.gsc-input {}
+
+.gsib_a .gsc-input {
+	line-height: var(--scale-golden);
+	font-size: var(--size-small);
+	color: var(--text-color);
+}
+
+.gsc-search-button {
+	border-radius: var(--border-radius);
+	text-align: right !important;
+	width: 90% !important;
+	height: 40px !important;
+}
+
+.gsc-search-button svg {
+	display: block;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+.gsc-search-button-v2 {}
+
+.gsc-resultsRoot {
+	background: black !important;
+	border-radius: var(--border-radius);
+}
+.gsc-results {}
+
+/* Google's Programmable Search Engine (erstwhile Custom Search Engine) */
+/* Use a different font family for search results */
+.gs-title,
+.gs-snippet {
+}
+
+/* Add a border between individual search results */
+.gs-webResult {}
+
+/* Do no display the count of search results */
+.gsc-result-info {
+  display: none;
+}
+
+/* Hide the Google branding in search results */
+.gcsc-branding {
+  display: none;
+}
+
+/* Hide the thumbnail images in search results */
+.gsc-thumbnail {
+  display: none;
+}
+
+/* Hide the snippets in Google search results */
+.gs-snippet {
+  display: none;
+}
+
+/* Change the font size of the title of search results */
+.gs-title a {
+  font-size: 1.2rem;
+}
+
+/* Change the font size of snippets inside search results */
+.gs-snippet {
+  font-size: 1rem;
+}
+
+/* Google Custom Search highlights matching words in bold, toggle that */
+.gs-title b,
+.gs-snippet b {
+  font-weight: normal;
+}
+
+/* Do no display the URL of web pages in search results */
+.gsc-url-top,
+.gsc-url-bottom {
+  display: none;
+}
+
+/* Highlight the pagination buttons at the bottom of search results */
+.gsc-cursor-page {
+  font-size: 1.5em;
+  padding: 4px 8px;
+  border: 2px solid #ccc;
+}

@@ -2,6 +2,7 @@ title: Brajeshwar
 description: 'I am an entrepreneur, and technologist, with a deep focus on leadership in products and designs.'
 
 url: 'https://brajeshwar.com'
+baseurl: ''
 
 markdown: kramdown
 highlighter: rouge
