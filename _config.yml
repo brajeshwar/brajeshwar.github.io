@@ -13,6 +13,10 @@ feed:
   posts_limit: 10
   author: Brajeshwar
 
+sass:
+  style: compressed
+  sourcemap: never
+
 plugins:
   - jekyll-feed
   - jekyll-optional-front-matter
