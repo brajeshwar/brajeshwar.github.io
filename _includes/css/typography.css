@@ -14,9 +14,8 @@ blockquote {
 	font-family: var(--font-family-alt);
 	font-size: var(--size-small);
 	font-style: italic;
-	color: var(--text-color-medium);
 
-	background: var(--gray-100);
+	background: var(--color-bg-alt);
 	border-radius: var(--border-radius);
 }
 
