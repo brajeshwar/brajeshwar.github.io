@@ -19,6 +19,7 @@
 {% include css/archives.css %}
 {% include css/post.css %}
 
+{% include css/switch.css %}
 {% include css/utils.css %}
 {% include css/debug.css %}
 

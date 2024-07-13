@@ -23,7 +23,7 @@ header {
 }
 
 .logo a:hover, .logo a:active {
-	background: var(--text-color-lighter);
+	background: var(--logo-color-bg);
 }
 .logo__img, .logo__img--path {
 	fill: var(--logo-color);
@@ -44,5 +44,5 @@ header {
 }
 
 .menu a:hover, .menu a:active {
-	background: var(--text-color-lighter);
+	background: var(--color-bg-alt);
 }
