@@ -19,7 +19,7 @@ hr {
   margin: var(--space-default) auto;
   background-size: contain;
   background: var(--border-color);
-  border: 0 none;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .title,
@@ -38,7 +38,7 @@ kbd {
 figure {
   margin: 0;
   padding: 0;
-  background: var(--gray-200);
+  background: var(--color-200);
   border-radius: var(--border-radius);
 }
 
@@ -77,7 +77,7 @@ tfoot {
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--gray-100);
+  background-color: var(--color-100);
 }
 
 tbody tr:nth-child(even) button {
@@ -85,7 +85,7 @@ tbody tr:nth-child(even) button {
 }
 
 tbody tr:nth-child(even) button:hover {
-  background-color: var(--gray-200);
+  background-color: var(--color-200);
 }
 
 /* Restrict sizing to the page width. */

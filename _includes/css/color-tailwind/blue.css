@@ -1,0 +1,14 @@
+/* "Blue" from Tailwind color https://tailwindcss.com/docs/customizing-colors */
+:root {
+  --color-50:  #eff6ff;
+  --color-100: #dbeafe;
+  --color-200: #bfdbfe;
+  --color-300: #93c5fd;
+  --color-400: #60a5fa;
+  --color-500: #3b82f6;
+  --color-600: #2563eb;
+  --color-700: #1d4ed8;
+  --color-800: #1e40af;
+  --color-900: #1e3a8a;
+  --color-950: #172554;
+}

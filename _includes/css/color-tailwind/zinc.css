@@ -1,0 +1,14 @@
+/* "Zinc" from Tailwind color https://tailwindcss.com/docs/customizing-colors */
+:root {
+  --color-50:  #fafafa;
+  --color-100: #f4f4f5;
+  --color-200: #e4e4e7;
+  --color-300: #d4d4d8;
+  --color-400: #a1a1aa;
+  --color-500: #71717a;
+  --color-600: #52525b;
+  --color-700: #3f3f46;
+  --color-800: #27272a;
+  --color-900: #18181b;
+  --color-950: #09090b;
+}

@@ -1,0 +1,14 @@
+/* "Slate" from Tailwind color https://tailwindcss.com/docs/customizing-colors */
+:root {
+  --color-50:  #f8fafc;
+  --color-100: #f1f5f9;
+  --color-200: #e2e8f0;
+  --color-300: #cbd5e1;
+  --color-400: #94a3b8;
+  --color-500: #64748b;
+  --color-600: #475569;
+  --color-700: #334155;
+  --color-800: #1e293b;
+  --color-900: #0f172a;
+  --color-950: #020617;
+}
