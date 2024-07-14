@@ -97,11 +97,9 @@ $breakpoint-medium: 800px;
 $breakpoint-large:  1024px;
 $breakpoint-extralarge: 1600px;
 
-/* themes (auto/light | dark) */
 
 :root,
 ::backdrop {
-  /* Default (light) theme */
   --color-bg: var(--color-50);
   --color-bg-alt: var(--color-200);
   --color-bg-100: var(--color-100);
@@ -127,39 +125,4 @@ $breakpoint-extralarge: 1600px;
   --border-color-harder: var(--color-500);
   --border-color-hardest: var(--color-700);
   
-}
-
-/* Dark theme */
-[data-theme="dark"] {
-  --color-bg: var(--color-800);
-  --color-bg-alt: var(--color-700);
-  --color-bg-100: var(--color-800);
-  --color-bg-200: var(--color-700);
-  --color-bg-300: var(--color-600);
-
-  --logo-color: var(--color-100);
-  --logo-color-bg: var(--color-900);
-
-  --text-color:         var(--color-300);
-  --text-color-medium:  var(--color-500);
-  --text-color-light:   var(--color-600);
-  --text-color-lighter: var(--color-700);
-  --text-color-dark:    var(--color-400);
-  --text-color-darker:  var(--color-100);
-
-  --text-color-link:          var(--color-100);
-  --text-color-link-visited:  var(--color-50);
-  --text-color-link-active:   var(--color-50);
-
-  --border-color: var(--color-600);
-  --border-color-hard: var(--color-500);
-  --border-color-harder: var(--color-400);
-  --border-color-hardest: var(--color-200);
-
-}
-
-@media (prefers-color-scheme: dark) {
-  img, video {
-    opacity: var(--opacity-lower);
-  }
 }
