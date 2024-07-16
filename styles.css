@@ -13,7 +13,6 @@
 {% include css/typography.css %}
 {% include css/forms.css %}
 {% include css/grid.css %}
-{% include css/code-vs.css %}
 
 {% include css/layout.css %}
 {% include css/header.css %}
