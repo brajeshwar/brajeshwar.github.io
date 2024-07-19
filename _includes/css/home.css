@@ -187,9 +187,13 @@
 }
 
 .cards__books a, .cards__books a:visited {
-  opacity: var(--opacity-low);
+  /* grayscale image */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 
 .cards__books a:hover, .cards__books a:active {
-  opacity: var(--opacity-reset);
+  -webkit-filter: grayscale(0);
+  filter: none;
 }
