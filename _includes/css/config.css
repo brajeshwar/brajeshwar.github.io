@@ -114,8 +114,9 @@ $breakpoint-extralarge: 1600px;
 
 :root,
 ::backdrop {
-  --color-bg: var(--color-50);
+  --color-bg: var(--color-0);
   --color-bg-alt: var(--color-200);
+  --color-bg-50 : var(--color-50);
   --color-bg-100: var(--color-100);
   --color-bg-200: var(--color-200);
   --color-bg-300: var(--color-300);
