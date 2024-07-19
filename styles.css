@@ -5,8 +5,6 @@
 {%- capture include_to_scssify -%}
 
 /* color theme */
-{% include css/color-tailwind/zinc.css %}
-
 {% include css/config.css %}
 {% include css/sanitize.css %}
 {% include css/base.css %}
