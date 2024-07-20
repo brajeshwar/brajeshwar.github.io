@@ -2,9 +2,8 @@
 layout: default
 ---
 
-<main role="main" class="container-ideal">
+<main role="main" class="container-ideal {{ page.style }}">
   <article>
-    <h1 class="text-alt">{{ page.title | escape }}</h1>
     {{ content }}
   </article>
 </main>
