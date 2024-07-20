@@ -19,6 +19,7 @@
 {% include css/archives.css %}
 {% include css/search.css %}
 {% include css/post.css %}
+{% include css/now.css %}
 
 {% include css/utils.css %}
 {% include css/debug.css %}

@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-My name is Brajeshwar Oinam.
+Hi, my name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of Imphal[^Imphal], Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 

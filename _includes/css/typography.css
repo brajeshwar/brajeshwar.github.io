@@ -19,6 +19,19 @@ blockquote {
 	border-radius: var(--border-radius);
 }
 
+mark {
+	background: var(--bg-color-300);
+	border-radius: var(--border-radius);
+	padding: var(--space-smallest) var(--space-smaller);
+	font-family: var(--font-family-monospace);
+	font-size: var(--size-smaller);
+	color: var(--text-color-light);
+}
+
 pre {
 	padding: var(--space-default);
+}
+
+code {
+	font-size: var(--size-smaller);
 }
