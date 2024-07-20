@@ -1,6 +1,12 @@
 .page-now {
 	color: var(--text-color-lightest);
+	font-weight: 200;
+}
+
+.page-now h1 {
+	font-size: var(--size-small);
 	font-weight: 100;
+	margin: 0 0 var(--space-small);
 }
 
 .page-now a {
@@ -13,35 +19,29 @@
 
 .page-now ul {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 var(--space-default);
 	padding: 0;
 }
 
 .page-now ul li {
 	margin: var(--space-smallest);
-	padding: var(--space-smallest) var(--space-small);
+	padding: 0 var(--space-small);
 }
 
-.page-now ul li ul li ul {
-	margin: var(--space-smallest) var(--space-smaller);
-	border-left: 1px solid var(--border-color-light);
+.page-now ul li ul {
+	margin: var(--space-smallest) var(--space-small);
+	border-left: 1px solid var(--border-color-lighter);
 }
 
-.page-now ul li ul li ul li {
-	margin: var(--space-smallest) var(--space-default);
-	padding: var(--space-smaller) 0;
-	border-bottom: 1px solid var(--border-color-lighter);
-	font-weight: 300;
+/* NOW */
+.page-now__now {
+	margin-bottom: var(--space-default);
 }
 
-.page-now ul li ul li ul li:last-child {
-	border: 0 none;
-}
-
-/* NOW - This is the last entry. */
-.page-now > article > ul > li:first-child > ul > li:first-child {
-	padding: var(--space-default);
-	margin: var(--space-default) 0;
+.page-now__now > ul li:first-child ul {
+	font-size: larger;
+	margin-bottom: var(--space-default);
+	padding: var(--space-smallest) var(--space-default);
 	color: var(--text-color);
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius);
@@ -49,24 +49,30 @@
 	border-bottom-color: var(--border-color);
 }
 
-.page-now > article > ul > li:first-child > ul > li:first-child a {
+.page-now__now ul li ul li {
+	padding: var(--space-smaller) 0;
+	margin: var(--space-smallest) var(--space-small);
+	border-bottom: 1px solid var(--border-color-light);
+}
+
+.page-now__now ul li ul li:last-child {
+	border-bottom: 0 none;
+}
+
+.page-now__now > ul li:first-child ul li  a {
 	color: var(--text-color-lighter);	
 }
 
-.page-now > article > ul > li:first-child > ul > li:first-child a:hover, .page-now > article > ul > li:first-child > ul > li:first-child a:active {
+.page-now__now > ul li:first-child ul li a:hover, .page-now__now > ul li:first-child ul li a:active {
 	color: var(--text-color-darkest);	
 }
 
-.page-now > article > ul > li:first-child > ul > li:first-child > ul {
-	padding: var(--space-smallest) var(--space-small);
-	border: 0 none;
-}
-
-.page-now > article > ul > li:first-child > ul > li:first-child > ul li {
+.page-now__now > ul li:first-child ul li {
+	padding: var(--space-small) 0;
 	margin: 0;
 	border-bottom: 1px solid var(--border-color);
 }
 
-.page-now > article > ul > li:first-child > ul > li:first-child > ul li:last-child {
+.page-now__now > ul li:first-child ul li:last-child {
 	border-bottom: 0 none;
 }
