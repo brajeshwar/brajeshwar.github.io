@@ -5,7 +5,7 @@ body {
   font-family: var(--font-family-sans);
   line-height: var(--scale-golden);
   color: var(--text-color);
-  background: var(--color-bg);
+  background: var(--bg-color);
 
   transition: background 500ms ease-in-out, color 200ms ease;
 }
@@ -30,9 +30,10 @@ kbd {
 }
 
 figure {
-  margin: 0;
+  margin: var(--space-default) 0;
   padding: 0;
-  background: var(--color-200);
+  background: var(--color-100);
+  border-bottom: 1px solid var(--border-color-light);
   border-radius: var(--border-radius);
 }
 

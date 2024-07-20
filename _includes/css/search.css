@@ -1,12 +1,14 @@
 .search__provider {
+	border: 1px solid var(--border-color) !important;
+	border-radius: var(--border-radius);
 }
 
 .gcse-search {}
 .gsc-control-cse, .gsc-control-cse-en {
 	margin: 0 !important;
 	padding: var(--space-small) !important;
+	background: var(--bg-color-50) !important;
 	border-radius: var(--border-radius);
-	background: var(--color-bg-alt) !important;
 }
 
 .gsc-control-wrapper-cse {

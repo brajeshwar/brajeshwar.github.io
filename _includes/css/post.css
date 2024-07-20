@@ -17,7 +17,7 @@
 	
 	padding: 0;
 	margin: var(--space-large) auto;
-	background: var(--color-bg-alt);
+	background: var(--bg-color-100);
 	border-radius: var(--border-radius-larger);
 
 	font-size: smaller;
@@ -28,12 +28,12 @@
 	display: block;
 	padding: var(--space-smaller);
 	text-decoration: none;
-	color: var(--text-color-medium);
+	color: var(--text-color-lighter);
 }
 
 .post-nav a:hover, .post-nav a:active {
-	color: var(--text-color-darker);
-	background: var(--color-bg-300);
+	color: var(--text-color-dark);
+	background: var(--bg-color-200);
 }
 
 .post-nav__prev, .post-nav__next {}
