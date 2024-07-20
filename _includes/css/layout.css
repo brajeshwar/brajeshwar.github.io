@@ -13,8 +13,10 @@
 .footnotes {
 	margin: var(--space-default) 0;
 	padding: var(--space-default);
+	color: var(--text-color-lighter);
 	font-size: var(--size-smaller);
-	border-top: 1px solid var(--border-color);
+	background: var(--bg-color-50);
+	border-radius: var(--border-radius);
 }
 
 .reversefootnote {

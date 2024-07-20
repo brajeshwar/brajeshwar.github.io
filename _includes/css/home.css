@@ -7,23 +7,32 @@
 
 .intro__title {
   font-size: var(--size-large);
+  margin: 0;
 }
+
+.intro__title--sub {}
 
 .intro strong {
   display: block;
 }
 
 .sidekick {
-  max-width: var(--body-width-ideal);
+  margin: var(--space-smaller) 0;
+  padding: var(--space-smaller) var(--space-default);
+  font-weight: 100;
+  font-size: var(--size-default);
+  border-radius: var(--border-radius);
+  background: var(--bg-color-100);
+  border: 1px solid var(--border-color-light);
 }
 
 /* home: blog */
 .home__blog {
   font-size: var(--size-large);
-  font-weight: 200;
+  font-weight: 100;
 }
 .home__blog--context {
-  font-size: var(--size-medium);
+  font-size: var(--size-default);
 }
 .home__blog--items {
   list-style: none;
@@ -48,14 +57,14 @@
   flex-grow: 1;
 
   border-radius: var(--border-radius);
-  background: var(--color-bg-alt);
-  border: 1px solid var(--border-color);
-  border-bottom-color: var(--border-color-hard);
+  background: var(--bg-color-50);
+  border: 1px solid var(--border-color-light);
+  border-bottom-color: var(--border-color);
 }
 .home__blog--item:hover, .home__blog--item:active {
   cursor: pointer;
-  background: var(--color-bg);
-  border: 1px solid var(--border-color-hard);
+  background: var(--bg-color-lightest);
+  border: 1px solid var(--border-color);
 }
 .home__blog--item a, .home__blog--item a:visited {
   display: block;
@@ -71,13 +80,12 @@
 }
 .home__blog--meta {
   font-size: small;
-  color: var(--text-color);
+  color: var(--text-color-lighter);
   padding-top: var(--space-smaller);
   display: block;
 }
 .home__blog--footer {
   font-size: var(--size-small);
-  text-align: right;
 }
 .home__blog--footer a {
   text-transform: uppercase;
@@ -120,7 +128,7 @@
 
 .support__footer {
   color: var(--text-color);
-  background: var(--color-bg-alt);
+  background: var(--bg-color-100);
   border-radius: var(--border-radius);
   padding: var(--space-smaller) var(--space-small);
   line-height: var(--scale);
@@ -136,10 +144,13 @@
 /* connect */
 .connect {}
 .connect ul {
-  padding: 0 var(--space-small);
-  margin: 0 var(--space-smaller);
+  list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: var(--size-smaller);
   color: var(--text-color-light);
+}
+.connect ul li {
 }
 .connect__title {
   font-weight: 200;
@@ -155,6 +166,13 @@
   text-transform: lowercase;
   margin: 0;
   padding: 0;
+}
+
+.connect span {
+  margin-right: var(--space-smaller);
+  font-family: var(--font-family-monospace);
+  font-size: var(--size-smaller);
+  color: var(--text-color-lighter);
 }
 
 /* Books */

@@ -39,7 +39,7 @@ header {
 .menu {
 	padding: var(--space-smaller) var(--space-small);
 	font-size: smaller;
-	background: var(--color-bg-50);
+	background: var(--bg-color-50);
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius-larger);
 }
