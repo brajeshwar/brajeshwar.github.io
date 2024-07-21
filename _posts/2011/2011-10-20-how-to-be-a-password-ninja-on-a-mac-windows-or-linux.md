@@ -10,7 +10,7 @@ The best thing about it is that the File format is the same on all Operating Sys
 
 Here is a typical setup you can follow to sync across platforms/computers:
 
-`Save your Keepass file in your [Dropbox](http://www.dropbox.com/) folder.`
+Save your Keepass file in your [Dropbox](http://www.dropbox.com/) folder.
 
 
 ## More about Keepass
