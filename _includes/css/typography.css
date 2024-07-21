@@ -30,6 +30,8 @@ mark {
 
 pre {
 	padding: var(--space-default);
+	background: var(--color-zero);
+	border-radius: var(--border-radius);
 }
 
 code {
