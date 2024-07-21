@@ -7,8 +7,7 @@
 	font-size: var(--size-small);
 	font-weight: 100;
 	margin: 0 0 var(--space-small);
-	padding: var(--space-small) 0;
-	border-top: 1px solid var(--border-color-light);
+	padding: 0;
 }
 
 .page-now a {
@@ -32,7 +31,17 @@
 
 .page-now ul li ul {
 	margin: var(--space-smallest) var(--space-small);
+	padding: 0 var(--space-small);
 	border-left: 1px solid var(--border-color-lighter);
+}
+
+.page-now ul li ul li {
+	padding: var(--space-small) 0;
+	border-bottom: 1px solid var(--border-color-lighter);
+}
+
+.page-now ul li ul li:last-child {
+	border: 0 none;
 }
 
 /* NOW */
