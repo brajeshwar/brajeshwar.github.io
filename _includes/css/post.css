@@ -5,6 +5,15 @@
 	line-height: var(--scale);
 }
 
+.post__meta {
+	display: block;
+	padding: var(--space-smallest) var(--space-small);
+	background: var(--bg-color-50);
+	border-radius: var(--border-radius-larger);
+	font-size: smaller;
+	color: var(--text-color-light);
+}
+
 .post img {
 	width: 100%;
 	height: auto;
