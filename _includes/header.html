@@ -2,13 +2,14 @@
   <section class="container">
     <div class="header">
       <div class="logo">
-        <a href="{{ site.url }}" title="{{ site.title }}">
+        <a href="{{ site.baseurl | prepend: site.url }}" title="{{ site.title }}">
           {% include brajeshwar-logo.svg %}
         </a>
       </div>
       <nav class="menu">
-        <a href="/about/">About</a>
-        <a href="/archives/">Archives</a>
+        <a href="{{ site.baseurl | prepend: site.url }}/about/">About</a>
+        <a href="{{ site.baseurl | prepend: site.url }}/archives/">Archives</a>
+        <a href="{{ site.baseurl | prepend: site.url }}/now/">Now</a>
       </nav>
       <!-- 
         perhaps a light/dark theme

@@ -7,7 +7,7 @@ You can use the ContextMenu class with the standard menus on the Flash Context M
 
 Here is a simple example to hide selective menu items from the context menu.
 
-```
+```as
 conMenu_cm = new ContextMenu ();
 //remove the menu items "zoom" and "quality"
 conMenu_cm.builtInItems.zoom = false;
@@ -17,7 +17,7 @@ _level0.menu = conMenu_cm;
 
 Here is another simple example to hide all built-in menus but show only selective ones.
 
-```
+```as
 conMenu_cm = new ContextMenu ();
 //hide the BuiltInItems
 conMenu_cm.hideBuiltInItems();

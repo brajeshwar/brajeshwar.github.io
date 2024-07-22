@@ -6,7 +6,7 @@ This is possible with the [CSS2 standard (CSS2 standard)](http://www.w3.org/TR/R
 
 Now, You can have something like;
 
-```
+```css
 .myStyle {
 	width : 50%;
 	max-height : 12px;
