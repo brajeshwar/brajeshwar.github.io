@@ -37,3 +37,8 @@ pre {
 code {
 	font-size: var(--size-smaller);
 }
+
+/* code highlighter from https://github.com/richleland/pygments-css */
+.highlight {
+	border-radius: var(--border-radius);
+}
