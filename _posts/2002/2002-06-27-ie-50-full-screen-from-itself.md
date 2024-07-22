@@ -4,7 +4,7 @@ There was some discussion on the Macromedia Flash Forum about Full screen from t
 
 Have the folllowing Javascript
 
-```
+```js
 function fullscreen(){
  var hdiff;
  window.moveTo(-4,-4);

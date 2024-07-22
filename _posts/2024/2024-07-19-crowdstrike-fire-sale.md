@@ -1,4 +1,4 @@
-# CrowdStrike - a Fire Sale!
+# CrowdStrike - a Fire Sale
 
 “Everything must go.”
 
