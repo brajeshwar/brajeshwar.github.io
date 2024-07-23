@@ -12,13 +12,23 @@
 /* footnotes */
 .footnotes {
 	margin: var(--space-default) 0;
-	padding: var(--space-default);
+	padding: var(--space-default) 0;
 	color: var(--text-color-lighter);
 	font-size: var(--size-smaller);
-	background: var(--bg-color-50);
+	background: var(--bg-color-100);
 	border-radius: var(--border-radius);
 }
 
 .reversefootnote {
-	text-decoration: none;
+  visibility: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.reversefootnote:after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\21B5";
 }

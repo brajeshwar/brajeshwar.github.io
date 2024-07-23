@@ -27,3 +27,11 @@ iframe, object, embed {
 	height: var(--embed-video-height);
   border-radius: var(--border-radius);
 }
+
+.pill {
+	display: inline-block;
+	white-space: nowrap;
+	padding: 0 var(--space-smaller);
+	border-radius: var(--border-radius-largest);
+	background: var(--color-100);
+}

@@ -9,11 +9,10 @@ a:hover, a:active {
 }
 
 blockquote {
-	margin: var(--space-default);
+	margin: var(--space-default) var(--space-smaller);
 	padding: var(--space-smallest) var(--space-default);
 	font-family: var(--font-family-alt);
 	font-size: var(--size-small);
-	font-style: italic;
 
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius);

@@ -104,16 +104,14 @@
 }
 
 .home__blog--popular-items {
+  color: var(--text-color-lighter);
   font-size: var(--size-small);
-  list-style: none;
   margin: var(--space-default);
-  padding: 0;
+  padding: 0 var(--space-smallest);
 }
 
 .home__blog--popular-items span {
-  font-family: var(--font-family-monospace);
   font-size: smaller;
-  margin-right: var(--space-default);
 }
 
 .home__blog--popular-items a {
