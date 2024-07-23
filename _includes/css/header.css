@@ -11,6 +11,13 @@ header {
 	gap: var(--space-smaller);
 }
 
+/* small screens - flush left */
+@media (max-width: $breakpoint-small) {
+  .header {
+  	justify-content: left;
+	}
+}
+
 .header a {
 	text-decoration: none;
 }
