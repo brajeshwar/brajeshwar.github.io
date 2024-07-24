@@ -69,9 +69,9 @@
   --space-default:  calc(var(--scale) * 1rem);
   --space-large:    calc(var(--scale) * 2rem);
   --space-larger:   calc(var(--scale) * 3rem);
-  --space-small:    calc(var(--scale-small) * 1rem);
+  --space-small:    calc(var(--scale-small) * 0.8rem);
   --space-smaller:  calc(var(--scale-small) * 0.5rem);
-  --space-smallest: calc(var(--scale-small) * 0.2rem);
+  --space-smallest: calc(var(--scale-small) * 0.1rem);
 
   --size-default:   calc(var(--scale) * 1.2rem);
   --size-small:     calc(var(--scale) * 0.9rem);

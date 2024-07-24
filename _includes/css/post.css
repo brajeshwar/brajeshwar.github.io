@@ -7,6 +7,7 @@
 
 .post__meta {
 	display: block;
+	margin: var(--space-default) 0;
 	padding: var(--space-smallest) var(--space-small);
 	background: var(--bg-color-50);
 	border-radius: var(--border-radius-larger);

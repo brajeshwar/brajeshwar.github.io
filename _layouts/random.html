@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Go to a random page</title>
+
+<script>
+var comingFromPost = document.referrer;
+
+function linkToRandomBlogPost() {
+  var allPosts = [{% for post in site.posts %}
+      "{{ post.url }}"{% unless post.previous == nil %},{% endunless %}
+  }
+    {% endfor %}];
+
+var i = 0;
+do {
+  var randomPostLink = allPosts[Math.floor(Math.random() * allPosts.length)]; i++;}
+while (comingFromPost.includes(randomPostLink) || i > 10)
+
+if (i > 10 && comingFromPost !== '/random') {
+  randomPostLink = '/random';}
+
+if (i > 10 && comingFromPost === '/random') {
+  randomPostLink = '/random'
+  }
+
+return randomPostLink;
+}
+
+location.replace(linkToRandomBlogPost())
+
+</script>
+
+</head>
+<body>
+
+  <article style="margin: 2rem auto; text-align: center">
+    {{ content }}
+  </article>
+
+</body>
+</html>
