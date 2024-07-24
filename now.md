@@ -24,9 +24,7 @@ style: page-now
 
 {% include_relative now/2001.md %}
 
-<p>
-	<blockquote>
-		Started in Jul-2024.
-		I’ve back-dated events that are interesting to me.
-	</blockquote>
+<p class="note">
+	Started in 2024.
+	I’ve back-dated events that are interesting to me.
 </p>
