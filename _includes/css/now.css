@@ -3,10 +3,19 @@
 	font-weight: 200;
 }
 
+.page-now .note {
+	font-size: var(--size-smaller);
+	font-weight: 100;
+	text-align: center;
+	border-radius: var(--border-radius);
+	background: var(--color-50);
+	padding: var(--space-smallest);
+}
+
 .page-now h1 {
 	font-size: var(--size-small);
 	font-weight: 100;
-	margin: 0 0 var(--space-small);
+	margin: 0;
 	padding: 0;
 }
 
@@ -68,7 +77,7 @@
 
 .page-now__now ul li ul li {
 	padding: var(--space-smaller) 0;
-	margin: var(--space-smallest) var(--space-small);
+	margin: var(--space-smallest) 0;
 	border-bottom: 1px solid var(--border-color-light);
 }
 
