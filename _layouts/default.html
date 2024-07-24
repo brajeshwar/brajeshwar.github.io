@@ -22,7 +22,8 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#fafafa">
 
-<link rel="stylesheet" href="{{ site.baseurl | prepend: site.url }}/styles.css">
+{% assign cacheBust = site.time | date:'?v=%Y%B%d' %}
+<link rel="stylesheet" href="{{ "/styles.css" | relative_url | append: cacheBust }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
 
 </head>
