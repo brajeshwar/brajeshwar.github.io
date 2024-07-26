@@ -11,8 +11,11 @@ body {
 }
 
 hr {
+  padding: 0;
+  margin: var(--space-default) auto;
   border: 0;
   height: 0;
+  background: none;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -37,50 +40,16 @@ figure {
   border-radius: var(--border-radius);
 }
 
+figure img {
+  border-radius: var(--border-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 figcaption {
   margin: 0;
   padding: var(--space-smaller) var(--space-small);
   font-size: var(--size-smaller);
-}
-
-/* table */
-table {
-  border-collapse: collapse;
-  margin-bottom: 10px;
-  width: 100%;
-  table-layout: fixed;
-}
-
-table caption {
-  text-align: left;
-}
-
-td,
-th {
-  padding: 6px;
-  text-align: left;
-  vertical-align: top;
-  word-wrap: break-word;
-}
-
-thead {
-  border-bottom: 1px solid var(--border-color);
-}
-
-tfoot {
-  border-top: 1px solid var(--border-color);
-}
-
-tbody tr:nth-child(even) {
-  background-color: var(--color-100);
-}
-
-tbody tr:nth-child(even) button {
-  background-color: var(--color-white);
-}
-
-tbody tr:nth-child(even) button:hover {
-  background-color: var(--color-200);
 }
 
 /* Restrict sizing to the page width. */

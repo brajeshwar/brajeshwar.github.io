@@ -1,0 +1,36 @@
+- title: "Coupling"
+  year: 2000-2004
+  img: coupling.jpg
+  url: https://en.wikipedia.org/wiki/Coupling_(British_TV_series)
+- title: "Friends"
+  year: 1994-2004
+  img: friends.jpg
+  url: https://en.wikipedia.org/wiki/Friends
+- title: "Monty Python’s Flying Circus"
+  year: 1969–1974
+  img: monty-pythons-flying-circus.jpg
+  url: https://en.wikipedia.org/wiki/Monty_Python's_Flying_Circus
+- title: "Person of Interest"
+  year: 2011–2016
+  img: person-of-interest.jpg
+  url: https://en.wikipedia.org/wiki/Person_of_Interest_(TV_series)
+- title: "Sherlock"
+  year: 2010-2017
+  img: sherlock.jpg
+  url: https://en.wikipedia.org/wiki/Sherlock_(TV_series)
+- title: "Shōgun"
+  year: 2024
+  img: shogun.jpg
+  url: https://en.wikipedia.org/wiki/Shōgun_(2024_TV_series)
+- title: "The Queen’s Gambit"
+  year: 2000
+  img: the-queens-gambit.jpg
+  url: https://en.wikipedia.org/wiki/The_Queen's_Gambit_(miniseries)
+- title: "The X-Files"
+  year: 1993--2018
+  img: the-x-files.jpg
+  url: https://en.wikipedia.org/wiki/The_X-Files
+- title: "Westworld"
+  year: 2016-2022
+  img: westworld.jpg
+  url: https://en.wikipedia.org/wiki/Westworld_(TV_series)

@@ -35,7 +35,7 @@ td.gsc-search-button {
 .gsc-input {}
 
 .gsib_a .gsc-input {
-	line-height: var(--scale-golden);
+	line-height: var(--scale);
 	font-size: var(--size-small);
 	color: var(--text-color);
 }

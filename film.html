@@ -1,64 +1,45 @@
 ---
 layout: page-full
 title: Film
+style: page-film
 ---
 
-<article>
-	<h2>TV Series</h2>
-	<h2>Movies</h2>
-</article>
+<h2 id="tv">TV-Series</h2>
 
-# Movies
+{% if site.data.tv %}
+<ul class="item__cards">
+{% for series in site.data.tv -%}
+	<li>
+		<a href="{{ series.url }}" target="_film">
+			<figure>
+				<img width="240" height="150" src="{{ site.baseurl | prepend: site.url }}/static/film/tv/{{ series.img }}" alt="{{ series.title }}">
+  			<figcaption>{{ series.title }} <span>({{ series.year }})</span></figcaption>
+  		</figure>
+		</a>
+	</li>
+{% endfor -%}
+</ul>
+{% endif %}
 
-> Here are some of the movies we loved to watch, can re-watch, and appreciate the masterpiece.
+<h2 id="movies">Movies</h2>
 
-## 21st Century (2000-2099)
+{% if site.data.movies %}
+<ul class="item__cards">
+{% for movie in site.data.movies -%}
+	<li>
+		<a href="{{ movie.url }}" target="_film">
+			<figure>
+				<img width="240" height="150" src="{{ site.baseurl | prepend: site.url }}/static/film/movies/{{ movie.img }}" alt="{{ movie.title }}">
+  			<figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
+  		</figure>
+		</a>
+	</li>
+{% endfor -%}
+</ul>
+{% endif %}
 
-- Donnie Darko (2001)
-- Memento (2000)
-- Million Dollar Baby (2004)
-- No Country for Old Men (2007)
-- Predestination (2015)
-- Shutter Island (2010)
-- The Prestige (2006)
-- Triangle (2009)
-- Windtalkers (2002)
-
-## 20th Century (1900-1999)
-
-- 12 Angry Men (1957)
-- 2001: A Space Odyssey (1968)
-- Bicycle Thieves (1948)
-- Colossus: The Forbin Project (1970)
-- Cube (1997)
-- Das Boot (1981)
-- Fargo (1996)
-- Fight Club (1999)
-- For a Few Dollars More (1965)
-- Forrest Gump (1994)
-- Ikiru (1952)
-- Metropolis (1927)
-- Monty Python and the Holy Grail (1975)
-- Monty Python's Life of Brian (1979)
-- North by Northwest (1959)
-- One Flew Over the Cuckoo's Nest (1975)
-- One Flew Over the Cuckoo's Nest (1975)
-- Pi (1998)
-- Pulp Fiction (1994)
-- Rashomon (1950)
-- Rear Window (1954)
-- Reservoir Dogs (1992)
-- Seven Samurai (1954)
-- Sunset Boulevard (1950)
-- Taxi Driver (1976)
-- The Bridge on the River Kwai (1957)
-- The Good, the Bad and the Ugly (1966)
-- The Last of the Mohicans (1992)
-- The Third Man (1949)
-- To Kill a Mockingbird (1962)
-- Yojimbo (1961)
-
-### Was suggested; Yet to Watch
+<!-- 
+	Was suggested; Yet to Watch
 
 - Abre los Ojos (1997)
 - Brazil (1985)
@@ -75,7 +56,16 @@ title: Film
 - The Holy Mountain (1973)
 - Ugetsu (1953)
 - West Side Story (1961)
+-->
 
-### References
-
-- [Roger Ebert](https://www.rogerebert.com/great-movies) "Here are more than 300 reconsiderations and appreciations of movies from the distant past to the recent past, all of movies that I consider worthy of being called -- great." - Roger Ebert
+<article>
+	<p>
+		I enjoyed watching these films (movies and TV series). I can watch and re-watch them and continue to appreciate the masterpieces.
+	</p>
+	<h3>References</h3>
+	<ul>
+		<li>Here are more than <a href="https://www.rogerebert.com/great-movies">300 reconsiderations and appreciations of movies</a> from the distant past to the recent past, all of movies that I consider worthy of being called “great.” - Roger Ebert</li>
+		<li>IMDB’s <a href="https://www.imdb.com/list/ls064721857/">Top 200 Greatest Films Of All Time</a></li>
+	</ul>
+</article>
+ 

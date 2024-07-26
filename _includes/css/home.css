@@ -201,44 +201,20 @@
   color: var(--text-color-lighter);
 }
 
-/* Books */
-.cards__books {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--space-default);
-  row-gap: var(--space-default);
+/* Books - contained in the Flex-ed Item Cards */
+.home__books li {
+  flex: 3 3 30%;
 }
 
-.cards__books--item {
-  list-style: none;
-  vertical-align: top;
-  margin: 0;
-  padding: 0;
-  max-width: 30%;
-  
-  flex-basis: auto;
-  flex-grow: 1;
-}
-
-.cards__books--item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.cards__books a, .cards__books a:visited {
-  /* grayscale image */
+.home__books a {
+  display: block;
+  /* grayscale */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 
-.cards__books a:hover, .cards__books a:active {
+.home__books a:hover, .home__books a:active {
   -webkit-filter: grayscale(0);
   filter: none;
 }

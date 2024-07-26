@@ -32,3 +32,31 @@
   left: 0;
   content: "\21B5";
 }
+
+/* List Card Items */
+ul.item__cards {
+	list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: var(--space-default);
+  row-gap: var(--space-default);
+}
+
+ul.item__cards li {
+	list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+ul.item__cards li img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
