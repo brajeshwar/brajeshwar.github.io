@@ -4,27 +4,30 @@
 
 {%- capture include_to_scssify -%}
 
-{% include css/config.css %}
-{% include css/sanitize.css %}
-{% include css/base.css %}
-{% include css/typography.css %}
-{% include css/forms.css %}
-{% include css/table.css %}
-{% include css/code.css %}
-{% include css/grid.css %}
+{% include css/0-base-sanitize.css %}
+{% include css/0-base-code.css %}
+{% include css/0-base-config.css %}
 
-{% include css/layout.css %}
-{% include css/header.css %}
-{% include css/footer.css %}
-{% include css/home.css %}
-{% include css/archives.css %}
-{% include css/search.css %}
-{% include css/post.css %}
-{% include css/now.css %}
-{% include css/film.css %}
+{% include css/1-init.css %}
+{% include css/1-init-typography.css %}
+{% include css/1-init-forms.css %}
+{% include css/1-init-table.css %}
 
-{% include css/utils.css %}
-{% include css/debug.css %}
+{% include css/2-layout-base.css %}
+{% include css/2-layout-header.css %}
+{% include css/2-layout-footer.css %}
+{% include css/2-layout-home.css %}
+
+{% include css/3-module-archives.css %}
+{% include css/3-module-search.css %}
+{% include css/3-module-post.css %}
+{% include css/3-module-now.css %}
+{% include css/3-module-film.css %}
+
+{% include css/3-module-grid.css %}
+
+{% include css/4-tools-utils.css %}
+{% include css/4-tools-debug.css %}
 
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines -}}

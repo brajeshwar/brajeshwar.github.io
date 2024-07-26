@@ -1,11 +1,3 @@
-/*
- * TODO
- * Move all variable naming to Tailwind style;
- * --text-color-50, --text-color-100, --text-color-200, etc
- * --bg-color-50, --bg-color-100, --bg-color-200, etc
- */
-
-/* global */
 :root {
   --font-family-sans: system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-family-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
@@ -158,5 +150,4 @@ $breakpoint-extralarge: 1600px;
   
   --logo-color:     var(--color-600);
   --logo-color-bg:  var(--color-200);
-
 }

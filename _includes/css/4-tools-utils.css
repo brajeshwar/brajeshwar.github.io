@@ -35,3 +35,12 @@ iframe, object, embed {
 	border-radius: var(--border-radius-largest);
 	background: var(--color-100);
 }
+
+.link-border a {
+	text-decoration: none;
+	border-bottom: var(--border-size) solid var(--text-color-lightest);
+}
+
+.link-border a:hover, .link-border a:active {
+	border-bottom-color: var(--text-color-darker);
+}

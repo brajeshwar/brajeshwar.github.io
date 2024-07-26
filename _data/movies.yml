@@ -6,6 +6,10 @@
   year: 1968
   img: 2001-a-space-odyssey.jpg
   url: https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey
+- title: "A Trip to the Moon"
+  year: 1902
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/A_Trip_to_the_Moon
 - title: "Bicycle Thieves"
   year: 1948
   img: bicycle-thieves.jpg
