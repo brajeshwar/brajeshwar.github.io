@@ -68,3 +68,4 @@ exclude:
   - Gemfile.lock
   - gemfiles/
   - README.*
+  - now/*
