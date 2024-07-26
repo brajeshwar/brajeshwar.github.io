@@ -6,6 +6,14 @@
   year: 1994-2004
   img: friends.jpg
   url: https://en.wikipedia.org/wiki/Friends
+- title: "Fringe"
+  year: 2008–2013
+  img: fringe.jpg
+  url: https://en.wikipedia.org/wiki/Fringe_(TV_series)
+- title: "Lost"
+  year: 2005–2010
+  img: lost.jpg
+  url: https://en.wikipedia.org/wiki/Lost_(2004_TV_series)
 - title: "Monty Python’s Flying Circus"
   year: 1969–1974
   img: monty-pythons-flying-circus.jpg
@@ -22,12 +30,16 @@
   year: 2024
   img: shogun.jpg
   url: https://en.wikipedia.org/wiki/Shōgun_(2024_TV_series)
+- title: "The Big Bang Theory"
+  year: 2007-2019
+  img: the-big-bang-theory.jpg
+  url: https://en.wikipedia.org/wiki/The_Big_Bang_Theory
 - title: "The Queen’s Gambit"
   year: 2000
   img: the-queens-gambit.jpg
   url: https://en.wikipedia.org/wiki/The_Queen's_Gambit_(miniseries)
 - title: "The X-Files"
-  year: 1993--2018
+  year: 1993-2018
   img: the-x-files.jpg
   url: https://en.wikipedia.org/wiki/The_X-Files
 - title: "Westworld"
