@@ -134,6 +134,10 @@
   year: 2010
   img: shutter-island.jpg
   url: https://en.wikipedia.org/wiki/Shutter_Island_(film)
+- title: "The Lord of the Rings"
+  year: 2001-2003
+  img: the-lord-of-the-rings.jpg
+  url: https://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)
 - title: "The Prestige"
   year: 2006
   img: the-prestige.jpg
