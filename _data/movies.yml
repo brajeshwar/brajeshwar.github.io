@@ -26,6 +26,10 @@
   year: 1981
   img: das-boot.jpg
   url: https://en.wikipedia.org/wiki/Das_Boot
+- title: "Donnie Darko"
+  year: 2001
+  img: donnie-darko.jpg
+  url: https://en.wikipedia.org/wiki/Donnie_Darko
 - title: "Fargo"
   year: 1996
   img: fargo.jpg
@@ -40,121 +44,109 @@
   url: https://en.wikipedia.org/wiki/For_a_Few_Dollars_More
 - title: "Forrest Gump"
   year: 1994
-  img: img.jpg
+  img: forrest-gump.jpg
   url: https://en.wikipedia.org/wiki/Forrest_Gump
 - title: "Ikiru"
   year: 1952
-  img: img.jpg
+  img: ikiru.jpg
   url: https://en.wikipedia.org/wiki/Ikiru
 - title: "Metropolis"
   year: 1927
-  img: img.jpg
+  img: metropolis.jpg
   url: https://en.wikipedia.org/wiki/Metropolis_(1927_film)
 - title: "Monty Python and the Holy Grail"
   year: 1975
-  img: img.jpg
+  img: monty-python-and-the-holy-grail.jpg
   url: https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail
 - title: "Monty Python’s Life of Brian"
   year: 1979
-  img: img.jpg
+  img: monty-pythons-life-of-brian.jpg
   url: https://en.wikipedia.org/wiki/Monty_Python%27s_Life_of_Brian
 - title: "North by Northwest"
   year: 1959
-  img: img.jpg
+  img: north-by-northwest.jpg
   url: https://en.wikipedia.org/wiki/North_by_Northwest
 - title: "One Flew Over the Cuckoo’s Nest"
   year: 1975
-  img: img.jpg
+  img: one-flew-over-the-cuckoos-nest.jpg
   url: https://en.wikipedia.org/wiki/One_Flew_Over_the_Cuckoo%27s_Nest_(film)
 - title: "Pi"
   year: 1998
-  img: img.jpg
+  img: pi.jpg
   url: https://en.wikipedia.org/wiki/Pi_(film)
 - title: "Pulp Fiction"
   year: 1994
-  img: img.jpg
+  img: pulp-fiction.jpg
   url: https://en.wikipedia.org/wiki/Pulp_Fiction
 - title: "Rashomon"
   year: 1950
-  img: img.jpg
+  img: rashomon.jpg
   url: https://en.wikipedia.org/wiki/Rashomon
 - title: "Rear Window"
   year: 1954
-  img: img.jpg
+  img: rear-window.jpg
   url: https://en.wikipedia.org/wiki/Rear_Window
 - title: "Reservoir Dogs"
   year: 1992
-  img: img.jpg
+  img: reservoir-dogs.jpg
   url: https://en.wikipedia.org/wiki/Reservoir_Dogs
 - title: "Seven Samurai"
   year: 1954
-  img: img.jpg
+  img: seven-samurai.jpg
   url: https://en.wikipedia.org/wiki/Seven_Samurai
 - title: "Sunset Boulevard"
   year: 1950
-  img: img.jpg
+  img: sunset-boulevard.jpg
   url: https://en.wikipedia.org/wiki/Sunset_Boulevard_(film)
 - title: "Taxi Driver"
   year: 1976
-  img: img.jpg
+  img: taxi-driver.jpg
   url: https://en.wikipedia.org/wiki/Taxi_Driver
 - title: "The Bridge on the River Kwai"
   year: 1957
-  img: img.jpg
+  img: the-bridge-on-the-river-kwai.jpg
   url: https://en.wikipedia.org/wiki/The_Bridge_on_the_River_Kwai
 - title: "The Good, the Bad and the Ugly"
   year: 1966
-  img: img.jpg
+  img: the-good-the-bad-and-the-ugly.jpg
   url: https://en.wikipedia.org/wiki/The_Good,_the_Bad_and_the_Ugly
 - title: "The Last of the Mohicans"
   year: 1992
-  img: img.jpg
+  img: the-last-of-the-mohicans.jpg
   url: https://en.wikipedia.org/wiki/The_Last_of_the_Mohicans_(1992_film)
-- title: "The Third Man"
-  year: 1949
-  img: img.jpg
-  url: https://en.wikipedia.org/wiki/The_Third_Man
 - title: "To Kill a Mockingbird"
   year: 1962
-  img: img.jpg
+  img: to-kill-a-mockingbird.jpg
   url: https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird_(film)
-- title: "Yojimbo"
-  year: 1961
-  img: img.jpg
-  url: https://en.wikipedia.org/wiki/Yojimbo
-- title: "Donnie Darko"
-  year: 2001
-  img: img.jpg
-  url: https://en.wikipedia.org/wiki/Donnie_Darko
 - title: "Memento"
   year: 2000
-  img: img.jpg
+  img: memento.jpg
   url: https://en.wikipedia.org/wiki/Memento_(film)
-- title: "Million Dollar Baby"
-  year: 2004
-  img: img.jpg
-  url: https://en.wikipedia.org/wiki/Million_Dollar_Baby
 - title: "No Country for Old Men"
   year: 2007
-  img: img.jpg
+  img: no-country-for-old-men.jpg
   url: https://en.wikipedia.org/wiki/No_Country_for_Old_Men
 - title: "Predestination"
   year: 2015
-  img: img.jpg
+  img: predestination.jpg
   url: https://en.wikipedia.org/wiki/Predestination_(film)
 - title: "Shutter Island"
   year: 2010
-  img: img.jpg
+  img: shutter-island.jpg
   url: https://en.wikipedia.org/wiki/Shutter_Island_(film)
 - title: "The Prestige"
   year: 2006
-  img: img.jpg
+  img: the-prestige.jpg
   url: https://en.wikipedia.org/wiki/The_Prestige_(film)
 - title: "Triangle"
   year: 2009
-  img: img.jpg
+  img: triangle.jpg
   url: https://en.wikipedia.org/wiki/Triangle_(2009_British_film)
 - title: "Windtalkers"
   year: 2002
-  img: img.jpg
+  img: windtalkers.jpg
   url: https://en.wikipedia.org/wiki/Windtalkers
+- title: "Yojimbo"
+  year: 1961
+  img: yojimbo.jpg
+  url: https://en.wikipedia.org/wiki/Yojimbo

@@ -152,6 +152,7 @@ $breakpoint-extralarge: 1600px;
   --logo-color-bg:  var(--color-200);
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root,
   ::backdrop {

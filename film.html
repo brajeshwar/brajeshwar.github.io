@@ -29,7 +29,7 @@ style: page-film
 	<li>
 		<a href="{{ movie.url }}" target="_film">
 			<figure>
-				<img width="240" height="150" src="{{ site.baseurl | prepend: site.url }}/static/film/movies/{{ movie.img }}" alt="{{ movie.title }}">
+				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/film/movies/{{ movie.img }}" alt="{{ movie.title }}">
   			<figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
   		</figure>
 		</a>
@@ -37,6 +37,24 @@ style: page-film
 {% endfor -%}
 </ul>
 {% endif %}
+
+<h2 id="movies-india">Movies (India)</h2>
+
+{% if site.data.movies %}
+<ul class="item__cards">
+{% for movie in site.data.movies-india -%}
+	<li>
+		<a href="{{ movie.url }}" target="_film">
+			<figure>
+				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/film/movies/{{ movie.img }}" alt="{{ movie.title }}">
+  			<figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
+  		</figure>
+		</a>
+	</li>
+{% endfor -%}
+</ul>
+{% endif %}
+
 
 <article>
 	<p>
