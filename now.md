@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Now
-style: page-now
+style: page-now link-border
 ---
 
 <section class="page-now__now" markdown="1">
