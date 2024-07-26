@@ -113,17 +113,6 @@
   font-size: smaller;
 }
 
-.home__blog--popular-items a {
-  text-decoration: none;
-  color: var(--text-color-dark);
-}
-
-.home__blog--popular-items a:hover, .home__blog--popular-items a:active {
-  text-decoration: underline;
-  color: var(--text-color-darkest);
-}
-
-
 /* support & endorsements */
 .support {
   font-size: var(--size-smaller);
