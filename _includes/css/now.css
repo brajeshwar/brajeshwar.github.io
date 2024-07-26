@@ -62,6 +62,7 @@
 	padding: 0;
 	margin: 0;
 	border: 0 none;
+	color: var(--text-color);
 }
 
 .page-now__now > ul li:first-child ul {
@@ -72,7 +73,6 @@
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius);
 	border: 1px solid var(--border-color-lighter);
-	border-bottom-color: var(--border-color);
 }
 
 .page-now__now ul li ul li {

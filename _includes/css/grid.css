@@ -1,3 +1,7 @@
+/*
+ * Need to get rid of this common grid.
+ * Let's do a custom on the few places where it is needed.
+*/
 .grid {
   display: grid;
   grid-gap: var(--space-default);
@@ -21,7 +25,7 @@
 .grid__merge-five-rows { grid-row-end: span 5 }
 .grid__merge-six-rows { grid-row-end: span 6 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: $breakpoint-small) {
   .grid__c1  { grid-column-end: span 1 }
   .grid__c2  { grid-column-end: span 2 }
   .grid__c3  { grid-column-end: span 3 }

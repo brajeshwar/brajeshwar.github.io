@@ -12,7 +12,7 @@ header {
 }
 
 /* small screens - flush left */
-@media (max-width: $breakpoint-small) {
+@media only screen and (max-width: $breakpoint-small) {
   .header {
   	justify-content: left;
 	}
