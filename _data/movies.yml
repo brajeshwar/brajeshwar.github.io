@@ -8,7 +8,7 @@
   url: https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey
 - title: "A Trip to the Moon"
   year: 1902
-  img: img.jpg
+  img: a-trip-to-the-moon.jpg
   url: https://en.wikipedia.org/wiki/A_Trip_to_the_Moon
 - title: "Bicycle Thieves"
   year: 1948
@@ -24,19 +24,19 @@
   url: https://en.wikipedia.org/wiki/Cube_(1997_film)
 - title: "Das Boot"
   year: 1981
-  img: img.jpg
+  img: das-boot.jpg
   url: https://en.wikipedia.org/wiki/Das_Boot
 - title: "Fargo"
   year: 1996
-  img: img.jpg
+  img: fargo.jpg
   url: https://en.wikipedia.org/wiki/Fargo_(1996_film)
 - title: "Fight Club"
   year: 1999
-  img: img.jpg
+  img: fight-club.jpg
   url: https://en.wikipedia.org/wiki/Fight_Club
 - title: "For a Few Dollars More"
   year: 1965
-  img: img.jpg
+  img: for-a-few-dollars-more.jpg
   url: https://en.wikipedia.org/wiki/For_a_Few_Dollars_More
 - title: "Forrest Gump"
   year: 1994

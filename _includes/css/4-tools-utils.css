@@ -33,7 +33,7 @@ iframe, object, embed {
 	white-space: nowrap;
 	padding: 0 var(--space-smaller);
 	border-radius: var(--border-radius-largest);
-	background: var(--color-100);
+	background: var(--bg-color-100);
 }
 
 .link-border a {

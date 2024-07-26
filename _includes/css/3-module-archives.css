@@ -16,7 +16,7 @@
 	margin: 0;
 	padding: var(--space-smaller) var(--space-small);
 	font-weight: 200;
-	background: var(--bg-color-200);
+	background: var(--bg-color-100);
 }
 
 .archives__items {

@@ -53,9 +53,9 @@ header {
 
 .menu a {
 	padding: var(--space-smaller);
-	color: var(--color-500);
+	color: var(--text-color-dark);
 }
 
 .menu a:hover, .menu a:active {
-	color: var(--color-950);
+	color: var(--text-color-darkest);
 }
