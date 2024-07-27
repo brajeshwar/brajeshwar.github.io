@@ -53,10 +53,10 @@
   --major-second     : 1.125             ;
   --minor-second     : 1.066666667       ;
   
-  /* chosen scale for brajeshwar.com*/
-  --scale: var(--major-third);
-  --scale-small: var(--major-second);
-  --scale-golden: var(--golden);
+  --scale:        var(--golden);
+  --scale-small:  var(--major-second);
+  --scale-medium: var(--fourth);
+  --scale-large:  var(--octave);
 
   --space-default:  calc(var(--scale) * 1rem);
   --space-large:    calc(var(--scale) * 2rem);
@@ -65,20 +65,19 @@
   --space-smaller:  calc(var(--scale-small) * 0.5rem);
   --space-smallest: calc(var(--scale-small) * 0.1rem);
 
-  --size-default:   calc(var(--scale) * 1.2rem);
-  --size-small:     calc(var(--scale) * 0.9rem);
-  --size-smaller:   calc(var(--scale) * 0.8rem);
-  --size-smallest:  calc(var(--scale) * 0.6rem);
-  --size-medium:    calc(var(--scale) * 1.3rem);
+  --size-default:   calc(var(--scale) * 1rem);
+  --size-small:     calc(var(--scale) * 0.8rem);
+  --size-smaller:   calc(var(--scale) * 0.6rem);
+  --size-smallest:  calc(var(--scale) * 0.4rem);
+  --size-medium:    calc(var(--scale) * 1.2rem);
   --size-large:     calc(var(--scale) * 1.4rem);
   --size-larger:    calc(var(--scale) * 1.6rem);
   --size-largest:   calc(var(--scale) * 2rem);
 
   --opacity-reset: 1;
-  --opacity-no: 1;
   --opacity-low: 0.9;
-  --opacity-lower: 0.75;
-  --opacity-lowest: 0.6;
+  --opacity-lower: 0.7;
+  --opacity-lowest: 0.5;
 
   --transition-duration: 0.4s;
 

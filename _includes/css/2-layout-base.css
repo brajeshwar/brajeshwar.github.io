@@ -9,6 +9,15 @@
 	max-width: var(--body-width-ideal);
 }
 
+/* grid items - custom sort ordering */
+@media (max-width: $breakpoint-small) {
+  .order__1 { order: 1; }
+  .order__2 { order: 2; }
+  .order__3 { order: 2; }
+  .order__4 { order: 2; }
+  .order__5 { order: 2; }
+}
+
 /* footnotes */
 .footnotes {
 	margin: var(--space-default) 0;
