@@ -3,7 +3,7 @@ html {}
 body {
   font-size: 18px;
   font-family: var(--font-family-sans);
-  line-height: var(--scale-golden);
+  line-height: var(--scale);
   color: var(--text-color);
   background: var(--bg-color);
 
