@@ -10,14 +10,30 @@
   year: 1902
   img: a-trip-to-the-moon.jpg
   url: https://en.wikipedia.org/wiki/A_Trip_to_the_Moon
+- title: "Avatar"
+  year: 2009
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Avatar_(2009_film)
+- title: "Back to the Future"
+  year: 1985
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Back_to_the_Future
 - title: "Bicycle Thieves"
   year: 1948
   img: bicycle-thieves.jpg
   url: https://en.wikipedia.org/wiki/Bicycle_Thieves
+- title: "Blade Runner"
+  year: 1982
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Blade_Runner
 - title: "Colossus: The Forbin Project"
   year: 1970
   img: colossus-the-forbin-project.jpg
   url: https://en.wikipedia.org/wiki/Colossus%3A_The_Forbin_Project
+- title: "Contact"
+  year: 1997
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Contact_(1997_American_film)
 - title: "Cube"
   year: 1997
   img: cube.jpg
@@ -30,6 +46,10 @@
   year: 2001
   img: donnie-darko.jpg
   url: https://en.wikipedia.org/wiki/Donnie_Darko
+- title: "Eternal Sunshine of the Spotless Mind"
+  year: 2004
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind
 - title: "Fargo"
   year: 1996
   img: fargo.jpg
@@ -38,6 +58,10 @@
   year: 1999
   img: fight-club.jpg
   url: https://en.wikipedia.org/wiki/Fight_Club
+- title: "First Blood"
+  year: 1982
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/First_Blood
 - title: "For a Few Dollars More"
   year: 1965
   img: for-a-few-dollars-more.jpg
@@ -46,10 +70,38 @@
   year: 1994
   img: forrest-gump.jpg
   url: https://en.wikipedia.org/wiki/Forrest_Gump
+- title: "Gladiator"
+  year: 2000
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Gladiator_(2000_film)
+- title: "Groundhog Day"
+  year: 1993
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Groundhog_Day_(film)
+- title: "Harakiri"
+  year: 1962
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Harakiri_(1962_film)
 - title: "Ikiru"
   year: 1952
   img: ikiru.jpg
   url: https://en.wikipedia.org/wiki/Ikiru
+- title: "Inception"
+  year: 2010
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Inception
+- title: "Interstellar"
+  year: 2014
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Interstellar_(film)
+- title: "Iron Man"
+  year: 2008
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
+- title: "Léon: The Professional"
+  year: 2094
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Léon:_The_Professional
 - title: "Metropolis"
   year: 1927
   img: metropolis.jpg
@@ -62,14 +114,30 @@
   year: 1979
   img: monty-pythons-life-of-brian.jpg
   url: https://en.wikipedia.org/wiki/Monty_Python%27s_Life_of_Brian
+- title: "Memento"
+  year: 2000
+  img: memento.jpg
+  url: https://en.wikipedia.org/wiki/Memento_(film)
+- title: "No Country for Old Men"
+  year: 2007
+  img: no-country-for-old-men.jpg
+  url: https://en.wikipedia.org/wiki/No_Country_for_Old_Men
 - title: "North by Northwest"
   year: 1959
   img: north-by-northwest.jpg
   url: https://en.wikipedia.org/wiki/North_by_Northwest
+- title: "Once Upon a Time in the West"
+  year: 2068
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_the_West
 - title: "One Flew Over the Cuckoo’s Nest"
   year: 1975
   img: one-flew-over-the-cuckoos-nest.jpg
   url: https://en.wikipedia.org/wiki/One_Flew_Over_the_Cuckoo%27s_Nest_(film)
+- title: "Predestination"
+  year: 2015
+  img: predestination.jpg
+  url: https://en.wikipedia.org/wiki/Predestination_(film)
 - title: "Pi"
   year: 1998
   img: pi.jpg
@@ -90,14 +158,30 @@
   year: 1992
   img: reservoir-dogs.jpg
   url: https://en.wikipedia.org/wiki/Reservoir_Dogs
+- title: "Scarface"
+  year: 1983
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Scarface_(1983_film)
+- title: "Schindler’s List"
+  year: 1993
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Schindler%27s_List
 - title: "Seven Samurai"
   year: 1954
   img: seven-samurai.jpg
   url: https://en.wikipedia.org/wiki/Seven_Samurai
+- title: "Spirited Away"
+  year: 2001
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Spirited_Away
 - title: "Sunset Boulevard"
   year: 1950
   img: sunset-boulevard.jpg
   url: https://en.wikipedia.org/wiki/Sunset_Boulevard_(film)
+- title: "Shutter Island"
+  year: 2010
+  img: shutter-island.jpg
+  url: https://en.wikipedia.org/wiki/Shutter_Island_(film)
 - title: "Taxi Driver"
   year: 1976
   img: taxi-driver.jpg
@@ -114,26 +198,30 @@
   year: 1992
   img: the-last-of-the-mohicans.jpg
   url: https://en.wikipedia.org/wiki/The_Last_of_the_Mohicans_(1992_film)
+- title: "The Matrix"
+  year: 1999
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/The_Matrix
+- title: "The Truman Show"
+  year: 1998
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/The_Truman_Show
+- title: "The Usual Suspects"
+  year: 1995
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/The_Usual_Suspects
+- title: "The Wild Bunch"
+  year: 1969
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/The_Wild_Bunch
 - title: "To Kill a Mockingbird"
   year: 1962
   img: to-kill-a-mockingbird.jpg
   url: https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird_(film)
-- title: "Memento"
-  year: 2000
-  img: memento.jpg
-  url: https://en.wikipedia.org/wiki/Memento_(film)
-- title: "No Country for Old Men"
-  year: 2007
-  img: no-country-for-old-men.jpg
-  url: https://en.wikipedia.org/wiki/No_Country_for_Old_Men
-- title: "Predestination"
-  year: 2015
-  img: predestination.jpg
-  url: https://en.wikipedia.org/wiki/Predestination_(film)
-- title: "Shutter Island"
-  year: 2010
-  img: shutter-island.jpg
-  url: https://en.wikipedia.org/wiki/Shutter_Island_(film)
+- title: "Top Gun"
+  year: 1986
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Top_Gun
 - title: "The Lord of the Rings"
   year: 2001-2003
   img: the-lord-of-the-rings.jpg
@@ -146,6 +234,10 @@
   year: 2009
   img: triangle.jpg
   url: https://en.wikipedia.org/wiki/Triangle_(2009_British_film)
+- title: "V for Vendetta"
+  year: 2005
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/V_for_Vendetta
 - title: "Windtalkers"
   year: 2002
   img: windtalkers.jpg
