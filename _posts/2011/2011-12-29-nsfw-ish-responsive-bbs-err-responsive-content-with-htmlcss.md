@@ -8,6 +8,30 @@ Me: Hmmmm, sure, why not. I can even do a "<a href="http://www.youtube.com/watch
 
 So, I went ahead and started styling the pages. Here is the code snippet for the responsive boobs.
 
-<script src="https://gist.github.com/1534354.js"></script>
+```css
+// Smartphones
+@media (max-width: 480px) {
+	boob-size: 32;
+	boob-cup: A;
+}
+
+// Tablets and bigger landscape phones
+@media (min-width: 480px) and (max-width: 768px) {
+	boob-size: 34;
+	boob-cup: B;
+}
+
+// Portrait tablet to landscape and desktop browsers
+@media (min-width: 768px) and (max-width: 940px) {
+	boob-size: 36;
+	boob-cup: C;
+}
+
+// X-Large desktop
+@media (min-width: 1210px) {
+	boob-size: 38;
+	boob-cup: D;
+}
+```
 
 I know, that's a scary nightmare, right! Today morning, I woke up totally sweating with those codes haunting and hurting my brain.
