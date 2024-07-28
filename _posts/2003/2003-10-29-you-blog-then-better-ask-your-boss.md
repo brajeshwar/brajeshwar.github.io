@@ -8,7 +8,7 @@ For the archive sack, here is the Step No. 6.
 
 <strong>The fix </strong>: This is another Perl insert, this time into the file lib/MT/App/Comments.pm (about line 150):
 
-```
+```perl
 $Text::Wrap::cols = 72;
 $body = Text::Wrap::wrap('', '', $body) . "\n$link_url\n\n" .
    $app->translate('IP Address:') . ' ' . $comment->ip . "\n" .

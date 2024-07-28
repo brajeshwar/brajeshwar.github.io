@@ -1,0 +1,55 @@
+- title: "Nokia 5110"
+  years: 1999-1999
+  released: 1998
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Nokia_5110
+- title: "Nokia 8210"
+  years: 2000-2000
+  released: 1999
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Nokia_8210
+- title: "Nokia 8310"
+  years: 2001-2002
+  released: 2001
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Nokia_8310
+- title: "What was it?"
+  years: 2003-2004
+  released: 0000
+  img: img.jpg
+  url: 
+- title: "Motorola Razr v3"
+  years: 2005-2006
+  released: 2004
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Motorola_Razr_V3
+- title: "Nokia N95"
+  years: 2007-2008
+  released: 2006
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/Nokia_N95
+- title: "iPhone 3G"
+  years: 2008-2010
+  released: 2008
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/IPhone_3G
+- title: "iPhone 4s"
+  years: 2011-2014
+  released: 2011
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/IPhone_4s
+- title: "iPhone 6"
+  years: 2015-2018
+  released: 2014
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/IPhone_6
+- title: "iPhone 11 Pro"
+  years: 2019-2020
+  released: 2019
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/IPhone_11_Pro
+- title: "iPhone 13 Mini"
+  years: 2021-2024
+  released: 2021
+  img: img.jpg
+  url: https://en.wikipedia.org/wiki/IPhone_13

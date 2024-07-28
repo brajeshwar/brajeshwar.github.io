@@ -6,7 +6,7 @@ There had been a project (classified as of now) here where Alert Component was c
 
 Well, according to the example in the docs the clickHandler is a function reference. But if you pass a function reference as a argument, the scope with which the function is called is not going to be what you need. To get around to this, a listener object which had a click method was used, instead of the function reference and it worked; found the tip in the Using Component Events tree. Now, should we say that the docs are wrong on this. You have to pass a listener object that is either handling the event the DOM way or listen to the event the new dispatcher way.
 
-```as
+```ActionScript
 this.confirmListener = {
  click:function (evt) {
   trace (evt.detail);
