@@ -14,10 +14,6 @@
   year: 2003
   img: gozu.jpg
   url: https://en.wikipedia.org/wiki/Gozu
-- title: "Identity"
-  year: 2003
-  img: identity.jpg
-  url: https://en.wikipedia.org/wiki/Identity_(2003_film)
 - title: "Jacob’s Ladder"
   year: 1990
   img: jacobs-ladder.jpg
@@ -50,7 +46,3 @@
   year: 1953
   img: ugetsu.jpg
   url: https://en.wikipedia.org/wiki/Ugetsu
-- title: "West Side Story"
-  year: 1961
-  img: west-side-story.jpg
-  url: https://en.wikipedia.org/wiki/West_Side_Story_(1961_film)
