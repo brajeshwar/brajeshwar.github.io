@@ -22,6 +22,29 @@ img.right {
 	margin: 0 0 var(--space-small) var(--space-small);
 }
 
+@media (min-width: $breakpoint-small) {
+  figure.large,
+  img.large {
+  	margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    
+    width: 100vw;
+    max-width: var(--image-width-max);
+    transform: translateX(calc(50vw - 50%));
+  }
+
+  figure.full,
+  img.full {
+		margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-radius: 0;
+    
+    width: 100vw;
+    max-width: var(--image-width-full);
+    transform: translateX(calc(50vw - 50%));
+	}
+}
+
 /* fix youtube and other video embeds */
 iframe, object, embed {
 	height: var(--embed-video-height);

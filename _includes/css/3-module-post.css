@@ -1,8 +1,9 @@
+.page-post {}
+
 .post {}
 
 .post__title {
 	font-family: var(--font-family-alt);
-	line-height: var(--scale);
 }
 
 .post__meta {

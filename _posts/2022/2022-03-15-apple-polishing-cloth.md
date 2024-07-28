@@ -10,7 +10,7 @@ It replaces the cloth that ships with Apple's monitors, such as the Pro Display 
 
 Apple's pricing did shake the Apple fanverse with its costlier than usual pricing, at $19 (₹1,900 in India) for each piece. Nonetheless, it turned out to be one of the most successful launches in recent years -- it was back-ordered by months.
 
-<figure class="content-medium">
+<figure class="large">
   <img src="/static/2022/apple-polishing-cloth-amazon.jpg" alt="Apple Polishing Cloth against a normal microfiber cloth." loading="lazy">
   <figcaption>
     Apple Polishing Cloth against a normal microfiber cloth.
@@ -25,11 +25,6 @@ The cloth comes embossed with the Apple logo. It’s subtle, but it is there. It
 
 Is it worth it? Well, it depends. It turned out to be a thing-of-awe for me, to buy and keep it -- perhaps frame it -- so I can smile, laugh, or maybe even cry with joy in the future, remembering the product do exist, and I own a piece.
 
-<figure class="content-large">
-  <img src="/static/2022/apple-polishing-cloth-keyboard-mouse-trackpad.jpg" alt="Apple Polishing blends perfectly with other Apple products." loading="lazy">
-  <figcaption>
-    Apple Polishing blends perfectly with other Apple products.
-  </figcaption>
-</figure>
+<img class="full" src="/static/2022/apple-polishing-cloth-keyboard-mouse-trackpad.jpg" alt="Apple Polishing blends perfectly with other Apple products." loading="lazy">
 
 To compensate for the guilt, I had been skipping lunch every Saturday ever since I bought the Apple Polishing Cloth.
