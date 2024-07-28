@@ -18,7 +18,7 @@ Most accelerators like to focus on one type of startup. For example, some only w
 
 Most accelerators will offer you mentorship, workspace, operational support and access to funding via introductions to angel investors or outright payments. Program durations run anywhere from a few weeks to a few months. Many programs are quite competitive and only accept 2 to 10 startups a year.
 
-![Startup Accelerator)](/static/2016/accelerator.jpg)
+<img class="full" src="/static/2016/accelerator.jpg" alt="Startup Accelerator">
 
 Here’s a list of great accelerators and the types of startups they work with.
 

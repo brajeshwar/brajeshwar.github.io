@@ -26,10 +26,11 @@ hr {
 
 kbd {
   background: var(--color-white);
-  border-bottom: 2px solid var(--border-color-dark);
+  border-bottom: var(--border-size) solid var(--border-color);
   border-radius: var(--border-radius);
-  color: var(--text-color-light);
-  padding: 0 var(--space-smallest);
+  color: var(--text-color-lighter);
+  padding: var(--space-smallest) var(--space-smaller);
+  font-size: smaller;
 }
 
 figure {

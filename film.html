@@ -6,19 +6,19 @@ style: page-film
 
 <p>
 	I enjoyed watching these
-	<a href="https://en.wikipedia.org/wiki/Film">films</a> (movies and TV series).
+	<a href="https://en.wikipedia.org/wiki/Film">films</a> (movies and tv-series).
 	I can watch, and re-watch them, and continue to appreciate the masterpieces.
 </p>
 
-<h2 id="tv">TV-Series</h2>
-
 {% if site.data.tv %}
+<h2 id="tv">TV-Series</h2>
 <ul class="item__cards">
-{% for series in site.data.tv -%}
+{% assign sorted_series = site.data.tv | sort:'title' -%}
+{% for series in sorted_series -%}
 	<li>
 		<a href="{{ series.url }}" target="_film">
 			<figure>
-				<img width="240" height="150" src="{{ site.baseurl | prepend: site.url }}/static/film/{{ series.img }}" alt="{{ series.title }}">
+				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/film/{{ series.img }}" alt="{{ series.title }}">
   			<figcaption>{{ series.title }} <span>({{ series.year }})</span></figcaption>
   		</figure>
 		</a>
@@ -27,11 +27,11 @@ style: page-film
 </ul>
 {% endif %}
 
+{% if site.data.movies %}
 <h2 id="movies">Movies</h2>
-
-{% if site.data.movies %}
 <ul class="item__cards">
-{% for movie in site.data.movies -%}
+{% assign sorted_movies = site.data.movies | sort:'title' -%}
+{% for movie in sorted_movies -%}
 	<li>
 		<a href="{{ movie.url }}" target="_film">
 			<figure>
@@ -44,28 +44,11 @@ style: page-film
 </ul>
 {% endif %}
 
-<h2 id="movies-india">Movies (India)</h2>
-
 {% if site.data.movies %}
-<ul class="item__cards">
-{% for movie in site.data.movies-india -%}
-	<li>
-		<a href="{{ movie.url }}" target="_film">
-			<figure>
-				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/film/{{ movie.img }}" alt="{{ movie.title }}">
-  			<figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
-  		</figure>
-		</a>
-	</li>
-{% endfor -%}
-</ul>
-{% endif %}
-
 <h2 id="movies-india">Movies (To Watch)</h2>
-
-{% if site.data.movies %}
 <ul class="item__cards">
-{% for movie in site.data.movies-tbd -%}
+{% assign sorted_movies = site.data.movies-tbd | sort:'title' -%}
+{% for movie in sorted_movies -%}
 	<li>
 		<a href="{{ movie.url }}" target="_film">
 			<figure>

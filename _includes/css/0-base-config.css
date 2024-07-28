@@ -26,10 +26,11 @@
   --color-900: #101010;
   --color-950: #0a0a0a;
   
-  --body-width: 96%;
-  --body-width-max: 76rem; /* visual width */
-  --body-width-ideal: 46rem; /* ideal reading width */
-
+  --body-width:         96%;
+  --body-width-ideal:   46rem; /* ideal reading width */
+  --body-width-max:     76rem; /* visual width */
+  --body-width-medium:  60rem; /* objects that are large but not max */
+  
   --embed-video-height: calc(0.5625 * var(--body-width-ideal)); /* manual height based on the ideal width against the video ratio, mostly youtube which is 315/560=0.5625 */
 
   /* modular scale */
@@ -93,6 +94,9 @@
   --border-size-large: 10px;
 
   --logo-size: 42px;
+
+  --image-width-max: var(--body-width-medium);
+  --image-width-full: 1600px;
 }
 
 /*

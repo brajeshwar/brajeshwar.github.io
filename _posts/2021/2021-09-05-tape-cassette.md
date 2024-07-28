@@ -4,7 +4,7 @@
 
 Tapedeck showcase the amazing beauty in the designs of the common audio tape cassette. There's an amazing range of designs, starting from the early 60's functional cassette designs, moving through the colourful playfulness of the 70's audio tapes to amazing shape variations during the 80's and 90's.
 
-<div class="gallery content-large">
+<div class="gallery large">
   <img src="https://cdn.oinam.com/img/tape-cassette/agfa_ferrocolor_60_rot.webp">
   <img src="https://cdn.oinam.com/img/tape-cassette/basf_chrome_extra_ii_90c_081001.webp">
   <img src="https://cdn.oinam.com/img/tape-cassette/denon_dxm_60_080417.webp">

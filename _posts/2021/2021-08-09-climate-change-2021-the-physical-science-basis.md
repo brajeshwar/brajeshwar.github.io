@@ -8,7 +8,7 @@ More than 200 scientists from over 60 countries contributed to the Report - [Cli
 
 Humans have already heated the planet by roughly 1.1°Celsius, since the 19th century. The warming is happening even faster than scientists previously thought. The latest projections have us reaching or exceeding the 1.5°C threshold scientists say is critical to stay below -- within the next decade or two.
 
-<figure class="content-large">
+<figure class="large">
   <img src="/static/2021/climate-change.jpg" alt="Climate Change" loading="lazy">
   <figcaption>
     "As we witness our planet transforming around us we watch, listen, measure … respond."

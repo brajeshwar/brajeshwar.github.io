@@ -6,7 +6,7 @@ Webb will be the largest, most powerful telescope ever launched into space. It f
 
 In this lifetime, we are entering another era of learning more about the Universe. The Hubble changed how we saw and understand the Universe around us. The Webb telescope will bring in the next unprecedented wave of information, and we are ready to blow our minds.
 
-<figure class="content-large">
+<figure class="large">
   <a href="https://www.flickr.com/photos/nasawebbtelescope/"><img src="https://cdn.oinam.com/img/science/webb-rendering-03.webp" alt="The James Webb Space Telescope" loading="lazy"></a>
   <figcaption>
     The James Webb Space Telescope (JWST or "Webb"). Photo from <a href="https://www.flickr.com/photos/nasawebbtelescope/">NASA's Flickr Photos</a>.
@@ -19,7 +19,7 @@ Objects near this point can orbit the Sun synchronously with the Earth, allowing
 
 ESA[^ESA] has a nicely done [Webb Launch Kit](https://esamultimedia.esa.int/docs/science/Webb-LaunchKit_EN.pdf) (pdf) that details the telescope and the launch.
   
-<div class="gallery content-large">
+<div class="gallery large">
   <a href="https://cdn.oinam.com/img/science/webb-in-a-nutshell-original.jpg"><img src="https://cdn.oinam.com/img/science/webb-in-a-nutshell.webp" title="Webb in a Nutshell" loading="lazy"></a>
   <a href="https://cdn.oinam.com/img/science/webb-vs-hubble-original.jpg"><img src="https://cdn.oinam.com/img/science/webb-vs-hubble.webp" title="Webb vs Hubble" loading="lazy"></a>
   <a href="https://cdn.oinam.com/img/science/webb-science-original.jpg"><img src="https://cdn.oinam.com/img/science/webb-science.webp" title="Webb Science" loading="lazy"></a>
