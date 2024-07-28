@@ -1,14 +1,17 @@
-.page-film .item__cards li {
+.page-film .item__cards li,
+.page-devices .item__cards li {
 	max-width: 220px;
 }
 
 @media only screen and (max-width: $breakpoint-small) {
-	.page-film .item__cards li {
+	.page-film .item__cards li,
+	.page-devices .item__cards li {
 		max-width: 170px;
 	}	
 }
 
-.page-film .item__cards a {
+.page-film .item__cards a,
+.page-devices .item__cards a {
 	display: block;
 	text-decoration: none;
 	background: var(--bg-color-50);
@@ -17,12 +20,14 @@
 	opacity: var(--opacity-low);
 }
 
-.page-film .item__cards a:hover, .page-film .item__cards a:active {
+.page-film .item__cards a:hover, .page-film .item__cards a:active,
+.page-devices .item__cards a:hover, .page-devices .item__cards a:active {
 	border-color: var(--border-color);
 	opacity: var(--opacity-reset);
 }
 
-.page-film figure {
+.page-film figure,
+.page-devices figure {
 	margin: 0;
 	border: 0 none;
 	background: none;
@@ -31,7 +36,12 @@
 .page-film figure img {}
 .page-film figure figcaption {}
 
-.page-film figure span {
+.page-film figure span,
+.page-devices figure span {
 	font-size: x-small;
 	color: var(--text-color-lighter);
+}
+
+.page-devices figure span {
+	display: block;
 }

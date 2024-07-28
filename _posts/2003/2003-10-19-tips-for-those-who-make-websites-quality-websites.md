@@ -6,9 +6,9 @@ The title is one of the most important element of a quality web page, more to th
 
 Useful articles, links on web standards, must DOs for Web/Internet Application developers;
 
-- <a href="http://www.maxdesign.com.au/presentation/checklist.cfm">A web standards checklist</a> (<a href="http://www.maxdesign.com.au/presentation/checklist/checklist.pdf">PDF</a>)<br />
-- <a href="http://www.google.com/webmasters/">Google Information for Webmasters</a><br />
-- <a href="http://www.456bereastreet.com/archive/200408/web_development_mistakes/">Web Development Mistakes</a><br />
-- <a href="http://webstandards.org/">The Web Standards Project</a><br />
-- <a href="http://www.w3csites.com/">W3 Compliant sites</a><br />
+- <a href="http://www.maxdesign.com.au/presentation/checklist.cfm">A web standards checklist</a> (<a href="http://www.maxdesign.com.au/presentation/checklist/checklist.pdf">PDF</a>)
+- <a href="http://www.google.com/webmasters/">Google Information for Webmasters</a>
+- <a href="http://www.456bereastreet.com/archive/200408/web_development_mistakes/">Web Development Mistakes</a>
+- <a href="http://webstandards.org/">The Web Standards Project</a>
+- <a href="http://www.w3csites.com/">W3 Compliant sites</a>
 - <a href="http://www.d.umn.edu/itss/support/Training/Online/webdesign/css.html">Web Design Reference to Cascading Style Sheets</a>

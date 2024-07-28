@@ -1,0 +1,27 @@
+---
+layout: page-full
+title: Devices
+style: page-devices
+---
+
+{% if site.data.devices %}
+<h2 id="phones">Phones</h2>
+<p>
+	I got my first personal phone in 1999 when I migrated from Manipur to Bombay. Here is the evolution of my phone and the phone home screen over the years.
+</p>
+<ul class="item__cards">
+{% for phones in site.data.devices -%}
+	<li>
+		<a href="{{ phones.url }}" target="_oinam">
+			<figure>
+				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/devices/{{ phones.img }}" alt="{{ phones.title }}">
+  			<figcaption>
+  				{{ phones.title }} ({{ phones.released }})
+  				<span>Used: {{ phones.years }}</span>
+  			</figcaption>
+  		</figure>
+		</a>
+	</li>
+{% endfor -%}
+</ul>
+{% endif %}
