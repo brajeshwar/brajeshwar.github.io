@@ -12,11 +12,11 @@
   url: https://en.wikipedia.org/wiki/A_Trip_to_the_Moon
 - title: "Avatar"
   year: 2009
-  img: img.jpg
+  img: avatar.jpg
   url: https://en.wikipedia.org/wiki/Avatar_(2009_film)
 - title: "Back to the Future"
   year: 1985
-  img: img.jpg
+  img: back-to-the-future.jpg
   url: https://en.wikipedia.org/wiki/Back_to_the_Future
 - title: "Bicycle Thieves"
   year: 1948
@@ -244,7 +244,7 @@
   url: https://en.wikipedia.org/wiki/Triangle_(2009_British_film)
 - title: "V for Vendetta"
   year: 2005
-  img: img.jpg
+  img: v-for-vendetta.jpg
   url: https://en.wikipedia.org/wiki/V_for_Vendetta
 - title: "Windtalkers"
   year: 2002
