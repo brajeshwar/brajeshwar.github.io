@@ -1,47 +1,53 @@
 :root {
-	--toggle-width: 24px;
-	--toggle-height: 24px;
-	--toggle-button-size: 0;
-	--toggle-transition-duration: 0.5s;
+  --toggle-width: 60px;
+  --toggle-height: 34px;
+  --toggle-button-size: 26px;
+  --toggle-transition-duration: var(--transition-duration);
 }
 
 .theme-switch-wrapper {
-  display: inline-block;
-  float: right;
-  width: var(--toggle-width);
-  height: var(--toggle-width);
+  display: flex;
+  align-items: center;
 }
 
 .theme-switch {
-  display: block;
+  display: inline-block;
   position: relative;
   height: var(--toggle-height);
   width: var(--toggle-width);
 }
 
-.theme-switch input { display: none; }
+.theme-switch input {
+  display: none;
+}
 
 .slider {
+  background: var(--background-color-highlight);
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   top: 0;
   cursor: pointer;
-  
-  background: transparent;
+  border-radius: var(--toggle-height);
   transition: 0.4s;
 }
 
 .slider:before {
   content: "";
   position: absolute;
-  background: transparent;
+  left: 4px;
+  bottom: 4px;
+  background: var(--background-color);
+  width: var(--toggle-button-size);;
+  height: var(--toggle-button-size);
   transition: var(--toggle-transition-duration);
   border-radius: var(--border-radius-round);
 }
 
-input:checked + .slider {}
+input:checked + .slider {
+  background: var(--background-color-highlight);
+}
 
 input:checked + .slider:before {
   transform: translateX(calc(1* var(--toggle-button-size)));
@@ -54,9 +60,26 @@ input:checked + .slider:before {
   pointer-events: none;
 }
 
-.feather {}
+.feather-moon {
+  opacity: 0;
+  left: 9px;
+  bottom: 9px;
+  transform: translateX(4px);
+}
 
-.feather-moon { opacity: 0; }
-.feather-sun { opacity: 1; }
-input:checked + .slider .feather-moon { opacity: 1; }
-input:checked + .slider .feather-sun { opacity: 0; }
+.feather-sun {
+  opacity: 1;
+  right: 10px;
+  bottom: 9px;
+  transform: translateX(0px);
+}
+
+input:checked + .slider .feather-moon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+input:checked + .slider .feather-sun {
+  opacity: 0;
+  transform: translateX(-4px);
+}
