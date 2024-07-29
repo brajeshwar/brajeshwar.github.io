@@ -67,3 +67,23 @@ iframe, object, embed {
 .link-border a:hover, .link-border a:active {
 	border-bottom-color: var(--text-color-darker);
 }
+
+/* clamp content to one line */
+.one-liner {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.visually-hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
+}

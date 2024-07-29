@@ -112,47 +112,49 @@ $breakpoint-extralarge: 1600px;
  * default and only LIGHT theme.
  * If I think I want a dark theme, replicate and reverse the palette pattern.
  */
-:root,
-::backdrop {
+@media (prefers-color-scheme: light) {
+  :root,
+  ::backdrop {
 
-  --color-zero: var(--color-white);
-  --color-full: var(--color-black);
+    --color-zero: var(--color-white);
+    --color-full: var(--color-black);
 
-  --bg-color    : var(--color-0);
-  --bg-color-50 : var(--color-50);
-  --bg-color-100: var(--color-100);
-  --bg-color-200: var(--color-200);
-  --bg-color-300: var(--color-300);
-  --bg-color-400: var(--color-400);
-  --bg-color-500: var(--color-500);
-  --bg-color-600: var(--color-600);
-  --bg-color-700: var(--color-700);
-  --bg-color-800: var(--color-800);
-  --bg-color-900: var(--color-900);
-  --bg-color-950: var(--color-950);
+    --bg-color    : var(--color-0);
+    --bg-color-50 : var(--color-50);
+    --bg-color-100: var(--color-100);
+    --bg-color-200: var(--color-200);
+    --bg-color-300: var(--color-300);
+    --bg-color-400: var(--color-400);
+    --bg-color-500: var(--color-500);
+    --bg-color-600: var(--color-600);
+    --bg-color-700: var(--color-700);
+    --bg-color-800: var(--color-800);
+    --bg-color-900: var(--color-900);
+    --bg-color-950: var(--color-950);
 
-  --text-color:           var(--color-700);
-  --text-color-light:     var(--color-600);
-  --text-color-lighter:   var(--color-500);
-  --text-color-lightest:  var(--color-400);
-  --text-color-dark:      var(--color-800);
-  --text-color-darker:    var(--color-900);
-  --text-color-darkest:   var(--color-950);
+    --text-color:           var(--color-700);
+    --text-color-light:     var(--color-600);
+    --text-color-lighter:   var(--color-500);
+    --text-color-lightest:  var(--color-400);
+    --text-color-dark:      var(--color-800);
+    --text-color-darker:    var(--color-900);
+    --text-color-darkest:   var(--color-950);
 
-  --text-color-link:          var(--color-600);
-  --text-color-link-visited:  var(--text-color-link);
-  --text-color-link-active:   var(--color-950);
+    --text-color-link:          var(--color-600);
+    --text-color-link-visited:  var(--text-color-link);
+    --text-color-link-active:   var(--color-950);
 
-  --border-color:           var(--color-300);
-  --border-color-light:     var(--color-200);
-  --border-color-lighter:   var(--color-100);
-  --border-color-lightest:  var(--color-50);
-  --border-color-dark:      var(--color-400);
-  --border-color-darker:    var(--color-600);
-  --border-color-darkest:   var(--color-800);
-  
-  --logo-color:     var(--color-600);
-  --logo-color-bg:  var(--color-200);
+    --border-color:           var(--color-300);
+    --border-color-light:     var(--color-200);
+    --border-color-lighter:   var(--color-100);
+    --border-color-lightest:  var(--color-50);
+    --border-color-dark:      var(--color-400);
+    --border-color-darker:    var(--color-600);
+    --border-color-darkest:   var(--color-800);
+    
+    --logo-color:     var(--color-600);
+    --logo-color-bg:  var(--color-200);
+  }
 }
 
 
