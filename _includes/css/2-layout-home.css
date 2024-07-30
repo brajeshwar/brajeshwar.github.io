@@ -180,3 +180,9 @@
   -webkit-filter: grayscale(0);
   filter: none;
 }
+
+.home__books img {
+  border-radius: var(--border-radius-large);
+  border-top-left-radius: var(--border-radius-tiny);
+  border-bottom-left-radius: var(--border-radius-tiny);
+}
