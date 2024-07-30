@@ -12,14 +12,14 @@
 	text-decoration: underline;
 }
 
-.archives__year {
+.archives h2 {
 	margin: 0;
 	padding: var(--space-smaller) var(--space-small);
 	font-weight: 200;
 	background: var(--bg-color-100);
 }
 
-.archives__items {
+.archives ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -27,25 +27,25 @@
 	border-right: 1px solid var(--border-color-light)
 }
 
-.archives__item {
+.archives ul li {
 	margin: 0;
 	padding: var(--space-smallest) 0 0 var(--space-small);
 }
 
-.archives__item:nth-child(even) {
+.archives ul li:nth-child(even) {
 	background: var(--bg-color-50);
 }
 
-.archives__item:last-child {
+.archives ul li:last-child {
 	padding-bottom: var(--space-default);
 	border: 0 none;
 }
 
-.archives__item--date {
+.archives ul li time {
 	font-family: var(--font-family-monospace);
 	font-size: smaller;
 	text-transform: uppercase;
 	margin-right: var(--space-smaller);
 }
 
-.archives__item--title {}
+.archives ul li a {}

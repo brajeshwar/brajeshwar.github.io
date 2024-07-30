@@ -15,16 +15,17 @@ title: Archives
 
     {%- if currentdate != date -%}
       {%- unless forloop.first -%}</ul>{% endunless %}
-      <h2 class="archives__year" id="year-{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
-      <ul class="archives__items">
+      <h2 id="{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
+      <ul>
         {% assign date = currentdate %}
       {%- endif -%}
-        <li class="archives__item">
-          <time class="archives__item--date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
-          <a class="archives__item--title" href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a>
+        <li>
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
+          <a href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a>
         </li>
       {%- if forloop.last -%}
       </ul>{% endif %}
     {% endfor %}
   </article>
+
 </main>

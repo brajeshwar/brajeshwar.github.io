@@ -18,6 +18,7 @@ blockquote {
 	padding: var(--space-smallest) var(--space-default);
 	font-family: var(--font-family-alt);
 	border-left: var(--border-size-medium) solid var(--border-color-light);
+	background: var(--bg-color-50);
 }
 
 mark {
