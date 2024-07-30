@@ -18,16 +18,16 @@
 {% include css/2-layout-footer.css %}
 {% include css/2-layout-home.css %}
 
+{% include css/3-module-pages.css %}
 {% include css/3-module-archives.css %}
 {% include css/3-module-search.css %}
 {% include css/3-module-post.css %}
 {% include css/3-module-now.css %}
-{% include css/3-module-pages.css %}
+{% include css/3-module-about.css %}
 
 {% include css/3-module-grid.css %}
 
 {% include css/4-tools-utils.css %}
-{% include css/4-tools-debug.css %}
 
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines -}}

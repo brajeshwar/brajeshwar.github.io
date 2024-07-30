@@ -5,6 +5,8 @@
   --font-family-cursive: cursive;
   --font-family-alt: var(--font-family-serif);
 
+  --font-size-base: 18px;
+
   --color-white: #fff;
   --color-black: #000;
   --color-primary: #0f2021;
@@ -82,8 +84,9 @@
 
   --transition-duration: 0.4s;
 
-  --border-radius: 5px;
-  --border-radius-small: 3px;
+  --border-radius: 7px;
+  --border-radius-tiny: 2px;
+  --border-radius-small: 4px;
   --border-radius-large: 10px;
   --border-radius-larger: 25px;
   --border-radius-largest: 42px;

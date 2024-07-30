@@ -1,3 +1,4 @@
+{% if site.data.books %}
 <article id="books">
 	<p>
 		Here are some of the all-time favorite books I have read, re-read, and would recommend. I maintain a list of interesting books that I read each year -
@@ -10,55 +11,16 @@
 		<a href="/2024/books/">2024</a>.
 	</p>
 	<ul class="item__cards home__books">
+		{% assign sorted_books = site.data.books | sort:'title' -%}
+		{% for books in sorted_books limit: 6 -%}
 		<li>
-			<a
-				href="https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People"
-				title="How to Win Friends and Influence People by Dale Carnegie">
+			<a href="{{ books.url }}" title="{{ books.title }}" target="_oinam">
 				<img
-					width="360" height="480"
-					src="/static/books/how-to-win-friends-and-influence-people.webp"
-					alt="How to Win Friends and Influence People by Dale Carnegie">
+					width="360" height="480" alt="{{ books.title }}"
+					src="{{ site.baseurl | prepend: site.url }}/static/books/{{ books.img }}">
 			</a>
 		</li>
-		<li>
-			<a
-				href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings"
-				title="The Lord of the Rings by J.R.R. Tolkien">
-				<img
-					width="360" height="480"
-					src="/static/books/the-lord-of-the-rings.webp"
-					alt="The Lord of the Rings by J.R.R. Tolkien">
-			</a>
-		</li>
-		<li>
-			<a
-				href="https://en.wikipedia.org/wiki/The_Story_of_My_Experiments_with_Truth"
-				title="The Story of My Experiments with Truth by Mohandas Karamchand Gandhi">
-				<img
-					width="360" height="480"
-					src="/static/books/the-story-of-my-experiments-with-truth.webp"
-					alt="The Story of My Experiments with Truth by Mohandas Karamchand Gandhi">
-			</a>
-		</li>
-		<li>
-			<a
-				href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things"
-				title="The Design of Everyday Things by Don Norman">
-				<img
-					width="360" height="480"
-					src="/static/books/the-design-of-everyday-things.webp"
-					alt="The Design of Everyday Things by Don Norman">
-			</a>
-		</li>
-		<li>
-			<a
-				href="https://en.wikipedia.org/wiki/Don't_Make_Me_Think"
-				title="Don’t Make Me Think">
-				<img
-					width="360" height="480"
-					src="/static/books/dont-make-me-think.webp"
-					alt="Don’t Make Me Think">
-			</a>
-		</li>
+		{% endfor -%}
 	</ul>
 </article>
+{% endif %}
