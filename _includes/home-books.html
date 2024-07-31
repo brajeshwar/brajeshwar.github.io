@@ -14,7 +14,7 @@
 		{% assign sorted_books = site.data.books | sort:'title' -%}
 		{% for books in sorted_books limit: 6 -%}
 		<li>
-			<a href="{{ books.url }}" title="{{ books.title }}" target="_oinam">
+			<a href="{{ books.url }}" title="{{ books.title }}">
 				<img
 					width="360" height="480" alt="{{ books.title }}"
 					src="{{ site.baseurl | prepend: site.url }}/static/books/{{ books.img }}">
