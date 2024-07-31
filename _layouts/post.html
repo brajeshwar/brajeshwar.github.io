@@ -5,8 +5,8 @@ layout: default
 <main role="main" class="container-ideal page-post">
 
   <article class="post">
-    <h1 class="post__title">{{ page.title }}</h1>
-    <time class="post__meta" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
     {{ content }}
   </article>
 
