@@ -2,18 +2,15 @@
 
 .post {}
 
-.post__title {
+.post h1 {
 	font-family: var(--font-family-alt);
 }
 
-.post__meta {
+.post time {
 	display: block;
-	margin: var(--space-default) 0;
-	padding: var(--space-smallest) var(--space-small);
-	background: var(--bg-color-50);
-	border-radius: var(--border-radius-larger);
-	font-size: smaller;
-	color: var(--text-color-light);
+	font-size: var(--size-smallest);
+	color: var(--text-color-lighter);
+	text-transform: uppercase;
 }
 
 .post img {
@@ -38,13 +35,13 @@
 
 .post-nav a {
 	display: block;
-	padding: var(--space-smaller);
+	padding: var(--space-smaller) var(--space-default);
 	text-decoration: none;
 	color: var(--text-color-lighter);
 }
 
 .post-nav a:hover, .post-nav a:active {
-	color: var(--text-color-dark);
+	color: var(--text-color-darker);
 	background: var(--bg-color-200);
 }
 
