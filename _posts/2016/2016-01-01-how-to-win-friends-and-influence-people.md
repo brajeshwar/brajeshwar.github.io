@@ -1,0 +1,9 @@
+# How to Win Friends and Influence People
+
+A book I have read quite a few times, would re-read, and recommend to others. [How to Win Friends and Influence People](https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People) is a 1936 self-help book written by Dale Carnegie.[^DaleCarnegie] One of the core ideas in the book is that it is possible to change other people’s behavior by changing one’s behavior towards them.
+
+The book is a classic. Yet, most of the writings in it are timeless and will remain relevant through the ages.
+
+Of course, there are critics. How you absorb the writings and make up a better version of yourself is your own.
+
+[^DaleCarnegie]: [Dale Carnegie](https://en.wikipedia.org/wiki/Dale_Carnegie) was an American writer and lecturer, and the developer of courses in self-improvement, salesmanship, corporate training, public speaking, and interpersonal skills. His first job after college was selling correspondence courses to ranchers. He moved on to selling bacon, soap, and lard for [Armour & Company](https://en.wikipedia.org/wiki/Armour_and_Company). After saving $500, he quit sales in 1911 in order to pursue a lifelong dream of becoming a Chautauqua lecturer. He ended up instead attending the American Academy of Dramatic Arts in New York, but found little success as an actor. His first collection of his writings was Public Speaking: a Practical Course for Business Men (1926), later entitled [Public Speaking and Influencing Men in Business](https://en.wikipedia.org/wiki/Public_Speaking_and_Influencing_Men_in_Business) (1932).  By the time of his death, the book had sold five million copies in 31 languages.
