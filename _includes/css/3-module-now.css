@@ -14,7 +14,7 @@
 
 .page-now h1 {
 	font-size: var(--size-small);
-	font-weight: 100;
+	font-weight: 200;
 	margin: 0;
 	padding: 0;
 }
@@ -53,7 +53,7 @@
 	border: 0 none;
 }
 
-/* NOW */
+/* NOW - NOW */
 .page-now__now {
 	margin-bottom: var(--space-default);
 }
@@ -62,17 +62,27 @@
 	padding: 0;
 	margin: 0;
 	border: 0 none;
-	color: var(--text-color);
+	color: var(--text-color-dark);
+	text-align: center;
+}
+
+.page-now__now > ul > li:first-child {
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--text-color-dark);
 }
 
 .page-now__now > ul li:first-child ul {
+	/* reset the styling from above - its parent */
+	text-align: left;
+	text-transform: none;
+	
 	font-size: larger;
-	margin-bottom: var(--space-default);
+	margin: var(--space-default) auto;
 	padding: var(--space-smallest) var(--space-default);
 	color: var(--text-color);
-	background: var(--bg-color-100);
+	background: var(--bg-color-200);
 	border-radius: var(--border-radius);
-	border: 1px solid var(--border-color-lighter);
 }
 
 .page-now__now ul li ul li {
@@ -85,8 +95,8 @@
 	border-bottom: 0 none;
 }
 
-.page-now__now > ul li:first-child ul li  a {
-	color: var(--text-color-lighter);	
+.page-now__now > ul li:first-child ul li a {
+	color: var(--text-color-light);	
 }
 
 .page-now__now > ul li:first-child ul li a:hover, .page-now__now > ul li:first-child ul li a:active {
