@@ -40,20 +40,19 @@
   flex-grow: 1;
 
   border-radius: var(--border-radius);
-  background: var(--bg-color-50);
-  border: 1px solid var(--border-color-light);
-  border-bottom-color: var(--border-color);
+  background: var(--bg-color-100);
+  border: var(--border-size) solid var(--bg-color-100);
 }
 .home__blog--item:hover, .home__blog--item:active {
   cursor: pointer;
-  background: var(--bg-color-lightest);
-  border: 1px solid var(--border-color);
+  background: var(--bg-color-50);
+  border-color: var(--border-color);
 }
 .home__blog--item a, .home__blog--item a:visited {
   display: block;
   height: 100%;
   text-decoration: none;
-  color: var(--text-color-darker);
+  color: var(--text-color-dark);
 }
 .home__blog--item a:hover, .home__blog--item a:active {}
 .home__blog--title {

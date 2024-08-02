@@ -1,4 +1,6 @@
-# Hero, the Movie
+# Hero (英雄)
+
+<img class="large" src="/static/2004/hero.webp" alt="Hero (2022)">
 
 The desert sands of Dan Gin Shan in Dun Huang, China, has some of the most remote terrain in the world and some of the most stunning too. This was where Hero, a two thousand year old epic saga was set. During the 'Warring States' Period, China was divided into seven Kingdoms. For year they battled for supremacy while the people suffered. The king of Qin was the most ruthless in his effort to conquer the land and unity All Under Heaven. He was regarded as a common threat by other six Kingdoms. The annals of Chinese history are abounded with tales of the assassins sent to kill the great king. This is one of the legends, which gave birth to a swordsman or a Wu Xia film, [Hero](https://en.wikipedia.org/wiki/Hero_(2002_film)).
 
