@@ -1,13 +1,13 @@
 # Microsoft Windows Vista Wallpapers
 
-## Download
-
 - [The Full Pack](https://archives.oinam.com/vista-wallpapers/WindowsVistaWallpaperPack.zip) (30MB)
 - [The Cool Black](https://archives.oinam.com/vista-wallpapers/vista-wallpaper-cool-black.zip) (3MB)
 - [The Widescreen](https://archives.oinam.com/vista-wallpapers/VistaWidescreen.zip) (6MB)
 - [Release 5381](https://archives.oinam.com/vista-wallpapers/WindowsVista5381.zip) (11MB)
 - [Missing Ones](https://archives.oinam.com/vista-wallpapers/WindowsVistaWallpaper-Missing.zip) (15MB)
 - [Hamad Darmish](https://archives.oinam.com/vista-wallpapers/windows-vista-wallpaper-hamad-darwish.zip) (30MB)
+
+`UPDATE:` [Download all of Microsoft Windows Wallpapers](/2021/windows-wallpapers/) from Windows 3.0 to Windows 11.
 
 <img class="full" src="/static/2006/vista-wallpaper.jpg" alt="Microsoft Vista Wallpapers">
 
