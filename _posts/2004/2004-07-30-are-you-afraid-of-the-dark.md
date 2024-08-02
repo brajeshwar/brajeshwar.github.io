@@ -1,6 +1,5 @@
 # Are you afraid of the Dark?
 
-
 Sonja Verbrugge had no idea that this was going to be her last day on earth. She was pushing her way through the sea of summer tourists overflowing the busy sidewalks of `Unter den Linden`. Don't panic, she told herself. You must keep calm.
 
 The instant message on her computer from Franz had been terrifying.

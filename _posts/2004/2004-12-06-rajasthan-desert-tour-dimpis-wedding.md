@@ -1,6 +1,8 @@
 # Rajasthan Desert Tour, Dimpi's Wedding
 
-I woke up from a slumber, I could feel the grinding feeling of the sands between my teeth, I open my eyes and saw sands around me. Three camels were there already grazing among the most minimal vegetation found on the vast desert. I scanned around myself and found that both of my friends were there too wasted, tired, lying there along with me on top of the sand dune. We discovered that we were all clad in `pagri` (head gear like the Punjabi Turban), complete with the traditional Rajasthani earings on each of our left ears. I realize we were in rush when we set out for the journey that we had to had our denims and shirts on instead of the Rajasthani wardrobe which we had really wished to dorn with. I re-shake and tried to remember the whole thing, read ahead for the whole story how I landed up riding a camel, camped on the sands, had food in the starlit night, woke up waiting for the sun to emerge from the sands.
+I woke up from a slumber, I could feel the grinding feeling of the sands between my teeth, I open my eyes and saw sands around me. Three camels were there already grazing among the most minimal vegetation found on the vast desert. I scanned around myself and found that both of my friends were also there -- wasted, tired, lying there on top of the sand dune.
+
+We discovered that we were all clad in `pagri` (head gear like the Punjabi Turban), complete with the traditional Rajasthani earings on each of our left ears. We were in rush when we set out for the journey that we had to had our denims and shirts on instead of the Rajasthani wardrobe which we had really wished to dorn with. I re-shake and tried to remember the whole thing, read ahead for the whole story how I landed up riding a camel, camped on the sands, had food in the starlit night, woke up waiting for the sun to emerge from the sands.
 
 ## Few days ago, Nov 26, 2004
 
