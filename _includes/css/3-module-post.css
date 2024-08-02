@@ -4,13 +4,23 @@
 
 .post h1 {
 	font-family: var(--font-family-alt);
+	text-align: center;
+	margin: 0 auto var(--space-small);
+}
+
+.post aside {
+	margin: var(--space-default) auto;
+	text-align: center;
+	line-height: 0.1rem;
+	border-bottom: var(--border-size) solid var(--border-color-light);
 }
 
 .post time {
-	display: block;
+	padding: var(--space-smallest) var(--space-small);
 	font-size: var(--size-smallest);
-	color: var(--text-color-lighter);
-	text-transform: uppercase;
+	color: var(--text-color-light);
+	border-radius: var(--border-radius-largest);
+	background: var(--border-color-light);
 }
 
 .post img {
