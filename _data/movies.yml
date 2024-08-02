@@ -36,7 +36,7 @@
   url: https://en.wikipedia.org/wiki/Blade_Runner_2049
 - title: "Bridge to Terabithia"
   year: 2007
-  img: img.webp
+  img: bridge-to-terabithia.webp
   url: https://en.wikipedia.org/wiki/Bridge_to_Terabithia_(2007_film)
 - title: "Colossus: The Forbin Project"
   year: 1970
@@ -58,6 +58,10 @@
   year: 2001
   img: donnie-darko.webp
   url: https://en.wikipedia.org/wiki/Donnie_Darko
+- title: "Dunkirk"
+  year: 2017
+  img: dunkirk.webp
+  url: https://en.wikipedia.org/wiki/Dunkirk_(2017_film)
 - title: "Eternal Sunshine of the Spotless Mind"
   year: 2004
   img: eternal-sunshine-of-the-spotless-mind.webp
@@ -70,10 +74,10 @@
   year: 1999
   img: fight-club.webp
   url: https://en.wikipedia.org/wiki/Fight_Club
-- title: "First Blood"
-  year: 1982
-  img: first-blood.webp
-  url: https://en.wikipedia.org/wiki/First_Blood
+- title: "Rambo"
+  year: 1982-2019
+  img: rambo.webp
+  url: https://en.wikipedia.org/wiki/Rambo_(franchise)
 - title: "For a Few Dollars More"
   year: 1965
   img: for-a-few-dollars-more.webp
@@ -96,7 +100,7 @@
   url: https://en.wikipedia.org/wiki/Harakiri_(1962_film)
 - title: "Harry Potter"
   year: 2001-2011
-  img: img.webp
+  img: harry-potter.webp
   url: https://en.wikipedia.org/wiki/Harry_Potter_(film_series)
 - title: "Identity"
   year: 2003
@@ -120,11 +124,11 @@
   url: https://en.wikipedia.org/wiki/Iron_Man_(2008_film)
 - title: "John Wick"
   year: 2014-2023
-  img: img.webp
+  img: john-wick.webp
   url: https://en.wikipedia.org/wiki/John_Wick
 - title: "Kill Bill"
   year: 2003-2004
-  img: img.webp
+  img: kill-bill.webp
   url: "https://en.wikipedia.org/wiki/Kill_Bill%3A_Volume_1"
 - title: "Léon: The Professional"
   year: 2094
@@ -140,7 +144,7 @@
   url: https://en.wikipedia.org/wiki/Metropolis_(1927_film)
 - title: "Mission: Impossible"
   year: 1996-2025
-  img: img.webp
+  img: mission-impossible.webp
   url: https://en.wikipedia.org/wiki/Mission:_Impossible_(film_series)
 - title: "Monty Python and the Holy Grail"
   year: 1975
@@ -230,6 +234,10 @@
   year: 1976
   img: taxi-driver.webp
   url: https://en.wikipedia.org/wiki/Taxi_Driver
+- title: "Tenet"
+  year: 2020
+  img: tenet.webp
+  url: https://en.wikipedia.org/wiki/Tenet_(film)
 - title: "The Bridge on the River Kwai"
   year: 1957
   img: the-bridge-on-the-river-kwai.webp
@@ -272,7 +280,7 @@
   url: https://en.wikipedia.org/wiki/The_Prestige_(film)
 - title: "Titanic"
   year: 1997
-  img: img.webp
+  img: titanic.webp
   url: https://en.wikipedia.org/wiki/Titanic_(1997_film)
 - title: "To Kill a Mockingbird"
   year: 1962
