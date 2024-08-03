@@ -1,6 +1,6 @@
 # Adobe and Macromedia
 
-My blog won't be that complete without an article that highlights the completion of the acquisition of [Macromedia](http://www.macromedia.com/) by [Adobe](http://www.adobe.com/) which was officially closed on Dec 3, 2005. One of the interesting outcome of the acquisition at this moment is the announcement that Adobe Reader to be part of the Flash Player.
+My blog won’t be that complete without an article that highlights the completion of the acquisition of [Macromedia](https://en.wikipedia.org/wiki/Macromedia) by [Adobe](http://www.adobe.com/) which was officially closed on Dec 3, 2005. One of the interesting outcome of the acquisition at this moment is the announcement that Adobe Reader to be part of the Flash Player.
 
 Macromedia Certifications;
 

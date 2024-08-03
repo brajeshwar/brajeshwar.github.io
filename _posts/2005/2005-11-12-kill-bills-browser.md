@@ -1,4 +1,4 @@
-# Kill Bill's Browser
+# Kill Bill’s Browser
 
 It looks like the whole rage against Internet Explorer have started again with wilder fury. I just saw Boing Boing's post about [Kill Bill's Browser](http://www.killbillsbrowser.com/). 
 

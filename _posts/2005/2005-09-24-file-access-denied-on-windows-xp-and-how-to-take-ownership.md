@@ -15,4 +15,4 @@ You do not have permission to read the contents of directory `folderName`. Do yo
 All permissions will be replaced if you press Yes.
 1. Click <kbd>OK</kbd>, and then reapply the permissions and security settings that you want for the folder and its contents.
 
-That's it.
+That’s it.

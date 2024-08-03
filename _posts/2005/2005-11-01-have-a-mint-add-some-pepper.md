@@ -4,4 +4,4 @@ I have installed [Mint](http://www.haveamint.com/) coupla hours ago and I am enj
 
 So, go and have a mint and add some pepper too. Currently, with a price tag of $30 per site, this is a real steal.
 
-Installation was also an easy one, I used the `php_value auto_prepend_file` and the output buffer, change/add few lines in the .htaccess file. And, that was it, Mint was running.http://www.haveamint.com/.
+Installation was also an easy one, I used the `php_value auto_prepend_file` and the output buffer, change/add few lines in the `.htaccess` file. And, that was it, Mint was running.

@@ -55,7 +55,7 @@ A typical order would look like,
 
 ```
 .
-D:\Repository\AS2Classes
+/Repository/AS2Classes
 $(LocalData)/Classes
 ```
 
