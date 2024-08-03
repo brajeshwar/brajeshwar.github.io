@@ -1,6 +1,9 @@
-# SlidePilot
+---
+img-cover: "/static/2023/slidepilot.webp"
+img-alt: "SlidePilot"
+---
 
-[![SlidePilot](/static/2023/slidepilot.png "SlidePilot")](https://slidepilotapp.com/)
+# SlidePilot
 
 [SlidePilot](https://slidepilotapp.com/) is a powerful native macOS tool for presenting PDF slides with support for LaTeX Beamer[^LaTeXBeamer].
 

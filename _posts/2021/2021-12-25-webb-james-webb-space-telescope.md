@@ -1,3 +1,8 @@
+---
+img-cover: "https://cdn.oinam.com/img/science/webb-rendering-03.webp"
+img-title: "The James Webb Space Telescope"
+---
+
 # James Webb Space Telescope (JWST or "Webb")
 
 The [James Webb Space Telescope](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope) (JWST or "Webb") is a joint NASA–ESA–CSA space telescope that is planned to succeed the Hubble Space Telescope as NASA's flagship astrophysics mission. The JWST will provide improved infrared resolution and sensitivity over Hubble[^Hubble], and will enable a broad range of investigations across the fields of astronomy and cosmology, including observing some of the most distant events and objects in the universe, such as the formation of the first galaxies.
@@ -5,13 +10,6 @@ The [James Webb Space Telescope](https://en.wikipedia.org/wiki/James_Webb_Space_
 Webb will be the largest, most powerful telescope ever launched into space. It follows in the footsteps of the Hubble Space Telescope as the next great space science observatory, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy.
 
 In this lifetime, we are entering another era of learning more about the Universe. The Hubble changed how we saw and understand the Universe around us. The Webb telescope will bring in the next unprecedented wave of information, and we are ready to blow our minds.
-
-<figure class="large">
-  <a href="https://www.flickr.com/photos/nasawebbtelescope/"><img src="https://cdn.oinam.com/img/science/webb-rendering-03.webp" alt="The James Webb Space Telescope" loading="lazy"></a>
-  <figcaption>
-    The James Webb Space Telescope (JWST or "Webb"). Photo from <a href="https://www.flickr.com/photos/nasawebbtelescope/">NASA's Flickr Photos</a>.
-  </figcaption>
-</figure>
 
 On Dec 25, 2021, the telescope is being launched on an Ariane 5 rocket from Europe’s Spaceport in French Guiana. From there it embarks on a month-long journey to its destination orbit around the second Lagrange point (L2), about 1,500,000 kilometres from Earth. In the first month after launch, Webb will unfold its sunshield, and then deploy its 6.5-metre primary mirror that can detect the faint light of distant stars and galaxies with a sensitivity a hundred times greater than that of Hubble.
 

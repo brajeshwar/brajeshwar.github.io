@@ -34,10 +34,9 @@ kbd {
 }
 
 figure {
-  margin: var(--space-default) 0;
+  margin: 0;
   padding: 0;
-  background: var(--color-100);
-  border-bottom: 1px solid var(--border-color-light);
+  text-align: center;
   border-radius: var(--border-radius);
 }
 
@@ -49,8 +48,12 @@ figure img {
 
 figcaption {
   margin: 0;
+  background: var(--color-100);
   padding: var(--space-smaller) var(--space-small);
   font-size: var(--size-smaller);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom: var(--border-size) solid var(--border-color);
 }
 
 /* Restrict sizing to the page width. */

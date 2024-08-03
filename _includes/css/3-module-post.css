@@ -1,6 +1,10 @@
-.page-post {}
+.page-post {
+	margin-top: calc(var(--space-large) * -1);
+}
 
-.post {}
+.post {
+	padding-top: var(--space-large);
+}
 
 .post h1 {
 	font-family: var(--font-family-alt);

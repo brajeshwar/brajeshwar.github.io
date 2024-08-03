@@ -1,6 +1,9 @@
-# Apple Polishing Cloth
+---
+img-cover: /static/2022/apple-polishing-cloth-keyboard-mouse-trackpad.jpg
+img-alt: Apple Polishing blends perfectly with other Apple products
+---
 
-![Apple Polishing Cloth](/static/2022/apple-polishing-cloth.jpg "Apple Polishing Cloth")
+# Apple Polishing Cloth
 
 Apple released its [Polishing Cloth](https://www.apple.com/shop/product/MM6F3AM/A/polishing-cloth) in October of 2021. It is a one-of-a-kind microfiber cloth, best earmarked for cleaning Apple hardware and devices.
 
@@ -25,6 +28,6 @@ The cloth comes embossed with the Apple logo. It’s subtle, but it is there. It
 
 Is it worth it? Well, it depends. It turned out to be a thing-of-awe for me, to buy and keep it -- perhaps frame it -- so I can smile, laugh, or maybe even cry with joy in the future, remembering the product do exist, and I own a piece.
 
-<img class="full" src="/static/2022/apple-polishing-cloth-keyboard-mouse-trackpad.jpg" alt="Apple Polishing blends perfectly with other Apple products." loading="lazy">
+![Apple Polishing Cloth](/static/2022/apple-polishing-cloth.jpg "Apple Polishing Cloth")
 
 To compensate for the guilt, I had been skipping lunch every Saturday ever since I bought the Apple Polishing Cloth.
