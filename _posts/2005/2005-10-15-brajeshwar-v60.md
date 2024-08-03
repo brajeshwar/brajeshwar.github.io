@@ -4,9 +4,10 @@ I have been planning a revamp for almost a year and when I finally did one, it l
 
 Onwards, browsing through the galley section at [CSSVault](http://cssvault.com/), I am totally amazed at how people come up with some of the best known UI Designs. Look at the cool UI Designs,
 [Spilt Cocoa](http://chiseko.hosted.doosh.net/),
-"Folietto (Folietto)":http://www.folietto.at/,
-"JoshDura (JoshDura)":http://www.joshdura.com/,
-"Snook (Snook)":http://www.snook.ca/jonathan/, etc.
+[Folietto](http://www.folietto.at/),
+[JoshDura](http://www.joshdura.com/),
+[Snook](http://www.snook.ca/jonathan/),
+etc.
 
 But then, with the current v6, I have learnt few more xhtml, css tricks and am trying my best to implement some if not all of them;
 

@@ -1,5 +1,7 @@
 # Sin City, Hostage, Sahara, Elektra, Hitch
 
+<img class="full" src="/static/2005/sin-city.webp" alt="Sin City">
+
 One thing about the movie is that, "It was very much like a comic book." Just like Frank Miller's Comic work, it was black and white with some stash of colors here and there. I am very sure every comic lover would love to watch [Sin City](http://www.sincitythemovie.com/).
 
 The whole movie was a combination of three stories which crossed paths in a the most un-related manner, precisely three of Frank Miller's work, *The Hard Goodbye, The Big Fat Kill* and *That Yellow Bastard*. One thing that I am for sure is that there will be lots of scissor work for the Indian Movie Censor here; there were practically some scenes which can never be shown in the Indian theatres. The scene where Marv (Mickey Rourke) came to take his medicine from Lucille (Carla Gugino) after he found Goldie (Jaime King) assassinated besides his bed.
