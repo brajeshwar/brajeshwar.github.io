@@ -26,5 +26,5 @@ style: page-now link-border
 
 <p class="note">
 	Started in 2024.
-	I’ve back-dated events that are interesting to me.
+	I’ve back-dated some events that are interesting to me.
 </p>

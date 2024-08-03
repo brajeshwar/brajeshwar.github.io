@@ -53,6 +53,23 @@
 	border: 0 none;
 }
 
+/* list if it happens inside the styled lists - whatever that is */
+.page-now ul li ul li ul:has(li) {
+	margin: 0 !important;
+	padding: 0 var(--space-small) !important;
+	background: none !important;
+	border: 0 none !important;
+	color: inherit !important;
+	font-size: var(--size-small) !important;
+}
+.page-now ul li ul li ul li:nth-child(n+1) {
+	list-style: disc;
+	margin: 0 var(--space-small);
+	padding: var(--space-smallest);
+	font-size: inherit;
+	border: 0 none;
+}
+
 /* NOW - NOW */
 .page-now__now {
 	margin-bottom: var(--space-default);
