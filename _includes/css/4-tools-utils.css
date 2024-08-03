@@ -32,17 +32,17 @@ img.right {
     max-width: var(--image-width-max);
     transform: translateX(calc(50vw - 50%));
   }
+}
 
-  figure.full,
-  img.full {
-		margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    border-radius: 0;
-    
-    width: 100vw;
-    max-width: var(--image-width-full);
-    transform: translateX(calc(50vw - 50%));
-	}
+figure.full,
+img.full {
+  margin: 0 calc(50% - 50vw);
+  
+  border-radius: 0;
+  
+  width: 100vw;
+  max-width: var(--body-width-full);
+  transform: translateX(calc(50vw - 50%));
 }
 
 /* fix youtube and other video embeds */

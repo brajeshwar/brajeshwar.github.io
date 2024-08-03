@@ -1,6 +1,9 @@
-# Mélissa Theuriau
+---
+img-cover: "https://cdn.oinam.com/img/people/melissa-theuriau.webp"
+img-alt: "Mélissa Theuriau"
+---
 
-<img class="full" src="https://cdn.oinam.com/img/people/melissa-theuriau.webp" alt="Mélissa Theuriau" loading="lazy">
+# Mélissa Theuriau
 
 Little did I realize that my site will crawl to its knees when I uploaded her pictures for the archives. My site crawled to a halt, and my hosting provider warned of gulping up 15GB this month.
 

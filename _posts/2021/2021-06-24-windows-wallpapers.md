@@ -1,3 +1,8 @@
+---
+img-cover: https://cdn.oinam.com/img/windows/windows-xp-wallpaper-bliss.webp
+img-alt: Windows Wallpaper
+---
+
 # Windows Wallpapers - 3.0 to 11
 
 Download all of Microsoft Windows Wallpapers from Windows 3.0 to Windows 11.
@@ -16,6 +21,3 @@ Download all of Microsoft Windows Wallpapers from Windows 3.0 to Windows 11.
 | [Windows 8.1](https://archives.oinam.com/windows-wallpaper/windows-8.1.zip)                                                                | 5.4 MB   | 2013       |
 | [Windows 10](https://archives.oinam.com/windows-wallpaper/windows-10.zip)                                                                  | 19.3 MB  | 2014       |
 | [Windows 11](https://archives.oinam.com/windows-wallpaper/windows-11.zip)                                                                  | 26.8 MB  | 2021       |
-
-<img class="full" src="https://cdn.oinam.com/img/windows/windows-xp-wallpaper-bliss.webp" alt="Windows Wallpaper">
-

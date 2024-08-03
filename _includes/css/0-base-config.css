@@ -32,6 +32,7 @@
   --body-width-ideal:   46rem; /* ideal reading width */
   --body-width-max:     76rem; /* visual width */
   --body-width-medium:  60rem; /* objects that are large but not max */
+  --body-width-full:    1600px;
   
   --embed-video-height: calc(0.5625 * var(--body-width-ideal)); /* manual height based on the ideal width against the video ratio, mostly youtube which is 315/560=0.5625 */
 
