@@ -4,7 +4,7 @@ Guy Watson (Flash Guru) recently got converted to a Mac. [Abdul Qabiz](http://ww
 
 Some of our team at Mixercast are already on MacBooks - [Freeman Murray](http://www.flickr.com/photos/brajeshwar/182305644/), [Bill Lee](http://www.flickr.com/photos/brajeshwar/181518054/), [Soumyadeep Paul](http://www.flickr.com/photos/brajeshwar/165580106/).
 
-<a href="http://www.flickr.com/photos/brajeshwar/sets/72157600176589151/"><img class="medium" src="/static/2006/apple-macbook.jpg" alt="Apple Mac Powerbook" loading="lazy"></a>
+<a href="http://www.flickr.com/photos/brajeshwar/sets/72157600176589151/"><img class="large" src="/static/2006/apple-macbook.jpg" alt="Apple Mac Powerbook" loading="lazy"></a>
 
 I am converting to a Mac. Besides testing for compatibility, browser behavior, etc., I have never used a Mac seriously, and I never felt the need to move. It is not that I am against Mac or love Windows; I was just concerned with getting my work done the fastest and the best way possible.
 
