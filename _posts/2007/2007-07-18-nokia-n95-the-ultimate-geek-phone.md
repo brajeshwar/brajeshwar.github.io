@@ -4,6 +4,8 @@ The [Nokia N95](https://en.wikipedia.org/wiki/Nokia_N95) was released about a we
 
 Currently, the Nokia N95 is defined as the ultimate geek phone which some people even considering it as the one that can compete against the [iPhone](http://www.apple.com/iphone/). Well, I will not be doing a comparison of the two; nonetheless, I'll buy an iPhone as soon as it is released in India.
 
+<img class="large" src="/static/2007/nokia-n95.webp" alt="Nokia N95">
+
 ## Features
 
 The compact 99 mm (L) x 53 mm (W) x 21 mm (H) Nokia N95 sports a WCDMA2100 (HSDPA), EGSM900, GSM850/1800/1900 MHz (EGPRS). However, it does not support HSDPA networks in the US limiting your wireless data to EDGE networks. It has the usual smart-phone features like Bluetooth (stereo support), Infrared, USB Cable connect option complete with a built-in WiFi. The TFT display with a 2.6" QVGA of 240 x 320 px is awesome with its incredible color and clarity of both images and video. The orientation changes according to the direction in which you slide the Nokia N95 slider - yes, it can slide two ways.
