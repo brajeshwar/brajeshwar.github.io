@@ -4,6 +4,7 @@ footer {
 	padding: var(--space-small);
 	margin-top: var(--space-large);
 	border-top: 1px solid var(--border-color);
+	background: var(--bg-color-50);
 }
 
 footer nav {

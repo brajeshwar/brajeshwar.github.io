@@ -10,7 +10,7 @@ Now, as <a href="https://www.theguardian.com/sustainable-business/2016/nov/20/ar
 
 ## Real Problems In Need of Real Solutions
 
-![Fish Recognition)](/static/2016/fish-recognition.jpg)
+<img class="full" src="/static/2016/fish-recognition.jpg" alt="Fish Recognition">
 
 Illegal fishing costs the world economy an estimated $20 billion a year. Like many of the problems that artificial intelligence is being called upon to address, this one is big, literally too big for human minds and eyes to handle on their own. Smart computers can help, and smart computer programmers can help make those smart computers.
 

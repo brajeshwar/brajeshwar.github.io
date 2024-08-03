@@ -25,7 +25,7 @@ Many smartphones allow users to control their smartphone from their touchscreen.
 
 Then there are the interpersonal relationships that can benefit from the use of a smartphone. Grandparents can have face-to-face relationships with their children and grandchildren without ever leaving the comfort of their phone with free video conferencing software. Social media sites allow seniors to diversify their personal network by finding like-minded individuals who enjoy the same hobbies even if they are located in a different state or country. 
 
-<img class="medium" src="/static/2018/technology-for-elderly.jpg" alt="Technology for the Elderly" loading="lazy">
+<img src="/static/2018/technology-for-elderly.jpg" alt="Technology for the Elderly" loading="lazy">
 
 ## Digital Health Care
 

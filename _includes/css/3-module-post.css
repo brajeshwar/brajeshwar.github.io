@@ -9,7 +9,7 @@
 }
 
 .post aside {
-	margin: var(--space-default) auto;
+	margin: var(--space-large) auto;
 	text-align: center;
 	line-height: 0.1rem;
 	border-bottom: var(--border-size) solid var(--border-color-light);
