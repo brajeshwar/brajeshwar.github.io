@@ -1,6 +1,5 @@
-.search__provider {
-	border: 1px solid var(--border-color) !important;
-	border-radius: var(--border-radius);
+.search__provider * {
+	border: 0 none !important;
 }
 
 .gcse-search {}

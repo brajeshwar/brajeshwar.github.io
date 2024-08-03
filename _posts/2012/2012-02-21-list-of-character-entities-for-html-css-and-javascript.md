@@ -2,9 +2,9 @@
 
 I always had to fiddle and look around multiple sources to get the correct Character Entity with their named or numeric entity for HTML, the unicode entity for CSS, or the Octal-encoded character for Javascript.
 
-For instance, in CSS, to add &rarr; in the content of :before, you can write;
+For instance, in CSS, to add &rarr; in the content of `:before`, you can write;
 
-```html
+```css
 .more:before {
   content: "\2192";
   margin-right: 1em;
