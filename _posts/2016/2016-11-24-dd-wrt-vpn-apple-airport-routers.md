@@ -1,8 +1,11 @@
+---
+img-cover: /static/2016/airport-wireless.jpg
+img-alt: Apple Airport Wireless
+---
+
 # DD-WRT, VPN and Apple Airport Routers
 
 Apple's Airport Extreme[^AirportExtreme] and Airport Express[^AirportExpress] are brilliant at what they do. They are secure, yet easy to set up and maintain. Well, you do not need to maintain them - they tend to just keep working. It makes it super easy for an Apple product eco-system to co-exist without much hassle and fuss.
-
-<img class="full" src="/static/2016/airport-wireless.jpg" alt="Apple Airport Wireless">
 
 After many Linksys and D-Link Wi-Fi Routers, I started with the first generation Airpot Express and upgraded to the first Airport Time Capsule[^AirportTimeCapsule] when it was released in 2008. The time capsule (Airport Extreme with Time Machine enabled Drive) lasted for 5 years and the Airport Express, a little over 6 years. Our current Home Network Setup is powered by an Airport Extreme and few Airport Expresses.
 
