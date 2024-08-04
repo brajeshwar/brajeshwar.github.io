@@ -1,3 +1,8 @@
+---
+image: /static/2013/iron-man-3.webp
+image-title: Iron Man 3
+---
+
 # What Startups can learn from Iron Man 3
 
 Yes, as expected <a href="http://www.imdb.com/title/tt1300854/">Iron Man 3</a> was an awesome movie. The movie opens as a narrative by Tony Stark to Dr. Bruce Banner, a story that started way before Tony Stark became Iron Man. I won't be talking about the movie, I'll let you enjoy that at a theatre near you.

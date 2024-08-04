@@ -1,6 +1,9 @@
-# What are HDR or High Dynamic Range Images?
+---
+image: /static/2006/hdr-baby-elephant.jpg
+image-title: Baby Elephant at the Bannerghatta National Park (Bangalore)
+---
 
-[![Baby Elephant at the Bannerghatta National Park (Bangalore))](/static/2006/hdr-baby-elephant.jpg)](http://www.flickr.com/photos/brajeshwar/6126993228/)
+# What are HDR or High Dynamic Range Images
 
 Wikipedia defines High Dynamic Range Imaging (HDRI for short) as a set of techniques that allow a far greater dynamic range of exposures than normal digital imaging techniques. The intention is to accurately represent the wide range of intensity levels found in real scenes, ranging from direct sunlight to the deepest shadows. This provides the opportunity to shoot a scene and have total control of the final imaging from the beginning to the end of the photography project.
 

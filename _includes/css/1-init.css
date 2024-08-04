@@ -36,7 +36,6 @@ kbd {
 figure {
   margin: 0;
   padding: 0;
-  text-align: center;
   border-radius: var(--border-radius);
 }
 

@@ -1,7 +1,6 @@
 header {
 	padding: var(--space-default) 0;
 	margin-bottom: var(--space-large);
-	border-bottom: 1px solid var(--border-color);
 }
 
 .header {

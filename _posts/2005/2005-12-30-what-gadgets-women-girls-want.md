@@ -1,6 +1,6 @@
 # What (Gadgets) do Women & Girls Want?
 
-<img class="small right" src="/static/2005/hitachimicrodrive.jpg" alt="Hitachi Microdrive for Girls">
+<img class="medium right" src="/static/2005/hitachimicrodrive.jpg" alt="Hitachi Microdrive for Girls">
 
 I saw a nice article on [Engadget](http://engadget.com/) about Hitachi claiming their Microdrive to be "A girls's best friend". The humorous part was neither the drive nor the articls but the comments. Don't miss the comments.
 
