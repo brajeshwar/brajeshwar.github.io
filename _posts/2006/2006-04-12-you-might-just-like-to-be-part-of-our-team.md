@@ -1,4 +1,4 @@
-# You might just like to be part of our Team!
+# You might just like to be part of our Team
 
 [![Oinam team acquired by Nanocast)](/static/2006/oinam-nanocast.jpg)](http://www.flickr.com/photos/brajeshwar/sets/72057594102788334/)
 

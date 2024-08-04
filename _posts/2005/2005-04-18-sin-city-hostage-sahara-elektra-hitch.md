@@ -1,6 +1,9 @@
-# Sin City, Hostage, Sahara, Elektra, Hitch
+---
+image: /static/2005/sin-city.webp
+image-title: Sin City
+---
 
-<img class="full" src="/static/2005/sin-city.webp" alt="Sin City">
+# Sin City, Hostage, Sahara, Elektra, Hitch
 
 One thing about the movie is that, "It was very much like a comic book." Just like Frank Miller's Comic work, it was black and white with some stash of colors here and there. I am very sure every comic lover would love to watch [Sin City](http://www.sincitythemovie.com/).
 

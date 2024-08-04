@@ -22,7 +22,6 @@
 
 .page-film .item__cards a:hover, .page-film .item__cards a:active,
 .page-devices .item__cards a:hover, .page-devices .item__cards a:active {
-	border-color: var(--border-color);
 	opacity: var(--opacity-reset);
 }
 
@@ -34,7 +33,9 @@
 }
 
 .page-film figure img {}
-.page-film figure figcaption {}
+.page-film figcaption {
+	border: 0 none;
+}
 
 .page-film figure span,
 .page-devices figure span {
