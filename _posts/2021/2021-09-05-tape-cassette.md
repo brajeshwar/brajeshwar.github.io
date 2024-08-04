@@ -4,17 +4,19 @@
 
 Tapedeck showcase the amazing beauty in the designs of the common audio tape cassette. There's an amazing range of designs, starting from the early 60's functional cassette designs, moving through the colourful playfulness of the 70's audio tapes to amazing shape variations during the 80's and 90's.
 
-<div class="gallery" markdown="1">
-- ![](https://cdn.oinam.com/img/tape-cassette/agfa_ferrocolor_60_rot.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/universum_90.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/sony-walkman-60-ferro_mcipjh_121006.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/philips_sq60_071201.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/orwo_k60_071130.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/orig_0008_philips_cd_one_90.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/memorex_dbs_60_071126.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/hitachi_lownoise_c60_b_oge_120922.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/goldstar_hp60_3_081022.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/fuji_fl90_090802.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/denon_dxm_60_080417.webp)
-- ![](https://cdn.oinam.com/img/tape-cassette/basf_chrome_extra_ii_90c_081001.webp)
+<div class="gallery">
+	<ul>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/agfa_ferrocolor_60_rot.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/universum_90.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/sony-walkman-60-ferro_mcipjh_121006.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/philips_sq60_071201.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/orwo_k60_071130.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/orig_0008_philips_cd_one_90.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/memorex_dbs_60_071126.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/hitachi_lownoise_c60_b_oge_120922.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/goldstar_hp60_3_081022.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/fuji_fl90_090802.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/denon_dxm_60_080417.webp"></li>
+		<li><img loading="lazy" src="https://cdn.oinam.com/img/tape-cassette/basf_chrome_extra_ii_90c_081001.webp"></li>
+	</ul>
 </div>
