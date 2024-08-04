@@ -1,6 +1,6 @@
 ---
-img-cover: /static/2016/airport-wireless.jpg
-img-alt: Apple Airport Wireless
+image: /static/2016/airport-wireless.jpg
+image-title: Apple Airport Wireless
 ---
 
 # DD-WRT, VPN and Apple Airport Routers

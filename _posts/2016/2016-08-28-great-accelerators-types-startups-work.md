@@ -1,3 +1,8 @@
+---
+image: /static/2016/accelerator.webp
+image-title: Startup Accelerator
+---
+
 # Great Accelerators and the types of Startups they work with
 
 In many ways, founding a startup is more challenging than starting a traditional business. Of course, entrepreneurs want to make money when they start a traditional business. However, startup founders must prove that their idea will grow into a large corporation. This is quite a bit of pressure.
@@ -17,8 +22,6 @@ Most accelerators like to focus on one type of startup. For example, some only w
 ## What to Expect
 
 Most accelerators will offer you mentorship, workspace, operational support and access to funding via introductions to angel investors or outright payments. Program durations run anywhere from a few weeks to a few months. Many programs are quite competitive and only accept 2 to 10 startups a year.
-
-<img class="full" src="/static/2016/accelerator.jpg" alt="Startup Accelerator">
 
 Here’s a list of great accelerators and the types of startups they work with.
 

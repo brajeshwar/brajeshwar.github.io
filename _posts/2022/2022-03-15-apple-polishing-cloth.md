@@ -1,6 +1,6 @@
 ---
-img-cover: /static/2022/apple-polishing-cloth-keyboard-mouse-trackpad.jpg
-img-alt: Apple Polishing blends perfectly with other Apple products
+image: /static/2022/apple-polishing-cloth-keyboard-mouse-trackpad.jpg
+image-title: Apple Polishing blends perfectly with other Apple products
 ---
 
 # Apple Polishing Cloth

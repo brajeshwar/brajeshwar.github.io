@@ -2,6 +2,31 @@
 	margin-top: calc(var(--space-large) * -1);
 }
 
+.page-post figure.cover-photo {
+	margin: 0 calc(50% - 50vw);
+  border-radius: 0;
+  width: 100vw;
+  max-width: var(--body-width-full);
+  transform: translateX(calc(50vw - 50%));
+
+  color: var(--text-color-light);
+	font-family: var(--font-family-alt);
+	font-size: smaller;
+	text-align: center;
+}
+
+.page-post figure.cover-photo img {
+	width: 100%;
+	height: auto;
+	border-radius: 0;
+}
+
+.page-post figure.cover-photo figcaption {
+	margin: 0;
+	border-radius: 0;
+}
+
+
 .post {
 	padding-top: var(--space-large);
 }

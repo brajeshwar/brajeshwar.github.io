@@ -1,6 +1,6 @@
 ---
-img-cover: https://cdn.oinam.com/img/computer/IBM-PC-Model-5150.webp
-img-alt: IBM Personal Computer Model 5150
+image: https://cdn.oinam.com/img/computer/IBM-PC-Model-5150.webp
+image-title: IBM Personal Computer Model 5150
 ---
 
 # IBM's First PC was Released 40-Years Ago
