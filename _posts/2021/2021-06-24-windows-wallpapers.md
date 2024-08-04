@@ -1,6 +1,6 @@
 ---
-img-cover: https://cdn.oinam.com/img/windows/windows-xp-wallpaper-bliss.webp
-img-alt: Windows Wallpaper
+image: https://cdn.oinam.com/img/windows/windows-xp-wallpaper-bliss.webp
+image-title: Windows Wallpaper
 ---
 
 # Windows Wallpapers - 3.0 to 11

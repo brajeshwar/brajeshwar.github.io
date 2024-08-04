@@ -1,6 +1,6 @@
 ---
-img-cover: /static/2006/vista-wallpaper.jpg
-img-alt: Microsoft Vista Wallpapers
+image: /static/2006/vista-wallpaper.jpg
+image-title: Microsoft Vista Wallpapers
 ---
 
 # Microsoft Windows Vista Wallpapers

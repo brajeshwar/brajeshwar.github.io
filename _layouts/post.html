@@ -4,10 +4,11 @@ layout: default
 
 <main role="main" class="container-ideal page-post">
 
-  {%- if page.img-cover %}
-    <img class="full" loading="lazy"
-      src="{{ page.img-cover }}"
-      alt="{{ page.img-alt }}">
+  {%- if page.image %}
+    <figure class="cover-photo">
+      <img loading="lazy" src="{{ page.image }}" alt="{{ page.image-title }}">
+      {% if page.image-caption %}<figcaption>{{ page.image-caption }}</figcaption>{% endif %}
+    </figure>
   {% endif -%}
 
   <article class="post">

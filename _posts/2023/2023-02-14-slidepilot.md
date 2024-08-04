@@ -1,6 +1,6 @@
 ---
-img-cover: "/static/2023/slidepilot.webp"
-img-alt: "SlidePilot"
+image: /static/2023/slidepilot.webp
+image-title: SlidePilot
 ---
 
 # SlidePilot
