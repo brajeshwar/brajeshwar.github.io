@@ -8,11 +8,6 @@
   width: 100vw;
   max-width: var(--body-width-full);
   transform: translateX(calc(50vw - 50%));
-
-  color: var(--text-color-light);
-	font-family: var(--font-family-alt);
-	font-size: smaller;
-	text-align: center;
 }
 
 .page-post figure.cover-photo img {
@@ -24,6 +19,11 @@
 .page-post figure.cover-photo figcaption {
 	margin: 0;
 	border-radius: 0;
+}
+
+.page-post figure, .page figure {
+	color: var(--text-color-light);
+	text-align: center;
 }
 
 

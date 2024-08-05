@@ -139,7 +139,7 @@ $breakpoint-extralarge: 1600px;
     --text-color:           var(--color-700);
     --text-color-light:     var(--color-600);
     --text-color-lighter:   var(--color-500);
-    --text-color-lightest:  var(--color-400);
+    --text-color-lightest:  var(--color-300);
     --text-color-dark:      var(--color-800);
     --text-color-darker:    var(--color-900);
     --text-color-darkest:   var(--color-950);
@@ -157,7 +157,7 @@ $breakpoint-extralarge: 1600px;
     --border-color-darkest:   var(--color-800);
     
     --logo-color:     var(--color-600);
-    --logo-color-bg:  var(--color-200);
+    --logo-color-bg:  var(--color-300);
   }
 }
 
