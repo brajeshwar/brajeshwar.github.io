@@ -39,11 +39,16 @@ pre {
 }
 
 code {
-	font-size: var(--size-smaller);
 	font-family: var(--font-family-monospace);
 }
 
 /* code highlighter from https://github.com/richleland/pygments-css */
 .highlight {
 	border-radius: var(--border-radius);
+}
+
+/* word-wrap plain-text in codes */
+.language-plaintext code {
+	word-wrap: break-word;
+	white-space: pre-wrap;   
 }

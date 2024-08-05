@@ -1,8 +1,6 @@
 # 10 open source web fonts, Techniques for User-Friendly HTML Tables, Music while you work
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/yoN6XfyQsr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-A music video that you can just let it in the background while you work.
+<iframe width="100%" src="https://www.youtube.com/embed/yoN6XfyQsr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Useful Techniques for User-Friendly Tables
 
