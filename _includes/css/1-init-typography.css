@@ -17,8 +17,10 @@ blockquote {
 	margin: var(--space-default) 0;
 	padding: var(--space-smallest) var(--space-default);
 	font-family: var(--font-family-alt);
-	border-left: var(--border-size-medium) solid var(--border-color-light);
+	border-left: var(--border-size-large) var(--border-style) var(--border-color-light);
 	background: var(--bg-color-50);
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
 }
 
 mark {
@@ -33,10 +35,12 @@ pre {
 	padding: var(--space-default);
 	background: var(--color-zero);
 	border-radius: var(--border-radius);
+	font-family: var(--font-family-monospace);
 }
 
 code {
 	font-size: var(--size-smaller);
+	font-family: var(--font-family-monospace);
 }
 
 /* code highlighter from https://github.com/richleland/pygments-css */
