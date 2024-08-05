@@ -1,5 +1,5 @@
 .page-now {
-	color: var(--text-color-lightest);
+	color: var(--text-color-lighter);
 	font-weight: 200;
 }
 
@@ -19,9 +19,7 @@
 	padding: 0;
 }
 
-.page-now a {
-	color: var(--text-color-lightest);
-}
+.page-now a {}
 
 .page-now a:hover, .page-now a:active {
 	color: var(--text-color);

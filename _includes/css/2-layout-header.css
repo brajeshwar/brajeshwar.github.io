@@ -44,17 +44,17 @@ header {
 /* menu */
 .menu {
 	padding: var(--space-smaller) var(--space-small);
-	font-size: smaller;
-	background: var(--bg-color-50);
-	border: 1px solid var(--border-color);
+	font-weight: 300;
+	font-size: var(--size-smaller);
+	background: var(--bg-color-800);
 	border-radius: var(--border-radius-larger);
 }
 
 .menu a {
 	padding: var(--space-smaller);
-	color: var(--text-color-dark);
+	color: var(--text-color-lightest);
 }
 
 .menu a:hover, .menu a:active {
-	color: var(--text-color-darkest);
+	color: var(--color-zero);
 }
