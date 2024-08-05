@@ -41,13 +41,13 @@
 	margin: var(--space-large) auto;
 	text-align: center;
 	line-height: 0.1rem;
-	border-bottom: var(--border-size) solid var(--border-color-light);
+	border-bottom: var(--border-size) var(--border-style) var(--border-color-light);
 }
 
 .post time {
 	padding: var(--space-smallest) var(--space-small);
-	font-size: var(--size-smallest);
-	color: var(--text-color-light);
+	font-size: smaller;
+	color: var(--text-color-lighter);
 	border-radius: var(--border-radius-largest);
 	background: var(--border-color-light);
 }

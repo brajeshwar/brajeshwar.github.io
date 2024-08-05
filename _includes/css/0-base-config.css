@@ -91,6 +91,9 @@
   --border-radius-large: 10px;
   --border-radius-larger: 25px;
   --border-radius-largest: 42px;
+
+  --border-style: solid;
+  --border-style-alt: dotted;
   
   --border-size: 1px;
   --border-size-small: 3px;

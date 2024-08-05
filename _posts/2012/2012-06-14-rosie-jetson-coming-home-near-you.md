@@ -1,8 +1,11 @@
+---
+image: /static/2012/the-jetsons-and-rosie-the-robot.jpg
+image-title: The Jetsons and Rosie, the Robot
+---
+
 # Rosie Jetson - Coming to a home near YOU?
 
 If you're anything like me when you were a kid you dreamed that in the not-so-distant future you would be driving around in an anti-gravity car, living in an apartment hovering in a space-age bubble in the sky. Oh and with [Rosie Jetson](http://en.wikipedia.org/wiki/List_of_The_Jetsons_characters#Rosey) would be your back-talking robot maid. And if you're like me then you are bitterly disappointed with the present epoch's lack of hover jets. Well, to soothe that bitter sting of disappointment you can comfort yourself with the [new robotic maid](http://www.news.cornell.edu/stories/May12/PlacingNewObjects.html) that will hopefully come to market soon.
-
-![The Jetsons and Rosie, the Robot)](/static/2012/the-jetsons-and-rosie-the-robot.jpg)
 
 Shaking your head in disbelief? You should be because this isn't exactly Rosie-caliber as of yet. The [new robotic droid](http://www.popsci.com/technology/article/2011-11/controlled-kinect-new-tele-operated-cleaner-bot-picks-clutter) that could soon be playing Rosie -- or Jeeves -- in homes is programmed to scan a disheveled room, identify objects, and is capable of putting them back in their rightful places.
 
@@ -20,4 +23,4 @@ The robots are still more accurate than [Roombas](http://en.wikipedia.org/wiki/R
 
 By the time the Rosie-esque bots get to market, the researchers hope to significantly improve through output with things like high-res cameras and tactile sensors, and with programmable preferences.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/9psNh-dJTDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/9psNh-dJTDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
