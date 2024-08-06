@@ -103,7 +103,7 @@
   --logo-size: 42px;
 
   --image-width-max: var(--body-width-medium);
-  --image-width-full: 1600px;
+  --image-width-full: var(--body-width-full);
 }
 
 /*
