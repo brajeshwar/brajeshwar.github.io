@@ -16,6 +16,11 @@
   font-size: var(--size-default);
   font-weight: 200;
 }
+
+.home__blog--intro {
+  margin-top: 0;
+}
+
 .home__blog--items {
   list-style: none;
   padding: 0;
@@ -28,6 +33,7 @@
   gap: var(--space-default);
   row-gap: var(--space-small);
 }
+
 .home__blog--item {
   list-style: none;
   margin: 0;
@@ -104,6 +110,7 @@
 }
 
 .support h2 {
+  margin-top: var(--space-smaller);
   font-weight: 200;
   text-transform: lowercase;
   border-bottom: 1px solid var(--border-color);

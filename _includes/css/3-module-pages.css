@@ -14,9 +14,6 @@
 .page-devices .item__cards a {
 	display: block;
 	text-decoration: none;
-	background: var(--bg-color-50);
-	border-radius: var(--border-radius);
-	border: 1px solid var(--border-color-light);
 	opacity: var(--opacity-low);
 }
 
