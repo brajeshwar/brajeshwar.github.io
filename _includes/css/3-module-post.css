@@ -40,7 +40,7 @@
 .post aside {
 	margin: var(--space-large) auto;
 	text-align: center;
-	line-height: 0.1rem;
+	line-height: 0.00000001rem;
 	border-bottom: var(--border-size) var(--border-style) var(--border-color-light);
 }
 
