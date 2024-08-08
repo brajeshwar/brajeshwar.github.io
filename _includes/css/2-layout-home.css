@@ -6,8 +6,8 @@
 }
 
 .intro h1 {
-  font-size: var(--size-large);
   margin: 0;
+  font-size: var(--size-large);
 }
 
 
@@ -58,6 +58,7 @@
   display: block;
   height: 100%;
   text-decoration: none;
+  line-height: var(--step-2);
   color: var(--text-color-dark);
 }
 .home__blog--item a:hover, .home__blog--item a:active {}
