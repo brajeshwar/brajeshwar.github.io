@@ -13,8 +13,7 @@
 
 /* home: blog */
 .home__blog {
-  font-size: var(--size-default);
-  font-weight: 200;
+  font-size: larger;
 }
 
 .home__blog--intro {
@@ -87,12 +86,11 @@
 }
 
 .home__blog--popular {
-  font-size: var(--size-small);
+  font-size: smaller;
 }
 
 .home__blog--popular-items {
   color: var(--text-color-lighter);
-  font-size: var(--size-small);
   margin: var(--space-default);
   padding: 0 var(--space-smallest);
 }
@@ -102,7 +100,7 @@
 }
 
 .home__blog--popular-items span {
-  font-size: smaller;
+  font-size: small;
 }
 
 /* support & endorsements */

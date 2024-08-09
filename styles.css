@@ -6,6 +6,7 @@
 
 {% include css/0-base-sanitize.css %}
 {% include css/0-base-code.css %}
+{% include css/0-base-fonts.css %}
 {% include css/0-base-config.css %}
 
 {% include css/1-init.css %}
