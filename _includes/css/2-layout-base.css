@@ -23,7 +23,6 @@
 	margin: var(--space-default) 0;
 	padding: var(--space-smaller) var(--space-small) var(--space-smaller) 0;
 	color: var(--text-color-lighter);
-	font-size: var(--size-smaller);
 	background: var(--bg-color-50);
 	border-radius: var(--border-radius);
 }

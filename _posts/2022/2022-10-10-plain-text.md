@@ -4,7 +4,8 @@ I was once an [Evernote](https://evernote.com) user since its early days and a p
 
 I have moved to a simpler notetaking and writing habit for my notes. I have chosen a simple plain-text life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
 
-> Every device, including ones long gone, and ones not invented yet, can read and edit plain text. - [Derek Sivers](https://sive.rs/plaintext)
+{:.aside .right}
+Every device, including ones long gone, and ones not invented yet, can read and edit plain text. - [Derek Sivers](https://sive.rs/plaintext)
 
 For short, quick notes, I tend to start with Apple’s Notes, share common family notes,  and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all of my notes in my __Notebook__. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime, while my notes remain free of any dependency.
 
