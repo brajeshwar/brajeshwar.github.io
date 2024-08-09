@@ -1,5 +1,5 @@
 :root {
-  font-family: var(--font-family-sans);
+  font-family: "Atkinson Hyperlegible", var(--font-family-sans);
   font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }
 

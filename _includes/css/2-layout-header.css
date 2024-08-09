@@ -44,7 +44,6 @@ header.site-header {
 /* menu */
 .menu {
 	padding: var(--space-smaller) var(--space-small);
-	font-weight: 300;
 	font-size: var(--size-smaller);
 	background: var(--bg-color-800);
 	border-radius: var(--border-radius-larger);
