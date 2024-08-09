@@ -30,7 +30,7 @@ It is one of the simplest and the first few originals of Static Site Generators.
 
 It is the default tool at [Github Pages](https://pages.github.com) to generate static websites. One less thing to worry about is hosting your website.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/xlwn1hFa5QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/xlwn1hFa5QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 _Q. How did I do it?_
 
@@ -69,7 +69,7 @@ Even if you have your WordPress content inside the default `wp-content`, it shou
 
 [![Oinam Jekyll Theme)](/static/2021/oinam-jekyll-cover.png)](https://oinam.github.io/oinam-jekyll/)
 
-With still a lingering 1200 posts, Jekyll Server was really slow. It took north of `10sec` to reflect the changes. I also tried [Hugo](https://gohugo.io) which turns out to be super-fast. However, I wanted a simpler solution. I stuck out with Jekyll and deployed on [Github Pages](https://pages.github.com). Well, once the design was done, I <mark>DO NOT</mark> have to run Jekyll while writing; if I want to preview, a MarkDown previewer is enough. Better yet -- take a break, make tea or coffee and come back for the rendered site. ;-)
+With still a lingering 1200 posts, Jekyll Server was really slow. It took north of `10sec` to reflect the changes. I also tried [Hugo](https://gohugo.io) which turns out to be super-fast. However, I wanted a simpler solution. I stuck out with Jekyll and deployed on [Github Pages](https://pages.github.com). Well, once the design was done, I **DO NOT** have to run Jekyll while writing; if I want to preview, a MarkDown previewer is enough. Better yet -- take a break, make tea or coffee and come back for the rendered site. ;-)
 
 During the early days, I wrote all sorts of crap. Many a blog post could have been a tweet but then, there was no [Twitter](https://twitter.com/brajeshwar).
 

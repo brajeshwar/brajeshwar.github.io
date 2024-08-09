@@ -189,14 +189,14 @@ $breakpoint-extralarge: 1600px;
     --text-color:           var(--color-700);
     --text-color-light:     var(--color-600);
     --text-color-lighter:   var(--color-500);
-    --text-color-lightest:  var(--color-300);
+    --text-color-lightest:  var(--color-400);
     --text-color-dark:      var(--color-800);
     --text-color-darker:    var(--color-900);
     --text-color-darkest:   var(--color-950);
 
     --text-color-link:          var(--color-600);
     --text-color-link-visited:  var(--text-color-link);
-    --text-color-link-active:   var(--color-950);
+    --text-color-link-active:   var(--color-full);
 
     --border-color:           var(--color-300);
     --border-color-light:     var(--color-200);

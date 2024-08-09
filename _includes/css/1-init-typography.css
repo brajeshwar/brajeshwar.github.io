@@ -4,13 +4,17 @@ h1, h2, h3, h4, h5 , h6 {
 }
 
 a {
-  color: var(--text-color-link);
+  color: inherit;
+  text-decoration-thickness: 0.06rem;
+  text-decoration-color: var(--text-color-lightest);
+  text-underline-offset: 0.1618034rem;
 }
 a:visited {
   color: var(--text-color-link-visited);
 }
 a:hover, a:active {
   color: var(--text-color-link-active);
+  text-decoration-color: var(--text-color-link-active);
 }
 
 blockquote {
@@ -24,14 +28,6 @@ blockquote {
 	border-bottom-right-radius: var(--border-radius);
 }
 
-mark {
-	background: var(--bg-color-200);
-	border-radius: var(--border-radius-small);
-	padding: var(--space-smallest) var(--space-smaller);
-	font-family: var(--font-family-monospace);
-	font-size: smaller;
-}
-
 pre {
 	padding: var(--space-default);
 	background: var(--color-zero);
@@ -39,9 +35,20 @@ pre {
 	font-family: var(--font-family-monospace);
 }
 
-code {
+/* normal code that is not attached to a code highlighter */
+mark, code.language-plaintext {
+	padding: var(--space-3xs) var(--space-2xs);
 	font-family: var(--font-family-monospace);
+	font-size: smaller;
+	background-color: var(--bg-color-100);
+	border-radius: var(--border-radius-largest);
+	border-bottom: var(--border-size) var(--border-style) var(--border-color);
+
+	/* fix edges of wrapped inline elements	*/
+	-webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
+
 
 aside, .aside {
 	float: left;
