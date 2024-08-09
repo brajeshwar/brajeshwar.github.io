@@ -29,6 +29,10 @@ img.right {
 	margin: 0 0 var(--space-small) var(--space-small);
 }
 
+img.border-reset {
+  border-radius: 0;
+}
+
 @media (min-width: $breakpoint-small) {
   figure.large,
   img.large {
