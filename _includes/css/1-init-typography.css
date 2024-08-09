@@ -14,8 +14,9 @@ a:hover, a:active {
 }
 
 blockquote {
-	margin: var(--space-default) 0;
-	padding: var(--space-smallest) var(--space-default);
+	margin: var(--space-m) 0;
+	padding: var(--space-3xs) var(--space-m);
+
 	font-family: var(--font-family-alt);
 	border-left: var(--border-size-large) var(--border-style) var(--border-color-light);
 	background: var(--bg-color-50);
@@ -40,6 +41,35 @@ pre {
 
 code {
 	font-family: var(--font-family-monospace);
+}
+
+aside, .aside {
+	float: left;
+	width: 70%;
+	margin: var(--space-3xs) var(--space-s);
+	margin-left: -10vw;
+	padding: var(--space-s);
+
+	font-family: var(--font-family-alt);
+	background: var(--bg-color-100);
+	border-radius: var(--border-radius);
+}
+
+aside.right, .aside.right {
+	float: right;
+	margin: var(--space-3xs) var(--space-s);
+	margin-right: -10vw;
+}
+
+/* rest in small screen, it becomes the same as a blockquote */
+@media (max-width: $breakpoint-medium) {
+  aside, .aside,
+  aside.right, .aside.right {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* code highlighter from https://github.com/richleland/pygments-css */
