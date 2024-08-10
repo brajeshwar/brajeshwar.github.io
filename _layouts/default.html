@@ -12,8 +12,8 @@
 </title>
 
 <meta name="description" content="{{ site.description }}">
-<link rel="archives" href="{{ site.url }}/archives/">
-<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="archives" href="{{ site.baseurl | prepend: site.url }}/archives/">
+<link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url }}">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,9 +24,8 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#fafafa">
 
-{% assign cacheBust = site.time | date:'?v=%Y%b%d' %}
-<link rel="stylesheet" href="{{ '/styles.css' | relative_url | append: cacheBust }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
+<link rel="stylesheet" href="{{ '/styles.css' }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl | prepend: site.url }}/feed.xml">
 
 </head>
 <body>
