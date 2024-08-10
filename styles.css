@@ -13,6 +13,7 @@
 {% include css/1-init-typography.css %}
 {% include css/1-init-forms.css %}
 {% include css/1-init-table.css %}
+{% include css/1-init-img.css %}
 
 {% include css/2-layout-base.css %}
 {% include css/2-layout-header.css %}
@@ -24,7 +25,6 @@
 {% include css/3-module-search.css %}
 {% include css/3-module-post.css %}
 {% include css/3-module-now.css %}
-{% include css/3-module-about.css %}
 
 {% include css/3-module-grid.css %}
 

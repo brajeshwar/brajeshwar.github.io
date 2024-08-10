@@ -17,14 +17,11 @@
 }
 
 .page-post figure.cover-photo figcaption {
-	margin: 0;
+	margin: 0 auto;
 	border-radius: 0;
 }
 
-.page-post figure, .page figure {
-	color: var(--text-color-light);
-	text-align: center;
-}
+.page-post figure, .page figure {}
 
 
 .post {

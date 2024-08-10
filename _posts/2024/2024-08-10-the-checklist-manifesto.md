@@ -6,7 +6,7 @@ While I initially thought this book could have been condensed into a blog post o
 
 Atul walks readers through his experience of how the modern medical system fails. The 20th century saw vast increases in medical knowledge through a richer understanding of the body and from swathes of new drugs, tests, and surgical procedures. And yet, mistakes are still made; diagnoses are missed, critical tests aren’t run, and standard treatments aren’t given. Even when the correct answer is known by someone—and often by everyone involved—patients slip through the cracks.
 
-> The first is diligence, the necessity of giving sufficient attention to detail to avoid error and prevail against obstacles. Diligence seems an easy and minor virtue. Diligence is both central to performance and fiendishly complex.
+The first is diligence, the necessity of giving sufficient attention to detail to avoid error and prevail against obstacles. Diligence seems an easy and minor virtue. Diligence is both central to performance and fiendishly complex.
 
 ![Checklist are My Love Language](/static/2024/checklist-are-my-love-language.webp)
 

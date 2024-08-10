@@ -45,28 +45,6 @@ kbd {
   font-size: smaller;
 }
 
-figure {
-  margin: 0;
-  padding: 0;
-  border-radius: var(--border-radius);
-}
-
-figure img {
-  border-radius: var(--border-radius);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-figcaption {
-  margin: 0;
-  background: var(--color-100);
-  padding: var(--space-smaller) var(--space-small);
-  font-size: var(--size-smaller);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-  border-bottom: var(--border-size) solid var(--border-color);
-}
-
 /* Restrict sizing to the page width. */
 :where(iframe, img, input, video, select, textarea) {
   height: auto;

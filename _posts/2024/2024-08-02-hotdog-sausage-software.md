@@ -4,7 +4,7 @@ While still in school in the mid-1990s, I began reading about computers. In one 
 
 On Aug 2, 1999, I landed in [Bombay](https://en.wikipedia.org/wiki/Mumbai), leaving my town for good. I had my first interaction with the Internet, but unfortunately, HotDog seemed to have died out by then.
 
-<img class="border-reset" src="/static/2024/hotdog-from-sausage-software.jpg" alt="HotDog from Sausage Software">
+<img class="reset-border-radius" src="/static/2024/hotdog-from-sausage-software.jpg" alt="HotDog from Sausage Software">
 
 [HotDog](https://en.wikipedia.org/wiki/HotDog) is an HTML editor developed by [Sausage Software](https://en.wikipedia.org/wiki/Sausage_Software) in the mid-1990s. At the time of its development, only a few HTML editors were available on the market (such as HoTMetaL), and HotDog gathered significant interest due to its ease of use.
 
