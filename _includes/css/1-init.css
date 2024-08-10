@@ -37,11 +37,11 @@ hr {
 }
 
 kbd {
-  background: var(--color-white);
-  border-bottom: var(--border-size) solid var(--border-color);
-  border-radius: var(--border-radius);
+  background: var(--color-zero);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
+  border-radius: var(--border-radius-small);
   color: var(--text-color-lighter);
-  padding: var(--space-smallest) var(--space-smaller);
+  padding: var(--space-3xs) var(--space-2xs);
   font-size: smaller;
 }
 
