@@ -29,14 +29,14 @@
   flex-flow: row wrap;
   align-items: stretch;
   justify-content: space-between;
-  gap: var(--space-default);
-  row-gap: var(--space-small);
+  gap: var(--space-s);
+  row-gap: var(--space-s);
 }
 
 .home__blog--item {
   list-style: none;
   margin: 0;
-  padding: var(--space-smaller) var(--space-small);
+  padding: var(--space-xs) var(--space-s);
   
   vertical-align: top;
   width: 30%;
@@ -64,10 +64,9 @@
   line-height: var(--scale);
 }
 .home__blog--meta {
-  font-size: var(--size-smallest);
-  color: var(--text-color-lighter);
-  padding-top: var(--space-smaller);
   display: block;
+  font-size: small;
+  color: var(--text-color-lighter);
 }
 .home__blog--footer {
   font-size: var(--size-small);
