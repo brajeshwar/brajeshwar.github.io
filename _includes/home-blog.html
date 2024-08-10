@@ -6,7 +6,7 @@
   <ul class="home__blog--items">
     {%- for post in site.posts limit: 9 -%}
     <li class="home__blog--item">
-      <a class="home__blog--title" href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">
+      <a class="home__blog--title" href="{{ post.url }}">
         {{ post.title }}
         <time class="home__blog--meta" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
       </a>

@@ -6,7 +6,7 @@ permalink: /about/brajeshwar.com/
 
 The domain `brajeshwar.com` was registered on `Jun 11, 2001`.
 
-I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash[^Flash] tips, tricks, and things I was doing. That's how it all started. `brajeshwar.com` started as a Flash-Website.
+I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash[^Flash] tips, tricks, and things I was doing. That's how it all started. My website started as a Flash-Website.
 
 I moved on to Blogspot, later known as Blogger[^Blogger], then to MovableType[^MovableType] in 2002, and later to WordPress[^WordPress] by 2003-2004, ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
 
@@ -32,8 +32,13 @@ After being neglected for many years, I decided to rebuild my website and simpli
 I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles.
 
 [^Flash]: [Adobe Flash](https://en.wikipedia.org/wiki/Adobe_Flash) (formerly Macromedia Flash and FutureSplash) is a discontinued multimedia software platform used for production of animations, rich internet applications, desktop applications, mobile apps, mobile games, and embedded web browser video players. Flash was initially used to create fully-interactive websites, but this approach was phased out with the introduction of HTML5.
+
 [^Blogger]: [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)) later known as [Blogger](https://www.blogger.com/) is an online content management system (CMS) which enables multi-user blogs with time-stamped entries. [Pyra Labs](https://en.wikipedia.org/wiki/Pyra_Labs) developed it before being acquired by Google in 2003. Google hosts the blogs, which can be accessed through a subdomain of blogspot.com. Blogs can also be accessed from a user-owned custom domain (such as www.example.com) by using DNS facilities to direct a domain to Google's servers.
+
 [^MovableType]: [MovableType](https://movabletype.org) was created by a husband and wife team with a single purpose: to create a powerful solution for the creation and management of web content. An originator of the blogging field, Movable Type offers stability, a user-friendly interface, and beautifully extensive visual customization for websites and blogs.
+
 [^WordPress]: [WordPress](https://wordpress.org) is open source software you can use to create a beautiful website, blog, or app.
+
 [^MarkDown]: [Markdown](https://en.wikipedia.org/wiki/Markdown) is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+
 [^Jekyll]: [Jekyll](https://jekyllrb.com) is a simple, blog-aware, static site generator for personal, project, or organization sites.

@@ -2,7 +2,7 @@
 
 <audio controls>
   <source src="https://cdn.oinam.com/audio/angry-ring-ring.mp3" type="audio/mpeg">
-  No Audio Support!
+  Your browser seems to unable to play audio!
 </audio>
 
 ## Download Angry Ringtones

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Now
-style: page-now link-border
+style: page-now
 ---
 
 <section class="page-now__now" markdown="1">
@@ -24,7 +24,6 @@ style: page-now link-border
 
 {% include_relative now/2001.md %}
 
-<p class="note">
-	Started in 2024.
-	I’ve back-dated some events that are interesting to me.
-</p>
+{:.note}
+Started in 2024.
+I’ve back-dated some events that are interesting to me.

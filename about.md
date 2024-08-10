@@ -13,9 +13,10 @@ I migrated and reached Bombay[^Bombay] on Aug 2, 1999 to kick-start my career. I
 
 After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a Floppy-Disk[^Floppy-Disk] which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an Internet café[^InternetCafe] nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
 
-> [brajeshwar.com](/about/brajeshwar.com/) was booked on a dare and I'm happy with that decision.
-
 ## Internet
+
+{:.aside .right}
+`brajeshwar.com` was booked on a dare and I’m happy with that decision. [Read the story](/about/brajeshwar.com/) about this domain.
 
 It was the Internet boom in India, and the proliferation of the Internet was prominent. I wanted to be part of that world. Within six months through my first job, I shifted my focus to the Online World - started reading lots of books, online resources, and there was no turning back. By mid-2000, I had shifted my focus to the Internet.
 
