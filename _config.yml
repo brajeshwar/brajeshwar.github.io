@@ -1,5 +1,5 @@
 title: 'Brajeshwar'
-description: 'I am an entrepreneur, and technologist, with a deep focus on leadership in products and designs.'
+description: 'I’m on an adventure to create beautiful and meaningful products to improve the world for my daughters and their friends.'
 
 url: 'https://brajeshwar.com'
 baseurl: ''
@@ -21,7 +21,7 @@ algolia:
     - static
 
 feed:
-  posts_limit: 10
+  posts_limit: 9
   author: Brajeshwar
 
 sass:
