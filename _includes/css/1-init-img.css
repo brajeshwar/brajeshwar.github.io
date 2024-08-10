@@ -1,0 +1,137 @@
+/*
+ * TBD: I seem have reset the size somewhere along the cascade
+ * fix them without the !important
+ */
+
+img {
+	border-radius: var(--border-radius);
+}
+
+img.small {
+	width: 40% !important;
+	height: auto;
+}
+
+img.medium {
+	width: 60% !important;
+	height: auto;
+}
+
+img.left {
+	float: left;
+	margin: 0 var(--space-s) var(--space-s) 0;
+}
+
+img.right {
+  float: right;
+	margin: 0 0 var(--space-s) var(--space-s);
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  background: var(--color-100);
+  border-radius: var(--border-radius);
+}
+
+figure img {
+  width: 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+figcaption {
+  max-width: var(--body-width-ideal);
+  margin: 0 auto;
+  padding: var(--space-2xs) var(--space-xs);
+  text-align: left;
+  font-size: smaller;
+}
+
+@media (min-width: $breakpoint-small) {
+  figure.large,
+  img.large {
+  	margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    
+    width: 100vw !important;
+    max-width: var(--image-width-max);
+    transform: translateX(calc(50vw - 50%));
+  }
+}
+
+figure.full,
+img.full {
+  margin: 0 calc(50% - 50vw);
+  
+  border-radius: 0;
+  
+  width: 100vw;
+  max-width: var(--body-width-full);
+  transform: translateX(calc(50vw - 50%));
+}
+
+figure.full figcaption, figure.large figcaption {
+  padding-inline: 0;
+}
+
+/* images gallery */
+.gallery {
+  margin: var(--space-default) calc(50% - 50vw);
+  width: 100vw;
+  max-width: var(--body-width-max);
+  transform: translateX(calc(50vw - 50%));
+}
+
+.gallery a {
+  opacity: var(--opacity-low);
+}
+
+.gallery a:hover, .gallery a:active {
+  opacity: var(--opacity-reset);
+}
+
+.gallery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+  gap: var(--space-smaller);
+}
+
+.gallery ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  flex-grow: 3;
+  flex-basis: 30%;
+}
+
+.gallery ul li:last-child {
+  flex-grow: 10;
+}
+
+.gallery ul li img {
+  height: 100%;
+  width: 100%;
+}
+
+/* small screens - disable flex columns */
+@media (max-width: $breakpoint-small) {
+  .gallery {
+    margin: var(--space-default) 0;
+    width: 100%;
+    transform: none;
+  }
+
+  .gallery ul li {
+    width: 100%;
+    flex-basis: 100%;
+    flex-grow: 0;
+  }
+}

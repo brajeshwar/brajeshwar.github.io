@@ -8,7 +8,7 @@ For me, it all started with [Internet Explorer](https://en.wikipedia.org/wiki/In
 
 In 2000, I had the chance of building a marketing website for a bank (I think it was HDFC or another financial institute). The caveat was it has to work flawlessly in [Netscape Communicator](https://en.wikipedia.org/wiki/Netscape_Communicator). This was the time when Internet Explorer had become the _de facto_ browser and __it just works__. I took my time and flexed my HTML skill to make it work across IE and Netscape. I had that pride of accomplishment when the client was happy and satisfied with the result. Very soon Internet Explorer 6 was released and it changed the browser landscape altogether.
 
-<img class="small right border-reset" src="https://cdn.oinam.com/img/technology/internet-explorer-1.png" alt="Internet Explorer 1" loading="lazy">
+<img class="small right reset-border-radius" src="https://cdn.oinam.com/img/technology/internet-explorer-1.png" alt="Internet Explorer 1" loading="lazy">
 
 To this day, many government departments continue to rely on fortified and modified version of Internet Explorer 6. If I'm not mistaken, the whole of India's Passport Processing interface is still powered by Internet Explorer and erstwhile Adobe [Flex](https://en.wikipedia.org/wiki/Apache_Flex).
 
