@@ -36,12 +36,13 @@
 
 .post small {
 	display: block;
+	width: 100%;
 	margin: var(--space-l) auto;
 	padding: 0;
 	text-align: center;
 	line-height: 0.00000001rem;
 /*	border-bottom: var(--border-size) var(--border-style) var(--border-color-light);*/
-
+	
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1618034), rgba(0, 0, 0, 0));
 	height: 1px;
 }
@@ -50,7 +51,7 @@
 	padding: var(--space-3xs) var(--space-xs);
 	color: var(--text-color-lighter);
 	border-radius: var(--border-radius-largest);
-	background-color: var(--bg-color-200);
+	background-color: var(--bg-color-100);
 }
 
 .post img {
