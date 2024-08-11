@@ -1,17 +1,98 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
+
+<head>
 <meta charset="utf-8">
-<title>Goto: {{ page.redirect.to }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="{{ page.redirect.to }}">
 <script>location="{{ page.redirect.to }}"</script>
 <meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
 <meta name="robots" content="noindex">
 
-<p>
-  Still here?
-  <br>
-  Please GOTO:
-  <a href="{{ page.redirect.to }}">{{ page.redirect.to }}</a>
-</p>
+<title>Goto: {{ page.redirect.to }}</title>
 
+<style>
+  :root {
+    /* Tailwind inspired */
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f4f4f5;
+    --color-zinc-200: #e4e4e7;
+    --color-zinc-300: #d4d4d8;
+    --color-zinc-400: #a1a1aa;
+    --color-zinc-500: #71717a;
+    --color-zinc-600: #52525b;
+    --color-zinc-700: #3f3f46;
+    --color-zinc-800: #18181b;
+    --color-zinc-900: #18181b;
+
+    --font-family-sans-serif: system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-family-serif: 'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    --border-radius: 13px;
+  }
+
+  html {
+    background: var(--color-zinc-100);
+  }
+
+  body {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    font-family: var(--font-family-serif);
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-zinc-700);
+
+    /* vertical center */
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+  }
+
+  ul,
+  ol {
+    padding: 0 0.5rem;
+    margin: 0 1rem;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0 0 1rem;
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 1.6rem 2rem;
+    background: var(--color-zinc-50);
+    box-shadow: 0 10px 20px var(--color-zinc-200);
+    border-radius: var(--border-radius);
+  }
+
+</style>
+
+</head>
+
+<body>
+
+  <main>
+    <p>
+      Still here?
+      <br>
+      Please GOTO:
+      <a href="{{ page.redirect.to }}">{{ page.redirect.to }}</a>
+    </p>
+  </main>
+
+</body>
 </html>
