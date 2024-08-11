@@ -46,6 +46,6 @@ Once ready for production and deployment, grep through the styles and look for "
 
 ## Furthermore
 
-In a more advanced environment, you can extract data such as the colors used in a particular design project, the variants of border-radius values used, the number of existence of text-shadows, `et al` and take informed decisions - settle on a color guide depending the frequency of a particular color, standardized on a border-radius or even set a standard, uniform text-shadows across the project. Tools such as [CSSLint](http://csslint.net/), [CSSCSS](http://zmoazeni.github.io/csscss/) can be added to your workflow for a more advanced design and development of styles for your design project.
+In a more advanced environment, you can extract data such as the colors used in a particular design project, the variants of border-radius values used, the number of existence of text-shadows, etc. and take informed decisions - settle on a color guide depending the frequency of a particular color, standardized on a border-radius or even set a standard, uniform text-shadows across the project. Tools such as [CSSLint](http://csslint.net/), [CSSCSS](http://zmoazeni.github.io/csscss/) can be added to your workflow for a more advanced design and development of styles for your design project.
 
 I hope, you the designers, now have some inkling of what a tool like grep can help you. You'll need to get your hands dirty with the terminal and some command-line. Let me assure you they are not that hard and it is OK to hijack such developer tools to help your design work.
