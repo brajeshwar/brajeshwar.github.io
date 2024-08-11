@@ -75,8 +75,11 @@
   --color-900: #101010;
   --color-950: #0a0a0a;
   
+  /* keep the reading length ideally within 50–75 characters */
+  --reading-ideal:      60ch;
+
   --body-width:         96%;
-  --body-width-ideal:   46rem; /* ideal reading width */
+  --body-width-ideal:   var(--reading-ideal); /* ideal reading width */
   --body-width-max:     76rem; /* visual width */
   --body-width-medium:  60rem; /* objects that are large but not max */
   --body-width-full:    1600px;
@@ -166,7 +169,7 @@ $breakpoint-extralarge: 1600px;
  * default and only LIGHT theme.
  * If I think I want a dark theme, replicate and reverse the palette pattern.
  */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root,
   ::backdrop {
 
@@ -212,7 +215,7 @@ $breakpoint-extralarge: 1600px;
 }
 
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root,
   ::backdrop {
 
@@ -257,7 +260,7 @@ $breakpoint-extralarge: 1600px;
   }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   img, video {
     opacity: var(--opacity-lower);
   }
