@@ -28,23 +28,20 @@ img.right {
 }
 
 figure {
-  margin: 0;
+  margin: 0 0 var(--space-m);
   padding: 0;
-  background-color: var(--bg-color-100);
   border-radius: var(--border-radius);
 }
 
 figure img {
   width: 100%;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 figcaption {
   max-width: var(--body-width-ideal);
   margin: 0 auto;
-  padding: var(--space-2xs) var(--space-xs);
-  text-align: left;
+  padding: var(--space-3xs);
+  text-align: center;
   font-size: smaller;
 }
 
