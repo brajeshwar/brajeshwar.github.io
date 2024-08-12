@@ -4,6 +4,14 @@ iframe, object, embed {
   border-radius: var(--border-radius);
 }
 
+.label {
+  font-size: smaller;
+  text-align: center;
+  border-radius: var(--border-radius-largest);
+  background: var(--bg-color-100);
+  padding: var(--space-3xs);
+}
+
 .pill {
 	display: inline-block;
 	white-space: nowrap;

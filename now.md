@@ -24,6 +24,6 @@ style: page-now
 
 {% include_relative now/2001.md %}
 
-{:.note}
+{:.label}
 Started in 2024.
 I’ve back-dated some events that are interesting to me.

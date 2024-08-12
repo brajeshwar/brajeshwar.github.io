@@ -60,12 +60,14 @@ figcaption {
 figure.full,
 img.full {
   margin: 0 calc(50% - 50vw);
-  
-  border-radius: 0;
-  
-  width: 100vw;
+  width: 100vw !important;
   max-width: var(--body-width-full);
   transform: translateX(calc(50vw - 50%));
+  border-radius: 0;
+}
+
+figure.full img {
+  border-radius: 0;
 }
 
 figure.full figcaption, figure.large figcaption {
