@@ -1,0 +1,10 @@
+:root {
+  --toggle-width: 60px;
+  --toggle-height: 34px;
+  --toggle-button-size: 26px;
+  --toggle-transition-duration: var(--transition-duration);
+}
+
+.color-theme {
+  
+}

@@ -23,7 +23,7 @@ blockquote {
 
 	font-family: var(--font-family-alt);
 	border-left: var(--border-size-large) var(--border-style) var(--border-color-light);
-	background: var(--bg-color-50);
+	background: var(--bg-color-100);
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }
@@ -40,6 +40,7 @@ mark, code.language-plaintext {
 	padding: var(--space-3xs) var(--space-2xs);
 	font-family: var(--font-family-monospace);
 	font-size: smaller;
+	color: var(--text-color-lighter);
 	background-color: var(--bg-color-100);
 	border-radius: var(--border-radius-largest);
 	border-bottom: var(--border-size) var(--border-style) var(--border-color);

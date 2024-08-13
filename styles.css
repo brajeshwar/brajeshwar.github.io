@@ -25,7 +25,7 @@
 {% include css/3-module-search.css %}
 {% include css/3-module-post.css %}
 {% include css/3-module-now.css %}
-
+{% include css/3-module-theme.css %}
 {% include css/3-module-grid.css %}
 
 {% include css/4-tools-utils.css %}
