@@ -5,6 +5,15 @@ image-title: V for Vendetta
 
 # V for Vendetta
 
+> “Remember, remember The fifth of November The gunpowder treason and plot. I know of no reason Why the gunpowder treason Should ever be forgot.” But what of the man? I know his name was Guy Fawkes, and I know that, in 1605, he attempted to blow up the houses of Parliament.
+> 
+> But who was he really? What was he like? We are told to remember the idea, not the man, because a man can fail. He can be caught. He can be killed and forgotten. But four hundred years later an idea can still change the world. I’ve witnessed firsthand the power of ideas. I’ve seen people kill in the name of them; and die defending them.
+> 
+> But you cannot kiss an idea, cannot touch it or hold it. Ideas do not bleed. They do not feel pain. They do not love. And it is not an idea that I miss, it is a man. A man that made me remember the fifth of November. A man that I will never forget.
+> 
+> -- Evey Hammond
+
+
 [V for Vendetta](https://en.wikipedia.org/wiki/V_for_Vendetta_(film)) is a movie worth re-watching. I have re-watched it so many times that I have lost count. The film reimagines the book [1984](/2024/1984/) with Elrond of Rivendell[^Elrond] in an alternate universe as a rebellion.
 
 A dystopian political action film, it is based on the [1988–89 DC Vertigo Comics](https://en.wikipedia.org/wiki/V_for_Vendetta) limited series of the same title by Alan Moore, David Lloyd, and Tony Weare. The film, set in a future where a fascist totalitarian regime has subjugated the UK, centers on V, an anarchist and masked freedom fighter who attempts to ignite a revolution through elaborate terrorist acts, and on Evey Hammond, a young woman caught up in V’s mission.
