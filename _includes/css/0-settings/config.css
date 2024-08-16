@@ -1,0 +1,126 @@
+:root {
+  --font-family-sans: system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  --font-family-monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  --font-family-cursive: cursive;
+  
+  --font-family: var(--font-family-sans);
+  --font-family-alt: "Libre Baskerville", var(--font-family-serif);
+
+  --font-size-base: 18px;
+
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #0f2021;
+  --color-secondary: #0f3538;
+  --color-primary-accent: #ff6600;
+  --color-secondary-accent: #ff9200;
+
+  /* Gray color palette from https://oinam.com/brand/ */
+  --color-0  : #fafafa;
+  --color-50 : #f5f5f5;
+  --color-100: #f0f0f0;
+  --color-200: #e5e5e5;
+  --color-300: #d5d5d5;
+  --color-400: #a0a0a0;
+  --color-500: #606060;
+  --color-600: #404040;
+  --color-700: #262626;
+  --color-800: #171717;
+  --color-900: #101010;
+  --color-950: #0a0a0a;
+  
+  --body-width:         96%;
+  --body-width-ideal:   46rem; /* ideal reading width */
+  --body-width-max:     76rem; /* visual width */
+  --body-width-medium:  60rem; /* objects that are large but not max */
+  --body-width-full:    1600px;
+
+  --embed-video-height: calc(0.5625 * var(--body-width-ideal)); /* manual height based on the ideal width against the video ratio, mostly youtube which is 315/560=0.5625 */
+
+  /* modular scale */
+  --double-octave    : 4                 ;
+  --pi               : 3.14159265359     ;
+  --major-twelfth    : 3                 ;
+  --major-eleventh   : 2.666666667       ;
+  --major-tenth      : 2.5               ;
+  --octave           : 2                 ;
+  --major-seventh    : 1.875             ;
+  --minor-seventh    : 1.777777778       ;
+  --major-sixth      : 1.666666667       ;
+  --phi              : 1.618034          ;
+  --golden           : 1.618034          ;
+  --minor-sixth      : 1.6               ;
+  --fifth            : 1.5               ;
+  --augmented-fourth : 1.41421           ;
+  --fourth           : 1.333333333       ;
+  --major-third      : 1.25              ;
+  --minor-third      : 1.2               ;
+  --major-second     : 1.125             ;
+  --minor-second     : 1.066666667       ;
+  
+  --scale:        var(--golden);
+  --scale-small:  var(--augmented-fourth);
+  --scale-medium: var(--fourth);
+  --scale-large:  var(--octave);
+
+  --space-default:  calc(var(--scale) * 1rem);
+  --space-large:    calc(var(--scale) * 1.618034rem);
+  --space-larger:   calc(var(--scale) * 2.5rem);
+  --space-small:    calc(var(--scale-small) * 0.8rem);
+  --space-smaller:  calc(var(--scale-small) * 0.5rem);
+  --space-smallest: calc(var(--scale-small) * 0.2rem);
+
+  --size-default:   calc(var(--scale) * 1rem);
+  --size-small:     calc(var(--scale) * 0.8rem);
+  --size-smaller:   calc(var(--scale) * 0.6rem);
+  --size-smallest:  calc(var(--scale) * 0.4rem);
+  --size-medium:    calc(var(--scale) * 1.2rem);
+  --size-large:     calc(var(--scale) * 1.4rem);
+  --size-larger:    calc(var(--scale) * 1.6rem);
+  --size-largest:   calc(var(--scale) * 2rem);
+
+  --opacity-reset: 1;
+  --opacity-low: 0.9;
+  --opacity-lower: 0.7;
+  --opacity-lowest: 0.5;
+
+  --transition-duration: 0.4s;
+
+  --border-radius: 7px;
+  --border-radius-tiny: 2px;
+  --border-radius-small: 4px;
+  --border-radius-large: 10px;
+  --border-radius-larger: 25px;
+  --border-radius-largest: 42px;
+
+  --border-style: solid;
+  --border-style-alt: dotted;
+  
+  --border-size: 1px;
+  --border-size-small: 3px;
+  --border-size-medium: 5px;
+  --border-size-large: 10px;
+  --border-size-larger: 20px;
+  --border-size-largest: 142px;
+
+  --logo-size: 42px;
+
+  --image-width-max: var(--body-width-medium);
+  --image-width-full: var(--body-width-full);
+}
+
+@media (prefers-color-scheme: dark) {
+  img, video {
+    opacity: var(--opacity-lower);
+  }
+}
+
+/*
+  jekyll supports sass out of the box.
+  Use only when plain CSS do not suffice.
+*/
+$breakpoint-small:  581px;
+$breakpoint-medium: 800px;
+$breakpoint-large:  1024px;
+$breakpoint-extralarge: 1600px;

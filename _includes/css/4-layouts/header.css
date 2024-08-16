@@ -1,6 +1,5 @@
 header.site-header {
-	padding: var(--space-default) 0;
-	margin-bottom: var(--space-large);
+	margin: var(--space-m) auto;
 }
 
 .header {
@@ -9,13 +8,6 @@ header.site-header {
 	align-items: center;
 	gap: var(--space-3xs);
 }
-
-/* small screens - flush left */
-/*@media only screen and (max-width: $breakpoint-small) {
-  .header {
-  	justify-content: left;
-	}
-}*/
 
 .header a {
 	text-decoration: none;

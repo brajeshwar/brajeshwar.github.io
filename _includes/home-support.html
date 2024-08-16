@@ -1,34 +1,23 @@
 <article class="support">
-  <h2>Endorsements</h2>
+
+  <h2>
+    Support & Endorsements
+  </h2>
+
   <ul>
+    {% for items in site.data.support -%}
     <li>
-      I co-founded <a href="https://valinor.earth/">Valinor Earth</a> where we build sustainable and profitable technology practices helping businesses curb climate change.
+      <a href="{{ items.url }}">{{ items.title }}</a>
+      {{ items.desc }}
     </li>
-    <li>
-      <a href="https://inboxstartup.com">Inbox Startup</a>
-      helps Startups during the chaotic zero stage.
-    </li>
-    <li>
-      <a href="https://sendune.com">Sendune</a>
-      is a ‘Customer Data Platform’ that integrates with AWS SES to send Emails, SMS, and OTP’s.
-    </li>
-    <li>
-      <a href="https://www.jobfit360.com">JobFit 360</a>
-      harness the potential of AI to foster a holistic, efficient, and inclusive talent acquisition strategy.
-    </li>
-    <li>
-      <a href="https://mltitude.com">mltitude.ai</a>
-      effortlessly unlock insights with AI-powered surveys, assessments, and quizzes that seamlessly collect, analyze, and report data to drive informed decisions.
-    </li>
-    <li>
-      <a href="https://beondeck.com/r/brajeshwar">On Deck</a>
-      is where founders go to build world-changing startups in a community of peers, mentors, and investors.
-    </li>
+    {% endfor -%}
   </ul>
-  <p class="support__footer">
+
+  <p class="mark">
     <small>
       <strong>Disclaimer:</strong>
       I’m affiliated with, endorse, support, and use these products. I’m part of, advise, mentor, invest, and/or own parts in some of them.
     </small>
   </p>
+
 </article>

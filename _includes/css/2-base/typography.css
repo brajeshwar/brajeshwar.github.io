@@ -1,6 +1,5 @@
 h1, h2, h3, h4, h5 , h6 {
-	font-weight: 200;
-	line-height: var(--step-4);
+	line-height: var(--scale-small);
 }
 
 a {
@@ -22,8 +21,9 @@ blockquote {
 	padding: var(--space-3xs) var(--space-m);
 
 	font-family: var(--font-family-alt);
-	border-left: var(--border-size-large) var(--border-style) var(--border-color-light);
+
 	background: var(--bg-color-100);
+	border-left: var(--border-size-large) var(--border-style) var(--border-color-light);
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }

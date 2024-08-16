@@ -1,5 +1,9 @@
 .page-post {
-	margin-top: calc(var(--space-large) * -1);
+	font-family: var(--font-family-alt);
+}
+
+.page-post figure, .page figure {
+	font-family: var(--font-family);
 }
 
 .page-post figure.cover-photo {
@@ -21,17 +25,13 @@
 	border-radius: 0;
 }
 
-.page-post figure, .page figure {}
-
-
 .post {
-	padding-top: var(--space-large);
+	padding-top: var(--space-l);
 }
 
 .post h1 {
-	font-family: var(--font-family-alt);
 	text-align: center;
-	margin: 0 auto var(--space-small);
+	margin: 0 auto var(--space-s);
 }
 
 .post small {
@@ -45,6 +45,7 @@
 }
 
 .post time {
+	font-family: var(--font-family);
 	padding: var(--space-3xs) var(--space-xs);
 	color: var(--text-color-lighter);
 	border-radius: var(--border-radius-largest);
@@ -67,6 +68,7 @@
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius-larger);
 
+	font-family: var(--font-family);
 	font-size: smaller;
 	text-transform: uppercase;
 }
