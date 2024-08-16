@@ -20,11 +20,13 @@
 
 /* footnotes */
 .footnotes {
-	margin: var(--space-default) 0;
-	padding: var(--space-smaller) var(--space-small) var(--space-smaller) 0;
+	margin: var(--space-m) auto;
+	padding: var(--space-xs);
 	color: var(--text-color-lighter);
 	background: var(--bg-color-50);
 	border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--scale--1);
 }
 
 .reversefootnote {
@@ -52,8 +54,8 @@ ul.item__cards {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  gap: var(--space-default);
-  row-gap: var(--space-default);
+  gap: var(--space-xs);
+  row-gap: var(--space-xs);
 }
 
 ul.item__cards li {

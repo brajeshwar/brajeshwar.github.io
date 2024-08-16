@@ -4,31 +4,35 @@
 
 {%- capture include_to_scssify -%}
 
-{% include css/0-base-sanitize.css %}
-{% include css/0-base-code.css %}
-{% include css/0-base-fonts.css %}
-{% include css/0-base-config.css %}
+{% include css/0-settings/scale.css %}
+{% include css/0-settings/fonts.css %}
+{% include css/0-settings/config.css %}
+{% include css/0-settings/theme-black.css %}
 
-{% include css/1-init.css %}
-{% include css/1-init-typography.css %}
-{% include css/1-init-forms.css %}
-{% include css/1-init-table.css %}
-{% include css/1-init-img.css %}
+{% include css/1-tools/utils.css %}
+{% include css/1-tools/grid.css %}
 
-{% include css/2-layout-base.css %}
-{% include css/2-layout-header.css %}
-{% include css/2-layout-footer.css %}
-{% include css/2-layout-home.css %}
 
-{% include css/3-module-pages.css %}
-{% include css/3-module-archives.css %}
-{% include css/3-module-search.css %}
-{% include css/3-module-post.css %}
-{% include css/3-module-now.css %}
-{% include css/3-module-theme.css %}
-{% include css/3-module-grid.css %}
+{% include css/2-base/sanitize.css %}
+{% include css/2-base/init.css %}
+{% include css/2-base/typography.css %}
+{% include css/2-base/forms.css %}
+{% include css/2-base/table.css %}
 
-{% include css/4-tools-utils.css %}
+{% include css/3-modules/code.css %}
+{% include css/3-modules/img.css %}
+
+
+{% include css/4-layouts/base.css %}
+{% include css/4-layouts/header.css %}
+{% include css/4-layouts/footer.css %}
+{% include css/4-layouts/home.css %}
+{% include css/4-layouts/pages.css %}
+{% include css/4-layouts/archives.css %}
+{% include css/4-layouts/search.css %}
+{% include css/4-layouts/post.css %}
+{% include css/4-layouts/now.css %}
+
 
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines -}}

@@ -1,6 +1,6 @@
 # Magic at Hacker News
 
 Co-Founder
-SendWithSES
+Sendune
 Friends
 Investment

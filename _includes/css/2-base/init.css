@@ -1,26 +1,19 @@
-:root {
-  font-family: "Atkinson Hyperlegible", var(--font-family-sans);
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-}
-
-/*@supports (font-variation-settings: normal) {
-  :root {
-    font-family: InterVariable, var(--font-family-sans);
-  }
-}*/
-
 html {
   height: 100%;
 }
 
 body {
+  font-family: var(--font-family);
+  font-feature-settings: 'liga' 1, 'calt' 1;
   font-size: var(--font-size-base);
   line-height: var(--scale);
   color: var(--text-color);
-  background: var(--bg-color);
+  background-color: var(--bg-color);
 
   transition: background 500ms ease-in-out, color 200ms ease;
 }
+
+main {}
 
 hr {
   padding: 0;

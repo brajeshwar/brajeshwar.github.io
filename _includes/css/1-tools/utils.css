@@ -20,6 +20,17 @@ iframe, object, embed {
 	background: var(--bg-color-100);
 }
 
+.mark {
+  background-color: var(--bg-color-100);
+  padding: var(--space-2xs);
+  line-height: var(--scale-small);
+
+  background: var(--bg-color-100);
+  border-left: var(--border-size-larger) var(--border-style) var(--border-color-light);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
 .link-border a {
 	text-decoration: none;
 	border-bottom: var(--border-size) solid var(--text-color-lightest);
@@ -51,13 +62,4 @@ iframe, object, embed {
   clip-path: inset(1px);
   white-space: nowrap;
   position: absolute;
-}
-
-/* debug: attach a "?" class to debug with a blinking box */
-.\? {
-  animation: \?wobble 0.5s ease-in-out alternate infinite;
-}
-@keyframes \?wobble {
-  0% { box-shadow: inset 1px 1px gold, inset -1px -1px gold; }
-  100% { box-shadow: inset 5px 5px red, inset -5px -5px red; }
 }
