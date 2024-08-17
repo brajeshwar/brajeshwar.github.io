@@ -6,7 +6,6 @@
 
 {% include css/0-settings/modular-scale.css %}
 {% include css/0-settings/scale.css %}
-{% include css/0-settings/fonts.css %}
 {% include css/0-settings/theme.css %}
 {% include css/0-settings/config.css %}
 {% include css/0-settings/light-dark.css %}
