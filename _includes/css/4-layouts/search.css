@@ -28,14 +28,13 @@ td.gsc-search-button {
 }
 
 .gsc-input-box {
-	height: var(--space-large) !important;
+	height: var(--space-l) !important;
 }
 
 .gsc-input {}
 
 .gsib_a .gsc-input {
 	line-height: var(--scale);
-	font-size: var(--size-small);
 	color: var(--text-color);
 }
 

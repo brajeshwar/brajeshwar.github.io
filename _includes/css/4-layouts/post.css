@@ -34,22 +34,13 @@
 	margin: 0 auto var(--space-s);
 }
 
-.post small {
-	display: block;
-	width: 100%;
-	margin: var(--space-l) auto;
-	padding: 0;
-	text-align: center;
-	line-height: 0.00000001rem;
-	border-bottom: var(--border-size) var(--border-style) var(--bg-color-100);
-}
-
 .post time {
-	font-family: var(--font-family);
+	display: block;
+	margin: var(--space-xs) auto;
 	padding: var(--space-3xs) var(--space-xs);
+	font-size: var(--step--2);
+	text-align: center;
 	color: var(--text-color-lighter);
-	border-radius: var(--border-radius-largest);
-	background-color: var(--bg-color-100);
 }
 
 .post img {
@@ -64,7 +55,7 @@
 	grid-template-columns: repeat(2, 1fr);
 	
 	padding: 0;
-	margin: var(--space-large) auto;
+	margin: var(--space-l) auto;
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius-larger);
 
