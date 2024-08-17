@@ -1,62 +1,33 @@
-.search__provider * {
+.search__provider {
 	border: 0 none !important;
 }
 
 .gcse-search {}
-.gsc-control-cse, .gsc-control-cse-en {
-	margin: 0 !important;
-	padding: var(--space-small) !important;
-	background: var(--bg-color-50) !important;
-	border-radius: var(--border-radius);
-}
+.gsc-control-cse, .gsc-control-cse-en {}
 
-.gsc-control-wrapper-cse {
-	margin: 0 !important;
-	padding: 0 !important;
-	width: 100% !important;
-	border-radius: var(--border-radius);
-}
+.gsc-control-wrapper-cse {}
 
-table.gsc-search-box {
-	width: 100% !important;
-}
+table.gsc-search-box {}
 td.gsc-input {
-	width: 80% !important;
+	width: 75% !important;
 }
 td.gsc-search-button {
 	width: 20% !important;
 }
 
-.gsc-input-box {
-	height: var(--space-l) !important;
-}
+.gsc-input-box {}
 
 .gsc-input {}
 
-.gsib_a .gsc-input {
-	line-height: var(--scale);
-	color: var(--text-color);
-}
+.gsib_a .gsc-input {}
 
-.gsc-search-button {
-	border-radius: var(--border-radius);
-	text-align: right !important;
-	width: 90% !important;
-	height: 40px !important;
-}
+.gsc-search-button {}
 
-.gsc-search-button svg {
-	display: block;
-	width: 16px !important;
-	height: 16px !important;
-}
+.gsc-search-button svg {}
 
 .gsc-search-button-v2 {}
 
-.gsc-resultsRoot {
-	background: black !important;
-	border-radius: var(--border-radius);
-}
+.gsc-resultsRoot {}
 .gsc-results {}
 
 /* Google's Programmable Search Engine (erstwhile Custom Search Engine) */

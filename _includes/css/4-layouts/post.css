@@ -1,9 +1,7 @@
-.page-post {
-	font-family: var(--font-family-alt);
-}
+.page-post {}
 
 .page-post figure, .page figure {
-	font-family: var(--font-family);
+	font-family: var(--font-family-sans);
 }
 
 .page-post figure.cover-photo {
@@ -27,6 +25,12 @@
 
 .post {
 	padding-top: var(--space-l);
+}
+
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+	font-family: var(--font-family-serif);
+	line-height: var(--scale-small);
+	font-weight: 200;
 }
 
 .post h1 {
@@ -59,7 +63,7 @@
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius-larger);
 
-	font-family: var(--font-family);
+	font-family: var(--font-family-sans);
 	font-size: smaller;
 	text-transform: uppercase;
 }

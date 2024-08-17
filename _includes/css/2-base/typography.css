@@ -20,7 +20,8 @@ blockquote {
 	margin: var(--space-m) 0;
 	padding: var(--space-3xs) var(--space-m);
 
-	font-family: var(--font-family-alt);
+	font-family: var(--font-family-serif);
+	font-size: var(--step-0);
 
 	background: var(--bg-color-100);
 	border-left: var(--border-size-large) var(--border-style) var(--border-color-light);
@@ -58,7 +59,7 @@ aside, .aside {
 	margin-left: -10vw;
 	padding: var(--space-s);
 
-	font-family: var(--font-family-alt);
+	font-family: var(--font-family-serif);
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius);
 }
