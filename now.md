@@ -4,6 +4,9 @@ title: Now
 style: page-now
 ---
 
+[//]: # "Think of what you’d tell a friend you hadn’t seen in a year."
+[//]: # Create an intro and then continue with the listicle.
+
 <section class="page-now__now" markdown="1">
 {% include_relative now/2024.md %}
 </section>

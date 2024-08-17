@@ -2,17 +2,13 @@
 
 .intro {
   max-width: var(--body-width-ideal);
-  margin-bottom: var(--space-l);
 
   font-family: var(--font-family-alt);
-  font-size: var(--step-2);
-  line-height: var(--scale-small);
+  font-size: var(--step-1);
 }
 
 .intro h1 {
-  margin: 0;
-  padding: 0;
-  font-size: var(--step-3);
+  font-size: var(--step-2);
 }
 
 
@@ -139,9 +135,10 @@ ul.home__blog--popular-items time {
   color: var(--text-color-light);
 }
 .connect ul li {}
+
 .connect__title {
   font-weight: 200;
-  font-size: var(--size-medium);
+  font-size: var(--step-1);
   text-transform: lowercase;
   margin: 0 0 var(--space-default);
   padding: 0;
@@ -149,7 +146,7 @@ ul.home__blog--popular-items time {
 
 .connect__title--sub {
   font-weight: 200;
-  font-size: var(--size-small);
+  font-size: var(--step-0);
   text-transform: lowercase;
   margin: 0;
   padding: 0;
@@ -158,7 +155,7 @@ ul.home__blog--popular-items time {
 .connect span {
   margin-right: var(--space-smaller);
   font-family: var(--font-family-monospace);
-  font-size: var(--size-smaller);
+  font-size: smaller;
   color: var(--text-color-lighter);
 }
 

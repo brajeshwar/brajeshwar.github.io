@@ -21,23 +21,31 @@ header.site-header {
 }
 
 .logo a {
+	margin: 0;
+	padding: 0;
 	display: inline-block;
 	border-radius: 100%;
 }
 
+.logo a .logo__img, .logo a .logo__img--path,
+.logo a:visited .logo__img, .logo a:visited .logo__img--path {
+	fill: var(--logo-color);
+} 
+
 .logo a:hover, .logo a:active {
-	background: var(--logo-color-bg);
+	background: var(--logo-color);
 }
 
-.logo__img, .logo__img--path {
-	fill: var(--logo-color);
+.logo a:hover .logo__img, .logo a:hover .logo__img--path,
+.logo a:active .logo__img, .logo a:active .logo__img--path {
+	fill: var(--logo-color-bg);
 }
 
 /* menu */
 .menu {
 	padding: var(--space-smaller) var(--space-small);
-	font-size: var(--size-smaller);
-	background: var(--bg-color-800);
+	font-size: var(--step--1);
+	background-color: var(--bg-color-full);
 	border-radius: var(--border-radius-larger);
 }
 

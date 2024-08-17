@@ -45,6 +45,8 @@ figcaption {
   font-size: smaller;
 }
 
+figure:has(figcaption) {}
+
 @media (min-width: $breakpoint-small) {
   figure.large,
   img.large {

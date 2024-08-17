@@ -1,8 +1,8 @@
 footer.site-footer {
 	text-align: center;
 	color: var(--text-color-light);
-	padding: var(--space-small);
-	margin-top: var(--space-large);
+	padding: var(--space-s);
+	margin-top: var(--space-l);
 	border-top: 1px solid var(--border-color);
 }
 
@@ -12,5 +12,5 @@ footer.site-footer nav {
 }
 
 footer.site-footer nav a {
-	padding: 0 var(--space-smallest);
+	padding: 0 var(--space-3xs);
 }

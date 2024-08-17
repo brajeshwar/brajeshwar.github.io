@@ -4,14 +4,15 @@
 
 {%- capture include_to_scssify -%}
 
+{% include css/0-settings/modular-scale.css %}
 {% include css/0-settings/scale.css %}
 {% include css/0-settings/fonts.css %}
+{% include css/0-settings/theme.css %}
 {% include css/0-settings/config.css %}
-{% include css/0-settings/theme-black.css %}
+{% include css/0-settings/light-dark.css %}
 
 {% include css/1-tools/utils.css %}
 {% include css/1-tools/grid.css %}
-
 
 {% include css/2-base/sanitize.css %}
 {% include css/2-base/init.css %}
@@ -21,7 +22,7 @@
 
 {% include css/3-modules/code.css %}
 {% include css/3-modules/img.css %}
-
+{% include css/3-modules/switch.css %}
 
 {% include css/4-layouts/base.css %}
 {% include css/4-layouts/header.css %}
@@ -32,7 +33,6 @@
 {% include css/4-layouts/search.css %}
 {% include css/4-layouts/post.css %}
 {% include css/4-layouts/now.css %}
-
 
 {%- endcapture -%}
 {{- include_to_scssify | scssify | strip_newlines -}}
