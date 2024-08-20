@@ -33,7 +33,6 @@ ul.home__blog--items li {
   margin: 0;
   padding: var(--space-xs) var(--space-s);
   
-  vertical-align: top;
   width: 30%;
   
   flex-basis: auto;

@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
   color: inherit;
-  text-decoration-thickness: 0.06rem;
+  text-decoration-thickness: 0.05rem;
   text-decoration-color: var(--text-color-lightest);
   text-underline-offset: 0.1618034rem;
 }
