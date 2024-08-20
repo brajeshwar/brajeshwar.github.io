@@ -1,4 +1,4 @@
-# New Updates from "Google+ for Android"
+# New Updates from “Google+ for Android”
 
 Mobile phones that run on <a href="http://developer.android.com/guide/basics/what-is-android.html">Android OS</a> have the advantage to access innumerable number of Android Applications. Ever since Google has taken control on Android operating system, rapid development has taken place. Smart Android applications have not only enhanced functionalities of mobile phones but also changed the lifestyles of millions of people across the globe. Google has been improving social application, Google+ for Android quite often to ensure that there will be steady and stable growth. Google has delivered updates for <a href="https://market.android.com/details?id=com.google.android.apps.plus">Google+ for Android</a> application. 
 
@@ -7,7 +7,8 @@ Let us learn more about these updates:
 - New updates are intended to enhance existing application's features and boost its performance. Now, it is possible to find who has liked (+1'd) your posts or your comments. Earlier it was confined to find the number of +1d's only. As per the new update, you can find the entire list of users who had liked your comments or posts. You can find their names and profile photos as well.
 - Another change is brought in the 'what is hot' section of video stream. This feature can be compared to <a href="http://support.twitter.com/articles/101125">Twitter trending topics</a>. Trending topics on Twitter are very popular as current highly popular topics are selected and presented to Twitter users. This will ensure that users will be exposed to the most admired topics shared by Twitter community. Through 'what is hot' section from Google+ for Android, you will be able to notice highly circulated posts that are getting the attention of the audience.
 - Videos will be displayed in smaller size so that more number of streams can be accommodated for every scroll. In earlier versions users were very much annoyed with automatic refresh of video streaming. The good news is that, this pain taking process has been annihilated through the current update. The updated application is available for download from the site.
-<h3>Is everything Good for 'Google+ for Android'?</h3>
+
+### Is everything Good for 'Google+ for Android'?
 
 There is mixed reaction on the new updates introduced by Google. The application cannot fill the entire screen space when it is loaded on Tablets. This drawback is reflected on both Android Honeycomb and Ice Cream Sandwich versions. Even though Google has announced some new features with respect to mobile applications last month, nothing much was delivered with respect to <a href="http://arstechnica.com/gadgets/news/2011/07/hands-on-google-mobile-client-for-android-and-huddle-group-messaging.ars">applications used on smartphones</a>. The new updates are quite impressive to improve the overall performance of the 'Google+ for Android' application. 
 
