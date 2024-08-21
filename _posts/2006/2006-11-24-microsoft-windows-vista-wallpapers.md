@@ -12,7 +12,7 @@ image-title: Microsoft Vista Wallpapers
 - [Missing Ones](https://archives.oinam.com/vista-wallpapers/WindowsVistaWallpaper-Missing.zip) (15MB)
 - [Hamad Darmish](https://archives.oinam.com/vista-wallpapers/windows-vista-wallpaper-hamad-darwish.zip) (30MB)
 
-`UPDATE:` [Download all of Microsoft Windows Wallpapers](/2021/windows-wallpapers/) from Windows 3.0 to Windows 11.
+**UPDATE:** [Download all of Microsoft Windows Wallpapers](/2021/windows-wallpapers/) from Windows 3.0 to Windows 11.
 
 Microsoft started work on their plans for Windows Vista ("Longhorn") in 2001, prior to the release of Windows XP. It was originally expected to ship sometime late in 2003 as a minor step between Windows XP (codenamed "Whistler") and "Blackcomb" (now known as Windows "Vienna"). Gradually, "Longhorn" assimilated many of the important new features and technologies slated for "Blackcomb", resulting in the release date being pushed back several times. Many of Microsoft's developers were also re-tasked with improving the security of Windows XP.
 

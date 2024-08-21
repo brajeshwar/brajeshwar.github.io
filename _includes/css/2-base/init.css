@@ -43,6 +43,11 @@ kbd {
   max-width: 100%;
 }
 
+:where(audio) {
+  height: auto;
+  width: 100%;
+}
+
 /* Reduced Motion; Remove
  * animations
  * fixed background attachments

@@ -14,7 +14,7 @@ Recently, while trying to prune and clear up storage, I realize that Google had 
 
 Before doing anything, I strongly suggest creating a full back of your Google content. Follow the instructions at [Google Takeout](https://takeout.google.com) and get a copy of your Backups.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/a4Mfg3Rb_4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/a4Mfg3Rb_4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Deleting Photos
 
@@ -22,7 +22,7 @@ Google Photos was the one taking up most of the storage. It wasn't an easy task 
 
 I found a working script for Google Chrome [Google Photos Delete All Tool](https://github.com/mrishab/google-photos-delete-tool), which helped deletion (working version mentioned ahead). Unfortunately, Google Photos web interface seems to update their HTML tag and CSS classes, which no longer worked. I made a tiny tweak in the Button Labels and DELETE duration between actions. Even then, it was not without flaws. It did not work all the time, and I had to tweak/resize the viewport, retry few times, and when it worked, I just let it do its magic. I have a pretty beefy computer (40GB RAM), and I still needed to pick a longer delay between delete cycles.
 
-![Activity Monitor)](/static/2021/activity-monitor.png)
+<img class="large" src="/static/2021/activity-monitor.png" alt="Activity Monitor">
 
 I sent a [Pull Request](https://github.com/mrishab/google-photos-delete-tool/pull/36) to the source. The updated script is at [github.com/oinam/google-photos-delete-tool](https://github.com/oinam/google-photos-delete-tool). This works as of JUN 2021.
 
