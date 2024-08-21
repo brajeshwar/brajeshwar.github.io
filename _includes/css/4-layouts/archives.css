@@ -18,6 +18,10 @@
 	padding: 0;
 	border: 0 none;
 }
+.archives table td {
+	/* a custom spacing that breaks the default spacing values */
+	padding: calc(var(--space-3xs)*0.6) var(--space-2xs);
+}
 
 .archives table caption {
 	margin: 0;
