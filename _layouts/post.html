@@ -5,7 +5,9 @@ layout: default
 <main role="main" class="container-ideal page-post">
 
   {%- if page.image %}
-    <div class="cover-photo" style="background-image: url({{ page.image }})"></div>
+    <div class="cover-photo" style="background-image: url({{ page.image }});
+      {%- if page.image-pos -%}background-position: {{ page.image-pos }};{%- endif -%}
+      "></div>
     {% if page.image-caption %}<p class="cover-photo__caption">{{ page.image-caption }}</p>{% endif %}
   {% endif -%}
 
