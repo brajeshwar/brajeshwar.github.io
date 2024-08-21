@@ -2,7 +2,7 @@
   --color-zero              : light-dark(#fff, #000);
   --color-full              : light-dark(#000, #fff);
 
-  --bg-color                : light-dark(var(--color-0),   var(--color-900));
+  --bg-color                : light-dark(var(--color-0),   var(--color-800));
   --bg-color-50             : light-dark(var(--color-50),  var(--color-700));
   --bg-color-100            : light-dark(var(--color-100), var(--color-600));
   --bg-color-200            : light-dark(var(--color-200), var(--color-500));
