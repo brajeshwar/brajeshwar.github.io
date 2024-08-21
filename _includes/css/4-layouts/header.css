@@ -1,5 +1,5 @@
 header.site-header {
-	margin: var(--space-m) auto;
+	margin: var(--space-s) auto var(--space-xl) auto;
 }
 
 .header {
@@ -25,6 +25,8 @@ header.site-header {
 	padding: 0;
 	display: inline-block;
 	border-radius: 100%;
+
+	transition: all 0.5s ease;
 }
 
 .logo a .logo__img, .logo a .logo__img--path,
