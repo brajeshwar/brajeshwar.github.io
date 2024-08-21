@@ -2,13 +2,12 @@ footer.site-footer {
 	text-align: center;
 	color: var(--text-color-light);
 	padding: var(--space-s);
-	margin-top: var(--space-l);
-	border-top: 1px solid var(--border-color);
+	margin-top: var(--space-xl);
 }
 
 footer.site-footer nav {
 	text-transform: uppercase;
-	font-size: small;
+	font-size: smaller;
 }
 
 footer.site-footer nav a {
