@@ -23,7 +23,7 @@
 }
 
 /* TBD: Move this to container query */
-@media only screen and (min-width: $breakpoint-extralarge) {
+@media (min-width: $breakpoint-extralarge) {
 	.page-post .cover-photo {
 		border-radius: var(--border-radius);
 	}	
