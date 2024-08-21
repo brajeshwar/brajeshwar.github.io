@@ -41,7 +41,7 @@ mark, code.language-plaintext {
 	padding: var(--space-3xs) var(--space-2xs);
 	font-family: var(--font-family-monospace);
 	font-size: smaller;
-	color: var(--text-color-lighter);
+	color: var(--text-color-light);
 	background-color: var(--bg-color-100);
 	border-radius: var(--border-radius-largest);
 	border-bottom: var(--border-size) var(--border-style) var(--border-color);

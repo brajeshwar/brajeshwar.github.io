@@ -84,6 +84,10 @@ ul.home__blog--popular-items {
   padding-inline: var(--space-m);
 }
 
+ul.home__blog--popular-items li::marker {
+  color: var(--text-color-lightest);
+}
+
 ul.home__blog--popular-items time {
   display: inline-block;
 
@@ -145,6 +149,7 @@ ul.home__blog--popular-items time {
   text-transform: lowercase;
   margin: 0 0 var(--space-default);
   padding: 0;
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
 .connect__title--sub {
