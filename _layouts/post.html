@@ -5,10 +5,8 @@ layout: default
 <main role="main" class="container-ideal page-post">
 
   {%- if page.image %}
-    <figure class="cover-photo">
-      <img loading="lazy" src="{{ page.image }}" alt="{{ page.image-title }}">
-      {% if page.image-caption %}<figcaption>{{ page.image-caption }}</figcaption>{% endif %}
-    </figure>
+    <div class="cover-photo" style="background-image: url({{ page.image }})"></div>
+    {% if page.image-caption %}<p class="cover-photo__caption">{{ page.image-caption }}</p>{% endif %}
   {% endif -%}
 
   <article class="post">

@@ -1,6 +1,6 @@
 table {
   border-collapse: collapse;
-  margin: var(--space-default) auto;
+  margin: var(--space-m) auto;
   width: 100%;
   table-layout: fixed;
 }
@@ -11,7 +11,7 @@ table caption {
 
 td,
 th {
-  padding: var(--space-smallest) var(--space-smaller);
+  padding: var(--space-3xs) var(--space-2xs);
   text-align: left;
   vertical-align: top;
   word-wrap: break-word;
@@ -19,7 +19,7 @@ th {
 
 thead {
   background: var(--bg-color-200);
-  border-bottom: var(--border-size) solid var(--border-color-dark);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color-dark);
 }
 
 thead th {
@@ -36,23 +36,23 @@ thead th:last-child {
 }
 
 tbody {
-  border: var(--border-size) solid var(--border-color-lighter);
+  border: var(--border-size) var(--border-style) var(--border-color-lighter);
 }
 
 tbody tr {
-  border-bottom: var(--border-size) solid var(--border-color-lighter);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color-lighter);
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--color-50);
+  background-color: var(--bg-color-50);
 }
 
 tbody tr:hover, tbody tr:active {
-  background: var(--color-100);
+  background: var(--bg-color-100);
   border-bottom-color: var(--border-color);
 }
 
 
 tfoot {
-  border-top: 1px solid var(--border-color);
+  border-top: var(--border-size) var(--border-style) var(--border-color);
 }

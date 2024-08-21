@@ -17,7 +17,9 @@ body {
   transition: background 500ms ease-in-out, color 200ms ease;
 }
 
-main {}
+main {
+  container: main / inline-size;
+}
 
 hr {
   padding: 0;
