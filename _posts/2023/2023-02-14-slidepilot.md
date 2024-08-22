@@ -1,13 +1,10 @@
----
-image: /static/2023/slidepilot.webp
-image-title: SlidePilot
----
-
 # SlidePilot
 
 [SlidePilot](https://slidepilotapp.com/) is a powerful native macOS tool for presenting PDF slides with support for LaTeX Beamer[^LaTeXBeamer].
 
 I was struggling with presenting PDFs with the built-in macOS Preview[^Preview] App. I tried several options to optimize Preview's setup so I could present it easily. But I realized I could look around to see if someone had solved the problem. Well, they did. I stumbled on SlidePilot and is one of the best finds in recent times. It is free and [open source](https://github.com/SlidePilot).
+
+<img class="large" src="/static/2023/slidepilot.webp" alt="SlidePilot">
 
 Use the Beamer class notes slides or add your notes in RTF[^RTF] format. For notes, SlidePilot supports the note function of the LaTeX Beamer class. On the other hand, you can easily add notes in RTF format to any PDF with the built-in text editor.
 

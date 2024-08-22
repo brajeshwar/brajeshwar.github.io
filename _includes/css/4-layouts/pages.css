@@ -1,3 +1,11 @@
+.pages {}
+
+.pages__title {
+	font-size: var(--step-2);
+	text-align: center;
+}
+
+/* FILM */
 .page-film .item__cards li,
 .page-devices .item__cards li {
 	max-width: 220px;
@@ -42,4 +50,24 @@
 
 .page-devices figure span {
 	display: block;
+}
+
+/* BOOKMARKS */
+.page-bookmarks {}
+
+.pages__bookmarks {
+	columns: 360px 3;
+}
+
+.pages__bookmarks ul {
+	margin: 0;
+	padding: 0 var(--space-s);
+}
+
+.pages__bookmarks ul li {
+	break-inside: avoid;
+}
+
+.pages__bookmarks li::marker {
+	color: var(--text-color-lightest);
 }

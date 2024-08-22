@@ -1,5 +1,5 @@
 {% if site.data.books %}
-<article id="books">
+<article id="books" class="home__books">
 	<p>
 		Here are some of the all-time favorite books I have read, re-read, and would recommend. I maintain a list of interesting books that I read each year -
 		<a href="/2018/books/">2018</a>,
@@ -10,7 +10,7 @@
 		<a href="/2023/books/">2023</a>,
 		<a href="/2024/books/">2024</a>.
 	</p>
-	<ul class="item__cards home__books">
+	<ul class="item__cards">
 		{% assign sorted_books = site.data.books | sort:'title' -%}
 		{% for books in sorted_books limit: 6 -%}
 		<li>

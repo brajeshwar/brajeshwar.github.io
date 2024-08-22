@@ -37,12 +37,6 @@
 	padding-top: var(--space-l);
 }
 
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-	font-family: var(--font-family-serif);
-	line-height: var(--scale-small);
-	font-weight: 200;
-}
-
 .post h1 {
 	text-align: center;
 	margin: 0 auto var(--space-s);
