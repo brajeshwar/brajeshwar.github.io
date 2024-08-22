@@ -1,14 +1,6 @@
 .page-post {}
 
-.page-post .cover-photo__caption {
-	max-width: var(--body-width-ideal);
-	margin: var(--space-2xs) auto;
-	text-align: center;
-	font-family: var(--font-family-sans);
-	font-size: smaller;
-}
-
-.page-post .cover-photo {
+.cover-photo {
 	margin: 0 calc(50% - 50vw);
   width: 100vw;
   max-width: var(--body-width-full);
@@ -24,9 +16,17 @@
 
 /* TBD: Move this to container query */
 @media (min-width: $breakpoint-extralarge) {
-	.page-post .cover-photo {
+	.cover-photo {
 		border-radius: var(--border-radius);
 	}	
+}
+
+.cover-photo__caption {
+	max-width: var(--body-width-ideal);
+	margin: var(--space-2xs) auto;
+	text-align: center;
+	font-family: var(--font-family-sans);
+	font-size: smaller;
 }
 
 .page-post figure, .page figure {

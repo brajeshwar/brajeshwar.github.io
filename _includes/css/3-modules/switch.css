@@ -1,4 +1,6 @@
-.theme__switch {
-	all: unset;
-  cursor: pointer;
+.mode-switch {
+	display: block;
+
+	width: var(--logo-size);
+	height: var(--logo-size);
 }
