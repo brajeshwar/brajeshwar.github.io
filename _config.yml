@@ -53,6 +53,11 @@ defaults:
       layout: 'post'
       permalink: '/:year/:title/'
   - scope:
+      path: 'bookmarks'
+      type: 'pages'
+    values:
+      layout: 'page-bookmarks'
+  - scope:
       path: '_redirect'
       type: 'pages'
     values:

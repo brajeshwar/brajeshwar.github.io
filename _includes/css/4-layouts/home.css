@@ -168,13 +168,15 @@ ul.home__blog--popular-items time {
 }
 
 /* Books - contained in the Flex-ed Item Cards */
-.home__books {}
+.home__books {
+  padding: var(--space-2xs) 0;
+}
 
 .home__books li {
   flex: 3 3 30%;
 }
 
-.home__books a {
+.home__books li a {
   display: block;
   /* grayscale */
   filter: gray; /* IE6-9 */
@@ -188,7 +190,7 @@ ul.home__blog--popular-items time {
 }
 
 .home__books img {
-  border-radius: var(--border-radius-large);
+  border-radius: var(--border-radius-larger);
   border-top-left-radius: var(--border-radius-tiny);
   border-bottom-left-radius: var(--border-radius-tiny);
 }
