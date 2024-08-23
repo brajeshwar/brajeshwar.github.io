@@ -40,6 +40,10 @@ iframe, object, embed {
 	border-bottom-color: var(--text-color-darker);
 }
 
+.text-low, .text-low a, .text-low a:hover, .text-low a:active {
+  color: var(--text-color-lightest);
+}
+
 hr.spacer {
   margin: var(--space-m) 0;
   padding: 0;
