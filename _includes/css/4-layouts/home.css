@@ -178,6 +178,7 @@ ul.home__blog--popular-items time {
 
 .home__books li a {
   display: block;
+
   /* grayscale */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
@@ -190,6 +191,7 @@ ul.home__blog--popular-items time {
 }
 
 .home__books img {
+  border: var(--border-size) var(--border-style) var(--border-color-dark);
   border-radius: var(--border-radius-larger);
   border-top-left-radius: var(--border-radius-tiny);
   border-bottom-left-radius: var(--border-radius-tiny);

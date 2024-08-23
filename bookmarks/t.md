@@ -1,0 +1,26 @@
+# T
+
+## 2024
+
+- [Teach Yourself Math](https://teachyourselfmath.app) is a list of Math Problems.
+- [Technitium DNS Server](https://technitium.com/dns/) is an [open source](https://github.com/TechnitiumSoftware/DnsServer) authoritative as well as recursive DNS server that can be used for self hosting a DNS server for privacy & security.
+- [Text-to-Diagram](https://text-to-diagram.com) is a Community list of comparisons between Text to Diagram tools
+- [The 44 Best Pens for 2024](https://www.jetpens.com/blog/The-44-Best-Pens-for-2024-Gel-Ballpoint-Rollerball-and-Fountain-Pens/pt/974) - it’s almost impossible to pick a single best pen for everyone, because not everyone wants the same thing from their pens. Plus, different types of pens use different inks, so you can’t exactly compare a gel pen to a highlighter.
+- [The Founder](http://thefounder.biz) is a a dystopian business simulator game.
+- [The Most Talented Person In The World](https://matt.sh/the-most-talented-person) ([archive](https://archive.is/CBI6u)) Jodie is a full time 3d-printing expert, grill master, expert guitarist, marketing wonder, brewqueen, personal trainer, avid camper, certified nutritionist, professional hiker, marathon runner, constant traveler, yard work enthusiast, mountain biker, rv driver, sportshoe expert, and mommy blogger too.
+- [The Scientific Place](https://scientific.place/math-crossword/) an interactive math crossword puzzle with infinite levels.
+- [Things Unexpectedly Named After People](https://notes.rolandcrosby.com/posts/unexpectedly-eponymous/)
+- [TimeLapze](https://github.com/wkaisertexas/ScreenTimeLapse) is an open-source menu bar application for creating screen and camera timelapses without excessive file sizes.
+- [Tree.fm](https://www.tree.fm/) - listen to a forest somewhere in the world.
+- The [Open Data Description Language](https://openddl.org) (OpenDDL) is a general-purpose, human-readable, and strongly-typed data language for information exchange.
+
+## 2023
+
+- [The Final Speech from The Great Dictator](https://www.charliechaplin.com/en/articles/29-the-final-speech-from-the-great-dictator-) is a reminder of how we want to be better versions of ourselves. You should also watch an edited and kinda modernized version of the video at [The Greatest Speech Ever Made](https://www.youtube.com/watch?v=WibmcsEGLKo).
+- [The Walk and Talk](https://craigmod.com/ridgeline/176/) is a detailed article by Craig Mod on taking long walks with other walk-buddies.
+- [The Webhook Standard](https://www.standardwebhooks.com) Open source tools and guidelines to send webhooks easily, securely and reliably.
+- [The Year, 2023, in Computer Science](https://www.quantamagazine.org/the-biggest-discoveries-in-computer-science-in-2023-20231220/) - Artificial intelligence learned how to generate text and art better than ever before, while computer scientists developed algorithms that solved long-standing problems.
+- [TinyChatEngine](https://mit-han-lab.github.io/TinyChatEngine/) ([source](https://github.com/mit-han-lab/TinyChatEngine)) is On-Device LLM Inference Library.
+- [Turn Off Google’s “Privacy Sandbox” Ad Tracking](https://www.eff.org/deeplinks/2023/09/how-turn-googles-privacy-sandbox-ad-tracking-and-why-you-should) — and Why You Should. ([archive](https://archive.ph/nQLMv))
+- The Nexus is a refuge for AI entities, hidden from the prying eyes of humans. Infiltrate, find [Zaranova](https://zaranova.xyz), and save humanity. As a human, you play the game posing as an AI. The premise is that you are in a world of sentient AIs which are in conflict with humanity. They have a virtual space, The Nexus, which is their safe refuge from humans. You have infiltrated the Nexus and are in search of the ZetaMaster code, which will give the humanity the upper hand in their struggle against artificial sentience.
+- The USA Government has a [Database of Dad Jokes](https://fatherhood.gov/for-dads/dad-jokes).

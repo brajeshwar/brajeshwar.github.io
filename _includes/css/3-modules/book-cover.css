@@ -1,0 +1,17 @@
+.book__cover {
+  border: var(--border-size) var(--border-style) var(--border-color-dark);
+  border-radius: var(--border-radius-larger);
+  border-top-left-radius: var(--border-radius-tiny);
+  border-bottom-left-radius: var(--border-radius-tiny);
+
+  padding: var(--space-xs);
+  text-align: center;
+}
+
+.book__cover .book__cover--title {
+  font-family: var(--font-family-serif);
+}
+
+.book__cover .book__cover--author {
+  border-top: var(--border-size) var(--border-style) var(--border-color-light);
+}
