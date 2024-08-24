@@ -18,10 +18,10 @@
   <p class="home__blog--popular">
     Highlights - some of the popular articles ranked by major search engines.
     <ul class="home__blog--popular-items">
-      {% for posts-pop in site.data.posts-popular -%}
+      {% for item in site.data.posts-popular -%}
       <li>
-        <a href="{{ posts-pop.url }}">{{ posts-pop.title }}</a>
-        <time>{{ posts-pop.time }}</time>
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        <time>{{ item.time }}</time>
       </li>
       {% endfor -%}
     </ul>

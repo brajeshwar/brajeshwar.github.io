@@ -1,6 +1,8 @@
 .page-post {}
 
-.cover-photo {
+photo-cover {
+	display: block;
+
 	margin: 0 calc(50% - 50vw);
   width: 100vw;
   max-width: var(--body-width-full);
@@ -16,17 +18,19 @@
 
 /* TBD: Move this to container query */
 @media (min-width: $breakpoint-extralarge) {
-	.cover-photo {
+	photo-cover {
 		border-radius: var(--border-radius);
 	}	
 }
 
-.cover-photo__caption {
+photo-cover__caption {
+	display: block;
 	max-width: var(--body-width-ideal);
 	margin: var(--space-2xs) auto;
-	text-align: center;
+	
 	font-family: var(--font-family-sans);
 	font-size: smaller;
+	text-align: center;
 }
 
 .page-post figure, .page figure {
@@ -38,6 +42,7 @@
 }
 
 .post h1 {
+	font-family: var(--font-family-serif);
 	text-align: center;
 	margin: 0 auto var(--space-s);
 }

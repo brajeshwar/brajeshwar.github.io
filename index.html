@@ -2,33 +2,15 @@
 layout: default
 ---
 
-<main class="container home">
-
-  <article class="intro">
-    <h1>Hi, I’m Brajeshwar.</h1>
-    <p>
-      I’m on an adventure to create beautiful and meaningful products to improve the world for my daughters and their friends.
-    </p>
-  </article>
-
-  <div class="grid">
-    <div class="grid__c8">
-      {% include home-blog.html %}
-    </div>
-    <div class="grid__c4">
-      {% include home-support.html %}
-    </div>
-  </div>
-
-  <hr class="spacer">
-
-  <div class="grid">
-    <div class="grid__c4 order__2">
-      {% include home-connect.html %}
-    </div>
-    <div class="grid__c8 order__1">
-      {% include home-books.html %}
-    </div>
-  </div>
-
+<main class="container">
+  <home-container>
+    <home-intro>
+      <h1>{{ site.data.ui.me.intro }}</h1>
+      <p>{{ site.data.ui.me.intro_desc }}</p>
+    </home-intro>
+    <home-articles> {% include home-blog.html %}    </home-articles>
+    <home-support>  {% include home-support.html %} </home-support>
+    <home-books>    {% include home-books.html %}   </home-books>
+    <home-connect>  {% include home-connect.html %} </home-connect>
+  </home-container>
 </main>

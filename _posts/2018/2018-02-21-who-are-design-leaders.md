@@ -4,8 +4,6 @@ Design Leaders aren't super-designers. Their role is NOT to 'approve or disappro
 
 Many organizations make the common mistake of confusing design managers with design leaders. Design leaders touch upon the organization, and not just the design department. The role is strategic and needs to align with the organization's strategy and plans.
 
-![Design](https://cdn.oinam.com/img/stock/design-studio-blueprint.jpg)
-
 ## C-suite Design Leaders who can take decisions
 
 Organizations, in search for a competitive advantage over their counterparts, should have more visible acts of advocacy for design leadership. Hiring design leaders such as "Chief Design Officer" or similar C-suite Vice President design roles is a good start.

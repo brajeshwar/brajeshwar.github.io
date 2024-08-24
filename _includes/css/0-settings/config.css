@@ -12,6 +12,11 @@
   --body-width-medium : 60rem; /* objects that are large but not max */
   --body-width-full   : 1600px;
 
+  --display-small:  480px;
+  --display-medium: 800px;
+  --display-large:  1024px;
+  --display-extralarge: 1600px;
+
   /*
     manual height based on the ideal width against the video ratio,
     mostly youtube which is 315/560=0.5625 */
@@ -68,7 +73,7 @@
   Use only when plain CSS do not suffice.
   We should move this to containers.
 */
-$breakpoint-small:  581px;
+$breakpoint-small:  480px;
 $breakpoint-medium: 800px;
 $breakpoint-large:  1024px;
 $breakpoint-extralarge: 1600px;

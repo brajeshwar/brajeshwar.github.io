@@ -3,15 +3,14 @@ layout: default
 ---
 
 {%- if page.image -%}
-  <div class="cover-photo"
-    style="
+  <photo-cover style="
       background-image: url({{ page.image }});
       {%- if page.image-position -%}
       background-position: {{ page.image-position }};
       {%- endif -%}
-    "></div>
+    "></photo-cover>
   {%- if page.image-caption -%}
-    <p class="cover-photo__caption">{{ page.image-caption }}</p>
+  <photo-cover__caption>{{ page.image-caption }}</photo-cover__caption>
   {%- endif -%}
 {% endif %}
 
@@ -39,4 +38,3 @@ layout: default
   {%- endif -%}
 
 </main>
-
