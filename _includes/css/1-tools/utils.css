@@ -44,6 +44,10 @@ iframe, object, embed {
   color: var(--text-color-lightest);
 }
 
+.text-center {
+  text-align: center;
+}
+
 hr.spacer {
   margin: var(--space-m) 0;
   padding: 0;

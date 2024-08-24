@@ -8,8 +8,6 @@ I have been using Photoshop since its 4th version for all of the graphical editi
 
 I can recollect, that it was intimidating during my initial encounters with the software, with its varied and elaborate tools, it took quite a bit of time for me to understand the the power it can wield on a digital canvas. But then it became easier to use, manipulate its capabilities to full (if not the fullest) and learn to apply the right option to bring out the desired output. With that said, shifting to Photoshop CS2 wasn't much of a difference for me though I have never tried Photoshop CS. I never thought of upgrading from version 7.0 as my need was very little, the graphical/design usage was very far and between my actual work profile.
 
-![Adobe Photoshop)](https://cdn.oinam.com/img/software/adobe-photoshop-cc-2017.webp)
-
 Here are the few features which I have experienced, liked about and want to talk about here;
 
 Help Navigation seem to have taken a quantum leap, and is now much easier to navigate. This was specially helpful for casual or reguar-but-not-experienced user need to refer to them often.

@@ -1,3 +1,7 @@
+---
+image: /static/2023/scandinavian-design.webp
+---
+
 # Scandinavian Design
 
 I started my career as a computer graphics designer with no formal education in anything related to design. I realized that I had always liked more of a minimal, simple, yet functional design. I learned pretty late in my career that it has a term for it.

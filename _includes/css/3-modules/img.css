@@ -64,12 +64,14 @@ img.full {
   width: 100vw !important;
   max-width: var(--body-width-full);
   transform: translateX(calc(50vw - 50%));
+  border-radius: 0;
 }
 
 /* TBD: Move this to container query */
-@media (max-width: $breakpoint-extralarge) {
-  figure.full img {
-    border-radius: 0;
+@media (min-width: $breakpoint-extralarge) {
+  figure.full img,
+  img.full {
+    border-radius: var(--border-radius);
   } 
 }
 

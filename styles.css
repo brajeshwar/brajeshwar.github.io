@@ -11,7 +11,6 @@
 {% include css/0-settings/light-dark.css %}
 
 {% include css/1-tools/utils.css %}
-{% include css/1-tools/grid.css %}
 
 {% include css/2-base/sanitize.css %}
 {% include css/2-base/init.css %}
@@ -21,6 +20,8 @@
 
 {% include css/3-modules/code.css %}
 {% include css/3-modules/img.css %}
+{% include css/3-modules/cards.css %}
+{% include css/3-modules/footnotes.css %}
 {% include css/3-modules/switch.css %}
 
 {% include css/4-layouts/base.css %}

@@ -1,5 +1,5 @@
 header.site-header {
-	margin: var(--space-s) auto;
+	margin: var(--space-xs) auto var(--space-m) auto;
 }
 
 .header {

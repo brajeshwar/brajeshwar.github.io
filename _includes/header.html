@@ -6,9 +6,9 @@
       </a>
     </div>
     <nav class="menu">
-      <a href="/about/" title="About">About</a>
-      <a href="/archives/" title="Archives">Archives</a>
-      <a href="/now/" title="Now">Now</a>
+      {% for item in site.data.nav.main -%}
+        <a href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor -%}
     </nav>
     <div class="mode-switch"></div>
   </div>

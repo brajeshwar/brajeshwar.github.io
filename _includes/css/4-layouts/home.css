@@ -1,16 +1,45 @@
-.home {}
+home-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-l) var(--space-m);
 
-.intro {
-  max-width: var(--body-width-ideal);
+  grid-template-areas:
+    "intro intro ."
+    "articles articles support"
+    "connect books books"
+    ;
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  home-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "intro"
+    "articles"
+    "support"
+    "books"
+    "connect"
+    ;
+  }
+}
+
+home-container home-intro     { grid-area: intro; }
+home-container home-articles  { grid-area: articles; }
+home-container home-support   { grid-area: support; }
+home-container home-books     { grid-area: books; }
+home-container home-connect   { grid-area: connect; }
+
+home-container home-intro {
   font-family: var(--font-family-serif);
   font-size: var(--step-2);
   line-height: var(--scale-small);
 }
 
-.intro h1 {
-  font-size: var(--step-2);
+home-container home-intro h1 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--step-3);
 }
-
 
 /* home: blog */
 .home__blog {}
@@ -29,11 +58,10 @@ ul.home__blog--items {
 }
 
 ul.home__blog--items li {
-  list-style: none;
   margin: 0;
   padding: var(--space-xs) var(--space-s);
   
-  width: 30%;
+  width: 16ch;
   
   flex-basis: auto;
   flex-grow: 1;
@@ -42,8 +70,8 @@ ul.home__blog--items li {
   font-weight: 200;
   line-height: var(--scale-small);
 
-  border-radius: var(--border-radius);
   background: var(--bg-color-100);
+  border-radius: var(--border-radius);
   border: var(--border-size) var(--border-style) var(--bg-color-100);
 }
 
@@ -65,16 +93,7 @@ ul.home__blog--items time {
   color: var(--text-color-lighter);
 }
 
-/* small screens - disable flex columns */
-@media (max-width: $breakpoint-small) {
-  ul.home__blog--items li {
-    width: 100%;
-    flex-grow: 0;
-  }
-}
-
 /* home: blog - popular articles */
-
 .home__blog--popular {
   margin: var(--space-m) auto;
 }
@@ -141,7 +160,6 @@ ul.home__blog--popular-items time {
   margin: 0;
   color: var(--text-color-light);
 }
-.connect ul li {}
 
 .connect__title {
   font-weight: 200;
@@ -173,7 +191,9 @@ ul.home__blog--popular-items time {
 }
 
 .home__books li {
-  flex: 3 3 30%;
+  width: 200px;
+  flex-basis: auto;
+  flex-grow: 1;
 }
 
 .home__books li a {
@@ -191,6 +211,7 @@ ul.home__blog--popular-items time {
 }
 
 .home__books img {
+  object-fit: cover;
   border: var(--border-size) var(--border-style) var(--border-color-dark);
   border-radius: var(--border-radius-larger);
   border-top-left-radius: var(--border-radius-tiny);

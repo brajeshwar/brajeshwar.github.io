@@ -1,0 +1,21 @@
+main:
+- title: About
+  url: "/about/"
+- title: Archives
+  url: "/archives/"
+- title: Now
+  url: "/now/"
+
+footer:
+- title: Home
+  url: "/"
+- title: Feed
+  url: "/feed.xml"
+- title: About
+  url: "/about/"
+- title: Archives
+  url: "/archives/"
+- title: Film
+  url: "/film/"
+- title: Now
+  url: "/now/"

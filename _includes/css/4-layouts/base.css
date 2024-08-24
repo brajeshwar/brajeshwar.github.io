@@ -1,72 +1,10 @@
-.container,
-.container-ideal {
+main.container,
+main.container-ideal {
 	width: var(--body-width);
 	max-width: var(--body-width-max);
-	margin: auto;
+	margin-inline: auto;
 }
 
-.container-ideal {
+main.container-ideal {
 	max-width: var(--body-width-ideal);
-}
-
-/* grid items - custom sort ordering */
-@media (max-width: $breakpoint-small) {
-  .order__1 { order: 1; }
-  .order__2 { order: 2; }
-  .order__3 { order: 2; }
-  .order__4 { order: 2; }
-  .order__5 { order: 2; }
-}
-
-/* footnotes */
-.footnotes {
-	margin: var(--space-m) auto;
-	padding: var(--space-xs);
-	color: var(--text-color-lighter);
-	background: var(--bg-color-50);
-	border-radius: var(--border-radius);
-  font-family: var(--font-family-sans);
-  font-size: var(--step--1);
-}
-
-.reversefootnote {
-  visibility: hidden;
-  position: relative;
-  text-decoration: none;
-}
-
-.reversefootnote:after {
-  visibility: visible;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "\21B5";
-}
-
-/* List Card Items */
-ul.item__cards {
-	list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: var(--space-xs);
-  row-gap: var(--space-xs);
-}
-
-ul.item__cards li {
-	list-style: none;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
-ul.item__cards li img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }

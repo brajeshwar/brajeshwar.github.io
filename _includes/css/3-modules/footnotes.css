@@ -1,0 +1,23 @@
+.footnotes {
+	margin: var(--space-m) auto;
+	padding: var(--space-xs);
+	color: var(--text-color-lighter);
+	background: var(--bg-color-50);
+	border-radius: var(--border-radius);
+  font-family: var(--font-family-sans);
+  font-size: var(--step--1);
+}
+
+.reversefootnote {
+  visibility: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.reversefootnote:after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\21B5";
+}
