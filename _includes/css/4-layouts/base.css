@@ -1,10 +1,10 @@
-main.container,
-main.container-ideal {
+.container,
+.container-ideal {
 	width: var(--body-width);
 	max-width: var(--body-width-max);
 	margin-inline: auto;
 }
 
-main.container-ideal {
+.container-ideal {
 	max-width: var(--body-width-ideal);
 }

@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Permify](https://permify.co) is an [open-source](https://github.com/Permify/permify) authorization as a service inspired by Google Zanzibar, designed to build and manage fine-grained and scalable authorization systems for any application.
 - [Photorealistic Video Generation](https://walt-video-diffusion.github.io) with Diffusion Models.
 - [Pika Labs](https://pikalabs.org) is a nonprofit Organization focused on investigating AI capabilities.
 - [Pitivi](https://www.pitivi.org) is a Free video editor with a beautiful and intuitive user interface, a clean codebase and a fantastic community.

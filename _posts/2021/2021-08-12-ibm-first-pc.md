@@ -1,9 +1,6 @@
----
-image: https://cdn.oinam.com/img/computer/IBM-PC-Model-5150.webp
-image-title: IBM Personal Computer Model 5150
----
+# IBM’s First PC was Released 40-Years Ago
 
-# IBM's First PC was Released 40-Years Ago
+<img class="large" src="https://cdn.oinam.com/img/computer/IBM-PC-Model-5150.webp" alt="IBM Personal Computer Model 5150">
 
 The Personal Computer has come a long way. 40 years on this day (AUG 12), IBM announced their first Personal Computer - The [IBM Personal Computer](https://en.wikipedia.org/wiki/IBM_Personal_Computer) (Model 5150). The [Press Release](https://www.ibm.com/ibm/history/exhibits/pc25/pc25_press.html) was published on Aug 12, 1981. The majority of modern personal computers are distant descendants of the IBM PC.
 
