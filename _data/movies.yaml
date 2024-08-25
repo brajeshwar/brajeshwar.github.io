@@ -82,7 +82,7 @@
   year: 1994
   img: forrest-gump.webp
   url: https://en.wikipedia.org/wiki/Forrest_Gump
-- title: "Ghost in the Shell"
+- title: "Ghost in the Shell (攻殻機動隊)"
   year: 1995
   img: ghost-in-the-shell.webp
   url: https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film)
@@ -94,7 +94,7 @@
   year: 1993
   img: groundhog-day.webp
   url: https://en.wikipedia.org/wiki/Groundhog_Day_(film)
-- title: "Harakiri"
+- title: "Harakiri (切腹)"
   year: 1962
   img: harakiri.webp
   url: https://en.wikipedia.org/wiki/Harakiri_(1962_film)
@@ -106,7 +106,7 @@
   year: 2003
   img: identity.webp
   url: https://en.wikipedia.org/wiki/Identity_(2003_film)
-- title: "Ikiru"
+- title: "Ikiru (生きる)"
   year: 1952
   img: ikiru.webp
   url: https://en.wikipedia.org/wiki/Ikiru
@@ -194,7 +194,7 @@
   year: 1982-2019
   img: rambo.webp
   url: https://en.wikipedia.org/wiki/Rambo_(franchise)
-- title: "Rashomon"
+- title: "Rashomon (羅生門)"
   year: 1950
   img: rashomon.webp
   url: https://en.wikipedia.org/wiki/Rashomon
@@ -214,7 +214,7 @@
   year: 1993
   img: schindlers-list.webp
   url: "https://en.wikipedia.org/wiki/Schindler%27s_List"
-- title: "Seven Samurai"
+- title: "Seven Samurai (七人の侍)"
   year: 1954
   img: seven-samurai.webp
   url: https://en.wikipedia.org/wiki/Seven_Samurai
@@ -222,7 +222,7 @@
   year: 1975
   img: sholay.webp
   url: https://en.wikipedia.org/wiki/Sholay
-- title: "Spirited Away"
+- title: "Spirited Away (千と千尋の神隠し)"
   year: 2001
   img: spirited-away.webp
   url: https://en.wikipedia.org/wiki/Spirited_Away
@@ -310,7 +310,7 @@
   year: 2002
   img: windtalkers.webp
   url: https://en.wikipedia.org/wiki/Windtalkers
-- title: "Yojimbo"
+- title: "Yojimbo (用心棒)"
   year: 1961
   img: yojimbo.webp
   url: https://en.wikipedia.org/wiki/Yojimbo
