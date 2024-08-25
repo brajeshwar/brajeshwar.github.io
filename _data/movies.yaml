@@ -74,10 +74,6 @@
   year: 1999
   img: fight-club.webp
   url: https://en.wikipedia.org/wiki/Fight_Club
-- title: "Rambo"
-  year: 1982-2019
-  img: rambo.webp
-  url: https://en.wikipedia.org/wiki/Rambo_(franchise)
 - title: "For a Few Dollars More"
   year: 1965
   img: for-a-few-dollars-more.webp
@@ -86,6 +82,10 @@
   year: 1994
   img: forrest-gump.webp
   url: https://en.wikipedia.org/wiki/Forrest_Gump
+- title: "Ghost in the Shell"
+  year: 1995
+  img: ghost-in-the-shell.webp
+  url: https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film)
 - title: "Gladiator"
   year: 2000
   img: gladiator.webp
@@ -190,6 +190,10 @@
   year: 1987
   img: pushpaka-vimana.webp
   url: https://en.wikipedia.org/wiki/Pushpaka_Vimana_(1987_film)
+- title: "Rambo"
+  year: 1982-2019
+  img: rambo.webp
+  url: https://en.wikipedia.org/wiki/Rambo_(franchise)
 - title: "Rashomon"
   year: 1950
   img: rashomon.webp
@@ -255,9 +259,9 @@
   img: the-lunchbox.webp
   url: https://en.wikipedia.org/wiki/The_Lunchbox
 - title: "The Matrix"
-  year: 1999
+  year: 1999-2003
   img: the-matrix.webp
-  url: https://en.wikipedia.org/wiki/The_Matrix
+  url: https://en.wikipedia.org/wiki/The_Matrix_(franchise)
 - title: "The Truman Show"
   year: 1998
   img: the-truman-show.webp

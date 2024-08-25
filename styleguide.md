@@ -5,10 +5,13 @@ style: page-styleguide
 ---
 
 - Articles
-	- If possible, avoid frontmatter. If needed, it should be optional.
+	- If possible, avoid front matter. If used, it should be optional.
 - Images
-	- Books 360px x 480px (image), width: 360px x 480px - 30% (Code)
+	- Books 360px x 480px (image), width: 360px x 480px - 30% (Code) `TBD: Need to resize & optimize.`
 	- Film 300px x 400px (image), width: 225px x 300px (general), 170px for small.
-- CSS Style Classes
+- CSS Styles
+	- Custom, strange, and `why I did that` ones.
+	- I need to stop doing custom styles.
 	- `aside, {:.aside}` for custom styled aside.
 	- `{:.aside .right}` flushes right
+	- `{:.mark}` not the HTML <mark>MARK</mark> but a highlighted text/phrase block.
