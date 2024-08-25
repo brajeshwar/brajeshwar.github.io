@@ -1,29 +1,30 @@
-.archives {
+page-archives {
+	display: block;
 	margin: var(--space-default) auto;
 	border-radius: var(--border-radius);
 	border: 1px solid var(--border-color);
 }
 
-.archives a {
+page-archives a {
 	display: block;
 	text-decoration: none;
 }
 
-.archives a:hover, .archives a:active {
+page-archives a:hover, page-archives a:active {
 	text-decoration: underline;
 }
 
-.archives table {
+page-archives table {
 	margin: 0;
 	padding: 0;
 	border: 0 none;
 }
-.archives table td {
+page-archives table td {
 	/* a custom spacing that breaks the default spacing values */
 	padding: calc(var(--space-3xs)*0.6) var(--space-2xs);
 }
 
-.archives table caption {
+page-archives table caption {
 	margin: 0;
 	padding: 0 var(--space-2xs);
 	font-size: var(--step-1);
@@ -32,25 +33,25 @@
 	border-bottom: 1px solid var(--border-color);
 }
 
-.archives table:first-child caption {
+page-archives table:first-child caption {
 	border-top-left-radius: var(--border-radius);
 	border-top-right-radius: var(--border-radius);
 }
 
-.archives table:last-child {
+page-archives table:last-child {
 	border-bottom-left-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }
 
-.archives table:last-child tr:last-child td:first-child {
+page-archives table:last-child tr:last-child td:first-child {
 	border-bottom-left-radius: var(--border-radius);
 }
 
-.archives table:last-child tr:last-child td:last-child {
+page-archives table:last-child tr:last-child td:last-child {
 	border-bottom-right-radius: var(--border-radius);
 }
 
-.archives table tr td:first-child {
+page-archives table tr td:first-child {
 	width: 5rem;
 	font-family: var(--font-family-monospace);
 	font-size: smaller;

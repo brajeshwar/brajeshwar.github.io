@@ -5,11 +5,9 @@ title: Archives
 
 <main class="container-ideal">
 
-  <div class="search__provider">
-    {% include search-google.html %}
-  </div>
+  <search__provider>{% include search-google.html %}</search__provider>
 
-  <article class="archives">
+  <page-archives>
     {%- for post in site.posts -%}
     {%- assign currentdate = post.date | date: "%Y" -%}
     {%- if currentdate != date -%}
@@ -25,6 +23,6 @@ title: Archives
     {%- if forloop.last %}
     </table>{% endif %}
     {% endfor %}
-  </article>
+  </page-archives>
 
 </main>
