@@ -1,17 +1,13 @@
 .page-now {
 	color: var(--text-color-lighter);
-	font-weight: 200;
 }
 
 .page-now h1 {
-	font-family: var(--font-family-sans);
-	font-size: var(--step-0);
-	font-weight: 200;
 	margin: 0;
-	padding: 0;
+	padding: 0 var(--space-3xs);
+	font-family: var(--font-family-sans);
+	font-size: var(--step--1);
 }
-
-.page-now a {}
 
 .page-now a:hover, .page-now a:active {
 	color: var(--text-color);
@@ -19,23 +15,23 @@
 
 .page-now ul {
 	list-style: none;
-	margin: 0 0 var(--space-default);
+	margin: 0 0 var(--space-m);
 	padding: 0;
 }
 
 .page-now ul li {
-	margin: var(--space-smallest);
-	padding: 0 var(--space-small);
+	margin: var(--space-3xs) 0;
+	padding: 0 var(--space-3xs);
 }
 
 .page-now ul li ul {
-	margin: var(--space-smallest) var(--space-small);
-	padding: 0 var(--space-small);
+	margin: var(--space-3xs) var(--space-xs);
+	padding: 0 var(--space-xs);
 	border-left: 1px solid var(--border-color-light);
 }
 
 .page-now ul li ul li {
-	padding: var(--space-small) 0;
+	padding: var(--space-xs);
 	border-bottom: 1px solid var(--border-color-lighter);
 }
 
@@ -46,7 +42,7 @@
 /* list if it happens inside the styled lists - whatever that is */
 .page-now ul li ul li ul:has(li) {
 	margin: 0 !important;
-	padding: 0 var(--space-small) !important;
+	padding: 0 var(--space-xs) !important;
 	background: none !important;
 	border: 0 none !important;
 	color: inherit !important;
@@ -54,8 +50,8 @@
 }
 .page-now ul li ul li ul li:nth-child(n+1) {
 	list-style: disc;
-	margin: 0 var(--space-small);
-	padding: var(--space-smallest);
+	margin: 0 var(--space-xs);
+	padding: var(--space-3xs);
 	font-size: inherit !important;
 	border: 0 none;
 }
@@ -86,15 +82,15 @@
 	
 	font-size: larger;
 	margin: var(--space-default) auto;
-	padding: var(--space-smallest) var(--space-default);
+	padding: var(--space-3xs) var(--space-default);
 	color: var(--text-color);
 	background: var(--bg-color-100);
 	border-radius: var(--border-radius);
 }
 
 .page-now__now ul li ul li {
-	padding: var(--space-smaller) 0;
-	margin: var(--space-smallest) 0;
+	padding: var(--space-xser) 0;
+	margin: var(--space-3xs) 0;
 	border-bottom: var(--border-size) var(--border-style) var(--border-color-light);
 }
 
@@ -111,7 +107,7 @@
 }
 
 .page-now__now > ul li:first-child ul li {
-	padding: var(--space-small) 0;
+	padding: var(--space-xs) 0;
 	margin: 0;
 	border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
