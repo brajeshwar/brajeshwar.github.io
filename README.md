@@ -24,7 +24,7 @@ It is always a `Work-in-Progress`.
 - [ ] Replace Google Search with either [PageFind](https://pagefind.app) or stay with [Algolia](https://www.algolia.com) (I’ve a premium free tier).
 - [ ] `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
 
-## Todo - posts in drafts but pulished
+## Todo - pulished in-progress articles
 
 - [ ] /2009/2009-08-02-bombay
 - [ ] /2021/laaija-teenager/
