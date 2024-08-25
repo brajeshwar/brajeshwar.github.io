@@ -67,17 +67,17 @@ ul.home__blog--items li {
   flex-grow: 1;
 
   font-size: var(--step-1);
-  font-weight: 200;
   line-height: var(--scale-small);
 
   background: var(--bg-color-100);
   border-radius: var(--border-radius);
-  border: var(--border-size) var(--border-style) var(--bg-color-100);
+  border: var(--border-size) var(--border-style) transparent;
 }
 
 ul.home__blog--items li:hover, ul.home__blog--items li:active {
   cursor: pointer;
-  border-color: var(--border-color);
+  background: var(--bg-color);
+  border-color: var(--text-color);
 }
 
 ul.home__blog--items li a, ul.home__blog--items li a:visited {
@@ -89,7 +89,7 @@ ul.home__blog--items li a, ul.home__blog--items li a:visited {
 ul.home__blog--items time {
   display: block;
   margin-bottom: var(--space-2xs);
-  font-size: small;
+  font-size: var(--step--2);
   color: var(--text-color-lighter);
 }
 
