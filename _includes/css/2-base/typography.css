@@ -68,6 +68,7 @@ aside, .aside {
 aside.left, .aside.left {
 	float: left;
 	margin: var(--space-3xs) var(--space-s);
+	margin-left: -10vw;
 }
 
 aside.right, .aside.right {
@@ -79,6 +80,7 @@ aside.right, .aside.right {
 /* rest in small screen, it becomes the same as a blockquote */
 @media (max-width: $breakpoint-medium) {
   aside, .aside,
+  aside.left, .aside.left,
   aside.right, .aside.right {
     float: none;
     width: 100%;

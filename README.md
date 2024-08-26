@@ -35,13 +35,10 @@ It is always a `Work-in-Progress`.
 
 ## Notes
 
-Finish the layout with System Fonts first.
-Let's see if we should add a web-font afterwards
-The interface be in sans-serif while the readable area in serif.
-Some highly readable serif fonts
-Roboto Serif, https://fonts.withgoogle.com/roboto-serif
-Source Serif 4
-Noto Serif
-Lora
-Libre Baskerville
-Playfair Display
+- Some highly readable serif fonts
+	- Roboto Serif, https://fonts.withgoogle.com/roboto-serif
+	- Source Serif 4
+	- Noto Serif
+	- Lora
+	- Libre Baskerville
+	- Playfair Display
