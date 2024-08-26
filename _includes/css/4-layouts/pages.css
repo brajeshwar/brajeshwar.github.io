@@ -76,7 +76,3 @@
 .pages__bookmarks ul li {
 	break-inside: avoid;
 }
-
-.pages__bookmarks li::marker {
-	color: var(--text-color-lightest);
-}
