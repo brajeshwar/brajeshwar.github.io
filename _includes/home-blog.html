@@ -1,22 +1,27 @@
-<article class="home__blog">
-
+<home-posts>
   <p>
     I’ve been writing since 2001.
     I write about technology in general, focusing on design, productivity, and startups.  
   </p>
   
-  <ul class="home__blog--items">
-    {%- for post in site.posts limit: 9 -%}
-    <li>
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
-      <a class="home__blog--title" href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
+  <posts-recent>
+    <ul>
+      {%- for post in site.posts limit: 9 -%}
+      <li>
+        <a href="{{ post.url }}">
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+          {{ post.title }}
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </posts-recent>
 
   {% if site.data.posts-popular %}
-  <p class="home__blog--popular">
-    Highlights - some of the popular articles ranked by major search engines.
+  <posts-popular>
+    <p>
+      Highlights - some of the popular articles ranked by major search engines.
+    </p>
     <ul class="home__blog--popular-items">
       {% for item in site.data.posts-popular -%}
       <li>
@@ -25,11 +30,10 @@
       </li>
       {% endfor -%}
     </ul>
-  </p>
+  </posts-popular>
   {% endif %}
   
   <p class="mark">
     › The <a href="/archives/">ARCHIVES</a> has all articles.
   </p>
-
-</article>
+</home-posts>
