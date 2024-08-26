@@ -103,10 +103,6 @@ ul.home__blog--popular-items {
   padding-inline: var(--space-m);
 }
 
-ul.home__blog--popular-items li::marker {
-  color: var(--text-color-lightest);
-}
-
 ul.home__blog--popular-items time {
   display: inline-block;
 
