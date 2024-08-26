@@ -19,6 +19,7 @@ It is always a `Work-in-Progress`.
 
 ## Todo
 
+- [ ] Home blog posts should be block level at the `a` instead of the `li`.
 - [ ] /now/ - "Think of what you’d tell a friend you hadn’t seen in years." Create an intro and then continue with the listicle.
 - [ ] `Books` let’s do a simple box card design without images.
 - [ ] Move to a more consistent spacing and typographic scale. Use https://utopia.fyi
