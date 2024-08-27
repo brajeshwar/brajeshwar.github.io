@@ -7,7 +7,11 @@
     </div>
     <nav class="menu">
       {% for item in site.data.nav.main -%}
-        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% assign css_class = nil %}
+        {% if page.url contains item.url %}
+          {% assign css_class = 'class="active"' %}
+        {% endif %}
+        <a {{ css_class }} href="{{ item.url }}">{{ item.title }}</a>
       {% endfor -%}
     </nav>
     <div class="mode-switch"></div>
