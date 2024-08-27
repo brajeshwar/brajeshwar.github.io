@@ -2,14 +2,7 @@
 layout: default
 ---
 
-<main role="main" class="container pages page-bookmarks">
-  <h1 class="pages__title">
-    <a href="/bookmarks/">Bookmarks</a>
-    ›
-    {{ page.title }}
-  </h1>
-
-  {% include bookmarks-nav.html %}
-  
-  <article class="pages__bookmarks">{{ content }}</article>
+<main role="main" class="container-ideal pages page-bookmarks">
+  <bookmarks-header>{% include bookmarks-header.html %}</bookmarks-header>
+  <bookmarks-items>{{ content }}</bookmarks-items>
 </main>

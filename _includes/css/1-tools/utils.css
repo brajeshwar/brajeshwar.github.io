@@ -48,6 +48,10 @@ iframe, object, embed {
   text-align: center;
 }
 
+ul.list-alt-color li:nth-child(even) {
+  background-color: var(--bg-color-50);
+}
+
 hr.spacer {
   margin: var(--space-m) 0;
   padding: 0;

@@ -53,26 +53,34 @@
 }
 
 /* BOOKMARKS */
-.page-bookmarks {}
-
-.pages__bookmarks {
-	columns: 360px 3;
-	column-rule: var(--border-size) var(--border-style) var(--border-color-light);
+bookmarks-header {
+	display: block;
+	text-align: center;
+	margin-bottom: var(--space-m);
 }
 
-.pages__bookmarks h2 {
-	font-size: var(--step-1);
-	text-transform: uppercase;
-	margin: 0 var(--space-s);
-	padding: 0;
-	border-bottom: var(--border-size) var(--border-style) var(--border-color-light);
-}
-
-.pages__bookmarks ul {
+bookmarks-header nav a, bookmarks-header nav a:visited {
+	font-family: var(--font-family-monospace);
+	font-size: var(--step--1);
+	text-decoration: none;
+	line-height: calc(var(--scale) * var(--scale-small));
+	
 	margin: 0;
-	padding: var(--space-s);
+	padding: var(--space-3xs) var(--space-xs);
+	
+	background: var(--bg-color-100);
+	border: var(--border-size) var(--border-style) transparent;
+	border-radius: var(--border-radius);
 }
 
-.pages__bookmarks ul li {
-	break-inside: avoid;
+bookmarks-header nav a:hover, bookmarks-header nav a:active {
+	background: var(--bg-color-200);
+	border-color: var(--border-color-dark);
+}
+
+bookmarks-header nav a.active {
+	cursor: default;
+	color: var(--text-color-lightest);
+	background: var(--bg-color-full);
+	border-color: transparent;
 }
