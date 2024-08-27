@@ -13,6 +13,11 @@ header.site-header {
 	text-decoration: none;
 }
 
+.header a.active {
+	cursor: default;
+	color: var(--color-zero);
+}
+
 /* logo */
 .logo {
 	width: var(--logo-size);

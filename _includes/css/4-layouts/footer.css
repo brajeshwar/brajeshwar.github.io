@@ -13,3 +13,11 @@ footer.site-footer nav {
 footer.site-footer nav a {
 	padding: 0 var(--space-3xs);
 }
+
+footer.site-footer nav a.active {
+	cursor: default;
+	font-weight: bold;
+	color: var(--color-full);
+	text-decoration-thickness: 0.1rem;
+	text-decoration-color: var(--color-full);
+}
