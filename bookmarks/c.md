@@ -2,6 +2,8 @@
 
 ## 2024
 
+- [IOGraph](https://iographica.com) — is an application that turns mouse movements into contemporary art. The idea is that you have the program running in the background while doing your usual daily stuff at the computer. 
+- [Coolify](https://coolify.io) is an [open-source](https://github.com/coollabsio/coolify) & self-hostable Heroku / Netlify / Vercel alternative.
 - [Can’t send email more than 500 miles](https://web.mit.edu/jemorris/humor/500-miles) ([archive](https://archive.ph/T2cFq)) (the characters in the story are participating at HackerNews - [TreyHarris](https://news.ycombinator.com/user?id=TreyHarris) and [thyrsus](https://news.ycombinator.com/user?id=thyrsus))
 - [Cap](https://cap.so) is an [open source](https://github.com/cap-so/cap) and privacy-focused alternative to Loom. Lightweight, powerful, and stunning. Record and share in seconds.
 - [Cap](https://cap.so) is an [Open Source](https://github.com/cap-so/cap) Loom alternative.
