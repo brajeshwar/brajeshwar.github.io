@@ -39,7 +39,7 @@ pre {
 
 /* normal code that is not attached to a code highlighter */
 mark, code.language-plaintext {
-	padding: var(--space-3xs) var(--space-2xs);
+	padding: 2px var(--space-3xs);
 	font-family: var(--font-family-monospace);
 	font-size: smaller;
 	color: var(--text-color-light);
