@@ -3,7 +3,8 @@
 photo-cover {
 	display: block;
 
-	margin: 0 calc(50% - 50vw);
+	margin-inline: calc(50% - 50vw);
+	margin-bottom: var(--space-m);
   width: 100vw;
   max-width: var(--body-width-full);
   height: 600px;
@@ -23,10 +24,14 @@ photo-cover {
 	}	
 }
 
+photo-cover:has(+ photo-cover__caption) {
+	margin-bottom: var(--space-3xs);
+}
+
 photo-cover__caption {
 	display: block;
 	max-width: var(--body-width-ideal);
-	margin: var(--space-2xs) auto;
+	margin: var(--space-2xs) auto var(--space-m) auto;
 	
 	font-family: var(--font-family-sans);
 	font-size: smaller;
@@ -37,14 +42,13 @@ photo-cover__caption {
 	font-family: var(--font-family-sans);
 }
 
-.post {
-	padding-top: var(--space-l);
-}
+.post {}
 
 .post h1 {
 	font-family: var(--font-family-serif);
 	text-align: center;
 	margin: 0 auto var(--space-s);
+	padding: 0;
 }
 
 .post time {
