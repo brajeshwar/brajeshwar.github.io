@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Free Public APIs](https://www.freepublicapis.com) tested everyday.
 - [Fably](https://stefanom.github.io/fably/) is an [open-source](https://github.com/stefanom/fably) setup that tells bedtime stories to kids.
 - [FileBrowser](https://filebrowser.org) provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. [source](https://github.com/filebrowser/filebrowser)
 - [FontBase](https://fontba.se) is the font manager of the new generation, built by designers, for designers.
