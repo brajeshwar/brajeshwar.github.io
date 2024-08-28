@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [The Monospace Web](https://owickstrom.github.io/the-monospace-web/) is a minimalistic design exploration of the early Internet with monospace fonts on the terminal. ([source](https://github.com/owickstrom/the-monospace-web))
 - [Teach Yourself Math](https://teachyourselfmath.app) is a list of Math Problems.
 - [Technitium DNS Server](https://technitium.com/dns/) is an [open source](https://github.com/TechnitiumSoftware/DnsServer) authoritative as well as recursive DNS server that can be used for self hosting a DNS server for privacy & security.
 - [Text-to-Diagram](https://text-to-diagram.com) is a Community list of comparisons between Text to Diagram tools

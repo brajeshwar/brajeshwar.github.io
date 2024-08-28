@@ -59,7 +59,7 @@ posts-recent ul {
   flex-flow: row wrap;
   align-items: stretch;
   justify-content: space-between;
-  gap: var(--space-2xs) var(--space-2xs);
+  gap: var(--space-2xs);
 }
 
 posts-recent ul li {
@@ -109,7 +109,6 @@ posts-popular ul time {
   padding: 0 var(--space-2xs);
 
   font-size: small;
-  text-transform: uppercase;
   
   color: var(--text-color-lighter);
   background-color: var(--bg-color-100);
