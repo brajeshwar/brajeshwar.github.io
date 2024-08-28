@@ -1,17 +1,37 @@
-.book__cover {
-  border: var(--border-size) var(--border-style) var(--border-color-dark);
-  border-radius: var(--border-radius-larger);
-  border-top-left-radius: var(--border-radius-tiny);
-  border-bottom-left-radius: var(--border-radius-tiny);
+book-cover {
+  display: block;
+  padding: 0;
 
-  padding: var(--space-xs);
-  text-align: center;
-}
-
-.book__cover .book__cover--title {
   font-family: var(--font-family-serif);
+
+  color: var(--text-color-lightest);
+  background-color: var(--bg-color-600);
+  border: 1px solid var(--border-color-dark);
+  border-left-width: 1rem;
+  border-left-color: var(--bg-color-700);
 }
 
-.book__cover .book__cover--author {
-  border-top: var(--border-size) var(--border-style) var(--border-color-light);
+book-cover:before {
+  display: block;
+  height: 5rem;
+  content: "";
+  background-color: var(--color-zero);
+}
+
+book-cover book-title {
+  display: block;
+  margin: var(--space-3xl) var(--space-m) var(--space-3xs) var(--space-m) ;
+
+  font-family: var(--font-family-sans);
+  font-weight: 100;
+  font-size: var(--step-3);
+
+  border: 1px solid var(--color-full);
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+book-cover book-author {
+  display: block;
+  margin: var(--space-3xs) var(--space-m) var(--space-l) var(--space-m);
 }
