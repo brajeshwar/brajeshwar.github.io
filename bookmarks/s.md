@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Screenity](https://screenity.io/) is an [open-source](https://github.com/alyssaxuu/screenity) screen recorder that's free, private, and friendly.
 - [Surfer](https://surfsup.ai) is an [open-source](https://github.com/CEREBRUS-MAXIMUS/Surfer-Data) digital footprint exporter, designed to centralize all your personal data from various online platforms into a single folder.
 - [Scale of Universe](https://scaleofuniverse.com/) is an interactive experience to inspire people to learn about the vast ranges of the visible and invisible world.
 - [ScreenPlay](https://screen-play.app) is an [Open Source](https://gitlab.com/kelteseth/ScreenPlay) Live-Wallpaper app for Windows and OSX.

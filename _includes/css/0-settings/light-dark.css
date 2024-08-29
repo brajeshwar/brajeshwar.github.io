@@ -16,12 +16,12 @@
   --bg-color-full           : light-dark(var(--color-950), var(--color-0));
   
   --text-color              : light-dark(var(--color-700), var(--color-200));
-  --text-color-light        : light-dark(var(--color-600), var(--color-300));
-  --text-color-lighter      : light-dark(var(--color-500), var(--color-400));
-  --text-color-lightest     : light-dark(var(--color-400), var(--color-500));
-  --text-color-dark         : light-dark(var(--color-800), var(--color-200));
-  --text-color-darker       : light-dark(var(--color-900), var(--color-100));
-  --text-color-darkest      : light-dark(var(--color-950), var(--color-50));
+  --text-color-light        : light-dark(var(--color-500), var(--color-300));
+  --text-color-lighter      : light-dark(var(--color-400), var(--color-400));
+  --text-color-lightest     : light-dark(var(--color-300), var(--color-600));
+  --text-color-dark         : light-dark(var(--color-700), var(--color-400));
+  --text-color-darker       : light-dark(var(--color-800), var(--color-200));
+  --text-color-darkest      : light-dark(var(--color-950), var(--color-100));
 
   --text-color-link         : light-dark(var(--color-600), var(--color-300));
   --text-color-link-visited : light-dark(var(--color-600), var(--color-300));
