@@ -27,6 +27,10 @@ img.right {
 	margin: 0 0 var(--space-s) var(--space-s);
 }
 
+img.round {
+  border-radius: 100%;
+}
+
 figure {
   margin: 0 0 var(--space-m);
   padding: 0;
