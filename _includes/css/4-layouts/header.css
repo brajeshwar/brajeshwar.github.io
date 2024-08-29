@@ -1,31 +1,27 @@
-header.site-header {
+header {
 	margin: var(--space-s) auto var(--space-l) auto;
+	text-align: center;
 }
 
-.header {
-	display: flex;
+site-header {
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	gap: var(--space-3xs);
-}
 
-.header a {
-	text-decoration: none;
-}
-
-.header a.active {
-	cursor: default;
-	color: var(--color-zero);
+	background: transparent;
+	border-radius: var(--border-radius-larger);
+	border: var(--border-size) var(--border-style) transparent;	
 }
 
 /* logo */
-.logo {
+site-logo {
 	width: var(--logo-size);
 	height: var(--logo-size);
 	line-height: var(--logo-size);
 }
 
-.logo a {
+site-logo a {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
@@ -34,33 +30,43 @@ header.site-header {
 	transition: all 0.5s ease;
 }
 
-.logo a .logo__img, .logo a .logo__img--path,
-.logo a:visited .logo__img, .logo a:visited .logo__img--path {
-	fill: var(--logo-color);
-} 
-
-.logo a:hover, .logo a:active {
+site-logo a:hover, site-logo a:active {
 	background: var(--logo-color);
 }
 
-.logo a:hover .logo__img, .logo a:hover .logo__img--path,
-.logo a:active .logo__img, .logo a:active .logo__img--path {
+/* SVG: .logo__img and .logo__img--path */
+site-logo a .logo__img, site-logo a .logo__img--path,
+site-logo a:visited .logo__img, site-logo a:visited .logo__img--path {
+	fill: var(--logo-color);
+} 
+
+site-logo a:hover .logo__img, site-logo a:hover .logo__img--path,
+site-logo a:active .logo__img, site-logo a:active .logo__img--path {
 	fill: var(--logo-color-bg);
 }
 
 /* menu */
-.menu {
-	padding: var(--space-smaller) var(--space-small);
+site-nav {
+	padding: var(--space-2xs) var(--space-s);
 	font-size: var(--step--1);
-	background-color: var(--bg-color-full);
+	background-color: var(--bg-color-600);
 	border-radius: var(--border-radius-larger);
 }
 
-.menu a {
-	padding: var(--space-smaller);
+site-nav a, site-nav a:visited {
+	padding: var(--space-xs);
 	color: var(--text-color-lightest);
+	text-decoration: none;
 }
 
-.menu a:hover, .menu a:active {
+site-nav a:hover, site-nav a:active, site-nav a.active {
 	color: var(--color-zero);
+}
+
+/* mode: light dark */
+mode-toggle {
+	display: block;
+
+	width: var(--logo-size);
+	height: var(--logo-size);
 }

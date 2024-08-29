@@ -22,7 +22,6 @@
 {% include css/3-modules/img.css %}
 {% include css/3-modules/cards.css %}
 {% include css/3-modules/footnotes.css %}
-{% include css/3-modules/switch.css %}
 
 {% include css/4-layouts/base.css %}
 {% include css/4-layouts/header.css %}
