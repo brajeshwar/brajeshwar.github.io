@@ -180,18 +180,20 @@ home-support li {
 }
 
 /* Books - contained in the Flex-ed Item Cards */
-.home__books {
+home-books {
   padding: var(--space-2xs) 0;
 }
 
-.home__books li {
+home-books li {
   width: 200px;
   flex-basis: auto;
   flex-grow: 1;
 }
 
-.home__books li a {
+home-books li a {
   display: block;
+  text-decoration: none;
+  font-weight: 200;
 
   /* grayscale */
   filter: gray; /* IE6-9 */
@@ -199,15 +201,14 @@ home-support li {
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 
-.home__books a:hover, .home__books a:active {
+home-books a:hover, home-books a:active {
   -webkit-filter: grayscale(0);
   filter: none;
 }
 
-.home__books img {
+home-books img {
   object-fit: cover;
-  border: var(--border-size) var(--border-style) var(--border-color-dark);
-  border-radius: var(--border-radius-larger);
+  border-radius: var(--border-radius-large);
   border-top-left-radius: var(--border-radius-tiny);
   border-bottom-left-radius: var(--border-radius-tiny);
 }

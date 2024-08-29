@@ -1,18 +1,24 @@
 - title: 1984
+  author: George Orwell
   url: /2024/1984/
   img: 1984.webp
-- title: Don’t Make Me Think
-  url: https://en.wikipedia.org/wiki/Don't_Make_Me_Think
-  img: dont-make-me-think.webp
-- title: How to Win Friends and Influence People by Dale Carnegie
-  url: /2016/how-to-win-friends-and-influence-people/
-  img: how-to-win-friends-and-influence-people.webp
-- title: The Design of Everyday Things by Don Norman
+- title: Leonardo da Vinci
+  author: Walter Isaacson
+  url: https://en.wikipedia.org/wiki/Walter_Isaacson
+  img: leonardo-da-vinci.webp
+- title: Genghis Khan and the Making of the Modern World
+  author: Jack Weatherford
+  url: https://en.wikipedia.org/wiki/Genghis_Khan_and_the_Making_of_the_Modern_World
+  img: genghis-khan.webp
+- title: The Design of Everyday Things
+  author: Don Norman
   url: /2013/the-design-of-everyday-things/
   img: the-design-of-everyday-things.webp
-- title: The Lord of the Rings by J.R.R. Tolkien
+- title: The Lord of the Rings
+  author: J.R.R. Tolkien
   url: https://en.wikipedia.org/wiki/The_Lord_of_the_Rings
   img: the-lord-of-the-rings.webp
-- title: The Story of My Experiments with Truth by Mohandas Karamchand Gandhi
+- title: The Story of My Experiments with Truth
+  author: Mohandas Karamchand Gandhi
   url: /2021/the-story-of-my-experiments-with-truth/
-  img: the-story-of-my-experiments-with-truth.webp
+  img: mahatma-gandhi.webp

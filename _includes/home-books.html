@@ -1,5 +1,5 @@
 {% if site.data.books %}
-<article id="books" class="home__books">
+<home-books id="books">
 	<p>
 		Here are some of the all-time favorite books I have read, re-read, and would recommend. I maintain a list of interesting books that I read each year -
 		<a href="/2018/books/">2018</a>,
@@ -15,12 +15,11 @@
 		{% for books in sorted_books limit: 6 -%}
 		<li>
 			<a href="{{ books.url }}" title="{{ books.title }}">
-				<img
-					loading="lazy" width="360" height="480" alt="{{ books.title }}"
-					src="/static/books/{{ books.img }}">
+				<img loading="lazy" width="360" height="480" alt="{{ books.title }}" src="/static/books/{{ books.img }}">
+				<book-title>{{ books.title }}</book-title>
 			</a>
 		</li>
 		{% endfor -%}
 	</ul>
-</article>
+</home-books>
 {% endif %}
