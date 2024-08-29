@@ -176,7 +176,7 @@ home-support li {
   margin-right: var(--space-smaller);
   font-family: var(--font-family-monospace);
   font-size: smaller;
-  color: var(--text-color-lighter);
+  color: var(--text-color-light);
 }
 
 /* Books - contained in the Flex-ed Item Cards */

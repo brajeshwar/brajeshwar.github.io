@@ -45,7 +45,7 @@
 .page-film figure span,
 .page-devices figure span {
 	font-size: x-small;
-	color: var(--text-color-lighter);
+	color: var(--text-color-light);
 }
 
 .page-devices figure span {
