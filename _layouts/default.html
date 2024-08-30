@@ -25,8 +25,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafafa">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171717">
 
-{% assign StylesLatest = site.time | date:'?v=%Y%^b%d' %}
-<link rel="stylesheet" href="{{ '/styles.css' | relative_url | append: StylesLatest }}">
+<link rel="stylesheet" href="/styles.css">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl | prepend: site.url }}/feed.xml">
 
 </head>
