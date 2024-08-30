@@ -185,16 +185,29 @@ home-books {
 }
 
 home-books li {
-  width: 200px;
+  width: 240px;
   flex-basis: auto;
   flex-grow: 1;
 }
 
 home-books li a {
   display: block;
+  position: relative;
+  width: 100%;
+  height: calc(var(--scale-medium) * 240px);
+  
   text-decoration: none;
   font-weight: 200;
   line-height: var(--scale-small);
+  color: var(--text-color-lightest);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+
+  border-radius: var(--border-radius-large);
+  border-top-left-radius: var(--border-radius-tiny);
+  border-bottom-left-radius: var(--border-radius-tiny);
 
   /* grayscale */
   filter: gray; /* IE6-9 */
@@ -205,13 +218,17 @@ home-books li a {
 home-books a:hover, home-books a:active {
   -webkit-filter: grayscale(0);
   filter: none;
+  color: var(--color-zero);
 }
 
-home-books img {
-  object-fit: cover;
-  border-radius: var(--border-radius-large);
-  border-top-left-radius: var(--border-radius-tiny);
+book-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-2xs);
+  background: var(--bg-color-600);
+  opacity: var(--opacity-lower);
   border-bottom-left-radius: var(--border-radius-tiny);
+  border-bottom-right-radius: var(--border-radius-large);
 }
-
-book-title {}

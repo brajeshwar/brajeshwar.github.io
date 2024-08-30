@@ -13,8 +13,7 @@
 	<ul class="item__cards">
 		{% for books in site.data.books limit: 6 -%}
 		<li>
-			<a href="{{ books.url }}">
-				<img loading="lazy" width="360" height="480" alt="{{ books.alt }}" src="/static/books/{{ books.img }}">
+			<a href="{{ books.url }}" style="background-image: url(/static/books/{{ books.img }});">
 				<book-title>{{ books.title }}</book-title>
 			</a>
 		</li>
