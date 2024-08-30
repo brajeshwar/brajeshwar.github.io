@@ -13,6 +13,7 @@ search__provider * {
 search__provider table, search__provider table tr,
 search__provider table:hover, search__provider table tr:hover {
   background: 0 none;
+  border: 0 none;
 }
 
 .gcse-search {}
