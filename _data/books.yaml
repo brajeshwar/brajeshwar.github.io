@@ -3,26 +3,26 @@
   url: /2024/1984/
   img: 1984.webp
   alt: The Manuscript of the book 1984
-- title: Leonardo da Vinci
-  author: Walter Isaacson
-  url: https://en.wikipedia.org/wiki/Walter_Isaacson
-  img: leonardo-da-vinci.webp
-  alt: Portrait of Leonardo da Vinci
-- title: Genghis Khan and the Making of the Modern World
-  author: Jack Weatherford
-  url: https://en.wikipedia.org/wiki/Genghis_Khan_and_the_Making_of_the_Modern_World
-  img: genghis-khan.webp
-  alt: Genghis Khan on a Horse
-- title: The Design of Everyday Things
-  author: Don Norman
-  url: /2013/the-design-of-everyday-things/
-  img: the-design-of-everyday-things.webp
-  alt: A clean set of everyday objects
 - title: The Lord of the Rings
   author: J.R.R. Tolkien
   url: https://en.wikipedia.org/wiki/The_Lord_of_the_Rings
   img: the-lord-of-the-rings.webp
   alt: The One Ring to Rule Them All
+- title: Leonardo da Vinci
+  author: Walter Isaacson
+  url: https://en.wikipedia.org/wiki/Walter_Isaacson
+  img: leonardo-da-vinci.webp
+  alt: Portrait of Leonardo da Vinci
+- title: The Design of Everyday Things
+  author: Don Norman
+  url: /2013/the-design-of-everyday-things/
+  img: the-design-of-everyday-things.webp
+  alt: A clean set of everyday objects
+- title: Genghis Khan and the Making of the Modern World
+  author: Jack Weatherford
+  url: https://en.wikipedia.org/wiki/Genghis_Khan_and_the_Making_of_the_Modern_World
+  img: genghis-khan.webp
+  alt: Genghis Khan on a Horse
 - title: The Story of My Experiments with Truth
   author: Mohandas Karamchand Gandhi
   url: /2021/the-story-of-my-experiments-with-truth/

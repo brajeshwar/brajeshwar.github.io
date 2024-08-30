@@ -26,6 +26,7 @@ search__provider table:hover, search__provider table tr:hover {
 table.gsc-search-box {}
 td.gsc-input {
 	width: 75% !important;
+  height: 36px;
 }
 td.gsc-search-button {
 	width: 20% !important;
@@ -37,7 +38,11 @@ td.gsc-search-button {
 
 .gsib_a .gsc-input {}
 
-.gsc-search-button {}
+button.gsc-search-button {
+  width: 100%;
+  height: 36px;
+  cursor: pointer;
+}
 
 .gsc-search-button svg {}
 
