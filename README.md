@@ -19,14 +19,11 @@ It is always a `Work-in-Progress`.
 
 ## Todo
 
-- [ ] Home blog posts should be block level at the `a` instead of the `li`.
 - [ ] /now/ - "Think of what you’d tell a friend you hadn’t seen in years." Create an intro and then continue with the listicle.
 - [ ] Move to a more consistent spacing and typographic scale. Use https://utopia.fyi
 - [ ] Replace Google Search with either [PageFind](https://pagefind.app) or stay with [Algolia](https://www.algolia.com) (I’ve a premium free tier).
 - [ ] `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
-- [ ] Replace the books "How to Win Friends", and "Don't make me think" by
-	- [ ] [Genghis Khan and the Making of the Modern World](https://en.wikipedia.org/wiki/Genghis_Khan_and_the_Making_of_the_Modern_World) by [Jack Weatherford](https://en.wikipedia.org/wiki/Jack_Weatherford) (2004).
-	- [ ] Leonardo da Vinci by [Walter Isaacson](https://en.wikipedia.org/wiki/Walter_Isaacson) (2017).
+- [ ] A more cascading and common modular layout/design to reduce repetitive styles and try to stay within 25KB CSS after build.
 
 ## Todo - pulished in-progress articles
 
