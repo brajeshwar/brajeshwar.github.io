@@ -11,8 +11,7 @@
 		<a href="/2024/books/">2024</a>.
 	</p>
 	<ul class="item__cards">
-		{% assign sorted_books = site.data.books | sort:'title' -%}
-		{% for books in sorted_books limit: 6 -%}
+		{% for books in site.data.books limit: 6 -%}
 		<li>
 			<a href="{{ books.url }}">
 				<img loading="lazy" width="360" height="480" alt="{{ books.alt }}" src="/static/books/{{ books.img }}">

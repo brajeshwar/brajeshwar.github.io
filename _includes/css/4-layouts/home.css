@@ -194,6 +194,7 @@ home-books li a {
   display: block;
   text-decoration: none;
   font-weight: 200;
+  line-height: var(--scale-small);
 
   /* grayscale */
   filter: gray; /* IE6-9 */
