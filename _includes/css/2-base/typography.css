@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5 , h6 {
 a {
   color: inherit;
   text-decoration-thickness: 0.05rem;
-  text-decoration-color: var(--text-color-lightest);
+  text-decoration-color: var(--text-color-lighter);
   text-underline-offset: 0.1618034rem;
 }
 a:visited {
@@ -90,7 +90,7 @@ aside.right, .aside.right {
 }
 
 li::marker {
-  color: var(--text-color-lightest);
+  color: var(--text-color-lighter);
 }
 
 /* code highlighter from https://github.com/richleland/pygments-css */
