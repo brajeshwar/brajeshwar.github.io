@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [MarkMap](https://markmap.js.org) is an [open-source](https://github.com/markmap/markmap) tool to build mindmaps with plain text.
 - [macOSpilot-ai-assistant](https://github.com/elfvingralf/macOSpilot-ai-assistant) - Voice + Vision powered AI assistant that answers questions about any application, in context and in audio.
 - [Marker](https://github.com/VikParuchuri/marker) converts PDF to markdown quickly with high accuracy.
 - [Maze Generator](https://mazegenerator.net)

@@ -237,7 +237,7 @@ home-books li a {
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 
-home-books a:hover, home-books a:active {
+home-books li a:hover, home-books li a:active {
   -webkit-filter: grayscale(0);
   filter: none;
   color: var(--color-zero);
