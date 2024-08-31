@@ -2,6 +2,8 @@
 
 ## 2024
 
+- [FUTO](https://www.futo.org/) is an organization dedicated to developing, both through in-house engineering and investment, technologies that frustrate centralization and industry consolidation.
+- [FCast](https://fcast.org) is an [open-source](https://gitlab.futo.org/videostreaming/fcast/) media caster for all OSes.
 - [Free Public APIs](https://www.freepublicapis.com) tested everyday.
 - [Fably](https://stefanom.github.io/fably/) is an [open-source](https://github.com/stefanom/fably) setup that tells bedtime stories to kids.
 - [FileBrowser](https://filebrowser.org) provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. [source](https://github.com/filebrowser/filebrowser)
