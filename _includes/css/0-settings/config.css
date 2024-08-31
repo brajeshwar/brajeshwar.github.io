@@ -57,6 +57,7 @@
   --border-size-largest   : 142px;
 
   --logo-size             : 42px;
+  --icon-size             : 30px;
 
   --image-width-max       : var(--body-width-medium);
   --image-width-full      : var(--body-width-full);

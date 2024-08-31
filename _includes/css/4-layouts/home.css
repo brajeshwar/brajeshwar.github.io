@@ -179,6 +179,28 @@ home-support li {
   color: var(--text-color-light);
 }
 
+connect-icons {
+  display: block;
+  margin: var(--space-s) auto var(--space-m) auto;
+}
+
+connect-icons a {
+  display: inline-block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+connect-icons a svg, connect-icons a:visited svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: var(--border-radius-small);
+  fill: var(--text-color-light);
+}
+
+connect-icons a:hover svg, connect-icons a:active svg {
+  fill: var(--text-color);
+}
+
 /* Books - contained in the Flex-ed Item Cards */
 home-books {
   padding: var(--space-2xs) 0;
