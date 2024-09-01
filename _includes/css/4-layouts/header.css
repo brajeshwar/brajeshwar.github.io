@@ -15,17 +15,17 @@ site-header {
 }
 
 /* logo */
-site-logo {
-	width: var(--logo-size);
-	height: var(--logo-size);
-	line-height: var(--logo-size);
-}
+site-logo {}
 
 site-logo a {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
 	border-radius: 100%;
+	
+	width: var(--logo-size);
+	height: var(--logo-size);
+	line-height: var(--logo-size);
 
 	transition: all 0.5s ease;
 }
