@@ -18,14 +18,12 @@ Objects near this point can orbit the Sun synchronously with the Earth, allowing
 ESA[^ESA] has a nicely done [Webb Launch Kit](https://esamultimedia.esa.int/docs/science/Webb-LaunchKit_EN.pdf) (pdf) that details the telescope and the launch.
   
 <div class="gallery" markdown="1">
-  <ul>
-    <li><a href="https://cdn.oinam.com/img/science/webb-in-a-nutshell-original.jpg" title="Webb in a Nutshell"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-in-a-nutshell.webp" alt="Webb in a Nutshell"></a></li>
-    <li><a href="https://cdn.oinam.com/img/science/webb-vs-hubble-original.jpg" title="Webb vs Hubble"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-vs-hubble.webp" alt="Webb vs Hubble"></a></li>
-    <li><a href="https://cdn.oinam.com/img/science/webb-science-original.jpg" title="Webb Science"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-science.webp" alt="Webb Science"></a></li>
-    <li><a href="https://cdn.oinam.com/img/science/webb-science-instruments-original.jpg" title="Webb Science Instruments"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-science-instruments.webp" alt="Webb Science Instruments"></a></li>
-    <li><a href="https://cdn.oinam.com/img/science/webb-spectroscopy-original.jpg" title="Webb Spectroscopy"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-spectroscopy.webp" alt="Webb Spectroscopy"></a></li>
-    <li><a href="https://cdn.oinam.com/img/science/webb-study-the-universe-in-infrared-original.jpg" title="Webb Infrared"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-study-the-universe-in-infrared.webp" alt="Webb Infrared"></a></li>
-  </ul>
+- <a href="https://cdn.oinam.com/img/science/webb-in-a-nutshell-original.jpg" title="Webb in a Nutshell"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-in-a-nutshell.webp" alt="Webb in a Nutshell"></a>
+- <a href="https://cdn.oinam.com/img/science/webb-vs-hubble-original.jpg" title="Webb vs Hubble"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-vs-hubble.webp" alt="Webb vs Hubble"></a>
+- <a href="https://cdn.oinam.com/img/science/webb-science-original.jpg" title="Webb Science"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-science.webp" alt="Webb Science"></a>
+- <a href="https://cdn.oinam.com/img/science/webb-science-instruments-original.jpg" title="Webb Science Instruments"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-science-instruments.webp" alt="Webb Science Instruments"></a>
+- <a href="https://cdn.oinam.com/img/science/webb-spectroscopy-original.jpg" title="Webb Spectroscopy"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-spectroscopy.webp" alt="Webb Spectroscopy"></a>
+- <a href="https://cdn.oinam.com/img/science/webb-study-the-universe-in-infrared-original.jpg" title="Webb Infrared"><img loading="lazy" src="https://cdn.oinam.com/img/science/webb-study-the-universe-in-infrared.webp" alt="Webb Infrared"></a>
 </div>
 
 ## First Image (Jul 12, 2022)
