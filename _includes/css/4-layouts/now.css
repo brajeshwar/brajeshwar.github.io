@@ -103,7 +103,7 @@
 }
 
 .page-now__now > ul li:first-child ul li a:hover, .page-now__now > ul li:first-child ul li a:active {
-	color: var(--text-color-darkest);	
+	color: var(--text-color-darker);	
 }
 
 .page-now__now > ul li:first-child ul li {

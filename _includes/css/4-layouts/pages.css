@@ -68,19 +68,19 @@ bookmarks-header nav a, bookmarks-header nav a:visited {
 	margin: 0;
 	padding: var(--space-3xs) var(--space-xs);
 	
-	background: var(--bg-color-100);
+	background: var(--bg-color-200);
 	border: var(--border-size) var(--border-style) transparent;
 	border-radius: var(--border-radius);
 }
 
 bookmarks-header nav a:hover, bookmarks-header nav a:active {
-	background: var(--bg-color-200);
+	background: var(--bg-color-300);
 	border-color: var(--border-color-dark);
 }
 
 bookmarks-header nav a.active {
 	cursor: default;
 	color: var(--text-color-lightest);
-	background: var(--bg-color-full);
+	background: var(--bg-color-900);
 	border-color: transparent;
 }

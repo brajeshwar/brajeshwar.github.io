@@ -44,11 +44,10 @@ tbody tr {
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--bg-color-50);
+  background-color: var(--bg-color-200);
 }
 
 tbody tr:hover, tbody tr:active {
-  background: var(--bg-color-100);
   border-bottom-color: var(--border-color);
 }
 
