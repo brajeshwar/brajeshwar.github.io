@@ -90,7 +90,7 @@ aside.right, .aside.right {
 }
 
 li::marker {
-  color: var(--text-color-lighter);
+  color: var(--text-color-light);
 }
 
 /* code highlighter from https://github.com/richleland/pygments-css */

@@ -72,7 +72,7 @@ photo-cover__caption {
 	
 	padding: 0;
 	margin: var(--space-l) auto;
-	background: var(--bg-color-100);
+	background: var(--bg-color-200);
 	border-radius: var(--border-radius-larger);
 
 	font-family: var(--font-family-sans);
@@ -89,7 +89,7 @@ photo-cover__caption {
 
 .post-nav a:hover, .post-nav a:active {
 	color: var(--text-color-darker);
-	background: var(--bg-color-200);
+	background: var(--bg-color-300);
 }
 
 .post-nav__prev, .post-nav__next {}

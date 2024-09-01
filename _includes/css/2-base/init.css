@@ -13,7 +13,7 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--scale);
   color: var(--text-color);
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-100);
 
   transition: background 500ms ease-in-out, color 200ms ease;
 }
