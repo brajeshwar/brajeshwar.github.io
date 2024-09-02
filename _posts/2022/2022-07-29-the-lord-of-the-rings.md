@@ -6,7 +6,7 @@ This is a book that you take your time, read it slow; perhaps slower than the ti
 
 The book created an entire mythology, complete with languages, history, and cultures. The story follows the quest to destroy the One Ring, an object of immense power that threatens the very existence of the free peoples of Middle-earth[^MiddleEarth]. The [movie adaptations](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)) are also equally appealing and have a massive fan following.
 
-![Map of Middle Earth](/static/2022/lotr-map-of-middle-earth.webp)
+<a href="//lotrproject.com/map/"><img class="large" src="/static/2022/lotr-map-of-middle-earth.webp" alt="Map of Middle Earth"></a>
 
 The Lord of the Rings begins in the Shire, home to the hobbits. Frodo Baggins, inherits a seemingly simple gold ring from his uncle, Bilbo Baggins. However, Gandalf the Grey, a wise and powerful wizard, soon reveals that this is the One Ring, forged by the Dark Lord Sauron to rule all other Rings of Power. The Ring holds immense power and has a corrupting influence on its bearer, making them obsessed and turning them evil over time. Sauron, who was defeated millennia ago and lost the Ring, now seeks to reclaim it to conquer Middle-earth.
 
@@ -30,7 +30,7 @@ Rohan is soon attacked by Saruman’s forces, leading to the Battle of Helm's De
 
 Back in Frodo and Sam’s journey, they capture Gollum, a creature who once owned the Ring and was deeply corrupted by it. Gollum becomes their guide, leading them through the treacherous paths to Mordor. Despite Sam’s mistrust, Frodo pities Gollum and hopes to redeem him. However, Gollum secretly plots to betray them by leading them to Shelob, a giant spider-like creature. Shelob attacks Frodo, but Sam fights her off. Believing Frodo to be dead, Sam takes the Ring to continue the quest. However, when orcs take Frodo’s body, Sam learns Frodo is alive but captured. Sam rescues Frodo from the orcs, and the two continue their journey to Mount Doom.
 
-![One Ring to Rule Them All](/static/2022/one-ring-to-rule-them-all.webp)
+<img class="small right" src="/static/2022/one-ring-to-rule-them-all.webp" alt="One Ring to Rule Them All">
 
 As Frodo and Sam near the end of their quest, the armies of Gondor and Rohan prepare to face Sauron’s forces. Aragorn, having claimed his birthright, uses a palantír to challenge Sauron, distracting him from Frodo’s approach. He leads the combined armies to the Black Gate of Mordor, hoping to draw out Sauron’s troops and give Frodo a chance to destroy the Ring.
 
