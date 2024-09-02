@@ -8,7 +8,7 @@ iframe, object, embed {
   font-size: smaller;
   text-align: center;
   border-radius: var(--border-radius-largest);
-  background: var(--bg-color-100);
+  background: var(--bg-color-low);
   padding: var(--space-3xs);
 }
 
@@ -17,31 +17,30 @@ iframe, object, embed {
 	white-space: nowrap;
 	padding: 0 var(--space-smaller);
 	border-radius: var(--border-radius-largest);
-	background: var(--bg-color-100);
+	background: var(--bg-color-low);
 }
 
 .mark {
-  background-color: var(--bg-color-100);
+  background-color: var(--bg-color-low);
   padding: var(--space-2xs);
   line-height: var(--scale-small);
 
-  background: var(--bg-color-100);
-  border-left: var(--border-size-larger) var(--border-style) var(--border-color-light);
+  border-left: var(--border-size-larger) var(--border-style) var(--border-color-high);
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
 
 .link-border a {
 	text-decoration: none;
-	border-bottom: var(--border-size) var(--border-style) var(--text-color-lightest);
+	border-bottom: var(--border-size) var(--border-style) var(--text-color-lower);
 }
 
 .link-border a:hover, .link-border a:active {
-	border-bottom-color: var(--text-color-darker);
+	border-bottom-color: var(--text-color-higher);
 }
 
 .text-low, .text-low a, .text-low a:hover, .text-low a:active {
-  color: var(--text-color-lightest);
+  color: var(--text-color-lower);
 }
 
 .text-center {
@@ -49,7 +48,7 @@ iframe, object, embed {
 }
 
 ul.list-alt-color li:nth-child(even) {
-  background-color: var(--bg-color-200);
+  background-color: var(--bg-color-low);
 }
 
 hr.spacer {

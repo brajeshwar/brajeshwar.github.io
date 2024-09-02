@@ -3,12 +3,7 @@ layout: default
 ---
 
 {%- if page.image -%}
-  <photo-cover style="
-      background-image: url({{ page.image }});
-      {%- if page.image-position -%}
-      background-position: {{ page.image-position }};
-      {%- endif -%}
-    "></photo-cover>
+  <photo-cover style="background-image: url({{ page.image }});"></photo-cover>
   {%- if page.image-caption -%}
   <photo-cover__caption>{{ page.image-caption }}</photo-cover__caption>
   {%- endif -%}

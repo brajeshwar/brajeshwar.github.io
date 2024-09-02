@@ -31,31 +31,31 @@ site-logo a {
 }
 
 site-logo a:hover, site-logo a:active {
-	background: var(--logo-color);
+	background: var(--text-color);
 }
 
 /* SVG: .logo__img and .logo__img--path */
 site-logo a .logo__img, site-logo a .logo__img--path,
 site-logo a:visited .logo__img, site-logo a:visited .logo__img--path {
-	fill: var(--logo-color);
+	fill: var(--bg-color-high);
 } 
 
 site-logo a:hover .logo__img, site-logo a:hover .logo__img--path,
 site-logo a:active .logo__img, site-logo a:active .logo__img--path {
-	fill: var(--logo-color-bg);
+	fill: var(--color-zero);
 }
 
 /* menu */
 site-nav {
 	padding: var(--space-2xs) var(--space-s);
 	font-size: var(--step--1);
-	background-color: var(--bg-color-600);
+	background-color: var(--bg-color-high);
 	border-radius: var(--border-radius-larger);
 }
 
 site-nav a, site-nav a:visited {
 	padding: var(--space-xs);
-	color: var(--text-color-lightest);
+	color: var(--text-color-lower);
 	text-decoration: none;
 }
 

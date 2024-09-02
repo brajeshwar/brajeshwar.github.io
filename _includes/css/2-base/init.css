@@ -13,7 +13,7 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--scale);
   color: var(--text-color);
-  background-color: var(--bg-color-100);
+  background-color: var(--bg-color-lower);
 
   transition: background 500ms ease-in-out, color 200ms ease;
 }
@@ -35,7 +35,7 @@ kbd {
   background: var(--color-zero);
   border-bottom: var(--border-size) var(--border-style) var(--border-color);
   border-radius: var(--border-radius-small);
-  color: var(--text-color-light);
+  color: var(--text-color-low);
   padding: var(--space-3xs) var(--space-2xs);
   font-size: smaller;
 }

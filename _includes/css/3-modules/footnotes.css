@@ -1,7 +1,7 @@
 .footnotes {
 	margin: var(--space-m) auto;
 	padding: var(--space-xs);
-	background: var(--bg-color-200);
+	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
   font-family: var(--font-family-sans);
   font-size: var(--step--1);

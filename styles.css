@@ -4,11 +4,9 @@
 
 {%- capture include_to_scssify -%}
 
-{% include css/0-settings/modular-scale.css %}
 {% include css/0-settings/scale.css %}
-{% include css/0-settings/theme.css %}
+{% include css/0-settings/color.css %}
 {% include css/0-settings/config.css %}
-{% include css/0-settings/light-dark.css %}
 
 {% include css/1-tools/utils.css %}
 
