@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5 , h6 {
 a, a:visited {
   color: inherit;
   text-decoration-thickness: 0.05rem;
-  text-decoration-color: var(--text-color-lower);
+  text-decoration-color: var(--text-color-low);
   text-underline-offset: 0.1618034rem;
 }
 
@@ -40,7 +40,8 @@ mark, code.language-plaintext {
 	padding: 2px var(--space-3xs);
 	font-family: var(--font-family-monospace);
 	font-size: smaller;
-	background-color: var(--bg-color-low);
+	color: var(--text-color-light);
+	background-color: var(--bg-color);
 	border-radius: var(--border-radius-largest);
 	border-bottom: var(--border-size) var(--border-style) var(--border-color);
 
@@ -87,7 +88,7 @@ aside.right, .aside.right {
 }
 
 li::marker {
-  color: var(--text-color-low);
+  color: var(--text-color-lower);
 }
 
 /* code highlighter from https://github.com/richleland/pygments-css */
