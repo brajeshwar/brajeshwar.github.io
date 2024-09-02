@@ -76,21 +76,21 @@ posts-recent ul li a, posts-recent ul li a:visited {
   text-decoration: none;
   line-height: var(--scale-small);
 
-  background: var(--bg-color-200);
+  background: var(--bg-color-low);
   border-radius: var(--border-radius);
   border: var(--border-size) var(--border-style) transparent;
 }
 
 posts-recent ul li a:hover, posts-recent ul li a:active {
-  background: var(--bg-color-300);
-  border-color: var(--border-color-dark);
+  background: var(--bg-color);
+  border-color: var(--border-color-high);
 }
 
 posts-recent ul time {
   display: block;
   margin-bottom: var(--space-2xs);
   font-size: var(--step--2);
-  color: var(--text-color-light);
+  color: var(--text-color-low);
 }
 
 /* home: blog - popular articles */
@@ -110,8 +110,8 @@ posts-popular ul time {
 
   font-size: small;
   
-  color: var(--text-color-light);
-  background-color: var(--bg-color-200);
+  color: var(--text-color-low);
+  background-color: var(--bg-color-low);
   border-radius: var(--border-radius-large);
 }
 
@@ -152,7 +152,7 @@ home-support li {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: var(--text-color-light);
+  color: var(--text-color-low);
 }
 
 .connect__title {
@@ -176,7 +176,7 @@ home-support li {
   margin-right: var(--space-smaller);
   font-family: var(--font-family-monospace);
   font-size: smaller;
-  color: var(--text-color-light);
+  color: var(--text-color-low);
 }
 
 connect-icons {
@@ -194,7 +194,7 @@ connect-icons a svg, connect-icons a:visited svg {
   width: var(--icon-size);
   height: var(--icon-size);
   border-radius: var(--border-radius-small);
-  fill: var(--text-color-light);
+  fill: var(--text-color-low);
 }
 
 connect-icons a:hover svg, connect-icons a:active svg {
@@ -219,9 +219,9 @@ home-books li a {
   height: calc(var(--scale-medium) * 240px);
   
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 300;
   line-height: var(--scale-small);
-  color: var(--text-color-lightest);
+  color: var(--text-color-lower);
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -249,8 +249,8 @@ book-title {
   right: 0;
   bottom: 0;
   padding: var(--space-2xs);
-  background: var(--bg-color-600);
-  opacity: var(--opacity-lower);
+  background: var(--bg-color-higher);
+  opacity: var(--opacity-low);
   border-bottom-left-radius: var(--border-radius-tiny);
   border-bottom-right-radius: var(--border-radius-large);
 }

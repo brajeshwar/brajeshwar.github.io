@@ -45,7 +45,7 @@
 .page-film figure span,
 .page-devices figure span {
 	font-size: x-small;
-	color: var(--text-color-light);
+	color: var(--text-color-low);
 }
 
 .page-devices figure span {
@@ -68,19 +68,19 @@ bookmarks-header nav a, bookmarks-header nav a:visited {
 	margin: 0;
 	padding: var(--space-3xs) var(--space-xs);
 	
-	background: var(--bg-color-200);
+	background: var(--bg-color-low);
 	border: var(--border-size) var(--border-style) transparent;
 	border-radius: var(--border-radius);
 }
 
 bookmarks-header nav a:hover, bookmarks-header nav a:active {
-	background: var(--bg-color-300);
-	border-color: var(--border-color-dark);
+	background: var(--bg-color);
+	border-color: var(--border-color-high);
 }
 
 bookmarks-header nav a.active {
 	cursor: default;
-	color: var(--text-color-lightest);
-	background: var(--bg-color-900);
+	color: var(--text-color-lower);
+	background: var(--bg-color-higher);
 	border-color: transparent;
 }

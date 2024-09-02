@@ -1,6 +1,6 @@
 footer.site-footer {
 	text-align: center;
-	color: var(--text-color-light);
+	color: var(--text-color-low);
 	padding: var(--space-s);
 	margin-top: var(--space-xl);
 }

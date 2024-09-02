@@ -33,11 +33,10 @@
   --space-smallest        : calc(var(--scale-small) * 0.2rem);
 
   --opacity-reset         : 1;
-  --opacity-low           : 0.9;
-  --opacity-lower         : 0.7;
-  --opacity-lowest        : 0.5;
+  --opacity-low           : 0.8;
+  --opacity-lower         : 0.6;
 
-  --transition-duration   : 0.4s;
+  --transition-duration   : 0.3s;
 
   --border-radius         : 7px;
   --border-radius-tiny    : 2px;

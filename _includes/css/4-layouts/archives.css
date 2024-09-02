@@ -29,7 +29,7 @@ page-archives table caption {
 	padding: 0 var(--space-2xs);
 	font-size: var(--step-1);
 	font-weight: 200;
-	background: var(--bg-color-100);
+	background: var(--bg-color);
 	border-bottom: 1px solid var(--border-color);
 }
 

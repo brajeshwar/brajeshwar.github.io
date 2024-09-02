@@ -18,8 +18,8 @@ th {
 }
 
 thead {
-  background: var(--bg-color-200);
-  border-bottom: var(--border-size) var(--border-style) var(--border-color-dark);
+  background: var(--bg-color-low);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color-high);
 }
 
 thead th {
@@ -36,15 +36,15 @@ thead th:last-child {
 }
 
 tbody {
-  border: var(--border-size) var(--border-style) var(--border-color-lighter);
+  border: var(--border-size) var(--border-style) var(--border-color-lower);
 }
 
 tbody tr {
-  border-bottom: var(--border-size) var(--border-style) var(--border-color-lighter);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color-lower);
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--bg-color-200);
+  background-color: var(--bg-color-low);
 }
 
 tbody tr:hover, tbody tr:active {
