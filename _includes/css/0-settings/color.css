@@ -29,7 +29,6 @@
   --text-color-higher       : light-dark(var(--color-900), var(--color-200));
   
   --text-color-link         : light-dark(var(--color-800), var(--color-400));
-  --text-color-link-visited : light-dark(var(--color-600), var(--color-300));
   --text-color-link-active  : light-dark(var(--color-900), var(--color-100));
 
   --border-color-lower      : light-dark(var(--color-100), var(--color-900));

@@ -3,15 +3,13 @@ h1, h2, h3, h4, h5 , h6 {
 	line-height: var(--scale-small);
 }
 
-a {
+a, a:visited {
   color: inherit;
   text-decoration-thickness: 0.05rem;
-  text-decoration-color: var(--text-color-low);
+  text-decoration-color: var(--text-color-lower);
   text-underline-offset: 0.1618034rem;
 }
-a:visited {
-  color: var(--text-color-link-visited);
-}
+
 a:hover, a:active {
   color: var(--text-color-link-active);
   text-decoration-color: var(--text-color-link-active);
