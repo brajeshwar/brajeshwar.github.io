@@ -82,7 +82,7 @@ photo-cover__caption {
 
 .post-nav a {
 	display: block;
-	padding: var(--space-smaller) var(--space-default);
+	padding: var(--space-smaller) var(--space);
 	text-decoration: none;
 	color: var(--text-color-low);
 }

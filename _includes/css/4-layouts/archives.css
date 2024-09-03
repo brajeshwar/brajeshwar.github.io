@@ -1,6 +1,6 @@
 page-archives {
 	display: block;
-	margin: var(--space-default) auto;
+	margin: var(--space) auto;
 	border-radius: var(--border-radius);
 	border: 1px solid var(--border-color);
 }

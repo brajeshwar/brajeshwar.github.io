@@ -24,7 +24,7 @@ main {
 
 hr {
   padding: 0;
-  margin: var(--space-default) auto;
+  margin: var(--space) auto;
   border: 0;
   height: 0;
   background: none;
