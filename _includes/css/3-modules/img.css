@@ -85,7 +85,7 @@ figure.full figcaption, figure.large figcaption {
 
 /* images gallery */
 .gallery {
-  margin: var(--space-default) calc(50% - 50vw);
+  margin: var(--space) calc(50% - 50vw);
   width: 100vw;
   max-width: var(--body-width-max);
   transform: translateX(calc(50vw - 50%));
@@ -132,7 +132,7 @@ figure.full figcaption, figure.large figcaption {
 /* small screens - disable flex columns */
 @media (max-width: $breakpoint-small) {
   .gallery {
-    margin: var(--space-default) 0;
+    margin: var(--space) 0;
     width: 100%;
     transform: none;
   }
