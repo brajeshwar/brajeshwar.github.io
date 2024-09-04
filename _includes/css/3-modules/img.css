@@ -44,8 +44,9 @@ figure img {
 figcaption {
   max-width: var(--body-width-ideal);
   margin: 0 auto;
-  padding: var(--space-3xs);
+  padding: var(--space-xs) var(--space-3xs);
   font-size: smaller;
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
 figure:has(figcaption) {}

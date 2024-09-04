@@ -32,6 +32,8 @@ photo-cover__caption {
 	display: block;
 	max-width: var(--body-width-ideal);
 	margin: var(--space-2xs) auto var(--space-m) auto;
+	padding: var(--space-2xs) 0;
+	border-bottom: var(--border-size) var(--border-style) var(--border-color);
 	
 	font-family: var(--font-family-sans);
 	font-size: smaller;
