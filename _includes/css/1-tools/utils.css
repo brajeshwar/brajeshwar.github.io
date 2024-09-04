@@ -10,7 +10,7 @@ iframe, object, embed {
   text-align: center;
   border-radius: var(--border-radius-largest);
   background: var(--bg-color-low);
-  padding: var(--space-3xs);
+  padding: var(--space-3xs) var(--space-s);
 }
 
 .pill {
