@@ -7,6 +7,12 @@ baseurl: ''
 markdown: kramdown
 highlighter: rouge
 
+# Enable line-numbers for code (TBD: Table layout seems to have a conflict with this)
+# kramdown:
+#   syntax_highlighter_opts:
+#     block:
+#       line_numbers: true
+
 permalink: pretty
 permalink: /:title/
 
