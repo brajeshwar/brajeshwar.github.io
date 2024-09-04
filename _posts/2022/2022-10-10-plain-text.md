@@ -1,19 +1,19 @@
 # Plain Text
 
-I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many notetaking apps and bought enough of them -- [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
+I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many note-taking apps and bought enough of them — [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
 
-I have moved to a simpler notetaking and writing habit for my notes. I have chosen a simple plain-text life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
+I have moved to a simpler note-taking and writing habit for my notes. I have chosen a simple plain-text[^plaintext] life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
 
 {:.aside .right}
 Every device, including ones long gone, and ones not invented yet, can read and edit plain text. - [Derek Sivers](https://sive.rs/plaintext)
 
-For short, quick notes, I tend to start with Apple’s Notes, share common family notes,  and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all of my notes in my __Notebook__. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime, while my notes remain free of any dependency.
+For short, quick notes, I tend to start with Apple’s Notes, share common family notes,  and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all of my notes in my **Notebook**. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime, while my notes remain free of any dependency.
 
 The simplicity of storing plain-text files as individual files is much more useful than storing them in a database and having an export format. The direct manipulation of files allows multiple apps to coexist, change or migrate to other apps, and do useful things on top of the same files.
 
 For team writing, I'd be happy to use whatever helps the team write better and easier for everyone.
 
-> [Plain text](https://en.wikipedia.org/wiki/Plain_text) is a powerful universal tool that is almost zero cost, work across platforms, are light enough to work remotely over poor connections, doesn't go out of date, and is quick to learn.
+> Plain text is a powerful universal tool that is almost zero cost, work across platforms, are light enough to work remotely over poor connections, doesn't go out of date, and is quick to learn.
 
 Plain text is software and operating system agnostic. It's searchable, portable, lightweight, and easily manipulated. It's unstructured. It works when web servers are down, or the Internet is not working. There's no exporting and importing, no databases or tags or flags or stars or prioritizing or any other proprietary induced rules on what you can and can't do with it.
 
@@ -23,7 +23,9 @@ Of course, Plain Text has its limitations and disadvantages. The User Experience
 
 > You are only truly be digitally free when your notes can stand alone, independent of any one app.
 
-### References
+---
+
+## References
 
 “Our tools and techniques are only as valuable as the workflow.”
 
@@ -51,6 +53,8 @@ Here are a few set of tools, articles, and references that will get you started,
 	- [Foam](https://github.com/foambubble/foam) is a personal knowledge management and sharing system inspired by Roam Research, built on [Visual Studio Code](https://code.visualstudio.com) and GitHub.
 	- [Logseg](https://logseq.com) is another open source knowledge base that works on top of local plain-text Markdown and Org-mode files. Use it to write, organize and share your thoughts, keep your to-do list, and build your own digital garden. It is hugely inspired by Roam Research, Org Mode, Tiddlywiki and Workflowy.
 	- [nb](https://xwmx.github.io/nb/) is a command line and local web note‑taking, bookmarking, archiving, and knowledge base application.
+
+[^plaintext]: [Plain Text](https://en.wikipedia.org/wiki/Plain_text) is a loose term for data that represent only characters of readable material but not its graphical representation nor other objects. It may also include a limited number of “whitespace” characters that affect simple arrangement of text, such as spaces, line breaks, or tabulation characters. Plain text is different from formatted text, where style information is included; from structured text, where structural parts of the document such as paragraphs, sections, and the like are identified; and from binary files in which some portions must be interpreted as binary objects.
 
 [^Obsidian]: [Obsidian](https://obsidian.md) is a powerful knowledge base on top of a local folder of plain text Markdown files. With Obsidian, your data sits in a local folder. Obsidian works completely offline, internet or service issues will never be your problem.
 
