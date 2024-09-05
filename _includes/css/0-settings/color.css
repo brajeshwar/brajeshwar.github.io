@@ -1,3 +1,9 @@
+/*
+ * TBD: transition to oklch()
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch
+ * https://blog.logrocket.com/oklch-css-consistent-accessible-color-palettes/
+ */
+
 /* greyscale */
 :root {
   --color-100: #f0f0f0;

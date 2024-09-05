@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Laminar](https://www.lmnr.ai) is an [open-source](https://github.com/lmnr-ai/lmnr) DataDog + PostHog for AI agents / RAG apps. Fast, reliable and insightful.
 - [Lansat Satellite images to write your name](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/), from NASA.
 - [Lapdev](https://lap.dev) is an [Open source](https://github.com/lapce/lapdev), self hosted dev environment. It uses Devcontainers spec and scales from a single machine to a global fleet of servers.
 - [Lightning CSS](https://lightningcss.dev) is an extremely fast CSS parser, transformer, bundler, and minifier.

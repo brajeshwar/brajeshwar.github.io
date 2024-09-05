@@ -1,0 +1,20 @@
+# Cargo Cult
+
+“In the South Seas there is a Cargo Cult of people. During the war they saw airplanes land with lots of good materials, and they want the same thing to happen now. So they’ve arranged to make things like runways, to put fires along the sides of the runways, to make a wooden hut for a man to sit in, with two wooden pieces on his head like headphones and bars of bamboo sticking out like antennas—he’s the controller—and they wait for the airplanes to land. They’re doing everything right. The form is perfect. It looks exactly the way it looked before. But it doesn’t work. No airplanes land. So I call these things Cargo Cult Science, because they follow all the apparent precepts and forms of scientific investigation, but they’re missing something essential, because the planes don’t land.”
+
+— Richard Feynman,[^RichardFeynman] [1974 Caltech Commencement Address](http://calteches.library.caltech.edu/51/2/CargoCult.htm) ([archive](https://archive.is/VBdgn))
+
+> Rituals mimic successful actions without grasping their underlying principles.
+
+The world has become increasingly divided amongst factions, and beliefs. Yes, the world is advancing, while a lot more are also dragging behind and regressing. The hardest part is that each and everyone strongly believes in their own act that they are on the right path and those different from them are “wrong.”
+
+One of the best advice I’ve ever gotten is never to start a conversation or an argument with, “You’re an idiot.” When you label someone else with whatever you think it is, the conversation is dead before it starts.
+
+The speech by Richard Feynman was targeted to scientists. However, it is applicable to all forward-thinking civilized humans. Here are the few snippets from the article that really stood out to me. 
+
+- “The idea that we all hope you have learned in studying science in school—we never explicitly say what this is, but just hope that you catch on by all the examples of scientific investigation.  It is interesting, therefore, to bring it out now and speak of it explicitly.  It’s a kind of scientific integrity, a principle of scientific thought that corresponds to a kind of utter honesty—a kind of leaning over backwards.”
+- “When you have put a lot of ideas together to make an elaborate theory, you want to make sure, when explaining what it fits, that those things it fits are not just the things that gave you the idea for the theory; but that the finished theory makes something else come out right, in addition.”
+- “We’ve learned from experience that the truth will out.  Other experimenters will repeat your experiment and find out whether you were wrong or right.  Nature’s phenomena will agree or they’ll disagree with your theory.  And, although you may gain some temporary fame and excitement, you will not gain a good reputation if you haven’t tried to be very careful in this kind of work.  And it’s this type of integrity, this kind of care not to fool yourself, that is missing to a large extent in much of the research in Cargo Cult Science.”
+- “The first principle is that you must not fool yourself—and you are the easiest person to fool.  So you have to be very careful about that.  After you’ve not fooled yourself, it’s easy not to fool others. You just have to be honest in a conventional way after that.”
+
+[^RichardFeynman]: [Richard Phillips Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) (May 11, 1918 – February 15, 1988) was an American theoretical physicist, known for his work in the path integral formulation of quantum mechanics, the theory of quantum electrodynamics, the physics of the superfluidity of supercooled liquid helium, as well as his work in particle physics for which he proposed the parton model. For his contributions to the development of quantum electrodynamics, Feynman received the Nobel Prize in Physics in 1965 jointly with Julian Schwinger and Shin'ichirō Tomonaga.
