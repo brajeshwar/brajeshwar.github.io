@@ -4,9 +4,15 @@ title: Now
 style: page-now
 ---
 
-<section class="page-now__now" markdown="1">
-{% include_relative now/2024.md %}
+<section class="now-now" markdown="1">
+
+I started [Valinor Earth](https://valinor.earth) some time back. I've been working on my efforts to help curb climate change. After a few trials, pivots, and feedback, we decided to leverage satellite data to help companies with their efforts on climate projects with project financing, monitoring, reporting, and verification.
+
+I work remotely out of Bangalore, India.
+
 </section>
+
+{% include_relative now/2024.md %}
 
 {% include_relative now/2016.md %}
 
