@@ -37,9 +37,9 @@
   --text-color-link         : light-dark(var(--color-800), var(--color-300));
   --text-color-link-active  : light-dark(var(--color-900), var(--color-200));
 
-  --border-color-lower      : light-dark(var(--color-100), var(--color-900));
-  --border-color-low        : light-dark(var(--color-200), var(--color-800));
-  --border-color            : light-dark(var(--color-300), var(--color-700));
-  --border-color-high       : light-dark(var(--color-400), var(--color-600));
-  --border-color-higher     : light-dark(var(--color-300), var(--color-500));
+  --border-color-lower      : light-dark(var(--color-100), var(--color-800));
+  --border-color-low        : light-dark(var(--color-200), var(--color-700));
+  --border-color            : light-dark(var(--color-300), var(--color-600));
+  --border-color-high       : light-dark(var(--color-400), var(--color-500));
+  --border-color-higher     : light-dark(var(--color-500), var(--color-400));
 }

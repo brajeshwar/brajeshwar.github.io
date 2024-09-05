@@ -6,7 +6,7 @@
 
   --font-size-base        : 18px;
 
-  --body-width            : 99%;
+  --body-width            : 96%;
   --body-width-ideal      : 46rem; /* ideal reading width */
   --body-width-max        : 76rem; /* visual width */
   --body-width-medium     : 60rem; /* objects that are large but not max */
