@@ -23,6 +23,7 @@ It is always a `Work-in-Progress`.
 - [ ] Replace Google Search with either [PageFind](https://pagefind.app) or stay with [Algolia](https://www.algolia.com) (I’ve a premium free tier).
 - [ ] `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
 - [ ] A more cascading and common modular layout/design to reduce repetitive styles and try to stay within 25KB CSS after build.
+- [ ] Loved the idea of light-dark mode with themes on [Ryan Mulligan's website](https://ryanmulligan.dev). He is also a man of culture - his website is [open-source](https://github.com/hexagoncircle/ryan-mulligan-dev).  Should we do something like that.
 
 ## Todo - pulished in-progress articles
 
