@@ -12,13 +12,9 @@ If you know a senior who has just purchased a smartphone and is struggling to fi
 
 ## Pick a Different Phone
 
-<a href="http://www.jitterbugdirect.com/">
-<img class="small right" src="/static/2018/jitterbug-phone-colors.jpg" alt="Jitterbug Phones">
-</a>
-
 Sometimes the problem is the phone and not the person. If a senior in your life is having trouble getting their head around their new smartphone, it may just be that they have the wrong phone. Take advantage of the return policy. And get them something they will be able to figure out more easily. 
 
-Sometimes the smartest phone choice is not a smartphone at all. It may be something more like the <a href="http://www.jitterbugdirect.com/">Jitterbug phones</a> you have heard of that offer basic functionality for seniors. This type of phone usually has large, easy to read numbers, as loud earpiece and speaker that is also compatible with hearing aids, and bright screens with clear information that makes navigation a simpler task.
+Sometimes the smartest phone choice is not a smartphone at all. It may be something more like the Jitterbug phones you have heard of that offer basic functionality for seniors. This type of phone usually has large, easy to read numbers, as loud earpiece and speaker that is also compatible with hearing aids, and bright screens with clear information that makes navigation a simpler task.
 
 So before you give an elderly the latest and greatest Android phone, you have to ask yourself if you are doing what's best for them, or what's best for you. Consider the possibility that a smartphone is not a smart choice for them.
 
@@ -26,7 +22,7 @@ So before you give an elderly the latest and greatest Android phone, you have to
 
 If they do get a smartphone, help them find apps that will help them, not nearly entertain them. You don’t have to be a senior to need a little help remembering things. But if the senior in your life does need a little help remembering things like when to take which pills, appointments, and special events, There are apps for that. You can even find apps specifically to help those with Alzheimer's disease.
 
-If their vision is a problem such that they have a hard time reading mail, there are <a href="https://brailleworks.com/5-top-mobile-apps-for-the-blind/">apps for the visually impaired</a> such as <a href="http://www.knfbreader.com/">KNFB Reader</a> that do automatic scanning and OCR function, combining it with a speech engine that reads processed text aloud. Make sure they know that smartphones can be helpful and not just fun.
+If their vision is a problem such that they have a hard time reading mail, there are <a href="https://brailleworks.com/5-top-mobile-apps-for-the-blind/">apps for the visually impaired</a> such as KNFB Reader that do automatic scanning and OCR function, combining it with a speech engine that reads processed text aloud. Make sure they know that smartphones can be helpful and not just fun.
 
 ## Social Media
 

@@ -4,7 +4,7 @@
 
 [Pokémon Go](http://www.pokemongo.com/) has, no doubt, taken the world by storm. It's estimated that the game has more active users than Snapchat. It's the first widely popular augmented reality game and people have been willing to go to extreme measures to catch 'em all. Pokémon Go uses real-world locations and virtual images to sends users on wild quests in search of the elusive Pokémon. Here are some interesting stories that demonstrate Pokémon Go's influence on its players.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/AVWPWYYIcpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/AVWPWYYIcpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Gotta Catch 'em All
 
@@ -46,9 +46,5 @@ Within days of the game's release, Shayla Wiggins [found a dead body](http://mon
 ## Pokémon Go in India
 
 In the early days of its release, even though it is not officially launched, Indians were fortunate enough to [play Pokémon Go](http://gadgets.ndtv.com/games/features/playing-pokemon-go-in-india-heres-everything-you-need-to-know-858349). Unfortunately, it is no longer playable and Indians have to wait for the official release of Pokémon Go.
-
-[//]: # https://thatsweetgift.com/gift-for-geeks-and-nerds/ is a paid link.
-
-So while you're out there on the search for Mewtwo, remember to [play responsibly](https://thatsweetgift.com/gift-for-geeks-and-nerds/).
 
 Update: Dec 14, 2016 - Pokémon Go is officially launched in India.
