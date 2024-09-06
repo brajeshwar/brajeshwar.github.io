@@ -1,6 +1,8 @@
-# Hero (英雄)
+---
+image: /static/2004/hero.webp
+---
 
-<img class="large" src="/static/2004/hero.webp" alt="Hero (2022)">
+# Hero (英雄)
 
 The desert sands of Dan Gin Shan in Dun Huang, China, has some of the most remote terrain in the world and some of the most stunning too. This was where Hero, a two thousand year old epic saga was set. During the 'Warring States' Period, China was divided into seven Kingdoms. For year they battled for supremacy while the people suffered. The king of Qin was the most ruthless in his effort to conquer the land and unity All Under Heaven. He was regarded as a common threat by other six Kingdoms. The annals of Chinese history are abounded with tales of the assassins sent to kill the great king. This is one of the legends, which gave birth to a swordsman or a Wu Xia film, [Hero](https://en.wikipedia.org/wiki/Hero_(2002_film)).
 
@@ -10,7 +12,7 @@ The film was a colorful film, music was not that intense but follow something li
 
 The fight scene between Jet Li (Nameless) and Donnie Yen (Sky) at the House of Chess was cool, jittery, wet and intricate. The water droplets, the moves, it is something any action movie fan would love to see. Well, there are the usual cable, wire tricks, still camera shot thingy. The fight was a traditional Hong Kong style fight scene. All actors did not seem to be affected by gravity at all in all the fights.
 
-The clear Lakes of Si Chuan Province, fight scene between Jet Li and Tony Leung was chilling, breath-taking, colorful, yellow, green, gold, red, silent but poetic. The surrounding environment of the Lakes itself was really spectacular and you will be mesmerized by its amazing beauty. It is also stated that the waters at these lakes remain still only between 10 a.m. and 12 noon.
+> The clear Lakes of Si Chuan Province, fight scene between Jet Li and Tony Leung was chilling, breath-taking, colorful, yellow, green, gold, red, silent but poetic. The surrounding environment of the Lakes itself was really spectacular and you will be mesmerized by its amazing beauty. It is also stated that the waters at these lakes remain still only between 10 a.m. and 12 noon.
 
 The autumn setting fight scene between Maggie and Ziyi in the forest of Inner Mongolia was ablazed with color, dance of swords and swift clean movements. The audience is treated with a sea of golden leaves, two ladies dressed in red dancing, fighting in the air. A quick flight of the two ladies in the woods reminds me of the flight fight between Yun Fat Chow and Zhang Ziyi in the bamboo woods of Crouching Tiger Hidden Dragon.
 
