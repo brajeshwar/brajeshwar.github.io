@@ -10,8 +10,6 @@ Consultants in the age of the Internet are far more effective than those from an
 
 They can build an online portfolio presence, build up credibility through regular blogging, networking, protect client data, be getting protected through a secure VPN connection, and provide coaching face-to-face or via online methods.
 
-Yes, a VPN, these days is a <a href="/2016/dd-wrt-vpn-apple-airport-routers/">much-needed</a> necessity. Here are a <a href="http://list25.com/reviews/best-vpn-services-compared/">list of some of the best VPN providers</a> for you to choose and get started.
-
 ## Avoid self-sabotage
 
 You might imagine that one risk of becoming a consultant is that you don't have enough clients or that you have irregular earnings. However, with sufficiently robust marketing, in the beginning, you will soon develop a client base which will then help your business grow through word-of-mouth messaging. You might reach a point where you have to turn work away or where you have to put people on a waiting list.
