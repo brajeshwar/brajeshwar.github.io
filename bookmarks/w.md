@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [WealthFolio](https://wealthfolio.app) is an [open-source](https://github.com/afadil/wealthfolio) Private and Secure Desktop Investment Tracking Application.
 - [Web3 is Going Just Great](https://www.web3isgoinggreat.com) is a project by [Molly White](https://www.mollywhite.net), to track some examples of how things in the blockchains/crypto/web3 technology space aren't actually going as well as its proponents might like you to believe. The timeline tracks events in cryptocurrency and blockchain-based technologies, dating back to the beginning of 2021.
 - [Whistleblower Aid](https://whistlebloweraid.org) is a non-profit dedicated to supporting and protecting whistleblowers— in the interest of the public, and in the pursuit of a robust, resilient and thriving democracy. 
 - [White Phoenix](https://getmyfileback.com) is an [open-source](https://github.com/cyberark/White-Phoenix) free ransomware recovery tool.
