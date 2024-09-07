@@ -66,7 +66,6 @@ site-nav a:hover, site-nav a:active, site-nav a.active {
 /* mode: light dark */
 mode-toggle {
 	display: block;
-
 	width: var(--logo-size);
 	height: var(--logo-size);
 }

@@ -22,6 +22,17 @@ main {
   container: main / inline-size;
 }
 
+main,
+.container-ideal {
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin-inline: auto;
+}
+
+.container-ideal {
+  max-width: var(--body-width-ideal);
+}
+
 hr {
   padding: 0;
   margin: var(--space) auto;

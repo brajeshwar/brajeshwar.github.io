@@ -21,7 +21,6 @@
 {% include css/3-modules/cards.css %}
 {% include css/3-modules/footnotes.css %}
 
-{% include css/4-layouts/base.css %}
 {% include css/4-layouts/header.css %}
 {% include css/4-layouts/footer.css %}
 {% include css/4-layouts/home.css %}
