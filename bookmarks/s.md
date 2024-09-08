@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [ShipMap](https://www.shipmap.org) shows the movement of ships around the world.
 - [staticrypt](https://robinmoisson.github.io/staticrypt/) is an [open-source](https://github.com/robinmoisson/staticrypt) tool to password protect a static HTML page, decrypted in-browser in JS with no dependency. No server logic needed.
 - [Screenity](https://screenity.io/) is an [open-source](https://github.com/alyssaxuu/screenity) screen recorder that's free, private, and friendly.
 - [Surfer](https://surfsup.ai) is an [open-source](https://github.com/CEREBRUS-MAXIMUS/Surfer-Data) digital footprint exporter, designed to centralize all your personal data from various online platforms into a single folder.
