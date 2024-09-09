@@ -18,20 +18,16 @@ It is always a `Work-in-Progress`.
 
 ## Todo
 
+- [ ] Split styles and load it inline with specific page-type separations.
 - [ ] Move to a more consistent spacing and typographic scale. Use https://utopia.fyi
 - [ ] Replace Google Search with either [PageFind](https://pagefind.app) or stay with [Algolia](https://www.algolia.com) (I’ve a premium free tier).
 - [ ] `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
 - [ ] A more cascading and common modular layout/design to reduce repetitive styles and try to stay within 25KB CSS after build.
 - [ ] Loved the idea of light-dark mode with themes on [Ryan Mulligan's website](https://ryanmulligan.dev). He is also a man of culture - his website is [open-source](https://github.com/hexagoncircle/ryan-mulligan-dev).  Should we do something like that.
 
-## Todo - pulished in-progress articles
-
-- [ ] /2009/2009-08-02-bombay
-- [ ] /2021/laaija-teenager/
-
 ## Notes
 
-- Some highly readable serif fonts
+- Some highly readable serif fonts. Let's try once I get to Cloudflare fonts.
 	- Roboto Serif, https://fonts.withgoogle.com/roboto-serif
 	- Source Serif 4
 	- Noto Serif
