@@ -34,3 +34,4 @@ It is always a `Work-in-Progress`.
 	- Lora
 	- Libre Baskerville
 	- Playfair Display
+	- [Lora Variable](https://v-fonts.com/fonts/lora)

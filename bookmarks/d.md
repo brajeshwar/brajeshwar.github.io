@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [DevHub](https://wangchujiang.com/DevHub/) ([App Store](https://apps.apple.com/app/devhub/id6476452351)) is an [open-source](https://github.com/jaywcjlove/DevHub) feature-rich offline application, meticulously crafted to support developers in their daily tasks while ensuring the utmost security of their data.
 - [Dawarich](https://dawarich.app/) is an [open-source](https://github.com/Freika/dawarich) self-hosted alternative to Google Location History. It can accept data from [OwnTracks](https://owntracks.org/booklet/guide/apps/) and [Overland](https://overland.p3k.app).
 - [Daminik](https://daminik.com/) is a simple & scalable Digital Asset Manager with a build in Content Delivery Network ([source](https://github.com/daminikhq/daminik)).
 - [DAnswer](https://www.danswer.ai) is an [open-source](https://github.com/danswer-ai/danswer), AI-powered search engine across your company's docs, apps, and people.
