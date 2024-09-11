@@ -27,7 +27,7 @@ It is always a `Work-in-Progress`.
 
 ## Notes
 
-- Some highly readable serif fonts. Let's try once I get to Cloudflare fonts.
+- Some highly readable serif fonts. Let's try once I get to Cloudflare fonts. Pick a variable font.
 	- Roboto Serif, https://fonts.withgoogle.com/roboto-serif
 	- Source Serif 4
 	- Noto Serif

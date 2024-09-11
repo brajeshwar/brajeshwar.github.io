@@ -4,7 +4,7 @@ Growing up during the TV boom of the 1980s and 90s, I loved Advertisements.[^Adv
 
 Unfortunately, the digital world has skewed intentions to such a degree that ads are now targeted, trained, and tailored to the point that if you divert your attention a few fractions elsewhere, they will recalculate, recalibrate, and retarget to get back to you to think and believe in what they intend you to.
 
-**I block Ads.**
+> I block Ads.
 
 I block ads in the browser (client) and at the DNS level. The combination of these two is effective enough for now.
 
