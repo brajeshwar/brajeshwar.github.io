@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Google Illuminate](https://illuminate.google.com/home) - Transform your content into AI-generated audio discussions.
 - [Ghostarchive](https://ghostarchive.org/) is a free-to-use archiving website.
 - [Gmailify](https://www.gmailify.com) is a complete email system bringing custom domains to Gmail accounts. Without hacks.
 - [GreenTunnel](https://github.com/SadeghHayeri/GreenTunnel) is an anti-censorship utility designed to bypass the DPI system that is put in place by various ISPs to block access to certain websites.
