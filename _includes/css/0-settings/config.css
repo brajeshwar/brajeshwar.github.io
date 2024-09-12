@@ -12,15 +12,15 @@
   --body-width-medium     : 60rem; /* objects that are large but not max */
   --body-width-full       : 1600px;
 
-  --display-small             : 480px;
-  --display-medium             : 800px;
-  --display-large             : 1024px;
-  --display-extralarge            : 1600px;
+  --display-small         : 480px;
+  --display-medium        : 800px;
+  --display-large         : 1024px;
+  --display-extralarge    : 1600px;
 
   --scale-small           : var(--augmented-fourth);
   --scale                 : var(--golden);
 
-  --space         : calc(var(--scale) * 1rem);
+  --space                 : calc(var(--scale) * 1rem);
   --space-small           : calc(var(--scale-small) * 0.8rem);
   --space-smaller         : calc(var(--scale-small) * 0.5rem);
   --space-smallest        : calc(var(--scale-small) * 0.2rem);

@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Omnivore](https://omnivore.app/) is a free and [open source](https://github.com/omnivore-app) read-it-later app (omnivore.app)
 - [Objective-See](https://objective-see.org/) has tiny but nifty tools for macOS.
 - [Obsidian](https://obsidian.md/) has a well done [documentation](https://help.obsidian.md/).
 - [OpenCat](https://www.petoi.com/pages/opencat-open-source-robot-pet-framework) is an [open source](https://github.com/PetoiCamp/OpenCat) quadruped robot pet framework for developing Boston Dynamics-style four-legged robots that are perfect for STEM, coding & robotics education, IoT robotics applications, AI-enhanced robotics application services, research, and DIY robotics kit development.
