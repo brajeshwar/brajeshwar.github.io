@@ -12,7 +12,7 @@ Of course, I don’t hate ads. It is a legitimate business model. I just don’t
 
 > The best minds of my generation are thinking about how to make people click ads. — [Jeff Hammerbacher](https://en.wikipedia.org/wiki/Jeff_Hammerbacher)
 
-These days, it is impossible to read/view the actual content of most websites—they are filled with the landmines of ads. There is no way to have a normal decent web experience without an AdBlocker or a few of them.
+These days, it is impossible to read/view the actual content of most websites—they are filled with the landmines of ads. There is no way to have a normal decent web experience without an AdBlocker or a few of them. Someone rightly said, “Content” is an advertising term for whatever fills the space between all the ads.
 
 Even the USA’s agency, [FBI suggest using Adblockers](https://www.ic3.gov/Media/Y2022/PSA221221). The reasoning, in this case, is to avoid falling prey to cyber criminals impersonating brands using search engine advertisement services to defraud users. ([archive](https://archive.is/3Mioj))
 
