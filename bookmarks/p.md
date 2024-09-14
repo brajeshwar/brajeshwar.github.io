@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Protomaps](https://protomaps.com) is an [open source](https://github.com/protomaps) map of the world, deployable as a single static file on cloud storage.
 - [Protector](https://www.protector.so) is a security detail for hire - like Uber for Security.
 - [Permify](https://permify.co) is an [open-source](https://github.com/Permify/permify) authorization as a service inspired by Google Zanzibar, designed to build and manage fine-grained and scalable authorization systems for any application.
 - [Photorealistic Video Generation](https://walt-video-diffusion.github.io) with Diffusion Models.
