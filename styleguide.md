@@ -14,7 +14,7 @@ title: Styleguide
 ## Images
 
 - Books: `360px x 480px` (styled as `240px x 320px`)
-- Film: `225px x 300px`
+- Film:  `300px x 400px` (styled as `225px x 300px`)
 - Gallery has a container, `class="gallery" markdown="1"`, then is a markdown list with images, optionally with a link.
 
 ## CSS Styles

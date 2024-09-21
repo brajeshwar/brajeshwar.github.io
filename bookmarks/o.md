@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Open Scanner] scans your receipts, notes, textbooks, and anything else you point your iPhone at. ([source](https://github.com/pencilresearch/OpenScanner))
 - [Omnivore](https://omnivore.app/) is a free and [open source](https://github.com/omnivore-app) read-it-later app (omnivore.app)
 - [Objective-See](https://objective-see.org/) has tiny but nifty tools for macOS.
 - [Obsidian](https://obsidian.md/) has a well done [documentation](https://help.obsidian.md/).
