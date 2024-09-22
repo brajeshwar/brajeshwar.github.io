@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5 , h6 {
 	font-weight: 400;
 	line-height: var(--scale-small);
 	text-wrap: balance; /* Others */
-	text-wrap: pretty; /* Chrome as of SEP-2024? */
+	text-wrap: pretty; /* Chrome as of SEP-2024 */
 }
 
 a, a:visited {
@@ -21,11 +21,11 @@ blockquote {
 	margin: var(--space-m) 0;
 	padding: var(--space-3xs) var(--space-m);
 
-	font-family: var(--font-family-serif);
+	font-family: var(--font-family-alt);
 	font-size: var(--step-0);
 
 	background: var(--bg-color-low);
-	border-left: var(--border-size-large) var(--border-style) var(--border-color-high);
+	border-left: var(--border-size-large) var(--border-style) var(--border-color);
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }
@@ -38,13 +38,17 @@ pre {
 }
 
 /* normal code that is not attached to a code highlighter */
-mark, code.language-plaintext {
-	padding: 2px var(--space-3xs);
+mark,
+.mark,
+code.language-plaintext {
+	padding: 2px var(--space-2xs);
+	
 	font-family: var(--font-family-monospace);
-	font-size: smaller;
+	font-size: var(--step--1);
 	color: var(--text-color-light);
+	
 	background-color: var(--bg-color);
-	border-radius: var(--border-radius-largest);
+	border-radius: var(--border-radius);
 	border-bottom: var(--border-size) var(--border-style) var(--border-color);
 
 	/* fix edges of wrapped inline elements	*/
@@ -60,7 +64,7 @@ aside, .aside {
 	margin-left: -10vw;
 	padding: var(--space-s);
 
-	font-family: var(--font-family-serif);
+	font-family: var(--font-family-alt);
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
 }

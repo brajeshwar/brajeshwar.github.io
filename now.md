@@ -30,6 +30,6 @@ I work remotely out of Bangalore, India.
 
 {% include_relative now/2001.md %}
 
-{:.label}
+{:.mark}
 Started in 2024.
 I’ve back-dated some events that are interesting to me.

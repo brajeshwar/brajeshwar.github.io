@@ -25,4 +25,3 @@ Custom, strange, and `why I did that` ones. I need to stop doing custom styles.
 - `{:.aside .right}` flushes right
 - `{:.mark}` shares the same style as HTML <mark>MARK</mark> and is a highlighted text/phrase block.
 - images can be `.small`, `.medium`, `.large`, or `.full`. Besides the default `left` alignment, they can be flushed `.right`.
-- `.text-center` aligns a text to the center.
