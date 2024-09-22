@@ -47,9 +47,9 @@
   --border-size           : 1px;
   --border-size-small     : 3px;
   --border-size-medium    : 5px;
-  --border-size-large     : 10px;
-  --border-size-larger    : 20px;
-  --border-size-largest   : 142px;
+  --border-size-large     : 8px;
+  --border-size-larger    : 12px;
+  --border-size-largest   : 20px;
 
   --logo-size             : 42px;
   --icon-size             : 30px;
