@@ -26,7 +26,7 @@ V follows his exploits for the year until the night when he has vowed to strike 
 
 <iframe width="100%" src="https://www.youtube-nocookie.com/embed/yhVERjN6V_k?si=RIaqgTOqfrPKX32q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-{:.label}
+{:.mark}
 A Kinetic Typography Soliloquy[^Soliloquy] from the movie V for Vendetta.
 
 [^Soliloquy]: A [soliloquy](https://en.wikipedia.org/wiki/Soliloquy) is a monologue addressed to oneself, thoughts spoken out loud without addressing another character.

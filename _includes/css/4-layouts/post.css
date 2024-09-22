@@ -47,7 +47,7 @@ photo-cover__caption {
 .post {}
 
 .post h1 {
-	font-family: var(--font-family-serif);
+	font-family: var(--font-family-alt);
 	text-align: center;
 	margin: 0 auto var(--space-s);
 	padding: 0;

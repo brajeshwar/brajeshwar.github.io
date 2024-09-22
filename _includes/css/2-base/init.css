@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family);
   font-feature-settings: 'liga' 1, 'calt' 1;
   font-size: var(--font-size-base);
   line-height: var(--scale);
@@ -60,6 +60,25 @@ kbd {
 :where(audio) {
   height: auto;
   width: 100%;
+}
+
+/* fix youtube and other video embeds */
+/* manual height based on the ideal width against the video ratio, mostly youtube which is 315/560=0.5625 */
+iframe, object, embed {
+  height: calc(0.5625 * var(--body-width-ideal));
+  border-radius: var(--border-radius);
+}
+
+.visually-hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
 }
 
 /* Reduced Motion; Remove
