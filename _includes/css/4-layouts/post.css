@@ -1,5 +1,3 @@
-.page-post {}
-
 photo-cover {
 	display: block;
 
@@ -40,17 +38,14 @@ photo-cover__caption {
 	text-align: center;
 }
 
-.page-post figure, .page figure {
-	font-family: var(--font-family-sans);
-}
-
 .post {}
 
-.post h1 {
+.post h1, .post h2, .post h3, .post h5, .post h5, .post h6  {
 	font-family: var(--font-family-alt);
+}
+
+.post h1 {
 	text-align: center;
-	margin: 0 auto var(--space-s);
-	padding: 0;
 }
 
 .post time {

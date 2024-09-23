@@ -10,9 +10,7 @@ Even though there are few things in this world that are more satisfying, challen
 
 When a successful entrepreneur is highlighted, it is usually their success and money that is at the forefront of the story. This leads readers to falsely believing that these tech billionaires and super successful entrepreneurs are merely "lucky". 
 
-What they don't highlight is the struggles and years of hard work and labor. Startup website <a href="http://fundersandfounders.com/">Funders and Founders</a> highlights the hardships of some of the world's most successful billionaire entrepreneurs. 
-
-One infographic on the site, <a href="http://fundersandfounders.com/too-late-to-start-life-crisis/">"Too Late to Start?"</a>, highlights the fact that most of these successful entrepreneurs started their journeys between the ages of 35-39.
+What they don't highlight is the struggles and years of hard work and labor. In fact, most of these successful entrepreneurs started their journeys between the ages of 35-39.
 
 ## There are a million failures before a single win
 

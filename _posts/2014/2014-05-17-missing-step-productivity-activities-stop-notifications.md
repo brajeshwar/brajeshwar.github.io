@@ -32,4 +32,6 @@ Go ahead and disable all those notifications - stop all audio notifications, don
 
 Once you can live with no notifications, you'll find that you're no longer disturbed out of your zone. You'll also realize why all those productivity tips and tricks didn't work before. With no notifications, all the experts' advice, productivity to-do and activities will begin to work. Give it a try.
 
-<mark>Stop the Notifications!</mark>
+> Stop the Notifications!
+
+Update: I’ve an updated related article with a [focus on phones](/2024/phone/).
