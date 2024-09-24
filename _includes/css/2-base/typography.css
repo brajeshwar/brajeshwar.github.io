@@ -44,7 +44,6 @@ mark,
 code.language-plaintext {
 	padding: 2px var(--space-2xs);
 	
-	font-family: var(--font-family-monospace);
 	font-size: var(--step--1);
 	color: var(--text-color-light);
 	

@@ -17,7 +17,7 @@ footer.site-footer nav a {
 footer.site-footer nav a.active {
 	cursor: default;
 	font-weight: bold;
-	color: var(--color-full);
+	color: var(--text-color-link-active);
 	text-decoration-thickness: 0.1rem;
-	text-decoration-color: var(--color-full);
+	text-decoration-color: var(--text-color-link-active);
 }

@@ -48,7 +48,7 @@ kbd {
   border-radius: var(--border-radius-small);
   color: var(--text-color-low);
   padding: var(--space-3xs) var(--space-2xs);
-  font-size: smaller;
+  font-size: var(--step--1);
 }
 
 /* Restrict sizing to the page width. */

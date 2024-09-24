@@ -1,10 +1,9 @@
-.pages {}
-
 .pages__title {
 	font-family: var(--font-family-alt);
 	font-size: var(--step-2);
 	text-align: center;
 }
+
 
 /* FILM */
 .page-film .item__cards li,
@@ -53,6 +52,7 @@
 	display: block;
 }
 
+
 /* BOOKMARKS */
 bookmarks-header {
 	display: block;
@@ -84,4 +84,41 @@ bookmarks-header nav a.active {
 	color: var(--text-color-lower);
 	background: var(--bg-color-higher);
 	border-color: transparent;
+}
+
+
+/* NOW */
+now-header {
+	display: block;
+
+	margin-bottom: var(--space-m);
+	padding: var(--space-2xs) var(--space-l);
+	background: var(--bg-color-low);
+	border-radius: var(--border-radius);
+
+	font-family: var(--font-family-alt);
+	font-size: var(--step-1);
+}
+
+.page-now h1 {
+	margin-inline: var(--space-s);
+	font-family: var(--font-family-alt);
+	font-size: var(--step-1);
+	border-bottom: var(--border-size) var(--border-style) var(--border-color);
+}
+
+.page-now ul {
+	margin: 0;
+	padding-inline: var(--space-s);
+}
+
+.page-now ul li {
+	padding: var(--space-3xs) 0;
+}
+
+.page-now code {
+	font-size: smaller;
+	background-color: var(--bg-color-low);
+	border: 0 none;
+	border-radius: var(--border-radius-large);
 }
