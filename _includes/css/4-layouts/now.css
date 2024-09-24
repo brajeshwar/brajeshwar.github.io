@@ -1,34 +1,20 @@
-.now-now {
-	margin-bottom: var(--space-m);
-	padding: var(--space-s) var(--space-m);
-	background: var(--bg-color);
-	border-radius: var(--border-radius);
-
-	font-family: var(--font-family-alt);
-	font-size: var(--step-0);
-}
-
 .page-now {}
 
 .page-now h1 {
 	margin: 0;
 	padding: 0 var(--space-3xs);
 	font-size: var(--step-0);
+	border-left: var(--border-size) var(--border-style) var(--border-color);
 }
 
 .page-now ul {
-	list-style: none;
-	margin: 0 0 var(--space-m);
-	padding: 0;
 }
 
 .page-now ul li {
-	margin: var(--space-3xs) 0;
-	padding: 0 var(--space-3xs);
 }
 
-.page-now ul li ul {
-	margin: var(--space-3xs) var(--space-xs);
+.page-now ul {
+	margin: var(--space-s) 0;
 	padding: 0 var(--space-xs);
 	border-left: var(--border-size) var(--border-style) var(--border-color);
 }
@@ -39,22 +25,5 @@
 }
 
 .page-now ul li ul li:last-child {
-	border: 0 none;
-}
-
-/* list if it happens inside the styled lists - whatever that is */
-.page-now ul li ul li ul:has(li) {
-	margin: 0 !important;
-	padding: 0 var(--space-xs) !important;
-	background: none !important;
-	border: 0 none !important;
-	color: inherit !important;
-	font-size: inherit !important;
-}
-.page-now ul li ul li ul li:nth-child(n+1) {
-	list-style: disc;
-	margin: 0 var(--space-xs);
-	padding: var(--space-3xs);
-	font-size: inherit !important;
 	border: 0 none;
 }
