@@ -15,8 +15,6 @@ Finally, launch the business by building a website. Theoretically, you can launc
 
 If you're hesitating about building a website because you don't know how, you probably have some misconceptions about what it takes to have a great looking website. Perhaps, you think it's expensive to hire someone, or that it will take too long. The good news is that you can start one cheaply and quickly.
 
-<a href="https://www.ipage.com/web-hosting">iPage</a> is one such good hosting provider that will get you with a free drag-and-drop Website Builder and hundreds of mobile-friendly websites. A good deal with them is helping me with my simple and quick webpages requirements.
-
 If all this sounds like geek-speak to you, all it means is that if you know how to use a mouse, you can drag-and-drop elements and graphics into a premade outline to build your website on a hosting site that will host your virtual business for you. This website will not only look good on a computer, like a desktop or laptop, but it will also automatically resize to look good when viewed from a mobile-device like a smartphone or tablet.
 
 ## Recommended Website Pages
@@ -42,8 +40,6 @@ You might be wondering how you're going to fill up all the pages if you have lit
 As a freelancer you could be making a great income doing work that you love because you have a natural talent for it. Think about it, you'll be doing something you love all day and get paid for it.
 
 Incidentally, you don't have to feel guilty for not fitting into the corporate environment. It's not a sign that you lack a sense of personal responsibility but that you have an <a href="/2016/are-you-a-freelancer-an-entrepreneur-or-a-salesperson/">entrepreneurial</a> spirit. In fact, you belong to the majority of workers around the world.
-
-> According to a <a href="http://www.gallup.com/services/190118/engaged-workplace.aspx">2016 Gallup survey</a>, "A staggering 87% of employees worldwide are not engaged. Many companies are experiencing a crisis of engagement and aren't aware of it."
 
 Unlike the majority of people, however, you've decided to do something about it—instead of sticking it out to the bitter end or shuffling from one job to another that's equally as dissatisfying, you've decided to make an independent living for yourself.
 

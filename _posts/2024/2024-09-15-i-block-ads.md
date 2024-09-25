@@ -4,13 +4,13 @@ Growing up during the TV boom of the 1980s and 90s, I loved Advertisements.[^Adv
 
 Unfortunately, the digital world has skewed intentions to such a degree that ads are now targeted, trained, and tailored to the point that if you divert your attention a few fractions elsewhere, they will recalculate, recalibrate, and retarget to get back to you to think and believe in what they intend you to.
 
-> I block Ads.
+> The best minds of my generation are thinking about how to make people click ads. — [Jeff Hammerbacher](https://en.wikipedia.org/wiki/Jeff_Hammerbacher)
 
 I block ads in the browser (client) and at the DNS level. The combination of these two is effective enough for now.
 
 Of course, I don’t hate ads. It is a legitimate business model. I just don’t like the over-done ads that is everywhere, and in everything. For reference, Google, in 2022, generated over $224 billion from ads.
 
-> The best minds of my generation are thinking about how to make people click ads. — [Jeff Hammerbacher](https://en.wikipedia.org/wiki/Jeff_Hammerbacher)
+<img class="full" src="/static/2024/ads-ads-ads.webp" alt="Ads Ads Ads" loading="lazy">
 
 These days, it is impossible to read/view the actual content of most websites—they are filled with the landmines of ads. There is no way to have a normal decent web experience without an AdBlocker or a few of them. Someone rightly said, “Content” is an advertising term for whatever fills the space between all the ads.
 

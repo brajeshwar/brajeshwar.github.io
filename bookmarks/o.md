@@ -2,7 +2,8 @@
 
 ## 2024
 
-- [Open Scanner] scans your receipts, notes, textbooks, and anything else you point your iPhone at. ([source](https://github.com/pencilresearch/OpenScanner))
+- [OpenFreeMap](https://openfreemap.org) lets you display custom maps on your website and apps for free. ([Source](https://github.com/hyperknot/openfreemap) https://github.com/hyperknot/openfreemap)
+- [Open Scanner](https://openscanner.app) scans your receipts, notes, textbooks, and anything else you point your iPhone at. ([source](https://github.com/pencilresearch/OpenScanner))
 - [Omnivore](https://omnivore.app/) is a free and [open source](https://github.com/omnivore-app) read-it-later app (omnivore.app)
 - [Objective-See](https://objective-see.org/) has tiny but nifty tools for macOS.
 - [Obsidian](https://obsidian.md/) has a well done [documentation](https://help.obsidian.md/).
@@ -21,4 +22,3 @@
 
 - [OSGameClones](https://osgameclones.com) tries to gather open-source or source-available remakes of great old games.
 - OpenAI’s [Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) lists some good strategies for getting better results.
-

@@ -1,4 +1,4 @@
-# How product designers use Big Data Science to make durable products?
+# How product designers use Big Data Science to make durable products
 
 Two years ago, a self-driving Car was launched by Google. However, it was only a few minutes later that it blew brains of the people by stopping in the middle of the street when it confronted a woman seated in a wheelchair while she was chasing a running duck with her broomstick. The car took a halt till the road became clear and then started making an advanced contribution to the worldwide traffic safety.
 
