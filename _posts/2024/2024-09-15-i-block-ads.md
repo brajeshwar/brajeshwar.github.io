@@ -10,7 +10,7 @@ For now, I fixed it by turning the Private Relay `OFF` while waiting for Adguard
 
 In that short window of a few hours, I realized that the Internet is an unforgiving place to browse without an AdBlocker. As I was on my usual chore of collecting and sharing `interesting`, `weird`, and `strange` finds for [Hacker News](/2023/hacker-news/), I was stunned to see how unusable the browsing experience had become.
 
-To all the friends, readers, and visitors of Hacker News, I’d like to extend my sincere apologies. I realize that the majority of the visitors there would likely be using some sort of Ad Blocking mechanism, and I’m a tad relieved by that thought. For everyone else, please find a solution that suits your needs.
+To all the friends, readers, and visitors of Hacker News, I’d like to extend my sincere apologies. I do realize that the majority of the visitors there would likely be using some sort of Ad Blocking mechanism, and I’m a tad relieved by that thought. For everyone else, please find a solution that suits your needs.
 
 {:.aside .right}
 For instance, my wife gets cranky without ads. Some time back, she thought the Internet was broken—“As soon as I enter our home, none of the Ads show up. I had to go outside on Mobile data or turn off Wi-Fi at home to see my ads.” She is now on a separate VLAN[^VLAN] with all her fully-loaded Internet — away from our home network. She is prohibited from using her devices to interact with many devices inside the network. <kbd>;-)</kbd>
