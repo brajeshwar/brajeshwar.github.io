@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Screenpipe](https://screenpi.pe) records your screens and mics 24/7 safely on your computer, and connects it to AI, creating magic from your data. ([Source](https://github.com/mediar-ai/screenpipe))
 - [ShipMap](https://www.shipmap.org) shows the movement of ships around the world.
 - [staticrypt](https://robinmoisson.github.io/staticrypt/) is an [open-source](https://github.com/robinmoisson/staticrypt) tool to password protect a static HTML page, decrypted in-browser in JS with no dependency. No server logic needed.
 - [Screenity](https://screenity.io/) is an [open-source](https://github.com/alyssaxuu/screenity) screen recorder that's free, private, and friendly.
