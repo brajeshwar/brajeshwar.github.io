@@ -6,7 +6,7 @@ They take no equity, ownership, or future right to invest. You get perks and an 
 
 The awesome people at [On Deck](https://beondeck.com/r/brajeshwar) back the Merge Grant initiative.
 
-> Go ahead, [apply for a microgrant](https://odteam.notion.site/Merge-Grant-7eadfac121ae45328c80cd3a733fb2ab).
+> › [Apply for a Grant](https://odteam.notion.site/Merge-Grant-7eadfac121ae45328c80cd3a733fb2ab)
 
 ## Eligibility
 
