@@ -1,17 +1,17 @@
-search__provider {
+search-provider {
   display: block;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color-lower);
 }
 
-search__provider * {
+search-provider * {
   margin: 0;
   padding: 0;
   border: 0 none;
 }
 
-search__provider table, search__provider table tr,
-search__provider table:hover, search__provider table tr:hover {
+search-provider table, search-provider table tr,
+search-provider table:hover, search-provider table tr:hover {
   background: 0 none;
   border: 0 none;
 }

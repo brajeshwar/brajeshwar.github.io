@@ -28,7 +28,7 @@ page-archives table caption {
 	margin: 0;
 	padding: 0 var(--space-2xs);
 	font-size: var(--step-1);
-	font-weight: 200;
+	font-weight: var(--font-weight-light);
 	background: var(--bg-color);
 	border-bottom: 1px solid var(--border-color);
 }

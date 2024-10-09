@@ -10,7 +10,7 @@
   --font-weight-bold      : 600;
   --font-weight-bolder    : 800;
   
-  --font-size-base        : 18px;
+  --font-size             : 18px;
 
   --body-width            : 96%;
   --body-width-ideal      : 46rem; /* ideal reading width */

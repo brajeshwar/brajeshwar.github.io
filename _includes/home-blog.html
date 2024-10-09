@@ -1,7 +1,10 @@
 <home-posts>
   <p>
     I’ve been writing since 2001.
-    I write about technology in general, focusing on design, productivity, and startups.  
+    I write about technology in general, focusing on design, productivity, and startups.
+    There are over
+    {{ site.posts | size }}
+    posts in the <a href="/archives/">archives</a>.
   </p>
   
   <posts-recent>
@@ -34,6 +37,6 @@
   {% endif %}
   
   <p class="mark">
-    The <a href="/archives/">ARCHIVES</a> has all articles.
+    The <a href="/archives/">ARCHIVES</a> has all {{ site.posts | size }} posts.
   </p>
 </home-posts>
