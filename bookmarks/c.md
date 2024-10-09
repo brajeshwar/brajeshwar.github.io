@@ -7,7 +7,7 @@
 - [Coolify](https://coolify.io) is an [open-source](https://github.com/coollabsio/coolify) & self-hostable Heroku / Netlify / Vercel alternative.
 - [Can’t send email more than 500 miles](https://web.mit.edu/jemorris/humor/500-miles) ([archive](https://archive.ph/T2cFq)) (the characters in the story are participating at HackerNews - [TreyHarris](https://news.ycombinator.com/user?id=TreyHarris) and [thyrsus](https://news.ycombinator.com/user?id=thyrsus))
 - [Cap](https://cap.so) is an [open source](https://github.com/cap-so/cap) and privacy-focused alternative to Loom. Lightweight, powerful, and stunning. Record and share in seconds.
-- [Cap](https://cap.so) is an [Open Source](https://github.com/cap-so/cap) Loom alternative.
+- [Cap](https://cap.so) is an [Open Source](https://github.com/cap-so/cap) Loom alternative. Beautiful, shareable screen recordings.
 - [Cashless sucks](https://aeon.co/essays/going-cashless-is-a-bad-idea-but-its-not-a-conspiracy) ([archive](https://archive.ph/JyP46)) It’s not in the interests of the ordinary person but it’s not a conspiracy either. A cashless society is a system run amok.
 - [Chamath Palihapitiya](https://en.wikipedia.org/wiki/Chamath_Palihapitiya) did a deep dive into the [Global Energy Transition and Inflation Reduction Act](https://chamath.substack.com/p/the-global-energy-transition) ([archive](https://archive.ph/YNXJR))
 - [ClimateTriage](https://climatetriage.com/) - Discover a meaningful way to contribute to open source projects focused on climate technology and sustainability.

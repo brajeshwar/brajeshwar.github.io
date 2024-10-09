@@ -1,5 +1,4 @@
 .pages__title {
-	font-family: var(--font-family-alt);
 	font-size: var(--step-2);
 	text-align: center;
 }
@@ -96,14 +95,14 @@ now-header {
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
 
-	font-family: var(--font-family-alt);
 	font-size: var(--step-1);
+	font-weight: var(--font-weight-light);
 }
 
 .page-now h1 {
 	margin-inline: var(--space-s);
-	font-family: var(--font-family-alt);
 	font-size: var(--step-1);
+	font-weight: var(--font-weight-lighter);
 	border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
@@ -114,6 +113,10 @@ now-header {
 
 .page-now ul li {
 	padding: var(--space-3xs) 0;
+}
+
+.page-now ul li::marker {
+  color: var(--border-color);
 }
 
 .page-now code {

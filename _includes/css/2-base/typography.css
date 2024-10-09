@@ -1,5 +1,5 @@
-h1, h2, h3, h4, h5 , h6 {
-	font-weight: 400;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
 	text-wrap: balance; /* Others */
 	text-wrap: pretty; /* Chrome as of SEP-2024 */
@@ -22,8 +22,9 @@ blockquote {
 	margin-left: calc(-1 * var(--border-size-large));
 	padding: var(--space-3xs) var(--space-m);
 
-	font-family: var(--font-family-alt);
-	font-size: var(--step-1);
+	font-size: var(--step-2);
+	font-weight: var(--font-weight-light);
+	line-height: var(--scale-small);
 
 	color: var(--text-color-higher);
 
@@ -66,8 +67,10 @@ aside, .aside {
 	margin-left: -10vw;
 	padding: var(--space-s) var(--space-m);
 
-	font-family: var(--font-family-alt);
-	font-size: var(--step-0);
+	font-size: var(--step-1);
+	font-weight: var(--font-weight-light);
+	line-height: var(--scale-small);
+
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
 }

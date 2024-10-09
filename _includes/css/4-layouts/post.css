@@ -41,7 +41,7 @@ photo-cover__caption {
 .post {}
 
 .post h1, .post h2, .post h3, .post h5, .post h5, .post h6  {
-	font-family: var(--font-family-alt);
+	
 }
 
 .post h1 {
