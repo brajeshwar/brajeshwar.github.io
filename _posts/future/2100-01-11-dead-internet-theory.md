@@ -6,3 +6,4 @@ I wasn’t very concerned with the Dead Internet Theory[^deadInternettheory], un
 
 Interesting Read
 https://darkfutura.substack.com/p/dead-internet
+https://old.reddit.com/r/ChatGPT/comments/1fye6tb/the_human_internet_is_dying_ai_images_taking_over/
