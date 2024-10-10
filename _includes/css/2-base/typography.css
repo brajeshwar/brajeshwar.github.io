@@ -18,16 +18,15 @@ a:hover, a:active {
 }
 
 blockquote {
-	margin: var(--space-m) 0;
+	margin: var(--space-s) 0;
 	margin-left: calc(-1 * var(--border-size-large));
 	padding: var(--space-3xs) var(--space-m);
 
 	font-size: var(--step-2);
-	font-weight: var(--font-weight-light);
+	font-weight: var(--font-weight-lighter);
 	line-height: var(--scale-small);
-
+	
 	color: var(--text-color-higher);
-
 	background: var(--bg-color-low);
 	border-left: var(--border-size-large) var(--border-style) var(--border-color);
 	border-top-right-radius: var(--border-radius);
