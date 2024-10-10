@@ -2,7 +2,7 @@
 
 ## 2024
 
-- [Caesium](https://saerasoft.com/caesium) is a free [open-source](https://github.com/Lymphatus/caesium-image-compressor) software developed for simplicity and effectiveness.
+- [Caesium](https://saerasoft.com/caesium) is a free [open-source](https://github.com/Lymphatus/caesium-image-compressor) tool to compress pictures up to 90% without visible quality loss.
 - Clipshare is an incredibly simple, [open-source](https://github.com/goshops-com/clipshare) alternative to Loom that only requires S3.
 - [Coolify](https://coolify.io) is an [open-source](https://github.com/coollabsio/coolify) & self-hostable Heroku / Netlify / Vercel alternative.
 - [Can’t send email more than 500 miles](https://web.mit.edu/jemorris/humor/500-miles) ([archive](https://archive.ph/T2cFq)) (the characters in the story are participating at HackerNews - [TreyHarris](https://news.ycombinator.com/user?id=TreyHarris) and [thyrsus](https://news.ycombinator.com/user?id=thyrsus))
