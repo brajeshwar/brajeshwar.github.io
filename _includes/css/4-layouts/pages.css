@@ -87,7 +87,7 @@ bookmarks-header nav a.active {
 
 
 /* NOW */
-now-header {
+.now-now {
 	display: block;
 
 	margin-bottom: var(--space-m);
@@ -97,12 +97,13 @@ now-header {
 
 	font-size: var(--step-1);
 	font-weight: var(--font-weight-light);
+	line-height: var(--scale-small);
 }
 
 .page-now h1 {
 	margin-inline: var(--space-s);
 	font-size: var(--step-1);
-	font-weight: var(--font-weight-lighter);
+	font-weight: var(--font-weight-light);
 	border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
