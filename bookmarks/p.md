@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Publii](https://getpublii.com) is an [open-source](https://github.com/GetPublii/Publii) Static Site Generator App.
 - The A-Z of [Product Psychology](https://delightyourusers.com/psychology) Cognitive Biases and Principles you can use to create products people love.
 - [Protomaps](https://protomaps.com) is an [open source](https://github.com/protomaps) map of the world, deployable as a single static file on cloud storage.
 - [Protector](https://www.protector.so) is a security detail for hire - like Uber for Security.
