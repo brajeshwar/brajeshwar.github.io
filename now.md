@@ -4,14 +4,13 @@ title: Now
 style: page-now
 ---
 
-<now-header>
-	<p>
-		I started <a href="https://valinor.earth">Valinor Earth</a> to help businesses fight climate change. After a few trials, pivots, and feedback, we decided to leverage satellite data to help companies with their efforts on climate projects with project financing, monitoring, reporting, and verification.
-	</p>
-	<p>
-		I work remotely out of Bangalore, India.
-	</p>
-</now-header>
+<div class="now-now" markdown="1">
+
+I started <a href="https://valinor.earth">Valinor Earth</a> to help businesses fight climate change. After a few trials, pivots, and feedback, we decided to leverage satellite data to help companies with their efforts on climate projects with project financing, monitoring, reporting, and verification.
+
+I work remotely out of Bangalore, India.
+
+</div>
 
 {% include_relative now/2024.md %}
 

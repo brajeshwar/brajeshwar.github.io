@@ -23,7 +23,7 @@ blockquote {
 	padding: var(--space-m);
 
 	font-size: var(--step-1);
-	font-weight: var(--font-weight-lighter);
+	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
 	
 	color: var(--text-color-higher);
