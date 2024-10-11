@@ -8,7 +8,7 @@ After 20 years, as of Jun 2021, I have done away with comments and discarded a w
 
 The Markdown files don’t even have front matter[^frontmatter] and are as human-readable as possible and will likely be readable on any system now and ever. I have decided to stay as plain-text as possible while using Markdown syntax for a minimal visual guide to differentiate content variations such as `headings`, `code`, and sometimes to add aesthetically relevant media — audio, video, and images.
 
-Plain-Text makes life much simpler. I can write in tools that focus on writing without worrying about Static Site Generators like [Jekyll](https://jekyllrb.com), [Hugo](https://gohugo.io), [11ty](https://www.11ty.dev) or any other Jamstack[^Jamstack] to render the website.
+[Plain-Text](/2022/plain-text/) makes life much simpler. I can write in tools that focus on writing without worrying about Static Site Generators like [Jekyll](https://jekyllrb.com), [Hugo](https://gohugo.io), [11ty](https://www.11ty.dev) or any other Jamstack[^Jamstack] to render the website.
 
 I can write quickly and easily write with my default Editor, [Sublime Text](https://www.sublimetext.com) or use other fantastic Plain-Text/Markdown writing tools at my disposal such as [iA Writer](https://ia.net/writer), [Typora](https://typora.io), [Panda](https://bear.app/panda/), or [Obsidian](https://obsidian.md).
 
@@ -24,7 +24,7 @@ Here are some well-written articles that will help you setup Sublime Text as the
 
 ## WordPress to Jekyll
 
-_Q. Why did I chose Jekyll?_
+### Q. Why did I chose Jekyll?
 
 It is one of the simplest and the first few originals of Static Site Generators. Jekyll is established, stable, and has a huge community. If you have a problem, someone somewhere had very likely solved it.
 
@@ -32,7 +32,7 @@ It is the default tool at [Github Pages](https://pages.github.com) to generate s
 
 <iframe width="100%" src="https://www.youtube.com/embed/xlwn1hFa5QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-_Q. How did I do it?_
+### Q. How did I do it?
 
 Your mileage may vary, and I did stumble on few hiccups. However, it was easy, and people have solved many other complex problems when converting WordPress to Jekyll. In my case, I was not worried about neither the design nor the comments. 
 
@@ -57,7 +57,7 @@ Here are some references that I read while importing WordPress content to Jekyll
 - [How To: WordPress to Jekyll](https://paulstamatiou.com/how-to-wordpress-to-jekyll/)
 - [From Wordpress To Jekyll](https://www.bawbgale.com/from-wordpress-to-jekyll/)
 
-_Q. What about Static Assets from WordPress's wp-content?_
+### Q. What about Static Assets from WordPress's wp-content?
 
 I had ported the static parts to AWS S3 long back, and that made life easier. It made it easy for me to switch and try out hosting providers. I had to worry about the WordPress Posts part; all the static contents were already on AWS S3 with Cloudfront. The other reason was, once when my website was rather popular, I spent a lot on hosting and bandwidth were capped. With AWS, I spent less than double-digit dollars a month even when I was serving over 100GBs month bandwidth with the static sites (including open source downloads).
 
