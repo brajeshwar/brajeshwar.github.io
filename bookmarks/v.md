@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Voiczy](https://www.voiczy.com) transforms language learning into an exciting adventure. Watch your child become a confident multilingual speaker, opening doors to a world of opportunities.
 - [VHS](https://github.com/charmbracelet/vhs) is an open-source CLI home video recorder.
 - [ViroReact](https://github.com/NativeVision/viro) is a library for developers to rapidly build augmented reality (AR) and virtual reality (VR) experiences. 
 - [Voxos](https://gitlab.com/literally-useful/voxos) is an open-source desktop voice assistant that aims to put Clippy to shame while supporting new desktop workflows powered by LLMs.

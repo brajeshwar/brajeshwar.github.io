@@ -40,12 +40,10 @@ photo-cover__caption {
 
 .post {}
 
-.post h1, .post h2, .post h3, .post h5, .post h5, .post h6  {
-	
-}
-
 .post h1 {
+	margin: 0;
 	text-align: center;
+	line-height: var(--scale-small);
 }
 
 .post time {
