@@ -1,6 +1,6 @@
 # Non-Tech Startups in a Tech-Obsessed World
 
-The Startup world is covered in Silicon Valley-esque buzzwords — [AI](https://en.wikipedia.org/wiki/Artificial_intelligence), [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning), [e/acc](/2023/e-acc/), _et al_, and everything else in between.
+The Startup world is covered in Silicon Valley-esque buzzwords — [AI](https://en.wikipedia.org/wiki/Artificial_intelligence), [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning), [Deep Learning]()https://en.wikipedia.org/wiki/Deep_learning, [Quantum Computing](https://en.wikipedia.org/wiki/Quantum_computing), [Edge Computing](https://en.wikipedia.org/wiki/Edge_computing), Disruptive Innovation, Scalability, Unicorn, [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service), Pivot, [API](https://en.wikipedia.org/wiki/API), Decentralized,  [e/acc](/2023/e-acc/), _et al_, and everything else in between.
 
 While we live in a tech-obsessed world, non-tech businesses still have ample opportunity to thrive. In fact, some of these startups hold the key to addressing some of the real and tangible challenges people face daily. Whether it’s reinventing traditional industries, focusing on hands-on services, or creating innovative products in fields like food, fashion, and wellness, non-tech startups deserve more attention and respect.
 
