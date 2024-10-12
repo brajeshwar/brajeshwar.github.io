@@ -18,7 +18,7 @@ After job-hunting for a month, I landed my first job as a Computer Graphic Desig
 ## Internet
 
 {:.aside .right}
-**brajeshwar.com** was [booked on a dare](/about/brajeshwar.com/) and I’m happy with that decision.
+`brajeshwar.com` was [booked on a dare](/about/brajeshwar.com/) and I’m happy with that decision.
 
 It was the Internet boom in India, and the proliferation of the Internet was prominent. I wanted to be part of that world. Within six months through my first job, I shifted my focus to the Online World - started reading lots of books, online resources, and there was no turning back. By mid-2000, I had shifted my focus to the Internet.
 
