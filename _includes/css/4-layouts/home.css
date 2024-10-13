@@ -155,8 +155,11 @@ home-support li {
   color: var(--text-color-low);
 }
 
+.connect ul li {
+}
+
 .connect__title {
-  font-weight: 200;
+  font-weight: var(--font-weight-light);
   font-size: var(--step-1);
   text-transform: lowercase;
   margin: 0 0 var(--space);

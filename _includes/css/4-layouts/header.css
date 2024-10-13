@@ -1,10 +1,8 @@
 header {
 	margin: var(--space-s) auto var(--space-l) auto;
 	text-align: center;
-}
-
-site-header {
-	display: inline-flex;
+	
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: var(--space-3xs);
@@ -15,7 +13,10 @@ site-header {
 }
 
 /* logo */
-site-logo {}
+site-logo {
+	width: var(--logo-size);
+	height: var(--logo-size);
+}
 
 site-logo a {
 	margin: 0;
@@ -25,7 +26,6 @@ site-logo a {
 	
 	width: var(--logo-size);
 	height: var(--logo-size);
-	line-height: var(--logo-size);
 
 	transition: all 0.5s ease;
 }
