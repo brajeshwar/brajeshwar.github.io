@@ -2,34 +2,34 @@
 
 Plain Text Notetaking is one of the best habits you can build up. It will pay you back, compounding as time goes on and as software and apps come and go.
 
-I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many note-taking apps and bought enough of them — [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
+I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many note-taking apps and bought enough of them — [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Typora](https://typora.io),  [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
 
-I have moved to a simpler note-taking and writing habit for my notes. I have chosen a simple plain-text[^plaintext] life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
+I have moved to a simpler note-taking and writing habit for my notes. I have chosen a simple, plain-text[^plaintext] life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
 
 {:.aside .right}
-Every device, including ones long gone, and ones not invented yet, can read and edit plain text. - [Derek Sivers](https://sive.rs/plaintext)
+“Every device, including ones long gone, and ones not invented yet, can read and edit plain text.” - [Derek Sivers](https://sive.rs/plaintext)
 
-For short, quick notes, I tend to start with Apple’s Notes, share common family notes,  and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all of my notes in my **Notebook**. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime, while my notes remain free of any dependency.
+For short, quick notes, I tend to start with Apple’s Notes, share common family notes, and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all my notes in my **Notebook**. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime while my notes remain free of any dependency.
 
-The simplicity of storing plain-text files as individual files is much more useful than storing them in a database and having an export format. The direct manipulation of files allows multiple apps to coexist, change or migrate to other apps, and do useful things on top of the same files.
+The simplicity of storing plain-text files as individual files is much more helpful than storing them in a database and having an export format. Directly manipulating files allows multiple apps to coexist, change, or migrate to other apps and do helpful things on top of the duplicate files.
 
-For team writing, I'd be happy to use whatever helps the team write better and easier for everyone.
+For team writing, I’d be happy to use whatever helps the team write better and easier for everyone.
 
-> Plain text is a powerful universal tool that is almost zero cost, work across platforms, are light enough to work remotely over poor connections, doesn't go out of date, and is quick to learn.
+> “Plain text is a powerful universal tool that is almost zero cost, work across platforms, are light enough to work remotely over poor connections, doesn’t go out of date, and is quick to learn.”
 
-Plain text is software and operating system agnostic. It's searchable, portable, lightweight, and easily manipulated. It's unstructured. It works when web servers are down, or the Internet is not working. There's no exporting and importing, no databases or tags or flags or stars or prioritizing or any other proprietary induced rules on what you can and can't do with it.
+Plain text is software and operating system-agnostic. It’s searchable, portable, lightweight, and easily manipulated. It’s unstructured. It works when web servers are down or the Internet is not working. There’s no exporting and importing, no databases or tags or flags or stars or prioritizing or any other proprietary induced rules on what you can and can’t do with it.
 
-The only additional formatting I'm comfortable adding is Markdown[^Markdown]. It is designed to be human readable. It's not obfuscated by encoding; you can directly edit the source files with most editors, or edit them automatically with scripts. My own limitation is to stay within the confines of human readability -- the Markdown text files should still be readable by someone who has no clue about Markdown.
+The only additional formatting I’m comfortable adding is Markdown[^Markdown]. It is designed to be human-readable. It’s not obfuscated by encoding; you can directly edit the source files with most editors or edit them automatically with scripts. My self-imposed limitation is to stay within the confines of human readability — the Markdown text files should still be readable by someone without a clue about Markdown.
 
-Of course, Plain Text has its limitations and disadvantages. The User Experience is not that good. It is entirely dependent on the tools that can support it. It has no rules and makes it harder to be disciplined in maintaining them.
+Of course, Plain Text has its limitations and disadvantages. The User Experience could be better. It is entirely dependent on the tools that can support it. It has no rules, which makes it harder to be disciplined in maintaining them.
 
-> You are only truly be digitally free when your notes can stand alone, independent of any one app.
+> “You are only truly be digitally free when your notes can stand alone, independent of any one app.”
 
 ## References
 
 “Our tools and techniques are only as valuable as the workflow.”
 
-Here are a few set of tools, articles, and references that will get you started, stay productive, and lead a simpler, plain-text lifestyle. Read a lot, admire other people's work, and then form your style, methods, and workflows.
+Here are a few tools, articles, and references that will get you started, help you stay productive, and lead a simpler, plain-text lifestyle. Read, admire other people’s work, and then form your style, methods, and workflows.
 
 ### Articles (Documentation, Methodologies, & Philosophies)
 
