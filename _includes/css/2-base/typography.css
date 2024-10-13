@@ -7,14 +7,15 @@ h1, h2, h3, h4, h5, h6 {
 
 a, a:visited {
   color: var(--text-color-link);
-  text-decoration-thickness: 0.7px;
   text-decoration-color: var(--text-color-lower);
-  text-underline-offset: 0.2666666667rem;
+  text-decoration-thickness: 0.6px;
+  text-underline-offset: 0.3rem;
 }
 
 a:hover, a:active {
   color: var(--text-color-link-active);
   text-decoration-color: var(--text-color);
+  text-decoration-thickness: 1px;
 }
 
 blockquote {

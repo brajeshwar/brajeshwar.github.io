@@ -43,6 +43,7 @@ photo-cover__caption {
 .post h1 {
 	margin: 0;
 	text-align: center;
+	font-size: var(--step-3);
 	line-height: var(--scale-small);
 }
 

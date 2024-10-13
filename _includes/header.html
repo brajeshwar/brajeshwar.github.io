@@ -1,19 +1,17 @@
 <header>
-  <site-header>
-    <site-logo>
-      <a href="/" title="Home">
-        {%- include brajeshwar-logo.svg -%}
-      </a>
-    </site-logo>
-    <site-nav>
-      {% for item in site.data.nav.main -%}
-        {%- assign css_class = nil -%}
-        {%- if page.url contains item.url -%}
-          {%- assign css_class = 'class="active"' -%}
-        {%- endif -%}
-        <a {{ css_class }} href="{{ item.url }}">{{ item.title }}</a>
-      {% endfor -%}
-    </site-nav>
-    <mode-toggle></mode-toggle>
-  </site-header>
+  <site-logo>
+    <a href="/" title="Home">
+      {%- include brajeshwar-logo.svg -%}
+    </a>
+  </site-logo>
+  <site-nav>
+    {% for item in site.data.nav.main -%}
+      {%- assign css_class = nil -%}
+      {%- if page.url contains item.url -%}
+        {%- assign css_class = 'class="active"' -%}
+      {%- endif -%}
+      <a {{ css_class }} href="{{ item.url }}">{{ item.title }}</a>
+    {% endfor -%}
+  </site-nav>
+  <mode-toggle></mode-toggle>
 </header>

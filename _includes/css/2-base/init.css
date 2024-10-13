@@ -9,9 +9,14 @@ html {
 
 body {
   font-family: var(--font-family-sans);
-  font-feature-settings: 'liga' 1, 'calt' 1;
   font-size: var(--font-size);
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  
   line-height: var(--scale);
+  
   color: var(--text-color);
   background-color: var(--bg-color-lower);
 
