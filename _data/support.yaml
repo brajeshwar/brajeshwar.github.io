@@ -10,9 +10,6 @@
 - title: Sendune
   url: https://sendune.com/
   desc: "is a ‘Customer Data Platform’ that integrates with AWS SES to send Emails, SMS, and OTP’s."
-- title: "SuperCMMS"
-  url: https://supercmms.com
-  desc: "Manage work orders at your factory, shop floor, building, car fleet, restaurant chain, solar and wind sites or just about any industry."
 - title: "JobFit 360"
   url: https://www.jobfit360.com/
   desc: "harness the potential of AI to foster a holistic, efficient, and inclusive talent acquisition strategy."
