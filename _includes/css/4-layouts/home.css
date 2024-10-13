@@ -46,7 +46,7 @@ home-container home-intro p {
   padding: 0;
 }
 
-/* home: blog */
+/* BLOG POSTS */
 home-posts {
   display: block;
 }
@@ -99,7 +99,7 @@ posts-recent ul time {
 /* home: blog - popular articles */
 posts-popular {
   display: block;
-  margin: var(--space-l) auto;
+  margin: var(--space-m) auto;
 }
 
 posts-popular ul {
@@ -119,18 +119,15 @@ posts-popular ul time {
 }
 
 
-/* support & endorsements */
+/* SUPPORT & ENDORSEMENTS */
 home-support {
-  padding: var(--space-xs) 0;
+  display: block;
   font-size: var(--step--1);
 }
 
 home-support h2 {
-  margin: 0 0 var(--space-m) 0;
-  padding: 0;
-  
   text-transform: lowercase;
-  font-weight: 100;
+  font-weight: var(--font-weight-lighter);
   
   border-bottom: 1px solid var(--border-color);
 }
@@ -138,15 +135,15 @@ home-support h2 {
 home-support ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 home-support li {
-  list-style: none;
-  margin: 0 0 var(--space-smaller);
-  padding: 0;
+  margin: 0;
+  padding: 0 0 var(--space-2xs) 0;
 }
 
-/* connect */
+/* CONNECT */
 .connect {
   font-size: var(--step--1);
 }
