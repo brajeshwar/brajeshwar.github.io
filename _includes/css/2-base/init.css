@@ -2,7 +2,15 @@
   color-scheme: light dark;
 }
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 html {
+  margin: 0;
+  padding: 0;
   height: 100%;
   scroll-behavior: smooth;
 }
