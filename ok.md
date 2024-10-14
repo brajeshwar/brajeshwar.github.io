@@ -3,7 +3,6 @@ layout: page
 title: OK
 ---
 
-{:.mark}
-A work-in-progress.
+# OK
 
-## OK. I agree with you. You’re right.
+> I agree with you. You’re right.

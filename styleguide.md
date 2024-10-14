@@ -3,13 +3,12 @@ layout: page
 title: Styleguide
 ---
 
-{:.pages__title}
 # Styleguide
 
 ## Articles
 
 - If possible, avoid front matter. If used, it should be optional.
-- There is an optional cover-picture. I'm thinking of getting rid of that.
+- There is an optional cover-picture. Can we make this an optional element but as part of the content and styled as a `cover-picture`?
 
 ## Images
 
@@ -17,7 +16,11 @@ title: Styleguide
 - Film:  `300px x 400px` (styled as `225px x 300px`)
 - Gallery has a container, `class="gallery" markdown="1"`, then is a markdown list with images, optionally with a link.
 
-## CSS Styles
+## Styles
+
+- Avoid
+	+ gradiants
+	+ box-shadows
 
 Custom, strange, and `why I did that` ones. I need to stop doing custom styles.
 
