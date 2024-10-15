@@ -31,6 +31,8 @@ Even the USA’s agency, [FBI suggest using Adblockers](https://www.ic3.gov/Medi
 
 I block ads in the browser (client) and at the DNS level. The combination of these two is effective enough for now. Here are a few tools to get you started;
 
+<img class="medium right" src="/static/2024/google-newspaper-ad-1999.jpg" alt="Google’s Newspaper Ad from 1999">
+
 ## DNS Resolvers with AdBlockers
 
 These tools help you resolve your internet queries by routing them through their servers worldwide. One of the features included in these services is blocking ads at the DNS level. You can use this and other client-side AdBlockers for a more effective Ad blocking setup.
