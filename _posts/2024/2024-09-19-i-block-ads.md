@@ -48,6 +48,7 @@ These tools help you resolve your internet queries by routing them through their
 ## Others
 
 - [AdBlock Tester](https://adblock-tester.com) tests your Browser’s AdBlocking effectiveness.
+- [How I Experience the Web Today](https://how-i-experience-web-today.com) takes you on an adventure of how a normal personal experiences the Web today.
 
 [^Advertising]: [Advertising](https://en.wikipedia.org/wiki/Advertising) is the practice and techniques employed to bring attention to a product or service. Advertising aims to present a product or service in terms of utility, advantages and qualities of interest to consumers. It is typically used to promote a specific good or service, but there are a wide range of uses, the most common being commercial advertisement.
 
