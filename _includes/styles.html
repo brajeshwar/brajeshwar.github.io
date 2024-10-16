@@ -1,25 +1,26 @@
-{%- capture include_to_scssify -%}
+{% capture include_to_scssify %}
 
-{% include css/0-settings/scale.css %}
-{% include css/0-settings/color.css %}
-{% include css/0-settings/config.css %}
+{% include css/0.1-scale.css %}
+{% include css/0.2-color.css %}
+{% include css/0.3-config.css %}
 
-{% include css/2-base/init.css %}
-{% include css/2-base/typography.css %}
-{% include css/2-base/table.css %}
+{% include css/1.1-base.css %}
+{% include css/1.2-typography.css %}
+{% include css/1.3-table.css %}
 
-{% include css/3-modules/code.css %}
-{% include css/3-modules/img.css %}
-{% include css/3-modules/cards.css %}
-{% include css/3-modules/footnotes.css %}
+{% include css/2.1-code.css %}
+{% include css/2.1-images.css %}
+{% include css/2.1-cards.css %}
+{% include css/2.1-footnotes.css %}
 
-{% include css/4-layouts/header.css %}
-{% include css/4-layouts/footer.css %}
-{% include css/4-layouts/home.css %}
-{% include css/4-layouts/pages.css %}
-{% include css/4-layouts/archives.css %}
-{% include css/4-layouts/search.css %}
-{% include css/4-layouts/post.css %}
+{% include css/3.1-header.css %}
+{% include css/3.1-footer.css %}
 
-{%- endcapture -%}
+{% include css/4.1-home.css %}
+{% include css/4.1-pages.css %}
+{% include css/4.1-archives.css %}
+{% include css/4.1-search.css %}
+{% include css/4.1-post.css %}
+
+{% endcapture %}
 {{- include_to_scssify | scssify | strip_newlines -}}
