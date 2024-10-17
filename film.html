@@ -10,23 +10,6 @@ style: page-film
 	<mark>Last updated: Jul 31, 2024</mark>
 </p>
 
-{% if site.data.tv %}
-<h2 id="tv">TV-Series</h2>
-<ul class="item__cards">
-{% assign sorted_series = site.data.tv | sort:'title' -%}
-{% for series in sorted_series -%}
-	<li>
-		<a href="{{ series.url }}">
-			<figure>
-				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ series.img }}" alt="{{ series.title }}">
-  			<figcaption>{{ series.title }} <span>({{ series.year }})</span></figcaption>
-  		</figure>
-		</a>
-	</li>
-{% endfor -%}
-</ul>
-{% endif %}
-
 {% if site.data.movies %}
 <h2 id="movies">Movies</h2>
 <ul class="item__cards">
@@ -54,6 +37,23 @@ style: page-film
 			<figure>
 				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ movie.img }}" alt="{{ movie.title }}">
   			<figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
+  		</figure>
+		</a>
+	</li>
+{% endfor -%}
+</ul>
+{% endif %}
+
+{% if site.data.tv %}
+<h2 id="tv">TV-Series</h2>
+<ul class="item__cards">
+{% assign sorted_series = site.data.tv | sort:'title' -%}
+{% for series in sorted_series -%}
+	<li>
+		<a href="{{ series.url }}">
+			<figure>
+				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ series.img }}" alt="{{ series.title }}">
+  			<figcaption>{{ series.title }} <span>({{ series.year }})</span></figcaption>
   		</figure>
 		</a>
 	</li>

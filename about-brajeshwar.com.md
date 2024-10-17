@@ -10,7 +10,7 @@ I booked the domain on a dare. At work, I once met an expert programmer, who sug
 
 I moved on to [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)), later known as [Blogger](https://www.blogger.com/), then to [MovableType](https://movabletype.org) in 2002, and later to [WordPress](https://wordpress.org) by 2003-2004, ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
 
-Initially, the site was hosted on few local shared servers. The site really did grew in popularity after Macromedia's recognition. Later, it was cared for by [Media Temple](https://mediatemple.net), [Medium Cube](https://mediumcube.com) (special thanks to [Tamouh Hakmi](https://www.linkedin.com/in/tamouh/)), [Pagely](https://pagely.com), and [WPEngine](https://wpengine.com) (grandfathered me in a free tier forever).
+Initially, the site was hosted on few local shared servers. The site really did grew in popularity after Macromedia's recognition. Later, it was cared for by [Media Temple](https://mediatemple.net), [Medium Cube](https://mediumcube.com) (special thanks to [Tamouh Hakmi](https://www.linkedin.com/in/tamouh/)), [Pagely](https://pagely.com), and [WPEngine](https://wpengine.com).
 
 ## Writers
 
