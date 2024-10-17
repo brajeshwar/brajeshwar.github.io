@@ -1,5 +1,4 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: "InterDisplay", var(--font-family-sans);
 	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
 	text-wrap: balance; /* Others */
