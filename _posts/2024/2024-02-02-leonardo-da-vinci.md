@@ -12,7 +12,7 @@ Leonardo started early as an apprentice in the workshop of Andrea del Verrocchio
 
 His early exposure to various fields shaped Leonardo’s broad interests. He soon surpassed his contemporaries with his incredible ability to observe the world around him and translate those observations into art and designs. The meticulous precision with which he approached painting, coupled with his scientific curiosity, laid the groundwork for his later masterpieces.
 
-<figure class="large">
+<figure class="full">
   <a href="https://en.wikipedia.org/wiki/Last_Supper"><img src="https://cdn.oinam.com/img/painting/last-supper.webp" alt="The Last Supper by Leonardo da Vinci" loading="lazy"></a>
   <figcaption>
     Depictions of the Last Supper by Leonardo da Vinci in late-1490s, Milan, Italy.
