@@ -2,7 +2,7 @@
 
 I was intrigued by a topic, so I went down a rabbit hole[^RabbitHole] to find out: “How does a dishwasher in Eco-mode run much longer but save water and electricity?”
 
-> tldr; “Eco-mode” is designed to conserve water and energy, even though they run longer than standard cycles. The longer runtime allows the dishwasher to use less energy by optimizing factors like water heating and flow.
+> _tldr;_ “Eco-mode” is designed to conserve water and energy, even though they run longer than standard cycles. The longer runtime allows the dishwasher to use less energy by optimizing factors like water heating and flow.
 
 ## Water
 
