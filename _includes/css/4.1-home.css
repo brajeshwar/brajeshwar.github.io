@@ -204,7 +204,7 @@ connect-icons a:hover svg, connect-icons a:active svg {
   fill: var(--text-color);
 }
 
-/* Books - contained in the Flex-ed Item Cards */
+/* BOOKS */
 home-books {
   padding: var(--space-2xs) 0;
 }
@@ -212,6 +212,7 @@ home-books {
 home-books li {
   width: 240px;
   height: 320px;
+  
   flex-basis: auto;
   flex-grow: 1;
 }

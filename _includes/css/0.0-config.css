@@ -78,6 +78,9 @@
   --font-family-monospace : Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   --font-family-cursive   : cursive;
 
+  --font-family           : "Inter", var(--font-family-sans);
+  --font-family-alt       : "Georgia", var(--font-family-serif);
+
   --font-weight-lighter   : 100;
   --font-weight-light     : 200;
   --font-weight           : 400;

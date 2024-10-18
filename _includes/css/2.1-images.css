@@ -45,9 +45,9 @@ figcaption {
   max-width: var(--body-width-ideal);
   margin: 0 auto;
   padding: var(--space-xs) var(--space-3xs);
-  font-family: var(--font-family);
+  
   font-size: smaller;
-  border-bottom: var(--border-size) var(--border-style) var(--border-color-low);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
 figure:has(figcaption) {}

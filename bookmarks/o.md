@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [OpenCharacter](https://opencharacter.org) is an [open-source](https://github.com/bobcoi03/opencharacter) Alternative to [Character.AI](https://character.ai).
 - [OpenFreeMap](https://openfreemap.org) lets you display custom maps on your website and apps for free. ([Source](https://github.com/hyperknot/openfreemap) https://github.com/hyperknot/openfreemap)
 - [Open Scanner](https://openscanner.app) scans your receipts, notes, textbooks, and anything else you point your iPhone at. ([source](https://github.com/pencilresearch/OpenScanner))
 - [Omnivore](https://omnivore.app/) is a free and [open source](https://github.com/omnivore-app) read-it-later app (omnivore.app)

@@ -19,19 +19,18 @@ a:hover, a:active {
 }
 
 blockquote {
-	margin: var(--space-s) 0;
-	margin-left: calc(-1 * var(--border-size-large));
+	margin: var(--space-s) auto;
 	padding: var(--space-m);
 
+	font-family: var(--font-family-alt);
 	font-size: var(--step-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
+	text-align: center;
 	
 	color: var(--text-color-higher);
 	background: var(--bg-color-low);
-	border-left: var(--border-size-large) var(--border-style) var(--border-color);
-	border-top-right-radius: var(--border-radius);
-	border-bottom-right-radius: var(--border-radius);
+	border-radius: var(--border-radius);
 }
 
 blockquote p {
@@ -72,6 +71,7 @@ aside, .aside {
 	margin-left: -10vw;
 	padding: var(--space-s) var(--space-m);
 
+	font-family: var(--font-family-alt);
 	font-size: var(--step-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
