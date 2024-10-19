@@ -32,6 +32,7 @@ Try to have curious participation — be kind. Don’t be snarky. Converse curio
 	- Official [Front Page RSS](https://news.ycombinator.com/rss) and the [Show HN RSS](https://news.ycombinator.com/showrss).
 	- Documentation and Samples for the [Official HN API](https://github.com/HackerNews/API), in partnership with Firebase.
 - Unofficial Hacker News tools, services, etc.
+	- [Awesome Hacker News](https://github.com/cheeaun/awesome-hacker-news) is a collection of awesome Hacker News apps, libraries, resources and shiny things.
 	- Hacker News user [minimaxir](https://news.ycombinator.com/user?id=minimaxir) ([Max Woolf](https://minimaxir.com)) has a well-maintained document — the [HackerNews Undocumented](https://github.com/minimaxir/hacker-news-undocumented).
 	- [Hacker News RSS](https://hnrss.github.io)
 	- [HN Badges](https://hnbadges.netlify.app/?user=Brajeshwar)
