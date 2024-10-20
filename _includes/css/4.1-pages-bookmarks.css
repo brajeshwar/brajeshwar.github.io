@@ -1,0 +1,31 @@
+bookmarks-header {
+	display: block;
+	text-align: center;
+	margin-bottom: var(--space-m);
+}
+
+bookmarks-header nav a, bookmarks-header nav a:visited {
+	font-family: var(--font-family-monospace);
+	font-size: var(--step--1);
+	text-decoration: none;
+	line-height: calc(var(--scale) * var(--scale-small));
+	
+	margin: 0;
+	padding: var(--space-3xs) var(--space-xs);
+	
+	background: var(--bg-color-low);
+	border: var(--border-size) var(--border-style) transparent;
+	border-radius: var(--border-radius);
+}
+
+bookmarks-header nav a:hover, bookmarks-header nav a:active {
+	background: var(--bg-color);
+	border-color: var(--border-color-high);
+}
+
+bookmarks-header nav a.active {
+	cursor: default;
+	color: var(--text-color-lower);
+	background: var(--bg-color-higher);
+	border-color: transparent;
+}
