@@ -1,0 +1,39 @@
+.now-now {
+	display: block;
+
+	margin-bottom: var(--space-m);
+	padding: var(--space-2xs) var(--space-l);
+	background: var(--bg-color-low);
+	border-radius: var(--border-radius);
+
+	font-family: var(--font-family-alt);
+	font-size: var(--step-1);
+	line-height: var(--scale-small);
+}
+
+.page-now h1 {
+	margin-inline: var(--space-s);
+	font-size: var(--step-1);
+	font-weight: var(--font-weight-light);
+	border-bottom: var(--border-size) var(--border-style) var(--border-color);
+}
+
+.page-now ul {
+	margin: 0;
+	padding-inline: var(--space-s);
+}
+
+.page-now ul li {
+	padding: var(--space-3xs) 0;
+}
+
+.page-now ul li::marker {
+  color: var(--border-color);
+}
+
+.page-now code {
+	font-size: smaller;
+	background-color: var(--bg-color-low);
+	border: 0 none;
+	border-radius: var(--border-radius-large);
+}
