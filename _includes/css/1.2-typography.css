@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 a, a:visited {
   color: var(--text-color-link);
   text-decoration-color: var(--text-color-lower);
-  text-decoration-thickness: 0.6px;
+  text-decoration-thickness: 0.7px;
   text-underline-offset: 0.3rem;
 }
 

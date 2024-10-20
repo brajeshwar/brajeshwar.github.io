@@ -78,14 +78,14 @@
   --font-family-monospace : Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
   --font-family-cursive   : cursive;
 
-  --font-family           : 'Roboto', var(--font-family-sans);
-  --font-family-alt       : 'Georgia', var(--font-family-serif);
+  --font-family           : 'Helvetica Neue', 'Helvetica', var(--font-family-sans);
+  --font-family-alt       : 'Georgia', 'Times New Roman', var(--font-family-serif);
 
-  --font-weight-lighter   : 100;
-  --font-weight-light     : 200;
+  --font-weight-lighter   : 200;
+  --font-weight-light     : 300;
   --font-weight           : 400;
-  --font-weight-bold      : 600;
-  --font-weight-bolder    : 800;
+  --font-weight-bold      : 500;
+  --font-weight-bolder    : 600;
   
   --font-size             : 18px;
 

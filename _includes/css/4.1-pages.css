@@ -95,8 +95,8 @@ bookmarks-header nav a.active {
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
 
+	font-family: var(--font-family-alt);
 	font-size: var(--step-1);
-	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
 }
 
