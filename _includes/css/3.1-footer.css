@@ -1,23 +1,11 @@
-footer.site-footer {
+footer {
+	font-size: var(--step--1);
 	text-align: center;
 	color: var(--text-color-low);
 	padding: var(--space-s);
 	margin-top: var(--space-xl);
 }
 
-footer.site-footer nav {
-	text-transform: uppercase;
-	font-size: var(--step--1);
-}
-
-footer.site-footer nav a {
-	padding: var(--space-2xs);
-}
-
-footer.site-footer nav a.active {
-	cursor: default;
-	font-weight: bold;
-	color: var(--text-color-link-active);
-	text-decoration-thickness: 0.1rem;
-	text-decoration-color: var(--text-color-link-active);
+footer nav a {
+	padding: var(--space-xs) var(--space-3xs);
 }
