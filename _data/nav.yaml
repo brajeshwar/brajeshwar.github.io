@@ -5,6 +5,8 @@ main:
   url: "/archives/"
 - title: Now
   url: "/now/"
+- title: Newsletter
+  url: "/newsletter/"
 
 footer:
 - title: Home
@@ -21,3 +23,5 @@ footer:
   url: "/film/"
 - title: Now
   url: "/now/"
+- title: Newsletter
+  url: "/newsletter/"
