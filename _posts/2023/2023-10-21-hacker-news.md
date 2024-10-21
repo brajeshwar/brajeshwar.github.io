@@ -36,6 +36,7 @@ Try to have curious participation — be kind. Don’t be snarky. Converse curio
 	- Hacker News user [minimaxir](https://news.ycombinator.com/user?id=minimaxir) ([Max Woolf](https://minimaxir.com)) has a well-maintained document — the [HackerNews Undocumented](https://github.com/minimaxir/hacker-news-undocumented).
 	- [Hacker News RSS](https://hnrss.github.io)
 	- [HN Badges](https://hnbadges.netlify.app/?user=Brajeshwar)
+	- [HN Update](https://hnup.date) is an hourly News Broadcast of the posts on the frontpage of Hacker News. As of 2024-OCT, it is powered by [NotebookLM](https://notebooklm.google.com). While, [Radio HN](https://radio-hn.pages.dev) is a daily podcast discussing the top five stories on hacker news. Writen and directed by Openai’s chat-GPT, read by ElevenLabs’ AI voice.
 	- [Hacker News Rankings](https://hnrankings.info) visualize the movement and trends of Hacker News.
 	- [Hacker News Title Edit Tracker](https://hackernewstitles.netlify.app)
 	- [HackerNewsRemovals](https://github.com/vitoplantamura/HackerNewsRemovals) List of stories removed from the Hacker News Front Page, updated in real time.

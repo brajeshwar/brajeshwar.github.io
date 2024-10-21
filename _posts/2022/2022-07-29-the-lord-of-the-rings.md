@@ -8,6 +8,17 @@ The book created an entire mythology, complete with languages, history, and cult
 
 <a href="//lotrproject.com/map/"><img class="large" src="/static/2022/lotr-map-of-middle-earth.webp" alt="Map of Middle Earth"></a>
 
+```
+“Three Rings for the Elven-kings under the sky,
+Seven for the Dwarf-lords in their halls of stone,
+Nine for Mortal Men doomed to die,
+One for the Dark Lord on his dark throne
+In the Land of Mordor where the Shadows lie.
+One Ring to rule them all, One Ring to find them,
+One Ring to bring them all and in the darkness bind them
+In the Land of Mordor where the Shadows lie.”
+```
+
 The Lord of the Rings begins in the Shire, home to the hobbits. Frodo Baggins, inherits a seemingly simple gold ring from his uncle, Bilbo Baggins. However, Gandalf the Grey, a wise and powerful wizard, soon reveals that this is the One Ring, forged by the Dark Lord Sauron to rule all other Rings of Power. The Ring holds immense power and has a corrupting influence on its bearer, making them obsessed and turning them evil over time. Sauron, who was defeated millennia ago and lost the Ring, now seeks to reclaim it to conquer Middle-earth.
 
 Realizing the danger, Gandalf advises Frodo to leave the Shire. Frodo is joined by his loyal friend, Samwise Gamgee, and two other hobbits, Merry Brandybuck and Pippin Took. They embark on a journey to Rivendell, the realm of the Elves, to seek counsel. Along the way, they encounter various dangers, including the terrifying Ringwraiths, Sauron’s spectral servants who are hunting for the Ring. The hobbits are saved by a mysterious ranger named Strider, later revealed to be Aragorn, the heir to the throne of Gondor, the greatest kingdom of men.
