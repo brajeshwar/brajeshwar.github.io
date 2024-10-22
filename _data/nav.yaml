@@ -3,8 +3,6 @@ main:
   url: "/about/"
 - title: Archives
   url: "/archives/"
-- title: Now
-  url: "/now/"
 - title: Newsletter
   url: "/newsletter/"
 
