@@ -7,5 +7,5 @@ footer {
 }
 
 footer nav a {
-	padding: var(--space-xs) var(--space-3xs);
+	padding: var(--space-3xs);
 }
