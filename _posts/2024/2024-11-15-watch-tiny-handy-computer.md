@@ -1,6 +1,6 @@
 # Watch - the Tiny Handy Computer
 
-Growing up, I was introduced to Star Trek[^StarTrek] and Giant Robo[^GiantRobo] in the 90s. Like everyone else, I wanted to have those video-talking handheld devices, tiny computers worn as watches, in our lifetime. And yes, we are here, and we have all of them—phones to video-talk to someone on the other side of the world and watches that you can give commands to.
+Growing up, I was introduced to Star Trek[^StarTrek] and Giant Robo[^GiantRobo] in the 90s. Like everyone else, I wanted to have those video-talking handheld devices, and tiny computers worn as watches, in our lifetime. And yes, we are here, and we have all of them—phones to video-talk to someone on the other side of the world and watches that you can give commands to.
 
 Smartwatches are often seen as fitness and health tools, and rightfully so. Besides motivating people to work out more, they are also impressive productivity enhancers. 
 
