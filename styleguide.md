@@ -19,7 +19,7 @@ title: Styleguide
 ## Styles
 
 - Avoid
-	+ gradiants
+	+ gradients
 	+ box-shadows
 
 Custom, strange, and `why I did that` ones. I need to stop doing custom styles.
