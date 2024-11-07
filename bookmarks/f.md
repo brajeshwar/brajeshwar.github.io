@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Frame0](https://frame0.app/) Make hand-drawn style wireframes quickly and easily.
 - [FUTO](https://www.futo.org/) is an organization dedicated to developing, both through in-house engineering and investment, technologies that frustrate centralization and industry consolidation.
 - [FCast](https://fcast.org) is an [open-source](https://gitlab.futo.org/videostreaming/fcast/) media caster for all OSes.
 - [Free Public APIs](https://www.freepublicapis.com) tested everyday.

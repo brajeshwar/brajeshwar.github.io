@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [SuperStreamer](https://superstreamer.xyz/) is an [open-source](https://github.com/matvp91/superstreamer) All-in-one toolkit from ingest to adaptive video playback. Built for developers in need of video tooling.
 - [Screenpipe](https://screenpi.pe) records your screens and mics 24/7 safely on your computer, and connects it to AI, creating magic from your data. ([Source](https://github.com/mediar-ai/screenpipe))
 - [ShipMap](https://www.shipmap.org) shows the movement of ships around the world.
 - [staticrypt](https://robinmoisson.github.io/staticrypt/) is an [open-source](https://github.com/robinmoisson/staticrypt) tool to password protect a static HTML page, decrypted in-browser in JS with no dependency. No server logic needed.

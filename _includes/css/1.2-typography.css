@@ -21,13 +21,13 @@ a:hover, a:active {
 
 blockquote {
 	margin: var(--space-s) auto;
-	padding: var(--space-m);
+	padding: var(--space-m) var(--space-l);
 	
 	font-family: var(--font-family-alt);
 	font-size: var(--step-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
-	text-align: center;
+	hyphens: auto;
 	
 	color: var(--text-color-higher);
 	background: var(--bg-color-low);
@@ -77,6 +77,7 @@ aside, .aside {
 	font-size: var(--step-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
+	hyphens: auto;
 
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
