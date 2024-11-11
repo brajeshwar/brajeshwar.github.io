@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [HTML-to-Markdown](https://html-to-markdown.com) is an [open-source](https://github.com/JohannesKaufmann/html-to-markdown) tool to convert entire websites to Markdown.
 - [Harper](https://writewithharper.com) is an [open-source](https://github.com/elijah-potter/harper) English grammar checker.
 - [Huly](https://huly.io), an [open-source](https://github.com/hcengineering/platform) platform, serves as an all-in-one replacement of Linear, Jira, Slack, and Notion.
 - [HTML for people](https://htmlforpeople.com) is a fantastic educational and easy-to-start HTML-as-a-Document initiative by [Blake Watson](https://blakewatson.com). HTML isn’t only for people working in the tech field. It’s for anybody, the way documents are for anybody. HTML is just another type of document. A very special one—the one the web is built on.
