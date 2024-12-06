@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [AlternateOSS](https://alternateoss.com) - Free & Open Source Alternatives. Explore the Alternate Universe of Software.
 - [A list of "crisis tools"](https://www.brendangregg.com/blog/2024-03-24/linux-crisis-tools.html) recommended installing on Linux servers by default.
 - [ADDR.tools](https://addr.tools) - possibly useful tools for the Internet.
 - [AI Avatars](https://avatars.tzador.com) Development friendly, consistent, filterable, generated user avatar service.
