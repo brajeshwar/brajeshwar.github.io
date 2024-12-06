@@ -2,7 +2,8 @@
 
 ## 2024
 
-- [Don't Fuck With Scroll](https://dontfuckwithscroll.com). Just let people scroll.
+- [Diátaxis](https://diataxis.fr) - A systematic approach to technical documentation authoring.
+[Don't Fuck With Scroll](https://dontfuckwithscroll.com). Just let people scroll.
 - [Data Commons](https://datacommons.org) aggregates and harmonizes global, open data, giving everyone the power to uncover insights with natural language questions.
 - [Donobu](https://www.donobu.com) is a web automation and testing tool using AI.
 - [DevHub](https://wangchujiang.com/DevHub/) ([App Store](https://apps.apple.com/app/devhub/id6476452351)) is an [open-source](https://github.com/jaywcjlove/DevHub) feature-rich offline application, meticulously crafted to support developers in their daily tasks while ensuring the utmost security of their data.
