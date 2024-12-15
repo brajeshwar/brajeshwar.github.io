@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [StampList](https://landing.club/stamplist) lists breakout companies with a track record of sponsoring visas for exceptional talent.
 - [SuperStreamer](https://superstreamer.xyz/) is an [open-source](https://github.com/matvp91/superstreamer) All-in-one toolkit from ingest to adaptive video playback. Built for developers in need of video tooling.
 - [Screenpipe](https://screenpi.pe) records your screens and mics 24/7 safely on your computer, and connects it to AI, creating magic from your data. ([Source](https://github.com/mediar-ai/screenpipe))
 - [ShipMap](https://www.shipmap.org) shows the movement of ships around the world.
