@@ -1,3 +1,7 @@
+---
+image: /static/2020/dont-make-me-think.jpg
+---
+
 # Don’t Make Me Think
 
 [Don’t Make Me Think](https://en.wikipedia.org/wiki/Don't_Make_Me_Think) by [Steve Krug](https://en.wikipedia.org/wiki/Steve_Krug) is about human–computer interaction and web usability. The idea is that a good software program or web site should let users accomplish their intended tasks as easily and directly as possible.
