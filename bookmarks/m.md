@@ -2,6 +2,7 @@
 
 ## 2024
 
+- A [Mighty Girl](https://www.amightygirl.com/)'s collection of both fictional and biographical stories about remarkable girls and young women.
 - [Merklemap](https://www.merklemap.com) discovers and enumerate all subdomains associated with a website, including those not publicly advertised.
 - [MarkMap](https://markmap.js.org) is an [open-source](https://github.com/markmap/markmap) tool to build mindmaps with plain text.
 - [macOSpilot-ai-assistant](https://github.com/elfvingralf/macOSpilot-ai-assistant) - Voice + Vision powered AI assistant that answers questions about any application, in context and in audio.
