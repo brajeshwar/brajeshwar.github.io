@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Colorify Rocks](https://colorify.rocks) is an AI Color Palette Generator.
 - [Caesium](https://saerasoft.com/caesium) is a free [open-source](https://github.com/Lymphatus/caesium-image-compressor) tool to compress pictures up to 90% without visible quality loss.
 - Clipshare is an incredibly simple, [open-source](https://github.com/goshops-com/clipshare) alternative to Loom that only requires S3.
 - [Coolify](https://coolify.io) is an [open-source](https://github.com/coollabsio/coolify) & self-hostable Heroku / Netlify / Vercel alternative.
