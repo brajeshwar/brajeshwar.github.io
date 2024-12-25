@@ -2,6 +2,7 @@
 
 ## 2024
 
+- [Hoarder](https://hoarder.app) - Quickly save links, notes, and images and hoarder will automatically tag them for you using AI for faster retrieval. ([source](https://github.com/hoarder-app/hoarder))
 - [HTML-to-Markdown](https://html-to-markdown.com) is an [open-source](https://github.com/JohannesKaufmann/html-to-markdown) tool to convert entire websites to Markdown.
 - [Harper](https://writewithharper.com) is an [open-source](https://github.com/elijah-potter/harper) English grammar checker.
 - [Huly](https://huly.io), an [open-source](https://github.com/hcengineering/platform) platform, serves as an all-in-one replacement of Linear, Jira, Slack, and Notion.
