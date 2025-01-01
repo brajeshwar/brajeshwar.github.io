@@ -28,6 +28,10 @@ that **just** makes it sound like there won’t be any problems. It discounts th
 
 These are “Lullaby Word.” Like ‘should,’ it lulls your mind into a false sense of security. A better translation of ‘just’ would have been, ‘have a lot of trouble to.'”
 
+Alexander Pugh put it nicely on a [Hacker News comment](https://news.ycombinator.com/item?id=42560382);
+
+> For instance, “Let’s just add an API.” I think the approach to an API as “just” a feature of your product will be about as successful as saying, “Let’s just add a UI.” To implement a successful UI, one needs to be thoughtful and thorough and bring in people who specialize in it. Why should any other interface for your product be any different? It’s not that it’s a bad or good idea, but rather one that shouldn’t “just” be done.
+
 ## Soon
 
 Another lullaby is “soon” which translates to a vague timeline and no definitives. When someone ask you when, and the answer is “Soon”, it means , “I don’t know, but don’t keep bothering me.”
@@ -47,3 +51,5 @@ Adding ‘very’ is like adding a sleeping pill to the lullaby. It makes it eve
 ## All
 
 All I gotta do is … [A synonym for “just.”]
+
+Lullaby words are designed to discourage feedback by putting both the speaker’s and the listener’s minds to sleep. And no feedback means that the meaning of the statement containing a lullaby word cannot be clarified. And, if it’s not clarified, it can mean almost anything – and that’s always the beginning of trouble. If you want to avoid such trouble, start converting those lullaby words to alarm words – waking you up to potential misunderstanding rather than lulling you to sleep.
