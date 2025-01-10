@@ -13,6 +13,8 @@ I work remotely out of Bangalore, India.
 
 </div>
 
+{% include_relative now/2025.md %}
+
 {% include_relative now/2024.md %}
 
 {% include_relative now/2016.md %}
