@@ -2,6 +2,8 @@
 
 ## 2025
 
+- 
+
 ## 2024
 
 - [Colorify Rocks](https://colorify.rocks) is an AI Color Palette Generator.
