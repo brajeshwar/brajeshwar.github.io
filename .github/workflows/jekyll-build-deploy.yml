@@ -8,8 +8,8 @@ name: Deploy Jekyll site to Pages
 
 on:
   # schedule a deploy every day
-  schedule:
-    - cron: '1 0 * * *'
+  ## schedule:
+    ## - cron: '1 0 * * *'
   # Runs on pushes targeting the default branch
   push:
     branches: [$default-branch]
