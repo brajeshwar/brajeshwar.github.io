@@ -1,5 +1,9 @@
 # S
 
+## 2025
+
+- [SVGL](https://svgl.app) is an [open-source](https://github.com/pheralb/svgl) beautiful library with SVG logos.
+
 ## 2024
 
 - [StampList](https://landing.club/stamplist) lists breakout companies with a track record of sponsoring visas for exceptional talent.
