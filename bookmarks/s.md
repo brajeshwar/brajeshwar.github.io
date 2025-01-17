@@ -3,6 +3,8 @@
 ## 2025
 
 - [SVGL](https://svgl.app) is an [open-source](https://github.com/pheralb/svgl) beautiful library with SVG logos.
+- [Stories from the Internet](https://dbrgn.ch/stories-from-the-internet.html) is a collection of internet folklore. ([archive](https://archive.is/TEWVB))
+- [Software Folklore](https://beza1e1.tuxen.de/lore/) is a collection of stories of bugs with symptoms beyond belief. )[archive](https://archive.is/HlYBi))
 
 ## 2024
 
