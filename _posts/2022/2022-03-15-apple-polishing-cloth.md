@@ -22,7 +22,7 @@ Apple's pricing did shake the Apple fanverse with its costlier than usual pricin
 
 The polishing cloth feels extra premium, and you can feel the proverbial heaven while cleaning Apple devices. It caresses the glasses with such smoothness that it touches like a diamond on glass, sans the cut.
 
-But beware, the product page lists every the polishing cloth is compatible with. For instance, it is only compatible with the first-generation iPhone SE, the first-generation iPad mini, and the fifth-generation iPod touch. The polishing cloth can indeed be used to clean with non-Apple devices.
+But beware, the product page lists every devices the polishing cloth is compatible with. For instance, it is only compatible with the first-generation iPhone SE, the first-generation iPad mini, and the fifth-generation iPod touch. The polishing cloth can indeed be used to clean with non-Apple devices.
 
 The cloth comes embossed with the Apple logo. It’s subtle, but it is there. It’s placed in the lower right corner, so it stays out of the way but still reminds you it’s Apple’s premium cloth.
 
