@@ -11,6 +11,8 @@ footer:
   url: "/"
 - title: Feed
   url: "/feed.xml"
+- title: Privacy
+  url: "/privacy/"
 - title: About
   url: "/about/"
 - title: Archives
@@ -23,3 +25,5 @@ footer:
   url: "/now/"
 - title: Newsletter
   url: "/newsletter/"
+- title: Contact
+  url: "/contact/"
