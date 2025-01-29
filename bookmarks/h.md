@@ -1,5 +1,9 @@
 # H
 
+## 2025
+
+- Almost all of the [HTML Elements](https://iamwillwang.com/dollar/every-html-element/).
+
 ## 2024
 
 - [Hoarder](https://hoarder.app) - Quickly save links, notes, and images and hoarder will automatically tag them for you using AI for faster retrieval. ([source](https://github.com/hoarder-app/hoarder))
