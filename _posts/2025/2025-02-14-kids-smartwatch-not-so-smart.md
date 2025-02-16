@@ -121,6 +121,7 @@ Of course, the best is **not to tether your kids to a digital lease.** Ultimatel
 - **tim.sh (2025)** [Everyone knows your location: tracking myself down through in-app ads](https://timsh.org/tracking-myself-down-through-in-app-ads/), [read the interesting comments](https://news.ycombinator.com/item?id=42909921) on Hacker News
 - **Kinzoo (2023)** [The pros and cons of smartwatches for children](https://www.kinzoo.com/blog/the-pros-and-cons-of-smartwatches-for-children)
 - **Bleeping Computer (2021)** [Smartwatches for children are a privacy and security nightmare](https://www.bleepingcomputer.com/news/security/smartwatches-for-children-are-a-privacy-and-security-nightmare/)
+- **CNET (2021)** [Life360 app is selling data from millions of families](https://www.cnet.com/tech/services-and-software/google-will-use-ai-to-determine-if-youre-lying-about-your-age/)
 - **The Markup (2021)** [The Popular Family Safety App Life360 Is Selling Precise Location Data on Its Tens of Millions of Users](https://themarkup.org/privacy/2021/12/06/the-popular-family-safety-app-life360-is-selling-precise-location-data-on-its-tens-of-millions-of-user)
 - **Wired (2020)** [Kids' Smartwatches Are a Security Nightmare Despite Years of Warnings](https://www.wired.com/story/kid-smartwatch-security-vulnerabilities/)
 - **TechCrunch (2019)** [Over 2 Million Kids’ GPS Watch Records Left Exposed](https://techcrunch.com/2019/12/18/cloud-flaws-millions-child-watch-trackers/)
