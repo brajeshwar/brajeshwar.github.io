@@ -1,5 +1,9 @@
 # N
 
+## 2025
+
+- [Nping](https://github.com/hanshuaikang/Nping) is a Ping Tool with Real-Time Data and Visualizations.
+
 ## 2024
 
 - [Naev](https://naev.org) is a game about space exploration, trade and combat. Players travel the galaxy and earn money by trading, fighting and performing missions.
