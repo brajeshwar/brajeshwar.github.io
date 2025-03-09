@@ -1,5 +1,9 @@
 # M
 
+## 2025
+
+- [Masscan](https://github.com/robertdavidgraham/masscan) - TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes.
+
 ## 2024
 
 - A [Mighty Girl](https://www.amightygirl.com/)'s collection of both fictional and biographical stories about remarkable girls and young women.
