@@ -30,9 +30,9 @@
   
   --text-color-lower        : light-dark(var(--color-4), var(--color-6));
   --text-color-low          : light-dark(var(--color-5), var(--color-5));
-  --text-color              : light-dark(var(--color-7), var(--color-4));
-  --text-color-high         : light-dark(var(--color-8), var(--color-3));
-  --text-color-higher       : light-dark(var(--color-9), var(--color-2));
+  --text-color              : light-dark(var(--color-8), var(--color-3));
+  --text-color-high         : light-dark(var(--color-9), var(--color-2));
+  --text-color-higher       : light-dark(var(--color-9), var(--color-1));
   
   --text-color-link         : light-dark(var(--color-8), var(--color-3));
   --text-color-link-active  : light-dark(var(--color-9), var(--color-2));
