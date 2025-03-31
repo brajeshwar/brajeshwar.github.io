@@ -74,6 +74,7 @@ On a quiet Sunday in December 2016, a man walked into a Washington, D.C. pizzeri
 
 This incident, known as the [Pizzagate conspiracy theory](https://en.wikipedia.org/wiki/Pizzagate_conspiracy_theory), was an early wake-up call that misinformation on algorithm-driven platforms isn’t just harmless chatter; it can erupt into real-world harm. Digital algorithms excel at one task above all: getting people’s attention. Unfortunately, false or misleading content often checks that box exceedingly well. Conspiracy theories, emotionally charged rumors, and clickbait headlines spread like wildfire in algorithmic feeds precisely because they spark strong reactions.
 
+{:.aside}
 In the attention economy, virality can trump veracity, and as a result, we’ve seen a flood of misinformation.
 
 During the [COVID-19 pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic), for example, a deluge of false claims – from miracle cures to vaccine microchip myths – went viral on social networks. Users who engaged with one anti-vaccine video on YouTube would soon find their “Up Next” queue filled with more of the same, rapidly deepening the rabbit hole. Facebook and Twitter struggled (and often failed) to stem the tide of COVID misinformation their algorithms had helped propagate. The consequences were dire: confusion among the public, erosion of trust in health authorities, and, in some cases, people ingesting dangerous “remedies” touted in viral posts. The World Health Organization termed it an “infodemic.”[^Infodemic]

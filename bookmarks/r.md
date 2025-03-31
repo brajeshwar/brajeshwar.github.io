@@ -1,5 +1,9 @@
 # R
 
+# 2025
+
+- [RDAP](https://lookup.icann.org/) (Registration Data Access Protocol) is the definitive source for delivering generic top-level domain name (gTLD) registration information in place of WHOIS services. [Open Source Command-Line Tool](https://github.com/icann/icann-rdap/wiki/RDAP-command).
+
 ## 2024
 
 - [Real-time map](https://www.starlinkmap.org) of every Starlink satellite in orbit. As of 2024-Mar, there are 5,601 orbiting satellites.

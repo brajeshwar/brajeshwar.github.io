@@ -1,5 +1,9 @@
 # D
 
+## 2025
+
+- [Docs](https://github.com/suitenumerique/docs) is a collaborative note taking, wiki and documentation platform that scales. Built with Django and React. Opensource alternative to Notion or Outline.
+
 ## 2024
 
 - [Diátaxis](https://diataxis.fr) - A systematic approach to technical documentation authoring.

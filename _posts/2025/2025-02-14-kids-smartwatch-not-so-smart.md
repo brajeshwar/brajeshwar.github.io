@@ -14,9 +14,7 @@ Fortunately, phone service providers need strict legal orders from authorities t
 
 That leaves third-party companies selling Smartwatches, especially for kids, that track their every location, listen to the talks, and record everything. By installing their apps, wearing the watch, and “agreeing” to their Terms of Service and Privacy Policy, you gave everything away—bypassing any security sandbox your phone’s operating system might impose on such apps.
 
-![A dystopian future where AI shepherds children](/static/2025/ai-kids-smartwatch.webp)
-
-## AI
+## AI (Artificial Intelligence)
 
 We are seeing AI-enabled scams a lot more these days. AI voices that can mimic anyone are at the disposal of scammers.
 
@@ -101,6 +99,9 @@ India has a bigger problem with a lack of checks and balances regarding security
 	- Even with the [Digital Personal Data Protection Act](https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023), consumer complaints about data misuse or security breaches often had limited recourse.
 	- Enforcement bodies such as [CERT-In](https://en.wikipedia.org/wiki/Indian_Computer_Emergency_Response_Team) (Indian Computer Emergency Response Team) do address cybersecurity incidents but rarely investigate child-specific data privacy vulnerabilities in wearable devices.
 
+{:.aside .right}
+Not all kids’ smartwatches are as smart as they claim to be. Prioritizing security, functionality, and parental control features will help you choose a device that enhances your child’s safety without compromising their privacy.
+
 ## Alternatives
 
 When parents shop for a children’s smartwatch, they often look for a balance between connection (e.g., the ability to call or message their child) and safety (e.g., location tracking). Unfortunately, many kid-focused smartwatches can introduce significant privacy and security risks—especially cheaper models with insufficient data protection.
@@ -116,7 +117,7 @@ Of course, the best is **not to tether your kids to a digital lease.** Ultimatel
 
 ---
 
-## References
+### References
 
 - **tim.sh (2025)** [Everyone knows your location: tracking myself down through in-app ads](https://timsh.org/tracking-myself-down-through-in-app-ads/), [read the interesting comments](https://news.ycombinator.com/item?id=42909921) on Hacker News
 - **Kinzoo (2023)** [The pros and cons of smartwatches for children](https://www.kinzoo.com/blog/the-pros-and-cons-of-smartwatches-for-children)
