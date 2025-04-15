@@ -1,5 +1,9 @@
 # A
 
+## 2025
+
+- [Apache ECharts](https://echarts.apache.org/) is an Open Source JavaScript Visualization.
+
 ## 2024
 
 - [AlternateOSS](https://alternateoss.com) - Free & Open Source Alternatives. Explore the Alternate Universe of Software.

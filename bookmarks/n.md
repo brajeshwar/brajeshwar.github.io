@@ -2,6 +2,7 @@
 
 ## 2025
 
+- [NetBird](https://netbird.io) combines a WireGuard®-based overlay network with Zero Trust Network Access, providing a unified [open-source](https://github.com/netbirdio/netbird) platform for reliable and secure connectivity
 - [Nping](https://github.com/hanshuaikang/Nping) is a Ping Tool with Real-Time Data and Visualizations.
 
 ## 2024

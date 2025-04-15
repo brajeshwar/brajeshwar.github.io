@@ -7,7 +7,7 @@ title: OK
 
 > I agree with you. You’re right.
 
-Whatever you said, your idea, your points and everything is right. Perhaps, I had my opinion but it is my own. Thanks.
+Whatever you say, your idea, your points, everything is correct. I have my opinions, but they are my own. Thanks.
 
 <!-- 
 
