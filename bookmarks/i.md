@@ -1,5 +1,9 @@
 # I
 
+## 2025
+
+- [Infat](https://github.com/philocalyst/infat) is a command line tool to set default openers for file formats and url schemes on macos
+
 ## 2024
 
 - [IronCalc](https://www.ironcalc.com) – [Open-Source](https://github.com/ironcalc/IronCalc/) Spreadsheet Engine.
