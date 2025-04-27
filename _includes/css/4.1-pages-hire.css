@@ -1,0 +1,15 @@
+.page-hire article.testimonials {
+	background: var(--color-zero);
+	border-radius: var(--border-radius);
+	padding: var(--space-smallest) var(--space);
+}
+
+.page-hire article.testimonials p {
+	margin: var(--space) auto;
+	padding-left: var(--space-smallest);
+	border-bottom: var(--border-size) var(--border-style) var(--color-2);
+}
+
+.page-hire article.testimonials p:last-child {
+	border: 0 none;
+}
