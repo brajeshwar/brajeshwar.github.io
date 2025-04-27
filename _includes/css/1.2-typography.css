@@ -35,8 +35,12 @@ blockquote {
 }
 
 blockquote p {
-	margin: 0;
+	margin: 0 auto var(--space);
 	padding: 0;
+}
+
+blockquote p:last-child {
+	margin: 0;
 }
 
 pre {

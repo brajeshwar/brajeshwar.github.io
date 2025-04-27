@@ -3,8 +3,8 @@ main:
   url: "/about/"
 - title: Archives
   url: "/archives/"
-- title: Newsletter
-  url: "/newsletter/"
+- title: Hire
+  url: "/hire/"
 
 footer:
 - title: Home
