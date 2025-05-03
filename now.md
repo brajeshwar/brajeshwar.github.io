@@ -11,8 +11,6 @@ I started <a href="https://valinor.earth">Valinor Earth</a> to help businesses f
 
 </div>
 
-{% include_relative now/2025.md %}
-
 {% include_relative now/2024.md %}
 
 {% include_relative now/2016.md %}
