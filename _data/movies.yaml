@@ -210,6 +210,10 @@
   year: 1992
   img: reservoir-dogs.webp
   url: https://en.wikipedia.org/wiki/Reservoir_Dogs
+- title: "The Rocketeer"
+  year: 1991
+  img: the-rocketeer.webp
+  url: https://en.wikipedia.org/wiki/The_Rocketeer_(film)
 - title: "Scarface"
   year: 1983
   img: scarface.webp
