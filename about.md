@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<img class="small right" width="480px" height="480px" src="https://cdn.oinam.com/img/avatar/brajeshwar.webp" alt="Brajeshwar Oinam">
+<img class="small right" width="480px" height="480px" src="https://cdn.oinam.com/img/avatar/brajeshwar.jpg" alt="Brajeshwar Oinam">
 
 Hi, my name is Brajeshwar Oinam.
 

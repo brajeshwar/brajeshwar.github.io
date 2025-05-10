@@ -1,10 +1,10 @@
 - title: "Nokia 5110"
-  years: 1999-1999
+  years: 1999
   released: 1998
   img: img.jpg
   url: https://en.wikipedia.org/wiki/Nokia_5110
 - title: "Nokia 8210"
-  years: 2000-2000
+  years: 2000
   released: 1999
   img: img.jpg
   url: https://en.wikipedia.org/wiki/Nokia_8210
@@ -49,7 +49,7 @@
   img: img.jpg
   url: https://en.wikipedia.org/wiki/IPhone_11_Pro
 - title: "iPhone 13 Mini"
-  years: 2021-2024
+  years: 2021-Present
   released: 2021
   img: img.jpg
   url: https://en.wikipedia.org/wiki/IPhone_13
