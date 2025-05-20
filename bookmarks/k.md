@@ -1,5 +1,9 @@
 # K
 
+## 2025
+
+- [K-Scale](https://www.kscale.dev) Open-source humanoid robots, built for developers.
+
 ## 2024
 
 - [Krita](https://krita.org/en/) is a FREE and [open source](https://invent.kde.org/graphics/krita) painting program. It is made by artists that want to see affordable art tools for everyone.
