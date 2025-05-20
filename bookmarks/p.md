@@ -1,5 +1,9 @@
 # P
 
+# 2025
+
+- [pure.md](https://pure.md) is a REST API that lets AI agents and developers reliably access and cache web content.
+
 ## 2024
 
 - [Publii](https://getpublii.com) is an [open-source](https://github.com/GetPublii/Publii) Static Site Generator App.

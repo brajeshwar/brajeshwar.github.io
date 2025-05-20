@@ -35,12 +35,12 @@ sass:
   sourcemap: never
 
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-algolia
-  - jekyll-redirect-from  
+  - jekyll-feed
   - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-redirect-from  
+  - jekyll-sitemap
   - jekyll-titles-from-headings
   
 optional_front_matter:

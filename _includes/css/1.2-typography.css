@@ -51,17 +51,15 @@ pre {
 }
 
 /* normal code that is not attached to a code highlighter */
+code.language-plaintext,
 mark,
-.mark,
-code.language-plaintext {
-	padding: 2px var(--space-2xs);
+.mark {
+	padding: var(--space-3xs) var(--space-xs);
 	
-	font-size: smaller;
-	color: var(--text-color-light);
+	font-size: var(--step--1);
 	
-	background-color: var(--bg-color);
-	border-radius: var(--border-radius);
-	border-bottom: var(--border-size) var(--border-style) var(--border-color);
+	background: var(--bg-color-low);
+	border-radius: var(--border-radius-larger);
 
 	/* fix edges of wrapped inline elements	*/
 	-webkit-box-decoration-break: clone;
