@@ -1,6 +1,5 @@
 ---
 image: /static/2006/hdr-baby-elephant.jpg
-image-title: Baby Elephant at the Bannerghatta National Park (Bangalore)
 ---
 
 # What are HDR or High Dynamic Range Images

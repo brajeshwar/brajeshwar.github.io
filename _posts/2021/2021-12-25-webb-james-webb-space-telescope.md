@@ -1,6 +1,5 @@
 ---
 image: https://cdn.oinam.com/img/science/webb-rendering-03.webp
-image-title: The James Webb Space Telescope
 ---
 
 # James Webb Space Telescope (JWST or "Webb")

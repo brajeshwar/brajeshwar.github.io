@@ -1,6 +1,5 @@
 ---
 image: /static/2013/iron-man-3.webp
-image-title: Iron Man 3
 ---
 
 # What Startups can learn from Iron Man 3

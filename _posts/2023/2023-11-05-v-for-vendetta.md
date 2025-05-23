@@ -1,6 +1,5 @@
 ---
 image: /static/2023/v-for-vendetta.webp
-image-title: V for Vendetta
 ---
 
 # V for Vendetta

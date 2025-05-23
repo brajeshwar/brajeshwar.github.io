@@ -1,6 +1,5 @@
 ---
 image: /static/2007/nokia-n95.webp
-image-title: Nokia N95
 ---
 
 # Nokia N95 - the ultimate geek phone

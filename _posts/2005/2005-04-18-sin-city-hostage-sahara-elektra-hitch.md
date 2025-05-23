@@ -1,6 +1,5 @@
 ---
 image: /static/2005/sin-city.webp
-image-title: Sin City
 ---
 
 # Sin City, Hostage, Sahara, Elektra, Hitch
