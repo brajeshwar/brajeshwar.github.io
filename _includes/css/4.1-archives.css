@@ -5,13 +5,12 @@ page-archives {
 	border: 1px solid var(--border-color);
 }
 
-page-archives a {
+page-archives a,
+page-archives a:visited,
+page-archives a:hover,
+page-archives a:active {
 	display: block;
 	text-decoration: none;
-}
-
-page-archives a:hover, page-archives a:active {
-	text-decoration: underline;
 }
 
 page-archives table {

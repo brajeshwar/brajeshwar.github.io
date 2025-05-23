@@ -30,28 +30,28 @@ home-container home-books     { grid-area: books; }
 home-container home-connect   { grid-area: connect; }
 
 home-container home-intro {
-  font-family: var(--font-family-alt);
   font-size: var(--step-2);
   font-weight: var(--font-weight-light);
-  line-height: var(--scale-small);
 }
 
 home-container home-intro h1 {
   margin: 0 0 var(--space-s) 0;
   padding: 0;
-  font-family: var(--font-family-alt);
   font-size: var(--step-3);
 }
 
 home-container home-intro p {
   margin: 0;
   padding: 0;
+  font-size: var(--step-2);
 }
 
 /* BLOG POSTS */
 home-posts {
   display: block;
 }
+
+posts-recent {}
 
 posts-recent ul {
   list-style: none;
@@ -76,8 +76,9 @@ posts-recent ul li a, posts-recent ul li a:visited {
   margin: 0;
   padding: var(--space-xs) var(--space-s);
   
+  font-family: var(--font-family-alt);
   font-size: var(--step-1);
-  line-height: var(--scale-small);
+  font-weight: var(--font-weight-lighter);
   text-decoration: none;
   
   background: var(--bg-color-low);
@@ -86,6 +87,7 @@ posts-recent ul li a, posts-recent ul li a:visited {
 }
 
 posts-recent ul li a:hover, posts-recent ul li a:active {
+  text-decoration: none;
   background: var(--bg-color);
   border-color: var(--border-color-high);
 }
@@ -216,6 +218,11 @@ home-books li {
   
   flex-basis: auto;
   flex-grow: 1;
+
+  font-family: var(--font-family-ui);
+  font-size: var(--step--1);
+  font-weight: var(--font-weight-light);
+  line-height: var(--scale-small);
 }
 
 home-books li a {
@@ -225,8 +232,6 @@ home-books li a {
   height: 100%;
   
   text-decoration: none;
-  font-weight: var(--font-weight-light);
-  line-height: var(--scale-small);
   color: var(--text-color-lower);
 
   background-repeat: no-repeat;

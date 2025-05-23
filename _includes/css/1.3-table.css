@@ -48,7 +48,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover, tbody tr:active {
-  border-bottom-color: var(--border-color);
+  border-bottom-color: var(--border-color-high);
 }
 
 

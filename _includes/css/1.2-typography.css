@@ -1,20 +1,22 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-family);
+	font-family: var(--font-family-headings);
 	font-weight: var(--font-weight-light);
 	line-height: var(--scale-small);
-	text-wrap: balance; /* Others */
-	text-wrap: pretty; /* Chrome as of SEP-2024 */
+	text-wrap: balance;
+	text-wrap: pretty;
 }
 
 a, a:visited {
   color: var(--text-color-link);
+  text-decoration: underline;
   text-decoration-color: var(--text-color-lower);
-  text-decoration-thickness: 0.7px;
+  text-decoration-thickness: 0.8px;
   text-underline-offset: 0.3rem;
 }
 
 a:hover, a:active {
   color: var(--text-color-link-active);
+  text-decoration: underline;
   text-decoration-color: var(--text-color);
   text-decoration-thickness: 1px;
 }
@@ -26,7 +28,6 @@ blockquote {
 	font-family: var(--font-family-alt);
 	font-size: var(--step-1);
 	font-weight: var(--font-weight-light);
-	line-height: var(--scale-small);
 	hyphens: auto;
 	
 	color: var(--text-color-higher);
@@ -58,7 +59,7 @@ mark,
 	
 	font-size: var(--step--1);
 	
-	background: var(--bg-color-low);
+	background: var(--bg-color);
 	border-radius: var(--border-radius-larger);
 
 	/* fix edges of wrapped inline elements	*/
@@ -76,9 +77,8 @@ aside, .aside {
 	padding: var(--space-s) var(--space-m);
 
 	font-family: var(--font-family-alt);
-	font-size: var(--step-1);
+	font-size: var(--step-0);
 	font-weight: var(--font-weight-light);
-	line-height: var(--scale-small);
 	hyphens: auto;
 
 	background: var(--bg-color-low);
