@@ -7,14 +7,14 @@
   
   <posts-recent>
     <ul>
-      {%- for post in site.posts limit: 9 -%}
+      {% for post in site.posts limit: 9 %}
       <li>
         <a href="{{ post.url }}">
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
           {{ post.title }}
         </a>
       </li>
-      {%- endfor -%}
+      {% endfor %}
     </ul>
   </posts-recent>
 
@@ -24,12 +24,12 @@
       Some of the popular posts ranked by major search engines.
     </p>
     <ul class="home__blog--popular-items">
-      {% for item in site.data.posts-popular -%}
+      {% for item in site.data.posts-popular %}
       <li>
         <a href="{{ item.url }}">{{ item.title }}</a>
         <time>{{ item.time }}</time>
       </li>
-      {% endfor -%}
+      {% endfor %}
     </ul>
   </posts-popular>
   {% endif %}

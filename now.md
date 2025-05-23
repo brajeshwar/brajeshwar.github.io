@@ -5,11 +5,7 @@ styles: css/4.1-pages-now.css
 style: page-now
 ---
 
-<div class="now-now" markdown="1">
-
-I started <a href="https://valinor.earth">Valinor Earth</a> to help businesses fight climate change. After a few trials, pivots, and feedback, we decided to leverage satellite data to help companies with their efforts on climate projects with project financing, monitoring, reporting, and verification.
-
-</div>
+> I started [Valinor Earth](https://valinor.earth) to help businesses fight climate change. After a few trials, pivots, and feedback, we decided to leverage satellite data to help companies with their efforts on climate projects with project financing, monitoring, reporting, and verification.
 
 {% include_relative now/2024.md %}
 

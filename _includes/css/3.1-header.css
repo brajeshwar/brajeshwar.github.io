@@ -48,6 +48,7 @@ site-logo a:active .logo__img, site-logo a:active .logo__img--path {
 /* menu */
 site-nav {
 	padding: var(--space-2xs) var(--space-s);
+	font-family: var(--font-family-ui);
 	font-size: var(--step--1);
 	background-color: var(--bg-color-high);
 	border-radius: var(--border-radius-larger);

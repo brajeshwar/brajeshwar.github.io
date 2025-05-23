@@ -78,8 +78,10 @@
   --font-family-monospace : Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
   --font-family-cursive   : cursive;
 
-  --font-family           : 'Helvetica Neue', 'Helvetica', var(--font-family-sans);
-  --font-family-alt       : 'Georgia', 'Times New Roman', var(--font-family-serif);
+  --font-family           : 'Merriweather', var(--font-family-serif);
+  --font-family-alt       : 'Merriweather Sans', var(--font-family-sans);
+  --font-family-headings  : 'Merriweather Sans', var(--font-family-sans);
+  --font-family-ui        : var(--font-family-sans);
 
   --font-weight-lighter   : 200;
   --font-weight-light     : 300;
@@ -100,9 +102,9 @@
   --display-large         : 1024px;
   --display-extralarge    : 1600px;
 
-  --scale-small           : var(--augmented-fourth);
-  --scale                 : var(--golden);
-
+  --scale                 : var(--major-sixth);
+  --scale-small           : var(--major-third);
+  
   --space                 : calc(var(--scale) * 1rem);
   --space-small           : calc(var(--scale-small) * 0.8rem);
   --space-smaller         : calc(var(--scale-small) * 0.5rem);
