@@ -1,6 +1,5 @@
 ---
 image: /static/2012/the-jetsons-and-rosie-the-robot.jpg
-image-title: The Jetsons and Rosie, the Robot
 ---
 
 # Rosie Jetson - Coming to a home near YOU?

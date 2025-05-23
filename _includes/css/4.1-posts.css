@@ -22,11 +22,11 @@ photo-cover {
 	}	
 }
 
-photo-cover:has(+ photo-cover__caption) {
+photo-cover:has(+ photo-cover__desc) {
 	margin-bottom: var(--space-3xs);
 }
 
-photo-cover__caption {
+photo-cover__desc {
 	display: block;
 	max-width: var(--body-width-ideal);
 	margin: var(--space-2xs) auto var(--space-m) auto;

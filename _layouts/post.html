@@ -5,8 +5,8 @@ styles: styles-posts.html
 
 {%- if page.image -%}
   <photo-cover style="background-image: url({{ page.image }});"></photo-cover>
-  {%- if page.image-caption -%}
-  <photo-cover__caption>{{ page.image-caption }}</photo-cover__caption>
+  {%- if page.image-desc -%}
+  <photo-cover__desc>{{ page.image-desc }}</photo-cover__desc>
   {%- endif -%}
 {% endif %}
 

@@ -1,3 +1,8 @@
+---
+image: https://cdn.oinam.com/img/painting/last-supper.webp
+image-desc: Depiction of the Last Supper by Leonardo da Vinci in late-1490s, Milan, Italy.
+---
+
 # Leonardo da Vinci
 
 [Walter Isaacson](https://en.wikipedia.org/wiki/Walter_Isaacson) is a historian and journalist best known for writing biographies of important public figures, including [Henry Kissinger](https://en.wikipedia.org/wiki/Henry_Kissinger), [Benjamin Franklin](https://en.wikipedia.org/wiki/Benjamin_Franklin), [Albert Einstein](https://en.wikipedia.org/wiki/Albert_Einstein), [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs), [Jennifer Doudna](https://en.wikipedia.org/wiki/Jennifer_Doudna), and [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk).
@@ -6,20 +11,15 @@ One of the best books which I like the most is Leonardo da Vinci.[^LeonardoDaVin
 
 > “Study the science of art. Study the art of science. Develop your senses—especially learn how to see. Realize that everything connects to everything else.”
 
-Among his many other brilliant works, Leonardo da Vinci produced the two most famous paintings in history: The Last Supper and the Mona Lisa. With a passion that sometimes became obsessive, he pursued innovative studies of anatomy, fossils, birds, the heart, flying machines, botany, geology, and weaponry. His ability to stand at the crossroads of the humanities and the sciences, made iconic by his drawing of Vitruvian Man, made him history’s most creative genius.
+Among his many other brilliant works, Leonardo da Vinci produced the two most famous paintings in history: The Last Supper[^TheLastSupper] and the Mona Lisa[^MonaLisa]. With a passion that sometimes became obsessive, he pursued innovative studies of anatomy, fossils, birds, the heart, flying machines, botany, geology, and weaponry. His ability to stand at the crossroads of the humanities and the sciences, made iconic by his drawing of Vitruvian Man, made him history’s most creative genius.
+
+<img class="large" src="/static/2024/leonardo-da-vinci-as-an-apprentice.webp" alt="A young Leonardo da Vinci as an apprentice.">
 
 Leonardo started early as an apprentice in the workshop of Andrea del Verrocchio in Florence, where he was exposed to a wide array of disciplines, including painting, sculpture, and mechanical arts.
 
 His early exposure to various fields shaped Leonardo’s broad interests. He soon surpassed his contemporaries with his incredible ability to observe the world around him and translate those observations into art and designs. The meticulous precision with which he approached painting, coupled with his scientific curiosity, laid the groundwork for his later masterpieces.
 
-<figure class="full">
-  <a href="https://en.wikipedia.org/wiki/Last_Supper"><img src="https://cdn.oinam.com/img/painting/last-supper.webp" alt="The Last Supper by Leonardo da Vinci" loading="lazy"></a>
-  <figcaption>
-    Depictions of the Last Supper by Leonardo da Vinci in late-1490s, Milan, Italy.
-  </figcaption>
-</figure>
-
-Painted between 1495 and 1498, [The Last Supper](https://en.wikipedia.org/wiki/Last_Supper) is a large mural depicting the moment Jesus Christ announces that one of his disciples will betray him. Leonardo demonstrates his mastery of perspective, light, and human emotion. The twelve apostles are arranged in groups of three, and each character reacts differently to Christ’s revelation, giving the painting a sense of drama and psychological depth.
+Painted between 1495 and 1498, [The Last Supper](https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)) is a large mural depicting the moment Jesus Christ announces that one of his disciples will betray him. Leonardo demonstrates his mastery of perspective, light, and human emotion. The twelve apostles are arranged in groups of three, and each character reacts differently to Christ’s revelation, giving the painting a sense of drama and psychological depth.
 
 However, The Last Supper was painted using an experimental technique—tempera on a dry plaster wall—which made it highly susceptible to damage. Over the centuries, the painting has deteriorated significantly, requiring multiple restoration efforts. It is one of the most studied and revered works in art history.
 
@@ -33,7 +33,7 @@ Leonardo constantly questioned the natural world. He was a prolific writer and s
 
 Leonardo’s anatomical studies extended to the physiology of the body as well. He was fascinated by how the human body functioned, and his drawings of the human heart, for example, are incredibly accurate, anticipating modern anatomical discoveries. His research into the circulation of blood, muscle movement, and the brain was groundbreaking, although his findings were not published in his lifetime.
 
-{:.aside .right}
+{:.aside}
 in 1994, Bill Gates purchased the Codex Leicester,[^CodexLeicester] a collection of scientific writings by Leonardo da Vinci, for US$30.8 million at an auction.
 
 Leonardo’s notebooks are filled with designs for machines that, though never built in his time, foreshadowed future technological developments. He sketched ideas for flying machines, including an early version of a helicopter, a parachute, and even a tank. Unfortunately, these inventions were not feasible with the technology available in the 15th century.
@@ -41,6 +41,10 @@ Leonardo’s notebooks are filled with designs for machines that, though never b
 Leonardo da Vinci exemplified the Renaissance ideal of a polymath—someone who is not bound by one discipline but seeks to understand the world in all its complexity.
 
 [^LeonardoDaVinci]: [Leonardo di ser Piero da Vinci](https://en.wikipedia.org/wiki/Leonardo_da_Vinci) (15 April 1452 – 2 May 1519) was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect. While his fame initially rested on his achievements as a painter, he has also become known for his notebooks, in which he made drawings and notes on a variety of subjects, including anatomy, astronomy, botany, cartography, painting, and palaeontology. Leonardo is widely regarded to have been a genius who epitomised the Renaissance humanist ideal, and his collective works comprise a contribution to later generations of artists.
+
+[^TheLastSupper]: [The Last Supper](https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)) is a mural painting by Leonardo da Vinci, dated to c. 1495–1498, housed in the refectory of the Convent of [Santa Maria delle Grazie](https://en.wikipedia.org/wiki/Santa_Maria_delle_Grazie,_Milan) in [Milan](https://en.wikipedia.org/wiki/Milan), Italy. The painting represents the scene of the [Last Supper](https://en.wikipedia.org/wiki/Last_Supper) of Jesus with the Twelve Apostles, as it is told in the Gospel of John – specifically the moment after Jesus announces that one of his apostles will betray him. Its handling of space, mastery of perspective, treatment of motion and complex display of human emotion has made it one of the Western world’s most recognizable paintings and among Leonardo’s most celebrated works. Some commentators consider it pivotal in inaugurating the transition into what is now termed the High Renaissance.
+
+[^MonaLisa]: The [Mona Lisa](https://en.wikipedia.org/wiki/Mona_Lisa) is a half-length portrait painting by Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as “the best known, the most visited, the most written about, the most sung about, and the most parodied work of art in the world.” The painting’s novel qualities include the subject’s enigmatic expression, monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.
 
 [^Sfumato]: [Sfumato](https://en.wikipedia.org/wiki/Sfumato) is a painting technique for softening the transition between colours, mimicking an area beyond what the human eye is focusing on, or the out-of-focus plane. It is one of the canonical painting modes of the Renaissance. Leonardo da Vinci was the most prominent practitioner of sfumato, based on his research in optics and human vision, and his experimentation with the camera obscura. He introduced it and implemented it in many of his works, including the Virgin of the Rocks and in his famous painting of the Mona Lisa. He described sfumato as “without lines or borders, in the manner of smoke.”
 

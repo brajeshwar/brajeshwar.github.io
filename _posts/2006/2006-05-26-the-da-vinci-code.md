@@ -1,6 +1,5 @@
 ---
 image: /static/2006/da-vinci-code-cryptex.webp
-image-title: Cryptex from the DaVinci Code
 ---
 
 # The Da Vinci Code

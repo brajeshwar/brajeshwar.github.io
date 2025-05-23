@@ -1,6 +1,5 @@
 ---
 image: /static/2012/svalbard-seed-vault.webp
-image-title: Svalbard Seed Vault
 ---
 
 # Doomsday Biotech Gene Bank - a redundant server farm protecting biodiversity

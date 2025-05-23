@@ -1,6 +1,5 @@
 ---
 image: /static/2006/apple-macbook.jpg
-image-title: Apple Mac Powerbook
 ---
 
 # Mac Convert! Am I?

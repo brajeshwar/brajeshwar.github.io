@@ -1,6 +1,5 @@
 ---
 image: /static/2013/the-design-of-everyday-things.webp
-image-title: The Design of Everyday Things by Don Norman
 ---
 
 # The Design of Everyday Things

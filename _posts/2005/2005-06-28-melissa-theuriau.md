@@ -1,6 +1,5 @@
 ---
 image: https://cdn.oinam.com/img/people/melissa-theuriau.webp
-image-title: Mélissa Theuriau
 ---
 
 # Mélissa Theuriau

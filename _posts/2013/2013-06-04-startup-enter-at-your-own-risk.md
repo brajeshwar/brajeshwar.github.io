@@ -1,6 +1,5 @@
 ---
 image: /static/2013/startup-enter-at-your-own-risk.jpg
-image-title: Enter at your own Risk. Next Stop. Startup.
 ---
 
 # Enter at your own Risk. Next Stop. Startup.

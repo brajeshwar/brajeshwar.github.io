@@ -1,6 +1,5 @@
 ---
 image: /static/2016/accelerator.webp
-image-title: Startup Accelerator
 ---
 
 # Great Accelerators and the types of Startups they work with
