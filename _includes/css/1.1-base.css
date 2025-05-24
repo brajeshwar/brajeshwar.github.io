@@ -6,11 +6,13 @@
   font-optical-sizing: auto;
 }
 
+/*
 @supports (font-variation-settings: normal) {
   :root {
-  /* font-family: "InterVariable", var(--font-family-sans); */
+   font-family: "InterVariable", var(--font-family-sans); 
   }
 }
+*/
 
 *,
 ::before,

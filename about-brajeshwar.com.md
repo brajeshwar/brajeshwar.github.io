@@ -6,15 +6,15 @@ permalink: /about/brajeshwar.com/
 
 The domain `brajeshwar.com` was registered on `Jun 11, 2001`.
 
-I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the [Flash](https://en.wikipedia.org/wiki/Adobe_Flash) tips, tricks, and things I was doing. That's how it all started. My website started as a Flash-Website.
+I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash[^Flash] tips, tricks, and things I was doing. That’s how it all started. My website started as a Flash-Website.
 
-I moved on to [Blogspot](https://en.wikipedia.org/wiki/Blogger_(service)), later known as [Blogger](https://www.blogger.com/), then to [MovableType](https://movabletype.org) in 2002, and later to [WordPress](https://wordpress.org) by 2003-2004, ever since its early beta. I stayed with WordPress for a very long time - about 18 years.
+I moved on to Blogspot,[^Blogspot] then to Movable Type[^MovableType] in 2002, and later to WordPress[^WordPress] by 2003-2004, ever since its early beta. [I stayed with WordPress](/2024/wordpress/) for a very long time–about 18 years.
 
 Initially, the site was hosted on few local shared servers. The site really did grew in popularity after Macromedia's recognition. Later, it was cared for by [Media Temple](https://mediatemple.net), [Medium Cube](https://mediumcube.com) (special thanks to [Tamouh Hakmi](https://www.linkedin.com/in/tamouh/)), [Pagely](https://pagely.com), and [WPEngine](https://wpengine.com).
 
 ## Writers
 
-Quite a few writers contributed to brajeshwar.com. Unfortunately, the website is now super simplified. I upgraded to as much plain-text as possible, with some minimal formatting with MarkDown. I use a simple tool to automate the conversion to HTML.
+Quite a few writers contributed to brajeshwar.com. The website is now simplified. I upgraded to as much plain-text as possible, with some minimal formatting with MarkDown. I use a simple tool to automate the conversion to HTML.
 
 So, no writers are highlighted in the articles. However, I will be forever grateful to these awesome people who contributed to the website;
 
@@ -27,6 +27,15 @@ So, no writers are highlighted in the articles. However, I will be forever grate
 
 ## 20 Years
 
-After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary (2021-JUN-11), the site is now as plain-text as possible, sprinkled with the spices of some [Markdown](https://en.wikipedia.org/wiki/Markdown) and translated by [Jekyll](https://jekyllrb.com). [Github](https://github.com) takes care of the Jekyll part to spit out the HTML ([view source](https://github.com/brajeshwar/brajeshwar.github.io)).
+After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary (Jun 11, 2021), the site is now as plain-text as possible, sprinkled with the spices of some [Markdown](https://en.wikipedia.org/wiki/Markdown) and translated by [Jekyll](https://jekyllrb.com). [Github](https://github.com) takes care of the Jekyll part to spit out the HTML ([view source](https://github.com/brajeshwar/brajeshwar.github.io)).
 
 I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles.
+
+
+[^Flash]: Erstwhile [Macromedia](https://en.wikipedia.org/wiki/Macromedia) Flash and [FutureSplash](https://www.webdesignmuseum.org/software/futuresplash-animator-in-1996) (later, [Adobe Flash](https://en.wikipedia.org/wiki/Adobe_Flash)) is a discontinued multimedia software platform used for production of animations, rich internet applications, desktop applications, mobile apps, mobile games, and embedded web browser video players.
+
+[^Blogspot]: Blogspot is the domain name used by Google’s free blog-hosting service, [Blogger](https://en.wikipedia.org/wiki/Blogger_(service)), to give each user their own “something.blogspot.com” address. Originally developed by [Pyra Labs](https://en.wikipedia.org/wiki/Pyra_Labs) and launched on Aug 23, 1999, Blogger let anyone publish time-stamped posts online with a simple, template-driven editor. Pyra Labs was acquired by Google in February 2003, and since then all new and existing blogs have been hosted on Google’s infrastructure under the blogspot.com subdomain.
+
+[^MovableType]: [Movable Type](https://en.wikipedia.org/wiki/Movable_Type) is a server-based weblog publishing system originally created by [Benjamin](https://en.wikipedia.org/wiki/Benjamin_Trott) and [Mena Trott](https://en.wikipedia.org/wiki/Mena_Grabowski_Trott) at [Six Apart](https://en.wikipedia.org/wiki/Six_Apart), and first announced on Sep 3, 2001, with version 1.0 following on Oct 8, 2001.
+
+[^WordPress]: [WordPress](https://en.wikipedia.org/wiki/WordPress) is a free, open-source [web content management system](https://en.wikipedia.org/wiki/Web_content_management_system) (CMS) originally developed to publish blogs but now capable of powering everything from traditional websites to forums, media galleries, membership sites, learning management systems, and online stores. Written in PHP and paired with a MySQL or MariaDB database, WordPress is distributed under the GNU General Public License (GPLv2 or later). Its core architecture includes a plugin system—allowing developers to extend functionality—and a template system known as “Themes” for layout and design customization. WordPress was first released on May 27, 2003, by its founders, [Matt Mullenweg](https://en.wikipedia.org/wiki/Matt_Mullenweg) and  [Mike Little](https://en.wikipedia.org/wiki/Mike_Little).

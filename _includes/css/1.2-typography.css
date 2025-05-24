@@ -28,7 +28,7 @@ blockquote {
 	font-family: var(--font-family-alt);
 	font-size: var(--step-0);
 	font-weight: var(--font-weight-light);
-	hyphens: auto;
+	hyphens: none;
 	
 	color: var(--text-color-higher);
 	background: var(--bg-color-low);
@@ -79,7 +79,7 @@ aside, .aside {
 	font-family: var(--font-family-alt);
 	font-size: var(--step-0);
 	font-weight: var(--font-weight-light);
-	hyphens: auto;
+	hyphens: none;
 
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
