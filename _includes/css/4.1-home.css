@@ -132,6 +132,7 @@ home-support {
 
 home-support h2 {
   text-transform: lowercase;
+  font-size: var(--step-1);
   font-weight: var(--font-weight-lighter);
   
   border-bottom: 1px solid var(--border-color);

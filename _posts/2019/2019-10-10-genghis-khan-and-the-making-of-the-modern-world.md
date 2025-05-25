@@ -29,6 +29,14 @@ The Mongol Peace facilitated the exchange of ideas, technologies, and goods acro
 
 Moreover, Genghis Khan’s emphasis on meritocracy, religious tolerance, and communication networks left an indelible mark on the political and administrative systems of the regions he conquered. Many of the innovative practices he introduced were embraced by subsequent empires and civilizations, shaping governance in Europe, the Middle East, and Asia for generations.
 
+### References & Updates
+
+[Fall of Civilizations Podcast](https://fallofcivilizationspodcast.com) has a brilliant almost 7-hour episode on [The Mongols - Terror of the Steppe](https://www.youtube.com/watch?v=PdFwMDuAnS4).
+
+<iframe width="100%" src="https://www.youtube.com/embed/PdFwMDuAnS4?si=VYwqK39n-z8x33wr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- May 1, 2025: [Genghis Khan: The Secret History of the Mongols](https://www.imdb.com/title/tt36118991/) is a mini TV Series.
+
 
 [^Mongolia]: [Mongolia](https://en.wikipedia.org/wiki/Mongolia) is a landlocked country in East Asia, bordered by Russia to the north and China to the south and southeast. It covers an area of 1,564,116 square kilometres, with a population of 3.5 million, making it the world’s most sparsely populated sovereign state. Mongolia is the world’s largest landlocked country that does not border an inland sea, and much of its area is covered by grassy steppe, with mountains to the north and west and the Gobi Desert to the south. [Ulaanbaatar](https://en.wikipedia.org/wiki/Ulaanbaatar), the capital and largest city, is home to roughly half of the country’s population.
 [^SilkRoad]: The [Silk Road](https://en.wikipedia.org/wiki/Silk_Road) was a network of Eurasian trade routes active from the second century BCE until the mid-15th century. Spanning over 6,400KM, it played a central role in facilitating economic, cultural, political, and religious interactions between the Eastern and Western worlds. The name “Silk Road” was first coined in the late 19th century, but some 20th- and 21st-century historians instead prefer the term Silk Routes, on the grounds that it more accurately describes the intricate web of land and sea routes connecting Central, East, South, Southeast, and West Asia as well as East Africa and Southern Europe.
