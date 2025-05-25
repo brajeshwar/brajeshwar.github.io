@@ -43,6 +43,8 @@ home-container home-intro h1 {
 home-container home-intro p {
   margin: 0;
   padding: 0;
+
+  font-family: var(--font-family-headings);
   font-size: var(--step-2);
 }
 
