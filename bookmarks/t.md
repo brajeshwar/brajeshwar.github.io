@@ -1,5 +1,9 @@
 # T
 
+## 2025
+
+- A comprehensive list of various [text to diagram](https://xosh.org/text-to-diagram/) tools. Ordered roughly by recency and similarity.
+
 ## 2024
 
 - [There](https://there.pm) is an [open-source](https://github.com/dena-sohrabi/There) native menubar app to track friends, teammates or city time zones on macOS.

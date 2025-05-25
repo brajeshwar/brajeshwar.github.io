@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About Brajeshwar
 ---
 
 <img class="small right" width="480px" height="480px" src="https://cdn.oinam.com/img/avatar/brajeshwar.jpg" alt="Brajeshwar Oinam">
@@ -11,14 +11,13 @@ I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https
 
 ## Work
 
-I migrated and reached [Bombay](/2009/bombay/) on Aug 2, 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
+I landed in [Bombay](/2009/bombay/) on Aug 2, 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
 
 After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a [floppy disk](https://en.wikipedia.org/wiki/Floppy_disk) which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_café) nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
 
-## Internet
+> brajeshwar.com was [registered on Jun 11, 2001](/about/brajeshwar.com/).
 
-{:.aside .right}
-`brajeshwar.com` was [booked on a dare](/about/brajeshwar.com/) and I’m happy with that decision.
+## Internet
 
 It was the Internet boom in India, and the proliferation of the Internet was prominent. I wanted to be part of that world. Within six months through my first job, I shifted my focus to the Online World - started reading lots of books, online resources, and there was no turning back. By mid-2000, I had shifted my focus to the Internet.
 
@@ -47,4 +46,4 @@ I had worked with some fantastic companies. I was one of the Creative Directors 
 
 I've known [Shanta](https://oinam.mom) since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
 
-We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amara.oinam.com/) (Nov 2016).
+We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amaraoinam.com/) (Nov 2016).
