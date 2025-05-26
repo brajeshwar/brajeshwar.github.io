@@ -6,7 +6,7 @@ I was once an [Evernote](https://evernote.com) user since its early days and a p
 
 I have moved to a simpler note-taking and writing habit for my notes. I have chosen a simple, plain-text[^plaintext] life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
 
-{:.aside .right}
+{:.aside}
 “Every device, including ones long gone, and ones not invented yet, can read and edit plain text.” - [Derek Sivers](https://sive.rs/plaintext)
 
 For short, quick notes, I tend to start with Apple’s Notes, share common family notes, and as a scratch pad for everything. If needed, I transfer and add them to the correct folder along with all my notes in my **Notebook**. Right now, I use Obsidian[^Obsidian] to manage my notes. The beauty of this setup is that I can change tools anytime while my notes remain free of any dependency.
@@ -16,6 +16,8 @@ The simplicity of storing plain-text files as individual files is much more help
 For team writing, I’d be happy to use whatever helps the team write better and easier for everyone.
 
 > “Plain text is a powerful universal tool that is almost zero cost, work across platforms, are light enough to work remotely over poor connections, doesn’t go out of date, and is quick to learn.”
+
+<img class="medium right" src="/static/2022/plain-text.jpg" alt="ChatGPT Prompt: An educated man is writing on a notebook with a vintage fountain pen. The image style is of vintage 1950s–style poster in grayscale.">
 
 Plain text is software and operating system-agnostic. It’s searchable, portable, lightweight, and easily manipulated. It’s unstructured. It works when web servers are down or the Internet is not working. There’s no exporting and importing, no databases or tags or flags or stars or prioritizing or any other proprietary induced rules on what you can and can’t do with it.
 
