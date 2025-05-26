@@ -62,6 +62,7 @@ site-nav a, site-nav a:visited {
 
 site-nav a:hover, site-nav a:active, site-nav a.active {
 	color: var(--color-zero);
+	text-decoration: none;
 }
 
 /* mode: light dark */

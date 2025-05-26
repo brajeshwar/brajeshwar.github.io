@@ -2,6 +2,7 @@
 
 ## 2025
 
+- [Canine](https://canine.sh) is a modern, [open source](https://github.com/czhu12/canine) alternative to [Heroku](https://www.heroku.com).
 - [Computer related horror stories, folklore, and anecdotes](https://www.cs.earlham.edu/~skylar/humor/Unix/computer.folklore.from.net.rumors.html) is a collection of anecdotes and stories about computer technology and the people who spend their time working with computers. ([archive](https://archive.is/jBXSl))
 
 ## 2024

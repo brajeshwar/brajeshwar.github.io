@@ -1,5 +1,9 @@
 # F
 
+# 2025
+
+- [Fanaka](https://fanaka.readthedocs.io) is  handbook for African success in the international software industry. It is focused on helping African tech workers work successfully in international tech companies. However, this should be applicable to other regions of the world for those early professionals or even while they are in colleges.
+
 ## 2024
 
 - [Frame0](https://frame0.app/) Make hand-drawn style wireframes quickly and easily.

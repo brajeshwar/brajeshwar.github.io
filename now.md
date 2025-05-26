@@ -9,7 +9,11 @@ style: page-now
 
 {% include_relative now/2024.md %}
 
+{% include_relative now/2020.md %}
+
 {% include_relative now/2016.md %}
+
+{% include_relative now/2010.md %}
 
 {% include_relative now/2008.md %}
 
