@@ -79,8 +79,8 @@
   --font-family-cursive   : cursive;
 
   --font-family           : 'Merriweather', var(--font-family-serif);
-  --font-family-alt       : 'Merriweather Sans', var(--font-family-sans);
-  --font-family-headings  : 'Merriweather Sans', var(--font-family-sans);
+  --font-family-alt       : 'Playfair Display', var(--font-family-sans);
+  --font-family-headings  : 'Playfair Display', var(--font-family-sans);
   --font-family-ui        : var(--font-family-sans);
 
   --font-weight-lighter   : 200;
