@@ -17,8 +17,6 @@ For team writing, I’d be happy to use whatever helps the team write better and
 
 > “Plain text is a powerful universal tool that is almost zero cost, work across platforms, are light enough to work remotely over poor connections, doesn’t go out of date, and is quick to learn.”
 
-<img class="medium right" src="/static/2022/plain-text.jpg" alt="ChatGPT Prompt: An educated man is writing on a notebook with a vintage fountain pen. The image style is of vintage 1950s–style poster in grayscale.">
-
 Plain text is software and operating system-agnostic. It’s searchable, portable, lightweight, and easily manipulated. It’s unstructured. It works when web servers are down or the Internet is not working. There’s no exporting and importing, no databases or tags or flags or stars or prioritizing or any other proprietary induced rules on what you can and can’t do with it.
 
 The only additional formatting I’m comfortable adding is Markdown[^Markdown]. It is designed to be human-readable. It’s not obfuscated by encoding; you can directly edit the source files with most editors or edit them automatically with scripts. My self-imposed limitation is to stay within the confines of human readability — the Markdown text files should still be readable by someone without a clue about Markdown.
