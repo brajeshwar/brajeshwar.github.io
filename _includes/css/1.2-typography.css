@@ -78,10 +78,7 @@ mark,
 article {}
 
 aside, .aside {
-	float: left;
-	width: 70%;
-	margin: var(--space-3xs) var(--space-s);
-	margin-left: -10vw;
+	margin: var(--space-2xs) auto;
 	padding: var(--space-s) var(--space-m);
 
 	font-family: var(--font-family-alt);
@@ -95,14 +92,14 @@ aside, .aside {
 
 aside.left, .aside.left {
 	float: left;
-	margin: var(--space-3xs) var(--space-s);
 	margin-left: -10vw;
+	width: 70%;
 }
 
 aside.right, .aside.right {
 	float: right;
-	margin: var(--space-3xs) var(--space-s);
 	margin-right: -10vw;
+	width: 70%;
 }
 
 /* rest in small screen, it becomes the same as a blockquote */
@@ -118,7 +115,7 @@ aside.right, .aside.right {
 }
 
 li::marker {
-  color: var(--text-color-lower);
+  color: var(--text-color-low);
 }
 
 /* code highlighter from https://github.com/richleland/pygments-css */
