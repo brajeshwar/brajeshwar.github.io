@@ -11,18 +11,18 @@ class ThemeToggle extends HTMLElement {
     this.button = document.createElement('button');
     this.button.setAttribute('aria-label', 'Toggle theme');
     this.button.classList.add('theme-toggle');
-    
+
     // Create icon container
     this.iconContainer = document.createElement('span');
     this.iconContainer.classList.add('theme-toggle-icon');
     this.button.appendChild(this.iconContainer);
-    
+
     // Add click handler
     this.button.addEventListener('click', () => this.toggleTheme());
-    
+
     // Add button to component
     this.appendChild(this.button);
-    
+
     // Set initial theme
     this.setTheme(this.getCurrentTheme());
   }
@@ -39,7 +39,7 @@ class ThemeToggle extends HTMLElement {
   setTheme(theme) {
     // Remove any existing theme classes
     document.documentElement.classList.remove('theme-light', 'theme-dark');
-    
+
     if (theme === 'light') {
       document.documentElement.classList.add('theme-light');
     } else if (theme === 'dark') {
@@ -49,10 +49,10 @@ class ThemeToggle extends HTMLElement {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       document.documentElement.classList.add(prefersDark ? 'theme-dark' : 'theme-light');
     }
-    
+
     // Update icon
     this.updateIcon(theme);
-    
+
     // Save theme preference
     localStorage.setItem('theme', theme);
   }
@@ -60,8 +60,8 @@ class ThemeToggle extends HTMLElement {
   updateIcon(theme) {
     const icons = {
       auto: `<svg viewBox="0 0 24 24" width="24" height="24">
-        <path fill="currentColor" d="M12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
-        <path fill="currentColor" d="M12 4V2M12 22v-2M4.93 4.93L3.51 3.51M20.49 20.49l-1.42-1.42M2 12H0M24 12h-2M4.93 19.07l-1.42 1.42M20.49 3.51l-1.42 1.42"/>
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path fill="currentColor" d="M12,2v20c5.523,0,10-4.477,10-10S17.523,2,12,2z"/>
       </svg>`,
       light: `<svg viewBox="0 0 24 24" width="24" height="24">
         <path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
@@ -70,7 +70,7 @@ class ThemeToggle extends HTMLElement {
         <path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
       </svg>`
     };
-    
+
     this.iconContainer.innerHTML = icons[theme];
   }
 

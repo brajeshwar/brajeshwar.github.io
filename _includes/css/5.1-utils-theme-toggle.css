@@ -14,8 +14,7 @@
 }
 
 .theme-toggle:hover {
-  color: var(--color-zero);
-  background-color: var(--text-color);
+  color: var(--text-color);
 }
 
 .theme-toggle-icon {
