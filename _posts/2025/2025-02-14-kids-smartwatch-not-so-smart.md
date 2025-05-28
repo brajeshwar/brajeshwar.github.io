@@ -6,7 +6,8 @@ image: /static/2025/kids-smartwatch.webp
 
 In 2016, I decided to try a watch for my kid with GPS and the ability to call pre-defined numbers. One fateful evening, after about a year of usage, I called their support and asked them to locate the watch. I was beyond surprised when they could pinpoint within meters of where the watch might be. Probing further, I realized they have their servers somewhere in the underbelly of Andheri (East), Bombay. I know those places; those were the places I started my professional career, and I remember spending countless evenings sipping tea from the local street vendors there. That was when I decided never to trust these services and stopped using them.
 
-> These watches are made in China, resold, and serviced by local Indian companies.
+{:.aside .right}
+These watches are made in China, resold, and serviced by local Indian companies.
 
 Of course, your cell phone service providers know your exact locations while you use a phone. Your smartphone Operating System (iOS, Android) providers and manufacturers also know almost all the details of what you have on your phone—from locations to your browsing habits to the places you go out to eat, your office, and your home.
 
@@ -18,8 +19,7 @@ That leaves third-party companies selling Smartwatches, especially for kids, tha
 
 We are seeing AI-enabled scams a lot more these days. AI voices that can mimic anyone are at the disposal of scammers.
 
-- What if someone calls you in your kid’s voice, asking to pick them up from somewhere someone spoofed their GPS.
-- Or the Smartphone’s server data got leaked (even if unintentionally), and the entire time series of your kids’ movement, locations of interest, and where they usually go goes to people with bad intentions.
+Imagine a scenario when someone calls you in your kid’s voice, asking to pick them up from somewhere someone spoofed their GPS. Or the Smartphone’s server data got leaked (even if unintentionally), and the entire time series of your kids’ movement, locations of interest, and where they usually go goes to people with bad intentions.
 
 These are hypothetical and bare-minimal incidents that can and might happen. A lot worse can come out of this lethargic and insecure method of strapping a digital tether to your kids with a device that can pinpoint their location within meters, listen to their voices every second, and track their whereabouts.
 
@@ -99,7 +99,6 @@ India has a bigger problem with a lack of checks and balances regarding security
 	- Even with the [Digital Personal Data Protection Act](https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023), consumer complaints about data misuse or security breaches often had limited recourse.
 	- Enforcement bodies such as [CERT-In](https://en.wikipedia.org/wiki/Indian_Computer_Emergency_Response_Team) (Indian Computer Emergency Response Team) do address cybersecurity incidents but rarely investigate child-specific data privacy vulnerabilities in wearable devices.
 
-{:.aside .right}
 Not all kids’ smartwatches are as smart as they claim to be. Prioritizing security, functionality, and parental control features will help you choose a device that enhances your child’s safety without compromising their privacy.
 
 ## Alternatives

@@ -46,6 +46,7 @@ home-container home-intro p {
 
   font-family: var(--font-family-headings);
   font-size: var(--step-2);
+  line-height: var(--scale-small);
 }
 
 /* BLOG POSTS */
@@ -80,7 +81,8 @@ posts-recent ul li a, posts-recent ul li a:visited {
   
   font-family: var(--font-family-alt);
   font-size: var(--step-1);
-  font-weight: var(--font-weight-lighter);
+  font-weight: var(--font-weight-light);
+  line-height: var(--scale-small);
   text-decoration: none;
   
   background: var(--bg-color-low);

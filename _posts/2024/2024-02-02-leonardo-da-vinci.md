@@ -33,8 +33,8 @@ Leonardo constantly questioned the natural world. He was a prolific writer and s
 
 Leonardo’s anatomical studies extended to the physiology of the body as well. He was fascinated by how the human body functioned, and his drawings of the human heart, for example, are incredibly accurate, anticipating modern anatomical discoveries. His research into the circulation of blood, muscle movement, and the brain was groundbreaking, although his findings were not published in his lifetime.
 
-{:.aside}
-in 1994, Bill Gates purchased the Codex Leicester,[^CodexLeicester] a collection of scientific writings by Leonardo da Vinci, for US$30.8 million at an auction.
+{:.aside .right}
+In 1994, Bill Gates purchased the Codex Leicester,[^CodexLeicester] a collection of scientific writings by Leonardo da Vinci, for US$30.8 million at an auction.
 
 Leonardo’s notebooks are filled with designs for machines that, though never built in his time, foreshadowed future technological developments. He sketched ideas for flying machines, including an early version of a helicopter, a parachute, and even a tank. Unfortunately, these inventions were not feasible with the technology available in the 15th century.
 

@@ -79,7 +79,7 @@
   --font-family-cursive   : cursive;
 
   --font-family           : 'Merriweather', var(--font-family-serif);
-  --font-family-alt       : 'Playfair Display', var(--font-family-sans);
+  --font-family-alt       : var(--font-family-sans);
   --font-family-headings  : 'Playfair Display', var(--font-family-sans);
   --font-family-ui        : var(--font-family-sans);
 
