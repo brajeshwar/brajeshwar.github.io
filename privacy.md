@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Privacy | Brajeshwar
+title: Privacy
 ---
 
 # Privacy
