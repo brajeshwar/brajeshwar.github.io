@@ -58,16 +58,14 @@ pre {
 	font-family: var(--font-family-monospace);
 }
 
-/* normal code that is not attached to a code highlighter */
 code.language-plaintext,
 mark,
 .mark {
-	padding: var(--space-3xs) var(--space-xs);
+	padding: var(--space-3xs) var(--space-2xs);
 	
 	font-size: var(--step--1);
-	color: var(--text-color);
 	
-	background: var(--bg-color);
+	background: var(--bg-color-low);
 	border-radius: var(--border-radius-larger);
 
 	/* fix edges of wrapped inline elements	*/
