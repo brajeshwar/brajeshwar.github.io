@@ -1,6 +1,6 @@
 # Subscription Lifestyle
 
-In today’s fast-moving constantly-changing economy, ownership is quietly giving way to access. From transportation ([Ola](https://www.olacabs.com), [Uber](https://www.uber.com), [Zipcar](https://www.zipcar.com)) to entertainment ([Netflix](https://www.netflix.com), [Spotify](https://www.spotify.com)), clothing ([Rent the Runway](https://www.renttherunway.com)), housing ([Airbnb](https://www.airbnb.com)), and furniture ([Feather](https://www.livefeather.com), [Furlenco](https://www.furlenco.com), [Rentomojo](https://www.rentomojo.com)), the subscription lifestyle is now common. Amid this shift, one question remains important: what is worth owning?
+In today’s fast-moving constantly-changing economy, ownership is quietly giving way to access. From transportation ([Ola](https://www.olacabs.com), [Uber](https://www.uber.com), [Zipcar](https://www.zipcar.com)) to entertainment ([Netflix](https://www.netflix.com), [Spotify](https://www.spotify.com)), clothing ([Rent the Runway](https://www.renttherunway.com)), housing ([Airbnb](https://www.airbnb.com)), and furniture ([Fernish](https://fernish.com), [Furlenco](https://www.furlenco.com), [Rentomojo](https://www.rentomojo.com)), the subscription lifestyle is now common. Amid this shift, one question remains important: what is worth owning?
 
 The subscription economy[^SubscriptionBusiness] is growing fast. [Zuora's Subscription Economy Index](https://www.zuora.com/resource/subscription-economy-index/) showed a 435% rise in nine years. It grew much faster than the S&P 500.[^SP500] People like access because it is flexible, convenient, and requires less money upfront.
 
@@ -16,7 +16,7 @@ The core idea behind subscriptions is the freedom they offer. Philosopher [Byung
 
 There are practical reasons, too. Renting reduces waste and overproduction. It lets more people access premium products. Subscriptions are efficient in a fast-changing world.
 
-In Europe, the EU promotes circular economies.[^CircularEconomy] The [European Green Deal](https://en.wikipedia.org/wiki/European_Green_Deal) supports sustainable, service-based models. In India, urban migration and high living costs prompt people to opt for renting. In China, apps like WeChat (https://wechat.com) make managing subscription services easy.
+In Europe, the EU promotes circular economies.[^CircularEconomy] The [European Green Deal](https://en.wikipedia.org/wiki/European_Green_Deal) supports sustainable, service-based models. In India, urban migration and high living costs prompt people to opt for renting. In China, apps like [WeChat](https://wechat.com) make managing subscription services easy.
 
 ## What Should We Own
 
