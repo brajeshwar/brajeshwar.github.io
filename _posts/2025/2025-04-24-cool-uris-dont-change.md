@@ -6,8 +6,7 @@ A URI is just a web address, `example.com/about`, and a “cool” URI is one th
 
 Changing web addresses breaks links. If you rename or move a page, old bookmarks, search engine results, and references stop working. That’s annoying for users and harmful to the web.
 
-{:.aside .right}
-Keeping URIs so that they will still be around in 2, 20 or 200 or even 2,000 years is clearly not as simple as it sounds.
+> Keeping URIs so that they will still be around in 2, 20 or 200 or even 2,000 years is clearly not as simple as it sounds.
 
 Cool URIs are readable and built to last. Instead of `/v2/store/item?id=1234`, go with `/store/blue-mug`. It’s easier to remember, easier to type, and it still makes sense years later.
 
