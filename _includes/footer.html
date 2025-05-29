@@ -6,7 +6,8 @@
   </nav>
   <p>
     <small>
-      2001-{{ "now" | date: "%Y" }}
+      2001-{{ site.time | date: "%Y" }}
+      (active for {{ site.time | date: '%Y' | minus: 2001 }} years)
       brajeshwar.com
     </small>
   </p>
