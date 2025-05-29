@@ -140,9 +140,10 @@
   --image-width-full      : var(--body-width-full);
 }
 
+/* TBD: This seems to be not working. */
 @media (prefers-color-scheme: dark) {
   img, video {
-    opacity: var(--opacity-low);
+    opacity: var(--opacity-lower);
   }
 }
 
