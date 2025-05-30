@@ -1,7 +1,5 @@
 # O
 
-## 2024
-
 - [Outerbase Studio](https://studio.outerbase.com) is a lightweight, browser-based GUI for managing SQL databases, designed for simplicity and versatility. ([source](https://github.com/outerbase/studio))
 - [OpenCharacter](https://opencharacter.org) is an [open-source](https://github.com/bobcoi03/opencharacter) Alternative to [Character.AI](https://character.ai).
 - [OpenFreeMap](https://openfreemap.org) lets you display custom maps on your website and apps for free. ([Source](https://github.com/hyperknot/openfreemap))
@@ -18,8 +16,5 @@
 - [OutRun](https://outrun.tadris.de) is an [open-source](https://github.com/timfraedrich/OutRun), privacy oriented, outdoor fitness tracker.
 - Observable released their [open-source](https://github.com/observablehq/framework) Observable [Framework](https://observablehq.com/framework/).
 - Open Source tools to Record and Rewind everything on your computer — [Mac](https://rem.ing) / [PC](https://github.com/yuka-friends/Windrecorder).
-
-## 2023
-
 - [OSGameClones](https://osgameclones.com) tries to gather open-source or source-available remakes of great old games.
 - OpenAI’s [Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) lists some good strategies for getting better results.
