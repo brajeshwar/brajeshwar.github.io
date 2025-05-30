@@ -1,7 +1,5 @@
 # B
 
-## 2024
-
 - [Archivarix](https://archivarix.com) is a free opensource CMS combined with an online website downloader and a wayback rebuilder.
 - [Braintrust](https://www.braintrust.dev) is the end-to-end platform for building world-class AI apps.
 - [Bookshop.org](https://bookshop.org/) works to connect readers with independent booksellers all over the world.

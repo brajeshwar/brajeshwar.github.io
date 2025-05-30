@@ -1,12 +1,7 @@
 # N
 
-## 2025
-
 - [NetBird](https://netbird.io) combines a WireGuard®-based overlay network with Zero Trust Network Access, providing a unified [open-source](https://github.com/netbirdio/netbird) platform for reliable and secure connectivity
 - [Nping](https://github.com/hanshuaikang/Nping) is a Ping Tool with Real-Time Data and Visualizations.
-
-## 2024
-
 - [Naev](https://naev.org) is a game about space exploration, trade and combat. Players travel the galaxy and earn money by trading, fighting and performing missions.
 - [New wave Sci-Fi: 75 best novels of 1964–1983](https://www.hilobrow.com/new-wave-sci-fi/)
 - [Natron](https://natrongithub.github.io) is an Open Source Compositing Software For VFX and Motion Graphics.

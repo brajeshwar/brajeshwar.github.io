@@ -1,12 +1,7 @@
 # C
 
-## 2025
-
 - [Canine](https://canine.sh) is a modern, [open source](https://github.com/czhu12/canine) alternative to [Heroku](https://www.heroku.com).
 - [Computer related horror stories, folklore, and anecdotes](https://www.cs.earlham.edu/~skylar/humor/Unix/computer.folklore.from.net.rumors.html) is a collection of anecdotes and stories about computer technology and the people who spend their time working with computers. ([archive](https://archive.is/jBXSl))
-
-## 2024
-
 - [Colorify Rocks](https://colorify.rocks) is an AI Color Palette Generator.
 - [Caesium](https://saerasoft.com/caesium) is a free [open-source](https://github.com/Lymphatus/caesium-image-compressor) tool to compress pictures up to 90% without visible quality loss.
 - Clipshare is an incredibly simple, [open-source](https://github.com/goshops-com/clipshare) alternative to Loom that only requires S3.

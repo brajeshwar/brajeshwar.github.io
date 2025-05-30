@@ -1,13 +1,8 @@
 # S
 
-## 2025
-
 - [SVGL](https://svgl.app) is an [open-source](https://github.com/pheralb/svgl) beautiful library with SVG logos.
 - [Stories from the Internet](https://dbrgn.ch/stories-from-the-internet.html) is a collection of internet folklore. ([archive](https://archive.is/TEWVB))
 - [Software Folklore](https://beza1e1.tuxen.de/lore/) is a collection of stories of bugs with symptoms beyond belief. )[archive](https://archive.is/HlYBi))
-
-## 2024
-
 - [StampList](https://landing.club/stamplist) lists breakout companies with a track record of sponsoring visas for exceptional talent.
 - [SuperStreamer](https://superstreamer.xyz/) is an [open-source](https://github.com/matvp91/superstreamer) All-in-one toolkit from ingest to adaptive video playback. Built for developers in need of video tooling.
 - [Screenpipe](https://screenpi.pe) records your screens and mics 24/7 safely on your computer, and connects it to AI, creating magic from your data. ([Source](https://github.com/mediar-ai/screenpipe))
@@ -30,9 +25,6 @@
 - [static-web-server](https://static-web-server.net) is an [open-source](https://github.com/static-web-server/static-web-server/) cross-platform, high-performance and asynchronous web server for static files-serving.
 - [Stellarium](https://stellarium.org) is a free [open source](https://github.com/Stellarium/stellarium) planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope.
 - [SuperTux](https://www.supertux.org) is an [open-source](https://github.com/SuperTux/supertux) classic 2D jump'n run side-scroller game in a style similar to the original Super Mario games.
-
-## 2023
-
 - [Shepherd](https://shepherd.com) asked 1,234 authors for their 3 favorite reads in 2023. They have listed the [100 best books of 2023](https://shepherd.com/bboy/2023).
 - [Six Degrees of Wikipedia](https://www.sixdegreesofwikipedia.com/) is a website which traverses hyperlinks on Wikipedia to find the least number of clicks it takes to navigate between any of the nearly six million pages on the world's largest free online encyclopedia. ([source](https://github.com/jwngr/sdow))
 - [Starsector](https://fractalsoftworks.com) (formerly “Starfarer”) is an in-development open-world single-player space-combat, roleplaying, exploration, and economic game. You take the role of a space captain seeking fortune and glory however you choose.
