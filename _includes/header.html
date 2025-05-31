@@ -13,5 +13,8 @@
       <a {{ css_class }} href="{{ item.url }}">{{ item.title }}</a>
     {% endfor -%}
   </site-nav>
+  <search-container>
+    {% include search-modal.html %}
+  </search-container>
   <mode-toggle></mode-toggle>
 </header>
