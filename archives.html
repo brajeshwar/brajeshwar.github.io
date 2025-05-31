@@ -6,8 +6,6 @@ styles: css/4.1-archives.css
 
 <main class="container-ideal">
 
-  <search-provider>{% include search-google.html %}</search-provider>
-
   <page-archives>
     {%- for post in site.posts -%}
     {%- assign currentdate = post.date | date: "%Y" -%}
