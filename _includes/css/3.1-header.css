@@ -47,7 +47,7 @@ site-logo a:active .logo__img, site-logo a:active .logo__img--path {
 
 /* menu */
 site-nav {
-	padding: var(--space-2xs) var(--space-s);
+	padding: var(--space-2xs);
 	font-family: var(--font-family-ui);
 	font-size: var(--step--1);
 	background-color: var(--bg-color-high);
@@ -55,7 +55,7 @@ site-nav {
 }
 
 site-nav a, site-nav a:visited {
-	padding: var(--space-xs) var(--space-3xs);
+	padding: var(--space-2xs) var(--space-3xs);
 	color: var(--text-color-lower);
 	text-decoration: none;
 }
@@ -69,12 +69,13 @@ site-nav a:hover, site-nav a:active, site-nav a.active {
 search-container {
 	display: flex;
 	align-items: center;
-	margin: 0 var(--space-xs);
+	margin: 0;
+	padding: 0;
 }
 
 /* mode: light dark */
 mode-toggle {
 	display: block;
-	width: var(--logo-size);
-	height: var(--logo-size);
+	margin: 0;
+	padding: 0;
 }
