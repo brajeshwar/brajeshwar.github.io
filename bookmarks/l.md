@@ -1,5 +1,6 @@
 # L
 
+- [LibriVox](https://librivox.org) is a place for free public domain audiobooks.
 - [Letterpress](https://github.com/dunyakirkali/letterpress) is a project aimed at simplifying the self-publishing process for books. It provides a ready-to-use template based on AsciiDoctor, catering to authors who need robust support for diagramming, coding examples, and mathematical formulas.
 - [Laminar](https://www.lmnr.ai) is an [open-source](https://github.com/lmnr-ai/lmnr) DataDog + PostHog for AI agents / RAG apps. Fast, reliable and insightful.
 - [Lansat Satellite images to write your name](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/), from NASA.

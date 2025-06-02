@@ -1,3 +1,4 @@
+/* SEARCH */
 search-provider {
   display: block;
   border-radius: var(--border-radius);
@@ -25,11 +26,11 @@ search-provider table:hover, search-provider table tr:hover {
 
 table.gsc-search-box {}
 td.gsc-input {
-	width: 75% !important;
+  width: 75% !important;
   height: 36px;
 }
 td.gsc-search-button {
-	width: 20% !important;
+  width: 20% !important;
 }
 
 .gsc-input-box {}
