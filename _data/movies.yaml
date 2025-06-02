@@ -10,10 +10,6 @@
   year: 1902
   img: a-trip-to-the-moon.webp
   url: https://en.wikipedia.org/wiki/A_Trip_to_the_Moon
-- title: "Andaz Apna Apna"
-  year: 1994
-  img: andaz-apna-apna.webp
-  url: https://en.wikipedia.org/wiki/Andaz_Apna_Apna
 - title: "Avatar"
   year: 2009
   img: avatar.webp
@@ -154,10 +150,6 @@
   year: 1979
   img: monty-pythons-life-of-brian.webp
   url: "https://en.wikipedia.org/wiki/Monty_Python%27s_Life_of_Brian"
-- title: "Moondram Pirai"
-  year: 1982
-  img: moondram-pirai.webp
-  url: https://en.wikipedia.org/wiki/Moondram_Pirai
 - title: "No Country for Old Men"
   year: 2007
   img: no-country-for-old-men.webp
@@ -170,6 +162,10 @@
   year: 1999
   img: notting-hill.webp
   url: https://en.wikipedia.org/wiki/Notting_Hill_(film)
+- title: "Oblivion"
+  year: 2013
+  img: oblivion.webp
+  url: https://en.wikipedia.org/wiki/Oblivion_(2013_film)
 - title: "Once Upon a Time in the West"
   year: 1968
   img: once-upon-a-time-in-the-west.webp
@@ -190,10 +186,6 @@
   year: 1994
   img: pulp-fiction.webp
   url: https://en.wikipedia.org/wiki/Pulp_Fiction
-- title: "Pushpaka Vimana"
-  year: 1987
-  img: pushpaka-vimana.webp
-  url: https://en.wikipedia.org/wiki/Pushpaka_Vimana_(1987_film)
 - title: "Rambo"
   year: 1982-2019
   img: rambo.webp
@@ -226,10 +218,6 @@
   year: 1954
   img: seven-samurai.webp
   url: https://en.wikipedia.org/wiki/Seven_Samurai
-- title: "Sholay"
-  year: 1975
-  img: sholay.webp
-  url: https://en.wikipedia.org/wiki/Sholay
 - title: "Spirited Away (千と千尋の神隠し)"
   year: 2001
   img: spirited-away.webp
@@ -262,10 +250,6 @@
   year: 1992
   img: the-last-of-the-mohicans.webp
   url: https://en.wikipedia.org/wiki/The_Last_of_the_Mohicans_(1992_film)
-- title: "The Lunchbox"
-  year: 2013
-  img: the-lunchbox.webp
-  url: https://en.wikipedia.org/wiki/The_Lunchbox
 - title: "The Matrix"
   year: 1999-2003
   img: the-matrix.webp
@@ -302,6 +286,10 @@
   year: 1986
   img: top-gun.webp
   url: https://en.wikipedia.org/wiki/Top_Gun
+- title: "Top Gun: Maverick"
+  year: 2022
+  img: top-gun-maverick.webp
+  url: https://en.wikipedia.org/wiki/Top_Gun%3A_Maverick
 - title: "Triangle"
   year: 2009
   img: triangle.webp

@@ -9,3 +9,4 @@ https://www.keybr.com will help you to learn touch typing which means typing thr
 [TypingClub](https://www.typingclub.com) is a web-based program that teaches you how to type with fun games, videos and challenges. You can practice with different languages, keyboard layouts and stories, and track your progress with stars and badges.
 
 https://www.typequicker.com
+https://www.ratatype.com/

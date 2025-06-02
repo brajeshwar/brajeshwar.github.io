@@ -1,5 +1,6 @@
 # T
 
+- [tldx](https://github.com/brandonyoungdev/tldx) Domain Availability Research Tool.
 - A comprehensive list of various [text to diagram](https://xosh.org/text-to-diagram/) tools. Ordered roughly by recency and similarity.
 - [There](https://there.pm) is an [open-source](https://github.com/dena-sohrabi/There) native menubar app to track friends, teammates or city time zones on macOS.
 - [The Monospace Web](https://owickstrom.github.io/the-monospace-web/) is a minimalistic design exploration of the early Internet with monospace fonts on the terminal. ([source](https://github.com/owickstrom/the-monospace-web))
