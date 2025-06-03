@@ -18,6 +18,8 @@ I asked my childhood best friend to come with me. He didn’t even ask anything 
 
 We were loaded onto an army truck and were seated in the center. By that time, there was no turning back, but we decided to think ahead to the upcoming ‘fun time.’ None at home knew where we were going or had even gone. It was normal not to tell people at home what we do at that time. The journey took a long time, must have been 4-5 hours, when we requested a ‘simple’ pee-stop along the winding mountainous road of the hills of [Manipur](https://en.wikipedia.org/wiki/Manipur) (INDIA).
 
+<img class="large" src="/static/2025/flower-bush-hill.webp" alt="Flower in a Bush">
+
 We thought it ‘simple’ - just a pee-stop to take a leak on the side of the mountains or the bush nearby. Turns out, it wasn’t simple. There were the crackling sounds of the walkie-talkie and the confirmation wait that lasted quite a few bad minutes. Finally, the uniformed people around us rose, carrying their guns, and took their positions, pointing out their weapons above the mountains and guarding the roads. My friend and I peed overlooking a big river below, but we decided not to compete to see who could pee the farthest that day. Looking around, we realized we were in one of the convoy of 10+ army trucks traveling that day.
 
 We reached later in the evening, had army food in the barracks, slept on wooden beds, and saw the army having fun, drinking, dancing, and joking the night away. We were asked a few times by a few of them who we were and what we were doing. ‘Our army friend,’ answered for us that we were the young ‘computer experts’ from the town center.
