@@ -14,6 +14,10 @@
   year: 2008–2013
   img: fringe.webp
   url: https://en.wikipedia.org/wiki/Fringe_(TV_series)
+- title: "Game of Thrones"
+  year: 2011–2019
+  img: game-of-thrones.webp
+  url: https://en.wikipedia.org/wiki/Game_of_Thrones
 - title: "Lost"
   year: 2005–2010
   img: lost.webp
@@ -38,6 +42,10 @@
   year: 2014-2019
   img: silicon-valley.webp
   url: https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)
+- title: "South Park"
+  year: 1997-Present
+  img: south-park.webp
+  url: https://en.wikipedia.org/wiki/South_Park
 - title: "The Big Bang Theory"
   year: 2007-2019
   img: the-big-bang-theory.webp
