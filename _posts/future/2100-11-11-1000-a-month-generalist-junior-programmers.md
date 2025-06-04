@@ -6,12 +6,27 @@ ZED
 Replit
 v0
 Lovable
+https://github.com/copilot
 
 
 My AI Skeptic Friends Are All Nuts
 https://fly.io/blog/youre-all-nuts/
 
-https://simonwillison.net
+Stop Over-thinking AI Subscriptions
+https://steipete.me/posts/2025/stop-overthinking-ai-subscriptions
+
+Plan	Monthly Fee	Included Usage	Marginal Cost
+Claude Pro	$20	~45 messages/5h	Rate limited
+Claude Max 5×	$100	~225 messages/5h	Rate limited
+Claude Max 20×	$200	~900 messages/5h	Rate limited
+Cursor Pro	$20	500 fast requests	$0.04/fast request
+OpenAI o3	Pay-per-use	N/A	$10-40/1M tokens
+
+Claude Max gives you almost unlimited use of Claude Code, which is hands-down the best terminal-based AI tool available (next to Cursor). For $200/month, you get 20× the usage of Claude Pro.
+
+OpenAI’s o3 model costs $10 per 1M input tokens and $40 per 1M output tokens. Cached input drops to $2.50/1M. When you’re debugging complex code and you want the absolute best reasoning, o3 delivers, but it adds up fast.
+
+o3 is my dark knight—silent, pricey, but rescues impossible bugs.
 
 https://news.ycombinator.com/item?id=44163063
 
