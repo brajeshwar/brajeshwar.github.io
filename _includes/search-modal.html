@@ -74,8 +74,8 @@
       indexName: '{{ site.algolia.index_name }}',
       searchClient: searchClient,
       searchFunction(helper) {
-        const query = helper.getQuery();
-        if (query.length === 0) {
+        const query = (helper.state && helper.state.query) ? helper.state.query : '';
+        if (query.trim().length === 0) {
           hitsContainer.style.display = 'none';
           emptyState.style.display = 'none';
           initialState.style.display = 'block';
