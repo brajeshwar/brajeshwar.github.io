@@ -31,7 +31,7 @@ someOtherObject.someOtherMethod (this);
 }
 ```
 
-When an instance property or a class property has the same name as a method parameter, the parameter takes precedence. That is, uses of the duplicate name in the method will refer to the parameter, not the property. However, we can still access teh property by preceding the name with the `this` keyword.
+When an instance property or a class property has the same name as a method parameter, the parameter takes precedence. That is, uses of the duplicate name in the method will refer to the parameter, not the property. However, we can still access the property by preceding the name with the `this` keyword.
 
 EAS 2.0 says that, the use of `this` is perfectly legal even when it is not required. It also advocates that using `this` when not required is redundant. It is best avoided for easier reading of the codes. In an AS 2.0 class definition, use of the `this` keyword is legal only within instance methods and construction functions.
 
