@@ -9,12 +9,12 @@ There are more than 250,000 third-party applications officially available on the
 Earlier this week, I came across a yet another photo-sharing app called [Instagr.am](http://instagr.am/). At the first look, it looks to be a yet another Flickr[^Flickr] app clone or something that does nothing different than what the existing apps would allow me to do. Using it for 3 days, made me change notions and talk about it.
 
 <div class="gallery" markdown="1">
-- <a href="https://www.instagram.com/p/CV5we/"><img src="/static/2025/instagram-1.jpg"></a>
-- <a href="https://www.instagram.com/p/Cpwu3ZfP0Vs/"><img src="/static/2025/instagram-2.jpg"></a>
-- <a href="https://www.instagram.com/p/CsaZDCEOhkg/"><img src="/static/2025/instagram-3.jpg"></a>
-- <a href="https://www.instagram.com/p/Cv37yyiPzjx/"><img src="/static/2025/instagram-4.jpg"></a>
-- <a href="https://www.instagram.com/p/BFaG6/"><img src="/static/2025/instagram-5.jpg"></a>
-- <a href="https://www.instagram.com/p/BB6t/"><img src="/static/2025/instagram-6.jpg"></a>
+- <a href="https://www.instagram.com/p/CV5we/"><img src="/static/2010/instagram-1.jpg"></a>
+- <a href="https://www.instagram.com/p/Cpwu3ZfP0Vs/"><img src="/static/2010/instagram-2.jpg"></a>
+- <a href="https://www.instagram.com/p/CsaZDCEOhkg/"><img src="/static/2010/instagram-3.jpg"></a>
+- <a href="https://www.instagram.com/p/Cv37yyiPzjx/"><img src="/static/2010/instagram-4.jpg"></a>
+- <a href="https://www.instagram.com/p/BFaG6/"><img src="/static/2010/instagram-5.jpg"></a>
+- <a href="https://www.instagram.com/p/BB6t/"><img src="/static/2010/instagram-6.jpg"></a>
 </div>
 
 Instagram app has a several, Lomography[^Lomo] 'filters' to add fizz to the shots the iPhone takes otherwise. On top of that, it has an icing of a social feature that allows you to share the pictures with Twitter, Facebook, Foursquare, Flickr and Tumblr. Not just that, the pictures get shared within the Instagram network too. Though the network doesn't have too many friends of mine to see who's sharing what, but with time, I am sure, the scene will change.

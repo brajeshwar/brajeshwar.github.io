@@ -1,10 +1,10 @@
 # iPhone 3G, is it coming soon to India
 
-<img class="medium" src="/static/2008/iphone-3g.png" alt="Apple iPhone 3G" loading="lazy">
-
 Macworld Associate Editor Dan Moren has the <a href="http://www.macworld.com/article/134594/2008/07/liveupdate.html">play-by-play of Apple's Q3 2008 financial results</a>. Apple COO Tim Cook and CFO Peter Oppenheimer were discussing Apple's results for the fiscal third quarter.
 
 Questions from analysts about the tight supplies of iPhone 3Gs prompted Cook to mention Apple's expansion plans. Cook pointed out that the shortages are a result of "overwhelming demand" and that Apple was confident enough in its ability to boost production that it would expand the iPhone's market by 20 countries on August 22.
+
+<img class="medium right" src="/static/2008/iphone-3g.png" alt="Apple iPhone 3G" loading="lazy">
 
 Well, that last part was the interesting part for the '<a href="http://www.apple.com/iphone/countries/">other countries</a>' which includes India in the Coming Soon list of Countries.
 
