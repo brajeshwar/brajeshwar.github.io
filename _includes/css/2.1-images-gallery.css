@@ -1,4 +1,10 @@
-/* GALLERY */
+/*
+  GALLERY
+  Usage:
+    <div class="gallery" markdown="1">
+    - a UL/LI image with or without a link
+    </div>
+*/
 .gallery {
   margin: var(--space) calc(50% - 50vw);
   width: 100vw;
