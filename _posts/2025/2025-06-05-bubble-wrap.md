@@ -11,4 +11,4 @@
 
 I used to host a Flash Game, some sort of, Bubble Wrap Bubble Popper. Unfortunately, it went away along with Flash. I have been meaning to have a playable Bubble Popping Game.
 
-I’ve been playing with AI-assisted coding for the past few days. Here is a simple webpage with a playable Bubble Popper. This was done after dinner and before sleep. I had to sleep a bit late, and the result wasn’t that bad.
+I’ve been playing with AI-assisted coding for the past few days. Here is a simple webpage with a playable Bubble Popper. This was done between dinner and sleep. I had to sleep a bit late, and the result wasn’t that bad.
