@@ -1,16 +1,16 @@
 # Twitter - short, sweet and sleek - Let's get started
 
-Twitter has suddenly attained the status of a notoriously popular Application. After being fueled by <a href="http://sxsw.com/">SXSW</a>, everybody else is talking about Twitter including those <a href="http://manwithnoblog.com/2007/03/10/twitter-explosion/">who don't even have a blog</a>. Talks in the Blogosphere have spit out stats that Twitter got 1 million messages sent recently. Finally after about a year of its launch, Twitter has won. 
+Twitter has suddenly attained the status of a notoriously popular Application. After being fueled by [SXSW](http://sxsw.com/), everybody else is talking about Twitter including those <a href="http://manwithnoblog.com/2007/03/10/twitter-explosion/">who don't even have a blog</a>. Talks in the Blogosphere have spit out stats that Twitter got 1 million messages sent recently. Finally after about a year of its launch, Twitter has won. 
 
 Of course, it is not everybody that loves Twitter, some seriously <a href="http://www.brianalvey.com/2007/03/10/putting-the-twit-in-twitter/">hate it</a>.
 
-Wait, I just got a Twitter from BBC News - Train services resume along a stretch of the West Coast Main Line in Cumbria after a fatal train crash. <a href="http://tinyurl.com/2jkv4c">http://tinyurl.com/2jkv4c</a>
+I just got a tweet from BBC News - Train services resume along a stretch of the West Coast Main Line in Cumbria after a fatal train crash. <a href="http://tinyurl.com/2jkv4c">http://tinyurl.com/2jkv4c</a>
 
 ## Twitter
 
 <a href="http://ross.typepad.com/">Ross Mayfield</a>, CEO of <a href="http://twitter.com/socialtext">SocialText</a> have an <a href="http://ross.typepad.com/blog/2007/03/twitter_tips_th.html">in-depth article</a> on Twitter, its statistics, etc. He describes Twitter as, "a mobile social software that lets you broadcast and receive short messages with your social network.  You can use it with SMS, on the web or IM." "A darn easy API has enabled other clients such as <a href="http://iconfactory.com/software/twitterrific">Twitterific</a> for the Mac.  Twitter is Continuous Partial Presence, mostly made up of mundane messages in answer to the question - What are you doing?. A never-ending steam of presence messages prompts you to update your own.  Messages are more ephemeral than IM presence -- and posting is of a lower threshold, both because of ease and accessibility, and the informality of the medium."
 
-Ah! I got another Twitter from <a href="http://digg.com/">Digg</a> - The Pirate Bay gives diploma to the King of Sweden - <a href="http://tinyurl.com/ypwgb3">http://tinyurl.com/ypwgb3</a> - The Pirate Bay guys congratulates the King of Sweden for go.
+Another tweet from <a href="http://digg.com/">Digg</a> - The Pirate Bay gives diploma to the King of Sweden - <a href="http://tinyurl.com/ypwgb3">http://tinyurl.com/ypwgb3</a> - The Pirate Bay guys congratulates the King of Sweden for go.
 
 At the time of writing this article, here are the Twitters that I follow (and perhaps you might be interested)
 
