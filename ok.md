@@ -5,9 +5,10 @@ title: OK
 
 # OK
 
-> I agree with you. You’re right.
+> You’re right.
 
-Whatever you say, your idea, your points, everything is correct. I have my opinions, but they are my own. Thanks.
+Whatever you say, your idea, your points, everything is correct.
+I have my own opinions, but they are mine.
 
 <!-- 
 

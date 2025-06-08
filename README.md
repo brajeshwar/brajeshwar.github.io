@@ -16,13 +16,14 @@ The source repository that runs my personal website - [brajeshwar.com](https://b
 
 ## Todo
 
+- [ ] `/search/` a dedicated Search Page to reduce the load on others.
+- [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia]s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
+- [ ] Search and “Ask AI” should be a choice defaulting to Search. Use Sagepilot for the AI or an Open source alternative.
 - [ ] Re-direct `docs.brajeshwar.com` via Cloudflare Workers.
 - [ ] A style component for Photos. Will this be a post sub-type?
 - [ ] Yearly Archives `/2001/`, `/2002/`, etc.
-- [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia]s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
 - [ ] `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
 - [ ] Fix 404s
-- [ ] Search and “Ask AI” should be a choice defaulting to Search. Use Sagepilot for the AI or an Open source alternative.
 - [ ] Loved the idea of light-dark mode with themes on [Ryan Mulligan's website](https://ryanmulligan.dev). He is also a man of culture - his website is [open-source](https://github.com/hexagoncircle/ryan-mulligan-dev).  Try something like that?
 
 ## Promotions & Affiliates
