@@ -88,7 +88,6 @@ kbd {
 /* manual height based on the ideal width against the video ratio, mostly youtube which is 315/560=0.5625 */
 iframe, object, embed {
   height: calc(0.5625 * var(--body-width-ideal));
-  border-radius: var(--border-radius);
 }
 
 .visually-hidden {

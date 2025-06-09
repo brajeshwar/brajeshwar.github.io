@@ -201,4 +201,4 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 If you have any questions about this Privacy Policy, You can contact us:
 
 - By email: brajeshwar@oinam.com
-- By visiting this page on our website: [https://brajeshwar.com/contact](https://brajeshwar.com/contact)
+- By visiting this page on our website: [brajeshwar.com/contact](https://brajeshwar.com/contact)

@@ -3,9 +3,7 @@
  * fix them without the !important
  */
 
-img {
-	border-radius: var(--border-radius);
-}
+img {}
 
 img.small {
 	width: 40% !important;
@@ -34,7 +32,6 @@ img.round {
 figure {
   margin: 0 0 var(--space-m);
   padding: 0;
-  border-radius: var(--border-radius);
 }
 
 figure img {
@@ -42,14 +39,12 @@ figure img {
 }
 
 figcaption {
-  max-width: var(--body-width-ideal);
   margin: 0 auto;
-  padding: var(--space-xs) var(--space-3xs);
+  padding: var(--space-2xs) var(--space-3xs);
   
   font-family: var(--font-family-ui);
   font-size: var(--step--1);
-  text-align: center;
-  border-bottom: var(--border-size) var(--border-style) var(--border-color);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color-low);
 }
 
 figure:has(figcaption) {}
@@ -72,15 +67,6 @@ img.full {
   width: 100vw !important;
   max-width: var(--body-width-full);
   transform: translateX(calc(50vw - 50%));
-  border-radius: 0;
-}
-
-/* TBD: Move this to container query */
-@media (min-width: $breakpoint-extralarge) {
-  figure.full img,
-  img.full {
-    border-radius: var(--border-radius);
-  } 
 }
 
 figure.full figcaption, figure.large figcaption {
