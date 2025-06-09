@@ -16,8 +16,10 @@ The source repository that runs my personal website - [brajeshwar.com](https://b
 
 ## Todo
 
+- [ ] Page Template (Full Width) - Wear, Devices, Books, Films
+- [ ] Page Template (Ideal Width)
 - [ ] `/search/` a dedicated Search Page to reduce the load on others.
-- [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia]s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
+- [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
 - [ ] Search and “Ask AI” should be a choice defaulting to Search. Use Sagepilot for the AI or an Open source alternative.
 - [ ] Re-direct `docs.brajeshwar.com` via Cloudflare Workers.
 - [ ] A style component for Photos. Will this be a post sub-type?

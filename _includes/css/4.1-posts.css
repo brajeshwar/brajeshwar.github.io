@@ -15,13 +15,6 @@ photo-cover {
   background-size: cover;
 }
 
-/* TBD: Move this to container query */
-@media (min-width: $breakpoint-extralarge) {
-	photo-cover {
-		border-radius: var(--border-radius);
-	}	
-}
-
 photo-cover:has(+ photo-cover__desc) {
 	margin-bottom: var(--space-3xs);
 }
@@ -31,7 +24,7 @@ photo-cover__desc {
 	max-width: var(--body-width-ideal);
 	margin: var(--space-2xs) auto var(--space-m) auto;
 	padding: var(--space-2xs) 0;
-	border-bottom: var(--border-size) var(--border-style) var(--border-color);
+	border-bottom: var(--border-size) var(--border-style) var(--border-color-low);
 	
 	font-family: var(--font-family-sans);
 	font-size: smaller;
