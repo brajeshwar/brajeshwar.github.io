@@ -10,6 +10,8 @@ title: OK
 Whatever you say, your idea, your points, everything is correct.
 I have my own opinions, but they are mine.
 
+I may not want to participate, but I deeply respect your religious, political, and sporting ideologies, views, and approaches.
+
 <!-- 
 
 Gone without food on many nights.
