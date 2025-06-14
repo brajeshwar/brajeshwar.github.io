@@ -23,6 +23,14 @@ class ThemeToggle extends HTMLElement {
     // Add button to component
     this.appendChild(this.button);
 
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      const currentTheme = this.getCurrentTheme();
+      if (currentTheme === 'auto') {
+        this.setTheme('auto');
+      }
+    });
+
     // Set initial theme
     this.setTheme(this.getCurrentTheme());
   }
@@ -40,15 +48,13 @@ class ThemeToggle extends HTMLElement {
     // Remove any existing theme classes
     document.documentElement.classList.remove('theme-light', 'theme-dark');
 
-    if (theme === 'light') {
-      document.documentElement.classList.add('theme-light');
-    } else if (theme === 'dark') {
-      document.documentElement.classList.add('theme-dark');
-    } else {
-      // Auto theme - use system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.classList.add(prefersDark ? 'theme-dark' : 'theme-light');
-    }
+    const actualTheme = this.getActualTheme(theme);
+    
+    // Add the appropriate theme class
+    document.documentElement.classList.add(actualTheme === 'dark' ? 'theme-dark' : 'theme-light');
+
+    // Update theme-color meta tags for Safari Compact mode
+    this.updateThemeColorMeta(actualTheme);
 
     // Update icon
     this.updateIcon(theme);
@@ -72,6 +78,30 @@ class ThemeToggle extends HTMLElement {
     };
 
     this.iconContainer.innerHTML = icons[theme];
+  }
+
+  getActualTheme(theme) {
+    if (theme === 'light') {
+      return 'light';
+    } else if (theme === 'dark') {
+      return 'dark';
+    } else {
+      // Auto theme - use system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return prefersDark ? 'dark' : 'light';
+    }
+  }
+
+  updateThemeColorMeta(actualTheme) {
+    // Remove existing theme-color meta tags
+    const existingMetas = document.querySelectorAll('meta[name="theme-color"]');
+    existingMetas.forEach(meta => meta.remove());
+
+    // Add new theme-color meta tag based on current theme
+    const meta = document.createElement('meta');
+    meta.name = 'theme-color';
+    meta.content = actualTheme === 'dark' ? '#171717' : '#f0f0f0';
+    document.head.appendChild(meta);
   }
 
   toggleTheme() {
