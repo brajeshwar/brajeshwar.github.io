@@ -4,7 +4,7 @@ title: About brajeshwar.com
 permalink: /about/brajeshwar.com/
 ---
 
-> `brajeshwar.com` was registered on `Jun 11, 2001`
+`brajeshwar.com` was registered on `Jun 11, 2001`
 
 I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash[^Flash] tips, tricks, and things I was doing. That’s how it all started. My website started as a Flash-Website.
 

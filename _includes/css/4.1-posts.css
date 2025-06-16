@@ -28,7 +28,7 @@ photo-cover__desc {
 	
 	font-family: var(--font-family-sans);
 	font-size: smaller;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .post {}
@@ -37,7 +37,6 @@ photo-cover__desc {
 
 .post h1 {
 	margin: 0;
-	text-align: center;
 	font-size: var(--step-3);
 	line-height: var(--scale-small);
 }
@@ -45,9 +44,8 @@ photo-cover__desc {
 .post time {
 	display: block;
 	margin: var(--space-xs) auto;
-	padding: var(--space-3xs) var(--space-xs);
+	padding: var(--space-3xs) 1px;
 	font-size: var(--step--2);
-	text-align: center;
 }
 
 .post img {
