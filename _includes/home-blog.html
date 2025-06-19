@@ -23,14 +23,14 @@
     <p>
       Some of the popular posts ranked by major search engines.
     </p>
-    <ol class="home__blog--popular-items">
+    <ul class="home__blog--popular-items">
       {% for item in site.data.posts-popular %}
       <li>
         <a href="{{ item.url }}">{{ item.title }}</a>
         <time>{{ item.time }}</time>
       </li>
       {% endfor %}
-    </ol>
+    </ul>
   </posts-popular>
   {% endif %}
 </home-posts>

@@ -111,7 +111,11 @@ posts-popular {
 
 posts-popular ul, posts-popular ol {
   margin: 0 0 var(--space-m) 0;
-  padding-inline: var(--space-m);
+  padding-inline: var(--space);
+}
+
+posts-popular li::marker {
+  color: var(--text-color-lower);
 }
 
 posts-popular time {
@@ -163,8 +167,7 @@ home-support li {
   color: var(--text-color-low);
 }
 
-.connect ul li {
-}
+.connect ul li {}
 
 .connect__title {
   font-weight: var(--font-weight-light);
@@ -188,28 +191,6 @@ home-support li {
   font-family: var(--font-family-monospace);
   font-size: smaller;
   color: var(--text-color-low);
-}
-
-connect-icons {
-  display: block;
-  margin: var(--space-s) auto var(--space-m) auto;
-}
-
-connect-icons a {
-  display: inline-block;
-  width: var(--icon-size);
-  height: var(--icon-size);
-}
-
-connect-icons a svg, connect-icons a:visited svg {
-  width: var(--icon-size);
-  height: var(--icon-size);
-  border-radius: var(--border-radius-small);
-  fill: var(--text-color-low);
-}
-
-connect-icons a:hover svg, connect-icons a:active svg {
-  fill: var(--text-color);
 }
 
 /* BOOKS */
