@@ -76,7 +76,7 @@ mark,
 article {}
 
 aside, .aside {
-	margin: var(--space-2xs) auto;
+	margin: var(--space-2xs);
 	padding: var(--space-s) var(--space-m);
 
 	font-family: var(--font-family-alt);

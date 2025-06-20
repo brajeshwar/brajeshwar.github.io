@@ -10,6 +10,8 @@ title: OK
 Whatever you say, your idea, your points, everything is correct.
 I have my own opinions, but they are mine.
 
+Your Linux, or Windows, or macOS is definitely better. So, are your Emacs or Vim.
+
 I may not want to participate, but I deeply respect your religious, political, and sporting ideologies, views, and approaches.
 
 <!-- 
