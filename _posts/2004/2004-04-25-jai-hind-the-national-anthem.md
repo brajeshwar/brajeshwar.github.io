@@ -72,7 +72,7 @@ Victory, victory, victory to thee.
 
 <iframe width="100%" src="https://www.youtube.com/embed/DOFnMBgZQXg?si=PETPl6jjR2GxuJGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-{:.mark}
+{:.desc}
 Rabindranath Tagore reciting “Jana Gana Mana”
 
 [^JanaGanaMana]: [Jana Gana Mana](https://en.wikipedia.org/wiki/Jana_Gana_Mana) (জন গণ মন) 'Thou Art the Ruler of the Minds of All People') is the national anthem of the Republic of India. It was originally composed as “Bharoto Bhagyo Bidhata” in Bengali by polymath [Rabindranath Tagore](https://en.wikipedia.org/wiki/Rabindranath_Tagore) on December 11, 1911. The first stanza of the song Bharoto Bhagyo Bidhata was adopted by the Constituent Assembly of India as the National Anthem on January 24, 1950. A formal rendition of the national anthem takes approximately 52 seconds. A shortened version consisting of the first and last lines (and taking about 20 seconds to play) is also staged occasionally. It was first publicly sung on December 27, 1911 at the Calcutta (present-day Kolkata) Session of the Indian National Congress.

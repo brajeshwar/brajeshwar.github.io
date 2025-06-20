@@ -16,21 +16,22 @@ The source repository that runs my personal website - [brajeshwar.com](https://b
 
 ## Todo
 
-- [ ] Page Template (Full Width) - Wear, Devices, Books, Films
-- [ ] Page Template (Ideal Width)
-- [ ] `/search/` a dedicated Search Page to reduce the load on others.
-- [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
-- [ ] Search and “Ask AI” should be a choice defaulting to Search. Use Sagepilot for the AI or an Open source alternative.
 - [ ] Re-direct `docs.brajeshwar.com` via Cloudflare Workers.
-- [ ] A style component for Photos. Will this be a post sub-type?
+- [ ] Move `/search/` to a dedicated page to reduce the load on others.
+- [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
+- [ ] Page Template (Full Width) - Pages, Wear, Devices, Books, Films
+- [ ] Page Template (Ideal Width) - posts.
+- [ ] Page template (Timeline) `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
+- [ ] A style component for photos, which highlights some key photos. This will likely come after https://pictures.oinam.com is up.
 - [ ] Yearly Archives `/2001/`, `/2002/`, etc.
-- [ ] `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
-- [ ] Fix 404s
+- [ ] Search and “Ask AI” should be a choice defaulting to Search. Use Sagepilot for the AI or an Open source alternative.
 - [ ] Loved the idea of light-dark mode with themes on [Ryan Mulligan's website](https://ryanmulligan.dev). He is also a man of culture - his website is [open-source](https://github.com/hexagoncircle/ryan-mulligan-dev).  Try something like that?
+- [ ] Fix 404s
 
 ## Promotions & Affiliates
 
 These tools, services, and companies are the ones that I use. I want to promote them, while I link to their affiliates and referral links. It should have a promotional benefit to others who sign-up. I should be using it or have used it and would happily promote.
 
-- [OpenPhone]()
-- [Attio](https://www.attio.com?r=IiDWXG7ug6IWeX9n) Workspaces created via the link will receive 10% off Attio for their first year.
+- OpenPhone, 
+- Attio, https://www.attio.com?r=IiDWXG7ug6IWeX9n (Workspaces created via the link will receive 10% off Attio for their first year.)
+- Grammarly, 
