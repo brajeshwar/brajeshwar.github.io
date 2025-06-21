@@ -32,10 +32,17 @@ By the 1990s, Microsoft Office came to dominate. Its integrated suite made switc
 
 Suddenly, fluency expanded beyond just typing or crunching numbers. It became about how well you could build pivot tables in Excel, craft compelling slides in PowerPoint, or manage your inbox like a pro in Outlook. Office certifications became a thing. Companies started training entire workforces on Office 95, 97, 2000, and beyond.
 
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/iByIUM3q69I?si=duLgSPRdnEHffvX5" title="In the TV Series, The IT Crowd, Denholm interviews Jen about her computer fluency." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-{:.desc}
-In the TV Series, The IT Crowd,[^TheITCrowd] Denholm Reynholm (played by Christopher Morris) interviews Jen Barber (played by Katherine Parkinson) about her computer fluency.
+<figure>
+	<iframe
+		width="100%" height="auto"
+		src="https://www.youtube.com/embed/iByIUM3q69I?si=duLgSPRdnEHffvX5"
+		title="In the TV Series, The IT Crowd, Denholm interviews Jen about her computer fluency."
+		frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+	</iframe>
+	<figcaption>
+		In the TV Series, <a href="https://en.wikipedia.org/wiki/The_IT_Crowd">The IT Crowd</a>, Denholm Reynholm (played by Christopher Morris) interviews Jen Barber (played by Katherine Parkinson) about her computer fluency.
+	</figcaption>
+</figure>
 
 ## AI Fluency Is the New Fluency
 
@@ -86,8 +93,6 @@ Software fluency once meant knowing how to type faster, build spreadsheets, or c
 
 The digital frontier is open. Just like the early adopters of WordStar and Lotus 1-2-3 rewrote what productivity meant, today’s AI-fluent professionals are crafting a new playbook.
 
-
-[^TheITCrowd]: [The IT Crowd](https://en.wikipedia.org/wiki/The_IT_Crowd) is a British television sitcom, created, written, and directed by [Graham Linehan](https://en.wikipedia.org/wiki/Graham_Linehan), produced by [Ash Atalla](https://en.wikipedia.org/wiki/Ash_Atalla) and starring [Chris O’Dowd](https://en.wikipedia.org/wiki/Chris_O%27Dowd), [Richard Ayoade](https://en.wikipedia.org/wiki/Richard_Ayoade), [Katherine Parkinson](https://en.wikipedia.org/wiki/Katherine_Parkinson), and [Matt Berry](https://en.wikipedia.org/wiki/Matt_Berry). Set in the offices of the fictional Reynholm Industries in London, the series revolves around the staff of its IT (Information Technology) department: technical genius Maurice Moss (Ayoade); work-shy Roy Trenneman (O’Dowd); and Jen Barber (Parkinson), the department head/relationship manager who knows nothing about IT. The show also focuses on the bosses of Reynholm Industries: Denholm Reynholm ([Chris Morris](https://en.wikipedia.org/wiki/Chris_Morris_(satirist))) and, later, his son Douglas ([Matt Berry](https://en.wikipedia.org/wiki/Matt_Berry)).
 
 [^Klingon]: [Klingon](https://en.wikipedia.org/wiki/Klingon_language) is sometimes referred to as Klingonese is the constructed language spoken by a fictional alien race called the [Klingons](https://en.wikipedia.org/wiki/Klingon) in the [Star Trek](https://en.wikipedia.org/wiki/Star_Trek) universe.
 
