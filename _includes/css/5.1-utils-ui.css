@@ -23,12 +23,3 @@
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
 }
-
-.desc {
-  margin: 0 auto;
-  padding: var(--space-2xs) var(--space-3xs);
-  
-  font-family: var(--font-family-ui);
-  font-size: var(--step--1);
-  border-bottom: var(--border-size) var(--border-style) var(--border-color-low);
-}
