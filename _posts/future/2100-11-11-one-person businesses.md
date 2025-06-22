@@ -46,3 +46,8 @@ https://stripe.com/in/atlas
 https://x.com/dvassallo/status/1784740714913710510
 https://sacra.com/c/gumroad/
 https://backlinko.com/substack-users
+
+
+Silicon Valley’s ‘Tiny Team’ Era is Here
+https://www.bloomberg.com/news/articles/2025-06-20/ai-is-ushering-in-the-tiny-team-era-in-silicon-valley
+[archive](https://archive.ph/YHr9s)
