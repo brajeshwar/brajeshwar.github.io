@@ -13,7 +13,7 @@ The source repository that runs my personal website - [brajeshwar.com](https://b
 - [ ] Page Template (Ideal Width) - posts.
 - [ ] Page template (Timeline) `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
 - [ ] A style component for photos, which highlights some key photos. This will likely come after https://pictures.oinam.com is up.
-- [ ] Yearly Archives `/2001/`, `/2002/`, etc.
+- [ ] Yearly Archives `/2001/`, `/2002/`, etc. https://simonwillison.net/ has a nice way of doing it.
 - [ ] Search and “Ask AI” should be a choice defaulting to Search. Use Sagepilot for the AI or an Open source alternative.
 - [ ] Loved the idea of light-dark mode with themes on [Ryan Mulligan's website](https://ryanmulligan.dev). He is also a man of culture - his website is [open-source](https://github.com/hexagoncircle/ryan-mulligan-dev).  Try something like that?
 - [ ] Fix 404s
