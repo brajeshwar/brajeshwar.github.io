@@ -8,7 +8,7 @@ image: /static/2025/mission-impossible-AI.webp
 2025-JUN: WARNING! CONTAIN SPOILERS
 ```
 
-In a world increasingly shaped by Artificial Intelligence (AI), Mission Impossible reflects our collective anxieties and aspirations surrounding its destructive potential. 
+In a world increasingly shaped by AI (Artificial Intelligence), Mission Impossible reflects our collective anxieties and aspirations surrounding its destructive potential. 
 
 On the one hand, AI is deeply integrated into our daily lives, influencing everything from social media algorithms to the management of critical infrastructure. On the other hand, it raises significant concerns about oversight, control, and accountability.
 
