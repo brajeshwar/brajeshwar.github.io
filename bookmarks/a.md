@@ -18,9 +18,6 @@
 - [AzuraCast](https://www.azuracast.com) is a free and [open-source](https://github.com/AzuraCast/AzuraCast), self-hosted web radio station in a box.
 - A [graveyard](https://killedby.tech) for discontinued products from Apple, Google and Microsoft
 - A tribute to [Nokia 3310](https://legendary3310.tilda.ws).
-
-## 2023
-
 - [Ansel](https://ansel.photos/), an open-source fork of [Darktable](https://www.darktable.org),  is a photo-editing software for digital artists, designed to help you achieve your own interpretation of raw digital photographs.
 - [Aphantasia](https://en.wikipedia.org/wiki/Aphantasia) is the inability to create mental imagery. Aphantasia is considered the opposite of [Hyperphantasia](https://en.wikipedia.org/wiki/Hyperphantasia), the condition of having extremely vivid mental imagery.
 - [ArtBot](https://tinybots.net/artbot) is your gateway to experiment with the wonderful world of generative AI art using the power of the AI Horde, a distributed open source network of GPUs running Stable Diffusion.
