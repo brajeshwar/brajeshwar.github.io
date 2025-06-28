@@ -2,7 +2,7 @@
 
 The source repository that runs my personal website - [brajeshwar.com](https://brajeshwar.com). The domain, `brajeshwar.com`, was booked on Jun 11, 2001.
 
-- 2021: A Jekyll-powered static website. Article: [20+ years old site - WordPress to Static](https://brajeshwar.com/2021/brajeshwar.com-2021/).
+2021: A Jekyll-powered static website. Article: [20+ years old site - WordPress to Static](https://brajeshwar.com/2021/brajeshwar.com-2021/).
 
 ## Todo
 
@@ -43,5 +43,6 @@ Github Pages [Dependency versions](https://pages.github.com/versions/)
 
 Checked on Jul 1, 2025
 
-- Ruby 3.3.4 (Official Ruby 3.4.4)
 - Jekyll 3.10.0 (Official Jekyll 4.4.1)
+- Ruby 3.3.4 (Official Ruby 3.4.4)
+- Sass 3.7.4
