@@ -39,10 +39,8 @@ These tools, services, and companies are the ones that I use. I want to promote 
 
 ### Notes
 
-Github Pages [Dependency versions](https://pages.github.com/versions/)
-
-Checked on Jul 1, 2025
-
-- Jekyll 3.10.0 (Official Jekyll 4.4.1)
-- Ruby 3.3.4 (Official Ruby 3.4.4)
-- Sass 3.7.4
+- `Jul 1, 2025`
+	- Github Pages [Dependency versions](https://pages.github.com/versions/)
+	- Jekyll 3.10.0 (Official Jekyll 4.4.1)
+	- Ruby 3.3.4 (Official Ruby 3.4.4) | `3.3.5` is the one working with CloudFlare Pages.
+	- Sass 3.7.4
