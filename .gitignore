@@ -1,5 +1,6 @@
 .aider*
 .bundle/
+.claude/
 .jekyll-cache/
 .jekyll-metadata
 .obsidian
