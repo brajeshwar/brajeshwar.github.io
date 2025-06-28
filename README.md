@@ -36,3 +36,12 @@ These tools, services, and companies are the ones that I use. I want to promote 
 - [Reddit](https://www.reddit.com/user/Brajeshwar/)
 - [WordPress](https://profiles.wordpress.org/brajeshwar/)
 - More at https://discoverprofile.com/brajeshwar/
+
+### Notes
+
+Github Pages [Dependency versions](https://pages.github.com/versions/)
+
+Checked on Jul 1, 2025
+
+- Ruby 3.3.4 (Official Ruby 3.4.4)
+- Jekyll 3.10.0 (Official Jekyll 4.4.1)
