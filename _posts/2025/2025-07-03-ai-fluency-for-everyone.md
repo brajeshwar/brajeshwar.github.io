@@ -8,8 +8,6 @@ Fast forward to the 1990s, and the office landscape shifts. Microsoft Office[^MS
 
 Today, in 2025, a new frontier is rising. Artificial Intelligence is no longer confined to sci-fi dreams or tech lab experiments—it’s the newest, hottest “software” you need to master. And AI fluency is fast becoming the Microsoft Office of our era.
 
-<img class="large" src="/static/2025/women-computers-80s.webp" alt="Women on Computers" loading="lazy">
-
 ## WordStar - The Early Keyboard Kung Fu
 
 Before graphical user interfaces and mice, there was WordStar. Launched in the late 1970s, it became the most popular word processor for a decade. But mastering WordStar was no small feat.
