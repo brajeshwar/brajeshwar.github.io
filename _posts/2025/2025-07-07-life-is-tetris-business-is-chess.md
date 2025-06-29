@@ -4,8 +4,6 @@ Entrepreneurs, tech professionals, and strategic thinkers frequently face uncert
 
 One compelling analogy is, “Life is like playing Tetris, while business resembles a strategic game of chess.” This analogy underscores the significance of adaptability in personal life and the crucial role of strategic foresight in business.
 
-<img class="large" src="/static/2025/tetris-apocalypse.webp" alt="Tetris Apocalypse">
-
 ## Life is Tetris - Adaptability Over Planning
 
 Tetris,[^Tetris] a classic arcade game created by Alexey Pajitnov in 1984, embodies unpredictability and adaptability. Players manage falling geometric shapes, arranging them in real-time to prevent pieces from piling up and ending the game. Much like life, Tetris does not allow players to control what shapes come next. Success depends entirely on adapting effectively to ever-changing situations.
