@@ -78,9 +78,9 @@
   --font-family-monospace : Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
   --font-family-cursive   : cursive;
 
-  --font-family           : 'Merriweather', var(--font-family-serif);
+  --font-family           : var(--font-family-sans);
   --font-family-alt       : var(--font-family-sans);
-  --font-family-headings  : 'Playfair Display', var(--font-family-sans);
+  --font-family-headings  : var(--font-family-serif);
   --font-family-ui        : var(--font-family-sans);
 
   --font-weight-lighter   : 200;

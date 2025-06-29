@@ -65,14 +65,6 @@ site-nav a:hover, site-nav a:active, site-nav a.active {
 	text-decoration: none;
 }
 
-/* search */
-search-container {
-	display: flex;
-	align-items: center;
-	margin: 0;
-	padding: 0;
-}
-
 /* mode: light dark */
 mode-toggle {
 	display: block;
