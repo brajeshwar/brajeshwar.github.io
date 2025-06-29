@@ -17,6 +17,9 @@ For the first time on [Oct 21, 2023](https://news.ycombinator.com/front?day=2023
 
 I have developed a typical routine to submit articles. I tend to gather interesting links during the day, and when America’s [West Coast](https://en.wikipedia.org/wiki/West_Coast_of_the_United_States) wakes up, I submit them in batches of bursts over an hour or so before I retire for the day. The idea is not to get emotional -- the same links you submitted will die, but someone else submitting it after a few hours, or a day or two will get voted. While I slept and woke up the next day, an article or two got on the front page.
 
+{:.aside .left}
+I maintain a [list of sources](https://github.com/brajeshwar/hackernews-source) from where I submit stories to Hacker News.
+
 So far, the most number of stories I have had on the front page simultaneously is four, which is 13.33% of the front page stories. I have also seen my submissions as the 1st and 30th at the same time, and submissions that stay on for more than a day - which are rare occurrences.
 
 The basic idea for Hacker News is anything that good [hackers](https://en.wikipedia.org/wiki/Hacker) would find interesting, including more than hacking and startups — anything that gratifies one’s intellectual curiosity.
