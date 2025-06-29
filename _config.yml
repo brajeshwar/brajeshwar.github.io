@@ -76,11 +76,11 @@ collections:
     output: true
 
 exclude:
+  - .claude
   - .obsidian
   - Gemfile
   - Gemfile.lock
   - gemfiles/
   - README.*
   - now/*
-
-exclude: [vendor]
+  - vendor
