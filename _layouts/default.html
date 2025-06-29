@@ -13,7 +13,6 @@
 
 <meta name="description" content="{{ site.description }}">
 
-<meta name="msapplication-TileColor" content="#171717">
 <meta name="color-scheme" content="light dark">
 
 <link rel="archives" href="{{ site.baseurl | prepend: site.url }}/archives/">
@@ -26,8 +25,6 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
-{% include fonts.html %}
-
 <style type="text/css">{% include styles.html %}</style>
 
 </head>
@@ -37,6 +34,5 @@
   {{ content }}
   {% include footer.html %}
 
-  <script src="/assets/js/theme-switcher.js"></script>
 </body>
 </html>

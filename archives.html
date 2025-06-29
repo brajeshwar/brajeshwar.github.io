@@ -6,6 +6,10 @@ styles: css/4.1-archives.css
 
 <main class="container-ideal">
 
+  <search-container>
+    {% include search-modal.html %}
+  </search-container>
+
   <page-archives>
     {%- for post in site.posts -%}
     {%- assign currentdate = post.date | date: "%Y" -%}

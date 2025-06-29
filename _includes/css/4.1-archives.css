@@ -56,3 +56,14 @@ page-archives table tr td:first-child {
 	font-size: smaller;
 	text-transform: uppercase;
 }
+
+/* Search container styling for archives page */
+search-container {
+	display: block;
+	margin-bottom: var(--space);
+}
+
+search-container .search-trigger {
+	width: 100%;
+	justify-content: flex-start;
+}
