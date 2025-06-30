@@ -6,6 +6,7 @@ The source repository that runs my personal website - [brajeshwar.com](https://b
 
 ## Todo
 
+- [ ] I need to setup the website to be able to do experiments. Should I just do a sub-domain or stick to the main domain?
 - [ ] Re-direct `docs.brajeshwar.com` via Cloudflare Workers.
 - [x] Move `/search/` to a dedicated page to reduce the load on others.
 - [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
