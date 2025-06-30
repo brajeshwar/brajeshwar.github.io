@@ -24,6 +24,7 @@ These tools, services, and companies are the ones that I use. I want to promote 
 - OpenPhone
 - Attio, https://www.attio.com?r=IiDWXG7ug6IWeX9n (Workspaces created via the link will receive 10% off Attio for their first year.)
 - Willow, https://willowvoice.com/?ref=BOINAM86
+- Cal, https://refer.cal.com/brajeshwar
 
 ### Archived / Elsewhere
 
