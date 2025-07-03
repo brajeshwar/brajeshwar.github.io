@@ -17,7 +17,7 @@ In life, unforeseen challenges continually emerge, such as career shifts, person
 
 > [Off-topic] Someone made a Tetris that you can play at your own time and leisure - [Lazy Tetris](https://lazytetris.com).
 
-<img class="large" src="/static/2025/chess-queen.webp" alt="Chess">
+<img class="full" src="/static/2025/chess-queen.webp" alt="Business is Chess">
 
 ## Business is Chess - Strategic Foresight
 

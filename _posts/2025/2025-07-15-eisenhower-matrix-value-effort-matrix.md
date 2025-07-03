@@ -2,7 +2,7 @@
 
 The Eisenhower Matrix, or the Value-Effort Matrix, is one of those deceptively simple tools that quietly changes how you see your day. It’s less about strict rules and more about a mindset. It is the gentle way to untangle the noise and focus on what truly matters.
 
-> Here’s how it played out. [Dwight D. Eisenhower](https://en.wikipedia.org/wiki/Dwight_D._Eisenhower), the 34^th president and a five-star general, faced a mountain of decisions every day. His secret? He sorted tasks not by how urgent they seemed but by their real impact and effort. From that simple logic, the matrix was born.
+> Here’s how it played out. [Dwight D. Eisenhower](https://en.wikipedia.org/wiki/Dwight_D._Eisenhower), the 34th president and a five-star general, faced a mountain of decisions every day. His secret? He sorted tasks not by how urgent they seemed but by their real impact and effort. From that simple logic, the matrix was born.
 
 <a href="/static/2025/eisenhower-matrix-original.png"><img src="/static/2025/eisenhower-matrix.webp" alt="Eisenhower Matrix"></a>
 
