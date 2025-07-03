@@ -16,7 +16,7 @@ Own the content, know your process, and define your patterns. Use tools, leverag
 
 ## Domain as Digital Identity
 
-Owning your domain name is the foundational step towards this digital independence. A domain serves as a ‘permanent’ address in the online world. It gives you authority and flexibility over your identity, enabling you to use personalized emails, such as `hi@yourdomain.com`, reinforcing your brand and professionalism. Beyond just branding, it safeguards your presence from platform lock-in, algorithm changes, and unexpected disruptions.
+Owning your domain name is the foundational step towards this digital independence. A domain serves as a ‘permanent’ address in the online world. It gives you authority and flexibility over your identity, enabling you to use [personalized emails](/2024/email/), such as `hi@yourdomain.com`, reinforcing your brand and professionalism. Beyond just branding, it safeguards your presence from platform lock-in, algorithm changes, and unexpected disruptions.
 
 Personal websites further amplify this control. They allow creators to publish content exactly how they envision it, without restrictions imposed by third-party algorithms, advertisement rules, or format limitations. The layout, design, and structure of a personal website can reflect the creator’s identity, aesthetics, and values, fostering deeper relationships with readers and followers.
 
