@@ -57,6 +57,10 @@ page-archives table tr td:first-child {
 	text-transform: uppercase;
 }
 
+page-archives tbody tr:hover, page-archives tbody tr:active {
+  border-bottom-color: var(--border-color-high);
+}
+
 /* Search container styling for archives page */
 search-container {
 	display: block;
