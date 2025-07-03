@@ -6,11 +6,11 @@ The software? [WordStar](/2024/wordstar/). The challenge? Learning to wield it l
 
 Fast forward to the 1990s, and the office landscape shifts. Microsoft Office[^MSOffice] arrives like a Swiss Army knife,[^SwissArmyKnife] Word, Excel, PowerPoint, Outlook, all bundled to make the modern knowledge worker’s life easier. Suddenly, fluency in these tools is no longer just a neat trick but the baseline for getting hired, promoted, and respected.
 
-Today, in 2025, a new frontier is rising. Artificial Intelligence is no longer confined to sci-fi dreams or tech lab experiments—it’s the newest, hottest “software” you need to master. And AI fluency is fast becoming the Microsoft Office of our era.
+Today, in 2025, a new frontier is rising. Artificial Intelligence is no longer confined to sci-fi dreams or tech lab experiments; it’s the newest, hottest “software” you need to master. And AI fluency is fast becoming the Microsoft Office of our era.
 
 ## WordStar - The Early Keyboard Kung Fu
 
-Before graphical user interfaces and mice, there was WordStar. Launched in the late 1970s, it became the most popular word processor for a decade. But mastering WordStar was no small feat.
+Before graphical user interfaces and mice, there was [WordStar](/2024/wordstar/). Launched in the late 1970s, it became the most popular word processor for a decade. But mastering WordStar was no small feat.
 
 No mouse, no fancy toolbars; just the keyboard and cryptic command combinations. You needed to remember dozens of shortcuts just to perform basic tasks, such as saving, deleting, or formatting. The famous <kbd>Ctrl-K</kbd> <kbd>Ctrl-S</kbd> sequence to save and <kbd>Ctrl-Q</kbd> to quit became office battle cries.
 
@@ -46,7 +46,7 @@ Suddenly, fluency expanded beyond just typing or crunching numbers. It became ab
 
 We’ve come a long way from keyboard shortcuts and macros. Today, AI is everywhere, whether it’s [ChatGPT](https://chatgpt.com/) drafting your emails, [GitHub Copilot](https://en.wikipedia.org/wiki/GitHub_Copilot) helping you write code, or AI tools generating marketing copy, graphics, or even music.
 
-AI fluency is not about memorizing commands. It’s about conversation—knowing how to ask questions, give context, refine outputs, and critically evaluate results. It’s a whole new muscle to build.
+AI fluency is not about memorizing commands. It’s about conversation, knowing how to ask questions, give context, refine outputs, and critically evaluate results. It’s a whole new muscle to build.
 
 AI can create text that sounds human, solve problems on the fly, or generate ideas you’d never thought of. Just like WordStar demands keyboard mastery, AI demands conversational mastery.
 
@@ -64,8 +64,6 @@ It’s not just coders or data scientists who need AI skills. Marketers, HR prof
 
 [According to ZDNet](https://www.zdnet.com/article/employers-want-workers-with-ai-skills-but-what-exactly-does-that-mean/), hiring managers across sectors are desperate for candidates who can do more than “talk AI.” They want fluency: the ability to utilize AI to enhance workflows, generate insights, and drive innovation.
 
-HR platforms, Betterworks, emphasize that [AI fluency drives more innovative performance management and learning systems](https://www.betterworks.com/magazine/ai-fluency-hr-innovation/). AI is helping companies customize training and boost engagement—only if workers are fluent enough to use it.
-
 Humanitarians AI states that AI fluency is [rapidly becoming a core hiring requirement](https://www.linkedin.com/pulse/rise-ai-fluency-core-hiring-requirement-humanitarians-ai-ydqje/), not just for tech jobs but for roles that rely on creativity, problem-solving, and effective communication.
 
 ## Get Started
@@ -75,19 +73,19 @@ Just like you needed training and practice for Office, AI fluency takes a combin
 - **Curiosity:** Willingness to experiment with different AI tools.
 - **Practice:** Building a habit of crafting clear, iterative prompts.
 - **Critical Thinking:** Questioning AI’s answers, spotting errors.
-- **Continuous Learning:** AI tools evolve fast—today’s skills can become outdated tomorrow.
+- **Continuous Learning:** AI tools evolve fast; today’s skills can become outdated tomorrow.
 
 Imagine being stuck in 2000 without knowing Excel or PowerPoint. You’d be sidelined. In 2030, that’s what not having AI fluency might look like: struggling to keep up with automated workflows, missing insights, or losing ground to competitors who harness AI for creative and operational advantage.
 
 ## But How
 
 - **Explore AI assistants:** Start with free tools like [ChatGPT](https://chatgpt.com), [Google Gemini](https://gemini.google.com), [Claude](https://claude.ai), [Perplexity](https://www.perplexity.ai), etc.
-- **Practice prompt engineering:** Try different ways to ask questions or give instructions.
+- **Practice prompt/context engineering:** Try different ways to ask questions or give instructions.
 - **Learn AI integrations in your tools:** For example, Microsoft 365 Copilot, Google’s AI.
 - **Take online courses:** Platforms like [Coursera](https://www.coursera.org), [Udemy](https://www.udemy.com), [Maven](https://maven.com), and [OpenSesame](https://www.opensesame.com) offer AI fluency training.
 - **Join communities:** Hang out in online social communities focussed on AI that shares tips and hacks.
 
-Software fluency once meant knowing how to type faster, build spreadsheets, or craft presentations. AI fluency means knowing how to think with machines—to turn them into collaborators and co-creators.
+Software fluency once meant knowing how to type faster, build spreadsheets, or craft presentations. AI fluency means learning how to think with machines and to turn them into collaborators and co-creators.
 
 The digital frontier is open. Just like the early adopters of WordStar and Lotus 1-2-3 rewrote what productivity meant, today’s AI-fluent professionals are crafting a new playbook.
 
