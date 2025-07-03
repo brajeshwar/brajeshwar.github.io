@@ -47,10 +47,6 @@ tbody tr:nth-child(even) {
   background-color: var(--bg-color-low);
 }
 
-tbody tr:hover, tbody tr:active {
-  border-bottom-color: var(--border-color-high);
-}
-
 
 tfoot {
   border-top: var(--border-size) var(--border-style) var(--border-color);
