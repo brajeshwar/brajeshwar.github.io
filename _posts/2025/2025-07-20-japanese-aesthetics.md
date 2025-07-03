@@ -1,13 +1,6 @@
 # Japanese Aesthetics
 
-[Japanese Aesthetics](https://en.wikipedia.org/wiki/Japanese_aesthetics) represent a rich and complex framework of artistic principles and cultural values that have profoundly influenced both traditional and contemporary art, literature, and society in Japan and beyond. Rooted in key concepts such as mono no aware (the pathos of things), yūgen (subtle profundity), and wabi-sabi (the beauty of imperfection), these aesthetics emphasize the appreciation of transience, natural beauty, and the emotional resonance of experiences, reflecting a unique worldview that prioritizes connection with nature and the ephemerality of life.
-
-{:.aside .right}
-For example, the principles of wabi-sabi continue to resonate in modern design and art, promoting sustainability and mindfulness amidst a fast-paced world, while encouraging an appreciation for the beauty in imperfection and decay.
-
-Despite their enduring popularity, Japanese aesthetics are not without controversy. The interplay between traditional values and modernity often presents challenges, as contemporary artists navigate expectations rooted in historical conservatism while seeking to innovate and engage with global audiences. Additionally, the commercialization of these aesthetic principles raises questions about authenticity and the commodification of culture, prompting ongoing discussions regarding cultural appropriation and the integrity of artistic expression.
-
-Overall, Japanese aesthetics provide a profound lens through which to explore beauty, emotional depth, and the human experience, influencing diverse fields and fostering a global dialogue that continues to evolve.
+[Japanese Aesthetics](https://en.wikipedia.org/wiki/Japanese_aesthetics) represent a rich and complex framework of artistic principles and cultural values that have profoundly influenced both traditional and contemporary art, literature, and society in Japan and beyond. Rooted in key concepts such as _mono no aware_ (the pathos of things), _yūgen_ (subtle profundity), and _wabi-sabi_ (the beauty of imperfection), these aesthetics emphasize the appreciation of transience, natural beauty, and the emotional resonance of experiences, reflecting a unique worldview that prioritizes connection with nature and the ephemerality of life.
 
 ## Mono no Aware
 
@@ -25,6 +18,9 @@ The concept has a close connection with [Zen](https://en.wikipedia.org/wiki/Zen)
 
 ## Wabi-Sabi
 
+{:.aside .right}
+For example, the principles of wabi-sabi continue to resonate in modern design and art, promoting sustainability and mindfulness amidst a fast-paced world, while encouraging an appreciation for the beauty in imperfection and decay.
+
 [Wabi-sabi](https://en.wikipedia.org/wiki/Wabi-sabi) (侘び寂び) is another cornerstone of Japanese aesthetic philosophy, emphasizing the beauty found in imperfection and the natural cycles of life. It combines two concepts: wabi, which signifies a subdued, austere beauty, and sabi, which denotes the beauty that comes with age and the passage of time.
 
 Wabi-sabi is rooted in Buddhist teachings, specifically the ideas of impermanence (無常, mujō), suffering (苦, ku), and emptiness (空, kū). This aesthetic values simplicity, asymmetry, and a rustic quality, encouraging an appreciation of the natural world and its imperfections. Wabi-sabi can be experienced in various contexts, such as traditional Japanese gardens and architecture, where the fleeting and imperfect nature of existence is celebrated.
@@ -34,3 +30,7 @@ Wabi-sabi is rooted in Buddhist teachings, specifically the ideas of impermanenc
 The concept of fuzei (風情), which translates to “wind emotion,” captures the Heian sensibility toward the natural harmony in design and aesthetics. The term encapsulates an aesthetic taste that emphasizes the ambiance and scenic qualities of an environment. Fuzei does not solely refer to the physical attributes of a space but also embodies a deeper, almost ethereal quality that resonates with viewers, creating an emotional connection that transcends the mere visual.
 
 These key concepts of Japanese aesthetics reveal a profound relationship between nature, emotion, and the human experience, shaping the cultural landscape and influencing artistic expressions throughout history.
+
+Despite their enduring popularity, Japanese aesthetics are not without controversy. The interplay between traditional values and modernity often presents challenges, as contemporary artists navigate expectations rooted in historical conservatism while seeking to innovate and engage with global audiences. Additionally, the commercialization of these aesthetic principles raises questions about authenticity and the commodification of culture, prompting ongoing discussions regarding cultural appropriation and the integrity of artistic expression.
+
+Overall, Japanese aesthetics provide a profound lens through which to explore beauty, emotional depth, and the human experience, influencing diverse fields and fostering a global dialogue that continues to evolve.
