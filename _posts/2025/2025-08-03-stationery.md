@@ -1,7 +1,3 @@
----
-image: /static/2025/stationery.webp
----
-
 # Stationery
 
 I grew up studying in my early years with an ardent lack of stationery. I still remember buying a used fountain pen from a friend, and it became my prized luxury item.
@@ -12,15 +8,17 @@ Now, I can afford to buy, and I have an indulgence in purchasing exquisite stati
 
 In a world where everything seems to be digitized, from our grocery lists to our signatures, the humble world of stationery quietly endures. It’s thriving in ways that make the digital realm look almost... sterile.
 
+<img class="full" src="/static/2025/stationery.webp" alt="Stationery" loading="lazy">
+
 There’s something deeply personal about putting pen to paper. That small act, that tactile connection, still resonates. The friction of graphite or ink on paper gives shape to ideas in ways that no keyboard tap ever can.
 
 [Handwriting](/2025/handwriting/) slows you down. It forces you to think, to reflect. The very act of choosing the right pen, paper, and notebook becomes ritualistic. It is deliberate. In the same way that some people prefer manual coffee grinders over pods, or vinyl over Spotify, good stationery adds depth to the mundane.
 
 There’s also a tactile satisfaction that screen-swipes can never replace. Turning pages, hearing the soft rustle, feeling the tooth of paper under a pen tip, these are sensory experiences that reconnect us with our human side.
 
-![Midori MD Notebook](/static/2024/notebook-midori.webp)
-
 When it comes to stationery, the Japanese are at the pinnacle of the ultra-premium market. Japan doesn’t just make stationery. Japan perfects it.
+
+<img src="/static/2024/notebook-midori.webp" alt="Midori MD Notebook" loading="lazy">
 
 A [Midori](/2024/midori/) MD notebook, for example, is designed with such thoughtfulness that the binding lies flat, the paper resists bleed-through, and even the packaging invites reuse. [Muji](https://www.muji.com/), on the other hand, takes minimalism to new heights. Their gel ink pens, notebooks, and folders are as functional as they are beautiful, and priced well within the reach of everyday users.
 
