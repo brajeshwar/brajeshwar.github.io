@@ -1,26 +1,35 @@
 /*
- * TBD: I seem have reset the size somewhere along the cascade
- * fix them without the !important
+ * TBD:
+ * 1. I seem have reset the size somewhere along the cascade fix them without the !important
+ * 2. Move/combine this as part of a common media style (images, audio, and video)
  */
 
 img {}
 
-img.small {
+img.small,
+video.small,
+audio.small {
 	width: 40% !important;
 	height: auto;
 }
 
-img.medium {
+img.medium,
+video.medium,
+audio.medium {
 	width: 60% !important;
 	height: auto;
 }
 
-img.left {
+img.left,
+audio.left,
+video.left {
 	float: left;
 	margin: 0 var(--space-s) var(--space-s) 0;
 }
 
-img.right {
+img.right,
+audio.right,
+video.right {
   float: right;
 	margin: 0 0 var(--space-s) var(--space-s);
 }
