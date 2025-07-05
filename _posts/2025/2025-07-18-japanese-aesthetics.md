@@ -1,3 +1,7 @@
+---
+image: /static/2025/japanese-aesthetics.webp
+---
+
 # Japanese Aesthetics
 
 [Japanese Aesthetics](https://en.wikipedia.org/wiki/Japanese_aesthetics) represent a rich and complex framework of artistic principles and cultural values that have profoundly influenced both traditional and contemporary art, literature, and society in Japan and beyond. Rooted in key concepts such as _mono no aware_ (the pathos of things), _yūgen_ (subtle profundity), and _wabi-sabi_ (the beauty of imperfection), these aesthetics emphasize the appreciation of transience, natural beauty, and the emotional resonance of experiences, reflecting a unique worldview that prioritizes connection with nature and the ephemerality of life.

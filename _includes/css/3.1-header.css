@@ -55,7 +55,7 @@ site-nav {
 }
 
 site-nav a, site-nav a:visited {
-	padding: var(--space-2xs) var(--space-3xs);
+	padding: var(--space-2xs);
 	color: var(--text-color-lower);
 	text-decoration: none;
 }
