@@ -6,7 +6,7 @@ Before you roll your eyes and mumble, “Yeah, yeah, another macho aphorism,” 
 
 ## The Fastest People ain’t in a Hurry
 
-<video class="right" width="300" height="533" autoplay muted controls loop>
+<video class="right" width="300" height="533" autoplay playsinline muted controls loop>
   <source src="https://cdn.oinam.com/video/sports/f1-pit-stop-2024.mp4" type="video/mp4">
 </video>
 
