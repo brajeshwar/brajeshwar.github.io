@@ -1,6 +1,7 @@
-source "https://rubygems.org"
-gem "jekyll"
-gem "webrick"
+source 'https://rubygems.org'
+gem 'jekyll'
+gem 'webrick'
+gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
   gem 'jekyll-algolia'
@@ -10,5 +11,4 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jekyll-sitemap'
   gem 'jekyll-titles-from-headings'
-  gem 'kramdown-parser-gfm'
 end

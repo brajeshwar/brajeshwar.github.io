@@ -73,14 +73,15 @@
 /* CONFIG */
 
 :root {
-  --font-family-sans      : system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-family-serif     : Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
+  --font-family-sans-serif: system-ui, -apple-system, 'Segoe UI', 'Roboto', Ubuntu, Cantarell, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
   --font-family-monospace : Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
-  --font-family-cursive   : cursive;
+  --font-family-cursive   : 'Brush Script MT', cursive;
+  --font-family-fantasy   : Papyrus;
 
-  --font-family           : var(--font-family-sans);
-  --font-family-alt       : var(--font-family-serif);
-  --font-family-ui        : var(--font-family-sans);
+  --font-family           : 'Trebuchet MS', var(--font-family-sans-serif);
+  --font-family-alt       : 'Lucida Bright', Georgia, var(--font-family-serif);
+  --font-family-ui        : var(--font-family-sans-serif);
 
   --font-weight-lighter   : 200;
   --font-weight-light     : 300;
