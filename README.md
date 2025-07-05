@@ -1,8 +1,6 @@
 # brajeshwar.com
 
-The source repository that runs my personal website - [brajeshwar.com](https://brajeshwar.com). The domain, `brajeshwar.com`, was booked on Jun 11, 2001.
-
-2021: A Jekyll-powered static website. Article: [20+ years old site - WordPress to Static](https://brajeshwar.com/2021/brajeshwar.com-2021/).
+Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com). The domain, `brajeshwar.com`, was booked on Jun 11, 2001.
 
 ---
 ## brajeshwar.com 2025
@@ -30,15 +28,15 @@ The source repository that runs my personal website - [brajeshwar.com](https://b
 ## Todo
 
 - [ ] I need to setup the website to be able to do experiments. Should I just do a sub-domain or stick to the main domain?
-- [ ] Re-direct `docs.brajeshwar.com` via Cloudflare Workers.
-- [x] Move `/search/` to a dedicated page to reduce the load on others.
-- [ ] Replaced Google Search with Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
-- [ ] Page Template (Full Width) - Pages, Wear, Devices, Books, Films
-- [ ] Page Template (Ideal Width) - posts.
-- [ ] Page template (Timeline) `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn Profile eventually.
-- [ ] A style component for photos, which highlights some key photos. This will likely come after https://pictures.oinam.com is up.
 - [ ] Yearly Archives `/2001/`, `/2002/`, etc. https://simonwillison.net/ has a nice way of doing it.
-- [ ] Loved the idea of light-dark mode with themes on [Ryan Mulligan's website](https://ryanmulligan.dev). He is also a man of culture - his website is [open-source](https://github.com/hexagoncircle/ryan-mulligan-dev).
+- [ ] Move `/search/` to a dedicated page to reduce the load on others.
+- [ ] Search moved from Google to Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
+- [ ] Page Template (Full Width) - Pages, Wear, Devices, Books, Films.
+- [ ] Page Template (Ideal Width) - posts, article, ideal for reading.
+- [ ] Page template (Timeline) `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn profile eventually.
+- [ ] A style component for photos, which highlights some key photos. This will likely come after https://pictures.oinam.com is up.
+- [ ] Re-direct `docs.brajeshwar.com` via Cloudflare Workers.
+- [ ] Move all Jekyll Redirects to Cloudflare or plain HTML.
 
 ## Promotions & Affiliates
 

@@ -6,7 +6,6 @@
 .obsidian
 .sass-cache/
 _site/
-prompt/
 vendor/
 
 # Ignore OS generated files #
