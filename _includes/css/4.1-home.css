@@ -30,7 +30,7 @@ home-container home-books     { grid-area: books; }
 home-container home-connect   { grid-area: connect; }
 
 home-container home-intro {
-  font-family: var(--font-family-headings);
+  font-family: var(--font-family-alt);
   font-size: var(--step-2);
   font-weight: var(--font-weight-light);
 }
@@ -45,7 +45,6 @@ home-container home-intro p {
   margin: 0;
   padding: 0;
 
-  font-family: var(--font-family-headings);
   font-size: var(--step-2);
   line-height: var(--scale-small);
 }

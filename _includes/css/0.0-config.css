@@ -79,8 +79,7 @@
   --font-family-cursive   : cursive;
 
   --font-family           : var(--font-family-sans);
-  --font-family-alt       : var(--font-family-sans);
-  --font-family-headings  : var(--font-family-serif);
+  --font-family-alt       : var(--font-family-serif);
   --font-family-ui        : var(--font-family-sans);
 
   --font-weight-lighter   : 200;
