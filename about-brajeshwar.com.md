@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About brajeshwar.com
-permalink: /about/brajeshwar.com
+permalink: /about/brajeshwar.com/
 ---
 
 `brajeshwar.com` was registered on `Jun 11, 2001`

@@ -37,7 +37,7 @@ photo-cover__desc {
 
 .post h1 {
 	margin: 0;
-	font-family: var(--font-family-headings);
+	font-family: var(--font-family-alt);
 	font-size: var(--step-3);
 	line-height: var(--scale-small);
 }
