@@ -5,8 +5,6 @@ styles: css/4.1-pages-now.css
 style: page-now
 ---
 
-> I started [Valinor Earth](https://valinor.earth) to help businesses fight climate change. After a few trials, pivots, and feedback, we decided to leverage satellite data to help companies with their efforts on climate projects with project financing, monitoring, reporting, and verification.
-
 {% include_relative now/2024.md %}
 
 {% include_relative now/2020.md %}
