@@ -1,8 +1,0 @@
-# I
-
-- [Infat](https://github.com/philocalyst/infat) is a command line tool to set default openers for file formats and url schemes on macos
-- [IronCalc](https://www.ironcalc.com) – [Open-Source](https://github.com/ironcalc/IronCalc/) Spreadsheet Engine.
-- [IT-Tools](https://it-tools.tech) is an [open-source](https://github.com/CorentinTh/it-tools/) collection of handy online tools for developers.
-- [I am The Fold](https://iamthefold.com) is an experiment to show how designing for The Fold can be treacherous ([source](https://github.com/iest/i-am-the-fold)).
-- [InstaBooks](https://instabooks.ai) is an AI TextBook Generator.
-- [IOGraph](https://iographica.com) — is an application that turns mouse movements into contemporary art. The idea is that you have the program running in the background while doing your usual daily stuff at the computer. 
