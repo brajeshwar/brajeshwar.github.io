@@ -1,6 +1,6 @@
 # Yahoo! UI LIbrary Grids CSS
 
-[YUI Grids CSS](http://com1.devnet.scd.yahoo.com/yui/grids/), an addition to [Yahoo! UI](http://developer.yahoo.net/yui/), is a suite of web page templates with the ability to nest grids of one to four columns within the content area of those templates. The template and grid system offers the following features;
+[YUI Grids CSS](https://clarle.github.io/yui3/yui/docs/cssgrids/), an addition to [Yahoo! UI](https://en.wikipedia.org/wiki/YUI_Library) ([source](https://github.com/yui/yui3)), is a suite of web page templates with the ability to nest grids of one to four columns within the content area of those templates. The template and grid system offers the following features;
 
 - Full A-grade browser support.
 - More than 100 page layouts with a single CSS file at just 1.82KB.
