@@ -40,6 +40,7 @@ photo-cover__desc {
 	
 	font-family: var(--font-family-alt);
 	font-size: var(--step-3);
+	font-weight: var(--font-weight-bold);
 	line-height: var(--scale-small);
 }
 

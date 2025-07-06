@@ -80,7 +80,7 @@
   --font-family-fantasy   : Papyrus;
 
   --font-family           : var(--font-family-sans-serif);
-  --font-family-alt       : Georgia, var(--font-family-serif);
+  --font-family-alt       : var(--font-family-serif);
   --font-family-ui        : var(--font-family-sans-serif);
 
   --font-weight-lighter   : 200;
