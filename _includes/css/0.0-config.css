@@ -79,9 +79,9 @@
   --font-family-cursive   : 'Brush Script MT', cursive;
   --font-family-fantasy   : Papyrus;
 
-  --font-family           : var(--font-family-sans-serif);
-  --font-family-alt       : var(--font-family-serif);
-  --font-family-ui        : var(--font-family-sans-serif);
+  --font-family           : 'Libre Baskerville', var(--font-family-serif);
+  --font-family-alt       : 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', var(--font-family-sans-serif);
+  --font-family-ui        : 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', var(--font-family-sans-serif);
 
   --font-weight-lighter   : 200;
   --font-weight-light     : 300;

@@ -38,7 +38,6 @@ photo-cover__desc {
 .post h1 {
 	margin: 0;
 	
-	font-family: var(--font-family-alt);
 	font-size: var(--step-3);
 	font-weight: var(--font-weight-bold);
 	line-height: var(--scale-small);
@@ -48,6 +47,7 @@ photo-cover__desc {
 	display: block;
 	margin: var(--space-xs) auto;
 	padding: var(--space-3xs) 1px;
+	font-family: var(--font-family-ui);
 	font-size: var(--step--2);
 }
 
