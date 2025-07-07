@@ -81,13 +81,13 @@
 
   --font-family           : 'Libre Baskerville', var(--font-family-serif);
   --font-family-alt       : 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', var(--font-family-sans-serif);
-  --font-family-ui        : 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', var(--font-family-sans-serif);
+  --font-family-ui        : var(--font-family-sans-serif);
 
-  --font-weight-lighter   : 200;
+  --font-weight-lighter   : 100;
   --font-weight-light     : 300;
   --font-weight           : 400;
   --font-weight-bold      : 500;
-  --font-weight-bolder    : 600;
+  --font-weight-bolder    : 700;
   
   --font-size             : 18px;
 
