@@ -4,7 +4,7 @@
 
 Today, we take the `World Wide Web` (the Web) for granted - a utility as ubiquitous as electricity.
 
-On this day, Aug 6, 1991, [Tim Berners-Lee](https://en.wikipedia.org/wiki/WorldWideWeb) posted [information](https://groups.google.com/g/comp.archives/c/CfsHlSNYPUI/m/DTs60INnuzcJ?pli=1) about his [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) project to the public and introduced the Web to the world.
+On this day, Aug 6, 1991, [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee) posted [information](https://groups.google.com/g/comp.archives/c/CfsHlSNYPUI/m/DTs60INnuzcJ?pli=1) about his [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) project to the public and introduced the Web to the world.
 
 > The WWW project merges the techniques of information retrieval and hypertext to 
 make an easy but powerful global information system.
