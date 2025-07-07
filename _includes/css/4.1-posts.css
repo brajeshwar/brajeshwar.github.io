@@ -32,21 +32,22 @@ photo-cover__desc {
 }
 
 .post {}
-
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {}
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+	margin: var(--space-m) auto 0;
+	padding: 0;
+}
 
 .post h1 {
 	margin: 0;
-	
-	font-size: var(--step-3);
 	font-weight: var(--font-weight-bold);
 	line-height: var(--scale-small);
 }
 
 .post time {
 	display: block;
-	margin: var(--space-xs) auto;
+	margin: var(--space-3xs) auto var(--space-m);
 	padding: var(--space-3xs) 1px;
+	
 	font-family: var(--font-family-ui);
 	font-size: var(--step--2);
 }
