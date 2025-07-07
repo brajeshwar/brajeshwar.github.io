@@ -98,6 +98,10 @@
   year: 2001-2011
   img: harry-potter.webp
   url: https://en.wikipedia.org/wiki/Harry_Potter_(film_series)
+- title: "Her"
+  year: 2013
+  img: her.webp
+  url: https://en.wikipedia.org/wiki/Her_(2013_film)
 - title: "Identity"
   year: 2003
   img: identity.webp
