@@ -4,11 +4,11 @@ Entrepreneurs, tech professionals, and strategic thinkers frequently face uncert
 
 One compelling analogy is, “Life is like playing Tetris, while business resembles a strategic game of chess.” This analogy underscores the significance of adaptability in personal life and the crucial role of strategic foresight in business.
 
-## Life is Tetris - Adaptability Over Planning
+## Life is Tetris
 
 Tetris,[^Tetris] a classic arcade game created by Alexey Pajitnov in 1984, embodies unpredictability and adaptability. Players manage falling geometric shapes, arranging them in real-time to prevent pieces from piling up and ending the game. Much like life, Tetris does not allow players to control what shapes come next. Success depends entirely on adapting effectively to ever-changing situations.
 
-{:.aside .left}
+{:.aside .right}
 “In life, you can’t control the board.” — [Observer](https://observer.com/2016/01/your-life-is-tetris-stop-playing-it-like-chess/)
 
 This perspective is vividly explored by Tim Urban[^TimUrban] and others, who suggest that approaching life like a chess game, with overly calculated and meticulously planned moves, can be counterproductive. Chess requires precise planning of several moves ahead, anticipating opponents’ responses, and avoiding unexpected complications. Life, however, rarely follows neat, predictable pathways.
@@ -19,7 +19,7 @@ In life, unforeseen challenges continually emerge, such as career shifts, person
 
 <img class="full" src="/static/2025/chess-queen.webp" alt="Business is Chess">
 
-## Business is Chess - Strategic Foresight
+## Business is Chess
 
 Conversely, business operates more like chess, where strategic foresight and calculated moves dominate. Chess[^Chess] fundamentally revolves around strategy, with players plotting multiple moves ahead, analyzing potential outcomes, and continually adjusting their tactics based on opponents’ actions.
 
@@ -32,7 +32,7 @@ Historical business giants, such as [IBM](https://www.ibm.com/), and contemporar
 
 Tesla, for example, strategically decided to dominate the electric vehicle market through carefully executed steps: building infrastructure like Superchargers,[^TeslaSupercharger] designing compelling products such as Models S, 3, X, and Y, and securing essential resources like battery technology and raw materials. Each decision was methodically calculated, much like a chess player’s careful orchestration toward checkmate.
 
-## Tetris & Chess
+## Tetris + Chess
 
 Interestingly, true mastery in life and business involves blending the adaptability of Tetris with the strategic rigor of Chess. Entrepreneurs and tech leaders must remain agile in responding to immediate challenges while maintaining strategic coherence and direction toward long-term goals.
 
@@ -45,7 +45,7 @@ The COVID-19 pandemic[^COVID19] provided an excellent example of companies combi
 3. **Invest in Scenario Planning:** Regularly engage in scenario planning to anticipate various market conditions, competitor moves, and internal challenges. This maintains strategic preparedness, similar to chess players studying future moves.
 4. **Cultivate Continuous Learning:** Foster a culture of continuous learning and improvement. Embrace failures as learning opportunities to enhance both adaptability and strategic thinking simultaneously.
 
-“Life is Tetris, Business is Chess” offers entrepreneurs and strategic thinkers a practical and insightful framework for navigating life and business. It highlights the necessity of adaptability in handling life’s unpredictable challenges and emphasizes the importance of strategic foresight in achieving long-term business success. Yet, beyond metaphors, actual achievement comes from acknowledging our human capacity for growth, adaptation, and strategic wisdom. By embracing both flexibility and thoughtful planning, we navigate uncertainty more effectively, creating paths not just for survival but for meaningful and lasting success.
+**“Life is Tetris, Business is Chess”** offers entrepreneurs and strategic thinkers a practical and insightful framework for navigating life and business. It highlights the necessity of adaptability in handling life’s unpredictable challenges and emphasizes the importance of strategic foresight in achieving long-term business success. Yet, beyond metaphors, actual achievement comes from acknowledging our human capacity for growth, adaptation, and strategic wisdom. By embracing both flexibility and thoughtful planning, we navigate uncertainty more effectively, creating paths not just for survival but for meaningful and lasting success.
 
 ### Further Reading
 
