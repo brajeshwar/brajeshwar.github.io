@@ -41,7 +41,6 @@ plugins:
   - jekyll-feed
   - jekyll-optional-front-matter
   - jekyll-paginate
-  - jekyll-redirect-from  
   - jekyll-sitemap
   - jekyll-titles-from-headings
   
