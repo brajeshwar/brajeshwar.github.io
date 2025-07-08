@@ -1,3 +1,7 @@
+---
+image: '/static/2025/walk-out.webp'
+---
+
 # Can I Walk Out?
 
 > “Can I walk out with my content?”
