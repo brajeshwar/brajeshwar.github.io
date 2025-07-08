@@ -1,7 +1,5 @@
 # Digital Go-Bag for the Internet
 
-<img class="medium right" src="/static/2025/go-bag-digital.webp" alt="Digital Go-Bag">
-
 Recently, my daughter had a profound epiphany: “I, in many ways, was raised by the Internet.”
 
 We live our lives online now. From work emails to banking, from cloud storage to personal chats, everything we value seems to float around in some invisible digital ether. But like any system, the Internet is fragile. Services go down. Tools shut shop. Accounts get locked. A company you relied on yesterday may disappear tomorrow.
@@ -9,6 +7,8 @@ We live our lives online now. From work emails to banking, from cloud storage to
 So, what happens when the apps, accounts, and services you depend on go dark?
 
 A digital “Go-Bag”[^GoBag] for the Internet — your emergency kit for surviving digital disasters.
+
+<img class="medium right" src="/static/2025/go-bag-digital.webp" alt="Digital Go-Bag">
 
 Just like many keep an emergency kit for earthquakes or power outages, your digital life deserves the same foresight. If your Google account gets locked, can you still access your documents? If Twitter implodes (again), do you have a backup of your followers or your tweets? If Notion, Figma, or Slack go down, can your team keep working?
 
