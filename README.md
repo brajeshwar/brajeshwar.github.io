@@ -27,16 +27,16 @@ Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
 
 ## Todo
 
-- [ ] I need to setup the website to be able to do experiments. Should I just do a sub-domain or stick to the main domain?
+- [ ] `/lab/` for the list of experiments and play stuffs. Don't care much for organization but follow these patterns. `https://lab.brajeshwar.com/project/`, `https://project.lab.brajeshwar.com`
 - [ ] Yearly Archives `/2001/`, `/2002/`, etc. https://simonwillison.net/ has a nice way of doing it.
 - [ ] Move `/search/` to a dedicated page to reduce the load on others.
 - [ ] Search moved from Google to Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
-- [ ] Page Template (Full Width) - Pages, Wear, Devices, Books, Films.
-- [ ] Page Template (Ideal Width) - posts, article, ideal for reading.
+- [ ] Page Template (Full Width) - Pages, Photos, Wear, Devices, Books, Films.
+- [ ] Page Template (Ideal Width) - posts, articles, ideal for reading.
 - [ ] Page template (Timeline) `cv.brajeshwar.com` as part of `/about`. This should also replace my LinkedIn profile eventually.
 - [ ] A style component for photos, which highlights some key photos. This will likely come after https://pictures.oinam.com is up.
-- [ ] Re-direct `docs.brajeshwar.com` via Cloudflare Workers.
-- [ ] Move all Jekyll Redirects to Cloudflare or plain HTML.
+- [ ] Re-direct `docs.brajeshwar.com` > `https://archive.oinam.com` via Cloudflare Workers.
+- [ ] Move all Jekyll Redirects to Cloudflare or plain HTML or just ignore them! Give a good explanation and possible next-step in the 404 page.
 
 ## Promotions & Affiliates
 
