@@ -3,19 +3,17 @@ layout: page
 title: About Brajeshwar
 ---
 
-<img class="small right" width="480px" height="480px" src="https://cdn.oinam.com/img/avatar/brajeshwar.jpg" alt="Brajeshwar Oinam">
-
 Hi, my name is Brajeshwar Oinam.
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
+
+The domain `brajeshwar.com` was [registered on Jun 11, 2001](/about/brajeshwar.com/).
 
 ## Work
 
 I landed in [Bombay](/2009/bombay/) on Aug 2, 1999 to kick-start my career. I soon fell in love with the city, the speed, and the pace at which things get done.
 
 After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a [floppy disk](https://en.wikipedia.org/wiki/Floppy_disk) which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_café) nearby. Well, they were impressed with the task and my story on how I completed it. I started work the following week.
-
-`brajeshwar.com` was [registered on Jun 11, 2001](/about/brajeshwar.com/).
 
 ## Internet
 
