@@ -5,14 +5,14 @@ title: OK
 
 # OK
 
-`You’re right.`
+> You’re right.
 
 Whatever you say, your idea, your points, everything is correct.
 I have my own opinions, but they are mine.
 
 Your Linux, Windows, or macOS is definitely better. So, are your Emacs or Vim.
 
-I may not want to participate, but I will continue to deeply respect your religious, political, and sporting ideologies, views, and approaches. I’m not concerned with caste, creed, color, or which household you were born to. I will respect you for what you are and what you have made of yourself.
+I may not want to participate, but I will continue to respect your religious, political, and sporting ideologies, views, and approaches. I’m not concerned with caste, creed, color, or which household you were born to. I will respect you for what you are and what you have made of yourself.
 
 <!-- 
 
