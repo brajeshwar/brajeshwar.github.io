@@ -8,19 +8,19 @@ image: '/static/2025/walk-out.webp'
 
 Or in the worst-case scenario, “Can I just Walk Out?”, without worrying about the content.
 
-A set of people believes it is always about being open-source versus proprietary software. However, I’d like to question the freedom of how to move my content around, from open-source to proprietary, and from one platform to another.
+A set of people believes it is always about being open-source versus proprietary software. However, I’d like to focus more on the freedom of how to move my content around, from proprietary to open-source or open-format, and between platforms.
 
-This was one of my primary reasons for liking and endorsing the likes of [Obsidian](/2025/obsidian/). With Obsidian, there is no cloud lock-in, no required account, and your notes are yours, local and portable. This is freedom. In a time of centralization, this matters. It is a choice to own your thoughts.
+For instance, this was one of my primary reasons for liking and endorsing the likes of [Obsidian](/2025/obsidian/). With Obsidian, there is no cloud lock-in, no required account, and your notes are yours, local and portable. This is freedom. In a time of centralization, this matters. It is a choice to own your thoughts.
 
-Own the content, know your process, and define your patterns. Use tools, leverage the ecosystems, but with [backups](/2021/backup/) so you can “walk out” with minimal nuances.
+Own the content, know the process, and define the patterns. Use tools, leverage the ecosystems, but with [backups](/2021/backup/) so you can “walk out” with minimal nuances.
 
 ## POSSE
 
-[POSSE](https://indieweb.org/POSSE) or Publish (on your) Own Site, Syndicate Elsewhere is the practice of posting content on your own site first, then publishing copies or sharing links to third parties (like social media silos) with original post links to provide viewers a path to directly interacting with your content. This approach ensures that even if platforms shut down, censor, or change policies, the creator’s content remains intact and accessible.
+[POSSE](https://indieweb.org/POSSE) or _Publish (on your) Own Site, Syndicate Elsewhere_ is the practice of posting content on your own site first, then publishing copies or sharing links to third parties (like social media silos) with original post links to provide viewers a path to directly interacting with your content. This approach ensures that even if platforms shut down, censor, or change policies, the creator’s content remains intact and accessible.
 
 ## Domain as Digital Identity
 
-Owning your domain name is the foundational step towards this digital independence. A domain serves as a ‘permanent’ address in the online world. It gives you authority and flexibility over your identity, enabling you to use [personalized emails](/2024/email/), such as `hi@yourdomain.com`, reinforcing your brand and professionalism. Beyond just branding, it safeguards your presence from platform lock-in, algorithm changes, and unexpected disruptions.
+Owning your domain name is a foundational step towards this digital independence. A domain serves as a ‘permanent’ address in the online world. It gives you authority and flexibility over your identity, enabling you to use [personalized emails](/2024/email/), such as `contact@brajeshwar.com`, reinforcing your brand and professionalism. Beyond just branding, it safeguards your presence from platform lock-in, algorithm changes, and unexpected disruptions.
 
 Personal websites further amplify this control. They allow creators to publish content exactly how they envision it, without restrictions imposed by third-party algorithms, advertisement rules, or format limitations. The layout, design, and structure of a personal website can reflect the creator’s identity, aesthetics, and values, fostering deeper relationships with readers and followers.
 
