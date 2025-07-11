@@ -84,9 +84,9 @@
   --font-family-ui        : var(--font-family-sans-serif);
 
   --font-weight-lighter   : 100;
-  --font-weight-light     : 300;
+  --font-weight-light     : 200;
   --font-weight           : 400;
-  --font-weight-bold      : 500;
+  --font-weight-bold      : 600;
   --font-weight-bolder    : 700;
   
   --font-size             : 18px;
