@@ -5,3 +5,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: bold;
+  font-display: swap;
+}
