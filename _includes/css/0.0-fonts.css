@@ -1,15 +1,21 @@
 @font-face {
   font-family: "Libre Baskerville";
-  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2") format("woff2");
+  src: url("/assets/fonts/libre-baskerville-2024/libre-baskerville-v14-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  
+  font-display: swap;              /* no FOIT */
+  unicode-range: U+000-5FF;        /* Latin subset */
+  size-adjust: 98.5%;              /* tune to your fallback (e.g., Georgia) */
 }
 
 @font-face {
   font-family: "Libre Baskerville";
-  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2") format("woff2");
+  src: url("/assets/fonts/libre-baskerville-2024/libre-baskerville-v14-latin-bold.woff2") format("woff2");
   font-weight: 600;
   font-style: bold;
-  font-display: swap;
+  
+  font-display: swap;              /* no FOIT */
+  unicode-range: U+000-5FF;        /* Latin subset */
+  size-adjust: 98.5%;              /* tune to your fallback (e.g., Georgia) */
 }
