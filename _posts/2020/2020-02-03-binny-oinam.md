@@ -2,9 +2,11 @@
 
 Many years ago (I think it was in 1986), I was late on the first day of the new class at School. The teacher asked me to sit on an isolated extra bench, and that was when I met two brothers who share the same family name as mine. The younger one was more curious.
 
-> “I’m Oinam Brajeshwar.”\
-> **“Oinam Binny.”**\
-> That was when we both knew we would be good friends.
+`“I’m Oinam Brajeshwar.”`
+
+`“Oinam Binny.”`
+
+That was when we both knew we would be good friends.
 
 <figure class="large">
 	<img src="/static/2020/binny-oinam-in-2007.webp" alt="Binny Oinam in 2007" loading="lazy">
