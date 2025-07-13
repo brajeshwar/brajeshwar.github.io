@@ -1,4 +1,4 @@
-This may be fictions but it resonated with me. I like to take the path less trodden.
+The story is fictious but it resonated with me. I like to take the path less trodden.
 
 Once upon a time, in the life of Hercules, he came to the crossroads. The road diverged lay a beautiful goddess who offered him every temptation he could imagine. Adorned in finery, she promised him a life of ease. She swore he’d never taste want or unhappiness or fear or pain. Follow her, she said, and his every desire would be fulfilled.
 
