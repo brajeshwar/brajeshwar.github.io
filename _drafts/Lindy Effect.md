@@ -1,0 +1,3 @@
+# Lindy effect
+
+The [Lindy effect](https://en.wikipedia.org/wiki/Lindy_effect) (also known as Lindy's Law) is a theorized phenomenon by which the future life expectancy of some non-perishable things, like a technology or an idea, is proportional to their current age. Thus, the Lindy effect proposes the longer a period something has survived to exist or be used in the present, the longer its remaining life expectancy. Longevity implies a resistance to change, obsolescence or competition and greater odds of continued existence into the future. Where the Lindy effect applies, mortality rate decreases with time. Mathematically, the Lindy effect corresponds to lifetimes following a Pareto probability distribution.

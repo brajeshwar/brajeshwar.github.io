@@ -37,6 +37,8 @@ Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
 - [ ] A style component for photos, which highlights some key photos. This will likely come after https://pictures.oinam.com is up.
 - [ ] Re-direct `docs.brajeshwar.com` > `https://archive.oinam.com` via Cloudflare Workers.
 - [ ] Move all Jekyll Redirects to Cloudflare or plain HTML or just ignore them! Give a good explanation and possible next-step in the 404 page.
+- [ ] Move `cdn.oinam.com` items to `brajeshwar.com`.
+- [ ] Move YouTube videos to `brajeshwar.com`.
 
 ## Promotions & Affiliates
 
@@ -64,3 +66,4 @@ These tools, services, and companies are the ones that I use. I want to promote 
 	- Jekyll 3.10.0 (Official Jekyll 4.4.1)
 	- Ruby 3.3.4 (Official Ruby 3.4.4) | `3.3.5` is the one working with CloudFlare Pages.
 	- Sass 3.7.4
+	- Github has a 50MB filesize limit of each file.

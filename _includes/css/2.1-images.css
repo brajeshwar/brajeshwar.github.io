@@ -1,10 +1,15 @@
 /*
  * TBD:
  * 1. I seem have reset the size somewhere along the cascade fix them without the !important
- * 2. Move/combine this as part of a common media style (images, audio, and video)
+ * 2. "media.css" —Move/combine this as part of a common media style (images, audio, and video)
  */
 
 img {}
+
+video {
+  object-fit: fill; /* set poster same size as video but distorts aspect-radio */
+  /* object-fit: cover; */ /* set poster same size as video but cuts off to maintain aspect-radio */
+}
 
 img.small,
 video.small,

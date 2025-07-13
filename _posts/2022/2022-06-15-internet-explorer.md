@@ -14,6 +14,6 @@ To this day, many government departments continue to rely on fortified and modif
 
 I continued the love-hate relationship with Internet Explorer until [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) came along. Except for visual testing, I have not seen or used Internet Explorer in over a decade. However, the nostalgic feeling remained and it will be loved for what it was.
 
-[Benjamin Slivka](https://benslivka.com/) has a good article on the [history of Internet Explorer](https://benslivka.com/2021/05/27/internet-explorer-a-brief-history/). He created Internet Explorer that was bundled with Microsoft Windows 95.
+[Benjamin Slivka](https://benslivka.com/) has a good article on the [history of Internet Explorer](https://benslivka.com/2021/05/27/internet-explorer-a-brief-history/) ([archive](https://web.archive.org/web/20210528014836/https://benslivka.com/2021/05/27/internet-explorer-a-brief-history/)). He created Internet Explorer that was bundled with Microsoft Windows 95.
 
 Goodbye, Dear old friend. You will be missed.
