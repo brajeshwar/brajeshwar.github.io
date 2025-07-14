@@ -96,4 +96,4 @@ The digital frontier is open. Just like the early adopters of WordStar and Lotus
 
 [^SwissArmyKnife]: A [Swiss Army knife](https://en.wikipedia.org/wiki/Swiss_Army_knife) is a compact, multi-functional pocket tool originally made in Switzerland. It typically includes various blades, screwdrivers, scissors, and other handy tools all folded into one small device. Known for its versatility and convenience, it’s designed to handle a wide range of everyday tasks and outdoor needs.
 
-[^Lotus123]: Lotus 1-2-3 is a discontinued spreadsheet program from Lotus Software (later part of IBM). It was the first killer application of the IBM PC, was hugely popular in the 1980s, and significantly contributed to the success of IBM PC-compatibles in the business market.[1]
+[^Lotus123]: Lotus 1-2-3 is a discontinued spreadsheet program from Lotus Software (later part of IBM). It was the first killer application of the IBM PC, was hugely popular in the 1980s, and significantly contributed to the success of IBM PC-compatibles in the business market.
