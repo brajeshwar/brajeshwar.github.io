@@ -1,3 +1,0 @@
-[Corporate Memphis](https://en.wikipedia.org/wiki/Corporate_Memphis) (aka Alegria, Globohomo) is a style of illustrations that features extrahuman attributes, such as non proportional bodies and non-existing skin colors. It has been credited to Facebook, and was explicitly made to be modular (as in designers are replaceable).
-
-This style has strong connotations of cynical corporations, eerie feelings of minimalist facelessness, toxic positivity and an anxious alignment with current political winds, clear enough to minimize scrutiny but vague enough to be entirely unactionable. The mood words are growth hacking and user engagement.

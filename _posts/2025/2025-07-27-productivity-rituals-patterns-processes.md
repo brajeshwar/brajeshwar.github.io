@@ -5,7 +5,15 @@ This article is a `Work-in-Progress` effort in outlining ideas, and ways to have
 
 “In the world of distractions, the person armed with the next step is the winner.”
 
-In an age dominated by [notifications](/2014/missing-step-productivity-activities-stop-notifications/), endless to-do lists, and competing priorities, structuring your day with effective rituals, patterns, and processes can be truly transformative. By intentionally minimizing distractions and leveraging proven tools, such as time blocking and the Eisenhower Matrix, while adopting the strategies of “working smarter, not harder,” we can create a framework for productivity that thrives even in uncertain environments.
+In an age dominated by [notifications](/2014/missing-step-productivity-activities-stop-notifications/), endless to-do lists, and competing priorities, structuring your day with effective rituals, patterns, and processes can be truly transformative. By intentionally minimizing distractions and leveraging proven tools, such as time blocking and the [Eisenhower Matrix](/2025/eisenhower-matrix-value-effort-matrix/), while adopting the strategies of “working smarter, not harder,” we can create a framework for productivity that thrives even in uncertain environments.
+
+## Habits vs Routines vs Rituals
+
+**Habits** are things we do that get so ingrained that they become automatic. They come with familiar urges to do something, usually triggered by a cue. We might have the desire to check our phone for messages, emails, and likes as soon as we wake up each morning (or when we get a notification). 
+
+**Routines** require more commitment to maintain. For many of us, going to the gym or intermittent fasting are routines; we have to make a conscious effort to maintain them, or else we’ll stop. 
+
+**Rituals** require the most intention. Rituals have meaning beyond the action itself; they celebrate the purpose, the “why” of a repeated action. A daily meditation practice or even a few moments of quiet while solving the Crossword or Sudoku can be rituals that give us comfort and joy.
 
 ## Minimizing Phone Distractions
 
@@ -81,6 +89,12 @@ No plan is immune to the unexpected. Build agility into your workflows by:
 
 **Investing in Resilience:** Both in terms of physical health and mindset, resilience equips you to adapt quickly.
 
-## Mindset
+Ultimately, productivity is not about doing it all; it’s about doing what matters. By mastering rituals, implementing efficient processes, and taming your tools, you create an environment where focus and intention thrive. Colloquially, we think of a ritual as something we do regularly and in the same way every time.
 
-Ultimately, productivity is not about doing it all; it’s about doing what matters. By mastering rituals, implementing efficient processes, and taming your tools, you create an environment where focus and intention thrive. As both Graham’s insights on schedules and Gawande’s checklist discipline remind us, the secret lies in thoughtful, deliberate action.
+Definitions aside, a ritual has a few key characteristics.
+
+**It’s intentional.** You consciously engage and are present.\
+**It’s participatory.** You’re active rather than passive.\
+**It’s meaningful.** It’s valuable beyond the action itself or any utility. It’s often emotional, nostalgic, fun, celebratory, identity-forming.\
+**It’s consistent.** It’s reliable in timing, expectation, quality, etc.\
+**It’s finite.** There’s a constraint around time, effort, or action itself.
