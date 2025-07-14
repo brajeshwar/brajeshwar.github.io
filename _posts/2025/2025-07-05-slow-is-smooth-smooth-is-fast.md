@@ -4,11 +4,11 @@ That sounds like the kind of thing a Navy SEAL instructor would growl at you bef
 
 Before you roll your eyes and mumble, “Yeah, yeah, another macho aphorism,” let’s unwrap this one. Slowly. Smoothly.
 
-<video class="right" width="300" height="533" autoplay playsinline muted controls loop>
+## The Fastest People ain’t in a Hurry
+
+<video class="right" width="300" height="auto" autoplay playsinline muted controls loop>
   <source src="/static/2025/f1-pit-stop-2024.mp4" type="video/mp4">
 </video>
-
-## The Fastest People ain’t in a Hurry
 
 Ever seen a Formula One pit crew? They change four tires, refuel, wipe the windshield, and maybe tuck in the driver’s seatbelt, all in under three seconds.
 
