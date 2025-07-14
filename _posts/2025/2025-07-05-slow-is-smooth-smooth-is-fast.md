@@ -5,7 +5,7 @@ That sounds like the kind of thing a Navy SEAL instructor would growl at you bef
 Before you roll your eyes and mumble, “Yeah, yeah, another macho aphorism,” let’s unwrap this one. Slowly. Smoothly.
 
 <video class="right" width="300" height="533" autoplay playsinline muted controls loop>
-  <source src="https://cdn.oinam.com/video/sports/f1-pit-stop-2024.mp4" type="video/mp4">
+  <source src="/static/2025/f1-pit-stop-2024.mp4" type="video/mp4">
 </video>
 
 ## The Fastest People ain’t in a Hurry

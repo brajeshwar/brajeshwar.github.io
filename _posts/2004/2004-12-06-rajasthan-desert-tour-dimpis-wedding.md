@@ -24,8 +24,6 @@ This was the big day for Satyendra's sister, Amrita Kshetrimayum. She is getting
 
 With the bride finally at her home now, we set out to to explore Rajasthan, starting from Jaipur itself. Jaipur is indeed a nice town, not so fast but steady. There were lotta forts to be seen. One special place I like most was the Elephant ride on that day. It was my first Elephant ride and we all enjoyed it very much.
 
-<img class="full" src="https://cdn.oinam.com/img/india/rajasthan-desert-sunset.webp" alt="Sunset at the Rajasthan Desert" loading="lazy">
-
 ## Dec 01, 2004
 
 We decided to head towards Jodhpur and visit most tourist spots, forts, palaces, and the sands.

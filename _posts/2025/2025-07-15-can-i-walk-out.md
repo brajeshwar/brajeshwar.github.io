@@ -14,6 +14,16 @@ For instance, this was one of my primary reasons for liking and endorsing the li
 
 Own the content, know the process, and define the patterns. Use tools, leverage the ecosystems, but with [backups](/2021/backup/) so you can “walk out” with minimal nuances.
 
+## Own the Content, Use Any of the Tools Available
+
+Regardless of which platform you use, Medium, Substack, or WordPress, your website is ultimately in their hands. If you forget to do a task one day, they can take it all away. You need to control your audience to reduce the chances of “unforeseen circumstances.”
+
+There have been enough instances of platforms dying, pivoting, or just plain ignoring their users. It’s OK to use a platform, but it’s best to own the content or have a backup of it, so you can “walk away if needed.”
+
+Owning the domain and pointing it to the Blogspots, Substacks, and WordPresses of the world as a tool is OK. I’m pretty sure that one day, you will need to relocate to another platform.
+
+Once upon a time, WordPress was the new MovableType or Blogspot, Medium was the new WordPress, and Substack was the new Medium. You never know.
+
 ## POSSE
 
 [POSSE](https://indieweb.org/POSSE) or _Publish (on your) Own Site, Syndicate Elsewhere_ is the practice of posting content on your own site first, then publishing copies or sharing links to third parties (like social media silos) with original post links to provide viewers a path to directly interacting with your content. This approach ensures that even if platforms shut down, censor, or change policies, the creator’s content remains intact and accessible.
