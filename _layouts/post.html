@@ -34,3 +34,16 @@ styles: styles-posts.html
   {%- endif -%}
 
 </main>
+
+
+<script type="text/javascript" src="/assets/scripts/anchor.min.js"></script>
+<script type="text/javascript">
+  (function () {
+  'use strict';
+
+  anchors.options.placement = 'left';
+
+  anchors.add('article.post > h2, article.post > h3, article.post > h4, article.post > h5, article.post > h6');
+
+  })();
+</script>
