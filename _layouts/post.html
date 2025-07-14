@@ -41,7 +41,10 @@ styles: styles-posts.html
   (function () {
   'use strict';
 
-  anchors.options.placement = 'left';
+  anchors.options = {
+    placement: 'left',
+    icon: '§'
+  };
 
   anchors.add('article.post > h2, article.post > h3, article.post > h4, article.post > h5, article.post > h6');
 
