@@ -34,7 +34,7 @@ By 2005, I decided to take the plunge and started our first company - Oinam Soft
 [Tata Consultancy Services](https://www.tcs.com),
 *et al*.
 
-We also worked for many contractors who sub-contracted their work to us. We were, in fact, one of the best ghost developers to many successful Contractors.
+We also worked for many contractors who sub-contracted their work to us. We were, in fact, one of the best ghost developers to many successful contractors.
 
 In 2006, [Mixercast, Inc](https://www.linkedin.com/company/167518) acquired the Oinam Team. It was an exciting experience, being part of a Startup and learning from it. Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was dissolved on Dec 31, 2009 after selling its IP (Intellectual Property) to erstwhile Google (now Alphabet).
 

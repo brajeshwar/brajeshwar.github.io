@@ -22,6 +22,10 @@ Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
 		- [Ten things to know about veganism in childhood](https://www.bbc.com/future/article/20250627-10-things-to-know-about-veganism-in-childhood)
 		- ['Notable' rise in dads over 60 in England and Wales](https://www.bbc.com/news/articles/cd0vvr9j1dxo)
 		- [Head bans smartphones in favour of 'brick' phones](https://www.bbc.com/news/articles/cn7ddy8mpl1o)
+	- The Walrus
+		- Look at the typographic spacings that plays brilliantly without needing anything supplemental.
+		- [How I Solved the Century-Old Mystery of a Miraculous Shipwreck Survivor](https://thewalrus.ca/empress-of-ireland-survivor-mystery/)
+		- [Greenland Has Been Fighting Off Americans for Over a Century](https://thewalrus.ca/greenland-has-been-fighting-off-americans-for-over-a-century/)
 
 ---
 

@@ -89,7 +89,7 @@
   --font-weight-bold      : 600;
   --font-weight-bolder    : 700;
   
-  --font-size             : 17px;
+  --font-size             : 18px; /* 16px is advised for Libre Baskerville. 18px still plays beautifully bold. */
 
   --body-width            : 96%;
   --body-width-ideal      : 46rem; /* ideal reading width */
@@ -102,7 +102,7 @@
   --display-large         : 1024px;
   --display-extralarge    : 1600px;
 
-  --scale                 : var(--major-sixth);
+  --scale                 : var(--golden);
   --scale-small           : var(--major-third);
   
   --space                 : calc(var(--scale) * 1rem);

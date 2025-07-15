@@ -23,7 +23,7 @@ So, no writers are highlighted in the articles. However, I will be forever grate
 3. [Praval Singh](https://praval.com) wrote extensively about Open Source, and unix technologies. Some of his articles went on to become quite popular, and shared a lot.
 4. Ritesh Reddy writes at [Reddy2Go](https://www.reddy2go.com) and has contributed quite a bit of interesting articles to my site.
 5. [Robin Wilding](https://www.linkedin.com/in/robin-wilding-91456428/)
-6. Many other Guest Writers and Contributors.
+6. Many other guest writers and contributors.
 
 ## 20 Years
 
