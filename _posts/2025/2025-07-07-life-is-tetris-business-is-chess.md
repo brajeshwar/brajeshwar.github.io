@@ -4,6 +4,8 @@ Entrepreneurs, tech professionals, and strategic thinkers frequently face uncert
 
 One compelling analogy is, “Life is like playing Tetris, while business resembles a strategic game of chess.” This analogy underscores the significance of adaptability in personal life and the crucial role of strategic foresight in business.
 
+<img class="large" src="/static/2025/tetris-tetrominoes.webp" alt="Tetrominoes" loading="lazy">
+
 ## Life is Tetris
 
 Tetris,[^Tetris] a classic arcade game created by Alexey Pajitnov in 1984, embodies unpredictability and adaptability. Players manage falling geometric shapes, arranging them in real-time to prevent pieces from piling up and ending the game. Much like life, Tetris does not allow players to control what shapes come next. Success depends entirely on adapting effectively to ever-changing situations.
@@ -31,6 +33,25 @@ In business, this translates into meticulous market analysis, thorough competito
 Historical business giants, such as [IBM](https://www.ibm.com/), and contemporary leaders like [Apple](https://www.apple.com/) and [Tesla](https://www.tesla.com) illustrate this principle vividly. Their successes resulted from precise strategic decisions, much like those of chess masters who foresee the consequences of every move. These companies recognized that strategic positioning, resource allocation, and innovation demand deliberate and thoughtful long-term planning.
 
 Tesla, for example, strategically decided to dominate the electric vehicle market through carefully executed steps: building infrastructure like Superchargers,[^TeslaSupercharger] designing compelling products such as Models S, 3, X, and Y, and securing essential resources like battery technology and raw materials. Each decision was methodically calculated, much like a chess player’s careful orchestration toward checkmate.
+
+<img class="large" src="/static/2025/chess-pieces.webp
+" alt="Chess Pieces">
+
+## Chess Pieces
+
+And here is my meek and fuzzy attempt to equate chess pieces to some of the key functions and heads of a company.
+
+**King.** The CEO is an Analyst who reads and understands numbers, groks data, tracks cost and cash flow, and knows the numbers inside out. Know how to scale, predict the future, be a truth seeker, and be a fortune teller. Turn the business weaknesses into strengths. This is a symbol of leadership that must be protected, not overly mobile, but every decision affects the game.
+
+**Queen.** The COO is the operator who glues everything together. Builds systems and operating processes. This is the wolf who remains calm at all costs, powerful, agile, and capable across the board. The COO is versatile and executes strategically. Often, the one who handles day-to-day operations and brings the CEO’s vision to life. This is an operational powerhouse, a strategic executor, and covers the most ground.
+
+**Knights.** The Builder. Often led by the CTO, these are one or more of the people in Product, Engineering, or Design. They know the product better than the CEO/Founder, but they don’t want to get involved in running a company. They are always looking to build the best of whatever they are offering now. They challenge assumptions and push for excellence even when they are tempted to settle for enough. They stay hidden but are the ultimate building machines. They discuss details, not just concepts, think differently, solve problems creatively, and approach challenges from unique angles.
+
+**Rooks.** They are sellers, such as the Chief of Sales. The CEO starts here but hands over the baton to this person. They sell certainties; they shape the entire environment of the sale. They are the people-person whose main job is to ensure financial health, oversee resources, and manage long-term financial strategies. They are reliable, foundational, linked with transparency, and forward planning.
+
+**Bishops.** They are storytellers, such as the Chief of Marketing. The CEO can be the face of the story department, but the script is written by the Bishops.. They make the company unforgettable. They are strategic, far-seeing, brand storytellers, connecting internal and external audiences.
+
+**Pawns.** The executives, VPs, and directors play critical roles in advancing the company. They can be promoted when they reach the other side, the milestones, and clip points. Operational leaders and key staff drive daily progress and can grow into leadership roles. They are the essential element with growth potential, and are the front-line force of the company.
 
 ## Tetris + Chess
 
