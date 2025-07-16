@@ -39,9 +39,3 @@ We also worked for many contractors who sub-contracted their work to us. We were
 In 2006, [Mixercast, Inc](https://www.linkedin.com/company/167518) acquired the Oinam Team. It was an exciting experience, being part of a Startup and learning from it. Unfortunately, [Mixercast](http://www.crunchbase.com/company/mixercast) was dissolved on Dec 31, 2009 after selling its IP (Intellectual Property) to erstwhile Google (now Alphabet).
 
 I had worked with some fantastic companies. I was one of the Creative Directors at [Razorfish](https://www.razorfish.com), and was the Chief Product Officer at [Mobisy](//mobisy.com).
-
-## Family
-
-I've known [Shanta](https://oinam.mom) since 1993. We met again in 2006 while she was an intern at Mixercast. We got [married](/2007/brajeshwar-and-shanta-got-married-on-07-07-07/) in July 2007. We got officially registered in Bombay on 07/07/2007.
-
-We have two daughters, [Laaija](https://laaija.com/) (Dec 2008) and [Amara](https://amaraoinam.com/) (Nov 2016).
