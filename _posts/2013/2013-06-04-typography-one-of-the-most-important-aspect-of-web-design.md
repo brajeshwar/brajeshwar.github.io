@@ -63,5 +63,3 @@ Footnotes are a nice way to give references to your articles, content or blog po
 ## More Typography
 
 Go ahead and explore Typeplate, download or clone [the source](https://github.com/typeplate/typeplate.github.io) and study it. It has a pretty small footprint and it gives you a perfect foundation for your types and fonts. Typeplate has other typography elements, such as - Small Capitals, Drop Capitals, Small Print, Definition List and even take special care of Ampersands.
-
-For the more curious, who want to further their typography skill, you might want to look at [I Love Typography](http://ilovetypography.com/) for a regular dose of Typography treatment.
