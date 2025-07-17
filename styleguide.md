@@ -20,10 +20,10 @@ title: Styleguide
 
 They should be rather ornamental. The content should still have a meaning and work without the video.
 
-<video width="100%" height="auto" controls autoplay muted loop preload="auto|metadata|none">
+<video width="100%" height="auto" poster="" controls autoplay muted loop preload="auto|metadata|none">
   <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-	Your browser does not support the video tag.
+  <source src="movie.webm" type="video/webm">
+	[Video Format - Non-Supported Browser]
 </video>
 
 ## Styles
