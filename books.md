@@ -1,3 +1,8 @@
+---
+layout: page
+title: Books
+---
+
 # Books
 
 ## Why Read?
@@ -39,18 +44,13 @@ Here are a few personal tips that worked for me while trying to read/learn the c
 - [Wikisource](https://en.wikisource.org/wiki/Main_Page) is the free library that anyone can improve.
 - [The Society of Minds](http://aurellem.org/society-of-mind/) by [Marvin Minsky](https://web.media.mit.edu/~minsky/).
 
-#### References
+### References
 
 - [HackerNews Book Recommendations](https://hacker-recommended-books.vercel.app)
 - [A Helpful Guide to Reading Better](https://fs.blog/reading/)
 - [Books by the Foot](https://booksbythefoot.com)
 - [Good Books](https://www.goodbooks.io) Recommended by Successful People.
 - [How to Gain More From Your Reading](https://psyche.co/guides/how-to-gain-more-from-reading-by-taking-it-all-in-more-slowly)
-- Brajeshwar's Books of
-  [2018](https://brajeshwar.com/2019/books-of-2018/),
-  [2019](https://brajeshwar.com/2019/books-of-2019/),
-  [2020](https://brajeshwar.com/2020/books-of-2020/),
-  [2021](https://brajeshwar.com/2021/books-of-2021/).
 
 
 [^speed-read]: [Speed Reading](https://en.wikipedia.org/wiki/Speed_reading) is the technique of chunking and minimizing subvocalization. The many available speed-reading training programs may utilize books, videos, software, and seminars. There is little scientific evidence regarding speed reading, and as a result its value seems uncertain.
