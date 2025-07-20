@@ -5,7 +5,11 @@ Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
 ---
 ## brajeshwar.com 2025
 
-- I like the simplicity, the well-done design of the single articles of [YaleEnvironment360](https://e360.yale.edu).
+- Styles
+	- Start thinking as a simple, common, but decoupled style so I can embed them anywhere with specific styles. For instance, if I finally move to Pandoc + Make for the build. I can Pandoc build individual articles and leave the other files. Now, Jekyll practically build everything.
+	- Media (Audio, Pictures, Video) have a common style for easy treatment.
+	- Captions can be left (default), center, or right aligned. Should this be more from a utility class that aligns object (mostly text) to their desired alignments.
+- Articles. I like the simplicity, the well-done design of the single articles of [YaleEnvironment360](https://e360.yale.edu).
 	- I like the clean blockquote without any background but enough separation from the rest and the highlight of its presence.
 	- The FIGURE and the image content are well placed. The caption is there as part of the picture content without much special treatment.
 	- I like their multi-image splits view.
