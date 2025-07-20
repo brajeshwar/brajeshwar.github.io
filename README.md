@@ -32,6 +32,7 @@ Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
 ## Todo
 
 - [ ] Yearly Archives `/2001/`, `/2002/`, etc. https://simonwillison.net/ has a nice way of doing it.
+- [ ] Do we really need to remember the preference and hence JavaScript for the Light/Dark theme. Here is a solution with just CSS - https://codepen.io/ditheringidiot/pen/JjbzNMz
 - [ ] Only text on home. Books, convert them to a list of the top rereads.
 - [ ] Move `/search/` to a dedicated page to reduce the load on others.
 - [ ] Search moved from Google to Algolia in `2025-JUN`. Should try [PageFind](https://pagefind.app). I'm hitting Algolia’s monthly limits pretty easily. I like how they do it at https://block.github.io/goose/
