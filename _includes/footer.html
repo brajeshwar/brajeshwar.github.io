@@ -7,45 +7,40 @@
   <p>
     <small>
       2001-<span id="year_current"></span>
-      (<span id="year_since"></span>)
+      (<span id="time_since"></span>)
       brajeshwar.com
     </small>
   </p>
 </footer>
 
 <script>
-  // Current Year
-  document.getElementById("year_current").innerHTML = new Date().getFullYear();
-
-  // Calculate Year-Since.
-  // Hard-coded start year and month
-  // brajeshwwar.com started on Jun 11, 2001.
+  // brajeshwar.com started on Jun 11, 2001
   const startYear = 2001;
-  const startMonth = 6; // June
+  const startMonth = 6;
+  const startDay = 11;
+  const startDate = new Date(startYear, startMonth - 1, startDay);
+  const now = new Date();
 
-  function getElapsedYearsAndMonths(startYear, startMonth) {
-    const now = new Date();
-    let years = now.getFullYear() - startYear;
-    let months = now.getMonth() - (startMonth - 1);
+  let years = now.getFullYear() - startDate.getFullYear();
+  let months = now.getMonth() - (startMonth - 1);
 
-    if (months < 0) {
-      years -= 1;
+  if (months < 0) {
+      years--;
       months += 12;
-    }
-
-    return { years, months };
   }
 
-  function pluralize(count, singular, plural) {
-    return count === 1 ? singular : plural;
+  let time_since = '';
+  if (years > 0) {
+      time_since += `${years} year${years > 1 ? 's' : ''}`;
   }
-
-  // Calculate and display "year_since"
-  const elapsed = getElapsedYearsAndMonths(startYear, startMonth);
-  let resultText = `${elapsed.years} Years`;
-
-  if (elapsed.months > 0) {
-    resultText += `, ${elapsed.months} ${pluralize(elapsed.months, 'Month', 'Months')}`;
+  if (months > 0) {
+      if (time_since) time_since += ' and ';
+      time_since += `${months} month${months > 1 ? 's' : ''}`;
   }
-  document.getElementById('year_since').textContent = resultText;
+  if (!time_since) time_since = '0 months';
+
+  document.getElementById("time_since").textContent = time_since;
+
+  // Output current year
+  document.getElementById("year_current").textContent = now.getFullYear();
 </script>
