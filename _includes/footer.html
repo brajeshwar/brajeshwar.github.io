@@ -42,6 +42,10 @@
 
   // Calculate and display "year_since"
   const elapsed = getElapsedYearsAndMonths(startYear, startMonth);
-  document.getElementById('year_since').textContent =
-    `${elapsed.years} years, ${elapsed.months} ${pluralize(elapsed.months, 'month', 'months')}`;
+  let resultText = `${elapsed.years} Years`;
+
+  if (elapsed.months > 0) {
+    resultText += `, ${elapsed.months} ${pluralize(elapsed.months, 'Month', 'Months')}`;
+  }
+  document.getElementById('year_since').textContent = resultText;
 </script>
