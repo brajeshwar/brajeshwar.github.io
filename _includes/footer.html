@@ -6,9 +6,42 @@
   </nav>
   <p>
     <small>
-      2001-{{ site.time | date: "%Y" }}
-      ({{ site.time | date: '%Y' | minus: 2001 }} years)
+      2001-<span id="year_current"></span>
+      (<span id="year_since"></span>)
       brajeshwar.com
     </small>
   </p>
 </footer>
+
+<script>
+  // Current Year
+  document.getElementById("year_current").innerHTML = new Date().getFullYear();
+
+  // Calculate Year-Since.
+  // Hard-coded start year and month
+  // brajeshwwar.com started on Jun 11, 2001.
+  const startYear = 2001;
+  const startMonth = 6; // June
+
+  function getElapsedYearsAndMonths(startYear, startMonth) {
+    const now = new Date();
+    let years = now.getFullYear() - startYear;
+    let months = now.getMonth() - (startMonth - 1);
+
+    if (months < 0) {
+      years -= 1;
+      months += 12;
+    }
+
+    return { years, months };
+  }
+
+  function pluralize(count, singular, plural) {
+    return count === 1 ? singular : plural;
+  }
+
+  // Calculate and display "year_since"
+  const elapsed = getElapsedYearsAndMonths(startYear, startMonth);
+  document.getElementById('year_since').textContent =
+    `${elapsed.years} years, ${elapsed.months} ${pluralize(elapsed.months, 'month', 'months')}`;
+</script>
