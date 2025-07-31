@@ -12,7 +12,7 @@ It is not a performance. It’s messy, awkward, spicy, and sometimes gives you b
 
 ## Internet Tourist
 
-Mos to fus drift through the internet the way vacationers drift through a city, they stick to the postcard streets (the default settings), eat at the safest chain restaurants (the biggest platforms), snap a few photos (screenshots), and leave with souvenir clutter (browser extensions they never use).
+Most of us drift through the internet the way vacationers drift through a city, they stick to the postcard streets (the default settings), eat at the safest chain restaurants (the biggest platforms), snap a few photos (screenshots), and leave with souvenir clutter (browser extensions they never use).
 
 That light-touch approach is fine for a weekend trip, but it’s a risky, limiting way to live online. Software and web services are not attractions to tick off; they’re neighborhoods you inhabit. If you want to thrive, not just pass through, you have to unpack, meet the locals, and understand the infrastructure.
 
