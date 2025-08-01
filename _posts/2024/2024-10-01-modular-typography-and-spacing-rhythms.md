@@ -1,6 +1,6 @@
 # Modular Typography and Spacing Rhythms
 
-I was creating a simple website for [my daughter’s art](https://amara.oinam.art), and I wanted to do it quickly while maintaining a semblance of rhythm and modularity. I don’t want to spend time maintaining it, but I should remember how things work when I come back. The best way to do that was to use already-done, researched, and working methods, especially with typography and spacing.
+I was creating a simple website for [my daughter’s art](https://art.amaraoinam.com), and I wanted to do it quickly while maintaining a semblance of rhythm and modularity. I don’t want to spend time maintaining it, but I should remember how things work when I come back. The best way to do that was to use already-done, researched, and working methods, especially with typography and spacing.
 
 > A modular scale, like a musical scale, is a prearranged set of harmonious proportions.
 > — [Robert Bringhurst](https://en.wikipedia.org/wiki/Robert_Bringhurst)
