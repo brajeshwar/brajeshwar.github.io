@@ -1,12 +1,12 @@
 # Ultra-Lean AI-Assisted Startups
 
-When Y Combinator published its “The First 10-person, $100 B Company” [Request for Startups](https://www.ycombinator.com/rfs), it wasn’t another laundry list of ideas. It was a bold manifesto. YC argues that with the right mix of advanced AI tools, infrastructure-as-code, and razor-sharp focus, tiny teams can challenge the _status quo_, and maybe even topple the giants that dominate tech today.
+Recently, Y Combinator published its “The First 10-person, $100 B Company” [Request for Startups](https://www.ycombinator.com/rfs). It is a bold manifesto. YC argues that with the right mix of advanced AI tools, infrastructure-as-code, and razor-sharp focus, tiny teams can challenge the _status quo_, and maybe even topple the giants that dominate tech today.
 
 ## Infrastructure-as-Code Foundations
 
 Gone are the days when you needed a rack of servers and a specialized ops team to run a product at scale. Tools such as [Terraform](https://en.wikipedia.org/wiki/Terraform_(software)), [Pulumi](https://en.wikipedia.org/wiki/Pulumi), and [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes) operators let you treat your entire stack as declarative code. Spin up a complete environment in minutes. Roll out updates with a simple pipeline.
 
-These practices aren’t new. [DevOps](https://en.wikipedia.org/wiki/DevOps) has preached them for years, but now they’re table stakes for any ultra-lean AI startup. The payoff is enormous. A two-person team can manage more service endpoints than a thirty-person group did a decade ago.
+These practices aren’t new. [DevOps](https://en.wikipedia.org/wiki/DevOps) has preached them for years, but now they’re table stakes for any ultra-lean Startup. The payoff is enormous. A two-person team can manage more service endpoints than a thirty-person group did a decade ago.
 
 ## Multi-Agent Architectures
 
