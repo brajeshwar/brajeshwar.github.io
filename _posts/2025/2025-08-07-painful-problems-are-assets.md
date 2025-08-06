@@ -4,10 +4,10 @@ In the book, How to Make a Few Billion Dollars by [Brad Jacobs](https://en.wikip
 
 “If you want to make money in the business world, you need to get used to problems, because that’s what business is. It’s actually about finding problems, embracing and even enjoying them — because each problem is an opportunity to remove an obstacle and get closer to success.”
 
+Well, [people want to avoid pain and indulge in pleasure](https://www.cgustavo.com/blog/profitable-problem-solving).
+
 {:.aside .right}
 “Problems are an asset — not something to avoid but something to run toward.”
-
-Well, [people want to avoid pain and indulge in pleasure](https://www.cgustavo.com/blog/profitable-problem-solving).
 
 A familiar pattern keeps showing up in the startup world: a team builds a slick demo, investors nod approvingly, and everyone talks about how it will “change the way we work.” Yet, once it’s out in the wild, real customers barely touch it. What’s going on?
 
