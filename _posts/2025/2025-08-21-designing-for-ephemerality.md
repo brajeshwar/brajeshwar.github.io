@@ -1,3 +1,7 @@
+---
+image: "/static/2025/software-ephemerality.webp"
+---
+
 # Designing for Ephemerality
 
 There’s a melancholy in watching software die. One day, it’s the tool you swear by, shaping your work and your life. The next, it’s sunsetted, acquired and dismantled, or quietly abandoned in a forgotten GitHub repo. If you’ve been on the internet long enough, you’ve buried many of your digital companions, such as [del.icio.us](https://en.wikipedia.org/wiki/Delicious_(website)), [Google Reader](https://en.wikipedia.org/wiki/Google_Reader), [ICQ](/2024/icq/), [Winamp](https://en.wikipedia.org/wiki/Winamp), and countless others that once felt eternal.
@@ -26,6 +30,9 @@ So what do we do as builders? Do we give up and stop caring? Hardly. Designing f
 4. **Treat Longevity as a Bonus, Not a Guarantee.** If your software lives for a decade, celebrate. If it lives two, you’ve achieved a miracle. Don’t measure success by imagined immortality. Measure it by the depth of its impact in its time.
 
 ## Nostalgia as Design Principle
+
+{:.aside .right}
+[Killed by Google](https://killedbygoogle.com) is a list of tools, utilities, and products by Google, which were eventually sunsetted.
 
 There’s a strange power in nostalgia. When designing for ephemerality, nostalgia becomes both a guide and a warning. Nostalgia teaches us what people really valued. The rituals, communities, and small moments of joy. These are timeless design anchors.
 
