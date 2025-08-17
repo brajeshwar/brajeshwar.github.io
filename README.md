@@ -36,6 +36,7 @@ Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
 ## Todo
 
 - [ ] Yearly Archives `/2001/`, `/2002/`, etc. https://simonwillison.net/ has a nice way of doing it.
+- [ ] Link to the downloadable Markdown source file for every pages and posts.
 - [ ] Modern Font Stacks. https://modernfontstacks.com
 - [ ] Do we really need to remember the preference and hence JavaScript for the Light/Dark theme. Here is a solution with just CSS - https://codepen.io/ditheringidiot/pen/JjbzNMz
 - [ ] Only text on home. Books, convert them to a list of the top rereads.
