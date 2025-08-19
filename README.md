@@ -5,6 +5,8 @@ Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
 ---
 ## brajeshwar.com 2025
 
+- General
+	- Default to text as the main content. Media (images, videos, audio) when when needed and it should be ornamental where if it is not there, it should still work most of the times.
 - Styles
 	- Start thinking as a simple, common, but decoupled style so I can embed them anywhere with specific styles. For instance, if I finally move to Pandoc + Make for the build. I can Pandoc build individual articles and leave the other files. Now, Jekyll practically build everything.
 	- Media (Audio, Pictures, Video) have a common style for easy treatment.
@@ -77,4 +79,4 @@ These tools, services, and companies are the ones that I use. I want to promote 
 	- Jekyll 3.10.0 (Official Jekyll 4.4.1)
 	- Ruby 3.3.4 (Official Ruby 3.4.4) | `3.3.5` is the one working with CloudFlare Pages.
 	- Sass 3.7.4
-	- Github has a 50MB filesize limit of each file.
+	- Github has a 50MB filesize limit per file.
