@@ -69,4 +69,4 @@ Alright, I think I missed about Money. Well, money is not a factor at all becaus
 ### Updates / Edits
 
 - Mar 25, 2012: Was on the [Homepage of HackerNews](https://news.ycombinator.com/item?id=3752051)
-- Aug 21, 2025: Resurrected from the Wayback Machine. Was lost/deleted.
+- Aug 21, 2025: [Resurrected](https://web.archive.org/web/20120326062936/http://brajeshwar.com/2012/jobs-and-hiring-youre-doing-it-all-wrong/) from the Wayback Machine. Was lost/deleted.
