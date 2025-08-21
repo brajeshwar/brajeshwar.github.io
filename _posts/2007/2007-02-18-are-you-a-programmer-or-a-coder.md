@@ -53,4 +53,5 @@ Do you want to be a programmer or a coder?
 ### References & Updates
 
 - Feb 17, 2007: Inspired by an article in the Times of India — [A myth called the Indian programmer](http://timesofindia.indiatimes.com/home/sunday-toi/A-myth-called-the-Indian-programmer/articleshow/1633868.cms).  ([archive](https://archive.is/MDX1r))
+- Feb 15, 2012: [Homepage of Hacker News](https://news.ycombinator.com/item?id=3593124)
 - Aug 28, 2024: Read an interesting article today about [The Myth of the Coder](https://cacm.acm.org/opinion/the-myth-of-the-coder/). ([archive](https://archive.is/NZXYJ))

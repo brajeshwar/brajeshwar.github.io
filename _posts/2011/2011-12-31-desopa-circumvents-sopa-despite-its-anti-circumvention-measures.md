@@ -17,3 +17,7 @@ On the DeSopa page Rizk writes that the ridiculous power of special interest gro
 Rizk clearly states that his program, DeSopa, is proof that SOPA is not an effectual method of controlling copyright infringement and online piracy. DeSopa "is proof of concept that SOPA will not help prevent piracy."
 
 Hmm... perhaps that was Rizk's goal after all. To release his program far ahead of a Congressional SOPA decision in hopes of convincing Congress that SOPA is moot. A clever man that Rizk.
+
+## Updates
+
+- Dec 31, 2011: On the [Homepage of Hacker News](https://news.ycombinator.com/item?id=3411068)
