@@ -13,3 +13,8 @@ I had the privilege of working with a few such geniuses, and they’re doing ver
 If you find someone, who can seamlessly walk between these two worlds of designing and development, give them everything they need and have them on your side. They're some of the rarest breeds.
 
 So, what do you say? How many “Desingineer” do you know?
+
+### Updates
+
+- Dec 20, 2011: Was on the [front-page of Hacker News](https://news.ycombinator.com/item?id=3373702)
+- Aug 25, 2025: Wrote a follow-up article, [Desingineer v2.0 - The Mythical Hybrid Every Startup Still Craves](/2025/desingineer-v2-the-mythical-hybrid-every-startup-still-craves/)
