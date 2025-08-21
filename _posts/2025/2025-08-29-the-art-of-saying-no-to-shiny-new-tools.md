@@ -4,7 +4,9 @@ Every few months, a new framework or API emerges, promising to revolutionize the
 
 Developers, founders, and teams feel the pull. The temptation is strong: if everyone else is talking about it, surely we are missing out by not adopting it. The pursuit of shiny tools is not unlike the old myth of the magpie, where creatures said to be mesmerized by glittering objects, building nests littered with things that sparkle yet serve little purpose.  
 
-But unlike magpies, our nests are our codebases, our products, our companies. Filling them with every glittering thing rarely leads to strength or beauty. More often, it leads to fragility.  
+But unlike magpies, our nests are our codebases, our products, our companies. Filling them with every glittering thing rarely leads to strength or beauty. More often, it leads to fragility.
+
+<img class="large" src="/static/2025/distracted-boyfriend-roman.webp" alt="Distracted Roman Boyfriend" loading="lazy">
 
 ## Novelty as a Distraction
 
