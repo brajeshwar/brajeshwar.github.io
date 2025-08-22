@@ -1,5 +1,5 @@
 ---
-image: /static/2023/the-eternal-september-by-DALL-E.webp
+image: /static/2023/eternal-september.webp
 ---
 
 # Eternal September

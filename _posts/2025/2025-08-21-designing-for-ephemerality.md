@@ -1,5 +1,5 @@
 ---
-image: "/static/2025/software-ephemerality.webp"
+image: /static/2025/software-ephemerality.webp
 ---
 
 # Designing for Ephemerality
