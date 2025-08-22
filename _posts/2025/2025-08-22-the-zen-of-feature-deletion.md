@@ -1,14 +1,15 @@
 ---
-image: "/static/2026/apple-ipod-iphone-ipad.webp"
+image: /static/2026/apple-ipod-iphone-ipad.webp
 ---
 
 # The Zen of Feature Deletion
 
 On a long enough product timeline, every feature starts out as a spark of excitement. A designer, an engineer, or maybe even a customer believes that a feature addition will delight users, differentiate the product, or finally silence that one competitor who keeps claiming parity. The roadmap fills, the backlog grows, and the release notes balloon with bullet points.  
 
-Then one day you wake up and realize your product feels less like a sharp blade and more like a [Swiss Army knife](https://en.wikipedia.org/wiki/Swiss_Army_knife) whose corkscrew broke off years ago. Most users only touch three tools, yet you carry the weight of twenty.  
+{:.aside .right}
+“The art of deleting features is as important, if not more, than the act of adding them.”
 
-The art of deleting features is as important, if not more, than the act of adding them.
+Then one day you wake up and realize your product feels less like a sharp blade and more like a [Swiss Army knife](https://en.wikipedia.org/wiki/Swiss_Army_knife) whose corkscrew broke off years ago. Most users only touch three tools, yet you carry the weight of twenty.  
 
 ## Less Is Not Laziness
 
@@ -42,7 +43,7 @@ Contrast that with zombie features such as those dusty corners of apps nobody to
 
 When [Slack](https://slack.com/) removed its ephemeral “Posts” feature, the company explained openly why it didn’t fit the workflow they envisioned. Users grumbled for a moment, then adapted. In the long run, Slack’s transparency reinforced trust. People would rather follow a product with a point of view than a Frankenstein stitched together for fear of offending.
 
-## The Courage to Unbuild
+## Courage to Unbuild
 
 Feature deletion is a cultural act as much as a technical one. It requires shifting from a mindset of accumulation to one of curation.  
 
@@ -59,7 +60,7 @@ Car design also teaches this. A stripped-down, well-balanced sports car often de
 
 Digital products should embrace the same principle. Our screens are not infinite playgrounds. They’re canvases where every element must earn its keep.
 
-## The Zen
+## Zen
 
 In Zen philosophy, emptiness is not nothingness but potential. The blank space in a painting gives form to the brush strokes. Silence between notes makes music.  
 
@@ -67,13 +68,14 @@ In software, deleted features are not losses but opportunities. They create room
 
 A product that knows what to leave out feels calmer. It respects the user’s time and attention. It also respects the team’s energy, redirecting it toward polishing what matters instead of patching what doesn’t.
 
-## The Long Game
+## Long Game
 
 A startup chasing growth may fear pruning. After all, won’t more features attract more customers? Perhaps in the short term. But history shows otherwise. The most enduring products thrive not because they did everything, but because they did something exceptionally well and kept doing it.  
 
-Think of [Dropbox](https://www.dropbox.com/). Its original magic was simple file syncing. Over the years, it experimented with chat apps, email replacements, and even a “Dropbox Paper” rival to Google Docs. Although many of those experiments have since faded, the brand still stands tall on the reliability of core file storage.  
-
+{:.aside .right}
 The Zen of feature deletion is a discipline that separates fads from focus. 
+
+Think of [Dropbox](https://www.dropbox.com/). Its original magic was simple file syncing. Over the years, it experimented with chat apps, email replacements, and even a “Dropbox Paper” rival to Google Docs. Although many of those experiments have since faded, the brand still stands tall on the reliability of core file storage.  
 
 The next time your team debates a new feature, ask two questions:
 

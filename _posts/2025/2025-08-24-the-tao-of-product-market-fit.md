@@ -2,7 +2,7 @@
 
 When startup founders talk about [Product-Market Fit](https://en.wikipedia.org/wiki/Product-market_fit) (PMF), it often sounds like a binary switch: one day you don’t have it, and then suddenly you do. But reality is far more nuanced. PMF isn’t a finish line you cross; it’s a living balance between the evolving needs of your users and the enduring essence of your product. It’s less like conquering a mountain and more like practicing Tai Chi - fluid, adaptive, and deeply connected to context.[^TaiChi]
 
-## The Illusion of Arrival
+## Illusion of Arrival
 
 The mythology of PMF usually starts with [Marc Andreessen’s](https://en.wikipedia.org/wiki/Marc_Andreessen) famous line, “Product/market fit means being in a good market with a product that can satisfy that market.
 
