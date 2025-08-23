@@ -1,10 +1,12 @@
 ---
 image: /static/2023/eternal-september.webp
 ---
+
 # Eternal September: The First Internet Flood
 
 In September 1993, something broke on the Internet. Not technically, but
 culturally. Until then, online spaces like Usenet[^USENET] had their own rhythms.
+
 Each September, a new wave of college freshmen would log in for the
 first time, stumble through the arcane rituals of netiquette, and
 gradually learn the ropes. By October, the storm usually calmed, and the
