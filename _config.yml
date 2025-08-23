@@ -82,4 +82,3 @@ exclude:
   - gemfiles/
   - README.*
   - now/*
-  - vendor
