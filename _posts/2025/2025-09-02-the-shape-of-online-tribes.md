@@ -1,4 +1,4 @@
-# Shape of Online Tribes
+# The Shape of Online Tribes
 
 If you think moderating a Discord[^Discord] server full of meme-spamming teenagers is rough, imagine trying to keep two grad students from murdering each other over a Linux kernel patch on Usenet,[^Usenet] while both are dialing in at 28.8 kbps. Welcome to the long and glorious tradition of online tribes: noisy, passionate, and always one flame war away from implosion.
 
