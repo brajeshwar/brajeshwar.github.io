@@ -8,7 +8,10 @@ This was the [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer) (P2P) re
 
 ## The Spark: Napster
 
-Napster [launched in 1999](https://en.wikipedia.org/wiki/Napster) was the brainchild of a college dropout, [Shawn Fanning](https://en.wikipedia.org/wiki/Shawn_Fanning), and his partner [Sean Parker](https://en.wikipedia.org/wiki/Sean_Parker) (later famous as Facebook’s first president). It wasn’t elegant software by today’s standards. Still, it solved a problem that seemed impossible before: how to share [MP3s](https://en.wikipedia.org/wiki/MP3) directly with anyone else on the Internet, without needing a central library.  
+Napster [launched in 1999](https://en.wikipedia.org/wiki/Napster) was the brainchild of a college dropout, [Shawn Fanning](https://en.wikipedia.org/wiki/Shawn_Fanning), and his partner [Sean Parker](https://en.wikipedia.org/wiki/Sean_Parker) (later famous as Facebook’s first president). It wasn’t elegant software by today’s standards. Still, it solved a problem that seemed impossible before: how to share [MP3s](https://en.wikipedia.org/wiki/MP3) directly with anyone else on the Internet, without needing a central library.
+
+{:.aside .right}
+“You can’t stop technology. You can’t stop music. The industry can fight all they want, but the genie is already out of the bottle.” — Shawn Fanning
 
 Users flocked to it. In less than two years, Napster attracted over [80 million registered users](https://en.wikipedia.org/wiki/Napster#Growth) at a time when the Internet itself had fewer than 400 million total. [Metallica](https://en.wikipedia.org/wiki/Metallica) sued. The [Recording Industry Association of America](https://en.wikipedia.org/wiki/Recording_Industry_Association_of_America) (RIAA) declared war. Universities tried to block it, fearing clogged networks.  
 
@@ -32,7 +35,10 @@ There was also the anarchist thrill. Users knew it was “wrong” in the legal 
 
 ## Move Fast, Break Music
 
-Mark Zuckerberg popularized the line “move fast and break things” in Facebook’s early years, but Napster lived that mantra before it had a slogan. It moved so fast it forced a multi-billion-dollar industry to its knees, and it broke not just things but entire business models.  
+Mark Zuckerberg popularized the line “move fast and break things” in Facebook’s early years, but Napster lived that mantra before it had a slogan. It moved so fast it forced a multi-billion-dollar industry to its knees, and it broke not just things but entire business models.
+
+{:.aside .right}
+“Most of the innovation that’s going to happen in music and media is going to come from the fringes, from people who don’t ask permission.” — Sean Parker 
 
 The lawsuits and shutdowns didn’t end the P2P era. They highlighted how fragile old structures were. The industry eventually adjusted. Apple’s [iTunes](https://en.wikipedia.org/wiki/ITunes) and later [Spotify](https://en.wikipedia.org/wiki/Spotify) learned from Napster’s lesson: make access cheaper, easier, and legal, or people will just keep pirating.  
 
@@ -46,6 +52,8 @@ The P2P outlaw years hold a few reminders for today’s entrepreneurs.
 2. **Viral growth beats polished launches.** Napster didn’t need press releases or funding. It spread because it solved a burning problem. When people want something badly enough, adoption looks like wildfire.  
 3. **Regulation is reactive, not proactive.** The law didn’t anticipate P2P. By the time lawsuits arrived, the culture shift was already permanent. Today, startups in AI, fintech, and biotech face similar gaps where the product moves faster than the legal framework.  
 4. **The outlaw phase is temporary.** Napster burned fast and bright, but its DNA lived on in Spotify, YouTube, and every platform that makes digital goods accessible. What begins as piracy often becomes infrastructure. 
+
+---
 
 If you were online back then, you’ll remember the rituals;
 
