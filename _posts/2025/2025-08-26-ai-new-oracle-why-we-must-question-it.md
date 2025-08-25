@@ -1,6 +1,10 @@
 # AI, the New Oracle, Why We Must Question It
 
-In ancient Greece, seekers traveled to [Delphi](https://en.wikipedia.org/wiki/Delphi) to consult the [Oracle](https://en.wikipedia.org/wiki/Oracle), hoping for clarity about war, love, and fate. They received cryptic riddles that shaped empires and lives. Today, our temple is not marble but digital; our oracle is not a priestess but an algorithm. We open [ChatGPT](https://chatgpt.com), [Claude](https://claude.ai), or [Gemini](https://gemini.google.com/), and we ask, _“Should I invest in this market? What career should I pursue? How do I fix my life? The machine answers, and often, we believe.”_
+In ancient Greece, seekers traveled to [Delphi](https://en.wikipedia.org/wiki/Delphi) to consult the [Oracle](https://en.wikipedia.org/wiki/Oracle), hoping for clarity about war, love, and fate. They received cryptic riddles that shaped empires and lives. Today, our temple is not marble but digital; our oracle is not a priestess but an algorithm.
+
+We open [ChatGPT](https://chatgpt.com), [Claude](https://claude.ai), or [Gemini](https://gemini.google.com/), and we ask, *“Should I invest in this market? What career should I pursue? How do I fix my life?”*
+
+**The machine answers, and often, we believe.**
 
 The echo is unmistakable. We’ve built a new oracle. The question is whether we’ve also inherited the same dangers.
 
@@ -8,7 +12,7 @@ The echo is unmistakable. We’ve built a new oracle. The question is whether we
 
 ## The Ancient Oracle: Ambiguity as Power
 
-Delphi’s prophecies were powerful because they were ambiguous. King Croesus famously asked if he should wage war on Persia. The Oracle replied, _“If you go to war, you will destroy a great empire.”_ Believing it was Persia, he marched confidently into battle. It was his own empire that fell.
+Delphi’s prophecies were powerful because they were ambiguous. [King Croesus](https://en.wikipedia.org/wiki/Croesus) famously asked if he should wage war on Persia. The Oracle replied, _“If you go to war, you will destroy a great empire.”_ Believing it was Persia, he marched confidently into battle. It was his own empire that fell.
 
 {:.aside .right}
 The danger lies not in the oracle but in blind belief.   
@@ -25,7 +29,7 @@ Like Delphi, the Oracle of The Matrix trades in paradoxes. Her power is not in p
 
 This mirrors how we now interact with AI: the machine doesn’t “know” the future, but its outputs shape how we think, decide, and act.
 
-## AI - the New Oracle
+## AI, the New Oracle
 
 Large language models do not sit in smoky temples, but their authority is no less mystifying. They generate answers with the polish of truth. Their inner workings are inaccessible to most. Terms like embeddings and transformers are incantations.  
 
@@ -40,7 +44,7 @@ If Delphi shaped wars and The Matrix Oracle shaped Neo’s destiny, today’s AI
 - **Dependency.** Ancient leaders outsourced decisions to priestesses. Characters in The Matrix deferred to the Oracle’s words. We risk doing the same with algorithms.  
 - **Self-fulfilling prophecy.** Belief in the Oracle’s words makes them real. Trust in AI recommendations nudges reality toward its outputs.  
 
-Whether marble temple, Hollywood script, or machine interface, the human pattern is the same: a hunger for certainty and a willingness to surrender judgment.
+Whether marble temple, Hollywood script, or machine interface, the human pattern is the same: the hunger for certainty and the willingness to surrender judgment.
 
 ## Why We Must Question the New Oracle
 
