@@ -2,7 +2,7 @@
 
 The story of technology has never been a straight march of progress but a rhythm of surges and collapses. We have seen it before. The dot-com boom,[^DotComBoom] when every website with “.com” in its name commanded millions in valuation, only to collapse in the early 2000s. The crypto mania, where coins multiplied like weeds, most now withered and forgotten. The metaverse,[^metaverse] proclaimed as our inevitable digital destiny, is now a hushed whisper.
 
-Today, the loudest chorus sings of artificial intelligence. Every week, a new model claims to “redefine everything.” Investors, founders, and commentators treat the curve of progress as though it must keep bending ever upward. And yet, for those who have studied history or philosophy, this is familiar ground.
+Today, the loudest chorus sings of artificial intelligence (AI). Every week, a new model claims to “redefine everything.” Investors, founders, and commentators treat the curve of progress as though it must keep bending ever upward. And yet, for those who have read history or philosophy, this is familiar ground.
 
 Stoicism[^Stoicism] offers a counterweight to such excess. It reminds us not to be carried away by what is outside our control, to act with virtue, and to build for the long arc of time rather than the short fever of the moment. To navigate AI hype cycles, one might think less like a day trader and more like Marcus Aurelius,[^MarcusAurelius] less intoxicated by promise and more anchored by permanence.
 
@@ -14,7 +14,7 @@ To build with a Stoic mind is to anchor attention on the durable core. Just as E
 
 ## Accepting the Cycle
 
-The Stoic doctrine of [Amor Fati](https://en.wikipedia.org/wiki/Amor_fati)—to love one’s fate—encourages acceptance of the world as it is. The hype cycle itself is not an aberration but part of the natural order of innovation. First comes the trigger, then the peak of inflated expectations, the trough of disillusionment, and finally, for the patient, the plateau of productivity.
+The Stoic doctrine of [Amor Fati](https://en.wikipedia.org/wiki/Amor_fati), to love one’s fate, encourages acceptance of the world as it is. The hype cycle itself is not an aberration but part of the natural order of innovation. First comes the trigger, then the peak of inflated expectations, the trough of disillusionment, and finally, for the patient, the plateau of productivity.
 
 To resist this pattern is to exhaust oneself. To accept it is to act wisely. The Stoic builder does not waste energy cursing the madness of the crowd; he navigates through it, knowing that hype will crash, that most competitors will vanish, and that only what is truly valuable will endure.
 
@@ -36,7 +36,7 @@ Contrast these with the corpses of overhyped technologies, VR headsets collectin
 
 What does Stoic building look like in the age of AI?
 
-It begins with essentials. A Stoic founder asks: does this product solve a problem that repeats daily, or merely an occasional nuisance? Stoicism prizes utility over glamour. Products that endure are those woven into the fabric of daily work and life.
+It begins with essentials. A Stoic founder asks, “Does this product solve a problem that repeats daily, or merely an occasional nuisance?” Stoicism prizes utility over glamour. Products that endure are those woven into the fabric of daily work and life.
 
 It continues with sustainability. AI models will change, APIs will break, and frameworks will age. A Stoic design anticipates impermanence. It ensures that even if the underlying model is swapped, the product’s value to the user remains intact.
 
