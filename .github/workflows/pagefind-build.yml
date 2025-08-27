@@ -1,0 +1,48 @@
+name: Build Pagefind Search Index
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: "main"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-pagefind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      
+      - name: Setup Pagefind
+        run: |
+          wget -O pagefind.tar.gz "https://github.com/CloudCannon/pagefind/releases/latest/download/pagefind-x86_64-unknown-linux-musl.tar.gz"
+          tar -xzf pagefind.tar.gz
+          chmod +x pagefind
+      
+      - name: Debug site structure
+        run: |
+          echo "Contents of _site directory:"
+          ls -la ./_site/
+          echo "Sample HTML files:"
+          find ./_site -name "*.html" | head -5
+      
+      - name: Run Pagefind
+        run: ./pagefind --site ./_site --verbose
+      
+      - name: Upload Pagefind files
+        uses: actions/upload-artifact@v4
+        with:
+          name: pagefind-index
+          path: ./_site/_pagefind/

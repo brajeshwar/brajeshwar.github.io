@@ -1,8 +1,7 @@
 # Official Jekyll’s Github Action
 # https://jekyllrb.com/docs/continuous-integration/github-actions/
 # https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
-# Pagefind, https://pagefind.app, for static search
-# Updated: Aug 27, 2025
+# Updated: Mar 30, 2024
 #
 
 name: Deploy Jekyll site to Pages
@@ -51,15 +50,6 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Setup Pagefind
-        # Download and install Pagefind binary
-        run: |
-          wget -O pagefind.tar.gz "https://github.com/CloudCannon/pagefind/releases/latest/download/pagefind-x86_64-unknown-linux-musl.tar.gz"
-          tar -xzf pagefind.tar.gz
-          chmod +x pagefind
-      - name: Run Pagefind
-        # Generate search index from built HTML files
-        run: ./pagefind --site ./_site
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
