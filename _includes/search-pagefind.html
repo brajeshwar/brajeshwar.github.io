@@ -1,0 +1,95 @@
+<!-- Pagefind Search Implementation -->
+<div id="pagefind-search">
+  <div class="pagefind-ui-container">
+    <div id="search"></div>
+  </div>
+</div>
+
+<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/_pagefind/pagefind-ui.js"></script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ 
+      element: "#search",
+      showSubResults: true,
+      highlightParam: "highlight",
+      excerptLength: 30
+    });
+  });
+</script>
+
+<style>
+  #pagefind-search {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .pagefind-ui-container {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Clean styling for search results */
+  .pagefind-ui__search-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .pagefind-ui__search-input:focus {
+    border-color: #0066cc;
+  }
+  
+  .pagefind-ui__results {
+    margin-top: 20px;
+  }
+  
+  .pagefind-ui__result {
+    margin-bottom: 20px;
+    padding: 16px;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  .pagefind-ui__result-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .pagefind-ui__result-title a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .pagefind-ui__result-title a:hover {
+    text-decoration: underline;
+  }
+  
+  .pagefind-ui__result-excerpt {
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Highlight search terms */
+  .pagefind-ui__result-excerpt mark {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
+  .pagefind-ui__message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 20px 0;
+  }
+</style>
