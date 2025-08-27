@@ -1,0 +1,33 @@
+---
+layout: page
+title: Search Test
+---
+
+<h2>Basic Search Test</h2>
+
+<div id="search-test">
+  <input type="text" id="search-input" placeholder="Type to search...">
+  <div id="search-results"></div>
+</div>
+
+<script>
+document.getElementById('search-input').addEventListener('input', function(e) {
+  const query = e.target.value.toLowerCase();
+  const resultsDiv = document.getElementById('search-results');
+  
+  if (query.length < 2) {
+    resultsDiv.innerHTML = '';
+    return;
+  }
+  
+  // Simple client-side search for testing
+  const content = document.body.innerText.toLowerCase();
+  if (content.includes(query)) {
+    resultsDiv.innerHTML = '<p>Found: "' + query + '" on this page</p>';
+  } else {
+    resultsDiv.innerHTML = '<p>No results for: "' + query + '"</p>';
+  }
+});
+</script>
+
+<p>This is a test page to verify search functionality works. Try searching for "search" or "test".</p>
