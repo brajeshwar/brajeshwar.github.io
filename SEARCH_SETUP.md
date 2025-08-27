@@ -1,62 +1,45 @@
-# Search Provider Setup
+# Pagefind Search Implementation - Task Record
 
-This site supports multiple search providers. Here's how to switch between them:
+## Task Status
+- [x] Analyze current search setup (Google CSE active, Algolia configured)
+- [x] Create basic search interface (`_includes/search-pagefind.html`)
+- [x] Create test page (`search-pagefind.html`)
+- [ ] **IN PROGRESS**: Create working GitHub workflow for Pagefind
+- [ ] Test complete implementation
+- [ ] Document switching between search providers
 
-## Current Setup
-- **Active**: Google Custom Search (via `search-google.html`)
-- **Available**: Algolia (configured but not active)
-- **New**: Pagefind (ready to test)
+## Implementation Plan
 
-## Search Providers
+### Step 1: Clean Pagefind Search Interface
+- Simple HTML div for search
+- Load Pagefind CSS and JS from `/_pagefind/` directory
+- Initialize PagefindUI with minimal config
 
-### 1. Google Custom Search (Current)
-- File: `_includes/search-google.html`
-- Page: `search.html` includes `search-google.html`
-- No build step required
+### Step 2: GitHub Workflow Strategy
+- Create separate workflow that builds Jekyll + runs Pagefind
+- Deploy complete site (including `_pagefind` files) to GitHub Pages
+- Replace existing deployment workflow when ready
 
-### 2. Algolia (Configured)
-- File: `_includes/search-algolia.html` and `_includes/search-modal.html`
-- Requires API keys in `_config.yml`
-- Uses workflow: `.github/workflows/algolia-index-push.yml`
+### Step 3: Testing Process
+1. Push workflow changes
+2. Trigger workflow manually
+3. Test `/search-pagefind/` page
+4. Verify search functionality works
+5. Switch main search if successful
 
-### 3. Pagefind (New)
-- File: `_includes/search-pagefind.html`
-- Test page: `search-pagefind.html`
-- Uses workflow: `.github/workflows/jekyll-pagefind-deploy.yml`
+## Current Issues Encountered
+- ❌ GitHub Action `cloudcannon/pagefind-action@v1` doesn't exist
+- ❌ Manual Pagefind installation had download/extraction issues
+- ❌ Search interface shows but Pagefind files not found (expected - no workflow running yet)
 
-## Switching to Pagefind
+## Next Steps
+1. Create clean, working GitHub workflow using npm installation
+2. Test workflow deployment
+3. Verify search functionality
+4. Document final switching process
 
-### Step 1: Test Pagefind
-1. Rename current workflow: `jekyll-build-deploy.yml` → `jekyll-build-deploy.yml.backup`
-2. Rename Pagefind workflow: `jekyll-pagefind-deploy.yml` → `jekyll-build-deploy.yml`
-3. Push changes and let GitHub Actions build
-4. Visit `/search-pagefind/` to test
-
-### Step 2: Make Pagefind Primary (if satisfied)
-Edit `search.html`:
-```html
----
-layout: page
-title: Search
-styles: css/4.1-search.css
-style: page-search
----
-
-{% include search-pagefind.html %}
-```
-
-### Step 3: Revert if Needed
-1. Restore original workflow files
-2. Change `search.html` back to `{% include search-google.html %}`
-
-## Pagefind Features
-- ✅ Highlights search terms
-- ✅ Clean, minimal interface
-- ✅ No API limits or costs
-- ✅ Works offline after initial load
-- ✅ Automatically indexes all content
-
-## Notes
-- Pagefind runs after Jekyll builds the site
-- Search index is generated automatically from your content
-- No configuration needed beyond the workflow setup
+## Files Created
+- `_includes/search-pagefind.html` - Search interface
+- `search-pagefind.html` - Test page
+- `.github/workflows/pagefind-build.yml` - Separate workflow (needs fixing)
+- `search-test.html` - Basic JS test page
