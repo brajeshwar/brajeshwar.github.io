@@ -6,7 +6,7 @@ class PagefindUI {
         this.options = {
             element: "#search",
             baseUrl: "/",
-            bundlePath: "/assets/scripts/",
+            bundlePath: "/_pagefind/",
             showImages: true,
             showSubResults: false,
             excerptLength: 30,
@@ -61,18 +61,26 @@ class PagefindUI {
 
     async loadPagefind() {
         try {
-            // Load pagefind search data from our assets folder
-            const response = await fetch(`${this.options.bundlePath}pagefind.js`);
-            if (!response.ok) {
-                throw new Error(`Failed to load pagefind: ${response.status}`);
+            // Check if pagefind is already loaded from the script tag
+            if (window.pagefind) {
+                this.searchInstance = await window.pagefind.init(this.options.pagefindOptions);
+                return;
             }
 
-            const pagefindCode = await response.text();
-            // Execute the pagefind code
-            eval(pagefindCode);
+            // If not loaded, wait a bit and try again
+            let attempts = 0;
+            const maxAttempts = 10;
 
-            // Initialize pagefind
-            this.searchInstance = await window.pagefind.init(this.options.pagefindOptions);
+            while (!window.pagefind && attempts < maxAttempts) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+                attempts++;
+            }
+
+            if (window.pagefind) {
+                this.searchInstance = await window.pagefind.init(this.options.pagefindOptions);
+            } else {
+                throw new Error('Pagefind failed to load');
+            }
         } catch (error) {
             console.error('Failed to load Pagefind:', error);
             // Fallback: show message
