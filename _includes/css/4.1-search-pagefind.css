@@ -313,8 +313,10 @@ mark {
 .pagefind-ui__result-date {
   font-style: italic;
   color: var(--text-color-muted, #666);
-  font-size: 14px;
-  margin-bottom: 8px;
+  font-size: 13px;
+  font-family: var(--font-family-ui, system-ui, -apple-system, sans-serif);
+  margin: 4px 0 12px 0;
+  opacity: 0.8;
 }
 
 .pagefind-ui__result-excerpt {

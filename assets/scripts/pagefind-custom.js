@@ -76,53 +76,37 @@ function enhanceSearchInterface() {
 }
 
 function enhanceResult(resultElement) {
-    // Wrap content in a container for better layout
+    // Add date if available and not already added
     const titleElement = resultElement.querySelector('.pagefind-ui__result-title');
-    const excerptElement = resultElement.querySelector('.pagefind-ui__result-excerpt');
+    const linkElement = titleElement?.querySelector('a');
     
-    if (titleElement && excerptElement && !resultElement.querySelector('.pagefind-ui__result-content')) {
-        const contentWrapper = document.createElement('div');
-        contentWrapper.className = 'pagefind-ui__result-content';
-        
-        // Move title and excerpt to content wrapper
-        contentWrapper.appendChild(titleElement.cloneNode(true));
-        contentWrapper.appendChild(excerptElement.cloneNode(true));
-        
-        // Add date if available in the result data
-        const linkElement = titleElement.querySelector('a');
-        if (linkElement && linkElement.href) {
-            const dateMatch = linkElement.href.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
-            if (dateMatch) {
-                const [, year, month, day] = dateMatch;
-                const date = new Date(year, month - 1, day);
-                const options = {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                };
-                const formattedDate = date.toLocaleDateString('en-US', options);
-                
-                // Insert date element after title in content wrapper
-                const dateElement = document.createElement('div');
-                dateElement.className = 'pagefind-ui__result-date';
-                dateElement.textContent = formattedDate;
-                const titleInWrapper = contentWrapper.querySelector('.pagefind-ui__result-title');
-                titleInWrapper.insertAdjacentElement('afterend', dateElement);
-            }
+    if (linkElement && linkElement.href && !resultElement.querySelector('.pagefind-ui__result-date')) {
+        const dateMatch = linkElement.href.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
+        if (dateMatch) {
+            const [, year, month, day] = dateMatch;
+            const date = new Date(year, month - 1, day);
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+            
+            // Insert date element after title
+            const dateElement = document.createElement('div');
+            dateElement.className = 'pagefind-ui__result-date';
+            dateElement.textContent = formattedDate;
+            titleElement.insertAdjacentElement('afterend', dateElement);
+            
+            console.log('Added date:', formattedDate, 'to result');
         }
-        
-        // Replace original content with wrapped version
-        titleElement.remove();
-        excerptElement.remove();
-        resultElement.insertBefore(contentWrapper, resultElement.firstChild);
     }
     
     // Handle optional images (if they exist in the content)
     const imgElement = resultElement.querySelector('img');
     if (imgElement && !imgElement.classList.contains('pagefind-ui__result-image')) {
         imgElement.className = 'pagefind-ui__result-image';
-        // Ensure image is positioned on the right
-        resultElement.appendChild(imgElement);
+        console.log('Enhanced image for result');
     }
 }
