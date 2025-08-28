@@ -4,9 +4,9 @@ The Internet has a way of reinventing old ideas. From [Usenet](https://en.wikipe
 
 ## From Usenet to Email Threads
 
-Usenet in the early 1980s wasn’t technically “email,” but it felt close. It was a distributed bulletin board where people subscribed to groups and received posts, such as messages. Then came [LISTSERV](https://en.wikipedia.org/wiki/LISTSERV) and [Majordomo](https://en.wikipedia.org/wiki/Majordomo_(software)), software that let communities manage true email lists. Suddenly, a group of scientists, hobbyists, or coders could stay in touch without centralized control.  
+Usenet in the early 1980s wasn’t technically [email](/2024/email/), but it felt close. It was a distributed bulletin board where people subscribed to groups and received posts, such as messages. Then came [LISTSERV](https://en.wikipedia.org/wiki/LISTSERV) and [Majordomo](https://en.wikipedia.org/wiki/Majordomo_(software)), software that let communities manage true email lists. Suddenly, a group of scientists, hobbyists, or coders could stay in touch without centralized control.  
 
-Mailing lists weren’t glamorous, but they were effective. The [Linux kernel](https://en.wikipedia.org/wiki/Linux_kernel) itself was born and still thrives on mailing lists. If you wanted to follow the conversations of open-source giants like [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), you subscribed to the right list. Debates, patches, flame wars—all flowed into your inbox.  
+Mailing lists weren’t glamorous, but they were effective. The [Linux kernel](https://en.wikipedia.org/wiki/Linux_kernel) itself was born and still thrives on mailing lists. If you wanted to follow the conversations of open-source giants like [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), you subscribed to the right list. Your Inbox gets everything, from debates to patches to flame wars.
 
 ## Communities That Lived in the Inbox
 
@@ -52,7 +52,5 @@ Every era has rediscovered them:
 - Independent creators and niche communities today.  
 
 It’s worth asking whether the next “new thing” will be less a revolution and more a rebranding of the same pattern: direct messages, delivered reliably, with ownership intact.  
-
-## Final Thought
 
 Mailing lists may lack the glamour of shiny apps, but they have something more valuable: permanence. In an Internet that forgets quickly, the inbox remembers. Communities that opt for mailing lists prioritize durability over distraction. That’s why the format, in one form or another, will outlast every trend.
