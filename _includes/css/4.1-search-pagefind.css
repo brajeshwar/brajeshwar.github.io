@@ -230,10 +230,19 @@ mark {
   --pagefind-ui-border: var(--border-color, #e1e5e9);
 }
 
+/* Ensure Pagefind UI is visible */
+.pagefind-ui,
+.pagefind-ui__form,
+.pagefind-ui__search-input {
+  display: block !important;
+  visibility: visible !important;
+}
+
 /* Enhanced Search Input */
 .pagefind-ui__search-input {
   width: 100%;
-  padding: 12px 48px 12px 16px; /* Extra right padding for clear button */
+  padding: 12px 48px 12px 16px;
+  /* Extra right padding for clear button */
   font-size: 16px;
   border: 2px solid var(--border-color, #e1e5e9);
   border-radius: 8px;
@@ -254,18 +263,21 @@ mark {
 
 .pagefind-ui__result {
   margin-bottom: 20px;
-  padding: 20px 24px; /* Left-right padding for the boxes */
+  padding: 20px 24px;
+  /* Left-right padding for the boxes */
   border: 1px solid var(--border-color, #e1e5e9);
   border-radius: 8px;
   background: var(--bg-color, #fff);
   display: flex;
   align-items: flex-start;
-  gap: 20px; /* Space between content and image */
+  gap: 20px;
+  /* Space between content and image */
 }
 
 .pagefind-ui__result-content {
   flex: 1;
-  min-width: 0; /* Allows text to wrap properly */
+  min-width: 0;
+  /* Allows text to wrap properly */
 }
 
 /* Optional image on the right */
@@ -275,9 +287,12 @@ mark {
   height: 80px;
   border-radius: 6px;
   object-fit: cover;
-  order: 2; /* Ensures image appears on the right */
-  float: none; /* Override default float */
-  margin: 0; /* Reset default margins */
+  order: 2;
+  /* Ensures image appears on the right */
+  float: none;
+  /* Override default float */
+  margin: 0;
+  /* Reset default margins */
 }
 
 .pagefind-ui__result-title {
@@ -340,11 +355,12 @@ mark {
     flex-direction: column;
     padding: 16px 20px;
   }
-  
+
   .pagefind-ui__result-image {
     width: 100%;
     height: 120px;
-    order: 0; /* Image goes to top on mobile */
+    order: 0;
+    /* Image goes to top on mobile */
     margin-bottom: 12px;
   }
 }
