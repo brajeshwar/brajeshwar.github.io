@@ -72,7 +72,7 @@
 
 .pagefind-ui__search-clear:active {
   background: var(--bg-color-medium, #e5e5e5);
-  transform: translateY(-50%) scale(0.95);
+  transform: translateY(-50%);
 }
 
 .pagefind-ui__search-clear[hidden] {
