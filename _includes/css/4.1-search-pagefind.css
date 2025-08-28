@@ -268,31 +268,27 @@ mark {
   border: 1px solid var(--border-color, #e1e5e9);
   border-radius: 8px;
   background: var(--bg-color, #fff);
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  /* Space between content and image */
+  display: block;
+  /* Changed from flex to block for text wrapping */
+  overflow: hidden;
+  /* Contain floated elements */
 }
 
 .pagefind-ui__result-content {
-  flex: 1;
-  min-width: 0;
-  /* Allows text to wrap properly */
+  /* No special layout needed - content flows naturally around floated image */
 }
 
-/* Optional image on the right */
+/* Optional image floated on the right with text wrapping */
 .pagefind-ui__result-image {
-  flex-shrink: 0;
+  float: right;
   width: 120px;
   height: 80px;
   border-radius: 6px;
   object-fit: cover;
-  order: 2;
-  /* Ensures image appears on the right */
-  float: none;
-  /* Override default float */
-  margin: 0;
-  /* Reset default margins */
+  margin: 0 0 16px 20px;
+  /* Bottom and left margin for text wrapping */
+  clear: right;
+  /* Ensure images don't stack */
 }
 
 .pagefind-ui__result-title {
@@ -352,15 +348,16 @@ mark {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .pagefind-ui__result {
-    flex-direction: column;
     padding: 16px 20px;
   }
 
   .pagefind-ui__result-image {
+    float: none;
+    /* Remove float on mobile */
     width: 100%;
     height: 120px;
-    order: 0;
-    /* Image goes to top on mobile */
-    margin-bottom: 12px;
+    margin: 0 0 12px 0;
+    /* Full width with bottom margin */
+    display: block;
   }
 }
