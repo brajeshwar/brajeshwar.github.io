@@ -1,12 +1,19 @@
-# Jekyll build with Pagefind search - Complete deployment workflow
-# This replaces the standard jekyll-build-deploy.yml when ready to use Pagefind
+# Official Jekyll’s Github Action
+# https://jekyllrb.com/docs/continuous-integration/github-actions/
+# https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
+# Updated: Mar 30, 2024
+#
 
-name: Deploy Jekyll site with Pagefind to Pages
+name: Deploy Jekyll site to Pages
 
 on:
+  # schedule a deploy every day
+  schedule:
+    - cron: '1 0 * * *'
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: "main"
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -16,7 +23,8 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -28,34 +36,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
-          bundler-cache: true
-          
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-        
       - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-          
-      - name: Install Pagefind
-        run: npm install pagefind
-        
-      - name: Build Pagefind index
-        run: npx pagefind --site _site
-        
       - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
   # Deployment job
