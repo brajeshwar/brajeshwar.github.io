@@ -1,9 +1,13 @@
-# Jekyll build with Pagefind search - Complete deployment workflow
-# This replaces the standard jekyll-build-deploy.yml when ready to use Pagefind
+# Jekyll - Build and Deploy to Github Pages
+# Pagefind, https://pagefind.app, powers the Search
+# Updated: Aug 30, 2025
 
-name: Deploy Jekyll site with Pagefind to Pages
+name: Deploy Jekyll via Push and Schedule
 
 on:
+  # schedule a deploy every day
+  schedule:
+    - cron: '1 0 * * *'
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
