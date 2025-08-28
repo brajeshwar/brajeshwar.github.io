@@ -1,7 +1,16 @@
 ---
 layout: page
 title: Search
+styles: css/4.1-search-pagefind.css
 style: page-search
 ---
 
-{% include search-pagefind.html %}
+<div id="search"></div>
+
+<!-- Load Pagefind CSS and JS -->
+<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/_pagefind/pagefind-ui.js"></script>
+
+<!-- Load custom scripts -->
+<script src="{{ '/assets/scripts/pagefind.js' | relative_url }}"></script>
+
