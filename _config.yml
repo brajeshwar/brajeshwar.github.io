@@ -16,18 +16,6 @@ highlighter: rouge
 permalink: pretty
 permalink: /:title/
 
-search_provider: algolia
-algolia:
-  application_id: TLHGGYA9QZ
-  index_name: brajeshwar.com
-  search_only_api_key: 17f090a9f2b6488a3cbd09abdb3040ae # YOUR_SEARCH_ONLY_API_KEY
-  files_to_exclude:
-    - _redirect/*.*
-    - backups
-    - bookmarks
-    - now
-    - static
-
 feed:
   posts_limit: 9
   author: Brajeshwar
@@ -37,7 +25,6 @@ sass:
   sourcemap: never
 
 plugins:
-  - jekyll-algolia
   - jekyll-feed
   - jekyll-optional-front-matter
   - jekyll-paginate
@@ -60,18 +47,21 @@ defaults:
       layout: 'post'
       permalink: '/:year/:title/'
   - scope:
-      path: 'bookmarks'
-      type: 'pages'
-    values:
-      layout: 'page-bookmarks'
-  - scope:
       path: '_redirect'
       type: 'pages'
     values:
       layout: 'redirect'
+  - scope:
+      path: '_pages'
+      type: 'pages'
+    values:
+      layout: 'page'
+      permalink: '/:name/'
 
 collections:
   redirect:
+    output: true
+  pages:
     output: true
 
 exclude:
@@ -80,5 +70,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - gemfiles/
+  - AGENTS.md
   - README.*
   - now/*

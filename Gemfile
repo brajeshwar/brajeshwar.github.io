@@ -5,7 +5,6 @@ gem 'webrick'
 gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
-  gem 'jekyll-algolia'
   gem 'jekyll-feed'
   gem 'jekyll-optional-front-matter'
   gem 'jekyll-paginate'
