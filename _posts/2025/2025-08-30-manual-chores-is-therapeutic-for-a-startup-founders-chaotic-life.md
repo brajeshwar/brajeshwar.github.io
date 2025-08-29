@@ -51,7 +51,7 @@ A small garden, even if just a balcony with a few plants, is another classroom. 
 
 Startups often glamorize overnight success, but gardening whispers a deeper truth: real growth takes time, and sometimes the most important action is simply waiting. [^EnglishGardening]
 
-<img class="large" src="/static/2025/japanese-tea-ceremony.webp" alt="Japanese Tea Ceremony" loading="lazy">
+<img class="full" src="/static/2025/japanese-tea-ceremony.webp" alt="Japanese Tea Ceremony" loading="lazy">
 
 ## Brewing Tea: The Ritual of Slowness
 

@@ -8,7 +8,7 @@ We open [ChatGPT](https://chatgpt.com), [Claude](https://claude.ai), or [Gemini]
 
 The echo is unmistakable. We’ve built a new oracle. The question is whether we’ve also inherited the same dangers.
 
-<img class="full" src="/static/2025/oracle.webp" alt="Oracle" loading="lazy">
+<img class="full" src="/static/2025/oracle-roman-temple.webp" alt="Oracle" loading="lazy">
 
 ## The Ancient Oracle: Ambiguity as Power
 
