@@ -4,7 +4,7 @@ A startup founder’s calendar often feels like a battlefield: investor meetings
 
 The world of building startups demands velocity. Manual chores whisper slowness. They ask for nothing except presence. Dishwashing, sweeping, folding laundry, or tending a garden are not glamorous pursuits. But they are precisely the antidotes to the violent rush of entrepreneurial life.
 
-<img class="large" src="/static/2025/lady-white-dress-lake-mountain.webp" alt="Lady in the Lake" loading="lazy">
+<img class="full" src="/static/2025/lady-in-white-snow.webp" alt="Lady in the Lake" loading="lazy">
 
 ## Philosophy of Chores
 
@@ -50,6 +50,8 @@ For a founder, sweeping becomes a reminder that decluttering is never about reac
 A small garden, even if just a balcony with a few plants, is another classroom. Watering, pruning, and waiting remind me that growth is a seasonal process. Seeds do not rush. Plants do not check metrics. They grow in cycles of sunlight and shadow, with patience as their only secret.
 
 Startups often glamorize overnight success, but gardening whispers a deeper truth: real growth takes time, and sometimes the most important action is simply waiting. [^EnglishGardening]
+
+<img class="large" src="/static/2025/japanese-tea-ceremony.webp" alt="Japanese Tea Ceremony" loading="lazy">
 
 ## Brewing Tea: The Ritual of Slowness
 
