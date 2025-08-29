@@ -71,5 +71,6 @@ exclude:
   - Gemfile.lock
   - gemfiles/
   - AGENTS.md
+  - DEV.md
   - README.*
   - now/*
