@@ -65,12 +65,9 @@ collections:
     output: true
 
 exclude:
-  - .claude
-  - .obsidian
   - Gemfile
   - Gemfile.lock
   - gemfiles/
-  - AGENTS.md
-  - DEV.md
-  - README.*
-  - now/*
+  - README.md
+  - README/
+  - now/

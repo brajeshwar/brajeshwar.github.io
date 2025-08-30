@@ -6,8 +6,8 @@ gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
   gem 'jekyll-feed'
-  gem 'jekyll-optional-front-matter'
-  gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
+  gem 'jekyll-paginate'
+  gem 'jekyll-optional-front-matter'
   gem 'jekyll-titles-from-headings'
 end
