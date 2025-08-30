@@ -18,6 +18,6 @@ And in Startup land, perception is half the product. Nobody’s raising a seed r
 
 So yes, let’s get comfortable with “AI.” It’s wrong in the same way as calling your car a “vehicle” instead of a “four-stroke internal combustion machine with torque converter” is incorrect. Technically off, practically perfect.
 
-And if someone wants to lecture me about how it’s not “AI,” it’s just an “LLM,” [I’ll happily nod.](/ok/) Then I’ll go back to using “AI” because, ironically, the model of human communication suggests it predicts the right outcome with the highest probability.
-
 <img class="large" src="/static/2025/ai-ml-dl-llm-gai-gpt-nlp.png" alt="AI ML DL LLM GenAI GPT NLP Data Science" loading="lazy">
+
+And if someone wants to lecture me about how it’s not “AI,” it’s just an “LLM,” [I’ll happily nod.](/ok/) Then I’ll go back to using “AI” because, ironically, the model of human communication suggests it predicts the right outcome with the highest probability.
