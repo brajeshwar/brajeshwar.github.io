@@ -1,3 +1,7 @@
+---
+image: /static/2025/memento-mori.webp
+---
+
 # Always be Dying
 
 Why think about death on a beautiful day?
