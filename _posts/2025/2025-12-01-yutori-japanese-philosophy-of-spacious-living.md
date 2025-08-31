@@ -1,10 +1,12 @@
+---
+image: /static/2025/japanese-home-with-pool.webp
+---
+
 ## Yutori - Japanese Philosophy of Spacious Living
 
 Imagine the morning rush in the city of [Tokyo](https://en.wikipedia.org/wiki/Tokyo), Japan. It is indeed a choreography of speed. Suited commuters weave through [Shinjuku Station](https://en.wikipedia.org/wiki/Shinjuku_Station), phones in hand, eyes fixed forward.
 
 And, on a side street nearby, an old man leans against a shopfront, sipping tea, watching the world slide by. He is not in a hurry, but is in Yutori (ゆとり), the Japanese philosophy of creating room to breathe.
-
-<img class="large" src="/static/2025/yutori-spacious-living.webp" alt="Yutori - Japanese Philosophy of Spacious Living" loading="lazy">
 
 Yutori translates as spaciousness, margin, ease. It is not laziness, nor escape. It is the pause that makes the music, the margin that gives the page meaning.
 
