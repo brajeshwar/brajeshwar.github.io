@@ -1,7 +1,3 @@
----
-image: /static/2023/eternal-september.webp
----
-
 # Eternal September: The First Internet Flood
 
 In September 1993, something broke on the Internet. Not technically, but

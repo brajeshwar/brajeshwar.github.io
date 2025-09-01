@@ -1,7 +1,3 @@
----
-image: /static/2023/eternal-september.webp
----
-
 # Eternal September
 
 In the history of the Internet, September 1993 is often referenced as a turning point, a seemingly innocuous moment that fundamentally altered the dynamics of online communities. This phenomenon is famously referred to as [The Eternal September](https://en.wikipedia.org/wiki/Eternal_September).
