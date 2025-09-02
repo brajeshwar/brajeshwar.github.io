@@ -72,4 +72,4 @@ exclude:
   - gemfiles/
   - now/
   - README.md
-  - README/
+  - _README/
