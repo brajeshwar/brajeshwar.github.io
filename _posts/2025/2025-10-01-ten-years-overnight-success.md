@@ -1,4 +1,4 @@
-# The 10+ Years Overnight Successes
+# The 10-Year Overnight Success
 
 “Overnight success” is one of the most misleading phrases in business. It suggests a sudden event, like a lightning strike, that propels a founder or company into fame and fortune. In reality, almost every so-called instant hit is the visible tip of a very long, mostly invisible process punctuated with years of experiments, failures, dead ends, and small wins that compound quietly until the results are impossible to ignore.  
 

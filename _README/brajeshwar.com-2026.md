@@ -1,6 +1,4 @@
-# Development
-
-## brajeshwar.com 2025
+# brajeshwar.com-2026
 
 - General
 	- Default to text as the main content. Media (images, videos, audio) when when needed and it should be ornamental where if it is not there, it should still work most of the times.
