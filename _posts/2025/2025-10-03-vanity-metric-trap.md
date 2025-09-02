@@ -4,6 +4,8 @@ The dashboard finally tipped over a million users on a Friday afternoon. The tea
 
 This is how vanity works. It doesn’t lie. It just tells an incomplete story so loudly that you stop asking for the complete one.
 
+<img class="large" src="/static/2025/fake-data-curve.svg" alt="The Vanity Metric Trap">
+
 ## When Downloads Become Theater
 
 There’s a peculiar psychology at work in every tech company. Humans are drawn to numbers; they seem solid, objective, comforting. The brain likes patterns, and when patterns show up as lines ascending on dashboards, it’s easy to believe that all’s well. This “quantification bias” lends numbers authority, regardless of whether those numbers hold any meaning at all.
@@ -24,6 +26,8 @@ This is the trap. Vanity metrics are cheap, portable, and easy to celebrate. The
 ### WeWork: Creative Accounting
 
 [WeWork](https://en.wikipedia.org/wiki/WeWork) famously invented “community adjusted EBITDA,” stripping out basic costs like marketing and administration to turn nearly $1 billion in losses into a paper profit. Occupancy dashboards looked strong because leadership cut deals that photographed well but hurt in cash. The foundation cracked the moment markets stopped believing the story.
+
+<img class="medium right" src="/static/2025/anna-ferris-as-elizabeth-holmes.webp" alt="Anna Ferris as Elizabeth Holmes" loading="lazy">
 
 ### Theranos: Validation Theater
 
