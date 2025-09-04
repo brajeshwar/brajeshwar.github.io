@@ -8,7 +8,8 @@ It’s no secret that tech startups have a certain allure. They promise high ret
 
 The tech-centric focus often overshadows the real innovation happening outside the digital space. Non-tech startups, which focus on products and services that meet fundamental human needs, are equally important. These businesses, whether crafting handmade goods, starting sustainable farms, or offering personal services, are not only creating jobs but also building strong communities.
 
-> “The road to success and the road to failure are almost exactly the same.” - [Colin Davis](https://en.wikipedia.org/wiki/Colin_Davis)
+{:.aside .right}
+“The road to success and the road to failure are almost exactly the same.” - [Colin Davis](https://en.wikipedia.org/wiki/Colin_Davis)
 
 Take, for example, the rise of local organic food producers or companies focusing on zero-waste lifestyles. These non-tech businesses are responding to consumer demand for healthier, more sustainable products—an area where technology alone cannot provide all the answers. Their innovations may be less flashy, but their impact is profound and meaningful.
 
@@ -26,13 +27,14 @@ For example, a local bakery might not be ambitious to scale globally. Still, it 
 
 Non-tech startups also tend to have fewer barriers to entry. While launching a tech startup might require specialized skills, expensive equipment, or significant funding, many non-tech ventures can be started with minimal resources. A home-based bakery, a freelance graphic design business, or a personal training service can all start with small investments and grow based on demand and reputation.
 
+{:.aside .left}
+“The true entrepreneur is a doer, not a dreamer.” ― [Nolan Bushnell](https://en.wikipedia.org/wiki/Nolan_Bushnell)
+
 It’s a misconception to think that innovation only happens in the tech world. Non-tech startups are innovating in equally groundbreaking ways, though they may not grab headlines similarly. Innovation in non-tech industries often comes down to creative problem-solving, customer experience, and craftsmanship.
 
 For instance, the rise of eco-friendly and ethical fashion brands is a response to the growing awareness of environmental and labor issues in the traditional fashion industry. These non-tech companies are rethinking how clothes are made, focusing on sustainable materials, fair labor practices, and slow fashion, prioritizing quality over quantity.
 
 In the fitness industry, non-tech startups are leading the way with a wave of innovation that is distinctly human-centric. Whether it’s small boutique studios offering specialized classes or personal trainers providing tailored programs, these businesses are a testament to the enduring value of human expertise, creativity, and passion in an increasingly tech-driven world.
-
-> “The true entrepreneur is a doer, not a dreamer.” ― [Nolan Bushnell](https://en.wikipedia.org/wiki/Nolan_Bushnell)
 
 ## Are you a non-tech entrepreneur?
 
