@@ -1,4 +1,4 @@
-# The Dot-Com Bubble as a Founders’ Rite of Passage
+# The Dot-Com Bubble as Founders’ Rite of Passage
 
 In the late 1990s, walking into a startup office felt more like crashing a rock concert than a business. Exuberant founders ordered Aeron chairs by the truckload, plastered their logos on billboards lining Silicon Valley’s Highway 101, and celebrated venture rounds with champagne and pyrotechnics. The secret ingredient wasn’t profits or product, it was simply the suffix “.com.”
 
