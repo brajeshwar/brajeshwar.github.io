@@ -4,7 +4,7 @@ Every startup community has its legends. The lone founder who willed an idea int
 
 ## Origins of the Founder-as-Hero Myth
 
-Silicon Valley loves storytelling. It frames startups like epic quests, with founders cast as heroic figures. Steve Jobs in a garage. Elon Musk coding in rented offices. Jeff Bezos leaving a steady Wall Street job to chase e-commerce. The hero’s journey is familiar, digestible, and compelling.  
+The Startup world loves storytelling. It frames startups like epic quests, with founders cast as heroic figures. Steve Jobs in a garage. Elon Musk coding in rented offices. Jeff Bezos leaving a steady Wall Street job to chase e-commerce. The hero’s journey is familiar, digestible, and compelling.  
 
 But reality rarely mirrors myth. Behind every successful founder, there are markets that were ready, investors who bet early, timing that aligned, and sheer luck that amplified their efforts. The hero story is a simplification of a much more complex system.
 
