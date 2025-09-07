@@ -68,4 +68,4 @@ Napster, Kazaa, and their peers weren’t sustainable businesses. They were flas
 
 For founders, their story is a reminder: history didn’t begin with Silicon Valley’s slogans. The idea of “breaking things” was already running on 56k modems, written in C code by kids who wanted music. Sometimes, the entrepreneurs who burn out the fastest are the ones who light the way.
 
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/vvr9AMWEU-c?si=RaYkVgG_8ig2lwka" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/fRJ-M6s1rlU?si=oPLW-KV-uokMCiQV" title="Dial-up Modem Handshake Sound Spectrogram" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
