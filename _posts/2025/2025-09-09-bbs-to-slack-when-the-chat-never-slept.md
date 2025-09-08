@@ -1,5 +1,7 @@
 # BBS to Slack: When the Chat Never Slept
 
+<img class="medium right" src="/static/2025/bulletin-board-system.png" alt="Bulletin Board System" loading="lazy">
+
 The first time you dialed into a [Bulletin Board System](https://en.wikipedia.org/wiki/Bulletin_board_system) (BBS) felt like stumbling into a secret room hidden inside the telephone lines. The modem screamed, the screen flickered, and suddenly you were not alone. Someone out there, faceless but typing, was awake at the same odd hour as you. That sense—that the chat never stopped, and someone might reply if you waited long enough—was the hook that kept people logging back in.  
 
 From BBSs in the 80s and 90s to today’s [Slack](https://en.wikipedia.org/wiki/Slack_(software)) channels running in the background of every workplace, the lineage of real-time communication is the story of how humans built digital campfires and never let them die out.  
