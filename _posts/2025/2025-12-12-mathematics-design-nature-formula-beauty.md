@@ -1,8 +1,8 @@
 # Mathematics in Design: Nature’s Formula for Beauty
 
-<img class="medium right" src="/static/2025/laaija-japanese-art.webp" alt="Laaija’s Japanese Art" loading="lazy">
+A few weeks back, I saw my daughter sketching a character for her schools’ event, some sort of a India-Japan collaboration. She has a natural gift for creativity, the kind of talent that lets her draw fluidly without overthinking proportion or spacing. I watched her with quiet admiration. When I tried to explain why some of her shapes “felt right” and why others looked slightly off, I found myself reaching for mathematics, not art theory.
 
-A few weeks back, I saw my daughter sketching a character for her schools’ show even, some sort of a India-Japan collaboration. She has a natural gift for creativity, the kind of talent that lets her draw fluidly without overthinking proportion or spacing. I watched her with quiet admiration. When I tried to explain why some of her shapes “felt right” and why others looked slightly off, I found myself reaching for mathematics, not art theory.
+<img class="medium right" src="/static/2025/laaija-japanese-art.webp" alt="Laaija’s Japanese Art" loading="lazy">
 
 I told her the story of how I started as a designer. When I began my career as a developer, there were no designers in the room. We built products with bare bones. Design wasn’t even an afterthought; heck, it was nonexistent. Out of necessity, I picked up design. As a developer, my first tools were not brushes or palettes. They were numbers, ratios, and patterns.
 
