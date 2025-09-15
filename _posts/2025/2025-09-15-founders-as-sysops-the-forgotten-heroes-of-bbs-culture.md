@@ -46,7 +46,7 @@ Why forgotten? Unlike today’s startup founders, sysops rarely became rich or f
 
 Every Discord server, every Reddit community, every indie SaaS founder today stands on the shoulders of these unsung sysops.
 
-## The Lessons
+*Well…*
 
 1. **Wear every hat with intent.** The grind is not glamorous, but it teaches resilience.  
 2. **Be T-shaped.** You don’t need mastery in all things, but ignorance is fatal.  
