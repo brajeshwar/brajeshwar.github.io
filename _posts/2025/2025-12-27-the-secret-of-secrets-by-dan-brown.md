@@ -1,4 +1,8 @@
- # The Secret of Secrets by Dan Brown
+---
+image: /static/2025/the-secret-of-secrets.webp
+---
+
+# The Secret of Secrets by Dan Brown
  
 [Dan Brown](https://en.wikipedia.org/wiki/Dan_Brown)
 [The Secret of Secrets](https://en.wikipedia.org/wiki/The_Secret_of_Secrets_(Brown_novel))
