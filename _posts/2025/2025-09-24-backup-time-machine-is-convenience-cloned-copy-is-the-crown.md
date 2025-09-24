@@ -1,8 +1,3 @@
----
-image: https://cdn.oinam.com/img/computer/ome-2-1952.webp
-image-desc: The OME P2, released by a French company in 1952, is an example of an electronic analog computer. Its name is short for Opérateur Mathématique Électronique.
----
-
 # Backup: Time Machine is Convenience; Cloned Copy is the Crown
 
 Twenty years ago, I learned a lesson the hard way. I will never forget that event for the entirety of my life, especially when it comes to the importance of having backups, have [backups of everything](/2021/backup/), so you have the flexibility to [walk away](/2025/can-i-walk-out/).
@@ -12,6 +7,8 @@ On that fateful day, as I returned to Bombay from Bangalore, I realized that the
 That moment was when I realized the importance of having good backups. I built routines around them. I read, experimented, and refined my approach. Over time, those routines hardened into habits and philosophies to [backup, backup, and backup](/2021/backup/).
 
 Still, theory and habit only help so much when disaster strikes again.
+
+<img class="large" src="/static/2025/time-machine.webp" alt="Time Machine" loading="lazy">
 
 ## The Crash of 2025
 
