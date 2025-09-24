@@ -23,15 +23,15 @@ Well, the limits of a Time Machine backup are that it provides versioned files, 
 
 ## The Homework Resurrection: A Small Miracle
 
-I do have a story about the time macOS’s [Time Machine](https://en.wikipedia.org/wiki/Time_Machine_(macOS)) proved its worth. About a year ago, my daughter lost some of her school homework that she had been working on her computer. She asked me if I could do something about it, so I fired up Time Machine and went back in time to retrieve her homework. That definitely confirmed what she had in my mind about me—a standard nerd who can make computers do magic. All I did was stick a simple external Hard Drive to her Mac and set it as a Time Machine Backup. That little rescue is precisely what versioned backups do well: recover deleted files, restore earlier drafts, or pick specific versions.
+I do have a story about that time when macOS’s [Time Machine](https://en.wikipedia.org/wiki/Time_Machine_(macOS)) proved its worth. About a year ago, my daughter lost some of her school homework that she had been working on her computer. She asked me if I could do something about it, so I fired up Time Machine and went back in time to retrieve her homework. That confirmed what she had in mind about me—a standard nerd who can make computers do magic. All I did was stick a simple external Hard Drive to her Mac and set it as a Time Machine Backup. That little rescue is precisely what versioned backups do well: recover deleted files, restore earlier drafts, or pick specific versions.
 
 ## Cloned Copy takes the Crown
 
-Anyway, nothing, however, can beat a bootable cloned drive. If your system drive fails, you can swap in the clone (or boot from it) and continue as if nothing catastrophic happened. I use [Carbon Copy Cloner](https://bombich.com), but there are other alternatives, such as [SuperDuper](https://www.shirt-pocket.com/SuperDuper/).
+Anyway, nothing, however, can beat a bootable cloned drive. If my system drive fails, I can swap in the clone (or boot from it) and continue as if nothing catastrophic happened. I use [Carbon Copy Cloner](https://bombich.com), but there are other alternatives, such as [SuperDuper](https://www.shirt-pocket.com/SuperDuper/).
 
-And yes, I also have Cloud Backups, but they are just the files and data related to work, family, and personal use.
+And yes, I do have Cloud backups, but they are just the files and data related to work, family, and personal use.
 
-I’m now of the opinion that if one can invest and afford a second working computer, one can just swap it when things go south. That way, treat tools as tools to get things done and not get attached to them.
+I’m now of the opinion that if one can invest and afford a second working computer, so one can just swap it when things go south. That way, treat tools as tools to get things done and not get attached to them.
 
 My friend Kathan Shah of [Spurge](https://spurge.rentals) helped by sourcing a MacBook within a few hours, and I was back in business. Settings, apps, files—everything almost as it was. If you’re in India and needs help with refurbished computers, phones, and devices, I highly recommend their team. They are super helpful to Startups and SMBs alike.
 
