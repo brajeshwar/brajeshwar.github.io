@@ -1,3 +1,8 @@
+---
+image: https://cdn.oinam.com/img/computer/ome-2-1952.webp
+image-desc: The OME P2, released by a French company in 1952, is an example of an electronic analog computer. Its name is short for Opérateur Mathématique Électronique.
+---
+
 # Backup: Time Machine is Convenience; Cloned Copy is the Crown
 
 Twenty years ago, I learned a lesson the hard way. I will never forget that event for the entirety of my life, especially when it comes to the importance of having backups, have [backups of everything](/2021/backup/), so you have the flexibility to [walk away](/2025/can-i-walk-out/).
