@@ -8,7 +8,7 @@ That moment was when I realized the importance of having good backups. I built r
 
 Still, theory and habit only help so much when disaster strikes again.
 
-<img class="large" src="/static/2025/time-machine.webp" alt="Time Machine" loading="lazy">
+<img class="full" src="/static/2025/time-machine.webp" alt="Time Machine" loading="lazy">
 
 ## The Crash of 2025
 
