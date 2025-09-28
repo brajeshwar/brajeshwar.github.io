@@ -35,6 +35,9 @@ Why it works;
 
 Flashy unicorns chase hypergrowth with investor money. They burn capital, hoping to flip market share into monopoly power. Boring businesses chase cash flow. They grow at their own pace, sustainably, and rarely need to raise rounds.
 
+{:.aside .right}
+“There are no secrets to success. It is the result of preparation, hard work, and learning from failure.” — [Colin Powell](https://en.wikipedia.org/wiki/Colin_Powell)
+
 - [WeWork](https://en.wikipedia.org/wiki/WeWork), once valued at $47 billion, collapsed spectacularly because it never achieved profitability.  
 - [Public Storage](https://en.wikipedia.org/wiki/Public_Storage), founded in 1972, built a simple model — storage lockers. Today, it’s worth over $50 billion with steady profits and dividend payouts.  
 

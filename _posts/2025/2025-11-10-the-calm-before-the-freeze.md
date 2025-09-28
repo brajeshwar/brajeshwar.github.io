@@ -22,7 +22,7 @@ Systems are dull in boom times, but they are lifelines when capital is scarce.
 
 ## Case Studies in Resilience
 
-- **Basecamp** (now 37signals) famously avoided the hype cycle, choosing profitability and customer focus over venture funding. Their steady systems made downturns manageable rather than catastrophic.  
+- **Basecamp** famously avoided the hype cycle, choosing profitability and customer focus over venture funding. Their steady systems made downturns manageable rather than catastrophic.  
 - **Mailchimp** never raised venture money. By focusing on sustainable growth and customer revenue, it survived multiple cycles while others vanished.  
 - **Airbnb**, during the 2008 financial crisis, had to systematize scrappiness—selling cereal boxes to survive. That practice of operational creativity built resilience into their DNA.
 
