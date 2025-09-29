@@ -16,6 +16,8 @@ I used to pivot like a tourist. New city every quarter. New market, new story, n
 
 The first real change was minor, but it was much harder. I stopped switching maps and learned the streets. I chose one problem big enough for a decade and close enough to touch. I wrote the sharp question for the next week and erased everything that did not serve it. Momentum arrived when the work stopped flinching.
 
+<img class="full" src="/static/2025/fast-furious-startups.webp" alt="Fast & Furous - Startups" loading="lazy">
+
 ## A Scene from the Slow Lane
 
 We launched a simple product. The idea was familiar. The promise was clear: reach first value in minutes, then learn the craft at a steady pace. The early weeks were quiet. No campaigns. No feature buffet. I stayed close to users each day. I read tickets. I watched sessions. I wrote decisions in plain language: what we chose, why it mattered, and when to revisit them.
