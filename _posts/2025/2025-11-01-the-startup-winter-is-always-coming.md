@@ -12,6 +12,8 @@ Markets breathe in and out. Easy capital, cheap credit, and optimistic narrative
 
 Every founder must understand this rhythm. Expecting eternal sunshine is a dangerous mistake. Planning for winter is not pessimism; it’s a survival strategy.
 
+<img class="full" src="/static/2025/winter-is-coming.webp" alt="Winter is Coming" loading="lazy">
+
 ## Startup Winters
 
 ### The Dot-Com Bust (2000–2002)
