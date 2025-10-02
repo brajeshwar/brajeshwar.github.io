@@ -6,11 +6,13 @@
 
 Media stories thrive on compression. A decade of persistence is condensed into a clean narrative arc: two people in a garage one year, a billion-dollar valuation the next. The middle years are either ignored or romanticized as “grit,” but those years are the substance of the story, not the filler. What appears to be an overnight eruption is often just the moment when compounding finally tips the scales.  
 
-The truth is that timing makes work suddenly legible to the outside world. When the right wave arrives, people assume the surfer appeared out of nowhere. They miss the thousands of hours spent paddling in the dark, catching smaller waves, and getting thrown off the board.  
+The truth is that timing makes work suddenly legible to the outside world. When the right wave arrives, people assume the surfer appeared out of nowhere. They miss the thousands of hours spent paddling in the dark, catching smaller waves, and getting thrown off the board.
+
+<img class="large" src="/static/2025/fake-data-curve.svg" alt="Fake Curve Growth Graph">
 
 ## Compounding in the Background
 
-Compounding is not just a financial phenomenon; it governs careers and companies. Efforts layered over time multiply. Every failed product contributes knowledge, every tiny user base builds a distribution channel, every relationship quietly accrues social capital.
+Compounding governs careers and companies. Efforts layered over time multiply. Every failed product contributes knowledge, every tiny user base builds a distribution channel, every relationship quietly accrues social capital.
 
 {:.aside .right}
 “Play long‑term games with long‑term people. All returns in life, whether in wealth, relationships, or knowledge, come from compound interest.” — [Naval Ravikant](https://en.wikipedia.org/wiki/Naval_Ravikant)
@@ -35,13 +37,13 @@ This creates a warped perception: that patience guarantees success, when in fact
 
 ## The Pattern of Breakouts
 
-Look closely across industries and the pattern repeats:  
+Look closely across industries and the pattern repeats.
 
 1. **Invisible Decade.** A long, mostly unglamorous period of exploration, failures, pivots, and learning.  
 2. **Visible Breakout.** The moment the world pays attention, usually when the market timing aligns and the previous decade of compounding suddenly matters.  
 3. **Narrative Rewrite.** Founders or journalists re-cast the messy middle into a clean story of foresight and inevitability.  
 
-This cycle is visible not only in technology but also in art, literature, music, and science. The [Beatles](https://en.wikipedia.org/wiki/The_Beatles) “exploded” in 1964, but they had been grinding through small clubs in Liverpool and Hamburg since 1957. [Vincent van Gogh](https://en.wikipedia.org/wiki/Vincent_van_Gogh) died in poverty, having painted thousands of works that nobody wanted; decades later, he was hailed as a genius. In every field, the “overnight” arc is a story built in hindsight, not a reflection of reality.  
+This cycle is visible not only in technology but also in art, literature, music, and science. [The Beatles](https://en.wikipedia.org/wiki/The_Beatles) “exploded” in 1964, but they had been grinding through small clubs in Liverpool and Hamburg since 1957. [Vincent van Gogh](https://en.wikipedia.org/wiki/Vincent_van_Gogh) died in poverty, having painted thousands of works that nobody wanted; decades later, he was hailed as a genius. In every field, the “overnight” arc is a story built in hindsight, not a reflection of reality.  
 
 ## Why It Matters for Builders
 
