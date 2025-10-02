@@ -1,5 +1,5 @@
 ---
-image: /static/2025/chopsticks.webp
+image: /static/2024/chopsticks.webp
 ---
 
 # Chopsticks
