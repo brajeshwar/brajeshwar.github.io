@@ -2,7 +2,7 @@
 
 The dashboard finally tipped over a million users on a Friday afternoon. The team cheered. The CEO sent a Slack update. An investor replied with a fire emoji. Screenshots flew across threads like confetti. By Monday morning, support tickets piled up. Most of last week’s new users never reached value. Finance quietly asked why cash conversion stayed flat. The same dashboard that fueled celebration could not explain the silence that followed.
 
-This is how vanity works. It doesn’t lie. It just tells an incomplete story so loudly that you stop asking for the complete one.
+This is how vanity works. It doesn’t lie. It just tells an incomplete story so loudly that you stop asking for the correct and complete one.
 
 <img class="large" src="/static/2025/fake-data-curve.svg" alt="The Vanity Metric Trap">
 
@@ -13,7 +13,7 @@ There’s a peculiar psychology at work in every tech company. Humans are drawn 
 {:.aside .right}
 “Vanity metrics are the numbers you want to publish on TechCrunch to make your competitors feel bad.” — [Eric Ries](https://en.wikipedia.org/wiki/Eric_Ries)
 
-Boards cheer, investors send DMs with emojis, and journalists copy and paste big round figures into headlines. Founders feel clever. But the trap springs quickly: many of these metrics measure only surface-level activity, not real progress. Downloads, social media mentions, “registered accounts,” and website visits are all examples of numbers that sound impressive but don’t predict business survival or customer satisfaction.
+Boards cheer, investors send DMs with emojis, and journalists copy and paste big round figures into headlines. Founders feel clever. But the trap springs quickly: many of these metrics measure only surface-level activity, not real progress. Downloads, social media mentions, GitHub stars, “registered accounts,” and website visits are all examples of numbers that sound impressive but don’t predict business survival or customer satisfaction.
 
 This is the trap. Vanity metrics are cheap, portable, and easy to celebrate. They give instant validation while obscuring the brutal truth: most of these numbers do not predict survival.
 
@@ -21,7 +21,7 @@ This is the trap. Vanity metrics are cheap, portable, and easy to celebrate. The
 
 ### Quibi: Downloads Without Demand
 
-[Quibi](https://en.wikipedia.org/wiki/Quibi) raised $1.75 billion before launch. On day one, the app saw 910,000 downloads. Six months later, it shut down. The downloads masked a brutal fact: over 90% of users abandoned the service after their free trial. Quibi celebrated its acquisition while ignoring the only metric that mattered—whether anyone wanted what they built.
+[Quibi](https://en.wikipedia.org/wiki/Quibi) raised $1.75 billion before launch. On day one, the app saw 910,000 downloads. Six months later, it shut down. The downloads masked a brutal fact: over 90% of users abandoned the service after their free trial. Quibi celebrated its acquisition while ignoring the only metric that mattered.
 
 ### WeWork: Creative Accounting
 
@@ -58,7 +58,7 @@ Research reveals a stark reality: 65% of investment rounds fail to return the in
 1.  **Resource Misallocation.** Teams pour effort into campaigns that drive downloads but not retention. Time and capital are wasted chasing hollow growth.
 2.  **Customer Trust Erosion.** When companies prioritize acquisition over experience, customers churn more quickly, leaving behind negative reviews and a damaged brand.
 3.  **Missed Opportunities.** By staring at surface-level graphs, teams overlook real customer signals. The obsession with top-line numbers blinds founders to subtler patterns that reveal actual growth paths.
-4.  **Fragile Foundations.** Dashboards built to flatter executives disconnect from customer reality. By the time the truth surfaces—in churn, burn rates, or refinancing crises—it is often too late.
+4.  **Fragile Foundations.** Dashboards built to flatter executives disconnect from customer reality. By the time the truth surfaces, in churn, burn rates, or refinancing crises, it is often too late.
 
 ## Toward Virtue Metrics
 
