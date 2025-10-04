@@ -4,7 +4,10 @@ I used to keep a sticker on my laptop that said “Fail Fast.” It looked brave
 
 Products died in a rush of signups that never activated. We moved features like furniture. Nothing fit. Another Product starved under a buffet of A/B tests that answered polite questions and dodged the real ones. And yet, another raised money for the wrong reason: to outrun our own confusion. Each time I posted the same post-mortem, the same promise to learn, the same itinerary for the next sprint.
 
-What we all called pace now really seems like a panic with better branding. The reset did not come with a quote on a slide. It came on a Tuesday night in a rented kitchen, wiping condensation off a kettle. I wrote in a little notebook, “No more speed for its own sake. Learn quickly. Commit slowly. Build only what compounds.”
+What we all called pace now really seems like a panic with better branding. The reset did not come with a quote on a slide. It came on a Tuesday night in a rented kitchen, wiping condensation off a kettle.
+
+{:.aside .right}
+I wrote in a little notebook, “No more speed for its own sake. Learn quickly. Commit slowly. Build only what compounds.”
 
 Speed felt like booking a domain at breakfast, and launching three landing pages before lunch. It felt like a tidy dashboard and a noisy Twitter feed. It felt like changing two variables and pretending I had learned one thing.
 
@@ -26,7 +29,7 @@ One rule set the pace. Every change must make the next experiment cheaper than t
 
 ## What Endures
 
-Endurance is not slowness. It is a sustainable pace with compounding advantage. It is taking reversible steps quickly and irreversible steps only with proof. It protects code health and customer trust, much like cash.
+Endurance is a sustainable pace with compounding advantage. It is taking reversible steps quickly and irreversible steps only with proof. It protects code health and customer trust, much like cash.
 
 The quiet mechanics. Nothing here is loud. Everything here compounds.
 
