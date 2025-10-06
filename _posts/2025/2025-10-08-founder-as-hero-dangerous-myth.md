@@ -4,9 +4,11 @@ Every startup community has its legends. The lone founder who willed an idea int
 
 ## Origins of the Founder-as-Hero Myth
 
-The Startup world loves storytelling. It frames startups like epic quests, with founders cast as heroic figures. Steve Jobs in a garage. Elon Musk coding in rented offices. Jeff Bezos leaving a steady Wall Street job to chase e-commerce. The hero’s journey is familiar, digestible, and compelling.  
+The Startup world loves storytelling. It frames startups like epic quests, with founders cast as heroic figures. [Steve Jobs](/2007/steve-jobs-at-home-in-1982/) in a garage. [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk) coding in rented offices. [Jeff Bezos](https://en.wikipedia.org/wiki/Jeff_Bezos) leaving a steady Wall Street job to chase e-commerce. The hero’s journey is familiar, digestible, and compelling.
 
-But reality rarely mirrors myth. Behind every successful founder, there are markets that were ready, investors who bet early, timing that aligned, and sheer luck that amplified their efforts. The hero story is a simplification of a much more complex system.
+> The hero story is a simplification of a much more complex system.
+
+But reality rarely mirrors myth. Behind every successful founder, there are markets that were ready, investors who bet early, timing that aligned, and sheer luck that amplified their efforts.
 
 ## Why the Narrative Misleads Teams
 
@@ -16,10 +18,10 @@ Research on organizational psychology shows that “charismatic leadership” ca
 
 ## Why Investors Get Confused
 
-Investors are not immune to the narrative. Venture capital has a history of betting on “founder DNA”, the visionary traits that supposedly predict outlier success. However, as Bill Gross famously demonstrated in his analysis of over 200 startups, timing was the single most significant driver of success, even surpassing founder quality, idea, or funding.
+Investors are not immune to the narrative. Venture capital has a history of betting on “Founder DNA”, the visionary traits that supposedly predict outlier success. However, as [Bill Gross](https://en.wikipedia.org/wiki/Bill_H._Gross) famously demonstrated in his analysis of over 200 startups, **timing was the single most significant driver of success,** even surpassing founder quality, idea, or funding.
 
-{:.aside .left}
-“In the beginner’s mind there are many possibilities, but in the expert’s there are few.” – Shunryu Suzuki
+{:.aside .right}
+“In the beginner’s mind there are many possibilities, but in the expert’s there are few.” – [Shunryu Suzuki](https://en.wikipedia.org/wiki/Shunryū_Suzuki)
 
 Betting too heavily on a heroic founder blinds investors to the ecosystem around them: customer demand, regulatory shifts, competitor dynamics, and macroeconomic trends.
 
@@ -27,7 +29,7 @@ Betting too heavily on a heroic founder blinds investors to the ecosystem around
 
 The most damaging effect is on the founders themselves. The pressure to live up to the myth can push them into unsustainable work habits, poor mental health, and even destructive decision-making.
 
-Consider Adam Neumann at WeWork. Initially cast as a visionary leader, his cult-like persona became inextricably linked to the company’s narrative. When the IPO unraveled, so did the myth. Or Elizabeth Holmes at Theranos, who embodied the savior archetype until reality intruded 
+Consider Adam Neumann at WeWork. Initially cast as a visionary leader, his cult-like persona became inextricably linked to the company’s narrative. When the IPO unraveled, so did the myth. Or Elizabeth Holmes at Theranos, who embodied the savior archetype until reality intruded.
 
 These examples are extreme, but they highlight how the myth can trap founders into believing they alone must embody the company’s destiny.
 
@@ -36,13 +38,15 @@ These examples are extreme, but they highlight how the myth can trap founders in
 The inconvenient truth is that markets, timing, and luck often matter more than brilliance or persistence.
 
 {:.aside .right}
-“Chance favors the prepared mind.” — Louis Pasteur
+“Chance favors the prepared mind.” — [Louis Pasteur](https://en.wikipedia.org/wiki/Louis_Pasteur)
 
 - **Google** was not the first search engine, but it emerged when broadband and web adoption made relevance ranking essential.  
 - **Facebook** did not invent social networking, but it landed at the right cultural moment when college campuses needed closed, trusted networks.  
 - **Airbnb** barely survived its early years, but the 2008 financial crisis suddenly made extra income and cheaper travel appealing. 
 
 These stories show founders mattered, but they mattered within contexts larger than themselves.
+
+<img class="full" src="/static/2025/founder-hero.webp" alt="The Founder Hero" loading="lazy">
 
 ## Toward a Better Narrative
 
