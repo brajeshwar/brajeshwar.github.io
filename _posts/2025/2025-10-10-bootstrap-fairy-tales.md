@@ -1,6 +1,6 @@
 # Bootstrap Fairy Tales
 
-The word “bootstrapped” has an aura. It suggests grit, independence, and purity. It conveys the idea that a business can rise from nothing through sheer determination and perseverance. But like most fairy tales, the story is simplified. For every bootstrapped venture that scaled into global empires, there are 99 more that fade into silence. Looking at both extremes helps separate myth from reality.  
+The word “bootstrapped” has an aura. It suggests grit, independence, and purity. It conveys the idea that a business can rise from nothing through sheer determination and perseverance. But like most fairy tales, the story is simplified. For every bootstrapped venture that scaled into global empires, there are 99 more that fade into silence.
 
 ## The Mirage of “Self-Made”
 
