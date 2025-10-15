@@ -2,6 +2,8 @@
 
 In the startup world, “growth” is the magic word. Investors chase it, founders obsess over it, and the press rewards it with headlines. Growth signals momentum, market validation, and survival in a competitive landscape. Yet beneath the glamor of hockey-stick charts lies a dangerous illusion, “infinite growth at all costs.” History shows that when speed outruns sustainability, the ending is rarely graceful.
 
+<img class="large" src="/static/2025/fake-data-curve.svg" alt="The Apple-ish Smooth Curve Upward">
+
 ## The Myth of Straight Lines
 
 Every pitch deck seems to feature the same diagram: a line that slopes gently, then suddenly curves upward in perpetual acceleration. It’s a neat story, but reality rarely behaves like that. Markets saturate. Competitors enter. Customers lose interest. The curve flattens.
@@ -25,7 +27,7 @@ Amazon, often seen as the poster child of endless growth, actually grew in waves
 
 ## The Allure of Vanity Metrics
 
-A subtle trap lies in what companies choose to measure. Downloads, monthly active users, and fundraising rounds all appear well in press releases, but they rarely directly correlate with sustainable business health. Chasing these numbers leads to fragile empires. Contrast that with businesses that focus on unit economics, retention, and operational resilience. Their growth may seem unimpressive in the early years, but it compounds over time.
+A subtle trap lies in what companies choose to measure. Downloads, monthly active users, and fundraising rounds all appear well in press releases, but they rarely directly correlate with sustainable business health. [Chasing these numbers leads to fragile empires.](/2025/vanity-metric-trap/) Contrast that with businesses that focus on unit economics, retention, and operational resilience. Their growth may seem unimpressive in the early years, but it compounds over time.
 
 ## Anecdotes from the Long Game
 
