@@ -27,7 +27,7 @@ Tools are accelerants. They magnify what already exists. A chaotic system, when 
 
 ## Processes and Patterns
 
-Lasting productivity comes from [habits and systems](/2025/productivity-rituals-patterns-processes/), not from software features. Processes—like weekly reviews, time-blocking, or prioritization frameworks—are the actual levers. Tools merely provide scaffolding.  
+Lasting productivity comes from [habits and systems](/2025/productivity-rituals-patterns-processes/), not from software features. Processes, like weekly reviews, time-blocking, or prioritization frameworks—, are the actual levers. Tools merely provide scaffolding.  
 
 Consider the practice of writing regularly. You could use a leather-bound journal, a [plain-text](/2022/plain-text/) file, or the latest AI-powered note app. The benefits come not from the container, but from the ritual of reflection.  
 
