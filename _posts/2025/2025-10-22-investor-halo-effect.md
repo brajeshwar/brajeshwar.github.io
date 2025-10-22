@@ -23,15 +23,15 @@ When cracks appear, they tend to widen more rapidly. Burn rates spike, customer 
 
 ### Theranos
 
-Elizabeth Holmes secured investments from notable figures, including Rupert Murdoch and the Walton family. Their reputations gave her company legitimacy even when evidence of workable technology was absent. For years, this shielded Theranos from scrutiny. By the time regulators and journalists broke through the halo, billions had evaporated, and patients were put at risk.  
+[Elizabeth Holmes](https://en.wikipedia.org/wiki/Elizabeth_Holmes) secured investments from notable figures, including [Rupert Murdoch](https://en.wikipedia.org/wiki/Rupert_Murdoch) and the Walton family. Their reputations gave her company legitimacy even when evidence of workable technology was absent. For years, this shielded [Theranos](https://en.wikipedia.org/wiki/Theranos) from scrutiny. By the time regulators and journalists broke through the halo, billions had evaporated, and patients were put at risk.  
 
 ### WeWork
 
-WeWork’s meteoric rise was powered by SoftBank’s Vision Fund. Masayoshi Son famously urged Adam Neumann to “think bigger,” pouring billions into the company. The halo effect not only justified an inflated valuation but also masked a shaky business model built on long-term leases and short-term tenants. When market reality struck, the hype unraveled into one of the largest startup implosions in history.  
+[WeWork](https://en.wikipedia.org/wiki/WeWork)’s meteoric rise was powered by SoftBank’s Vision Fund. [Masayoshi Son](https://en.wikipedia.org/wiki/Masayoshi_Son) famously urged [Adam Neumann](https://en.wikipedia.org/wiki/Adam_Neumann) to “think bigger,” pouring billions into the company. The halo effect not only justified an inflated valuation but also masked a shaky business model built on long-term leases and short-term tenants. When market reality struck, the hype unraveled into one of the largest startup implosions in history.  
 
 ### FTX
 
-Sam Bankman-Fried’s crypto exchange drew money from blue-chip firms like Sequoia Capital, which even published a glowing profile calling him a “future trillionaire.” The investor halo gave FTX cover, assuring the public and media that all was well. When the fraud was exposed, the collapse was swift, wiping out billions and shaking confidence in the entire sector.  
+[Sam Bankman-Fried](https://en.wikipedia.org/wiki/Sam_Bankman-Fried)’s crypto exchange drew money from blue-chip firms like [Sequoia Capital](https://en.wikipedia.org/wiki/Sequoia_Capital), which even published a glowing profile calling him a “future trillionaire.” The investor halo gave FTX cover, assuring the public and media that all was well. When the fraud was exposed, the collapse was swift, wiping out billions and shaking confidence in the entire sector.  
 
 These stories share a familiar pattern: investor reputations became an integral part of the product. Founders, employees, and markets mistook prestige for proof. The higher the shine, the harder the fall.  
 
