@@ -6,11 +6,11 @@ Like any other established institutions in India, the Schools follow a rather bu
 
 Anyway, without going into the details of the discrepancies in the schools in India, let me tell you the story of how I used technology to streamline my daughter's admission. I wanted to involve relatives, friends, and family without overwhelming them, so I needed a solution that is an easy, simple, and no-learning-needed approach to keep track of the progress.
 
-![Laaija](/static/2013/laaija-pose-for-new-school.jpg)
+<img class="large" src="/static/2013/laaija-pose-for-new-school.jpg" alt="Laaija Oinam" loading="lazy">
 
 Yes, I went to lots of 'Education Fair', stood in lines for hours in the hot Indian Summer, visited a hell lot of schools to check them out, met with teachers, roam around the campus, even talked to few students. Besides that, I tracked, labeled, and measured my actions and outcomes with [Trello](http://trello.com/) and mapped the locations with Google Maps. The mobile version of Trello (iOS and Android) is an awesome app and everyone involved really liked it.
 
-## My daughter outgrew her playgroup.
+## My daughter outgrew her playgroup
 
 My daughter, [Laaija](http://laaija.com/), celebrated her 4th birthday in 2012-DEC. She is now ready for a 'real' school. She has already outlined the kind of school she would like to go to. It is a list of strange, funny, and cute (at least to us) criteria and we know what she meant. No, you won't want to know that list.
 
@@ -23,12 +23,12 @@ I treated it like a Project - steps, processes, labels, issues - a flow borrowed
 
 ## I created 6 core boards
 
-1. __Inbox__ - Everything is dropped here first - school names, location on Google maps, notes on people's review, facilities and amenities available etc.
-1. __Considered__ - All schools which we considered applying were dragged into the "Considered" Board. We try to add as many details as possible here.
-1. __Applied__ - This is the board for all schools where we applied for our daughter's admission.
-1. __Accepted__ - Schools which have accepted us. It's now our decision to pick the school, to get admitted or not.
-1. __Rejected by Us__ - The schools rejected by us irrespective of the selection of the schools. The Cards in this List can come from "Inbox", "Applied" or "Accepted". It's not surprising that this List holds the most number of Cards.
-1. __Rejected by School__ - Of course, quite a few of the schools rejected our application. This List holds all those cards.
+1. **Inbox** - Everything is dropped here first - school names, location on Google maps, notes on people's review, facilities and amenities available etc.
+1. **Considered** - All schools which we considered applying were dragged into the "Considered" Board. We try to add as many details as possible here.
+1. **Applied** - This is the board for all schools where we applied for our daughter's admission.
+1. **Accepted** - Schools which have accepted us. It's now our decision to pick the school, to get admitted or not.
+1. **Rejected by Us** - The schools rejected by us irrespective of the selection of the schools. The Cards in this List can come from "Inbox", "Applied" or "Accepted". It's not surprising that this List holds the most number of Cards.
+1. **Rejected by School** - Of course, quite a few of the schools rejected our application. This List holds all those cards.
 
 
 ## Label
@@ -52,7 +52,7 @@ The idea is to take notes and just write-down details while visiting a School or
 
 Yes, I finally got my daughter admitted a few days back and she is excited about her new school. We hope she will like it and have fun with her new school.
 
-I created a Public Template of the Trello Board if you wish to use it - [Picking a School](https://trello.com/b/WF9Zv2HC/). You should change the List Names, Labels to cater to your requirements.
+> I created a Public Template of the Trello Board — [Picking a School](https://trello.com/b/WF9Zv2HC/). You should change the List Names, Labels to cater to your requirements.
 
 Besides the activities that I cannot ignore, Trello really helped me get our daughter admitted and freed up quite a bit of my effort, time and I was able to continue my work while I stay engaged with the Admission Process.
 
