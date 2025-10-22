@@ -1,6 +1,8 @@
 # Breaking the Innovation Theatre
 
-Once upon a time, hackathons were raw, real, and honest. Picture a dimly lit room, half-finished pizza boxes, buzzing monitors, and clusters of sleep-deprived geeks pushing out code for the sheer joy of it. There was no HR department hovering, no executive with a camera crew, and certainly no glossy corporate press release. It was about building, tinkering, and sometimes failing spectacularly. I know because I lived through that era. I even owned the domain `hackathon.co` back when it meant something. I eventually sold it for a tidy sum in the low thousands, but the culture had already shifted by then.
+Once upon a time, [hackathons](https://en.wikipedia.org/wiki/Hackathon) were raw, real, and honest. Picture a dimly lit room, half-finished pizza boxes, buzzing monitors, and clusters of sleep-deprived geeks pushing out code for the sheer joy of it. There was no HR department hovering, no executive with a camera crew, and certainly no glossy corporate press release. It was about building, tinkering, and sometimes failing spectacularly.
+
+I know because I lived through that era. I even owned the domain `hackathon.co` back when it meant something. I eventually sold it for a tidy sum in the low thousands, but the culture had already shifted by then.
 
 ## Rise of Innovation Theatre
 
