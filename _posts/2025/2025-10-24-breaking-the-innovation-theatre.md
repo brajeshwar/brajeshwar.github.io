@@ -2,13 +2,15 @@
 
 Once upon a time, [hackathons](https://en.wikipedia.org/wiki/Hackathon) were raw, real, and honest. Picture a dimly lit room, half-finished pizza boxes, buzzing monitors, and clusters of sleep-deprived geeks pushing out code for the sheer joy of it. There was no HR department hovering, no executive with a camera crew, and certainly no glossy corporate press release. It was about building, tinkering, and sometimes failing spectacularly.
 
+> “I was there, Gandalf. I was there 3,000 years ago.”
+
 I know because I lived through that era. I even owned the domain `hackathon.co` back when it meant something. I eventually sold it for a tidy sum in the low thousands, but the culture had already shifted by then.
 
 ## Rise of Innovation Theatre
 
 Fast forward to today. Hackathons are no longer underground rituals of code and caffeine. They’ve been absorbed into the corporate bloodstream as carefully managed PR events. Employees are summoned to “ideation labs,” whiteboards are rolled out, and slogans about “moonshots” are plastered on every wall. The outcome is predictable: a few PowerPoint decks, some half-working demos, and a press release bragging about innovation.
 
-{:.aside .right}
+{:.aside .left}
 “Innovation is not about saying yes to everything. It’s about saying NO to all but the most crucial features.” — [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs)
 
 This is, well, **the innovation theatre**, an activity that appears to be progress but rarely delivers. The spotlight is not on solving problems but on projecting the image of a forward-thinking company.
