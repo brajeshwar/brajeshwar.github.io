@@ -1,6 +1,6 @@
 # The Fallacy of Storytelling
 
-In every startup gathering, the word “storytelling” floats around like oxygen. Investors demand it. Accelerators teach it. Founders repeat it. The logic is simple: without a story, no one cares. But buried in that mantra is a trap. Not all storytelling is the same. Confusing the story crafted to raise money with the story grounded in operational truth can lead founders down a dangerous path.
+In every startup gathering, the word “storytelling” floats around like oxygen. Investors demand it. Accelerators teach it. Founders repeat it. The logic is that without a story, no one cares. But buried in that mantra is a trap. Not all storytelling is the same. Confusing the story crafted to raise money with the story grounded in operational truth can lead founders down a dangerous path.
 
 > “In a time of deceit, telling the truth is a revolutionary act.” — [George Orwell](https://en.wikipedia.org/wiki/George_Orwell)
 
@@ -17,7 +17,13 @@ Inside the company, the story must be grounded in brutal clarity. Metrics are ja
 {:.aside .right}
 “The most essential gift for a good writer is a built-in, shock-proof shit detector.” — [Ernest Hemingway](https://en.wikipedia.org/wiki/Ernest_Hemingway)
 
-Narrative in operations is not about spectacle. It is about coherence. Why are we doing this? What problem do we solve? What do the numbers actually show? That narrative can inspire, but only because it is anchored to facts. 
+Narrative in operations is not about spectacle. It is about coherence.
+
+- Why are we doing this?
+- What problem do we solve?
+- What do the numbers actually show?
+
+That narrative can inspire, but only because it is anchored to facts. 
 
 ## Where the Fallacy Appears
 
