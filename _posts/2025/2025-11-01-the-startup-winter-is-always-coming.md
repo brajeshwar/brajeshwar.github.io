@@ -18,15 +18,15 @@ Every founder must understand this rhythm. Expecting eternal sunshine is a dange
 
 ### The Dot-Com Bust (2000–2002)
 
-The late 1990s saw startups IPO on little more than a domain name. Pets.com became the poster child of unsustainable growth, burning through capital with no profitable model. When the bubble burst, the NASDAQ lost nearly 80% of its value. Thousands of startups shut down, and only a few, such as Amazon and eBay, emerged stronger.  
+The late 1990s saw startups IPO on little more than a domain name. [Pets.com](https://en.wikipedia.org/wiki/Pets.com) became the poster child of unsustainable growth, burning through capital with no profitable model. When the bubble burst, the NASDAQ lost nearly 80% of its value. Thousands of startups shut down, and only a few, such as [Amazon](https://www.amazon.com) and [eBay](https://www.ebay.com), emerged stronger.  
 
 ### The Global Financial Crisis (2008–2010)
 
-The housing collapse triggered a liquidity crunch. Venture capital tightened, and even strong startups faced layoffs or shutdowns. Yet disciplined companies like Airbnb and Uber, born during the downturn, thrived by solving real pain points with lean models.  
+The housing collapse triggered a liquidity crunch. Venture capital tightened, and even strong startups faced layoffs or shutdowns. Yet disciplined companies like [Airbnb](https://www.airbnb.com) and [Uber](https://www.uber.com), born during the downturn, thrived by solving real pain points with lean models.  
 
 ### The Pandemic Boom and Bust (2020–2023)
 
-Cheap capital and accelerated digital adoption created an unprecedented surge in demand. Zoom, Shopify, and fintechs grew at breakneck speed. But when interest rates rose and demand normalized, many overvalued startups faced brutal corrections. 2022 became known as the year of mass tech layoffs, proving again that winter follows summer.  
+Cheap capital and accelerated digital adoption created an unprecedented surge in demand. [Zoom](https://www.zoom.com), [Shopify](https://www.shopify.com/), and FinTech Startups grew at breakneck speed. But when interest rates rose and demand normalized, many overvalued startups faced brutal corrections. 2022 became known as the year of mass tech layoffs, proving again that winter follows summer.  
 
 Each cycle reveals the same arc: exuberance, overextension, correction, and the survival of the grounded.
 
