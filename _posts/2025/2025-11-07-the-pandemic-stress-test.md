@@ -1,10 +1,10 @@
 # The Pandemic Stress Test
 
-In 2020, the world was thrown into an experiment no startup founder or product manager would have dared to design. The [COVID-19 pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic) was a global-scale stress test. Every assumption about supply chains, customer behavior, remote work, and team resilience was suddenly put to the test. What survived wasn’t just strong; it was anti-fragile.  
+In 2020, the world was thrown into an experiment no startup founder or product manager would have dared to design. The [COVID-19 pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic) was a global-scale stress test. Every assumption about supply chains, customer behavior, remote work, and team resilience was suddenly put to the test.
 
 ## Fragile, Robust, and Anti-Fragile
 
-[Nassim Nicholas Taleb](https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb) popularized the concept of anti-fragility—systems that don’t just resist shocks but improve because of them. A wine glass is fragile: one fall and it’s gone. A steel bar is robust: it withstands stress without changing significantly. A muscle is anti-fragile: it grows stronger when subjected to stress.
+[Nassim Nicholas Taleb](https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb) popularized the concept of anti-fragility, systems that don’t just resist shocks but improve because of them. A wine glass is fragile: one fall and it’s gone. A steel bar is robust: it withstands stress without changing significantly. A muscle is anti-fragile: it grows stronger when subjected to stress.
 
 {:.aside .right}
 “The antifragile loves randomness and uncertainty.” — [Nassim Nicholas Taleb](https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb)
@@ -19,7 +19,7 @@ The harshest lesson: convenience products are the first to vanish when survival 
 
 ## Products That Endured
 
-Then came the robust. Platforms like Zoom, Slack, and cloud infrastructure providers became utilities. They didn’t necessarily innovate faster during 2020, but they proved dependable under massive, unplanned loads. Their survival was not due to brilliance alone but because they had built for scalability long before it was tested.
+Then came the robust. Platforms like [Zoom](https://www.zoom.com), [Slack](https://slack.com/), and cloud infrastructure providers became utilities. They didn’t necessarily innovate faster during 2020, but they proved dependable under massive, unplanned loads. Their survival was not due to brilliance alone but because they had built for scalability long before it was tested.
 
 {:.aside .right}
 “It’s not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.” — [Charles Darwin](https://en.wikipedia.org/wiki/Charles_Darwin)
@@ -28,16 +28,16 @@ Robustness came from boring engineering: redundancy, distributed systems, and ma
 
 ## Products That Thrived
 
-And then there were the anti-fragile. Companies like Shopify and Notion accelerated. Shopify’s bet on enabling small merchants online meant the surge in e-commerce was rocket fuel. Notion’s modular, flexible approach to collaboration meant that as teams scrambled to redefine their workflows, the tool adapted to them.  
+And then there were the anti-fragile. Companies like [Shopify](https://www.shopify.com/) and [Notion](https://www.notion.com) accelerated. Shopify’s bet on enabling small merchants online meant the surge in e-commerce was rocket fuel. Notion’s modular, flexible approach to collaboration meant that as teams scrambled to redefine their workflows, the tool adapted to them.  
 
-The stress of the pandemic acted like weights in the gym. The harder the world pulled, the more these products bulked up. They acquired not just users but habits, embedding themselves into workflows that will outlast the crisis.  
+The stress of the pandemic acted like weights in the gym. The harder the world pulled, the more these products bulked up. They acquired users, and habits, embedding themselves into workflows that will outlast the crisis.  
 
 ## Teams as Stress-Tested Systems
 
 Products weren’t the only ones under the microscope. Teams faced the same fragile-robust-anti-fragile sorting.  
 
 - **Fragile teams** cracked under remote work. Culture was overly dependent on physical proximity and unstructured office chatter.  
-- **Robust teams** managed to keep the lights on with Zoom calls and project boards, but they didn’t evolve much.  
+- **Robust teams** managed to keep the lights on with Zoom calls and project boards.  
 - **Anti-fragile teams** re-imagined collaboration. They documented better, created asynchronous rituals, and built trust in new ways. For them, 2020 was a transformation.  
 
 The lesson: anti-fragile teams don’t idolize a single environment. They are fluid. Their cohesion doesn’t weaken when context changes.  
@@ -51,6 +51,6 @@ The lesson: anti-fragile teams don’t idolize a single environment. They are fl
 
 ## The Long Tail of the Stress Test
 
-The pandemic was not the last shock. Climate events, geopolitical tensions, and economic swings—all are future stress tests waiting in the queue. The 2020 experiment revealed a spectrum: fragile systems that broke, robust systems that held, and anti-fragile ones that grew stronger.  
+The pandemic was not the last shock. Climate events, geopolitical tensions, and economic swings are the future stress tests waiting in the queue. The 2020 experiment revealed a spectrum: fragile systems that broke, robust systems that held, and anti-fragile ones that grew stronger.  
 
 Founders have a choice. You can build wine glasses. You can make steel bars. Or you can build muscles.
