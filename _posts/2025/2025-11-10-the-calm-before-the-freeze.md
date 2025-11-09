@@ -1,6 +1,6 @@
 # The Calm Before the Freeze
 
-In every cycle, the market moves from heat to chill. Founders celebrate when money flows and customers are eager to try new things. Yet, the real test of a company is not during the fever pitch of growth but in the cold silence when enthusiasm evaporates. The companies that endure are not the loudest in the room, but rather the ones that have prepared beforehand.
+In every cycle, the market moves from heat to chill. Founders celebrate when money flows and customers are eager to try new things. Yet, the real test of a company is not during the fever pitch of growth but in the cold silence when enthusiasm evaporates. The companies that endure are the ones that have prepared beforehand.
 
 ## Why Calm Matters
 
@@ -22,9 +22,9 @@ Systems are dull in boom times, but they are lifelines when capital is scarce.
 
 ## Case Studies in Resilience
 
-- **Basecamp** famously avoided the hype cycle, choosing profitability and customer focus over venture funding. Their steady systems made downturns manageable rather than catastrophic.  
-- **Mailchimp** never raised venture money. By focusing on sustainable growth and customer revenue, it survived multiple cycles while others vanished.  
-- **Airbnb**, during the 2008 financial crisis, had to systematize scrappiness—selling cereal boxes to survive. That practice of operational creativity built resilience into their DNA.
+- [Basecamp](https://basecamp.com) famously avoided the hype cycle, choosing profitability and customer focus over venture funding. Their steady systems made downturns manageable rather than catastrophic.  
+- [Mailchimp](https://mailchimp.com) never raised venture money. By focusing on sustainable growth and customer revenue, it survived multiple cycles while others vanished.  
+- [Airbnb](https://www.airbnb.com), during the 2008 financial crisis, had to systematize scrappiness by selling cereal boxes to survive. That practice of operational creativity built resilience into their DNA.
 
 These examples reveal a common thread: systems turn fragility into anti-fragility.
 
