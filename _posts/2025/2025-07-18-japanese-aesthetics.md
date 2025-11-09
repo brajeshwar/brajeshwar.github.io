@@ -33,6 +33,17 @@ Wabi-sabi is rooted in Buddhist teachings, specifically the ideas of impermanenc
 
 The concept of fuzei (風情), which translates to “wind emotion,” captures the Heian sensibility toward the natural harmony in design and aesthetics. The term encapsulates an aesthetic taste that emphasizes the ambiance and scenic qualities of an environment. Fuzei does not solely refer to the physical attributes of a space but also embodies a deeper, almost ethereal quality that resonates with viewers, creating an emotional connection that transcends the mere visual.
 
+## Shibui
+
+<img class="medium right" src="/static/2025/japanese-shibui.webp" alt="Shibui" loading="lazy">
+
+Where *wabi-sabi* celebrates imperfection and *iki* finds grace in simplicity, [Shibui](https://en.wikipedia.org/wiki/Shibui) rests in quiet restraint, a beauty that doesn’t shout but stays with you. It is elegance without excess, depth without drama. A *shibui* object or experience reveals its richness slowly, through texture, balance, and understatement.
+
+The word itself stems from the taste of something astringent, sharp at first, but rewarding with time. It’s the opposite of the immediate and the loud. A *shibui* space, like a well-aged wooden room or a muted textile, invites contemplation rather than attention. It embodies a sense of calm completeness, nothing more to add, nothing less to take away.
+
+In design and life, shibui reminds us to pursue refinement through restraint. It’s not minimalism for the sake of absence, but harmony born of presence — where beauty is not declared but discovered.
+
+
 These key concepts of Japanese aesthetics reveal a profound relationship between nature, emotion, and the human experience, shaping the cultural landscape and influencing artistic expressions throughout history.
 
 Despite their enduring popularity, Japanese aesthetics are not without controversy. The interplay between traditional values and modernity often presents challenges, as contemporary artists navigate expectations rooted in historical conservatism while seeking to innovate and engage with global audiences. Additionally, the commercialization of these aesthetic principles raises questions about authenticity and the commodification of culture, prompting ongoing discussions regarding cultural appropriation and the integrity of artistic expression.
