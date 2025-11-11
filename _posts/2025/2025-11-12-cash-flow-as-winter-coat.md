@@ -1,10 +1,10 @@
 # Cash Flow as Winter Coat
 
-In the wild, survival is rarely about strength. It’s about insulation. The animal that survives the harshest winter is the one with the thickest coat, not the sharpest teeth. For founders and businesses, cash flow is that coat. When markets turn cold, it’s not vision statements or hockey-stick slides that keep you alive—it’s liquidity.
+In the wild, survival is rarely about strength. It’s about insulation. The animal that survives the harshest winter is the one with the thickest coat, not the sharpest teeth. For founders and businesses, cash flow is that coat. When markets turn cold, it’s not vision statements or hockey-stick slides that keep you alive. It is liquidity.
 
 ## Liquidity Outranks Everything Else
 
-Revenue looks glamorous on the pitch deck. Valuation flatters your ego. But cash in the bank pays salaries, vendors, and cloud bills. A company can have a billion-dollar valuation and still collapse in weeks if liquidity dries up. [Enron](https://en.wikipedia.org/wiki/Enron), [Lehman Brothers](https://en.wikipedia.org/wiki/Lehman_Brothers), and countless dot-com startups illustrate this in painful detail.
+Revenue looks glamorous on the pitch deck. Valuation flatters your ego. But cash in the bank pays salaries, vendors, and server bills. A company can have a billion-dollar valuation and still collapse in weeks if liquidity dries up. [Enron](https://en.wikipedia.org/wiki/Enron), [Lehman Brothers](https://en.wikipedia.org/wiki/Lehman_Brothers), and countless dot-com startups illustrate this in painful detail.
 
 Cash flow gives you optionality. It allows you to delay tough decisions until they’re strategic, not desperate. It buys time for product pivots, provides negotiation leverage with partners, and serves as a buffer against customer churn. Liquidity is less about “thriving” and more about “not dying.”
 
@@ -18,7 +18,7 @@ That simple formula can forecast whether you’re running a marathon or sprintin
 
 ## The Founder’s Winter Coat
 
-Think of liquidity management as seasonal prep. In the summer, when markets are favorable and funding is cheap, the temptation is to run lean on cash—invest everything in growth. But seasoned operators know winter comes. A global crisis, a regulatory shift, or a single large client default can drop the temperature overnight.
+Think of liquidity management as seasonal prep. In the summer, when markets are favorable and funding is cheap, the temptation is to run lean on cash and invest everything in growth. But seasoned operators know [winter comes](/2025/the-startup-winter-is-always-coming/). A global crisis, a regulatory shift, or a single large client default can drop the temperature overnight.
 
 Your cash buffer is like layering clothes before the storm hits. You don’t regret carrying that heavy coat when the wind starts howling.
 
