@@ -8,8 +8,7 @@ The irony? These dull, steady enterprises often create more lasting wealth than 
 
 “Boring” is shorthand for unglamorous. These are industries that don’t get featured in glossy profiles but underpin modern life. [Pest control](https://en.wikipedia.org/wiki/Pest_control), [plumbing](https://en.wikipedia.org/wiki/Plumbing) supply, [packaging](https://en.wikipedia.org/wiki/Packaging), industrial cleaning, [laundromats](https://en.wikipedia.org/wiki/Self-service_laundry), [HVAC](https://en.wikipedia.org/wiki/Heating,_ventilation,_and_air_conditioning) services, or [waste management](https://en.wikipedia.org/wiki/Waste_management).  
 
-They rarely change much over decades. Their customers keep coming back because the need doesn’t vanish. And their markets are enormous — hidden in plain sight.  
-Economists refer to this phenomenon as the [Lindy Effect](/2025/lindy-effect/): the longer a service or product has been in existence, the more likely it is to remain so in the future. People needed clean water centuries ago. They’ll still need it tomorrow.  
+They rarely change much over decades. Their customers keep coming back because the need doesn’t vanish. And their markets are enormous while hiding in plain sight. Economists refer to this phenomenon as the [Lindy Effect](/2025/lindy-effect/): the longer a service or product has been in existence, the more likely it is to remain so in the future. People needed clean water centuries ago. They’ll still need it tomorrow.  
 
 ## Case Study: Waste Management
 
@@ -59,11 +58,11 @@ During recessions, consumer luxuries shrink. Venture-backed startups implode whe
 - They still need their trash picked up.  
 - They still pay for storage units, car washes, pest control, and plumbing repairs.  
 
-While unicorns collapse under their burn rate, boring businesses remain stable — sometimes even stronger because they face less competition.  
+While unicorns collapse under their burn rate, boring businesses remain stable. Sometimes, even stronger because they face less competition.  
 
 ## The Hidden Power of Compounding
 
-Take a business that earns $500,000 in annual profit. It might look small next to a unicorn with billions in “valuation.” But compounded over 20 years, without investor dilution, that boring business generates $10 million in wealth — and often much more when reinvested.  
+Take a business that earns $500,000 in annual profit. It might look small next to a unicorn with billions in “valuation.” But compounded over 20 years, without investor dilution, that boring business generates $10 million in wealth and often much more when reinvested.  
 
 Flashy startups rise and fall with market cycles. The boring ones simply compound.  
 
