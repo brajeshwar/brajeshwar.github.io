@@ -14,7 +14,6 @@ GEM
     eventmachine (1.2.7)
     ffi (1.17.2)
     ffi (1.17.2-arm64-darwin)
-    filesize (0.2.0)
     forwardable-extended (2.6.0)
     google-protobuf (4.31.1)
       bigdecimal
@@ -66,19 +65,11 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     mercenary (0.4.0)
-    mini_portile2 (2.8.9)
-    nokogiri (1.18.8)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
-    nokogiri (1.18.8-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.18.8-x86_64-darwin)
-      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (6.0.2)
-    racc (1.8.1)
     rake (13.3.0)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
@@ -110,6 +101,7 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-titles-from-headings
   kramdown-parser-gfm
+  logger
   webrick
 
 BUNDLED WITH
