@@ -26,7 +26,7 @@ title: Books
 
 ### Tips
 
-Here are a few personal tips that worked for me while trying to read/learn the contents of books and get the best out of them. This will help you to overcome the habit of practicing `Tsundoku`[^tsundoku].
+Here are a few personal tips that worked for me while trying to read/learn the contents of books and get the best out of them. This will help you to overcome the habit of `Tsundoku`[^tsundoku].
 
 - Read reviews, from multiple sources, of a book and try to know a general idea of the content and idea of that book.
 - Or listen to audio books at about 1.2x speed. You can use whatever you are comfortable with -- a headphone, or in your car.
