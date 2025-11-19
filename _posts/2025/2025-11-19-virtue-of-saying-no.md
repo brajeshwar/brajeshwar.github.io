@@ -4,7 +4,7 @@ Every founder knows the seduction of “Yes.” Yes to new features, yes to anot
 
 ## Winter Is Always Coming
 
-Markets turn. Funding dries up. Customers pull back. History shows us that winter is always coming in some form. The dot-com bust, the 2008 financial crisis, and the 2020 pandemic — each served as a cold reminder that excess gets punished and discipline gets rewarded. Winter is not just an external force; it is a discipline you must carry with you even in bull markets.
+Markets turn. Funding dries up. Customers pull back. History shows us that [winter is always coming](/2025/the-startup-winter-is-always-coming/) in some form. The [dot-com bust](/2025/surviving-the-dot-com-collapse-lessons/), the [2008 financial crisis](/2025/2008-redux-the-great-tech-reset/), and the [2020 pandemic](/2025/the-pandemic-stress-test/) — each served as a cold reminder that excess gets punished and discipline gets rewarded. Winter is not just an external force; it is a discipline you must carry with you even in bull markets.
 
 {:.aside .right}
 “Innovation is saying no to a thousand things.” — [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs)
@@ -29,4 +29,4 @@ Companies that emerge strongest from downturns are rarely the ones that chase ev
 
 A founder must ask, before every decision, “Does this strengthen our core mission, or does it dilute it?” If it dilutes, the answer is “NO.” Every “NO” is a reinforcement of clarity. Every “NO” is a small bet that focus will outlast chaos.
 
-In the end, saying “NO” is not about scarcity but about the abundance of intent. It is about creating the conditions where your “Yes” can bloom without being strangled by clutter. The virtue of saying “NO” is the founder’s compass through every winter. And, Winter is Always Coming.
+In the end, saying “NO” is not about scarcity but about the abundance of intent. It is about creating the conditions where your “Yes” can bloom without being strangled by clutter. The virtue of saying “NO” is the founder’s compass through every winter. And, [Winter is Always Coming](/2025/the-startup-winter-is-always-coming/).
