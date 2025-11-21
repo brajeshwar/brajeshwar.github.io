@@ -2,7 +2,7 @@
 
 There is an old rhythm to markets that no one escapes. Abundance invites excess. Scarcity forces restraint. The cycle repeats, and each time we rediscover the old virtue that hides in plain sight: frugality.  
 
-Frugality isn’t just about pinching pennies. It is the art of extracting value from limited means, the discipline of distinguishing essentials from distractions. In times of crisis—wars, recessions, or startup downturns—frugality resurfaces as the skill that separates survivors from casualties.  
+Frugality isn’t just about pinching pennies. It is the art of extracting value from limited means, the discipline of distinguishing essentials from distractions. In times of crisis, be it wars, recessions, or startup downturns, frugality resurfaces as the skill that separates survivors from casualties.  
 
 ## The Forgotten Virtue
 

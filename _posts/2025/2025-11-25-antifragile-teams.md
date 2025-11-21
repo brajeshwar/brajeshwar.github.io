@@ -4,7 +4,7 @@ In [Nassim Nicholas Taleb](https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb)�
 
 ## Why Small Teams Outlast Large Ones
 
-Large teams have inertia. They develop communication overhead, rigid processes, and dependency chains that slow response time. When the unexpected hits—a market crash, a supply chain collapse, or a new competitor—these teams struggle to reconfigure.
+Large teams have inertia. They develop communication overhead, rigid processes, and dependency chains that slow response time. When the unexpected hits, a market crash, a supply chain collapse, or a new competitor, these teams struggle to reconfigure.
 
 {:.aside .right}
 “Innovation is a function of small teams who are free to experiment.” — [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs)
