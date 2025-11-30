@@ -53,7 +53,7 @@ Write the stories, stash the keys, rehearse the exit. Then close the laptop and 
 
 The idea of “Always be Dying” came after reading an interesting article, [Always be quitting](https://jmmv.dev/2021/04/always-be-quitting.html) by [Julio Merino](https://jmmv.dev). ([archive](https://web.archive.org/web/20210517042429/https://jmmv.dev/2021/04/always-be-quitting.html))
 
-`This article is likely to remain a Work-in-Progress for a while.`
+`Will remain a Work-in-Progress for a while.`
 
 
 [^CarpeDiem]: [Carpe diem](https://en.wikipedia.org/wiki/Carpe_diem) translates to “seize the day.” It is a rallying cry to step forward rather than stand by. When the phrase echoes in your mind, procrastination loosens its grip, opportunities appear closer, and excuses lose their shine. The mantra does not promote reckless impulse; it invites mindful urgency, an insistence on shaping the hours instead of watching them evaporate.
