@@ -1,17 +1,3 @@
-# Week 48, 2025
-
-[Lightning CSS](https://lightningcss.dev) is an extremely fast CSS parser, transformer, bundler, and minifier.
-
-[LinguaCafe](https://simjanos-dev.github.io/LinguaCafeHome/) is a Self-hosted software for language learners to read foreign languages.
-
-[Loop](https://github.com/MrKai77/Loop) is an open-source macOS app that simplifies window management.
-
-[LOTR Project](http://lotrproject.com) is site dedicated to JRR Tolkein’s works, depicting the genealogy of Middle-Earth.
-
-[Librum](https://librumreader.com) ([source](https://github.com/Librum-Reader/Librum)) is a clean and powerful way to read and manage your e-books on any device.
-
-London’s TfL has released a batch of documents that show almost every underground station in [glorious 3D format](https://www.ianvisits.co.uk/articles/3d-maps-of-every-underground-station-ab-14630/).
-
 [HTML for people](https://htmlforpeople.com) is a fantastic educational and easy-to-start HTML-as-a-Document initiative by [Blake Watson](https://blakewatson.com). HTML isn’t only for people working in the tech field. It’s for anybody, the way documents are for anybody. HTML is just another type of document. A very special one—the one the web is built on.
 
 [Helio](https://helio.fm) is an attempt to rethink a music sequencer to create a tool that feels right. It provides a lightweight UI to help you get into the zone and focus on your ideas.

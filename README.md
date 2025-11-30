@@ -16,6 +16,9 @@ These tools, services, and companies are the ones that I use. I want to promote 
 - Films/TV
   - Harley Davidson and the Marlboro Man (1991)
   - Slow Horses (2022-)
+- Plan
+  - Photos, Weekly Stumbles, Bookmarks, and Tweet-ish posts.
+- Post - Weekly at Max released on Monday.
 
 ### Archived / Elsewhere
 
