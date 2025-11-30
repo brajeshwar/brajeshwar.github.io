@@ -12,7 +12,7 @@ I have my own opinions, but they are mine.
 
 Your choice of Operating System is definitely better, be it Linux, Windows, or Mac. So, are your Emacs or Vim.
 
-I may not want to participate, but I will continue to respect your religious, political, and sporting ideologies, views, and approaches. I’m not concerned with caste, creed, color, or which household you were born to. I will respect you for what you are and what you have made of yourself.
+I may not want to participate, but I will continue to respect your religious, political, and sporting ideologies, views, and approaches. I’m not concerned with caste, creed, color, or which household or demographics you were born to. I will respect you for what you are and what you have made of yourself.
 
 <!-- 
 
