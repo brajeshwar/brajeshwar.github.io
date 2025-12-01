@@ -30,13 +30,14 @@ In a typical and normal daily practice, Yutori looks plain and simple.
 
 Work culture, in Japan and elsewhere, often glorifies busyness. Schedules packed to the edge are seen as proof of importance. Yet systems without slack are fragile. Engineers know this. Founders learn it through collapse.
 
-Yutori insists on slack by design. A lightly scheduled day leaves room for error and surprise. Teams with buffers can recover when things break. Without that margin, efficiency buckles into burnout.
+Yutori insists on **Slack by Design**. A lightly scheduled day leaves room for error and surprise. Teams with buffers can recover when things break. Without that margin, efficiency buckles into burnout.
 
-Where the West frames it as “work-life balance,” Yutori states it more bluntly: “Balance is not optional; it is the condition for doing good work at all.
+Where the West frames it as “work-life balance,” Yutori states it more bluntly: “Balance is not optional; it is the condition for doing good work at all.”
 
 ## Entrepreneurs
 
 Entrepreneurs are taught to hustle, to grind until success or collapse. Yet the strongest companies are rarely born of exhaustion. They emerge from clarity, which space allows. For entrepreneurs, margin is not a weakness. It is resilience.
+
 Ideas surface in downtime. Insights arrive walking, resting, waiting, or in a slow warm shower.
 
 Energy requires slack. Speed without rest ends in breakdown. Businesses need buffers. A startup with no margin, financial or human, snaps under pressure.
@@ -45,7 +46,7 @@ Energy requires slack. Speed without rest ends in breakdown. Businesses need buf
 
 There is prestige in answering, “I’m busy.” But busyness is often a camouflage for poor design. Yutori rejects it. To say I have margin is strength, not failure.
 
-Entrepreneurs can practice this by leaving blank time in calendars, choosing fewer priorities, and treating recovery as central. As [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) said, “Innovation is saying no to 1,000 things.” Yutori is the refusal that lives daily.
+Entrepreneurs can practice this by leaving blank time in calendars, choosing fewer priorities, and treating recovery as central. As [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) said, “Innovation is saying NO to 1,000 things.” Yutori is the refusal that lives daily.
 
 ## Practice
 
