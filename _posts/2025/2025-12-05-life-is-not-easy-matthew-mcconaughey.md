@@ -12,11 +12,14 @@ Think about it to say, Oh, wow, what an unbelievable play. It was an unbelievabl
 
 What about the other side of unbelievable? You know that side when we humans underperform or act out of our best character. For instance, a man flies a suicide jet into the World Trade Center. Millions die from diseases every day that we have cures for. Bob the builder swears that he’s going to have your house built by Thanksgiving, and you can’t move in until Christmas the next year. Our best friends lie to us. And we lie to ourselves all the time.
 
+{:.aside .right}
+“We lie best when we lie to ourselves.” — [Stephen King](https://en.wikipedia.org/wiki/Stephen_King)
+
 Unbelievable. I don’t think so. Again, it just happens, and it happens every day. Nothing that we homo sapien earthlings do is unbelievable. And if there’s one thing you can depend on, it’s people being. So we shouldn’t be surprised that we are the trickiest mammals walking the planet. I’m not worried about the monkeys. I’m worried about you and me. So, acknowledge Axum’s greatness as real and do not be naive about mankind’s capacity for evil, nor be in denial of our own shortcomings.
 
 ## Happiness is Different than Joy
 
-If I win, I will be happy. If I don’t. I won’t. It’s an if-then. Cause and effect. Quid pro quo. A standard that we cannot sustain because we immediately raise it every time we attain it. You see happiness. Happiness demands a certain outcome. It is result-reliant. And I say, if happiness is what you’re after, then. You’re going to be let down frequently, and you'll be unhappy.
+If I win, I will be happy. If I don’t. I won’t. It’s an if-then. Cause and effect. [Quid pro quo](https://en.wikipedia.org/wiki/Quid_pro_quo). A standard that we cannot sustain because we immediately raise it every time we attain it. You see happiness. Happiness demands a certain outcome. It is result-reliant. And I say, if happiness is what you’re after, then. You’re going to be let down frequently, and you'll be unhappy.
 
 Much of your time. Joy that joy is a different thing. It’s something else. Joy is not a choice. It’s not a response to some results. It’s a constant. Joy is the feeling that we have from doing what we are fashioned to do, no matter the outcome. Now, personally, as an actor, I started enjoying my work and literally being happier when I stopped trying to make the daily Labor a means to an end. It’s under construction. It is in constant approach alive and well in the doing of what we’re fashion to do and enjoying.
 
