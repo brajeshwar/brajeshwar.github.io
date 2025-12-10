@@ -4,11 +4,11 @@ image: /static/2025/laptop-closed-tea-bonsai-tree.webp
 
 # Digital Minimalism and the Annual Reset Ritual
 
-Every December, a quiet ritual takes shape for those of us who live and work online. It’s not about parties or shopping. It’s about a strange relief that comes from closing tabs, archiving projects, and clearing away the invisible clutter that accumulates in our digital lives. Unlike spring cleaning, this ritual doesn’t involve closets or garages. It lives entirely in browsers, hard drives, and cloud accounts.
+Every December, a quiet ritual takes shape for those of us who live and work online. It’s not about parties or shopping. It’s about a strange relief that comes from closing tabs, archiving projects, and clearing away the invisible clutter that accumulates in our digital lives. Unlike spring cleaning,[^SpringCleaning] this ritual doesn’t involve closets or garages. It lives entirely in browsers, hard drives, and cloud accounts.
 
 ## Weight of the Invisible
 
-The modern knowledge worker lives surrounded by tabs, apps, and side projects. They pile up because every tool whispers the promise of “someday.” A browser with fifty open tabs feels like carrying fifty unresolved thoughts. A Google Drive full of half-written drafts is a museum of guilt. An abandoned side project is a room with the lights still on.
+The modern knowledge worker lives surrounded by tabs, apps, and side projects. They pile up because every tool whispers the promise of “someday.” A browser with forty-two open tabs feels like carrying forty-two unresolved thoughts. A Google Drive full of half-written drafts is a museum of guilt. An abandoned side project is a room with the lights still on.
 
 We preach minimalism in the physical world while hoarding endlessly in the digital one.
 
@@ -33,7 +33,7 @@ The same logic applies to tools. Every year adds a new set of apps and SaaS subs
 
 Founders and creators are notorious for hoarding side projects. An idea sparked in April becomes a repo in May and a ghost by July. December is the moment to decide which deserve oxygen in January and which deserve an archive folder.
 
-Files follow the same pattern. Old decks, outdated PDFs, duplicates with “final_v3_really_really_final_i_promise_final” in their names. The reset ritual is about sending them into deep storage or deleting them altogether.
+Files follow the same pattern. Old decks, outdated PDFs, duplicates with *“final_v3_really_really_final_i_promise_final”* in their names. The reset ritual is about sending them into deep storage or deleting them altogether.
 
 ## Philosophy of Less
 
