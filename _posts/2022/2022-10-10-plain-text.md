@@ -4,7 +4,7 @@ Plain Text Notetaking is one of the best habits you can build up. It will pay yo
 
 I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many note-taking apps and bought enough of them — [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Typora](https://typora.io),  [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
 
-I have moved to a simpler note-taking and writing habit for my notes. I have chosen a simple, plain-text[^plaintext] life. The idea is to approach __contents as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
+I have moved to a simpler note-taking and writing habit for my notes. I have chosen a simple, plain-text[^plaintext] life. The idea is to approach __content as data-first with tools on the top__. I have grown to like the simple methods I use and the philosophies of managing the files and the directories/folders.
 
 {:.aside}
 “Every device, including ones long gone, and ones not invented yet, can read and edit plain text.” - [Derek Sivers](https://sive.rs/plaintext)
@@ -33,7 +33,7 @@ Here are a few tools, articles, and references that will get you started, help y
 
 ### Articles (Documentation, Methodologies, & Philosophies)
 
-- [A Plain Text Personal Organizer](https://danlucraft.com/blog/2008/04/plain-text-organizer/)
+- A Plain Text Personal Organizer [Archive](https://web.archive.org/web/20120205111929/https://danlucraft.com/blog/2008/04/plain-text-organizer/)
 - [A template to organise life in plain text](https://github.com/jukil/plain-text-life)
 - [Achieve a text-only work-flow](http://donlelek.github.io/2015-03-09-text-only-workflow/)
 - [I Still Use Plain Text for Everything, and I Love it](https://lifehacker.com/i-still-use-plain-text-for-everything-and-i-love-it-1758380840)
