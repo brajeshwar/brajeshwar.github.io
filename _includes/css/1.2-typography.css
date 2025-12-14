@@ -1,8 +1,8 @@
 h1, h2, h3, h4, h5, h6 {
-	font-weight: var(--font-weight-light);
-	line-height: var(--scale-small);
-	text-wrap: balance;
-	text-wrap: pretty;
+  font-weight: var(--font-weight-light);
+  line-height: var(--scale-small);
+  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 h1 { font-size: var(--step-3); }
@@ -28,75 +28,75 @@ a:hover, a:active {
 }
 
 blockquote {
-	margin: var(--space-s) auto;
-	padding: var(--space-m) var(--space-l);
-	
-	font-family: var(--font-family-alt);
-	font-size: var(--step-0);
-	font-weight: var(--font-weight-light);
-	hyphens: none;
-	
-	color: var(--text-color-higher);
-	background: var(--bg-color-low);
-	border-radius: var(--border-radius);
+  margin: var(--space-s) auto;
+  padding: var(--space-m) var(--space-l);
+
+  font-family: var(--font-family-alt);
+  font-size: var(--step-0);
+  font-weight: var(--font-weight-light);
+  hyphens: none;
+
+  color: var(--text-color-higher);
+  background: var(--bg-color-low);
+  border-radius: var(--border-radius);
 }
 
 blockquote p {
-	margin: 0 auto var(--space);
-	padding: 0;
+  margin: 0 auto var(--space);
+  padding: 0;
 }
 
 blockquote p:last-child {
-	margin: 0;
+  margin: 0;
 }
 
 pre {
-	padding: var(--space);
-	background: var(--color-zero);
-	border-radius: var(--border-radius);
-	font-family: var(--font-family-monospace);
+  padding: var(--space);
+  background: var(--color-zero);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-monospace);
 }
 
 code.language-plaintext,
 mark,
 .mark {
-	padding: var(--space-3xs) var(--space-2xs);
-	
-	font-size: var(--step--1);
-	
-	background: var(--bg-color-low);
-	border-radius: var(--border-radius-larger);
+  padding: var(--space-3xs) var(--space-2xs);
 
-	/* fix edges of wrapped inline elements	*/
-	-webkit-box-decoration-break: clone;
+  font-size: var(--step--1);
+
+  background: none;
+  /*border-radius: var(--border-radius-larger);*/
+
+  /* fix edges of wrapped inline elements */
+  -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
 }
 
 article {}
 
 aside, .aside {
-	margin: var(--space-2xs);
-	padding: var(--space-s) var(--space-m);
+  margin: var(--space-2xs);
+  padding: var(--space-s) var(--space-m);
 
-	font-family: var(--font-family-alt);
-	font-size: var(--step-0);
-	font-weight: var(--font-weight-light);
-	hyphens: none;
+  font-family: var(--font-family-alt);
+  font-size: var(--step-0);
+  font-weight: var(--font-weight-light);
+  hyphens: none;
 
-	background: var(--bg-color-low);
-	border-radius: var(--border-radius);
+  background: var(--bg-color-low);
+  border-radius: var(--border-radius);
 }
 
 aside.left, .aside.left {
-	float: left;
-	margin-left: -10vw;
-	width: 70%;
+  float: left;
+  margin-left: -10vw;
+  width: 70%;
 }
 
 aside.right, .aside.right {
-	float: right;
-	margin-right: -10vw;
-	width: 70%;
+  float: right;
+  margin-right: -10vw;
+  width: 70%;
 }
 
 /* rest in small screen, it becomes the same as a blockquote */
@@ -117,11 +117,11 @@ li::marker {
 
 /* code highlighter from https://github.com/richleland/pygments-css */
 .highlight {
-	border-radius: var(--border-radius);
+  border-radius: var(--border-radius);
 }
 
 /* word-wrap plain-text in codes */
 .language-plaintext code {
-	word-wrap: break-word;
-	white-space: pre-wrap;   
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }

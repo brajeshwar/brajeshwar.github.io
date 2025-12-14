@@ -5,6 +5,17 @@ title: Books
 
 # Books
 
+Since 2018, I have started listing the interesting ones I read each year:
+<a href="/2018/books/">2018</a>,
+<a href="/2019/books/">2019</a>,
+<a href="/2020/books/">2020</a>,
+<a href="/2021/books/">2021</a>,
+<a href="/2022/books/">2022</a>,
+<a href="/2023/books/">2023</a>,
+<a href="/2024/books/">2024</a>,
+<a href="/2025/books/">2025</a>,
+<a href="/2026/books/">2026</a>.
+
 ## Why Read?
 
 1. Reading well will deepen your appreciation of literature; you’ll gain new experiences and enrich your knowledge of the world and other people.
