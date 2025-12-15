@@ -1,60 +1,60 @@
 page-archives {
-	display: block;
-	margin: var(--space) auto;
-	border-radius: var(--border-radius);
-	border: 1px solid var(--border-color);
+  display: block;
+  margin: var(--space) auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
 }
 
 page-archives a,
 page-archives a:visited,
 page-archives a:hover,
 page-archives a:active {
-	display: block;
-	text-decoration: none;
+  display: block;
+  text-decoration: none;
 }
 
 page-archives table {
-	margin: 0;
-	padding: 0;
-	border: 0 none;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
 }
 page-archives table td {
-	/* a custom spacing that breaks the default spacing values */
-	padding: calc(var(--space-3xs)*0.6) var(--space-2xs);
+  /* a custom spacing that breaks the default spacing values */
+  padding: calc(var(--space-3xs)*0.6) var(--space-2xs);
 }
 
 page-archives table caption {
-	margin: 0;
-	padding: 0 var(--space-2xs);
-	font-size: var(--step-1);
-	font-weight: var(--font-weight-light);
-	background: var(--bg-color);
-	border-bottom: 1px solid var(--border-color);
+  margin: 0;
+  padding: 0 var(--space-2xs);
+  font-size: var(--step-1);
+  font-weight: var(--font-weight-light);
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 page-archives table:first-child caption {
-	border-top-left-radius: var(--border-radius);
-	border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 page-archives table:last-child {
-	border-bottom-left-radius: var(--border-radius);
-	border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 page-archives table:last-child tr:last-child td:first-child {
-	border-bottom-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 page-archives table:last-child tr:last-child td:last-child {
-	border-bottom-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 page-archives table tr td:first-child {
-	width: 5rem;
-	font-family: var(--font-family-monospace);
-	font-size: smaller;
-	text-transform: uppercase;
+  width: 7rem;
+  font-family: var(--font-family-monospace);
+  font-size: smaller;
+  text-transform: uppercase;
 }
 
 page-archives tbody tr:hover, page-archives tbody tr:active {
@@ -63,11 +63,11 @@ page-archives tbody tr:hover, page-archives tbody tr:active {
 
 /* Search container styling for archives page */
 search-container {
-	display: block;
-	margin-bottom: var(--space);
+  display: block;
+  margin-bottom: var(--space);
 }
 
 search-container .search-trigger {
-	width: 100%;
-	justify-content: flex-start;
+  width: 100%;
+  justify-content: flex-start;
 }
