@@ -11,22 +11,22 @@ footer:
   url: "/"
 - title: Feed
   url: "/feed.xml"
-- title: Search
-  url: "/search/"
-- title: Privacy
-  url: "/privacy/"
+- title: Now
+  url: "/now/"
 - title: About
   url: "/about/"
-- title: Hire
-  url: "/hire/"
 - title: Archives
   url: "/archives/"
 - title: Books
   url: "/books/"
 - title: Film
   url: "/film/"
-- title: Now
-  url: "/now/"
+- title: Hire
+  url: "/hire/"
+- title: Privacy
+  url: "/privacy/"
+- title: Search
+  url: "/search/"
 - title: Newsletter
   url: "/newsletter/"
 - title: Contact

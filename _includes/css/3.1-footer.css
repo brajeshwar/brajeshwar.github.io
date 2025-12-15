@@ -1,13 +1,17 @@
 footer {
-	font-family: var(--font-family-ui);
-	font-size: var(--step--1);
-	text-align: center;
-	text-transform: lowercase;
-	color: var(--text-color-low);
-	padding: var(--space-s);
-	margin-top: var(--space-xl);
+  padding: var(--space-s);
+  margin-top: var(--space-xl);
+
+  font-family: var(--font-family-ui);
+  font-size: var(--step--1);
+  text-align: center;
+  text-transform: lowercase;
+
+  color: var(--text-color-low);
+
+  border-top: var(--border-size) var(--border-style) var(--border-color);
 }
 
 footer nav a {
-	padding: var(--space-3xs);
+  padding: var(--space-3xs);
 }
