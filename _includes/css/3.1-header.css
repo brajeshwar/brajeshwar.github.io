@@ -1,73 +1,70 @@
 header {
-	margin: var(--space-s) auto var(--space-l) auto;
-	text-align: center;
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: var(--space-3xs);
+  margin: var(--space-s) auto var(--space-l) auto;
+  text-align: center;
 
-	background: transparent;
-	border-radius: var(--border-radius-larger);
-	border: var(--border-size) var(--border-style) transparent;	
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3xs);
+
 }
 
 /* logo */
 site-logo {
-	width: var(--logo-size);
-	height: var(--logo-size);
+  width: var(--logo-size);
+  height: var(--logo-size);
 }
 
 site-logo a {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-	border-radius: 100%;
-	
-	width: var(--logo-size);
-	height: var(--logo-size);
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border-radius: 100%;
 
-	transition: all 0.5s ease;
+  width: var(--logo-size);
+  height: var(--logo-size);
+
+  transition: all 0.5s ease;
 }
 
 site-logo a:hover, site-logo a:active {
-	background: var(--text-color);
+  background: var(--text-color);
 }
 
 /* SVG: .logo__img and .logo__img--path */
 site-logo a .logo__img, site-logo a .logo__img--path,
 site-logo a:visited .logo__img, site-logo a:visited .logo__img--path {
-	fill: var(--bg-color-high);
+  fill: var(--bg-color-high);
 } 
 
 site-logo a:hover .logo__img, site-logo a:hover .logo__img--path,
 site-logo a:active .logo__img, site-logo a:active .logo__img--path {
-	fill: var(--color-zero);
+  fill: var(--color-zero);
 }
 
 /* menu */
 site-nav {
-	padding: var(--space-2xs);
-	font-family: var(--font-family-ui);
-	font-size: var(--step--1);
-	background-color: var(--bg-color-high);
-	border-radius: var(--border-radius-larger);
+  padding: var(--space-2xs);
+  font-family: var(--font-family-ui);
+  font-size: var(--step--1);
+  background-color: var(--bg-color-high);
+  border-radius: var(--border-radius-larger);
 }
 
 site-nav a, site-nav a:visited {
-	padding: var(--space-2xs);
-	color: var(--text-color-lower);
-	text-decoration: none;
+  padding: var(--space-2xs);
+  color: var(--text-color-lower);
+  text-decoration: none;
 }
 
 site-nav a:hover, site-nav a:active, site-nav a.active {
-	color: var(--color-zero);
-	text-decoration: none;
+  color: var(--color-zero);
+  text-decoration: none;
 }
 
 /* mode: light dark */
 mode-toggle {
-	display: block;
-	margin: 0;
-	padding: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
