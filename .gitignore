@@ -1,13 +1,10 @@
-.aider*
 .bundle/
-.claude/
 .jekyll-cache/
 .jekyll-metadata
 .obsidian
+.ruby-lsp
 .sass-cache/
 _site/
-node_modules/
-vendor/
 
 # Ignore OS generated files #
 .DS_Store*

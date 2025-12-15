@@ -84,27 +84,27 @@ We use both Session and Persistent Cookies for the purposes set out below:
 
 - __Necessary / Essential Cookies__
 
-	Type: Session Cookies
+  Type: Session Cookies
 
-	Administered by: Us
+  Administered by: Us
 
-	Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
+  Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
 
 - __Cookies Policy / Notice Acceptance Cookies__
 
-	Type: Persistent Cookies
+  Type: Persistent Cookies
 
-	Administered by: Us
+  Administered by: Us
 
-	Purpose: These Cookies identify if users have accepted the use of cookies on the Website.
+  Purpose: These Cookies identify if users have accepted the use of cookies on the Website.
 
 - __Functionality Cookies__
 
-	Type: Persistent Cookies
+  Type: Persistent Cookies
 
-	Administered by: Us
+  Administered by: Us
 
-	Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
+  Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
 
 ### Use of Your Personal Data
 
@@ -201,4 +201,4 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 If you have any questions about this Privacy Policy, You can contact us:
 
 - By email: brajeshwar@oinam.com
-- By visiting this page on our website: [brajeshwar.com/contact](https://brajeshwar.com/contact)
+- By visiting the `/contact` page on our website: [brajeshwar.com/contact](/contact)
