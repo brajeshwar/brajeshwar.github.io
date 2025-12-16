@@ -1,7 +1,8 @@
 # brajeshwar.com
 
-Source that runs my personal website - [brajeshwar.com](https://brajeshwar.com).
-`brajeshwar.com` was booked on Jun 11, 2001.
+> I’m on an adventure to create beautiful and meaningful products to improve the world for my daughters and their friends.
+
+[brajeshwar.com](https://brajeshwar.com) was booked on Jun 11, 2001.
 
 ## Promotions & Affiliates
 
