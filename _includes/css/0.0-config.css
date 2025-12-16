@@ -81,7 +81,7 @@
 
 :root {
   --font-family-serif     : Georgia, 'Times New Roman', Times, serif;
-  --font-family-sans-serif: system-ui, -apple-system, Ubuntu, Cantarell, sans-serif;
+  --font-family-sans-serif: system-ui, -apple-system, 'Segoe UI', Ubuntu, Noto, Cantarell, sans-serif;
   --font-family-monospace : Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
   
   --font-family           : var(--font-family-serif);
