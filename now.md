@@ -5,6 +5,8 @@ styles: css/4.1-pages-now.css
 style: page-now
 ---
 
+{% include_relative now/2025.md %}
+
 {% include_relative now/2024.md %}
 
 {% include_relative now/2020.md %}
