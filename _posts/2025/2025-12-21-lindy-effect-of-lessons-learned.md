@@ -24,6 +24,6 @@ Every December, founders and technologists look back and ask: what was real prog
 
 ## Filtering Signal from Noise
 
-The Lindy filter is simple: ask if it has survived previous versions of itself. Email has been declared dead for decades, but it remains alive. Shiny metaverses come and go, but real community networks endure. AI copilots have precedent in decades of decision support tools—they’ll likely evolve, not vanish.  
+The Lindy filter is simple: ask if it has survived previous versions of itself. [Email](/2024/email/) has been declared dead for decades, but it remains alive. Shiny metaverses come and go, but real community networks endure. AI copilots have precedent in decades of decision support tools will likely evolve, not vanish.  
 
 Looking ahead to the next year, the safest bet is that what has lasted already will last even longer. As for the latest miracle trend, ask: does it rest on timeless principles, or is it just another costume party for a fading trick?
