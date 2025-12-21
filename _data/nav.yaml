@@ -25,6 +25,8 @@ footer:
   url: "/hire/"
 - title: Privacy
   url: "/privacy/"
+- title: Terms
+  url: "/terms/"
 - title: Search
   url: "/search/"
 - title: Newsletter
