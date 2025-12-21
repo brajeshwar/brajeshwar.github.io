@@ -12,15 +12,6 @@ These tools, services, and companies are the ones that I use. I want to promote 
 - Attio, https://www.attio.com?r=IiDWXG7ug6IWeX9n
 - Cal, https://refer.cal.com/brajeshwar
 
-## TODO
-
-- Films/TV
-  - Harley Davidson and the Marlboro Man (1991)
-  - Slow Horses (2022-)
-- Plan
-  - Photos, Weekly Stumbles, Bookmarks, and Tweet-ish posts.
-- Post - Weekly at Max released on Monday.
-
 ### Archived / Elsewhere
 
 - [Blogspot](http://brajeshwar.blogspot.com)
