@@ -38,6 +38,10 @@
   year: 1970
   img: colossus-the-forbin-project.webp
   url: https://en.wikipedia.org/wiki/Colossus%3A_The_Forbin_Project
+- title: "Come and See"
+  year: 1985
+  img: come-and-see.webp
+  url: https://en.wikipedia.org/wiki/Come_and_See
 - title: "Contact"
   year: 1997
   img: contact.webp
