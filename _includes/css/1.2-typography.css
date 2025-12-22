@@ -52,9 +52,12 @@ blockquote p:last-child {
 
 pre {
   padding: var(--space);
-  background: var(--color-zero);
+  background-color: var(--bg-color-low);
   border-radius: var(--border-radius);
   font-family: var(--font-family-monospace);
+
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 code.language-plaintext,
@@ -64,8 +67,8 @@ mark,
 
   font-size: var(--step--1);
 
-  background: none;
-  /*border-radius: var(--border-radius-larger);*/
+  background-color: var(--bg-color-low); /* set to same as <pre> */
+  border-radius: var(--border-radius);
 
   /* fix edges of wrapped inline elements */
   -webkit-box-decoration-break: clone;
