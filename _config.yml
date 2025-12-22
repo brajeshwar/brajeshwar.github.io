@@ -65,11 +65,7 @@ collections:
     output: true
 
 exclude:
-  - .github/
-  - .obsidian/
   - Gemfile
   - Gemfile.lock
-  - gemfiles/
   - now/
   - README.md
-  - _README/
