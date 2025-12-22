@@ -10,8 +10,8 @@ December arrives quietly, often disguised as festivity and fatigue. For founders
 
 ## The Case for Retrospection
 
-1. **Time’s filter.** What remains after twelve months is not just what you did, but who you became. Reflection reveals the shape of that change.  
-2. **Error as tutor.** The Stoic practice is not to regret mistakes, but to study them. Errors are not scars to hide; they are teachers.  
+1. **Time’s filter.** What remains after twelve months is who you became. Reflection reveals the shape of that change.  
+2. **Error as tutor.** The Stoic practice is to study them. Errors are not scars to hide; they are teachers.  
 3. **Armor, not ornament.** Reflection is not for sentimentality. It is practical. To face uncertainty in January, you carry December’s clarity.  
 
 ## Practices from the Stoics
@@ -33,4 +33,4 @@ December arrives quietly, often disguised as festivity and fatigue. For founders
 2. Write three lists: *kept virtues, repeated errors, systems redesigned.*  
 3. Close with a single maxim, your own or borrowed from Aurelius, that you will carry into January.
 
-December offers the time to look within. Retrospection is not passive. It is an act of building armor—quiet, invisible, and indispensable for the future.
+December offers the time to look within. Retrospection is not passive. It is an act of building armor; quiet, invisible, and indispensable for the future.

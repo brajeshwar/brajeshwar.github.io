@@ -6,19 +6,19 @@ image: /static/2025/paper-archive-laptop.webp
 
 In the early days of my work, I kept everything: half-finished sketches, notes from conversations that went nowhere, code snippets too brittle to use in production. Most of them never saw the light of day again, or so I thought. Years later, those fragments had a strange way of resurfacing. What looked like waste became soil.  
 
-Archiving and composting ideas are not about nostalgia. It is about building a quiet reserve. Founders who cultivate their past work discover that nothing is ever truly wasted. What matters is how you store, revisit, and recycle.  
+Archiving and composting ideas are about building a quiet reserve. Founders who cultivate their past work discover that nothing is ever truly wasted. What matters is how you store, revisit, and recycle.  
 
 ## Archiving as a Founder’s Memory
 
-An Archive is not a [Mausoleum](https://en.wikipedia.org/wiki/Mausoleum). It is a memory bank.
+An Archive is like a memory bank.
 
 The best founders I know have the discipline to store, tag, and revisit their past work. Notes from a failed pitch contain a metaphor worth reviving. An abandoned code experiment might carry the seed of a future feature.  
 
-[Leonardo da Vinci’s](/2024/leonardo-da-vinci/) notebooks are perhaps the most famous example of this principle. His thousands of pages of sketches and notes, many of which were never developed during his lifetime, later inspired engineers, artists, and scientists for centuries. Da Vinci’s genius was not just in his creativity, but in his archiving.  
+[Leonardo da Vinci’s](/2024/leonardo-da-vinci/) notebooks are perhaps the most famous example of this principle. His thousands of pages of sketches and notes, many of which were never developed during his lifetime, later inspired engineers, artists, and scientists for centuries. Da Vinci’s genius was, besides his creativity, in his archiving.  
 
 The act of archiving forces you to slow down, to close a loop properly. Even if the project is abandoned, the residue is retained. Over time, this practice turns into a library that outlives single ventures.  
 
-For modern founders, version control systems like [Git](https://git-scm.com/) serve a similar function. Even “dead branches” of code sit preserved, waiting for revival. As [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) himself noted, Linux was not a fully formed invention; it was an iterative archive of patches, contributions, and refinements. The value was in what was preserved and built upon.  
+For modern founders, version control systems like [Git](https://git-scm.com/) serve a similar function. Even “dead branches” of code sit preserved, waiting for revival. As [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) himself noted, “Linux was not a fully formed invention; it was an iterative archive of patches, contributions, and refinements. The value was in what was preserved and built upon.”
 
 ## The Compost Heap: Controlled Decay
 
@@ -51,21 +51,13 @@ The Archive gives you structure. The compost heap gives you chaos. Together, the
 
 The founder who knows how to recycle their past is less dependent on sudden inspiration. They always have raw material at hand.  
 
-Consider the Japanese concept of [Mottainai](https://en.wikipedia.org/wiki/Mottainai), which embodies a sense of regret over waste, as well as a mindfulness of reuse. Applied to ideas, it suggests that every scrap has potential. Your most powerful ideas may already exist, just in compost form.  
+Consider the Japanese concept of [Mottainai](https://en.wikipedia.org/wiki/Mottainai), which embodies a sense of regret over waste, as well as a mindfulness of reuse. Applied to ideas, it suggests that every scrap has potential. Your most powerful ideas may already exist, just in compost form. 
 
 ## Historical and Startup Parallels
 
-### Thomas Edison’s Lab Notebooks
-
-Edison filled thousands of pages with experiments, many of which failed. Those “failed” notes became reference material for later breakthroughs.  
-
-### Twitter’s Pivot
-
-What became Twitter started as [Odeo](https://en.wikipedia.org/wiki/Odeo), a podcasting platform rendered obsolete by Apple’s iTunes integration. The compost was the messaging experiment. The Archive was the team. Together, they birthed a new product.  
-
-### NASA’s Archive
-
-Even space exploration relies on past work. NASA frequently revisits design archives from Apollo missions when building new spacecraft. The past is a blueprint for the future.  
+- **Thomas Edison’s Lab Notebooks.** Edison filled thousands of pages with experiments, many of which failed. Those “failed” notes became reference material for later breakthroughs. 
+- **Twitter’s Pivot.** What became Twitter started as [Odeo](https://en.wikipedia.org/wiki/Odeo), a podcasting platform rendered obsolete by Apple’s iTunes integration. The compost was the messaging experiment. The Archive was the team. Together, they birthed a new product.
+- **NASA’s Archive.** Even space exploration relies on past work. NASA frequently revisits design archives from Apollo missions when building new spacecraft. The past is a blueprint for the future. 
 
 ## Practical Tips for Founders
 

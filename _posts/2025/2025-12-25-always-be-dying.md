@@ -11,12 +11,11 @@ Death does not check the weather or the day. The old Stoics kept a skull on the 
 {:.aside .right}
 Embrace Memento mori[^MementoMori] without lugging around a suitcase full of regrets.
 
-Yet the goal is not to brood. The goal is to savour. Pre‑planning for the final curtain lets us spend less energy worrying about the lights going out and more energy dancing under them.
+Yet the goal is not to brood. The goal is to savor. Pre‑planning for the final curtain lets us spend less energy worrying about the lights going out and more energy dancing under them.
 
 Write down stuffs - interesting, mundane, boring, just about anything. Write for your future self. But remember, that future-you is going to be a stranger reading the notes. Your memory is a leaky bucket. Future‑You will have different dreams, different passwords, and possibly fewer teeth. 
 
-Treat that person with kindness. Leave notes: what you believed, what you built, what made you laugh so hard you spilled tea on the keyboard.
-Write like you would write to a pen pal[^PenPals] who shares your fingerprints but none of your context.
+Treat that person with kindness. Leave notes: what you believed, what you built, what made you laugh so hard you spilled tea on the keyboard. Write like you would write to a pen pal[^PenPals] who shares your fingerprints but none of your context.
 
 Skip the abbreviations. Explain the inside jokes. Tag the photos. You are building a time capsule that can be opened by anyone, including the version of you who no longer remembers where the capsule is buried.
 
@@ -28,16 +27,16 @@ Minimalism is not scarcity; it is mobility. Build systems so you [can walk away]
 
 Just ubiquitous access to the things that matter:
 
-- Identity Documents. Copies of Papers that proves your identity and identification.
-- Essential contacts, not the whole address book, only the people who would notice you are missing.
-- Core memories: journals, photos, silly voice memos.
-- Seed phrases and keys for whatever secures your money, your code, or your diary.
+- **Identity Documents.** Copies of Papers that proves your identity and identification.
+- **Essential contacts**, not the whole address book, only the people who would notice you are missing.
+- **Core memories.** Journals, photos, silly voice memos.
+- **Seed phrases and keys** for whatever secures your money, your code, or your diary.
 
 These items lives in redundant, vaults scattered across the cloud (and maybe on a trusted friend’s drive). The trick is to separate ownership from availability. You can borrow access from anywhere without lugging hardware.
 
 ## The Box
 
-Flat files rule. Markdown and [plain text](/2022/plain-text/) will outlive today’s note‑taking apps. Password manager with an emergency kit. Print the kit, seal it, label it. Stateless authentication, WebAuthn tokens or passkeys are tied to biometrics rather than a specific device.
+Flat files rule. Markdown and [plain text](/2022/plain-text/) will outlive today’s note‑taking apps. Password manager with an emergency kit. Print the kit, seal it, label it. Stateless authentication, WebAuth tokens or passkeys are tied to biometrics rather than a specific device.
 
 Periodic drills. Once a quarter or once every half-year, pretend you lost every gadget. Retrieve your life from a library computer. Fix what breaks.
 
