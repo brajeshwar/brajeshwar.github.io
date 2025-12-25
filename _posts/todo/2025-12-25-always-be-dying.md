@@ -13,7 +13,7 @@ Embrace Memento mori[^MementoMori] without lugging around a suitcase full of reg
 
 Yet the goal is not to brood. The goal is to savor. Pre‑planning for the final curtain lets us spend less energy worrying about the lights going out and more energy dancing under them.
 
-Write down stuffs - interesting, mundane, boring, just about anything. Write for your future self. But remember, that future-you is going to be a stranger reading the notes. Your memory is a leaky bucket. Future‑You will have different dreams, different passwords, and possibly fewer teeth. 
+Write down stuffs - interesting, mundane, boring, just about anything. Write for your future self. But remember, that **future-you** is going to be a stranger reading the notes. Your memory is a leaky bucket. Future‑You will have different dreams, different passwords, and possibly fewer teeth. 
 
 Treat that person with kindness. Leave notes: what you believed, what you built, what made you laugh so hard you spilled tea on the keyboard. Write like you would write to a pen pal[^PenPals] who shares your fingerprints but none of your context.
 
@@ -44,15 +44,18 @@ Periodic drills. Once a quarter or once every half-year, pretend you lost every 
 
 Start practicing a routine, such as weekly, monthly, quarterly, or annually, to write to the Future-You.  Try disaster drills. Recover your vault on a fresh machine or public terminal. Learn to audit the archive. Remove clutter. Keep the cringe, future historians love that stuff. Sprinkle reminders in a calendar so the habit survives when willpower takes a holiday.
 
+> The **Future-You** is a Stranger Reading Your Current Notes.
+
 ## Memento mori
 
 Remembering death is a cheat code for living. Preparing your digital and emotional estate is a gift to every version of you and to the people who will clean up the mess. It costs a little more than a notebook, a password manager, and the courage to admit that the party ends.
 
 Write the stories, stash the keys, rehearse the exit. Then close the laptop and go outside. The sun is still up, and you are still here.
 
-The idea of “Always be Dying” came after reading an interesting article, [Always be quitting](https://jmmv.dev/2021/04/always-be-quitting.html) by [Julio Merino](https://jmmv.dev). ([archive](https://web.archive.org/web/20210517042429/https://jmmv.dev/2021/04/always-be-quitting.html))
+### References & Further Reading
 
-`Will remain a Work-in-Progress for a while.`
+- [Always be quitting](https://jmmv.dev/2021/04/always-be-quitting.html) by [Julio Merino](https://jmmv.dev). ([archive](https://web.archive.org/web/20210517042429/https://jmmv.dev/2021/04/always-be-quitting.html))
+- [The Last Post](https://www.penmachine.com/2011/05/the-last-post) by [Derek Miller](https://www.penmachine.com) ([archive](https://web.archive.org/web/20110507055126/https://www.penmachine.com/2011/05/the-last-post))
 
 
 [^CarpeDiem]: [Carpe diem](https://en.wikipedia.org/wiki/Carpe_diem) translates to “seize the day.” It is a rallying cry to step forward rather than stand by. When the phrase echoes in your mind, procrastination loosens its grip, opportunities appear closer, and excuses lose their shine. The mantra does not promote reckless impulse; it invites mindful urgency, an insistence on shaping the hours instead of watching them evaporate.
