@@ -4,7 +4,7 @@ Entrepreneurs, tech professionals, and strategic thinkers frequently face uncert
 
 One compelling analogy is, “Life is like playing Tetris, while business resembles a strategic game of chess.” This analogy underscores the significance of adaptability in personal life and the crucial role of strategic foresight in business.
 
-<img class="large" src="/static/2025/tetris-tetrominoes.webp" alt="Tetrominoes" loading="lazy">
+<img class="full" src="/static/2025/tetris-life.webp" alt="Tetrominoes" loading="lazy">
 
 ## Life is Tetris
 
