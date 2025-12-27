@@ -1,6 +1,6 @@
 # Plain Text
 
-Plain Text Notetaking is one of the best habits you can build up. It will pay you back, compounding as time goes on and as software and apps come and go.
+Plain Text Note-Taking is one of the best habits you can build up. It will pay you back, compounding as time goes on and as software and apps come and go.
 
 I was once an [Evernote](https://evernote.com) user since its early days and a premium subscriber for many years. I have used many note-taking apps and bought enough of them — [iA Writer](https://ia.net/writer), [ByWord](https://bywordapp.com), [Typora](https://typora.io),  [Bear](https://bear.app), [SimpleNote](https://simplenote.com), [nvAlt](https://brettterpstra.com/projects/nvalt/) fork of [Notational Velocity](https://notational.net/), etc.
 
