@@ -8,6 +8,8 @@ Artificial Intelligence (AI) is, in fact, becoming ubiquitous in our daily lives
 
 Designing products with such invisible features requires a mindset shift. It’s no longer about showcasing AI capabilities, but about crafting experiences where AI feels like an integral part of the product.
 
+> “Good design makes the right thing feel so natural that users mistake it for the product’s default state.”
+
 ## Nothing Happened
 
 A good invisible feature doesn’t make the user stop and think, “Whoa, this is AI!” It should rather be, “Ah! That worked.”
