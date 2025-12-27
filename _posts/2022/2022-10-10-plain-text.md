@@ -36,6 +36,7 @@ Here are a few tools, articles, and references that will get you started, help y
 - A Plain Text Personal Organizer [Archive](https://web.archive.org/web/20120205111929/https://danlucraft.com/blog/2008/04/plain-text-organizer/)
 - [A template to organise life in plain text](https://github.com/jukil/plain-text-life)
 - [Achieve a text-only work-flow](http://donlelek.github.io/2015-03-09-text-only-workflow/)
+- [Always Bet on Text](https://graydon2.dreamwidth.org/193447.html) ([archive](https://web.archive.org/web/20141001000000*/https://graydon2.dreamwidth.org/193447.html))
 - [I Still Use Plain Text for Everything, and I Love it](https://lifehacker.com/i-still-use-plain-text-for-everything-and-i-love-it-1758380840)
 - [My productivity app for the past 12 years has been a single .txt file](https://jeffhuang.com/productivity_text_file/)
 - [Note Taking, Writing and Life Organization Using Plain Text Files](http://www.markwk.com/plain-text-life.html)
