@@ -11,11 +11,22 @@
 
 @font-face {
   font-family: "Libre Baskerville";
+  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  size-adjust: 98.5%;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
   src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: bold;
-  
-  font-display: swap;              /* no FOIT */
-  unicode-range: U+000-5FF;        /* Latin subset */
-  size-adjust: 98.5%;              /* tune to your fallback (e.g., Georgia) */
+  font-weight: 700;
+  font-style: normal;
+
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  size-adjust: 98.5%;
 }
