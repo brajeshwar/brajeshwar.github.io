@@ -6,26 +6,26 @@ image: /static/2025/lady-mountain-dawn.webp
 
 December arrives quietly, often disguised as festivity and fatigue. For founders, builders, and seekers, it is also the one month that insists on looking back, not in nostalgia, but in sober reflection. The Stoics taught that retrospection is not indulgence; it is a form of armor. The shield that prepares you for the storms of tomorrow.
 
-[Marcus Aurelius](https://en.wikipedia.org/wiki/Marcus_Aurelius), in Meditations, was not writing for an audience. He was writing to himself. Notes scribbled on campaigns, reminders of his mortality, instructions to return to first principles. Two thousand years later, this form of journaling remains an effective operating system for founders as they close the year.
+[Marcus Aurelius](https://en.wikipedia.org/wiki/Marcus_Aurelius), in Meditations, was writing to himself, not concerned about an audience. Notes scribbled on campaigns, reminders of his mortality, instructions to return to first principles. Two thousand years later, this form of journaling remains an effective operating system for founders as they close the year.
 
 ## The Case for Retrospection
 
-1. **Time’s filter.** What remains after twelve months is who you became. Reflection reveals the shape of that change.  
-2. **Error as tutor.** The Stoic practice is to study them. Errors are not scars to hide; they are teachers.  
-3. **Armor, not ornament.** Reflection is not for sentimentality. It is practical. To face uncertainty in January, you carry December’s clarity.  
+1. **Time’s Filter.** What remains after twelve months is who you became. Reflection reveals the shape of that change.  
+2. **Error as Tutor.** The Stoic practice is to study them. Errors are not scars to hide; they are teachers.  
+3. **Armor, not Ornament.** Reflection is not for sentimentality. It is practical. To face uncertainty in January, you carry December’s clarity.  
 
 ## Practices from the Stoics
 
-1. **Daily self-audit.** [Seneca](https://en.wikipedia.org/wiki/Seneca_the_Younger) suggested ending each day by asking, “What bad habit did you master? What temptation resisted?” Extend this across a year.  
-2. **Premeditatio malorum.** Envision the obstacles ahead. Catalog how the past year’s struggles prepared you for them.  
-3. **Memento mori.** [Mortality sharpens judgment.](/2025/always-be-dying/) What did you spend time on that mattered, and what would you not repeat if time were shorter?  
-4. **Virtue check.** Did your actions align with wisdom, courage, justice, and temperance? Or were they hijacked by vanity metrics and short-term panic?  
+1. **Daily Self-Audit.** [Seneca](https://en.wikipedia.org/wiki/Seneca_the_Younger) suggested ending each day by asking, “What bad habit did you master? What temptation resisted?” Extend this across a year.  
+2. **Premeditatio Malorum.**[^PremeditatioMalorum] Envision the obstacles ahead. Catalog how the past year’s struggles prepared you for them.  
+3. **Memento Mori.** [Mortality sharpens judgment.](/2025/always-be-dying/) What did you spend time on that mattered, and what would you not repeat if time were shorter?  
+4. **Virtue Check.** Did your actions align with wisdom, courage, justice, and temperance? Or were they hijacked by vanity metrics and short-term panic?  
 
 ## For Modern Founders
 
-1. **Systems over resolutions.** Replace the fragile promise of “next year I will” with the sturdier design of systems that carry momentum forward.  
-2. **Founder’s journal.** Write in the same unpolished style Marcus did. Not for Medium posts, not for LinkedIn, but for the inner audit that keeps you sane.  
-3. **Endings as beginnings.** December is not the conclusion of a story, but the pause before the next chapter. Retrospection lets you enter it lighter.  
+1. **Systems over Resolutions.** Replace the fragile promise of “next year I will” with the sturdier design of systems that carry momentum forward.  
+2. **Founder’s Journal.** Write in the same unpolished style Marcus did. Not for Medium posts, not for LinkedIn, but for the inner audit that keeps you sane.  
+3. **Endings as Beginnings.** December is not the conclusion of a story, but the pause before the next chapter. Retrospection lets you enter it lighter.  
 
 ## A Stoic Ritual for December
 
@@ -33,4 +33,7 @@ December arrives quietly, often disguised as festivity and fatigue. For founders
 2. Write three lists: *kept virtues, repeated errors, systems redesigned.*  
 3. Close with a single maxim, your own or borrowed from Aurelius, that you will carry into January.
 
-December offers the time to look within. Retrospection is not passive. It is an act of building armor; quiet, invisible, and indispensable for the future.
+December offers the time to look within. Retrospection is an act of building armor; quiet, invisible, and indispensable for the future.
+
+
+[^PremeditatioMalorum]: Premeditatio Malorum or [Negative Visualization](https://en.wikipedia.org/wiki/Negative_visualization) is a core Stoic mental exercise that asks you to rehearse adversity before it arrives. The idea is blunt and practical: imagine loss, failure, illness, rejection, or inconvenience in advance, not to dwell in pessimism, but to strip these events of their shock value. By calmly visualizing what could go wrong, you realize that most feared outcomes are survivable, manageable, or outside your control anyway. This practice trains emotional resilience, sharpens gratitude for present stability, and reduces entitlement to favorable outcomes. In short, it is a discipline of preparedness, reminding you that tranquility is not built by hoping for the best, but by being ready for the worst.
