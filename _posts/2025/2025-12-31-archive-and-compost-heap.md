@@ -41,7 +41,7 @@ Founders are often told to chase novelty. But innovation is less about conjuring
 ## Tools for the Practice
 
 1. **Digital Archives.** Use a consistent structure. Markdown folders, Git repositories, or note-taking systems like [Obsidian](/2025/obsidian/) or [Logseq](https://logseq.com/). The key is accessibility, not perfection. Don’t over-engineer; just make sure you can find things later.
-2. **Compost Bins.** Maintain a digital “dumping ground.” A folder or database where half-formed thoughts, scraps, and snippets go without judgment. [Evernote](https://evernote.com/), [Notion](https://www.notion.so/), or even a plain `/scratch` folder works. Don’t organize too early.
+2. **Compost Bins.** Maintain a digital “dumping ground.” A folder or database where half-formed thoughts, scraps, and snippets go without judgment. [Evernote](https://evernote.com/), [Notion](https://www.notion.so/), or even a plain `/all`, `/inbox`, or `/scratch` folder works. Don’t organize too early.
 3. **Review Rituals.** Schedule seasonal reviews. Just as gardeners turn compost piles, founders can revisit and remix their archives. Set aside one day a quarter to scan through the mess. Most of it will still be useless. A few gems will reveal themselves.
 4. **Zettelkasten Thinking.** The [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) method, popularized by German sociologist [Niklas Luhmann](https://en.wikipedia.org/wiki/Niklas_Luhmann), is essentially structured composting. Notes are deliberately linked so that unexpected connections appear over time. Luhmann wrote over 70 books from this system.  
 
