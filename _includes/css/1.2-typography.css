@@ -66,6 +66,8 @@ mark,
 .mark {
   padding: var(--space-3xs) var(--space-2xs);
 
+  font-size: var(--step--1);
+
   background-color: var(--bg-color-low); /* set to same as <pre> */
   border-radius: var(--border-radius);
 
