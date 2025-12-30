@@ -1,7 +1,7 @@
 :root {
   color-scheme: light dark;
 
-  font-family: var(--font-family);
+  font-family: var(--font-family-sans-serif);
   font-feature-settings: 'liga' 1, 'calt' 1;
   font-optical-sizing: auto;
 }

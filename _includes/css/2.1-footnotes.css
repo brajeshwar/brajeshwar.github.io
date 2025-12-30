@@ -5,7 +5,6 @@
 	background: var(--bg-color-low);
 	border-radius: var(--border-radius);
   
-  font-family: var(--font-family-ui);
   font-size: var(--step--1);
   hyphens: auto;
 }

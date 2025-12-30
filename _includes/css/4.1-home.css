@@ -203,7 +203,6 @@ home-books li {
   flex-basis: auto;
   flex-grow: 1;
 
-  font-family: var(--font-family-ui);
   font-size: var(--step--1);
   font-weight: var(--font-weight-light);
   line-height: var(--scale-small);
