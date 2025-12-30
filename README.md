@@ -4,6 +4,15 @@
 
 [brajeshwar.com](https://brajeshwar.com) was booked on Jun 11, 2001.
 
+## Notes
+
+- `Jul 1, 2025`
+  - Github Pages [Dependency versions](https://pages.github.com/versions/)
+  - Jekyll 3.10.0 (Official Jekyll 4.4.1)
+  - Ruby 3.3.4 (Official Ruby 3.4.4) | `3.3.5` is the one working with CloudFlare Pages.
+  - Sass 3.7.4
+  - Github has a 50MB filesize limit per file.
+
 ## Promotions & Affiliates
 
 These tools, services, and companies are the ones that I use. I want to promote them, while I link to their affiliates and referral links. It should have a promotional benefit to others who sign-up. I should be using it or have used it and would happily promote.

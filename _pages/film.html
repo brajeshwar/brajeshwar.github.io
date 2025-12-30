@@ -6,9 +6,9 @@ style: page-film
 ---
 
 <p class="container-ideal">
-	I enjoyed watching these films (movies and tv-series).
-	I can watch, and re-watch them, and continue to appreciate the masterpieces.
-	<mark>Last updated: Jul 31, 2025</mark>
+  I enjoy watching films (movies and tv-series). I watch a lof of them.
+  These are the ones I can watch, and re-watch repeatedly, and continue to appreciate the masterpieces.
+  <mark>Last updated: Jul 31, 2025</mark>
 </p>
 
 {% if site.data.movies %}
@@ -16,14 +16,14 @@ style: page-film
 <ul class="item__cards">
 {% assign sorted_movies = site.data.movies | sort:'title' -%}
 {% for movie in sorted_movies -%}
-	<li>
-		<a href="{{ movie.url }}">
-			<figure>
-				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ movie.img }}" alt="{{ movie.title }}">
-  			<figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
-  		</figure>
-		</a>
-	</li>
+  <li>
+    <a href="{{ movie.url }}">
+      <figure>
+        <img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ movie.img }}" alt="{{ movie.title }}">
+        <figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
+      </figure>
+    </a>
+  </li>
 {% endfor -%}
 </ul>
 {% endif %}
@@ -33,14 +33,14 @@ style: page-film
 <ul class="item__cards">
 {% assign sorted_movies = site.data.movies-tbd | sort:'title' -%}
 {% for movie in sorted_movies -%}
-	<li>
-		<a href="{{ movie.url }}">
-			<figure>
-				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ movie.img }}" alt="{{ movie.title }}">
-  			<figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
-  		</figure>
-		</a>
-	</li>
+  <li>
+    <a href="{{ movie.url }}">
+      <figure>
+        <img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ movie.img }}" alt="{{ movie.title }}">
+        <figcaption>{{ movie.title }} <span>({{ movie.year }})</span></figcaption>
+      </figure>
+    </a>
+  </li>
 {% endfor -%}
 </ul>
 {% endif %}
@@ -50,14 +50,14 @@ style: page-film
 <ul class="item__cards">
 {% assign sorted_series = site.data.tv | sort:'title' -%}
 {% for series in sorted_series -%}
-	<li>
-		<a href="{{ series.url }}">
-			<figure>
-				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ series.img }}" alt="{{ series.title }}">
-  			<figcaption>{{ series.title }} <span>({{ series.year }})</span></figcaption>
-  		</figure>
-		</a>
-	</li>
+  <li>
+    <a href="{{ series.url }}">
+      <figure>
+        <img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/films/{{ series.img }}" alt="{{ series.title }}">
+        <figcaption>{{ series.title }} <span>({{ series.year }})</span></figcaption>
+      </figure>
+    </a>
+  </li>
 {% endfor -%}
 </ul>
 {% endif %}
