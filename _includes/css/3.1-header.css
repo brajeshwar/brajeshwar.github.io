@@ -1,5 +1,6 @@
 header {
-  margin: var(--space-s) auto var(--space-l) auto;
+  margin: 0 auto;
+  padding: var(--space-m) 0;
   text-align: center;
 
   display: flex;
@@ -7,6 +8,7 @@ header {
   align-items: center;
   gap: var(--space-3xs);
 
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
 /* logo */
