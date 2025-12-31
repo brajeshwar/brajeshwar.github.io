@@ -51,7 +51,7 @@ page-archives table:last-child tr:last-child td:last-child {
 }
 
 page-archives table tr td:first-child {
-  width: 7rem;
+  width: 5rem;
   font-family: var(--font-family-monospace);
   font-size: smaller;
   text-transform: uppercase;
@@ -59,15 +59,4 @@ page-archives table tr td:first-child {
 
 page-archives tbody tr:hover, page-archives tbody tr:active {
   border-bottom-color: var(--border-color-high);
-}
-
-/* Search container styling for archives page */
-search-container {
-  display: block;
-  margin-bottom: var(--space);
-}
-
-search-container .search-trigger {
-  width: 100%;
-  justify-content: flex-start;
 }

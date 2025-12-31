@@ -34,18 +34,18 @@ photo-cover__desc {
   margin: var(--space-s) 0;
   font-family: var(--font-family-serif);
   font-size: var(--step-0);
-  line-height: var(--scale-large);
 }
 
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   margin: var(--space-m) auto 0;
   padding: 0;
+  line-height: var(--scale-small);
 }
 
+/* post title */
 .post h1 {
   margin: 0;
   font-weight: var(--font-weight);
-  line-height: var(--scale-small);
 }
 
 .post time {
