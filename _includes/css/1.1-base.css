@@ -67,7 +67,7 @@ hr {
 }
 
 kbd {
-  background: var(--color-zero);
+  background: var(--bg-color-lowest);
   border-bottom: var(--border-size) var(--border-style) var(--border-color);
   border-radius: var(--border-radius-small);
   color: var(--text-color-low);
