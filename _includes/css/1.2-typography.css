@@ -21,7 +21,7 @@ a, a:visited {
 }
 
 a:hover, a:active {
-  color: var(--text-color-link-active);
+  color: var(--text-color-link);
   text-decoration: underline;
   text-decoration-color: var(--text-color);
   text-decoration-thickness: 1px;

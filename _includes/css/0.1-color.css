@@ -5,11 +5,11 @@
   --color-2: oklch(92.2% 0 0);
   --color-3: oklch(87% 0 0);
   --color-4: oklch(70.8% 0 0);
-  --color-5: oklch(55.6% 0 0);
-  --color-6: oklch(43.9% 0 0);
-  --color-7: oklch(37.1% 0 0);
-  --color-8: oklch(26.9% 0 0);
-  --color-9: oklch(20.5% 0 0);
+  --color-5: oklch(43.9% 0 0);
+  --color-6: oklch(37.1% 0 0);
+  --color-7: oklch(26.8% 0.007 34.298);
+  --color-8: oklch(21.6% 0.006 56.043);
+  --color-9: oklch(14.5% 0 0);
 }
 
 :root, .theme-light {
@@ -22,11 +22,10 @@
   
   --text-color-lower        : var(--color-4);
   --text-color-low          : var(--color-5);
-  --text-color              : var(--color-8);
+  --text-color              : var(--color-7);
   --text-color-higher       : var(--color-9);
   
-  --text-color-link         : var(--color-8);
-  --text-color-link-active  : var(--color-9);
+  --text-color-link         : var(--color-9);
 
   --border-color-lower      : var(--color-1);
   --border-color-low        : var(--color-2);
@@ -44,11 +43,10 @@
   
   --text-color-lower        : var(--color-6);
   --text-color-low          : var(--color-5);
-  --text-color              : var(--color-3);
+  --text-color              : var(--color-4);
   --text-color-higher       : var(--color-1);
   
-  --text-color-link         : var(--color-3);
-  --text-color-link-active  : var(--color-2);
+  --text-color-link         : var(--color-1);
 
   --border-color-lower      : var(--color-8);
   --border-color-low        : var(--color-7);
@@ -68,17 +66,14 @@
 
     --text-color-lower        : var(--color-6);
     --text-color-low          : var(--color-5);
-    --text-color              : var(--color-3);
-    --text-color-high         : var(--color-2);
+    --text-color              : var(--color-4);
     --text-color-higher       : var(--color-1);
-    
-    --text-color-link         : var(--color-3);
-    --text-color-link-active  : var(--color-2);
+
+    --text-color-link         : var(--color-1);
 
     --border-color-lower      : var(--color-8);
     --border-color-low        : var(--color-7);
     --border-color            : var(--color-6);
     --border-color-high       : var(--color-5);
-    --border-color-higher     : var(--color-4);
   }
 }
