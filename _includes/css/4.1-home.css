@@ -234,7 +234,7 @@ home-books li a {
 home-books li a:hover, home-books li a:active {
   -webkit-filter: grayscale(0);
   filter: none;
-  color: var(--color-zero);
+  color: var(--bg-color-lowest);
 }
 
 book-title {

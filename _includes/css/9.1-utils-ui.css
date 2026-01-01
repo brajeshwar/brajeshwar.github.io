@@ -3,7 +3,7 @@
   padding: var(--space-m) var(--space-l);
 
   color: var(--text-color-higher);
-  background: var(--color-zero);
+  background: var(--bg-color-lowest);
   border-radius: var(--border-radius);
 }
 

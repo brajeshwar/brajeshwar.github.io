@@ -1,26 +1,19 @@
-/*
- * TBD: transition to oklch()
- * Reference: Tailwind color, https://tailwindcss.com/docs/colors
- */
-
-/* greyscale */
+/* 2026: Neutral, https://tailwindcss.com/docs/colors */
 :root {
-  --color-1: #f0f0f0;
-  --color-2: #e5e5e5;
-  --color-3: #d5d5d5;
-  --color-4: #a0a0a0;
-  --color-5: #606060;
-  --color-6: #404040;
-  --color-7: #262626;
-  --color-8: #171717;
-  --color-9: #101010;
+  --color-0: oklch(98.5% 0 0);
+  --color-1: oklch(97% 0 0);
+  --color-2: oklch(92.2% 0 0);
+  --color-3: oklch(87% 0 0);
+  --color-4: oklch(70.8% 0 0);
+  --color-5: oklch(55.6% 0 0);
+  --color-6: oklch(43.9% 0 0);
+  --color-7: oklch(37.1% 0 0);
+  --color-8: oklch(26.9% 0 0);
+  --color-9: oklch(20.5% 0 0);
 }
 
-/* light-dark */
 :root, .theme-light {
-  --color-zero              : #fff;
-  --color-full              : #000;
-
+  --bg-color-lowest         : var(--color-0);
   --bg-color-lower          : var(--color-1);
   --bg-color-low            : var(--color-2);
   --bg-color                : var(--color-3);
@@ -30,7 +23,6 @@
   --text-color-lower        : var(--color-4);
   --text-color-low          : var(--color-5);
   --text-color              : var(--color-8);
-  --text-color-high         : var(--color-9);
   --text-color-higher       : var(--color-9);
   
   --text-color-link         : var(--color-8);
@@ -40,13 +32,10 @@
   --border-color-low        : var(--color-2);
   --border-color            : var(--color-3);
   --border-color-high       : var(--color-4);
-  --border-color-higher     : var(--color-5);
 }
 
 .theme-dark {
-  --color-zero              : #000;
-  --color-full              : #fff;
-
+  --bg-color-lowest         : var(--color-9);
   --bg-color-lower          : var(--color-8);
   --bg-color-low            : var(--color-7);
   --bg-color                : var(--color-6);
@@ -56,7 +45,6 @@
   --text-color-lower        : var(--color-6);
   --text-color-low          : var(--color-5);
   --text-color              : var(--color-3);
-  --text-color-high         : var(--color-2);
   --text-color-higher       : var(--color-1);
   
   --text-color-link         : var(--color-3);
@@ -66,20 +54,18 @@
   --border-color-low        : var(--color-7);
   --border-color            : var(--color-6);
   --border-color-high       : var(--color-5);
-  --border-color-higher     : var(--color-4);
 }
 
+/* COPY-PASTE the above DARK THEME */
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light) {
-    --color-zero              : #000;
-    --color-full              : #fff;
-
+    --bg-color-lowest         : var(--color-9);
     --bg-color-lower          : var(--color-8);
     --bg-color-low            : var(--color-7);
     --bg-color                : var(--color-6);
     --bg-color-high           : var(--color-2);
     --bg-color-higher         : var(--color-1);
-    
+
     --text-color-lower        : var(--color-6);
     --text-color-low          : var(--color-5);
     --text-color              : var(--color-3);
