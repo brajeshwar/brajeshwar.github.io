@@ -7,10 +7,10 @@ The late 1990s and early 2000s felt like a carnival of possibility. The Web was 
 Looking back now, it’s hard not to feel a sense of nostalgia. Flash is gone, Applets are forgotten, and the Web that once promised infinite creativity is now corralled into frameworks, compliance checklists, and app-store rules. But the lessons from building on those extinct platforms still matter, especially for product builders riding today’s waves of hype.
 
 <figure>
-	<a href="https://album.oinam.com/share/JjH65Winmo8_zrD10B2vTUWjVwwgGyMYNe2IaVA07E2h6OzlmPV30JfoH4kpiFKSfvY"><img class="large" src="/static/2025/macromedia-lego-2005.webp" alt="Macromedia LEGO (2005)" loading="lazy"></a>
-	<figcaption>
-		Three Idiots at the Macromedia Lego Team Meetup (2005).
-	</figcaption>
+  <a href="https://album.oinam.com/2005-macromedia-lego-team"><img class="large" src="/static/2025/macromedia-lego-2005.webp" alt="Macromedia LEGO (2005)" loading="lazy"></a>
+  <figcaption>
+    Three Idiots at the Macromedia Lego Team Meetup (2005).
+  </figcaption>
 </figure>
 
 ## Flash: The Web’s Playground
