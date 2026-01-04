@@ -37,9 +37,10 @@ I block ads in the browser (client) and at the DNS level. The combination of the
 
 These tools help you resolve your internet queries by routing them through their servers worldwide. One of the features included in these services is blocking ads at the DNS level. You can use this and other client-side AdBlockers for a more effective Ad blocking setup.
 
+- [Mullvad DNS over HTTPS and DNS over TLS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls)
+- [AdGuard DNS](https://adguard-dns.io/) / [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) controls all web traffic on your devices, block ads, trackers, and malicious domains.
 - [NextDNS](https://nextdns.io) protects you from all kinds of security threats, blocks ads and trackers on websites and in apps and provides a safe and supervised Internet for kids — on all devices and on all networks.
 - [Control D](https://controld.com) is a modern and customizable DNS service that blocks threats, unwanted content and ads - on all devices.
-- [AdGuard DNS](https://adguard-dns.io/) / [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome) controls all web traffic on your devices, block ads, trackers, and malicious domains.
 - [Pi-Hole](https://pi-hole.net) network-wide ad blocking via your own Linux hardware. [I started with this](/2019/pi-hole-blocking-ads-at-home/).
 
 ## Ad-Blockers
