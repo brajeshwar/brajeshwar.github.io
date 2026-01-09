@@ -1,5 +1,9 @@
 /* Pagefind UI Base Styles */
 .pagefind-ui {
+  margin: var(--space-s) auto;
+}
+
+.pagefind-ui {
   --pagefind-ui-scale: 1;
   --pagefind-ui-primary: #034ad8;
   --pagefind-ui-text: #393939;

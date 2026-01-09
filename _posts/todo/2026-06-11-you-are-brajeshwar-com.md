@@ -1,4 +1,4 @@
-# You are brajeshwar.com, right?
+# You are brajeshwar.com?
 
 In 2010-2011, I was in Mountain View while undergoing an [entrepreneurship course at the Founder Institute](/2011/the-founder-institute-experience/). Well, besides the usual coffee and lunch places, I frequented [Hacker Dojo](https://en.wikipedia.org/wiki/Hacker_Dojo). I remember that my friends and I even did some presentations, and participated in a few [Hackathons](/2025/breaking-the-innovation-theatre/) there.
 
