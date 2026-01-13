@@ -8,6 +8,8 @@ Then came the 2010s, and like many of us swept up in the gospel of digital effic
 
 The world seemed noisier. News felt engineered to provoke. Every headline screamed; every story was laced with masala;[^Masala] every argument had to be packaged as a war. I withdrew. For more than a decade, my relationship with News was like a polite nod to an acquaintance I no longer wanted to speak to.
 
+<img class="full" src="/static/2026/newspaper-in-home-library.jpg" alt="Reading a Newspaper" loading="lazy">
+
 Recently, I picked up the Newspaper again. It started as a trash collector of sorts, instead of the plastic bag, during the Pandemic. After a while, I started reading bits and pieces, here and there. I didn’t return to my old habit of reading every word. Age and sanity have cured me of that. I no longer feel compelled to plough through the political gossip or the sensational crime stories written like screenplay drafts for low-budget thrillers. I skip the masala. I skip the drama. I skip anything that feels breathless or over-seasoned.
 
 But I read again. This time with intention. With distance. With a detached affection. Something about the physical Newspaper still feels honest. Not necessarily the news itself, but the act of reading it. You sit down. You unfold it. You slow yourself to the page’s pace. There is no infinite scroll, no algorithmic trapdoor pulling you deeper. There are edges. There is an end. There is quiet.
@@ -28,7 +30,7 @@ This may be what growing older does. It teaches us to curate not just our time b
 
 I don’t think I’ll ever go back to the way I used to read as a kid. That obsessive scanning, that all-consuming curiosity, that unfiltered consumption, it belongs to a younger mind. But I am grateful that I can return to the practice in a gentler, more thoughtful way.
 
-The world is still loud. The news is still spicy. But I don’t have to be.
+> The world is still loud. The news is still spicy. But I don’t have to be.
 
 All I need is a quiet morning, a cup of chai, and a newspaper waiting to be unfolded. A little ritual revived. A small act of reclaiming myself in a world that keeps trying to speed everything up. Some habits are worth returning to. And some stories read better when they’re printed on paper.
 
