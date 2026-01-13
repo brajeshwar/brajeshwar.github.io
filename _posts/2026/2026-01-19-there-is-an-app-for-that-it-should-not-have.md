@@ -2,7 +2,7 @@
 
 <iframe width="100%" height="auto" src="https://www.youtube.com/embed/qanXK0vWgV4?si=i4JcoTIE3pqt4964" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-We do remember Apple’s iPhone Commercial, “There’s an App for That,” which eventually became a pop culture phrase and the final reason in a company meeting to have “Apps, Lots of Apps.”
+We all remember Apple’s iPhone Commercial, “There’s an App for That.” That eventually became a pop culture phrase and one of the most common reason in a company meeting to have “Apps, Lots of Apps.”
 
 When [smartphones were new](/2008/iphone-3g-is-it-coming-soon-to-india/), the App Store was, in Apple’s own words, “Magic.” Your phone could do things it never could before. Flashlight? App. Banking? App. Taxi? App.
 
