@@ -31,7 +31,7 @@ The app’s user interface is sleek and intuitive. You may not need to be a geek
 
 [Instagram](https://en.wikipedia.org/wiki/Instagram) was released to public on October 6, 2010. I uploaded my [first picture on 10/10/10](https://www.instagram.com/p/faY/). In April 2012, Facebook acquired Instagram for approximately US$1 billion in cash and stock. It was first released for iOS and two years later for Android in 2012.
 
-`Edited on Jun 5, 2025.`
+`Edits: Jun 5, 2025.`
 
 [^iPhone]: The [iPhone](https://en.wikipedia.org/wiki/IPhone) is a line of smartphones developed and marketed by [Apple](https://www.apple.com) that run iOS, the company’s own mobile operating system. The first-generation iPhone was announced by then–Apple CEO and co-founder [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) on January 9, 2007, at Macworld 2007, and launched later that year. India saw the introduction of the iPhone with the second generation of the iPhone, [iPhone 3G in 2008](/2008/iphone-3g-india-22-august/).
 
