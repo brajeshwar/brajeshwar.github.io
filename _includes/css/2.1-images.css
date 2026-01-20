@@ -53,6 +53,7 @@ figure img {
 }
 
 figcaption {
+  max-width: var(--body-width-ideal);
   margin: 0 auto;
   padding: var(--space-2xs) var(--space-3xs);
   
