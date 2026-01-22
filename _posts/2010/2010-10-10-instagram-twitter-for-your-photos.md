@@ -1,12 +1,12 @@
 # Instagram - Twitter for your photos
 
-The iPhone[^iPhone] has been one of the best innovations of all time. The sheer power and magic of apps on iPhone have taken it to the next level. Let’s not forget the ecosystem it has built for our beloved developers to write an app and, at the same time, make money off it!
+The iPhone[^iPhone] has been one of the best innovations of all time. The sheer power and magic of iPhone apps have taken it to the next level. Let’s not forget the ecosystem it has built for our beloved developers to write an app and make money from it!
 
 > Apple allows 70% of revenues from the store to instantly go to the seller of the app, and 30% go to Apple.
 
 There are more than 250,000 third-party applications officially available on the App Store. Android marketplace, for that matter, is chasing it fast!
 
-Earlier this week, I came across a yet another photo-sharing app called [Instagr.am](http://instagr.am/). At the first look, it looks to be a yet another Flickr[^Flickr] app clone or something that does nothing different than what the existing apps would allow me to do. Using it for 3 days, made me change notions and talk about it.
+Earlier this week, I came across yet another photo-sharing app called [Instagr.am](http://instagr.am/). At first glance, it looks to be yet another Flickr[^Flickr] app clone or something that does nothing different than what the existing apps would allow me to do. Using it for 3 days, made me change notions and talk about it.
 
 <div class="gallery" markdown="1">
 - <a href="https://www.instagram.com/p/CV5we/"><img src="/static/2010/instagram-1.jpg"></a>
@@ -17,21 +17,21 @@ Earlier this week, I came across a yet another photo-sharing app called [Instagr
 - <a href="https://www.instagram.com/p/BB6t/"><img src="/static/2010/instagram-6.jpg"></a>
 </div>
 
-Instagram app has a several, Lomography[^Lomo] 'filters' to add fizz to the shots the iPhone takes otherwise. On top of that, it has an icing of a social feature that allows you to share the pictures with Twitter, Facebook, Foursquare, Flickr and Tumblr. Not just that, the pictures get shared within the Instagram network too. Though the network doesn't have too many friends of mine to see who's sharing what, but with time, I am sure, the scene will change.
+The Instagram app has several Lomography[^Lomo] 'filters' to add fizz to the shots the iPhone takes otherwise. On top of that, it has a social feature that allows you to share pictures with Twitter, Facebook, Foursquare, Flickr, and Tumblr. Not just that, the pictures get shared within the Instagram network too. Though the network doesn't have too many of my friends to see who's sharing what, I am sure, with time, the scene will change.
 
 It’s like you take pictures wherever you go and share them across all the major social networks with one central app. Additionally, it can communicate with the Foursquare API. What that means is that when you allow the picture to get a geo-tag, it intelligently updates your FourSquare[^FourSquare] account with the location as the pictures go live!
 
 You can look for your friends on Twitter, Facebook, or even your iPhone contacts to see if they already use Instagram. If you find them, you can add them to the Instagram network and keep track of what, when, and where they share pictures. You can add comments and explore the most popular images from across the people who are already using the app.
 
-One downside is that you cannot save a picture if you like it or wish to set it as your iPhone’s wallpaper.
+What makes this discovery even more compelling is that Instagram itself began as something entirely different. Before this elegant, photo-centric simplicity, it lived as a busy little experiment called **Burbn** (the Flickr-esque naming rage of the time), part check-in app, part social network, part playful distraction, trying earnestly to be everything at once. Users quietly voted with their behavior, ignoring most of it and returning again and again only for the photos. Instead of forcing a grand vision, the founders did the unfashionable thing: they deleted almost everything and listened to what people were actually doing. The result is a product that found its natural shape.
 
 <a href="https://www.instagram.com/p/faY/"><img class="small right" src="/static/2010/instagram-1st-picture-2010-10-10.jpg" alt="Instagram - Oinam’s 1st Picture uploaded on Oct 10, 2010." loading="lazy"></a>
 
-The app’s user interface is sleek and intuitive. You may not need to be a geek to know how it works. It is not an app that one would use and forget. You’ll probably set it to be your default hit when it comes to sharing the next “twitpic.” There are more than a dozen “filters” to apply, and you can publish as many photos as you like for free! The app supports 3G, 3GS, and iPhone 4 phones.
+The app’s user interface is sleek and intuitive. You may not need to be a geek to know how it works. It is not an app that one would use and forget. You’ll probably set it as your default when sharing the next “twitpic.” There are more than a dozen “filters” to apply, and you can publish as many photos as you like for free! The app supports 3G, 3GS, and iPhone 4 phones.
 
-[Instagram](https://en.wikipedia.org/wiki/Instagram) was released to public on October 6, 2010. I uploaded my [first picture on 10/10/10](https://www.instagram.com/p/faY/). In April 2012, Facebook acquired Instagram for approximately US$1 billion in cash and stock. It was first released for iOS and two years later for Android in 2012.
+[Instagram](https://en.wikipedia.org/wiki/Instagram) was released to the public on October 6, 2010. I uploaded my [first picture on 10/10/10](https://www.instagram.com/p/faY/). In April 2012, Facebook acquired Instagram for approximately US$1 billion in cash and stock. It was first released for iOS and two years later for Android in 2012.
 
-`Edits: Jun 5, 2025.`
+`Edits: Jun 5, 2025, Jan 22, 2026.`
 
 [^iPhone]: The [iPhone](https://en.wikipedia.org/wiki/IPhone) is a line of smartphones developed and marketed by [Apple](https://www.apple.com) that run iOS, the company’s own mobile operating system. The first-generation iPhone was announced by then–Apple CEO and co-founder [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) on January 9, 2007, at Macworld 2007, and launched later that year. India saw the introduction of the iPhone with the second generation of the iPhone, [iPhone 3G in 2008](/2008/iphone-3g-india-22-august/).
 
