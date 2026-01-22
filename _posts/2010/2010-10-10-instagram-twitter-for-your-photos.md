@@ -23,7 +23,10 @@ It’s like you take pictures wherever you go and share them across all the majo
 
 You can look for your friends on Twitter, Facebook, or even your iPhone contacts to see if they already use Instagram. If you find them, you can add them to the Instagram network and keep track of what, when, and where they share pictures. You can add comments and explore the most popular images from across the people who are already using the app.
 
-What makes this discovery even more compelling is that Instagram itself began as something entirely different. Before this elegant, photo-centric simplicity, it lived as a busy little experiment called **Burbn** (the Flickr-esque naming rage of the time), part check-in app, part social network, part playful distraction, trying earnestly to be everything at once. Users quietly voted with their behavior, ignoring most of it and returning again and again only for the photos. Instead of forcing a grand vision, the founders did the unfashionable thing: they deleted almost everything and listened to what people were actually doing. The result is a product that found its natural shape.
+{:.aside .right}
+“Instagram began development in San Francisco as Burbn, a mobile check-in app created by [Kevin Systrom](https://en.wikipedia.org/wiki/Kevin_Systrom) and [Mike Krieger](https://en.wikipedia.org/wiki/Mike_Krieger). Realizing that it was too similar to Foursquare, they refocused their app on photo-sharing, which had become a popular feature among its users.” — [Wikipedia](https://en.wikipedia.org/wiki/Instagram)
+
+Before this elegant, photo-centric simplicity, Instagram lived as a busy little experiment called **Burbn** (the Flickr-esque naming rage of the time), part check-in app, part social network, part playful distraction, trying earnestly to be everything at once. Users quietly voted with their behavior, ignoring most of it and returning again and again only for the photos. Instead of forcing a grand vision, the founders did the unfashionable thing: they deleted almost everything and listened to what people were actually doing. The result is a product that found its natural shape.
 
 <a href="https://www.instagram.com/p/faY/"><img class="small right" src="/static/2010/instagram-1st-picture-2010-10-10.jpg" alt="Instagram - Oinam’s 1st Picture uploaded on Oct 10, 2010." loading="lazy"></a>
 
