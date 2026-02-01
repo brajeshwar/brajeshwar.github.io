@@ -25,10 +25,8 @@ footer:
   url: "/hire/"
 - title: Ideas
   url: "/ideas/"
-- title: Privacy
-  url: "/privacy/"
-- title: Terms
-  url: "/terms/"
+- title: Legal
+  url: "/legal/"
 - title: Search
   url: "/search/"
 - title: Newsletter
