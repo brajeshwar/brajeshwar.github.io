@@ -8,7 +8,7 @@
 }
 
 .block-medium {
-  margin: var(--space-l);
+  padding-inline: var(--space-l);
 }
 
 .block-info {
