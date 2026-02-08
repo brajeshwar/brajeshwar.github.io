@@ -12,6 +12,9 @@ The article suggests the idea of Holding pens, which are designated areas in eve
 
 Well, this will always be a `work-in-progress.` However, I have found that “Valet Bowls”[^ValetBowls] are fantastic for holding items, whether temporarily or as more permanent storage containers. For instance, we have a wall-mounted key holder where all keys go by default. It has been more than 10 years since I made my suggestions to the extended families that we all seem to know where to look for keys when we are at each other’s homes.
 
+{:.aside .right}
+“A place for everything and everything in its place.”
+
 We have started using Valet Bowls with good depth to hold items at many locations around the house. When an item is lost, it is very likely in one of them. At times, mostly during weekly or monthly chores, we tend to pick them up and reconcile at their places. For instance, all hair-related items (I have daughters) go in that bowl with all other hair-related stuff. All of the [stationery](/2025/stationery/) goes in a few bowls, so you always know where to look if you want a pen or a pencil, an eraser, or sticky notes.
 
 Others have called it the “take-off,” and I like the thinking behind it. For instance, if you need to drive out, the house keys, the car keys, and other items that go out with you are usually there near the “take-off” places/bowls.
