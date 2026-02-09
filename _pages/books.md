@@ -62,6 +62,7 @@ Here are a few personal tips that worked for me while trying to read/learn the c
 - [Books by the Foot](https://booksbythefoot.com)
 - [Good Books](https://www.goodbooks.io) Recommended by Successful People.
 - [How to Gain More From Your Reading](https://psyche.co/guides/how-to-gain-more-from-reading-by-taking-it-all-in-more-slowly)
+- [Odd Lots Recommended Books](https://odd-lots-books.netlify.app)
 
 
 [^speed-read]: [Speed Reading](https://en.wikipedia.org/wiki/Speed_reading) is the technique of chunking and minimizing subvocalization. The many available speed-reading training programs may utilize books, videos, software, and seminars. There is little scientific evidence regarding speed reading, and as a result its value seems uncertain.
