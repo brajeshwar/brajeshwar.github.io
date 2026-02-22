@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Brajeshwar Prasad
-permalink: /who-is/brajeshwar-prasad/
 ---
 
 # Brajeshwar Prasad
