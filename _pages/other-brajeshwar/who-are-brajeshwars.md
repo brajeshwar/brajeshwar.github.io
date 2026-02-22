@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Other Brajeshwars
+title: Who are Brajeshwar
 ---
 
-# Other Brajeshwars
+# Who are Brajeshwars
 
 Brajeshwar is a rather common Indian Name. I have found a few popular personalities named “Brajeshwar.” It is interesting, and I’m trying to collect the details for fun.
 
