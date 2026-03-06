@@ -32,3 +32,10 @@ https://web.archive.org/web/20001204224100/http://www.useit.com/alertbox/2000102
 
 Macromedia acquired Flash from a company called FutureWave at the end of 1996
 https://cybercultural.com/p/internet-1996/
+
+I started my career as a Programmer and did a lot of programmatic designs. Unfortunately, I’m not artistic. So, my tools of choice for Design were Code and Mathematics.
+Early on, I saw my colleagues working in Flash but didn’t notice anything that interested me. I don’t quite remember the exact chain of events, but I think it all started when I saw a friend writing code called “ASfunction” inside Flash, “What? You can write code to make the drawings do stuff?”
+So, that was the magic; I can code and see things happen in real-time (no compilation, no render). And that was the only thing I did for quite a while.
+Unfortunately, the Flash IDE was a sloth. I spend most of my time writing ActionScript in TextPad and compiling it with a CLI called MTASC (from the same developer behind HAXE.org).[1] If memory serves me well, I used to maintain the ActionScript syntax for TextPad.[2]
+1. https://brajeshwar.com/2005/haxe-programming-language/
+2. https://brajeshwar.com/2002/textpad-syntax-file-for-asmx/

@@ -106,6 +106,7 @@ Of course, the best is **not to tether your kids to a digital lease.** Ultimatel
 
 ### References
 
+- A former student at KTH Royal Institute of Technology has demonstrated how a popular [children’s smartwatch can be fully compromised over the internet](https://www.kth.se/en/om/nyheter/centrala-nyheter/kth-studenten-hackade-klocka-for-barn-1.1461249). In his thesis, [Ethical Hacking of a Smartwatch for Kids: A Hacker’s Playground](https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A2037346&dswid=824), Gustaf Blomqvist conducted an ethical security assessment of a widely sold kids’ smartwatch and found what he describes as severe security flaws.
 - **tim.sh (2025)** [Everyone knows your location: tracking myself down through in-app ads](https://timsh.org/tracking-myself-down-through-in-app-ads/), [read the interesting comments](https://news.ycombinator.com/item?id=42909921) on Hacker News
 - **Kinzoo (2023)** [The pros and cons of smartwatches for children](https://www.kinzoo.com/blog/the-pros-and-cons-of-smartwatches-for-children)
 - **Bleeping Computer (2021)** [Smartwatches for children are a privacy and security nightmare](https://www.bleepingcomputer.com/news/security/smartwatches-for-children-are-a-privacy-and-security-nightmare/)
