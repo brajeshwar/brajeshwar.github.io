@@ -8,5 +8,4 @@ Another Software that made my career, became part of my professional life, and p
 
 Thank You, Aldus PageMaker.
 
-
 [^CorelDRAW]: [CorelDRAW](https://en.wikipedia.org/wiki/CorelDRAW) is a vector graphics editor developed by Corel Corporation. It serves as a digital painting platform, desktop publishing suite, and is commonly used for production art in signmaking, vinyl and laser cutting and engraving, print-on-demand and other industry processes.
