@@ -54,6 +54,7 @@ Here are a few personal tips that worked for me while trying to read/learn the c
 - [LibriVox](https://librivox.org) free public domain Audiobooks.
 - [Wikisource](https://en.wikisource.org/wiki/Main_Page) is the free library that anyone can improve.
 - [The Society of Minds](http://aurellem.org/society-of-mind/) by [Marvin Minsky](https://web.media.mit.edu/~minsky/).
+- [Library of Short Stories](https://www.libraryofshortstories.com) is a Free Online Library for Classic Short Stories.
 
 ### References
 
