@@ -13,11 +13,11 @@ Stick to the [Sequoia Capital](https://sequoiacap.com/article/writing-a-business
 
 A top-tier investor will spend, on average, three to four minutes with a cold deck. In those minutes they are running a rapid pattern-matching exercise against every deal they have ever seen. When your deck uses a non-standard format, it derails that rhythm. Their brain spends cognitive energy figuring out where to look rather than evaluating what you are saying. You have introduced friction at the worst possible moment.
 
-Two frameworks have become the de facto standard for early-stage pitch decks. They differ slightly in emphasis, but both reflect decades of pattern recognition about what investors need to see. Together, they represent the cognitive map most professional investors carry into every meeting.
+Two frameworks have become the de facto standard for early-stage pitch decks. They differ slightly in emphasis, but both reflect decades of pattern recognition about what investors need to see.
 
 ## Sequoia Capital
 
-[Sequoia’s framework](https://sequoiacap.com/article/writing-a-business-plan/), refined through investments in Apple, Google, and Airbnb, is organized around the narrative logic of a great business. It moves from context to solution to market to traction to ask in a clean, logical arc that mirrors how an investor builds conviction.
+[Sequoia’s framework](https://sequoiacap.com/article/writing-a-business-plan/) is organized around the narrative logic of a great business. It moves from context to solution to market to traction to ask in a clean, logical arc that mirrors how an investor builds conviction.
 
 - **Company Purpose:** One sentence. What do you do?
 - **Problem:** The pain you are solving and who feels it.

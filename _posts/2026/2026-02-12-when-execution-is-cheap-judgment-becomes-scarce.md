@@ -50,13 +50,13 @@ Two failure modes come up repeatedly.
 
 **Abdication.** Teams that delegate judgment to systems. “The model says we should focus here.” “The playbook says we do this next.” Models and playbooks are tools for execution. They don’t substitute for thinking.
 
-[Figma](https://www.figma.com)’s enterprise expansion is a clean example. They had data showing demand across dozens of verticals. [Dylan Field](https://en.wikipedia.org/wiki/Dylan_Field) and the team focused on design and product teams first, saying no to marketing teams, engineering teams, and other buyers who wanted in. The data would have supported broader execution. The judgment was to stay narrow until they truly understood one motion.
+[Figma](https://www.figma.com)’s enterprise expansion shows this. They had data showing demand across dozens of verticals. [Dylan Field](https://en.wikipedia.org/wiki/Dylan_Field) and the team focused on design and product teams first, saying no to marketing teams, engineering teams, and other buyers who wanted in. The data would have supported broader execution. The judgment was to stay narrow until they truly understood one motion.
 
 ## Building Judgment Capacity
 
 You can’t scale judgment the way you scale execution, but you can build it.
 
-[Atlassian](https://www.atlassian.com) built one of the most successful enterprise GTM motions by letting individual contributors and small teams buy and deploy their tools without sales involvement. Every other enterprise SaaS company was building outbound teams and going top-down.
+[Atlassian](https://www.atlassian.com) built their enterprise GTM motion by letting individual contributors and small teams buy and deploy their tools without sales involvement. Every other enterprise SaaS company was building outbound teams and going top-down.
 
 {:.aside .right}
 Atlassian’s “No Sales Team” story is famous. What’s less known is how close it came to breaking. In early enterprise pilots, Atlassian noticed deals stalling not because buyers disliked the product, but because procurement departments didn’t trust a company that wouldn’t negotiate.
@@ -72,7 +72,7 @@ The best GTM leaders I know create space for their teams to make real decisions 
 {:.aside .right}
 Snowflake rejected standard ICP thinking. Instead of “data leaders” or “CIOs,” they built an internal persona called “The Skeptic.”
 
-[Frank Slootman](https://en.wikipedia.org/wiki/Frank_Slootman) and the team made precise judgments about where to compete. They focused on data teams at cloud-native companies who were frustrated with existing solutions. That precision meant teams stopped chasing every opportunity, moved faster on the deals that mattered, and sold what was actually real. Competitors could copy Snowflake’s architecture. They couldn’t copy hundreds of well-made decisions about which customers to serve and how.
+[Frank Slootman](https://en.wikipedia.org/wiki/Frank_Slootman) and the team made precise judgments about where to compete. They focused on data teams at cloud-native companies who were frustrated with existing solutions. That precision meant teams stopped chasing every opportunity and moved faster on the ones that mattered. Competitors could copy Snowflake’s architecture. They couldn’t copy hundreds of well-made decisions about which customers to serve and how.
 
 ## What This Means for Enterprise GTM
 
