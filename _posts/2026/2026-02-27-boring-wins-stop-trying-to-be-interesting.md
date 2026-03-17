@@ -1,6 +1,6 @@
 # Boring Wins: Stop Trying to Be Interesting
 
-I’ve been obsessed with studying how enterprises actually hold onto accounts. Not just win them — hold them, grow them, make them impossible to remove.
+I’ve been obsessed with studying how enterprises actually hold onto accounts. Not just win them. Hold them, grow them, make them impossible to remove.
 
 It is never the suave dinner, the Mediterranean resort offsite, or the [Zuora-esque storytelling deck](https://www.zuora.com/resource/best-sales-deck-ever/) that the sales team rehearsed for three weeks. Sales gets you in the door. But the companies that own accounts for a decade? They didn’t do it by being interesting. They did it by being reliably, boringly, impossible to argue against.
 
@@ -12,7 +12,7 @@ That’s a compounding loop most GTM teams never build intentionally.
 
 [Salesforce](https://www.salesforce.com) did a version of this too. The pitch in the early 2000s was “no software,” and that got them in the door. But that’s not why they still own those accounts twenty years later. Quarterly releases that came on schedule. Honest status pages. Support that enterprise IT teams could actually work with. They became the system the forecast ran through, the comp plans referenced. They stayed dominant because they stopped surprising people in bad ways.
 
-[Microsoft](https://www.microsoft.com/) didn’t try to out-engineer [AWS](https://aws.amazon.com) in the cloud. What [Azure](https://azure.microsoft.com/) offered was familiarity — if you were already running Windows servers and Office 365, it was the path of least resistance. Not the most capable option. The least risky one. For large enterprises with procurement committees and risk reviews, those are not the same thing.
+[Microsoft](https://www.microsoft.com/) didn’t try to out-engineer [AWS](https://aws.amazon.com) in the cloud. What [Azure](https://azure.microsoft.com/) offered was familiarity. If you were already running Windows servers and Office 365, it was the path of least resistance. Not the most capable option. The least risky one. For large enterprises with procurement committees and risk reviews, those are not the same thing.
 
 None of these companies won long-term by being the most interesting option. They won by becoming the option no one in the account wanted to argue against.
 
