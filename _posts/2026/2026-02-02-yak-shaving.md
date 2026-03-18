@@ -8,13 +8,13 @@ Most of us live in the second one.
 
 Well, that would be Yak Shaving. It is the noble art of doing seventeen unrelated things so that you can eventually do the one thing you actually wanted to do.
 
-Yak Shaving is the practice of performing a long chain of seemingly irrelevant or trivial tasks that are logically required before you can complete your original task. Many times, it is procrastination, but quite often it is a “productive distraction” with a straight face. I may be genuinely working; unfortunately, just not on the thing I’m supposed to.
+Yak Shaving is the practice of performing a long chain of seemingly irrelevant or trivial tasks that are logically required before you can complete your original task. Many times, it is procrastination, but quite often it is a “productive distraction” with a straight face. I may be genuinely working, but just not on the thing I’m supposed to.
 
 <img class="large" src="/static/2026/yak-shaving-cow-girl.webp" alt="Yak Shaving" loading="lazy">
 
 ## Blame MIT and a Cartoon Yak
 
-The [phrase was coined](https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html) in the 1990s by Carlin J. Vieri, a PhD student at [MIT](https://mit.edu). He borrowed the absurd imagery from a 1991 episode of [The Ren & Stimpy Show](The Ren & Stimpy Show), which referenced a fictional “Yak Shaving Day.” [Archive](https://archive.ph/72MGr)
+The [phrase was coined](https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html) in the 1990s by Carlin J. Vieri, a PhD student at [MIT](https://mit.edu). He borrowed the absurd imagery from a 1991 episode of [The Ren & Stimpy Show](https://en.wikipedia.org/wiki/The_Ren_%26_Stimpy_Show), which referenced a fictional “Yak Shaving Day.” [Archive](https://archive.ph/72MGr)
 
 Engineers, being engineers, looked at this nonsense and said, “Yes! That perfectly describes our lives.”
 
