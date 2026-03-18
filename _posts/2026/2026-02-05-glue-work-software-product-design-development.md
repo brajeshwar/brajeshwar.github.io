@@ -16,7 +16,7 @@ Being glue means handling the tasks that don’t get rewarded or praised during 
 
 ## Unforgiven
 
-The paradox of being glue is that when you do it well, you are invisible. If the project runs smoothly, people assume it was just a “good project.” However, if you stop doing the glue work, the project’s velocity stalls, bugs increase, and morale dips.
+The paradox of being glue is that when you do it well, you are invisible. If the project runs smoothly, people assume it was just a “good project.” But if you stop doing the glue work, the project’s velocity stalls, bugs increase, and morale dips.
 
 It is often unrewarding because traditional performance metrics such as tickets closed, lines of code written, or designs delivered rarely capture the value of “making everyone else 20% more effective.” In many organizations, being the person who “just makes things work” can lead to being passed over for promotions in favor of those who shipped visible features.
 

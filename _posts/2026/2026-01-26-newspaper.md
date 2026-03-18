@@ -28,11 +28,11 @@ We talk a lot about going back to basics, but most of us rarely do it. Restartin
 
 This may be what growing older does. It teaches us to curate not just our time but our minds. It teaches us that information is not wisdom. It teaches us that sometimes the best things in life are the ones we left behind because we thought the future would always be better.
 
-I don’t think I’ll ever go back to the way I used to read as a kid. That obsessive scanning, that all-consuming curiosity, that unfiltered consumption, it belongs to a younger mind. But I am grateful that I can return to the practice in a gentler, more thoughtful way.
+I don’t think I’ll ever go back to the way I used to read as a kid. That obsessive scanning, that all-consuming curiosity, that unfiltered consumption: it belongs to a younger mind. But I am grateful that I can return to the practice in a gentler, more thoughtful way.
 
 > The world is still loud. The news is still spicy. But I don’t have to be.
 
 All I need is a quiet morning, a cup of chai, and a newspaper waiting to be unfolded. A little ritual revived. A small act of reclaiming myself in a world that keeps trying to speed everything up. Some habits are worth returning to. And some stories read better when they’re printed on paper.
 
 
-[^Masala]: The Spices that, we Indians, add to everything to make it "tastier and flavorful."
+[^Masala]: The spices we Indians add to everything to make it tastier and more flavorful.

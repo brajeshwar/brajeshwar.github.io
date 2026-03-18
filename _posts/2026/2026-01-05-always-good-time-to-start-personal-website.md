@@ -65,7 +65,7 @@ Essays, notes, explanations, and observations all belong. Some posts will be sho
 
 The payoff from a personal website arrives without announcements. You gain clarity through repetition. You build credibility by leaving a trail of thought. Opportunities show up from people who have been reading quietly for years.
 
-None of this requires scale but presence. The site becomes a long-lived signal that continues to speak even when you are not publishing.
+None of this requires scale, only presence. The site becomes a long-lived signal that continues to speak even when you are not publishing.
 
 ## This Year is the Right Year
 

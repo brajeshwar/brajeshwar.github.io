@@ -1,8 +1,8 @@
 # Sprezzatura
 
-I have thought of this for a long time, but never knew the correct terminology. Recently, I stumbled on it and its Italian, [Sprezzatura](https://en.wikipedia.org/wiki/Sprezzatura). 
+I have thought of this for a long time, but never knew the correct terminology. Recently, I stumbled on it and it's Italian: [Sprezzatura](https://en.wikipedia.org/wiki/Sprezzatura).
 
-Sprezzatura is the art of making the difficult appear effortless, the art of making something difficult look easy, or maintaining a nonchalant demeanor while performing complex tasks.
+Sprezzatura is the art of making the difficult appear effortless, of maintaining composure while performing the most complex of tasks.
 
 {:.aside .right}
 “A duck glides across the water in perfect calm, while beneath the surface its feet work furiously, unseen.”

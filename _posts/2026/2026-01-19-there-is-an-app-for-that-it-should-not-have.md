@@ -6,7 +6,7 @@ We all remember Apple’s iPhone Commercial, “There’s an App for That.” Th
 
 When [smartphones were new](/2008/iphone-3g-is-it-coming-soon-to-india/), the App Store was, in Apple’s own words, “Magic.” Your phone could do things it never could before. Flashlight? App. Banking? App. Taxi? App.
 
-Star Trek[^StarTrek] was beginning to unfold right in front of our eyes, and we thought it was the start of significant progress towards becoming a multi-planet, multi-star civilization. Unfortunately, that ain’t happening, but we did get an app, when pressing a glowing red gem said — [I Am Rich](https://en.wikipedia.org/wiki/I_Am_Rich).
+Star Trek[^StarTrek] was beginning to unfold right in front of our eyes, and we thought it was the start of significant progress towards becoming a multi-planet, multi-star civilization. Unfortunately, that ain’t happening, but we did get an app, when pressing a glowing red gem said: [I Am Rich](https://en.wikipedia.org/wiki/I_Am_Rich).
 
 Today, that phrase has mutated into something absurd: “There’s an app for everything. Whether it needs one or not.” We have crossed the line from usefulness into excess.
 
@@ -43,7 +43,7 @@ This is not an anti-app manifesto. Apps earn their place when they provide:
 - Offline-first workflows.
 - Device-level performance (camera, audio, sensors).
 
-Maps, messaging, music production, navigation, professional tools. These deserve native apps. A restaurant menu, an event page, a newsletter reader, a support portal? Those deserve a URL — a Website.
+Maps, messaging, music production, navigation, professional tools. These deserve native apps. A restaurant menu, an event page, a newsletter reader, a support portal? Those deserve a URL: a website.
 
 Of course, the App stores made distribution easy. Somewhere along the way, that convenience was mistaken for necessity. Products were designed around install funnels instead of user needs.
 
