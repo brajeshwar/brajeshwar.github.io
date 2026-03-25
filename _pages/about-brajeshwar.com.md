@@ -39,3 +39,8 @@ I have done away with comments, and dicarded a whole lot of other metadata. I ha
 [^MovableType]: [Movable Type](https://en.wikipedia.org/wiki/Movable_Type) is a server-based weblog publishing system originally created by [Benjamin](https://en.wikipedia.org/wiki/Benjamin_Trott) and [Mena Trott](https://en.wikipedia.org/wiki/Mena_Grabowski_Trott) at [Six Apart](https://en.wikipedia.org/wiki/Six_Apart), and first announced on Sep 3, 2001, with version 1.0 following on Oct 8, 2001.
 
 [^WordPress]: [WordPress](https://en.wikipedia.org/wiki/WordPress) is a free, open-source [web content management system](https://en.wikipedia.org/wiki/Web_content_management_system) (CMS) originally developed to publish blogs but now capable of powering everything from traditional websites to forums, media galleries, membership sites, learning management systems, and online stores. Written in PHP and paired with a MySQL or MariaDB database, WordPress is distributed under the GNU General Public License (GPLv2 or later). Its core architecture includes a plugin system—allowing developers to extend functionality—and a template system known as “Themes” for layout and design customization. WordPress was first released on May 27, 2003, by its founders, [Matt Mullenweg](https://en.wikipedia.org/wiki/Matt_Mullenweg) and  [Mike Little](https://en.wikipedia.org/wiki/Mike_Little).
+
+
+<!--
+Should this follow the timeline story like the About page 
+-->
