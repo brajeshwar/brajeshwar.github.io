@@ -9,3 +9,7 @@ Notepad++ development began, in September 2003, by Don Ho, a former Paris Didero
 [Notepad++](https://en.wikipedia.org/wiki/Notepad%2B%2B) was first released on SourceForge on 25 November 2003, as a Windows-only application.
 
 Notepad++ is simple for those who need a straightforward, no-nonsense text editor, yet it offers complex features for hardcore developers who demand syntax highlighting, multi-document tabbing, and support for dozens of programming languages.
+
+## UPDATES
+
+**Apr 29, 2026:** After a 20-year wait, Notepad++ is now available as a [native macOS app](https://notepad-plus-plus-mac.org), following a successful open-source community port of the original Windows codebase. No Wine, no emulation. A full native port for Apple Silicon and Intel Macs. [Download](https://notepad-plus-plus-mac.org).
