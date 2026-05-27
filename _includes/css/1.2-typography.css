@@ -31,6 +31,7 @@ blockquote {
   margin: var(--space-s) auto;
   padding: var(--space-m) var(--space-l);
 
+  font-family: var(--font-family-serif);
   font-size: var(--step-0);
   font-weight: var(--font-weight-light);
   hyphens: none;
@@ -82,6 +83,7 @@ aside, .aside {
   margin: var(--space-2xs);
   padding: var(--space-s) var(--space-m);
 
+  font-family: var(--font-family-serif);
   font-size: var(--step-0);
   font-weight: var(--font-weight-light);
   hyphens: none;
