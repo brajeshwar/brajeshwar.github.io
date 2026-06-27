@@ -1,25 +1,35 @@
-.anchorjs-link {
-  color: inherit !important;
-  text-decoration: none !important;
+/* Heading anchors — vanilla (see assets/scripts/anchors.js).
+   The § link sits in the left margin and reveals on hover / focus. */
+.post > h2,
+.post > h3,
+.post > h4,
+.post > h5,
+.post > h6 {
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  /* Do not display AnchorJS icon for small screens */
-  .anchorjs-link {
-    display: none;
-  }
+.headerlink {
+  position: absolute;
+  left: -1em;
+  width: 1em;
+
+  text-decoration: none;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.16s linear;
 }
 
-*:hover > .anchorjs-link {
-  opacity: 0.5;
-  
-  /* To fade links as they appear, change transition-property from 'color' to 'all' */
-  -webkit-transition: color .16s linear;
-  transition: color .16s linear;
+.post > :is(h2, h3, h4, h5, h6):hover .headerlink,
+.headerlink:focus {
+  opacity: 0.6;
 }
 
-*:hover > .anchorjs-link:hover,
-.anchorjs-link:focus {
-  text-decoration: none !important;
-  opacity: 0.8;
+.headerlink:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* No room in the margin on small screens. */
+@media (max-width: $breakpoint-small) {
+  .headerlink { display: none; }
 }

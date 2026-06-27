@@ -54,9 +54,4 @@ site-nav a:hover, site-nav a:active, site-nav a.active {
   text-decoration: none;
 }
 
-/* mode: light dark */
-mode-toggle {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
+/* Reader settings (font + theme) styled in 8.1-tools-theme-toggle.css */

@@ -5,6 +5,7 @@
 .ruby-lsp
 .sass-cache/
 _site/
+tmp/
 
 # Ignore OS generated files #
 .DS_Store*

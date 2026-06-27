@@ -1,12 +1,32 @@
+/* Optional variable fonts for the reader font selector (Ovellum parity).
+   System sans/serif are the defaults; these download only when the reader
+   picks Inter or Geist (font-display:swap → no load cost otherwise). */
+@font-face {
+  font-family: "Inter var";
+  src: url("/assets/fonts/inter/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist var";
+  src: url("/assets/fonts/geist/Geist-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Libre Baskerville stays available behind --font-serif as an optional
+   upgrade, but is not part of the default reader fonts. */
 @font-face {
   font-family: "Libre Baskerville";
   src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  
-  font-display: swap;              /* no FOIT */
-  unicode-range: U+000-5FF;        /* Latin subset */
-  size-adjust: 98.5%;              /* tune to your fallback (e.g., Georgia) */
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  size-adjust: 98.5%;
 }
 
 @font-face {
@@ -14,7 +34,6 @@
   src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
-
   font-display: swap;
   unicode-range: U+000-5FF;
   size-adjust: 98.5%;
@@ -25,7 +44,6 @@
   src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-
   font-display: swap;
   unicode-range: U+000-5FF;
   size-adjust: 98.5%;

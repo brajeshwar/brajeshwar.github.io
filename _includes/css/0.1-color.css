@@ -1,79 +1,258 @@
-/* 2026: Neutral, https://tailwindcss.com/docs/colors */
+/* ============================================================
+   Theming — ported from Ovellum (ovellum.oss.oinam.com).
+   See _docs/COLOR.md.
+   ------------------------------------------------------------
+   Two ORTHOGONAL axes on <html>:
+     • data-theme   : auto (default) | light | dark   — appearance MODE
+     • data-palette : default | eink | flexoki | nord | solarized — color SCHEME
+   Mode and palette are independent: every palette has a light and a dark
+   form. Palettes re-tint the gray SCALE; mode flips the SEMANTIC tokens
+   light↔dark. "auto" follows prefers-color-scheme.
+   Extra axis: data-accent (custom accent color).
+
+   Token layers:
+     1. raw scale     --color-gray-50..950 (+ white/black) — palettes override
+     2. semantic      --color-bg/surface/fg/accent/border… — map to the scale,
+                      and flip for dark mode
+     3. bridge        the site's legacy tokens (--bg-color-*, --text-color-*,
+                      --border-color-*) + v2027 tokens (--bg,--text,--rule,…)
+                      alias onto the semantic layer, so every component keeps
+                      working and inherits palette + mode for free.
+   ============================================================ */
+
+/* ---- Raw scale (default palette = neutral) ------------------ */
 :root {
-  --color-0: oklch(98.5% 0 0);
-  --color-1: oklch(97% 0 0);
-  --color-2: oklch(92.2% 0 0);
-  --color-3: oklch(87% 0 0);
-  --color-4: oklch(70.8% 0 0);
-  --color-5: oklch(43.9% 0 0);
-  --color-6: oklch(37.1% 0 0);
-  --color-7: oklch(26.8% 0.007 34.298);
-  --color-8: oklch(21.6% 0.006 56.043);
-  --color-9: oklch(14.5% 0 0);
+  --color-white: oklch(100% 0 0);
+  --color-black: oklch(0% 0 0);
+  --color-gray-50:  oklch(98.5% 0 0);
+  --color-gray-100: oklch(97% 0 0);
+  --color-gray-200: oklch(92.2% 0 0);
+  --color-gray-300: oklch(87% 0 0);
+  --color-gray-400: oklch(70.8% 0 0);
+  --color-gray-500: oklch(55.6% 0 0);
+  --color-gray-600: oklch(43.9% 0 0);
+  --color-gray-700: oklch(37.1% 0 0);
+  --color-gray-800: oklch(26.9% 0 0);
+  --color-gray-900: oklch(20.5% 0 0);
+  --color-gray-950: oklch(14.5% 0 0);
+
+  /* semantic — light */
+  --color-primary: var(--color-gray-900);
+  --color-primary-fg: var(--color-gray-50);
+  --color-primary-hover: var(--color-gray-800);
+  --color-accent: var(--color-gray-900);
+  --color-accent-fg: var(--color-gray-50);
+  --color-accent-hover: var(--color-gray-700);
+
+  --color-bg: var(--color-gray-100);
+  --color-surface: var(--color-white);
+  --color-bg-subtle: var(--color-gray-100);
+  --color-bg-muted: var(--color-gray-200);
+  --color-bg-chrome: var(--color-gray-200);
+  --color-fg: var(--color-gray-900);
+  --color-fg-muted: var(--color-gray-700);
+  --color-fg-subtle: var(--color-gray-500);
+
+  --color-border: color-mix(in oklch, var(--color-fg) 10%, transparent);
+  --color-border-strong: color-mix(in oklch, var(--color-fg) 18%, transparent);
+  --color-border-focus: var(--color-gray-500);
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+  --color-code-bg: var(--color-gray-200);
 }
 
-:root, .theme-light {
-  --bg-color-lowest         : var(--color-0);
-  --bg-color-lower          : var(--color-1);
-  --bg-color-low            : var(--color-2);
-  --bg-color                : var(--color-3);
-  --bg-color-high           : var(--color-7);
-  --bg-color-higher         : var(--color-8);
-  
-  --text-color-lower        : var(--color-4);
-  --text-color-low          : var(--color-5);
-  --text-color              : var(--color-7);
-  --text-color-higher       : var(--color-9);
-  
-  --text-color-link         : var(--color-9);
-
-  --border-color-lower      : var(--color-1);
-  --border-color-low        : var(--color-2);
-  --border-color            : var(--color-3);
-  --border-color-high       : var(--color-4);
+/* ---- Palettes (re-tint the scale + accent) ----------------- */
+:root[data-palette="eink"] {
+  --color-gray-50:  oklch(97.4% 0.014 89);
+  --color-gray-100: oklch(95.2% 0.019 91);
+  --color-gray-200: oklch(91.0% 0.025 89);
+  --color-gray-300: oklch(85.6% 0.033 89);
+  --color-gray-400: oklch(73.5% 0.038 91);
+  --color-gray-500: oklch(60.9% 0.028 87);
+  --color-gray-600: oklch(50.6% 0.023 85);
+  --color-gray-700: oklch(40.8% 0.020 83);
+  --color-gray-800: oklch(28.5% 0.015 90);
+  --color-gray-900: oklch(22.3% 0.014 88);
+  --color-gray-950: oklch(17.8% 0.012 92);
+  --color-surface: var(--color-gray-50);
+  --color-accent: oklch(22.3% 0.014 88);
+  --color-accent-fg: oklch(97.4% 0.014 89);
+  --color-accent-hover: oklch(40.8% 0.020 83);
 }
 
-.theme-dark {
-  --bg-color-lowest         : var(--color-9);
-  --bg-color-lower          : var(--color-8);
-  --bg-color-low            : var(--color-7);
-  --bg-color                : var(--color-6);
-  --bg-color-high           : var(--color-2);
-  --bg-color-higher         : var(--color-1);
-  
-  --text-color-lower        : var(--color-6);
-  --text-color-low          : var(--color-5);
-  --text-color              : var(--color-4);
-  --text-color-higher       : var(--color-1);
-  
-  --text-color-link         : var(--color-1);
-
-  --border-color-lower      : var(--color-8);
-  --border-color-low        : var(--color-7);
-  --border-color            : var(--color-6);
-  --border-color-high       : var(--color-5);
+:root[data-palette="flexoki"] {
+  --color-gray-50:  oklch(99.0% 0.016 95);
+  --color-gray-100: oklch(95.4% 0.015 98);
+  --color-gray-200: oklch(91.7% 0.015 98);
+  --color-gray-300: oklch(84.6% 0.014 102);
+  --color-gray-400: oklch(77.2% 0.013 96);
+  --color-gray-500: oklch(61.7% 0.008 89);
+  --color-gray-600: oklch(53.8% 0.008 97);
+  --color-gray-700: oklch(45.3% 0.005 92);
+  --color-gray-800: oklch(27.3% 0.002 68);
+  --color-gray-900: oklch(22.3% 0.002 68);
+  --color-gray-950: oklch(17.0% 0.002 0);
+  --color-surface: var(--color-gray-50);
+  --color-accent: oklch(48.2% 0.131 255);
+  --color-accent-fg: oklch(99.0% 0.016 95);
+  --color-accent-hover: oklch(59.9% 0.110 247);
 }
 
-/* COPY-PASTE the above DARK THEME */
+:root[data-palette="nord"] {
+  --color-gray-50:  oklch(97.3% 0.006 265);
+  --color-gray-100: oklch(95.1% 0.007 261);
+  --color-gray-200: oklch(93.3% 0.010 262);
+  --color-gray-300: oklch(89.9% 0.016 263);
+  --color-gray-400: oklch(76.5% 0.026 263);
+  --color-gray-500: oklch(63.1% 0.036 263);
+  --color-gray-600: oklch(52.3% 0.045 263);
+  --color-gray-700: oklch(45.2% 0.035 264);
+  --color-gray-800: oklch(37.9% 0.029 266);
+  --color-gray-900: oklch(32.4% 0.023 264);
+  --color-gray-950: oklch(29.8% 0.027 267);
+  --color-surface: var(--color-gray-50);
+  --color-accent: oklch(59.4% 0.077 254);
+  --color-accent-fg: oklch(95.1% 0.007 261);
+  --color-accent-hover: oklch(69.7% 0.059 249);
+}
+
+:root[data-palette="solarized"] {
+  --color-gray-50:  oklch(98.7% 0.023 96);
+  --color-gray-100: oklch(97.4% 0.026 90);
+  --color-gray-200: oklch(93.1% 0.026 92);
+  --color-gray-300: oklch(87.0% 0.031 90);
+  --color-gray-400: oklch(69.8% 0.016 197);
+  --color-gray-500: oklch(65.4% 0.020 205);
+  --color-gray-600: oklch(56.8% 0.029 222);
+  --color-gray-700: oklch(52.3% 0.028 219);
+  --color-gray-800: oklch(30.9% 0.052 220);
+  --color-gray-900: oklch(26.7% 0.049 220);
+  --color-gray-950: oklch(23.0% 0.042 222);
+  --color-surface: var(--color-gray-50);
+  --color-accent: oklch(61.5% 0.139 245);
+  --color-accent-fg: oklch(97.4% 0.026 90);
+  --color-accent-hover: oklch(51.3% 0.114 245);
+}
+
+/* ---- Mode: dark remap of the semantic tokens --------------- */
+/* Shared block reused by explicit dark and auto+system-dark. */
+:root[data-theme="dark"],
+:root[data-palette][data-theme="dark"] {
+  --color-bg: var(--color-gray-900);
+  --color-surface: var(--color-gray-800);
+  --color-bg-subtle: var(--color-gray-900);
+  --color-bg-muted: var(--color-gray-800);
+  --color-bg-chrome: var(--color-gray-800);
+  --color-fg: var(--color-gray-100);
+  --color-fg-muted: var(--color-gray-300);
+  --color-fg-subtle: var(--color-gray-500);
+  --color-code-bg: var(--color-gray-950);
+  --color-primary: var(--color-gray-50);
+  --color-primary-fg: var(--color-gray-900);
+  --color-primary-hover: var(--color-gray-200);
+  --color-accent: var(--color-gray-100);
+  --color-accent-fg: var(--color-gray-900);
+  --color-accent-hover: var(--color-gray-300);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root:not(.theme-light) {
-    --bg-color-lowest         : var(--color-9);
-    --bg-color-lower          : var(--color-8);
-    --bg-color-low            : var(--color-7);
-    --bg-color                : var(--color-6);
-    --bg-color-high           : var(--color-2);
-    --bg-color-higher         : var(--color-1);
-
-    --text-color-lower        : var(--color-6);
-    --text-color-low          : var(--color-5);
-    --text-color              : var(--color-4);
-    --text-color-higher       : var(--color-1);
-
-    --text-color-link         : var(--color-1);
-
-    --border-color-lower      : var(--color-8);
-    --border-color-low        : var(--color-7);
-    --border-color            : var(--color-6);
-    --border-color-high       : var(--color-5);
+  :root[data-theme="auto"] {
+    --color-bg: var(--color-gray-900);
+    --color-surface: var(--color-gray-800);
+    --color-bg-subtle: var(--color-gray-900);
+    --color-bg-muted: var(--color-gray-800);
+    --color-bg-chrome: var(--color-gray-800);
+    --color-fg: var(--color-gray-100);
+    --color-fg-muted: var(--color-gray-300);
+    --color-fg-subtle: var(--color-gray-500);
+    --color-code-bg: var(--color-gray-950);
+    --color-primary: var(--color-gray-50);
+    --color-primary-fg: var(--color-gray-900);
+    --color-primary-hover: var(--color-gray-200);
+    --color-accent: var(--color-gray-100);
+    --color-accent-fg: var(--color-gray-900);
+    --color-accent-hover: var(--color-gray-300);
   }
+}
+
+/* ---- Palette-specific dark accent tuning ------------------- */
+:root[data-palette="nord"][data-theme="dark"] {
+  --color-accent: oklch(77.5% 0.062 217);
+  --color-accent-fg: oklch(32.4% 0.023 264);
+  --color-accent-hover: oklch(76.3% 0.048 194);
+}
+:root[data-palette="flexoki"][data-theme="dark"] {
+  --color-accent: oklch(59.9% 0.110 247);
+  --color-accent-fg: oklch(17.0% 0.002 0);
+  --color-accent-hover: oklch(68.1% 0.085 240);
+}
+:root[data-palette="solarized"][data-theme="dark"] {
+  --color-accent: oklch(61.5% 0.139 245);
+  --color-accent-fg: oklch(26.7% 0.049 220);
+  --color-accent-hover: oklch(68.7% 0.119 241);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-palette="nord"][data-theme="auto"] {
+    --color-accent: oklch(77.5% 0.062 217);
+    --color-accent-fg: oklch(32.4% 0.023 264);
+    --color-accent-hover: oklch(76.3% 0.048 194);
+  }
+  :root[data-palette="flexoki"][data-theme="auto"] {
+    --color-accent: oklch(59.9% 0.110 247);
+    --color-accent-fg: oklch(17.0% 0.002 0);
+    --color-accent-hover: oklch(68.1% 0.085 240);
+  }
+  :root[data-palette="solarized"][data-theme="auto"] {
+    --color-accent: oklch(61.5% 0.139 245);
+    --color-accent-fg: oklch(26.7% 0.049 220);
+    --color-accent-hover: oklch(68.7% 0.119 241);
+  }
+}
+
+/* ---- Accent override (custom accent color) ----------------- */
+:root[data-accent][data-accent][data-accent] {
+  --color-accent: var(--ov-accent);
+  --color-accent-hover: color-mix(in oklch, var(--ov-accent) 78%, var(--color-fg));
+  --color-accent-fg: oklch(98.5% 0 0);
+  --color-primary: var(--ov-accent);
+  --color-primary-hover: color-mix(in oklch, var(--ov-accent) 78%, var(--color-fg));
+  --color-primary-fg: oklch(98.5% 0 0);
+}
+
+/* ============================================================
+   Bridge — legacy + v2027 token names alias onto the semantic
+   layer above. Because the semantic tokens flip for mode and
+   re-tint for palette, every existing component inherits both.
+   ============================================================ */
+:root {
+  --bg-color-lowest    : var(--color-surface);
+  --bg-color-lower     : var(--color-bg);
+  --bg-color-low       : var(--color-bg-muted);
+  --bg-color           : var(--color-bg-muted);
+  --bg-color-high      : var(--color-primary);
+  --bg-color-higher    : var(--color-primary);
+
+  --text-color-lower   : var(--color-fg-subtle);
+  --text-color-low     : var(--color-fg-muted);
+  --text-color         : var(--color-fg);
+  --text-color-higher  : var(--color-fg);
+
+  --text-color-link    : var(--color-link);
+
+  --border-color-lower : var(--color-border);
+  --border-color-low   : var(--color-border);
+  --border-color       : var(--color-border);
+  --border-color-high  : var(--color-border-strong);
+
+  /* v2027 semantic tokens */
+  --bg            : var(--color-bg);
+  --bg-subtle     : var(--color-bg-muted);
+  --text          : var(--color-fg);
+  --text-muted    : var(--color-fg-muted);
+  --rule          : var(--color-border);
+  --accent        : var(--color-accent);
+  --accent-hover  : var(--color-accent-hover);
+  --mark          : var(--color-bg-muted);
+  --sidenote-text : var(--color-fg-subtle);
+  --code-bg       : var(--color-code-bg);
 }

@@ -55,12 +55,17 @@ figure img {
 figcaption {
   max-width: var(--body-width-ideal);
   margin: 0 auto;
-  padding: var(--space-2xs) var(--space-3xs);
-  
+  padding: var(--space-2xs) 0;
+
   font-family: var(--font-family-sans-serif);
   font-size: var(--step--1);
-  border-bottom: var(--border-size) var(--border-style) var(--border-color-low);
+  color: var(--text-muted);              /* restrained, per SPEC §4.3 */
+  border-bottom: var(--border-size) var(--border-style) var(--rule);
 }
+
+/* Caption alignment utility — left is the default; opt into center/right. */
+figcaption.center, figure.center figcaption { text-align: center; }
+figcaption.right,  figure.right figcaption  { text-align: right; }
 
 figure:has(figcaption) {}
 
