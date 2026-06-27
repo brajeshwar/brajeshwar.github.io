@@ -22,3 +22,48 @@
   left: 0;
   content: "\21B5";
 }
+
+/* ===== Tufte sidenotes (Phase 2) — see _docs/SIDENOTES.md ==================
+   Progressive enhancement: with JS off (or on narrow screens) the .footnotes
+   block above renders normally at the article foot. On wide screens
+   sidenotes.js adds .has-sidenotes to the article, hides that block, and places
+   an <aside class="sidenote"> in the right margin aligned to each reference. */
+
+.has-sidenotes {
+  position: relative;             /* positioning context for the asides */
+}
+
+.has-sidenotes .footnotes {
+  display: none;                  /* notes now live in the margin */
+}
+
+.sidenote {
+  position: absolute;
+  left: 100%;                     /* just past the reading column's right edge */
+  width: var(--sidenote-width);
+
+  /* reset the generic `aside {}` box treatment — sidenotes are plain margin text */
+  margin: 0 0 0 var(--sidenote-gap);
+  padding: 0;
+  background: none;
+  border-radius: 0;
+
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--step--2);
+  font-weight: var(--font-weight);
+  line-height: var(--scale-small);
+  color: var(--sidenote-text);
+
+  text-align: left;
+  hyphens: auto;
+}
+
+.sidenote p { margin: 0; }
+.sidenote p + p { margin-top: var(--space-2xs); }
+
+.sidenote-ref {
+  margin-right: var(--space-3xs);
+  font-variant-position: super;   /* small raised number where supported */
+  color: var(--text-muted);
+}
+

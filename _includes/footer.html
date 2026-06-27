@@ -1,10 +1,17 @@
-<footer>
-  <nav>
-    {% for item in site.data.nav.footer -%}
-      <a href="{{ item.url }}">{{ item.title }}</a>
+<footer data-pagefind-ignore>
+  <nav class="footer-columns">
+    {% for group in site.data.nav.footer -%}
+    <div class="footer-column">
+      <h2 class="footer-column__heading">{{ group.heading }}</h2>
+      <ul>
+        {% for item in group.links -%}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor -%}
+      </ul>
+    </div>
     {% endfor -%}
   </nav>
-  <p>
+  <p class="footer-colophon">
     <small>
       2001-<span id="year_current"></span>
       (<span id="time_since"></span>,

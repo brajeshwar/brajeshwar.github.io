@@ -1,36 +1,171 @@
-.theme-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+/* Appearance panel (mode + palette + font) — built by appearance.js.
+   UI chrome: sans-serif, semantic tokens only. Mirrors the search panel. */
+appearance-settings {
+  display: inline-flex;
+  align-items: center;
+}
+
+.appearance-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   width: var(--logo-size);
   height: var(--logo-size);
   border-radius: 50%;
+  border: none;
+  background: none;
+
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition-duration) ease;
+}
+
+.appearance-trigger:hover,
+.appearance-trigger:focus-visible {
+  color: var(--text);
+}
+
+.appearance-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--text);
+  opacity: 0.18;
+}
+
+.appearance-panel {
+  position: fixed;
+  z-index: 51;
+  top: 4.75rem;
+  right: var(--space-s);
+
+  width: min(92vw, 20rem);
+  max-height: 80vh;
+  overflow-y: auto;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-color-lower);
-  transition: all 0.3s ease;
+  flex-direction: column;
+  gap: var(--space-s);
+
+  padding: var(--space-m);
+  background: var(--bg);
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 40px -12px var(--text);
+
+  font-family: var(--font-family-sans-serif);
 }
 
-.theme-toggle:hover {
-  color: var(--text-color);
+.appearance-panel[hidden],
+.appearance-backdrop[hidden] {
+  display: none;
 }
 
-.theme-toggle-icon {
-  width: 24px;
-  height: 24px;
+.appearance-group {
   display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.appearance-group__label {
+  font-size: var(--step--2);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.appearance-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs);
+}
+
+.appearance-option {
+  flex: 1 1 auto;
+  padding: var(--space-3xs) var(--space-2xs);
+
+  font-family: inherit;
+  font-size: var(--step--1);
+  line-height: 1.2;
+  white-space: nowrap;
+
+  color: var(--text-muted);
+  background: transparent;
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: color var(--transition-duration) ease,
+              border-color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
+}
+
+.appearance-option:hover {
+  color: var(--text);
+  border-color: var(--border-color-high);
+}
+
+.appearance-option[aria-pressed="true"] {
+  color: var(--color-primary-fg);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.appearance-option:focus-visible {
+  outline: var(--border-size-small) solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Accent swatches */
+.appearance-swatches {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  gap: var(--space-2xs);
 }
 
-.theme-toggle-icon svg {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
+.appearance-swatch {
+  flex: none;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  padding: 0;
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 50%;
+  background: var(--swatch, var(--text));
+  cursor: pointer;
 }
 
-.theme-toggle:hover svg {
-  transform: rotate(30deg);
+.appearance-swatch--default {
+  background: var(--text);
 }
+
+.appearance-swatch[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--text-muted);
+}
+
+.appearance-swatch:focus-visible {
+  outline: var(--border-size-small) solid var(--accent);
+  outline-offset: 2px;
+}
+
+.appearance-swatch--custom {
+  display: inline-flex;
+  line-height: 0;
+  background: none;
+  border: none;
+}
+
+.appearance-swatch--custom input {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  padding: 0;
+  border: var(--border-size) var(--border-style) var(--border-color-high);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.appearance-swatch--custom input::-webkit-color-swatch-wrapper { padding: 0; }
+.appearance-swatch--custom input::-webkit-color-swatch { border: 0; border-radius: 50%; }
+.appearance-swatch--custom input::-moz-color-swatch { border: 0; border-radius: 50%; }

@@ -1,0 +1,132 @@
+/* Header search — trigger + lazy panel. See assets/scripts/search.js + _docs/SEARCH.md.
+   UI chrome, semantic tokens only. */
+site-search {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-search__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--transition-duration) ease;
+}
+
+.site-search__trigger:hover,
+.site-search__trigger:focus-visible {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Dim/scrim that also captures outside clicks to close. */
+.site-search__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--text);
+  opacity: 0.18;
+}
+
+/* Centered command-palette popup (opens in place; ⌘K). */
+.site-search__panel {
+  position: fixed;
+  z-index: 51;
+  top: 12vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(92vw, 40rem);
+  max-height: 72vh;
+  overflow-y: auto;
+
+  padding: var(--space-s);
+  background: var(--bg);
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: var(--border-radius);
+  box-shadow: 0 16px 48px -12px var(--text);
+
+  text-align: left;   /* the panel is inside the centered <header>; reset it */
+}
+
+.site-search__panel[hidden],
+.site-search__backdrop[hidden] {
+  display: none;
+}
+
+.site-search__error {
+  margin: 0;
+  padding: var(--space-2xs) 0;
+  color: var(--text-muted);
+}
+
+/* ⌘K hint badge next to the trigger icon (hidden on coarse pointers). */
+.site-search__hint {
+  margin-left: var(--space-3xs);
+  padding: 1px var(--space-3xs);
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--step--2);
+  line-height: 1.4;
+  color: var(--text-muted);
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: var(--border-radius-small);
+}
+
+@media (max-width: 800px), (pointer: coarse) {
+  .site-search__hint { display: none; }
+}
+
+/* Theme Pagefind's Modular UI with our tokens so results follow the active theme. */
+.site-search__panel {
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--text);
+  --pagefind-ui-background: var(--bg);
+  --pagefind-ui-border: var(--rule);
+  --pagefind-ui-tag: var(--bg-subtle);
+  --pagefind-ui-font: var(--font-family-sans-serif);
+}
+
+.site-search__summary {
+  margin: var(--space-2xs) 0;
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.site-search__summary:empty { display: none; }
+
+/* Result list (Modular UI classes). The whole result block is clickable via a
+   stretched title link; left-aligned, with a hover affordance. */
+.pagefind-modular-list-result {
+  position: relative;                         /* anchor for the stretched link */
+  padding: var(--space-2xs);
+  border-radius: var(--border-radius-small);
+}
+.pagefind-modular-list-result:hover {
+  background: var(--bg-subtle);
+}
+.pagefind-modular-list-result + .pagefind-modular-list-result {
+  border-top: var(--border-size) var(--border-style) var(--rule);
+}
+
+.pagefind-modular-list-title { margin: 0 0 var(--space-3xs); }
+.pagefind-modular-list-link { color: var(--text); text-decoration: none; }
+.pagefind-modular-list-link:hover { text-decoration: underline; }
+
+/* Stretch the title link over the whole result so the entire block is clickable. */
+.pagefind-modular-list-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.pagefind-modular-list-excerpt {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}

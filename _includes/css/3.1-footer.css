@@ -1,16 +1,59 @@
 footer {
-  padding: var(--space-s);
+  padding: var(--space-l) var(--space-s) var(--space-m);
   margin-top: var(--space-xl);
 
   font-size: var(--step--1);
-  text-align: center;
-  text-transform: lowercase;
+  color: var(--text-muted);
 
-  color: var(--text-color-low);
-
-  border-top: var(--border-size) var(--border-style) var(--border-color);
+  border-top: var(--border-size) var(--border-style) var(--rule);
 }
 
-footer nav a {
-  padding: var(--space-3xs);
+/* Column-categorised links (v2027), from _data/nav.yaml `footer`. */
+.footer-columns {
+  max-width: var(--body-width-max);
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-m) var(--space-l);
+}
+
+.footer-column__heading {
+  margin: 0 0 var(--space-2xs);
+
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--step--1);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column li {
+  margin: 0;
+  padding: var(--space-3xs) 0;
+}
+
+.footer-column a {
+  text-decoration: none;
+}
+
+.footer-column a:hover,
+.footer-column a:active {
+  text-decoration: underline;
+}
+
+.footer-colophon {
+  max-width: var(--body-width-max);
+  margin: var(--space-l) auto 0;
+
+  text-align: center;
+  text-transform: lowercase;
+  color: var(--text-muted);
 }

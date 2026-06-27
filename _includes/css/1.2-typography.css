@@ -27,18 +27,20 @@ a:hover, a:active {
   text-decoration-thickness: 1px;
 }
 
+/* Blockquote — Yale e360 style: no background, a quiet left rule, spacing does
+   the separating. See _docs/v2027/SPEC.md §4.3. */
 blockquote {
-  margin: var(--space-s) auto;
-  padding: var(--space-m) var(--space-l);
+  margin: var(--space-m) 0;
+  padding: var(--space-2xs) 0 var(--space-2xs) var(--space-m);
 
   font-family: var(--font-family-serif);
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   font-weight: var(--font-weight-light);
+  font-style: italic;
   hyphens: none;
 
-  color: var(--text-color-higher);
-  background: var(--bg-color-low);
-  border-radius: var(--border-radius);
+  color: var(--text-muted);
+  border-left: var(--border-size-small) var(--border-style) var(--rule);
 }
 
 blockquote p {
