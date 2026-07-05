@@ -215,8 +215,10 @@ accent. All inherit the contrast bump above via the semantic layer.
 
 ## Iterate-later
 - Migrate components off the legacy bridge onto `--color-*` directly (cleanup, optional).
-- **Accent axis** still offers 7 swatches + a custom picker — the most colourful part of an
-  otherwise monotone, compact panel. Candidate to trim if the minimal direction continues.
+
+> **Accent** was trimmed to **Default + Blue + Amber** (a cool + a warm swatch that complement
+> the Cool/Warm palettes); the custom colour picker was removed. Set via `applyAccent` →
+> inline `--ov-accent` + `data-accent="custom"`, persisted as `localStorage('accent')`.
 
 ---
 
