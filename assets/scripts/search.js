@@ -1,5 +1,5 @@
 /* Header search — in-place ⌘K command palette on Pagefind's Modular UI.
- * See _docs/SEARCH.md.
+ * See _docs/search.md.
  *
  * Opens a centered popup in place (never navigates while JS is on). Triggered by
  * the header button OR ⌘K / Ctrl+K; closed by Esc or backdrop. The Modular UI

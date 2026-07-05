@@ -62,7 +62,7 @@ Key conventions to honor:
 
 ## 4. Design language
 
-North stars (for reference, not for copying): **Tufte CSS** (sidenotes), **Yale e360** (clean blockquotes, figure/caption restraint, multi-image splits), **BBC** and **The Walrus** (typographic spacing that needs no ornament), **iDiallo** (article page craft), **Simon Willison's archives** (year-archive pattern).
+North stars (for reference, not for copying): **Tufte CSS** (sidenotes), **Yale e360** (clean blockquotes, figure/caption restraint, multi-image splits), **BBC** and **The Walrus** (typographic spacing that needs no ornament), **iDiallo** (article page craft), **Simon Willison's archives** (year-archive pattern), **Aresluna** (article-page benchmark — margin sidenotes with hover cross-focus, type-scale confidence; see [`inspirations.md`](inspirations.md)).
 
 ### 4.1 Typography
 - **Sans-serif for UI** (header, nav, footer, post meta, theme selector). **Serif for long-form content** (post and page article bodies).

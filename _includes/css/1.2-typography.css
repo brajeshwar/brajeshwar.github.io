@@ -28,7 +28,7 @@ a:hover, a:active {
 }
 
 /* Blockquote — Yale e360 style: no background, a quiet left rule, spacing does
-   the separating. See _docs/v2027/SPEC.md §4.3. */
+   the separating. See _docs/v2027/spec.md §4.3. */
 blockquote {
   margin: var(--space-m) 0;
   padding: var(--space-2xs) 0 var(--space-2xs) var(--space-m);
