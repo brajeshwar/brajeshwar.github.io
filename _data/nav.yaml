@@ -3,43 +3,62 @@ main:
   url: "/about/"
 - title: Archives
   url: "/archives/"
+- title: Now
+  url: "/now/"
 - title: Contact
   url: "/contact/"
 
-# footer is grouped into columns (v2027). Each group renders as a column in the
-# footer; ungrouped flat lists are no longer used. All original links preserved.
+# footer: a flat, centered row of page links (v2027 — simplified from the earlier
+# grouped columns). Order is Brajeshwar's.
 footer:
-- heading: Browse
-  links:
-  - title: Home
-    url: "/"
-  - title: Archives
-    url: "/archives/"
-  - title: Now
-    url: "/now/"
-  - title: Search
-    url: "/search/"
-- heading: Reading
-  links:
-  - title: Books
-    url: "/books/"
-  - title: Film
-    url: "/film/"
-  - title: Ideas
-    url: "/ideas/"
-- heading: About
-  links:
-  - title: About
-    url: "/about/"
-  - title: Hire
-    url: "/hire/"
-  - title: Legal
-    url: "/legal/"
-- heading: Connect
-  links:
-  - title: Newsletter
-    url: "/newsletter/"
-  - title: Feed
-    url: "/feed.xml"
-  - title: Contact
-    url: "/contact/"
+- title: Home
+  url: "/"
+- title: About
+  url: "/about/"
+- title: Archives
+  url: "/archives/"
+- title: Now
+  url: "/now/"
+- title: Search
+  url: "/search/"
+- title: Books
+  url: "/books/"
+- title: Film
+  url: "/film/"
+- title: Ideas
+  url: "/ideas/"
+- title: Hire
+  url: "/hire/"
+- title: Legal
+  url: "/legal/"
+- title: Newsletter
+  url: "/newsletter/"
+- title: Contact
+  url: "/contact/"
+- title: Photos
+  url: "/photos/"   # page not created yet — link is intentional per Brajeshwar
+
+# social: icon links below the page links. icon = _includes/icons/<icon>.svg (inline SVG).
+social:
+- title: RSS
+  url: "/feed.xml"
+  icon: rss
+- title: Twitter
+  url: "https://twitter.com/brajeshwar"
+  icon: twitter
+- title: Github
+  url: "https://github.com/brajeshwar"
+  icon: github
+- title: Mastodon
+  url: "https://margins.oinam.com/@brajeshwar"
+  icon: mastodon
+  rel: me
+- title: Oinam
+  url: "https://oinam.com"
+  icon: oinam
+- title: Memos
+  url: "https://memos.oinam.com"
+  icon: memos
+- title: Instagram
+  url: "https://www.instagram.com/oinam/"
+  icon: instagram

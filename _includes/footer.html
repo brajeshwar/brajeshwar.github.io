@@ -1,54 +1,25 @@
 <footer data-pagefind-ignore>
-  <nav class="footer-columns">
-    {% for group in site.data.nav.footer -%}
-    <div class="footer-column">
-      <h2 class="footer-column__heading">{{ group.heading }}</h2>
-      <ul>
-        {% for item in group.links -%}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor -%}
-      </ul>
-    </div>
+  <nav class="footer-links" aria-label="Pages">
+    {% for item in site.data.nav.footer -%}
+    <a href="{{ item.url }}">{{ item.title }}</a>
     {% endfor -%}
   </nav>
+
+  <nav class="footer-social" aria-label="Elsewhere">
+    {% for item in site.data.nav.social -%}
+    {%- assign icon_file = "icons/" | append: item.icon | append: ".svg" -%}
+    <a href="{{ item.url }}" title="{{ item.title }}" aria-label="{{ item.title }}"{% if item.rel %} rel="{{ item.rel }}"{% endif %}>
+      {%- include {{ icon_file }} -%}
+    </a>
+    {% endfor -%}
+  </nav>
+
   <p class="footer-colophon">
-    <small>
-      2001-<span id="year_current"></span>
-      (<span id="time_since"></span>,
-      {{ site.posts | size }} posts)
-      brajeshwar.com
-    </small>
+    <small>&copy; 2001&ndash;<span id="year_current"></span> Brajeshwar Oinam &middot; {{ site.posts | size }} posts</small>
   </p>
 </footer>
 
 <script>
-  // brajeshwar.com started on Jun 11, 2001
-  const startYear = 2001;
-  const startMonth = 6;
-  const startDay = 11;
-  const startDate = new Date(startYear, startMonth - 1, startDay);
-  const now = new Date();
-
-  let years = now.getFullYear() - startDate.getFullYear();
-  let months = now.getMonth() - (startMonth - 1);
-
-  if (months < 0) {
-      years--;
-      months += 12;
-  }
-
-  let time_since = '';
-  if (years > 0) {
-      time_since += `${years} year${years > 1 ? 's' : ''}`;
-  }
-  if (months > 0) {
-      if (time_since) time_since += ' and ';
-      time_since += `${months} month${months > 1 ? 's' : ''}`;
-  }
-  if (!time_since) time_since = '0 months';
-
-  document.getElementById("time_since").textContent = time_since;
-
-  // Output current year
-  document.getElementById("year_current").textContent = now.getFullYear();
+  // Copyright year — keeps "2001–<now>" current without a rebuild.
+  document.getElementById('year_current').textContent = new Date().getFullYear();
 </script>
