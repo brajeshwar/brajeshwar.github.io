@@ -59,7 +59,7 @@ body, pages, articles) — header/footer keep the base scale. Mechanism (`0.0-co
 raw clamps are `--step-N-base`; `:root` aliases `--step-N: var(--step-N-base)` (used by
 header/footer), and `main` redefines `--step-N: calc(var(--step-N-base) * var(--text-scale))`.
 So every element that uses `--step-*` in content scales automatically — no per-element rules.
-Values: `xs` 0.88 · `s` 0.94 · **m 1 (default, no attribute)** · `l` 1.09 · `xl` 1.19. Persisted
+Values are **symmetric around the middle**: `xs` 0.85 · `s` 0.925 · **m 1 (default, middle, no attribute)** · `l` 1.075 · `xl` 1.15 (±0.075 / ±0.15). Persisted
 as `localStorage('textsize')`; applied before paint by the no-flash snippet.
 
 **Interface vs content (Brajeshwar's model).** The reader's font choice applies to **all

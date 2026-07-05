@@ -138,11 +138,11 @@ appearance-settings {
   padding-inline: 0;
   line-height: 1;
 }
-.appearance-options--textsize .appearance-option[data-opt="xs"] { font-size: 0.72rem; }
-.appearance-options--textsize .appearance-option[data-opt="s"]  { font-size: 0.85rem; }
+.appearance-options--textsize .appearance-option[data-opt="xs"] { font-size: 0.75rem; }
+.appearance-options--textsize .appearance-option[data-opt="s"]  { font-size: 0.875rem; }
 .appearance-options--textsize .appearance-option[data-opt="m"]  { font-size: 1rem; }
-.appearance-options--textsize .appearance-option[data-opt="l"]  { font-size: 1.18rem; }
-.appearance-options--textsize .appearance-option[data-opt="xl"] { font-size: 1.38rem; }
+.appearance-options--textsize .appearance-option[data-opt="l"]  { font-size: 1.125rem; }
+.appearance-options--textsize .appearance-option[data-opt="xl"] { font-size: 1.25rem; }
 
 /* Accent swatches */
 .appearance-swatches {
