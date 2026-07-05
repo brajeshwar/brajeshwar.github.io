@@ -50,16 +50,21 @@ Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → 
 [data-font="inter"] { --font-body: "Inter var", var(--font-sans); }
 [data-font="geist"] { --font-body: "Geist var", var(--font-sans); }
 ```
-- `body { font-family: var(--font-body); }` (`1.1-base.css`) — applies the choice **site-wide**,
-  like Ovellum (headings, nav, footer all follow). Post meta (`.post time`) stays sans via
-  `4.1-posts.css`.
+**Interface vs content (Brajeshwar's model).** The reader's font choice is for **reading
+content only** — it does **not** restyle the UI chrome:
+- `body { font-family: var(--font-sans); }` (`1.1-base.css`) — the **interface** font. Header,
+  footer, home, nav all stay system sans regardless of the choice.
+- `.container-ideal article { font-family: var(--font-body); }` (`1.1-base.css`) — the reader's
+  choice applies to **post/page article prose + its headings** only.
+- **Sidenotes** (`.sidenote`/`.sidenote-inline`) and **post meta** (`.post time`) re-assert sans
+  on top of that, so they stay sans even inside a serif article. Blockquotes **inherit** their
+  context (serif inside a serif article, sans elsewhere).
 - Set on `<html>` by `appearance.js`, persisted in `localStorage('font')`, applied before first
   paint by the no-flash snippet (`sans` = no attribute = default).
 
 > History: `cd3227e0` made posts sans; a Phase-1 draft flipped to serif; then a Reader-style
-> Sans/Serif/Mono selector; **now** the Ovellum font axis (Sans/Serif/Inter/Geist), site-wide.
-> If you want UI pinned to sans regardless of choice, move `font-family: var(--font-body)` off
-> `body` and onto `.container-ideal article` instead.
+> Sans/Serif/Mono selector; then the Ovellum font axis (Sans/Serif/Inter/Geist) applied
+> site-wide; **now** scoped to article content so the interface is always sans (this section).
 
 ## Type scale (fluid, Utopia)
 `0.0-config.css`, generated at <https://utopia.fyi> (320px @18px/1.2 → 1240px @20px/1.25).
@@ -177,6 +182,13 @@ Because the default is monotone, **link affordance is the underline, not colour*
 quiet at rest, thickening to `--text-color` on hover/focus. Target body contrast **WCAG AA+**
 (4.5:1, toward 7:1). Don't push muted grays below legible contrast — `--text-color-low` /
 `-lower` are for hierarchy, not for hiding text.
+
+The text tiers were **darkened one step for higher overall contrast** (Brajeshwar): in light,
+`--color-fg` gray-900 → **gray-950**, `--color-fg-muted` gray-700 → **gray-800**,
+`--color-fg-subtle` gray-500 → **gray-600**; in dark (both `[data-theme=dark]` and the
+`auto` media query), the same tiers move brighter (`--color-fg` gray-100 → **gray-50**,
+`-muted` gray-300 → **gray-200**, `-subtle` gray-500 → **gray-400**). Backgrounds unchanged.
+Because these are semantic tokens over the re-tinted scale, **every palette inherits the bump**.
 
 ## Palettes (source values in `0.1-color.css`)
 - **default** — **monotone grayscale** (the base `:root`); the resting theme.
