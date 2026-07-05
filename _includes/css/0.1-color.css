@@ -1,14 +1,21 @@
 /* ============================================================
    Theming — ported from Ovellum (ovellum.oss.oinam.com).
-   See _docs/COLOR.md.
+   See _docs/styles.md.
    ------------------------------------------------------------
+   DEFAULT THEME = MONOTONE GRAYSCALE (by design). The base palette below is
+   pure zero-chroma gray — oklch(L 0 0) — and the default accent is gray too
+   (--color-accent: --color-gray-900), so even links carry no hue. Link
+   affordance comes from the UNDERLINE, not colour (see 1.2-typography.css).
+   Colour is strictly opt-in: pick a tinted palette (eink/flexoki/nord/
+   solarized) or set an accent via the appearance panel. Keep the base monotone.
+
    Two ORTHOGONAL axes on <html>:
      • data-theme   : auto (default) | light | dark   — appearance MODE
-     • data-palette : default | eink | flexoki | nord | solarized — color SCHEME
+     • data-palette : default (monotone) | eink | flexoki | nord | solarized — color SCHEME
    Mode and palette are independent: every palette has a light and a dark
    form. Palettes re-tint the gray SCALE; mode flips the SEMANTIC tokens
    light↔dark. "auto" follows prefers-color-scheme.
-   Extra axis: data-accent (custom accent color).
+   Extra axis: data-accent (custom accent color — opt-in colour).
 
    Token layers:
      1. raw scale     --color-gray-50..950 (+ white/black) — palettes override
