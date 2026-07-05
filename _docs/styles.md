@@ -38,18 +38,27 @@ Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → 
 - **"Libre Baskerville"** (`assets/fonts/libre-baskerville/*.woff2`, latin subset,
   regular/italic/bold, `size-adjust: 98.5%`) — **the reader "Serif" font** (`[data-font="serif"]`),
   with the system serif stack as its fallback while loading / on failure.
-- **"Inter var"** (`inter/InterVariable.woff2`) and **"Geist var"** (`geist/Geist-Variable.ttf`),
-  `font-weight: 100 900` — the Inter / Geist reader choices.
+- **"Geist var"** (`geist/Geist-Variable.ttf`, `font-weight: 100 900`) — **the reader
+  "Sans-Serif" font**. (Inter was removed.)
 
-### The `[data-font]` axis
+### The `[data-font]` axis — three panel choices
+The panel labels map to values: **Default** = `sans` (system stack, **no webfont**, fast),
+**Sans-Serif** = `geist`, **Serif** = `serif` (Libre Baskerville).
 ```css
 /* 0.0-config.css */
-:root { --font-body: var(--font-sans); }   /* default */
+:root { --font-body: var(--font-sans); }   /* Default — no attribute, system sans */
 [data-font="sans"]  { --font-body: var(--font-sans); }
-[data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); }
-[data-font="inter"] { --font-body: "Inter var", var(--font-sans); }
-[data-font="geist"] { --font-body: "Geist var", var(--font-sans); }
+[data-font="geist"] { --font-body: "Geist var", var(--font-sans); }        /* "Sans-Serif" */
+[data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); } /* "Serif" */
 ```
+
+### Text size (Kindle-style) — `[data-text-size]`
+Five "A" buttons in the appearance panel, growing left → right, default in the middle.
+Sets `--text-scale` (`0.0-config.css`), applied to the **reading column only** — body,
+headings, and blockquote scale proportionally (`.container-ideal article …` in `1.1-base.css`);
+the rest of the site keeps the fluid Utopia scale. Values: `xs` 0.88 · `s` 0.94 · **m 1 (default,
+no attribute)** · `l` 1.09 · `xl` 1.19. Persisted as `localStorage('textsize')`; applied before
+paint by the no-flash snippet.
 **Interface vs content (Brajeshwar's model).** The reader's font choice is for **reading
 content only** — it does **not** restyle the UI chrome:
 - `body { font-family: var(--font-sans); }` (`1.1-base.css`) — the **interface** font. Header,
@@ -120,7 +129,7 @@ Theming is split into **two independent axes**, both set on `<html>`:
 | Axis | Attribute | Values | What it controls |
 |---|---|---|---|
 | **Mode** | `data-theme` | `auto` (default) · `light` · `dark` | light ↔ dark (appearance) |
-| **Palette** | `data-palette` | `default` · `eink` · `flexoki` · `nord` · `solarized` | the colour scheme / hue |
+| **Palette** | `data-palette` | `default` · `nord` (Cool) · `eink` (Warm) | the colour scheme / hue |
 
 They compose freely: **every palette has a light and a dark form**. "Nord + Dark",
 "Solarized + Light", "E-ink + Auto" all work. `auto` follows `prefers-color-scheme`;
@@ -191,12 +200,12 @@ The text tiers were **darkened one step for higher overall contrast** (Brajeshwa
 Because these are semantic tokens over the re-tinted scale, **every palette inherits the bump**.
 
 ## Palettes (source values in `0.1-color.css`)
-- **default** — **monotone grayscale** (the base `:root`); the resting theme.
-- **eink** — warm paper (replaces the old "sepia"); the *warmer vintage tone* for easier reading.
-- **flexoki** — warm paper, blue accent (Flexoki).
-- **nord** — cool blue-slate.
-- **solarized** — Solarized base tones.
-Each defines `--color-gray-*` + `--color-surface` + accent; dark accents tuned per palette.
+Three panel choices (Brajeshwar trimmed from five; Flexoki + Solarized removed):
+- **Default** (`default`) — **monotone grayscale** (the base `:root`); the resting theme.
+- **Cool** (`nord`) — cool blue-slate (Nord).
+- **Warm** (`eink`) — warm paper / sepia (the Kindle-style warm read).
+Each tinted palette redefines `--color-gray-*` + `--color-surface` + accent; nord tunes its dark
+accent. All inherit the contrast bump above via the semantic layer.
 
 ## Verified (live, 1440px)
 - [x] Default = light, neutral, sans — bg `gray-100`, fg `gray-900`.
@@ -205,8 +214,9 @@ Each defines `--color-gray-*` + `--color-surface` + accent; dark accents tuned p
 - [x] Builds clean; inlined CSS ~29 KB (under the 42 KB budget).
 
 ## Iterate-later
-- **Text-size axis** — Ovellum's `data-text-size` scales `--ov-text-scale`; not wired because the site uses its own Utopia `--step-*` scale. Would need a base-size multiplier.
 - Migrate components off the legacy bridge onto `--color-*` directly (cleanup, optional).
+- **Accent axis** still offers 7 swatches + a custom picker — the most colourful part of an
+  otherwise monotone, compact panel. Candidate to trim if the minimal direction continues.
 
 ---
 

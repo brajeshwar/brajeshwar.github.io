@@ -15,8 +15,8 @@
 <meta name="color-scheme" content="light dark">
 <meta name="fediverse:creator" content="@brajeshwar@margins.oinam.com">
 
-<!-- No-flash: apply the reader's saved mode + palette + font + accent before first paint. -->
-<script>(function(){try{var d=document.documentElement,g=localStorage,t=g.getItem('theme'),p=g.getItem('palette'),f=g.getItem('font'),a=g.getItem('accent');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(p&&p!=='default')d.dataset.palette=p;if(f&&f!=='sans')d.dataset.font=f;if(a){d.style.setProperty('--ov-accent',a);d.dataset.accent='custom';}}catch(e){}})();</script>
+<!-- No-flash: apply the reader's saved mode + palette + font + text size + accent before first paint. -->
+<script>(function(){try{var d=document.documentElement,g=localStorage,t=g.getItem('theme'),p=g.getItem('palette'),f=g.getItem('font'),s=g.getItem('textsize'),a=g.getItem('accent');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(p&&p!=='default')d.dataset.palette=p;if(f&&f!=='sans')d.dataset.font=f;if(s&&s!=='m')d.dataset.textSize=s;if(a){d.style.setProperty('--ov-accent',a);d.dataset.accent='custom';}}catch(e){}})();</script>
 
 <link rel="archives" href="{{ site.baseurl | prepend: site.url }}/archives/">
 <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url }}">

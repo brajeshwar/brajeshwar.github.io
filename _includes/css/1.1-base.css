@@ -66,6 +66,18 @@ main,
   font-family: var(--font-body);
 }
 
+/* Text size (Kindle-style, --text-scale via [data-text-size]) scales the whole
+   reading column proportionally — body, headings, and blockquote — while the rest
+   of the site keeps the fluid Utopia scale. */
+.container-ideal article        { font-size: calc(var(--step-0)  * var(--text-scale)); }
+.container-ideal article h1     { font-size: calc(var(--step-3)  * var(--text-scale)); }
+.container-ideal article h2     { font-size: calc(var(--step-2)  * var(--text-scale)); }
+.container-ideal article h3     { font-size: calc(var(--step-1)  * var(--text-scale)); }
+.container-ideal article h4     { font-size: calc(var(--step-0)  * var(--text-scale)); }
+.container-ideal article h5     { font-size: calc(var(--step--1) * var(--text-scale)); }
+.container-ideal article h6     { font-size: calc(var(--step--2) * var(--text-scale)); }
+.container-ideal article blockquote { font-size: calc(var(--step-1) * var(--text-scale)); }
+
 hr {
   padding: 0;
   margin: var(--space) auto;

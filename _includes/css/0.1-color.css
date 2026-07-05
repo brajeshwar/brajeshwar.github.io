@@ -6,12 +6,12 @@
    pure zero-chroma gray — oklch(L 0 0) — and the default accent is gray too
    (--color-accent: --color-gray-900), so even links carry no hue. Link
    affordance comes from the UNDERLINE, not colour (see 1.2-typography.css).
-   Colour is strictly opt-in: pick a tinted palette (eink/flexoki/nord/
-   solarized) or set an accent via the appearance panel. Keep the base monotone.
+   Colour is strictly opt-in: pick a tinted palette (nord = Cool, eink = Warm)
+   or set an accent via the appearance panel. Keep the base monotone.
 
    Two ORTHOGONAL axes on <html>:
      • data-theme   : auto (default) | light | dark   — appearance MODE
-     • data-palette : default (monotone) | eink | flexoki | nord | solarized — color SCHEME
+     • data-palette : default (monotone) | nord (Cool) | eink (Warm/sepia) — color SCHEME
    Mode and palette are independent: every palette has a light and a dark
    form. Palettes re-tint the gray SCALE; mode flips the SEMANTIC tokens
    light↔dark. "auto" follows prefers-color-scheme.
@@ -87,24 +87,6 @@
   --color-accent-hover: oklch(40.8% 0.020 83);
 }
 
-:root[data-palette="flexoki"] {
-  --color-gray-50:  oklch(99.0% 0.016 95);
-  --color-gray-100: oklch(95.4% 0.015 98);
-  --color-gray-200: oklch(91.7% 0.015 98);
-  --color-gray-300: oklch(84.6% 0.014 102);
-  --color-gray-400: oklch(77.2% 0.013 96);
-  --color-gray-500: oklch(61.7% 0.008 89);
-  --color-gray-600: oklch(53.8% 0.008 97);
-  --color-gray-700: oklch(45.3% 0.005 92);
-  --color-gray-800: oklch(27.3% 0.002 68);
-  --color-gray-900: oklch(22.3% 0.002 68);
-  --color-gray-950: oklch(17.0% 0.002 0);
-  --color-surface: var(--color-gray-50);
-  --color-accent: oklch(48.2% 0.131 255);
-  --color-accent-fg: oklch(99.0% 0.016 95);
-  --color-accent-hover: oklch(59.9% 0.110 247);
-}
-
 :root[data-palette="nord"] {
   --color-gray-50:  oklch(97.3% 0.006 265);
   --color-gray-100: oklch(95.1% 0.007 261);
@@ -121,24 +103,6 @@
   --color-accent: oklch(59.4% 0.077 254);
   --color-accent-fg: oklch(95.1% 0.007 261);
   --color-accent-hover: oklch(69.7% 0.059 249);
-}
-
-:root[data-palette="solarized"] {
-  --color-gray-50:  oklch(98.7% 0.023 96);
-  --color-gray-100: oklch(97.4% 0.026 90);
-  --color-gray-200: oklch(93.1% 0.026 92);
-  --color-gray-300: oklch(87.0% 0.031 90);
-  --color-gray-400: oklch(69.8% 0.016 197);
-  --color-gray-500: oklch(65.4% 0.020 205);
-  --color-gray-600: oklch(56.8% 0.029 222);
-  --color-gray-700: oklch(52.3% 0.028 219);
-  --color-gray-800: oklch(30.9% 0.052 220);
-  --color-gray-900: oklch(26.7% 0.049 220);
-  --color-gray-950: oklch(23.0% 0.042 222);
-  --color-surface: var(--color-gray-50);
-  --color-accent: oklch(61.5% 0.139 245);
-  --color-accent-fg: oklch(97.4% 0.026 90);
-  --color-accent-hover: oklch(51.3% 0.114 245);
 }
 
 /* ---- Mode: dark remap of the semantic tokens --------------- */
@@ -188,31 +152,11 @@
   --color-accent-fg: oklch(32.4% 0.023 264);
   --color-accent-hover: oklch(76.3% 0.048 194);
 }
-:root[data-palette="flexoki"][data-theme="dark"] {
-  --color-accent: oklch(59.9% 0.110 247);
-  --color-accent-fg: oklch(17.0% 0.002 0);
-  --color-accent-hover: oklch(68.1% 0.085 240);
-}
-:root[data-palette="solarized"][data-theme="dark"] {
-  --color-accent: oklch(61.5% 0.139 245);
-  --color-accent-fg: oklch(26.7% 0.049 220);
-  --color-accent-hover: oklch(68.7% 0.119 241);
-}
 @media (prefers-color-scheme: dark) {
   :root[data-palette="nord"][data-theme="auto"] {
     --color-accent: oklch(77.5% 0.062 217);
     --color-accent-fg: oklch(32.4% 0.023 264);
     --color-accent-hover: oklch(76.3% 0.048 194);
-  }
-  :root[data-palette="flexoki"][data-theme="auto"] {
-    --color-accent: oklch(59.9% 0.110 247);
-    --color-accent-fg: oklch(17.0% 0.002 0);
-    --color-accent-hover: oklch(68.1% 0.085 240);
-  }
-  :root[data-palette="solarized"][data-theme="auto"] {
-    --color-accent: oklch(61.5% 0.139 245);
-    --color-accent-fg: oklch(26.7% 0.049 220);
-    --color-accent-hover: oklch(68.7% 0.119 241);
   }
 }
 
