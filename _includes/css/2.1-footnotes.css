@@ -23,7 +23,7 @@
   content: "\21B5";
 }
 
-/* ===== Tufte sidenotes (Phase 2) — see _docs/SIDENOTES.md ==================
+/* ===== Tufte sidenotes (Phase 2) — see _docs/sidenotes.md ==================
    Progressive enhancement: with JS off (or on narrow screens) the .footnotes
    block above renders normally at the article foot. On wide screens
    sidenotes.js adds .has-sidenotes to the article, hides that block, and places
@@ -66,4 +66,51 @@
   font-variant-position: super;   /* small raised number where supported */
   color: var(--text-muted);
 }
+
+/* ===== Aresluna-inspired wayfinding — see _docs/v2027/inspirations.md ======
+   Cross-focus: sidenotes.js toggles .sidenote-focus on the article and
+   .is-active on the matching reference + sidenote pair. The pair lights up;
+   every other sidenote dims. */
+
+.sidenote {
+  transition: opacity var(--transition-duration), color var(--transition-duration);
+}
+
+.sidenote-focus .sidenote:not(.is-active) {
+  opacity: var(--opacity-lower);
+}
+
+.sidenote.is-active {
+  color: var(--text-color);
+}
+
+sup[id^="fnref"].is-active a,
+sup[id^="fnref"].is-open a {
+  color: var(--accent-hover);
+  background: var(--mark);
+  border-radius: var(--border-radius-tiny);
+}
+
+/* Reveal-in-place: on narrow screens (sidenotes folded back) a tapped
+   reference opens its note as this inline panel right below the current
+   block; tapping the panel dismisses it. An <aside>, so reset the generic
+   aside box treatment the same way .sidenote does. */
+
+.sidenote-inline {
+  margin: var(--space-2xs) 0 var(--space-xs);
+  padding: var(--space-2xs) var(--space-xs);
+  background: var(--bg-color-low);
+  border-radius: var(--border-radius);
+
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--step--1);
+  font-weight: var(--font-weight);
+  line-height: var(--scale-small);
+  color: var(--sidenote-text);
+  hyphens: auto;
+  cursor: pointer;
+}
+
+.sidenote-inline p { margin: 0; }
+.sidenote-inline p + p { margin-top: var(--space-2xs); }
 
