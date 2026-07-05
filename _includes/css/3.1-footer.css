@@ -1,59 +1,76 @@
 footer {
-  padding: var(--space-l) var(--space-s) var(--space-m);
-  margin-top: var(--space-xl);
-
-  font-size: var(--step--1);
-  color: var(--text-muted);
+  /* Align with the content band; thin subtle top rule separates it from the body. */
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin: var(--space-2xl) auto 0;
+  padding: var(--space-l) 0 var(--space-xl);
 
   border-top: var(--border-size) var(--border-style) var(--rule);
+
+  text-align: center;
+  color: var(--text-muted);
 }
 
-/* Column-categorised links (v2027), from _data/nav.yaml `footer`. */
-.footer-columns {
-  max-width: var(--body-width-max);
-  margin-inline: auto;
+/* Page links — one centred, wrapping row. */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3xs) var(--space-s);
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  gap: var(--space-m) var(--space-l);
-}
-
-.footer-column__heading {
-  margin: 0 0 var(--space-2xs);
-
-  font-family: var(--font-family-sans-serif);
   font-size: var(--step--1);
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text);
 }
 
-.footer-column ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.footer-links a,
+.footer-links a:visited {
+  color: var(--text-color-lower);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
 }
 
-.footer-column li {
-  margin: 0;
-  padding: var(--space-3xs) 0;
-}
-
-.footer-column a {
+.footer-links a:hover,
+.footer-links a:active {
+  color: var(--text-color-higher);
   text-decoration: none;
 }
 
-.footer-column a:hover,
-.footer-column a:active {
-  text-decoration: underline;
+/* Social icons — centred row below the links. */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2xs);
+
+  margin-top: var(--space-m);
 }
 
-.footer-colophon {
-  max-width: var(--body-width-max);
-  margin: var(--space-l) auto 0;
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xs);
 
-  text-align: center;
-  text-transform: lowercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  color: var(--text);
+}
+
+.footer-social svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Copyright — the last line. */
+.footer-colophon {
+  margin: var(--space-l) 0 0;
+  font-size: var(--step--2);
   color: var(--text-muted);
 }
