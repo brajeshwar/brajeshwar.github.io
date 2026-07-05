@@ -1,22 +1,27 @@
 <footer data-pagefind-ignore>
-  <nav class="footer-links" aria-label="Pages">
-    {% for item in site.data.nav.footer -%}
-    <a href="{{ item.url }}">{{ item.title }}</a>
-    {% endfor -%}
-  </nav>
+  <div class="footer-inner">
+    <nav class="footer-links" aria-label="Pages">
+      {% for group in site.data.nav.footer -%}
+      {%- unless forloop.first %}<span class="footer-links__sep" aria-hidden="true">&bull;</span>{% endunless -%}
+      {% for item in group.links -%}
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor -%}
+      {% endfor -%}
+    </nav>
 
-  <nav class="footer-social" aria-label="Elsewhere">
-    {% for item in site.data.nav.social -%}
-    {%- assign icon_file = "icons/" | append: item.icon | append: ".svg" -%}
-    <a href="{{ item.url }}" title="{{ item.title }}" aria-label="{{ item.title }}"{% if item.rel %} rel="{{ item.rel }}"{% endif %}>
-      {%- include {{ icon_file }} -%}
-    </a>
-    {% endfor -%}
-  </nav>
+    <nav class="footer-social" aria-label="Elsewhere">
+      {% for item in site.data.nav.social -%}
+      {%- assign icon_file = "icons/" | append: item.icon | append: ".svg" -%}
+      <a href="{{ item.url }}" title="{{ item.title }}" aria-label="{{ item.title }}"{% if item.rel %} rel="{{ item.rel }}"{% endif %}>
+        {%- include {{ icon_file }} -%}
+      </a>
+      {% endfor -%}
+    </nav>
 
-  <p class="footer-colophon">
-    <small>&copy; 2001&ndash;<span id="year_current"></span> Brajeshwar Oinam &middot; {{ site.posts | size }} posts</small>
-  </p>
+    <p class="footer-colophon">
+      <small>&copy; 2001&ndash;<span id="year_current"></span> Brajeshwar Oinam &middot; {{ site.posts | size }} posts</small>
+    </p>
+  </div>
 </footer>
 
 <script>
