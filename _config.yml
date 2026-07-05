@@ -67,5 +67,12 @@ collections:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - node_modules        # defining `exclude` drops Jekyll's defaults — re-add the important ones
+  - vendor
   - now/
   - README.md
+  - CLAUDE.md           # agent guidance — must not be published (/CLAUDE/)
+  - Makefile            # dev tooling
+  - scripts             # post-build scripts run from the checkout, not the published site
+  # NOTE: agents-manifest.json is intentionally NOT excluded — Jekyll must render it so
+  # scripts/build-agent-markdown.mjs can read it; the script deletes it before deploy.
