@@ -1,26 +1,29 @@
 /* Appearance panel — ported from Ovellum. See _docs/styles.md.
  *
- * Four independent axes, each persisted and applied to <html>:
- *   mode    → data-theme   : auto | light | dark        (localStorage 'theme')
- *   palette → data-palette : default | eink | flexoki | nord | solarized ('palette')
- *   font    → data-font    : sans | serif | inter | geist ('font')
- *   accent  → --ov-accent inline + data-accent="custom"  ('accent' = oklch/hex string)
- * The no-flash <head> snippet (in default.html) applies all four before first
- * paint; this builds the control panel, keeps it in sync, and persists changes.
- * With JS disabled nothing renders and the defaults show.
+ * Five independent axes, each persisted and applied to <html>:
+ *   mode    → data-theme     : auto | light | dark              (localStorage 'theme')
+ *   palette → data-palette   : default | nord | eink            ('palette')
+ *   font    → data-font      : sans (Default/system) | geist (Sans-Serif) | serif (Serif) ('font')
+ *   size    → data-text-size : xs | s | m (default) | l | xl    ('textsize')
+ *   accent  → --ov-accent inline + data-accent="custom"         ('accent' = oklch/hex string)
+ * The no-flash <head> snippet (in default.html) applies mode/palette/font/accent
+ * before first paint; this builds the control panel, keeps it in sync, and
+ * persists changes. With JS disabled nothing renders and the defaults show.
  */
 (function () {
   'use strict';
 
   var AXES = {
-    theme:   { key: 'theme',   def: 'auto',    attr: 'theme',
-               opts: [['auto','Auto'], ['light','Light'], ['dark','Dark']] },
-    palette: { key: 'palette', def: 'default', attr: 'palette',
-               opts: [['default','Default'], ['eink','E-ink'], ['flexoki','Flexoki'], ['nord','Nord'], ['solarized','Solarized']] },
-    font:    { key: 'font',    def: 'sans',    attr: 'font',
-               opts: [['sans','Sans'], ['serif','Serif'], ['inter','Inter'], ['geist','Geist']] }
+    theme:    { key: 'theme',    def: 'auto',    attr: 'theme',
+                opts: [['auto','Auto'], ['light','Light'], ['dark','Dark']] },
+    palette:  { key: 'palette',  def: 'default', attr: 'palette',
+                opts: [['default','Default'], ['nord','Cool'], ['eink','Warm']] },
+    font:     { key: 'font',     def: 'sans',    attr: 'font',
+                opts: [['sans','Default'], ['geist','Sans-Serif'], ['serif','Serif']] },
+    textsize: { key: 'textsize', def: 'm',       attr: 'textSize',
+                opts: [['xs','A'], ['s','A'], ['m','A'], ['l','A'], ['xl','A']] }
   };
-  var GROUPS = [['theme','Mode'], ['palette','Palette'], ['font','Font']];
+  var GROUPS = [['theme','Mode'], ['palette','Palette'], ['font','Font'], ['textsize','Text Size']];
 
   // Accent swatches (Ovellum parity). '' = default (use the palette/mode accent).
   var ACCENTS = [
@@ -92,7 +95,7 @@
     var g = makeGroup(label, 'appearance-' + axis + '-label');
 
     var opts = document.createElement('div');
-    opts.className = 'appearance-options';
+    opts.className = 'appearance-options appearance-options--' + axis;
     opts.setAttribute('role', 'group');
     opts.setAttribute('aria-labelledby', g.labelId);
 
@@ -100,7 +103,9 @@
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'appearance-option';
+      btn.dataset.opt = o[0];
       btn.textContent = o[1];
+      if (axis === 'textsize') btn.setAttribute('aria-label', 'Text size ' + o[0]);
       btn.setAttribute('aria-pressed', o[0] === current ? 'true' : 'false');
       btn.addEventListener('click', function () {
         apply(axis, o[0]);
@@ -192,6 +197,7 @@
     apply('theme', read('theme'));
     apply('palette', read('palette'));
     apply('font', read('font'));
+    apply('textsize', read('textsize'));
     applyAccent(readAccent());
 
     if (window.matchMedia) {

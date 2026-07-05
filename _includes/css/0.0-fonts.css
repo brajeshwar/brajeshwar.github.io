@@ -1,14 +1,6 @@
-/* Optional variable fonts for the reader font selector (Ovellum parity).
-   System sans/serif are the defaults; these download only when the reader
-   picks Inter or Geist (font-display:swap → no load cost otherwise). */
-@font-face {
-  font-family: "Inter var";
-  src: url("/assets/fonts/inter/InterVariable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Self-hosted fonts for the reader font selector. The Default font is the system
+   sans stack (no webfont); these download only when the reader picks "Sans-Serif"
+   (Geist) or "Serif" (Libre Baskerville) — font-display:swap → no load cost otherwise. */
 @font-face {
   font-family: "Geist var";
   src: url("/assets/fonts/geist/Geist-Variable.ttf") format("truetype");

@@ -1,5 +1,5 @@
-/* Appearance panel (mode + palette + font) — built by appearance.js.
-   UI chrome: sans-serif, semantic tokens only. Mirrors the search panel. */
+/* Appearance panel (mode + palette + font + text size + accent) — built by
+   appearance.js. UI chrome: sans-serif, semantic tokens only. Compact float. */
 appearance-settings {
   display: inline-flex;
   align-items: center;
@@ -37,22 +37,22 @@ appearance-settings {
 .appearance-panel {
   position: fixed;
   z-index: 51;
-  top: 4.75rem;
+  top: 4rem;
   right: var(--space-s);
 
-  width: min(92vw, 20rem);
+  width: min(90vw, 15.5rem);
   max-height: 80vh;
   overflow-y: auto;
 
   display: flex;
   flex-direction: column;
-  gap: var(--space-s);
+  gap: var(--space-xs);
 
-  padding: var(--space-m);
+  padding: var(--space-s);
   background: var(--bg);
   border: var(--border-size) var(--border-style) var(--rule);
   border-radius: var(--border-radius);
-  box-shadow: 0 10px 40px -12px var(--text);
+  box-shadow: 0 8px 28px -14px var(--text);
 
   font-family: var(--font-family-sans-serif);
 }
@@ -65,7 +65,7 @@ appearance-settings {
 .appearance-group {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xs);
+  gap: var(--space-3xs);
 }
 
 .appearance-group__label {
@@ -117,6 +117,25 @@ appearance-settings {
   outline-offset: 2px;
 }
 
+/* Text size — five equal-width cells, each an "A" that grows left → right (Kindle). */
+.appearance-options--textsize {
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+.appearance-options--textsize .appearance-option {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xs) 0;
+  line-height: 1;
+}
+.appearance-options--textsize .appearance-option[data-opt="xs"] { font-size: 0.72rem; }
+.appearance-options--textsize .appearance-option[data-opt="s"]  { font-size: 0.86rem; }
+.appearance-options--textsize .appearance-option[data-opt="m"]  { font-size: 1rem; }
+.appearance-options--textsize .appearance-option[data-opt="l"]  { font-size: 1.2rem; }
+.appearance-options--textsize .appearance-option[data-opt="xl"] { font-size: 1.45rem; }
+
 /* Accent swatches */
 .appearance-swatches {
   display: flex;
@@ -127,8 +146,8 @@ appearance-settings {
 
 .appearance-swatch {
   flex: none;
-  inline-size: 1.25rem;
-  block-size: 1.25rem;
+  inline-size: 1.05rem;
+  block-size: 1.05rem;
   padding: 0;
   border: var(--border-size) var(--border-style) var(--rule);
   border-radius: 50%;
@@ -157,8 +176,8 @@ appearance-settings {
 }
 
 .appearance-swatch--custom input {
-  inline-size: 1.25rem;
-  block-size: 1.25rem;
+  inline-size: 1.05rem;
+  block-size: 1.05rem;
   padding: 0;
   border: var(--border-size) var(--border-style) var(--border-color-high);
   border-radius: 50%;
