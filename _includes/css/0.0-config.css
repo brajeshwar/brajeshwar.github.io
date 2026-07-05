@@ -29,14 +29,26 @@
  */
 
 :root {
-  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-   --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-   --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-   --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-   --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-   --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-   --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+  /* Base type scale (Utopia). --step-N aliases these below; content inside <main>
+     multiplies them by --text-scale (the Kindle text-size control), while
+     header/footer keep the base scale. */
+  --step--2-base: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1-base: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0-base:  clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1-base:  clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2-base:  clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3-base:  clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4-base:  clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5-base:  clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+  --step--2: var(--step--2-base);
+  --step--1: var(--step--1-base);
+  --step-0:  var(--step-0-base);
+  --step-1:  var(--step-1-base);
+  --step-2:  var(--step-2-base);
+  --step-3:  var(--step-3-base);
+  --step-4:  var(--step-4-base);
+  --step-5:  var(--step-5-base);
 }
 
 
@@ -165,13 +177,25 @@
 [data-font="geist"] { --font-body: "Geist var", var(--font-sans); }
 [data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); }
 
-/* Text size — Kindle-style. Scales the reading column only (1.1-base.css).
+/* Text size — Kindle-style. Multiplies the type scale for ALL content inside
+   <main> (home body, pages, articles) — header/footer stay on the base scale.
    Default = m (no attribute); two steps smaller (s, xs) and larger (l, xl). */
 :root                 { --text-scale: 1; }
 [data-text-size="xs"] { --text-scale: 0.88; }
 [data-text-size="s"]  { --text-scale: 0.94; }
 [data-text-size="l"]  { --text-scale: 1.09; }
 [data-text-size="xl"] { --text-scale: 1.19; }
+
+main {
+  --step--2: calc(var(--step--2-base) * var(--text-scale));
+  --step--1: calc(var(--step--1-base) * var(--text-scale));
+  --step-0:  calc(var(--step-0-base)  * var(--text-scale));
+  --step-1:  calc(var(--step-1-base)  * var(--text-scale));
+  --step-2:  calc(var(--step-2-base)  * var(--text-scale));
+  --step-3:  calc(var(--step-3-base)  * var(--text-scale));
+  --step-4:  calc(var(--step-4-base)  * var(--text-scale));
+  --step-5:  calc(var(--step-5-base)  * var(--text-scale));
+}
 
 /* TBD: This seems to be not working. */
 @media (prefers-color-scheme: dark) {

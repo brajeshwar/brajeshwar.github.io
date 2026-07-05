@@ -68,6 +68,14 @@ appearance-settings {
   gap: var(--space-3xs);
 }
 
+/* Accent group: label + swatches on one line. */
+.appearance-group--inline {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xs);
+}
+
 .appearance-group__label {
   font-size: var(--step--2);
   font-weight: var(--font-weight-bold);
@@ -76,65 +84,65 @@ appearance-settings {
   color: var(--text-muted);
 }
 
+/* Segmented control: the group is one pill (rounded ends, clipped), each option a
+   flat cell divided by a hairline. Single line, minimal, compact. */
 .appearance-options {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3xs);
+  flex-wrap: nowrap;
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 999px;
+  overflow: hidden;
 }
 
 .appearance-option {
   flex: 1 1 auto;
+  min-width: 0;
   padding: var(--space-3xs) var(--space-2xs);
 
   font-family: inherit;
-  font-size: var(--step--1);
-  line-height: 1.2;
+  font-size: var(--step--2);
+  line-height: 1.15;
   white-space: nowrap;
+  text-align: center;
 
   color: var(--text-muted);
   background: transparent;
-  border: var(--border-size) var(--border-style) var(--rule);
-  border-radius: var(--border-radius-small);
+  border: 0;
+  border-inline-end: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 0;
   cursor: pointer;
   transition: color var(--transition-duration) ease,
-              border-color var(--transition-duration) ease,
               background-color var(--transition-duration) ease;
 }
 
-.appearance-option:hover {
-  color: var(--text);
-  border-color: var(--border-color-high);
-}
+.appearance-option:last-child { border-inline-end: 0; }
+
+.appearance-option:hover { color: var(--text); }
 
 .appearance-option[aria-pressed="true"] {
   color: var(--color-primary-fg);
   background: var(--color-primary);
-  border-color: var(--color-primary);
 }
 
 .appearance-option:focus-visible {
   outline: var(--border-size-small) solid var(--accent);
-  outline-offset: 2px;
+  outline-offset: -3px;
 }
 
-/* Text size — five equal-width cells, each an "A" that grows left → right (Kindle). */
-.appearance-options--textsize {
-  flex-wrap: nowrap;
-  align-items: stretch;
-}
+/* Text size — five equal cells, each an "A" that grows left → right (Kindle). */
 .appearance-options--textsize .appearance-option {
   flex: 1 1 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-3xs) 0;
+  padding-inline: 0;
   line-height: 1;
 }
 .appearance-options--textsize .appearance-option[data-opt="xs"] { font-size: 0.72rem; }
-.appearance-options--textsize .appearance-option[data-opt="s"]  { font-size: 0.86rem; }
+.appearance-options--textsize .appearance-option[data-opt="s"]  { font-size: 0.85rem; }
 .appearance-options--textsize .appearance-option[data-opt="m"]  { font-size: 1rem; }
-.appearance-options--textsize .appearance-option[data-opt="l"]  { font-size: 1.2rem; }
-.appearance-options--textsize .appearance-option[data-opt="xl"] { font-size: 1.45rem; }
+.appearance-options--textsize .appearance-option[data-opt="l"]  { font-size: 1.18rem; }
+.appearance-options--textsize .appearance-option[data-opt="xl"] { font-size: 1.38rem; }
 
 /* Accent swatches */
 .appearance-swatches {
