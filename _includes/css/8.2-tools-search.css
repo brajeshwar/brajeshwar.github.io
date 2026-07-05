@@ -1,4 +1,4 @@
-/* Header search — trigger + lazy panel. See assets/scripts/search.js + _docs/SEARCH.md.
+/* Header search — trigger + lazy panel. See assets/scripts/search.js + _docs/search.md.
    UI chrome, semantic tokens only. */
 site-search {
   display: inline-flex;

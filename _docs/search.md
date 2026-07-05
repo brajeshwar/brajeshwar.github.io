@@ -1,7 +1,7 @@
 # SEARCH — brajeshwar.com
 
 Site-wide search in the header, powered by **Pagefind**, lazy-loaded so it costs
-nothing on normal page loads. Partner docs: [`MEMORY.md`](MEMORY.md).
+nothing on normal page loads. Partner docs: [`memory.md`](memory.md).
 
 ## UI choice — Modular UI (not the Default UI)
 Pagefind 1.5 ships three front-ends; we use the **Modular UI** (`pagefind-modular-ui.js`),
@@ -82,3 +82,12 @@ now"* under a bare `jekyll serve`. Use the **`Makefile`**:
 | `make pagefind` | (re)build just the index against the current `_site/`. |
 
 `search.js` is cached hard by the dev server — **hard-reload** after changing it.
+
+### Alternatives considered (local dev)
+Four options were weighed before landing on the Makefile:
+1. **Manual build** (`jekyll build` → `npx pagefind --site _site` → serve) — simplest; manual re-index on content change. **This is what `make serve`/`make build` automate.**
+2. **Jekyll `_plugins/` hook** — auto-run Pagefind after generation. **Rejected:** `_plugins/` is GitHub Pages-incompatible (spec §3) and heavier than needed.
+3. **Watch script** (`nodemon --watch _posts --watch _pages …`) — best DX, auto-reindex on change; extra dependency. Deferred; the Makefile covers the need.
+4. **Docker + Make** — reproducible env; Docker overhead unjustified for a static site. Kept the **Make** half, dropped Docker.
+
+Pagefind only needs to re-run when **content** changes (posts, pages); CSS/JS edits don't require a re-index. Production is unchanged — CI runs `npx pagefind --site _site` after the Jekyll build (spec §9).

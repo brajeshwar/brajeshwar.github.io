@@ -4,7 +4,7 @@ Guidance for AI agents (Claude Code) working in this repo.
 
 ## Active work
 The **v2027 redesign** lives on branch `brajeshwar.com-v2027`. Its full specification is in
-[`_docs/v2027/SPEC.md`](_docs/v2027/SPEC.md). Read it before starting and re-read the guardrails
+[`_docs/v2027/spec.md`](_docs/v2027/spec.md). Read it before starting and re-read the guardrails
 before any commit-worthy change.
 
 ## What this site is

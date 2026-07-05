@@ -1,4 +1,4 @@
-/* Appearance panel — ported from Ovellum. See _docs/COLOR.md + _docs/TYPOGRAPHY.md.
+/* Appearance panel — ported from Ovellum. See _docs/styles.md.
  *
  * Four independent axes, each persisted and applied to <html>:
  *   mode    → data-theme   : auto | light | dark        (localStorage 'theme')

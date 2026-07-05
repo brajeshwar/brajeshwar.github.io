@@ -5,11 +5,13 @@
 > first each session; keep it current.
 
 ## Docs index
-- [`v2027/SPEC.md`](v2027/SPEC.md) — single source of truth for the v2027 redesign (the brief Brajeshwar built with Claude CoWork).
-- [`TYPOGRAPHY.md`](TYPOGRAPHY.md) — type scale, spacing, rhythm; sans default + reader font selector (`--font-reading`).
-- [`COLOR.md`](COLOR.md) — **Ovellum two-axis theming**: mode (`data-theme` auto/light/dark) × palette (`data-palette` default/eink/flexoki/nord/solarized), bridge, no-flash.
-- [`SIDENOTES.md`](SIDENOTES.md) — Tufte margin sidenotes built from kramdown footnotes (Phase 2).
-- [`SEARCH.md`](SEARCH.md) — site-wide header search, lazy-loaded Pagefind.
+- [`design.md`](design.md) — **design philosophy** (the *why*): text-first, ornament-free, decoupled/portable styles, progressive enhancement, reader's choice.
+- [`styles.md`](styles.md) — the **style specifics**: typography (scales, font axis), color & theming (**Ovellum two-axis**: mode `data-theme` auto/light/dark × palette `data-palette` default/eink/flexoki/nord/solarized, + font + accent, bridge, no-flash), branding.
+- [`sidenotes.md`](sidenotes.md) — Tufte margin sidenotes built from kramdown footnotes (Phase 2) + Aresluna wayfinding.
+- [`search.md`](search.md) — site-wide header search, lazy-loaded Pagefind.
+- [`todo.md`](todo.md) — running site task list (beyond the redesign phases).
+- [`v2027/spec.md`](v2027/spec.md) — single source of truth for the v2027 redesign (the brief Brajeshwar built with Claude CoWork).
+- [`v2027/inspirations.md`](v2027/inspirations.md) — article-craft studies (Aresluna deep-dive; Yale e360, BBC, The Walrus, iDiallo).
 - [`/CLAUDE.md`](../CLAUDE.md) — short guardrails for AI agents working in the repo.
 
 ---
@@ -44,7 +46,7 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 - Theme overrides via `<html data-theme="light|dark|sepia|gray">`; no attribute = Light, and `prefers-color-scheme: dark` → Dark **only when reader made no explicit choice**.
 
 ## Key features (as built)
-- **Sidenotes** — `assets/scripts/sidenotes.js` (defer) walks `.footnotes`, builds `<aside class="sidenote">` in the right gutter aligned to each `sup#fnref:N`; strips the `↩`, keeps the number, hides the bottom block when active. Narrow → fold back to footnotes. JS off → plain footnotes. CSS in `2.1-footnotes.css`. **Live-verified.** See [`SIDENOTES.md`](SIDENOTES.md).
+- **Sidenotes** — `assets/scripts/sidenotes.js` (defer) walks `.footnotes`, builds `<aside class="sidenote">` in the right gutter aligned to each `sup#fnref:N`; strips the `↩`, keeps the number, hides the bottom block when active. Narrow → fold back to footnotes. JS off → plain footnotes. CSS in `2.1-footnotes.css`. **Live-verified.** See [`sidenotes.md`](sidenotes.md).
 - **Reader settings** — `<reader-settings>` in the header, built by `assets/scripts/reader.js` (defer): two native `<select>`s — **font** (Sans default / Serif / Mono → `[data-font]` → `--font-reading`) and **theme** (Auto / Light / Dark / Sepia / Gray → `[data-theme]`). Persists `localStorage.font` + `localStorage.theme`. **No-flash** inline `<head>` snippet applies both before first paint. CSS in `0.1-color.css` + `0.0-config.css` (font tokens) + `8.1-tools-theme-toggle.css`.
 
 ## Phasing (SPEC §10)
@@ -63,12 +65,12 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 
 ## Status
 - **Phase 0 done.** Semantic token layer introduced in `0.1-color.css` (additive, zero visual change).
-- **Phase 1 done + live-verified.** See [`COLOR.md`](COLOR.md) + [`TYPOGRAPHY.md`](TYPOGRAPHY.md).
+- **Phase 1 done + live-verified.** See [`styles.md`](styles.md).
   - `0.1-color.css` restructured: `.theme-*` classes → `[data-theme]` attributes; **four palettes** (light/dark/sepia/gray); auto-dark via `:root:not([data-theme])`; semantic aliases declared once.
   - **Reading surface defaults to SANS** with a **reader font selector** (Sans/Serif/Mono via `--font-reading` + `[data-font]`). Brajeshwar's call: sans default, font is a reader choice (Kindle/Reader-style). Supersedes the earlier serif-default draft (and the `cd3227e0` sans commit) — both reconciled.
   - **Reader settings control** — `reader.js` builds `<reader-settings>` (font + theme selects); old inline `ThemeToggle` removed from `header.html`; `theme.js` renamed → `reader.js`. No-flash `<head>` snippet applies theme+font before paint. Theme selector = **Auto + 4 themes** (Auto approved).
   - `8.1-tools-theme-toggle.css` restyled (`.reader-select`, semantic tokens).
-- **Phase 2 done + live-verified.** Tufte sidenotes. See [`SIDENOTES.md`](SIDENOTES.md). `sidenotes.js` + `2.1-footnotes.css` + sidenote tokens in `0.0-config.css`.
+- **Phase 2 done + live-verified.** Tufte sidenotes. See [`sidenotes.md`](sidenotes.md). `sidenotes.js` + `2.1-footnotes.css` + sidenote tokens in `0.0-config.css`.
   - **Browser-verified at 1440px**: footnotes → clean margin sidenotes aligned to refs (after resetting the inherited generic `aside{}` box); at 760px → fold back to foot footnotes with `↩`; sepia+serif persisted across reload with no flash; selects reflect stored state.
 - **Phase 3 done + live-verified.** Templates & chrome.
   - **Header** — already centered logo+nav with full-width rule; removed the dead `mode-toggle` CSS (now `reader-settings`).
@@ -83,12 +85,12 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
   - **CSS budget** — Brajeshwar set the budget at **≤ 42KB** (supersedes the old ~10KB note). Inlined `<style>` per page (compressed): ~17KB (pages) to ~25KB (search w/ Pagefind UI). **Well under budget.**
 - **Phase 5 (verification) — passing.** Builds clean; only layouts/includes/css/js/`nav.yaml` touched (no post/draft/page-body content); permalinks unchanged; 4 themes + font selector persist with no flash; sidenotes work + fold back; JS-off → real footnotes + default theme; CSS under budget; no AI-attributed commits (nothing committed — staged for review).
   - Files touched (Phases 0–4): `_data/nav.yaml`; `_includes/css/{0.0-config,0.1-color,1.2-typography,2.1-footnotes,2.1-images,3.1-header,3.1-footer,8.1-tools-theme-toggle,9.9-utils-anchorjs}.css`; deleted `4.1-search.css`; `_includes/{header,footer}.html`; `_layouts/{default,post}.html`; `assets/scripts/{reader,sidenotes,anchors}.js` (new); deleted `assets/scripts/anchor.min.js` + old `theme.js`.
-- **Header search added + live-verified.** Site-wide search via lazy-loaded Pagefind (Option 1 — zero page-load cost). See [`SEARCH.md`](SEARCH.md). `<site-search>` trigger in `header.html` (links to `/search/` as JS-off fallback) + `assets/scripts/search.js` (defer, opens an inline themed panel, lazy-loads `pagefind-ui.*` on first click) + `_includes/css/8.2-tools-search.css` (in base bundle). Browser-verified: page load injects no Pagefind; click → panel + lazy-load; "cherrapunji" → 1 highlighted result.
+- **Header search added + live-verified.** Site-wide search via lazy-loaded Pagefind (Option 1 — zero page-load cost). See [`search.md`](search.md). `<site-search>` trigger in `header.html` (links to `/search/` as JS-off fallback) + `assets/scripts/search.js` (defer, opens an inline themed panel, lazy-loads `pagefind-ui.*` on first click) + `_includes/css/8.2-tools-search.css` (in base bundle). Browser-verified: page load injects no Pagefind; click → panel + lazy-load; "cherrapunji" → 1 highlighted result.
   - ⚠️ **Cache gotcha (testing only):** `jekyll serve` wipes `_site/pagefind/` on regeneration and caches `search.js` hard — test with `--skip-initial-build --no-watch` after `npx pagefind --site _site`, and hard-reload. The `DOMContentLoaded` ready-guard in search.js is required (don't remove).
   - **Reworked into a ⌘K command palette (live-verified on a plain serve).** Now opens a **centered in-place popup** via the trigger **or ⌘K / Ctrl+K**; Esc/backdrop close; **never navigates** while JS is on (removed the auto-redirect — shows an in-panel "open the search page" message if Pagefind can't load). ⌘K hint badge in the header (platform-aware). **Root cause of "search just goes to /search/": all `assets/scripts/*.js` were loaded via `prepend: site.url` → `https://brajeshwar.com/...`, which 404s under local `jekyll serve` so no JS attached. Fixed to `relative_url` (root-relative) in `default.html` + `post.html`.** `/search/` page unchanged (auto-focused input, JS-off fallback).
   - **Switched to Pagefind's Modular UI (live-verified).** We're on Pagefind 1.5.2 (current — not a version bump). Default UI → **Modular UI** (`pagefind-modular-ui.js`): our ⌘K shell builds `PagefindModularUI.Instance` + `Input`+`Summary`+`ResultList` (`showImages:false`) into 3 mounts in the panel; same `--pagefind-ui-*` theming on `.site-search__panel`. Eager search payload **~32KB → ~5KB gz**. Considered the Component UI (`<pagefind-modal>`, ~40KB, heavier/harder to theme) and rejected it. Verified: "monaco" → 2 themed text-only results.
   - **`data-pagefind-ignore` on `<header>` + `<footer>`** so repeating chrome (nav, the ⌘K hint badge, footer columns) isn't indexed — without it the header's ⌘K led every result excerpt. Verified: "bombay flood" → clean content excerpts.
-- **Theming reworked → Ovellum parity (live-verified).** Replaced the single-axis `[data-theme]` light/dark/sepia/gray with Ovellum's (ovellum.oss.oinam.com) **two independent axes**: **mode** (`data-theme`: auto/light/dark) × **palette** (`data-palette`: default/eink/flexoki/nord/solarized). Plus **font axis** (`data-font`: sans/serif/inter/geist) with self-hosted **Inter** + **Geist** variable fonts (`assets/fonts/`, `0.0-fonts.css`, `font-display:swap` so they load only when chosen). See [`COLOR.md`](COLOR.md) + [`TYPOGRAPHY.md`](TYPOGRAPHY.md).
+- **Theming reworked → Ovellum parity (live-verified).** Replaced the single-axis `[data-theme]` light/dark/sepia/gray with Ovellum's (ovellum.oss.oinam.com) **two independent axes**: **mode** (`data-theme`: auto/light/dark) × **palette** (`data-palette`: default/eink/flexoki/nord/solarized). Plus **font axis** (`data-font`: sans/serif/inter/geist) with self-hosted **Inter** + **Geist** variable fonts (`assets/fonts/`, `0.0-fonts.css`, `font-display:swap` so they load only when chosen). See [`styles.md`](styles.md).
   - `0.1-color.css` fully rewritten: raw `--color-gray-*` scale (palettes re-tint) → semantic `--color-*` (mode flips light↔dark) → **bridge** aliasing all legacy `--bg-color-*`/`--text-color-*`/`--border-color-*` + v2027 `--bg/--text/--rule/--accent` onto the semantic layer, so every component themes with zero edits. `color-mix()` for borders.
   - `--font-body` (default `--font-sans`) drives `body`; legacy `--font-family-*` aliased.
   - Controls: `<appearance-settings>` panel (`appearance.js`, replaces `reader.js`) — Mode/Palette/Font button groups; no-flash snippet applies all 3 axes before paint; `localStorage` keys `theme`/`palette`/`font`. CSS in `8.1-tools-theme-toggle.css`.
@@ -100,5 +102,12 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
   - Sidenote hover/focus highlight; tune `--sidenote-width`/breakpoint on long or clustered notes.
   - Migrate components off legacy color tokens (`--bg-color-*` etc.) onto the semantic ones (`--bg`, `--text`, …) — a tidy-up, not required for function.
   - Optional further CSS trimming by moving content-only partials out of the always-inlined base — not needed given the 42KB budget.
-- **Local dev loop (`Makefile`).** `jekyll serve` does NOT build the Pagefind index (only CI does) → ⌘K shows "Search isn't available right now" locally. Use **`make serve`** (build + `npx pagefind --site _site` + `jekyll serve --skip-initial-build --no-watch`) for working local search; `make dev` for fast live-reload without search; `make build` / `make pagefind` / `make clean`. See [`SEARCH.md`](SEARCH.md).
-- Note: `.gitignore` has a pre-existing uncommitted `tmp/` line from before this work (not ours) — leave it.
+- **Local dev loop (`Makefile`).** `jekyll serve` does NOT build the Pagefind index (only CI does) → ⌘K shows "Search isn't available right now" locally. Use **`make serve`** (build + `npx pagefind --site _site` + `jekyll serve --skip-initial-build --no-watch`) for working local search; `make dev` for fast live-reload without search; `make build` / `make pagefind` / `make clean`. See [`search.md`](search.md).
+- **Docs reorg (this session).** `_docs` filenames lowercased; `COLOR.md`+`TYPOGRAPHY.md` folded into **[`styles.md`](styles.md)** (type → colour → branding); new **[`design.md`](design.md)** (philosophy) and **[`todo.md`](todo.md)** (site task list, from the `tmp/` braindump); article-craft studies (Yale e360, BBC, The Walrus, iDiallo) added to [`v2027/inspirations.md`](v2027/inspirations.md). Empty root `TODO.md` stub removed (consolidated into `todo.md`).
+- **Design decisions locked + built (this session; build-verified, measure browser-checked):**
+  - **Reading measure = character-based** — `--measure: 66ch` (~60–70 chars/line) → `--body-width-ideal`; was `46rem`≈80ch. Video embeds → `aspect-ratio: 16/9` (width-derived height no longer valid). Browser-checked at 1512px: column ~665px ≈ 66ch. See [`styles.md`](styles.md) §1.
+  - **Default theme = monotone grayscale** (already true; now explicitly locked with a header comment in `0.1-color.css`). Zero-chroma scale + gray accent → links carry no hue; affordance is the **underline**. Colour is opt-in (tinted palette or accent axis). See [`styles.md`](styles.md) §2.
+  - **Page-load budget < 100 KB** for non-article pages (hard target, documented). Homepage today ~48 KB raw / ~13 KB gzip (31 KB inlined CSS + ~20 KB first-party JS, **zero images**), comfortably under. See [`design.md`](design.md) → *Performance budget*.
+  - **Icons → Lucide** (MIT) recommended, **inline SVG / currentColor / zero-fetch**, home `_includes/icons/`. Not yet adopted in markup — a [`todo.md`](todo.md) follow-up. Header search icon is already this style. See [`styles.md`](styles.md) §4.
+  - **`.gitignore`** properly filled: `tmp/`, `node_modules/`, `vendor/`, `.vscode/`, `.idea/`, `.pagefind-cache/` (keep committing `package.json`/lockfile). Supersedes the old stale "pre-existing tmp/ line" note.
+  - Follow-ups queued in [`todo.md`](todo.md): adopt Lucide, Geist `.ttf`→`.woff2`, scope `sidenotes.js` to article pages.

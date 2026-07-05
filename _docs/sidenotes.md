@@ -1,7 +1,7 @@
 # SIDENOTES — brajeshwar.com
 
 Tufte-style margin notes, built from the footnotes kramdown already emits. **No
-content or markup changes** — old posts get sidenotes for free. Spec: [`v2027/SPEC.md`](v2027/SPEC.md) §5.
+content or markup changes** — old posts get sidenotes for free. Spec: [`v2027/spec.md`](v2027/spec.md) §5.
 
 ## Source markup (unchanged, kramdown)
 ```html
@@ -24,6 +24,20 @@ content or markup changes** — old posts get sidenotes for free. Spec: [`v2027/
 3. **If not** (narrow screens): no asides; the `.footnotes` block renders normally at the foot.
 4. **JS disabled:** nothing runs; plain kramdown footnotes at the foot, all anchors work.
 
+Wayfinding (Aresluna-inspired, see [`v2027/inspirations.md`](v2027/inspirations.md)):
+
+5. **Cross-focus (sidenotes active):** hovering or keyboard-focusing a reference adds
+   `.sidenote-focus` to the article and `.is-active` to the matching reference + sidenote
+   pair — the pair lights up, other sidenotes dim. Works in both directions (hovering a
+   sidenote highlights its reference). Clicking a reference spotlights the pair for ~1.5s
+   instead of jumping (the foot block is hidden, so the anchor would go nowhere).
+6. **Reveal-in-place (narrow screens):** tapping a reference opens the note as an inline
+   `<aside class="sidenote-inline">` right after the current block (never inside a
+   list/table — inserted after the nearest `p`/`ul`/`ol`/`blockquote`/`figure`/`table`/
+   heading). One note open at a time; tapping the reference again or the panel dismisses
+   it; `aria-expanded` is kept on the reference link. The foot `.footnotes` block stays,
+   so jump-less reading is an enhancement, not a replacement.
+
 Robustness:
 - Note id is resolved from the reference's `href` (`#fn:1`), not by string-munging the
   `fnref` id — so repeated references (`fnref:1:1`) still map to the right note.
@@ -35,12 +49,16 @@ Robustness:
 
 ## CSS & tokens
 - `_includes/css/2.1-footnotes.css` — `.footnotes` (foot fallback, unchanged) + the
-  `.has-sidenotes` / `.sidenote` / `.sidenote-ref` rules. Note: `.sidenote` is an
-  `<aside>`, so it **explicitly resets** the generic `aside {}` box treatment
-  (background/padding/border/serif) to render as plain margin text.
+  `.has-sidenotes` / `.sidenote` / `.sidenote-ref` rules, plus the cross-focus rules
+  (`.sidenote-focus`, `.is-active`, `.is-open`) and the `.sidenote-inline` reveal panel.
+  Note: `.sidenote` and `.sidenote-inline` are `<aside>`s, so they **explicitly reset**
+  the generic `aside {}` box treatment (background/padding/border/serif).
+- Cross-focus uses only existing tokens: dimming via `--opacity-lower`, active note via
+  `--text-color`, active reference via `--accent-hover` on `--mark`. Transitions respect
+  the global `prefers-reduced-motion` kill switch in `1.1-base.css`.
 - `_includes/css/0.0-config.css` — `--sidenote-width` (16rem), `--sidenote-gap` (2.5rem),
   `--sidenote-min-gutter` (14rem, kept in sync with `MIN_GUTTER_REM` in the JS).
-- Color: `--sidenote-text` (semantic token, see [`COLOR.md`](COLOR.md)).
+- Color: `--sidenote-text` (semantic token, see [`styles.md`](styles.md)).
 
 ## Verified (live, 1440px)
 - [x] Desktop: footnotes render as margin sidenotes aligned to references, clean (no box),
@@ -50,6 +68,4 @@ Robustness:
 - [x] No Markdown/content edits; works on a 2005 post.
 
 ## Possible follow-ups (not done)
-- Tap-to-reveal a note inline on narrow screens (SPEC calls it optional).
-- Reference ↔ sidenote hover/focus highlight for wayfinding (`.sidenote-active` hook exists in spirit; not wired).
 - Tune `--sidenote-width` / breakpoint against very long notes and clustered references on real content.
