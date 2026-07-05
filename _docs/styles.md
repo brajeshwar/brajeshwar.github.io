@@ -230,15 +230,33 @@ Light for now — the place for brand/identity specifics to grow.
   **inherits the surrounding text colour** — so it follows theme, palette, and accent for
   free, and costs **zero extra requests** and a few hundred bytes each. No icon font, no
   sprite sheet, no `<img>`.
-- **Suggested pattern (Jekyll).** Keep one file per icon in `_includes/icons/` (e.g.
-  `_includes/icons/search.svg`) and pull it in with `{% include icons/search.svg %}`, mirroring
-  how the logo is included. Add `aria-hidden="true"` for decorative icons, or a
-  `<title>`/`aria-label` when the icon is the only label. Keep `width`/`height` at `1em` (or a
-  step token) so icons scale with text.
+- **Pattern in use (Jekyll).** One file per icon in **`_includes/icons/`** (e.g.
+  `_includes/icons/rss.svg`). Pull in a fixed one with `{% include icons/rss.svg %}`, or a
+  data-driven one with a variable: `{% assign f = "icons/" | append: item.icon | append: ".svg" %}{% include {{ f }} %}`
+  (the footer does this over `_data/nav.yaml` `social`). Add `aria-hidden="true"` for decorative
+  icons, or `title`/`aria-label` on the link when the icon is the only label.
 - **Do not** switch to an icon webfont or a remote sprite — both add a request and break the
   "inline, currentColor, zero-fetch" rule above (see [`design.md`](design.md) → *Performance budget*).
 
-Alternatives considered (all MIT, all fine if a specific glyph is missing from Lucide):
-**Tabler Icons** (~4,000+, same stroke style, slightly heavier line), **Heroicons** (Tailwind's
-set, outline + solid), **Phosphor** (multiple weights). Lucide is the default; borrow a single
-glyph from another set only when Lucide lacks it, keeping the stroke weight consistent.
+### Brand / social icons — Simple Icons
+Lucide has **no brand icons** (they were removed). For social/brand glyphs use
+**[Simple Icons](https://simpleicons.org)** (CC0 — public domain). Fetch the path, set
+`fill="currentColor"`, 24×24 viewBox, and save into `_includes/icons/`. The **footer social row**
+uses Simple Icons for **rss, twitter (the "x" glyph), github, mastodon, instagram**; **oinam**
+and **memos** have no brand icon, so they're small hand-authored filled glyphs (an "O" ring and a
+notes bubble) kept in the same filled style for a consistent row.
+
+### One filled family (header + footer)
+All chrome icons are **filled, `currentColor`, 20px**, and live in `_includes/icons/`, so the
+header and footer read as one set:
+- **Brand/social** (footer): Simple Icons — `rss`, `twitter` (the "x" glyph), `github`,
+  `mastodon`, `instagram`.
+- **Hand-authored filled** (no brand equivalent): `oinam` (an "O" ring), `memos` (a notes
+  bubble), `search` (a filled magnifier — the earlier stroke one read too thin), `theme` (a
+  filled contrast circle — replaced a busy circle-with-dots).
+- **Shared**: the header and footer RSS are the **same file** (`icons/rss.svg`).
+
+The header search/theme were previously thin stroke (Lucide-style) outlines; they're now filled
+to match the footer at Brajeshwar's request. If a *new* UI glyph is ever needed and no brand
+version exists, prefer a filled treatment consistent with this set (Lucide/Tabler/Heroicons/
+Phosphor are fine sources to trace a filled shape from — all MIT).

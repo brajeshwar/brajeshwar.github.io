@@ -82,8 +82,8 @@ North stars (for reference, not for copying): **Tufte CSS** (sidenotes), **Yale 
   - **Grayscale** — neutral grays, print-like, higher contrast, accent desaturated.
 
 ### 4.3 Layout
-- **Header**: logo + primary nav, centered, with a full-width `border-bottom`. Nav from `_data/nav.yaml` `main`.
-- **Footer**: column-categorized links from `_data/nav.yaml` `footer`.
+- **Header**: logo in the **left corner** (links to `/`); on the **right**, the primary nav (About · Archives · Now · Contact) followed by tool icons — **Search** (opens the ⌘K palette; no visible badge, shortcut still fires), **RSS** (`/feed.xml`), and the **theme changer** on the far right. Separated from the body by **spacing, no rule**. Flat text nav (no pill); stacks and centers on narrow screens. Nav from `_data/nav.yaml` `main`. *(Supersedes the earlier centered + full-width `border-bottom` sketch.)*
+- **Footer**: simplified to three centred rows — a flat wrapping row of **page links** (`_data/nav.yaml` `footer`, Brajeshwar's order), a row of **social icons** (`_data/nav.yaml` `social`; inline SVG from `_includes/icons/`), and a **copyright line** last. Thin subtle `border-top`; spacing does the rest. *(Supersedes the earlier column-categorised grouping.)*
 - **Reading column**: ideal measure ~60–70ch for serif body. Article uses a content column plus a **right-hand margin gutter** wide enough for sidenotes on large screens.
 - **Blockquote**: no background; clear separation from body; subtle presence (Yale e360 style).
 - **Figures/images**: `<figure>` + minimal-treatment `<figcaption>`. Support multi-image split rows (gallery). Caption alignment as a **utility class** (left default, center, right). Media is ornamental — every article must read fine if images fail to load.

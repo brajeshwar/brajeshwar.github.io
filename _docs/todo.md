@@ -19,9 +19,11 @@ Running list of site tasks, beyond the v2027 redesign phases (those are tracked 
 - [ ] **YouTube videos** — move to `brajeshwar.com`, or embed and ignore, or self-host (PeerTube for Oinam or similar).
 
 ## Design system & performance
-- [ ] **Adopt [Lucide](https://lucide.dev) icons** — inline the raw `<svg>` (currentColor,
-      zero-fetch) into `_includes/icons/`; standardise the header search icon + any future
-      icons on it. See [`styles.md`](styles.md) §4.
+- [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +
+      hand-authored `oinam`/`memos`) and the header icons (`search`, `rss`, `theme`) all live
+      there now — one **filled** family, `currentColor`, shared `rss.svg`. See [`styles.md`](styles.md) §4.
+- [ ] **Create the `/photos/` page** — the footer links to it (per Brajeshwar) but it doesn't
+      exist yet; the link 404s until the page is added. (Photos component is also in *Content & pages* below.)
 - [ ] **Geist `.ttf` → `.woff2`.** `assets/fonts/geist/Geist-Variable.ttf` is a raw TrueType;
       convert to woff2 (much smaller) so readers who pick Geist pay less. Inter and Libre
       Baskerville are already woff2. (Default load is unaffected — fonts load only when chosen.)
