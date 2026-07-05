@@ -1,7 +1,8 @@
-# brajeshwar.com — local dev loop. See _docs/SEARCH.md.
+# brajeshwar.com — local dev loop. See _docs/search.md + _docs/agents.md.
 #
-# Jekyll builds the site; Pagefind builds the SEARCH INDEX as a post-build step
-# (exactly like CI: bundle exec jekyll build → npx pagefind --site _site).
+# Jekyll builds the site; two post-build steps then run (exactly like CI):
+#   1. node scripts/build-agent-markdown.mjs  → .md twins + /llms.txt for AI agents
+#   2. npx pagefind --site _site              → the ⌘K SEARCH INDEX
 #
 # IMPORTANT: `jekyll serve` on its own does NOT build the search index — and its
 # --watch even wipes _site/pagefind/ on every rebuild. So ⌘K search only works
@@ -9,9 +10,10 @@
 
 .PHONY: build pagefind serve dev clean
 
-## build   — full production-parity build into _site/ (site + search index)
+## build   — full production-parity build into _site/ (site + agent .md + search index)
 build:
 	bundle exec jekyll build
+	node scripts/build-agent-markdown.mjs
 	npx pagefind --site _site
 
 ## pagefind — (re)build just the search index against the current _site/
