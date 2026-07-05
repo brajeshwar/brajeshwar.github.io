@@ -3,9 +3,13 @@
 Guidance for AI agents (Claude Code) working in this repo.
 
 ## Active work
-The **v2027 redesign** lives on branch `brajeshwar.com-v2027`. Its full specification is in
-[`_docs/v2027/spec.md`](_docs/v2027/spec.md). Read it before starting and re-read the guardrails
-before any commit-worthy change.
+The **v2027 redesign is merged to `main` and deployed** (live at brajeshwar.com, as of
+2026-07-05). Work now happens on **`main`**, and **every push to `main` auto-deploys** via
+GitHub Actions — so keep changes small and reviewable. We're in **incremental-improvement**
+mode. **Read [`_docs/memory.md`](_docs/memory.md) first each session** ("Where we are"), then
+[`_docs/todo.md`](_docs/todo.md). The redesign spec is [`_docs/v2027/spec.md`](_docs/v2027/spec.md);
+hosting/DNS is [`_docs/hosting.md`](_docs/hosting.md). Re-read the guardrails before any
+commit-worthy change.
 
 ## What this site is
 A Jekyll site (kramdown) with **~1,463 posts (2001–2026)**, of which **~1,393 have no YAML
