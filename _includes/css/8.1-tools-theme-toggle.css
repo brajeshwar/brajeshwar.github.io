@@ -167,24 +167,3 @@ appearance-settings {
   outline: var(--border-size-small) solid var(--accent);
   outline-offset: 2px;
 }
-
-.appearance-swatch--custom {
-  display: inline-flex;
-  line-height: 0;
-  background: none;
-  border: none;
-}
-
-.appearance-swatch--custom input {
-  inline-size: 1.05rem;
-  block-size: 1.05rem;
-  padding: 0;
-  border: var(--border-size) var(--border-style) var(--border-color-high);
-  border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
-}
-
-.appearance-swatch--custom input::-webkit-color-swatch-wrapper { padding: 0; }
-.appearance-swatch--custom input::-webkit-color-swatch { border: 0; border-radius: 50%; }
-.appearance-swatch--custom input::-moz-color-swatch { border: 0; border-radius: 50%; }

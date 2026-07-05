@@ -5,7 +5,7 @@
  *   palette → data-palette   : default | nord | eink            ('palette')
  *   font    → data-font      : sans (Default/system) | geist (Sans-Serif) | serif (Serif) ('font')
  *   size    → data-text-size : xs | s | m (default) | l | xl    ('textsize')
- *   accent  → --ov-accent inline + data-accent="custom"         ('accent' = oklch/hex string)
+ *   accent  → --ov-accent inline + data-accent="custom"         ('accent' = Default/Blue/Amber oklch)
  * The no-flash <head> snippet (in default.html) applies mode/palette/font/accent
  * before first paint; this builds the control panel, keeps it in sync, and
  * persists changes. With JS disabled nothing renders and the defaults show.
@@ -25,15 +25,12 @@
   };
   var GROUPS = [['theme','Mode'], ['palette','Palette'], ['font','Font'], ['textsize','Text Size']];
 
-  // Accent swatches (Ovellum parity). '' = default (use the palette/mode accent).
+  // Accent swatches. '' = default (use the palette/mode accent). A tight pair that
+  // complements the palettes: a cool blue (for Cool/Nord) and a warm amber (for Warm/eink).
   var ACCENTS = [
     ['', 'Default'],
     ['oklch(57% 0.16 255)', 'Blue'],
-    ['oklch(56% 0.18 295)', 'Purple'],
-    ['oklch(56% 0.14 150)', 'Green'],
-    ['oklch(66% 0.13 65)',  'Amber'],
-    ['oklch(60% 0.17 15)',  'Red'],
-    ['oklch(60% 0.11 200)', 'Cyan']
+    ['oklch(66% 0.13 65)',  'Amber']
   ];
 
   var trigger, panel, backdrop;
@@ -145,18 +142,6 @@
       btn.addEventListener('click', function () { applyAccent(a[0]); press(btn); });
       row.appendChild(btn);
     });
-
-    // Custom colour picker (Ovellum parity).
-    var custom = document.createElement('label');
-    custom.className = 'appearance-swatch appearance-swatch--custom';
-    custom.title = 'Custom colour';
-    var input = document.createElement('input');
-    input.type = 'color';
-    input.setAttribute('aria-label', 'Custom accent colour');
-    if (/^#[0-9a-f]{6}$/i.test(current)) input.value = current;
-    input.addEventListener('input', function () { applyAccent(input.value); press(null); });
-    custom.appendChild(input);
-    row.appendChild(custom);
 
     g.group.appendChild(row);
     return g.group;
