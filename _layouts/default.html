@@ -21,6 +21,11 @@
 <link rel="archives" href="{{ site.baseurl | prepend: site.url }}/archives/">
 <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl | prepend: site.url }}/feed.xml">
+{%- comment -%} Plain-text Markdown twin for AI agents (built by scripts/build-agent-markdown.mjs). See _docs/agents.md. {%- endcomment -%}
+{%- if page.collection == 'posts' or page.collection == 'pages' -%}
+{%- assign md_href = page.url | append: '%%%' | replace: '/%%%', '' | append: '.md' -%}
+<link rel="alternate" type="text/markdown" href="{{ md_href | relative_url }}">
+{%- endif -%}
 
 <style type="text/css">{% include styles.html %}</style>
 <link rel="stylesheet" href="{{ '/assets/print.css' | relative_url }}" media="print">

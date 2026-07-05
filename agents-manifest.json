@@ -1,0 +1,24 @@
+---
+permalink: /agents-manifest.json
+sitemap: false
+layout: null
+---
+{%- comment -%}
+  Build-time manifest for scripts/build-agent-markdown.mjs (a Pagefind-style
+  post-build step). Maps each post/page to its final URL + source file so the
+  script can emit /<slug>.md twins and /llms.txt. Jekyll owns the URL truth
+  (permalinks + jekyll-titles-from-headings), so the script never re-derives it.
+  The script deletes this file before deploy — it is not published.
+{%- endcomment -%}
+{%- assign pages_coll = site.collections | where: "label", "pages" | first -%}
+{"site":{"title":{{ site.title | jsonify }},"description":{{ site.description | jsonify }},"url":{{ site.url | jsonify }}},"docs":[
+{%- assign sep = "" -%}
+{%- for d in site.posts -%}
+{{ sep }}{"url":{{ d.url | jsonify }},"path":{{ d.relative_path | jsonify }},"title":{{ d.title | jsonify }},"date":{{ d.date | date: '%Y-%m-%d' | jsonify }},"collection":"posts"}
+{%- assign sep = "," -%}
+{%- endfor -%}
+{%- for d in pages_coll.docs -%}
+{{ sep }}{"url":{{ d.url | jsonify }},"path":{{ d.relative_path | jsonify }},"title":{{ d.title | jsonify }},"date":{{ d.date | date: '%Y-%m-%d' | jsonify }},"collection":"pages"}
+{%- assign sep = "," -%}
+{%- endfor -%}
+]}
