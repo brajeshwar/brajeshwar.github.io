@@ -160,7 +160,7 @@
 
 /* Reader font choice — overrides --font-body (default sans). Ovellum parity. */
 [data-font="sans"]  { --font-body: var(--font-sans); }
-[data-font="serif"] { --font-body: var(--font-serif); }
+[data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); }
 [data-font="inter"] { --font-body: "Inter var", var(--font-sans); }
 [data-font="geist"] { --font-body: "Geist var", var(--font-sans); }
 

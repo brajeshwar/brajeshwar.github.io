@@ -17,8 +17,10 @@
   font-display: swap;
 }
 
-/* Libre Baskerville stays available behind --font-serif as an optional
-   upgrade, but is not part of the default reader fonts. */
+/* Libre Baskerville is the reader "Serif" font ([data-font="serif"] in
+   0.0-config.css → --font-body). Self-hosted, latin subset, font-display:swap
+   so it downloads only when a reader picks Serif. Falls back to the system
+   serif stack (--font-serif) while loading / if it fails. */
 @font-face {
   font-family: "Libre Baskerville";
   src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2") format("woff2");
