@@ -8,35 +8,38 @@ main:
 - title: Contact
   url: "/contact/"
 
-# footer: a flat, centered row of page links (v2027 — simplified from the earlier
-# grouped columns). Order is Brajeshwar's.
+# footer: centered page links, rendered as one row with a subtle bullet between
+# each group. Groups + order are Brajeshwar's.
 footer:
-- title: Home
-  url: "/"
-- title: About
-  url: "/about/"
-- title: Archives
-  url: "/archives/"
-- title: Now
-  url: "/now/"
-- title: Search
-  url: "/search/"
-- title: Books
-  url: "/books/"
-- title: Film
-  url: "/film/"
-- title: Ideas
-  url: "/ideas/"
-- title: Hire
-  url: "/hire/"
-- title: Legal
-  url: "/legal/"
-- title: Newsletter
-  url: "/newsletter/"
-- title: Contact
-  url: "/contact/"
-- title: Photos
-  url: "/photos/"   # page not created yet — link is intentional per Brajeshwar
+- links:
+  - title: Home
+    url: "/"
+- links:
+  - title: About
+    url: "/about/"
+  - title: Archives
+    url: "/archives/"
+  - title: Books
+    url: "/books/"
+  - title: Now
+    url: "/now/"
+  - title: Photos
+    url: "/photos/"
+  - title: Film
+    url: "/film/"
+  - title: Ideas
+    url: "/ideas/"
+- links:
+  - title: Hire
+    url: "/hire/"
+  - title: Legal
+    url: "/legal/"
+  - title: Newsletter
+    url: "/newsletter/"
+  - title: Search
+    url: "/search/"
+  - title: Contact
+    url: "/contact/"
 
 # social: icon links below the page links. icon = _includes/icons/<icon>.svg (inline SVG).
 social:
@@ -53,11 +56,8 @@ social:
   url: "https://margins.oinam.com/@brajeshwar"
   icon: mastodon
   rel: me
-- title: Oinam
-  url: "https://oinam.com"
-  icon: oinam
 - title: Memos
-  url: "https://memos.oinam.com"
+  url: "https://bits.oinam.com/"
   icon: memos
 - title: Instagram
   url: "https://www.instagram.com/oinam/"

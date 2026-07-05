@@ -1,17 +1,22 @@
+/* Outer footer spans the full viewport width so the top rule is edge-to-edge. */
 footer {
-  /* Align with the content band; thin subtle top rule separates it from the body. */
-  width: var(--body-width);
-  max-width: var(--body-width-max);
-  margin: var(--space-2xl) auto 0;
-  padding: var(--space-l) 0 var(--space-xl);
-
+  margin-top: var(--space-2xl);
   border-top: var(--border-size) var(--border-style) var(--rule);
 
-  text-align: center;
   color: var(--text-muted);
 }
 
-/* Page links — one centred, wrapping row. */
+/* Inner content stays at the reading/content width, centred. */
+.footer-inner {
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin-inline: auto;
+  padding: var(--space-l) 0 var(--space-xl);
+
+  text-align: center;
+}
+
+/* Page links — one centred, wrapping row; groups split by a subtle bullet. */
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +25,12 @@ footer {
   gap: var(--space-3xs) var(--space-s);
 
   font-size: var(--step--1);
+}
+
+.footer-links__sep {
+  color: var(--text-color-lower);
+  opacity: var(--opacity-lower);
+  user-select: none;
 }
 
 .footer-links a,
