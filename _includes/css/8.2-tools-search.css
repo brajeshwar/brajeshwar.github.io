@@ -67,22 +67,6 @@ site-search {
   color: var(--text-muted);
 }
 
-/* ⌘K hint badge next to the trigger icon (hidden on coarse pointers). */
-.site-search__hint {
-  margin-left: var(--space-3xs);
-  padding: 1px var(--space-3xs);
-  font-family: var(--font-family-sans-serif);
-  font-size: var(--step--2);
-  line-height: 1.4;
-  color: var(--text-muted);
-  border: var(--border-size) var(--border-style) var(--rule);
-  border-radius: var(--border-radius-small);
-}
-
-@media (max-width: 800px), (pointer: coarse) {
-  .site-search__hint { display: none; }
-}
-
 /* Theme Pagefind's Modular UI with our tokens so results follow the active theme. */
 .site-search__panel {
   --pagefind-ui-primary: var(--accent);
