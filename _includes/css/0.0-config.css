@@ -180,11 +180,11 @@
 /* Text size — Kindle-style. Multiplies the type scale for ALL content inside
    <main> (home body, pages, articles) — header/footer stay on the base scale.
    Default = m (no attribute); two steps smaller (s, xs) and larger (l, xl). */
-:root                 { --text-scale: 1; }
-[data-text-size="xs"] { --text-scale: 0.88; }
-[data-text-size="s"]  { --text-scale: 0.94; }
-[data-text-size="l"]  { --text-scale: 1.09; }
-[data-text-size="xl"] { --text-scale: 1.19; }
+:root                 { --text-scale: 1; }     /* m — default, the middle button */
+[data-text-size="xs"] { --text-scale: 0.85; }  /* −2 steps */
+[data-text-size="s"]  { --text-scale: 0.925; } /* −1 step  */
+[data-text-size="l"]  { --text-scale: 1.075; } /* +1 step  */
+[data-text-size="xl"] { --text-scale: 1.15; }  /* +2 steps — symmetric ±0.075 / ±0.15 around 1 */
 
 main {
   --step--2: calc(var(--step--2-base) * var(--text-scale));
