@@ -75,7 +75,7 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 - **Phase 3 done + live-verified.** Templates & chrome.
   - **Header** — already centered logo+nav with full-width rule; removed the dead `mode-toggle` CSS (now `reader-settings`).
   - **Footer** — restructured `_data/nav.yaml` `footer` from a flat list into **4 categorised groups** (Browse / Reading / About / Connect — all 13 original links preserved); `footer.html` renders columns; `3.1-footer.css` is a responsive `auto-fit` grid + centered colophon. ⚠️ The grouping is my IA guess — easy to re-bucket; iterate freely.
-  - **Blockquote** — Yale e360 style: no background box, quiet left rule, italic serif, muted (`1.2-typography.css`).
+  - **Blockquote** — Yale e360 style: quiet left rule, italic, muted; **font-family follows the global `--font-body`** (the reader's font choice), not a fixed serif (`1.2-typography.css`).
   - **Figures** — captions muted/restrained + caption-alignment utilities (`figcaption.center/.right`, default left) in `2.1-images.css`. Gallery already existed.
   - Browser-verified: footer columns on home + posts, header, sidenotes still work post-refactor.
 - **Phase 4 done.** Cleanup.

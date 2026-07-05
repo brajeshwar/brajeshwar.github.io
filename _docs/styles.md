@@ -26,24 +26,27 @@ The reader picks the body font via the **appearance panel** → `[data-font]` sw
 | Token | Stack | |
 |---|---|---|
 | `--font-sans` | `ui-sans-serif, system-ui, -apple-system, …` | system sans (default) |
-| `--font-serif` | `ui-serif, Georgia, Cambria, Times, serif` | system serif |
+| `--font-serif` | `ui-serif, Georgia, Cambria, Times, serif` | system serif (fallback for the Serif choice) |
 | `--font-mono` | `ui-monospace, SFMono-Regular, Menlo, …` | `code`, `pre` |
 | `--font-body` | `var(--font-sans)` by default | **the body font** — what `[data-font]` swaps |
 
 Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → --font-serif`,
 `…-monospace → --font-mono`.
 
-**Variable fonts** (`0.0-fonts.css`, bundled): `@font-face` for **"Inter var"**
-(`assets/fonts/inter/InterVariable.woff2`) and **"Geist var"** (`assets/fonts/geist/Geist-Variable.ttf`),
-`font-weight: 100 900`, `font-display: swap` → they **download only when chosen** (no page-load
-cost otherwise). Libre Baskerville stays defined behind `--font-serif` as an optional upgrade.
+**Self-hosted fonts** (`0.0-fonts.css`, bundled `@font-face`, all `font-display: swap` so they
+**download only when chosen** — no default-load cost):
+- **"Libre Baskerville"** (`assets/fonts/libre-baskerville/*.woff2`, latin subset,
+  regular/italic/bold, `size-adjust: 98.5%`) — **the reader "Serif" font** (`[data-font="serif"]`),
+  with the system serif stack as its fallback while loading / on failure.
+- **"Inter var"** (`inter/InterVariable.woff2`) and **"Geist var"** (`geist/Geist-Variable.ttf`),
+  `font-weight: 100 900` — the Inter / Geist reader choices.
 
 ### The `[data-font]` axis
 ```css
 /* 0.0-config.css */
 :root { --font-body: var(--font-sans); }   /* default */
 [data-font="sans"]  { --font-body: var(--font-sans); }
-[data-font="serif"] { --font-body: var(--font-serif); }
+[data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); }
 [data-font="inter"] { --font-body: "Inter var", var(--font-sans); }
 [data-font="geist"] { --font-body: "Geist var", var(--font-sans); }
 ```

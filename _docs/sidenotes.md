@@ -53,6 +53,8 @@ Robustness:
   (`.sidenote-focus`, `.is-active`, `.is-open`) and the `.sidenote-inline` reveal panel.
   Note: `.sidenote` and `.sidenote-inline` are `<aside>`s, so they **explicitly reset**
   the generic `aside {}` box treatment (background/padding/border/serif).
+  Both render at **`--step--1`** (sans, muted) — a deliberately larger note voice than a
+  typical Tufte footnote; bumped one step up the scale for easier margin reading.
 - Cross-focus uses only existing tokens: dimming via `--opacity-lower`, active note via
   `--text-color`, active reference via `--accent-hover` on `--mark`. Transitions respect
   the global `prefers-reduced-motion` kill switch in `1.1-base.css`.
