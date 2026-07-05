@@ -25,12 +25,14 @@
   };
   var GROUPS = [['theme','Mode'], ['palette','Palette'], ['font','Font'], ['textsize','Text Size']];
 
-  // Accent swatches. '' = default (use the palette/mode accent). A tight pair that
-  // complements the palettes: a cool blue (for Cool/Nord) and a warm amber (for Warm/eink).
+  // Accent swatches. '' = default (use the palette/mode accent); then four hues
+  // that complement the palettes. Five total, Default first.
   var ACCENTS = [
     ['', 'Default'],
     ['oklch(57% 0.16 255)', 'Blue'],
-    ['oklch(66% 0.13 65)',  'Amber']
+    ['oklch(56% 0.14 150)', 'Green'],
+    ['oklch(66% 0.13 65)',  'Amber'],
+    ['oklch(60% 0.17 15)',  'Red']
   ];
 
   var trigger, panel, backdrop;
@@ -119,6 +121,7 @@
   function buildAccentGroup() {
     var current = readAccent();
     var g = makeGroup('Accent', 'appearance-accent-label');
+    g.group.classList.add('appearance-group--inline');   // label + swatches on one line
 
     var row = document.createElement('div');
     row.className = 'appearance-swatches';

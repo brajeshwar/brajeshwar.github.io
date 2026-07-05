@@ -53,21 +53,23 @@ The panel labels map to values: **Default** = `sans` (system stack, **no webfont
 ```
 
 ### Text size (Kindle-style) — `[data-text-size]`
-Five "A" buttons in the appearance panel, growing left → right, default in the middle.
-Sets `--text-scale` (`0.0-config.css`), applied to the **reading column only** — body,
-headings, and blockquote scale proportionally (`.container-ideal article …` in `1.1-base.css`);
-the rest of the site keeps the fluid Utopia scale. Values: `xs` 0.88 · `s` 0.94 · **m 1 (default,
-no attribute)** · `l` 1.09 · `xl` 1.19. Persisted as `localStorage('textsize')`; applied before
-paint by the no-flash snippet.
-**Interface vs content (Brajeshwar's model).** The reader's font choice is for **reading
-content only** — it does **not** restyle the UI chrome:
-- `body { font-family: var(--font-sans); }` (`1.1-base.css`) — the **interface** font. Header,
-  footer, home, nav all stay system sans regardless of the choice.
-- `.container-ideal article { font-family: var(--font-body); }` (`1.1-base.css`) — the reader's
-  choice applies to **post/page article prose + its headings** only.
+Five "A" buttons in the appearance panel, growing left → right, default in the middle. Sets
+`--text-scale`, which **multiplies the whole type scale for content inside `<main>`** (home
+body, pages, articles) — header/footer keep the base scale. Mechanism (`0.0-config.css`): the
+raw clamps are `--step-N-base`; `:root` aliases `--step-N: var(--step-N-base)` (used by
+header/footer), and `main` redefines `--step-N: calc(var(--step-N-base) * var(--text-scale))`.
+So every element that uses `--step-*` in content scales automatically — no per-element rules.
+Values: `xs` 0.88 · `s` 0.94 · **m 1 (default, no attribute)** · `l` 1.09 · `xl` 1.19. Persisted
+as `localStorage('textsize')`; applied before paint by the no-flash snippet.
+
+**Interface vs content (Brajeshwar's model).** The reader's font choice applies to **all
+content**; only the **header and footer** (the UI chrome) are pinned to system sans:
+- `body { font-family: var(--font-body); }` (`1.1-base.css`) — the reader's choice flows to
+  home body, pages, and articles.
+- `header, footer { font-family: var(--font-sans); }` (`1.1-base.css`) — the chrome stays sans
+  regardless of the choice (search + appearance panels live inside the header, so they follow).
 - **Sidenotes** (`.sidenote`/`.sidenote-inline`) and **post meta** (`.post time`) re-assert sans
-  on top of that, so they stay sans even inside a serif article. Blockquotes **inherit** their
-  context (serif inside a serif article, sans elsewhere).
+  on top of content, so they stay sans even in a serif article. Blockquotes **inherit** context.
 - Set on `<html>` by `appearance.js`, persisted in `localStorage('font')`, applied before first
   paint by the no-flash snippet (`sans` = no attribute = default).
 
@@ -216,9 +218,11 @@ accent. All inherit the contrast bump above via the semantic layer.
 ## Iterate-later
 - Migrate components off the legacy bridge onto `--color-*` directly (cleanup, optional).
 
-> **Accent** was trimmed to **Default + Blue + Amber** (a cool + a warm swatch that complement
-> the Cool/Warm palettes); the custom colour picker was removed. Set via `applyAccent` →
-> inline `--ov-accent` + `data-accent="custom"`, persisted as `localStorage('accent')`.
+> **Accent** = five swatches (**Default + Blue/Green/Amber/Red**), rendered **inline with the
+> "Accent" label** (`.appearance-group--inline`); no custom colour picker. Set via `applyAccent`
+> → inline `--ov-accent` + `data-accent="custom"`, persisted as `localStorage('accent')`.
+> **Panel controls are segmented pills** (`.appearance-options` = one rounded pill, options are
+> flat divided cells; single line, compact) — see `8.1-tools-theme-toggle.css`.
 
 ---
 

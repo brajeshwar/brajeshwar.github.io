@@ -30,7 +30,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
 
-  font-family: var(--font-sans);    /* INTERFACE font — header, footer, home, nav, chrome. Always system sans. */
+  font-family: var(--font-body);    /* reader's choice — applies to all content; only header/footer are pinned to sans (3.1-header/footer + rule below) */
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 400;
@@ -58,25 +58,15 @@ main,
   max-width: var(--body-width-ideal);
 }
 
-/* The reader's font choice (--font-body via [data-font]) applies to the READING
-   CONTENT only — post/page article prose and its headings. The interface (body,
-   header, footer, home) stays sans. Sidenotes + post meta re-assert sans on top
-   of this (2.1-footnotes.css / 4.1-posts.css). */
-.container-ideal article {
-  font-family: var(--font-body);
+/* Font scope: the reader's font (--font-body) applies to ALL content (home, pages,
+   articles) via `body` above; only the header and footer (the UI chrome) are pinned
+   to system sans. Sidenotes + post meta re-assert sans on top (2.1-footnotes.css /
+   4.1-posts.css). Text size scales content via the --step-* tokens redefined on
+   `main` (0.0-config.css), so no per-element rules are needed here. */
+header,
+footer {
+  font-family: var(--font-sans);
 }
-
-/* Text size (Kindle-style, --text-scale via [data-text-size]) scales the whole
-   reading column proportionally — body, headings, and blockquote — while the rest
-   of the site keeps the fluid Utopia scale. */
-.container-ideal article        { font-size: calc(var(--step-0)  * var(--text-scale)); }
-.container-ideal article h1     { font-size: calc(var(--step-3)  * var(--text-scale)); }
-.container-ideal article h2     { font-size: calc(var(--step-2)  * var(--text-scale)); }
-.container-ideal article h3     { font-size: calc(var(--step-1)  * var(--text-scale)); }
-.container-ideal article h4     { font-size: calc(var(--step-0)  * var(--text-scale)); }
-.container-ideal article h5     { font-size: calc(var(--step--1) * var(--text-scale)); }
-.container-ideal article h6     { font-size: calc(var(--step--2) * var(--text-scale)); }
-.container-ideal article blockquote { font-size: calc(var(--step-1) * var(--text-scale)); }
 
 hr {
   padding: 0;
