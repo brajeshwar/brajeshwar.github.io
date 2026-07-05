@@ -1,14 +1,38 @@
 header {
-  margin: 0 auto;
-  padding: var(--space-xs) 0 var(--space-m) 0;
-  text-align: center;
+  /* Align with the content band; logo at the left edge, menu at the right. */
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin: 0 auto var(--space-l);      /* bottom spacing separates header from body (no rule) */
+  padding: var(--space-s) 0;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: var(--space-3xs);
+  gap: var(--space-s);
+}
 
-  border-bottom: var(--border-size) var(--border-style) var(--border-color);
+/* Right cluster: menu items + tool icons. */
+site-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+/* Narrow screens: the logo-left / menu-right row can't fit (~478px min, no
+   hamburger). Stack and center so nothing overflows horizontally. */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  site-menu {
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+  site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* logo */
@@ -35,23 +59,50 @@ site-logo a:visited .logo__img, site-logo a:visited .logo__img--path {
   fill: var(--bg-color-high);
 } 
 
-/* menu */
+/* menu — flat text links (no pill) */
 site-nav {
-  padding: var(--space-2xs);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
   font-size: var(--step--1);
-  background-color: var(--bg-color-high);
-  border-radius: var(--border-radius-larger);
 }
 
 site-nav a, site-nav a:visited {
-  padding: var(--space-2xs);
+  padding: var(--space-3xs) var(--space-2xs);
+  border-radius: var(--border-radius-small);
   color: var(--text-color-lower);
   text-decoration: none;
+  transition: color var(--transition-duration) ease;
 }
 
 site-nav a:hover, site-nav a:active, site-nav a.active {
-  color: var(--bg-color-lowest);
+  color: var(--text-color-higher);
   text-decoration: none;
 }
 
-/* Reader settings (font + theme) styled in 8.1-tools-theme-toggle.css */
+/* tool icons: search + rss + theme changer (far right) */
+site-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+/* RSS icon — match the search / appearance trigger treatment
+   (search styled in 8.2-tools-search.css, theme changer in 8.1-tools-theme-toggle.css) */
+.site-rss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+}
+
+.site-rss:hover, .site-rss:focus-visible {
+  color: var(--text);
+  text-decoration: none;
+}
