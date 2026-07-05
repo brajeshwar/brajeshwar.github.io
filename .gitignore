@@ -1,10 +1,23 @@
+# Jekyll / Ruby build
 .bundle/
 .jekyll-cache/
 .jekyll-metadata
-.obsidian
-.ruby-lsp
 .sass-cache/
 _site/
+# vendor/ = bundle install --path vendor
+vendor/
+
+# Node / Pagefind tooling (commit package.json + lockfile, not the deps)
+node_modules/
+.pagefind-cache/
+
+# Editor / tooling local state
+.obsidian
+.ruby-lsp
+.vscode/
+.idea/
+
+# Scratch — local braindumps & working files (not part of the site)
 tmp/
 
 # Ignore OS generated files #
