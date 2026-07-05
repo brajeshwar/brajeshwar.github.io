@@ -33,7 +33,7 @@ blockquote {
   margin: var(--space-m) 0;
   padding: var(--space-2xs) 0 var(--space-2xs) var(--space-m);
 
-  font-family: var(--font-body);   /* follow the reader's global font, not a fixed serif */
+  /* inherit — follows the article's reading font inside content, sans elsewhere */
   font-size: var(--step-1);
   font-weight: var(--font-weight-light);
   font-style: italic;

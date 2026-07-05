@@ -56,9 +56,9 @@
   --color-bg-subtle: var(--color-gray-100);
   --color-bg-muted: var(--color-gray-200);
   --color-bg-chrome: var(--color-gray-200);
-  --color-fg: var(--color-gray-900);
-  --color-fg-muted: var(--color-gray-700);
-  --color-fg-subtle: var(--color-gray-500);
+  --color-fg: var(--color-gray-950);         /* higher contrast (was gray-900) */
+  --color-fg-muted: var(--color-gray-800);   /* higher contrast (was gray-700) */
+  --color-fg-subtle: var(--color-gray-600);  /* higher contrast (was gray-500) */
 
   --color-border: color-mix(in oklch, var(--color-fg) 10%, transparent);
   --color-border-strong: color-mix(in oklch, var(--color-fg) 18%, transparent);
@@ -150,9 +150,9 @@
   --color-bg-subtle: var(--color-gray-900);
   --color-bg-muted: var(--color-gray-800);
   --color-bg-chrome: var(--color-gray-800);
-  --color-fg: var(--color-gray-100);
-  --color-fg-muted: var(--color-gray-300);
-  --color-fg-subtle: var(--color-gray-500);
+  --color-fg: var(--color-gray-50);          /* higher contrast (was gray-100) */
+  --color-fg-muted: var(--color-gray-200);   /* higher contrast (was gray-300) */
+  --color-fg-subtle: var(--color-gray-400);  /* higher contrast (was gray-500) */
   --color-code-bg: var(--color-gray-950);
   --color-primary: var(--color-gray-50);
   --color-primary-fg: var(--color-gray-900);
@@ -169,9 +169,9 @@
     --color-bg-subtle: var(--color-gray-900);
     --color-bg-muted: var(--color-gray-800);
     --color-bg-chrome: var(--color-gray-800);
-    --color-fg: var(--color-gray-100);
-    --color-fg-muted: var(--color-gray-300);
-    --color-fg-subtle: var(--color-gray-500);
+    --color-fg: var(--color-gray-50);          /* higher contrast (was gray-100) */
+    --color-fg-muted: var(--color-gray-200);   /* higher contrast (was gray-300) */
+    --color-fg-subtle: var(--color-gray-400);  /* higher contrast (was gray-500) */
     --color-code-bg: var(--color-gray-950);
     --color-primary: var(--color-gray-50);
     --color-primary-fg: var(--color-gray-900);
