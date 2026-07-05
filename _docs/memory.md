@@ -4,12 +4,30 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
+## Where we are (updated 2026-07-05) — READ FIRST
+- **The v2027 redesign is DONE, MERGED to `main`, and DEPLOYED (live at brajeshwar.com).**
+  `brajeshwar.com-v2027` was fast-forward-merged into `main` (`cd3227e0 → 2826a518`, 18 commits)
+  and pushed; the GitHub Actions deploy ran **green** (build incl. the new agent-markdown step,
+  + Pagefind, + deploy-pages).
+- **Working branch is now `main`.** Each **push to `main` auto-deploys** (workflow trigger).
+  So: commit small, reviewable changes; pushing publishes. (Optionally branch + merge for bigger
+  work.) Same guardrails apply — no content edits, no AI attribution, Brajeshwar makes/pushes
+  the commits unless he asks otherwise.
+- **Mode: incremental improvement.** Brajeshwar is reviewing pages/articles live and will point
+  out things to refine. Open work is in [`todo.md`](todo.md).
+- **Hosting/DNS decided** — keep the `brajeshwar.github.io` repo name (don't rename), keep
+  Cloudflare Pages dormant, use Cloudflare for DNS (+ proxy later for Workers/redirects). See
+  [`hosting.md`](hosting.md).
+- **Fixed 2026-07-05:** dev files (`CLAUDE.md`→`/CLAUDE/`, `Makefile`, `scripts/`) were being
+  published — now in `_config.yml` `exclude`. Re-check `_site/` after editing `exclude`.
+
 ## Docs index
 - [`design.md`](design.md) — **design philosophy** (the *why*): text-first, ornament-free, decoupled/portable styles, progressive enhancement, reader's choice.
-- [`styles.md`](styles.md) — the **style specifics**: typography (scales, font axis), color & theming (**Ovellum two-axis**: mode `data-theme` auto/light/dark × palette `data-palette` default/eink/flexoki/nord/solarized, + font + accent, bridge, no-flash), branding.
+- [`styles.md`](styles.md) — the **style specifics**: typography (scales, font axis Default/Sans-Serif/Serif, Kindle text-size), color & theming (**Ovellum two-axis**: mode `data-theme` auto/light/dark × palette `data-palette` default/nord(Cool)/eink(Warm), + accent, bridge, no-flash), branding.
 - [`sidenotes.md`](sidenotes.md) — Tufte margin sidenotes built from kramdown footnotes (Phase 2) + Aresluna wayfinding.
 - [`search.md`](search.md) — site-wide header search, lazy-loaded Pagefind.
 - [`agents.md`](agents.md) — plain-text Markdown twins (`/x.md`) + `/llms.txt` for AI agents; post-build step like Pagefind.
+- [`hosting.md`](hosting.md) — GitHub Pages + Cloudflare hosting/DNS setup and decisions.
 - [`todo.md`](todo.md) — running site task list (beyond the redesign phases).
 - [`v2027/spec.md`](v2027/spec.md) — single source of truth for the v2027 redesign (the brief Brajeshwar built with Claude CoWork).
 - [`v2027/inspirations.md`](v2027/inspirations.md) — article-craft studies (Aresluna deep-dive; Yale e360, BBC, The Walrus, iDiallo).
