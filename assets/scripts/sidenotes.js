@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  var MIN_GUTTER_REM = 14;   // keep in sync with --sidenote-min-gutter
+  var MIN_GUTTER_REM = 17;   // keep in sync with --sidenote-min-gutter
   var FLASH_MS = 1500;       // spotlight duration when a reference is clicked
   var items = [];
 
@@ -86,13 +86,32 @@
     return aside;
   }
 
+  /* Wide media (.full/.large images, galleries, right asides) grows past the
+     reading column into the sidenote gutter — notes must not sit on top of it.
+     Returns the vertical ranges (relative to the article top) such elements
+     occupy, so placement can push overlapping notes below them. */
+  function collectObstacles(item, articleRect) {
+    var edge = articleRect.right + rem(1);     // past this line = in the gutter
+    var els = item.el.querySelectorAll('.full, .large, .gallery, aside.right, .aside.right');
+    var list = [];
+    Array.prototype.forEach.call(els, function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.height === 0 || r.right <= edge) return;
+      list.push({ top: r.top - articleRect.top, bottom: r.bottom - articleRect.top });
+    });
+    list.sort(function (a, b) { return a.top - b.top; });
+    return list;
+  }
+
   function place(item) {
     clear(item);
     if (!gutterFits(item.el)) return;          // fold back to footnotes
     closeAllInlines(item);                     // the margin takes over from inline reveals
     item.el.classList.add('has-sidenotes');
 
-    var articleTop = item.el.getBoundingClientRect().top;
+    var articleRect = item.el.getBoundingClientRect();
+    var articleTop = articleRect.top;
+    var obstacles = collectObstacles(item, articleRect);
     var gap = rem(1);
     var lastBottom = 0;
     var seen = {};
@@ -112,8 +131,12 @@
 
       var refTop = ref.getBoundingClientRect().top - articleTop;
       var top = Math.max(refTop, lastBottom + gap);
+      var height = aside.offsetHeight;
+      obstacles.forEach(function (ob) {        // dodge wide media in the gutter
+        if (top < ob.bottom && top + height > ob.top) top = ob.bottom + gap;
+      });
       aside.style.top = top + 'px';
-      lastBottom = top + aside.offsetHeight;
+      lastBottom = top + height;
       item.notes.push(aside);
       item.byId[id] = aside;
     });

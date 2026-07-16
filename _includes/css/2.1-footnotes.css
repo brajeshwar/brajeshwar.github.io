@@ -40,7 +40,11 @@
 .sidenote {
   position: absolute;
   left: 100%;                     /* just past the reading column's right edge */
-  width: var(--sidenote-width);
+  /* Fluid width: at most --sidenote-width, but never past the viewport — the
+     centered column leaves (100vw − column)/2 of right margin; keep the gap
+     plus 1rem of breathing room to the edge. 100% here = the column width. */
+  width: min(var(--sidenote-width),
+             calc((100vw - 100%) / 2 - var(--sidenote-gap) - 1rem));
 
   /* reset the generic `aside {}` box treatment — sidenotes are plain margin text */
   margin: 0 0 0 var(--sidenote-gap);
