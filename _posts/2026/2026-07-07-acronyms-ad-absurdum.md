@@ -1,4 +1,4 @@
-# Acronyms Ad Nauseam
+# Acronyms Ad Absurdum
 
 [Daniel’s Acronym Fatigue Series](https://devz.cl/posts/acryonym-fatigue-series-why-i-m-wary-of-engineering-acronyms/) started this train of thought, and everything came flashing back that I thought I would write it out.
 
