@@ -4,7 +4,10 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-07-05) — READ FIRST
+## Where we are (updated 2026-07-09) — READ FIRST
+- **Pending review/commit:** the sidenote-fit + measure-fix changes from the 2026-07-08
+  session (see the "Sidenote/layout iteration" bullet below) — 3 code files + 3 docs,
+  build-verified, headless-browser-verified, awaiting Brajeshwar's live look and commit.
 - **The v2027 redesign is DONE, MERGED to `main`, and DEPLOYED (live at brajeshwar.com).**
   `brajeshwar.com-v2027` was fast-forward-merged into `main` (`cd3227e0 → 2826a518`, 18 commits)
   and pushed; the GitHub Actions deploy ran **green** (build incl. the new agent-markdown step,
@@ -152,3 +155,29 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 - **Header redesigned (this session; browser-verified desktop + narrow):** logo **left** (→ `/`); on the **right**, nav (About · Archives · **Now** · Contact) then tool icons — **Search** (⌘K palette; visible `⌘K` badge removed, shortcut still fires via `search.js` global keydown), **RSS** (`/feed.xml`), **theme changer** far right. **Removed the `border-bottom` rule**; separated from body by `margin-bottom: var(--space-l)`. Nav is now **flat text** (dropped the pill). Header constrained to `--body-width-max`, `justify-content: space-between`. **Stacks + centers ≤600px** (no hamburger). Added `Now` to `_data/nav.yaml` `main`. Removed dead `.site-search__hint` CSS. Files: `header.html`, `3.1-header.css`, `8.2-tools-search.css`, `_data/nav.yaml`.
   - **Header icons now match the footer** (Brajeshwar's follow-up): all **filled, 20px, `currentColor`**, pulled from `_includes/icons/` — **RSS is the exact same file as the footer** (`icons/rss.svg`, Simple Icons); **search** is a hand-authored filled magnifier (the old stroke one read too thin); **theme** is a hand-authored filled contrast circle (the old circle-with-dots looked bad). New files: `icons/search.svg`, `icons/theme.svg`.
   - Supersedes the Phase-3 "centered logo+nav + full-width rule" note above and spec §4.3. **Uncommitted — staged for review.**
+- **Sidenote/layout iteration (this session; headless-Chrome-verified at 1512/1280px).**
+  Sidenotes were colliding with the negative-margin breakout designs (`.large`/`.full`
+  images, `.gallery`, `aside.right` all poke into the same right viewport margin the notes
+  hang in). **Tried a left-aligned article layout** (column flush left in a homepage-width
+  container, notes in the structural right gutter) — **Brajeshwar rejected it ("too lefty");
+  the article column stays viewport-centered**, all left-alignment CSS reverted (no
+  `.container-article`; breakouts keep their original viewport-centered rules). What the
+  exercise produced and **kept**:
+  - **Measure fixed: `--measure: 66ch → 66rch`** (surfaced when the article briefly carried
+    its own cap and `66ch` inflated ~665→822px — Brajeshwar: "too wide"). `ch` resolves
+    against each element's own font-size; `rch` resolves at the root (16px), so every use of
+    the token (`.container-ideal`, `figcaption`, `photo-cover__desc`) is the same ~665px
+    column, stable across reader font choices. Needs ~2023+ browsers (Safari 16.4 / Chrome
+    111 / Firefox 128). See [`styles.md`](styles.md) §Reading measure.
+  - **`sidenotes.js` dodges wide media**: `collectObstacles()` records the vertical ranges of
+    `.full`/`.large`/`.gallery`/`aside.right` elements that cross past the column's right
+    edge; a note whose slot intersects one is pushed below it (verified: notes clear the
+    full-bleed floppy + `.large` flower on `/2025/fixing-a-dos-computer-for-the-army-1993/`).
+    This was the actual fix for "sidenotes break article designs".
+  - **Sidenote fit**: `--sidenote-gap` 2.5→**3.5rem**; `.sidenote` width now **fluid** —
+    `min(16rem, (100vw − column)/2 − gap − 1rem)` (`2.1-footnotes.css`) so notes shrink to
+    the available margin instead of overflowing the viewport (they previously overflowed at
+    ~1120–1300px widths); `--sidenote-min-gutter` 14→**17rem** + `MIN_GUTTER_REM` synced, so
+    notes only appear (from ~1210px viewports) when a ≥12rem note genuinely fits.
+  - Net files: `0.0-config.css`, `2.1-footnotes.css`, `sidenotes.js` (+ docs `styles.md`,
+    `sidenotes.md`). **Uncommitted — staged for review.**

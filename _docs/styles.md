@@ -101,14 +101,17 @@ characters per line (see [`design.md`](design.md) → *Comfortable measure*).
 
 ```css
 /* 0.0-config.css */
---measure          : 66ch;              /* ~60–70 chars/line target */
+--measure          : 66rch;             /* ~60–70 chars/line target, resolved at the root font */
 --body-width-ideal : var(--measure);    /* .container-ideal reading column = the measure */
 ```
 - `.container-ideal { max-width: var(--body-width-ideal); }` (`1.1-base.css`) → the reading
-  column. `ch` resolves against the column's (body) font, so the measure holds at ~66
-  characters whether the reader is on sans, serif, Inter, or Geist — it doesn't drift wide on
-  large type the way a fixed `rem` width did (was `46rem` ≈ 80ch, now `66ch` ≈ 665px @20px sans,
-  verified ~65–70 real chars/line).
+  column (~665px). **`rch`, not `ch`**: plain `ch` resolves against each *element's own*
+  font-size, so the one token produced different widths at different usage sites (on an
+  element carrying `--step-0` ≈ 20px, `66ch` inflates to ~822px; on `figcaption` at
+  `--step--1` it shrinks). `rch` resolves against the root (16px system sans), pinning every
+  use to the same ~665px column. Trade-offs: the column no longer subtly re-widens when the
+  reader picks Serif/Geist (stable is better), and `rch` needs ~2023+ browsers
+  (Safari 16.4 / Chrome 111 / Firefox 128).
 - Media in the column (`figure`, `img`, video embeds) fits the measure. **Video embeds use
   `aspect-ratio: 16/9`** (`1.1-base.css`), not a width-derived pixel height — required now
   that the column width is font-relative.

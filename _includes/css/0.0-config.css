@@ -115,7 +115,11 @@
   --font-size             : 16px;
 
   --body-width            : 96%;
-  --measure               : 66ch;  /* reading measure — comfort is char-count, not px; ~60–70ch (see design.md) */
+  --measure               : 66rch; /* reading measure — comfort is char-count, not px; ~60–70ch (see design.md).
+                                      rch (root ch), not ch: plain ch resolves against each element's own
+                                      font-size, so the same token gave the article (--step-0) a wider column
+                                      than the pages (16px) and .post-nav (smaller) a narrower one. rch pins
+                                      them all to the root 16px — one consistent column everywhere. */
   --body-width-ideal      : var(--measure); /* reading column = the measure */
   --body-width-max        : 76rem; /* visual width */
   --body-width-medium     : 60rem; /* objects that are large but not max */
@@ -165,9 +169,11 @@
   --image-width-full      : var(--body-width-full);
 
   /* Tufte sidenotes (Phase 2) — right-margin gutter. See _docs/sidenotes.md. */
-  --sidenote-width        : 16rem;
-  --sidenote-gap          : 2.5rem;  /* gap between reading column and sidenote */
-  --sidenote-min-gutter   : 14rem;   /* enable sidenotes only if this much right space exists */
+  --sidenote-width        : 16rem;   /* the maximum — notes shrink to fit the margin (2.1-footnotes.css) */
+  --sidenote-gap          : 3.5rem;  /* gap between reading column and sidenote */
+  --sidenote-min-gutter   : 17rem;   /* enable sidenotes only above this much right margin —
+                                        gap + ≥12rem of note + breathing room, so a note always
+                                        fully fits (sync sidenotes.js MIN_GUTTER_REM) */
 }
 
 /* Reader font choice — overrides --font-body (applies to article content, not the
