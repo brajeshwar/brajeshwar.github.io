@@ -1,0 +1,61 @@
+/* ============================================================
+   Album — thumbnail grid for photos, films, devices, videos.
+   ------------------------------------------------------------
+   Used by _layouts/album.html. Consolidates what used to be
+   4.1-pages-film.css and 4.1-pages-books.css — which were
+   byte-for-byte identical copies of each other, both scoped to
+   .page-film/.page-devices, and neither reachable from books.
+
+   The grid itself (ul.item__cards flex wrap) lives in 2.1-cards.css
+   in the base bundle, because the homepage books list uses it too.
+   This file only styles the album's cards on top of that.
+
+   Per-collection differences stay on the `style:` hook
+   (.page-film, .page-devices) rather than forking the layout.
+   ============================================================ */
+
+.album .item__cards li {
+  max-width: 220px;
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .album .item__cards li {
+    max-width: 170px;
+  }
+}
+
+.album .item__cards a {
+  display: block;
+  text-decoration: none;
+  opacity: var(--opacity-low);
+}
+
+/* :focus-visible added — the originals only covered hover/active,
+   so keyboard users got no affordance on these grids. */
+.album .item__cards a:hover,
+.album .item__cards a:focus-visible,
+.album .item__cards a:active {
+  opacity: var(--opacity-reset);
+}
+
+.album figure {
+  margin: 0;
+  border: 0 none;
+  background: none;
+}
+
+.album figcaption {
+  border: 0 none;
+}
+
+/* Was `font-size: x-small` — swapped for the site's step scale. */
+.album figure span {
+  font-size: var(--step--2);
+  color: var(--text-color-low);
+}
+
+/* Devices stack the "Used: …" line under the title; film keeps the
+   year inline after it. */
+.page-devices figure span {
+  display: block;
+}

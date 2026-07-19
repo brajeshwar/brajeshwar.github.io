@@ -1,0 +1,15 @@
+---
+layout: default
+styles: styles-album.html
+---
+
+{%- comment -%}
+  Album — full-bleed thumbnail grid for photos, films, devices, videos.
+  Body is deliberately identical to the old page-full.html plus the .album
+  hook, so film/devices render exactly as before. Pages bring their own
+  headings; the layout adds none. See _docs/css-architecture.md.
+{%- endcomment -%}
+
+<main role="main" class="album {{ page.style }}">
+  {{ content }}
+</main>

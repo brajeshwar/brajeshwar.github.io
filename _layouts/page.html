@@ -3,8 +3,27 @@ layout: default
 styles: styles-pages.html
 ---
 
+{%- comment -%}
+  Merged 2026-07-19: page.html + page-full.html are one layout now.
+
+  Defaults to `container-ideal` reading width — 22 pages rely on it
+  (about, books, contact, blogroll, styleguide, 404, …). Set `full: true`
+  in a page's front matter for a full-bleed body instead.
+
+  The two pages that used page-full (film, devices) moved to the album
+  layout, so `full: true` currently has no users. It stays because
+  full-width is a capability worth keeping for a non-gallery page.
+  See _docs/css-architecture.md.
+{%- endcomment -%}
+
+{% if page.full %}
+<main role="main" class="{{ page.style }}">
+  {{ content }}
+</main>
+{% else %}
 <main role="main" class="container-ideal {{ page.style }}">
   <article>
     {{ content }}
   </article>
 </main>
+{% endif %}
