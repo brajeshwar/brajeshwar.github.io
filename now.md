@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Now
-styles: css/4.1-pages-now.css
+styles: css/now.css
 style: page-now
 ---
 

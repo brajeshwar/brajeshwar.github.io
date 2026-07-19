@@ -1,4 +1,60 @@
 /* ============================================================
+   Themes — palettes, light/dark values, webfonts.
+   ------------------------------------------------------------
+   Merged from: 0.0-fonts.css + 0.1-color.css
+   Two orthogonal axes (mode x palette) plus font + accent.
+   The only file allowed to hold raw colour values.
+   ============================================================ */
+
+/* Self-hosted fonts for the reader font selector. The Default font is the system
+   sans stack (no webfont); these download only when the reader picks "Sans-Serif"
+   (Geist) or "Serif" (Libre Baskerville) — font-display:swap → no load cost otherwise. */
+@font-face {
+  font-family: "Geist var";
+  src: url("/assets/fonts/geist/Geist-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Libre Baskerville is the reader "Serif" font ([data-font="serif"] in
+   0.0-config.css → --font-body). Self-hosted, latin subset, font-display:swap
+   so it downloads only when a reader picks Serif. Falls back to the system
+   serif stack (--font-serif) while loading / if it fails. */
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  size-adjust: 98.5%;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  size-adjust: 98.5%;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  size-adjust: 98.5%;
+}
+
+
+/* ---- Colour tokens ---------------------------------------------------- */
+
+/* ============================================================
    Theming — ported from Ovellum (ovellum.oss.oinam.com).
    See _docs/styles.md.
    ------------------------------------------------------------
@@ -168,6 +224,51 @@
   --color-primary: var(--ov-accent);
   --color-primary-hover: color-mix(in oklch, var(--ov-accent) 78%, var(--color-fg));
   --color-primary-fg: oklch(98.5% 0 0);
+}
+
+/* ---- Syntax highlighting (code blocks) --------------------- */
+/* The pygments token classes in 2.1-code.css reference ONLY the
+   --code-* tokens below — no hardcoded colours there any more.
+
+   Light and dark share one hue per token type and differ only in
+   LIGHTNESS (--code-l) and CHROMA (--code-c), so a code block sits
+   on --color-code-bg and stays legible in either mode without a
+   duplicated palette.
+
+   MONOTONE SWITCH: set --code-c: 0 and syntax highlighting becomes
+   pure grayscale — tokens still differ by weight/italic/underline.
+   That is the setting most in keeping with the monotone default at
+   the top of this file; the restrained chroma below is the opt-in. */
+:root {
+  --code-l: 45%;    /* token lightness — light mode (dark ink on a light block) */
+  --code-c: 0.10;   /* token chroma — set to 0 for fully monotone code */
+
+  --code-bg      : var(--color-code-bg);
+  --code-fg      : var(--color-fg);
+  --code-fg-muted: var(--color-fg-muted);
+  --code-subtle  : var(--color-fg-subtle);
+  --code-hl-bg   : color-mix(in oklch, var(--color-fg) 12%, transparent);
+
+  --code-comment  : var(--color-fg-subtle);
+  --code-keyword  : oklch(var(--code-l) var(--code-c) 145);
+  --code-string   : oklch(var(--code-l) var(--code-c) 60);
+  --code-number   : oklch(var(--code-l) var(--code-c) 250);
+  --code-function : oklch(var(--code-l) var(--code-c) 265);
+  --code-variable : oklch(var(--code-l) var(--code-c) 195);
+  --code-builtin  : oklch(var(--code-l) var(--code-c) 200);
+  --code-decorator: oklch(var(--code-l) var(--code-c) 65);
+  --code-inserted : oklch(var(--code-l) var(--code-c) 145);
+  --code-deleted  : oklch(var(--code-l) calc(var(--code-c) * 1.5) 25);
+  --code-error    : oklch(var(--code-l) calc(var(--code-c) * 1.7) 25);
+}
+
+/* Dark mode only needs the lightness flipped — hues carry over. */
+:root[data-theme="dark"],
+:root[data-palette][data-theme="dark"] {
+  --code-l: 78%;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] { --code-l: 78%; }
 }
 
 /* ============================================================

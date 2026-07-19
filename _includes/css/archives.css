@@ -1,3 +1,9 @@
+/* ============================================================
+   Archives — /archives/ only.
+   ------------------------------------------------------------
+   Loaded via the styles: key in _pages/archives.html.
+   ============================================================ */
+
 page-archives {
   display: block;
   margin: var(--space) auto;

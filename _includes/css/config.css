@@ -1,4 +1,20 @@
-/* Modular Scale */
+/* ============================================================
+   Config — ratios, scales, spacing, breakpoints.
+   ------------------------------------------------------------
+   Site-wide settings. Everything downstream reads from here.
+   Defines the $breakpoint-* SCSS vars, so this must stay FIRST
+   in the concatenated stream (see _includes/styles.html).
+   ============================================================ */
+
+/* ---- Modular scale ratios ----------------------------------
+   Named musical/geometric ratios, kept as a palette to pick from.
+   Only a few are actually referenced (--golden, --minor-third,
+   --minor-seventh, below, via --scale*); the rest are here so a
+   ratio can be swapped by name instead of pasting a magic number.
+   Harmless to keep — comments and unused custom properties both
+   cost nothing in the shipped CSS (see the note at the foot of
+   this file about compressed output).
+   ------------------------------------------------------------ */
 :root {
   --double-octave    : 4;
   --pi               : 3.14159265359;
@@ -130,10 +146,18 @@
   --display-large         : 1024px;
   --display-extralarge    : 1600px;
 
+  /* ⚠️ SECOND spacing system — ratio-derived, predates the Utopia
+     --space-3xs…3xl scale defined above. Both are live and both are
+     used across components. They are NOT interchangeable:
+       --space        ≈ 1.618rem   (ratio × 1rem, fixed)
+       --space-m      ≈ 1.69–1.88rem (Utopia, fluid via clamp)
+     Prefer the Utopia --space-* scale in new code; it responds to
+     viewport width. These stay because migrating every component
+     off them is a bigger job than it looks. */
   --scale                 : var(--golden);
   --scale-small           : var(--minor-third);
   --scale-large           : var(--minor-seventh);
-  
+
   --space                 : calc(var(--scale) * 1rem);
   --space-small           : calc(var(--scale-small) * 0.8rem);
   --space-smaller         : calc(var(--scale-small) * 0.5rem);
@@ -203,19 +227,70 @@ main {
   --step-5:  calc(var(--step-5-base)  * var(--text-scale));
 }
 
-/* TBD: This seems to be not working. */
+/* ⚠️ Dormant, and wrong in both directions when it does fire.
+   Diagnosed 2026-07-19 (this replaces an older "seems to be not
+   working" note — it isn't working, and here is why).
+
+   `prefers-color-scheme` reads the OS setting ONLY. It knows nothing
+   about [data-theme], which is what actually decides the page's mode.
+   So:
+     • OS light + reader picks dark → never fires. Verified in-browser:
+       img opacity stays 1 in all three [data-theme] values.
+     • OS dark  + reader picks light → fires anyway, dimming images on
+       a light page. The bad case, and the harder one to notice.
+
+   The fix, if image-dimming is still wanted, is to key it off the mode
+   the way themes.css does — a [data-theme="dark"] rule plus a
+   prefers-color-scheme block scoped to [data-theme="auto"]. Left as-is
+   rather than switched on quietly: enabling it is a visible design
+   change across every image on the site, not a bug fix. Tracked in
+   _docs/todo.md. */
 @media (prefers-color-scheme: dark) {
   img, video {
     opacity: var(--opacity-lower);
   }
 }
 
-/*
-  jekyll supports sass out of the box.
-  Use only when plain CSS do not suffice.
-  We should move this to containers.
-*/
+/* ---- Breakpoints -------------------------------------------
+   SCSS variables, not custom properties — and they have to be.
+   `@media (max-width: var(--foo))` is invalid: custom properties
+   resolve per-element at computed-value time, while a media query
+   is evaluated before any element exists. SCSS substitutes these
+   at build time, which works.
+
+   Duplicated as --display-* custom properties above for the rare
+   place that needs the number inside a declaration rather than a
+   media query. Keep the two in sync by hand.
+
+   Because these are build-time, config.css MUST come first in the
+   concatenated stream (see _includes/styles.html) — any file using
+   $breakpoint-* after a reorder would fail the build with
+   "Undefined variable".
+
+   Jekyll ships SCSS out of the box; use it only where plain CSS
+   won't do. Long-term these should become container queries.
+   ------------------------------------------------------------ */
 $breakpoint-small      : 480px;
 $breakpoint-medium     : 800px;
 $breakpoint-large      : 1024px;
 $breakpoint-extralarge : 1600px;
+
+/* ---- A note on comments in this codebase -------------------
+   Comment freely. `sass: style: compressed` (_config.yml) strips
+   ordinary block comments from the emitted CSS, so prose here costs
+   zero bytes on the ~1,456 pages that inline this file. Verified:
+   adding ~4 KB of banners during the 2026-07-19 flatten changed the
+   built output by 0 bytes.
+
+   TWO rules, both learned the hard way:
+
+   1. Never use a BANG comment — slash-star-bang. Sass preserves
+      those even when compressed, so it WOULD ship on every page.
+
+   2. Never write a literal star-slash inside comment prose. It
+      closes the comment early and the rest parses as garbage —
+      the build dies with "expected selector", pointing at
+      styles.html rather than the file that actually broke.
+      (Cost us a build during the syntax-highlighting work, when
+      a token list contained the sequence.)
+   ------------------------------------------------------------ */

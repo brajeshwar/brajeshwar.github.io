@@ -1,3 +1,11 @@
+/* ============================================================
+   Search — Pagefind UI, /search/ only.
+   ------------------------------------------------------------
+   Loaded via the styles: key in _pages/search.html.
+   Holds the --pagefind-ui-* vars; the one remaining place with
+   raw colour values outside themes.css (per SPEC S9).
+   ============================================================ */
+
 /* Pagefind UI Base Styles */
 .pagefind-ui {
   margin: var(--space) auto;

@@ -1,0 +1,9 @@
+/* ============================================================
+   Page — standard page bundle.
+   ------------------------------------------------------------
+   Loaded by _layouts/page.html via styles-pages.html.
+   Currently empty: pages get everything they need from base +
+   chrome. Kept as the hook for page-only styling so the tier
+   exists when it's needed. Replaces the 0-byte 4.1-pages.css.
+   ============================================================ */
+

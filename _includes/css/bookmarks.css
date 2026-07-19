@@ -1,3 +1,11 @@
+/* ============================================================
+   Bookmarks — not yet wired up.
+   ------------------------------------------------------------
+   Styles a <bookmarks-header> element for a bookmarks page that
+   does not exist yet. Kept deliberately: in-progress work, not
+   dead code. Nothing includes this file today.
+   ============================================================ */
+
 bookmarks-header {
 	display: block;
 	text-align: center;

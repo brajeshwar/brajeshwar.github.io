@@ -1,0 +1,625 @@
+/* ============================================================
+   Base — default element styling, every page.
+   ------------------------------------------------------------
+   Merged from: 1.1-base.css + 1.2-typography.css + 1.3-table.css
+                + 2.1-images.css + 2.1-cards.css + 2.1-footnotes.css
+                + 9.1-utils-ui.css
+   Footnotes live here, not in post.css: two PAGES use them too
+   (_pages/about-brajeshwar.com.md, _pages/books.md).
+   ul.item__cards lives here because the homepage books list and
+   the album layout both use the same grid.
+   ============================================================ */
+
+:root {
+  color-scheme: light dark;
+
+  font-family: var(--font-family-sans-serif);
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-optical-sizing: auto;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+
+  font-family: var(--font-body);    /* reader's choice — applies to all content; only header/footer are pinned to sans (3.1-header/footer + rule below) */
+  font-size: var(--font-size);
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: var(--scale);
+
+  color: var(--text-color);
+  background-color: var(--bg-color-lower);
+
+  transition: background 500ms ease-in-out, color 200ms ease;
+}
+
+main {
+  container: main / inline-size;
+}
+
+main,
+.container-ideal {
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin-inline: auto;
+}
+
+.container-ideal {
+  max-width: var(--body-width-ideal);
+}
+
+/* Font scope: the reader's font (--font-body) applies to ALL content (home, pages,
+   articles) via `body` above; only the header and footer (the UI chrome) are pinned
+   to system sans. Sidenotes + post meta re-assert sans on top (2.1-footnotes.css /
+   4.1-posts.css). Text size scales content via the --step-* tokens redefined on
+   `main` (0.0-config.css), so no per-element rules are needed here. */
+header,
+footer {
+  font-family: var(--font-sans);
+}
+
+hr {
+  padding: 0;
+  margin: var(--space) auto;
+  border: 0;
+  height: 0;
+  background: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+kbd {
+  background: var(--bg-color-lowest);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
+  border-radius: var(--border-radius-small);
+  color: var(--text-color-low);
+  padding: var(--space-3xs) var(--space-2xs);
+  font-size: var(--step--1);
+}
+
+/* Restrict sizing to the page width. */
+:where(iframe, img, input, video, select, textarea) {
+  height: auto;
+  max-width: 100%;
+}
+
+:where(audio) {
+  height: auto;
+  width: 100%;
+}
+
+/* Video embeds (mostly YouTube, 16:9). aspect-ratio keeps the ratio correct at
+   any column width — the reading measure is now character-based (--measure), so a
+   width-derived pixel height no longer holds. */
+iframe, object, embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+.visually-hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
+}
+
+/* Reduced Motion; Remove
+ * animations
+ * fixed background attachments
+ * timed scrolling behaviors
+ * transitions
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+
+/* ---- Typography ---------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-light);
+  line-height: var(--scale-small);
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+h4 { font-size: var(--step-0); }
+h5 { font-size: var(--step--1); }
+h6 { font-size: var(--step--2); }
+
+a, a:visited {
+  color: var(--text-color-link);
+  text-decoration: underline;
+  text-decoration-color: var(--text-color-lower);
+  text-decoration-thickness: 0.8px;
+  text-underline-offset: 0.3rem;
+}
+
+a:hover, a:active {
+  color: var(--text-color-link);
+  text-decoration: underline;
+  text-decoration-color: var(--text-color);
+  text-decoration-thickness: 1px;
+}
+
+/* Blockquote — Yale e360 style: no background, a quiet left rule, spacing does
+   the separating. See _docs/v2027/spec.md §4.3. */
+blockquote {
+  margin: var(--space-m) 0;
+  padding: var(--space-2xs) 0 var(--space-2xs) var(--space-m);
+
+  /* inherit — follows the article's reading font inside content, sans elsewhere */
+  font-size: var(--step-1);
+  font-weight: var(--font-weight-light);
+  font-style: italic;
+  hyphens: none;
+
+  color: var(--text-muted);
+  border-left: var(--border-size-small) var(--border-style) var(--rule);
+}
+
+blockquote p {
+  margin: 0 auto var(--space);
+  padding: 0;
+}
+
+blockquote p:last-child {
+  margin: 0;
+}
+
+pre {
+  padding: var(--space);
+  background-color: var(--bg-color-low);
+  border-radius: var(--border-radius);
+
+  font-family: var(--font-family-monospace);
+  font-size: var(--step--1);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+code.language-plaintext,
+mark,
+.mark {
+  padding: var(--space-3xs) var(--space-2xs);
+
+  font-size: var(--step--1);
+
+  background-color: var(--bg-color-low); /* set to same as <pre> */
+  border-radius: var(--border-radius);
+
+  /* fix edges of wrapped inline elements */
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+article {}
+
+aside, .aside {
+  margin: var(--space-2xs);
+  padding: var(--space-s) var(--space-m);
+
+  font-family: var(--font-family-serif);
+  font-size: var(--step-0);
+  font-weight: var(--font-weight-light);
+  hyphens: none;
+
+  background: var(--bg-color-low);
+  border-radius: var(--border-radius);
+}
+
+aside.left, .aside.left {
+  float: left;
+  margin-left: -10vw;
+  width: 70%;
+}
+
+aside.right, .aside.right {
+  float: right;
+  margin-right: -10vw;
+  width: 70%;
+}
+
+/* rest in small screen, it becomes the same as a blockquote */
+@media (max-width: $breakpoint-medium) {
+  aside, .aside,
+  aside.left, .aside.left,
+  aside.right, .aside.right {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+li::marker {
+  color: var(--text-color-low);
+}
+
+/* code highlighter from https://github.com/richleland/pygments-css */
+.highlight {
+  border-radius: var(--border-radius);
+}
+
+/* word-wrap plain-text in codes */
+.language-plaintext code {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+
+/* ---- Tables ---------------------------------------------------- */
+
+table {
+  border-collapse: collapse;
+  margin: var(--space-m) auto;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  text-align: left;
+}
+
+td,
+th {
+  padding: var(--space-3xs) var(--space-2xs);
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+thead {
+  background: var(--bg-color-low);
+  border-bottom: var(--border-size) var(--border-style) var(--border-color-high);
+}
+
+thead th {
+  font-weight: var(--font-weight-light);
+  font-size: var(--step-0);
+}
+
+thead th:first-child {
+  border-top-left-radius: var(--border-radius);
+}
+
+thead th:last-child {
+  border-top-right-radius: var(--border-radius);
+}
+
+tbody {
+  border: var(--border-size) var(--border-style) var(--border-color-lower);
+}
+
+tbody tr {
+  border-bottom: var(--border-size) var(--border-style) var(--border-color-lower);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-color-low);
+}
+
+
+tfoot {
+  border-top: var(--border-size) var(--border-style) var(--border-color);
+}
+
+/* ---- Images ---------------------------------------------------- */
+
+/*
+ * TBD:
+ * 1. I seem have reset the size somewhere along the cascade fix them without the !important
+ * 2. "media.css" —Move/combine this as part of a common media style (images, audio, and video)
+ */
+
+img {}
+
+video {
+  object-fit: fill; /* set poster same size as video but distorts aspect-radio */
+  /* object-fit: cover; */ /* set poster same size as video but cuts off to maintain aspect-radio */
+}
+
+img.small,
+video.small,
+audio.small {
+	width: 40% !important;
+	height: auto;
+}
+
+img.medium,
+video.medium,
+audio.medium {
+	width: 60% !important;
+	height: auto;
+}
+
+img.left,
+audio.left,
+video.left {
+	float: left;
+	margin: 0 var(--space-s) var(--space-s) 0;
+}
+
+img.right,
+audio.right,
+video.right {
+  float: right;
+	margin: 0 0 var(--space-s) var(--space-s);
+}
+
+img.round {
+  border-radius: 100%;
+}
+
+figure {
+  margin: 0 0 var(--space-m);
+  padding: 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  max-width: var(--body-width-ideal);
+  margin: 0 auto;
+  padding: var(--space-2xs) 0;
+
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--step--1);
+  color: var(--text-muted);              /* restrained, per SPEC §4.3 */
+  border-bottom: var(--border-size) var(--border-style) var(--rule);
+}
+
+/* Caption alignment utility — left is the default; opt into center/right. */
+figcaption.center, figure.center figcaption { text-align: center; }
+figcaption.right,  figure.right figcaption  { text-align: right; }
+
+figure:has(figcaption) {}
+
+@media (min-width: $breakpoint-small) {
+  figure.large,
+  img.large {
+  	margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    
+    width: 100vw !important;
+    max-width: var(--image-width-max);
+    transform: translateX(calc(50vw - 50%));
+  }
+}
+
+figure.full,
+img.full {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw !important;
+  max-width: var(--body-width-full);
+  transform: translateX(calc(50vw - 50%));
+}
+
+figure.full figcaption, figure.large figcaption {
+  padding-inline: 0;
+}
+
+
+/* ---- Cards grid ---------------------------------------------------- */
+
+ul.item__cards {
+	list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: var(--space-xs);
+  row-gap: var(--space-xs);
+}
+
+ul.item__cards li {
+	list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+ul.item__cards li img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Footnotes + sidenotes ---------------------------------------------------- */
+
+.footnotes {
+	margin: var(--space-m) auto;
+	padding: var(--space-xs);
+  padding-right: var(--space-m); /* optical alignment fix */
+	background: var(--bg-color-low);
+	border-radius: var(--border-radius);
+  
+  font-size: var(--step--1);
+  hyphens: auto;
+}
+
+.reversefootnote {
+  visibility: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.reversefootnote:after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\21B5";
+}
+
+/* ===== Tufte sidenotes (Phase 2) — see _docs/sidenotes.md ==================
+   Progressive enhancement: with JS off (or on narrow screens) the .footnotes
+   block above renders normally at the article foot. On wide screens
+   sidenotes.js adds .has-sidenotes to the article, hides that block, and places
+   an <aside class="sidenote"> in the right margin aligned to each reference. */
+
+.has-sidenotes {
+  position: relative;             /* positioning context for the asides */
+}
+
+.has-sidenotes .footnotes {
+  display: none;                  /* notes now live in the margin */
+}
+
+.sidenote {
+  position: absolute;
+  left: 100%;                     /* just past the reading column's right edge */
+  /* Fluid width: at most --sidenote-width, but never past the viewport — the
+     centered column leaves (100vw − column)/2 of right margin; keep the gap
+     plus 1rem of breathing room to the edge. 100% here = the column width. */
+  width: min(var(--sidenote-width),
+             calc((100vw - 100%) / 2 - var(--sidenote-gap) - 1rem));
+
+  /* reset the generic `aside {}` box treatment — sidenotes are plain margin text */
+  margin: 0 0 0 var(--sidenote-gap);
+  padding: 0;
+  background: none;
+  border-radius: 0;
+
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--step--1);      /* one step up the scale — larger, easier margin read */
+  font-weight: var(--font-weight);
+  line-height: var(--scale-small);
+  color: var(--sidenote-text);
+
+  text-align: left;
+  hyphens: auto;
+}
+
+.sidenote p { margin: 0; }
+.sidenote p + p { margin-top: var(--space-2xs); }
+
+.sidenote-ref {
+  margin-right: var(--space-3xs);
+  font-variant-position: super;   /* small raised number where supported */
+  color: var(--text-muted);
+}
+
+/* ===== Aresluna-inspired wayfinding — see _docs/v2027/inspirations.md ======
+   Cross-focus: sidenotes.js toggles .sidenote-focus on the article and
+   .is-active on the matching reference + sidenote pair. The pair lights up;
+   every other sidenote dims. */
+
+.sidenote {
+  transition: opacity var(--transition-duration), color var(--transition-duration);
+}
+
+.sidenote-focus .sidenote:not(.is-active) {
+  opacity: var(--opacity-lower);
+}
+
+.sidenote.is-active {
+  color: var(--text-color);
+}
+
+sup[id^="fnref"].is-active a,
+sup[id^="fnref"].is-open a {
+  color: var(--accent-hover);
+  background: var(--mark);
+  border-radius: var(--border-radius-tiny);
+}
+
+/* Reveal-in-place: on narrow screens (sidenotes folded back) a tapped
+   reference opens its note as this inline panel right below the current
+   block; tapping the panel dismisses it. An <aside>, so reset the generic
+   aside box treatment the same way .sidenote does. */
+
+.sidenote-inline {
+  margin: var(--space-2xs) 0 var(--space-xs);
+  padding: var(--space-2xs) var(--space-xs);
+  background: var(--bg-color-low);
+  border-radius: var(--border-radius);
+
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--step--1);
+  font-weight: var(--font-weight);
+  line-height: var(--scale-small);
+  color: var(--sidenote-text);
+  hyphens: auto;
+  cursor: pointer;
+}
+
+.sidenote-inline p { margin: 0; }
+.sidenote-inline p + p { margin-top: var(--space-2xs); }
+
+
+
+/* ---- Block utilities ---------------------------------------------------- */
+
+.block-highlight {
+  margin: var(--space-s) auto;
+  padding: var(--space-m) var(--space-l);
+
+  color: var(--text-color-higher);
+  background: var(--bg-color-lowest);
+  border-radius: var(--border-radius);
+}
+
+.block-medium {
+  padding-inline: var(--space-l);
+}
+
+.block-info {
+  margin: var(--space-xs) 0;
+  padding: var(--space-xs) var(--space-s);
+  
+  font-size: var(--step--1);
+  line-height: var(--scale-small);
+
+  color: var(--text-color-low);
+  background: var(--bg-color-low);
+  border-radius: var(--border-radius);
+}

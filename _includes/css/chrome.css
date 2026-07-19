@@ -1,0 +1,508 @@
+/* ============================================================
+   Chrome — site furniture on every page.
+   ------------------------------------------------------------
+   Merged from: 3.1-header.css + 3.1-footer.css
+                + 8.1-tools-theme-toggle.css + 8.2-tools-search.css
+   Header, footer, appearance panel, search palette.
+   ============================================================ */
+
+header {
+  /* Align with the content band; logo at the left edge, menu at the right. */
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin: 0 auto var(--space-l);      /* bottom spacing separates header from body (no rule) */
+  padding: var(--space-s) 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+/* Right cluster: menu items + tool icons. */
+site-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+/* Narrow screens: the logo-left / menu-right row can't fit (~478px min, no
+   hamburger). Stack and center so nothing overflows horizontally. */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  site-menu {
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+  site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* logo */
+site-logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+site-logo a {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border-radius: 100%;
+
+  width: var(--logo-size);
+  height: var(--logo-size);
+
+  transition: all 0.5s ease;
+}
+
+/* SVG: .logo__img and .logo__img--path */
+site-logo a .logo__img, site-logo a .logo__img--path,
+site-logo a:visited .logo__img, site-logo a:visited .logo__img--path {
+  fill: var(--bg-color-high);
+} 
+
+/* menu — flat text links (no pill) */
+site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  font-size: var(--step--1);
+}
+
+site-nav a, site-nav a:visited {
+  padding: var(--space-3xs) var(--space-2xs);
+  border-radius: var(--border-radius-small);
+  color: var(--text-color-lower);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+}
+
+site-nav a:hover, site-nav a:active, site-nav a.active {
+  color: var(--text-color-higher);
+  text-decoration: none;
+}
+
+/* tool icons: search + rss + theme changer (far right) */
+site-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+/* RSS icon — match the search / appearance trigger treatment
+   (search styled in 8.2-tools-search.css, theme changer in 8.1-tools-theme-toggle.css) */
+.site-rss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+}
+
+.site-rss:hover, .site-rss:focus-visible {
+  color: var(--text);
+  text-decoration: none;
+}
+
+
+/* ---- Footer ---------------------------------------------------- */
+
+/* Outer footer spans the full viewport width so the top rule is edge-to-edge. */
+footer {
+  margin-top: var(--space-2xl);
+  border-top: var(--border-size) var(--border-style) var(--rule);
+
+  color: var(--text-muted);
+}
+
+/* Inner content stays at the reading/content width, centred. */
+.footer-inner {
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin-inline: auto;
+  padding: var(--space-l) 0 var(--space-xl);
+
+  text-align: center;
+}
+
+/* Page links — one centred, wrapping row; groups split by a subtle bullet. */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3xs) var(--space-s);
+
+  font-size: var(--step--1);
+}
+
+.footer-links__sep {
+  color: var(--text-color-lower);
+  opacity: var(--opacity-lower);
+  user-select: none;
+}
+
+.footer-links a,
+.footer-links a:visited {
+  color: var(--text-color-lower);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+  color: var(--text-color-higher);
+  text-decoration: none;
+}
+
+/* Social icons — centred row below the links. */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2xs);
+
+  margin-top: var(--space-m);
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xs);
+
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  color: var(--text);
+}
+
+.footer-social svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Copyright — the last line. */
+.footer-colophon {
+  margin: var(--space-l) 0 0;
+  font-size: var(--step--2);
+  color: var(--text-muted);
+}
+
+
+/* ---- Appearance panel ---------------------------------------------------- */
+
+/* Appearance panel (mode + palette + font + text size + accent) — built by
+   appearance.js. UI chrome: sans-serif, semantic tokens only. Compact float. */
+appearance-settings {
+  display: inline-flex;
+  align-items: center;
+}
+
+.appearance-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+  border: none;
+  background: none;
+
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition-duration) ease;
+}
+
+.appearance-trigger:hover,
+.appearance-trigger:focus-visible {
+  color: var(--text);
+}
+
+.appearance-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--text);
+  opacity: 0.18;
+}
+
+.appearance-panel {
+  position: fixed;
+  z-index: 51;
+  top: 4rem;
+  right: var(--space-s);
+
+  width: min(90vw, 15.5rem);
+  max-height: 80vh;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+
+  padding: var(--space-s);
+  background: var(--bg);
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 28px -14px var(--text);
+
+  font-family: var(--font-family-sans-serif);
+}
+
+.appearance-panel[hidden],
+.appearance-backdrop[hidden] {
+  display: none;
+}
+
+.appearance-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+/* Accent group: label + swatches on one line. */
+.appearance-group--inline {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xs);
+}
+
+.appearance-group__label {
+  font-size: var(--step--2);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+/* Segmented control: the group is one pill (rounded ends, clipped), each option a
+   flat cell divided by a hairline. Single line, minimal, compact. */
+.appearance-options {
+  display: flex;
+  flex-wrap: nowrap;
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.appearance-option {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--space-3xs) var(--space-2xs);
+
+  font-family: inherit;
+  font-size: var(--step--2);
+  line-height: 1.15;
+  white-space: nowrap;
+  text-align: center;
+
+  color: var(--text-muted);
+  background: transparent;
+  border: 0;
+  border-inline-end: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 0;
+  cursor: pointer;
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
+}
+
+.appearance-option:last-child { border-inline-end: 0; }
+
+.appearance-option:hover { color: var(--text); }
+
+.appearance-option[aria-pressed="true"] {
+  color: var(--color-primary-fg);
+  background: var(--color-primary);
+}
+
+.appearance-option:focus-visible {
+  outline: var(--border-size-small) solid var(--accent);
+  outline-offset: -3px;
+}
+
+/* Text size — five equal cells, each an "A" that grows left → right (Kindle). */
+.appearance-options--textsize .appearance-option {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0;
+  line-height: 1;
+}
+.appearance-options--textsize .appearance-option[data-opt="xs"] { font-size: 0.75rem; }
+.appearance-options--textsize .appearance-option[data-opt="s"]  { font-size: 0.875rem; }
+.appearance-options--textsize .appearance-option[data-opt="m"]  { font-size: 1rem; }
+.appearance-options--textsize .appearance-option[data-opt="l"]  { font-size: 1.125rem; }
+.appearance-options--textsize .appearance-option[data-opt="xl"] { font-size: 1.25rem; }
+
+/* Accent swatches */
+.appearance-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.appearance-swatch {
+  flex: none;
+  inline-size: 1.05rem;
+  block-size: 1.05rem;
+  padding: 0;
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 50%;
+  background: var(--swatch, var(--text));
+  cursor: pointer;
+}
+
+.appearance-swatch--default {
+  background: var(--text);
+}
+
+.appearance-swatch[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--text-muted);
+}
+
+.appearance-swatch:focus-visible {
+  outline: var(--border-size-small) solid var(--accent);
+  outline-offset: 2px;
+}
+
+
+/* ---- Search palette ---------------------------------------------------- */
+
+/* Header search — trigger + lazy panel. See assets/scripts/search.js + _docs/search.md.
+   UI chrome, semantic tokens only. */
+site-search {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-search__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--transition-duration) ease;
+}
+
+.site-search__trigger:hover,
+.site-search__trigger:focus-visible {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Dim/scrim that also captures outside clicks to close. */
+.site-search__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--text);
+  opacity: 0.18;
+}
+
+/* Centered command-palette popup (opens in place; ⌘K). */
+.site-search__panel {
+  position: fixed;
+  z-index: 51;
+  top: 12vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(92vw, 40rem);
+  max-height: 72vh;
+  overflow-y: auto;
+
+  padding: var(--space-s);
+  background: var(--bg);
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: var(--border-radius);
+  box-shadow: 0 16px 48px -12px var(--text);
+
+  text-align: left;   /* the panel is inside the centered <header>; reset it */
+}
+
+.site-search__panel[hidden],
+.site-search__backdrop[hidden] {
+  display: none;
+}
+
+.site-search__error {
+  margin: 0;
+  padding: var(--space-2xs) 0;
+  color: var(--text-muted);
+}
+
+/* Theme Pagefind's Modular UI with our tokens so results follow the active theme. */
+.site-search__panel {
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--text);
+  --pagefind-ui-background: var(--bg);
+  --pagefind-ui-border: var(--rule);
+  --pagefind-ui-tag: var(--bg-subtle);
+  --pagefind-ui-font: var(--font-family-sans-serif);
+}
+
+.site-search__summary {
+  margin: var(--space-2xs) 0;
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.site-search__summary:empty { display: none; }
+
+/* Result list (Modular UI classes). The whole result block is clickable via a
+   stretched title link; left-aligned, with a hover affordance. */
+.pagefind-modular-list-result {
+  position: relative;                         /* anchor for the stretched link */
+  padding: var(--space-2xs);
+  border-radius: var(--border-radius-small);
+}
+.pagefind-modular-list-result:hover {
+  background: var(--bg-subtle);
+}
+.pagefind-modular-list-result + .pagefind-modular-list-result {
+  border-top: var(--border-size) var(--border-style) var(--rule);
+}
+
+.pagefind-modular-list-title { margin: 0 0 var(--space-3xs); }
+.pagefind-modular-list-link { color: var(--text); text-decoration: none; }
+.pagefind-modular-list-link:hover { text-decoration: underline; }
+
+/* Stretch the title link over the whole result so the entire block is clickable. */
+.pagefind-modular-list-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.pagefind-modular-list-excerpt {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
