@@ -12,6 +12,7 @@ node_modules/
 .pagefind-cache/
 
 # Editor / tooling local state
+.claude/
 .obsidian
 .ruby-lsp
 .vscode/
