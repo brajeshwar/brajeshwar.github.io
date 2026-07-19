@@ -4,10 +4,85 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-07-09) — READ FIRST
-- **Pending review/commit:** the sidenote-fit + measure-fix changes from the 2026-07-08
-  session (see the "Sidenote/layout iteration" bullet below) — 3 code files + 3 docs,
-  build-verified, headless-browser-verified, awaiting Brajeshwar's live look and commit.
+## Where we are (updated 2026-07-19) — READ FIRST
+
+### ⚠️ 9 commits on `main`, COMMITTED BUT NOT PUSHED
+`main` is **ahead of `origin/main` by 9**. Working tree is clean. Nothing has deployed —
+remember every push to `main` auto-deploys, so pushing publishes all nine at once.
+
+    aa7d8519  Docs: record the font-axis change to two options
+    03a2ebd6  Drop the Geist font option; the font axis is now two choices
+    d8347e43  Docs: record the CSS audit, its fixes, and the remaining backlog
+    b7a4d6e1  Audit all 12 CSS files: fix theming bugs, drop verified dead weight
+    d6a83702  Move the 2026 books post into _posts/todo/      ← Brajeshwar's own change
+    c96665cb  Docs: CSS architecture, budget, and findings from the restructure
+    299212e4  Flatten CSS into 12 named files; fix + tokenise syntax highlighting
+    23385363  Add album layout for galleries; merge page-full into page
+    2833edb1  Ignore .claude/ (local agent config)
+
+Ordered so **each commit builds on its own**. To resume: `git log --oneline origin/main..HEAD`.
+Push with `git push origin main`, then watch the Actions run.
+
+**Reader-visible changes in this batch** (everything else is structural or docs):
+1. **Syntax highlighting now works** on the 55 posts with code blocks — it had never shipped.
+2. **The font panel has 2 options, not 3** — Geist removed.
+3. **`/devices/` gallery is styled** — it had shipped with no gallery CSS at all.
+4. **`/search/` follows the theme** — it was rendering hardcoded `#0066cc`/`#fff` regardless.
+
+### What happened this session (2026-07-19)
+A CSS consolidation pass, start to finish. Full detail in
+[`css-architecture.md`](css-architecture.md) — that is now the primary CSS doc.
+
+- **CSS budget reconciled** — docs carried both "~10KB" and "≤42KB". Now one figure:
+  **≤ 13 KB gzipped per page**, measured over the wire. Pages sit at 5.8–6.8 KB.
+- **Flattened 25 numbered ITCSS partials → 12 named files.** `config` · `themes` · `base` ·
+  `chrome` · `post` · `page` · `album` + per-page one-offs + `bookmarks`. **Don't reintroduce
+  numeric prefixes.** Cascade order lives only in `styles.html`; `config.css` must stay first
+  (it defines the `$breakpoint-*` SCSS vars, and media queries can't read custom properties).
+- **New `album` layout** for galleries (film + devices). **`books` is prose, not a gallery.**
+- **`page-full.html` merged into `page.html`** with a `full:` flag (currently no users).
+- **Audited all 12 files** — fixed 2 real bugs, removed 35 dead custom properties.
+  −2,012 B raw / −0.35 KB gzip on every page.
+- **Dropped Geist** — near-duplicate of the system stack, 165 KB unsubsetted ttf.
+
+### Rules learned this session — worth not re-learning
+- **CSS comments are free; HTML/Liquid comments are not.** `sass: style: compressed` strips
+  block comments from CSS, so prose in `_includes/css/*.css` costs zero shipped bytes.
+  An `<!-- HTML comment -->` in a layout **does** ship to all ~1,456 pages — use
+  `{%- comment -%}` there. Verified both ways.
+- **Custom property DECLARATIONS ship even when nothing reads them.** Comments are stripped;
+  declarations are not. An earlier note in `config.css` claimed otherwise and had licensed
+  ~1.6 KB of dead tokens. Don't add speculative tokens.
+- **Never use a bang comment** (`slash-star-bang`) — it survives compression.
+- **Never write a literal `*/` inside comment prose** — it closes the block early and the build
+  fails with a misleading "expected selector" pointing at `styles.html`. Cost one build.
+- **Browser caches JS hard on a plain `python3 -m http.server` / `jekyll serve`.** A JS change
+  can look like it didn't take when the built file is correct. Hard-reload (cmd+shift+r) before
+  concluding anything. Same trap `search.md` documents for `search.js`.
+- **Verify, don't infer.** Two claims in the old docs were wrong on inspection (`/books/`
+  "unstyled"; footnotes "posts-only"). Both were caught by checking the actual files.
+
+### Verification state
+Build clean. Rule-set diffs confirm only intended changes. Browser-verified at 1440px across
+light/dark and default/nord/eink: homepage, `/about/`, `/film/`, `/devices/`, `/search/`, and a
+post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.66:1, nord-dark
+≥ 5.92:1, eink-light 4.49:1 (comments, a hair under AA — a property of the shared
+`--color-fg-subtle` token, documented, not introduced here).
+
+### Picking this back up
+1. **Push** (or review first): `git log -p origin/main..HEAD`.
+2. **Highest-value next task**, with evidence already gathered: `search.css` hand-copies ~6 KB
+   of Pagefind's own stylesheet, which `_pages/search.html` already links separately. Needs
+   `make serve` (Pagefind built) to byte-compare before cutting. See
+   [`todo.md`](todo.md) → *From the 2026-07-19 CSS audit*, which has 7 verified-but-not-done items.
+3. **Two open design calls for Brajeshwar**, not bugs to fix silently:
+   - Dark-mode image dimming is dormant *and* inverted (keys off OS, not `[data-theme]`).
+     Turning it on correctly changes every image on the site.
+   - The design hook flags **Geist** as an overused font in `themes.css` — now moot, the font
+     is gone, but if the warning reappears for another face the suppression command is
+     `/impeccable hooks ignore-value overused-font <Face> --shared`. Only Brajeshwar runs it.
+
+### Older state (still true)
 - **The v2027 redesign is DONE, MERGED to `main`, and DEPLOYED (live at brajeshwar.com).**
   `brajeshwar.com-v2027` was fast-forward-merged into `main` (`cd3227e0 → 2826a518`, 18 commits)
   and pushed; the GitHub Actions deploy ran **green** (build incl. the new agent-markdown step,
@@ -25,6 +100,7 @@
   published — now in `_config.yml` `exclude`. Re-check `_site/` after editing `exclude`.
 
 ## Docs index
+- [`css-architecture.md`](css-architecture.md) — **how CSS is split** (12 named files, three tiers, which layout pulls which bundle), the rules for adding more, the old→new filename map, and the 2026-07-19 audit + backlog. **Read before touching `_includes/css/`.**
 - [`design.md`](design.md) — **design philosophy** (the *why*): text-first, ornament-free, decoupled/portable styles, progressive enhancement, reader's choice.
 - [`styles.md`](styles.md) — the **style specifics**: typography (scales, font axis Default/Sans-Serif/Serif, Kindle text-size), color & theming (**Ovellum two-axis**: mode `data-theme` auto/light/dark × palette `data-palette` default/nord(Cool)/eink(Warm), + accent, bridge, no-flash), branding.
 - [`sidenotes.md`](sidenotes.md) — Tufte margin sidenotes built from kramdown footnotes (Phase 2) + Aresluna wayfinding.
