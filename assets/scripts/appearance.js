@@ -3,7 +3,7 @@
  * Five independent axes, each persisted and applied to <html>:
  *   mode    → data-theme     : auto | light | dark              (localStorage 'theme')
  *   palette → data-palette   : default | nord | eink            ('palette')
- *   font    → data-font      : sans (Default/system) | geist (Sans-Serif) | serif (Serif) ('font')
+ *   font    → data-font      : sans (Default/system) | serif (Serif)      ('font')
  *   size    → data-text-size : xs | s | m (default) | l | xl    ('textsize')
  *   accent  → --ov-accent inline + data-accent="custom"         ('accent' = Default/Blue/Amber oklch)
  * The no-flash <head> snippet (in default.html) applies mode/palette/font/accent
@@ -19,7 +19,10 @@
     palette:  { key: 'palette',  def: 'default', attr: 'palette',
                 opts: [['default','Default'], ['nord','Cool'], ['eink','Warm']] },
     font:     { key: 'font',     def: 'sans',    attr: 'font',
-                opts: [['sans','Default'], ['geist','Sans-Serif'], ['serif','Serif']] },
+                // Two options by design; 'geist' was removed 2026-07-19. read()
+                // validates against this list, so a reader with the old value
+                // stored falls back to 'sans' with no migration step.
+                opts: [['sans','Default'], ['serif','Serif']] },
     textsize: { key: 'textsize', def: 'm',       attr: 'textSize',
                 opts: [['xs','A'], ['s','A'], ['m','A'], ['l','A'], ['xl','A']] }
   };

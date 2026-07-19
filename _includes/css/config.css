@@ -108,8 +108,8 @@
 
 :root {
   /* Font stacks. The reader picks the body font via the appearance panel →
-     [data-font] swaps --font-body (see _docs/styles.md). Geist + Libre Baskerville
-     are the optional self-hosted fonts (see themes.css); sans/serif/mono are
+     [data-font] swaps --font-body (see _docs/styles.md). Libre Baskerville is
+     the one optional self-hosted font (see themes.css); sans/serif/mono are
      system stacks (sans = the Default, no-webfont choice). */
   --font-sans : ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
@@ -185,9 +185,14 @@
 
 /* Reader font choice — overrides --font-body (applies to article content, not the
    interface; see base.css). Panel labels: Default = sans (system, no webfont),
-   Sans-Serif = Geist, Serif = Libre Baskerville. */
+   Serif = Libre Baskerville. Two options only — see the note in themes.css for
+   why the third ("Sans-Serif" / Geist) was dropped.
+
+   A reader who had picked Geist still has "geist" in localStorage. Nothing
+   matches it any more, so --font-body keeps its default and they simply see
+   the system stack; appearance.js validates against its own option list and
+   shows Default as active. No migration needed. */
 [data-font="sans"]  { --font-body: var(--font-sans); }
-[data-font="geist"] { --font-body: "Geist var", var(--font-sans); }
 [data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); }
 
 /* Text size — Kindle-style. Multiplies the type scale for ALL content inside

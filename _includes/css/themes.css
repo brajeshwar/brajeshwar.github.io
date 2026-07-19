@@ -5,16 +5,21 @@
    The only file allowed to hold raw colour values.
    ============================================================ */
 
-/* Self-hosted fonts for the reader font selector. The Default font is the system
-   sans stack (no webfont); these download only when the reader picks "Sans-Serif"
-   (Geist) or "Serif" (Libre Baskerville) — font-display:swap → no load cost otherwise. */
-@font-face {
-  font-family: "Geist var";
-  src: url("/assets/fonts/geist/Geist-Variable.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+/* Self-hosted fonts for the reader font selector. The Default font is the
+   system sans stack (no webfont); Libre Baskerville downloads only when the
+   reader picks "Serif" — font-display:swap → no load cost otherwise.
+
+   The font axis is deliberately TWO options, not three. A "Sans-Serif" slot
+   (Geist) was removed 2026-07-19: as a neo-grotesque it sat very close to the
+   system stack it was offering an alternative to, so picking it barely changed
+   anything — while costing a 165 KB unsubsetted .ttf, the heaviest asset on
+   the site. Two options that genuinely differ beat three where one is a
+   near-duplicate. See the standing advice a few lines down in config.css:
+   "Resist the temptation to use custom fonts."
+
+   If a third option is ever wanted, make it one the system stack CANNOT give —
+   Atkinson Hyperlegible is the obvious candidate for a site that hands this
+   much control to the reader. Subset to latin and ship woff2, not ttf. */
 
 /* Libre Baskerville is the reader "Serif" font ([data-font="serif"] in
    config.css → --font-body). Self-hosted, latin subset, font-display:swap

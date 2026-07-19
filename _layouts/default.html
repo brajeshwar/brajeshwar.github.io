@@ -15,8 +15,22 @@
 <meta name="color-scheme" content="light dark">
 <meta name="fediverse:creator" content="@brajeshwar@margins.oinam.com">
 
-<!-- No-flash: apply the reader's saved mode + palette + font + text size + accent before first paint. -->
-<script>(function(){try{var d=document.documentElement,g=localStorage,t=g.getItem('theme'),p=g.getItem('palette'),f=g.getItem('font'),s=g.getItem('textsize'),a=g.getItem('accent');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(p&&p!=='default')d.dataset.palette=p;if(f&&f!=='sans')d.dataset.font=f;if(s&&s!=='m')d.dataset.textSize=s;if(a){d.style.setProperty('--ov-accent',a);d.dataset.accent='custom';}}catch(e){}})();</script>
+{%- comment -%}
+  No-flash: apply the reader's saved mode + palette + font + text size + accent
+  before first paint.
+
+  The font check whitelists 'serif' rather than passing through anything that
+  isn't 'sans' — a stale localStorage value (e.g. 'geist', dropped 2026-07-19)
+  would otherwise be written onto <html> as a data-font nothing matches. Keep
+  this list in sync with AXES.font.opts in assets/scripts/appearance.js if a
+  font option is ever added.
+
+  NOTE: this is a Liquid comment, not an HTML one, deliberately. Liquid
+  comments are removed at build time; <!-- HTML comments --> are NOT, and ship
+  to every one of ~1,456 pages. Unlike CSS (where compression strips comments),
+  prose in a layout is not free — use {% raw %}{%- comment -%}{% endraw %} here.
+{%- endcomment -%}
+<script>(function(){try{var d=document.documentElement,g=localStorage,t=g.getItem('theme'),p=g.getItem('palette'),f=g.getItem('font'),s=g.getItem('textsize'),a=g.getItem('accent');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(p&&p!=='default')d.dataset.palette=p;if(f==='serif')d.dataset.font=f;if(s&&s!=='m')d.dataset.textSize=s;if(a){d.style.setProperty('--ov-accent',a);d.dataset.accent='custom';}}catch(e){}})();</script>
 
 <link rel="archives" href="{{ site.baseurl | prepend: site.url }}/archives/">
 <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url }}">
