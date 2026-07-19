@@ -6,7 +6,7 @@
    byte-for-byte identical copies of each other, both scoped to
    .page-film/.page-devices, and neither reachable from books.
 
-   The grid itself (ul.item__cards flex wrap) lives in 2.1-cards.css
+   The grid itself (ul.item__cards flex wrap) lives in base.css
    in the base bundle, because the homepage books list uses it too.
    This file only styles the album's cards on top of that.
 

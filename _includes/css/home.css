@@ -59,7 +59,6 @@ home-posts {
   display: block;
 }
 
-posts-recent {}
 
 posts-recent ul {
   list-style: none;
@@ -171,7 +170,6 @@ home-support li {
   color: var(--text-color-low);
 }
 
-.connect ul li {}
 
 .connect__title {
   font-weight: var(--font-weight-light);

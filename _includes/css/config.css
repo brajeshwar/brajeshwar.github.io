@@ -7,13 +7,22 @@
    ============================================================ */
 
 /* ---- Modular scale ratios ----------------------------------
-   Named musical/geometric ratios, kept as a palette to pick from.
-   Only a few are actually referenced (--golden, --minor-third,
-   --minor-seventh, below, via --scale*); the rest are here so a
-   ratio can be swapped by name instead of pasting a magic number.
-   Harmless to keep — comments and unused custom properties both
-   cost nothing in the shipped CSS (see the note at the foot of
-   this file about compressed output).
+   Named musical/geometric ratios, kept as a palette to pick from
+   so a ratio can be swapped by name instead of pasting a magic
+   number. Only --golden and --minor-third are referenced (via
+   --scale / --scale-small below).
+
+   ⚠️ These are NOT free. An earlier note here claimed unused custom
+   properties cost nothing in the shipped CSS — that is wrong, and it
+   was licensing dead weight. Comments are stripped by compression;
+   DECLARATIONS ARE NOT. Every custom property below ships on all
+   ~1,456 pages whether or not anything reads it. Measured 2026-07-19.
+
+   Kept anyway, deliberately: the whole block is ~330 B raw and
+   compresses to very little (near-identical repeated lines), and it
+   documents the vocabulary the scale is drawn from. That is a
+   judgement call, not a freebie — if you add tokens here, know you
+   are paying for them everywhere.
    ------------------------------------------------------------ */
 :root {
   --double-octave    : 4;
@@ -23,9 +32,7 @@
   --major-tenth      : 2.5;
   --octave           : 2;
   --major-seventh    : 1.875;
-  --minor-seventh    : 1.777777778;
   --major-sixth      : 1.666666667;
-  --phi              : 1.618034;
   --golden           : 1.618034;
   --minor-sixth      : 1.6;
   --fifth            : 1.5;
@@ -82,20 +89,12 @@
   --space-l:    clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
   --space-xl:   clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
   --space-2xl:  clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
-  --space-3xl:  clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
 
-  /* One-up pairs */
-  --space-3xs-2xs:  clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
-  --space-2xs-xs:   clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
-  --space-xs-s:     clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
-  --space-s-m:      clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
-  --space-m-l:      clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem);
-  --space-l-xl:     clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
-  --space-xl-2xl:   clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
-  --space-2xl-3xl:  clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
-
-  /* Custom pairs */
-  --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
+  /* Utopia also generates --space-3xl and a set of "one-up pair"
+     tokens (--space-s-m, --space-l-xl, …) for fluid transitions
+     between two steps. None was ever referenced, so they were dropped
+     2026-07-19 — they are declarations, and declarations ship. Paste
+     them back from the generator URL above if a pair is ever needed. */
 }
 
 /* CONFIG */
@@ -110,7 +109,7 @@
 :root {
   /* Font stacks. The reader picks the body font via the appearance panel →
      [data-font] swaps --font-body (see _docs/styles.md). Geist + Libre Baskerville
-     are the optional self-hosted fonts in 0.0-fonts.css; sans/serif/mono are
+     are the optional self-hosted fonts (see themes.css); sans/serif/mono are
      system stacks (sans = the Default, no-webfont choice). */
   --font-sans : ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
@@ -126,7 +125,6 @@
   --font-weight-light     : 200;
   --font-weight           : 400;
   --font-weight-bold      : 600;
-  --font-weight-bolder    : 700;
   
   --font-size             : 16px;
 
@@ -141,13 +139,9 @@
   --body-width-medium     : 60rem; /* objects that are large but not max */
   --body-width-full       : 1600px;
 
-  --display-small         : 480px;
-  --display-medium        : 800px;
-  --display-large         : 1024px;
-  --display-extralarge    : 1600px;
 
   /* ⚠️ SECOND spacing system — ratio-derived, predates the Utopia
-     --space-3xs…3xl scale defined above. Both are live and both are
+     --space-3xs…2xl scale defined above. Both are live and both are
      used across components. They are NOT interchangeable:
        --space        ≈ 1.618rem   (ratio × 1rem, fixed)
        --space-m      ≈ 1.69–1.88rem (Utopia, fluid via clamp)
@@ -156,12 +150,9 @@
      off them is a bigger job than it looks. */
   --scale                 : var(--golden);
   --scale-small           : var(--minor-third);
-  --scale-large           : var(--minor-seventh);
 
   --space                 : calc(var(--scale) * 1rem);
-  --space-small           : calc(var(--scale-small) * 0.8rem);
   --space-smaller         : calc(var(--scale-small) * 0.5rem);
-  --space-smallest        : calc(var(--scale-small) * 0.2rem);
 
   --opacity-reset         : 1;
   --opacity-low           : 0.8;
@@ -174,26 +165,18 @@
   --border-radius-small   : 4px;
   --border-radius-large   : 10px;
   --border-radius-larger  : 25px;
-  --border-radius-largest : 42px;
 
   --border-style          : solid;
-  --border-style-alt      : dotted;
 
   --border-size           : 1px;
   --border-size-small     : 3px;
-  --border-size-medium    : 5px;
-  --border-size-large     : 8px;
-  --border-size-larger    : 12px;
-  --border-size-largest   : 20px;
 
   --logo-size             : 42px;
-  --icon-size             : 30px;
 
   --image-width-max       : var(--body-width-medium);
-  --image-width-full      : var(--body-width-full);
 
   /* Tufte sidenotes (Phase 2) — right-margin gutter. See _docs/sidenotes.md. */
-  --sidenote-width        : 16rem;   /* the maximum — notes shrink to fit the margin (2.1-footnotes.css) */
+  --sidenote-width        : 16rem;   /* the maximum — notes shrink to fit the margin (base.css) */
   --sidenote-gap          : 3.5rem;  /* gap between reading column and sidenote */
   --sidenote-min-gutter   : 17rem;   /* enable sidenotes only above this much right margin —
                                         gap + ≥12rem of note + breathing room, so a note always
@@ -201,7 +184,7 @@
 }
 
 /* Reader font choice — overrides --font-body (applies to article content, not the
-   interface; see 1.1-base.css). Panel labels: Default = sans (system, no webfont),
+   interface; see base.css). Panel labels: Default = sans (system, no webfont),
    Sans-Serif = Geist, Serif = Libre Baskerville. */
 [data-font="sans"]  { --font-body: var(--font-sans); }
 [data-font="geist"] { --font-body: "Geist var", var(--font-sans); }

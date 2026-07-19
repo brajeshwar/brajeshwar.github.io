@@ -1,8 +1,6 @@
 /* ============================================================
    Chrome — site furniture on every page.
    ------------------------------------------------------------
-   Merged from: 3.1-header.css + 3.1-footer.css
-                + 8.1-tools-theme-toggle.css + 8.2-tools-search.css
    Header, footer, appearance panel, search palette.
    ============================================================ */
 
@@ -96,7 +94,7 @@ site-tools {
 }
 
 /* RSS icon — match the search / appearance trigger treatment
-   (search styled in 8.2-tools-search.css, theme changer in 8.1-tools-theme-toggle.css) */
+   (search styled in chrome.css, theme changer in chrome.css) */
 .site-rss {
   display: inline-flex;
   align-items: center;

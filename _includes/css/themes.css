@@ -1,7 +1,6 @@
 /* ============================================================
    Themes — palettes, light/dark values, webfonts.
    ------------------------------------------------------------
-   Merged from: 0.0-fonts.css + 0.1-color.css
    Two orthogonal axes (mode x palette) plus font + accent.
    The only file allowed to hold raw colour values.
    ============================================================ */
@@ -18,7 +17,7 @@
 }
 
 /* Libre Baskerville is the reader "Serif" font ([data-font="serif"] in
-   0.0-config.css → --font-body). Self-hosted, latin subset, font-display:swap
+   config.css → --font-body). Self-hosted, latin subset, font-display:swap
    so it downloads only when a reader picks Serif. Falls back to the system
    serif stack (--font-serif) while loading / if it fails. */
 @font-face {
@@ -61,7 +60,7 @@
    DEFAULT THEME = MONOTONE GRAYSCALE (by design). The base palette below is
    pure zero-chroma gray — oklch(L 0 0) — and the default accent is gray too
    (--color-accent: --color-gray-900), so even links carry no hue. Link
-   affordance comes from the UNDERLINE, not colour (see 1.2-typography.css).
+   affordance comes from the UNDERLINE, not colour (see base.css).
    Colour is strictly opt-in: pick a tinted palette (nord = Cool, eink = Warm)
    or set an accent via the appearance panel. Keep the base monotone.
 
@@ -86,7 +85,6 @@
 /* ---- Raw scale (default palette = neutral) ------------------ */
 :root {
   --color-white: oklch(100% 0 0);
-  --color-black: oklch(0% 0 0);
   --color-gray-50:  oklch(98.5% 0 0);
   --color-gray-100: oklch(97% 0 0);
   --color-gray-200: oklch(92.2% 0 0);
@@ -102,27 +100,35 @@
   /* semantic — light */
   --color-primary: var(--color-gray-900);
   --color-primary-fg: var(--color-gray-50);
-  --color-primary-hover: var(--color-gray-800);
   --color-accent: var(--color-gray-900);
-  --color-accent-fg: var(--color-gray-50);
   --color-accent-hover: var(--color-gray-700);
 
   --color-bg: var(--color-gray-100);
   --color-surface: var(--color-white);
-  --color-bg-subtle: var(--color-gray-100);
   --color-bg-muted: var(--color-gray-200);
-  --color-bg-chrome: var(--color-gray-200);
   --color-fg: var(--color-gray-950);         /* higher contrast (was gray-900) */
   --color-fg-muted: var(--color-gray-800);   /* higher contrast (was gray-700) */
   --color-fg-subtle: var(--color-gray-600);  /* higher contrast (was gray-500) */
 
   --color-border: color-mix(in oklch, var(--color-fg) 10%, transparent);
   --color-border-strong: color-mix(in oklch, var(--color-fg) 18%, transparent);
-  --color-border-focus: var(--color-gray-500);
   --color-link: var(--color-accent);
-  --color-link-hover: var(--color-accent-hover);
   --color-code-bg: var(--color-gray-200);
 }
+
+/* Removed 2026-07-19 — declared but read by nothing, and the cost was
+   not trivial: --color-accent-fg alone was assigned in six places (every
+   palette and every mode block) and consumed in none. Verified across all
+   CSS and JS before deleting.
+
+     --color-black          --color-primary-hover   --color-accent-fg
+     --color-bg-subtle      --color-bg-chrome       --color-border-focus
+     --color-link-hover
+
+   Re-adding any of them is one line pointing at the right step of the
+   gray scale — that is the whole point of the layered design. Do NOT
+   reintroduce them speculatively: declarations ship on every page, and
+   a semantic token nothing reads is just weight with a good name. */
 
 /* ---- Palettes (re-tint the scale + accent) ----------------- */
 :root[data-palette="eink"] {
@@ -139,7 +145,6 @@
   --color-gray-950: oklch(17.8% 0.012 92);
   --color-surface: var(--color-gray-50);
   --color-accent: oklch(22.3% 0.014 88);
-  --color-accent-fg: oklch(97.4% 0.014 89);
   --color-accent-hover: oklch(40.8% 0.020 83);
 }
 
@@ -157,77 +162,69 @@
   --color-gray-950: oklch(29.8% 0.027 267);
   --color-surface: var(--color-gray-50);
   --color-accent: oklch(59.4% 0.077 254);
-  --color-accent-fg: oklch(95.1% 0.007 261);
   --color-accent-hover: oklch(69.7% 0.059 249);
 }
 
 /* ---- Mode: dark remap of the semantic tokens --------------- */
-/* Shared block reused by explicit dark and auto+system-dark. */
-:root[data-theme="dark"],
-:root[data-palette][data-theme="dark"] {
+/* Dark has to be written twice — once for an explicit choice, once
+   inside @media for "auto" — because a media query cannot be merged
+   with a bare selector in CSS. Kept as SCSS mixins so the VALUES
+   exist once and the two branches can never drift apart. They were
+   byte-identical by luck before; now it is structural.
+
+   Selector note, and this used to be a latent bug (fixed 2026-07-19):
+   both branches must carry a [data-palette] variant. Without it the
+   auto branch is :root[data-theme="auto"] at specificity (0,2,0) —
+   exactly tied with :root[data-palette="eink"], which sets a LIGHT
+   --color-surface. It won only because it appeared later in the file.
+   Reorder the palettes below the modes (or split this file, or shuffle
+   the include list in styles.html) and eink/nord on a dark system would
+   have silently regressed to a light surface. The [data-palette]
+   variant takes it to (0,3,0) and settles it on specificity, not luck.
+   The explicit-dark branch always had this guard; auto did not. */
+
+@mixin dark-semantic-tokens {
   --color-bg: var(--color-gray-900);
   --color-surface: var(--color-gray-800);
-  --color-bg-subtle: var(--color-gray-900);
   --color-bg-muted: var(--color-gray-800);
-  --color-bg-chrome: var(--color-gray-800);
   --color-fg: var(--color-gray-50);          /* higher contrast (was gray-100) */
   --color-fg-muted: var(--color-gray-200);   /* higher contrast (was gray-300) */
   --color-fg-subtle: var(--color-gray-400);  /* higher contrast (was gray-500) */
   --color-code-bg: var(--color-gray-950);
   --color-primary: var(--color-gray-50);
   --color-primary-fg: var(--color-gray-900);
-  --color-primary-hover: var(--color-gray-200);
   --color-accent: var(--color-gray-100);
-  --color-accent-fg: var(--color-gray-900);
   --color-accent-hover: var(--color-gray-300);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root[data-theme="auto"] {
-    --color-bg: var(--color-gray-900);
-    --color-surface: var(--color-gray-800);
-    --color-bg-subtle: var(--color-gray-900);
-    --color-bg-muted: var(--color-gray-800);
-    --color-bg-chrome: var(--color-gray-800);
-    --color-fg: var(--color-gray-50);          /* higher contrast (was gray-100) */
-    --color-fg-muted: var(--color-gray-200);   /* higher contrast (was gray-300) */
-    --color-fg-subtle: var(--color-gray-400);  /* higher contrast (was gray-500) */
-    --color-code-bg: var(--color-gray-950);
-    --color-primary: var(--color-gray-50);
-    --color-primary-fg: var(--color-gray-900);
-    --color-primary-hover: var(--color-gray-200);
-    --color-accent: var(--color-gray-100);
-    --color-accent-fg: var(--color-gray-900);
-    --color-accent-hover: var(--color-gray-300);
-  }
-}
-
-/* ---- Palette-specific dark accent tuning ------------------- */
-:root[data-palette="nord"][data-theme="dark"] {
+/* Nord wants a cooler accent once it is dark. */
+@mixin nord-dark-accent {
   --color-accent: oklch(77.5% 0.062 217);
-  --color-accent-fg: oklch(32.4% 0.023 264);
   --color-accent-hover: oklch(76.3% 0.048 194);
 }
+
+:root[data-theme="dark"],
+:root[data-palette][data-theme="dark"] { @include dark-semantic-tokens; }
+
+:root[data-palette="nord"][data-theme="dark"] { @include nord-dark-accent; }
+
 @media (prefers-color-scheme: dark) {
-  :root[data-palette="nord"][data-theme="auto"] {
-    --color-accent: oklch(77.5% 0.062 217);
-    --color-accent-fg: oklch(32.4% 0.023 264);
-    --color-accent-hover: oklch(76.3% 0.048 194);
-  }
+  :root[data-theme="auto"],
+  :root[data-palette][data-theme="auto"] { @include dark-semantic-tokens; }
+
+  :root[data-palette="nord"][data-theme="auto"] { @include nord-dark-accent; }
 }
 
 /* ---- Accent override (custom accent color) ----------------- */
 :root[data-accent][data-accent][data-accent] {
   --color-accent: var(--ov-accent);
   --color-accent-hover: color-mix(in oklch, var(--ov-accent) 78%, var(--color-fg));
-  --color-accent-fg: oklch(98.5% 0 0);
   --color-primary: var(--ov-accent);
-  --color-primary-hover: color-mix(in oklch, var(--ov-accent) 78%, var(--color-fg));
   --color-primary-fg: oklch(98.5% 0 0);
 }
 
 /* ---- Syntax highlighting (code blocks) --------------------- */
-/* The pygments token classes in 2.1-code.css reference ONLY the
+/* The pygments token classes in post.css reference ONLY the
    --code-* tokens below — no hardcoded colours there any more.
 
    Light and dark share one hue per token type and differ only in
@@ -262,13 +259,16 @@
   --code-error    : oklch(var(--code-l) calc(var(--code-c) * 1.7) 25);
 }
 
-/* Dark mode only needs the lightness flipped — hues carry over. */
+/* Dark mode only needs the lightness flipped — hues carry over.
+   Carries the same [data-palette] guard as the semantic block above.
+   No palette sets --code-l today, so nothing is broken without it —
+   but if one ever does, the guard is why it will keep working. */
 :root[data-theme="dark"],
-:root[data-palette][data-theme="dark"] {
-  --code-l: 78%;
-}
+:root[data-palette][data-theme="dark"] { --code-l: 78%; }
+
 @media (prefers-color-scheme: dark) {
-  :root[data-theme="auto"] { --code-l: 78%; }
+  :root[data-theme="auto"],
+  :root[data-palette][data-theme="auto"] { --code-l: 78%; }
 }
 
 /* ============================================================

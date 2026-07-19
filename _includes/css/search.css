@@ -2,27 +2,31 @@
    Search — Pagefind UI, /search/ only.
    ------------------------------------------------------------
    Loaded via the styles: key in _pages/search.html.
-   Holds the --pagefind-ui-* vars; the one remaining place with
-   raw colour values outside themes.css (per SPEC S9).
+
+   Holds the --pagefind-ui-* bridge: Pagefind's own theming vars, fed
+   from this site's tokens so the search UI follows mode, palette and
+   accent like every other component.
+
+   As of 2026-07-19 this file contains NO raw colour values. It used to
+   be the documented exception to the "colour only in themes.css" rule;
+   it no longer needs to be. There are now zero exceptions.
    ============================================================ */
 
-/* Pagefind UI Base Styles */
+/* Pagefind UI base.
+   Merged 2026-07-19 from two adjacent `.pagefind-ui` blocks, and the
+   four colour literals that lived here (primary/text/background/border)
+   are gone: a second `.pagefind-ui` block further down overwrote all
+   four, so they never rendered. Colours now come from theme tokens in
+   the "Custom CSS Variables" block below — see the note there. */
 .pagefind-ui {
   margin: var(--space) auto;
-}
 
-.pagefind-ui {
   --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: #034ad8;
-  --pagefind-ui-text: #393939;
-  --pagefind-ui-background: #ffffff;
-  --pagefind-ui-border: #eeeeee;
-  --pagefind-ui-tag: #152028;
+  --pagefind-ui-tag: var(--text-color);
   --pagefind-ui-border-width: 2px;
   --pagefind-ui-border-radius: 8px;
   --pagefind-ui-image-border-radius: 8px;
-  --pagefind-ui-image-box-ratio: 3 / 2;
-  --pagefind-ui-font: sans-serif;
+  --pagefind-ui-font: var(--font-body);
 }
 
 .pagefind-ui__form {
@@ -63,7 +67,7 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
-  color: var(--text-color-lower, #999);
+  color: var(--text-color-lower);
   cursor: pointer;
   outline: none;
   display: flex;
@@ -73,8 +77,8 @@
 }
 
 .pagefind-ui__search-clear:hover {
-  background: var(--bg-color-low, #f5f5f5);
-  color: var(--text-color, #333);
+  background: var(--bg-color-low);
+  color: var(--text-color);
 }
 
 .pagefind-ui__search-clear:focus {
@@ -83,7 +87,7 @@
 }
 
 .pagefind-ui__search-clear:active {
-  background: var(--bg-color-medium, #e5e5e5);
+  background: var(--bg-color-low);
   transform: translateY(-50%);
 }
 
@@ -224,22 +228,28 @@
   opacity: 0.9;
 }
 
-mark {
-  color: var(--pagefind-ui-text);
-  background-color: var(--pagefind-ui-primary);
-  font-weight: 600;
-  padding: calc(0.1rem * var(--pagefind-ui-scale)) calc(0.2rem * var(--pagefind-ui-scale));
-  border-radius: calc(var(--pagefind-ui-border-radius) / 4);
-}
+/* (An unscoped `mark` rule sat here — Pagefind's own default. It was
+   dead: the search-term highlight further down this file overrode every
+   one of its declarations. Removed 2026-07-19 along with the global
+   leak it was part of.) */
 
 /* Custom Overrides and Enhancements */
 
-/* Custom CSS Variables */
+/* Theme bridge — Pagefind's own vars fed from the site's tokens, so the
+   search UI follows mode + palette + accent like everything else.
+
+   Fixed 2026-07-19: this block previously referenced --link-color,
+   --accent-color, --text-color-muted, --text-color-secondary,
+   --highlight-bg, --highlight-text and --bg-color-medium — SEVEN tokens
+   that are declared nowhere in this codebase. Every one silently fell
+   through to its hardcoded hex fallback, so search results ignored the
+   reader's theme entirely. The hex fallbacks are dropped too: these
+   tokens all exist, so a fallback is unreachable and just ships bytes. */
 .pagefind-ui {
-  --pagefind-ui-primary: var(--link-color, #0066cc);
-  --pagefind-ui-text: var(--text-color, #333);
-  --pagefind-ui-background: var(--bg-color, #fff);
-  --pagefind-ui-border: var(--border-color, #e1e5e9);
+  --pagefind-ui-primary: var(--text-color-link);
+  --pagefind-ui-text: var(--text-color);
+  --pagefind-ui-background: var(--bg-color);
+  --pagefind-ui-border: var(--border-color);
 }
 
 /* Ensure Pagefind UI is visible */
@@ -256,16 +266,16 @@ mark {
   padding: 12px 48px 12px 16px;
   /* Extra right padding for clear button */
   font-size: 16px;
-  border: 2px solid var(--border-color, #e1e5e9);
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s ease;
-  background: var(--bg-color, #fff);
-  color: var(--text-color, #333);
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .pagefind-ui__search-input:focus {
-  border-color: var(--accent-color, #0066cc);
+  border-color: var(--accent);
 }
 
 /* Enhanced Results Layout */
@@ -277,9 +287,9 @@ mark {
   margin-bottom: 20px;
   padding: 20px 24px;
   /* Left-right padding for the boxes */
-  border: 1px solid var(--border-color, #e1e5e9);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: var(--bg-color, #fff);
+  background: var(--bg-color);
   display: block;
   /* Changed from flex to block for text wrapping */
   overflow: hidden;
@@ -312,7 +322,7 @@ mark {
 
 .pagefind-ui__result-title a,
 .pagefind-ui__result-link {
-  color: var(--link-color, #0066cc);
+  color: var(--text-color-link);
   text-decoration: none;
 }
 
@@ -324,22 +334,26 @@ mark {
 /* Custom date styling */
 .pagefind-ui__result-date {
   font-style: italic;
-  color: var(--text-color-muted, #666);
+  color: var(--text-muted);
   margin: 4px 0 12px 0;
   opacity: 0.8;
 }
 
 .pagefind-ui__result-excerpt {
-  color: var(--text-color-secondary, #666);
+  color: var(--text-muted);
   line-height: 1.5;
   font-size: 15px;
 }
 
-/* Highlight search terms */
+/* Highlight search terms.
+   Scoped to .pagefind-ui (2026-07-19). This used to also match bare
+   `mark`, so on /search/ EVERY <mark> on the page — including ones in
+   prose, e.g. the "Last updated" badges — got repainted with the
+   search-hit treatment, overriding the global rule in base.css. */
 .pagefind-ui__result-excerpt mark,
-mark {
-  background-color: var(--highlight-bg, #fff3cd);
-  color: var(--highlight-text, #856404);
+.pagefind-ui mark {
+  background-color: var(--mark);
+  color: var(--text-color);
   padding: 2px 4px;
   border-radius: 3px;
   font-weight: 500;
@@ -347,7 +361,7 @@ mark {
 
 .pagefind-ui__message {
   text-align: center;
-  color: var(--text-color-muted, #666);
+  color: var(--text-muted);
   font-style: italic;
   margin: 20px 0;
 }

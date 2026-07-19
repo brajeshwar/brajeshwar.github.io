@@ -1,8 +1,6 @@
 /* ============================================================
    Post — article layout bundle.
    ------------------------------------------------------------
-   Merged from: 4.1-posts.css + 2.1-code.css
-                + 2.1-images-gallery.css + 9.9-utils-anchorjs.css
    Loaded by _layouts/post.html via styles-posts.html.
    ============================================================ */
 
@@ -96,7 +94,6 @@ photo-cover__desc {
   background: var(--bg-color);
 }
 
-.post-nav__prev, .post-nav__next {}
 
 .post-nav__prev a {
   border-top-left-radius: var(--border-radius-larger);
@@ -119,7 +116,7 @@ photo-cover__desc {
    slab, which ignored the reader's mode + palette entirely. It was
    also included by nothing, so none of it ever shipped.
 
-   Now: colours come only from the --code-* tokens in 0.1-color.css,
+   Now: colours come only from the --code-* tokens in themes.css,
    so code follows mode and palette like every other component.
    Selectors are grouped by role rather than listed one-per-line,
    which is why this file is a third of its former size.
