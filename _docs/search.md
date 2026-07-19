@@ -44,7 +44,7 @@ and even that loads on **first open** (Option 1). Measured for this site (~1,480
   If Pagefind can't load, it shows an in-panel message linking to `/search/` (no auto-navigate).
   - **Ready-guard**: init runs on `DOMContentLoaded` (like `sidenotes.js`) so handlers always
     attach — do not remove it.
-- **Styles** (`_includes/css/8.2-tools-search.css`, in the base bundle): the trigger, the
+- **Styles** (`_includes/css/chrome.css`, *Search palette* section, in the base bundle): the trigger, the
   centered command-palette panel + scrim, the ⌘K hint badge, the error message, result-list
   spacing (`.pagefind-modular-list-*`), and `--pagefind-ui-*` overrides on `.site-search__panel`
   mapping Pagefind onto our semantic tokens (results follow the active theme).

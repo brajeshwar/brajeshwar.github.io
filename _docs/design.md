@@ -83,7 +83,8 @@ This is a hard target, and the site already meets it comfortably; the discipline
 
 Current measured homepage (built): **~48 KB** HTML uncompressed (**~13 KB** gzip) with **~31 KB**
 of that being the inlined critical CSS, plus **~20 KB** of first-party JS — well inside budget.
-The inlined-CSS sub-budget is **≤ 42 KB** (see [`memory.md`](memory.md)). Re-measure when adding
+The inlined-CSS sub-budget is **≤ 13 KB gzipped** per page — measured over the wire, not raw
+(see [`memory.md`](memory.md)). Pages measure 6.1–7.2 KB gzip today. Re-measure when adding
 anything to the base bundle.
 
 ## Reader's choice

@@ -8,15 +8,16 @@ For the *why* behind these choices — the reading-first philosophy they serve �
 > comes from the scales below (`--step-*`, `--space-*`, `--scale`). Reuse a token, don't
 > invent a number.
 >
-> **Golden rule (color):** no hardcoded colors outside `_includes/css/0.1-color.css`.
-> Components reference tokens only. Known exceptions: `2.1-code.css` (pygments) and the
-> Pagefind UI vars in `4.1-search-pagefind.css`.
+> **Golden rule (color):** no hardcoded colors outside `_includes/css/themes.css`.
+> Components reference tokens only. **One** known exception remains: the Pagefind UI vars in
+> `search.css`. (syntax highlighting was the other — tokenised 2026-07-19 onto
+> `--code-*`; see [`css-architecture.md`](css-architecture.md) → *Syntax highlighting*.)
 
 ---
 
 # 1. Typography
 
-How type works on the site. Lives in `_includes/css/0.0-config.css` (scales, families),
+How type works on the site. Lives in `_includes/css/config.css` (scales, families),
 `0.0-fonts.css` (variable fonts), and `1.2-typography.css` (headings, rhythm).
 
 ## Families & the font axis (Ovellum parity)
@@ -216,7 +217,7 @@ accent. All inherit the contrast bump above via the semantic layer.
 - [x] Default = light, neutral, sans — bg `gray-100`, fg `gray-900`.
 - [x] Nord + Dark + Geist → Nord-dark slate bg, light fg, Geist body font; panel shows all three pressed.
 - [x] Persisted across reload via no-flash (no flash; `data-theme/palette/font` reapplied before paint).
-- [x] Builds clean; inlined CSS ~29 KB (under the 42 KB budget).
+- [x] Builds clean; inlined CSS ~29 KB raw (budget is now **≤ 13 KB gzipped** per page — see [`memory.md`](memory.md)).
 
 ## Iterate-later
 - Migrate components off the legacy bridge onto `--color-*` directly (cleanup, optional).

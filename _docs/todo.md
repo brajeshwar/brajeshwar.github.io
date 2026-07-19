@@ -18,6 +18,53 @@ Running list of site tasks, beyond the v2027 redesign phases (those are tracked 
 - [ ] **Migrate `cdn.oinam.com`** remnants to `brajeshwar.com`.
 - [ ] **YouTube videos** — move to `brajeshwar.com`, or embed and ignore, or self-host (PeerTube for Oinam or similar).
 
+## CSS architecture (decided 2026-07-19 — see [`css-architecture.md`](css-architecture.md))
+Three tiers: base embedded on every page → one bundle per layout → per-page opt-in for
+one-offs only. Keep embedding; no external stylesheet. Ordered roughly by value/effort.
+
+- [x] **Fix `2.1-code.css` orphan + tokenise it** *(2026-07-19)* — the partial was included by
+      nothing, so syntax highlighting never shipped (55 posts have code blocks). Wired into
+      `styles-posts.html`, then **tokenised**: it was the upstream pygments "native" theme with
+      ~100 hardcoded hex values and its own fixed dark slab that ignored mode + palette. Now it
+      references only the new `--code-*` tokens in `0.1-color.css`. Also added `c1`/`cd`/`s1`/`s2`
+      (Rouge classes the upstream file lacked — comments and strings were rendering as plain code)
+      and dropped the `.err` background box (lexer false positives). File 4.8 KB → 3.6 KB.
+      Browser-verified light + dark; all tokens ≥ 4.49:1 contrast across default/nord/eink.
+- [x] **New `album.html` layout** *(2026-07-19)* — `_layouts/album.html` + `styles-album.html` +
+      `4.1-album.css`. `film` and `devices` now share it. **`books` is not a gallery** (prose page,
+      stays on `layout: page`); `4.1-pages-books.css` turned out to be a byte-identical copy of
+      the film CSS — both deleted. Fixed `/devices/`, which had shipped with no gallery CSS at all.
+      Added `:focus-visible` on card links; `x-small` → `--step--2`. Browser-verified light + dark.
+- [x] **Merge `page-full.html` into `page.html`** *(2026-07-19)* — one layout, conditional wrapper,
+      defaults to `container-ideal`. All 22 reading pages verified unchanged. `full: true` exists
+      but has no users (film/devices went to `album`).
+- [x] **Flatten the CSS file structure** *(2026-07-19)* — 25 numbered ITCSS partials → **12 plainly
+      named files**: `config` · `themes` · `base` · `chrome` · `post` · `page` · `album` + per-page
+      one-offs (`home`, `archives`, `search`, `now`) + `bookmarks`. Numbering dropped; cascade order
+      now lives only in `styles.html`. Verified equivalent: identical byte counts and identical rule
+      sets on 7 page types, one intentional reorder (`.block-*` utilities ahead of chrome, no
+      selector overlap). Old→new map in [`css-architecture.md`](css-architecture.md).
+- [x] **`4.1-pages.css` (0 bytes)** → now `page.css`, kept as the page-tier hook with a comment
+      explaining why it's empty.
+- [x] **`4.1-pages-bookmarks.css`** → now `bookmarks.css`. **Not deleted** — it styles a
+      `<bookmarks-header>` for a bookmarks page that doesn't exist yet, i.e. in-progress work.
+      Still included by nothing.
+- [ ] **Dark-mode image dimming is dormant and inverted** *(found 2026-07-19)* — the
+      `@media (prefers-color-scheme: dark) { img, video { opacity } }` rule in `config.css` keys off
+      the **OS** setting, not `[data-theme]`. Verified in-browser: OS-light + reader-chosen dark
+      never dims; OS-dark + reader-chosen light dims images on a light page. Fix is to mirror the
+      `[data-theme="dark"]` + `auto`-scoped pattern from `themes.css` — but switching it on is a
+      visible change to every image, so it's a design call, not a silent fix. Diagnosis is in the
+      CSS comment.
+- [ ] **`/devices/` images are missing** — every entry in `_data/devices.yaml` has the placeholder
+      `img: img.jpg` and `static/devices/` is empty, so the page has always rendered broken images.
+      Pre-existing, unrelated to the CSS work; needs real images + a data edit.
+- [ ] **`photos.md` → `layout: album`** when there's something to show (currently a prose stub).
+- [x] ~~**Demote footnotes out of base**~~ *(investigated 2026-07-19 — **rejected**)*. Not
+      posts-only: `_pages/about-brajeshwar.com.md` and `_pages/books.md` both use footnotes, so
+      moving them into `post.css` would break sidenotes and the foot fallback on those pages.
+      They stay in `base.css`.
+
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +
       hand-authored `oinam`/`memos`) and the header icons (`search`, `rss`, `theme`) all live

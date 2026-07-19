@@ -128,7 +128,7 @@ Acceptance: pick Sepia, navigate to another page, reload, close and reopen the t
 ## 7. CSS architecture & cleanliness
 
 - Keep the numbered-partial ITCSS structure, inlined via `styles.html`. 
-- **Critical base bundle** (config + color tokens + base + typography + header + footer) stays embedded and should land **under ~10KB** (per Brajeshwar's note). Verify the byte size in Phase 4.
+- **Critical base bundle** (config + color tokens + base + typography + header + footer) stays embedded and must land **under 13KB gzipped** per page — measured over the wire, not raw. (Supersedes the earlier ~10KB and ≤42KB figures; set 2026-07-19.) Verify the byte size in Phase 4.
 - Page-type styles stay split (posts, pages, home, archives, search) and continue to load through the `styles:` layout key. Posts vs pages may share base; confirm whether post styles embed-with-base or load separately and document the decision (open question from the notes).
 - **One color file to rule them all**: enforce "no hardcoded color outside `0.1-color.css`." A quick grep for hex/rgb/hsl in other partials should come back clean.
 - **Dead code pass** (Phase 4): remove unused partials/selectors. Audit each `4.1-pages-*` against pages that still exist.
@@ -164,7 +164,7 @@ Each template must map to the existing layouts; do not invent a new layout syste
 1. **Design system** — typography (`0.0-fonts.css`, `1.2-typography.css`), semantic color tokens + four theme palettes, theme selector UI + `theme.js` + no-flash inline snippet.
 2. **Reading layout + sidenotes** — ideal-width article layout, `sidenotes.js`, sidenote CSS, responsive fold-back, JS-off fallback verified.
 3. **Templates & chrome** — header (centered logo+nav, full-width rule), column footer, full-width vs ideal-width page templates, figure/caption + gallery + caption-alignment utility, blockquote treatment.
-4. **Cleanup** — dead CSS removal, AnchorJS decision, "no hardcoded color" grep, base bundle < 10KB verification.
+4. **Cleanup** — dead CSS removal, AnchorJS decision, "no hardcoded color" grep, base bundle < 13KB gzip verification.
 5. **Verification** — the checklist in §11.
 
 Keep each phase a reviewable unit.
@@ -179,7 +179,7 @@ Keep each phase a reviewable unit.
 - [ ] Jekyll builds clean locally and on Actions; Pagefind still indexes (compare "Indexed N pages" to post count).
 - [ ] Four themes render correctly; selection persists across navigation, reload, and tab reopen; no theme flash on load; OS dark mode honored when no explicit choice.
 - [ ] Sidenotes appear in the margin on desktop for old footnoted posts, fold to footnotes when narrow, and degrade to plain footnotes with JS disabled.
-- [ ] Base CSS bundle embedded and under ~10KB; no hardcoded colors outside `0.1-color.css`.
+- [ ] Base CSS bundle embedded and under 13KB gzipped; no hardcoded colors outside `0.1-color.css`.
 - [ ] Site fully readable with JavaScript disabled.
 - [ ] No commit attributed to Claude/Anthropic; no AI references in messages or comments.
 

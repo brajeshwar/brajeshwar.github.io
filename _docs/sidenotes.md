@@ -52,7 +52,7 @@ Robustness:
   window narrows, and restores them when it widens.
 
 ## CSS & tokens
-- `_includes/css/2.1-footnotes.css` — `.footnotes` (foot fallback, unchanged) + the
+- `_includes/css/base.css` (*Footnotes + sidenotes* section) — `.footnotes` (foot fallback, unchanged) + the
   `.has-sidenotes` / `.sidenote` / `.sidenote-ref` rules, plus the cross-focus rules
   (`.sidenote-focus`, `.is-active`, `.is-open`) and the `.sidenote-inline` reveal panel.
   Note: `.sidenote` and `.sidenote-inline` are `<aside>`s, so they **explicitly reset**

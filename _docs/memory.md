@@ -61,7 +61,10 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 8. **Reviewable diffs** — work phase by phase; don't mix refactor with redesign.
 
 ## Architecture to honor
-- CSS = small numbered **ITCSS partials** in `_includes/css/`, **inlined** into `<head>` via `styles.html` (`{% capture %}` + SCSSify). Base bundle stays embedded and **under ~10KB**.
+- CSS = **12 plainly-named files** in `_includes/css/`, **inlined** into `<head>` via `styles.html` (`{% capture %}` + SCSSify). Base bundle stays embedded and **under 13KB gzipped** per page (measured over the wire, not raw).
+- ⚠️ **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`css-architecture.md`](css-architecture.md). Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
+- **CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only. Shipped the same day: syntax highlighting fixed + tokenised onto `--code-*`; new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html` with a `full:` flag. Full rationale + the orphan-partial findings: [`css-architecture.md`](css-architecture.md).
+- **Layouts are now**: `default` · `post` · `page` (reading width, `full: true` for full-bleed) · `album` (galleries) · `redirect`.
 - Layouts pick a CSS bundle through the `styles:` front-matter key (`styles-posts.html`, `styles-pages.html`).
 - **All themeable values are CSS custom properties; no hardcoded colors outside `0.1-color.css`.** Use semantic tokens: `--bg`, `--bg-subtle`, `--text`, `--text-muted`, `--rule`, `--accent`, `--accent-hover`, `--mark`, `--sidenote-text`, `--code-bg`.
 - `container-ideal` = reading width (~60–70ch serif + right gutter for sidenotes); `page.style` = full-width page hook.
@@ -76,7 +79,7 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 1. **Design system** — typography, semantic tokens + 4 theme palettes, theme selector UI + `theme.js` + no-flash snippet.
 2. **Reading layout + sidenotes** — ideal-width article, `sidenotes.js`, responsive fold-back, JS-off fallback.
 3. **Templates & chrome** — centered header logo+nav w/ full-width rule, column footer, full-width vs ideal-width templates, figure/caption + gallery + caption-align utility, blockquote.
-4. **Cleanup** — dead-CSS pass, AnchorJS decision, "no hardcoded color" grep, base bundle <10KB.
+4. **Cleanup** — dead-CSS pass, AnchorJS decision, "no hardcoded color" grep, base bundle under budget.
 5. **Verification** — checklist in SPEC §11.
 
 ## Open questions (defaults chosen, flag in the partial when resolved)
@@ -103,8 +106,8 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 - **Phase 4 done.** Cleanup.
   - **AnchorJS dropped** — removed vendored `assets/scripts/anchor.min.js`; new vanilla `assets/scripts/anchors.js` (defer, in `post.html`) injects `§` heading links; `9.9-utils-anchorjs.css` repurposed to `.headerlink` styles (reveal on hover, hidden on small screens). Browser-verified (§ appears on h2 hover).
   - **Dead CSS** — removed `_includes/css/4.1-search.css` (Google CSE `.gsc-*`, unreferenced since the Pagefind move).
-  - **Hardcoded colors** — clean outside the known exceptions: `2.1-code.css` (pygments) and `4.1-search-pagefind.css` (Pagefind UI vars — left as-is per SPEC §9). No stray colors elsewhere.
-  - **CSS budget** — Brajeshwar set the budget at **≤ 42KB** (supersedes the old ~10KB note). Inlined `<style>` per page (compressed): ~17KB (pages) to ~25KB (search w/ Pagefind UI). **Well under budget.**
+  - **Hardcoded colors** — clean outside the known exceptions: `2.1-code.css` (pygments) and `4.1-search-pagefind.css` (Pagefind UI vars — left as-is per SPEC §9). No stray colors elsewhere. **Update 2026-07-19: `2.1-code.css` is now tokenised onto `--code-*`, so `4.1-search-pagefind.css` is the only remaining exception.**
+  - **CSS budget** — history: original note ~10KB → raised to ≤42KB → **tightened to ≤13KB gzipped per page (2026-07-19, current rule)**. The budget is measured **gzipped over the wire**, not raw. Measured 2026-07-19 from `_site`: books 6.1KB, archives 6.3KB, article 6.6KB, home 6.8KB, search 7.2KB gzip (27.3–34.4KB raw). **All pass with ~5.8KB headroom.**
 - **Phase 5 (verification) — passing.** Builds clean; only layouts/includes/css/js/`nav.yaml` touched (no post/draft/page-body content); permalinks unchanged; 4 themes + font selector persist with no flash; sidenotes work + fold back; JS-off → real footnotes + default theme; CSS under budget; no AI-attributed commits (nothing committed — staged for review).
   - Files touched (Phases 0–4): `_data/nav.yaml`; `_includes/css/{0.0-config,0.1-color,1.2-typography,2.1-footnotes,2.1-images,3.1-header,3.1-footer,8.1-tools-theme-toggle,9.9-utils-anchorjs}.css`; deleted `4.1-search.css`; `_includes/{header,footer}.html`; `_layouts/{default,post}.html`; `assets/scripts/{reader,sidenotes,anchors}.js` (new); deleted `assets/scripts/anchor.min.js` + old `theme.js`.
 - **Header search added + live-verified.** Site-wide search via lazy-loaded Pagefind (Option 1 — zero page-load cost). See [`search.md`](search.md). `<site-search>` trigger in `header.html` (links to `/search/` as JS-off fallback) + `assets/scripts/search.js` (defer, opens an inline themed panel, lazy-loads `pagefind-ui.*` on first click) + `_includes/css/8.2-tools-search.css` (in base bundle). Browser-verified: page load injects no Pagefind; click → panel + lazy-load; "cherrapunji" → 1 highlighted result.
@@ -116,14 +119,14 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
   - `0.1-color.css` fully rewritten: raw `--color-gray-*` scale (palettes re-tint) → semantic `--color-*` (mode flips light↔dark) → **bridge** aliasing all legacy `--bg-color-*`/`--text-color-*`/`--border-color-*` + v2027 `--bg/--text/--rule/--accent` onto the semantic layer, so every component themes with zero edits. `color-mix()` for borders.
   - `--font-body` (default `--font-sans`) drives `body`; legacy `--font-family-*` aliased.
   - Controls: `<appearance-settings>` panel (`appearance.js`, replaces `reader.js`) — Mode/Palette/Font button groups; no-flash snippet applies all 3 axes before paint; `localStorage` keys `theme`/`palette`/`font`. CSS in `8.1-tools-theme-toggle.css`.
-  - **Browser-verified**: default light/neutral/sans; Nord+Dark+Geist → Nord-dark slate bg, Geist font; persisted across reload with no flash. Builds clean; inlined CSS ~29KB (<42KB).
+  - **Browser-verified**: default light/neutral/sans; Nord+Dark+Geist → Nord-dark slate bg, Geist font; persisted across reload with no flash. Builds clean; inlined CSS ~29KB raw (budget is now ≤13KB gzip — see the CSS budget note above).
   - **Accent axis wired (live-verified).** Appearance panel has an **Accent** group: 6 swatches (Blue/Purple/Green/Amber/Red/Cyan, Ovellum's oklch values) + Default + custom `<input type=color>`. Sets inline `--ov-accent` + `data-accent=custom`, persisted to `localStorage('accent')`, applied by the no-flash snippet. The ported `[data-accent]³` rule maps it onto `--color-accent` + `--color-primary` (links, nav pill, logo recolour). Verified: Blue accent → blue links/nav/logo, persists across reload.
   - **Still deferred:** `data-text-size` (conflicts with the site's Utopia `--step-*` scale — would need a base-size multiplier).
 - **Carry-over / iterate-later:**
   - Footer grouping is a guess — re-bucket as you like.
   - Sidenote hover/focus highlight; tune `--sidenote-width`/breakpoint on long or clustered notes.
   - Migrate components off legacy color tokens (`--bg-color-*` etc.) onto the semantic ones (`--bg`, `--text`, …) — a tidy-up, not required for function.
-  - Optional further CSS trimming by moving content-only partials out of the always-inlined base — not needed given the 42KB budget.
+  - Optional further CSS trimming by moving content-only partials out of the always-inlined base — not needed given the current headroom under the 13KB gzip budget.
 - **Local dev loop (`Makefile`).** `jekyll serve` does NOT build the Pagefind index (only CI does) → ⌘K shows "Search isn't available right now" locally. Use **`make serve`** (build + `npx pagefind --site _site` + `jekyll serve --skip-initial-build --no-watch`) for working local search; `make dev` for fast live-reload without search; `make build` / `make pagefind` / `make clean`. See [`search.md`](search.md).
 - **Appearance panel reworked (Brajeshwar; browser-verified).** `appearance.js` axes:
   - **Font** → 3 choices: **Default** = `sans` (system, no webfont, fast), **Sans-Serif** = `geist`, **Serif** = `serif` (Libre Baskerville). Inter removed (option, `@font-face`, and `assets/fonts/inter/` deleted).

@@ -36,10 +36,23 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 8. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
-- CSS = small numbered ITCSS partials in `_includes/css/`, **inlined** into `<head>` via
-  `styles.html` (SCSSify). Base bundle stays embedded and **under ~10KB**.
-- Layouts select a CSS bundle through the `styles:` front-matter key.
-- **All themeable values are CSS custom properties; no hardcoded colors outside `0.1-color.css`.**
+- CSS = **12 plainly-named files** in `_includes/css/` (`config`, `themes`, `base`, `chrome`,
+  `post`, `page`, `album`, + per-page one-offs), **inlined** into `<head>` via `styles.html`
+  (SCSSify). Flattened from 25 numbered ITCSS partials on 2026-07-19 — **don't reintroduce
+  numeric prefixes**; cascade order lives in `styles.html`, and `config.css` must stay first.
+  Base bundle stays embedded and **under 13KB gzipped** (over the wire, per page). Today's pages
+  measure 6.1–7.2KB gzip (27–34KB raw), so there is real headroom — re-measure when adding to base.
+- Layouts select a CSS bundle through the `styles:` front-matter key. **CSS splits by layout, not
+  by page** — base → per-layout bundle → per-page opt-in for one-offs only. New page type means a
+  new layout + one bundle. See [`_docs/css-architecture.md`](_docs/css-architecture.md).
+  (`styles:` = a CSS include; `style:` = a class on `<main>` — different keys, easily confused.)
+- **All themeable values are CSS custom properties; no hardcoded colors outside `themes.css`.**
+- **Comment CSS generously.** `sass: style: compressed` strips block comments, so prose in
+  `_includes/css/*.css` costs **zero bytes** in the shipped page — verified. Explain *why*,
+  record gotchas, date non-obvious decisions. Two hard rules: **never use a bang comment**
+  (slash-star-bang survives compression and ships), and **never write a literal star-slash
+  inside comment prose** (it closes the comment early; the build then fails with a misleading
+  "expected selector" pointing at `styles.html`).
 - `container-ideal` = reading width; `page.style` = full-width page hook.
 
 ## Quick verification before handing back
