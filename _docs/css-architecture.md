@@ -209,6 +209,55 @@ Cost: the `--code-*` tokens live in `0.1-color.css`, which is base, so every pag
 (+0.18 KB gzip on the homepage) even though only 55 posts have code. Kept there anyway — the
 guardrail puts colour in `0.1-color.css`, and it's where you'd look for them.
 
+## Audit + cleanup, 2026-07-19
+A pass over all 12 files, checking every selector against real markup and every custom
+property against real `var()` reads. **−2,012 B raw / −0.35 KB gzip on every page**
+(−2,571 B on `/search/`). Roughly 2.9 MB across the site.
+
+### Bugs fixed
+- **Palette + auto-dark hung on source order.** `:root[data-theme="auto"]` is specificity
+  (0,2,0) — exactly tied with `:root[data-palette="eink"]`, which sets a *light*
+  `--color-surface`. It won only because it appeared later in the file. Reordering the
+  palettes, splitting `themes.css`, or shuffling `styles.html` would have silently given
+  eink/nord readers a light surface in dark mode. The explicit-dark branch always carried a
+  `[data-palette]` guard; auto did not. Both do now, so it is settled on specificity.
+- **The two dark branches are now SCSS mixins.** Dark has to be written twice (a media query
+  can't merge with a bare selector), and the copies were identical only by luck. The values
+  now exist once; drift is structurally impossible. Merging the two `@media` wrappers paid
+  for the added selector — net **+1 byte**.
+- **`search.css` referenced seven tokens that don't exist.** `--link-color`, `--accent-color`,
+  `--text-color-muted`, `--text-color-secondary`, `--highlight-bg`, `--highlight-text`,
+  `--bg-color-medium` are declared nowhere, so every one fell through to a hardcoded hex and
+  the search UI ignored the reader's theme entirely. Repointed at real tokens; verified in-browser
+  that light/dark now invert and eink yields warm cream instead of `#fff`.
+- **`search.css` leaked into global `mark`.** An unscoped `mark` rule repainted *every* `<mark>`
+  on `/search/`, not just search hits. Scoped to `.pagefind-ui`. A second, earlier `mark` rule
+  was fully overridden by it — dead, removed.
+
+### Dead weight removed (all verified, not guessed)
+- **28 custom properties in `config.css`** — Utopia one-up pairs and `--space-3xl` (never
+  referenced), `--display-*` (dead *and* a hand-synced duplicate of `$breakpoint-*`), unused
+  border/radius/weight variants, `--icon-size`, `--image-width-full`, `--scale-large` +
+  `--minor-seventh`, `--space-small`/`--space-smallest`, `--phi` (a duplicate of `--golden`).
+- **7 semantic tokens in `themes.css`** (16 declaration sites) — `--color-accent-fg` alone was
+  assigned in six places and read in none.
+- **Empty rulesets** in `base.css`, `home.css`, `post.css`. Zero byte impact (compression drops
+  them) but pure source noise.
+- **All hardcoded colour** outside `themes.css`. `search.css` was the last documented exception;
+  **there are now zero exceptions.**
+
+### The correction that made this necessary
+An earlier comment in `config.css` claimed unused custom properties cost nothing in the shipped
+CSS. **That is wrong.** Comments are stripped by `style: compressed`; *declarations are not*. The
+note was licensing dead weight, and roughly 1.6 KB of unread tokens had accumulated behind it.
+Corrected in place.
+
+## Audit backlog
+Verified findings, deliberately not acted on yet — see [`todo.md`](todo.md) for the list.
+The big one: `search.css` hand-copies ~6 KB of Pagefind's own stylesheet, which
+`_pages/search.html` already links separately. Confirming that needs a Pagefind build
+(`make serve`), so it was left rather than cut on inference.
+
 ## Rules for adding CSS
 1. **Default to a tier-1 layout bundle.** New page type → new layout → one bundle.
 2. **Adding to base needs a reason.** It costs every page. Re-measure gzip after.

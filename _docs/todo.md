@@ -49,6 +49,30 @@ one-offs only. Keep embedding; no external stylesheet. Ordered roughly by value/
 - [x] **`4.1-pages-bookmarks.css`** → now `bookmarks.css`. **Not deleted** — it styles a
       `<bookmarks-header>` for a bookmarks page that doesn't exist yet, i.e. in-progress work.
       Still included by nothing.
+### From the 2026-07-19 CSS audit — not yet done
+Full findings and evidence in [`css-architecture.md`](css-architecture.md) → *Audit backlog*.
+- [ ] **search.css re-implements Pagefind's own stylesheet** (~6 KB of its 9.7 KB). `_pages/search.html`
+      already links the CLI-generated `pagefind-ui.css`, and the top half of `search.css` hand-copies
+      the same base UI on top of it. Needs a `make serve` (Pagefind built) to byte-compare before cutting.
+      Biggest single remaining win.
+- [ ] **chrome.css repeats itself** — 4 near-identical circular icon-button recipes (`.site-rss`,
+      `.appearance-trigger`, `.site-search__trigger`, `.footer-social a`); two byte-identical backdrops;
+      two popups sharing 9 declarations; `.site-search__panel` opened twice, 30 lines apart.
+      Ships on every page, so worth collapsing into shared primitives.
+- [ ] **base.css dead selectors** — `.visually-hidden` (no markup uses it), `img.round`,
+      `figcaption.center/right`, `audio.small/medium/left/right`, `object, embed`, `aside.left/right`,
+      `tfoot`. All verified against 1,456 built pages. Removing needs care: kramdown and
+      `sidenotes.js` generate markup that has no literal source match.
+- [ ] **base.css duplication** — `.sidenote` declared twice; `.sidenote`/`.sidenote-inline` repeat
+      6 declarations; `html`+`body` both set `scroll-behavior` (the `body` copy is inert).
+- [ ] **Two spacing systems** — ratio-derived `--space`/`--space-smaller` vs fluid Utopia `--space-*`.
+      Only 3 rules in base.css still use the ratio one; cheap to finish migrating.
+- [ ] **`--sidenote-min-gutter` is hand-synced with JS** (`assets/scripts/sidenotes.js` `MIN_GUTTER_REM`).
+      CSS declares a number it never reads. Either have JS read it via `getComputedStyle`, or drop the
+      token and keep the JS constant.
+- [ ] **base.css section order** — media rules and `hr`/`kbd` are stranded in the reset zone, ~240 lines
+      from where they belong; `.highlight` sits 50 lines from `pre`/`code`. A proposed order is in the docs.
+
 - [ ] **Dark-mode image dimming is dormant and inverted** *(found 2026-07-19)* — the
       `@media (prefers-color-scheme: dark) { img, video { opacity } }` rule in `config.css` keys off
       the **OS** setting, not `[data-theme]`. Verified in-browser: OS-light + reader-chosen dark
