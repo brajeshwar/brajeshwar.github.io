@@ -39,19 +39,35 @@ Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → 
 - **"Libre Baskerville"** (`assets/fonts/libre-baskerville/*.woff2`, latin subset,
   regular/italic/bold, `size-adjust: 98.5%`) — **the reader "Serif" font** (`[data-font="serif"]`),
   with the system serif stack as its fallback while loading / on failure.
-- **"Geist var"** (`geist/Geist-Variable.ttf`, `font-weight: 100 900`) — **the reader
-  "Sans-Serif" font**. (Inter was removed.)
+Libre Baskerville is the **only** webfont. Inter was removed earlier; Geist followed on
+2026-07-19 (see below).
 
-### The `[data-font]` axis — three panel choices
+### The `[data-font]` axis — two panel choices
 The panel labels map to values: **Default** = `sans` (system stack, **no webfont**, fast),
-**Sans-Serif** = `geist`, **Serif** = `serif` (Libre Baskerville).
+**Serif** = `serif` (Libre Baskerville).
 ```css
-/* 0.0-config.css */
+/* config.css */
 :root { --font-body: var(--font-sans); }   /* Default — no attribute, system sans */
 [data-font="sans"]  { --font-body: var(--font-sans); }
-[data-font="geist"] { --font-body: "Geist var", var(--font-sans); }        /* "Sans-Serif" */
 [data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); } /* "Serif" */
 ```
+
+**Why two, not three** *(2026-07-19)*. The third option was "Sans-Serif" = Geist. Two problems:
+it is a neo-grotesque, so it sat very close to the system stack it was offering an alternative
+*to* — a reader picking it barely saw a change — and it shipped as a **165 KB unsubsetted
+`.ttf`**, the heaviest asset on the site, against 84 KB of woff2 for all three Libre Baskerville
+styles. Two options that genuinely differ beat three where one is a near-duplicate. It also
+matches the standing advice already in `config.css`: *"Resist the temptation to use custom fonts."*
+
+If a third option is ever wanted, pick one the system stack **cannot** provide —
+**Atkinson Hyperlegible** is the natural candidate for a site that hands readers this much
+control. Subset to latin, ship woff2, never raw ttf.
+
+**Stale preferences need no migration.** A reader who had chosen Geist still has `"geist"` in
+`localStorage`. `read()` in `appearance.js` validates against its own option list and falls back
+to `sans`; the no-flash snippet in `default.html` whitelists `'serif'` rather than passing
+through anything that isn't `'sans'`, so no orphan `data-font` lands on `<html>`. Verified in
+browser with a stale value set.
 
 ### Text size (Kindle-style) — `[data-text-size]`
 Five "A" buttons in the appearance panel, growing left → right, default in the middle. Sets

@@ -95,9 +95,9 @@ Full findings and evidence in [`css-architecture.md`](css-architecture.md) → *
       there now — one **filled** family, `currentColor`, shared `rss.svg`. See [`styles.md`](styles.md) §4.
 - [x] **`/photos/` page created** as a coming-soon placeholder (`_pages/photos.md`). Replace with
       the real photos component when ready (see *Content & pages* below).
-- [ ] **Geist `.ttf` → `.woff2`.** `assets/fonts/geist/Geist-Variable.ttf` is a raw TrueType;
-      convert to woff2 (much smaller) so readers who pick Geist pay less. Inter and Libre
-      Baskerville are already woff2. (Default load is unaffected — fonts load only when chosen.)
+- [x] ~~**Geist `.ttf` → `.woff2`**~~ — moot: the Geist option was removed entirely on
+      2026-07-19 (near-duplicate of the system stack, 165 KB unsubsetted ttf). Libre
+      Baskerville is now the only webfont and is already woff2. See [`styles.md`](styles.md).
 - [ ] **Scope `sidenotes.js` to article pages.** It's loaded site-wide via `default.html` but
       only does anything where footnotes exist; skip it on the homepage/pages to shave a
       request from non-article loads (performance-budget tidy, not urgent).

@@ -74,7 +74,7 @@ This is a hard target, and the site already meets it comfortably; the discipline
   request). Icons are **inline SVG**, not an icon font or sprite fetch (see [`styles.md`](styles.md)
   §3). Prefer embedding a few KB over adding a round-trip.
 - **System fonts by default.** The default body font is the system stack — **0 bytes** of
-  webfont. Self-hosted fonts (Inter / Geist / Libre Baskerville) download **only if a reader
+  webfont. Self-hosted fonts (Libre Baskerville only, since 2026-07-19) download **only if a reader
   picks them**, never on a default load.
 - **Only the JS a page needs.** Vanilla, `defer`, and small. Scripts that only matter on
   articles (e.g. sidenotes) shouldn't tax a homepage — scope where practical.
