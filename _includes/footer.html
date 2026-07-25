@@ -18,13 +18,42 @@
       {% endfor -%}
     </nav>
 
+    {%- comment -%}
+      The colophon numbers are rendered at build time rather than by JavaScript.
+      The site rebuilds on a daily cron (.github/workflows/jekyll-build-deploy.yml),
+      so the year and the age can never be more than a day stale — and unlike the
+      empty <span> this replaced, the line still reads correctly with JS disabled.
+
+      Age: brajeshwar.com went live on 11 June 2001. Whole months only; the day is
+      deliberately ignored, as it was in the original 2025 script.
+    {%- endcomment -%}
+    {%- assign year_now = site.time | date: "%Y" | plus: 0 -%}
+    {%- assign month_now = site.time | date: "%-m" | plus: 0 -%}
+    {%- assign months_elapsed = year_now | minus: 2001 | times: 12 | plus: month_now | minus: 6 -%}
+    {%- assign years_since = months_elapsed | divided_by: 12 -%}
+    {%- assign months_since = months_elapsed | modulo: 12 -%}
+    {%- assign years_label = "years" -%}
+    {%- if years_since == 1 %}{% assign years_label = "year" %}{% endif -%}
+    {%- assign months_label = "months" -%}
+    {%- if months_since == 1 %}{% assign months_label = "month" %}{% endif -%}
+
+    {%- comment -%}
+      Thousands separator by hand: Liquid has no number-formatting filter and a
+      plugin is out of the question on GitHub Pages. One comma is enough up to
+      999,999 posts — revisit at seven digits, which is not a near-term problem.
+    {%- endcomment -%}
+    {%- assign post_digits = site.posts | size | append: "" -%}
+    {%- assign comma_at = post_digits | size | minus: 3 -%}
+    {%- if comma_at > 0 -%}
+      {%- assign post_head = post_digits | slice: 0, comma_at -%}
+      {%- assign post_tail = post_digits | slice: comma_at, 3 -%}
+      {%- assign post_count = post_head | append: "," | append: post_tail -%}
+    {%- else -%}
+      {%- assign post_count = post_digits -%}
+    {%- endif -%}
+
     <p class="footer-colophon">
-      <small>&copy; 2001&ndash;<span id="year_current"></span> Brajeshwar Oinam &middot; {{ site.posts | size }} posts</small>
+      <small>&copy; 2001&ndash;{{ year_now }} Brajeshwar Oinam &middot; {{ post_count }} posts &middot; {{ years_since }} {{ years_label }}{% if months_since > 0 %}, {{ months_since }} {{ months_label }}{% endif %}</small>
     </p>
   </div>
 </footer>
-
-<script>
-  // Copyright year — keeps "2001–<now>" current without a rebuild.
-  document.getElementById('year_current').textContent = new Date().getFullYear();
-</script>
