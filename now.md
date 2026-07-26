@@ -26,3 +26,5 @@ style: page-now
 {% include_relative now/2003.md %}
 
 {% include_relative now/2001.md %}
+
+<script defer src="{{ '/assets/scripts/anchors.js' | relative_url }}"></script>

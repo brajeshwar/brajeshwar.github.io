@@ -52,7 +52,11 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-50%, -50%);
+  /* The extra -1px is a hairline of daylight between the visible "20" and the
+     tray's edge. Dead flush, the glyph and the border touched and read as one
+     shape; a single pixel separates them without breaking the illusion that
+     the rest of the number continues underneath. */
+  transform: translate(calc(-50% - 1px), -50%);
   z-index: 0;                       /* under .archive-years (z-index 1) */
 
   font-family: var(--font-family-monospace);

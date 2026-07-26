@@ -237,6 +237,27 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Gear icon; archives hairline; /now/ wears the timeline (2026-07-27)
+- **Theme icon → gear.** The half-filled contrast circle read as "light/dark" when the panel it
+  opens is really all of settings — mode, palette, font, size, accent. Filled gear traced from
+  Heroicons (MIT), which `styles.md` §4 already names as an acceptable source for a filled
+  glyph. Same 24-viewBox / `currentColor` / 20px shape as the rest of the set, so it inherits
+  the icon sizing and the quieter icon colour with no extra rules.
+- **Archives: a 1px hairline between the "20" and the tray.** The century was centred exactly on
+  the tray's edge, so the glyph and the border touched and read as one shape.
+  `translate(calc(-50% - 1px), -50%)` gives it daylight without breaking the illusion that the
+  rest of the number continues underneath. Measured: 43px visible / 41px hidden.
+- **`/now/` now wears the `/about/` timeline's visuals** — spine, dots, quiet year headings,
+  prose held at the measure. **Done purely in CSS against the markup kramdown already emits, so
+  not one word of content moved.** `now.md` include_relative's eleven year fragments from
+  `now/`, each `# YYYY` + a bullet list, which maps straight onto the timeline's shape:
+  `h1` → `.timeline-when`, `<ul>` → `.timeline-entries` (the spine is its `border-left`),
+  `<li>` → `.timeline-entry` (the dot). Year headings also gained § anchors, so `/now/#2024`
+  works — `anchors.js` picked up a third selector rather than a third script.
+  ⚠️ Those visual rules are a **deliberate copy** of timeline.css's, not a shared import: both
+  are tier-2 page bundles never loaded together, so sharing means promoting to base.css and
+  charging ~1,456 pages for what two use. Same call as `.headerlink`. **Keep them in step.**
+
 ### Appearance panel: Sans-Serif back, every group on one line (2026-07-27)
 - **"Sans-Serif" (Geist) restored** as a third font option. It was dropped 2026-07-19 for its
   weight; Brajeshwar re-added the file and asked for the option back. **FOUR places must agree**
