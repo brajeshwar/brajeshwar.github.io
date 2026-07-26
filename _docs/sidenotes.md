@@ -16,7 +16,7 @@ content or markup changes** — old posts get sidenotes for free. This doc is th
 `article.container-ideal`:
 
 1. Finds each `article` that has a `.footnotes` block and `sup[id^="fnref"]` references.
-2. **If the gutter has room** (`band.right − article.right ≥ --sidenote-min-gutter`, where the
+2. **If the gutter has room** (`band.right − article.right ≥ MIN_GUTTER_REM`, where the
    band is the article's container — *not* the viewport, since 2026-07-27):
    adds `.has-sidenotes` to the article (→ hides the bottom `.footnotes` block), and for each
    reference clones its `li#fn:N` into an `<aside class="sidenote">` placed at `left: 100%`
@@ -62,10 +62,11 @@ Robustness:
   typical Tufte footnote; bumped one step up the scale for easier margin reading.
 - Cross-focus uses only existing tokens: dimming via `--opacity-lower`, active note via
   `--text-color`, active reference via `--accent-hover` on `--mark`. Transitions respect
-  the global `prefers-reduced-motion` kill switch in `1.1-base.css`.
-- `_includes/css/0.0-config.css` — `--sidenote-width` (16rem, the *maximum*),
-  `--sidenote-gap` (3.5rem), `--sidenote-min-gutter` (17rem, kept in sync with
-  `MIN_GUTTER_REM` in the JS).
+  the global `prefers-reduced-motion` kill switch in `base.css`.
+- `_includes/css/config.css` — `--sidenote-width` (16rem, the *maximum*) and
+  `--sidenote-gap` (3.5rem). ⚠️ **`--sidenote-min-gutter` was removed 2026-07-27**: CSS declared
+  a number that only the JS read. The threshold is `MIN_GUTTER_REM` (17) in
+  `assets/scripts/sidenotes.js` and nowhere else.
 - **Fluid note width:** `.sidenote { width: min(var(--sidenote-width),
   calc(min(96vw, var(--body-width-max)) − 100% − var(--sidenote-gap))) }` — the whole leftover
   after the column and the gap IS the gutter, because the column is left-aligned in the band.
@@ -86,7 +87,7 @@ Measured in Chrome against the built site, not calculated:
 | `--measure: 66rch` | **665px** column |
 | `--sidenote-gap` | **56px** |
 | `--sidenote-width` | **256px** (the maximum; notes shrink below it) |
-| `--sidenote-min-gutter` | **272px** — the JS threshold |
+| `MIN_GUTTER_REM` | **272px** (17rem) — the threshold, in `sidenotes.js`; no CSS token since 2026-07-27 |
 | Floor | notes survive to a **940px band**, i.e. about a **980px viewport** |
 
 ### It used to be 1210px — what changed and why it mattered
@@ -108,10 +109,33 @@ The gutter is paid for once, which:
   room, instead of `665 + 2 × 312 = 1289`;
 - put the prose's left edge on the band edge, the same line the header and footer rules draw.
 
-### Three things that must stay in step
+### ⚠️ Images without dimensions — the placement race
 
-1. `--sidenote-min-gutter` in `config.css` is **hand-synced** with `MIN_GUTTER_REM` in
-   `assets/scripts/sidenotes.js`. Still on the audit backlog to resolve.
+Notes are positioned from measured geometry, so anything that has no height *yet* is invisible
+to the maths. Images here carry **no `width`/`height` attributes**, so at first layout they
+contribute almost nothing.
+
+Measured on `/2005/mumbai-marooned-july-26-27-2005/`: the figure was **79px tall when the note
+was positioned and 675px once the image decoded** — leaving the note sitting on top of the
+photograph, with `document.readyState === 'complete'` and `img.complete === true`. The
+`window.load` re-render was meant to cover this and can fire before a cached image is laid out,
+so it was a race the page only *usually* won.
+
+It started losing on 2026-07-27, when wide media stopped spilling into both margins and began
+extending **right** — into the gutter the notes live in.
+
+**Fixed with a `ResizeObserver` on the IMAGES**, not on the article: placing a note changes the
+article's size, so observing the article would re-trigger the observer on its own output, while
+an image's size does not depend on where a note sits. No loop to debounce away.
+
+**This is a patch, not a cure.** The real fix is `width`/`height` attributes on images, which
+would also stop the layout shift every image currently causes. That is content-adjacent, so it
+is Brajeshwar's call — tracked in [`todo.md`](todo.md).
+
+### Things that must stay in step
+
+1. ~~`--sidenote-min-gutter` hand-synced with `MIN_GUTTER_REM`.~~ **Resolved 2026-07-27** by
+   deleting the CSS token. One source of truth: `MIN_GUTTER_REM` in `sidenotes.js`.
 2. `gutterFits()` measures the **band**, not `window.innerWidth`. The viewport version was
    correct only while the gutter was viewport margin; on a wide screen it now reports room the
    band does not offer.

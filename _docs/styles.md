@@ -18,7 +18,7 @@ philosophy they serve — see [`design.md`](design.md).
 # 1. Typography
 
 How type works on the site. Lives in `_includes/css/config.css` (scales, families),
-`0.0-fonts.css` (variable fonts), and `1.2-typography.css` (headings, rhythm).
+`themes.css` (variable fonts), and `base.css` (headings, rhythm).
 
 ## Families & the font axis (Ovellum parity)
 The reader picks the body font via the **appearance panel** → `[data-font]` swaps the
@@ -34,14 +34,17 @@ The reader picks the body font via the **appearance panel** → `[data-font]` sw
 Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → --font-serif`,
 `…-monospace → --font-mono`.
 
-**Self-hosted fonts** (`0.0-fonts.css`, bundled `@font-face`, all `font-display: swap` so they
+**Self-hosted fonts** (`themes.css`, bundled `@font-face`, all `font-display: swap` so they
 **download only when chosen** — no default-load cost):
 - **"Libre Baskerville"** (`assets/fonts/libre-baskerville/*.woff2`, latin subset,
   regular/italic/bold, `size-adjust: 98.5%`) — **the reader "Serif" font** (`[data-font="serif"]`),
   with the system serif stack as its fallback while loading / on failure.
-- **"Geist"** (`assets/fonts/geist/Geist-Variable.ttf`) — **the reader "Sans-Serif" font**
-  (`[data-font="geist"]`), a variable TTF so one file covers every weight, falling back to the
-  system sans stack.
+- **"Geist"** (`assets/fonts/geist/Geist-Variable.woff2`, latin subset, **47 KB**) — **the
+  reader "Sans-Serif" font** (`[data-font="geist"]`), variable, so one file covers every weight,
+  falling back to the system sans stack. Subset from a 169 KB `.ttf` on 2026-07-27, a 72% cut;
+  the `.ttf` stays in the repo as the re-subset source and is `exclude`d from the build. The
+  regeneration command is in the `themes.css` comment. ⚠️ Any re-subset must keep the variable
+  tables — a naive subset flattens the axis and every weight silently becomes 400.
 
 Two webfonts, both optional. Inter was removed earlier.
 
@@ -84,56 +87,69 @@ which is why removing and restoring Geist required no migration step in either d
 ### Text size (Kindle-style) — `[data-text-size]`
 Five "A" buttons in the appearance panel, growing left → right, default in the middle. Sets
 `--text-scale`, which **multiplies the whole type scale for content inside `<main>`** (home
-body, pages, articles) — header/footer keep the base scale. Mechanism (`0.0-config.css`): the
+body, pages, articles) — header/footer keep the base scale. Mechanism (`config.css`): the
 raw clamps are `--step-N-base`; `:root` aliases `--step-N: var(--step-N-base)` (used by
 header/footer), and `main` redefines `--step-N: calc(var(--step-N-base) * var(--text-scale))`.
 So every element that uses `--step-*` in content scales automatically — no per-element rules.
 Values are **symmetric around the middle**: `xs` 0.85 · `s` 0.925 · **m 1 (default, middle, no attribute)** · `l` 1.075 · `xl` 1.15 (±0.075 / ±0.15). Persisted
 as `localStorage('textsize')`; applied before paint by the no-flash snippet.
 
-**Interface vs content (Brajeshwar's model).** The reader's font choice applies to **all
-content**; only the **header and footer** (the UI chrome) are pinned to system sans:
-- `body { font-family: var(--font-body); }` (`1.1-base.css`) — the reader's choice flows to
-  home body, pages, and articles.
-- `header, footer { font-family: var(--font-sans); }` (`1.1-base.css`) — the chrome stays sans
-  regardless of the choice (search + appearance panels live inside the header, so they follow).
-- **Sidenotes** (`.sidenote`/`.sidenote-inline`) and **post meta** (`.post time`) re-assert sans
-  on top of content, so they stay sans even in a serif article. Blockquotes **inherit** context.
+**Interface vs content (Brajeshwar's model).** The reader's font choice applies to **prose**.
+**Interface is pinned to system sans** — and the distinction is what the text IS, not where it
+sits: prose is the reader's to set, controls and labels are the site's. Brajeshwar, 2026-07-27:
+*"UI Elements such as the PREV | NEXT should always be in the sans-serif system fonts. Making it
+serif is weird."*
+
+- `body { font-family: var(--font-body); }` (`base.css`) — the reader's choice flows to home
+  body, pages, and articles.
+- One rule in `base.css` pins the interface. `header` and `footer` are chrome by position;
+  everything else sits inside `main`, inherits `--font-body`, and must **opt out by name**:
+
+      header, footer, .post-nav, .pill, .back-to-top-row { font-family: var(--font-sans); }
+
+- **Sidenotes** (`.sidenote`/`.sidenote-inline`), **captions** (`figcaption`) and **post meta**
+  (`.post time`) re-assert sans on top of content — they are labels *about* content, not content.
+  Blockquotes **inherit** context.
 - Set on `<html>` by `appearance.js`, persisted in `localStorage('font')`, applied before first
   paint by the no-flash snippet (`sans` = no attribute = default).
+
+⚠️ **Add new controls inside `main` to that list.** The failure is silent: it only shows for
+readers who picked Serif or Sans-Serif, and the default is System, so casual checking never
+surfaces it. `.back-to-top-row` had a `font-family` until it became icon-only and lost it
+without anyone noticing — which is why the list exists rather than a rule per component.
 
 > History: `cd3227e0` made posts sans; a Phase-1 draft flipped to serif; then a Reader-style
 > Sans/Serif/Mono selector; then the Ovellum font axis (Sans/Serif/Inter/Geist) applied
 > site-wide; **now** scoped to article content so the interface is always sans (this section).
 
 ## Type scale (fluid, Utopia)
-`0.0-config.css`, generated at <https://utopia.fyi> (320px @18px/1.2 → 1240px @20px/1.25).
+`config.css`, generated at <https://utopia.fyi> (320px @18px/1.2 → 1240px @20px/1.25).
 Use these for **every** font-size:
 
 `--step--2` · `--step--1` · `--step-0` (body) · `--step-1` · `--step-2` · `--step-3` · `--step-4` · `--step-5`
 
-Headings (`1.2-typography.css`): h1 `--step-3` · h2 `--step-2` · h3 `--step-1` · h4 `--step-0` · h5 `--step--1` · h6 `--step--2`, all `font-weight: var(--font-weight-light)`, `line-height: var(--scale-small)`, `text-wrap: pretty`.
+Headings (`base.css`): h1 `--step-3` · h2 `--step-2` · h3 `--step-1` · h4 `--step-0` · h5 `--step--1` · h6 `--step--2`, all `font-weight: var(--font-weight-light)`, `line-height: var(--scale-small)`, `text-wrap: pretty`.
 
 ## Spacing scale (fluid, Utopia)
-`0.0-config.css`. Use for **every** margin/padding:
+`config.css`. Use for **every** margin/padding:
 
 `--space-3xs` … `--space-3xl`, plus one-up pairs (`--space-s-m`, `--space-m-l`, …) for fluid gaps.
 
 ## Vertical rhythm & line-height
 - Body `line-height: var(--scale)` = `--golden` (1.618) — generous, suits serif reading.
 - Headings `line-height: var(--scale-small)` = `--minor-third` (1.2) — tight.
-- Modular-scale ratios live in `0.0-config.css` (`--golden`, `--minor-third`, `--minor-seventh`, …); the active ones are aliased to `--scale`, `--scale-small`, `--scale-large`.
+- Modular-scale ratios live in `config.css` (`--golden`, `--minor-third`, `--minor-seventh`, …); the active ones are aliased to `--scale`, `--scale-small`, `--scale-large`.
 
 ## Reading measure (character-based)
 The reading column is sized by **character count, not pixels** — comfort is a function of
 characters per line (see [`design.md`](design.md) → *Comfortable measure*).
 
 ```css
-/* 0.0-config.css */
+/* config.css */
 --measure          : 66rch;             /* ~60–70 chars/line target, resolved at the root font */
 --body-width-ideal : var(--measure);    /* .container-ideal reading column = the measure */
 ```
-- `.container-ideal { max-width: var(--body-width-ideal); }` (`1.1-base.css`) → the reading
+- `.container-ideal { max-width: var(--body-width-ideal); }` (`base.css`) → the reading
   column (~665px). **`rch`, not `ch`**: plain `ch` resolves against each *element's own*
   font-size, so the one token produced different widths at different usage sites (on an
   element carrying `--step-0` ≈ 20px, `66ch` inflates to ~822px; on `figcaption` at
@@ -142,7 +158,7 @@ characters per line (see [`design.md`](design.md) → *Comfortable measure*).
   reader picks Serif/Geist (stable is better), and `rch` needs ~2023+ browsers
   (Safari 16.4 / Chrome 111 / Firefox 128).
 - Media in the column (`figure`, `img`, video embeds) fits the measure. **Video embeds use
-  `aspect-ratio: 16/9`** (`1.1-base.css`), not a width-derived pixel height — required now
+  `aspect-ratio: 16/9`** (`base.css`), not a width-derived pixel height — required now
   that the column width is font-relative.
 - `--measure` is the knob: raise toward `70ch` for a looser line, lower toward `62ch` for
   tighter. The sidenote gutter (see [`sidenotes.md`](sidenotes.md)) lives in the space to the
@@ -160,7 +176,7 @@ characters per line (see [`design.md`](design.md) → *Comfortable measure*).
 
 # 2. Color & theming
 
-Ported from **Ovellum** (ovellum.oss.oinam.com). All of this lives in `0.1-color.css`.
+Ported from **Ovellum** (ovellum.oss.oinam.com). All of this lives in `themes.css`.
 
 ## Two orthogonal axes (the whole point)
 Theming is split into **two independent axes**, both set on `<html>`:
@@ -210,11 +226,11 @@ New components should use the **`--color-*` semantic tokens** directly.
   `DOMContentLoaded` (required — see the search.js cache note in [`search.md`](search.md)).
   - **Accent** is also persisted: `localStorage('accent')` holds the colour string (oklch or
     `#hex`); the no-flash snippet sets `--ov-accent` + `data-accent` from it. The
-    `:root[data-accent][data-accent][data-accent]` rule (in `0.1-color.css`) maps `--ov-accent`
+    `:root[data-accent][data-accent][data-accent]` rule (in `themes.css`) maps `--ov-accent`
     onto `--color-accent` *and* `--color-primary` (so links, nav pill, logo, primary buttons
     all recolour); hover is a `color-mix` toward `--color-fg`.
 - **UI** — `<appearance-settings>` in the header: a trigger button opens a dropdown panel
-  (`8.1-tools-theme-toggle.css`) with four groups — **Mode**, **Palette**, **Font** (button
+  (`chrome.css`) with four groups — **Mode**, **Palette**, **Font** (button
   groups, `aria-pressed`) and **Accent** (swatches + custom `<input type=color>`). JS off →
   no panel, defaults render.
 
@@ -226,7 +242,7 @@ keep it monotone. Colour is opt-in only, via a tinted palette or the accent axis
 
 ## Links & contrast
 Because the default is monotone, **link affordance is the underline, not colour**
-(`1.2-typography.css`): `a { text-decoration: underline; text-decoration-color: var(--text-color-lower); }`
+(`base.css`): `a { text-decoration: underline; text-decoration-color: var(--text-color-lower); }`
 quiet at rest, thickening to `--text-color` on hover/focus. Target body contrast **WCAG AA+**
 (4.5:1, toward 7:1). Don't push muted grays below legible contrast — `--text-color-low` /
 `-lower` are for hierarchy, not for hiding text.
@@ -238,7 +254,7 @@ The text tiers were **darkened one step for higher overall contrast** (Brajeshwa
 `-muted` gray-300 → **gray-200**, `-subtle` gray-500 → **gray-400**). Backgrounds unchanged.
 Because these are semantic tokens over the re-tinted scale, **every palette inherits the bump**.
 
-## Palettes (source values in `0.1-color.css`)
+## Palettes (source values in `themes.css`)
 Three panel choices (Brajeshwar trimmed from five; Flexoki + Solarized removed):
 - **Default** (`default`) — **monotone grayscale** (the base `:root`); the resting theme.
 - **Cool** (`nord`) — cool blue-slate (Nord).
@@ -371,7 +387,8 @@ The failure mode we're avoiding is CSS scattered across twenty opt-in keys where
 tell what ships where.
 
 ## The files
-**Flattened 2026-07-19** from 25 numbered ITCSS partials to 12 plainly-named files. The numbering
+**Flattened 2026-07-19** from 25 numbered ITCSS partials to 12 plainly-named files (**13 today**
+— `timeline.css` was added with the `/about/` rework). The numbering
 (`0.0-`, `2.1-`, `9.9-`) encoded cascade order for humans; the order now lives in one place —
 `_includes/styles.html` — which is the only thing that actually determines it.
 
@@ -427,13 +444,13 @@ numbered names. They are kept as written — this table resolves them.
 
 | Old | New |
 |---|---|
-| `0.0-config.css` | `config.css` |
-| `0.0-fonts.css`, `0.1-color.css` | `themes.css` |
-| `1.1-base.css`, `1.2-typography.css`, `1.3-table.css`, `2.1-images.css`, `2.1-cards.css`, `2.1-footnotes.css`, `9.1-utils-ui.css` | `base.css` |
-| `3.1-header.css`, `3.1-footer.css`, `8.1-tools-theme-toggle.css`, `8.2-tools-search.css` | `chrome.css` |
-| `4.1-posts.css`, `2.1-code.css`, `2.1-images-gallery.css`, `9.9-utils-anchorjs.css` | `post.css` |
+| `config.css` | `config.css` |
+| `themes.css`, `themes.css` | `themes.css` |
+| `base.css`, `base.css`, `1.3-table.css`, `2.1-images.css`, `2.1-cards.css`, `base.css`, `9.1-utils-ui.css` | `base.css` |
+| `3.1-header.css`, `3.1-footer.css`, `chrome.css`, `8.2-tools-search.css` | `chrome.css` |
+| `4.1-posts.css`, `post.css`, `2.1-images-gallery.css`, `9.9-utils-anchorjs.css` | `post.css` |
 | `4.1-pages.css` (0 bytes) | `page.css` |
-| `4.1-album.css` | `album.css` |
+| `album.css` | `album.css` |
 | `4.1-home.css` / `4.1-archives.css` / `4.1-search-pagefind.css` / `4.1-pages-now.css` | `home.css` / `archives.css` / `search.css` / `now.css` |
 | `4.1-pages-bookmarks.css` | `bookmarks.css` |
 | `4.1-pages-film.css`, `4.1-pages-books.css` | deleted (duplicates, superseded by `album.css`) |
@@ -462,7 +479,7 @@ to Oinam's photo site later.
 
 `film` and `devices` were already the same thing wearing two hats: a `ul.item__cards` grid of
 `figure`s with a cover image, a title, and a bit of meta. They now share `_layouts/album.html`
-+ `styles-album.html` + `4.1-album.css`, with per-collection differences left on the `style:`
++ `styles-album.html` + `album.css`, with per-collection differences left on the `style:`
 hook (`.page-film`, `.page-devices` — e.g. devices stacks its "Used: …" line, film keeps the
 year inline).
 
@@ -521,7 +538,7 @@ them, visibly missing styles in production:
 
 | Partial | Size | Impact |
 |---|---|---|
-| `2.1-code.css` | 4.8 KB | ~~**Syntax highlighting is monochrome site-wide.**~~ **FIXED 2026-07-19** — see *Syntax highlighting* below. Affected 55 posts. |
+| `post.css` | 4.8 KB | ~~**Syntax highlighting is monochrome site-wide.**~~ **FIXED 2026-07-19** — see *Syntax highlighting* below. Affected 55 posts. |
 | `4.1-pages-books.css` | 850 B | **Correction (2026-07-19):** not a rendering bug. The file is a **byte-for-byte copy of `4.1-pages-film.css`** and contains no `page-books` selectors at all — `/books/` is a prose page on `layout: page` that needs no gallery CSS and renders fine. Pure dead weight. Deleted. |
 | `4.1-pages-bookmarks.css` | 781 B | No page references it; likely dead since a past restructure. |
 
@@ -535,17 +552,17 @@ The `album` consolidation fixes books, devices, and film together.
 `4.1-pages-bookmarks.css` needs a confirm-then-delete.
 
 ## Syntax highlighting (fixed 2026-07-19)
-`2.1-code.css` was the upstream pygments **"native"** theme: ~100 hardcoded hex values and its
+`post.css` was the upstream pygments **"native"** theme: ~100 hardcoded hex values and its
 own fixed dark slab, theme-blind. Wiring it in unchanged would have put a dark block on every
 page regardless of the reader's mode or palette — wrong for a site built around reader-chosen
 theming. So it was tokenised instead:
 
-- **New `--code-*` tokens in `0.1-color.css`.** Light and dark share one hue per token role and
+- **New `--code-*` tokens in `themes.css`.** Light and dark share one hue per token role and
   differ only in `--code-l` (lightness), so dark mode is a single-line flip rather than a
   duplicated palette. Chroma is one knob too: **`--code-c: 0` makes code fully monotone**,
   differentiating by weight/italic/underline alone — the setting most true to the monotone
   default, kept as an easy switch.
-- **`2.1-code.css` references only those tokens.** Selectors grouped by role, so the file went
+- **`post.css` references only those tokens.** Selectors grouped by role, so the file went
   4.8 KB → 3.6 KB while covering more classes.
 - **Added `c1`, `cd`, `s1`, `s2`** — Rouge emits these, the upstream pygments file didn't have
   them, so single-line comments (43×) and single/double-quoted strings (108×) were rendering as
@@ -560,9 +577,9 @@ sepia ramp; the Flexoki palette that replaced it on 2026-07-27 raised `--color-f
 4.97:1, so code comments in Warm-light now clear AA. Re-measure the rest of this line if it
 ever matters.*
 
-Cost: the `--code-*` tokens live in `0.1-color.css`, which is base, so every page carries them
+Cost: the `--code-*` tokens live in `themes.css`, which is base, so every page carries them
 (+0.18 KB gzip on the homepage) even though only 55 posts have code. Kept there anyway — the
-guardrail puts colour in `0.1-color.css`, and it's where you'd look for them.
+guardrail puts colour in `themes.css`, and it's where you'd look for them.
 
 ## Audit + cleanup, 2026-07-19
 A pass over all 12 files, checking every selector against real markup and every custom
@@ -657,6 +674,40 @@ the timeline, that is the point to extract a real layout instead.
 treatment is `album.css`, loaded by `_layouts/album.html`. To give a page thumbnails: switch it
 to `layout: album` and emit `<ul class="item__cards">`. `/books/`, `/photos/` and `/wear/` are
 candidates when they have images — none has thumbnail data yet, so none was converted.
+
+## Breaking out of the reading column — RIGHT ONLY
+
+Brajeshwar, 2026-07-27: *"No contents cannot go beyond the left container. If we are extending
+it, then we will do it to the right, so it is still within the body width."*
+
+Wide media keeps the article's **left edge** — the same line the prose, the header rule and the
+footer rule all start from — and grows **right**, stopping at the content band. It never enters
+the left margin and never exceeds the site width.
+
+    margin-inline: 0;      /* keep the left edge */
+    width: 100cqi;         /* grow right, to the band and no further */
+
+`100cqi`, not `100vw`. `main` declares `container: main / inline-size`, so inside an article
+`1cqi` is 1% of **the band** — exactly the box these should fill. No viewport arithmetic, so it
+cannot drift when the site width changes, and it does not have to know about scrollbars (100vw
+includes them, 100cqi does not).
+
+What it replaced: `margin-inline: calc(50% - 50vw); width: 100vw; transform: translateX(calc(50vw
+- 50%))` — viewport-wide and re-centred, so it spilled equally into **both** margins.
+
+**Everything that takes the band:** `figure.full` / `img.full`, `figure.large` / `img.large`
+(identical since 2026-07-27 — the 960px middle step is gone), `.gallery`, the **post title**
+(`.post h1`), `figcaption`, and `.post-nav`. Verified: one distinct right edge across header,
+footer, `main`, title, image, caption and nav.
+
+⚠️ **`photo-cover` cannot use `cqi`.** `post.html` emits it before `<main>`, so it is a `<body>`
+child with no container ancestor and `cqi` falls back to the viewport — the full-bleed this rule
+exists to prevent. It carries the band's own three lines instead (`--body-width` /
+`--body-width-max` / `margin-inline: auto`), **which must be kept in step with `main` by hand.**
+
+⚠️ **Wide media now sits in the sidenote gutter.** `sidenotes.js` `collectObstacles()` looks for
+`.full, .large, .gallery` and pushes overlapping notes below them — see
+[`sidenotes.md`](sidenotes.md) for the timing trap that came with it.
 
 ## Pill — the one shared control
 

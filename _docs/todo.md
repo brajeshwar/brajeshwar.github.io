@@ -29,11 +29,10 @@ Originally absorbed from the 2027 planning braindump.
       re-work on it. Park it for now. We need to think of how to show the books, it might become
       just SVGs or a Text Block without images."* So the open question is the books treatment
       (SVG covers vs a plain text block), and it is his to answer before any code moves.
-- [ ] **Page template (Full Width)** — Pages, Photos, Wear, Devices, Books, Films.
-- [ ] **Page template (Ideal Width)** — posts, articles, optimised for reading.
-      ⚠️ These two items predate, and are superseded by, *Standardise the site width* below —
-      that whole split is what's being collapsed into one maintained number. Don't act on
-      these two independently.
+- [x] ~~**Page template (Full Width)** / **(Ideal Width)**~~ — **closed 2026-07-27.** The split
+      these described is gone: there is ONE site width (64rem/1024px) and the reading measure is
+      a constraint on prose *inside* it, not a second template. See *Standardise the site width*
+      below and [`styles.md`](styles.md) §6.
 - [x] **Timeline template** *(2026-07-27)* — `/about/` is now a vertical timeline with a
       CSS-only Life/Work filter and shareable `#work` / `#life` URLs, so `/about/#work` is the
       link to send instead of a CV. `_pages/about.html` + `timeline.css`; `/now/` wears the same
@@ -284,6 +283,13 @@ at the top of this section.
       already ~48 KB raw / ~13 KB gzip. See [`design.md`](design.md) → *Performance budget*.
 
 ## Found 2026-07-27
+- [ ] **Images carry no `width`/`height` attributes.** Two consequences, one already patched:
+      (a) **layout shift** on every image as it loads; (b) sidenotes were being positioned
+      against a figure that had almost no height yet — measured 79px at placement, 675px once
+      decoded, so the note landed on the photograph. (b) is patched with a `ResizeObserver` in
+      `sidenotes.js`, which is a patch and not a cure. Adding the attributes fixes both properly,
+      but it means touching markup around content — **Brajeshwar's call.** See
+      [`sidenotes.md`](sidenotes.md) → *Images without dimensions*.
 - [x] **Node 18 in the deploy workflow is past EOL** *(fixed 2026-07-27)* — bumped to **22 LTS**,
       which is also what the site is developed against locally. Node only runs the agent-markdown
       script and Pagefind, so nothing was broken; it was an unsupported runtime sitting in the
@@ -308,14 +314,19 @@ at the top of this section.
 - [x] **Search moved off Algolia → Pagefind.** Algolia (adopted 2025-06) hit monthly limits too easily; <https://pagefind.app> replaces it. See [`search.md`](search.md).
 
 ## JavaScript
-- [ ] **Concatenate + minify on publish** *(policy set 2026-07-27, not built)*. **Eight**
-      scripts, **~35.5 KB** raw (re-measured 2026-07-27), unminified, one request each. Do it in
-      the Actions workflow after `jekyll build`, alongside the Pagefind and agent-markdown steps.
-      **Do not merge them all into one bundle** — `sidenotes.js` (11.4 KB) is posts-only and
-      `pagefind-custom.js` is `/search/`-only, so a single bundle would put ~35 KB on a homepage
-      that loads about 12 KB today. Bundle per page type, mirroring how the CSS already splits. Needs a
-      minifier in the workflow, which CLAUDE.md guardrail 6 was amended to permit. See
-      [`javascript.md`](javascript.md).
+- [x] **Minify on publish** *(BUILT 2026-07-27)* — esbuild in the Actions workflow and in
+      `make build`. **36.7 → 15.2 KB raw, 13.9 → 6.6 KB gzipped** (59% / 52%).
+      **In place, changing no HTML reference** — that is the design, not an implementation
+      detail. Local `jekyll serve` and the Cloudflare Pages backup (build command is
+      dashboard-side, deliberately left alone) never run this step and keep serving the readable
+      originals. Pointing the layout at CI-only bundle files would have left both with **no
+      JavaScript at all**. Verified on a real minified build: sidenotes placed, anchors built,
+      Back to Top inserted, panel built, zero console errors.
+- [x] ~~**Concatenate**~~ — *considered 2026-07-27, deliberately not done.* It needs the layout
+      to reference bundle names, which is exactly the coupling the in-place design avoids; the
+      gain was always minification rather than merging; and under HTTP/2 request count is not
+      what costs. Shape if ever wanted: bundle-per-layout mirroring the CSS, plus a plan for the
+      two non-CI environments. See [`javascript.md`](javascript.md).
 - [x] **Subset Geist to woff2** *(done 2026-07-27)* — **169,056 → 47,596 bytes, a 72% cut.**
       The variable machinery survives (`fvar`/`gvar`/`STAT`/`HVAR`, wght 100–900), verified by
       reading the axis back out of the built file *and* by measuring three different rendered

@@ -12,8 +12,9 @@ are [`_docs/styles.md`](_docs/styles.md), hosting is [`_docs/hosting.md`](_docs/
 Re-read the guardrails below before any commit-worthy change.
 
 ## What this site is
-A Jekyll site (kramdown) with **~1,463 posts (2001–2026)**, of which **~1,393 have no YAML
-front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
+A Jekyll site (kramdown) with **1,464 post files (2001–2026)** — 1,456 build, since 12 in
+`_posts/todo/` are dated 2099 and `future: false` holds them back — of which **1,394 have no
+YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
 `jekyll-optional-front-matter`. Search is **Pagefind**, run as a post-build step.
 Deploy is **GitHub Pages via GitHub Actions** (`.github/workflows/jekyll-build-deploy.yml`):
 Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, daily cron, and manual.
@@ -32,7 +33,10 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
    used sparingly and only where CSS can't do the job. Every page must work with it disabled.
    No CSS build step beyond Jekyll's SCSSify include pipeline. **Amended 2026-07-27:** a
    concatenate+minify step for JS *on publish* is permitted (a build tool, not a runtime
-   dependency) — not yet built. See [`_docs/javascript.md`](_docs/javascript.md).
+   dependency). **Built 2026-07-27**, as minify-only: esbuild rewrites `_site/assets/scripts/*.js`
+   in place, so no HTML reference changes and the environments that skip the step (local
+   `jekyll serve`, the Cloudflare backup) keep working. Concatenation was considered and
+   deliberately not done. See [`_docs/javascript.md`](_docs/javascript.md).
 7. **Commit authorship.** Never create commits attributed to Claude/Anthropic; never add
    "Generated with Claude", co-author trailers, or AI references in commit messages or code
    comments. Brajeshwar makes the commits — prepare and show changes for review rather than
@@ -40,12 +44,14 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 8. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
-- CSS = **12 plainly-named files** in `_includes/css/` (`config`, `themes`, `base`, `chrome`,
-  `post`, `page`, `album`, + per-page one-offs), **inlined** into `<head>` via `styles.html`
+- CSS = **13 plainly-named files** in `_includes/css/` (`config`, `themes`, `base`, `chrome`,
+  `post`, `page`, `album`, + per-page one-offs `home`/`archives`/`search`/`now`/`timeline`, plus
+  the not-yet-wired `bookmarks`), **inlined** into `<head>` via `styles.html`
   (SCSSify). Flattened from 25 numbered ITCSS partials on 2026-07-19 — **don't reintroduce
   numeric prefixes**; cascade order lives in `styles.html`, and `config.css` must stay first.
-  Base bundle stays embedded and **under 13KB gzipped** (over the wire, per page). Today's pages
-  measure 6.1–7.2KB gzip (27–34KB raw), so there is real headroom — re-measure when adding to base.
+  Base bundle stays embedded and **under 13KB gzipped** (over the wire, per page). Re-measured
+  2026-07-27: the heaviest page is **7.3KB gzip / 34KB raw**, so there is real headroom —
+  re-measure when adding to base.
 - Layouts select a CSS bundle through the `styles:` front-matter key. **CSS splits by layout, not
   by page** — base → per-layout bundle → per-page opt-in for one-offs only. New page type means a
   new layout + one bundle. See [`_docs/styles.md`](_docs/styles.md) §5.

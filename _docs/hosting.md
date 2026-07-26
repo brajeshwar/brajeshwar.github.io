@@ -46,11 +46,16 @@ how we run Jekyll 4.
   jekyll-optional-front-matter 0.3.2, jekyll-titles-from-headings 0.5.3
 - Actions: checkout@v4, setup-ruby@v1, setup-node@v4, configure-pages@v5,
   upload-pages-artifact@v3, deploy-pages@v4
-- Node 18, only to run Pagefind and scripts/build-agent-markdown.mjs. That script imports
-  nothing beyond node:fs and node:path, so there is no package.json and no npm dependency
-  tree to carry. Node 18 passed end of life on 30 Apr 2025 — worth bumping to 22.
+- Node 22 LTS, to run Pagefind, scripts/build-agent-markdown.mjs, and the esbuild minify step.
+  build-agent-markdown.mjs imports nothing beyond node:fs and node:path, so there is still no
+  package.json and no npm dependency tree to carry. Bumped from 18 on 2026-07-27; 18 had passed
+  end of life on 30 Apr 2025. 22 is also what the site is developed against locally, so the two
+  now match.
 - Pagefind is not pinned. The workflow runs npm install pagefind, so every build takes
   whatever npm calls latest, 1.5.2 today.
+- esbuild is not pinned either — npx --yes esbuild, added 2026-07-27. It minifies
+  _site/assets/scripts/*.js IN PLACE, so no HTML reference depends on it and a failure degrades
+  to unminified rather than to a broken page. See _docs/javascript.md.
 
 ### Limits
 
@@ -101,7 +106,12 @@ _site is worth the small setup cost.
 Settings, all dashboard-side:
 
 - Build command: `bundle exec jekyll build && node scripts/build-agent-markdown.mjs && npx
-  pagefind --site _site` — the same three steps as `make build` and as CI. Leave off the
+  pagefind --site _site` — three of the four steps `make build` and CI run.
+  ⚠️ **It does NOT include the esbuild minify step** (added to CI 2026-07-27), and that is
+  deliberate: the step rewrites files in place and changes no HTML reference, so the backup
+  simply serves unminified JavaScript and works identically. Add
+  `&& npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite`
+  before the pagefind step if you ever want parity. Leave off the
   --baseurl flag; baseurl is already '' in _config.yml.
 - Output directory: _site
 - Environment: JEKYLL_ENV = production, for parity with the Actions build.
@@ -119,7 +129,7 @@ into local dev and into the Actions build. (Override files exist if we ever chan
 the v2 image, Ruby 3.2.2 / Node 18.17.1, is deprecated on 23 Feb 2027, so stay on v3.)
 
 A consequence worth knowing: the two builders now run different Ruby and Node versions —
-Actions on Ruby 3.3.5 / Node 18, Cloudflare on whatever v3 ships. That is a feature here.
+Actions on Ruby 3.3.5 / Node 22, Cloudflare on whatever v3 ships. That is a feature here.
 The backup building green on newer versions is early warning that an upgrade on the Actions
 side would be safe.
 

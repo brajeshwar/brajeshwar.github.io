@@ -59,7 +59,7 @@ center, right) comes from **utility classes** rather than bespoke per-object rul
 ## Progressive enhancement, always
 The site must be **fully usable with JavaScript disabled** — real footnotes at the article
 foot, a sensible default theme, every link working. JS only *enhances*: sidenotes in the
-margin, theme/font persistence, in-place search. This is also what keeps the ~1,463
+margin, theme/font persistence, in-place search. This is also what keeps the ~1,456
 historical posts (most with no front matter) from ever breaking. The hard rules that follow
 from this are the guardrails in [`../CLAUDE.md`](../CLAUDE.md).
 

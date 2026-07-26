@@ -4,36 +4,87 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-07-26) — READ FIRST
+## Where we are (updated 2026-07-27) — READ FIRST
 
-### ⚠️ 11 commits on `main`, COMMITTED BUT NOT PUSHED — plus uncommitted work on top
-`main` is **ahead of `origin/main` by 11**, and the 2026-07-26 session below left further
-changes **uncommitted** in the working tree. Nothing has deployed — remember every push to
-`main` auto-deploys, so pushing publishes the whole stack at once.
+### ⚠️ 49 commits on `main`, NONE PUSHED. Every push auto-deploys.
+Working tree is **clean**. `main` is 49 ahead of `origin/main`, so `git push origin main`
+publishes roughly three sessions of work in one deploy.
 
-    a3880da8  Footer: bring back the site's age, and comma the post count
-    06199b1a  Docs: session handoff — state, decisions, and what to pick up next
-    aa7d8519  Docs: record the font-axis change to two options
-    03a2ebd6  Drop the Geist font option; the font axis is now two choices
-    d8347e43  Docs: record the CSS audit, its fixes, and the remaining backlog
-    b7a4d6e1  Audit all 12 CSS files: fix theming bugs, drop verified dead weight
-    d6a83702  Move the 2026 books post into _posts/todo/      ← Brajeshwar's own change
-    c96665cb  Docs: CSS architecture, budget, and findings from the restructure
-    299212e4  Flatten CSS into 12 named files; fix + tokenise syntax highlighting
-    23385363  Add album layout for galleries; merge page-full into page
-    2833edb1  Ignore .claude/ (local agent config)
+    git log --oneline origin/main..HEAD     # what would ship
+    git push origin main                    # then watch the Actions run
 
-Ordered so **each commit builds on its own**. To resume: `git log --oneline origin/main..HEAD`.
-Push with `git push origin main`, then watch the Actions run.
+**Watch that first run.** It exercises three things that have never run in CI:
+1. **Node 22** (was 18, past EOL) — Pagefind and the agent-markdown script run on it.
+2. **The esbuild minify step** — new, and the only step that can fail the build outright.
+3. **The Geist woff2** — the `.ttf` is now `exclude`d, so a wrong path means no Sans-Serif font.
+All three are verified locally against a production-parity build (`make build`), but locally is
+not CI.
 
-**Reader-visible changes in this batch** (everything else is structural or docs):
-1. **Syntax highlighting now works** on the 55 posts with code blocks — it had never shipped.
-2. **The font panel has 2 options, not 3** — Geist removed.
-3. **`/devices/` gallery is styled** — it had shipped with no gallery CSS at all.
-4. **`/search/` follows the theme** — it was rendering hardcoded `#0066cc`/`#fff` regardless.
-5. **The footer says the site's age again** — "© 2001–2026 … · 1,456 posts · 25 years, 1
-   month". Both numbers now render at build time in Liquid, not by JS, which also fixes the
-   copyright year rendering blank with JavaScript disabled.
+### The state, in one paragraph
+The site is on **one width — 64rem/1024px — and everything now agrees on it**: header, footer,
+`main`, post titles, wide images, captions, the prev/next bar. Wide media breaks out **to the
+right only**, never into the left margin, because the reading column is left-aligned in the band
+and that left edge is the page's alignment line. Colour is monotone by default with three
+palettes (Warm is now **Flexoki**); the reader also picks mode, font (System / Sans-Serif /
+Serif) and text size, all persisted. JS is eight small vanilla files, minified on publish.
+
+### What changed this session (2026-07-27), reader-visible
+1. **Warm palette is Flexoki** — ink-on-paper `#FFFCF0` / `#100F0F`.
+2. **Wide images break out rightward** and stop at the band, instead of spilling into both
+   margins. Post titles and captions take the band too.
+3. **Prev/Next reworked** — flush edges, a notch divider, hover, moving arrow; full width when
+   there is only one link.
+4. **Back to Top floats then settles** above the footer; arrow only.
+5. **Search results are themed** — they had been rendering as default Pagefind, yellow
+   highlights and all.
+6. **Serif readers get their apostrophes back** — a `unicode-range` bug had been sending
+   `’ “ ” – — • …` to the fallback font, 3,197 times in a 400-page sample.
+7. **Images are no longer dimmed in dark mode.**
+8. **The appearance panel is a two-column grid**; Font's first option is "System", not "Default".
+
+### Rules learned this session — these will bite again
+- **`post.css` loads after `base.css` at equal specificity, so it silently wins.** Four separate
+  bugs from this: `.post { margin }`, `.post-nav { margin }`, `.post img { width }` beating
+  `img.full`, and the `.container-ideal` shorthand cases. **In `post.css`, set only the axis or
+  property that rule has business setting, and exclude what `base.css` sizes.**
+- **A `margin: X auto` shorthand cancels `.container-ideal`'s `margin-inline`.** Use
+  `margin-block`.
+- **Font-scope bugs are invisible by default** — they only show for readers who picked Serif or
+  Sans-Serif. New controls inside `main` must be added to the sans list in `base.css`.
+- **Audit entries written from reading are unreliable.** Three of the five "highest value" items
+  were misfiled; measuring disagreed each time. Measure first.
+- **`nowrap` lets a cell overflow without ever wrapping** — so "did it wrap" is the wrong test.
+  Compare content box against text width.
+- **The browser caches `assets/scripts/*.js` across a normal reload.** `cmd+shift+r` after
+  editing JS; a query string on the page URL does not help.
+- **`python3 -m http.server` is single-threaded** and starves under a blocking CDP eval, which
+  makes images look permanently unloaded. Use `ThreadingHTTPServer` for anything image-dependent.
+
+### How to verify a change (the loop that works)
+    make build          # jekyll + agent-md + esbuild minify + pagefind — production parity
+Then serve `_site` statically and check in a browser. **`jekyll serve` alone does not build the
+search index, and its `--watch` wipes `_site/pagefind/`.** For anything involving sidenotes,
+images or search, use the full build.
+
+Guardrail check before handing back:
+
+    git diff --name-only origin/main..HEAD | grep -E '^_posts/|^_drafts/|^_data/'
+
+Should return nothing but Brajeshwar's own content commits.
+
+### Picking this back up — the shortlist
+Full list in [`todo.md`](todo.md). The ones worth doing next, in order:
+1. **Push, and watch the Actions run.** Nothing else should start until this is green.
+2. **`.sidenote` is declared in two blocks** (`base.css` 563 and 609) and repeats 6 declarations
+   with `.sidenote-inline`. Deliberately left: it is a refactor of live behaviour, best done with
+   the sidenote work rather than as a tidy.
+3. **Two spacing systems** — ratio `--space`/`--space-smaller` vs fluid `--space-*`, **10 call
+   sites** across five files (the old entry claimed 3). Each is a visible value, so it needs a
+   look, not a sweep.
+4. **Images have no `width`/`height` attributes.** This causes layout shift on every image and
+   was the root of the sidenote-overlap bug (patched with a `ResizeObserver`, not cured).
+   Fixing it properly is content-adjacent — Brajeshwar's call.
+5. **Home** is parked pending his decision on the books treatment (SVG covers vs text block).
 
 ### What happened 2026-07-26
 Docs and README, no reader-visible change. **Uncommitted.**
@@ -516,6 +567,41 @@ pages, and a 27th "00" year in the archives. His watcher and any `jekyll build` 
 same `_site`, so they overwrite each other and local measurements flip depending on who built
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
+
+### Documentation clean-up + handoff (2026-07-27, end of session)
+A full pass over every doc, because several had drifted far enough to mislead rather than help.
+
+**Corrected in `CLAUDE.md`** (all four were current-state claims, not history):
+- post count `~1,463` → **1,464 files / 1,456 built** (12 in `_posts/todo/` are 2099-dated and
+  held back by `future: false`);
+- `12 CSS files` → **13** (`timeline.css` arrived with the `/about/` rework);
+- guardrail 6's *"concatenate+minify … not yet built"* → **built, as minify-only**, with the
+  in-place design and the concat decision recorded;
+- the budget line re-measured: heaviest page is **7.3 KB gzip / 34 KB raw** against the 13 KB
+  ceiling.
+
+**`styles.md` and `sidenotes.md` were still citing the PRE-FLATTEN filenames** — `0.0-config.css`,
+`1.1-base.css`, `0.1-color.css` and friends, eight days after the flatten. Every one repointed.
+The remaining hits are inside the old→new map and the audit tables, which are history and stay.
+
+**New reference material** (this session's rules, written where they will be looked for):
+- `styles.md` §6 → **Breaking out of the reading column — RIGHT ONLY**: the `100cqi` idiom, what
+  it replaced, everything that takes the band, and the two traps (`photo-cover` cannot use `cqi`;
+  wide media now sits in the sidenote gutter).
+- `styles.md` §1 → the **interface-vs-prose font rule**, stated as a principle with the opt-out
+  list and the warning that the failure is invisible at the default font.
+- `sidenotes.md` → **Images without dimensions**: the placement race, the measured numbers, the
+  `ResizeObserver` patch, and why it is a patch.
+- `hosting.md` → Node 22, esbuild unpinned, and an explicit note that the Cloudflare build
+  command deliberately omits the minify step.
+
+**Verified mechanically, not by eye:** 0 broken cross-doc links across all 11 docs + `CLAUDE.md`
++ `README.md`; 0 docs missing from the index; `todo.md` reconciled to **17 open / 38 done**.
+
+**The `## Where we are` block at the top of this file was 40 commits stale** — it described an
+11-commit push that had long since been superseded, and still said Geist was removed. Rewritten
+as a real handoff: what to push and what to watch, the state in a paragraph, the reader-visible
+changes, the rules learned, the verification loop, and a five-item shortlist.
 
 ### Interface stays sans; post titles take the band (2026-07-27)
 Brajeshwar: *"UI Elements such as the PREV | NEXT should always be in the sans-serif system
@@ -1049,7 +1135,15 @@ post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.6
 
 ## Docs index
 - [`design.md`](design.md) — **design philosophy** (the *why*): text-first, ornament-free, decoupled/portable styles, progressive enhancement, reader's choice.
-- [`styles.md`](styles.md) — the **style specifics and the CSS architecture**, five sections: §1 typography (scales, font axis Default/Sans-Serif/Serif, Kindle text-size), §2 color & theming (**Ovellum two-axis**: mode `data-theme` auto/light/dark × palette `data-palette` default/nord(Cool)/eink(Warm), + accent, bridge, no-flash), §3 branding, §4 icons, §5 **how CSS is split** (12 named files, three tiers, which layout pulls which bundle, the rules for adding more, the old→new filename map, the 2026-07-19 audit + backlog). **Read §5 before touching `_includes/css/`.** Absorbed `css-architecture.md` on 2026-07-26.
+- [`styles.md`](styles.md) — the **style specifics and the CSS architecture**, six sections:
+  §1 typography (scales, font axis **System/Sans-Serif/Serif**, Kindle text-size, and the
+  interface-vs-prose font rule), §2 colour & theming (mode `data-theme` × palette
+  `data-palette` default/nord(Cool)/**eink(Warm = Flexoki)**, + accent, bridge, no-flash),
+  §3 branding, §4 icons, §5 **how CSS is split** (13 named files, three tiers, which layout
+  pulls which bundle, the old→new filename map, the 2026-07-19 audit + backlog),
+  §6 **layout patterns** — the four page shapes, the **right-only breakout rule**, the shared
+  `.pill`, and Back to Top. **Read §5 before touching `_includes/css/`, and §6 before changing
+  anything's width.** Absorbed `css-architecture.md` on 2026-07-26.
 - [`sidenotes.md`](sidenotes.md) — Tufte margin sidenotes built from kramdown footnotes (Phase 2) + Aresluna wayfinding.
 - [`search.md`](search.md) — site-wide header search, lazy-loaded Pagefind.
 - [`agents.md`](agents.md) — plain-text Markdown twins (`/x.md`) + `/llms.txt` for AI agents; post-build step like Pagefind.
@@ -1057,11 +1151,13 @@ post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.6
   versions, moved from `README.md`), the Cloudflare Pages backup build, DNS/CDN, and the
   domain decisions.
 - [`javascript.md`](javascript.md) — **the JS policy**: no frameworks, one file per function,
-  used sparingly, every page works without it; concat+minify on publish is permitted but not
-  yet built. Current inventory of all seven scripts.
+  used sparingly, every page works without it. **Minify on publish is BUILT** (esbuild, in
+  place, 52% gzipped); concatenation considered and deliberately not done. Inventory of all
+  eight scripts.
 - [`timeline.md`](timeline.md) — the `/about/` storyline: vertical timeline, CSS-only
-  Merged/Life/Work filter, hand-typed time ranges, experimental scroll line. **Authoring
-  convention lives here** — content is Brajeshwar's to write.
+  **Life/Work** filter (wearing the shared `.pill`), shareable `#work`/`#life` URLs, hand-typed
+  time ranges, experimental scroll line. **Authoring convention lives here** — content is
+  Brajeshwar's to write.
 - [`todo.md`](todo.md) — running site task list.
 - [`inspirations.md`](inspirations.md) — article-craft studies (Aresluna deep-dive; Yale e360, BBC, The Walrus, iDiallo).
 - [`/CLAUDE.md`](../CLAUDE.md) — short guardrails for AI agents working in the repo.
