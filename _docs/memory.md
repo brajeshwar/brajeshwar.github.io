@@ -4,12 +4,15 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-07-19) — READ FIRST
+## Where we are (updated 2026-07-26) — READ FIRST
 
-### ⚠️ 9 commits on `main`, COMMITTED BUT NOT PUSHED
-`main` is **ahead of `origin/main` by 9**. Working tree is clean. Nothing has deployed —
-remember every push to `main` auto-deploys, so pushing publishes all nine at once.
+### ⚠️ 11 commits on `main`, COMMITTED BUT NOT PUSHED — plus uncommitted work on top
+`main` is **ahead of `origin/main` by 11**, and the 2026-07-26 session below left further
+changes **uncommitted** in the working tree. Nothing has deployed — remember every push to
+`main` auto-deploys, so pushing publishes the whole stack at once.
 
+    a3880da8  Footer: bring back the site's age, and comma the post count
+    06199b1a  Docs: session handoff — state, decisions, and what to pick up next
     aa7d8519  Docs: record the font-axis change to two options
     03a2ebd6  Drop the Geist font option; the font axis is now two choices
     d8347e43  Docs: record the CSS audit, its fixes, and the remaining backlog
@@ -28,10 +31,182 @@ Push with `git push origin main`, then watch the Actions run.
 2. **The font panel has 2 options, not 3** — Geist removed.
 3. **`/devices/` gallery is styled** — it had shipped with no gallery CSS at all.
 4. **`/search/` follows the theme** — it was rendering hardcoded `#0066cc`/`#fff` regardless.
+5. **The footer says the site's age again** — "© 2001–2026 … · 1,456 posts · 25 years, 1
+   month". Both numbers now render at build time in Liquid, not by JS, which also fixes the
+   copyright year rendering blank with JavaScript disabled.
+
+### What happened 2026-07-26
+Docs and README, no reader-visible change. **Uncommitted.**
+
+- **Retired the "v2027" framing.** `_docs/v2027/` is gone: `inspirations.md` moved up to
+  `_docs/`, and `spec.md` was **deleted** — it briefed a redesign that shipped, and its
+  §3/§7 still described the numbered CSS partials and a four-theme selector that no longer
+  exist. Everything durable in it already lived elsewhere; the one exception, why the daily
+  cron exists (`future: false` hides post-dated articles), was salvaged into `hosting.md`.
+- **`css-architecture.md` folded into [`styles.md`](styles.md) as §5**, in full. One doc now
+  covers type, colour, branding, icons, and how the CSS is split.
+- **`README.md` is human-only again** — the tooling/versions note moved to `hosting.md`,
+  which now covers all hosting: GitHub Actions, the Cloudflare Pages backup, DNS/CDN, domain.
+- Net: **9 docs where there were 11**, and every cross-reference repointed (docs, `CLAUDE.md`,
+  and the comments in `styles.html`, `page.html`, `album.html`, `base.css`, `themes.css`).
+- **Cloudflare Pages runs on Cloudflare's defaults** (Brajeshwar's call). No `.ruby-version`,
+  no `.nvmrc`, no `RUBY_VERSION`/`NODE_VERSION` in the dashboard. The two builders therefore
+  run different Ruby/Node versions on purpose — if a default moves and the backup breaks, we
+  fix it then. Details in [`hosting.md`](hosting.md).
+- **Process, from Brajeshwar: log history, don't erase it.** Reverse decisions in place with a
+  date; leave dated log entries as written even when they name things since retired.
+
+### Archives year jump-nav (2026-07-26/27, built + browser-verified)
+A jump-nav for all 26 years on `/archives/`, pointing at the `#YYYY` anchors the
+`<caption id>` elements already provided. `_pages/archives.html` + `archives.css` only —
+**no new layout was needed** (it's a tier-2 per-page bundle, zero impact on other pages).
+CSS-only, so it works with JS off.
+
+**Revised 2026-07-27 — wide page, scrubber inside it.** `/archives/` moved off
+`container-ideal` (665px) onto a new **`.container-wide` (`--body-width-wide`, 80rem/1280px)**,
+the desktop target from the width research. **Opt-in per page, not a site-wide change** —
+`--body-width-max` also sizes the header, footer and `.gallery` on every page, so bumping it
+is the parked standardisation, not this. `.container-wide` is in `base.css` for `/books/` and
+`/film/` to reuse.
+
+That width forced the scrubber's architecture: it used to be `position: fixed`, offset from
+the centred column into the viewport margin — which only worked *because* a 665px column
+leaves a wide margin. At 1280px **there is no margin**, so it became a **grid column**
+(`grid-template-columns: auto minmax(0,1fr)`) with `position: sticky` inside it. Measured:
+38px wide (was 47), 20px gap, no overlap.
+
+Also this pass: thinner rail, subdued rest colour (`--text-color-low`), and a hover that
+darkens the text *and* adds a background. The hover background is
+`color-mix(in oklch, var(--text-color) 12%, transparent)` — mixing the foreground rather than
+using any `--bg-*` token, because none differs from the rail's own background in **both**
+modes. Contrast measured by canvas pixel readback, not assumed: rest **12.01:1** in both
+modes, hover **12.08:1** light / **10.09:1** dark, all clear of AA at this size.
+
+⚠️ **The pill's effective corner radius is not the declared one.** `--border-radius-larger` is
+25px, but top-left + top-right (50px) exceed the rail's ~38px width, so the browser scales
+every radius by `width / sum` — **19px** in practice. The rail's vertical padding is
+`--space-s` (20px) to clear that, so `26` and `01` start below where the curve finishes rather
+than being pinched by it (measured: 21px inset against a 19px curve). If the rail's width or
+that radius token changes, the effective radius moves with it — re-measure, don't assume 25.
+
+The rail starts **11px below the first article row** (row top 191px, rail 202px) — it drops
+past the year caption to sit with the rows it indexes. `margin-top` sets that resting offset
+and `top` sets where it parks once stuck; they differ deliberately and it does not jump,
+because sticky only displaces when `top` exceeds the resting position.
+
+**Two presentations of one list** (Brajeshwar's call, 2026-07-27 — the first build was a top
+bar only):
+- **Wide (≥1100px): a vertical rail in the left margin**, iOS-Contacts-index style. Labels are
+  the last two digits — `26, 25 … 01` — in a rounded pill (`--border-radius-larger`, 25px).
+  Measured: 47px wide, 9px clear of the reading column, 721px tall, smallest tap target
+  35×27px (above the WCAG 2.2 24×24 minimum).
+- **Narrow: the original sticky horizontal strip.** Not a compromise — the rail lives in the
+  dead space beside the centred 665px column, and on a phone the column is 96% of the screen
+  so that space doesn't exist. A left rail there would sit on the text.
+- The rail is positioned off the *column*, not the viewport
+  (`left: calc(50vw - var(--measure)/2 - 3.5rem)`), so it stays glued to the text instead of
+  drifting to a far corner on an ultrawide display.
+- **Labels are 2-digit, anchors are not.** `href` and `id` keep the full year, so
+  `/archives/#2024` still works; `aria-label` restores the full year for screen readers.
+  Safe because `site.posts` spans 2001–2026 — the 2100-dated drafts in `_posts/todo/` are
+  future-dated, so Jekyll never builds them in.
+
+- **Single page with anchors, not `/archives/YYYY/` pages.** Vanilla Jekyll can't generate a
+  page per year without a plugin (guardrail 3) — per-year URLs would mean 26 committed stubs
+  plus one every January.
+- **Rewrote the list with `group_by_exp`.** One grouping now feeds both the nav and the tables,
+  so they can't disagree. Kills the old running-`date` variable that opened and closed
+  `<table>` from two branches and shadowed Liquid's own `date` filter.
+- **1,459 absolute URLs → 3.** The links were built with `prepend: site.url`; `relative_url`
+  saved **27.6 KB** raw (356,037 → 328,381) and makes local preview work. Same bug class as
+  the `assets/scripts/*.js` one recorded further down.
+- **Two bugs caught by measuring in the browser, both of which would have shipped silently:**
+  1. `scroll-margin-top: 3.25rem` (52px) put the caption **5px underneath** the 57px sticky
+     bar. Now 4.5rem. The strip's height is content-derived and can't be read from a token —
+     re-verify if its padding or font size changes.
+  2. `--bg-color-high` is **not** a raised background — it bridges to `--color-primary`, the
+     *foreground*. Using it for the hover and `:target` styles painted a near-black chip under
+     dark text in light mode. Safe background steps are `--bg-color-lowest/-lower/-low` only.
+     Replaced with a colour shift (matching `site-nav` in chrome.css) and an accent rule.
+     Verified in both light and dark; a background highlight can't work here anyway, since the
+     only distinguishable step collapses to the caption's own colour in dark mode.
+- **Weight:** the page is **328 KB raw / 74 KB gzip** — 3.5× over the `design.md` non-article
+  budget. Pre-existing; logged in [`todo.md`](todo.md) as a decision, not fixed silently.
+- Verified in Chrome: build clean, Pagefind indexes the site, nav is `data-pagefind-ignore`d,
+  rail and strip both jump correctly, both render in light **and** dark. The strip stays one
+  row and scrolls sideways — it would wrap to 4 rows at 360px.
+- ⚠️ **`resize_window` does not work on this machine** (reports success, `innerWidth` never
+  changes — the OS window is maximised). To test a breakpoint, neutralise the `@media` rule
+  through CSSOM (`rule.media.mediaText = '(min-width: 99999px)'`), measure, then restore it.
+  That is how the narrow fallback was verified; don't waste time re-trying the resize.
+
+### Header reworked (2026-07-27, built + browser-verified)
+`_includes/css/chrome.css` + two new tokens in `config.css`. Affects **every page**.
+
+- **Centred again.** `justify-content: space-between` → `center`. Brajeshwar's call: the logo
+  and menu were pinned to opposite edges, making the nav a long mouse trip.
+- **Narrow screens are one row, and shorter.** It used to stack into a column — logo, then
+  nav, then tools, three rows of chrome before a phone reader saw content. Header height at
+  narrow is now **51px vs 82px** on desktop; padding and bottom margin are reduced *only* at
+  the breakpoint, since desktop spacing wasn't the complaint.
+- **Icons are quieter than the words now.** They were on `--text-muted` (`--color-fg-muted`),
+  *darker* than the nav's `--text-color-lower` (`--color-fg-subtle`) — the loudest thing in
+  the header. The ladder bottoms out at fg-subtle, so going quieter meant `color-mix` toward
+  the background, not a token swap. Measured: icons **3.83:1** light / **3.95:1** dark against
+  the page vs the nav's 7.17 / 6.94 — about half the contrast, still clear of the WCAG 1.4.11
+  **3:1** bar for non-text UI.
+- **Vertical hairline** (`border-left` on `site-tools`) separates words from glyphs. Safe
+  unconditionally because `site-nav` no longer wraps at any width, so it can't be orphaned.
+- **Icon size decoupled from the logo.** New `--icon-button-size` / `--icon-glyph-size`; both
+  used to be `--logo-size: 42px`, so shrinking icons would have shrunk the logo too. 32px
+  buttons / 17px glyphs, stepping to 26/15 under 600px and **24/14 under 360px** — 24px is the
+  WCAG 2.2 target-size floor, so savings below that come from padding, never the hit area.
+- **Logo: 42px → 34px**, holding its proportion against the icons' 42 → 32 (ratio now 1.06).
+  New `--logo-inset` (2px, 1px at the smallest step) with `box-sizing: border-box` insets the
+  glyph so it sits inside the hover circle *without* changing the outer box — the header row
+  measurements are unaffected.
+- **Logo hover: the glyph's dark fills a circle and the β knocks out of it**, in 0.15s (was
+  `transition: all 0.5s`, half a second on every property). **No `[data-theme]` branch needed
+  for dark mode**: the fill is `--bg-color-high` (→ `--color-primary`) and the glyph
+  `--bg-color-lower` (→ `--color-bg`), and both flip with mode, so the inversion is automatic.
+  Verified in both. The glyph's bbox reaches ~95% of the circle radius, so it clears the edge.
+- **Nav links underline on hover/focus** — the affordance `design.md` asks of every link, and
+  the header was the exception. Deliberately **not** on `.active`: the current page should
+  read as "you are here", not as something to click.
+- Verified: fits in one row at 430/390/375/360/**320**px, all targets ≥24px, appearance panel
+  and search palette still anchor inside the viewport, base CSS ~6.8 KB gzip on the homepage.
+
+⚠️ **The bug worth remembering — @media blocks lose on source order.** The narrow-header block
+was written *before* the `site-logo` / `site-nav` / `site-tools` rules it overrides. Those are
+element selectors of equal specificity, so the later base rules won and the media block
+silently did nothing: the nav kept `--step--1` and 10px padding, and the header needed **445px
+at a 360px viewport** — a horizontal-scroll bug. What made it hard to spot is that
+**custom-property overrides in the same block *did* work**, because those cascade by
+inheritance rather than source order. So the icons shrank while the font and padding didn't,
+and it looked half-applied rather than broken. **Media blocks must come after the rules they
+override**; the comment in `chrome.css` says so at both ends.
+
+### Next up — standardise the site width
+Brajeshwar wants **one width instead of the current two** (`container-ideal` vs the full-width
+`main`); the split exists because it was easier to maintain by hand, not because it was
+designed. **Nothing is decided or built yet.**
+
+The task, the research, and the open decisions are written up in
+[`todo.md`](todo.md) → *Standardise the site width*. Two measured facts came out of it and now
+live in the reference docs:
+
+- **`1rch` = 10.08px**, so `--measure: 66rch` is a **665px** column — the ~8px/ch rule of thumb
+  under-estimates it by ~130px. ([`styles.md`](styles.md) §1)
+- **Sidenotes need a 1210px viewport**, because the centred column spends as much on the dead
+  left margin as on the working right gutter. Going asymmetric would drop that to ~970–1010px.
+  ([`sidenotes.md`](sidenotes.md) → *The viewport floor*)
+
+Both were measured in Chrome against the built site (`/2022/plain-text/`), not calculated —
+the first attempt at deriving them from the CSS was wrong.
 
 ### What happened this session (2026-07-19)
-A CSS consolidation pass, start to finish. Full detail in
-[`css-architecture.md`](css-architecture.md) — that is now the primary CSS doc.
+A CSS consolidation pass, start to finish. Full detail in [`styles.md`](styles.md) §5 —
+`styles.md` is now the primary CSS doc.
 
 - **CSS budget reconciled** — docs carried both "~10KB" and "≤42KB". Now one figure:
   **≤ 13 KB gzipped per page**, measured over the wire. Pages sit at 5.8–6.8 KB.
@@ -93,40 +268,45 @@ post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.6
   the commits unless he asks otherwise.
 - **Mode: incremental improvement.** Brajeshwar is reviewing pages/articles live and will point
   out things to refine. Open work is in [`todo.md`](todo.md).
-- **Hosting/DNS decided** — keep the `brajeshwar.github.io` repo name (don't rename), keep
-  Cloudflare Pages dormant, use Cloudflare for DNS (+ proxy later for Workers/redirects). See
+- **Hosting decided** — keep the `brajeshwar.github.io` repo name (don't rename), use
+  Cloudflare for DNS + CDN proxy. **Reversed 2026-07-26: Cloudflare Pages is no longer
+  dormant** — it now builds the same repo as a backup, while brajeshwar.com stays on GitHub
+  Pages. The build versions moved out of `README.md` into `hosting.md` at the same time. See
   [`hosting.md`](hosting.md).
 - **Fixed 2026-07-05:** dev files (`CLAUDE.md`→`/CLAUDE/`, `Makefile`, `scripts/`) were being
   published — now in `_config.yml` `exclude`. Re-check `_site/` after editing `exclude`.
 
 ## Docs index
-- [`css-architecture.md`](css-architecture.md) — **how CSS is split** (12 named files, three tiers, which layout pulls which bundle), the rules for adding more, the old→new filename map, and the 2026-07-19 audit + backlog. **Read before touching `_includes/css/`.**
 - [`design.md`](design.md) — **design philosophy** (the *why*): text-first, ornament-free, decoupled/portable styles, progressive enhancement, reader's choice.
-- [`styles.md`](styles.md) — the **style specifics**: typography (scales, font axis Default/Sans-Serif/Serif, Kindle text-size), color & theming (**Ovellum two-axis**: mode `data-theme` auto/light/dark × palette `data-palette` default/nord(Cool)/eink(Warm), + accent, bridge, no-flash), branding.
+- [`styles.md`](styles.md) — the **style specifics and the CSS architecture**, five sections: §1 typography (scales, font axis Default/Sans-Serif/Serif, Kindle text-size), §2 color & theming (**Ovellum two-axis**: mode `data-theme` auto/light/dark × palette `data-palette` default/nord(Cool)/eink(Warm), + accent, bridge, no-flash), §3 branding, §4 icons, §5 **how CSS is split** (12 named files, three tiers, which layout pulls which bundle, the rules for adding more, the old→new filename map, the 2026-07-19 audit + backlog). **Read §5 before touching `_includes/css/`.** Absorbed `css-architecture.md` on 2026-07-26.
 - [`sidenotes.md`](sidenotes.md) — Tufte margin sidenotes built from kramdown footnotes (Phase 2) + Aresluna wayfinding.
 - [`search.md`](search.md) — site-wide header search, lazy-loaded Pagefind.
 - [`agents.md`](agents.md) — plain-text Markdown twins (`/x.md`) + `/llms.txt` for AI agents; post-build step like Pagefind.
-- [`hosting.md`](hosting.md) — GitHub Pages + Cloudflare hosting/DNS setup and decisions.
-- [`todo.md`](todo.md) — running site task list (beyond the redesign phases).
-- [`v2027/spec.md`](v2027/spec.md) — single source of truth for the v2027 redesign (the brief Brajeshwar built with Claude CoWork).
-- [`v2027/inspirations.md`](v2027/inspirations.md) — article-craft studies (Aresluna deep-dive; Yale e360, BBC, The Walrus, iDiallo).
+- [`hosting.md`](hosting.md) — **everything hosting**: GitHub Pages + Actions (and the build
+  versions, moved from `README.md`), the Cloudflare Pages backup build, DNS/CDN, and the
+  domain decisions.
+- [`todo.md`](todo.md) — running site task list.
+- [`inspirations.md`](inspirations.md) — article-craft studies (Aresluna deep-dive; Yale e360, BBC, The Walrus, iDiallo).
 - [`/CLAUDE.md`](../CLAUDE.md) — short guardrails for AI agents working in the repo.
 
 ---
 
-## What we're building (v2027 redesign)
+## What this site is
 
-Re-skin brajeshwar.com into a **serif, reading-first** site inspired by **Tufte CSS** —
-long-form articles with **right-margin sidenotes derived from the footnotes kramdown
-already emits** — plus a **reader theme selector** (Light · Dark · Sepia/Warm · Grayscale)
-that remembers the reader's choice. Tight code, content and presentation cleanly separated,
-**zero content files touched**.
+A **serif, reading-first** site in the spirit of **Tufte CSS** — long-form articles with
+**right-margin sidenotes derived from the footnotes kramdown already emits**, plus reader-set
+appearance (theme mode × palette, font, accent) that persists across visits. Tight code,
+content and presentation cleanly separated, **zero content files touched**.
 
-- **Stack stays:** Jekyll + kramdown + Pagefind, deployed to GitHub Pages via GitHub Actions.
-- **Branch:** `brajeshwar.com-v2027` (active; branched from `main` at `cd3227e0`, no redesign commits yet).
-- The redesign lives **only** in layouts, includes, CSS, JS, and build config.
+There is no versioned redesign to work toward. The 2026 re-skin shipped; from here the site
+just keeps evolving in small, reviewable steps. (It was called "v2027" while in flight — the
+name was retired 2026-07-26 along with `_docs/v2027/`.)
 
-## Non-negotiable guardrails (full list in SPEC §2 / CLAUDE.md)
+- **Stack:** Jekyll + kramdown + Pagefind, deployed to GitHub Pages via GitHub Actions.
+- **Branch:** `main`. Every push auto-deploys.
+- Presentation lives **only** in layouts, includes, CSS, JS, and build config.
+
+## Non-negotiable guardrails (full list in CLAUDE.md)
 1. **Never modify content** — no edits/no added front matter under `_posts/**`, `_drafts/**`, `_pages/**` bodies. `_data/*.yaml` off-limits except `nav.yaml` (with approval). ~1,393 of ~1,463 posts have **no front matter**; titles come from the `# H1` via `jekyll-titles-from-headings` + `jekyll-optional-front-matter`.
 2. **Preserve every URL** — permalink `/:title/`; 25 years of links (2001–2026) must not break.
 3. **Stay on Jekyll + Pagefind + kramdown** — no new SSG, no Markdown-engine swap, no new plugins unless a phase calls for it, no `_plugins/` hooks.
@@ -134,12 +314,12 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 5. **Sidenotes from existing footnotes only** — CSS/JS, no new authoring syntax, no per-post markup.
 6. **Vanilla JS only** — no frameworks, no JS/CSS build step beyond Jekyll's SCSSify includes.
 7. **Commit authorship** — never attribute commits to Claude/Anthropic; no "Generated with Claude", co-author trailers, or AI references in messages/comments. **Brajeshwar makes the commits** — prepare and show diffs for review; commit only if he explicitly asks (still no AI attribution).
-8. **Reviewable diffs** — work phase by phase; don't mix refactor with redesign.
+8. **Reviewable diffs** — one concern per change; don't mix a refactor with a redesign.
 
 ## Architecture to honor
 - CSS = **12 plainly-named files** in `_includes/css/`, **inlined** into `<head>` via `styles.html` (`{% capture %}` + SCSSify). Base bundle stays embedded and **under 13KB gzipped** per page (measured over the wire, not raw).
-- ⚠️ **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`css-architecture.md`](css-architecture.md). Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
-- **CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only. Shipped the same day: syntax highlighting fixed + tokenised onto `--code-*`; new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html` with a `full:` flag. Full rationale + the orphan-partial findings: [`css-architecture.md`](css-architecture.md).
+- ⚠️ **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`styles.md`](styles.md) §5 → *Old → new filename map*. Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
+- **CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only. Shipped the same day: syntax highlighting fixed + tokenised onto `--code-*`; new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html` with a `full:` flag. Full rationale + the orphan-partial findings: [`styles.md`](styles.md) §5.
 - **Layouts are now**: `default` · `post` · `page` (reading width, `full: true` for full-bleed) · `album` (galleries) · `redirect`.
 - Layouts pick a CSS bundle through the `styles:` front-matter key (`styles-posts.html`, `styles-pages.html`).
 - **All themeable values are CSS custom properties; no hardcoded colors outside `0.1-color.css`.** Use semantic tokens: `--bg`, `--bg-subtle`, `--text`, `--text-muted`, `--rule`, `--accent`, `--accent-hover`, `--mark`, `--sidenote-text`, `--code-bg`.
@@ -219,7 +399,7 @@ that remembers the reader's choice. Tight code, content and presentation cleanly
 - **[superseded] Interface = sans, content = reader's font (Brajeshwar; browser-verified).** The reader's font choice now applies to **article prose + its headings only** (`.container-ideal article { font-family: var(--font-body) }`); `body` is pinned to `var(--font-sans)`, so **header / footer / home / nav / post-meta / sidenotes stay system sans** even in Serif/Inter/Geist mode. Blockquotes inherit context. Verified at data-font=serif: nav/footer/copyright/sidenote/meta = ui-sans-serif, article p/headings = Libre Baskerville. `1.1-base.css` + `1.2-typography.css` (blockquote). See [`styles.md`](styles.md) §1.
 - **Higher contrast (Brajeshwar; browser-verified).** Text tiers pushed one step toward the extreme in both modes (backgrounds unchanged): light `--color-fg` gray-900→**950**, `-muted` 700→**800**, `-subtle` 500→**600**; dark `--color-fg` 100→**50**, `-muted` 300→**200**, `-subtle` 500→**400** (edited both the `[data-theme=dark]` block and the `prefers-color-scheme` auto block). All palettes inherit it via the token layer. `0.1-color.css`. See [`styles.md`](styles.md) §2.
 - **Agent Markdown twins + `/llms.txt` (this session; build-verified, served locally).** Every post/page gets a plain-text `.md` twin (`/about.md`, `/2026/childhood-computing.md`) for AI agents, plus a `/llms.txt` index. **Post-build like Pagefind, no plugin, zero content touched.** Pieces: `agents-manifest.json` (Jekyll template → url↔source-path manifest, `sitemap:false`, deleted after use) → `scripts/build-agent-markdown.mjs` (reads source md, strips front matter, prepends `# title` + `> Markdown version of <url>` (date on **posts only** — pages default to build-time), writes `_site/<slug>.md` + `_site/llms.txt`). Head **`<link rel="alternate" type="text/markdown">`** in `default.html` (gated on `page.collection`). Wired into `.github/workflows/jekyll-build-deploy.yml` (after jekyll build, before pagefind) and `make build`. Extension is **`.md`** (Brajeshwar's call). Local run wrote **1478 twins** (23 pages, 1455 posts); `.md`→`text/markdown`, `llms.txt`→`text/plain`. See [`agents.md`](agents.md). **Uncommitted.**
-- **Docs reorg (this session).** `_docs` filenames lowercased; `COLOR.md`+`TYPOGRAPHY.md` folded into **[`styles.md`](styles.md)** (type → colour → branding); new **[`design.md`](design.md)** (philosophy) and **[`todo.md`](todo.md)** (site task list, from the `tmp/` braindump); article-craft studies (Yale e360, BBC, The Walrus, iDiallo) added to [`v2027/inspirations.md`](v2027/inspirations.md). Empty root `TODO.md` stub removed (consolidated into `todo.md`).
+- **Docs reorg (this session).** `_docs` filenames lowercased; `COLOR.md`+`TYPOGRAPHY.md` folded into **[`styles.md`](styles.md)** (type → colour → branding); new **[`design.md`](design.md)** (philosophy) and **[`todo.md`](todo.md)** (site task list, from the `tmp/` braindump); article-craft studies (Yale e360, BBC, The Walrus, iDiallo) added to [`inspirations.md`](inspirations.md). Empty root `TODO.md` stub removed (consolidated into `todo.md`).
 - **Design decisions locked + built (this session; build-verified, measure browser-checked):**
   - **Reading measure = character-based** — `--measure: 66ch` (~60–70 chars/line) → `--body-width-ideal`; was `46rem`≈80ch. Video embeds → `aspect-ratio: 16/9` (width-derived height no longer valid). Browser-checked at 1512px: column ~665px ≈ 66ch. See [`styles.md`](styles.md) §1.
   - **Default theme = monotone grayscale** (already true; now explicitly locked with a header comment in `0.1-color.css`). Zero-chroma scale + gray accent → links carry no hue; affordance is the **underline**. Colour is opt-in (tinted palette or accent axis). See [`styles.md`](styles.md) §2.

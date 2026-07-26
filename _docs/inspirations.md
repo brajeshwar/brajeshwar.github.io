@@ -1,7 +1,8 @@
-# v2027 — Inspirations
+# Inspirations — brajeshwar.com
 
-A running list of sites and pages whose article-layout craft informs the v2027 redesign.
-These are north stars for *reference, not copying* (see SPEC §4). Each entry records what the
+A running list of sites and pages whose article-layout craft informs how this site reads.
+These are north stars for *reference, not copying* — the philosophy they serve is in
+[`design.md`](design.md). Each entry records what the
 page actually does (verified against its shipped HTML/CSS, not from memory), what we want to
 borrow, and what we admire but must not adopt because it conflicts with our guardrails.
 
@@ -55,7 +56,7 @@ prevent layout shift; images zoom into a "theatre" overlay.
 **Personality in the margins of the system**: custom cursors, pixel fonts for small UI
 accents, a glossary delivered through the same footnote mechanism.
 
-### Borrow for v2027
+### Borrow
 
 - **Note-voice contrast.** Sidenotes in a distinct size (ours: slightly *larger* relative
   presence than typical Tufte-style notes — already implemented and working) so they read as
@@ -77,7 +78,7 @@ accents, a glossary delivered through the same footnote mechanism.
   any figure treatment must come from CSS applied to existing markup only.
 - **CSS-painted footnote numbers** (`content: attr(...)`) — ours must remain real text in
   real `sup`/`li` elements so the no-JS page keeps working footnotes (guardrail 4/5).
-- **Left-gutter TOC** — out of scope for v2027; most posts are short.
+- **Left-gutter TOC** — not worth it here; most posts are short.
 
 ---
 

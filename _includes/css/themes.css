@@ -82,7 +82,7 @@
      2. semantic      --color-bg/surface/fg/accent/border… — map to the scale,
                       and flip for dark mode
      3. bridge        the site's legacy tokens (--bg-color-*, --text-color-*,
-                      --border-color-*) + v2027 tokens (--bg,--text,--rule,…)
+                      --border-color-*) + short-form tokens (--bg,--text,--rule,…)
                       alias onto the semantic layer, so every component keeps
                       working and inherits palette + mode for free.
    ============================================================ */
@@ -277,7 +277,7 @@
 }
 
 /* ============================================================
-   Bridge — legacy + v2027 token names alias onto the semantic
+   Bridge — legacy + short-form token names alias onto the semantic
    layer above. Because the semantic tokens flip for mode and
    re-tint for palette, every existing component inherits both.
    ============================================================ */
@@ -301,7 +301,7 @@
   --border-color       : var(--color-border);
   --border-color-high  : var(--color-border-strong);
 
-  /* v2027 semantic tokens */
+  /* short-form semantic tokens */
   --bg            : var(--color-bg);
   --bg-subtle     : var(--color-bg-muted);
   --text          : var(--color-fg);

@@ -3,13 +3,13 @@
 Guidance for AI agents (Claude Code) working in this repo.
 
 ## Active work
-The **v2027 redesign is merged to `main` and deployed** (live at brajeshwar.com, as of
-2026-07-05). Work now happens on **`main`**, and **every push to `main` auto-deploys** via
-GitHub Actions — so keep changes small and reviewable. We're in **incremental-improvement**
-mode. **Read [`_docs/memory.md`](_docs/memory.md) first each session** ("Where we are"), then
-[`_docs/todo.md`](_docs/todo.md). The redesign spec is [`_docs/v2027/spec.md`](_docs/v2027/spec.md);
-hosting/DNS is [`_docs/hosting.md`](_docs/hosting.md). Re-read the guardrails before any
-commit-worthy change.
+There is no big-bang redesign in flight and no version to work toward — the site just keeps
+evolving. Work happens on **`main`**, and **every push to `main` auto-deploys** via GitHub
+Actions, so keep changes small and reviewable. **Read [`_docs/memory.md`](_docs/memory.md)
+first each session** ("Where we are"), then [`_docs/todo.md`](_docs/todo.md). Design
+philosophy is [`_docs/design.md`](_docs/design.md), the visual system and CSS architecture
+are [`_docs/styles.md`](_docs/styles.md), hosting is [`_docs/hosting.md`](_docs/hosting.md).
+Re-read the guardrails below before any commit-worthy change.
 
 ## What this site is
 A Jekyll site (kramdown) with **~1,463 posts (2001–2026)**, of which **~1,393 have no YAML
@@ -44,7 +44,7 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
   measure 6.1–7.2KB gzip (27–34KB raw), so there is real headroom — re-measure when adding to base.
 - Layouts select a CSS bundle through the `styles:` front-matter key. **CSS splits by layout, not
   by page** — base → per-layout bundle → per-page opt-in for one-offs only. New page type means a
-  new layout + one bundle. See [`_docs/css-architecture.md`](_docs/css-architecture.md).
+  new layout + one bundle. See [`_docs/styles.md`](_docs/styles.md) §5.
   (`styles:` = a CSS include; `style:` = a class on `<main>` — different keys, easily confused.)
 - **All themeable values are CSS custom properties; no hardcoded colors outside `themes.css`.**
 - **Comment CSS generously.** `sass: style: compressed` strips block comments, so prose in

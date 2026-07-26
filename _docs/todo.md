@@ -1,14 +1,34 @@
 # Todo — brajeshwar.com
 
-Running list of site tasks, beyond the v2027 redesign phases (those are tracked in
-[`memory.md`](memory.md) and [`v2027/spec.md`](v2027/spec.md)). Absorbed from the
-`brajeshwar.com-2027` planning braindump.
+Running list of site tasks. Session-by-session history is in [`memory.md`](memory.md).
+Originally absorbed from the 2027 planning braindump.
 
 ## Content & pages
-- [ ] **Year archives** — `/2001/`, `/2002/`, … in the [Simon Willison](https://simonwillison.net/) style.
+- [x] **Year jump-nav on `/archives/`** *(2026-07-26/27)* — all 26 years, always reachable.
+      **Wide screens get a vertical rail in the left margin, iOS-Contacts style** (`26, 25 … 01`
+      in a rounded pill); narrow screens fall back to a sticky horizontal strip, because the
+      rail lives in the margin beside the centred column and a phone has no margin. Single page
+      with `#YYYY` anchors, chosen over `/archives/YYYY/` pages: vanilla Jekyll cannot generate
+      a page per year without a plugin (guardrail 3), so per-year URLs would mean 26 committed
+      stub files plus a new one every January — exactly the hand-maintenance we're shedding.
+      The `<caption id="YYYY">` anchors already existed, so `/archives/#2024` had always
+      worked; labels are 2-digit but hrefs and ids stay 4-digit, so no URL changed. CSS-only,
+      no JS. See [`memory.md`](memory.md).
+- [ ] **Year archives as separate pages** — `/2001/`, `/2002/`, … in the
+      [Simon Willison](https://simonwillison.net/) style. Superseded in practice by the jump-nav
+      above; only worth revisiting if the single page's weight becomes a problem (see below).
+- [x] ~~**`/archives/` is over the page-weight budget**~~ *(raised 2026-07-26, **closed
+      2026-07-27 — not a problem**)*. Brajeshwar's call: the budget is for **the homepage and
+      articles**, not listing pages, and the same will apply to `/books/`, `/film/` and others.
+      A listing's weight is its content. [`design.md`](design.md) → *Performance budget* now
+      says so. For the record the page is ~329 KB raw / ~74 KB gzip, and switching its links to
+      `relative_url` took **27.6 KB** off (1,459 absolute URLs → 3).
 - [ ] **Home = text only.** Reduce the homepage to writing; convert Books into a list of top rereads.
 - [ ] **Page template (Full Width)** — Pages, Photos, Wear, Devices, Books, Films.
 - [ ] **Page template (Ideal Width)** — posts, articles, optimised for reading.
+      ⚠️ These two items predate, and are superseded by, *Standardise the site width* below —
+      that whole split is what's being collapsed into one maintained number. Don't act on
+      these two independently.
 - [ ] **Timeline template** — `cv.brajeshwar.com` as part of `/about`; eventually replaces the LinkedIn profile.
 - [ ] **Photos component** — a style that highlights key photos. Likely after <https://pictures.oinam.com> is up.
 
@@ -18,7 +38,7 @@ Running list of site tasks, beyond the v2027 redesign phases (those are tracked 
 - [ ] **Migrate `cdn.oinam.com`** remnants to `brajeshwar.com`.
 - [ ] **YouTube videos** — move to `brajeshwar.com`, or embed and ignore, or self-host (PeerTube for Oinam or similar).
 
-## CSS architecture (decided 2026-07-19 — see [`css-architecture.md`](css-architecture.md))
+## CSS architecture (decided 2026-07-19 — see [`styles.md`](styles.md) §5)
 Three tiers: base embedded on every page → one bundle per layout → per-page opt-in for
 one-offs only. Keep embedding; no external stylesheet. Ordered roughly by value/effort.
 
@@ -43,14 +63,14 @@ one-offs only. Keep embedding; no external stylesheet. Ordered roughly by value/
       one-offs (`home`, `archives`, `search`, `now`) + `bookmarks`. Numbering dropped; cascade order
       now lives only in `styles.html`. Verified equivalent: identical byte counts and identical rule
       sets on 7 page types, one intentional reorder (`.block-*` utilities ahead of chrome, no
-      selector overlap). Old→new map in [`css-architecture.md`](css-architecture.md).
+      selector overlap). Old→new map in [`styles.md`](styles.md) §5 → *Old → new filename map*.
 - [x] **`4.1-pages.css` (0 bytes)** → now `page.css`, kept as the page-tier hook with a comment
       explaining why it's empty.
 - [x] **`4.1-pages-bookmarks.css`** → now `bookmarks.css`. **Not deleted** — it styles a
       `<bookmarks-header>` for a bookmarks page that doesn't exist yet, i.e. in-progress work.
       Still included by nothing.
 ### From the 2026-07-19 CSS audit — not yet done
-Full findings and evidence in [`css-architecture.md`](css-architecture.md) → *Audit backlog*.
+Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
 - [ ] **search.css re-implements Pagefind's own stylesheet** (~6 KB of its 9.7 KB). `_pages/search.html`
       already links the CLI-generated `pagefind-ui.css`, and the top half of `search.css` hand-copies
       the same base UI on top of it. Needs a `make serve` (Pagefind built) to byte-compare before cutting.
@@ -89,6 +109,57 @@ Full findings and evidence in [`css-architecture.md`](css-architecture.md) → *
       moving them into `post.css` would break sidenotes and the foot fallback on those pages.
       They stay in `base.css`.
 
+## Standardise the site width — agreed 2026-07-26, NOT STARTED
+⏸️ **On hold by Brajeshwar** — he wants to discuss more details before any of this is built.
+Do not start it unprompted. Research and measurements are done and recorded; the decisions
+below are the open part.
+
+**The goal.** One maintained width instead of the current split. The split exists because it
+was easier to maintain by hand, not because it was designed.
+
+**What's actually there today — four width tokens, not two** (`config.css`):
+
+    --body-width-ideal   66rch (665px)   .container-ideal, the reading column
+    --body-width-max     76rem (1216px)  main, the full-width container
+    --body-width-medium  60rem (960px)   "large but not max" objects
+    --body-width-full    1600px          figure.full / img.full breakout
+
+Literal unification is not available: prose at 1216px is unreadable and a gallery at 665px is
+pointless. **"One width" should mean one maintained number** — a single container with one
+max-width, and the reading measure expressed as a grid track inside it. Prose keeps its
+measure, galleries get the container, `figure.full` still breaks out via the existing
+`calc(50% - 50vw)`. One value to change when the site should get wider or narrower.
+
+**The blocking constraint, measured (see [`sidenotes.md`](sidenotes.md) → *The viewport
+floor*).** Sidenotes need a **1210px** viewport, because `.container-ideal` is centred and so
+spends as much on the dead left margin as on the working right gutter. An **asymmetric** grid
+drops that floor to roughly **970–1010px** — the difference between sidenotes working on a
+1024-class laptop and not. Fix this as part of the same change or the width choice inherits a
+limitation it doesn't need.
+
+**Target, from the research.** Design for **1280px**, hold a **1024px** floor, don't design
+past **1536px**. Reasoning: screen-resolution stats report CSS pixels, so the common
+1536×864 and 1280×720 rows are 1080p panels at 125% and 150% OS scaling. The CSS width most
+desktop readers have is **1280–1536, not 1920** — and the window is narrower still after
+browser chrome, the scrollbar, and readers who don't maximise. (`$breakpoint-large: 1024px`
+is a *breakpoint*, a separate question from the design target; it looks fine as is.)
+
+**Partial step taken 2026-07-27:** `/archives/` now uses **`.container-wide`
+(`--body-width-wide`, 80rem/1280px)**, the researched target. This is **opt-in per page**, not
+the standardisation — `--body-width-max` (76rem) still sizes the header, footer, `.gallery`
+and every other `main`, so the site is currently running *two* content widths where it ran
+one. That is a deliberate stopgap, and it makes finishing this task more urgent, not less.
+`/books/` and `/film/` are the next candidates for the same class.
+
+**Open, for Brajeshwar:**
+- [ ] Confirm the single container max-width (1280px, now proven on `/archives/`, vs 1216px)
+      and whether the header/footer band moves with it.
+- [ ] Go asymmetric for the sidenote gutter? Recommended — it is what unlocks 1024.
+- [ ] **Analytics.** Do we have viewport/resolution data for brajeshwar.com? A 25-year tech
+      blog's readers skew nothing like worldwide desktop share; our own numbers would settle
+      the target and make the public stats irrelevant.
+- [ ] What happens to `--body-width-medium` and `--body-width-full` — folded in, or kept?
+
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +
       hand-authored `oinam`/`memos`) and the header icons (`search`, `rss`, `theme`) all live
@@ -101,7 +172,7 @@ Full findings and evidence in [`css-architecture.md`](css-architecture.md) → *
 - [ ] **Scope `sidenotes.js` to article pages.** It's loaded site-wide via `default.html` but
       only does anything where footnotes exist; skip it on the homepage/pages to shave a
       request from non-article loads (performance-budget tidy, not urgent).
-- [x] **Reading width = character-based** — `--measure: 66ch` (~60–70 chars/line); video embeds
+- [x] **Reading width = character-based** — `--measure: 66rch` (~60–70 chars/line); video embeds
       switched to `aspect-ratio: 16/9`. See [`styles.md`](styles.md) §1.
 - [x] **Default theme = monotone grayscale** — locked; zero-chroma scale + gray accent, colour
       opt-in. Link affordance via underline. See [`styles.md`](styles.md) §2 / [`design.md`](design.md).

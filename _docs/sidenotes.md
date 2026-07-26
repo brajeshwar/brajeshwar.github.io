@@ -1,7 +1,7 @@
 # SIDENOTES — brajeshwar.com
 
 Tufte-style margin notes, built from the footnotes kramdown already emits. **No
-content or markup changes** — old posts get sidenotes for free. Spec: [`v2027/spec.md`](v2027/spec.md) §5.
+content or markup changes** — old posts get sidenotes for free. This doc is the spec.
 
 ## Source markup (unchanged, kramdown)
 ```html
@@ -24,7 +24,7 @@ content or markup changes** — old posts get sidenotes for free. Spec: [`v2027/
 3. **If not** (narrow screens): no asides; the `.footnotes` block renders normally at the foot.
 4. **JS disabled:** nothing runs; plain kramdown footnotes at the foot, all anchors work.
 
-Wayfinding (Aresluna-inspired, see [`v2027/inspirations.md`](v2027/inspirations.md)):
+Wayfinding (Aresluna-inspired, see [`inspirations.md`](inspirations.md)):
 
 5. **Cross-focus (sidenotes active):** hovering or keyboard-focusing a reference adds
    `.sidenote-focus` to the article and `.is-active` to the matching reference + sidenote
@@ -70,6 +70,38 @@ Robustness:
   margin; notes shrink to it (with 1rem breathing room to the viewport edge) rather than
   overflow. With the 17rem gutter threshold a note is always ≥ ~12rem wide.
 - Color: `--sidenote-text` (semantic token, see [`styles.md`](styles.md)).
+
+## The viewport floor: 1210px (measured 2026-07-26)
+Sidenotes need a **1210px viewport** before they appear at all. Below that every footnoted
+post silently falls back to footnotes at the article foot.
+
+Measured in Chrome against the built site, not calculated:
+
+| | |
+|---|---|
+| `1rch` | **10.08px** (not ~8px — the zero-glyph is wider here) |
+| `--measure: 66rch` | **665px** column |
+| `--sidenote-min-gutter: 17rem` | **272px** |
+| Floor | 665 + (2 × 272) = 1209, so **1210px** |
+
+**Why twice the gutter, and why that is the problem.** `.container-ideal` is *centred*, so the
+left and right margins are always equal — but `gutterFits()` only tests the right one. Every
+pixel spent on the left margin is dead space sized identically to the gutter doing the work.
+That doubling is what pushes the floor from ~970px to 1210px.
+
+Concretely: a 1024px-wide laptop, or a 1280px screen with a non-maximised window, gets no
+sidenotes — not because the margin is genuinely too tight, but because the layout insists on
+matching it on the unused side.
+
+**An asymmetric grid — content track plus a wider right gutter — would drop the floor to
+roughly 970–1010px.** That is the difference between the feature working on a 1024-class
+laptop and not. Not done; it is bound up with the width standardisation in
+[`todo.md`](todo.md) → *Standardise the site width*.
+
+Two things to keep in step if this is ever changed: `--sidenote-min-gutter` in `config.css` is
+hand-synced with `MIN_GUTTER_REM` in `assets/scripts/sidenotes.js`, and the fluid note width
+above assumes `(100vw − 100%) / 2`, i.e. a centred column. An asymmetric layout invalidates
+that formula.
 
 ## Verified (live, 1440px)
 - [x] Desktop: footnotes render as margin sidenotes aligned to references, clean (no box),

@@ -3,8 +3,8 @@
 My design philosophy for the site: the *why* behind the choices. The concrete
 implementation of these ideas — the tokens, scales, palettes, and fonts — lives in
 [`styles.md`](styles.md). The article-craft studies that inform the look live in
-[`v2027/inspirations.md`](v2027/inspirations.md). The redesign brief and guardrails are
-in [`v2027/spec.md`](v2027/spec.md).
+[`inspirations.md`](inspirations.md). The hard guardrails live in
+[`../CLAUDE.md`](../CLAUDE.md).
 
 ## Text first
 Default to **text as the main content**. Media — images, video, audio — is used only when
@@ -17,7 +17,7 @@ Let **spacing and typography do the work**, not rules, boxes, or decoration. A c
 blockquote with clear separation beats a boxed one. Restrained figures and quiet captions
 beat heavy treatments. Identity comes from typographic rhythm and restraint, not chrome.
 This is the ethos borrowed from the sites studied in
-[`v2027/inspirations.md`](v2027/inspirations.md) (Yale e360, BBC, The Walrus, Tufte, Aresluna).
+[`inspirations.md`](inspirations.md) (Yale e360, BBC, The Walrus, Tufte, Aresluna).
 
 ## Monotone by default, colour is opt-in
 The **default theme is monotone grayscale** — a zero-chroma gray scale, and even the accent
@@ -60,13 +60,23 @@ The site must be **fully usable with JavaScript disabled** — real footnotes at
 foot, a sensible default theme, every link working. JS only *enhances*: sidenotes in the
 margin, theme/font persistence, in-place search. This is also what keeps the ~1,463
 historical posts (most with no front matter) from ever breaking. The hard rules that follow
-from this are the guardrails in [`v2027/spec.md`](v2027/spec.md) §2.
+from this are the guardrails in [`../CLAUDE.md`](../CLAUDE.md).
 
 ## Performance budget — default page load under 100 KB
-The homepage and any non-article page should load in **under 100 KB total** (all resources,
-uncompressed). Article pages are exempt — their weight is their content's, and that's fine.
-This is a hard target, and the site already meets it comfortably; the discipline is about
-*staying* there. What keeps it light:
+The **homepage** should load in **under 100 KB total** (all resources, uncompressed). This is
+a hard target, and the site meets it comfortably; the discipline is about *staying* there.
+
+**Scope, revised 2026-07-27 (Brajeshwar).** The budget covers **the homepage and articles**.
+It does **not** cover listing pages — `/archives/` today, and `/books/`, `/film/` and others
+in future. A listing's weight *is* its content, the same argument that already exempted
+articles: an index of 1,456 posts cannot be small, and making it small would mean showing
+less of what the page exists to show. `/archives/` sits at ~329 KB raw / ~74 KB gzip and that
+is accepted, not tolerated. (The previous wording said "any non-article page", which would
+have made every listing page a permanent budget failure.)
+
+Articles are exempt from the byte target for the same reason, but not from the discipline —
+the inlined-CSS sub-budget below applies to **every** page, listings included. What keeps
+things light:
 
 - **Text-first, no hero images.** The homepage carries zero images by default (see *Text
   first*). Media is added only where it earns its place.
