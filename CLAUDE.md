@@ -37,11 +37,24 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
    in place, so no HTML reference changes and the environments that skip the step (local
    `jekyll serve`, the Cloudflare backup) keep working. Concatenation was considered and
    deliberately not done. See [`_docs/javascript.md`](_docs/javascript.md).
-7. **Commit authorship.** Never create commits attributed to Claude/Anthropic; never add
-   "Generated with Claude", co-author trailers, or AI references in commit messages or code
-   comments. Brajeshwar makes the commits — prepare and show changes for review rather than
-   committing, unless he explicitly asks (still with no AI attribution).
-8. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
+7. **Commits: signed, in Brajeshwar's name, and never pushed unasked.**
+   - **Every commit is GPG-signed.** `commit.gpgsign = true` is already set and the key is in
+     the agent, so `git commit` signs without a prompt — there is nothing to configure and no
+     excuse for an unsigned commit. **Verify with `git log --format='%h %G?'`; `G` is the only
+     acceptable result.** *(Confirmed working from an agent shell 2026-07-27.)*
+   - **All commits are in Brajeshwar's name. None in anyone else's.** Author and committer are
+     always `Brajeshwar Oinam <brajeshwar@oinam.com>`. Never attribute to Claude/Anthropic,
+     never add "Generated with Claude", co-author trailers, or any AI reference — not in commit
+     messages, not in code comments, not in docs.
+   - **Committing is fine. PUSHING IS NOT, until he says so** — every push to `main`
+     auto-deploys. Prepare, commit, report; wait to be asked before `git push`.
+8. **History rewrites destroy signatures — check before, not after.** `git filter-branch` and
+   `git filter-repo` both discard GPG signatures: a signature covers the commit object, so
+   changing a tree or a parent invalidates it and neither tool re-signs. **This already cost
+   882 signed commits spanning 2022-2026** (see `_docs/memory.md`). Before any rewrite:
+   `git log --format='%G?' <range> | sort | uniq -c` — take the count, warn Brajeshwar what it
+   will cost, and get his answer first. A rewrite is his decision, not a tidy-up.
+9. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
 - CSS = **13 plainly-named files** in `_includes/css/` (`config`, `themes`, `base`, `chrome`,

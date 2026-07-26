@@ -6,19 +6,23 @@
 
 ## Where we are (updated 2026-07-27) — READ FIRST
 
-### ⚠️ 49 commits on `main`, NONE PUSHED. Every push auto-deploys.
-Working tree is **clean**. `main` is 49 ahead of `origin/main`, so `git push origin main`
-publishes roughly three sessions of work in one deploy.
+### ✅ Pushed and deployed 2026-07-27. Working tree clean.
+`main` and `origin/main` are in sync. Three sessions of work shipped in one deploy.
 
-    git log --oneline origin/main..HEAD     # what would ship
-    git push origin main                    # then watch the Actions run
+⚠️ **Push only when Brajeshwar asks** (CLAUDE.md guardrail 7). Committing is fine; every push to
+`main` auto-deploys.
 
-**Watch that first run.** It exercises three things that have never run in CI:
+⚠️ **All commits are signed and in his name.** `commit.gpgsign` is on and the key is in the
+agent, so it is automatic — but **verify** with `git log --format='%h %G?'`. A history rewrite
+already cost 882 signatures once; see the entry below before running one.
+
+**The deploy that shipped exercised three things for the first time in CI:**
 1. **Node 22** (was 18, past EOL) — Pagefind and the agent-markdown script run on it.
 2. **The esbuild minify step** — new, and the only step that can fail the build outright.
 3. **The Geist woff2** — the `.ttf` is now `exclude`d, so a wrong path means no Sans-Serif font.
-All three are verified locally against a production-parity build (`make build`), but locally is
-not CI.
+All three were verified locally against a production-parity build (`make build`) before the
+push. **Check the Actions run went green** — if it did, all three are proven in CI too and this
+note can go.
 
 ### The state, in one paragraph
 The site is on **one width — 64rem/1024px — and everything now agrees on it**: header, footer,
@@ -88,7 +92,8 @@ Should return nothing but Brajeshwar's own content commits.
 
 ### Picking this back up — the shortlist
 Full list in [`todo.md`](todo.md). The ones worth doing next, in order:
-1. **Push, and watch the Actions run.** Nothing else should start until this is green.
+1. **Confirm the deploy went green** (Node 22, esbuild, Geist woff2 all ran in CI for the first
+   time). Nothing else should start until it has.
 2. **`.sidenote` is declared in two blocks** (`base.css` 563 and 609) and repeats 6 declarations
    with `.sidenote-inline`. Deliberately left: it is a refactor of live behaviour, best done with
    the sidenote work rather than as a tidy.
@@ -581,6 +586,52 @@ pages, and a 27th "00" year in the archives. His watcher and any `jekyll build` 
 same `_site`, so they overwrite each other and local measurements flip depending on who built
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
+
+### ⚠️ 882 GPG signatures lost to a history rewrite (2026-07-27)
+**What happened.** Two `.afphoto` purges were run to get past GitHub's 100 MB file limit — first
+`git filter-branch` over the unpushed range, then `git filter-repo` over the whole history to
+remove `static/*.afphoto` (191 MB). Both tools **discard GPG signatures**: a signature covers the
+commit object, so changing a tree or a parent invalidates it, and neither tool re-signs.
+
+**The cost, measured after the fact:**
+
+    before   882 G   347 N   9 E      (1,238 commits)
+    after      0 G  1,237 N            (1,237 commits)
+
+    Brajeshwar Oinam    867 signed commits
+    Brajeshwar           15 signed commits
+    span                 2022-10-07 → 2026-07-26
+
+The remote was force-pushed to the rewritten history, so the signed copy exists nowhere any
+more. Brajeshwar's call: *"What ever done so far be done."* Not restored.
+
+**Why it was not caught.** The rewrites were verified thoroughly for CONTENT — tree hashes
+identical, 1,237/1,237 commits matched by date+subject, 31 commits deep-compared with zero
+non-`.afphoto` differences — and not at all for METADATA. Signatures are commit metadata. A
+verification plan that only checks what it thought to check is how this passes.
+
+**The rule now, in CLAUDE.md guardrail 8:** before any history rewrite, run
+`git log --format='%G?' <range> | sort | uniq -c`, tell Brajeshwar what it will cost, and get his
+answer first. A rewrite is his decision, not a tidy-up.
+
+**Also worth keeping:** the 166 MB file that started this was blocking the push because **GitHub
+rejects on the BLOB, not on the tree** — deleting a large file in a later commit does not help,
+because the blob is still in the history being pushed. That is why a rewrite was the only fix,
+and why `*.afphoto`, `*.psd`, `*.sketch`, `*.fig` and friends are now in `.gitignore`: the
+failure arrives as a push rejection long after the mistake.
+
+### Commits are signed, in Brajeshwar's name, and pushed only on request (2026-07-27)
+Brajeshwar: *"going forward, all commits will be signed. You can even push but only after I say
+so. But, all commits are in my name, none others."*
+
+- **Signing is not a limitation of the agent environment** — this was checked, not assumed.
+  `commit.gpgsign = true` is set, the key is in the agent, and `git commit` from an agent shell
+  signs with no prompt. `f19eab95` was made from one and verified `G`. Anything unsigned in this
+  repo's recent history was stripped by the rewrites above, not left unsigned at creation.
+- **Verify, don't trust:** `git log --format='%h %G?'` after committing. `G` or it is wrong.
+- **All commits are Brajeshwar's.** No Claude/Anthropic attribution anywhere — not authorship,
+  not co-author trailers, not "Generated with", not in code comments or docs.
+- **Committing is fine; pushing waits for him.** Every push to `main` auto-deploys.
 
 ### Documentation clean-up + handoff (2026-07-27, end of session)
 A full pass over every doc, because several had drifted far enough to mislead rather than help.
