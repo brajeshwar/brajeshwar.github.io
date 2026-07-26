@@ -2,7 +2,8 @@
 #
 # Jekyll builds the site; two post-build steps then run (exactly like CI):
 #   1. node scripts/build-agent-markdown.mjs  → .md twins + /llms.txt for AI agents
-#   2. npx pagefind --site _site              → the ⌘K SEARCH INDEX
+#   2. esbuild --minify (in place)            → JS at ~40% of its source size
+#   3. npx pagefind --site _site              → the ⌘K SEARCH INDEX
 #
 # IMPORTANT: `jekyll serve` on its own does NOT build the search index — and its
 # --watch even wipes _site/pagefind/ on every rebuild. So ⌘K search only works
@@ -14,6 +15,7 @@
 build:
 	bundle exec jekyll build
 	node scripts/build-agent-markdown.mjs
+	npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite
 	npx pagefind --site _site
 
 ## pagefind — (re)build just the search index against the current _site/

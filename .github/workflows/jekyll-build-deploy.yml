@@ -60,6 +60,26 @@ jobs:
       - name: Generate agent Markdown (.md twins + llms.txt)
         run: node scripts/build-agent-markdown.mjs
 
+      # Minify the scripts IN PLACE, so no HTML reference changes.
+      #
+      # That is the whole design. The site loads /assets/scripts/<name>.js
+      # everywhere, and this step only makes those files smaller in _site.
+      # Local `jekyll serve` and the Cloudflare Pages backup — whose build
+      # command is set dashboard-side and does not include this step — both
+      # keep serving the readable originals and work exactly as before.
+      # Pointing the layout at bundle files that only CI produces would have
+      # left both of those with no JavaScript at all.
+      #
+      # NOT concatenated, deliberately. sidenotes.js is posts-only and
+      # pagefind-custom.js is /search/-only, so one bundle would put ~15 KB on
+      # a homepage that needs about 7 KB of it. Per-page-type bundles would
+      # work but need the reference changes this step exists to avoid, and
+      # under HTTP/2 the request count is not what costs. See _docs/javascript.md.
+      #
+      # 36.7 KB -> 15.2 KB raw, 13.9 KB -> 6.6 KB gzipped.
+      - name: Minify JavaScript
+        run: npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite
+
       - name: Install Pagefind
         run: npm install pagefind
         

@@ -18,8 +18,8 @@ Brajeshwar, 2026-07-27:
 4. **The page works without it.** This is not aspiration, it is the acceptance test. JS is
    *"the beauty on top of the content that already works on its own"* — an enhancement layer,
    never a dependency. Same as CLAUDE.md guardrail 4.
-5. **Concatenate + minify on publish.** Ship one minified bundle, keep the sources separate.
-   **Not built yet** — see below.
+5. **Minify on publish.** Ship minified, keep the sources readable. **Built 2026-07-27** —
+   see below. Concatenation was considered and deliberately not done.
 
 ## What exists today
 
@@ -34,37 +34,66 @@ Brajeshwar, 2026-07-27:
 | `timeline.js` | 2.3 KB | `/about/` |
 | `back-to-top.js` | 3.5 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
 
-**~35.5 KB raw across all eight** (re-measured 2026-07-27), none minified, each a separate
-request. No page loads all of them.
+**~35.5 KB raw across all eight** (re-measured 2026-07-27) — but **15.2 KB as shipped**, since
+2026-07-27; the table is source size. Each is a separate request, and no page loads all of them.
 
 Every one degrades cleanly: with JS off you get real footnotes instead of sidenotes, the
 default theme instead of a remembered one, `/search/` instead of the ⌘K palette, no `§`
 anchors, the timeline unfiltered — which is its default view anyway — and no Back to Top
 control, which costs nothing since scrolling up is always possible.
 
-## Concatenate + minify — NOT BUILT
+## Minify on publish — BUILT 2026-07-27
 
-The policy says do it "on publish", which means the Actions workflow
-(`.github/workflows/jekyll-build-deploy.yml`), after `jekyll build` and alongside the
-Pagefind and agent-markdown steps. It is **not implemented**; the site still ships eight
-unminified files.
+`npx esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite`,
+run in the Actions workflow after `jekyll build`, and in `make build` so local
+production-parity matches CI.
 
-Worth thinking through before building it, because a naive concat is worse than nothing here:
+**36.7 KB → 15.2 KB raw; 13.9 KB → 6.6 KB gzipped.** A 59% cut raw, 52% gzipped.
 
-- **One bundle for everything is a regression.** `sidenotes.js` is 11.4 KB and only posts need
-  it; `pagefind-custom.js` is only for `/search/`. Concatenating all eight would put ~35 KB on
-  the homepage, which today loads about 12 KB of JS. The gain has to come from minification,
-  not from merging unrelated scripts.
-- **Bundle per page type** matches how the CSS already works (base + per-layout, see
-  [`styles.md`](styles.md) §5) and is the obvious shape: a chrome bundle for every page, plus
-  post and search bundles.
-- **It adds a dependency**, which is the tension — a minifier (esbuild/terser) in the workflow.
-  That is a build tool, not a runtime framework, so it does not break "no frameworks", but it
-  does amend CLAUDE.md guardrail 6, which previously said "no JS/CSS build step beyond
-  Jekyll's SCSSify include pipeline". Guardrail 6 has been updated to permit exactly this and
-  nothing more.
-- **Keep sources readable.** These files carry a lot of explanatory comment; minification is
-  for the shipped copy only, never the source.
+### In place, and that is the whole design
+
+The step rewrites the files in `_site`; it changes no HTML. Every page still loads
+`/assets/scripts/<name>.js`, exactly as before. That matters because two other environments
+never run this step:
+
+- **local `jekyll serve`** — you get the readable originals, which is what you want while working;
+- **the Cloudflare Pages backup**, whose build command is set dashboard-side and is deliberately
+  left alone (see [`hosting.md`](hosting.md)). It keeps serving the unminified files.
+
+Both work, unchanged. Pointing the layout at bundle files that only CI produces would have left
+both of them with **no JavaScript at all** — a silent, total failure of the enhancement layer on
+the standby host, discovered only when it was needed.
+
+### Concatenation: considered, not done
+
+The earlier plan was per-page-type bundles. Rejected for now:
+
+- It requires the layout to reference bundle names, which is exactly the coupling the in-place
+  design avoids, and which breaks both environments above.
+- The gain was always in minification, not in merging. Under HTTP/2 the request count is not
+  what costs — the bytes are, and those are now down 52% gzipped without touching a reference.
+- One bundle for everything is a regression regardless: `sidenotes.js` (4.7 KB minified) is
+  posts-only and `pagefind-custom.js` is `/search/`-only, so a single bundle would put ~15 KB on
+  a homepage that needs about 7 KB of it.
+
+If concatenation is ever wanted, the shape is bundle-per-layout mirroring the CSS
+([`styles.md`](styles.md) §5) — and it needs a plan for the two non-CI environments first.
+
+### Sources stay readable
+
+These files carry a lot of explanatory comment and it all survives; minification touches only
+the shipped copy. Verified after the change: `back-to-top.js` in `_site` starts
+`(function(){"use strict";var l=2.5…` while the source is untouched.
+
+**Verified on a real minified build**, not by trusting the byte count: sidenotes placed (4),
+anchors built (10), Back to Top inserted, the appearance panel built with its pills, the search
+palette present, and zero console errors.
+
+### It adds a build dependency
+
+esbuild in the workflow. That is a build tool, not a runtime framework, so it does not break
+"no frameworks" — and CLAUDE.md guardrail 6 was amended on 2026-07-27 to permit exactly this
+and nothing more.
 
 ## Related
 
