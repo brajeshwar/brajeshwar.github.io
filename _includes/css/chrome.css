@@ -5,41 +5,35 @@
    ============================================================ */
 
 header {
-  /* Align with the content band; logo at the left edge, menu at the right. */
+  /* Centred cluster: logo, nav and tools sit together in the middle.
+     (Restored 2026-07-27 at Brajeshwar's request — this was `space-between`,
+     which threw the logo and the menu to opposite edges and made the nav a long
+     mouse trip. Centred reads tighter and the targets sit next to each other.) */
   width: var(--body-width);
   max-width: var(--body-width-max);
   margin: 0 auto var(--space-l);      /* bottom spacing separates header from body (no rule) */
   padding: var(--space-s) 0;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: var(--space-s);
 }
 
-/* Right cluster: menu items + tool icons. */
+/* Menu cluster: nav links + tool icons. */
 site-menu {
   display: flex;
   align-items: center;
-  gap: var(--space-s);
+  gap: var(--space-2xs);
 }
 
-/* Narrow screens: the logo-left / menu-right row can't fit (~478px min, no
-   hamburger). Stack and center so nothing overflows horizontally. */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    gap: var(--space-xs);
-  }
-  site-menu {
-    flex-direction: column;
-    gap: var(--space-2xs);
-  }
-  site-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
+/* NOTE: the narrow-screen header block lives at the END of this header section,
+   not here. It has to come after site-logo / site-nav / site-tools: those are
+   plain element selectors of equal specificity, so an earlier @media block loses
+   to them on source order and silently does nothing. (Custom-property overrides
+   like --logo-size would still have worked from up here, since those cascade by
+   inheritance — which is exactly what made the bug hard to see: the icons shrank
+   while the font and padding didn't.) */
 
 /* logo */
 site-logo {
@@ -49,21 +43,44 @@ site-logo {
 
 site-logo a {
   margin: 0;
-  padding: 0;
   display: inline-block;
   border-radius: 100%;
 
   width: var(--logo-size);
   height: var(--logo-size);
 
-  transition: all 0.5s ease;
+  /* Inset so the glyph sits inside the hover circle rather than touching its
+     edge. border-box keeps the OUTER size exactly --logo-size, so the header
+     row measurements don't move; only the drawn glyph shrinks. */
+  box-sizing: border-box;
+  padding: var(--logo-inset);
+
+  /* Was `all 0.5s` — half a second, on every property. Quick and specific:
+     only the two things that actually change on hover. */
+  transition: background-color 0.15s ease;
 }
 
 /* SVG: .logo__img and .logo__img--path */
 site-logo a .logo__img, site-logo a .logo__img--path,
 site-logo a:visited .logo__img, site-logo a:visited .logo__img--path {
   fill: var(--bg-color-high);
-} 
+  transition: fill 0.15s ease;
+}
+
+/* Hover/focus: the glyph's own dark fills the circle and the glyph knocks out
+   of it. Both sides are semantic tokens that flip with mode, so dark mode
+   inverts for free — --bg-color-high bridges to --color-primary (near-black in
+   light, near-white in dark) and --bg-color-lower to --color-bg (the reverse).
+   No second rule, no [data-theme] branch. */
+site-logo a:hover,
+site-logo a:focus-visible {
+  background-color: var(--bg-color-high);
+}
+
+site-logo a:hover .logo__img, site-logo a:hover .logo__img--path,
+site-logo a:focus-visible .logo__img, site-logo a:focus-visible .logo__img--path {
+  fill: var(--bg-color-lower);
+}
 
 /* menu — flat text links (no pill) */
 site-nav {
@@ -81,16 +98,48 @@ site-nav a, site-nav a:visited {
   transition: color var(--transition-duration) ease;
 }
 
-site-nav a:hover, site-nav a:active, site-nav a.active {
+/* Hover/focus underlines — the affordance design.md asks of every link, and
+   the header was the exception. Kept off .active on purpose: the current page
+   should read as "you are here" (darker), not as something to click. */
+site-nav a:hover, site-nav a:focus-visible {
+  color: var(--text-color-higher);
+  text-decoration: underline;
+}
+
+site-nav a:active, site-nav a.active {
   color: var(--text-color-higher);
   text-decoration: none;
 }
 
-/* tool icons: search + rss + theme changer (far right) */
+/* tool icons: search + rss + theme changer */
 site-tools {
   display: flex;
   align-items: center;
   gap: var(--space-3xs);
+
+  /* Hairline dividing the words from the glyphs. Safe to keep unconditional:
+     site-nav no longer wraps at any width (the narrow rule shrinks instead of
+     wrapping), so the bar can't be orphaned at the head of a second row. */
+  border-left: var(--border-size) var(--border-style) var(--rule);
+  padding-left: var(--space-2xs);
+  margin-left: var(--space-2xs);
+
+  /* Icons sit BELOW the nav text in contrast, not above it.
+     They used to use --text-muted (--color-fg-muted), which is *darker* than
+     the nav's --text-color-lower (--color-fg-subtle) — the icons were the
+     loudest thing in the header. The token ladder bottoms out at fg-subtle, so
+     going quieter than the text means mixing toward the background rather than
+     picking a token. Measured against the page background: stays clear of the
+     WCAG 1.4.11 3:1 bar for non-text UI in both light and dark. */
+  --icon-color       : color-mix(in oklch, var(--text-color-lower) 72%, var(--bg-color-lower));
+  --icon-color-hover : var(--text-color);
+}
+
+/* Glyphs are authored at 20px in _includes/icons/*.svg; scale them here so the
+   size lives with the layout instead of in 7 separate files. */
+site-tools svg {
+  width: var(--icon-glyph-size);
+  height: var(--icon-glyph-size);
 }
 
 /* RSS icon — match the search / appearance trigger treatment
@@ -99,18 +148,79 @@ site-tools {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--logo-size);
-  height: var(--logo-size);
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
   border-radius: 50%;
 
-  color: var(--text-muted);
+  color: var(--icon-color);
   text-decoration: none;
   transition: color var(--transition-duration) ease;
 }
 
 .site-rss:hover, .site-rss:focus-visible {
-  color: var(--text);
+  color: var(--icon-color-hover);
   text-decoration: none;
+}
+
+/* ---- Narrow screens: ONE ROW, and a shorter one -----------------
+   This used to stack into a column — logo, then nav, then tools — three rows of
+   chrome before a phone reader saw any content. Everything shrinks instead so
+   the row still fits, with no hamburger.
+
+   MUST STAY LAST in the header section. site-logo / site-nav / site-tools are
+   element selectors of the same specificity, so if this block appears before
+   them it loses on source order. Measured cost of getting that wrong: the nav
+   kept --step--1 and 10px link padding, and the header needed 445px of width at
+   a 360px viewport — a horizontal-scroll bug that looked fine on desktop.
+
+   The header's own padding and bottom margin also come down here, which is what
+   "start the content sooner" means. Scoped to this breakpoint on purpose: the
+   desktop header spacing was not the complaint. */
+@media (max-width: 600px) {
+  header {
+    --logo-size: 28px;
+    --logo-inset: 2px;
+    --icon-button-size: 26px;
+    --icon-glyph-size: 15px;
+
+    flex-wrap: nowrap;
+    gap: var(--space-3xs);
+    padding: var(--space-2xs) 0;
+    margin-bottom: var(--space-m);
+  }
+
+  site-menu { gap: var(--space-3xs); }
+
+  site-nav {
+    gap: 0;
+    font-size: var(--step--2);
+  }
+
+  /* Trim padding before font size: --step--2 is already small, and the nav
+     inherits the reader's font choice, so label widths are not fixed. */
+  site-nav a { padding: var(--space-3xs) 0.3rem; }
+
+  site-tools {
+    gap: 0;
+    padding-left: var(--space-3xs);
+    margin-left: var(--space-3xs);
+  }
+}
+
+/* Smallest phones (320px — iPhone SE 1st gen and similar). Measured: the row
+   above needs 327px, against 307px of usable width at 320, so it overflowed and
+   introduced a horizontal scroll. One more notch down closes it. 24px is the
+   floor for the icons — the WCAG 2.2 target-size minimum — so the remaining
+   savings come from padding and the logo, not the hit areas. */
+@media (max-width: 360px) {
+  header {
+    --logo-size: 24px;
+    --logo-inset: 1px;
+    --icon-button-size: 24px;
+    --icon-glyph-size: 14px;
+  }
+
+  site-nav a { padding: var(--space-3xs) 0.2rem; }
 }
 
 
@@ -219,20 +329,20 @@ appearance-settings {
   align-items: center;
   justify-content: center;
 
-  width: var(--logo-size);
-  height: var(--logo-size);
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
   border-radius: 50%;
   border: none;
   background: none;
 
-  color: var(--text-muted);
+  color: var(--icon-color);
   cursor: pointer;
   transition: color var(--transition-duration) ease;
 }
 
 .appearance-trigger:hover,
 .appearance-trigger:focus-visible {
-  color: var(--text);
+  color: var(--icon-color-hover);
 }
 
 .appearance-backdrop {
@@ -400,11 +510,11 @@ site-search {
   align-items: center;
   justify-content: center;
 
-  width: var(--logo-size);
-  height: var(--logo-size);
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
   border-radius: 50%;
 
-  color: var(--text-muted);
+  color: var(--icon-color);
   text-decoration: none;
   cursor: pointer;
   transition: color var(--transition-duration) ease;
@@ -412,7 +522,7 @@ site-search {
 
 .site-search__trigger:hover,
 .site-search__trigger:focus-visible {
-  color: var(--text);
+  color: var(--icon-color-hover);
   text-decoration: none;
 }
 

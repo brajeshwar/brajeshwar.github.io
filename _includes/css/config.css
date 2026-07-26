@@ -178,7 +178,22 @@
   --border-size           : 1px;
   --border-size-small     : 3px;
 
-  --logo-size             : 42px;
+  /* Logo. Came down from 42px on 2026-07-27 to hold its proportion against the
+     tool icons, which dropped 42 → 32 in the same pass. --logo-inset is the
+     padding that keeps the glyph inside its circular hover fill; it scales with
+     the size at each breakpoint. */
+  --logo-size             : 34px;
+  --logo-inset            : 2px;
+
+  /* Header tool icons (search, RSS, appearance). Deliberately SEPARATE from
+     --logo-size, which they used to share — shrinking the icons via that token
+     would have shrunk the logo with them. 32px keeps the hit area clear of the
+     WCAG 2.2 24x24 minimum while reading much quieter than the old 42px.
+     The glyph files are authored at 20px; --icon-glyph-size overrides that.
+     Both are re-declared smaller on `header` at the narrow breakpoint, and
+     inheritance carries the new values down. */
+  --icon-button-size      : 32px;
+  --icon-glyph-size       : 17px;
 
   --image-width-max       : var(--body-width-medium);
 
