@@ -29,17 +29,23 @@ styles: styles-posts.html
     article above it stayed at the measure.
   {%- endcomment -%}
   {%- if page.previous.url or page.next.url -%}
+  {%- comment -%}
+    The links are direct children of the nav — no wrapper divs. That is what
+    lets a lone Prev or Next take the full width (flex: 1 on one item) and
+    what makes the divider `a + a`, i.e. drawn only when there are two.
+    The old markup emitted an empty <div> for the missing side, so the first
+    and last posts left half the bar blank.
+
+    The arrow is its own <span> so it can move on hover independently of
+    the label.
+  {%- endcomment -%}
   <nav class="post-nav container-ideal">
-    <div class="post-nav__prev">
-      {%- if page.previous.url -%}
-      <a href="{{ page.previous.url }}" class="post-nav__prev" title="{{ page.previous.title }}"> ← Prev</a>
-      {%- endif -%}
-    </div>
-    <div class="post-nav__next">
-      {%- if page.next.url -%}
-      <a href="{{ page.next.url }}" class="post-nav__next" title="{{ page.next.title }}">Next → </a>
-      {%- endif -%}
-    </div>
+    {%- if page.previous.url -%}
+    <a href="{{ page.previous.url }}" class="post-nav__link post-nav__prev" title="{{ page.previous.title }}"><span class="post-nav__arrow" aria-hidden="true">&larr;</span> Prev</a>
+    {%- endif -%}
+    {%- if page.next.url -%}
+    <a href="{{ page.next.url }}" class="post-nav__link post-nav__next" title="{{ page.next.title }}">Next <span class="post-nav__arrow" aria-hidden="true">&rarr;</span></a>
+    {%- endif -%}
   </nav>
   {%- endif -%}
 

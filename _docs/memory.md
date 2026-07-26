@@ -517,6 +517,37 @@ same `_site`, so they overwrite each other and local measurements flip depending
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
 
+### Post nav: flush edges, a divider, and an alignment bug that predated it (2026-07-27)
+Brajeshwar: *"the navigation of PREV and NEXT needs to be flushed left and right… hover where
+the background color changes… a vertical separator bar when it has both… the ones with NEXT or
+PREV should have the full width… move the arrow a bit to the left or right in hover."*
+
+All five done, and the markup changed to make three of them fall out rather than be special-cased:
+
+- **Wrapper `<div>`s gone.** The links are direct children of the nav now. The old markup
+  emitted an empty `<div>` for the missing side, so on the **first and last posts** — the only
+  two with a single link — half the bar sat visibly blank.
+- **flex + `flex: 1`, not `grid-template-columns: repeat(2, 1fr)`.** The grid always reserved two
+  equal tracks. With flex, one child takes the whole width and two split it, no special case.
+- **The divider is `a + a`.** It cannot match a lone child, so the single-link posts get an
+  unbroken bar without a rule of their own.
+- **Flush** via `justify-content: flex-start / flex-end`, and the arrow is its own `<span>` so it
+  can `translateX(±0.25em)` on hover without reflowing the label. Transform only; the global
+  reduced-motion block zeroes the duration.
+- **Hover** mixes 8% of the foreground INTO the bar's own background rather than into
+  `transparent`, so the hovered half reads as a solid step rather than a translucent patch.
+  Verified it differs from the bar in both modes: light 0.922 → 0.860, dark 0.269 → 0.326.
+
+⚠️ **The bar had never been aligned with the article it belongs to.** `.post-nav` carried
+`margin: var(--space-l) auto` while also wearing `.container-ideal`, whose whole job is
+`margin-inline: 0 auto`. post.css loads after base.css at equal specificity, so `auto` won and
+the nav was **centred while the article was left-aligned — measured 179px out of step**. Fixed
+with `margin-block`, setting only the axis this rule has business setting.
+
+**This is the third time this session that a `margin` shorthand has silently cancelled
+`.container-ideal`'s `margin-inline`.** The pattern is now: in any rule that also wears
+`.container-ideal`, use `margin-block`, never the shorthand.
+
 ### The five highest-value items, plus the tidies (2026-07-27)
 Brajeshwar: *"Do all of the Highest Values (1 to 5). Git commit for each of them meaningful
 feature completion."* Nine commits. **Three of the five turned out to be misfiled**, which is

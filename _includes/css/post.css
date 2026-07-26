@@ -76,42 +76,88 @@ photo-cover__desc {
 }
 
 
-/* post navigation */
+/* ---- Post navigation: previous / next ---------------------------
+   One bar under the article. Prev sits hard left, Next hard right, and
+   whichever exists fills the width it is given.
+
+   flex + `flex: 1`, not a 2-column grid (changed 2026-07-27). The grid
+   always reserved two equal tracks, so the FIRST and LAST posts — the only
+   ones with a single link — left half the bar visibly empty. With flex,
+   one child takes all of it and two split it, with no special case to
+   write. It is also what makes the divider possible: `a + a` matches only
+   when there are two, so the rule is self-limiting.
+   ------------------------------------------------------------------ */
 .post-nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  
+  display: flex;
+
+  /* margin-BLOCK, not the `margin: X auto` shorthand this used to carry.
+     The nav also wears .container-ideal, whose whole job is
+     `margin-inline: 0 auto` — left-aligned in the band. A shorthand here
+     sets margin-left too, and post.css loads after base.css at equal
+     specificity, so `auto` won and the bar was CENTRED while the article
+     above it was left-aligned: measured 179px out of step with the prose it
+     belongs to. Same trap as the one logged for `.post { margin: X 0 }`.
+     Set only the axis this rule has business setting. */
+  margin-block: var(--space-l);
   padding: 0;
-  margin: var(--space-l) auto;
+
   background: var(--bg-color-low);
   border-radius: var(--border-radius-larger);
+  overflow: hidden;                 /* clips each half's hover to the round ends */
 
-  font-size: smaller;
+  font-size: var(--step--1);
   text-transform: uppercase;
 }
 
-.post-nav a {
-  display: block;
-  padding: var(--space-smaller) var(--space);
+.post-nav__link {
+  flex: 1;                          /* alone → full width; together → half each */
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+
+  padding: var(--space-2xs) var(--space-s);
   text-decoration: none;
   color: var(--text-color-low);
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
 }
 
-.post-nav a:hover, .post-nav a:active {
+/* Flush to the outer edges: Prev opens the bar, Next closes it. */
+.post-nav__prev { justify-content: flex-start; }
+.post-nav__next { justify-content: flex-end; }
+
+/* The divider, drawn ONLY when both links are present — `a + a` cannot
+   match a lone child, so the first and last posts get an unbroken bar
+   without a rule of their own. */
+.post-nav__link + .post-nav__link {
+  border-left: var(--border-size) var(--border-style) var(--border-color);
+}
+
+.post-nav__link:hover,
+.post-nav__link:focus-visible {
   color: var(--text-color-higher);
-  background: var(--bg-color);
+  /* Mixed INTO the bar's own background rather than into `transparent`, so
+     the half being hovered reads as a solid step up from the bar instead of
+     a translucent patch over the page. */
+  background-color: color-mix(in oklch, var(--text-color) 8%, var(--bg-color-low));
+  text-decoration: none;
 }
 
+/* The arrow leans the way it points, and only on hover — a small,
+   direction-carrying motion rather than decoration. Transform only, so it
+   never reflows the label beside it. Suppressed under
+   prefers-reduced-motion by the global block in base.css, which zeroes
+   transition-duration. */
+.post-nav__arrow {
+  display: inline-block;
+  transition: transform var(--transition-duration) ease;
+}
 
-.post-nav__prev a {
-  border-top-left-radius: var(--border-radius-larger);
-  border-bottom-left-radius: var(--border-radius-larger);
-}
-.post-nav__next a {
-  border-top-right-radius: var(--border-radius-larger);
-  border-bottom-right-radius: var(--border-radius-larger);
-  text-align: right;
-}
+.post-nav__prev:hover .post-nav__arrow,
+.post-nav__prev:focus-visible .post-nav__arrow { transform: translateX(-0.25em); }
+
+.post-nav__next:hover .post-nav__arrow,
+.post-nav__next:focus-visible .post-nav__arrow { transform: translateX(0.25em); }
 
 
 /* ---- Syntax highlighting ---------------------------------------------------- */
