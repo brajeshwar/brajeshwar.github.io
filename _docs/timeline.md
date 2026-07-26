@@ -31,16 +31,19 @@ Two parser facts worth keeping, since they cost a test to establish:
 ```html
 <div class="timeline">
 
-  <header class="timeline-head">
-    <h1>About Brajeshwar Oinam</h1>
-    <fieldset class="timeline-filter">
-      <legend>Show</legend>            <!-- clipped: named for screen readers, not drawn -->
-      <input type="checkbox" id="track-life" checked>
-      <label for="track-life">Life</label>
-      <input type="checkbox" id="track-work" checked>
-      <label for="track-work">Work</label>
-    </fieldset>
-  </header>
+  <h1 class="timeline-title-a11y">Brajeshwar Oinam</h1>   <!-- clipped, see below -->
+
+  <div class="timeline-intro">
+    <p>The intro opens the page, and spans the full band.</p>
+  </div>
+
+  <fieldset class="timeline-filter">                      <!-- directly above what it filters -->
+    <legend>Show</legend>            <!-- clipped: named for screen readers, not drawn -->
+    <input type="checkbox" id="track-life" checked>
+    <label for="track-life">Life</label>
+    <input type="checkbox" id="track-work" checked>
+    <label for="track-work">Work</label>
+  </fieldset>
 
   <section class="timeline-period">
     <h2 class="timeline-when" id="1999-2003">1999&ndash;2003</h2>
@@ -174,13 +177,21 @@ Work track. Nothing has been built for this. When it is, the obvious home is the
 beside the toggles, shown when Work is the active view — and worth deciding then whether the
 PDF is generated from this markup or maintained separately.
 
-## Head row
+## Page opening
 
-`About` on the left, the toggles on the right, sharing a line and a bottom rule, so the
-controls read as part of the heading rather than as a separate widget. Wraps to two lines on a
-phone rather than squeezing. The `<legend>` is still there for screen readers but clipped —
-defined locally rather than reusing `base.css`'s `.visually-hidden`, which the 2026-07-19 audit
-flagged as unreferenced and a deletion candidate.
+There is no title row (removed 2026-07-27). The order is **intro → filter → timeline**:
+
+- **No visible `<h1>`.** The intro opens the page. The heading is kept **clipped** in
+  `.timeline-title-a11y` rather than deleted — a document with no heading at all leaves
+  screen-reader and search users nothing to anchor on, and the clipped copy costs no pixels.
+  Delete the element if that is not wanted.
+- **The intro spans the full band**, no measure cap. Trade-off worth knowing: ~140 characters a
+  line at 1024px, against the ~66 `design.md` targets. Fine for a short opening; re-cap it if it
+  grows.
+- **The filter sits directly above the timeline it controls**, left-aligned, no border — a
+  control belongs next to the thing it acts on. `.timeline-head` and its bottom rule are gone.
+- The `<legend>` is still there for screen readers but clipped — defined locally rather than
+  reusing `base.css`'s `.visually-hidden`, which the 2026-07-19 audit flagged as unreferenced.
 
 ## The position line (experimental — may be cut)
 

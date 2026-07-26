@@ -20,30 +20,27 @@
   --timeline-gutter: var(--space-l);     /* space the spine lives in */
 }
 
-/* ---- Head: "About" left, the toggles right, one line --------
-   The page title and the filter share a row, so the controls read
-   as part of the heading rather than as a separate widget. Wraps
-   to two lines on a phone rather than squeezing.
+/* ---- Page opening ------------------------------------------
+   There is no title row any more (2026-07-27). The intro opens the page and
+   the filter sits directly above the timeline it controls. .timeline-head and
+   its bottom border are gone with it.
+
+   The h1 is kept for the accessibility tree only — clipped, not
+   display:none, so it stays announced and indexable while taking no space. A
+   page with no heading at all gives screen-reader and search users nothing to
+   anchor on.
    ------------------------------------------------------------ */
 
-.timeline-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-2xs) var(--space-s);
-
-  margin: 0 0 var(--space-l);
-  padding: 0 0 var(--space-2xs);
-  border-bottom: var(--border-size) var(--border-style) var(--rule);
-}
-
-/* Size, weight and line-height come from base.css's shared h1–h6 rules — this
-   sets spacing only. Overriding them here is what made the timeline's headings
-   drift out of step with the rest of the site (Brajeshwar, 2026-07-27: "all Hx
-   styles should be the same"). */
-.timeline-head h1 {
-  margin: 0;
+.timeline-title-a11y {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ---- Filter ------------------------------------------------
@@ -57,8 +54,11 @@
   flex-wrap: wrap;
   gap: var(--space-2xs);
   align-items: center;
+  justify-content: flex-start;      /* left of the page */
 
-  margin: 0;
+  /* No border of any kind — the rule that used to sit under the title row went
+     with it. Space below separates it from the first period instead. */
+  margin: 0 0 var(--space-l);
   padding: 0;
   border: 0;
 }
@@ -217,12 +217,16 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::befo
   pointer-events: none;
 }
 
-/* Intro above the timeline. Outside .timeline-period on purpose, so the
+/* Intro. Opens the page, and outside .timeline-period on purpose so the
    Life/Work filter can never hide it — it introduces the whole page, not one
-   track. Held at the reading measure while the timeline below spans the band. */
+   track.
+
+   Spans the FULL content band, at Brajeshwar's request; the measure cap it
+   used to carry is gone. Worth knowing what that trades: at 1024px these lines
+   run ~140 characters against the ~66 design.md targets. Fine for a short
+   opening, worth re-capping if it ever grows into several paragraphs. */
 .timeline-intro {
-  max-width: var(--measure);
-  margin: 0 0 var(--space-l);
+  margin: 0 0 var(--space-m);
 }
 
 .timeline-intro p { margin: 0 0 var(--space-2xs); }
