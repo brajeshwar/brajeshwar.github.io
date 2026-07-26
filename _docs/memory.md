@@ -517,6 +517,45 @@ same `_site`, so they overwrite each other and local measurements flip depending
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
 
+### Nav spans the band; captions match their figures (2026-07-27)
+Brajeshwar: *"The PREV | NEXT should extend the whole width of the content. Now that our article
+contents including FIGURES are inside, make the figcaption the same width as the FIGURE
+container."*
+
+Both are the same consequence of the breakout change: things that were capped at the reading
+measure now sit next to things that span the band.
+
+- **`.post-nav` dropped `.container-ideal`.** It was held at the measure to match the article,
+  which was right while nothing in a post was wider. It is a direct child of `main` and carries
+  no width of its own, so removing the class is the whole fix — it fills the band, and its two
+  halves reach the same edges the images do.
+- **`figcaption` lost `max-width: --body-width-ideal; margin: 0 auto`.** Capped at the measure
+  and CENTRED inside its figure: invisible while every figure was column-width, wrong the moment
+  one was 1024px — the caption's rule sat inset from both edges of the image above it and lined
+  up with nothing. Now full width of its parent, so the underline always tracks the figure's own
+  edges. `photo-cover__desc` got the same treatment against `photo-cover`.
+- Removed with it: `figure.full figcaption, figure.large figcaption { padding-inline: 0 }`, which
+  was a **no-op** — the base rule already sets `padding: X 0`. It existed to compensate for the
+  centring that is now gone.
+
+⚠️ **And a real bug the breakout change exposed: sidenotes landing on top of images.**
+`sidenotes.js` dodges wide media via `collectObstacles()`, and that logic was fine — the
+*timing* was not. Images here carry no width/height attributes, so they contribute almost no
+height at first layout. Measured on `/2005/mumbai-marooned/`: the figure was **79px tall when
+the note was positioned and 675px once the image decoded**, leaving the note sitting on the
+photograph with `readyState: complete` and `img.complete === true`. `window.load` was supposed
+to cover this and can fire before a cached image has been laid out, so it was a race the page
+only usually won — and it started losing once wide media stopped spilling left and began
+extending RIGHT, into the gutter the notes live in.
+
+Fixed with a `ResizeObserver` on the **images**, not the article: placing a note changes the
+article's size, so observing the article would re-trigger the observer on its own output. An
+image's size does not depend on where a note sits, so there is no loop.
+
+⚠️ **Testing note:** `python3 -m http.server` is single-threaded and starved under a blocking
+CDP eval, so images reported `complete: false` for minutes and the page looked broken in ways
+the code was not. Use `ThreadingHTTPServer` when checking anything image-dependent.
+
 ### Breakouts extend right only, never left (2026-07-27)
 Brajeshwar: *"For images, videos and other contents inside the articles, should no longer be
 extended to the left side. No contents cannot go beyond the left container. If we are extending

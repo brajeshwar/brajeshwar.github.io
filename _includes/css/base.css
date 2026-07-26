@@ -398,9 +398,22 @@ figure img {
   width: 100%;
 }
 
+/* The caption is as wide as the figure it belongs to (Brajeshwar,
+   2026-07-27: "make the figcaption the same width as the FIGURE
+   container").
+
+   It used to be `max-width: --body-width-ideal; margin: 0 auto` — capped at
+   the reading measure and centred inside its figure. That was invisible
+   while every figure was column-width, and wrong the moment wide media
+   started breaking out to the band: a 1024px figure got a 665px caption,
+   centred, so the caption's rule sat inset from both edges of the image
+   above it and lined up with nothing.
+
+   Full width of the parent instead, so the caption's underline always
+   tracks the figure's own edges. A caption is a label for a specific
+   object, not body prose, so it takes that object's measure. */
 figcaption {
-  max-width: var(--body-width-ideal);
-  margin: 0 auto;
+  margin: 0;
   padding: var(--space-2xs) 0;
 
   font-family: var(--font-family-sans-serif);
@@ -466,9 +479,11 @@ img.full {
   max-width: 100cqi;
 }
 
-figure.full figcaption, figure.large figcaption {
-  padding-inline: 0;
-}
+/* (`figure.full figcaption, figure.large figcaption { padding-inline: 0 }`
+   was here. Removed 2026-07-27 — the base figcaption rule above already
+   sets `padding: X 0`, so the inline padding was 0 for every caption and
+   this restated it. It was there to compensate for the centring that is
+   now gone.) */
 
 
 /* ---- Cards grid ---------------------------------------------------- */

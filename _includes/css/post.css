@@ -37,10 +37,15 @@ photo-cover:has(+ photo-cover__desc) {
   margin-bottom: var(--space-3xs);
 }
 
+/* The cover's caption, treated like any other figcaption: as wide as the
+   thing it captions. It was capped at the measure and centred, which left
+   it inset from both edges of a cover that now spans the band. Kept in step
+   with photo-cover's own width above, since neither can use cqi out here. */
 photo-cover__desc {
   display: block;
-  max-width: var(--body-width-ideal);
-  margin: var(--space-2xs) auto var(--space-m) auto;
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin: var(--space-2xs) auto var(--space-m);
   padding: var(--space-2xs) 0;
   border-bottom: var(--border-size) var(--border-style) var(--border-color-low);
   
@@ -119,14 +124,19 @@ photo-cover__desc {
 .post-nav {
   display: flex;
 
-  /* margin-BLOCK, not the `margin: X auto` shorthand this used to carry.
-     The nav also wears .container-ideal, whose whole job is
-     `margin-inline: 0 auto` — left-aligned in the band. A shorthand here
-     sets margin-left too, and post.css loads after base.css at equal
-     specificity, so `auto` won and the bar was CENTRED while the article
-     above it was left-aligned: measured 179px out of step with the prose it
-     belongs to. Same trap as the one logged for `.post { margin: X 0 }`.
-     Set only the axis this rule has business setting. */
+  /* The nav spans the CONTENT BAND — it is a direct child of `main` and
+     carries no width of its own, so it fills it. It used to wear
+     .container-ideal, held at the reading measure to match the article;
+     dropped 2026-07-27, because wide media now breaks out to the band and
+     the measure is the width of the PROSE rather than of the content.
+
+     margin-BLOCK, never the `margin: X auto` shorthand. While this did wear
+     .container-ideal (`margin-inline: 0 auto`), a shorthand here set
+     margin-left too — and post.css loads after base.css at equal
+     specificity, so `auto` won and the bar was CENTRED while the article was
+     left-aligned, 179px out of step with the prose it belongs to. The class
+     is gone but the habit stays: set only the axis this rule has business
+     setting. */
   margin-block: var(--space-l);
   padding: 0;
 

@@ -24,9 +24,11 @@ styles: styles-posts.html
   </article>
 
   {%- comment -%}
-    container-ideal here too: prev/next belongs to the reading column, and
-    without it the nav would stretch to the full standard width while the
-    article above it stayed at the measure.
+    NOT container-ideal (dropped 2026-07-27). It used to be held at the
+    reading measure so it matched the article, back when nothing else in a
+    post was wider. Now that wide media breaks out to the band, the measure
+    is the width of the PROSE, not of the content — so the nav spans the band
+    like the images do, and its two halves reach the same edges they do.
   {%- endcomment -%}
   {%- if page.previous.url or page.next.url -%}
   {%- comment -%}
@@ -39,7 +41,7 @@ styles: styles-posts.html
     The arrow is its own <span> so it can move on hover independently of
     the label.
   {%- endcomment -%}
-  <nav class="post-nav container-ideal">
+  <nav class="post-nav">
     {%- if page.previous.url -%}
     <a href="{{ page.previous.url }}" class="post-nav__link post-nav__prev" title="{{ page.previous.title }}"><span class="post-nav__arrow" aria-hidden="true">&larr;</span> Prev</a>
     {%- endif -%}

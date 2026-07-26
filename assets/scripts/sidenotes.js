@@ -305,6 +305,34 @@
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(render);                     // fonts settled
     }
+
+    /* Re-place when an IMAGE changes size.
+       The two lines above are not enough. Images here carry no width/height
+       attributes, so they contribute almost no height at first layout — a
+       note placed beside one lands where the image is ABOUT to be, and then
+       the image grows underneath it. Measured on /2005/mumbai-marooned/: the
+       figure was 79px tall when the note was positioned and 675px once the
+       image decoded, leaving the note sitting on top of the picture with
+       `readyState: complete` and `img.complete === true`. `load` can fire
+       before a cached image has been laid out, so it is a race this only
+       usually won.
+
+       It matters more since 2026-07-27, when wide media stopped breaking out
+       into both margins and started extending RIGHT — straight into the
+       gutter these notes live in.
+
+       Observe the IMAGES, not the article: placing a note changes the
+       article's size, so observing the article would re-trigger this on its
+       own output. An image's size does not depend on where a note sits, so
+       there is no loop to debounce away. */
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(onResize);
+      items.forEach(function (item) {
+        Array.prototype.forEach.call(item.el.querySelectorAll('img'), function (img) {
+          ro.observe(img);
+        });
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
