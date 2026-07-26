@@ -21,6 +21,23 @@
    Atkinson Hyperlegible is the obvious candidate for a site that hands this
    much control to the reader. Subset to latin and ship woff2, not ttf. */
 
+/* Geist is the reader "Sans-Serif" font ([data-font="geist"] in config.css →
+   --font-body). Variable TTF, so one file covers every weight. Self-hosted and
+   font-display:swap, so it downloads ONLY when a reader picks Sans-Serif —
+   never on a default load. Falls back to the system sans stack while loading.
+
+   ⚠️ 169 KB, unsubsetted TTF. That size is exactly why Geist was dropped on
+   2026-07-19; Brajeshwar re-added the file on 2026-07-27 and asked for the
+   option back. It costs nothing unless chosen, but a subset woff2 would cut it
+   by roughly an order of magnitude — see todo.md. */
+@font-face {
+  font-family: "Geist";
+  src: url("/assets/fonts/geist/Geist-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Libre Baskerville is the reader "Serif" font ([data-font="serif"] in
    config.css → --font-body). Self-hosted, latin subset, font-display:swap
    so it downloads only when a reader picks Serif. Falls back to the system

@@ -412,7 +412,11 @@ appearance-settings {
   top: calc(100% + var(--space-2xs));
   right: 0;
 
-  width: min(90vw, 15.5rem);
+  /* Widened 15.5rem → 21rem on 2026-07-27, when every group moved to
+     label-and-options-on-one-line. "FONT  Default Sans-Serif Serif" and
+     "TEXT SIZE  A A A A A" are the two that set the floor; at 15.5rem they
+     wrapped, which is the layout the change was meant to remove. */
+  width: min(90vw, 21rem);
   max-height: 80vh;
   overflow-y: auto;
 

@@ -237,6 +237,31 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Appearance panel: Sans-Serif back, every group on one line (2026-07-27)
+- **"Sans-Serif" (Geist) restored** as a third font option. It was dropped 2026-07-19 for its
+  weight; Brajeshwar re-added the file and asked for the option back. **FOUR places must agree**
+  and all four were changed: `AXES.font.opts` in `appearance.js`, the `[data-font="geist"]` rule
+  in `config.css`, the `@font-face` in `themes.css`, and the **no-flash whitelist in
+  `default.html`** — miss that last one and picking Sans-Serif flashes the default font on every
+  load. The comment there already warned about this; it is now cross-referenced from the JS too.
+  Verified end to end: attribute set, value stored, `--font-body` resolves to Geist, and
+  `document.fonts` reports the face loaded.
+- ⚠️ The file is a **169 KB unsubsetted TTF**, which is exactly why it was dropped before. Costs
+  nothing unless chosen, but a subset woff2 would be ~10× smaller — logged in `todo.md`.
+- **Every group is now label-left / options-right on one line**, matching what Accent already
+  did: `buildEnumGroup` adds `appearance-group--inline`. The panel widened **15.5rem → 21rem**
+  because "FONT  Default Sans-Serif Serif" and "TEXT SIZE  A A A A A" wrapped at the old width —
+  which is the layout the change existed to remove. Verified all five groups inline, options on
+  a single row, nothing overflowing.
+
+⚠️ **`jekyll serve --incremental --future --livereload` is what put 2100 posts on the site.**
+Brajeshwar runs that locally, and **`--future` builds the never-publish drafts in
+`_posts/todo/`** (the 2100-dated ones) into `_site` — 1,464 posts instead of 1,456, `/2100/`
+pages, and a 27th "00" year in the archives. His watcher and any `jekyll build` here share the
+same `_site`, so they overwrite each other and local measurements flip depending on who built
+last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
+checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
+
 ### Archives: the shared century behind the strip (2026-07-27)
 Brajeshwar's idea: a bold **"2026" set BEHIND the tray**, positioned so only the **"20"** shows
 in the left margin and the "26" runs on underneath — so every 2-digit label beside it reads as

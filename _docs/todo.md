@@ -229,3 +229,8 @@ at the top of this section.
       12 KB today. Bundle per page type, mirroring how the CSS already splits. Needs a
       minifier in the workflow, which CLAUDE.md guardrail 6 was amended to permit. See
       [`javascript.md`](javascript.md).
+- [ ] **Subset Geist to woff2** *(restored 2026-07-27)*. `assets/fonts/geist/Geist-Variable.ttf`
+      is **169 KB, unsubsetted TTF** — the weight that got it dropped on 2026-07-19. It only
+      downloads when a reader picks Sans-Serif, so it costs nothing by default, but a
+      latin-subset variable woff2 would cut it by roughly an order of magnitude. Libre
+      Baskerville is already woff2 + `unicode-range` for exactly this reason; match it.

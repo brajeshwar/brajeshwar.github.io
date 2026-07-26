@@ -233,15 +233,18 @@
 }
 
 /* Reader font choice — overrides --font-body (applies to article content, not the
-   interface; see base.css). Panel labels: Default = sans (system, no webfont),
-   Serif = Libre Baskerville. Two options only — see the note in themes.css for
-   why the third ("Sans-Serif" / Geist) was dropped.
+   interface; see base.css). Panel labels:
+     Default     = the system sans stack, no webfont at all
+     Sans-Serif  = Geist (self-hosted variable TTF, see themes.css)
+     Serif       = Libre Baskerville (self-hosted woff2)
 
-   A reader who had picked Geist still has "geist" in localStorage. Nothing
-   matches it any more, so --font-body keeps its default and they simply see
-   the system stack; appearance.js validates against its own option list and
-   shows Default as active. No migration needed. */
+   Three options again as of 2026-07-27. Geist was dropped 2026-07-19 for its
+   weight and restored at Brajeshwar's request with the file re-added; anyone
+   whose localStorage still held "geist" from before simply gets it working
+   again. No migration either way — appearance.js validates against its own
+   option list and falls back to Default for anything unrecognised. */
 [data-font="sans"]  { --font-body: var(--font-sans); }
+[data-font="geist"] { --font-body: "Geist", var(--font-sans); }
 [data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); }
 
 /* Text size — Kindle-style. Multiplies the type scale for ALL content inside

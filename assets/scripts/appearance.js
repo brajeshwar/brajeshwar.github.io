@@ -19,10 +19,14 @@
     palette:  { key: 'palette',  def: 'default', attr: 'palette',
                 opts: [['default','Default'], ['nord','Cool'], ['eink','Warm']] },
     font:     { key: 'font',     def: 'sans',    attr: 'font',
-                // Two options by design; 'geist' was removed 2026-07-19. read()
-                // validates against this list, so a reader with the old value
-                // stored falls back to 'sans' with no migration step.
-                opts: [['sans','Default'], ['serif','Serif']] },
+                // 'geist' was dropped 2026-07-19 for its weight and restored
+                // 2026-07-27 at Brajeshwar's request, with the file re-added.
+                // read() validates against this list, so any stale stored value
+                // falls back to 'sans' with no migration step.
+                // ⚠️ FOUR places must agree for a font option: this list, the
+                // [data-font] rule in config.css, the @font-face in themes.css,
+                // and the no-flash whitelist in _layouts/default.html.
+                opts: [['sans','Default'], ['geist','Sans-Serif'], ['serif','Serif']] },
     textsize: { key: 'textsize', def: 'm',       attr: 'textSize',
                 opts: [['xs','A'], ['s','A'], ['m','A'], ['l','A'], ['xl','A']] }
   };
@@ -95,6 +99,7 @@
   function buildEnumGroup(axis, label) {
     var a = AXES[axis], current = read(axis);
     var g = makeGroup(label, 'appearance-' + axis + '-label');
+    g.group.classList.add('appearance-group--inline');   // label + options on one line
 
     var opts = document.createElement('div');
     opts.className = 'appearance-options appearance-options--' + axis;
