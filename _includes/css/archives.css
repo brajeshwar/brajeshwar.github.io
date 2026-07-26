@@ -35,15 +35,23 @@
 }
 
 /* ---- The shared century -------------------------------------
-   A big "2026" set behind the tray. Its centre sits on the tray's LEFT EDGE,
-   so the first two digits fall outside in the margin and the last two run on
-   underneath — the tray's opaque background does the hiding. What is left is a
-   large "20" reading as the common prefix for every 2-digit label beside it:
-   20|26, 20|25, 20|24.
+   A big "20" set in the margin to the left of the tray, reading as the common
+   prefix for every 2-digit label beside it: 20|26, 20|25, 20|24.
 
-   The halving is exact because the face is monospaced with tabular figures, so
-   all four digits are the same width and translateX(-50%) lands precisely
-   between the second and third.
+   ⚠️ It used to be the whole "2026", centred on the tray's LEFT EDGE so that
+   the opaque tray hid the second half. That looked identical but could not be
+   spaced: the four digits are one string, so nudging it left to open a gap
+   beside the "0" dragged the "2" of "26" out into the margin with it.
+
+   Measured, at 36px with -0.02em tracking: the "0" ink ended at 242.14 and the
+   next digit's ink began at 242.49 — 0.35px apart, and the tray edge was at
+   244, so 1.51px of that third digit was already showing. THAT was what read
+   as the "20" touching the tray, not the "0" being clipped. No translate could
+   fix it; 0.35px was the most daylight any cut line could yield.
+
+   So the markup now emits only the two digits that were ever visible (Liquid
+   `slice: 0, 2`) and this positions by the RIGHT EDGE. The gap is now just a
+   margin — say what you want and get it.
 
    Quiet on purpose — it is a wayfinding device, not content, and it sits
    behind the thing people actually click.
@@ -51,12 +59,16 @@
 .archive-century {
   position: absolute;
   top: 50%;
-  left: 0;
-  /* The extra -1px is a hairline of daylight between the visible "20" and the
-     tray's edge. Dead flush, the glyph and the border touched and read as one
-     shape; a single pixel separates them without breaking the illusion that
-     the rest of the number continues underneath. */
-  transform: translate(calc(-50% - 1px), -50%);
+
+  /* Right edge meets the tray's left edge (the strip is the containing block
+     and the tray fills it), then back off for the daylight Brajeshwar asked
+     for: "at-least 1px of space with the year container". 2px of box margin
+     renders as ~2.9px of visible gap, because the italic "0" carries a little
+     right side bearing of its own. */
+  right: 100%;
+  margin-right: 2px;
+
+  transform: translateY(-50%);
   z-index: 0;                       /* under .archive-years (z-index 1) */
 
   font-family: var(--font-family-monospace);
@@ -83,11 +95,13 @@
   user-select: none;
 }
 
-/* Only where the margin can hold the visible half. The band caps at
-   --body-width-max, so the margin is (100vw − band) / 2; half of a ~3.25rem
-   four-digit mono string is roughly 60px, and it needs to clear that without
-   colliding with the viewport edge. Below this the mark is simply not drawn —
-   the labels still work, they just lose the flourish. */
+/* Only where the margin can hold the mark. The band caps at --body-width-max,
+   so the margin is (100vw − band) / 2, and the mark needs ~44px of it (42px of
+   "20" plus the 2px gap) without colliding with the viewport edge. Unchanged
+   by the four-digits-to-two switch above: the string got shorter, but what it
+   occupies in the margin is the same two digits it always showed. Below this
+   the mark is simply not drawn — the labels still work, they just lose the
+   flourish. */
 @media (max-width: 1250px) {
   .archive-century { display: none; }
 }
@@ -133,9 +147,11 @@
 
   /* Subdued at rest — the scrubber is a wayfinding aid, not the content.
      --text-color-low (--color-fg-muted), not --text-color-lower
-     (--color-fg-subtle): fg-subtle measures 4.49:1 in eink-light, and these
-     are small, so AA wants 4.5:1. Contrast is checked against the STRIP's
-     background, which is not the page background. */
+     (--color-fg-subtle): fg-subtle used to measure 4.49:1 in Warm-light, and
+     these are small, so AA wants 4.5:1. (Warm became Flexoki on 2026-07-27 and
+     its fg-subtle is now 4.97:1, so that particular near-miss is gone — but
+     fg-muted is still the right tier for a control, so this stands.) Contrast
+     is checked against the STRIP's background, not the page background. */
   color: var(--text-color-low);
   transition: color 0.12s ease, background-color 0.12s ease;
 }
@@ -267,8 +283,36 @@ page-archives table:last-child tr:last-child td:last-child {
   border-bottom-right-radius: var(--border-radius);
 }
 
+/* The date column — "JUL 07", always on one line, at any text size.
+   ------------------------------------------------------------
+   It was `width: 5rem`, and that broke on 2026-07-27 when the base font-size
+   went up. `rem` is the ROOT font size, and the reader's Text Size axis never
+   touches the root — it scales `--step-*`. So the text in the cell grew while
+   the box holding it did not. Measured against the old 60px content box:
+   XS had 8.8px to spare, M was already at −0.2px, XL was 9.2px over. Hence the
+   two squashed lines.
+
+   ⚠️ The obvious fixes do not work here, because `base.css` sets
+   `table { table-layout: fixed }`. Under fixed layout the specified width is
+   used LITERALLY — a cell's content is never consulted, so neither
+   `width: auto` (which just split the table 50/50, giving the date 510px) nor
+   the `width: 1%` + `nowrap` shrink-to-fit idiom (which gave it 10px and let
+   the date overflow across the title) does anything useful. Fixed layout means
+   an explicit number; the only question is what unit.
+
+   `ch` is that unit. It resolves against the ELEMENT'S OWN font, which is
+   `smaller` of whatever the reader has chosen, so the column tracks the text
+   automatically — and because this cell is monospaced, 1ch is exactly one
+   character. "MMM DD" is 6, so 6ch fits to the pixel at every step (measured:
+   slack 0.0 at XS, M and XL alike). The extra half-character is deliberate
+   slack against sub-pixel rounding; it costs 4–6px and never grows.
+
+   `box-sizing: border-box` is global, so the padding has to be added back in
+   or it would eat into the 6.5ch. */
 page-archives table tr td:first-child {
-  width: 5rem;
+  width: calc(6.5ch + 2 * var(--space-2xs));
+  white-space: nowrap;
+
   font-family: var(--font-family-monospace);
   font-size: smaller;
   text-transform: uppercase;
