@@ -6,6 +6,36 @@
    last-edited stamp is the first thing to need it.
    ============================================================ */
 
+/* ---- Prose measure -----------------------------------------
+   Pages fill the standard site width now (page.html no longer wraps the
+   article in .container-ideal). That is right for a grid, a table or a
+   gallery, and wrong for a paragraph — 1024px of text is ~150 characters a
+   line, against the ~66 design.md asks for.
+
+   So the cap moved from the CONTAINER to the TEXT. Block-level prose is held
+   at --measure; anything structural — .item__cards grids, tables, figures,
+   full-bleed images — is deliberately absent from this list and spans the
+   band.
+
+   Left-aligned, not centred, matching how articles sit in the band, so every
+   page's text starts on the same line as the header and footer rules.
+   ------------------------------------------------------------ */
+.page-prose-measure,
+main > article > p,
+main > article > ul:not(.item__cards),
+main > article > ol,
+main > article > blockquote,
+main > article > dl,
+main > article > h1,
+main > article > h2,
+main > article > h3,
+main > article > h4,
+main > article > h5,
+main > article > h6 {
+  max-width: var(--measure);
+  margin-inline: 0 auto;
+}
+
 /* Opt-in last-edited stamp. Pages carry no date of their own the way posts
    do, so `edited:` in a page's front matter is how one gets stated. The
    layout renders nothing at all when the key is absent, so this styles a

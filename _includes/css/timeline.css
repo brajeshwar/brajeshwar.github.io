@@ -217,6 +217,17 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::befo
   pointer-events: none;
 }
 
+/* Intro above the timeline. Outside .timeline-period on purpose, so the
+   Life/Work filter can never hide it — it introduces the whole page, not one
+   track. Held at the reading measure while the timeline below spans the band. */
+.timeline-intro {
+  max-width: var(--measure);
+  margin: 0 0 var(--space-l);
+}
+
+.timeline-intro p { margin: 0 0 var(--space-2xs); }
+.timeline-intro p:last-child { margin-bottom: 0; }
+
 /* ---- Periods and the spine ---------------------------------
    The spine is a border on the entry list, not a pseudo-element
    on the container, so it starts and stops with the entries —

@@ -39,35 +39,40 @@ Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → 
 - **"Libre Baskerville"** (`assets/fonts/libre-baskerville/*.woff2`, latin subset,
   regular/italic/bold, `size-adjust: 98.5%`) — **the reader "Serif" font** (`[data-font="serif"]`),
   with the system serif stack as its fallback while loading / on failure.
-Libre Baskerville is the **only** webfont. Inter was removed earlier; Geist followed on
-2026-07-19 (see below).
+- **"Geist"** (`assets/fonts/geist/Geist-Variable.ttf`) — **the reader "Sans-Serif" font**
+  (`[data-font="geist"]`), a variable TTF so one file covers every weight, falling back to the
+  system sans stack.
 
-### The `[data-font]` axis — two panel choices
+Two webfonts, both optional. Inter was removed earlier.
+
+### The `[data-font]` axis — three panel choices
 The panel labels map to values: **Default** = `sans` (system stack, **no webfont**, fast),
-**Serif** = `serif` (Libre Baskerville).
+**Sans-Serif** = `geist`, **Serif** = `serif` (Libre Baskerville).
 ```css
 /* config.css */
 :root { --font-body: var(--font-sans); }   /* Default — no attribute, system sans */
 [data-font="sans"]  { --font-body: var(--font-sans); }
+[data-font="geist"] { --font-body: "Geist", var(--font-sans); }              /* "Sans-Serif" */
 [data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); } /* "Serif" */
 ```
 
-**Why two, not three** *(2026-07-19)*. The third option was "Sans-Serif" = Geist. Two problems:
-it is a neo-grotesque, so it sat very close to the system stack it was offering an alternative
-*to* — a reader picking it barely saw a change — and it shipped as a **165 KB unsubsetted
-`.ttf`**, the heaviest asset on the site, against 84 KB of woff2 for all three Libre Baskerville
-styles. Two options that genuinely differ beat three where one is a near-duplicate. It also
-matches the standing advice already in `config.css`: *"Resist the temptation to use custom fonts."*
+**Geist: dropped 2026-07-19, restored 2026-07-27.** It was removed as a near-duplicate of the
+system stack shipping as a **169 KB unsubsetted `.ttf`** — the heaviest asset on the site,
+against 84 KB of woff2 for all three Libre Baskerville styles. Brajeshwar re-added the file and
+asked for the option back, so the reasoning is recorded rather than deleted: **the size
+objection still stands**, and subsetting it to woff2 is an open task in
+[`todo.md`](todo.md). It costs nothing unless a reader picks it.
 
-If a third option is ever wanted, pick one the system stack **cannot** provide —
-**Atkinson Hyperlegible** is the natural candidate for a site that hands readers this much
-control. Subset to latin, ship woff2, never raw ttf.
+⚠️ **FOUR places must agree for any font option**, and missing the last one is the quiet failure:
+1. `AXES.font.opts` — `assets/scripts/appearance.js`
+2. the `[data-font="…"]` rule — `config.css`
+3. the `@font-face` — `themes.css`
+4. **the no-flash whitelist** — `_layouts/default.html`. Without it the choice is not applied
+   before first paint, so the page flashes the default font on every load.
 
-**Stale preferences need no migration.** A reader who had chosen Geist still has `"geist"` in
-`localStorage`. `read()` in `appearance.js` validates against its own option list and falls back
-to `sans`; the no-flash snippet in `default.html` whitelists `'serif'` rather than passing
-through anything that isn't `'sans'`, so no orphan `data-font` lands on `<html>`. Verified in
-browser with a stale value set.
+**Stale preferences need no migration either way.** `read()` in `appearance.js` validates against
+its own option list and falls back to `sans`, so a value no longer offered is simply ignored —
+which is why removing and restoring Geist required no migration step in either direction.
 
 ### Text size (Kindle-style) — `[data-text-size]`
 Five "A" buttons in the appearance panel, growing left → right, default in the middle. Sets
@@ -595,3 +600,38 @@ Measure with:
 
     ruby -rzlib -e 'c=File.read(ARGV[0]); s=c.scan(/<style[^>]*>(.*?)<\/style>/m).flatten.join; \
       puts "raw #{s.bytesize} gzip #{Zlib::Deflate.deflate(s,9).bytesize}"' _site/index.html
+
+---
+
+# 6. Layout patterns
+
+Brajeshwar, 2026-07-27: *"There is a pattern of layout templates forming."* He is right, and
+naming them is what stops the next page inventing a sixth:
+
+| Pattern | Pages | How |
+|---|---|---|
+| **Reading** | posts, prose pages | `main` at the site width; prose capped at `--measure` |
+| **Timeline** | `/about/`, `/now/` | year/period heading, spine, dots, entries |
+| **Album** | `/film/`, `/devices/` | fluid `ul.item__cards` thumbnail grid |
+| **Listing** | `/archives/` | dense rows + the year scrubber |
+
+**Timeline is a shared look with no shared file.** `/about/` uses `timeline.css` on hand-written
+markup; `/now/` uses `now.css` on what kramdown emits from `now/*.md`. The rules are deliberate
+copies — both are tier-2 bundles never loaded together, so sharing means promoting to
+`base.css` and charging ~1,456 pages for two. **Keep them in step.** If a third page ever wants
+the timeline, that is the point to extract a real layout instead.
+
+**Album is available to any page.** The grid (`ul.item__cards`) lives in `base.css`; the card
+treatment is `album.css`, loaded by `_layouts/album.html`. To give a page thumbnails: switch it
+to `layout: album` and emit `<ul class="item__cards">`. `/books/`, `/photos/` and `/wear/` are
+candidates when they have images — none has thumbnail data yet, so none was converted.
+
+## Every page fills the band
+
+`page.html` no longer wraps content in `.container-ideal` (2026-07-27). Prose is held at the
+measure by `page.css` capping the TEXT elements instead, so a grid, table or gallery spans the
+full width while paragraphs keep ~66 characters. Structural elements are deliberately absent
+from that selector list — that is how a page opts into full width: use something that isn't a
+paragraph.
+
+`full: true` in a page's front matter is now inert; the branch it selected is gone.

@@ -6,19 +6,16 @@ styles: styles-pages.html
 {%- comment -%}
   Merged 2026-07-19: page.html + page-full.html are one layout now.
 
-  `main` is always the ONE standard site width (base.css). What `full:` picks
-  is what happens INSIDE it:
+  EVERY page now fills the standard site width. The `full:` branch is gone
+  (2026-07-27, Brajeshwar: "for all pages, content should extend the full width
+  of the body content area"), because there is nothing left for it to switch —
+  wrapping the article in .container-ideal is what used to hold prose pages at
+  665px inside a 1024px band, and that was the inconsistency.
 
-    default      prose capped at the reading measure (.container-ideal on the
-                 <article>), centred — 22 pages rely on this: about's prose
-                 ancestors, books, contact, blogroll, styleguide, 404, …
-    full: true   content fills the standard width — for pages that lay
-                 themselves out, like /about/'s timeline.
-
-  ⚠️ `full:` no longer means "full-bleed". It did when `main` was unbounded;
-  `main` is capped at --body-width-max now, so `full: true` gets the standard
-  band, not the viewport. Renamed in spirit, not in key, because the key has a
-  user (about.html). See _docs/styles.md §5.
+  Prose is still readable: page.css caps the TEXT elements at --measure rather
+  than caging the whole article. So a grid, a table or a gallery spans the band
+  while paragraphs keep their ~66 characters. `full: true` left in a page's
+  front matter is now simply inert.
 {%- endcomment -%}
 
 {%- comment -%}
@@ -42,16 +39,9 @@ styles: styles-pages.html
 {%- endif -%}
 {%- endcapture -%}
 
-{% if page.full %}
 <main role="main" class="{{ page.style }}">
-  {{ content }}
-  {{ page_edited }}
-</main>
-{% else %}
-<main role="main" class="{{ page.style }}">
-  <article class="container-ideal">
+  <article>
     {{ content }}
     {{ page_edited }}
   </article>
 </main>
-{% endif %}

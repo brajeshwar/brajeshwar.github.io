@@ -1,16 +1,13 @@
 ---
 layout: page
-title: About Brajeshwar Oinam
+title: Brajeshwar Oinam
 permalink: /about/
 styles: css/timeline.css
 full: true
-edited: 2026-07-27
+edited: 2026-07-07
 ---
 
 <!--
-  The /about/ storyline. Replaced the prose about.md on 2026-07-27; Brajeshwar
-  archived the old page, and its deletion is in this repo's history.
-
   Order is oldest-first, following the note the old page carried at its foot:
   "Do this more like a timeline story, from top to bottom, with years and
   details." (The CV at cv.brajeshwar.com runs newest-first — say the word and
@@ -27,9 +24,6 @@ edited: 2026-07-27
     /about/        both tracks (default)
     /about/#work   Work only — the link to send instead of a CV
     /about/#life   Life only
-
-  `edited:` in the front matter above is the hand-maintained last-edited date;
-  bump it when the content changes.
 -->
 
 <div class="timeline">
@@ -43,7 +37,7 @@ edited: 2026-07-27
   <span class="timeline-target" id="work" aria-hidden="true"></span>
 
   <header class="timeline-head">
-    <h1>About Brajeshwar Oinam</h1>
+    <h1>{{ page.title }}</h1>
 
     <fieldset class="timeline-filter">
       <legend>Show</legend>
@@ -55,6 +49,18 @@ edited: 2026-07-27
       <label for="track-work">Work</label>
     </fieldset>
   </header>
+
+  {%- comment -%}
+    Intro — Brajeshwar's to write. Sits above the timeline and outside it, so
+    the Life/Work filter never hides it. .timeline-intro holds it at the
+    reading measure; the timeline below spans the full band.
+  {%- endcomment -%}
+  <div class="timeline-intro">
+    <p>A quick introduction goes here &mdash; replace this paragraph.
+      The domain <code>brajeshwar.com</code> was
+      <a href="/about/brajeshwar.com/">registered on Jun 11, 2001</a>, and there is
+      a longer story behind it.</p>
+  </div>
 
   <section class="timeline-period">
     <h2 class="timeline-when" id="childhood">Childhood, school and college</h2>

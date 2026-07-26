@@ -237,6 +237,29 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Pages fill the band; the card grid goes fluid (2026-07-27)
+- **`/about/` gained an intro slot** above the timeline and outside `.timeline-period`, so the
+  Life/Work filter can never hide it — verified visible under both filters. Placeholder text
+  and the `/about/brajeshwar.com/` link are there for Brajeshwar to replace.
+- **Every page fills the standard band.** `page.html`'s `.container-ideal` wrapper is gone —
+  that was what held prose pages at 665px inside a 1024px band. `page.css` now caps the TEXT
+  elements at `--measure` instead, so a grid or table spans the width while paragraphs keep
+  ~66 characters. Verified on `/books/`: article 1024, prose 665, left-aligned, **content
+  untouched** (he asked for his text to be left alone). **`full: true` is now inert.**
+- **`ul.item__cards` is a fluid grid**, was `flex-flow: row wrap` with a fixed 220px card cap —
+  which packed left and left a ragged gap that grew with the window.
+  `repeat(auto-fill, minmax(var(--card-min), 1fr))` now. Verified on `/film/`: 5 equal 193px
+  columns spanning exactly 1024px, images filling their cards.
+  ⚠️ **auto-fill, NOT auto-fit** — auto-fit collapses empty tracks, so a two-item section would
+  stretch across the whole band. The archives strip wants exactly the opposite and uses
+  auto-fit; the difference is whether a short row should fill or stay card-sized.
+- Card density is now one knob, `--card-min` (11rem, 8rem on phones), not a max-width per card.
+- **Layout patterns are named in [`styles.md`](styles.md) §6** — reading, timeline, album,
+  listing — with the rule that timeline is a shared *look* with no shared file, and that a
+  third timeline page is the trigger to extract a real layout.
+- `/books/`, `/photos/`, `/wear/` were **not** converted: none has thumbnail data yet, and
+  Brajeshwar explicitly asked that `/books/` text not be replaced.
+
 ### Headings follow the ONE shared scale (2026-07-27)
 Brajeshwar: *"we already have a common style for all titles … all Hx styles should be the
 same."* He was right — `base.css` has defined it all along: `h1`–`h6` at

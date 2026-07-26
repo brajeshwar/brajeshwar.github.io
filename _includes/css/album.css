@@ -14,14 +14,21 @@
    (.page-film, .page-devices) rather than forking the layout.
    ============================================================ */
 
-.album .item__cards li {
-  max-width: 220px;
+/* No max-width on the card any more. The grid in base.css sizes the columns
+   now, and a cap here would stop them stretching to fill the band — which was
+   the whole point of going fluid. Tune the density with --card-min instead:
+   it is the minimum column width the auto-fill grid honours. */
+@media only screen and (max-width: $breakpoint-small) {
+  .album .item__cards {
+    --card-min: 8rem;                /* 128px — more, smaller cards on a phone */
+  }
 }
 
-@media only screen and (max-width: $breakpoint-small) {
-  .album .item__cards li {
-    max-width: 170px;
-  }
+/* Fill the card. The images carry width/height attributes, so the browser
+   derives the aspect ratio from them and reserves the box before the file
+   arrives — no layout shift as the grid loads. */
+.album .item__cards li img {
+  width: 100%;
 }
 
 .album .item__cards a {
