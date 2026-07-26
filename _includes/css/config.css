@@ -136,6 +136,13 @@
                                       them all to the root 16px — one consistent column everywhere. */
   --body-width-ideal      : var(--measure); /* reading column = the measure */
   --body-width-max        : 76rem; /* visual width */
+  --body-width-wide       : 80rem; /* 1280px — the desktop design target researched 2026-07-26
+                                      (see todo.md → Standardise the site width). OPT-IN via
+                                      .container-wide, for listing pages: archives now, books
+                                      and film likely next. Deliberately NOT --body-width-max,
+                                      which also sizes the header, the footer and .gallery on
+                                      every page — widening those is the site-wide change that
+                                      is still parked for discussion. */
   --body-width-medium     : 60rem; /* objects that are large but not max */
   --body-width-full       : 1600px;
 

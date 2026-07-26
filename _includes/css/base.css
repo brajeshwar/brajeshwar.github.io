@@ -67,6 +67,14 @@ main,
   max-width: var(--body-width-ideal);
 }
 
+/* Wider than the default content band, for pages that list rather than read —
+   archives today; books and film are the likely next ones. Opt-in per page, so
+   the header/footer/gallery band (--body-width-max) is untouched. A class beats
+   the bare `main` selector above on specificity, so it just wins. */
+.container-wide {
+  max-width: var(--body-width-wide);
+}
+
 /* Font scope: the reader's font (--font-body) applies to ALL content (home, pages,
    articles) via `body` above; only the header and footer (the UI chrome) are pinned
    to system sans. Sidenotes + post meta re-assert sans on top (base.css /

@@ -4,24 +4,59 @@ title: Archives
 styles: css/archives.css
 ---
 
-<main class="container-ideal">
+{%- comment -%}
+  One Liquid grouping drives both the jump-nav and the list, so they can never
+  disagree about which years exist. group_by_exp keeps site.posts' order, which
+  is newest-first, so the years come out descending with no sorting needed.
+
+  Replaced the older running-`date`-variable approach, which opened and closed
+  the <table> from two different branches of the loop and shadowed Liquid's own
+  `date` filter name with an assign.
+{%- endcomment -%}
+{%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+
+{%- comment -%}
+  container-wide, not container-ideal: this page lists, it doesn't read, so the
+  665px measure only cramped it. 80rem/1280px is the desktop target researched
+  2026-07-26. The scrubber is a real grid column here rather than something
+  floated in the viewport margin — at 1280px wide there IS no margin left to
+  put it in.
+{%- endcomment -%}
+<main class="container-wide archives-layout">
+
+  {%- comment -%}
+    Sticky year jump-nav. The anchors are the <caption> ids below — those already
+    existed, so /archives/#2024 has always worked; this just makes them reachable
+    without scrolling back to the top. Pure CSS sticky, no JS (guardrail 4).
+    pagefind-ignored: 26 bare year numbers would be noise in the index, on a page
+    that is already a list of every post title.
+  {%- endcomment -%}
+  {%- comment -%}
+    Labels are the last two digits (26, 25 … 01), iOS-Contacts style — but the
+    href and the caption id stay the FULL year, so /archives/#2024 keeps working.
+    aria-label restores the full year for screen readers, which would otherwise
+    hear "26". No ambiguity to worry about: site.posts spans 2001–2026, and the
+    2100-dated drafts in _posts/todo/ are future-dated, so Jekyll never builds
+    them into this list.
+  {%- endcomment -%}
+  <nav class="archive-years" aria-label="Jump to year" data-pagefind-ignore>
+    {%- for year in years %}
+    <a href="#{{ year.name }}" aria-label="{{ year.name }}">{{ year.name | slice: 2, 2 }}</a>
+    {%- endfor %}
+  </nav>
 
   <page-archives>
-    {%- for post in site.posts -%}
-    {%- assign currentdate = post.date | date: "%Y" -%}
-    {%- if currentdate != date -%}
-    {%- unless forloop.first -%}</table>{% endunless %}
+    {%- for year in years %}
     <table>
-      <caption id='{{post.date | date: "%Y"}}'>{{ currentdate }}</caption>
-      {% assign date = currentdate %}
-      {%- endif -%}
+      <caption id="{{ year.name }}">{{ year.name }}</caption>
+      {%- for post in year.items %}
       <tr>
         <td><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time></td>
-        <td><a href="{{ site.baseurl | prepend: site.url }}{{ post.url }}">{{ post.title }}</a></td>
+        <td><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
       </tr>
-    {%- if forloop.last %}
-    </table>{% endif %}
-    {% endfor %}
+      {%- endfor %}
+    </table>
+    {%- endfor %}
   </page-archives>
 
 </main>

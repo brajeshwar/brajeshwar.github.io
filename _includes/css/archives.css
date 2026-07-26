@@ -4,6 +4,160 @@
    Loaded via the styles: key in _pages/archives.html.
    ============================================================ */
 
+/* ------------------------------------------------------------
+   Year jump-nav (added 2026-07-26; left rail 2026-07-27)
+   ------------------------------------------------------------
+   Two presentations of ONE list, chosen by available space:
+
+   Wide  — a vertical rail in the left margin, iOS-Contacts index
+           style: 26, 25 … 01, a rounded pill, always on screen.
+   Narrow— the same links as a sticky horizontal strip at the top.
+
+   Why both: the rail lives in the dead space beside the centred
+   665px reading column, and that space only exists on a wide
+   viewport. On a phone the column is 96% of the screen and there
+   IS no margin, so a left rail would sit on top of the text. The
+   fallback is not a compromise; it is the only thing that fits.
+
+   CSS only in both modes — works with JS off, and :target does the
+   "you are here" mark.
+   ------------------------------------------------------------ */
+
+/* Base = the narrow/fallback presentation: sticky horizontal strip.
+   ONE ROW AT EVERY WIDTH, deliberately. Letting 26 links wrap gives
+   ~3 rows in the reading column and 5 rows at 360px (measured) — a
+   sticky bar eating half a phone viewport on every scroll, worse
+   than no nav at all. It scrolls sideways instead. */
+.archive-years {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  gap: var(--space-3xs);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+
+  /* Opaque: the list scrolls underneath this. */
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-2xs) 0;
+  margin-bottom: var(--space-2xs);
+}
+
+.archive-years a {
+  flex: 0 0 auto;
+  padding: var(--space-3xs) var(--space-2xs);
+  font-family: var(--font-family-monospace);
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums;   /* 26/25/24 line up in the rail */
+  text-decoration: none;
+  border-radius: var(--border-radius);
+
+  /* Subdued at rest — the scrubber is a wayfinding aid, not the content.
+     --text-color-low (--color-fg-muted), not --text-color-lower
+     (--color-fg-subtle): fg-subtle measures 4.49:1 in eink-light, and at
+     --step--2 these are small text, so AA wants 4.5:1. Contrast is checked
+     against the RAIL's background, which is not the page background. */
+  color: var(--text-color-low);
+  transition: color 0.12s ease, background-color 0.12s ease;
+}
+
+/* ---- Wide: the left rail -----------------------------------
+   The scrubber is a GRID COLUMN inside the page, not something
+   hung in the viewport margin. It used to be `position: fixed`
+   offset from the centred 665px column — that only worked because
+   a narrow column leaves a wide margin. At container-wide (1280px)
+   there is no margin left to hang it in, so it moved inside.
+
+   Sticky, not fixed: it scrolls with the list until it reaches the
+   top, then holds — which is also what keeps it inside its column
+   instead of floating over the page.
+
+   900px, not 1100px: the rail no longer needs viewport margin,
+   only enough container to give a ~2.5rem column plus a readable
+   list. Below that the sticky top strip takes over.
+   ------------------------------------------------------------ */
+@media (min-width: 900px) {
+  .archives-layout {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-s);
+    align-items: start;
+  }
+
+  .archive-years {
+    position: sticky;
+
+    /* Starts below where the ARTICLE ROWS begin, not level with the box.
+       Measured 2026-07-27: the list box starts at 148px, the first year
+       caption runs 149–190, and the first article row starts at 191. So the
+       rail drops past the caption to sit with the rows it indexes.
+       --space-2xl (72–80px) lands it there; --space-xl was ~10px short.
+
+       margin-top is the resting offset, top is where it parks once stuck.
+       They differ on purpose and it does NOT jump: the rail simply travels
+       up with the page until it reaches `top`, then holds. A jump would only
+       happen if top were LARGER than the resting offset. */
+    top: var(--space-m);
+    margin-top: var(--space-2xl);
+    margin-bottom: 0;
+
+    flex-direction: column;
+    gap: 0;
+    /* Vertical padding clears the rounded ends, so 26 and 01 start below where
+       the curve finishes instead of being pinched by it. Note the radius in play
+       is NOT the declared 25px: top-left + top-right (50px) exceed the ~38px
+       width, so the browser scales all radii by width/sum — about 19px here.
+       --space-s (18–20px) is the token that matches that. Re-check if the rail's
+       width or --border-radius-larger changes; the effective radius moves with
+       the width. */
+    padding: var(--space-s) 0;
+
+    /* Thin. The old rail was 47px; this trims the horizontal padding
+       to nothing and lets the tap target come from the link's own
+       min-width instead. */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-larger);
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: visible;
+
+    /* 26 rows can outgrow a short viewport; cap and scroll rather
+       than run off the bottom of the screen. */
+    max-height: calc(100vh - (2 * var(--space-m)));
+    overflow-y: auto;
+  }
+
+  .archive-years a {
+    /* Compact like the iOS index, but never below the WCAG 2.2
+       24x24 target minimum — checked in the browser, not assumed. */
+    min-width: 2.25rem;                 /* 36px — comfortably over the 24px minimum */
+    padding: var(--space-3xs) var(--space-3xs);
+    font-size: var(--step--2);
+    line-height: 1.35;
+    text-align: center;
+    /* Square: the hover background reads as a full-width band across the
+       scrubber. The pill's own radius + overflow clips the first and last. */
+    border-radius: 0;
+  }
+}
+
+/* Hover/focus: darken the text AND give it a background.
+   The background is a color-mix of the foreground into transparency rather
+   than any --bg-* token, because there is no token that differs from the
+   rail's own background in BOTH modes — --color-surface collapses onto it in
+   dark. Mixing the text colour works in every mode and palette by
+   construction, and stays monotone by default (design.md).
+   NOTE: --bg-color-high is NOT a raised background — it bridges to
+   --color-primary, the FOREGROUND. Using it here painted a near-black chip
+   under dark text. Safe background steps are --bg-color-lowest/-lower/-low. */
+.archive-years a:hover,
+.archive-years a:focus-visible {
+  color: var(--text-color-higher);
+  background-color: color-mix(in oklch, var(--text-color) 12%, transparent);
+}
+
 page-archives {
   display: block;
   margin: var(--space) auto;
@@ -36,6 +190,28 @@ page-archives table caption {
   font-weight: var(--font-weight-light);
   background: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
+
+  /* Land clear of the sticky year strip when jumped to via #YYYY, rather than
+     under it. MUST EXCEED the strip's rendered height, which is content-derived
+     (fluid padding + --step--1 line box + 1px border) and so cannot be read from
+     a token. Measured 2026-07-26 in Chrome at the 665px column: 57px. The first
+     attempt here was 3.25rem/52px and put the caption 5px *underneath* the bar —
+     verify in a browser after changing the strip's padding or font size. */
+  scroll-margin-top: 4.5rem;
+}
+
+/* "You are here" after a jump — CSS-only, no scroll-spy JS. Marks the year you
+   actually clicked, which is what the reader is looking for.
+
+   An accent rule + weight rather than a background: the caption already sits on
+   --bg-color (--color-bg-muted), and the only distinguishable background step,
+   --color-surface, collapses to the SAME value as the caption in dark mode
+   (both gray-800) — a highlight invisible in half the themes. Weight and a rule
+   read in every mode, and match design.md's "spacing and typography, not
+   decoration". inset box-shadow, not border-left, so nothing shifts by 3px. */
+page-archives table caption:target {
+  font-weight: var(--font-weight);
+  box-shadow: inset 3px 0 0 var(--accent);
 }
 
 page-archives table:first-child caption {
