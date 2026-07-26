@@ -260,8 +260,9 @@ at the top of this section.
 - [x] **`--body-width-medium` (60rem)** *(done 2026-07-27)* — folded into `--image-width-max`,
       its only reader. One token named for what it does instead of two, one of which claimed to
       be a site width and was not.
-- [ ] **`--body-width-full` (1600px)** — deliberately kept: it sizes `figure.full` / `.gallery`
-      breakouts, which are *supposed* to exceed the content band. Not a second site width.
+- [x] ~~**`--body-width-full` (1600px)**~~ — **removed 2026-07-27.** The premise no longer holds:
+      Brajeshwar's call is that nothing may exceed the band (*"so it is still within the body
+      width"*), so breakouts now stop at it and this token's only readers are gone.
 
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +

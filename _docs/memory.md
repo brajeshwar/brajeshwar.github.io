@@ -517,6 +517,46 @@ same `_site`, so they overwrite each other and local measurements flip depending
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
 
+### Breakouts extend right only, never left (2026-07-27)
+Brajeshwar: *"For images, videos and other contents inside the articles, should no longer be
+extended to the left side. No contents cannot go beyond the left container. If we are extending
+it, then we will do it to the right, so it is still within the body width."*
+
+Four breakout kinds, all in real use across the archive — `photo-cover` (72), `img/figure.full`
+(24), `img/figure.large` (58), `.gallery` (7). All did the same thing: viewport-wide, then
+re-centred, so they spilled equally into BOTH margins. On this asymmetric layout the left margin
+is the page's alignment edge — the line the prose, the header rule and the footer rule all start
+from — so spilling into it was the visible problem.
+
+**The mechanism is `100cqi`, not the old `100vw` + negative-margin + `translateX` dance.** `main`
+declares `container: main / inline-size`, so inside an article 1cqi is 1% of THE BAND. The idiom
+is two lines — `margin-inline: 0` to keep the left edge, `width: 100cqi` to grow right — with no
+viewport arithmetic, so it cannot drift when the site width changes and it does not have to know
+about scrollbars (100vw includes them, 100cqi does not).
+
+⚠️ **`photo-cover` cannot use it.** `post.html` emits it before `<main>`, so it is a `<body>`
+child with no container ancestor and cqi falls back to the viewport — exactly the full-bleed
+being removed. It is given the band's own three lines instead (`--body-width` /
+`--body-width-max` / `margin-inline: auto`), which must be kept in step with `main` by hand.
+
+⚠️ **`.post img { width: 100% }` was silently beating `img.full`.** Both are (0,1,1) and post.css
+loads after base.css, so an `img.full` measured 665px — the column — while a `figure.full` got
+the full band, because `.post img` does not match a `<figure>`. **Two authoring forms, two
+different results, no error anywhere.** Now `.post img:not(.full):not(.large)`.
+
+**That is the fourth instance this session of base.css setting geometry and post.css quietly
+overriding it** (`.post { margin }`, `.post-nav { margin }`, `.post img { width }`, plus the
+`.container-ideal` shorthand cases). The rule is now explicit in post.css: in this file, set only
+what this file has business setting, and exclude the classes base.css sizes.
+
+`--body-width-full` (1600px) is gone — its only readers were these breakouts, and nothing is
+allowed past the band any more, so a token naming a width beyond it named nothing.
+
+Verified on one post of each kind at 390 / 768 / 1024 / 1512px: left edge exactly on the band in
+every case, nothing past the band, no horizontal scroll anywhere. Sidenote collisions are already
+handled — `collectObstacles()` in sidenotes.js looks for `.full, .large, .gallery` and pushes
+overlapping notes below them; confirmed it self-corrects on `window.load` once images have height.
+
 ### Post nav: flush edges, a divider, and an alignment bug that predated it (2026-07-27)
 Brajeshwar: *"the navigation of PREV and NEXT needs to be flushed left and right… hover where
 the background color changes… a vertical separator bar when it has both… the ones with NEXT or

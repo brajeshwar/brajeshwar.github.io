@@ -162,7 +162,11 @@
 
                                       Reading width is separate and unaffected: articles cap at
                                       --body-width-ideal (the measure), not at this. */
-  --body-width-full       : 1600px;
+  /* --body-width-full (1600px) was here. Removed 2026-07-27: its only
+     readers were the figure.full and photo-cover breakouts, which now stop
+     at the content band instead of exceeding it — "so it is still within
+     the body width". Nothing is allowed to be wider than the band any
+     more, so a token naming a width beyond it named nothing. */
 
 
   /* ⚠️ SECOND spacing system — ratio-derived, predates the Utopia

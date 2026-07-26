@@ -4,15 +4,27 @@
    Loaded by _layouts/post.html via styles-posts.html.
    ============================================================ */
 
+/* The cover image, and the one breakout that CANNOT use 100cqi.
+   `_layouts/post.html` emits <photo-cover> before <main>, so it is a child
+   of <body> with no container ancestor — cqi units there fall back to the
+   viewport, which is exactly the full-bleed this is meant to stop.
+
+   So it is given the band's own measurements instead: same width, same
+   max-width, same auto inline margins as `main` in base.css. That lands it
+   on the band exactly, which means its left edge is the article's left edge
+   and its right edge is the band's. Edge-to-edge before this — it started
+   at viewport 0 while everything else on the page started at 244.
+
+   ⚠️ Keep these three lines in step with `main`. If the site width ever
+   moves, this is the one element that will not follow on its own. */
 photo-cover {
   display: block;
 
-  margin-inline: calc(50% - 50vw);
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+  margin-inline: auto;
   margin-bottom: var(--space-m);
-  width: 100vw;
-  max-width: var(--body-width-full);
   height: 600px;
-  transform: translateX(calc(50vw - 50%));
 
    background: no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -70,8 +82,25 @@ photo-cover__desc {
   font-size: var(--step--2);
 }
 
-.post img {
+/* Fill the column — EXCEPT the breakout classes, which base.css sizes to
+   the band.
+
+   The exclusion is load-bearing, not defensive. `.post img` and `img.full`
+   are both (0,1,1), and post.css loads after base.css, so a bare
+   `.post img { width: 100% }` silently won: img.full measured 665px, the
+   column width, instead of the band's 1024px — so an `img.full` did not
+   break out at all, while a `figure.full` did, because `.post img` does not
+   match a <figure>. Two authoring forms, two different results, no error.
+
+   Same class of bug as `.post { margin }` and `.post-nav { margin }` above:
+   base.css sets the geometry and post.css quietly overrides it. */
+.post img:not(.full):not(.large) {
   width: 100%;
+  height: auto;
+}
+
+.post img.full,
+.post img.large {
   height: auto;
 }
 
@@ -281,11 +310,13 @@ photo-cover__desc {
     - a UL/LI image with or without a link
     </div>
 */
+/* Right-only breakout — see the note in base.css. margin-BLOCK, because
+   the inline axis is the thing this rule must not touch. */
 .gallery {
-  margin: var(--space) calc(50% - 50vw);
-  width: 100vw;
-  max-width: var(--body-width-max);
-  transform: translateX(calc(50vw - 50%));
+  margin-block: var(--space);
+  margin-inline: 0;
+  width: 100cqi;
+  max-width: 100cqi;
 }
 
 .gallery a {

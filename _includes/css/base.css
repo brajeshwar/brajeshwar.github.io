@@ -414,24 +414,56 @@ figcaption {
    only one in use. */
 
 
+/* ---- Breaking out of the reading column -------------------------
+   THE RULE (Brajeshwar, 2026-07-27): "no contents can go beyond the left
+   container. If we are extending it, then we will do it to the right, so
+   it is still within the body width."
+
+   So a wide image keeps the article's LEFT edge — the same line the prose,
+   the header rule and the footer rule all start from — and grows to the
+   RIGHT, stopping at the content band. It never enters the left margin and
+   never exceeds the site width.
+
+   The mechanism is `100cqi`, not the old `100vw` + negative-margin +
+   translateX dance. `main` declares `container: main / inline-size`
+   (see above), so inside an article 1cqi is 1% of THE BAND — exactly the
+   box these should fill. That makes the idiom two lines:
+
+       margin-inline: 0;      keep the left edge
+       width: 100cqi;         grow right, to the band and no further
+
+   and it needs no viewport arithmetic, so it cannot drift when the site
+   width changes, and it does not have to know about scrollbars — 100vw
+   includes the scrollbar and 100cqi does not, which is why the old version
+   could overhang by a few px on Windows.
+
+   What it replaced, for the record:
+       margin-inline: calc(50% - 50vw);
+       width: 100vw;
+       transform: translateX(calc(50vw - 50%));
+   That made the element viewport-wide and re-centred it, so it spilled
+   equally into BOTH margins — including the left one, which on this
+   asymmetric layout is the page's alignment edge.
+
+   ⚠️ These now sit in the sidenote gutter. That is already handled:
+   sidenotes.js `collectObstacles()` looks for `.full, .large, .gallery`
+   and pushes any overlapping note below them.
+   ------------------------------------------------------------------ */
 @media (min-width: $breakpoint-small) {
   figure.large,
   img.large {
-  	margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    
-    width: 100vw !important;
-    max-width: var(--image-width-max);
-    transform: translateX(calc(50vw - 50%));
+    margin-inline: 0;
+    /* A middle step: wider than the measure, short of the full band. */
+    width: min(var(--image-width-max), 100cqi);
+    max-width: 100cqi;
   }
 }
 
 figure.full,
 img.full {
-  margin: 0 calc(50% - 50vw);
-  width: 100vw !important;
-  max-width: var(--body-width-full);
-  transform: translateX(calc(50vw - 50%));
+  margin-inline: 0;
+  width: 100cqi;
+  max-width: 100cqi;
 }
 
 figure.full figcaption, figure.large figcaption {
