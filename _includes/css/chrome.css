@@ -11,8 +11,14 @@ header {
      mouse trip. Centred reads tighter and the targets sit next to each other.) */
   width: var(--body-width);
   max-width: var(--body-width-max);
-  margin: 0 auto var(--space-l);      /* bottom spacing separates header from body (no rule) */
+  margin: 0 auto var(--space-l);
   padding: var(--space-s) 0;
+
+  /* Thin rule under the header, 2026-07-27. Because the rule sits on the header
+     box itself — which is already the content band — it stops at the content
+     edges rather than running to the browser edges. --rule is a 10% mix of the
+     foreground, so it stays a hairline in both modes instead of a hard line. */
+  border-bottom: var(--border-size) var(--border-style) var(--rule);
 
   display: flex;
   justify-content: center;
@@ -226,10 +232,15 @@ site-tools svg {
 
 /* ---- Footer ---------------------------------------------------- */
 
-/* Outer footer spans the full viewport width so the top rule is edge-to-edge. */
+/* The outer footer still spans the full viewport, but it no longer carries the
+   rule. Changed 2026-07-27: the top rule moved down to .footer-inner so it
+   stops at the content edges instead of running edge-to-edge, matching the new
+   header rule. (This reverses the earlier edge-to-edge decision — that is why
+   the outer element exists at all; it now only carries the spacing and the
+   muted text colour, and is kept for that plus any future full-bleed footer
+   background.) */
 footer {
   margin-top: var(--space-2xl);
-  border-top: var(--border-size) var(--border-style) var(--rule);
 
   color: var(--text-muted);
 }
@@ -240,6 +251,10 @@ footer {
   max-width: var(--body-width-max);
   margin-inline: auto;
   padding: var(--space-l) 0 var(--space-xl);
+
+  /* Rule sits here, not on <footer>, so it spans the content band and not the
+     browser width — the mirror of the header's border-bottom. */
+  border-top: var(--border-size) var(--border-style) var(--rule);
 
   text-align: center;
 }

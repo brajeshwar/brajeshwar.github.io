@@ -109,10 +109,38 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       moving them into `post.css` would break sidenotes and the foot fallback on those pages.
       They stay in `base.css`.
 
-## Standardise the site width — agreed 2026-07-26, NOT STARTED
-⏸️ **On hold by Brajeshwar** — he wants to discuss more details before any of this is built.
-Do not start it unprompted. Research and measurements are done and recorded; the decisions
-below are the open part.
+## Standardise the site width — ✅ DONE 2026-07-27
+**`--body-width-max` is 81rem / 1296px, and it is the only content width on the site.**
+Brajeshwar's call: *"Archives, and everything on the website should now run on the same
+width"*, then *"standardize at the size that encompasses the sidenotes too."* Header, footer,
+`main`, galleries and archives all measure 1296px; verified aligned on `/`, `/about/`,
+`/archives/`, `/film/` and an article.
+
+**The number is derived, not chosen.** It is the width that holds an article *and* its
+sidenotes:
+
+    --measure                                    665px
+    + 2 x (--sidenote-gap 56 + --sidenote-width 256)   624px
+    = 1289px  → rounded up to a whole 81rem (1296px)
+
+The article is centred, so the gutter has to be paid for on both sides — that doubling is the
+whole number. 1280px was 9px short of this, and measuring showed sidenotes rendering **5px
+past** the band, overhanging the new header and footer rules. `.sidenote`'s width is now
+computed against the band (`min(96vw, --body-width-max)`) rather than `100vw`, so notes clamp
+to the band exactly instead of drifting into the margin outside it — verified touching the
+edge with 0px slack at bands of 1200/1100/1000px, and 3px inside at full width.
+
+The reading column is untouched and is **not** an exception to this — articles cap at
+`--body-width-ideal` (the 66rch measure) *inside* that band, which is a reading constraint,
+not a second site width. Centres align, so nothing looks off-axis.
+
+**`--body-width-wide` and `.container-wide` are gone.** They existed for about a day, while
+this was undecided, so `/archives/` could be wide without dragging the header and footer with
+it. Once the header and footer gained rules (same day), that gap became visible: archives
+content overhung its own header rule by 32px a side. One width fixed it and deleted the
+duplication.
+
+Original research and the reasoning that produced 1280px is below, kept for the record.
 
 **The goal.** One maintained width instead of the current split. The split exists because it
 was easier to maintain by hand, not because it was designed.
@@ -144,21 +172,26 @@ desktop readers have is **1280–1536, not 1920** — and the window is narrower
 browser chrome, the scrollbar, and readers who don't maximise. (`$breakpoint-large: 1024px`
 is a *breakpoint*, a separate question from the design target; it looks fine as is.)
 
-**Partial step taken 2026-07-27:** `/archives/` now uses **`.container-wide`
-(`--body-width-wide`, 80rem/1280px)**, the researched target. This is **opt-in per page**, not
-the standardisation — `--body-width-max` (76rem) still sizes the header, footer, `.gallery`
-and every other `main`, so the site is currently running *two* content widths where it ran
-one. That is a deliberate stopgap, and it makes finishing this task more urgent, not less.
-`/books/` and `/film/` are the next candidates for the same class.
+**Superseded, kept as the trail:** for about a day on 2026-07-27, `/archives/` used an opt-in
+`.container-wide` (`--body-width-wide`) at 1280px while `--body-width-max` stayed at 76rem —
+a deliberate stopgap while the site-wide call was still open. It is gone; see the resolution
+at the top of this section.
 
-**Open, for Brajeshwar:**
-- [ ] Confirm the single container max-width (1280px, now proven on `/archives/`, vs 1216px)
-      and whether the header/footer band moves with it.
-- [ ] Go asymmetric for the sidenote gutter? Recommended — it is what unlocks 1024.
-- [ ] **Analytics.** Do we have viewport/resolution data for brajeshwar.com? A 25-year tech
-      blog's readers skew nothing like worldwide desktop share; our own numbers would settle
-      the target and make the public stats irrelevant.
-- [ ] What happens to `--body-width-medium` and `--body-width-full` — folded in, or kept?
+- [x] **Single container max-width — 1280px, applied everywhere** *(2026-07-27)*.
+- [x] **`--body-width-wide` / `.container-wide` removed** — duplication once the default moved.
+
+**Still open, and unaffected by the width decision:**
+- [ ] **Go asymmetric for the sidenote gutter?** Recommended, and now *more* valuable: the
+      centred column makes sidenotes need a 1210px viewport, and asymmetric would drop that to
+      ~970–1010px. Note the wider band does **not** help here — the sidenote gutter is measured
+      from the reading column, which is unchanged. See [`sidenotes.md`](sidenotes.md).
+- [ ] **Analytics.** Any viewport/resolution data for brajeshwar.com? A 25-year tech blog's
+      readers skew nothing like worldwide desktop share, and our own numbers would confirm (or
+      challenge) the 1280px choice with evidence rather than public averages.
+- [ ] **`--body-width-medium` (60rem)** — only read by `--image-width-max`. Either rename it to
+      say what it does or fold it in.
+- [ ] **`--body-width-full` (1600px)** — deliberately kept: it sizes `figure.full` / `.gallery`
+      breakouts, which are *supposed* to exceed the content band. Not a second site width.
 
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +

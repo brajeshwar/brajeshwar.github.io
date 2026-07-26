@@ -186,7 +186,38 @@ inheritance rather than source order. So the icons shrank while the font and pad
 and it looked half-applied rather than broken. **Media blocks must come after the rules they
 override**; the comment in `chrome.css` says so at both ends.
 
-### Next up — standardise the site width
+### Chrome rules + ONE site width (2026-07-27, browser-verified)
+- **Thin rules are back on the header and footer, at content width — not browser width.**
+  The header's `border-bottom` sits on the header box, which is already the content band, so
+  it stops at the content edges. The footer's `border-top` **moved from `<footer>` to
+  `.footer-inner`** for the same reason — that reverses the earlier "outer footer spans the
+  full viewport so the rule is edge-to-edge" decision, which is why the outer element exists;
+  it now carries only spacing and the muted colour. Both use `--rule` (a 10% foreground mix),
+  so they stay hairlines in light and dark; verified identical in both.
+- **`--body-width-max` is 81rem / 1296px, and it is the ONLY content width.** Brajeshwar:
+  *"Archives, and everything on the website should now run on the same width"*, then
+  *"standardize at the size that encompasses the sidenotes too."* Verified aligned on `/`,
+  `/about/`, `/archives/`, `/film/` and an article.
+- **The width is derived, not picked:** `--measure` (665) + 2 × (`--sidenote-gap` 56 +
+  `--sidenote-width` 256) = **1289**, rounded up to a whole 81rem. The article is centred, so
+  the gutter is paid for on *both* sides — that doubling is the number. 1280 was 9px short,
+  and measurement showed sidenotes rendering **5px past** the band, overhanging the header and
+  footer rules that had just been added. Adding those rules is what made the gap visible.
+- **`.sidenote` width now measures against the band, not `100vw`.** `min(96vw,
+  --body-width-max)` replaces `100vw`, so notes clamp to the band instead of drifting into the
+  margin outside it. Verified: 0px slack (exactly touching) at bands of 1200/1100/1000px, 3px
+  inside at full width. The token and the formula now agree by construction — change one and
+  the other still holds.
+- **`--body-width-wide` and `.container-wide` are deleted.** They lasted about a day. Adding
+  the chrome rules is what exposed the problem: with archives at 1280 and the header at 1216,
+  archives content overhung its own header rule by **32px a side**. One width removed both the
+  misalignment and the duplication.
+- The **reading column is unchanged** (665px, `--body-width-ideal`) and is not a second site
+  width — it's a reading constraint inside the band. Centres align; sidenotes still render.
+- ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
+  reading column, which didn't move. Going asymmetric is still the only lever there.
+
+### Earlier that day — standardise the site width (now resolved above)
 Brajeshwar wants **one width instead of the current two** (`container-ideal` vs the full-width
 `main`); the split exists because it was easier to maintain by hand, not because it was
 designed. **Nothing is decided or built yet.**

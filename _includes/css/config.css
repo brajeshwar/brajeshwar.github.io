@@ -135,14 +135,27 @@
                                       than the pages (16px) and .post-nav (smaller) a narrower one. rch pins
                                       them all to the root 16px — one consistent column everywhere. */
   --body-width-ideal      : var(--measure); /* reading column = the measure */
-  --body-width-max        : 76rem; /* visual width */
-  --body-width-wide       : 80rem; /* 1280px — the desktop design target researched 2026-07-26
-                                      (see todo.md → Standardise the site width). OPT-IN via
-                                      .container-wide, for listing pages: archives now, books
-                                      and film likely next. Deliberately NOT --body-width-max,
-                                      which also sizes the header, the footer and .gallery on
-                                      every page — widening those is the site-wide change that
-                                      is still parked for discussion. */
+  --body-width-max        : 81rem; /* 1296px — THE site width. One number for the whole site:
+                                      header, footer, main, galleries.
+
+                                      NOT arbitrary — it is the width that encompasses an
+                                      article AND its sidenotes:
+                                        --measure                       665px
+                                        + 2 x (--sidenote-gap 56px
+                                               + --sidenote-width 256px) 624px
+                                        = 1289px, rounded up to a whole 81rem.
+                                      The article is centred, so the gutter has to be paid for
+                                      on both sides; that doubling is what makes the number.
+
+                                      History: 76rem until 2026-07-27, then 80rem/1280px from
+                                      the desktop research (todo.md), then 81rem the same day
+                                      when measuring showed sidenotes rendered 5px PAST the
+                                      1280 band — the band did not actually contain them.
+                                      The short-lived --body-width-wide / .container-wide pair
+                                      is gone; it existed only while this was undecided.
+
+                                      Reading width is separate and unaffected: articles cap
+                                      at --body-width-ideal (the measure), not at this. */
   --body-width-medium     : 60rem; /* objects that are large but not max */
   --body-width-full       : 1600px;
 

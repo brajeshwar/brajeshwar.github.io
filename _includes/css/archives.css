@@ -68,7 +68,7 @@
    The scrubber is a GRID COLUMN inside the page, not something
    hung in the viewport margin. It used to be `position: fixed`
    offset from the centred 665px column — that only worked because
-   a narrow column leaves a wide margin. At container-wide (1280px)
+   a narrow column leaves a wide margin. At the site width (1280px)
    there is no margin left to hang it in, so it moved inside.
 
    Sticky, not fixed: it scrolls with the list until it reaches the

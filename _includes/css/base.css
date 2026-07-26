@@ -67,13 +67,11 @@ main,
   max-width: var(--body-width-ideal);
 }
 
-/* Wider than the default content band, for pages that list rather than read —
-   archives today; books and film are the likely next ones. Opt-in per page, so
-   the header/footer/gallery band (--body-width-max) is untouched. A class beats
-   the bare `main` selector above on specificity, so it just wins. */
-.container-wide {
-  max-width: var(--body-width-wide);
-}
+/* NOTE: there is no .container-wide any more. It existed for one day, while the
+   site width was still undecided, so archives could be 1280px without dragging
+   the header and footer along. --body-width-max IS 1280px now, so `main` gives
+   every page that width by default and the opt-in class was pure duplication.
+   Listing pages need no class; reading pages add .container-ideal. */
 
 /* Font scope: the reader's font (--font-body) applies to ALL content (home, pages,
    articles) via `body` above; only the header and footer (the UI chrome) are pinned
@@ -519,11 +517,16 @@ ul.item__cards li img {
 .sidenote {
   position: absolute;
   left: 100%;                     /* just past the reading column's right edge */
-  /* Fluid width: at most --sidenote-width, but never past the viewport — the
-     centered column leaves (100vw − column)/2 of right margin; keep the gap
-     plus 1rem of breathing room to the edge. 100% here = the column width. */
+  /* Fluid width: at most --sidenote-width, but never past THE CONTENT BAND.
+     Measured against the band — min(96vw, --body-width-max) — not the raw
+     viewport. 100vw let notes drift into the margin outside the band, where
+     they aligned with nothing and, at the old 1280px, overhung the header and
+     footer rules by 5px. --body-width-max is now derived to contain them
+     (measure + 2 x (gap + sidenote-width)), so the token and this agree by
+     construction. 100% here = the reading column's width. The old 1rem of
+     breathing room is gone: the band edge already sits inside the viewport. */
   width: min(var(--sidenote-width),
-             calc((100vw - 100%) / 2 - var(--sidenote-gap) - 1rem));
+             calc((min(96vw, var(--body-width-max)) - 100%) / 2 - var(--sidenote-gap)));
 
   /* reset the generic `aside {}` box treatment — sidenotes are plain margin text */
   margin: 0 0 0 var(--sidenote-gap);

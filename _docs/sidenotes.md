@@ -95,8 +95,18 @@ matching it on the unused side.
 
 **An asymmetric grid — content track plus a wider right gutter — would drop the floor to
 roughly 970–1010px.** That is the difference between the feature working on a 1024-class
-laptop and not. Not done; it is bound up with the width standardisation in
-[`todo.md`](todo.md) → *Standardise the site width*.
+laptop and not. **Still not done** — and note that the 2026-07-27 width standardisation did
+*not* change it. Widening the band to 1296px made the band *contain* the notes; it did not
+move the reading column, and the floor is set by the column being centred. Only going
+asymmetric moves it. Tracked in [`todo.md`](todo.md).
+
+**Update 2026-07-27 — the band now contains the notes.** `--body-width-max` is derived as
+`--measure + 2 × (--sidenote-gap + --sidenote-width)` = 1289px → 81rem, precisely so an
+article and its sidenotes fit inside one width. Before this, notes rendered 5px *outside* the
+band and overhung the header/footer rules. `.sidenote`'s width is measured against
+`min(96vw, --body-width-max)` rather than `100vw`, so it clamps to the band by construction —
+if you change either the measure or the sidenote tokens, re-derive `--body-width-max` or the
+notes will escape the band again.
 
 Two things to keep in step if this is ever changed: `--sidenote-min-gutter` in `config.css` is
 hand-synced with `MIN_GUTTER_REM` in `assets/scripts/sidenotes.js`, and the fluid note width
