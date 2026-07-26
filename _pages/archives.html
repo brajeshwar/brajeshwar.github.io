@@ -17,12 +17,12 @@ styles: css/archives.css
 
 {%- comment -%}
   No container class: this page lists, it doesn't read, so it takes `main`'s
-  default width — the site-wide 1280px — rather than the 665px reading measure
-  that .container-ideal would impose. The scrubber is a real grid column here
-  rather than something floated in the viewport margin; at this width there is
-  no margin left to put it in.
+  default width — the one site width — rather than the 665px reading measure
+  that .container-ideal would impose. No layout class either: the year strip
+  and the list are just two blocks in normal flow now, the strip hanging off
+  the header rule above them.
 {%- endcomment -%}
-<main class="archives-layout">
+<main>
 
   {%- comment -%}
     Sticky year jump-nav. The anchors are the <caption> ids below — those already

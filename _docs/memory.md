@@ -94,30 +94,31 @@ past the year caption to sit with the rows it indexes. `margin-top` sets that re
 and `top` sets where it parks once stuck; they differ deliberately and it does not jump,
 because sticky only displaces when `top` exceeds the resting position.
 
-**Moved right and hung off the header rule (2026-07-27, Brajeshwar's third pass).** The
-scrubber now sits on the **right**, with its top edge exactly on the header's `border-bottom`
-— *"the border becomes the start of the year scrubber"*. Square top, **no top border** (the
-header rule already draws that line; a second would read as a 2px seam), rounded foot only.
-It rises to meet the rule via `margin-top: calc(-1 * var(--space-l))`, cancelling the header's
-bottom margin — ⚠️ **keep those two in step**, or the scrubber detaches and floats. Parks at
-`top: 0` once stuck, since the rule it hung from has scrolled away by then.
-**DOM order is unchanged**: the nav is still first in the source and placed right via
-`grid-column`, so keyboard and screen-reader users still meet the 26-year jump list before
-~1,456 rows of links. Verified: rail top and header border both at y=77, rail's right edge
-flush with the band, no overlap with the list, and the narrow strip fallback still intact.
+**Final shape (2026-07-27, after four passes): a HORIZONTAL strip across the content width,
+hanging off the header rule.** Brajeshwar's iterations went top bar → left rail → right rail →
+horizontal strip; only this last one is live. Its top edge is exactly the header's
+`border-bottom` — *"the border becomes the start of the year scrubber"*. Square top with **no
+top border** (the header rule already draws that line; a second reads as a 2px seam), rounded
+foot only. It rises to meet the rule via `margin-top: calc(-1 * var(--space-l))`, cancelling
+the header's bottom margin — ⚠️ **keep those two in step**, or the strip detaches and floats.
 
-**Two presentations of one list** (Brajeshwar's call, 2026-07-27 — the first build was a top
-bar only):
-- **Wide (≥1100px): a vertical rail in the left margin**, iOS-Contacts-index style. Labels are
-  the last two digits — `26, 25 … 01` — in a rounded pill (`--border-radius-larger`, 25px).
-  Measured: 47px wide, 9px clear of the reading column, 721px tall, smallest tap target
-  35×27px (above the WCAG 2.2 24×24 minimum).
-- **Narrow: the original sticky horizontal strip.** Not a compromise — the rail lives in the
-  dead space beside the centred 665px column, and on a phone the column is 96% of the screen
-  so that space doesn't exist. A left rail there would sit on the text.
-- The rail is positioned off the *column*, not the viewport
-  (`left: calc(50vw - var(--measure)/2 - 3.5rem)`), so it stays glued to the text instead of
-  drifting to a far corner on an ultrawide display.
+- **An auto-fit grid, not a flex row.** `repeat(auto-fit, minmax(2.5rem, 1fr))` is what lets it
+  *"expand to fit all the years"* on a small screen: equal tracks, as many per row as fit, all
+  26 always visible, no horizontal scrolling and **no ragged last row** — which is exactly what
+  flex-grow would have produced (two leftover items stretched to half the width each). The two
+  spare tracks collapse to 0px, so the years sit flush to both edges.
+- **Row counts, measured** (against `main`'s width, with the list hidden so only the strip
+  reflowed): `>=1200` → 1 row / 57px · `737–1186` → 2 rows / 98px · `460–600` → 3 rows / 139px ·
+  `346–400` → 4 rows / 180px.
+- **Sticky from 768px up, static below.** One or two rows are fine to follow the reader (98px
+  is ~12% of a laptop viewport); three or four is not — on a phone that is a fifth of the
+  screen held permanently, worse than just scrolling past it.
+- ⚠️ **`scroll-margin-top` has to track the row count.** A wrapped 2-row strip is 98px, and the
+  original 4.5rem/72px dropped the caption *underneath* it — the same bug as the first build,
+  in a new place. Now 7rem from 768px and back to 4.5rem from 1250px, both verified clearing by
+  ~15px. Re-check whenever the strip's padding, font size or row count changes.
+- **DOM order is unchanged** throughout all four passes: the nav is first in the source, so
+  keyboard and screen-reader users meet the 26-year jump list before ~1,456 rows of links.
 - **Labels are 2-digit, anchors are not.** `href` and `id` keep the full year, so
   `/archives/#2024` still works; `aria-label` restores the full year for screen readers.
   Safe because `site.posts` spans 2001–2026 — the 2100-dated drafts in `_posts/todo/` are

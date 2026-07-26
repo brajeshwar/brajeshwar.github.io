@@ -5,159 +5,88 @@
    ============================================================ */
 
 /* ------------------------------------------------------------
-   Year jump-nav (added 2026-07-26; left rail 2026-07-27)
+   Year jump-nav — a horizontal strip hanging off the header rule
    ------------------------------------------------------------
-   Two presentations of ONE list, chosen by available space:
+   ONE presentation at every width (Brajeshwar, 2026-07-27, after
+   trying a top bar, then a left rail, then a right rail):
+   a horizontal band spanning the content width, whose TOP EDGE
+   IS the header's border-bottom.
 
-   Wide  — a vertical rail in the left margin, iOS-Contacts index
-           style: 26, 25 … 01, a rounded pill, always on screen.
-   Narrow— the same links as a sticky horizontal strip at the top.
-
-   Why both: the rail lives in the dead space beside the centred
-   665px reading column, and that space only exists on a wide
-   viewport. On a phone the column is 96% of the screen and there
-   IS no margin, so a left rail would sit on top of the text. The
-   fallback is not a compromise; it is the only thing that fits.
-
-   CSS only in both modes — works with JS off, and :target does the
-   "you are here" mark.
+   Laid out as an auto-fit grid rather than a flex row. That is
+   what lets it "expand to fit all the years" on a small screen:
+   the tracks are equal and as many fit per row as the width
+   allows, so 26 years are one row on a desktop and wrap into
+   even rows on a phone — no horizontal scrolling, nothing
+   hidden, and no ragged last row (which is what flex-grow would
+   have produced: two leftover items stretched to half the width
+   each).
    ------------------------------------------------------------ */
 
-/* Base = the narrow/fallback presentation: sticky horizontal strip.
-   ONE ROW AT EVERY WIDTH, deliberately. Letting 26 links wrap gives
-   ~3 rows in the reading column and 5 rows at 360px (measured) — a
-   sticky bar eating half a phone viewport on every scroll, worse
-   than no nav at all. It scrolls sideways instead. */
 .archive-years {
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  /* Hangs off the header rule: `main` begins one --space-l below the
+     header's border-bottom, so cancel exactly that to rise and meet it.
+     ⚠️ Keep in step with the header's margin-bottom in chrome.css — if that
+     changes and this doesn't, the strip detaches and floats. */
+  margin-top: calc(-1 * var(--space-l));
+  margin-bottom: var(--space-m);
 
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
   gap: var(--space-3xs);
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scrollbar-width: thin;
 
-  /* Opaque: the list scrolls underneath this. */
+  /* Opaque: the list scrolls underneath when this is stuck. */
   background: var(--bg-color);
-  border-bottom: 1px solid var(--border-color);
-  padding: var(--space-2xs) 0;
-  margin-bottom: var(--space-2xs);
+
+  /* A shallow tray under the rule. No top border — the header's own
+     border-bottom already draws that line, and a second would read as a 2px
+     seam. Sides and foot close the shape. */
+  border: var(--border-size) var(--border-style) var(--border-color);
+  border-top: 0;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  padding: var(--space-2xs);
 }
 
 .archive-years a {
-  flex: 0 0 auto;
   padding: var(--space-3xs) var(--space-2xs);
   font-family: var(--font-family-monospace);
   font-size: var(--step--1);
-  font-variant-numeric: tabular-nums;   /* 26/25/24 line up in the rail */
+  font-variant-numeric: tabular-nums;   /* 26/25/24 line up in their tracks */
+  text-align: center;
   text-decoration: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-small);
 
   /* Subdued at rest — the scrubber is a wayfinding aid, not the content.
      --text-color-low (--color-fg-muted), not --text-color-lower
-     (--color-fg-subtle): fg-subtle measures 4.49:1 in eink-light, and at
-     --step--2 these are small text, so AA wants 4.5:1. Contrast is checked
-     against the RAIL's background, which is not the page background. */
+     (--color-fg-subtle): fg-subtle measures 4.49:1 in eink-light, and these
+     are small, so AA wants 4.5:1. Contrast is checked against the STRIP's
+     background, which is not the page background. */
   color: var(--text-color-low);
   transition: color 0.12s ease, background-color 0.12s ease;
 }
 
-/* ---- Wide: the left rail -----------------------------------
-   The scrubber is a GRID COLUMN inside the page, not something
-   hung in the viewport margin. It used to be `position: fixed`
-   offset from the centred 665px column — that only worked because
-   a narrow column leaves a wide margin. At the site width (1280px)
-   there is no margin left to hang it in, so it moved inside.
-
-   Sticky, not fixed: it scrolls with the list until it reaches the
-   top, then holds — which is also what keeps it inside its column
-   instead of floating over the page.
-
-   900px, not 1100px: the rail no longer needs viewport margin,
-   only enough container to give a ~2.5rem column plus a readable
-   list. Below that the sticky top strip takes over.
-   ------------------------------------------------------------ */
-@media (min-width: 900px) {
-  .archives-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--space-s);
-    align-items: start;
-  }
-
-  /* Placed explicitly, so the scrubber can sit on the RIGHT visually while
-     staying FIRST in the DOM. Source order is the tab order: a keyboard or
-     screen-reader user meets the 26-year jump list before ~1,456 rows of
-     links, which is the whole point of having it. */
-  page-archives  { grid-column: 1; grid-row: 1; }
-  .archive-years { grid-column: 2; grid-row: 1; }
-
+/* Sticky from tablet up; static on phones.
+   Measured 2026-07-27 (row counts against `main`'s width, list hidden so only
+   the strip reflowed):
+       main >= 1200  -> 1 row,   57px    (viewport >= ~1250)
+       main 737-1186 -> 2 rows,  98px
+       main 460-600  -> 3 rows, 139px
+       main 346-400  -> 4 rows, 180px
+   One and two rows are fine to stick — 98px of a laptop viewport is about 12%.
+   Three or four rows is not: on a phone that is a fifth of the screen held
+   permanently, which is worse than simply scrolling past it. 768px is the
+   viewport where the strip is still 2 rows, so that is the cut. */
+@media (min-width: 768px) {
   .archive-years {
     position: sticky;
-
-    /* Hangs off the header rule: the header's border-bottom IS the top edge of
-       the scrubber. `main` starts one --space-l below that border (the header's
-       bottom margin), so the rail cancels exactly that much to rise and meet
-       it. Keep the two in step — if the header's margin-bottom changes, this
-       must change with it, or the scrubber detaches and floats.
-
-       Parks at top:0 once stuck, since the border it was attached to has
-       scrolled away by then. No jump: the rail travels up with the page until
-       it reaches `top`, and a jump only happens when `top` is LARGER than the
-       resting offset. */
     top: 0;
-    margin-top: calc(-1 * var(--space-l));
-    margin-bottom: 0;
-
-    flex-direction: column;
-    gap: 0;
-    /* Asymmetric now that the top is square and capped by the header rule:
-       only the BOTTOM has a curve to clear. That curve is not the declared
-       25px — bottom-left + bottom-right (50px) exceed the ~38px width, so the
-       browser scales the radii by width/sum, about 19px here; --space-s
-       (18–20px) matches it. The top just needs breathing room under the rule.
-       Re-check the bottom if the rail's width or --border-radius-larger
-       changes: the effective radius moves with the width. */
-    padding: var(--space-2xs) 0 var(--space-s);
-
-    /* A tab hanging from the header rule, not a free-floating pill: square
-       across the top with NO top border, because the header's border-bottom
-       already draws that line and a second one would read as a 2px seam.
-       Rounded at the foot only.
-
-       Thin: the rail was 47px before; horizontal padding is nil and the tap
-       target comes from the link's own min-width instead. */
-    border: 1px solid var(--border-color);
-    border-top: 0;
-    border-radius: 0 0 var(--border-radius-larger) var(--border-radius-larger);
-    overflow-x: visible;
-
-    /* 26 rows can outgrow a short viewport; cap and scroll rather
-       than run off the bottom of the screen. */
-    max-height: calc(100vh - (2 * var(--space-m)));
-    overflow-y: auto;
-  }
-
-  .archive-years a {
-    /* Compact like the iOS index, but never below the WCAG 2.2
-       24x24 target minimum — checked in the browser, not assumed. */
-    min-width: 2.25rem;                 /* 36px — comfortably over the 24px minimum */
-    padding: var(--space-3xs) var(--space-3xs);
-    font-size: var(--step--2);
-    line-height: 1.35;
-    text-align: center;
-    /* Square: the hover background reads as a full-width band across the
-       scrubber. The pill's own radius + overflow clips the first and last. */
-    border-radius: 0;
+    z-index: 10;
   }
 }
 
 /* Hover/focus: darken the text AND give it a background.
    The background is a color-mix of the foreground into transparency rather
    than any --bg-* token, because there is no token that differs from the
-   rail's own background in BOTH modes — --color-surface collapses onto it in
+   strip's own background in BOTH modes — --color-surface collapses onto it in
    dark. Mixing the text colour works in every mode and palette by
    construction, and stays monotone by default (design.md).
    NOTE: --bg-color-high is NOT a raised background — it bridges to
@@ -203,12 +132,26 @@ page-archives table caption {
   border-bottom: 1px solid var(--border-color);
 
   /* Land clear of the sticky year strip when jumped to via #YYYY, rather than
-     under it. MUST EXCEED the strip's rendered height, which is content-derived
-     (fluid padding + --step--1 line box + 1px border) and so cannot be read from
-     a token. Measured 2026-07-26 in Chrome at the 665px column: 57px. The first
-     attempt here was 3.25rem/52px and put the caption 5px *underneath* the bar —
-     verify in a browser after changing the strip's padding or font size. */
+     under it. MUST EXCEED the strip's rendered height — which is now variable,
+     because the strip wraps: 57px at one row, 98px at two. See the two
+     overrides below. Base value covers the un-stuck case (phones), where there
+     is nothing overhead to clear. An earlier version of this was 52px against a
+     57px bar and put the caption 5px *underneath* it — always verify in a
+     browser after changing the strip's padding, font size or row count. */
   scroll-margin-top: 4.5rem;
+}
+
+/* Strip is STICKY and TWO rows here (98px), so 4.5rem/72px would drop the
+   caption underneath it. These must come after the caption rule above:
+   equal specificity means source order decides. */
+@media (min-width: 768px) {
+  page-archives table caption { scroll-margin-top: 7rem; }
+}
+
+/* Back to ONE row (57px) once there is room, so the generous clearance is no
+   longer needed and would just waste screen. */
+@media (min-width: 1250px) {
+  page-archives table caption { scroll-margin-top: 4.5rem; }
 }
 
 /* "You are here" after a jump — CSS-only, no scroll-spy JS. Marks the year you
