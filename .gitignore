@@ -13,9 +13,9 @@ node_modules/
 
 # Editor / tooling local state
 .claude/
-.obsidian
-.ruby-lsp
-.vscode/
+.impeccable/
+.obsidian/
+.ruby-lsp/
 .idea/
 
 # Scratch — local braindumps & working files (not part of the site)
