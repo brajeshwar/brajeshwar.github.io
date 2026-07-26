@@ -517,6 +517,31 @@ same `_site`, so they overwrite each other and local measurements flip depending
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
 
+### Interface stays sans; post titles take the band (2026-07-27)
+Brajeshwar: *"UI Elements such as the PREV | NEXT should always be in the sans-serif system
+fonts. Making it serif is weird."* and *"Posts titles should extend the full length of the body
+width."*
+
+**The font-scope rule is now stated as a principle, not a list of accidents.** Prose follows the
+reader (`--font-body`); interface is pinned to system sans. The distinction is what the text
+IS, not where it sits: prose is the reader's to set, controls and labels are the site's. A
+Prev/Next bar set in Libre Baskerville reads as a sentence, which was the complaint.
+
+`header` and `footer` are chrome by position and were already covered. Everything else inherits
+`--font-body` and has to opt out by name — now `.post-nav`, `.pill` (the /about/ Life/Work
+filter; the appearance panel's copy was already sans only because the panel is) and
+`.back-to-top-row`. That last one had a `font-family` until it became icon-only and lost it
+silently — which is precisely the failure this list exists to prevent.
+
+⚠️ **This class of bug is invisible by default.** It only appears for readers who picked Serif
+or Sans-Serif, and the default is System — so casual checking will never show it. Add to the
+list when adding a control inside `main`.
+
+**Post titles span the band**, using the same `100cqi` idiom as the wide images, so the title,
+the images, the header rule and the footer rule all end on one line. The measure is a constraint
+on READING, and a title is scanned rather than read — a longer line costs nothing there and buys
+fewer wrapped lines. The title still follows the reader's font, correctly: it is content.
+
 ### One width, finally — and the nav divider becomes a notch (2026-07-27)
 Brajeshwar: *"The full width of the content, such as in the articles, is not the same the
 header, footer, etc. They should all be the same width."* and *"The vertical bar in the posts

@@ -107,13 +107,39 @@ main {
   margin-inline: 0 auto;
 }
 
-/* Font scope: the reader's font (--font-body) applies to ALL content (home, pages,
-   articles) via `body` above; only the header and footer (the UI chrome) are pinned
-   to system sans. Sidenotes + post meta re-assert sans on top (base.css /
-   post.css). Text size scales content via the --step-* tokens redefined on
-   `main` (config.css), so no per-element rules are needed here. */
+/* ---- Font scope: prose follows the reader, INTERFACE does not ----
+   The reader's font (--font-body) applies to all CONTENT — home, pages,
+   articles — via `body` above. Interface is pinned to system sans.
+
+   Brajeshwar, 2026-07-27: *"UI Elements such as the PREV | NEXT should
+   always be in the sans-serif system fonts. Making it serif is weird."*
+   The distinction is what the text IS, not where it sits: prose is the
+   reader's to set, controls and labels are the site's. A Prev/Next bar in
+   Libre Baskerville reads as a sentence, which is exactly the confusion.
+
+   The header and footer are chrome by position, so they are listed whole.
+   Everything else here sits INSIDE `main`, inheriting the reader's font,
+   and has to opt out by name:
+
+     .post-nav        previous / next        (added 2026-07-27)
+     .pill            any segmented selector, e.g. the /about/ Life/Work
+                      filter — the appearance panel's copy was already sans
+                      because the panel is, but the timeline's was not
+     .back-to-top-row inserted before <footer>, so it is a BODY child and
+                      inherits --font-body like anything else. It carries
+                      only an SVG today, so this is belt-and-braces — but it
+                      had a font-family until it stopped having a label, and
+                      losing it silently is the pattern this list exists for.
+     figcaption, .sidenote, .post time — labels about content, not content
+
+   ⚠️ Add to this list when adding a control inside `main`. The failure is
+   silent: it only shows for readers who chose Serif or Sans-Serif, which is
+   not the default, so it will not appear in casual checking. */
 header,
-footer {
+footer,
+.post-nav,
+.pill,
+.back-to-top-row {
   font-family: var(--font-sans);
 }
 
