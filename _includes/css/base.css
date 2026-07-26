@@ -47,7 +47,8 @@ body {
      height — the four other `height: 100%` rules in the CSS are all deep in
      the tree with their own sized parents. */
   min-height: 100%;
-  scroll-behavior: smooth;
+  /* scroll-behavior is on <html>, which is the scrolling element — the copy
+     that used to sit here did nothing. Removed 2026-07-27. */
 
   font-family: var(--font-body);    /* reader's choice — applies to all content; only header/footer are pinned to sans (chrome.css + rule below) */
   font-size: var(--font-size);
@@ -148,22 +149,10 @@ kbd {
 /* Video embeds (mostly YouTube, 16:9). aspect-ratio keeps the ratio correct at
    any column width — the reading measure is now character-based (--measure), so a
    width-derived pixel height no longer holds. */
-iframe, object, embed {
+iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
-}
-
-.visually-hidden {
-  display: block;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(1px);
-  white-space: nowrap;
-  position: absolute;
 }
 
 /* Reduced Motion; Remove
@@ -285,29 +274,14 @@ aside, .aside {
   border-radius: var(--border-radius);
 }
 
-aside.left, .aside.left {
-  float: left;
-  margin-left: -10vw;
-  width: 70%;
-}
-
-aside.right, .aside.right {
-  float: right;
-  margin-right: -10vw;
-  width: 70%;
-}
-
-/* rest in small screen, it becomes the same as a blockquote */
-@media (max-width: $breakpoint-medium) {
-  aside, .aside,
-  aside.left, .aside.left,
-  aside.right, .aside.right {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+/* aside.left / aside.right were here — floated pull-quotes at -10vw.
+   Removed 2026-07-27: zero uses across all 1,456 built pages. The
+   full-width reset that went with them is gone too, since there is
+   nothing left to reset.
+   NOTE sidenotes.js still lists `aside.right, .aside.right` among the
+   wide media it dodges when placing notes. That is left in on purpose —
+   it is a querySelectorAll that currently matches nothing and costs
+   nothing, and it is the right behaviour if one is ever authored. */
 
 li::marker {
   color: var(--text-color-low);
@@ -377,10 +351,6 @@ tbody tr:nth-child(even) {
 }
 
 
-tfoot {
-  border-top: var(--border-size) var(--border-style) var(--border-color);
-}
-
 /* ---- Images ---------------------------------------------------- */
 
 /*
@@ -396,35 +366,27 @@ video {
 }
 
 img.small,
-video.small,
-audio.small {
+video.small {
 	width: 40% !important;
 	height: auto;
 }
 
 img.medium,
-video.medium,
-audio.medium {
+video.medium {
 	width: 60% !important;
 	height: auto;
 }
 
 img.left,
-audio.left,
 video.left {
 	float: left;
 	margin: 0 var(--space-s) var(--space-s) 0;
 }
 
 img.right,
-audio.right,
 video.right {
   float: right;
 	margin: 0 0 var(--space-s) var(--space-s);
-}
-
-img.round {
-  border-radius: 100%;
 }
 
 figure {
@@ -447,9 +409,9 @@ figcaption {
   border-bottom: var(--border-size) var(--border-style) var(--rule);
 }
 
-/* Caption alignment utility — left is the default; opt into center/right. */
-figcaption.center, figure.center figcaption { text-align: center; }
-figcaption.right,  figure.right figcaption  { text-align: right; }
+/* figcaption.center / .right were here. Removed 2026-07-27: zero uses
+   across all 1,456 built pages. Left alignment is the default and the
+   only one in use. */
 
 
 @media (min-width: $breakpoint-small) {

@@ -162,7 +162,6 @@
 
                                       Reading width is separate and unaffected: articles cap at
                                       --body-width-ideal (the measure), not at this. */
-  --body-width-medium     : 60rem; /* objects that are large but not max */
   --body-width-full       : 1600px;
 
 
@@ -222,14 +221,18 @@
   --icon-button-size      : 32px;
   --icon-glyph-size       : 17px;
 
-  --image-width-max       : var(--body-width-medium);
+  /* 60rem. Was `var(--body-width-medium)`, a token whose only reader was this
+     line — so it named a site width that was not one. Folded in 2026-07-27. */
+  --image-width-max       : 60rem;
 
   /* Tufte sidenotes (Phase 2) — right-margin gutter. See _docs/sidenotes.md. */
   --sidenote-width        : 16rem;   /* the maximum — notes shrink to fit the margin (base.css) */
   --sidenote-gap          : 3.5rem;  /* gap between reading column and sidenote */
-  --sidenote-min-gutter   : 17rem;   /* enable sidenotes only above this much right margin —
-                                        gap + ≥12rem of note + breathing room, so a note always
-                                        fully fits (sync sidenotes.js MIN_GUTTER_REM) */
+  /* --sidenote-min-gutter was here (17rem). Removed 2026-07-27: it was
+     declared and read by NOTHING in CSS. The real threshold is
+     MIN_GUTTER_REM in assets/scripts/sidenotes.js, which is where the
+     measurement happens; a token that has to be hand-synced with a JS
+     constant is two sources of truth pretending to be one. */
 }
 
 /* Reader font choice — overrides --font-body (applies to article content, not the
@@ -289,29 +292,34 @@ main {
   --step-5:  calc(var(--step-5-base)  * var(--text-scale));
 }
 
-/* ⚠️ Dormant, and wrong in both directions when it does fire.
-   Diagnosed 2026-07-19 (this replaces an older "seems to be not
-   working" note — it isn't working, and here is why).
+/* ---- Dark mode and images: we do NOTHING, deliberately -----
+   There was a `@media (prefers-color-scheme: dark) { img, video { opacity:
+   0.6 } }` here. Removed 2026-07-27, and removed rather than repaired.
 
-   `prefers-color-scheme` reads the OS setting ONLY. It knows nothing
-   about [data-theme], which is what actually decides the page's mode.
-   So:
-     • OS light + reader picks dark → never fires. Verified in-browser:
-       img opacity stays 1 in all three [data-theme] values.
-     • OS dark  + reader picks light → fires anyway, dimming images on
-       a light page. The bad case, and the harder one to notice.
+   It was broken — `prefers-color-scheme` reads the OS setting and knows
+   nothing about [data-theme], which is what actually decides this page's
+   mode, so it never fired for a reader who chose dark on a light OS and
+   DID fire, dimming images on a light page, for the reverse. But fixing
+   the selector was the wrong move, because the rule should not exist.
 
-   The fix, if image-dimming is still wanted, is to key it off the mode
-   the way themes.css does — a [data-theme="dark"] rule plus a
-   prefers-color-scheme block scoped to [data-theme="auto"]. Left as-is
-   rather than switched on quietly: enabling it is a visible design
-   change across every image on the site, not a bug fix. Tracked in
-   _docs/todo.md. */
-@media (prefers-color-scheme: dark) {
-  img, video {
-    opacity: var(--opacity-lower);
-  }
-}
+   Blanket-dimming images in dark mode was early dark-mode advice and is
+   not what the web does now. Photographs are content: knocking 40% off
+   them makes them muddy and washed out, and it is the reader's photo of
+   a place, not a UI surface, that pays. The current standard is:
+
+     1. declare `color-scheme: light dark` so UA-rendered surfaces —
+        scrollbars, form controls, the canvas — follow the mode. Already
+        done, in base.css on :root and as a <meta> in default.html.
+     2. leave photographic content alone.
+
+   The narrow case that DOES suffer on a dark page is transparent-background
+   line art authored for white — a diagram, a logo. That wants per-image
+   handling (a <picture> with a prefers-color-scheme source, or a class on
+   the one image), not a filter over every image on the site. Nothing here
+   needs it today: the logo is inline SVG on currentColor, and the
+   galleries are photographs.
+   ------------------------------------------------------------ */
+
 
 /* ---- Breakpoints -------------------------------------------
    SCSS variables, not custom properties — and they have to be.

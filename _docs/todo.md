@@ -25,7 +25,10 @@ Originally absorbed from the 2027 planning braindump.
       A listing's weight is its content. [`design.md`](design.md) → *Performance budget* now
       says so. For the record the page is ~329 KB raw / ~74 KB gzip, and switching its links to
       `relative_url` took **27.6 KB** off (1,459 absolute URLs → 3).
-- [ ] **Home = text only.** Reduce the homepage to writing; convert Books into a list of top rereads.
+- [ ] **Home = text only.** ⏸ **PARKED 2026-07-27 at Brajeshwar's request** — *"I'm going to
+      re-work on it. Park it for now. We need to think of how to show the books, it might become
+      just SVGs or a Text Block without images."* So the open question is the books treatment
+      (SVG covers vs a plain text block), and it is his to answer before any code moves.
 - [ ] **Page template (Full Width)** — Pages, Photos, Wear, Devices, Books, Films.
 - [ ] **Page template (Ideal Width)** — posts, articles, optimised for reading.
       ⚠️ These two items predate, and are superseded by, *Standardise the site width* below —
@@ -125,27 +128,44 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
         search-specific one, which is the intended split, not duplication.
       - Verified: all three buttons render identically (32px circle, same colour, 17px glyph),
         the footer row kept its own look, and both popups open and paint unchanged in dark+Warm.
-- [ ] **base.css dead selectors** — `.visually-hidden` (no markup uses it), `img.round`,
-      `figcaption.center/right`, `audio.small/medium/left/right`, `object, embed`, `aside.left/right`,
-      `tfoot`. All verified against 1,456 built pages. Removing needs care: kramdown and
-      `sidenotes.js` generate markup that has no literal source match.
-- [ ] **base.css duplication** — `.sidenote` declared twice; `.sidenote`/`.sidenote-inline` repeat
-      6 declarations; `html`+`body` both set `scroll-behavior` (the `body` copy is inert).
-- [ ] **Two spacing systems** — ratio-derived `--space`/`--space-smaller` vs fluid Utopia `--space-*`.
-      Only 3 rules in base.css still use the ratio one; cheap to finish migrating.
-- [ ] **`--sidenote-min-gutter` is hand-synced with JS** (`assets/scripts/sidenotes.js` `MIN_GUTTER_REM`).
-      CSS declares a number it never reads. Either have JS read it via `getComputedStyle`, or drop the
-      token and keep the JS constant.
+- [x] **base.css dead selectors** *(done 2026-07-27)* — all re-verified against the 1,456 BUILT
+      pages, not the source, then removed: `.visually-hidden`, `img.round`,
+      `figcaption.center/right`, the `audio.*` names in the size/float lists, `object, embed`
+      (from the `iframe` group — `iframe` itself stays and is used), `aside.left/right` plus the
+      `@media` reset that existed only for them, and `tfoot`. Every one measured **0**.
+      ⚠️ `sidenotes.js` still lists `aside.right, .aside.right` among the wide media it dodges.
+      Left in on purpose: a `querySelectorAll` matching nothing costs nothing, and it is the
+      right behaviour if one is ever authored.
+- [x] **`html`+`body` both set `scroll-behavior`** *(done 2026-07-27)* — the `body` copy was
+      inert; `<html>` is the scrolling element. Removed.
+- [ ] **base.css duplication, the rest** — `.sidenote` is still declared in two blocks (563 and
+      609) and `.sidenote`/`.sidenote-inline` still repeat 6 declarations. Left alone
+      deliberately on 2026-07-27: the second block is the focus/transition layer added later and
+      merging them is a real refactor of live sidenote behaviour, not a tidy. Worth doing with
+      the sidenote work, not alongside unrelated cleanup.
+- [ ] **Two spacing systems** — ratio-derived `--space`/`--space-smaller` vs fluid Utopia
+      `--space-*`. ⚠️ **Not the 3 rules this entry claimed** — re-counted 2026-07-27: **10 call
+      sites** across `base`, `home`, `post`, `archives` and `search`. Each is a visible spacing
+      value, so this is a migration with a look to re-check, not a cheap tidy. Left for its own
+      pass.
+- [x] **`--sidenote-min-gutter` is hand-synced with JS** *(done 2026-07-27)* — dropped the CSS
+      token, kept the JS constant. That direction rather than the reverse: having JS read the
+      token would change the fold threshold and need a re-measure, and the measurement is the
+      part that has gone wrong before. `MIN_GUTTER_REM` in `sidenotes.js` is now the only source.
 - [ ] **base.css section order** — media rules and `hr`/`kbd` are stranded in the reset zone, ~240 lines
       from where they belong; `.highlight` sits 50 lines from `pre`/`code`. A proposed order is in the docs.
 
-- [ ] **Dark-mode image dimming is dormant and inverted** *(found 2026-07-19)* — the
-      `@media (prefers-color-scheme: dark) { img, video { opacity } }` rule in `config.css` keys off
-      the **OS** setting, not `[data-theme]`. Verified in-browser: OS-light + reader-chosen dark
-      never dims; OS-dark + reader-chosen light dims images on a light page. Fix is to mirror the
-      `[data-theme="dark"]` + `auto`-scoped pattern from `themes.css` — but switching it on is a
-      visible change to every image, so it's a design call, not a silent fix. Diagnosis is in the
-      CSS comment.
+- [x] **Dark-mode image dimming** *(resolved 2026-07-27 — **removed, not repaired**)*.
+      Brajeshwar: *"do the best practice that is the standard on the Internet."* That standard is
+      to **leave photographs alone**: declare `color-scheme: light dark` so UA-rendered surfaces
+      follow the mode (already done, on `:root` and as a `<meta>`), and do nothing to content
+      images. Blanket-dimming was early dark-mode advice; knocking 40% off a photo just makes it
+      muddy, and it is the reader's picture of a place that pays, not a UI surface. The rule was
+      also broken in both directions (`prefers-color-scheme` reads the OS, not `[data-theme]`) —
+      but fixing the selector would have shipped a worse page. Verified: images render at
+      opacity 1 in dark mode on `/film/`. The narrow real case — transparent-background line art
+      authored for white — wants per-image handling, not a site-wide filter; nothing needs it
+      today (the logo is inline SVG on `currentColor`, the galleries are photographs).
 - [ ] **`/devices/` images are missing** — every entry in `_data/devices.yaml` has the placeholder
       `img: img.jpg` and `static/devices/` is empty, so the page has always rendered broken images.
       Pre-existing, unrelated to the CSS work; needs real images + a data edit.
@@ -233,11 +253,13 @@ at the top of this section.
       band and the gutter is paid for once instead of mirrored into dead space. Sidenote floor
       **1210px → ~980px viewport**, measured. It is also what made the narrower site width
       possible — a centred column could not go below 1289px without starving the notes.
-- [ ] **Analytics.** Any viewport/resolution data for brajeshwar.com? A 25-year tech blog's
-      readers skew nothing like worldwide desktop share, and our own numbers would confirm (or
-      challenge) the 1280px choice with evidence rather than public averages.
-- [ ] **`--body-width-medium` (60rem)** — only read by `--image-width-max`. Either rename it to
-      say what it does or fold it in.
+- [x] ~~**Analytics** (viewport data to validate the width)~~ — **closed 2026-07-27**,
+      Brajeshwar: *"Ignore this for now. The width is good for now."* The 64rem/1024px band
+      stands on the sidenote arithmetic, which is a constraint rather than a guess. Reopen only
+      if the width is ever in question again.
+- [x] **`--body-width-medium` (60rem)** *(done 2026-07-27)* — folded into `--image-width-max`,
+      its only reader. One token named for what it does instead of two, one of which claimed to
+      be a site width and was not.
 - [ ] **`--body-width-full` (1600px)** — deliberately kept: it sizes `figure.full` / `.gallery`
       breakouts, which are *supposed* to exceed the content band. Not a second site width.
 
@@ -273,7 +295,11 @@ at the top of this section.
       `document.fonts.ready`. Pre-existing; not worth fixing until a real page is affected.
 
 ## Open questions
-- [ ] **Theme toggle without JS?** Do we really need to remember the Light/Dark preference (and thus JavaScript)? A CSS-only approach: <https://codepen.io/ditheringidiot/pen/JjbzNMz>. (Note: the current build deliberately persists reader choice via JS + a no-flash snippet; revisit only if the CSS-only tradeoff is worth losing persistence.)
+- [x] ~~**Theme toggle without JS?**~~ **DECIDED 2026-07-27 — no.** Brajeshwar: *"Theme toggle
+      cannot live without JavaScript and we need persistence for users visiting again."* A
+      CSS-only toggle cannot remember a choice across visits, and remembering it is the point.
+      The current build stays: JS + `localStorage` + the no-flash snippet in `default.html`.
+      Closed, not deferred — don't reopen without a mechanism that persists.
 
 ## Done
 - [x] **Modern Font Stacks** adopted — <https://modernfontstacks.com> *(2025-12-30)*
