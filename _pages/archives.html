@@ -39,11 +39,32 @@ styles: css/archives.css
     2100-dated drafts in _posts/todo/ are future-dated, so Jekyll never builds
     them into this list.
   {%- endcomment -%}
-  <nav class="archive-years" aria-label="Jump to year" data-pagefind-ignore>
-    {%- for year in years %}
-    <a href="#{{ year.name }}" aria-label="{{ year.name }}">{{ year.name | slice: 2, 2 }}</a>
-    {%- endfor %}
-  </nav>
+  {%- comment -%}
+    The strip and the century mark stick together, so the wrapper carries the
+    sticky — not the nav. The mark has to be a SIBLING of the nav, not a child
+    or a pseudo-element of it: inside a stacking context a negative-z-index
+    child still paints ABOVE its parent's background, so it could never be
+    hidden by the tray it is supposed to sit behind.
+  {%- endcomment -%}
+  <div class="archive-strip">
+
+    {%- comment -%}
+      The shared century. Only "20" is visible, sitting in the left margin; the
+      "26" runs on underneath the opaque tray, so every 2-digit label in it
+      reads as 20|26, 20|25, 20|24 … Uses the newest year rather than a
+      hardcoded string, though only its first two digits ever show.
+      aria-hidden: it is a typographic device, and a screen reader already gets
+      the full year from each link's aria-label.
+    {%- endcomment -%}
+    <span class="archive-century" aria-hidden="true">{{ years[0].name }}</span>
+
+    <nav class="archive-years" aria-label="Jump to year" data-pagefind-ignore>
+      {%- for year in years %}
+      <a href="#{{ year.name }}" aria-label="{{ year.name }}">{{ year.name | slice: 2, 2 }}</a>
+      {%- endfor %}
+    </nav>
+
+  </div>
 
   <page-archives>
     {%- for year in years %}

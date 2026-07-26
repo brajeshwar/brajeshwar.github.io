@@ -237,6 +237,27 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Archives: the shared century behind the strip (2026-07-27)
+Brajeshwar's idea: a bold **"2026" set BEHIND the tray**, positioned so only the **"20"** shows
+in the left margin and the "26" runs on underneath — so every 2-digit label beside it reads as
+20|26, 20|25, 20|24. The century becomes the common prefix instead of being repeated 26 times.
+
+- **Centre on the tray's left edge.** `left: 0; transform: translate(-50%, -50%)` puts exactly
+  two digits outside and two under. The halving is exact *because the face is monospaced with
+  tabular figures* — measured 47px visible / 47px hidden.
+- **It must be a SIBLING of the nav, not a child or a pseudo-element.** Inside a stacking
+  context a negative-`z-index` child still paints **above its parent's background**, so it could
+  never be hidden by the very tray it sits behind. Hence the new `.archive-strip` wrapper:
+  century `z-index: 0`, nav `z-index: 1` with its opaque background doing the masking.
+- **The wrapper took over the sticky** (was on the nav), so the mark and the tray travel
+  together. Verified their centres stay within 2px when stuck.
+- ⚠️ **Capped to the tray's height.** At 3.25rem it was 52px against a 42px tray and overhung
+  ~5px, invisible at rest but clipped by the viewport edge the moment the strip stuck at
+  `top: 0`. Now max 2.5rem/40px inside 42px, verified unclipped when stuck.
+- Hidden below 1250px, where the margin can no longer hold the visible half. Uses
+  `years[0].name`, not a hardcoded string. `aria-hidden` — it is a typographic device, and each
+  link already carries the full year in `aria-label`.
+
 ### Logo optical nudge + archives tightened to the new width (2026-07-27)
 - **Logo: align the GLYPH, not the box.** It had been pulled out by a whole `--logo-size`
   (40px), which put the beta ~29px into the margin and read as detached. Measured the path's
