@@ -226,10 +226,11 @@ at the top of this section.
       already ~48 KB raw / ~13 KB gzip. See [`design.md`](design.md) → *Performance budget*.
 
 ## Found 2026-07-27
-- [ ] **Node 18 in the deploy workflow is past EOL** — `.github/workflows/jekyll-build-deploy.yml`
-      pins `node-version: '18'`, which left security support in April 2025. Only Pagefind and the
-      agent-markdown script run on it, so nothing is broken; bump to 22 LTS and watch one build.
-      *(Ruby is on 3.3.5, which is current.)*
+- [x] **Node 18 in the deploy workflow is past EOL** *(fixed 2026-07-27)* — bumped to **22 LTS**,
+      which is also what the site is developed against locally. Node only runs the agent-markdown
+      script and Pagefind, so nothing was broken; it was an unsupported runtime sitting in the
+      deploy path. `build-agent-markdown.mjs` verified on 22 (1,479 files + llms.txt).
+      *(Ruby is on 3.3.5, which is current.)* ⚠️ Watch the first Actions run after this ships.
 - [ ] **Back to Top's height gate reads `scrollHeight` once, before images load.** The control is
       only built on a page taller than 2.5 viewports, measured at `DOMContentLoaded` — so a long
       gallery whose images have no intrinsic height yet can fail the test and never get one.

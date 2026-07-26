@@ -38,11 +38,16 @@ jobs:
           ruby-version: '3.3.5'
           bundler-cache: true
           
+      # Node 22 LTS. Was pinned to 18, which left security support in Apr 2025.
+      # Node only runs two things here — the agent-markdown script and Pagefind
+      # — so nothing was broken by the old pin; it was simply an unsupported
+      # runtime sitting in the deploy path. 22 is what the site is developed
+      # against locally. Ruby above is on 3.3.5 and is current.
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          
+          node-version: '22'
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
