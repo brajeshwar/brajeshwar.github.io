@@ -57,9 +57,18 @@
     item.el.classList.remove('has-sidenotes');
   }
 
+  /* Is there room for notes to the right of the column?
+     Measured against the CONTENT BAND (the article's offsetParent-ish
+     container, i.e. <main>), not window.innerWidth. It used to use the
+     viewport, which was right while the column was centred and the gutter was
+     just viewport margin. The column is left-aligned in the band now and the
+     gutter lives INSIDE it, so the viewport says nothing useful — on a wide
+     screen it would report hundreds of pixels of room that the band does not
+     actually offer, and notes would be placed and then clamped to nothing. */
   function gutterFits(article) {
     var rect = article.getBoundingClientRect();
-    var rightSpace = window.innerWidth - rect.right;
+    var band = (article.parentElement || document.body).getBoundingClientRect();
+    var rightSpace = band.right - rect.right;
     return rightSpace >= rem(MIN_GUTTER_REM);
   }
 

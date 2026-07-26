@@ -13,10 +13,11 @@ content or markup changes** — old posts get sidenotes for free. This doc is th
 
 ## How it works
 `assets/scripts/sidenotes.js` (loaded `defer` from `_layouts/default.html`), scoped to
-`.container-ideal article`:
+`article.container-ideal`:
 
 1. Finds each `article` that has a `.footnotes` block and `sup[id^="fnref"]` references.
-2. **If the right margin has room** (`window.innerWidth − article.right ≥ --sidenote-min-gutter`):
+2. **If the gutter has room** (`band.right − article.right ≥ --sidenote-min-gutter`, where the
+   band is the article's container — *not* the viewport, since 2026-07-27):
    adds `.has-sidenotes` to the article (→ hides the bottom `.footnotes` block), and for each
    reference clones its `li#fn:N` into an `<aside class="sidenote">` placed at `left: 100%`
    in the right gutter, `top` aligned to the reference. The `↩` back-link is stripped; the
@@ -65,15 +66,17 @@ Robustness:
 - `_includes/css/0.0-config.css` — `--sidenote-width` (16rem, the *maximum*),
   `--sidenote-gap` (3.5rem), `--sidenote-min-gutter` (17rem, kept in sync with
   `MIN_GUTTER_REM` in the JS).
-- **Fluid note width:** `.sidenote { width: min(var(--sidenote-width), calc((100vw − 100%) / 2
-  − var(--sidenote-gap) − 1rem)) }` — the centered column leaves `(100vw − column)/2` of right
-  margin; notes shrink to it (with 1rem breathing room to the viewport edge) rather than
-  overflow. With the 17rem gutter threshold a note is always ≥ ~12rem wide.
+- **Fluid note width:** `.sidenote { width: min(var(--sidenote-width),
+  calc(min(96vw, var(--body-width-max)) − 100% − var(--sidenote-gap))) }` — the whole leftover
+  after the column and the gap IS the gutter, because the column is left-aligned in the band.
+  There is deliberately **no `/ 2`**: that halving belonged to the centred layout, which split
+  the leftover between two margins, and leaving it in would starve every note to half its room.
 - Color: `--sidenote-text` (semantic token, see [`styles.md`](styles.md)).
 
-## The viewport floor: 1210px (measured 2026-07-26)
-Sidenotes need a **1210px viewport** before they appear at all. Below that every footnoted
-post silently falls back to footnotes at the article foot.
+## The viewport floor: ~980px (measured 2026-07-27)
+
+Sidenotes need roughly a **980px viewport** before they appear. Below that a footnoted post
+falls back to footnotes at the article foot, which is the designed behaviour.
 
 Measured in Chrome against the built site, not calculated:
 
@@ -81,37 +84,41 @@ Measured in Chrome against the built site, not calculated:
 |---|---|
 | `1rch` | **10.08px** (not ~8px — the zero-glyph is wider here) |
 | `--measure: 66rch` | **665px** column |
-| `--sidenote-min-gutter: 17rem` | **272px** |
-| Floor | 665 + (2 × 272) = 1209, so **1210px** |
+| `--sidenote-gap` | **56px** |
+| `--sidenote-width` | **256px** (the maximum; notes shrink below it) |
+| `--sidenote-min-gutter` | **272px** — the JS threshold |
+| Floor | notes survive to a **940px band**, i.e. about a **980px viewport** |
 
-**Why twice the gutter, and why that is the problem.** `.container-ideal` is *centred*, so the
-left and right margins are always equal — but `gutterFits()` only tests the right one. Every
-pixel spent on the left margin is dead space sized identically to the gutter doing the work.
-That doubling is what pushes the floor from ~970px to 1210px.
+### It used to be 1210px — what changed and why it mattered
 
-Concretely: a 1024px-wide laptop, or a 1280px screen with a non-maximised window, gets no
-sidenotes — not because the margin is genuinely too tight, but because the layout insists on
-matching it on the unused side.
+The column was **centred** in the band, so the left and right margins were always equal, but
+only the right one ever held a note. Every pixel of the left margin was dead space sized
+identically to the gutter doing the work, and the floor was `665 + 2 × 272 = 1209`.
 
-**An asymmetric grid — content track plus a wider right gutter — would drop the floor to
-roughly 970–1010px.** That is the difference between the feature working on a 1024-class
-laptop and not. **Still not done** — and note that the 2026-07-27 width standardisation did
-*not* change it. Widening the band to 1296px made the band *contain* the notes; it did not
-move the reading column, and the floor is set by the column being centred. Only going
-asymmetric moves it. Tracked in [`todo.md`](todo.md).
+That doubling had a second cost, which is what finally forced the issue: a centred column
+means the *site width* also has to pay for the gutter twice, so `--body-width-max` could not
+drop below 1289px without starving the notes. The band was 1296px and read as too wide.
 
-**Update 2026-07-27 — the band now contains the notes.** `--body-width-max` is derived as
-`--measure + 2 × (--sidenote-gap + --sidenote-width)` = 1289px → 81rem, precisely so an
-article and its sidenotes fit inside one width. Before this, notes rendered 5px *outside* the
-band and overhung the header/footer rules. `.sidenote`'s width is measured against
-`min(96vw, --body-width-max)` rather than `100vw`, so it clamps to the band by construction —
-if you change either the measure or the sidenote tokens, re-derive `--body-width-max` or the
-notes will escape the band again.
+**Fixed 2026-07-27 by left-aligning the column** (`.container-ideal { margin-inline: 0 auto }`).
+The gutter is paid for once, which:
 
-Two things to keep in step if this is ever changed: `--sidenote-min-gutter` in `config.css` is
-hand-synced with `MIN_GUTTER_REM` in `assets/scripts/sidenotes.js`, and the fluid note width
-above assumes `(100vw − 100%) / 2`, i.e. a centred column. An asymmetric layout invalidates
-that formula.
+- dropped the floor to **~980px**, so a 1024-class laptop now gets sidenotes where before it
+  got none;
+- let the site width come down to **64rem / 1024px** — `665 + 56 + 256 = 977` plus breathing
+  room, instead of `665 + 2 × 312 = 1289`;
+- put the prose's left edge on the band edge, the same line the header and footer rules draw.
+
+### Three things that must stay in step
+
+1. `--sidenote-min-gutter` in `config.css` is **hand-synced** with `MIN_GUTTER_REM` in
+   `assets/scripts/sidenotes.js`. Still on the audit backlog to resolve.
+2. `gutterFits()` measures the **band**, not `window.innerWidth`. The viewport version was
+   correct only while the gutter was viewport margin; on a wide screen it now reports room the
+   band does not offer.
+3. `.container-ideal`'s `margin-inline: 0 auto` is **re-declared in `post.css`** as
+   `margin: var(--space-s) auto var(--space-s) 0`, because `.post` carries the class and
+   `post.css` loads later at equal specificity. Write `auto` on both sides there and the
+   article re-centres, silently collapsing the gutter.
 
 ## Verified (live, 1440px)
 - [x] Desktop: footnotes render as margin sidenotes aligned to references, clean (no box),

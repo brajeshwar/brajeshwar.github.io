@@ -237,6 +237,46 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Narrower: 64rem, and the column goes asymmetric (2026-07-27)
+Brajeshwar, on seeing 81rem/1296px live: *"this is too wide, what is the next logical narrower
+body width. Think readable length of the articles + the sidenote + the padding and margin
+spaces."*
+
+**The answer required un-centring the column.** A centred article reserves the gutter on BOTH
+sides and only uses the right one, so 1289px was the hard floor — 1296 could not be narrowed
+without starving the notes. Paying for the gutter once gives:
+
+    --measure 665 + --sidenote-gap 56 + --sidenote-width 256 = 977
+    + 47px breathing room = 1024px = 64rem
+
+- **`--body-width-max: 64rem`.** `.container-ideal` is now `margin-inline: 0 auto` — the column
+  sits at the LEFT of the band, gutter to the right. Prose's left edge is the band edge, which
+  is the line the header and footer rules already draw.
+- **Sidenote floor 1210px → ~980px viewport**, measured by shrinking the band until notes fold
+  (they survive to a 940px band). The long-standing asymmetric todo is done, and it is what
+  bought the narrower site.
+- **Header: back to `space-between`.** Centred read adrift on small screens and, with the new
+  border-bottom, a centred cluster floating over a full-width rule looks unanchored.
+- **Logo 34px → 40px, and optically pulled out.** Above 1150px it gets
+  `margin-left: calc(-1 * var(--logo-size))` so its RIGHT edge lands on the band edge — the
+  slanted beta reads as pushed inwards otherwise. Below that it sits in flow; no clipping.
+  Verified one row and fitting at 1512/1200/1150/1100/768/430/390/360/320.
+
+⚠️ **Three things this broke, all found by measuring:**
+1. **The `/ 2` in `.sidenote`'s width** assumed a centred column splitting the leftover between
+   two margins. Left in, it would have halved every note.
+2. **`gutterFits()` measured `window.innerWidth`.** Correct only while the gutter was viewport
+   margin; now measures the band.
+3. **Archives' `scroll-margin-top` override at `min-width: 1250px`** put captions 26px UNDER
+   the strip. One row needs ~1200px of content and the band now caps at 1024 — the strip can
+   **never** be one row again, so the override was dead and wrong. Removed. *Third time this
+   exact bug class has appeared; the strip's height is variable and the clearance must track it.*
+
+⚠️ **Local `_site` goes stale.** `jekyll build` does not delete output whose source stopped
+qualifying, so `/2100/` pages and a 1,464 post count persisted from earlier builds and were
+briefly measured as real. `jekyll clean` restored 1,456 and 26 archive years. **CI is safe** —
+Actions builds from a fresh checkout. Run `make clean` before trusting local counts.
+
 ### ONE width, finished — posts and pages too (2026-07-27)
 The earlier pass standardised the *chrome* band; posts and 22 pages still put `.container-ideal`
 on `main` itself, so their content band was 665px while listing pages were 1296px — two visibly

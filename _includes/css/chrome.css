@@ -5,10 +5,12 @@
    ============================================================ */
 
 header {
-  /* Centred cluster: logo, nav and tools sit together in the middle.
-     (Restored 2026-07-27 at Brajeshwar's request — this was `space-between`,
-     which threw the logo and the menu to opposite edges and made the nav a long
-     mouse trip. Centred reads tighter and the targets sit next to each other.) */
+  /* Logo hard left, menu flushed right.
+     This has been round the houses, so the trail: space-between originally →
+     centred earlier on 2026-07-27 (the nav read tighter) → back to
+     space-between the same day. Centring looked adrift on a small screen, and
+     more to the point the header now carries a border-bottom: a centred cluster
+     floating above a full-width rule reads as unanchored, where ends anchor it. */
   width: var(--body-width);
   max-width: var(--body-width-max);
   margin: 0 auto var(--space-l);
@@ -21,7 +23,7 @@ header {
   border-bottom: var(--border-size) var(--border-style) var(--rule);
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: var(--space-s);
 }
@@ -45,6 +47,25 @@ site-menu {
 site-logo {
   width: var(--logo-size);
   height: var(--logo-size);
+}
+
+/* ---- Optical alignment of the logo -------------------------
+   The beta is a slanted letterform, so its visual mass sits right of its box's
+   left edge and it reads as pushed inwards next to the flush-left content
+   below. Pulled out into the left margin by its own width so its RIGHT edge
+   lands on the band edge — the same invisible line the prose, the header rule
+   and the footer rule all start from. The glyph then leans back INTO that line
+   instead of away from it.
+
+   Only where the margin can absorb it. The band caps at --body-width-max, so
+   the viewport margin is (100vw − band) / 2; a full --logo-size of it needs
+   roughly band + 2 × logo. Below that the logo stays in flow and simply sits at
+   the band edge like everything else — no clipping, no horizontal scroll.
+   ------------------------------------------------------------ */
+@media (min-width: 1150px) {
+  site-logo {
+    margin-left: calc(-1 * var(--logo-size));
+  }
 }
 
 site-logo a {

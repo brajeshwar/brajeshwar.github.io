@@ -83,7 +83,17 @@ main {
 .container-ideal {
   width: var(--body-width);
   max-width: var(--body-width-ideal);
-  margin-inline: auto;
+
+  /* LEFT of the band, not centred — `0 auto` is margin-left 0, margin-right
+     auto. This is what makes the narrow site width possible: the sidenote
+     gutter lives in the space to the right, and is paid for once instead of
+     being mirrored into dead space on the left. It also puts the prose's left
+     edge exactly on the band edge, which is the line the header rule and the
+     footer rule already draw — and the line the logo is optically aligned to.
+
+     Pages with no sidenotes keep the same left edge, so prose starts in the
+     same place whatever the page. */
+  margin-inline: 0 auto;
 }
 
 /* Font scope: the reader's font (--font-body) applies to ALL content (home, pages,
@@ -532,14 +542,16 @@ ul.item__cards li img {
   left: 100%;                     /* just past the reading column's right edge */
   /* Fluid width: at most --sidenote-width, but never past THE CONTENT BAND.
      Measured against the band — min(96vw, --body-width-max) — not the raw
-     viewport. 100vw let notes drift into the margin outside the band, where
-     they aligned with nothing and, at the old 1280px, overhung the header and
-     footer rules by 5px. --body-width-max is now derived to contain them
-     (measure + 2 x (gap + sidenote-width)), so the token and this agree by
-     construction. 100% here = the reading column's width. The old 1rem of
-     breathing room is gone: the band edge already sits inside the viewport. */
+     viewport, which let notes drift into the margin outside the band where they
+     aligned with nothing.
+
+     NO `/ 2` any more. That halving assumed a CENTRED column, splitting the
+     leftover between two margins. The article is left-aligned in the band now,
+     so the whole leftover is the gutter: band − column − gap. Leaving the
+     divide in would have starved every note to half its room.
+     100% here = the reading column's width. */
   width: min(var(--sidenote-width),
-             calc((min(96vw, var(--body-width-max)) - 100%) / 2 - var(--sidenote-gap)));
+             calc(min(96vw, var(--body-width-max)) - 100% - var(--sidenote-gap)));
 
   /* reset the generic `aside {}` box treatment — sidenotes are plain margin text */
   margin: 0 0 0 var(--sidenote-gap);

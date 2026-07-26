@@ -135,27 +135,33 @@
                                       than the pages (16px) and .post-nav (smaller) a narrower one. rch pins
                                       them all to the root 16px — one consistent column everywhere. */
   --body-width-ideal      : var(--measure); /* reading column = the measure */
-  --body-width-max        : 81rem; /* 1296px — THE site width. One number for the whole site:
+  --body-width-max        : 64rem; /* 1024px — THE site width. One number for the whole site:
                                       header, footer, main, galleries.
 
-                                      NOT arbitrary — it is the width that encompasses an
-                                      article AND its sidenotes:
-                                        --measure                       665px
-                                        + 2 x (--sidenote-gap 56px
-                                               + --sidenote-width 256px) 624px
-                                        = 1289px, rounded up to a whole 81rem.
-                                      The article is centred, so the gutter has to be paid for
-                                      on both sides; that doubling is what makes the number.
+                                      Derived, not chosen. The article sits at the LEFT of the
+                                      band with its sidenote gutter to the right, so the gutter
+                                      is paid for ONCE:
+                                        --measure                        665px
+                                        + --sidenote-gap                  56px
+                                        + --sidenote-width               256px
+                                        = 977px  ← article + its sidenote
+                                        + 47px breathing room
+                                        = 1024px (64rem)
 
-                                      History: 76rem until 2026-07-27, then 80rem/1280px from
-                                      the desktop research (todo.md), then 81rem the same day
-                                      when measuring showed sidenotes rendered 5px PAST the
-                                      1280 band — the band did not actually contain them.
-                                      The short-lived --body-width-wide / .container-wide pair
-                                      is gone; it existed only while this was undecided.
+                                      WHY THE ARTICLE IS NOT CENTRED ANY MORE. It was, and that
+                                      is exactly why the width was 1296px: a centred column has
+                                      to reserve the full gutter on BOTH sides, one of which is
+                                      dead space, giving 665 + 2x312 = 1289px as the FLOOR.
+                                      1296 could not be narrowed without either losing sidenotes
+                                      or squeezing them to ~123px. Paying for the gutter once is
+                                      what buys the narrower site.
 
-                                      Reading width is separate and unaffected: articles cap
-                                      at --body-width-ideal (the measure), not at this. */
+                                      History: 76rem → 80rem → 81rem (all centred, 2026-07-27)
+                                      → 64rem the same day, when the 81rem band read as too
+                                      wide and the dead left gutter was the reason.
+
+                                      Reading width is separate and unaffected: articles cap at
+                                      --body-width-ideal (the measure), not at this. */
   --body-width-medium     : 60rem; /* objects that are large but not max */
   --body-width-full       : 1600px;
 
@@ -195,7 +201,7 @@
      tool icons, which dropped 42 → 32 in the same pass. --logo-inset is the
      padding that keeps the glyph inside its circular hover fill; it scales with
      the size at each breakpoint. */
-  --logo-size             : 34px;
+  --logo-size             : 40px;
   --logo-inset            : 2px;
 
   /* Header tool icons (search, RSS, appearance). Deliberately SEPARATE from

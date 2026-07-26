@@ -148,11 +148,14 @@ page-archives table caption {
   page-archives table caption { scroll-margin-top: 7rem; }
 }
 
-/* Back to ONE row (57px) once there is room, so the generous clearance is no
-   longer needed and would just waste screen. */
-@media (min-width: 1250px) {
-  page-archives table caption { scroll-margin-top: 4.5rem; }
-}
+/* NO one-row override any more. There used to be a `min-width: 1250px` rule
+   dropping this back to 4.5rem/72px, because above that the strip fitted on one
+   row (57px). That stopped being true when the site width came down to 64rem:
+   one row needs ~1200px of content and the band now caps at 1024px, so the
+   strip is ALWAYS two rows or more. The override survived the change and put
+   captions 26px underneath the strip — measured, third time this exact bug has
+   appeared. If --body-width-max ever goes back above ~1200px, a one-row rule
+   becomes correct again; until then there is nothing to override. */
 
 /* "You are here" after a jump — CSS-only, no scroll-spy JS. Marks the year you
    actually clicked, which is what the reader is looking for.

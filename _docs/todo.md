@@ -110,7 +110,7 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       They stay in `base.css`.
 
 ## Standardise the site width — ✅ DONE 2026-07-27
-**`--body-width-max` is 81rem / 1296px, and it is the only content width on the site.**
+**`--body-width-max` is 64rem / 1024px, and it is the only content width on the site.**
 Brajeshwar's call: *"Archives, and everything on the website should now run on the same
 width"*, then *"standardize at the size that encompasses the sidenotes too."* Header, footer,
 `main`, galleries and archives all measure 1296px; verified aligned on `/`, `/about/`,
@@ -181,10 +181,10 @@ at the top of this section.
 - [x] **`--body-width-wide` / `.container-wide` removed** — duplication once the default moved.
 
 **Still open, and unaffected by the width decision:**
-- [ ] **Go asymmetric for the sidenote gutter?** Recommended, and now *more* valuable: the
-      centred column makes sidenotes need a 1210px viewport, and asymmetric would drop that to
-      ~970–1010px. Note the wider band does **not** help here — the sidenote gutter is measured
-      from the reading column, which is unchanged. See [`sidenotes.md`](sidenotes.md).
+- [x] **Asymmetric sidenote gutter** *(done 2026-07-27)*. The column is left-aligned in the
+      band and the gutter is paid for once instead of mirrored into dead space. Sidenote floor
+      **1210px → ~980px viewport**, measured. It is also what made the narrower site width
+      possible — a centred column could not go below 1289px without starving the notes.
 - [ ] **Analytics.** Any viewport/resolution data for brajeshwar.com? A 25-year tech blog's
       readers skew nothing like worldwide desktop share, and our own numbers would confirm (or
       challenge) the 1280px choice with evidence rather than public averages.
