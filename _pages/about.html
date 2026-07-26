@@ -1,0 +1,313 @@
+---
+layout: page
+title: About Brajeshwar Oinam
+permalink: /about/
+styles: css/timeline.css
+edited: 2026-07-27
+---
+
+<!--
+  The /about/ storyline. Replaced the prose about.md on 2026-07-27; Brajeshwar
+  archived the old page, and its deletion is in this repo's history.
+
+  Order is oldest-first, following the note the old page carried at its foot:
+  "Do this more like a timeline story, from top to bottom, with years and
+  details." (The CV at cv.brajeshwar.com runs newest-first — say the word and
+  it flips.)
+
+  AUTHORING — see _docs/timeline.md for the full convention.
+    .timeline-period   one time range; the heading is typed by hand
+    .timeline-when     the range, with an id — that id is what the § anchor
+                       links to, so /about/#2005-2006 is shareable
+    .timeline-entry    ONE event. data-track="life" or "work" is the ONLY
+                       thing the filter reads.
+
+  Filtered views, shareable as URLs:
+    /about/        both tracks (default)
+    /about/#work   Work only — the link to send instead of a CV
+    /about/#life   Life only
+
+  `edited:` in the front matter above is the hand-maintained last-edited date;
+  bump it when the content changes.
+-->
+
+<div class="timeline">
+
+  {%- comment -%}
+    Hash targets for shareable filtered URLs: /timeline-preview/#work and
+    #life. Zero-size; they exist purely so :target has something to match when
+    JavaScript is off. See _docs/timeline.md → Shareable URLs.
+  {%- endcomment -%}
+  <span class="timeline-target" id="life" aria-hidden="true"></span>
+  <span class="timeline-target" id="work" aria-hidden="true"></span>
+
+  <header class="timeline-head">
+    <h1>About Brajeshwar Oinam</h1>
+
+    <fieldset class="timeline-filter">
+      <legend>Show</legend>
+
+      <input type="checkbox" id="track-life" checked>
+      <label for="track-life">Life</label>
+
+      <input type="checkbox" id="track-work" checked>
+      <label for="track-work">Work</label>
+    </fieldset>
+  </header>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="childhood">Childhood, school and college</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="life">
+        <h3 class="timeline-title">Imphal, Manipur</h3>
+        <p>I was born in a quiet and serene, hill-surrounded green valley of
+          <a href="https://en.wikipedia.org/wiki/Imphal">Imphal</a>, Manipur (INDIA), and spent
+          all my childhood-school-life, teenage-college-life there.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="1999-2000">1999&ndash;2000</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="life">
+        <h3 class="timeline-title">Landed in Bombay</h3>
+        <p class="timeline-meta">Aug 2, 1999</p>
+        <p>I landed in <a href="/2009/bombay/">Bombay</a> on Aug 2, 1999, to kick-start my
+          career. I soon fell in love with the city, the speed, and the pace at which things
+          get done.</p>
+      </li>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Computer Graphic Designer</h3>
+        <p class="timeline-meta">Comic magazine startup &middot; Bombay</p>
+        <p>After job-hunting for a month, I landed my first job as a Computer Graphic Designer
+          in a Comic Magazine Startup. As part of the test for the job, they gave me a
+          <a href="https://en.wikipedia.org/wiki/Floppy_disk">floppy disk</a> which contains
+          the files to complete a graphic editing task. In those early days, I was crashing at
+          the Mumbai University Hostel and had no access to a computer. I went about an hour
+          early for the Interview and finished the job at an
+          <a href="https://en.wikipedia.org/wiki/Internet_caf%C3%A9">Internet caf&eacute;</a>
+          nearby. Well, they were impressed by the task and my story on how I completed it. I
+          started work the following week.</p>
+      </li>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Turned to the Internet</h3>
+        <p class="timeline-meta">By mid-2000</p>
+        <p>It was the Internet boom in India, and its proliferation was prominent. I wanted to
+          be part of that world. Within six months through my first job, I shifted my focus to
+          the Online World - started reading lots of books, online resources, and there was no
+          turning back. By mid-2000, I had shifted my focus to the Internet.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2001">2001</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="life">
+        <h3 class="timeline-title">brajeshwar.com</h3>
+        <p class="timeline-meta">Jun 11, 2001</p>
+        <p>The domain <code>brajeshwar.com</code> was
+          <a href="/about/brajeshwar.com/">registered on Jun 11, 2001</a>.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2003-2004">2003&ndash;2004</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Freelancing, full time</h3>
+        <p class="timeline-meta">Early 2003</p>
+        <p>In early 2003, I resigned from a very lucrative job and started freelancing
+          full-time. During those freelance days, I did many exciting work and enjoyed every
+          moment of it. I learned a lot from those experiences, made many friends, and hitched
+          some of the most rewarding relationships.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2005-2006">2005&ndash;2006</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Oinam Software</h3>
+        <p class="timeline-meta">Founder &middot; from 2005</p>
+        <p>By 2005, I decided to take the plunge and started our first company, Oinam Software.
+          We undertook some of the most innovative, sometimes very experimental work for
+          clients, such as
+          <a href="https://www.adobe.com">Adobe</a>,
+          <a href="http://www.cue.org.uk/">Cambridge University Entrepreneurs</a>,
+          <a href="http://disney.com/">Disney</a>,
+          <a href="https://en.wikipedia.org/wiki/Macromedia">Macromedia</a>,
+          <a href="http://obeo.com/">Obeo</a>,
+          <a href="https://www.pearson.com/us/">Pearson</a>,
+          <a href="http://www.starz.com/">STARZ</a>,
+          <a href="https://www.tcs.com">Tata Consultancy Services</a>,
+          <em>et al</em>.</p>
+        <p>We also worked for many contractors who subcontracted their work to us. We were, in
+          fact, one of the best ghost developers for many successful contractors.</p>
+      </li>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Acquired by Mixercast</h3>
+        <p class="timeline-meta">2006</p>
+        <p>In 2006, Mixercast, Inc
+          (<a href="https://web.archive.org/web/20070417143812/http://www.mixercast.com/">Web Archives</a>,
+          <a href="https://www.crunchbase.com/organization/mixercast">Crunchbase</a>) acquired
+          the Oinam Team. It was an exciting experience to be part of a Startup and learn from
+          it. Unfortunately, Mixercast was dissolved on Dec 31, 2009, after selling its IP
+          (Intellectual Property) to erstwhile Google (now Alphabet).</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2007-2009">2007&ndash;2009</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">oCricket</h3>
+        <p class="timeline-meta">Founder &middot; 2007, acquired June 2009</p>
+        <p>In 2007, I started <a href="/2023/ocricket/">oCricket</a>, a dedicated network for
+          Cricket lovers and fans. We envisioned oCricket as a way to help users access
+          Cricket-related media and content more efficiently and at a much more affordable
+          price. oCricket was acquired by Infinitely Beta Pvt. Ltd. in June 2009.</p>
+      </li>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Infinitely Beta &middot; Paisa.com</h3>
+        <p class="timeline-meta">From 2009</p>
+        <p>The team of oCricket went on to become the initial team of Infinitely Beta
+          (<a href="https://web.archive.org/web/20101216104216/http://infinitelybeta.com/">Web Archive</a>).
+          Its flagship product, Paisa.com,
+          (<a href="https://web.archive.org/web/20110707142949/http://www.paisa.com/">Web Archive</a>)
+          was praised by industry experts and beta testers for its innovative User Interface
+          and a never-before-done-in-India User Experience. Paisa.com was merged with
+          <a href="https://www.helpshift.com">HelpShift</a> in February 2012, which has raised
+          venture capital from Nexus Ventures, True Ventures, and others.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2010-2012">2010&ndash;2012</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Levoma</h3>
+        <p class="timeline-meta">Founder &middot; 2010, beta Jan 2011</p>
+        <p>In 2010, I started Levoma,
+          (<a href="https://web.archive.org/web/20110103192618/http://levoma.com/">Web Archive</a>)
+          a mobile video-dating service, helping singles aged 18-30, find partners easily,
+          quickly, and effectively. We were the first Indian startup to graduate at the
+          <a href="/2011/the-founder-institute-experience/">Founder Institute in 2010-2011</a>
+          Winter Silicon Valley Chapter. Levoma was among the final 12 graduating companies out
+          of it&rsquo;s initial cohort of 50+ startups. Levoma released its beta App in January
+          2011. It was acquired by a Singapore Investment firm - Kamelot Kapital Pte Ltd.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2014-2016">2014&ndash;2016</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Razorfish</h3>
+        <p class="timeline-meta">Creative Director &middot; Bangalore, India</p>
+        <p>Between 2014 to 2016, I worked at <a href="https://www.razorfish.com">Razorfish</a>
+          as a Creative Director. I led the creative design and development at Razorfish,
+          Bangalore, India. In a year, I hired and trained 50+ product designers and
+          developers. I trained them and taught best practices, standards of design, and
+          development.</p>
+        <p>I helped build Aditya Birla&rsquo;s ABOF.com, Johnson &amp; Johnson Visioncare, and
+          DMart&rsquo;s eCommerce Initiative in India. I Worked with Razorfish, UK on
+          careers.jpmorgan.com, and with Razorfish, Austin on Car2Go. I was lucky to mentor,
+          review code and designs for MyDeposits (UK), Phaladata (USA), Zest Money (India).</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2018-2019">2018&ndash;2019</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Energy storage, then precision farming</h3>
+        <p class="timeline-meta">With Gurjot Singh &middot; from 2018</p>
+        <p>In 2018, I met my co-founder, Gurjot Singh, while he was experimenting with the idea
+          of large-scale energy storage with Vanadium Redox Batteries. He is a research
+          scientist who specializes in the study of energy, food, and fuel. Unfortunately, due
+          to the high CAPEX requirements, we pivoted to Smart, and Precision farming with
+          Aeroponics. We built a demo farm in Bangalore, India. We were invited, and
+          interviewed at Mountain View but got rejected for the Y Combinator Winter 2019 Batch.
+          Gurjot moved on to a second generation Bio-fuel generation technique backed by the
+          Swish government, and a private Swish technology company. I stayed behind to find
+          solutions to the myriad of problems of Climate Changes.</p>
+      </li>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Mobisy</h3>
+        <p class="timeline-meta">Chief Product Officer (consulting) &middot; 2018&ndash;2019</p>
+        <p>Between 2018 and 2019, I consulted with <a href="https://mobisy.com">Mobisy</a> as
+          the Chief Product Officer. Mobisy is a high-growth, technology company that is
+          transforming the retail supply ecosystems in several markets, including India,
+          Africa, Middle East, and Europe through its products Bizom and Distiman.</p>
+        <p>Mobisy&rsquo;s products serve over 300 top consumer brands, including global FMCG
+          giants such as Cargill, Unilever, Procter &amp; Gamble, Reckitt-Benckiser, Coke,
+          Pepsi, Mondelez, and Hershey&rsquo;s. As of 2019, Mobisy&rsquo;s products have over
+          150,000 users and reach 5 million retailers.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline-period">
+    <h2 class="timeline-when" id="2021-present">2021&ndash;present</h2>
+    <ol class="timeline-entries">
+      <div class="timeline-progress" aria-hidden="true"></div>
+
+      <li class="timeline-entry" data-track="work">
+        <h3 class="timeline-title">Geospatial data for climate change</h3>
+        <p class="timeline-meta">Since 2021</p>
+        <p>Since 2021, I&rsquo;ve been experimenting, and building beautiful and meaningful
+          products focusing on Geospatial Data producing solutions for Climate Change.</p>
+      </li>
+    </ol>
+
+    <nav class="timeline-step" aria-label="Step between periods">
+      <a href="#2018-2019">&uarr; earlier</a>
+      <a href="#childhood">&darr; back to the start</a>
+    </nav>
+  </section>
+
+  <blockquote>
+    <p>Work-in-Progress</p>
+  </blockquote>
+
+</div>
+
+<script defer src="{{ '/assets/scripts/timeline.js' | relative_url }}"></script>
+
+{%- comment -%}
+  Heading anchors: prepends a § to each .timeline-when[id], so hovering a
+  period gives a copyable link to it. Same script the posts use — its selector
+  was widened rather than a second one written.
+{%- endcomment -%}
+<script defer src="{{ '/assets/scripts/anchors.js' | relative_url }}"></script>

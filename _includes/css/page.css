@@ -2,8 +2,23 @@
    Page — standard page bundle.
    ------------------------------------------------------------
    Loaded by _layouts/page.html via styles-pages.html.
-   Currently empty: pages get everything they need from base +
-   chrome. Kept as the hook for page-only styling so the tier
-   exists when it's needed. Replaces the 0-byte page.css.
+   Was empty; it is the hook for page-only styling, and the
+   last-edited stamp is the first thing to need it.
    ============================================================ */
 
+/* Opt-in last-edited stamp. Pages carry no date of their own the way posts
+   do, so `edited:` in a page's front matter is how one gets stated. The
+   layout renders nothing at all when the key is absent, so this styles a
+   thing that only appears where it was asked for.
+
+   Foot of the page, not the head: it is a modification note, not a
+   publication date, and putting it up top would read as the latter. Quiet
+   enough to be a footnote to the page rather than part of its content. */
+.page-edited {
+  margin-top: var(--space-l);
+  padding-top: var(--space-2xs);
+  border-top: var(--border-size) var(--border-style) var(--rule);
+
+  color: var(--text-color-lower);
+  font-family: var(--font-family-sans-serif);
+}

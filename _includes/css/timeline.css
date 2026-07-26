@@ -1,0 +1,406 @@
+/* ============================================================
+   Timeline — the /about/ storyline.
+   ------------------------------------------------------------
+   Loaded via the styles: key on the page. Authoring convention
+   is documented in _docs/timeline.md.
+
+   THE WHOLE FILTER IS CSS. Two real checkboxes drive it through
+   :has() + :checked, so it works with JavaScript disabled — both
+   start checked, so no-JS shows everything and never means "no
+   content" (guardrail 4). There is no JS file for this page.
+
+   Checkboxes, not radios, since 2026-07-27: "Merged" was dropped
+   because both-selected IS merged. Two independent toggles say
+   that directly instead of encoding it as a third state.
+   ============================================================ */
+
+.timeline {
+  --timeline-rule: 2px;                  /* the spine's thickness */
+  --timeline-dot: 11px;                  /* marker diameter */
+  --timeline-gutter: var(--space-l);     /* space the spine lives in */
+}
+
+/* ---- Head: "About" left, the toggles right, one line --------
+   The page title and the filter share a row, so the controls read
+   as part of the heading rather than as a separate widget. Wraps
+   to two lines on a phone rather than squeezing.
+   ------------------------------------------------------------ */
+
+.timeline-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2xs) var(--space-s);
+
+  margin: 0 0 var(--space-l);
+  padding: 0 0 var(--space-2xs);
+  border-bottom: var(--border-size) var(--border-style) var(--rule);
+}
+
+.timeline-head h1 {
+  margin: 0;
+  font-size: var(--step-1);
+  font-weight: var(--font-weight);
+  line-height: var(--scale-small);
+}
+
+/* ---- Filter ------------------------------------------------
+   Minimal on purpose: a small square that fills when chosen, in
+   the site's monotone. Rename the visible labels freely — only
+   the id/for pairs and the [data-track] values have to agree.
+   ------------------------------------------------------------ */
+
+.timeline-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* The group still needs a name for screen readers; it just isn't drawn.
+   Clipped rather than display:none so it stays in the accessibility tree.
+   Defined locally rather than reusing base.css's .visually-hidden, which the
+   2026-07-19 audit flagged as unreferenced and a candidate for deletion. */
+.timeline-filter legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The input itself is hidden from sight but NOT from the accessibility
+   tree or the keyboard — clip, don't display:none. */
+.timeline-filter input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.timeline-filter label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+
+  padding: var(--space-3xs) var(--space-2xs);
+  border-radius: var(--border-radius-small);
+
+  font-size: var(--step--1);
+  color: var(--text-color-low);
+  cursor: pointer;
+  transition: color 0.12s ease, background-color 0.12s ease;
+}
+
+/* The box. currentColor throughout, so it themes for free. */
+.timeline-filter label::before {
+  content: "";
+  width: 0.85em;
+  height: 0.85em;
+  border: var(--border-size) var(--border-style) currentColor;
+  border-radius: var(--border-radius-tiny);
+  opacity: 0.55;
+  transition: opacity 0.12s ease, background-color 0.12s ease;
+}
+
+.timeline-filter label:hover,
+.timeline-filter input:focus-visible + label {
+  color: var(--text-color-higher);
+  background-color: color-mix(in oklch, var(--text-color) 8%, transparent);
+}
+
+/* Focus ring rides on the label, since the input is clipped away. */
+.timeline-filter input:focus-visible + label {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.timeline-filter input:checked + label {
+  color: var(--text-color-higher);
+}
+
+.timeline-filter input:checked + label::before {
+  opacity: 1;
+  background-color: currentColor;
+  box-shadow: inset 0 0 0 2px var(--bg-color-lower);   /* the "tick": a knocked-out centre */
+}
+
+/* ---- The filter itself -------------------------------------
+   :has() reaches from the container to the checked box inside it.
+   Needs 2023+ browsers — the same bar --measure's `rch` unit
+   already set, so nothing new is excluded.
+
+   Each rule requires the OTHER track to still be checked. That is
+   deliberate: it means "neither checked" hides nothing and the
+   whole timeline shows, rather than the reader staring at an
+   empty page. See the pointer-events rule below.
+   ------------------------------------------------------------ */
+
+.timeline:has(#track-work:not(:checked)):has(#track-life:checked) .timeline-entry[data-track="work"],
+.timeline:has(#track-life:not(:checked)):has(#track-work:checked) .timeline-entry[data-track="life"] {
+  display: none;
+}
+
+/* A period whose entries have all been filtered away hides its own heading
+   too, rather than leaving an orphaned date with nothing under it. */
+.timeline:has(#track-work:not(:checked)):has(#track-life:checked) .timeline-period:not(:has(.timeline-entry[data-track="life"])),
+.timeline:has(#track-life:not(:checked)):has(#track-work:checked) .timeline-period:not(:has(.timeline-entry[data-track="work"])) {
+  display: none;
+}
+
+/* ---- Shareable URLs, without JavaScript ---------------------
+   /about/#work and /about/#life filter the page on arrival, so a
+   link sent to someone works even with scripting off — which is
+   the case that actually has to survive, since the point is to
+   send this instead of a CV.
+
+   Only active when timeline.js has NOT taken over. The script
+   adds .timeline-js to <html> and then owns the checkboxes; if
+   both mechanisms ran at once they could disagree (arrive at
+   #work, tick Life, and :target would still be hiding it).
+   A URL carries one fragment, so the three states are: no hash =
+   both, #work, #life. "#life#work" is not expressible and is not
+   needed — both IS the bare URL.
+   ------------------------------------------------------------ */
+
+html:not(.timeline-js) .timeline:has(#work:target) .timeline-entry[data-track="life"],
+html:not(.timeline-js) .timeline:has(#life:target) .timeline-entry[data-track="work"] {
+  display: none;
+}
+
+html:not(.timeline-js) .timeline:has(#work:target) .timeline-period:not(:has(.timeline-entry[data-track="work"])),
+html:not(.timeline-js) .timeline:has(#life:target) .timeline-period:not(:has(.timeline-entry[data-track="life"])) {
+  display: none;
+}
+
+/* Reflect the arrived-at state in the boxes too, so the control doesn't
+   contradict the page. Checkboxes can't be re-checked from CSS, so this
+   restyles the label instead: the box for the suppressed track reads as off. */
+html:not(.timeline-js) .timeline:has(#work:target) label[for="track-life"]::before,
+html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::before {
+  opacity: 0.55;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* The hash targets. Zero-size, at the top of the timeline, so :target has
+   something to match without adding a visible element or a scroll jump of any
+   consequence. */
+.timeline-target {
+  display: block;
+  height: 0;
+  scroll-margin-top: var(--space-l);
+}
+
+/* "At least one always selected", enforced without JavaScript: when only one
+   box is left checked, its label stops taking clicks, so it cannot be turned
+   off. Keyboard users can still uncheck it (space on the focused input, which
+   pointer-events can't intercept) — and that lands on the both-unchecked case
+   above, which shows everything. An odd checkbox state for a moment, never an
+   empty page. */
+.timeline-filter:has(#track-work:not(:checked)) label[for="track-life"],
+.timeline-filter:has(#track-life:not(:checked)) label[for="track-work"] {
+  pointer-events: none;
+}
+
+/* ---- Periods and the spine ---------------------------------
+   The spine is a border on the entry list, not a pseudo-element
+   on the container, so it starts and stops with the entries —
+   no stray line hanging past the last item.
+   ------------------------------------------------------------ */
+
+.timeline-period {
+  margin: 0 0 var(--space-l);
+}
+
+/* Time-range heading: "early 1980s", "1993-1995". Typed by hand. */
+.timeline-when {
+  position: relative;              /* anchor for the § headerlink */
+  margin: 0 0 var(--space-xs);
+  font-size: var(--step-0);
+  font-weight: var(--font-weight);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-color-lower);
+  letter-spacing: 0.02em;
+
+  /* Clear the sticky filter bar when jumped to via #id. */
+  scroll-margin-top: var(--space-l);
+}
+
+/* ---- Heading anchors ---------------------------------------
+   assets/scripts/anchors.js prepends a § link to every
+   .timeline-when[id], so hovering a period gives a copyable link
+   straight to it — "/about/#2005-2006".
+
+   These rules duplicate .headerlink in post.css on purpose.
+   post.css is the tier-1 ARTICLE bundle and timeline.css is a
+   tier-2 PAGE bundle; they are never loaded together, so the
+   alternative was promoting .headerlink into base.css and paying
+   for it on all ~1,456 pages to serve two page types. Keep the
+   two copies in step if the treatment changes.
+   ------------------------------------------------------------ */
+
+.timeline-when .headerlink {
+  position: absolute;
+  left: -1em;
+  width: 1em;
+
+  text-decoration: none;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.16s linear;
+}
+
+.timeline-when:hover .headerlink,
+.timeline-when .headerlink:focus {
+  opacity: 0.6;
+}
+
+.timeline-when .headerlink:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* No room in the margin on small screens. */
+@media (max-width: 480px) {
+  .timeline-when .headerlink { display: none; }
+}
+
+.timeline-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 var(--timeline-gutter);
+  border-left: var(--timeline-rule) var(--border-style) var(--rule);
+}
+
+.timeline-entry {
+  position: relative;
+  margin: 0 0 var(--space-m);
+}
+
+.timeline-entry:last-child { margin-bottom: 0; }
+
+/* Marker on the spine. Sits ON the rule, centred over it. */
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  left: calc((var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1);
+
+  width: var(--timeline-dot);
+  height: var(--timeline-dot);
+  border-radius: 50%;
+
+  background: var(--bg-color-lower);
+  border: var(--timeline-rule) var(--border-style) var(--rule);
+}
+
+/* Work entries read as filled, life as open — a quiet second signal so the
+   merged view is legible without reaching for colour, which the monotone
+   default rules out anyway (design.md). */
+.timeline-entry[data-track="work"]::before {
+  background: var(--text-color-lower);
+  border-color: var(--text-color-lower);
+}
+
+.timeline-title {
+  margin: 0 0 var(--space-3xs);
+  font-size: var(--step-0);
+  font-weight: var(--font-weight);
+  line-height: var(--scale-small);
+}
+
+.timeline-meta {
+  margin: 0 0 var(--space-2xs);
+  font-size: var(--step--1);
+  color: var(--text-color-lower);
+}
+
+.timeline-entry p { margin: 0 0 var(--space-2xs); }
+.timeline-entry p:last-child { margin-bottom: 0; }
+
+/* ---- Experimental: position line + section stepping ---------
+   Brajeshwar flagged this one as "not sure … want to experiment",
+   so it is deliberately the most separable part of the file:
+   delete this block and the timeline still works completely.
+
+   The progress fill uses scroll-driven animation, which is
+   Chrome/Edge 115+ only. It is wrapped in @supports so every
+   other browser simply gets the plain spine — no polyfill, no JS.
+   ------------------------------------------------------------ */
+
+.timeline-progress { display: none; }
+
+@supports (animation-timeline: scroll()) {
+  .timeline-entries { position: relative; }
+
+  .timeline-progress {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(var(--timeline-gutter) * -1 - var(--timeline-rule));
+    width: var(--timeline-rule);
+    height: 100%;
+    background: var(--accent);
+    transform-origin: top;
+    transform: scaleY(0);
+
+    animation: timeline-fill linear both;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes timeline-fill {
+    to { transform: scaleY(1); }
+  }
+}
+
+/* Respect the global motion kill switch: a line that races the scroll is
+   exactly the kind of motion someone may have turned off. */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-progress { display: none; }
+}
+
+/* Prev/next stepping between periods. Plain anchors — they work with JS off
+   and are keyboard-reachable by default. */
+.timeline-step {
+  display: flex;
+  gap: var(--space-2xs);
+  margin-top: var(--space-2xs);
+}
+
+.timeline-step a {
+  font-size: var(--step--2);
+  font-family: var(--font-family-monospace);
+  color: var(--text-color-lower);
+  text-decoration: none;
+  padding: var(--space-3xs) var(--space-2xs);
+  border-radius: var(--border-radius-small);
+}
+
+.timeline-step a:hover,
+.timeline-step a:focus-visible {
+  color: var(--text-color-higher);
+  background-color: color-mix(in oklch, var(--text-color) 8%, transparent);
+}
+
+/* ---- Narrow -------------------------------------------------
+   Tighter gutter so the prose keeps its measure on a phone. */
+@media (max-width: 600px) {
+  .timeline {
+    --timeline-gutter: var(--space-s);
+    --timeline-dot: 9px;
+  }
+}

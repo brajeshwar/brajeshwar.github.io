@@ -16,14 +16,37 @@ styles: styles-pages.html
   See _docs/styles.md §5.
 {%- endcomment -%}
 
+{%- comment -%}
+  `edited:` — an OPT-IN last-edited date for pages, which unlike posts carry no
+  date of their own. Renders only when the key is present, so no existing page
+  changes. Brajeshwar maintains the value by hand:
+
+      ---
+      layout: page
+      title: About
+      edited: 2026-07-27
+      ---
+
+  A plain YAML date is safest (`2026-07-27`); a quoted string works too, but
+  then Liquid's `date:` filter has to parse it, and anything ambiguous will
+  format oddly. Output is "Edited: Jul 27, 2026".
+{%- endcomment -%}
+{%- capture page_edited -%}
+{%- if page.edited -%}
+<p class="page-edited"><small>Edited: <time datetime="{{ page.edited | date: '%Y-%m-%d' }}">{{ page.edited | date: "%b %d, %Y" }}</time></small></p>
+{%- endif -%}
+{%- endcapture -%}
+
 {% if page.full %}
 <main role="main" class="{{ page.style }}">
   {{ content }}
+  {{ page_edited }}
 </main>
 {% else %}
 <main role="main" class="container-ideal {{ page.style }}">
   <article>
     {{ content }}
+    {{ page_edited }}
   </article>
 </main>
 {% endif %}

@@ -336,6 +336,9 @@ post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.6
 - [`hosting.md`](hosting.md) — **everything hosting**: GitHub Pages + Actions (and the build
   versions, moved from `README.md`), the Cloudflare Pages backup build, DNS/CDN, and the
   domain decisions.
+- [`timeline.md`](timeline.md) — the `/about/` storyline: vertical timeline, CSS-only
+  Merged/Life/Work filter, hand-typed time ranges, experimental scroll line. **Authoring
+  convention lives here** — content is Brajeshwar's to write.
 - [`todo.md`](todo.md) — running site task list.
 - [`inspirations.md`](inspirations.md) — article-craft studies (Aresluna deep-dive; Yale e360, BBC, The Walrus, iDiallo).
 - [`/CLAUDE.md`](../CLAUDE.md) — short guardrails for AI agents working in the repo.
