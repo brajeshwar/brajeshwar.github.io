@@ -9,46 +9,82 @@
    system sans stack (no webfont); Libre Baskerville downloads only when the
    reader picks "Serif" — font-display:swap → no load cost otherwise.
 
-   The font axis is deliberately TWO options, not three. A "Sans-Serif" slot
-   (Geist) was removed 2026-07-19: as a neo-grotesque it sat very close to the
-   system stack it was offering an alternative to, so picking it barely changed
-   anything — while costing a 165 KB unsubsetted .ttf, the heaviest asset on
-   the site. Two options that genuinely differ beat three where one is a
-   near-duplicate. See the standing advice a few lines down in config.css:
+   The axis is THREE options: System, Sans-Serif (Geist), Serif (Libre
+   Baskerville). The Sans-Serif slot was removed on 2026-07-19 and restored on
+   2026-07-27 at Brajeshwar's request, so the objection is recorded rather than
+   deleted: as a neo-grotesque, Geist sits close to the system stack it offers
+   an alternative to, so picking it changes less than the other two do. The
+   other half of that objection — a 165 KB unsubsetted .ttf, the heaviest asset
+   on the site — no longer applies; it is a 47 KB subset woff2 as of
+   2026-07-27. See the standing advice a few lines down in config.css:
    "Resist the temptation to use custom fonts."
 
-   If a third option is ever wanted, make it one the system stack CANNOT give —
+   If a FOURTH option is ever wanted, make it one the system stack CANNOT give —
    Atkinson Hyperlegible is the obvious candidate for a site that hands this
    much control to the reader. Subset to latin and ship woff2, not ttf. */
 
 /* Geist is the reader "Sans-Serif" font ([data-font="geist"] in config.css →
-   --font-body). Variable TTF, so one file covers every weight. Self-hosted and
+   --font-body). Variable, so one file covers every weight. Self-hosted and
    font-display:swap, so it downloads ONLY when a reader picks Sans-Serif —
    never on a default load. Falls back to the system sans stack while loading.
 
-   ⚠️ 169 KB, unsubsetted TTF. That size is exactly why Geist was dropped on
-   2026-07-19; Brajeshwar re-added the file on 2026-07-27 and asked for the
-   option back. It costs nothing unless chosen, but a subset woff2 would cut it
-   by roughly an order of magnitude — see todo.md. */
+   Subset to woff2 on 2026-07-27: 169,056 → 47,596 bytes, a 72% cut, and the
+   reason it had been the heaviest asset on the site. `font-weight: 100 900`
+   below is a promise about the file, so the subset had to keep the variable
+   machinery — fvar, gvar, STAT, HVAR all survive and the wght axis still
+   reads 100–900. Verified by reading the axis back out of the built file, not
+   by trusting the byte count: a naive subset flattens a variable font to a
+   single instance and every weight silently becomes 400.
+
+   Regenerate with (fonttools + brotli):
+     pyftsubset assets/fonts/geist/Geist-Variable.ttf \
+       --output-file=assets/fonts/geist/Geist-Variable.woff2 \
+       --flavor=woff2 --layout-features='*' \
+       --unicodes="U+0000-024F,U+0259,U+02BB-02BC,U+02C6,U+02DA,U+02DC,\
+                   U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2074,U+20A0-20BF,\
+                   U+2122,U+2190-21FF,U+2212,U+2215,U+FEFF,U+FFFD"
+
+   The .ttf stays in the repo as the source to re-subset from; only the .woff2
+   ships. */
 @font-face {
   font-family: "Geist";
-  src: url("/assets/fonts/geist/Geist-Variable.ttf") format("truetype");
+  src: url("/assets/fonts/geist/Geist-Variable.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
+  /* Read off the subset's own cmap rather than guessed. It has to reach past
+     U+05FF: the site uses ’ (3,197 times in a 400-page sample), “ ” • – —
+     → ← ↩ … and ₹, all of which live in U+2000-21FF. See the Libre
+     Baskerville note below — that is the same mistake, found here. */
+  unicode-range: U+0020-007E, U+00A0-01E9, U+0218-0237, U+0259, U+02BC-02DC,
+                 U+0300-0338, U+1E20-1E21, U+1E80-1EF9, U+2013-2044, U+2074,
+                 U+20AA-20BD, U+2122, U+2190-21B5, U+21E4-21E7, U+2212;
 }
 
 /* Libre Baskerville is the reader "Serif" font ([data-font="serif"] in
    config.css → --font-body). Self-hosted, latin subset, font-display:swap
    so it downloads only when a reader picks Serif. Falls back to the system
-   serif stack (--font-serif) while loading / if it fails. */
+   serif stack (--font-serif) while loading / if it fails.
+
+   ⚠️ These declared `U+000-5FF` until 2026-07-27, and that was a real bug,
+   not a tidy-up. The files DO contain ’ “ ” – — • … — every one of them above
+   U+05FF, so the range forbade the browser from using this font for exactly
+   the characters that carry a serif's voice. A reader on Serif got Libre
+   Baskerville for the letters and the system serif for every apostrophe: the
+   commonest non-ASCII character on the site, 3,197 times in a 400-page
+   sample. Found while choosing Geist's range, which is why all four faces are
+   corrected in one go.
+
+   The ranges below are read off each file's own cmap. All three faces are the
+   same google-fonts "latin" subset and share one range. */
 @font-face {
   font-family: "Libre Baskerville";
   src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+000-5FF;
+  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC,
+                 U+2013-2044, U+2074, U+20AC, U+2122, U+2212-2215;
   size-adjust: 98.5%;
 }
 
@@ -58,7 +94,8 @@
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  unicode-range: U+000-5FF;
+  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC,
+                 U+2013-2044, U+2074, U+20AC, U+2122, U+2212-2215;
   size-adjust: 98.5%;
 }
 
@@ -68,7 +105,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+000-5FF;
+  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC,
+                 U+2013-2044, U+2074, U+20AC, U+2122, U+2212-2215;
   size-adjust: 98.5%;
 }
 

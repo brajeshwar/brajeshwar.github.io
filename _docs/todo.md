@@ -269,8 +269,18 @@ at the top of this section.
       that loads about 12 KB today. Bundle per page type, mirroring how the CSS already splits. Needs a
       minifier in the workflow, which CLAUDE.md guardrail 6 was amended to permit. See
       [`javascript.md`](javascript.md).
-- [ ] **Subset Geist to woff2** *(restored 2026-07-27)*. `assets/fonts/geist/Geist-Variable.ttf`
-      is **169 KB, unsubsetted TTF** — the weight that got it dropped on 2026-07-19. It only
-      downloads when a reader picks Sans-Serif, so it costs nothing by default, but a
-      latin-subset variable woff2 would cut it by roughly an order of magnitude. Libre
-      Baskerville is already woff2 + `unicode-range` for exactly this reason; match it.
+- [x] **Subset Geist to woff2** *(done 2026-07-27)* — **169,056 → 47,596 bytes, a 72% cut.**
+      The variable machinery survives (`fvar`/`gvar`/`STAT`/`HVAR`, wght 100–900), verified by
+      reading the axis back out of the built file *and* by measuring three different rendered
+      widths at 100/400/900 in the browser — a naive subset flattens a variable font to one
+      instance and every weight silently becomes 400. The `.ttf` stays in the repo as the
+      re-subset source and is now `exclude`d from the build; it had still been shipping.
+      Regeneration command is in the `themes.css` comment.
+- [x] **`unicode-range` was wrong on all four faces** *(found and fixed 2026-07-27, while
+      choosing Geist's range)*. Libre Baskerville declared `U+000-5FF` — but the files contain
+      `’ “ ” – — • …`, every one of them above U+05FF. The range forbade the browser from using
+      the font for exactly the characters that carry a serif's voice, so a reader on Serif got
+      Libre Baskerville for the letters and the *system* serif for every apostrophe: the
+      commonest non-ASCII character on the site, **3,197 times in a 400-page sample**. All four
+      faces now declare ranges read off their own cmaps. Verified in-browser: `’ — •` render in
+      Libre Baskerville, not the fallback.

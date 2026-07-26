@@ -74,5 +74,11 @@ exclude:
   - CLAUDE.md           # agent guidance — must not be published (/CLAUDE/)
   - Makefile            # dev tooling
   - scripts             # post-build scripts run from the checkout, not the published site
+  # The variable TTF is the SOURCE we re-subset from, not a shipped asset. Only
+  # Geist-Variable.woff2 is referenced by themes.css, and the ttf is 169 KB
+  # against its 47 KB — three and a half times the file it replaced, sitting in
+  # the deploy for nobody. Kept in the repo so the subset can be regenerated
+  # (the pyftsubset command is in themes.css); excluded from the build.
+  - assets/fonts/geist/Geist-Variable.ttf
   # NOTE: agents-manifest.json is intentionally NOT excluded — Jekyll must render it so
   # scripts/build-agent-markdown.mjs can read it; the script deletes it before deploy.
