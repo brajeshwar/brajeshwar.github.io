@@ -153,21 +153,60 @@
    a semantic token nothing reads is just weight with a good name. */
 
 /* ---- Palettes (re-tint the scale + accent) ----------------- */
+
+/* WARM = Flexoki (Brajeshwar, 2026-07-27: "Our 'Warm' theme should be based on
+   https://github.com/kepano/flexoki"). An MIT-licensed palette by kepano,
+   built for reading on screens the way ink sits on paper. It replaces the
+   hand-rolled warm ramp that was here before.
+
+   ⚠️ HEX, not oklch, and deliberately so — this is the only palette in the
+   file written that way. These are upstream's published values, copied
+   verbatim from kepano/flexoki `css/flexoki.css`, and the point is that they
+   can be diffed against it. Converting to oklch would round every one of them
+   and lose that. Everything downstream (`color-mix(in oklch, …)` for the
+   borders) accepts hex without complaint.
+
+   The site's scale has 11 steps and Flexoki's has 15, so base-150/-800/-850/
+   -950 are the four that do not get a slot. Each line names the step it came
+   from, so the mapping is checkable.
+   ------------------------------------------------------------ */
 :root[data-palette="eink"] {
-  --color-gray-50:  oklch(97.4% 0.014 89);
-  --color-gray-100: oklch(95.2% 0.019 91);
-  --color-gray-200: oklch(91.0% 0.025 89);
-  --color-gray-300: oklch(85.6% 0.033 89);
-  --color-gray-400: oklch(73.5% 0.038 91);
-  --color-gray-500: oklch(60.9% 0.028 87);
-  --color-gray-600: oklch(50.6% 0.023 85);
-  --color-gray-700: oklch(40.8% 0.020 83);
-  --color-gray-800: oklch(28.5% 0.015 90);
-  --color-gray-900: oklch(22.3% 0.014 88);
-  --color-gray-950: oklch(17.8% 0.012 92);
-  --color-surface: var(--color-gray-50);
-  --color-accent: oklch(22.3% 0.014 88);
-  --color-accent-hover: oklch(40.8% 0.020 83);
+  --color-gray-50:  #FFFCF0;   /* paper    */
+  --color-gray-100: #F2F0E5;   /* base-50  */
+  --color-gray-200: #E6E4D9;   /* base-100 */
+  --color-gray-300: #CECDC3;   /* base-200 */
+  --color-gray-400: #B7B5AC;   /* base-300 */
+  --color-gray-500: #9F9D96;   /* base-400 */
+  --color-gray-600: #878580;   /* base-500 */
+  --color-gray-700: #6F6E69;   /* base-600 */
+  --color-gray-800: #575653;   /* base-700 */
+  --color-gray-900: #282726;   /* base-900 */
+  --color-gray-950: #100F0F;   /* black    */
+
+  /* Light. Only the three the shared defaults get wrong for this ramp — the
+     rest already land on the right Flexoki step and are left alone.
+
+     bg/surface follow kepano's own docs theme (`vitepress/index.css`): the
+     page is `paper` and raised surfaces are DARKER, not lighter. That inverts
+     the usual relationship, and it is correct here — on paper there is nothing
+     lighter than paper to raise onto. */
+  --color-bg: var(--color-gray-50);          /* paper    — vp-c-bg     */
+  --color-surface: var(--color-gray-100);    /* base-50  — vp-c-bg-alt */
+
+  /* fg-subtle is the one contrast compromise. Flexoki's tx-3 is base-300,
+     which measures 2.00:1 on paper — fine for the hairlines it is meant for,
+     unreadable for what this site spends it on (sidenote body text). Stepped
+     to base-600 = 4.97:1, i.e. AA. Same bump the default palette already makes
+     for the same reason; the tier above it, fg-muted, is base-700 at 7.14:1
+     and needs no help. */
+  --color-fg-subtle: var(--color-gray-700);  /* base-600 — 4.97:1 on paper */
+
+  /* Accent stays monotone, drawn from this ramp — colour on this site is
+     opt-in through the Accent axis, not baked into a palette (design.md).
+     Flexoki ships eight accent hues if that ever changes; kepano's own docs
+     theme uses cyan-600. Left as the darkest warm neutral: 14.51:1. */
+  --color-accent: var(--color-gray-900);     /* base-900 */
+  --color-accent-hover: var(--color-gray-800);
 }
 
 :root[data-palette="nord"] {
@@ -225,16 +264,43 @@
   --color-accent-hover: oklch(76.3% 0.048 194);
 }
 
+/* Flexoki dark is not the generic dark remap applied to a warm ramp — it is
+   its own set of assignments, and they disagree with the mixin above in every
+   row that matters. Left to the shared mixin, Warm-dark would come out on
+   base-900 with paper-white text; Flexoki puts the page on `black` and the
+   text on base-200, which is the whole character of it.
+
+   Taken from kepano's own docs theme (`vitepress/index.css`), with the same
+   one-step contrast bump on the subtle tier as the light half:
+       vp-c-bg      → black     ·  vp-c-bg-elv → base-900
+       vp-c-text-1  → base-200  ·  vp-c-text-2 → base-500
+   Ratios are against the black page background. */
+@mixin eink-dark-semantics {
+  --color-bg: var(--color-gray-950);         /* black            */
+  --color-surface: var(--color-gray-900);    /* base-900         */
+  --color-bg-muted: var(--color-gray-900);
+  --color-code-bg: var(--color-gray-900);    /* NOT gray-950 — that is the page */
+  --color-fg: var(--color-gray-300);         /* base-200 — 11.98:1 */
+  --color-fg-muted: var(--color-gray-500);   /* base-400 —  7.05:1 */
+  --color-fg-subtle: var(--color-gray-600);  /* base-500 —  5.19:1, Flexoki tx-2 */
+  --color-primary: var(--color-gray-300);
+  --color-primary-fg: var(--color-gray-950);
+  --color-accent: var(--color-gray-300);
+  --color-accent-hover: var(--color-gray-400);
+}
+
 :root[data-theme="dark"],
 :root[data-palette][data-theme="dark"] { @include dark-semantic-tokens; }
 
 :root[data-palette="nord"][data-theme="dark"] { @include nord-dark-accent; }
+:root[data-palette="eink"][data-theme="dark"] { @include eink-dark-semantics; }
 
 @media (prefers-color-scheme: dark) {
   :root[data-theme="auto"],
   :root[data-palette][data-theme="auto"] { @include dark-semantic-tokens; }
 
   :root[data-palette="nord"][data-theme="auto"] { @include nord-dark-accent; }
+  :root[data-palette="eink"][data-theme="auto"] { @include eink-dark-semantics; }
 }
 
 /* ---- Accent override (custom accent color) ----------------- */
