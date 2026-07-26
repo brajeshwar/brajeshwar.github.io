@@ -72,6 +72,9 @@ Then serve `_site` statically and check in a browser.
    excluded `Geist-Variable.ttf` kept reappearing in `_site` and `llms.txt` kept vanishing,
    which looked like the `exclude` had failed. A fresh `jekyll build` was correct both times.
    **If `_site` disagrees with the config, restart the server before debugging anything else.**
+3. **It also overwrites `_site` mid-comparison.** An A/B of two builds gave a "difference" that
+   was really their `--future` localhost build landing between the build and the copy. Use
+   `jekyll build --destination <dir>` for any before/after comparison, never the shared `_site`.
 
 For anything involving sidenotes, images, search or `_config.yml`, use the full build and serve
 it statically. `python3 -m http.server` is single-threaded and starves under a blocking eval —

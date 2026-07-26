@@ -283,6 +283,16 @@ at the top of this section.
       already ~48 KB raw / ~13 KB gzip. See [`design.md`](design.md) → *Performance budget*.
 
 ## Found 2026-07-27
+- [x] **Jekyll's "Excerpt modified" warning on `_pages/archives.html`** *(fixed 2026-07-27)* —
+      Jekyll builds an excerpt for every document by cutting at the first `\n\n`; that cut fell
+      inside archives.html's opening `{%- comment -%}` block, so Jekyll rewrote the block to
+      close it and warned. Fixed with `excerpt_separator: ''` on the **`_pages` collection
+      default**, not on the one file: it is a property of the collection, and any page whose
+      first blank line falls inside a Liquid block would warn the same way — which, in a repo
+      that comments its templates this heavily, is most of them. Safe because nothing reads
+      `.excerpt`, and jekyll-feed (the only plugin that would) feeds posts only. Proved by
+      building both versions to separate destinations: **feed byte-identical, all 1,486 built
+      HTML files byte-identical.**
 - [ ] **Images carry no `width`/`height` attributes.** Two consequences, one already patched:
       (a) **layout shift** on every image as it loads; (b) sidenotes were being positioned
       against a figure that had almost no height yet — measured 79px at placement, 675px once

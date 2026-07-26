@@ -57,6 +57,25 @@ defaults:
     values:
       layout: 'page'
       permalink: '/:name/'
+      # No excerpts for pages. Jekyll builds one for every document by cutting
+      # at the first "\n\n"; when that cut lands inside a Liquid block it
+      # rewrites the block to close it and warns:
+      #
+      #   Warning: Excerpt modified in _pages/archives.html!
+      #   Found a Liquid block containing the excerpt separator "\n\n".
+      #
+      # archives.html opens with a multi-paragraph {%- comment -%} explaining
+      # the group_by_exp, so the cut fell inside it. Setting the separator to
+      # "" makes Jekyll skip excerpt generation entirely for the collection
+      # (Document#generate_excerpt? is `!excerpt_separator.empty?`).
+      #
+      # Set here rather than on the one file because it is a property of the
+      # collection, not of that page: any page whose first blank line falls
+      # inside a Liquid block would warn the same way, and this repo comments
+      # its templates heavily. Safe because NOTHING reads `.excerpt` — no
+      # layout, include, script or config — and jekyll-feed, the only plugin
+      # that would, feeds posts only. Posts keep their excerpts.
+      excerpt_separator: ''
 
 collections:
   redirect:
