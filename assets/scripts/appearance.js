@@ -3,7 +3,7 @@
  * Five independent axes, each persisted and applied to <html>:
  *   mode    → data-theme     : auto | light | dark              (localStorage 'theme')
  *   palette → data-palette   : default | nord | eink            ('palette')
- *   font    → data-font      : sans (Default/system) | serif (Serif)      ('font')
+ *   font    → data-font      : sans (System) | geist (Sans-Serif) | serif  ('font')
  *   size    → data-text-size : xs | s | m (default) | l | xl    ('textsize')
  *   accent  → --ov-accent inline + data-accent="custom"         ('accent' = Default/Blue/Amber oklch)
  * The no-flash <head> snippet (in default.html) applies mode/palette/font/accent
@@ -26,7 +26,11 @@
                 // ⚠️ FOUR places must agree for a font option: this list, the
                 // [data-font] rule in config.css, the @font-face in themes.css,
                 // and the no-flash whitelist in _layouts/default.html.
-                opts: [['sans','Default'], ['geist','Sans-Serif'], ['serif','Serif']] },
+                // 'sans' is labelled "System" (was "Default", renamed
+                // 2026-07-27): it is the OS UI face, and "Default" said only
+                // that it was the one you get without choosing, which is true
+                // of every axis's first option and describes none of them.
+                opts: [['sans','System'], ['geist','Sans-Serif'], ['serif','Serif']] },
     textsize: { key: 'textsize', def: 'm',       attr: 'textSize',
                 opts: [['xs','A'], ['s','A'], ['m','A'], ['l','A'], ['xl','A']] }
   };
@@ -85,6 +89,10 @@
     meta.setAttribute('content', bg);
   }
 
+  /* One row of the panel: a label and whatever control the caller appends.
+     The wrapper is `display: contents` in CSS, so these two become items of
+     the PANEL's grid and every label/control pair lines up in its column —
+     there is no per-row layout to set here. */
   function makeGroup(label, labelId) {
     var group = document.createElement('div');
     group.className = 'appearance-group';
@@ -99,17 +107,18 @@
   function buildEnumGroup(axis, label) {
     var a = AXES[axis], current = read(axis);
     var g = makeGroup(label, 'appearance-' + axis + '-label');
-    g.group.classList.add('appearance-group--inline');   // label + options on one line
 
     var opts = document.createElement('div');
-    opts.className = 'appearance-options appearance-options--' + axis;
+    /* `pill` carries the shared segmented-selector look (chrome.css); the
+       appearance-* classes carry only what is specific to this panel. */
+    opts.className = 'pill appearance-options appearance-options--' + axis;
     opts.setAttribute('role', 'group');
     opts.setAttribute('aria-labelledby', g.labelId);
 
     a.opts.forEach(function (o) {
       var btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'appearance-option';
+      btn.className = 'pill__option appearance-option';
       btn.dataset.opt = o[0];
       btn.textContent = o[1];
       if (axis === 'textsize') btn.setAttribute('aria-label', 'Text size ' + o[0]);
@@ -129,7 +138,6 @@
   function buildAccentGroup() {
     var current = readAccent();
     var g = makeGroup('Accent', 'appearance-accent-label');
-    g.group.classList.add('appearance-group--inline');   // label + swatches on one line
 
     var row = document.createElement('div');
     row.className = 'appearance-swatches';

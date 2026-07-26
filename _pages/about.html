@@ -37,44 +37,31 @@ edited: 2026-07-07
   <span class="timeline-target" id="life" aria-hidden="true"></span>
   <span class="timeline-target" id="work" aria-hidden="true"></span>
 
-  {%- comment -%}
-    The visible title is gone (Brajeshwar, 2026-07-27) — the intro opens the
-    page instead. The h1 stays in the accessibility tree, clipped: a document
-    with no heading at all leaves screen-reader and search users nothing to
-    anchor on, and the clipped copy costs no pixels. Delete the element outright
-    if that is not wanted.
-  {%- endcomment -%}
-  <h1 class="timeline-title-a11y">{{ page.title }}</h1>
-
   <div class="timeline-intro">
     <p>
       I was born in a quiet and serene, hill-surrounded green valley of
       <a href="https://en.wikipedia.org/wiki/Imphal">Imphal</a>, Manipur (INDIA),
       and spent all my childhood-school-life, teenage-college-life there.
     </p>
-    <p>
-      This domain <code>brajeshwar.com</code> was
-      <a href="/about/brajeshwar.com/">registered on Jun 11, 2001</a>,
-      and there is a longer story behind it.
-    </p>
   </div>
 
-  {%- comment -%}
-    The filter sits directly above the timeline it controls, rather than up in a
-    title row — a control should be next to the thing it acts on.
-  {%- endcomment -%}
-  <fieldset class="timeline-filter">
+  <pre>work-in-progress</pre>
+
+  <fieldset class="timeline-filter pill">
     <legend>Show</legend>
 
     <input type="checkbox" id="track-life" checked>
-    <label for="track-life">Life</label>
+    <label class="pill__option" for="track-life">
+      <span class="pill__marker" aria-hidden="true"></span>Life</label>
 
     <input type="checkbox" id="track-work" checked>
-    <label for="track-work">Work</label>
+    <label class="pill__option" for="track-work">
+      <span class="pill__marker" aria-hidden="true"></span>Work</label>
   </fieldset>
 
+
   <section class="timeline-period">
-    <h2 class="timeline-when" id="1999-2000">1999&ndash;2000</h2>
+    <h2 class="timeline-when" id="1999-2000">1999 ›</h2>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
@@ -386,10 +373,4 @@ edited: 2026-07-07
 {%- endcomment -%}
 
 <script defer src="{{ '/assets/scripts/timeline.js' | relative_url }}"></script>
-
-{%- comment -%}
-  Heading anchors: prepends a § to each .timeline-when[id], so hovering a
-  period gives a copyable link to it. Same script the posts use — its selector
-  was widened rather than a second one written.
-{%- endcomment -%}
 <script defer src="{{ '/assets/scripts/anchors.js' | relative_url }}"></script>

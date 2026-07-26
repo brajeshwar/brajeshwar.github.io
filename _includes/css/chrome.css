@@ -258,64 +258,196 @@ site-tools svg {
 
 
 /* ---- Back to Top ------------------------------------------------
-   Site-wide, built by assets/scripts/back-to-top.js only on pages tall
-   enough to need it, and revealed only once the reader is a viewport down.
+   Built by assets/scripts/back-to-top.js, and only on a page tall enough to
+   want one. Inserted before the <footer>, in normal flow.
 
-   Deliberately quiet: it sits in the corner at the icon colour the header
-   tools use, so it reads as chrome rather than content, and it never
-   competes with what is being read. Fades rather than slides — motion is
-   suppressed for prefers-reduced-motion by the global kill switch in
-   base.css, and a fade that does not run simply appears.
+   It FLOATS, then SETTLES (Brajeshwar, 2026-07-27: "I wanted it to be visible
+   once a user starts scrolling and beyond certain scroll height. So, this
+   should start floating and then settle above the footer"). Both halves come
+   from one `position: sticky` — no fixed/static swap, no measuring on scroll:
 
-   Not rendered at all without JavaScript; scrolling up is always possible,
-   so nothing is lost.
+     - mid-page, the row's own place in the document is far below the fold, so
+       sticky pulls it up to --space-l off the viewport bottom. It floats.
+     - near the end, that place scrolls into view, no pull is needed any more,
+       and the row simply comes to rest where it actually lives — the band's
+       right edge, above the footer, in the standard rhythm.
+
+   The settle is therefore not an effect; it is the row arriving at itself.
+
+   Sticky needs room to travel, which is why base.css had to stop giving <body>
+   a definite `height: 100%` — see the note there.
+
+   JavaScript decides only WHETHER it is shown (a scroll threshold), never
+   where. Arrow only, no label: the glyph is the whole control, and the
+   accessible name lives on aria-label.
    ------------------------------------------------------------------ */
 
+.back-to-top-row {
+  position: sticky;
+  bottom: var(--space-l);
+  z-index: 5;                       /* over content, under the header (50) and the search palette */
+
+  width: var(--body-width);
+  max-width: var(--body-width-max);
+
+  /* The row takes over the seam <footer> used to own: the full --space-2xl
+     above it, then the footer follows close underneath. It has to read as part
+     of the footer's approach, not as a stray control tacked onto the article. */
+  margin: var(--space-2xl) auto var(--space-m);
+
+  display: flex;
+  justify-content: flex-end;        /* band's right edge, floating and settled alike */
+
+  /* The row is a full-band-width strip. While floating it lies across the
+     content, so it must not swallow clicks meant for the text underneath —
+     only the button itself takes the pointer back. */
+  pointer-events: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-duration) ease,
+              visibility var(--transition-duration) ease;
+}
+
+/* Added by back-to-top.js once the reader is far enough down. `visibility`
+   rather than `display` so the row keeps its box: the space above the footer
+   stays reserved whether or not the control is showing, and the footer never
+   jumps as it fades in. */
+.back-to-top-row.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* …the settled position only works if the footer gives up its own top margin.
+   Adjacent margins collapse to the LARGER of the two, so footer's --space-2xl
+   would otherwise win and leave the control marooned mid-gap, further from the
+   footer than from the content it belongs to. */
+.back-to-top-row + footer { margin-top: 0; }
+
 .back-to-top {
-  position: fixed;
-  right: var(--space-s);
-  bottom: var(--space-s);
-  z-index: 40;                      /* under the search palette + appearance panel */
+  pointer-events: auto;             /* the one part of the strip that is clickable */
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   width: var(--icon-button-size);
   height: var(--icon-button-size);
   border-radius: 50%;
-
-  background: var(--bg-color);
   border: var(--border-size) var(--border-style) var(--rule);
-  color: var(--icon-color, var(--text-color-lower));
+
+  /* Opaque, not transparent. It spends most of its life floating over running
+     text, and a see-through disc with a line of prose crossing it is unreadable
+     — the disc has to hold the page colour with it. */
+  background-color: var(--bg-color-lower);
+  color: var(--text-muted);
   text-decoration: none;
 
-  /* Hidden until the script says otherwise. visibility, not display, so the
-     opacity transition has something to animate. pointer-events guards
-     against clicking an invisible target. */
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.18s ease, visibility 0.18s ease, color 0.12s ease;
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
 }
 
-.back-to-top.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
+/* Darken on hover. A color-mix of the foreground rather than a --bg-* token:
+   --bg-color-high and --bg-color-higher both bridge to --color-primary, which
+   is a FOREGROUND colour (near-black in light mode) — using one here would
+   paint a black chip under dark text. Mixed INTO the page background rather
+   than into `transparent`, so the disc stays opaque while it floats. */
 .back-to-top:hover,
 .back-to-top:focus-visible {
-  color: var(--text-color-higher);
+  color: var(--text);
+  background-color: color-mix(in oklch, var(--text) 10%, var(--bg-color-lower));
   text-decoration: none;
 }
 
-/* Tuck it closer to the corner on a phone, where screen edges are scarcer. */
-@media (max-width: 600px) {
-  .back-to-top {
-    right: var(--space-2xs);
-    bottom: var(--space-2xs);
-  }
+
+/* ---- Pill: a reusable segmented selector -------------------------
+   One rounded track, hairline divisions, the chosen segment filled.
+
+   Extracted from the appearance panel 2026-07-27 so other controls can wear
+   the same shape — the /about/ Life/Work filter is the first. Lives in
+   chrome.css (base bundle) precisely because it is shared; a tier-2 copy would
+   have to be kept in step, which is the trap .headerlink already sits in.
+
+   Two mechanisms drive the "on" state, because the two users differ:
+     [aria-pressed="true"]   the appearance panel's <button>s, set by JS
+     .pill__option--on       anything else
+     :checked + label        the CSS-only checkbox filter (see timeline.css)
+   All three land on the same declarations below, so the look has one source.
+   ------------------------------------------------------------------ */
+
+.pill {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 999px;
+  overflow: hidden;                 /* clips the segments to the rounded ends */
+}
+
+.pill__option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xs);
+
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--space-3xs) var(--space-2xs);
+
+  font-family: inherit;
+  font-size: var(--step--2);
+  line-height: 1.15;
+  white-space: nowrap;
+  text-align: center;
+
+  color: var(--text-muted);
+  background: transparent;
+  border: 0;
+  border-inline-end: var(--border-size) var(--border-style) var(--rule);
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
+}
+
+.pill__option:last-child { border-inline-end: 0; }
+
+.pill__option:hover { color: var(--text); }
+
+.pill__option[aria-pressed="true"],
+.pill__option--on {
+  color: var(--color-primary-fg);
+  background: var(--color-primary);
+}
+
+/* Focus ring. `currentColor`, NOT --accent — the offset is negative, so the
+   ring is drawn INSIDE the segment on top of its own fill, and on a chosen
+   segment that fill is --color-primary while --accent resolves to essentially
+   the same colour: a near-black ring on near-black in light mode, near-white
+   on near-white in dark. Invisible in both, which is the one state a focus
+   ring must not be. currentColor is --color-primary-fg when chosen and
+   --text-muted when not, so it contrasts with whatever it sits on by
+   construction. (The accent swatches below keep --accent — their offset is
+   positive, so their ring lands on the page background.) */
+.pill__option:focus-visible {
+  outline: var(--border-size-small) solid currentColor;
+  outline-offset: -3px;
+}
+
+/* Optional marker inside a segment. A ring at rest, solid once chosen — the
+   filled state reads even where the segment's own darkening is subtle. */
+.pill__marker {
+  width: 0.62em;
+  height: 0.62em;
+  border-radius: 50%;
+  border: var(--border-size) var(--border-style) currentColor;
+  opacity: 0.55;
+  flex: 0 0 auto;
+  transition: opacity var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
 }
 
 
@@ -475,16 +607,29 @@ appearance-settings {
   right: 0;
 
   /* Widened 15.5rem → 21rem on 2026-07-27, when every group moved to
-     label-and-options-on-one-line. "FONT  Default Sans-Serif Serif" and
-     "TEXT SIZE  A A A A A" are the two that set the floor; at 15.5rem they
-     wrapped, which is the layout the change was meant to remove. */
-  width: min(90vw, 21rem);
+     label-and-options-on-one-line; → 24rem when the labels moved into their
+     own column (see the grid below), which takes width away from the controls.
+     "FONT  System Sans-Serif Serif" and "TEXT SIZE  A A A A A" are the two
+     that set the floor; below this they wrap, which is the layout these
+     changes were meant to remove. */
+  width: min(92vw, 24rem);
   max-height: 80vh;
   overflow-y: auto;
 
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
+  /* TWO COLUMNS: labels left, controls right (Brajeshwar, 2026-07-27). Each
+     row used to be its own flex line with `justify-content: space-between`,
+     which put the label left and the control right but let every control
+     START at a different x — the label's own width decided where its pill
+     began, so the five rows were ragged.
+
+     A grid on the PANEL fixes that: column 1 sizes to the widest label and
+     every control lines up on one edge. `max-content` rather than `auto` so
+     the label column never wins extra space when a control is narrow. */
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: var(--space-s);
+  row-gap: var(--space-xs);
 
   padding: var(--space-s);
   background: var(--bg);
@@ -500,19 +645,14 @@ appearance-settings {
   display: none;
 }
 
-.appearance-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3xs);
-}
-
-/* Accent group: label + swatches on one line. */
-.appearance-group--inline {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2xs);
-}
+/* The group has no box of its own — it dissolves into the panel's grid so its
+   label lands in column 1 and its control in column 2. Alignment is the
+   PANEL's job; a per-group flex row could only ever align within itself, which
+   is exactly what made the rows ragged. `display: contents` is safe here
+   because the element is a plain <div> carrying no role of its own; the
+   label↔control association is `aria-labelledby`, which is id-based and does
+   not care about the box tree. */
+.appearance-group { display: contents; }
 
 .appearance-group__label {
   font-size: var(--step--2);
@@ -522,50 +662,16 @@ appearance-settings {
   color: var(--text-muted);
 }
 
-/* Segmented control: the group is one pill (rounded ends, clipped), each option a
-   flat cell divided by a hairline. Single line, minimal, compact. */
-.appearance-options {
-  display: flex;
-  flex-wrap: nowrap;
-  border: var(--border-size) var(--border-style) var(--rule);
-  border-radius: 999px;
-  overflow: hidden;
-}
+/* The panel's groups ARE pills: appearance.js emits `pill appearance-options`
+   and `pill__option appearance-option` on every one, so the rounded track, the
+   hairline divisions and the filled-when-chosen state all come from the
+   component above. Only what is specific to living inside the panel is left
+   here — which is one declaration, plus the text-size row below.
 
-.appearance-option {
-  flex: 1 1 auto;
-  min-width: 0;
-  padding: var(--space-3xs) var(--space-2xs);
-
-  font-family: inherit;
-  font-size: var(--step--2);
-  line-height: 1.15;
-  white-space: nowrap;
-  text-align: center;
-
-  color: var(--text-muted);
-  background: transparent;
-  border: 0;
-  border-inline-end: var(--border-size) var(--border-style) var(--rule);
-  border-radius: 0;
-  cursor: pointer;
-  transition: color var(--transition-duration) ease,
-              background-color var(--transition-duration) ease;
-}
-
-.appearance-option:last-child { border-inline-end: 0; }
-
-.appearance-option:hover { color: var(--text); }
-
-.appearance-option[aria-pressed="true"] {
-  color: var(--color-primary-fg);
-  background: var(--color-primary);
-}
-
-.appearance-option:focus-visible {
-  outline: var(--border-size-small) solid var(--accent);
-  outline-offset: -3px;
-}
+   The .appearance-* names are kept as the hooks for that specificity rather
+   than dropped, so a panel-only tweak never has to reach for .pill and change
+   the /about/ filter by accident. */
+.appearance-options { width: 100%; }
 
 /* Text size — five equal cells, each an "A" that grows left → right (Kindle). */
 .appearance-options--textsize .appearance-option {

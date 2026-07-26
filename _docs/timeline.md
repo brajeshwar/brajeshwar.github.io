@@ -37,12 +37,14 @@ Two parser facts worth keeping, since they cost a test to establish:
     <p>The intro opens the page, and spans the full band.</p>
   </div>
 
-  <fieldset class="timeline-filter">                      <!-- directly above what it filters -->
+  <fieldset class="timeline-filter pill">                 <!-- directly above what it filters -->
     <legend>Show</legend>            <!-- clipped: named for screen readers, not drawn -->
     <input type="checkbox" id="track-life" checked>
-    <label for="track-life">Life</label>
+    <label class="pill__option" for="track-life">
+      <span class="pill__marker" aria-hidden="true"></span>Life</label>
     <input type="checkbox" id="track-work" checked>
-    <label for="track-work">Work</label>
+    <label class="pill__option" for="track-work">
+      <span class="pill__marker" aria-hidden="true"></span>Work</label>
   </fieldset>
 
   <section class="timeline-period">
@@ -104,7 +106,8 @@ full-width box has no margin to sit in. Wrap the footnoted prose in its own `.co
 Brajeshwar: *"I might change the terms."* Two places, no data migration:
 1. The `<label>` text — free text, change at will.
 2. If the *values* change (not just labels), the `id`/`for` pairs, the `data-track` values, and
-   the four selectors in `timeline.css` that name `#track-life` / `#track-work` must agree.
+   the selectors in `timeline.css` that name `#track-life` / `#track-work` must agree — the
+   `:has()` hide rules, the `pointer-events` guard, and the `:target` restyles.
 
 Keeping labels and values separate is exactly why this is markup and not a YAML schema.
 
@@ -116,6 +119,14 @@ never means no content (guardrail 4). (There *is* one script on the page, `timel
 only syncs the URL hash; see *Shareable URLs*. Remove it and the filter still works.) The
 inputs are clipped, not `display: none`, so they stay focusable; the focus ring rides on the
 label.
+
+**The control is the shared `.pill` (2026-07-27)** — the same segmented selector the appearance
+panel wears, at Brajeshwar's request: *"create a pill-like component, which we will re-use where
+needed."* The old square `label::before` boxes are gone; each label is a `.pill__option` holding
+a `.pill__marker` — a circle that is a ring at rest and fills when chosen — and the chosen
+segment darkens. The component lives in `chrome.css`; `timeline.css` adds only the checkbox
+mechanics, since a checkbox has no `aria-pressed` for the pill to hook. See
+[`styles.md`](styles.md) §6 → *Pill*.
 
 **"Merged" was dropped 2026-07-27** (Brajeshwar: *"we are going to see one or the other or both
 anyways"*). Both-checked **is** merged, so two independent toggles say it directly rather than
@@ -155,8 +166,9 @@ both-tracks *is* the bare URL.
    give `:target` something to match. This is the case that has to survive, because the
    recipient's setup is not ours to control. Verified: at `#work` with JS off, life entries are
    hidden and 8 of 10 periods show — *even with both checkboxes ticked*, so the link cannot be
-   defeated by stale control state. The suppressed track's box is restyled to read as off, so
-   the control never contradicts the page.
+   defeated by stale control state. The suppressed track's **segment** is restyled to read as
+   off (transparent, hollow marker), so the control never contradicts the page. Re-verified
+   after the pill change.
 2. **`assets/scripts/timeline.js`** — when JS runs it adds `.timeline-js` to `<html>`, which
    switches the `:target` rules **off**, then owns the checkboxes: hash → boxes on load and on
    `hashchange`, boxes → hash on change. Without that handover the two could disagree (arrive
@@ -203,8 +215,11 @@ still works completely.**
   filling accent line; every other browser gets the plain spine. No polyfill, no JS.
 - It is suppressed under `prefers-reduced-motion`, since a line racing the scroll is exactly
   the sort of motion someone may have switched off.
-- `.timeline-step` gives plain `↑ earlier` / `↓ later` anchors between periods — ordinary
-  links, so they work with JS off and are keyboard-reachable for free.
+- ~~`.timeline-step` gives plain `↑ earlier` / `↓ later` anchors between periods.~~
+  **Removed 2026-07-27** — replaced by the site-wide Back to Top (see [`styles.md`](styles.md)
+  §6). They were hand-maintained: each named a sibling `id`, so adding or reordering a period
+  pointed them somewhere wrong without any error. The markup and the CSS are both gone; a
+  tombstone comment remains in `timeline.css`.
 
 Open question for Brajeshwar: whether the fill should track the **whole page** (what it does
 now, `scroll(root block)`) or each period independently. The second reads better on a long

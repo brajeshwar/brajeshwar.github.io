@@ -237,7 +237,104 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
-### Back to Top, site-wide (2026-07-27)
+### The pill becomes a component; Back to Top comes in from the corner (2026-07-27, browser-verified)
+
+Brajeshwar: *"Create a pill-like component, which we will re-use where needed. For instance,
+the one from the Theme Selector. Use that clean, minimal, pill selector in `/about/` for
+Life / Work too. Instead of the square selection icon, let's change that to a clean, darker
+circle."* And: *"For the Scroll to Top, it needs a hover (darken the background). Bring it
+within the body width… positioned just above the footer, separating with our standard
+rhythmic spacing."*
+
+**`.pill` extracted into `chrome.css`.** The appearance panel's segmented look is now a shared
+component — `.pill` (track) / `.pill__option` (segment) / `.pill__marker` (dot). Both users
+emit both class sets: `appearance.js` writes `pill appearance-options …` and
+`pill__option appearance-option`, so `.appearance-*` survives purely as the hook for
+panel-specific sizing (the text-size row). `.appearance-options` is now **one declaration**
+where it used to carry the whole look.
+
+**`/about/` Life/Work wears it.** The old square `label::before` checkboxes are gone; each
+label is a `.pill__option` holding a `.pill__marker` — a ring at rest, filled once chosen —
+and the chosen segment darkens. Still zero JavaScript: real `<input type="checkbox">`
+elements drive it, so `:checked + .pill__option` re-declares the "on" look that
+`[aria-pressed="true"]` gives the panel. Three selectors, one set of declarations.
+
+Verified live: both on (light + dark), one on, and the **no-JS `:target` path** — with
+`.timeline-js` removed and `#work` in the hash, 12 work entries showed, 2 life entries hid,
+and the pill reflected it rather than contradicting the page. The *"at least one always
+selected"* guard survives the new markup: with Work off, both the Life label **and its marker
+span** compute `pointer-events: none`, and hit-testing at each of their centres falls through
+to the fieldset — so a pointer cannot clear the last track.
+
+**Fixed while extracting: the focus ring was invisible on a chosen segment.** It was
+`outline: … solid var(--accent)` with `outline-offset: -3px`, so the ring is drawn *inside*
+the segment on its own fill — and on a chosen segment that fill is `--color-primary`, which is
+essentially the same colour `--accent` resolves to. Near-black on near-black in light, near-
+white on near-white in dark. **Invisible in both**, and it had been shipping that way in the
+appearance panel. Now `solid currentColor`, which is `--color-primary-fg` when chosen and
+`--text-muted` when not, so it contrasts with whatever it sits on by construction. Verified by
+tabbing in for real (`.focus()` does not reliably match `:focus-visible`) in both modes and on
+both a selected and an unselected segment. The accent swatches keep `--accent` — their offset
+is positive, so their ring lands on the page background.
+
+**Back to Top: floats, then settles — and lost its label.** Brajeshwar: *"Remove the text
+'Back to Top'. Keep the arrow. It is not fixed at the footer. I wanted it to be visible once a
+user starts scrolling and beyond certain scroll height. So, this should start floating and
+then settle above the footer (what it is currently)."*
+
+Now a 32px circle with just the arrow (`aria-label` + `title` carry the name), and **both the
+float and the settle come from one `position: sticky; bottom: var(--space-l)`** on the row —
+no fixed/static swap, no per-scroll measuring. Mid-page the row's own place in the document
+is far below the fold, so sticky pulls it up off the viewport bottom; near the end that place
+scrolls into view and the row comes to rest where it actually lives. The settle is not an
+effect, it is the row arriving at itself. Measured: floating at exactly 40px off the viewport
+bottom, released to 288px at the foot of a long post, settled at 80 above / 30 below.
+
+JS decides only *whether* it shows (`scrollY > 1 viewport`, coalesced into a rAF), never
+where.
+
+⚠️ **This needed a change in `base.css`: `body { height: 100% }` → `min-height: 100%`.** The
+definite height made the body BOX exactly one viewport tall on every page — content just
+overflowed it visibly, so nothing ever looked wrong — but a sticky child is clamped to its
+containing block, so the control could not float past the first screen. Verified nothing
+depended on it: the four other `height: 100%` rules in the CSS are all deep in the tree with
+their own sized parents, `/contact/` still fills the viewport (body 861 = innerHeight), and
+the homepage's `height: 100%` cards are unaffected.
+
+Two more non-obvious pieces:
+- **Row `pointer-events: none`, button `auto`.** The row is a full-band-width strip lying
+  across the content while it floats; without this it would swallow clicks on the text
+  underneath. Hit-tested: a point in the strip 60px left of the button returns the article.
+- **The disc must be opaque** (`--bg-color-lower`), and the hover mix goes *into* that rather
+  than into `transparent` — a see-through disc with prose crossing it is unreadable.
+
+Hover darkens via `color-mix` of the foreground — **not** a `--bg-*` token, because
+`--bg-color-high`/`--bg-color-higher` both bridge to `--color-primary`, which is a
+*foreground* colour and would paint a near-black chip under dark text. That trap has now been
+hit twice; the comment in `chrome.css` names it.
+
+Spacing at rest: the row takes the `--space-2xl` seam the footer used to own and sits
+`--space-m` above it, so it reads as the footer's approach rather than as something tacked
+onto the article. This needs `.back-to-top-row + footer { margin-top: 0 }` — **adjacent
+margins collapse to the larger**, so the footer's own `2xl` otherwise stranded the control
+mid-gap. Caught by measuring, not by looking. The hide is `visibility`/`opacity`, not
+`display`, so the row keeps its box and the footer never jumps as it fades in.
+
+⚠️ **Verified with the `computer` scroll action, not `window.scrollTo`** — see the automation
+note below; programmatic scrolling fires no scroll events here, so the show/hide threshold
+would have looked broken. Full sequence checked on a 38,000px post: hidden at the top, fades
+in past one viewport, floats at the band's right edge, settles above the footer, fades out
+again on the way back up.
+
+⚠️ **The browser caches `assets/scripts/*.js` across a normal reload.** A `jekyll build` plus
+`navigate` showed the NEW inlined CSS with the OLD script still running — the arrow-only
+markup was simply absent and it read as a broken script. `cmd+shift+r` is required after
+editing a JS file; a `?cachebust` query on the page URL does not help, since it is the script
+request that is cached.
+
+Budget after all of this: **6.9–7.3 KB gzip** inlined per page (33–35 KB raw), well under 13 KB.
+
+### Back to Top, first cut (2026-07-27) — superseded above
 Replaces the per-period *"↑ earlier / ↓ back to the start"* links on `/about/`, which were
 hand-maintained — each named a sibling id, so adding or reordering a period silently pointed
 them somewhere wrong — and existed on that page only.
@@ -245,7 +342,8 @@ them somewhere wrong — and existed on that page only.
 `assets/scripts/back-to-top.js` + `.back-to-top` in `chrome.css`. Two conditions, both
 deliberate: the control is only **built** on a page taller than 2.5 viewports, and only
 **appears** once the reader is a viewport down. Verified `/about/` (6.15× tall) builds it and
-`/contact/` (1×) does not.
+`/contact/` (1×) does not. *(The "appears once a viewport down" half was dropped when the
+control moved into the flow — see above. The 2.5-viewport build condition stands.)*
 
 It is a real `<a href="#top">` — `#top` is defined by HTML as the document top, so the link
 works with no click handler, and the global `scroll-behavior: smooth` animates it, which also
@@ -419,14 +517,126 @@ same `_site`, so they overwrite each other and local measurements flip depending
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
 
-### Archives: the shared century behind the strip (2026-07-27)
-Brajeshwar's idea: a bold **"2026" set BEHIND the tray**, positioned so only the **"20"** shows
-in the left margin and the "26" runs on underneath — so every 2-digit label beside it reads as
-20|26, 20|25, 20|24. The century becomes the common prefix instead of being repeated 26 times.
+### Panel in two columns · Font "System" · Warm is now Flexoki (2026-07-27)
+
+**1. The appearance panel is a two-column grid.** Brajeshwar: *"align them into two columns,
+the labels on the left and the content (options on the right)."* Each row used to be its own
+flex line with `justify-content: space-between` — label left, control right, but every control
+STARTING at a different x, because the label's own width decided where its pill began. Five
+ragged rows.
+
+The fix is that alignment is the panel's job, not the row's: `display: grid` with
+`grid-template-columns: max-content 1fr` on `.appearance-panel`, and `.appearance-group` reduced
+to `display: contents` so each label/control pair drops into the panel's own columns.
+`max-content` rather than `auto` so the label column never claims space when a control is
+narrow. `.appearance-group--inline` is gone from both the CSS and the JS — it existed only to
+make a row lay itself out.
+
+`display: contents` is safe here: the group is a plain `<div>` with no role, and the
+label↔control association is `aria-labelledby`, which is id-based and indifferent to the box
+tree. Measured after: all five labels at x=905, all five controls at x=997.2, right edges at
+1247, every label on one line ("TEXT SIZE" no longer wraps).
+
+Panel widened 21rem → 24rem, since a dedicated label column takes width from the controls.
+Checked down to a 320px viewport: no control overflows its track and no pill segment clips its
+own text (`min-width: 0` on the segments means the track can look fine while the buttons clip,
+so both were measured).
+
+**2. Font: "Default" → "System".** Label only. It names what the option is — the OS UI face —
+where "Default" only said it was the one you get without choosing, which is true of the first
+option on every axis. The stored value is still `sans`, so none of the other three places that
+must agree for a font option changed, and no reader's saved choice needs migrating.
+
+**3. Warm is now [Flexoki](https://github.com/kepano/flexoki).** Brajeshwar: *"Our 'Warm' theme
+should be based on…"*. Note the history: Flexoki was ONE OF FIVE palettes until the trim to
+three (logged further down this file, 2026-07-19), when it was cut and Warm stayed a
+hand-rolled sepia ramp. It is now back as the basis for Warm itself.
+
+- **Hex, not `oklch`** — the only palette in the file written that way, deliberately. These are
+  upstream's published values copied verbatim from `kepano/flexoki` `css/flexoki.css` so they
+  can be diffed against it; converting would round every one and lose that. `color-mix(in
+  oklch, …)` takes hex without complaint.
+- **11 slots, 15 steps** — base-150/-800/-850/-950 get none. Each line names its source step.
+- **Its own dark mixin** (`eink-dark-semantics`), because Flexoki's dark form is not the generic
+  dark remap applied to a warm ramp. Left to the shared mixin, Warm-dark would have landed on
+  base-900 with paper-white text; Flexoki puts the page on `black` and the text on base-200,
+  which is the whole character of it. Mappings taken from kepano's own docs theme
+  (`vitepress/index.css`), and wired into BOTH dark branches (explicit and inside the
+  `prefers-color-scheme` media query) exactly as nord's accent already is — the specificity note
+  further down this file explains why both are required.
+- **One deliberate divergence.** Flexoki's `tx-3` is base-300, which measures **2.00:1** on
+  paper — right for the hairlines it is meant for, unreadable for what this site spends
+  `--color-fg-subtle` on (sidenote body text). Stepped one notch: base-600 (**4.97:1**) light,
+  base-500 (**5.19:1**) dark. The same bump the default palette already makes, for the same
+  reason.
+- **Accent stays monotone**, drawn from the same ramp. Colour on this site is opt-in through the
+  Accent axis (design.md), so a palette does not get to introduce a hue. Flexoki ships eight
+  accent hues if that ever changes; kepano's own docs theme uses cyan-600.
+
+Verified live, both modes. Light: page `#FFFCF0`, text `#100F0F`, surface `#F2F0E5`, bg-muted
+`#E6E4D9`. Dark: page `#100F0F`, text `#CECDC3` (11.98:1), fg-muted `#9F9D96` (7.05:1),
+fg-subtle `#878580` (5.19:1). Checked on a post and on `/archives/`.
+
+⚠️ **The attribute value stays `eink`**, not renamed to `flexoki`. Renaming it would invalidate
+every reader's saved `localStorage('palette')` for no visible gain — `read()` validates against
+the option list and would silently drop them back to Default.
+
+### Archives: the date column now sizes itself in `ch` (2026-07-27)
+Brajeshwar: *"the 'MMM DD' are now too narrow and squashed. It should always be in a single
+line… can we make it always fit whatever the font-size."*
+
+His diagnosis was right — the base font-size went up and the column did not. `width: 5rem`
+uses the ROOT font size, and the reader's Text Size axis never touches the root; it scales
+`--step-*`. Measured against the old 60px content box: **XS had 8.8px spare, M was already at
+−0.2px, XL was 9.2px over.** So it had been failing at the default size too, not just XL.
+
+⚠️ **The obvious fixes are dead ends here, because `base.css` sets `table-layout: fixed`.**
+Under fixed layout the specified width is used literally and the cell's content is never
+consulted:
+- `width: auto` → the table just split 50/50 and gave the date **510px**.
+- `width: 1%` + `nowrap` (the standard shrink-to-fit idiom) → **10px**, with the date
+  overflowing straight across the titles. I shipped this one to the browser before catching it;
+  `nowrap` means a cell can overflow without ever wrapping, so "did it wrap" is the **wrong
+  test** — check `content box − text width`, not `getClientRects().length`.
+
+Fixed layout means an explicit number, so the only question was the unit. **`ch` resolves
+against the element's own font**, which is `smaller` of whatever the reader picked, so the
+column tracks the text automatically — and the cell is monospaced, so 1ch is exactly one
+character. "MMM DD" is 6; `calc(6.5ch + 2 * var(--space-2xs))` (the padding added back because
+`box-sizing: border-box` is global), the half-character being slack against sub-pixel rounding.
+
+Verified across **all 1,456 rows × 5 text sizes × 3 font choices**: zero overflowing, zero
+wrapped, 4.3–5.8px of slack throughout, cell width tracking 75.4px (XS) → 95px (XL). Bare 6ch
+measured slack 0.00 at every step, which is correct but too tight to ship.
+
+### Archives: the century stops hiding and starts being two digits (2026-07-27)
+Brajeshwar: *"move the '20' just a tiny bit to the left to add at-least 1px of space with the
+year container."*
+
+**A translate could not do it, and measuring showed why.** The mark rendered the whole "2026"
+centred on the tray's left edge, so the visible "20" and the hidden "26" were **one string**:
+sliding it left to open a gap beside the "0" dragged the "2" of "26" out into the margin with
+it. At 36px with -0.02em tracking the "0" ink ended at **242.14** and the next digit's ink
+began at **242.49** — 0.35px apart — with the tray edge at **244**. So **1.51px of that third
+digit was already showing**, and *that* was what read as the "20" touching the tray; the "0"
+was never clipped. 0.35px was the most daylight any cut line could yield.
+
+Fix: **emit only the two digits that were ever visible** (`{{ years[0].name | slice: 0, 2 }}`)
+and position by the right edge — `right: 100%; margin-right: 2px` — instead of centring a
+four-digit string. Nothing visible was lost, because nothing of the "26" was ever on screen.
+The gap is now just a margin: 2px of box renders as **2.87px of visible daylight** (the italic
+"0" carries a little right side bearing of its own). Verified at rest, stuck at `top: 0`, and
+in dark mode; the mark still fits inside the tray vertically (83.9–119.9 within 81–122.7) and
+still needs the same ~44px of margin, so the 1250px cut-off is unchanged.
+
+Lesson worth keeping: **a mask is not spacing.** Hiding half a string with an opaque box looks
+identical to drawing half a string right up until you need to move one of them.
+
+The original construction, for the record:
 
 - **Centre on the tray's left edge.** `left: 0; transform: translate(-50%, -50%)` puts exactly
   two digits outside and two under. The halving is exact *because the face is monospaced with
-  tabular figures* — measured 47px visible / 47px hidden.
+  tabular figures* — measured 47px visible / 47px hidden. *(Superseded above.)*
 - **It must be a SIBLING of the nav, not a child or a pseudo-element.** Inside a stacking
   context a negative-`z-index` child still paints **above its parent's background**, so it could
   never be hidden by the very tray it sits behind. Hence the new `.archive-strip` wrapper:
@@ -436,9 +646,9 @@ in the left margin and the "26" runs on underneath — so every 2-digit label be
 - ⚠️ **Capped to the tray's height.** At 3.25rem it was 52px against a 42px tray and overhung
   ~5px, invisible at rest but clipped by the viewport edge the moment the strip stuck at
   `top: 0`. Now max 2.5rem/40px inside 42px, verified unclipped when stuck.
-- Hidden below 1250px, where the margin can no longer hold the visible half. Uses
-  `years[0].name`, not a hardcoded string. `aria-hidden` — it is a typographic device, and each
-  link already carries the full year in `aria-label`.
+- Hidden below 1250px, where the margin can no longer hold the mark. Derived from
+  `years[0].name`, not a hardcoded string, so it follows the archive into 2100. `aria-hidden` —
+  it is a typographic device, and each link already carries the full year in `aria-label`.
 
 ### Logo optical nudge + archives tightened to the new width (2026-07-27)
 - **Logo: align the GLYPH, not the box.** It had been pulled out by a whole `--logo-size`

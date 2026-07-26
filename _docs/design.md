@@ -22,8 +22,9 @@ This is the ethos borrowed from the sites studied in
 ## Monotone by default, colour is opt-in
 The **default theme is monotone grayscale** — a zero-chroma gray scale, and even the accent
 (links, nav pill, logo) is gray, not a hue. Colour is never the default; it's something a
-reader *chooses*: a tinted palette (eink / flexoki / nord / solarized) or a custom accent via
-the appearance panel. This keeps the resting site calm and print-like, and forces the design
+reader *chooses*: a tinted palette (Cool = Nord, Warm = Flexoki) or a custom accent via the
+appearance panel. Even the tinted palettes keep a monotone accent — Flexoki ships eight accent
+hues and Warm uses none of them, because hue on this site belongs to the Accent axis. This keeps the resting site calm and print-like, and forces the design
 to work in pure value contrast before any colour is added. Implementation + how to keep it
 monotone: [`styles.md`](styles.md) §2.
 

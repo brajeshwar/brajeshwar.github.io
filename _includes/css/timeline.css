@@ -44,23 +44,25 @@
 }
 
 /* ---- Filter ------------------------------------------------
-   Minimal on purpose: a small square that fills when chosen, in
-   the site's monotone. Rename the visible labels freely — only
-   the id/for pairs and the [data-track] values have to agree.
+   Wears the shared .pill from chrome.css, so it is the same control as the
+   appearance panel's — one component, two users (Brajeshwar, 2026-07-27:
+   "create a pill-like component, which we will re-use where needed").
+
+   Only what the pill cannot know lives here: the checkbox mechanics. The
+   filter has to stay CSS-only (guardrail 4), so real <input type="checkbox">
+   elements drive it and the <label> is the visible segment. The pill's "on"
+   look is re-declared for `:checked + label` because a checkbox has no
+   aria-pressed to hook.
    ------------------------------------------------------------ */
 
+/* Nothing here but the <fieldset> reset and the placement. The border, the
+   radius and the segment layout all come from .pill — deliberately not
+   repeated, so a change to the component reaches both users. */
 .timeline-filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs);
-  align-items: center;
-  justify-content: flex-start;      /* left of the page */
-
-  /* No border of any kind — the rule that used to sit under the title row went
-     with it. Space below separates it from the first period instead. */
+  position: relative;   /* containing block for the clipped inputs below */
   margin: 0 0 var(--space-l);
   padding: 0;
-  border: 0;
+  min-inline-size: 0;   /* fieldsets carry a min-content floor by default */
 }
 
 /* The group still needs a name for screen readers; it just isn't drawn.
@@ -78,8 +80,11 @@
   white-space: nowrap;
 }
 
-/* The input itself is hidden from sight but NOT from the accessibility
-   tree or the keyboard — clip, don't display:none. */
+/* Clipped, not display:none — the input must stay focusable and in the
+   accessibility tree, since it is the control and the label is only its face.
+   `.pill` sets `overflow: hidden`, so the input is positioned at its static
+   spot (no top/left) and stays inside the box: focusing it can't scroll the
+   group sideways. Verified — scrollLeft stays 0 and the page doesn't jump. */
 .timeline-filter input {
   position: absolute;
   width: 1px;
@@ -92,51 +97,24 @@
   border: 0;
 }
 
-.timeline-filter label {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-3xs);
-
-  padding: var(--space-3xs) var(--space-2xs);
-  border-radius: var(--border-radius-small);
-
-  font-size: var(--step--1);
-  color: var(--text-color-low);
-  cursor: pointer;
-  transition: color 0.12s ease, background-color 0.12s ease;
+/* Selected: the segment darkens and the marker fills — the same two signals
+   the appearance panel gives, driven off :checked instead of aria-pressed. */
+.timeline-filter input:checked + .pill__option {
+  color: var(--color-primary-fg);
+  background: var(--color-primary);
 }
 
-/* The box. currentColor throughout, so it themes for free. */
-.timeline-filter label::before {
-  content: "";
-  width: 0.85em;
-  height: 0.85em;
-  border: var(--border-size) var(--border-style) currentColor;
-  border-radius: var(--border-radius-tiny);
-  opacity: 0.55;
-  transition: opacity 0.12s ease, background-color 0.12s ease;
-}
-
-.timeline-filter label:hover,
-.timeline-filter input:focus-visible + label {
-  color: var(--text-color-higher);
-  background-color: color-mix(in oklch, var(--text-color) 8%, transparent);
-}
-
-/* Focus ring rides on the label, since the input is clipped away. */
-.timeline-filter input:focus-visible + label {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-.timeline-filter input:checked + label {
-  color: var(--text-color-higher);
-}
-
-.timeline-filter input:checked + label::before {
+.timeline-filter input:checked + .pill__option .pill__marker {
   opacity: 1;
   background-color: currentColor;
-  box-shadow: inset 0 0 0 2px var(--bg-color-lower);   /* the "tick": a knocked-out centre */
+}
+
+/* Focus ring rides on the label, since the input itself is clipped away.
+   currentColor for the same reason as .pill__option:focus-visible — see the
+   note there; an --accent ring vanishes on a chosen segment in both modes. */
+.timeline-filter input:focus-visible + .pill__option {
+  outline: var(--border-size-small) solid currentColor;
+  outline-offset: -3px;
 }
 
 /* ---- The filter itself -------------------------------------
@@ -187,14 +165,19 @@ html:not(.timeline-js) .timeline:has(#life:target) .timeline-period:not(:has(.ti
   display: none;
 }
 
-/* Reflect the arrived-at state in the boxes too, so the control doesn't
-   contradict the page. Checkboxes can't be re-checked from CSS, so this
-   restyles the label instead: the box for the suppressed track reads as off. */
-html:not(.timeline-js) .timeline:has(#work:target) label[for="track-life"]::before,
-html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::before {
+/* Reflect the arrived-at state in the control too, so it doesn't contradict
+   the page. Checkboxes can't be re-checked from CSS, so this restyles the
+   segment instead: the suppressed track's pill reads as off. */
+html:not(.timeline-js) .timeline:has(#work:target) label[for="track-life"],
+html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] {
+  color: var(--text-muted);
+  background: transparent;
+}
+
+html:not(.timeline-js) .timeline:has(#work:target) label[for="track-life"] .pill__marker,
+html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill__marker {
   opacity: 0.55;
   background-color: transparent;
-  box-shadow: none;
 }
 
 /* The hash targets. Zero-size, at the top of the timeline, so :target has

@@ -46,11 +46,18 @@ Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → 
 Two webfonts, both optional. Inter was removed earlier.
 
 ### The `[data-font]` axis — three panel choices
-The panel labels map to values: **Default** = `sans` (system stack, **no webfont**, fast),
+The panel labels map to values: **System** = `sans` (system stack, **no webfont**, fast),
 **Sans-Serif** = `geist`, **Serif** = `serif` (Libre Baskerville).
+
+*"System" was called "Default" until 2026-07-27* (Brajeshwar: *"For the FONT, replace Default
+with System"*). It names what the option actually is — the OS UI face — where "Default" said
+only that it was the one you get without choosing, which is true of the first option on every
+axis and describes none of them. **Label only: the stored value is still `sans`,** so nothing
+in `config.css`, the `@font-face` blocks, or the no-flash whitelist changed and no reader's
+saved choice needed migrating.
 ```css
 /* config.css */
-:root { --font-body: var(--font-sans); }   /* Default — no attribute, system sans */
+:root { --font-body: var(--font-sans); }   /* System — no attribute, system sans */
 [data-font="sans"]  { --font-body: var(--font-sans); }
 [data-font="geist"] { --font-body: "Geist", var(--font-sans); }              /* "Sans-Serif" */
 [data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); } /* "Serif" */
@@ -161,7 +168,7 @@ Theming is split into **two independent axes**, both set on `<html>`:
 | Axis | Attribute | Values | What it controls |
 |---|---|---|---|
 | **Mode** | `data-theme` | `auto` (default) · `light` · `dark` | light ↔ dark (appearance) |
-| **Palette** | `data-palette` | `default` · `nord` (Cool) · `eink` (Warm) | the colour scheme / hue |
+| **Palette** | `data-palette` | `default` · `nord` (Cool) · `eink` (Warm = Flexoki) | the colour scheme / hue |
 
 They compose freely: **every palette has a light and a dark form**. "Nord + Dark",
 "Solarized + Light", "E-ink + Auto" all work. `auto` follows `prefers-color-scheme`;
@@ -235,9 +242,28 @@ Because these are semantic tokens over the re-tinted scale, **every palette inhe
 Three panel choices (Brajeshwar trimmed from five; Flexoki + Solarized removed):
 - **Default** (`default`) — **monotone grayscale** (the base `:root`); the resting theme.
 - **Cool** (`nord`) — cool blue-slate (Nord).
-- **Warm** (`eink`) — warm paper / sepia (the Kindle-style warm read).
+- **Warm** (`eink`) — **[Flexoki](https://github.com/kepano/flexoki)** since 2026-07-27, at
+  Brajeshwar's request. Ink on paper: `#FFFCF0` light, `#100F0F` dark. It replaced a
+  hand-rolled sepia ramp. The attribute value stays `eink` deliberately — changing it would
+  invalidate every reader's saved `localStorage('palette')` for no visible gain.
+
 Each tinted palette redefines `--color-gray-*` + `--color-surface` + accent; nord tunes its dark
 accent. All inherit the contrast bump above via the semantic layer.
+
+**Warm is the one palette written in hex, not `oklch`** — those are upstream's published values
+copied verbatim from `kepano/flexoki`, so they can be diffed against it; converting would round
+every one and lose that. The site's scale has 11 steps to Flexoki's 15, so base-150/-800/-850/
+-950 get no slot; each line in `themes.css` names the step it came from.
+
+**Warm needs its own dark mixin** (`eink-dark-semantics`), because Flexoki's dark form is not
+the generic dark remap applied to a warm ramp — it puts the page on `black` and the text on
+base-200, where the shared mixin would have given base-900 with paper-white text. Mappings are
+kepano's own (`vitepress/index.css`): bg→black, bg-elv→base-900, tx→base-200, tx-2→base-500.
+
+One deliberate divergence, in both modes: **Flexoki's `tx-3` is too faint for what this site
+spends it on.** base-300 measures 2.00:1 on paper — right for the hairlines it is meant for,
+unreadable for sidenote body text. `--color-fg-subtle` is stepped one notch to base-600
+(4.97:1 light) / base-500 (5.19:1 dark), the same bump the default palette already makes.
 
 ## Verified (live, 1440px)
 - [x] Default = light, neutral, sans — bg `gray-100`, fg `gray-900`.
@@ -248,11 +274,16 @@ accent. All inherit the contrast bump above via the semantic layer.
 ## Iterate-later
 - Migrate components off the legacy bridge onto `--color-*` directly (cleanup, optional).
 
-> **Accent** = five swatches (**Default + Blue/Green/Amber/Red**), rendered **inline with the
-> "Accent" label** (`.appearance-group--inline`); no custom colour picker. Set via `applyAccent`
+> **Accent** = five swatches (**Default + Blue/Green/Amber/Red**), on the "Accent" row of the
+> panel grid like every other control; no custom colour picker. Set via `applyAccent`
 > → inline `--ov-accent` + `data-accent="custom"`, persisted as `localStorage('accent')`.
-> **Panel controls are segmented pills** (`.appearance-options` = one rounded pill, options are
-> flat divided cells; single line, compact) — see `8.1-tools-theme-toggle.css`.
+> **Panel controls are segmented pills** — see *Pill* in §6, which is now a shared component
+> rather than something the panel owns.
+>
+> **Panel layout is a two-column grid** (2026-07-27): labels in column 1, controls in column 2,
+> set on `.appearance-panel` itself with `.appearance-group { display: contents }`. Rows used to
+> lay themselves out, which let every control start at a different x. There is no
+> `.appearance-group--inline` any more.
 
 ---
 
@@ -524,9 +555,10 @@ theming. So it was tokenised instead:
   artifact. A colour tint remains.
 
 Verified in-browser, light and dark, at 1440px. Contrast on the code background: light ≥ 5.68:1,
-dark ≥ 7.66:1, nord-dark ≥ 5.92:1, eink-light ≥ 4.49:1. The eink-light figure is comments
-(`--color-fg-subtle`) sitting a hair under AA's 4.5 — a property of that shared site token, not
-of the code CSS; raising it would mean diverging code comments from the site's subtle-text token.
+dark ≥ 7.66:1, nord-dark ≥ 5.92:1, eink-light ≥ 4.49:1. *The eink-light figure is from the old
+sepia ramp; the Flexoki palette that replaced it on 2026-07-27 raised `--color-fg-subtle` to
+4.97:1, so code comments in Warm-light now clear AA. Re-measure the rest of this line if it
+ever matters.*
 
 Cost: the `--code-*` tokens live in `0.1-color.css`, which is base, so every page carries them
 (+0.18 KB gzip on the homepage) even though only 55 posts have code. Kept there anyway — the
@@ -625,6 +657,86 @@ the timeline, that is the point to extract a real layout instead.
 treatment is `album.css`, loaded by `_layouts/album.html`. To give a page thumbnails: switch it
 to `layout: album` and emit `<ul class="item__cards">`. `/books/`, `/photos/` and `/wear/` are
 candidates when they have images — none has thumbnail data yet, so none was converted.
+
+## Pill — the one shared control
+
+Brajeshwar, 2026-07-27: *"Create a pill-like component, which we will re-use where needed. For
+instance, the one from the Theme Selector."*
+
+A segmented selector: one rounded track, hairline divisions, the chosen segment filled. It was
+the appearance panel's private styling until 2026-07-27, when the `/about/` Life/Work filter
+needed the same control and the rules were extracted into `.pill` in `chrome.css`.
+
+| Class | Role |
+|---|---|
+| `.pill` | the track — `inline-flex`, rounded, `overflow: hidden` so segments clip to the ends |
+| `.pill__option` | one segment |
+| `.pill__marker` | optional dot inside a segment: a ring at rest, solid once chosen |
+
+It lives in `chrome.css` (the base bundle) *because* it is shared. A tier-2 copy would have to
+be kept in step by hand, which is the trap `/about/` and `/now/` already sit in for the timeline
+— worth it there, where the two are large and never co-loaded; not worth it for ~40 lines.
+
+**Three ways to say "on", one set of declarations.** The two users drive selection differently,
+so `.pill__option[aria-pressed="true"]` (the panel's `<button>`s, set by JS),
+`.pill__option--on`, and `:checked + .pill__option` (the filter's real checkboxes, in
+`timeline.css`) all land on the same colours. Adding a third user means adding a selector, not a
+second look.
+
+The filter uses checkboxes rather than buttons because it has to work with JavaScript off
+(guardrail 4) — `:has()` and `:checked` do the filtering, so the pill had to accept a
+label-driven mechanism as well as an ARIA-driven one.
+
+⚠️ **The focus ring must be `currentColor`, not `--accent`.** `outline-offset` is negative, so
+the ring is drawn inside the segment on its own fill — and a chosen segment's fill is
+`--color-primary`, which is near enough to `--accent` that the ring disappears in *both* modes.
+This shipped broken in the appearance panel until 2026-07-27. `currentColor` resolves to
+`--color-primary-fg` when chosen and `--text-muted` when not, so it always contrasts with what
+it sits on. Same trap as the `--bg-color-high` one: two tokens that look unrelated by name and
+resolve to the same colour.
+
+## Back to Top
+
+Built by `back-to-top.js`, inserted before `<footer>`, and only on a page taller than 2.5
+viewports. An arrow in a circle, no label — the accessible name is on `aria-label`.
+
+**It floats, then settles.** Brajeshwar, 2026-07-27: *"I wanted it to be visible once a user
+starts scrolling and beyond certain scroll height. So, this should start floating and then
+settle above the footer."* Both halves come from one `position: sticky; bottom: var(--space-l)`
+on the row — no fixed/static swap, no measuring on scroll:
+
+- Mid-page the row's own place in the document is far below the fold, so sticky pulls it up to
+  `--space-l` off the viewport bottom. It floats, at the band's right edge.
+- Near the end that place scrolls into view, no pull is needed, and the row comes to rest where
+  it actually lives. **The settle is not an effect; it is the row arriving at itself.**
+
+Measured: floating at exactly 40px off the viewport bottom mid-page, released to 288px at the
+foot of a long post.
+
+JavaScript decides only *whether* it shows — `scrollY > 1 viewport` toggles `.is-visible`,
+coalesced into an animation frame. Never where it sits.
+
+Three things this depends on, each non-obvious:
+
+1. **`<body>` must not have a definite height.** It was `height: 100%`, so the body *box* was
+   one viewport tall on every page and content simply overflowed it visibly — nothing looked
+   wrong, but a sticky child is clamped to its containing block, so the control could not float
+   past the first screen. Now `min-height: 100%` (see `base.css`), which keeps the original
+   intent and lets the box grow.
+2. **The row is `pointer-events: none`, the button `auto`.** The row is a full-band-width strip
+   lying across the content while it floats; without this it would swallow clicks on the text
+   underneath. Verified by hit-testing: a point in the strip 60px left of the button returns the
+   article.
+3. **The button's background is opaque** (`--bg-color-lower`, and the hover mixes *into* it
+   rather than into `transparent`). A see-through disc with a line of prose crossing it is
+   unreadable.
+
+The settled position takes over the `--space-2xl` seam the footer used to own and sits
+`--space-m` above it, so it reads as the footer's approach rather than as something stuck on the
+end of the article. That needs `.back-to-top-row + footer { margin-top: 0 }` — adjacent margins
+collapse to the larger, so the footer's own `2xl` would otherwise strand the control mid-gap.
+`visibility`/`opacity` rather than `display` for the hide, so the row keeps its box and the
+footer never jumps as it fades in.
 
 ## Every page fills the band
 

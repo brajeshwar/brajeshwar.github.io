@@ -5,9 +5,11 @@ Originally absorbed from the 2027 planning braindump.
 
 ## Content & pages
 - [x] **Year jump-nav on `/archives/`** *(2026-07-26/27)* — all 26 years, always reachable.
-      **Wide screens get a vertical rail in the left margin, iOS-Contacts style** (`26, 25 … 01`
-      in a rounded pill); narrow screens fall back to a sticky horizontal strip, because the
-      rail lives in the margin beside the centred column and a phone has no margin. Single page
+      **A horizontal strip hanging off the header rule**, at every width — an auto-fit grid, so
+      26 years are one row on a desktop and wrap into even rows on a phone. *(Corrected
+      2026-07-27: this entry described a vertical left rail, iOS-Contacts style, which was one
+      of three layouts tried and discarded — top bar → left rail → right rail → strip. A big
+      "20" century mark sits in the left margin as the shared prefix.)* Single page
       with `#YYYY` anchors, chosen over `/archives/YYYY/` pages: vanilla Jekyll cannot generate
       a page per year without a plugin (guardrail 3), so per-year URLs would mean 26 committed
       stub files plus a new one every January — exactly the hand-maintenance we're shedding.
@@ -29,7 +31,16 @@ Originally absorbed from the 2027 planning braindump.
       ⚠️ These two items predate, and are superseded by, *Standardise the site width* below —
       that whole split is what's being collapsed into one maintained number. Don't act on
       these two independently.
-- [ ] **Timeline template** — `cv.brajeshwar.com` as part of `/about`; eventually replaces the LinkedIn profile.
+- [x] **Timeline template** *(2026-07-27)* — `/about/` is now a vertical timeline with a
+      CSS-only Life/Work filter and shareable `#work` / `#life` URLs, so `/about/#work` is the
+      link to send instead of a CV. `_pages/about.html` + `timeline.css`; `/now/` wears the same
+      visuals. See [`timeline.md`](timeline.md). **Two follow-ups are open, below:** the
+      "Download Resume" PDF and retiring `cv.brajeshwar.com`.
+- [ ] **"Download Resume" PDF** — the Work track as a downloadable file. Obvious home is beside
+      the Life/Work pill when Work is the active view. Worth deciding then whether the PDF is
+      generated from the timeline markup or maintained separately.
+- [ ] **Retire `cv.brajeshwar.com`** once `/about/#work` has been live a while — belongs with the
+      other Cloudflare Worker redirects above.
 - [ ] **Photos component** — a style that highlights key photos. Likely after <https://pictures.oinam.com> is up.
 
 ## Infrastructure & migrations
@@ -113,19 +124,21 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
 **`--body-width-max` is 64rem / 1024px, and it is the only content width on the site.**
 Brajeshwar's call: *"Archives, and everything on the website should now run on the same
 width"*, then *"standardize at the size that encompasses the sidenotes too."* Header, footer,
-`main`, galleries and archives all measure 1296px; verified aligned on `/`, `/about/`,
-`/archives/`, `/film/` and an article.
+`main`, galleries and archives all measure the same 1024px band; verified aligned on `/`,
+`/about/`, `/archives/`, `/film/` and an article.
 
-**The number is derived, not chosen.** It is the width that holds an article *and* its
-sidenotes:
+**The number is derived, not chosen.** It is the width that holds an article *and* one
+sidenote gutter:
 
-    --measure                                    665px
-    + 2 x (--sidenote-gap 56 + --sidenote-width 256)   624px
-    = 1289px  → rounded up to a whole 81rem (1296px)
+    --measure                            665px
+    + --sidenote-gap 56 + --sidenote-width 256   312px
+    = 977px  → 64rem (1024px), with 47px of breathing room
 
-The article is centred, so the gutter has to be paid for on both sides — that doubling is the
-whole number. 1280px was 9px short of this, and measuring showed sidenotes rendering **5px
-past** the band, overhanging the new header and footer rules. `.sidenote`'s width is now
+⚠️ **It was 81rem/1296px for part of 2026-07-27**, from the same sum with the gutter counted
+**twice** — correct while the reading column was centred, because then the margin is mirrored
+and you pay for the gutter on both sides. Going asymmetric (below) deleted that doubling and
+took 272px off the site. Both numbers are kept here because the arithmetic is the point: the
+width is a consequence of the sidenote decision, not an independent choice. `.sidenote`'s width is now
 computed against the band (`min(96vw, --body-width-max)`) rather than `100vw`, so notes clamp
 to the band exactly instead of drifting into the margin outside it — verified touching the
 edge with 0px slack at bands of 1200/1100/1000px, and 3px inside at full width.
@@ -212,6 +225,17 @@ at the top of this section.
 - [x] **Page-load budget < 100 KB** (non-article pages) — documented as a hard target; homepage
       already ~48 KB raw / ~13 KB gzip. See [`design.md`](design.md) → *Performance budget*.
 
+## Found 2026-07-27
+- [ ] **Node 18 in the deploy workflow is past EOL** — `.github/workflows/jekyll-build-deploy.yml`
+      pins `node-version: '18'`, which left security support in April 2025. Only Pagefind and the
+      agent-markdown script run on it, so nothing is broken; bump to 22 LTS and watch one build.
+      *(Ruby is on 3.3.5, which is current.)*
+- [ ] **Back to Top's height gate reads `scrollHeight` once, before images load.** The control is
+      only built on a page taller than 2.5 viewports, measured at `DOMContentLoaded` — so a long
+      gallery whose images have no intrinsic height yet can fail the test and never get one.
+      `sidenotes.js` already solves this in the same repo by re-running on `window.load` and
+      `document.fonts.ready`. Pre-existing; not worth fixing until a real page is affected.
+
 ## Open questions
 - [ ] **Theme toggle without JS?** Do we really need to remember the Light/Dark preference (and thus JavaScript)? A CSS-only approach: <https://codepen.io/ditheringidiot/pen/JjbzNMz>. (Note: the current build deliberately persists reader choice via JS + a no-flash snippet; revisit only if the CSS-only tradeoff is worth losing persistence.)
 
@@ -221,12 +245,12 @@ at the top of this section.
 - [x] **Search moved off Algolia → Pagefind.** Algolia (adopted 2025-06) hit monthly limits too easily; <https://pagefind.app> replaces it. See [`search.md`](search.md).
 
 ## JavaScript
-- [ ] **Concatenate + minify on publish** *(policy set 2026-07-27, not built)*. Seven scripts,
-      ~30.9 KB raw, unminified, one request each. Do it in the Actions workflow after
-      `jekyll build`, alongside the Pagefind and agent-markdown steps. **Do not merge all
-      seven into one bundle** — `sidenotes.js` (10.7 KB) is posts-only and `pagefind-custom.js`
-      is `/search/`-only, so a single bundle would put ~31 KB on a homepage that loads about
-      12 KB today. Bundle per page type, mirroring how the CSS already splits. Needs a
+- [ ] **Concatenate + minify on publish** *(policy set 2026-07-27, not built)*. **Eight**
+      scripts, **~35.5 KB** raw (re-measured 2026-07-27), unminified, one request each. Do it in
+      the Actions workflow after `jekyll build`, alongside the Pagefind and agent-markdown steps.
+      **Do not merge them all into one bundle** — `sidenotes.js` (11.4 KB) is posts-only and
+      `pagefind-custom.js` is `/search/`-only, so a single bundle would put ~35 KB on a homepage
+      that loads about 12 KB today. Bundle per page type, mirroring how the CSS already splits. Needs a
       minifier in the workflow, which CLAUDE.md guardrail 6 was amended to permit. See
       [`javascript.md`](javascript.md).
 - [ ] **Subset Geist to woff2** *(restored 2026-07-27)*. `assets/fonts/geist/Geist-Variable.ttf`

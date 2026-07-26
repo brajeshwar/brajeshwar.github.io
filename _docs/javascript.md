@@ -25,17 +25,17 @@ Brajeshwar, 2026-07-27:
 
 | Script | Raw | Loaded on |
 |---|---:|---|
-| `appearance.js` | 7.8 KB | every page (theme/font/accent panel) |
-| `sidenotes.js` | 10.7 KB | posts |
-| `search.js` | 3.9 KB | every page (⌘K palette) |
-| `pagefind-custom.js` | 4.5 KB | `/search/` |
+| `appearance.js` | 8.2 KB | every page (theme/font/accent panel) |
+| `sidenotes.js` | 11.4 KB | posts |
+| `search.js` | 3.8 KB | every page (⌘K palette) |
+| `pagefind-custom.js` | 4.4 KB | `/search/` |
 | `pagefind-autofocus.js` | 0.4 KB | `/search/` |
-| `anchors.js` | 1.2 KB | posts, `/about/` |
-| `timeline.js` | 2.4 KB | `/about/` |
-| `back-to-top.js` | 2.3 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else |
+| `anchors.js` | 1.4 KB | posts, `/about/` |
+| `timeline.js` | 2.3 KB | `/about/` |
+| `back-to-top.js` | 3.5 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
 
-**~33 KB raw across all eight**, none minified, each a separate request. No page loads all
-of them.
+**~35.5 KB raw across all eight** (re-measured 2026-07-27), none minified, each a separate
+request. No page loads all of them.
 
 Every one degrades cleanly: with JS off you get real footnotes instead of sidenotes, the
 default theme instead of a remembered one, `/search/` instead of the ⌘K palette, no `§`
@@ -46,13 +46,13 @@ control, which costs nothing since scrolling up is always possible.
 
 The policy says do it "on publish", which means the Actions workflow
 (`.github/workflows/jekyll-build-deploy.yml`), after `jekyll build` and alongside the
-Pagefind and agent-markdown steps. It is **not implemented**; the site still ships seven
+Pagefind and agent-markdown steps. It is **not implemented**; the site still ships eight
 unminified files.
 
 Worth thinking through before building it, because a naive concat is worse than nothing here:
 
-- **One bundle for everything is a regression.** `sidenotes.js` is 10.7 KB and only posts need
-  it; `pagefind-custom.js` is only for `/search/`. Concatenating all seven would put ~31 KB on
+- **One bundle for everything is a regression.** `sidenotes.js` is 11.4 KB and only posts need
+  it; `pagefind-custom.js` is only for `/search/`. Concatenating all eight would put ~35 KB on
   the homepage, which today loads about 12 KB of JS. The gain has to come from minification,
   not from merging unrelated scripts.
 - **Bundle per page type** matches how the CSS already works (base + per-layout, see
