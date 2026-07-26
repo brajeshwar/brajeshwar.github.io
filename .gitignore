@@ -47,3 +47,22 @@ Thumbs.db
 *.swp
 ._*
 *~
+
+# ---- Design sources — NEVER commit these -------------------------------
+# Affinity/Photoshop/Sketch working files are hundreds of MB and are not what
+# the site ships; the site ships the exported asset.
+#
+# Added 2026-07-27 after a 166 MB .afphoto reached a commit and blocked the
+# push outright: GitHub rejects any file over 100 MB, and it rejects it on the
+# BLOB, so deleting the file in a later commit does not help — the blob is
+# still in the history being pushed. Un-doing it meant rewriting history.
+#
+# Keep the sources somewhere outside the repo (or in Git LFS, if they ever
+# genuinely need versioning).
+*.afphoto
+*.afdesign
+*.afpub
+*.psd
+*.sketch
+*.fig
+*.xd
