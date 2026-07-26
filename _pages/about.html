@@ -64,8 +64,6 @@ edited: 2026-07-07
     </p>
   </div>
 
-  <code>Work-in-Progress</code>
-
   <section class="timeline-period">
     <h2 class="timeline-when" id="1999-2000">1999&ndash;2000</h2>
     <ol class="timeline-entries">
@@ -295,6 +293,93 @@ edited: 2026-07-07
   </section>
 
 </div>
+
+{%- comment -%}
+     ===========================================================
+     TEMPLATES — copy one, paste it in place, delete the comment
+     markers around it, and edit. Nothing below renders.
+
+     A LIQUID comment, not an HTML one, deliberately: Liquid comments are
+     stripped at build time and cost zero shipped bytes, while an
+     <!-- HTML comment --> would ship this whole block to every visitor of
+     /about/ for something only the author ever reads. Same rule the
+     layouts follow.
+     ===========================================================
+
+  ─── A PERIOD, with one entry of each track ────────────────────
+  Drop this between two <section>s above. The heading text is free
+  ("early 1980s", "1993-1995", "Bangalore years" — anything). The id is
+  what /about/#the-id links to and what the hovered § copies, so keep it
+  short and stable; changing it breaks any link already shared.
+
+  data-track is the ONLY thing the Life/Work filter reads. Every entry
+  needs one, and it must be exactly "life" or "work".
+
+  timeline-meta is optional — a date, a role, a place, or nothing.
+
+<section class="timeline-period">
+  <h2 class="timeline-when" id="2027">2027</h2>
+  <ol class="timeline-entries">
+    <div class="timeline-progress" aria-hidden="true"></div>
+
+    <li class="timeline-entry" data-track="work">
+      <h3 class="timeline-title">What happened</h3>
+      <p class="timeline-meta">Role &middot; Place &middot; Date</p>
+      <p>A paragraph. <a href="https://example.com">Links</a> work as normal,
+        and so does <em>emphasis</em> and <code>code</code>.</p>
+      <p>A second paragraph if the entry needs one.</p>
+    </li>
+
+    <li class="timeline-entry" data-track="life">
+      <h3 class="timeline-title">Something personal</h3>
+      <p>Life entries render an open marker; work entries a filled one, so the
+        merged view is readable without relying on colour.</p>
+    </li>
+  </ol>
+</section>
+
+  ─── A SIDENOTE ───────────────────────────────────────────────
+  Sidenotes are built by assets/scripts/sidenotes.js from ordinary
+  footnote markup. In a post you would just write kramdown's [^1]; in
+  hand-written HTML like this page you emit what kramdown would have.
+
+  THREE THINGS MUST LINE UP, or nothing appears:
+    1. the wrapper carries class="container-ideal" — the script looks for
+       the reading column, and positions notes just past its right edge
+    2. the reference is <sup id="fnref:N"> containing <a href="#fn:N">
+    3. the note is <li id="fn:N"> inside <div class="footnotes">
+
+  N is any unique string; "1", "2" … is simply convention. The href and
+  the ids must match exactly — that pairing is how a note finds its
+  reference, not the order they appear in.
+
+  What you get: on a wide screen the note moves into the right margin
+  beside its reference and the block at the foot is hidden. Narrow, or
+  with JavaScript off, the footnotes stay at the foot and the links work
+  as ordinary anchors. Nothing to configure for either.
+
+  ⚠️ Put this INSIDE a .container-ideal wrapper of its own on this page —
+  the timeline itself spans the full width, and a note hung off a
+  full-width box would have no margin to sit in.
+
+<div class="container-ideal">
+  <p>A sentence that needs a note<sup id="fnref:1" role="doc-noteref"><a
+    href="#fn:1" class="footnote" rel="footnote">1</a></sup>, and the prose
+    carries on afterwards.</p>
+
+  <div class="footnotes" role="doc-endnotes">
+    <ol>
+      <li id="fn:1" role="doc-endnote">
+        <p>The note itself. It can hold <a href="https://example.com">links</a>
+          and runs as long as it needs to. <a href="#fnref:1"
+          class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      </li>
+    </ol>
+  </div>
+</div>
+
+     ===========================================================
+{%- endcomment -%}
 
 <script defer src="{{ '/assets/scripts/timeline.js' | relative_url }}"></script>
 

@@ -237,6 +237,32 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Copy-paste templates, and a sidenote regression fixed (2026-07-27)
+- **Templates in `_pages/about.html`** — a period and a sidenote, in a **Liquid** comment so
+  they cost nothing to ship. As an HTML comment they added **3,725 bytes** to `/about/` for
+  something only the author reads. Verified inert: absent from the built HTML, present in source.
+
+⚠️ **Making pages full-width silently broke sidenotes on pages** (commit `54ea75e8`).
+`sidenotes.js` looks for the reading column to hang notes off; removing `.container-ideal` from
+`page.html`'s article removed the column. `/books/` and `/about/brajeshwar.com/` lost their
+margin notes — **and nothing looked broken**, because footnotes still rendered at the foot,
+which is the designed fallback. Found by measuring: 2 refs, 0 sidenotes.
+
+Fixed two ways:
+1. `sidenotes.js` now matches **`.container-ideal`** rather than `article.container-ideal`, so a
+   hand-written page can opt in with a `<div class="container-ideal">` wrapper.
+2. `page.html` puts the class back **when the rendered content contains a footnotes block**.
+   Detected from content, not a front-matter flag, so it cannot drift.
+
+⚠️⚠️ **Liquid's `assign` does NOT evaluate `contains`.** The first attempt hoisted the test into
+`{%- assign has_footnotes = content contains '…' -%}` — which fails *silently and truthily*, so
+**all 22 pages** got the class. `contains` is only evaluated by `if` / `unless` / `case`; the
+test has to live inline in the `if`. Caught by checking a page that has no footnotes.
+
+Trade-off recorded in the layout: a footnoted page is measure-width throughout, so a grid on it
+will not span the band. Both current users are pure prose. A page needing both should wrap only
+the footnoted part.
+
 ### Content base moves onto `main` — pages match posts (2026-07-27)
 Brajeshwar: *"the font-size of the articles (posts) are good, but I see the ones in the pages
 are smaller."* Root cause: `body { font-size: var(--font-size) }` is a flat **16px** that

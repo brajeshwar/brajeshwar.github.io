@@ -39,8 +39,33 @@ styles: styles-pages.html
 {%- endif -%}
 {%- endcapture -%}
 
+{%- comment -%}
+  A page with footnotes gets .container-ideal back on its <article>.
+
+  Sidenotes are positioned just past the RIGHT EDGE of the measure column, so
+  they need that column to exist as a box. Making every page full-width
+  (2026-07-27) removed it and silently cost /books/ and /about/brajeshwar.com/
+  their margin notes — footnotes still rendered at the foot, which is the
+  designed fallback, so nothing looked broken. Caught by measuring: 2 refs, 0
+  sidenotes.
+
+  Detected from the rendered content rather than a front-matter flag, so it
+  cannot drift out of sync with whether the page really has footnotes.
+
+  ⚠️ The test is inline in the `if`, NOT hoisted into an `assign`. Liquid's
+  `assign` takes a value or a filtered value — it does NOT evaluate operators
+  like `contains`, and it fails silently: `assign x = content contains '…'`
+  produced a truthy value on EVERY page, so all 22 got the class. Only `if`,
+  `unless` and `case` evaluate `contains`.
+
+  ⚠️ Trade-off: such a page is measure-width throughout, so a grid or gallery
+  on it will not span the band. Prose pages look identical either way (the text
+  is capped at the measure regardless), and both current users are pure prose.
+  A page that needs both wants a .container-ideal wrapper around just the
+  footnoted part instead — see the sidenote example in _pages/about.html.
+{%- endcomment -%}
 <main role="main" class="{{ page.style }}">
-  <article>
+  <article{% if content contains 'class="footnotes"' %} class="container-ideal"{% endif %}>
     {{ content }}
     {{ page_edited }}
   </article>

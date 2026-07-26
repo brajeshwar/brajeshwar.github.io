@@ -36,7 +36,12 @@
 
   function collect() {
     items = [];
-    var articles = document.querySelectorAll('article.container-ideal');
+    /* Any element carrying the reading measure, not just <article>. Posts use
+       article.post.container-ideal; a hand-written page can wrap prose in a
+       <div class="container-ideal"> and get sidenotes the same way. Elements
+       without a .footnotes block are skipped below, so .post-nav (which also
+       carries the class) costs nothing. */
+    var articles = document.querySelectorAll('.container-ideal');
     Array.prototype.forEach.call(articles, function (article) {
       var fnBlock = article.querySelector('.footnotes');
       if (!fnBlock) return;

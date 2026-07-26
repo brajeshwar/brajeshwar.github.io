@@ -70,6 +70,32 @@ Two parser facts worth keeping, since they cost a test to establish:
 Entry style follows the CV at <https://cv.brajeshwar.com>: each role a discrete block with a
 date range, an organisation, a location and a description, newest first.
 
+## Copy-paste templates
+
+`_pages/about.html` ends with a **Liquid** comment holding two ready templates: a period with
+one entry of each track, and a sidenote. Copy one, paste it in place, delete the comment
+markers, edit.
+
+Liquid (`{%- comment -%}`), not HTML (`<!-- -->`), deliberately — an HTML comment would ship the
+whole block to every visitor of `/about/` for something only the author reads. Measured: 3,725
+bytes saved on that one page.
+
+## Sidenotes in hand-written HTML
+
+Sidenotes come from ordinary footnote markup. In a post you write kramdown's `[^1]`; in HTML you
+emit what kramdown would have. **Three things must line up or nothing appears:**
+
+1. the wrapper carries `class="container-ideal"` — `sidenotes.js` looks for the reading column
+   and places notes just past its right edge;
+2. the reference is `<sup id="fnref:N">` containing `<a href="#fn:N">`;
+3. the note is `<li id="fn:N">` inside `<div class="footnotes">`.
+
+`N` is any unique string; the href and the ids must match exactly — that pairing is how a note
+finds its reference, not document order.
+
+⚠️ On `/about/` the wrapper matters: the timeline spans the full band, and a note hung off a
+full-width box has no margin to sit in. Wrap the footnoted prose in its own `.container-ideal`.
+
 ## Renaming the tracks
 
 Brajeshwar: *"I might change the terms."* Two places, no data migration:
