@@ -175,22 +175,49 @@ site-tools svg {
   height: var(--icon-glyph-size);
 }
 
-/* RSS icon — match the search / appearance trigger treatment
-   (search styled in chrome.css, theme changer in chrome.css) */
-.site-rss {
+/* ---- Icon button ------------------------------------------------
+   The header's round icon controls: search, RSS, appearance. All three had
+   their own copy of this — same circle, same size, same colours, differing
+   only in the two or three lines an <a> needs versus a <button> (2026-07-27
+   audit). A fourth would have been a fourth copy, which is how the first
+   three happened.
+
+   `.icon-button` is the look; the specific class beside it in the markup
+   (`.site-rss`, `.appearance-trigger`, `.site-search__trigger`) stays as the
+   JS hook and the place for anything genuinely per-button. Same split as
+   `.pill` / `.appearance-options`.
+
+   Element-agnostic on purpose: the resets for `border`/`background`/`cursor`
+   and for `text-decoration` are BOTH here, so it does not matter whether the
+   next one is a link or a button. Neither reset costs anything on the element
+   that did not need it.
+
+   Note this is NOT the footer's social row. Those are deliberately a
+   different treatment — padded rather than fixed-size, no circle, and on
+   --text-muted rather than --icon-color, because they sit in muted footer
+   text and not in the header's tool cluster. They were listed with these
+   three in the audit; measuring them says otherwise, so they stay separate.
+   ------------------------------------------------------------------ */
+.icon-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   width: var(--icon-button-size);
   height: var(--icon-button-size);
   border-radius: 50%;
+
+  border: none;
+  background: none;
+  cursor: pointer;
 
   color: var(--icon-color);
   text-decoration: none;
   transition: color var(--transition-duration) ease;
 }
 
-.site-rss:hover, .site-rss:focus-visible {
+.icon-button:hover,
+.icon-button:focus-visible {
   color: var(--icon-color-hover);
   text-decoration: none;
 }
@@ -564,33 +591,47 @@ appearance-settings {
   position: relative;
 }
 
-.appearance-trigger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* .appearance-trigger's own look is .icon-button (see above); nothing
+   button-specific is left to say here. */
 
-  width: var(--icon-button-size);
-  height: var(--icon-button-size);
-  border-radius: 50%;
-  border: none;
-  background: none;
+/* ---- Overlay chrome, shared by both popups ----------------------
+   The appearance panel and the search palette are the same kind of object —
+   a dim behind, a bordered card in front, both hidden until asked for — and
+   each carried its own copy. Grouped rather than given a class of their own:
+   there are exactly two, they are structurally fixed, and neither is a family
+   likely to grow. If a third overlay ever appears, promote this to a class
+   the way .icon-button was.
+   ------------------------------------------------------------------ */
 
-  color: var(--icon-color);
-  cursor: pointer;
-  transition: color var(--transition-duration) ease;
-}
-
-.appearance-trigger:hover,
-.appearance-trigger:focus-visible {
-  color: var(--icon-color-hover);
-}
-
-.appearance-backdrop {
+.appearance-backdrop,
+.site-search__backdrop {
   position: fixed;
   inset: 0;
   z-index: 50;
   background: var(--text);
   opacity: 0.18;
+}
+
+/* Everything the two cards agree on. What they do NOT agree on is where they
+   sit: the appearance panel hangs off its trigger (absolute), the search
+   palette is a centred command palette (fixed). That, their sizes, and their
+   shadow depths stay in the per-panel blocks below. */
+.appearance-panel,
+.site-search__panel {
+  z-index: 51;
+  overflow-y: auto;
+
+  padding: var(--space-s);
+  background: var(--bg);
+  border: var(--border-size) var(--border-style) var(--rule);
+  border-radius: var(--border-radius);
+}
+
+.appearance-panel[hidden],
+.appearance-backdrop[hidden],
+.site-search__panel[hidden],
+.site-search__backdrop[hidden] {
+  display: none;
 }
 
 .appearance-panel {
@@ -602,7 +643,6 @@ appearance-settings {
      right:0 rather than left:0 so it opens inward, away from the viewport
      edge, and cannot overflow off-screen on a phone. */
   position: absolute;
-  z-index: 51;
   top: calc(100% + var(--space-2xs));
   right: 0;
 
@@ -614,7 +654,6 @@ appearance-settings {
      changes were meant to remove. */
   width: min(92vw, 24rem);
   max-height: 80vh;
-  overflow-y: auto;
 
   /* TWO COLUMNS: labels left, controls right (Brajeshwar, 2026-07-27). Each
      row used to be its own flex line with `justify-content: space-between`,
@@ -631,18 +670,11 @@ appearance-settings {
   column-gap: var(--space-s);
   row-gap: var(--space-xs);
 
-  padding: var(--space-s);
-  background: var(--bg);
-  border: var(--border-size) var(--border-style) var(--rule);
-  border-radius: var(--border-radius);
+  /* Shallower than the search palette's: this one sits against the header
+     rather than floating over the page. */
   box-shadow: 0 8px 28px -14px var(--text);
 
   font-family: var(--font-family-sans-serif);
-}
-
-.appearance-panel[hidden],
-.appearance-backdrop[hidden] {
-  display: none;
 }
 
 /* The group has no box of its own — it dissolves into the panel's grid so its
@@ -730,70 +762,29 @@ site-search {
   align-items: center;
 }
 
-.site-search__trigger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: var(--icon-button-size);
-  height: var(--icon-button-size);
-  border-radius: 50%;
-
-  color: var(--icon-color);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color var(--transition-duration) ease;
-}
-
-.site-search__trigger:hover,
-.site-search__trigger:focus-visible {
-  color: var(--icon-color-hover);
-  text-decoration: none;
-}
-
-/* Dim/scrim that also captures outside clicks to close. */
-.site-search__backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: var(--text);
-  opacity: 0.18;
-}
-
-/* Centered command-palette popup (opens in place; ⌘K). */
+/* .site-search__trigger's look is .icon-button; its backdrop and the shared
+   half of its card are in the overlay-chrome block above. What is left is
+   only what makes this one a CENTRED COMMAND PALETTE rather than a panel
+   hanging off a trigger — and the Pagefind theming, which was already a
+   second .site-search__panel block 30 lines further down and is now folded
+   into this one. */
 .site-search__panel {
   position: fixed;
-  z-index: 51;
   top: 12vh;
   left: 50%;
   transform: translateX(-50%);
 
   width: min(92vw, 40rem);
   max-height: 72vh;
-  overflow-y: auto;
 
-  padding: var(--space-s);
-  background: var(--bg);
-  border: var(--border-size) var(--border-style) var(--rule);
-  border-radius: var(--border-radius);
+  /* Deeper than the appearance panel's: this one floats over the middle of
+     the page rather than sitting against the header. */
   box-shadow: 0 16px 48px -12px var(--text);
 
   text-align: left;   /* the panel is inside the centered <header>; reset it */
-}
 
-.site-search__panel[hidden],
-.site-search__backdrop[hidden] {
-  display: none;
-}
-
-.site-search__error {
-  margin: 0;
-  padding: var(--space-2xs) 0;
-  color: var(--text-muted);
-}
-
-/* Theme Pagefind's Modular UI with our tokens so results follow the active theme. */
-.site-search__panel {
+  /* Pagefind's Modular UI, themed with our tokens so results follow the
+     active mode + palette. */
   --pagefind-ui-primary: var(--accent);
   --pagefind-ui-text: var(--text);
   --pagefind-ui-background: var(--bg);

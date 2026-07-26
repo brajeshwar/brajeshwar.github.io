@@ -23,7 +23,7 @@
         See _docs/search.md.
       {%- endcomment -%}
       <site-search>
-        <a class="site-search__trigger" href="/search/" aria-label="Search" title="Search (⌘K)" aria-expanded="false" aria-controls="site-search-panel">
+        <a class="icon-button site-search__trigger" href="/search/" aria-label="Search" title="Search (⌘K)" aria-expanded="false" aria-controls="site-search-panel">
           {%- include icons/search.svg -%}
         </a>
         <div class="site-search__backdrop" hidden></div>
@@ -35,13 +35,13 @@
       </site-search>
 
       {%- comment -%} RSS feed (jekyll-feed → /feed.xml). Same filled glyph as the footer. {%- endcomment -%}
-      <a class="site-rss" href="/feed.xml" aria-label="RSS feed" title="RSS feed">
+      <a class="icon-button site-rss" href="/feed.xml" aria-label="RSS feed" title="RSS feed">
         {%- include icons/rss.svg -%}
       </a>
 
       {%- comment -%} Theme changer (appearance: mode + palette + font + accent) — panel built by /assets/scripts/appearance.js (defer). {%- endcomment -%}
       <appearance-settings>
-        <button class="appearance-trigger" type="button" aria-label="Appearance" aria-expanded="false" aria-controls="appearance-panel">
+        <button class="icon-button appearance-trigger" type="button" aria-label="Appearance" aria-expanded="false" aria-controls="appearance-panel">
           {%- include icons/theme.svg -%}
         </button>
         <div class="appearance-backdrop" hidden></div>

@@ -86,10 +86,25 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       already links the CLI-generated `pagefind-ui.css`, and the top half of `search.css` hand-copies
       the same base UI on top of it. Needs a `make serve` (Pagefind built) to byte-compare before cutting.
       Biggest single remaining win.
-- [ ] **chrome.css repeats itself** — 4 near-identical circular icon-button recipes (`.site-rss`,
-      `.appearance-trigger`, `.site-search__trigger`, `.footer-social a`); two byte-identical backdrops;
-      two popups sharing 9 declarations; `.site-search__panel` opened twice, 30 lines apart.
-      Ships on every page, so worth collapsing into shared primitives.
+- [x] **chrome.css repeats itself** *(done 2026-07-27)* — **1,010 bytes raw / 74 gzip off every
+      page**, and one fewer place for the next icon button to be copied into.
+      - **`.icon-button`** is now the primitive for the three round header controls
+        (`.site-rss`, `.appearance-trigger`, `.site-search__trigger`), which each carried their
+        own copy. Element-agnostic — the `<a>` resets and the `<button>` resets are both in it —
+        so the next one is one class, not a fourth copy. Specific classes stay beside it as the
+        JS hooks, same split as `.pill` / `.appearance-options`.
+      - **`.footer-social a` was NOT merged**, despite the audit listing it with those three.
+        Measuring says it is a different treatment: padded rather than fixed-size, no circle, and
+        on `--text-muted` rather than `--icon-color`, because it sits in muted footer text and
+        not the header's tool cluster.
+      - **The two backdrops and the shared half of the two cards are grouped**, not given a class
+        — there are exactly two and neither is a family likely to grow. Promote to a class if a
+        third overlay appears.
+      - **`.site-search__panel` opened twice, 30 lines apart** — the Pagefind theming block is
+        folded into the main one. The two blocks that remain are the *shared* card and the
+        search-specific one, which is the intended split, not duplication.
+      - Verified: all three buttons render identically (32px circle, same colour, 17px glyph),
+        the footer row kept its own look, and both popups open and paint unchanged in dark+Warm.
 - [ ] **base.css dead selectors** — `.visually-hidden` (no markup uses it), `img.round`,
       `figcaption.center/right`, `audio.small/medium/left/right`, `object, embed`, `aside.left/right`,
       `tfoot`. All verified against 1,456 built pages. Removing needs care: kramdown and
