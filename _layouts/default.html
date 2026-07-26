@@ -47,6 +47,12 @@
 <script defer src="{{ '/assets/scripts/appearance.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/scripts/sidenotes.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/scripts/search.js' | relative_url }}"></script>
+{%- comment -%}
+  Back to Top. Site-wide, but self-limiting: the script returns immediately on
+  a page that isn't tall enough to need one, so short pages pay a parse and
+  nothing else. See _docs/javascript.md.
+{%- endcomment -%}
+<script defer src="{{ '/assets/scripts/back-to-top.js' | relative_url }}"></script>
 <script defer src="https://analytics.oinam.net/script.js" data-website-id="7cc63f26-aabf-4814-88c9-9c3e29f1c783"></script>
 
 </head>

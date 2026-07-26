@@ -237,6 +237,27 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Back to Top, site-wide (2026-07-27)
+Replaces the per-period *"↑ earlier / ↓ back to the start"* links on `/about/`, which were
+hand-maintained — each named a sibling id, so adding or reordering a period silently pointed
+them somewhere wrong — and existed on that page only.
+
+`assets/scripts/back-to-top.js` + `.back-to-top` in `chrome.css`. Two conditions, both
+deliberate: the control is only **built** on a page taller than 2.5 viewports, and only
+**appears** once the reader is a viewport down. Verified `/about/` (6.15× tall) builds it and
+`/contact/` (1×) does not.
+
+It is a real `<a href="#top">` — `#top` is defined by HTML as the document top, so the link
+works with no click handler, and the global `scroll-behavior: smooth` animates it, which also
+means it inherits the `prefers-reduced-motion` kill switch instead of needing its own check.
+JS only toggles visibility.
+
+⚠️ **Testing note: programmatic scrolling fires NO scroll events in this automation context.**
+`window.scrollTo` moved the page 1,722px and produced **0** events, which made the control look
+broken across several checks while the logic was fine — a manually dispatched event toggled it
+correctly, and real wheel scrolling worked first time. **Verify scroll behaviour with the
+`computer` scroll action, not `window.scrollTo`.**
+
 ### Copy-paste templates, and a sidenote regression fixed (2026-07-27)
 - **Templates in `_pages/about.html`** — a period and a sidenote, in a **Liquid** comment so
   they cost nothing to ship. As an HTML comment they added **3,725 bytes** to `/about/` for

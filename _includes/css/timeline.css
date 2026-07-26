@@ -411,26 +411,11 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::befo
 
 /* Prev/next stepping between periods. Plain anchors — they work with JS off
    and are keyboard-reachable by default. */
-.timeline-step {
-  display: flex;
-  gap: var(--space-2xs);
-  margin-top: var(--space-2xs);
-}
-
-.timeline-step a {
-  font-size: var(--step--2);
-  font-family: var(--font-family-monospace);
-  color: var(--text-color-lower);
-  text-decoration: none;
-  padding: var(--space-3xs) var(--space-2xs);
-  border-radius: var(--border-radius-small);
-}
-
-.timeline-step a:hover,
-.timeline-step a:focus-visible {
-  color: var(--text-color-higher);
-  background-color: color-mix(in oklch, var(--text-color) 8%, transparent);
-}
+/* .timeline-step is gone (2026-07-27). The per-period "earlier / back to the
+   start" links were hand-maintained — each one named a sibling id, so adding or
+   reordering a period silently pointed them at the wrong place — and they only
+   ever existed on this page. Replaced by the site-wide Back to Top control in
+   chrome.css, which needs no ids and no upkeep. */
 
 /* ---- Narrow -------------------------------------------------
    Tighter gutter so the prose keeps its measure on a phone. */

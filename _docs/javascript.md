@@ -32,13 +32,15 @@ Brajeshwar, 2026-07-27:
 | `pagefind-autofocus.js` | 0.4 KB | `/search/` |
 | `anchors.js` | 1.2 KB | posts, `/about/` |
 | `timeline.js` | 2.4 KB | `/about/` |
+| `back-to-top.js` | 2.3 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else |
 
-**~30.9 KB raw across all seven**, none minified, each a separate request. No page loads all
+**~33 KB raw across all eight**, none minified, each a separate request. No page loads all
 of them.
 
 Every one degrades cleanly: with JS off you get real footnotes instead of sidenotes, the
 default theme instead of a remembered one, `/search/` instead of the ⌘K palette, no `§`
-anchors, and the timeline unfiltered — which is its default view anyway.
+anchors, the timeline unfiltered — which is its default view anyway — and no Back to Top
+control, which costs nothing since scrolling up is always possible.
 
 ## Concatenate + minify — NOT BUILT
 

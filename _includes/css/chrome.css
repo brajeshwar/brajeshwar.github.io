@@ -257,6 +257,68 @@ site-tools svg {
 }
 
 
+/* ---- Back to Top ------------------------------------------------
+   Site-wide, built by assets/scripts/back-to-top.js only on pages tall
+   enough to need it, and revealed only once the reader is a viewport down.
+
+   Deliberately quiet: it sits in the corner at the icon colour the header
+   tools use, so it reads as chrome rather than content, and it never
+   competes with what is being read. Fades rather than slides — motion is
+   suppressed for prefers-reduced-motion by the global kill switch in
+   base.css, and a fade that does not run simply appears.
+
+   Not rendered at all without JavaScript; scrolling up is always possible,
+   so nothing is lost.
+   ------------------------------------------------------------------ */
+
+.back-to-top {
+  position: fixed;
+  right: var(--space-s);
+  bottom: var(--space-s);
+  z-index: 40;                      /* under the search palette + appearance panel */
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+  border-radius: 50%;
+
+  background: var(--bg-color);
+  border: var(--border-size) var(--border-style) var(--rule);
+  color: var(--icon-color, var(--text-color-lower));
+  text-decoration: none;
+
+  /* Hidden until the script says otherwise. visibility, not display, so the
+     opacity transition has something to animate. pointer-events guards
+     against clicking an invisible target. */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0.18s ease, color 0.12s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  color: var(--text-color-higher);
+  text-decoration: none;
+}
+
+/* Tuck it closer to the corner on a phone, where screen edges are scarcer. */
+@media (max-width: 600px) {
+  .back-to-top {
+    right: var(--space-2xs);
+    bottom: var(--space-2xs);
+  }
+}
+
+
 /* ---- Footer ---------------------------------------------------- */
 
 /* The outer footer still spans the full viewport, but it no longer carries the
