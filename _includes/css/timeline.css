@@ -226,11 +226,22 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::befo
   margin: 0 0 var(--space-l);
 }
 
-/* Time-range heading: "early 1980s", "1993-1995". Typed by hand. */
+/* Time-range heading: "early 1980s", "1993-1995". Typed by hand.
+
+   Bigger and nudged left, 2026-07-27: at --step-0 the heading was barely above
+   the entry text, so each one read as an interruption in the flow rather than a
+   marker for the block beneath it — the break felt jarring precisely because
+   the title was not clearly doing a different job. --step-2 gives it that job.
+
+   The small negative inline margin is optical, the same idea as the logo's:
+   larger digits carry more left side bearing, so the glyph's painted edge
+   drifts right of the spine it should line up with. -0.06em pulls it back. It
+   is em-based, so it stays proportional if the size changes again. */
 .timeline-when {
   position: relative;              /* anchor for the § headerlink */
   margin: 0 0 var(--space-xs);
-  font-size: var(--step-0);
+  margin-left: -0.06em;
+  font-size: var(--step-2);
   font-weight: var(--font-weight);
   font-variant-numeric: tabular-nums;
   color: var(--text-color-lower);

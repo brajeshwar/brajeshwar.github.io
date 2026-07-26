@@ -237,6 +237,22 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Timeline section titles: bigger, nudged left (2026-07-27)
+Brajeshwar: *"the breaks in the timeline due to the section titles is too jarring."* The cause
+was that the year sat at `--step-0`, barely above the entry text — so it read as an
+interruption in the flow rather than a marker for the block beneath it. A title that isn't
+clearly doing a different job reads as a break rather than a heading.
+
+- **`--step-0` → `--step-2`** (20px → 31px, now ~1.95× the 16px entry text).
+- **`margin-left: -0.06em`** — optical, the same idea as the logo's nudge: larger digits carry
+  more left side bearing, so the painted glyph drifts right of the spine it should line up
+  with. At 31px that is 1.9px back. Em-based, so it stays proportional if the size changes.
+- Applied to **both** `.timeline-when` (about) and `.page-now h1` (now) — they are a deliberate
+  copy of each other, and this is exactly the kind of change that has to be mirrored. The
+  comment in `now.css` now says so explicitly.
+- The § headerlink is positioned in `em` off the heading, so it scaled with it; verified still
+  attached and placed.
+
 ### Gear icon; archives hairline; /now/ wears the timeline (2026-07-27)
 - **Theme icon → gear.** The half-filled contrast circle read as "light/dark" when the panel it
   opens is really all of settings — mode, palette, font, size, accent. Filled gear traced from
