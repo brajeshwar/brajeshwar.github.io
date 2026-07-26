@@ -62,9 +62,20 @@ Serif) and text size, all persisted. JS is eight small vanilla files, minified o
 
 ### How to verify a change (the loop that works)
     make build          # jekyll + agent-md + esbuild minify + pagefind — production parity
-Then serve `_site` statically and check in a browser. **`jekyll serve` alone does not build the
-search index, and its `--watch` wipes `_site/pagefind/`.** For anything involving sidenotes,
-images or search, use the full build.
+Then serve `_site` statically and check in a browser.
+
+⚠️ **A long-running `jekyll serve` will fight you, in two ways.**
+1. It does not build the search index, and its `--watch` **wipes `_site/pagefind/`** on every
+   rebuild.
+2. **It reads `_config.yml` once, at startup.** A server left running from before a config
+   change keeps regenerating `_site` with the OLD config. Caught at the end of 2026-07-27: the
+   excluded `Geist-Variable.ttf` kept reappearing in `_site` and `llms.txt` kept vanishing,
+   which looked like the `exclude` had failed. A fresh `jekyll build` was correct both times.
+   **If `_site` disagrees with the config, restart the server before debugging anything else.**
+
+For anything involving sidenotes, images, search or `_config.yml`, use the full build and serve
+it statically. `python3 -m http.server` is single-threaded and starves under a blocking eval —
+use `ThreadingHTTPServer` when images matter.
 
 Guardrail check before handing back:
 
