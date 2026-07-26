@@ -94,6 +94,18 @@ past the year caption to sit with the rows it indexes. `margin-top` sets that re
 and `top` sets where it parks once stuck; they differ deliberately and it does not jump,
 because sticky only displaces when `top` exceeds the resting position.
 
+**Moved right and hung off the header rule (2026-07-27, Brajeshwar's third pass).** The
+scrubber now sits on the **right**, with its top edge exactly on the header's `border-bottom`
+— *"the border becomes the start of the year scrubber"*. Square top, **no top border** (the
+header rule already draws that line; a second would read as a 2px seam), rounded foot only.
+It rises to meet the rule via `margin-top: calc(-1 * var(--space-l))`, cancelling the header's
+bottom margin — ⚠️ **keep those two in step**, or the scrubber detaches and floats. Parks at
+`top: 0` once stuck, since the rule it hung from has scrolled away by then.
+**DOM order is unchanged**: the nav is still first in the source and placed right via
+`grid-column`, so keyboard and screen-reader users still meet the 26-year jump list before
+~1,456 rows of links. Verified: rail top and header border both at y=77, rail's right edge
+flush with the band, no overlap with the list, and the narrow strip fallback still intact.
+
 **Two presentations of one list** (Brajeshwar's call, 2026-07-27 — the first build was a top
 bar only):
 - **Wide (≥1100px): a vertical rail in the left margin**, iOS-Contacts-index style. Labels are
@@ -173,6 +185,13 @@ bar only):
 - **Nav links underline on hover/focus** — the affordance `design.md` asks of every link, and
   the header was the exception. Deliberately **not** on `.active`: the current page should
   read as "you are here", not as something to click.
+- **Appearance panel now hangs off its trigger** (2026-07-27). It was
+  `position: fixed; top: 4rem; right: var(--space-s)` — pinned to the *viewport's* right
+  corner, which was fine while the header was right-aligned but left the panel ~495px away
+  from the icon once the header was centred. Now `position: absolute` inside
+  `appearance-settings` (`position: relative`), `right: 0` so it opens **inward** and cannot
+  run off a phone screen. Verified: right edges align exactly, 10px below the trigger, above
+  the backdrop, and still on-screen at a 360px-wide header.
 - Verified: fits in one row at 430/390/375/360/**320**px, all targets ≥24px, appearance panel
   and search palette still anchor inside the viewport, base CSS ~6.8 KB gzip on the homepage.
 

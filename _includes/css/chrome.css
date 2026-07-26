@@ -337,6 +337,10 @@ footer {
 appearance-settings {
   display: inline-flex;
   align-items: center;
+
+  /* Anchor for .appearance-panel below — the panel hangs off the trigger
+     rather than off the viewport corner. */
+  position: relative;
 }
 
 .appearance-trigger {
@@ -369,10 +373,17 @@ appearance-settings {
 }
 
 .appearance-panel {
-  position: fixed;
+  /* Hangs off the trigger, not the viewport corner. It was
+     `fixed; top: 4rem; right: var(--space-s)`, which put it against the right
+     edge of the screen — fine while the header was right-aligned, but the
+     header is centred now, so the panel opened a long way from the icon that
+     spawned it. Absolute + right:0 keeps its right edge on the trigger's.
+     right:0 rather than left:0 so it opens inward, away from the viewport
+     edge, and cannot overflow off-screen on a phone. */
+  position: absolute;
   z-index: 51;
-  top: 4rem;
-  right: var(--space-s);
+  top: calc(100% + var(--space-2xs));
+  right: 0;
 
   width: min(90vw, 15.5rem);
   max-height: 80vh;

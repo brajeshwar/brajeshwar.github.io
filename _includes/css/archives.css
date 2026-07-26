@@ -82,45 +82,56 @@
 @media (min-width: 900px) {
   .archives-layout {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: var(--space-s);
     align-items: start;
   }
 
+  /* Placed explicitly, so the scrubber can sit on the RIGHT visually while
+     staying FIRST in the DOM. Source order is the tab order: a keyboard or
+     screen-reader user meets the 26-year jump list before ~1,456 rows of
+     links, which is the whole point of having it. */
+  page-archives  { grid-column: 1; grid-row: 1; }
+  .archive-years { grid-column: 2; grid-row: 1; }
+
   .archive-years {
     position: sticky;
 
-    /* Starts below where the ARTICLE ROWS begin, not level with the box.
-       Measured 2026-07-27: the list box starts at 148px, the first year
-       caption runs 149–190, and the first article row starts at 191. So the
-       rail drops past the caption to sit with the rows it indexes.
-       --space-2xl (72–80px) lands it there; --space-xl was ~10px short.
+    /* Hangs off the header rule: the header's border-bottom IS the top edge of
+       the scrubber. `main` starts one --space-l below that border (the header's
+       bottom margin), so the rail cancels exactly that much to rise and meet
+       it. Keep the two in step — if the header's margin-bottom changes, this
+       must change with it, or the scrubber detaches and floats.
 
-       margin-top is the resting offset, top is where it parks once stuck.
-       They differ on purpose and it does NOT jump: the rail simply travels
-       up with the page until it reaches `top`, then holds. A jump would only
-       happen if top were LARGER than the resting offset. */
-    top: var(--space-m);
-    margin-top: var(--space-2xl);
+       Parks at top:0 once stuck, since the border it was attached to has
+       scrolled away by then. No jump: the rail travels up with the page until
+       it reaches `top`, and a jump only happens when `top` is LARGER than the
+       resting offset. */
+    top: 0;
+    margin-top: calc(-1 * var(--space-l));
     margin-bottom: 0;
 
     flex-direction: column;
     gap: 0;
-    /* Vertical padding clears the rounded ends, so 26 and 01 start below where
-       the curve finishes instead of being pinched by it. Note the radius in play
-       is NOT the declared 25px: top-left + top-right (50px) exceed the ~38px
-       width, so the browser scales all radii by width/sum — about 19px here.
-       --space-s (18–20px) is the token that matches that. Re-check if the rail's
-       width or --border-radius-larger changes; the effective radius moves with
-       the width. */
-    padding: var(--space-s) 0;
+    /* Asymmetric now that the top is square and capped by the header rule:
+       only the BOTTOM has a curve to clear. That curve is not the declared
+       25px — bottom-left + bottom-right (50px) exceed the ~38px width, so the
+       browser scales the radii by width/sum, about 19px here; --space-s
+       (18–20px) matches it. The top just needs breathing room under the rule.
+       Re-check the bottom if the rail's width or --border-radius-larger
+       changes: the effective radius moves with the width. */
+    padding: var(--space-2xs) 0 var(--space-s);
 
-    /* Thin. The old rail was 47px; this trims the horizontal padding
-       to nothing and lets the tap target come from the link's own
-       min-width instead. */
+    /* A tab hanging from the header rule, not a free-floating pill: square
+       across the top with NO top border, because the header's border-bottom
+       already draws that line and a second one would read as a 2px seam.
+       Rounded at the foot only.
+
+       Thin: the rail was 47px before; horizontal padding is nil and the tap
+       target comes from the link's own min-width instead. */
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-larger);
-    border-bottom: 1px solid var(--border-color);
+    border-top: 0;
+    border-radius: 0 0 var(--border-radius-larger) var(--border-radius-larger);
     overflow-x: visible;
 
     /* 26 rows can outgrow a short viewport; cap and scroll rather
