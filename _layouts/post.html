@@ -10,16 +10,26 @@ styles: styles-posts.html
   {%- endif -%}
 {% endif %}
 
-<main role="main" class="container-ideal">
+{%- comment -%}
+  `main` is the ONE standard site width (base.css). The reading measure moved
+  onto the <article> on 2026-07-27 so the content band matches every other page
+  type while the prose still wraps at ~66 characters. See _docs/styles.md §1.
+{%- endcomment -%}
+<main role="main">
 
-  <article class="post">
+  <article class="post container-ideal">
     <h1>{{ page.title }}</h1>
     <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
     {{ content }}
   </article>
 
+  {%- comment -%}
+    container-ideal here too: prev/next belongs to the reading column, and
+    without it the nav would stretch to the full standard width while the
+    article above it stayed at the measure.
+  {%- endcomment -%}
   {%- if page.previous.url or page.next.url -%}
-  <nav class="post-nav">
+  <nav class="post-nav container-ideal">
     <div class="post-nav__prev">
       {%- if page.previous.url -%}
       <a href="{{ page.previous.url }}" class="post-nav__prev" title="{{ page.previous.title }}"> ← Prev</a>

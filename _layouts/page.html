@@ -6,14 +6,19 @@ styles: styles-pages.html
 {%- comment -%}
   Merged 2026-07-19: page.html + page-full.html are one layout now.
 
-  Defaults to `container-ideal` reading width — 22 pages rely on it
-  (about, books, contact, blogroll, styleguide, 404, …). Set `full: true`
-  in a page's front matter for a full-bleed body instead.
+  `main` is always the ONE standard site width (base.css). What `full:` picks
+  is what happens INSIDE it:
 
-  The two pages that used page-full (film, devices) moved to the album
-  layout, so `full: true` currently has no users. It stays because
-  full-width is a capability worth keeping for a non-gallery page.
-  See _docs/styles.md §5.
+    default      prose capped at the reading measure (.container-ideal on the
+                 <article>), centred — 22 pages rely on this: about's prose
+                 ancestors, books, contact, blogroll, styleguide, 404, …
+    full: true   content fills the standard width — for pages that lay
+                 themselves out, like /about/'s timeline.
+
+  ⚠️ `full:` no longer means "full-bleed". It did when `main` was unbounded;
+  `main` is capped at --body-width-max now, so `full: true` gets the standard
+  band, not the viewport. Renamed in spirit, not in key, because the key has a
+  user (about.html). See _docs/styles.md §5.
 {%- endcomment -%}
 
 {%- comment -%}
@@ -43,8 +48,8 @@ styles: styles-pages.html
   {{ page_edited }}
 </main>
 {% else %}
-<main role="main" class="container-ideal {{ page.style }}">
-  <article>
+<main role="main" class="{{ page.style }}">
+  <article class="container-ideal">
     {{ content }}
     {{ page_edited }}
   </article>

@@ -56,22 +56,35 @@ main {
   container: main / inline-size;
 }
 
-main,
-.container-ideal {
+/* ONE STANDARD WIDTH (2026-07-27). Every `main` on the site is this box —
+   posts, pages, archives, albums, home. Nothing renders its content band at
+   any other width, so the header rule, the footer rule and the content edges
+   line up on every page type.
+
+   Before this, posts and 22 pages put .container-ideal on `main` itself, so
+   their content band was 665px while listing pages were 1296px — two visibly
+   different site widths depending on which page you landed on. */
+main {
   width: var(--body-width);
   max-width: var(--body-width-max);
   margin-inline: auto;
 }
 
-.container-ideal {
-  max-width: var(--body-width-ideal);
-}
+/* The reading measure is a constraint on PROSE, not a second site width.
+   It now sits on the <article> INSIDE that standard box, centred, so the text
+   still wraps at ~66 characters while its container matches every other page.
+   Widen --measure if the lines should be longer; do not widen this by moving
+   the class back up onto `main`, or the two-widths problem returns.
 
-/* NOTE: there is no .container-wide any more. It existed for one day, while the
-   site width was still undecided, so archives could be 1280px without dragging
-   the header and footer along. --body-width-max IS 1280px now, so `main` gives
-   every page that width by default and the opt-in class was pure duplication.
-   Listing pages need no class; reading pages add .container-ideal. */
+   ⚠️ Moving this class off `main` broke two things that were scoped to
+   `.container-ideal article` — sidenotes.js's selector and the sidenote CSS
+   below. Both were repointed at `article.post, .container-ideal`. If this
+   class moves again, re-check those. */
+.container-ideal {
+  width: var(--body-width);
+  max-width: var(--body-width-ideal);
+  margin-inline: auto;
+}
 
 /* Font scope: the reader's font (--font-body) applies to ALL content (home, pages,
    articles) via `body` above; only the header and footer (the UI chrome) are pinned

@@ -37,7 +37,12 @@ photo-cover__desc {
 }
 
 .post {
-  margin: var(--space-s) 0;
+  /* `auto`, not 0, on the inline axis: .post now carries .container-ideal, and
+     the shorthand's `0` was silently cancelling that class's
+     `margin-inline: auto` — post.css loads after base.css and the two match at
+     equal specificity, so source order decided. The article rendered flush to
+     the left edge of the standard width instead of centred in it. */
+  margin: var(--space-s) auto;
   font-size: var(--step-0);
 }
 

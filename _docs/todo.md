@@ -219,3 +219,13 @@ at the top of this section.
 - [x] **Modern Font Stacks** adopted — <https://modernfontstacks.com> *(2025-12-30)*
 - [x] **Search → dedicated `/search/` page** to reduce load on other pages.
 - [x] **Search moved off Algolia → Pagefind.** Algolia (adopted 2025-06) hit monthly limits too easily; <https://pagefind.app> replaces it. See [`search.md`](search.md).
+
+## JavaScript
+- [ ] **Concatenate + minify on publish** *(policy set 2026-07-27, not built)*. Seven scripts,
+      ~30.9 KB raw, unminified, one request each. Do it in the Actions workflow after
+      `jekyll build`, alongside the Pagefind and agent-markdown steps. **Do not merge all
+      seven into one bundle** — `sidenotes.js` (10.7 KB) is posts-only and `pagefind-custom.js`
+      is `/search/`-only, so a single bundle would put ~31 KB on a homepage that loads about
+      12 KB today. Bundle per page type, mirroring how the CSS already splits. Needs a
+      minifier in the workflow, which CLAUDE.md guardrail 6 was amended to permit. See
+      [`javascript.md`](javascript.md).

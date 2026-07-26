@@ -237,6 +237,32 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### ONE width, finished — posts and pages too (2026-07-27)
+The earlier pass standardised the *chrome* band; posts and 22 pages still put `.container-ideal`
+on `main` itself, so their content band was 665px while listing pages were 1296px — two visibly
+different site widths depending on where you landed. Brajeshwar: *"One Standard Website width."*
+
+- **`main` is now the standard width on every page type** — post, page, archives, album, home.
+  Verified `main`, the header rule and the footer rule share edges on all of them.
+- **The measure moved onto the `<article>`**, centred. Prose still wraps at ~66 characters; only
+  its container changed. Deliberately **not** left-aligned — text on 1,456 posts stays exactly
+  where it was.
+- **`full: true`** (a `page.html` capability that had no users) now means *"fill the standard
+  width"*, and `/about/`'s timeline uses it. It no longer means full-bleed, because `main` is
+  capped at `--body-width-max`.
+- Timeline entry prose is capped at `--measure` too — the structure wants the width, the
+  sentences don't.
+
+⚠️ **Two things this broke, both caught by measuring, both of the same class:**
+1. **`sidenotes.js` queried `.container-ideal article`.** Moving the class onto the article made
+   that match nothing — sidenotes would have silently vanished from every footnoted post. Now
+   `article.container-ideal`. Verified 3 notes still render, inside the band, footnotes hidden.
+2. **`.post { margin: var(--space-s) 0 }` silently cancelled `margin-inline: auto`.** The
+   shorthand's `0` beat `.container-ideal` because `post.css` loads after `base.css` at equal
+   specificity — **source order again**, the same trap as the header `@media` block. The article
+   rendered flush left. Now `margin: var(--space-s) auto`. *Shorthand margin is a cascade
+   hazard whenever a layout class supplies `margin-inline: auto`.*
+
 ### Earlier that day — standardise the site width (now resolved above)
 Brajeshwar wants **one width instead of the current two** (`container-ideal` vs the full-width
 `main`); the split exists because it was easier to maintain by hand, not because it was
@@ -336,6 +362,9 @@ post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.6
 - [`hosting.md`](hosting.md) — **everything hosting**: GitHub Pages + Actions (and the build
   versions, moved from `README.md`), the Cloudflare Pages backup build, DNS/CDN, and the
   domain decisions.
+- [`javascript.md`](javascript.md) — **the JS policy**: no frameworks, one file per function,
+  used sparingly, every page works without it; concat+minify on publish is permitted but not
+  yet built. Current inventory of all seven scripts.
 - [`timeline.md`](timeline.md) — the `/about/` storyline: vertical timeline, CSS-only
   Merged/Life/Work filter, hand-typed time ranges, experimental scroll line. **Authoring
   convention lives here** — content is Brajeshwar's to write.

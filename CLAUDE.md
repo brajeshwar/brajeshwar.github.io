@@ -28,7 +28,11 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
    at the article foot, a sensible default theme. JS only enhances (sidenotes, theme persistence).
 5. **Sidenotes come from existing footnotes** via CSS/JS only. No new authoring syntax, no per-post
    markup, no content edits.
-6. **Vanilla JS only.** No frameworks; no JS/CSS build step beyond Jekyll's SCSSify include pipeline.
+6. **Vanilla JS only.** No frameworks, ever — raw browser JS, one small file per function,
+   used sparingly and only where CSS can't do the job. Every page must work with it disabled.
+   No CSS build step beyond Jekyll's SCSSify include pipeline. **Amended 2026-07-27:** a
+   concatenate+minify step for JS *on publish* is permitted (a build tool, not a runtime
+   dependency) — not yet built. See [`_docs/javascript.md`](_docs/javascript.md).
 7. **Commit authorship.** Never create commits attributed to Claude/Anthropic; never add
    "Generated with Claude", co-author trailers, or AI references in commit messages or code
    comments. Brajeshwar makes the commits — prepare and show changes for review rather than

@@ -329,6 +329,16 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::befo
   color: var(--text-color-lower);
 }
 
+/* The timeline SPANS the standard site width, but its prose does not: entry
+   text is still capped at the reading measure, the same rule articles follow.
+   Without this, a 1296px-wide entry gives ~190-character lines — the structure
+   wants the width, the sentences do not. */
+.timeline-entry p,
+.timeline-title,
+.timeline-meta {
+  max-width: var(--measure);
+}
+
 .timeline-entry p { margin: 0 0 var(--space-2xs); }
 .timeline-entry p:last-child { margin-bottom: 0; }
 

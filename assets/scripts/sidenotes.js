@@ -10,7 +10,12 @@
  *     tapping a reference reveals the note in place, right below the current
  *     block. Tapping again (or tapping the panel) dismisses it.
  *   - JS disabled → nothing runs; plain kramdown footnotes render at the foot.
- * Scoped to the reading layout (.container-ideal article).
+ * Scoped to the reading column. That used to be `.container-ideal article`,
+ * back when .container-ideal sat on <main> and wrapped the article. On
+ * 2026-07-27 the class moved ONTO the article itself (one standard site width
+ * for every `main`), so that descendant selector stopped matching anything and
+ * would have silently killed sidenotes on every footnoted post. It now matches
+ * the article directly.
  */
 (function () {
   'use strict';
@@ -31,7 +36,7 @@
 
   function collect() {
     items = [];
-    var articles = document.querySelectorAll('.container-ideal article');
+    var articles = document.querySelectorAll('article.container-ideal');
     Array.prototype.forEach.call(articles, function (article) {
       var fnBlock = article.querySelector('.footnotes');
       if (!fnBlock) return;
