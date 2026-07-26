@@ -50,22 +50,28 @@ site-logo {
 }
 
 /* ---- Optical alignment of the logo -------------------------
-   The beta is a slanted letterform, so its visual mass sits right of its box's
-   left edge and it reads as pushed inwards next to the flush-left content
-   below. Pulled out into the left margin by its own width so its RIGHT edge
-   lands on the band edge — the same invisible line the prose, the header rule
-   and the footer rule all start from. The glyph then leans back INTO that line
-   instead of away from it.
+   Align the GLYPH to the band edge, not the logo's box.
 
-   Only where the margin can absorb it. The band caps at --body-width-max, so
-   the viewport margin is (100vw − band) / 2; a full --logo-size of it needs
-   roughly band + 2 × logo. Below that the logo stays in flow and simply sits at
-   the band edge like everything else — no clipping, no horizontal scroll.
+   The beta is slanted, so its painted left edge sits ~11px inside its own box
+   at 40px (--logo-inset, plus 24.8% of the drawn width — see
+   --logo-optical-inset). Left flush, the box lines up but the letter reads as
+   pushed inwards; pulled out by a whole --logo-size, as it was first built, the
+   glyph overshoots ~29px into the margin and reads as detached.
+
+   So the pull is exactly the emptiness: the box goes out by its own optical
+   inset and the GLYPH lands on the band edge — the same invisible line the
+   prose, the header rule and the footer rule all start from. Small enough to
+   read as flush, which is the intent.
+
+   Applied at all widths: it is ~11px, well inside the viewport margin that
+   `--body-width: 96%` already leaves, so there is nothing to gate it on and
+   nothing to clip.
    ------------------------------------------------------------ */
-@media (min-width: 1150px) {
-  site-logo {
-    margin-left: calc(-1 * var(--logo-size));
-  }
+site-logo {
+  margin-left: calc(
+    -1 * (var(--logo-inset) +
+          (var(--logo-size) - 2 * var(--logo-inset)) * var(--logo-optical-inset))
+  );
 }
 
 site-logo a {

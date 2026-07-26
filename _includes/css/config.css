@@ -204,6 +204,14 @@
   --logo-size             : 40px;
   --logo-inset            : 2px;
 
+  /* Where the beta's painted left edge sits inside its own viewBox, as a
+     fraction. Measured from the path's bounding box in brajeshwar-logo.svg:
+     x = 49.6 of a 200-wide viewBox. The glyph is a slanted letterform, so its
+     box is a quarter empty on the left and reading the box edge as the glyph
+     edge is what made it look pushed inwards. Used by chrome.css to nudge the
+     logo out by exactly that emptiness. Re-measure if the logo art changes. */
+  --logo-optical-inset    : 0.248;
+
   /* Header tool icons (search, RSS, appearance). Deliberately SEPARATE from
      --logo-size, which they used to share — shrinking the icons via that token
      would have shrunk the logo with them. 32px keeps the hit area clear of the

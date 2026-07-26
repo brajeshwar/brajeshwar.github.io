@@ -31,7 +31,12 @@
   margin-bottom: var(--space-m);
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+  /* 2rem tracks, down from 2.5rem on 2026-07-27 when the site width came down
+     to 64rem. At 1024px the band gives ~1002px of content: 26 tracks x 32px
+     plus 25 gaps = 957px, so the whole scrubber is back to ONE row. At 2.5rem
+     it needed 1165px and wrapped to two. Still well over the WCAG 2.2 24x24
+     target minimum — the rendered track is ~33px. */
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
   gap: var(--space-3xs);
 
   /* Opaque: the list scrolls underneath when this is stuck. */
@@ -43,13 +48,18 @@
   border: var(--border-size) var(--border-style) var(--border-color);
   border-top: 0;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
-  padding: var(--space-2xs);
+
+  /* Tightened with the narrower site width. The padding is what keeps a link's
+     hover background INSIDE the tray instead of bleeding onto its border —
+     the hover fills the whole grid track, so whatever is here is the only
+     margin the highlight has. */
+  padding: var(--space-3xs);
 }
 
 .archive-years a {
-  padding: var(--space-3xs) var(--space-2xs);
+  padding: var(--space-3xs) var(--space-3xs);
   font-family: var(--font-family-monospace);
-  font-size: var(--step--1);
+  font-size: var(--step--2);
   font-variant-numeric: tabular-nums;   /* 26/25/24 line up in their tracks */
   text-align: center;
   text-decoration: none;
@@ -65,16 +75,16 @@
 }
 
 /* Sticky from tablet up; static on phones.
-   Measured 2026-07-27 (row counts against `main`'s width, list hidden so only
-   the strip reflowed):
-       main >= 1200  -> 1 row,   57px    (viewport >= ~1250)
-       main 737-1186 -> 2 rows,  98px
-       main 460-600  -> 3 rows, 139px
-       main 346-400  -> 4 rows, 180px
-   One and two rows are fine to stick — 98px of a laptop viewport is about 12%.
-   Three or four rows is not: on a phone that is a fifth of the screen held
-   permanently, which is worse than simply scrolling past it. 768px is the
-   viewport where the strip is still 2 rows, so that is the cut. */
+   Re-measured 2026-07-27 after the 64rem site width and the 2rem tracks (row
+   counts against `main`'s width, list hidden so only the strip reflowed):
+       band 983-1024 -> 1 row,   42px   (viewport >= 1024)
+       band 500-900  -> 2 rows,  77px
+       band 346-400  -> 3 rows, 113px
+       band 307      -> 4 rows, 149px
+   One and two rows are fine to stick — 77px of a laptop viewport is about 9%.
+   Three or four is not: on a phone that is a fifth of the screen held
+   permanently, which is worse than simply scrolling past it. At 768px the strip
+   is still 2 rows, so that is the cut. */
 @media (min-width: 768px) {
   .archive-years {
     position: sticky;
@@ -132,30 +142,32 @@ page-archives table caption {
   border-bottom: 1px solid var(--border-color);
 
   /* Land clear of the sticky year strip when jumped to via #YYYY, rather than
-     under it. MUST EXCEED the strip's rendered height — which is now variable,
-     because the strip wraps: 57px at one row, 98px at two. See the two
-     overrides below. Base value covers the un-stuck case (phones), where there
-     is nothing overhead to clear. An earlier version of this was 52px against a
-     57px bar and put the caption 5px *underneath* it — always verify in a
-     browser after changing the strip's padding, font size or row count. */
+     under it. MUST EXCEED the strip's rendered height, which is VARIABLE
+     because the strip wraps — 42px at one row, 77px at two. The overrides below
+     track that. This base value covers the un-stuck case (phones), where there
+     is nothing overhead to clear at all.
+
+     ⚠️ This has now been wrong three times, each after something changed the
+     strip's height: 52px against a 57px bar, then 72px against 98px, then a
+     stale one-row override against a two-row strip. It is not derivable from a
+     token — measure it in a browser after touching the strip's padding, font
+     size, track width or the site width. */
   scroll-margin-top: 4.5rem;
 }
 
-/* Strip is STICKY and TWO rows here (98px), so 4.5rem/72px would drop the
-   caption underneath it. These must come after the caption rule above:
-   equal specificity means source order decides. */
+/* Sticky and TWO rows here (77px), so the 4.5rem base would drop the caption
+   underneath. Must come after the caption rule above: equal specificity means
+   source order decides. */
 @media (min-width: 768px) {
-  page-archives table caption { scroll-margin-top: 7rem; }
+  page-archives table caption { scroll-margin-top: 5.5rem; }   /* 88px > 77px */
 }
 
-/* NO one-row override any more. There used to be a `min-width: 1250px` rule
-   dropping this back to 4.5rem/72px, because above that the strip fitted on one
-   row (57px). That stopped being true when the site width came down to 64rem:
-   one row needs ~1200px of content and the band now caps at 1024px, so the
-   strip is ALWAYS two rows or more. The override survived the change and put
-   captions 26px underneath the strip — measured, third time this exact bug has
-   appeared. If --body-width-max ever goes back above ~1200px, a one-row rule
-   becomes correct again; until then there is nothing to override. */
+/* ONE row again from 1024px (42px strip), so the two-row clearance is now just
+   wasted screen. The 2rem tracks brought this case back — at 2.5rem the strip
+   could not fit one row inside a 1024px band at all. */
+@media (min-width: 1024px) {
+  page-archives table caption { scroll-margin-top: 3.5rem; }   /* 56px > 42px */
+}
 
 /* "You are here" after a jump — CSS-only, no scroll-spy JS. Marks the year you
    actually clicked, which is what the reader is looking for.

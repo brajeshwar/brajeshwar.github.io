@@ -237,6 +237,31 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Logo optical nudge + archives tightened to the new width (2026-07-27)
+- **Logo: align the GLYPH, not the box.** It had been pulled out by a whole `--logo-size`
+  (40px), which put the beta ~29px into the margin and read as detached. Measured the path's
+  bbox in `brajeshwar-logo.svg`: `x = 49.6` of a 200 viewBox, so the glyph's painted left edge
+  sits **24.8%** in — about **11px** at 40px once `--logo-inset` is added. The pull is now
+  exactly that emptiness (`--logo-optical-inset: 0.248`, applied in `chrome.css`), so the
+  **glyph** lands on the band edge while the box overhangs by 11px. Verified: glyph left 244 =
+  band left 244. Small enough to read as flush, which was the ask. No media query needed —
+  11px always fits inside the margin `--body-width: 96%` leaves.
+- **Archives strip back to ONE row.** Tracks `2.5rem → 2rem`, font `--step--1 → --step--2`,
+  tray padding `--space-2xs → --space-3xs`. At the 64rem band that is 26 × 32 + 25 gaps = 957px
+  inside ~1002px of content, so it fits on one line again — at 2.5rem it needed 1165px and had
+  wrapped to two. Strip height **98px → 42px**. Links render ~34 × 31px, still over the WCAG
+  24 × 24 target.
+- **Hover background verified inside the tray**: first link's left edge and last link's right
+  edge sit exactly on the tray's content box, so the highlight never bleeds onto the border.
+
+⚠️ **`scroll-margin-top` needed retuning for the FOURTH time.** Re-measured row counts at the
+new sizing: band 983–1024 → 1 row / 42px · 500–900 → 2 rows / 77px · 346–400 → 3 rows / 113px ·
+307 → 4 rows / 149px. Now 4.5rem base (unstuck), **5.5rem from 768px** (clears 77), **3.5rem
+from 1024px** (clears 42) — both verified clearing by 14px and 11px. The strip's height is
+content-derived and not readable from a token, so **this must be measured in a browser after
+any change to its padding, font size, track width, or the site width.** That warning is now in
+the CSS itself.
+
 ### Narrower: 64rem, and the column goes asymmetric (2026-07-27)
 Brajeshwar, on seeing 81rem/1296px live: *"this is too wide, what is the next logical narrower
 body width. Think readable length of the articles + the sidenote + the padding and margin
