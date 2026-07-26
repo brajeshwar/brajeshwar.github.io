@@ -1,389 +1,315 @@
 /* ============================================================
    Search — Pagefind UI, /search/ only.
    ------------------------------------------------------------
-   Loaded via the styles: key in _pages/search.html.
+   Loaded via the styles: key in _pages/search.html, which also links
+   Pagefind's own /pagefind/pagefind-ui.css. This file THEMES that UI so
+   it follows mode, palette and accent like every other component; it
+   does not replace it.
 
-   Holds the --pagefind-ui-* bridge: Pagefind's own theming vars, fed
-   from this site's tokens so the search UI follows mode, palette and
-   accent like every other component.
+   ⚠️ EVERY RULE HERE IS SCOPED UNDER #search, AND HAS TO BE.
+   Pagefind's own CSS carries Svelte scoping hashes:
 
-   As of 2026-07-19 this file contains NO raw colour values. It used to
-   be the documented exception to the "colour only in themes.css" rule;
-   it no longer needs to be. There are now zero exceptions.
+       .pagefind-ui__result.svelte-4xnkmf.svelte-4xnkmf   (0,3,0)  Pagefind
+       .pagefind-ui__result                               (0,1,0)  us
+       #search .pagefind-ui__result                       (1,1,0)  us, scoped
+
+   and its <link> sits in the page body, so it also won any tie against
+   this file, which is inlined in <head>. Unscoped, we lost on both
+   counts. `#search` is the container `_pages/search.html` already wraps
+   the UI in, and one ID beats any number of classes.
+
+   ⚠️ Found on 2026-07-27 by measuring, and it had been true the whole
+   time: with search.css REMOVED ENTIRELY, /search/ rendered identically
+   — same padding, same radius, same 21px title, same browser-default
+   yellow <mark>. About 10 KB was shipping to that page and styling
+   nothing. The audit had this filed as "re-implements Pagefind's own
+   stylesheet, ~6 KB of 9.7 KB"; a rule-by-rule comparison against
+   pagefind-ui.css found ZERO shared selectors, so that was not the shape
+   of it either. The duplication was INTERNAL — a hand-copy of Pagefind's
+   defaults followed by a second half re-declaring the same selectors at
+   equal specificity, the first half losing on source order.
+
+   So: one block per selector, scoped, and verified to actually apply.
+   Test with `make serve` — `jekyll serve` alone does not build the index,
+   and its --watch wipes _site/pagefind/.
+
+   NO raw colour values (since 2026-07-19); there are no exceptions to
+   "colour only in themes.css".
    ============================================================ */
 
-/* Pagefind UI base.
-   Merged 2026-07-19 from two adjacent `.pagefind-ui` blocks, and the
-   four colour literals that lived here (primary/text/background/border)
-   are gone: a second `.pagefind-ui` block further down overwrote all
-   four, so they never rendered. Colours now come from theme tokens in
-   the "Custom CSS Variables" block below — see the note there. */
-.pagefind-ui {
+/* Pagefind's own theming vars, fed from our tokens. Two `.pagefind-ui`
+   blocks were merged here — one set the geometry vars, the other the
+   colour vars, 200 lines apart. */
+#search .pagefind-ui {
   margin: var(--space) auto;
 
   --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: var(--text-color-link);
+  --pagefind-ui-text: var(--text-color);
+  --pagefind-ui-background: var(--bg-color);
+  --pagefind-ui-border: var(--border-color);
   --pagefind-ui-tag: var(--text-color);
-  --pagefind-ui-border-width: 2px;
-  --pagefind-ui-border-radius: 8px;
-  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-border-width: var(--border-size);
+  --pagefind-ui-border-radius: var(--border-radius);
+  --pagefind-ui-image-border-radius: var(--border-radius);
   --pagefind-ui-font: var(--font-body);
 }
 
-.pagefind-ui__form {
+/* The form is the positioning context for the clear button below. */
+#search .pagefind-ui__form {
   position: relative;
-  display: flex;
-  align-items: stretch;
   width: 100%;
 }
 
-.pagefind-ui__search-input {
-  position: relative;
-  display: flex;
-  align-items: center;
+#search .pagefind-ui__search-input {
   width: 100%;
-  padding: calc(1rem * var(--pagefind-ui-scale)) calc(1rem * var(--pagefind-ui-scale));
-  font-size: calc(1rem * var(--pagefind-ui-scale));
+  /* Both sides have to clear something Pagefind puts there: a magnifier
+     drawn as the form's ::before on the left, and the clear button on the
+     right. --space-l each side, not --space-2xs — at 2xs the query text
+     rendered on top of the magnifier. */
+  padding: var(--space-2xs) var(--space-l);
   font-family: var(--pagefind-ui-font);
-  color: var(--pagefind-ui-text);
-  background-color: var(--pagefind-ui-background);
-  border: var(--pagefind-ui-border-width) solid var(--pagefind-ui-border);
-  border-radius: var(--pagefind-ui-border-radius);
+  font-size: 1rem;                 /* 1rem exactly — iOS Safari zooms below 16px */
+
+  color: var(--text-color);
+  background: var(--bg-color);
+  border: var(--border-size) var(--border-style) var(--border-color);
+  border-radius: var(--border-radius);
   outline: none;
-  flex: 1;
+  transition: border-color var(--transition-duration) ease;
 }
 
-.pagefind-ui__search-input:focus {
-  border-color: var(--pagefind-ui-primary);
+#search .pagefind-ui__search-input:focus {
+  border-color: var(--accent);
 }
 
-.pagefind-ui__search-clear {
+/* Clear button. Pagefind ships no styling for this one. */
+#search .pagefind-ui__search-clear {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: var(--space-2xs);
   transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-  padding: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+
   border: 0;
   border-radius: 50%;
   background: transparent;
   color: var(--text-color-lower);
   cursor: pointer;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
 }
 
-.pagefind-ui__search-clear:hover {
+#search .pagefind-ui__search-clear:hover {
   background: var(--bg-color-low);
   color: var(--text-color);
 }
 
-.pagefind-ui__search-clear:focus {
-  outline: 2px solid var(--pagefind-ui-primary);
+#search .pagefind-ui__search-clear:focus-visible {
+  outline: var(--border-size-small) solid var(--accent);
   outline-offset: 2px;
 }
 
-.pagefind-ui__search-clear:active {
-  background: var(--bg-color-low);
-  transform: translateY(-50%);
+#search .pagefind-ui__search-clear svg {
+  width: var(--icon-glyph-size);
+  height: var(--icon-glyph-size);
 }
 
-.pagefind-ui__search-clear[hidden] {
-  display: none;
+#search .pagefind-ui__results {
+  margin-top: var(--space-s);
 }
 
-.pagefind-ui__search-clear svg {
-  width: 16px;
-  height: 16px;
-}
-
-.pagefind-ui__results {
-  padding-top: calc(1rem * var(--pagefind-ui-scale));
-}
-
-.pagefind-ui__result {
+#search .pagefind-ui__result {
   position: relative;
-  display: list-item;
   list-style-type: none;
-  padding: calc(1rem * var(--pagefind-ui-scale));
-  border: var(--pagefind-ui-border-width) solid var(--pagefind-ui-border);
-  border-radius: var(--pagefind-ui-border-radius);
-  background-color: var(--pagefind-ui-background);
-  margin-top: calc(1rem * var(--pagefind-ui-scale));
-}
+  margin-bottom: var(--space-s);
+  padding: var(--space-s);
 
-.pagefind-ui__result:first-child {
-  margin-top: 0;
-}
-
-.pagefind-ui__result-link {
-  display: block;
-  color: var(--pagefind-ui-text);
-  text-decoration: none;
-  outline: none;
-}
-
-.pagefind-ui__result-link:focus .pagefind-ui__result-title {
-  outline: 1px solid var(--pagefind-ui-primary);
-}
-
-.pagefind-ui__result-title {
-  display: inline-block;
-  font-weight: 700;
-  font-size: calc(1.2rem * var(--pagefind-ui-scale));
-  font-family: var(--pagefind-ui-font);
-  color: var(--pagefind-ui-primary);
-  margin-top: 0;
-  margin-bottom: calc(0.5rem * var(--pagefind-ui-scale));
-}
-
-.pagefind-ui__result-excerpt {
-  display: inline-block;
-  font-weight: 400;
-  font-size: calc(1rem * var(--pagefind-ui-scale));
-  font-family: var(--pagefind-ui-font);
-  color: var(--pagefind-ui-text);
-  margin-top: 0;
-  margin-bottom: calc(0.5rem * var(--pagefind-ui-scale));
-  line-height: 1.5;
-}
-
-.pagefind-ui__result-image {
-  float: right;
-  width: calc(5rem * var(--pagefind-ui-scale));
-  height: calc(5rem * var(--pagefind-ui-scale));
-  object-fit: cover;
-  object-position: center;
-  margin-left: calc(1rem * var(--pagefind-ui-scale));
-  margin-bottom: calc(1rem * var(--pagefind-ui-scale));
-  border-radius: var(--pagefind-ui-image-border-radius);
-}
-
-.pagefind-ui__result-tags {
-  display: flex;
-  gap: calc(0.5rem * var(--pagefind-ui-scale));
-  flex-wrap: wrap;
-  margin-top: calc(0.5rem * var(--pagefind-ui-scale));
-}
-
-.pagefind-ui__result-tag {
-  display: inline-block;
-  padding: calc(0.2rem * var(--pagefind-ui-scale)) calc(0.5rem * var(--pagefind-ui-scale));
-  font-size: calc(0.8rem * var(--pagefind-ui-scale));
-  font-family: var(--pagefind-ui-font);
-  color: var(--pagefind-ui-background);
-  background-color: var(--pagefind-ui-tag);
-  border-radius: calc(var(--pagefind-ui-border-radius) / 2);
-}
-
-.pagefind-ui__result-nested {
-  position: relative;
-  padding-left: calc(2rem * var(--pagefind-ui-scale));
-  margin-top: calc(0.5rem * var(--pagefind-ui-scale));
-}
-
-.pagefind-ui__result-nested::before {
-  content: "";
-  position: absolute;
-  left: calc(0.7rem * var(--pagefind-ui-scale));
-  top: calc(0.5rem * var(--pagefind-ui-scale));
-  width: calc(0.2rem * var(--pagefind-ui-scale));
-  height: calc(0.8rem * var(--pagefind-ui-scale));
-  background-color: var(--pagefind-ui-border);
-}
-
-.pagefind-ui__message {
-  text-align: center;
-  color: var(--pagefind-ui-text);
-  font-family: var(--pagefind-ui-font);
-  font-size: calc(1rem * var(--pagefind-ui-scale));
-  margin: calc(2rem * var(--pagefind-ui-scale)) 0;
-}
-
-.pagefind-ui__button {
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: calc(1rem * var(--pagefind-ui-scale));
-  font-family: var(--pagefind-ui-font);
-  color: var(--pagefind-ui-background);
-  background-color: var(--pagefind-ui-primary);
-  border: var(--pagefind-ui-border-width) solid var(--pagefind-ui-primary);
-  border-radius: var(--pagefind-ui-border-radius);
-  padding: calc(0.5rem * var(--pagefind-ui-scale)) calc(1rem * var(--pagefind-ui-scale));
-  margin-top: calc(1rem * var(--pagefind-ui-scale));
-  cursor: pointer;
-  outline: none;
-}
-
-.pagefind-ui__button:focus {
-  outline: 1px solid var(--pagefind-ui-primary);
-  outline-offset: calc(0.2rem * var(--pagefind-ui-scale));
-}
-
-.pagefind-ui__button:hover {
-  opacity: 0.9;
-}
-
-/* (An unscoped `mark` rule sat here — Pagefind's own default. It was
-   dead: the search-term highlight further down this file overrode every
-   one of its declarations. Removed 2026-07-19 along with the global
-   leak it was part of.) */
-
-/* Custom Overrides and Enhancements */
-
-/* Theme bridge — Pagefind's own vars fed from the site's tokens, so the
-   search UI follows mode + palette + accent like everything else.
-
-   Fixed 2026-07-19: this block previously referenced --link-color,
-   --accent-color, --text-color-muted, --text-color-secondary,
-   --highlight-bg, --highlight-text and --bg-color-medium — SEVEN tokens
-   that are declared nowhere in this codebase. Every one silently fell
-   through to its hardcoded hex fallback, so search results ignored the
-   reader's theme entirely. The hex fallbacks are dropped too: these
-   tokens all exist, so a fallback is unreachable and just ships bytes. */
-.pagefind-ui {
-  --pagefind-ui-primary: var(--text-color-link);
-  --pagefind-ui-text: var(--text-color);
-  --pagefind-ui-background: var(--bg-color);
-  --pagefind-ui-border: var(--border-color);
-}
-
-/* Ensure Pagefind UI is visible */
-.pagefind-ui,
-.pagefind-ui__form,
-.pagefind-ui__search-input {
-  display: block !important;
-  visibility: visible !important;
-}
-
-/* Enhanced Search Input */
-.pagefind-ui__search-input {
-  width: 100%;
-  padding: 12px 48px 12px 16px;
-  /* Extra right padding for clear button */
-  font-size: 16px;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  outline: none;
-  transition: border-color 0.2s ease;
+  border: var(--border-size) var(--border-style) var(--border-color);
+  border-radius: var(--border-radius);
   background: var(--bg-color);
-  color: var(--text-color);
+  overflow: hidden;                /* contains the floated thumbnail */
 }
 
-.pagefind-ui__search-input:focus {
-  border-color: var(--accent);
+#search .pagefind-ui__result:first-child { margin-top: 0; }
+
+/* Pagefind emits an empty <div class="result-thumb"> on every result,
+   image or not, and its own rule makes the result a flex row — so a
+   result with no thumbnail still reserved a column of blank space and the
+   text started a third of the way across. Only collapse it when it is
+   genuinely empty, so real thumbnails are untouched. */
+#search .pagefind-ui__result-thumb:empty { display: none; }
+
+#search .pagefind-ui__result-title {
+  margin: 0 0 var(--space-3xs);
+  font-family: var(--pagefind-ui-font);
+  font-size: var(--step-0);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--scale-small);
 }
 
-/* Enhanced Results Layout */
-.pagefind-ui__results {
-  margin-top: 20px;
-}
-
-.pagefind-ui__result {
-  margin-bottom: 20px;
-  padding: 20px 24px;
-  /* Left-right padding for the boxes */
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  background: var(--bg-color);
+#search .pagefind-ui__result-title a,
+#search .pagefind-ui__result-link {
   display: block;
-  /* Changed from flex to block for text wrapping */
-  overflow: hidden;
-  /* Contain floated elements */
-}
-
-.pagefind-ui__result-content {
-  /* No special layout needed - content flows naturally around floated image */
-}
-
-/* Optional image floated on the right with text wrapping */
-.pagefind-ui__result-image {
-  float: right;
-  width: 120px;
-  height: 80px;
-  border-radius: 6px;
-  object-fit: cover;
-  margin: 0 0 16px 20px;
-  /* Bottom and left margin for text wrapping */
-  clear: right;
-  /* Ensure images don't stack */
-}
-
-.pagefind-ui__result-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
-
-.pagefind-ui__result-title a,
-.pagefind-ui__result-link {
   color: var(--text-color-link);
   text-decoration: none;
 }
 
-.pagefind-ui__result-title a:hover,
-.pagefind-ui__result-link:hover {
+#search .pagefind-ui__result-title a:hover,
+#search .pagefind-ui__result-link:hover {
   text-decoration: underline;
 }
 
-/* Custom date styling */
-.pagefind-ui__result-date {
-  font-style: italic;
+/* The title CONTAINS the link, not the reverse. This file used to carry
+   `.pagefind-ui__result-link:focus .pagefind-ui__result-title`, which
+   assumed the opposite nesting and so never matched — a keyboard reader
+   tabbing through results got no focus indication at all. Verified
+   against the live DOM: p.result-title > a.result-link. Put on the link
+   itself, where it works. */
+#search .pagefind-ui__result-link:focus-visible {
+  outline: var(--border-size-small) solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-small);
+}
+
+#search .pagefind-ui__result-excerpt {
+  margin: 0;
+  font-family: var(--pagefind-ui-font);
+  font-size: var(--step--1);
   color: var(--text-muted);
-  margin: 4px 0 12px 0;
-  opacity: 0.8;
+  line-height: var(--scale);
 }
 
-.pagefind-ui__result-excerpt {
-  color: var(--text-muted);
-  line-height: 1.5;
-  font-size: 15px;
+/* Optional thumbnail, floated so the excerpt wraps around it. */
+#search .pagefind-ui__result-image {
+  float: right;
+  clear: right;                    /* stops two images stacking side by side */
+  width: 120px;
+  height: 80px;
+  margin: 0 0 var(--space-2xs) var(--space-s);
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--border-radius-small);
 }
 
-/* Highlight search terms.
-   Scoped to .pagefind-ui (2026-07-19). This used to also match bare
-   `mark`, so on /search/ EVERY <mark> on the page — including ones in
-   prose, e.g. the "Last updated" badges — got repainted with the
-   search-hit treatment, overriding the global rule in base.css. */
-.pagefind-ui__result-excerpt mark,
-.pagefind-ui mark {
-  background-color: var(--mark);
-  color: var(--text-color);
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-weight: 500;
+/* Sub-results within one page. Pagefind does emit these — 7 on a
+   one-word query — so this is live, not speculative. */
+#search .pagefind-ui__result-nested {
+  position: relative;
+  margin-top: var(--space-3xs);
+  padding-left: var(--space-m);
 }
 
-.pagefind-ui__message {
+#search .pagefind-ui__result-nested::before {
+  content: "";
+  position: absolute;
+  left: var(--space-3xs);
+  top: var(--space-3xs);
+  width: 2px;
+  height: 0.8em;
+  background-color: var(--border-color);
+}
+
+#search .pagefind-ui__message {
+  margin: var(--space-s) 0;
+  font-family: var(--pagefind-ui-font);
   text-align: center;
   color: var(--text-muted);
   font-style: italic;
-  margin: 20px 0;
 }
 
-/* Results without images - full width content */
-.pagefind-ui__result:not(:has(.pagefind-ui__result-image)) .pagefind-ui__result-content {
-  width: 100%;
+/* "Load more results". */
+#search .pagefind-ui__button {
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-s);
+  padding: var(--space-3xs) var(--space-2xs);
+
+  font-family: var(--pagefind-ui-font);
+  font-size: var(--step--1);
+  font-weight: var(--font-weight-bold);
+
+  color: var(--color-primary-fg);
+  background-color: var(--color-primary);
+  border: var(--border-size) var(--border-style) var(--color-primary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  outline: none;
+  transition: opacity var(--transition-duration) ease;
 }
 
-/* Responsive adjustments */
+#search .pagefind-ui__button:hover { opacity: 0.9; }
+
+#search .pagefind-ui__button:focus-visible {
+  outline: var(--border-size-small) solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Highlight search terms. Scoped to .pagefind-ui (2026-07-19): this used
+   to also match bare `mark`, so on /search/ EVERY <mark> on the page —
+   including ones in prose, e.g. the "Last updated" badges — got the
+   search-hit treatment, overriding the global rule in base.css.
+
+   Until the #search scoping above, this lost to the browser default and
+   hits rendered in pure yellow on a site whose whole point is that colour
+   is opt-in. */
+#search .pagefind-ui mark {
+  background-color: var(--mark);
+  color: var(--text-color);
+  padding: 2px 4px;
+  border-radius: var(--border-radius-small);
+  font-weight: var(--font-weight-bold);
+}
+
 @media (max-width: 768px) {
-  .pagefind-ui__result {
-    padding: 16px 20px;
-  }
+  #search .pagefind-ui__result { padding: var(--space-2xs); }
 
-  .pagefind-ui__result-image {
+  /* Full width above the text rather than floated beside it. */
+  #search .pagefind-ui__result-image {
     float: none;
-    /* Remove float on mobile */
+    display: block;
     width: 100%;
     height: 120px;
-    margin: 0 0 12px 0;
-    /* Full width with bottom margin */
-    display: block;
+    margin: 0 0 var(--space-3xs);
   }
 }
+
+/* ------------------------------------------------------------
+   REMOVED 2026-07-27, each verified dead against a live populated
+   /search/ rather than by reading. Recorded so they are not reinstated
+   speculatively:
+
+     .pagefind-ui__result-content       this Pagefind version emits
+                                        `result-inner`; 0 matches. The
+                                        rule was empty apart from a
+                                        comment anyway.
+     .pagefind-ui__result:not(:has(…))  same non-existent class.
+       .pagefind-ui__result-content
+     .pagefind-ui__result-tags / -tag   Pagefind emits tags only when
+                                        filters are configured; none are.
+     .pagefind-ui__result-date          not emitted by this index.
+     .pagefind-ui__result-link:focus    impossible nesting — see above.
+       .pagefind-ui__result-title
+     display/visibility !important      a `.pagefind-ui, __form,
+                                        __search-input { display: block
+                                        !important }` block, evidently
+                                        from a debugging session. It
+                                        forced the form to block, which
+                                        made the `display: flex` +
+                                        align-items above it inert.
+
+   Also folded: the duplicate .pagefind-ui, __search-input, __results,
+   __result, __result-image, __result-title, __result-excerpt and
+   __message blocks, which appeared twice each.
+
+   The hardcoded px values are gone too — this file uses the site's
+   --space-*, --step-*, --border-* and colour tokens like every other
+   file, which is what lets the search page follow the reader's text-size
+   and palette instead of sitting at a fixed 16px/8px.
+   ------------------------------------------------------------ */

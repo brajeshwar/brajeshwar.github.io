@@ -82,10 +82,30 @@ one-offs only. Keep embedding; no external stylesheet. Ordered roughly by value/
       Still included by nothing.
 ### From the 2026-07-19 CSS audit — not yet done
 Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
-- [ ] **search.css re-implements Pagefind's own stylesheet** (~6 KB of its 9.7 KB). `_pages/search.html`
-      already links the CLI-generated `pagefind-ui.css`, and the top half of `search.css` hand-copies
-      the same base UI on top of it. Needs a `make serve` (Pagefind built) to byte-compare before cutting.
-      Biggest single remaining win.
+- [x] **search.css** *(done 2026-07-27, against a real Pagefind build)* — **the audit's premise was
+      wrong, and the truth was worse.** A rule-by-rule comparison against `pagefind-ui.css` found
+      **zero shared selectors**: Pagefind's carry Svelte scoping hashes (`.svelte-4xnkmf`), so they
+      are (0,3,0) against our (0,1,0), and its `<link>` sits in the page body so it also won every
+      tie against our inlined `<head>` styles. **The file was almost entirely inert.** Proved by
+      A/B: with `search.css` removed entirely, `/search/` rendered identically — same padding,
+      same radius, same 21px title, same browser-default *yellow* `<mark>` on a site whose whole
+      point is that colour is opt-in. ~10 KB was shipping to that page and styling nothing.
+      - Fixed by scoping every rule under **`#search`** — the container `_pages/search.html`
+        already provides. One ID beats any number of classes, so the theme now actually applies.
+      - The real duplication was **internal**: a hand-copy of Pagefind's defaults followed by a
+        second half re-declaring the same eight selectors at equal specificity, the first half
+        losing on source order. One block per selector now.
+      - Six rules removed, each verified dead against a live populated page (not by reading):
+        `result-content` ×2 (this version emits `result-inner`), `result-tags`/`-tag` (no filters
+        configured), `result-date` (not indexed), and a `display: block !important` block left
+        from a debugging session.
+      - **Two real bugs fixed on the way.** The focus style was
+        `.pagefind-ui__result-link:focus .pagefind-ui__result-title` — inverted nesting, so it
+        never matched and keyboard readers got *no* focus indication on a result. And Pagefind
+        emits an empty `result-thumb` on every result, which its own flex rule turned into a
+        blank column, so text started a third of the way across.
+      - Hardcoded px are gone; the page now follows the reader's text-size and palette.
+      - Verified light and dark on a populated page.
 - [x] **chrome.css repeats itself** *(done 2026-07-27)* — **1,010 bytes raw / 74 gzip off every
       page**, and one fewer place for the next icon button to be copied into.
       - **`.icon-button`** is now the primitive for the three round header controls
