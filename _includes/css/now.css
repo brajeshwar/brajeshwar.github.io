@@ -32,25 +32,23 @@
   --timeline-gutter: var(--space-l);     /* space the spine lives in */
 }
 
-/* Year heading — the period. Matches .timeline-when, and must STAY matched:
-   size, weight, colour and the optical nudge are all mirrored from there.
-   The old underline is gone; the spine does that work now.
+/* Year heading — the period. Mirrors .timeline-when and must STAY mirrored.
 
-   Bigger and nudged left, 2026-07-27 — at --step-0 the year barely outranked
-   the entry text, so each one read as an interruption rather than a marker for
-   the block beneath it. The negative inline margin is optical: larger digits
-   carry more left side bearing, so the glyph drifts right of the spine it
-   should align with. */
+   TYPOGRAPHY COMES FROM base.css: these are <h1>s in the source fragments, so
+   they take --step-3 at --font-weight-light like every other h1 on the site.
+   Nothing typographic is set here (Brajeshwar, 2026-07-27: "all Hx styles
+   should be the same"); only the border reset, the spacing, the anchor's
+   positioning context and the optical nudge.
+
+   ⚠️ These are h1 while /about/'s periods are h2, so /now/'s years render one
+   step LARGER. That is the shared scale behaving correctly on different
+   levels, not a styling difference — the fragments in now/ would have to use
+   `##` for the two pages to match, and that is a content change. */
 .page-now h1 {
   position: relative;                    /* anchor for the § headerlink */
   margin: 0 0 var(--space-xs);
   margin-left: -0.06em;
-  font-size: var(--step-2);
-  font-weight: var(--font-weight);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.02em;
-  color: var(--text-color-lower);
-  border: 0;
+  border: 0;                             /* was an underline; the spine does that now */
 
   scroll-margin-top: var(--space-l);
 }

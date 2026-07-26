@@ -38,11 +38,12 @@
   border-bottom: var(--border-size) var(--border-style) var(--rule);
 }
 
+/* Size, weight and line-height come from base.css's shared h1–h6 rules — this
+   sets spacing only. Overriding them here is what made the timeline's headings
+   drift out of step with the rest of the site (Brajeshwar, 2026-07-27: "all Hx
+   styles should be the same"). */
 .timeline-head h1 {
   margin: 0;
-  font-size: var(--step-1);
-  font-weight: var(--font-weight);
-  line-height: var(--scale-small);
 }
 
 /* ---- Filter ------------------------------------------------
@@ -228,24 +229,24 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::befo
 
 /* Time-range heading: "early 1980s", "1993-1995". Typed by hand.
 
-   Bigger and nudged left, 2026-07-27: at --step-0 the heading was barely above
-   the entry text, so each one read as an interruption in the flow rather than a
-   marker for the block beneath it — the break felt jarring precisely because
-   the title was not clearly doing a different job. --step-2 gives it that job.
+   TYPOGRAPHY COMES FROM base.css. It is an <h2>, so it takes --step-2 at
+   --font-weight-light like every other h2 on the site. This block used to set
+   its own size, weight, colour, letter-spacing and tabular figures, and that is
+   exactly how the timeline drifted out of step with pages and posts
+   (Brajeshwar, 2026-07-27: "we already have a common style for all titles …
+   all Hx styles should be the same"). To change the size, change the heading
+   LEVEL or the shared scale — not this rule.
 
-   The small negative inline margin is optical, the same idea as the logo's:
-   larger digits carry more left side bearing, so the glyph's painted edge
-   drifts right of the spine it should line up with. -0.06em pulls it back. It
-   is em-based, so it stays proportional if the size changes again. */
+   What remains is structural, not typographic: the positioning context for the
+   § anchor, the spacing, the sticky-bar clearance, and the optical nudge. That
+   last is an alignment correction, not a style: larger digits carry more left
+   side bearing, so the painted glyph drifts right of the spine it should line
+   up with, and -0.06em pulls it back. Em-based, so it tracks whatever size the
+   shared scale hands it. */
 .timeline-when {
   position: relative;              /* anchor for the § headerlink */
   margin: 0 0 var(--space-xs);
   margin-left: -0.06em;
-  font-size: var(--step-2);
-  font-weight: var(--font-weight);
-  font-variant-numeric: tabular-nums;
-  color: var(--text-color-lower);
-  letter-spacing: 0.02em;
 
   /* Clear the sticky filter bar when jumped to via #id. */
   scroll-margin-top: var(--space-l);
@@ -327,11 +328,10 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"]::befo
   border-color: var(--text-color-lower);
 }
 
+/* An <h3>, so base.css gives it --step-1 at light weight. Spacing only here —
+   see the note on .timeline-when. */
 .timeline-title {
   margin: 0 0 var(--space-3xs);
-  font-size: var(--step-0);
-  font-weight: var(--font-weight);
-  line-height: var(--scale-small);
 }
 
 .timeline-meta {

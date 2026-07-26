@@ -237,7 +237,33 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
-### Timeline section titles: bigger, nudged left (2026-07-27)
+### Headings follow the ONE shared scale (2026-07-27)
+Brajeshwar: *"we already have a common style for all titles … all Hx styles should be the
+same."* He was right — `base.css` has defined it all along: `h1`–`h6` at
+`--font-weight-light` on the Utopia steps (h1 `--step-3` … h6 `--step--2`), `line-height:
+var(--scale-small)`, `text-wrap: pretty`. The timeline and /now/ were overriding it.
+
+**Removed every typographic override** from `.timeline-head h1`, `.timeline-when`,
+`.timeline-title` and `.page-now h1` — size, weight, colour, letter-spacing, tabular figures.
+They now take the shared scale purely from their heading LEVEL. Verified computed values match
+a bare `h1`/`h2`/`h3` exactly: **39.06 / 31.25 / 25px, weight 200**, same colour; a clean
+descending hierarchy of page title → period → entry title.
+
+What stays in those rules is structural only: the `position: relative` the § anchor needs, the
+spacing, `scroll-margin-top`, and the `-0.06em` optical nudge. That nudge is an *alignment*
+correction, not typography — larger digits carry more left side bearing, so the painted glyph
+drifts right of the spine. Being em-based it now tracks whatever size the shared scale gives.
+
+**To resize a heading, change its LEVEL or the shared scale — never the component rule.** That
+is the whole lesson: the previous pass had reached for `--step-2` directly and produced a
+timeline whose headings agreed with nothing else on the site.
+
+⚠️ **`/now/`'s years are `h1`, `/about/`'s periods are `h2`**, so /now/ renders one step larger
+(step-3 vs step-2). That is the shared scale behaving correctly on different levels, not a
+style difference. Matching them means changing `#` to `##` in the `now/` fragments — a content
+edit, and Brajeshwar's call.
+
+### Timeline section titles: bigger, nudged left (2026-07-27) — superseded above
 Brajeshwar: *"the breaks in the timeline due to the section titles is too jarring."* The cause
 was that the year sat at `--step-0`, barely above the entry text — so it read as an
 interruption in the flow rather than a marker for the block beneath it. A title that isn't
