@@ -225,9 +225,11 @@
   --icon-button-size      : 32px;
   --icon-glyph-size       : 17px;
 
-  /* 60rem. Was `var(--body-width-medium)`, a token whose only reader was this
-     line — so it named a site width that was not one. Folded in 2026-07-27. */
-  --image-width-max       : 60rem;
+  /* --image-width-max (60rem) was here, and --body-width-medium before it.
+     Removed 2026-07-27: its last reader was `.large`'s middle step, and
+     `.large` now goes to the band like everything else. A wide image, the
+     header rule and the footer rule share one width; there is no
+     intermediate to name. */
 
   /* Tufte sidenotes (Phase 2) — right-margin gutter. See _docs/sidenotes.md. */
   --sidenote-width        : 16rem;   /* the maximum — notes shrink to fit the margin (base.css) */

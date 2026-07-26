@@ -517,6 +517,32 @@ same `_site`, so they overwrite each other and local measurements flip depending
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
 
+### One width, finally — and the nav divider becomes a notch (2026-07-27)
+Brajeshwar: *"The full width of the content, such as in the articles, is not the same the
+header, footer, etc. They should all be the same width."* and *"The vertical bar in the posts
+PREV | NEXT looks weird. Either replace with a transparent bar or invert the color."*
+
+**The mismatch was 64px, and only `.large` had it.** Measured on a post: header, `.footer-inner`,
+`main` and `.post-nav` were all 244→1268 already. `figure.large` stopped at 1204 — the
+`--image-width-max` middle step (60rem/960px) kept from the breakout change the day before.
+Everything else on the page agreed; that one class did not. Removed the step: `.large` and
+`.full` are now both `100cqi`, so a wide image ends on the same line as the header rule and the
+footer rule. Verified: **one distinct right edge across all six elements.**
+
+The two classes are now identical in behaviour. Both are kept — 24 `.full` and 58 `.large` in the
+content, and content is not ours to edit — but there is one behaviour to maintain, not two.
+`--image-width-max` is gone with the step (and `--body-width-medium` before it, same lineage):
+there is no intermediate left to name.
+
+**The divider is now a notch cut through the bar, not a line drawn on it.** It was
+`--border-color`, a mix of the foreground — correct as a hairline between paragraphs, wrong
+inside a filled bar with a link either side. It takes the PAGE background now, so it reads as a
+slit. That inverts by construction in both modes: the bar is `--bg-color-low`, the page is
+`--bg-color-lower`, and one is lighter than the other in light and darker in dark, so the notch
+contrasts with what surrounds it without a second rule. It also survives the hover tint, which
+the foreground-mix hairline had started to disappear into. Verified in both modes, hovered and
+at rest.
+
 ### Nav spans the band; captions match their figures (2026-07-27)
 Brajeshwar: *"The PREV | NEXT should extend the whole width of the content. Now that our article
 contents including FIGURES are inside, make the figcaption the same width as the FIGURE

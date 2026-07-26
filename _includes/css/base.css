@@ -462,12 +462,30 @@ figcaption {
    sidenotes.js `collectObstacles()` looks for `.full, .large, .gallery`
    and pushes any overlapping note below them.
    ------------------------------------------------------------------ */
+/* ONE WIDTH. `.large` and `.full` both go to the band, and the band is what
+   the header, the footer and `main` already measure — so a wide image, the
+   header rule and the footer rule all end on the same line.
+
+   `.large` was a middle step at --image-width-max (60rem/960px), 64px short
+   of the band's 1024. Brajeshwar, 2026-07-27: *"The full width of the
+   content, such as in the articles, is not the same the header, footer, etc.
+   They should all be the same width."* That 64px was the whole complaint —
+   everything else on the page already agreed. A middle step is only worth
+   having if someone chose it; this one was left over from when breakouts
+   were viewport-relative and the band did not exist as a concept.
+
+   The two classes are now identical. Both are kept because both are in the
+   content (24 `.full`, 58 `.large` across the archive) and content is not
+   ours to edit — but there is one behaviour to maintain, not two.
+
+   `.large` keeps its breakpoint: below $breakpoint-small there is no room to
+   break out of, so it stays in the flow. `.full` breaks out at every width,
+   which on a phone means the band, which means no visible change. */
 @media (min-width: $breakpoint-small) {
   figure.large,
   img.large {
     margin-inline: 0;
-    /* A middle step: wider than the measure, short of the full band. */
-    width: min(var(--image-width-max), 100cqi);
+    width: 100cqi;
     max-width: 100cqi;
   }
 }

@@ -165,11 +165,25 @@ photo-cover__desc {
 .post-nav__prev { justify-content: flex-start; }
 .post-nav__next { justify-content: flex-end; }
 
-/* The divider, drawn ONLY when both links are present — `a + a` cannot
-   match a lone child, so the first and last posts get an unbroken bar
-   without a rule of their own. */
+/* The divider: a NOTCH cut through the bar, not a line drawn on it.
+
+   It was `--border-color`, a mix of the foreground — a hairline rule, which
+   is right between paragraphs and wrong here, sitting inside a filled bar
+   with a link either side. Brajeshwar, 2026-07-27: "looks weird. Either
+   replace with a transparent bar or invert the color."
+
+   Inverted: it takes the PAGE background, so it reads as a slit through the
+   bar rather than a mark on it. That inverts by construction in both modes —
+   the bar is --bg-color-low and the page is --bg-color-lower, and one is
+   lighter than the other in light mode and darker in dark, so the notch
+   always contrasts with what surrounds it without a second rule. It also
+   survives the hover tint, which a foreground-mix hairline was starting to
+   disappear into.
+
+   Drawn ONLY when both links are present — `a + a` cannot match a lone
+   child, so the first and last posts get an unbroken bar for free. */
 .post-nav__link + .post-nav__link {
-  border-left: var(--border-size) var(--border-style) var(--border-color);
+  border-left: var(--border-size-small) var(--border-style) var(--bg-color-lower);
 }
 
 .post-nav__link:hover,
