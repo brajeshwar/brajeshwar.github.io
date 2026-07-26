@@ -517,6 +517,61 @@ same `_site`, so they overwrite each other and local measurements flip depending
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
 
+### The five highest-value items, plus the tidies (2026-07-27)
+Brajeshwar: *"Do all of the Highest Values (1 to 5). Git commit for each of them meaningful
+feature completion."* Nine commits. **Three of the five turned out to be misfiled**, which is
+the useful part of this session — the audit's descriptions were written from reading, and
+measuring disagreed.
+
+**1. search.css.** Filed as "re-implements Pagefind's own stylesheet, ~6 KB of 9.7 KB". A
+rule-by-rule comparison against a real `pagefind-ui.css` found **zero shared selectors** —
+Pagefind's carry Svelte scoping hashes, so they are (0,3,0) against our (0,1,0), and its
+`<link>` sits in the page body so it also won every tie against our inlined `<head>` styles.
+**The file was almost entirely inert.** Proved by A/B: removing it completely changed nothing —
+same padding, same radius, same 21px title, same browser-default *yellow* `<mark>`. Fixed by
+scoping under `#search`. Two real bugs fell out: a focus style with inverted nesting that never
+matched (no focus ring on any result, ever) and an empty `result-thumb` reserving a blank column.
+
+**2. chrome.css repetition.** Real, and done: `.icon-button` for the three round header
+controls, the two backdrops and the shared half of the two cards grouped. **1,010 bytes raw /
+74 gzip off every page.** `.footer-social a` was listed with the icon buttons in the audit and
+deliberately NOT merged — measuring says it is a different treatment.
+
+**3. Node 18 → 22 LTS.** Straightforward.
+
+**4. Minify on publish.** esbuild, **36.7 → 15.2 KB raw, 13.9 → 6.6 KB gzipped**. In place,
+changing no HTML reference — that is the design: local `jekyll serve` and the Cloudflare backup
+never run the step and keep the readable originals. Pointing the layout at CI-only bundles
+would have left the standby host with **no JavaScript at all**. Concatenation considered and
+deliberately dropped.
+
+**5. Geist → woff2.** 169,056 → 47,596 bytes, 72%. The variable axis survives — verified by
+reading `fvar` back out AND by measuring three different rendered widths at 100/400/900,
+because a naive subset flattens a variable font and every weight silently becomes 400. The
+`.ttf` was still shipping; now excluded from the build.
+
+⚠️ **And it turned up a real typographic bug.** Libre Baskerville's three faces declared
+`unicode-range: U+000-5FF`, but the files contain `’ “ ” – — • …` — all above U+05FF. The range
+forbade the browser from using the font for exactly the characters that carry a serif's voice,
+so a reader on Serif got Libre Baskerville for the letters and the *system* serif for every
+apostrophe: **3,197 times in a 400-page sample**. All four faces now declare ranges read off
+their own cmaps.
+
+**Dark mode: removed, not repaired.** Brajeshwar asked for "the best practice that is the
+standard on the Internet", and that is to leave photographs alone — `color-scheme: light dark`
+for UA surfaces (already declared), nothing on content images. The old rule also keyed off the
+OS rather than `[data-theme]`, but fixing the selector would have shipped a worse page.
+
+**Tidies.** Dead selectors removed after re-verifying against the 1,456 *built* pages;
+`scroll-behavior` duplicate, `--sidenote-min-gutter` and `--body-width-medium` gone. Two were
+NOT done and are re-scoped in todo.md: the `.sidenote` double-declaration is a refactor of live
+behaviour rather than a tidy, and "two spacing systems, only 3 rules" is **10 call sites**, each
+a visible spacing value.
+
+**Closed by decision:** Home parked (books treatment is Brajeshwar's call — SVG or text block),
+theme-toggle-without-JS closed as *no* (persistence is the point), analytics closed (the width
+stands on the sidenote arithmetic).
+
 ### Panel in two columns · Font "System" · Warm is now Flexoki (2026-07-27)
 
 **1. The appearance panel is a two-column grid.** Brajeshwar: *"align them into two columns,
