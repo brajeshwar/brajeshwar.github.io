@@ -60,8 +60,14 @@
   /* Capped so the mark is never TALLER than the tray it hides behind. At
      3.25rem it stood 52px against a 42px tray and overhung by ~5px top and
      bottom, which is invisible at rest but clipped by the viewport edge the
-     moment the strip sticks at top: 0. 2.5rem/40px fits inside 42px. */
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+     moment the strip sticks at top: 0. Taken down a step again on request;
+     2.25rem/36px sits comfortably inside 42px. */
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+
+  /* Italic echoes the slant of the beta directly above it in the same margin —
+     the two marginal marks now lean the same way. Oblique keeps the advance
+     widths, so the exact two-digits-out / two-digits-under split still holds. */
+  font-style: italic;
   font-weight: var(--font-weight-bold);
   line-height: 1;
   letter-spacing: -0.02em;
