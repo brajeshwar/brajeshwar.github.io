@@ -237,6 +237,30 @@ override**; the comment in `chrome.css` says so at both ends.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
+### Content base moves onto `main` — pages match posts (2026-07-27)
+Brajeshwar: *"the font-size of the articles (posts) are good, but I see the ones in the pages
+are smaller."* Root cause: `body { font-size: var(--font-size) }` is a flat **16px** that
+bypasses the type scale, and **`.post` was the only rule reading `--step-0`**. Posts were never
+special — they were the only content on the scale. Everything else inherited 16px.
+
+**`main { font-size: var(--step-0) }`** now, which fixed a second, unreported bug at the same
+time:
+
+⚠️ **The Kindle text-size control did nothing on pages.** The A-buttons multiply `--step-*`
+inside `main`, but page prose was inheriting body's literal 16px, which no multiplier touches —
+**measured identical at xs/s/m/l/xl before the change**. Reading the size from `--step-0` *at
+main*, where the scaled values are defined, is what lets the control reach it. After: pages run
+17 / 18.5 / **20** / 21.5 / 23px across the five settings, exactly like posts.
+
+- Deliberately on `main`, **not `body`** — body also parents the header and footer, and raising
+  it would have inflated the chrome with the content. Verified unchanged: nav 16px, colophon
+  10.67px, body 16px.
+- `.post { font-size: var(--step-0) }` removed as a restatement. Posts verified still 20px,
+  text-scale still working, sidenotes still rendering.
+- `--font-size: 16px` in `config.css` is now referenced by `body` only. It is a hand-picked
+  number in a codebase whose golden rule is *"never hand-pick a font-size"* — left alone for now
+  because body's value is what the chrome inherits, but it is the next thing to put on the scale.
+
 ### Pages fill the band; the card grid goes fluid (2026-07-27)
 - **`/about/` gained an intro slot** above the timeline and outside `.timeline-period`, so the
   Life/Work filter can never hide it — verified visible under both filters. Placeholder text

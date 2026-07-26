@@ -257,6 +257,28 @@
 [data-text-size="xl"] { --text-scale: 1.15; }  /* +2 steps — symmetric ±0.075 / ±0.15 around 1 */
 
 main {
+  /* THE CONTENT BASE. Everything inside <main> starts from --step-0 (18–20px
+     fluid) rather than inheriting body's flat 16px.
+
+     Fixes two things at once, 2026-07-27 (Brajeshwar: "the font-size of the
+     articles are good, but the ones in the pages are smaller"):
+
+     1. Pages were 16px while posts were 18–20px, because .post set
+        `font-size: var(--step-0)` and nothing else did. Posts were never
+        special — they were the only thing reading the scale. Now all content
+        does, and pages match articles.
+
+     2. THE TEXT-SIZE CONTROL DID NOT WORK ON PAGES. The Kindle A-buttons
+        multiply --step-* below, but page prose was inheriting body's literal
+        16px, which no multiplier touches — measured identical at xs/s/m/l/xl.
+        Reading font-size from --step-0 *here*, where the scaled values are
+        defined, is what makes the control reach it.
+
+     Deliberately on `main`, not `body`: body is also the parent of the header
+     and footer, and raising it would inflate the chrome along with the
+     content. */
+  font-size: var(--step-0);
+
   --step--2: calc(var(--step--2-base) * var(--text-scale));
   --step--1: calc(var(--step--1-base) * var(--text-scale));
   --step-0:  calc(var(--step-0-base)  * var(--text-scale));
