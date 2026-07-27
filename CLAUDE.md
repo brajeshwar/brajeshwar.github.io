@@ -59,23 +59,34 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 ## Project shape (keep it)
 - CSS = **13 plainly-named files** in `_includes/css/` (`config`, `themes`, `base`, `chrome`,
   `post`, `page`, `album`, + per-page one-offs `home`/`archives`/`search`/`now`/`timeline`, plus
-  the not-yet-wired `bookmarks`), **inlined** into `<head>` via `styles.html`
-  (SCSSify). Flattened from 25 numbered ITCSS partials on 2026-07-19 — **don't reintroduce
-  numeric prefixes**; cascade order lives in `styles.html`, and `config.css` must stay first.
-  Base bundle stays embedded and **under 13KB gzipped** (over the wire, per page). Re-measured
-  2026-07-27: the heaviest page is **7.3KB gzip / 34KB raw**, so there is real headroom —
-  re-measure when adding to base.
-- Layouts select a CSS bundle through the `styles:` front-matter key. **CSS splits by layout, not
-  by page** — base → per-layout bundle → per-page opt-in for one-offs only. New page type means a
-  new layout + one bundle. See [`_docs/styles.md`](_docs/styles.md) §5.
-  (`styles:` = a CSS include; `style:` = a class on `<main>` — different keys, easily confused.)
+  the not-yet-wired `bookmarks`), all concatenated by **`assets/styles/site.css`** into ONE
+  external stylesheet (SCSSify). Flattened from 25 numbered ITCSS partials on 2026-07-19 —
+  **don't reintroduce numeric prefixes**; cascade order lives in `site.css`, and `config.css`
+  must stay first. One file, 9.5KB gzip / 50KB raw, fetched once and then cached.
+- **Externalised 2026-07-27, reversing the inlining.** `/assets/*` is served
+  `cache-control: max-age=31536000` — a year, gzipped, no `_headers` file, just what the host
+  does. Inlining re-sent ~6.6KB gzip on *every* page view and could never be cached (the HTML
+  is only `max-age=600`); external is one fetch, then free. Break-even is under two page views.
+  Per-layout splitting existed to keep the *inline* payload small and is now pointless: one URL
+  shared by every page is one cache entry, where per-layout files would each miss separately.
+- ⚠️ **A year-long cache means filenames must change when bytes do.**
+  `scripts/hash-assets.mjs` renames CSS/JS to `<name>.<hash>.ext` after the build and rewrites
+  every reference. It runs in Actions only; local `jekyll serve` serves the unhashed paths and
+  is internally consistent, as is the Cloudflare Pages backup.
+- ⚠️ **Every stylesheet now applies to every page.** There is no layout gate any more, so a
+  selector must anchor to something page-specific — a class (`.page`, `.post`) or a custom
+  element (`<photo-cover>`) — never a bare `main > article > h2`. `page.css` was the one file
+  that got this wrong; unscoped it would have clamped all ~1,456 post titles to the measure.
+  The `styles:` front-matter key is **gone** (`style:` = a class on `<main>` — still live, and
+  the two were easily confused).
 - **All themeable values are CSS custom properties; no hardcoded colors outside `themes.css`.**
 - **Comment CSS generously.** `sass: style: compressed` strips block comments, so prose in
   `_includes/css/*.css` costs **zero bytes** in the shipped page — verified. Explain *why*,
   record gotchas, date non-obvious decisions. Two hard rules: **never use a bang comment**
   (slash-star-bang survives compression and ships), and **never write a literal star-slash
   inside comment prose** (it closes the comment early; the build then fails with a misleading
-  "expected selector" pointing at `styles.html`).
+  "expected selector" pointing at `assets/styles/site.css` — the file doing the scssify, never
+  the file with the broken comment).
 - `container-ideal` = reading width; `page.style` = full-width page hook.
 
 ## Quick verification before handing back

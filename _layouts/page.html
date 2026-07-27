@@ -1,6 +1,5 @@
 ---
 layout: default
-styles: styles-pages.html
 ---
 
 {%- comment -%}
@@ -64,8 +63,16 @@ styles: styles-pages.html
   A page that needs both wants a .container-ideal wrapper around just the
   footnoted part instead — see the sidenote example in _pages/about.html.
 {%- endcomment -%}
+{%- comment -%}
+  `class="page"` mirrors `class="post"` on a post's article, and page.css hangs
+  its prose-measure rules off it. Added 2026-07-27 when the CSS moved to one
+  shared bundle: those rules used to be `main > article > p` and friends, which
+  was only ever safe while page.css loaded on this layout alone. A post is also
+  `main > article`, so unscoped they would have reached every post — see the
+  note at the top of that rule.
+{%- endcomment -%}
 <main role="main" class="{{ page.style }}">
-  <article{% if content contains 'class="footnotes"' %} class="container-ideal"{% endif %}>
+  <article class="page{% if content contains 'class="footnotes"' %} container-ideal{% endif %}">
     {{ content }}
     {{ page_edited }}
   </article>

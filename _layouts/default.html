@@ -42,7 +42,23 @@
 <link rel="alternate" type="text/markdown" href="{{ md_href | relative_url }}">
 {%- endif -%}
 
-<style type="text/css">{% include styles.html %}</style>
+{%- comment -%}
+  One external stylesheet for the whole site, replacing the inlined <style>
+  on 2026-07-27. /assets/* is served `cache-control: max-age=31536000`
+  gzipped, so this is fetched once and is then free on every page for a year;
+  the inline version re-sent ~6.6KB gzipped on every page view and could
+  never be cached, because the HTML is only max-age=600. The reasoning, the
+  cascade order and the leak it was careful to avoid are all in the file.
+
+  Plain render-blocking <link>, deliberately — no preload, no async. It must
+  block, or the page paints unstyled. It is also below the no-flash script
+  above, which only sets data-* on <html> and so is unaffected either way.
+
+  The href is rewritten to site.<hash>.css by scripts/hash-assets.mjs during
+  the build. A year-long cache with a stable filename would strand returning
+  readers on old CSS.
+{%- endcomment -%}
+<link rel="stylesheet" href="{{ '/assets/styles/site.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/print.css' | relative_url }}" media="print">
 <script defer src="{{ '/assets/scripts/appearance.js' | relative_url }}"></script>
 {%- comment -%}

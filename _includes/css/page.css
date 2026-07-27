@@ -1,7 +1,12 @@
 /* ============================================================
-   Page — standard page bundle.
+   Page — styles for the page layout.
    ------------------------------------------------------------
-   Loaded by _layouts/page.html via styles-pages.html.
+   Concatenated into assets/styles/site.css with everything else
+   and shipped to every page (2026-07-27; it used to be gated to
+   the page layout by styles-pages.html, which no longer exists).
+   Nothing here may rely on that gate — see the scoping note on
+   the rule below, which is exactly what went wrong when it went.
+
    Was empty; it is the hook for page-only styling, and the
    last-edited stamp is the first thing to need it.
    ============================================================ */
@@ -19,19 +24,28 @@
 
    Left-aligned, not centred, matching how articles sit in the band, so every
    page's text starts on the same line as the header and footer rules.
+
+   SCOPED TO .page ON PURPOSE (2026-07-27). These were `main > article > p`
+   and so on, which was safe only while this file loaded on the page layout
+   alone. Every stylesheet now ships in one bundle to every page, and a post
+   is also `main > article` — so the unscoped version reached all ~1,456 of
+   them. The damage was not hypothetical: `max-width: var(--measure)` has no
+   competitor in post.css, which sets `width` on the title and not
+   `max-width`, so `main > article > h1` would have won and clamped every
+   post title to the 665px measure — silently undoing the full-width titles.
+
+   `.page` is set by _layouts/page.html, mirroring `.post` on a post's
+   article. If that class ever comes off the layout, this whole block stops
+   applying and pages go full-band — visible immediately, which is the right
+   way for it to fail.
    ------------------------------------------------------------ */
 .page-prose-measure,
-main > article > p,
-main > article > ul:not(.item__cards),
-main > article > ol,
-main > article > blockquote,
-main > article > dl,
-main > article > h1,
-main > article > h2,
-main > article > h3,
-main > article > h4,
-main > article > h5,
-main > article > h6 {
+.page > p,
+.page > ul:not(.item__cards),
+.page > ol,
+.page > blockquote,
+.page > dl,
+.page > :is(h1, h2, h3, h4, h5, h6) {
   max-width: var(--measure);
   margin-inline: 0 auto;
 }

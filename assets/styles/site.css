@@ -1,0 +1,98 @@
+---
+# This empty front matter is load-bearing. Without the fence Jekyll treats the
+# file as a static asset and copies it verbatim — no Liquid, no includes, no
+# scssify, and the browser gets this manifest as literal text.
+---
+{%- comment -%}
+  ============================================================================
+  site.css — the ONE stylesheet. Externalised 2026-07-27.
+  ============================================================================
+
+  Every CSS file in _includes/css/ is concatenated here, compiled by scssify
+  (`sass: style: compressed` in _config.yml, so all this prose costs nothing),
+  and served as a single file to every page. Replaces the inlined <style> that
+  _includes/styles.html used to build.
+
+  WHY EXTERNAL, having argued the other way a day earlier:
+
+  The case for inlining was that a post is a landing page — someone arrives
+  from a search result or a link, reads it, leaves — so the extra round trip
+  is paid on the only page view there is. That reasoning was right; the
+  premise was wrong. Measured against the live site:
+
+      $ curl -sSI https://brajeshwar.com/assets/print.css
+      cache-control: max-age=31536000
+      content-encoding: gzip
+
+  A YEAR, gzipped, on every /assets/* file. No _headers file — that is just
+  what the host serves. So the round trip is not paid per page view or even
+  per session; it is paid once, and then the file is free on every page for
+  every visit for a year. Inlining re-sent ~6.6KB gzipped with every single
+  page and could never be cached, because the HTML itself is max-age=600.
+
+  Break-even is under two page views. Everything past that is profit.
+
+  WHY ONE FILE AND NOT PER-LAYOUT BUNDLES:
+
+  Splitting existed to keep the INLINE payload small — each page carried only
+  the CSS it used, because it carried it every time. Once the bytes are
+  cached, that logic inverts: one URL shared by all ~1,483 pages is one cache
+  entry filled on the first page view, where per-layout files would each miss
+  separately and a reader moving from a post to /film/ would pay again.
+
+  The cost is that a post now carries the timeline, album and home rules it
+  will never use — about 3.3KB gzipped. That is paid once a year, against
+  6.6KB saved on every page view after the first. It is not close.
+
+  It also retires a standing source of bugs: the `styles:` front-matter key,
+  which had to be right on every layout and page, and quietly shipped dead
+  weight when it wasn't. There is now nothing to get wrong.
+
+  ⚠️ ORDER IS THE CASCADE. There is no other mechanism now — no per-layout
+  gate, no page opt-in. Two things follow:
+
+    1. config.css MUST stay first. It defines the $breakpoint-* SCSS
+       variables and the custom properties every later file reads; Sass
+       resolves those at compile time, in source order.
+
+    2. A file that is no longer gated by layout applies EVERYWHERE. Anchor
+       its selectors to something page-specific — a class like `.page` or
+       `.post`, or a custom element like <photo-cover> — never a bare
+       `main > article > h2`. page.css was the one file that got this wrong
+       and was fixed in the same commit; its comment explains what broke.
+
+  ⚠️ CACHE-BUSTING IS NOT OPTIONAL at max-age=31536000. A returning reader
+  would otherwise hold a stale copy for a year. scripts/hash-assets.mjs
+  renames this to site.<hash>.css at build time and rewrites the href in
+  every page. Local `jekyll serve` never runs it and just serves this path.
+{%- endcomment -%}
+{% capture include_to_scssify %}
+
+{%- comment -%} Foundation — order-critical, config.css first. {%- endcomment -%}
+{% include css/config.css %}
+{% include css/themes.css %}
+{% include css/base.css %}
+{% include css/chrome.css %}
+
+{%- comment -%} Layout bundles. cards.css before album.css: album styles the
+  page around a card grid that cards.css defines. {%- endcomment -%}
+{% include css/cards.css %}
+{% include css/album.css %}
+{% include css/page.css %}
+{% include css/post.css %}
+
+{%- comment -%} Page one-offs. After page.css, which they used to layer on top
+  of when they were opt-ins declared in front matter. {%- endcomment -%}
+{% include css/archives.css %}
+{% include css/home.css %}
+{% include css/now.css %}
+{% include css/search.css %}
+{% include css/timeline.css %}
+
+{%- comment -%} NOT included: bookmarks.css. It styles a <bookmarks-header>
+  element that no page emits yet — CLAUDE.md calls it "not-yet-wired". Adding
+  it would ship 1.2KB to every page for markup that does not exist. Add the
+  line when the bookmarks page lands. {%- endcomment -%}
+
+{% endcapture %}
+{{- include_to_scssify | scssify | strip_newlines -}}

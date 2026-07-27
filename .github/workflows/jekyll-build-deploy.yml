@@ -80,6 +80,26 @@ jobs:
       - name: Minify JavaScript
         run: npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite
 
+      # Content-hash the long-cached assets: site.css -> site.<hash>.css, and
+      # the same for print.css and every script, rewriting the references.
+      #
+      # MUST run after the minify step above, or the hash names bytes we do
+      # not ship, and a rebuild that minifies differently would not bust.
+      #
+      # Needed because /assets/* comes back `cache-control: max-age=31536000`
+      # — a year, no revalidation. Without a new filename a returning reader
+      # keeps the CSS and JS they already have no matter what we deploy. That
+      # was already true of the scripts; externalising the CSS on 2026-07-27
+      # made it load-bearing.
+      #
+      # Unlike the minify step this DOES change HTML references — but it
+      # changes the files and the references together, so any build that skips
+      # it (local `jekyll serve`, the Cloudflare Pages backup) is internally
+      # consistent on the unhashed paths and works unchanged. The backup just
+      # keeps the year-long staleness this fixes here.
+      - name: Content-hash assets and rewrite references
+        run: node scripts/hash-assets.mjs
+
       - name: Install Pagefind
         run: npm install pagefind
         
