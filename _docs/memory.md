@@ -6,19 +6,29 @@
 
 ## Where we are (updated 2026-07-27) — READ FIRST
 
-### ⏸ 2026-07-27, second session — 4 commits ready, NOT pushed.
+### ⏸ 2026-07-27, second session — 6 commits ready, NOT pushed.
 All signed (`%G?` = `G`) and in Brajeshwar's name. Nothing is broken and the tree is clean;
 these are simply waiting on his word, per guardrail 7.
 
+    c6b12e8c  Merge the duplicated timeline CSS, and restore the § anchors I deleted
+    b72d867f  Docs: record the CSS externalisation and what it makes load-bearing
     e359263c  Externalise the CSS into one cache-busted stylesheet
     3b4218f3  Load sidenotes and anchors only where they have work, drop analytics
     0ba0cb72  Turn syntax highlighting off and delete its stylesheet
     22cb3522  Split code and cards out of the base CSS tier
 
-**All four are page-weight work, and the last one is the big change:** the CSS is no longer
-inlined. See *Architecture to honor* below and [`styles.md`](styles.md) §5 for the reasoning,
-which reverses a decision made the day before — after measuring the live cache headers rather
-than assuming them.
+**Mostly page-weight work, and `e359263c` is the big one:** the CSS is no longer inlined. See
+*Architecture to honor* below and [`styles.md`](styles.md) §5 for the reasoning, which reverses
+a decision made the day before — after measuring the live cache headers rather than assuming
+them.
+
+⚠️ **`22cb3522` shipped a regression that `c6b12e8c` fixes. Both are in this unpushed run, so
+the live site was never affected — but note the shape of it.** The code/cards split removed 225
+lines from `post.css` and took `.headerlink` (and its `position: relative`) with it, moving them
+nowhere. `anchors.js` kept inserting anchors, so **453 posts rendered a bare, permanently
+visible, underlined § against every heading**. It was found only because the timeline merge
+went looking at the *other two* copies of the same rules. There are no copies now — one
+`.headerlink` in `base.css`, positioned via `:is(h1..h6):has(> .headerlink)`.
 
 ⚠️ **The first deploy after this exercises `scripts/hash-assets.mjs` for the first time.**
 It has been verified against a full local build (1,486 pages, 7,955 references rewritten, and

@@ -493,6 +493,32 @@ written onto the article by `page.html`, mirroring `.post` on a post.
 that no page emits yet, and including it would ship 1.2 KB to every page for markup that does
 not exist. Add the line when the bookmarks page lands.
 
+### What one file retired: the copies (2026-07-27)
+
+Three separate blocks in this repo carried a comment justifying a hand-made duplicate on the
+grounds that *"these bundles are never loaded together, so sharing would mean promoting the
+rules into `base.css` and paying for them on all ~1,456 pages."* That reasoning was correct
+under inlining and is void under one shared file. All of them are gone:
+
+| Was duplicated | Copies | Now |
+|---|---|---|
+| Timeline spine, marker, period heading | `timeline.css`, `now.css` | `timeline.css`, grouped selectors carrying both vocabularies |
+| `.headerlink` (the § anchor) | `post.css`, `timeline.css`, `now.css` | `base.css`, once |
+
+⚠️ **One of those copies had already gone silently wrong.** `.headerlink` was deleted from
+`post.css` by accident during the code/cards split, so 453 posts rendered a bare, permanently
+visible § against every heading — found only because the timeline merge went looking at the
+other two copies. Duplicated CSS does not drift apart loudly.
+
+`.headerlink` gets its positioning context from `:is(h1..h6):has(> .headerlink)` — the heading
+becomes a containing block only once the script has put an anchor in it, which covers all three
+page types at once. The old form was a hand-listed `.post > h2, .post > h3, …`, which needed a
+new entry for every page type that wanted anchors, and that is exactly the upkeep that failed.
+
+The one value `/about/` and `/now/` genuinely disagree on is the gap between entries, so it is
+the `--timeline-entry-gap` token rather than a second rule: 30px against 20px, because an
+`/about/` entry is a title, meta and prose while a `/now/` entry is one paragraph.
+
 ### Where new CSS goes
 Still by layout, not by page — the failure mode being avoided is CSS scattered across twenty
 files where nobody can tell what styles what. "Base is the thing to protect" no longer means
