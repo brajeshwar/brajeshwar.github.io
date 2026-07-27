@@ -55,13 +55,18 @@
 // .post, a custom element like <photo-cover>) and never a bare
 // `main > article > h2`. See the note atop page.scss for what that cost once.
 //
-// config MUST stay first: it defines the $breakpoint-* variables every later
-// partial reads, and it has to be the module that emits first.
+// config MUST stay first: it is the :root block every later partial reads its
+// custom properties from, so it has to be the module that emits first.
 //
-// @use, NOT @import. Dart Sass deprecates @import and removes it in 3.0, and
-// the migration turned out to be four lines: base, album and home each read
-// $breakpoint-small, so each opens with `@use "config" as *` — `as *` keeps the
-// variables unnamespaced, so nothing else in those files changed.
+// The Sass VARIABLES are not here. The four breakpoints live in
+// _sass/breakpoints.scss, which emits no CSS at all and so is absent from this
+// list — a partial that needs one does `@use "breakpoints" as bp` and reads
+// `bp.$small`. They were in config.scss until 2026-07-27, which meant a
+// partial wanting a single number had to @use a whole stylesheet to get it;
+// that worked only because config happened to load first here. A module that
+// cannot emit CSS cannot be broken by load order, which is the point.
+//
+// @use, NOT @import. Dart Sass deprecates @import and removes it in 3.0.
 //
 // The thing to understand about @use here: a module's CSS is emitted at FIRST
 // load, not at each reference. That is why the order below is still the whole

@@ -1,7 +1,4 @@
-@use "config" as *;   // $breakpoint-* live in config.scss. `as *` keeps them
-                      // unnamespaced, exactly as they were under @import, so
-                      // nothing below this line had to change. config's own CSS
-                      // is emitted once, at site.scss's first @use, not here.
+@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* The home page's books row uses ul.item__cards, which lives in cards.css
    since 2026-07-27 — it was in base.css, and therefore on every post, to
@@ -31,7 +28,7 @@ home-container {
     ;
 }
 
-@media only screen and (max-width: $breakpoint-small) {
+@media only screen and (max-width: bp.$small) {
   home-container {
     grid-template-columns: 1fr;
     grid-template-areas:

@@ -1,7 +1,4 @@
-@use "config" as *;   // $breakpoint-* live in config.scss. `as *` keeps them
-                      // unnamespaced, exactly as they were under @import, so
-                      // nothing below this line had to change. config's own CSS
-                      // is emitted once, at site.scss's first @use, not here.
+@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
    Base — default element styling, every page.
@@ -612,10 +609,10 @@ figcaption {
    content (24 `.full`, 58 `.large` across the archive) and content is not
    ours to edit — but there is one behaviour to maintain, not two.
 
-   `.large` keeps its breakpoint: below $breakpoint-small there is no room to
+   `.large` keeps its breakpoint: below bp.$small there is no room to
    break out of, so it stays in the flow. `.full` breaks out at every width,
    which on a phone means the band, which means no visible change. */
-@media (min-width: $breakpoint-small) {
+@media (min-width: bp.$small) {
   figure.large,
   img.large {
     margin-inline: 0;

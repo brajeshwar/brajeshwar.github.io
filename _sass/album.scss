@@ -1,7 +1,4 @@
-@use "config" as *;   // $breakpoint-* live in config.scss. `as *` keeps them
-                      // unnamespaced, exactly as they were under @import, so
-                      // nothing below this line had to change. config's own CSS
-                      // is emitted once, at site.scss's first @use, not here.
+@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
    Album — thumbnail grid for photos, films, devices, videos.
@@ -23,7 +20,7 @@
    now, and a cap here would stop them stretching to fill the band — which was
    the whole point of going fluid. Tune the density with --card-min instead:
    it is the minimum column width the auto-fill grid honours. */
-@media only screen and (max-width: $breakpoint-small) {
+@media only screen and (max-width: bp.$small) {
   .album .item__cards {
     --card-min: 8rem;                /* 128px — more, smaller cards on a phone */
   }

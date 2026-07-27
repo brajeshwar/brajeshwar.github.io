@@ -1,0 +1,47 @@
+// ===========================================================================
+// breakpoints — the only Sass variables on the site.
+// ===========================================================================
+//
+// Split out of config.scss on 2026-07-27. Everything else in this codebase is
+// a CSS custom property; these four have to be Sass because a media query
+// cannot read `var(--x)` — the condition is evaluated before custom
+// properties exist. That is the whole reason Sass is still here at all.
+//
+// WHY ITS OWN FILE
+//
+// config.scss EMITS CSS: it is the `:root` block that defines every custom
+// property on the site. A partial that only wants a number was therefore
+// doing `@use "config" as *` — pulling in a stylesheet to read a variable.
+// That works, because a module is evaluated once and site.scss loads config
+// first so the CSS lands in the right place, but it is a coupling held
+// together by load order, and load order is the one thing this project has
+// already been bitten by more than once.
+//
+// This file emits NOTHING. `@use "breakpoints"` cannot move a byte of CSS or
+// change the cascade, whoever calls it and in whatever order. That is the
+// property worth having.
+//
+// USAGE — namespaced, deliberately:
+//
+//     @use "breakpoints" as bp;
+//     @media (max-width: bp.$small) { … }
+//
+// Not `as *`. The names are short and generic on purpose, so `bp.` is what
+// says where they come from; unqualified `$small` in a 600-line stylesheet
+// tells the next reader nothing. It also means adding a second variables
+// module later cannot collide.
+//
+// Renamed from `$breakpoint-small` at the same time: the file already says
+// "breakpoints" and the namespace already says `bp`, so the prefix was the
+// word a third time.
+//
+// NOT a full scale — these are the four widths the layout actually turns on,
+// and a fifth should be added only when a real rule needs it. Long-term most
+// of these want to be container queries; `main` already declares
+// `container: main / inline-size` and the wide-media rules use `cqi`.
+// ===========================================================================
+
+$small: 480px;
+$medium: 800px;
+$large: 1024px;
+$extralarge: 1600px;

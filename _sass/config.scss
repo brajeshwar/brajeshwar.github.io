@@ -348,10 +348,15 @@ main {
    Jekyll ships SCSS out of the box; use it only where plain CSS
    won't do. Long-term these should become container queries.
    ------------------------------------------------------------ */
-$breakpoint-small      : 480px;
-$breakpoint-medium     : 800px;
-$breakpoint-large      : 1024px;
-$breakpoint-extralarge : 1600px;
+/* MOVED to _sass/breakpoints.scss on 2026-07-27, and renamed: bp.$small,
+   bp.$medium, bp.$large, bp.$extralarge.
+
+   They lived here because this file was first in the cascade, which made it
+   the natural home for anything shared. But this file EMITS CSS — it is the
+   :root block below — so a partial that wanted one number had to @use a whole
+   stylesheet to read it, and that coupling was held together by load order.
+   breakpoints.scss emits nothing, so it cannot affect the cascade no matter
+   who loads it or when. */
 
 /* ---- A note on comments in this codebase -------------------
    Comment freely. `sass: style: compressed` (_config.yml) strips
