@@ -16,3 +16,7 @@ The commercial developments, on the other hand, are designed to empower business
 B- 72, Bhura Patel Marg, Ayodhya Nagar, vaishali west, Lalarpura, Jaipur, Rajasthan 302021\
 Email: [sales@brajeshwarbuilders.com](mailto:sales@brajeshwarbuilders.com)\
 Phone +91-8003421998
+
+---
+
+> Legal Disclaimer: I, Brajeshwar Oinam, have no relationship with “Brajeshwar Builders.” I just happen to like and appreciate them, hence a page dedicated to them. Their searches, sometimes, tend to land on my website.

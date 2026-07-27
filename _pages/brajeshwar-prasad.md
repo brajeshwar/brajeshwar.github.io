@@ -14,3 +14,7 @@ He was elected as a Constituent Assembly member from Gaya (Bihar) on a Congress 
 Rejecting the use of Mahatma Gandhi’s name in the [Constitution of India](https://en.wikipedia.org/wiki/Constitution_of_India), he stated, “..it is not a Gandhian Constitution. The foundation stones of this Constitution are the decisions of the American Supreme Court. It is the Government of India Act, 1935, repeated again… I do not want that the name of Mahatma Gandhi should be dragged in the rotten Constitution.” 
 
 He was elected to the Provisional Parliament (1950-52). Later, he was elected to the first Lok Sabha (1952-57) and for a second term (1957-62). Prasad also had a special interest in foreign affairs and was a staunch proponent of the world state.
+
+---
+
+> Legal Disclaimer: I, Brajeshwar Oinam, have no relationship with “Brajeshwar Prasad.” One of those interesting co-incidences, and I learnt about him when some of his searches landed on my website.
