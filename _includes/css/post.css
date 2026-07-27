@@ -150,14 +150,17 @@ photo-cover__desc {
      left-aligned, 179px out of step with the prose it belongs to. The class
      is gone but the habit stays: set only the axis this rule has business
      setting. */
-  /* Top only. The bottom used to be --space-l too, and it does NOT collapse
-     away: `main` is `container-type: inline-size`, which establishes an
-     independent formatting context, so the last child's bottom margin is
-     trapped inside instead of merging with what follows. It therefore STACKED
-     with the Back to Top row's own top margin. That is 40 of the 182px that
-     used to sit between this bar and the footer. The seam below is the row's
-     to own — see chrome.css. */
-  margin-block: var(--space-l) 0;
+  /* No margin of its own, in either direction (2026-07-27).
+     Above: the Back to Top row now sits immediately before this bar and its
+     --space-m bottom margin is the gap.
+     Below: the footer supplies it, via `main:has(.post-nav) + footer` in
+     chrome.css — because this bar's own bottom margin cannot do the job.
+     `main` is `container-type: inline-size`, which establishes an independent
+     formatting context, so the last child's bottom margin is TRAPPED inside
+     rather than merging with what follows: it would stack on top of whatever
+     the footer sets instead of collapsing into it. That trapped margin was 40
+     of the 182px this seam used to be. */
+  margin-block: 0;
   padding: 0;
 
   background: var(--bg-color-low);

@@ -25,13 +25,20 @@
 
   if (document.documentElement.scrollHeight <= window.innerHeight * LONG_ENOUGH) return;
 
-  /* `body > footer`, not `footer`. The site footer is the only one in the built
-     HTML today (checked across all ~1,456 pages), but a bare `footer` selector
-     would take the FIRST one in the document — so a post that ever emits its
-     own <footer> inside <main> would silently drop this row mid-article, and
-     the `.back-to-top-row + footer` margin rule would retarget with it. */
-  var footer = document.querySelector('body > footer');
-  if (!footer) return;
+  /* Where the control goes, in order of preference:
+       1. immediately BEFORE .post-nav — so on a post the arrow sits above the
+          prev/next bar and the bar can sit tight to the footer
+          (Brajeshwar, 2026-07-27);
+       2. otherwise before <footer>, which is every other page.
+
+     `body > footer`, not `footer`. The site footer is the only one in the
+     built HTML today (checked across all ~1,456 pages), but a bare `footer`
+     selector would take the FIRST one in the document — so a post that ever
+     emits its own <footer> inside <main> would silently drop this row
+     mid-article, and the `.back-to-top-row + footer` margin rule would
+     retarget with it. */
+  var anchor = document.querySelector('.post-nav') || document.querySelector('body > footer');
+  if (!anchor) return;
 
   var row = document.createElement('div');
   row.className = 'back-to-top-row';
@@ -53,7 +60,11 @@
     'l-4.3 4.3a1 1 0 0 1-1.4-1.4l6-6a1 1 0 0 1 .7-.3Z"/></svg>';
 
   row.appendChild(link);
-  footer.parentNode.insertBefore(row, footer);
+  /* Inside <main> on a post, since .post-nav lives there. `position: sticky`
+     is clamped to its containing block, which becomes main rather than body —
+     main spans the whole article, so there is more travel than the control
+     could ever use, and it settles at its flow position just above the bar. */
+  anchor.parentNode.insertBefore(row, anchor);
 
   /* Show once the reader is SHOW_AFTER viewports down, hide again on the way
      back up. Coalesced into an animation frame: `scroll` fires far more often

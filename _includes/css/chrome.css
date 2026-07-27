@@ -314,20 +314,21 @@ site-tools svg {
   bottom: var(--space-l);
   z-index: 5;                       /* over content, under the header (50) and the search palette */
 
+  /* Match the band, the way `main` does — for the case where this row is a
+     BODY child (every page that has no .post-nav). */
   width: var(--body-width);
   max-width: var(--body-width-max);
 
-  /* ONE standard space either side (Brajeshwar, 2026-07-27: "use the standard
-     gap between them, at best 2x the default spacing").
+  /* ONE standard space either side, wherever it lands.
+     On a post the order is now  article → arrow → PREV|NEXT → footer, so this
+     margin does double duty: it separates the arrow from the prose above and
+     from the bar below, at the same rhythm.
 
-     It was --space-2xl above and --space-m below, which on a post came to a
-     182px void: 40 from .post-nav's trapped bottom margin, 80 here, 32 for the
-     control, 30 below. A page with no Back to Top gets 80px — `footer`'s own
-     --space-2xl — so 182 was more than twice the site's own standard.
-
-     Now --space-m either side: 30 + 32 + 30 = 92px, within a dozen pixels of
-     that 80px standard, and the arrow sits higher, which is the other half of
-     what was asked. The nav gave up its bottom margin to make room. */
+     History, because the numbers were surprising: this was --space-2xl above
+     and --space-m below, which on a post produced a 182px void — 40 from
+     .post-nav's trapped bottom margin, 80 here, 32 for the control, 30 below.
+     A page with no Back to Top gets 80px from `footer`'s own --space-2xl, so
+     182 was more than twice the site's own standard for the same seam. */
   margin: var(--space-m) auto;
 
   display: flex;
@@ -344,6 +345,15 @@ site-tools svg {
               visibility var(--transition-duration) ease;
 }
 
+/* Inside <main> — on a post — the parent already IS the band, so the sizing
+   above would apply the 96% a second time and pull the arrow 20px short of the
+   right edge every other element lines up on. Measured: 1248 against the
+   band's 1268. Take the parent's full width instead. */
+main > .back-to-top-row {
+  width: 100%;
+  max-width: none;
+}
+
 /* Added by back-to-top.js once the reader is far enough down. `visibility`
    rather than `display` so the row keeps its box: the space above the footer
    stays reserved whether or not the control is showing, and the footer never
@@ -356,8 +366,25 @@ site-tools svg {
 /* …the settled position only works if the footer gives up its own top margin.
    Adjacent margins collapse to the LARGER of the two, so footer's --space-2xl
    would otherwise win and leave the control marooned mid-gap, further from the
-   footer than from the content it belongs to. */
+   footer than from the content it belongs to. Applies on pages, where the row
+   IS the last thing before the footer. */
 .back-to-top-row + footer { margin-top: 0; }
+
+/* On a POST the row is inside <main>, so the rule above cannot reach the
+   footer — it would keep its --space-2xl and push the prev/next bar 80px clear
+   of it, the opposite of "bring the nav bar closer to the footer".
+
+   `:has()` makes it expressible: style the footer by what an EARLIER SIBLING
+   contains. Same 2023+ bar the `/about/` filter and the `rch` unit already set.
+   It also covers a short post with no arrow — the condition is the bar, not
+   the arrow, so the spacing is the same either way.
+
+   ⚠️ `~`, NOT `+`. `post.html` emits `<script defer src=".../anchors.js">`
+   between `</main>` and `<footer>`, so main and footer are NOT adjacent and
+   `+` silently matched nothing — the footer kept its 80px and the change
+   looked like it had failed. The general-sibling combinator does not care what
+   sits between. There is exactly one footer, so it cannot over-match. */
+main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
 
 .back-to-top {
   pointer-events: auto;             /* the one part of the strip that is clickable */

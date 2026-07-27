@@ -748,8 +748,28 @@ resolve to the same colour.
 
 ## Back to Top
 
-Built by `back-to-top.js`, inserted before `<footer>`, and only on a page taller than 2.5
-viewports. An arrow in a circle, no label — the accessible name is on `aria-label`.
+Built by `back-to-top.js`, only on a page taller than 2.5 viewports. An arrow in a circle, no
+label — the accessible name is on `aria-label`.
+
+**Where it is inserted (2026-07-27):** before `.post-nav` when there is one, otherwise before
+`<footer>`. On a post that gives **article → arrow → PREV|NEXT → footer**, with the arrow above
+the bar and the bar tight to the footer. On every other page it is the last thing before the
+footer, as before.
+
+That puts it inside `<main>` on posts, which has two consequences worth knowing:
+- **`position: sticky` is clamped to `main` instead of `body`.** Fine — main spans the whole
+  article, far more travel than the control uses, and it settles just above the bar.
+- **`width: var(--body-width)` (96%) would apply a second time**, because main already IS the
+  band. Measured 1248 against the band's 1268. `main > .back-to-top-row` takes `width: 100%`
+  instead.
+
+**The spacing is one `--space-m` everywhere in that seam** — article→arrow, arrow→bar,
+bar→footer, all 30px. `.post-nav` carries no margin at all; the row's margin does the first two
+and `main:has(.post-nav) ~ footer` does the third.
+
+⚠️ **`~`, not `+`, for that footer rule.** `post.html` emits a `<script>` between `</main>` and
+`<footer>`, so they are not adjacent and `+` matched nothing — the footer silently kept its 80px
+and the change looked like it had failed.
 
 **It floats, then settles.** Brajeshwar, 2026-07-27: *"I wanted it to be visible once a user
 starts scrolling and beyond certain scroll height. So, this should start floating and then
