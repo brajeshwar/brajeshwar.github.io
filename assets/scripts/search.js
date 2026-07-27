@@ -74,6 +74,23 @@
     trigger.focus();
   }
 
+  /* Is the reader typing into something? Then a bare key is a character, not
+     a shortcut. Covers the Pagefind input inside the palette itself and the
+     one on /search/ — without this, "/" could never be typed into a search
+     box, which is the classic way this shortcut goes wrong.
+
+     Only text-accepting inputs count. A focused checkbox — the /about/
+     Life/Work filter — is not typing, so the shortcut still works there. */
+  var TEXT_INPUTS = /^(text|search|email|url|tel|password|number|date|month|week|time|datetime-local)$/;
+
+  function isTyping(el) {
+    if (!el) return false;
+    if (el.isContentEditable) return true;
+    var tag = el.tagName;
+    if (tag === 'TEXTAREA' || tag === 'SELECT') return true;
+    return tag === 'INPUT' && TEXT_INPUTS.test((el.type || 'text').toLowerCase());
+  }
+
   function onKeydown(e) {
     // ⌘K / Ctrl+K toggles search from anywhere.
     if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
@@ -81,6 +98,22 @@
       isOpen() ? close() : open();
       return;
     }
+
+    /* "/" opens search — the other convention readers arrive with, alongside
+       ⌘K. Opens only; ⌘K keeps the toggle, because pressing "/" again while
+       the palette is open should type a slash into the box, not close it.
+
+       Bare key only: no meta, ctrl or alt. ⌘/ and Ctrl+/ belong to the
+       browser and the OS, and taking them would be rude. Shift is NOT
+       excluded — on plenty of layouts "/" IS a shifted key, and e.key already
+       reports the character produced rather than the physical key. */
+    if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey
+        && !isOpen() && !isTyping(e.target)) {
+      e.preventDefault();
+      open();
+      return;
+    }
+
     if (e.key === 'Escape' && isOpen()) {
       e.preventDefault();
       close();
@@ -95,9 +128,15 @@
     backdrop = root.querySelector('.site-search__backdrop');
     if (!trigger || !panel) return;
 
-    // Show the right modifier in the hint (⌘ on Mac, Ctrl elsewhere).
+    /* Name both shortcuts, with the right modifier for the platform. The
+       markup ships "Search (⌘K)" so the tooltip is still right with JS off —
+       this only corrects it once we know the keys actually work and which
+       modifier this machine uses. */
+    var isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || '');
+    trigger.title = 'Search (' + (isMac ? '\u2318K' : 'Ctrl K') + ' or /)';
+
     var hint = root.querySelector('.site-search__hint');
-    if (hint && !/Mac|iPhone|iPad|iPod/.test(navigator.platform)) hint.textContent = 'Ctrl K';
+    if (hint && !isMac) hint.textContent = 'Ctrl K';
 
     trigger.addEventListener('click', function (e) { e.preventDefault(); open(); });
     backdrop.addEventListener('click', close);

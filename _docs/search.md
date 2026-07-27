@@ -36,8 +36,8 @@ and even that loads on **first open** (Option 1). Measured for this site (~1,480
 - **Markup** also has three mount points inside the panel: `#header-search-input`,
   `#header-search-summary`, `#header-search-results` (one per Modular UI component).
 - **Script** (`assets/scripts/search.js`, `defer`): opens a **centered popup in place** —
-  never navigates while JS is on. Opened by the trigger **or ⌘K / Ctrl+K** (global keydown);
-  closed by **Esc** or backdrop. On first open it injects `pagefind-modular-ui.css` +
+  never navigates while JS is on. Opened by the trigger, by **⌘K / Ctrl+K**, or by **`/`**
+  (global keydown); closed by **Esc** or backdrop. On first open it injects `pagefind-modular-ui.css` +
   `pagefind-modular-ui.js` **once**, then builds a `PagefindModularUI.Instance` and adds
   `Input` + `Summary` + `ResultList` (`showImages: false` — text-only) into the three mounts,
   and focuses the input. The Input preloads Pagefind on focus, so the first query is instant.
@@ -62,8 +62,38 @@ and even that loads on **first open** (Option 1). Measured for this site (~1,480
 - **Build/deploy**: unchanged — `.github/workflows` runs `npx pagefind --site _site` after the
   Jekyll build.
 
+### Keyboard shortcuts
+
+| | |
+|---|---|
+| **⌘K** / **Ctrl+K** | **toggles** — opens, and closes again if already open |
+| **`/`** | **opens only** (added 2026-07-27) |
+| **Esc** | closes |
+
+`/` opens rather than toggles on purpose: pressing it while the palette is open should type a
+slash into the query box, not close the thing you just opened.
+
+⚠️ **Two guards make `/` safe, and both are load-bearing.**
+
+1. **Not while typing.** `isTyping()` skips the shortcut when focus is in a text-accepting
+   `<input>`, a `<textarea>`, a `<select>`, or anything `contenteditable`. Without it, `/` could
+   never be typed into a search box — including Pagefind's own, in the palette and on
+   `/search/`, which is the classic way this shortcut goes wrong. A focused *checkbox* is not
+   typing, so the shortcut still works on the `/about/` filter.
+2. **Bare key only.** No `meta`, `ctrl` or `alt` — `⌘/` and `Ctrl+/` belong to the browser and
+   the OS. **Shift is deliberately NOT excluded**: on plenty of keyboard layouts `/` *is* a
+   shifted key, and `e.key` reports the character produced rather than the physical one.
+
+The trigger's `title` is rewritten by JS to name both shortcuts with the right modifier for the
+platform — `Search (⌘K or /)` on a Mac, `Search (Ctrl K or /)` elsewhere. The markup ships the
+⌘K form so the tooltip is still sensible with JS off.
+
 ## Verified (live, plain `jekyll serve`, 1440px)
 - [x] **⌘K** opens the centered palette in place; **click** opens it too — neither navigates.
+- [x] **`/`** opens it, from a real keypress (`key: "/"`, `code: "Slash"`), with the input
+      focused and the query box **empty** — the slash is not typed in.
+- [x] **`/` does not hijack typing**: not in the palette's own input, not in `/search/`'s input.
+- [x] **`⌘/`, `Ctrl+/`, `Alt+/` are ignored**; `/` again while open leaves it open.
 - [x] Query "monaco" → 2 results, highlighted, rendered inline.
 - [x] **Esc** / backdrop close; reopening works.
 - [x] `/search/` page loads with the input **auto-focused**.
