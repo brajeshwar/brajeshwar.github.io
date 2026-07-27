@@ -1,6 +1,6 @@
-# If you show a gun, fire it
+# Chekhov’s Gun: If you show a gun, fire it
 
-I tend to be the super-excited founder who will talk and suggest doing things that would likely be years ahead of the current circumstances. My co-founder, and business partner for the last 8+ years, is the one who will help me glide down to earth, all the way to the very [first principle](https://en.wikipedia.org/wiki/First_principle).
+I tend to be the super-excited founder who will talk and suggest doing things that would likely be years ahead of the current circumstances. My co-founder, and business partner for the last 8+ years, is the one who will help me glide down to earth, all the way to the very [first principle](https://en.wikipedia.org/wiki/First_principle).[^FirstPrinciple]
 
 A few days back, we were discussing the features of our new product for our Startup, [Valinor Earth](https://valinor.earth).
 
@@ -19,3 +19,5 @@ If you say in the first chapter that there is a rifle hanging on the wall, it ab
 One must never place a loaded rifle on the stage if it isn’t going to go off. It’s wrong to make promises you don’t mean to keep.
 
 If you are going to show a tool or do a demo, be ready to use it and make sure it is relevant to the customer's needs.
+
+[^FirstPrinciple]: [First principles](https://en.wikipedia.org/wiki/First_principle) thinking means breaking a problem down to the facts you can actually verify, then rebuilding your answer using only those, instead of copying how it’s normally done. The skill is knowing when to stop digging: deep enough that you’re standing on solid ground, not so deep that you’re rederiving everything from scratch. It’s slow and effortful, so it earns its keep mainly when the stakes are high or when the conventional answer has gone unquestioned for too long.
