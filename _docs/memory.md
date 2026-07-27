@@ -6,16 +6,25 @@
 
 ## Where we are (updated 2026-07-27) — READ FIRST
 
-### ⏸ 2026-07-27, second session — 6 commits ready, NOT pushed.
+### ⏸ 2026-07-27, second session — 8 commits ready, NOT pushed.
 All signed (`%G?` = `G`) and in Brajeshwar's name. Nothing is broken and the tree is clean;
 these are simply waiting on his word, per guardrail 7.
 
+    ac79eb13  Move the stylesheets to _sass, and hash fonts too
+    e36046cc  Docs: record the timeline merge and what one stylesheet retired
     c6b12e8c  Merge the duplicated timeline CSS, and restore the § anchors I deleted
     b72d867f  Docs: record the CSS externalisation and what it makes load-bearing
     e359263c  Externalise the CSS into one cache-busted stylesheet
     3b4218f3  Load sidenotes and anchors only where they have work, drop analytics
     0ba0cb72  Turn syntax highlighting off and delete its stylesheet
     22cb3522  Split code and cards out of the base CSS tier
+
+**Decided, so it does not get re-litigated: the browser cache TTL stays at a year.** A shorter
+TTL is what you pick when filenames are stable and you are hedging against staleness; content
+hashing removes the staleness, so shortening it only re-fetches identical files more often.
+`?v=<published-date>` was considered and rejected — the daily cron would bust it every day for
+unchanged bytes, and caches are free to ignore query strings (Cloudflare has a setting that
+does). See [`hosting.md`](hosting.md) → *Why a hash and not `?v=`*.
 
 **Mostly page-weight work, and `e359263c` is the big one:** the CSS is no longer inlined. See
 *Architecture to honor* below and [`styles.md`](styles.md) §5 for the reasoning, which reverses
