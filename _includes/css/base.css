@@ -173,12 +173,30 @@ kbd {
 }
 
 /* Video embeds (mostly YouTube, 16:9). aspect-ratio keeps the ratio correct at
-   any column width — the reading measure is now character-based (--measure), so a
-   width-derived pixel height no longer holds. */
+   any column width — the reading measure is character-based (--measure), so a
+   width-derived pixel height would not hold. */
 iframe {
-  width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
+}
+
+/* ---- Video and embeds take the CONTENT BAND ---------------------
+   Brajeshwar, 2026-07-27: "For the videos, and embeds such as YouTube iframe,
+   let's have it take up the full width of the posts."
+
+   Same right-only breakout as the wide images, and for the same reason: a
+   video held at the 665px measure while the images beside it ran to 1024
+   looked like two different pages. `100cqi` is the band, because `main`
+   declares `container: main / inline-size` — see *Breaking out of the reading
+   column* above.
+
+   Scoped to `main`. A bare `iframe { width: 100cqi }` would resolve against
+   the VIEWPORT anywhere outside a container, which is the full-bleed this
+   avoids everywhere else. */
+main :where(iframe, video) {
+  margin-inline: 0;
+  width: 100cqi;
+  max-width: 100cqi;
 }
 
 /* Reduced Motion; Remove
@@ -389,6 +407,27 @@ tbody tr:nth-child(even) {
 video {
   object-fit: fill; /* set poster same size as video but distorts aspect-radio */
   /* object-fit: cover; */ /* set poster same size as video but cuts off to maintain aspect-radio */
+}
+
+/* ---- Rounded corners on content media ---------------------------
+   Brajeshwar, 2026-07-27: "I like smooth rounded corners for images and even
+   videos. Can we add the starting rounded corner radius."
+
+   `--border-radius` (7px) — the starting step, the same one the appearance
+   panel, the search palette and the prev/next bar already use, so media
+   matches the chrome rather than inventing a second curve.
+
+   `:where()` on purpose: it contributes NOTHING to specificity, so the whole
+   rule weighs (0,0,1) and anything with an opinion — album cards, the gallery,
+   a future avatar — overrides it without needing !important or a longer
+   selector. A default, not a decree.
+
+   Scoped to `main`, so it cannot reach the header logo or the footer icons.
+   `photo-cover` is deliberately NOT included: it is a full-bleed element that
+   runs to the viewport edge, and a rounded corner against the edge of the
+   window reads as a rendering fault rather than as a curve. */
+main :where(img, video, iframe) {
+  border-radius: var(--border-radius);
 }
 
 img.small,

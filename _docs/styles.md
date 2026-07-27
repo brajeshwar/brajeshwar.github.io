@@ -696,18 +696,52 @@ What it replaced: `margin-inline: calc(50% - 50vw); width: 100vw; transform: tra
 - 50%))` — viewport-wide and re-centred, so it spilled equally into **both** margins.
 
 **Everything that takes the band:** `figure.full` / `img.full`, `figure.large` / `img.large`
-(identical since 2026-07-27 — the 960px middle step is gone), `.gallery`, the **post title**
-(`.post h1`), `figcaption`, and `.post-nav`. Verified: one distinct right edge across header,
+(identical since 2026-07-27 — the 960px middle step is gone), `.gallery`, **videos and embeds**
+(`main :where(iframe, video)`), the **post title** (`.post h1`), `figcaption`, and `.post-nav`. Verified: one distinct right edge across header,
 footer, `main`, title, image, caption and nav.
 
-⚠️ **`photo-cover` cannot use `cqi`.** `post.html` emits it before `<main>`, so it is a `<body>`
-child with no container ancestor and `cqi` falls back to the viewport — the full-bleed this rule
-exists to prevent. It carries the band's own three lines instead (`--body-width` /
-`--body-width-max` / `margin-inline: auto`), **which must be kept in step with `main` by hand.**
+### The one exception: `photo-cover`
+
+The optional `image:` in a post's front matter is **deliberately full-bleed** — the single
+element allowed past the band. Brajeshwar, 2026-07-27: *"an optional addition of beauty… sticks
+to the header border-bottom and spans with width of the browser viewport or a max of 1600px."*
+It is a flourish, not content; the article below still starts on the band's left edge.
+
+    width: 100%;                          /* of <body>, NOT 100vw — see below */
+    max-width: var(--body-width-full);    /* 1600px, the only user of that token */
+    margin-top: calc(-1 * var(--space-l));/* cancels the header's margin-bottom */
+
+- **`100%`, not `100vw`** — `100vw` includes the scrollbar and overflows horizontally by its
+  width.
+- **The negative top margin is what makes it "stick to the header border-bottom".** ⚠️ Keep it in
+  step with `header`'s `margin: 0 auto var(--space-l)` in chrome.css. `.archive-strip` does the
+  same trick and carries the same warning.
+- **No `border-radius`** — it runs to the window edge, and a curve against the edge of the
+  viewport reads as a rendering fault.
+- **Its caption stays on the body width**, not the image's. The image is a bleed and the caption
+  is text, so it lines up with the prose rather than with the flourish. It is the one caption on
+  the site that does *not* match its own figure.
+
+It also cannot use `cqi`: `post.html` emits it before `<main>`, so there is no container ancestor
+and `cqi` would fall back to the viewport.
 
 ⚠️ **Wide media now sits in the sidenote gutter.** `sidenotes.js` `collectObstacles()` looks for
 `.full, .large, .gallery` and pushes overlapping notes below them — see
 [`sidenotes.md`](sidenotes.md) for the timing trap that came with it.
+
+## Rounded corners on content media
+
+    main :where(img, video, iframe) { border-radius: var(--border-radius); }
+
+`--border-radius` (7px) — the starting step, the same curve the appearance panel, the search
+palette and the prev/next bar use, so media matches the chrome instead of inventing a second one.
+
+**`:where()` is doing real work here.** It contributes nothing to specificity, so the whole rule
+weighs (0,0,1) and anything with an opinion overrides it without `!important` or a longer
+selector. A default, not a decree. Scoped to `main`, so it cannot reach the header logo or the
+footer icons — both verified at `0px`.
+
+`photo-cover` is excluded on purpose; see the exception above.
 
 ## Pill — the one shared control
 

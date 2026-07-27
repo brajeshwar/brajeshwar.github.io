@@ -162,11 +162,13 @@
 
                                       Reading width is separate and unaffected: articles cap at
                                       --body-width-ideal (the measure), not at this. */
-  /* --body-width-full (1600px) was here. Removed 2026-07-27: its only
-     readers were the figure.full and photo-cover breakouts, which now stop
-     at the content band instead of exceeding it — "so it is still within
-     the body width". Nothing is allowed to be wider than the band any
-     more, so a token naming a width beyond it named nothing. */
+  /* The ONE width allowed past the band, and only for <photo-cover> — the
+     optional front-matter hero. Removed earlier on 2026-07-27 when everything
+     was brought inside the band, then restored the same day: the cover is a
+     deliberate full-bleed flourish, not content, and Brajeshwar wants it back
+     ("spans with width of the browser viewport or a max of 1600px").
+     Nothing else may use this. */
+  --body-width-full       : 1600px;
 
 
   /* ⚠️ SECOND spacing system — ratio-derived, predates the Utopia

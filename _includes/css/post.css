@@ -4,25 +4,37 @@
    Loaded by _layouts/post.html via styles-posts.html.
    ============================================================ */
 
-/* The cover image, and the one breakout that CANNOT use 100cqi.
-   `_layouts/post.html` emits <photo-cover> before <main>, so it is a child
-   of <body> with no container ancestor — cqi units there fall back to the
-   viewport, which is exactly the full-bleed this is meant to stop.
+/* ---- The cover image: the site's ONE full-bleed element ---------
+   The optional `image:` in a post's front matter. Brajeshwar, 2026-07-27:
+   *"I wanted it to be an optional addition of beauty. I used to style that so
+   that it sticks to the header border-bottom and spans with width of the
+   browser viewport or a max of 1600px. Can we bring that back?"*
 
-   So it is given the band's own measurements instead: same width, same
-   max-width, same auto inline margins as `main` in base.css. That lands it
-   on the band exactly, which means its left edge is the article's left edge
-   and its right edge is the band's. Edge-to-edge before this — it started
-   at viewport 0 while everything else on the page started at 244.
+   So this is the deliberate exception to the right-only breakout rule that
+   governs everything else (styles.md §6). It is a flourish, not content —
+   the article below it still starts on the band's left edge like every other
+   page. It was briefly brought onto the band earlier the same day, as part of
+   bringing everything inside the site width; that was wrong for this one
+   element and is reverted.
 
-   ⚠️ Keep these three lines in step with `main`. If the site width ever
-   moves, this is the one element that will not follow on its own. */
+   `width: 100%` of <body>, NOT `100vw`: 100vw includes the scrollbar and would
+   overflow horizontally by its width. Capped at --body-width-full (1600px),
+   the only place that token is used.
+
+   `margin-top` cancels the header's own `margin: 0 auto var(--space-l)` so the
+   image meets the header's border-bottom with no seam — "sticks to the header
+   border-bottom". ⚠️ Keep in step with that value in chrome.css; the same
+   coupling is noted on `.archive-strip`, which does the same trick.
+
+   No `border-radius`: it runs to the window edge, and a curve against the edge
+   of the viewport reads as a rendering fault. */
 photo-cover {
   display: block;
 
-  width: var(--body-width);
-  max-width: var(--body-width-max);
+  width: 100%;
+  max-width: var(--body-width-full);
   margin-inline: auto;
+  margin-top: calc(-1 * var(--space-l));
   margin-bottom: var(--space-m);
   height: 600px;
 
@@ -37,10 +49,15 @@ photo-cover:has(+ photo-cover__desc) {
   margin-bottom: var(--space-3xs);
 }
 
-/* The cover's caption, treated like any other figcaption: as wide as the
-   thing it captions. It was capped at the measure and centred, which left
-   it inset from both edges of a cover that now spans the band. Kept in step
-   with photo-cover's own width above, since neither can use cqi out here. */
+/* The cover's caption stays on the BODY WIDTH even though the image above it
+   does not (Brajeshwar: "For such image with a caption, make the caption span
+   only the width of the posts width").
+
+   That is the right split: the image is a bleed and the caption is text, so
+   the caption lines up with the prose it belongs to rather than with the
+   flourish it describes. It is the one place on the site where a caption does
+   NOT match its own figure — see the `figcaption` rule in base.css for the
+   general case. */
 photo-cover__desc {
   display: block;
   width: var(--body-width);
