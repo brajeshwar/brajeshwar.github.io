@@ -763,6 +763,14 @@ That puts it inside `<main>` on posts, which has two consequences worth knowing:
   band. Measured 1248 against the band's 1268. `main > .back-to-top-row` takes `width: 100%`
   instead.
 
+**The bar has no divider.** Two were tried and both were wrong the same way: a `--border-color`
+hairline read as a rule drawn *on* the bar, and inverting it to the page background read as a
+slit cut *through* it — better, but still a mark asking to be noticed on a control whose job is
+to be quiet. Nothing is the right answer. The halves are the same colour, so there is no seam
+until the pointer is over one, and then the hover tint draws the boundary exactly where it
+matters and only while it matters. It also deletes the first/last-post special case: no rule is
+left that needs to know how many links there are.
+
 **The spacing is one `--space-m` everywhere in that seam** — article→arrow, arrow→bar,
 bar→footer, all 30px. `.post-nav` carries no margin at all; the row's margin does the first two
 and `main:has(.post-nav) ~ footer` does the third.

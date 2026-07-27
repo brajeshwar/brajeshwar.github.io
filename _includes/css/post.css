@@ -188,26 +188,23 @@ photo-cover__desc {
 .post-nav__prev { justify-content: flex-start; }
 .post-nav__next { justify-content: flex-end; }
 
-/* The divider: a NOTCH cut through the bar, not a line drawn on it.
+/* NO DIVIDER. The two halves touch (Brajeshwar, 2026-07-27: "I don't think
+   the vertical separation is working. Remove that and let them touch each
+   other. The hover will do its own magic.").
 
-   It was `--border-color`, a mix of the foreground — a hairline rule, which
-   is right between paragraphs and wrong here, sitting inside a filled bar
-   with a link either side. Brajeshwar, 2026-07-27: "looks weird. Either
-   replace with a transparent bar or invert the color."
+   Two versions were tried and both were wrong for the same reason. A
+   `--border-color` hairline read as a rule drawn ON the bar, which is right
+   between paragraphs and wrong inside a filled control. Inverting it to the
+   page background read as a slit cut THROUGH the bar — better, but still a
+   mark asking to be noticed on an element whose whole job is quiet.
 
-   Inverted: it takes the PAGE background, so it reads as a slit through the
-   bar rather than a mark on it. That inverts by construction in both modes —
-   the bar is --bg-color-low and the page is --bg-color-lower, and one is
-   lighter than the other in light mode and darker in dark, so the notch
-   always contrasts with what surrounds it without a second rule. It also
-   survives the hover tint, which a foreground-mix hairline was starting to
-   disappear into.
+   Nothing is the right answer: the halves are the same colour, so there is
+   no seam to see until the pointer is over one of them, and then the hover
+   tint draws the boundary exactly where it matters and only while it
+   matters. It also removes the first/last-post special case entirely —
+   there is no rule left that needs to know how many links there are.
 
-   Drawn ONLY when both links are present — `a + a` cannot match a lone
-   child, so the first and last posts get an unbroken bar for free. */
-.post-nav__link + .post-nav__link {
-  border-left: var(--border-size-small) var(--border-style) var(--bg-color-lower);
-}
+*/
 
 .post-nav__link:hover,
 .post-nav__link:focus-visible {
