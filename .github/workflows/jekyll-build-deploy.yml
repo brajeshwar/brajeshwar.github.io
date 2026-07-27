@@ -1,6 +1,34 @@
 # Jekyll - Build and Deploy to Github Pages
 # Pagefind, https://pagefind.app, powers the Search
-# Updated: Aug 30, 2025
+# Updated: Jul 27, 2026
+#
+# ACTION VERSIONS — bumped 2026-07-27 to clear a GitHub deprecation warning:
+# checkout@v4, configure-pages@v5, setup-node@v4, upload-artifact@v4 (pulled in
+# by upload-pages-artifact@v3) and deploy-pages@v4 all target Node 20, which the
+# runners were force-running on Node 24. Builds were green, but the forcing is
+# temporary. Each was moved to the latest major, confirmed to declare
+# `using: node24` in its own action.yml rather than assumed.
+#
+# Checked before bumping, because a major is a major:
+#   - configure-pages@v6 still exposes outputs.base_path (used below)
+#   - deploy-pages@v5 still exposes outputs.page_url (used by the environment)
+#   - upload-pages-artifact@v5 still defaults path to "_site/"
+#   - setup-node@v7 still takes node-version
+#
+# Two behaviour changes that DON'T bite here, worth knowing if that ever changes:
+#   - setup-node v5+ auto-enables package-manager caching when package.json has
+#     a `packageManager` field. This repo has no package.json at all, so it
+#     cannot engage. If one is ever added, set `package-manager-cache: false`
+#     or make sure a lockfile exists.
+#   - upload-pages-artifact v5 defaults include-hidden-files to false. Nothing
+#     shipped is hidden — the only dotfiles in a local _site are .DS_Store,
+#     which are untracked and so never exist in a CI checkout.
+#
+# checkout v7 also blocks checking out fork PRs for pull_request_target and
+# workflow_run. This workflow triggers on push, schedule and dispatch only.
+#
+# ruby/setup-ruby stays on the floating @v1 — it is not in the deprecation and
+# tracks its own majors.
 
 name: Deploy Jekyll via Push and Schedule
 
@@ -30,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -44,13 +72,13 @@ jobs:
       # runtime sitting in the deploy path. 22 is what the site is developed
       # against locally. Ruby above is on 3.3.5 and is current.
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '22'
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -80,11 +108,15 @@ jobs:
       - name: Minify JavaScript
         run: npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite
 
-      # Content-hash the long-cached assets: site.css -> site.<hash>.css, and
-      # the same for print.css and every script, rewriting the references.
+      # Content-hash the long-cached assets and rewrite every reference, in two
+      # passes: fonts first, then the font URLs inside the built stylesheets,
+      # and only then the CSS and JS — so a stylesheet's hash covers its own
+      # font URLs. One pass would hash CSS content that was about to change.
       #
       # MUST run after the minify step above, or the hash names bytes we do
       # not ship, and a rebuild that minifies differently would not bust.
+      # (Visible proof: the CSS and font hashes match a local build exactly,
+      # while the JS hashes differ — because only CI minifies.)
       #
       # Needed because /assets/* comes back `cache-control: max-age=31536000`
       # — a year, no revalidation. Without a new filename a returning reader
@@ -107,7 +139,7 @@ jobs:
         run: npx pagefind --site _site
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
 
   deploy:
     environment:
@@ -118,4 +150,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
