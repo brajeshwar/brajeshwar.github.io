@@ -283,6 +283,14 @@ at the top of this section.
       already ~48 KB raw / ~13 KB gzip. See [`design.md`](design.md) → *Performance budget*.
 
 ## Found 2026-07-27
+- [x] **Base tier was carrying two things almost nothing used** *(split 2026-07-27)* — audited by
+      testing every shipped rule against a real post, then against 8 posts to separate "unused
+      here" from "unused anywhere". `code.css` (syntax highlighting) was **59% of `post.css`**
+      and went to all 1,456 posts, but only **55 (3.8%)** contain a code block; it is now
+      included conditionally. `cards.css` (`ul.item__cards`) was in `base.css` — **0 posts, 3
+      pages** — and now belongs to the album and home bundles. **687 bytes gzip (9.4%) off 1,401
+      posts.** Verified across all 1,456: zero posts with code missing the CSS, zero with CSS
+      and no code, and all three card grids intact.
 - [x] **Jekyll's "Excerpt modified" warning on `_pages/archives.html`** *(fixed 2026-07-27)* —
       Jekyll builds an excerpt for every document by cutting at the first `\n\n`; that cut fell
       inside archives.html's opening `{%- comment -%}` block, so Jekyll rewrote the block to

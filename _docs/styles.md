@@ -387,8 +387,9 @@ The failure mode we're avoiding is CSS scattered across twenty opt-in keys where
 tell what ships where.
 
 ## The files
-**Flattened 2026-07-19** from 25 numbered ITCSS partials to 12 plainly-named files (**13 today**
-— `timeline.css` was added with the `/about/` rework). The numbering
+**Flattened 2026-07-19** from 25 numbered ITCSS partials to 12 plainly-named files (**15 today**
+— `timeline.css` came with the `/about/` rework; `code.css` and `cards.css` were split out of
+the base tier on 2026-07-27, see *Keeping the base tier honest* below). The numbering
 (`0.0-`, `2.1-`, `9.9-`) encoded cascade order for humans; the order now lives in one place —
 `_includes/styles.html` — which is the only thing that actually determines it.
 
@@ -674,6 +675,46 @@ the timeline, that is the point to extract a real layout instead.
 treatment is `album.css`, loaded by `_layouts/album.html`. To give a page thumbnails: switch it
 to `layout: album` and emit `<ul class="item__cards">`. `/books/`, `/photos/` and `/wear/` are
 candidates when they have images — none has thumbnail data yet, so none was converted.
+
+## Keeping the base tier honest
+
+The point of splitting the CSS is that a page carries only what it uses. That only holds if the
+**base tier** stays genuinely universal — anything in `config`/`themes`/`base`/`chrome` ships to
+all ~1,456 posts and every page.
+
+Audited 2026-07-27 by loading a post and testing every shipped rule against the DOM, then
+against a sample of 8 posts to separate "unused here" from "unused anywhere". Two things were
+paying rent on 1,456 pages to serve a handful:
+
+| Split out | Was | Used by | Now included by |
+|---|---|---|---|
+| `code.css` | 3,495 B, 59% of `post.css` | **55 of 1,456 posts (3.8%)** | `styles-posts.html`, **conditionally** |
+| `cards.css` | 737 B, in `base.css` | **0 posts, 3 pages** | `styles-album.html` + `home.css` |
+
+**Result: 7,334 → 6,647 gzip on a post without code — 687 bytes, 9.4%, off 1,401 posts.** A post
+*with* code is 7,248, still below where it started, because `cards.css` left too. Home, `/film/`
+and `/devices/` are unchanged: they pull `cards.css` back in.
+
+The conditional include is the interesting half:
+
+```liquid
+{% raw %}{% if content contains 'class="highlight"' %}{% include css/code.css %}{% endif %}{% endraw %}
+```
+
+⚠️ **The test must be inline in the `if`.** Liquid's `assign` does not evaluate `contains` — it
+fails silently *and truthily*, so assigning it to a variable first would ship the file to every
+post while reading as correct. Same trap as `_layouts/page.html`.
+
+⚠️ **Never write a literal Liquid tag in a CSS comment.** These files are Liquid includes, so
+Jekyll parses what is inside `/* */` too. Documenting the tag above by spelling it out in
+`code.css` broke the whole build, with the syntax error reported against `styles.html` — nowhere
+near the cause. Use a raw tag or describe it in prose.
+
+**What is NOT worth splitting**, having measured it: the theme-state rules
+(`[data-theme]`/`[data-palette]`/`[data-font]`/`[data-text-size]`) look dead on any given page —
+16 rules matching nothing — but they *are* the reader's options and must ship. Likewise
+`.sidenote*`, `.back-to-top-row.is-visible`, `.pill__*` and `.pagefind-modular-*` match nothing
+until JS creates the elements. A naive "unused CSS" tool will flag all of these. Don't.
 
 ## Breaking out of the reading column — RIGHT ONLY
 

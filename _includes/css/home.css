@@ -1,3 +1,9 @@
+/* The home page's books row uses ul.item__cards, which lives in cards.css
+   since 2026-07-27 — it was in base.css, and therefore on every post, to
+   serve this page and the two album pages. Pulled in here rather than
+   duplicated. */
+{% include css/cards.css %}
+
 /* ============================================================
    Home — homepage only.
    ------------------------------------------------------------

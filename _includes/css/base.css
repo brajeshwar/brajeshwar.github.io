@@ -568,49 +568,6 @@ img.full {
    this restated it. It was there to compensate for the centring that is
    now gone.) */
 
-
-/* ---- Cards grid ---------------------------------------------------- */
-
-/* FLUID, and it fills the content width. Was `flex-flow: row wrap` with a fixed
-   220px cap on each card, which meant the row packed from the left and left a
-   ragged gap on the right that grew as the window did.
-
-   auto-fill + 1fr instead: the browser fits as many equal columns of at least
-   --card-min as the row allows and stretches them to consume what is left, so
-   the grid always meets both edges of the band. Cards get WIDER as space
-   allows rather than the row getting emptier.
-
-   auto-fill, not auto-fit: auto-fit collapses the empty tracks, so a section
-   with two items would stretch them across the whole band. auto-fill keeps the
-   empty columns, so a short section's cards stay card-sized. (The archives year
-   strip wants the opposite and uses auto-fit — the difference is whether a
-   short row should fill or stay put.) */
-ul.item__cards {
-  --card-min: 11rem;                 /* 176px — the narrowest a thumbnail reads at */
-
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
-  align-items: start;
-  gap: var(--space-m) var(--space-xs);
-}
-
-ul.item__cards li {
-	list-style: none;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
-ul.item__cards li img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* ---- Footnotes + sidenotes ---------------------------------------------------- */
 
 .footnotes {
