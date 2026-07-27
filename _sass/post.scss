@@ -169,6 +169,21 @@ photo-cover__desc {
      change it. Sized to sit INSIDE the bar's 46px — see .post-nav__random. */
   --post-nav-random-size: 38px;
 
+  /* Its resting fill. --color-primary straight was too heavy (Brajeshwar,
+     2026-07-27: "The Random's button is too dark") — in light mode that is
+     gray-900, a near-black disc in a quiet grey bar, which shouts on a page
+     whose whole argument is restraint.
+
+     Eased 22% toward the bar it sits in, rather than swapped for a fixed
+     grey. That keeps it derived from the same token the selected pill uses,
+     and it stays correct in every theme without a second rule: in light it
+     lands around gray-700, in dark it steps the light disc down to a soft
+     off-white. A hardcoded grey would have had to be re-picked per palette.
+
+     The full --color-primary is still used — on hover, where the extra weight
+     now reads as activation instead of as the default state. */
+  --post-nav-random-bg: color-mix(in oklab, var(--color-primary) 78%, var(--bg-color-low));
+
   /* The nav spans the CONTENT BAND — it is a direct child of `main` and
      carries no width of its own, so it fills it. It used to wear
      .container-ideal, held at the reading measure to match the article;
@@ -298,21 +313,42 @@ photo-cover__desc {
      No ring. The 1px page-coloured border existed to separate a circle that
      was the same colour as the bar; at this contrast it would be a light halo
      on a dark disc, which reads as a rendering fault rather than a gap. */
-  background-color: var(--color-primary);
-  color: var(--color-primary-fg);
+  background-color: var(--post-nav-random-bg);
 
   text-decoration: none;
-  transition: opacity var(--transition-duration) ease;
+  transition: background-color var(--transition-duration) ease;
 }
 
-/* Hover lifts rather than tints. The fill is already the strongest value in
-   the bar, so there is no "step up" available in the direction the link
-   halves move — mixing toward the text colour would make it muddier, not more
-   active. Easing the opacity keeps the affordance without inventing a fifth
-   grey. */
+/* ⚠️ THE COLOUR HAS TO BE RE-STATED ON :visited AND :hover, and it is not
+   belt-and-braces — leaving either off is a visible bug.
+
+   base.css styles links as `a, a:visited` and `a:hover, a:active`, both
+   (0,1,1). A bare `.post-nav__random` is (0,1,0) and LOSES to both, so the
+   icon quietly took --text-color-link — a dark value — on a dark disc:
+   invisible. The rest state broke the first time the button was ever
+   clicked, because /random/ is then a visited link and `a:visited` applies
+   from then on.
+
+   Adding a pseudo-class takes these to (0,2,0), which wins. This is the same
+   trap `.icon-button` in chrome.css sits in: it re-states colour on :hover
+   but not on :visited, so the header RSS link is one visit away from the
+   same bug. Not fixed here — flagged there.
+
+   Hover goes to the FULL --color-primary rather than easing opacity. The
+   rest state is deliberately softened (below), so "press toward the strong
+   value" is available as an affordance and reads as activation. Opacity was
+   the earlier approach and was wrong twice over: it faded the icon along
+   with the disc, and it left `color` unset, which is what let base.css win. */
+.post-nav__random,
+.post-nav__random:visited {
+  color: var(--color-primary-fg);
+}
+
 .post-nav__random:hover,
-.post-nav__random:focus-visible {
-  opacity: var(--opacity-low);
+.post-nav__random:focus-visible,
+.post-nav__random:active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-fg);
   text-decoration: none;
 }
 
