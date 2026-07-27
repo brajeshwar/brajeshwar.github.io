@@ -289,7 +289,15 @@ pre {
   overflow-y: hidden;
 }
 
-code.language-plaintext,
+/* Inline code, <mark>, and the .mark utility share one chip treatment.
+
+   ⚠️ `:not(pre) > code`, not `code.language-plaintext` (changed 2026-07-27).
+   Kramdown only adds `class="language-plaintext"` while a syntax highlighter
+   is active; with Rouge disabled it emits a bare `<code>`, and the old
+   selector silently stopped matching — inline code lost its chip on every
+   post that had any. Matching the ELEMENT and excluding the one inside `pre`
+   is what the rule always meant, and it holds either way. */
+:not(pre) > code,
 mark,
 .mark {
   padding: var(--space-3xs) var(--space-2xs);

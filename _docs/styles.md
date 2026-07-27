@@ -686,29 +686,48 @@ Audited 2026-07-27 by loading a post and testing every shipped rule against the 
 against a sample of 8 posts to separate "unused here" from "unused anywhere". Two things were
 paying rent on 1,456 pages to serve a handful:
 
-| Split out | Was | Used by | Now included by |
+| Split out | Was | Used by | Outcome |
 |---|---|---|---|
-| `code.css` | 3,495 B, 59% of `post.css` | **55 of 1,456 posts (3.8%)** | `styles-posts.html`, **conditionally** |
+| `code.css` | 3,495 B, 59% of `post.css` | **55 of 1,456 posts (3.8%)** | **deleted** — see below |
 | `cards.css` | 737 B, in `base.css` | **0 posts, 3 pages** | `styles-album.html` + `home.css` |
 
 **Result: 7,334 → 6,647 gzip on a post without code — 687 bytes, 9.4%, off 1,401 posts.** A post
 *with* code is 7,248, still below where it started, because `cards.css` left too. Home, `/film/`
 and `/devices/` are unchanged: they pull `cards.css` back in.
 
-The conditional include is the interesting half:
+### Syntax highlighting is off entirely
 
-```liquid
-{% raw %}{% if content contains 'class="highlight"' %}{% include css/code.css %}{% endif %}{% endraw %}
-```
+`code.css` was first made conditional, then removed outright (2026-07-27), and Rouge is disabled
+in `_config.yml`. Brajeshwar: *"I don't think I will be writing anything that shows off code any
+more."* The numbers agreed:
 
-⚠️ **The test must be inline in the `if`.** Liquid's `assign` does not evaluate `contains` — it
-fails silently *and truthily*, so assigning it to a variable first would ship the file to every
-post while reading as correct. Same trap as `_layouts/page.html`.
+- **55 of 1,456 posts** have a code block at all;
+- **257 of their 310 blocks are `plaintext`** — nothing to colour;
+- of the rest, the languages are mostly 2002-era ActionScript, plus some CSS and shell;
+- and it was **the only place colour appeared by default** on a site whose stated rule is that
+  colour is opt-in.
+
+Turning off the highlighter beats deleting only the stylesheet. Rouge's `<span>` soup is emitted
+by kramdown, so dropping the CSS alone would have kept ~1.5 KB of markup per post doing nothing.
+With `syntax_highlighter_opts: disable: true`, a block renders as plain
+`<pre><code class="language-js">` and `base.css` already gives `<pre>` its background, padding,
+radius, monospace and horizontal scroll — no styling is lost.
+
+**Measured on those 55 posts: 262,286 bytes raw / 41,276 gzip, −8.9% / −5.0%, about 4.7 KB raw
+per post.** Every one of the 1,456 posts now ships an identical 31,022-byte CSS bundle.
+
+⚠️ **`:not(pre) > code`, not `code.language-plaintext`.** Kramdown only adds that class while a
+highlighter is active. With Rouge off it emits a bare `<code>`, so the old selector silently
+stopped matching and **inline code lost its chip on every post that had any**. Caught in the
+browser, not in the build — nothing errors.
+
+Reverting is three steps, listed in the `_config.yml` comment: drop the `kramdown:` block,
+restore the stylesheet from git, re-add the conditional include.
 
 ⚠️ **Never write a literal Liquid tag in a CSS comment.** These files are Liquid includes, so
-Jekyll parses what is inside `/* */` too. Documenting the tag above by spelling it out in
-`code.css` broke the whole build, with the syntax error reported against `styles.html` — nowhere
-near the cause. Use a raw tag or describe it in prose.
+Jekyll parses inside `/* */` too. Documenting the conditional by spelling it out in `code.css`
+broke the whole build, with the syntax error reported against `styles.html` — nowhere near the
+cause. Use a raw tag or describe it in prose.
 
 **What is NOT worth splitting**, having measured it: the theme-state rules
 (`[data-theme]`/`[data-palette]`/`[data-font]`/`[data-text-size]`) look dead on any given page —

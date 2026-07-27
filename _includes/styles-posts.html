@@ -1,17 +1,12 @@
 {%- comment -%}
   Post bundle. See _docs/styles.md §5.
 
-  Syntax highlighting is CONDITIONAL: only 55 of 1,456 posts (3.8%) contain a
-  code block, and the pygments theme is 3,495 bytes — 59% of what post.css
-  used to ship. The other 1,401 posts were carrying it for nothing.
+  There used to be a conditional `code.css` here, for syntax highlighting.
+  Both are gone as of 2026-07-27: Rouge is disabled in _config.yml, so no
+  post emits `class="highlight"` and there is nothing to style. base.css
+  gives <pre> its block, monospace, radius and scroll, which is all a code
+  block needs now.
 
-  ⚠️ The test has to be INLINE in the `if`. Liquid's `assign` does not
-  evaluate `contains`; it fails silently AND truthily, so writing
-  `{% assign has_code = content contains '…' %}` would send this to every
-  post while reading as correct. The same trap is documented on
-  `_layouts/page.html`, where it once put a class on all 22 pages.
-
-  `class="highlight"` is what Rouge wraps every highlighted block in.
+  To bring highlighting back, three steps — see the note in _config.yml.
 {%- endcomment -%}
 {% include css/post.css %}
-{% if content contains 'class="highlight"' %}{% include css/code.css %}{% endif %}

@@ -291,6 +291,14 @@ at the top of this section.
       pages** — and now belongs to the album and home bundles. **687 bytes gzip (9.4%) off 1,401
       posts.** Verified across all 1,456: zero posts with code missing the CSS, zero with CSS
       and no code, and all three card grids intact.
+- [x] **Syntax highlighting removed entirely** *(2026-07-27, Brajeshwar's call)* — Rouge disabled
+      in `_config.yml` and `code.css` deleted. 257 of the 310 code blocks were `plaintext`
+      anyway, and it was the only default colour on a monotone site. Disabling the highlighter
+      beats deleting just the CSS: the `<span>` soup is kramdown's, so the stylesheet alone would
+      have left ~1.5 KB/post of markup doing nothing. **−262,286 bytes raw / −41,276 gzip across
+      the 55 posts (−8.9% / −5.0%).** ⚠️ Needed `:not(pre) > code` in base.css — kramdown drops
+      `class="language-plaintext"` when the highlighter is off, so inline code silently lost its
+      chip. Revert is three steps, documented in `_config.yml`.
 - [x] **Jekyll's "Excerpt modified" warning on `_pages/archives.html`** *(fixed 2026-07-27)* —
       Jekyll builds an excerpt for every document by cutting at the first `\n\n`; that cut fell
       inside archives.html's opening `{%- comment -%}` block, so Jekyll rewrote the block to
