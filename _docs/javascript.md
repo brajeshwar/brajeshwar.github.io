@@ -26,16 +26,34 @@ Brajeshwar, 2026-07-27:
 | Script | Raw | Loaded on |
 |---|---:|---|
 | `appearance.js` | 8.2 KB | every page (theme/font/accent panel) |
-| `sidenotes.js` | 11.4 KB | posts |
-| `search.js` | 3.8 KB | every page (⌘K palette) |
+| `sidenotes.js` | 11.4 KB | **87 pages** — only where footnotes exist (2026-07-27) |
+| `search.js` | 3.8 KB | every page (⌘K palette, and `/`) |
 | `pagefind-custom.js` | 4.4 KB | `/search/` |
 | `pagefind-autofocus.js` | 0.4 KB | `/search/` |
-| `anchors.js` | 1.4 KB | posts, `/about/` |
+| `anchors.js` | 1.4 KB | **453 posts** — only where an `h2`+ exists (2026-07-27) |
 | `timeline.js` | 2.3 KB | `/about/` |
 | `back-to-top.js` | 3.5 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
 
 **~35.5 KB raw across all eight** (re-measured 2026-07-27) — but **15.2 KB as shipped**, since
 2026-07-27; the table is source size. Each is a separate request, and no page loads all of them.
+
+**Load only where there is work to do (2026-07-27).** `sidenotes.js` is the largest script on
+the site and only 85 of 1,456 posts have footnotes — on every other page it loaded, ran, found
+nothing and returned. Both it and `anchors.js` are now gated on the rendered content:
+
+    {% if content contains 'class="footnotes"' %}…{% endif %}
+
+⚠️ **The test must be inline in the `if`.** Liquid's `assign` does not evaluate `contains` —
+it fails silently *and truthily*, so hoisting it to a variable ships the script everywhere
+while reading as correct. Same trap as `page.html` and the old conditional `code.css`.
+
+A typical post now fetches three scripts instead of five, and — since the analytics beacon was
+removed the same day — makes **no cross-origin request at all**. Saving: 2,189 bytes gzipped,
+plus a DNS lookup and a TLS handshake.
+
+⚠️ **Scripts are content-hashed on publish** (`scripts/hash-assets.mjs`). `/assets/*` is served
+`max-age=31536000`, so before this every JS fix could take a **year** to reach a returning
+reader. See [`hosting.md`](hosting.md) → *Cache headers we actually get*.
 
 Every one degrades cleanly: with JS off you get real footnotes instead of sidenotes, the
 default theme instead of a remembered one, `/search/` instead of the ⌘K palette, no `§`

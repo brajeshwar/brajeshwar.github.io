@@ -378,20 +378,79 @@ Theming — mode × palette × font × accent — is §2 above; the byte budget 
 that point. Folded into this doc on 2026-07-26, from what used to be `css-architecture.md`.
 
 ## The principle
-Embed everything — no external stylesheet, no extra request. At 6–7 KB gzip the inlined
-CSS rides along in the same round trip as the HTML, which beats a cacheable external file
-for a site whose traffic is mostly first-time arrivals on a single post.
 
-Split by **layout**, not by page. A page-specific bundle is the exception, not the pattern.
+> ⚠️ **Superseded 2026-07-27. The CSS is now ONE EXTERNAL FILE.** The two paragraphs
+> immediately below are the 2026-07-19 decision, kept as written. Read *The principle,
+> restated* under them for what is true today.
+
+~~Embed everything — no external stylesheet, no extra request. At 6–7 KB gzip the inlined
+CSS rides along in the same round trip as the HTML, which beats a cacheable external file
+for a site whose traffic is mostly first-time arrivals on a single post.~~
+
+~~Split by **layout**, not by page. A page-specific bundle is the exception, not the pattern.
 The failure mode we're avoiding is CSS scattered across twenty opt-in keys where nobody can
-tell what ships where.
+tell what ships where.~~
+
+## The principle, restated (2026-07-27)
+
+**Ship one external stylesheet and let it cache.** `assets/styles/site.css` concatenates
+every file in `_includes/css/` and is the only stylesheet on the site.
+
+The embed-everything argument was not sloppy, it was built on an unchecked premise — that
+the round trip recurs. Measuring instead of assuming:
+
+    $ curl -sSI https://brajeshwar.com/assets/print.css
+    cache-control: max-age=31536000
+    content-encoding: gzip
+
+A year, gzipped, on every `/assets/*` file. There is no `_headers` file; that is simply what
+the host serves. So the fetch happens once and the file is then free on every page, for every
+visit, for a year — while inlining re-sent ~6.6 KB gzip on *every* page view and could never
+be cached at all, because the HTML is only `max-age=600`. **Break-even is under two page
+views.**
+
+**And one file, not per-layout bundles.** Splitting existed to keep the *inline* payload
+small — each page carried only what it used, because it carried it every single time. Once
+the bytes are cached that logic inverts: one URL shared by all ~1,483 pages is one cache
+entry filled on the first view, where per-layout files would each miss separately and a
+reader moving from a post to `/film/` would pay again. The cost is that a post carries the
+timeline, album and home rules it will never use — about 3.3 KB gzip, once a year, against
+6.6 KB saved on every view after the first.
+
+Whole site: **50,210 bytes raw, 9,480 gzipped.**
+
+### Two things this makes load-bearing
+
+**1. Cache-busting is not optional.** At `max-age=31536000` the browser does not re-request
+and does not even revalidate — a stable filename strands a returning reader on old CSS for up
+to a year. `scripts/hash-assets.mjs` renames to `<name>.<hash>.ext` after the build and
+rewrites every reference, failing the build if anything it hashed ends up referenced by
+nothing. It must run **after** the esbuild minify step, or the hash describes bytes that are
+not the bytes we ship. It runs in Actions only; local `jekyll serve` and the Cloudflare Pages
+backup stay on the unhashed paths and are internally consistent.
+
+This was *already* true of the JavaScript — every fix shipped to `assets/scripts/` since the
+move to this host could take a year to reach a returning reader. Inlined CSS was accidentally
+immune, riding along with `max-age=600` HTML. Externalising made it matter, and the fix
+covers the scripts too.
+
+**2. Every stylesheet applies to every page.** There is no layout gate any more. A selector
+must anchor to something page-specific — a class (`.page`, `.post`) or a custom element
+(`<photo-cover>`, `<home-books>`) — and never a bare `main > article > h2`.
+
+`page.css` was the one file that had assumed the gate, and the damage was not cosmetic: its
+prose-measure rule was `main > article > p` and friends, a post is *also* `main > article`,
+and `max-width: var(--measure)` had no competitor in `post.css` — which sets `width` on the
+title, not `max-width`. So `main > article > h1` would have won and silently clamped all
+~1,456 post titles back to 665px, undoing the full-width titles. It is now scoped to `.page`,
+written onto the article by `page.html`, mirroring `.post` on a post.
 
 ## The files
-**Flattened 2026-07-19** from 25 numbered ITCSS partials to 12 plainly-named files (**15 today**
-— `timeline.css` came with the `/about/` rework; `code.css` and `cards.css` were split out of
-the base tier on 2026-07-27, see *Keeping the base tier honest* below). The numbering
+**Flattened 2026-07-19** from 25 numbered ITCSS partials to 12 plainly-named files (**14 today**
+— `timeline.css` came with the `/about/` rework; `cards.css` was split out of the base tier on
+2026-07-27, and `code.css` was deleted the same day when Rouge was disabled). The numbering
 (`0.0-`, `2.1-`, `9.9-`) encoded cascade order for humans; the order now lives in one place —
-`_includes/styles.html` — which is the only thing that actually determines it.
+`assets/styles/site.css` — which is the only thing that actually determines it.
 
     _includes/css/
       config.css      ratios, scales, spacing, breakpoints   ← must stay first
@@ -408,36 +467,41 @@ the base tier on 2026-07-27, see *Keeping the base tier honest* below). The numb
       now.css         /
       bookmarks.css   not yet wired up — see below
 
-## The three tiers
+## How the one file is assembled
 
-### Tier 0 — Base (every page, always)
-`config` → `themes` → `base` → `chrome`, in that order, assembled by `_includes/styles.html`.
-Order is load-bearing: `config` defines the `$breakpoint-*` SCSS vars and every custom property
-downstream reads, so it stays first.
+> The **three tiers** — base, per-layout bundle, per-page opt-in — described how CSS was
+> *delivered* until 2026-07-27, gated by the `styles:` front-matter key. Delivery is now one
+> file for everyone and that key is gone. The grouping survives as **organisation**: it is
+> still how you decide which file to open. It is no longer what ships where.
 
-Base is the thing to protect. Adding here costs every one of ~1,456 pages.
+`assets/styles/site.css` is the manifest. It is a `.css` file with front matter (load-bearing
+— without the fence Jekyll copies it verbatim and the browser gets Liquid as text), and it
+`{% include %}`s every stylesheet in cascade order inside one `capture`, then `scssify`s it.
 
-### Tier 1 — Layout bundles (one per layout, via the `styles:` **layout** key)
-Each layout names one include, which pulls one file. This is where new CSS should go.
+    Foundation      config → themes → base → chrome
+    Layout          cards → album → page → post
+    Page one-offs   archives → home → now → search → timeline
 
-| Layout | Bundle | File |
-|---|---|---|
-| `post.html` | `styles-posts.html` | `post.css` — article layout, syntax highlighting, gallery, heading anchors |
-| `page.html` | `styles-pages.html` | `page.css` — empty hook; pages get what they need from base + chrome |
-| `album.html` | `styles-album.html` | `album.css` — album cards, thumbnails, captions |
+**Order is the cascade. There is no other mechanism now.** Two consequences:
 
-Two things deliberately live in **base** rather than a layout bundle:
-- **`ul.item__cards`** (the flex grid) — the homepage books list and the album layout both use it.
-- **Footnotes + sidenotes** — two *pages* use footnotes (`about-brajeshwar.com`, `books`), not
-  just posts, so demoting them to `post.css` would break them.
+- `config.css` **must stay first** — it defines the `$breakpoint-*` SCSS vars and every custom
+  property downstream reads, and Sass resolves those at compile time, in source order.
+- `cards.css` precedes `album.css` (album styles the page around the grid cards defines), and
+  the page one-offs follow `page.css`, which is what they used to layer on top of.
 
-### Tier 2 — Per-page opt-in (via the `styles:` **page** front-matter key)
-Reserved for genuinely singular pages. Four today; the bar for a fifth is high.
+`bookmarks.css` is **deliberately not in the manifest** — it styles a `<bookmarks-header>`
+that no page emits yet, and including it would ship 1.2 KB to every page for markup that does
+not exist. Add the line when the bookmarks page lands.
 
-    index.html          css/home.css
-    _pages/archives     css/archives.css
-    _pages/search       css/search.css      (Pagefind UI — biggest file, 9.7 KB)
-    now.md              css/now.css
+### Where new CSS goes
+Still by layout, not by page — the failure mode being avoided is CSS scattered across twenty
+files where nobody can tell what styles what. "Base is the thing to protect" no longer means
+*bytes* (everything ships regardless); it means **blast radius**. A selector in `base.css` is
+one you are pointing at all ~1,483 pages on purpose.
+
+The corollary is the rule in *The principle, restated* above: since nothing is gated any more,
+anything page-specific has to say so **in the selector**. Anchor to a class or a custom
+element. A bare `main > article > h2` is a bug waiting for the next page type.
 
 ### Old → new filename map
 Historical entries in [`memory.md`](memory.md) and in the sections above still use the
@@ -470,9 +534,14 @@ repeating that check on any future reshuffle:
       puts s.scan(/(?:^|\})([^{}@]{1,80})\{/).flatten.map(&:strip).sort.join("\n")' \
       _site/index.html > /tmp/rules-before.txt
 
-### Two keys, easily confused
-- `styles:` (plural) — names a CSS include. Works on a **layout** (tier 1) or a **page** (tier 2).
-- `style:` (singular) — a CSS **class** written onto `<main>`. A layout/styling hook, not a bundle.
+### Two keys, easily confused — now one
+- ~~`styles:` (plural) — names a CSS include. Works on a **layout** (tier 1) or a **page**
+  (tier 2).~~ **Removed 2026-07-27.** Every stylesheet ships to every page, so there was
+  nothing left for it to switch. It was deleted from three layouts and five pages; a stray
+  `styles:` in front matter today does nothing at all.
+- `style:` (singular) — a CSS **class** written onto `<main>`. Still live. A layout/styling
+  hook, not a bundle. This is the one that survives, and it was always the more confusable
+  of the two.
 
 ## The `album` layout (built 2026-07-19)
 A thumbnail grid for photos, videos, or both — a simple album hosted here, likely linking out
@@ -728,6 +797,11 @@ restore the stylesheet from git, re-add the conditional include.
 Jekyll parses inside `/* */` too. Documenting the conditional by spelling it out in `code.css`
 broke the whole build, with the syntax error reported against `styles.html` — nowhere near the
 cause. Use a raw tag or describe it in prose.
+
+> Still true, and the misdirection is now one file further away: since 2026-07-27 the error
+> points at **`assets/styles/site.css`**, which is merely the file calling `scssify`, and never
+> at the `_includes/css/*.css` that actually contains the broken comment. Same for a stray
+> literal `*` `/` inside comment prose.
 
 **What is NOT worth splitting**, having measured it: the theme-state rules
 (`[data-theme]`/`[data-palette]`/`[data-font]`/`[data-text-size]`) look dead on any given page —

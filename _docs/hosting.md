@@ -96,6 +96,33 @@ Setup gotcha: SSL mode must be Full, not Flexible, or you get redirect loops. Gi
 must issue its Let's Encrypt cert first. Reliable order — grey-cloud DNS, wait for Pages to
 show the cert and enable "Enforce HTTPS", then flip to orange-cloud with SSL = Full.
 
+## Cache headers we actually get (measured 2026-07-27)
+
+Not configured by us — there is no `_headers` file in the repo. This is what the edge returns,
+and it drove the decision to externalise the CSS:
+
+| Path | `Cache-Control` | Effect |
+|---|---|---|
+| `/assets/*` (css, js, fonts) | `max-age=31536000` | **one year**, gzipped |
+| HTML pages | `max-age=600` | 10 minutes |
+
+    $ curl -sSI https://brajeshwar.com/assets/print.css
+    cache-control: max-age=31536000
+    content-encoding: gzip
+
+⚠️ **A year means no re-request and no revalidation.** The browser does not ask; it uses its
+copy. So **any asset we ship under a stable filename is unreachable to a returning reader for
+up to a year.** That was quietly true of every JavaScript fix since the move to this host.
+
+`scripts/hash-assets.mjs` is the answer — it renames assets to `<name>.<hash>.ext` after the
+build and rewrites every reference, so changed bytes always arrive at a new URL, which is the
+one thing a cache cannot satisfy. It runs in the Actions deploy, after the esbuild minify step
+(hashing before minifying would describe bytes we do not ship). A build that skips it stays on
+the unhashed paths and is internally consistent — see the backup note below.
+
+Conditional requests still work when they are reached: an `If-None-Match` against the weak
+ETag returns `304` with zero bytes. That is the fallback, not the mechanism.
+
 ## Cloudflare Pages: the backup build (2026-07-26)
 
 This reverses the 2026-07-05 decision, which was to keep Cloudflare Pages dormant on the

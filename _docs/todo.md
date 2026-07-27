@@ -52,6 +52,12 @@ Originally absorbed from the 2027 planning braindump.
 - [ ] **YouTube videos** — move to `brajeshwar.com`, or embed and ignore, or self-host (PeerTube for Oinam or similar).
 
 ## CSS architecture (decided 2026-07-19 — see [`styles.md`](styles.md) §5)
+
+> ⚠️ **The delivery half of this was superseded 2026-07-27.** CSS is no longer inlined and no
+> longer split per layout: one external `assets/styles/site.css`, content-hashed, cached a
+> year. The `styles:` key is gone. Items below that talk about *what ships to which page* are
+> historical; items about *how the files are organised* still stand. [`styles.md`](styles.md)
+> §5 → *The principle, restated*.
 Three tiers: base embedded on every page → one bundle per layout → per-page opt-in for
 one-offs only. Keep embedding; no external stylesheet. Ordered roughly by value/effort.
 
@@ -256,6 +262,15 @@ at the top of this section.
       Brajeshwar: *"Ignore this for now. The width is good for now."* The 64rem/1024px band
       stands on the sidenote arithmetic, which is a constraint rather than a guess. Reopen only
       if the width is ever in question again.
+- [ ] **Analytics: pick a replacement approach.** The `analytics.oinam.net` beacon was
+      **removed entirely 2026-07-27** at Brajeshwar's request — *"Remove 'analytics.oinam.net'
+      until I figure out a better way to do this."* The site now makes **zero cross-origin
+      requests**. The cost was never the script's size: a third origin means a DNS lookup and a
+      TLS handshake before it can start, commonly 100–300 ms on a cold mobile connection, on
+      every page. The markup is preserved verbatim in a Liquid comment in `_layouts/default.html`,
+      so restoring it is a copy-paste. Whatever replaces it, prefer something that does not add
+      an origin — Cloudflare Web Analytics (the CDN is already in the path) or server-side log
+      processing both avoid the handshake entirely.
 - [x] **`--body-width-medium` (60rem)** *(done 2026-07-27)* — folded into `--image-width-max`,
       its only reader. One token named for what it does instead of two, one of which claimed to
       be a site width and was not.
@@ -272,9 +287,14 @@ at the top of this section.
 - [x] ~~**Geist `.ttf` → `.woff2`**~~ — moot: the Geist option was removed entirely on
       2026-07-19 (near-duplicate of the system stack, 165 KB unsubsetted ttf). Libre
       Baskerville is now the only webfont and is already woff2. See [`styles.md`](styles.md).
-- [ ] **Scope `sidenotes.js` to article pages.** It's loaded site-wide via `default.html` but
-      only does anything where footnotes exist; skip it on the homepage/pages to shave a
-      request from non-article loads (performance-budget tidy, not urgent).
+- [x] **Scope `sidenotes.js` to article pages** *(done 2026-07-27, and tighter than asked)* — it
+      is gated on `content contains 'class="footnotes"'`, so it loads where footnotes actually
+      exist rather than merely on articles: **87 of 1,483 pages**, down from all of them. It is
+      the largest script on the site (4.9 KB minified) and only 85 of 1,456 posts have
+      footnotes, so on 94% of posts it was loading, running, finding nothing and returning.
+      `anchors.js` got the same treatment (453 posts, gated on an `h2`+). ⚠️ The `contains` test
+      must be inline in the `if` — Liquid's `assign` does not evaluate it and fails silently
+      *and truthily*. See [`javascript.md`](javascript.md).
 - [x] **Reading width = character-based** — `--measure: 66rch` (~60–70 chars/line); video embeds
       switched to `aspect-ratio: 16/9`. See [`styles.md`](styles.md) §1.
 - [x] **Default theme = monotone grayscale** — locked; zero-chroma scale + gray accent, colour

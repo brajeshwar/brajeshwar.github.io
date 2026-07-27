@@ -6,8 +6,24 @@
 
 ## Where we are (updated 2026-07-27) — READ FIRST
 
-### ✅ Session closed 2026-07-27. Pushed, deployed, working tree clean.
-`main` and `origin/main` are in sync. Nothing is pending.
+### ⏸ 2026-07-27, second session — 4 commits ready, NOT pushed.
+All signed (`%G?` = `G`) and in Brajeshwar's name. Nothing is broken and the tree is clean;
+these are simply waiting on his word, per guardrail 7.
+
+    e359263c  Externalise the CSS into one cache-busted stylesheet
+    3b4218f3  Load sidenotes and anchors only where they have work, drop analytics
+    0ba0cb72  Turn syntax highlighting off and delete its stylesheet
+    22cb3522  Split code and cards out of the base CSS tier
+
+**All four are page-weight work, and the last one is the big change:** the CSS is no longer
+inlined. See *Architecture to honor* below and [`styles.md`](styles.md) §5 for the reasoning,
+which reverses a decision made the day before — after measuring the live cache headers rather
+than assuming them.
+
+⚠️ **The first deploy after this exercises `scripts/hash-assets.mjs` for the first time.**
+It has been verified against a full local build (1,486 pages, 7,955 references rewritten, and
+it fails the build if anything it hashed ends up referenced by nothing), but it has never run
+in CI. Watch that first Actions run.
 
 ⚠️ **Push only when Brajeshwar asks** (CLAUDE.md guardrail 7). Committing is fine; every push to
 `main` auto-deploys.
@@ -1286,11 +1302,12 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
 8. **Reviewable diffs** — one concern per change; don't mix a refactor with a redesign.
 
 ## Architecture to honor
-- CSS = **12 plainly-named files** in `_includes/css/`, **inlined** into `<head>` via `styles.html` (`{% capture %}` + SCSSify). Base bundle stays embedded and **under 13KB gzipped** per page (measured over the wire, not raw).
+- CSS = **13 plainly-named files** in `_includes/css/`, concatenated by **`assets/styles/site.css`** into ONE external stylesheet (`{% capture %}` + SCSSify). **9.5 KB gzip / 50 KB raw for the whole site**, fetched once and cached. ⚠️ **Externalised 2026-07-27, reversing the inline-everything rule** — `/assets/*` is served `max-age=31536000`, so inlining re-sent ~6.6 KB gzip on every page view and could never be cached (HTML is `max-age=600`). The ≤13 KB gzip budget still holds but is now a **whole-site** number, not per-page.
+- ⚠️ **Two things the one-file model makes load-bearing.** (a) **Cache-busting**: `scripts/hash-assets.mjs` renames CSS/JS to `<name>.<hash>.ext` post-build and rewrites references — a stable filename at `max-age=31536000` strands returning readers for a year. It must run *after* the esbuild minify step. (b) **Every stylesheet applies to every page** — anchor selectors to a class (`.page`, `.post`) or custom element, never a bare `main > article > h2`. `page.css` broke this rule and would have clamped all ~1,456 post titles to 665px.
 - ⚠️ **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`styles.md`](styles.md) §5 → *Old → new filename map*. Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
-- **CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only. Shipped the same day: syntax highlighting fixed + tokenised onto `--code-*`; new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html` with a `full:` flag. Full rationale + the orphan-partial findings: [`styles.md`](styles.md) §5.
+- ~~**CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only.~~ **Superseded 2026-07-27** — delivery is one external file for every page; the three tiers survive only as *organisation* (which file to open), never as what ships where. Still shipped that day and still true: syntax highlighting fixed + tokenised onto `--code-*` (later removed entirely); new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html`. Full rationale: [`styles.md`](styles.md) §5.
 - **Layouts are now**: `default` · `post` · `page` (reading width, `full: true` for full-bleed) · `album` (galleries) · `redirect`.
-- Layouts pick a CSS bundle through the `styles:` front-matter key (`styles-posts.html`, `styles-pages.html`).
+- ~~Layouts pick a CSS bundle through the `styles:` front-matter key (`styles-posts.html`, `styles-pages.html`).~~ **The `styles:` key and all four `styles-*.html` shims were deleted 2026-07-27** — every stylesheet ships to every page, so there is nothing left to switch. `style:` (singular, a class on `<main>`) is unrelated and still live.
 - **All themeable values are CSS custom properties; no hardcoded colors outside `0.1-color.css`.** Use semantic tokens: `--bg`, `--bg-subtle`, `--text`, `--text-muted`, `--rule`, `--accent`, `--accent-hover`, `--mark`, `--sidenote-text`, `--code-bg`.
 - `container-ideal` = reading width (~60–70ch serif + right gutter for sidenotes); `page.style` = full-width page hook.
 - Theme overrides via `<html data-theme="light|dark|sepia|gray">`; no attribute = Light, and `prefers-color-scheme: dark` → Dark **only when reader made no explicit choice**.

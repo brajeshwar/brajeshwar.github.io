@@ -81,22 +81,29 @@ things light:
 
 - **Text-first, no hero images.** The homepage carries zero images by default (see *Text
   first*). Media is added only where it earns its place.
-- **Inline over fetch.** Critical CSS is inlined into `<head>` (one payload, no blocking
-  request). Icons are **inline SVG**, not an icon font or sprite fetch (see [`styles.md`](styles.md)
-  §3). Prefer embedding a few KB over adding a round-trip.
+- **Inline over fetch — except where caching wins outright.** Icons are **inline SVG**, not an
+  icon font or sprite fetch (see [`styles.md`](styles.md) §3). Prefer embedding a few KB over
+  adding a round-trip. **CSS is the documented exception since 2026-07-27**: `/assets/*` is
+  served `max-age=31536000`, so one external stylesheet is fetched once and is then free on
+  every page for a year, where inlining re-sent it with every page view and could never be
+  cached. Break-even is under two page views — see [`styles.md`](styles.md) §5.
 - **System fonts by default.** The default body font is the system stack — **0 bytes** of
   webfont. Self-hosted fonts (Libre Baskerville only, since 2026-07-19) download **only if a reader
   picks them**, never on a default load.
 - **Only the JS a page needs.** Vanilla, `defer`, and small. Scripts that only matter on
   articles (e.g. sidenotes) shouldn't tax a homepage — scope where practical.
-- **Watch third-party.** Every external script is a request and a dependency; keep them
-  minimal (currently one small analytics beacon).
+- **Watch third-party.** Every external script is a request and a dependency. **Zero of them
+  today** — the analytics beacon was removed 2026-07-27. A third origin costs a DNS lookup and
+  a TLS handshake before its script can even start, commonly 100–300 ms on a cold mobile
+  connection, on every page.
 
-Current measured homepage (built): **~48 KB** HTML uncompressed (**~13 KB** gzip) with **~31 KB**
-of that being the inlined critical CSS, plus **~20 KB** of first-party JS — well inside budget.
-The inlined-CSS sub-budget is **≤ 13 KB gzipped** per page — measured over the wire, not raw
-(see [`memory.md`](memory.md)). Pages measure 6.1–7.2 KB gzip today. Re-measure when adding
-anything to the base bundle.
+**The CSS sub-budget: ≤ 13 KB gzipped.** Measured over the wire, not raw. It used to be
+per-page, because the CSS was inlined and every page paid it again. Since 2026-07-27 there is
+one stylesheet for the whole site — **9.5 KB gzip / 50 KB raw** — so the budget is now a
+**whole-site** figure, and it is the one number to re-measure when adding CSS anywhere.
+
+That the number barely moved while its meaning changed is the point: a page used to carry
+6.1–7.2 KB gzip of CSS *every single view*, and now carries 9.5 KB *once*.
 
 ## Reader's choice
 Appearance is the reader's to set, Kindle/Reader-style: **theme** (mode × palette), **font**,
