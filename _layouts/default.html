@@ -45,7 +45,21 @@
 <style type="text/css">{% include styles.html %}</style>
 <link rel="stylesheet" href="{{ '/assets/print.css' | relative_url }}" media="print">
 <script defer src="{{ '/assets/scripts/appearance.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/scripts/sidenotes.js' | relative_url }}"></script>
+{%- comment -%}
+  Sidenotes, only where there are footnotes to turn into sidenotes. It is the
+  largest script on the site (4.9 KB minified, 1.9 KB gzipped) and **85 of
+  1,456 posts — 5.8% — have footnotes**; on every other page it loaded, ran,
+  found nothing and returned.
+
+  ⚠️ The test must be INLINE in the `if`. Liquid's `assign` does not evaluate
+  `contains`: it fails silently AND truthily, so binding it to a variable
+  first would ship the script everywhere while reading as correct. Same trap
+  as `_layouts/page.html` and the old conditional code.css.
+
+  `class="footnotes"` is what kramdown wraps the foot block in, and it is what
+  sidenotes.js itself looks for.
+{%- endcomment -%}
+{% if content contains 'class="footnotes"' %}<script defer src="{{ '/assets/scripts/sidenotes.js' | relative_url }}"></script>{% endif %}
 <script defer src="{{ '/assets/scripts/search.js' | relative_url }}"></script>
 {%- comment -%}
   Back to Top. Site-wide, but self-limiting: the script returns immediately on
@@ -53,7 +67,18 @@
   nothing else. See _docs/javascript.md.
 {%- endcomment -%}
 <script defer src="{{ '/assets/scripts/back-to-top.js' | relative_url }}"></script>
-<script defer src="https://analytics.oinam.net/script.js" data-website-id="7cc63f26-aabf-4814-88c9-9c3e29f1c783"></script>
+{%- comment -%}
+  Analytics removed 2026-07-27 at Brajeshwar's request, "until I figure out a
+  better way to do this". It was:
+
+    <script defer src="https://analytics.oinam.net/script.js"
+            data-website-id="7cc63f26-aabf-4814-88c9-9c3e29f1c783"></script>
+
+  The cost was not its size but its ORIGIN: a third host meant a DNS lookup
+  and a TLS handshake before it could even start, typically 100-300ms on a
+  cold mobile connection, on every page. Self-hosting the script would remove
+  that; so does removing it.
+{%- endcomment -%}
 
 </head>
 <body>
