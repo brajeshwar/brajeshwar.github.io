@@ -32,6 +32,7 @@ Brajeshwar, 2026-07-27:
 | `pagefind-autofocus.js` | 0.4 KB | `/search/` |
 | `anchors.js` | 1.4 KB | **453 posts** — only where an `h2`+ exists (2026-07-27) |
 | `timeline.js` | 2.3 KB | `/about/` |
+| `random.js` | 1.8 KB | `/random/` only (2026-07-27) |
 | `back-to-top.js` | 3.5 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
 
 **~35.5 KB raw across all eight** (re-measured 2026-07-27) — but **15.2 KB as shipped**, since
@@ -54,6 +55,39 @@ plus a DNS lookup and a TLS handshake.
 ⚠️ **Scripts are content-hashed on publish** (`scripts/hash-assets.mjs`). `/assets/*` is served
 `max-age=31536000`, so before this every JS fix could take a **year** to reach a returning
 reader. See [`hosting.md`](hosting.md) → *Cache headers we actually get*.
+
+## Random post (built 2026-07-27)
+
+A circle in the middle of the prev/next bar goes to `/random/`, which sends the reader to a
+random post. **Self-contained by request** — Brajeshwar: *"A standalone independent module that
+I can carry with my website and not worry about CloudFlare or others."* One page, one small
+script, nothing outside the repo. A Cloudflare Worker was the alternative and was rejected on
+exactly that ground.
+
+**The index is inlined into `/random/`, not fetched from `/assets/`.** That is the whole design
+decision. An index under `/assets/` would inherit `max-age=31536000` and **freeze for a year** —
+posts written afterwards would silently never appear in the pool, and nothing would look broken.
+Hashing the filename fixes it but then the script needs the hashed name, which has to come from
+the HTML anyway. Since `/random/` is the only page that wants the index, it carries it: the HTML
+is `max-age=600`, so a new post is in the pool within ten minutes of a deploy, with no extra
+request and no second cache to reason about.
+
+~62 KB raw / ~23 KB gzipped of URLs, paid **only** by someone who clicked Random. Measured:
+packing them more cleverly (dropping slashes, grouping by year) saves ~1.5 KB gzipped, because
+gzip already eats the repetition — not worth JS that reassembles URLs. Pipe-separated rather
+than newline-separated, so the Liquid loop needs no whitespace-control gymnastics.
+
+- **`location.replace`, not `.href`** — so Back from the post you land on returns to where you
+  clicked Random, instead of bouncing you forward through `/random/` again.
+- **Never returns you to the post you came from**, via `document.referrer`. Odds are 1 in 1,456,
+  but that once reads as a broken button rather than a coincidence. Verified: 0 self-hits in
+  20,000 draws, 1,455 distinct landings out of 1,455 possible.
+- **JS off** → the page shows a real link to a post picked at *build* time (Liquid has no random
+  filter, so the seed is `site.time | date: '%s' | modulo: site.posts.size`). The daily cron
+  rotates it on its own. Deliberately **not** a `<meta http-equiv="refresh">`: an auto-redirect
+  with no JS to replace the history entry traps the Back button.
+- `noindex, follow` + `sitemap: false` + `data-pagefind-ignore` — it is a doorway, not a
+  destination, and its content changes every build.
 
 Every one degrades cleanly: with JS off you get real footnotes instead of sidenotes, the
 default theme instead of a remembered one, `/search/` instead of the ⌘K palette, no `§`

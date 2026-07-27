@@ -40,10 +40,22 @@ layout: default
     The arrow is its own <span> so it can move on hover independently of
     the label.
   {%- endcomment -%}
+  {%- comment -%}
+    Prev · Random · Next.
+
+    The random button is written BETWEEN the two links for reading order and
+    for the tab order, but it does not depend on that position to sit in the
+    middle — post.css centres it absolutely. That matters on the first and
+    last post, which have only one neighbour: the remaining link takes the
+    whole bar (`flex: 1`), and in normal flow the button would be shoved to
+    whichever end was free. Absolute centring means the three-piece bar and
+    the two-piece bar look the same.
+  {%- endcomment -%}
   <nav class="post-nav">
     {%- if page.previous.url -%}
     <a href="{{ page.previous.url }}" class="post-nav__link post-nav__prev" title="{{ page.previous.title }}"><span class="post-nav__arrow" aria-hidden="true">&larr;</span> Prev</a>
     {%- endif -%}
+    <a href="{{ '/random/' | relative_url }}" class="post-nav__random" title="Read something at random" aria-label="Read a random post">{%- include icons/shuffle.svg -%}</a>
     {%- if page.next.url -%}
     <a href="{{ page.next.url }}" class="post-nav__link post-nav__next" title="{{ page.next.title }}">Next <span class="post-nav__arrow" aria-hidden="true">&rarr;</span></a>
     {%- endif -%}

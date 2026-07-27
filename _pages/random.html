@@ -1,0 +1,81 @@
+---
+title: Random
+permalink: /random/
+sitemap: false
+noindex: true
+---
+
+{%- comment -%}
+  /random/ — sends the reader to a random post.
+
+  SELF-CONTAINED, on purpose (Brajeshwar, 2026-07-27: "A standalone
+  independent module that I can carry with my website and not worry about
+  CloudFlare or others."). It is one page plus one small script. No Worker, no
+  KV, no build service, nothing outside this repo.
+
+  WHY THE INDEX IS INLINE HERE RATHER THAN A FILE TO FETCH
+
+  The obvious design is a JSON index somewhere under /assets/ that a script
+  fetches. That would be a bug waiting to happen: /assets/* is served
+  `cache-control: max-age=31536000`, so the index would freeze for a YEAR and
+  posts written after it would silently never appear in the pool. Nothing
+  would look broken — the button would keep working, just never offering
+  anything new. Hashing the filename fixes that but then the script has to
+  learn the hashed name, which means the name has to come from the HTML
+  anyway.
+
+  This page IS the only thing that needs the index, so the index lives in it.
+  The HTML is `max-age=600`, so it refreshes on its own and a new post is in
+  the pool within ten minutes of a deploy. One less moving part, one less
+  cache to reason about, and no extra request: the reader is already loading
+  this page.
+
+  It costs ~62 KB raw / ~23 KB gzipped, paid ONLY by someone who clicked
+  Random. Measured against the alternatives, packing the URLs more cleverly
+  (dropping the slashes, grouping by year) saves about 1.5 KB gzipped — gzip
+  already eats the repetition — and costs JS that reassembles URLs, so plain
+  full URLs it is.
+
+  `|` as the separator, not a newline: one character, and no whitespace-control
+  gymnastics in the Liquid loop to stop every line arriving indented. A URL
+  cannot contain a bare `|`.
+
+  WITHOUT JAVASCRIPT this page still works (guardrail 4). It renders a real
+  link to a post picked at BUILD time, and because the site rebuilds on a
+  daily cron that pick rotates every day on its own. Deliberately NOT a
+  <meta http-equiv="refresh">: an automatic redirect with no JS to replace the
+  history entry traps the back button, and this page is reached by choice — it
+  can afford to state what it is.
+{%- endcomment -%}
+
+{%- comment -%}
+  The build-time pick. Liquid has no random filter and this repo takes no new
+  plugins (guardrail 3), so the build timestamp is the seed: seconds since the
+  epoch, modulo the number of posts. Deterministic per build — which is what
+  makes it testable — and different on every build.
+{%- endcomment -%}
+{%- assign seed = site.time | date: '%s' -%}
+{%- assign pick_index = seed | modulo: site.posts.size -%}
+{%- assign pick = site.posts[pick_index] -%}
+
+<div class="random" data-pagefind-ignore>
+  <h1>Random</h1>
+
+  <p class="random__js">Finding you something to read&hellip;</p>
+
+  <noscript>
+    <p>JavaScript is off, so here is one picked when the site was last built:</p>
+  </noscript>
+
+  <p class="random__fallback">
+    <a href="{{ pick.url | relative_url }}" rel="nofollow">{{ pick.title }}</a>
+    &mdash; or go back to <a href="{{ '/archives/' | relative_url }}">all {{ site.posts.size }} posts</a>.
+  </p>
+</div>
+
+{%- capture random_index -%}
+{%- for post in site.posts -%}
+{{ post.url | relative_url }}{%- unless forloop.last -%}|{%- endunless -%}
+{%- endfor -%}
+{%- endcapture -%}
+<script type="text/plain" id="random-index">{{ random_index }}</script>

@@ -19,6 +19,12 @@ these are simply waiting on his word, per guardrail 7.
     0ba0cb72  Turn syntax highlighting off and delete its stylesheet
     22cb3522  Split code and cards out of the base CSS tier
 
+**Random post, built 2026-07-27.** A circle in the middle of the prev/next bar → `/random/` →
+a random post. Self-contained by request (no Cloudflare Worker). ⚠️ **The post index is inlined
+into `/random/` rather than fetched from `/assets/`** — that path is cached a year, so an index
+there would freeze and new posts would silently never appear in the pool. The HTML is
+`max-age=600`, so it stays fresh on its own. See [`javascript.md`](javascript.md) → *Random post*.
+
 **Decided, so it does not get re-litigated: the browser cache TTL stays at a year.** A shorter
 TTL is what you pick when filenames are stable and you are hedging against staleness; content
 hashing removes the staleness, so shortening it only re-fetches identical files more often.

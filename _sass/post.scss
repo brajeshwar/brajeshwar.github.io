@@ -154,6 +154,9 @@ photo-cover__desc {
 .post-nav {
   display: flex;
 
+  /* Containing block for the absolutely-centred random button below. */
+  position: relative;
+
   /* The nav spans the CONTENT BAND — it is a direct child of `main` and
      carries no width of its own, so it fills it. It used to wear
      .container-ideal, held at the reading measure to match the article;
@@ -204,6 +207,81 @@ photo-cover__desc {
 /* Flush to the outer edges: Prev opens the bar, Next closes it. */
 .post-nav__prev { justify-content: flex-start; }
 .post-nav__next { justify-content: flex-end; }
+
+/* ---- The random button ------------------------------------------
+   A third piece in the bar (2026-07-27, Brajeshwar): a circle in the middle
+   that goes to /random/, which then sends the reader to a random post.
+
+   ABSOLUTELY CENTRED, not laid out in flow. The bar's links are `flex: 1`,
+   so on the first and last post — the only ones with a single neighbour —
+   the one remaining link takes the whole width and a normal-flow button
+   would be pushed to whichever end was free. Centring it against the bar
+   itself means it sits in the same place on every post, and the links keep
+   the flex behaviour they already had, untouched.
+
+   The links justify their text to the outer edges, so the middle of the bar
+   is empty on every variant and there is nothing for the circle to cover.
+
+   THE RING IS THE SPACING (Brajeshwar: "its border is the 1px transparent
+   that we thought earlier. Now that there is a third piece in the NAV, it
+   makes sense to have the spacing.").
+
+   It is drawn in the PAGE background, not in `transparent` — a literally
+   transparent border would show the bar through it and separate nothing.
+   This is the second of the two dividers tried and rejected back when the
+   bar had only two halves: a hairline read as a rule drawn ON the bar, and
+   inverting it to the page colour read as a slit cut THROUGH it. The slit
+   was the better of the two and was still wrong for a straight line, which
+   is a mark asking to be noticed on an element whose job is to be quiet.
+   Around a circle it is not a mark — it is the button reading as punched
+   out of the bar, which is exactly what it is. Same idea, and the shape is
+   what makes it work.
+   ------------------------------------------------------------------ */
+.post-nav__random {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Above the links, so hovering the circle does not also tint the half
+     underneath it — both are positioned, so without this the later link in
+     source order would paint over the button. */
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+  border-radius: 50%;
+
+  /* The bar's own fill, so the circle is the bar — only the ring separates
+     them. On hover it steps up exactly as a link half does. */
+  background-color: var(--bg-color-low);
+  border: var(--border-size) var(--border-style) var(--bg-color-lower);
+
+  color: var(--text-color-low);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
+}
+
+.post-nav__random:hover,
+.post-nav__random:focus-visible {
+  color: var(--text-color-higher);
+  background-color: color-mix(in oklab, var(--text-color) 8%, var(--bg-color-low));
+  text-decoration: none;
+}
+
+/* The bar has to be tall enough for the circle plus its ring, or the ring
+   touches the rounded ends and stops reading as a gap. The links set the
+   height from their own padding and font-size, which is a hair under this on
+   a narrow screen; min-height makes the floor explicit rather than leaving it
+   to a coincidence between two unrelated values. */
+.post-nav {
+  min-height: calc(var(--icon-button-size) + (var(--border-size) * 2) + var(--space-2xs));
+  align-items: stretch;
+}
 
 /* NO DIVIDER. The two halves touch (Brajeshwar, 2026-07-27: "I don't think
    the vertical separation is working. Remove that and let them touch each

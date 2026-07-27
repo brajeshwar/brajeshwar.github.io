@@ -13,6 +13,14 @@
 
 <meta name="description" content="{{ site.description }}">
 <meta name="color-scheme" content="light dark">
+{%- comment -%}
+  Opt-in `noindex: true` in a page's front matter. Only /random/ uses it: the
+  page is a doorway, not a destination — its content is one link that changes
+  every build, so indexing it would put a permanently-stale result in search
+  engines for a URL whose whole point is that it never has fixed content.
+  `follow` so the links out of it still carry.
+{%- endcomment -%}
+{%- if page.noindex %}<meta name="robots" content="noindex, follow">{% endif -%}
 <meta name="fediverse:creator" content="@brajeshwar@margins.oinam.com">
 
 {%- comment -%}
@@ -77,6 +85,17 @@
 {%- endcomment -%}
 {% if content contains 'class="footnotes"' %}<script defer src="{{ '/assets/scripts/sidenotes.js' | relative_url }}"></script>{% endif %}
 <script defer src="{{ '/assets/scripts/search.js' | relative_url }}"></script>
+{%- comment -%}
+  Random, on the one page that carries the post index. Gated on the index
+  element rather than on `page.url == '/random/'` so the two cannot drift: the
+  script does nothing without that element, and this is the same test the
+  script itself makes.
+
+  ⚠️ Inline in the `if`, like the others. Liquid's `assign` does not evaluate
+  `contains` — it fails silently AND truthily, so hoisting it would ship this
+  on all ~1,483 pages while reading as correct.
+{%- endcomment -%}
+{% if content contains 'id="random-index"' %}<script defer src="{{ '/assets/scripts/random.js' | relative_url }}"></script>{% endif %}
 {%- comment -%}
   Back to Top. Site-wide, but self-limiting: the script returns immediately on
   a page that isn't tall enough to need one, so short pages pay a parse and
