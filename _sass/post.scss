@@ -1,7 +1,20 @@
+@use "config" as *;   // $breakpoint-* live in config.scss. `as *` keeps them
+                      // unnamespaced, exactly as they were under @import, so
+                      // nothing below this line had to change. config's own CSS
+                      // is emitted once, at site.scss's first @use, not here.
+                      //
+                      // Added 2026-07-27 with the random button's narrow-screen
+                      // rule, the first use of a Sass variable in this file.
+
 /* ============================================================
-   Post — article layout bundle.
+   Post — article layout.
    ------------------------------------------------------------
-   Loaded by _layouts/post.html via styles-posts.html.
+   Concatenated into assets/styles/site.scss with everything else
+   and shipped to every page (2026-07-27; it used to be gated to
+   the post layout by styles-posts.html, which no longer exists).
+   Every selector here is anchored to `.post`, `.post-nav` or a
+   custom element, so nothing leaks — see the note on page.scss
+   for what happened to the one file that got that wrong.
    ============================================================ */
 
 /* ---- The cover image: the site's ONE full-bleed element ---------
@@ -157,6 +170,12 @@ photo-cover__desc {
   /* Containing block for the absolutely-centred random button below. */
   position: relative;
 
+  /* The random circle's diameter, declared here rather than on the button so
+     the narrow-screen override at the foot of this file has one place to
+     change it. Deliberately larger than the bar's own height (46px) — see the
+     note on .post-nav__random. */
+  --post-nav-random-size: 56px;
+
   /* The nav spans the CONTENT BAND — it is a direct child of `main` and
      carries no width of its own, so it fills it. It used to wear
      .container-ideal, held at the reading measure to match the article;
@@ -185,7 +204,13 @@ photo-cover__desc {
 
   background: var(--bg-color-low);
   border-radius: var(--border-radius-larger);
-  overflow: hidden;                 /* clips each half's hover to the round ends */
+
+  /* NO `overflow: hidden` (removed 2026-07-27). It used to clip each half's
+     hover to the bar's round ends, which is the right effect — but it also
+     clips anything that leaves the box, and the random button is now
+     deliberately TALLER than the bar so it reads as raised rather than
+     inset. Clipping is replaced by giving each half its own outer radius,
+     below, so the corners round without the box being a cage. */
 
   font-size: var(--step--1);
   text-transform: uppercase;
@@ -207,6 +232,25 @@ photo-cover__desc {
 /* Flush to the outer edges: Prev opens the bar, Next closes it. */
 .post-nav__prev { justify-content: flex-start; }
 .post-nav__next { justify-content: flex-end; }
+
+/* ---- Rounded ends, without clipping the bar ---------------------
+   Each half rounds its own OUTER end, which is what `overflow: hidden` used
+   to do for free. The inner ends stay square and meet in the middle, exactly
+   as before — the two halves are the same colour at rest, so there is nothing
+   to see there until one is hovered.
+
+   The `:has()` pair handles the first and last post. A single link is
+   `flex: 1` and fills the whole bar, so it needs BOTH ends rounded or the
+   hover tint squares off the corner it does not own. Written as "the bar has
+   no prev" / "the bar has no next" rather than with :only-child, because the
+   random button is a child too and would break any count-based selector. */
+.post-nav__prev { border-radius: var(--border-radius-larger) 0 0 var(--border-radius-larger); }
+.post-nav__next { border-radius: 0 var(--border-radius-larger) var(--border-radius-larger) 0; }
+
+.post-nav:not(:has(.post-nav__prev)) .post-nav__next,
+.post-nav:not(:has(.post-nav__next)) .post-nav__prev {
+  border-radius: var(--border-radius-larger);
+}
 
 /* ---- The random button ------------------------------------------
    A third piece in the bar (2026-07-27, Brajeshwar): a circle in the middle
@@ -251,12 +295,24 @@ photo-cover__desc {
   align-items: center;
   justify-content: center;
 
-  width: var(--icon-button-size);
-  height: var(--icon-button-size);
+  /* BIGGER THAN THE BAR, on purpose (Brajeshwar, 2026-07-27: "Make the Random
+     button bigger than the NAV Bar, so it is highlighted properly"). The bar
+     is 46px tall, so at 56px the circle stands 5px proud at the top and
+     bottom and reads as sitting ON the bar rather than punched into it.
+
+     This is what cost the bar its `overflow: hidden` — see the note there.
+     Anything taller than the bar has to be able to leave the box. */
+  width: var(--post-nav-random-size);
+  height: var(--post-nav-random-size);
   border-radius: 50%;
 
-  /* The bar's own fill, so the circle is the bar — only the ring separates
-     them. On hover it steps up exactly as a link half does. */
+  /* The bar's own fill, so the circle reads as the same material — only the
+     ring separates them. On hover it steps up exactly as a link half does.
+
+     The ring now does two jobs: where the circle overlaps the bar it is the
+     gap that separates them, and where it stands proud of the bar it is
+     page-on-page and simply disappears. Same 1px, two readings, no extra
+     rule. */
   background-color: var(--bg-color-low);
   border: var(--border-size) var(--border-style) var(--bg-color-lower);
 
@@ -273,14 +329,31 @@ photo-cover__desc {
   text-decoration: none;
 }
 
-/* The bar has to be tall enough for the circle plus its ring, or the ring
-   touches the rounded ends and stops reading as a gap. The links set the
-   height from their own padding and font-size, which is a hair under this on
-   a narrow screen; min-height makes the floor explicit rather than leaving it
-   to a coincidence between two unrelated values. */
+/* The icon grows with the circle. The SVG ships at 16px, which is right in a
+   32px header tool and lost inside a 56px one. */
+.post-nav__random svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* The bar keeps its natural height — set by the links' own padding and
+   font-size — and the circle is allowed to exceed it. There was a min-height
+   here while the circle was smaller than the bar and had to fit inside it;
+   that constraint is now the opposite of what is wanted, so it is gone.
+
+   `align-items: stretch` keeps each half full-height so its hover tint fills
+   the bar rather than hugging its text. */
 .post-nav {
-  min-height: calc(var(--icon-button-size) + (var(--border-size) * 2) + var(--space-2xs));
   align-items: stretch;
+}
+
+/* ---- Narrow screens ---------------------------------------------
+   The circle shrinks with everything else, but not below the bar's own
+   height — past that it stops standing proud and the whole point of it is
+   gone, while the prev/next labels lose room they actually need. */
+@media (max-width: $breakpoint-small) {
+  .post-nav { --post-nav-random-size: 44px; }
+  .post-nav__random svg { width: 18px; height: 18px; }
 }
 
 /* NO DIVIDER. The two halves touch (Brajeshwar, 2026-07-27: "I don't think
