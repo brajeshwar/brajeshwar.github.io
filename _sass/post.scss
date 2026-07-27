@@ -319,28 +319,21 @@ photo-cover__desc {
   transition: background-color var(--transition-duration) ease;
 }
 
-/* ⚠️ THE COLOUR HAS TO BE RE-STATED ON :visited AND :hover, and it is not
-   belt-and-braces — leaving either off is a visible bug.
+/* This button is where the site-wide :visited bug was FOUND: the icon went
+   invisible because a bare `.post-nav__random` (0,1,0) lost `color` to
+   base.css's `a:visited` (0,1,1), and /random/ becomes a visited link the
+   first time anyone clicks it. It turned out to affect the header nav,
+   PREV/NEXT, the § anchors, the header tools and more, and it is fixed at the
+   root now — base.css wraps its link rules in :where(), so any component rule
+   wins. No `:visited` restatement is needed here or anywhere else.
 
-   base.css styles links as `a, a:visited` and `a:hover, a:active`, both
-   (0,1,1). A bare `.post-nav__random` is (0,1,0) and LOSES to both, so the
-   icon quietly took --text-color-link — a dark value — on a dark disc:
-   invisible. The rest state broke the first time the button was ever
-   clicked, because /random/ is then a visited link and `a:visited` applies
-   from then on.
-
-   Adding a pseudo-class takes these to (0,2,0), which wins. This is the same
-   trap `.icon-button` in chrome.css sits in: it re-states colour on :hover
-   but not on :visited, so the header RSS link is one visit away from the
-   same bug. Not fixed here — flagged there.
-
-   Hover goes to the FULL --color-primary rather than easing opacity. The
-   rest state is deliberately softened (below), so "press toward the strong
-   value" is available as an affordance and reads as activation. Opacity was
-   the earlier approach and was wrong twice over: it faded the icon along
-   with the disc, and it left `color` unset, which is what let base.css win. */
-.post-nav__random,
-.post-nav__random:visited {
+   Hover goes to the FULL --color-primary rather than easing opacity. The rest
+   state is deliberately softened (above), so "press toward the strong value"
+   is available as an affordance and reads as activation. Opacity was the
+   earlier approach and was wrong twice over: it faded the icon along with the
+   disc, and leaving `color` unset is what let base.css win in the first
+   place. */
+.post-nav__random {
   color: var(--color-primary-fg);
 }
 

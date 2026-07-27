@@ -295,7 +295,37 @@ h6 { font-size: var(--step--2); }
   .headerlink { display: none; }
 }
 
-a, a:visited {
+/* ⚠️ :where() IS LOAD-BEARING HERE, added 2026-07-27. It makes these rules
+   zero-specificity, so ANY component rule beats them.
+
+   Without it these are (0,1,1) — an element plus a pseudo-class — which is
+   higher than a plain single class. Every piece of chrome that happens to be
+   a link therefore LOST its own colour the moment it was visited, and took
+   --text-color-link instead. That is --color-accent: gray-900 by default, so
+   the symptom was "this went slightly too dark" rather than anything obviously
+   broken, and it became a wrong hue outright for any reader who picked an
+   accent.
+
+   Found by audit, not by eye, and it was everywhere: the header nav
+   (`site-nav a`, 0,0,2), PREV/NEXT (`.post-nav__link`, 0,1,0), the § heading
+   anchors (`.headerlink`, 0,1,0), the header tools (`.icon-button`, 0,1,0),
+   the homepage book list (`home-books li a`, 0,0,3) and the search results
+   (`.pagefind-modular-list-link`, 0,1,0). Every one of those is a link a
+   reader visits by definition, so the bug was permanent once triggered.
+
+   Patching each with its own `:visited` was the alternative. This is better:
+   it removes the cause instead of the instances, and it stops the next
+   chrome link from arriving with the same bug. A DEFAULT should be the
+   easiest thing in the cascade to override, which is exactly what :where()
+   says.
+
+   ⚠️ Only `color` was ever affected. Browsers restrict :visited styling to a
+   short list of colour properties, so the `text-decoration` here never leaked
+   into visited state — and `.post-nav__link:hover` already re-states
+   `text-decoration: none` at (0,2,0), so hover was covered too. The blast
+   radius of this change is colour, on the rules listed above, and nothing
+   else: everything at (0,1,1) or higher already won and is untouched. */
+:where(a, a:visited) {
   color: var(--text-color-link);
   text-decoration: underline;
   text-decoration-color: var(--text-color-lower);
@@ -303,7 +333,7 @@ a, a:visited {
   text-underline-offset: 0.3rem;
 }
 
-a:hover, a:active {
+:where(a:hover, a:active) {
   color: var(--text-color-link);
   text-decoration: underline;
   text-decoration-color: var(--text-color);
