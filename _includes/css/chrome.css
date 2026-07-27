@@ -317,10 +317,18 @@ site-tools svg {
   width: var(--body-width);
   max-width: var(--body-width-max);
 
-  /* The row takes over the seam <footer> used to own: the full --space-2xl
-     above it, then the footer follows close underneath. It has to read as part
-     of the footer's approach, not as a stray control tacked onto the article. */
-  margin: var(--space-2xl) auto var(--space-m);
+  /* ONE standard space either side (Brajeshwar, 2026-07-27: "use the standard
+     gap between them, at best 2x the default spacing").
+
+     It was --space-2xl above and --space-m below, which on a post came to a
+     182px void: 40 from .post-nav's trapped bottom margin, 80 here, 32 for the
+     control, 30 below. A page with no Back to Top gets 80px — `footer`'s own
+     --space-2xl — so 182 was more than twice the site's own standard.
+
+     Now --space-m either side: 30 + 32 + 30 = 92px, within a dozen pixels of
+     that 80px standard, and the arrow sits higher, which is the other half of
+     what was asked. The nav gave up its bottom margin to make room. */
+  margin: var(--space-m) auto;
 
   display: flex;
   justify-content: flex-end;        /* band's right edge, floating and settled alike */

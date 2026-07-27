@@ -782,12 +782,28 @@ Three things this depends on, each non-obvious:
    rather than into `transparent`). A see-through disc with a line of prose crossing it is
    unreadable.
 
-The settled position takes over the `--space-2xl` seam the footer used to own and sits
-`--space-m` above it, so it reads as the footer's approach rather than as something stuck on the
-end of the article. That needs `.back-to-top-row + footer { margin-top: 0 }` — adjacent margins
-collapse to the larger, so the footer's own `2xl` would otherwise strand the control mid-gap.
-`visibility`/`opacity` rather than `display` for the hide, so the row keeps its box and the
-footer never jumps as it fades in.
+**One standard space either side of the settled control** — `margin: var(--space-m) auto`.
+Retuned 2026-07-27: it was `--space-2xl` above and `--space-m` below, which on a post produced a
+**182px void** between the prev/next bar and the footer. The breakdown is worth keeping, because
+three of the four contributors were invisible in the CSS:
+
+    40px  .post-nav's bottom margin — TRAPPED, see below
+    80px  this row's --space-2xl top margin
+    32px  the control itself
+    30px  this row's bottom margin
+
+⚠️ **`.post-nav`'s bottom margin did not collapse away.** `main` is
+`container-type: inline-size`, which establishes an independent formatting context, so the last
+child's bottom margin is trapped inside it instead of merging with what follows — it *stacked*
+with this row's top margin instead of collapsing into it. `.post-nav` now sets
+`margin-block: var(--space-l) 0` and leaves the seam to this rule.
+
+Result: **92px**, against the **80px** a page with no Back to Top already gets from `footer`'s
+own `--space-2xl`. Verified the same on a post, `/about/` and `/archives/`.
+
+`.back-to-top-row + footer { margin-top: 0 }` is still required — adjacent margins collapse to
+the larger, so the footer's `2xl` would otherwise reopen the gap. `visibility`/`opacity` rather
+than `display` for the hide, so the row keeps its box and the footer never jumps as it fades in.
 
 ## Every page fills the band
 

@@ -150,7 +150,14 @@ photo-cover__desc {
      left-aligned, 179px out of step with the prose it belongs to. The class
      is gone but the habit stays: set only the axis this rule has business
      setting. */
-  margin-block: var(--space-l);
+  /* Top only. The bottom used to be --space-l too, and it does NOT collapse
+     away: `main` is `container-type: inline-size`, which establishes an
+     independent formatting context, so the last child's bottom margin is
+     trapped inside instead of merging with what follows. It therefore STACKED
+     with the Back to Top row's own top margin. That is 40 of the 182px that
+     used to sit between this bar and the footer. The seam below is the row's
+     to own — see chrome.css. */
+  margin-block: var(--space-l) 0;
   padding: 0;
 
   background: var(--bg-color-low);
