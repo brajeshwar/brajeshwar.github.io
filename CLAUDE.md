@@ -57,12 +57,21 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 9. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
-- CSS = **13 plainly-named files** in `_includes/css/` (`config`, `themes`, `base`, `chrome`,
+- CSS = **13 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
   `post`, `page`, `album`, + per-page one-offs `home`/`archives`/`search`/`now`/`timeline`, plus
-  the not-yet-wired `bookmarks`), all concatenated by **`assets/styles/site.css`** into ONE
-  external stylesheet (SCSSify). Flattened from 25 numbered ITCSS partials on 2026-07-19 —
-  **don't reintroduce numeric prefixes**; cascade order lives in `site.css`, and `config.css`
-  must stay first. One file, 9.5KB gzip / 50KB raw, fetched once and then cached.
+  the not-yet-wired `bookmarks`), compiled by **`assets/styles/site.scss`** into ONE external
+  stylesheet. Flattened from 25 numbered ITCSS partials on 2026-07-19 — **don't reintroduce
+  numeric prefixes**; cascade order lives in `site.scss`, and `config` must stay first.
+  One file, 9.5KB gzip / 49KB raw, fetched once and then cached.
+- **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
+  them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
+  because an underscore directory is never copied to the output — sources under `assets/`
+  would publish 14 raw `.scss` files at public URLs. **`@use`, not `@import`** (Dart Sass
+  removes `@import` in 3.0): a module emits its CSS at FIRST load, so the order in `site.scss`
+  is still the entire cascade. `base`/`album`/`home` each open with `@use "config" as *` for
+  `$breakpoint-*`. Verified byte-identical across the move.
+- One trap **went away** with it: a literal Liquid tag in a CSS comment used to break the
+  build. These are no longer parsed as Liquid, so a stray tag in a comment is just text.
 - **Externalised 2026-07-27, reversing the inlining.** `/assets/*` is served
   `cache-control: max-age=31536000` — a year, gzipped, no `_headers` file, just what the host
   does. Inlining re-sent ~6.6KB gzip on *every* page view and could never be cached (the HTML
@@ -70,23 +79,26 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
   Per-layout splitting existed to keep the *inline* payload small and is now pointless: one URL
   shared by every page is one cache entry, where per-layout files would each miss separately.
 - ⚠️ **A year-long cache means filenames must change when bytes do.**
-  `scripts/hash-assets.mjs` renames CSS/JS to `<name>.<hash>.ext` after the build and rewrites
-  every reference. It runs in Actions only; local `jekyll serve` serves the unhashed paths and
+  `scripts/hash-assets.mjs` renames CSS/JS **and fonts** to `<name>.<hash>.ext` after the build
+  and rewrites every reference, in two passes — fonts first, then the CSS that points at them,
+  so the stylesheet's hash covers its own font URLs. Must run AFTER the esbuild minify step.
+  (A `?v=<date>` query string was the alternative and is worse: the daily cron would bust it
+  every day for unchanged bytes, and some caches ignore query strings outright.) It runs in Actions only; local `jekyll serve` serves the unhashed paths and
   is internally consistent, as is the Cloudflare Pages backup.
 - ⚠️ **Every stylesheet now applies to every page.** There is no layout gate any more, so a
   selector must anchor to something page-specific — a class (`.page`, `.post`) or a custom
-  element (`<photo-cover>`) — never a bare `main > article > h2`. `page.css` was the one file
+  element (`<photo-cover>`) — never a bare `main > article > h2`. `page.scss` was the one file
   that got this wrong; unscoped it would have clamped all ~1,456 post titles to the measure.
   The `styles:` front-matter key is **gone** (`style:` = a class on `<main>` — still live, and
   the two were easily confused).
-- **All themeable values are CSS custom properties; no hardcoded colors outside `themes.css`.**
+- **All themeable values are CSS custom properties; no hardcoded colors outside `themes.scss`.**
 - **Comment CSS generously.** `sass: style: compressed` strips block comments, so prose in
-  `_includes/css/*.css` costs **zero bytes** in the shipped page — verified. Explain *why*,
+  `_sass/*.scss` costs **zero bytes** in the shipped page — verified. Explain *why*,
   record gotchas, date non-obvious decisions. Two hard rules: **never use a bang comment**
   (slash-star-bang survives compression and ships), and **never write a literal star-slash
   inside comment prose** (it closes the comment early; the build then fails with a misleading
-  "expected selector" pointing at `assets/styles/site.css` — the file doing the scssify, never
-  the file with the broken comment).
+  "expected selector" pointing at `assets/styles/site.scss` — the entry point, never the
+  partial with the broken comment).
 - `container-ideal` = reading width; `page.style` = full-width page hook.
 
 ## Quick verification before handing back

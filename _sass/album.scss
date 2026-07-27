@@ -1,3 +1,8 @@
+@use "config" as *;   // $breakpoint-* live in config.scss. `as *` keeps them
+                      // unnamespaced, exactly as they were under @import, so
+                      // nothing below this line had to change. config's own CSS
+                      // is emitted once, at site.scss's first @use, not here.
+
 /* ============================================================
    Album — thumbnail grid for photos, films, devices, videos.
    ------------------------------------------------------------

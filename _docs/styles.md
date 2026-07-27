@@ -8,7 +8,7 @@ philosophy they serve — see [`design.md`](design.md).
 > comes from the scales below (`--step-*`, `--space-*`, `--scale`). Reuse a token, don't
 > invent a number.
 >
-> **Golden rule (color):** no hardcoded colors outside `_includes/css/themes.css`.
+> **Golden rule (color):** no hardcoded colors outside `_sass/themes.scss`.
 > Components reference tokens only. **One** known exception remains: the Pagefind UI vars in
 > `search.css`. (syntax highlighting was the other — tokenised 2026-07-19 onto
 > `--code-*`; see §5 → *Syntax highlighting*.)
@@ -17,7 +17,7 @@ philosophy they serve — see [`design.md`](design.md).
 
 # 1. Typography
 
-How type works on the site. Lives in `_includes/css/config.css` (scales, families),
+How type works on the site. Lives in `_sass/config.scss` (scales, families),
 `themes.css` (variable fonts), and `base.css` (headings, rhythm).
 
 ## Families & the font axis (Ovellum parity)
@@ -377,6 +377,16 @@ Theming — mode × palette × font × accent — is §2 above; the byte budget 
 **Decided 2026-07-19.** Supersedes the ad-hoc mix of `styles:` keys that had grown up to
 that point. Folded into this doc on 2026-07-26, from what used to be `css-architecture.md`.
 
+> 📍 **Where the files live, as of 2026-07-27:** `_sass/*.scss`. They were
+> `_includes/css/*.css` until then — Liquid includes, because the CSS was inlined into the
+> HTML. Nothing includes them into HTML any more, so they are ordinary Sass partials compiled
+> by `assets/styles/site.scss`.
+>
+> **This doc still says `config.css`, `base.css`, `themes.css` in many places** — those are
+> dated entries kept as written, and they mean `_sass/config.scss` and so on. Same content,
+> same names, different extension and directory. (There is an older rename too: the numbered
+> ITCSS partials, `0.0-config.css` and friends — see *Old → new filename map* below.)
+
 ## The principle
 
 > ⚠️ **Superseded 2026-07-27. The CSS is now ONE EXTERNAL FILE.** The two paragraphs
@@ -393,8 +403,8 @@ tell what ships where.~~
 
 ## The principle, restated (2026-07-27)
 
-**Ship one external stylesheet and let it cache.** `assets/styles/site.css` concatenates
-every file in `_includes/css/` and is the only stylesheet on the site.
+**Ship one external stylesheet and let it cache.** `assets/styles/site.scss` compiles
+every partial in `_sass/` and is the only stylesheet on the site.
 
 The embed-everything argument was not sloppy, it was built on an unchecked premise — that
 the round trip recurs. Measuring instead of assuming:
@@ -450,9 +460,9 @@ written onto the article by `page.html`, mirroring `.post` on a post.
 — `timeline.css` came with the `/about/` rework; `cards.css` was split out of the base tier on
 2026-07-27, and `code.css` was deleted the same day when Rouge was disabled). The numbering
 (`0.0-`, `2.1-`, `9.9-`) encoded cascade order for humans; the order now lives in one place —
-`assets/styles/site.css` — which is the only thing that actually determines it.
+`assets/styles/site.scss` — which is the only thing that actually determines it.
 
-    _includes/css/
+    _sass/
       config.css      ratios, scales, spacing, breakpoints   ← must stay first
       themes.css      palettes, light/dark, webfonts         ← only file with raw colour
       base.css        reset, type, tables, images, cards,
@@ -824,10 +834,16 @@ Jekyll parses inside `/* */` too. Documenting the conditional by spelling it out
 broke the whole build, with the syntax error reported against `styles.html` — nowhere near the
 cause. Use a raw tag or describe it in prose.
 
-> Still true, and the misdirection is now one file further away: since 2026-07-27 the error
-> points at **`assets/styles/site.css`**, which is merely the file calling `scssify`, and never
-> at the `_includes/css/*.css` that actually contains the broken comment. Same for a stray
-> literal `*` `/` inside comment prose.
+> ✅ **This trap is GONE as of 2026-07-27.** The stylesheets moved from `_includes/css/*.css`
+> to `_sass/*.scss` and are no longer Liquid includes, so Jekyll does not parse inside them at
+> all. A literal Liquid tag in a comment is now just text. Kept above because the failure it
+> describes cost a build and the shape of it — an error reported against the file that *called*
+> the compiler, never the file with the bad comment — is worth recognising if it ever recurs.
+>
+> ⚠️ **Two rules DO survive the move**, because they are Sass, not Liquid: never write a bang
+> comment (slash-star-bang survives compression and ships), and never write a literal `*` `/`
+> inside comment prose. That second one still misreports, now against
+> `assets/styles/site.scss` rather than the partial at fault.
 
 **What is NOT worth splitting**, having measured it: the theme-state rules
 (`[data-theme]`/`[data-palette]`/`[data-font]`/`[data-text-size]`) look dead on any given page —

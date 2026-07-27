@@ -1,8 +1,17 @@
+@use "config" as *;   // $breakpoint-* live in config.scss. `as *` keeps them
+                      // unnamespaced, exactly as they were under @import, so
+                      // nothing below this line had to change. config's own CSS
+                      // is emitted once, at site.scss's first @use, not here.
+
 /* The home page's books row uses ul.item__cards, which lives in cards.css
    since 2026-07-27 — it was in base.css, and therefore on every post, to
-   serve this page and the two album pages. Pulled in here rather than
-   duplicated. */
-{% include css/cards.css %}
+   serve this page and the two album pages.
+
+   This file used to pull it in with an include. That was right when each page
+   assembled its own bundle, and became a DUPLICATE the moment the manifest
+   started including cards.css for everyone: the rules were emitted twice into
+   the same stylesheet. Removed 2026-07-27. Cascade order is the manifest's
+   job now, and cards.css sits ahead of this file there. */
 
 /* ============================================================
    Home — homepage only.

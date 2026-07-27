@@ -1,0 +1,108 @@
+---
+# This empty front matter is load-bearing. It is what marks the file as one
+# Jekyll should render rather than copy: without the fence you get this
+# manifest served verbatim as text, @import lines and all.
+---
+// ===========================================================================
+// site.scss — the ONE stylesheet.
+// ===========================================================================
+//
+// Every partial in _sass/ is compiled into a single file, served to every
+// page, and cached for a year. Sources moved out of _includes/css/ on
+// 2026-07-27 (Brajeshwar: "its raw CSS files no longer need to live under
+// _includes"), which is right — nothing includes them into HTML any more.
+//
+// WHY _sass/ AND NOT assets/styles/*
+//
+// _sass/ is Jekyll's built-in home for stylesheet partials: it is a Sass load
+// path, and being an underscore directory it is NEVER copied to the output.
+// Sources under assets/ would be published — fourteen raw .scss files sitting
+// at public URLs, in the deploy, for nobody. That is avoidable with `exclude`
+// plus a `sass.load_paths` entry, but it is three moving parts to reproduce
+// what _sass/ does with zero configuration and no way to get wrong.
+//
+// Same intent either way: the sources are out of _includes/, in a directory
+// that means stylesheets and nothing else.
+//
+// WHY THE OUTPUT STAYS AT /assets/styles/site.css
+//
+// Root (/site.css) was the alternative. /assets/* is the path measured to come
+// back `cache-control: max-age=31536000`, and that single header is what the
+// whole externalisation rests on. Cloudflare almost certainly keys that off the
+// .css extension rather than the path, so root would very likely behave the
+// same — but "very likely" is a poor trade against a measured fact, for a move
+// that buys nothing. print.css stays at /assets/print.css for the same reason.
+//
+// ---------------------------------------------------------------------------
+// WHAT CHANGED IN THE MOVE
+//
+// These were Liquid includes, assembled by {% raw %}{% capture %}{% endraw %} + scssify. They are
+// now plain Sass partials, and NOTHING ELSE CHANGED — verified byte-identical
+// against the previous build.
+//
+// One trap disappears with them. A literal Liquid tag in a CSS comment used to
+// break the build, reporting the error against whichever file called scssify
+// and never the file with the bad comment. Jekyll no longer parses these as
+// Liquid, so a stray tag in a comment here is now just text.
+//
+// Two rules survive the move unchanged:
+//   - Comments still cost ZERO bytes. `sass: style: compressed` strips them,
+//     so prose in _sass/*.scss never reaches the browser. Keep commenting.
+//   - Never write a bang comment. Slash-star-bang survives compression.
+//
+// ⚠️ ORDER IS THE CASCADE. There is no layout gate and no per-page opt-in; a
+// selector must anchor to something page-specific (a class like .page or
+// .post, a custom element like <photo-cover>) and never a bare
+// `main > article > h2`. See the note atop page.scss for what that cost once.
+//
+// config MUST stay first: it defines the $breakpoint-* variables every later
+// partial reads, and it has to be the module that emits first.
+//
+// @use, NOT @import. Dart Sass deprecates @import and removes it in 3.0, and
+// the migration turned out to be four lines: base, album and home each read
+// $breakpoint-small, so each opens with `@use "config" as *` — `as *` keeps the
+// variables unnamespaced, so nothing else in those files changed.
+//
+// The thing to understand about @use here: a module's CSS is emitted at FIRST
+// load, not at each reference. That is why the order below is still the whole
+// cascade. config is listed first, so it emits first; when base later does
+// `@use "config" as *` the module is already loaded and emits nothing more.
+// Reorder this list and you reorder the stylesheet.
+//
+// Verified byte-identical to the @import build, which was itself byte-identical
+// to the Liquid-include build that preceded it.
+//
+// The output carries a 3-byte UTF-8 BOM. That is Dart Sass declaring the
+// encoding, and it is correct: there is a `content: "↵"` in the sidenote rules,
+// the one non-ASCII character in the file. `sass: charset: false` is not
+// honoured by jekyll-sass-converter 3.1, and stripping the BOM by hand would
+// trade a correctness guard for three bytes on a file cached for a year.
+// ===========================================================================
+
+// Foundation.
+@use "config";
+@use "themes";
+@use "base";
+@use "chrome";
+
+// Layout. cards before album: album styles the page around the grid cards
+// defines. (home.scss used to @include cards itself, which quietly emitted it
+// twice once the manifest started including it for everyone — fixed here by
+// this list being the single place it appears.)
+@use "cards";
+@use "album";
+@use "page";
+@use "post";
+
+// Page one-offs. After page, which they used to layer on top of when they were
+// front-matter opt-ins. timeline before now: timeline owns the shared timeline
+// component and now holds only that page's overrides.
+@use "archives";
+@use "home";
+@use "search";
+@use "timeline";
+@use "now";
+
+// NOT imported: bookmarks. It styles a <bookmarks-header> that no page emits
+// yet — CLAUDE.md calls it "not-yet-wired". Importing it would ship 1.2 KB to
+// every page for markup that does not exist. Add the line when the page lands.

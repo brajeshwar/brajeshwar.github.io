@@ -1201,7 +1201,7 @@ A CSS consolidation pass, start to finish. Full detail in [`styles.md`](styles.m
 
 ### Rules learned this session — worth not re-learning
 - **CSS comments are free; HTML/Liquid comments are not.** `sass: style: compressed` strips
-  block comments from CSS, so prose in `_includes/css/*.css` costs zero shipped bytes.
+  block comments from CSS, so prose in `_sass/*.scss` costs zero shipped bytes.
   An `<!-- HTML comment -->` in a layout **does** ship to all ~1,456 pages — use
   `{%- comment -%}` there. Verified both ways.
 - **Custom property DECLARATIONS ship even when nothing reads them.** Comments are stripped;
@@ -1264,7 +1264,7 @@ post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.6
   §3 branding, §4 icons, §5 **how CSS is split** (13 named files, three tiers, which layout
   pulls which bundle, the old→new filename map, the 2026-07-19 audit + backlog),
   §6 **layout patterns** — the four page shapes, the **right-only breakout rule**, the shared
-  `.pill`, and Back to Top. **Read §5 before touching `_includes/css/`, and §6 before changing
+  `.pill`, and Back to Top. **Read §5 before touching `_sass/`, and §6 before changing
   anything's width.** Absorbed `css-architecture.md` on 2026-07-26.
 - [`sidenotes.md`](sidenotes.md) — Tufte margin sidenotes built from kramdown footnotes (Phase 2) + Aresluna wayfinding.
 - [`search.md`](search.md) — site-wide header search, lazy-loaded Pagefind.
@@ -1312,7 +1312,7 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
 8. **Reviewable diffs** — one concern per change; don't mix a refactor with a redesign.
 
 ## Architecture to honor
-- CSS = **13 plainly-named files** in `_includes/css/`, concatenated by **`assets/styles/site.css`** into ONE external stylesheet (`{% capture %}` + SCSSify). **9.5 KB gzip / 50 KB raw for the whole site**, fetched once and cached. ⚠️ **Externalised 2026-07-27, reversing the inline-everything rule** — `/assets/*` is served `max-age=31536000`, so inlining re-sent ~6.6 KB gzip on every page view and could never be cached (HTML is `max-age=600`). The ≤13 KB gzip budget still holds but is now a **whole-site** number, not per-page.
+- CSS = **13 plainly-named Sass partials** in **`_sass/`**, compiled by **`assets/styles/site.scss`** into ONE external stylesheet. ⚠️ **Moved out of `_includes/css/` 2026-07-27** — they were Liquid includes and nothing includes them into HTML any more. `@use`, not `@import` (Dart Sass 3.0 removes it); a module emits at FIRST load, so the order in `site.scss` is the whole cascade. **9.5 KB gzip / 50 KB raw for the whole site**, fetched once and cached. ⚠️ **Externalised 2026-07-27, reversing the inline-everything rule** — `/assets/*` is served `max-age=31536000`, so inlining re-sent ~6.6 KB gzip on every page view and could never be cached (HTML is `max-age=600`). The ≤13 KB gzip budget still holds but is now a **whole-site** number, not per-page.
 - ⚠️ **Two things the one-file model makes load-bearing.** (a) **Cache-busting**: `scripts/hash-assets.mjs` renames CSS/JS to `<name>.<hash>.ext` post-build and rewrites references — a stable filename at `max-age=31536000` strands returning readers for a year. It must run *after* the esbuild minify step. (b) **Every stylesheet applies to every page** — anchor selectors to a class (`.page`, `.post`) or custom element, never a bare `main > article > h2`. `page.css` broke this rule and would have clamped all ~1,456 post titles to 665px.
 - ⚠️ **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`styles.md`](styles.md) §5 → *Old → new filename map*. Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
 - ~~**CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only.~~ **Superseded 2026-07-27** — delivery is one external file for every page; the three tiers survive only as *organisation* (which file to open), never as what ships where. Still shipped that day and still true: syntax highlighting fixed + tokenised onto `--code-*` (later removed entirely); new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html`. Full rationale: [`styles.md`](styles.md) §5.

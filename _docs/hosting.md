@@ -120,6 +120,33 @@ one thing a cache cannot satisfy. It runs in the Actions deploy, after the esbui
 (hashing before minifying would describe bytes we do not ship). A build that skips it stays on
 the unhashed paths and is internally consistent — see the backup note below.
 
+**It covers fonts too, in two passes** (2026-07-27). CSS references fonts and HTML references
+CSS, so the leaves are hashed first: fonts, then the font URLs inside the built stylesheets are
+rewritten, and only then is the CSS hashed — so a stylesheet's hash covers its own font URLs.
+Hashing them in one pass would have produced a CSS hash describing content about to change.
+Fonts nothing references are left alone rather than renamed to a URL nobody links to.
+
+### Why a hash and not `?v=<published-date>`
+
+Brajeshwar asked, 2026-07-27. Same goal, and the query string is the older technique, but it
+loses twice over:
+
+- **A date busts when nothing changed.** This site rebuilds on a **daily cron**, so
+  `?v=2026-07-28` would hand every returning reader a new URL every day and re-download
+  byte-identical CSS ~365 times a year — worse than no busting at all, which at least serves
+  from cache. A content hash changes only when the bytes change: a handful of times a year.
+  The date answers *"when did we build"*; the question is *"did this file change"*.
+- **Some caches ignore query strings.** A hashed filename is a genuinely different resource to
+  every cache, proxy and browser there is. A query string is a hint intermediaries may
+  disregard, and Cloudflare ships a cache level — *Ignore Query String* — that does exactly
+  that. The bust would silently stop working and nothing would look wrong.
+
+**So: leave the browser TTL at a year.** A shorter TTL (a month, say) is what you choose when
+filenames are stable and you are hedging against staleness. Hashing removes the staleness, so
+shortening it only makes returning readers re-fetch identical files more often for no benefit.
+`max-age=31536000` on an immutable URL is the standard pairing. The knob, if it is ever wanted,
+is Cloudflare → **Caching → Configuration → Browser Cache TTL**.
+
 Conditional requests still work when they are reached: an `If-None-Match` against the weak
 ETag returns `304` with zero bytes. That is the fallback, not the mechanism.
 

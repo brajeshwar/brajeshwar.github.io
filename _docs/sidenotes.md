@@ -53,7 +53,7 @@ Robustness:
   window narrows, and restores them when it widens.
 
 ## CSS & tokens
-- `_includes/css/base.css` (*Footnotes + sidenotes* section) — `.footnotes` (foot fallback, unchanged) + the
+- `_sass/base.scss` (*Footnotes + sidenotes* section) — `.footnotes` (foot fallback, unchanged) + the
   `.has-sidenotes` / `.sidenote` / `.sidenote-ref` rules, plus the cross-focus rules
   (`.sidenote-focus`, `.is-active`, `.is-open`) and the `.sidenote-inline` reveal panel.
   Note: `.sidenote` and `.sidenote-inline` are `<aside>`s, so they **explicitly reset**
@@ -63,7 +63,7 @@ Robustness:
 - Cross-focus uses only existing tokens: dimming via `--opacity-lower`, active note via
   `--text-color`, active reference via `--accent-hover` on `--mark`. Transitions respect
   the global `prefers-reduced-motion` kill switch in `base.css`.
-- `_includes/css/config.css` — `--sidenote-width` (16rem, the *maximum*) and
+- `_sass/config.scss` — `--sidenote-width` (16rem, the *maximum*) and
   `--sidenote-gap` (3.5rem). ⚠️ **`--sidenote-min-gutter` was removed 2026-07-27**: CSS declared
   a number that only the JS read. The threshold is `MIN_GUTTER_REM` (17) in
   `assets/scripts/sidenotes.js` and nowhere else.
