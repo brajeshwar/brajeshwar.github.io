@@ -108,6 +108,22 @@ Custom, strange, and *why I did that* ones — a shorter list than it used to be
 - ~~`{:.aside .right}`~~ — **removed.** Zero uses across all 1,456 posts.
 - `{:.mark}` shares the style of <mark>MARK</mark>, a highlighted phrase.
 
+## Post navigation
+
+Under every article: **PREV · (shuffle) · NEXT**. One bar, prev hard left, next hard right,
+and whichever exists fills the width it is given — the first and last post have only one
+neighbour and their single link takes the whole bar rather than leaving half of it empty.
+
+The circle in the middle goes to `/random/`, which sends you to a random post. It is 38px
+inside a 46px bar, centred *absolutely* rather than laid out in flow, so it sits in the same
+place whether the bar has two links or one. Its fill is `--color-primary` eased toward the bar
+— the same "on" colour the selected pill wears — so it inverts correctly in every theme
+without a per-theme rule.
+
+`/random/` carries the list of every post URL inline and picks one in JavaScript. With
+JavaScript off it shows a real link to a post chosen at build time, which the daily rebuild
+rotates on its own. It never sends you back to the post you came from.
+
 ## The reader's controls
 
 The gear in the header. Five axes, all remembered between visits and all applied before first

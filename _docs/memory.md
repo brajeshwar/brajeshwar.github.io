@@ -6,24 +6,49 @@
 
 ## Where we are (updated 2026-07-27) — READ FIRST
 
-### ⏸ 2026-07-27, second session — 8 commits ready, NOT pushed.
-All signed (`%G?` = `G`) and in Brajeshwar's name. Nothing is broken and the tree is clean;
-these are simply waiting on his word, per guardrail 7.
+### ✅ Session closed 2026-07-27 (second session). Pushed, deployed green, tree clean.
+`main` and `origin/main` are in sync. Nothing is pending.
 
-    ac79eb13  Move the stylesheets to _sass, and hash fonts too
-    e36046cc  Docs: record the timeline merge and what one stylesheet retired
-    c6b12e8c  Merge the duplicated timeline CSS, and restore the § anchors I deleted
-    b72d867f  Docs: record the CSS externalisation and what it makes load-bearing
-    e359263c  Externalise the CSS into one cache-busted stylesheet
-    3b4218f3  Load sidenotes and anchors only where they have work, drop analytics
-    0ba0cb72  Turn syntax highlighting off and delete its stylesheet
-    22cb3522  Split code and cards out of the base CSS tier
+⚠️ **Push only when Brajeshwar asks** (guardrail 7). **All commits signed and in his name** —
+verify with `git log --format='%h %G?'`; `G` is the only acceptable result.
 
-**Random post, built 2026-07-27.** A circle in the middle of the prev/next bar → `/random/` →
-a random post. Self-contained by request (no Cloudflare Worker). ⚠️ **The post index is inlined
-into `/random/` rather than fetched from `/assets/`** — that path is cached a year, so an index
-there would freeze and new posts would silently never appear in the pool. The HTML is
-`max-age=600`, so it stays fresh on its own. See [`javascript.md`](javascript.md) → *Random post*.
+⚠️ **Stage explicitly, never `git add -A`.** He edits content in this repo while I work, and
+`-A` swept his in-progress book notes into one of my commits. Caught and backed out with a
+snapshot taken first, but the habit is the fix: name the files.
+
+### What this session changed, in order
+
+1. **CSS is ONE EXTERNAL STYLESHEET**, not inlined. `/assets/*` is served `max-age=31536000`,
+   so inlining re-sent ~6.6 KB gzip on every page view and could never be cached; external is
+   one fetch then free. Reverses the previous day's decision — the old reasoning was sound but
+   rested on an unmeasured premise. 49 KB raw / 9.5 KB gzip for the whole site.
+2. **Sources moved `_includes/css/*.css` → `_sass/*.scss`**, compiled by
+   `assets/styles/site.scss`. `@use`, not `@import` (Dart Sass 3.0 removes it). Breakpoints
+   live in `_sass/breakpoints.scss`, a variables-only module that emits nothing.
+3. **Everything under `/assets/` is content-hashed** — CSS, JS *and fonts*, in two passes
+   (fonts first, then the CSS that points at them). Without this a year-long cache strands
+   returning readers; it was already silently true of the JavaScript.
+4. **Scripts load only where they have work.** sidenotes.js on 87 of 1,483 pages, anchors.js on
+   453 of 1,456 posts. Analytics removed entirely — zero cross-origin requests now.
+5. **Random post.** A circle in the prev/next bar → `/random/` → a random post. Self-contained
+   by request. ⚠️ Its index is inlined into that page, NOT under `/assets/`, which would freeze
+   it for a year.
+6. **Timeline CSS merged** — `/about/` and `/now/` were the same component built twice.
+   `.headerlink` went from three copies to one, and the post copy had already been deleted by
+   accident, so 453 posts were rendering a bare visible §. Caught before deploy.
+7. **`:visited` colour leak fixed at the root.** See below — this one is a cascade law now.
+8. **Actions bumped to Node 24** versions; the deprecation warning is gone.
+
+### The two rules most likely to be broken next
+
+⚠️ **Every stylesheet applies to every page.** No layout gate exists any more. Anchor selectors
+to a class (`.page`, `.post`) or a custom element — never a bare `main > article > h2`.
+`page.scss` got this wrong and would have clamped all ~1,456 post titles to 665px.
+
+⚠️ **Element defaults are `:where()`-wrapped in base.scss, link colours especially.** Unwrapped,
+`a:visited` is (0,1,1) — higher than a plain class — so six chrome components silently lost
+their colour once visited. Do not un-wrap, and do not patch a chrome link with its own
+`:visited`. [`styles.md`](styles.md) §5 → *Element defaults are `:where()`-wrapped*.
 
 **Decided, so it does not get re-litigated: the browser cache TTL stays at a year.** A shorter
 TTL is what you pick when filenames are stable and you are hedging against staleness; content

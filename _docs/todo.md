@@ -302,6 +302,33 @@ at the top of this section.
 - [x] **Page-load budget < 100 KB** (non-article pages) — documented as a hard target; homepage
       already ~48 KB raw / ~13 KB gzip. See [`design.md`](design.md) → *Performance budget*.
 
+## Found 2026-07-27 (second session)
+
+- [x] **`:visited` was stealing chrome link colours, site-wide** *(fixed 2026-07-27)* — base.css
+      styled links as `a, a:visited` / `a:hover, a:active`, both **(0,1,1)**, which is higher
+      than a plain class. Six components lost their colour once visited: `site-nav a`,
+      `.post-nav__link`, `.headerlink`, `.icon-button`, `home-books li a`,
+      `.pagefind-modular-list-link`. Read as "slightly too dark" by default and as a wrong hue
+      for anyone with an accent picked. Fixed at the cause — both base rules are `:where()`-
+      wrapped now. See [`styles.md`](styles.md) §5.
+- [x] **`.headerlink` had been deleted from post.css by accident** *(fixed 2026-07-27)* — the
+      code/cards split removed 225 lines and took it along, so **453 posts rendered a bare,
+      permanently visible, underlined § against every heading**. Never deployed; found while
+      merging the other two copies of the same rules. It exists once now, in base.scss.
+- [x] **cards.css was being emitted twice** *(fixed 2026-07-27)* — home.css still pulled it in
+      with an include, which became a duplicate the moment the manifest included it for
+      everyone. 334 bytes.
+- [x] **The gear had no tooltip** *(fixed 2026-07-27)* — every other icon-only control carries
+      `title` + `aria-label`; the appearance trigger had only the label.
+- [ ] **Fonts inside the CSS are hashed, but nothing verifies the pair stays in step.** The
+      two-pass order in `hash-assets.mjs` (fonts → rewrite CSS → hash CSS) is correct and
+      commented, but a future edit that reorders it would silently produce a CSS hash that does
+      not cover its own font URLs. Worth an assertion in the script rather than a comment.
+- [ ] **`/now/` has no agent-markdown twin.** `now.md` lives at the repo root rather than in
+      `_pages/`, so `page.collection` is empty and `_layouts/default.html` skips the
+      `<link rel="alternate" type="text/markdown">`. Moving it into `_pages/` would fix it and
+      change nothing else, but it is a file Brajeshwar edits often — his call.
+
 ## Found 2026-07-27
 - [x] **Base tier was carrying two things almost nothing used** *(split 2026-07-27)* — audited by
       testing every shipped rule against a real post, then against 8 posts to separate "unused

@@ -539,6 +539,41 @@ The corollary is the rule in *The principle, restated* above: since nothing is g
 anything page-specific has to say so **in the selector**. Anchor to a class or a custom
 element. A bare `main > article > h2` is a bug waiting for the next page type.
 
+### Element defaults are `:where()`-wrapped — link colours especially (2026-07-27)
+
+`base.scss` sets link colour as `:where(a, a:visited)` and `:where(a:hover, a:active)`, which
+is **zero specificity**. Any component rule beats it. That is deliberate and it is the fix for
+a bug that had spread across the whole site.
+
+Unwrapped, those selectors are **(0,1,1)** — an element plus a pseudo-class — which is *higher
+than a plain class*. So every piece of chrome that happens to be a link lost its own colour the
+moment it was visited and took `--text-color-link` instead. `--text-color-link` is
+`--color-accent`, gray-900 by default, so the symptom read as *"this went slightly too dark"*
+rather than as anything broken — and became a wrong hue outright for a reader who had picked
+an accent. It was permanent once triggered, because visiting is what these links are for.
+
+Six places, found by audit rather than by eye:
+
+| selector | | was |
+|---|---|---|
+| `site-nav a` | (0,0,2) | header nav |
+| `.post-nav__link` | (0,1,0) | PREV / NEXT |
+| `.headerlink` | (0,1,0) | the § anchors |
+| `.icon-button` | (0,1,0) | search, RSS |
+| `home-books li a` | (0,0,3) | homepage book list |
+| `.pagefind-modular-list-link` | (0,1,0) | search results |
+
+⚠️ **Do not un-wrap these, and do not "fix" a chrome link by adding `:visited` to its own
+rule.** The instance-level patch works and was what the random button carried for one commit,
+but it leaves the next chrome link to arrive with the same bug. A default should be the easiest
+thing in the cascade to override.
+
+**Blast radius, checked rather than assumed:** colour only, on those six. Browsers restrict
+`:visited` styling to a short list of colour properties, so the `text-decoration` in those
+rules never leaked into visited state; hover was already covered by `.post-nav__link:hover`
+re-stating it at (0,2,0). Everything at (0,1,1) or higher already won and is untouched —
+`.footer-links a`, `.footer-social a`, `.archive-years a`, the Pagefind result titles.
+
 ### Old → new filename map
 Historical entries in [`memory.md`](memory.md) and in the sections above still use the
 numbered names. They are kept as written — this table resolves them.
