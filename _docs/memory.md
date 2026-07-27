@@ -6,8 +6,8 @@
 
 ## Where we are (updated 2026-07-27) — READ FIRST
 
-### ✅ Pushed and deployed 2026-07-27. Working tree clean.
-`main` and `origin/main` are in sync. Three sessions of work shipped in one deploy.
+### ✅ Session closed 2026-07-27. Pushed, deployed, working tree clean.
+`main` and `origin/main` are in sync. Nothing is pending.
 
 ⚠️ **Push only when Brajeshwar asks** (CLAUDE.md guardrail 7). Committing is fine; every push to
 `main` auto-deploys.
@@ -16,19 +16,16 @@
 agent, so it is automatic — but **verify** with `git log --format='%h %G?'`. A history rewrite
 already cost 882 signatures once; see the entry below before running one.
 
-**The deploy that shipped exercised three things for the first time in CI:**
-1. **Node 22** (was 18, past EOL) — Pagefind and the agent-markdown script run on it.
-2. **The esbuild minify step** — new, and the only step that can fail the build outright.
-3. **The Geist woff2** — the `.ttf` is now `exclude`d, so a wrong path means no Sans-Serif font.
-All three were verified locally against a production-parity build (`make build`) before the
-push. **Check the Actions run went green** — if it did, all three are proven in CI too and this
-note can go.
+**Node 22, the esbuild minify step and the Geist woff2 all ran green in CI** and were verified
+on the live site: `Geist-Variable.woff2` serves at 47,596 bytes, the `.ttf` 404s as intended, and
+`back-to-top.js` arrives minified. That whole risk is now closed.
 
 ### The state, in one paragraph
-The site is on **one width — 64rem/1024px — and everything now agrees on it**: header, footer,
-`main`, post titles, wide images, captions, the prev/next bar. Wide media breaks out **to the
-right only**, never into the left margin, because the reading column is left-aligned in the band
-and that left edge is the page's alignment line. Colour is monotone by default with three
+The site is on **one width — 64rem/1024px — and everything agrees on it**: header, footer,
+`main`, post titles, wide images, captions, videos and embeds, the prev/next bar. Wide media
+breaks out **to the right only**, never into the left margin, because the reading column is
+left-aligned in the band and that left edge is the page's alignment line. **`photo-cover` is the
+one deliberate exception** — a full-bleed hero to 1600px, flush under the header rule. Colour is monotone by default with three
 palettes (Warm is now **Flexoki**); the reader also picks mode, font (System / Sans-Serif /
 Serif) and text size, all persisted. JS is eight small vanilla files, minified on publish.
 
@@ -92,18 +89,16 @@ Should return nothing but Brajeshwar's own content commits.
 
 ### Picking this back up — the shortlist
 Full list in [`todo.md`](todo.md). The ones worth doing next, in order:
-1. **Confirm the deploy went green** (Node 22, esbuild, Geist woff2 all ran in CI for the first
-   time). Nothing else should start until it has.
-2. **`.sidenote` is declared in two blocks** (`base.css` 563 and 609) and repeats 6 declarations
+1. **`.sidenote` is declared in two blocks** (`base.css` 563 and 609) and repeats 6 declarations
    with `.sidenote-inline`. Deliberately left: it is a refactor of live behaviour, best done with
    the sidenote work rather than as a tidy.
-3. **Two spacing systems** — ratio `--space`/`--space-smaller` vs fluid `--space-*`, **10 call
+2. **Two spacing systems** — ratio `--space`/`--space-smaller` vs fluid `--space-*`, **10 call
    sites** across five files (the old entry claimed 3). Each is a visible value, so it needs a
    look, not a sweep.
-4. **Images have no `width`/`height` attributes.** This causes layout shift on every image and
+3. **Images have no `width`/`height` attributes.** This causes layout shift on every image and
    was the root of the sidenote-overlap bug (patched with a `ResizeObserver`, not cured).
    Fixing it properly is content-adjacent — Brajeshwar's call.
-5. **Home** is parked pending his decision on the books treatment (SVG covers vs text block).
+4. **Home** is parked pending his decision on the books treatment (SVG covers vs text block).
 
 ### What happened 2026-07-26
 Docs and README, no reader-visible change. **Uncommitted.**
@@ -586,6 +581,42 @@ pages, and a 27th "00" year in the archives. His watcher and any `jekyll build` 
 same `_site`, so they overwrite each other and local measurements flip depending on who built
 last. **Production is unaffected** — the Actions workflow runs a plain `jekyll build` on a fresh
 checkout. If a local count looks wrong, run `jekyll clean` and rebuild before believing it.
+
+### Post media and the footer seam, finished (2026-07-27, late)
+The last run of changes before the session closed, all on how a post ends and how it carries
+media.
+
+**The footer seam.** It was **182px** between the prev/next bar and the footer, against the
+**80px** a page with no Back to Top gets. Four margins made it, and the surprising one is worth
+keeping: **`.post-nav`'s bottom margin did not collapse away**, because `main` is
+`container-type: inline-size` and that establishes an independent formatting context — the last
+child's bottom margin is trapped inside instead of merging with what follows, so it *stacked*.
+Then the order changed on request: the arrow moved **above** the bar and the bar went tight to
+the footer. It is now **article → arrow → PREV|NEXT → footer, 30px between each**.
+
+Two traps in that one change:
+- **`~`, not `+`.** `main:has(.post-nav) + footer` matched nothing, because `post.html` emits a
+  `<script>` between `</main>` and `<footer>`. The footer silently kept its 80px and the change
+  read as having failed rather than as having missed. **In this repo, never assume `main` and
+  `footer` are adjacent.**
+- **`width: var(--body-width)` applied twice.** Moving the row inside `main` meant the 96% was
+  taken of the band rather than the viewport — the arrow landed 20px short of the edge
+  everything else lines up on. `main > .back-to-top-row { width: 100% }`.
+
+**The divider is gone.** Two versions were tried — a foreground hairline, then an inverted notch
+— and both were a mark asking to be noticed on a control whose job is to be quiet. The halves
+touch; the hover tint draws the boundary only while it matters. It also deleted the
+first/last-post special case, since no rule is left that needs to know how many links there are.
+
+**Media.** Videos and embeds take the band like the wide images (665 → 1024). Content media gets
+`--border-radius`, via `main :where(img, video, iframe)` — `:where()` keeps it at (0,0,1) so
+anything with an opinion overrides it, and the `main` scope keeps it off the header logo and
+footer icons.
+
+⚠️ **`photo-cover` is full-bleed again, and is now the site's ONE documented exception** to
+"nothing goes past the band". It had been brought onto the band earlier the same day; that was
+wrong for this element. It is a flourish, not content. Its caption stays on the body width — the
+only caption on the site that does not match its own figure. See `styles.md` §6.
 
 ### ⚠️ 882 GPG signatures lost to a history rewrite (2026-07-27)
 **What happened.** Two `.afphoto` purges were run to get past GitHub's 100 MB file limit — first
