@@ -82,12 +82,19 @@
 {% include css/post.css %}
 
 {%- comment -%} Page one-offs. After page.css, which they used to layer on top
-  of when they were opt-ins declared in front matter. {%- endcomment -%}
+  of when they were opt-ins declared in front matter.
+
+  timeline.css BEFORE now.css: since 2026-07-27 timeline.css owns the shared
+  timeline component and carries /now/'s hooks in its grouped selectors, and
+  now.css holds only that page's overrides. Specificity happens to settle the
+  one rule where they overlap either way, but a component preceding the thing
+  that overrides it is the order that stays true as both change.
+{%- endcomment -%}
 {% include css/archives.css %}
 {% include css/home.css %}
-{% include css/now.css %}
 {% include css/search.css %}
 {% include css/timeline.css %}
+{% include css/now.css %}
 
 {%- comment -%} NOT included: bookmarks.css. It styles a <bookmarks-header>
   element that no page emits yet — CLAUDE.md calls it "not-yet-wired". Adding

@@ -1,24 +1,60 @@
 /* ============================================================
-   Timeline — the /about/ storyline.
+   Timeline — the shared component, and the /about/ storyline.
    ------------------------------------------------------------
-   Loaded via the styles: key on the page. Authoring convention
-   is documented in _docs/timeline.md.
+   TWO PAGES WEAR THIS: /about/ (the life/work storyline) and
+   /now/ (the year-by-year log). Authoring convention for the
+   former is documented in _docs/timeline.md.
 
-   THE WHOLE FILTER IS CSS. Two real checkboxes drive it through
-   :has() + :checked, so it works with JavaScript disabled — both
-   start checked, so no-JS shows everything and never means "no
-   content" (guardrail 4). There is no JS file for this page.
+   ⚠️ MERGED 2026-07-27. now.css used to hold a deliberate COPY of
+   the spine, the marker and the period heading, and said why:
+   both were tier-2 page bundles, never loaded together, so
+   sharing "would mean promoting them into base.css and charging
+   all ~1,456 pages for something two pages use".
+
+   That reason died the same day the CSS went external. Every
+   stylesheet is now concatenated into one cached file, so nothing
+   is "promoted" and nothing is "charged" — the two copies were
+   simply two copies. They were still pixel-identical when merged
+   (11px dot, 2px rule, -46.5px offset, 40px gutter, all measured),
+   which is luck: keeping two hand-copied blocks in step is the
+   trap, not the cost. Now there is one.
+
+   /now/ drives it from the markup kramdown already emits, NOT by
+   rewriting content into timeline markup. now.md include_relative's
+   eleven year fragments, each `# YYYY` plus a bullet list:
+
+       # 2024   →  .page-now h1      (the period heading)
+       <ul>     →  .page-now ul      (carries the spine)
+       <li>     →  .page-now ul li   (dot on the spine)
+
+   So the grouped selectors below carry both vocabularies. Add a
+   third user by adding its hooks to these groups.
+
+   THE WHOLE FILTER IS CSS (the /about/-only half of this file).
+   Two real checkboxes drive it through :has() + :checked, so it
+   works with JavaScript disabled — both start checked, so no-JS
+   shows everything and never means "no content" (guardrail 4).
 
    Checkboxes, not radios, since 2026-07-27: "Merged" was dropped
    because both-selected IS merged. Two independent toggles say
    that directly instead of encoding it as a third state.
    ============================================================ */
 
-.timeline {
+.timeline,
+.page-now {
   --timeline-rule: 2px;                  /* the spine's thickness */
   --timeline-dot: 11px;                  /* marker diameter */
   --timeline-gutter: var(--space-l);     /* space the spine lives in */
+
+  /* Gap between entries. The one value the two users genuinely
+     disagree on, so it is a token rather than a second rule: an
+     /about/ entry is a title + meta + prose and needs the air; a
+     /now/ entry is a single paragraph and looks adrift with it.
+     Deliberate, not drift — which is what it was before. */
+  --timeline-entry-gap: var(--space-m);
 }
+
+.page-now { --timeline-entry-gap: var(--space-s); }
 
 /* ---- Page opening ------------------------------------------
    There is no title row any more (2026-07-27). The intro opens the page and
@@ -241,7 +277,8 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
    side bearing, so the painted glyph drifts right of the spine it should line
    up with, and -0.06em pulls it back. Em-based, so it tracks whatever size the
    shared scale hands it. */
-.timeline-when {
+.timeline-when,
+.page-now h1 {
   position: relative;              /* anchor for the § headerlink */
   margin: 0 0 var(--space-xs);
   margin-left: -0.06em;
@@ -250,61 +287,57 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
   scroll-margin-top: var(--space-l);
 }
 
-/* ---- Heading anchors ---------------------------------------
-   assets/scripts/anchors.js prepends a § link to every
-   .timeline-when[id], so hovering a period gives a copyable link
-   straight to it — "/about/#2005-2006".
+/* /now/ only: its periods are <h1>, which base.css underlines. The spine
+   already separates the years, so the rule would be a second divider saying
+   the same thing. /about/'s periods are <h2> and carry no border to reset.
 
-   These rules duplicate .headerlink in post.css on purpose.
-   post.css is the tier-1 ARTICLE bundle and timeline.css is a
-   tier-2 PAGE bundle; they are never loaded together, so the
-   alternative was promoting .headerlink into base.css and paying
-   for it on all ~1,456 pages to serve two page types. Keep the
-   two copies in step if the treatment changes.
+   ⚠️ That level difference is also why /now/'s years render one step LARGER.
+   That is the shared type scale behaving correctly on different levels, not a
+   styling difference — the fragments in now/ would have to use `##` to match,
+   and that is a content change. */
+.page-now h1 { border: 0; }
+
+/* ---- Heading anchors ---------------------------------------
+   MOVED TO base.css 2026-07-27. anchors.js still prepends a § link
+   to every .timeline-when[id], so hovering a period gives a
+   copyable link straight to it — "/about/#2005-2006" — but the
+   styling is no longer here.
+
+   There were THREE copies of .headerlink (post.css, timeline.css,
+   now.css), each justified by bundles that "are never loaded
+   together". They all load together now. Worse, the post.css copy
+   had already been deleted by accident, so every post with a
+   heading rendered a bare, permanently visible § — see the note
+   in base.css.
+
+   One class, applied by one script, to three page types: it is a
+   site-wide component and now lives in exactly one place.
    ------------------------------------------------------------ */
 
-.timeline-when .headerlink {
-  position: absolute;
-  left: -1em;
-  width: 1em;
-
-  text-decoration: none;
-  color: var(--text-muted);
-  opacity: 0;
-  transition: opacity 0.16s linear;
-}
-
-.timeline-when:hover .headerlink,
-.timeline-when .headerlink:focus {
-  opacity: 0.6;
-}
-
-.timeline-when .headerlink:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
-/* No room in the margin on small screens. */
-@media (max-width: 480px) {
-  .timeline-when .headerlink { display: none; }
-}
-
-.timeline-entries {
+/* The spine is a border on the entry LIST, not a pseudo-element on the
+   container, so it starts and stops with the entries and no stray line hangs
+   past the last one. */
+.timeline-entries,
+.page-now ul {
   list-style: none;
   margin: 0;
   padding: 0 0 0 var(--timeline-gutter);
   border-left: var(--timeline-rule) var(--border-style) var(--rule);
 }
 
-.timeline-entry {
+.timeline-entry,
+.page-now ul li {
   position: relative;
-  margin: 0 0 var(--space-m);
+  margin: 0 0 var(--timeline-entry-gap);
+  padding: 0;
 }
 
-.timeline-entry:last-child { margin-bottom: 0; }
+.timeline-entry:last-child,
+.page-now ul li:last-child { margin-bottom: 0; }
 
 /* Marker on the spine. Sits ON the rule, centred over it. */
-.timeline-entry::before {
+.timeline-entry::before,
+.page-now ul li::before {
   content: "";
   position: absolute;
   top: 0.55em;
@@ -344,7 +377,8 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
    wants the width, the sentences do not. */
 .timeline-entry p,
 .timeline-title,
-.timeline-meta {
+.timeline-meta,
+.page-now ul li {
   max-width: var(--measure);
 }
 
@@ -403,7 +437,8 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
 /* ---- Narrow -------------------------------------------------
    Tighter gutter so the prose keeps its measure on a phone. */
 @media (max-width: 600px) {
-  .timeline {
+  .timeline,
+  .page-now {
     --timeline-gutter: var(--space-s);
     --timeline-dot: 9px;
   }

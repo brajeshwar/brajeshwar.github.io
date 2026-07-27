@@ -1,8 +1,14 @@
 /* Heading anchors — vanilla replacement for the AnchorJS dependency.
  * For each content heading that has an id (kramdown auto_ids), prepend a
  * clickable § link to that id. Loaded defer.
- * Hidden until hover/focus — styles live in post.css for articles and in
- * timeline.css for the timeline (separate bundles, never loaded together).
+ * Hidden until hover/focus. Styles live in ONE place, base.css, as of
+ * 2026-07-27 — including the `position: relative` the absolute § needs, which
+ * a heading picks up via `:has(> .headerlink)` once this script has run.
+ *
+ * They used to be copied into post.css, timeline.css and now.css, on the
+ * grounds that those bundles were never loaded together. They all load
+ * together now. The post.css copy had also been deleted by accident, so every
+ * post with an h2 or lower was rendering a bare, permanently visible §.
  *
  * Two scopes:
  *   article.post > h2..h6   post bodies

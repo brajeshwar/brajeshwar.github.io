@@ -1,134 +1,55 @@
 /* ============================================================
    Now — /now/ only.
    ------------------------------------------------------------
-   Loaded via the styles: key in now.md.
+   Almost nothing lives here any more.
 
-   Wears the /about/ timeline's visuals (Brajeshwar, 2026-07-27:
-   "copy the timeline visuals and design from /about/ — they are
-   very similar with different contents"). The two pages ARE the
-   same shape: a year, then dated entries under it.
+   /now/ wears the /about/ timeline's visuals (Brajeshwar,
+   2026-07-27: "copy the timeline visuals and design from /about/
+   — they are very similar with different contents"). The two
+   pages ARE the same shape: a year, then dated entries under it.
 
-   Done entirely in CSS against the markup kramdown already
-   emits — NOT by rewriting the content into timeline markup.
-   now.md include_relative's eleven year fragments from now/, and
-   each is `# YYYY` plus a bullet list, so:
+   ⚠️ MERGED INTO timeline.css 2026-07-27. This file used to hold
+   a deliberate COPY of the spine, the marker, the period heading
+   and the § anchor — about 90 lines — and explained why: the two
+   were tier-2 page bundles, never loaded together, so sharing
+   "would mean promoting them into base.css and charging all
+   ~1,456 pages for something two pages use".
 
-       # 2024   →  .timeline-when     (the period heading)
-       <ul>     →  .timeline-entries  (carries the spine)
-       <li>     →  .timeline-entry    (dot on the spine)
+   Externalising the CSS the same day killed that reason. Every
+   stylesheet is concatenated into one cached file now, so there
+   is no promotion and no charge; the copies were only copies.
+   They were still pixel-identical when merged — 11px dot, 2px
+   rule, -46.5px offset, 40px gutter, all measured — which is
+   luck rather than discipline. Keeping two hand-copied blocks in
+   step is the trap, and it had already sprung once: the third
+   copy of .headerlink, in post.css, was silently deleted and
+   nobody noticed until 453 posts were rendering a bare §.
 
-   The rules below are deliberately a COPY of their counterparts
-   in timeline.css, not a shared import. Both are tier-2 page
-   bundles and are never loaded together, so sharing would mean
-   promoting them into base.css and charging all ~1,456 pages for
-   something two pages use — the same call already made for
-   .headerlink (styles.md §5). Keep the two in step if the
-   timeline's look changes.
+   The shared component lives in timeline.css and carries this
+   page's hooks in its grouped selectors:
+
+       # 2024   →  .page-now h1      (the period heading)
+       <ul>     →  .page-now ul      (carries the spine)
+       <li>     →  .page-now ul li   (dot on the spine)
+
+   The § anchor styling lives in base.css.
+
+   What remains below is only what /now/ does DIFFERENTLY. If you
+   are looking for the timeline's look, it is not in this file.
    ============================================================ */
 
-.page-now {
-  --timeline-rule: 2px;                  /* the spine's thickness */
-  --timeline-dot: 11px;                  /* marker diameter */
-  --timeline-gutter: var(--space-l);     /* space the spine lives in */
-}
-
-/* Year heading — the period. Mirrors .timeline-when and must STAY mirrored.
-
-   TYPOGRAPHY COMES FROM base.css: these are <h1>s in the source fragments, so
-   they take --step-3 at --font-weight-light like every other h1 on the site.
-   Nothing typographic is set here (Brajeshwar, 2026-07-27: "all Hx styles
-   should be the same"); only the border reset, the spacing, the anchor's
-   positioning context and the optical nudge.
-
-   ⚠️ These are h1 while /about/'s periods are h2, so /now/'s years render one
-   step LARGER. That is the shared scale behaving correctly on different
-   levels, not a styling difference — the fragments in now/ would have to use
-   `##` for the two pages to match, and that is a content change. */
-.page-now h1 {
-  position: relative;                    /* anchor for the § headerlink */
-  margin: 0 0 var(--space-xs);
-  margin-left: -0.06em;
-  border: 0;                             /* was an underline; the spine does that now */
-
-  scroll-margin-top: var(--space-l);
-}
-
-/* Air between years, since the rule that used to separate them is gone. */
+/* Air between years. /about/ has one continuous spine per period; /now/ stacks
+   eleven year fragments, and without this the next year's heading crowds the
+   last entry of the previous one. There is no /about/ equivalent, because a
+   period heading there is never preceded by a sibling list. */
 .page-now ul + h1 { margin-top: var(--space-l); }
 
-/* The list carries the spine — a border on the list rather than a
-   pseudo-element on the page, so it starts and stops with the entries and no
-   stray line hangs past the last one. */
-.page-now ul {
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0 var(--timeline-gutter);
-  border-left: var(--timeline-rule) var(--border-style) var(--rule);
-}
-
-.page-now ul li {
-  position: relative;
-  margin: 0 0 var(--space-s);
-  padding: 0;
-
-  /* Prose keeps the reading measure even though the page is the full site
-     width — the same rule timeline entries follow. */
-  max-width: var(--measure);
-}
-
-.page-now ul li:last-child { margin-bottom: 0; }
-
-/* Marker, sitting ON the rule and centred over it. */
-.page-now ul li::before {
-  content: "";
-  position: absolute;
-  top: 0.55em;
-  left: calc((var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1);
-
-  width: var(--timeline-dot);
-  height: var(--timeline-dot);
-  border-radius: 50%;
-
-  background: var(--bg-color-lower);
-  border: var(--timeline-rule) var(--border-style) var(--rule);
-}
-
+/* Inline code in a now-entry. Quieter than a post's: these are passing
+   mentions of a tool or a command in a sentence, not code being read, so it
+   takes a soft fill and no border. */
 .page-now code {
   font-size: smaller;
   background-color: var(--bg-color-low);
   border: 0 none;
   border-radius: var(--border-radius-large);
-}
-
-/* ---- Heading anchors ---------------------------------------
-   anchors.js prepends a § to each .page-now h1[id] — kramdown gives the year
-   headings their ids automatically — so a year is linkable: /now/#2024.
-   Duplicated from post.css / timeline.css for the reason at the top of this
-   file. */
-.page-now h1 .headerlink {
-  position: absolute;
-  left: -1em;
-  width: 1em;
-
-  text-decoration: none;
-  color: var(--text-muted);
-  opacity: 0;
-  transition: opacity 0.16s linear;
-}
-
-.page-now h1:hover .headerlink,
-.page-now h1 .headerlink:focus { opacity: 0.6; }
-
-.page-now h1 .headerlink:hover { opacity: 1; text-decoration: none; }
-
-@media (max-width: 480px) {
-  .page-now h1 .headerlink { display: none; }
-}
-
-/* Narrow: tighter gutter so the prose keeps its measure on a phone. */
-@media (max-width: 600px) {
-  .page-now {
-    --timeline-gutter: var(--space-s);
-    --timeline-dot: 9px;
-  }
 }

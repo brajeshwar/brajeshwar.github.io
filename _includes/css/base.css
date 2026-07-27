@@ -237,6 +237,62 @@ h4 { font-size: var(--step-0); }
 h5 { font-size: var(--step--1); }
 h6 { font-size: var(--step--2); }
 
+/* ---- Heading anchors -----------------------------------------------
+   assets/scripts/anchors.js prepends <a class="headerlink">§</a> to post
+   headings, /about/ period headings and /now/ year headings, so any of them
+   can be linked to directly. Hidden until the heading is hovered or the link
+   itself is focused, and pulled into the left margin so it never reflows the
+   text it belongs to.
+
+   ⚠️ ONE COPY, HERE, SINCE 2026-07-27 — and it belongs in base for a reason
+   worth not re-litigating. There used to be three (post.css, timeline.css,
+   now.css), each carrying a comment explaining that the bundles "are never
+   loaded together" so a shared rule would have to be promoted to base and
+   charged to all ~1,456 pages. Every stylesheet ships to every page now, so
+   that cost is imaginary and the three copies were just three copies.
+
+   ⚠️ AND THE POST COPY WAS ALREADY GONE. It was deleted by accident in
+   22cb3522 (the code/cards split, which removed 225 lines from post.css and
+   moved this nowhere), so every post with an h2 or lower rendered a bare,
+   permanently visible, underlined § jammed against the heading text — 453
+   posts. Caught before it shipped. That is the argument against hand-copied
+   blocks in one line: the copies do not drift apart loudly, they drift apart
+   silently.
+
+   No context prefix on the selector. The class is written by exactly one
+   script and appears nowhere else in the site, so scoping it would only
+   invite a fourth copy the next time a page type wants one. */
+
+/* The positioning context the absolute § needs. `:has(> .headerlink)` gives it
+   to a heading ONLY once the script has actually put an anchor in it, which
+   covers all three page types at once and adds nothing to a heading without
+   one. The old version was a hand-listed `.post > h2, .post > h3, …` block,
+   deleted in the same accident, and it would have needed a fourth entry for
+   every new page type. `:has()` is already the bar this site sets — the whole
+   /about/ filter is built on it. */
+:is(h1, h2, h3, h4, h5, h6):has(> .headerlink) { position: relative; }
+
+.headerlink {
+  position: absolute;
+  left: -1em;
+  width: 1em;
+
+  text-decoration: none;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.16s linear;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover .headerlink,
+.headerlink:focus { opacity: 0.6; }
+
+.headerlink:hover { opacity: 1; text-decoration: none; }
+
+/* No room in the margin on small screens. */
+@media (max-width: 480px) {
+  .headerlink { display: none; }
+}
+
 a, a:visited {
   color: var(--text-color-link);
   text-decoration: underline;
