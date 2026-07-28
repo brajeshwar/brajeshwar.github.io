@@ -147,6 +147,53 @@ photo-cover__desc {
 }
 
 
+/* ---- Figures take the band -------------------------------------
+   Brajeshwar, 2026-07-28: "For images in posts in FIGURE tags should extend
+   the whole body width."
+
+   Same right-only breakout, same `100cqi`, as `.full` / `.large` images and as
+   `main :where(iframe, video)` — so a figure, a wide image, a video, the header
+   rule and the footer rule all end on the same line. `100cqi` resolves against
+   `main`, which declares `container: main / inline-size`; it is NOT the article,
+   and if `.post` ever gains a `container-type` this silently becomes the 665px
+   column with no error. Verified 2026-07-28: a plain figure measures 1024.
+
+   ALL figures, not `figure:has(img)`, and that is deliberate on two counts.
+
+   First, the selector has to match the one sidenotes.js uses for obstacles
+   (below) — if CSS widened `:has(img)` while JS looked for `figure`, they would
+   agree only by accident, and narrowing either later would desynchronise them
+   silently. Same failure the `.post img` note above records: two authoring
+   forms, two results, no error.
+
+   Second, the two figures in the archive with no <img> are not text — they are
+   an <audio> player and a YouTube <iframe>. The iframe case was already broken:
+   `main :where(iframe, video)` sends the embed to 100cqi while its own <figure>
+   stayed at the measure, so the video overflowed its own figure and its caption
+   lined up with neither. This fixes that rather than working around it.
+
+   ⚠️ NO GATE HERE, unlike the blockquote above — and the difference is the
+   point. A blockquote near a sidenote had to stay narrow because nothing moves
+   it. Wide media does not need to: sidenotes.js `collectObstacles()` already
+   measures wide elements that protrude into the gutter and pushes overlapping
+   notes below them. `figure` is added to that selector in the same commit;
+   without it, notes would sit on top of these 19 newly-wide figures.
+
+   Upscaling is accepted, not overlooked. 5 of the 17 local images inside plain
+   figures are narrower than 1024 and will soften: hiring-horror.jpg (555 — the
+   only one that will read as poor), printing-pressing-16th-century.jpg (800),
+   amara-art-hello-world.webp (800), amara-art-business-card.webp (800),
+   metarefresh-2014.jpg (1000, imperceptible). Capping figures at the image's
+   intrinsic width via `width: fit-content` was the alternative and was rejected:
+   it would make the 555px one NARROWER than it is today, a regression to a
+   shipped post that nobody asked for. */
+.post figure {
+  margin-inline: 0;
+  width: 100cqi;
+  max-width: 100cqi;
+}
+
+
 /* ---- Blockquote breakout ---------------------------------------
    Yale e360 runs its pull quotes wider than the reading column. Adapted
    rather than copied: e360 CENTRES its quote, widening in both directions,

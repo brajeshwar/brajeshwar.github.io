@@ -111,7 +111,14 @@
      occupy, so placement can push overlapping notes below them. */
   function collectObstacles(item, articleRect) {
     var edge = articleRect.right + rem(1);     // past this line = in the gutter
-    var els = item.el.querySelectorAll('.full, .large, .gallery, aside.right, .aside.right');
+    /* `figure` added 2026-07-28, when post.css sent every figure to the band.
+       Safe to list unconditionally: the `r.right <= edge` test below already
+       discards anything that does not actually protrude into the gutter, so a
+       column-width figure on a page costs one getBoundingClientRect and is
+       then ignored. Keep this selector in step with the `.post figure` rule in
+       post.css — CSS widens the media, this is the only thing that moves the
+       notes out of its way, and neither half is any use alone. */
+    var els = item.el.querySelectorAll('figure, .full, .large, .gallery, aside.right, .aside.right');
     var list = [];
     Array.prototype.forEach.call(els, function (el) {
       var r = el.getBoundingClientRect();
