@@ -372,7 +372,20 @@ blockquote {
   hyphens: none;
 
   color: var(--text-muted);
-  border-left: var(--border-size) var(--border-style) var(--color-accent);
+
+  /* ⚠️ --border-size-small is 3px; --border-size is 1px. The names are INVERTED
+     and there is no reading of "small" that makes 3 < 1. Everything else in the
+     repo uses --border-size-small for focus outlines, where thicker is the
+     point, so the value is right and only the name lies. This rule wants the
+     heavier of the two — it is the quote's only marker — and briefly did not:
+     swapping to --border-size on 2026-07-28 to "bump it for presence" cut it
+     from 3px to 1px instead. Do not touch this without reading config.scss:202.
+
+     The colour change hid the mistake. On eink dark the old --rule resolved to
+     --color-border, a 10%-opacity ghost at 1.10:1 against the page — so the
+     3px bar was effectively invisible, and 1px of solid accent at 11.98:1 still
+     looked like an improvement. Contrast went up 10x while the ink halved. */
+  border-left: var(--border-size-small) var(--border-style) var(--color-accent);
 }
 
 blockquote p {
