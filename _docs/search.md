@@ -1,14 +1,15 @@
 # SEARCH — brajeshwar.com
 
-Site-wide search in the header, powered by **Pagefind**, lazy-loaded so it costs
-nothing on normal page loads. Partner docs: [`memory.md`](memory.md).
+Site-wide search lives in the header, powered by Pagefind and lazy-loaded so it costs nothing
+on normal page loads. Partner docs: [`memory.md`](memory.md).
 
 ## UI choice — Modular UI (not the Default UI)
-Pagefind 1.5 ships three front-ends; we use the **Modular UI** (`pagefind-modular-ui.js`),
-assembled in our own ⌘K shell. It's by far the lightest, themes via the same
-`--pagefind-ui-*` vars, and gives full control of markup. (We're on Pagefind **1.5.2** — current;
-this is a UI choice, not a version question. The Default UI we used before is heavier; the
-Component UI / `<pagefind-modal>` is heavier still and harder to theme.)
+Pagefind 1.5 ships three front-ends, and we use the Modular UI (`pagefind-modular-ui.js`),
+assembled in our own ⌘K shell. It is by far the lightest, themes via the same
+`--pagefind-ui-*` vars, and gives full control of markup. We are on Pagefind 1.5.2, which is
+current; this is a UI choice, not a version question. The Default UI we used before is
+heavier, and the Component UI (`pagefind-component-ui.js` / `<pagefind-modal>`) is heavier
+still and harder to theme.
 
 | Front-end | eager JS+CSS (gzip) | |
 |---|---|---|
@@ -17,8 +18,8 @@ Component UI / `<pagefind-modal>` is heavier still and harder to theme.)
 | **Modular UI (`pagefind-modular-ui.js`)** | **~5 KB** | ← we use this in our own shell |
 
 ## Why lazy
-The index is sharded and fetched on demand — only the small Modular UI runtime is eager,
-and even that loads on **first open** (Option 1). Measured for this site (~1,480 pages, gzip):
+The index is sharded and fetched on demand. Only the small Modular UI runtime is eager, and
+even that loads on first open (Option 1). Measured for this site (~1,480 pages, gzip):
 
 | When | Files | Transfer |
 |---|---|---|
@@ -29,38 +30,44 @@ and even that loads on **first open** (Option 1). Measured for this site (~1,480
 | Full index on disk | `index/` 2 MB + `fragment/` 6 MB | never loaded wholesale |
 
 ## How it works — in-place ⌘K command palette
-- **Markup** (`_includes/header.html`): a `<site-search>` with
-  - `a.site-search__trigger` → a real link to **`/search/`** (the JS-off fallback) + a
-    `kbd.site-search__hint` (⌘K / Ctrl K, set per-platform by JS),
-  - a `.site-search__backdrop` and a `.site-search__panel > #header-search` (both `hidden`).
-- **Markup** also has three mount points inside the panel: `#header-search-input`,
-  `#header-search-summary`, `#header-search-results` (one per Modular UI component).
-- **Script** (`assets/scripts/search.js`, `defer`): opens a **centered popup in place** —
-  never navigates while JS is on. Opened by the trigger, by **⌘K / Ctrl+K**, or by **`/`**
-  (global keydown); closed by **Esc** or backdrop. On first open it injects `pagefind-modular-ui.css` +
-  `pagefind-modular-ui.js` **once**, then builds a `PagefindModularUI.Instance` and adds
-  `Input` + `Summary` + `ResultList` (`showImages: false` — text-only) into the three mounts,
-  and focuses the input. The Input preloads Pagefind on focus, so the first query is instant.
-  If Pagefind can't load, it shows an in-panel message linking to `/search/` (no auto-navigate).
-  - **Ready-guard**: init runs on `DOMContentLoaded` (like `sidenotes.js`) so handlers always
-    attach — do not remove it.
-- **Styles** (`_sass/chrome.scss`, *Search palette* section, in the base bundle): the trigger, the
-  centered command-palette panel + scrim, the ⌘K hint badge, the error message, result-list
-  spacing (`.pagefind-modular-list-*`), and `--pagefind-ui-*` overrides on `.site-search__panel`
-  mapping Pagefind onto our semantic tokens (results follow the active theme).
-- **Asset URLs**: all `assets/scripts/*.js` load via `{{ '…' | relative_url }}` (root-relative),
-  so they work under `jekyll serve` AND in production. **Do not** use `prepend: site.url` for
-  scripts — that hardcodes `https://brajeshwar.com/…`, which 404s locally and made the trigger
-  fall through to a plain navigation (the "search just goes to /search/" bug).
-- **`/search/` page** (`_pages/search.html`): full-page Pagefind UI with an **auto-focused**
-  input (`pagefind-autofocus.js`) — the JS-off fallback and a shareable search URL. Unchanged.
-- **Index scope**: `<header>` and `<footer>` carry **`data-pagefind-ignore`** so the repeating
-  chrome (nav, the ⌘K hint badge, footer columns) is excluded from the index — otherwise it
-  pollutes every result's excerpt (the header sits at the top of `<body>`, so its text led every
-  excerpt). Only real page content is indexed. *(Posts that genuinely mention ⌘K — e.g. Monaco,
-  Safari — will still show it in their own excerpts; that's real content.)*
-- **Build/deploy**: unchanged — `.github/workflows` runs `npx pagefind --site _site` after the
-  Jekyll build.
+The markup (`_includes/header.html`) is a `<site-search>` holding an `a.site-search__trigger`,
+a real link to `/search/` that is the JS-off fallback, with a `kbd.site-search__hint`
+(⌘K / Ctrl K, set per-platform by JS), plus a `.site-search__backdrop` and a
+`.site-search__panel > #header-search`, both `hidden`. Inside the panel sit three mount
+points, `#header-search-input`, `#header-search-summary`, and `#header-search-results`, one
+per Modular UI component.
+
+The script (`assets/scripts/search.js`, `defer`) opens a centered popup in place and never
+navigates while JS is on. It is opened by the trigger, by ⌘K / Ctrl+K, or by `/` (global
+keydown), and closed by Esc or the backdrop. On first open it injects
+`pagefind-modular-ui.css` + `pagefind-modular-ui.js` once, then builds a
+`PagefindModularUI.Instance`, adds `Input` + `Summary` + `ResultList` (`showImages: false`,
+text-only) into the three mounts, and focuses the input. The Input preloads Pagefind on
+focus, so the first query is instant. If Pagefind can't load, it shows an in-panel message
+linking to `/search/` (no auto-navigate). One ready-guard: init runs on `DOMContentLoaded`
+(like `sidenotes.js`) so handlers always attach — do not remove it.
+
+The styles (`_sass/chrome.scss`, *Search palette* section, in the base bundle) cover the
+trigger, the centered command-palette panel and scrim, the ⌘K hint badge, the error message,
+result-list spacing (`.pagefind-modular-list-*`), and `--pagefind-ui-*` overrides on
+`.site-search__panel` mapping Pagefind onto our semantic tokens, so results follow the active
+theme.
+
+Asset URLs: all `assets/scripts/*.js` load via `{{ '…' | relative_url }}` (root-relative), so
+they work under `jekyll serve` and in production. Do not use `prepend: site.url` for scripts.
+That hardcodes `https://brajeshwar.com/…`, which 404s locally and made the trigger fall
+through to a plain navigation (the "search just goes to /search/" bug).
+
+The `/search/` page (`_pages/search.html`) is a full-page Pagefind UI with an auto-focused
+input (`pagefind-autofocus.js`), serving as the JS-off fallback and a shareable search URL.
+It is unchanged.
+
+Index scope: `<header>` and `<footer>` carry `data-pagefind-ignore` so the repeating chrome
+(nav, the ⌘K hint badge, footer columns) is excluded from the index. Otherwise it pollutes
+every result's excerpt; the header sits at the top of `<body>`, so its text led every
+excerpt. Only real page content is indexed. *(Posts that genuinely mention ⌘K — e.g. Monaco,
+Safari — will still show it in their own excerpts; that's real content.)* Build and deploy
+are unchanged: `.github/workflows` runs `npx pagefind --site _site` after the Jekyll build.
 
 ### Keyboard shortcuts
 
@@ -75,34 +82,34 @@ slash into the query box, not close the thing you just opened.
 
 ⚠️ **Two guards make `/` safe, and both are load-bearing.**
 
-1. **Not while typing.** `isTyping()` skips the shortcut when focus is in a text-accepting
-   `<input>`, a `<textarea>`, a `<select>`, or anything `contenteditable`. Without it, `/` could
-   never be typed into a search box — including Pagefind's own, in the palette and on
+1. Not while typing. `isTyping()` skips the shortcut when focus is in a text-accepting
+   `<input>`, a `<textarea>`, a `<select>`, or anything `contenteditable`. Without it, `/`
+   could never be typed into a search box — including Pagefind's own, in the palette and on
    `/search/`, which is the classic way this shortcut goes wrong. A focused *checkbox* is not
    typing, so the shortcut still works on the `/about/` filter.
-2. **Bare key only.** No `meta`, `ctrl` or `alt` — `⌘/` and `Ctrl+/` belong to the browser and
-   the OS. **Shift is deliberately NOT excluded**: on plenty of keyboard layouts `/` *is* a
+2. Bare key only. No `meta`, `ctrl`, or `alt` — `⌘/` and `Ctrl+/` belong to the browser and
+   the OS. Shift is deliberately not excluded: on plenty of keyboard layouts `/` *is* a
    shifted key, and `e.key` reports the character produced rather than the physical one.
 
-The trigger's `title` is rewritten by JS to name both shortcuts with the right modifier for the
-platform — `Search (⌘K or /)` on a Mac, `Search (Ctrl K or /)` elsewhere. The markup ships the
-⌘K form so the tooltip is still sensible with JS off.
+The trigger's `title` is rewritten by JS to name both shortcuts with the right modifier for
+the platform: `Search (⌘K or /)` on a Mac, `Search (Ctrl K or /)` elsewhere. The markup ships
+the ⌘K form so the tooltip is still sensible with JS off.
 
 ## Verified (live, plain `jekyll serve`, 1440px)
-- [x] **⌘K** opens the centered palette in place; **click** opens it too — neither navigates.
-- [x] **`/`** opens it, from a real keypress (`key: "/"`, `code: "Slash"`), with the input
-      focused and the query box **empty** — the slash is not typed in.
-- [x] **`/` does not hijack typing**: not in the palette's own input, not in `/search/`'s input.
-- [x] **`⌘/`, `Ctrl+/`, `Alt+/` are ignored**; `/` again while open leaves it open.
+- [x] ⌘K opens the centered palette in place; click opens it too — neither navigates.
+- [x] `/` opens it, from a real keypress (`key: "/"`, `code: "Slash"`), with the input
+      focused and the query box empty — the slash is not typed in.
+- [x] `/` does not hijack typing: not in the palette's own input, not in `/search/`'s input.
+- [x] `⌘/`, `Ctrl+/`, `Alt+/` are ignored; `/` again while open leaves it open.
 - [x] Query "monaco" → 2 results, highlighted, rendered inline.
-- [x] **Esc** / backdrop close; reopening works.
-- [x] `/search/` page loads with the input **auto-focused**.
-- [x] Page load injects **no** Pagefind assets (only the trigger markup).
+- [x] Esc / backdrop close; reopening works.
+- [x] `/search/` page loads with the input auto-focused.
+- [x] Page load injects no Pagefind assets (only the trigger markup).
 
 ## Running search locally
-`jekyll serve` does **not** build the Pagefind index (only CI does), and its `--watch`
-even wipes `_site/pagefind/` on every rebuild — so ⌘K shows *"Search isn't available right
-now"* under a bare `jekyll serve`. Use the **`Makefile`**:
+`jekyll serve` does not build the Pagefind index (only CI does), and its `--watch` even wipes
+`_site/pagefind/` on every rebuild, so ⌘K shows *"Search isn't available right now"* under a
+bare `jekyll serve`. Use the `Makefile`:
 
 | Command | What you get |
 |---|---|
@@ -111,13 +118,20 @@ now"* under a bare `jekyll serve`. Use the **`Makefile`**:
 | `make build` | full production-parity build into `_site/` (site + index). |
 | `make pagefind` | (re)build just the index against the current `_site/`. |
 
-`search.js` is cached hard by the dev server — **hard-reload** after changing it.
+`search.js` is cached hard by the dev server, so hard-reload after changing it.
 
 ### Alternatives considered (local dev)
 Four options were weighed before landing on the Makefile:
-1. **Manual build** (`jekyll build` → `npx pagefind --site _site` → serve) — simplest; manual re-index on content change. **This is what `make serve`/`make build` automate.**
-2. **Jekyll `_plugins/` hook** — auto-run Pagefind after generation. **Rejected:** `_plugins/` is GitHub Pages-incompatible (spec §3) and heavier than needed.
-3. **Watch script** (`nodemon --watch _posts --watch _pages …`) — best DX, auto-reindex on change; extra dependency. Deferred; the Makefile covers the need.
-4. **Docker + Make** — reproducible env; Docker overhead unjustified for a static site. Kept the **Make** half, dropped Docker.
 
-Pagefind only needs to re-run when **content** changes (posts, pages); CSS/JS edits don't require a re-index. Production is unchanged — CI runs `npx pagefind --site _site` after the Jekyll build (spec §9).
+1. Manual build (`jekyll build` → `npx pagefind --site _site` → serve) — simplest, with a
+   manual re-index on content change. This is what `make serve`/`make build` automate.
+2. Jekyll `_plugins/` hook — auto-run Pagefind after generation. Rejected: `_plugins/` is
+   GitHub Pages-incompatible (spec §3) and heavier than needed.
+3. Watch script (`nodemon --watch _posts --watch _pages …`) — best DX, auto-reindex on
+   change, but an extra dependency. Deferred; the Makefile covers the need.
+4. Docker + Make — reproducible env, but Docker overhead is unjustified for a static site.
+   Kept the Make half, dropped Docker.
+
+Pagefind only needs to re-run when content changes (posts, pages); CSS/JS edits don't require
+a re-index. Production is unchanged — CI runs `npx pagefind --site _site` after the Jekyll
+build (spec §9).

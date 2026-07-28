@@ -1,13 +1,13 @@
 # Inspirations — brajeshwar.com
 
 A running list of sites and pages whose article-layout craft informs how this site reads.
-These are north stars for *reference, not copying* — the philosophy they serve is in
-[`design.md`](design.md). Each entry records what the
-page actually does (verified against its shipped HTML/CSS, not from memory), what we want to
-borrow, and what we admire but must not adopt because it conflicts with our guardrails.
+These are north stars for *reference, not copying*; the philosophy they serve is in
+[`design.md`](design.md). Each entry records what the page actually does (verified against
+its shipped HTML/CSS, not from memory), what we want to borrow, and what we admire but must
+not adopt because it conflicts with our guardrails.
 
-The SPEC's original north stars — Tufte CSS, Yale e360, BBC, The Walrus, iDiallo,
-Simon Willison's archives — still stand; this file collects the deeper studies.
+The SPEC's original north stars — Tufte CSS, Yale e360, BBC, The Walrus, iDiallo, Simon
+Willison's archives — still stand; this file collects the deeper studies.
 
 ---
 
@@ -20,65 +20,65 @@ served markup and stylesheets (`site/main.css`, July 2026).
 
 ### How it is built
 
-**One generous reading column.** The text column (he calls it the "chute") is
-`max-width: 850px` on large screens, 700px on mid, with 36px margins (24px small). Wider
-than a classic 65ch measure — it works because the type is large.
+The page reads in one generous column. The text column (he calls it the "chute") is
+`max-width: 850px` on large screens, 700px on mid, with 36px margins (24px small). That is
+wider than a classic 65ch measure, and it works because the type is large.
 
-**Large, confident type.** Base body is 24px/34px on large viewports, 20px/27px on medium.
-Headings are oversized: an "epic" h1 at 88px, h1 at 60px, h2 at 48px. Captions/notes drop to
-18px. Spacing, not rules or boxes, separates sections.
+The type is large and confident. Base body is 24px/34px on large viewports, 20px/27px on
+medium. Headings are oversized: an "epic" h1 at 88px, h1 at 60px, h2 at 48px. Captions and
+notes drop to 18px. Spacing, not rules or boxes, separates sections.
 
-**Serif body, contrasting note face.** Body is set in *Selectric Century* (his own serif
-digitization of the IBM Selectric typewriter face); sidenotes and captions switch to a
-different face (*Selectric UN*) at caption size with slight letter-spacing. The note voice is
-distinct from the body voice — not just smaller body text.
+The body is set in *Selectric Century*, his own serif digitization of the IBM Selectric
+typewriter face; sidenotes and captions switch to a different face, *Selectric UN*, at
+caption size with slight letter-spacing. The note voice is distinct from the body voice,
+not just smaller body text.
 
-**Footnotes live in the right margin.** Inline references are `.footnote-hook` elements whose
-number is painted by CSS (`content: attr(data-footnote-count)`); the notes themselves sit in
-an absolutely positioned `.footnote-container` in the right gutter, aligned near their
-references. Structurally the same idea as our SPEC §sidenotes: real notes in markup, margin
-placement as presentation.
+Footnotes live in the right margin. Inline references are `.footnote-hook` elements whose
+number is painted by CSS (`content: attr(data-footnote-count)`); the notes themselves sit
+in an absolutely positioned `.footnote-container` in the right gutter, aligned near their
+references. Structurally this is the same idea as our SPEC §sidenotes: real notes in
+markup, margin placement as presentation. Hovering a reference sets
+`body.footnote-hovering` and dims every other note and hook except the matching pair, so
+the eye is guided to exactly one note.
 
-**Hover cross-focus.** Hovering a reference sets `body.footnote-hovering` and dims every
-other note and hook except the matching pair — the eye is guided to exactly one note.
+Narrow screens degrade deliberately. Below 768px the margin container is hidden and the
+note instead appears as a full-bleed inline panel (thin top/bottom borders, background
+fill) right at the reference: reveal-in-place rather than jump-to-foot.
 
-**Narrow screens degrade deliberately.** Below 768px the margin container is hidden and the
-note instead appears as a full-bleed inline panel (thin top/bottom borders, background fill)
-right at the reference — reveal-in-place rather than jump-to-foot.
+Figures have a width vocabulary. Each picks from a scale — `width-chute-narrow`,
+`width-chute`, `width-aside`, `width-super-aside` — so images can sit narrower than the
+text, match it, or bleed into the gutters. Aspect-ratio placeholder classes reserve space
+and prevent layout shift, and images zoom into a "theatre" overlay.
 
-**A width vocabulary for figures.** Figures pick from a scale — `width-chute-narrow`,
-`width-chute`, `width-aside`, `width-super-aside` — so images can sit narrower than the text,
-match it, or bleed into the gutters. Aspect-ratio placeholder classes reserve space and
-prevent layout shift; images zoom into a "theatre" overlay.
-
-**A left-gutter table of contents** (~250–300px) accompanies long essays.
-
-**Personality in the margins of the system**: custom cursors, pixel fonts for small UI
-accents, a glossary delivered through the same footnote mechanism.
+A left-gutter table of contents (~250–300px) accompanies long essays. And there is
+personality in the margins of the system: custom cursors, pixel fonts for small UI
+accents, and a glossary delivered through the same footnote mechanism.
 
 ### Borrow
 
-- **Note-voice contrast.** Sidenotes in a distinct size (ours: slightly *larger* relative
-  presence than typical Tufte-style notes — already implemented and working) so they read as
-  a second voice, not shrunken body text.
-- **Hover cross-highlight** between a footnote reference and its sidenote, and the
-  dim-the-rest focus effect. Pure JS/CSS enhancement; no markup changes.
-- **Reveal-in-place on narrow screens** — tapping a reference opens the note inline near it,
-  instead of only linking down to the footnote block. (SPEC §sidenotes already allows this
-  "optionally"; this page is the proof it's worth doing.)
-- **Type-scale confidence.** Larger base body size and genuinely big headings; let white
-  space do the structural work.
-- **Layout-shift discipline** around figures (reserve aspect ratio before images load).
+The note-voice contrast: sidenotes in a distinct size (ours have a slightly *larger*
+relative presence than typical Tufte-style notes, already implemented and working) so they
+read as a second voice, not shrunken body text. With that, the hover cross-highlight
+between a footnote reference and its sidenote, and the dim-the-rest focus effect — a pure
+JS/CSS enhancement, no markup changes.
+
+Reveal-in-place on narrow screens, where tapping a reference opens the note inline near it
+instead of only linking down to the footnote block. SPEC §sidenotes already allows this
+"optionally"; this page is the proof it's worth doing.
+
+Type-scale confidence: a larger base body size and genuinely big headings, letting white
+space do the structural work. And the layout-shift discipline around figures, reserving
+aspect ratio before images load.
 
 ### Admire, don't adopt
 
-- **Custom self-hosted fonts** (Selectric Century/UN, Pantograph, pixel faces). We stay on
-  Modern Font Stacks / system fonts per SPEC §4.1.
-- **Per-figure width classes** require authoring markup per post. Our content is frozen —
-  any figure treatment must come from CSS applied to existing markup only.
-- **CSS-painted footnote numbers** (`content: attr(...)`) — ours must remain real text in
-  real `sup`/`li` elements so the no-JS page keeps working footnotes (guardrail 4/5).
-- **Left-gutter TOC** — not worth it here; most posts are short.
+The custom self-hosted fonts (Selectric Century/UN, Pantograph, pixel faces) stay his; we
+stay on Modern Font Stacks / system fonts per SPEC §4.1. Per-figure width classes require
+authoring markup per post, and our content is frozen: any figure treatment must come from
+CSS applied to existing markup only. CSS-painted footnote numbers (`content: attr(...)`)
+are also out, since ours must remain real text in real `sup`/`li` elements so the no-JS
+page keeps working footnotes (guardrail 4/5). A left-gutter TOC is not worth it here; most
+posts are short.
 
 ---
 
@@ -86,13 +86,11 @@ accents, a glossary delivered through the same footnote mechanism.
 
 <https://e360.yale.edu>
 
-The reference for a **simple, well-done single-article page**. What to borrow:
-
-- **Clean blockquotes** — no background box; enough separation from the body to register its
-  presence without ornament.
-- **Restrained figures** — the `<figure>` and its image sit well together; the caption is part
-  of the picture content without special treatment.
-- **Multi-image split views** — tidy side-by-side image rows.
+The reference for a simple, well-done single-article page. What to borrow: clean
+blockquotes, with no background box and enough separation from the body to register its
+presence without ornament; restrained figures, where the `<figure>` and its image sit well
+together and the caption is part of the picture content without special treatment; and
+multi-image split views, tidy side-by-side image rows.
 
 Example articles studied:
 - [Why U.S. Geothermal May Advance, Despite Political Headwinds](https://e360.yale.edu/features/united-states-geothermal-republican-spending-bill)
@@ -116,7 +114,7 @@ Also admired for their single-article pages. Example articles:
 
 <https://thewalrus.ca>
 
-Look at how the **typographic spacing plays brilliantly without needing anything
-supplemental** — no rules, no boxes, just rhythm. Example articles:
+Look at how the typographic spacing plays brilliantly without needing anything
+supplemental: no rules, no boxes, just rhythm. Example articles:
 - [How I Solved the Century-Old Mystery of a Miraculous Shipwreck Survivor](https://thewalrus.ca/empress-of-ireland-survivor-mystery/)
 - [Greenland Has Been Fighting Off Americans for Over a Century](https://thewalrus.ca/greenland-has-been-fighting-off-americans-for-over-a-century/)
