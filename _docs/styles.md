@@ -162,6 +162,17 @@ characters per line (see [`design.md`](design.md) → *Comfortable measure*).
 - Media in the column (`figure`, `img`, video embeds) fits the measure. Video embeds use
   `aspect-ratio: 16/9` (`base.css`), not a width-derived pixel height — required now
   that the column width is font-relative.
+- **Blockquotes break the measure** (2026-07-28, after Yale e360 — see
+  [`inspirations.md`](inspirations.md)). `.post:not(.has-sidenotes) blockquote` widens to the
+  band, `min(96vw, --body-width-max)`: left edge stays on the band edge, right edge grows
+  665px → 1024px. The accent rides `var(--color-accent)` on the left rule, so it is coral for
+  a reader who opted into an accent and gray for everyone else.
+  ⚠️ Gated on `:not(.has-sidenotes)` because it grows into the sidenote gutter — sidenotes are
+  `position: absolute; left: 100%`, so a widened quote lands *under* them rather than pushing
+  them. Measured in-browser: 13 posts / 16 pairs would overlap ungated; 0 with the gate.
+  Degrades right in both directions — JS off means no `.has-sidenotes`, so the quote breaks out
+  and the footnotes stay at the article foot; on narrow screens `gutterFits()` fails, but there
+  the band *is* the column so the expression evaluates to no change at all.
 - `--measure` is the knob: raise toward `70ch` for a looser line, lower toward `62ch` for
   tighter. The sidenote gutter (see [`sidenotes.md`](sidenotes.md)) lives in the space to the
   right of this column.

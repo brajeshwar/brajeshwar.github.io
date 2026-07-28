@@ -92,6 +92,33 @@ presence without ornament; restrained figures, where the `<figure>` and its imag
 together and the caption is part of the picture content without special treatment; and
 multi-image split views, tidy side-by-side image rows.
 
+### Taken 2026-07-28 — the wide pull quote
+
+e360 runs its pull quotes wider than the reading column, in a coral accent, with a lot of
+air. Brajeshwar: *"I like the blockquote with the expanded width … constrained on the left
+of the article while moving beyond the with of the readable article. I'm also good with
+introducing accent color here."* Studied on
+[After Decades of Drought, Water Is Rising in the African Sahel](https://e360.yale.edu/features/sahel-groundwater-climate-monsoon).
+
+Adapted rather than copied, in two places:
+
+- **Direction.** e360 *centres* its quote and grows both ways, which it can do because its
+  column is centred. Ours is not — `.container-ideal` pins the article's left edge to the
+  band edge that the header rule, the footer rule and the logo all align to. So the quote
+  grows right only. Rule in `_sass/post.scss`, sized to the band with the same
+  `min(96vw, --body-width-max)` expression `.sidenote` bounds itself with.
+- **Colour.** The accent lands on the left rule via `var(--color-accent)`, never a literal.
+  `themes.scss` is explicit that the resting site is monotone and the accent is opt-in, so
+  this shows e360's coral to a reader who chose an accent and stays gray for everyone else.
+  Colouring the quote *text* was rejected: this fires on all 193 blockquotes in 176 posts
+  with no per-quote opt-out (guardrail 1), where e360 uses the device a few times an article.
+
+⚠️ **The breakout is gated on `:not(.has-sidenotes)`** — the gutter it grows into is the
+sidenote gutter. Verified in the browser, not by eye: forcing the breakout on collides on
+**13 posts / 16 blockquote-sidenote pairs**; with the gate, all 21 candidates are clean. A
+Markdown-proximity estimate had said 21 posts, overstating it by 60% — measure geometry, not
+source lines, if this is ever widened.
+
 Example articles studied:
 - [Why U.S. Geothermal May Advance, Despite Political Headwinds](https://e360.yale.edu/features/united-states-geothermal-republican-spending-bill)
 - [In War Zones, a Race to Save Key Seeds Needed to Feed the World](https://e360.yale.edu/features/seed-banks-war-palestine-ukraine-sudan-syria)
