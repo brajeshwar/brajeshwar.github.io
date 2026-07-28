@@ -147,6 +147,59 @@ photo-cover__desc {
 }
 
 
+/* ---- Blockquote breakout ---------------------------------------
+   Yale e360 runs its pull quotes wider than the reading column. Adapted
+   rather than copied: e360 CENTRES its quote, widening in both directions,
+   which it can do because its column is centred. Ours is not — .container-ideal
+   is `margin-inline: 0 auto`, so the article's left edge is pinned to the
+   band edge that the header rule, the footer rule and the logo all align to.
+   So the quote grows to the RIGHT only and keeps that left edge, which is what
+   Brajeshwar asked for: "constrained on the left of the article while moving
+   beyond the width of the readable article."
+
+   ⚠️ WHY THIS IS GATED ON :not(.has-sidenotes) — the gutter it grows into is
+   the SIDENOTE gutter. `.sidenote` is `position: absolute; left: 100%` with a
+   --sidenote-gap margin, measured off the article, so it sits in exactly the
+   space a full-band quote wants. A widened blockquote does not push a sidenote
+   anywhere; it lands underneath it, and both become unreadable.
+
+   Measured 2026-07-28, in the browser and not by eye: 176 posts carry a
+   blockquote, 85 carry footnotes, 32 carry both. Of those, 21 have a
+   blockquote within six lines of a footnote reference in the Markdown — but
+   source proximity is NOT overlap, and checking rendered geometry instead
+   (every blockquote box against every placed sidenote box, with the breakout
+   forced on) put the true figure at 13 posts and 16 overlapping pairs. With
+   the gate, all 21 come back clean. Re-run that probe before widening this
+   further; the Markdown heuristic overstated it by 60%.
+
+   sidenotes.js adds .has-sidenotes only after gutterFits() passes, which makes
+   it precisely the flag this needs: "the gutter is occupied right now." So the
+   breakout is automatic where the gutter is free and simply does not happen
+   where it is not — no JS change, no per-post markup, no content edit.
+
+   It degrades correctly in both directions, which is the test that matters
+   (guardrail 4). JS off: no .has-sidenotes is ever added, the quote breaks out,
+   and the footnotes render at the article foot where they always did — nothing
+   to collide with. Narrow screens: gutterFits() fails, so again no class — but
+   there the band IS the column, so `min(96vw, --body-width-max)` evaluates to
+   the article's own width and the breakout silently amounts to nothing.
+
+   The width expression is deliberately the same one `.sidenote` bounds itself
+   with — min(96vw, --body-width-max) is THE band. Since the article's left edge
+   is the band's left edge, setting the quote to the band's width lands its
+   right edge exactly on the band's right edge, next to nothing and past
+   nothing. Not `--body-width-full` (1600px): that is the photo-cover bleed,
+   and prose has no business out there.
+
+   Stopping instead at calc(100% + var(--sidenote-gap)) was the safe-everywhere
+   alternative — 56px of guaranteed-empty gap, no gate needed. Rejected as too
+   timid to read as intentional: 665px to 721px is under nine percent, which
+   looks like a mistake rather than a break. */
+.post:not(.has-sidenotes) blockquote {
+  width: min(96vw, var(--body-width-max));
+}
+
+
 /* ---- Post navigation: previous / next ---------------------------
    One bar under the article. Prev sits hard left, Next hard right, and
    whichever exists fills the width it is given.

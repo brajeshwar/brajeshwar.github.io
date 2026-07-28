@@ -341,9 +341,28 @@ h6 { font-size: var(--step--2); }
 }
 
 /* Blockquote — Yale e360 style: no background, a quiet left rule, spacing does
-   the separating. See _docs/inspirations.md (Yale e360). */
+   the separating. See _docs/inspirations.md (Yale e360). The width breakout
+   that goes with this lives in post.scss, because it is post-only.
+
+   ACCENT, 2026-07-28 (Brajeshwar: "I'm also good with introducing accent
+   colour here", after e360's coral pull quotes). The rule takes
+   --color-accent, NOT a hardcoded hue. themes.scss is explicit that the base
+   is monotone and --color-accent resolves to a gray until someone opts into a
+   hue via the appearance panel's data-accent axis — so this reads as e360's
+   coral for a reader who chose an accent and changes nothing for everyone
+   else. Writing a literal colour here would have shipped hue to people who
+   deliberately have none, and would have been the only hardcoded colour
+   outside themes.scss.
+
+   The rule is also the ONLY thing that carries the accent. Colouring the quote
+   TEXT was the other option and is wrong at this scale: this fires on all 193
+   blockquotes across 176 posts with no per-quote opt-out (guardrail 1 — no
+   content edits), and e360 uses its coral editorially, a few times an article. */
 blockquote {
-  margin: var(--space-m) 0;
+  /* --space-l, up from --space-m: once a quote breaks the measure it reads as
+     a display element, and a display element that is only --space-m from the
+     paragraph above looks like it is still part of it. */
+  margin: var(--space-l) 0;
   padding: var(--space-2xs) 0 var(--space-2xs) var(--space-m);
 
   /* inherit — follows the article's reading font inside content, sans elsewhere */
@@ -353,7 +372,7 @@ blockquote {
   hyphens: none;
 
   color: var(--text-muted);
-  border-left: var(--border-size-small) var(--border-style) var(--rule);
+  border-left: var(--border-size) var(--border-style) var(--color-accent);
 }
 
 blockquote p {
