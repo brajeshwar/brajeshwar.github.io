@@ -1,0 +1,38 @@
+{%- comment -%}
+  Home — the 21 most recent articles, as a table of contents.
+
+  Title left, date hard right, dotted leader filling the gap between them
+  (Brajeshwar 2026-07-31: "list the last 21 articles like a table of content.
+  Title and then the date on the right").
+
+  The leader is an EMPTY <span>, not dot characters. Typed dots would be read
+  aloud by a screen reader, would not stretch to fill, and would break at
+  arbitrary points when the title wraps. A flex child with a dotted bottom
+  border stretches to whatever space is left on the last line and is invisible
+  to assistive tech. See .toc in home.scss for the wrapping behaviour.
+
+  The whole row is one <a>: a title-only link leaves the date and the leader
+  as dead space in a list whose rows are ~40 characters of target.
+{%- endcomment -%}
+<home-toc>
+  <h2 class="toc__heading">
+    Articles <a href="/archives/">(view all)</a>
+  </h2>
+
+  <p class="toc__intro">
+    I’ve been writing since 2001, about technology in general and design,
+    productivity and startups in particular.
+  </p>
+
+  <ul class="toc">
+    {%- for post in site.posts limit: 21 %}
+    <li class="toc__row">
+      <a class="toc__link" href="{{ post.url | relative_url }}">
+        <span class="toc__title">{{ post.title }}</span>
+        <span class="toc__leader" aria-hidden="true"></span>
+        <time class="toc__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</home-toc>

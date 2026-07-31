@@ -293,6 +293,19 @@ at the top of this section.
 - [x] **`--body-width-medium` (60rem)** *(done 2026-07-27)* — folded into `--image-width-max`,
       its only reader. One token named for what it does instead of two, one of which claimed to
       be a site width and was not.
+- [ ] **Full-bleed is back, for two components only** *(2026-07-31)*. The homepage Books and
+      Photos strips run to the viewport edge — Brajeshwar: *"thumbnails that spans the width of
+      the browser viewport. The title is within our body width."* This **reverses** the entry
+      below for those two, and nothing else: every other breakout still stops at the band. The
+      mechanism is not a resurrected `--body-width-full` but `width: 100vw` +
+      `margin-inline: calc(50% - 50vw)`, with `padding-inline-start: calc(50vw - 50%)` putting
+      the first thumbnail back on the band's left edge so it lines up with the heading, the
+      header rule and the logo.
+      ⚠️ `100vw` includes the scrollbar and the band does not, so the strip is a scrollbar
+      wider than the page can show. `body:has(home-container) { overflow-x: clip }` absorbs it
+      — `clip`, not `hidden`, because `hidden` would make the body a scroll container and
+      unstick the sticky header. Scoped with `:has()` so no other page is touched. The test is
+      `document.documentElement.scrollWidth > window.innerWidth`, which is invisible by eye.
 - [x] ~~**`--body-width-full` (1600px)**~~ — removed 2026-07-27. The premise no longer holds:
       Brajeshwar's call is that nothing may exceed the band (*"so it is still within the body
       width"*), so breakouts now stop at it and this token's only readers are gone.

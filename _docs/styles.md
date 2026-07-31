@@ -463,7 +463,7 @@ covers the scripts too.
 
 **2. Every stylesheet applies to every page.** There is no layout gate any more. A selector
 must anchor to something page-specific — a class (`.page`, `.post`) or a custom element
-(`<photo-cover>`, `<home-books>`) — and never a bare `main > article > h2`.
+(`<photo-cover>`, `<home-container>`) — and never a bare `main > article > h2`.
 
 `page.css` was the one file that had assumed the gate, and the damage was not cosmetic: its
 prose-measure rule was `main > article > p` and friends, a post is *also* `main > article`,
@@ -577,7 +577,7 @@ Six places, found by audit rather than by eye:
 | `.post-nav__link` | (0,1,0) | PREV / NEXT |
 | `.headerlink` | (0,1,0) | the § anchors |
 | `.icon-button` | (0,1,0) | search, RSS |
-| `home-books li a` | (0,0,3) | homepage book list |
+| `home-books li a` | (0,0,3) | homepage book list — *retired 2026-07-31, now `.strip__link`* |
 | `.pagefind-modular-list-link` | (0,1,0) | search results |
 
 ⚠️ **Do not un-wrap these, and do not "fix" a chrome link by adding `:visited` to its own
@@ -630,6 +630,42 @@ repeating that check on any future reshuffle:
 - `style:` (singular) — a CSS class written onto `<main>`. Still live. A layout/styling
   hook, not a bundle. This is the one that survives, and it was always the more confusable
   of the two.
+
+## The home page (rebuilt 2026-07-31)
+Built from Brajeshwar's tldraw wireframe. Three pieces, all in `_sass/home.scss`.
+
+**A two-column band.** `home-container` is a grid: a reading column and an 18rem sidebar,
+with the sidebar spanning both content rows rather than being cut in two. Both tracks are
+`minmax(0, …)` — a grid track's default `min-width: auto` refuses to shrink below its
+content, so one long post title would otherwise push the column past its share and squeeze
+the sidebar. It collapses to one column at `$medium`, not `$small`: with an 18rem sidebar the
+reading column is the narrower of the two below ~800px.
+
+**Table-of-contents lists.** Articles (21 most recent) and Popular & Handpicked, both title
+left / date hard right with a dotted leader between. Includes: `home-articles.html`,
+`home-popular.html`.
+- `align-items: flex-end` on the row, **not `baseline`**. Baseline looks identical on
+  one-line rows and wrong on every wrapped one — it pins to the first line, stranding the
+  date at the top of a two-line row. `flex-end` drops the leader and date onto the title's
+  last line.
+- The leader is a **repeating radial gradient, not `border-bottom: 1px dotted`.** The border
+  version was written first and failed on contact: `--border-color` is a 10% alpha, and a 1px
+  dotted border on a 2× display antialiases into a continuous hairline. The computed style
+  said `dotted` while the screen showed a solid rule. 2px dots on a 7px pitch instead.
+- The leader is an empty `<span>`, never typed dots — dots would be read aloud, would not
+  stretch, and would break at arbitrary points.
+
+**Two full-bleed strips** (Books, Photos) — one shared include, `home-strip.html`, at two
+ratios: books 3:4, photos 4:3, set with `aspect-ratio` on the `<img>` so a slow file still
+reserves its box and the row never reflows. See the *Full-bleed is back* entry in
+[`todo.md`](todo.md) for the bleed mechanism and the `overflow-x: clip` counterweight.
+⚠️ **Photos renders nothing** until `_data/photos.yaml` exists; the include is gated on its
+items exactly as Books is.
+
+⚠️ **These strips do not use `ul.item__cards`.** That class is shared with the album pages
+through `album.scss` (`/devices/`, `/film/`, `/music/`, `/wear/`), which want a wrapping grid
+where these want a clipped single row. New classes, no shared surface — verified after the
+rebuild that `cards.scss` and `album.scss` were untouched and those four pages unchanged.
 
 ## The `album` layout (built 2026-07-19)
 A thumbnail grid for photos, videos, or both — a simple album hosted here, likely linking out

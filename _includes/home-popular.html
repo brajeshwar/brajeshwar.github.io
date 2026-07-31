@@ -1,0 +1,37 @@
+{%- comment -%}
+  Home — Popular & Handpicked, in the same table-of-contents form as the
+  articles list above it.
+
+  Source is _data/posts-popular.yaml, which is content and not ours to edit.
+  Brajeshwar 2026-07-31: "I will likely have 13 articles later but for now,
+  just pick up what we have currently on page" — so there is no `limit` here.
+  The list is however long the data file is; add entries to the yaml and they
+  appear.
+
+  Dates come from the yaml's `time:` field rather than a post lookup, because
+  an entry may point anywhere. No <time datetime> attribute for that reason:
+  the strings are already display-formatted and a machine-readable value would
+  have to be parsed out of them, which would be wrong the first time an entry
+  points at something that is not a dated post.
+{%- endcomment -%}
+{% if site.data.posts-popular %}
+<home-toc>
+  <h2 class="toc__heading">Popular &amp; Handpicked</h2>
+
+  <p class="toc__intro">
+    Some ranked by the search engines, some picked by me.
+  </p>
+
+  <ul class="toc">
+    {%- for item in site.data.posts-popular %}
+    <li class="toc__row">
+      <a class="toc__link" href="{{ item.url | relative_url }}">
+        <span class="toc__title">{{ item.title }}</span>
+        <span class="toc__leader" aria-hidden="true"></span>
+        <span class="toc__date">{{ item.time }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</home-toc>
+{% endif %}

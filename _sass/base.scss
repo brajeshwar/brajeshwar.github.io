@@ -312,6 +312,10 @@ h6 { font-size: var(--step--2); }
    the homepage book list (`home-books li a`, 0,0,3) and the search results
    (`.pagefind-modular-list-link`, 0,1,0). Every one of those is a link a
    reader visits by definition, so the bug was permanent once triggered.
+   (`home-books li a` no longer exists — the homepage rebuild on 2026-07-31
+   replaced it with `.strip__link`, which is covered by the same `:where()`
+   fix below. Left in the list because this is the record of what the audit
+   found, not an inventory of what is on the page today.)
 
    Patching each with its own `:visited` was the alternative. This is better:
    it removes the cause instead of the instances, and it stops the next

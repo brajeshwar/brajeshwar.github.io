@@ -1,0 +1,33 @@
+{%- comment -%}
+  Home sidebar — Alumni. Split out of home-connect.html on 2026-07-31, when
+  the sidebar became an explicit three-part stack: Connect, Alumni, then
+  Support & Endorsements.
+
+  ⚠️ The markup was <p><ul>…</ul></p> in its old home. That is invalid — a <ul>
+  is not phrasing content, so every browser closes the <p> before the list and
+  leaves a stray </p> after it, giving an empty paragraph in the DOM that CSS
+  can still target. Fixed in the move: the list stands on its own. Includes are
+  template, not content, so this is ours to correct under guardrail 1.
+{%- endcomment -%}
+<home-alumni>
+  <h3 class="aside__title aside__title--sub">Alumni</h3>
+  <ul class="aside__years">
+    <li><span>2024</span> <a href="https://www.startupbootcamp.org">Startup Bootcamp</a> Netherlands</li>
+    <li><span>2022</span> <a href="https://www.entrepreneursforimpact.com/">Entrepreneurs for Impact</a> USA</li>
+    <li><span>2022</span> <a href="https://500.co/accelerators/accelerate-aichi">500’s Accelerate Aichi</a> Japan</li>
+    <li><span>2020</span> <a href="https://beondeck.com/r/brajeshwar">On Deck</a> USA</li>
+    <li><span>2010</span> <a href="https://fi.co">Founder Institute</a> USA</li>
+  </ul>
+  {%- comment -%}
+    Moved here with Alumni from home-connect.html, still commented out, still
+    Brajeshwar's to switch on. Same list form, so it belongs beside its sibling
+    rather than in the contact block.
+
+      <h3 class="aside__title aside__title--sub">Schools &amp; College (Manipur, INDIA)</h3>
+      <ul class="aside__years">
+        <li><span>1999</span> <a href="https://dmcscience.ac.in">Dhanamanjuri College of Science</a></li>
+        <li><span>1995</span> <a href="https://manipurpublicschool.in">Manipur Public School</a></li>
+        <li><span>1993</span> <a href="https://tinytotsuniqueschool.blogspot.com">Tiny Tots’ Unique School</a></li>
+      </ul>
+  {%- endcomment -%}
+</home-alumni>

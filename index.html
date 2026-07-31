@@ -3,15 +3,52 @@ layout: default
 title: Brajeshwar Oinam
 ---
 
+{%- comment -%}
+  Home. Rebuilt 2026-07-31 from Brajeshwar's tldraw wireframe: a reading
+  column of two table-of-contents lists, a three-part sidebar beside it, then
+  two full-bleed thumbnail strips beneath.
+
+  The two strips sit OUTSIDE <home-container> deliberately. They bleed past
+  the band, and a grid item that escapes its own grid fights the track sizing
+  it is supposed to obey — the negative margins would resolve against the
+  column, not the page. Keeping them as siblings means the grid describes the
+  banded part of the page and nothing else.
+{%- endcomment -%}
+
 <main>
   <home-container>
     <home-intro>
       <h1>{{ site.data.ui.me.intro }}</h1>
       <p>{{ site.data.ui.me.intro_desc }}</p>
     </home-intro>
-    <home-articles> {% include home-blog.html %}    </home-articles>
-    <home-support>  {% include home-support.html %} </home-support>
-    <home-books>    {% include home-books.html %}   </home-books>
-    <home-connect>  {% include home-connect.html %} </home-connect>
+
+    <home-articles>{% include home-articles.html %}</home-articles>
+
+    <home-popular>{% include home-popular.html %}</home-popular>
+
+    <home-aside>
+      {% include home-connect.html %}
+      {% include home-alumni.html %}
+      {% include home-support.html %}
+    </home-aside>
   </home-container>
+
+  {% include home-strip.html
+     items = site.data.books
+     title = "Books"
+     href  = "/books/"
+     kind  = "books"
+     intro = "Some of my all-time favourites, read and re-read. Since 2018 I list the interesting ones I read each year." %}
+
+  {%- comment -%}
+    Photos renders NOTHING until _data/photos.yaml exists — the include is
+    gated on `items`, exactly as Books always has been, and /photos/ is still
+    a coming-soon page. Same field shape as books.yaml (title, url, img, alt),
+    with images under /static/photos/. Data is content and not ours to invent.
+  {%- endcomment -%}
+  {% include home-strip.html
+     items = site.data.photos
+     title = "Photos"
+     href  = "/photos/"
+     kind  = "photos" %}
 </main>

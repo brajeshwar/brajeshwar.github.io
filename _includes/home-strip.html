@@ -1,0 +1,45 @@
+{%- comment -%}
+  Home — one full-bleed thumbnail strip. Used by Books and Photos, which are
+  the same component at two aspect ratios (Brajeshwar 2026-07-31: "Photos.
+  Same style as Books").
+
+  Parameters:
+    items    the data array (site.data.books / site.data.photos)
+    title    heading text
+    href     where the heading links
+    kind     "books" | "photos" — picks the ratio class and the image folder
+    intro    optional paragraph, rendered above the strip inside the band
+
+  The heading sits in the band; the strip bleeds to the viewport edge. Both
+  the title and every item are links, as asked.
+
+  ⚠️ NOT ul.item__cards. That class is shared with the album pages
+  (/devices/, /film/, /music/, /wear/) via album.scss, and reusing it here
+  would have coupled this redesign to four pages that want a wrapping grid,
+  not a clipped single row. New classes, no shared surface.
+{%- endcomment -%}
+{% if include.items %}
+<home-strip class="strip-section">
+  <h2 class="strip__heading">
+    <a href="{{ include.href | relative_url }}">{{ include.title }}</a>
+  </h2>
+
+  {%- if include.intro %}
+  <p class="strip__intro">{{ include.intro }}</p>
+  {%- endif %}
+
+  <ul class="strip strip--{{ include.kind }}">
+    {%- for item in include.items %}
+    <li class="strip__item">
+      <a class="strip__link" href="{{ item.url | relative_url }}">
+        <img class="strip__img"
+             src="/static/{{ include.kind }}/{{ item.img }}"
+             alt="{{ item.alt | default: item.title }}"
+             loading="lazy" decoding="async">
+        <span class="strip__caption">{{ item.title }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</home-strip>
+{% endif %}

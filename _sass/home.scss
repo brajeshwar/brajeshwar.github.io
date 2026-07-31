@@ -1,52 +1,66 @@
 @use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
 
-/* The home page's books row uses ul.item__cards, which lives in cards.css
-   since 2026-07-27 — it was in base.css, and therefore on every post, to
-   serve this page and the two album pages.
-
-   This file used to pull it in with an include. That was right when each page
-   assembled its own bundle, and became a DUPLICATE the moment the manifest
-   started including cards.css for everyone: the rules were emitted twice into
-   the same stylesheet. Removed 2026-07-27. Cascade order is the manifest's
-   job now, and cards.css sits ahead of this file there. */
-
 /* ============================================================
    Home — homepage only.
    ------------------------------------------------------------
-   Loaded via the styles: key in index.html.
+   Rebuilt 2026-07-31 from Brajeshwar's tldraw wireframe. Three pieces:
+
+     1. a two-column band — reading column + sidebar
+     2. two table-of-contents lists in that reading column
+     3. two full-bleed thumbnail strips below the band
+
+   Every selector here is anchored to a <home-*> custom element or a `.toc` /
+   `.strip` class, because every stylesheet applies to every page now — there
+   is no layout gate. Nothing here may match a bare tag.
+
+   ⚠️ ul.item__cards is NO LONGER USED by this page. It is shared with the
+   album pages through album.scss (/devices/, /film/, /music/, /wear/), and
+   this page's strip wants a clipped single row where those want a wrapping
+   grid. The old home-books rules that styled it are gone; cards.scss is
+   untouched and those four pages are unaffected.
    ============================================================ */
 
+/* ---- The banded part of the page ------------------------------
+   Two columns: the reading column and the sidebar. The wireframe puts
+   Articles and Popular in the left column with Connect / Alumni / Support
+   stacked to their right, so the sidebar spans both content rows rather than
+   being cut into two boxes.
+
+   `minmax(0, …)` on both tracks is load-bearing, not decoration: a grid
+   track's default `min-width: auto` refuses to shrink below its content, so
+   one long unbroken post title in the toc would push the column past its
+   share and squeeze the sidebar. With minmax(0,…) the title wraps instead. */
 home-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 18rem);
   gap: var(--space-l) var(--space-m);
+  align-items: start;
 
   grid-template-areas:
-    "intro intro ."
-    "articles articles support"
-    "connect books books"
-    ;
+    "intro    ."
+    "articles aside"
+    "popular  aside";
 }
 
-@media only screen and (max-width: bp.$small) {
+home-container home-intro    { grid-area: intro; }
+home-container home-articles { grid-area: articles; }
+home-container home-popular  { grid-area: popular; }
+home-container home-aside    { grid-area: aside; }
+
+/* Collapse at --medium, not --small: the sidebar is 18rem, so below roughly
+   800px the reading column is narrower than the thing beside it. */
+@media only screen and (max-width: bp.$medium) {
   home-container {
     grid-template-columns: 1fr;
     grid-template-areas:
-    "intro"
-    "articles"
-    "support"
-    "books"
-    "connect"
-    ;
+      "intro"
+      "articles"
+      "popular"
+      "aside";
   }
 }
 
-home-container home-intro     { grid-area: intro; }
-home-container home-articles  { grid-area: articles; }
-home-container home-support   { grid-area: support; }
-home-container home-books     { grid-area: books; }
-home-container home-connect   { grid-area: connect; }
-
+/* ---- Intro ---------------------------------------------------- */
 home-container home-intro {
   font-size: var(--step-2);
   font-weight: var(--font-weight-light);
@@ -66,97 +80,189 @@ home-container home-intro p {
   line-height: var(--scale-small);
 }
 
-/* BLOG POSTS */
-home-posts {
-  display: block;
-}
+/* ---- Table of contents ----------------------------------------
+   Title left, date hard right, dotted leader filling whatever is left
+   between them — the printed table-of-contents device.
 
+   HOW THE LEADER SURVIVES A WRAPPING TITLE, which is the whole difficulty:
 
-posts-recent ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+   `align-items: flex-end` aligns the three children to the BOTTOM of the
+   tallest. When a title wraps to two lines the row grows, and the leader and
+   the date settle onto the last line of the title rather than floating beside
+   its first. `align-items: baseline` looks identical for one-line rows and
+   wrong for every wrapped one — it pins to the FIRST line's baseline, leaving
+   the date stranded at the top of a two-line row.
 
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: var(--space-2xs);
-}
+   The leader is `flex: 1 1 auto` so it takes the slack, with a `min-width` so
+   it never collapses to invisibility when a title happens to end near the
+   date. It is an empty span with a dotted bottom border, NOT typed dots: dots
+   would be announced by a screen reader, would not stretch to fill, and would
+   break at arbitrary points.
 
-posts-recent ul li {
-  flex-grow: 1;
-  width: 20ch;
-}
+   The `translateY` lifts the rule off the text baseline so it reads as a
+   leader and not as an underline of the date. */
+.toc__heading {
+  margin: 0 0 var(--space-2xs);
+  padding: 0 0 var(--space-3xs);
 
-posts-recent ul li a, posts-recent ul li a:visited {
-  display: block;
-  height: 100%;
-  margin: 0;
-  padding: var(--space-xs) var(--space-s);
-  
   font-size: var(--step-1);
   font-weight: var(--font-weight-light);
-  line-height: var(--scale-small);
-  text-decoration: none;
-  
-  background: var(--bg-color-low);
-  border-radius: var(--border-radius);
-  border: var(--border-size) var(--border-style) transparent;
+  text-transform: lowercase;
+
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
-posts-recent ul li a:hover, posts-recent ul li a:active {
-  text-decoration: none;
-  background: var(--bg-color);
-  border-color: var(--border-color-high);
-}
-
-posts-recent ul time {
-  display: block;
-  margin-bottom: var(--space-2xs);
-  font-size: var(--step--2);
+.toc__heading a {
+  font-size: var(--step--1);
   color: var(--text-color-low);
 }
 
-/* home: blog - popular articles */
-posts-popular {
-  display: block;
-  margin: var(--space-m) auto;
-}
-
-posts-popular ul, posts-popular ol {
-  margin: 0 0 var(--space-m) 0;
-  padding-inline: var(--space);
-}
-
-posts-popular li::marker {
-  color: var(--text-color-lower);
-}
-
-posts-popular time {
-  display: inline-block;
-  padding: 0 var(--space-2xs);
-
-  font-size: small;
-  
+.toc__intro {
+  margin: 0 0 var(--space-s);
+  font-size: var(--step--1);
   color: var(--text-color-low);
-  background-color: var(--bg-color-low);
-  border-radius: var(--border-radius-large);
 }
 
+.toc {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-/* SUPPORT & ENDORSEMENTS */
-home-support {
+.toc__row {
+  margin: 0;
+  padding: 0;
+}
+
+.toc__link,
+.toc__link:visited {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2xs);
+
+  padding: var(--space-3xs) 0;
+
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* The title is the only part that may wrap; `min-width: 0` lets it. */
+.toc__title {
+  min-width: 0;
+  font-weight: var(--font-weight-light);
+}
+
+/* ⚠️ A gradient, not `border-bottom: 1px dotted`. That was the first attempt
+   and it does not survive contact with this site: `--border-color` is a 10%
+   alpha, and a 1px dotted border on a 2x display renders sub-pixel dots that
+   antialias into a continuous hairline. Measured on the built page — the
+   computed style said `dotted` while the screen showed a solid rule, which is
+   the worst kind of wrong, since the CSS reads as correct.
+
+   A repeating radial gradient gives dots at a size we choose rather than a
+   size the border algorithm picks: 2px dots on a 7px pitch, painted at the
+   bottom edge. `--text-color-lower` instead of a border token because this is
+   a typographic device, not a box edge — it wants to sit in the same tonal
+   family as the muted date it leads to. */
+.toc__leader {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  align-self: flex-end;
+
+  /* leave room for the dot row and lift it off the text baseline */
+  height: 0.85em;
+
+  background-image: radial-gradient(
+    circle closest-side,
+    var(--text-color-lower) 99%,
+    transparent 100%
+  );
+  background-position: left bottom 0.28em;
+  background-size: 7px 2px;
+  background-repeat: repeat-x;
+}
+
+.toc__date {
+  flex: none;
+  white-space: nowrap;
+
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums;   /* dates stack in a straight edge */
+  color: var(--text-color-low);
+}
+
+.toc__link:hover .toc__title,
+.toc__link:active .toc__title {
+  text-decoration: underline;
+  text-decoration-color: var(--text-color-lower);
+  text-underline-offset: 0.3rem;
+}
+
+.toc__link:hover .toc__leader,
+.toc__link:active .toc__leader {
+  background-image: radial-gradient(
+    circle closest-side,
+    var(--text-color-low) 99%,
+    transparent 100%
+  );
+}
+
+/* ---- Sidebar --------------------------------------------------
+   Connect, then Alumni, then Support & Endorsements, in that order. */
+home-aside {
   display: block;
   font-size: var(--step--1);
 }
 
-home-support h2 {
-  text-transform: lowercase;
+home-aside > * + * {
+  display: block;
+  margin-top: var(--space-m);
+}
+
+.aside__title {
+  margin: 0 0 var(--space-2xs);
+  padding: 0 0 var(--space-3xs);
+
   font-size: var(--step-1);
-  font-weight: var(--font-weight-lighter);
-  
-  border-bottom: 1px solid var(--border-color);
+  font-weight: var(--font-weight-light);
+  text-transform: lowercase;
+
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
+}
+
+.aside__title--sub {
+  font-size: var(--step-0);
+  border-bottom: 0 none;
+}
+
+.aside__years {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color-low);
+}
+
+.aside__years span {
+  margin-right: var(--space-3xs);
+  font-family: var(--font-family-monospace);
+  font-size: smaller;
+  color: var(--text-color-low);
+}
+
+/* home-support carries its own <h2>; match it to the sidebar's heading. */
+home-support {
+  display: block;
+}
+
+home-support h2 {
+  margin: 0 0 var(--space-2xs);
+  padding: 0 0 var(--space-3xs);
+
+  font-size: var(--step-1);
+  font-weight: var(--font-weight-light);
+  text-transform: lowercase;
+
+  border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
 home-support ul {
@@ -170,97 +276,164 @@ home-support li {
   padding: 0 0 var(--space-2xs) 0;
 }
 
-/* CONNECT */
-.connect {
-  font-size: var(--step--1);
+/* ---- Full-bleed thumbnail strips (Books, Photos) --------------
+   Brajeshwar 2026-07-31: "thumbnails that spans the width of the browser
+   viewport. The title is within our body width."
+
+   ⚠️ THIS REVERSES A RECORDED DECISION. `--body-width-full` was deleted on
+   2026-07-27 because nothing was to exceed the band. These two strips are the
+   stated exception; everything else still stops at it.
+
+   THE BLEED. `main` is the band (max 1024px, centred). `margin-inline:
+   calc(50% - 50vw)` pulls each edge out to the viewport and `width: 100vw`
+   fills it. The strip then starts again at the band's left edge via a matching
+   `padding-inline-start`, so the first thumbnail lines up with the heading
+   above it — and with the header rule, the footer rule and the logo, the one
+   alignment the whole site is built on. It runs off the right edge, which is
+   the point.
+
+   ⚠️ `100vw` INCLUDES THE SCROLLBAR; the band does not. So the strip is a
+   scrollbar wider than the page can show, and on its own that gives the whole
+   document a horizontal scrollbar. `overflow-x: clip` on the body absorbs it —
+   see the `body:has(home-container)` rule at the foot of this file for why
+   `clip` and not `hidden`. Verify with
+   `document.documentElement.scrollWidth > window.innerWidth`; that boolean is
+   the only way to see this, and it is invisible by eye until the page starts
+   rocking sideways.
+
+   ONE ROW, CLIPPED. `flex-wrap: nowrap` plus `overflow: hidden` on the strip:
+   as many thumbnails as fit, the rest cut off at the viewport edge. */
+.strip-section {
+  display: block;
+  margin-top: var(--space-xl);
 }
 
-.connect ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: var(--text-color-low);
-}
+.strip__heading {
+  margin: 0 0 var(--space-2xs);
+  padding: 0 0 var(--space-3xs);
 
-
-.connect__title {
-  font-weight: var(--font-weight-light);
   font-size: var(--step-1);
+  font-weight: var(--font-weight-light);
   text-transform: lowercase;
-  margin: 0 0 var(--space);
-  padding: 0;
+
   border-bottom: var(--border-size) var(--border-style) var(--border-color);
 }
 
-.connect__title--sub {
-  font-weight: var(--font-weight-light);
-  font-size: var(--step-0);
-  text-transform: lowercase;
+.strip__intro {
+  margin: 0 0 var(--space-s);
+  font-size: var(--step--1);
+  color: var(--text-color-low);
+}
+
+.strip {
+  --strip-item: 9.5rem;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-2xs);
+
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  /* start the row on the band's left edge, then bleed off the right */
+  padding-inline-start: calc(50vw - 50%);
+  padding-inline-end: 0;
+
+  overflow: hidden;
+}
+
+.strip__item {
+  flex: 0 0 var(--strip-item);
+  width: var(--strip-item);
   margin: 0;
   padding: 0;
 }
 
-.connect span {
-  margin-right: var(--space-smaller);
-  font-family: var(--font-family-monospace);
-  font-size: smaller;
-  color: var(--text-color-low);
-}
-
-/* BOOKS */
-home-books {
-  padding: var(--space-2xs) 0;
-}
-
-home-books li {
-  width: 240px;
-  height: 320px;
-  
-  flex-basis: auto;
-  flex-grow: 1;
-
-  font-size: var(--step--1);
-  font-weight: var(--font-weight-light);
-  line-height: var(--scale-small);
-}
-
-home-books li a {
+.strip__link,
+.strip__link:visited {
   display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  
+  color: var(--text-color-low);
   text-decoration: none;
-  color: var(--text-color-lower);
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-clip: border-box;
-
-  border-radius: var(--border-radius-large);
-  border-top-left-radius: var(--border-radius-tiny);
-  border-bottom-left-radius: var(--border-radius-tiny);
-
-  /* grayscale */
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 
-home-books li a:hover, home-books li a:active {
-  -webkit-filter: grayscale(0);
-  filter: none;
-  color: var(--bg-color-lowest);
+.strip__img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color-low);
+
+  /* the site is monotone at rest; colour arrives on hover */
+  filter: grayscale(1);
 }
 
-book-title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: var(--space-2xs);
-  background: var(--bg-color-higher);
-  opacity: var(--opacity-low);
-  border-bottom-left-radius: var(--border-radius-tiny);
-  border-bottom-right-radius: var(--border-radius-large);
+/* 3:4 for books, 4:3 for photos — set on the image so a missing or slow file
+   still reserves the right box and the row never reflows as they load. */
+.strip--books .strip__img  { aspect-ratio: 3 / 4;  object-fit: cover; }
+.strip--photos .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
+
+.strip__caption {
+  display: block;
+  margin-top: var(--space-3xs);
+
+  font-size: var(--step--2);
+  line-height: var(--scale-small);
+
+  /* one line, ellipsised — a long book title must not set the row height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strip__link:hover .strip__img,
+.strip__link:focus-visible .strip__img {
+  filter: grayscale(0);
+}
+
+.strip__link:hover .strip__caption,
+.strip__link:focus-visible .strip__caption {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+/* Mobile: two rows, still clipped. Brajeshwar: "In mobile, max two lines."
+   The cap is written in the item's own units so it follows --strip-item and
+   does not need a second magic number if the size changes. */
+@media only screen and (max-width: bp.$small) {
+  .strip {
+    --strip-item: 7.5rem;
+    --strip-caption: 2.2rem;   /* caption line + its top margin */
+
+    flex-wrap: wrap;
+    max-height: calc((var(--strip-item) * 4 / 3 + var(--strip-caption)) * 2
+                     + var(--space-2xs));
+  }
+
+  .strip--photos {
+    max-height: calc((var(--strip-item) * 3 / 4 + var(--strip-caption)) * 2
+                     + var(--space-2xs));
+  }
+}
+
+/* ⚠️ The counterweight to the full-bleed strips above, and the reason the page
+   does not scroll sideways.
+
+   `clip`, never `hidden`. `overflow-x: hidden` makes the element a scroll
+   container, which would become the scroll context for the sticky site header
+   (chrome.scss) and pin it to the top of the document instead of the viewport
+   — the header would scroll away. `clip` creates no scroll container, so
+   sticky keeps working, and unlike `hidden` it lets the other axis stay
+   `visible` rather than being forced to `auto`.
+
+   Scoped with `:has()` so it applies to the home page alone. A blanket
+   `body { overflow-x: clip }` would change the containing-block behaviour of
+   every other page to fix a problem only this one has. */
+body:has(home-container) {
+  overflow-x: clip;
 }
