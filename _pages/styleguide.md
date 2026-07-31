@@ -5,7 +5,7 @@ title: Styleguide
 
 # Styleguide
 
-What the site actually does, so I stop guessing. Last checked against the CSS on Jul 27, 2026.
+What the site actually does, so I stop guessing. Last checked against the CSS on Aug 1, 2026.
 
 ## Widths — there is only one
 
@@ -45,15 +45,74 @@ No rounded corners on it. It runs to the window edge, and a curve there looks li
 
 ## Images
 
-| | source size | notes |
-|---|---|---|
-| Books | `360 × 480` | `/books/` is a **prose page**, not a grid |
-| Film | `225 × 300` | `<img width="225" height="300">`, album layout |
-| Devices | `225 × 300` | same |
+### The thumbnail template — long edge **800px**
 
-The card grid is **fluid** — `repeat(auto-fill, minmax(11rem, 1fr))` — so cards flex with the
-band. There is no fixed "styled as" size any more; the old `240 × 320` note described a layout
-that no longer exists.
+Crop and resize everything that goes into `/static/*` to one of three boxes. One number, three
+shapes:
+
+| shape | box | used by |
+|---|---|---|
+| **Portrait 3:4** | `600 × 800` | books, film, devices — covers, posters |
+| **Landscape 4:3** | `800 × 600` | album photos |
+| **Square 1:1** | `800 × 800` | anything that is neither |
+
+**Where 800 comes from.** Measured against the built site on Aug 1, 2026, the widest a
+thumbnail ever renders is **245px** — that is `/album/`, whose masonry columns grow to fill the
+band. Everything else is smaller: the grids on `/books/`, `/film/` and `/devices/` top out at
+**193px**, and the home-page strips are fixed at **192px**.
+
+| surface | widest render |
+|---|---:|
+| `/album/` masonry | 245px |
+| `/books/` · `/film/` · `/devices/` grid | 193px |
+| home strips (books, album) | 192px |
+
+A retina screen wants twice that, so **490px is the floor today**. A 600px-wide source clears
+it with about 20% to spare, which is the headroom: the rendered size can grow from 245 to
+**300px** before anything needs re-cutting. Landscape gets more room again, because there the
+long edge *is* the width.
+
+**Do not go bigger "just in case."** 800 on the long edge is already 3× the largest thing on
+the page. Past that you are paying bytes on every page view for pixels no screen will resolve,
+and the album strip alone loads eight of them.
+
+### Format and budget
+
+- **WebP**, quality **75–82**. AVIF is smaller again but the encode is slower and the win at
+  this size is small.
+- **≤ 60 KB per thumbnail**, and most should land near 25–40 KB. Anything over 100 KB at these
+  dimensions means the quality slider is too high, not that the image is complicated.
+- Filename is the slug: `the-lord-of-the-rings.webp`, lowercase, hyphenated.
+
+### Keep the master
+
+Copy the untouched source to `<name>-original.<ext>` **before** cropping. That convention is
+already in the archive and it is what makes a re-cut possible when this template changes.
+⚠️ Masters live in `/static/` too, so they ship with the deploy — a few are referenced directly
+by posts, so they are not dead weight, but do not add a 700 KB master casually.
+
+### Where they go
+
+`/static/books/`, `/static/album/`, `/static/films/`, `/static/devices/` — bare filenames in
+the matching `_data/*.yaml`. A `img:` value beginning with `/` is used verbatim instead, which
+is the escape hatch for borrowing a file from another folder.
+
+### What is inconsistent today
+
+Worth a pass when convenient, not urgent:
+
+| | today | against the template |
+|---|---|---|
+| books | `360 × 480` (9 files) | 1.5× on `/album/` — soft on a retina screen |
+| film | `225 × 300` (97 files) | **1.2×** — visibly soft wherever it renders at 193px |
+
+129 of 136 files are already 3:4, so the shape is right and only the resolution is short.
+
+### The grid itself
+
+Fluid — `repeat(auto-fill, minmax(11rem, 1fr))`, `8rem` inside `.album` — so cards flex with the
+band and there is no fixed "styled as" size. `/album/` is different again: multi-column masonry,
+so each image keeps its own height and nothing is cropped.
 
 Gallery: a container, then a plain markdown list of images, optionally linked.
 

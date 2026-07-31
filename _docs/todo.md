@@ -348,6 +348,24 @@ reading the note in [`styles.md`](styles.md) → *The home page*: the site has n
 tablet-specific layout to begin with. What it has is per-component collapse points, which is
 the better pattern and is why there is no single tablet number to delete.
 
+## Thumbnails — re-cut to the template (raised 2026-08-01)
+
+`/styleguide/` now carries a thumbnail template: **long edge 800px**, cropped to 3:4, 4:3 or
+1:1. It came from measuring the built site rather than picking a round number — the widest a
+thumbnail ever renders is **245px** (`/album/` masonry, whose columns grow to fill the band),
+against 193px for the `/books/` `/film/` `/devices/` grids and 192px for the home strips. A
+retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroom.
+
+- [ ] **Re-cut `/static/films/`** — 97 files at `225 × 300`, i.e. **1.2×** where they render at
+      193px. This is the visibly soft one.
+- [ ] **Re-cut `/static/books/`** — 9 files at `360 × 480`, 1.5× on `/album/`. Less urgent; they
+      are fine in the home strip, which renders at 192.
+- [ ] 129 of 136 existing files are already 3:4, so this is a resolution pass, not a re-crop.
+
+⚠️ **Keep the `<name>-original.<ext>` masters.** Four posts reference them directly, so they are
+not dead weight — but `/static/` in the deploy is 372 MB, of which ~95 MB is `-original` files.
+Worth a separate look at whether the unreferenced ones need to ship at all.
+
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +
       hand-authored `oinam`/`memos`) and the header icons (`search`, `rss`, `theme`) all live
