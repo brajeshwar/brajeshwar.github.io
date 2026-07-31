@@ -50,10 +50,14 @@ content:
 it fails silently *and truthily*, so hoisting it to a variable ships the script everywhere
 while reading as correct. Same trap as `page.html` and the old conditional `code.css`.
 
-A typical post now fetches three scripts instead of five, a saving of 2,189 bytes gzipped.
-For four days it also made no cross-origin request at all, the analytics beacon having been
-removed the same day; that beacon was restored 2026-07-31, so the DNS lookup and TLS
-handshake are back and the script-count saving stands on its own.
+A typical post now fetches three scripts instead of five, a saving of 2,189 bytes gzipped,
+and the template makes no cross-origin request at all — the analytics beacon went the same
+day. It came back briefly on 2026-07-31 and was gone again within the hour; measurement is
+Cloudflare's edge logs now, which need no script. Every script the site loads is its own.
+
+⚠️ That is a claim about the *template*, not every page. 101 of 1,484 pages reach off-origin
+for embedded media the posts themselves contain — YouTube (89 references), `cdn.oinam.com`
+images (38), Vimeo, gists (measured 2026-07-31). Those are content and stay untouched.
 
 ⚠️ **Scripts are content-hashed on publish** (`scripts/hash-assets.mjs`). `/assets/*` is
 served `max-age=31536000`, so before this every JS fix could take a year to reach a returning

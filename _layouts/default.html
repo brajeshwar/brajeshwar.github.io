@@ -103,28 +103,35 @@
 {%- endcomment -%}
 <script defer src="{{ '/assets/scripts/back-to-top.js' | relative_url }}"></script>
 {%- comment -%}
-  Analytics — self-hosted Umami at analytics.oinam.net.
+  NO ANALYTICS SCRIPT, AND NOTHING TO ADD HERE. Measurement is Cloudflare's,
+  taken server-side at the edge from requests this site already makes — so it
+  costs the reader nothing, cannot be blocked, and needs no markup. Settled
+  2026-07-31: "Remove oinam.net analytics. We will stick to Cloudflare."
 
-  Removed 2026-07-27 ("until I figure out a better way to do this"), RESTORED
-  2026-07-31 at Brajeshwar's request. Kept here as history rather than a clean
-  re-add, because the reason it came out has not changed and is worth seeing
-  at the call site.
+  History, because this has moved twice and the reasoning is easy to lose:
+  the self-hosted Umami beacon at analytics.oinam.net was removed 2026-07-27,
+  restored 2026-07-31 on request, and removed again the same day once the
+  numbers below came in. It was:
 
-  The cost is not the script's size (4.6 KB) but its ORIGIN. This is the only
-  cross-origin request the site makes, and a third host pays a DNS lookup and
-  a TLS handshake before the script can even start — measured 725 ms cold from
-  a warm connection on 2026-07-31, and commonly 100-300 ms on mobile. It is
-  `defer`red, so it never blocks rendering or delays first paint; the cost is a
-  connection the page would otherwise not open at all.
+    <script defer src="https://analytics.oinam.net/script.js"
+            data-website-id="7cc63f26-aabf-4814-88c9-9c3e29f1c783"></script>
 
-  Two ways to keep the numbers and drop the handshake, if it ever matters:
-  proxy the script through this domain (Cloudflare is already in front, so a
-  path like /js/script.js could pass through to the Umami host), or switch to
-  Cloudflare Web Analytics, whose origin is already in the request path. Both
-  are noted in todo.md.
+  ⚠️ DO NOT "improve" this by adding Cloudflare WEB Analytics. That is a
+  different product from the edge analytics we now rely on, and it is the
+  wrong trade twice over. Its beacon loads from static.cloudflareinsights.com
+  — a separate hostname, so it costs the same DNS lookup and TLS handshake
+  Umami did, buying nothing. And it is on standard tracker blocklists:
+  measured 2026-07-31, that host does not resolve on Brajeshwar's own DNS
+  while cloudflare.com does, so it would record nothing for exactly the
+  readers most likely to visit. Edge analytics has no such failure mode
+  because there is no client request to block.
+
+  If richer per-visit data is ever wanted, the option that does not add an
+  origin is to PROXY a self-hosted beacon through this domain — Cloudflare
+  already fronts the site, so a path like /js/script.js can pass through to
+  the analytics host and ride the connection the browser already has. See
+  todo.md.
 {%- endcomment -%}
-<script defer src="https://analytics.oinam.net/script.js"
-        data-website-id="7cc63f26-aabf-4814-88c9-9c3e29f1c783"></script>
 
 </head>
 <body>

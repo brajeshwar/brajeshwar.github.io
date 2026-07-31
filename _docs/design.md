@@ -99,12 +99,22 @@ bytes of webfont; self-hosted fonts (Libre Baskerville only, since 2026-07-19) d
 only if a reader picks them, never on a default load. JavaScript is vanilla, deferred, and
 small, scoped where practical so a script that only matters on articles (sidenotes, say)
 does not tax the homepage. And third-party scripts are watched: every external script is a
-request and a dependency, and there is exactly one today — the self-hosted Umami beacon at
-`analytics.oinam.net`, removed 2026-07-27 and restored 2026-07-31. A third origin costs a
-DNS lookup and a TLS handshake before its script can even start, commonly 100–300 ms on a
-cold mobile connection, on every page. It is deferred, so it delays no paint; what it costs
-is a connection the page would otherwise never open. One is the ceiling, not a starting
-point.
+request and a dependency, and **the templates add zero of them** — nothing in the chrome
+reaches off-origin, so the cost is never paid by a page that did not ask for it. A third
+origin costs a DNS lookup and a TLS handshake before its script can even start, commonly
+100–300 ms on a cold mobile connection, on every page — `defer` hides that from first paint
+but does not remove it.
+
+Be precise about the claim, because it is easy to overstate: 101 of 1,484 pages *do* make
+cross-origin requests, from YouTube and Vimeo embeds and images on `cdn.oinam.com` written
+into the posts themselves (measured 2026-07-31). That is content, and content is not ours to
+edit. The template's job is to add nothing on top of it.
+
+That is why measurement is server-side. Cloudflare already fronts the site, so it counts
+requests at the edge: nothing to download, nothing to block, no origin. Analytics moved
+three times before landing here (removed 2026-07-27, restored 2026-07-31, removed again the
+same day), and the deciding fact was that the obvious client-side alternatives all pay the
+handshake for data an edge log already has.
 
 The CSS sub-budget is ≤ 13 KB gzipped, measured over the wire, not raw. It used to be
 per-page, because the CSS was inlined and every page paid it again. Since 2026-07-27 there

@@ -267,16 +267,29 @@ at the top of this section.
       removed entirely 2026-07-27 (*"until I figure out a better way to do this"*), which left
       the site making zero cross-origin requests for four days. It is back in
       `_layouts/default.html`, deferred, unchanged.
-- [ ] **Analytics: drop the extra origin, keep the numbers.** Now the follow-up rather than
-      the blocker. The cost was never the script's size (4.6 KB): a third origin means a DNS
-      lookup and a TLS handshake before it can start — measured **725 ms cold on 2026-07-31**,
-      and commonly 100–300 ms on mobile. `defer` means it delays no paint, so this is a
-      connection cost, not a rendering one. Two ways to keep the data and lose the handshake:
-      **proxy the script through this domain** (Cloudflare already fronts the site, so a path
-      like `/js/script.js` could pass through to the Umami host — the beacon then shares the
-      existing connection), or **Cloudflare Web Analytics**, whose origin is already in the
-      request path. Worth doing only if the handshake ever shows up in real numbers; the
-      current setup is correct, just not free.
+- [x] ~~**Analytics: drop the extra origin, keep the numbers.**~~ — **settled 2026-07-31.**
+      Brajeshwar: *"Remove oinam.net analytics. We will stick to Cloudflare."* The Umami beacon
+      is gone again and nothing replaces it in the markup: the site is proxied by Cloudflare
+      (`server: cloudflare`, `cf-ray` present, Fastly behind it for Pages), so request counts
+      are already collected at the edge. Zero bytes to the reader, no origin, unblockable.
+      Coarser than Umami — request-level, bot noise, no session depth — and that was accepted
+      as the right trade.
+
+      ⚠️ **Correction, recorded because this file argued the opposite for an hour.** The
+      earlier entry said to prefer *Cloudflare Web Analytics* since "the CDN is already in the
+      path." That was wrong, and it conflated two different products. Cloudflare Web Analytics
+      is a client-side beacon served from `static.cloudflareinsights.com` — a separate
+      hostname, so it costs the same DNS lookup and TLS handshake the Umami beacon did. Worse,
+      it is on standard tracker blocklists: measured 2026-07-31, that host resolves fine via
+      1.1.1.1 and 8.8.8.8 but returns **nothing on Brajeshwar's own resolver**, while
+      `cloudflare.com` resolves normally from the same machine. It would under-count exactly
+      the audience this site attracts. Edge analytics has no client request to block.
+- [ ] **If per-visit depth is ever wanted, proxy — do not add an origin.** The one approach
+      that keeps a real analytics product without the handshake: put the beacon behind this
+      domain, e.g. a Cloudflare Worker or origin rule mapping `/js/script.js` through to a
+      self-hosted host. It then rides the connection the browser already opened and reads as
+      first-party, so blocklists do not apply. Only worth building if the edge numbers turn
+      out to be too coarse to answer a real question.
 - [x] **`--body-width-medium` (60rem)** *(done 2026-07-27)* — folded into `--image-width-max`,
       its only reader. One token named for what it does instead of two, one of which claimed to
       be a site width and was not.
