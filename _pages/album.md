@@ -26,9 +26,9 @@ title: Album
   choose between.
 {%- endcomment -%}
 {% include card-grid.html
-   items = site.data.album
-   dir   = "album"
-   ratio = "4x3" %}
+   items  = site.data.album
+   dir    = "album"
+   layout = "masonry" %}
 </div>
 
 Coming Soon.

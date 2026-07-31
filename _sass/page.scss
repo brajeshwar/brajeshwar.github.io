@@ -118,3 +118,69 @@
    heights there would break the line, so it stays uniform whatever this does. */
 .card-grid--4x3 img { aspect-ratio: 4 / 3; object-fit: cover; }
 .card-grid--3x4 img { aspect-ratio: 3 / 4; object-fit: cover; }
+
+
+/* ---- Masonry, with no JavaScript ------------------------------
+   /album/ only (2026-08-01: "can we introduce masonry layout to /album/. Can
+   we stay with just CSS or will we need JavaScript").
+
+   Just CSS. Native masonry is still not shippable — measured in Chrome 150 on
+   2026-08-01, all three competing syntaxes report false:
+   `grid-template-rows: masonry`, `display: masonry`, and the newer `item-flow`.
+   So this is multi-column, which has been universally supported for a decade
+   and does the one thing masonry is actually for: let every image keep its own
+   height so nothing is cropped.
+
+   `columns: 14rem` is a column WIDTH, not a count — the browser fits as many
+   ~14rem columns as the container allows and rebalances on resize, so there
+   are no breakpoints here and none are wanted.
+
+   `break-inside: avoid` on the item is the whole trick. Without it a figure
+   splits across a column boundary and you get the top half of a photograph at
+   the foot of one column and the bottom half at the head of the next.
+
+   Columns have no row-gap, so the vertical rhythm is the item's own
+   margin-bottom. `column-fill: balance` is the default and is what keeps the
+   columns near-equal height rather than filling the first one completely.
+
+   ⚠️ THE REAL TRADE-OFF IS READING ORDER, and it is the reason to reach for
+   JavaScript if it ever matters. Columns flow top-to-bottom and THEN across:
+   with three columns, items 1-2-3 run down the left, not across the top. For
+   an album, which is browsed rather than read in sequence, that is fine and
+   arguably natural. For anything where "next" must mean "to the right" —
+   a chronological feed, a numbered list — it is wrong, and no amount of CSS
+   fixes it. That is the one case where a JS masonry earns its keep; nothing
+   else here does.
+
+   ⚠️ The ratio is deliberately unset, so `aspect-ratio` from the card-grid--*
+   rules must NOT apply. That is why this is a separate class rather than a
+   modifier stacked on top of one.
+
+   ⚠️ AND THE SELECTOR NEEDS TWO CLASSES. cards.scss writes `ul.item__cards`,
+   which is (0,1,1) — an element plus a class — so a lone `.card-grid--masonry`
+   at (0,1,0) loses and `display: grid` survives. The failure is quiet and
+   confusing: `columns` still computes (measured column-width 224px, exactly
+   the 14rem asked for) but has no effect whatsoever on a grid container, so
+   the CSS reads as applied and the layout does not move. Verified 2026-08-01
+   by reading the matched rules off the element. */
+.item__cards.card-grid--masonry {
+  display: block;              /* overrides .item__cards' grid */
+  columns: 14rem;
+  column-gap: var(--space-xs);
+}
+
+.item__cards.card-grid--masonry > li {
+  break-inside: avoid;
+  margin: 0 0 var(--space-xs);
+  /* Safari has historically needed this alongside break-inside to stop an item
+     splitting; harmless everywhere else. */
+  -webkit-column-break-inside: avoid;
+}
+
+.item__cards.card-grid--masonry img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;          /* the point: each photo keeps its own shape */
+  object-fit: fill;
+}

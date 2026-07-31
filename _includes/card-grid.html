@@ -9,6 +9,7 @@
     id        optional id for that heading, so it can be linked
     sub       optional subtitle paragraph under the heading
     ratio     "3x4" (books) or "4x3" (album) — sets the intrinsic size hint
+    layout    "masonry" to drop the fixed ratio and let each image keep its own
     captions  "true" to print a <figcaption>; omit for images that speak alone
 
   A data item may carry `media: video` or `media: audio`, which overlays a
@@ -66,7 +67,7 @@
   {%- else -%}
     {%- assign iw = 225 -%}{%- assign ih = 300 -%}
   {%- endif -%}
-  <ul class="item__cards card-grid--{{ include.ratio | default: "3x4" }}">
+  <ul class="item__cards {% if include.layout == "masonry" %}card-grid--masonry{% else %}card-grid--{{ include.ratio | default: "3x4" }}{% endif %}">
     {%- for item in include.items %}
     {%- assign first = item.img | slice: 0 -%}
     {%- if first == "/" -%}

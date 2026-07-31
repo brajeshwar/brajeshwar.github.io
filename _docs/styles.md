@@ -725,6 +725,31 @@ it does *nothing*; the script picks `'auto'` explicitly instead. And a programma
 does not reliably fire a `scroll` event, so the click handler re-syncs the button state
 directly rather than waiting for one.
 
+### Masonry on /album/ — no JavaScript (2026-08-01)
+
+Brajeshwar asked whether masonry could be CSS-only. It can, and it is.
+
+**Native masonry is still not shippable.** Measured in Chrome 150 on 2026-08-01, all three
+competing syntaxes report `false`: `grid-template-rows: masonry`, `display: masonry`, and the
+newer `item-flow`. So this is **multi-column**, universally supported for a decade, doing the
+one thing masonry is actually for — every image keeps its own height and nothing is cropped.
+
+`columns: 14rem` is a column *width*, not a count, so the browser fits as many as the
+container allows and rebalances on resize. No breakpoints. Measured: 1 column at 320–480,
+3 at 768, 4 at 1024–1512, 0 items split at any width, columns within 82px of each other.
+
+⚠️ **The selector needs two classes: `.item__cards.card-grid--masonry`.** `cards.scss` writes
+`ul.item__cards`, which is (0,1,1); a lone `.card-grid--masonry` at (0,1,0) loses and
+`display: grid` survives. The failure is quiet — `columns` still *computes* (measured
+column-width 224px, exactly the 14rem asked for) but has no effect on a grid container, so
+the CSS reads as applied while the layout does not move.
+
+⚠️ **The trade-off is reading order, and it is the only reason to reach for JavaScript.**
+Columns flow top-to-bottom then across: with three columns, items 1-2-3 run *down* the left,
+not across the top. For an album, browsed rather than read in sequence, that is fine. For a
+chronological feed where "next" must mean "to the right", no amount of CSS fixes it — that is
+where a JS masonry earns its keep, and nothing else here does.
+
 **Media badges** (2026-08-01). An album item carrying `media: video` or `media: audio` gets a
 small icon over the bottom-left of its frame — a play glyph or a waveform, `_includes/icons/`,
 monochrome and `currentColor` like the rest. Stills get nothing: absence is the default, so
