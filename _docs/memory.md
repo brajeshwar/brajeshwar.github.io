@@ -4,7 +4,117 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-07-27) — READ FIRST
+## Where we are (updated 2026-08-01) — READ FIRST
+
+### ⏸ Session paused 2026-08-01 (fourth session). **14 commits sit UNPUSHED on `main`.**
+
+Brajeshwar: *"Commit. Do not Push. I will continue tomorrow."* Everything is committed, the
+tree is clean, every commit is signed (`G`) and in his name. `origin/main` is 14 behind.
+
+**Nothing is deployed.** The live site still shows the pre-redesign home page. The first
+action tomorrow, once he says so, is `git push origin main` — then watch the Actions run and
+verify against the live URLs, not `_site`.
+
+| commit | |
+|---|---|
+| `e15fefda` | Homepage rebuilt from the wireframe |
+| `7da64916` | Homepage: toc refinements, wider gutter, capped strip bleed, Photos |
+| `c458c4e8` | Homepage: trim long titles, centre the strips both ways |
+| `a88bc57f` | Home strips: scrollable with arrows, wrapping captions, 12 items |
+| `5515fdd1` | Fix home page overflowing sideways below 768px; Books hover |
+| `6ab845a7` | Strips: uncap the bleed, and make mobile scroll like everywhere else |
+| `3d2615aa` | /books/ and /photos/ become card-grid pages; home shows the tail |
+| `e0a30e3b` | Darker header nav; /photos/ loses captions and links out |
+| `5b2c35b3` | Photos becomes Album; /photos/ redirects; media badges |
+| `1cd75065` | /album/ gets CSS-only masonry |
+| `ab312c00` | Styleguide: a thumbnail template for /static/* |
+| `c37d63a4` | Move the /books/ prose out to _backup/books-BCK.md |
+| `02261894` | Header and footer rules go one notch stronger |
+| `c6a98854` | Footer links alphabetised; 'View all articles' gets an arrow |
+
+⚠️ **Push only when Brajeshwar asks** (guardrail 7). **All commits signed and in his name** —
+verify with `git log --format='%h %G?'`; `G` is the only acceptable result.
+
+⚠️ **Stage explicitly, never `git add -A`.** He edits this repo while I work — twice this
+session (`nav.yaml` footer reorder, `home-articles.html` arrow). Both were committed
+*separately* so the diff reads as his. Check `git status` before every commit.
+
+### What this session built — the home page, /books/, /album/
+
+A full home-page redesign from a tldraw wireframe, then four rounds of refinement on it.
+
+1. **Home is two columns + two strips.** A reading column of two table-of-contents lists
+   (Articles, Popular & Handpicked) with a Connect / Alumni / Support sidebar, then Books and
+   Album thumbnail strips that break past the band. `index.html`, five new includes, a
+   rewritten `home.scss`.
+2. **The toc lists**: title left, date hard right, dotted leader between; titles truncate to
+   one line; Articles groups by year with a right-aligned marker so dates drop to `JUL 07`;
+   row hover is a background, not an underline. Article count is one `assign` at the top of
+   `home-articles.html`.
+3. **The strips** scroll horizontally with subtle `‹ ›` arrows (`strip-nav.js`, home page
+   only, progressive enhancement), bleed to the full viewport uncapped, and centre when short.
+4. **`/books/`** is a card-grid page with an *All Time Favorites* section driven by
+   `highlight: true` in `books.yaml`. Its prose moved out to `_backup/books-BCK.md`.
+5. **`/photos/` became `/album/`**, with a real `_redirect` collection behind it, media badges
+   for video/audio items, and CSS-only masonry.
+6. **Styleguide** gained a measured thumbnail template — long edge 800px.
+
+### ⚠️ Loose ends to pick up
+
+- **`_data/books.yaml` entries 7–12 are literal duplicates of 1–6**, added to preview a longer
+  shelf. Marked at the top of the file. **Delete that block when real titles go in** — an
+  unedited duplicate reads as deliberate to anyone who does not know.
+- **`_data/album.yaml` is entirely placeholder**, borrowing `/static/books/` thumbnails
+  because `/static/album/` does not exist. Four entries carry `media:` tags purely to show the
+  badges. Replace wholesale when real photos land; the include already handles bare filenames.
+- **Masonry looks like a plain grid today** because every placeholder is the same 3:4 shape. It
+  was verified by injecting varied ratios; it will come alive on its own with real photos.
+- **`/static/films/` is 97 files at 225×300 — 1.2× where it renders.** Visibly soft on retina.
+  The re-cut list is in [`todo.md`](todo.md) → *Thumbnails*.
+- **`_backup/books-BCK.md`** holds 634 words of the old /books/ prose, verbatim, for
+  Brajeshwar to decide on. `_backup/` is an underscore directory so it cannot publish.
+- **Above 1512px is unverified.** The iframe harness clamps to the outer window, so the
+  uncapped strip bleed and the masonry column count have not been seen on a wide display.
+
+### Rules learned this session — these will bite again
+
+1. **Never write a bare `1fr` in a grid template.** `1fr` is `minmax(auto, 1fr)`, and that
+   automatic minimum will not shrink below the track's max-content. With `white-space: nowrap`
+   titles it made the "single column" 679px inside a 346px container and **the whole home page
+   scrolled sideways below 768px**. Always `minmax(0, 1fr)`.
+2. **`justify-content: center` on an overflowing scroller hides content.** It centres the
+   overflow, so half lands left of `scrollLeft: 0` where nothing can reach it — measured at
+   x = −451. Use `safe center`.
+3. **`behavior: 'smooth'` is a no-op under `prefers-reduced-motion`** (which Brajeshwar has
+   ON), and a programmatic scroll does not reliably fire a `scroll` event. Decide `behavior`
+   in JS and re-sync state on click rather than trusting the event.
+4. **`overflow-x: clip` on `body` does not reliably reach the viewport.** Set it on `html` too.
+5. **`text-decoration` is drawn by the ancestor that declares it.** An underline set on a
+   child span while the link declares `none` computes correctly and paints nothing.
+6. **Measuring an `oklch()` colour needs a canvas.** `getComputedStyle().color` returns
+   `oklch()` now, so string-parsing gives nonsense — it reported a real contrast change as a
+   no-op. Paint bg then colour onto a canvas, read the pixel.
+7. **`.visually-hidden` does not exist on this site** — deleted after the 2026-07-19 audit.
+   Put the word in `alt`, not a hidden span.
+8. **`ul.item__cards` is (0,1,1).** A single-class override loses to it, silently: `columns`
+   still computes while `display: grid` survives, so the CSS reads as applied and nothing
+   moves.
+
+### How to verify a change (the loop that works)
+
+`bundle exec jekyll build` → the dev server on `:4000` → **measure in the browser, don't look.**
+The bugs this session were all invisible: a sideways scroll of 2.5px, 451px of unreachable
+books, a hover state that painted nothing, a ratio that was requested and never applied.
+
+**The responsive sweep that catches layout breaks** — load each page type in an iframe at
+320 / 480 / 768 / 1024 / 1512 and assert both `documentElement.scrollWidth <= viewport` **and**
+that `window.scrollX` stays 0 after trying to scroll. Nine page types were clean at the end.
+⚠️ The harness cannot exceed the outer window width; iframes wider than the browser silently
+render at the browser's width and report meaningless numbers.
+
+---
+
+## Session record — 2026-07-27 (superseded, kept per the log-history rule)
 
 ### ✅ Session closed 2026-07-27 (second session). Pushed, deployed green, tree clean.
 `main` and `origin/main` are in sync. Nothing is pending.

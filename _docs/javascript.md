@@ -33,11 +33,14 @@ Brajeshwar, 2026-07-27:
 | `anchors.js` | 1.4 KB | **453 posts** — only where an `h2`+ exists (2026-07-27) |
 | `timeline.js` | 2.3 KB | `/about/` |
 | `random.js` | 1.8 KB | `/random/` only (2026-07-27) |
+| `strip-nav.js` | 3.0 KB | **home page only** — arrows for the Books/Album strips (2026-08-01) |
 | `back-to-top.js` | 3.5 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
 
-All eight together are ~35.5 KB raw (re-measured 2026-07-27), but 15.2 KB as shipped since
-2026-07-27; the table is source size. Each is a separate request, and no page loads all of
-them.
+**All ten together** are ~47.6 KB raw source, **16.7 KB minified / 7.5 KB gzipped** as shipped
+(re-measured 2026-08-01 by running the same `esbuild --minify` step Actions runs — the local
+build skips it, so the files on disk after `jekyll build` are roughly double what ships). The
+table is source size. Each is a separate request, and **no page loads all of them**: the home
+page loads four (`appearance`, `back-to-top`, `search`, `strip-nav`), a typical post three.
 
 Since 2026-07-27, scripts load only where there is work to do. `sidenotes.js` is the largest
 script on the site, and only 85 of 1,456 posts have footnotes; on every other page it loaded,
