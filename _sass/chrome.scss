@@ -123,10 +123,19 @@ site-nav {
   font-size: var(--step--1);
 }
 
+/* Nav labels sit at the body text colour (2026-08-01: "Make it darker, same as
+   the default text color"). They were --text-color-lower, the subtle tier, which
+   put the primary navigation a full two steps below the prose it sits above.
+
+   ⚠️ This narrows the gap to the hover/active state below, which uses
+   --text-color-higher. That is still a distinct step, and the underline is what
+   actually carries hover now — the colour shift was never doing the work on its
+   own. Do not "restore contrast" by darkening hover further; the resting state
+   is the thing that was wrong. */
 site-nav a, site-nav a:visited {
   padding: var(--space-3xs) var(--space-2xs);
   border-radius: var(--border-radius-small);
-  color: var(--text-color-lower);
+  color: var(--text-color);
   text-decoration: none;
   transition: color var(--transition-duration) ease;
 }

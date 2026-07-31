@@ -27,6 +27,7 @@ title: Books
    items   = favourites
    dir     = "books"
    ratio   = "3x4"
+   captions = true
    heading = "All Time Favorites"
    id      = "favorites"
    sub     = "Here are some of my all-time favorite books I have read and re-read and would highly recommend." %}
@@ -35,6 +36,7 @@ title: Books
    items   = site.data.books
    dir     = "books"
    ratio   = "3x4"
+   captions = true
    heading = "Every Book"
    id      = "all" %}
 </div>

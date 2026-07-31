@@ -95,3 +95,26 @@
   width: 100cqi;
   max-width: 100cqi;
 }
+
+
+/* ---- Card-grid aspect ratios ----------------------------------
+   The `ratio` passed to card-grid.html lands here as a class, because the
+   <img width>/<height> attributes only reserve space — album.scss sets
+   `width: 100%` with height auto, so without this a card renders at whatever
+   ratio the file happens to be. Measured 2026-08-01: /photos/ rendered 0.75
+   (portrait) while 4x3 was requested.
+
+   `object-fit: cover` fills the frame and centre-crops the overflow.
+
+   ⚠️ THE COST IS PORTRAIT PHOTOS. A vertical shot in a 4:3 landscape frame
+   loses its top and bottom, which on a photo page is a real loss rather than a
+   cosmetic one. Two ways out if that starts to hurt, both one line:
+     · `1:1` — crops portrait and landscape equally rather than punishing one
+     · drop the rule for this grid entirely — `.item__cards` is
+       `align-items: start`, so cards of different heights already sit fine and
+       nothing is cropped at all. That is the right answer for a gallery of
+       mixed orientations; a uniform grid is the right answer for an index.
+   The home strip is a single scrolling ROW and has no such choice: ragged
+   heights there would break the line, so it stays uniform whatever this does. */
+.card-grid--4x3 img { aspect-ratio: 4 / 3; object-fit: cover; }
+.card-grid--3x4 img { aspect-ratio: 3 / 4; object-fit: cover; }

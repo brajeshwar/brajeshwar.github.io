@@ -9,6 +9,7 @@
     id        optional id for that heading, so it can be linked
     sub       optional subtitle paragraph under the heading
     ratio     "3x4" (books) or "4x3" (photos) — sets the intrinsic size hint
+    captions  "true" to print a <figcaption>; omit for images that speak alone
 
   ⚠️ This uses `ul.item__cards`, the SHARED album grid, on purpose. The home
   page's scrolling strips deliberately do not (they want one clipped row where
@@ -16,6 +17,13 @@
   /film/ and /devices/ already have, so it should reuse it rather than grow a
   third card system. album.scss supplies the sizing via a `.album` ancestor,
   which the calling page provides with a wrapper div.
+
+  LINKS may be internal or external. A `url` starting with "http" is emitted
+  verbatim and gets `rel="noopener"` plus an external marker; anything else is
+  run through `relative_url`. That split matters — `relative_url` prepends the
+  baseurl, so passing it an absolute URL is at best a no-op and at worst a
+  mangled href the moment a baseurl exists. Photos point off-site by design
+  (album.oinam.com), books point at posts here.
 
   IMAGE PATHS follow the same rule as the home strips: a bare filename resolves
   under /static/<dir>/, an `img` beginning with "/" is used verbatim. That is
@@ -25,6 +33,13 @@
   `width`/`height` are intrinsic hints so the grid reserves each cell before
   the file lands and the page does not reflow as it loads. They are a ratio,
   not a rendered size — CSS sizes the image.
+
+  ⚠️ AND THEY DO NOT ENFORCE THE RATIO. album.scss sets `img { width: 100% }`
+  with height auto, so a card renders at the file's NATURAL ratio and the
+  attributes only reserve space. Measured 2026-08-01: /photos/ came out at 0.75
+  (portrait) while `ratio: "4x3"` was passed, because the placeholder files are
+  book covers. The `card-grid--*` class on the <ul> is what actually crops —
+  see page.scss. Change the class, not these numbers.
 {%- endcomment -%}
 {% if include.items and include.items.size > 0 %}
   {%- if include.heading %}
@@ -38,7 +53,7 @@
   {%- else -%}
     {%- assign iw = 225 -%}{%- assign ih = 300 -%}
   {%- endif -%}
-  <ul class="item__cards">
+  <ul class="item__cards card-grid--{{ include.ratio | default: "3x4" }}">
     {%- for item in include.items %}
     {%- assign first = item.img | slice: 0 -%}
     {%- if first == "/" -%}
@@ -46,14 +61,22 @@
     {%- else -%}
       {%- assign src = "/static/" | append: include.dir | append: "/" | append: item.img -%}
     {%- endif -%}
+    {%- assign proto = item.url | slice: 0, 4 -%}
+    {%- if proto == "http" -%}
+      {%- assign href = item.url -%}{%- assign ext = true -%}
+    {%- else -%}
+      {%- assign href = item.url | relative_url -%}{%- assign ext = false -%}
+    {%- endif -%}
     <li>
-      <a href="{{ item.url | relative_url }}">
+      <a href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
         <figure>
           <img width="{{ iw }}" height="{{ ih }}"
                src="{{ src | relative_url }}"
                alt="{{ item.alt | default: item.title }}"
                loading="lazy" decoding="async">
+          {%- if include.captions %}
           <figcaption>{{ item.title }}{% if item.author %} <span>{{ item.author }}</span>{% endif %}</figcaption>
+          {%- endif %}
         </figure>
       </a>
     </li>

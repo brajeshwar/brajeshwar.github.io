@@ -1,21 +1,3 @@
-# ⚠️ ENTRIES 7-12 ARE TEMPORARY DUPLICATES of entries 1-6, added 2026-07-31 so
-# the home page's Books strip could be seen at a realistic length:
-# Brajeshwar, "Replicate and show me more books, say, 12 of them."
-#
-# They are a preview device, not a shelf. DELETE THE SECOND BLOCK the moment
-# real titles go in — an unedited duplicate is worse than a short list, and it
-# will look deliberate to anyone who does not know this comment exists.
-#
-# Entries 1-6 are the real, curated list and are untouched.
-#
-# `highlight: true` marks a book for the "All Time Favorites" grid at the top of
-# /books/ (added 2026-08-01). It is optional — anything without it appears only
-# in the full list. The six flagged below are the original curated entries, and
-# they are exactly the six the old home page introduced as "some of my all-time
-# favorite books I have read and re-read", so the flag records a description
-# that already existed rather than inventing a new judgement.
-
-
 - title: 1984
   author: George Orwell
   url: /2024/1984/

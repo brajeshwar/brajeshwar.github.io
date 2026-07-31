@@ -13,6 +13,11 @@
   The heading sits in the band; the strip breaks out symmetrically around it.
   Both the title and every item are links.
 
+  LINKS may point off-site. A `url` starting with "http" is emitted verbatim
+  with `rel="noopener"`; anything else goes through `relative_url`. Photos link
+  to album.oinam.com, books to posts here — and `relative_url` prepends the
+  baseurl, so handing it an absolute URL is wrong the moment a baseurl exists.
+
   IMAGE PATHS. `img` is normally a bare filename and resolves under
   /static/<kind>/. An `img` that already starts with "/" is used verbatim
   instead — which is what lets the placeholder photos borrow the book
@@ -59,8 +64,14 @@
       {%- else -%}
         {%- assign img_src = "/static/" | append: include.kind | append: "/" | append: item.img -%}
       {%- endif -%}
+      {%- assign proto = item.url | slice: 0, 4 -%}
+      {%- if proto == "http" -%}
+        {%- assign href = item.url -%}{%- assign ext = true -%}
+      {%- else -%}
+        {%- assign href = item.url | relative_url -%}{%- assign ext = false -%}
+      {%- endif -%}
       <li class="strip__item">
-        <a class="strip__link" href="{{ item.url | relative_url }}">
+        <a class="strip__link" href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
           <img class="strip__img"
                src="{{ img_src | relative_url }}"
                alt="{{ item.alt | default: item.title }}"
