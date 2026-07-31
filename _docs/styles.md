@@ -252,6 +252,34 @@ is gray (`--color-accent: var(--color-gray-900)`) — so the resting site, links
 carries no hue. This is deliberate (see [`design.md`](design.md) → *Monotone by default*);
 keep it monotone. Colour is opt-in only, via a tinted palette or the accent axis.
 
+### The two structural rules (2026-08-01)
+
+The header's `border-bottom` and the footer's `border-top` are the only borders on
+`--rule-strong` (an 18% mix of the foreground) rather than `--rule` (10%). Brajeshwar:
+*"Increase the border color one notch for the header and footer, so they are more prominent
+than the other borders."*
+
+Measured on the dark/eink default, compositing each border over the page background:
+
+| | painted rgb | contrast vs page |
+|---|---|--:|
+| header + footer rule | `51,48,49` | **1.47** |
+| every other border | `36,33,34` | 1.20 |
+
+**22% more contrast**, and header and footer paint identically — they are a pair that brackets
+the page.
+
+⚠️ **Only those two may use `--rule-strong`.** The point is that they outrank every other
+border by exactly one tier; a third user starts eroding that. Note `chrome.scss` still uses
+plain `--rule` for the search-result separator and the tool-icon divider, which is correct.
+
+⚠️ **Measuring an `oklch()` colour with alpha needs a canvas.** `getComputedStyle().color` now
+returns `oklch(…)` rather than `rgb(…)` in Chrome, so the usual trick of parsing the computed
+string yields nonsense — it did here, reporting all three borders as identical at 1.10 and the
+change as having done nothing. Paint the background then the border onto a canvas and read the
+pixel; that composites the alpha for you and is the only reading that reflects what is on
+screen.
+
 ## Links & contrast
 Because the default is monotone, link affordance is the underline, not colour
 (`base.css`): `a { text-decoration: underline; text-decoration-color: var(--text-color-lower); }`

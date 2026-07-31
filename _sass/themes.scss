@@ -428,6 +428,22 @@
   --text          : var(--color-fg);
   --text-muted    : var(--color-fg-muted);
   --rule          : var(--color-border);
+  /* One notch up from --rule, for the site's two structural lines only.
+     Added 2026-08-01: "Increase the border color one notch for the header and
+     footer, so they are more prominent than the other borders on the website."
+
+     It resolves to --color-border-strong, an 18% mix of the foreground against
+     --rule's 10% — the tier that already existed as --border-color-high and had
+     three users. Named for the job rather than aliased to that, because the
+     header and footer rules are not "a high-contrast border", they are THE two
+     lines that bound the page, and the next person changing them should not
+     have to reason about whether a focus outline shares the value.
+
+     ⚠️ Only chrome.scss's header border-bottom and footer border-top may use
+     this. Everything else stays on --rule; the whole point is that these two
+     read as more structural than the rest, and a third user starts eroding
+     that. */
+  --rule-strong   : var(--color-border-strong);
   --accent        : var(--color-accent);
   --accent-hover  : var(--color-accent-hover);
   --mark          : var(--color-bg-muted);

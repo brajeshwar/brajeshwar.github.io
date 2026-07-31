@@ -18,9 +18,15 @@ header {
 
   /* Thin rule under the header, 2026-07-27. Because the rule sits on the header
      box itself — which is already the content band — it stops at the content
-     edges rather than running to the browser edges. --rule is a 10% mix of the
-     foreground, so it stays a hairline in both modes instead of a hard line. */
-  border-bottom: var(--border-size) var(--border-style) var(--rule);
+     edges rather than running to the browser edges.
+
+     --rule-strong, not --rule, since 2026-08-01: an 18% mix of the foreground
+     against --rule's 10%, so the two lines that bound the page read as more
+     structural than every other border on the site. Still a colour-mix rather
+     than a solid, so it stays a hairline in both modes instead of a hard line,
+     and still follows the palette. Mirrored on the footer's border-top —
+     change one and change the other. */
+  border-bottom: var(--border-size) var(--border-style) var(--rule-strong);
 
   display: flex;
   justify-content: space-between;
@@ -545,8 +551,10 @@ footer {
   padding: var(--space-l) 0 var(--space-xl);
 
   /* Rule sits here, not on <footer>, so it spans the content band and not the
-     browser width — the mirror of the header's border-bottom. */
-  border-top: var(--border-size) var(--border-style) var(--rule);
+     browser width — the mirror of the header's border-bottom, and it takes the
+     same --rule-strong. These two are a pair: they bracket the page, so they
+     match each other and outrank every other border by one tier. */
+  border-top: var(--border-size) var(--border-style) var(--rule-strong);
 
   text-align: center;
 }
