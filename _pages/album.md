@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Photos
+title: Album
 ---
 
-<h1>Photos</h1>
+<h1>Album</h1>
 
 <div class="album" markdown="0">
 {%- comment -%}
-  Built 2026-08-01, mirroring /books/ — "Follow the same ideas as the /books/
+  Built 2026-08-01, mirroring /books/. Renamed from /photos/ on 2026-08-01 — "Follow the same ideas as the /books/
   with photos.yml".
 
   ⚠️ EVERY THUMBNAIL HERE IS A PLACEHOLDER borrowed from /static/books/, because
-  /static/photos/ does not exist yet. _data/photos.yaml says so at the top and
-  is the only thing that needs replacing: drop real files into /static/photos/,
+  /static/album/ does not exist yet. _data/album.yaml says so at the top and
+  is the only thing that needs replacing: drop real files into /static/album/,
   rewrite that file with bare filenames, and this page and the home strip both
   fill in with no code change.
 
@@ -26,8 +26,8 @@ title: Photos
   choose between.
 {%- endcomment -%}
 {% include card-grid.html
-   items = site.data.photos
-   dir   = "photos"
+   items = site.data.album
+   dir   = "album"
    ratio = "4x3" %}
 </div>
 

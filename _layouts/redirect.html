@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- comment -%}
+  Redirect layout — built 2026-08-01, when /photos/ became /album/.
+
+  The `_redirect` collection was configured in _config.yml long ago and never
+  used: the folder was empty and this layout did not exist, so the machinery
+  was declared and absent. It exists now because a URL moved, and guardrail 2
+  says every URL is preserved.
+
+  ⚠️ NO JAVASCRIPT. A `<meta http-equiv="refresh">` is the only redirect a
+  static host can perform without a server rule, and it works with scripting
+  disabled — which a JS `location.replace` would not. `0;` so it is immediate.
+
+  `rel="canonical"` on the TARGET tells a crawler the destination is the real
+  page, and `noindex` keeps this stub out of the index while `follow` lets the
+  link equity pass through. Between them a search engine treats this the way it
+  would a 301, which is the closest a static file gets.
+
+  The visible link is not decoration. If the refresh is blocked — some
+  extensions and readers do block it — the reader lands on a page that says
+  where it went and offers the door, rather than a blank screen.
+
+  A page using this layout needs only front matter:
+
+      ---
+      layout: redirect
+      permalink: /old-url/
+      redirect_to: /new-url/
+      sitemap: false
+      ---
+
+  ⚠️ `sitemap: false` goes on the PAGE, not here. Front matter in a layout does
+  not propagate to the documents that use it, so the stub was listed in
+  sitemap.xml on the first attempt — verified by grepping the built file. The
+  `noindex` below is the belt; this is the braces.
+{%- endcomment -%}
+<title>Moved to {{ page.redirect_to }}</title>
+<link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+  <p>This page has moved to <a href="{{ page.redirect_to | relative_url }}">{{ page.redirect_to }}</a>.</p>
+</body>
+</html>

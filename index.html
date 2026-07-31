@@ -38,7 +38,7 @@ title: Brajeshwar Oinam
     HOW MANY THUMBNAILS EACH STRIP SHOWS — change the two numbers.
     ============================================================
     The home page shows the LAST N of each shelf; the full lists live at
-    /books/ and /photos/ (2026-08-01: "the books list on the home page should
+    /books/ and /album/ (2026-08-01: "the books list on the home page should
     be the last xx number from the above /books/").
 
     "Last" means the end of the data file, i.e. most recently added — so a new
@@ -48,7 +48,7 @@ title: Brajeshwar Oinam
     original order rather than showing the shelf backwards.
   {%- endcomment -%}
   {%- assign home_books_count  = 8 -%}
-  {%- assign home_photos_count = 8 -%}
+  {%- assign home_album_count = 8 -%}
 
   {%- assign books_tail = site.data.books | reverse | slice: 0, home_books_count | reverse -%}
   {%- comment -%}
@@ -63,20 +63,22 @@ title: Brajeshwar Oinam
      captions = true %}
 
   {%- comment -%}
-    Photos renders NOTHING until _data/photos.yaml exists — the include is
-    gated on `items`, exactly as Books always has been, and /photos/ is still
-    a coming-soon page. Same field shape as books.yaml (title, url, img, alt),
-    with images under /static/photos/. Data is content and not ours to invent.
+    Album (renamed from Photos, 2026-08-01 — "we are likely to have videos and
+    audio too besides photos"). Still placeholder data: _data/album.yaml
+    borrows the book thumbnails because /static/album/ does not exist yet, and
+    the include is gated on `items` exactly as Books is, so an empty file
+    renders nothing rather than an empty heading.
   {%- endcomment -%}
   {%- comment -%}
-    No `captions` here: a photo names itself, and a caption under every frame
-    turned the row into a wall of repeated text while the placeholders are in
-    place. Removed 2026-07-31 on request.
+    No `captions` here: the images speak for themselves, and a caption under
+    every frame turned the row into a wall of repeated text. Items carrying
+    `media: video` or `media: audio` get a small icon badge instead, which is
+    the one thing a thumbnail cannot say on its own.
   {%- endcomment -%}
-  {%- assign photos_tail = site.data.photos | reverse | slice: 0, home_photos_count | reverse -%}
+  {%- assign album_tail = site.data.album | reverse | slice: 0, home_album_count | reverse -%}
   {% include home-strip.html
-     items = photos_tail
-     title = "Photos"
-     href  = "/photos/"
-     kind  = "photos" %}
+     items = album_tail
+     title = "Album"
+     href  = "/album/"
+     kind  = "album" %}
 </main>

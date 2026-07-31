@@ -8,8 +8,21 @@
     heading   optional <h2> text
     id        optional id for that heading, so it can be linked
     sub       optional subtitle paragraph under the heading
-    ratio     "3x4" (books) or "4x3" (photos) — sets the intrinsic size hint
+    ratio     "3x4" (books) or "4x3" (album) — sets the intrinsic size hint
     captions  "true" to print a <figcaption>; omit for images that speak alone
+
+  A data item may carry `media: video` or `media: audio`, which overlays a
+  small icon on the thumbnail so a reader can tell what a frame leads to before
+  clicking. Omitted means a still image, which needs no marker — the absence is
+  the default, not a third icon.
+
+  ⚠️ The badge is `aria-hidden` and the word goes into the image's ALT instead
+  — "… (video)". The first attempt used a `.visually-hidden` span, which this
+  site does not have: base.css's copy was deleted after the 2026-07-19 audit
+  flagged it unreferenced, so the span would have printed the word "video"
+  under the thumbnail as plain visible text. The alt needs no class, cannot
+  rot the same way, and is where a screen reader expects to find what an image
+  is anyway.
 
   ⚠️ This uses `ul.item__cards`, the SHARED album grid, on purpose. The home
   page's scrolling strips deliberately do not (they want one clipped row where
@@ -27,7 +40,7 @@
 
   IMAGE PATHS follow the same rule as the home strips: a bare filename resolves
   under /static/<dir>/, an `img` beginning with "/" is used verbatim. That is
-  what lets the placeholder photos borrow the book covers while /static/photos/
+  what lets the placeholder album items borrow the book covers while /static/album/
   does not exist yet.
 
   `width`/`height` are intrinsic hints so the grid reserves each cell before
@@ -72,8 +85,11 @@
         <figure>
           <img width="{{ iw }}" height="{{ ih }}"
                src="{{ src | relative_url }}"
-               alt="{{ item.alt | default: item.title }}"
+               alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
                loading="lazy" decoding="async">
+          {%- if item.media == "video" or item.media == "audio" %}
+          <span class="media-badge" aria-hidden="true">{% include icons/{{ item.media }}.svg %}</span>
+          {%- endif %}
           {%- if include.captions %}
           <figcaption>{{ item.title }}{% if item.author %} <span>{{ item.author }}</span>{% endif %}</figcaption>
           {%- endif %}

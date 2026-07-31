@@ -23,8 +23,8 @@ footer:
     url: "/books/"
   - title: Now
     url: "/now/"
-  - title: Photos
-    url: "/photos/"
+  - title: Album
+    url: "/album/"
   - title: Film
     url: "/film/"
   - title: Ideas

@@ -604,6 +604,11 @@ home-support li {
   text-decoration: none;
 }
 
+.strip__frame {
+  display: block;
+  position: relative;   /* positioning context for the media badge */
+}
+
 .strip__img {
   display: block;
   width: 100%;
@@ -616,10 +621,10 @@ home-support li {
   filter: grayscale(1);
 }
 
-/* 3:4 for books, 4:3 for photos — set on the image so a missing or slow file
+/* 3:4 for books, 4:3 for the album — set on the image so a missing or slow file
    still reserves the right box and the row never reflows as they load. */
 .strip--books .strip__img  { aspect-ratio: 3 / 4;  object-fit: cover; }
-.strip--photos .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
+.strip--album .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
 
 /* Captions WRAP (2026-07-31: "The title should wrap and Ok to show in more
    than one line for longer titles"). They were `white-space: nowrap` with an
@@ -688,13 +693,13 @@ home-support li {
    and put a faint halo around it. On Books the same rule has a caption to
    highlight, which is the whole reason it earns its place there. The grayscale
    lifting off the image is the hover state here. */
-.strip--photos .strip__link {
+.strip--album .strip__link {
   padding: 0;
   margin: 0;
 }
 
-.strip--photos .strip__link:hover,
-.strip--photos .strip__link:focus-visible {
+.strip--album .strip__link:hover,
+.strip--album .strip__link:focus-visible {
   background-color: transparent;
 }
 
@@ -824,4 +829,54 @@ body:has(home-container) {
 .strip__nav:disabled {
   opacity: 0;
   pointer-events: none;
+}
+
+
+/* ---- Media badge ----------------------------------------------
+   A small icon over the corner of a thumbnail that leads to video or audio
+   (2026-08-01). Stills get nothing — absence is the default state, so the
+   badge means "this is not just a picture" rather than being one of three
+   markers a reader has to learn.
+
+   Bottom-left, not centred. A centred play button is the convention for a
+   video PLAYER, and these are links to a page that holds the video; putting a
+   play glyph in the middle of the frame promises playback in place and does
+   not deliver it. The corner reads as a label, which is what it is.
+
+   The backdrop is not decoration either: the icon sits on a photograph whose
+   brightness is unknown, and `currentColor` alone would vanish on anything
+   pale. A dark scrim with a light glyph is legible on every image, which a
+   single colour cannot be.
+
+   `aria-hidden` on the badge and the word in the image's alt instead — see the
+   note in card-grid.html for why a .visually-hidden span was the wrong tool
+   here (that utility does not exist on this site). */
+.media-badge {
+  position: absolute;
+  inset-inline-start: var(--space-3xs);
+  inset-block-end: var(--space-3xs);
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: var(--border-radius-small);
+
+  color: oklch(97% 0 0);
+  background-color: oklch(12% 0 0 / 0.66);
+  backdrop-filter: blur(2px);
+}
+
+.media-badge svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  display: block;
+}
+
+/* On the wrapping grids the frame is the <figure>. */
+.item__cards figure {
+  position: relative;
 }

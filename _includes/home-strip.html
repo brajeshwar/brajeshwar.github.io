@@ -3,12 +3,15 @@
   Photos, which are the same component at two aspect ratios.
 
   Parameters:
-    items     the data array (site.data.books / site.data.photos)
+    items     the data array (site.data.books / site.data.album)
     title     heading text
     href      where the heading links
-    kind      "books" | "photos" — picks the ratio class and the image folder
+    kind      "books" | "album" — picks the ratio class and the image folder
     intro     optional paragraph, rendered above the strip inside the band
     captions  "true" to print the item title under each thumbnail
+
+  A data item may carry `media: video` or `media: audio`, overlaying a small
+  icon so a reader can tell what the frame leads to. Omitted means a still.
 
   The heading sits in the band; the strip breaks out symmetrically around it.
   Both the title and every item are links.
@@ -20,8 +23,8 @@
 
   IMAGE PATHS. `img` is normally a bare filename and resolves under
   /static/<kind>/. An `img` that already starts with "/" is used verbatim
-  instead — which is what lets the placeholder photos borrow the book
-  thumbnails while /static/photos/ does not exist. Slice rather than
+  instead — which is what lets the placeholder album items borrow the book
+  thumbnails while /static/album/ does not exist. Slice rather than
   `contains "/"`, because a filename in a subfolder would contain one too.
 
   THE ARROWS ARE PROGRESSIVE ENHANCEMENT. They ship as real <button>s but
@@ -72,10 +75,15 @@
       {%- endif -%}
       <li class="strip__item">
         <a class="strip__link" href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
-          <img class="strip__img"
-               src="{{ img_src | relative_url }}"
-               alt="{{ item.alt | default: item.title }}"
-               loading="lazy" decoding="async">
+          <span class="strip__frame">
+            <img class="strip__img"
+                 src="{{ img_src | relative_url }}"
+                 alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
+                 loading="lazy" decoding="async">
+            {%- if item.media == "video" or item.media == "audio" %}
+            <span class="media-badge" aria-hidden="true">{% include icons/{{ item.media }}.svg %}</span>
+            {%- endif %}
+          </span>
           {%- if include.captions %}
           <span class="strip__caption">{{ item.title }}</span>
           {%- endif %}

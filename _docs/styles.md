@@ -725,8 +725,21 @@ it does *nothing*; the script picks `'auto'` explicitly instead. And a programma
 does not reliably fire a `scroll` event, so the click handler re-syncs the button state
 directly rather than waiting for one.
 
-⚠️ **Photos is placeholder data.** `_data/photos.yaml` exists but every `img` points into
-`/static/books/` — there is no `/static/photos/` yet. An `img` beginning with `/` is used
+**Media badges** (2026-08-01). An album item carrying `media: video` or `media: audio` gets a
+small icon over the bottom-left of its frame — a play glyph or a waveform, `_includes/icons/`,
+monochrome and `currentColor` like the rest. Stills get nothing: absence is the default, so
+the badge means "not just a picture" rather than being one of three markers to learn.
+Bottom-left rather than centred, because a centred play button is the convention for a
+*player* and these are links to a page that holds the media. The dark scrim is not decoration
+— the icon sits on a photograph of unknown brightness, and a single colour cannot be legible
+on all of them.
+⚠️ The badge is `aria-hidden`; the word goes into the image's **alt** ("… (video)"). The first
+attempt used a `.visually-hidden` span, which **this site does not have** — base.css's copy
+was deleted after the 2026-07-19 audit flagged it unreferenced, so it would have printed the
+word "video" under the thumbnail as visible text.
+
+⚠️ **Album is placeholder data.** `_data/album.yaml` exists but every `img` points into
+`/static/books/` — there is no `/static/album/` yet. An `img` beginning with `/` is used
 verbatim by the include; bare filenames resolve under `/static/<kind>/`. Replace the yaml
 wholesale when real photos land.
 
@@ -960,7 +973,7 @@ the timeline, that is the point to extract a real layout instead.
 
 Album is available to any page. The grid (`ul.item__cards`) lives in `base.css`; the card
 treatment is `album.css`, loaded by `_layouts/album.html`. To give a page thumbnails: switch it
-to `layout: album` and emit `<ul class="item__cards">`. `/books/`, `/photos/` and `/wear/` are
+to `layout: album` and emit `<ul class="item__cards">`. `/books/`, `/album/` and `/wear/` are
 candidates when they have images — none has thumbnail data yet, so none was converted.
 
 ## Keeping the base tier honest

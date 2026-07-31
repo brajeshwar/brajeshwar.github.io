@@ -46,6 +46,14 @@ Originally absorbed from the 2027 planning braindump.
 - [ ] **Photos component** — a style that highlights key photos. Likely after <https://pictures.oinam.com> is up.
 
 ## Infrastructure & migrations
+- [x] **`_redirect` collection is real now** *(2026-08-01)*. It was declared in `_config.yml`
+      and completely empty — no folder, no `_layouts/redirect.html` — so the machinery existed
+      on paper only. `/photos/` → `/album/` needed it: that URL was live and returning 200 in
+      production, and guardrail 2 preserves every URL. The layout is a `<meta http-equiv>`
+      refresh plus a canonical to the target, `noindex, follow`, and a real visible link for
+      when the refresh is blocked. No JavaScript, so it works with scripting off.
+      ⚠️ `sitemap: false` goes on the redirecting PAGE, not the layout — layout front matter
+      does not propagate, and the stub appeared in `sitemap.xml` until it was moved.
 - [ ] **Redirect** `docs.brajeshwar.com` → <https://archive.oinam.com> via Cloudflare Workers.
 - [ ] **Move Jekyll redirects** to Cloudflare / plain HTML — or drop them and give a good explanation and next step in the 404 page.
 - [ ] **Migrate `cdn.oinam.com`** remnants to `brajeshwar.com`.
