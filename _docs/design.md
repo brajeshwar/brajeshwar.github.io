@@ -99,9 +99,12 @@ bytes of webfont; self-hosted fonts (Libre Baskerville only, since 2026-07-19) d
 only if a reader picks them, never on a default load. JavaScript is vanilla, deferred, and
 small, scoped where practical so a script that only matters on articles (sidenotes, say)
 does not tax the homepage. And third-party scripts are watched: every external script is a
-request and a dependency, and there are zero of them today — the analytics beacon was
-removed 2026-07-27. A third origin costs a DNS lookup and a TLS handshake before its script
-can even start, commonly 100–300 ms on a cold mobile connection, on every page.
+request and a dependency, and there is exactly one today — the self-hosted Umami beacon at
+`analytics.oinam.net`, removed 2026-07-27 and restored 2026-07-31. A third origin costs a
+DNS lookup and a TLS handshake before its script can even start, commonly 100–300 ms on a
+cold mobile connection, on every page. It is deferred, so it delays no paint; what it costs
+is a connection the page would otherwise never open. One is the ceiling, not a starting
+point.
 
 The CSS sub-budget is ≤ 13 KB gzipped, measured over the wire, not raw. It used to be
 per-page, because the CSS was inlined and every page paid it again. Since 2026-07-27 there

@@ -50,9 +50,10 @@ content:
 it fails silently *and truthily*, so hoisting it to a variable ships the script everywhere
 while reading as correct. Same trap as `page.html` and the old conditional `code.css`.
 
-A typical post now fetches three scripts instead of five, and, since the analytics beacon was
-removed the same day, makes no cross-origin request at all. The saving is 2,189 bytes gzipped,
-plus a DNS lookup and a TLS handshake.
+A typical post now fetches three scripts instead of five, a saving of 2,189 bytes gzipped.
+For four days it also made no cross-origin request at all, the analytics beacon having been
+removed the same day; that beacon was restored 2026-07-31, so the DNS lookup and TLS
+handshake are back and the script-count saving stands on its own.
 
 ⚠️ **Scripts are content-hashed on publish** (`scripts/hash-assets.mjs`). `/assets/*` is
 served `max-age=31536000`, so before this every JS fix could take a year to reach a returning

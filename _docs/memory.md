@@ -29,7 +29,8 @@ snapshot taken first, but the habit is the fix: name the files.
    (fonts first, then the CSS that points at them). Without this a year-long cache strands
    returning readers; it was already silently true of the JavaScript.
 4. **Scripts load only where they have work.** sidenotes.js on 87 of 1,483 pages, anchors.js on
-   453 of 1,456 posts. Analytics removed entirely — zero cross-origin requests now.
+   453 of 1,456 posts. Analytics was removed entirely on 2026-07-27 and **restored 2026-07-31**
+   at Brajeshwar's request, so the site is back to exactly one cross-origin request.
 5. **Random post.** A circle in the prev/next bar → `/random/` → a random post. Self-contained
    by request. ⚠️ Its index is inlined into that page, NOT under `/assets/`, which would freeze
    it for a year.

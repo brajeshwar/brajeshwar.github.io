@@ -262,15 +262,21 @@ at the top of this section.
       Brajeshwar: *"Ignore this for now. The width is good for now."* The 64rem/1024px band
       stands on the sidenote arithmetic, which is a constraint rather than a guess. Reopen only
       if the width is ever in question again.
-- [ ] **Analytics: pick a replacement approach.** The `analytics.oinam.net` beacon was
-      removed entirely 2026-07-27 at Brajeshwar's request — *"Remove 'analytics.oinam.net'
-      until I figure out a better way to do this."* The site now makes zero cross-origin
-      requests. The cost was never the script's size: a third origin means a DNS lookup and a
-      TLS handshake before it can start, commonly 100–300 ms on a cold mobile connection, on
-      every page. The markup is preserved verbatim in a Liquid comment in `_layouts/default.html`,
-      so restoring it is a copy-paste. Whatever replaces it, prefer something that does not add
-      an origin — Cloudflare Web Analytics (the CDN is already in the path) or server-side log
-      processing both avoid the handshake entirely.
+- [x] ~~**Analytics: pick a replacement approach.**~~ — **restored as-is 2026-07-31**,
+      Brajeshwar: *"can we add it back."* The `analytics.oinam.net` Umami beacon had been
+      removed entirely 2026-07-27 (*"until I figure out a better way to do this"*), which left
+      the site making zero cross-origin requests for four days. It is back in
+      `_layouts/default.html`, deferred, unchanged.
+- [ ] **Analytics: drop the extra origin, keep the numbers.** Now the follow-up rather than
+      the blocker. The cost was never the script's size (4.6 KB): a third origin means a DNS
+      lookup and a TLS handshake before it can start — measured **725 ms cold on 2026-07-31**,
+      and commonly 100–300 ms on mobile. `defer` means it delays no paint, so this is a
+      connection cost, not a rendering one. Two ways to keep the data and lose the handshake:
+      **proxy the script through this domain** (Cloudflare already fronts the site, so a path
+      like `/js/script.js` could pass through to the Umami host — the beacon then shares the
+      existing connection), or **Cloudflare Web Analytics**, whose origin is already in the
+      request path. Worth doing only if the handshake ever shows up in real numbers; the
+      current setup is correct, just not free.
 - [x] **`--body-width-medium` (60rem)** *(done 2026-07-27)* — folded into `--image-width-max`,
       its only reader. One token named for what it does instead of two, one of which claimed to
       be a site width and was not.
