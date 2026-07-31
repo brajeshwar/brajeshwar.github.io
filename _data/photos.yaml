@@ -23,25 +23,65 @@
   img: /static/books/1984.webp
   alt: Placeholder thumbnail, borrowed from the books shelf
 
+
 - title: Placeholder — replace with a real photo
   url: /photos/
   img: /static/books/the-lord-of-the-rings.webp
   alt: Placeholder thumbnail, borrowed from the books shelf
+
 
 - title: Placeholder — replace with a real photo
   url: /photos/
   img: /static/books/leonardo-da-vinci.webp
   alt: Placeholder thumbnail, borrowed from the books shelf
 
+
 - title: Placeholder — replace with a real photo
   url: /photos/
   img: /static/books/the-design-of-everyday-things.webp
   alt: Placeholder thumbnail, borrowed from the books shelf
 
+
 - title: Placeholder — replace with a real photo
   url: /photos/
   img: /static/books/genghis-khan.webp
   alt: Placeholder thumbnail, borrowed from the books shelf
+
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/mahatma-gandhi.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/1984.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/the-lord-of-the-rings.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/leonardo-da-vinci.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/the-design-of-everyday-things.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/genghis-khan.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
 
 - title: Placeholder — replace with a real photo
   url: /photos/

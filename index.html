@@ -33,18 +33,27 @@ title: Brajeshwar Oinam
     </home-aside>
   </home-container>
 
+  {%- comment -%}
+    The Books intro paragraph was removed 2026-07-31 on request. The `intro`
+    parameter is still supported by the include — nothing else passes one today.
+  {%- endcomment -%}
   {% include home-strip.html
-     items = site.data.books
-     title = "Books"
-     href  = "/books/"
-     kind  = "books"
-     intro = "Some of my all-time favourites, read and re-read. Since 2018 I list the interesting ones I read each year." %}
+     items    = site.data.books
+     title    = "Books"
+     href     = "/books/"
+     kind     = "books"
+     captions = true %}
 
   {%- comment -%}
     Photos renders NOTHING until _data/photos.yaml exists — the include is
     gated on `items`, exactly as Books always has been, and /photos/ is still
     a coming-soon page. Same field shape as books.yaml (title, url, img, alt),
     with images under /static/photos/. Data is content and not ours to invent.
+  {%- endcomment -%}
+  {%- comment -%}
+    No `captions` here: a photo names itself, and a caption under every frame
+    turned the row into a wall of repeated text while the placeholders are in
+    place. Removed 2026-07-31 on request.
   {%- endcomment -%}
   {% include home-strip.html
      items = site.data.photos

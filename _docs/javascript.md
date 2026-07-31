@@ -59,6 +59,30 @@ Cloudflare's edge logs now, which need no script. Every script the site loads is
 for embedded media the posts themselves contain — YouTube (89 references), `cdn.oinam.com`
 images (38), Vimeo, gists (measured 2026-07-31). Those are content and stay untouched.
 
+### `strip-nav.js` (2026-07-31) — home page only
+
+Arrow controls for the Books and Photos strips. Gated inline on
+`content contains 'class="strip__viewport"'`, so it ships on 1 page of 1,484.
+
+Progressive enhancement in the strict sense: the strips are native `overflow-x: auto`
+scrollers, so trackpad, touch, keyboard and scrollbar all work without this file. The
+buttons ship carrying `hidden` and are revealed only after the script measures a real
+overflow — so with JS off they never appear at all, rather than appearing and doing nothing.
+
+Two things it works around, both found by measurement, both documented at the call site:
+
+- **`behavior: 'smooth'` is a no-op under `prefers-reduced-motion: reduce`** — not degraded,
+  ignored. The script reads the media query and passes `'auto'` instead.
+- **A programmatic scroll does not reliably fire `scroll`.** Verified: `scrollLeft` moved
+  0 → 300 with a listener attached and a 400 ms wait, and the listener never ran. So the
+  click handler calls `sync()` itself (twice — once for the instant case, once after the
+  smooth animation) instead of trusting the event. The `scroll` listener stays for the
+  inputs that bypass the buttons.
+
+`ResizeObserver` watches the viewport, **not** lazy images: items are fixed-width and the
+`<img>` carries an `aspect-ratio`, so the geometry is settled at first layout and the arrows
+are correct before a thumbnail decodes.
+
 ⚠️ **Scripts are content-hashed on publish** (`scripts/hash-assets.mjs`). `/assets/*` is
 served `max-age=31536000`, so before this every JS fix could take a year to reach a returning
 reader. See [`hosting.md`](hosting.md) → *Cache headers we actually get*.

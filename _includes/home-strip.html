@@ -1,28 +1,39 @@
 {%- comment -%}
   Home — one thumbnail strip that breaks out past the band. Used by Books and
-  Photos, which are the same component at two aspect ratios (Brajeshwar
-  2026-07-31: "Photos. Same style as Books").
+  Photos, which are the same component at two aspect ratios.
 
   Parameters:
-    items    the data array (site.data.books / site.data.photos)
-    title    heading text
-    href     where the heading links
-    kind     "books" | "photos" — picks the ratio class and the image folder
-    intro    optional paragraph, rendered above the strip inside the band
+    items     the data array (site.data.books / site.data.photos)
+    title     heading text
+    href      where the heading links
+    kind      "books" | "photos" — picks the ratio class and the image folder
+    intro     optional paragraph, rendered above the strip inside the band
+    captions  "true" to print the item title under each thumbnail
 
-  The heading sits in the band; the strip breaks out. Both the title and every
-  item are links, as asked.
+  The heading sits in the band; the strip breaks out symmetrically around it.
+  Both the title and every item are links.
 
   IMAGE PATHS. `img` is normally a bare filename and resolves under
   /static/<kind>/. An `img` that already starts with "/" is used verbatim
   instead — which is what lets the placeholder photos borrow the book
-  thumbnails while /static/photos/ does not exist yet. Slice rather than
+  thumbnails while /static/photos/ does not exist. Slice rather than
   `contains "/"`, because a filename in a subfolder would contain one too.
+
+  THE ARROWS ARE PROGRESSIVE ENHANCEMENT. They ship as real <button>s but
+  carry `hidden`, and strip-nav.js removes that only once it has measured that
+  the strip actually overflows. With JS off they never appear — and nothing is
+  lost, because the strip is a native `overflow-x: auto` scroller that a
+  trackpad, a touchscreen or a keyboard can already move. The buttons are a
+  convenience for a mouse, not the mechanism.
+
+  `aria-hidden` on the chevron glyph with a real label on the button: "‹" is
+  announced as "single left-pointing angle quotation mark", which is not what
+  anyone needs to hear.
 
   ⚠️ NOT ul.item__cards. That class is shared with the album pages
   (/devices/, /film/, /music/, /wear/) via album.scss, and reusing it here
   would have coupled this to four pages that want a wrapping grid, not a
-  clipped single row. New classes, no shared surface.
+  clipped single row.
 {%- endcomment -%}
 {% if include.items %}
 <home-strip class="strip-section">
@@ -34,24 +45,38 @@
   <p class="strip__intro">{{ include.intro }}</p>
   {%- endif %}
 
-  <ul class="strip strip--{{ include.kind }}">
-    {%- for item in include.items %}
-    {%- assign img_first = item.img | slice: 0 -%}
-    {%- if img_first == "/" -%}
-      {%- assign img_src = item.img -%}
-    {%- else -%}
-      {%- assign img_src = "/static/" | append: include.kind | append: "/" | append: item.img -%}
-    {%- endif -%}
-    <li class="strip__item">
-      <a class="strip__link" href="{{ item.url | relative_url }}">
-        <img class="strip__img"
-             src="{{ img_src | relative_url }}"
-             alt="{{ item.alt | default: item.title }}"
-             loading="lazy" decoding="async">
-        <span class="strip__caption">{{ item.title }}</span>
-      </a>
-    </li>
-    {%- endfor %}
-  </ul>
+  <div class="strip__viewport">
+    <button class="strip__nav strip__nav--prev" type="button"
+            aria-label="Scroll {{ include.title | downcase }} left" hidden>
+      <span aria-hidden="true">&lsaquo;</span>
+    </button>
+
+    <ul class="strip strip--{{ include.kind }}{% unless include.captions %} strip--nocaption{% endunless %}">
+      {%- for item in include.items %}
+      {%- assign img_first = item.img | slice: 0 -%}
+      {%- if img_first == "/" -%}
+        {%- assign img_src = item.img -%}
+      {%- else -%}
+        {%- assign img_src = "/static/" | append: include.kind | append: "/" | append: item.img -%}
+      {%- endif -%}
+      <li class="strip__item">
+        <a class="strip__link" href="{{ item.url | relative_url }}">
+          <img class="strip__img"
+               src="{{ img_src | relative_url }}"
+               alt="{{ item.alt | default: item.title }}"
+               loading="lazy" decoding="async">
+          {%- if include.captions %}
+          <span class="strip__caption">{{ item.title }}</span>
+          {%- endif %}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <button class="strip__nav strip__nav--next" type="button"
+            aria-label="Scroll {{ include.title | downcase }} right" hidden>
+      <span aria-hidden="true">&rsaquo;</span>
+    </button>
+  </div>
 </home-strip>
 {% endif %}

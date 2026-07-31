@@ -97,6 +97,17 @@
 {%- endcomment -%}
 {% if content contains 'id="random-index"' %}<script defer src="{{ '/assets/scripts/random.js' | relative_url }}"></script>{% endif %}
 {%- comment -%}
+  Strip arrows, on the one page that has thumbnail strips. Gated on the
+  viewport element rather than on `page.url == '/'` so the two cannot drift —
+  the script does nothing without it, and this is the same test the script
+  itself makes.
+
+  ⚠️ Inline in the `if`, like the others. Liquid's `assign` does not evaluate
+  `contains`; it fails silently AND truthily, so hoisting it would ship this
+  on all ~1,484 pages while reading as correct.
+{%- endcomment -%}
+{% if content contains 'class="strip__viewport"' %}<script defer src="{{ '/assets/scripts/strip-nav.js' | relative_url }}"></script>{% endif %}
+{%- comment -%}
   Back to Top. Site-wide, but self-limiting: the script returns immediately on
   a page that isn't tall enough to need one, so short pages pay a parse and
   nothing else. See _docs/javascript.md.

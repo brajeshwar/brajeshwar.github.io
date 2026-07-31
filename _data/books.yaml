@@ -1,28 +1,82 @@
+# ⚠️ ENTRIES 7-12 ARE TEMPORARY DUPLICATES of entries 1-6, added 2026-07-31 so
+# the home page's Books strip could be seen at a realistic length:
+# Brajeshwar, "Replicate and show me more books, say, 12 of them."
+#
+# They are a preview device, not a shelf. DELETE THE SECOND BLOCK the moment
+# real titles go in — an unedited duplicate is worse than a short list, and it
+# will look deliberate to anyone who does not know this comment exists.
+#
+# Entries 1-6 are the real, curated list and are untouched.
+
 - title: 1984
   author: George Orwell
   url: /2024/1984/
   img: 1984.webp
   alt: The Manuscript of the book 1984
+
 - title: The Lord of the Rings
   author: J.R.R. Tolkien
   url: /2022/the-lord-of-the-rings/
   img: the-lord-of-the-rings.webp
   alt: The One Ring to Rule Them All
+
 - title: Leonardo da Vinci
   author: Walter Isaacson
   url: /2024/leonardo-da-vinci/
   img: leonardo-da-vinci.webp
   alt: Portrait of Leonardo da Vinci
+
 - title: The Design of Everyday Things
   author: Don Norman
   url: /2013/the-design-of-everyday-things/
   img: the-design-of-everyday-things.webp
   alt: A clean set of everyday objects
+
 - title: Genghis Khan and the Making of the Modern World
   author: Jack Weatherford
   url: /2019/genghis-khan-and-the-making-of-the-modern-world/
   img: genghis-khan.webp
   alt: Genghis Khan on a Horse
+
+- title: The Story of My Experiments with Truth
+  author: Mohandas Karamchand Gandhi
+  url: /2021/the-story-of-my-experiments-with-truth/
+  img: mahatma-gandhi.webp
+  alt: Mahatma Gandhi
+
+
+# ---- TEMPORARY DUPLICATES (see the note at the top) -------------------
+
+- title: 1984
+  author: George Orwell
+  url: /2024/1984/
+  img: 1984.webp
+  alt: The Manuscript of the book 1984
+
+- title: The Lord of the Rings
+  author: J.R.R. Tolkien
+  url: /2022/the-lord-of-the-rings/
+  img: the-lord-of-the-rings.webp
+  alt: The One Ring to Rule Them All
+
+- title: Leonardo da Vinci
+  author: Walter Isaacson
+  url: /2024/leonardo-da-vinci/
+  img: leonardo-da-vinci.webp
+  alt: Portrait of Leonardo da Vinci
+
+- title: The Design of Everyday Things
+  author: Don Norman
+  url: /2013/the-design-of-everyday-things/
+  img: the-design-of-everyday-things.webp
+  alt: A clean set of everyday objects
+
+- title: Genghis Khan and the Making of the Modern World
+  author: Jack Weatherford
+  url: /2019/genghis-khan-and-the-making-of-the-modern-world/
+  img: genghis-khan.webp
+  alt: Genghis Khan on a Horse
+
 - title: The Story of My Experiments with Truth
   author: Mohandas Karamchand Gandhi
   url: /2021/the-story-of-my-experiments-with-truth/

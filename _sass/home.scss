@@ -412,7 +412,11 @@ home-support li {
   font-weight: var(--font-weight-light);
   text-transform: lowercase;
 
-  border-bottom: var(--border-size) var(--border-style) var(--border-color);
+  /* Transparent, not absent: a border that appears on hover would shift the
+     strip down by its own width on every pointer entry. Reserving the space
+     and only colouring it keeps the row still (2026-07-31: "No border-bottom
+     by default. It shows on hover."). */
+  border-bottom: var(--border-size) var(--border-style) transparent;
   transition: border-bottom-color 120ms ease-out;
 }
 
@@ -473,13 +477,61 @@ home-support li {
      the heading above still sits in the band, so the alignment the rest of the
      site keeps is still stated on the page, and the row reads as a separate
      centred object rather than a column that overflows. */
+  width: 100%;
+  padding-inline: 0;
+
+  /* ⚠️ `safe center`, and the `safe` is not optional — it is the difference
+     between a centred row and 451px of unreachable books.
+
+     Plain `center` centres the overflow too, so a shelf wider than the
+     viewport spills equally in BOTH directions — and the half that lands to
+     the left of the scroll origin cannot be reached, because `scrollLeft` does
+     not go below 0. Measured 2026-07-31 with twelve books at 1512: the first
+     thumbnail sat at x = -451 with the strip already scrolled fully left, and
+     the prev arrow correctly reported itself disabled because by the scroller's
+     reckoning it WAS at the start.
+
+     `safe` falls back to `start` the moment content overflows, which is
+     precisely the case where centring loses data. So: a short shelf centres in
+     the bleed, as asked; a long one starts at the bleed's left edge and
+     scrolls right, with everything reachable. */
+  justify-content: safe center;
+
+  /* SCROLLABLE, not clipped (2026-07-31). It was `overflow: hidden`, which
+     looked right on a wide desktop and quietly made half a twelve-book shelf
+     unreachable on a laptop — the row simply ended at the viewport edge with
+     no way to continue. `auto` keeps the same visual (nothing spills, the row
+     still runs off the edge) while a trackpad, a touchscreen, a keyboard or
+     the arrow buttons can all reach the rest.
+
+     `justify-content: center` is why the bleed is symmetric; note that a
+     centred flex row that OVERFLOWS clips equally at both ends and, in some
+     engines, makes the start unreachable by scrolling. `margin-inline: auto`
+     on the list items would be the version of this that breaks; the padding
+     scroll-guards below are what keep the first item reachable. */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;              /* the arrows are the affordance */
+  overscroll-behavior-x: contain;     /* no back-swipe navigation */
+}
+
+.strip::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .strip { scroll-behavior: auto; }
+}
+
+/* The viewport is what carries the bleed now; the strip fills it and scrolls
+   inside it. Splitting the two is what lets the arrows sit against the bleed
+   edges rather than travelling with the scrolled content. */
+.strip__viewport {
+  --strip-bleed: min(100vw, var(--body-width-full));
+
+  position: relative;
   width: var(--strip-bleed);
   max-width: var(--strip-bleed);
   margin-inline: calc(50% - var(--strip-bleed) / 2);
-  padding-inline: 0;
-  justify-content: center;
-
-  overflow: hidden;
 }
 
 /* ⚠️ FIXED WIDTH, and do not "improve" this to `flex: 1 0 …` so the row fills
@@ -527,17 +579,21 @@ home-support li {
 .strip--books .strip__img  { aspect-ratio: 3 / 4;  object-fit: cover; }
 .strip--photos .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
 
+/* Captions WRAP (2026-07-31: "The title should wrap and Ok to show in more
+   than one line for longer titles"). They were `white-space: nowrap` with an
+   ellipsis, which truncated most of the shelf — and unlike the toc rows there
+   is no leader here that needs the space, so the only thing truncation bought
+   was a uniform row height nobody asked for.
+
+   The strip is `align-items: start`, so a two-line caption grows its own item
+   without dragging the thumbnails out of line. */
 .strip__caption {
   display: block;
   margin-top: var(--space-3xs);
 
   font-size: var(--step--2);
   line-height: var(--scale-small);
-
-  /* one line, ellipsised — a long book title must not set the row height */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-wrap: pretty;
 }
 
 .strip__link:hover .strip__img,
@@ -586,4 +642,69 @@ home-support li {
    every other page to fix a problem only this one has. */
 body:has(home-container) {
   overflow-x: clip;
+}
+
+
+/* ---- Strip arrows ---------------------------------------------
+   Brajeshwar 2026-07-31: "a very subtle arrow '‹›' but with a big hit area to
+   make it easy to hit."
+
+   So: a 15px glyph inside a 56px target. WCAG 2.5.8 asks for 24px minimum and
+   this is more than double it, because the thing being aimed at is a chevron
+   the size of a comma. The button is transparent at rest and only earns a
+   backdrop on hover — subtle, but never invisible to a pointer.
+
+   `hidden` in the markup, removed by strip-nav.js only once it has measured a
+   real overflow. So they never appear on a shelf that fits, and never appear
+   at all with JS off — where the strip is still a native scroller, so nothing
+   is lost. See _docs/javascript.md.
+
+   Absolutely positioned against .strip__viewport, which does NOT scroll, so
+   they hold their place at the bleed edges while the content moves under
+   them. */
+.strip__nav {
+  position: absolute;
+  top: 0;
+  bottom: var(--space-l);
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3.5rem;                 /* 56px of hit area for a 15px glyph */
+  padding: 0;
+  border: 0 none;
+  border-radius: var(--border-radius);
+
+  font-size: var(--step-2);
+  line-height: 1;
+  color: var(--text-color-low);
+
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+
+  opacity: var(--opacity-low);
+  transition: opacity 120ms ease-out, background-color 120ms ease-out;
+}
+
+.strip__nav--prev { inset-inline-start: 0; }
+.strip__nav--next { inset-inline-end: 0; }
+
+.strip__nav:hover,
+.strip__nav:focus-visible {
+  opacity: 1;
+  color: var(--text-color);
+  background-color: var(--bg-color-low);
+}
+
+.strip__nav[hidden] { display: none; }
+
+/* At the end of the run there is nothing to scroll to; the script sets this
+   rather than removing the button, so the row does not reflow mid-scroll. */
+.strip__nav:disabled {
+  opacity: 0;
+  pointer-events: none;
 }

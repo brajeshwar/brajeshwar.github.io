@@ -694,6 +694,24 @@ the ratio lives on the image, a grown item is also *taller* — three sizes on t
 The honest cost of fixed width is that six books stop ~66px short of a 1512px viewport; that
 resolves itself once the shelf overflows. Raise `--strip-item` if it needs forcing sooner.
 
+**The strips scroll, with arrow buttons** (2026-07-31). `overflow-x: auto`, not `hidden` —
+the clipped version quietly made half a twelve-item shelf unreachable. Two `<button>`s per
+strip, a 15px chevron in a 56px hit area, shipped with `hidden` and revealed by
+`strip-nav.js` only once it measures a real overflow. With JS off they never appear and
+nothing is lost: the row is a native scroller for trackpad, touch and keyboard.
+
+⚠️ **`justify-content: safe center`, and the `safe` is load-bearing.** Plain `center` centres
+the *overflow* too, so half a long shelf lands left of the scroll origin where `scrollLeft`
+cannot reach it — measured with twelve books at 1512, the first thumbnail sat at x = −451
+with the row already fully scrolled left. `safe` falls back to `start` when content
+overflows: short shelves centre, long ones start at the bleed edge and scroll.
+
+⚠️ **Two reduced-motion traps, both measured on Brajeshwar's machine** (which has the OS
+setting on). `scrollBy({behavior:'smooth'})` does not merely degrade under reduced motion —
+it does *nothing*; the script picks `'auto'` explicitly instead. And a programmatic scroll
+does not reliably fire a `scroll` event, so the click handler re-syncs the button state
+directly rather than waiting for one.
+
 ⚠️ **Photos is placeholder data.** `_data/photos.yaml` exists but every `img` points into
 `/static/books/` — there is no `/static/photos/` yet. An `img` beginning with `/` is used
 verbatim by the include; bare filenames resolve under `/static/<kind>/`. Replace the yaml
