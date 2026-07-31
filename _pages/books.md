@@ -5,6 +5,40 @@ title: Books
 
 # Books
 
+<div class="album" markdown="0">
+{%- comment -%}
+  Added 2026-08-01. The prose below this block is Brajeshwar's and is untouched
+  — the grids are inserted around it, not in place of it.
+
+  `<div class="album">` rather than `layout: album`: the album LAYOUT drops the
+  reading measure for the whole page, which would set this page's several
+  hundred words of prose at the full band. The album CLASS is all the grids
+  actually need — album.scss targets `.album .item__cards`, a descendant
+  selector — so the cards get their sizing and figure resets while every
+  paragraph below keeps `.page`'s measure. `markdown="0"` stops kramdown
+  looking for Markdown inside, which it would otherwise do to the Liquid.
+
+  ⚠️ ul.item__cards is exempted from the measure by page.scss (the
+  `:not(.item__cards)` in its prose-measure rule), which is exactly why a grid
+  can sit inside a `.page` and still span the band.
+{%- endcomment -%}
+{% assign favourites = site.data.books | where: "highlight", true %}
+{% include card-grid.html
+   items   = favourites
+   dir     = "books"
+   ratio   = "3x4"
+   heading = "All Time Favorites"
+   id      = "favorites"
+   sub     = "Here are some of my all-time favorite books I have read and re-read and would highly recommend." %}
+
+{% include card-grid.html
+   items   = site.data.books
+   dir     = "books"
+   ratio   = "3x4"
+   heading = "Every Book"
+   id      = "all" %}
+</div>
+
 Since 2018, I have started listing the interesting ones I read each year:
 <a href="/2018/books/">2018</a>,
 <a href="/2019/books/">2019</a>,

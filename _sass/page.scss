@@ -66,3 +66,32 @@
   color: var(--text-color-lower);
   font-family: var(--font-family-sans-serif);
 }
+
+/* ---- A card grid on a footnoted page --------------------------
+   `/books/` has footnotes, so page.html gives its <article> the
+   `container-ideal` class — sidenotes are positioned just past the right edge
+   of the measure column and need that column to exist as a box. The side
+   effect is that everything inside is 665px, including a gallery, and
+   page.html's own comment predicts this exact case:
+
+     "such a page is measure-width throughout, so a grid or gallery on it will
+      not span the band … A page that needs both wants a .container-ideal
+      wrapper around just the footnoted part instead"
+
+   Rather than invert the page for it, the grid breaks back out. `100cqi` is
+   `main`'s inline size (main declares `container: main / inline-size`), i.e.
+   the band — the same unit the wide images and video embeds use. The article
+   is left-aligned in the band, so a child at the band's width starts on the
+   same edge and simply runs to the far side.
+
+   ⚠️ Anchored to `.album`, not to `.item__cards`. The grid may want the band;
+   an arbitrary `<ul>` in prose must not. `.album` is the deliberate opt-in a
+   page writes around a gallery, and it is what album.scss already keys its
+   card sizing off, so one class means one decision.
+
+   Measured 2026-08-01: /books/ grids 665px → 1024px, prose unchanged at the
+   measure, sidenotes still placed. */
+.page > .album {
+  width: 100cqi;
+  max-width: 100cqi;
+}

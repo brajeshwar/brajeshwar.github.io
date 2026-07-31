@@ -656,8 +656,19 @@ home-support li {
    why it lines up with the thumbnail's edges instead of hugging the words.
    The padding is what makes it read as a block rather than a smear. */
 .strip__link {
-  padding: var(--space-3xs);
-  margin: calc(-1 * var(--space-3xs));
+  /* Asymmetric padding, deliberately (2026-08-01: "increase the bottom padding
+     to give good spacing"). The caption sits at the bottom, so that edge is the
+     only one where the highlight has TEXT to clear rather than an image edge —
+     an even inset looks tight there and roomy everywhere else. Top and sides
+     stay at --space-3xs so the background still reads as the thumbnail's own
+     block rather than a loose card around it.
+
+     `border-radius` is one value for all four corners, so the top rounds
+     exactly as the bottom does. The image carries the same radius, which is
+     what makes the two curves sit concentric instead of one squaring off
+     inside the other. */
+  padding: var(--space-3xs) var(--space-3xs) var(--space-2xs);
+  margin: calc(-1 * var(--space-3xs)) calc(-1 * var(--space-3xs)) 0;
   border-radius: var(--border-radius);
   transition: background-color 120ms ease-out;
 }
@@ -665,6 +676,26 @@ home-support li {
 .strip__link:hover,
 .strip__link:focus-visible {
   background-color: var(--bg-color-low);
+}
+
+/* ⚠️ NO background on the photo strip. Brajeshwar 2026-08-01: "No need for
+   background on hover. Make no sense when we have no text/title. The hover
+   colour is enough."
+
+   Exactly right, and it is not merely redundant there — it is worse than
+   nothing. Photos carry no caption, so the background has no text to sit
+   behind; all it can do is draw a rectangle a few pixels larger than the image
+   and put a faint halo around it. On Books the same rule has a caption to
+   highlight, which is the whole reason it earns its place there. The grayscale
+   lifting off the image is the hover state here. */
+.strip--photos .strip__link {
+  padding: 0;
+  margin: 0;
+}
+
+.strip--photos .strip__link:hover,
+.strip--photos .strip__link:focus-visible {
+  background-color: transparent;
 }
 
 .strip__link:hover .strip__img,

@@ -1,0 +1,62 @@
+{%- comment -%}
+  A thumbnail grid, as used by /film/ and /devices/ — now also /books/ and
+  /photos/ (2026-08-01: "For /books/ replicate /film/ but with the books.yml").
+
+  Parameters:
+    items     the data array
+    dir       folder under /static/ holding the images
+    heading   optional <h2> text
+    id        optional id for that heading, so it can be linked
+    sub       optional subtitle paragraph under the heading
+    ratio     "3x4" (books) or "4x3" (photos) — sets the intrinsic size hint
+
+  ⚠️ This uses `ul.item__cards`, the SHARED album grid, on purpose. The home
+  page's scrolling strips deliberately do not (they want one clipped row where
+  this wants a wrapping grid) — but a full listing page wants exactly what
+  /film/ and /devices/ already have, so it should reuse it rather than grow a
+  third card system. album.scss supplies the sizing via a `.album` ancestor,
+  which the calling page provides with a wrapper div.
+
+  IMAGE PATHS follow the same rule as the home strips: a bare filename resolves
+  under /static/<dir>/, an `img` beginning with "/" is used verbatim. That is
+  what lets the placeholder photos borrow the book covers while /static/photos/
+  does not exist yet.
+
+  `width`/`height` are intrinsic hints so the grid reserves each cell before
+  the file lands and the page does not reflow as it loads. They are a ratio,
+  not a rendered size — CSS sizes the image.
+{%- endcomment -%}
+{% if include.items and include.items.size > 0 %}
+  {%- if include.heading %}
+  <h2{% if include.id %} id="{{ include.id }}"{% endif %}>{{ include.heading }}</h2>
+  {%- endif %}
+  {%- if include.sub %}
+  <p class="container-ideal card-grid__sub">{{ include.sub }}</p>
+  {%- endif %}
+  {%- if include.ratio == "4x3" -%}
+    {%- assign iw = 300 -%}{%- assign ih = 225 -%}
+  {%- else -%}
+    {%- assign iw = 225 -%}{%- assign ih = 300 -%}
+  {%- endif -%}
+  <ul class="item__cards">
+    {%- for item in include.items %}
+    {%- assign first = item.img | slice: 0 -%}
+    {%- if first == "/" -%}
+      {%- assign src = item.img -%}
+    {%- else -%}
+      {%- assign src = "/static/" | append: include.dir | append: "/" | append: item.img -%}
+    {%- endif -%}
+    <li>
+      <a href="{{ item.url | relative_url }}">
+        <figure>
+          <img width="{{ iw }}" height="{{ ih }}"
+               src="{{ src | relative_url }}"
+               alt="{{ item.alt | default: item.title }}"
+               loading="lazy" decoding="async">
+          <figcaption>{{ item.title }}{% if item.author %} <span>{{ item.author }}</span>{% endif %}</figcaption>
+        </figure>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+{% endif %}

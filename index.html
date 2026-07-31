@@ -34,11 +34,29 @@ title: Brajeshwar Oinam
   </home-container>
 
   {%- comment -%}
+    ============================================================
+    HOW MANY THUMBNAILS EACH STRIP SHOWS — change the two numbers.
+    ============================================================
+    The home page shows the LAST N of each shelf; the full lists live at
+    /books/ and /photos/ (2026-08-01: "the books list on the home page should
+    be the last xx number from the above /books/").
+
+    "Last" means the end of the data file, i.e. most recently added — so a new
+    book appears on the home page by being appended to _data/books.yaml and
+    nothing else. Liquid has no `last: n`, and negative offsets on `slice` are
+    not worth relying on, so it is reverse → take → reverse, which restores the
+    original order rather than showing the shelf backwards.
+  {%- endcomment -%}
+  {%- assign home_books_count  = 8 -%}
+  {%- assign home_photos_count = 8 -%}
+
+  {%- assign books_tail = site.data.books | reverse | slice: 0, home_books_count | reverse -%}
+  {%- comment -%}
     The Books intro paragraph was removed 2026-07-31 on request. The `intro`
     parameter is still supported by the include — nothing else passes one today.
   {%- endcomment -%}
   {% include home-strip.html
-     items    = site.data.books
+     items    = books_tail
      title    = "Books"
      href     = "/books/"
      kind     = "books"
@@ -55,8 +73,9 @@ title: Brajeshwar Oinam
     turned the row into a wall of repeated text while the placeholders are in
     place. Removed 2026-07-31 on request.
   {%- endcomment -%}
+  {%- assign photos_tail = site.data.photos | reverse | slice: 0, home_photos_count | reverse -%}
   {% include home-strip.html
-     items = site.data.photos
+     items = photos_tail
      title = "Photos"
      href  = "/photos/"
      kind  = "photos" %}
