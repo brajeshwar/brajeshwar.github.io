@@ -763,6 +763,12 @@ attempt used a `.visually-hidden` span, which **this site does not have** — ba
 was deleted after the 2026-07-19 audit flagged it unreferenced, so it would have printed the
 word "video" under the thumbnail as visible text.
 
+⚠️ **`/books/` lost its prose on 2026-08-01** and with it its footnotes, so it no longer gets
+`container-ideal` from `page.html` — the article is plain `.page` at the full band. The
+`.page > .album` rule is a no-op there now and is kept for the next footnoted page with a
+gallery. The prose is verbatim in `_backup/books-BCK.md`, an underscore directory Jekyll never
+copies, so it cannot publish itself at `/books-BCK/`.
+
 ⚠️ **Album is placeholder data.** `_data/album.yaml` exists but every `img` points into
 `/static/books/` — there is no `/static/album/` yet. An `img` beginning with `/` is used
 verbatim by the include; bare filenames resolve under `/static/<kind>/`. Replace the yaml

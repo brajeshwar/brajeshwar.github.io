@@ -68,7 +68,14 @@
 }
 
 /* ---- A card grid on a footnoted page --------------------------
-   `/books/` has footnotes, so page.html gives its <article> the
+   ⚠️ HISTORICAL AS OF 2026-08-01: /books/ no longer has footnotes — its prose
+   moved to _backup/books-BCK.md — so that page's article is plain `.page` at
+   the full band now and this rule is a no-op there. It is kept because the
+   mechanism is real and the next footnoted page with a gallery will need it,
+   and because putting the prose back would silently restore the 665px cage.
+   Verified after the removal: article `.page`, 1024px, grids 1024px.
+
+   `/books/` had footnotes, so page.html gave its <article> the
    `container-ideal` class — sidenotes are positioned just past the right edge
    of the measure column and need that column to exist as a box. The side
    effect is that everything inside is 665px, including a gallery, and
