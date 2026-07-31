@@ -1,0 +1,49 @@
+# PLACEHOLDER DATA — created 2026-07-31 at Brajeshwar's request, so the Photos
+# strip on the home page has something to render:
+#
+#   "What happened to the new 'Photos' section. Copy 'Books' but the thumbnails
+#    are 4:3. If there are nothing, copy from the books or or something for the
+#    thumbnail. I will populate it later."
+#
+# ⚠️ EVERY IMAGE HERE IS BORROWED FROM /static/books/. There is no
+# /static/photos/ directory yet, and a broken <img> would read as a bug rather
+# than as a placeholder. The strip renders them at 4:3, so these 3:4 book
+# covers are centre-cropped by `object-fit: cover` — they will look like
+# cropped book covers, because that is exactly what they are.
+#
+# TO REPLACE: drop real files into /static/photos/, then rewrite this file with
+# the same four fields and BARE filenames (no leading "/"), which resolve under
+# /static/photos/ automatically. The leading slash below is the escape hatch
+# that lets a placeholder point somewhere else; real entries do not need it.
+#
+# Same shape as _data/books.yaml: title, url, img, alt.
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/1984.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/the-lord-of-the-rings.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/leonardo-da-vinci.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/the-design-of-everyday-things.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/genghis-khan.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf
+
+- title: Placeholder — replace with a real photo
+  url: /photos/
+  img: /static/books/mahatma-gandhi.webp
+  alt: Placeholder thumbnail, borrowed from the books shelf

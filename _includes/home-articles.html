@@ -1,36 +1,57 @@
 {%- comment -%}
-  Home — the 21 most recent articles, as a table of contents.
+  ============================================================
+  HOW MANY ARTICLES THIS PAGE LISTS — change the number below.
+  ============================================================
+  This is the knob, and it is deliberately the first thing in the file
+  (Brajeshwar 2026-07-31: "The number of last titles to show here should be a
+  value I change in the code myself"). Nothing else needs touching: the year
+  separators regroup themselves, because they are driven by the posts that
+  actually come out of the loop rather than by a hard-coded list of years.
+{%- endcomment -%}
+{%- assign article_count = 21 -%}
 
-  Title left, date hard right, dotted leader filling the gap between them
-  (Brajeshwar 2026-07-31: "list the last 21 articles like a table of content.
-  Title and then the date on the right").
 
-  The leader is an EMPTY <span>, not dot characters. Typed dots would be read
-  aloud by a screen reader, would not stretch to fill, and would break at
-  arbitrary points when the title wraps. A flex child with a dotted bottom
-  border stretches to whatever space is left on the last line and is invisible
-  to assistive tech. See .toc in home.scss for the wrapping behaviour.
+{%- comment -%}
+  Home — the most recent articles, as a table of contents.
 
-  The whole row is one <a>: a title-only link leaves the date and the leader
-  as dead space in a list whose rows are ~40 characters of target.
+  Title left, date hard right, dotted leader between. The whole row is one
+  <a>: a title-only link leaves the date and the leader as dead space in a row
+  that is otherwise a 40-character target.
+
+  YEAR SEPARATORS. `date: '%Y'` on each post, compared with the previous one,
+  emits a right-aligned year marker whenever the year changes — so the marker
+  sits directly above the first date of its group, which is the only place it
+  reads as a label for that column (Brajeshwar: "by flushing on the right side,
+  let's separate by years just above the dates"). Dates then drop the year and
+  become "JUL 07", since the group already says 2026.
+
+  The marker is a real <li> inside the same <ul> rather than a heading between
+  two lists: one list is one list to a screen reader, and splitting it per year
+  would announce "list of 4 items" seven times for what is one chronological
+  run.
 {%- endcomment -%}
 <home-toc>
-  <h2 class="toc__heading">
-    Articles <a href="/archives/">(view all)</a>
-  </h2>
+  <h2 class="toc__heading">Articles</h2>
 
   <p class="toc__intro">
     I’ve been writing since 2001, about technology in general and design,
-    productivity and startups in particular.
+    productivity, and startups in particular.
+    <a href="{{ '/archives/' | relative_url }}">View all articles</a>.
   </p>
 
   <ul class="toc">
-    {%- for post in site.posts limit: 21 %}
+    {%- assign shown_year = "" -%}
+    {%- for post in site.posts limit: article_count %}
+    {%- assign post_year = post.date | date: '%Y' -%}
+    {%- if post_year != shown_year %}
+    <li class="toc__year"><span>{{ post_year }}</span></li>
+    {%- assign shown_year = post_year -%}
+    {%- endif %}
     <li class="toc__row">
       <a class="toc__link" href="{{ post.url | relative_url }}">
         <span class="toc__title">{{ post.title }}</span>
         <span class="toc__leader" aria-hidden="true"></span>
-        <time class="toc__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+        <time class="toc__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' | upcase }}</time>
       </a>
     </li>
     {%- endfor %}

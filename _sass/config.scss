@@ -162,12 +162,19 @@
 
                                       Reading width is separate and unaffected: articles cap at
                                       --body-width-ideal (the measure), not at this. */
-  /* The ONE width allowed past the band, and only for <photo-cover> — the
-     optional front-matter hero. Removed earlier on 2026-07-27 when everything
-     was brought inside the band, then restored the same day: the cover is a
-     deliberate full-bleed flourish, not content, and Brajeshwar wants it back
-     ("spans with width of the browser viewport or a max of 1600px").
-     Nothing else may use this. */
+  /* The width allowed past the band. Removed earlier on 2026-07-27 when
+     everything was brought inside the band, then restored the same day: the
+     cover is a deliberate full-bleed flourish, not content, and Brajeshwar
+     wanted it back ("spans with width of the browser viewport or a max of
+     1600px").
+
+     Three users now, and the list is closed — <photo-cover>, and the home
+     page's Books and Photos strips, added 2026-07-31 ("Thumbnail to extend the
+     browser viewport breaking out of the body with. Of course constrained to
+     our max CSS variable. I think our current is 1600px."). This comment said
+     "Nothing else may use this" until then; it is a short list of deliberate
+     flourishes, not an open door. Prose and page furniture still stop at
+     --body-width-max. */
   --body-width-full       : 1600px;
 
 

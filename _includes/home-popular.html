@@ -8,11 +8,17 @@
   The list is however long the data file is; add entries to the yaml and they
   appear.
 
-  Dates come from the yaml's `time:` field rather than a post lookup, because
-  an entry may point anywhere. No <time datetime> attribute for that reason:
-  the strings are already display-formatted and a machine-readable value would
-  have to be parsed out of them, which would be wrong the first time an entry
-  points at something that is not a dated post.
+  ⚠️ NO YEAR SEPARATORS HERE, and the dates keep their year — "JUL 07, 2026",
+  not the articles list's "JUL 07". The separators up there work because that
+  list is one unbroken run, newest first, so a year marker labels a real group.
+  This list is ranked and handpicked, in no date order at all, so grouping it
+  by year would invent a structure the content does not have and the year has
+  to travel with each row instead.
+
+  `upcase` rather than a CSS text-transform: the date is data here, not a
+  heading, and the string comes straight from the yaml's `time:` field. No
+  <time datetime> for the same reason — those strings are display-formatted and
+  an entry may point at something that is not a dated post at all.
 {%- endcomment -%}
 {% if site.data.posts-popular %}
 <home-toc>
@@ -28,7 +34,7 @@
       <a class="toc__link" href="{{ item.url | relative_url }}">
         <span class="toc__title">{{ item.title }}</span>
         <span class="toc__leader" aria-hidden="true"></span>
-        <span class="toc__date">{{ item.time }}</span>
+        <span class="toc__date">{{ item.time | upcase }}</span>
       </a>
     </li>
     {%- endfor %}

@@ -33,7 +33,12 @@
 home-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 18rem);
-  gap: var(--space-l) var(--space-m);
+  /* Column gap widened --space-m → --space-xl on 2026-07-31 ("Increase the
+     gutter between the main content and the sidebar"). It is doing real work
+     now that the toc rows carry a hover background that runs to the edge of
+     the reading column: at --space-m the highlight came within ~30px of the
+     sidebar text and the two columns read as one. Row gap is unchanged. */
+  gap: var(--space-l) var(--space-xl);
   align-items: start;
 
   grid-template-areas:
@@ -134,15 +139,35 @@ home-container home-intro p {
   padding: 0;
 }
 
+/* The row highlight (2026-07-31). Brajeshwar: "Remove the text under (or
+   border-bottom). Instead do a back-ground change for the entire line… we
+   might need to introduce a subtle, perhaps the smaller padding."
+
+   The negative inline margin is the point of the whole rule. A background
+   needs padding or the text sits flush against its own highlight — but plain
+   padding would push the titles inward, and this site's every edge is aligned
+   to one line (header rule, footer rule, logo, prose). Pulling the margin back
+   by exactly the padding leaves the TEXT where it was and lets only the
+   highlight extend past it. Change one of the two numbers and the column
+   silently stops lining up with everything above it. */
 .toc__link,
 .toc__link:visited {
   display: flex;
   align-items: flex-end;
   gap: var(--space-2xs);
 
-  padding: var(--space-3xs) 0;
+  padding: var(--space-3xs) var(--space-2xs);
+  margin-inline: calc(-1 * var(--space-2xs));
+  border-radius: var(--border-radius);
 
   color: var(--text-color);
+  text-decoration: none;
+}
+
+.toc__link:hover,
+.toc__link:focus-visible,
+.toc__link:active {
+  background-color: var(--bg-color-low);
   text-decoration: none;
 }
 
@@ -182,29 +207,56 @@ home-container home-intro p {
   background-repeat: repeat-x;
 }
 
+/* Dates: smaller than the titles, already uppercase from the template, and a
+   step lighter so the titles stay the thing you read (Brajeshwar 2026-07-31:
+   "Make the 'JUL 07' smaller but capitalized, and not as dark as the titles").
+
+   Uppercasing happens in Liquid via `upcase`, not here via text-transform:
+   Popular's dates come out of a yaml as free strings, so doing it in one place
+   keeps both lists identical whatever the source. */
 .toc__date {
   flex: none;
   white-space: nowrap;
 
-  font-size: var(--step--1);
+  font-size: var(--step--2);
+  font-family: var(--font-family-monospace);
+  letter-spacing: 0.04em;
   font-variant-numeric: tabular-nums;   /* dates stack in a straight edge */
-  color: var(--text-color-low);
+  color: var(--text-color-lower);
 }
 
-.toc__link:hover .toc__title,
-.toc__link:active .toc__title {
-  text-decoration: underline;
-  text-decoration-color: var(--text-color-lower);
-  text-underline-offset: 0.3rem;
-}
-
+/* ⚠️ No underline on hover any more — the row background IS the hover state
+   (2026-07-31). An underline plus a highlight plus a leader is three signals
+   for one affordance, and the underline was the one that fought the leader
+   dots sitting a few pixels above it. */
 .toc__link:hover .toc__leader,
+.toc__link:focus-visible .toc__leader,
 .toc__link:active .toc__leader {
   background-image: radial-gradient(
     circle closest-side,
     var(--text-color-low) 99%,
     transparent 100%
   );
+}
+
+/* Year separator — a right-aligned marker sitting directly above the first
+   date of its group, so it labels the date column rather than the titles.
+   Articles only; Popular is not in date order and carries its year per row. */
+.toc__year {
+  margin: var(--space-s) 0 var(--space-3xs);
+  padding: 0;
+
+  text-align: right;
+
+  font-size: var(--step--2);
+  font-family: var(--font-family-monospace);
+  letter-spacing: 0.12em;
+  color: var(--text-color-lower);
+}
+
+/* The first marker in the list has the heading's own spacing above it. */
+.toc__year:first-child {
+  margin-top: 0;
 }
 
 /* ---- Sidebar --------------------------------------------------
@@ -280,23 +332,26 @@ home-support li {
    Brajeshwar 2026-07-31: "thumbnails that spans the width of the browser
    viewport. The title is within our body width."
 
-   ⚠️ THIS REVERSES A RECORDED DECISION. `--body-width-full` was deleted on
-   2026-07-27 because nothing was to exceed the band. These two strips are the
-   stated exception; everything else still stops at it.
+   ⚠️ THIS WIDENS AN EXISTING EXCEPTION rather than inventing one.
+   `--body-width-full` (1600px) was never deleted — it was removed and restored
+   the same day, 2026-07-27, for `<photo-cover>`, whose comment in config.scss
+   said "Nothing else may use this". These two strips are now the second and
+   third users, at Brajeshwar's instruction; that comment is updated to match.
+   Everything else still stops at the band.
 
    THE BLEED. `main` is the band (max 1024px, centred). `margin-inline:
-   calc(50% - 50vw)` pulls each edge out to the viewport and `width: 100vw`
-   fills it. The strip then starts again at the band's left edge via a matching
-   `padding-inline-start`, so the first thumbnail lines up with the heading
-   above it — and with the header rule, the footer rule and the logo, the one
-   alignment the whole site is built on. It runs off the right edge, which is
-   the point.
+   calc(50% - var(--strip-bleed) / 2)` pulls each edge outward and the strip
+   fills the result. It then starts again at the band's left edge via a
+   matching `padding-inline-start`, so the first thumbnail lines up with the
+   heading above it — and with the header rule, the footer rule and the logo,
+   the one alignment the whole site is built on. It runs off the right edge,
+   which is the point.
 
-   ⚠️ `100vw` INCLUDES THE SCROLLBAR; the band does not. So the strip is a
-   scrollbar wider than the page can show, and on its own that gives the whole
-   document a horizontal scrollbar. `overflow-x: clip` on the body absorbs it —
-   see the `body:has(home-container)` rule at the foot of this file for why
-   `clip` and not `hidden`. Verify with
+   ⚠️ `100vw` INCLUDES THE SCROLLBAR; the band does not. Below 1600px the bleed
+   resolves to `100vw`, so the strip is a scrollbar wider than the page can
+   show, and on its own that gives the whole document a horizontal scrollbar.
+   `overflow-x: clip` on the body absorbs it — see the `body:has(home-container)`
+   rule at the foot of this file for why `clip` and not `hidden`. Verify with
    `document.documentElement.scrollWidth > window.innerWidth`; that boolean is
    the only way to see this, and it is invisible by eye until the page starts
    rocking sideways.
@@ -308,6 +363,17 @@ home-support li {
   margin-top: var(--space-xl);
 }
 
+/* The heading's rule IS the link's underline (2026-07-31). Brajeshwar: "Bring
+   the hyperlink underline or the border-bottom to be in the same line as the
+   border-bottom beneath. Not underlined by default. Hover, make the whole
+   border-bottom darkened."
+
+   So the <a> carries no decoration of its own and the section's border-bottom
+   does the work — one line instead of two a few pixels apart. Hover darkens
+   the whole rule, which is why the hover sits on the HEADING and not on the
+   link: the rule belongs to the heading, and `.strip__heading a:hover` could
+   only ever restyle the text. `:has()` keeps it to a real pointer on the link
+   rather than anywhere in the heading box. */
 .strip__heading {
   margin: 0 0 var(--space-2xs);
   padding: 0 0 var(--space-3xs);
@@ -317,6 +383,20 @@ home-support li {
   text-transform: lowercase;
 
   border-bottom: var(--border-size) var(--border-style) var(--border-color);
+  transition: border-bottom-color 120ms ease-out;
+}
+
+.strip__heading a,
+.strip__heading a:visited,
+.strip__heading a:hover,
+.strip__heading a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.strip__heading:has(a:hover),
+.strip__heading:has(a:focus-visible) {
+  border-bottom-color: var(--text-color);
 }
 
 .strip__intro {
@@ -326,7 +406,19 @@ home-support li {
 }
 
 .strip {
-  --strip-item: 9.5rem;
+  /* 12rem = 192px. Sized so the six books currently in the data reach the
+     right edge of a laptop viewport rather than stopping short of it — a
+     strip that ends in whitespace does not read as a strip that continues,
+     and the whole point of the bleed is that it runs off the page. With a
+     seventh item it clips instead, which is the intended state. Raise this if
+     the shelves stay short; the mobile block below overrides it. */
+  --strip-item: 12rem;
+
+  /* The bleed width: the viewport, but never past --body-width-full (1600px).
+     Brajeshwar 2026-07-31: "Thumbnail to extend the browser viewport breaking
+     out of the body with. Of course constrained to our max CSS variable. I
+     think our current is 1600px." */
+  --strip-bleed: min(100vw, var(--body-width-full));
 
   list-style: none;
   margin: 0;
@@ -336,16 +428,41 @@ home-support li {
   flex-wrap: nowrap;
   gap: var(--space-2xs);
 
-  width: 100vw;
-  max-width: 100vw;
-  margin-inline: calc(50% - 50vw);
-  /* start the row on the band's left edge, then bleed off the right */
-  padding-inline-start: calc(50vw - 50%);
+  width: var(--strip-bleed);
+  max-width: var(--strip-bleed);
+  margin-inline: calc(50% - var(--strip-bleed) / 2);
+  /* start the row on the band's left edge, then bleed off the right.
+     `50%` is half of main (the 1024px band); half the bleed minus that is
+     exactly the overhang on one side, so the first thumbnail lands back on
+     the band edge at any viewport — 244px at 1512, 288px at 2000.
+
+     `max(0px, …)` because that subtraction goes NEGATIVE if --body-width-full
+     is ever set below --body-width-max: the strip would then be narrower than
+     the band it is supposed to escape, and a negative pad would drag the first
+     thumbnail out of its own container. Cannot happen at 1600 against a 1024
+     band, but the guard costs nothing and the failure would be baffling —
+     measured 2026-07-31 by forcing the token to 900px, where the first
+     thumbnail did leave the band edge. */
+  padding-inline-start: max(0px, calc(var(--strip-bleed) / 2 - 50%));
   padding-inline-end: 0;
 
   overflow: hidden;
 }
 
+/* ⚠️ FIXED WIDTH, and do not "improve" this to `flex: 1 0 …` so the row fills
+   the viewport when the shelf is short. That was tried on 2026-07-31 and is
+   visibly broken: with `max-width` capping some items and not others, flex
+   distributes the free space unevenly, so the last two thumbnails grew to
+   288px while the first four stayed at 192 — and because the ratio lives on
+   the image, growing an item makes it TALLER too, so the row ends up with
+   thumbnails of three different sizes on two different baselines. Reverted
+   within the minute.
+
+   The cost of `0 0` is honest and small: six books at 12rem stop about 66px
+   short of a 1512px viewport, so the bleed reads as a row that ends rather
+   than one that continues. That resolves itself the moment the shelf is long
+   enough to overflow, which is the state this is designed for. If it needs
+   forcing sooner, raise --strip-item — do not make the items elastic. */
 .strip__item {
   flex: 0 0 var(--strip-item);
   width: var(--strip-item);

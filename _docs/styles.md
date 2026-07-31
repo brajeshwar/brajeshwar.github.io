@@ -641,9 +641,12 @@ content, so one long post title would otherwise push the column past its share a
 the sidebar. It collapses to one column at `$medium`, not `$small`: with an 18rem sidebar the
 reading column is the narrower of the two below ~800px.
 
-**Table-of-contents lists.** Articles (21 most recent) and Popular & Handpicked, both title
-left / date hard right with a dotted leader between. Includes: `home-articles.html`,
-`home-popular.html`.
+**Table-of-contents lists.** Articles and Popular & Handpicked, both title left / date hard
+right with a dotted leader between. Includes: `home-articles.html`, `home-popular.html`.
+- **How many articles show is a single `{% raw %}{% assign article_count = 21 %}{% endraw %}`
+  at the top of `home-articles.html`** — deliberately the first thing in the file, because
+  it is the knob Brajeshwar changes. The year separators regroup themselves from whatever
+  the loop returns.
 - `align-items: flex-end` on the row, **not `baseline`**. Baseline looks identical on
   one-line rows and wrong on every wrapped one — it pins to the first line, stranding the
   date at the top of a two-line row. `flex-end` drops the leader and date onto the title's
@@ -654,13 +657,33 @@ left / date hard right with a dotted leader between. Includes: `home-articles.ht
   said `dotted` while the screen showed a solid rule. 2px dots on a 7px pitch instead.
 - The leader is an empty `<span>`, never typed dots — dots would be read aloud, would not
   stretch, and would break at arbitrary points.
+- **Hover is a row background, not an underline** (2026-07-31). The `margin-inline` is the
+  negative of the horizontal padding, so the highlight gets breathing room while the *text*
+  stays flush with the column edge every other element on the site aligns to. Change one of
+  the two numbers and the column silently stops lining up.
+- **Year separators, Articles only.** A right-aligned marker whenever the year changes, so it
+  labels the date column it sits above; dates then drop the year (`JUL 07`). Popular is
+  ranked, not chronological, so it has no separators and keeps full dates (`JUL 07, 2026`).
+  Uppercasing is `upcase` in Liquid, not `text-transform` — Popular's dates are free strings
+  from a yaml, and doing it in one place keeps both lists identical whatever the source.
 
-**Two full-bleed strips** (Books, Photos) — one shared include, `home-strip.html`, at two
+**Two breakout strips** (Books, Photos) — one shared include, `home-strip.html`, at two
 ratios: books 3:4, photos 4:3, set with `aspect-ratio` on the `<img>` so a slow file still
-reserves its box and the row never reflows. See the *Full-bleed is back* entry in
-[`todo.md`](todo.md) for the bleed mechanism and the `overflow-x: clip` counterweight.
-⚠️ **Photos renders nothing** until `_data/photos.yaml` exists; the include is gated on its
-items exactly as Books is.
+reserves its box and the row never reflows. Width is `min(100vw, --body-width-full)`, i.e.
+the viewport capped at 1600px. See the *Full-bleed is back* entry in [`todo.md`](todo.md) for
+the mechanism and the `overflow-x: clip` counterweight.
+
+⚠️ **Items are fixed width (`flex: 0 0`) and must stay that way.** Making them elastic so a
+short shelf fills the viewport was tried on 2026-07-31 and is visibly broken: with
+`max-width` capping some and not others, flex distributes free space unevenly, and because
+the ratio lives on the image, a grown item is also *taller* — three sizes on two baselines.
+The honest cost of fixed width is that six books stop ~66px short of a 1512px viewport; that
+resolves itself once the shelf overflows. Raise `--strip-item` if it needs forcing sooner.
+
+⚠️ **Photos is placeholder data.** `_data/photos.yaml` exists but every `img` points into
+`/static/books/` — there is no `/static/photos/` yet. An `img` beginning with `/` is used
+verbatim by the include; bare filenames resolve under `/static/<kind>/`. Replace the yaml
+wholesale when real photos land.
 
 ⚠️ **These strips do not use `ul.item__cards`.** That class is shared with the album pages
 through `album.scss` (`/devices/`, `/film/`, `/music/`, `/wear/`), which want a wrapping grid

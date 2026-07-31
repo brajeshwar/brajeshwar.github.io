@@ -1,7 +1,7 @@
 {%- comment -%}
-  Home — one full-bleed thumbnail strip. Used by Books and Photos, which are
-  the same component at two aspect ratios (Brajeshwar 2026-07-31: "Photos.
-  Same style as Books").
+  Home — one thumbnail strip that breaks out past the band. Used by Books and
+  Photos, which are the same component at two aspect ratios (Brajeshwar
+  2026-07-31: "Photos. Same style as Books").
 
   Parameters:
     items    the data array (site.data.books / site.data.photos)
@@ -10,13 +10,19 @@
     kind     "books" | "photos" — picks the ratio class and the image folder
     intro    optional paragraph, rendered above the strip inside the band
 
-  The heading sits in the band; the strip bleeds to the viewport edge. Both
-  the title and every item are links, as asked.
+  The heading sits in the band; the strip breaks out. Both the title and every
+  item are links, as asked.
+
+  IMAGE PATHS. `img` is normally a bare filename and resolves under
+  /static/<kind>/. An `img` that already starts with "/" is used verbatim
+  instead — which is what lets the placeholder photos borrow the book
+  thumbnails while /static/photos/ does not exist yet. Slice rather than
+  `contains "/"`, because a filename in a subfolder would contain one too.
 
   ⚠️ NOT ul.item__cards. That class is shared with the album pages
   (/devices/, /film/, /music/, /wear/) via album.scss, and reusing it here
-  would have coupled this redesign to four pages that want a wrapping grid,
-  not a clipped single row. New classes, no shared surface.
+  would have coupled this to four pages that want a wrapping grid, not a
+  clipped single row. New classes, no shared surface.
 {%- endcomment -%}
 {% if include.items %}
 <home-strip class="strip-section">
@@ -30,10 +36,16 @@
 
   <ul class="strip strip--{{ include.kind }}">
     {%- for item in include.items %}
+    {%- assign img_first = item.img | slice: 0 -%}
+    {%- if img_first == "/" -%}
+      {%- assign img_src = item.img -%}
+    {%- else -%}
+      {%- assign img_src = "/static/" | append: include.kind | append: "/" | append: item.img -%}
+    {%- endif -%}
     <li class="strip__item">
       <a class="strip__link" href="{{ item.url | relative_url }}">
         <img class="strip__img"
-             src="/static/{{ include.kind }}/{{ item.img }}"
+             src="{{ img_src | relative_url }}"
              alt="{{ item.alt | default: item.title }}"
              loading="lazy" decoding="async">
         <span class="strip__caption">{{ item.title }}</span>
