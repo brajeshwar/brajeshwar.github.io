@@ -56,7 +56,20 @@ home-container home-aside    { grid-area: aside; }
    800px the reading column is narrower than the thing beside it. */
 @media only screen and (max-width: bp.$medium) {
   home-container {
-    grid-template-columns: 1fr;
+    /* ⚠️ `minmax(0, 1fr)`, NEVER a bare `1fr` — the same trap as the two-column
+       rule above, and it broke the whole page for four days.
+
+       `1fr` is shorthand for `minmax(auto, 1fr)`, and that automatic minimum
+       refuses to shrink below the track's max-content. Once the toc titles
+       became `white-space: nowrap` (for the ellipsis), their max-content was
+       the full untruncated headline — so this "single column" computed to
+       679px inside a 346px container and the ENTIRE HOME PAGE scrolled
+       sideways at every width below 768px. Every other page was fine, which is
+       what made it invisible: nothing looked wrong until it was measured.
+
+       Verified 2026-08-01 at 320/360/390/480/600: document scrollWidth now
+       equals the viewport at each. */
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "intro"
       "articles"
@@ -157,7 +170,18 @@ home-container home-intro p {
   gap: var(--space-2xs);
 
   padding: var(--space-3xs) var(--space-2xs);
-  margin-inline: calc(-1 * var(--space-2xs));
+  /* ⚠️ `min()` against the page's own side gutter, not a flat negative margin.
+     A flat -10px is fine while `main` sits inside a 1512px viewport with 244px
+     to spare on each side; at 320px the band is 96% of the viewport, the
+     gutter is 6.4px, and the highlight overflowed the page by 3.6px on every
+     one of 28 rows. Measured 2026-08-01: the document scrolled sideways by
+     2.5px at 320 and 360.
+
+     `(100vw - 100%) / 2` IS that gutter — 100% resolves against this row's
+     containing block, which is the reading column. So the highlight bleeds the
+     full --space-2xs when there is room and exactly the gutter when there is
+     not, keeping the text on the band edge at every width with no breakpoint. */
+  margin-inline: calc(-1 * min(var(--space-2xs), (100vw - 100%) / 2));
   border-radius: var(--border-radius);
 
   color: var(--text-color);
@@ -596,6 +620,35 @@ home-support li {
   text-wrap: pretty;
 }
 
+/* HOVER IS A BACKGROUND, NOT AN UNDERLINE (2026-08-01). Brajeshwar: "the
+   hover underline on text isn't working … a background color instead. So, it
+   highlights the text/title and covers the text."
+
+   Why the underline never showed: it was set on `.strip__caption`, a <span>
+   inside the link, while `text-decoration` is INHERITED and drawn by the
+   nearest block-level ancestor that declares it. `.strip__link` declares
+   `text-decoration: none` at rest, so the span's own `underline` had nothing
+   to draw against in the propagation the browser had already resolved — the
+   rule computed exactly as written and painted nothing. A background has no
+   such indirection.
+
+   The background sits on the LINK, so it covers thumbnail and caption alike.
+   The image is opaque and fills the item's width, so the only place the colour
+   actually shows is behind and below the text — which is the highlight, and
+   why it lines up with the thumbnail's edges instead of hugging the words.
+   The padding is what makes it read as a block rather than a smear. */
+.strip__link {
+  padding: var(--space-3xs);
+  margin: calc(-1 * var(--space-3xs));
+  border-radius: var(--border-radius);
+  transition: background-color 120ms ease-out;
+}
+
+.strip__link:hover,
+.strip__link:focus-visible {
+  background-color: var(--bg-color-low);
+}
+
 .strip__link:hover .strip__img,
 .strip__link:focus-visible .strip__img {
   filter: grayscale(0);
@@ -604,8 +657,6 @@ home-support li {
 .strip__link:hover .strip__caption,
 .strip__link:focus-visible .strip__caption {
   color: var(--text-color);
-  text-decoration: underline;
-  text-underline-offset: 0.2rem;
 }
 
 /* Mobile: two rows, still clipped. Brajeshwar: "In mobile, max two lines."
@@ -640,6 +691,21 @@ home-support li {
    Scoped with `:has()` so it applies to the home page alone. A blanket
    `body { overflow-x: clip }` would change the containing-block behaviour of
    every other page to fix a problem only this one has. */
+/* ⚠️ BOTH html and body. `overflow-x: clip` on body alone does NOT reliably
+   propagate to the viewport the way `hidden` does — measured 2026-08-01, the
+   computed style on body read `clip` while the page still scrolled sideways
+   by 2.5px. Setting it on the root as well makes the clip unambiguous.
+
+   Still `clip` and never `hidden`: `hidden` would make the element a scroll
+   container, which becomes the scroll context for the sticky site header
+   (chrome.scss) and pins it to the document instead of the viewport. `clip`
+   creates no scroll container and lets the other axis stay `visible` rather
+   than being forced to `auto`.
+
+   Scoped with `:has()` so it applies to the home page alone — a blanket rule
+   would change containing-block behaviour on every other page to fix a
+   problem only this one has. */
+html:has(home-container),
 body:has(home-container) {
   overflow-x: clip;
 }

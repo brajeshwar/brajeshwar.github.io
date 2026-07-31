@@ -722,6 +722,32 @@ through `album.scss` (`/devices/`, `/film/`, `/music/`, `/wear/`), which want a 
 where these want a clipped single row. New classes, no shared surface — verified after the
 rebuild that `cards.scss` and `album.scss` were untouched and those four pages unchanged.
 
+### Responsive audit, 2026-08-01
+
+Measured, not assumed: every page type loaded in an iframe at 320 / 480 / 768 / 1024 / 1512
+and checked for `documentElement.scrollWidth > viewport` **and** for an actual sideways
+scroll. All nine page types clean at all five widths.
+
+That audit existed because it found a real break. The home page overflowed at **every width
+below 768px** — 692px of content in a 320px viewport, on 28 rows — and every other page was
+fine, which is exactly why nobody saw it. Two causes, both mine, both invisible by eye:
+
+1. **`grid-template-columns: 1fr` in the mobile collapse.** `1fr` is `minmax(auto, 1fr)`, and
+   that automatic minimum will not shrink below the track's max-content. Once toc titles
+   became `white-space: nowrap` for the ellipsis, max-content was the full untruncated
+   headline, so the "single column" computed to **679px inside a 346px container**. The
+   two-column rule above it was already written `minmax(0, 1fr)` for this exact reason; the
+   collapse rule was not. **Never write a bare `1fr` in this codebase.**
+2. **A flat negative margin on the row highlight.** `-10px` each side is nothing against a
+   1512px viewport with 244px of gutter; at 320px the gutter is 6.4px and it overflowed by
+   3.6px. Now `calc(-1 * min(var(--space-2xs), (100vw - 100%) / 2))` — bleed the full amount
+   when there is room, exactly the gutter when there is not, no breakpoint needed.
+
+⚠️ **`overflow-x: clip` on `body` does not reliably reach the viewport.** Unlike `hidden`, it
+did not propagate: computed style on body read `clip` while the page still scrolled sideways
+2.5px. It is set on `html` **and** `body` now. Still never `hidden` — that would make the
+element a scroll container and unstick the sticky header.
+
 ## The `album` layout (built 2026-07-19)
 A thumbnail grid for photos, videos, or both — a simple album hosted here, likely linking out
 to Oinam's photo site later.

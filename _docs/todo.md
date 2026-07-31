@@ -310,6 +310,36 @@ at the top of this section.
       Brajeshwar's call is that nothing may exceed the band (*"so it is still within the body
       width"*), so breakouts now stop at it and this token's only readers are gone.
 
+## Breakpoints — consolidate (raised 2026-08-01)
+
+Brajeshwar asked what the base mobile breakpoint is. The honest answer is that there isn't
+one number: `_sass/breakpoints.scss` declares four tokens and calls them *"the four widths
+the layout actually turns on"*, and that sentence is false. Audited 2026-08-01:
+
+| | |
+|---|---|
+| declared tokens | `$small: 480`, `$medium: 800`, `$large: 1024`, `$extralarge: 1600` |
+| actually in the CSS | **360, 480, 600, 768, 800, 1024, 1250** |
+| rules using a token | **5** — album, base, home ×2, post |
+| rules hardcoding px | **9** — archives ×4, base, chrome ×2, search, timeline |
+
+Two of the nine hardcode a value that already *is* a token (`base.scss:294` = 480 = `$small`,
+`archives.scss:250` = 1024 = `$large`), so those are free to convert. The genuinely
+unaccounted-for values are **360, 600, 768, 1250**.
+
+- [ ] **Convert the two accidental hardcodes to tokens** — zero visual change, pure tidy.
+- [ ] **Decide whether 600 and 768 should both exist.** `chrome.scss` and `timeline.scss` turn
+      at 600; `search.scss` and `archives.scss` turn at 768. Nothing needs them to differ.
+- [ ] **`$large` (1024) is never used as a max-width breakpoint** — it is the band width. Worth
+      asking whether it belongs in a file of *breakpoints* at all.
+- [ ] **`$extralarge` (1600) has no media query at all** — it duplicates `--body-width-full`.
+      One of the two should go.
+
+⚠️ **Do not "simplify" this by collapsing tablet and desktop into one breakpoint** without
+reading the note in [`styles.md`](styles.md) → *The home page*: the site has no
+tablet-specific layout to begin with. What it has is per-component collapse points, which is
+the better pattern and is why there is no single tablet number to delete.
+
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +
       hand-authored `oinam`/`memos`) and the header icons (`search`, `rss`, `theme`) all live
