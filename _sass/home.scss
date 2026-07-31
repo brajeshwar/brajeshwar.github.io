@@ -550,7 +550,25 @@ home-support li {
    inside it. Splitting the two is what lets the arrows sit against the bleed
    edges rather than travelling with the scrolled content. */
 .strip__viewport {
-  --strip-bleed: min(100vw, var(--body-width-full));
+  /* UNCAPPED (2026-08-01). Brajeshwar: "Because we allow the thumbnails to
+     scroll sideways, does it not make sense to not constrained at 1600px but
+     let it be anything… So, super wide desktops sees all but others scrolls."
+
+     Right, and no ceiling is needed to express it — `100vw` IS the "infinite"
+     he asked whether was possible. It resolves to whatever the viewport is, so
+     an ultrawide shows more thumbnails and a laptop shows fewer and scrolls
+     for the rest. A large sentinel like 3600px would behave identically below
+     3600 and arbitrarily above it, which is worse than no number at all.
+
+     This drops the earlier `min(100vw, --body-width-full)`. The 1600px cap
+     came from the first version of this strip, when it was clipped rather than
+     scrollable and a bound was the only thing stopping content from being
+     unreachable. Now that it scrolls, the bound only ever hid thumbnails from
+     people with the screens to see them.
+
+     ⚠️ --body-width-full is NOT changed and still means 1600px for
+     <photo-cover>, its remaining user. Only these strips are uncapped. */
+  --strip-bleed: 100vw;
 
   position: relative;
   width: var(--strip-bleed);
@@ -659,22 +677,24 @@ home-support li {
   color: var(--text-color);
 }
 
-/* Mobile: two rows, still clipped. Brajeshwar: "In mobile, max two lines."
-   The cap is written in the item's own units so it follows --strip-item and
-   does not need a second magic number if the size changes. */
+/* Mobile: smaller thumbnails, SAME single scrolling row.
+   
+   ⚠️ This block used to `flex-wrap: wrap` into two clipped rows, from the
+   earlier instruction "In mobile, max two lines". That was superseded on
+   2026-07-31 by "when the browser is narrower … allow users to scroll
+   horizontally" — but the wrap survived the rewrite, so narrow screens were
+   the one place the strips did NOT scroll: twelve books folded into two rows,
+   the rest clipped by a max-height, and the arrows stayed hidden because a
+   wrapped row never overflows horizontally and `overflows()` correctly said
+   so. Caught 2026-08-01 by measuring visible-thumbnail counts across widths —
+   320/390/480 reported `overflows: false` while every wider viewport reported
+   true, which is backwards.
+   
+   One behaviour at every width now: one row, scrolls, arrows when it
+   overflows. Only the item size changes. */
 @media only screen and (max-width: bp.$small) {
   .strip {
     --strip-item: 7.5rem;
-    --strip-caption: 2.2rem;   /* caption line + its top margin */
-
-    flex-wrap: wrap;
-    max-height: calc((var(--strip-item) * 4 / 3 + var(--strip-caption)) * 2
-                     + var(--space-2xs));
-  }
-
-  .strip--photos {
-    max-height: calc((var(--strip-item) * 3 / 4 + var(--strip-caption)) * 2
-                     + var(--space-2xs));
   }
 }
 

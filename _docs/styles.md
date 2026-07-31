@@ -676,8 +676,21 @@ right with a dotted leader between. Includes: `home-articles.html`, `home-popula
 
 **Two breakout strips** (Books, Photos) — one shared include, `home-strip.html`, at two
 ratios: books 3:4, photos 4:3, set with `aspect-ratio` on the `<img>` so a slow file still
-reserves its box and the row never reflows. Width is `min(100vw, --body-width-full)`, i.e.
-the viewport capped at 1600px. See the *Full-bleed is back* entry in [`todo.md`](todo.md) for
+reserves its box and the row never reflows.
+
+**Width is `100vw`, uncapped** (2026-08-01). It was `min(100vw, --body-width-full)` while the
+row was *clipped*, when a bound was the only thing stopping content being unreachable. Once
+it scrolled, that bound only hid thumbnails from people with the screens to see them. No
+sentinel value is needed — `100vw` already means "the viewport", so an ultrawide shows more
+and a laptop scrolls for the rest. `--body-width-full` still means 1600px for `<photo-cover>`,
+its remaining user.
+
+⚠️ **One behaviour at every width: one row, scrolls, arrows on overflow.** The `$small` block
+sets only the item size. It previously also wrapped into two clipped rows, from an earlier
+instruction, and that survived the rewrite — so narrow screens were the one place the strips
+did *not* scroll, and the arrows correctly stayed hidden because a wrapped row never
+overflows horizontally. Found by comparing visible-thumbnail counts across widths: 320/390/480
+reported no overflow while every wider viewport did, which is backwards. See the *Full-bleed is back* entry in [`todo.md`](todo.md) for
 the mechanism and the `overflow-x: clip` counterweight.
 
 **The bleed is symmetric** (2026-07-31): the strip box is centred on the page and
