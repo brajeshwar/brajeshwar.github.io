@@ -8,8 +8,7 @@ main:
 - title: Contact
   url: "/contact/"
 
-# footer: centered page links, rendered as one row with a subtle bullet between
-# each group. Groups + order are Brajeshwar's.
+# footer: centered page links, rendered as one row with a subtle bullet between each group.
 footer:
 - links:
   - title: Home
@@ -17,27 +16,26 @@ footer:
 - links:
   - title: About
     url: "/about/"
+  - title: Album
+    url: "/album/"
   - title: Archives
     url: "/archives/"
   - title: Books
     url: "/books/"
-  - title: Now
-    url: "/now/"
-  - title: Album
-    url: "/album/"
   - title: Film
     url: "/film/"
   - title: Ideas
     url: "/ideas/"
 - links:
-  - title: Hire
-    url: "/hire/"
   - title: Legal
     url: "/legal/"
   - title: Newsletter
     url: "/newsletter/"
+  - title: Now
+    url: "/now/"
   - title: Search
     url: "/search/"
+- links:
   - title: Contact
     url: "/contact/"
 
