@@ -657,6 +657,13 @@ right with a dotted leader between. Includes: `home-articles.html`, `home-popula
   said `dotted` while the screen showed a solid rule. 2px dots on a 7px pitch instead.
 - The leader is an empty `<span>`, never typed dots — dots would be read aloud, would not
   stretch, and would break at arbitrary points.
+- **Titles are truncated, not wrapped** (2026-07-31) — one line, `text-overflow: ellipsis`,
+  so the leader always has room. Needs `white-space: nowrap` + `overflow: hidden` +
+  `text-overflow` on the title *and* `flex: 0 1 auto` + `min-width: 0` on the flex item: a
+  flex child's default `min-width: auto` refuses to shrink below its content, which cancels
+  the ellipsis entirely. The leader's minimum went 1.5rem → 3rem (≈7 dots) at the same time,
+  since trimming only helps if the space it frees reads as a leader. Rows are now a uniform
+  42px.
 - **Hover is a row background, not an underline** (2026-07-31). The `margin-inline` is the
   negative of the horizontal padding, so the highlight gets breathing room while the *text*
   stays flush with the column edge every other element on the site aligns to. Change one of
@@ -672,6 +679,13 @@ ratios: books 3:4, photos 4:3, set with `aspect-ratio` on the `<img>` so a slow 
 reserves its box and the row never reflows. Width is `min(100vw, --body-width-full)`, i.e.
 the viewport capped at 1600px. See the *Full-bleed is back* entry in [`todo.md`](todo.md) for
 the mechanism and the `overflow-x: clip` counterweight.
+
+**The bleed is symmetric** (2026-07-31): the strip box is centred on the page and
+`justify-content: center` centres the thumbnails inside it, so a short shelf sits in the
+middle of the bleed and a long one clips evenly at both edges. This replaced a
+`padding-inline-start` that pinned the first thumbnail to the band's left edge — so these
+strips are the one place on the site that does *not* start on that line. Deliberate, and
+asked for; the heading above still sits in the band, so the alignment is still stated.
 
 ⚠️ **Items are fixed width (`flex: 0 0`) and must stay that way.** Making them elastic so a
 short shelf fills the viewport was tried on 2026-07-31 and is visibly broken: with

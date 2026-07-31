@@ -171,9 +171,35 @@ home-container home-intro p {
   text-decoration: none;
 }
 
-/* The title is the only part that may wrap; `min-width: 0` lets it. */
+/* ⚠️ TITLES ARE TRUNCATED, NOT WRAPPED (2026-07-31). Brajeshwar: "For longer
+   article titles, let's trim it … so that visually, there are always good
+   enough dots to separate the titles from the date."
+
+   Three properties have to agree or this silently does nothing:
+     `white-space: nowrap`   — one line, so there is a line end to trim at
+     `overflow: hidden`      — clip what does not fit
+     `text-overflow: ellipsis` — and mark the clip with …
+
+   And two flex properties make the trim happen at the RIGHT moment:
+     `flex: 0 1 auto`  — the title may shrink. Without the `1` it holds its
+                         full intrinsic width, pushes the leader to its
+                         min-width and the date off the row entirely.
+     `min-width: 0`    — a flex item's default `min-width: auto` refuses to go
+                         below its content, which cancels the shrink and, with
+                         it, the ellipsis. This is the one that looks like it
+                         should not matter and does.
+
+   The wrapping version this replaces worked, but a two-line title left only
+   the leader's 1.5rem minimum beside the date — technically a leader, visually
+   a stub. One line always leaves the dots room. */
 .toc__title {
+  flex: 0 1 auto;
   min-width: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   font-weight: var(--font-weight-light);
 }
 
@@ -191,7 +217,11 @@ home-container home-intro p {
    family as the muted date it leads to. */
 .toc__leader {
   flex: 1 1 auto;
-  min-width: 1.5rem;
+  /* 3rem ≈ seven dots at the 7px pitch below. Raised from 1.5rem when titles
+     started truncating: the trim only helps if the space it frees is enough to
+     read as a leader, and 1.5rem was two dots and a gap. This minimum is what
+     the title shrinks to make room for. */
+  min-width: 3rem;
   align-self: flex-end;
 
   /* leave room for the dot row and lift it off the text baseline */
@@ -428,23 +458,26 @@ home-support li {
   flex-wrap: nowrap;
   gap: var(--space-2xs);
 
+  /* SYMMETRIC BLEED (2026-07-31). Brajeshwar: "extend not just on the right
+     but both ways, so the thumbnails are always centered (within 1600px),
+     while the titles stays within the body width."
+
+     The strip box is centred on the page by the margin, and
+     `justify-content: center` centres the thumbnails inside it — so a short
+     shelf sits in the middle of the bleed rather than hugging one end, and a
+     long one clips evenly at both edges instead of only the right.
+
+     ⚠️ This replaces a `padding-inline-start` that pinned the first thumbnail
+     to the band's left edge, so these strips are now the ONE place on the site
+     that does not start on that line. That is deliberate and was asked for:
+     the heading above still sits in the band, so the alignment the rest of the
+     site keeps is still stated on the page, and the row reads as a separate
+     centred object rather than a column that overflows. */
   width: var(--strip-bleed);
   max-width: var(--strip-bleed);
   margin-inline: calc(50% - var(--strip-bleed) / 2);
-  /* start the row on the band's left edge, then bleed off the right.
-     `50%` is half of main (the 1024px band); half the bleed minus that is
-     exactly the overhang on one side, so the first thumbnail lands back on
-     the band edge at any viewport — 244px at 1512, 288px at 2000.
-
-     `max(0px, …)` because that subtraction goes NEGATIVE if --body-width-full
-     is ever set below --body-width-max: the strip would then be narrower than
-     the band it is supposed to escape, and a negative pad would drag the first
-     thumbnail out of its own container. Cannot happen at 1600 against a 1024
-     band, but the guard costs nothing and the failure would be baffling —
-     measured 2026-07-31 by forcing the token to 900px, where the first
-     thumbnail did leave the band edge. */
-  padding-inline-start: max(0px, calc(var(--strip-bleed) / 2 - 50%));
-  padding-inline-end: 0;
+  padding-inline: 0;
+  justify-content: center;
 
   overflow: hidden;
 }
