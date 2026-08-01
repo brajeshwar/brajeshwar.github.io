@@ -86,10 +86,32 @@ and the album strip alone loads eight of them.
 
 ### Keep the master
 
-Copy the untouched source to `<name>-original.<ext>` **before** cropping. That convention is
-already in the archive and it is what makes a re-cut possible when this template changes.
-⚠️ Masters live in `/static/` too, so they ship with the deploy — a few are referenced directly
-by posts, so they are not dead weight, but do not add a 700 KB master casually.
+Keep the untouched source **before** cropping — it is what makes a re-cut possible when this
+template changes. There are two conventions, and they are not interchangeable.
+
+**Collection thumbnails** — `books`, `films`, `album`, `devices`, `wear` — put the master in a
+`src/` subfolder under the same slug, with no suffix:
+
+```
+static/books/the-lord-of-the-rings.webp        ← published, 800px long edge, 3:4
+static/books/src/the-lord-of-the-rings.jpg     ← master, whatever the source gave
+```
+
+Same stem, different folder, so the pair is obvious at a glance and a re-cut is a loop over
+`src/` rather than a filename dance. Adopted 2026-08-01 — *"move all the `*-original.*` files
+into `/static/books/src/` and remove the `-original` so we have exact mapping of the file
+names"* — replacing a `<name>-original.<ext>` suffix that sat inline next to the published
+file. `src/` exists in all five folders; three are still empty, waiting on content.
+
+**Per-post images** — `static/<year>/` — keep the old `<name>-original.<ext>` suffix, in place.
+⚠️ **Do not migrate these.** 41 of them are live and three are linked *directly* from posts, so
+their URLs are pinned by guardrail 2. The suffix stays the convention for anything under a year
+folder; `src/` is only for the collections above.
+
+⚠️ Masters ship with the deploy either way — `/static/` is 372 MB, of which 92 MB is year-folder
+masters against 1.5 MB in `src/`. Excluding `static/*/src` in `_config.yml` would stop the
+collection masters shipping, at the cost of 404-ing eight URLs nothing links to. Not done; it
+is a decision, not a tidy-up. Meanwhile, do not add a 700 KB master casually.
 
 ### Adding a book or an album item
 

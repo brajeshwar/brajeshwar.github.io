@@ -362,9 +362,22 @@ retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroo
       are fine in the home strip, which renders at 192.
 - [ ] 129 of 136 existing files are already 3:4, so this is a resolution pass, not a re-crop.
 
-⚠️ **Keep the `<name>-original.<ext>` masters.** Four posts reference them directly, so they are
-not dead weight — but `/static/` in the deploy is 372 MB, of which ~95 MB is `-original` files.
-Worth a separate look at whether the unreferenced ones need to ship at all.
+⚠️ **Keep the masters.** They are what a re-cut re-cuts from. **Two conventions since
+2026-08-01** (full rules in [`/styleguide/`](../_pages/styleguide.md) § *Keep the master*):
+
+- **Collections** — `books`, `films`, `album`, `devices`, `wear` — masters moved into
+  `<folder>/src/<slug>.<ext>`, `-original` stripped, so the master and the published `.webp`
+  share a stem: *"so we have exact mapping of the file names."* 8 files moved (7 books,
+  1 film); `album`, `devices` and `wear` got the folder but have nothing in it yet. 1.5 MB.
+- **Year folders** — `static/2019/`…`static/2026/` — still `<name>-original.<ext>`, in place,
+  **not migrated**. 41 files, 92 MB, of which **3 are linked directly from posts**, so their
+  URLs are pinned. Migrating them would break those links for no gain.
+
+- [ ] The 92 MB is the real weight, and it is in the year folders, not the collections. Worth a
+      separate look at whether the 38 unreferenced ones need to ship at all. Excluding
+      `static/*/src` in `_config.yml` would stop the collection masters shipping too, but that
+      is 1.5 MB — a rounding error against the 92 MB, and it 404s eight URLs. Raised and not
+      done: it is Brajeshwar's call, not a tidy-up.
 
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +
