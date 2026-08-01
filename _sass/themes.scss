@@ -172,6 +172,12 @@
 
   --color-border: color-mix(in oklch, var(--color-fg) 10%, transparent);
   --color-border-strong: color-mix(in oklch, var(--color-fg) 18%, transparent);
+  /* 32%, for the header and footer rules only. Added 2026-08-01: "make it even
+     darker. They should be clear separators." -strong at 18% read as a
+     considered hairline; this reads as a line that divides the page, which is
+     what those two are for. Still a mix of the foreground rather than a solid,
+     so it follows every palette and stays a rule instead of becoming a bar. */
+  --color-border-structural: color-mix(in oklch, var(--color-fg) 32%, transparent);
   --color-link: var(--color-accent);
   --color-code-bg: var(--color-gray-200);
 }
@@ -409,6 +415,24 @@
   --bg-color           : var(--color-bg-muted);
   --bg-color-high      : var(--color-primary);
   --bg-color-higher    : var(--color-primary);
+  /* The hover wash for a thumbnail or a toc row. Added 2026-08-01: "increase
+     the color accent one value more."
+
+     ⚠️ It has to be a MIX, not the next token along, because there is no next
+     token: --bg-color-low and --bg-color are both --color-bg-muted (identical
+     values, so stepping between them changes nothing) and the one after,
+     --bg-color-high, is --color-primary — near-white in dark mode, which would
+     flood the thumbnail rather than tint behind it. So this leans the muted
+     background 20% toward the foreground.
+
+     20% was measured, not picked. Against the page on eink dark the ladder runs
+     1.28 (the old --bg-color-low) → 1.50 at 8% → 1.78 at 16% → 1.96 at 20% →
+     2.52 at 30% → 3.62 at 45%. 45% was the first attempt and is wrong: at 3.62
+     the wash is brighter than the header rule and reads as a filled card rather
+     than a hover. 1.96 is a genuine step — 53% more contrast than before — and
+     sits just under the 2.22 of the structural rules, which keeps the hierarchy
+     honest: a separator should out-read a hover state. */
+  --bg-color-hover     : color-mix(in oklch, var(--color-bg-muted) 80%, var(--color-fg) 20%);
 
   --text-color-lower   : var(--color-fg-subtle);
   --text-color-low     : var(--color-fg-muted);
@@ -443,7 +467,7 @@
      this. Everything else stays on --rule; the whole point is that these two
      read as more structural than the rest, and a third user starts eroding
      that. */
-  --rule-strong   : var(--color-border-strong);
+  --rule-strong   : var(--color-border-structural);
   --accent        : var(--color-accent);
   --accent-hover  : var(--color-accent-hover);
   --mark          : var(--color-bg-muted);

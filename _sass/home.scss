@@ -661,26 +661,31 @@ home-support li {
    why it lines up with the thumbnail's edges instead of hugging the words.
    The padding is what makes it read as a block rather than a smear. */
 .strip__link {
-  /* Asymmetric padding, deliberately (2026-08-01: "increase the bottom padding
-     to give good spacing"). The caption sits at the bottom, so that edge is the
-     only one where the highlight has TEXT to clear rather than an image edge —
-     an even inset looks tight there and roomy everywhere else. Top and sides
-     stay at --space-3xs so the background still reads as the thumbnail's own
-     block rather than a loose card around it.
+  /* UNIFORM padding on all four sides (2026-08-01: "add padding at the top too
+     to have a uniform view"). It was --space-3xs on top and sides against
+     --space-2xs at the bottom, on the reasoning that only the caption edge had
+     text to clear. Wrong once the background arrived: an inset that differs by
+     edge reads as a misaligned box, not as a considered asymmetry, because the
+     highlight draws the box and the eye compares its four margins directly.
+
+     The negative margin matches the padding on top and sides, so the THUMBNAIL
+     stays exactly where it was and only the wash extends past it. Bottom margin
+     stays 0 — that is the one edge where the extra space is real, holding the
+     caption clear of the next row.
 
      `border-radius` is one value for all four corners, so the top rounds
      exactly as the bottom does. The image carries the same radius, which is
      what makes the two curves sit concentric instead of one squaring off
      inside the other. */
-  padding: var(--space-3xs) var(--space-3xs) var(--space-2xs);
-  margin: calc(-1 * var(--space-3xs)) calc(-1 * var(--space-3xs)) 0;
+  padding: var(--space-2xs);
+  margin: calc(-1 * var(--space-2xs)) calc(-1 * var(--space-2xs)) 0;
   border-radius: var(--border-radius);
   transition: background-color 120ms ease-out;
 }
 
 .strip__link:hover,
 .strip__link:focus-visible {
-  background-color: var(--bg-color-low);
+  background-color: var(--bg-color-hover);
 }
 
 /* ⚠️ NO background on the photo strip. Brajeshwar 2026-08-01: "No need for

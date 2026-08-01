@@ -259,15 +259,20 @@ The header's `border-bottom` and the footer's `border-top` are the only borders 
 *"Increase the border color one notch for the header and footer, so they are more prominent
 than the other borders."*
 
-Measured on the dark/eink default, compositing each border over the page background:
+**Strengthened again 2026-08-01** — *"make it even darker. They should be clear separators."*
+`--rule-strong` now points at a new `--color-border-structural` (32% of the foreground) rather
+than `--color-border-strong` (18%). Measured on the dark/eink default, compositing each border
+over the page background:
 
 | | painted rgb | contrast vs page |
 |---|---|--:|
-| header + footer rule | `51,48,49` | **1.47** |
+| header + footer rule | `78,75,76` | **2.22** |
+| hover wash (`--bg-color-hover`) | `71,67,68` | 1.96 |
 | every other border | `36,33,34` | 1.20 |
 
-**22% more contrast**, and header and footer paint identically — they are a pair that brackets
-the page.
+**85% more contrast than an ordinary border**, and header and footer paint identically — they
+are a pair that brackets the page. Note the deliberate hierarchy: a separator out-reads a
+hover state, which out-reads an ordinary border.
 
 ⚠️ **Only those two may use `--rule-strong`.** The point is that they outrank every other
 border by exactly one tier; a third user starts eroding that. Note `chrome.scss` still uses
