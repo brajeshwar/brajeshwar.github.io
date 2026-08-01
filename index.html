@@ -58,6 +58,8 @@ title: Brajeshwar Oinam
     to the end of the file; that is the whole protocol.
   {%- endcomment -%}
   {%- assign home_books_count  = 8 -%}
+  {%- comment -%} Inert while the Album strip below is commented out; left in
+  place so restoring the strip is only the two comment tags. {%- endcomment -%}
   {%- assign home_album_count = 8 -%}
 
   {%- assign books_tail = site.data.books | reverse | slice: 0, home_books_count -%}
@@ -73,22 +75,38 @@ title: Brajeshwar Oinam
      captions = true %}
 
   {%- comment -%}
+    ============================================================
+    ALBUM STRIP — COMMENTED OUT 2026-08-01, ON PURPOSE, NOT DEAD
+    ============================================================
+    "Comment out the Album in the home page … I will work on the Album later in
+    the evening." Everything needed to switch it back on is below: delete this
+    `comment` opener and the `endcomment` after the include, and it returns
+    exactly as it was. /album/ itself is untouched and still live; this hides
+    only the home-page strip.
+
+    ⚠️ THE PROSE BELOW WAS THREE SEPARATE `comment` BLOCKS AND IS NOW ONE.
+    Liquid is 4.0.4 here and its `comment` tag does NOT nest — the first
+    `endcomment` closes the outermost block, so leaving the inner ones in place
+    would have ended this comment early and dumped the rest of the block, the
+    include and all, straight into the page. If you restore the strip, split
+    the prose back out; while it is commented out, it has to stay flattened.
+
     Album (renamed from Photos, 2026-08-01 — "we are likely to have videos and
     audio too besides photos"). Still placeholder data: _data/album.yaml
     borrows the book thumbnails because /static/album/ does not exist yet, and
     the include is gated on `items` exactly as Books is, so an empty file
     renders nothing rather than an empty heading.
-  {%- endcomment -%}
-  {%- comment -%}
+
     No `captions` here: the images speak for themselves, and a caption under
     every frame turned the row into a wall of repeated text. Items carrying
     `media: video` or `media: audio` get a small icon badge instead, which is
     the one thing a thumbnail cannot say on its own.
-  {%- endcomment -%}
+
   {%- assign album_tail = site.data.album | reverse | slice: 0, home_album_count -%}
   {% include home-strip.html
      items = album_tail
      title = "Album"
      href  = "/album/"
      kind  = "album" %}
+  {%- endcomment -%}
 </main>
