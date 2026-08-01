@@ -1,109 +1,51 @@
-# PLACEHOLDER DATA — created 2026-07-31, renamed photos.yaml → album.yaml on
-# 2026-08-01 because the section will carry video and audio too, not only
-# photographs. Feeds the Album strip on the home page and the /album/ page:
+# Album — feeds the /album/ page and the Album strip on the home page.
 #
-#   "What happened to the new 'Photos' section. Copy 'Books' but the thumbnails
-#    are 4:3. If there are nothing, copy from the books or or something for the
-#    thumbnail. I will populate it later."
+# Real data since 2026-08-01. This file used to hold twelve placeholders that
+# borrowed thumbnails from /static/books/, because /static/album/ did not exist
+# yet; the first real photo replaced all of them. Nothing here is a stand-in
+# any more, so anything that looks wrong on the page is a real bug.
 #
-# ⚠️ EVERY IMAGE HERE IS BORROWED FROM /static/books/. There is no
-# /static/album/ directory yet, and a broken <img> would read as a bug rather
-# than as a placeholder. The strip renders them at 4:3, so these 3:4 book
-# covers are center-cropped by `object-fit: cover` — they will look like
-# cropped book covers, because that is exactly what they are.
+# ---------------------------------------------------------------------------
+# ADDING A PHOTO — the whole protocol
+# ---------------------------------------------------------------------------
+# 1. Drop the master in `_src/album/<slug>.<ext>`. It goes to Git LFS by path
+#    and never ships, because `_src` starts with an underscore. Use `git add`,
+#    never `git mv` — see /styleguide/ § Keep the master for why that matters.
+# 2. Cut `static/album/<slug>.webp` from it, same stem, NATIVE aspect ratio.
+#    Do not pre-crop to 4:3: /album/ is masonry and shows the real shape, and
+#    the home strip crops to 4:3 itself with `object-fit: cover`.
+# 3. Append an entry below. THE LAST ENTRY IS THE NEWEST — that is the entire
+#    ordering protocol, same as _data/books.yaml, and it is why the home strip
+#    reads newest-first while /album/ keeps this file's own order. There is
+#    deliberately no date field.
 #
-# TO REPLACE: drop real files into /static/album/, then rewrite this file with
-# the same four fields and BARE filenames (no leading "/"), which resolve under
-# /static/album/ automatically. The leading slash below is the escape hatch
-# that lets a placeholder point somewhere else; real entries do not need it.
-#
-# Same shape as _data/books.yaml: title, url, img, alt.
-#
-# `url` points OFF-SITE, to the photo's page on album.oinam.com (2026-08-01:
-# "each will link to an external source, mostly like
-# https://album.oinam.com/album/somephoto/"). The card-grid include emits any
-# url starting with "http" verbatim with rel="noopener", so absolute URLs are
-# expected here and must NOT be run through relative_url.
-#
-# `media:` is OPTIONAL and marks what the thumbnail actually leads to —
-# "video" or "audio" put a small icon badge over the corner of the frame. Omit
-# it for a still photograph, which is the default and needs no marker.
-#
-# ⚠️ `alt` is now the ONLY description these images carry — /album/ prints no
-# captions, so a screen reader has nothing else to go on and `title` is used
-# only as the alt fallback. Write real alt text for the real photos; the
-# placeholder text below is not a template worth copying.
+# ---------------------------------------------------------------------------
+# FIELDS
+# ---------------------------------------------------------------------------
+# title  Shown as the caption on the home strip. /album/ prints no captions.
+# img    BARE filename — resolves under /static/album/ automatically. A leading
+#        "/" is the escape hatch for pointing somewhere else entirely.
+# url    Where the card links. Brajeshwar 2026-08-01: "I'm going to have custom
+#        URLs for each." Anything starting with "http" is emitted verbatim with
+#        rel="noopener"; anything else goes through relative_url. So absolute
+#        URLs belong here as written and must NOT be run through relative_url.
+# alt    ⚠️ THE ONLY DESCRIPTION THESE IMAGES CARRY. /album/ prints no captions,
+#        so a screen reader has nothing else, and `title` is used only as the
+#        alt fallback. Write it for someone who cannot see the picture.
+# media  OPTIONAL — "video" or "audio" puts a small icon badge over the corner
+#        of the frame. Omit it for a still photograph, which is the default.
+#        (The section was renamed from Photos on 2026-08-01 precisely because
+#        it will carry video and audio too.)
+# w / h  The cut file's REAL pixel size. ⚠️ Worth the two seconds it costs.
+#        /album/ is masonry, so every photo keeps its own shape, and without
+#        these the card reserves the 3:4 default and then jumps to the true
+#        ratio when the file lands. Jekyll cannot measure an image without a
+#        plugin, so the numbers are recorded here by whoever cut it — which is
+#        the one moment the size is already on screen.
 
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/first-light/
-  img: /static/books/1984.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-  media: video
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/the-long-road/
-  img: /static/books/the-lord-of-the-rings.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-  media: audio
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/harbor-morning/
-  img: /static/books/leonardo-da-vinci.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/paper-lanterns/
-  img: /static/books/the-design-of-everyday-things.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/high-desert/
-  img: /static/books/genghis-khan.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/rain-on-glass/
-  img: /static/books/mahatma-gandhi.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/first-light-2/
-  img: /static/books/1984.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/the-long-road-2/
-  img: /static/books/the-lord-of-the-rings.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/harbor-morning-2/
-  img: /static/books/leonardo-da-vinci.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-  media: video
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/paper-lanterns-2/
-  img: /static/books/the-design-of-everyday-things.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-  media: audio
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/high-desert-2/
-  img: /static/books/genghis-khan.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
-
-
-- title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/rain-on-glass-2/
-  img: /static/books/mahatma-gandhi.webp
-  alt: Placeholder thumbnail, borrowed from the books shelf
+- title: Edward Norton
+  url: https://album.oinam.com/album/edward-norton/
+  img: edward-norton.webp
+  w: 600
+  h: 464
+  alt: A selfie taken in a bookshop, two men smiling in front of floor-to-ceiling shelves packed with paperbacks

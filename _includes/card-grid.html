@@ -54,6 +54,21 @@
   (portrait) while `ratio: "4x3"` was passed, because the placeholder files are
   book covers. The `card-grid--*` class on the <ul> is what actually crops —
   see page.scss. Change the class, not these numbers.
+
+  ⚠️ PER-ITEM `w`/`h` OVERRIDE THEM, AND MASONRY NEEDS THAT (2026-08-01). A
+  fixed ratio hint is fine for a cropped grid, where every cell is the same
+  shape by construction. It is wrong for masonry, whose entire point is that
+  each photo keeps its own shape: the first real album photo is 600x464
+  landscape, and the 225x300 portrait default made the browser reserve 3:4 and
+  then snap to 1.29:1 the moment the file landed — a visible reflow, and one
+  that gets worse as photos of mixed orientation are added.
+
+  So an item may carry `w:` and `h:`, and they win. Jekyll cannot read an
+  image's real dimensions without a plugin (guardrail 3), so the numbers are
+  authored beside the file that has them — cheap, because whoever cuts the
+  thumbnail has just seen its size. Omit them and the ratio default applies as
+  before; nothing else in the repo passes them, so the cropped grids on /books/
+  and /film/ are untouched.
 {%- endcomment -%}
 {% if include.items and include.items.size > 0 %}
   {%- if include.heading %}
@@ -84,7 +99,7 @@
     <li>
       <a href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
         <figure>
-          <img width="{{ iw }}" height="{{ ih }}"
+          <img width="{{ item.w | default: iw }}" height="{{ item.h | default: ih }}"
                src="{{ src | relative_url }}"
                alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
                loading="lazy" decoding="async">

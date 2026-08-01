@@ -80,9 +80,25 @@ and the album strip alone loads eight of them.
 
 - **WebP**, quality **75–82**. AVIF is smaller again but the encode is slower and the win at
   this size is small.
-- **≤ 60 KB per thumbnail**, and most should land near 25–40 KB. Anything over 100 KB at these
-  dimensions means the quality slider is too high, not that the image is complicated.
+- **≤ 60 KB per thumbnail**, and most should land near 25–40 KB.
 - Filename is the slug: `the-lord-of-the-rings.webp`, lowercase, hyphenated.
+
+⚠️ **When a thumbnail busts the budget, cut the long edge — not the quality.** This section
+used to say that over 100 KB "means the quality slider is too high, not that the image is
+complicated." That is wrong, and the first real album photo disproved it: a bookshop interior,
+which is several hundred legible book spines, i.e. detail everywhere and nothing for the
+encoder to flatten. Measured 2026-08-01, same source:
+
+| long edge | q82 | q75 | q70 | q65 |
+|---|---:|---:|---:|---:|
+| 800 | 122.9 KB | 97.1 KB | 91.7 KB | 86.5 KB |
+| 700 | 90.1 KB | 70.6 KB | 66.8 KB | 62.6 KB |
+| **600** | 69.9 KB | **54.6 KB** | 52.0 KB | 49.2 KB |
+
+Dropping from q82 to q65 at 800px saves 36 KB and visibly softens the faces. Dropping to
+600px at q75 saves 68 KB and costs nothing you can see, because 600 still clears the 490px
+retina floor by 22% — the headroom this page already documents. **So 800 is the template, not
+a minimum.** For a detail-dense frame, take the long edge to 600 and leave quality at 75.
 
 ### Keep the master
 
@@ -141,6 +157,17 @@ true.
 `highlight: true` on a book puts it in *All Time Favorites* and takes it out of *More Books* —
 one flag, two grids, no entry in both. `media: video` or `media: audio` on an album item
 overlays the matching icon.
+
+⚠️ **Album entries should also carry `w:` and `h:`** — the cut file's real pixel size. `/album/`
+is masonry, so every photo keeps its own shape, and without them the card reserves the 3:4
+default and then jumps to the true ratio the moment the file lands. Jekyll cannot measure an
+image without a plugin, so the numbers are written beside the file by whoever cut it, which is
+the one moment the size is already on screen. Books and film do not need them: those grids crop
+every cell to the same shape by construction, so one hint is right for all of them.
+
+Album thumbnails are cut at their **native** aspect ratio, never pre-cropped to 4:3. `/album/`
+shows the real shape and the home strip crops to 4:3 itself with `object-fit: cover`; pre-cropping
+would throw away the picture the masonry page is there to show.
 
 **When one file gets unwieldy**, split it into a directory — `_data/books/2024.yaml`,
 `2025.yaml`, and so on. Jekyll turns `_data/books/` into a hash keyed by filename and iterates
