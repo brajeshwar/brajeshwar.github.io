@@ -7,12 +7,6 @@ title: Books
 
 <div class="album" markdown="0">
 {%- comment -%}
-  Grids added 2026-08-01. The page's prose was removed the same day and lives
-  verbatim in `_backup/books-BCK.md` — "The prose from books will go. Remove
-  from there and keep a backup books-BCK.md for me to decide what to do with it
-  later." Nothing was reworded; it is the whole block including its two
-  footnote definitions.
-
   `<div class="album">` rather than `layout: album`. This mattered more when the
   prose was here — the album LAYOUT drops the reading measure for the whole page
   — and is kept because the CLASS is all the grids need: album.scss targets
@@ -32,7 +26,7 @@ title: Books
   Two grids, ONE source, no overlap (2026-08-01: "I do not want to repeat the
   Favorites in the All books section").
 
-  `highlight: true` splits _data/books.yaml in two. `where_exp` rather than a
+  `highlight: true` splits `_data/books.yaml` in two. `where_exp` rather than a
   second data file, because two files would mean two places a book can live and
   a way for it to end up in both or neither — the flag is the single fact and
   the grids are two views of it. Promoting a book to a favorite is one word in
@@ -55,6 +49,60 @@ title: Books
    heading = "Personal Favorites &amp; Recommendations"
    id      = "favorites"
    sub     = "Here are some of my all-time favorite books — ones I have read and re-read, and would highly recommend." %}
+
+{%- comment -%}
+  ⚠️ THE PROSE BLOCK BELOW NEEDS `markdown="1"`, AND THAT IS THE WHOLE TRICK.
+  Added 2026-08-01, moved here from the How to Read a Book post — "I wasn't sure
+  of your formatting to add a prose block."
+
+  The wrapper is `<div class="album" markdown="0">`, which switches kramdown OFF
+  for everything inside it. Paste Markdown in there and it renders as literal
+  characters: `## Free and Open Source Books` prints its own hashes and every
+  link prints its own brackets. `markdown="1"` on a nested element turns it back
+  on for that subtree only, which is the documented way out and the reason this
+  is a `<div>` at all rather than plain text.
+
+  `container-ideal` puts the list on the reading measure. Without it the prose
+  would run the full band the grids use — fine for thumbnails, far too wide for
+  a line of text. It is the same class the article body uses.
+
+  ⚠️ Blank lines around the `<div>` are load-bearing. kramdown only treats a
+  block-level HTML element as a boundary when it is separated by blank lines; a
+  `markdown="1"` div jammed against the Liquid above it does not re-enter
+  Markdown mode reliably.
+
+  ⚠️ NO FOOTNOTES IN HERE. The two sections moved over carry none, which is
+  lucky: page.html keys `container-ideal` off `content contains
+  'class="footnotes"'`, so adding one would silently change the whole page's
+  width. If a footnote is ever wanted here, check what that does to the layout
+  first.
+{%- endcomment -%}
+
+<div class="container-ideal" markdown="1">
+
+## Free and Open Source Books
+
+- [Downpour](https://www.downpour.com) DRM-Free AudioBooks (paid)
+- [Global Grey’s Books](https://www.globalgreyebooks.com/) is a growing library of high-quality, public domain, free ebooks.
+- [Standard Ebooks](https://standardebooks.org) has free and liberated ebooks.
+- Project [Gutenberg](https://www.gutenberg.org) is a library of over 60,000 free eBooks carefully produced for the true book lover.
+- [Open Library](https://openlibrary.org)
+- [Open Textbook Initiative](https://aimath.org/textbooks/) from The American Institute of Mathematics.
+- [LibriVox](https://librivox.org) free public domain Audiobooks.
+- [Wikisource](https://en.wikisource.org/wiki/Main_Page) is the free library that anyone can improve.
+- [The Society of Minds](http://aurellem.org/society-of-mind/) by [Marvin Minsky](https://web.media.mit.edu/~minsky/).
+- [Library of Short Stories](https://www.libraryofshortstories.com) is a Free Online Library for Classic Short Stories.
+
+### References
+
+- [HackerNews Book Recommendations](https://hacker-recommended-books.vercel.app)
+- [A Helpful Guide to Reading Better](https://fs.blog/reading/)
+- [Books by the Foot](https://booksbythefoot.com)
+- [Good Books](https://www.goodbooks.io) Recommended by Successful People.
+- [How to Gain More From Your Reading](https://psyche.co/guides/how-to-gain-more-from-reading-by-taking-it-all-in-more-slowly)
+- [Odd Lots Recommended Books](https://odd-lots-books.netlify.app)
+
+</div>
 
 {%- comment -%}
   ⚠️ CAPTURED, not written inline as an include parameter. The inline version
