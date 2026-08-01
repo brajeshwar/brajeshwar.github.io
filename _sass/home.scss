@@ -672,6 +672,26 @@ home-support li {
 .strip--books .strip__img  { aspect-ratio: 3 / 4;  object-fit: cover; }
 .strip--album .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
 
+/* The album runs WIDER than the books shelf — 200px against 192px. Brajeshwar
+   2026-08-01: "Maintain the ratio, but increase the width to 200px. The current
+   thumbnail is too tiny."
+
+   Only the width is set. The 4:3 above does the rest, so the frame goes
+   200x150 and the crop is unchanged; nothing here needs to know the height.
+
+   Why the album can afford it and books cannot: a 4:3 frame at 200px is 150px
+   tall, still SHORTER than a 3:4 book at 192px (256px), so the taller strip
+   does not get taller and the two rows keep their relative weight. It reads as
+   more generous rather than as a different component.
+
+   ⚠️ THIS DECLARATION MUST STAY ABOVE THE SMALL-SCREEN BLOCK at the end of
+   this section. That block sets `--strip-item` on `.strip`, which is the same
+   specificity as `.strip--album` here — so it wins on source order alone. Move
+   this below it and every phone gets 200px thumbnails in a 320px viewport. */
+.strip--album {
+  --strip-item: 12.5rem;
+}
+
 /* Captions WRAP (2026-07-31: "The title should wrap and Ok to show in more
    than one line for longer titles"). They were `white-space: nowrap` with an
    ellipsis, which truncated most of the shelf — and unlike the toc rows there
