@@ -42,16 +42,26 @@
 #        (The section was renamed from Photos on 2026-08-01 precisely because
 #        it will carry video and audio too.)
 #
-# ⚠️ NO `w`/`h`, AND THAT IS A DECISION, NOT AN OVERSIGHT. They were added
-# earlier on 2026-08-01 to reserve each card's box before the file loads, and
-# removed the same day: "we will have a set with varying height because of the
-# masonry. So, remove the additional w and h." Ragged heights are the point of
-# the page, and pinning each one costs two hand-maintained numbers per photo
-# that no build step can ever check. Nothing regressed by removing them —
-# page.scss sets `aspect-ratio: auto` on masonry images, which cancels the
-# reservation those attributes would have driven, so they were inert anyway
-# (measured: 16px reserved with them, 16px without). Do not add them back
-# without also taking that declaration off.
+# ⚠️ `w`/`h` ARE THE CUT FILE'S REAL PIXEL SIZE, AND THEY ARE NOT OPTIONAL HERE.
+# They were removed earlier on 2026-08-01 — "we will have a set with varying
+# height because of the masonry, so remove the additional w and h" — on the
+# reasoning that pinning dimensions fights a ragged layout. They are back
+# because that is not what they do.
+#
+# They do not pin anything. They tell the browser each photo's SHAPE before the
+# file downloads. Without them every card is about 16px tall at first layout,
+# the masonry columns get balanced against those wrong heights, and only then
+# do the real images arrive. Chrome quietly re-balances and you never see it.
+# Safari does not: the first row visibly staggers. Reported 2026-08-01,
+# "Chrome is perfect. Safari is acting up."
+#
+# Heights still vary, exactly as before — `width: 100%` with `height: auto` is
+# what keeps each photo its own shape, not these numbers.
+#
+# ⚠️ They are half a fix. page.scss must NOT declare `aspect-ratio: auto` on
+# masonry images: the initial value of aspect-ratio IS auto, so declaring it
+# cancels the rule that reads these attributes and makes them inert. Both
+# halves or neither.
 
 # ⚠️ `url` IS OPTIONAL. An entry without one renders as a plain unlinked
 # figure — not as an empty anchor, which would be a link back to this page.
@@ -65,15 +75,26 @@
 # if you add an old photograph, decide whether it belongs at the end (newest
 # ADDED) or in date order, and stay consistent.
 
-- title: A fresh start with a new iMac
-  img: 2010-07-10-imac-fresh-start.webp
-
-- title: My daughter loves art
-  img: 2018-10-13-daughter-loves-art.webp
-
-- title: Cable car tracks in San Francisco
-  img: 2023-06-18-san-francisco.webp
-
 - title: Met Edward Norton in London
   url: https://www.instagram.com/p/DZx4WchDoVE/
   img: 2026-06-19-edward-norton.webp
+  w: 600
+  h: 464
+
+- title: Fresh start with an iMac
+  url: https://unsplash.com/photos/silver-imac-with-apple-magic-keyboard-and-magic-mouse-fGkBx7hX9Ms
+  img: 2010-07-10-imac-fresh-start.webp
+  w: 800
+  h: 584
+
+- title: Daughter loves art
+  url: https://www.instagram.com/p/Bo8sBhHF0Oa/
+  img: 2018-10-13-daughter-loves-art.webp
+  w: 777
+  h: 800
+
+- title: Eerily empty weekend in San Francisco
+  url: https://www.instagram.com/p/CtpbIlJujAH/
+  img: 2023-06-18-san-francisco.webp
+  w: 554
+  h: 600

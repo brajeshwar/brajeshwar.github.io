@@ -55,22 +55,29 @@
   book covers. The `card-grid--*` class on the <ul> is what actually crops —
   see page.scss. Change the class, not these numbers.
 
-  ⚠️ AND ON THE MASONRY GRID THEY RESERVE NOTHING AT ALL. Worth knowing before
-  anyone tries to "fix" the hint for /album/, because the obvious fix does not
-  work. page.scss sets `aspect-ratio: auto` on masonry images; the initial
-  value of `aspect-ratio` IS `auto`, so that declaration reads like a no-op and
-  is not — it cancels the UA rule that derives a ratio from these attributes.
-  Measured 2026-08-01 in Chrome, 244.8px container, image never loading:
+  ⚠️ PER-ITEM `w`/`h` OVERRIDE THEM, AND /album/ NEEDS THAT — TO FIX SAFARI.
+  A single ratio hint is right for a cropped grid, where every cell is the same
+  shape by construction. On the masonry grid it is wrong, and being wrong there
+  is not cosmetic: with no correct ratio, nothing is reserved before the file
+  loads, every card is ~16px tall at first layout, and the columns get balanced
+  against those heights. Chrome re-balances once the images land and you never
+  see it. Safari does not, and the first row visibly staggers — reported
+  2026-08-01: "Chrome is perfect. Safari is acting up."
+
+  Measured in Chrome, 244.8px container, image never loading:
 
     w/h 600x464, no aspect-ratio declared  → 189.3px reserved (correct)
     w/h 225x300, no aspect-ratio declared  → 326.4px reserved (wrong shape)
     w/h 600x464, aspect-ratio: auto        →  16px  (nothing reserved)
     no attributes at all                   →  16px
 
-  Per-item `w`/`h` fields were added to album.yaml to fix this and removed the
-  same day, because ragged heights are the whole point of that page and the
-  reservation was never happening anyway. If it is ever wanted, the CSS
-  declaration has to come off FIRST — the data change alone does nothing.
+  ⚠️ BOTH HALVES ARE REQUIRED. These fields do nothing on their own — page.scss
+  used to declare `aspect-ratio: auto` on masonry images, which cancels the UA
+  rule that reads these attributes. That declaration is gone; if it ever comes
+  back, these numbers go inert again and Safari breaks again.
+
+  Omit them and the ratio default applies as before, so nothing else in the
+  repo is affected: /books/ and /film/ pass neither and still get 225x300.
 {%- endcomment -%}
 {% if include.items and include.items.size > 0 %}
   {%- if include.heading %}
@@ -112,7 +119,7 @@
       <a href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
       {%- endif -%}
         <figure>
-          <img width="{{ iw }}" height="{{ ih }}"
+          <img width="{{ item.w | default: iw }}" height="{{ item.h | default: ih }}"
                src="{{ src | relative_url }}"
                alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
                loading="lazy" decoding="async">

@@ -184,10 +184,29 @@
   -webkit-column-break-inside: avoid;
 }
 
+/* ⚠️ `aspect-ratio: auto` USED TO BE HERE AND HAD TO GO (2026-08-01). It read
+   as a harmless restatement — the initial value of `aspect-ratio` IS `auto` —
+   and it was not: an author declaration of `auto` cancels the UA rule that
+   derives a ratio from an <img>'s width/height attributes, so nothing at all
+   was reserved before the file loaded. Measured in Chrome, 244.8px container,
+   image never loading:
+
+     w/h 600x464, no aspect-ratio declared  -> 189.3px reserved (correct)
+     w/h 600x464, aspect-ratio: auto        ->  16px  (nothing)
+
+   Chrome hides the cost by re-balancing the columns once the images land.
+   Safari does not, which is why the album's first row sat flush in Chrome and
+   staggered in Safari: every card is ~16px tall at first layout, the columns
+   are balanced against those wrong heights, and WebKit's incremental multicol
+   relayout does not fully redo the packing when the real heights arrive.
+
+   Each photo still keeps its own shape — `width: 100%` with `height: auto` is
+   what does that, not this declaration. Removing it changes nothing after
+   load; it only gives the browser the shape BEFORE load. Verified in Chrome:
+   identical 189.3px rendered height with and without. */
 .item__cards.card-grid--masonry img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: auto;          /* the point: each photo keeps its own shape */
   object-fit: fill;
 }
