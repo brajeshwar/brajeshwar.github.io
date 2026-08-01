@@ -1,3 +1,7 @@
+---
+image: /static/2026/how-to-read-a-book.webp
+---
+
 # How to Read a Book
 
 > Or, what forty years of reading did not teach me.
