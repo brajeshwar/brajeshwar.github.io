@@ -299,6 +299,41 @@ The text tiers were darkened one step for higher overall contrast (Brajeshwar): 
 `-muted` gray-300 → gray-200, `-subtle` gray-500 → gray-400). Backgrounds unchanged.
 Because these are semantic tokens over the re-tinted scale, every palette inherits the bump.
 
+### Text contrast raised one step, 2026-08-01
+
+*"Increase contrast of the text throughout. Let's make them darker (more accented)."*
+
+Every `--color-fg*` tier moved one step toward the extreme, in all four blocks that define
+them (shared light, eink light, generic dark, eink dark). Measured across all six
+palette × mode combinations, contrast against the page:
+
+| palette · mode | title / body | intro · caption | date |
+|---|--:|--:|--:|
+| eink · dark *(his default)* | 11.98 → **15.00** | 7.05 → **9.31** | 5.19 → **7.05** |
+| eink · light | → 18.62 | → 14.51 | → 7.14 |
+| default · dark | → 17.18 | → 16.44 | → 12.09 |
+| default · light | → 18.16 | → 16.44 | → 9.51 |
+| nord · dark | → 11.54 | → 10.84 | → 9.25 |
+| nord · light | → 11.95 | → 10.84 | → 6.40 |
+
+**Every combination is now AAA (≥7.0)** except nord-light's 13px date at 6.40, which still
+clears AA comfortably.
+
+⚠️ **`--color-fg` could not move in two of the four blocks** — it is already at the end of
+the ramp (`gray-950` in light, `gray-50` in generic dark). The primary text was measured at
+11.98:1 *before* this change, well past AAA, so the real gain is in the two tiers under it:
+muted (intros, captions, alumni rows) and subtle (dates, year markers). Only eink dark had
+headroom on the primary tier, and it used it: base-200 → base-100.
+
+⚠️ **The eink change departs from kepano's Flexoki docs mapping** (text-1 → base-200,
+text-2 → base-500), which the rest of that block still follows. Deliberate override for
+legibility, not a mistake to revert.
+
+**The other half of "more accented" is weight, not colour.** The h1, the intro paragraph and
+every section heading are `--font-weight-light` (**200**) — very thin at 39px. That reads as
+washed out no matter what the contrast ratio says. Raising `--font-weight-light` to 300 is a
+one-token change if the type still feels light after this.
+
 ## Palettes (source values in `themes.css`)
 Three panel choices (Brajeshwar trimmed from five; Flexoki + Solarized removed):
 - Default (`default`) — monotone grayscale (the base `:root`); the resting theme.

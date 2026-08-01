@@ -166,9 +166,20 @@
   --color-bg: var(--color-gray-100);
   --color-surface: var(--color-white);
   --color-bg-muted: var(--color-gray-200);
-  --color-fg: var(--color-gray-950);         /* higher contrast (was gray-900) */
-  --color-fg-muted: var(--color-gray-800);   /* higher contrast (was gray-700) */
-  --color-fg-subtle: var(--color-gray-600);  /* higher contrast (was gray-500) */
+  /* ---- Text contrast, raised again 2026-08-01 ------------------------------
+     "Increase contrast of the text throughout. Let's make them darker (more
+     accented), the titles, sub-titles, paragraphs etc."
+
+     Every tier moves one step toward the extreme. --color-fg is already at the
+     end of the ramp in both light (gray-950) and generic dark (gray-50), so
+     the primary text cannot go further there — it was measured at 11.98:1 on
+     eink dark before this, which is well past AAA. What was actually low were
+     the two tiers under it: 7.05 (muted — intros, captions, alumni rows) and
+     5.19 (subtle — dates, year markers). Those are what moved most.
+     ------------------------------------------------------------------------ */
+  --color-fg: var(--color-gray-950);         /* ramp end — cannot go darker */
+  --color-fg-muted: var(--color-gray-900);   /* was gray-800 */
+  --color-fg-subtle: var(--color-gray-700);  /* was gray-600 */
 
   --color-border: color-mix(in oklch, var(--color-fg) 10%, transparent);
   --color-border-strong: color-mix(in oklch, var(--color-fg) 18%, transparent);
@@ -243,7 +254,7 @@
      to base-600 = 4.97:1, i.e. AA. Same bump the default palette already makes
      for the same reason; the tier above it, fg-muted, is base-700 at 7.14:1
      and needs no help. */
-  --color-fg-subtle: var(--color-gray-700);  /* base-600 — 4.97:1 on paper */
+  --color-fg-subtle: var(--color-gray-800);  /* base-700 — was base-600, +1 step 2026-08-01 */
 
   /* Accent stays monotone, drawn from this ramp — color on this site is
      opt-in through the Accent axis, not baked into a palette (design.md).
@@ -292,9 +303,9 @@
   --color-bg: var(--color-gray-900);
   --color-surface: var(--color-gray-800);
   --color-bg-muted: var(--color-gray-800);
-  --color-fg: var(--color-gray-50);          /* higher contrast (was gray-100) */
-  --color-fg-muted: var(--color-gray-200);   /* higher contrast (was gray-300) */
-  --color-fg-subtle: var(--color-gray-400);  /* higher contrast (was gray-500) */
+  --color-fg: var(--color-gray-50);          /* ramp end — cannot go lighter */
+  --color-fg-muted: var(--color-gray-100);   /* was gray-200 */
+  --color-fg-subtle: var(--color-gray-300);  /* was gray-400 */
   --color-code-bg: var(--color-gray-950);
   --color-primary: var(--color-gray-50);
   --color-primary-fg: var(--color-gray-900);
@@ -324,9 +335,14 @@
   --color-surface: var(--color-gray-900);    /* base-900         */
   --color-bg-muted: var(--color-gray-900);
   --color-code-bg: var(--color-gray-900);    /* NOT gray-950 — that is the page */
-  --color-fg: var(--color-gray-300);         /* base-200 — 11.98:1 */
-  --color-fg-muted: var(--color-gray-500);   /* base-400 —  7.05:1 */
-  --color-fg-subtle: var(--color-gray-600);  /* base-500 —  5.19:1, Flexoki tx-2 */
+  /* ⚠️ Raised one step each 2026-08-01, which DEPARTS from kepano's Flexoki
+     docs mapping quoted above (text-1 → base-200, text-2 → base-500). That
+     mapping is still the reference for everything else in this block; these
+     three are a deliberate override for legibility, not a mistake to correct
+     back. */
+  --color-fg: var(--color-gray-200);         /* base-100 — was base-200 */
+  --color-fg-muted: var(--color-gray-400);   /* base-300 — was base-400 */
+  --color-fg-subtle: var(--color-gray-500);  /* base-400 — was base-500 */
   --color-primary: var(--color-gray-300);
   --color-primary-fg: var(--color-gray-950);
   --color-accent: var(--color-gray-300);
