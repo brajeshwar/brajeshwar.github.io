@@ -54,7 +54,7 @@ title: Books
    captions = true
    heading = "Personal Favorites &amp; Recommendations"
    id      = "favorites"
-   sub     = "Here are some of my all-time favorite books I have read and re-read and would highly recommend." %}
+   sub     = "Here are some of my all-time favorite books — ones I have read and re-read, and would highly recommend." %}
 
 {%- comment -%}
   ⚠️ CAPTURED, not written inline as an include parameter. The inline version
@@ -81,7 +81,7 @@ title: Books
 {%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
 
 {%- capture books_sub -%}
-Since 2018, I have started listing the interesting ones I read each year:
+Since 2018, I have listed the interesting ones I read each year:
 {% for p in yearly %}<a href="{{ p.url | relative_url }}">{{ p.date | date: '%Y' }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
 {%- endcapture -%}
 
