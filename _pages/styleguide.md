@@ -158,12 +158,18 @@ true.
 one flag, two grids, no entry in both. `media: video` or `media: audio` on an album item
 overlays the matching icon.
 
-⚠️ **Album entries should also carry `w:` and `h:`** — the cut file's real pixel size. `/album/`
-is masonry, so every photo keeps its own shape, and without them the card reserves the 3:4
-default and then jumps to the true ratio the moment the file lands. Jekyll cannot measure an
-image without a plugin, so the numbers are written beside the file by whoever cut it, which is
-the one moment the size is already on screen. Books and film do not need them: those grids crop
-every cell to the same shape by construction, so one hint is right for all of them.
+An album entry is **three fields — `title`, `img`, `url`** — plus optional `media`. There is no
+`alt`: the includes emit `item.alt | default: item.title`, so the **title is the alt text**.
+⚠️ That means an album title is doing two jobs at once — the caption on the home strip and the
+description a screen reader reads with the picture unseen. Write them to survive being read
+aloud.
+
+⚠️ **Album entries carry no `w:`/`h:` either, and that is deliberate.** Ragged heights are the
+point of a masonry page, and per-photo dimensions are two hand-maintained numbers that no build
+step can check. They were tried and removed on 2026-08-01. Anyone reaching for them again should
+know the measurement first: `page.scss` sets `aspect-ratio: auto` on masonry images, which
+cancels the rule that derives a ratio from those attributes, so they reserve **nothing** —
+16px with them, 16px without. The CSS has to change before the data change means anything.
 
 Album thumbnails are cut at their **native** aspect ratio, never pre-cropped to 4:3. `/album/`
 shows the real shape and the home strip crops to 4:3 itself with `object-fit: cover`; pre-cropping

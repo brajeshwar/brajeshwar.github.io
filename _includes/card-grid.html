@@ -55,20 +55,22 @@
   book covers. The `card-grid--*` class on the <ul> is what actually crops —
   see page.scss. Change the class, not these numbers.
 
-  ⚠️ PER-ITEM `w`/`h` OVERRIDE THEM, AND MASONRY NEEDS THAT (2026-08-01). A
-  fixed ratio hint is fine for a cropped grid, where every cell is the same
-  shape by construction. It is wrong for masonry, whose entire point is that
-  each photo keeps its own shape: the first real album photo is 600x464
-  landscape, and the 225x300 portrait default made the browser reserve 3:4 and
-  then snap to 1.29:1 the moment the file landed — a visible reflow, and one
-  that gets worse as photos of mixed orientation are added.
+  ⚠️ AND ON THE MASONRY GRID THEY RESERVE NOTHING AT ALL. Worth knowing before
+  anyone tries to "fix" the hint for /album/, because the obvious fix does not
+  work. page.scss sets `aspect-ratio: auto` on masonry images; the initial
+  value of `aspect-ratio` IS `auto`, so that declaration reads like a no-op and
+  is not — it cancels the UA rule that derives a ratio from these attributes.
+  Measured 2026-08-01 in Chrome, 244.8px container, image never loading:
 
-  So an item may carry `w:` and `h:`, and they win. Jekyll cannot read an
-  image's real dimensions without a plugin (guardrail 3), so the numbers are
-  authored beside the file that has them — cheap, because whoever cuts the
-  thumbnail has just seen its size. Omit them and the ratio default applies as
-  before; nothing else in the repo passes them, so the cropped grids on /books/
-  and /film/ are untouched.
+    w/h 600x464, no aspect-ratio declared  → 189.3px reserved (correct)
+    w/h 225x300, no aspect-ratio declared  → 326.4px reserved (wrong shape)
+    w/h 600x464, aspect-ratio: auto        →  16px  (nothing reserved)
+    no attributes at all                   →  16px
+
+  Per-item `w`/`h` fields were added to album.yaml to fix this and removed the
+  same day, because ragged heights are the whole point of that page and the
+  reservation was never happening anyway. If it is ever wanted, the CSS
+  declaration has to come off FIRST — the data change alone does nothing.
 {%- endcomment -%}
 {% if include.items and include.items.size > 0 %}
   {%- if include.heading %}
@@ -99,7 +101,7 @@
     <li>
       <a href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
         <figure>
-          <img width="{{ item.w | default: iw }}" height="{{ item.h | default: ih }}"
+          <img width="{{ iw }}" height="{{ ih }}"
                src="{{ src | relative_url }}"
                alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
                loading="lazy" decoding="async">

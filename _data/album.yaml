@@ -22,30 +22,37 @@
 # ---------------------------------------------------------------------------
 # FIELDS
 # ---------------------------------------------------------------------------
-# title  Shown as the caption on the home strip. /album/ prints no captions.
+# THREE FIELDS, and that is the whole shape. Deliberately so — see below.
+#
+# title  Two jobs. It is the caption on the home strip, and it is ALSO the
+#        image's alt text: the includes emit `item.alt | default: item.title`,
+#        so with no `alt` written here the title is what a screen reader reads.
+#        Brajeshwar 2026-08-01: "remove the alt too, the title should be the
+#        alt in the html." Write titles that stand up to being read aloud with
+#        the picture unseen — they are doing both jobs.
 # img    BARE filename — resolves under /static/album/ automatically. A leading
 #        "/" is the escape hatch for pointing somewhere else entirely.
 # url    Where the card links. Brajeshwar 2026-08-01: "I'm going to have custom
 #        URLs for each." Anything starting with "http" is emitted verbatim with
 #        rel="noopener"; anything else goes through relative_url. So absolute
 #        URLs belong here as written and must NOT be run through relative_url.
-# alt    ⚠️ THE ONLY DESCRIPTION THESE IMAGES CARRY. /album/ prints no captions,
-#        so a screen reader has nothing else, and `title` is used only as the
-#        alt fallback. Write it for someone who cannot see the picture.
+#
 # media  OPTIONAL — "video" or "audio" puts a small icon badge over the corner
 #        of the frame. Omit it for a still photograph, which is the default.
 #        (The section was renamed from Photos on 2026-08-01 precisely because
 #        it will carry video and audio too.)
-# w / h  The cut file's REAL pixel size. ⚠️ Worth the two seconds it costs.
-#        /album/ is masonry, so every photo keeps its own shape, and without
-#        these the card reserves the 3:4 default and then jumps to the true
-#        ratio when the file lands. Jekyll cannot measure an image without a
-#        plugin, so the numbers are recorded here by whoever cut it — which is
-#        the one moment the size is already on screen.
+#
+# ⚠️ NO `w`/`h`, AND THAT IS A DECISION, NOT AN OVERSIGHT. They were added
+# earlier on 2026-08-01 to reserve each card's box before the file loads, and
+# removed the same day: "we will have a set with varying height because of the
+# masonry. So, remove the additional w and h." Ragged heights are the point of
+# the page, and pinning each one costs two hand-maintained numbers per photo
+# that no build step can ever check. Nothing regressed by removing them —
+# page.scss sets `aspect-ratio: auto` on masonry images, which cancels the
+# reservation those attributes would have driven, so they were inert anyway
+# (measured: 16px reserved with them, 16px without). Do not add them back
+# without also taking that declaration off.
 
-- title: Edward Norton
-  url: https://album.oinam.com/album/edward-norton/
+- title: Met Edward Norton in London
+  url: https://www.instagram.com/p/DZx4WchDoVE/
   img: edward-norton.webp
-  w: 600
-  h: 464
-  alt: A selfie taken in a bookshop, two men smiling in front of floor-to-ceiling shelves packed with paperbacks
