@@ -9,8 +9,14 @@
 # ADDING A PHOTO — the whole protocol
 # ---------------------------------------------------------------------------
 # 1. Drop the master in `_src/album/<slug>.<ext>`. It goes to Git LFS by path
-#    and never ships, because `_src` starts with an underscore. Use `git add`,
-#    never `git mv` — see /styleguide/ § Keep the master for why that matters.
+#    and never ships, because `_src` starts with an underscore.
+#    ⚠️ Bring a file IN with `git add`, never `git mv`: `git mv` writes the
+#    rename straight to the index without running LFS's clean filter, so the
+#    real binary is committed and nothing looks wrong. RENAMING one that is
+#    already in `_src/` is the opposite case and `git mv` is right there — the
+#    index entry is already a pointer and moving it keeps it one (verified
+#    2026-08-01 renaming a master: 131-byte pointer before and after, against a
+#    299 KB file on disk). See /styleguide/ § Keep the master.
 # 2. Cut `static/album/<slug>.webp` from it, same stem, NATIVE aspect ratio.
 #    Do not pre-crop to 4:3: /album/ is masonry and shows the real shape, and
 #    the home strip crops to 4:3 itself with `object-fit: cover`.
@@ -93,12 +99,12 @@
 # So a photo can go up the moment it is cut and become a link whenever its
 # destination exists. Add the line, nothing else changes.
 #
-# FILENAMES ARE DATED — `YYYY-MM-DD-slug` — and the published .webp keeps the
-# same stem as its master in _src/album/. The date is when the photo was taken,
-# which is not the order this file is read in: ordering is position, last entry
-# newest, exactly as with books. They agree today and are allowed to diverge;
-# if you add an old photograph, decide whether it belongs at the end (newest
-# ADDED) or in date order, and stay consistent.
+# FILENAMES ARE DATED — `YYYY-MM-DD-slug` — the date the photo was taken, and
+# the published .webp keeps the same stem as its master in _src/album/. Name
+# the slug for the subject, not the look: this file's third entry was cut as
+# `city-skyline-at-sunset` because the place was a guess, and became
+# `2007-07-17-bombay` once Brajeshwar titled it. Rename the master, the cut and
+# the `img:` line together, or the pair stops matching.
 
 - title: Oinam Software acquired by Nanocast
   img: 2006-04-08-oinam-software-acquired-by-nanocast.webp
@@ -109,7 +115,7 @@
 
 - title: Bombay
   url: /2009/bombay/
-  img: 2007-07-17-city-skyline-at-sunset.webp
+  img: 2007-07-17-bombay.webp
 
 - title: Fresh start with an iMac
   url: https://unsplash.com/photos/silver-imac-with-apple-magic-keyboard-and-magic-mouse-fGkBx7hX9Ms
