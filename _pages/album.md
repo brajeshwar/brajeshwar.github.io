@@ -21,8 +21,8 @@ title: Album
   their sizing while any prose on the page keeps the reading measure.
 
   The "All Time Favorites" split that /books/ has is deliberately absent —
-  `highlight` is supported by the data shape, but marking favourites among six
-  placeholders would be theatre. Add the section when there are real photos to
+  `highlight` is supported by the data shape, but marking favorites among six
+  placeholders would be theater. Add the section when there are real photos to
   choose between.
 {%- endcomment -%}
 {% include card-grid.html

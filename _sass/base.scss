@@ -84,7 +84,7 @@ main {
 }
 
 /* The reading measure is a constraint on PROSE, not a second site width.
-   It now sits on the <article> INSIDE that standard box, centred, so the text
+   It now sits on the <article> INSIDE that standard box, centered, so the text
    still wraps at ~66 characters while its container matches every other page.
    Widen --measure if the lines should be longer; do not widen this by moving
    the class back up onto `main`, or the two-widths problem returns.
@@ -97,7 +97,7 @@ main {
   width: var(--body-width);
   max-width: var(--body-width-ideal);
 
-  /* LEFT of the band, not centred — `0 auto` is margin-left 0, margin-right
+  /* LEFT of the band, not centered — `0 auto` is margin-left 0, margin-right
      auto. This is what makes the narrow site width possible: the sidenote
      gutter lives in the space to the right, and is paid for once instead of
      being mirrored into dead space on the left. It also puts the prose's left
@@ -300,7 +300,7 @@ h6 { font-size: var(--step--2); }
 
    Without it these are (0,1,1) — an element plus a pseudo-class — which is
    higher than a plain single class. Every piece of chrome that happens to be
-   a link therefore LOST its own colour the moment it was visited, and took
+   a link therefore LOST its own color the moment it was visited, and took
    --text-color-link instead. That is --color-accent: gray-900 by default, so
    the symptom was "this went slightly too dark" rather than anything obviously
    broken, and it became a wrong hue outright for any reader who picked an
@@ -324,10 +324,10 @@ h6 { font-size: var(--step--2); }
    says.
 
    ⚠️ Only `color` was ever affected. Browsers restrict :visited styling to a
-   short list of colour properties, so the `text-decoration` here never leaked
+   short list of color properties, so the `text-decoration` here never leaked
    into visited state — and `.post-nav__link:hover` already re-states
    `text-decoration: none` at (0,2,0), so hover was covered too. The blast
-   radius of this change is colour, on the rules listed above, and nothing
+   radius of this change is color, on the rules listed above, and nothing
    else: everything at (0,1,1) or higher already won and is untouched. */
 :where(a, a:visited) {
   color: var(--text-color-link);
@@ -349,16 +349,16 @@ h6 { font-size: var(--step--2); }
    that goes with this lives in post.scss, because it is post-only.
 
    ACCENT, 2026-07-28 (Brajeshwar: "I'm also good with introducing accent
-   colour here", after e360's coral pull quotes). The rule takes
+   color here", after e360's coral pull quotes). The rule takes
    --color-accent, NOT a hardcoded hue. themes.scss is explicit that the base
    is monotone and --color-accent resolves to a gray until someone opts into a
    hue via the appearance panel's data-accent axis — so this reads as e360's
    coral for a reader who chose an accent and changes nothing for everyone
-   else. Writing a literal colour here would have shipped hue to people who
-   deliberately have none, and would have been the only hardcoded colour
+   else. Writing a literal color here would have shipped hue to people who
+   deliberately have none, and would have been the only hardcoded color
    outside themes.scss.
 
-   The rule is also the ONLY thing that carries the accent. Colouring the quote
+   The rule is also the ONLY thing that carries the accent. Coloring the quote
    TEXT was the other option and is wrong at this scale: this fires on all 193
    blockquotes across 176 posts with no per-quote opt-out (guardrail 1 — no
    content edits), and e360 uses its coral editorially, a few times an article. */
@@ -385,7 +385,7 @@ blockquote {
      swapping to --border-size on 2026-07-28 to "bump it for presence" cut it
      from 3px to 1px instead. Do not touch this without reading config.scss:202.
 
-     The colour change hid the mistake. On eink dark the old --rule resolved to
+     The color change hid the mistake. On eink dark the old --rule resolved to
      --color-border, a 10%-opacity ghost at 1.10:1 against the page — so the
      3px bar was effectively invisible, and 1px of solid accent at 11.98:1 still
      looked like an improvement. Contrast went up 10x while the ink halved. */
@@ -457,7 +457,7 @@ aside, .aside {
    NOTE sidenotes.js still lists `aside.right, .aside.right` among the
    wide media it dodges when placing notes. That is left in on purpose —
    it is a querySelectorAll that currently matches nothing and costs
-   nothing, and it is the right behaviour if one is ever authored. */
+   nothing, and it is the right behavior if one is ever authored. */
 
 li::marker {
   color: var(--text-color-low);
@@ -600,10 +600,10 @@ figure img {
    container").
 
    It used to be `max-width: --body-width-ideal; margin: 0 auto` — capped at
-   the reading measure and centred inside its figure. That was invisible
+   the reading measure and centered inside its figure. That was invisible
    while every figure was column-width, and wrong the moment wide media
    started breaking out to the band: a 1024px figure got a 665px caption,
-   centred, so the caption's rule sat inset from both edges of the image
+   centered, so the caption's rule sat inset from both edges of the image
    above it and lined up with nothing.
 
    Full width of the parent instead, so the caption's underline always
@@ -651,7 +651,7 @@ figcaption {
        margin-inline: calc(50% - 50vw);
        width: 100vw;
        transform: translateX(calc(50vw - 50%));
-   That made the element viewport-wide and re-centred it, so it spilled
+   That made the element viewport-wide and re-centered it, so it spilled
    equally into BOTH margins — including the left one, which on this
    asymmetric layout is the page's alignment edge.
 
@@ -673,7 +673,7 @@ figcaption {
 
    The two classes are now identical. Both are kept because both are in the
    content (24 `.full`, 58 `.large` across the archive) and content is not
-   ours to edit — but there is one behaviour to maintain, not two.
+   ours to edit — but there is one behavior to maintain, not two.
 
    `.large` keeps its breakpoint: below bp.$small there is no room to
    break out of, so it stays in the flow. `.full` breaks out at every width,
@@ -697,7 +697,7 @@ img.full {
 /* (`figure.full figcaption, figure.large figcaption { padding-inline: 0 }`
    was here. Removed 2026-07-27 — the base figcaption rule above already
    sets `padding: X 0`, so the inline padding was 0 for every caption and
-   this restated it. It was there to compensate for the centring that is
+   this restated it. It was there to compensate for the centering that is
    now gone.) */
 
 /* ---- Footnotes + sidenotes ---------------------------------------------------- */
@@ -749,7 +749,7 @@ img.full {
      viewport, which let notes drift into the margin outside the band where they
      aligned with nothing.
 
-     NO `/ 2` any more. That halving assumed a CENTRED column, splitting the
+     NO `/ 2` any more. That halving assumed a CENTERED column, splitting the
      leftover between two margins. The article is left-aligned in the band now,
      so the whole leftover is the gutter: band − column − gap. Leaving the
      divide in would have starved every note to half its room.

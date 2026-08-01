@@ -30,23 +30,23 @@ treatments. Identity comes from typographic rhythm and restraint, not chrome. Th
 ethos borrowed from the sites studied in [`inspirations.md`](inspirations.md) (Yale e360,
 BBC, The Walrus, Tufte, Aresluna).
 
-## Monotone by default, colour is opt-in
+## Monotone by default, color is opt-in
 The default theme is monotone grayscale — a zero-chroma gray scale, where even the accent
-(links, nav pill, logo) is gray, not a hue. Colour is never the default; it is something a
+(links, nav pill, logo) is gray, not a hue. Color is never the default; it is something a
 reader *chooses*: a tinted palette (Cool = Nord, Warm = Flexoki) or a custom accent via the
 appearance panel. Even the tinted palettes keep a monotone accent — Flexoki ships eight
 accent hues and Warm uses none of them, because hue on this site belongs to the Accent
 axis. This keeps the resting site calm and print-like, and forces the design to work in
-pure value contrast before any colour is added. Implementation, and how to keep it
+pure value contrast before any color is added. Implementation, and how to keep it
 monotone, is in [`styles.md`](styles.md) §2.
 
 ## Contrast & legibility
 Aim for strong, comfortable contrast: body text should clear WCAG AA (4.5:1) and ideally
-approach AAA (7:1) for long-form reading. Because the default is monotone, colour cannot
+approach AAA (7:1) for long-form reading. Because the default is monotone, color cannot
 carry meaning, so affordance rides on other signals. Links are underlined, always, not
-merely a different shade — the underline is quiet at rest (a muted decoration colour) and
+merely a different shade — the underline is quiet at rest (a muted decoration color) and
 strengthens on hover and focus, so a reader never has to guess what is a link. Emphasis
-comes from weight and space, not colour. And muted, subtle grays must stay honestly
+comes from weight and space, not color. And muted, subtle grays must stay honestly
 readable: muted is for hierarchy, not for hiding text below a legible contrast ratio.
 
 ## Comfortable measure (reading width by character count)

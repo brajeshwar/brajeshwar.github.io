@@ -38,7 +38,7 @@
    A big "20" set in the margin to the left of the tray, reading as the common
    prefix for every 2-digit label beside it: 20|26, 20|25, 20|24.
 
-   ⚠️ It used to be the whole "2026", centred on the tray's LEFT EDGE so that
+   ⚠️ It used to be the whole "2026", centered on the tray's LEFT EDGE so that
    the opaque tray hid the second half. That looked identical but could not be
    spaced: the four digits are one string, so nudging it left to open a gap
    beside the "0" dragged the "2" of "26" out into the margin with it.
@@ -179,7 +179,7 @@
    The background is a color-mix of the foreground into transparency rather
    than any --bg-* token, because there is no token that differs from the
    strip's own background in BOTH modes — --color-surface collapses onto it in
-   dark. Mixing the text colour works in every mode and palette by
+   dark. Mixing the text color works in every mode and palette by
    construction, and stays monotone by default (design.md).
    NOTE: --bg-color-high is NOT a raised background — it bridges to
    --color-primary, the FOREGROUND. Using it here painted a near-black chip

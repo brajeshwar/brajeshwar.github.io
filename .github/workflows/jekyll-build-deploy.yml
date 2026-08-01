@@ -15,7 +15,7 @@
 #   - upload-pages-artifact@v5 still defaults path to "_site/"
 #   - setup-node@v7 still takes node-version
 #
-# Two behaviour changes that DON'T bite here, worth knowing if that ever changes:
+# Two behavior changes that DON'T bite here, worth knowing if that ever changes:
 #   - setup-node v5+ auto-enables package-manager caching when package.json has
 #     a `packageManager` field. This repo has no package.json at all, so it
 #     cannot engage. If one is ever added, set `package-manager-cache: false`

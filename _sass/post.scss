@@ -82,7 +82,7 @@ photo-cover__desc {
      auto), because .post carries that class and post.css loads AFTER base.css
      at equal specificity — whatever is written here wins. Getting this wrong is
      invisible in the CSS and obvious on the page: an earlier `margin: X 0`
-     cancelled the auto entirely, and `margin: X auto` re-centred the article
+     canceled the auto entirely, and `margin: X auto` re-centered the article
      and collapsed the sidenote gutter. */
   margin: var(--space-s) auto var(--space-s) 0;
   /* font-size removed 2026-07-27: `main` sets --step-0 for all content now, so
@@ -196,8 +196,8 @@ photo-cover__desc {
 
 /* ---- Blockquote breakout ---------------------------------------
    Yale e360 runs its pull quotes wider than the reading column. Adapted
-   rather than copied: e360 CENTRES its quote, widening in both directions,
-   which it can do because its column is centred. Ours is not — .container-ideal
+   rather than copied: e360 CENTERS its quote, widening in both directions,
+   which it can do because its column is centered. Ours is not — .container-ideal
    is `margin-inline: 0 auto`, so the article's left edge is pinned to the
    band edge that the header rule, the footer rule and the logo all align to.
    So the quote grows to the RIGHT only and keeps that left edge, which is what
@@ -261,7 +261,7 @@ photo-cover__desc {
 .post-nav {
   display: flex;
 
-  /* Containing block for the absolutely-centred random button below. */
+  /* Containing block for the absolutely-centered random button below. */
   position: relative;
 
   /* The random circle's diameter, declared here rather than on the button so
@@ -271,14 +271,14 @@ photo-cover__desc {
 
   /* Its resting fill. --color-primary straight was too heavy (Brajeshwar,
      2026-07-27: "The Random's button is too dark") — in light mode that is
-     gray-900, a near-black disc in a quiet grey bar, which shouts on a page
+     gray-900, a near-black disc in a quiet gray bar, which shouts on a page
      whose whole argument is restraint.
 
      Eased 22% toward the bar it sits in, rather than swapped for a fixed
-     grey. That keeps it derived from the same token the selected pill uses,
+     gray. That keeps it derived from the same token the selected pill uses,
      and it stays correct in every theme without a second rule: in light it
      lands around gray-700, in dark it steps the light disc down to a soft
-     off-white. A hardcoded grey would have had to be re-picked per palette.
+     off-white. A hardcoded gray would have had to be re-picked per palette.
 
      The full --color-primary is still used — on hover, where the extra weight
      now reads as activation instead of as the default state. */
@@ -293,7 +293,7 @@ photo-cover__desc {
      margin-BLOCK, never the `margin: X auto` shorthand. While this did wear
      .container-ideal (`margin-inline: 0 auto`), a shorthand here set
      margin-left too — and post.css loads after base.css at equal
-     specificity, so `auto` won and the bar was CENTRED while the article was
+     specificity, so `auto` won and the bar was CENTERED while the article was
      left-aligned, 179px out of step with the prose it belongs to. The class
      is gone but the habit stays: set only the axis this rule has business
      setting. */
@@ -339,7 +339,7 @@ photo-cover__desc {
 /* The per-half `border-radius` rules that briefly stood in for
    `overflow: hidden` are gone (2026-07-27). They existed only because the
    circle was taller than the bar and could not be clipped; inverting its
-   colours removed the need for the extra height, and the clip came back —
+   colors removed the need for the extra height, and the clip came back —
    one declaration doing what four rules and two :has() selectors were
    doing, with no first/last-post special case to maintain. */
 
@@ -347,12 +347,12 @@ photo-cover__desc {
    A third piece in the bar (2026-07-27, Brajeshwar): a circle in the middle
    that goes to /random/, which then sends the reader to a random post.
 
-   ABSOLUTELY CENTRED, not laid out in flow. The bar's links are `flex: 1`,
-   so on the first and last post — the only ones with a single neighbour —
+   ABSOLUTELY CENTERED, not laid out in flow. The bar's links are `flex: 1`,
+   so on the first and last post — the only ones with a single neighbor —
    the one remaining link takes the whole width and a normal-flow button
-   would be pushed to whichever end was free. Centring it against the bar
+   would be pushed to whichever end was free. Centering it against the bar
    itself means it sits in the same place on every post, and the links keep
-   the flex behaviour they already had, untouched.
+   the flex behavior they already had, untouched.
 
    The links justify their text to the outer edges, so the middle of the bar
    is empty on every variant and there is nothing for the circle to cover.
@@ -365,7 +365,7 @@ photo-cover__desc {
    transparent border would show the bar through it and separate nothing.
    This is the second of the two dividers tried and rejected back when the
    bar had only two halves: a hairline read as a rule drawn ON the bar, and
-   inverting it to the page colour read as a slit cut THROUGH it. The slit
+   inverting it to the page color read as a slit cut THROUGH it. The slit
    was the better of the two and was still wrong for a straight line, which
    is a mark asking to be noticed on an element whose job is to be quiet.
    Around a circle it is not a mark — it is the button reading as punched
@@ -393,7 +393,7 @@ photo-cover__desc {
      whole background color … If we do that, we do not need to increase the
      size above the PREV | NEXT container."
 
-     Right diagnosis. The circle was the bar's own colour with a 1px ring, so
+     Right diagnosis. The circle was the bar's own color with a 1px ring, so
      it had almost nothing to distinguish it and growing it only made a
      bigger indistinct shape. Size is still doing one job — a comfortable hit
      target, well past the 24px WCAG 2.5.8 minimum — but it is no longer
@@ -402,7 +402,7 @@ photo-cover__desc {
   height: var(--post-nav-random-size);
   border-radius: 50%;
 
-  /* INVERTED, and not with new colours. --color-primary / --color-primary-fg
+  /* INVERTED, and not with new colors. --color-primary / --color-primary-fg
      is the pair the appearance panel's and the /about/ filter's SELECTED pill
      already use, so this reads as the same "on" state the site uses
      everywhere else rather than as a one-off. It inverts correctly on its own
@@ -410,8 +410,8 @@ photo-cover__desc {
      dark, and the accent when a reader has picked one — so there is no
      per-theme rule here and none is needed.
 
-     No ring. The 1px page-coloured border existed to separate a circle that
-     was the same colour as the bar; at this contrast it would be a light halo
+     No ring. The 1px page-colored border existed to separate a circle that
+     was the same color as the bar; at this contrast it would be a light halo
      on a dark disc, which reads as a rendering fault rather than a gap. */
   background-color: var(--post-nav-random-bg);
 
@@ -483,7 +483,7 @@ photo-cover__desc {
    page background read as a slit cut THROUGH the bar — better, but still a
    mark asking to be noticed on an element whose whole job is quiet.
 
-   Nothing is the right answer: the halves are the same colour, so there is
+   Nothing is the right answer: the halves are the same color, so there is
    no seam to see until the pointer is over one of them, and then the hover
    tint draws the boundary exactly where it matters and only while it
    matters. It also removes the first/last-post special case entirely —

@@ -35,7 +35,7 @@ title: Books
   `highlight: true` splits _data/books.yaml in two. `where_exp` rather than a
   second data file, because two files would mean two places a book can live and
   a way for it to end up in both or neither — the flag is the single fact and
-  the grids are two views of it. Promoting a book to a favourite is one word in
+  the grids are two views of it. Promoting a book to a favorite is one word in
   one place.
 
   ⚠️ `b.highlight != true`, not `b.highlight == false`. The key is OPTIONAL, so
@@ -43,11 +43,11 @@ title: Books
   the ones explicitly written `highlight: false` and drop every book that simply
   omits it, which is nearly all of them.
 {%- endcomment -%}
-{% assign favourites = site.data.books | where: "highlight", true %}
+{% assign favorites = site.data.books | where: "highlight", true %}
 {% assign rest = site.data.books | where_exp: "b", "b.highlight != true" %}
 
 {% include card-grid.html
-   items   = favourites
+   items   = favorites
    dir     = "books"
    ratio   = "3x4"
    captions = true

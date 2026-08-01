@@ -33,13 +33,13 @@
    Test with `make serve` — `jekyll serve` alone does not build the index,
    and its --watch wipes _site/pagefind/.
 
-   NO raw colour values (since 2026-07-19); there are no exceptions to
-   "colour only in themes.css".
+   NO raw color values (since 2026-07-19); there are no exceptions to
+   "color only in themes.css".
    ============================================================ */
 
 /* Pagefind's own theming vars, fed from our tokens. Two `.pagefind-ui`
    blocks were merged here — one set the geometry vars, the other the
-   colour vars, 200 lines apart. */
+   color vars, 200 lines apart. */
 #search .pagefind-ui {
   margin: var(--space) auto;
 
@@ -257,7 +257,7 @@
    search-hit treatment, overriding the global rule in base.css.
 
    Until the #search scoping above, this lost to the browser default and
-   hits rendered in pure yellow on a site whose whole point is that colour
+   hits rendered in pure yellow on a site whose whole point is that color
    is opt-in. */
 #search .pagefind-ui mark {
   background-color: var(--mark);
@@ -309,7 +309,7 @@
    __message blocks, which appeared twice each.
 
    The hardcoded px values are gone too — this file uses the site's
-   --space-*, --step-*, --border-* and colour tokens like every other
+   --space-*, --step-*, --border-* and color tokens like every other
    file, which is what lets the search page follow the reader's text-size
    and palette instead of sitting at a fixed 16px/8px.
    ------------------------------------------------------------ */

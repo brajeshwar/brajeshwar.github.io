@@ -14,7 +14,7 @@ and the prev/next bar all end on the same line. The number is not a taste call: 
 reading measure plus one sidenote gutter — `665 + 56 + 256 = 977`, rounded up.
 
 Prose sits at the **measure** (`66rch`, ~665px) *inside* that band, left-aligned rather than
-centred. The left edge of the prose is the site's alignment line: the header rule, the footer
+centered. The left edge of the prose is the site's alignment line: the header rule, the footer
 rule and the logo all start from it.
 
 **Anything wide grows to the RIGHT.** Never into the left margin. There is exactly one
@@ -163,7 +163,7 @@ Gallery: a container, then a plain markdown list of images, optionally linked.
 Size and float classes: `.small` (40%) · `.medium` (60%) · `.left` · `.right`.
 
 `.large` and `.full` both take the whole band and are now **identical**. Both are kept because
-both are in the archive, but there is one behaviour to maintain, not two.
+both are in the archive, but there is one behavior to maintain, not two.
 
 ## Videos and embeds
 
@@ -208,12 +208,12 @@ Custom, strange, and *why I did that* ones — a shorter list than it used to be
 
 Under every article: **PREV · (shuffle) · NEXT**. One bar, prev hard left, next hard right,
 and whichever exists fills the width it is given — the first and last post have only one
-neighbour and their single link takes the whole bar rather than leaving half of it empty.
+neighbor and their single link takes the whole bar rather than leaving half of it empty.
 
 The circle in the middle goes to `/random/`, which sends you to a random post. It is 38px
-inside a 46px bar, centred *absolutely* rather than laid out in flow, so it sits in the same
+inside a 46px bar, centered *absolutely* rather than laid out in flow, so it sits in the same
 place whether the bar has two links or one. Its fill is `--color-primary` eased toward the bar
-— the same "on" colour the selected pill wears — so it inverts correctly in every theme
+— the same "on" color the selected pill wears — so it inverts correctly in every theme
 without a per-theme rule.
 
 `/random/` carries the list of every post URL inline and picks one in JavaScript. With
@@ -231,8 +231,8 @@ paint, so nothing flashes:
 - **Text Size** — five steps, scaling everything inside `main`
 - **Accent** — five swatches
 
-Colour is **opt-in**. The resting theme is monotone grey and links are underlined rather than
-coloured. Prose follows the reader's font choice; the interface never does.
+Color is **opt-in**. The resting theme is monotone gray and links are underlined rather than
+colored. Prose follows the reader's font choice; the interface never does.
 
 ---
 

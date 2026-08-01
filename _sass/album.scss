@@ -19,7 +19,7 @@
 /* No max-width on the card any more. The grid in base.css sizes the columns
    now, and a cap here would stop them stretching to fill the band — which was
    the whole point of going fluid. Tune the density with --card-min instead:
-   it is the minimum column width the auto-fill grid honours. */
+   it is the minimum column width the auto-fill grid honors. */
 @media only screen and (max-width: bp.$small) {
   .album .item__cards {
     --card-min: 8rem;                /* 128px — more, smaller cards on a phone */

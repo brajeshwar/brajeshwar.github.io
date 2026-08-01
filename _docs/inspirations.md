@@ -48,7 +48,7 @@ fill) right at the reference: reveal-in-place rather than jump-to-foot.
 Figures have a width vocabulary. Each picks from a scale — `width-chute-narrow`,
 `width-chute`, `width-aside`, `width-super-aside` — so images can sit narrower than the
 text, match it, or bleed into the gutters. Aspect-ratio placeholder classes reserve space
-and prevent layout shift, and images zoom into a "theatre" overlay.
+and prevent layout shift, and images zoom into a "theater" overlay.
 
 A left-gutter table of contents (~250–300px) accompanies long essays. And there is
 personality in the margins of the system: custom cursors, pixel fonts for small UI
@@ -102,15 +102,15 @@ introducing accent color here."* Studied on
 
 Adapted rather than copied, in two places:
 
-- **Direction.** e360 *centres* its quote and grows both ways, which it can do because its
-  column is centred. Ours is not — `.container-ideal` pins the article's left edge to the
+- **Direction.** e360 *centers* its quote and grows both ways, which it can do because its
+  column is centered. Ours is not — `.container-ideal` pins the article's left edge to the
   band edge that the header rule, the footer rule and the logo all align to. So the quote
   grows right only. Rule in `_sass/post.scss`, sized to the band with the same
   `min(96vw, --body-width-max)` expression `.sidenote` bounds itself with.
-- **Colour.** The accent lands on the left rule via `var(--color-accent)`, never a literal.
+- **Color.** The accent lands on the left rule via `var(--color-accent)`, never a literal.
   `themes.scss` is explicit that the resting site is monotone and the accent is opt-in, so
   this shows e360's coral to a reader who chose an accent and stays gray for everyone else.
-  Colouring the quote *text* was rejected: this fires on all 193 blockquotes in 176 posts
+  Coloring the quote *text* was rejected: this fires on all 193 blockquotes in 176 posts
   with no per-quote opt-out (guardrail 1), where e360 uses the device a few times an article.
 
 ⚠️ **The breakout is gated on `:not(.has-sidenotes)`** — the gutter it grows into is the

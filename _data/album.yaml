@@ -9,7 +9,7 @@
 # ⚠️ EVERY IMAGE HERE IS BORROWED FROM /static/books/. There is no
 # /static/album/ directory yet, and a broken <img> would read as a bug rather
 # than as a placeholder. The strip renders them at 4:3, so these 3:4 book
-# covers are centre-cropped by `object-fit: cover` — they will look like
+# covers are center-cropped by `object-fit: cover` — they will look like
 # cropped book covers, because that is exactly what they are.
 #
 # TO REPLACE: drop real files into /static/album/, then rewrite this file with
@@ -49,7 +49,7 @@
 
 
 - title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/harbour-morning/
+  url: https://album.oinam.com/album/harbor-morning/
   img: /static/books/leonardo-da-vinci.webp
   alt: Placeholder thumbnail, borrowed from the books shelf
 
@@ -84,7 +84,7 @@
 
 
 - title: Placeholder — replace with a real photo
-  url: https://album.oinam.com/album/harbour-morning-2/
+  url: https://album.oinam.com/album/harbor-morning-2/
   img: /static/books/leonardo-da-vinci.webp
   alt: Placeholder thumbnail, borrowed from the books shelf
   media: video

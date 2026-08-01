@@ -11,12 +11,12 @@ markdown: kramdown
 # wrapper — base.css already gives <pre> its block, monospace and scroll.
 #
 # Why: only 55 of 1,456 posts have a code block, 257 of their 310 blocks are
-# plaintext (nothing to colour), and Brajeshwar does not plan to write
+# plaintext (nothing to color), and Brajeshwar does not plan to write
 # code-heavy posts. Measured saving on those 55 posts: 261,791 bytes, 8.8%
 # of their HTML — the span markup plus the code.css bundle, which is keyed
 # off .highlight and so now never loads.
 #
-# It is also the only place colour appeared by default on a monotone site.
+# It is also the only place color appeared by default on a monotone site.
 #
 # To bring it back, three steps:
 #   1. delete the `kramdown:` block below;

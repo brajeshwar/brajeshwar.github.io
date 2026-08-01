@@ -80,7 +80,7 @@
 // The output carries a 3-byte UTF-8 BOM. That is Dart Sass declaring the
 // encoding, and it is correct: there is a `content: "↵"` in the sidenote rules,
 // the one non-ASCII character in the file. `sass: charset: false` is not
-// honoured by jekyll-sass-converter 3.1, and stripping the BOM by hand would
+// honored by jekyll-sass-converter 3.1, and stripping the BOM by hand would
 // trade a correctness guard for three bytes on a file cached for a year.
 // ===========================================================================
 

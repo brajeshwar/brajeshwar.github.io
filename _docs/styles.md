@@ -197,7 +197,7 @@ Theming is split into two independent axes, both set on `<html>`:
 | Axis | Attribute | Values | What it controls |
 |---|---|---|---|
 | **Mode** | `data-theme` | `auto` (default) · `light` · `dark` | light ↔ dark (appearance) |
-| **Palette** | `data-palette` | `default` · `nord` (Cool) · `eink` (Warm = Flexoki) | the colour scheme / hue |
+| **Palette** | `data-palette` | `default` · `nord` (Cool) · `eink` (Warm = Flexoki) | the color scheme / hue |
 
 They compose freely: every palette has a light and a dark form. "Nord + Dark",
 "Solarized + Light", "E-ink + Auto" all work. `auto` follows `prefers-color-scheme`;
@@ -205,7 +205,7 @@ They compose freely: every palette has a light and a dark form. "Nord + Dark",
 
 Plus two more axes: `data-font` (see §1) and accent (`data-accent="custom"` + an inline
 `--ov-accent`), which recolours links / nav / primary surfaces — 6 swatches
-(Blue/Purple/Green/Amber/Red/Cyan) + Default + a custom colour picker.
+(Blue/Purple/Green/Amber/Red/Cyan) + Default + a custom color picker.
 
 ## How the two axes stay independent — token layers
 1. Raw scale — `--color-gray-50 … --color-gray-950` (+ white/black). Palettes
@@ -237,7 +237,7 @@ New components should use the `--color-*` semantic tokens directly.
   each axis to `localStorage` (`theme` / `palette` / `font`). It also updates
   `<meta name="theme-color">` from the computed `body` background. Ready-guard on
   `DOMContentLoaded` (required — see the search.js cache note in [`search.md`](search.md)).
-  - Accent is also persisted: `localStorage('accent')` holds the colour string (oklch or
+  - Accent is also persisted: `localStorage('accent')` holds the color string (oklch or
     `#hex`); the no-flash snippet sets `--ov-accent` + `data-accent` from it. The
     `:root[data-accent][data-accent][data-accent]` rule (in `themes.css`) maps `--ov-accent`
     onto `--color-accent` *and* `--color-primary` (so links, nav pill, logo, primary buttons
@@ -250,7 +250,7 @@ New components should use the `--color-*` semantic tokens directly.
 The base `:root` palette is pure zero-chroma gray (`oklch(L 0 0)`) and the default accent
 is gray (`--color-accent: var(--color-gray-900)`) — so the resting site, links included,
 carries no hue. This is deliberate (see [`design.md`](design.md) → *Monotone by default*);
-keep it monotone. Colour is opt-in only, via a tinted palette or the accent axis.
+keep it monotone. Color is opt-in only, via a tinted palette or the accent axis.
 
 ### The two structural rules (2026-08-01)
 
@@ -273,7 +273,7 @@ the page.
 border by exactly one tier; a third user starts eroding that. Note `chrome.scss` still uses
 plain `--rule` for the search-result separator and the tool-icon divider, which is correct.
 
-⚠️ **Measuring an `oklch()` colour with alpha needs a canvas.** `getComputedStyle().color` now
+⚠️ **Measuring an `oklch()` color with alpha needs a canvas.** `getComputedStyle().color` now
 returns `oklch(…)` rather than `rgb(…)` in Chrome, so the usual trick of parsing the computed
 string yields nonsense — it did here, reporting all three borders as identical at 1.10 and the
 change as having done nothing. Paint the background then the border onto a canvas and read the
@@ -281,7 +281,7 @@ pixel; that composites the alpha for you and is the only reading that reflects w
 screen.
 
 ## Links & contrast
-Because the default is monotone, link affordance is the underline, not colour
+Because the default is monotone, link affordance is the underline, not color
 (`base.css`): `a { text-decoration: underline; text-decoration-color: var(--text-color-lower); }`
 quiet at rest, thickening to `--text-color` on hover/focus. Target body contrast WCAG AA+
 (4.5:1, toward 7:1). Don't push muted grays below legible contrast — `--text-color-low` /
@@ -331,7 +331,7 @@ unreadable for sidenote body text. `--color-fg-subtle` is stepped one notch to b
 - Migrate components off the legacy bridge onto `--color-*` directly (cleanup, optional).
 
 > Accent = five swatches (Default + Blue/Green/Amber/Red), on the "Accent" row of the
-> panel grid like every other control; no custom colour picker. Set via `applyAccent`
+> panel grid like every other control; no custom color picker. Set via `applyAccent`
 > → inline `--ov-accent` + `data-accent="custom"`, persisted as `localStorage('accent')`.
 > Panel controls are segmented pills — see *Pill* in §6, which is now a shared component
 > rather than something the panel owns.
@@ -353,7 +353,7 @@ the repo root (`brajeshwar-logo.svg`, `brajeshwar-logotype.svg`, `brajeshwar-log
 `-circle`, `-bg`, `-nobg`, `-light`). The inline SVG picks up `currentColor`, so the mark
 follows the active theme and accent.
 
-The accent axis (§2) is the brand hook — where brand colour is expressed. `Default` is the
+The accent axis (§2) is the brand hook — where brand color is expressed. `Default` is the
 restrained neutral identity; the swatches + custom picker let a reader (or a future brand
 refresh) recolour links, nav pill, and the logo in one move via `--ov-accent`.
 
@@ -375,7 +375,7 @@ text-first design exactly.
 
 Icons are inlined as plain text — no HTTP request. Paste the raw `<svg>` markup directly into
 the template (as with `brajeshwar-logo.svg`). Because it uses `stroke="currentColor"`, each
-icon inherits the surrounding text colour — so it follows theme, palette, and accent for
+icon inherits the surrounding text color — so it follows theme, palette, and accent for
 free, and costs zero extra requests and a few hundred bytes each. No icon font, no sprite
 sheet, no `<img>`.
 
@@ -509,7 +509,7 @@ Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (
 
     _sass/
       config.css      ratios, scales, spacing, breakpoints   ← must stay first
-      themes.css      palettes, light/dark, webfonts         ← only file with raw colour
+      themes.css      palettes, light/dark, webfonts         ← only file with raw color
       base.css        reset, type, tables, images, cards,
                       footnotes, block utilities
       chrome.css      header, footer, appearance, search
@@ -526,7 +526,7 @@ Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (
 
 > The three tiers — base, per-layout bundle, per-page opt-in — described how CSS was
 > *delivered* until 2026-07-27, gated by the `styles:` front-matter key. Delivery is now one
-> file for everyone and that key is gone. The grouping survives as *organisation*: it is
+> file for everyone and that key is gone. The grouping survives as *organization*: it is
 > still how you decide which file to open. It is no longer what ships where.
 
 `assets/styles/site.css` is the manifest. It is a `.css` file with front matter (load-bearing
@@ -584,14 +584,14 @@ The corollary is the rule in *The principle, restated* above: since nothing is g
 anything page-specific has to say so in the selector. Anchor to a class or a custom
 element. A bare `main > article > h2` is a bug waiting for the next page type.
 
-### Element defaults are `:where()`-wrapped — link colours especially (2026-07-27)
+### Element defaults are `:where()`-wrapped — link colors especially (2026-07-27)
 
-`base.scss` sets link colour as `:where(a, a:visited)` and `:where(a:hover, a:active)`, which
+`base.scss` sets link color as `:where(a, a:visited)` and `:where(a:hover, a:active)`, which
 is zero specificity. Any component rule beats it. That is deliberate and it is the fix for
 a bug that had spread across the whole site.
 
 Unwrapped, those selectors are (0,1,1) — an element plus a pseudo-class — which is *higher
-than a plain class*. So every piece of chrome that happens to be a link lost its own colour the
+than a plain class*. So every piece of chrome that happens to be a link lost its own color the
 moment it was visited and took `--text-color-link` instead. `--text-color-link` is
 `--color-accent`, gray-900 by default, so the symptom read as *"this went slightly too dark"*
 rather than as anything broken — and became a wrong hue outright for a reader who had picked
@@ -613,8 +613,8 @@ rule.** The instance-level patch works and was what the random button carried fo
 but it leaves the next chrome link to arrive with the same bug. A default should be the easiest
 thing in the cascade to override.
 
-Blast radius, checked rather than assumed: colour only, on those six. Browsers restrict
-`:visited` styling to a short list of colour properties, so the `text-decoration` in those
+Blast radius, checked rather than assumed: color only, on those six. Browsers restrict
+`:visited` styling to a short list of color properties, so the `text-decoration` in those
 rules never leaked into visited state; hover was already covered by `.post-nav__link:hover`
 re-stating it at (0,2,0). Everything at (0,1,1) or higher already won and is untouched —
 `.footer-links a`, `.footer-social a`, `.archive-years a`, the Pagefind result titles.
@@ -713,7 +713,7 @@ sentinel value is needed — `100vw` already means "the viewport", so an ultrawi
 and a laptop scrolls for the rest. `--body-width-full` still means 1600px for `<photo-cover>`,
 its remaining user.
 
-⚠️ **One behaviour at every width: one row, scrolls, arrows on overflow.** The `$small` block
+⚠️ **One behavior at every width: one row, scrolls, arrows on overflow.** The `$small` block
 sets only the item size. It previously also wrapped into two clipped rows, from an earlier
 instruction, and that survived the rewrite — so narrow screens were the one place the strips
 did *not* scroll, and the arrows correctly stayed hidden because a wrapped row never
@@ -721,8 +721,8 @@ overflows horizontally. Found by comparing visible-thumbnail counts across width
 reported no overflow while every wider viewport did, which is backwards. See the *Full-bleed is back* entry in [`todo.md`](todo.md) for
 the mechanism and the `overflow-x: clip` counterweight.
 
-**The bleed is symmetric** (2026-07-31): the strip box is centred on the page and
-`justify-content: center` centres the thumbnails inside it, so a short shelf sits in the
+**The bleed is symmetric** (2026-07-31): the strip box is centered on the page and
+`justify-content: center` centers the thumbnails inside it, so a short shelf sits in the
 middle of the bleed and a long one clips evenly at both edges. This replaced a
 `padding-inline-start` that pinned the first thumbnail to the band's left edge — so these
 strips are the one place on the site that does *not* start on that line. Deliberate, and
@@ -741,11 +741,11 @@ strip, a 15px chevron in a 56px hit area, shipped with `hidden` and revealed by
 `strip-nav.js` only once it measures a real overflow. With JS off they never appear and
 nothing is lost: the row is a native scroller for trackpad, touch and keyboard.
 
-⚠️ **`justify-content: safe center`, and the `safe` is load-bearing.** Plain `center` centres
+⚠️ **`justify-content: safe center`, and the `safe` is load-bearing.** Plain `center` centers
 the *overflow* too, so half a long shelf lands left of the scroll origin where `scrollLeft`
 cannot reach it — measured with twelve books at 1512, the first thumbnail sat at x = −451
 with the row already fully scrolled left. `safe` falls back to `start` when content
-overflows: short shelves centre, long ones start at the bleed edge and scroll.
+overflows: short shelves center, long ones start at the bleed edge and scroll.
 
 ⚠️ **Two reduced-motion traps, both measured on Brajeshwar's machine** (which has the OS
 setting on). `scrollBy({behavior:'smooth'})` does not merely degrade under reduced motion —
@@ -782,9 +782,9 @@ where a JS masonry earns its keep, and nothing else here does.
 small icon over the bottom-left of its frame — a play glyph or a waveform, `_includes/icons/`,
 monochrome and `currentColor` like the rest. Stills get nothing: absence is the default, so
 the badge means "not just a picture" rather than being one of three markers to learn.
-Bottom-left rather than centred, because a centred play button is the convention for a
+Bottom-left rather than centered, because a centered play button is the convention for a
 *player* and these are links to a page that holds the media. The dark scrim is not decoration
-— the icon sits on a photograph of unknown brightness, and a single colour cannot be legible
+— the icon sits on a photograph of unknown brightness, and a single color cannot be legible
 on all of them.
 ⚠️ The badge is `aria-hidden`; the word goes into the image's **alt** ("… (video)"). The first
 attempt used a `.visually-hidden` span, which **this site does not have** — base.css's copy
@@ -885,7 +885,7 @@ width:
       <main role="main" class="container-ideal {{ page.style }}"><article>{{ content }}</article></main>
     {% endif %}
 
-One layout, both behaviours, 22 pages unchanged (verified: every page that was on
+One layout, both behaviors, 22 pages unchanged (verified: every page that was on
 `container-ideal` still is). `page-full.html` is deleted.
 
 `full: true` has no users — film and devices went to `album` instead. It stays as a
@@ -929,7 +929,7 @@ theming. So it was tokenised instead:
   plain code. All 33 classes the site actually emits are now covered.
 - Dropped the `.err` background box. Rouge flags `err` on valid 2002-era ActionScript
   (33 spans across 5 posts, all false positives); a highlighted box drew the eye to a lexer
-  artifact. A colour tint remains.
+  artifact. A color tint remains.
 
 Verified in-browser, light and dark, at 1440px. Contrast on the code background: light ≥ 5.68:1,
 dark ≥ 7.66:1, nord-dark ≥ 5.92:1, eink-light ≥ 4.49:1. *The eink-light figure is from the old
@@ -939,7 +939,7 @@ ever matters.*
 
 Cost: the `--code-*` tokens live in `themes.css`, which is base, so every page carries them
 (+0.18 KB gzip on the homepage) even though only 55 posts have code. Kept there anyway — the
-guardrail puts colour in `themes.css`, and it's where you'd look for them.
+guardrail puts color in `themes.css`, and it's where you'd look for them.
 
 ## Audit + cleanup, 2026-07-19
 A pass over all 12 files, checking every selector against real markup and every custom
@@ -975,7 +975,7 @@ property against real `var()` reads. −2,012 B raw / −0.35 KB gzip on every p
   assigned in six places and read in none.
 - Empty rulesets in `base.css`, `home.css`, `post.css`. Zero byte impact (compression drops
   them) but pure source noise.
-- All hardcoded colour outside `themes.css`. `search.css` was the last documented exception;
+- All hardcoded color outside `themes.css`. `search.css` was the last documented exception;
   there are now zero exceptions.
 
 ### The correction that made this necessary
@@ -1061,10 +1061,10 @@ in `_config.yml`. Brajeshwar: *"I don't think I will be writing anything that sh
 more."* The numbers agreed:
 
 - 55 of 1,456 posts have a code block at all;
-- 257 of their 310 blocks are `plaintext` — nothing to colour;
+- 257 of their 310 blocks are `plaintext` — nothing to color;
 - of the rest, the languages are mostly 2002-era ActionScript, plus some CSS and shell;
-- and it was the only place colour appeared by default on a site whose stated rule is that
-  colour is opt-in.
+- and it was the only place color appeared by default on a site whose stated rule is that
+  color is opt-in.
 
 Turning off the highlighter beats deleting only the stylesheet. Rouge's `<span>` soup is emitted
 by kramdown, so dropping the CSS alone would have kept ~1.5 KB of markup per post doing nothing.
@@ -1123,7 +1123,7 @@ cannot drift when the site width changes, and it does not have to know about scr
 includes them, 100cqi does not).
 
 What it replaced: `margin-inline: calc(50% - 50vw); width: 100vw; transform: translateX(calc(50vw
-- 50%))` — viewport-wide and re-centred, so it spilled equally into *both* margins.
+- 50%))` — viewport-wide and re-centered, so it spilled equally into *both* margins.
 
 Everything that takes the band: `figure.full` / `img.full`, `figure.large` / `img.large`
 (identical since 2026-07-27 — the 960px middle step is gone), `.gallery`, videos and embeds
@@ -1196,7 +1196,7 @@ be kept in step by hand, which is the trap `/about/` and `/now/` already sit in 
 Three ways to say "on", one set of declarations. The two users drive selection differently,
 so `.pill__option[aria-pressed="true"]` (the panel's `<button>`s, set by JS),
 `.pill__option--on`, and `:checked + .pill__option` (the filter's real checkboxes, in
-`timeline.css`) all land on the same colours. Adding a third user means adding a selector, not a
+`timeline.css`) all land on the same colors. Adding a third user means adding a selector, not a
 second look.
 
 The filter uses checkboxes rather than buttons because it has to work with JavaScript off
@@ -1209,7 +1209,7 @@ the ring is drawn inside the segment on its own fill — and a chosen segment's 
 This shipped broken in the appearance panel until 2026-07-27. `currentColor` resolves to
 `--color-primary-fg` when chosen and `--text-muted` when not, so it always contrasts with what
 it sits on. Same trap as the `--bg-color-high` one: two tokens that look unrelated by name and
-resolve to the same colour.
+resolve to the same color.
 
 ## Back to Top
 
@@ -1231,7 +1231,7 @@ That puts it inside `<main>` on posts, which has two consequences worth knowing:
 The bar has no divider. Two were tried and both were wrong the same way: a `--border-color`
 hairline read as a rule drawn *on* the bar, and inverting it to the page background read as a
 slit cut *through* it — better, but still a mark asking to be noticed on a control whose job is
-to be quiet. Nothing is the right answer. The halves are the same colour, so there is no seam
+to be quiet. Nothing is the right answer. The halves are the same color, so there is no seam
 until the pointer is over one, and then the hover tint draws the boundary exactly where it
 matters and only while it matters. It also deletes the first/last-post special case: no rule is
 left that needs to know how many links there are.

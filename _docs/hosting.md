@@ -83,7 +83,7 @@ less sturdy setup. Keep brajeshwar.github.io.
 
 ## Cloudflare: DNS and CDN
 
-Grey cloud (DNS-only) is name resolution alone; traffic goes straight to GitHub Pages,
+Gray cloud (DNS-only) is name resolution alone; traffic goes straight to GitHub Pages,
 which has its own Fastly CDN. Orange cloud (proxied) puts Cloudflare's edge in front, giving
 CDN, caching, WAF, analytics, and Workers.
 
@@ -93,7 +93,7 @@ redirects, the cdn.oinam.com migration, the 404 next-steps. The CDN speed gain a
 marginal; the site is tiny and already CDN-backed.
 
 Setup gotcha: SSL mode must be Full, not Flexible, or you get redirect loops. GitHub Pages
-must issue its Let's Encrypt cert first. The reliable order is grey-cloud DNS, wait for
+must issue its Let's Encrypt cert first. The reliable order is gray-cloud DNS, wait for
 Pages to show the cert and enable "Enforce HTTPS", then flip to orange-cloud with SSL =
 Full.
 

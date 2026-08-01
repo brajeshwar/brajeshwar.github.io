@@ -393,7 +393,7 @@ home-support li {
    third users, at Brajeshwar's instruction; that comment is updated to match.
    Everything else still stops at the band.
 
-   THE BLEED. `main` is the band (max 1024px, centred). `margin-inline:
+   THE BLEED. `main` is the band (max 1024px, centered). `margin-inline:
    calc(50% - var(--strip-bleed) / 2)` pulls each edge outward and the strip
    fills the result. It then starts again at the band's left edge via a
    matching `padding-inline-start`, so the first thumbnail lines up with the
@@ -438,7 +438,7 @@ home-support li {
 
   /* Transparent, not absent: a border that appears on hover would shift the
      strip down by its own width on every pointer entry. Reserving the space
-     and only colouring it keeps the row still (2026-07-31: "No border-bottom
+     and only coloring it keeps the row still (2026-07-31: "No border-bottom
      by default. It shows on hover."). */
   border-bottom: var(--border-size) var(--border-style) transparent;
   transition: border-bottom-color 120ms ease-out;
@@ -490,8 +490,8 @@ home-support li {
      but both ways, so the thumbnails are always centered (within 1600px),
      while the titles stays within the body width."
 
-     The strip box is centred on the page by the margin, and
-     `justify-content: center` centres the thumbnails inside it — so a short
+     The strip box is centered on the page by the margin, and
+     `justify-content: center` centers the thumbnails inside it — so a short
      shelf sits in the middle of the bleed rather than hugging one end, and a
      long one clips evenly at both edges instead of only the right.
 
@@ -500,14 +500,14 @@ home-support li {
      that does not start on that line. That is deliberate and was asked for:
      the heading above still sits in the band, so the alignment the rest of the
      site keeps is still stated on the page, and the row reads as a separate
-     centred object rather than a column that overflows. */
+     centered object rather than a column that overflows. */
   width: 100%;
   padding-inline: 0;
 
   /* ⚠️ `safe center`, and the `safe` is not optional — it is the difference
-     between a centred row and 451px of unreachable books.
+     between a centered row and 451px of unreachable books.
 
-     Plain `center` centres the overflow too, so a shelf wider than the
+     Plain `center` centers the overflow too, so a shelf wider than the
      viewport spills equally in BOTH directions — and the half that lands to
      the left of the scroll origin cannot be reached, because `scrollLeft` does
      not go below 0. Measured 2026-07-31 with twelve books at 1512: the first
@@ -516,7 +516,7 @@ home-support li {
      reckoning it WAS at the start.
 
      `safe` falls back to `start` the moment content overflows, which is
-     precisely the case where centring loses data. So: a short shelf centres in
+     precisely the case where centering loses data. So: a short shelf centers in
      the bleed, as asked; a long one starts at the bleed's left edge and
      scrolls right, with everything reachable. */
   justify-content: safe center;
@@ -529,7 +529,7 @@ home-support li {
      the arrow buttons can all reach the rest.
 
      `justify-content: center` is why the bleed is symmetric; note that a
-     centred flex row that OVERFLOWS clips equally at both ends and, in some
+     centered flex row that OVERFLOWS clips equally at both ends and, in some
      engines, makes the start unreachable by scrolling. `margin-inline: auto`
      on the list items would be the version of this that breaks; the padding
      scroll-guards below are what keep the first item reachable. */
@@ -548,7 +548,7 @@ home-support li {
 
 /* The viewport is what carries the bleed now; the strip fills it and scrolls
    inside it. Splitting the two is what lets the arrows sit against the bleed
-   edges rather than travelling with the scrolled content. */
+   edges rather than traveling with the scrolled content. */
 .strip__viewport {
   /* UNCAPPED (2026-08-01). Brajeshwar: "Because we allow the thumbnails to
      scroll sideways, does it not make sense to not constrained at 1600px but
@@ -617,7 +617,7 @@ home-support li {
   border-radius: var(--border-radius);
   background-color: var(--bg-color-low);
 
-  /* the site is monotone at rest; colour arrives on hover */
+  /* the site is monotone at rest; color arrives on hover */
   filter: grayscale(1);
 }
 
@@ -656,7 +656,7 @@ home-support li {
    such indirection.
 
    The background sits on the LINK, so it covers thumbnail and caption alike.
-   The image is opaque and fills the item's width, so the only place the colour
+   The image is opaque and fills the item's width, so the only place the color
    actually shows is behind and below the text — which is the highlight, and
    why it lines up with the thumbnail's edges instead of hugging the words.
    The padding is what makes it read as a block rather than a smear. */
@@ -685,7 +685,7 @@ home-support li {
 
 /* ⚠️ NO background on the photo strip. Brajeshwar 2026-08-01: "No need for
    background on hover. Make no sense when we have no text/title. The hover
-   colour is enough."
+   color is enough."
 
    Exactly right, and it is not merely redundant there — it is worse than
    nothing. Photos carry no caption, so the background has no text to sit
@@ -726,7 +726,7 @@ home-support li {
    320/390/480 reported `overflows: false` while every wider viewport reported
    true, which is backwards.
    
-   One behaviour at every width now: one row, scrolls, arrows when it
+   One behavior at every width now: one row, scrolls, arrows when it
    overflows. Only the item size changes. */
 @media only screen and (max-width: bp.$small) {
   .strip {
@@ -745,7 +745,7 @@ home-support li {
    `visible` rather than being forced to `auto`.
 
    Scoped with `:has()` so it applies to the home page alone. A blanket
-   `body { overflow-x: clip }` would change the containing-block behaviour of
+   `body { overflow-x: clip }` would change the containing-block behavior of
    every other page to fix a problem only this one has. */
 /* ⚠️ BOTH html and body. `overflow-x: clip` on body alone does NOT reliably
    propagate to the viewport the way `hidden` does — measured 2026-08-01, the
@@ -759,7 +759,7 @@ home-support li {
    than being forced to `auto`.
 
    Scoped with `:has()` so it applies to the home page alone — a blanket rule
-   would change containing-block behaviour on every other page to fix a
+   would change containing-block behavior on every other page to fix a
    problem only this one has. */
 html:has(home-container),
 body:has(home-container) {
@@ -838,7 +838,7 @@ body:has(home-container) {
    badge means "this is not just a picture" rather than being one of three
    markers a reader has to learn.
 
-   Bottom-left, not centred. A centred play button is the convention for a
+   Bottom-left, not centered. A centered play button is the convention for a
    video PLAYER, and these are links to a page that holds the video; putting a
    play glyph in the middle of the frame promises playback in place and does
    not deliver it. The corner reads as a label, which is what it is.
@@ -846,7 +846,7 @@ body:has(home-container) {
    The backdrop is not decoration either: the icon sits on a photograph whose
    brightness is unknown, and `currentColor` alone would vanish on anything
    pale. A dark scrim with a light glyph is legible on every image, which a
-   single colour cannot be.
+   single color cannot be.
 
    `aria-hidden` on the badge and the word in the image's alt instead — see the
    note in card-grid.html for why a .visually-hidden span was the wrong tool

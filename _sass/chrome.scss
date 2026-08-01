@@ -7,9 +7,9 @@
 header {
   /* Logo hard left, menu flushed right.
      This has been round the houses, so the trail: space-between originally →
-     centred earlier on 2026-07-27 (the nav read tighter) → back to
-     space-between the same day. Centring looked adrift on a small screen, and
-     more to the point the header now carries a border-bottom: a centred cluster
+     centered earlier on 2026-07-27 (the nav read tighter) → back to
+     space-between the same day. Centering looked adrift on a small screen, and
+     more to the point the header now carries a border-bottom: a centered cluster
      floating above a full-width rule reads as unanchored, where ends anchor it. */
   width: var(--body-width);
   max-width: var(--body-width-max);
@@ -22,7 +22,7 @@ header {
 
      --rule-strong, not --rule, since 2026-08-01: an 18% mix of the foreground
      against --rule's 10%, so the two lines that bound the page read as more
-     structural than every other border on the site. Still a colour-mix rather
+     structural than every other border on the site. Still a color-mix rather
      than a solid, so it stays a hairline in both modes instead of a hard line,
      and still follows the palette. Mirrored on the footer's border-top —
      change one and change the other. */
@@ -129,13 +129,13 @@ site-nav {
   font-size: var(--step--1);
 }
 
-/* Nav labels sit at the body text colour (2026-08-01: "Make it darker, same as
+/* Nav labels sit at the body text color (2026-08-01: "Make it darker, same as
    the default text color"). They were --text-color-lower, the subtle tier, which
    put the primary navigation a full two steps below the prose it sits above.
 
    ⚠️ This narrows the gap to the hover/active state below, which uses
    --text-color-higher. That is still a distinct step, and the underline is what
-   actually carries hover now — the colour shift was never doing the work on its
+   actually carries hover now — the color shift was never doing the work on its
    own. Do not "restore contrast" by darkening hover further; the resting state
    is the thing that was wrong. */
 site-nav a, site-nav a:visited {
@@ -192,7 +192,7 @@ site-tools svg {
 
 /* ---- Icon button ------------------------------------------------
    The header's round icon controls: search, RSS, appearance. All three had
-   their own copy of this — same circle, same size, same colours, differing
+   their own copy of this — same circle, same size, same colors, differing
    only in the two or three lines an <a> needs versus a <button> (2026-07-27
    audit). A fourth would have been a fourth copy, which is how the first
    three happened.
@@ -415,7 +415,7 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
 
   /* Opaque, not transparent. It spends most of its life floating over running
      text, and a see-through disc with a line of prose crossing it is unreadable
-     — the disc has to hold the page colour with it. */
+     — the disc has to hold the page color with it. */
   background-color: var(--bg-color-lower);
   color: var(--text-muted);
   text-decoration: none;
@@ -426,7 +426,7 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
 
 /* Darken on hover. A color-mix of the foreground rather than a --bg-* token:
    --bg-color-high and --bg-color-higher both bridge to --color-primary, which
-   is a FOREGROUND colour (near-black in light mode) — using one here would
+   is a FOREGROUND color (near-black in light mode) — using one here would
    paint a black chip under dark text. Mixed INTO the page background rather
    than into `transparent`, so the disc stays opaque while it floats. */
 .back-to-top:hover,
@@ -503,7 +503,7 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
 /* Focus ring. `currentColor`, NOT --accent — the offset is negative, so the
    ring is drawn INSIDE the segment on top of its own fill, and on a chosen
    segment that fill is --color-primary while --accent resolves to essentially
-   the same colour: a near-black ring on near-black in light mode, near-white
+   the same color: a near-black ring on near-black in light mode, near-white
    on near-white in dark. Invisible in both, which is the one state a focus
    ring must not be. currentColor is --color-primary-fg when chosen and
    --text-muted when not, so it contrasts with whatever it sits on by
@@ -535,7 +535,7 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
    stops at the content edges instead of running edge-to-edge, matching the new
    header rule. (This reverses the earlier edge-to-edge decision — that is why
    the outer element exists at all; it now only carries the spacing and the
-   muted text colour, and is kept for that plus any future full-bleed footer
+   muted text color, and is kept for that plus any future full-bleed footer
    background.) */
 footer {
   margin-top: var(--space-2xl);
@@ -543,7 +543,7 @@ footer {
   color: var(--text-muted);
 }
 
-/* Inner content stays at the reading/content width, centred. */
+/* Inner content stays at the reading/content width, centered. */
 .footer-inner {
   width: var(--body-width);
   max-width: var(--body-width-max);
@@ -559,7 +559,7 @@ footer {
   text-align: center;
 }
 
-/* Page links — one centred, wrapping row; groups split by a subtle bullet. */
+/* Page links — one centered, wrapping row; groups split by a subtle bullet. */
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -589,7 +589,7 @@ footer {
   text-decoration: none;
 }
 
-/* Social icons — centred row below the links. */
+/* Social icons — centered row below the links. */
 .footer-social {
   display: flex;
   flex-wrap: wrap;
@@ -666,7 +666,7 @@ appearance-settings {
 
 /* Everything the two cards agree on. What they do NOT agree on is where they
    sit: the appearance panel hangs off its trigger (absolute), the search
-   palette is a centred command palette (fixed). That, their sizes, and their
+   palette is a centered command palette (fixed). That, their sizes, and their
    shadow depths stay in the per-panel blocks below. */
 .appearance-panel,
 .site-search__panel {
@@ -690,7 +690,7 @@ appearance-settings {
   /* Hangs off the trigger, not the viewport corner. It was
      `fixed; top: 4rem; right: var(--space-s)`, which put it against the right
      edge of the screen — fine while the header was right-aligned, but the
-     header is centred now, so the panel opened a long way from the icon that
+     header is centered now, so the panel opened a long way from the icon that
      spawned it. Absolute + right:0 keeps its right edge on the trigger's.
      right:0 rather than left:0 so it opens inward, away from the viewport
      edge, and cannot overflow off-screen on a phone. */
@@ -816,7 +816,7 @@ site-search {
 
 /* .site-search__trigger's look is .icon-button; its backdrop and the shared
    half of its card are in the overlay-chrome block above. What is left is
-   only what makes this one a CENTRED COMMAND PALETTE rather than a panel
+   only what makes this one a CENTERED COMMAND PALETTE rather than a panel
    hanging off a trigger — and the Pagefind theming, which was already a
    second .site-search__panel block 30 lines further down and is now folded
    into this one. */

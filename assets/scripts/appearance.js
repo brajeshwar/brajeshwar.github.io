@@ -26,7 +26,7 @@
                 // ⚠️ FOUR places must agree for a font option: this list, the
                 // [data-font] rule in config.css, the @font-face in themes.css,
                 // and the no-flash whitelist in _layouts/default.html.
-                // 'sans' is labelled "System" (was "Default", renamed
+                // 'sans' is labeled "System" (was "Default", renamed
                 // 2026-07-27): it is the OS UI face, and "Default" said only
                 // that it was the one you get without choosing, which is true
                 // of every axis's first option and describes none of them.

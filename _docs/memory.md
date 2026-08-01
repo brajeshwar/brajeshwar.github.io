@@ -19,7 +19,7 @@ verify against the live URLs, not `_site`.
 |---|---|
 | `e15fefda` | Homepage rebuilt from the wireframe |
 | `7da64916` | Homepage: toc refinements, wider gutter, capped strip bleed, Photos |
-| `c458c4e8` | Homepage: trim long titles, centre the strips both ways |
+| `c458c4e8` | Homepage: trim long titles, center the strips both ways |
 | `a88bc57f` | Home strips: scrollable with arrows, wrapping captions, 12 items |
 | `5515fdd1` | Fix home page overflowing sideways below 768px; Books hover |
 | `6ab845a7` | Strips: uncap the bleed, and make mobile scroll like everywhere else |
@@ -52,7 +52,7 @@ A full home-page redesign from a tldraw wireframe, then four rounds of refinemen
    row hover is a background, not an underline. Article count is one `assign` at the top of
    `home-articles.html`.
 3. **The strips** scroll horizontally with subtle `‹ ›` arrows (`strip-nav.js`, home page
-   only, progressive enhancement), bleed to the full viewport uncapped, and centre when short.
+   only, progressive enhancement), bleed to the full viewport uncapped, and center when short.
 4. **`/books/`** is a card-grid page with an *All Time Favorites* section driven by
    `highlight: true` in `books.yaml`. Its prose moved out to `_backup/books-BCK.md`.
 5. **`/photos/` became `/album/`**, with a real `_redirect` collection behind it, media badges
@@ -82,7 +82,7 @@ A full home-page redesign from a tldraw wireframe, then four rounds of refinemen
    automatic minimum will not shrink below the track's max-content. With `white-space: nowrap`
    titles it made the "single column" 679px inside a 346px container and **the whole home page
    scrolled sideways below 768px**. Always `minmax(0, 1fr)`.
-2. **`justify-content: center` on an overflowing scroller hides content.** It centres the
+2. **`justify-content: center` on an overflowing scroller hides content.** It centers the
    overflow, so half lands left of `scrollLeft: 0` where nothing can reach it — measured at
    x = −451. Use `safe center`.
 3. **`behavior: 'smooth'` is a no-op under `prefers-reduced-motion`** (which Brajeshwar has
@@ -91,9 +91,9 @@ A full home-page redesign from a tldraw wireframe, then four rounds of refinemen
 4. **`overflow-x: clip` on `body` does not reliably reach the viewport.** Set it on `html` too.
 5. **`text-decoration` is drawn by the ancestor that declares it.** An underline set on a
    child span while the link declares `none` computes correctly and paints nothing.
-6. **Measuring an `oklch()` colour needs a canvas.** `getComputedStyle().color` returns
+6. **Measuring an `oklch()` color needs a canvas.** `getComputedStyle().color` returns
    `oklch()` now, so string-parsing gives nonsense — it reported a real contrast change as a
-   no-op. Paint bg then colour onto a canvas, read the pixel.
+   no-op. Paint bg then color onto a canvas, read the pixel.
 7. **`.visually-hidden` does not exist on this site** — deleted after the 2026-07-19 audit.
    Put the word in `alt`, not a hidden span.
 8. **`ul.item__cards` is (0,1,1).** A single-class override loses to it, silently: `columns`
@@ -151,7 +151,7 @@ snapshot taken first, but the habit is the fix: name the files.
 6. **Timeline CSS merged** — `/about/` and `/now/` were the same component built twice.
    `.headerlink` went from three copies to one, and the post copy had already been deleted by
    accident, so 453 posts were rendering a bare visible §. Caught before deploy.
-7. **`:visited` colour leak fixed at the root.** See below — this one is a cascade law now.
+7. **`:visited` color leak fixed at the root.** See below — this one is a cascade law now.
 8. **Actions bumped to Node 24** versions; the deprecation warning is gone.
 
 ### The two rules most likely to be broken next
@@ -160,9 +160,9 @@ snapshot taken first, but the habit is the fix: name the files.
 to a class (`.page`, `.post`) or a custom element — never a bare `main > article > h2`.
 `page.scss` got this wrong and would have clamped all ~1,456 post titles to 665px.
 
-⚠️ **Element defaults are `:where()`-wrapped in base.scss, link colours especially.** Unwrapped,
+⚠️ **Element defaults are `:where()`-wrapped in base.scss, link colors especially.** Unwrapped,
 `a:visited` is (0,1,1) — higher than a plain class — so six chrome components silently lost
-their colour once visited. Do not un-wrap, and do not patch a chrome link with its own
+their color once visited. Do not un-wrap, and do not patch a chrome link with its own
 `:visited`. [`styles.md`](styles.md) §5 → *Element defaults are `:where()`-wrapped*.
 
 **Decided, so it does not get re-litigated: the browser cache TTL stays at a year.** A shorter
@@ -206,7 +206,7 @@ The site is on one width — 64rem/1024px — and everything agrees on it: heade
 `main`, post titles, wide images, captions, videos and embeds, the prev/next bar. Wide media
 breaks out to the right only, never into the left margin, because the reading column is
 left-aligned in the band and that left edge is the page's alignment line. `photo-cover` is the
-one deliberate exception — a full-bleed hero to 1600px, flush under the header rule. Colour is monotone by default with three
+one deliberate exception — a full-bleed hero to 1600px, flush under the header rule. Color is monotone by default with three
 palettes (Warm is now Flexoki); the reader also picks mode, font (System / Sans-Serif /
 Serif) and text size, all persisted. JS is eight small vanilla files, minified on publish.
 
@@ -271,7 +271,7 @@ Should return nothing but Brajeshwar's own content commits.
 ### Picking this back up — the shortlist
 Full list in [`todo.md`](todo.md). The ones worth doing next, in order:
 1. **`.sidenote` is declared in two blocks** (`base.css` 563 and 609) and repeats 6 declarations
-   with `.sidenote-inline`. Deliberately left: it is a refactor of live behaviour, best done with
+   with `.sidenote-inline`. Deliberately left: it is a refactor of live behavior, best done with
    the sidenote work rather than as a tidy.
 2. **Two spacing systems** — ratio `--space`/`--space-smaller` vs fluid `--space-*`, 10 call
    sites across five files (the old entry claimed 3). Each is a visible value, so it needs a
@@ -290,7 +290,7 @@ Docs and README work, with no reader-visible change. **Uncommitted.**
   exist. Everything durable in it already lived elsewhere; the one exception, why the daily
   cron exists (`future: false` hides post-dated articles), was salvaged into `hosting.md`.
 - **`css-architecture.md` folded into [`styles.md`](styles.md) as §5**, in full. One doc now
-  covers type, colour, branding, icons, and how the CSS is split.
+  covers type, color, branding, icons, and how the CSS is split.
 - **`README.md` is human-only again** — the tooling/versions note moved to `hosting.md`,
   which now covers all hosting: GitHub Actions, the Cloudflare Pages backup, DNS/CDN, domain.
 - Net: 9 docs where there were 11, and every cross-reference repointed (docs, `CLAUDE.md`,
@@ -316,12 +316,12 @@ is the parked standardisation, not this. `.container-wide` is in `base.css` for 
 `/film/` to reuse.
 
 That width forced the scrubber's architecture: it used to be `position: fixed`, offset from
-the centred column into the viewport margin — which only worked *because* a 665px column
+the centered column into the viewport margin — which only worked *because* a 665px column
 leaves a wide margin. At 1280px there is no margin, so it became a grid column
 (`grid-template-columns: auto minmax(0,1fr)`) with `position: sticky` inside it. Measured:
 38px wide (was 47), 20px gap, no overlap.
 
-Also this pass: thinner rail, subdued rest colour (`--text-color-low`), and a hover that
+Also this pass: thinner rail, subdued rest color (`--text-color-low`), and a hover that
 darkens the text *and* adds a background. The hover background is
 `color-mix(in oklch, var(--text-color) 12%, transparent)` — mixing the foreground rather than
 using any `--bg-*` token, because none differs from the rail's own background in both
@@ -386,9 +386,9 @@ the header's bottom margin — ⚠️ **keep those two in step**, or the strip d
   2. `--bg-color-high` is not a raised background — it bridges to `--color-primary`, the
      *foreground*. Using it for the hover and `:target` styles painted a near-black chip under
      dark text in light mode. Safe background steps are `--bg-color-lowest/-lower/-low` only.
-     Replaced with a colour shift (matching `site-nav` in chrome.css) and an accent rule.
+     Replaced with a color shift (matching `site-nav` in chrome.css) and an accent rule.
      Verified in both light and dark; a background highlight can't work here anyway, since the
-     only distinguishable step collapses to the caption's own colour in dark mode.
+     only distinguishable step collapses to the caption's own color in dark mode.
 - **Weight:** the page is 328 KB raw / 74 KB gzip — 3.5× over the `design.md` non-article
   budget. Pre-existing; logged in [`todo.md`](todo.md) as a decision, not fixed silently.
 - Verified in Chrome: build clean, Pagefind indexes the site, nav is `data-pagefind-ignore`d,
@@ -402,7 +402,7 @@ the header's bottom margin — ⚠️ **keep those two in step**, or the strip d
 ### Header reworked (2026-07-27, built + browser-verified)
 `_includes/css/chrome.css` + two new tokens in `config.css`. Affects every page.
 
-- **Centred again.** `justify-content: space-between` → `center`. Brajeshwar's call: the logo
+- **Centered again.** `justify-content: space-between` → `center`. Brajeshwar's call: the logo
   and menu were pinned to opposite edges, making the nav a long mouse trip.
 - **Narrow screens are one row, and shorter.** It used to stack into a column — logo, then
   nav, then tools, three rows of chrome before a phone reader saw content. Header height at
@@ -435,7 +435,7 @@ the header's bottom margin — ⚠️ **keep those two in step**, or the strip d
 - **Appearance panel now hangs off its trigger** (2026-07-27). It was
   `position: fixed; top: 4rem; right: var(--space-s)` — pinned to the *viewport's* right
   corner, which was fine while the header was right-aligned but left the panel ~495px away
-  from the icon once the header was centred. Now `position: absolute` inside
+  from the icon once the header was centered. Now `position: absolute` inside
   `appearance-settings` (`position: relative`), `right: 0` so it opens inward and cannot
   run off a phone screen. Verified: right edges align exactly, 10px below the trigger, above
   the backdrop, and still on-screen at a 360px-wide header.
@@ -458,14 +458,14 @@ override**; the comment in `chrome.css` says so at both ends.
   it stops at the content edges. The footer's `border-top` moved from `<footer>` to
   `.footer-inner` for the same reason — that reverses the earlier "outer footer spans the
   full viewport so the rule is edge-to-edge" decision, which is why the outer element exists;
-  it now carries only spacing and the muted colour. Both use `--rule` (a 10% foreground mix),
+  it now carries only spacing and the muted color. Both use `--rule` (a 10% foreground mix),
   so they stay hairlines in light and dark; verified identical in both.
 - **`--body-width-max` is 81rem / 1296px, and it is the ONLY content width.** Brajeshwar:
   *"Archives, and everything on the website should now run on the same width"*, then
   *"standardize at the size that encompasses the sidenotes too."* Verified aligned on `/`,
   `/about/`, `/archives/`, `/film/` and an article.
 - **The width is derived, not picked:** `--measure` (665) + 2 × (`--sidenote-gap` 56 +
-  `--sidenote-width` 256) = 1289, rounded up to a whole 81rem. The article is centred, so
+  `--sidenote-width` 256) = 1289, rounded up to a whole 81rem. The article is centered, so
   the gutter is paid for on *both* sides — that doubling is the number. 1280 was 9px short,
   and measurement showed sidenotes rendering 5px past the band, overhanging the header and
   footer rules that had just been added. Adding those rules is what made the gap visible.
@@ -479,7 +479,7 @@ override**; the comment in `chrome.css` says so at both ends.
   archives content overhung its own header rule by 32px a side. One width removed both the
   misalignment and the duplication.
 - The reading column is unchanged (665px, `--body-width-ideal`) and is not a second site
-  width — it's a reading constraint inside the band. Centres align; sidenotes still render.
+  width — it's a reading constraint inside the band. Centers align; sidenotes still render.
 - ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
@@ -509,13 +509,13 @@ Verified live: both on (light + dark), one on, and the no-JS `:target` path — 
 `.timeline-js` removed and `#work` in the hash, 12 work entries showed, 2 life entries hid,
 and the pill reflected it rather than contradicting the page. The *"at least one always
 selected"* guard survives the new markup: with Work off, both the Life label and its marker
-span compute `pointer-events: none`, and hit-testing at each of their centres falls through
+span compute `pointer-events: none`, and hit-testing at each of their centers falls through
 to the fieldset — so a pointer cannot clear the last track.
 
 **Fixed while extracting: the focus ring was invisible on a chosen segment.** It was
 `outline: … solid var(--accent)` with `outline-offset: -3px`, so the ring is drawn *inside*
 the segment on its own fill — and on a chosen segment that fill is `--color-primary`, which is
-essentially the same colour `--accent` resolves to. Near-black on near-black in light, near-
+essentially the same color `--accent` resolves to. Near-black on near-black in light, near-
 white on near-white in dark. Invisible in both, and it had been shipping that way in the
 appearance panel. Now `solid currentColor`, which is `--color-primary-fg` when chosen and
 `--text-muted` when not, so it contrasts with whatever it sits on by construction. Verified by
@@ -556,7 +556,7 @@ Two more non-obvious pieces:
 
 Hover darkens via `color-mix` of the foreground — not a `--bg-*` token, because
 `--bg-color-high`/`--bg-color-higher` both bridge to `--color-primary`, which is a
-*foreground* colour and would paint a near-black chip under dark text. That trap has now been
+*foreground* color and would paint a near-black chip under dark text. That trap has now been
 hit twice; the comment in `chrome.css` names it.
 
 Spacing at rest: the row takes the `--space-2xl` seam the footer used to own and sits
@@ -599,7 +599,7 @@ JS only toggles visibility.
 ⚠️ **Testing note: programmatic scrolling fires NO scroll events in this automation context.**
 `window.scrollTo` moved the page 1,722px and produced **0** events, which made the control look
 broken across several checks while the logic was fine — a manually dispatched event toggled it
-correctly, and real wheel scrolling worked first time. **Verify scroll behaviour with the
+correctly, and real wheel scrolling worked first time. **Verify scroll behavior with the
 `computer` scroll action, not `window.scrollTo`.**
 
 ### Copy-paste templates, and a sidenote regression fixed (2026-07-27)
@@ -682,9 +682,9 @@ same."* He was right — `base.css` has defined it all along: `h1`–`h6` at
 var(--scale-small)`, `text-wrap: pretty`. The timeline and /now/ were overriding it.
 
 **Removed every typographic override** from `.timeline-head h1`, `.timeline-when`,
-`.timeline-title` and `.page-now h1` — size, weight, colour, letter-spacing, tabular figures.
+`.timeline-title` and `.page-now h1` — size, weight, color, letter-spacing, tabular figures.
 They now take the shared scale purely from their heading LEVEL. Verified computed values match
-a bare `h1`/`h2`/`h3` exactly: 39.06 / 31.25 / 25px, weight 200, same colour; a clean
+a bare `h1`/`h2`/`h3` exactly: 39.06 / 31.25 / 25px, weight 200, same color; a clean
 descending hierarchy of page title → period → entry title.
 
 What stays in those rules is structural only: the `position: relative` the § anchor needs, the
@@ -722,8 +722,8 @@ clearly doing a different job reads as a break rather than a heading.
   opens is really all of settings — mode, palette, font, size, accent. Filled gear traced from
   Heroicons (MIT), which `styles.md` §4 already names as an acceptable source for a filled
   glyph. Same 24-viewBox / `currentColor` / 20px shape as the rest of the set, so it inherits
-  the icon sizing and the quieter icon colour with no extra rules.
-- **Archives: a 1px hairline between the "20" and the tray.** The century was centred exactly on
+  the icon sizing and the quieter icon color with no extra rules.
+- **Archives: a 1px hairline between the "20" and the tray.** The century was centered exactly on
   the tray's edge, so the glyph and the border touched and read as one shape.
   `translate(calc(-50% - 1px), -50%)` gives it daylight without breaking the illusion that the
   rest of the number continues underneath. Measured: 43px visible / 41px hidden.
@@ -917,8 +917,8 @@ Everything else on the page agreed; that one class did not. Removed the step: `.
 `.full` are now both `100cqi`, so a wide image ends on the same line as the header rule and the
 footer rule. Verified: one distinct right edge across all six elements.
 
-The two classes are now identical in behaviour. Both are kept — 24 `.full` and 58 `.large` in the
-content, and content is not ours to edit — but there is one behaviour to maintain, not two.
+The two classes are now identical in behavior. Both are kept — 24 `.full` and 58 `.large` in the
+content, and content is not ours to edit — but there is one behavior to maintain, not two.
 `--image-width-max` is gone with the step (and `--body-width-medium` before it, same lineage):
 there is no intermediate left to name.
 
@@ -944,13 +944,13 @@ measure now sit next to things that span the band.
   no width of its own, so removing the class is the whole fix — it fills the band, and its two
   halves reach the same edges the images do.
 - **`figcaption` lost `max-width: --body-width-ideal; margin: 0 auto`.** Capped at the measure
-  and CENTRED inside its figure: invisible while every figure was column-width, wrong the moment
+  and CENTERED inside its figure: invisible while every figure was column-width, wrong the moment
   one was 1024px — the caption's rule sat inset from both edges of the image above it and lined
   up with nothing. Now full width of its parent, so the underline always tracks the figure's own
   edges. `photo-cover__desc` got the same treatment against `photo-cover`.
 - Removed with it: `figure.full figcaption, figure.large figcaption { padding-inline: 0 }`, which
   was a no-op — the base rule already sets `padding: X 0`. It existed to compensate for the
-  centring that is now gone.
+  centering that is now gone.
 
 ⚠️ **And a real bug the breakout change exposed: sidenotes landing on top of images.**
 `sidenotes.js` dodges wide media via `collectObstacles()`, and that logic was fine — the
@@ -977,7 +977,7 @@ it, then we will do it to the right, so it is still within the body width."*
 
 Four breakout kinds, all in real use across the archive — `photo-cover` (72), `img/figure.full`
 (24), `img/figure.large` (58), `.gallery` (7). All did the same thing: viewport-wide, then
-re-centred, so they spilled equally into BOTH margins. On this asymmetric layout the left margin
+re-centered, so they spilled equally into BOTH margins. On this asymmetric layout the left margin
 is the page's alignment edge — the line the prose, the header rule and the footer rule all start
 from — so spilling into it was the visible problem.
 
@@ -1034,10 +1034,10 @@ All five done, and the markup changed to make three of them fall out rather than
 ⚠️ **The bar had never been aligned with the article it belongs to.** `.post-nav` carried
 `margin: var(--space-l) auto` while also wearing `.container-ideal`, whose whole job is
 `margin-inline: 0 auto`. post.css loads after base.css at equal specificity, so `auto` won and
-the nav was **centred while the article was left-aligned — measured 179px out of step**. Fixed
+the nav was **centered while the article was left-aligned — measured 179px out of step**. Fixed
 with `margin-block`, setting only the axis this rule has business setting.
 
-**This is the third time this session that a `margin` shorthand has silently cancelled
+**This is the third time this session that a `margin` shorthand has silently canceled
 `.container-ideal`'s `margin-inline`.** The pattern is now: in any rule that also wears
 `.container-ideal`, use `margin-block`, never the shorthand.
 
@@ -1089,7 +1089,7 @@ OS rather than `[data-theme]`, but fixing the selector would have shipped a wors
 **Tidies.** Dead selectors removed after re-verifying against the 1,456 *built* pages;
 `scroll-behavior` duplicate, `--sidenote-min-gutter` and `--body-width-medium` gone. Two were
 NOT done and are re-scoped in todo.md: the `.sidenote` double-declaration is a refactor of live
-behaviour rather than a tidy, and "two spacing systems, only 3 rules" is 10 call sites, each
+behavior rather than a tidy, and "two spacing systems, only 3 rules" is 10 call sites, each
 a visible spacing value.
 
 **Closed by decision:** Home parked (books treatment is Brajeshwar's call — SVG or text block),
@@ -1148,7 +1148,7 @@ hand-rolled sepia ramp. It is now back as the basis for Warm itself.
   `--color-fg-subtle` on (sidenote body text). Stepped one notch: base-600 (4.97:1) light,
   base-500 (5.19:1) dark. The same bump the default palette already makes, for the same
   reason.
-- **Accent stays monotone**, drawn from the same ramp. Colour on this site is opt-in through the
+- **Accent stays monotone**, drawn from the same ramp. Color on this site is opt-in through the
   Accent axis (design.md), so a palette does not get to introduce a hue. Flexoki ships eight
   accent hues if that ever changes; kepano's own docs theme uses cyan-600.
 
@@ -1193,7 +1193,7 @@ Brajeshwar: *"move the '20' just a tiny bit to the left to add at-least 1px of s
 year container."*
 
 **A translate could not do it, and measuring showed why.** The mark rendered the whole "2026"
-centred on the tray's left edge, so the visible "20" and the hidden "26" were one string:
+centered on the tray's left edge, so the visible "20" and the hidden "26" were one string:
 sliding it left to open a gap beside the "0" dragged the "2" of "26" out into the margin with
 it. At 36px with -0.02em tracking the "0" ink ended at 242.14 and the next digit's ink
 began at 242.49 — 0.35px apart — with the tray edge at 244. So 1.51px of that third
@@ -1201,7 +1201,7 @@ digit was already showing, and *that* was what read as the "20" touching the tra
 was never clipped. 0.35px was the most daylight any cut line could yield.
 
 Fix: emit only the two digits that were ever visible (`{{ years[0].name | slice: 0, 2 }}`)
-and position by the right edge — `right: 100%; margin-right: 2px` — instead of centring a
+and position by the right edge — `right: 100%; margin-right: 2px` — instead of centering a
 four-digit string. Nothing visible was lost, because nothing of the "26" was ever on screen.
 The gap is now just a margin: 2px of box renders as 2.87px of visible daylight (the italic
 "0" carries a little right side bearing of its own). Verified at rest, stuck at `top: 0`, and
@@ -1213,7 +1213,7 @@ identical to drawing half a string right up until you need to move one of them.
 
 The original construction, for the record:
 
-- **Centre on the tray's left edge.** `left: 0; transform: translate(-50%, -50%)` puts exactly
+- **Center on the tray's left edge.** `left: 0; transform: translate(-50%, -50%)` puts exactly
   two digits outside and two under. The halving is exact *because the face is monospaced with
   tabular figures* — measured 47px visible / 47px hidden. *(Superseded above.)*
 - **It must be a SIBLING of the nav, not a child or a pseudo-element.** Inside a stacking
@@ -1221,7 +1221,7 @@ The original construction, for the record:
   never be hidden by the very tray it sits behind. Hence the new `.archive-strip` wrapper:
   century `z-index: 0`, nav `z-index: 1` with its opaque background doing the masking.
 - **The wrapper took over the sticky** (was on the nav), so the mark and the tray travel
-  together. Verified their centres stay within 2px when stuck.
+  together. Verified their centers stay within 2px when stuck.
 - ⚠️ **Capped to the tray's height.** At 3.25rem it was 52px against a 42px tray and overhung
   ~5px, invisible at rest but clipped by the viewport edge the moment the strip stuck at
   `top: 0`. Now max 2.5rem/40px inside 42px, verified unclipped when stuck.
@@ -1259,7 +1259,7 @@ Brajeshwar, on seeing 81rem/1296px live: *"this is too wide, what is the next lo
 body width. Think readable length of the articles + the sidenote + the padding and margin
 spaces."*
 
-**The answer required un-centring the column.** A centred article reserves the gutter on BOTH
+**The answer required un-centering the column.** A centered article reserves the gutter on BOTH
 sides and only uses the right one, so 1289px was the hard floor — 1296 could not be narrowed
 without starving the notes. Paying for the gutter once gives:
 
@@ -1272,15 +1272,15 @@ without starving the notes. Paying for the gutter once gives:
 - **Sidenote floor 1210px → ~980px viewport**, measured by shrinking the band until notes fold
   (they survive to a 940px band). The long-standing asymmetric todo is done, and it is what
   bought the narrower site.
-- **Header: back to `space-between`.** Centred read adrift on small screens and, with the new
-  border-bottom, a centred cluster floating over a full-width rule looks unanchored.
+- **Header: back to `space-between`.** Centered read adrift on small screens and, with the new
+  border-bottom, a centered cluster floating over a full-width rule looks unanchored.
 - **Logo 34px → 40px, and optically pulled out.** Above 1150px it gets
   `margin-left: calc(-1 * var(--logo-size))` so its RIGHT edge lands on the band edge — the
   slanted beta reads as pushed inwards otherwise. Below that it sits in flow; no clipping.
   Verified one row and fitting at 1512/1200/1150/1100/768/430/390/360/320.
 
 ⚠️ **Three things this broke, all found by measuring:**
-1. **The `/ 2` in `.sidenote`'s width** assumed a centred column splitting the leftover between
+1. **The `/ 2` in `.sidenote`'s width** assumed a centered column splitting the leftover between
    two margins. Left in, it would have halved every note.
 2. **`gutterFits()` measured `window.innerWidth`.** Correct only while the gutter was viewport
    margin; now measures the band.
@@ -1301,7 +1301,7 @@ different site widths depending on where you landed. Brajeshwar: *"One Standard 
 
 - **`main` is now the standard width on every page type** — post, page, archives, album, home.
   Verified `main`, the header rule and the footer rule share edges on all of them.
-- **The measure moved onto the `<article>`**, centred. Prose still wraps at ~66 characters; only
+- **The measure moved onto the `<article>`**, centered. Prose still wraps at ~66 characters; only
   its container changed. Deliberately not left-aligned — text on 1,456 posts stays exactly
   where it was.
 - **`full: true`** (a `page.html` capability that had no users) now means *"fill the standard
@@ -1314,24 +1314,24 @@ different site widths depending on where you landed. Brajeshwar: *"One Standard 
 1. **`sidenotes.js` queried `.container-ideal article`.** Moving the class onto the article made
    that match nothing — sidenotes would have silently vanished from every footnoted post. Now
    `article.container-ideal`. Verified 3 notes still render, inside the band, footnotes hidden.
-2. **`.post { margin: var(--space-s) 0 }` silently cancelled `margin-inline: auto`.** The
+2. **`.post { margin: var(--space-s) 0 }` silently canceled `margin-inline: auto`.** The
    shorthand's `0` beat `.container-ideal` because `post.css` loads after `base.css` at equal
    specificity — **source order again**, the same trap as the header `@media` block. The article
    rendered flush left. Now `margin: var(--space-s) auto`. *Shorthand margin is a cascade
    hazard whenever a layout class supplies `margin-inline: auto`.*
 
-### Earlier that day — standardise the site width (now resolved above)
+### Earlier that day — standardize the site width (now resolved above)
 Brajeshwar wants one width instead of the current two (`container-ideal` vs the full-width
 `main`); the split exists because it was easier to maintain by hand, not because it was
 designed. Nothing is decided or built yet.
 
 The task, the research, and the open decisions are written up in
-[`todo.md`](todo.md) → *Standardise the site width*. Two measured facts came out of it and now
+[`todo.md`](todo.md) → *Standardize the site width*. Two measured facts came out of it and now
 live in the reference docs:
 
 - **`1rch` = 10.08px**, so `--measure: 66rch` is a 665px column — the ~8px/ch rule of thumb
   under-estimates it by ~130px. ([`styles.md`](styles.md) §1)
-- **Sidenotes need a 1210px viewport**, because the centred column spends as much on the dead
+- **Sidenotes need a 1210px viewport**, because the centered column spends as much on the dead
   left margin as on the working right gutter. Going asymmetric would drop that to ~970–1010px.
   ([`sidenotes.md`](sidenotes.md) → *The viewport floor*)
 
@@ -1414,7 +1414,7 @@ post with code. Contrast measured on code blocks: light ≥ 5.68:1, dark ≥ 7.6
 - [`design.md`](design.md) — design philosophy (the *why*): text-first, ornament-free, decoupled/portable styles, progressive enhancement, reader's choice.
 - [`styles.md`](styles.md) — the style specifics and the CSS architecture, six sections:
   §1 typography (scales, font axis System/Sans-Serif/Serif, Kindle text-size, and the
-  interface-vs-prose font rule), §2 colour & theming (mode `data-theme` × palette
+  interface-vs-prose font rule), §2 color & theming (mode `data-theme` × palette
   `data-palette` default/nord(Cool)/eink(Warm = Flexoki), + accent, bridge, no-flash),
   §3 branding, §4 icons, §5 how CSS is split (13 named files, three tiers, which layout
   pulls which bundle, the old→new filename map, the 2026-07-19 audit + backlog),
@@ -1470,7 +1470,7 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
 - CSS = **13 plainly-named Sass partials** in **`_sass/`**, compiled by **`assets/styles/site.scss`** into ONE external stylesheet. ⚠️ **Moved out of `_includes/css/` 2026-07-27** — they were Liquid includes and nothing includes them into HTML any more. `@use`, not `@import` (Dart Sass 3.0 removes it); a module emits at FIRST load, so the order in `site.scss` is the whole cascade. **9.5 KB gzip / 50 KB raw for the whole site**, fetched once and cached. ⚠️ **Externalised 2026-07-27, reversing the inline-everything rule** — `/assets/*` is served `max-age=31536000`, so inlining re-sent ~6.6 KB gzip on every page view and could never be cached (HTML is `max-age=600`). The ≤13 KB gzip budget still holds but is now a **whole-site** number, not per-page.
 - ⚠️ **Two things the one-file model makes load-bearing.** (a) **Cache-busting**: `scripts/hash-assets.mjs` renames CSS/JS to `<name>.<hash>.ext` post-build and rewrites references — a stable filename at `max-age=31536000` strands returning readers for a year. It must run *after* the esbuild minify step. (b) **Every stylesheet applies to every page** — anchor selectors to a class (`.page`, `.post`) or custom element, never a bare `main > article > h2`. `page.css` broke this rule and would have clamped all ~1,456 post titles to 665px.
 - ⚠️ **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`styles.md`](styles.md) §5 → *Old → new filename map*. Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
-- ~~**CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only.~~ **Superseded 2026-07-27** — delivery is one external file for every page; the three tiers survive only as *organisation* (which file to open), never as what ships where. Still shipped that day and still true: syntax highlighting fixed + tokenised onto `--code-*` (later removed entirely); new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html`. Full rationale: [`styles.md`](styles.md) §5.
+- ~~**CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only.~~ **Superseded 2026-07-27** — delivery is one external file for every page; the three tiers survive only as *organization* (which file to open), never as what ships where. Still shipped that day and still true: syntax highlighting fixed + tokenised onto `--code-*` (later removed entirely); new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html`. Full rationale: [`styles.md`](styles.md) §5.
 - **Layouts are now**: `default` · `post` · `page` (reading width, `full: true` for full-bleed) · `album` (galleries) · `redirect`.
 - ~~Layouts pick a CSS bundle through the `styles:` front-matter key (`styles-posts.html`, `styles-pages.html`).~~ **The `styles:` key and all four `styles-*.html` shims were deleted 2026-07-27** — every stylesheet ships to every page, so there is nothing left to switch. `style:` (singular, a class on `<main>`) is unrelated and still live.
 - **All themeable values are CSS custom properties; no hardcoded colors outside `0.1-color.css`.** Use semantic tokens: `--bg`, `--bg-subtle`, `--text`, `--text-muted`, `--rule`, `--accent`, `--accent-hover`, `--mark`, `--sidenote-text`, `--code-bg`.
@@ -1540,7 +1540,7 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
   - **Palette** → 3: Default, Cool = `nord`, Warm = `eink` (sepia). Flexoki + Solarized removed (light re-tints + dark accent blocks in `0.1-color.css`).
   - **Text Size** → NEW axis `[data-text-size]` (`xs`/`s`/m default/`l`/`xl`), five growing "A" buttons (Kindle-style). Scales the reading column only via `--text-scale` (`0.0-config.css` → `.container-ideal article` body/headings/blockquote in `1.1-base.css`); interface unaffected. Persisted `localStorage('textsize')`; no-flash snippet applies it (`data-text-size`, camelCase `dataset.textSize`).
   - Panel compacted (`8.1-tools-theme-toggle.css`: tighter padding/gaps, ~15.5rem wide, smaller swatches).
-  - **Accent trimmed** (follow-up) to Default + Blue + Amber (a cool + a warm swatch complementing Cool/Warm palettes); custom colour picker removed (+ its dead CSS). `appearance.js` `ACCENTS`.
+  - **Accent trimmed** (follow-up) to Default + Blue + Amber (a cool + a warm swatch complementing Cool/Warm palettes); custom color picker removed (+ its dead CSS). `appearance.js` `ACCENTS`.
   - Verified: 5 groups render; text size 20px→23.8px(xl)/17.6px(xs), headings scale, nav unaffected; Cool=blue-slate, Warm=warm paper; all persist. Files: `appearance.js`, `0.0-config.css`, `0.0-fonts.css`, `0.1-color.css`, `1.1-base.css`, `8.1-tools-theme-toggle.css`, `default.html` (no-flash). See [`styles.md`](styles.md) §1–2.
 - **Font/text-size scope widened + panel redesigned (Brajeshwar; browser-verified).**
   - **Font choice now applies to ALL content** (home body, pages, articles), not just articles: `body { font-family: var(--font-body) }`; only `header, footer` pinned to `var(--font-sans)` (`1.1-base.css`). Sidenotes/post-meta still re-assert sans. Verified: home intro + h1 → Libre Baskerville on Serif; nav/footer stay sans.
@@ -1550,16 +1550,16 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
 - **[superseded] Interface = sans, content = reader's font (Brajeshwar; browser-verified).** The reader's font choice now applies to article prose + its headings only (`.container-ideal article { font-family: var(--font-body) }`); `body` is pinned to `var(--font-sans)`, so header / footer / home / nav / post-meta / sidenotes stay system sans even in Serif/Inter/Geist mode. Blockquotes inherit context. Verified at data-font=serif: nav/footer/copyright/sidenote/meta = ui-sans-serif, article p/headings = Libre Baskerville. `1.1-base.css` + `1.2-typography.css` (blockquote). See [`styles.md`](styles.md) §1.
 - **Higher contrast (Brajeshwar; browser-verified).** Text tiers pushed one step toward the extreme in both modes (backgrounds unchanged): light `--color-fg` gray-900→950, `-muted` 700→800, `-subtle` 500→600; dark `--color-fg` 100→50, `-muted` 300→200, `-subtle` 500→400 (edited both the `[data-theme=dark]` block and the `prefers-color-scheme` auto block). All palettes inherit it via the token layer. `0.1-color.css`. See [`styles.md`](styles.md) §2.
 - **Agent Markdown twins + `/llms.txt` (this session; build-verified, served locally).** Every post/page gets a plain-text `.md` twin (`/about.md`, `/2026/childhood-computing.md`) for AI agents, plus a `/llms.txt` index. Post-build like Pagefind, no plugin, zero content touched. Pieces: `agents-manifest.json` (Jekyll template → url↔source-path manifest, `sitemap:false`, deleted after use) → `scripts/build-agent-markdown.mjs` (reads source md, strips front matter, prepends `# title` + `> Markdown version of <url>` (date on posts only — pages default to build-time), writes `_site/<slug>.md` + `_site/llms.txt`). Head `<link rel="alternate" type="text/markdown">` in `default.html` (gated on `page.collection`). Wired into `.github/workflows/jekyll-build-deploy.yml` (after jekyll build, before pagefind) and `make build`. Extension is `.md` (Brajeshwar's call). Local run wrote 1478 twins (23 pages, 1455 posts); `.md`→`text/markdown`, `llms.txt`→`text/plain`. See [`agents.md`](agents.md). **Uncommitted.**
-- **Docs reorg (this session).** `_docs` filenames lowercased; `COLOR.md`+`TYPOGRAPHY.md` folded into [`styles.md`](styles.md) (type → colour → branding); new [`design.md`](design.md) (philosophy) and [`todo.md`](todo.md) (site task list, from the `tmp/` braindump); article-craft studies (Yale e360, BBC, The Walrus, iDiallo) added to [`inspirations.md`](inspirations.md). Empty root `TODO.md` stub removed (consolidated into `todo.md`).
+- **Docs reorg (this session).** `_docs` filenames lowercased; `COLOR.md`+`TYPOGRAPHY.md` folded into [`styles.md`](styles.md) (type → color → branding); new [`design.md`](design.md) (philosophy) and [`todo.md`](todo.md) (site task list, from the `tmp/` braindump); article-craft studies (Yale e360, BBC, The Walrus, iDiallo) added to [`inspirations.md`](inspirations.md). Empty root `TODO.md` stub removed (consolidated into `todo.md`).
 - **Design decisions locked + built (this session; build-verified, measure browser-checked):**
   - **Reading measure = character-based** — `--measure: 66ch` (~60–70 chars/line) → `--body-width-ideal`; was `46rem`≈80ch. Video embeds → `aspect-ratio: 16/9` (width-derived height no longer valid). Browser-checked at 1512px: column ~665px ≈ 66ch. See [`styles.md`](styles.md) §1.
-  - **Default theme = monotone grayscale** (already true; now explicitly locked with a header comment in `0.1-color.css`). Zero-chroma scale + gray accent → links carry no hue; affordance is the underline. Colour is opt-in (tinted palette or accent axis). See [`styles.md`](styles.md) §2.
+  - **Default theme = monotone grayscale** (already true; now explicitly locked with a header comment in `0.1-color.css`). Zero-chroma scale + gray accent → links carry no hue; affordance is the underline. Color is opt-in (tinted palette or accent axis). See [`styles.md`](styles.md) §2.
   - **Page-load budget < 100 KB** for non-article pages (hard target, documented). Homepage today ~48 KB raw / ~13 KB gzip (31 KB inlined CSS + ~20 KB first-party JS, zero images), comfortably under. See [`design.md`](design.md) → *Performance budget*.
   - **Icons → Lucide** (MIT) recommended, inline SVG / currentColor / zero-fetch, home `_includes/icons/`. Not yet adopted in markup — a [`todo.md`](todo.md) follow-up. Header search icon is already this style. See [`styles.md`](styles.md) §4.
   - **`.gitignore`** properly filled: `tmp/`, `node_modules/`, `vendor/`, `.vscode/`, `.idea/`, `.pagefind-cache/` (keep committing `package.json`/lockfile). Supersedes the old stale "pre-existing tmp/ line" note.
   - Follow-ups queued in [`todo.md`](todo.md): adopt Lucide, Geist `.ttf`→`.woff2`, scope `sidenotes.js` to article pages.
 - **Typography refinements (committed `0b0b5d09`):** reader Serif = self-hosted Libre Baskerville (`[data-font="serif"]`, loads only when chosen); sidenotes bumped one step to `--step--1`; blockquotes use `--font-body` (follow the reader's font, not a fixed serif). See [`styles.md`](styles.md) §1 + [`sidenotes.md`](sidenotes.md).
-- **Footer simplified (this session; browser-verified desktop + mobile):** three centred rows — (1) page links, (2) social icons, (3) copyright line last (`© 2001–<year> Brajeshwar Oinam · N posts`, year via JS). Icons live in `_includes/icons/*.svg` — brand glyphs from Simple Icons (CC0), `memos` hand-authored filled; footer template pulls them via a data-driven `{% include {{ var }} %}` (works). Files: `footer.html`, `3.1-footer.css`, `_data/nav.yaml`, `_includes/icons/`.
+- **Footer simplified (this session; browser-verified desktop + mobile):** three centered rows — (1) page links, (2) social icons, (3) copyright line last (`© 2001–<year> Brajeshwar Oinam · N posts`, year via JS). Icons live in `_includes/icons/*.svg` — brand glyphs from Simple Icons (CC0), `memos` hand-authored filled; footer template pulls them via a data-driven `{% include {{ var }} %}` (works). Files: `footer.html`, `3.1-footer.css`, `_data/nav.yaml`, `_includes/icons/`.
   - **Refinements (Brajeshwar):** page links are now grouped with a subtle bullet between groups (`.footer-links__sep`), order `Home • About Archives Books Now Photos Film Ideas • Hire Legal Newsletter Search Contact` — `_data/nav.yaml` `footer` is a list of `{links:[…]}` groups. Outer `footer` spans the full viewport (border-top edge-to-edge); a `.footer-inner` wrapper holds the content at `--body-width` / `--body-width-max`. Social: Oinam removed (`oinam.svg` deleted), Memos → `https://bits.oinam.com/`. Instagram = `instagram.com/oinam`.
   - **`/photos/` created** as a coming-soon page: `_pages/photos.md` (`layout: page`, `title: Photos`, an HTML `<h1>` — a markdown `#` heading gets stripped by `titles_from_headings: strip_title` in `_config.yml`, so pages use HTML headings; cf. `hire.html`). Body is just "Coming Soon."
 - **Header redesigned (this session; browser-verified desktop + narrow):** logo left (→ `/`); on the right, nav (About · Archives · Now · Contact) then tool icons — Search (⌘K palette; visible `⌘K` badge removed, shortcut still fires via `search.js` global keydown), RSS (`/feed.xml`), theme changer far right. Removed the `border-bottom` rule; separated from body by `margin-bottom: var(--space-l)`. Nav is now flat text (dropped the pill). Header constrained to `--body-width-max`, `justify-content: space-between`. Stacks + centers ≤600px (no hamburger). Added `Now` to `_data/nav.yaml` `main`. Removed dead `.site-search__hint` CSS. Files: `header.html`, `3.1-header.css`, `8.2-tools-search.css`, `_data/nav.yaml`.

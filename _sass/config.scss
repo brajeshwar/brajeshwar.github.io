@@ -21,7 +21,7 @@
    Kept anyway, deliberately: the whole block is ~330 B raw and
    compresses to very little (near-identical repeated lines), and it
    documents the vocabulary the scale is drawn from. That is a
-   judgement call, not a freebie — if you add tokens here, know you
+   judgment call, not a freebie — if you add tokens here, know you
    are paying for them everywhere.
    ------------------------------------------------------------ */
 :root {
@@ -148,15 +148,15 @@
                                         + 47px breathing room
                                         = 1024px (64rem)
 
-                                      WHY THE ARTICLE IS NOT CENTRED ANY MORE. It was, and that
-                                      is exactly why the width was 1296px: a centred column has
+                                      WHY THE ARTICLE IS NOT CENTERED ANY MORE. It was, and that
+                                      is exactly why the width was 1296px: a centered column has
                                       to reserve the full gutter on BOTH sides, one of which is
                                       dead space, giving 665 + 2x312 = 1289px as the FLOOR.
                                       1296 could not be narrowed without either losing sidenotes
                                       or squeezing them to ~123px. Paying for the gutter once is
                                       what buys the narrower site.
 
-                                      History: 76rem → 80rem → 81rem (all centred, 2026-07-27)
+                                      History: 76rem → 80rem → 81rem (all centered, 2026-07-27)
                                       → 64rem the same day, when the 81rem band read as too
                                       wide and the dead left gutter was the reason.
 

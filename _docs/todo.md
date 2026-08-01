@@ -31,7 +31,7 @@ Originally absorbed from the 2027 planning braindump.
       (SVG covers vs a plain text block), and it is his to answer before any code moves.
 - [x] ~~**Page template (Full Width)** / **(Ideal Width)**~~ — closed 2026-07-27. The split
       these described is gone: there is ONE site width (64rem/1024px) and the reading measure is
-      a constraint on prose *inside* it, not a second template. See *Standardise the site width*
+      a constraint on prose *inside* it, not a second template. See *Standardize the site width*
       below and [`styles.md`](styles.md) §6.
 - [x] **Timeline template** *(2026-07-27)* — `/about/` is now a vertical timeline with a
       CSS-only Life/Work filter and shareable `#work` / `#life` URLs, so `/about/#work` is the
@@ -64,7 +64,7 @@ Originally absorbed from the 2027 planning braindump.
 > ⚠️ **The delivery half of this was superseded 2026-07-27.** CSS is no longer inlined and no
 > longer split per layout: one external `assets/styles/site.css`, content-hashed, cached a
 > year. The `styles:` key is gone. Items below that talk about *what ships to which page* are
-> historical; items about *how the files are organised* still stand. [`styles.md`](styles.md)
+> historical; items about *how the files are organized* still stand. [`styles.md`](styles.md)
 > §5 → *The principle, restated*.
 Three tiers: base embedded on every page → one bundle per layout → per-page opt-in for
 one-offs only. Keep embedding; no external stylesheet. Ordered roughly by value/effort.
@@ -105,7 +105,7 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       tie against our inlined `<head>` styles. The file was almost entirely inert. Proved by
       A/B: with `search.css` removed entirely, `/search/` rendered identically — same padding,
       same radius, same 21px title, same browser-default *yellow* `<mark>` on a site whose whole
-      point is that colour is opt-in. ~10 KB was shipping to that page and styling nothing.
+      point is that color is opt-in. ~10 KB was shipping to that page and styling nothing.
       - Fixed by scoping every rule under `#search` — the container `_pages/search.html`
         already provides. One ID beats any number of classes, so the theme now actually applies.
       - The real duplication was internal: a hand-copy of Pagefind's defaults followed by a
@@ -139,7 +139,7 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       - **`.site-search__panel` opened twice, 30 lines apart** — the Pagefind theming block is
         folded into the main one. The two blocks that remain are the *shared* card and the
         search-specific one, which is the intended split, not duplication.
-      - Verified: all three buttons render identically (32px circle, same colour, 17px glyph),
+      - Verified: all three buttons render identically (32px circle, same color, 17px glyph),
         the footer row kept its own look, and both popups open and paint unchanged in dark+Warm.
 - [x] **base.css dead selectors** *(done 2026-07-27)* — all re-verified against the 1,456 BUILT
       pages, not the source, then removed: `.visually-hidden`, `img.round`,
@@ -148,13 +148,13 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       `@media` reset that existed only for them, and `tfoot`. Every one measured 0.
       ⚠️ `sidenotes.js` still lists `aside.right, .aside.right` among the wide media it dodges.
       Left in on purpose: a `querySelectorAll` matching nothing costs nothing, and it is the
-      right behaviour if one is ever authored.
+      right behavior if one is ever authored.
 - [x] **`html`+`body` both set `scroll-behavior`** *(done 2026-07-27)* — the `body` copy was
       inert; `<html>` is the scrolling element. Removed.
 - [ ] **base.css duplication, the rest** — `.sidenote` is still declared in two blocks (563 and
       609) and `.sidenote`/`.sidenote-inline` still repeat 6 declarations. Left alone
       deliberately on 2026-07-27: the second block is the focus/transition layer added later and
-      merging them is a real refactor of live sidenote behaviour, not a tidy. Worth doing with
+      merging them is a real refactor of live sidenote behavior, not a tidy. Worth doing with
       the sidenote work, not alongside unrelated cleanup.
 - [ ] **Two spacing systems** — ratio-derived `--space`/`--space-smaller` vs fluid Utopia
       `--space-*`. ⚠️ **Not the 3 rules this entry claimed** — re-counted 2026-07-27: **10 call
@@ -188,7 +188,7 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       moving them into `post.css` would break sidenotes and the foot fallback on those pages.
       They stay in `base.css`.
 
-## Standardise the site width — ✅ DONE 2026-07-27
+## Standardize the site width — ✅ DONE 2026-07-27
 **`--body-width-max` is 64rem / 1024px, and it is the only content width on the site.**
 Brajeshwar's call: *"Archives, and everything on the website should now run on the same
 width"*, then *"standardize at the size that encompasses the sidenotes too."* Header, footer,
@@ -203,7 +203,7 @@ sidenote gutter:
     = 977px  → 64rem (1024px), with 47px of breathing room
 
 ⚠️ **It was 81rem/1296px for part of 2026-07-27**, from the same sum with the gutter counted
-**twice** — correct while the reading column was centred, because then the margin is mirrored
+**twice** — correct while the reading column was centered, because then the margin is mirrored
 and you pay for the gutter on both sides. Going asymmetric (below) deleted that doubling and
 took 272px off the site. Both numbers are kept here because the arithmetic is the point: the
 width is a consequence of the sidenote decision, not an independent choice. `.sidenote`'s width is now
@@ -213,7 +213,7 @@ edge with 0px slack at bands of 1200/1100/1000px, and 3px inside at full width.
 
 The reading column is untouched and is **not** an exception to this — articles cap at
 `--body-width-ideal` (the 66rch measure) *inside* that band, which is a reading constraint,
-not a second site width. Centres align, so nothing looks off-axis.
+not a second site width. Centers align, so nothing looks off-axis.
 
 **`--body-width-wide` and `.container-wide` are gone.** They existed for about a day, while
 this was undecided, so `/archives/` could be wide without dragging the header and footer with
@@ -240,7 +240,7 @@ measure, galleries get the container, `figure.full` still breaks out via the exi
 `calc(50% - 50vw)`. One value to change when the site should get wider or narrower.
 
 **The blocking constraint, measured (see [`sidenotes.md`](sidenotes.md) → *The viewport
-floor*).** Sidenotes need a 1210px viewport, because `.container-ideal` is centred and so
+floor*).** Sidenotes need a 1210px viewport, because `.container-ideal` is centered and so
 spends as much on the dead left margin as on the working right gutter. An asymmetric grid
 drops that floor to roughly 970–1010px — the difference between sidenotes working on a
 1024-class laptop and not. Fix this as part of the same change or the width choice inherits a
@@ -250,7 +250,7 @@ limitation it doesn't need.
 past 1536px. Reasoning: screen-resolution stats report CSS pixels, so the common
 1536×864 and 1280×720 rows are 1080p panels at 125% and 150% OS scaling. The CSS width most
 desktop readers have is 1280–1536, not 1920 — and the window is narrower still after
-browser chrome, the scrollbar, and readers who don't maximise. (`$breakpoint-large: 1024px`
+browser chrome, the scrollbar, and readers who don't maximize. (`$breakpoint-large: 1024px`
 is a *breakpoint*, a separate question from the design target; it looks fine as is.)
 
 **Superseded, kept as the trail:** for about a day on 2026-07-27, `/archives/` used an opt-in
@@ -265,7 +265,7 @@ at the top of this section.
 - [x] **Asymmetric sidenote gutter** *(done 2026-07-27)*. The column is left-aligned in the
       band and the gutter is paid for once instead of mirrored into dead space. Sidenote floor
       1210px → ~980px viewport, measured. It is also what made the narrower site width
-      possible — a centred column could not go below 1289px without starving the notes.
+      possible — a centered column could not go below 1289px without starving the notes.
 - [x] ~~**Analytics** (viewport data to validate the width)~~ — closed 2026-07-27,
       Brajeshwar: *"Ignore this for now. The width is good for now."* The 64rem/1024px band
       stands on the sidenote arithmetic, which is a constraint rather than a guess. Reopen only
@@ -385,16 +385,16 @@ Worth a separate look at whether the unreferenced ones need to ship at all.
       *and truthily*. See [`javascript.md`](javascript.md).
 - [x] **Reading width = character-based** — `--measure: 66rch` (~60–70 chars/line); video embeds
       switched to `aspect-ratio: 16/9`. See [`styles.md`](styles.md) §1.
-- [x] **Default theme = monotone grayscale** — locked; zero-chroma scale + gray accent, colour
+- [x] **Default theme = monotone grayscale** — locked; zero-chroma scale + gray accent, color
       opt-in. Link affordance via underline. See [`styles.md`](styles.md) §2 / [`design.md`](design.md).
 - [x] **Page-load budget < 100 KB** (non-article pages) — documented as a hard target; homepage
       already ~48 KB raw / ~13 KB gzip. See [`design.md`](design.md) → *Performance budget*.
 
 ## Found 2026-07-27 (second session)
 
-- [x] **`:visited` was stealing chrome link colours, site-wide** *(fixed 2026-07-27)* — base.css
+- [x] **`:visited` was stealing chrome link colors, site-wide** *(fixed 2026-07-27)* — base.css
       styled links as `a, a:visited` / `a:hover, a:active`, both (0,1,1), which is higher
-      than a plain class. Six components lost their colour once visited: `site-nav a`,
+      than a plain class. Six components lost their color once visited: `site-nav a`,
       `.post-nav__link`, `.headerlink`, `.icon-button`, `home-books li a`,
       `.pagefind-modular-list-link`. Read as "slightly too dark" by default and as a wrong hue
       for anyone with an accent picked. Fixed at the cause — both base rules are `:where()`-
@@ -428,7 +428,7 @@ Worth a separate look at whether the unreferenced ones need to ship at all.
       and no code, and all three card grids intact.
 - [x] **Syntax highlighting removed entirely** *(2026-07-27, Brajeshwar's call)* — Rouge disabled
       in `_config.yml` and `code.css` deleted. 257 of the 310 code blocks were `plaintext`
-      anyway, and it was the only default colour on a monotone site. Disabling the highlighter
+      anyway, and it was the only default color on a monotone site. Disabling the highlighter
       beats deleting just the CSS: the `<span>` soup is kramdown's, so the stylesheet alone would
       have left ~1.5 KB/post of markup doing nothing. −262,286 bytes raw / −41,276 gzip across
       the 55 posts (−8.9% / −5.0%). ⚠️ Needed `:not(pre) > code` in base.css — kramdown drops

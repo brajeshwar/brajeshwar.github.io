@@ -71,7 +71,7 @@ Markdown would have been parser-dependent. In HTML we write the `id` ourselves.
 | `.timeline-title` / `.timeline-meta` | Heading and the role/place/date line. |
 
 Entry style follows the CV at <https://cv.brajeshwar.com>: each role a discrete block with a
-date range, an organisation, a location and a description, newest first.
+date range, an organization, a location and a description, newest first.
 
 ## Copy-paste templates
 
@@ -183,7 +183,7 @@ follow along as you click.
 
 ## Download Resume (not built)
 
-Brajeshwar's stated direction: a downloadable PDF labelled "Download Resume", which *is* the
+Brajeshwar's stated direction: a downloadable PDF labeled "Download Resume", which *is* the
 Work track. Nothing has been built for this. When it is, the obvious home is the head row
 beside the toggles, shown when Work is the active view — and worth deciding then whether the
 PDF is generated from this markup or maintained separately.

@@ -2,7 +2,7 @@
    Themes — palettes, light/dark values, webfonts.
    ------------------------------------------------------------
    Two orthogonal axes (mode x palette) plus font + accent.
-   The only file allowed to hold raw colour values.
+   The only file allowed to hold raw color values.
    ============================================================ */
 
 /* Self-hosted fonts for the reader font selector. The Default font is the
@@ -111,7 +111,7 @@
 }
 
 
-/* ---- Colour tokens ---------------------------------------------------- */
+/* ---- Color tokens ---------------------------------------------------- */
 
 /* ============================================================
    Theming — ported from Ovellum (ovellum.oss.oinam.com).
@@ -120,8 +120,8 @@
    DEFAULT THEME = MONOTONE GRAYSCALE (by design). The base palette below is
    pure zero-chroma gray — oklch(L 0 0) — and the default accent is gray too
    (--color-accent: --color-gray-900), so even links carry no hue. Link
-   affordance comes from the UNDERLINE, not colour (see base.css).
-   Colour is strictly opt-in: pick a tinted palette (nord = Cool, eink = Warm)
+   affordance comes from the UNDERLINE, not color (see base.css).
+   Color is strictly opt-in: pick a tinted palette (nord = Cool, eink = Warm)
    or set an accent via the appearance panel. Keep the base monotone.
 
    Two ORTHOGONAL axes on <html>:
@@ -130,7 +130,7 @@
    Mode and palette are independent: every palette has a light and a dark
    form. Palettes re-tint the gray SCALE; mode flips the SEMANTIC tokens
    light↔dark. "auto" follows prefers-color-scheme.
-   Extra axis: data-accent (custom accent color — opt-in colour).
+   Extra axis: data-accent (custom accent color — opt-in color).
 
    Token layers:
      1. raw scale     --color-gray-50..950 (+ white/black) — palettes override
@@ -239,7 +239,7 @@
      and needs no help. */
   --color-fg-subtle: var(--color-gray-700);  /* base-600 — 4.97:1 on paper */
 
-  /* Accent stays monotone, drawn from this ramp — colour on this site is
+  /* Accent stays monotone, drawn from this ramp — color on this site is
      opt-in through the Accent axis, not baked into a palette (design.md).
      Flexoki ships eight accent hues if that ever changes; kepano's own docs
      theme uses cyan-600. Left as the darkest warm neutral: 14.51:1. */
@@ -351,7 +351,7 @@
 
 /* ---- Syntax highlighting (code blocks) --------------------- */
 /* The pygments token classes in post.css reference ONLY the
-   --code-* tokens below — no hardcoded colours there any more.
+   --code-* tokens below — no hardcoded colors there any more.
 
    Light and dark share one hue per token type and differ only in
    LIGHTNESS (--code-l) and CHROMA (--code-c), so a code block sits

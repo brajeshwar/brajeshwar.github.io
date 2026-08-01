@@ -265,7 +265,7 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
 
    TYPOGRAPHY COMES FROM base.css. It is an <h2>, so it takes --step-2 at
    --font-weight-light like every other h2 on the site. This block used to set
-   its own size, weight, colour, letter-spacing and tabular figures, and that is
+   its own size, weight, color, letter-spacing and tabular figures, and that is
    exactly how the timeline drifted out of step with pages and posts
    (Brajeshwar, 2026-07-27: "we already have a common style for all titles …
    all Hx styles should be the same"). To change the size, change the heading
@@ -335,7 +335,7 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
 .timeline-entry:last-child,
 .page-now ul li:last-child { margin-bottom: 0; }
 
-/* Marker on the spine. Sits ON the rule, centred over it. */
+/* Marker on the spine. Sits ON the rule, centered over it. */
 .timeline-entry::before,
 .page-now ul li::before {
   content: "";
@@ -352,7 +352,7 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
 }
 
 /* Work entries read as filled, life as open — a quiet second signal so the
-   merged view is legible without reaching for colour, which the monotone
+   merged view is legible without reaching for color, which the monotone
    default rules out anyway (design.md). */
 .timeline-entry[data-track="work"]::before {
   background: var(--text-color-lower);
