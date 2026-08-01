@@ -51,15 +51,43 @@ title: Books
    dir     = "books"
    ratio   = "3x4"
    captions = true
-   heading = "All Time Favorites"
+   heading = "Personal Favorites &amp; Recommendations"
    id      = "favorites"
    sub     = "Here are some of my all-time favorite books I have read and re-read and would highly recommend." %}
+
+{%- comment -%}
+  ⚠️ CAPTURED, not written inline as an include parameter. The inline version
+  took the build down with "Invalid syntax for include tag": a Liquid string
+  literal is delimited by the quote it opens with, so the first `href="` inside
+  a double-quoted `sub = "…"` ENDS the string and everything after it is parsed
+  as more parameters. Wrapping the outside in single quotes would also work, but
+  a capture beats remembering which quote is safe — the block below can hold any
+  markup, over as many lines as it likes, with nothing to escape.
+
+  ⚠️ AND THE LINKS MUST BE HTML, NOT MARKDOWN. Two reasons stack. The include
+  emits this into `<p class="…">{{ include.sub }}</p>`, a block-level HTML
+  element, and kramdown does not process Markdown inside one; and the whole
+  block sits in `<div class="album" markdown="0">`, which switches Markdown off
+  explicitly. Tested 2026-08-01 by swapping in `[2018](/2018/books/)` and
+  building: it rendered as those literal characters, not a link.
+
+  The years are generated from the posts that actually exist rather than typed
+  out, so January needs no edit and a link can never point at a year that was
+  never written. Matching `/books/` with both slashes is deliberate: a post at
+  /2024/best-books/ contains "books/" but not "/books/", so it cannot sneak in.
+{%- endcomment -%}
+{%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
+{%- capture books_sub -%}
+Since 2018, I have started listing the interesting ones I read each year:
+{% for p in yearly %}<a href="{{ p.url | relative_url }}">{{ p.date | date: '%Y' }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
+{%- endcapture -%}
 
 {% include card-grid.html
    items   = rest
    dir     = "books"
    ratio   = "3x4"
    captions = true
-   heading = "More Books"
-   id      = "more" %}
+   heading = "Books"
+   id      = "more"
+   sub     = books_sub %}
 </div>
