@@ -241,7 +241,7 @@ home-container home-intro p {
    family as the muted date it leads to. */
 .toc__leader {
   flex: 1 1 auto;
-  /* 3rem ≈ seven dots at the 7px pitch below. Raised from 1.5rem when titles
+  /* 3rem ≈ twelve dots at the 4px pitch below. Raised from 1.5rem when titles
      started truncating: the trim only helps if the space it frees is enough to
      read as a leader, and 1.5rem was two dots and a gap. This minimum is what
      the title shrinks to make room for. */
@@ -251,13 +251,48 @@ home-container home-intro p {
   /* leave room for the dot row and lift it off the text baseline */
   height: 0.85em;
 
+  /* ⚠️ SMALLER, TIGHTER, CRISPER (2026-08-01). Brajeshwar: "I want the dots in
+     the articles list to be clearer, smaller, and more concentrated … without
+     introducing different artifacts." Same technique as before — one repeating
+     radial-gradient — so nothing new can render differently per engine. Three
+     numbers changed, each for a measured reason.
+
+     1. EXPLICIT RADIUS, NOT `closest-side`. `closest-side` derives the radius
+        from the tile's SHORT side, which welded the dot's diameter to the
+        tile's height: the old 7x2 tile could only ever draw a 2px dot, and
+        shrinking the dot meant shrinking the tile, which moved the band. An
+        explicit `0.75px` decouples size from pitch, so each can be tuned on
+        its own. Dot is now 1.5px against 2px.
+
+     2. 4px PITCH, AND IT MUST BE A WHOLE NUMBER. 99 dots where there were 57 —
+        that is the "more concentrated". 3.5px was tried and rejected: at
+        dpr 2 a fractional pitch lands every other dot on a half device pixel,
+        so alternating dots render sharp and soft and the line visibly
+        shimmers. That is the artifact to avoid, and integer pitch is the whole
+        defence against it.
+
+     3. 0.25em, NOT 0.28em, FOR THE SAME REASON ONE AXIS DOWN. At the 20px this
+        row computes to, 0.28em = 5.6px = 11.2 device pixels, so the band
+        straddled a device row and every dot was smeared vertically. 0.25em is
+        exactly 5px = 10 device pixels. The dots got smaller AND clearer, which
+        sounds contradictory until you notice most of the old softness was this
+        rather than the size. Kept in `em` so it still tracks the type at other
+        steps; it is only guaranteed integral at the dominant size, and a
+        fractional landing there costs uniform softness, never uneven dots.
+
+     The colour goes up one step to --text-color-low at the same time. A 1.5px
+     dot never fully covers a device pixel, so antialiasing dims it — hold the
+     old --text-color-lower and the smaller dot reads fainter, not clearer.
+     Checked in both themes: the tokens are not symmetric (light-mode `low` is
+     near-black at rgb(40,39,38)) but subpixel coverage lands it as a mid grey
+     there, and a soft light grey in dark. */
   background-image: radial-gradient(
-    circle closest-side,
-    var(--text-color-lower) 99%,
-    transparent 100%
+    circle,
+    var(--text-color-low) 0.75px,
+    transparent 0.75px
   );
-  background-position: left bottom 0.28em;
-  background-size: 7px 2px;
+  background-position: left bottom 0.25em;
+  background-size: 4px 4px;
   background-repeat: repeat-x;
 }
 
@@ -283,13 +318,16 @@ home-container home-intro p {
    (2026-07-31). An underline plus a highlight plus a leader is three signals
    for one affordance, and the underline was the one that fought the leader
    dots sitting a few pixels above it. */
+/* Hover moves up one more step, to full --text-color. It used to land on
+   --text-color-low, which is where the RESTING state now sits (see above), so
+   holding it there would have left hover with no change at all. */
 .toc__link:hover .toc__leader,
 .toc__link:focus-visible .toc__leader,
 .toc__link:active .toc__leader {
   background-image: radial-gradient(
-    circle closest-side,
-    var(--text-color-low) 99%,
-    transparent 100%
+    circle,
+    var(--text-color) 0.75px,
+    transparent 0.75px
   );
 }
 
