@@ -30,8 +30,40 @@
 
    `margin-top` cancels the header's own `margin: 0 auto var(--space-l)` so the
    image meets the header's border-bottom with no seam — "sticks to the header
-   border-bottom". ⚠️ Keep in step with that value in chrome.css; the same
-   coupling is noted on `.archive-strip`, which does the same trick.
+   border-bottom" — AND THEN ONE MORE --border-size, so it rises over the rule
+   itself rather than stopping under it.
+
+   ⚠️ THAT SECOND TERM IS NOT A NUDGE, it is exactly the border it hides
+   (2026-08-01). Brajeshwar: *"Since the border-bottom of the header is darker,
+   when there are cover pictures for articles, I can sometimes see the line on
+   top of the picture. Can we move up the picture -1px to cover that up."*
+   Measured before changing anything: the border band occupied CSS y 80→81 and
+   the image began at exactly 81, so the whole 1px rule sat on the picture with
+   zero overlap. It reads as a line ACROSS the photo rather than under the
+   header because the header rule stops at the content band (244→1268 here)
+   while the image bleeds the full width (0→1512) — a rule that runs only part
+   way across a photo has no way of looking deliberate.
+
+   Written as `var(--border-size)` and not `1px` on purpose: the two now have
+   to agree, and a literal would silently stop covering if the rule ever got
+   thicker. Because both edges derive from the same header bottom and the same
+   token, they stay on the same device-pixel row at any zoom — which is what
+   fixes the "sometimes".
+
+   It costs nothing of the picture: the background is `fixed`, so it is
+   positioned against the viewport and does not shift when the box moves. The
+   box grows 1px upward and paints there; the image content does not budge.
+   Verified by forcing the border red — fully covered, no sliver.
+
+   ⚠️ Do NOT overshoot to be safe. Anything more than one border width pulls
+   the photo up into the header's own padding, where it paints over the header
+   background instead of the rule.
+
+   ⚠️ Keep the FIRST term in step with the header's margin-bottom in
+   chrome.css. `.archive-strip` cancels the same margin and is deliberately NOT
+   getting the second term: it is a tray of year links, not a picture, so the
+   rule above it is the separator doing its job. The two are no longer the same
+   trick — do not "fix" one to match the other.
 
    No `border-radius`: it runs to the window edge, and a curve against the edge
    of the viewport reads as a rendering fault. */
@@ -41,7 +73,7 @@ photo-cover {
   width: 100%;
   max-width: var(--body-width-full);
   margin-inline: auto;
-  margin-top: calc(-1 * var(--space-l));
+  margin-top: calc(-1 * (var(--space-l) + var(--border-size)));
   margin-bottom: var(--space-m);
   height: 600px;
 
