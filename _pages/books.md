@@ -43,6 +43,7 @@ title: Books
   the ones explicitly written `highlight: false` and drop every book that simply
   omits it, which is nearly all of them.
 {%- endcomment -%}
+
 {% assign favorites = site.data.books | where: "highlight", true %}
 {% assign rest = site.data.books | where_exp: "b", "b.highlight != true" %}
 
@@ -76,7 +77,9 @@ title: Books
   never written. Matching `/books/` with both slashes is deliberate: a post at
   /2024/best-books/ contains "books/" but not "/books/", so it cannot sneak in.
 {%- endcomment -%}
+
 {%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
+
 {%- capture books_sub -%}
 Since 2018, I have started listing the interesting ones I read each year:
 {% for p in yearly %}<a href="{{ p.url | relative_url }}">{{ p.date | date: '%Y' }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
