@@ -218,3 +218,54 @@
   aspect-ratio: auto;
   object-fit: fill;
 }
+
+/* ---- Link columns -------------------------------------------------------
+   Long lists of links set in columns, used at the foot of /books/ for the
+   free-libraries and references lists. Brajeshwar 2026-08-01: "can you make it
+   into columns with at-least 3 columns at the current body width at the highest
+   1024px."
+
+   ⚠️ `columns: 18rem 3`, NOT `column-count: 3`. The shorthand carries a width
+   AND a count, and the count acts as a CEILING: at most three columns, each at
+   least 18rem (288px). At the 1024px band that is exactly three; at 768px it
+   falls to two and on a phone to one, with no breakpoint written. A bare
+   `column-count: 3` would have held three columns all the way down to 320px
+   and produced ~90px of column for lines that are whole sentences.
+
+   The arithmetic, so the 18rem is checkable rather than a feel: the browser
+   fits floor((width + gap) / (column-width + gap)) columns. At 1024 with a
+   24px gap that is floor(1048 / 312) = 3. Raising the width past 20rem would
+   drop it to two at the band, which is the thing to re-check if it changes.
+
+   `break-inside: avoid` on the item, because these are wrapping sentences, not
+   single words — without it a list item splits across a column boundary and
+   the sentence continues at the top of the next column. */
+.link-columns ul {
+  columns: 18rem 3;
+  column-gap: var(--space-m);
+  margin-block: var(--space-s) var(--space-l);
+
+  /* ⚠️ `outside` WITH padding, not `list-style-position: inside`. The default
+     `outside` puts the marker in the element's left padding, and with
+     `padding: 0` that is outside the column box, where it gets clipped — the
+     usual reason people reach for `inside` in a multi-column list. `inside`
+     works but sets the marker inline, so a wrapped line runs back to the
+     column edge instead of hanging under the text, and every one of these
+     items wraps. 1.15em of padding keeps the markers inside the column AND
+     keeps the hanging indent. Compared side by side in the browser. */
+  padding-inline-start: 1.15em;
+  list-style-position: outside;
+}
+
+.link-columns li {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;   /* WebKit has needed this alongside */
+  margin-block-end: var(--space-2xs);
+}
+
+/* The second heading needs air above it — it follows a column block, and the
+   list's own bottom margin is doing that job, so only the first needs resetting
+   against the grid above. */
+.link-columns h2 {
+  margin-block-start: var(--space-l);
+}

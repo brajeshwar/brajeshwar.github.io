@@ -1,0 +1,156 @@
+---
+layout: page
+title: Books
+---
+
+{%- comment -%}
+  ⚠️ THIS IS `.html`, NOT `.md`, AND THAT CHANGES ONE THING ABSOLUTELY.
+  Renamed 2026-08-01: "if books.html would be the easier one to play with the
+  HTML markup instead of the Markdown (Markdown for more prose), then let's
+  change that to a HTML file."
+
+  kramdown does not run on this file at all. Not "runs but is switched off by
+  `markdown="0"`" — it never sees it. So:
+
+    · every list, link and heading below must be written as HTML. A line
+      beginning `## ` prints its own hashes; `[text](url)` prints its own
+      brackets. There is no `markdown="1"` escape hatch here, because there is
+      no Markdown processor to re-enter.
+    · the `markdown="0"` attribute that used to sit on the wrapper is gone. It
+      existed to stop kramdown chewing on the Liquid, and now has nothing to do.
+    · Liquid still runs. Includes, assigns, captures and comments are unchanged.
+
+  The URL did not move. `_pages` is `permalink: '/:name/'` and `:name` is the
+  filename without its extension, so `/books/` is the same page it always was —
+  the same reason `film.html`, `about.html` and `devices.html` have clean URLs.
+
+  ⚠️ THE <h1> IS NOW REAL MARKUP, AND THAT IS A VISIBLE CHANGE. As Markdown,
+  `# Books` was eaten by jekyll-titles-from-headings: the plugin lifts the first
+  H1 into the page title and removes it from the body, which is why /books/
+  rendered with no heading while /album/ — whose `<h1>` is hand-written HTML —
+  rendered one. Writing it as HTML makes the two pages agree.
+{%- endcomment -%}
+
+<h1>Books</h1>
+
+<div class="album">
+{%- comment -%}
+  `<div class="album">` rather than `layout: album`. The album LAYOUT drops the
+  reading measure for the whole page; the CLASS is all the grids need, because
+  album.scss targets `.album .item__cards`, a descendant selector, so the cards
+  get their sizing and figure resets without the layout deciding anything about
+  the page.
+
+  ⚠️ This page has no footnotes, and page.html keys `container-ideal` off
+  `content contains 'class="footnotes"'` — so `.page` is the full band here
+  rather than the 665px measure. The grids do not care either way, because
+  `.page > .album` takes 100cqi, which is the band in both cases.
+{%- endcomment -%}
+{%- comment -%}
+  Two grids, ONE source, no overlap (2026-08-01: "I do not want to repeat the
+  Favorites in the All books section").
+
+  `highlight: true` splits `_data/books.yaml` in two. `where_exp` rather than a
+  second data file, because two files would mean two places a book can live and
+  a way for it to end up in both or neither — the flag is the single fact and
+  the grids are two views of it. Promoting a book to a favorite is one word in
+  one place.
+
+  ⚠️ `b.highlight != true`, not `b.highlight == false`. The key is OPTIONAL, so
+  most entries have no `highlight` at all — comparing to false would match only
+  the ones explicitly written `highlight: false` and drop every book that simply
+  omits it, which is nearly all of them.
+{%- endcomment -%}
+
+{% assign favorites = site.data.books | where: "highlight", true %}
+{% assign rest = site.data.books | where_exp: "b", "b.highlight != true" %}
+
+{% include card-grid.html
+   items   = favorites
+   dir     = "books"
+   ratio   = "3x4"
+   captions = true
+   heading = "Personal Favorites &amp; Recommendations"
+   id      = "favorites"
+   sub     = "Here are some of my all-time favorite books — ones I have read and re-read, and would highly recommend." %}
+
+{%- comment -%}
+  ⚠️ CAPTURED, not written inline as an include parameter. The inline version
+  took the build down with "Invalid syntax for include tag": a Liquid string
+  literal is delimited by the quote it opens with, so the first `href="` inside
+  a double-quoted `sub = "…"` ENDS the string and everything after it is parsed
+  as more parameters. Wrapping the outside in single quotes would also work, but
+  a capture beats remembering which quote is safe — the block below can hold any
+  markup, over as many lines as it likes, with nothing to escape.
+
+  The years are generated from the posts that actually exist rather than typed
+  out, so January needs no edit and a link can never point at a year that was
+  never written. Matching `/books/` with both slashes is deliberate: a post at
+  /2024/best-books/ contains "books/" but not "/books/", so it cannot sneak in.
+{%- endcomment -%}
+
+{%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
+
+{%- capture books_sub -%}
+Since 2018, I have listed the interesting ones I read each year:
+{% for p in yearly %}<a href="{{ p.url | relative_url }}">{{ p.date | date: '%Y' }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
+{%- endcapture -%}
+
+{% include card-grid.html
+   items   = rest
+   dir     = "books"
+   ratio   = "3x4"
+   captions = true
+   heading = "Books"
+   id      = "more"
+   sub     = books_sub %}
+</div>
+
+{%- comment -%}
+  ⚠️ THE LINK LISTS SIT AFTER THE GRIDS, NOT BETWEEN THEM (2026-08-01: "the
+  prose in the middle is not working, move it to the bottom after the books").
+  They were briefly in the middle, where they cut the page in half: two grids
+  that belong together read as one shelf, and a wall of links dropped between
+  them made the second grid look like the start of a different page.
+
+  `.link-columns` sets them in columns — "at least 3 columns at the current
+  body width, at the highest 1024px". The rule lives in page.scss and reads
+  `columns: 18rem 3`: at most three columns, each at least 18rem, so the 1024px
+  band gives exactly three and narrower viewports fall to two and then one on
+  their own. A bare `column-count: 3` would have forced three columns onto a
+  phone.
+
+  ⚠️ DELIBERATELY NOT `container-ideal`. These sit outside the reading measure:
+  665px is right for sentences and wrong for three columns of links. They take
+  the band, which is where the 1024px in the request comes from.
+{%- endcomment -%}
+
+<section class="link-columns">
+
+  <h2 id="free-books">Free and Open Source Books</h2>
+
+  <ul>
+    <li><a href="https://www.downpour.com">Downpour</a> DRM-Free AudioBooks (paid)</li>
+    <li><a href="https://www.globalgreyebooks.com/">Global Grey&rsquo;s Books</a> is a growing library of high-quality, public domain, free ebooks.</li>
+    <li><a href="https://standardebooks.org">Standard Ebooks</a> has free and liberated ebooks.</li>
+    <li>Project <a href="https://www.gutenberg.org">Gutenberg</a> is a library of over 60,000 free eBooks carefully produced for the true book lover.</li>
+    <li><a href="https://openlibrary.org">Open Library</a></li>
+    <li><a href="https://aimath.org/textbooks/">Open Textbook Initiative</a> from The American Institute of Mathematics.</li>
+    <li><a href="https://librivox.org">LibriVox</a> free public domain Audiobooks.</li>
+    <li><a href="https://en.wikisource.org/wiki/Main_Page">Wikisource</a> is the free library that anyone can improve.</li>
+    <li><a href="http://aurellem.org/society-of-mind/">The Society of Minds</a> by <a href="https://web.media.mit.edu/~minsky/">Marvin Minsky</a>.</li>
+    <li><a href="https://www.libraryofshortstories.com">Library of Short Stories</a> is a Free Online Library for Classic Short Stories.</li>
+  </ul>
+
+  <h2 id="references">References</h2>
+
+  <ul>
+    <li><a href="https://hacker-recommended-books.vercel.app">HackerNews Book Recommendations</a></li>
+    <li><a href="https://fs.blog/reading/">A Helpful Guide to Reading Better</a></li>
+    <li><a href="https://booksbythefoot.com">Books by the Foot</a></li>
+    <li><a href="https://www.goodbooks.io">Good Books</a> Recommended by Successful People.</li>
+    <li><a href="https://psyche.co/guides/how-to-gain-more-from-reading-by-taking-it-all-in-more-slowly">How to Gain More From Your Reading</a></li>
+    <li><a href="https://odd-lots-books.netlify.app">Odd Lots Recommended Books</a></li>
+  </ul>
+
+</section>
