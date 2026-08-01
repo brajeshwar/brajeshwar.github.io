@@ -91,6 +91,43 @@ already in the archive and it is what makes a re-cut possible when this template
 ⚠️ Masters live in `/static/` too, so they ship with the deploy — a few are referenced directly
 by posts, so they are not dead weight, but do not add a 700 KB master casually.
 
+### Adding a book or an album item
+
+Append to the end of `_data/books.yaml` or `_data/album.yaml`. **The last entry is the
+newest** — that is the whole ordering protocol, and it is why the home-page strips read
+newest-first while `/books/` keeps the file's own order. There is deliberately no date field:
+a re-read has no single date worth recording, and a second field is a second thing to keep
+true.
+
+`highlight: true` on a book puts it in *All Time Favorites* and takes it out of *More Books* —
+one flag, two grids, no entry in both. `media: video` or `media: audio` on an album item
+overlays the matching icon.
+
+**When one file gets unwieldy**, split it into a directory — `_data/books/2024.yaml`,
+`2025.yaml`, and so on. Jekyll turns `_data/books/` into a hash keyed by filename and iterates
+it in **filename order, not filesystem order** (verified 2026-08-01 by creating the files out
+of sequence: 2026 → 2024 → 2025 still read back 2024 → 2025 → 2026). So "the last entry is the
+newest" still holds globally, as long as filenames sort ascending — which is why the split is
+**by year, never by letter**. An alphabetical split would scatter chronology across files and
+break the one rule the whole thing rests on.
+
+The cost is a flatten step wherever the list is used, since a directory is a hash of arrays
+rather than one array:
+
+```liquid
+{% raw %}{% assign books = "" | split: "" %}
+{% for group in site.data.books %}{% assign books = books | concat: group[1] %}{% endfor %}{% endraw %}
+```
+
+⚠️ That snippet is wrapped in a Liquid **raw** block in this page's source, and has to be.
+Liquid runs **before** Markdown, so a fenced code block is no protection: the example executed
+on first write and took the build down with *"concat filter requires an array argument"*,
+because `site.data.books` is still a flat array here, not a directory. Naming the tag in prose
+does it too — a bare mention of it outside a raw block reads as an unclosed opening tag and
+fails with *"'raw' tag was never closed"*. Both mistakes were made writing this paragraph.
+
+Not worth paying until editing one file is genuinely annoying — a few hundred entries is fine.
+
 ### Where they go
 
 `/static/books/`, `/static/album/`, `/static/films/`, `/static/devices/` — bare filenames in

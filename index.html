@@ -46,11 +46,16 @@ title: Brajeshwar Oinam
     reversed back: the strip reads newest-to-oldest left to right, while
     /books/ keeps the data file's own order.
 
-    ⚠️ "Newest" here means LAST IN THE FILE, because the entries carry no date.
-    Append a new book to the end of _data/books.yaml and it leads the strip;
-    reorder the file and the strip silently reorders with it. If that ever
-    matters, add a `read:` date per entry and sort on it instead — one filter
-    change here, and it survives the file being rearranged.
+    "Newest" means LAST IN THE FILE, and that is the convention, not a
+    limitation. Brajeshwar 2026-08-01: "the latest is always the last entry in
+    the YAML file… The reason I do not want to or need to record read is that I
+    tend to re-read books a lot and honestly does not matter. I do not want to
+    maintain another record."
+
+    ⚠️ So do NOT add a `read:` or `added:` date and sort on it. That was
+    suggested and rejected on the good ground that a re-read has no single date
+    worth recording, and a second field is a second thing to keep true. Append
+    to the end of the file; that is the whole protocol.
   {%- endcomment -%}
   {%- assign home_books_count  = 8 -%}
   {%- assign home_album_count = 8 -%}
