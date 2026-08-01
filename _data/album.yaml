@@ -82,13 +82,21 @@
 # if you add an old photograph, decide whether it belongs at the end (newest
 # ADDED) or in date order, and stay consistent.
 
-- title: Met Edward Norton in London
-  url: https://www.instagram.com/p/DZx4WchDoVE/
-  img: 2026-06-19-edward-norton.webp
+- title: The day Oinam Software was acquired by Nanocast
+  img: 2006-04-08-oinam-software-acquired-by-nanocast.webp
+
+- title: Reading GigaOM on a Nokia N95
+  img: 2006-05-26-nokia-n95.webp
+
+- title: Sunset from the seawall
+  img: 2007-07-17-city-skyline-at-sunset.webp
 
 - title: Fresh start with an iMac
   url: https://unsplash.com/photos/silver-imac-with-apple-magic-keyboard-and-magic-mouse-fGkBx7hX9Ms
   img: 2010-07-10-imac-fresh-start.webp
+
+- title: Bangalore Palace
+  img: 2012-10-01-bangalore-palace.webp
 
 - title: Daughter loves art
   url: https://www.instagram.com/p/Bo8sBhHF0Oa/
@@ -97,3 +105,7 @@
 - title: Eerily empty weekend in San Francisco
   url: https://www.instagram.com/p/CtpbIlJujAH/
   img: 2023-06-18-san-francisco.webp
+
+- title: Met Edward Norton in London
+  url: https://www.instagram.com/p/DZx4WchDoVE/
+  img: 2026-06-19-edward-norton.webp
