@@ -47,6 +47,9 @@ Originally absorbed from the 2027 planning braindump.
       book covers, entries sorted by `img` filename. ⚠️ Two of the eight have no `url` and
       render **unlinked by design**; both includes guard on the field rather than emitting
       `<a href="">`, which is a link to the current page, not an inert one.
+- [x] **`/books/` is now `books.html`** *(2026-08-01)* — HTML markup, Markdown reserved for
+      prose-heavy pages. URL unchanged (`_pages` is `permalink: '/:name/'`). Its free-libraries
+      and references lists sit at the foot as one list in `columns: 18rem 3`, a step smaller.
 - [ ] **Photos component** — a style that highlights key photos. Likely after <https://pictures.oinam.com> is up.
 
 ## Infrastructure & migrations
@@ -389,6 +392,22 @@ retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroo
       per month** — 86 MB is 8.6% of storage, and every CI checkout that pulls LFS spends
       bandwidth against the same quota. (`actions/checkout` does not pull LFS unless asked, and
       must not be asked: the build never reads `_src/`.) Raised, not done — Brajeshwar's call.
+
+## Raised 2026-08-01, second half — open
+
+- [ ] ⚠️ **Re-cut the `how-to-read-a-book` cover.** The top line of the title is missing from
+      the file: the first crop used a 122px offset picked to keep the BOOK centred and it lands
+      inside the words "How to". The 1280x927 original was deleted the same day on "do not
+      worry about preserving the original", and every surviving copy is downstream of that
+      crop. Brajeshwar has it in Apple Photos. Drop it back into `/static/2026/` and re-cut —
+      **measure where the TITLE sits, not where the book sits.**
+- [ ] **No `og:image` / `twitter:image` anywhere on the site.** 35 posts carry a cover that no
+      social preview will ever show. One include, and it would earn its keep immediately.
+- [ ] **`/devices/` has one `<a href="">`** — its own hand-written markup in `_pages/devices.html`
+      with an entry that has no `url`. `card-grid.html` and `home-strip.html` both guard on the
+      field now; devices does not. Six more `href=""` sit in old post bodies and are content.
+- [ ] **`/film/` says "Last updated: Dec 31, 2025."** A hand-maintained date on a page whose
+      data changes independently of it.
 
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +

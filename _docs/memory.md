@@ -6,13 +6,15 @@
 
 ## Where we are (updated 2026-08-01, end of the fifth session) — READ FIRST
 
-### ⏸ Session paused 2026-08-01. **26 of 27 commits are LIVE. One is not.**
+### ✅ Session CLOSED 2026-08-01. Everything pushed, deployed green, tree clean.
 
-`origin/main` is `af5421f4`, deployed green and verified against the live URLs. The tree is
-clean. Every commit this session is signed (`G`) and in Brajeshwar's name.
+`main` and `origin/main` are in sync at `cca94c3e`. **37 commits** this session, every one
+signed (`G`) and in Brajeshwar's name, none touching `_posts/**` except where he asked for it
+by name. Nothing is pending.
 
-**Unpushed:** `2ce08ec2` *legal.md: back to "capitalized"* — plus whatever docs commit closes
-this session. Push when he asks, not before (guardrail 7).
+Verified against the live URLs rather than `_site`: the article, `/books/`, `/album/` and the
+cover image all 200; the 2099 draft correctly 404s and appears in neither `feed.xml` nor
+`sitemap.xml`; the new link CSS is in the served stylesheet.
 
 ### What this session did
 
@@ -36,6 +38,16 @@ placeholder into a real, populated section and did a copy-editing pass. In order
 6. **`/album/` is real.** Eight photographs, cut from masters in `_src/album/`, native aspect,
    all inside the 60 KB budget. Home strip re-enabled and widened to 240px.
 7. **Copy edit** of `/`, `/books/` and `/film/` — eleven fixes, smallest change each time.
+8. **`/books/` became `books.html`.** kramdown never sees it now, so every list and heading is
+   HTML. The URL did not move — `_pages` is `permalink: '/:name/'` and `:name` excludes the
+   extension. A visible fix fell out of it: `# Books` as Markdown was being eaten by
+   jekyll-titles-from-headings, so the page had no heading where `/album/` (raw `<h1>`) had one.
+   The free-libraries and references lists moved to its foot as **one** list in
+   **`columns: 18rem 3`**, a step smaller.
+9. **`How to Read a Book` became a real review** — the four levels, the disagreement rule, an
+   honest verdict — with three researched sidenotes and a 16:9 cover.
+10. **Link states fixed.** The resting underline was nearly as dark as the text, so hover had
+   nowhere to go. See *Rules learned* #8.
 
 ### ⚠️ Loose ends to pick up
 
@@ -50,9 +62,18 @@ placeholder into a real, populated section and did a copy-editing pass. In order
   `static/2026/` that nothing links to. Moving them to `_src/` would take `/static/` from
   371 MB to ~285 MB — weighed against GitHub LFS's 1 GB storage / 1 GB monthly bandwidth.
   Raised twice, decided neither time. **Brajeshwar's call, not a tidy-up.**
-- **`_backup/`** holds `books-BCK.md` (634 words of old `/books/` prose), plus his own
-  `Brajeshwar.md` and `PeopleAndBlogs.md`. Underscore directory, so none of it publishes —
-  but the repository is **public**.
+- **`_backup/` is gone.** Retired 2026-08-01: `PeopleAndBlogs.md` moved to `_archives/`
+  byte-identical, the rest dropped. ⚠️ `books-BCK.md`, the 634 words of old `/books/` prose,
+  is recoverable from `c37d63a4` and nowhere else. `_archives/` is NOT a declared collection,
+  so like `_backup/` it publishes nothing — but the repository is **public**.
+- ⚠️ **The `how-to-read-a-book` cover is missing the top line of the title, and the original
+  is gone.** The first cut used a 122px offset chosen to keep the BOOK symmetric; it lands
+  inside the words "How to", and the 1280x927 source was deleted the same commit on
+  Brajeshwar's "do not worry about preserving the original". Every surviving copy is
+  downstream of that crop. He has it in Apple Photos — dropping it back into `/static/2026/`
+  allows a proper re-cut. **This is the one unfinished thing on the site.**
+- **No `og:image` or `twitter:image`, on any page.** 35 posts carry a cover that no social
+  preview will ever show. Raised 2026-08-01, not started.
 - **Above 1512px is still unverified.** The iframe harness clamps to the outer window.
 - **Safari's `/album/` first row is uneven, and that is accepted.** See *Rules learned* #2.
 
@@ -100,6 +121,21 @@ placeholder into a real, populated section and did a copy-editing pass. In order
 7. **Straight-quote and double-space sweeps over stripped HTML report phantoms.** Replacing
    tags with spaces manufactures both. A first pass reported 38 faults and every one was mine;
    match against the raw HTML inside text nodes instead.
+
+8. **A link state that "does nothing" is usually the RESTING state's fault.** Hover was
+   already set to `--text-color` and looked identical to rest, because rest was on
+   `--text-color-lower` — rgb(64,64,64) against a rgb(229) page, 8.23:1 where the body text is
+   15.72:1. The two states differed by **1.91:1** on a 0.8px line. Lightening rest to a 50%
+   foreground mix (3.14:1, still over the 3:1 non-text threshold) roughly doubled the jump in
+   all six palette/mode combinations. ⚠️ And hover must be `--text-color`, **not**
+   `--color-accent`: nord's accent is a mid-tone blue at 3.31:1, so accent-on-hover would move
+   1.2x there. Only `--text-color` is guaranteed to sit at the far end of every palette.
+9. **`markdown="0"` vs a `.html` file are not the same thing.** With `markdown="0"` kramdown
+   still runs and a nested `markdown="1"` re-enters it. In a `.html` page kramdown never runs
+   at all, so there is no escape hatch and every list, link and heading must be HTML.
+10. **`git mv` is right for renaming WITHIN `_src/` and wrong for moving INTO it.** Into: the
+   clean filter never runs and the real binary is committed. Within: the index entry is
+   already a pointer and stays one. Verified both ways.
 
 ### How to verify a change (the loop that works)
 
