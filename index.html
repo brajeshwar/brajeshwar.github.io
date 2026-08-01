@@ -41,16 +41,21 @@ title: Brajeshwar Oinam
     /books/ and /album/ (2026-08-01: "the books list on the home page should
     be the last xx number from the above /books/").
 
-    "Last" means the end of the data file, i.e. most recently added — so a new
-    book appears on the home page by being appended to _data/books.yaml and
-    nothing else. Liquid has no `last: n`, and negative offsets on `slice` are
-    not worth relying on, so it is reverse → take → reverse, which restores the
-    original order rather than showing the shelf backwards.
+    NEWEST FIRST (2026-08-01: "I also want the books lists in the homepage to be
+    chronological with the newest first"). So it is reverse → take, and NOT
+    reversed back: the strip reads newest-to-oldest left to right, while
+    /books/ keeps the data file's own order.
+
+    ⚠️ "Newest" here means LAST IN THE FILE, because the entries carry no date.
+    Append a new book to the end of _data/books.yaml and it leads the strip;
+    reorder the file and the strip silently reorders with it. If that ever
+    matters, add a `read:` date per entry and sort on it instead — one filter
+    change here, and it survives the file being rearranged.
   {%- endcomment -%}
   {%- assign home_books_count  = 8 -%}
   {%- assign home_album_count = 8 -%}
 
-  {%- assign books_tail = site.data.books | reverse | slice: 0, home_books_count | reverse -%}
+  {%- assign books_tail = site.data.books | reverse | slice: 0, home_books_count -%}
   {%- comment -%}
     The Books intro paragraph was removed 2026-07-31 on request. The `intro`
     parameter is still supported by the include — nothing else passes one today.
@@ -75,7 +80,7 @@ title: Brajeshwar Oinam
     `media: video` or `media: audio` get a small icon badge instead, which is
     the one thing a thumbnail cannot say on its own.
   {%- endcomment -%}
-  {%- assign album_tail = site.data.album | reverse | slice: 0, home_album_count | reverse -%}
+  {%- assign album_tail = site.data.album | reverse | slice: 0, home_album_count -%}
   {% include home-strip.html
      items = album_tail
      title = "Album"

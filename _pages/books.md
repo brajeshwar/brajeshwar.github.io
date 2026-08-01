@@ -28,7 +28,24 @@ title: Books
   `.page > .album` takes 100cqi, which is the band in both cases. If the prose
   comes back, so does the measure, and so do the sidenotes it was there for.
 {%- endcomment -%}
+{%- comment -%}
+  Two grids, ONE source, no overlap (2026-08-01: "I do not want to repeat the
+  Favorites in the All books section").
+
+  `highlight: true` splits _data/books.yaml in two. `where_exp` rather than a
+  second data file, because two files would mean two places a book can live and
+  a way for it to end up in both or neither — the flag is the single fact and
+  the grids are two views of it. Promoting a book to a favourite is one word in
+  one place.
+
+  ⚠️ `b.highlight != true`, not `b.highlight == false`. The key is OPTIONAL, so
+  most entries have no `highlight` at all — comparing to false would match only
+  the ones explicitly written `highlight: false` and drop every book that simply
+  omits it, which is nearly all of them.
+{%- endcomment -%}
 {% assign favourites = site.data.books | where: "highlight", true %}
+{% assign rest = site.data.books | where_exp: "b", "b.highlight != true" %}
+
 {% include card-grid.html
    items   = favourites
    dir     = "books"
@@ -39,10 +56,10 @@ title: Books
    sub     = "Here are some of my all-time favorite books I have read and re-read and would highly recommend." %}
 
 {% include card-grid.html
-   items   = site.data.books
+   items   = rest
    dir     = "books"
    ratio   = "3x4"
    captions = true
-   heading = "Every Book"
-   id      = "all" %}
+   heading = "More Books"
+   id      = "more" %}
 </div>
