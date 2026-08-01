@@ -47,7 +47,7 @@ What follows is my own take: the whys, and some of the hows, gathered over years
 7. Try to write a summary after you’ve read the whole book.
 8. Find your format/style or mix them up: digital, physical, audio.
 
-### Tips
+## Tips
 
 Here are a few personal tips that worked for me while trying to read and learn the contents of books and get the best out of them. This will help you overcome the habit of `Tsundoku`[^tsundoku].
 
