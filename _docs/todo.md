@@ -43,6 +43,10 @@ Originally absorbed from the 2027 planning braindump.
       generated from the timeline markup or maintained separately.
 - [ ] **Retire `cv.brajeshwar.com`** once `/about/#work` has been live a while — belongs with the
       other Cloudflare Worker redirects above.
+- [x] **`/album/` is real** *(2026-08-01)* — eight photographs replacing the twelve borrowed
+      book covers, entries sorted by `img` filename. ⚠️ Two of the eight have no `url` and
+      render **unlinked by design**; both includes guard on the field rather than emitting
+      `<a href="">`, which is a link to the current page, not an inert one.
 - [ ] **Photos component** — a style that highlights key photos. Likely after <https://pictures.oinam.com> is up.
 
 ## Infrastructure & migrations
@@ -356,25 +360,30 @@ thumbnail ever renders is **245px** (`/album/` masonry, whose columns grow to fi
 against 193px for the `/books/` `/film/` `/devices/` grids and 192px for the home strips. A
 retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroom.
 
-- [ ] **Re-cut `/static/films/`** — 97 files at `225 × 300`, i.e. **1.2×** where they render at
-      193px. This is the visibly soft one.
+- [ ] **Re-cut `/static/films/`** — **97 of its 119 files** are `225 × 300`, i.e. **1.2×**
+      where they render at 193px. The visibly soft one, and the largest job left. (`/film/`
+      renders 112 `<li>`; 97 is the count that actually needs re-cutting.)
 - [ ] **Re-cut `/static/books/`** — 9 files at `360 × 480`, 1.5× on `/album/`. Less urgent; they
       are fine in the home strip, which renders at 192.
 - [ ] 129 of 136 existing files are already 3:4, so this is a resolution pass, not a re-crop.
+- [x] **`/static/album/` cut to the template** *(2026-08-01)* — 8 photographs, native aspect,
+      every one inside the 60 KB budget. ⚠️ The home album strip is now **240px**, so the retina
+      floor for these is 480px. The narrowest cut is 554px wide: fine today, and the ceiling is
+      about **280px** before they need re-cutting.
 
 ⚠️ **Keep the masters.** They are what a re-cut re-cuts from. **Two conventions since
 2026-08-01** (full rules in [`/styleguide/`](../_pages/styleguide.md) § *Keep the master*):
 
 - **Collections** — masters live in **`_src/{books,film,album,devices,wear}/`** at the repo
-  root, on **Git LFS**, under the same slug as the published file. 8 files (7 books, 1 film);
-  the other three folders are empty placeholders. Because `_src` starts with an underscore
+  root, on **Git LFS**, under the same slug as the published file. 12 files: 7 books, 1 film,
+  4 album; `devices` and `wear` are still empty placeholders. Because `_src` starts with an underscore
   Jekyll never copies it, so masters stopped shipping with no `_config.yml` change — which
   retired the `exclude: static/*/src` question raised earlier the same day.
 - **Year folders** — `static/2019/`…`static/2026/` — still `<name>-original.<ext>`, in place,
   **not migrated**. 41 files, 96 MB, of which **3 are linked directly from posts**, so their
   URLs are pinned. Migrating those three would break links for no gain.
 
-- [ ] **The 86.3 MB decision.** 38 of the 41 year-folder masters are referenced by nothing and
+- [ ] **The 86.3 MB decision — raised twice on 2026-08-01, decided neither time.** 38 of the 41 year-folder masters are referenced by nothing and
       ship on every deploy. Moving them to `_src/` would take `/static/` from 371 MB to about
       285 MB. ⚠️ Weigh it against the **GitHub LFS free tier: 1 GB storage and 1 GB bandwidth
       per month** — 86 MB is 8.6% of storage, and every CI checkout that pulls LFS spends

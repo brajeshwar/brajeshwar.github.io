@@ -4,7 +4,123 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-01) — READ FIRST
+## Where we are (updated 2026-08-01, end of the fifth session) — READ FIRST
+
+### ⏸ Session paused 2026-08-01. **26 of 27 commits are LIVE. One is not.**
+
+`origin/main` is `af5421f4`, deployed green and verified against the live URLs. The tree is
+clean. Every commit this session is signed (`G`) and in Brajeshwar's name.
+
+**Unpushed:** `2ce08ec2` *legal.md: back to "capitalized"* — plus whatever docs commit closes
+this session. Push when he asks, not before (guardrail 7).
+
+### What this session did
+
+Two halves. The first is recorded verbatim below under *Session record — 2026-08-01 (first
+half)*; it built the home page, `/books/` and `/album/`. The second half turned `/album/` from
+placeholder into a real, populated section and did a copy-editing pass. In order:
+
+1. **Books shelf made honest.** Duplicate preview entries deleted, favourites and the rest made
+   disjoint via `highlight: true`, home strip runs newest-first. British → American spelling
+   across the whole UI (`favourites` → `favorites`), content untouched.
+2. **Contrast raised one step** across every palette and mode; header and footer rules
+   strengthened to `--rule-strong`.
+3. **Masters moved to `_src/` on Git LFS.** Three attempts, and the third is the good one:
+   `-original` suffix → `static/*/src/` → **`_src/{books,film,album,devices,wear}/`**. The
+   leading underscore is the whole point — Jekyll never copies an underscore directory, so
+   masters stopped shipping with no `_config.yml` exclude. See *Rules learned* #1.
+4. **Leader dots** on the home page: smaller (1.5px), twice as dense (4px pitch), and landed
+   on whole device pixels. Most of the old softness was a fractional vertical offset, not size.
+5. **Cover photos rise 1px over the header rule** so it no longer draws a line across the top
+   of the picture on the 70 posts that have one.
+6. **`/album/` is real.** Eight photographs, cut from masters in `_src/album/`, native aspect,
+   all inside the 60 KB budget. Home strip re-enabled and widened to 240px.
+7. **Copy edit** of `/`, `/books/` and `/film/` — eleven fixes, smallest change each time.
+
+### ⚠️ Loose ends to pick up
+
+- **Two of the eight album entries have no `url` and render UNLINKED by design.** Both includes
+  test `item.url` and emit a plain `<figure>`, or a `<span class="strip__link">` on the home
+  strip, rather than `<a href="">` — which is not an inert link but a link to the current page.
+  Adding the `url` later turns the card into a link with no other change.
+- **`/static/films/` — 97 of its 119 files are 225×300**, i.e. 1.2× where they render. The
+  visibly soft one, and the largest re-cut job left. (112 `<li>` render on `/film/`; the 97 is
+  the count that needs re-cutting.)
+- **86.3 MB of unreferenced year-folder masters still ship.** 38 files under `static/2019/`…
+  `static/2026/` that nothing links to. Moving them to `_src/` would take `/static/` from
+  371 MB to ~285 MB — weighed against GitHub LFS's 1 GB storage / 1 GB monthly bandwidth.
+  Raised twice, decided neither time. **Brajeshwar's call, not a tidy-up.**
+- **`_backup/`** holds `books-BCK.md` (634 words of old `/books/` prose), plus his own
+  `Brajeshwar.md` and `PeopleAndBlogs.md`. Underscore directory, so none of it publishes —
+  but the repository is **public**.
+- **Above 1512px is still unverified.** The iframe harness clamps to the outer window.
+- **Safari's `/album/` first row is uneven, and that is accepted.** See *Rules learned* #2.
+
+### Rules learned this session — these will bite again
+
+1. **`git mv` skips LFS's clean filter — but only one direction matters.** Bringing a file
+   INTO `_src/` with `git mv` commits the real binary and nothing looks wrong; use plain `mv`
+   + `git add`. RENAMING a file already in `_src/` is safe with `git mv`, because the index
+   entry is already a pointer. Verified both ways. The only check that proves it:
+   `git cat-file -p $(git ls-files -s <path> | awk '{print $2}') | head -1` must print
+   `version https://git-lfs.github.com/spec/v1`. `git lfs status` and `git lfs ls-files` each
+   lie differently here.
+2. **⚠️ `aspect-ratio: auto` on masonry images reads as a no-op and is not — DO NOT DELETE IT
+   ALONE.** The initial value of `aspect-ratio` IS `auto`, so declaring it looks harmless; what
+   it actually does is cancel the UA rule that derives a ratio from an `<img>`'s width/height
+   attributes. Measured in Chrome, 244.8px container, image never loading:
+
+   | declaration | reserved before load |
+   |---|---:|
+   | `w/h 600x464`, no `aspect-ratio` declared | 189.3px — correct |
+   | `w/h 225x300`, no `aspect-ratio` declared | 326.4px — wrong shape |
+   | `w/h 600x464`, `aspect-ratio: auto` | 16px — nothing |
+   | no attributes at all | 16px |
+
+   So nothing reserves space, every card is ~16px tall at first layout, and the masonry columns
+   balance against those heights. Chrome re-balances when the images land; **Safari does not**,
+   which is why `/album/`'s first row is flush in Chrome and staggered in Safari. The fix is
+   per-item `w`/`h` in `album.yaml` **and** deleting that declaration — **both or neither.**
+   Deleting it alone is worse than leaving it, because every card then reserves the wrong 3:4
+   default and jumps on load in every browser. Brajeshwar chose neither, knowing the cost:
+   *"I'd rather live with a non-aligned masonry than introduce size in the album.yaml."*
+   All three files carry the warning from their own side.
+3. **An `<a href="">` is not an inert link.** It points at the current page: it takes tab
+   focus, announces as a link, and reloads on click. Guard on the field, don't emit an empty
+   anchor.
+4. **Liquid 4.0.4's `comment` tag does not nest.** The first `endcomment` closes the outermost
+   block, so commenting out a region containing comments dumps the rest of it — includes and
+   all — into the page. Flatten the inner ones first.
+5. **Cut the long edge, not the quality slider, when a thumbnail busts its budget** — and check
+   the *rendered width*, not the long edge, because on a masonry page a portrait photo's long
+   edge is its height. A dense frame may need both levers: the San Francisco cut needed 600px
+   AND q68 where 600/q75 was 60.0 KB, just over.
+6. **Integer pitch, or the dots shimmer.** A fractional `background-size` puts every other dot
+   on a half device pixel at dpr 2, so they alternate sharp and soft.
+7. **Straight-quote and double-space sweeps over stripped HTML report phantoms.** Replacing
+   tags with spaces manufactures both. A first pass reported 38 faults and every one was mine;
+   match against the raw HTML inside text nodes instead.
+
+### How to verify a change (the loop that works)
+
+`bundle exec jekyll build` → the dev server on `:4000` → **measure in the browser, don't look.**
+Everything real this session was invisible to the eye: a 1px rule painted across 70 cover
+photos, 10px of hover padding that was applied and then clipped, dots smeared across two device
+rows, a reservation of 16px where 189px was needed.
+
+**The decisive trick for load-order bugs:** point every image at a URL that never resolves, so
+only the reserved box remains. That is what turned "Safari is acting up" into a measurement.
+
+**The responsive sweep** — load each page type in an iframe at 320 / 480 / 768 / 1024 / 1512
+and assert both `documentElement.scrollWidth <= viewport` and that `window.scrollX` stays 0.
+
+---
+
+## Session record — 2026-08-01, first half (superseded, kept per the log-history rule)
+
+⚠️ The status below was true when written and is not now: those 14 commits are pushed and live.
+
+### What it said at the time
 
 ### ⏸ Session paused 2026-08-01 (fourth session). **14 commits sit UNPUSHED on `main`.**
 
