@@ -13,13 +13,13 @@ title: Legal
 
 This privacy policy describes the policies and procedures on the collection, use and disclosure of your information when you use the service and tells you about your privacy rights and how the law protects you.
 
-By visiting my website, you agree to the collection and use of some information in accordance with this privacy policy.
+By visiting this website, you agree to the collection and use of some information in accordance with this privacy policy.
 
 ## Interpretation and Definitions
 
 ### Interpretation
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+The words of which the initial letter is highlighted have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 
 ### Definitions
 
@@ -67,7 +67,7 @@ We use Cookies and similar tracking technologies to track the activity on Our Se
 - __Cookies or Browser Cookies.__ A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.
 - __Web Beacons.__ Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).
 
-Cookies can be “Persistent” or “Session” Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. [You can learn more about cookies on Wikipedia.](https://en.wikipedia.org/wiki/HTTP_cookie)
+Cookies can be “Persistent” or “Session” Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. [You can learn more about cookies on Wikipedia.](https://en.wikipedia.org/wiki/HTTP_cookie)[^CookiesWikipedia]
 
 We use both Session and Persistent Cookies for the purposes set out below:
 
@@ -200,3 +200,6 @@ If you have any questions, you can contact:
 
 - By email: brajeshwar@oinam.com
 - By visiting the `/contact` page on our website: [brajeshwar.com/contact](/contact)
+
+
+[^CookiesWikipedia]: A [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) (also called web cookie, Internet cookie, browser cookie, or simply cookie) is a small block of data created by a web server while a user is browsing a website and placed on the user’s computer or other device by the user’s web browser. Cookies are placed on the device used to access a website, and more than one cookie may be placed on a user’s device during a session.
