@@ -329,19 +329,55 @@ h6 { font-size: var(--step--2); }
    `text-decoration: none` at (0,2,0), so hover was covered too. The blast
    radius of this change is color, on the rules listed above, and nothing
    else: everything at (0,1,1) or higher already won and is untouched. */
+/* ⚠️ THE UNDERLINE IS THE WHOLE AFFORDANCE ON THIS SITE, so the gap between
+   resting and hover has to be big enough to see. Brajeshwar 2026-08-01: "I see
+   no difference between the normal hyperlink and hover/active."
+
+   He was right, and the cause was not the one it looks like. There WAS always a
+   difference — resting on --text-color-lower, hover on --text-color — but
+   measured on the page it came to 1.91:1 between the two states, painted on a
+   0.8px line that renders as 1.6 device pixels. --text-color-lower is
+   rgb(64,64,64) against a rgb(229) page: 8.23:1, where the body text itself is
+   15.72:1. The resting underline was nearly as dark as the words above it, so
+   there was almost nowhere for hover to go.
+
+   The fix is to LIGHTEN the resting state rather than darken the hover, which
+   is where the room actually is. A 50% mix of the foreground lands at 3.14:1
+   against the page — still over the 3:1 WCAG non-text threshold, so it reads as
+   an affordance — and the jump to hover roughly doubles everywhere. Measured
+   across all six palette and mode combinations:
+
+     default light   1.91x → 5.01x      nord light   1.87x → 4.20x
+     default dark    1.42x → 3.40x      nord dark    1.25x → 2.78x
+     eink    light   2.61x → 5.19x      eink dark    2.13x → 3.43x
+
+   ⚠️ HOVER GOES TO --text-color, NOT --color-accent, AND THAT WAS TESTED.
+   Brajeshwar suggested "perhaps use the darkest accent we have", which is the
+   obvious move and fails on one palette: nord's accent is a mid-tone blue at
+   3.31:1 light and 5.03:1 dark, so hovering would have moved 1.2x and 1.5x
+   there — no better than the bug being fixed. --text-color is the only token
+   guaranteed to be the far end of the contrast range in every palette.
+
+   Thickness 1px resting, 2px hover: at dpr 2 that is a clean 2 to 4 device
+   pixels. The old 0.8/1 pair rendered as 1.6 and 2, which at dpr 1 rounded to
+   the same pixel and changed nothing at all.
+
+   `:focus-visible` joins hover here because it had NO link style of its own —
+   greppable, there is no other focus-visible rule in this file — so keyboard
+   users got the resting underline and no feedback whatsoever. */
 :where(a, a:visited) {
   color: var(--text-color-link);
   text-decoration: underline;
-  text-decoration-color: var(--text-color-lower);
-  text-decoration-thickness: 0.8px;
+  text-decoration-color: color-mix(in oklch, var(--color-fg) 50%, transparent);
+  text-decoration-thickness: 1px;
   text-underline-offset: 0.3rem;
 }
 
-:where(a:hover, a:active) {
+:where(a:hover, a:active, a:focus-visible) {
   color: var(--text-color-link);
   text-decoration: underline;
   text-decoration-color: var(--text-color);
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 2px;
 }
 
 /* Blockquote — Yale e360 style: no background, a quiet left rule, spacing does
