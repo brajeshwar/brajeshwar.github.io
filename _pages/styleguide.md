@@ -89,29 +89,46 @@ and the album strip alone loads eight of them.
 Keep the untouched source **before** cropping — it is what makes a re-cut possible when this
 template changes. There are two conventions, and they are not interchangeable.
 
-**Collection thumbnails** — `books`, `films`, `album`, `devices`, `wear` — put the master in a
-`src/` subfolder under the same slug, with no suffix:
+**Collection thumbnails** — masters go in **`_src/`** at the repo root, one folder per
+collection, under the same slug as the published file with no suffix:
 
 ```
-static/books/the-lord-of-the-rings.webp        ← published, 800px long edge, 3:4
-static/books/src/the-lord-of-the-rings.jpg     ← master, whatever the source gave
+_src/books/  _src/film/  _src/album/  _src/devices/  _src/wear/
+
+static/books/the-lord-of-the-rings.webp   ← published, 800px long edge, 3:4
+_src/books/the-lord-of-the-rings.jpg      ← master, whatever the source gave
 ```
 
-Same stem, different folder, so the pair is obvious at a glance and a re-cut is a loop over
-`src/` rather than a filename dance. Adopted 2026-08-01 — *"move all the `*-original.*` files
-into `/static/books/src/` and remove the `-original` so we have exact mapping of the file
-names"* — replacing a `<name>-original.<ext>` suffix that sat inline next to the published
-file. `src/` exists in all five folders; three are still empty, waiting on content.
+Same stem, different tree, so the pair is obvious at a glance and a re-cut is a loop over
+`_src/` rather than a filename dance. Two properties come free with that leading underscore
+and are the whole reason for it:
+
+- **Masters never ship.** Jekyll does not copy an underscore directory into `_site`, the same
+  way `_docs/` and `_backup/` stay out. No `_config.yml` exclude, nothing to remember, and no
+  public URL for a 5 MB camera original.
+- **Masters are on Git LFS.** `.gitattributes` tracks `_src/**` by *path*, so the repo carries
+  a 131-byte pointer per file while the same `.jpg` under `static/` stays an ordinary blob.
+  ⚠️ Track by path, never by extension — an extension rule would swallow the published files
+  too. `.gitkeep` is explicitly opted back out; a pointer file is not a placeholder.
+
+⚠️ **Add masters with plain `mv` + `git add`, never `git mv`.** `git mv` writes the rename
+straight into the index without running LFS's clean filter, so the real binary goes in and
+`git status` looks perfectly normal. The only check that actually proves it:
+
+```
+git ls-files -s _src/books/1984.jpg          # → blob sha
+git cat-file -p <sha> | head -1              # → version https://git-lfs.github.com/spec/v1
+```
+
+`_src/film` is singular while the published folder is `static/films/` — deliberate, matching
+the `/film/` page; don't "fix" either one. Adopted 2026-08-01, replacing a `<name>-original.<ext>`
+suffix that sat inline next to the published file (and, for a few hours, a `static/*/src/`
+layout that shipped with the deploy).
 
 **Per-post images** — `static/<year>/` — keep the old `<name>-original.<ext>` suffix, in place.
 ⚠️ **Do not migrate these.** 41 of them are live and three are linked *directly* from posts, so
 their URLs are pinned by guardrail 2. The suffix stays the convention for anything under a year
-folder; `src/` is only for the collections above.
-
-⚠️ Masters ship with the deploy either way — `/static/` is 372 MB, of which 92 MB is year-folder
-masters against 1.5 MB in `src/`. Excluding `static/*/src` in `_config.yml` would stop the
-collection masters shipping, at the cost of 404-ing eight URLs nothing links to. Not done; it
-is a decision, not a tidy-up. Meanwhile, do not add a 700 KB master casually.
+folder; `_src/` is only for the five collections above. Meanwhile, do not add a 700 KB master casually.
 
 ### Adding a book or an album item
 

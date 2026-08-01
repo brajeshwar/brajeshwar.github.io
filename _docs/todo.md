@@ -365,19 +365,21 @@ retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroo
 ⚠️ **Keep the masters.** They are what a re-cut re-cuts from. **Two conventions since
 2026-08-01** (full rules in [`/styleguide/`](../_pages/styleguide.md) § *Keep the master*):
 
-- **Collections** — `books`, `films`, `album`, `devices`, `wear` — masters moved into
-  `<folder>/src/<slug>.<ext>`, `-original` stripped, so the master and the published `.webp`
-  share a stem: *"so we have exact mapping of the file names."* 8 files moved (7 books,
-  1 film); `album`, `devices` and `wear` got the folder but have nothing in it yet. 1.5 MB.
+- **Collections** — masters live in **`_src/{books,film,album,devices,wear}/`** at the repo
+  root, on **Git LFS**, under the same slug as the published file. 8 files (7 books, 1 film);
+  the other three folders are empty placeholders. Because `_src` starts with an underscore
+  Jekyll never copies it, so masters stopped shipping with no `_config.yml` change — which
+  retired the `exclude: static/*/src` question raised earlier the same day.
 - **Year folders** — `static/2019/`…`static/2026/` — still `<name>-original.<ext>`, in place,
-  **not migrated**. 41 files, 92 MB, of which **3 are linked directly from posts**, so their
-  URLs are pinned. Migrating them would break those links for no gain.
+  **not migrated**. 41 files, 96 MB, of which **3 are linked directly from posts**, so their
+  URLs are pinned. Migrating those three would break links for no gain.
 
-- [ ] The 92 MB is the real weight, and it is in the year folders, not the collections. Worth a
-      separate look at whether the 38 unreferenced ones need to ship at all. Excluding
-      `static/*/src` in `_config.yml` would stop the collection masters shipping too, but that
-      is 1.5 MB — a rounding error against the 92 MB, and it 404s eight URLs. Raised and not
-      done: it is Brajeshwar's call, not a tidy-up.
+- [ ] **The 86.3 MB decision.** 38 of the 41 year-folder masters are referenced by nothing and
+      ship on every deploy. Moving them to `_src/` would take `/static/` from 371 MB to about
+      285 MB. ⚠️ Weigh it against the **GitHub LFS free tier: 1 GB storage and 1 GB bandwidth
+      per month** — 86 MB is 8.6% of storage, and every CI checkout that pulls LFS spends
+      bandwidth against the same quota. (`actions/checkout` does not pull LFS unless asked, and
+      must not be asked: the build never reads `_src/`.) Raised, not done — Brajeshwar's call.
 
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +

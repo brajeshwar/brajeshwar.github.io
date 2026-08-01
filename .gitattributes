@@ -1,1 +1,9 @@
 * text=auto
+# Image masters live in _src/ and are stored with Git LFS (added 2026-08-01).
+# Tracked by PATH, not by extension: the same .jpg under static/ must stay a
+# normal blob, because those are the published files the site actually serves.
+# `-text` turns off eol/CRLF munging, which would corrupt a binary.
+_src/** filter=lfs diff=lfs merge=lfs -text
+# ...except the keep-files for the still-empty folders: a zero-byte placeholder
+# has nothing to store, and an LFS pointer is not a placeholder.
+_src/**/.gitkeep -filter -diff -merge text
