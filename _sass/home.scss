@@ -503,6 +503,14 @@ home-support li {
      centered object rather than a column that overflows. */
   width: 100%;
   padding-inline: 0;
+  /* ⚠️ Room for the hover wash above the thumbnails. The links carry a negative
+     top margin so the background extends past the image without moving it —
+     but this strip is `overflow-y: hidden`, and overflow clips to the PADDING
+     box, so with no padding here the link's top 10px sat outside the clip and
+     was painted away. Measured 2026-08-01: intended 10px of background above
+     the image, 0px actually visible. The padding is what makes the top of the
+     wash exist on screen; it is not spacing for its own sake. */
+  padding-block-start: var(--space-2xs);
 
   /* ⚠️ `safe center`, and the `safe` is not optional — it is the difference
      between a centered row and 451px of unreachable books.
@@ -683,9 +691,15 @@ home-support li {
   transition: background-color 120ms ease-out;
 }
 
+/* ⚠️ Back to --bg-color-low (2026-08-01: "too dark. I think, we should revert
+   the background color"). --bg-color-hover raised it from 1.28 to 1.96 contrast
+   against the page, which read as a filled card behind a photograph rather than
+   a wash under it. The token still exists and is still used by the toc rows,
+   where there is no image competing with it — a hover tint that works behind
+   TEXT is too much behind a picture. */
 .strip__link:hover,
 .strip__link:focus-visible {
-  background-color: var(--bg-color-hover);
+  background-color: var(--bg-color-low);
 }
 
 /* ⚠️ NO background on the photo strip. Brajeshwar 2026-08-01: "No need for
