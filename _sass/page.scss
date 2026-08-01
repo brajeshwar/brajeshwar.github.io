@@ -263,9 +263,26 @@
   margin-block-end: var(--space-2xs);
 }
 
-/* The second heading needs air above it — it follows a column block, and the
-   list's own bottom margin is doing that job, so only the first needs resetting
-   against the grid above. */
+/* ⚠️ ONE STEP DOWN, AND IT TAKES TWO DECLARATIONS (2026-08-01: "decrease the
+   font-size one step below for this section"). Setting `font-size` on the
+   section moves the list, because list text inherits — but NOT the heading:
+   base.scss gives `h2 { font-size: var(--step-2) }`, an absolute value that
+   inheritance cannot touch. So the heading is stepped explicitly to
+   `--step-1`, one rung down the same scale, and the two move together.
+
+   Body text is `--step-0`, so the list lands on `--step--1`. This is the right
+   register for it: sixteen reference links at the foot of the page are a
+   footer, not reading matter, and they were competing with the book titles
+   above them at full body size.
+
+   The 18rem column width is unaffected — `rem` is root-relative, so a smaller
+   font here does not change the column count, only how much fits in each. Still
+   three columns at the band; re-measured after the change. */
+.link-columns {
+  font-size: var(--step--1);
+}
+
 .link-columns h2 {
+  font-size: var(--step-1);
   margin-block-start: var(--space-l);
 }

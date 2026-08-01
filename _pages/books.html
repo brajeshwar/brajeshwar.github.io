@@ -125,9 +125,27 @@ Since 2018, I have listed the interesting ones I read each year:
   the band, which is where the 1024px in the request comes from.
 {%- endcomment -%}
 
+{%- comment -%}
+  ⚠️ ONE LIST, NOT TWO (2026-08-01: "combine Free and Open Source Books and
+  References into a single one, don't separate them. Let them flow across the
+  column"). Two lists meant two column blocks stacked, each balancing its own
+  items — ten across three columns, then a heading, then six across three more.
+  The second block was half-empty and the whole thing read as two half-finished
+  tables rather than one list. As a single <ul> the sixteen items balance once
+  and flow continuously.
+
+  The old `id="free-books"` and `id="references"` anchors are gone with the
+  second heading. Checked before merging: nothing in _posts, _pages, _includes,
+  _layouts, _data or index.html linked to either, so no URL fragment broke.
+
+  Free-book sources first, recommendation sites after — the original order,
+  kept, because it still goes roughly from "where to get books" to "what to
+  read next".
+{%- endcomment -%}
+
 <section class="link-columns">
 
-  <h2 id="free-books">Free and Open Source Books</h2>
+  <h2 id="free-books">Free Books &amp; References</h2>
 
   <ul>
     <li><a href="https://www.downpour.com">Downpour</a> DRM-Free AudioBooks (paid)</li>
@@ -140,11 +158,6 @@ Since 2018, I have listed the interesting ones I read each year:
     <li><a href="https://en.wikisource.org/wiki/Main_Page">Wikisource</a> is the free library that anyone can improve.</li>
     <li><a href="http://aurellem.org/society-of-mind/">The Society of Minds</a> by <a href="https://web.media.mit.edu/~minsky/">Marvin Minsky</a>.</li>
     <li><a href="https://www.libraryofshortstories.com">Library of Short Stories</a> is a Free Online Library for Classic Short Stories.</li>
-  </ul>
-
-  <h2 id="references">References</h2>
-
-  <ul>
     <li><a href="https://hacker-recommended-books.vercel.app">HackerNews Book Recommendations</a></li>
     <li><a href="https://fs.blog/reading/">A Helpful Guide to Reading Better</a></li>
     <li><a href="https://booksbythefoot.com">Books by the Foot</a></li>
