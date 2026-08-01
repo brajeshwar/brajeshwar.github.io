@@ -184,29 +184,37 @@
   -webkit-column-break-inside: avoid;
 }
 
-/* ⚠️ `aspect-ratio: auto` USED TO BE HERE AND HAD TO GO (2026-08-01). It read
-   as a harmless restatement — the initial value of `aspect-ratio` IS `auto` —
-   and it was not: an author declaration of `auto` cancels the UA rule that
-   derives a ratio from an <img>'s width/height attributes, so nothing at all
-   was reserved before the file loaded. Measured in Chrome, 244.8px container,
-   image never loading:
+/* ⚠️ `aspect-ratio: auto` IS NOT THE NO-OP IT LOOKS LIKE — AND IT STAYS ANYWAY.
+   The initial value of `aspect-ratio` IS `auto`, so this reads as a harmless
+   restatement. It is not: an AUTHOR declaration of `auto` cancels the UA rule
+   that derives a ratio from an <img>'s width/height attributes, so with it
+   here nothing at all is reserved before a file loads. Measured in Chrome,
+   244.8px container, image never loading:
 
      w/h 600x464, no aspect-ratio declared  -> 189.3px reserved (correct)
+     w/h 225x300, no aspect-ratio declared  -> 326.4px reserved (wrong shape)
      w/h 600x464, aspect-ratio: auto        ->  16px  (nothing)
 
-   Chrome hides the cost by re-balancing the columns once the images land.
-   Safari does not, which is why the album's first row sat flush in Chrome and
-   staggered in Safari: every card is ~16px tall at first layout, the columns
-   are balanced against those wrong heights, and WebKit's incremental multicol
-   relayout does not fully redo the packing when the real heights arrive.
+   That costs something real: every card is ~16px tall at first layout, the
+   masonry columns are balanced against those heights, Chrome re-balances once
+   the images land and Safari does not — so /album/'s first row is flush in
+   Chrome and uneven in Safari.
 
-   Each photo still keeps its own shape — `width: 100%` with `height: auto` is
-   what does that, not this declaration. Removing it changes nothing after
-   load; it only gives the browser the shape BEFORE load. Verified in Chrome:
-   identical 189.3px rendered height with and without. */
+   ⚠️ DO NOT "FIX" THIS BY DELETING THE LINE. On its own that is WORSE than
+   leaving it: with no per-item dimensions in _data/album.yaml, card-grid.html
+   falls back to a 225x300 hint, so every card would reserve a 3:4 box —
+   326px tall — and visibly jump to its true height on load, in every browser.
+   Deleting this line only helps alongside real w/h per photo, and those were
+   removed on purpose (2026-08-01: "I'd rather live with a non-aligned masonry
+   than introduce size in the album.yaml"). Both or neither; see the note in
+   _data/album.yaml, which carries the same warning from the other side.
+
+   Each photo keeps its own shape either way — `width: 100%` with `height:
+   auto` is what does that, not this declaration. */
 .item__cards.card-grid--masonry img {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: auto;
   object-fit: fill;
 }

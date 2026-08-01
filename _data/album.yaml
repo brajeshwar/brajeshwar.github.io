@@ -42,26 +42,33 @@
 #        (The section was renamed from Photos on 2026-08-01 precisely because
 #        it will carry video and audio too.)
 #
-# ⚠️ `w`/`h` ARE THE CUT FILE'S REAL PIXEL SIZE, AND THEY ARE NOT OPTIONAL HERE.
-# They were removed earlier on 2026-08-01 — "we will have a set with varying
-# height because of the masonry, so remove the additional w and h" — on the
-# reasoning that pinning dimensions fights a ragged layout. They are back
-# because that is not what they do.
+# ⚠️ NO `w`/`h`, DELIBERATELY, AND THIS HAS BEEN DECIDED TWICE.
+# They are the cut file's real pixel size, and adding them would tell the
+# browser each photo's SHAPE before its bytes arrive. Removed the first time on
+# the reasoning that they pin a layout meant to be ragged — which was the wrong
+# model, they pin nothing. Added back to fix Safari. Removed again, knowing
+# exactly what that costs: "I'd rather live with a non-aligned masonry than
+# introduce size in the album.yaml."
 #
-# They do not pin anything. They tell the browser each photo's SHAPE before the
-# file downloads. Without them every card is about 16px tall at first layout,
-# the masonry columns get balanced against those wrong heights, and only then
-# do the real images arrive. Chrome quietly re-balances and you never see it.
-# Safari does not: the first row visibly staggers. Reported 2026-08-01,
-# "Chrome is perfect. Safari is acting up."
+# WHAT IT COSTS, so nobody rediscovers it as a bug: with no dimensions, nothing
+# reserves space before an image loads. Every card is about 16px tall at first
+# layout and the masonry columns are balanced against those heights. Chrome
+# re-balances when the images land and looks perfect. Safari does not fully
+# redo the packing, so /album/'s first row sits unevenly there. That is a known
+# and accepted trade, not a defect to fix — the fix is these two numbers per
+# photo, and the two numbers are the thing being refused.
 #
-# Heights still vary, exactly as before — `width: 100%` with `height: auto` is
-# what keeps each photo its own shape, not these numbers.
+# ⚠️ AND IT IS HALF A FIX EITHER WAY. page.scss declares `aspect-ratio: auto`
+# on masonry images, which cancels the rule that reads width/height attributes.
+# Adding w/h here without removing that declaration does NOTHING; removing that
+# declaration without adding w/h here is WORSE than both, because every card
+# then reserves the wrong 3:4 default and visibly jumps on load. Both or
+# neither. Measured in Chrome, 244.8px container, image never loading:
 #
-# ⚠️ They are half a fix. page.scss must NOT declare `aspect-ratio: auto` on
-# masonry images: the initial value of aspect-ratio IS auto, so declaring it
-# cancels the rule that reads these attributes and makes them inert. Both
-# halves or neither.
+#   w/h 600x464, no aspect-ratio declared  -> 189.3px reserved (correct)
+#   w/h 225x300, no aspect-ratio declared  -> 326.4px reserved (wrong shape)
+#   w/h 600x464, aspect-ratio: auto        ->  16px (nothing reserved)
+#   no attributes at all                   ->  16px
 
 # ⚠️ `url` IS OPTIONAL. An entry without one renders as a plain unlinked
 # figure — not as an empty anchor, which would be a link back to this page.
@@ -78,23 +85,15 @@
 - title: Met Edward Norton in London
   url: https://www.instagram.com/p/DZx4WchDoVE/
   img: 2026-06-19-edward-norton.webp
-  w: 600
-  h: 464
 
 - title: Fresh start with an iMac
   url: https://unsplash.com/photos/silver-imac-with-apple-magic-keyboard-and-magic-mouse-fGkBx7hX9Ms
   img: 2010-07-10-imac-fresh-start.webp
-  w: 800
-  h: 584
 
 - title: Daughter loves art
   url: https://www.instagram.com/p/Bo8sBhHF0Oa/
   img: 2018-10-13-daughter-loves-art.webp
-  w: 777
-  h: 800
 
 - title: Eerily empty weekend in San Francisco
   url: https://www.instagram.com/p/CtpbIlJujAH/
   img: 2023-06-18-san-francisco.webp
-  w: 554
-  h: 600
