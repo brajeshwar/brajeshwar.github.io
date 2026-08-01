@@ -99,7 +99,18 @@
       {%- assign href = item.url | relative_url -%}{%- assign ext = false -%}
     {%- endif -%}
     <li>
+      {%- comment -%}
+        ⚠️ A URL-LESS ITEM RENDERS UNLINKED, not as an empty anchor. Without
+        this test an entry with no `url` emitted `<a href="">`, which is not a
+        dead link — it is a link back to the CURRENT page, so it tabs, it
+        announces as a link, and clicking it reloads. Album entries arrive
+        before their destinations exist (2026-08-01: "I'm going to have custom
+        URLs for each"), so this is the normal state here, not an edge case.
+        Add the `url` later and the card becomes a link with no other change.
+      {%- endcomment -%}
+      {%- if item.url -%}
       <a href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
+      {%- endif -%}
         <figure>
           <img width="{{ iw }}" height="{{ ih }}"
                src="{{ src | relative_url }}"
@@ -112,7 +123,9 @@
           <figcaption>{{ item.title }}{% if item.author %} <span>{{ item.author }}</span>{% endif %}</figcaption>
           {%- endif %}
         </figure>
+      {%- if item.url -%}
       </a>
+      {%- endif -%}
     </li>
     {%- endfor %}
   </ul>

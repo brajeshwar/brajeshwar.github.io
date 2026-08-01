@@ -53,6 +53,27 @@
 # (measured: 16px reserved with them, 16px without). Do not add them back
 # without also taking that declaration off.
 
+# ⚠️ `url` IS OPTIONAL. An entry without one renders as a plain unlinked
+# figure — not as an empty anchor, which would be a link back to this page.
+# So a photo can go up the moment it is cut and become a link whenever its
+# destination exists. Add the line, nothing else changes.
+#
+# FILENAMES ARE DATED — `YYYY-MM-DD-slug` — and the published .webp keeps the
+# same stem as its master in _src/album/. The date is when the photo was taken,
+# which is not the order this file is read in: ordering is position, last entry
+# newest, exactly as with books. They agree today and are allowed to diverge;
+# if you add an old photograph, decide whether it belongs at the end (newest
+# ADDED) or in date order, and stay consistent.
+
+- title: A fresh start with a new iMac
+  img: 2010-07-10-imac-fresh-start.webp
+
+- title: My daughter loves art
+  img: 2018-10-13-daughter-loves-art.webp
+
+- title: Cable car tracks in San Francisco
+  img: 2023-06-18-san-francisco.webp
+
 - title: Met Edward Norton in London
   url: https://www.instagram.com/p/DZx4WchDoVE/
-  img: edward-norton.webp
+  img: 2026-06-19-edward-norton.webp

@@ -100,6 +100,14 @@ Dropping from q82 to q65 at 800px saves 36 KB and visibly softens the faces. Dro
 retina floor by 22% — the headroom this page already documents. **So 800 is the template, not
 a minimum.** For a detail-dense frame, take the long edge to 600 and leave quality at 75.
 
+⚠️ **And sometimes you need both levers.** The rule above was written from one photograph; a
+second, a San Francisco street thick with foliage, needed 600 **and** q68 to reach 55.1 KB —
+600/q75 landed just over the line at 60.0 KB. Reach for the long edge first, then give up a
+little quality, and check the **rendered width** rather than the long edge when you do:
+`/album/` is masonry, so a portrait photo's long edge is its height and its *width* is what has
+to clear 490px. The San Francisco cut is 554×600 — 600 on the long edge, but only 13% of
+headroom on the edge that actually matters.
+
 ### Keep the master
 
 Keep the untouched source **before** cropping — it is what makes a re-cut possible when this

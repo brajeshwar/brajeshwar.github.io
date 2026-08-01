@@ -74,7 +74,23 @@
         {%- assign href = item.url | relative_url -%}{%- assign ext = false -%}
       {%- endif -%}
       <li class="strip__item">
+        {%- comment -%}
+          ⚠️ NO URL YET → a <span>, not an <a href="">. An empty href is not an
+          inert link, it points at the CURRENT page: it takes tab focus, it
+          announces as a link, and clicking it reloads the home page.
+
+          A span rather than dropping the element, because .strip__link carries
+          the layout AND every hover hook — the padding, the negative margins
+          that let the wash sit above the thumbnail, and the grayscale-to-colour
+          transition. CSS `:hover` is not anchor-specific, so a span keeps all
+          of it and only the navigation goes away. Album entries routinely land
+          before their destinations exist, so this is the normal state here.
+        {%- endcomment -%}
+        {%- if item.url -%}
         <a class="strip__link" href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
+        {%- else -%}
+        <span class="strip__link">
+        {%- endif -%}
           <span class="strip__frame">
             <img class="strip__img"
                  src="{{ img_src | relative_url }}"
@@ -87,7 +103,7 @@
           {%- if include.captions %}
           <span class="strip__caption">{{ item.title }}</span>
           {%- endif %}
-        </a>
+        {%- if item.url -%}</a>{%- else -%}</span>{%- endif -%}
       </li>
       {%- endfor %}
     </ul>
