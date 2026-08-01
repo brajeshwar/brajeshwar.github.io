@@ -14,10 +14,28 @@
 # 2. Cut `static/album/<slug>.webp` from it, same stem, NATIVE aspect ratio.
 #    Do not pre-crop to 4:3: /album/ is masonry and shows the real shape, and
 #    the home strip crops to 4:3 itself with `object-fit: cover`.
-# 3. Append an entry below. THE LAST ENTRY IS THE NEWEST — that is the entire
-#    ordering protocol, same as _data/books.yaml, and it is why the home strip
-#    reads newest-first while /album/ keeps this file's own order. There is
-#    deliberately no date field.
+# 3. Add an entry below, then KEEP THE LIST SORTED BY `img` FILENAME, ASCENDING.
+#    That is the whole ordering protocol (2026-08-01: "sort my entries in
+#    album.yaml based on images filename"), and it is deliberately mechanical:
+#    it can be checked without knowing anything about the photographs, by
+#    sorting eight strings.
+#
+#    ⚠️ It differs from _data/books.yaml, which is "append, last is newest".
+#    Books have no natural key, so position IS the record. Album filenames are
+#    `YYYY-MM-DD-slug`, so they carry their own order and position should just
+#    follow them — appending a 2006 photo to the end of the file would make
+#    position and filename disagree, and then neither is trustworthy.
+#
+#    Sorting the strings gives chronological order for free, because an ISO
+#    date prefix sorts lexicographically. ⚠️ That equivalence is the ONLY thing
+#    holding the two ideas together: name a file without the date prefix and it
+#    lands somewhere arbitrary in the list while still being "sorted". If the
+#    naming convention ever changes, this rule needs rewriting with it.
+#
+#    The last entry is therefore still the newest, which is what the home strip
+#    depends on — it reverses the list to read newest-first, while /album/ keeps
+#    this file's order and reads forwards through time. There is deliberately no
+#    date field: the filename already is one.
 #
 # ---------------------------------------------------------------------------
 # FIELDS
@@ -82,13 +100,15 @@
 # if you add an old photograph, decide whether it belongs at the end (newest
 # ADDED) or in date order, and stay consistent.
 
-- title: The day Oinam Software was acquired by Nanocast
+- title: Oinam Software acquired by Nanocast
   img: 2006-04-08-oinam-software-acquired-by-nanocast.webp
 
-- title: Reading GigaOM on a Nokia N95
+- title: Nokia N95
+  url: /2007/nokia-n95-the-ultimate-geek-phone/
   img: 2006-05-26-nokia-n95.webp
 
-- title: Sunset from the seawall
+- title: Bombay
+  url: /2009/bombay/
   img: 2007-07-17-city-skyline-at-sunset.webp
 
 - title: Fresh start with an iMac
