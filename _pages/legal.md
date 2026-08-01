@@ -19,7 +19,7 @@ By visiting this website, you agree to the collection and use of some informatio
 
 ### Interpretation
 
-The words of which the initial letter is highlighted have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 
 ### Definitions
 
