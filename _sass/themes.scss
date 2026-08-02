@@ -6,11 +6,12 @@
    ============================================================ */
 
 /* Self-hosted fonts for the reader font selector. The Default font is the
-   system sans stack (no webfont); Libre Baskerville downloads only when the
-   reader picks "Serif" — font-display:swap → no load cost otherwise.
+   system sans stack (no webfont); a custom font downloads only when the
+   reader picks its option — font-display:swap → no load cost otherwise.
 
-   The axis is THREE options: System, Sans-Serif (Geist), Serif (Libre
-   Baskerville). The Sans-Serif slot was removed on 2026-07-19 and restored on
+   The axis is THREE options: System, Sans-Serif (Geist), Serif (Source
+   Serif 4 since 2026-08-02; Libre Baskerville before that, kept dormant
+   below). The Sans-Serif slot was removed on 2026-07-19 and restored on
    2026-07-27 at Brajeshwar's request, so the objection is recorded rather than
    deleted: as a neo-grotesque, Geist sits close to the system stack it offers
    an alternative to, so picking it changes less than the other two do. The
@@ -61,10 +62,101 @@
                  U+20AA-20BD, U+2122, U+2190-21B5, U+21E4-21E7, U+2212;
 }
 
-/* Libre Baskerville is the reader "Serif" font ([data-font="serif"] in
-   config.css → --font-body). Self-hosted, latin subset, font-display:swap
-   so it downloads only when a reader picks Serif. Falls back to the system
-   serif stack (--font-serif) while loading / if it fails.
+/* Source Serif 4 is the reader "Serif" font ([data-font="serif"] in
+   config.css → --font-body) as of 2026-08-02, replacing Libre Baskerville:
+   "Let's switch the Serif option to Source Serif 4 but keep Baskerville.
+   I want to see how things are." Adobe's screen-first text serif, SIL OFL
+   (LICENSE.md sits beside the files). Self-hosted like everything else;
+   font-display:swap + unicode-range mean it downloads ONLY when a reader
+   picks Serif, never on a default load — the System default stays free.
+
+   TWO FILES, NOT SIX: it is a variable font, so Roman carries every weight
+   and Italic carries every italic weight. What was done to the upstream
+   1.2 MB Roman / 850 KB Italic TTFs to get 64 KB / 65 KB:
+
+   1. `opsz` PINNED AT 20, its default. The upstream font is also variable
+      in optical size (8-60), and those deltas were most of the bytes. Body
+      text renders at ~16-20px, exactly what the opsz-20 default instance
+      is drawn for; headings lose only the display-cut refinements nobody
+      asked for. Pinning at the DEFAULT means the shipped outlines are
+      byte-identical to what an unpinned font would render at body sizes.
+   2. `wght` CLAMPED TO 200:700. The site uses 200 (--font-weight-light),
+      400 (body), 600 (--font-weight-bold) and 700 (<strong>'s UA default
+      resolves 400→700). Nothing reaches past 700; those deltas are gone.
+      ⚠️ If a new weight token ever exceeds 700, re-subset with a wider
+      clamp or the browser will flatten it to 700.
+   3. Subset to the same unicode set as Geist, with pyftsubset's DEFAULT
+      layout features rather than Geist's `--layout-features='*'` — the
+      difference is ~34 KB per face of small-caps/alternate machinery the
+      CSS never invokes. What survives, verified by reading the built
+      files: GPOS kern/mark/mkmk, GSUB ccmp/dnom/frac/liga/locl/numr, and
+      the wght axis reading 200-700. `tabular-nums` (archives, home dates)
+      needs no `tnum` here: all ten default digits measure 500/1000em —
+      the default figures ARE tabular, checked in hmtx.
+
+   Regenerate with (fonttools + brotli, via uv):
+     uvx fonttools varLib.instancer -q -o /tmp/inst.ttf \
+       assets/fonts/source-serif/SourceSerif4Variable-Roman.ttf \
+       opsz=20 wght=200:700
+     uvx --with brotli fonttools subset /tmp/inst.ttf \
+       --output-file=assets/fonts/source-serif/SourceSerif4Variable-Roman.woff2 \
+       --flavor=woff2 \
+       --unicodes="U+0000-024F,U+0259,U+02BB-02BC,U+02C6,U+02DA,U+02DC,\
+                   U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2074,U+20A0-20BF,\
+                   U+2122,U+2190-21FF,U+2212,U+2215,U+FEFF,U+FFFD"
+   (same for Italic). The upstream TTFs stay in the repo as the source to
+   re-subset from — with their FULL axes, so a future subset can choose a
+   different opsz or weight range — and are excluded from the build in
+   _config.yml exactly like Geist-Variable.ttf.
+
+   The range below is a light SUPERSET of the cmap, written in coarse
+   blocks. That is safe by construction: unicode-range only gates the
+   DOWNLOAD, and per-glyph fallback is decided against the real cmap after
+   it arrives — and the family is only ever referenced once the reader has
+   picked Serif, at which point the file downloads for the ASCII anyway.
+   The characters that carry a serif's voice — ’ “ ” – — • … — sit in
+   U+2002-2049, INSIDE the range: the Baskerville bug below cannot recur.
+   One glyph the upstream font simply lacks: ↩ U+21A9, kramdown's footnote
+   backlink. It falls to the system serif — as it always has; Libre
+   Baskerville does not have it either. */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/assets/fonts/source-serif/SourceSerif4Variable-Roman.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC,
+                 U+01E6-01F9, U+0218-0237, U+0259, U+02BB-02DC, U+0300-0331,
+                 U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF,
+                 U+2122, U+2190-2199, U+2212-2215;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/assets/fonts/source-serif/SourceSerif4Variable-Italic.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC,
+                 U+01E6-01F9, U+0218-0237, U+0259, U+02BB-02DC, U+0300-0331,
+                 U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF,
+                 U+2122, U+2190-2199, U+2212-2215;
+}
+
+/* Libre Baskerville — DORMANT since 2026-08-02, deliberately kept. It was
+   the reader "Serif" font; Source Serif 4 above holds that slot now, and
+   NOTHING references this family, which in @font-face terms means these
+   three faces cost zero bytes on the wire — a face only downloads when
+   text actually uses it. Kept, files and declarations both, because the
+   switch is an experiment ("I want to see how things are"): reverting is
+   ONE line in config.css — point [data-font="serif"] back at
+   "Libre Baskerville" — and everything below simply wakes up.
+
+   ⚠️ Do NOT put both serifs in one stack ("Source Serif 4", "Libre
+   Baskerville", serif): while the first downloads, the browser renders the
+   interim in the NEXT family that matches — which would trigger a second
+   download and ship both fonts to every Serif reader. One family per
+   option, system stack behind it.
 
    ⚠️ These declared `U+000-5FF` until 2026-07-27, and that was a real bug,
    not a tidy-up. The files DO contain ’ “ ” – — • … — every one of them above

@@ -121,5 +121,14 @@ exclude:
   # the deploy for nobody. Kept in the repo so the subset can be regenerated
   # (the pyftsubset command is in themes.css); excluded from the build.
   - assets/fonts/geist/Geist-Variable.ttf
+  # Same deal for Source Serif 4 (2026-08-02): the two TTFs are the full
+  # upstream variable sources (2 MB, all axes) kept only for re-subsetting —
+  # the recipe is in themes.css. LICENSE.md is excluded for a different
+  # reason: jekyll-optional-front-matter turns any bare .md into a PAGE, so
+  # unexcluded it would publish as rendered HTML at its own URL. The license
+  # stays readable in the public repo, which is where the sources live.
+  - assets/fonts/source-serif/SourceSerif4Variable-Roman.ttf
+  - assets/fonts/source-serif/SourceSerif4Variable-Italic.ttf
+  - assets/fonts/source-serif/LICENSE.md
   # NOTE: agents-manifest.json is intentionally NOT excluded — Jekyll must render it so
   # scripts/build-agent-markdown.mjs can read it; the script deletes it before deploy.

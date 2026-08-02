@@ -108,9 +108,10 @@
 
 :root {
   /* Font stacks. The reader picks the body font via the appearance panel →
-     [data-font] swaps --font-body (see _docs/styles.md). Libre Baskerville is
-     the one optional self-hosted font (see themes.css); sans/serif/mono are
-     system stacks (sans = the Default, no-webfont choice). */
+     [data-font] swaps --font-body (see _docs/styles.md). The optional
+     self-hosted fonts (Geist, Source Serif 4 — see themes.css) load only on
+     that choice; sans/serif/mono are system stacks (sans = the Default,
+     no-webfont choice). */
   --font-sans : ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --font-mono : ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -256,17 +257,26 @@
 /* Reader font choice — overrides --font-body (applies to article content, not the
    interface; see base.css). Panel labels:
      Default     = the system sans stack, no webfont at all
-     Sans-Serif  = Geist (self-hosted variable TTF, see themes.css)
-     Serif       = Libre Baskerville (self-hosted woff2)
+     Sans-Serif  = Geist (self-hosted variable woff2, see themes.css)
+     Serif       = Source Serif 4 (self-hosted variable woff2, since
+                   2026-08-02; Libre Baskerville before that, kept dormant
+                   in themes.css — reverting is this one line)
 
    Three options again as of 2026-07-27. Geist was dropped 2026-07-19 for its
    weight and restored at Brajeshwar's request with the file re-added; anyone
    whose localStorage still held "geist" from before simply gets it working
    again. No migration either way — appearance.js validates against its own
-   option list and falls back to Default for anything unrecognised. */
+   option list and falls back to Default for anything unrecognised. The
+   serif swap needed no migration either: the stored value is "serif", which
+   now simply resolves to the new family.
+
+   ⚠️ One family per option, system stack behind it — never two custom fonts
+   in one stack. While the first downloads (font-display: swap), the interim
+   renders in the next matching family, which would trigger that family's
+   download too and ship both fonts for one choice. */
 [data-font="sans"]  { --font-body: var(--font-sans); }
 [data-font="geist"] { --font-body: "Geist", var(--font-sans); }
-[data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); }
+[data-font="serif"] { --font-body: "Source Serif 4", var(--font-serif); }
 
 /* Text size — Kindle-style. Multiplies the type scale for ALL content inside
    <main> (home body, pages, articles) — header/footer stay on the base scale.

@@ -36,9 +36,21 @@ Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → 
 
 Self-hosted fonts (`themes.css`, bundled `@font-face`, all `font-display: swap` so they
 download only when chosen — no default-load cost):
+- "Source Serif 4" (`assets/fonts/source-serif/SourceSerif4Variable-{Roman,Italic}.woff2`,
+  64 + 65 KB) — the reader "Serif" font (`[data-font="serif"]`) since 2026-08-02, with the
+  system serif stack as its fallback while loading / on failure. Variable: Roman carries
+  weights 200–700, Italic likewise. Cut from Adobe's 1.2 MB/850 KB upstream VF TTFs by
+  pinning `opsz` at its default 20, clamping `wght` to 200:700 and subsetting to the Geist
+  unicode set — the full recipe and the verification checklist are in the `themes.css`
+  comment. The upstream TTFs stay in the repo (full axes, for re-subsetting) and are
+  `exclude`d from the build, as is the OFL `LICENSE.md` beside them — that one because
+  jekyll-optional-front-matter would otherwise render a bare `.md` into a published page.
 - "Libre Baskerville" (`assets/fonts/libre-baskerville/*.woff2`, latin subset,
-  regular/italic/bold, `size-adjust: 98.5%`) — the reader "Serif" font (`[data-font="serif"]`),
-  with the system serif stack as its fallback while loading / on failure.
+  regular/italic/bold, `size-adjust: 98.5%`) — **dormant since 2026-08-02**; it was the
+  Serif font from the start until Source Serif 4 replaced it (*"switch the Serif option to
+  Source Serif 4 but keep Baskerville. I want to see how things are"*). Nothing references
+  the family, so its faces never download; the files and `@font-face` blocks stay so the
+  revert is one line in `config.css`.
 - "Geist" (`assets/fonts/geist/Geist-Variable.woff2`, latin subset, 47 KB) — the reader
   "Sans-Serif" font (`[data-font="geist"]`), variable, so one file covers every weight,
   falling back to the system sans stack. Subset from a 169 KB `.ttf` on 2026-07-27, a 72% cut;
@@ -46,11 +58,14 @@ download only when chosen — no default-load cost):
   regeneration command is in the `themes.css` comment. ⚠️ Any re-subset must keep the variable
   tables — a naive subset flattens the axis and every weight silently becomes 400.
 
-Two webfonts, both optional. Inter was removed earlier.
+Two active webfonts, both optional, plus the dormant Baskerville. Inter was removed earlier.
+⚠️ One custom family per option, system stack behind it — two custom fonts in one stack means
+the interim render during `swap` triggers the second family's download too.
 
 ### The `[data-font]` axis — three panel choices
 The panel labels map to values: System = `sans` (system stack, no webfont, fast),
-Sans-Serif = `geist`, Serif = `serif` (Libre Baskerville).
+Sans-Serif = `geist`, Serif = `serif` (Source Serif 4; the stored value predates the
+2026-08-02 font swap and did not change, so no reader's saved choice needed migrating).
 
 *"System" was called "Default" until 2026-07-27* (Brajeshwar: *"For the FONT, replace Default
 with System"*). It names what the option actually is — the OS UI face — where "Default" said
@@ -63,7 +78,7 @@ saved choice needed migrating.
 :root { --font-body: var(--font-sans); }   /* System — no attribute, system sans */
 [data-font="sans"]  { --font-body: var(--font-sans); }
 [data-font="geist"] { --font-body: "Geist", var(--font-sans); }              /* "Sans-Serif" */
-[data-font="serif"] { --font-body: "Libre Baskerville", var(--font-serif); } /* "Serif" */
+[data-font="serif"] { --font-body: "Source Serif 4", var(--font-serif); }    /* "Serif" */
 ```
 
 Geist: dropped 2026-07-19, restored 2026-07-27. It was removed as a near-duplicate of the

@@ -6,7 +6,54 @@
 
 ## Where we are (updated 2026-08-02, sixth session) — READ FIRST
 
-### The in-post image gallery is built and committed. NOT pushed — wait to be asked.
+### Built and committed this session: the in-post image gallery, and the Serif font
+### swap to Source Serif 4. NOT pushed — Brajeshwar: "Don't push yet. I want to finish
+### a few more things."
+
+### The Serif option is Source Serif 4 now; Libre Baskerville is dormant, not deleted.
+
+Brajeshwar, 2026-08-02: *"Let's switch the Serif option to Source Serif 4 but keep
+Baskerville. I want to see how things are. However, our default should always be the system
+fonts. The custom fonts are loaded only on demand and served from the same server locally."*
+
+All four conditions were already the architecture or became one change each:
+
+- **The swap is ONE line** — `[data-font="serif"]` in `config.scss` now names
+  "Source Serif 4". The stored value `serif` did not change, so no reader migration and no
+  `default.html` no-flash edit; of the FOUR places that must agree for a font option
+  (styles.md §"data-font axis"), only the `[data-font]` rule and the `@font-face` moved.
+- **On-demand was already true and stays true** — `@font-face` + `unicode-range` +
+  `font-display: swap` download a face only when text uses the family, and the family is
+  only referenced under `[data-font="serif"]`. Measured: a System-default load makes ZERO
+  font requests; a Serif load fetches exactly the two Source Serif files (62 + 64 KB
+  transfer) and nothing else.
+- **Self-hosted** — `assets/fonts/source-serif/`, hashed by `hash-assets.mjs` in CI like
+  every other font. Sources: Adobe's official release (adobe-fonts/source-serif, 4.005R).
+- **Baskerville kept** — files and `@font-face` blocks intact, nothing references the
+  family, so its faces cost zero bytes on the wire. Reverting = pointing the one
+  `config.scss` line back. ⚠️ Never chain both serifs in one stack; the `swap` interim
+  would download the second family too (recorded in config.scss and themes.scss).
+
+The files: upstream variable TTFs are 1.2 MB (Roman) and 850 KB (Italic); shipped woff2 are
+**64 + 65 KB**, Geist-class. The cut, recorded with the recipe in `themes.scss`: pin `opsz`
+at its default 20 (body text renders 16–20px, so shipped outlines are byte-identical to what
+an unpinned font would draw there), clamp `wght` to 200:700 (site uses 200/400/600, plus
+700 for `<strong>`'s UA `bolder`), subset to the Geist unicode set with default layout
+features. Verified by reading the BUILT files, not the byte counts: `wght` axis alive at
+200–700 both faces, GPOS kern/mark/mkmk and GSUB liga/frac survive, all ten default digits
+are 500/1000em so `tabular-nums` (archives, home dates) needs no `tnum`, and ’ “ ” – — • …
+are inside both the cmap and the declared `unicode-range` — the Baskerville apostrophe bug
+class cannot recur. In-browser: Serif renders Source Serif 4 with real 200/700 and italic,
+no Baskerville request, System default untouched.
+
+⚠️ **Two things that will bite later:**
+- **A weight token past 700 will silently flatten to 700** — the clamp was cut to what the
+  site uses. Re-subset wider if `--font-weight-*` ever exceeds it; recipe in themes.scss.
+- **`assets/fonts/source-serif/LICENSE.md` must STAY in `_config.yml`'s exclude** — not for
+  weight but because jekyll-optional-front-matter renders any bare `.md` into a published
+  page. The TTF sources are excluded beside it, Geist-style.
+
+### The in-post image gallery is built and committed.
 
 Brajeshwar, 2026-08-02: *"Let's build an Image Gallery, which I have used and will use in my
 posts. For any container with the class 'gallery', extend beyond the body width until our max
