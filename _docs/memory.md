@@ -84,6 +84,18 @@ isn't working, add 0.25 instead."*
   the options went to him with device-pixel math and he picked 0.75px: one solid row plus
   one at half alpha on retina, still 1 device pixel on 1x. Amendment dated on the token.
 
+### Six researched sidenotes for the kids-smartwatch post (requested by name)
+
+Brajeshwar: *"For /2025/kids-smartwatch-not-so-smart/ can you extract some meaningful
+sidenotes and add to the article?"* — a content edit he asked for by name, like the
+How to Read a Book notes. Six kramdown footnotes added, each fact web-verified before
+writing: the WatchOut watches + Germany's destroy-order ban; the DeStefano AI-voice
+ransom call and Senate testimony; the ENOX Safe-KID-One as the EU's first data-privacy
+recall; Thinkrace's 47M-device sequential-ID white-label platform; DPDP §9's flat ban on
+tracking children (that consent cannot cure); Apple's AirTags-are-for-things caveat.
+Verified rendering: 6 sidenotes placed in order, no overlaps, coexists with the post's
+existing `.aside.right`, foot block hidden with JS on.
+
 ### Two homepage refinements, same afternoon
 
 - **The Books and Album strip titles are full-row hit areas** — the heading anchor went
