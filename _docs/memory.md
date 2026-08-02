@@ -4,7 +4,63 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-01, end of the fifth session) — READ FIRST
+## Where we are (updated 2026-08-02, sixth session) — READ FIRST
+
+### The in-post image gallery is built and committed. NOT pushed — wait to be asked.
+
+Brajeshwar, 2026-08-02: *"Let's build an Image Gallery, which I have used and will use in my
+posts. For any container with the class 'gallery', extend beyond the body width until our max
+guardrail of 1600px. As we are already doing masonry, can we re-use that."*
+
+Built, in one commit. `.gallery` — a class five posts (2010–2024) already carry on a `<div>`
+wrapping a plain list of images — now bleeds past the band to `min(100vw, 1600px)`, centered,
+with `/album/`'s multi-column masonry (`columns: 14rem`, same gap, `break-inside: avoid`) on
+the `<ul>` inside. The full write-up is *The second exception: `.gallery`* in
+[`styles.md`](styles.md) §6; the CSS is one block in `base.scss`.
+
+The pieces, and where they live:
+
+- **`base.scss`** — the bleed (`50cqi − bleed/2` centers a body-width box from INSIDE the
+  665px article; photo-cover's `width: 100%` trick is unreachable there), the masonry on
+  `.gallery > ul`, captions pulled back to the band (mirrors `photo-cover__desc`), and the
+  `html:has(.gallery), body:has(.gallery) { overflow-x: clip }` counterweight — without it
+  every sub-1600 viewport scrolls sideways by a scrollbar's width.
+- **`post.scss`** — `.post figure:not(.gallery)`, a load-bearing exclusion: the
+  figures-take-the-band rule loads after base and would quietly pull a `figure.gallery` back
+  to `100cqi`. Same idiom as `.post img:not(.full):not(.large)`.
+- **`config.scss`** — `--body-width-full`'s user list grew to four, by name, at his request.
+- **`_docs/styles.md`** — §6 gained the gallery section; three stale "one exception /
+  only user / one caption" claims got dated corrections.
+
+**Verified in Chrome against the served build** (320/480/768/1024/1512): gallery fills
+`min(viewport, 1600)`, 1/2/3/4/6 columns, `scrollWidth ≤ viewport`, `scrollX` pinned at 0,
+sidenotes duck below galleries (`.gallery` was already in `collectObstacles()`), a
+gallery-free post keeps `overflow-x: visible`, home keeps its own clip. Stylesheet cost:
+54.0 → 55.2 KB raw, 10.3 → 10.4 KB gzip (~100 bytes on the wire).
+
+### ⚠️ Things the next reader must know
+
+- **Brajeshwar edited content mid-build, and it is his, not staged, not committed.**
+  `_posts/2024/2024-05-17-phone.md` — he switched its lone captioned figure from
+  `class="gallery"` to `class="large"` while the gallery was being built. Read it as a
+  decision: one captioned picture is a wide figure on the band; `.gallery` means a photo
+  wall. The `figure.gallery` support (bleed, band-width caption, the `:not` exclusion) was
+  verified against a synthetic fixture and stays, for when the distinction goes the other way.
+- **Gallery images carry no width/height attributes** — they are plain Markdown/HTML in
+  content, so nothing reserves their boxes before load and the columns balance against
+  loading heights. Same accepted trade-off as `/album/` (rules-learned #2, fifth session):
+  Chrome rebalances when files land, Safari may not. The fix would be content edits, which
+  are off the table (guardrail 1).
+- **Above 1512px is still unverified** — the iframe harness clamps to the outer window, and
+  the gallery's 1600px cap engages only beyond it. The formula is the same `min()`
+  photo-cover has shipped with since 2026-07-27.
+- **`_pages/styleguide.md` documents `.gallery` in its prose** and now under-describes it
+  (no mention of the bleed or masonry). It is a `_pages/**` prose body — guardrail 1 —
+  so updating it is Brajeshwar's edit to make, not ours.
+
+---
+
+## Session record — 2026-08-01, fifth session (superseded as the index head, kept per the log-history rule)
 
 ### ✅ Session CLOSED 2026-08-01. Everything pushed, deployed green, tree clean.
 

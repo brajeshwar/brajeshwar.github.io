@@ -736,6 +736,133 @@ img.full {
    this restated it. It was there to compensate for the centering that is
    now gone.) */
 
+/* ---- The image gallery: past the band, capped at 1600px ---------
+   Brajeshwar, 2026-08-02: "For any container with the class 'gallery',
+   extend beyond the body width until our max guardrail of 1600px. As we
+   are already doing masonry, can we re-use that."
+
+   `.gallery` is authored in the CONTENT — five posts (2010-2024) plus the
+   styleguide wrap images in it, so the markup arrives in two shapes and
+   neither is ours to edit (guardrail 1):
+
+     div.gallery > ul > li > a > img       Markdown list under markdown="1"
+     div.gallery > ul > li > img           raw HTML list (tape-cassette)
+
+   The rules meet both — and any OTHER element carrying the class, since
+   the ask was "any container": the bleed sits on `.gallery` itself,
+   whatever the element; the masonry sits on the <ul> when there is one.
+   A figure.gallery would get the width and no columns. One existed while
+   this was being built — the phone post — and Brajeshwar moved it to
+   `.large` the same hour, in his own tree: one captioned picture reads as
+   a wide figure, not a photo wall. The figure support stays, tested,
+   for the next time the distinction goes the other way.
+
+   THE BLEED — the FOURTH user of --body-width-full, joining <photo-cover>
+   and the two home strips; config.scss's list on the token is updated to
+   match. Same shape as the strips: centered on the page, the viewport
+   wide, never past 1600px. photo-cover gets this with `width: 100%`
+   because it is `main`'s SIBLING and resolves against <body>; a gallery is
+   INSIDE the article, whose box is the 665px measure, so the escape uses
+   `main`'s own units instead. `50cqi` is the band's midpoint, and the band
+   is centered in the body, so `50cqi - bleed/2` places a body-centered box
+   from inside any descendant of `main` — no viewport arithmetic against
+   the article's own width, which is the dance styles.md §6 retired.
+
+   ⚠️ The anchor is the article sitting FLUSH on the band's left edge —
+   margin-left 0 and no padding anywhere between `main` and the gallery.
+   If articles ever gain inline padding, every gallery drifts by it.
+
+   ⚠️ `100vw` INCLUDES THE SCROLLBAR; the body does not. Below 1600px the
+   bleed is 100vw, so the box pokes half a scrollbar past each body edge
+   and would hand the whole document a sideways scroll. The html/body clip
+   at the end of this block absorbs it.
+
+   Sidenotes already know: collectObstacles() in sidenotes.js has listed
+   `.gallery` among the wide elements all along, so a note that would land
+   beside a gallery moves below it instead. */
+.gallery {
+  --gallery-bleed: min(100vw, var(--body-width-full));
+
+  width: var(--gallery-bleed);
+  max-width: var(--gallery-bleed);
+  margin-inline: calc(50cqi - var(--gallery-bleed) / 2);
+  margin-block: var(--space-m);
+}
+
+/* The masonry, reused from /album/ — same technique, same numbers, for the
+   same reason: multi-column is the only masonry CSS can do today, and it
+   does the one thing a photo wall needs — every image at its own height,
+   nothing cropped. The full reasoning, and the reading-order trade-off
+   (which matters even less here than on /album/ — a post gallery is
+   browsed, not read in sequence), lives with `.card-grid--masonry` in
+   page.scss; read it there rather than trusting a summary.
+
+   Deliberately NOT shared selectors with that block: the album rules are
+   welded to the card-grid include's markup and its 225x300 fallback hints
+   (the aspect-ratio warning in page.scss). Gallery images carry no
+   width/height attributes at all, so none of that machinery applies —
+   three overlapping declarations are cheaper than coupling this to a rule
+   whose warnings are about somebody else's markup.
+
+   The <ul> is a plain Markdown or hand-written list, so it brings bullets
+   and indentation that must go. */
+.gallery > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  columns: 14rem;               /* a WIDTH, not a count — see page.scss */
+  column-gap: var(--space-xs);
+}
+
+.gallery > ul > li {
+  break-inside: avoid;                  /* never split a photo across columns */
+  -webkit-column-break-inside: avoid;   /* Safari has needed this alongside */
+  margin: 0 0 var(--space-xs);          /* the rhythm; columns have no row-gap */
+}
+
+/* display: block kills the baseline gap under an inline image; 100% fills
+   the column so every photo shares one width and keeps its own height. */
+.gallery li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* A gallery's caption comes back to the BAND, like photo-cover's does and
+   for its reason: the image is a bleed and the caption is text, so the
+   caption lines up with the page rather than with the flourish it labels.
+   Measured 2026-08-02, on the figure.gallery the phone post briefly
+   carried: without this rule its caption ran the full 1512px viewport,
+   flush against x=0 — a ~200-character line starting on an edge no other
+   text on the site touches. That figure is `.large` now, so no caption in
+   the archive hits this rule today; it stays because the bleed without it
+   is a trap that measurement already sprang once. The general "a caption
+   is as wide as its figure" rule in the figcaption comment above has TWO
+   exceptions now, both of them bleeds; photo-cover__desc's comment in
+   post.scss says so too.
+
+   The gallery box and the band are both centered on the body, so plain
+   auto margins land this exactly on the band; min() keeps it from
+   EXCEEDING the figure on viewports narrower than the band, where the
+   caption simply matches the bleed again. */
+.gallery figcaption {
+  width: min(100%, var(--body-width-max));
+  margin-inline: auto;
+}
+
+/* ⚠️ The counterweight to the bleed, without which every sub-1600px
+   viewport scrolls sideways by a scrollbar's width. `clip` and never
+   `hidden`, on BOTH html and body — `hidden` creates a scroll container,
+   which becomes the scroll context for the sticky site header and pins it
+   to the document instead of the viewport; and body alone measurably fails
+   to reach the viewport. The full write-up is on `body:has(home-container)`
+   in home.scss; this is the same rule, scoped to pages holding a gallery. */
+html:has(.gallery),
+body:has(.gallery) {
+  overflow-x: clip;
+}
+
 /* ---- Footnotes + sidenotes ---------------------------------------------------- */
 
 .footnotes {

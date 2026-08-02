@@ -751,7 +751,8 @@ row was *clipped*, when a bound was the only thing stopping content being unreac
 it scrolled, that bound only hid thumbnails from people with the screens to see them. No
 sentinel value is needed — `100vw` already means "the viewport", so an ultrawide shows more
 and a laptop scrolls for the rest. `--body-width-full` still means 1600px for `<photo-cover>`,
-its remaining user.
+its remaining user (joined 2026-08-02 by the in-post `.gallery` — see *The second exception*
+under §6).
 
 ⚠️ **One behavior at every width: one row, scrolls, arrows on overflow.** The `$small` block
 sets only the item size. It previously also wrapped into two clipped rows, from an earlier
@@ -1166,12 +1167,13 @@ What it replaced: `margin-inline: calc(50% - 50vw); width: 100vw; transform: tra
 - 50%))` — viewport-wide and re-centered, so it spilled equally into *both* margins.
 
 Everything that takes the band: `figure.full` / `img.full`, `figure.large` / `img.large`
-(identical since 2026-07-27 — the 960px middle step is gone), `.gallery`, videos and embeds
+(identical since 2026-07-27 — the 960px middle step is gone), videos and embeds
 (`main :where(iframe, video)`), the post title (`.post h1`), `figcaption`, and `.post-nav`.
 Verified: one distinct right edge across header, footer, `main`, title, image, caption
-and nav.
+and nav. (`.gallery` was in this list until 2026-08-02; it goes *past* the band now — see
+its own section below.)
 
-### The one exception: `photo-cover`
+### The first exception: `photo-cover`
 
 The optional `image:` in a post's front matter is deliberately full-bleed — the single
 element allowed past the band. Brajeshwar, 2026-07-27: *"an optional addition of beauty… sticks
@@ -1179,7 +1181,7 @@ to the header border-bottom and spans with width of the browser viewport or a ma
 It is a flourish, not content; the article below still starts on the band's left edge.
 
     width: 100%;                          /* of <body>, NOT 100vw — see below */
-    max-width: var(--body-width-full);    /* 1600px, the only user of that token */
+    max-width: var(--body-width-full);    /* 1600px; .gallery shares the token since 2026-08-02 */
     margin-top: calc(-1 * var(--space-l));/* cancels the header's margin-bottom */
 
 - `100%`, not `100vw` — `100vw` includes the scrollbar and overflows horizontally by its
@@ -1190,11 +1192,47 @@ It is a flourish, not content; the article below still starts on the band's left
 - No `border-radius` — it runs to the window edge, and a curve against the edge of the
   viewport reads as a rendering fault.
 - Its caption stays on the body width, not the image's. The image is a bleed and the caption
-  is text, so it lines up with the prose rather than with the flourish. It is the one caption on
-  the site that does *not* match its own figure.
+  is text, so it lines up with the prose rather than with the flourish. It was the one caption
+  on the site that does *not* match its own figure until `.gallery figcaption` joined it on
+  2026-08-02, for the same reason.
 
 It also cannot use `cqi`: `post.html` emits it before `<main>`, so there is no container ancestor
 and `cqi` would fall back to the viewport.
+
+### The second exception: `.gallery` (2026-08-02)
+
+Brajeshwar: *"For any container with the class 'gallery', extend beyond the body width until
+our max guardrail of 1600px. As we are already doing masonry, can we re-use that."* Five posts
+(2010–2024) wrap a plain list of images in `<div class="gallery">`; the class is authored in
+content, so the CSS meets the markup where it is. Rules live in `base.scss`, one block.
+
+    --gallery-bleed: min(100vw, var(--body-width-full));
+    width: var(--gallery-bleed);
+    margin-inline: calc(50cqi - var(--gallery-bleed) / 2);
+
+- **Centered like the strips, not right-only** — that is what "extend beyond the body width"
+  asked for. Unlike `photo-cover` it sits *inside* the article (a 665px box), so `width: 100%`
+  cannot reach the body; instead `50cqi` names the band's midpoint, the band is centered on the
+  body, so `50cqi − bleed/2` places a body-centered box from inside any descendant of `main`.
+- **The masonry is /album/'s**, verbatim in technique and numbers — `columns: 14rem`,
+  `column-gap: var(--space-xs)`, `break-inside: avoid` — applied to the gallery's own `<ul>`.
+  Deliberately *not* shared selectors with `.card-grid--masonry`: that block's machinery
+  (aspect-ratio warning, 225×300 fallback) is welded to the card-grid include's markup.
+- **`100vw` includes the scrollbar**, so below 1600px the box pokes half a scrollbar past each
+  body edge. `html:has(.gallery), body:has(.gallery) { overflow-x: clip }` absorbs it — the
+  same counterweight, for the same reason, as `body:has(home-container)` on the home page.
+- **Captions come back to the band** (`.gallery figcaption`), mirroring `photo-cover__desc`.
+  Measured before the rule: a caption ran the full 1512px viewport flush against x=0.
+- **`.post figure:not(.gallery)`** — the figures-take-the-band rule loads after base at higher
+  specificity and would quietly pull a `figure.gallery` back to `100cqi`. Same load-bearing
+  exclusion idiom as `.post img:not(.full):not(.large)`.
+- `sidenotes.js` already listed `.gallery` among its obstacles, so notes duck below galleries
+  with no JS change.
+
+Verified 2026-08-02 in Chrome at 320/480/768/1024/1512: gallery fills `min(viewport, 1600)`,
+1/2/3/4/6 columns respectively, `scrollWidth ≤ viewport` and `scrollX` pinned at 0 everywhere;
+a gallery-free post keeps `overflow-x: visible`. Above 1512px is unverified — the standing
+iframe-harness limit — but the formula is the same `min()` photo-cover ships with.
 
 ⚠️ **Wide media now sits in the sidenote gutter.** `sidenotes.js` `collectObstacles()` looks for
 `.full, .large, .gallery` and pushes overlapping notes below them — see

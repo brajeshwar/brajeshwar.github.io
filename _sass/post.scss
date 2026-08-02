@@ -94,9 +94,10 @@ photo-cover:has(+ photo-cover__desc) {
 
    That is the right split: the image is a bleed and the caption is text, so
    the caption lines up with the prose it belongs to rather than with the
-   flourish it describes. It is the one place on the site where a caption does
-   NOT match its own figure — see the `figcaption` rule in base.css for the
-   general case. */
+   flourish it describes. It was the one place on the site where a caption did
+   NOT match its own figure until 2026-08-02, when `.gallery figcaption` in
+   base.scss joined it for the same reason — both exceptions are bleeds. See
+   the `figcaption` rule in base.css for the general case. */
 photo-cover__desc {
   display: block;
   width: var(--body-width);
@@ -218,8 +219,18 @@ photo-cover__desc {
    metarefresh-2014.jpg (1000, imperceptible). Capping figures at the image's
    intrinsic width via `width: fit-content` was the alternative and was rejected:
    it would make the 555px one NARROWER than it is today, a regression to a
-   shipped post that nobody asked for. */
-.post figure {
+   shipped post that nobody asked for.
+
+   ⚠️ `:not(.gallery)` is load-bearing (2026-08-02). base.scss bleeds a
+   gallery PAST the band — min(100vw, 1600px), centered — and this rule
+   loads after base at higher specificity, so without the exclusion it
+   would quietly pull a figure.gallery back to 100cqi and pin it left.
+   Verified on real markup: the phone post carried exactly that figure
+   while this was built (it is `.large` now, Brajeshwar's same-day edit).
+   Same idiom as `.post img:not(.full):not(.large)` above: a class
+   base.scss sizes must be excluded here. sidenotes.js is unaffected — its
+   obstacle list names `.gallery` on its own, beside `figure`. */
+.post figure:not(.gallery) {
   margin-inline: 0;
   width: 100cqi;
   max-width: 100cqi;
