@@ -490,6 +490,18 @@ home-support li {
   text-decoration: none;
 }
 
+/* Block, not inline (2026-08-02: "display: block the 'books' and 'album'
+   title, so it has a large hit-area"). An inline anchor is only as wide as
+   the word it wraps — 'books' was a ~90px target on a 1024px row. Block
+   fills the heading, so the WHOLE row is clickable, which is the promise
+   the hover already makes: the border-bottom that answers the pointer runs
+   the full band width, and an affordance should not be wider than its hit
+   area. The `:has(a:hover)` rule below needs no change — the pointer now
+   matches the anchor anywhere on the row, which is exactly why it fires. */
+.strip__heading a {
+  display: block;
+}
+
 .strip__heading:has(a:hover),
 .strip__heading:has(a:focus-visible) {
   border-bottom-color: var(--text-color);
