@@ -84,9 +84,11 @@ saved choice needed migrating.
 Geist: dropped 2026-07-19, restored 2026-07-27. It was removed as a near-duplicate of the
 system stack shipping as a 169 KB unsubsetted `.ttf` — the heaviest asset on the site,
 against 84 KB of woff2 for all three Libre Baskerville styles. Brajeshwar re-added the file and
-asked for the option back, so the reasoning is recorded rather than deleted: the size
-objection still stands, and subsetting it to woff2 is an open task in
-[`todo.md`](todo.md). It costs nothing unless a reader picks it.
+asked for the option back, so the reasoning is recorded rather than deleted. *(Corrected
+2026-08-02: this paragraph still called the subsetting "an open task" — it was done the same
+day it was restored, 2026-07-27, 169 → 47 KB, as the bullet above says. The size objection is
+closed; the two claims had been contradicting each other in one section.)* It costs nothing
+unless a reader picks it.
 
 ⚠️ **FOUR places must agree for any font option**, and missing the last one is the quiet failure:
 1. `AXES.font.opts` — `assets/scripts/appearance.js`

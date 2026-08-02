@@ -421,6 +421,44 @@ cold. They are not. Do not re-raise them.
       field now; devices does not. Six more `href=""` sit in old post bodies and are content.
       **The only one of the four still open.**
 
+## Raised 2026-08-02 (sixth session)
+
+What shipped is in [`memory.md`](memory.md) → *Where we are*: the in-post `.gallery`
+(1600px bleed + /album/'s masonry), Serif → Source Serif 4 (Baskerville dormant), the
+hover system (hairline token, full-row strip titles, link text darkens), six researched
+sidenotes for the kids-smartwatch post. These are what it left open:
+
+- [ ] **Decide Libre Baskerville's fate.** The swap to Source Serif 4 is an experiment —
+      *"keep Baskerville. I want to see how things are."* Its three woff2 faces (86 KB) and
+      `@font-face` blocks are dormant: nothing references the family, so they cost zero on
+      the wire, and the revert is one line in `config.scss`. Once he has lived with Source
+      Serif 4: either flip back, or delete the `libre-baskerville/` directory and its three
+      `@font-face` blocks. **His call, after reading in it for a while.**
+- [ ] ⚠️ **Source Serif's `wght` axis is clamped to 200:700.** The subset covers the weights
+      the site uses (200/400/600, and 700 for `<strong>`). A future `--font-weight-*` token
+      past 700 will silently flatten to 700 — the browser gives no warning. The re-subset
+      recipe (instancer + pyftsubset) is in the `themes.scss` comment. Same class of trap as
+      the Geist "naive subset flattens the axis" warning, from the other direction.
+- [ ] **The two masonries share values by copy, not by rule.** `.gallery > ul` (base.scss)
+      and `.item__cards.card-grid--masonry` (page.scss) both say `columns: 14rem`,
+      `column-gap: --space-xs`, `break-inside: avoid` — deliberately not shared selectors
+      (the album block is welded to card-grid.html's fallback-hint machinery). Raised with
+      Brajeshwar 2026-08-02; agreed to leave until one of them actually changes. If they
+      should ever be locked together, a three-line Sass mixin costs zero shipped bytes.
+- [ ] **`_pages/styleguide.md` under-describes `.gallery`** — it shows the markup but says
+      nothing of the 1600px bleed or the masonry. It is a `_pages/**` prose body (guardrail
+      1), so **Brajeshwar's edit to make**, not an agent's.
+- [ ] **The gallery's 1600px cap has never been seen.** The iframe harness clamps to the
+      outer window (1512 on this machine), and the cap engages only beyond it. The formula
+      is the same `min(100vw, --body-width-full)` photo-cover has shipped with since
+      2026-07-27, so the risk is low — but "verified above 1600" remains unclaimable, for
+      this and for photo-cover alike.
+- [x] **Sidenotes as requested content work** *(2026-08-02)* — six researched, web-verified
+      footnotes added to `/2025/kids-smartwatch-not-so-smart/` at his request by name. The
+      pattern (from How to Read a Book, fifth session): sidenotes = kramdown footnotes; verify
+      every fact before writing it; match the post's voice; single-paragraph notes, usually
+      opening with a link, closing dry.
+
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +
       hand-authored `oinam`/`memos`) and the header icons (`search`, `rss`, `theme`) all live

@@ -4,16 +4,79 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-02, sixth session) — READ FIRST
+## Where we are (updated 2026-08-02, end of the sixth session) — READ FIRST
 
-### ✅ PUSHED AND DEPLOYED GREEN 2026-08-02 ("Commit. Push."). Verified against the live
-### site: the hashed stylesheet carries Source Serif 4, the 0.75px hairline and the
-### gallery bleed; SourceSerif4Variable-Roman.822bcfc3.woff2 serves 200 at its exact
-### built size (63,644 bytes — hash-assets' first run over a NEW font directory);
-### /2024/locavore/ renders the gallery. Eight commits, all signed, all his.
+### ✅ Session CLOSED 2026-08-02. Everything deployed green and verified live; ONE
+### docs-only commit (this close) sits unpushed, awaiting his word — guardrail 7.
 
-### What this session built: the in-post image gallery; the Serif swap to Source
-### Serif 4; hover affordances (full-row strip titles, hairline + darkening links).
+Ten commits pushed across two deploys, both green, every commit signed (`G`) and in
+Brajeshwar's name. Verified against the live site, not `_site`: the hashed stylesheet
+carries Source Serif 4, the 0.75px hairline and the gallery bleed;
+`SourceSerif4Variable-Roman.822bcfc3.woff2` serves 200 at its exact built size (63,644
+bytes — `hash-assets.mjs`'s first run over a brand-new font directory, clean);
+`/2024/locavore/` renders the gallery; `/2025/kids-smartwatch-not-so-smart/` serves all
+six new footnotes. The eleventh commit is the session-close docs pass (todo, memory,
+one styles.md correction) — **push it when he asks, nothing else is pending.**
+
+### What this session did
+
+1. **The in-post image gallery.** `.gallery` bleeds past the band to `min(100vw,
+   1600px)`, centered, with /album/'s masonry on its `<ul>`. Fourth user of
+   `--body-width-full`. Details below and in [`styles.md`](styles.md) §6.
+2. **Serif → Source Serif 4**, variable, subset to 64+65 KB, on-demand as ever; Libre
+   Baskerville kept dormant for the flip-back. Details below.
+3. **The hover system**: Books/Album strip titles are full-row hit areas; every hover
+   underline/border standardized on `--border-size-hairline` (0.5px → 0.75px same day, his
+   pick from rendered options); link TEXT darkens on hover site-wide, homepage toc rows
+   included, dates and leaders excluded by their own colors.
+4. **Six researched sidenotes** for `/2025/kids-smartwatch-not-so-smart/` — content work
+   he asked for by name; every fact web-verified before writing.
+5. **His content committed alongside**: the phone-post figure decision (gallery → large),
+   two copy edits, two new drafts (`ux-nomenclature`, future-dated Aug 8; a 2099 London
+   todo).
+
+### Rules learned this session — these will bite again
+
+1. **He specs line thickness in typographic points, and literal conversion goes wrong in
+   BOTH directions.** "0.1 point" = 0.13px rounds to NOTHING at dpr 1; his follow-up
+   "0.25" was 0.33px — *thinner* than the 0.5px already shipping that he was calling
+   invisible. Translate to device pixels, present rendered options, let him pick
+   (he chose 0.75px). Do not implement the literal number.
+2. **Identical 1px borders paint differently at different sub-pixel positions.** Books'
+   strip border sat at device-pixel fraction .55 and smeared 2 device px of ink across 3
+   rows; Album's sat at .95 and painted crisp. His eye caught it; the CSS was identical.
+   The leader-dots lesson (fifth session) generalized to borders: fractional position, not
+   size, is often the perceived difference.
+3. **A resting state at the ramp end makes "darker on hover" impossible — and a (0,1,1)
+   resting declaration silently blocks a `:where()` hover.** `.toc__link` had both
+   problems at once. The fix is always the same shape: lighten REST (the room is there),
+   and declare hover at the same specificity as rest.
+4. **Never chain two custom fonts in one stack.** During `font-display: swap`'s interim
+   the browser renders the next matching family — downloading it too. One custom family
+   per option, system stack behind it. Recorded in config.scss and themes.scss.
+5. **jekyll-optional-front-matter turns ANY bare `.md` into a published page.** A font
+   directory's `LICENSE.md` would have rendered as HTML at its own URL. Exclude such
+   files in `_config.yml`; the exclusion comment says why.
+6. **`50cqi − bleed/2` centers a body-width box from INSIDE the article.** photo-cover's
+   `width: 100%` trick only works as `main`'s sibling; within the 665px article the band's
+   midpoint (50cqi) is the usable anchor because band-center == body-center. The anchor
+   assumption: article flush on the band's left edge, no intermediate padding.
+
+### Picking this back up — the shortlist
+
+Open items are in [`todo.md`](todo.md) → *Raised 2026-08-02*. The ones that need HIM:
+Baskerville's fate (flip back or delete, after living with Source Serif 4); the
+styleguide's gallery prose (guardrail 1 — his edit). Standing from earlier sessions:
+the 86.3 MB of unreferenced year-folder masters (his call), `/static/films/` re-cuts,
+`/devices/`' one `<a href="">`.
+
+### How to verify a change (the loop that works)
+
+`bundle exec jekyll build` → serve `_site` with a ThreadingHTTPServer → **measure in the
+browser, don't look** — canvas pixel readback for colors, getBoundingClientRect for
+geometry, real hovers via element refs, the iframe sweep (320/480/768/1024/1512) for
+layout. Everything real this session was sub-visual: a 0.27-device-pixel line, a .55
+fractional border position, a hover color change of 13 RGB points.
 
 ### The Serif option is Source Serif 4 now; Libre Baskerville is dormant, not deleted.
 
