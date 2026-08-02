@@ -372,7 +372,26 @@ h6 { font-size: var(--step--2); }
 
    `:focus-visible` joins hover here because it had NO link style of its own —
    greppable, there is no other focus-visible rule in this file — so keyboard
-   users got the resting underline and no feedback whatsoever. */
+   users got the resting underline and no feedback whatsoever.
+
+   THE TEXT ITSELF DARKENS ON HOVER TOO (2026-08-02). Brajeshwar: "the text
+   don't change color. I think we should make the text darker or more
+   accented across hyperlinks." The room was already there: rest sits on
+   --text-color-link (→ --color-accent → gray-900 by default, ONE step
+   lighter than the gray-950 body text; an accent hue if the reader chose
+   one), so hover steps to --text-color — the same "only token guaranteed
+   to be the far end in every palette" reasoning as the underline above.
+   For a reader with a color accent the link rests IN the accent and
+   darkens to full text on hover: "darker or more accented", both.
+
+   The homepage toc rows get the right scoping for free, and it is worth
+   knowing WHY before restyling them: the row's <a> wraps title, leader
+   AND date, but .toc__date and .toc__leader set their own colors, so the
+   anchor's hover color reaches only the title by inheritance ("just the
+   titles would be nicer, without highlighting the dates"). The archives
+   anchors contain nothing but the title. Neither page needed a rule of
+   its own — if a future toc child should NOT darken, give it an explicit
+   color like the date has. */
 :where(a, a:visited) {
   color: var(--text-color-link);
   text-decoration: underline;
@@ -382,7 +401,7 @@ h6 { font-size: var(--step--2); }
 }
 
 :where(a:hover, a:active, a:focus-visible) {
-  color: var(--text-color-link);
+  color: var(--text-color);
   text-decoration: underline;
   text-decoration-color: var(--text-color);
   text-decoration-thickness: var(--border-size-hairline);

@@ -184,7 +184,17 @@ home-container home-intro p {
   margin-inline: calc(-1 * min(var(--space-2xs), (100vw - 100%) / 2));
   border-radius: var(--border-radius);
 
-  color: var(--text-color);
+  /* --text-color-link, DOWN from --text-color (2026-08-02: "make the hover
+     text color darker than the normal state. Of course, just the titles").
+     The old value was the ramp end — gray-950, "cannot go darker" — so a
+     hover step was arithmetically impossible; the room has to come from
+     the resting state, exactly like the underline fix of 2026-08-01. Rest
+     on the link token (gray-900, or the reader's accent) also matches what
+     the archives rows always did, so the two listings now agree. The date
+     and the leader are untouched by BOTH states: each sets its own color,
+     which is the only reason the anchor's color can swing without
+     dragging them along — see the note in base.scss. */
+  color: var(--text-color-link);
   text-decoration: none;
 }
 
@@ -192,6 +202,9 @@ home-container home-intro p {
 .toc__link:focus-visible,
 .toc__link:active {
   background-color: var(--bg-color-low);
+  /* Needed here at (0,1,1) — the resting declaration above outweighs the
+     base :where() hover, so without this the row would never darken. */
+  color: var(--text-color);
   text-decoration: none;
 }
 

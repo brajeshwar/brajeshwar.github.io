@@ -225,8 +225,16 @@
      actually draw: exactly 1 device pixel on retina, rounded up to 1 on
      dpr 1. Structural rules (header/footer, table separators, figcaption)
      stay on --border-size; this token is for lines whose job is to answer
-     the pointer. */
-  --border-size-hairline  : 0.5px;
+     the pointer.
+
+     RAISED 0.5px → 0.75px the same day. The single device pixel read as
+     absent at arm's length ("the hover thickness… isn't working"); his
+     next number, 0.25pt, is 0.33px — thinner still — so the fix went the
+     other way, to the value he picked from the rendered options: 0.75px
+     is one-and-a-half device pixels on retina (one solid row plus one at
+     half alpha — visibly present, still finer than the old 1px) and still
+     a clean 1 device pixel on a 1x display. */
+  --border-size-hairline  : 0.75px;
   --border-size-small     : 3px;
 
   /* Logo. Came down from 42px on 2026-07-27 to hold its proportion against the

@@ -53,6 +53,32 @@ no Baskerville request, System default untouched.
   weight but because jekyll-optional-front-matter renders any bare `.md` into a published
   page. The TTF sources are excluded beside it, Geist-style.
 
+### Link text darkens on hover, site-wide; the hairline grew to 0.75px
+
+Second round on the hover work, same day. Brajeshwar: *"make the hover text color darker
+than the normal state. Of course, just the titles… without highlighting the dates. I
+realize, this is for all A HREFs."* And: *"the hover thickness that we added 0.1 recently
+isn't working, add 0.25 instead."*
+
+- **Global link hover color**: the base `:where(a:hover…)` block now goes to
+  `--text-color`. The room already existed — rest is `--text-color-link` (gray-900, or the
+  reader's accent), one step shy of the gray-950 body text — same far-end reasoning as the
+  2026-08-01 underline fix. With a color accent set, links rest in the accent and darken to
+  full text: "darker or more accented", both.
+- **The homepage toc needed its own fix and the reason is a trap**: `.toc__link` rested on
+  `--text-color` — the ramp end, so "darker on hover" was arithmetically impossible AND its
+  (0,1,1) resting declaration silently blocked the base :where() hover. Rest moved to the
+  link token (now agrees with the archives rows), hover declared explicitly in the row's
+  own hover block. Dates and leader dots never move: they carry their OWN colors, which is
+  the only reason the anchor's color can swing without dragging them (noted in base.scss).
+- **Measured with a real hover, canvas pixel readback**: title 23,23,23 → 10,10,10, date
+  pinned at 64,64,64, prose links identical; archives anchors hold only the title so the
+  base rule suffices there.
+- **`--border-size-hairline` 0.5px → 0.75px.** The single retina device pixel read as
+  absent to him. His literal ask was 0.25pt = 0.33px — THINNER, the wrong direction — so
+  the options went to him with device-pixel math and he picked 0.75px: one solid row plus
+  one at half alpha on retina, still 1 device pixel on 1x. Amendment dated on the token.
+
 ### Two homepage refinements, same afternoon
 
 - **The Books and Album strip titles are full-row hit areas** — the heading anchor went
