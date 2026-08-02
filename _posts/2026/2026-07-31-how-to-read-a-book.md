@@ -4,7 +4,7 @@ image: /static/2026/how-to-read-a-book.webp
 
 # How to Read a Book
 
-> Or, what forty years of reading did not teach me.
+> Or, what reading since the 1990s did not teach me.
 
 After decades of reading books, I have decided to finally learn [How to Read a Book](https://en.wikipedia.org/wiki/How_to_Read_a_Book). There is a particular kind of embarrassment in that sentence, and I have made my peace with it.
 
