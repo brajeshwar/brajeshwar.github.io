@@ -393,21 +393,33 @@ retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroo
       bandwidth against the same quota. (`actions/checkout` does not pull LFS unless asked, and
       must not be asked: the build never reads `_src/`.) Raised, not done — Brajeshwar's call.
 
-## Raised 2026-08-01, second half — open
+## Raised 2026-08-01, second half
 
-- [ ] ⚠️ **Re-cut the `how-to-read-a-book` cover.** The top line of the title is missing from
-      the file: the first crop used a 122px offset picked to keep the BOOK centred and it lands
-      inside the words "How to". The 1280x927 original was deleted the same day on "do not
-      worry about preserving the original", and every surviving copy is downstream of that
-      crop. Brajeshwar has it in Apple Photos. Drop it back into `/static/2026/` and re-cut —
-      **measure where the TITLE sits, not where the book sits.**
-- [ ] **No `og:image` / `twitter:image` anywhere on the site.** 35 posts carry a cover that no
-      social preview will ever show. One include, and it would earn its keep immediately.
+⚠️ **Three of these four were raised by me and CLOSED by Brajeshwar on 2026-08-02.** They are
+kept, per the log-history rule, because each one still looks like a bug to anyone who finds it
+cold. They are not. Do not re-raise them.
+
+- [x] ~~**Re-cut the `how-to-read-a-book` cover.**~~ **Closed 2026-08-02: "don't worry about
+      the cover picture, let that be."** The top line of the title is missing from the file —
+      the first crop used a 122px offset picked to keep the BOOK centred and it lands inside
+      the words "How to" — and the 1280x927 original was deleted the same day on "do not worry
+      about preserving the original". He has it in Apple Photos and has decided it is not worth
+      redoing. ⚠️ The lesson survives the decision and is the reason this entry stays: when
+      cropping a cover, **measure where the SUBJECT OF THE TITLE sits, not where the object
+      sits.** The two were 122px apart here and only one of them was checked.
+- [x] ~~**No `og:image` / `twitter:image` anywhere on the site.**~~ **Closed 2026-08-02: "I
+      never cared about them and don't want to for my personal website."** A deliberate absence,
+      not a gap. 35 posts carry a cover that no social preview will show, and that is the
+      intended behaviour. Anyone auditing the head tags will find this missing and should leave
+      it missing.
+- [x] ~~**`/film/` says "Last updated: Dec 31, 2025."**~~ **Closed 2026-08-02: "I also want to
+      maintain the last updated manually for film."** Hand-maintained on purpose. It is not
+      derived from the data and must not be automated — the date means "when Brajeshwar last
+      curated this list", which no file mtime or data length can stand in for.
 - [ ] **`/devices/` has one `<a href="">`** — its own hand-written markup in `_pages/devices.html`
       with an entry that has no `url`. `card-grid.html` and `home-strip.html` both guard on the
       field now; devices does not. Six more `href=""` sit in old post bodies and are content.
-- [ ] **`/film/` says "Last updated: Dec 31, 2025."** A hand-maintained date on a page whose
-      data changes independently of it.
+      **The only one of the four still open.**
 
 ## Design system & performance
 - [x] **Icon system in `_includes/icons/`.** Footer social icons (Simple Icons CC0 brands +

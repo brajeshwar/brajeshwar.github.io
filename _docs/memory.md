@@ -66,14 +66,20 @@ placeholder into a real, populated section and did a copy-editing pass. In order
   byte-identical, the rest dropped. ⚠️ `books-BCK.md`, the 634 words of old `/books/` prose,
   is recoverable from `c37d63a4` and nowhere else. `_archives/` is NOT a declared collection,
   so like `_backup/` it publishes nothing — but the repository is **public**.
-- ⚠️ **The `how-to-read-a-book` cover is missing the top line of the title, and the original
-  is gone.** The first cut used a 122px offset chosen to keep the BOOK symmetric; it lands
-  inside the words "How to", and the 1280x927 source was deleted the same commit on
-  Brajeshwar's "do not worry about preserving the original". Every surviving copy is
-  downstream of that crop. He has it in Apple Photos — dropping it back into `/static/2026/`
-  allows a proper re-cut. **This is the one unfinished thing on the site.**
-- **No `og:image` or `twitter:image`, on any page.** 35 posts carry a cover that no social
-  preview will ever show. Raised 2026-08-01, not started.
+- ⚠️ **Three things that look like bugs and are decisions.** Raised by me 2026-08-01, closed
+  by Brajeshwar 2026-08-02. Written here so the next reader does not "fix" them:
+  · The `how-to-read-a-book` cover is missing the top line of its title, and the original is
+    deleted. *"Don't worry about the cover picture, let that be."*
+  · There is no `og:image` or `twitter:image` on any page, so none of the 35 covers will ever
+    appear in a social preview. *"I never cared about them and don't want to for my personal
+    website."*
+  · `/film/`'s "Last updated" is typed by hand and will drift from the data. *"I also want to
+    maintain the last updated manually for film."* It means when he last curated the list,
+    which nothing derivable can stand in for.
+  ⚠️ The cropping lesson outlives its ticket: **measure where the SUBJECT sits, not where the
+  object sits.** The book and its title were 122px apart and only the book was checked.
+- **`/devices/` still has one `<a href="">`** — its own hand-written markup, one entry with no
+  `url`. Both shared includes guard on the field now; `_pages/devices.html` does not.
 - **Above 1512px is still unverified.** The iframe harness clamps to the outer window.
 - **Safari's `/album/` first row is uneven, and that is accepted.** See *Rules learned* #2.
 
