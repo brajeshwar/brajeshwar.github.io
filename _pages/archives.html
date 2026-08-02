@@ -77,7 +77,7 @@ title: Archives
   <page-archives>
     {%- for year in years %}
     <table>
-      <caption id="{{ year.name }}">{{ year.name }}</caption>
+      <caption id="{{ year.name }}"><strong>{{ year.name }}</strong></caption>
       {%- for post in year.items %}
       <tr>
         <td><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time></td>
