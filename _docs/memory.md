@@ -6,9 +6,14 @@
 
 ## Where we are (updated 2026-08-02, sixth session) — READ FIRST
 
-### Built and committed this session: the in-post image gallery, and the Serif font
-### swap to Source Serif 4. NOT pushed — Brajeshwar: "Don't push yet. I want to finish
-### a few more things."
+### ✅ PUSHED AND DEPLOYED GREEN 2026-08-02 ("Commit. Push."). Verified against the live
+### site: the hashed stylesheet carries Source Serif 4, the 0.75px hairline and the
+### gallery bleed; SourceSerif4Variable-Roman.822bcfc3.woff2 serves 200 at its exact
+### built size (63,644 bytes — hash-assets' first run over a NEW font directory);
+### /2024/locavore/ renders the gallery. Eight commits, all signed, all his.
+
+### What this session built: the in-post image gallery; the Serif swap to Source
+### Serif 4; hover affordances (full-row strip titles, hairline + darkening links).
 
 ### The Serif option is Source Serif 4 now; Libre Baskerville is dormant, not deleted.
 
