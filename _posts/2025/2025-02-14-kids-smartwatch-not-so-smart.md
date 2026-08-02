@@ -17,7 +17,7 @@ That leaves third-party companies selling Smartwatches, especially for kids, tha
 
 ## AI (Artificial Intelligence)
 
-We are seeing AI-enabled scams a lot more these days. AI voices that can mimic anyone are at the disposal of scammers.
+We are seeing AI-enabled scams a lot more these days. AI voices that can mimic anyone are at the disposal of scammers.[^VoiceClone]
 
 Imagine a scenario when someone calls you in your kid’s voice, asking to pick them up from somewhere someone spoofed their GPS. Or the Smartphone’s server data got leaked (even if unintentionally), and the entire time series of your kids’ movement, locations of interest, and where they usually go goes to people with bad intentions.
 
@@ -41,7 +41,7 @@ Many children’s smartwatches rely on mobile apps to communicate location, mess
 - The **connections are unencrypted**, where data is sent over `HTTP` instead of `HTTPS`, risking exposure of location and personal details to anyone intercepting traffic.
 - Their **encryption is weak or no encryption at rest**, and many models store location data and user information in plain text on unsecured servers.
 
-The Norwegian Consumer Council’s 2017 “WatchOut” [report highlighted insecure communication channels](https://consumerfed.org/wp-content/uploads/2017/10/watchout-report.pdf) (PDF) in several popular kids’ smartwatches. One watch, when transmitting location coordinates, did not use robust SSL/TLS, making the data vulnerable to interception.
+The Norwegian Consumer Council’s 2017 “WatchOut” [report highlighted insecure communication channels](https://consumerfed.org/wp-content/uploads/2017/10/watchout-report.pdf) (PDF) in several popular kids’ smartwatches. One watch, when transmitting location coordinates, did not use robust SSL/TLS, making the data vulnerable to interception.[^WatchOut]
 
 ## Authentication and Authorization
 
@@ -76,16 +76,16 @@ If a phone is compromised or the app developer's servers are breached, these vul
 
 Many of the smartwatch vendors do not clearly define what personal data is collected (e.g., name, age, location history, voice recordings), how long is the data retained, where is it stored, or whether the data is shared with third-party advertisers or analytics services.
 
-In some instances, families and regulators have found that data collected via children’s watches was stored in cloud servers in foreign jurisdictions with lax data protections, raising compliance questions under GDPR (in the EU) or COPPA (in the US).
+In some instances, families and regulators have found that data collected via children’s watches was stored in cloud servers in foreign jurisdictions with lax data protections, raising compliance questions under GDPR (in the EU) or COPPA (in the US).[^SafeKidOne]
 
 ## India
 
 India has a bigger problem with a lack of checks and balances regarding security and privacy, which extends to enforcement. The burgeoning rise of scams powered by technologies, including AI-enabled ones, is rampant with no immediate respite in sight. India does not have a dedicated child online privacy law akin to the [Children’s Online Privacy Protection Act](https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act) (COPPA) in the U.S. or the strict requirements under the [European Union’s GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (especially its child-specific provisions).
 
-- **Proliferation of Low-Cost and Unbranded Devices.** India’s large consumer market and price-sensitive segments often rely on imported or locally assembled kids’ smartwatches sold under various brand names (or sometimes no brand at all). Many are rebranded Chinese models, frequently using the same firmware and companion apps with documented security flaws in other countries.
+- **Proliferation of Low-Cost and Unbranded Devices.** India’s large consumer market and price-sensitive segments often rely on imported or locally assembled kids’ smartwatches sold under various brand names (or sometimes no brand at all). Many are rebranded Chinese models, frequently using the same firmware and companion apps with documented security flaws in other countries.[^Thinkrace]
 - **Easy Access to Online Stores.** Online marketplaces (Flipkart, Amazon, etc.) feature numerous kids’ smartwatch listings. Reviews and product descriptions frequently emphasize features like GPS tracking, voice calls, and “parental monitoring” but often omit security or data protection details.
 - **Lack of Consumer Awareness.** Parents may prioritize cost and basic safety functionalities (e.g., SOS calls and location tracking) over stringent privacy or data security features. Technical details or disclaimers about data handling (if present at all) are often minimal.
-- **Low Regulatory Enforcement.** Even with the [Digital Personal Data Protection Act](https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023), consumer complaints about data misuse or security breaches often had limited recourse. Enforcement bodies such as [CERT-In](https://en.wikipedia.org/wiki/Indian_Computer_Emergency_Response_Team) (Indian Computer Emergency Response Team) do address cybersecurity incidents but rarely investigate child-specific data privacy vulnerabilities in wearable devices.
+- **Low Regulatory Enforcement.** Even with the [Digital Personal Data Protection Act](https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023), consumer complaints about data misuse or security breaches often had limited recourse. Enforcement bodies such as [CERT-In](https://en.wikipedia.org/wiki/Indian_Computer_Emergency_Response_Team) (Indian Computer Emergency Response Team) do address cybersecurity incidents but rarely investigate child-specific data privacy vulnerabilities in wearable devices.[^DPDP]
 
 Not all kids’ smartwatches are as smart as they claim to be. Prioritizing security, functionality, and parental control features will help you choose a device that enhances your child’s safety without compromising their privacy.
 
@@ -98,7 +98,7 @@ Here are a few alternative approaches to help parents stay connected and ensure 
 - Non-smart “feature” phones (sometimes referred to as “dumb phones”) that offer calling and texting but lack internet browsing or advanced app functionality.
 - A regular smartphone (Android or iPhone) with robust parental control apps or built-in settings that limit app installs, control screen time, and manage location sharing. You could lock it down to the basics - no social media, no video, etc. but enable the GPS and phone calls.
 - Apple Watch or similar with Family Setup so that a child can wear a Watch without having their own Phone. The watch is managed through a parent’s Phone. However, this is an expensive setup.
-- AirTags or similar devices. They are not as accurate and real-time, but they are cheaper and good enough. AirTags excel at pinpointing the location of an item. If your primary concern is knowing where your child is in a specific context (e.g., a large gated community, a crowded amusement park, a large event), an AirTag attached to their backpack or clothing might be more suitable than a smartwatch designed for two-way communication.
+- AirTags or similar devices. They are not as accurate and real-time, but they are cheaper and good enough. AirTags excel at pinpointing the location of an item. If your primary concern is knowing where your child is in a specific context (e.g., a large gated community, a crowded amusement park, a large event), an AirTag attached to their backpack or clothing might be more suitable than a smartwatch designed for two-way communication.[^AirTag]
 
 Of course, the best is **not to tether your kids to a digital lease.** Ultimately, the best choice depends on your child’s age, maturity, and actual safety needs. For many families, alternatives like a simple phone, a well-managed family sharing plan, or a basic GPS tracker can offer peace of mind without the heightened data and security risks that plague many kids’ smartwatches.
 
@@ -121,3 +121,15 @@ Of course, the best is **not to tether your kids to a digital lease.** Ultimatel
 - **NextTV (2017)** [Smartwatches Can Endanger Kids](https://www.nexttv.com/news/groups-ftc-smartwatches-can-endanger-kids-415990)
 - **Forbrukerrådet (2017)** [Significant security flaws in smartwatches for children](https://www.forbrukerradet.no/side/significant-security-flaws-in-smartwatches-for-children/)
 - **TechCrunch (2017)** [Consumer report warns over safety of kids’ smartwatches](https://techcrunch.com/2017/10/19/consumer-report-warns-over-safety-of-kids-smartwatches/)
+
+[^VoiceClone]: This has already stopped being hypothetical. In 2023, [Jennifer DeStefano of Scottsdale, Arizona picked up a call](https://www.cnn.com/2023/04/29/us/ai-scam-calls-kidnapping-cec/index.html) and heard her 15-year-old daughter sobbing that she had been kidnapped; a man demanded a $1 million ransom. Her daughter was safe on a ski trip a few miles away. “I never doubted for one second it was her,” she later [testified to the US Senate](https://www.judiciary.senate.gov/imo/media/doc/2023-06-13%20PM%20-%20Testimony%20-%20DeStefano.pdf) (PDF). A device that streams a child’s voice to an under-secured server is raw material for exactly this call.
+
+[^WatchOut]: The four watches tested were the Gator 2, Tinitell, Viksfjord, and Xplora. The Gator sent children’s location data to servers in China unencrypted, and the Viksfjord could be made to call a number without the wearer noticing—a listening device on a child’s wrist. A month after the report, [Germany banned children’s smartwatches with a listen-in function](https://techcrunch.com/2017/11/20/germany-bans-kids-smartwatches-that-can-be-used-for-eavesdropping/) outright, classifying them as prohibited transmitting equipment, and told parents to destroy the ones they already had. Among the documented uses that prompted it: parents listening in on teachers during lessons.
+
+[^SafeKidOne]: The regulators did act once, and the case is instructive. In February 2019, the EU issued its [first-ever recall of a product on data-privacy grounds](https://www.theregister.com/2019/02/04/european_commission_security_risks_kids_smartwatch/): the ENOX Safe-KID-One, a children’s smartwatch whose app talked to its server unencrypted and whose server handed out location history and phone numbers to anyone who asked. A stranger could place a call *to* the child through the watch. The recall notice reads like a summary of this article.
+
+[^Thinkrace]: The scale of the white-label pipeline is the point. [Thinkrace](https://techcrunch.com/2019/12/18/cloud-flaws-millions-child-watch-trackers/), one of the largest makers of location-tracking devices, built watches resold under 360-plus other names, all on a cloud platform where a device’s data could be pulled with nothing but its ID number—and the IDs were sequential. Pen Test Partners counted some 47 million devices on that platform, and noted that the brand on the box often does not know whose backend it is selling. The same watch, the same flaw, a different logo in every market.
+
+[^DPDP]: On paper, Section 9 of the DPDP Act is one of the strictest child-data laws anywhere: verifiable parental consent for anyone under 18, and a flat prohibition on tracking, behavioral monitoring, and targeted advertising directed at children—one that parental consent cannot cure. Read literally, that outlaws the core function of most kids’ tracking watches sold in India. The Act received assent in August 2023; the rules that would let anyone enforce it were still a draft when this was written.
+
+[^AirTag]: With one caveat Apple itself insists on: [AirTags are built to find things, not people](https://www.apple.com/newsroom/2022/02/an-update-on-airtag-and-unwanted-tracking/), and the anti-stalking protections cut against this use—an AirTag traveling away from its owner triggers alerts on nearby iPhones and eventually starts beeping. In a school bag among strangers’ phones, the tag can announce itself. It works best where you are nearby anyway: the park, the event, the gated community.
