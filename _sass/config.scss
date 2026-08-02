@@ -211,6 +211,22 @@
   --border-style          : solid;
 
   --border-size           : 1px;
+  /* THE hover-affordance thickness (2026-08-02). Brajeshwar: "hover
+     underlines/border… seem to be too thick. Can we have just about 0.1
+     point thick and standardize across all such behavior." Every hover
+     underline and hover border on the site takes this token: link
+     underlines (base.scss, rest AND hover), the header nav, both search
+     result styles, the home strip headings.
+
+     0.5px and not the literal 0.1pt, measured reasoning: 0.1pt is 0.133px,
+     which is 0.27 device pixels at dpr 2 and 0.13 at dpr 1 — a browser
+     rounds that to NOTHING on a standard display and the affordance
+     silently vanishes. 0.5px is the thinnest line every screen can
+     actually draw: exactly 1 device pixel on retina, rounded up to 1 on
+     dpr 1. Structural rules (header/footer, table separators, figcaption)
+     stay on --border-size; this token is for lines whose job is to answer
+     the pointer. */
+  --border-size-hairline  : 0.5px;
   --border-size-small     : 3px;
 
   /* Logo. Came down from 42px on 2026-07-27 to hold its proportion against the

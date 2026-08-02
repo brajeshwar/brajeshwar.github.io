@@ -53,6 +53,26 @@ no Baskerville request, System default untouched.
   weight but because jekyll-optional-front-matter renders any bare `.md` into a published
   page. The TTF sources are excluded beside it, Geist-style.
 
+### Two homepage refinements, same afternoon
+
+- **The Books and Album strip titles are full-row hit areas** — the heading anchor went
+  `display: block`, so the click target is the whole 1024px row, matching the full-width
+  border-bottom the hover already painted. Verified by hit-testing the far end of the row.
+- **Hover underlines/borders are hairlines now, standardized on one token.** Brajeshwar:
+  *"I like the darker color for all hover underlines/border, but they seem to be too thick.
+  Can we have just about 0.1 point thick and standardize."* New `--border-size-hairline:
+  0.5px` in config.scss — NOT the literal 0.1pt, which is 0.13px and rounds to NOTHING on a
+  dpr-1 screen (reasoning recorded on the token). Applied to: link underlines (rest AND
+  hover, base.scss), the header nav hover, both search-result styles, and the strip
+  headings. ⚠️ This REVERSES 2026-08-01's "1px resting, 2px hover" — safe now because the
+  color jump (1.9x-5x in every palette/mode) carries the state; that decision's trap was
+  equal thickness AND equal color. The archives table-row hover keeps --border-size: its
+  separator exists at rest, structural, not a hover affordance.
+- **His "Books looks thicker than Album" was real and was sub-pixel, not CSS** — both were
+  1px, but Books' border sat at device-pixel fraction .55 (2 device px of ink smeared over
+  3 rows) and Album's at .95 (painted crisp). The leader-dots lesson again. One device
+  pixel of ink halves the worst case; the fraction itself follows content flow.
+
 ### The in-post image gallery is built and committed.
 
 Brajeshwar, 2026-08-02: *"Let's build an Image Gallery, which I have used and will use in my

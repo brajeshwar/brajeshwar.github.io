@@ -477,8 +477,18 @@ home-support li {
   /* Transparent, not absent: a border that appears on hover would shift the
      strip down by its own width on every pointer entry. Reserving the space
      and only coloring it keeps the row still (2026-07-31: "No border-bottom
-     by default. It shows on hover."). */
-  border-bottom: var(--border-size) var(--border-style) transparent;
+     by default. It shows on hover.").
+
+     Hairline since 2026-08-02 — this line exists only to answer the
+     pointer, so it takes the standard hover thickness (config.scss). It
+     also shrinks the difference Brajeshwar spotted between the two strips:
+     both borders were 1px, but at dpr 2 Books' landed at device-pixel
+     fraction .55 and smeared its 2 device pixels of ink across three rows
+     while Album's sat at .95 and painted crisp — same sub-pixel lottery as
+     the leader dots. One device pixel of ink halves both the weight and
+     the worst-case smear; the fraction itself follows from content flow
+     and is not controllable here. */
+  border-bottom: var(--border-size-hairline) var(--border-style) transparent;
   transition: border-bottom-color 120ms ease-out;
 }
 

@@ -358,9 +358,17 @@ h6 { font-size: var(--step--2); }
    there — no better than the bug being fixed. --text-color is the only token
    guaranteed to be the far end of the contrast range in every palette.
 
-   Thickness 1px resting, 2px hover: at dpr 2 that is a clean 2 to 4 device
-   pixels. The old 0.8/1 pair rendered as 1.6 and 2, which at dpr 1 rounded to
-   the same pixel and changed nothing at all.
+   Thickness was 1px resting, 2px hover from 2026-08-01 to 2026-08-02 — "at
+   dpr 2 that is a clean 2 to 4 device pixels", chosen so hover changed
+   something even at dpr 1, where the older 0.8/1 pair rounded to the same
+   pixel and changed nothing. REVERSED 2026-08-02, Brajeshwar: "I like the
+   darker color for all hover underlines/border, but they seem to be too
+   thick… standardize across all such behavior." Both states now sit on
+   --border-size-hairline (0.5px — see config.scss for why not the literal
+   0.1pt he floated) and the state change is carried by COLOR alone. That
+   is safe where the 2026-08-01 bug was not, because that bug was equal
+   thickness AND near-equal color; the color half is fixed above — the
+   jump is 1.9x-5x in every palette/mode, thick line or thin.
 
    `:focus-visible` joins hover here because it had NO link style of its own —
    greppable, there is no other focus-visible rule in this file — so keyboard
@@ -369,7 +377,7 @@ h6 { font-size: var(--step--2); }
   color: var(--text-color-link);
   text-decoration: underline;
   text-decoration-color: color-mix(in oklch, var(--color-fg) 50%, transparent);
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: var(--border-size-hairline);
   text-underline-offset: 0.3rem;
 }
 
@@ -377,7 +385,7 @@ h6 { font-size: var(--step--2); }
   color: var(--text-color-link);
   text-decoration: underline;
   text-decoration-color: var(--text-color);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--border-size-hairline);
 }
 
 /* Blockquote — Yale e360 style: no background, a quiet left rule, spacing does

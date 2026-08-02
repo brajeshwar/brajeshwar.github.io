@@ -164,6 +164,7 @@
 #search .pagefind-ui__result-title a:hover,
 #search .pagefind-ui__result-link:hover {
   text-decoration: underline;
+  text-decoration-thickness: var(--border-size-hairline);   /* the standard hover hairline */
 }
 
 /* The title CONTAINS the link, not the reverse. This file used to carry

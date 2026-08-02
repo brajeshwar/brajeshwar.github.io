@@ -152,6 +152,10 @@ site-nav a, site-nav a:visited {
 site-nav a:hover, site-nav a:focus-visible {
   color: var(--text-color-higher);
   text-decoration: underline;
+  /* Hairline, like every hover underline on the site (2026-08-02 —
+     standardized on the token; the nav was on the browser default, which
+     is font-derived and thicker). */
+  text-decoration-thickness: var(--border-size-hairline);
 }
 
 site-nav a:active, site-nav a.active {
@@ -868,7 +872,7 @@ site-search {
 
 .pagefind-modular-list-title { margin: 0 0 var(--space-3xs); }
 .pagefind-modular-list-link { color: var(--text); text-decoration: none; }
-.pagefind-modular-list-link:hover { text-decoration: underline; }
+.pagefind-modular-list-link:hover { text-decoration: underline; text-decoration-thickness: var(--border-size-hairline); }
 
 /* Stretch the title link over the whole result so the entire block is clickable. */
 .pagefind-modular-list-link::after {
