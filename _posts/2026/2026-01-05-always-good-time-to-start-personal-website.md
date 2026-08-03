@@ -1,6 +1,6 @@
 # It is Always a Good Time to Start a Personal Website, This Year, Any Year
 
-*On ownership, quiet thinking, and carving a small, durable place on the Internet.*
+> On ownership, quiet thinking, and carving a small, durable place on the Internet.
 
 Every year, especially around the end of the year and the start of the new year, people ask, “Is it a good year to start a personal website?” I’m confident that it was, is, and always will be.
 
@@ -31,8 +31,7 @@ This long view sharpens judgment. It also encourages restraint. Both are valuabl
 
 A personal website works best as a thinking tool. Writing publicly forces clarity without demanding polish. You explain ideas to better understand them. You leave notes for your future self without hiding them away.
 
-{:.aside .left}
-“By publishing ourselves on the web, we reject the role of passive media marketing recipient… The best use of our technology enhances our humanity, it lets us shape our narrative and share our story and connect us.” — [Justin Hall](https://en.wikipedia.org/wiki/Justin_Hall), best known as a pioneer blogger.
+> “By publishing ourselves on the web, we reject the role of passive media marketing recipient… The best use of our technology enhances our humanity, it lets us shape our narrative and share our story and connect us.” — [Justin Hall](https://en.wikipedia.org/wiki/Justin_Hall), best known as a pioneer blogger.
 
 Unlike social feeds, which fragment thought, or private notes, which tend to disappear into folders, a personal website keeps your thinking visible and searchable on your terms. It becomes an external memory that grows alongside you.
 
@@ -48,8 +47,7 @@ Writing produces readiness. Publishing creates a mild, healthy pressure to be ho
 
 You do not need an elaborate setup to begin. If you are non-technical, choose a simple hosted platform and use the default design. Write short posts. Let the site feel plain. Plain ages well.
 
-{:.aside .right}
-“The point of blogging is not the software. The software exists to make the writing happen.” — [Dave Winer](https://en.wikipedia.org/wiki/Dave_Winer)
+> “The point of blogging is not the software. The software exists to make the writing happen.” — [Dave Winer](https://en.wikipedia.org/wiki/Dave_Winer)
 
 If you are comfortable reading documentation to get things done, buy a domain and choose boring tools. Static sites, minimal systems, and text-first approaches reduce friction and maintenance. A personal website should not demand attention. It should accept it when you decide to give it.
 
