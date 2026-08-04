@@ -35,6 +35,12 @@
 # FIELDS: title (required), author, url (required), img, alt, highlight.
 # ===========================================================================
 
+- title: Leonardo da Vinci
+  author: Walter Isaacson
+  url: /2024/leonardo-da-vinci/
+  img: leonardo-da-vinci.webp
+  alt: Portrait of Leonardo da Vinci
+
 - title: The Diary of a Young Girl
   author: Anne Frank
   url: /2023/books/
@@ -79,17 +85,9 @@
   author: 37signals
   url: /2019/books/
 
-- title: How to Be the Startup Hero
-  author: Tim Draper
-  url: /2018/books/
-
 - title: Hackers & Painters
   author: Paul Graham
   url: /2020/books/
-
-- title: The Mom Test
-  author: Rob Fitzpatrick
-  url: /2019/books/
 
 - title: Draw to Win
   author: Dan Roam
@@ -98,10 +96,6 @@
 - title: Unscripted
   author: M.J. DeMarco
   url: /2023/books/
-
-- title: Shape Up
-  author: Ryan Singer
-  url: /2019/books/
 
 - title: The Design of Everyday Things
   author: Don Norman
@@ -129,9 +123,6 @@
 - title: 'Zen: The Art of Simple Living'
   author: Shunmyo Masuno
   url: /2020/books/
-
-- title: The Bhagavad Gita
-  url: /2022/books/
 
 - title: Genghis Khan and the Making of the Modern World
   author: Jack Weatherford
@@ -167,10 +158,6 @@
 - title: The Almanack of Naval Ravikant
   author: Eric Jorgenson
   url: /2020/books/
-
-- title: Business Adventures
-  author: John Brooks
-  url: /2018/books/
 
 - title: Prepared
   author: Diane Tavenner
@@ -288,10 +275,6 @@
   author: David Epstein
   url: /2020/books/
 
-- title: The Bitcoin Big Bang
-  author: Brian Kelly
-  url: /2018/books/
-
 - title: 'Meaningful: The Story of Ideas That Fly'
   author: Bernadette Jiwa
   url: /2019/books/
@@ -368,9 +351,6 @@
   author: David Deutsch
   url: /2021/books/
 
-- title: The Bible
-  url: /2022/books/
-
 - title: Meditations
   author: Marcus Aurelius
   url: /2025/books/
@@ -378,10 +358,6 @@
 - title: Silver Spoon Kids
   author: Eileen Gallo & Jon Gallo
   url: /2021/books/
-
-- title: Poems
-  author: John Keats
-  url: /2025/books/
 
 - title: A Good Enough Parent
   author: Bruno Bettelheim
@@ -564,10 +540,6 @@
   author: Rob Falcone
   url: /2019/books/
 
-- title: Haline
-  author: Sundeep Ahuja
-  url: /2021/books/
-
 - title: Kwaidan
   author: Lafcadio Hearn
   url: /2024/books/
@@ -720,12 +692,6 @@
   author: Alberto Savoia
   url: /2020/books/
 
-- title: Leonardo da Vinci
-  author: Walter Isaacson
-  url: /2024/leonardo-da-vinci/
-  img: leonardo-da-vinci.webp
-  alt: Portrait of Leonardo da Vinci
-
 - title: The Accidental Masterpiece
   author: Michael Kimmelman
   url: /2024/books/
@@ -749,6 +715,3 @@
 - title: Impact Mapping
   author: Gojko Adzic
   url: /2023/books/
-
-- title: The Quran
-  url: /2022/books/
