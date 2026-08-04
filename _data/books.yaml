@@ -1,754 +1,107 @@
 # ===========================================================================
-# ⚠️ NEWEST FIRST. THE TOP OF THIS FILE IS THE TOP OF THE SHELF.
+# The books shelf. Rendered by _pages/books.html and the home page strip.
 #
-# Brajeshwar 2026-08-04: "The last one should be the first in the books.yaml
-# as I will add at the top and not at the bottom." So a new book goes ABOVE
-# this line's first entry, and nothing else has to be touched.
+# ⚠️ THE ORDER OF THIS FILE IS THE ORDER OF THE SITE. Neither page sorts or
+# reverses: index.html takes a plain slice off the HEAD for the home strip,
+# and /books/ renders the whole thing as written. So the top of this file is
+# the top of the shelf and the left of the home row — add a new book ABOVE the
+# first entry, not at the bottom (2026-08-04: "The last one should be the
+# first in the books.yaml as I will add at the top and not at the bottom").
+# ⚠️ _data/album.yaml is the OPPOSITE, still newest-last, and index.html still
+# reverses that one. The two conventions differ on purpose; do not unify them
+# without changing both sides.
 #
-# ⚠️ THIS REVERSES THE OLD PROTOCOL, which was the opposite and is quoted in
-# index.html for the record (2026-08-01: "the latest is always the last entry
-# in the YAML file"). Both the home strip and /books/ now render this file in
-# ITS OWN ORDER — index.html dropped the `reverse` filter it used to apply,
-# and /books/ never had one. That is the whole point: what you see is the
-# order you typed, on both pages, so there is no longer a mental flip between
-# editing this file and reading the site.
+# ⚠️ THE CURRENT ORDER IS SHUFFLED, NOT CHRONOLOGICAL — that is deliberate and
+# is not damage to repair (2026-08-04: "do a random sweep of the list - make
+# the items random before I do my manual edit"). It was a seeded shuffle of
+# the newest-first list, so the previous order is recoverable exactly: see the
+# commit before it in `git log -- _data/books.yaml`. Each book still records
+# its own year in `url`, so nothing was lost with the year separators that
+# used to break this file into blocks.
 #
-# HIGHLIGHTS ARE A SEPARATE SECTION AND ARE NOT REPEATED BELOW IT.
+# HIGHLIGHTS ARE A SEPARATE SECTION AND ARE NEVER REPEATED BELOW IT.
 # `highlight: true` moves a book into the "Personal Favorites" grid at the top
-# of /books/, and _pages/books.html builds the second grid from
-# `highlight != true`, so the two are disjoint by construction. Promoting a
-# book is one word in one place; it does not move in this file.
-#
-# THE YEAR MARKERS ARE COMMENTS, NOT STRUCTURE. Nothing reads them — this is
-# a flat array and the order is the only thing that carries meaning. They are
-# here because 176 entries in one list is hard to navigate by eye.
+# of /books/; _pages/books.html builds the second grid from `highlight != true`
+# so the two are disjoint by construction. Promoting a book is one word in one
+# place and does not move it in this file.
 #
 # NO `img` ON MOST OF THESE, ON PURPOSE. An entry without one renders a
 # .bookplate — the bound board drawn in CSS, _sass/bookplate.scss — so a book
 # can be listed the day it is read and the cover picture can arrive later, or
 # never. Adding an `img` later turns the plate into a cover with no other edit.
+# Bare filenames resolve under /static/books/; a value starting with `/` is
+# used verbatim.
+#
+# FIELDS: title (required), author, url (required), img, alt, highlight.
 # ===========================================================================
-
-# ---- 2026 — from /2026/books/. The current read is first.
-
-- title: The Three-Body Problem
-  author: Liu Cixin
-  url: /2026/books/
-
-- title: Principles for Dealing with the Changing World Order
-  author: Ray Dalio
-  url: /2026/books/
-
-- title: Nexus
-  author: Yuval Noah Harari
-  url: /2026/books/
-
-- title: How to Read a Book
-  author: Mortimer J. Adler & Charles Van Doren
-  url: /2026/how-to-read-a-book/
-
-- title: How the World Really Works
-  author: Vaclav Smil
-  url: /2026/books/
-
-- title: Don’t Believe Everything You Think
-  author: Joseph Nguyen
-  url: /2026/books/
-
-- title: The Corporation in the Twenty-First Century
-  author: John Kay
-  url: /2026/books/
-
-- title: The Corn Maiden and Other Nightmares
-  author: Joyce Carol Oates
-  url: /2026/books/
-
-- title: Anthropause
-  author: Stan Cox
-  url: /2026/books/
-
-
-# ---- 2025 — from /2025/books/.
-
-- title: The Secret of Secrets
-  author: Dan Brown
-  url: /2025/the-secret-of-secrets/
-
-- title: The Iliad
-  author: Homer
-  url: /2025/books/
-
-- title: The Great Gatsby
-  author: F. Scott Fitzgerald
-  url: /2025/the-great-gatsby/
-
-- title: The War of Art
-  author: Steven Pressfield
-  url: /2025/books/
-
-- title: The Price of Time
-  author: Edward Chancellor
-  url: /2025/books/
-
-- title: The Sands of Time
-  author: Sidney Sheldon
-  url: /2025/books/
-
-- title: Master of the Game
-  author: Sidney Sheldon
-  url: /2025/books/
-
-- title: Meditations
-  author: Marcus Aurelius
-  url: /2025/books/
-
-- title: Poems
-  author: John Keats
-  url: /2025/books/
-
-- title: Flatland
-  author: Edwin Abbott Abbott
-  url: /2025/books/
-
-- title: Frankenstein
-  author: Mary Shelley
-  url: /2025/books/
-
-
-# ---- 2024 — from /2024/books/.
-
-- title: The Tatas
-  author: Girish Kuber
-  url: /2024/books/
-
-- title: The Power of Future Machines
-  author: Rajiv Malhotra, TN Sudarshan & Manogna Sastry
-  url: /2024/books/
-
-- title: The Odyssey
-  author: Homer
-  url: /2024/books/
-
-- title: The Cold Start Problem
-  author: Andrew Chen
-  url: /2024/books/
-
-- title: The Autobiography of Benjamin Franklin
-  author: Benjamin Franklin
-  url: /2024/books/
-
-- title: The Anxious Generation
-  author: Jonathan Haidt
-  url: /2024/books/
-
-- title: The Accidental Masterpiece
-  author: Michael Kimmelman
-  url: /2024/books/
-
-- title: Luka and the Fire of Life
-  author: Salman Rushdie
-  url: /2024/books/
-
-- title: Little Women
-  author: Louisa May Alcott
-  url: /2024/books/
-
-- title: Kwaidan
-  author: Lafcadio Hearn
-  url: /2024/books/
-
-- title: Invisible Women
-  author: Caroline Criado Perez
-  url: /2024/books/
-
-- title: Chip War
-  author: Chris Miller
-  url: /2024/books/
-
-
-# ---- 2023 — from /2023/books/.
-
-- title: Unscripted
-  author: M.J. DeMarco
-  url: /2023/books/
-
-- title: The Untethered Soul
-  author: Michael A. Singer
-  url: /2023/books/
 
 - title: The Diary of a Young Girl
   author: Anne Frank
   url: /2023/books/
 
-- title: The Courage to Be Disliked
-  author: Ichiro Kishimi & Fumitake Koga
-  url: /2023/books/
-
-- title: Impact Mapping
-  author: Gojko Adzic
-  url: /2023/books/
-
-- title: How Not to Be Wrong
-  author: Jordan Ellenberg
-  url: /2023/books/
-
-- title: How to Be Perfect
-  author: Michael Schur
-  url: /2023/books/
-
-- title: Elon Musk
-  author: Walter Isaacson
-  url: /2023/books/
-
-
-# ---- 2022 — from /2022/books/.
-
-- title: Will
-  author: Will Smith
-  url: /2022/books/
-
-- title: The Future We Choose
-  author: Christiana Figueres & Tom Rivett-Carnac
-  url: /2022/books/
-
-- title: The Creativity Code
-  author: Marcus du Sautoy
-  url: /2022/books/
-
-- title: The Code Breaker
-  author: Walter Isaacson
-  url: /2022/books/
-
-- title: The Art of War
-  author: Sun Tzu
-  url: /2022/books/
-
-- title: Quiet
-  author: Susan Cain
-  url: /2022/books/
-
-- title: Project Hail Mary
-  author: Andy Weir
-  url: /2022/books/
-
-- title: How We Got to Now
-  author: Steven Johnson
-  url: /2024/how-we-got-to-now/
-
-- title: A Good Enough Parent
-  author: Bruno Bettelheim
-  url: /2022/books/
-
-- title: Prepared
-  author: Diane Tavenner
-  url: /2022/books/
-
-- title: How to Talk So Kids Will Listen and Listen So Kids Will Talk
-  author: Adele Faber & Elaine Mazlish
-  url: /2022/books/
-
-- title: Founding Sales
-  author: Peter Kazanjy
-  url: /2022/books/
-
-- title: Factfulness
-  author: Hans Rosling, Ola Rosling & Anna Rosling Rönnlund
-  url: /2022/books/
-
-- title: Effortless
-  author: Greg McKeown
-  url: /2022/books/
-
-- title: Multipliers
-  author: Liz Wiseman & Greg McKeown
-  url: /2022/books/
-
-- title: Essentialism
-  author: Greg McKeown
-  url: /2022/books/
-
-- title: Discipline Is Destiny
-  author: Ryan Holiday
-  url: /2022/books/
-
-- title: 21 Lessons for the 21st Century
-  author: Yuval Noah Harari
-  url: /2022/books/
-
-- title: Sapiens
-  author: Yuval Noah Harari
-  url: /2022/books/
-
-- title: Buddhism Plain and Simple
-  author: Steve Hagen
-  url: /2022/books/
-
-- title: The Bhagavad Gita
-  url: /2022/books/
-
-- title: The Quran
-  url: /2022/books/
-
-- title: The Bible
-  url: /2022/books/
-
-
-# ---- 2021 — from /2021/books/.
-
-- title: Zen and the Art of Motorcycle Maintenance
-  author: Robert M. Pirsig
-  url: /2021/books/
-
-- title: The Obstacle Is the Way
-  author: Ryan Holiday
-  url: /2021/books/
-
-- title: The Psychology of Money
-  author: Morgan Housel
-  url: /2021/books/
-
-- title: The Beginning of Infinity
-  author: David Deutsch
-  url: /2021/books/
-
-- title: The Uninhabitable Earth
-  author: David Wallace-Wells
-  url: /2021/books/
-
-- title: The Push
-  author: Ashley Audrain
-  url: /2021/books/
-
-- title: The Innovators
-  author: Walter Isaacson
-  url: /2021/books/
-
-- title: Silver Spoon Kids
-  author: Eileen Gallo & Jon Gallo
-  url: /2021/books/
-
-- title: Reviving Ophelia
-  author: Mary Pipher
-  url: /2021/books/
-
-- title: Merchants of Doubt
-  author: Naomi Oreskes & Erik M. Conway
-  url: /2021/books/
-
-- title: How to Avoid a Climate Disaster
-  author: Bill Gates
-  url: /2021/books/
-
-- title: Haline
-  author: Sundeep Ahuja
-  url: /2021/books/
-
-- title: Deep Work
-  author: Cal Newport
-  url: /2021/books/
-
-- title: Antifragile
-  author: Nassim Nicholas Taleb
-  url: /2021/books/
-
-
-# ---- 2020 — from /2020/books/.
-
-- title: 'Zen: The Art of Simple Living'
-  author: Shunmyo Masuno
-  url: /2020/books/
-
-- title: Zen and the Art of Happiness
-  author: Chris Prentiss
-  url: /2020/books/
-
-- title: Why We Sleep
-  author: Matthew Walker
-  url: /2020/books/
-
-- title: What If
-  author: Randall Munroe
-  url: /2020/books/
-
-- title: Valley of Genius
-  author: Adam Fisher
-  url: /2020/books/
-
-- title: Under Pressure
-  author: Lisa Damour
-  url: /2020/books/
-
-- title: Turn the Ship Around!
-  author: L. David Marquet
-  url: /2020/books/
-
-- title: The Selfish Gene
-  author: Richard Dawkins
-  url: /2020/books/
-
-- title: The Right It
-  author: Alberto Savoia
-  url: /2020/books/
-
-- title: The Blazing World
-  author: Margaret Cavendish
-  url: /2020/books/
-
-- title: The Climate Solution
-  author: Mridula Ramesh
-  url: /2020/books/
-
-- title: The Choice
-  author: Edith Eger
-  url: /2020/books/
-
-- title: The Big Picture
-  author: Sean Carroll
-  url: /2020/books/
-
-- title: The Almanack of Naval Ravikant
-  author: Eric Jorgenson
-  url: /2020/books/
-
-- title: That Will Never Work
-  author: Marc Randolph
-  url: /2020/books/
-
-- title: Tao Te Ching
-  author: Laozi
-  url: /2020/books/
-
-- title: Saying No to Jugaad
-  author: TN Hari & MS Subramanian
-  url: /2020/books/
-
-- title: Range
-  author: David Epstein
-  url: /2020/books/
-
-- title: My Family and Other Animals
-  author: Gerald Durrell
-  url: /2020/books/
-
-- title: Loonshots
-  author: Safi Bahcall
-  url: /2020/books/
-
-- title: I Am Malala
-  author: Malala Yousafzai
-  url: /2020/books/
-
-- title: How To
-  author: Randall Munroe
-  url: /2020/books/
-
-- title: High Growth Handbook
-  author: Elad Gil
-  url: /2020/books/
-
-- title: Hackers & Painters
-  author: Paul Graham
-  url: /2020/books/
-
-- title: Good Economics for Hard Times
-  author: Abhijit Banerjee & Esther Duflo
-  url: /2020/books/
-
-- title: Girl, Woman, Other
-  author: Bernardine Evaristo
-  url: /2020/books/
-
-- title: Earthquake Boy
-  author: Leela Gour Broome
-  url: /2020/books/
-
-- title: Early Indians
-  author: Tony Joseph
-  url: /2020/books/
-
-- title: Crossing the Chasm
-  author: Geoffrey A. Moore
-  url: /2020/books/
-
-- title: Can’t Hurt Me
-  author: David Goggins
-  url: /2020/books/
-
-- title: A Guide to the Good Life
-  author: William B. Irvine
-  url: /2020/books/
-
-- title: A Room of One’s Own
-  author: Virginia Woolf
-  url: /2020/books/
-
-
-# ---- 2019 — from /2019/books/.
-
-- title: Bringing Up Bébé
-  author: Pamela Druckerman
-  url: /2019/books/
-
-- title: Lifescale
-  author: Brian Solis
-  url: /2019/books/
-
-- title: Stillness Is the Key
-  author: Ryan Holiday
-  url: /2019/books/
-
-- title: The Little Book of Lykke
-  author: Meik Wiking
-  url: /2019/books/
-
-- title: Ikigai
-  author: Héctor García & Francesc Miralles
-  url: /2019/books/
-
-- title: The Book of Joy
-  author: Dalai Lama & Desmond Tutu
-  url: /2019/books/
-
-- title: Atomic Habits
-  author: James Clear
-  url: /2019/books/
-
-- title: The Future Is Asian
-  author: Parag Khanna
-  url: /2019/books/
-
-- title: How I Almost Blew It
-  author: Sidharth Rao
-  url: /2019/books/
+- title: Little Women
+  author: Louisa May Alcott
+  url: /2024/books/
+
+- title: Simplify
+  author: Joshua Becker
+  url: /2018/books/
 
 - title: Trillion Dollar Coach
   author: Eric Schmidt, Jonathan Rosenberg & Alan Eagle
   url: /2019/books/
 
-- title: The Mom Test
-  author: Rob Fitzpatrick
-  url: /2019/books/
+- title: The Daily Stoic
+  author: Ryan Holiday & Stephen Hanselman
+  url: /2018/books/
 
-- title: 'Meaningful: The Story of Ideas That Fly'
-  author: Bernadette Jiwa
-  url: /2019/books/
+- title: The Great Gatsby
+  author: F. Scott Fitzgerald
+  url: /2025/the-great-gatsby/
 
-- title: The Launch Pad
-  author: Randall E. Stross
-  url: /2019/books/
+- title: The Iliad
+  author: Homer
+  url: /2025/books/
 
-- title: Radical Candor
-  author: Kim Scott
-  url: /2019/books/
+- title: So Good They Can’t Ignore You
+  author: Cal Newport
+  url: /2018/books/
 
-- title: The Culture Code
-  author: Daniel Coyle
-  url: /2019/books/
+- title: Founding Sales
+  author: Peter Kazanjy
+  url: /2022/books/
 
-- title: What You Do Is Who You Are
-  author: Ben Horowitz
-  url: /2019/books/
-
-- title: Venture Deals
-  author: Brad Feld & Jason Mendelson
-  url: /2019/books/
-
-- title: Just F*ing Demo!
-  author: Rob Falcone
-  url: /2019/books/
-
-- title: Radical Focus
-  author: Christina Wodtke
-  url: /2019/books/
-
-- title: The Infinite Game
-  author: Simon Sinek
-  url: /2019/books/
-
-- title: Start With Why
-  author: Simon Sinek
-  url: /2019/books/
-
-- title: Shape Up
-  author: Ryan Singer
-  url: /2019/books/
-
-- title: It Doesn’t Have to Be Crazy at Work
-  author: Jason Fried & David Heinemeier Hansson
-  url: /2019/books/
-
-- title: Rework
-  author: Jason Fried & David Heinemeier Hansson
-  url: /2019/books/
-
-- title: Remote
-  author: Jason Fried & David Heinemeier Hansson
-  url: /2019/books/
+- title: The Secret to Success
+  author: Eric Thomas
+  url: /2018/books/
 
 - title: Getting Real
   author: 37signals
   url: /2019/books/
 
-- title: Unfolding the Napkin
-  author: Dan Roam
+- title: How to Be the Startup Hero
+  author: Tim Draper
+  url: /2018/books/
+
+- title: Hackers & Painters
+  author: Paul Graham
+  url: /2020/books/
+
+- title: The Mom Test
+  author: Rob Fitzpatrick
   url: /2019/books/
 
 - title: Draw to Win
   author: Dan Roam
   url: /2019/books/
 
-- title: Show and Tell
-  author: Dan Roam
+- title: Unscripted
+  author: M.J. DeMarco
+  url: /2023/books/
+
+- title: Shape Up
+  author: Ryan Singer
   url: /2019/books/
-
-
-# ---- 2018 — from /2018/books/, the first of the yearly lists.
-
-- title: The Subtle Art of Not Giving a F*ck
-  author: Mark Manson
-  url: /2018/books/
-
-- title: The Checklist Manifesto
-  author: Atul Gawande
-  url: /2018/books/
-
-- title: You Are a Badass
-  author: Jen Sincero
-  url: /2018/books/
-
-- title: Superintelligence
-  author: Nick Bostrom
-  url: /2018/books/
-
-- title: We Have a Deal
-  author: Natalie Reynolds
-  url: /2018/books/
-
-- title: Big Magic
-  author: Elizabeth Gilbert
-  url: /2018/books/
-
-- title: How to Read a Person Like a Book
-  author: Gerard I. Nierenberg & Henry H. Calero
-  url: /2018/books/
-
-- title: Good Strategy Bad Strategy
-  author: Richard Rumelt
-  url: /2018/books/
-
-- title: Smartcuts
-  author: Shane Snow
-  url: /2018/books/
-
-- title: WTF? What’s the Future and Why It’s Up to Us
-  author: Tim O’Reilly
-  url: /2018/books/
-
-- title: The Bitcoin Big Bang
-  author: Brian Kelly
-  url: /2018/books/
-
-- title: How to Win Friends and Influence People
-  author: Dale Carnegie
-  url: /2016/how-to-win-friends-and-influence-people/
-  img: how-to-win-friends-and-influence-people.webp
-
-- title: The 5 Elements of Effective Thinking
-  author: Edward B. Burger & Michael Starbird
-  url: /2018/books/
-
-- title: Hit Refresh
-  author: Satya Nadella
-  url: /2018/books/
-
-- title: The Secret to Success
-  author: Eric Thomas
-  url: /2018/books/
-
-- title: So Good They Can’t Ignore You
-  author: Cal Newport
-  url: /2018/books/
-
-- title: Business Adventures
-  author: John Brooks
-  url: /2018/books/
-
-- title: Absolute and None
-  author: Dinker Charak
-  url: /2018/books/
-
-- title: The End of Jobs
-  author: Taylor Pearson
-  url: /2018/books/
-
-- title: Fire and Fury
-  author: Michael Wolff
-  url: /2018/books/
-
-- title: Their Lost Daughters
-  author: Joy Ellis
-  url: /2018/books/
-
-- title: Astrophysics for People in a Hurry
-  author: Neil deGrasse Tyson
-  url: /2018/books/
-
-- title: The Universe in a Nutshell
-  author: Stephen Hawking
-  url: /2018/books/
-
-- title: Artemis
-  author: Andy Weir
-  url: /2018/books/
-
-- title: Ego Is the Enemy
-  author: Ryan Holiday
-  url: /2018/books/
-
-- title: Too Soon Old, Too Late Smart
-  author: Gordon Livingston
-  url: /2018/books/
-
-- title: Think Straight
-  author: Darius Foroux
-  url: /2018/books/
-
-- title: The Daily Stoic
-  author: Ryan Holiday & Stephen Hanselman
-  url: /2018/books/
-
-- title: How to Be the Startup Hero
-  author: Tim Draper
-  url: /2018/books/
-
-- title: The Entrepreneur Roller Coaster
-  author: Darren Hardy
-  url: /2018/books/
-
-- title: Simplify
-  author: Joshua Becker
-  url: /2018/books/
-
-- title: The God of Small Things
-  author: Arundhati Roy
-  url: /2018/books/
-
-
-# ---- Older, and the ones carrying `highlight: true`. These predate the
-#      yearly-list extraction and are the six that already had covers cut.
-
-- title: The Story of My Experiments with Truth
-  author: Mohandas Karamchand Gandhi
-  url: /2021/the-story-of-my-experiments-with-truth/
-  img: mahatma-gandhi.webp
-  alt: Mahatma Gandhi
-
-- title: Genghis Khan and the Making of the Modern World
-  author: Jack Weatherford
-  url: /2019/genghis-khan-and-the-making-of-the-modern-world/
-  img: genghis-khan.webp
-  alt: Genghis Khan on a Horse
-  highlight: true
 
 - title: The Design of Everyday Things
   author: Don Norman
@@ -757,11 +110,416 @@
   alt: A clean set of everyday objects
   highlight: true
 
-- title: Leonardo da Vinci
+- title: Hit Refresh
+  author: Satya Nadella
+  url: /2018/books/
+
+- title: How to Talk So Kids Will Listen and Listen So Kids Will Talk
+  author: Adele Faber & Elaine Mazlish
+  url: /2022/books/
+
+- title: Unfolding the Napkin
+  author: Dan Roam
+  url: /2019/books/
+
+- title: The Launch Pad
+  author: Randall E. Stross
+  url: /2019/books/
+
+- title: 'Zen: The Art of Simple Living'
+  author: Shunmyo Masuno
+  url: /2020/books/
+
+- title: The Bhagavad Gita
+  url: /2022/books/
+
+- title: Genghis Khan and the Making of the Modern World
+  author: Jack Weatherford
+  url: /2019/genghis-khan-and-the-making-of-the-modern-world/
+  img: genghis-khan.webp
+  alt: Genghis Khan on a Horse
+  highlight: true
+
+- title: A Room of One’s Own
+  author: Virginia Woolf
+  url: /2020/books/
+
+- title: A Guide to the Good Life
+  author: William B. Irvine
+  url: /2020/books/
+
+- title: Elon Musk
   author: Walter Isaacson
-  url: /2024/leonardo-da-vinci/
-  img: leonardo-da-vinci.webp
-  alt: Portrait of Leonardo da Vinci
+  url: /2023/books/
+
+- title: The Sands of Time
+  author: Sidney Sheldon
+  url: /2025/books/
+
+- title: Effortless
+  author: Greg McKeown
+  url: /2022/books/
+
+- title: It Doesn’t Have to Be Crazy at Work
+  author: Jason Fried & David Heinemeier Hansson
+  url: /2019/books/
+
+- title: The Almanack of Naval Ravikant
+  author: Eric Jorgenson
+  url: /2020/books/
+
+- title: Business Adventures
+  author: John Brooks
+  url: /2018/books/
+
+- title: Prepared
+  author: Diane Tavenner
+  url: /2022/books/
+
+- title: The Selfish Gene
+  author: Richard Dawkins
+  url: /2020/books/
+
+- title: Venture Deals
+  author: Brad Feld & Jason Mendelson
+  url: /2019/books/
+
+- title: Zen and the Art of Motorcycle Maintenance
+  author: Robert M. Pirsig
+  url: /2021/books/
+
+- title: Rework
+  author: Jason Fried & David Heinemeier Hansson
+  url: /2019/books/
+
+- title: Big Magic
+  author: Elizabeth Gilbert
+  url: /2018/books/
+
+- title: The Checklist Manifesto
+  author: Atul Gawande
+  url: /2018/books/
+
+- title: The Little Book of Lykke
+  author: Meik Wiking
+  url: /2019/books/
+
+- title: Can’t Hurt Me
+  author: David Goggins
+  url: /2020/books/
+
+- title: The Uninhabitable Earth
+  author: David Wallace-Wells
+  url: /2021/books/
+
+- title: The Book of Joy
+  author: Dalai Lama & Desmond Tutu
+  url: /2019/books/
+
+- title: How the World Really Works
+  author: Vaclav Smil
+  url: /2026/books/
+
+- title: How To
+  author: Randall Munroe
+  url: /2020/books/
+
+- title: Superintelligence
+  author: Nick Bostrom
+  url: /2018/books/
+
+- title: Turn the Ship Around!
+  author: L. David Marquet
+  url: /2020/books/
+
+- title: The Corn Maiden and Other Nightmares
+  author: Joyce Carol Oates
+  url: /2026/books/
+
+- title: The Psychology of Money
+  author: Morgan Housel
+  url: /2021/books/
+
+- title: Early Indians
+  author: Tony Joseph
+  url: /2020/books/
+
+- title: Valley of Genius
+  author: Adam Fisher
+  url: /2020/books/
+
+- title: Astrophysics for People in a Hurry
+  author: Neil deGrasse Tyson
+  url: /2018/books/
+
+- title: Saying No to Jugaad
+  author: TN Hari & MS Subramanian
+  url: /2020/books/
+
+- title: The Secret of Secrets
+  author: Dan Brown
+  url: /2025/the-secret-of-secrets/
+
+- title: 21 Lessons for the 21st Century
+  author: Yuval Noah Harari
+  url: /2022/books/
+
+- title: The Code Breaker
+  author: Walter Isaacson
+  url: /2022/books/
+
+- title: How to Avoid a Climate Disaster
+  author: Bill Gates
+  url: /2021/books/
+
+- title: The Push
+  author: Ashley Audrain
+  url: /2021/books/
+
+- title: The Three-Body Problem
+  author: Liu Cixin
+  url: /2026/books/
+
+- title: Frankenstein
+  author: Mary Shelley
+  url: /2025/books/
+
+- title: Range
+  author: David Epstein
+  url: /2020/books/
+
+- title: The Bitcoin Big Bang
+  author: Brian Kelly
+  url: /2018/books/
+
+- title: 'Meaningful: The Story of Ideas That Fly'
+  author: Bernadette Jiwa
+  url: /2019/books/
+
+- title: The Future Is Asian
+  author: Parag Khanna
+  url: /2019/books/
+
+- title: The Odyssey
+  author: Homer
+  url: /2024/books/
+
+- title: Radical Focus
+  author: Christina Wodtke
+  url: /2019/books/
+
+- title: The Tatas
+  author: Girish Kuber
+  url: /2024/books/
+
+- title: Under Pressure
+  author: Lisa Damour
+  url: /2020/books/
+
+- title: Loonshots
+  author: Safi Bahcall
+  url: /2020/books/
+
+- title: Buddhism Plain and Simple
+  author: Steve Hagen
+  url: /2022/books/
+
+- title: The Untethered Soul
+  author: Michael A. Singer
+  url: /2023/books/
+
+- title: Sapiens
+  author: Yuval Noah Harari
+  url: /2022/books/
+
+- title: Artemis
+  author: Andy Weir
+  url: /2018/books/
+
+- title: Think Straight
+  author: Darius Foroux
+  url: /2018/books/
+
+- title: Ikigai
+  author: Héctor García & Francesc Miralles
+  url: /2019/books/
+
+- title: What If
+  author: Randall Munroe
+  url: /2020/books/
+
+- title: Start With Why
+  author: Simon Sinek
+  url: /2019/books/
+
+- title: Absolute and None
+  author: Dinker Charak
+  url: /2018/books/
+
+- title: The Choice
+  author: Edith Eger
+  url: /2020/books/
+
+- title: Essentialism
+  author: Greg McKeown
+  url: /2022/books/
+
+- title: The Beginning of Infinity
+  author: David Deutsch
+  url: /2021/books/
+
+- title: The Bible
+  url: /2022/books/
+
+- title: Meditations
+  author: Marcus Aurelius
+  url: /2025/books/
+
+- title: Silver Spoon Kids
+  author: Eileen Gallo & Jon Gallo
+  url: /2021/books/
+
+- title: Poems
+  author: John Keats
+  url: /2025/books/
+
+- title: A Good Enough Parent
+  author: Bruno Bettelheim
+  url: /2022/books/
+
+- title: Their Lost Daughters
+  author: Joy Ellis
+  url: /2018/books/
+
+- title: Earthquake Boy
+  author: Leela Gour Broome
+  url: /2020/books/
+
+- title: High Growth Handbook
+  author: Elad Gil
+  url: /2020/books/
+
+- title: Multipliers
+  author: Liz Wiseman & Greg McKeown
+  url: /2022/books/
+
+- title: The Future We Choose
+  author: Christiana Figueres & Tom Rivett-Carnac
+  url: /2022/books/
+
+- title: The Universe in a Nutshell
+  author: Stephen Hawking
+  url: /2018/books/
+
+- title: Remote
+  author: Jason Fried & David Heinemeier Hansson
+  url: /2019/books/
+
+- title: The Courage to Be Disliked
+  author: Ichiro Kishimi & Fumitake Koga
+  url: /2023/books/
+
+- title: The 5 Elements of Effective Thinking
+  author: Edward B. Burger & Michael Starbird
+  url: /2018/books/
+
+- title: The Blazing World
+  author: Margaret Cavendish
+  url: /2020/books/
+
+- title: The Subtle Art of Not Giving a F*ck
+  author: Mark Manson
+  url: /2018/books/
+
+- title: The Power of Future Machines
+  author: Rajiv Malhotra, TN Sudarshan & Manogna Sastry
+  url: /2024/books/
+
+- title: Crossing the Chasm
+  author: Geoffrey A. Moore
+  url: /2020/books/
+
+- title: The End of Jobs
+  author: Taylor Pearson
+  url: /2018/books/
+
+- title: The Story of My Experiments with Truth
+  author: Mohandas Karamchand Gandhi
+  url: /2021/the-story-of-my-experiments-with-truth/
+  img: mahatma-gandhi.webp
+  alt: Mahatma Gandhi
+
+- title: How to Be Perfect
+  author: Michael Schur
+  url: /2023/books/
+
+- title: Zen and the Art of Happiness
+  author: Chris Prentiss
+  url: /2020/books/
+
+- title: Merchants of Doubt
+  author: Naomi Oreskes & Erik M. Conway
+  url: /2021/books/
+
+- title: The Obstacle Is the Way
+  author: Ryan Holiday
+  url: /2021/books/
+
+- title: Fire and Fury
+  author: Michael Wolff
+  url: /2018/books/
+
+- title: That Will Never Work
+  author: Marc Randolph
+  url: /2020/books/
+
+- title: Chip War
+  author: Chris Miller
+  url: /2024/books/
+
+- title: The Innovators
+  author: Walter Isaacson
+  url: /2021/books/
+
+- title: What You Do Is Who You Are
+  author: Ben Horowitz
+  url: /2019/books/
+
+- title: The Cold Start Problem
+  author: Andrew Chen
+  url: /2024/books/
+
+- title: The Entrepreneur Roller Coaster
+  author: Darren Hardy
+  url: /2018/books/
+
+- title: Quiet
+  author: Susan Cain
+  url: /2022/books/
+
+- title: Discipline Is Destiny
+  author: Ryan Holiday
+  url: /2022/books/
+
+- title: The Climate Solution
+  author: Mridula Ramesh
+  url: /2020/books/
+
+- title: You Are a Badass
+  author: Jen Sincero
+  url: /2018/books/
+
+- title: The Corporation in the Twenty-First Century
+  author: John Kay
+  url: /2026/books/
+
+- title: Stillness Is the Key
+  author: Ryan Holiday
+  url: /2019/books/
+
+- title: Tao Te Ching
+  author: Laozi
+  url: /2020/books/
 
 - title: The Lord of the Rings
   author: J.R.R. Tolkien
@@ -770,9 +528,227 @@
   alt: The One Ring to Rule Them All
   highlight: true
 
+- title: Atomic Habits
+  author: James Clear
+  url: /2019/books/
+
+- title: Lifescale
+  author: Brian Solis
+  url: /2019/books/
+
+- title: The Big Picture
+  author: Sean Carroll
+  url: /2020/books/
+
+- title: The War of Art
+  author: Steven Pressfield
+  url: /2025/books/
+
+- title: Antifragile
+  author: Nassim Nicholas Taleb
+  url: /2021/books/
+
+- title: Ego Is the Enemy
+  author: Ryan Holiday
+  url: /2018/books/
+
+- title: Invisible Women
+  author: Caroline Criado Perez
+  url: /2024/books/
+
+- title: Factfulness
+  author: Hans Rosling, Ola Rosling & Anna Rosling Rönnlund
+  url: /2022/books/
+
+- title: Just F*ing Demo!
+  author: Rob Falcone
+  url: /2019/books/
+
+- title: Haline
+  author: Sundeep Ahuja
+  url: /2021/books/
+
+- title: Kwaidan
+  author: Lafcadio Hearn
+  url: /2024/books/
+
+- title: Bringing Up Bébé
+  author: Pamela Druckerman
+  url: /2019/books/
+
+- title: The Infinite Game
+  author: Simon Sinek
+  url: /2019/books/
+
+- title: How to Read a Book
+  author: Mortimer J. Adler & Charles Van Doren
+  url: /2026/how-to-read-a-book/
+
+- title: Show and Tell
+  author: Dan Roam
+  url: /2019/books/
+
+- title: How We Got to Now
+  author: Steven Johnson
+  url: /2024/how-we-got-to-now/
+
+- title: Master of the Game
+  author: Sidney Sheldon
+  url: /2025/books/
+
+- title: Will
+  author: Will Smith
+  url: /2022/books/
+
+- title: Nexus
+  author: Yuval Noah Harari
+  url: /2026/books/
+
+- title: We Have a Deal
+  author: Natalie Reynolds
+  url: /2018/books/
+
+- title: Why We Sleep
+  author: Matthew Walker
+  url: /2020/books/
+
+- title: Project Hail Mary
+  author: Andy Weir
+  url: /2022/books/
+
+- title: Reviving Ophelia
+  author: Mary Pipher
+  url: /2021/books/
+
+- title: How I Almost Blew It
+  author: Sidharth Rao
+  url: /2019/books/
+
+- title: Deep Work
+  author: Cal Newport
+  url: /2021/books/
+
+- title: The Creativity Code
+  author: Marcus du Sautoy
+  url: /2022/books/
+
+- title: The Art of War
+  author: Sun Tzu
+  url: /2022/books/
+
+- title: How to Win Friends and Influence People
+  author: Dale Carnegie
+  url: /2016/how-to-win-friends-and-influence-people/
+  img: how-to-win-friends-and-influence-people.webp
+
+- title: Radical Candor
+  author: Kim Scott
+  url: /2019/books/
+
+- title: The Anxious Generation
+  author: Jonathan Haidt
+  url: /2024/books/
+
+- title: How to Read a Person Like a Book
+  author: Gerard I. Nierenberg & Henry H. Calero
+  url: /2018/books/
+
+- title: Girl, Woman, Other
+  author: Bernardine Evaristo
+  url: /2020/books/
+
+- title: Principles for Dealing with the Changing World Order
+  author: Ray Dalio
+  url: /2026/books/
+
+- title: The Culture Code
+  author: Daniel Coyle
+  url: /2019/books/
+
+- title: Good Economics for Hard Times
+  author: Abhijit Banerjee & Esther Duflo
+  url: /2020/books/
+
+- title: Too Soon Old, Too Late Smart
+  author: Gordon Livingston
+  url: /2018/books/
+
+- title: Anthropause
+  author: Stan Cox
+  url: /2026/books/
+
+- title: The Price of Time
+  author: Edward Chancellor
+  url: /2025/books/
+
 - title: 1984
   author: George Orwell
   url: /2024/1984/
   img: 1984.webp
   alt: The Manuscript of the book 1984
   highlight: true
+
+- title: I Am Malala
+  author: Malala Yousafzai
+  url: /2020/books/
+
+- title: Smartcuts
+  author: Shane Snow
+  url: /2018/books/
+
+- title: Good Strategy Bad Strategy
+  author: Richard Rumelt
+  url: /2018/books/
+
+- title: Flatland
+  author: Edwin Abbott Abbott
+  url: /2025/books/
+
+- title: The Autobiography of Benjamin Franklin
+  author: Benjamin Franklin
+  url: /2024/books/
+
+- title: Luka and the Fire of Life
+  author: Salman Rushdie
+  url: /2024/books/
+
+- title: How Not to Be Wrong
+  author: Jordan Ellenberg
+  url: /2023/books/
+
+- title: The Right It
+  author: Alberto Savoia
+  url: /2020/books/
+
+- title: Leonardo da Vinci
+  author: Walter Isaacson
+  url: /2024/leonardo-da-vinci/
+  img: leonardo-da-vinci.webp
+  alt: Portrait of Leonardo da Vinci
+
+- title: The Accidental Masterpiece
+  author: Michael Kimmelman
+  url: /2024/books/
+
+- title: Don’t Believe Everything You Think
+  author: Joseph Nguyen
+  url: /2026/books/
+
+- title: My Family and Other Animals
+  author: Gerald Durrell
+  url: /2020/books/
+
+- title: WTF? What’s the Future and Why It’s Up to Us
+  author: Tim O’Reilly
+  url: /2018/books/
+
+- title: The God of Small Things
+  author: Arundhati Roy
+  url: /2018/books/
+
+- title: Impact Mapping
+  author: Gojko Adzic
+  url: /2023/books/
+
+- title: The Quran
+  url: /2022/books/
