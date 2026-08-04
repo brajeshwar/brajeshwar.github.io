@@ -107,9 +107,24 @@ color outside `themes.scss`. The warning is on the rule itself.
 
 ### Picking this back up — the shortlist
 
-**Nothing on the site looks different yet.** `_data/books.yaml` is unchanged, so every book
-still has a cover; the plate appears the first time he adds an entry without an `img`. What
-shipped is the capability, not a visible change — do not go looking for one on `/books/`.
+**And then he filled it.** *"Extract all the books from /2026/books/ and update the
+books.yaml, I want to see how it looks."* Nine books from that post appended to
+`_data/books.yaml`, none with an `img` — so `/books/` now runs six covers and nine plates,
+and the home shelf is nine-tenths plates. `_data/*.yaml` is a guardrail-1 file and this was
+his explicit instruction, which is the only thing that opens it.
+
+⚠️ **The Design of Everyday Things is in that post and was NOT added again** — it is already
+in the file with its cover and `highlight: true`. Check for a duplicate before appending; the
+two grids are disjoint views of one list, so a repeat would show up twice on the page.
+
+⚠️ **The home shelf shows no cover photographs any more.** `home_books_count = 8` takes the
+LAST eight entries, and all eight are now coverless 2026 books. Not a bug — it is what
+"newest last" means — but if he wants a mix, that is the number to raise, or the books to
+give covers.
+
+**`url` points at `/2026/books/` for eight of the nine**, because that is where each is
+actually written about and there are no per-book posts. How to Read a Book has its own review
+and points there. That is a one-word edit per entry if he wants it different.
 
 The plate is deliberately uniform: no per-book tint, no generated variation. That is the
 ethos ("nothing arbitrary"), and it is also the honest reading — a shelf of plain bindings.
