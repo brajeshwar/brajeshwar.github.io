@@ -37,3 +37,59 @@
   url: /2021/the-story-of-my-experiments-with-truth/
   img: mahatma-gandhi.webp
   alt: Mahatma Gandhi
+
+# ---------------------------------------------------------------------------
+# From /2026/books/, added 2026-08-04.
+#
+# NO `img` ON ANY OF THESE, ON PURPOSE. An entry without one renders a
+# .bookplate — the bound board drawn in CSS (_sass/bookplate.scss) — so a book
+# can be listed the day it is read and the cover picture can arrive later, or
+# never. Adding an `img` later turns the plate into a cover with no other edit.
+#
+# In the post's own order, which is alphabetical by section. That matters
+# because LAST IN THIS FILE IS NEWEST: the home shelf takes the last eight and
+# reverses them, so The Three-Body Problem leads the row — which is right, it
+# is the one being read now.
+#
+# `url` points at /2026/books/ for all but one, because that is where each is
+# actually written about; there are no per-book posts for these. How to Read a
+# Book has its own review, so it points there instead. The Design of Everyday
+# Things is in that post too and is NOT repeated here — it is already above,
+# with its cover and its highlight.
+# ---------------------------------------------------------------------------
+
+- title: Anthropause
+  author: Stan Cox
+  url: /2026/books/
+
+- title: The Corn Maiden and Other Nightmares
+  author: Joyce Carol Oates
+  url: /2026/books/
+
+- title: The Corporation in the Twenty-First Century
+  author: John Kay
+  url: /2026/books/
+
+- title: Don’t Believe Everything You Think
+  author: Joseph Nguyen
+  url: /2026/books/
+
+- title: How the World Really Works
+  author: Vaclav Smil
+  url: /2026/books/
+
+- title: How to Read a Book
+  author: Mortimer J. Adler & Charles Van Doren
+  url: /2026/how-to-read-a-book/
+
+- title: Nexus
+  author: Yuval Noah Harari
+  url: /2026/books/
+
+- title: Principles for Dealing with the Changing World Order
+  author: Ray Dalio
+  url: /2026/books/
+
+- title: The Three-Body Problem
+  author: Liu Cixin
+  url: /2026/books/
