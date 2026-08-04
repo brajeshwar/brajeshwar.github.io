@@ -156,6 +156,27 @@ in the main grid, zero overlap, 176 accounted for. The split is `where highlight
 `where_exp highlight != true`, so it is disjoint by construction and a book's `highlight`
 does not move it in the file.
 
+### ⚠️ AND THEN HE SHUFFLED IT — the current order is RANDOM, and that is not damage
+
+*"Remove the comment separator in books.yaml. And do a random sweep of the list - make the
+items random before I do my manual edit."* Both done in one commit: the year separators are
+gone and all 176 entries are in a shuffled order, staged for a hand pass he intends to make.
+
+**Do not "restore" chronology.** Two things make that safe to leave alone: each book still
+records its own year in `url` (`/2019/books/`), so the separators carried nothing that is not
+still in the data; and the shuffle was **seeded** (`20260804`), so the previous newest-first
+order is exactly recoverable from the commit before it in `git log -- _data/books.yaml`.
+
+⚠️ **The head of the file is no longer "newest", so the home strip's eight are eight random
+books** until he reorders — flagged to him before the change, not after. The add-at-the-top
+protocol still governs anything NEW he types; it is the existing 176 that are unsorted.
+The favorites grid shuffled too, for the same reason: it inherits the file's order and has
+none of its own.
+
+**Proved rather than eyeballed, again**: the parsed list before and after is the same set of
+entries order-independently, the order did change, and the highlight and img counts held at
+4 and 7. That is the check that a rewrite of every line in the file moved nothing but order.
+
 **`url` points at `/2026/books/` for eight of the nine**, because that is where each is
 actually written about and there are no per-book posts. How to Read a Book has its own review
 and points there. That is a one-word edit per entry if he wants it different.
