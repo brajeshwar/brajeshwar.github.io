@@ -8,8 +8,6 @@ Then came the 2010s, and like many of us swept up in the gospel of digital effic
 
 The world seemed noisier. News felt engineered to provoke. Every headline screamed; every story was laced with masala;[^Masala] every argument had to be packaged as a war. I withdrew. For more than a decade, my relationship with News was like a polite nod to an acquaintance I no longer wanted to speak to.
 
-<img class="full" src="/static/2026/newspaper-in-home-library.jpg" alt="Reading a Newspaper" loading="lazy">
-
 Recently, I picked up the Newspaper again. It started as a trash collector of sorts, instead of the plastic bag, during the Pandemic. After a while, I started reading bits and pieces, here and there. I didn’t return to my old habit of reading every word. Age and sanity have cured me of that. I no longer feel compelled to plough through the political gossip or the sensational crime stories written like screenplay drafts for low-budget thrillers. I skip the masala. I skip the drama. I skip anything that feels breathless or over-seasoned.
 
 But I read again. This time with intention. With distance. With a detached affection. Something about the physical Newspaper still feels honest. Not necessarily the news itself, but the act of reading it. You sit down. You unfold it. You slow yourself to the page’s pace. There is no infinite scroll, no algorithmic trapdoor pulling you deeper. There are edges. There is an end. There is quiet.
