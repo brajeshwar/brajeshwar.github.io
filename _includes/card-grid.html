@@ -44,6 +44,11 @@
   what lets the placeholder album items borrow the book covers while /static/album/
   does not exist yet.
 
+  NO `img` AT ALL renders a .bookplate — a bound board drawn in CSS carrying the
+  title and author — rather than a broken image. Added 2026-08-04 so books can
+  be listed before their covers are cut. Full reasoning is at the tag below and
+  in _sass/bookplate.scss.
+
   `width`/`height` are intrinsic hints so the grid reserves each cell before
   the file lands and the page does not reflow as it loads. They are a ratio,
   not a rendered size — CSS sizes the image.
@@ -116,10 +121,44 @@
       <a href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>
       {%- endif -%}
         <figure>
+          {%- comment -%}
+            ⚠️ NO `img` → A TYPESET PLATE, NOT A BROKEN IMAGE. Without this test
+            an entry with no `img` resolved to `/static/<dir>/` — the folder,
+            not a file — and rendered the browser's broken-image glyph with the
+            alt text beside it. Brajeshwar 2026-08-04: "I want to start adding
+            more books but I don't want to spend time editing the book cover
+            pictures now."
+
+            So a book is now a title, an author and a url; the picture is
+            optional and can arrive later, at which point the plate is replaced
+            by the cover with no other change. The plate draws a plain bound
+            board in CSS — see _sass/bookplate.scss for what and why.
+
+            ⚠️ aria-hidden, AND IT RELIES ON THE CAPTION. The plate prints the
+            title, and the <figcaption> below prints it again; hiding the plate
+            from assistive tech is what stops the link announcing it twice. The
+            consequence is that a caption-less call would leave an img-less
+            card's link with NO accessible name at all — both callers pass
+            `captions` today, and a third that does not would need an
+            aria-label on the anchor.
+
+            data-pagefind-ignore for the same duplication, one layer out:
+            aria-hidden means nothing to the search indexer, so without it
+            /books/ would carry every img-less title and author TWICE in the
+            index and could return an excerpt that reads as a stutter. Same
+            attribute header.html and footer.html already use, same reason.
+          {%- endcomment -%}
+          {%- if item.img -%}
           <img width="{{ iw }}" height="{{ ih }}"
                src="{{ src | relative_url }}"
                alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
                loading="lazy" decoding="async">
+          {%- else -%}
+          <span class="bookplate" aria-hidden="true" data-pagefind-ignore>
+            <span class="bookplate__title">{{ item.title }}</span>
+            {%- if item.author %}<span class="bookplate__author">{{ item.author }}</span>{% endif %}
+          </span>
+          {%- endif -%}
           {%- if item.media == "video" or item.media == "audio" %}
           <span class="media-badge" aria-hidden="true">{% include icons/{{ item.media }}.svg %}</span>
           {%- endif %}

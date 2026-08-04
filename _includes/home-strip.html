@@ -92,10 +92,31 @@
         <span class="strip__link">
         {%- endif -%}
           <span class="strip__frame">
+            {%- comment -%}
+              ⚠️ NO `img` → THE SAME CSS PLATE /books/ USES. This shelf reads
+              site.data.books, so the moment a book is added without a cover
+              picture — which is the point of the plate, 2026-08-04 — the home
+              page would otherwise render a broken image inside the frame.
+              Guarding only card-grid.html would have shipped that.
+
+              aria-hidden, and the .strip__caption below carries the title for
+              assistive tech. `captions = true` is passed for Books in
+              index.html; the album shelf passes none, but album entries always
+              have a picture. data-pagefind-ignore does the same job for the
+              search index, which aria-hidden does not touch. See
+              _sass/bookplate.scss.
+            {%- endcomment -%}
+            {%- if item.img -%}
             <img class="strip__img"
                  src="{{ img_src | relative_url }}"
                  alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
                  loading="lazy" decoding="async">
+            {%- else -%}
+            <span class="bookplate" aria-hidden="true" data-pagefind-ignore>
+              <span class="bookplate__title">{{ item.title }}</span>
+              {%- if item.author %}<span class="bookplate__author">{{ item.author }}</span>{% endif %}
+            </span>
+            {%- endif -%}
             {%- if item.media == "video" or item.media == "audio" %}
             <span class="media-badge" aria-hidden="true">{% include icons/{{ item.media }}.svg %}</span>
             {%- endif %}

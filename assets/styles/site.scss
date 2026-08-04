@@ -95,6 +95,12 @@
 // twice once the manifest started including it for everyone — fixed here by
 // this list being the single place it appears.)
 @use "cards";
+// bookplate sits inside those cards — the typeset stand-in an img-less book
+// gets instead of a cover. Listed here because it is a card-level component,
+// NOT because it needs the position: it has to survive `.album figure span`
+// from the next line, and it does that on specificity (two classes beats one
+// class and two elements), not on order. See the header of bookplate.scss.
+@use "bookplate";
 @use "album";
 @use "page";
 @use "post";

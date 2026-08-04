@@ -1,0 +1,243 @@
+/* ============================================================
+   Bookplate — a typeset stand-in for a book with no cover picture.
+   ------------------------------------------------------------
+   Brajeshwar 2026-08-04: "I want to start adding more books but I don't want
+   to spend time editing the book cover pictures now. Can we do a clean, nice
+   book-esque design in CSS or SVG as the placeholder for books listing
+   without a picture?"
+
+   This answers the question parked in todo.md since 2026-07-27 — "SVG covers
+   vs a plain text block". It is neither, quite: it is CSS, and the reason is
+   the homepage budget. An inline SVG repeats its whole markup in every card,
+   on a page held under 100 KB; this is ONE rule set, shared by every plate,
+   inside a stylesheet already fetched and cached for a year. The other half of
+   the reason is that SVG text does not wrap — "Genghis Khan and the Making of
+   the Modern World" would need a hand-placed line break per title, which is
+   exactly the per-item maintenance he is trying not to take on.
+
+   WHERE IT COMES FROM
+   Both includes emit it: card-grid.html (used by /books/ and /album/) and
+   home-strip.html (the home page shelf). An entry with no `img` gets a plate
+   instead of an <img>; an entry with one is untouched. So adding a book to
+   _data/books.yaml is now a title, an author and a url — no image work — and
+   the picture can arrive later with no other change.
+
+   WHAT IT DRAWS
+   A plain bound front board, seen flat: the spine down the left with its hinge
+   line, the title set in a serif on the paper face, a short rule under it, and
+   the author beneath in letterspaced caps. Nothing is invented — that is the
+   plainest binding a book can have, which is the point. A shelf of these reads
+   as a library's unjacketed stock rather than as a wall of missing images.
+
+   ⚠️ THE TITLE IS ALSO IN THE CAPTION, AND THAT IS DELIBERATE.
+   card-grid.html prints a <figcaption> and the home strip prints
+   .strip__caption, so an img-less card says the title twice. Checked at the
+   sizes it actually renders at before shipping: the two read as different
+   objects — one is the cover, one is the label — which is what every real book
+   grid does. The plate is aria-hidden, so a screen reader hears it once.
+
+   ⚠️ AND THE INNER SELECTORS NEED TWO CLASSES. On /books/ the plate sits
+   inside a <figure>, and album.scss carries `.album figure span`, which is
+   (0,1,2) — one class and two elements. A lone `.bookplate__title` is (0,1,0)
+   and LOSES to it, silently: the title would render at --step--2 in
+   --text-color-low, i.e. as a second caption, and the CSS would read as
+   applied. `.bookplate .bookplate__title` is (0,2,0) and wins, because the
+   class count is compared before the element count. Same trap as
+   `.item__cards.card-grid--masonry` in page.scss.
+   ============================================================ */
+
+.bookplate {
+  /* THE PLATE IS ITS OWN CONTAINER, which is the whole trick to the type.
+     The type below is sized in `cqi` — 1% of the plate's own width — so one
+     rule set covers a 146px card on a phone, a 193px card in the /books/ grid
+     and a 192px thumbnail on the home shelf, and the cover looks typeset at
+     each of them rather than shrunk. A book cover scales as a whole; so does
+     this.
+
+     `inline-size` and not `size`: block-size containment would ignore the
+     aspect-ratio below and collapse the plate to nothing. */
+  container-type: inline-size;
+
+  /* 3:4 — the shape card-grid.html reserves for a book and the shape
+     .strip--books gives the shelf. Declared here rather than inherited from
+     those rules because a plate is not an <img>: none of the img selectors in
+     page.scss, cards.scss, album.scss or home.scss reach it, so it carries its
+     own sizing and nothing had to be widened to accommodate it. */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  /* ⚠️ NO PADDING HERE, AND IT IS THE ONE RULE THIS COMPONENT CANNOT BREAK.
+     A query container cannot read its OWN container units — that would be
+     circular — so a `cqi` in the plate's own padding silently resolves against
+     the NEXT container up, which on /books/ is the 1024px page. Measured
+     before the fix: `padding: 10cqi 9cqi 10cqi …` computed to 102px and 164px
+     inside a 193px card, the plate blew out to 257px, its content box
+     collapsed to 1px — and because the content box is what a container query
+     measures, every plate then reported itself as 1px wide, so the title fell
+     to its clamp floor and the author's `max-width: 150px` query matched at
+     full size. All of it looked like the units were unsupported. They were not.
+
+     The inset lives on the two text spans instead; they are descendants and
+     resolve correctly. Keeping the plate padding-free pays twice: its content
+     box then equals its border box, so 1cqi is exactly 1% of the visible
+     plate and every number below reads as a percentage of the cover. */
+
+  /* The board. --bg-color-lowest is the surface token — a step off the page
+     background in every palette and both modes, so the plate reads as an
+     object laid on the page rather than a hole cut in it. The hairline is what
+     keeps that edge honest when the two values are close, which in the default
+     light palette they are (gray-100 page, white surface).
+
+     ⚠️ THE STEP IS NOT ALWAYS UPWARD, and that is not a bug to fix. Measured
+     across all six palette/mode combinations: the board is lighter than the
+     page in five of them, and DARKER in Warm light, where Flexoki's page is
+     paper (255,252,240) and its surface is base-50 (242,240,229). A cream page
+     with a slightly deeper board is what an unjacketed cloth binding actually
+     looks like, so the odd one out is the one that reads best. Do not "fix" it
+     by hardcoding a lighter value; that would break the monotone contract and
+     the other five. */
+  background-color: var(--bg-color-lowest);
+  border: var(--border-size-hairline) solid var(--rule-strong);
+
+  /* ⚠️ MATCHES THE COVERS, and it has to be declared because the rule that
+     rounds them cannot reach a plate. base.scss carries
+     `main :where(img, video, iframe) { border-radius: var(--border-radius) }`,
+     so every real cover on the site is 7px rounded — a square-cornered plate
+     would be the one hard-edged card in a grid of soft ones, which reads as a
+     mistake at a glance. The home shelf rounds .strip__img on its own account
+     as well, to the same token. */
+  border-radius: var(--border-radius);
+
+  /* The backstop for a pathological title. Nothing in the data comes close —
+     the longest today is 46 characters and sets in three lines — but a title
+     long enough to outgrow the board should be clipped BY the board rather
+     than printed over the card below it. */
+  overflow: hidden;
+}
+
+/* ---- The spine ------------------------------------------------------------
+   A front cover seen flat shows the spine on the LEFT, and the one detail that
+   makes it read as a spine rather than as a stripe is the hinge: the shallow
+   crease where the board folds away from the binding. That is the gradient —
+   deepest at the bound edge, easing off across the band — and the hairline at
+   its end is the crease itself.
+
+   Built from a color-mix rather than a fixed value so it holds in every
+   palette and both modes: --text-color is the far end of the ramp everywhere,
+   so a small percentage of it is always "a little deeper than the board".
+
+   ⚠️ `width` IS A PERCENTAGE, not the cqi the text spans use, and for the same
+   reason the plate carries no padding: a pseudo-element belongs to the
+   container rather than sitting inside it, so `7cqi` here would resolve
+   against the page. A percentage on an absolutely-positioned box resolves
+   against its containing block — the plate — which is what is wanted. It is
+   the same 7% either way, because a padding-free plate has one width and not
+   two. */
+.bookplate::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 7%;
+
+  background-image: linear-gradient(
+    to right,
+    color-mix(in oklch, var(--text-color) 11%, transparent),
+    color-mix(in oklch, var(--text-color) 3%, transparent) 70%,
+    color-mix(in oklch, var(--text-color) 6%, transparent)
+  );
+  border-inline-end: var(--border-size-hairline) solid var(--rule-strong);
+}
+
+/* ---- The type -------------------------------------------------------------
+   var(--font-serif) is the SYSTEM serif stack, and it is deliberate on both
+   counts.
+
+   Serif, because the plate stands in for a printed object and printed book
+   covers are set in one. The caption below it stays in the page's own font,
+   which is part of what keeps the two from reading as the same line twice.
+
+   System, because it costs nothing. [data-font] swaps --font-body, never
+   --font-serif, so a reader on the Serif option gets Source Serif 4 for the
+   page while the plate stays on Georgia — a distinction invisible at this size,
+   and it saves the home page from pulling a webfont it would otherwise not
+   need. Never chain a webfont in front of it: during font-display's swap
+   interim the browser renders, and downloads, the next matching family
+   (themes.scss).
+
+   The inset is padding-inline on the spans themselves — see the plate above
+   for why it cannot live on the plate. Asymmetric on purpose: the spine eats
+   the left edge, so the text clears it and the type block still looks centred
+   on the visible board. */
+.bookplate .bookplate__title,
+.bookplate .bookplate__author {
+  display: block;
+  padding-inline: 16cqi 9cqi;         /* 7cqi of spine + 9cqi of margin */
+
+  font-family: var(--font-serif);
+  text-align: center;
+  overflow-wrap: break-word;          /* a long single word breaks rather than escaping the board */
+}
+
+.bookplate .bookplate__title {
+  /* clamp() around the cqi, because a container unit has neither floor nor
+     ceiling of its own: at the 128px --card-min that album.scss drops to below
+     480px, a bare 9.5cqi sets 12px, and on a wide shelf it would keep growing
+     past the caption it sits above. */
+  font-size: clamp(0.75rem, 9.5cqi, 1.375rem);
+  line-height: var(--scale-small);
+  font-weight: var(--font-weight);
+  color: var(--text-color);
+
+  /* `balance` and not the `pretty` used elsewhere on the site: a cover title is
+     a short ragged block where even line lengths are the whole point, which is
+     what balance is for. Pretty only protects the last line — right for a
+     paragraph, wrong for three words. */
+  text-wrap: balance;
+}
+
+/* The rule under the title. It hangs off the title's ::after rather than
+   sitting between the two spans because the author disappears on the narrowest
+   plates (below) and the rule must not go with it. */
+.bookplate .bookplate__title::after {
+  content: "";
+  display: block;
+  width: 20cqi;
+  margin: 6cqi auto 0;
+  border-block-start: var(--border-size-hairline) solid var(--rule-strong);
+}
+
+.bookplate .bookplate__author {
+  margin-block-start: 5cqi;
+
+  font-size: clamp(0.5625rem, 5cqi, 0.8125rem);
+  line-height: var(--scale-small);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-color-lower);
+}
+
+/* ⚠️ A CONTAINER QUERY ON THE PLATE'S OWN WIDTH, not a media query.
+   The plate's size does not follow the viewport: /books/ gives it 193px in a
+   1024px band and about 146px on a 320px phone, while the home shelf gives it
+   192px at every width down to 480px and 120px below that. A breakpoint would
+   therefore be right for one of those and wrong for the others.
+
+   Below 150px the author line is 8px of letterspaced caps under a 14px title —
+   texture, not information — and it is printed in full in the caption directly
+   beneath either way. The title and its rule carry the plate alone at that
+   size. */
+@container (max-width: 150px) {
+  .bookplate .bookplate__author {
+    display: none;
+  }
+
+  .bookplate .bookplate__title::after {
+    margin-block-start: 5cqi;
+  }
+}

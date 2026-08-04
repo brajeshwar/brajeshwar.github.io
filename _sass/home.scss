@@ -707,6 +707,20 @@ home-support li {
 .strip--books .strip__img  { aspect-ratio: 3 / 4;  object-fit: cover; }
 .strip--album .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
 
+/* A book with no cover picture gets a .bookplate here instead of an <img>
+   (home-strip.html, 2026-08-04). It brings its own 3:4, its own board color
+   and its own rounding, so the only thing belonging to the SHELF rather than
+   to the plate is set here: the grayscale this row wears at rest and drops on
+   hover. Without it a plate would be the one always-colored card in a row of
+   desaturated covers — visible in Cool and Warm, where the surface and text
+   tokens the plate is built from are tinted rather than neutral.
+
+   ⚠️ Not merged into the .strip__img block above. That block sets a
+   background-color, which would paint straight over the plate's board. */
+.strip__frame .bookplate {
+  filter: grayscale(1);
+}
+
 /* The album runs WIDER than the books shelf — 240px against 192px. Brajeshwar
    2026-08-01: "Maintain the ratio, but increase the width to 200px. The current
    thumbnail is too tiny," then "the 200px for the thumbnail is still tiny, make
@@ -818,8 +832,8 @@ home-support li {
   background-color: transparent;
 }
 
-.strip__link:hover .strip__img,
-.strip__link:focus-visible .strip__img {
+.strip__link:hover :is(.strip__img, .bookplate),
+.strip__link:focus-visible :is(.strip__img, .bookplate) {
   filter: grayscale(0);
 }
 
