@@ -37,30 +37,41 @@ title: Brajeshwar Oinam
     ============================================================
     HOW MANY THUMBNAILS EACH STRIP SHOWS — change the two numbers.
     ============================================================
-    The home page shows the LAST N of each shelf; the full lists live at
-    /books/ and /album/ (2026-08-01: "the books list on the home page should
-    be the last xx number from the above /books/").
+    Each strip shows the newest N of its shelf; the full lists live at /books/
+    and /album/ (2026-08-01: "the books list on the home page should be the
+    last xx number from the above /books/"), and both read newest-to-oldest
+    left to right (2026-08-01: "I also want the books lists in the homepage to
+    be chronological with the newest first").
 
-    NEWEST FIRST (2026-08-01: "I also want the books lists in the homepage to be
-    chronological with the newest first"). So it is reverse → take, and NOT
-    reversed back: the strip reads newest-to-oldest left to right, while
-    /books/ keeps the data file's own order.
+    ⚠️ THE TWO SHELVES DISAGREE ABOUT WHERE "NEWEST" LIVES, AND THAT IS WHY
+    ONE OF THESE LINES HAS A `reverse` AND THE OTHER NO LONGER DOES.
 
-    "Newest" means LAST IN THE FILE, and that is the convention, not a
-    limitation. Brajeshwar 2026-08-01: "the latest is always the last entry in
-    the YAML file… The reason I do not want to or need to record read is that I
-    tend to re-read books a lot and honestly does not matter. I do not want to
-    maintain another record."
+    BOOKS: newest is FIRST in the file, since 2026-08-04. Brajeshwar: "We need
+    to reverse the books shown in the home page. The last one should be the
+    first in the books.yaml as I will add at the top and not at the bottom."
+    So the strip is a plain `slice` off the head — no reverse — and /books/,
+    which never had one, now agrees with it for free. What he types at the top
+    of _data/books.yaml is what appears at the left of this strip and at the
+    top of /books/, with no mental flip in between. That was the point.
 
-    ⚠️ So do NOT add a `read:` or `added:` date and sort on it. That was
-    suggested and rejected on the good ground that a re-read has no single date
-    worth recording, and a second field is a second thing to keep true. Append
-    to the end of the file; that is the whole protocol.
+    This REVERSES the protocol recorded here on 2026-08-01, kept because it is
+    the reasoning and not just the rule — Brajeshwar then: "the latest is
+    always the last entry in the YAML file… The reason I do not want to or need
+    to record read is that I tend to re-read books a lot and honestly does not
+    matter. I do not want to maintain another record."
+
+    ALBUM: unchanged. _data/album.yaml is still newest-LAST, so that line below
+    still does reverse → take. Only the books convention moved.
+
+    ⚠️ The half that did NOT change, and must not: do NOT add a `read:` or
+    `added:` date and sort on it. That was suggested and rejected on the good
+    ground that a re-read has no single date worth recording, and a second
+    field is a second thing to keep true. Position in the file IS the record.
   {%- endcomment -%}
   {%- assign home_books_count  = 8 -%}
   {%- assign home_album_count = 8 -%}
 
-  {%- assign books_tail = site.data.books | reverse | slice: 0, home_books_count -%}
+  {%- assign books_tail = site.data.books | slice: 0, home_books_count -%}
   {%- comment -%}
     The Books intro paragraph was removed 2026-07-31 on request. The `intro`
     parameter is still supported by the include — nothing else passes one today.

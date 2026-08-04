@@ -47,8 +47,19 @@ title: Books
   `.page > .album` takes 100cqi, which is the band in both cases.
 {%- endcomment -%}
 {%- comment -%}
+  ⚠️ NO SORT, NO REVERSE, AND THAT IS NOW LOAD-BEARING RATHER THAN INCIDENTAL.
+  Both grids render `_data/books.yaml` in its own order, which since 2026-08-04
+  is newest-FIRST (Brajeshwar: "The last one should be the first in the
+  books.yaml as I will add at the top and not at the bottom… This applies the
+  same for /books/"). This page needed no change to satisfy that — it never
+  reordered anything — but the absence of a filter is the feature now, so do
+  not add one. index.html is where the change landed: its books strip dropped
+  the `reverse` it used to apply, and the two pages agree again.
+
   Two grids, ONE source, no overlap (2026-08-01: "I do not want to repeat the
-  Favorites in the All books section").
+  Favorites in the All books section"; restated 2026-08-04: "except for the
+  highlights, where it shows the highlights in the top section. Those
+  highlights are not included in the list of all the other books").
 
   `highlight: true` splits `_data/books.yaml` in two. `where_exp` rather than a
   second data file, because two files would mean two places a book can live and
