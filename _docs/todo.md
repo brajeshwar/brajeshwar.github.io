@@ -25,10 +25,21 @@ Originally absorbed from the 2027 planning braindump.
       A listing's weight is its content. [`design.md`](design.md) → *Performance budget* now
       says so. For the record the page is ~329 KB raw / ~74 KB gzip, and switching its links to
       `relative_url` took 27.6 KB off (1,459 absolute URLs → 3).
-- [ ] **Home = text only.** ⏸ **PARKED 2026-07-27 at Brajeshwar's request** — *"I'm going to
-      re-work on it. Park it for now. We need to think of how to show the books, it might become
-      just SVGs or a Text Block without images."* So the open question is the books treatment
-      (SVG covers vs a plain text block), and it is his to answer before any code moves.
+- [ ] **Home = text only.** ⏸ **STILL PARKED 2026-07-27 at Brajeshwar's request** — *"I'm going
+      to re-work on it. Park it for now. We need to think of how to show the books, it might
+      become just SVGs or a Text Block without images."* ✅ **Half of it is answered**: the books
+      treatment landed 2026-08-04 as the `.bookplate` below — CSS, not SVG and not a bare text
+      block. The *page* question ("Home = text only") is untouched and remains his to call.
+- [x] **Books with no cover picture** *(2026-08-04)* — *"I want to start adding more books but I
+      don't want to spend time editing the book cover pictures now. Can we do a clean, nice
+      book-esque design in CSS or SVG as the placeholder for books listing without a picture?"*
+      An entry in `_data/books.yaml` with no `img` now renders a `.bookplate`: a plain bound
+      board drawn in CSS — spine and hinge down the left, title in a serif on the paper face, a
+      short rule, the author in letterspaced caps. Both `card-grid.html` (/books/) and
+      `home-strip.html` (the home shelf) emit it, so a coverless book cannot show up broken on
+      one page and fine on the other. **So a book is now a title, an author and a url**; the
+      picture is optional and can arrive later with no other change. +319 bytes gzip on the one
+      cached stylesheet. See [`memory.md`](memory.md) and `_sass/bookplate.scss`.
 - [x] ~~**Page template (Full Width)** / **(Ideal Width)**~~ — closed 2026-07-27. The split
       these described is gone: there is ONE site width (64rem/1024px) and the reading measure is
       a constraint on prose *inside* it, not a second template. See *Standardize the site width*

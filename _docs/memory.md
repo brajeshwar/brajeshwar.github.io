@@ -4,7 +4,133 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-02, end of the sixth session) — READ FIRST
+## Where we are (updated 2026-08-04, seventh session) — READ FIRST
+
+### ⏸ FOUR commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.
+
+`origin/main` is four behind, every one signed (`G`) and in his name. **Two of them pre-date
+this session** and were already waiting:
+
+| commit | |
+|---|---|
+| `e507e852` | Docs: close the sixth session *(2026-08-02, was already unpushed)* |
+| `be262f85` | User Experience of Nomenclature *(his own content commit)* |
+| `4a2357ab` | Books: a CSS bookplate for entries with no cover picture |
+| *(HEAD)* | Docs: record the bookplate — this file; its own hash changes if it is amended again |
+
+Books can now be listed **without cover pictures**. Brajeshwar, 2026-08-04: *"I want to
+start adding more books but I don't want to spend time editing the book cover pictures
+now. Can we do a clean, nice book-esque design in CSS or SVG as the placeholder for books
+listing without a picture?"*
+
+An entry in `_data/books.yaml` with no `img` renders a **`.bookplate`** instead of a broken
+image: a plain bound board drawn in CSS — the spine and its hinge down the left, the title
+set in a serif on the paper face, a short rule, the author beneath in letterspaced caps. A
+shelf of them reads as a library's unjacketed stock. **Adding a book is now a title, an
+author and a url**; the picture is optional and can arrive later with no other change.
+
+**This answers half of the question parked since 2026-07-27** — "SVG covers vs a plain text
+block". It is neither: CSS. `_docs/todo.md` records why (an inline SVG repeats its markup in
+every card on a page held under 100 KB, and SVG text does not wrap, so every long title
+would need a hand-placed line break — exactly the per-item maintenance he is avoiding). The
+OTHER half of that todo, "Home = text only", is untouched and still his to call.
+
+**Nothing here touches content.** `_data/books.yaml` is unchanged; the plates were verified
+against entries injected into the BUILT `_site`, which is disposable output. His own
+in-progress edit to `_posts/2018/2018-01-31-books.md` was left alone and unstaged.
+
+### What this session did
+
+| file | |
+|---|---|
+| `_sass/bookplate.scss` | new — the whole component, 1.7 KB raw / **+319 bytes gzip** |
+| `_includes/card-grid.html` | `img` → plate fallback for /books/ (and /album/) |
+| `_includes/home-strip.html` | the same fallback for the home shelf |
+| `_sass/home.scss` | the plate wears the shelf's grayscale-at-rest |
+| `assets/styles/site.scss` | `@use "bookplate"`, after `cards` |
+| `CLAUDE.md`, `_docs/todo.md`, `_docs/memory.md` | 16 partials now; the parked item |
+
+**Verified against the served build, not by looking**: 3:4 at every size; the type scales
+with the plate (18.1px title at 193px in the /books/ grid, 16.3px at 173px, 13.8px at 146px,
+the 12px clamp floor at the 120px phone shelf); the author line drops below a 150px plate;
+the longest title in the data and a deliberately absurd 78-character one both set inside the
+board; no sideways scroll at 320/375/480/768/1024; painted colors read off a canvas in all
+**six** palette/mode combinations; the shelf hover exercised with a REAL hover (plate
+`grayscale(1)` → `(0)` while an un-hovered cover beside it stays at `1`); Pagefind still
+indexes 1,486 pages.
+
+The Liquid was verified by building against a **copied** data directory —
+`data_dir: _data_liquidtest` in an override config, destination outside the repo — so the two
+img-less fixture books went through the real includes with `_data/books.yaml` never touched.
+An entry with a title and no author renders correctly: title, rule, no empty author span.
+
+⚠️ **The spine inverts in dark mode.** It is a `color-mix` of `--text-color`, which is
+near-white there, so the band paints LIGHTER than the board and the crease reads as a
+highlight rather than a shadow. Looked at, not reasoned about: it reads as light catching the
+binding edge of a dark book. Left alone deliberately — a mode-specific value would put a raw
+color outside `themes.scss`. The warning is on the rule itself.
+
+### Rules learned this session — these will bite again
+
+1. **⚠️ A QUERY CONTAINER CANNOT READ ITS OWN CONTAINER UNITS, AND THE FAILURE IS SILENT AND
+   BACKWARDS.** `container-type: inline-size` plus `padding: 10cqi` on the SAME element does
+   not error and does not resolve to zero — the `cqi` falls through to the next container up,
+   which on /books/ is the 1024px page. Measured: padding computed to 102px and 164px inside
+   a 193px card, the plate blew out to 257px, and its content box collapsed to **1px**. A
+   container query measures the CONTENT box, so every plate then reported itself as 1px wide
+   — the title fell to its clamp floor and a `@container (max-width: 150px)` rule matched at
+   full size. It reads exactly like "container units are not supported here". They were.
+   The fix is structural: keep the container's own box free of `cqi` and put every container
+   unit on descendants. A padding-free container has the second virtue that its content box
+   equals its border box, so 1cqi is honestly 1% of the visible element.
+2. **A pseudo-element belongs to the container rather than sitting inside it** — same trap,
+   one layer down. `.bookplate::before { width: 7cqi }` resolves against the PAGE. Use a
+   percentage there; on an absolutely-positioned box it resolves against the containing
+   block, which is the element you meant.
+3. **base.scss rounds every image on the site** — `main :where(img, video, iframe) {
+   border-radius: var(--border-radius) }`. Anything standing in for an image must declare the
+   same 7px or it is the one hard-edged card in a grid of soft ones. Found by reading the
+   matched rules off a cover, not by looking at it.
+4. **`.album figure span` is (0,1,2), and a new component inside a `<figure>` will lose to
+   it.** One class beats two elements only when the class COUNT is higher, so
+   `.bookplate__title` at (0,1,0) loses and `.bookplate .bookplate__title` at (0,2,0) wins.
+   Unfixed, the plate's title would have rendered at `--step--2` in `--text-color-low` — i.e.
+   as a second caption — with the CSS reading as applied. Same shape as the
+   `.item__cards.card-grid--masonry` trap.
+5. **`aria-hidden` means nothing to Pagefind.** Any markup that repeats visible text needs
+   `data-pagefind-ignore` as well, or the page carries it twice in the index. header.html and
+   footer.html already do this; the pattern was there to copy.
+6. **Verify a data-driven component by mutating `_site`, never the data file.** `_site` is
+   disposable build output, so a throwaway script can inject as many fixture entries as the
+   test needs — real stylesheet, real fonts, real grid — with `_data/*.yaml` untouched
+   (guardrail 1) and nothing of his at risk while he edits the same tree.
+
+### Picking this back up — the shortlist
+
+**Nothing on the site looks different yet.** `_data/books.yaml` is unchanged, so every book
+still has a cover; the plate appears the first time he adds an entry without an `img`. What
+shipped is the capability, not a visible change — do not go looking for one on `/books/`.
+
+The plate is deliberately uniform: no per-book tint, no generated variation. That is the
+ethos ("nothing arbitrary"), and it is also the honest reading — a shelf of plain bindings.
+If a shelf of twenty ever feels monotonous, that is the first thing to revisit, and it is a
+decision rather than a bug. Two alternates were rendered and shown to him alongside the
+shipped one, each a one-line change: **B**, no spine with a blind-stamped inset frame
+instead, and **C**, title only with no rule and no author. A was recommended and shipped
+because the spine is the quiet detail the ethos asks for where the inset frame is chrome,
+which [`design.md`](design.md) argues against.
+
+⚠️ **`_pages/styleguide.md` documents the thumbnail and card system and does not mention the
+plate.** It is a `_pages/**` prose body — guardrail 1 — so updating it is Brajeshwar's edit
+to make, not ours. Same disposition as the `.gallery` prose from the sixth session.
+
+Open items are in [`todo.md`](todo.md). The ones that need HIM, unchanged from 2026-08-02:
+Baskerville's fate; the styleguide's gallery prose (guardrail 1); the 86.3 MB of unreferenced
+year-folder masters; `/static/films/` re-cuts; `/devices/`' one `<a href="">`.
+
+---
+
+## Session record — 2026-08-02, sixth session (superseded as the index head, kept per the log-history rule)
 
 ### ✅ Session CLOSED 2026-08-02. Everything deployed green and verified live; ONE
 ### docs-only commit (this close) sits unpushed, awaiting his word — guardrail 7.

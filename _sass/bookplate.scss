@@ -129,7 +129,16 @@
 
    Built from a color-mix rather than a fixed value so it holds in every
    palette and both modes: --text-color is the far end of the ramp everywhere,
-   so a small percentage of it is always "a little deeper than the board".
+   so a small percentage of it is always a step away from the board.
+
+   ⚠️ AND IN DARK MODE THAT STEP GOES THE OTHER WAY — CHECKED, AND KEPT.
+   --text-color is near-white there, so the band paints LIGHTER than the board
+   and the crease reads as a highlight rather than a shadow. Looked at in the
+   browser rather than reasoned about: it reads as light catching the binding
+   edge of a dark book, which is a real thing a book does, and the hinge stays
+   the same distance from the board as it is in light mode because both ends
+   are mixes of the same two tokens. Do not "correct" it with a mode-specific
+   value — that would put a raw color outside themes.scss for no gain.
 
    ⚠️ `width` IS A PERCENTAGE, not the cqi the text spans use, and for the same
    reason the plate carries no padding: a pseudo-element belongs to the

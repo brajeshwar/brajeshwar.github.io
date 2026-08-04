@@ -57,13 +57,14 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 9. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
-- CSS = **15 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
-  `cards`, `post`, `page`, `album`, + per-page one-offs `home`/`archives`/`search`/`now`/`timeline`,
-  plus the variables-only `breakpoints` and the not-yet-wired `bookmarks`), compiled by
+- CSS = **16 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
+  `cards`, `bookplate`, `post`, `page`, `album`, + per-page one-offs
+  `home`/`archives`/`search`/`now`/`timeline`, plus the variables-only `breakpoints` and the
+  not-yet-wired `bookmarks`), compiled by
   **`assets/styles/site.scss`** into ONE external stylesheet. Flattened from 25 numbered ITCSS
   partials on 2026-07-19 — **don't reintroduce numeric prefixes**; cascade order lives in
   `site.scss`, and `config` must stay first.
-  One file, **10.3KB gzip / 54KB raw** (2026-08-01), fetched once and then cached.
+  One file, **11.0KB gzip / 57.9KB raw** (2026-08-04), fetched once and then cached.
 - **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
   them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
   because an underscore directory is never copied to the output — sources under `assets/`

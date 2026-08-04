@@ -570,6 +570,8 @@ Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (
       base.css        reset, type, tables, images, cards,
                       footnotes, block utilities
       chrome.css      header, footer, appearance, search
+      bookplate.css   the CSS stand-in for a book with no cover picture
+                      (2026-08-04) — sits inside the cards grid
       post.css        article bundle
       page.css        page bundle (empty hook today)
       album.css       gallery bundle
@@ -864,6 +866,88 @@ wholesale when real photos land.
 through `album.scss` (`/devices/`, `/film/`, `/music/`, `/wear/`), which want a wrapping grid
 where these want a clipped single row. New classes, no shared surface — verified after the
 rebuild that `cards.scss` and `album.scss` were untouched and those four pages unchanged.
+
+### The bookplate — a book with no cover picture (2026-08-04)
+
+Brajeshwar: *"I want to start adding more books but I don't want to spend time editing the
+book cover pictures now. Can we do a clean, nice book-esque design in CSS or SVG as the
+placeholder for books listing without a picture?"* This closes the books half of the item
+parked in [`todo.md`](todo.md) since 2026-07-27 — *SVG covers vs a plain text block*.
+
+**It is CSS, and neither of the two options as posed.** An inline SVG repeats its whole
+markup in every card, on a home page held under 100 KB; `_sass/bookplate.scss` is one rule
+set shared by every plate, inside a stylesheet already fetched and cached for a year — **1.7
+KB raw, +319 bytes gzip**. And SVG text does not wrap, so every long title would need a
+hand-placed line break: exactly the per-item maintenance the request is trying to shed.
+
+An entry in `_data/books.yaml` with **no `img`** renders a plain bound front board — the
+spine and its hinge down the left, the title in a serif on the paper face, a short rule, the
+author in letterspaced caps. Both `card-grid.html` and `home-strip.html` emit it, so a
+coverless book cannot render fine on `/books/` and broken on the home shelf. Adding a book is
+now a title, an author and a url.
+
+⚠️ **A QUERY CONTAINER CANNOT READ ITS OWN CONTAINER UNITS, AND THE FAILURE IS SILENT AND
+BACKWARDS.** The plate is `container-type: inline-size` so its type scales in `cqi` with the
+card rather than with the viewport — 18.1px at 193px in the `/books/` grid, 13.8px at 146px
+on a phone. But a `cqi` in the container's **own** properties does not error and does not
+resolve to zero: it falls through to the next container up, which here is the 1024px page.
+Measured with `padding: 10cqi 9cqi …` on the plate itself:
+
+| | |
+|---|---|
+| padding computed | 102px and 164px, inside a 193px card |
+| plate width | blew out to 257px |
+| plate **content box** | collapsed to ~1px |
+| what a container query then measured | ~1px — so `(max-width: 150px)` matched at full size |
+| what the title did | fell to its `clamp()` floor everywhere |
+
+All of which reads exactly like "container units are unsupported here". They were not. **The
+fix is structural: keep the container's own box free of `cqi` and put every container unit on
+descendants.** A padding-free container has a second virtue — its content box equals its
+border box, so `1cqi` is honestly 1% of the visible element and every number in the file
+reads as a percentage of the cover.
+
+⚠️ **A pseudo-element belongs to the container rather than sitting inside it** — the same
+trap one layer down. `.bookplate::before { width: 7cqi }` resolves against the page. Use a
+percentage: on an absolutely-positioned box it resolves against the containing block, which
+is the element you meant.
+
+⚠️ **`.album figure span` is (0,1,2).** On `/books/` the plate sits inside a `<figure>`, so a
+lone `.bookplate__title` at (0,1,0) loses to it and the title renders at `--step--2` in
+`--text-color-low` — a second caption — with the CSS reading as applied. `.bookplate
+.bookplate__title` at (0,2,0) wins, because the class count is compared before the element
+count. Same shape as the `.item__cards.card-grid--masonry` trap above.
+
+⚠️ **Anything standing in for an image must declare `border-radius`.** base.scss carries
+`main :where(img, video, iframe) { border-radius: var(--border-radius) }`, so every real
+cover is 7px rounded and a square-cornered plate is the one hard-edged card in the grid.
+
+⚠️ **`aria-hidden` means nothing to Pagefind.** The plate repeats the caption's text, so it
+also carries `data-pagefind-ignore` — the same attribute, for the same reason, as
+`header.html` and `footer.html`.
+
+**The title appears twice on an img-less card, deliberately** — once on the plate, once in
+the caption below. Checked at the sizes it actually renders at: they read as different
+objects, one the cover and one the label, which is what every real book grid does. The plate
+is `aria-hidden`, so it is announced once.
+
+**The board is a step off the page in all six palette/mode combinations**, and the step is
+*not* always upward: in Warm light, Flexoki's page is paper (255,252,240) and the surface is
+base-50 (242,240,229), so the board is slightly darker. That is what an unjacketed cloth
+binding looks like on cream stock — the odd one out is the one that reads best. Do not
+hardcode a lighter value; it would break the monotone contract and the other five.
+
+**The spine inverts in dark mode, and that was checked rather than assumed.** It is a
+`color-mix` of `--text-color`, which is near-white in dark, so the band paints *lighter* than
+the board and the crease is a highlight instead of a shadow. In the browser it reads as light
+catching the binding edge of a dark book. Left as is: a mode-specific value would put a raw
+color outside `themes.scss` to fix something that is not broken.
+
+**The home shelf's grayscale applies to plates too**, via
+`.strip__link:hover :is(.strip__img, .bookplate)`. Verified with a real hover, not by reading
+the selector — this repo has three separate entries about hover rules that computed exactly
+as written and painted nothing. On hover the plate goes `grayscale(1)` → `grayscale(0)` while
+an un-hovered cover beside it stays at `1`.
 
 ### Responsive audit, 2026-08-01
 
