@@ -177,6 +177,40 @@ none of its own.
 entries order-independently, the order did change, and the highlight and img counts held at
 4 and 7. That is the check that a rewrite of every line in the file moved nothing but order.
 
+### The strip's hover background is gone; the plate's own rules darken instead
+
+*"With this new style, the hover on the homepage looks really ugly. Remove the background and
+on hover, darken the borders of the books design."*
+
+**Why the wash stopped working, because it is a general lesson.** It was right for a row of
+photographs and wrong for a row of bookplates. A plate is a pale board with a hairline edge;
+`--bg-color-low` painted a few pixels outside that edge is a second, softer border around the
+first — two concentric boxes of nearly the same value. That near-miss is what reads as "ugly"
+without being nameable. Against an opaque photograph the same wash only ever showed below the
+caption, which is why it worked for three days and then did not.
+
+- **`--bookplate-rule`** is new and is the whole mechanism: the board edge, the spine's hinge
+  and the rule under the title all read it, so hover sets ONE property and three lines move
+  together and cannot drift. Custom properties inherit, so `::before` and `::after` get it.
+- **The hover lives in `bookplate.scss`, not `home.scss`**, keyed
+  `:is(a, .strip__link):hover .bookplate`. A plate is hovered on `/books/` too; keying it to
+  `.strip__link` would have given one component two hover states on two pages. `:is()` and not
+  a bare `a` because a url-less book renders its strip item as a `<span class="strip__link">`.
+- **`transition` is declared at REST**, not in the hover block — a transition is read from the
+  state *before* the change, so hover-only gives an instant snap in and a fade out.
+- ⚠️ **Measuring it gives `transition-duration: 0s`, and nothing is wrong.** base.scss's
+  global `prefers-reduced-motion: reduce` block zeroes it with `!important`, and he browses
+  with reduced motion ON. The 120ms is in the compiled stylesheet; verified both ends.
+- **Do NOT reach for an underline as the replacement.** That is what the wash replaced on
+  2026-08-01, and it never painted: it was set on `.strip__caption`, a `<span>`, while
+  `text-decoration` is drawn by the nearest block-level ancestor that declares it, and
+  `.strip__link` declares `none`. The rule computed exactly as written and did nothing.
+
+**Measured with real hovers on both pages**, not read off the selector: home strip link
+background stays `rgba(0,0,0,0)`; board edge, spine hinge and title rule all go 177 → 108 in
+light/default; grayscale still lifts and the caption still darkens. On `/books/` the same
+border move happens (0.32 → 0.6 alpha) alongside the existing opacity 0.8 → 1.
+
 **`url` points at `/2026/books/` for eight of the nine**, because that is where each is
 actually written about and there are no per-book posts. How to Read a Book has its own review
 and points there. That is a one-word edit per entry if he wants it different.
