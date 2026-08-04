@@ -118,9 +118,43 @@ in the file with its cover and `highlight: true`. Check for a duplicate before a
 two grids are disjoint views of one list, so a repeat would show up twice on the page.
 
 ⚠️ **The home shelf shows no cover photographs any more.** `home_books_count = 8` takes the
-LAST eight entries, and all eight are now coverless 2026 books. Not a bug — it is what
-"newest last" means — but if he wants a mix, that is the number to raise, or the books to
-give covers.
+eight newest entries, and all eight are coverless 2026 books. Not a bug, but if he wants a
+mix, that is the number to raise, or the books to give covers.
+
+### ⚠️ THEN THE WHOLE FILE FLIPPED: `books.yaml` IS NEWEST-**FIRST** NOW (2026-08-04)
+
+*"We need to reverse the books shown in the home page. The last one should be the first in
+the books.yaml as I will add at the top and not at the bottom. This applies the same for
+/books/ except for the highlights…"*
+
+**This reverses the 2026-08-01 protocol** — *"the latest is always the last entry in the YAML
+file"* — which is quoted at length in `index.html` and stays there, because the reasoning
+behind it (no `read:` date, a re-read has no single date worth recording) did not change.
+Only the direction did. **Do not re-append at the bottom.**
+
+Three things moved, and only one of them was code:
+
+1. **`_data/books.yaml` was reversed end to end.** Not re-sorted — *reversed*, so every
+   relative position survives and only the direction flips. Proved rather than eyeballed:
+   `after == before.reverse` was asserted field-for-field on the parsed YAML before the old
+   file was let go. The year-marker comments were re-emitted in the new order; they are
+   comments, and nothing reads them.
+2. **`index.html` dropped its `reverse` filter** — `site.data.books | slice: 0, 8`, a plain
+   take off the head. ⚠️ **The album line still has its `reverse` and must keep it**:
+   `_data/album.yaml` is still newest-LAST. The two shelves now disagree about where "newest"
+   lives, which is exactly why one line has the filter and the other does not.
+3. **`_pages/books.html` needed no change at all**, and that is now load-bearing rather than
+   incidental: it never reordered anything, so the absence of a filter there is the feature.
+   Do not add one.
+
+**The home strip renders byte-identically to before the flip** — same eight books, same order
+— which is the check that the two changes cancel. `/books/` is the page that visibly changed:
+it reads newest-to-oldest now.
+
+**Highlights are untouched and still disjoint**, as he restated: 4 in the favorites grid, 172
+in the main grid, zero overlap, 176 accounted for. The split is `where highlight == true` /
+`where_exp highlight != true`, so it is disjoint by construction and a book's `highlight`
+does not move it in the file.
 
 **`url` points at `/2026/books/` for eight of the nine**, because that is where each is
 actually written about and there are no per-book posts. How to Read a Book has its own review
