@@ -87,6 +87,13 @@
      box then equals its border box, so 1cqi is exactly 1% of the visible
      plate and every number below reads as a percentage of the cover. */
 
+  /* EVERY LINE ON THE PLATE READS THIS ONE VALUE — the outer board edge, the
+     spine's hinge, and the short rule under the title. That is what lets the
+     hover at the foot of this file darken the whole thing by setting a single
+     custom property, rather than restating three border-colors. Custom
+     properties inherit, so the ::before and the ::after pick it up for free. */
+  --bookplate-rule: var(--rule-strong);
+
   /* The board. --bg-color-lowest is the surface token — a step off the page
      background in every palette and both modes, so the plate reads as an
      object laid on the page rather than a hole cut in it. The hairline is what
@@ -102,7 +109,7 @@
      by hardcoding a lighter value; that would break the monotone contract and
      the other five. */
   background-color: var(--bg-color-lowest);
-  border: var(--border-size-hairline) solid var(--rule-strong);
+  border: var(--border-size-hairline) solid var(--bookplate-rule);
 
   /* ⚠️ MATCHES THE COVERS, and it has to be declared because the rule that
      rounds them cannot reach a plate. base.scss carries
@@ -112,6 +119,23 @@
      mistake at a glance. The home shelf rounds .strip__img on its own account
      as well, to the same token. */
   border-radius: var(--border-radius);
+
+  /* ⚠️ TRANSITIONS THE BORDER, AND IT MUST BE DECLARED AT REST rather than in
+     the hover block at the foot of this file. A transition is read from the
+     element's state BEFORE the change: put it only under :hover and the colour
+     snaps on the way in and fades on the way out, which reads as a glitch.
+     120ms matches what the strip's background wash used to use, so the shelf
+     feels the same even though nothing about it is the same.
+
+     ⚠️ IF YOU MEASURE THIS AND GET `transition-duration: 0s`, NOTHING IS
+     WRONG. base.scss carries a global `prefers-reduced-motion: reduce` block
+     that zeroes transition-duration on everything with !important, and
+     Brajeshwar browses with reduced motion ON — so the reading he will get,
+     and the reading a devtools probe on his machine will get, is 0s and an
+     instant change. The 120ms is in the compiled stylesheet and is what
+     everyone else sees. Verified both: `transition:border-color 120ms
+     ease-out` in site.css, `0s` computed in a reduced-motion browser. */
+  transition: border-color 120ms ease-out;
 
   /* The backstop for a pathological title. Nothing in the data comes close —
      the longest today is 46 characters and sets in three lines — but a title
@@ -160,7 +184,7 @@
     color-mix(in oklch, var(--text-color) 3%, transparent) 70%,
     color-mix(in oklch, var(--text-color) 6%, transparent)
   );
-  border-inline-end: var(--border-size-hairline) solid var(--rule-strong);
+  border-inline-end: var(--border-size-hairline) solid var(--bookplate-rule);
 }
 
 /* ---- The type -------------------------------------------------------------
@@ -218,7 +242,7 @@
   display: block;
   width: 20cqi;
   margin: 6cqi auto 0;
-  border-block-start: var(--border-size-hairline) solid var(--rule-strong);
+  border-block-start: var(--border-size-hairline) solid var(--bookplate-rule);
 }
 
 .bookplate .bookplate__author {
@@ -249,4 +273,43 @@
   .bookplate .bookplate__title::after {
     margin-block-start: 5cqi;
   }
+}
+
+
+/* ---- Hover -----------------------------------------------------------------
+   Brajeshwar 2026-08-04: "With this new style, the hover on the homepage looks
+   really ugly. Remove the background and on hover, darken the borders of the
+   books design."
+
+   So the plate's own lines are the affordance now. Setting --bookplate-rule is
+   the whole change: the board edge, the spine's hinge and the rule under the
+   title all read that property, so one declaration moves three lines at once
+   and they cannot drift apart.
+
+   ⚠️ THE HOVER LIVES HERE, NOT IN home.scss, AND THAT IS DELIBERATE. A plate
+   is hovered on /books/ too, where the card is an <a> inside the grid. Keying
+   this to .strip__link would have given the same component two different hover
+   states on two pages for no reason a reader could see.
+
+   `:is(a, .strip__link)` rather than a bare `a`, because a book with no `url`
+   renders its strip item as a <span class="strip__link"> — an empty href is a
+   link to the current page, so both includes guard on the field. The span is
+   not navigable, but it is still hovered, and a card that highlights on hover
+   and then does nothing on click is worse than one that never highlights. This
+   is what keeps the two in step: only the <a> form ever gets here in practice
+   today, because every book carries a url.
+
+   The mix is on --text-color, the far end of the ramp in every palette and
+   both modes, so "darker" is guaranteed to mean darker — the same reasoning as
+   the link-hover rule in base.scss. 60% lands the light-mode edge at about
+   rgb(108) against rgb(176) at rest: clearly a state change, still a hairline
+   and not a stroke.
+
+   ⚠️ The transition is declared on the PLATE, not here, and it has to be — a
+   transition only runs if the property is already transitionable on the
+   element BEFORE the state changes. Declaring it inside the hover block gives
+   you an instant snap on the way in and a fade only on the way out. */
+:is(a, .strip__link):hover .bookplate,
+:is(a, .strip__link):focus-visible .bookplate {
+  --bookplate-rule: color-mix(in oklch, var(--text-color) 60%, transparent);
 }

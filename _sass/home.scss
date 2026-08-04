@@ -761,75 +761,54 @@ home-support li {
   text-wrap: pretty;
 }
 
-/* HOVER IS A BACKGROUND, NOT AN UNDERLINE (2026-08-01). Brajeshwar: "the
-   hover underline on text isn't working … a background color instead. So, it
-   highlights the text/title and covers the text."
+/* ⚠️ THE HOVER BACKGROUND IS GONE (2026-08-04). Brajeshwar: "With this new
+   style, the hover on the homepage looks really ugly. Remove the background
+   and on hover, darken the borders of the books design."
 
-   Why the underline never showed: it was set on `.strip__caption`, a <span>
-   inside the link, while `text-decoration` is INHERITED and drawn by the
-   nearest block-level ancestor that declares it. `.strip__link` declares
-   `text-decoration: none` at rest, so the span's own `underline` had nothing
-   to draw against in the propagation the browser had already resolved — the
-   rule computed exactly as written and painted nothing. A background has no
-   such indirection.
+   The wash was right for a row of photographs and wrong for a row of
+   bookplates, and the reason is worth keeping. A plate is a pale board with a
+   hairline edge sitting on the page; a rectangle of --bg-color-low painted a
+   few pixels outside that edge reads as a second, softer border around the
+   first — two concentric boxes of nearly the same value, which is exactly the
+   kind of near-miss the eye reports as "ugly" without being able to name.
+   Against an opaque photograph the same wash only ever showed below the
+   caption, which is why it worked before the plates existed.
 
-   The background sits on the LINK, so it covers thumbnail and caption alike.
-   The image is opaque and fills the item's width, so the only place the color
-   actually shows is behind and below the text — which is the highlight, and
-   why it lines up with the thumbnail's edges instead of hugging the words.
-   The padding is what makes it read as a block rather than a smear. */
+   What replaced it is on the plate itself: its rules darken. See the hover
+   block at the foot of _sass/bookplate.scss. Nothing here paints on hover any
+   more — the caption still darkens (below) and covers still lose their
+   grayscale, which together are the whole affordance now.
+
+   THE HISTORY, because this rule has been round the houses. The wash arrived
+   2026-08-01 ("the hover underline on text isn't working … a background color
+   instead") replacing an underline that never painted at all: it was set on
+   .strip__caption, a <span>, while `text-decoration` is drawn by the nearest
+   block-level ancestor that declares it, and .strip__link declares `none`. So
+   do NOT reach for an underline here as the replacement — it is the option
+   that was already tried and silently did nothing. */
 .strip__link {
-  /* UNIFORM padding on all four sides (2026-08-01: "add padding at the top too
-     to have a uniform view"). It was --space-3xs on top and sides against
-     --space-2xs at the bottom, on the reasoning that only the caption edge had
-     text to clear. Wrong once the background arrived: an inset that differs by
-     edge reads as a misaligned box, not as a considered asymmetry, because the
-     highlight draws the box and the eye compares its four margins directly.
+  /* The padding OUTLIVES the background it was drawn for, and only one edge of
+     it still does anything. Top and sides are cancelled by the negative margin
+     — they existed so the wash could extend past the thumbnail without moving
+     it — so with no wash they are a no-op that keeps the geometry identical to
+     before. The BOTTOM is real space, holding the caption clear of whatever
+     follows, and is the reason this is not simply deleted.
 
-     The negative margin matches the padding on top and sides, so the THUMBNAIL
-     stays exactly where it was and only the wash extends past it. Bottom margin
-     stays 0 — that is the one edge where the extra space is real, holding the
-     caption clear of the next row.
-
-     `border-radius` is one value for all four corners, so the top rounds
-     exactly as the bottom does. The image carries the same radius, which is
-     what makes the two curves sit concentric instead of one squaring off
-     inside the other. */
+     `transition` and `border-radius` were removed with the wash: one animated a
+     background-color that no longer changes, the other rounded a box that no
+     longer paints. The plate carries its own radius and its own transition. */
   padding: var(--space-2xs);
   margin: calc(-1 * var(--space-2xs)) calc(-1 * var(--space-2xs)) 0;
-  border-radius: var(--border-radius);
-  transition: background-color 120ms ease-out;
 }
 
-/* ⚠️ Back to --bg-color-low (2026-08-01: "too dark. I think, we should revert
-   the background color"). --bg-color-hover raised it from 1.28 to 1.96 contrast
-   against the page, which read as a filled card behind a photograph rather than
-   a wash under it. The token still exists and is still used by the toc rows,
-   where there is no image competing with it — a hover tint that works behind
-   TEXT is too much behind a picture. */
-.strip__link:hover,
-.strip__link:focus-visible {
-  background-color: var(--bg-color-low);
-}
-
-/* ⚠️ NO background on the photo strip. Brajeshwar 2026-08-01: "No need for
-   background on hover. Make no sense when we have no text/title. The hover
-   color is enough."
-
-   Exactly right, and it is not merely redundant there — it is worse than
-   nothing. Photos carry no caption, so the background has no text to sit
-   behind; all it can do is draw a rectangle a few pixels larger than the image
-   and put a faint halo around it. On Books the same rule has a caption to
-   highlight, which is the whole reason it earns its place there. The grayscale
-   lifting off the image is the hover state here. */
+/* The album strip drops even that bottom space: no captions, so there is no
+   text to hold clear (2026-08-01: "No need for background on hover. Make no
+   sense when we have no text/title. The hover color is enough" — the same
+   instruction the books strip has now caught up with). The grayscale lifting
+   off the image is the entire hover state here. */
 .strip--album .strip__link {
   padding: 0;
   margin: 0;
-}
-
-.strip--album .strip__link:hover,
-.strip--album .strip__link:focus-visible {
-  background-color: transparent;
 }
 
 .strip__link:hover :is(.strip__img, .bookplate),
