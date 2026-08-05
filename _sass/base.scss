@@ -169,8 +169,31 @@ kbd {
   max-width: 100%;
 }
 
+/* ⚠️ NO `height` HERE, AND THAT IS A FIX, NOT AN OMISSION (2026-08-05).
+   This rule used to read `height: auto; width: 100%` and the `height: auto` was
+   quietly fatal: an <audio> element's visible size comes from its shadow-DOM
+   control strip, which the UA stylesheet sizes explicitly (~54px in Chrome).
+   An AUTHOR declaration of `auto` beats any UA declaration regardless of
+   specificity, so the controls had no height to lay out against and the whole
+   player collapsed.
+
+   Measured on the LIVE site before the fix: `getBoundingClientRect().height`
+   was 0 and the computed height was `0px`, with `:where(audio) { height: auto }`
+   the only matched rule setting it. The player was invisible — a reader saw the
+   caption and nothing above it. It had been that way on all three posts that
+   carry audio (/2004/jai-hind-the-national-anthem/,
+   /2007/podcast-interview-with-marissa-mayer-of-google/,
+   /2009/angry-iphone-ringtone/) and nobody could play any of them.
+
+   ⚠️ This is why the sibling rule above lists img/video/iframe and NOT audio.
+   For those, `height: auto` is doing real work — it undoes an intrinsic or
+   attribute height so `max-width: 100%` can scale them. Audio has no intrinsic
+   size to undo; it only has controls, and `auto` erases them. Do not "tidy" it
+   back into that list.
+
+   `width: 100%` stays: it stretches the control strip to the measure instead of
+   leaving it at the UA's default ~300px. */
 :where(audio) {
-  height: auto;
   width: 100%;
 }
 
