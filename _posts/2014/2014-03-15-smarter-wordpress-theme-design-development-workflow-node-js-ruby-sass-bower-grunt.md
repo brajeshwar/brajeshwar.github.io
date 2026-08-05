@@ -8,7 +8,7 @@ The idea behind the presentation was to introduce existing WordPress Designers a
 
 ### Browse, Download Files;
 
-* The <a href="http://www.slideshare.net/Brajeshwar/wordpress-theme-development-workflow-with-nodejs-ruby-sass-bower-and-grunt">Slides are on SlideShare</a>.<br />
+* The <a href="/static/pdf/wordpress-theme-development-workflow.pdf">Slides as a PDF</a> (1.2&nbsp;MB).<br />
 * <a href="https://github.com/theme6/wp-portkey">WP-Portkey</a> on Github.
 
 ### Here are the breakdown of the slides;
