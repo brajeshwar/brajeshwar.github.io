@@ -64,15 +64,17 @@ Victory, victory, victory to thee.
 ```
 
 <figure>
-  <audio controls src="https://archive.org/download/jana-gana-mana/jana_gana_mana.mp3"></audio>
+  <audio controls preload="none" src="/static/audio/jana-gana-mana.mp3"></audio>
   <figcaption>Jana Gana Mana
-  	<cite>(source: <a href="https://archive.org/download/jana-gana-mana/jana_gana_mana.mp3">archive.org</a>)</cite>
+  	<cite>(source: <a href="https://archive.org/details/jana-gana-mana">archive.org</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/">CC BY-NC-SA 2.5</a>)</cite>
   </figcaption>
 </figure>
 
-<iframe width="100%" src="https://www.youtube.com/embed/DOFnMBgZQXg?si=PETPl6jjR2GxuJGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-{:.desc}
-Rabindranath Tagore reciting “Jana Gana Mana”
+<figure>
+  <iframe width="100%" src="https://www.youtube.com/embed/DOFnMBgZQXg?si=PETPl6jjR2GxuJGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <figcaption>
+    Rabindranath Tagore reciting “Jana Gana Mana”
+  </figcaption>
+</figure>
 
 [^JanaGanaMana]: [Jana Gana Mana](https://en.wikipedia.org/wiki/Jana_Gana_Mana) (জন গণ মন) 'Thou Art the Ruler of the Minds of All People') is the national anthem of the Republic of India. It was originally composed as “Bharoto Bhagyo Bidhata” in Bengali by polymath [Rabindranath Tagore](https://en.wikipedia.org/wiki/Rabindranath_Tagore) on December 11, 1911. The first stanza of the song Bharoto Bhagyo Bidhata was adopted by the Constituent Assembly of India as the National Anthem on January 24, 1950. A formal rendition of the national anthem takes approximately 52 seconds. A shortened version consisting of the first and last lines (and taking about 20 seconds to play) is also staged occasionally. It was first publicly sung on December 27, 1911 at the Calcutta (present-day Kolkata) Session of the Indian National Congress.
