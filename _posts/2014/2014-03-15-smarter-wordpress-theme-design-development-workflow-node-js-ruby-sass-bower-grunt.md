@@ -36,4 +36,11 @@ The idea behind the presentation was to introduce existing WordPress Designers a
 1. Deploy with Grunt, sit back and relax.
 1. Thanks to everyone for being part of my presentation.
 
-<iframe src="http://www.slideshare.net/slideshow/embed_code/32184284?rel=0" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
+<figure>
+  <a href="/static/pdf/wordpress-theme-development-workflow.pdf">
+    <img src="/static/2014/wordpress-theme-development-workflow.webp" alt="Title slide — a smarter WordPress Theme Workflow with node.js, ruby, sass, bower and grunt, WordCamp Mumbai 2014" loading="lazy">
+  </a>
+  <figcaption>
+    <a href="/static/pdf/wordpress-theme-development-workflow.pdf">A smarter WordPress Theme Workflow</a>, WordCamp Mumbai 2014 &mdash; 22 slides (PDF, 1.2&nbsp;MB)
+  </figcaption>
+</figure>

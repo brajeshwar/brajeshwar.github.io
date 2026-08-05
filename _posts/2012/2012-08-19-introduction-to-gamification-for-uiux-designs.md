@@ -4,7 +4,14 @@ At the <a href="//www.siliconindia.com/events-agenda/webapps-conference-Bangalor
 
 It was not bad but I won't call that a very good one either. My gauge of the audience was off the track. I was talking to a crowd who have never heard of "Gamification" and almost all of the audience haven't heard of <a href="//www.codecademy.com/">CodeAcademy</a>, no clue of the recently popular and viral site <a href="//benthebodyguard.com/">Ben the Bodyguard</a> and they were amusingly clueless about - <a href="//en.wikipedia.org/wiki/Easter_egg_(media)">Easter Egg</a>. Next time, I'll do more research on the audience I'll be speaking to.
 
-<iframe src="http://www.slideshare.net/slideshow/embed_code/13995516" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
+<figure>
+  <a href="/static/pdf/gamification-in-ui-ux-designs.pdf">
+    <img src="/static/2012/gamification-in-ui-ux-designs.webp" alt="Title slide — Gamification in UI/UX Designs, by Brajeshwar Oinam" loading="lazy">
+  </a>
+  <figcaption>
+    <a href="/static/pdf/gamification-in-ui-ux-designs.pdf">Gamification in UI/UX Designs</a> &mdash; 11 slides (PDF, 567&nbsp;KB)
+  </figcaption>
+</figure>
 
 Flipping through the above slides won't do much justice without reading the notes included with the slide or interacting with me during my session. I tend to have just about 10-13 major slides and I love interacting with the crowd. I've lots to learn and I'm learning a lot from the few interactions that I had recently, including this one at WebApp 2012.
 
