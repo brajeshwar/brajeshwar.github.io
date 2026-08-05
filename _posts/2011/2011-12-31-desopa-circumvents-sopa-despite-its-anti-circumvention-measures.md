@@ -2,7 +2,7 @@
 
 Leave it to the internet to find a way to circumvent impending laws designed solely to control it.
 
-Pro-internet developer Tamer Rizk designed a tool that can circumvent the Stop Online Piracy Act (SOPA) and 'save the internet'. Rizk's app is rather ironic given that it circumvents SOPA -- despite its anti-circumvention measures. His new app, called <a href="https://addons.mozilla.org/en-US/firefox/addon/desopa/">DeSopa</a> (<a href="https://github.com/TamerRizk/desopa">source on Github</a>), is a Firefox add-on extension that can outwit SOPA by manipulating the Domain Name System.
+Pro-internet developer Tamer Rizk designed a tool that can circumvent the Stop Online Piracy Act (SOPA) and 'save the internet'. Rizk's app is rather ironic given that it circumvents SOPA -- despite its anti-circumvention measures. His new app, called [DeSopa](https://addons.mozilla.org/en-US/firefox/addon/desopa/) ([source on Github](https://github.com/TamerRizk/desopa)), is a Firefox add-on extension that can outwit SOPA by manipulating the Domain Name System.
 
 SOPA, if/when it is approved, would force ISPs to deny service to any websites found infringing on copyright material and would use the Domain Name System (DNS) to filter offending websites. DeSopa however found a loophole: a circumvention measure of bypassing the DNS and using IP addresses to load websites instead of the DNS-given name of the website (ex. using 209.85.175.99 instead of https://www.google.com/). By checking with foreign DNS servers DeSopa can find the correct IP address without using its DNS address -- and would therefore not be caught in SOPA's web.
 

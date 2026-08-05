@@ -1,6 +1,6 @@
 # 'Flashcomm : 2 more Components'
 
-<a href="https://www.macromedia.com/software/flashcom/download/components/" target="_blank">Flashcomm Components</a>, they have been upadated and 2 more components (15th Component : VideoPlayback and the 16th : VideoRecord) have been added. Go get your <a href="https://www.macromedia.com/software/flashcom/download/components/" target="_blank">FREE download</a> today. Thanks to <a href="https://samuelwan.com/information/" target="_blank">Sam</a> for the quick info.
+[Flashcomm Components](https://www.macromedia.com/software/flashcom/download/components/), they have been upadated and 2 more components (15th Component : VideoPlayback and the 16th : VideoRecord) have been added. Go get your [FREE download](https://www.macromedia.com/software/flashcom/download/components/) today. Thanks to [Sam](https://samuelwan.com/information/) for the quick info.
 
 Remember to read the documentation of the 2 new components in the PDF that is enclosed with the communication components package. It is also learnt that the "SimpleConnect" component no longer has a memory leak on the client-side; previously, the memory leak occurred if you typed faster than 1 character every 10 milliseconds. And no more problem of those people asking how can you have more than one AVPresence component instances in a single application without having to set the property for each instance of the AVPresence,
 

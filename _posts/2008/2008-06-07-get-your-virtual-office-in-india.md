@@ -1,6 +1,6 @@
 # Get your Virtual Office in India
 
-Today morning, something caught my fancy with the Hindustan Times print, something about setting up a cheap virtual office for startups who need a physical address, phones number and assistants. I googled around to find one such service -- the <a href="https://www.servcorp.net/imperialservcorp/">Imperial Servcorp</a>.
+Today morning, something caught my fancy with the Hindustan Times print, something about setting up a cheap virtual office for startups who need a physical address, phones number and assistants. I googled around to find one such service -- the [Imperial Servcorp](https://www.servcorp.net/imperialservcorp/).
 
 Imperial Servcorp is a joint venture between real estate conglomerate K. Raheja Corp and Australian serviced office provider Servcorp. They've setup virtual office formats for Multinationals and Small & Medium Enterprises (SMEs) across India. Their first Indian serviced office complex at Mumbai's Bandra-Kurla Complex (BKC) was inaugurated in February this year. I'm not sure but I suspect there are similar services in Hyderabad and Bangalore too.
 

@@ -6,15 +6,15 @@ Ordinarily consisting of a flat surface upon which you are invited to "draw" an 
 
 ## Flavors
 
-Often used by artists as a general replacement for a mouse as the primary pointing and navigation device, the use of tablets is ubiquitous in the digital artist community. Out of experience, I'm going to suggest <a href="https://www.wacom.com/">Wacom</a> models for different types of users.
+Often used by artists as a general replacement for a mouse as the primary pointing and navigation device, the use of tablets is ubiquitous in the digital artist community. Out of experience, I'm going to suggest [Wacom](https://www.wacom.com/) models for different types of users.
 
-- Amateur: All you amateur designers and illustrators, don't dig deep ipockets. Without investing much you can get a <a href="https://www.wacom.com/bamboo/">Bamboo</a> (512 levels of pressure sensitivity and a resolution of 1024 lines per inch), available in 3 different sizes albeit with the same specifications.
-- Professional: If you're a pro or want to be one, you probably havebudget but you don't want to compromise on quality. Your best bet would be the <a href="https://www.wacom.com/intuos/">Intuos</a> models with the latest offerings sporting 2048 pressure levels and includes tilt sensitivity.
-- Uber cool: If you're already a rockstar designer and want to productivity, look no further than the <a href="https://www.wacom.com/cintiq/">Cintiq</a> series. Hold your horses, these 'tablets' are actually pressure sensitive monitors and you can draw directly on the screen!
+- Amateur: All you amateur designers and illustrators, don't dig deep ipockets. Without investing much you can get a [Bamboo](https://www.wacom.com/bamboo/) (512 levels of pressure sensitivity and a resolution of 1024 lines per inch), available in 3 different sizes albeit with the same specifications.
+- Professional: If you're a pro or want to be one, you probably havebudget but you don't want to compromise on quality. Your best bet would be the [Intuos](https://www.wacom.com/intuos/) models with the latest offerings sporting 2048 pressure levels and includes tilt sensitivity.
+- Uber cool: If you're already a rockstar designer and want to productivity, look no further than the [Cintiq](https://www.wacom.com/cintiq/) series. Hold your horses, these 'tablets' are actually pressure sensitive monitors and you can draw directly on the screen!
 
 ## Tech Talk
 
-Using a patented electromagnetic resonance technology, Wacom tablets provide power through resonant coupling thus alleviating the need for batteries or power cords. Resulting in a longer and essentially maintenance free lifespan this makes the tablet bigger and heavier than other technologies. Most tablets sport a USB interface since almost all computers support USB. Being hot swappable is an added advantage. Bluetooth is a wireless option for connecting a graphics tablet to your computer as in the <a href="https://www.wacom.com/graphire/">Graphire</a> Bluetooth, which can connect to your computer without wires. Popular sizes match up neatly to the 4:3 aspect ratio but wide-format graphics tablets are said to better correspond with the aspect ratio of widescreen monitors though not necessary because software takes care of the mapping.
+Using a patented electromagnetic resonance technology, Wacom tablets provide power through resonant coupling thus alleviating the need for batteries or power cords. Resulting in a longer and essentially maintenance free lifespan this makes the tablet bigger and heavier than other technologies. Most tablets sport a USB interface since almost all computers support USB. Being hot swappable is an added advantage. Bluetooth is a wireless option for connecting a graphics tablet to your computer as in the [Graphire](https://www.wacom.com/graphire/) Bluetooth, which can connect to your computer without wires. Popular sizes match up neatly to the 4:3 aspect ratio but wide-format graphics tablets are said to better correspond with the aspect ratio of widescreen monitors though not necessary because software takes care of the mapping.
 
 ## Relief from RSI
 

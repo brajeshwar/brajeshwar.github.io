@@ -1,6 +1,6 @@
 # Microsoft Opens Up with Windows Azure
 
-Open Source Developers will always have more reasons to smile than curse themselves for using Open Source Softwares. A new reason however is Microsoft's recent declaration at the <a href="https://osidays.com/">Open Source India conference</a>, OSI Days 2010, of the availability of a latest range of developer software tools and Software Development Kits (SDKs) for <a href="https://en.wikipedia.org/wiki/PHP">PHP</a> (Hypertext Preprocessor) developers who exclusively work on the development of <a href="https://www.microsoft.com/windowsazure/windowsazure/">Windows Azure</a>. As stated earlier this announcement comes as a pleasant surprise more so for open source developers (those developing Azure) than anyone else.
+Open Source Developers will always have more reasons to smile than curse themselves for using Open Source Softwares. A new reason however is Microsoft's recent declaration at the [Open Source India conference](https://osidays.com/), OSI Days 2010, of the availability of a latest range of developer software tools and Software Development Kits (SDKs) for [PHP](https://en.wikipedia.org/wiki/PHP) (Hypertext Preprocessor) developers who exclusively work on the development of [Windows Azure](https://www.microsoft.com/windowsazure/windowsazure/). As stated earlier this announcement comes as a pleasant surprise more so for open source developers (those developing Azure) than anyone else.
 
 This new development by Microsoft is a conscious attempt towards bridging the gap between Microsoft and Open Source Communities; and for this - a 2 year effort has taken place with which it has expanded its open source community project work to support cloud platform interoperability. Speaking on Microsoft's intention to provide Open Source developers more access to their platforms, Vijay Rajagopalan, Principal Architect for Microsoft's Interoperability Strategy team said "One example of this is our support for an open and interoperable cloud, which we believe is critical for businesses, governments and organizations to take full advantage of cloud-enabled innovations. The new SDKs and tools we are announcing today are an important step towards ensuring an open cloud that in turn brings greater flexibility to our partners and customers."
 
@@ -14,7 +14,7 @@ Microsoft though needn't worry about offering new language programs or visual to
 
 ## What Potential does this Development Hold?
 
-With the availability of these new tools that are dedicated to openness in cloud computing, developers can now merge the applications of the new <a href="https://www.microsoft.com/windowsazure/">Windows Azure</a> with other platforms (other clouds or on-premise clouds) and fabricate more novel open cloud applications. 
+With the availability of these new tools that are dedicated to openness in cloud computing, developers can now merge the applications of the new [Windows Azure](https://www.microsoft.com/windowsazure/) with other platforms (other clouds or on-premise clouds) and fabricate more novel open cloud applications. 
 
 ## The Way Forward
 

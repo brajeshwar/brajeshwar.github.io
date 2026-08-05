@@ -1,8 +1,8 @@
 # Cogito Ergo Sum - I blog, therefore I am
 
-It is the generation of the lazy, the people who need their 11am cuppa coffee to even register that they are alive, and the generation of the creatively competent, the ones who are up all night writing about their fantasy alternate worlds. Is <a href="https://www.copyblogger.com/blogging-is-dead-again/">blogging dead</a> then?
+It is the generation of the lazy, the people who need their 11am cuppa coffee to even register that they are alive, and the generation of the creatively competent, the ones who are up all night writing about their fantasy alternate worlds. Is [blogging dead](https://www.copyblogger.com/blogging-is-dead-again/) then?
 
-Writing isn't easy, and Blogging is even tougher. Keeping up with the self acquired deadline of creating something readable on a regular basis is quite a task, especially when the only proceeds are the <a href="https://www.mathewingram.com/work/2007/07/10/do-blog-comments-still-matter/">comments</a> and a readership. Blogs that began as a drunken epiphany have a short shelf life, and even the ones that were born out of a meticulously thought out ideology are tough to keep up with. So what do you do when you want to prove that blogging is your calling, especially in this <a href="https://www.nytimes.com/2011/02/21/technology/internet/21blog.html">micro-blogging obsessed world</a> that gets jaded if you write more than 140 characters? Do we need to force-fit blogs into <a href="https://www.web-strategist.com/blog/2007/10/24/do-you-respect-media-snackers-tell-me-why/">snack-sized</a> containers?
+Writing isn't easy, and Blogging is even tougher. Keeping up with the self acquired deadline of creating something readable on a regular basis is quite a task, especially when the only proceeds are the [comments](https://www.mathewingram.com/work/2007/07/10/do-blog-comments-still-matter/) and a readership. Blogs that began as a drunken epiphany have a short shelf life, and even the ones that were born out of a meticulously thought out ideology are tough to keep up with. So what do you do when you want to prove that blogging is your calling, especially in this [micro-blogging obsessed world](https://www.nytimes.com/2011/02/21/technology/internet/21blog.html) that gets jaded if you write more than 140 characters? Do we need to force-fit blogs into [snack-sized](https://www.web-strategist.com/blog/2007/10/24/do-you-respect-media-snackers-tell-me-why/) containers?
 
 ## Re-think Great Expectations
 
@@ -10,15 +10,15 @@ If you thought you'd be an instant hit and a blogger's award will be named after
 
 ## Always, Scan
 
-Always scan the market before you sell your product. Do a little survey of what is popular (in other words -- what sells) in the blog world, and, in your field, what works. Note the trends, the famous blogs, the readers, their opinions, and then start a blog. Your readership will ultimately define your virtual existence, so take a lesson from <a href="https://bokardo.com/">Bokardo</a>. 
+Always scan the market before you sell your product. Do a little survey of what is popular (in other words -- what sells) in the blog world, and, in your field, what works. Note the trends, the famous blogs, the readers, their opinions, and then start a blog. Your readership will ultimately define your virtual existence, so take a lesson from [Bokardo](https://bokardo.com/). 
 
 ## Move with Time
 
-If it is a technical, science, informatory blog, then you must be absolutely sure your knowledge is up-to-date. Read a lot before you start giving <a href="https://www.urbandictionary.com/define.php?term=Gyaan">gyaan</a>. Make sure you know everything there is to know before you start writing, not just in your area, but in the art of writing too. Sometimes blogs with good information are not read because their language is coarse and presentation is poor. Hence, the next important thing is how you present your blog. Add templates, fonts, themes and colors that reflect the personality of your blog. The blog is an extension of you; so do justice to it and your own self too. 
+If it is a technical, science, informatory blog, then you must be absolutely sure your knowledge is up-to-date. Read a lot before you start giving [gyaan](https://www.urbandictionary.com/define.php?term=Gyaan). Make sure you know everything there is to know before you start writing, not just in your area, but in the art of writing too. Sometimes blogs with good information are not read because their language is coarse and presentation is poor. Hence, the next important thing is how you present your blog. Add templates, fonts, themes and colors that reflect the personality of your blog. The blog is an extension of you; so do justice to it and your own self too. 
 
 ## Break the Block
 
-Everybody and their uncles go through a writer's block. You don't have to be like <a href="https://bigb.bigadda.com/">Amitabh Bachchan</a> (who blogs every night, and <a href="https://twitter.com/srbachchan">microblogs</a> every two hours), maintain your own pace. Irregularity is acceptable; it is the disappearing act that is a killer. Write a short note on your blog that you will be back after a break with stuff that is worth writing and reading. Good bloggers are always happy to cross promote, and you can always get help with your blog by working with a new writer. 
+Everybody and their uncles go through a writer's block. You don't have to be like [Amitabh Bachchan](https://bigb.bigadda.com/) (who blogs every night, and [microblogs](https://twitter.com/srbachchan) every two hours), maintain your own pace. Irregularity is acceptable; it is the disappearing act that is a killer. Write a short note on your blog that you will be back after a break with stuff that is worth writing and reading. Good bloggers are always happy to cross promote, and you can always get help with your blog by working with a new writer. 
 
 ## Know when to Pack the Bags
 

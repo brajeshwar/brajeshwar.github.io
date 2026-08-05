@@ -1,8 +1,8 @@
 # Apple releases iPad
 
-The wait is over. Steve did his job! After the much hyped event, we have a new product from <a href="https://www.apple.com/">Apple</a>. It's an <a href="https://www.apple.com/ipad/">iPad</a>. Yesterday, we wrote about <a href="/2010/what-to-expect-from-apple-today/">what to expect off the event</a>. Steve Jobs made many souls happy!
+The wait is over. Steve did his job! After the much hyped event, we have a new product from [Apple](https://www.apple.com/). It's an [iPad](https://www.apple.com/ipad/). Yesterday, we wrote about [what to expect off the event](/2010/what-to-expect-from-apple-today/). Steve Jobs made many souls happy!
 
-Last night, we saw people storming onto social networks -- <a href="https://search.twitter.com/search?q=ipad">Twitter</a>, Facebook, Blogs and everything else they could to publish even the minuscule detail of the device as it got revealed by Apple. Many blogs were covering the event live via pictures and text updates. It was fascinating to see few blogs did a LIVE coverage without having a live presence at the event! All this indicates how social the brand Apple gets to be, despite their silence on the product until it was finally launched, yesterday.
+Last night, we saw people storming onto social networks -- [Twitter](https://search.twitter.com/search?q=ipad), Facebook, Blogs and everything else they could to publish even the minuscule detail of the device as it got revealed by Apple. Many blogs were covering the event live via pictures and text updates. It was fascinating to see few blogs did a LIVE coverage without having a live presence at the event! All this indicates how social the brand Apple gets to be, despite their silence on the product until it was finally launched, yesterday.
 
 Topics like Apple and iPad started to trend within minutes of the launch. Few websites had to face downtime as well. Thanks to the enormous load that the social network addicts passed on to them!
 
@@ -43,4 +43,4 @@ iPad is undoubtedly a masterpiece when it comes to read information, watch video
 
 It's an iPad and not a netbook or a laptop, so let's not expect it to do which it ain't build for. It would be a great experience for Kindle lovers to try out this new device. We would be equally anxious to see Amazon's take on this.
 
-For now, it shall be to early to dig into the good-bad-ugly of an iPad. We shall wait to see one, rather use it. There is more to expect from <a href="https://theappleblog.com/2010/01/27/ibooks-app-ibook-store/">iBookstore</a> and <a href="https://www.apple.com/iwork/">iWork</a>. Let's not forget the App Store and the community of iPhone app developers. Let the applications developed specifically for iPad arrive. There is more to come in the ecosystem, for sure.
+For now, it shall be to early to dig into the good-bad-ugly of an iPad. We shall wait to see one, rather use it. There is more to expect from [iBookstore](https://theappleblog.com/2010/01/27/ibooks-app-ibook-store/) and [iWork](https://www.apple.com/iwork/). Let's not forget the App Store and the community of iPhone app developers. Let the applications developed specifically for iPad arrive. There is more to come in the ecosystem, for sure.

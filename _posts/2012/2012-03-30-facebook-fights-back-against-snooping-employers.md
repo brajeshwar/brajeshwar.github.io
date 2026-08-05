@@ -2,7 +2,7 @@
 
 In response to employers demanding employees force over their Facebook passwords, Facebook has decided to fight back. But of course they are Facebook. And unsurprisingly, they are fighting back in their typical screw-you-I'm-Facebook style response.
 
-They released a rather <a href="https://www.facebook.com/notes/facebook-and-privacy/protecting-your-passwords-and-your-privacy/326598317390057">fiery indictment</a> of the workplace practice, saying that it violates not only privacy rights but also Facebook's own constitution of guidelines - you are not allowed to share or solicit Facebook passwords. They even went so far as to call it criminal, saying companies forcing employees or potential employees to pass over information is a violation. "As a user, you shouldn't be forced to share your private information and communications just to get a job," Facebook said in its <a href="https://www.facebook.com/notes/facebook-and-privacy/protecting-your-passwords-and-your-privacy/326598317390057">post</a>.
+They released a rather [fiery indictment](https://www.facebook.com/notes/facebook-and-privacy/protecting-your-passwords-and-your-privacy/326598317390057) of the workplace practice, saying that it violates not only privacy rights but also Facebook's own constitution of guidelines - you are not allowed to share or solicit Facebook passwords. They even went so far as to call it criminal, saying companies forcing employees or potential employees to pass over information is a violation. "As a user, you shouldn't be forced to share your private information and communications just to get a job," Facebook said in its [post](https://www.facebook.com/notes/facebook-and-privacy/protecting-your-passwords-and-your-privacy/326598317390057).
 
 Facebook, in their very public release said that this practice affects users, 'friends' of users and employers themselves:
 
@@ -22,4 +22,4 @@ Employers who enter their employees' social profiles will be legally liable for 
 
 So, now what?
 
-Well, Facebook is telling users to <a href="https://news.cnet.com/8301-13578_3-57403259-38/facebook-dont-reveal-your-password-to-snooping-employers/">just say no</a>. Facebook will likely be backed up with the law (hence their legal soapbox), meaning that Facebook users should be fine. In theory.
+Well, Facebook is telling users to [just say no](https://news.cnet.com/8301-13578_3-57403259-38/facebook-dont-reveal-your-password-to-snooping-employers/). Facebook will likely be backed up with the law (hence their legal soapbox), meaning that Facebook users should be fine. In theory.

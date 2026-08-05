@@ -4,7 +4,7 @@ Linux is an OS that conjures up images of computer nerds hunched over their keyb
 
 ## What options does one have?
 
-To be rather precise, the answer is five -- <a href="https://www.comptia.org/">CompTIA</a> (Computing Technology Industry Association), <a href="https://www.lpi.org/">LPI</a> (Linux Professional Institute), <a href="https://www.linuxcertification.org/">SAIR Linux</a>, <a href="https://www.novell.com/training/certinfo/">Novell Corporation</a> and <a href="https://www.redhat.com/certification/">Red Hat</a>. If you are wondering whether you should go with "Eeenie Meenie Mynie Mo" to chart your career path, allow me to elaborate and educate you on your options.
+To be rather precise, the answer is five -- [CompTIA](https://www.comptia.org/) (Computing Technology Industry Association), [LPI](https://www.lpi.org/) (Linux Professional Institute), [SAIR Linux](https://www.linuxcertification.org/), [Novell Corporation](https://www.novell.com/training/certinfo/) and [Red Hat](https://www.redhat.com/certification/). If you are wondering whether you should go with "Eeenie Meenie Mynie Mo" to chart your career path, allow me to elaborate and educate you on your options.
 
 ## The two roads
 
@@ -12,7 +12,7 @@ CompTIA, SAIR and LPI are professional/industry vendor-neutral certification pro
 
 ## Eenie Meenie Mynie Mo
 
-Yes, sometimes believing in serendipity is a tempting choice but for those of you driven by logic and reason, read on. For those fairly new to Linux, try the ## LPIC Level 1 or ## CompTIA Linux+. Developing strong basics will establish your credentials and form the basis for expanding your resume. These exams are also more affordable than Red Hat certifications and are available through testing networks like <a href="https://www.prometric.com/">Prometric</a> and <a href="https://www.pearsonvue.com/">PearsonVue</a>. Novell Linux certifications are only through Novell Partners. SAIR has been integrated into the Linux Professional Group and is keeping a low profile since. For advanced administrators, Red Hat's RHCE requires passing a hands-on exam and challenges your technical skills. Though it is vendor specific most of it is true of many other flavors of Linux.
+Yes, sometimes believing in serendipity is a tempting choice but for those of you driven by logic and reason, read on. For those fairly new to Linux, try the ## LPIC Level 1 or ## CompTIA Linux+. Developing strong basics will establish your credentials and form the basis for expanding your resume. These exams are also more affordable than Red Hat certifications and are available through testing networks like [Prometric](https://www.prometric.com/) and [PearsonVue](https://www.pearsonvue.com/). Novell Linux certifications are only through Novell Partners. SAIR has been integrated into the Linux Professional Group and is keeping a low profile since. For advanced administrators, Red Hat's RHCE requires passing a hands-on exam and challenges your technical skills. Though it is vendor specific most of it is true of many other flavors of Linux.
 
 ## How long will it last?
 
@@ -24,10 +24,10 @@ Whether you are an experienced Linux Admin or a newbie gingerly stepping forth i
 
 So what are you waiting for? All the links you need to access and more at your fingertips:
 
-- <a href="https://www.certification-crazy.net/lpi_study.htm">LPI Certification Self-Study Guide</a>
-- <a href="https://www.certification-crazy.net/linux_main.htm">Certification Crazy</a>
-- <a href="https://oreilly.com/linux/">O'Reilly Linux Resource</a>
-- <a href="https://www.redhat.com/certification/">Redhat Certification</a>
-- <a href="https://www.linuxcertification.org/">SAIR Linux</a>
-- <a href="https://www.comptia.org/certifications/listed/linux.aspx">CompTIA Linux+</a>
-- <a href="https://www.novell.com/training/certinfo/clp/">Novell Certified Linux Professional</a>
+- [LPI Certification Self-Study Guide](https://www.certification-crazy.net/lpi_study.htm)
+- [Certification Crazy](https://www.certification-crazy.net/linux_main.htm)
+- [O'Reilly Linux Resource](https://oreilly.com/linux/)
+- [Redhat Certification](https://www.redhat.com/certification/)
+- [SAIR Linux](https://www.linuxcertification.org/)
+- [CompTIA Linux+](https://www.comptia.org/certifications/listed/linux.aspx)
+- [Novell Certified Linux Professional](https://www.novell.com/training/certinfo/clp/)

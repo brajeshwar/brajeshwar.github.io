@@ -4,11 +4,11 @@ In this new environment flash files can work on-line or off-line transparently t
 
 Some of the prominent links about Macromedia Central can be found at;
 
-- <a href="https://www.macromedia.com/devnet/central/" title="macromedia central at devnet">Devnet on Central</a>
-- <a href="https://www.macromedia.com/software/central/whitepaper/central_wp.pdf" title="macromedia central white paper in pdf">central whitepaper pdf</a>
-- <a href="https://www.macromedia.com/devnet/central/sdk/" title="macromedia central public SDK">Public SDK</a>
-- <a href="https://www.macromedia.com/go/install_central" title="Install Macromedia Central">Install Macromedia Central</a>
-- <a href="https://www.centralapps.com/" title="central applications">Central Apps</a>
+- [Devnet on Central](https://www.macromedia.com/devnet/central/ "macromedia central at devnet")
+- [central whitepaper pdf](https://www.macromedia.com/software/central/whitepaper/central_wp.pdf "macromedia central white paper in pdf")
+- [Public SDK](https://www.macromedia.com/devnet/central/sdk/ "macromedia central public SDK")
+- [Install Macromedia Central](https://www.macromedia.com/go/install_central "Install Macromedia Central")
+- [Central Apps](https://www.centralapps.com/ "central applications")
 
 <a href="https://en.wikipedia.org/wiki/Macromedia" title="Macromedia"><img class="small right" src="/static/2003/macromedia-logo.png" alt="Macromedia"></a>
 

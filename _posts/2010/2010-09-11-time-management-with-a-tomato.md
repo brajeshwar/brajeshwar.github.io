@@ -1,6 +1,6 @@
 # Time Management with a Tomato
 
-Time management is an all important and essential skill for all professionals in the business arena today. In this post, I'm going to define a process of splitting up the 24 hours of a day into smaller more manageable moments of time. If you are wondering what a tomato has to do with this, let me dis-pell the mystery. It's called the <a href="https://www.pomodorotechnique.com/">Pomodoro Technique</a>.
+Time management is an all important and essential skill for all professionals in the business arena today. In this post, I'm going to define a process of splitting up the 24 hours of a day into smaller more manageable moments of time. If you are wondering what a tomato has to do with this, let me dis-pell the mystery. It's called the [Pomodoro Technique](https://www.pomodorotechnique.com/).
 
 In this post, I will provide an overview of this technique of time management. The Pomodoro Technique was founded by Francesco Cirillo, a business consultant, while in university struggling to juggle his studies. Cirillo developed the technique in 1992 and named it after his tomato-shaped timer. "Pomodoro" is the Italian word for "tomato". QED or Quad Errad Demonstratum i.e. hence proved.
 
@@ -45,4 +45,4 @@ The Pomodoro Technique showcases specific ways to handle interruptions, by disti
 
 The Pomodoro Technique also involves recording your tasks and pomodoros, estimating the effort needed for activities, allocating your available pomodoros, and more. You can implement only the parts that matter to your situation or requirement and still benefit from this technique.
 
-If you want to learn more, you can download the Pomodoro Technique -- <a href="https://www.pomodorotechnique.com/">book</a> (FREE) and the <a href="https://pomodoro.ugolandini.com/">Pomodoro Desktop</a> (a desktop application for the Mac OSX.)
+If you want to learn more, you can download the Pomodoro Technique -- [book](https://www.pomodorotechnique.com/) (FREE) and the [Pomodoro Desktop](https://pomodoro.ugolandini.com/) (a desktop application for the Mac OSX.)

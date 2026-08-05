@@ -1,6 +1,6 @@
 # Ping! You got music
 
-Apple has always been well equipped to take on music centered social networks like <a href="https://www.last.fm/">Last.fm</a>, <a href="https://like.fm/">Like.fm</a> and has finally entered the charts with <a href="https://www.apple.com/itunes/ping/">Ping</a> in sync with <a href="https://www.apple.com/itunes/">iTunes 10</a>. As always the inherent simplicity of Apple services isn't lost here in a complex web of functionality. Ping is also available on the iPhone and iPod touch with iTunes 10 for the eternally mobile.
+Apple has always been well equipped to take on music centered social networks like [Last.fm](https://www.last.fm/), [Like.fm](https://like.fm/) and has finally entered the charts with [Ping](https://www.apple.com/itunes/ping/) in sync with [iTunes 10](https://www.apple.com/itunes/). As always the inherent simplicity of Apple services isn't lost here in a complex web of functionality. Ping is also available on the iPhone and iPod touch with iTunes 10 for the eternally mobile.
 
 ## Ping Fu!
 
@@ -20,4 +20,4 @@ The joy and sharing of social networks is as rampant as ever. Png lets you see w
 
 ## Just press Play
 
-With 160 million iTunes users in 23 countries, Steve Jobs, says "With Ping you can follow your favorite artists and friends and join a worldwide conversation with music's most passionate fans." With a catalog of over 14 million songs, 65,000 TV episodes and 10,000 movies including over 3,000 in HD video, <a href="https://www.apple.com/itunes/">iTunes 10</a> offers Movie Rentals, integrated podcasting support, the ability to turn previously purchased tracks into complete albums at a reduced price, and seamless integration with iPod, iPad and iPhone.
+With 160 million iTunes users in 23 countries, Steve Jobs, says "With Ping you can follow your favorite artists and friends and join a worldwide conversation with music's most passionate fans." With a catalog of over 14 million songs, 65,000 TV episodes and 10,000 movies including over 3,000 in HD video, [iTunes 10](https://www.apple.com/itunes/) offers Movie Rentals, integrated podcasting support, the ability to turn previously purchased tracks into complete albums at a reduced price, and seamless integration with iPod, iPad and iPhone.

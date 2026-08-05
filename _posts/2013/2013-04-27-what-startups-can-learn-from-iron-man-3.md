@@ -4,7 +4,7 @@ image: /static/2013/iron-man-3.webp
 
 # What Startups can learn from Iron Man 3
 
-Yes, as expected <a href="https://www.imdb.com/title/tt1300854/">Iron Man 3</a> was an awesome movie. The movie opens as a narrative by Tony Stark to Dr. Bruce Banner, a story that started way before Tony Stark became Iron Man. I won't be talking about the movie, I'll let you enjoy that at a theatre near you.
+Yes, as expected [Iron Man 3](https://www.imdb.com/title/tt1300854/) was an awesome movie. The movie opens as a narrative by Tony Stark to Dr. Bruce Banner, a story that started way before Tony Stark became Iron Man. I won't be talking about the movie, I'll let you enjoy that at a theatre near you.
 
 So, after the Avengers event in New York, Tony became obsessive and began prototyping lots of Iron Man suits. He moves on to another model and never have 'the one' perfect Iron Man suit.
 

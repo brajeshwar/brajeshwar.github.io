@@ -4,10 +4,10 @@ I was trying to know a bit more about Subversion folder management myself. While
 
 BASIC
 
-- REPOSITORY: <a href="https://svnbook.red-bean.com/svnbook/ch05s04.html#svn-ch-5-sect-6.1">Official recommendation</a> is to have three folders/subdirectories under the Project Root - "trunk", "branches" and "tags".
-- COMMIT WISELY: Commit to reflect a <a href="https://svnbook.red-bean.com/svnbook/ch04s03.html">single purpose</a>.
+- REPOSITORY: [Official recommendation](https://svnbook.red-bean.com/svnbook/ch05s04.html#svn-ch-5-sect-6.1) is to have three folders/subdirectories under the Project Root - "trunk", "branches" and "tags".
+- COMMIT WISELY: Commit to reflect a [single purpose](https://svnbook.red-bean.com/svnbook/ch04s03.html).
 - ISSUE-TRACKER: Create 2-way links between Subversion changesets and issue-tracking database.
-- TRACK MERGES MANUALLY: Write descriptive log message that explains <a href="https://svnbook.red-bean.com/svnbook/ch04s03.html#svn-ch-4-sect-3.2">your merge</a>.
+- TRACK MERGES MANUALLY: Write descriptive log message that explains [your merge](https://svnbook.red-bean.com/svnbook/ch04s03.html#svn-ch-4-sect-3.2).
 
 
 WHEN, WHAT AND WHY TO BRANCH, TAG
@@ -24,4 +24,4 @@ SO ...
 
 UPDATES
 
-1st Oct, 2007: Kalid Azad has <a href="https://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a>.
+1st Oct, 2007: Kalid Azad has [A Visual Guide to Version Control](https://betterexplained.com/articles/a-visual-guide-to-version-control/).

@@ -1,6 +1,6 @@
 # The art of Linux
 
-As discussed in our earlier article -- <a href="/2008/ready-for-lamp/">Ready for LAMP</a>, let's move on to our mainstream theme - The art of (tao) Linux!
+As discussed in our earlier article -- [Ready for LAMP](/2008/ready-for-lamp/), let's move on to our mainstream theme - The art of (tao) Linux!
 
 The existence of Linux is inevitable in the realm of LAMP based web development. It is more than incomplete to talk about LAMP without the operating system - Linux. Although Apache, mySQL and PHP/Python/Perl are equally capable of running over non-*nix machines too, Linux predominantly holds a larger share in terms of developers' choice. Hence the acronym - LAMP.
 

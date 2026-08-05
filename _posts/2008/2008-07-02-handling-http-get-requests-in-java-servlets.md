@@ -1,6 +1,6 @@
 # Handling HTTP GET Requests in Java Servlets
 
-Earlier, we've <a href="/2008/java-servlets-an-introduction/">introduced you to Java Servlets</a> -- what they are, life cycle, advantages. Let's move ahead with Java Servlets and get some simple code to handle the HTTP GET Request to show you how to write a servlet.
+Earlier, we've [introduced you to Java Servlets](/2008/java-servlets-an-introduction/) -- what they are, life cycle, advantages. Let's move ahead with Java Servlets and get some simple code to handle the HTTP GET Request to show you how to write a servlet.
 
 Servlets can be used for handling both the GET Requests and the POST Requests. However in this post, let's write the code for handling the GET Request. The HttpServlet class is used for handling HTTP GET Requests as it has some specialized methods that can efficiently handle the HTTP requests. These methods are;
 

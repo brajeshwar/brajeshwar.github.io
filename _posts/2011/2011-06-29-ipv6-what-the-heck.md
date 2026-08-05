@@ -2,9 +2,9 @@
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/2wa7y3W2DI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-First came <a href="https://en.wikipedia.org/wiki/IPv4">IPv4</a> -- an interesting story in itself given that the original protocol for the internet was named TCP, and entered into its third version before IP came about -- giving birth to Internet Protocol version 4 (IPv4).
+First came [IPv4](https://en.wikipedia.org/wiki/IPv4) -- an interesting story in itself given that the original protocol for the internet was named TCP, and entered into its third version before IP came about -- giving birth to Internet Protocol version 4 (IPv4).
 
-IPv5 was quickly eclipsed by the speed of technological advancements and now we have <a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a> -- well almost. IPv6 is still chugging along, desperately trying to get noticed like an annoying middle child.
+IPv5 was quickly eclipsed by the speed of technological advancements and now we have [IPv6](https://en.wikipedia.org/wiki/IPv6) -- well almost. IPv6 is still chugging along, desperately trying to get noticed like an annoying middle child.
 
 IPv6 however will quickly become a reality as we exhaust the few remaining IPv4 addresses from the finite batch of 3.4 million addresses that were available through version 4's protocol. IPv6 comparatively will give us 340 undecillion addresses, or `340,282,366,920,938,000,000,000,000,000,000,000,000` addresses -- to be precise.
 

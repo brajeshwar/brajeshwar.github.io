@@ -10,7 +10,7 @@ Being a successful online company requires placing people first and search engin
 
 Thinking for search engines is counterproductive. A search engine won't buy your products or redistribute your messages. A search engine does not re-tweet your links or tell its friends how great your products were.
 
-Some people also limit their link-building strategies because they feel that will suffer the <a href="/2010/blame-it-on-google-sandbox/">wrath of the Sandbox</a>. This is insane because they are destroying the opportunity to create a brand image for their website. Without a good brand image, a position at the top of the SERPs is meaningless because it won't inspire anyone to actually visit your site.
+Some people also limit their link-building strategies because they feel that will suffer the [wrath of the Sandbox](/2010/blame-it-on-google-sandbox/). This is insane because they are destroying the opportunity to create a brand image for their website. Without a good brand image, a position at the top of the SERPs is meaningless because it won't inspire anyone to actually visit your site.
 
 Finally, too many people are terrified about using outbound links on their own pages. If they use too many, they fear they will lose their pagerank. The purpose of the Internet is to share information, not to worry about building page rank. Readers will only return when they like what you are willing to share and returning visitors mean more than any that the search engine refers.
 

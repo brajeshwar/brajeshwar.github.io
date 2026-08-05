@@ -2,7 +2,7 @@
 
 Install Leopard on your PC in 3 easy steps!
 
-DailyApps has a nice hack on how to install Leopard, Apple's latest <a href="https://www.apple.com/macosx/">Mac OS X</a> 10.5.x in 3 simple steps.
+DailyApps has a nice hack on how to install Leopard, Apple's latest [Mac OS X](https://www.apple.com/macosx/) 10.5.x in 3 simple steps.
 
 Just after few days Leopard was released, hackers have managed to create a patched DVD that everyone can use to install Leopard on PC's without having to buy a Mac. DailyApps warns that the tutorial is very experimental and things might not work the right way simply because it is still early days in hacking Leopard to work on PC's. So, do it at your own risk.
 

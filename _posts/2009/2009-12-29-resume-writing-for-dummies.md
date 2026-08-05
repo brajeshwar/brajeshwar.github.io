@@ -50,4 +50,4 @@ Link to your blog or portfolio, LinkedIn, StackOverflow, Github, etc. If you don
 
 ### Updates
 
-For employers, I just found an interesting template from <a href="https://www.typeform.com">Typeform</a> -- <a href="https://www.typeform.com/templates/t/employee-job-application/">Job Application Form Template</a>. Check it out and get your company’s hiring process smoother with this job application form template.
+For employers, I just found an interesting template from [Typeform](https://www.typeform.com) -- [Job Application Form Template](https://www.typeform.com/templates/t/employee-job-application/). Check it out and get your company’s hiring process smoother with this job application form template.

@@ -1,8 +1,8 @@
 # Setup Facebook Chat with Messages in OS X Mountain Lion
 
-Apple recently announced <a href="https://www.apple.com/macosx/mountain-lion/">OS X Mountain Lion</a> and is expected to be released this summer 2012. If you're adventurous enough, you can download and try out the <a href="https://developer.apple.com/technologies/mountain-lion/">developer beta</a> release of OS X Mountain Lion.
+Apple recently announced [OS X Mountain Lion](https://www.apple.com/macosx/mountain-lion/) and is expected to be released this summer 2012. If you're adventurous enough, you can download and try out the [developer beta](https://developer.apple.com/technologies/mountain-lion/) release of OS X Mountain Lion.
 
-For the remaining mere mortals - you and me - you can try out <a href="https://www.apple.com/macosx/mountain-lion/messages-beta/">Messages</a> Beta which will be part of the new upcoming OS X Mountain Lion.
+For the remaining mere mortals - you and me - you can try out [Messages](https://www.apple.com/macosx/mountain-lion/messages-beta/) Beta which will be part of the new upcoming OS X Mountain Lion.
 
 You can use your iCloud ID to sign-in to Messages and start using it right away. The other supported services are AIM, Google Talk, Yahoo! and Jabber Protocol.
 

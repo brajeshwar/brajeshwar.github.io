@@ -1,10 +1,10 @@
 # Download Free book - The Photoshop Anthology
 
-Sitepoint is giving away an entire 278 page Photoshop book for free (pdf). It will only be up for grabs for 30 days. The entire 278 page book, yours to keep, forever! <a href="https://photoshop.aws.sitepoint.com/">The Photoshop Anthology: 101 Web Design Tips, Tricks & Techniques</a> is the ultimate Photoshop compendium for web designers.
+Sitepoint is giving away an entire 278 page Photoshop book for free (pdf). It will only be up for grabs for 30 days. The entire 278 page book, yours to keep, forever! [The Photoshop Anthology: 101 Web Design Tips, Tricks & Techniques](https://photoshop.aws.sitepoint.com/) is the ultimate Photoshop compendium for web designers.
 
 It's brimming with tried and tested real-world Photoshop solutions that will add impact to your next web design project. If you've ever been stuck for inspiration, have puzzled over just how to create a shiny aqua-style button, or wanted to create that seamlessly tiling background image you saw on a site recently, you need download this book.
 
-If you want to know more before downloading the book, check the details at <a href="https://www.photoshopsupport.com/photoshop-blog/08/05/free-photoshop-book-anthology-101.html">Photoshop Support</a>. Here are some excerpts;
+If you want to know more before downloading the book, check the details at [Photoshop Support](https://www.photoshopsupport.com/photoshop-blog/08/05/free-photoshop-book-anthology-101.html). Here are some excerpts;
 
 Who Should Read this Book?
 

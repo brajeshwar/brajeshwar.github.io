@@ -1,6 +1,6 @@
 # How to evaluate your new Product/Startup idea
 
-<a href="https://evhead.com/">Evan Williams</a> is one of those many entrepreneurs that I admire. Well, he is one of the team behind two hugely successful web applications - <a href="https://www.blogger.com/">Blogger</a> and <a href="https://twitter.com/">Twitter</a>. Here, I'm going to re-phrase and re-think over one of his recent article - <a href="https://web.archive.org/web/20160322105954/https://evhead.com/2007/12/how-to-evaluate-new-product-idea.asp">Will it fly? How to Evaluate a New Product Idea</a> (original at <em>https://evhead.com/2007/12/how-to-evaluate-new-product-idea.asp</em>).
+[Evan Williams](https://evhead.com/) is one of those many entrepreneurs that I admire. Well, he is one of the team behind two hugely successful web applications - [Blogger](https://www.blogger.com/) and [Twitter](https://twitter.com/). Here, I'm going to re-phrase and re-think over one of his recent article - [Will it fly? How to Evaluate a New Product Idea](https://web.archive.org/web/20160322105954/https://evhead.com/2007/12/how-to-evaluate-new-product-idea.asp) (original at <em>https://evhead.com/2007/12/how-to-evaluate-new-product-idea.asp</em>).
 
 Evan goes deep with the following points;
 

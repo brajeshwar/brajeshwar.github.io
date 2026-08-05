@@ -1,6 +1,6 @@
 # Essential Principles for Good Web Design
 
-I just stumbled on an awesome article from <a href="https://psdtuts.com/">PSDTuts</a> - <a href="https://psdtuts.com/designing-tutorials/9-essential-principles-for-good-web-design/">9 Essential Principles for Good Web Design</a>. In the article, <strong>Collis</strong> talks about the oxymorons that a designer faces while designing a good website - a design that is both usable and pleasing, delivers information and builds brand, is technically sound and visually coherent.
+I just stumbled on an awesome article from [PSDTuts](https://psdtuts.com/) - [9 Essential Principles for Good Web Design](https://psdtuts.com/designing-tutorials/9-essential-principles-for-good-web-design/). In the article, <strong>Collis</strong> talks about the oxymorons that a designer faces while designing a good website - a design that is both usable and pleasing, delivers information and builds brand, is technically sound and visually coherent.
 
 The article is worth a read, and it links to other resources which are old but golden rules of the design paradigm. The article lays out 9 Essential Principles for Good Web Design;
 

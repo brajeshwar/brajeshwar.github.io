@@ -1,6 +1,6 @@
 # Cappuccino
 
-The guys from <a href="https://280north.com/">280 North</a> did it again. Earlier, it was the awesome Keynote on the Web -- <a href="https://280slides.com/">280 Slides</a>. Now, its -- <a href="https://cappuccino.org/">Cappuccino</a> -- an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
+The guys from [280 North](https://280north.com/) did it again. Earlier, it was the awesome Keynote on the Web -- [280 Slides](https://280slides.com/). Now, its -- [Cappuccino](https://cappuccino.org/) -- an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
 
 280 Slides
 
@@ -8,7 +8,7 @@ The guys from <a href="https://280north.com/">280 North</a> did it again. Earlie
 
 Cappuccino
 
-Along with Objective-J, Cappuccino provides a complete toolkit to develop rich web applications. Its open sourced under <a href="https://www.gnu.org/licenses/lgpl.html">LGPL</a>.
+Along with Objective-J, Cappuccino provides a complete toolkit to develop rich web applications. Its open sourced under [LGPL](https://www.gnu.org/licenses/lgpl.html).
 
 Cappuccino is built on top of standard web technologies like JavaScript, and it implements most of the familiar APIs from GNUstep and Apple's Cocoa frameworks. When you program in Cappuccino, you don't need to concern yourself with the complexities of traditional web technologies like HTML, CSS, or even the DOM. The unpleasantries of building complex cross browser applications are abstracted away for you.
 
@@ -18,8 +18,8 @@ With Cappuccino, you don't need to know HTML. You'll never write a line of CSS. 
 
 Cappuccino and Objective-J run in any modern web browser, including:
 
-* <a href="https://www.microsoft.com/windows/products/winfamily/ie/">Internet Explorer 6 & 7</a>
-* <a href="https://firefox.com/">Firefox 2 and 3</a>
-* <a href="https://www.apple.com/safari/">Safari 3 / WebKit</a>
-* <a href="https://www.google.com/chrome/">Google Chrome</a>
-* <a href="https://www.opera.com/">Opera 9</a>
+* [Internet Explorer 6 & 7](https://www.microsoft.com/windows/products/winfamily/ie/)
+* [Firefox 2 and 3](https://firefox.com/)
+* [Safari 3 / WebKit](https://www.apple.com/safari/)
+* [Google Chrome](https://www.google.com/chrome/)
+* [Opera 9](https://www.opera.com/)

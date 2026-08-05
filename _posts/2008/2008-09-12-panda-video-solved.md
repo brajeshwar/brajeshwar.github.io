@@ -4,9 +4,9 @@ Panda is an awesome open source solution for video uploading, encoding and strea
 
 By providing an elegant REST API, Panda makes it completely painless to implement full video uploading, encoding and streaming functionality to your web application in a matter of hours.
 
-* Runs completely within <a href="https://aws.amazon.com/">Amazon's Web Services</a> utilising EC2, S3 and SimpleDB.
-* Everything contained within one elegant <a href="https://www.merbivore.com/">Merb</a> application.
-* Support for the numerous encoding profiles <a href="https://ffmpeg.mplayerhq.hu/">FFmpeg</a> supports including FLV, h264 for Flash a iPhone formats.
+* Runs completely within [Amazon's Web Services](https://aws.amazon.com/) utilising EC2, S3 and SimpleDB.
+* Everything contained within one elegant [Merb](https://www.merbivore.com/) application.
+* Support for the numerous encoding profiles [FFmpeg](https://ffmpeg.mplayerhq.hu/) supports including FLV, h264 for Flash a iPhone formats.
 * Lovely little admin dashboard for managing your videos.
 
 Runs in the cloud
@@ -19,13 +19,13 @@ Your Panda EC2 instance will provide a simple REST (both YAML and XML formats su
 
 Once a video has been uploaded the encoding daemon will pickup the job and encode the video to the encoding profiles you specify. Upon completion Panda will send a notification back to your application to let it know the video has finished encoding and can be watched.
 
-The superb <a href="https://www.jeroenwijering.com/?item=Jwp_FLV_Media_Player">JW FLV Player</a> is used by default, but because you've got access to all of the video files you can use any Flash video player out there.
+The superb [JW FLV Player](https://www.jeroenwijering.com/?item=Jwp_FLV_Media_Player) is used by default, but because you've got access to all of the video files you can use any Flash video player out there.
 
 More about Panda
 
-* <a href="https://pandastream.com/">Panda Website</a>
-* <a href="https://pandastream.com/docs/getting_started">Get Started</a>
-* <a href="https://pandastream.com/docs">Documentation</a>
-* <a href="https://github.com/newbamboo/panda">Source at Github</a>
+* [Panda Website](https://pandastream.com/)
+* [Get Started](https://pandastream.com/docs/getting_started)
+* [Documentation](https://pandastream.com/docs)
+* [Source at Github](https://github.com/newbamboo/panda)
 
-Panda was created by the specialist Ruby on Rails (and Merb!) development company <a href="https://new-bamboo.co.uk/">New Bamboo</a>.
+Panda was created by the specialist Ruby on Rails (and Merb!) development company [New Bamboo](https://new-bamboo.co.uk/).

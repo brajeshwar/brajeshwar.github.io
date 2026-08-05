@@ -1,6 +1,6 @@
 # Meeting Startups at Conquest, 2019
 
-I'm one of the mentors at the <a href="https://conquest.org.in/">Conquest</a>, 2019. I met up with some of the Startups.
+I'm one of the mentors at the [Conquest](https://conquest.org.in/), 2019. I met up with some of the Startups.
 
 ## Aayush
 
@@ -14,7 +14,7 @@ Aayush built a unique microsensor technology, which is cost-effective, smart pri
 
 ## Xplorazzi
 
-<a href="https://www.xplorazzi.com/">Xplorazzi</a> is building an automated tool which will take retail shop shelf images and CCTV video feed to create Planograms.
+[Xplorazzi](https://www.xplorazzi.com/) is building an automated tool which will take retail shop shelf images and CCTV video feed to create Planograms.
 
 Planograms are a crucial part of today’s retail stores. It can be done manually to comply with audit requirements or use software that is an additional cost to the retailers.
 
@@ -22,13 +22,13 @@ Xplorazzi uses imaging technology, deep learning, and sales data to build a smar
 
 ## Untangled 
 
-<a href="https://untangled.cloud/">Untangled Cloud</a> makes it easy to work across multiple Cloud providers such as Amazon’s AWS, Google Cloud, and Microsoft’s Azure.
+[Untangled Cloud](https://untangled.cloud/) makes it easy to work across multiple Cloud providers such as Amazon’s AWS, Google Cloud, and Microsoft’s Azure.
 
 Untangled Cloud provides analytics and tools to help Startups and SMEs make better decisions while choosing the right cloud service providers. They help in upskilling teams to learn more about the services of various cloud providers. They also plan to build tools to help migrate from one cloud provider to the other easily and seamlessly. 
 
 ## Pigeon
 
-<a href="https://pigeonapp.io/">Pigeon</a> is "Zapier for Notifications."
+[Pigeon](https://pigeonapp.io/) is "Zapier for Notifications."
 
 Pigeon has built an easy to use system that helps businesses manage user notifications & preferences across multiple channels -- emails, apps, instant messaging apps, and text messages in one place.
 

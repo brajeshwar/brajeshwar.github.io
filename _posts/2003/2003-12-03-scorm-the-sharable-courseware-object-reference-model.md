@@ -8,7 +8,7 @@ SCORM offers the potential for widespread interoperability of content and reusab
 
 ### Refencences
 
-- <a href="https://www.rhassociates.com/scorm.htm" title="scorm">Scorm at RHassociates.com</a>
-- <a href="https://www.rhassociates.com/scorm.htm" title="SCORM Version 1.3 Sample Run-time Environment (RTE) Version 1.3 Beta-3">SCORM Version 1.3 Sample Run-time Environment (RTE) Version 1.3 Beta-3</a>
-- <a href="https://www.rhassociates.com/adl_background.htm" title="adl background">ADL background</a>
-- <a href="https://www.macromedia.com/resources/elearning/whitepapers.html" title="macromedia white paper relating to scorm">Related Macromedia White Papers</a>
+- [Scorm at RHassociates.com](https://www.rhassociates.com/scorm.htm "scorm")
+- [SCORM Version 1.3 Sample Run-time Environment (RTE) Version 1.3 Beta-3](https://www.rhassociates.com/scorm.htm "SCORM Version 1.3 Sample Run-time Environment (RTE) Version 1.3 Beta-3")
+- [ADL background](https://www.rhassociates.com/adl_background.htm "adl background")
+- [Related Macromedia White Papers](https://www.macromedia.com/resources/elearning/whitepapers.html "macromedia white paper relating to scorm")

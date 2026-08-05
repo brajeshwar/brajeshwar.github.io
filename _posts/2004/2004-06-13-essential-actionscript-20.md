@@ -61,9 +61,9 @@ The last chapter of Part I of the book deals with exception handling, error hand
 
 Reference links:
 
-- <a href="https://moock.org/eas2/" title="essential actionscript 2.0">Official Site</a>
-- <a href="https://moock.org/eas2/examples/" title="examples">EAS 2.0 Examples</a>
-- <a href="https://ootips.org/" title="object orientation tips">Object Orientation Tips</a>
-- <a href="https://www.uml.org/" title="UML home page">UML</a>
-- <a href="https://www.gmodeler.com/" title="gModeler">gModeler</a>
-- <a href="https://archive.eiffel.com/doc/manuals/technology/oosc/inheritance-design/page.html" title="using inheritance well">Using Inheritance Well</a>
+- [Official Site](https://moock.org/eas2/ "essential actionscript 2.0")
+- [EAS 2.0 Examples](https://moock.org/eas2/examples/ "examples")
+- [Object Orientation Tips](https://ootips.org/ "object orientation tips")
+- [UML](https://www.uml.org/ "UML home page")
+- [gModeler](https://www.gmodeler.com/ "gModeler")
+- [Using Inheritance Well](https://archive.eiffel.com/doc/manuals/technology/oosc/inheritance-design/page.html "using inheritance well")

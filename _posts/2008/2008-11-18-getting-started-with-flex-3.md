@@ -4,7 +4,7 @@ Jack D. Herrington is an engineer, author and presenter whose mission is to expo
 
 Emily Kim, President, Trilemtry, Inc., has co-authored and contributed to a number of books including a college-level workbook about the Internet and various ColdFusion books. Besides being a writer, Emily is also a programmer, designer and a Abobe Master Instructor.
 
-Adobe sent me 10 books -- <a href="https://www.amazon.com/Getting-Started-Flex-Developer-Developers/dp/0596520646">Getting started with Flex 3</a> and I'm giving away all of them to 10 developers who are willing to comment or <a href="/contact/">contact</a> with their name and mailing address.
+Adobe sent me 10 books -- [Getting started with Flex 3](https://www.amazon.com/Getting-Started-Flex-Developer-Developers/dp/0596520646) and I'm giving away all of them to 10 developers who are willing to comment or [contact](/contact/) with their name and mailing address.
 
 Getting started with Flex 3
 

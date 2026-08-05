@@ -6,22 +6,22 @@ Android's fire will continue to spread in the coming months by adding many new a
 
 ## Samsung Galaxy S II (I9100)
 
-<a href="https://www.samsung.com/in/consumer/mobile-phone/mobile-phone/smartphone/GT-I9100LKAINU/index.idx?pagetype=prd_detail">Samsung Galaxy S II</a> takes the number one slot in "The top Android phones" both in terms of price and features. Even though it is priced around 30k, it is truly value for money product as it far exceeds other Android phones in the same price range by offering more advanced features. With 1.2 GHz Dual Core Processor and 1 GB RAM the slim hand-held comes with netbook power. 
+[Samsung Galaxy S II](https://www.samsung.com/in/consumer/mobile-phone/mobile-phone/smartphone/GT-I9100LKAINU/index.idx?pagetype=prd_detail) takes the number one slot in "The top Android phones" both in terms of price and features. Even though it is priced around 30k, it is truly value for money product as it far exceeds other Android phones in the same price range by offering more advanced features. With 1.2 GHz Dual Core Processor and 1 GB RAM the slim hand-held comes with netbook power. 
 
 ## Sony Ericsson Xperia Arc
 
-<a href="https://www.sonyericsson.com/cws/corporate/products/phoneportfolio/specification/xperiaarc">Sony Ericsson Xperia Arc</a> is an ultra-sleek model from Sony Ericsson noticed as one of the thinnest phones in the world. It just measures 8.7 mm at its thinnest point. The best features include 4.2" LED backlit display, 1 GHz Scorpion processor, 512 MB RAM and 8 MP camera. The phone comes with Gingerbread OS. 
+[Sony Ericsson Xperia Arc](https://www.sonyericsson.com/cws/corporate/products/phoneportfolio/specification/xperiaarc) is an ultra-sleek model from Sony Ericsson noticed as one of the thinnest phones in the world. It just measures 8.7 mm at its thinnest point. The best features include 4.2" LED backlit display, 1 GHz Scorpion processor, 512 MB RAM and 8 MP camera. The phone comes with Gingerbread OS. 
 
 ## Google Nexus S
 
-<a href="https://www.google.com/nexus/">Google Nexus S</a> is another high level Android phone from Samsung with its unique feature - instant Android Version update. As long as the hardware supports, the Android OS (Operating System) will be updated automatically. Currently it is available with Gingerbread version. As the phone does not come with customized User Interface, it offers the ability to experience Android in its pure form. The phone is featured with 1.0 GHz Cortex A-8 Processor, 512 MB Ram and 5 MP Camera. 
+[Google Nexus S](https://www.google.com/nexus/) is another high level Android phone from Samsung with its unique feature - instant Android Version update. As long as the hardware supports, the Android OS (Operating System) will be updated automatically. Currently it is available with Gingerbread version. As the phone does not come with customized User Interface, it offers the ability to experience Android in its pure form. The phone is featured with 1.0 GHz Cortex A-8 Processor, 512 MB Ram and 5 MP Camera. 
 
 ## LG Optimus 2X (P990)
 
-<a href="https://www.gsmarena.com/lg_optimus_2x-3598.php">LG Optimus 2X</a> is the 'value for money' phone at the current price. The phone comes with 1 GHz Nvidia Dual Core processor, 512 MB RAM, 8 MP camera and 4" IPS LCD screen. It has got the title of world's first dual core smartphone. Currently it is available with Gingerbread version (Android 2.3).
+[LG Optimus 2X](https://www.gsmarena.com/lg_optimus_2x-3598.php) is the 'value for money' phone at the current price. The phone comes with 1 GHz Nvidia Dual Core processor, 512 MB RAM, 8 MP camera and 4" IPS LCD screen. It has got the title of world's first dual core smartphone. Currently it is available with Gingerbread version (Android 2.3).
 
 ## HTC Incredible S
 
-<a href="https://www.htc.com/www/smartphones/htc-incredible-s/">HTC Incredible S</a> is the top end from HTC with 1 GHz Qualcomm processor, 4" SLCD display, 8 MP Camera, slim and strong built with Android 2.3.3 HTC sense UI2.0.  The phone is really incredible with the interface, applications and multi-tasking power. 
+[HTC Incredible S](https://www.htc.com/www/smartphones/htc-incredible-s/) is the top end from HTC with 1 GHz Qualcomm processor, 4" SLCD display, 8 MP Camera, slim and strong built with Android 2.3.3 HTC sense UI2.0.  The phone is really incredible with the interface, applications and multi-tasking power. 
 
 With increasing number of Android phone sales in US and Europe, the same pace is expected in Indian market. Have you tasted the Android flavor? I am sure the Droid devices will make a significant effect on your living style.

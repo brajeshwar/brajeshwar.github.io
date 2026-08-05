@@ -1,6 +1,6 @@
 # Word Wrap in Eclipse
 
-It is still very buggy but we can live with it; you can enable <a href="https://ahtik.com/blog/projects/eclipse-word-wrap/">Word Wrap in Eclipse</a>. It screws up the line number, line height, etc but they will get back to their normal state once you turn off Virtual Word Wrap.
+It is still very buggy but we can live with it; you can enable [Word Wrap in Eclipse](https://ahtik.com/blog/projects/eclipse-word-wrap/). It screws up the line number, line height, etc but they will get back to their normal state once you turn off Virtual Word Wrap.
 
 ## How to install?
 

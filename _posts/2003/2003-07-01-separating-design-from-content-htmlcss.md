@@ -7,31 +7,31 @@ While struggling to do a tableless (yes, no tables at all) for this site, I came
 
 CSS related worth mentioning links
 
-- <a href="https://www.meyerweb.com/" title="eric meyer">eric meyer's website</a>
-- <a href="https://css-discuss.incutio.com/" title="css wiki">the css wiki</a>
-- <a href="https://www.alistapart.com/stories/practicalcss/" title="ala layout">a list apart's css layout technique</a>
-- <a href="https://www.bluerobot.com/" title="blue robot">blue robot</a> how can you miss this one,
-- <a href="https://www.thenoodleincident.com/" title="noodle incident">the noodle incident</a>
-- <a href="https://glish.com/" title="glish">glish</a> a good resource,
-- <a href="https://www.v2studio.com/k/" title="kay">kay</a>
-- <a href="https://www.mako4css.com/" title="css shark">css shark</a>
-- <a href="https://www.ncdesign.org/html/sindex.htm" title="nc design">nc design</a> rather basic but still good for a start,
-- <a href="https://www.contenu.nu/nublog.html" title="nu blog">nu blog</a>, care for css for print,
-- <a href="https://realworldstyle.com/" title="real world style">real world style</a>, styles that works with antique browsers too,
-- <a href="https://www.w3schools.com/css/" title="w3 schools">w3 schools' css</a>
+- [eric meyer's website](https://www.meyerweb.com/ "eric meyer")
+- [the css wiki](https://css-discuss.incutio.com/ "css wiki")
+- [a list apart's css layout technique](https://www.alistapart.com/stories/practicalcss/ "ala layout")
+- [blue robot](https://www.bluerobot.com/ "blue robot") how can you miss this one,
+- [the noodle incident](https://www.thenoodleincident.com/ "noodle incident")
+- [glish](https://glish.com/ "glish") a good resource,
+- [kay](https://www.v2studio.com/k/ "kay")
+- [css shark](https://www.mako4css.com/ "css shark")
+- [nc design](https://www.ncdesign.org/html/sindex.htm "nc design") rather basic but still good for a start,
+- [nu blog](https://www.contenu.nu/nublog.html "nu blog"), care for css for print,
+- [real world style](https://realworldstyle.com/ "real world style"), styles that works with antique browsers too,
+- [w3 schools' css](https://www.w3schools.com/css/ "w3 schools")
 and how can I forget the css link on
-- <a href="https://www.w3.org/TR/REC-CSS2/cover.html" title="w3c">w3c</a>
-- <a href="https://zeldman.com/daily/1003b.shtml#nov0603" title="CSS smorgasbord">Jeffrey Zeldman's CSS smorgasbord</a>)
-- <a href="https://www.htmlhelp.com/reference/css/text/" title="">CSS Text Propeties</a>
-- <a href="https://www.pixy.cz/blogg/clanky/cssnopreloadrollovers/">Fast Rollovers, No Preload Needed</a>
-- <a href="https://www.redmelon.net/tstme/">Red Melon experiments</a>
-- <a href="https://www.simplebits.com/tips/minitab_shapes.html">Mini-tab shapes</a>
+- [w3c](https://www.w3.org/TR/REC-CSS2/cover.html "w3c")
+- [Jeffrey Zeldman's CSS smorgasbord](https://zeldman.com/daily/1003b.shtml#nov0603 "CSS smorgasbord"))
+- [CSS Text Propeties](https://www.htmlhelp.com/reference/css/text/)
+- [Fast Rollovers, No Preload Needed](https://www.pixy.cz/blogg/clanky/cssnopreloadrollovers/)
+- [Red Melon experiments](https://www.redmelon.net/tstme/)
+- [Mini-tab shapes](https://www.simplebits.com/tips/minitab_shapes.html)
 vertical mini-tabs
-- <a href="https://www.meyerweb.com/eric/css/edge/popups/demo.html">Pure CSS popups</a>
-- <a href="https://www.positioniseverything.net/ordered-floats.html#demo-213">Source-ordered columns</a>
+- [Pure CSS popups](https://www.meyerweb.com/eric/css/edge/popups/demo.html)
+- [Source-ordered columns](https://www.positioniseverything.net/ordered-floats.html#demo-213)
 CSS Hints for IE5
-- <a href="https://www.fu2k.org/alex/css/">Netscape-4-compatible CSS layouts</a>
-- <a href="https://css-discuss.incutio.com/?page=CssHacks">CSS browser hacks</a>
+- [Netscape-4-compatible CSS layouts](https://www.fu2k.org/alex/css/)
+- [CSS browser hacks](https://css-discuss.incutio.com/?page=CssHacks)
 Hiding CSS from old versions of Opera
-- <a href="https://www.w3development.de/css/hide_css_from_browsers/">Hiding CSS from various browsers</a>
-- <a href="https://css-discuss.incutio.com/?page=StyleInEmail">Using CSS to style email</a>
+- [Hiding CSS from various browsers](https://www.w3development.de/css/hide_css_from_browsers/)
+- [Using CSS to style email](https://css-discuss.incutio.com/?page=StyleInEmail)

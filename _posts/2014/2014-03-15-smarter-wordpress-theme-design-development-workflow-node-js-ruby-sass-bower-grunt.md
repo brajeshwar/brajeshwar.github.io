@@ -1,19 +1,19 @@
 # A Smarter WordPress Theme Design & Development Workflow with node.js, ruby, sass, bower and grunt
 
-I was lucky to be one of the <a href="https://2014.mumbai.wordcamp.org/speakers/">speakers</a> at the <a href="https://2014.mumbai.wordcamp.org/">WordCamp Mumbai</a>, Mar 15-16, 2014. When I stumbled upon their Call for Speakers, I was excited with the speaking opportunity and an uncanny chance to visit Bombay after so many years. Thankfully, the organizing team accepted my proposal and thus, presented and spoke on, "A Smarter WordPress Theme Design & Development Workflow with <a href="https://nodejs.org/">node.js</a>, <a href="https://www.ruby-lang.org/">ruby</a>, <a href="https://sass-lang.com/">sass</a>, <a href="https://bower.io/">bower</a> and <a href="https://gruntjs.com/">grunt</a>."
+I was lucky to be one of the [speakers](https://2014.mumbai.wordcamp.org/speakers/) at the [WordCamp Mumbai](https://2014.mumbai.wordcamp.org/), Mar 15-16, 2014. When I stumbled upon their Call for Speakers, I was excited with the speaking opportunity and an uncanny chance to visit Bombay after so many years. Thankfully, the organizing team accepted my proposal and thus, presented and spoke on, "A Smarter WordPress Theme Design & Development Workflow with [node.js](https://nodejs.org/), [ruby](https://www.ruby-lang.org/), [sass](https://sass-lang.com/), [bower](https://bower.io/) and [grunt](https://gruntjs.com/)."
 
-> Special thanks goes to <a href="https://saneef.com/">Saneef Ansari</a>, my business partner at <a href="https://theme6.com/">Theme6</a> for helping me out iron the kinks and pushing codes so I could release our initial draft framework of <a href="https://github.com/theme6/wp-portkey">WP-Portkey</a>.
+> Special thanks goes to [Saneef Ansari](https://saneef.com/), my business partner at [Theme6](https://theme6.com/) for helping me out iron the kinks and pushing codes so I could release our initial draft framework of [WP-Portkey](https://github.com/theme6/wp-portkey).
 
 The idea behind the presentation was to introduce existing WordPress Designers and Developers to a more automated workflow so they can focus on what they do best - design and develop WordPress themes.
 
 ### Browse, Download Files;
 
-* The <a href="/static/pdf/wordpress-theme-development-workflow.pdf">Slides as a PDF</a> (1.2&nbsp;MB).<br />
-* <a href="https://github.com/theme6/wp-portkey">WP-Portkey</a> on Github.
+* The [Slides as a PDF](/static/pdf/wordpress-theme-development-workflow.pdf) (1.2&nbsp;MB).<br />
+* [WP-Portkey](https://github.com/theme6/wp-portkey) on Github.
 
 ### Here are the breakdown of the slides;
 
-1. Introducing myself - I'm Brajeshwar and I tweet <a href="//twitter.com/brajeshwar">@brajeshwar</a>.
+1. Introducing myself - I'm Brajeshwar and I tweet [@brajeshwar](//twitter.com/brajeshwar).
 1. In early days and even to these day, the most typical workflow of WordPress Theme Design and Development is to work on the PHP, CSS and JavaScripts on their own. Sometimes, we pick up from existing theme frameworks or a starter frame and goes on with the workflow and repeat it till we are happy with the outcome.
 1. We also have to refresh our browsers, on various permutations and combinations of Platforms, devices and browsers.
 1. Once we become good with this workflow, we even graduated to minifying the CSS, concatenate and uglify the JavaScripts to optimize our themes.

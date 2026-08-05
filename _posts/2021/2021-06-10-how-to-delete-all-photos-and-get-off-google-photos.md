@@ -39,7 +39,7 @@ It will take hours, even days, if you have lots of photos. Let it run. It took m
 
 ![Google One Storage Management)](/static/2021/google-one-storage-management.jpg)
 
-Clean up at Google One’s Storage isn’t easy either. The hardest ones are going to be the Large Items. I had no idea where the “Large Files” were stored. So, I cannot delete it from the local synced Drive but have to hunt and peck at the <a href="https://one.google.com/storage/management">Google Storage Management</a> Dashboard. Be careful; you might be deleting important files.
+Clean up at Google One’s Storage isn’t easy either. The hardest ones are going to be the Large Items. I had no idea where the “Large Files” were stored. So, I cannot delete it from the local synced Drive but have to hunt and peck at the [Google Storage Management](https://one.google.com/storage/management) Dashboard. Be careful; you might be deleting important files.
 
 <img class="small right" src="/static/2021/google-one-support-india-rbi.jpg" alt="Google One Support Chat">
 

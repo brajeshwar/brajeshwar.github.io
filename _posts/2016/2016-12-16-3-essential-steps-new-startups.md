@@ -8,7 +8,7 @@ It's all too common for would-be entrepreneurs to think of ideas for products or
 
 ## Identify your Unique Selling Proposition
 
-Whether you're launching a completely new and revolutionary product or something that's similar to what others already sell, you must identify your <a href="https://www.marketingdonut.co.uk/marketing/marketing-strategy/branding/developing-your-usp-a-step-by-step-guide">Unique Selling Proposition</a> (USP). Once you've developed your USP, incorporate that into your marketing strategy. Remember, just because you inherently know what makes your product better than similar offerings doesn't mean your prospective customers will.
+Whether you're launching a completely new and revolutionary product or something that's similar to what others already sell, you must identify your [Unique Selling Proposition](https://www.marketingdonut.co.uk/marketing/marketing-strategy/branding/developing-your-usp-a-step-by-step-guide) (USP). Once you've developed your USP, incorporate that into your marketing strategy. Remember, just because you inherently know what makes your product better than similar offerings doesn't mean your prospective customers will.
 
 ## Plan Ahead
 

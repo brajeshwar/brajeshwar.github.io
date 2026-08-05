@@ -4,15 +4,15 @@ Icon Fonts are a smart way to deploy scalable icons in your website and web app 
 
 You might have used some of the icon fonts, such as;
 
-- <a href="https://fontawesome.io/">Font Awesome</a>, 
-- <a href="https://www.entypo.com/">Entypo</a>, 
-- <a href="https://icomoon.io/">IcoMoon</a>, 
-- <a href="https://symbolset.com/">Symbolset</a>, 
-- <a href="https://typicons.com/">Typicons</a>, 
-- <a href="https://somerandomdude.com/work/iconic/">Iconic</a>, 
-- <a href="https://zocial.smcllns.com/">Zocial</a>, 
-- <a href="https://designmodo.com/linecons-free/">Linecons</a>, 
-- <a href="https://shoestrap.org/downloads/elusive-icons-webfont/">Elusive Icons</a>, etc.
+- [Font Awesome](https://fontawesome.io/), 
+- [Entypo](https://www.entypo.com/), 
+- [IcoMoon](https://icomoon.io/), 
+- [Symbolset](https://symbolset.com/), 
+- [Typicons](https://typicons.com/), 
+- [Iconic](https://somerandomdude.com/work/iconic/), 
+- [Zocial](https://zocial.smcllns.com/), 
+- [Linecons](https://designmodo.com/linecons-free/), 
+- [Elusive Icons](https://shoestrap.org/downloads/elusive-icons-webfont/), etc.
 
 The easiest and simplest way to use them is to dump the font variants, drop in the icon style classes and use them in your html with an `<i class="icon-myicon"></i>`. However, with this method, you're forcing your users to download the whole font, when you actually use just a few of the icons.
 
@@ -34,7 +34,7 @@ IcoMoon  does have the added advantage that you can upload your own custom icons
 
 <img class="small right" src="/static/2013/icomoon-icon.png" alt="IcoMoon Icon Font" loading="lazy">
 
-Let's take a look at the <a href="https://icomoon.io/app/">IconMoon App</a>. Fontello isn't that different. You should be good with whichever service you choose.
+Let's take a look at the [IconMoon App](https://icomoon.io/app/). Fontello isn't that different. You should be good with whichever service you choose.
 
 ## Import Icons
 

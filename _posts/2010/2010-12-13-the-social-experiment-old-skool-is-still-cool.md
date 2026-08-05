@@ -4,7 +4,7 @@ In today's connected world, have you ever looked back at the times when we had c
 
 ## An Idea!
 
-The idea started when Trent Mitchell, a video-production teacher at Shorecrest saw the movie <a href="https://www.thesocialnetwork-movie.com/">The Social Network</a>, a story about the founding of Facebook and wondered if his students could cut themselves off from text and Facebook. Mitchell, 36 told the students that he didn't think they could tear themselves away from social media. Half the students said they could do it; the other half thought it was the worst idea they'd ever heard, he said. So he pulled in friend and teacher Marty Ballew, and together created The Social Experiment.
+The idea started when Trent Mitchell, a video-production teacher at Shorecrest saw the movie [The Social Network](https://www.thesocialnetwork-movie.com/), a story about the founding of Facebook and wondered if his students could cut themselves off from text and Facebook. Mitchell, 36 told the students that he didn't think they could tear themselves away from social media. Half the students said they could do it; the other half thought it was the worst idea they'd ever heard, he said. So he pulled in friend and teacher Marty Ballew, and together created The Social Experiment.
 
 To promote the project, students made video trailers spoofing "The Social Network" and the Harry Potter series. Shorecrest High School students Jesse Hoefer, left, Nicholi Wytovicz, Mara Harris, Samuel Chudler and Corey Smith video documented the process with confessional videos and interviews with students and staff, some of whom also volunteered to cut themselves off. The schools will combine the results for a final documentary film on the experiment.
 

@@ -2,7 +2,7 @@
 
 With the end of Culture Unplugged's film festival, Humanity Explored, they're already on another one "Spirit Enlightened" -- an Online Film Festival, exploring the consciousness, spiritual, humane, political, unplugged and shared by artists and evolutionaries.
 
-<a href="https://www.cultureunplugged.com/">Culture Unplugged</a> launches "Spirit Enlightened" with over 400 documentaries and short films from 130 countries worldwide. The festival aspires to trace the spirit that has led the humanity through centuries and civilizations. The festival hopes to explore with you, 'That' which envelops to infuse and evolve the individual as well as collective being, expands our vision of time as well as place, enlivens our hearts, and enlightens our species to transcend the present state of being for the mystical new -- the next state of supramental self. The festival hopes to spread and feel the divine/enlightened spirit in the moment of its performance, in the midst of humanity now and forever, through film-media.
+[Culture Unplugged](https://www.cultureunplugged.com/) launches "Spirit Enlightened" with over 400 documentaries and short films from 130 countries worldwide. The festival aspires to trace the spirit that has led the humanity through centuries and civilizations. The festival hopes to explore with you, 'That' which envelops to infuse and evolve the individual as well as collective being, expands our vision of time as well as place, enlivens our hearts, and enlightens our species to transcend the present state of being for the mystical new -- the next state of supramental self. The festival hopes to spread and feel the divine/enlightened spirit in the moment of its performance, in the midst of humanity now and forever, through film-media.
 
 ## Humanity Explored
 
@@ -10,11 +10,11 @@ The previous festival -- Humanity Explored -- drew over 3.2 million viewers from
 
 The Winning Films Are:
 
-- PEOPLE'S CHOICE (Most Viewed): <a href="https://www.cultureunplugged.com/play/1591/Prayers-Answered">Prayers Answered</a> by Galek Palsang, United States
-- POPULAR (Runner Up): <a href="https://www.cultureunplugged.com/play/1057/Renita-Renita">Renita Renita</a> by Tonny Trimarsanto, Indonesia
-- VIRAL (Most Shared/Linked): <a href="https://www.cultureunplugged.com/play/2146/Dying-Symphony">Dying Symphony</a> by Rana Akmal, Pakistan
-- UNDISCOVERED (Must View): <a href="https://www.cultureunplugged.com/play/1295/Think-Peace--Portrait-of-a-21st-Century-Movement">Think Peace - Portrait of a 21st Century Movement</a> by Corey Ogilvie, Canada
-- FILM-MAKER'S CHOICE (Best ART): <a href="https://www.cultureunplugged.com/play/1568/Hummingbird">Hummingbird</a> by Holly Mosher, United States
+- PEOPLE'S CHOICE (Most Viewed): [Prayers Answered](https://www.cultureunplugged.com/play/1591/Prayers-Answered) by Galek Palsang, United States
+- POPULAR (Runner Up): [Renita Renita](https://www.cultureunplugged.com/play/1057/Renita-Renita) by Tonny Trimarsanto, Indonesia
+- VIRAL (Most Shared/Linked): [Dying Symphony](https://www.cultureunplugged.com/play/2146/Dying-Symphony) by Rana Akmal, Pakistan
+- UNDISCOVERED (Must View): [Think Peace - Portrait of a 21st Century Movement](https://www.cultureunplugged.com/play/1295/Think-Peace--Portrait-of-a-21st-Century-Movement) by Corey Ogilvie, Canada
+- FILM-MAKER'S CHOICE (Best ART): [Hummingbird](https://www.cultureunplugged.com/play/1568/Hummingbird) by Holly Mosher, United States
 
 
 ## Culture Unplugged

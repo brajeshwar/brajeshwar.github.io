@@ -2,7 +2,7 @@
 
 ![Music on Tux)](/static/2008/linux-music.jpg)
 
-In our last article -- <a href="/2008/software-installation-on-linux/">Software installation woes on Linux</a> -- we proved that installing a software package was as easy as it was rumored otherwise. We saw two pretty common and of course easy ways of software installation.
+In our last article -- [Software installation woes on Linux](/2008/software-installation-on-linux/) -- we proved that installing a software package was as easy as it was rumored otherwise. We saw two pretty common and of course easy ways of software installation.
 
 As promised, we shall now put our eyes down for the third and by far the most scaring way. Trust me, it is not at all as geeky as you have always figured it out to be. Following some easy steps by understanding what is each one of them doing shall help us master this art in sometime. Once you've learned, this would be a cakewalk just like the other two, previously described ways.
 

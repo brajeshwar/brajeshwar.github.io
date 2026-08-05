@@ -2,7 +2,7 @@
 
 Do you have more than one website, or rather lots of them? You can now reduce one hassle of the many that goes in maintaining lots of websites, blogs -- the ability to place Sitemaps for multiple hosts on a single host through robots.txt.
 
-We know how to include <a href="/2007/just-add-to-your-robotstxt-no-need-to-submit-sitemap-to-google/">auto-discovery of Sitemaps</a> using robots.txt. Google have <a href="https://googlewebmastercentral.blogspot.com/2008/02/cross-submissions-via-robotstxt-on.html">announced</a> a new way for Sitemap cross-submissions using Google Webmaster Tools, making it possible to submit Sitemaps for multiple hosts on a single dedicated host.
+We know how to include [auto-discovery of Sitemaps](/2007/just-add-to-your-robotstxt-no-need-to-submit-sitemap-to-google/) using robots.txt. Google have [announced](https://googlewebmastercentral.blogspot.com/2008/02/cross-submissions-via-robotstxt-on.html) a new way for Sitemap cross-submissions using Google Webmaster Tools, making it possible to submit Sitemaps for multiple hosts on a single dedicated host.
 
 For instance, if I want to submit and maintain Sitemaps for each of these sites --
 

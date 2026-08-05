@@ -1,6 +1,6 @@
 # Windows Phone 7
 
-Microsoft's Windows Phone 7 promises to bring together contacts, photos, music and video into one smooth mobile experience. It's holistic design aims to bring together web content, applications and services into a single view port, making you master of all you survey. Microsoft is introducing the new mobile OS at <a href="https://www.mobileworldcongress.com/">Mobile World Congress 2010</a>, in Barcelona next month.
+Microsoft's Windows Phone 7 promises to bring together contacts, photos, music and video into one smooth mobile experience. It's holistic design aims to bring together web content, applications and services into a single view port, making you master of all you survey. Microsoft is introducing the new mobile OS at [Mobile World Congress 2010](https://www.mobileworldcongress.com/), in Barcelona next month.
 
 ## A New Home
 

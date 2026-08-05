@@ -1,6 +1,6 @@
 # Bulletproof your self-hosted Wordpress blog - how to survive traffic spikes
 
-There is a rather complex, long and detailed article on how to <a href="https://www.maxmasnick.com/guides/bulletproof_your_blog/">Bulletproof your blog: a guide for surviving traffic spikes</a>, but for all the other self-hosted Wordpress blogs out there, here is a simple non-geeky solution suited for most of us. You don't need to edit anything, pull or push anything - you've to just worry about your actual writing/blogging.
+There is a rather complex, long and detailed article on how to [Bulletproof your blog: a guide for surviving traffic spikes](https://www.maxmasnick.com/guides/bulletproof_your_blog/), but for all the other self-hosted Wordpress blogs out there, here is a simple non-geeky solution suited for most of us. You don't need to edit anything, pull or push anything - you've to just worry about your actual writing/blogging.
 
 Recently one of my article, [Desingineer - the mythical person every Startups are looking for](/2011/desingineer-the-mythical-person-every-startups-are-looking-for/), stayed on the frontpage of HackerNews for about 24 hours and it held up without any problem. Here is the [video](/2011/how-is-it-like-during-the-first-hour-when-your-site-is-on-top-of-hackernews/) of the traffic onslaught.
 

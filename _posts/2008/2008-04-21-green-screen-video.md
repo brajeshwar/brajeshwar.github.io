@@ -2,7 +2,7 @@
 
 Green Screen: A technique for mixing two images together, in which a color from one image is removed, revealing another image behind it.
 
-Recently, I got an article submission from a representative of <a href="https://www.ribbitfilms.com/">Ribbit Films</a> with some quick tips for shooting on green-screen. The tips are good enough and was unlike a sales pitch and thus I decided to have it here for my readers. I'm very less of a Video Guy, so forgive me if things don't really match up. But if you comment or ask question or visit Ribbit Films itself, things should be easy to clarify.
+Recently, I got an article submission from a representative of [Ribbit Films](https://www.ribbitfilms.com/) with some quick tips for shooting on green-screen. The tips are good enough and was unlike a sales pitch and thus I decided to have it here for my readers. I'm very less of a Video Guy, so forgive me if things don't really match up. But if you comment or ask question or visit Ribbit Films itself, things should be easy to clarify.
 
 Ribbit Films is the leading supplier of pre-keyed, green screen footage. Mr. Navarre Joseph, president of Ribbit Films, has been instrumental in producing and distributing high level, prepared footage for use in commercials, films, and even online programs such as Flash.
 

@@ -1,6 +1,6 @@
 # Opera Dragonfly, Easy web apps debugging
 
-Opera released their new Developer Tools -- <a href="https://www.opera.com/products/dragonfly/">Opera Dragonfly</a> -- about a week back. The initial alpha version include
+Opera released their new Developer Tools -- [Opera Dragonfly](https://www.opera.com/products/dragonfly/) -- about a week back. The initial alpha version include
 
 * JavaScript debugger
 * DOM inspector
@@ -20,4 +20,4 @@ The early Alpha launch was received with great enthusiasm from the developer com
 
 The Opera Dragonfly is also working on the Scope documentation which they plan to release in the coming days.
 
-Chris Mills' article on <a href="https://dev.opera.com/articles/view/introduction-to-opera-dragonfly/">Introduction to Opera Dragonfly</a> should give you much more details about Opera Dragonfly. <a href="https://dev.opera.com/articles/view/opera-dragonfly-architecture/">Opera Dragonfly Architecture</a> covers covers the architecture of Opera Dragonfly in detail, showing what the different components in the architecture are, and how they interact during Dragonfly's running.
+Chris Mills' article on [Introduction to Opera Dragonfly](https://dev.opera.com/articles/view/introduction-to-opera-dragonfly/) should give you much more details about Opera Dragonfly. [Opera Dragonfly Architecture](https://dev.opera.com/articles/view/opera-dragonfly-architecture/) covers covers the architecture of Opera Dragonfly in detail, showing what the different components in the architecture are, and how they interact during Dragonfly's running.

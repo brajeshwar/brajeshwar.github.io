@@ -19,6 +19,6 @@ Ain’t that awesome. I’m feeling elated and happy -- “Wow! Just like that.�
 
 Using Balsamiq Mockups feels like you are drawing, but it's digital, so you can tweak and rearrange controls easily, and the end result is much cleaner. Teams can come up with a design and iterate over it in real-time in the course of a meeting.
 
-There are over 60 pre-built controls to choose from, you can design anything from a super-simple dialog box to a full-fledged application, from a simple website to a Rich Internet Application. Browse through the <a href="https://www.balsamiq.com/products/mockups/examples">samples</a> or download more <a href="https://www.mockupstogo.net/">Mockups</a>.
+There are over 60 pre-built controls to choose from, you can design anything from a super-simple dialog box to a full-fledged application, from a simple website to a Rich Internet Application. Browse through the [samples](https://www.balsamiq.com/products/mockups/examples) or download more [Mockups](https://www.mockupstogo.net/).
 
 Note: The limitation with the Trial was that it won’t let you save your files (but you can still export/import and save it manually).

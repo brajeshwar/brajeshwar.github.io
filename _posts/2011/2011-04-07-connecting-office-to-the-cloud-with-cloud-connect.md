@@ -4,13 +4,13 @@ If Microsoft is the evil empire, then their Office Suite is their "Death Star" -
 
 Google may have found the chink in Microsoft's armor, and it comes in the form of an uber-simple app dubbed Cloud Connect. 
 
-<a href="https://tools.google.com/dlpage/cloudconnect">Cloud Connect</a> is a plugin-style app that allows users to sync up their Office documents with Google's online office-style suite Google Docs. 
+[Cloud Connect](https://tools.google.com/dlpage/cloudconnect) is a plugin-style app that allows users to sync up their Office documents with Google's online office-style suite Google Docs. 
 
 The struggling Google Docs has yet to grab any mainstream appeal, possibly due to corporations' fear of cloud-based computing. But -- finally, Google Docs will begin grabbing the market share they deserve  via Cloud Connect. 
 
 Cloud Connect allows users to sync up and work collaboratively in the cloud, using all the Office features they are used to (well, not all). Cloud Connect can be used from any PC, laptop, netbooks, or smartphone due to the unique URL given by Google Docs. 
 
-The timing from Google's Rebel Alliance strike couldn't be more perfect as Microsoft's Office 365 is just beginning to pick up steam. <a href="https://office365.microsoft.com/">Office 365</a> is an online version of the Office Suite-glaringly similar to Google Docs. 
+The timing from Google's Rebel Alliance strike couldn't be more perfect as Microsoft's Office 365 is just beginning to pick up steam. [Office 365](https://office365.microsoft.com/) is an online version of the Office Suite-glaringly similar to Google Docs. 
 
 Currently Cloud Connect has mild performance issues when it comes to synchronization and loss of formatting -- problems not faced by Microsoft's answer to Cloud Connect, Microsoft's Web Apps for Office.
 

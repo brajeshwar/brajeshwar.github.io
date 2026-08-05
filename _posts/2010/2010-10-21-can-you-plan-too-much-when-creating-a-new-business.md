@@ -1,10 +1,10 @@
 # Can you plan too much when creating a new business?
 
-We all know that running a successful business means that you must plan your strategy and refine your tactics. The article <a href="https://bsng.lithium.com/t5/The-Industry-Word/5-Dangerous-Business-Planning-Myths/ba-p/5781">5 Dangerous Business Planning Myths</a> describes that all businesses must plan carefully. Regardless of what business you are in, if you fail to plan you might as well plan to fail.
+We all know that running a successful business means that you must plan your strategy and refine your tactics. The article [5 Dangerous Business Planning Myths](https://bsng.lithium.com/t5/The-Industry-Word/5-Dangerous-Business-Planning-Myths/ba-p/5781) describes that all businesses must plan carefully. Regardless of what business you are in, if you fail to plan you might as well plan to fail.
 
 The problem is that entrepreneurs can often plan too much. Putting too much time and energy into a business plan can actually be dangerous for a couple of reasons.
 
-<a href="https://www.paulstips.com/brainbox/pt/home.nsf/link/31102006-The-problems-of-excessive-planning">The Problems of Excessive Planning</a>, as claimed by the author, is that excessive planning is often procrastination in disguise. Entrepreneurs may be nervous to actually begin their startup and want to justify to themselves that they are being productive.
+[The Problems of Excessive Planning](https://www.paulstips.com/brainbox/pt/home.nsf/link/31102006-The-problems-of-excessive-planning), as claimed by the author, is that excessive planning is often procrastination in disguise. Entrepreneurs may be nervous to actually begin their startup and want to justify to themselves that they are being productive.
 
 This is an interesting claim but a more practical concern is that we often have too much confidence in our abilities to forecast the future. During my MBA classes I decided to give up my dream of going into finance because I learned that being successful investing in the stock market is usually more about being a lucky guesser than creating brilliant models.
 

@@ -14,7 +14,7 @@ A successful design leader brings in a design harmony, patterns, frameworks, and
 
 One key measure of a successful design leader is her effective presentation skills. She should be able to talk with confidence and drive everyone involved towards a common goal. She should have good management skills and leverage the best of design managers. Finally, she should mentor and help more designers become leaders.
 
-> Marcin Treder <a href="https://www.uxpin.com/studio/blog/persona-great-design-leader/">said it beautifully</a>, "Great design leaders are seasoned practitioners, ready to give up the craft."
+> Marcin Treder [said it beautifully](https://www.uxpin.com/studio/blog/persona-great-design-leader/), "Great design leaders are seasoned practitioners, ready to give up the craft."
 
 A design leader leads and drives discussions with the design team, management and beyond. She initiates dialogue, both good and bad, to achieve the common goal of producing good meaningful designs. She instills an inquisitive mood of asking "what" driving organizations to produce better-designed products. She is confident in leaving the "how" of designs to the designers and the team.
 
@@ -24,7 +24,7 @@ It is sad but many organizations try to bring in design leaders who are not desi
 
 A design leader continues to be actively involved in design disciplines, remain driven to design, coaches others, is a team player, always open-minded, is not afraid of change, and is always ready to give actionable feedback. Last, but not the least, a design leader is committed to integrating design and design thinking throughout the organization.
 
-> "Design leaders succeed by designing indirectly – through the work of their teams. The key task of a design leader is to become the worst designer on the team." -- <a href="https://www.uxpin.com/studio/blog/persona-great-design-leader/">Marcin Treder</a>
+> "Design leaders succeed by designing indirectly – through the work of their teams. The key task of a design leader is to become the worst designer on the team." -- [Marcin Treder](https://www.uxpin.com/studio/blog/persona-great-design-leader/)
 
 ### Here are some good references for further reading;
 

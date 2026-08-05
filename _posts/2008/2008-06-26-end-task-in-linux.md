@@ -1,6 +1,6 @@
 # The 'end task' procedure for Linux
 
-In our previous article -- <a href="/2008/linux-vocabulary/">Sharpen your Linux vocabulary</a> -- we visualized few commonly used terms in context with the Linux  operating system and its surroundings! I thank and appreciate the readers for  adding on a few more words.
+In our previous article -- [Sharpen your Linux vocabulary](/2008/linux-vocabulary/) -- we visualized few commonly used terms in context with the Linux  operating system and its surroundings! I thank and appreciate the readers for  adding on a few more words.
 
 While I was figuring out a way to run Internet using a CDMA wireless modem on  my Linux machine, one of the applications refused to respond due to some rare  error. This very incident reminded me to come up with following article which  elaborates few methods to help you terminate a process or application running on  a Linux distribution - something similar to 'end task' on a windows operating  system.
 

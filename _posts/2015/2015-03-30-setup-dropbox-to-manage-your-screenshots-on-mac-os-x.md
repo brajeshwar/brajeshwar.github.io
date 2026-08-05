@@ -1,6 +1,6 @@
 # Setup Dropbox to manage your screenshots on Mac OS X
 
-There are quite a lot of Screenshot management apps for Mac OS X. I like most of them but I also like <a href="https://db.tt/Ko3m4LDu" title="Dropbox">Dropbox</a> a lot. With the Screenshot management feature from Dropbox, you can now do away with all those Screenshot apps and use the tool you already have.
+There are quite a lot of Screenshot management apps for Mac OS X. I like most of them but I also like [Dropbox](https://db.tt/Ko3m4LDu "Dropbox") a lot. With the Screenshot management feature from Dropbox, you can now do away with all those Screenshot apps and use the tool you already have.
 
 First, enable Dropbox to handle your Screenshots.
 
@@ -12,7 +12,7 @@ Second, drop your OS X screenshots automatically into Dropbox's Screenshot folde
 
 `$ defaults write com.apple.screencapture location ~/Dropbox/Screenshots/;killall SystemUIServer`
 
-Or use a utility such as <a href="https://www.titanium.free.fr/onyx.html" title="OnyX">OnyX</a>
+Or use a utility such as [OnyX](https://www.titanium.free.fr/onyx.html "OnyX")
 
 <img class="large" src="/static/2015/onyx-screenshot.png" alt="OnyX">
 

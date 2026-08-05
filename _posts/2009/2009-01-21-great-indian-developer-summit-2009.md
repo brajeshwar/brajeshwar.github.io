@@ -10,16 +10,16 @@ DETAILS
 
 - Summit Dates: April 22-25 2009 (Wed Through Sat)
 - Venue: Indian Institute of Science Campus, Bangalore, India.
-- Agenda: <a href="https://www.developersummit.com/agendaOutline.html">Program outline</a>
+- Agenda: [Program outline](https://www.developersummit.com/agendaOutline.html)
 - Topics Covered - Java/J2EE, Microsoft computing technologies, Rich Internet Applications (RIA), Web 2.0, Ajax, Agile, SOA, and Enterprise IT
-- <a href="https://www.developersummit.com/sessions.html#net">GIDS.NET Conference</a> - April 22 2009 (Wed)
-- <a href="https://www.developersummit.com/sessions.html#web">GIDS.Web Conference</a> - April 23 2009 (Thu)
-- <a href="https://www.developersummit.com/sessions.html#java">GIDS.Java Conference</a> - April 24 2009 (Fri)
-- <a href="https://www.developersummit.com/workshops.html">GIDS.Workshops</a> - April 25 2009 (Sat)
-- <a href="https://www.developersummit.com/awards.html">GIDS 2009 Awards Evening</a> - April 25 2009 (Sat)
+- [GIDS.NET Conference](https://www.developersummit.com/sessions.html#net) - April 22 2009 (Wed)
+- [GIDS.Web Conference](https://www.developersummit.com/sessions.html#web) - April 23 2009 (Thu)
+- [GIDS.Java Conference](https://www.developersummit.com/sessions.html#java) - April 24 2009 (Fri)
+- [GIDS.Workshops](https://www.developersummit.com/workshops.html) - April 25 2009 (Sat)
+- [GIDS 2009 Awards Evening](https://www.developersummit.com/awards.html) - April 25 2009 (Sat)
 - GIDS 2009 Expo - April 22-24 2009 (Wed Through Fri)
 - Exclusive Show by MTC VJ & Comedian Cyrus Broacha - April 25 2009 (Sat) evening
 - Target Audience: Software Developers, Architects, Project leads, Development Managers, Web professionals.
-- <a href="https://www.developersummit.com/speakers.html">Complete list of Speakers</a>.
+- [Complete list of Speakers](https://www.developersummit.com/speakers.html).
 
-Visit <a href="https://www.developersummit.com/">GIDS '09</a> for more.
+Visit [GIDS '09](https://www.developersummit.com/) for more.

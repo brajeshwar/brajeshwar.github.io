@@ -4,7 +4,7 @@
 
 Proto.in is the premier Startup Community Event that happens in India. It is about giving entrepreneurs a platform to express their visions and showcase their imagination, with a working prototype, for the world to see. It's about increasing partnership, collaboration and mindshare among a distinguished, qualified and well-connected audience. Proto.in provides a unique platform for promising startup talent to communicate their creativity and innovation potential.
 
-<a href="https://proto.in/">Proto.in</a> strive by their mantra -- Create, Contribute, Collaborate.
+[Proto.in](https://proto.in/) strive by their mantra -- Create, Contribute, Collaborate.
 
 Proto.in come together once in every six months, bringing together entrepreneurs, aspiring entrepreneurs, veterans, investors, technologists, bloggers, mentors, bankers, media professionals, hackers, mavericks, students, and even folks from the government bodies such as DST, NASSCOM, TiE, IAMAI, to build a cohesive and sensible ecosystem in India.
 
@@ -20,7 +20,7 @@ Simply blog and spread the word about Proto.in event and send a trackback to thi
 
 Proto '08 July (Delhi) Edition Snapshot;
 
-* <a href="https://www.proto.in/">Proto.in</a> (Read above for FREE Entry)
+* [Proto.in](https://www.proto.in/) (Read above for FREE Entry)
 * Entry fee per person: Rs. 500
 * Venue: IIT, Delhi
 * Date: 18th and 19th July, 2008
@@ -31,4 +31,4 @@ Proto '08 July (Delhi) Edition Snapshot;
 * Press Conference in Delhi: 11th July, 2008
 * Entry Fee per Company (once shortlisted): Rs. 10,000
 
-<span class="codeRed"><a href="https://www.proto.in/proto2008se/registration/">Register</a> early as seats are limited.</span>
+<span class="codeRed">[Register](https://www.proto.in/proto2008se/registration/) early as seats are limited.</span>

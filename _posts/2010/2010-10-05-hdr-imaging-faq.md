@@ -1,6 +1,6 @@
 # HDR Imaging FAQ
 
-After writing about <a href="/2010/hdr-imaging-some-common-creation-techniques/">HDR Image Creation Techniques</a> & <a href="/2010/hdr-imaging-top-10-tutorials/">Top 10 HDRI Tutorials</a>, this article answers the questions that are frequently asked about HDRI.
+After writing about [HDR Image Creation Techniques](/2010/hdr-imaging-some-common-creation-techniques/) & [Top 10 HDRI Tutorials](/2010/hdr-imaging-top-10-tutorials/), this article answers the questions that are frequently asked about HDRI.
 
 ## Why does the HDR image look so dark?
 

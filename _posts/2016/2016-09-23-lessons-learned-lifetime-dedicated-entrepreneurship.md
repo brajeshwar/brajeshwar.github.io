@@ -2,11 +2,11 @@
 
 If you're planning to start a business or a startup, it's valuable to learn about life and the flow of business from people who have navigated their own paths to success. Though it's true, no matter who you learn from or what college you attend, ultimately, everyone has to make his or her own way to success. However, no one can make it without borrowing a proven effective strategy or two from someone else.
 
-<a href="https://en.wikipedia.org/wiki/David_Morgenthaler">David Turner Morgenthaler</a> died in June of this year after achieving great success with his venture capital firm, <a href="https://www.morgenthaler.com/">Morgenthaler Ventures</a>.
+[David Turner Morgenthaler](https://en.wikipedia.org/wiki/David_Morgenthaler) died in June of this year after achieving great success with his venture capital firm, [Morgenthaler Ventures](https://www.morgenthaler.com/).
 
 Turner, known as a successful investor, entrepreneur and philanthropist will also go down in history for his instrumental roles in amending ERISA legislation and lowering the US capital gains tax to 28% from 49%.
 
-Small Biz Trends contributor Scott Shane shared some of the <a href="https://smallbiztrends.com/2016/07/david-morgenthaler-entrepreneur-advice.html">valuable business lessons</a> he learned from Morgenthaler over the years.
+Small Biz Trends contributor Scott Shane shared some of the [valuable business lessons](https://smallbiztrends.com/2016/07/david-morgenthaler-entrepreneur-advice.html) he learned from Morgenthaler over the years.
 
 What Can Entrepreneurs, Startup Founders and Investors Learn from Morgenthaler?
 

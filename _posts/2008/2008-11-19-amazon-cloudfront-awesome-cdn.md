@@ -1,8 +1,8 @@
 # Amazon CloudFront, an Awesome CDN
 
-Amazon announced <a href="https://aws.amazon.com/cloudfront/">CloudFront</a> just about a day back and we were extremely excited that we would be able to serve files faster to our users.
+Amazon announced [CloudFront](https://aws.amazon.com/cloudfront/) just about a day back and we were extremely excited that we would be able to serve files faster to our users.
 
-I won't detail about Amazon CloudFront as their blog have done a good job on that -- <a href="https://aws.typepad.com/aws/2008/11/distribute-your-content-with-amazon-cloudfront.html">Distribute Your Content With Amazon CloudFront</a>.
+I won't detail about Amazon CloudFront as their blog have done a good job on that -- [Distribute Your Content With Amazon CloudFront](https://aws.typepad.com/aws/2008/11/distribute-your-content-with-amazon-cloudfront.html).
 
 What our team did was some simple test to see the speed and response time for our new Amazon CloudFront CDN-ed content.
 
@@ -95,4 +95,4 @@ mydist.cloudfront.net. 60 IN	A	216.137.39.225
 
 Wow! Only 6 hops :-)
 
-So, as you can see CloudFront really works as a good Content Delivery Network and is extremely affordable, no entry cost at all. Check out their <a href="https://aws.typepad.com/">blog</a>.
+So, as you can see CloudFront really works as a good Content Delivery Network and is extremely affordable, no entry cost at all. Check out their [blog](https://aws.typepad.com/).

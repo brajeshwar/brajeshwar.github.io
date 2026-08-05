@@ -54,9 +54,9 @@ Even if you use a Laptop with a built-in microphone, I can guarantee you that th
 
 Here is my suggestion, in order of preference;
 
-1. <a href="https://en.wikipedia.org/wiki/Pop_filter">Pop Filter Microphone</a> with a stand, either on the desk or clipped/screwed to the table.
-1. <a href="https://en.wikipedia.org/wiki/Lavalier_microphone">Lavalier Microphone</a> that can be clipped to your kid’s top/shirt.
-1. The last option is an <a href="https://en.wikipedia.org/wiki/Headset_(audio)">audio headset</a> (speaker + microphone). However, they come in the way of your kid studying or listening to the teacher.
+1. [Pop Filter Microphone](https://en.wikipedia.org/wiki/Pop_filter) with a stand, either on the desk or clipped/screwed to the table.
+1. [Lavalier Microphone](https://en.wikipedia.org/wiki/Lavalier_microphone) that can be clipped to your kid’s top/shirt.
+1. The last option is an [audio headset](<https://en.wikipedia.org/wiki/Headset_(audio)>) (speaker + microphone). However, they come in the way of your kid studying or listening to the teacher.
 
 _Search for_
 
@@ -87,17 +87,17 @@ _Search for_
 
 ## UPS
 
-Invest in a entry-level <a href="https://en.wikipedia.org/wiki/Uninterruptible_power_supply">UPS</a> (Uninterruptible Power Supply). A UPS is used to protect hardware such as computers and other electrical devices where an unexpected power disruption could cause data loss, or damage to the devices.
+Invest in a entry-level [UPS](https://en.wikipedia.org/wiki/Uninterruptible_power_supply) (Uninterruptible Power Supply). A UPS is used to protect hardware such as computers and other electrical devices where an unexpected power disruption could cause data loss, or damage to the devices.
 
 ### Software
 
 Besides the usual software that she will need, as suggested by the school, try to get some additional life-skill software-tools that will come handy. Some of the basics include but not limited to;
 
-- A calendar. Teach your kid to schedule class video calls, homework submissions, peer-to-peer meetings, etc. You should also have access to it, so you can help when needed. <a href="https://calendar.google.com/">Google Calendar</a> is a pretty good option.
+- A calendar. Teach your kid to schedule class video calls, homework submissions, peer-to-peer meetings, etc. You should also have access to it, so you can help when needed. [Google Calendar](https://calendar.google.com/) is a pretty good option.
 - A TODO app. Try to stay with the basic simple listings and not overwhelm them. A lot many people have wasted countless hours trying to hunt for the best TODO app, the best ways of using it. So, just stick to simple listings and checking items off. Better yet, stick to the physical Sticky / Post-it Note.
-- A Password Manager. It is high time to teach your kid to use a Password Manager. Some of the good ones are <a href="https://1password.com">1Password</a> (paid), <a href="https://keepass.info">Keepass</a> (free, open-source), <a href="https://bitwarden.com">Bitwarden</a> (free, open-source, paid)
+- A Password Manager. It is high time to teach your kid to use a Password Manager. Some of the good ones are [1Password](https://1password.com) (paid), [Keepass](https://keepass.info) (free, open-source), [Bitwarden](https://bitwarden.com) (free, open-source, paid)
 
 
 ## Upgrades
 
-The next best upgrade after the basics are taken care off, would be, to separate their activity/study computer from the video device -- have a device such as an iPad, a Tablet or a Phone just for the video calls/classes and a desktop or a laptop or a <a href="https://www.raspberrypi.org">Raspberry Pi</a> as their study computer.
+The next best upgrade after the basics are taken care off, would be, to separate their activity/study computer from the video device -- have a device such as an iPad, a Tablet or a Phone just for the video calls/classes and a desktop or a laptop or a [Raspberry Pi](https://www.raspberrypi.org) as their study computer.

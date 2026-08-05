@@ -1,14 +1,14 @@
 # Twitter client Twhirl acquired by Seesmic
 
-The acquisition of Twhirl, for an undisclosed amount, by <a href="https://www.seesmic.com/">Seesmic</a> is an interesting news from many angle, the most interesting being Twhirl an AIR application which can run on both Windows and Mac, and of course on Linux.
+The acquisition of Twhirl, for an undisclosed amount, by [Seesmic](https://www.seesmic.com/) is an interesting news from many angle, the most interesting being Twhirl an AIR application which can run on both Windows and Mac, and of course on Linux.
 
-<a href="https://www.twhirl.org/">Twhirl</a> is a popular desktop Twitter client, based on the <a href="https://www.adobe.com/go/air/">Adobe AIR platform</a>, developed by Marco Kaiser. Besides being able to acess Twitter service directly from the Desktop, Twhirl also cross post to other services like <a href="https://www.pownce.com/">Pownce</a> and <a href="https://www.jaiku.com/">Jaiku</a>.
+[Twhirl](https://www.twhirl.org/) is a popular desktop Twitter client, based on the [Adobe AIR platform](https://www.adobe.com/go/air/), developed by Marco Kaiser. Besides being able to acess Twitter service directly from the Desktop, Twhirl also cross post to other services like [Pownce](https://www.pownce.com/) and [Jaiku](https://www.jaiku.com/).
 
-Twhirl is one of the <a href="https://www.readwriteweb.com/archives/top_twitter_clients_definitive_list.php">best Desktop Twitter clients</a> available, amongst others like <a href="https://iconfactory.com/software/twitterrific">Twitterific</a> and Instant Messenger Clients. Seesmic plans to enhance the application further and eventually make it the official Seesmic Desktop Client.
+Twhirl is one of the [best Desktop Twitter clients](https://www.readwriteweb.com/archives/top_twitter_clients_definitive_list.php) available, amongst others like [Twitterific](https://iconfactory.com/software/twitterrific) and Instant Messenger Clients. Seesmic plans to enhance the application further and eventually make it the official Seesmic Desktop Client.
 
 I hope this news made a sudden burst of interest among Windows, Mac and Linux AIR Developers.
 
-Serial Entrepreneur & Blogger, LoÃ¯c Le Meur, who is behind Seesmic have cited <a href="https://www.loiclemeur.com/english/2008/04/20-reasons-why.html">many reasons for acquiring Twhirl</a>. The reasons are worth reading and is reproduced here verbatim;
+Serial Entrepreneur & Blogger, LoÃ¯c Le Meur, who is behind Seesmic have cited [many reasons for acquiring Twhirl](https://www.loiclemeur.com/english/2008/04/20-reasons-why.html). The reasons are worth reading and is reproduced here verbatim;
 
 - Staying in touch with your friends using microblogging is much easier using a client than through your browser.
 - Twhirl is the #1 and coolest Twitter client with more than 100,000 downloads and 7% of all tweets posted per day.

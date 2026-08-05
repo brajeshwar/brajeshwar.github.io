@@ -20,11 +20,11 @@ The most definitive of reasons are the ones nobody has control upon. Few might b
 
 No matter how much we deny, this will be the major decision we will make for ourselves. One may argue saying - "What are you talking about? I have made all my decisions for my entire life." Well, deciding a university you would want to study, or a course one would want to study, or the choice of a country one would want to study in - are not exactly the defining decisions one would make. What all can school dropout can do? - It is this very answer to this question that is the defining decision.
 
-<a href="https://www.penelopetrunk.com/aboutme.html">Penelope Trunk</a>, a career advisor quotes - One of the worst pieces of career advice that I bet each of you has not only gotten but given is to "do what you love".
+[Penelope Trunk](https://www.penelopetrunk.com/aboutme.html), a career advisor quotes - One of the worst pieces of career advice that I bet each of you has not only gotten but given is to "do what you love".
 
-and we have <a href="https://www.selfcreation.com">selfcreation.com</a> saying the exact opposite. 
+and we have [selfcreation.com](https://www.selfcreation.com) saying the exact opposite. 
 
-We also have <a href="https://en.wikipedia.org/wiki/Katharine_Hepburn">Katherine Hepburn</a>, a famous 90's actress saying - If you always do what interests you, then at least one person is pleased.
+We also have [Katherine Hepburn](https://en.wikipedia.org/wiki/Katharine_Hepburn), a famous 90's actress saying - If you always do what interests you, then at least one person is pleased.
 
 Having said all this, did you find the answer for yourself? If you have, I shall count one more person to be pleased, if not, there is certainly more to it! 
 

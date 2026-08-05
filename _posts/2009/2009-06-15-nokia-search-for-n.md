@@ -32,7 +32,7 @@ A. "Ovi Store"
 
 Clue: To make the hardware experience better and help the device evolve via appliations or widgets, Nokia have introduced the Ovi Store, where you can get more widgets for your Nokia phone. Ovi Store is a self-service, web-based tool that provides content providers and developers with an easy way to distribute and sell mobile applications and content to millions of consumers.
 
-In short, <a href="https://store.ovi.com/">Ovi Store</a>;
+In short, [Ovi Store](https://store.ovi.com/);
 
 - Delivers smart content recommendations based on user actions, handset and location.
 - Supports a range of content types including applications, games, videos, podcasts, productivity tools, web and location-based services and much more.
@@ -67,4 +67,4 @@ Rules
 - Nokia India is offering one unit of Nokia N97 each as the prize to each of the winners.
 - Contest starts 15th June and continues till 19th June, 2009.
 
-For more details, visit the <a href="https://www.searchforn.com/">Search for N</a>.
+For more details, visit the [Search for N](https://www.searchforn.com/).

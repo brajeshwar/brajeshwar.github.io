@@ -2,7 +2,7 @@
 
 3D glasses, despite making you look horrifically like an 80s-movie nerd, do an OK job. That's what researchers at the Tsukuba University in Japan thought too. So they made them better -- much better.  This new project from Tsukuba is prototyping a different kind of 3D display that focuses on multiple layers of depth that give enhanced depth perception and better focus. 
 
-Other Japanese projects recently displayed at <a href="https://www.ceatec.com/2011/en/">CEATEC</a> 2011 are bringing 3D TV to a whole another level (thank you Japan) by doing away with the silly Urkel-looking glasses entirely and using just the naked eye for their 3D experiences. BUT, since they are nowhere near as visually impressive as Tsukuba, who cares.
+Other Japanese projects recently displayed at [CEATEC](https://www.ceatec.com/2011/en/) 2011 are bringing 3D TV to a whole another level (thank you Japan) by doing away with the silly Urkel-looking glasses entirely and using just the naked eye for their 3D experiences. BUT, since they are nowhere near as visually impressive as Tsukuba, who cares.
 
 Standard 3D glasses lack the parallax needed for better viewing, with just horizontal parallax. New technology from the project at Tsukuba uses fifty unique viewpoints, ten horizontally and 5 vertically. The effect of these increased viewpoints is a greater range of viewing and significantly increased resolution. 
 
@@ -12,4 +12,4 @@ Unfortunately when Kakeya says the technology isn't quite ready yet for market, 
 
 Surely at some point in the very-near future someone will recognize that re-purposing the technology for the entertainment market would give them the funding necessary to bring the cost of the technology down to a reasonable level--which could help them get it into production faster. 
 
-Kakeya's <a href="https://spiedigitallibrary.org/proceedings/resource/2/psisdg/8043/1/80430B_1">work</a> on depth perception focuses on using Coarse Integral Volumetric Imaging (CIVI), and is quickly making progress by combining multi-view and volumetric solutions with a multilayered approach to structure in integral imaging.
+Kakeya's [work](https://spiedigitallibrary.org/proceedings/resource/2/psisdg/8043/1/80430B_1) on depth perception focuses on using Coarse Integral Volumetric Imaging (CIVI), and is quickly making progress by combining multi-view and volumetric solutions with a multilayered approach to structure in integral imaging.

@@ -6,11 +6,11 @@ Personally, I have a hard time seeing such small devices ever take the place of 
 
 ## Android phones are selling at a rate of 300,000 a day
 
-An article that was just published on Mashable today, <a href="https://mashable.com/2010/12/09/android-device-stats-2010/">Google Exec: More Than 300K Android Phones Activated Daily</a> says that Google is coming close to selling half a million of these devices every day. The Android became more popular than the iPhone in the beginning of 2010 and has been capturing market share ever since.
+An article that was just published on Mashable today, [Google Exec: More Than 300K Android Phones Activated Daily](https://mashable.com/2010/12/09/android-device-stats-2010/) says that Google is coming close to selling half a million of these devices every day. The Android became more popular than the iPhone in the beginning of 2010 and has been capturing market share ever since.
 
 ## iPhones are clearly losing popularity
 
-When I started to do a Google News search for iPhones, the most popular article I found was <a href="https://www.ismashphone.com/2010/12/turning-your-iphone-into-an-android-phone.html">6 Tips for Turning Your iPhone into an Android Phone</a>. The article does not downplay the iPhone, but it emphasizes that there are many features with the iPhone that customers are not happy with. Therefore, they can turn their iPhone into almost an Android clone.
+When I started to do a Google News search for iPhones, the most popular article I found was [6 Tips for Turning Your iPhone into an Android Phone](https://www.ismashphone.com/2010/12/turning-your-iphone-into-an-android-phone.html). The article does not downplay the iPhone, but it emphasizes that there are many features with the iPhone that customers are not happy with. Therefore, they can turn their iPhone into almost an Android clone.
 
 There are four main reasons why Androids seem to be gaining an edge over iphones:
 

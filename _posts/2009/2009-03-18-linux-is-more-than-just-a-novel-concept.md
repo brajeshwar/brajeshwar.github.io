@@ -9,11 +9,11 @@ Few characteristics that differentiates Linux and its distros include;
 - A major feature about Linux that it holds over other operating systems is the ease of writing drivers. These Linux drivers are often smaller than other operating system drivers.
 - Linux is regarded as one of the best embedded operating systems.
 - Linux is widely considered the best OS for Web servers. Even if you consider the price!
-- <a href="https://www.ubuntu.com">Ubuntu</a> has the simplest installer of all the Linux distros today.
-- As a trait of a perfect OS, <a href="https://www.OpenSuse.org">OpenSuse</a> values aesthetics of great UI and features.
-- Yet another desirable feature is to have good hardware device compatibility, and <a href="https://www.pclinuxos.com/">PCLinuxOS</a> is now doing it better than the rest.
-- A lot of people still look for traditional stability in an OS and it is <a href="https://www.Slackware.com">Slackware</a> which is designed to be steady and runs smooth.
-- <a href="https://fedoraproject.org/">Fedora</a> is a perfect Linux OS which has a Security-Enhanced Linux feature that executes a range of security policies and hits the list for its reliable security features.
+- [Ubuntu](https://www.ubuntu.com) has the simplest installer of all the Linux distros today.
+- As a trait of a perfect OS, [OpenSuse](https://www.OpenSuse.org) values aesthetics of great UI and features.
+- Yet another desirable feature is to have good hardware device compatibility, and [PCLinuxOS](https://www.pclinuxos.com/) is now doing it better than the rest.
+- A lot of people still look for traditional stability in an OS and it is [Slackware](https://www.Slackware.com) which is designed to be steady and runs smooth.
+- [Fedora](https://fedoraproject.org/) is a perfect Linux OS which has a Security-Enhanced Linux feature that executes a range of security policies and hits the list for its reliable security features.
 - Since most distros are available for a free download, Linux has a strong support for functionality in the network, client and server systems.
 - Its flexible file access permission system and walls prevent viruses and malwares.
 

@@ -2,7 +2,7 @@
 
 The present-day digital world gains the upper hand when it comes to writing and publishing content online. Everyone can create and share them with the public, so the issue of plagiarism and copyright infringement becomes essential more than ever. To make sure they write original works and no one duplicates them, writers consider plagiarism check tools and services to protect content from copy-pasting.
 
-One of them has strong chances to become <a href="https://plagiarismcheck.org/">your own plagiarism curation tool</a>, which belongs to a new-generation service complemented with technology and advanced algorithmic solutions.
+One of them has strong chances to become [your own plagiarism curation tool](https://plagiarismcheck.org/), which belongs to a new-generation service complemented with technology and advanced algorithmic solutions.
 
 [![PlagiarismCheck)](/static/2018/plagiarismcheck.jpg)](https://plagiarismcheck.org/)
 
@@ -36,7 +36,7 @@ The tool is web-based and doesn't require any downloads or installations. Start 
 
 ## Pricing
 
-PlagiarismCheck offers three <a href="https://plagiarismcheck.org/pricing/">upgrading options</a>, depending on the number of pages a user needs to analyze: light, standard, and premium.
+PlagiarismCheck offers three [upgrading options](https://plagiarismcheck.org/pricing/), depending on the number of pages a user needs to analyze: light, standard, and premium.
 
 Unlike most services, this one doesn't offer any monthly or yearly subscriptions. Once bought, a chosen pack will not expire until a user decides to use all the available check limits.
 

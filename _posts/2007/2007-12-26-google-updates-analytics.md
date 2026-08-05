@@ -1,6 +1,6 @@
 # Google updates Analytics
 
-Very recently, Google <a href="https://analytics.blogspot.com/2007/12/announcing-new-graphing-tools-gajs.html">announced</a> several updates to Google Analytics including the ability to graph multiple data points at once, 6 additional languages and most importantly the ga.js tracking. Google Analytics was using the urchin.js tag earlier (it will still continue to work sans the new features).
+Very recently, Google [announced](https://analytics.blogspot.com/2007/12/announcing-new-graphing-tools-gajs.html) several updates to Google Analytics including the ability to graph multiple data points at once, 6 additional languages and most importantly the ga.js tracking. Google Analytics was using the urchin.js tag earlier (it will still continue to work sans the new features).
 
 The new update will be immediately available to all current Google Analytics users. The newly introduced 6 language options are -- Thai, Filipino, Indonesian, Czech, Hungarian, and Portuguese (Portugal).
 

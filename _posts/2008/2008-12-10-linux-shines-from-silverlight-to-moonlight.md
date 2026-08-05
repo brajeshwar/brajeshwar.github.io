@@ -2,9 +2,9 @@
 
 If I were to inquire Linux users about how would they scrutinize various applications on the Web if the functionality gets closer to that of Microsoft; their answer would perhaps be Moonlight 1.0 which had been released to provide them the feature parity with Microsoft's Silverlight 1.0.
 
-The first beta of the Linux implementation of Silverlight, the Novell-sponsored <a href="https://www.go-mono.com/moonlight">Moonlight project </a>has been released. Moonlight is an open source implementation of <a href="https://silverlight.net/">Silverlight</a>, primarily for Linux and other Unix/X11 based operating systems. It is designed is a way that Linux users can access additional content and where Microsoft delivers the content to the non-Windows users. With this it can be drawn that now onwards Linux users won't miss any interesting when it comes to Web content. 
+The first beta of the Linux implementation of Silverlight, the Novell-sponsored [Moonlight project](https://www.go-mono.com/moonlight)has been released. Moonlight is an open source implementation of [Silverlight](https://silverlight.net/), primarily for Linux and other Unix/X11 based operating systems. It is designed is a way that Linux users can access additional content and where Microsoft delivers the content to the non-Windows users. With this it can be drawn that now onwards Linux users won't miss any interesting when it comes to Web content. 
 
-Moonlight 1.0 delivers compatibility with Silverlight 1.0 media with some features from the Silverlight 2.0 specifications, which has officially been available from Microsoft recently. In fact Moonlight 1.0 has almost every facet which is available in <a href="https://www.internetnews.com/dev-news/article.php/3777661">Silverlight 2.0</a>. 
+Moonlight 1.0 delivers compatibility with Silverlight 1.0 media with some features from the Silverlight 2.0 specifications, which has officially been available from Microsoft recently. In fact Moonlight 1.0 has almost every facet which is available in [Silverlight 2.0](https://www.internetnews.com/dev-news/article.php/3777661). 
 
 The main initiative behind the Moonlight 1.0 is to enable the compatibility for running of Silverlight applications on Linux, to provide a Linux SDK and to reuse the Silverlight engine that is being built for the desktop applications.
 

@@ -1,6 +1,6 @@
 # Prevent HotLinking with .htaccess
 
-It is fine for people to take images, css, js and other medias from your site as long as they re-host it on their own server after making a copy. Also, known as HotLinking, stealing people's bandwidth by linking directly to other site's images, js, css files is a bad thing. If you are a site owner and want to prevent hotlinking or serve an alternate content, here is an easy solution using <a href="https://httpd.apache.org/docs/1.3/howto/htaccess.html">.htaccess</a>.
+It is fine for people to take images, css, js and other medias from your site as long as they re-host it on their own server after making a copy. Also, known as HotLinking, stealing people's bandwidth by linking directly to other site's images, js, css files is a bad thing. If you are a site owner and want to prevent hotlinking or serve an alternate content, here is an easy solution using [.htaccess](https://httpd.apache.org/docs/1.3/howto/htaccess.html).
 
 Create a .htaccess file and place it on the root of the domain where you want to prevent hotlinking. In my case, it is `www.brajeshwar.com`. Add or append, the following codes between the *Rewrite Rule* else create the same.
 
@@ -14,7 +14,7 @@ RewriteRule \.(gif|jpg|js|css)$ - [F]
 ```
 
 This will prevent hotlinking to my gif, jpg, js and css files.
-Note: <a href="https://httpd.apache.org/docs/1.3/mod/mod_rewrite.html">mod_rewrite</a> should be enabled for this to work.
+Note: [mod_rewrite](https://httpd.apache.org/docs/1.3/mod/mod_rewrite.html) should be enabled for this to work.
 
 In an event where you want to replace a hotlinked media with an alternate media, here is the change for the .htaccess file.
 

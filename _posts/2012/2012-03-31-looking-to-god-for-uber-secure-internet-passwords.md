@@ -1,6 +1,6 @@
 # Looking to God for Uber-Secure Internet Passwords?
 
-While "God" itself is one of the least-secure passwords, men of the cloth have come up with some of the most secure passwords on the internet today -- by choosing <a href="https://venturebeat.com/2012/03/30/bible-secure-passwords/">Bible-based passwords</a>.
+While "God" itself is one of the least-secure passwords, men of the cloth have come up with some of the most secure passwords on the internet today -- by choosing [Bible-based passwords](https://venturebeat.com/2012/03/30/bible-secure-passwords/).
 
 This epic advice comes from Right Reverend James Langstaff, Bishop of Rochester, England - who recently told his his flock to capture passwords from the New Testament, and ditch those password123-type oldies. That's right, the cloth has gone high tech by using oddly-perverse, yet hard-to-crack passwords (by capitalizing on our general lack of biblical knowledge). 
 

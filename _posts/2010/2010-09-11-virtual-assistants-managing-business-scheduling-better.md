@@ -1,6 +1,6 @@
 # Virtual Assistants - Managing Business Scheduling Better
 
-The world of Online Business has picked up leaps and bounds. Having penned down an article on <a href="/2010/virtual-office-services-on-a-high/">Virtual Office Services</a>, there seems to be yet another online service that will facilitate the functioning of entrepreneurs and home-based businesses. Virtual Assistant is a service offered by various online firms wherein professional experts take on jobs of Personal Secretaries/Assistants performing secretarial tasks related to administration, creative (social) and even technological services (computer-related).
+The world of Online Business has picked up leaps and bounds. Having penned down an article on [Virtual Office Services](/2010/virtual-office-services-on-a-high/), there seems to be yet another online service that will facilitate the functioning of entrepreneurs and home-based businesses. Virtual Assistant is a service offered by various online firms wherein professional experts take on jobs of Personal Secretaries/Assistants performing secretarial tasks related to administration, creative (social) and even technological services (computer-related).
 
 ## How does it work then?
 
@@ -16,11 +16,11 @@ It is a given that every business requires to set the basics right in terms of p
 
 ## Virtual Assistant Service Providers
 
-- <a href="https://www.elance.com/">Elance</a>
-- <a href="https://www.odesk.com/">oDesk</a>
-- <a href="https://getfriday.com/">GetFriday</a>
-- <a href="https://www.brickworkindia.com/">Brickwork India</a>
-- <a href="https://virtual-assistants.outsourcing-services-india.com/services.php">Yantram</a>
-- <a href="https://www.livehelpindia.com/dedicated-24-7-virtual-staffing.html">Live Help India</a>
-- <a href="https://www.internet-researcher.com/vaservices.html">Internet-Researcher</a>
-- <a href="https://www.va4marketing.com/">VA4business</a>
+- [Elance](https://www.elance.com/)
+- [oDesk](https://www.odesk.com/)
+- [GetFriday](https://getfriday.com/)
+- [Brickwork India](https://www.brickworkindia.com/)
+- [Yantram](https://virtual-assistants.outsourcing-services-india.com/services.php)
+- [Live Help India](https://www.livehelpindia.com/dedicated-24-7-virtual-staffing.html)
+- [Internet-Researcher](https://www.internet-researcher.com/vaservices.html)
+- [VA4business](https://www.va4marketing.com/)

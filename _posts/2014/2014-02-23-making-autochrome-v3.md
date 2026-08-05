@@ -23,7 +23,7 @@ We believe that Design is not just how it looks; Design is also about how it wor
 
 We realize that today's Single Page Web Apps might help solve these problems. So to try out, we prototyped a JSON API over WordPress. We did succeed. From there we considered building the front end which consumes these API endpoints.
 
-We considered, <a href="https://backbonejs.org/">Backbone.js</a> and <a href="https://angularjs.org/">AngularJS</a>. We previously had experience with Backbone.js but AngularJS was our first. After reading a lot and testing out, we found AngularJS to the winner.
+We considered, [Backbone.js](https://backbonejs.org/) and [AngularJS](https://angularjs.org/). We previously had experience with Backbone.js but AngularJS was our first. After reading a lot and testing out, we found AngularJS to the winner.
 
 Well, here is our advice for the folks are looking for a Javascript framework, "The learning curve of AngulaJS is on a bit higher side; but it's really worth the time." For us, AngularJS helped in keeping the code well structured and it's directives saved a lot of spaghetti code.
 
@@ -38,13 +38,13 @@ With this setup, we were able to achieve roughly over 50 times faster in page re
 
 ## Development
 
-We chose our favorites: <a href="https://sass-lang.com/">SASS</a> and <a href="https://coffeescript.org/">CoffeeScript</a> variants for the pre-processors. Made use of <a href="https://gruntjs.com/">Grunt</a> to watch and compile those files. So far using Grunt was straight forward.
+We chose our favorites: [SASS](https://sass-lang.com/) and [CoffeeScript](https://coffeescript.org/) variants for the pre-processors. Made use of [Grunt](https://gruntjs.com/) to watch and compile those files. So far using Grunt was straight forward.
 
 But when the time came to hash the Stylesheets and Javascript files in a WordPress theme, things were not so straight forward.
 
 In order to concatenate and revision the Javascript files while building the distribution archive, we made use of grunt task `grunt-usemin`. But, in the case of WordPress Stylesheet, we avoided filename based hashing. Since, WordPress looks for the exact filename `style.css`, and a hashed filenames like `style.34d3e234.css` didn't work with WordPress. 
 
-So we decided to go with using the `$ver` parameter in the function `wp_enqueue_style()` in WordPress which conventionally used to include stylesheets in themes. During the build using the grunt task `grunt-text-replace` we injected the hash of the file as parameter. Some call this method as query based hashing and if you are using <a href="https://www.cloudflare.com/">CloudFlare</a> CDN, you may got ahead and set the "Static Content Caching Level" to Aggressive to cache these query based URLs.
+So we decided to go with using the `$ver` parameter in the function `wp_enqueue_style()` in WordPress which conventionally used to include stylesheets in themes. During the build using the grunt task `grunt-text-replace` we injected the hash of the file as parameter. Some call this method as query based hashing and if you are using [CloudFlare](https://www.cloudflare.com/) CDN, you may got ahead and set the "Static Content Caching Level" to Aggressive to cache these query based URLs.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4zUnFMUdnvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -58,4 +58,4 @@ Grunt along with Git comes to the rescue during builds and deployments. After ta
 
 ## WP-Portkey
 
-<a href="https://github.com/theme6/wp-portkey">WP-Portkey</a> (Github) is our Open Source WordPress Theme Development Workflow we use at <a href="https://theme6.com/">Theme6</a>. We will keep improving it as we continue to use it.
+[WP-Portkey](https://github.com/theme6/wp-portkey) (Github) is our Open Source WordPress Theme Development Workflow we use at [Theme6](https://theme6.com/). We will keep improving it as we continue to use it.

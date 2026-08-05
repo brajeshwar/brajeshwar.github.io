@@ -6,7 +6,7 @@ In 1987, China started its borrowed idea of incubators from the United States. T
 
 China has been trying to combine homegrown venture capital funds and hi-tech business incubators in a drive to forge a knowledge-driven and energy-efficient economy. The government and state-funded policy banks are now active insetting up funds that aimed at financing smaller venture capital funds. These were primarily for high-tech research and development and seed funds that were provided to help a business develop an idea, create the first product and market the product for the first time.
 
-Extracted from an article from <a href="https://news.xinhuanet.com/english/">Xinhua News Agency</a>;
+Extracted from an article from [Xinhua News Agency](https://news.xinhuanet.com/english/);
 
 > In August, the Ministry of Finance and the State Administration of Taxation adopted more favorable financing and taxation terms for companies in incubators. The government promised that 150 percent of research and development expenditure could be deducted from the taxable income of companies in the following fiscal year.
 > 

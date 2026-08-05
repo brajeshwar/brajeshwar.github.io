@@ -1,6 +1,6 @@
 # The Founder Institute Experience
 
-Those 101 days at the Winter 2010 Bay Area semester, <a href="https://fi.co/">Founder Institute</a> was one hell of an action-packed, fast-paced learning experience. Some of the who's who of the Startup world, who mentored us delivered some of the best sessions, which taught us a lot more than we anticipated. Thanks a million to <a href="https://www.linkedin.com/in/adeoressi/">Adeo Ressi</a>.
+Those 101 days at the Winter 2010 Bay Area semester, [Founder Institute](https://fi.co/) was one hell of an action-packed, fast-paced learning experience. Some of the who's who of the Startup world, who mentored us delivered some of the best sessions, which taught us a lot more than we anticipated. Thanks a million to [Adeo Ressi](https://www.linkedin.com/in/adeoressi/).
 
 ## Let me tell you my story
 
@@ -18,24 +18,24 @@ The second shock came somewhere around the holiday season, 2010. I was to leave 
 
 Surviving each week was hard enough and there was no room for compromise. We slogged on the weekly assignment, special assignment, and product building of our Startups. Finally, the persistent, relentless, and hard-working ones remained. Out of the 50+ odd entrepreneurs that started with the Semester, only 14 graduated on 23rd Feb 2011.
 
-We became good friends, helped each other, and enjoyed the time spent together. I'm sure, we'll always remember the great time spent at the <a href="https://www.yelp.com/biz/antonios-nut-house-palo-alto">Antonio's Nut House</a>, Palo Alto.
+We became good friends, helped each other, and enjoyed the time spent together. I'm sure, we'll always remember the great time spent at the [Antonio's Nut House](https://www.yelp.com/biz/antonios-nut-house-palo-alto), Palo Alto.
 
 The graduates from the Winter 2010 Bay Area Semester, Founder Institute:
 
-- <a href="https://www.linkedin.com/in/amolkher">Amol Kher</a>, <a href="https://www.healthmobs.com/">Health Mobs</a> (<a href="https://www.facebook.com/healthmobs">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/brajeshwar">Brajeshwar Oinam</a>, <a href="https://levoma.com/">Levoma</a> (<a href="https://www.facebook.com/pages/Levoma/101675196554390">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/cypriennoel">Cyprien Noel</a>, <a href="https://objectfabric.com/">Object Fabric</a> (<a href="https://www.facebook.com/pages/ObjectFabric/172309392798507">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/fernandopizarro">Fernando Pizarro</a>, <a href="https://www.cinecandy.com/">Cine Candy</a> (<a href="https://www.facebook.com/pages/Cinecandy/181767748519762">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/gauravsharmaln">Gaurav Sharma</a>, <a href="https://rightbuy.com/">Right Buy</a> (<a href="https://www.facebook.com/rightbuy">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/jasonseed">Jason Seed</a>, <a href="https://www.ready2sign.com/">Ready2Sign</a> (<a href="https://www.facebook.com/pages/Ready-2-Sign/186703101342952">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/jayahangal">Jayalaxmi Hangal</a>, <a href="https://family-alley.com/">Family Alley</a> (<a href="https://apps.facebook.com/beautiful_families/">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/marenkate">Maren Kate Donovan</a>, <a href="https://zirtual.com/">Zirtual</a> (<a href="https://www.facebook.com/pages/Zirtual/201621619853004">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/navinbathija">Navin Bathija</a>, <a href="https://www.myneoloan.com/">Neo</a> (<a href="https://www.facebook.com/MyNeoLoan">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/rohitnallapeta">Rohit Nallapeta</a>, <a href="https://adnuance.com/">AdNuance</a> (<a href="https://www.facebook.com/pages/AdNuance-Inc/126414150764731">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/sanjaysanmalhotra">Sanjay Malhotra</a>, <a href="https://clevrr.com/">Clevrr</a> (<a href="https://www.facebook.com/Clevrr">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/sethmcohen">Seth Cohen</a>, <a href="https://www.screenius.com/">Screenius</a> (<a href="https://www.facebook.com/pages/Screenius/187431201289246">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/steffbold">Steffany Boldrini</a>, <a href="https://ecobold.com/">Ecobold</a> (<a href="https://www.facebook.com/EcoBold">Facebook Page</a>)<br />
-- <a href="https://www.linkedin.com/in/weslymichel">Wesly Michel</a>, <a href="https://mosion.me/">Mosion</a> (<a href="https://www.facebook.com/pages/Mosion/193922787293912">Facebook Page</a>)
+- [Amol Kher](https://www.linkedin.com/in/amolkher), [Health Mobs](https://www.healthmobs.com/) ([Facebook Page](https://www.facebook.com/healthmobs))<br />
+- [Brajeshwar Oinam](https://www.linkedin.com/in/brajeshwar), [Levoma](https://levoma.com/) ([Facebook Page](https://www.facebook.com/pages/Levoma/101675196554390))<br />
+- [Cyprien Noel](https://www.linkedin.com/in/cypriennoel), [Object Fabric](https://objectfabric.com/) ([Facebook Page](https://www.facebook.com/pages/ObjectFabric/172309392798507))<br />
+- [Fernando Pizarro](https://www.linkedin.com/in/fernandopizarro), [Cine Candy](https://www.cinecandy.com/) ([Facebook Page](https://www.facebook.com/pages/Cinecandy/181767748519762))<br />
+- [Gaurav Sharma](https://www.linkedin.com/in/gauravsharmaln), [Right Buy](https://rightbuy.com/) ([Facebook Page](https://www.facebook.com/rightbuy))<br />
+- [Jason Seed](https://www.linkedin.com/in/jasonseed), [Ready2Sign](https://www.ready2sign.com/) ([Facebook Page](https://www.facebook.com/pages/Ready-2-Sign/186703101342952))<br />
+- [Jayalaxmi Hangal](https://www.linkedin.com/in/jayahangal), [Family Alley](https://family-alley.com/) ([Facebook Page](https://apps.facebook.com/beautiful_families/))<br />
+- [Maren Kate Donovan](https://www.linkedin.com/in/marenkate), [Zirtual](https://zirtual.com/) ([Facebook Page](https://www.facebook.com/pages/Zirtual/201621619853004))<br />
+- [Navin Bathija](https://www.linkedin.com/in/navinbathija), [Neo](https://www.myneoloan.com/) ([Facebook Page](https://www.facebook.com/MyNeoLoan))<br />
+- [Rohit Nallapeta](https://www.linkedin.com/in/rohitnallapeta), [AdNuance](https://adnuance.com/) ([Facebook Page](https://www.facebook.com/pages/AdNuance-Inc/126414150764731))<br />
+- [Sanjay Malhotra](https://www.linkedin.com/in/sanjaysanmalhotra), [Clevrr](https://clevrr.com/) ([Facebook Page](https://www.facebook.com/Clevrr))<br />
+- [Seth Cohen](https://www.linkedin.com/in/sethmcohen), [Screenius](https://www.screenius.com/) ([Facebook Page](https://www.facebook.com/pages/Screenius/187431201289246))<br />
+- [Steffany Boldrini](https://www.linkedin.com/in/steffbold), [Ecobold](https://ecobold.com/) ([Facebook Page](https://www.facebook.com/EcoBold))<br />
+- [Wesly Michel](https://www.linkedin.com/in/weslymichel), [Mosion](https://mosion.me/) ([Facebook Page](https://www.facebook.com/pages/Mosion/193922787293912))
 
 ## Founder Institute - Globalizing Silicon Valley
 
@@ -43,11 +43,11 @@ The graduates from the Winter 2010 Bay Area Semester, Founder Institute:
 
 Some interesting FAQ and References about Founder Institute.
 
-- <a href="https://www.quora.com/Is-Founder-Institute-a-good-deal-for-entrepreneurs-Why-or-why-not">Is Founder Institute a good deal for entrepreneurs? Why or why not?</a><br />
-- <a href="https://www.quora.com/How-do-programs-like-Y-Combinator-and-TechStars-compare-to-The-Founder-Institute">How do programs like Y Combinator and TechStars compare to The Founder Institute?</a><br />
-- <a href="https://www.quora.com/What-does-the-3-5-promise-really-mean-for-the-Founder-Institute">What does the 3.5% promise really mean for the Founder Institute?</a><br />
-- <a href="https://www.quora.com/Founder-Institute/What-has-the-experience-been-like-for-people-taking-part-in-Adeo-Ressis-Founder-Institute-program">What has the experience been like for people taking part in Adeo Ressi's Founder Institute program?</a><br />
-- <a href="https://www.facebook.com/pages/The-Founder-Institute/176659728864">Founder Institute on Facebook</a><br />
-- Follow <a href="https://twitter.com/founding">@founding</a> on Twitter.
+- [Is Founder Institute a good deal for entrepreneurs? Why or why not?](https://www.quora.com/Is-Founder-Institute-a-good-deal-for-entrepreneurs-Why-or-why-not)<br />
+- [How do programs like Y Combinator and TechStars compare to The Founder Institute?](https://www.quora.com/How-do-programs-like-Y-Combinator-and-TechStars-compare-to-The-Founder-Institute)<br />
+- [What does the 3.5% promise really mean for the Founder Institute?](https://www.quora.com/What-does-the-3-5-promise-really-mean-for-the-Founder-Institute)<br />
+- [What has the experience been like for people taking part in Adeo Ressi's Founder Institute program?](https://www.quora.com/Founder-Institute/What-has-the-experience-been-like-for-people-taking-part-in-Adeo-Ressis-Founder-Institute-program)<br />
+- [Founder Institute on Facebook](https://www.facebook.com/pages/The-Founder-Institute/176659728864)<br />
+- Follow [@founding](https://twitter.com/founding) on Twitter.
 
-<a href="https://fi.co/join/graduate-Brajeshwar_Oinam">Join the Founder Institute</a>
+[Join the Founder Institute](https://fi.co/join/graduate-Brajeshwar_Oinam)

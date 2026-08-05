@@ -1,6 +1,6 @@
 # Adobe AIR and Security
 
-I was reading an Adobe article about an upcoming security update for Flash Player in this month of April, 2008. The Flash Player security update provides further mitigations for issues listed in the December 2007 <a href="https://www.adobe.com/support/security/bulletins/apsb07-20.html">Security Bulletin ABSP07-20</a> for DNS rebinding and cross-domain policy file vulnerabilities, and <a href="https://www.adobe.com/support/security/advisories/apsa07-06.html">Security Advisory APSA07-06</a> for cross-site scripting vulnerabilities in SWFs.
+I was reading an Adobe article about an upcoming security update for Flash Player in this month of April, 2008. The Flash Player security update provides further mitigations for issues listed in the December 2007 [Security Bulletin ABSP07-20](https://www.adobe.com/support/security/bulletins/apsb07-20.html) for DNS rebinding and cross-domain policy file vulnerabilities, and [Security Advisory APSA07-06](https://www.adobe.com/support/security/advisories/apsa07-06.html) for cross-site scripting vulnerabilities in SWFs.
 
 Well, the Adobe AIR shares technology with Flash Player and thus it is likely that Adobe AIR too will get an update with these fixes. This prompted me to do a rather lengthy article on a related topic -- Adobe AIR and Security -- which have been lingering in my to-do list for quite a while. Lengthy but this article will still fall short of all the details of AIR security as it is a big subject in itself.
 
@@ -11,7 +11,7 @@ From AIR perspective, this is a very minute update and is likely that most exist
 * SWF or HTML content loaded from outside of the application (for example, from a web URL or from a local directory)
 * SWF content hosted within HTML in an AIR application
 
-If your AIR application is using affected content (non-application SWF/HTML; SWF in HTML) to do any of the following, consult Adobe's <a href="https://www.adobe.com/devnet/flashplayer/articles/flash_player9_security_update.html">Flash Player 9 security update article</a>;
+If your AIR application is using affected content (non-application SWF/HTML; SWF in HTML) to do any of the following, consult Adobe's [Flash Player 9 security update article](https://www.adobe.com/devnet/flashplayer/articles/flash_player9_security_update.html);
 
 * Use sockets or XMLSockets, regardless of the domain the SWF is connecting to
 * Use `addRequestHeader` or `URLRequest.requestHeaders` in any network API call when sending or loading data cross-domain or Rely on cross-domain access to web services, where HTTP headers are used to interact with the service
@@ -20,15 +20,15 @@ If your AIR application is using affected content (non-application SWF/HTML; SWF
 
 Installing/Upgrading the new AIR should just replace your current AIR version. The application descriptor does not require change. Any other Applications that do not rely on these types of content will not be affected by the security update. Specifically, all-SWF and all-HTML applications where all content files are loaded from the application's directory will remain unaffected. It may be noted that, the AIR runtime periodically checks to see if any updates are available. Once an updated version is detected, the AIR runtime will download it in the background and automatically install it.
 
-However, this is very unlikely to have anything to do with the <a href="/2008/adobe-air-ready-for-linux/">Adobe AIR for Linux Alpha</a> release as it was dropped very recently. But keep a watch eye over Adobe if you're developing or using Adobe AIR applications.
+However, this is very unlikely to have anything to do with the [Adobe AIR for Linux Alpha](/2008/adobe-air-ready-for-linux/) release as it was dropped very recently. But keep a watch eye over Adobe if you're developing or using Adobe AIR applications.
 
 Adobe AIR (erstwhile Central, Apollo)
 
-If you were one of those veterans who have heard, seen and beta-tested <a href="/2003/macromedia-central-10/">Central</a>, <a href="/2007/apollo/">Apollo</a>; you'd know of the three striking technical and business topics that overwhelm the applications -- Branding, Licensing and Security. Out of these three, I believe, starting with Apollo, Adobe AIR have solved the issues of 'Branding' and 'Licensing'. What left is Security and this is something which will remain, we'll continue to fight.
+If you were one of those veterans who have heard, seen and beta-tested [Central](/2003/macromedia-central-10/), [Apollo](/2007/apollo/); you'd know of the three striking technical and business topics that overwhelm the applications -- Branding, Licensing and Security. Out of these three, I believe, starting with Apollo, Adobe AIR have solved the issues of 'Branding' and 'Licensing'. What left is Security and this is something which will remain, we'll continue to fight.
 
-Talk about Adobe Applications and Software Security, then the <a href="https://blogs.adobe.com/stateofsecurity/">blog of Adobe's Lucas Adamski</a> is the place to look for. We know that Adobe AIR is kinda-sorta-Desktop-Web Application which means it inherits the security issues of both the web and the desktop, it even makes it more compound due to the fact that it access the web from the desktop and vice-versa in-a-way. 
+Talk about Adobe Applications and Software Security, then the [blog of Adobe's Lucas Adamski](https://blogs.adobe.com/stateofsecurity/) is the place to look for. We know that Adobe AIR is kinda-sorta-Desktop-Web Application which means it inherits the security issues of both the web and the desktop, it even makes it more compound due to the fact that it access the web from the desktop and vice-versa in-a-way. 
 
-In his article -- <a href="https://www.adobe.com/devnet/air/articles/introduction_to_air_security.html">Introducing the Adobe AIR security model</a>, Lucas says
+In his article -- [Introducing the Adobe AIR security model](https://www.adobe.com/devnet/air/articles/introduction_to_air_security.html), Lucas says
 
 A desktop application has certain characteristics. On the one hand, desktop applications generally have a lot more privileges than a similar web application, as they have been installed by the user to a specific desktop machine, implying a degree of trust that is greater than that of arbitrary web content. On the other hand, the privileges inherent in a desktop application require a greater degree of caution as certain coding practices and patterns that may be common in web applications may never be acceptable in a desktop application.
 

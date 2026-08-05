@@ -1,10 +1,10 @@
 # Flex is now Open Source - one of the sweetest announcement from Adobe
 
-Adobe is announcing that <a href="https://www.adobe.com/go/flex/">Flex</a> will be released under the <a href="https://opensource.org/licenses/mozilla1.1.php">Mozilla Public License</a> (MPL). Along with <a href="https://www.mozilla.org/projects/tamarin/">Tamarin</a>, Adobe will make Rich Internet Application Development an Open Source Experience. Developers can use the Flex SDK to freely develop and deploy Flex applications using either Adobe Flex Builder or an IDE of their choice.
+Adobe is announcing that [Flex](https://www.adobe.com/go/flex/) will be released under the [Mozilla Public License](https://opensource.org/licenses/mozilla1.1.php) (MPL). Along with [Tamarin](https://www.mozilla.org/projects/tamarin/), Adobe will make Rich Internet Application Development an Open Source Experience. Developers can use the Flex SDK to freely develop and deploy Flex applications using either Adobe Flex Builder or an IDE of their choice.
 
-The <a href="https://www.adobe.com/go/opensourceflex/">Open Source Flex</a> initiative will thus make not only the source of ActionScript components from the Flex SDK, which have been available since Flex 2, but also includes the Java source code for the ActionScript and MXML compilers, the ActionScript debugger and the core ActionScript libraries from the SDK. The Flex SDK includes all of the components needed to create Flex applications that run in any browser - on Mac OS X, Windows, and Linux and on now on the desktop using <a href="https://www.adobe.com/go/apollo/">Apollo</a>.
+The [Open Source Flex](https://www.adobe.com/go/opensourceflex/) initiative will thus make not only the source of ActionScript components from the Flex SDK, which have been available since Flex 2, but also includes the Java source code for the ActionScript and MXML compilers, the ActionScript debugger and the core ActionScript libraries from the SDK. The Flex SDK includes all of the components needed to create Flex applications that run in any browser - on Mac OS X, Windows, and Linux and on now on the desktop using [Apollo](https://www.adobe.com/go/apollo/).
 
-Sign up for the Google Group discussion on Flex Open Source. You can download the <a href="https://www.adobe.com/products/flex/">Flex SDK</a> too. So, Open Source believers, let's flex our Rich Internet Application Development experience.
+Sign up for the Google Group discussion on Flex Open Source. You can download the [Flex SDK](https://www.adobe.com/products/flex/) too. So, Open Source believers, let's flex our Rich Internet Application Development experience.
 
 Q. Why Adobe chose the Mozilla Public License?
 

@@ -11,11 +11,11 @@ The kit contains the following major components:
 
 ## Getting Started, Flash Video Resources
 
-- Flash Video Exporter (free with <a href="https://www.macromedia.com/go/tryflashpro/" title="Flash MX 2004 Professional">Flash MX 2004 Professional</a>)
-- <a href="https://www.macromedia.com/go/videostart/" title="Getting Started with Flash Video">Getting Started with Flash Video</a>
-- <a href="https://www.macromedia.com/go/videodocs/" title="Import and Edit Video Tutorial">Import and Edit Video Tutorial</a>
-- <a href="https://www.macromedia.com/go/videowhitepaper/" title="Flash MX 2004 and Video whitepaper">Flash MX 2004 and Video whitepaper</a>
-- <a href="https://www.macromedia.com/go/fvg/" title="Flash Video Gallery">Flash Video Gallery</a>
-- <a href="https://www.macromedia.com/devnet/mx/flash/video.html" title="Flash Video Developer Center">Flash Video Developer Center</a>
-- <a href="https://www.macromedia.com/go/integratingvideo/" title="Integrating Video Into Macromedia Flash">Integrating Video Into Macromedia Flash</a>
+- Flash Video Exporter (free with [Flash MX 2004 Professional](https://www.macromedia.com/go/tryflashpro/ "Flash MX 2004 Professional"))
+- [Getting Started with Flash Video](https://www.macromedia.com/go/videostart/ "Getting Started with Flash Video")
+- [Import and Edit Video Tutorial](https://www.macromedia.com/go/videodocs/ "Import and Edit Video Tutorial")
+- [Flash MX 2004 and Video whitepaper](https://www.macromedia.com/go/videowhitepaper/ "Flash MX 2004 and Video whitepaper")
+- [Flash Video Gallery](https://www.macromedia.com/go/fvg/ "Flash Video Gallery")
+- [Flash Video Developer Center](https://www.macromedia.com/devnet/mx/flash/video.html "Flash Video Developer Center")
+- [Integrating Video Into Macromedia Flash](https://www.macromedia.com/go/integratingvideo/ "Integrating Video Into Macromedia Flash")
 - Flash Video Streaming Service

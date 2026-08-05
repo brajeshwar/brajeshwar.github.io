@@ -29,7 +29,7 @@ Large brands and companies with good funding resources can afford to invest in s
 
 ## How then can you build customer trust and make sales quickly and easily?
 
-Researchers Thomas Travisano and William Brooks stumbled on an interesting fact about the emotional triggers that compel people to buy. They interviewed all types of B2B decision-makers and consumer buyers to figure out what makes them buy some products and services and not others for their book - <a href="https://www.amazon.com/Youre-Working-Hard-Make-Sale/dp/0786303956/">You’re Working Too Hard to Make the Sale!</a>
+Researchers Thomas Travisano and William Brooks stumbled on an interesting fact about the emotional triggers that compel people to buy. They interviewed all types of B2B decision-makers and consumer buyers to figure out what makes them buy some products and services and not others for their book - [You’re Working Too Hard to Make the Sale!](https://www.amazon.com/Youre-Working-Hard-Make-Sale/dp/0786303956/)
 
 > They learned that customers buy most frequently from people and brands they feel understand them.
 

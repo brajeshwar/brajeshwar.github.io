@@ -26,38 +26,38 @@ Here’s a list of great accelerators and the types of startups they work with.
 
 ## Tech, Web, Mobile, and Science Accelerators
 
-- For innovators that plan to combine technology with entertainment to create brand new experiences, <a href="https://disneyaccelerator.com/">Disney</a> is interested.
-- <a href="https://bluestartups.com/">Blue Startups</a> in Honolulu, Hawaii, works with companies focused on technology. Blue pays special attention to startups that want to do business in both the US and Asian marketplaces.
-- <a href="https://startfast.net/">StartFast</a> in Syracuse, New York works with startups in the web, mobile and software industries.
-- The <a href="https://www.illumina.com/science/accelerator.html">Illumina Accelerator program</a> is geared toward scientists in the progressive fields of genomics, clinical research and applied sciences.
-- <a href="https://www.lightspeedic.com/">LightSpeed Innovations</a> in Southern California works with startups in the aerospace industry.
-- <a href="https://www.lumapictures.com/launch/">Luma Launch</a>, located in Santa Monica, CA seeks to works with startups that combine content presentation with technology.
-- <a href="https://www.ventureoutny.com/">VentureOut</a> in New York City works with technology startups.
-- The <a href="https://www.saltminesgroup.com/">SaltMines Group</a> in Vero Beach, Florida works with startups that have designed innovative social media products and mobile apps.
-- The <a href="https://www.theyieldlab.com/">Yield Lab</a> located in St. Louis, Missouri offers help to agricultural technology companies whose product offerings and business concepts encourage sustainability.
+- For innovators that plan to combine technology with entertainment to create brand new experiences, [Disney](https://disneyaccelerator.com/) is interested.
+- [Blue Startups](https://bluestartups.com/) in Honolulu, Hawaii, works with companies focused on technology. Blue pays special attention to startups that want to do business in both the US and Asian marketplaces.
+- [StartFast](https://startfast.net/) in Syracuse, New York works with startups in the web, mobile and software industries.
+- The [Illumina Accelerator program](https://www.illumina.com/science/accelerator.html) is geared toward scientists in the progressive fields of genomics, clinical research and applied sciences.
+- [LightSpeed Innovations](https://www.lightspeedic.com/) in Southern California works with startups in the aerospace industry.
+- [Luma Launch](https://www.lumapictures.com/launch/), located in Santa Monica, CA seeks to works with startups that combine content presentation with technology.
+- [VentureOut](https://www.ventureoutny.com/) in New York City works with technology startups.
+- The [SaltMines Group](https://www.saltminesgroup.com/) in Vero Beach, Florida works with startups that have designed innovative social media products and mobile apps.
+- The [Yield Lab](https://www.theyieldlab.com/) located in St. Louis, Missouri offers help to agricultural technology companies whose product offerings and business concepts encourage sustainability.
 
 ## Women, Minority, Social Change and Team-Based Accelerators
 
-- <a href="https://mergelane.com/">MergeLane</a> in Colorado focuses on women-based startups and the challenges those founders face.
-- <a href="https://startup52.com/">Startup52</a> is a New York City-based accelerator program. This program only works with startups with a strong and diverse team of founders.
-- <a href="https://capria.vc/">Capria</a> in Seattle, Washington looks for startups with a product or business concept that focuses on making a global impact, especially in developing countries and emerging markets.
-- <a href="https://cofoundharlem.com/">Cofound</a> Harlem in New York City has the goal to launch 100 new Harlem-based, community impactful companies by 2020.
-- <a href="https://www.gener8tor.com/">Gener8tor</a> has locations in Milwaukee and Madison, Wisconsin. The accelerator works with startups that have a strong team of founders.
-- <a href="https://www.sixersinnovationlab.com/">The Sixers Innovation Lab</a>, a JV between the Philadelphia 76ers and the Kimball Office, is looking for promising startups in any industry. The Innovation Lab wants to stimulate startup community growth throughout Philadelphia and New Jersey.
+- [MergeLane](https://mergelane.com/) in Colorado focuses on women-based startups and the challenges those founders face.
+- [Startup52](https://startup52.com/) is a New York City-based accelerator program. This program only works with startups with a strong and diverse team of founders.
+- [Capria](https://capria.vc/) in Seattle, Washington looks for startups with a product or business concept that focuses on making a global impact, especially in developing countries and emerging markets.
+- [Cofound](https://cofoundharlem.com/) Harlem in New York City has the goal to launch 100 new Harlem-based, community impactful companies by 2020.
+- [Gener8tor](https://www.gener8tor.com/) has locations in Milwaukee and Madison, Wisconsin. The accelerator works with startups that have a strong team of founders.
+- [The Sixers Innovation Lab](https://www.sixersinnovationlab.com/), a JV between the Philadelphia 76ers and the Kimball Office, is looking for promising startups in any industry. The Innovation Lab wants to stimulate startup community growth throughout Philadelphia and New Jersey.
 
 ## Product Design
 
-- <a href="https://matter.vc/">Matter</a> in New York City and San Francisco is looking for startups that have designed a product that the accelerator can quickly bring to market.
+- [Matter](https://matter.vc/) in New York City and San Francisco is looking for startups that have designed a product that the accelerator can quickly bring to market.
 
 ## Marketing
 
-- <a href="https://brandery.org/">The Brandery</a> in Cincinnatti, OH offers $50,000 in outright funding and works with business in the marketing, branding and design fields.
+- [The Brandery](https://brandery.org/) in Cincinnatti, OH offers $50,000 in outright funding and works with business in the marketing, branding and design fields.
 
 ## Retail and Consumer Goods
 
-- <a href="https://xrclabs.com/">XRC Labs</a> in New York City is great for startups in the consumer goods and retail market.
+- [XRC Labs](https://xrclabs.com/) in New York City is great for startups in the consumer goods and retail market.
 
 
 As you can see, advancing technology and science, working with others and working towards social change can give your startup a really big foot in the door with many accelerators. However, there are accelerators that fund good startups in all industries. You just have to know where to look.
 
-In addition, for further guidance, <a href="https://www.startupnext.co/">Startup Next</a> is a pre-accelerator program that will help a promising startup in any industry get into a top accelerator program.
+In addition, for further guidance, [Startup Next](https://www.startupnext.co/) is a pre-accelerator program that will help a promising startup in any industry get into a top accelerator program.

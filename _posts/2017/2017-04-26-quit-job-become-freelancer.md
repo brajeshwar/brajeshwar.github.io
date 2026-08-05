@@ -39,7 +39,7 @@ You might be wondering how you're going to fill up all the pages if you have lit
 
 As a freelancer you could be making a great income doing work that you love because you have a natural talent for it. Think about it, you'll be doing something you love all day and get paid for it.
 
-Incidentally, you don't have to feel guilty for not fitting into the corporate environment. It's not a sign that you lack a sense of personal responsibility but that you have an <a href="/2016/are-you-a-freelancer-an-entrepreneur-or-a-salesperson/">entrepreneurial</a> spirit. In fact, you belong to the majority of workers around the world.
+Incidentally, you don't have to feel guilty for not fitting into the corporate environment. It's not a sign that you lack a sense of personal responsibility but that you have an [entrepreneurial](/2016/are-you-a-freelancer-an-entrepreneur-or-a-salesperson/) spirit. In fact, you belong to the majority of workers around the world.
 
 Unlike the majority of people, however, you've decided to do something about it—instead of sticking it out to the bitter end or shuffling from one job to another that's equally as dissatisfying, you've decided to make an independent living for yourself.
 

@@ -8,7 +8,7 @@ Article spinners are applications that simply take an existing piece of content 
 
 In theory, this sounds like a great idea. We have all dreamed about having robots do our work for us at some point in our lives, so in the online world anyways it appears that our dreams have come true. Unfortunately, even in the virtual world, laziness rarely pays off.
 
-The article <a href="https://hubpages.com/hub/Why-Article-Spinning-Is-A-Complete-Waste-Of-Time">Why Article Spinning is a Complete Waste of Time</a> discusses some of the drawbacks of this process. First of all, article spinners usually create inane content that could just as easily be written by a blindfolded monkey. They usually don't change an article much, they just replace words with common synonyms that are easily picked up by search engines but make no sense to the reader.
+The article [Why Article Spinning is a Complete Waste of Time](https://hubpages.com/hub/Why-Article-Spinning-Is-A-Complete-Waste-Of-Time) discusses some of the drawbacks of this process. First of all, article spinners usually create inane content that could just as easily be written by a blindfolded monkey. They usually don't change an article much, they just replace words with common synonyms that are easily picked up by search engines but make no sense to the reader.
 
 Also, while they may not read well to users, they are still easily connected to the original piece in most circumstances. Directories and bloggers that have given you permission to submit original content are not usually fooled by them. Some people describe some spinners as being higher quality than others, but in almost all cases a rewrite is still necessary to make the new article work and read well.
 

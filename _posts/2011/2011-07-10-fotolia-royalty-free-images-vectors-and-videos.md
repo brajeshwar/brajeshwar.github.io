@@ -1,10 +1,10 @@
 # Fotolia - Royalty free Images, Vectors and Videos
 
-Started in November 2005, <a href="https://www.fotolia.com/">Fotolia</a> have over 13 million images, vectors and HD Videos in their gallery. Fotolia also have a collection of exceptional images, from well known agencies in the world, in their <a href="https://www.fotolia.com/Info/Collection">Infinite Collection</a>. With Infinite Collection, Fotolia is able to offer both crowd-sourced and professional images on one site.
+Started in November 2005, [Fotolia](https://www.fotolia.com/) have over 13 million images, vectors and HD Videos in their gallery. Fotolia also have a collection of exceptional images, from well known agencies in the world, in their [Infinite Collection](https://www.fotolia.com/Info/Collection). With Infinite Collection, Fotolia is able to offer both crowd-sourced and professional images on one site.
 
-You can even get free photos and vectors which are provided via their <a href="https://www.facebook.com/Fotolia">Facebook Page</a>. If you wish to use them royalty free, you can buy from their vast collection. You can eve sell your Photos, videos etc and earn money.
+You can even get free photos and vectors which are provided via their [Facebook Page](https://www.facebook.com/Fotolia). If you wish to use them royalty free, you can buy from their vast collection. You can eve sell your Photos, videos etc and earn money.
 
-They have a <a href="https://www.fotolia.com/ribbon2010">Plug-In</a> that can instantly add high-resolution photos, videos and illustrations to your PowerPoint or Word documents. You can also use their  <a href="https://www.fotolia.com/desktop">Desktop Widget</a> to search for stock images, vector and videos on your desktop.
+They have a [Plug-In](https://www.fotolia.com/ribbon2010) that can instantly add high-resolution photos, videos and illustrations to your PowerPoint or Word documents. You can also use their  [Desktop Widget](https://www.fotolia.com/desktop) to search for stock images, vector and videos on your desktop.
 
 Photographers and designers constantly update Fotolia with thousands of new photos and illustrations each day, while photographers and designers receive commission from each photo sold and revenue from advertising on the free section.
 
@@ -33,7 +33,7 @@ All images offered on Fotolia are Royalty free, they can be used for all kinds o
 
 The interface is a bit clunky, confusing at first use. For instance, I could not find a way to browse all photos or categories until I did a Search and click from there. Another noticeable usability issue was that of 404 (Not Found) being re-directed back to their homepage. For a photo, video, media site, I'm really itching to have a much cleaner, sleeker, crispier design.
 
-Fotolia competes with the likes of <a href="https://www.istockphoto.com/">iStockPhoto</a>, <a href="https://www.dreamstime.com/">Dreamstime</a>, <a href="https://cutcaster.com/">Cutcaster</a> and <a href="https://www.shutterstock.com/">ShutterStock</a>.
+Fotolia competes with the likes of [iStockPhoto](https://www.istockphoto.com/), [Dreamstime](https://www.dreamstime.com/), [Cutcaster](https://cutcaster.com/) and [ShutterStock](https://www.shutterstock.com/).
 
 ## Get yours for Free
 

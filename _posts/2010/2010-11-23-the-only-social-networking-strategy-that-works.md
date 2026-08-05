@@ -18,4 +18,4 @@ Finally, you must carefully study the communities you would like to participate 
 
 Developing a successful social networking strategy is not impossible. You simply need to know how to go about marketing and branding yourself the right way.
 
-If you want to learn more, read <a href="https://www.universitybusiness.com/viewarticle.aspx?articleid=1289">Five Steps to Developing a Successful Social Networking Strategy</a>.
+If you want to learn more, read [Five Steps to Developing a Successful Social Networking Strategy](https://www.universitybusiness.com/viewarticle.aspx?articleid=1289).

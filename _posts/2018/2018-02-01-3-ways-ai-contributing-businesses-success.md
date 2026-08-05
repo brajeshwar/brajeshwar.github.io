@@ -1,6 +1,6 @@
 # 3 Ways AI is Contributing to Businesses Success
 
-Tech innovations like artificial intelligence are no longer the stuff of science-fiction. Thanks to advancements made in machine learning, we now have AI that can <a href="https://mashable.com/2017/06/12/ai-machine-math/">complete notoriously difficult university entrance exams</a> 12 times faster than the average human. That's just one example of how far this technology has come.
+Tech innovations like artificial intelligence are no longer the stuff of science-fiction. Thanks to advancements made in machine learning, we now have AI that can [complete notoriously difficult university entrance exams](https://mashable.com/2017/06/12/ai-machine-math/) 12 times faster than the average human. That's just one example of how far this technology has come.
 
 Luckily, access to these technologies isn't restricted to a few elite individuals or organizations. Machine learning, AI, and automation are all set to revolutionize the way companies do business in the near future, and businesses of nearly all sizes can benefit.
 
@@ -8,7 +8,7 @@ Here are just a few ways companies will soon be able to take advantage of these 
 
 ## Offering Personalized Service
 
-Today's sophisticated <a href="https://snaps.io/chatbotplatform/">chatbot platforms</a> demonstrate the power of AI. Brands are <a href="https://www.entrepreneur.com/article/299611">already using chatbots</a> to improve customer service, send potential customers targeted ads, and gather user data.
+Today's sophisticated [chatbot platforms](https://snaps.io/chatbotplatform/) demonstrate the power of AI. Brands are [already using chatbots](https://www.entrepreneur.com/article/299611) to improve customer service, send potential customers targeted ads, and gather user data.
 
 A customer service chatbot doesn't just offer a greater degree of convenience to users; it also allows businesses to save money by reducing the need to hire human customer service representatives. This is just one more example of automation solving a major problem for organizations.
 
@@ -18,7 +18,7 @@ Because machine learning allows AI to constantly learn from data, chatbots can a
 
 Effective social media marketing involves analyzing consumer behavior to post targeted content at precise times; AI can make this process much easier. 
 
-For example, imagine a potential customer regularly checks their business Facebook account at specific times throughout the week. Perhaps the customer's search history and behavior indicate they're in the market for a new business software. AI can <a href="https://www.forbes.com/sites/johnellett/2017/07/27/new-ai-based-tools-are-transforming-social-media-marketing/">gather and assess</a> this data much more reliably than a human, posting ads during the times of day when the user is most likely to actually see them.
+For example, imagine a potential customer regularly checks their business Facebook account at specific times throughout the week. Perhaps the customer's search history and behavior indicate they're in the market for a new business software. AI can [gather and assess](https://www.forbes.com/sites/johnellett/2017/07/27/new-ai-based-tools-are-transforming-social-media-marketing/) this data much more reliably than a human, posting ads during the times of day when the user is most likely to actually see them.
 
 ## Enhancing Email Campaigns
 

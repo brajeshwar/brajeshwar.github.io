@@ -1,8 +1,8 @@
 # Nishita Photo theme on Wordpress.com
 
-About a month ago, I got an email from <a href="https://simpledream.net/">Lance Willett</a> of Automattic that they would be launching <a href="/2006/nishita-photo-blog-theme/">Nishita Wordpress theme</a> on Wordpress.com. That was great news!
+About a month ago, I got an email from [Lance Willett](https://simpledream.net/) of Automattic that they would be launching [Nishita Wordpress theme](/2006/nishita-photo-blog-theme/) on Wordpress.com. That was great news!
 
-Honestly, I had not really been maintaining the theme though it turn out be a rather popular one. The wordpress.com version was released sometime back - <a href="https://en.blog.wordpress.com/2011/09/14/new-theme-nishita/">Nishita Theme on Wordpress.com</a> (<a href="https://theme.wordpress.com/themes/nishita/">theme showcase</a>).
+Honestly, I had not really been maintaining the theme though it turn out be a rather popular one. The wordpress.com version was released sometime back - [Nishita Theme on Wordpress.com](https://en.blog.wordpress.com/2011/09/14/new-theme-nishita/) ([theme showcase](https://theme.wordpress.com/themes/nishita/)).
 
 > Nishita is a simple, minimally-styled photo blogging theme - now available for WordPress.com blogs. With a choice of dark or light color scheme, the muted design puts all the focus on your photos. Not only is this theme designed for photos, but it also loves big photos: the default layout is super-wide at 1024 pixels.
 

@@ -1,6 +1,6 @@
 # What empowers the revolution called ~ Android
 
-It has been quite an exciting ride for Android from being seen as a very small time substitute of Apple's iPhone to becoming the most sought after mobile operating system. There are many reasons cited which personify Android to be one of the best technological innovations that has happened in the last decade or so. It is vital that we know the chief aspects which essentially empower Android and have, over a period of time transformed it to be <a href="https://news.discovery.com/tech/called-it-android-phones-more-popular-than-iphones.html">more popular than iPhones</a>. 
+It has been quite an exciting ride for Android from being seen as a very small time substitute of Apple's iPhone to becoming the most sought after mobile operating system. There are many reasons cited which personify Android to be one of the best technological innovations that has happened in the last decade or so. It is vital that we know the chief aspects which essentially empower Android and have, over a period of time transformed it to be [more popular than iPhones](https://news.discovery.com/tech/called-it-android-phones-more-popular-than-iphones.html). 
 
 ## Always a competitor of iPhone!
 
@@ -20,7 +20,7 @@ Firms like Samsung, HTC, and Motorola represent the manufacturers' side and the 
 
 ## The developer's ultimate choice - Android
 
-A recent report stated that 72% developers were of the feeling that Android is "best positioned to power a large number and variety of connected devices in the future." Scott Schwarzhoff, vice president of <a href="https://www.appcelerator.com/">Appcelerator</a>, the company that did the survey, said, "You will see Android embedded on devices beyond the smartphone - tablets, connected TVs, conference systems like Cisco's TelePresence, stereos, refrigerators, automobiles. How many devices could benefit from the Android operating system? The answer is : A Lot. It is the next-generation operating system."
+A recent report stated that 72% developers were of the feeling that Android is "best positioned to power a large number and variety of connected devices in the future." Scott Schwarzhoff, vice president of [Appcelerator](https://www.appcelerator.com/), the company that did the survey, said, "You will see Android embedded on devices beyond the smartphone - tablets, connected TVs, conference systems like Cisco's TelePresence, stereos, refrigerators, automobiles. How many devices could benefit from the Android operating system? The answer is : A Lot. It is the next-generation operating system."
 
 ## Android and its ruthless Novel Practices
 

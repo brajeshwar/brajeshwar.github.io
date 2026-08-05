@@ -16,10 +16,10 @@ While some critics may consider this intrusive, the technology is already in pla
 
 With a huge amount of users connecting to GPS-based apps, services and advertising daily, location-based advertising will be a large part of mobile advertising's future. 
 
-What this signifies is a return to the hyper-local marketing strategy that ruled before TV and the Internet took over. Hyper-local advertising will not only give actionable advertising opportunities to small locally run businesses but it will also be used by large corporations with local products, for example: <a href="https://www.groupon.com/">Groupon</a>.
+What this signifies is a return to the hyper-local marketing strategy that ruled before TV and the Internet took over. Hyper-local advertising will not only give actionable advertising opportunities to small locally run businesses but it will also be used by large corporations with local products, for example: [Groupon](https://www.groupon.com/).
 
 ## Application-Based Advertising
 
-After Google scooped up <a href="https://www.admob.com/">AdMob</a> (from under Apple's nose), Apple retaliated with the creation of their own AdMob-like mobile advertising company -- <a href="https://developer.apple.com/iad/">iAd</a>.
+After Google scooped up [AdMob](https://www.admob.com/) (from under Apple's nose), Apple retaliated with the creation of their own AdMob-like mobile advertising company -- [iAd](https://developer.apple.com/iad/).
 
 iAd's main focus is on integrating advertisements into the popular iPhone and iPad applications. Steve Jobs undoubtedly believes that this will be a huge market given that the average user spends 30+ minutes a day using the over 300,000 iOS apps.  With a 40% Apple 60% app developers profit share system this technology will prove to be a huge stream of revenue for Apple. And even though Google's AdMob's strategy is based more on web-based advertising than application-based, they will undoubtedly want to cash in on a similar program for their Android smartphone platform.

@@ -1,6 +1,6 @@
 # Key features Google+ needs to challenge Facebook
 
-Within a month of its launch, <a href="https://plus.google.com/">Google+</a> is considered to be peril to the current social networking don Facebook. However Google+ needs much more enhancements else it may join the Google's flop list (<a href="www.orkut.com/">Orkut</a>, <a href="www.google.com/buzz">Buzz</a> & <a href="https://wave.google.com/">Wave</a>). Albeit, the features of Google+ are stunning and the User Interface is too gorgeous than any existing social network, Google+ is still a half scorched one and it needs striking enhancements to capture the throne from Facebook.
+Within a month of its launch, [Google+](https://plus.google.com/) is considered to be peril to the current social networking don Facebook. However Google+ needs much more enhancements else it may join the Google's flop list ([Orkut](www.orkut.com/), [Buzz](www.google.com/buzz) & [Wave](https://wave.google.com/)). Albeit, the features of Google+ are stunning and the User Interface is too gorgeous than any existing social network, Google+ is still a half scorched one and it needs striking enhancements to capture the throne from Facebook.
 
 These are some of the enrichments I (the user) require in Google+ (kinda my wishlist):
 
@@ -10,7 +10,7 @@ It's really pathetic to notice that the Don of all the search engines has failed
 
 ## Father of Analytics Fails
 
-Yet again Google fails to include its trademark Analytics (Google practically invented Analytics through Google Analytics) in its Google+. If you are a <a href="https://sproutsocial.com/">SproutSocial</a> user like me, then you will feel incomplete in any social network that doesn't provide Analytics.
+Yet again Google fails to include its trademark Analytics (Google practically invented Analytics through Google Analytics) in its Google+. If you are a [SproutSocial](https://sproutsocial.com/) user like me, then you will feel incomplete in any social network that doesn't provide Analytics.
 
 Google+ doesn't show the recent followers or even lost followers, it doesn't show you who shared your link or clicked on it. It doesn't illustrate any figures and statistics of your followers, their posts, comments as in SproutSocial. Google must seriously consider this since if Google+ provides analytics then it can easily overpower Facebook which lacks the same.
 

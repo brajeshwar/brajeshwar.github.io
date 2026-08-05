@@ -1,6 +1,6 @@
 # Java Servlets, an introduction
 
-We've been talking a lot about Linux lately. Let's break out a bit from that and talk about another topic -- the Java Servlet Technology. We'll try to cover some basic aspects of <a href="https://java.sun.com/products/servlet/">Java Servlet Technology</a> and may be a little more.
+We've been talking a lot about Linux lately. Let's break out a bit from that and talk about another topic -- the Java Servlet Technology. We'll try to cover some basic aspects of [Java Servlet Technology](https://java.sun.com/products/servlet/) and may be a little more.
 
 To give you a basic idea, Servlets are the server side components that are the Java counterpart to dynamic web content technologies like CGI, PHP and ASP.NET.
 

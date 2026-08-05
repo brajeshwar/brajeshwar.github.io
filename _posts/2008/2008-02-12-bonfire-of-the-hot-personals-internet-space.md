@@ -2,11 +2,11 @@
 
 Hot or Not acquired for $20 million
 
-Early today morning, Techcrunch <a href="https://www.techcrunch.com/2008/02/11/hotornot-apparently-very-hot-acquired-for-20-million/">reported</a> the acquisition of <a href="https://www.hotornot.com/">Hot or Not</a> for a reported sum of $20 million allegedly by people related to <a href="https://www.avidlifemedia.com/">Avid Life Media</a>. 'Hot or Not' was founded by James Hong and Jim Young in October 2000. Hot or Not never raised outside funding.
+Early today morning, Techcrunch [reported](https://www.techcrunch.com/2008/02/11/hotornot-apparently-very-hot-acquired-for-20-million/) the acquisition of [Hot or Not](https://www.hotornot.com/) for a reported sum of $20 million allegedly by people related to [Avid Life Media](https://www.avidlifemedia.com/). 'Hot or Not' was founded by James Hong and Jim Young in October 2000. Hot or Not never raised outside funding.
 
 James Hong confirmed the acquisition to TechCrunch but did not disclosed the price. 'Hot or Not' makes money from advertising, virtual flowers and a premium fee when users want to connect. Their annual revenue is estimated to be around $5 million, with $2 million in profit.
 
-Founder James Hong was <a href="https://venturebeat.com/2008/02/11/james-hong-on-selling-hotornot/">interviewed by VentureBeat</a> on the sale of Hot or Not.
+Founder James Hong was [interviewed by VentureBeat](https://venturebeat.com/2008/02/11/james-hong-on-selling-hotornot/) on the sale of Hot or Not.
 
 Hong said that he will be more free and people can expect to see him in cafes a lot more often.
 
@@ -14,7 +14,7 @@ All my life, my parents have called me lazy -- and they're right.  24 Hour Fitne
 
 WooMe gets $3 million more funds
 
-Few days back, there were <a href="https://www.somewhatfrank.com/2008/02/woome-attracts.html">reports</a> of WooMe receiving another $3 million funding. The round was led by Mangrove Capital and included previous investor Atomico and a few others as well.  <a href="https://woome.com/">WooMe</a> is an online speed dating site in the line of <a href="https://www.speeddate.com/">SpeedDate.com</a>.
+Few days back, there were [reports](https://www.somewhatfrank.com/2008/02/woome-attracts.html) of WooMe receiving another $3 million funding. The round was led by Mangrove Capital and included previous investor Atomico and a few others as well.  [WooMe](https://woome.com/) is an online speed dating site in the line of [SpeedDate.com](https://www.speeddate.com/).
 
 There are a few things that are nearly guaranteed revenue generators on the Web and obviously online dating is one of them so I am not surprised to see WooMe attracting money like online daters.
 
@@ -28,12 +28,12 @@ I've been resurrecting Live Speed Dating (LSD) for quite sometime after it got a
 
 It sure looks like the already HOT Personals space on the Internet is becoming more and more hot. Are you prepared to be part of the bonfire?
 
-Note: On a totally different note, I heard of Mac's download Manager -- <a href="https://www.yazsoft.com/">Speed Download</a> releasing its 5th version. I have version 4.x with me and I got another one from the MacHeist II Bundle. If you're on a Mac and want my copy of Speed Download, comment below and ONE lucky person will get the license.
+Note: On a totally different note, I heard of Mac's download Manager -- [Speed Download](https://www.yazsoft.com/) releasing its 5th version. I have version 4.x with me and I got another one from the MacHeist II Bundle. If you're on a Mac and want my copy of Speed Download, comment below and ONE lucky person will get the license.
 
 UPDATES
 
 2008 Feb 13:
 
-James Hong wrote on his blog that he wasn't going to <a href="https://blog.jhong.org/2008/02/so-long-hotornot-and-thanks-for-all.html">make a big deal about the acquisition</a>, preferring to go gently into that good night.
+James Hong wrote on his blog that he wasn't going to [make a big deal about the acquisition](https://blog.jhong.org/2008/02/so-long-hotornot-and-thanks-for-all.html), preferring to go gently into that good night.
 
-<a href="https://www.techcrunch.com/">Mike</a> actually got the exact size of the deal wrong, but he was correct that the deal closed on February 8. Where Mike Arrington gets his information I will never know! Private investors that bought us out intend to hire up and grow the HOTorNOT brand, basically to do all the things that Jim and I dreamed of doing, but never managed to organize and do! We would love to see HOTorNOT grow to epic proportion, and we are confident that it is in better hands with these guys!
+[Mike](https://www.techcrunch.com/) actually got the exact size of the deal wrong, but he was correct that the deal closed on February 8. Where Mike Arrington gets his information I will never know! Private investors that bought us out intend to hire up and grow the HOTorNOT brand, basically to do all the things that Jim and I dreamed of doing, but never managed to organize and do! We would love to see HOTorNOT grow to epic proportion, and we are confident that it is in better hands with these guys!

@@ -1,3 +1,3 @@
 # Flash Communication Server MX
 
-So, it is out finally, Flash Communication Server MX is released today. You can <a href="https://www.macromedia.com/software/trial_download/index.cgi">download</a> a trial version from <a href="https://www.macromedia.com/">Macromedia</a>. While you are there, go and visit the <a href="https://www.macromedia.com/desdev/mx/flashcom/">Flash communication Development</a> section on the site.
+So, it is out finally, Flash Communication Server MX is released today. You can download a trial version from [Macromedia](https://www.macromedia.com/). While you are there, go and visit the [Flash communication Development](https://www.macromedia.com/desdev/mx/flashcom/) section on the site.

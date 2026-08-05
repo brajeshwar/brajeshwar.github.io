@@ -4,7 +4,7 @@ The smartphone has today surpassed the PC as the new and true personal computer.
 
 ## Security
 
-Mobile threats are different and Lookout is uniquely designed for smartphones to protect against malware, spyware threats and apps that violate privacy. Lightweight and efficient, <a href="https://www.mylookout.com/">Lookout</a> stays connected to ensure up-to-date, comprehensive protection. Scans can be initiated real-time or scheduled. The Privacy Advisor provides clear insight into which apps access private data like location, messages and personal information, as well as scan every app you download to see what data it accesses. Lookout also allows you to remotely lock your phone from the web if it's lost or stolen and even offers remotely deleting all personal data from it -- including the SD card.
+Mobile threats are different and Lookout is uniquely designed for smartphones to protect against malware, spyware threats and apps that violate privacy. Lightweight and efficient, [Lookout](https://www.mylookout.com/) stays connected to ensure up-to-date, comprehensive protection. Scans can be initiated real-time or scheduled. The Privacy Advisor provides clear insight into which apps access private data like location, messages and personal information, as well as scan every app you download to see what data it accesses. Lookout also allows you to remotely lock your phone from the web if it's lost or stolen and even offers remotely deleting all personal data from it -- including the SD card.
 
 ## Backup
 
@@ -16,4 +16,4 @@ The price of a replacement isn't the only cost of a lost or stolen mobile device
 
 ## Complete Control
 
-Lookout's easy-to-use account dashboard allows you to remotely manage multiple phones from the web. You can get updates to your phone automatically over the air and it supports phones across multiple operating systems including Android, BlackBerry and Windows Mobile. Manage your data and up to two phones over the air by logging into the Lookout website. Your Lookout account follows you, not just your phone. If you get a new phone, you'll be able to continue using Lookout without signing up again. <a href="https://www.mylookout.com/">Get it today</a>!
+Lookout's easy-to-use account dashboard allows you to remotely manage multiple phones from the web. You can get updates to your phone automatically over the air and it supports phones across multiple operating systems including Android, BlackBerry and Windows Mobile. Manage your data and up to two phones over the air by logging into the Lookout website. Your Lookout account follows you, not just your phone. If you get a new phone, you'll be able to continue using Lookout without signing up again. [Get it today](https://www.mylookout.com/)!

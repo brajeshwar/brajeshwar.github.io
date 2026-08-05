@@ -1,10 +1,10 @@
 # OSX Lion - Make way for the King
 
-Steve Jobs says that the <a href="https://www.apple.com/macosx/lion/">Lion</a> has been inspired by their efforts with iOS, resulting in an expanded use of multitouch gestures, an emphasis on iPad-like full screen applications and an App Store for OS X (which will also be coming to Snow Leopard). The Launchpad application launcher will give an iPad-like grid of icons allowing you to create iOS-style folders for applications and finally the all-new Mission Control will offer a unified view of all open windows, apps and dock. Expect the eighth major release of the world's most advanced operating system; Lion to roll out in the summer of 2011.
+Steve Jobs says that the [Lion](https://www.apple.com/macosx/lion/) has been inspired by their efforts with iOS, resulting in an expanded use of multitouch gestures, an emphasis on iPad-like full screen applications and an App Store for OS X (which will also be coming to Snow Leopard). The Launchpad application launcher will give an iPad-like grid of icons allowing you to create iOS-style folders for applications and finally the all-new Mission Control will offer a unified view of all open windows, apps and dock. Expect the eighth major release of the world's most advanced operating system; Lion to roll out in the summer of 2011.
 
 ## The Mac App Store
 
-Like the iPhone and iPad, soon Mac users will find the best place to discover and buy new apps made just for Mac, right on a Mac. The <a href="https://www.apple.com/mac/app-store/">Mac App Store</a> will offer the possibility of browsing and purchasing apps. And it simplified installation means you just click once, and your new app is downloaded, installed and ready to go.
+Like the iPhone and iPad, soon Mac users will find the best place to discover and buy new apps made just for Mac, right on a Mac. The [Mac App Store](https://www.apple.com/mac/app-store/) will offer the possibility of browsing and purchasing apps. And it simplified installation means you just click once, and your new app is downloaded, installed and ready to go.
 
 ## The Launchpad
 

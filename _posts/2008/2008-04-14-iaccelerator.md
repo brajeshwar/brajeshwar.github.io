@@ -1,6 +1,6 @@
 # iAccelerator Summer Start-up Camp (India)
 
-I've heard of the term, <a href="https://www.ciieindia.org/?page_id=93">iAccelerator</a>, before but never cared to look further until today when I read <a href="https://tarundua.net/summers/ahmedabad">an article</a> from Tarun about this YCombinator style Summer Startup Camp.
+I've heard of the term, [iAccelerator](https://www.ciieindia.org/?page_id=93), before but never cared to look further until today when I read [an article](https://tarundua.net/summers/ahmedabad) from Tarun about this YCombinator style Summer Startup Camp.
 
 iAccelerator is an IIM Ahmedabad initiative done in conjunction with Microsoft, Kuruvindum, NASSCOM and Kickstart.in bringing a unique opportunity for young developers to convert their ideas into reality.
 
@@ -8,4 +8,4 @@ The three-month Summer Camp is inspired by the success of YCombinator and the pr
 
 Participants will be given a monthly stipend of Rs. 8,000 (equivalent to about $200 /mo), internet connected computers, an office space, mentoring, networking and accommodation at IIMA. It's pity that they don't have much funds to even give the participants a reasonable pocket-money.
 
-I suggest skipping the <a href="https://www.ciieindia.org/?page_id=93">last paras</a> of the iAccelerator article, a rather lame effort in humor gone cheesy. You'd rather enjoy Tarun's <a href="https://tarundua.net/summers/ahmedabad">take on Startup initiatives</a> if you have the guts for a Startup.
+I suggest skipping the [last paras](https://www.ciieindia.org/?page_id=93) of the iAccelerator article, a rather lame effort in humor gone cheesy. You'd rather enjoy Tarun's [take on Startup initiatives](https://tarundua.net/summers/ahmedabad) if you have the guts for a Startup.

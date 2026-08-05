@@ -4,7 +4,7 @@ If you pay a woman for sex, that's illegal -- it's prostitution. If you film it 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/JLSiy4nUvnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Wade is the founder of <a href="https://www.seekingarrangement.com/">SeekingArrangement.com</a>, <a href="https://www.dateamillionaire.com/">DateaMillionare.com</a> and <a href="https://www.whatsyourprice.com/">WhatsYourPrice.com</a>, and now the like-minded <a href="https://www.misstravel.com/">MissTravel.com</a>; all are websites dedicated to finding rich men for attractive young women, or vice versa. Or both. Think Couch Surfing for gold diggers. It is no strings attached apparently.
+Wade is the founder of [SeekingArrangement.com](https://www.seekingarrangement.com/), [DateaMillionare.com](https://www.dateamillionaire.com/) and [WhatsYourPrice.com](https://www.whatsyourprice.com/), and now the like-minded [MissTravel.com](https://www.misstravel.com/); all are websites dedicated to finding rich men for attractive young women, or vice versa. Or both. Think Couch Surfing for gold diggers. It is no strings attached apparently.
 
 > "MissTravel.com was built to solve the big travel dilemma, by matching Generous frequent flyers who have the money but lack company with Attractive travel lovers who don't have the financial resources to do so," says the MissTravel.com website. Wade's entrepreneurial spirit combined with his affinity for sugar daddy-style match-ups is yet again striking virtual gold.
 

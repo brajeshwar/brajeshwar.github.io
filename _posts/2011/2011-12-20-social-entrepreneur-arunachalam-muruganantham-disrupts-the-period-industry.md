@@ -1,6 +1,6 @@
 # Social Entrepreneur Arunachalam Muruganantham Disrupts the Period Industry
 
-Arunachalam Muruganantham is a social Entrepreneur who decided to disrupt the period industry, specially for developing countries like India, where cost of sanitary napkins is not affordable to most women. He says that only 7% of the Indian women uses the modern-day sanitary napkins and his target is to make the remaining 93% have access to really cheap sanitary napkins. <a href="https://www.fastcoexist.com/1679008/an-indian-inventor-disrupts-the-period-industry">Read more about his journey</a> or visit <a href="https://newinventions.in/">his website</a>.
+Arunachalam Muruganantham is a social Entrepreneur who decided to disrupt the period industry, specially for developing countries like India, where cost of sanitary napkins is not affordable to most women. He says that only 7% of the Indian women uses the modern-day sanitary napkins and his target is to make the remaining 93% have access to really cheap sanitary napkins. [Read more about his journey](https://www.fastcoexist.com/1679008/an-indian-inventor-disrupts-the-period-industry) or visit [his website](https://newinventions.in/).
 
 Here is a Interview, by BlogAdda, of awesome man.
 

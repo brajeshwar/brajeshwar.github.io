@@ -1,6 +1,6 @@
 # Filesystem & file organization in Linux
 
-Let's hope that our earlier article -- <a href="/2008/choice-of-linux-distros/">Which Linux distro is right for you?</a> -- helped you decide a distro suitable for you. With the assembly of a complete Linux machine, it's time now to look into the architectural design of the operating system and look how robust Linux is with an efficient file management system it has. We shall now dive in to understand the file system and the file hierarchy of a Linux system.
+Let's hope that our earlier article -- [Which Linux distro is right for you?](/2008/choice-of-linux-distros/) -- helped you decide a distro suitable for you. With the assembly of a complete Linux machine, it's time now to look into the architectural design of the operating system and look how robust Linux is with an efficient file management system it has. We shall now dive in to understand the file system and the file hierarchy of a Linux system.
 
 A common description of the UNIX system, which also holds good for a Linux operating system says, "On a UNIX system, everything is a file; if something is not a file, it is a process."
 

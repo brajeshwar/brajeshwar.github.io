@@ -1,6 +1,6 @@
 # Nasscom-ICICI KP joins hands for a Rs. 100 crore VC fund
 
-The onslaught of "economical, rapidly deployable" private equity funding in India is growing and it looks like 2008 will see another year of such phenomenal growth. Today, the Economic Times (India) carried a Press Release of a recent formation of a <a href="https://www.nasscom.in/">Nasscom</a>-<a href="https://www.iciciknowledgepark.com/">ICICI Knowledge Park</a> fund of Rs. 100 crore (roughly $25.45 million). The fund is aimed at providing seed capital to startups creating intellectual property.
+The onslaught of "economical, rapidly deployable" private equity funding in India is growing and it looks like 2008 will see another year of such phenomenal growth. Today, the Economic Times (India) carried a Press Release of a recent formation of a [Nasscom](https://www.nasscom.in/)-[ICICI Knowledge Park](https://www.iciciknowledgepark.com/) fund of Rs. 100 crore (roughly $25.45 million). The fund is aimed at providing seed capital to startups creating intellectual property.
 
 The corpus fund will be operated independently and managed by a professional team. Tata Consultancy Services (TCS), ICICI Knowledge Park and Bharti Airtel are the anchor investors.
 

@@ -1,6 +1,6 @@
 # Start.hover.in
 
-Recently, Hover.in started <a href="https://start.hover.in/">start.hover.in</a>, a library created by for developers and publishers to easily add user engagement and rich media (or hovering widgets called hoverlets) within their webpage.
+Recently, Hover.in started [start.hover.in](https://start.hover.in/), a library created by for developers and publishers to easily add user engagement and rich media (or hovering widgets called hoverlets) within their webpage.
 
 Their product demo along with the library, is available on their site, focussing on inviting application developers from facebook, opensocial and other distribution platforms to build compelling contextual applications.
 
@@ -12,6 +12,6 @@ Developers and content-providers can get access to the HOVER API that exposes me
 
 ## Publishers
 
-Blogs and websites can easily decide their user-engagement strategies by just including a script and specifying certain URI's for their links corresponding to available hoverlets. They've already got a <a href="https://wordpress.org/extend/plugins/wp-hover/">Wordpress plugin</a> which can be used right away by bloggers.
+Blogs and websites can easily decide their user-engagement strategies by just including a script and specifying certain URI's for their links corresponding to available hoverlets. They've already got a [Wordpress plugin](https://wordpress.org/extend/plugins/wp-hover/) which can be used right away by bloggers.
 
 Hover.in is an intext content+ad delivery "platform", that gives publishers complete control on what elements of their site they want users to engage with & what content or ad to be shown during the interaction.

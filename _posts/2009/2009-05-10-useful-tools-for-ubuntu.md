@@ -1,6 +1,6 @@
 # Useful Tools for your Ubuntu installation
 
-With the advent of the latest release of probably the most preferred Linux distro, <a href="https://www.ubuntu.com/getubuntu/releasenotes/904overview">Ubuntu 9.04</a> (Jaunty Jackalope), life for a lot of has become simpler. I have been loving the changelog that Ubuntu team works on. With their six-monthly release schedule they come back with better UI, support for new technologies, newer kernel, etc. You may wish to check out the <a href="https://www.ubuntu.com/products/whatisubuntu/904features/">scintillating features</a> of the latest release.
+With the advent of the latest release of probably the most preferred Linux distro, [Ubuntu 9.04](https://www.ubuntu.com/getubuntu/releasenotes/904overview) (Jaunty Jackalope), life for a lot of has become simpler. I have been loving the changelog that Ubuntu team works on. With their six-monthly release schedule they come back with better UI, support for new technologies, newer kernel, etc. You may wish to check out the [scintillating features](https://www.ubuntu.com/products/whatisubuntu/904features/) of the latest release.
 
 I wonder if a lot of reader know the Ubuntu philosophy which says "I am what I am because of who we all are". Ubuntu, from its birth has focused on providing a stable, user friendly and easy to install and up to date operating system.
 
@@ -18,6 +18,6 @@ You may use the inbuilt package manager to search and install these applications
 
 I could find a lot of other interesting tools as well which help optimizing your Linux installation with their powerful-yet-simple UI. Most of these tools intend to improve the overall performance of the system.
 
-Another key concern for novice users is the presence of hacking element which tend to create vulnerability. You may like to have a look at this interesting <a href="https://www.ubuntugeek.com/list-of-security-tools-available-in-ubuntu.html">Ubuntu Geek article</a> that showcases few tools that help you safeguard your beloved Ubuntu installation gainst security issues and concerns.
+Another key concern for novice users is the presence of hacking element which tend to create vulnerability. You may like to have a look at this interesting [Ubuntu Geek article](https://www.ubuntugeek.com/list-of-security-tools-available-in-ubuntu.html) that showcases few tools that help you safeguard your beloved Ubuntu installation gainst security issues and concerns.
 
-Before we close, I would like to share an interesting <a href="https://www.ubuntugeek.com/bandwidth-monitoring-tools-for-ubuntu-users.html">list</a> of bandwidth monitoring tools for Ubuntu users.
+Before we close, I would like to share an interesting [list](https://www.ubuntugeek.com/bandwidth-monitoring-tools-for-ubuntu-users.html) of bandwidth monitoring tools for Ubuntu users.

@@ -2,7 +2,7 @@
 
 ![The Well)](/static/2010/well-logo-real-blue.png)
 
-The year is 2010 and social networking site <a href="https://www.well.com/">The Well</a> celebrates its 25th anniversary, providing us with the perfect opportunity to look back in retrospective, and look forward with bleak hope. Currently there are over 500 million users on <a href="https://www.facebook.com/">Facebook</a>, and if Facebook were a country it would be the 3rd largest country on the planet. The news is plastered with daily reports of people using Facebook pedophile rings, twisted acts of cyber bullying, and other signs of a decaying society. Thankfully there is little talk about the millions of hours logged daily by Facebook users on the <a href="https://www.farmville.com/">Farmville</a> app. This was perhaps not the intention of the fathers of social networking Stewart Brand and Larry Brilliant.
+The year is 2010 and social networking site [The Well](https://www.well.com/) celebrates its 25th anniversary, providing us with the perfect opportunity to look back in retrospective, and look forward with bleak hope. Currently there are over 500 million users on [Facebook](https://www.facebook.com/), and if Facebook were a country it would be the 3rd largest country on the planet. The news is plastered with daily reports of people using Facebook pedophile rings, twisted acts of cyber bullying, and other signs of a decaying society. Thankfully there is little talk about the millions of hours logged daily by Facebook users on the [Farmville](https://www.farmville.com/) app. This was perhaps not the intention of the fathers of social networking Stewart Brand and Larry Brilliant.
 
 Rewind to 1985.
 

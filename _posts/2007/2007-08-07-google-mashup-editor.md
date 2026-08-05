@@ -25,11 +25,11 @@ The GME Sandbox provides a integrated environment to test your mashup before you
 
 ### REFERENCES
 
-- Google Mashup Editor - <a href="https://groups.google.com/group/google-mashup-editor">official Group</a>
-- Google Mashup Editor - <a href="https://code.google.com/gme/gettingstarted.html">Getting Started</a>
-- Google Mashup Editor - <a href="https://code.google.com/gme/">Framework and Tools</a>
-- Google Mashup Editor - <a href="https://gallery.googlemashups.com/">Mashup Gallery</a>
-- Google Mashup Editor - <a href="https://googlemashupeditor.blogspot.com/">Blog</a>
-- Google Mashup Editor - <a href="https://editor.googlemashups.com/docs/samples.html">Samples</a>
-- <a href="https://www.readwriteweb.com/archives/google_mashup_editor.php">Read/WriteWeb</a> on Google Mashup Editor
-- <a href="https://www.downloadsquad.com/2007/07/09/first-look-google-mashup-editor/">Download Squad</a> on Google Mashup Editor
+- Google Mashup Editor - [official Group](https://groups.google.com/group/google-mashup-editor)
+- Google Mashup Editor - [Getting Started](https://code.google.com/gme/gettingstarted.html)
+- Google Mashup Editor - [Framework and Tools](https://code.google.com/gme/)
+- Google Mashup Editor - [Mashup Gallery](https://gallery.googlemashups.com/)
+- Google Mashup Editor - [Blog](https://googlemashupeditor.blogspot.com/)
+- Google Mashup Editor - [Samples](https://editor.googlemashups.com/docs/samples.html)
+- [Read/WriteWeb](https://www.readwriteweb.com/archives/google_mashup_editor.php) on Google Mashup Editor
+- [Download Squad](https://www.downloadsquad.com/2007/07/09/first-look-google-mashup-editor/) on Google Mashup Editor

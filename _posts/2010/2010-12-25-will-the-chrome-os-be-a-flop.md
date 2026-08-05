@@ -2,7 +2,7 @@
 
 Google has been the father of innovation in cyberspace. They have developed so many advanced web technologies that we have begun to believe that they would never develop a technology that wouldn't catch on with the web community.
 
-Google has recently developed the <a href="https://www.google.com/chromeos/">Chrome Operating System</a>. The intention of this technology is to make traditional desktop operating systems obsolete. That's a worthy goal, but the operating system may actually be Google's <a href="https://www.infopackets.com/news/business/google/2010/20101221_more_analysts_dismiss_google_chrome_operating_system.htm">first big flop</a>. Google brags that the system is going to be fast, simple and secure. Unfortunately, many web technologists don't find these cliche statements to be very impressive.
+Google has recently developed the [Chrome Operating System](https://www.google.com/chromeos/). The intention of this technology is to make traditional desktop operating systems obsolete. That's a worthy goal, but the operating system may actually be Google's [first big flop](https://www.infopackets.com/news/business/google/2010/20101221_more_analysts_dismiss_google_chrome_operating_system.htm). Google brags that the system is going to be fast, simple and secure. Unfortunately, many web technologists don't find these cliche statements to be very impressive.
 
 ## Chrome is not for everyone
 
@@ -16,7 +16,7 @@ Google may have over-innovated itself. Until other technology has a chance to ca
 
 ## Give up local Apps
 
-Google unrealistically expects users to give up their ability to run local applications on their computers, according to the article <a href="https://technologizer.com/2010/12/24/cr48-apps/">Why Wouldn't You Want Apps?</a> Many users are disappointed with many web-based applications. Granted, word processing and image editing can be conducted online, but these applications have not been around as long.
+Google unrealistically expects users to give up their ability to run local applications on their computers, according to the article [Why Wouldn't You Want Apps?](https://technologizer.com/2010/12/24/cr48-apps/) Many users are disappointed with many web-based applications. Granted, word processing and image editing can be conducted online, but these applications have not been around as long.
 
 Since the developers have not had enough time to perfect them, users aren't as happy with their functionality. It seems as though Google might be trying to phase out Microsoft by making many of its existing products obsolete. They are probably going to find that this approach is going to backfire for them.
 

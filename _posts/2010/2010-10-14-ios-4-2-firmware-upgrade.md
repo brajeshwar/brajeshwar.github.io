@@ -2,7 +2,7 @@
 
 The success of the iPad over the last year is changing the face of mobile computing. The tablet revolution was brought about by Apple's revolutionary technology, which has moved them to the forefront of computing. Another new era will be ushered in next month in November, an update for the operating system of the world's most popular technologies, the iPhone and the iPad.
 
-The firmware update due next month, <a href="https://www.apple.com/iphone/ios4/">iOS 4.2</a> will make some necessary changes and some nice-to-haves:
+The firmware update due next month, [iOS 4.2](https://www.apple.com/iphone/ios4/) will make some necessary changes and some nice-to-haves:
 
 ## Multitasking
 

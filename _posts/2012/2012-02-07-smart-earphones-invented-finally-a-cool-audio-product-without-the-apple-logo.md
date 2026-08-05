@@ -1,8 +1,8 @@
 # SMART Earphones Invented - Finally a cool audio product without the Apple logo
 
-Cellphones are smart, MP3 players and iPods are smart - and now our smart appliances have a smart companion, earphones. Before you envision white Apple-esque earbuds, there finally comes a cool product to market not invented by the Empire. Nope, these ones were invented in Tokyo by the <a href="https://www.designinterface.jp/en/">Igarashi Design Interfaces Project</a>.
+Cellphones are smart, MP3 players and iPods are smart - and now our smart appliances have a smart companion, earphones. Before you envision white Apple-esque earbuds, there finally comes a cool product to market not invented by the Empire. Nope, these ones were invented in Tokyo by the [Igarashi Design Interfaces Project](https://www.designinterface.jp/en/).
 
-Igarashi's (they will have to come up with a more marketable name for them-ya know, like the Empire would) new concept are <a href="https://www.designinterface.jp/en/projects/UniversalEarphones/">universal earphones</a> that are smart enough to compensate for incorrect ear insertion by switching audio channels. So if you put your ear bud in the wrong ear (which happens daily with my iPod thanks to those too damned small little white ear buds), it will auto-correct you.
+Igarashi's (they will have to come up with a more marketable name for them-ya know, like the Empire would) new concept are [universal earphones](https://www.designinterface.jp/en/projects/UniversalEarphones/) that are smart enough to compensate for incorrect ear insertion by switching audio channels. So if you put your ear bud in the wrong ear (which happens daily with my iPod thanks to those too damned small little white ear buds), it will auto-correct you.
 
 By placing small proximity sensors in their earphones, they can easily determine incorrect placement by searching their surroundings. If it sits closely next to the back of your ear, it is in correct, but if it points forward, toward the fresh air, then it detects a mismatch and swaps audio circuits.
 

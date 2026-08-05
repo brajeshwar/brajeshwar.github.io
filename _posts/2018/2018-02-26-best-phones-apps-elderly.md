@@ -22,7 +22,7 @@ So before you give an elderly the latest and greatest Android phone, you have to
 
 If they do get a smartphone, help them find apps that will help them, not nearly entertain them. You don’t have to be a senior to need a little help remembering things. But if the senior in your life does need a little help remembering things like when to take which pills, appointments, and special events, There are apps for that. You can even find apps specifically to help those with Alzheimer's disease.
 
-If their vision is a problem such that they have a hard time reading mail, there are <a href="https://brailleworks.com/5-top-mobile-apps-for-the-blind/">apps for the visually impaired</a> such as KNFB Reader that do automatic scanning and OCR function, combining it with a speech engine that reads processed text aloud. Make sure they know that smartphones can be helpful and not just fun.
+If their vision is a problem such that they have a hard time reading mail, there are [apps for the visually impaired](https://brailleworks.com/5-top-mobile-apps-for-the-blind/) such as KNFB Reader that do automatic scanning and OCR function, combining it with a speech engine that reads processed text aloud. Make sure they know that smartphones can be helpful and not just fun.
 
 ## Social Media
 

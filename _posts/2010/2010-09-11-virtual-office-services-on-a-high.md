@@ -1,6 +1,6 @@
 # Virtual Office Services - On a High
 
-Having known about the existence of <a href="/2008/get-your-virtual-office-in-india/">Virtual Offices in India</a>, it is now essential for us to understand the benefits of availing the services of a virtual office, who are the players in the Industry which offer virtual office services and what range of services that are on display. Before we do this, it becomes important for us to differentiate between Virtual Office services and <a href="https://sify.com/finance/cisco-unveils-virtual-office-solution-news-default-jegxdoafhgi.html">virtual office solutions</a> (the kind that Cisco has recently launched). 
+Having known about the existence of [Virtual Offices in India](/2008/get-your-virtual-office-in-india/), it is now essential for us to understand the benefits of availing the services of a virtual office, who are the players in the Industry which offer virtual office services and what range of services that are on display. Before we do this, it becomes important for us to differentiate between Virtual Office services and [virtual office solutions](https://sify.com/finance/cisco-unveils-virtual-office-solution-news-default-jegxdoafhgi.html) (the kind that Cisco has recently launched). 
 
 Virtual office services offer online real-estate like services to entrepreneurs who wish to hire an office space for a day or two for office related purposes and virtual office solutions like the one launched by Cisco on the other hand is a secure solution that allows employees to work from home with the same set-up in their offices. The idea of availing the service of a virtual office is to make it easier for start-ups and businesses that are affected by limited office space, to get office support without actually coming to the physical office. It is ideal for people on the move, and those operating from a home office. A glance at some Space services that a virtual office offers could be --
 
@@ -12,11 +12,11 @@ Along with these office spaces, virtual offices are also provided with on-site a
 
 Though a recently launched service in India, there are quite a few online firms that have included the provision of Virtual Office space as one of their market offerings. To name a few;
 
-- <a href="https://www.servcorp.co.in/">Imperial Servcorp</a>
-- <a href="https://www.awadh.in/">Awadh</a>
-- <a href="https://www.regus.co.in/">Regus</a>
-- <a href="https://www.virtuindia.com/index.html">VirtuIndia</a> - Virtual Office Service
-- <a href="https://www.officesindia.com/virtual_office.php">OfficesIndia</a>
+- [Imperial Servcorp](https://www.servcorp.co.in/)
+- [Awadh](https://www.awadh.in/)
+- [Regus](https://www.regus.co.in/)
+- [VirtuIndia](https://www.virtuindia.com/index.html) - Virtual Office Service
+- [OfficesIndia](https://www.officesindia.com/virtual_office.php)
 
 and many more firms now offer virtual office services. Most or all of these firms assert that there are a lot of benefits of hiring a virtual office space. To quote, one of these online virtual office service providers claims
 

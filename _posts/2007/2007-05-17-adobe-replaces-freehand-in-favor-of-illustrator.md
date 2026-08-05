@@ -1,8 +1,8 @@
 # Adobe replaces FreeHand in favor of Illustrator
 
-<a href="https://blogs.adobe.com/jnack/">John Nack</a>, Senior Product Manager, Adobe Photoshop wrote that Adobe will be <a href="https://blogs.adobe.com/jnack/2007/05/freehand_no_lon.html">replacing Freehand with Illustrator</a>. Adobe will continue to sell the current version of FreeHand, but will not do any further development and won't release any updates.
+[John Nack](https://blogs.adobe.com/jnack/), Senior Product Manager, Adobe Photoshop wrote that Adobe will be [replacing Freehand with Illustrator](https://blogs.adobe.com/jnack/2007/05/freehand_no_lon.html). Adobe will continue to sell the current version of FreeHand, but will not do any further development and won't release any updates.
 
-Adobe has <a href="https://www.jnack.com/adobe/illustrator/FreeHand_to_Illustrator_Migration_FAQ.pdf">created an FAQ</a> (PDF) that explains the details of the decision not to rev FreeHand, talks about <a href="https://www.adobe.com/products/illustrator/">Illustrator CS3</a> features added to make FreeHand users more comfortable, and more.
+Adobe has [created an FAQ](https://www.jnack.com/adobe/illustrator/FreeHand_to_Illustrator_Migration_FAQ.pdf) (PDF) that explains the details of the decision not to rev FreeHand, talks about [Illustrator CS3](https://www.adobe.com/products/illustrator/) features added to make FreeHand users more comfortable, and more.
 
 ## FreeHand Upgrade Path
 

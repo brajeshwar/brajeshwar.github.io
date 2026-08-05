@@ -1,8 +1,8 @@
 # Linux, Windows and Mac - The OS Race
 
-If you belong to the "Linux Community" bandwagon, you may just have a different opinion on the fact that there are lessons to be learned from Windows and Mac! Linux community does enjoys some real good evangelism despite having a minuscule user base. Just to prove the support statement, statistics by <a href="https://marketshare.hitslink.com/report.aspx?qprid=8">Marketshare</a> show that Windows enjoys a gorilla sized market share of 90%, followed by Mac 8% and Linux users together mount less than 1%. 
+If you belong to the "Linux Community" bandwagon, you may just have a different opinion on the fact that there are lessons to be learned from Windows and Mac! Linux community does enjoys some real good evangelism despite having a minuscule user base. Just to prove the support statement, statistics by [Marketshare](https://marketshare.hitslink.com/report.aspx?qprid=8) show that Windows enjoys a gorilla sized market share of 90%, followed by Mac 8% and Linux users together mount less than 1%. 
 
-Uniqueness about Linux primarily involves diversity, ability to be tailored well, availability and support to open source applications and not to mention some <a href="https://linuxdevices.com/news/NS9527593286.html">real good solutions</a>. Most of the times, for free! 
+Uniqueness about Linux primarily involves diversity, ability to be tailored well, availability and support to open source applications and not to mention some [real good solutions](https://linuxdevices.com/news/NS9527593286.html). Most of the times, for free! 
 
 Still, the Linux community has a few learning outcomes to explore from its competitors, Windows and Mac. Just to list a few;
 

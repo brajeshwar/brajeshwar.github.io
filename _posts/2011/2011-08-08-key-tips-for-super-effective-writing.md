@@ -6,15 +6,15 @@ While there are no set rules for increasing the effectiveness of your writing, h
 
 ## Object of Interest
 
-It is absolutely necessary that you have an idea about the real interest factor about your topic. This will be your focal point in the write up and also the reason for your curiosity. Being curious about your topic is good; it is also a <a href="https://www.findallanswers.com/enhance-creativity-2/">boost to your creativity</a> as you write what you understand perfectly. 
+It is absolutely necessary that you have an idea about the real interest factor about your topic. This will be your focal point in the write up and also the reason for your curiosity. Being curious about your topic is good; it is also a [boost to your creativity](https://www.findallanswers.com/enhance-creativity-2/) as you write what you understand perfectly. 
 
 ## Understand Your Creativity Schedule
 
-It is actually proven that creativity does have some instigating factors that make the process more viable for some specific times. Like, you might be assailed with most of your ideas and writing content during the day or the silent hours of the night. You are the most likely person to understand this trend and yet you might have been overlooking this till now. Analyse yourself and your work to better <a href="https://poetrynprogress.com/2010/03/15/the-creative-process-unveiled-tapping-into-your-creativity/">understand your creativity schedule</a> and then base your work schedule on it.
+It is actually proven that creativity does have some instigating factors that make the process more viable for some specific times. Like, you might be assailed with most of your ideas and writing content during the day or the silent hours of the night. You are the most likely person to understand this trend and yet you might have been overlooking this till now. Analyse yourself and your work to better [understand your creativity schedule](https://poetrynprogress.com/2010/03/15/the-creative-process-unveiled-tapping-into-your-creativity/) and then base your work schedule on it.
 
 ## Reassess Your Emotional Well-being
 
-It is true that creativity is the <a href="https://www.aliceboyes.com/creativity/">most affected by emotions</a>. If you are very upset or sad or just plain restless; do not try to plough on through your writing. Instead it might be a great idea to take some time off and use the time to do something that helps you realign your focus. You could maybe take a walk or some light exercises can also do the trick. However, it completely depends upon you as to what works for you in this regard.
+It is true that creativity is the [most affected by emotions](https://www.aliceboyes.com/creativity/). If you are very upset or sad or just plain restless; do not try to plough on through your writing. Instead it might be a great idea to take some time off and use the time to do something that helps you realign your focus. You could maybe take a walk or some light exercises can also do the trick. However, it completely depends upon you as to what works for you in this regard.
 
 ## Record a Track of Your Creativity
 
@@ -22,6 +22,6 @@ This is a very mechanical approach to creativity, but it actually works. When yo
 
 ## Spare Time for Relaxation
 
-Of course, it feels great to be gushing with creativity and enjoying the flow. However, the burn-up will also be that much more intense. So, the solution is to balance your work and relaxation. Remember that relaxing is actually giving you time to <a href="https://www.perfectexperts.com/5-things-to-recharge-your-creativity.html">refuel your creative energy</a>. 
+Of course, it feels great to be gushing with creativity and enjoying the flow. However, the burn-up will also be that much more intense. So, the solution is to balance your work and relaxation. Remember that relaxing is actually giving you time to [refuel your creative energy](https://www.perfectexperts.com/5-things-to-recharge-your-creativity.html). 
 
 All in all just keep it in mind that you have to love what you do to really enjoy it and when you enjoy your work it shows in your performance.

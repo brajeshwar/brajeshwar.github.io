@@ -1,6 +1,6 @@
 # Business Intelligence with Retailigence
 
-Peter Christianson's resume, as he tells it, is like a who's who of NASDAQ success stories - so when he lent his talents to new startup, <a href="https://www.retailigence.com/">Retailigence</a>, people paid attention.
+Peter Christianson's resume, as he tells it, is like a who's who of NASDAQ success stories - so when he lent his talents to new startup, [Retailigence](https://www.retailigence.com/), people paid attention.
 
 Retailigence and its founder, Jeremy Geiger, are leveraging Peter's thorough portfolio of skills: business development, revenue growth, supply chain management, operations research, statistics, management consulting, business-process re-engineering and mathematics;  skills Peter is using to help turn Retailigence into the next big thing. Retailigence is a hodge podge of all those skills, mashed together to create a data-driven, traffic-management platform that connects the 3 prongs of the retail sector: retailers, brands and developers - all without an app or search engine.
 

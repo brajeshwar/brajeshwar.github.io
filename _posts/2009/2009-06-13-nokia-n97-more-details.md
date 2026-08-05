@@ -1,6 +1,6 @@
 # More about Nokia N97 (this can be yours)
 
-I've been briefed about the rules, regulations and details where Nokia will give out 10 Nokia N97 as part of the <a href="/2009/nokia-search-for-n/">Search for N</a>.
+I've been briefed about the rules, regulations and details where Nokia will give out 10 Nokia N97 as part of the [Search for N](/2009/nokia-search-for-n/).
 
 What is 'Search for N'?
 
@@ -14,7 +14,7 @@ Once contestants successfully answer all five clues the race is then on to locat
 
 When?
 
-To be part of the international 'Search for N' treasure hunt, and join thousands of others, mark your calendar -- 15th June, 2009. Ten lucky winners will be selected from across India, 2 each from these sites - <a href="https://www.techtree.com/">Techtree</a>, <a href="https://www.thinkdigit.com/">ThinkDigit</a>, <a href="https://www.fonearena.com/">Fonearena</a>, <a href="/">Brajeshwar</a> and <a href="https://www.labnol.org/">Digital Inspiration</a>.
+To be part of the international 'Search for N' treasure hunt, and join thousands of others, mark your calendar -- 15th June, 2009. Ten lucky winners will be selected from across India, 2 each from these sites - [Techtree](https://www.techtree.com/), [ThinkDigit](https://www.thinkdigit.com/), [Fonearena](https://www.fonearena.com/), [Brajeshwar](/) and [Digital Inspiration](https://www.labnol.org/).
 
 Rules
 
@@ -40,4 +40,4 @@ What's in the new Nokia N97
 
 What's Next?
 
-Stay, follow and watch the <a href="/2009/nokia-search-for-n/">Search for N</a>.
+Stay, follow and watch the [Search for N](/2009/nokia-search-for-n/).

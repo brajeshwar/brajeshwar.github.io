@@ -2,7 +2,7 @@
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/ggxORMUm8fQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<a href="https://www.apple.com/">Apple</a> introduced <a href="https://www.apple.com/macosx/">Mac OS X Lion</a> with a gradual shift towards iOS or an iOS-ish experience. Here is how you can wiggle, arrange, delete Apps on your Launchpad on Mac OS X Lion, pretty much like how you do on you iOS devices (<a href="https://www.apple.com/iphone/">iPhone</a>, <a href="https://www.apple.com/ipad/">iPad</a> or the <a href="https://www.apple.com/ipod/">iPod</a>).
+[Apple](https://www.apple.com/) introduced [Mac OS X Lion](https://www.apple.com/macosx/) with a gradual shift towards iOS or an iOS-ish experience. Here is how you can wiggle, arrange, delete Apps on your Launchpad on Mac OS X Lion, pretty much like how you do on you iOS devices ([iPhone](https://www.apple.com/iphone/), [iPad](https://www.apple.com/ipad/) or the [iPod](https://www.apple.com/ipod/)).
 
 Here's how:
 

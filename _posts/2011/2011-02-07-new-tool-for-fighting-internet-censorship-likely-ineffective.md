@@ -2,7 +2,7 @@
 
 International electronic communications are essential to global trade and relations. Censorship programs of some countries can make this seem impossible. Fortunately, they are developing ways to overcome these barriers.
 
-In a post by Fox News, an <a href="https://venturebeat.com/2011/02/05/how-one-researcher-enabled-the-u-s-government-to-slip-news-through-chinas-censors/">announcement made by the Defcon Hacker's Conference</a> details how the U.S. government is using a program called Feed Over email to bypass China's government censors. Sho Ho spoke of the product and said she hopes it will soon help gain support for new ideas in tense political climates.
+In a post by Fox News, an [announcement made by the Defcon Hacker's Conference](https://venturebeat.com/2011/02/05/how-one-researcher-enabled-the-u-s-government-to-slip-news-through-chinas-censors/) details how the U.S. government is using a program called Feed Over email to bypass China's government censors. Sho Ho spoke of the product and said she hopes it will soon help gain support for new ideas in tense political climates.
 
 ## Problems with programs such as Feed Over email
 

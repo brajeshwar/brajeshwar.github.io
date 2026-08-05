@@ -2,13 +2,13 @@
 
 Today, mobile phones have become inevitable in one's life. We've seen it grow from a mere luxury to now a necessity. The transformation in the lifestyle of we, the people is a major reason for this change. What started with a several bucks for incoming call has moved on to a plethora of plans which have free outgoing calls today.
 
-The telecom sector has had a great time in the past 10 years. Early players have minted a huge sum of money already despite the licensing fee they would have paid to get into the play-field. From just <a href="https://www.indiadaily.com/editorial/09-10b-04.asp">40.6 million</a> mobile phone users in Spetember'2004, India is to have over <a href="https://www.physorg.com/news148219531.html">650 million</a> users by 2012, as predicted by the Indian prime minister last year.
+The telecom sector has had a great time in the past 10 years. Early players have minted a huge sum of money already despite the licensing fee they would have paid to get into the play-field. From just [40.6 million](https://www.indiadaily.com/editorial/09-10b-04.asp) mobile phone users in Spetember'2004, India is to have over [650 million](https://www.physorg.com/news148219531.html) users by 2012, as predicted by the Indian prime minister last year.
 
-Admist all the number games, an acronym which is of more interest to the mobile phone subscribers is <a href="https://en.wikipedia.org/wiki/Mobile_number_portability">MNP</a> or the well known and self explanatory, Mobile Number Portability. 
+Admist all the number games, an acronym which is of more interest to the mobile phone subscribers is [MNP](https://en.wikipedia.org/wiki/Mobile_number_portability) or the well known and self explanatory, Mobile Number Portability. 
 
 > Mobile number portability (MNP) enables mobile telephone users to retain their mobile telephone numbers when changing from one mobile network operator to another.
 
-A large percentage of mobile users are willing to switch to a different service provider but cannot afford to change their phone numbers. MNP is for them. The latest news in this context was <a href="https://www.dot.gov.in/as/MNP/AS-1%20Amend.%206-5-2009.pdf">DoT's notification</a> on rolling out MNP by September'2009 in Delhi, Mumbai, Maharashtra and Gujarat which form Zone I and Kolkata, Tamil Nadu, Chennai, Andhra Pradesh and Karnataka of Zone 2 within the following 6 months.
+A large percentage of mobile users are willing to switch to a different service provider but cannot afford to change their phone numbers. MNP is for them. The latest news in this context was [DoT's notification](https://www.dot.gov.in/as/MNP/AS-1%20Amend.%206-5-2009.pdf) on rolling out MNP by September'2009 in Delhi, Mumbai, Maharashtra and Gujarat which form Zone I and Kolkata, Tamil Nadu, Chennai, Andhra Pradesh and Karnataka of Zone 2 within the following 6 months.
 
 MNP is active in countries like Australia, Denmark and Sweden since 2001. Even Saudi Arabia has it since the year 2006.
 

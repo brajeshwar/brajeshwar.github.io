@@ -1,6 +1,6 @@
 # Red Hat Enterprise Linux 5.3b adds to virtualization
 
-Red Hat Enterprise Linux 5.3 (<a href="https://www.redhat.com/rhel/">RHEL 5.3</a>) beta has been launched by <a href="https://www.redhat.com/">Red Hat Inc.</a> with claims that the companies adopting this shall be able to virtualise out-sized and complex operations with appealing ease. For beginners, RHEL 5.3 beta offers virtualization to run on larger systems with additional memory and with more guests per host. There have been significant improvements in this release, enabling enhancements in features such as clustering, file systems, hardware driver support and virtualization. It will also facilitate the intricate applications to link with disk storage and network support devices. 
+Red Hat Enterprise Linux 5.3 ([RHEL 5.3](https://www.redhat.com/rhel/)) beta has been launched by [Red Hat Inc.](https://www.redhat.com/) with claims that the companies adopting this shall be able to virtualise out-sized and complex operations with appealing ease. For beginners, RHEL 5.3 beta offers virtualization to run on larger systems with additional memory and with more guests per host. There have been significant improvements in this release, enabling enhancements in features such as clustering, file systems, hardware driver support and virtualization. It will also facilitate the intricate applications to link with disk storage and network support devices. 
 
 According to Daniel Riek, an RHEL product manager, 
 
@@ -18,4 +18,4 @@ These additional benefits further increases the confidence in the virtualization
 
 This release of 5.3 beta version will be very important considering the product life cycle of Linux presently. Minor changes such as tracking of internal operations with the same applications will now become possible as compared to the previous version where in the kernel was the only place for these internal operations. Also, the provision of a guest run on the KVM hypervisor would help in testing for the software developers. 
 
-Overall <a href="https://www.redhat.com/rhel/">RHEL 5.3</a> promises to be a good product.
+Overall [RHEL 5.3](https://www.redhat.com/rhel/) promises to be a good product.

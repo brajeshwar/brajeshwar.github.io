@@ -1,6 +1,6 @@
 # 4 clear trends to watch in Consumer Electronics for 2011
 
-Earlier this month the <a href="https://www.ce.org/">Consumer Electronics Association</a> hosted their annual <a href="https://www.cesweb.org/">Consumer Electronics Show</a> -- showcasing upcoming trends in electronics and the newest advancements in geeky gadget technology. After 40 years in the business the trade show has grown to over 2,000 members, all of who are on the cutting edge of electronics research, development, design and distribution. 
+Earlier this month the [Consumer Electronics Association](https://www.ce.org/) hosted their annual [Consumer Electronics Show](https://www.cesweb.org/) -- showcasing upcoming trends in electronics and the newest advancements in geeky gadget technology. After 40 years in the business the trade show has grown to over 2,000 members, all of who are on the cutting edge of electronics research, development, design and distribution. 
 
 This year's event was held on January 6-9 and yielded 4 clear trends in consumer electronics that should be a focus for IT geeks in 2011: that everything will be internet-enabled, the app frenzy will continue, tablets will continue to explode, and we should finally start seeing in 3D.
 

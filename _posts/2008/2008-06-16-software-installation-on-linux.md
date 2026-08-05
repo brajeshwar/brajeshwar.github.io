@@ -2,7 +2,7 @@
 
 ![Windows Vista Everything Included)](/static/2008/vista-malice.jpg)
 
-While we gracefully installed our <a href="/2008/choice-of-linux-distros/">favorite Linux distro</a>, one of the mundane problems which most users face is - installing a new software. In the beginning, software installation on a Linux distro can seem extremely intimidating while using a terminal but more often than not we can install things graphically. Installing software on Linux is not only easier than most of us think, but it also has some special features which help software's to be updated automatically!
+While we gracefully installed our [favorite Linux distro](/2008/choice-of-linux-distros/), one of the mundane problems which most users face is - installing a new software. In the beginning, software installation on a Linux distro can seem extremely intimidating while using a terminal but more often than not we can install things graphically. Installing software on Linux is not only easier than most of us think, but it also has some special features which help software's to be updated automatically!
 
 Primarily, there are 3 main ways to install a software on Linux.
 
@@ -16,11 +16,11 @@ The first way of installing software is by using a .deb/.rpm file.  As mentioned
 
 Here and thereafter, we shall concentrate on .deb files whenever we happen to encounter both the flavors. Remember that there is not much of a difference in the way they're executed. It it is just that how these are fabricated depending on the underlying distro they are meant for - debian or RPM based.
 
-Coming back to the first way of installing software, this method is pretty similar to installing a software on a MS windows with an executable file. Just download a .deb file for the software you want to install, double click to open it via the default package manager- synaptic in case of <a href="https://www.ubuntu.com">ubuntu</a> (debian) and type in your password  when prompted. We hope you'd have speculated which password should this be! Installing a software by this method shall automatically check for any additional dependencies you may need and will download and install them too.
+Coming back to the first way of installing software, this method is pretty similar to installing a software on a MS windows with an executable file. Just download a .deb file for the software you want to install, double click to open it via the default package manager- synaptic in case of [ubuntu](https://www.ubuntu.com) (debian) and type in your password  when prompted. We hope you'd have speculated which password should this be! Installing a software by this method shall automatically check for any additional dependencies you may need and will download and install them too.
 
 One of the disappointing fact about this type of installation is not every  program created for Linux has a .deb for users to use for installation. Also, new programs generally do not have a .deb at first until they get more users and popularity. Lastly when the software is updated it will not automatically update, you will need to uninstall it then grab the new .deb package.
 
-A great website to get  .deb packages for popular Linux programs is <a href="https://www.getdeb.net/">getdeb.net</a>.
+A great website to get  .deb packages for popular Linux programs is [getdeb.net](https://www.getdeb.net/).
 
 Using apt-get with a software repository
 

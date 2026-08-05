@@ -1,6 +1,6 @@
 # Apple iBooks 1.2
 
-E-books take a lot of space in your digital shelves and often start to look cluttered and unorganized unlike the large library shelves that house physical books. Apple's <a href="https://www.apple.com/ipad/features/ibooks.html">iBooks 1.2</a> allows you to enjoy fully-illustrated works, get your notes out of your e-books, and more.
+E-books take a lot of space in your digital shelves and often start to look cluttered and unorganized unlike the large library shelves that house physical books. Apple's [iBooks 1.2](https://www.apple.com/ipad/features/ibooks.html) allows you to enjoy fully-illustrated works, get your notes out of your e-books, and more.
 
 ## Collections
 

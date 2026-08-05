@@ -1,9 +1,9 @@
 # An open source PHP client for SURBL; thanks to the spam attack on nsfw.in
 
-Couple of days back, I got an email from Amazon Abuse Desk, that botnet spammers were abusing <a href="https://nsfw.in">NSFW.in</a>. Our IP on the AWS EC2 was added to <a href="https://www.spamhaus.org/sbl/">The Spamhaus Block List</a>. Some Russian botnet spam gangs were creating automates short url at NSFW.in.
+Couple of days back, I got an email from Amazon Abuse Desk, that botnet spammers were abusing [NSFW.in](https://nsfw.in). Our IP on the AWS EC2 was added to [The Spamhaus Block List](https://www.spamhaus.org/sbl/). Some Russian botnet spam gangs were creating automates short url at NSFW.in.
 
-<a href="https://abhiomkar.in/">Abhinay</a> created a PHP Client for <a href="https://www.surbl.org/">SURBL</a>. Now, NSFW.in short-link creation just need to look up the domain against SURBL to see if a domain is blacklisted or not.
+[Abhinay](https://abhiomkar.in/) created a PHP Client for [SURBL](https://www.surbl.org/). Now, NSFW.in short-link creation just need to look up the domain against SURBL to see if a domain is blacklisted or not.
 
-The <a href="https://github.com/abhiomkar/php-surblclient">SURBL PHP client</a> is released as Open-Source under MIT license and is <a href="https://github.com/abhiomkar/php-surblclient">available at Github</a>.
+The [SURBL PHP client](https://github.com/abhiomkar/php-surblclient) is released as Open-Source under MIT license and is [available at Github](https://github.com/abhiomkar/php-surblclient).
 
-<a href="https://nsfw.in/">NSFW.in</a> is a url shortening service that makes unsafe URLs safer!
+[NSFW.in](https://nsfw.in/) is a url shortening service that makes unsafe URLs safer!

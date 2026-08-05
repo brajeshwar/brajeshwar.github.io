@@ -12,14 +12,14 @@ Aging in place was often impossible. As people age their mobility becomes more l
 
 [//]: # paid link - https://www.easyclimber.com/
 
-Fortunately, technology has made <a href="https://www.easyclimber.com/">elevators and lifts for elderly</a> homeowners a possibility for an increasing number of individuals. Originally, this technology was cost prohibitive for the average person but it has been refined extensively over the past decades and is now an affordable option for many more retirees.
+Fortunately, technology has made [elevators and lifts for elderly](https://www.easyclimber.com/) homeowners a possibility for an increasing number of individuals. Originally, this technology was cost prohibitive for the average person but it has been refined extensively over the past decades and is now an affordable option for many more retirees.
 
 Another innovation which has made aging in place a more viable solution for homeowners is the ability to work from home. In the past, many retirees would find their decreased income made it impossible to remain in the larger home they had once easily afforded. Working outside of the home in lower paying jobs was an option, but not as enjoyable or rewarding in many ways as their previous careers. The internet has made it possible for retirees, and anyone else, to create a business they love from the comfort of their own home which can provide the needed financial resources to age in place while continuing to do meaningful work.
 
 
 ## Mobile Phones and Apps
 
-It is remarkable to think that it was only a little over a decade ago that the common telephone became an irreplaceable part of so many peoples lives. In 2007, Apple released the first iPhone and ever since the smartphone industry has grown exponentially. There are many <a href="/2018/best-phones-apps-elderly/">smartphones and apps</a> that are ideally suited for an aging population. 
+It is remarkable to think that it was only a little over a decade ago that the common telephone became an irreplaceable part of so many peoples lives. In 2007, Apple released the first iPhone and ever since the smartphone industry has grown exponentially. There are many [smartphones and apps](/2018/best-phones-apps-elderly/) that are ideally suited for an aging population. 
 
 Many smartphones allow users to control their smartphone from their touchscreen. The ability to remotely view who is at the front door and then unlock the door without having to get up is a valuable tool. Other sci-fi like smartphone capabilities includes turning the lights in any part of the home on or off, ordering necessities from online stores, controlling the thermostat, and even opening or closing the garage door.
 
@@ -29,7 +29,7 @@ Then there are the interpersonal relationships that can benefit from the use of 
 
 ## Digital Health Care
 
-Perhaps the most exciting change is the emerging digital healthcare marketplace. Recently the tech giant Best Buy <a href="https://www.digitalcommerce360.com/2017/10/10/best-buy-rolls-out-a-digital-healthcare-program-aimed-at-seniors/">indicated their interest</a> in this space. 
+Perhaps the most exciting change is the emerging digital healthcare marketplace. Recently the tech giant Best Buy [indicated their interest](https://www.digitalcommerce360.com/2017/10/10/best-buy-rolls-out-a-digital-healthcare-program-aimed-at-seniors/) in this space. 
 
 Some of the digital healthcare features that are already widely available include telehealth apps that allow individuals to access high-quality medical care within an app on their phone. While this is obviously not well suited for emergency or critical healthcare needs, it is a fantastic solution for those seniors who only have to go in for routine issues which could be taken care of remotely. 
 

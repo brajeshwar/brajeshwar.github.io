@@ -2,7 +2,7 @@
 
 Terms like "landslide fall" have been heard in abundance this month and it is high time for everyone to realize that we are heading into recession (if we're already not into it). Though some might argue, that we are still not there, the fact of the matter is that the stock market's performance resembles the mountain peaks. The picture looks gloomy for a Linux user too. 
 
-A bad news for these users has been made public by a statement from Matt Asay of <em><a href="https://www.alfresco.com/">Alfresco</a></em>; a Linux based open source content management system wherein he states 
+A bad news for these users has been made public by a statement from Matt Asay of <em>[Alfresco](https://www.alfresco.com/)</em>; a Linux based open source content management system wherein he states 
 
 Short terms -- the next few weeks -- everyone, whether commercial or proprietary, is going to find life unpleasant.
 

@@ -1,6 +1,6 @@
 # Twitter - the Brand New Bird!
 
-<a href="https://twitter.com/newtwitter">The brand new Bird</a>! Yes, like everyone else on the Internet, we are talking about the redesigned Twitter web interface.  Twitter has announced major changes to the way users can interact with its  interface. A complete multimedia makeover, the new Twitter engages and improves the user experience like never before. There's more to see, more to do and more to engage with, without having to leave Twitter's interface. 
+[The brand new Bird](https://twitter.com/newtwitter)! Yes, like everyone else on the Internet, we are talking about the redesigned Twitter web interface.  Twitter has announced major changes to the way users can interact with its  interface. A complete multimedia makeover, the new Twitter engages and improves the user experience like never before. There's more to see, more to do and more to engage with, without having to leave Twitter's interface. 
 
 ## Life beyond 140 characters?
 

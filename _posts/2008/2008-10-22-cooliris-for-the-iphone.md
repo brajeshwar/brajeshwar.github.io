@@ -2,7 +2,7 @@
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/0LV8Ixeg90I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Cooliris is the browser extension that revolutionizes the way you view media on your computer. It is now available as an application for your iPhone! <a href="https://blog.cooliris.com/2008/10/18/iphone-meet-cooliris/">Cooliris for the iPhone</a> allows you to search the web for media and news in an intuitive, easy-to-navigate way. Your results are displayed on an endlessly streaming 3D Wall that is a breeze to browse with your iPhone touchscreen.
+Cooliris is the browser extension that revolutionizes the way you view media on your computer. It is now available as an application for your iPhone! [Cooliris for the iPhone](https://blog.cooliris.com/2008/10/18/iphone-meet-cooliris/) allows you to search the web for media and news in an intuitive, easy-to-navigate way. Your results are displayed on an endlessly streaming 3D Wall that is a breeze to browse with your iPhone touchscreen.
 
 This release of Cooliris for the iPhone centers around two main features: Search, which allows you to browse the latest pictures and videos, and Discover, your portal to up-to-date news for Sports, Entertainment, Business, and all the other featured channels you've come to expect from Cooliris on the Web. 
 

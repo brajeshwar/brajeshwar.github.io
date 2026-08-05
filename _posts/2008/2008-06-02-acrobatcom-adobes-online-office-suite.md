@@ -1,6 +1,6 @@
 # Acrobat.com - Adobe's Online Office Suite
 
-Another major change in Adobe's steer towards their online presence is that of the just launched <a href="https://www.acrobat.com/">Acrobat.com</a>. It is the combination of their online meetings tool -- Adobe Brio, online Word Processor -- Adobe Buzzword and online file sharing -- Adobe Share. This new announcement comes with the release of their latest offering -- Adobe Acrobat 9 -- with Flash built into the PDF experience.
+Another major change in Adobe's steer towards their online presence is that of the just launched [Acrobat.com](https://www.acrobat.com/). It is the combination of their online meetings tool -- Adobe Brio, online Word Processor -- Adobe Buzzword and online file sharing -- Adobe Share. This new announcement comes with the release of their latest offering -- Adobe Acrobat 9 -- with Flash built into the PDF experience.
 
 Adobe Buzzword
 
@@ -22,7 +22,7 @@ Adobe Share allows you to share files with others. Just many other typical file 
 
 Acrobat 9
 
-The big news for <a href="https://www.adobe.com/go/acrobat/">Acrobat 9</a> is the support for Flash. You can now create documents with embedded Flash movies, or developers can design entire new skins for electronic documents using Adobe's Flex. PDF documents made with Acrobat 9 also support collaboration among multiple authors and reviewers over the Internet, making them connected documents.
+The big news for [Acrobat 9](https://www.adobe.com/go/acrobat/) is the support for Flash. You can now create documents with embedded Flash movies, or developers can design entire new skins for electronic documents using Adobe's Flex. PDF documents made with Acrobat 9 also support collaboration among multiple authors and reviewers over the Internet, making them connected documents.
 
 The PDF portfolios in Acrobat 9 allow you to combine multiple file types -- documents, audio, video, even 3D objects -- and compress them into one PDF file.
 

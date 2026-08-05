@@ -2,7 +2,7 @@
 
 The 2008 Adobe Design Achievement Awards gives higher education students from around the world the creative license to propel their careers in the future. Enter in 12 categories in 3 media areas endorsed by the industry, over US $60,000 in cash prizes will be awarded.
 
-Calls for entries to the <a href="https://www.adobe.com/education/adaa/">2008 Adobe Design Achievement Awards</a> was announced early morning today by Adobe (<a href="https://www.adobe.com/aboutadobe/pressroom/pressreleases/200711/111307ADAAEntries.html">press release</a>).
+Calls for entries to the [2008 Adobe Design Achievement Awards](https://www.adobe.com/education/adaa/) was announced early morning today by Adobe ([press release](https://www.adobe.com/aboutadobe/pressroom/pressreleases/200711/111307ADAAEntries.html)).
 
 2008 ADAA's Eco-Friendly Approach
 
@@ -35,8 +35,8 @@ Entries will be reviewed and scored by an independent panel of twelve distinguis
 
 Submit your Entry
 
-Submissions will be accepted online through May 2, 2008. The <a href="https://www.adaaentry.com/submit/">online submissions</a> will be judged digitally in May and semifinalists will be asked to submit their source files and a physical aspect of their entry as it is meant to be viewed for the final phase of judging. Finalists will be invited to New York and win cash and software prizes.
+Submissions will be accepted online through May 2, 2008. The [online submissions](https://www.adaaentry.com/submit/) will be judged digitally in May and semifinalists will be asked to submit their source files and a physical aspect of their entry as it is meant to be viewed for the final phase of judging. Finalists will be invited to New York and win cash and software prizes.
 
 Updates
 
-18th Dec, 2007 -- The list of <a href="https://www.adaaentry.com/2007/winners.php">2007 Adobe Design Achievement Award winners</a>
+18th Dec, 2007 -- The list of [2007 Adobe Design Achievement Award winners](https://www.adaaentry.com/2007/winners.php)

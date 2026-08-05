@@ -22,13 +22,13 @@ By contrast, when you work for someone else, you go to work at a certain hour an
 
 So, in order, to be a successful consultant, you will have to impose some of the same iron disciplines on yourself that you would have imposed upon you if worked for someone else.
 
-It's important to point out that while you can self-sabotage yourself by doing too little work to keep a healthy cash flow, you could also go to the other extreme and do too much work. You could <a href="https://businesstown.com/articles/how-youre-killing-your-business-every-day-without-even-realizing-it/">self-sabotage by working around the clock</a>, getting completely stressed out and ruining your health, joy, and creativity.
+It's important to point out that while you can self-sabotage yourself by doing too little work to keep a healthy cash flow, you could also go to the other extreme and do too much work. You could [self-sabotage by working around the clock](https://businesstown.com/articles/how-youre-killing-your-business-every-day-without-even-realizing-it/), getting completely stressed out and ruining your health, joy, and creativity.
 
 ## Develop a support system
 
 When you work for a corporation, you work within a pre-established support system. HR sets a regular schedule for you so that you know when to work and for how long in order to receive a regular paycheck, and it also takes care of administration, benefits, and health care. If you get stuck in a project, you can talk to colleagues with expertise that can help you figure out a solution. If you get stuck on a computer-related issue, then you can complain to the IT department, who will then troubleshoot the problem. Finally, you can enjoy the camaraderie of those around you because you all share a common mission.
 
-When you work on your own, all these things that you took for granted as an employee suddenly disappear. For this reason, it’s necessary for you to create a network of support to assist you with legal, accounting, marketing, and technical issues. You should also develop a network of business peers like fellow consultants, Internet marketers, <a href="https://brajeshwar.com/2012/blogging-nuances-impacts/">bloggers</a>, and entrepreneurs so that you don’t feel so isolated.
+When you work on your own, all these things that you took for granted as an employee suddenly disappear. For this reason, it’s necessary for you to create a network of support to assist you with legal, accounting, marketing, and technical issues. You should also develop a network of business peers like fellow consultants, Internet marketers, [bloggers](https://brajeshwar.com/2012/blogging-nuances-impacts/), and entrepreneurs so that you don’t feel so isolated.
 
 ## Choose an optimum payment system
 

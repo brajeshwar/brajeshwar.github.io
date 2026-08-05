@@ -1,8 +1,8 @@
 # 3D Printer gives woman brand new Jawbone
 
-Don't you just love it when random technology advances non-technocratic fields? I do, which is why I got excited when I heard that they used a 3D printer to create an 83-year-old Belgian woman's <a href="https://www.uhasselt.be/UH/Tijdschriften/ToonPersmededeling.html?i=482">jawbone replacement</a>. 
+Don't you just love it when random technology advances non-technocratic fields? I do, which is why I got excited when I heard that they used a 3D printer to create an 83-year-old Belgian woman's [jawbone replacement](https://www.uhasselt.be/UH/Tijdschriften/ToonPersmededeling.html?i=482). 
 
-After the woman's jaw was infected, and effectively ruined by <a href="https://en.wikipedia.org/wiki/Osteomyelitis">osteomyelitis</a>, technicians at the University of Hasselt in Belgium built her a new one with their highly-advanced 3D printer. The team loaded the 3D printer with finely-ground titanium powder, and formed a jawbone to her specifications; a jawbone as good as the woman's original.  3D-printed bone-replacement parts like this one are created by feeding information from MRIs and X-Rays into high-caliber 3D printing machines. 
+After the woman's jaw was infected, and effectively ruined by [osteomyelitis](https://en.wikipedia.org/wiki/Osteomyelitis), technicians at the University of Hasselt in Belgium built her a new one with their highly-advanced 3D printer. The team loaded the 3D printer with finely-ground titanium powder, and formed a jawbone to her specifications; a jawbone as good as the woman's original.  3D-printed bone-replacement parts like this one are created by feeding information from MRIs and X-Rays into high-caliber 3D printing machines. 
 
 "This is a world premiere, the first time a patient specific implant has replaced the entire lower jaw," says Jules Poukens, a lead researcher at the University of Hasselt. "It's a cautious, but firm step."
 
@@ -20,6 +20,6 @@ The bone-replacement technology is already being investigated for use in other b
 
 The team hopes that the technology can be used in the future to print skin grafts and build-up entire organs (by layering cells onto a 3D-printed organ frame) since 3D printers can now layer materials that are only micrometers thick.
 
-"It's only the start" <a href="https://www.layerwise.com/LayerWise_worlds_first_AM_lower_jaw/PR_LayerWise_EN_Worlds_first_AM_lower_jaw.pdf">says project-funder Layerwise's managing director Peter Mercelis</a>. 
+"It's only the start" [says project-funder Layerwise's managing director Peter Mercelis](https://www.layerwise.com/LayerWise_worlds_first_AM_lower_jaw/PR_LayerWise_EN_Worlds_first_AM_lower_jaw.pdf). 
 
 Patient specific implants can potentially be applied on a much wider scale than transplantation of human bone structures.
