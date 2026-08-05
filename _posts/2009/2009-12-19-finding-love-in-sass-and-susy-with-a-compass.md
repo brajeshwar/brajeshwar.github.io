@@ -25,8 +25,40 @@ Simply put, Sass helps you write CSS in a different syntax, cascade your way thr
 
 Let's look at a simple example (excerpt from the <a href="http://sass-lang.com/">Sass</a> website)
 
-<script src="http://gist.github.com/617990.js?file=css-pre-sass"></script>
-<script src="http://gist.github.com/617990.js?file=sass-ified"></script>
+```css
+// CSS Code
+
+#data {
+float: left;
+margin-left: 10px;
+}
+#data th {
+text-align: center;
+font-weight: bold;
+}
+#data td, #data th {
+padding: 2px;
+}
+```
+
+```sass
+// SASS Code
+
+=table-scaffolding
+  th
+    text-align: center
+    font-weight: bold
+  td, th
+    padding: 2px
+
+=left(!dist)
+  float: left
+  margin-left = !dist
+
+#data
+  +left(10px)
+  +table-scaffolding
+```
 
 Which means you can use that "table-scaffolding" mixin again and again wherever you need it. Sass is easy to start and the best place to would be to visit the <a href="http://sass-lang.com/tutorial.html">Sass Tutorial</a>. Read below for Sass installation and usage.
 
