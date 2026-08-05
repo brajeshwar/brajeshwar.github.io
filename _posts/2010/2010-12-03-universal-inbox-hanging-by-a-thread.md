@@ -1,6 +1,6 @@
 # Universal Inbox - Hanging by a Thread
 
-Essentially <a href="http://www.threadsy.com/">Threadsy</a> is trying to solve the problem that most users face with multiple tabs open in a browser window. If you're the type who has a Twitter and Facebook account, as well as multiple e-mail accounts, you've probably got several tabs running throughout the day that keep these sites open. Threadsy's solution is to aggregate all the messages from those places into one interface using the newest APIs from Twitter and Facebook, the no-sign-in-needed OAuth from Gmail and other webmail offerings. 
+Essentially <a href="https://www.threadsy.com/">Threadsy</a> is trying to solve the problem that most users face with multiple tabs open in a browser window. If you're the type who has a Twitter and Facebook account, as well as multiple e-mail accounts, you've probably got several tabs running throughout the day that keep these sites open. Threadsy's solution is to aggregate all the messages from those places into one interface using the newest APIs from Twitter and Facebook, the no-sign-in-needed OAuth from Gmail and other webmail offerings. 
 
 ## Interface
 

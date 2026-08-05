@@ -40,8 +40,8 @@ About the Authors
 
 Actually I went straight off to this part after the Forward from Pritham Shetty to read about few of my favorite idols. Nothing much to read there, nothing funny, nothing out of the ordinary but that they are amazingly good developers, iconic digeratis that I admire.
 
-- [Brian Lesser](http://www.ryerson.ca/~blesser/)
-- [Giacomo Peldi Guilizzoni](http://www.peldi.com/)
-- [Joey Lott](http://www.person13.com/)
-- [Justin Watkins](http://www.justin-watkins.com/)
-- [Robert Reinhardt](http://www.flashsupport.com/)
+- [Brian Lesser](https://www.ryerson.ca/~blesser/)
+- [Giacomo Peldi Guilizzoni](https://www.peldi.com/)
+- [Joey Lott](https://www.person13.com/)
+- [Justin Watkins](https://www.justin-watkins.com/)
+- [Robert Reinhardt](https://www.flashsupport.com/)

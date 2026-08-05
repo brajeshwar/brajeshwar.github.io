@@ -1,6 +1,6 @@
 # Stop abusing Sass's '&-rule' while drugged in BEM
 
-[BEM](http://bem.info/) is awesome and we all love it. Our team at Razorfish, India have successfully moved bag-n-baggage to writing BEM style class names. The best benefit so far is that it is easier to work together in larger teams and much faster while fixing bugs. The other advantage I've seen is that we can move and/or switch team members across projects without having to do an extensive knowledge transfer. They feel right at home and in ease with the patterns across projects.
+[BEM](https://bem.info/) is awesome and we all love it. Our team at Razorfish, India have successfully moved bag-n-baggage to writing BEM style class names. The best benefit so far is that it is easier to work together in larger teams and much faster while fixing bugs. The other advantage I've seen is that we can move and/or switch team members across projects without having to do an extensive knowledge transfer. They feel right at home and in ease with the patterns across projects.
 
 So, when Sass 3.4 released with a well-defined `&-rule`, we went crazy and went BEM-BEM with it on everything we wrote. Here is how it goes;
 

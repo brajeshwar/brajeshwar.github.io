@@ -16,11 +16,11 @@ It is a given that every business requires to set the basics right in terms of p
 
 ## Virtual Assistant Service Providers
 
-- <a href="http://www.elance.com/">Elance</a>
-- <a href="http://www.odesk.com/">oDesk</a>
-- <a href="http://getfriday.com/">GetFriday</a>
-- <a href="http://www.brickworkindia.com/">Brickwork India</a>
-- <a href="http://virtual-assistants.outsourcing-services-india.com/services.php">Yantram</a>
-- <a href="http://www.livehelpindia.com/dedicated-24-7-virtual-staffing.html">Live Help India</a>
-- <a href="http://www.internet-researcher.com/vaservices.html">Internet-Researcher</a>
-- <a href="http://www.va4marketing.com/">VA4business</a>
+- <a href="https://www.elance.com/">Elance</a>
+- <a href="https://www.odesk.com/">oDesk</a>
+- <a href="https://getfriday.com/">GetFriday</a>
+- <a href="https://www.brickworkindia.com/">Brickwork India</a>
+- <a href="https://virtual-assistants.outsourcing-services-india.com/services.php">Yantram</a>
+- <a href="https://www.livehelpindia.com/dedicated-24-7-virtual-staffing.html">Live Help India</a>
+- <a href="https://www.internet-researcher.com/vaservices.html">Internet-Researcher</a>
+- <a href="https://www.va4marketing.com/">VA4business</a>

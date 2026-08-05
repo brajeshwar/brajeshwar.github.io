@@ -1,6 +1,6 @@
 # Y Combinator's new Gambit is the ultimate founder dating & recruiting manna
 
-There's been quite an array of reactions to the new move by Y Combinator when they announced the application for startup entrepreneurs [sans the idea](http://ycombinator.com/noidea.html) of a Business or a Product. As a 'Startup Entrepreneur', my spontaneous reaction, wrapped in [a tweet](http://twitter.com/Brajeshwar/status/179801822804967424) was, "any entrepreneur or founder eager to do a Startup will be brimming with ideas."
+There's been quite an array of reactions to the new move by Y Combinator when they announced the application for startup entrepreneurs [sans the idea](https://ycombinator.com/noidea.html) of a Business or a Product. As a 'Startup Entrepreneur', my spontaneous reaction, wrapped in [a tweet](https://twitter.com/Brajeshwar/status/179801822804967424) was, "any entrepreneur or founder eager to do a Startup will be brimming with ideas."
 
 However, on a second look at YC's initiative, I realized this is a brilliant gambit - YC is ready to take a much bigger albeit calculated risk for a long term winning move. Here's why.
 

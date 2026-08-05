@@ -1,6 +1,6 @@
 # Fashion and You gets $8 Million from Sequoia Capital (India)
 
-<a href="http://www.fashionandyou.com/">Fashion and You</a>, India's leading online private sales website announced that <a href="http://www.sequoiacap.com/india">Sequoia Capital</a> has invested $8 Million in the company. This investment will go towards growing the company's product offering, strengthening its enterprise technology, expanding its distribution capacity and funding future growth initiatives.
+<a href="https://www.fashionandyou.com/">Fashion and You</a>, India's leading online private sales website announced that <a href="https://www.sequoiacap.com/india">Sequoia Capital</a> has invested $8 Million in the company. This investment will go towards growing the company's product offering, strengthening its enterprise technology, expanding its distribution capacity and funding future growth initiatives.
 
 Mr. Shailendra Singh, Managing Director, Sequoia Capital India, said "We are delighted to partner with the founders and management of Fashion and You, who have quickly built Fashion and you into the leading online retailer of premium fashion brands in India with over half a million members who are part of the private shopping club. We are confident that the company will strengthen its position as a frontrunner and continue to grow rapidly even as this space witnesses rapid growth."
 

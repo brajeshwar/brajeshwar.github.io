@@ -1,6 +1,6 @@
 # oCricket in Public Beta
 
-I'm involved with [oCricket](http://ocricket.com/), a Startup which is trying to bring a new paradigm to the world of Cricket, its fans and followers alike. After our initial hiccups and shake-up in the team, we're finally ready for Public Beta.
+I'm involved with [oCricket](https://ocricket.com/), a Startup which is trying to bring a new paradigm to the world of Cricket, its fans and followers alike. After our initial hiccups and shake-up in the team, we're finally ready for Public Beta.
 
 ## What is oCricket?
 

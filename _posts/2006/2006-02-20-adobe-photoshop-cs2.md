@@ -1,6 +1,6 @@
 # Adobe Photoshop CS2
 
-Many Thanks to [Adobe](http://www.adobe.com/) for the Photoshop CS2 Review Copy. I have been stealing time in between my schedules to test this out for the past one month. Personally, I never felt the need to compare Photoshop with any other Image Editors. Maybe, my exposure to the variety of image editors are conservative but then the few that I tried never matched up to what Photoshop does. My review here may be rather vague and not that professional as I am not a professional Graphic/UI Designer, I tried out the features after reading about them and after consulting our Designer Team.
+Many Thanks to [Adobe](https://www.adobe.com/) for the Photoshop CS2 Review Copy. I have been stealing time in between my schedules to test this out for the past one month. Personally, I never felt the need to compare Photoshop with any other Image Editors. Maybe, my exposure to the variety of image editors are conservative but then the few that I tried never matched up to what Photoshop does. My review here may be rather vague and not that professional as I am not a professional Graphic/UI Designer, I tried out the features after reading about them and after consulting our Designer Team.
 
 Photoship CS2 was installed on my Lenovo (erstwhile IBM) Thinkpad R52 Intel Centrino running on 1.86GHz with about 1.25 GB of RAM sporting a screen resolution of 1400 x 1050 DPI displayed on a 32bit color depth. While testing, most of the time it was run as a stand-alone program, sometimes with Microsoft Outlook and Firefox opened.
 
@@ -28,4 +28,4 @@ Another fine tool was the Smart Objects, more attuned for the high-end professio
 
 Adobe Bridge is kinda gateway to the Adobe Stock Photos and a way to drill amonst the Adobe Creative Suite 2 softwares.
 
-[Adobe Photoshop CS2](http://www.adobe.com/products/photoshop/) retails at $649 and an upgrade from any prior version will cost $169. Adobe Photoshop CS2 can also be upgrade from Photoshop LE, PhotoDeluxe, or Photoshop Elements and will cost $499.
+[Adobe Photoshop CS2](https://www.adobe.com/products/photoshop/) retails at $649 and an upgrade from any prior version will cost $169. Adobe Photoshop CS2 can also be upgrade from Photoshop LE, PhotoDeluxe, or Photoshop Elements and will cost $499.

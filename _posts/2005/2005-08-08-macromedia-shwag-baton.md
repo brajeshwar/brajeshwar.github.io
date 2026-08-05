@@ -1,8 +1,8 @@
 # Macromedia Shwag Baton
 
-In keeping with the Macromedia Shwag baton passing tradition, after I was handed it coupla days back by [Matt Voerman](http://www.rocketboots.com.au/), I am proud to list out mine.
+In keeping with the Macromedia Shwag baton passing tradition, after I was handed it coupla days back by [Matt Voerman](https://www.rocketboots.com.au/), I am proud to list out mine.
 
-Being an [Adobe Community Expert](http://www.adobe.com/communities/experts/) (erstwhile Macromedia Team Member), and a much pampered developer of Macromedia Technologies, I am lucky to get many if not HUGE Macromedia Collectibles! As for the ones intended for the Macromedia User Groups, I am tired of distributing them as it never finishes. I would like to slip a quick thanks to Edward Sullivan for the same. Mike Chamber is another person responsible for most of my possessions and a heap of thanks goes to him.
+Being an [Adobe Community Expert](https://www.adobe.com/communities/experts/) (erstwhile Macromedia Team Member), and a much pampered developer of Macromedia Technologies, I am lucky to get many if not HUGE Macromedia Collectibles! As for the ones intended for the Macromedia User Groups, I am tired of distributing them as it never finishes. I would like to slip a quick thanks to Edward Sullivan for the same. Mike Chamber is another person responsible for most of my possessions and a heap of thanks goes to him.
 
 Macromedia Shwag in my possession (and everything else that came from Macromedia) so far;
 

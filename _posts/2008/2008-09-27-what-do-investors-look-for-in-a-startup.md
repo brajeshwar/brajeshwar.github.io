@@ -2,7 +2,7 @@
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/_BwatxQwgNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-A great [video Interview](http://venturehacks.com/articles/investment-criteria) with Venture Hacker Naval Ravikant answering the age-old question:
+A great [video Interview](https://venturehacks.com/articles/investment-criteria) with Venture Hacker Naval Ravikant answering the age-old question:
 
 What do you look for in a startup?
 

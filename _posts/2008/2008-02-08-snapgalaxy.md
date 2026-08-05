@@ -1,6 +1,6 @@
 # SnapGalaxy introduces revenue earning model
 
-<a href="http://www.snapgalaxy.com/">SnapGalaxy</a> was launched in late 2006 with their primary focus of allowing users to send photo prints to friends and relatives. SnapGalaxy services are divided into 2 sub-categories -- Printing Service and Online Service.
+<a href="https://www.snapgalaxy.com/">SnapGalaxy</a> was launched in late 2006 with their primary focus of allowing users to send photo prints to friends and relatives. SnapGalaxy services are divided into 2 sub-categories -- Printing Service and Online Service.
 
 They allow you to send your photos anywhere in the world. They deliver premium quality photo products to their users and their friends, family and relatives. There is unlimited photo storage, photo sharing, PhotoFolio, VirtualPhoto and much more.
 

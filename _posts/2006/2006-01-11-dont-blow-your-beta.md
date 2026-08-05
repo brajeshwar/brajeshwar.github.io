@@ -1,8 +1,8 @@
 # Don’t Blow Your Beta
 
-[Don't Blow Your Beta](http://www.techcrunch.com/2006/01/09/dont-blow-your-beta/) is a nice article from TechCrunch.
+[Don't Blow Your Beta](https://www.techcrunch.com/2006/01/09/dont-blow-your-beta/) is a nice article from TechCrunch.
 
-Here is an excerpt from [Ajaxian](http://ajaxian.com/);
+Here is an excerpt from [Ajaxian](https://ajaxian.com/);
 
 - do not release incomplete or broken features.
 - don't hold back features just to have new items in a month.
@@ -13,7 +13,7 @@ Here is an excerpt from [Ajaxian](http://ajaxian.com/);
 
 ## Release or Public Beta?
 
-Jason of [37Signals](http://www.37signals.com/) said;
+Jason of [37Signals](https://www.37signals.com/) said;
 
 > There's a better way not to blow your beta: don't launch one at all. Public betas are rediculous. If your product is public, it's not a beta, it's a release. Take responsibility for your product. "Beta" only passes the buck to your customers' outsourcing your pain to them.
 

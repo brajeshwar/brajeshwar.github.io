@@ -16,7 +16,7 @@ Initially, I was thinking of doing a rather complex matrix of Image Sprites by c
 
 ## The Better Solution
 
-One fine evening, an article popped up on [HackerNews](http://news.ycombinator.com/) -- [Data URIs make CSS sprites obsolete](http://www.nczonline.net/blog/2010/07/06/data-uris-make-css-sprites-obsolete/). Then, I knew this is something I can pursue to accomplish what we wanted.
+One fine evening, an article popped up on [HackerNews](https://news.ycombinator.com/) -- [Data URIs make CSS sprites obsolete](https://www.nczonline.net/blog/2010/07/06/data-uris-make-css-sprites-obsolete/). Then, I knew this is something I can pursue to accomplish what we wanted.
 
 In our situation, as each and every company is accompanied by their BSE Code, we inserted that in a class `bse_xxxxxx` (via Python in our case). We do have a default class, `stock_logo` that keeps a default logo ready just in case we don't have the logo of the company or is being changed or it simply does not exist. This default class also defines how the logo will be displayed, what will be the padding style etc. The class `bse_xxxxxx` is used only to insert the actual logo as a background-image.
 
@@ -43,8 +43,8 @@ The use cases look rather rare and might not be something you can use out of the
 
 ## Browser Support and the obvious Internet Explorer
 
-The [article](http://www.nczonline.net/blog/2010/07/06/data-uris-make-css-sprites-obsolete/) by Nicholas refers to his [CSSEmbed](http://github.com/nzakas/cssembed) solution which uses [MHTML](http://en.wikipedia.org/wiki/MHTML) mode to make IE6 and IE7 compatible stylesheets that use internal images similar to data URIs. So, you can use a conditional HTML comment to import IE specific styles.
+The [article](https://www.nczonline.net/blog/2010/07/06/data-uris-make-css-sprites-obsolete/) by Nicholas refers to his [CSSEmbed](https://github.com/nzakas/cssembed) solution which uses [MHTML](https://en.wikipedia.org/wiki/MHTML) mode to make IE6 and IE7 compatible stylesheets that use internal images similar to data URIs. So, you can use a conditional HTML comment to import IE specific styles.
 
 This is our first cut to the solution, we'll always be on the look-out to improve the solution (think Caching). If you've questions, or just want to say something, feel free to comment.
 
-[Source on Github](http://github.com/Brajeshwar/datauri-dynamic-css).
+[Source on Github](https://github.com/Brajeshwar/datauri-dynamic-css).

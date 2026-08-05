@@ -4,7 +4,7 @@ Effective - having a definite or desired effect.
 Efficient - productive with minimum waste or effort.
 Effortless - seemingly without effort; natural, easy.
 
-[Personal Time Management for Busy Managers](http://www.see.ed.ac.uk/~gerard/Management/art2.html) looks at the basics of Personal Time Management and describes how one can assume control of this basic resource.
+[Personal Time Management for Busy Managers](https://www.see.ed.ac.uk/~gerard/Management/art2.html) looks at the basics of Personal Time Management and describes how one can assume control of this basic resource.
 
 Personal Time Management is a set of tools which allow you to;
 

@@ -6,7 +6,7 @@ IBM's newest pet is their 120 petabyte (120 million gigabytes) storage array sys
 
 To put the ridiculously large number of 120 petabytes into proportion, it could hold 24 billion standard MP3 files, or replicate 60 times over the current biggest backup of the Internet from WayBack Machine's  150 billion stored webpages.
 
-Surprisingly this new super-computer storage system being created in <a href="http://almaden.ibm.com/">IBM's Almaden</a>, California facility actually has a use. Even more surprising is that they already have a customer for it; a client running in-depth simulations for a super computer detecting real world weather and climate phenomena.
+Surprisingly this new super-computer storage system being created in <a href="https://almaden.ibm.com/">IBM's Almaden</a>, California facility actually has a use. Even more surprising is that they already have a customer for it; a client running in-depth simulations for a super computer detecting real world weather and climate phenomena.
 
 IBM believes that this new breakthrough in 'fringe' hardware could soon have current-day uses for many of their enterprise clients. Bruce Hillsberg, IBM's Director of Storage says that, "this 120 petabyte system is on the lunatic fringe now, but in a few years it may be that all cloud computing systems are like it. Just keeping track of the names, types, and other attributes of the files stored in the system will consume around two petabytes of its capacity."
 

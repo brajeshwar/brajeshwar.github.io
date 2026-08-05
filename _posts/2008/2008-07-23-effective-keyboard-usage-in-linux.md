@@ -45,7 +45,7 @@ What we just saw was a comprehensive list of keyboard shortcuts for window manag
 - <kbd>Ctrl</kbd> + <kbd>O</kbd> It helps open an existing file within a program.
 - <kbd>Ctrl</kbd> + <kbd>Shift-W</kbd> It closes the active program.
 
-Some shortcuts for [Firefox](http://www.getfirefox.com/);
+Some shortcuts for [Firefox](https://www.getfirefox.com/);
 
 - <kbd>ALT</kbd> + <kbd>D</kbd> or <kbd>CTRL</kbd> + <kbd>L</kbd> or <kbd>F6</kbd> Lets you point to the address bar in a flash.
 - <kbd>CTRL</kbd> + <kbd>T</kbd> Creates a new tab in the current window.

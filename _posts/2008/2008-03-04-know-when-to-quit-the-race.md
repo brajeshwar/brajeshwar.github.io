@@ -1,6 +1,6 @@
 # Know when to quit the race
 
-Many businesses fail each year. Others are sold. You read about a few in the newspapers, but for each newsworthy event, thousands occur quietly in good economic times and bad. Here are 10 things to focus on when considering whether <a href="http://www.bizjournals.com/extraedge/consultants/growing_pains/2008/03/03/column12.html">you should quit the race</a> and move on.
+Many businesses fail each year. Others are sold. You read about a few in the newspapers, but for each newsworthy event, thousands occur quietly in good economic times and bad. Here are 10 things to focus on when considering whether <a href="https://www.bizjournals.com/extraedge/consultants/growing_pains/2008/03/03/column12.html">you should quit the race</a> and move on.
 
 - Selling a company isn't the same as losing. Some sales are big wins. Others are smaller victories. Redeploying underperforming assets, yourself included, is usually a good decision. Some people quit. Others move on. One of the best reasons to close or sell a business is that you've found something better to do. Businesses take up so much time and energy, there is a lost-opportunity cost of stubbornly sticking around too long.
 - Starting a business is difficult, but closing a company is even harder. Closing the right way is even more difficult. This affects many people, and some will fare worse than others. It's natural to seek to avoid facing tough choices, but postponing the inevitable usually causes greater harm. If it's inevitable, dealing with it now is always the best choice.

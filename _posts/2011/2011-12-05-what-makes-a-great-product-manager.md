@@ -1,6 +1,6 @@
 # What makes a great Product Manager
 
-Edward Ho, an Engineer at Google, have an <a href="http://www.quora.com/Google/What-makes-someone-a-great-product-manager-at-Google/answer/Edward-Ho-1">awesome answer</a> to a Quora Question - <a href="http://www.quora.com/Google/What-makes-someone-a-great-product-manager-at-Google">What makes someone a great product manager at Google?</a> Here is an extract; modified to answer a general question - What makes a great product manager?
+Edward Ho, an Engineer at Google, have an <a href="https://www.quora.com/Google/What-makes-someone-a-great-product-manager-at-Google/answer/Edward-Ho-1">awesome answer</a> to a Quora Question - <a href="https://www.quora.com/Google/What-makes-someone-a-great-product-manager-at-Google">What makes someone a great product manager at Google?</a> Here is an extract; modified to answer a general question - What makes a great product manager?
 
 ## A Great Product Manager:
 

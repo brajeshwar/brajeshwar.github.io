@@ -18,7 +18,7 @@ The action takes place in a networked computer game, mainly using a FPS game. Ev
 
 One of the players is serving as the cameraman/woman. His/her point of view is recorded to tape (or disc) and represents the "film-footage". Most of the time, the settings and characters are taken from the game that's being used for filming.
 
-This way of making machinima is easy to learn and feels close to "real-life" filmmaking. It has room for spontaneity and improvisation and adds that human touch to the behavior of your actors. Probably the best known example of "Live Action" machinima is the series <a href="http://www.adobe.com/motion/roosterteeth.html">Red vs. Blue</a>. Using XBOX console, the game Halo and no further technical tricks, the series quickly managed to become the best known machinima piece to date.
+This way of making machinima is easy to learn and feels close to "real-life" filmmaking. It has room for spontaneity and improvisation and adds that human touch to the behavior of your actors. Probably the best known example of "Live Action" machinima is the series <a href="https://www.adobe.com/motion/roosterteeth.html">Red vs. Blue</a>. Using XBOX console, the game Halo and no further technical tricks, the series quickly managed to become the best known machinima piece to date.
 
 ## 2. Scripted Machinima
 
@@ -43,4 +43,4 @@ Here are some points and hints that you might want to think about:
 - more content in games with more flexible ways to use -- more animations, more characters, more detail
 new forms of linear and non-linear stories emerging from mixing both worlds together -- think talk-shows, documentaries, etc.
 
-To get started, why not grab a copy of <a href="http://www.machinimafordummies.com/">Machinima for Dummies</a>!
+To get started, why not grab a copy of <a href="https://www.machinimafordummies.com/">Machinima for Dummies</a>!

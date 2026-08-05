@@ -2,7 +2,7 @@
 
 I ran into issues while trying to upgrade a Wordpress 2.0.7 installation to the new Wordpress 2.1 release.
 
-> Wordpress 2.1 is a brand new package complete with more efficient database code, faster than previous versions, more Ajax. It is also bundled with the powerful anti-spam plugin for Wordpress - [Akismet](http://akismet.com/blog/2007/01/version-20/).
+> Wordpress 2.1 is a brand new package complete with more efficient database code, faster than previous versions, more Ajax. It is also bundled with the powerful anti-spam plugin for Wordpress - [Akismet](https://akismet.com/blog/2007/01/version-20/).
 
 PRE-UPGRADE CHECKLIST
 
@@ -10,7 +10,7 @@ Let us be prepared before we upgrade from Wordpress 2.0.x to Wordpress 2.1.
 
 ## Back-up your database.
 
-It is an extremely easy task with [Wordpress DB Backup](http://www.ilfilosofo.com/blog/wp-db-backup). I think this was pre-packaged with the release of 2.0.5 or something close to that. However, this is done away with in the latest 2.1 Release.
+It is an extremely easy task with [Wordpress DB Backup](https://www.ilfilosofo.com/blog/wp-db-backup). I think this was pre-packaged with the release of 2.0.5 or something close to that. However, this is done away with in the latest 2.1 Release.
 
 ## Backup Wordpress files (mostly custom edited/added ones).
 
@@ -31,9 +31,9 @@ That should take care of the upgrade. But we are not done yet, there are few thi
 
 POST-UPGRADE
 
-- Activate all plugins. You may like to visit and check the "compatible plugin list (Plugins compatible with Wordpress 2.1)":http://codex.wordpress.org/Plugins/Plugin_Compatibility/2.1.
+- Activate all plugins. You may like to visit and check the "compatible plugin list (Plugins compatible with Wordpress 2.1)":https://codex.wordpress.org/Plugins/Plugin_Compatibility/2.1.
 - Enable "Use the visual editor when writing" in your Profile page. Many bloggers do not use the Visual Editor in the 2.0.x days but with the tabbed Visual-Code view in Wordpress 2.1, it is worth the switch.
 - Check if your "Pages" are correct. In my case, all pages got converted into Articles; I had to manually convert them to Pages again.
 - Database Query Caching is built in with Wordpress 2.1.
 
-All done, then you check out the [new features](http://wordpress.org/development/2007/01/ella-21/).
+All done, then you check out the [new features](https://wordpress.org/development/2007/01/ella-21/).

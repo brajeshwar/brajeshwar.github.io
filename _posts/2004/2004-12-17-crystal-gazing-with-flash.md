@@ -1,6 +1,6 @@
 # Crystal gazing with Flash
 
-Nice use of Flash Video, [Ask Crystal](http://www.ask-crystal.com/); ask something and get it answered. You can repeat the same question and still get different answers. The application is intelligently executed with load queue management of the swf videos.
+Nice use of Flash Video, [Ask Crystal](https://www.ask-crystal.com/); ask something and get it answered. You can repeat the same question and still get different answers. The application is intelligently executed with load queue management of the swf videos.
 
 Looking at the "Most asked questions", I am sure girls use this a lot more than boys.
 

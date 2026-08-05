@@ -1,6 +1,6 @@
 # Adobe MAX 2007 - ENGAGE
 
-Adobe MAX, the annual Adobe conference, is the premier educational forum for designers and developers worldwide. <a href="http://adobemax2007.com/">MAX 2007</a> will offer an unprecedented opportunity to learn new skills, explore emerging technologies, and connect with peers in the Adobe user community. At MAX 2007, independent industry leaders, as well as Adobe engineers and developers, will provide intensive and comprehensive training that will help you create truly engaging experiences.
+Adobe MAX, the annual Adobe conference, is the premier educational forum for designers and developers worldwide. <a href="https://adobemax2007.com/">MAX 2007</a> will offer an unprecedented opportunity to learn new skills, explore emerging technologies, and connect with peers in the Adobe user community. At MAX 2007, independent industry leaders, as well as Adobe engineers and developers, will provide intensive and comprehensive training that will help you create truly engaging experiences.
 
 Visit the Adobe MAX 2007 Blog for more details.
 

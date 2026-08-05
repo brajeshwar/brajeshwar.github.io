@@ -7,11 +7,11 @@ I once attended a Breeze Live Presentation on Flashcom. Before the actual presen
 - I am an expert
 -  am Brian Lesser
 
-The much anticipated Flash Communication Server book [Programming Flash Communication Server](http://flash-communications.net/) is expected to be released around the end of Feb 2005. The book is co-authored by
-[Brian Lesser](http://www.ryerson.ca/%7Eblesser/),
-[Peldi Guilizzoni](http://www.peldi.com/),
-[Robert Reinhardt](http://www.flashsupport.com/),
-[Justin Watkins](http://www.justin-watkins.com/),
-and [Joey Lott](http://www.person13.com/).
+The much anticipated Flash Communication Server book [Programming Flash Communication Server](https://flash-communications.net/) is expected to be released around the end of Feb 2005. The book is co-authored by
+[Brian Lesser](https://www.ryerson.ca/%7Eblesser/),
+[Peldi Guilizzoni](https://www.peldi.com/),
+[Robert Reinhardt](https://www.flashsupport.com/),
+[Justin Watkins](https://www.justin-watkins.com/),
+and [Joey Lott](https://www.person13.com/).
 
-[Pre-Order at O'Reilly](http://www.oreilly.com/catalog/progflashcs/)
+[Pre-Order at O'Reilly](https://www.oreilly.com/catalog/progflashcs/)

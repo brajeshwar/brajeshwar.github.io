@@ -4,7 +4,7 @@ Twusic is Twitter meet Music.
 
 After spending some time on Twitter as a user, you might notice that a lot of people share their music taste. But all this content only appears as text. For music lovers it's great to share with others what they're listening to but is it really relevant for their followers?
 
-Actually, there are many tweets containing the <a href="http://twitter.com/#!/search/%23nowplaying">#nowplaying</a> hashtag, thanks to all the music services that allow users to automatically push their music onto their Twitter account.
+Actually, there are many tweets containing the <a href="https://twitter.com/#!/search/%23nowplaying">#nowplaying</a> hashtag, thanks to all the music services that allow users to automatically push their music onto their Twitter account.
 
 Late 2010, Twitter started to include Apple Ping music information for those sharing their music via iTunes but, again, without the possibility to listen to that music, unless you already have it on your computer.
 

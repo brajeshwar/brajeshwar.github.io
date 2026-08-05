@@ -6,13 +6,13 @@ image: /static/2007/nokia-n95.webp
 
 The [Nokia N95](https://en.wikipedia.org/wiki/Nokia_N95) was released about a week late in India as against the global release, with a price package of about ₹36,500 (~$900) as initial launch price. However, the price dropped almost each week and is currently being sold for about ₹28,000 (~$690). I bought mine at ₹31,990 which was the first price cut after the initial launch (in the 2nd week of India's release).
 
-Currently, the Nokia N95 is defined as the ultimate geek phone which some people even considering it as the one that can compete against the [iPhone](http://www.apple.com/iphone/). Well, I will not be doing a comparison of the two; nonetheless, I'll buy an iPhone as soon as it is released in India.
+Currently, the Nokia N95 is defined as the ultimate geek phone which some people even considering it as the one that can compete against the [iPhone](https://www.apple.com/iphone/). Well, I will not be doing a comparison of the two; nonetheless, I'll buy an iPhone as soon as it is released in India.
 
 ## Features
 
 The compact 99 mm (L) x 53 mm (W) x 21 mm (H) Nokia N95 sports a WCDMA2100 (HSDPA), EGSM900, GSM850/1800/1900 MHz (EGPRS). However, it does not support HSDPA networks in the US limiting your wireless data to EDGE networks. It has the usual smart-phone features like Bluetooth (stereo support), Infrared, USB Cable connect option complete with a built-in WiFi. The TFT display with a 2.6" QVGA of 240 x 320 px is awesome with its incredible color and clarity of both images and video. The orientation changes according to the direction in which you slide the Nokia N95 slider - yes, it can slide two ways.
 
-It has a 5MP camera, Carl Zeiss optics, MPEG-4 video capture at 30 fps, and can take good quality photos.  The phone also boast of built-in photo and video editing like white balance, tones, exposure adjustment, cropping and direct web uploading through Nokia LifeBlog (currently supports just TypePad) and [Flickr](http://www.flickr.com/). However, on various occasions, I find it very slow to start the camera function and there is a major time delay while saving the photos in between shots. It has an 160MB memory and the Indian release version came loaded with an additional 1GB microSD.
+It has a 5MP camera, Carl Zeiss optics, MPEG-4 video capture at 30 fps, and can take good quality photos.  The phone also boast of built-in photo and video editing like white balance, tones, exposure adjustment, cropping and direct web uploading through Nokia LifeBlog (currently supports just TypePad) and [Flickr](https://www.flickr.com/). However, on various occasions, I find it very slow to start the camera function and there is a major time delay while saving the photos in between shots. It has an 160MB memory and the Indian release version came loaded with an additional 1GB microSD.
 
 With a promised Talk-time up to 240 min, standby up to 225 hours, the Nokia N95 really isn't good with its battery life. However good for normal telephone talks but usage of its many features - GPS, WiFi scanning will take a toll on its battery life.
 
@@ -26,7 +26,7 @@ PC users have always enjoyed Nokia phones because of their easy-to-use advance N
 
 ## iSync for Mac
 
-However, there is no such software for the [Apple Mac](http://www.apple.com/mac/). Nonetheless, there are some utilities that can make it a bit easier to interact your Mac with your Nokia N95. You'll definitely need the Nokia iSync utility to sync your address, calendar etc.
+However, there is no such software for the [Apple Mac](https://www.apple.com/mac/). Nonetheless, there are some utilities that can make it a bit easier to interact your Mac with your Nokia N95. You'll definitely need the Nokia iSync utility to sync your address, calendar etc.
 
 ## Media Transfer for Mac
 
@@ -34,7 +34,7 @@ Another must-have for Nokia N95 + Mac users is the Nokia Media Transfer utility.
 
 ## Flickr and Photos
 
-The Nokia N95 and the other Nokia N Series are [Flickr](http://www.flickr.com/photos/brajeshwar/) ready. If you can't see Flickr as an option when you try to connect to the Flickr service, your device wasn't shipped with Flickr settings ready to go.
+The Nokia N95 and the other Nokia N Series are [Flickr](https://www.flickr.com/photos/brajeshwar/) ready. If you can't see Flickr as an option when you try to connect to the Flickr service, your device wasn't shipped with Flickr settings ready to go.
 
 ## Business
 

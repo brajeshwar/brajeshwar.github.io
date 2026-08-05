@@ -1,6 +1,6 @@
 # Telnet to the Star War ASCII Animation
 
-via [ASCIImation](http://www.asciimation.co.nz/)
+via [ASCIImation](https://www.asciimation.co.nz/)
 
 `telnet towel.blikenlights.nl`
 

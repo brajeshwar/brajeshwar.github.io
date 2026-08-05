@@ -1,10 +1,10 @@
 # Essential ActionScript 2.0
 
-This book is another must have for any Flash-Actionscript Application Developer. Visit the [official book site](http://moock.org/eas2/). Neverthless, if you are looking for something like "Actionscript 2.0: The Definitive Guide", then this is not the book. It talks less or very little about Actionscript 2.0 syntax per se.
+This book is another must have for any Flash-Actionscript Application Developer. Visit the [official book site](https://moock.org/eas2/). Neverthless, if you are looking for something like "Actionscript 2.0: The Definitive Guide", then this is not the book. It talks less or very little about Actionscript 2.0 syntax per se.
 
 ## Actionscript 2.0 Overview
 
-Actionscript 2.0 was introduced along with Flash MX 2004. Though it adds little new runtime functionality to the language, it improved developement of Flash Applications by formalizinig Object Oriented Programming syntax and Methodology. Most of the new OOP syntax in Actionscript 2.0 is based on the [ECMAScript 4 standard](http://www.mozilla.org/js/language/es4/).
+Actionscript 2.0 was introduced along with Flash MX 2004. Though it adds little new runtime functionality to the language, it improved developement of Flash Applications by formalizinig Object Oriented Programming syntax and Methodology. Most of the new OOP syntax in Actionscript 2.0 is based on the [ECMAScript 4 standard](https://www.mozilla.org/js/language/es4/).
 
 The components have also matured to the new v2 components, re-written from scratch in Actionscript 2.0 and built atop version 2 of the Macromedia Component Architecture. It is advised not to mix Actionscript 1.0 (the script that existed with Flash 5 and Flash MX) OOP technique with Actionscript 2.0 code.
 
@@ -61,9 +61,9 @@ The last chapter of Part I of the book deals with exception handling, error hand
 
 Reference links:
 
-- <a href="http://moock.org/eas2/" title="essential actionscript 2.0">Official Site</a>
-- <a href="http://moock.org/eas2/examples/" title="examples">EAS 2.0 Examples</a>
-- <a href="http://ootips.org/" title="object orientation tips">Object Orientation Tips</a>
-- <a href="http://www.uml.org/" title="UML home page">UML</a>
-- <a href="http://www.gmodeler.com/" title="gModeler">gModeler</a>
-- <a href="http://archive.eiffel.com/doc/manuals/technology/oosc/inheritance-design/page.html" title="using inheritance well">Using Inheritance Well</a>
+- <a href="https://moock.org/eas2/" title="essential actionscript 2.0">Official Site</a>
+- <a href="https://moock.org/eas2/examples/" title="examples">EAS 2.0 Examples</a>
+- <a href="https://ootips.org/" title="object orientation tips">Object Orientation Tips</a>
+- <a href="https://www.uml.org/" title="UML home page">UML</a>
+- <a href="https://www.gmodeler.com/" title="gModeler">gModeler</a>
+- <a href="https://archive.eiffel.com/doc/manuals/technology/oosc/inheritance-design/page.html" title="using inheritance well">Using Inheritance Well</a>

@@ -6,7 +6,7 @@ Are programmers and coders the most neglected link in the software development c
 
 Some industry experts have put in that -- if programming requires a post graduate level of knowledge of complex algorithms and programming methods, coding requires only high school knowledge of the subject. Coding is deemed repetitive and monotonous.
 
-During many events, like the one last week in India at the annual fair of the software industry’s apex body [Nasscom](http://www.nasscom.in/), no one mentioned anything about programmer or aptly the coders. The event, which brought together software professionals from around the world, used up all its 29 sessions to discuss prospects to improve the performance of software companies. Panels chose to debate extensively on subjects like managing innovation, business growth and multiple geographies. But there was nothing on programmers/coders, whom we all believed are the driving force behind the success of any software company.
+During many events, like the one last week in India at the annual fair of the software industry’s apex body [Nasscom](https://www.nasscom.in/), no one mentioned anything about programmer or aptly the coders. The event, which brought together software professionals from around the world, used up all its 29 sessions to discuss prospects to improve the performance of software companies. Panels chose to debate extensively on subjects like managing innovation, business growth and multiple geographies. But there was nothing on programmers/coders, whom we all believed are the driving force behind the success of any software company.
 
 It has been an eternal battle between the business cubicles and the programmers box if technology drives the business or vice versa. Well, one compliments the other.
 
@@ -22,7 +22,7 @@ Yes, it is an open secret which software companies won’t say/accept — that S
 
 A Microsoft analyst have rightly said, “Like our manufacturing Industry, the Indian software industry is largely a process driven one. That should speak for the fact that we still don’t have a domestic software product like Yahoo or Google to use in our daily lives.”
 
-Is this also another reason that, IIT graduates have consciously shunned India’s best known companies such as [Infosys](http://www.infosys.com/) and [TCS](http://www.tcs.com/), though they are offered very attractive salaries?
+Is this also another reason that, IIT graduates have consciously shunned India’s best known companies such as [Infosys](https://www.infosys.com/) and [TCS](https://www.tcs.com/), though they are offered very attractive salaries?
 
 American companies still feel that most of the so called engineers in Indian companies are mere coders. They are almost identical workers who sat along hours to write lines after lines of codes, or test a fraction of a program. They did not complain because their pay and perks were good. Another fuel to this fire is that of the Indian social fabric. Parents, families and spouses do not know or care about the type of works programmers or coders do, they are more interested in the Name of the Company they work for, their monthly paycheck and the ability to include terms like `Software Professionals`, `BPO Team Lead`, `Working in MNC`, in their matrimonial classifieds.
 
@@ -52,6 +52,6 @@ Do you want to be a programmer or a coder?
 
 ### References & Updates
 
-- Feb 17, 2007: Inspired by an article in the Times of India — [A myth called the Indian programmer](http://timesofindia.indiatimes.com/home/sunday-toi/A-myth-called-the-Indian-programmer/articleshow/1633868.cms).  ([archive](https://archive.is/MDX1r))
+- Feb 17, 2007: Inspired by an article in the Times of India — [A myth called the Indian programmer](https://timesofindia.indiatimes.com/home/sunday-toi/A-myth-called-the-Indian-programmer/articleshow/1633868.cms).  ([archive](https://archive.is/MDX1r))
 - Feb 15, 2012: [Homepage of Hacker News](https://news.ycombinator.com/item?id=3593124)
 - Aug 28, 2024: Read an interesting article today about [The Myth of the Coder](https://cacm.acm.org/opinion/the-myth-of-the-coder/). ([archive](https://archive.is/NZXYJ))

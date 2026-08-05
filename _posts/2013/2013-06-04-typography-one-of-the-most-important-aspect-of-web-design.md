@@ -2,7 +2,7 @@
 
 I say, "your web-design is already half done when you've taken care of the Typography." Typography is such an important aspect of User Interface Designs that it would be total folly to neglect it in the underneaths of font-family, font-size and font-weights.
 
-Recently, I went to a casual gathering of WordPress enthusiasts to mark the [10th anniversary of WordPress](http://wordpress.org/news/2013/05/the-next-10-starts-now/), and we got talking about themes, plugins, frameworks and overalls of web designs. Amongst the interesting talks on WordPress specific frameworks, themes and general User Interface Frameworks like Bootstrap, Foundation, et al, we also happened to talked about Typography.
+Recently, I went to a casual gathering of WordPress enthusiasts to mark the [10th anniversary of WordPress](https://wordpress.org/news/2013/05/the-next-10-starts-now/), and we got talking about themes, plugins, frameworks and overalls of web designs. Amongst the interesting talks on WordPress specific frameworks, themes and general User Interface Frameworks like Bootstrap, Foundation, et al, we also happened to talked about Typography.
 
 Unfortunately, many were not really concerned about it but curious enough that they wanted to know more. This article is the result of that conversation, hoping that other designers would be able to kick-start on the ideas of Typography - explore it and even master it.
 
@@ -15,7 +15,7 @@ Unfortunately, many were not really concerned about it but curious enough that t
 
 I'm not a Typography expert but I've a keen interest and always wanted to know more, learn the tactics of using it effectively to make User Interfaces that are easier and better for users. You do not have to be an expert in Typography to make good use of it in your web design works.
 
-So, here is a basic foundation on Typography that should help you get started. Instead of doing a broad generalization - kerning, leading, letter-spacing, color and fonts - let me get straight to the basics with references a very good Typography Starter Kit - [Typeplate](http://typeplate.com/).
+So, here is a basic foundation on Typography that should help you get started. Instead of doing a broad generalization - kerning, leading, letter-spacing, color and fonts - let me get straight to the basics with references a very good Typography Starter Kit - [Typeplate](https://typeplate.com/).
 
 > Typeplate is a "typographic starter kit". It does not make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped-down Sass library concerned with the appropriate technical implementation of design patterns - not how they look.
 
@@ -38,7 +38,7 @@ There is a default indentation with Typeplate, of which I'm not overly fond of. 
 With Responsive Web Design these days, it makes even more sense to have your type more flexible. "In a fluid layout, browser width and typographic measure are linked: the wider the viewport, the more characters per line."
 
 > Since hyphens is an inherited property, it isn't sufficient to set it for a limited number of elements and assume you're done. You have to make sure you've turned it off for the elements that shouldn't be hyphenated.
-> -- [Eric Meyer](http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation/)
+> -- [Eric Meyer](https://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation/)
 
 ## Code Blocks
 

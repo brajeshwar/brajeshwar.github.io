@@ -29,7 +29,7 @@ A design leader continues to be actively involved in design disciplines, remain 
 ### Here are some good references for further reading;
 
 - [What Does it take to be a Design Leader?](https://www.linkedin.com/pulse/what-does-take-design-leader-michael-ditullo/)
-- [10 characteristics of great design leaders](http://lockwoodresource.com/ten-characteristics-of-great-design-leaders/) by Thomas Lockwood
-- [The Many Faces of Design Leadership](http://www.core77.com/posts/9962/the-many-faces-of-design-leadership-by-kevin-mccullagh-9962) by Kevin McCullagh
+- [10 characteristics of great design leaders](https://lockwoodresource.com/ten-characteristics-of-great-design-leaders/) by Thomas Lockwood
+- [The Many Faces of Design Leadership](https://www.core77.com/posts/9962/the-many-faces-of-design-leadership-by-kevin-mccullagh-9962) by Kevin McCullagh
 - [Becoming a Design Leader](https://www.slideshare.net/frogdesign/work-in-progress-thoughts-on-design-leadership) - a nice slideshow from [Frog Design](https://www.frogdesign.com/)
 - [Design Leadership Handbook](https://www.designbetter.co/design-leadership-handbook) from [Invision](https://www.invisionapp.com)

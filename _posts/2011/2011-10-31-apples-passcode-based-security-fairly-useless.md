@@ -4,7 +4,7 @@ Apple's security as of late is as effective as a one-armed man clapping. Not onl
 
 ## Damn You Siri
 
-A fatal flaw in Siri was recently <a href="http://nakedsecurity.sophos.com/2011/10/19/siri-iphone-4s-unlocked/">discovered</a>, tarnishing the reputation of the iPhone's newest claim to fame. The flaw allows anyone to access an iPhone via voice-activated commands despite screen and password locks, access that includes personal information. By hitting the home screen button a person, using Siri, could have access to texts, the calendar and other services -- all without having to unlock the home screen.
+A fatal flaw in Siri was recently <a href="https://nakedsecurity.sophos.com/2011/10/19/siri-iphone-4s-unlocked/">discovered</a>, tarnishing the reputation of the iPhone's newest claim to fame. The flaw allows anyone to access an iPhone via voice-activated commands despite screen and password locks, access that includes personal information. By hitting the home screen button a person, using Siri, could have access to texts, the calendar and other services -- all without having to unlock the home screen.
 
 Email luckily is not accessible, "the positive thing is that accessing some of the more sensitive services in this manner, such as email, is forbidden," says Alan Goode of Goode Intelligence, a mobile security firm. "But I could still run up a pretty impressive and annoying phone bill if I had malicious intent and if Apple missed this pretty easy to find vulnerability then what other security threats are hiding in Apple's latest mobile OS?".
 
@@ -12,7 +12,7 @@ Users can protect themselves from Siri by manually disabling the option to enabl
 
 ## iPad Blunder
 
-Seems like these days password protect means absolutely nothing to Apple and they are luring their users into a false sense of security. The <a href="http://www.dailymail.co.uk/sciencetech/article-2052752/iPad-2-iOS-5-password-glitch-means-hackers-gain-access-pulling-cover-off.html">newest blunder</a> is for the iPad, which can be passcode bypassed by using a magnetic smart cover. The smart covers seemingly confuses iOS 5.
+Seems like these days password protect means absolutely nothing to Apple and they are luring their users into a false sense of security. The <a href="https://www.dailymail.co.uk/sciencetech/article-2052752/iPad-2-iOS-5-password-glitch-means-hackers-gain-access-pulling-cover-off.html">newest blunder</a> is for the iPad, which can be passcode bypassed by using a magnetic smart cover. The smart covers seemingly confuses iOS 5.
 
 To open an iPad with smart cover while password locked you only need to hold down the power button until the iPad 2 slider turns off, you then close and open the smart cover and click cancel -- voila! 
 

@@ -46,7 +46,7 @@ Encourage your users to take action, lead them to the next step, forgive them fo
 ![Unicorn)](/static/2013/unicorn-sketch.jpg)
 
 > A designer who does not write markup and css is not designing for the web, but drawing pictures.
-> -- [Andy Rutledge](http://andyrutledge.com/)
+> -- [Andy Rutledge](https://andyrutledge.com/)
 
 ## Learn to translate your visual design to usable production-ready designs.
 

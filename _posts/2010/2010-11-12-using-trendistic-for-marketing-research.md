@@ -1,6 +1,6 @@
 # Using Trendistic for Marketing Research
 
-<a href="http://trendistic.com/">Trendistic</a> is a great tool that is used to follow activity on Twitter. As you are probably aware, there are about 30 million Twitter users in the world, so Twitter trends are a great tool for market researchers.
+<a href="https://trendistic.com/">Trendistic</a> is a great tool that is used to follow activity on Twitter. As you are probably aware, there are about 30 million Twitter users in the world, so Twitter trends are a great tool for market researchers.
 
 The problem with using Twitter for research is that it is often difficult to gauge what people are really thinking when they post their tweets. When they are only writing 140 characters, they could mean just about anything. However, if you really look carefully at someone's tweets you are able to have at least a general understanding of how they feel about a particular topic.
 
@@ -10,7 +10,7 @@ I was recently writing an article on trends in solar energy. While writing this 
 
 This gave me an idea about how popular the topic was. Many people had claimed that solar energy was one of the least talked about topics in the industry and this tool gave me a means to confirm this.
 
-More recently I tried using Trendistic to see how interest in entrepreneurship changed over the past six months. This is the graph for  -- <a href="http://trendistic.com/entrepreneur/_180-days">Twitter Trends for Entrepreneurs</a>.
+More recently I tried using Trendistic to see how interest in entrepreneurship changed over the past six months. This is the graph for  -- <a href="https://trendistic.com/entrepreneur/_180-days">Twitter Trends for Entrepreneurs</a>.
 
 The graph showed me that entrepreneurship was a fairly important topic prior to the months of July, but for the two months between July and September almost nobody talked about it.  Once September came around, the topic of entrepreneurship immediately gained popularity again.
 

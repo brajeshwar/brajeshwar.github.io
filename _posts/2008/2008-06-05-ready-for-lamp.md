@@ -12,7 +12,7 @@ Secondly, it's not that every Wordpress user needs to modify the Wordpress code.
 
 Lastly, Open source is an alternative, you need not always think open source! I hope we all now know what open source is all about.
 
-Moving on from where I left in my last post, I'll describe what <a title="LAMP" href="http://en.wikipedia.org/wiki/LAMP">LAMP</a> is all about. This term originated in the year 2001.
+Moving on from where I left in my last post, I'll describe what <a title="LAMP" href="https://en.wikipedia.org/wiki/LAMP">LAMP</a> is all about. This term originated in the year 2001.
 
 LAMP comprises of;
 
@@ -31,14 +31,14 @@ Apache web server: The Apache Web Server Project is an attempt to develop and ma
 
 For the uninitiated, a web server is operational basically for communication where there is a client-server flavor, the server process creates a socket and the client socket accesses the server through client socket techniques.
 
-MySQL database application: It is a free, multiuser, multi-threaded SQL dabase management system which now has above 11 million installations. The program runs as a server providing multi-user access to a number of databases. The project was started by a swedish company called MySQL AB but was later accuired by <a href="http://www.sun.com">Sun Microsystems</a>, earlier this year. It is a community supported and a robust DBMS. It is the backend for several popular content management systems like;
+MySQL database application: It is a free, multiuser, multi-threaded SQL dabase management system which now has above 11 million installations. The program runs as a server providing multi-user access to a number of databases. The project was started by a swedish company called MySQL AB but was later accuired by <a href="https://www.sun.com">Sun Microsystems</a>, earlier this year. It is a community supported and a robust DBMS. It is the backend for several popular content management systems like;
 
-* <a title="Joomla!" href="http://en.wikipedia.org/wiki/Joomla%21">Joomla!</a>
-* <a title="E107" href="http://en.wikipedia.org/wiki/E107">e107</a>
-* <a title="Drupal" href="http://en.wikipedia.org/wiki/Drupal">Drupal</a> and
-* <a title="WordPress" href="http://en.wikipedia.org/wiki/WordPress">WordPress</a>!
+* <a title="Joomla!" href="https://en.wikipedia.org/wiki/Joomla%21">Joomla!</a>
+* <a title="E107" href="https://en.wikipedia.org/wiki/E107">e107</a>
+* <a title="Drupal" href="https://en.wikipedia.org/wiki/Drupal">Drupal</a> and
+* <a title="WordPress" href="https://en.wikipedia.org/wiki/WordPress">WordPress</a>!
 
-PHP/Perl/Python: Scripting languages like <a href="http://www.perl.org/">Perl</a>, <a href="http://www.php.net/">PHP</a> and <a href="http://www.python.org/">Python</a> are getting more and more popular. The reason being rapid prototyping capabilities which allow the development of complex software projects in a time-saving and efficient manner.
+PHP/Perl/Python: Scripting languages like <a href="https://www.perl.org/">Perl</a>, <a href="https://www.php.net/">PHP</a> and <a href="https://www.python.org/">Python</a> are getting more and more popular. The reason being rapid prototyping capabilities which allow the development of complex software projects in a time-saving and efficient manner.
 
 PHP has an awesome function library in web development arena. It is the basis for several commercial and non-commercial websites today. PHP is easy to learn and allows newbies to get productive pretty quickly. PHP programming instructions are directly embedded in the HTML page which happens to be more intuitive to the developers. However, talking beyond the Web, Perl and Python are more dominant than PHP.
 

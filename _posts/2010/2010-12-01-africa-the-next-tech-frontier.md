@@ -8,7 +8,7 @@ Consider these budding African tech entrepreneurs helping rebuild Africa one pix
 
 ## Karanaja Macharia, CEO of Mobile Planet
 
-Karanja Macharia of Kenya is a seasoned businessman who is bringing Internet connectivity to Kenya through a mobile platform. With Internet connectivity hovering around 10% in Kenya, his idea to bring technology to the masses on a cheap Internet-enabled phone system. His unique ideas are showing that people can do more than just talk on a phone, a foreign concept with the majority of Kenyan cell phone users.  The <a href="http://www.mobileplanet.co.ke/">Mobile</a> Planet website makes the following statement about their work in Africa:
+Karanja Macharia of Kenya is a seasoned businessman who is bringing Internet connectivity to Kenya through a mobile platform. With Internet connectivity hovering around 10% in Kenya, his idea to bring technology to the masses on a cheap Internet-enabled phone system. His unique ideas are showing that people can do more than just talk on a phone, a foreign concept with the majority of Kenyan cell phone users.  The <a href="https://www.mobileplanet.co.ke/">Mobile</a> Planet website makes the following statement about their work in Africa:
 
 Subscriber numbers in Africa are growing at a phenomenal rate. This spells great potential. Potential to use mobile technology to address Africa's unique set of circumstances and challenges. We strive to provide products and services that enhance the quality of life of Africans in areas such as health, agriculture, education, e-governance and commerce. We remain committed to providing homegrown solutions that are relevant to all parts of Africa.
 
@@ -20,4 +20,4 @@ Africa poses unique challenges for tech entrepreneurs as different locations do 
 
 ## Fritz Ekwoge, iYam.mobi
 
-<a href="http://iyam.mobi/login">iYam.mobi</a> creator Fritz Ekwoge created a very simple application for a mobile phone-based directory. The idea sprung out of Cameroon's lack of internet connectivity. With only 2-5% of the population connected to the Internet, many users may only ever connect online through a mobile phone. Ekwoge's simple app iYam.mobi was designed to connect the un-connectable through a searchable database. He has now grown the idea into a SMS-based platform that anyone can use to create or consume Internet-based content.
+<a href="https://iyam.mobi/login">iYam.mobi</a> creator Fritz Ekwoge created a very simple application for a mobile phone-based directory. The idea sprung out of Cameroon's lack of internet connectivity. With only 2-5% of the population connected to the Internet, many users may only ever connect online through a mobile phone. Ekwoge's simple app iYam.mobi was designed to connect the un-connectable through a searchable database. He has now grown the idea into a SMS-based platform that anyone can use to create or consume Internet-based content.

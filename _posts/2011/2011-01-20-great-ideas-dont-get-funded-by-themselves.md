@@ -5,7 +5,7 @@
 
 <h3>Don't focus only on technology</h3>
 <p>Even if you are lucky to find an investor who used to be an engineer, they still aren't likely to be looking at the technology you are presenting to them. At least, that isn't their primary focus.</p>
-<p>Move away from the mentality that you should be focusing on the technology behind your design. Instead, summarize your product and them emphasize your business model. You can read more in the article <a href="http://www.youngentrepreneur.com/blog/top-5-things-that-make-you-look-appealing-to-an-investor/">Top 5 Things That Make You Appealing to an Investor</a>.</p>
+<p>Move away from the mentality that you should be focusing on the technology behind your design. Instead, summarize your product and them emphasize your business model. You can read more in the article <a href="https://www.youngentrepreneur.com/blog/top-5-things-that-make-you-look-appealing-to-an-investor/">Top 5 Things That Make You Appealing to an Investor</a>.</p>
 <h3>Show your own qualifications and entrepreneurial experience</h3>
 <p>Investors are really looking to invest in people more than ideas. Even if you present an idea that sounds strange to them, if you can show that you know what you are doing you have a good chance of being funded.</p>
 <p>If you have a lot of experience in the field, that will go a long way to getting credibility. If you have started a number of businesses before, then you clearly know how to be realistic and get your business off the ground.</p>

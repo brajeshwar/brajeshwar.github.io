@@ -12,7 +12,7 @@ Second, drop your OS X screenshots automatically into Dropbox's Screenshot folde
 
 `$ defaults write com.apple.screencapture location ~/Dropbox/Screenshots/;killall SystemUIServer`
 
-Or use a utility such as <a href="http://www.titanium.free.fr/onyx.html" title="OnyX">OnyX</a>
+Or use a utility such as <a href="https://www.titanium.free.fr/onyx.html" title="OnyX">OnyX</a>
 
 <img class="large" src="/static/2015/onyx-screenshot.png" alt="OnyX">
 

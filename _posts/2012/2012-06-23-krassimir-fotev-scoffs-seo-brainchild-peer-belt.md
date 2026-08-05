@@ -2,7 +2,7 @@
 
 If you're like me then you are sick of SEO. These cookie-cutter predictive patterns that create a myopic filter for the content we see online make as much sense as casting a rapper in a film noir, or taking a three-year old to a fine china shop. 
 
-This must be what Krassimir Fotev thought when he looked at how we gather, process and retrieve information and thought -- pssst... I can do better. So he did. (Don't you just love people like that?). He created [Peer Belt](http://www.peerbelt.com) -- a personalized search engine that organizes the content you encounter online. 
+This must be what Krassimir Fotev thought when he looked at how we gather, process and retrieve information and thought -- pssst... I can do better. So he did. (Don't you just love people like that?). He created [Peer Belt](https://www.peerbelt.com) -- a personalized search engine that organizes the content you encounter online. 
 
 After first getting a masters degree in Physics, then giving up a cushy job at Credit Suisse Krassimir created Peer Belt, and hasn't looked back since. 
 

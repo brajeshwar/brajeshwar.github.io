@@ -1,6 +1,6 @@
 # LetsLunch brings Online Networking OFFLINE -- bout damned time somebody went old school on networking
 
-If you're like me, then your social profiles haven't done anything to your business life other than imploring you to waste valuable working hours looking at random acquaintances' mobile uploads of their cats. Enter <a href="http://letslunch.com/">LetsLunch</a>.
+If you're like me, then your social profiles haven't done anything to your business life other than imploring you to waste valuable working hours looking at random acquaintances' mobile uploads of their cats. Enter <a href="https://letslunch.com/">LetsLunch</a>.
 
 LetsLunch is a new networking tool that blends the ease of online networking  with the practical use of actual networking. And, its as easy as 1-2-3. Literally!
 
@@ -8,7 +8,7 @@ LetsLunch is a new networking tool that blends the ease of online networking  wi
 - Step 2 is to tell the system what days you are free for lunch -- after which it will send you an email with your possible lunch matches and restaurants within a convenient distance for both parties.
 - Take a guess at step 3 (hint: its delicious, entertaining and gives you something to do over your lunch hour).
 
-The simple-to-use system is slightly more advanced than it sounds though as it includes 'reputations', VIPs, and <a href="http://blog.letslunch.com/">tips n' tricks</a> to maximize its potential.
+The simple-to-use system is slightly more advanced than it sounds though as it includes 'reputations', VIPs, and <a href="https://blog.letslunch.com/">tips n' tricks</a> to maximize its potential.
 
 I recently got the opportunity to (virtually) chat with LetsLunch creator Syed Shuttari, and I picked the creative entrepreneur's brain to create a detailed how-to guide of sorts:
 
@@ -48,4 +48,4 @@ You can add the movers and shakers of technology to your wishlist and if you go 
 
 Q. How is your service customizable to its users?
 
-We allow you to create your own profile, pictures, show the available lunch dates and choose your own unique URL, like I have at <a href="http://letslunch.com/Syed">LetsLunch.com/Syed</a>, which you can use on your blog, social media profile or to simply have other people request lunches with you.
+We allow you to create your own profile, pictures, show the available lunch dates and choose your own unique URL, like I have at <a href="https://letslunch.com/Syed">LetsLunch.com/Syed</a>, which you can use on your blog, social media profile or to simply have other people request lunches with you.

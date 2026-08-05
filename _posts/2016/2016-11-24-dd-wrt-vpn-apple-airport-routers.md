@@ -6,9 +6,9 @@ Apple's Airport Extreme[^AirportExtreme] and Airport Express[^AirportExpress] ar
 
 After many Linksys and D-Link Wi-Fi Routers, I started with the first generation Airpot Express and upgraded to the first Airport Time Capsule[^AirportTimeCapsule] when it was released in 2008. The time capsule (Airport Extreme with Time Machine enabled Drive) lasted for 5 years and the Airport Express, a little over 6 years. Our current Home Network Setup is powered by an Airport Extreme and few Airport Expresses.
 
-However, the apple routers are limited in their functionality. I wanted a VPN sitting in between the Internet and my home network without disturbing my original setup. I also wanted to have the option to turn the VPN OFF/ON quickly as and when I needed. I researched for a bit and settled on a cheap flashable wi-fi router. I flashed it with [DD-WRT](http://www.dd-wrt.com/).
+However, the apple routers are limited in their functionality. I wanted a VPN sitting in between the Internet and my home network without disturbing my original setup. I also wanted to have the option to turn the VPN OFF/ON quickly as and when I needed. I researched for a bit and settled on a cheap flashable wi-fi router. I flashed it with [DD-WRT](https://www.dd-wrt.com/).
 
-There are other Open Source Router firmwares which are equally good. I chose DD-WRT, as I find it easier, and have used it earlier. Some other alternatives you might want to try are - [Tomato](http://www.polarcloud.com/tomato), [OpenWRT](https://openwrt.org/), [Gargoyle](http://www.gargoyle-router.com/), etc.
+There are other Open Source Router firmwares which are equally good. I chose DD-WRT, as I find it easier, and have used it earlier. Some other alternatives you might want to try are - [Tomato](https://www.polarcloud.com/tomato), [OpenWRT](https://openwrt.org/), [Gargoyle](https://www.gargoyle-router.com/), etc.
 
 I'm not very technical but I can understand technology, and knows a thing or two about how things work. So, I chose simpler setups and things that just work. My current setup works for now.
 
@@ -16,9 +16,9 @@ I'm not very technical but I can understand technology, and knows a thing or two
 
 > DD-WRT is a Linux based alternative OpenSource firmware suitable for a great variety of WLAN routers and embedded systems. The main emphasis lies on providing the easiest possible handling while at the same time supporting a great number of functionalities within the framework of the respective hardware platform used.
 
-Flashing a router and installation of DD-WRT is pretty straight forward. The most important part is to choose the right firmware for the router, making sure that the [router is supported by DD-WRT](http://www.dd-wrt.com/site/support/router-database). Following the instructions on the [installation](http://www.dd-wrt.com/wiki/index.php/Installation) should be good enough.
+Flashing a router and installation of DD-WRT is pretty straight forward. The most important part is to choose the right firmware for the router, making sure that the [router is supported by DD-WRT](https://www.dd-wrt.com/site/support/router-database). Following the instructions on the [installation](https://www.dd-wrt.com/wiki/index.php/Installation) should be good enough.
 
-Once all installed and running, here are few basic setting [recommendations](http://dfarq.homeip.net/recommended-dd-wrt-settings/) suggested by industry experts.
+Once all installed and running, here are few basic setting [recommendations](https://dfarq.homeip.net/recommended-dd-wrt-settings/) suggested by industry experts.
 
 - Change the default network from something like 192.168.1.1 to 192.168.xx.xx of your choice.
 - Broadcast the SSID but secure it with WPA2 with AES. If you're not worried about backward compatibility, you can disable TKIP.
@@ -37,7 +37,7 @@ Here are some VPN providers to try;
 - [ExpressVPN](https://www.expressvpn.com),
 - [IPVanish](https://www.ipvanish.com/),
 - [MullVad](https://mullvad.net/),
-- [NordVPN](http://nordvpn.com/),
+- [NordVPN](https://nordvpn.com/),
 - [Private Internet Access](https://www.privateinternetaccess.com/),
 - [Private VPN](https://privatevpn.com/),
 - [Slick VPN](https://www.slickvpn.com/),

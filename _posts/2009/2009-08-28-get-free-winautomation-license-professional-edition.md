@@ -8,7 +8,7 @@ Just comment on how you will use WinAutomation to help you in your daily Windows
 
 ## What is WinAutomation?
 
-[WinAutomation](http://www.winautomation.com/) is a powerful automation tool that helps you automate any repetitive task on your computer.
+[WinAutomation](https://www.winautomation.com/) is a powerful automation tool that helps you automate any repetitive task on your computer.
 
 ## UPDATE:
 

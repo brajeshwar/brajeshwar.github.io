@@ -1,6 +1,6 @@
 # Microsoft Office Suite
 
-I always have a belief that, the first thing a computer (PC) user know is [Microsoft Office](http://office.microsoft.com/) and that it is a really easy one to catch up with, open-it and use-it. But, there are lots to the suite than just meets the eye. The software is not THAT easy to use, you have to get used to it, master its tit-bits and nourish your skill in making things work better, faster and intelligently. Today, I went out to the wilderness of the Internet to search for Tips, Tricks, Must-Knows about Powerpoint, Word.
+I always have a belief that, the first thing a computer (PC) user know is [Microsoft Office](https://office.microsoft.com/) and that it is a really easy one to catch up with, open-it and use-it. But, there are lots to the suite than just meets the eye. The software is not THAT easy to use, you have to get used to it, master its tit-bits and nourish your skill in making things work better, faster and intelligently. Today, I went out to the wilderness of the Internet to search for Tips, Tricks, Must-Knows about Powerpoint, Word.
 
 I really love plain text and thus do most of my documentations in plain ASCII text, though many clients prefer Microsoft Word and I think there are lots that you can do with the software than just type text, make bold, italic and print. There are lots more to powerpoint too, and now I have a feeling I know just about 10% of what powerpoint can do. I will need to learn a bit more and get used to the whole suite a bit.
 

@@ -6,7 +6,7 @@ I was trying out a way to float 4 DIVs inside a parent DIV on a quick site desig
 
 By now, it is rather a common thing, most (x)html/css layout designers know very well where to separate ID selectors from classes in CSS! This article should most aptly apply to newcomers.
 
-The [W3C](http://www.w3.org/) defines that attributes of the type ID cannot have the same value more than once in a document, which means that it is unique for that particular document. Nonthless, as of today, most browsers will not complain even if you violate the same. It may be noted that a CSS ID Selector usually contains a `#` followed by the ID value.
+The [W3C](https://www.w3.org/) defines that attributes of the type ID cannot have the same value more than once in a document, which means that it is unique for that particular document. Nonthless, as of today, most browsers will not complain even if you violate the same. It may be noted that a CSS ID Selector usually contains a `#` followed by the ID value.
 
 ```css
 #myid {

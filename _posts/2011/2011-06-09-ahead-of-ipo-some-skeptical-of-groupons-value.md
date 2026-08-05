@@ -1,6 +1,6 @@
 # Ahead of IPO, Some Skeptical of Groupon's Value!
 
-Since its inception, <a href="http://www.groupon.com/">Groupon</a> has steadily climbed the success ladder to achieve many accolades. It has shown immense promise and there is a definitive possibility of it being declared as one of the <a href="http://images.businessweek.com/slideshows/20110415/the-next-wave-of-tech-ipos/slides/9">leading Tech IPOs</a> of by the end of 2011. However, the company is not without its set of challenges. Some of these have also led to people wondering about Groupon's value and future ahead.
+Since its inception, <a href="https://www.groupon.com/">Groupon</a> has steadily climbed the success ladder to achieve many accolades. It has shown immense promise and there is a definitive possibility of it being declared as one of the <a href="https://images.businessweek.com/slideshows/20110415/the-next-wave-of-tech-ipos/slides/9">leading Tech IPOs</a> of by the end of 2011. However, the company is not without its set of challenges. Some of these have also led to people wondering about Groupon's value and future ahead.
 
 Here is a brief look at some of the reasons and speculations about Groupon's value:
 
@@ -14,7 +14,7 @@ One of the most insistent issues that customers have with Groupon offers is that
 
 ## Customer Relationship
 
-This is a <a href="http://en.wikipedia.org/wiki/Catch-22">catch 22 situation</a> that most online businesses have to suffer. They have to rely on online customers for their business to thrive, yet their online customers are not a loyal follow group. More often than not, they are random visitors that just happen to come across some offer coupon that appeals to them. Instead of completely relying on this group of customers, Groupon should focus their energy on local customers that can lead to a loyal database of customers with the right kind of offer cultivation.
+This is a <a href="https://en.wikipedia.org/wiki/Catch-22">catch 22 situation</a> that most online businesses have to suffer. They have to rely on online customers for their business to thrive, yet their online customers are not a loyal follow group. More often than not, they are random visitors that just happen to come across some offer coupon that appeals to them. Instead of completely relying on this group of customers, Groupon should focus their energy on local customers that can lead to a loyal database of customers with the right kind of offer cultivation.
 
 ## Expenditure Clash with Company's Earnings
 
@@ -22,6 +22,6 @@ Market reports have shown that the company has expanded quite rapidly. Most of t
 
 ## Extra Competition from the Biggies
 
-The <a href="http://www.digitaltrends.com/social-media/google-offers-vs-groupon-vs-facebook-deals/">competition from Google and Facebook</a> and the likes, on the similar concentration can be fatal to Groupon's value. Especially because, the bigger companies have a wealthier database and more efficient customer profiling that can get them better results.
+The <a href="https://www.digitaltrends.com/social-media/google-offers-vs-groupon-vs-facebook-deals/">competition from Google and Facebook</a> and the likes, on the similar concentration can be fatal to Groupon's value. Especially because, the bigger companies have a wealthier database and more efficient customer profiling that can get them better results.
 
 Keeping all these conditions in mind, it is no wonder that speculation has arisen over the topic of Groupon's value in this over competitive and dynamic market. However, the company can cover lots of lost grounds if their sales and marketing costs even out and their profits get a break.

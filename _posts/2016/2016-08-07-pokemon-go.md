@@ -2,7 +2,7 @@
 
 ![Pokémon Go)](/static/2016/pokemon-go-logo.png)
 
-[Pokémon Go](http://www.pokemongo.com/) has, no doubt, taken the world by storm. It's estimated that the game has more active users than Snapchat. It's the first widely popular augmented reality game and people have been willing to go to extreme measures to catch 'em all. Pokémon Go uses real-world locations and virtual images to sends users on wild quests in search of the elusive Pokémon. Here are some interesting stories that demonstrate Pokémon Go's influence on its players.
+[Pokémon Go](https://www.pokemongo.com/) has, no doubt, taken the world by storm. It's estimated that the game has more active users than Snapchat. It's the first widely popular augmented reality game and people have been willing to go to extreme measures to catch 'em all. Pokémon Go uses real-world locations and virtual images to sends users on wild quests in search of the elusive Pokémon. Here are some interesting stories that demonstrate Pokémon Go's influence on its players.
 
 <iframe width="100%" src="https://www.youtube.com/embed/AVWPWYYIcpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -20,19 +20,19 @@ Once you have reached level 5 you can begin battling. You join a Pokémon Gym an
 
 ## Stabbed, not stirred
 
-[ABC 7 reports](http://abc7.com/news/pokemon-go-player-stabbed-keeps-playing/1428184/) that Oregon resident Michael Baker was out playing Pokémon Go when he approached what he thought was a fellow Pokémon Go player. Turns out, this other man was not playing Pokémon Go and instead turned around and stabbed Baker. Baker refused any medical service and continued playing. 
+[ABC 7 reports](https://abc7.com/news/pokemon-go-player-stabbed-keeps-playing/1428184/) that Oregon resident Michael Baker was out playing Pokémon Go when he approached what he thought was a fellow Pokémon Go player. Turns out, this other man was not playing Pokémon Go and instead turned around and stabbed Baker. Baker refused any medical service and continued playing. 
 
 "I basically risked my life," Baker said in an interview with ABC 7. "It's important to me. I gotta basically catch them all."
 
 ## Pokemon in Zoos
 
-At the Toledo Zoo, a man and a woman were [reported to have scaled a fence](http://www.toledoblade.com/Police-Fire/2016/07/14/Pair-of-Pokemon-Go-players-arrested-at-Toledo-Zoo.html) in order to try to catch Pokémon. Robin Bartholomy was one of the trespassers.
+At the Toledo Zoo, a man and a woman were [reported to have scaled a fence](https://www.toledoblade.com/Police-Fire/2016/07/14/Pair-of-Pokemon-Go-players-arrested-at-Toledo-Zoo.html) in order to try to catch Pokémon. Robin Bartholomy was one of the trespassers.
 
 "It wasn't the most responsible thing to do, but hey, gotta catch 'em all," Bartholomy said in an interview with the Toledo Blade. The two, having been spotted by security cameras, were eventually caught by a tiger exhibit.
 
 ## Dead On
 
-Within days of the game's release, Shayla Wiggins [found a dead body](http://money.cnn.com/2016/07/09/technology/pokemon-go-dead-body/) while playing Pokémon Go. She said she hoped to find unique Pokémon by a natural water resource. She might have found Pokémon by the river, but she found something else too.
+Within days of the game's release, Shayla Wiggins [found a dead body](https://money.cnn.com/2016/07/09/technology/pokemon-go-dead-body/) while playing Pokémon Go. She said she hoped to find unique Pokémon by a natural water resource. She might have found Pokémon by the river, but she found something else too.
 
 "I probably would have never gone down there if it weren't for this game," Wiggins told CNNMoney. "But in a way, I'm thankful. I feel like I helped find his body. He could have been there for days."
 
@@ -45,6 +45,6 @@ Within days of the game's release, Shayla Wiggins [found a dead body](http://mon
 
 ## Pokémon Go in India
 
-In the early days of its release, even though it is not officially launched, Indians were fortunate enough to [play Pokémon Go](http://gadgets.ndtv.com/games/features/playing-pokemon-go-in-india-heres-everything-you-need-to-know-858349). Unfortunately, it is no longer playable and Indians have to wait for the official release of Pokémon Go.
+In the early days of its release, even though it is not officially launched, Indians were fortunate enough to [play Pokémon Go](https://gadgets.ndtv.com/games/features/playing-pokemon-go-in-india-heres-everything-you-need-to-know-858349). Unfortunately, it is no longer playable and Indians have to wait for the official release of Pokémon Go.
 
 Update: Dec 14, 2016 - Pokémon Go is officially launched in India.

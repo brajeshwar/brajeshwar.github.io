@@ -8,7 +8,7 @@ Here are just a few ways companies will soon be able to take advantage of these 
 
 ## Offering Personalized Service
 
-Today's sophisticated <a href="http://snaps.io/chatbotplatform/">chatbot platforms</a> demonstrate the power of AI. Brands are <a href="https://www.entrepreneur.com/article/299611">already using chatbots</a> to improve customer service, send potential customers targeted ads, and gather user data.
+Today's sophisticated <a href="https://snaps.io/chatbotplatform/">chatbot platforms</a> demonstrate the power of AI. Brands are <a href="https://www.entrepreneur.com/article/299611">already using chatbots</a> to improve customer service, send potential customers targeted ads, and gather user data.
 
 A customer service chatbot doesn't just offer a greater degree of convenience to users; it also allows businesses to save money by reducing the need to hire human customer service representatives. This is just one more example of automation solving a major problem for organizations.
 

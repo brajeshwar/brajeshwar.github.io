@@ -1,11 +1,11 @@
 # A sneak peak into Ubuntu 8.10 Intrepid Ibex
 
 
-Come October and Ubuntu fans shall cherish yet another release of the next <a href="http://www.ubuntu.com/testing/intrepid/alpha1">Ubuntu - Intrepid Ibex</a> (along with its derivatives - Kubuntu, Xubuntu, etc.) If you're aware, Ubuntu is known to adhere to a six-month release cycle and gets its version numbers from scheduled release dates. Interesting! While an Ubuntu release is in its development cycle, it is referred to by its code name.
+Come October and Ubuntu fans shall cherish yet another release of the next <a href="https://www.ubuntu.com/testing/intrepid/alpha1">Ubuntu - Intrepid Ibex</a> (along with its derivatives - Kubuntu, Xubuntu, etc.) If you're aware, Ubuntu is known to adhere to a six-month release cycle and gets its version numbers from scheduled release dates. Interesting! While an Ubuntu release is in its development cycle, it is referred to by its code name.
 
 Ubuntu is known for its high degree of acceptance amongst the newbies owing to its ease of use and support for hardware, sound, graphics, etc. and due to a large community it has in its periphery. 
 
-If you remember, <em><a href="http://en.wikipedia.org/wiki/Mark_Shuttleworth">Mark Shuttleworth</a></em> announced Ubuntu 8.10, code named as Intrepid Ibex, for a tentatively scheduled release in October, 6 months after Ubuntu 8.04 - Hardy Heron gets released. This <a href="https://lists.ubuntu.com/archives/ubuntu-devel/2008-February/025136.html">post</a> on the <a href="/2008/learn-linux-through-mailing-lists/">mailing list</a> says it all! 
+If you remember, <em><a href="https://en.wikipedia.org/wiki/Mark_Shuttleworth">Mark Shuttleworth</a></em> announced Ubuntu 8.10, code named as Intrepid Ibex, for a tentatively scheduled release in October, 6 months after Ubuntu 8.04 - Hardy Heron gets released. This <a href="https://lists.ubuntu.com/archives/ubuntu-devel/2008-February/025136.html">post</a> on the <a href="/2008/learn-linux-through-mailing-lists/">mailing list</a> says it all! 
 
 As per Mark, the key aspect with Intrepid Ibex shall be to include improvements in the arena of mobile computing and desktop scalability along with increased flexibility for Internet connectivity.
 

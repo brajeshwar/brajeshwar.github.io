@@ -8,7 +8,7 @@ An effective resume is
 
 - the simplest information about yourself, technical skillsets in our case which pin-points what you are best capable of executing
 - precise, to the point and no-nonsense
-- less pages; I would not really like a resume to be more than 3 pages, a maximum of 5 is enough - more than that, either you're [Albert Einstein](http://en.wikipedia.org/wiki/Einstein%2C_Albert) or a super-genius.
+- less pages; I would not really like a resume to be more than 3 pages, a maximum of 5 is enough - more than that, either you're [Albert Einstein](https://en.wikipedia.org/wiki/Einstein%2C_Albert) or a super-genius.
 
 A resume need not
 

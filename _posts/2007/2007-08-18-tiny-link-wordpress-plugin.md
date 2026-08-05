@@ -2,13 +2,13 @@
 
 I was in search of a way to automagically get an alternate short link for the lengthy URL of my articles. I tried a plugin but somehow went kaput and never worked for me. I decided to write one for myself and came up with a very simple solution.
 
-Well, <a href="http://wordpress.org/extend/plugins/tiny-link/">Tiny Link</a> is a Wordpress plugin that creates an alternate <a href="http://tinyurl.com/">TinyURL</a> link to your article or post permalink.
+Well, <a href="https://wordpress.org/extend/plugins/tiny-link/">Tiny Link</a> is a Wordpress plugin that creates an alternate <a href="https://tinyurl.com/">TinyURL</a> link to your article or post permalink.
 
 I hope this will be useful while sending hyperlinks in emails to avoid the word-wrap for lengthy article URLs. This should also be useful (as far as I can guess) to mobile device users so they will can type a shorter url to read an article.
 
 ## TINY LINK
 
-Download <a href="http://wordpress.org/extend/plugins/tiny-link/">Tiny Link</a> from Wordpress.
+Download <a href="https://wordpress.org/extend/plugins/tiny-link/">Tiny Link</a> from Wordpress.
 
 ## USAGE
 

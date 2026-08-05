@@ -1,6 +1,6 @@
 # Monitis - an IT monitoring StartUp
 
-<a href="http://portal.monitis.com/">Monitis</a> was declared as "The Most Innovative Start-up" for the Year 2009 by "<a href="http://clientconference.the451group.com/na/2009/">The 451 Group's Client Conference</a>. Also, it was selected as One of the Top 100 Private Limited Companies, by the editorial team of <a href="http://alwayson.goingon.com/">AlwaysOn</a>, along with partners at KPMG, Morgan Stanley, Hewlett-Packard, and a few other industry experts. 
+<a href="https://portal.monitis.com/">Monitis</a> was declared as "The Most Innovative Start-up" for the Year 2009 by "<a href="https://clientconference.the451group.com/na/2009/">The 451 Group's Client Conference</a>. Also, it was selected as One of the Top 100 Private Limited Companies, by the editorial team of <a href="https://alwayson.goingon.com/">AlwaysOn</a>, along with partners at KPMG, Morgan Stanley, Hewlett-Packard, and a few other industry experts. 
 
 ## Idea
 
@@ -10,7 +10,7 @@ One of the most important considerations for an enterprise, these days, is track
 
 Monitis is one of the leading providers of reasonable management solution and performance monitoring. Almost 50,000 customers spanning small businesses, government agencies, Fortune 500 companies and education institutions have selected Monitis for reducing system downtime, improving IT administrator productivity, and reducing operational expenditure. It is the changing system monitoring by providing user-friendly, reasonably priced, flexible (operation configurations includes internal and external cloud and shared), and easy to manage, management solution and SaaS performance monitoring. 
 
-Since 2007, Monitis has been trusted by various companies including <a href="http://www.bmw.com/">BMW</a>, <a href="http://www.acer.com/">Acer</a>, <a href="http://www.asu.edu/">Arizona State University</a>, etc. Once you sign up on this process, a dedicated customer services team helps you in choosing and setting up the Monitis various service packages. 
+Since 2007, Monitis has been trusted by various companies including <a href="https://www.bmw.com/">BMW</a>, <a href="https://www.acer.com/">Acer</a>, <a href="https://www.asu.edu/">Arizona State University</a>, etc. Once you sign up on this process, a dedicated customer services team helps you in choosing and setting up the Monitis various service packages. 
 
 ## Business Model
 

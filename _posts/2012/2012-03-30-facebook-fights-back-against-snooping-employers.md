@@ -22,4 +22,4 @@ Employers who enter their employees' social profiles will be legally liable for 
 
 So, now what?
 
-Well, Facebook is telling users to <a href="http://news.cnet.com/8301-13578_3-57403259-38/facebook-dont-reveal-your-password-to-snooping-employers/">just say no</a>. Facebook will likely be backed up with the law (hence their legal soapbox), meaning that Facebook users should be fine. In theory.
+Well, Facebook is telling users to <a href="https://news.cnet.com/8301-13578_3-57403259-38/facebook-dont-reveal-your-password-to-snooping-employers/">just say no</a>. Facebook will likely be backed up with the law (hence their legal soapbox), meaning that Facebook users should be fine. In theory.

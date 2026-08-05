@@ -4,7 +4,7 @@ image: /static/2012/svalbard-seed-vault.webp
 
 # Doomsday Biotech Gene Bank - a redundant server farm protecting biodiversity
 
-Sometimes technology works against nature. Other times it works for it. Now, finally, technology is being used to protect the earth. The Doomsday gene bank in Norway is using modern technology that functions like a back-up server for the world's biodiversity cache. The server-like [Svalbard Seed Vault](http://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault) was recently given an infusion of seeds, and cash, that has widely broadened its scope.
+Sometimes technology works against nature. Other times it works for it. Now, finally, technology is being used to protect the earth. The Doomsday gene bank in Norway is using modern technology that functions like a back-up server for the world's biodiversity cache. The server-like [Svalbard Seed Vault](https://en.wikipedia.org/wiki/Svalbard_Global_Seed_Vault) was recently given an infusion of seeds, and cash, that has widely broadened its scope.
 
 A much-needed infusion that is helping protect many of the gene and seed backups destroyed by the Afghan and Iraq wars, more recently the fire-destroyed Philippines facility and the suspected issues with the gene bank in Syria. The vault's architect, American Cary Fowler, welcomed the 25,000+ new seed samples with open arms, before he cranked up the cold (to a frigid -18°C) and sealed the door of the vault. If there was ever an eco ranger-based video game, the epic battle led by character Cary would surely be fought at the [Svalbard Vault](https://www.regjeringen.no/en/topics/food-fisheries-and-agriculture/svalbard-global-seed-vault/id462220/).
 

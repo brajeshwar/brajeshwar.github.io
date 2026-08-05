@@ -6,7 +6,7 @@ For some people, it is a daunting task trying to choose between a plasma televis
 
 ## Contrast
 
-The game of <a href="http://www.practical-home-theater-guide.com/contrast-ratio.html">contrast ratio</a> started after 2004, when the optimum peak was 4000:1. Before LED TVs came into being, Plasma televisions have has the best contrast with a contrast ratio. Today they lie in the same band. They give the blackest blacks and the whitest whites.  They perfectly display images from DVDs, video games and NTSC TV signals. This is because they are accurate in displaying images with a lot of dark and light images  simultaneously. LCD manufacturers have tried to make improvement in there black and white levels. However the fact that LCD uses much power when displaying full white makes them further inefficient.
+The game of <a href="https://www.practical-home-theater-guide.com/contrast-ratio.html">contrast ratio</a> started after 2004, when the optimum peak was 4000:1. Before LED TVs came into being, Plasma televisions have has the best contrast with a contrast ratio. Today they lie in the same band. They give the blackest blacks and the whitest whites.  They perfectly display images from DVDs, video games and NTSC TV signals. This is because they are accurate in displaying images with a lot of dark and light images  simultaneously. LCD manufacturers have tried to make improvement in there black and white levels. However the fact that LCD uses much power when displaying full white makes them further inefficient.
 
 ## Color
 

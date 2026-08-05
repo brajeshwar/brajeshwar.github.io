@@ -2,7 +2,7 @@
 
 If you are doing SEO for your own or someone else's website, you know what pagerank is. You have heard people claim that they use pagerank as the primary or even the only basis for their ranking. They focus on building links from high page rank sites and use pagerank as one of the only aspects of their keyword research strategy.
 
-There are a number of reasons why pagerank is not an effective way of measuring the competitiveness of a webpage. You can read more about it in <a href="http://www.conversationmarketing.com/2010/11/toolbar-pagerank-worthless-2010.htm">Why Toolbar Pagerank is Worthless</a>.
+There are a number of reasons why pagerank is not an effective way of measuring the competitiveness of a webpage. You can read more about it in <a href="https://www.conversationmarketing.com/2010/11/toolbar-pagerank-worthless-2010.htm">Why Toolbar Pagerank is Worthless</a>.
 
 ## Pagerank varies significantly on the front page
 
@@ -22,4 +22,4 @@ Readers come to your site for quality information. Limiting the number of qualit
 
 ## Don't forget about other ranking factors
 
-Google has just made some changes to its ranking algorithm. <a href="http://www.mattcutts.com/">Matt Cutts</a> says it is now based more on trust than pagerank. Pagerank may soon be an obsolete metric for SEO. Don't obsess over something that is unlikely to give as much benefit to your site as factors such as domain trust, relevancy and anchored back-links.
+Google has just made some changes to its ranking algorithm. <a href="https://www.mattcutts.com/">Matt Cutts</a> says it is now based more on trust than pagerank. Pagerank may soon be an obsolete metric for SEO. Don't obsess over something that is unlikely to give as much benefit to your site as factors such as domain trust, relevancy and anchored back-links.

@@ -1,8 +1,8 @@
 # A quick chat about "In50Hrs" with Vijay Anand
 
-Many in the Indian Startup scene knows Vijay Anand or have heard of him. Vijay Anand run [The Startup Centre](http://thestartupcentre.com/) and is very involved with Startups and Entrepreneurs in India.
+Many in the Indian Startup scene knows Vijay Anand or have heard of him. Vijay Anand run [The Startup Centre](https://thestartupcentre.com/) and is very involved with Startups and Entrepreneurs in India.
 
-I recently had the opportunity to meet him in person when he brought In50Hrs to Bangalore for the first time. [In50hrs](http://www.in50hrs.com/) is The Idea-To-Prototype Event. Entrepreneurs, Developers, and Product Designers come together to work on audacious ideas and build working prototypes (MVP) over a Weekend.
+I recently had the opportunity to meet him in person when he brought In50Hrs to Bangalore for the first time. [In50hrs](https://www.in50hrs.com/) is The Idea-To-Prototype Event. Entrepreneurs, Developers, and Product Designers come together to work on audacious ideas and build working prototypes (MVP) over a Weekend.
 
 Vijay's been organizing In50Hrs in Chennai for quite a while and he is taking his idea to other cities in India - Delhi, Pune, and Bangalore. I asked him a few quick questions and he has some thoughtful answers, which I'm sure will be useful to budding entrepreneurs and startups in India.
 

@@ -10,7 +10,7 @@ Just like weening a baby of her mothers' milk or of a drug addict from his drugs
 
 You just can't suddenly stop using something that you were used to regularly for quite a while. It will be easier to find a way to continue to tweet but reduce it gradually. Stop using your regular, ever-present client (Twitter, TweetDeck).
 
-I replaced mine with Alfred's Powerpack powered <a href="http://jdfwarrior.tumblr.com/post/12598255041/alfredtweet">AlfredTweet</a>. So, when I need to tweet a good article worth sharing or a funny thing that will make other people laugh, I tweet via AlfredTweet.
+I replaced mine with Alfred's Powerpack powered <a href="https://jdfwarrior.tumblr.com/post/12598255041/alfredtweet">AlfredTweet</a>. So, when I need to tweet a good article worth sharing or a funny thing that will make other people laugh, I tweet via AlfredTweet.
 
 That way, I can tweet anytime but I have to summon an effort to look at the twitter streams by visiting twitter.com. I do visit twitter in the afternoon when I'm rather exhausted from my regular work. Twitter website is now very convenient and everything is there - who followed you, talked to you, mentioned you.
 

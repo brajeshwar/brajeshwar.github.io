@@ -31,4 +31,4 @@ Anyone familiar with the book of patterns by the [Gang of Four](https://en.wikip
   + Tempest Method - The Tempest Method is used in the last few days before software delivery. The Tempest Method is characterized by lack of comments, and introduction of several Detonator Patterns.
   + Visitor From Hell - The Visitor From Hell Pattern is coincident with the absence of run time bounds checking on arrays. Inevitably, at least one control loop per system will have a Visitor From Hell Pattern that will overwrite critical data.
 
-Via: [Ailments of Unsuitable Project-Disoriented Software](http://www.dcc.unicamp.br/~oliva/fun/prog/resign-patterns).
+Via: [Ailments of Unsuitable Project-Disoriented Software](https://www.dcc.unicamp.br/~oliva/fun/prog/resign-patterns).

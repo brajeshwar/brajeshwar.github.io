@@ -1,6 +1,6 @@
 # Application Configuration (XML) File
 
-Today as I was doing a round of [Java Blogs](http://www.javablogs.com/), I came across an article, "On Configuration and XML".
+Today as I was doing a round of [Java Blogs](https://www.javablogs.com/), I came across an article, "On Configuration and XML".
 
 We have been using some sorta config.xml for most, well for all our Flash Applications. Not only does this makes life easier for the client but even for us while testing, debugging and even when we have to make quick changes without getting dirty with the codes. And yes, once the Application is deployed, changing nifty things is a breeze with the config.xml file. You should have read the happy, satisfied client's mails when we simply tell them to change some strings in the xml and they have what they want.
 

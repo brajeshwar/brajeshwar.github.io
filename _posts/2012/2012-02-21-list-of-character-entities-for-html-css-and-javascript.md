@@ -13,5 +13,5 @@ For instance, in CSS, to add &rarr; in the content of `:before`, you can write;
 
 So, I decided to go ahead, spend some time and made a nice, clean, easy-to-navigate one page site to display, literally, all Character Entity for HTML, CSS and Javascript.
 
-[Character Entities (HTML, CSS & Javascript)](http://oinam.github.io/entities/)
+[Character Entities (HTML, CSS & Javascript)](https://oinam.github.io/entities/)
 ([source](https://github.com/oinam/entities/))

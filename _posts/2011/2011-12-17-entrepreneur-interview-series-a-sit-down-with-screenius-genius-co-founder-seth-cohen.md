@@ -1,10 +1,10 @@
 # Entrepreneur Interview Series - A Sit-Down with Screenius genius co-founder Seth Cohen
 
-<a href="http://screenius.com/">Screenius</a> may sound like the ominous description of an evil-genius iPad app hell-bent on world domination -- but it's far less maleficent than that. Screenius is a newly-launched iPad <a href="http://screenius.com/screenius/">app</a> that is joining the ranks of Angry Birds, Doodle Jump and Pocket God.
+<a href="https://screenius.com/">Screenius</a> may sound like the ominous description of an evil-genius iPad app hell-bent on world domination -- but it's far less maleficent than that. Screenius is a newly-launched iPad <a href="https://screenius.com/screenius/">app</a> that is joining the ranks of Angry Birds, Doodle Jump and Pocket God.
 
 Screenius is another infotainment tool -- one that helps you funnel your video choices through its 'video valet' services. This video-funnelling tool reduces the ridiculously-large amount of online video choice and whittles it down to  a bearable size to offer you just two choices.
 
-Quite genius if you think about it. If you were to go to a Ben and Jerry's and stare at their 75+ flavors your eyes would glaze over as you tried to choose. Go to  McDonalds however and your choice between their simplistic Chocolate or Vanilla is practically child's play. "People can be paralyzed by too many choices," points out <a href="http://www.linkedin.com/in/sethmcohen">Seth Cohen</a>, co-founder and CEO of Screenius.
+Quite genius if you think about it. If you were to go to a Ben and Jerry's and stare at their 75+ flavors your eyes would glaze over as you tried to choose. Go to  McDonalds however and your choice between their simplistic Chocolate or Vanilla is practically child's play. "People can be paralyzed by too many choices," points out <a href="https://www.linkedin.com/in/sethmcohen">Seth Cohen</a>, co-founder and CEO of Screenius.
 
 Screenius is more than just a video-viewing app though. It's an intelligent app that learns your tastes as you go. If you watch TED Talks and The Colbert Report clips regularly, it won't pop-up with Justin Bieber's new Christmas hit or Jersey Shore reruns (both of which YouTube erroneously suggested to me last week, shudder). In addition to learning your likes the app includes review posting, sharing, and short menus for video browsing.
 

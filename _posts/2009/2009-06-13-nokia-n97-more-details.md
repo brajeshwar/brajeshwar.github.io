@@ -14,7 +14,7 @@ Once contestants successfully answer all five clues the race is then on to locat
 
 When?
 
-To be part of the international 'Search for N' treasure hunt, and join thousands of others, mark your calendar -- 15th June, 2009. Ten lucky winners will be selected from across India, 2 each from these sites - <a href="http://www.techtree.com/">Techtree</a>, <a href="http://www.thinkdigit.com/">ThinkDigit</a>, <a href="http://www.fonearena.com/">Fonearena</a>, <a href="/">Brajeshwar</a> and <a href="http://www.labnol.org/">Digital Inspiration</a>.
+To be part of the international 'Search for N' treasure hunt, and join thousands of others, mark your calendar -- 15th June, 2009. Ten lucky winners will be selected from across India, 2 each from these sites - <a href="https://www.techtree.com/">Techtree</a>, <a href="https://www.thinkdigit.com/">ThinkDigit</a>, <a href="https://www.fonearena.com/">Fonearena</a>, <a href="/">Brajeshwar</a> and <a href="https://www.labnol.org/">Digital Inspiration</a>.
 
 Rules
 

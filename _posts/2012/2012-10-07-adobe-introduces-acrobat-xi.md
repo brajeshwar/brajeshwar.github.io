@@ -1,6 +1,6 @@
 # Adobe introduces Acrobat XI
 
-In a small, focussed and quite gathering, Adobe unveiled their new <a href="http://www.adobe.com/in/products/acrobat.html">Acrobat XI</a>. Acrobat is Adobe's product suite for creating, editing, and viewing PDFs. It is literally used by all big corps, government institutions, and many non-profit organizations.
+In a small, focussed and quite gathering, Adobe unveiled their new <a href="https://www.adobe.com/in/products/acrobat.html">Acrobat XI</a>. Acrobat is Adobe's product suite for creating, editing, and viewing PDFs. It is literally used by all big corps, government institutions, and many non-profit organizations.
 
 The event was India focussed and Adobe showed some pretty interesting statistics and details on how Indian companies, Institutes, and other governing bodies like Passport Offices, Vehicle Registration and Licensing were using Adobe Acrobat to automate document management tasks.
 

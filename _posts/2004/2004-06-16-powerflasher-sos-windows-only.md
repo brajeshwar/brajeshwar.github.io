@@ -18,4 +18,4 @@ Advantage Overview;
 This free application runs on Windows 2000 / XP / 2003 and requires JavaVM starting from 1.3.
 Along with the program you can download a sample FLA file for you to test.
 
-Thanks to Carlo Blatz of [PowerFlasher](http://www.powerflasher.de/).
+Thanks to Carlo Blatz of [PowerFlasher](https://www.powerflasher.de/).

@@ -1,8 +1,8 @@
 # IE Tab Extension for FireFox
 
-[IE Tab](http://ietab.mozdev.org/) is one really cool extension for [Firefox](http://www.mozilla.com/firefox/).
+[IE Tab](https://ietab.mozdev.org/) is one really cool extension for [Firefox](https://www.mozilla.com/firefox/).
 
-There was an earlier extension, [IE View](http://ieview.mozdev.org/) but this one is different from that. IE View always open IE-only pages in newly launched windows of Internet Explorer, IE Tab opens them in tabs of Mozilla/Firefox.
+There was an earlier extension, [IE View](https://ieview.mozdev.org/) but this one is different from that. IE View always open IE-only pages in newly launched windows of Internet Explorer, IE Tab opens them in tabs of Mozilla/Firefox.
 
 Personally, why do I feel it is really cool?
 

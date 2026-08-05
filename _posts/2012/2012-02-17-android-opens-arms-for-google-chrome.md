@@ -1,6 +1,6 @@
 # Android ‘Opens Arms’ for Google Chrome
 
-Google Chrome is one of the most suave and user friendly browsers. This browser is mostly used as a style statement due to its vogue user interface and themes. The good news for Chrome lovers and Android owners is that google has started offering the beta version of the <a href="http://chrome.blogspot.com/2012/02/introducing-chrome-for-android.html">chrome browser for the android users</a>. On the flip side, the chrome browser is only available for the android devices that use Android version 4.0 or popularly known as the Ice Cream Sandwich. Currently only 1% of the Android population are on <a href="https://market.android.com/details?id=com.android.chrome">Ice Cream Sandwich Android devices</a>.
+Google Chrome is one of the most suave and user friendly browsers. This browser is mostly used as a style statement due to its vogue user interface and themes. The good news for Chrome lovers and Android owners is that google has started offering the beta version of the <a href="https://chrome.blogspot.com/2012/02/introducing-chrome-for-android.html">chrome browser for the android users</a>. On the flip side, the chrome browser is only available for the android devices that use Android version 4.0 or popularly known as the Ice Cream Sandwich. Currently only 1% of the Android population are on <a href="https://market.android.com/details?id=com.android.chrome">Ice Cream Sandwich Android devices</a>.
 
 <iframe width="100%" src="https://www.youtube.com/embed/lVjw7n_U37A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -20,7 +20,7 @@ Of course, now you can open the bookmarks you stored on chrome from your P.C thr
 
 ## Fast & Intuitive
 
-The chrome browser is designed for the Androids in such a way that it is <a href="http://www.youtube.com/watch?v=nCgQDjiotG0">very high in speed</a> and performance. This is because the chrome browser is built from scrape for the Android users.
+The chrome browser is designed for the Androids in such a way that it is <a href="https://www.youtube.com/watch?v=nCgQDjiotG0">very high in speed</a> and performance. This is because the chrome browser is built from scrape for the Android users.
 
 ## Fits Screen Aptly
 
@@ -28,4 +28,4 @@ As the browser is built from the scratch it is also designed in such a way that 
 
 While these are the major advantages of chrome browser on Android phones, the consequence is that there are no talks about releasing the version of chrome which will be compatible for other models of the Android phone and other similar OS devices. Prior to the release of this beta version, google chrome was unique for PCs alone and for the Android mobiles it was a separate browser.
 
-However, the separate browser wasn't much of a success since the smartphone users mostly use the inbuilt browser rather than downloading a new one. The exception to it is of course, <a href="http://www.readwriteweb.com/archives/opera_mini_is_most_downloaded_mobile_app.php">Opera Mini</a>, which is the only mobile browser which users download frequently. Now the beta version of chrome for Android will also join the list; that however depends on the launch of the beta version of chrome for other Androids by Google.
+However, the separate browser wasn't much of a success since the smartphone users mostly use the inbuilt browser rather than downloading a new one. The exception to it is of course, <a href="https://www.readwriteweb.com/archives/opera_mini_is_most_downloaded_mobile_app.php">Opera Mini</a>, which is the only mobile browser which users download frequently. Now the beta version of chrome for Android will also join the list; that however depends on the launch of the beta version of chrome for other Androids by Google.

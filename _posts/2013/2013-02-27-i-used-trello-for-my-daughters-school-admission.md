@@ -8,17 +8,17 @@ Anyway, without going into the details of the discrepancies in the schools in In
 
 <img class="large" src="/static/2013/laaija-pose-for-new-school.jpg" alt="Laaija Oinam" loading="lazy">
 
-Yes, I went to lots of 'Education Fair', stood in lines for hours in the hot Indian Summer, visited a hell lot of schools to check them out, met with teachers, roam around the campus, even talked to few students. Besides that, I tracked, labeled, and measured my actions and outcomes with [Trello](http://trello.com/) and mapped the locations with Google Maps. The mobile version of Trello (iOS and Android) is an awesome app and everyone involved really liked it.
+Yes, I went to lots of 'Education Fair', stood in lines for hours in the hot Indian Summer, visited a hell lot of schools to check them out, met with teachers, roam around the campus, even talked to few students. Besides that, I tracked, labeled, and measured my actions and outcomes with [Trello](https://trello.com/) and mapped the locations with Google Maps. The mobile version of Trello (iOS and Android) is an awesome app and everyone involved really liked it.
 
 ## My daughter outgrew her playgroup
 
-My daughter, [Laaija](http://laaija.com/), celebrated her 4th birthday in 2012-DEC. She is now ready for a 'real' school. She has already outlined the kind of school she would like to go to. It is a list of strange, funny, and cute (at least to us) criteria and we know what she meant. No, you won't want to know that list.
+My daughter, [Laaija](https://laaija.com/), celebrated her 4th birthday in 2012-DEC. She is now ready for a 'real' school. She has already outlined the kind of school she would like to go to. It is a list of strange, funny, and cute (at least to us) criteria and we know what she meant. No, you won't want to know that list.
 
 Last October, I had initialized the quest for her school. We wanted a good established one and not necessarily some fancy 'international' school (without explicitly excluding them), should not be very far from our residence. I should be able to get there within 30 minutes in the typical Bangalore Traffic. It should also not be next-door so she can learn to be independent, travel, and enjoy her school.
 
 ## Trello, Trello & Trello
 
-I treated it like a Project - steps, processes, labels, issues - a flow borrowed from the [Kanban Method](http://en.wikipedia.org/wiki/Kanban_(development)), which Trello is very good at.
+I treated it like a Project - steps, processes, labels, issues - a flow borrowed from the [Kanban Method](https://en.wikipedia.org/wiki/Kanban_(development)), which Trello is very good at.
 
 
 ## I created 6 core boards

@@ -1,6 +1,6 @@
 # JustRemindIt App is a helpful Band-Aid solution for Alzheimer Epidemic
 
-Some creative Silicon Valley professionals branch off on their own to become entrepreneurs by starting their own tech venture. <a href="http://adityakothadiya.com/">Aditya Kothadiya</a> did exactly that, twice. 
+Some creative Silicon Valley professionals branch off on their own to become entrepreneurs by starting their own tech venture. <a href="https://adityakothadiya.com/">Aditya Kothadiya</a> did exactly that, twice. 
 
 As a founder of `Shopalize` and `JustRemindIt`, Aditya is riding entrepreneurial journey twice. This enterprising individual's newest venture JustRemindIt has created a simple and yet brilliant application: a service that sends automatic reminders via Phone call and SMS to others. It also provides recurring reminders, contact lists, templates, an iPhone app and lot more functionalities.
 

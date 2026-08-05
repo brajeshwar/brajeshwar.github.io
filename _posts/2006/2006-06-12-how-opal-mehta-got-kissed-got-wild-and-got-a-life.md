@@ -4,7 +4,7 @@ Well, I decided to read the book after her plagiarism episode. [How Opal Mehta G
 
 References;
 
-- [How Kaavya Viswanathan Got Published, Got Accepted to Harvard, and Got Screwed](http://www.slashnot.com/articles/603/)
-- [Wrap Up:Young Author, Classic Controversy](http://www.plagiarismtoday.com/?p=229)
-- [Opal Mehta movie version canned](http://www.chron.com/disp/story.mpl/ent/3828527.html)
-- [Student's Novel Faces Plagiarism Controversy](http://www.thecrimson.com/article.aspx?ref=512948)
+- [How Kaavya Viswanathan Got Published, Got Accepted to Harvard, and Got Screwed](https://www.slashnot.com/articles/603/)
+- [Wrap Up:Young Author, Classic Controversy](https://www.plagiarismtoday.com/?p=229)
+- [Opal Mehta movie version canned](https://www.chron.com/disp/story.mpl/ent/3828527.html)
+- [Student's Novel Faces Plagiarism Controversy](https://www.thecrimson.com/article.aspx?ref=512948)

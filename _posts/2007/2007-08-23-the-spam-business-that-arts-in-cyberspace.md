@@ -4,7 +4,7 @@ Today there are many types of "electronic-spam", including the most famous "E-ma
 
 The University of Maryland issued a report in 2003, saying that spam costs businesses approximately $22 billion in lost productivity each year. There seems to be a no easy ways to deal with spam.  Microsoft Chairman Bill Gates said in 2004: "two years from now, spam will be solved". Well, that is another mis-prediction from Bill Gates.
 
-In 2005, industry analysts said that spam activity will get worse with a projection of damage 2006 close to $70 billion of lost productivity and network maintenance. Furthermore, in 2007 the spam cost is $712 dollars per employee or $71 billion dollars to all US businesses, according to a <a href="http://www.nucleusresearch.com/press_releases/prspam0307.html">survey</a> by Nucleus Research and Knowledge Storm.
+In 2005, industry analysts said that spam activity will get worse with a projection of damage 2006 close to $70 billion of lost productivity and network maintenance. Furthermore, in 2007 the spam cost is $712 dollars per employee or $71 billion dollars to all US businesses, according to a <a href="https://www.nucleusresearch.com/press_releases/prspam0307.html">survey</a> by Nucleus Research and Knowledge Storm.
 
 Here are some tips, techniques and recommendations in order to survive successfully alongside this universal problem of "spam".
 

@@ -4,4 +4,4 @@ Have you been in a situation where Firefox crashed and you lost track of all the
 
 It even claims to save windows, tabs, even things you were typing (I haven't experienced this part of the fun).
 
-Read [more details](http://kb.mozillazine.org/SessionSaver) about SessionSaver.
+Read [more details](https://kb.mozillazine.org/SessionSaver) about SessionSaver.

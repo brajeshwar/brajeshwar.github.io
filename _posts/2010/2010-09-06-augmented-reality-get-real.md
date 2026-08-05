@@ -6,7 +6,7 @@ Imagine yourself walking or driving down the street. With AR displays, informati
 
 ## The Bleeding Edge
 
-Some of the most exciting augmented-reality work is Pattie Maes and Pranav Mistry's <a href="http://www.pranavmistry.com/projects/sixthsense/">SixthSense</a> that relies on some basic components strung together in a lanyard like apparatus that the user wears around his neck.
+Some of the most exciting augmented-reality work is Pattie Maes and Pranav Mistry's <a href="https://www.pranavmistry.com/projects/sixthsense/">SixthSense</a> that relies on some basic components strung together in a lanyard like apparatus that the user wears around his neck.
 
 These components are : Camera, small projector, smartphone and a mirror. The user wears four colored caps on the fingers used to manipulate the images that the projector emits. SixthSense uses these simple, off-the-shelf components and turns any surface into an interactive screen. It works by using the camera and mirror to examine the surrounding world, feeding that image to the phone (which processes the image, gathers GPS coordinates and pulls data from the Internet), and then projecting information from the projector onto the surface in front of the user, whether it's a wrist, a wall, or even a person.
 
@@ -16,28 +16,28 @@ Because the user is wearing the camera on his chest, SixthSense will augment wha
 
 'Primitive' versions of augmented reality are already here on some smartphones like the iPhone and Android. Underlying most of these applications are a phone's GPS and compass; by knowing where you are, these applications can make sure to offer information relevant to you.
 
-<a href="http://www.layar.com/">Layar</a> uses the phone's camera and GPS capabilities to gather information about the surrounding area. It then overlays information about restaurants and other establishments in the area on the screen. Pointing the phone at a building will tell you if companies in that building are hiring, or it might be able to find photos of the building on Flickr or locate its history on Wikipedia.
+<a href="https://www.layar.com/">Layar</a> uses the phone's camera and GPS capabilities to gather information about the surrounding area. It then overlays information about restaurants and other establishments in the area on the screen. Pointing the phone at a building will tell you if companies in that building are hiring, or it might be able to find photos of the building on Flickr or locate its history on Wikipedia.
 
-<a href="http://www.yelp.com/">Yelp's</a> augmented-reality component, Monocle, uses the phone's GPS and compass to display information about local restaurants, including ratings and reviews, on the screen. You can touch one of the listings to find out more about a particular restaurant.
+<a href="https://www.yelp.com/">Yelp's</a> augmented-reality component, Monocle, uses the phone's GPS and compass to display information about local restaurants, including ratings and reviews, on the screen. You can touch one of the listings to find out more about a particular restaurant.
 
-<a href="http://itunes.apple.com/us/app/id335624129?mt=8">Le Bar Guide</a> will assist you in finding the nearest watering hole, give ratings and even point you to a taxi within stumbling distance. It's accurate to 20 feet.
+<a href="https://itunes.apple.com/us/app/id335624129?mt=8">Le Bar Guide</a> will assist you in finding the nearest watering hole, give ratings and even point you to a taxi within stumbling distance. It's accurate to 20 feet.
 
-<a href="http://worksnug.com/">WorkSnug</a>, an iPhone app that finds digital nomads a place to lay their weary laptop. It identifies Wi-Fi hotspots and potential workplaces -- from coffee shops to professional rent-a-desk office spaces --	 with user reviews encompassing power provision, atmosphere, noise levels and even the quality of the coffee.
+<a href="https://worksnug.com/">WorkSnug</a>, an iPhone app that finds digital nomads a place to lay their weary laptop. It identifies Wi-Fi hotspots and potential workplaces -- from coffee shops to professional rent-a-desk office spaces --	 with user reviews encompassing power provision, atmosphere, noise levels and even the quality of the coffee.
 
-<a href="http://itunes.apple.com/in/app/pocket-universe-virtual-sky/id306916838?mt=8">Pocket Universe</a> will spell out the stars, planets and constellations for you. Needing no connectivity, this clever app contains data on 10,000 stars, 88 constellations and lunar phases, while the "tonight's sky" feature shows meteor showers and visible planets based on your location.
+<a href="https://itunes.apple.com/in/app/pocket-universe-virtual-sky/id306916838?mt=8">Pocket Universe</a> will spell out the stars, planets and constellations for you. Needing no connectivity, this clever app contains data on 10,000 stars, 88 constellations and lunar phases, while the "tonight's sky" feature shows meteor showers and visible planets based on your location.
 
-<a href="http://www.dishpointer.com/">DishPointer</a> is designed for satellite installers or mobile broadcasters to hold their phones up to the sky and get a virtual overlay of their nearest satellites to know which way to point the darn dish.
+<a href="https://www.dishpointer.com/">DishPointer</a> is designed for satellite installers or mobile broadcasters to hold their phones up to the sky and get a virtual overlay of their nearest satellites to know which way to point the darn dish.
 
-<a href="http://itunes.apple.com/us/app/augmeasure/id336607546?mt=8">AugMeasure</a> which lets you gauge short distances using on your iPhone's camera.
+<a href="https://itunes.apple.com/us/app/augmeasure/id336607546?mt=8">AugMeasure</a> which lets you gauge short distances using on your iPhone's camera.
 
-<a href="http://hunter.pairsite.com/theodolite/">Theodolite</a> lets you know what axis is bisecting your Northerly inclination and at what altitude. It overlays such data over your camera's image and even lets you snap the screenshot for posterity.
+<a href="https://hunter.pairsite.com/theodolite/">Theodolite</a> lets you know what axis is bisecting your Northerly inclination and at what altitude. It overlays such data over your camera's image and even lets you snap the screenshot for posterity.
 
-<a href="http://itunes.apple.com/in/app/car-finder/id335295621?mt=8">Car Finder</a> creates a visible marker showing the car, its distance away and the direction in which to head.
+<a href="https://itunes.apple.com/in/app/car-finder/id335295621?mt=8">Car Finder</a> creates a visible marker showing the car, its distance away and the direction in which to head.
 
-The <a href="http://itunes.apple.com/us/app/wikitude/id329731243?mt=8">Wikitude World Browser AR</a> app displays data and other points of interest by overlaying information on the real-time camera view.
+The <a href="https://itunes.apple.com/us/app/wikitude/id329731243?mt=8">Wikitude World Browser AR</a> app displays data and other points of interest by overlaying information on the real-time camera view.
 
-<a href="http://www.acrossair.com/acrossair_app_augmented_reality_nearesttube_london_for_iPhone_3GS.htm">Acrossair Nearest Tube App</a> will pin-point where the nearest subway or light rail stations are for the London Tube, Paris Metro, Tokyo Subway, Barcelona Metro, San Francisco Transit, Madrid Metro, and New York Subways.
+<a href="https://www.acrossair.com/acrossair_app_augmented_reality_nearesttube_london_for_iPhone_3GS.htm">Acrossair Nearest Tube App</a> will pin-point where the nearest subway or light rail stations are for the London Tube, Paris Metro, Tokyo Subway, Barcelona Metro, San Francisco Transit, Madrid Metro, and New York Subways.
 
-<a href="http://www.acrossair.com/acrossair_app_augmented_reality_nearesttweet_for_iphone_3gs.htm">Acrossair Twitter App</a> will display all the tweets around you in 360 degrees of Augmented Reality view, with the distances and photos of the people tweeting around you.
+<a href="https://www.acrossair.com/acrossair_app_augmented_reality_nearesttweet_for_iphone_3gs.htm">Acrossair Twitter App</a> will display all the tweets around you in 360 degrees of Augmented Reality view, with the distances and photos of the people tweeting around you.
 
 Those were some of Augmented Reality applications/products already available for anyone to experience it today.

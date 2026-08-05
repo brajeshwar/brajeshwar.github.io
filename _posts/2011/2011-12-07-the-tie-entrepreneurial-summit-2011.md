@@ -4,6 +4,6 @@ With the theme, "Celebrating the EntrepreneurTrip", the TiE Entrepreneurial Summ
 
 TiE Summit 2011, though a little late to the party but will dorn the "Going Green" phrase this year. The organizers promises to use cutting edge web and mobile applications to manage communication, registration, accessing and networking at the conference. I seriously hope they'll have free and working Wi-Fi this time around.
 
-> Successful entrepreneurs and eminent thought leaders, all stellar names in themselves, will lead TES 2011 with keynote addresses. The conference <a href="http://tes2011.com/agenda">agenda</a>, with over 40 sessions and <a href="http://tes2011.com/speakers">over 100 speakers</a> will address a range of technology, policy, business and management issues of relevance to entrepreneurs.
+> Successful entrepreneurs and eminent thought leaders, all stellar names in themselves, will lead TES 2011 with keynote addresses. The conference <a href="https://tes2011.com/agenda">agenda</a>, with over 40 sessions and <a href="https://tes2011.com/speakers">over 100 speakers</a> will address a range of technology, policy, business and management issues of relevance to entrepreneurs.
 
 TiE Entrepreneurial Summit 2011 will highlight the fields of Healthcare, Education, Agriculture, Social Media & Advertising, Mobile Business, Clean Technologies, Web Economy, and Financial Services.

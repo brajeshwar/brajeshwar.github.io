@@ -1,6 +1,6 @@
 # Doubtsourcing the misunderstandings of two worlds
 
-Entrepreneur Sandeep Sood is the creator of the online comic strip -- <a href="http://www.doubtsourcing.com/">Doubtsourcing</a> -- inspired by the misunderstandings of two worlds. Of course, the ideas are his but the actual illustration work is outsourced to China. Set mostly in an office in India, <a href="http://www.doubtsourcing.com/">Doubtsourcing</a> aims to be to the outsourcing world what <a href="http://www.dilbert.com/">Dilbert</a> has been to the U.S. cubicle set.
+Entrepreneur Sandeep Sood is the creator of the online comic strip -- <a href="https://www.doubtsourcing.com/">Doubtsourcing</a> -- inspired by the misunderstandings of two worlds. Of course, the ideas are his but the actual illustration work is outsourced to China. Set mostly in an office in India, <a href="https://www.doubtsourcing.com/">Doubtsourcing</a> aims to be to the outsourcing world what <a href="https://www.dilbert.com/">Dilbert</a> has been to the U.S. cubicle set.
 
 There are already numerous funny strips drawn and some of them have serious hilarious takes equally on both US Clients and Indian Developers. Sood says, "The rap on Indian workers is that they have a can-do attitude but tend to over-promise and balk at using their own judgment." At the same time, he adds, "many U.S. companies treat them as dispensable cheap labor."
 
@@ -24,10 +24,10 @@ Alright, here is an excerpt of the part of Sood's story;
 
 Straddling it has always been part of Sood's life. His father, a chemical engineer, moved to the U.S. from Uganda. His mother, a loan officer, came from north India. Although the family is Hindu, Sood attended the Christian South Hills Academy in West Covina through middle school. He recalls coming home crying that his family was going to burn in hell for eternity.
 
-It was at UC Berkeley during the dot-com boom that Sood, an economics major, caught the entrepreneurial bug. After graduating in 1998, he worked at <a href="http://www.peoplesoft.com/">PeopleSoft</a> Inc. and other technology firms before setting out on his own.
+It was at UC Berkeley during the dot-com boom that Sood, an economics major, caught the entrepreneurial bug. After graduating in 1998, he worked at <a href="https://www.peoplesoft.com/">PeopleSoft</a> Inc. and other technology firms before setting out on his own.
 
 First he founded an online math education company called LearnTempo for kids from kindergarten to high school. It failed. In 2001, he started DeepSun, building websites for travel agents, massage therapists and construction companies for less than $500. He barely made the rent on his San Francisco studio apartment and nearly had to close the business when his laptop was stolen from his car while he was surfing.
 
-In 2002, he sold the name DeepSun to <a href="http://www.sun.com/">Sun</a> Microsystems Inc., which had complained that he was infringing its trademark. Sood declined to disclose the amount he got from Sun but said the money helped him keep the business afloat. The company became Monsoon Co. He has six full-time employees in the U.S. -- he hopes to double that this year -- and 90 workers in three cities in India: Pune, Mumbai and Chandigarh.
+In 2002, he sold the name DeepSun to <a href="https://www.sun.com/">Sun</a> Microsystems Inc., which had complained that he was infringing its trademark. Sood declined to disclose the amount he got from Sun but said the money helped him keep the business afloat. The company became Monsoon Co. He has six full-time employees in the U.S. -- he hopes to double that this year -- and 90 workers in three cities in India: Pune, Mumbai and Chandigarh.
 
 Sood, a cuff-link-wearing guy, has contracts with Wells Fargo & Co. and other big names, and with many small start-ups.

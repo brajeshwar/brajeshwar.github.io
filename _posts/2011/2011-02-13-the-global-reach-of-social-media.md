@@ -8,7 +8,7 @@ Hence keeping pace with the following trends becomes mandatory for users and ben
 
 In an era of increasing competition, a good company can become great mostly on the basis of its promotional campaigns and by building customer loyalty. In such a scenario, the low-cost endorsement option provided by social media is a godsend. Companies can advertise, inform and describe their products all in a compact space and market themselves to a sundry consumer base.
 
-Visionary brands need to realize that social media is about sending meaningful messages and building relationships. A good example of this is the <a href="http://www.refresheverything.com/">Pepsi Refresh Project</a>. People will only 'like' a product or organization on Facebook because they vaguely appreciate it, but the more significant challenge is to make them come back continually. 
+Visionary brands need to realize that social media is about sending meaningful messages and building relationships. A good example of this is the <a href="https://www.refresheverything.com/">Pepsi Refresh Project</a>. People will only 'like' a product or organization on Facebook because they vaguely appreciate it, but the more significant challenge is to make them come back continually. 
 
 ## Preaching & Professionalism
 
@@ -16,9 +16,9 @@ People who can delineate the company's vision clearly should blog, manage discus
 
 ## Real-Time Worrying, should be Handled
 
-Keeping pace with responses to a post or a product is difficult with so many different channels, but it is of great consequence. Discussions should be kept alive and running, as should regular updates about fresh developments. Starbucks engaged its fans with its feedback and contribution forum <a href="http://mystarbucksidea.force.com/ideaHome">My Starbucks Idea</a>. Dierdre Walsh, Community and Social Media Manager of <a href="http://www.ni.com/">National Instruments</a> says, "Listening and engaging in meaningful dialogue with customers both on our site and in social media outlets like Facebook, YouTube and Twitter helps us provide quality support, improve products, and build loyalty."
+Keeping pace with responses to a post or a product is difficult with so many different channels, but it is of great consequence. Discussions should be kept alive and running, as should regular updates about fresh developments. Starbucks engaged its fans with its feedback and contribution forum <a href="https://mystarbucksidea.force.com/ideaHome">My Starbucks Idea</a>. Dierdre Walsh, Community and Social Media Manager of <a href="https://www.ni.com/">National Instruments</a> says, "Listening and engaging in meaningful dialogue with customers both on our site and in social media outlets like Facebook, YouTube and Twitter helps us provide quality support, improve products, and build loyalty."
 
-Some tools used for such social media monitoring and analysis are <a href="http://www.ubervu.com/">uberVU</a>, Flinchline (a Dutch tool with international focus), <a href="http://www.meltwater.com/products/meltwater-buzz/">Meltwater Buzz</a>, <a href="http://www.radian6.com/">Radian6</a>, <a href="http://argylesocial.com/">Argyle Social</a> and and this <a href="https://brandmentions.com/socialmention/">brand monitoring tool</a> from Brandmentions.
+Some tools used for such social media monitoring and analysis are <a href="https://www.ubervu.com/">uberVU</a>, Flinchline (a Dutch tool with international focus), <a href="https://www.meltwater.com/products/meltwater-buzz/">Meltwater Buzz</a>, <a href="https://www.radian6.com/">Radian6</a>, <a href="https://argylesocial.com/">Argyle Social</a> and and this <a href="https://brandmentions.com/socialmention/">brand monitoring tool</a> from Brandmentions.
 
 ## Wise Content will itself create Wise Branding
 

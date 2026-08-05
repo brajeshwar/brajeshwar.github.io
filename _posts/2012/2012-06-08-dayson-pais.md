@@ -1,6 +1,6 @@
 # Dayson Pais
 
-Mumbai-based [Dayson Pais](http://in.linkedin.com/in/dayson) is the founder of `Webly`, `Epicwhale`, `Womo` -- and now he is the founder of `Textme`. And all this has been in the past 5 years. 
+Mumbai-based [Dayson Pais](https://in.linkedin.com/in/dayson) is the founder of `Webly`, `Epicwhale`, `Womo` -- and now he is the founder of `Textme`. And all this has been in the past 5 years. 
 
 Dayson's passion is incubating services and products for the web, brand identity, print, mobile & digital field -- hence the creation of his digital agency and cybernated incubator, Webly. His understanding of the "Wild, Wild Web" as he calls it, has built a solid entrepreneurial base for his many endeavors. Finally, his many hats are beginning to pay off -- with the success of many of his ventures, including his most recent, Textme.
 
@@ -48,7 +48,7 @@ Connecting with your visitors and understanding their perspective has been a rea
 
 Q. How did you get the attention of your first customers?
 
-The first Textme product was meant for website owners (http://ontextme.com/publisher/). The Textme publisher button was an easy integration for site owners and gave them the power to control, track and measure what content went mobile. Site visitors get to share content from that site to any mobile phone in the country and because we always attach the site link, website owners get returning visitors through an offline viral effect. Win Win. 
+The first Textme product was meant for website owners (https://ontextme.com/publisher/). The Textme publisher button was an easy integration for site owners and gave them the power to control, track and measure what content went mobile. Site visitors get to share content from that site to any mobile phone in the country and because we always attach the site link, website owners get returning visitors through an offline viral effect. Win Win. 
 
 Till today the publisher button drives a large chunk of our traffic. 
 

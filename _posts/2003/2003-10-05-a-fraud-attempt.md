@@ -1,6 +1,6 @@
 # A fraud attempt
 
-[Dave Yang](http://www.swfoo.com/), recently had some issues with [Actionscript Viewer 4.0](http://buraks.com/asv/) where some individual pretending to be Dave Yang, by changing his email account to his/her Hotmail email and asking for the software/key, read more about the story here.
+[Dave Yang](https://www.swfoo.com/), recently had some issues with [Actionscript Viewer 4.0](https://buraks.com/asv/) where some individual pretending to be Dave Yang, by changing his email account to his/her Hotmail email and asking for the software/key, read more about the story here.
 
 I have a similar story where another person was asking me to ....., better read the mail below 
 

@@ -4,9 +4,9 @@ With technology changing by the day it seems likely that come the year 2020 we'l
 
 So there's no doubt that the Internet will be a very different place when we get to 2020 and it's very likely that the technology we'll be using will be mind-boggling compared to today. Firstly, while many of us are already dabbling in video calls across broadband networks, the future will make this even more advanced than it is now.
 
-Faster connectivity speeds will ensure that you never lose the person at the other end, while the quality is likely to be beyond high-definition. Of course, by this point prices are also likely to have been driven down even more, so better quality [cheap internet](http://www.broadbandgenie.co.uk/broadband/cheap-internet) will be more readily available to more people.
+Faster connectivity speeds will ensure that you never lose the person at the other end, while the quality is likely to be beyond high-definition. Of course, by this point prices are also likely to have been driven down even more, so better quality [cheap internet](https://www.broadbandgenie.co.uk/broadband/cheap-internet) will be more readily available to more people.
 
-[//]: # http://www.broadbandgenie.co.uk/broadband/cheap-internet is a paid link.
+[//]: # https://www.broadbandgenie.co.uk/broadband/cheap-internet is a paid link.
 
 Financial transactions will also be vastly different to the way we use them online now. Security issues should have been finally addressed by this point in time, meaning that we'll be able to keep pretty much everything to do with our personal and business lives online. If you've been skeptical about the safety and security of online transactions, then the future should change all of that. Combined with Near Field Technology as a payment method for goods and services with smartphones, spending our hard-earned cash will be even easier.
 

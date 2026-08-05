@@ -16,11 +16,11 @@ The first way of installing software is by using a .deb/.rpm file.  As mentioned
 
 Here and thereafter, we shall concentrate on .deb files whenever we happen to encounter both the flavors. Remember that there is not much of a difference in the way they're executed. It it is just that how these are fabricated depending on the underlying distro they are meant for - debian or RPM based.
 
-Coming back to the first way of installing software, this method is pretty similar to installing a software on a MS windows with an executable file. Just download a .deb file for the software you want to install, double click to open it via the default package manager- synaptic in case of <a href="http://www.ubuntu.com">ubuntu</a> (debian) and type in your password  when prompted. We hope you'd have speculated which password should this be! Installing a software by this method shall automatically check for any additional dependencies you may need and will download and install them too.
+Coming back to the first way of installing software, this method is pretty similar to installing a software on a MS windows with an executable file. Just download a .deb file for the software you want to install, double click to open it via the default package manager- synaptic in case of <a href="https://www.ubuntu.com">ubuntu</a> (debian) and type in your password  when prompted. We hope you'd have speculated which password should this be! Installing a software by this method shall automatically check for any additional dependencies you may need and will download and install them too.
 
 One of the disappointing fact about this type of installation is not every  program created for Linux has a .deb for users to use for installation. Also, new programs generally do not have a .deb at first until they get more users and popularity. Lastly when the software is updated it will not automatically update, you will need to uninstall it then grab the new .deb package.
 
-A great website to get  .deb packages for popular Linux programs is <a href="http://www.getdeb.net/">getdeb.net</a>.
+A great website to get  .deb packages for popular Linux programs is <a href="https://www.getdeb.net/">getdeb.net</a>.
 
 Using apt-get with a software repository
 
@@ -34,7 +34,7 @@ Shoot a terminal and type, "sudo apt-get install > software-name >" without the 
 
 There may be several software's which may not be located in the repositories that your Linux distribution manages and comes with, as a default. In such an event, you may have to add more repositories. In Ubuntu you can add a software repository by navigating to System > Administration > Software Sources.
 
-In the window that pops up, choose the "Third-Party Software" tab and click the "add" button. Copy and paste your repository address in the desired location. A repository address will look something like this: deb http://archive.ubuntu.com/ubuntu/ hardy main.
+In the window that pops up, choose the "Third-Party Software" tab and click the "add" button. Copy and paste your repository address in the desired location. A repository address will look something like this: deb https://archive.ubuntu.com/ubuntu/ hardy main.
 
 Out of the 2 ways, which we've discussed, the best one is to install a software by using a software repository. This method is fairly easy and keeps the software's up-to-date automatically.
 

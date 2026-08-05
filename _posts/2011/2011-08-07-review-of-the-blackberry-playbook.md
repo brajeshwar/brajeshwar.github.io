@@ -2,7 +2,7 @@
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OLDh-6_sHT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-One of the latest entry into the Tablet market is the <a href="http://us.blackberry.com/playbook-tablet/">Blackberry Playbook</a> from <a href="http://www.rim.com/">RIM</a>.
+One of the latest entry into the Tablet market is the <a href="https://us.blackberry.com/playbook-tablet/">Blackberry Playbook</a> from <a href="https://www.rim.com/">RIM</a>.
 
 We know of RIM's primary market to be the Enterprise users and its Blackberry continues to enjoy a strong foothold. However, of late, the rapid adoption of Apple's iPad by Enterprise users have set RIM in motion to come-up with a competitive product, the result being that of the Blackberry 'Playbook'.
 
@@ -18,13 +18,13 @@ Here is a video of Blackberry Playbook against the Apple iPad.
 
 Unlike the iPad or Android, there is no home screen button. This one's gonna be confusing for people who's trying to use the Playbook for the first time. The touch screen extends beyond the visible screen, and swipes that begin and end on the bezel are used for system commands -- swipe down to go to the home screen, up to close an app, or diagonally across to access notifications.
 
-RIM seem to have done a very good job, besides others, on the built-in browser which excels at every web browsing behavior you can think of. Of course, there's <a href="http://www.adobe.com/products/flashplayer/">Flash Player</a> there, so the videos plays inline unlike the iPad. The performance of the Flash Player while playing videos and other Flash SWFs is very impressive and I see no degradation.
+RIM seem to have done a very good job, besides others, on the built-in browser which excels at every web browsing behavior you can think of. Of course, there's <a href="https://www.adobe.com/products/flashplayer/">Flash Player</a> there, so the videos plays inline unlike the iPad. The performance of the Flash Player while playing videos and other Flash SWFs is very impressive and I see no degradation.
 
-The caveat, right now, is that of the lack of Apps in the Blackberry <a href="http://us.blackberry.com/apps-software/appworld/">App World</a>. Unlike Apple which started long back with an endless number of developers clambering for a space in the App Store, Blackberry Playbook have to go a long way filling up its App World.
+The caveat, right now, is that of the lack of Apps in the Blackberry <a href="https://us.blackberry.com/apps-software/appworld/">App World</a>. Unlike Apple which started long back with an endless number of developers clambering for a space in the App Store, Blackberry Playbook have to go a long way filling up its App World.
 
-The PlayBook comes with Facebook, YouTube and excellent tools for word processing, spreadsheets and presentations. A Twitter client was missing though one can be downloaded from the App World. The Playbook is powered by <a href="http://www.qnx.com/products/neutrino-rtos/">QNX</a> OS and thus cannot take advantage of the Android Marketplace like other Tablets.
+The PlayBook comes with Facebook, YouTube and excellent tools for word processing, spreadsheets and presentations. A Twitter client was missing though one can be downloaded from the App World. The Playbook is powered by <a href="https://www.qnx.com/products/neutrino-rtos/">QNX</a> OS and thus cannot take advantage of the Android Marketplace like other Tablets.
 
-Nonetheless, there is good news, specially for Flash/Flex/ActionScript developers and designers, you can deploy to the Blackberry Playbook without any additional effort and is a breeze to just publish an app for the device. The Blackberry Playbook comes built-in with the latest <a href="http://www.adobe.com/products/air/">Adobe AIR Runtime</a> ready for your apps to be deployed.
+Nonetheless, there is good news, specially for Flash/Flex/ActionScript developers and designers, you can deploy to the Blackberry Playbook without any additional effort and is a breeze to just publish an app for the device. The Blackberry Playbook comes built-in with the latest <a href="https://www.adobe.com/products/air/">Adobe AIR Runtime</a> ready for your apps to be deployed.
 
 ## Tech Specs
 

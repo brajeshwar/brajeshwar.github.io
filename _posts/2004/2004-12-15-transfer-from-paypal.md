@@ -1,12 +1,12 @@
 # Tranfer from Paypal
 
-There is good news for [Paypal](http://www.paypal.com/) user in India. You can now transfer money through check and without going through the acrobatic feat of transfer through relatives and friends where you waste money on the transfer fee. Unlike the US where you can add a bank and have the money transferred, Indians have to be content with a check that Paypal will issue in your favor (take care that the name is same as the one in your bank account). And the current limitation is withdrawal of only $2,500 per month.
+There is good news for [Paypal](https://www.paypal.com/) user in India. You can now transfer money through check and without going through the acrobatic feat of transfer through relatives and friends where you waste money on the transfer fee. Unlike the US where you can add a bank and have the money transferred, Indians have to be content with a check that Paypal will issue in your favor (take care that the name is same as the one in your bank account). And the current limitation is withdrawal of only $2,500 per month.
 
 I have been using Paypal to accept payments for ads, and for smaller projects (below $500) and use it to buy software online. This new development from Paypal will be welcomed by many Indian developers, freelancers and small companies alike. I hope, we can add banks in future and have the money wired straight away.
 
 ## Xoom
 
-I tried [Xoom](http://www.xoom.com/) too, which is good and can transfer the money directly to most Indian banks within 4-5 days. However, the transaction charge is high and the conversion ratio is not really in your favor. On my test run, the dollar was about ₹1,000 cheaper thus making a lost of (roughly) ₹1,000 per $1,000.
+I tried [Xoom](https://www.xoom.com/) too, which is good and can transfer the money directly to most Indian banks within 4-5 days. However, the transaction charge is high and the conversion ratio is not really in your favor. On my test run, the dollar was about ₹1,000 cheaper thus making a lost of (roughly) ₹1,000 per $1,000.
 
 ## VISA Transfer
 

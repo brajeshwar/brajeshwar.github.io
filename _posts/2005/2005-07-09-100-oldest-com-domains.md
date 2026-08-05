@@ -1,6 +1,6 @@
 # 100 oldest .com domains
 
-The first .com domain name was [symbolics.com](http://www.symbolics.com/), registered on Mar 15, 1985 while the first .net domain name ever to be registered was [nordu.net](http://www.nordu.net/) which was registered on Jan 1, 1985.
+The first .com domain name was [symbolics.com](https://www.symbolics.com/), registered on Mar 15, 1985 while the first .net domain name ever to be registered was [nordu.net](https://www.nordu.net/) which was registered on Jan 1, 1985.
 
 Here are a few of the most important domains sorted by their registered date;
 

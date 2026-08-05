@@ -10,7 +10,7 @@ Majority of the Web Designers and Developers has been requesting a way of defini
 
 Many a times, any CSS developer would have felt that s/he is using repeated property values in a CSS stylesheet, for instance to make sure semantically different elements in a web page have a similar rendering and user experience. CSS does offer a way to group styles using groups of selectors, but we tend to neglect it more because of the fact that it's difficult to maintain, decreases readability and of course semantically distinct elements rarely share all style rules.
 
-[CSS Variables Note](http://disruptive-innovations.com/zoo/cssvariables/) names David Hyatt of [Apple](http://www.apple.com/) as one of the author, the other is Daniel Glazman of Disruptive Innovations. We might see a early implementation of CSS Variables in a future version of Safari!
+[CSS Variables Note](https://disruptive-innovations.com/zoo/cssvariables/) names David Hyatt of [Apple](https://www.apple.com/) as one of the author, the other is Daniel Glazman of Disruptive Innovations. We might see a early implementation of CSS Variables in a future version of Safari!
 
 ## The CSS Variables Definition
 
@@ -52,13 +52,13 @@ Using the value of a variable as the value or one of the values of a property in
 
 The above shows that we've styled the @div#post div.entry@ with color, background-color, padding and margin which have been defined earlier in `@variables` for screen medium by default and we can override the same same for "print" medium through the `@variables print`.
 
-More advanced details of CSS Variables -- Grammar, Interfaces like CSSRule, CSSVariablesRule, CSSVariablesDeclaration, CSSValue, CSSVariable, etc -- are discussed in details at the [CSS Variables Note](http://disruptive-innovations.com/zoo/cssvariables/).
+More advanced details of CSS Variables -- Grammar, Interfaces like CSSRule, CSSVariablesRule, CSSVariablesDeclaration, CSSValue, CSSVariable, etc -- are discussed in details at the [CSS Variables Note](https://disruptive-innovations.com/zoo/cssvariables/).
 
 ## What if you want to start using CSS Variables now?
 
-There are many hacked solutions available at the moment, though restricted to PHP environment, to inject variables inside your CSS. Some of them like [CSS-PHP Variable](http://sperling.com/examples/pcss/) and [Variables in your CSS via PHP](http://www.chrisjdavis.org/php-in-css) treats CSS like PHP and thus able to inject PHP variables rendering them inside your CSS codes.
+There are many hacked solutions available at the moment, though restricted to PHP environment, to inject variables inside your CSS. Some of them like [CSS-PHP Variable](https://sperling.com/examples/pcss/) and [Variables in your CSS via PHP](https://www.chrisjdavis.org/php-in-css) treats CSS like PHP and thus able to inject PHP variables rendering them inside your CSS codes.
 
-The near perfect way in the line of the above CSS Variables initiative is luckily available at Shaun Inman's website -- [CSS Server-side Constants](http://www.shauninman.com/archive/css_ssc).
+The near perfect way in the line of the above CSS Variables initiative is luckily available at Shaun Inman's website -- [CSS Server-side Constants](https://www.shauninman.com/archive/css_ssc).
 
 ## CSS-SSC
 
@@ -90,4 +90,4 @@ a {
 }
 ```
 
-If you wish to try out Shaun's method, it is available through his [CSS-SSV](http://www.shauninman.com/archive/css_ssc) Page. Otherwise, let's hope that CSS Variables are implemented quick enough so we can reap the benefit, optimize and save our time writing Stylesheets.
+If you wish to try out Shaun's method, it is available through his [CSS-SSV](https://www.shauninman.com/archive/css_ssc) Page. Otherwise, let's hope that CSS Variables are implemented quick enough so we can reap the benefit, optimize and save our time writing Stylesheets.

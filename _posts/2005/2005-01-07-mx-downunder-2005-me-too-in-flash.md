@@ -1,6 +1,6 @@
 # MX DownUnder 2005, Me too in Flash
 
-I was on a quick ICQ session with [Grant Skinner](http://www.gskinner.com/);
+I was on a quick ICQ session with [Grant Skinner](https://www.gskinner.com/);
 
 ```
 Session Start (Grant Skinner): Sat Jan 08 00:07:49 2005

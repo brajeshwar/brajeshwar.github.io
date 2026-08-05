@@ -1,6 +1,6 @@
 # BITS Conquest 2019 Finale
 
-Eleven Startups pitched at the BITS <a href="http://www.conquest.org.in">Conquest</a> 2019 Finale.
+Eleven Startups pitched at the BITS <a href="https://www.conquest.org.in">Conquest</a> 2019 Finale.
 
 Unfortunately, a jarring meme that I saw was that the Slides were very similar and have very similar presentation style. They even had the dreaded “competitor slides” where everything right was ticked for the Startups while the competitors were not.
 
@@ -12,7 +12,7 @@ Here are a few details about the Startups without any of my biased opinions.
 
 ## InvestoAsia
 
-<a href="http://investoasia.com">InvestoAsia</a> is a system that enables investment into emerging markets by digitizing their securities using blockchain technology into tokenized assets and further trade them on a private platform.
+<a href="https://investoasia.com">InvestoAsia</a> is a system that enables investment into emerging markets by digitizing their securities using blockchain technology into tokenized assets and further trade them on a private platform.
 
 ## FarmSurge
 
@@ -48,4 +48,4 @@ An innovative, cost-effective ingestible battery-less electronic Health Pill usi
 
 ## Nimble Vision
 
-<a href="http://www.nimblevision.in">Nimble Vision</a> provides an IoT solution for water level controller and meter. This solution brings massive data analytics on water availability, consumption, leakage and quality, helping people to conserve water up to 50%.
+<a href="https://www.nimblevision.in">Nimble Vision</a> provides an IoT solution for water level controller and meter. This solution brings massive data analytics on water availability, consumption, leakage and quality, helping people to conserve water up to 50%.

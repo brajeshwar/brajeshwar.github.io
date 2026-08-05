@@ -1,6 +1,6 @@
 # Cappuccino
 
-The guys from <a href="http://280north.com/">280 North</a> did it again. Earlier, it was the awesome Keynote on the Web -- <a href="http://280slides.com/">280 Slides</a>. Now, its -- <a href="http://cappuccino.org/">Cappuccino</a> -- an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
+The guys from <a href="https://280north.com/">280 North</a> did it again. Earlier, it was the awesome Keynote on the Web -- <a href="https://280slides.com/">280 Slides</a>. Now, its -- <a href="https://cappuccino.org/">Cappuccino</a> -- an open source framework that makes it easy to build desktop-caliber applications that run in a web browser.
 
 280 Slides
 
@@ -8,7 +8,7 @@ The guys from <a href="http://280north.com/">280 North</a> did it again. Earlier
 
 Cappuccino
 
-Along with Objective-J, Cappuccino provides a complete toolkit to develop rich web applications. Its open sourced under <a href="http://www.gnu.org/licenses/lgpl.html">LGPL</a>.
+Along with Objective-J, Cappuccino provides a complete toolkit to develop rich web applications. Its open sourced under <a href="https://www.gnu.org/licenses/lgpl.html">LGPL</a>.
 
 Cappuccino is built on top of standard web technologies like JavaScript, and it implements most of the familiar APIs from GNUstep and Apple's Cocoa frameworks. When you program in Cappuccino, you don't need to concern yourself with the complexities of traditional web technologies like HTML, CSS, or even the DOM. The unpleasantries of building complex cross browser applications are abstracted away for you.
 
@@ -18,8 +18,8 @@ With Cappuccino, you don't need to know HTML. You'll never write a line of CSS. 
 
 Cappuccino and Objective-J run in any modern web browser, including:
 
-* <a href="http://www.microsoft.com/windows/products/winfamily/ie/">Internet Explorer 6 & 7</a>
-* <a href="http://firefox.com/">Firefox 2 and 3</a>
-* <a href="http://www.apple.com/safari/">Safari 3 / WebKit</a>
-* <a href="http://www.google.com/chrome/">Google Chrome</a>
-* <a href="http://www.opera.com/">Opera 9</a>
+* <a href="https://www.microsoft.com/windows/products/winfamily/ie/">Internet Explorer 6 & 7</a>
+* <a href="https://firefox.com/">Firefox 2 and 3</a>
+* <a href="https://www.apple.com/safari/">Safari 3 / WebKit</a>
+* <a href="https://www.google.com/chrome/">Google Chrome</a>
+* <a href="https://www.opera.com/">Opera 9</a>

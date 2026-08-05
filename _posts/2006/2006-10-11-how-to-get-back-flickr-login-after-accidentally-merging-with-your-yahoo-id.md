@@ -8,4 +8,4 @@ So, if you have merged your Flickr ID with your Yahoo ID by mistake and you want
 
 How to do it?
 
-Go the bottom of their [FAQ](http://www.flickr.com/help/website/#7) and fill out the [Need to talk to someone?](http://www.flickr.com/help/website/#7) form detailing your Flickr ID, Email and the reason why you want to get back. That's it - Enjoy.
+Go the bottom of their [FAQ](https://www.flickr.com/help/website/#7) and fill out the [Need to talk to someone?](https://www.flickr.com/help/website/#7) form detailing your Flickr ID, Email and the reason why you want to get back. That's it - Enjoy.

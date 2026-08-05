@@ -1,6 +1,6 @@
 # Internet Monitoring Systems - User's Privacy at Stake
 
-It was always believed that, only the Security Agencies are willing to access the data flowing through the World Wide Web. This belief has been proved wrong, since now the <a href="http://dor.gov.in/">Directorate of Revenue Intelligence</a> (DRI) working under the Ministry of Finance are having plans for accessing the <a href="http://www.workexaminer.com/internet-monitoring-software.html">Internet Monitoring Systems</a>. Recently in a meeting of the Inter-Ministerial Group, this proposal was put by forward DRI, and a discussion was carried out.
+It was always believed that, only the Security Agencies are willing to access the data flowing through the World Wide Web. This belief has been proved wrong, since now the <a href="https://dor.gov.in/">Directorate of Revenue Intelligence</a> (DRI) working under the Ministry of Finance are having plans for accessing the <a href="https://www.workexaminer.com/internet-monitoring-software.html">Internet Monitoring Systems</a>. Recently in a meeting of the Inter-Ministerial Group, this proposal was put by forward DRI, and a discussion was carried out.
 
 As per the information provided by a top Government official, DRI are willing to have permission to monitor the systems, which are used in bids. They want to have a record of all the deals. The online tracking will also help them to get information of any suspected tax violators.
 
@@ -12,7 +12,7 @@ The Ministry of Home Affairs is having multiple strategies, so that they can get
 
 The security agencies are dealing with various issues and one of the major one is that they do not have the advanced technology that will help them to crack into any kind of data encryption.
 
-It has been made compulsory to the <a href="http://www.cdot.com/">Centre for Development of Telematics</a> (C-DoT) for installing an Internet Monitoring System. Orders for the same are passed by the government. This system will be later used by the various intelligence agencies, as to find out what kind of data is flowing throughout the networks. On the other hand, until now prying of such kind was being carried out only by the appointed agencies. Also, they were managed by the Home Ministry. As said by various industry experts, the request made by the DRI may possibly raise several questions regarding privacy of the user.
+It has been made compulsory to the <a href="https://www.cdot.com/">Centre for Development of Telematics</a> (C-DoT) for installing an Internet Monitoring System. Orders for the same are passed by the government. This system will be later used by the various intelligence agencies, as to find out what kind of data is flowing throughout the networks. On the other hand, until now prying of such kind was being carried out only by the appointed agencies. Also, they were managed by the Home Ministry. As said by various industry experts, the request made by the DRI may possibly raise several questions regarding privacy of the user.
 
 ## The Requisites
 

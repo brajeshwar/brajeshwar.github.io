@@ -1,6 +1,6 @@
 # Screen Sharing in Flash Media Server 2 Public Beta
 
-Macromedia’s [Flash Media Server 2](http://www.macromedia.com/software/flashmediaserver/public_beta/) goes public but restricted to USA, Europe and Japan. Well, looks like it is already time for a vacation to the United States!
+Macromedia’s [Flash Media Server 2](https://www.macromedia.com/software/flashmediaserver/public_beta/) goes public but restricted to USA, Europe and Japan. Well, looks like it is already time for a vacation to the United States!
 
 Good News -- I overheard that there is the `Screenshare.dll` somewhere in the modules/codecs folder. (In that case, why not try looking for the G711 Codec too.)
 

@@ -10,7 +10,7 @@ For years, this process may have worked. Companies just needed to get their mess
 
 After visualizing how a customer can possibly see 3,000 advertisements in a single day, ask yourself how many of those ads lead to actual purchase. I don't know the number myself, but I would probably assume is is far less than 10.
 
-So how do companies really get their marketing messages out there so that customers will actually buy them? Dr. Robert Cialdini, an American professor of psychology has detailed these strategies in his work which have been extended to social media. In fact, <a href="http://www.socialmediaexaminer.com/6-powerful-social-media-persuasion-techniques/">6 Powerful Social Media Persuasion Techniques</a> summarizes them very well.
+So how do companies really get their marketing messages out there so that customers will actually buy them? Dr. Robert Cialdini, an American professor of psychology has detailed these strategies in his work which have been extended to social media. In fact, <a href="https://www.socialmediaexaminer.com/6-powerful-social-media-persuasion-techniques/">6 Powerful Social Media Persuasion Techniques</a> summarizes them very well.
 
 Dr. Cialdini's work centers around building a relationship to a customer. Some of the most important elements of Dr. Cialdini's strategy are:
 

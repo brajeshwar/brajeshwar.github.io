@@ -4,4 +4,4 @@
 
 The files are at `@%windir%\Help\Tours\WindowsMediaPlayer\Audio\Wav@` directory of Windows XP. If these files are opened with a HEX editor (or any Text Editor for that matter) the code contains the signature "Deepz0ne", who was a member of former cracking group "Radium".
 
-Via [Tom's Hardware Guide](http://www.tomshardware.com/).
+Via [Tom's Hardware Guide](https://www.tomshardware.com/).

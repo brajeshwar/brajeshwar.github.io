@@ -7,7 +7,7 @@ Innate abilities differ from person to person; some are highly talented and some
 
 ## Practical Intelligence
 
-Professor <a href="http://en.wikipedia.org/wiki/Robert_Sternberg">Robert J. Sternberg</a>, an eminent psychologist at Yale University in the US defines Practical Intelligence as --
+Professor <a href="https://en.wikipedia.org/wiki/Robert_Sternberg">Robert J. Sternberg</a>, an eminent psychologist at Yale University in the US defines Practical Intelligence as --
 
 > It is the ability to adapt to, shape, and select everyday environments.
 
@@ -22,4 +22,4 @@ It is not just enough to develop our practical intelligence and never put it to 
 
 The world has understood the importance of practical intelligence and its role in the day to day problem-solving. This is evident by the fact that employers today based their recruitment on the basic skills required to excel and not only on the grades obtained in the analytical tests conducted by the institutions. The days are far gone when a mere degree would decide the fate of a candidate, ensuring thrifty business. 
 
-Studies conducted by Professor <a href="http://en.wikipedia.org/wiki/Robert_Sternberg">Robert J. Sternberg</a> and his team suggests that people who are academically good often fail to cope up with the problems in life whereas the opposite is true with people who are comparatively weak in academics. This would probably explain why many top icons have scaled such heights which others can only dream of.
+Studies conducted by Professor <a href="https://en.wikipedia.org/wiki/Robert_Sternberg">Robert J. Sternberg</a> and his team suggests that people who are academically good often fail to cope up with the problems in life whereas the opposite is true with people who are comparatively weak in academics. This would probably explain why many top icons have scaled such heights which others can only dream of.

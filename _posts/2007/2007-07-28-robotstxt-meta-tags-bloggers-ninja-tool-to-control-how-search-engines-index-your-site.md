@@ -1,10 +1,10 @@
 # Robots.txt, meta tags; Blogger’s Ninja Tool to control how search engines index your site
 
-I've been doing some bit of my own research on how to weed out non-usable contents and show just the good contents to search engines. I began to use robots.txt sometime back but they are limited to just disallow of some folders (like my wordpress installation folder - "wp"). The other day, I was reading the <a href="http://googleblog.blogspot.com/2007/07/robots-exclusion-protocol-now-with-even.html">Robots Exclusion Protocol</a> (REP) on Google's own Blog, and learnt a lot that was missing from my understanding of how you can take control of Search Engines indexing your site's content.
+I've been doing some bit of my own research on how to weed out non-usable contents and show just the good contents to search engines. I began to use robots.txt sometime back but they are limited to just disallow of some folders (like my wordpress installation folder - "wp"). The other day, I was reading the <a href="https://googleblog.blogspot.com/2007/07/robots-exclusion-protocol-now-with-even.html">Robots Exclusion Protocol</a> (REP) on Google's own Blog, and learnt a lot that was missing from my understanding of how you can take control of Search Engines indexing your site's content.
 
 Meta Tags
 
-<a href="http://www.google.com/">Google</a> have recently introduced a new META tag that will allow us to set when we want the page to be removed from the main Google Web Search results. For instance, if you want to remove a particular page after end of this year, then add the following Meta tag to your page (the date format is <a href="http://www.ietf.org/rfc/rfc0850.txt">RFC 850</a>);
+<a href="https://www.google.com/">Google</a> have recently introduced a new META tag that will allow us to set when we want the page to be removed from the main Google Web Search results. For instance, if you want to remove a particular page after end of this year, then add the following Meta tag to your page (the date format is <a href="https://www.ietf.org/rfc/rfc0850.txt">RFC 850</a>);
 
 `META NAME="GOOGLEBOT" CONTENT="unavailable_after: 31-Dec-2007 24:00:00 GMT`
 
@@ -70,8 +70,8 @@ A combination and permutation of robots.txt and Meta Tags can help you fine-grai
 
 REFERENCES
 
-- <a href="http://googleblog.blogspot.com/2007/01/controlling-how-search-engines-access.html">Controlling how search engines access and index your website</a>
-- <a href="http://googleblog.blogspot.com/2007/02/robots-exclusion-protocol.html">The Robots Exclusion Protocol</a>
-- <a href="http://googleblog.blogspot.com/2007/07/robots-exclusion-protocol-now-with-even.html">Robots Exclusion Protocol: now with even more flexibility</a>
-- <a href="http://www.robotstxt.org/wc/exclusion-admin.html">Web Server Administrator's Guide to the Robots Exclusion Protocol</a>
-- Robotstxt.org on <a href="http://www.robotstxt.org/wc/exclusion.html">Robots Exclusion</a>
+- <a href="https://googleblog.blogspot.com/2007/01/controlling-how-search-engines-access.html">Controlling how search engines access and index your website</a>
+- <a href="https://googleblog.blogspot.com/2007/02/robots-exclusion-protocol.html">The Robots Exclusion Protocol</a>
+- <a href="https://googleblog.blogspot.com/2007/07/robots-exclusion-protocol-now-with-even.html">Robots Exclusion Protocol: now with even more flexibility</a>
+- <a href="https://www.robotstxt.org/wc/exclusion-admin.html">Web Server Administrator's Guide to the Robots Exclusion Protocol</a>
+- Robotstxt.org on <a href="https://www.robotstxt.org/wc/exclusion.html">Robots Exclusion</a>

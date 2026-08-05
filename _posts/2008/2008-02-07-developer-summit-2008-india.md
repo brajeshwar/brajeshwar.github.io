@@ -1,10 +1,10 @@
 # Developer Summit 2008, India
 
-The Indian <a href="http://www.developersummit.com/">Developer Summit 2008</a> Features Co-located Conferences on Bleeding-edge .NET, Rich Web, Daring Java. The Call for Proposals are now Open and Nominations are invited for the Awards.
+The Indian <a href="https://www.developersummit.com/">Developer Summit 2008</a> Features Co-located Conferences on Bleeding-edge .NET, Rich Web, Daring Java. The Call for Proposals are now Open and Nominations are invited for the Awards.
 
 Under the hood of robust enterprise IT systems, infrastructure, software, products and applications, is the wisdom, passion, grit and experience of people who have contributed in multiple ways to make the end product successful. This collective ecosystem of "Developers" -- decision makers, analysts, architects, engineers, project managers, designers, and programmers -- is what makes the world of software tick.
 
-The 2008 edition of the annual <a href="http://www.developersummit.com/">Great Indian Developer Summit</a>, centered around the theme of "Recipes for Enterprise Productivity", features a blockbuster convergence of three on-the-radar co-located conferences that no entity in the "Developer ecosystem" can ignore in their quest for success at work and in their careers -- Bleeding-edge .NET, Rich Web and Daring Java.
+The 2008 edition of the annual <a href="https://www.developersummit.com/">Great Indian Developer Summit</a>, centered around the theme of "Recipes for Enterprise Productivity", features a blockbuster convergence of three on-the-radar co-located conferences that no entity in the "Developer ecosystem" can ignore in their quest for success at work and in their careers -- Bleeding-edge .NET, Rich Web and Daring Java.
 
 The first of its kind in India, Saltmarch Media's Developer Summit 2008 will provide a high quality summit experience where the most intelligent minds and proactive technology organisations converge to create a high-quality learning experience. Hosted in an intimate setting, the summit offers its participants the best food and comforts, ample networking opportunities, and thematized downtimes and after hours to foster informal interaction among the developer community in India.
 
@@ -29,11 +29,11 @@ The award categories are:
 
 Development Environments, Collaboration Solution, Content Management, Design and Modeling, Change and Configuration Management, Testing, Security, Web Development, Mobile Development, Frameworks, Database, Technical Books.
 
-Everyone worldwide is invited to nominate individuals, technologies, and organizations contributing to the evangelism, productivity and innovation excellence of the Indian developer ecosystem. The entries nominated by the ecosystem will be adjudged by an independent jury who will indulge in a rigorous and transparent process of selection. The awards will be announced at an exclusive awards nite on May 21 2008, at Bangalore, India, as part of Great Indian Developer Summit 2008. <a href="http://developersummit.com/awards.html">Nominate deserving individuals and projects</a>.
+Everyone worldwide is invited to nominate individuals, technologies, and organizations contributing to the evangelism, productivity and innovation excellence of the Indian developer ecosystem. The entries nominated by the ecosystem will be adjudged by an independent jury who will indulge in a rigorous and transparent process of selection. The awards will be announced at an exclusive awards nite on May 21 2008, at Bangalore, India, as part of Great Indian Developer Summit 2008. <a href="https://developersummit.com/awards.html">Nominate deserving individuals and projects</a>.
 
 CALL FOR PAPERS OPEN
 
-To join the Great Indian Developer Summit 2008 as a speaker is a great opportunity to build brand equity for both you as an individual and for your organization. The <a href="http://www.developersummit.com/callforpaper.html">Call for Participation</a> (CfP) is currently open till Feb 22 2008.
+To join the Great Indian Developer Summit 2008 as a speaker is a great opportunity to build brand equity for both you as an individual and for your organization. The <a href="https://www.developersummit.com/callforpaper.html">Call for Participation</a> (CfP) is currently open till Feb 22 2008.
 
 BENEFITS FOR PARTICIPANTS/WHY ATTEND
 
@@ -51,6 +51,6 @@ Benefits for participants (say for e.g. Golden Pass) include:
 * 1 Complimentary Pass to the Java Teenage Party (May 23)
 * Great Indian Developer Summit Participation Certificate
 
-Website: <a href="http://www.developersummit.com/">Great Indian Developer Summit 2008</a>
+Website: <a href="https://www.developersummit.com/">Great Indian Developer Summit 2008</a>
 Venue: Bangalore, India
 Dates: May 19-23, 2008

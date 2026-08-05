@@ -26,6 +26,6 @@ In conclusion, computer hackers are not a criminals or terrorists. The hacker co
 <figure>
   <img src="/static/2007/matrix-trinity-nmap-2.54betaA25.jpg" alt="In Matrix, Tnity uses Nmap" loading="lazy">
   <figcaption>
-    Trinity (in the movie Matrix) using <a href="http://insecure.org/nmap/nmap_inthenews.html">Nmap 2.54BetaA25</a> to hack.
+    Trinity (in the movie Matrix) using <a href="https://insecure.org/nmap/nmap_inthenews.html">Nmap 2.54BetaA25</a> to hack.
   </figcaption>
 </figure>

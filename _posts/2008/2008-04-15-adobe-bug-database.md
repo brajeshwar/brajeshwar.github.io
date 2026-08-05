@@ -1,6 +1,6 @@
 # Adobe opens Bug-Database to public
 
-Saw this off Colin's blog -- <a href="http://www.moock.org/blog/archives/000274.html">Public bug database for flash player</a>.
+Saw this off Colin's blog -- <a href="https://www.moock.org/blog/archives/000274.html">Public bug database for flash player</a>.
 
 Adobe got a sparkling new public place to <a href="https://bugs.adobe.com/">report and track bug-database</a> for Adobe Softwares and Technologies. In Colin's own words,
 

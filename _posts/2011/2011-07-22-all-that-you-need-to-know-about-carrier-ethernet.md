@@ -1,6 +1,6 @@
 # What you need to know about Carrier Ethernet
 
-A changing economy cannot always witness a constant growth in any sector. Very few industries have taken a strong place in the market and stood the tests of time. Industry analysts are predicting a great future in - <a href="http://searchtelecom.techtarget.com/definition/Carrier-Ethernet">Carrier Ethernet</a>.
+A changing economy cannot always witness a constant growth in any sector. Very few industries have taken a strong place in the market and stood the tests of time. Industry analysts are predicting a great future in - <a href="https://searchtelecom.techtarget.com/definition/Carrier-Ethernet">Carrier Ethernet</a>.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/SfXxhnSPBAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -10,7 +10,7 @@ Carrier Ethernet has become dominant in most Enterprise and Business Networks. I
 
 ## How Metro Ethernet Forum (MEF) Started
 
-In 2001, <a href="http://metroethernetforum.org/">Metro Ethernet Forum</a> was founded as a non-profit industry international consortium to dedicate itself to worldwide adoption of Carrier Ethernet networks and service. The principal concept was to bring the simplicity and cost model of Ethernet to the wide area network. 
+In 2001, <a href="https://metroethernetforum.org/">Metro Ethernet Forum</a> was founded as a non-profit industry international consortium to dedicate itself to worldwide adoption of Carrier Ethernet networks and service. The principal concept was to bring the simplicity and cost model of Ethernet to the wide area network. 
 
 MEF came up with five key attributes to establish Ethernet in WAN Technologies. The WAN providers should - 
 
@@ -18,7 +18,7 @@ MEF came up with five key attributes to establish Ethernet in WAN Technologies. 
 - Know Economy of scale from the resulting converged business, residential and wireless networks sharing the same infrastructure and services.
 - Know the resiliency - restoration capability to support the TDM traffic and help in the data flow over switched networks.
 - Opt for Service level agreements to providing quality service to multimedia standards.
-- Check Operations and Maintenance (<a href="http://en.wikipedia.org/wiki/OA%26M">OAM</a>) capabilities allowing connectivity verification, rapid recovery, and performance measurement.
+- Check Operations and Maintenance (<a href="https://en.wikipedia.org/wiki/OA%26M">OAM</a>) capabilities allowing connectivity verification, rapid recovery, and performance measurement.
 
 Accordingly, MEF came up with this new Carrier Ethernet with the idea of widely understood Ethernet with little training required.
 
@@ -32,7 +32,7 @@ Accordingly, MEF came up with this new Carrier Ethernet with the idea of widely 
 
 ## Carrier Ethernet in Today's Scenario
 
-Ethernet's ubiquitous presence in the LANs worldwide drives down the cost of <a href="http://www.webopedia.com/TERM/E/Ethernet.html">Ethernet as a technology</a>. Hence apart from the large enterprises, smaller businesses and start-ups are increasingly adopting this technology wanting to accelerate their sales. Moving forward, analysts described Carrier Ethernet technologies and products as permanent, ingrained, inseparable and growing part of service provider networks. Ethernet is really a family of networking standards that dictates how data should travel across a distance.
+Ethernet's ubiquitous presence in the LANs worldwide drives down the cost of <a href="https://www.webopedia.com/TERM/E/Ethernet.html">Ethernet as a technology</a>. Hence apart from the large enterprises, smaller businesses and start-ups are increasingly adopting this technology wanting to accelerate their sales. Moving forward, analysts described Carrier Ethernet technologies and products as permanent, ingrained, inseparable and growing part of service provider networks. Ethernet is really a family of networking standards that dictates how data should travel across a distance.
 
 MEF celebrates its tenth anniversary this year with nearly 200 worldwide members including telecommunications service providers, cable MSOs, network equipment / software manufacturers, semiconductors vendors and testing organizations. 
 

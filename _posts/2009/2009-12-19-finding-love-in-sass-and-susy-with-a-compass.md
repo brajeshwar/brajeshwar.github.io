@@ -2,15 +2,15 @@
 
 I've dabbled, played and tinkered with HTML/CSS for quite sometime but never took it seriously. Neither did I enjoyed doing them that much to relish the awesomeness of CSS. Of late, I've involved knee deep in some serious and heavy duty CSS. For some odd reason, I liked the way things worked out and am intrigued enough that I want to know more and go deeper, improvise and do it more better, and efficiently.
 
-Today, let me chronicle some of the tools, utilities I stumbled upon and I hope that it will be useful to other web developer/designers. Our team embraced semantic and well marked-up HTML long back and <a href="http://www.w3.org/TR/html5/">HTML5</a> is proving to be a boon for us. But for this article, let's keep HTML5 for another sunny day and let me just talk CSS.
+Today, let me chronicle some of the tools, utilities I stumbled upon and I hope that it will be useful to other web developer/designers. Our team embraced semantic and well marked-up HTML long back and <a href="https://www.w3.org/TR/html5/">HTML5</a> is proving to be a boon for us. But for this article, let's keep HTML5 for another sunny day and let me just talk CSS.
 
 Many people have many concerns with CSS, some of the glaring ones being the <em>lack of variables, inability to nest styles</em>, etc. Many CSS gurus and advanced users are smart enough to twist around this and write smart CSS and still remain sane about it. However, for the normal and not-that-advanced CSS developers and designers, I feel there is a real need for them. That's where many of these CSS pre-processor comes in as a savior.
 
 Topics;
 
-- <a href="http://sass-lang.com/">Sass</a>
-- <a href="http://wiki.github.com/chriseppstein/compass">Compass</a>
-- a little bit of <a href="http://github.com/ericam/compass-susy-plugin">Susy</a>
+- <a href="https://sass-lang.com/">Sass</a>
+- <a href="https://wiki.github.com/chriseppstein/compass">Compass</a>
+- a little bit of <a href="https://github.com/ericam/compass-susy-plugin">Susy</a>
 - How to get Started (Installation and Usage)
 - Few introductory Best Practices
 - A working Live Demo
@@ -19,11 +19,11 @@ I won't even talk about their integration with other major Application Servers l
 
 ## Sass
 
-Before going ahead, let me say that I like Nathan Borror's article -- <a href="http://nathanborror.com/posts/2009/nov/30/sass-isnt-me/">Sass isn't for me</a> and the reasoning behind it. Fortunately, Sass is for me and will be for most of you. Of course, i'll tell you how we manage 3000+ lines of CSS codes with Sass without having to scroll much and without having to wait for compass to compile those 'ballooning' 10,000+ lines Sass codes.
+Before going ahead, let me say that I like Nathan Borror's article -- <a href="https://nathanborror.com/posts/2009/nov/30/sass-isnt-me/">Sass isn't for me</a> and the reasoning behind it. Fortunately, Sass is for me and will be for most of you. Of course, i'll tell you how we manage 3000+ lines of CSS codes with Sass without having to scroll much and without having to wait for compass to compile those 'ballooning' 10,000+ lines Sass codes.
 
 Simply put, Sass helps you write CSS in a different syntax, cascade your way through the styles, and use variables, mixins and nested rules.
 
-Let's look at a simple example (excerpt from the <a href="http://sass-lang.com/">Sass</a> website)
+Let's look at a simple example (excerpt from the <a href="https://sass-lang.com/">Sass</a> website)
 
 ```css
 // CSS Code
@@ -60,20 +60,20 @@ padding: 2px;
   +table-scaffolding
 ```
 
-Which means you can use that "table-scaffolding" mixin again and again wherever you need it. Sass is easy to start and the best place to would be to visit the <a href="http://sass-lang.com/tutorial.html">Sass Tutorial</a>. Read below for Sass installation and usage.
+Which means you can use that "table-scaffolding" mixin again and again wherever you need it. Sass is easy to start and the best place to would be to visit the <a href="https://sass-lang.com/tutorial.html">Sass Tutorial</a>. Read below for Sass installation and usage.
 
 ## Compass
 
-For me, the need for <a href="http://wiki.github.com/chriseppstein/compass">Compass</a> was just to supplement Sass compilation without my intervention. I was ready to jump into Sass without any gears or tools or frameworks. However, Compass was a pleasant surprise for me and I'm loving every bit of it now.
+For me, the need for <a href="https://wiki.github.com/chriseppstein/compass">Compass</a> was just to supplement Sass compilation without my intervention. I was ready to jump into Sass without any gears or tools or frameworks. However, Compass was a pleasant surprise for me and I'm loving every bit of it now.
 
-Once Compass is installed, it comes built-in with the <a href="http://wiki.github.com/chriseppstein/compass/supported-frameworks">following frameworks</a> ready for you:
+Once Compass is installed, it comes built-in with the <a href="https://wiki.github.com/chriseppstein/compass/supported-frameworks">following frameworks</a> ready for you:
 
 - Core Compass Styles/Framework
 - Blueprint CSS
 - YUI Grid
 - 960.gs
 
-And here are some of the popular <a href="http://wiki.github.com/chriseppstein/compass/compass-plugins">Compass-Plugins</a> you can add:
+And here are some of the popular <a href="https://wiki.github.com/chriseppstein/compass/compass-plugins">Compass-Plugins</a> you can add:
 
 - 960.gs
 - Baseline
@@ -89,7 +89,7 @@ While I'm working on Sass, I simply turn on Compass to watch my folder and forge
 
 ## Susy
 
-Honestly, it was the name that strike me and I'm not complaining my choice of this particular Compass Plugin. <a href="http://www.oddbird.net/susy/">Susy</a> is a grid and utility plugin for Compass. Susy helps you do away with some of the calculations you always do when you deal with the <a href="http://www.w3.org/TR/CSS2/box.html">CSS Box Model</a> (understand it better with the interactive <a href="http://redmelon.net/tstme/box_model/">CSS Box Model</a>).
+Honestly, it was the name that strike me and I'm not complaining my choice of this particular Compass Plugin. <a href="https://www.oddbird.net/susy/">Susy</a> is a grid and utility plugin for Compass. Susy helps you do away with some of the calculations you always do when you deal with the <a href="https://www.w3.org/TR/CSS2/box.html">CSS Box Model</a> (understand it better with the interactive <a href="https://redmelon.net/tstme/box_model/">CSS Box Model</a>).
 
 However, if you're already comfortable with the other available plugins, it would be wise to start off Sass with that plugin/framework.
 
@@ -163,11 +163,11 @@ Nonetheless, if you need to install Sass, then here we go.
 
 `sudo gem install haml`
 
-Ah! that's because Sass is part of <a href="http://haml-lang.com/">Haml</a> Project.
+Ah! that's because Sass is part of <a href="https://haml-lang.com/">Haml</a> Project.
 
 ## Few introductory Best Practices
 
-We always want to know how to get things started ASAP and with anything new, we want a primer, guidelines, demos, working examples. I would suggest reading on the Tutorials, examples and documentations a bit on <a href="http://github.com/chriseppstein/compass">Compass</a> and <a href="http://sass-lang.com/">Sass</a>.
+We always want to know how to get things started ASAP and with anything new, we want a primer, guidelines, demos, working examples. I would suggest reading on the Tutorials, examples and documentations a bit on <a href="https://github.com/chriseppstein/compass">Compass</a> and <a href="https://sass-lang.com/">Sass</a>.
 
 One things I learnt during CSS and applied in Sass that proved useful is to separate the modules as much as you can. Keep separate Sass files that does separate stuffs and 'sass import' them in a single sass file which will eventually be compiled to a single CSS. That way, I won't have to scroll through one single 'screen.sass' with 10,000+ lines of sass codes.
 
@@ -196,4 +196,4 @@ Btw, that 'underscore' in the sass filenames denote that they should be expanded
 ## Notes
 
 - CSS Box Model -- The modern solution for supported browsers is to use CSS3's `box-sizing` set to `border-box` (the default is "content-box").
-- <a href="http://lesscss.org/">LessCSS</a> -- I've heard good reviews about LessCSS, another CSS-Preprocessor like Sass. It's just that I've never tried it seriously.
+- <a href="https://lesscss.org/">LessCSS</a> -- I've heard good reviews about LessCSS, another CSS-Preprocessor like Sass. It's just that I've never tried it seriously.

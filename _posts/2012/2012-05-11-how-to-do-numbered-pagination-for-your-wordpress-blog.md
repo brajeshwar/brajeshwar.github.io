@@ -4,7 +4,7 @@ There are a bunch of awesome Wordpress Plugins that can do `Numbered Pagination`
 
 Let's do a clean, nice and simple numbered pagination as seen on this blog. You can choose to have either the light or the dark version.
 
-Here is the code modified from Wordpress [Reference doc on Pagination](http://codex.wordpress.org/Function_Reference/paginate_links). The code is pretty self-explanatory. Just put it where you want your pagination to appear.
+Here is the code modified from Wordpress [Reference doc on Pagination](https://codex.wordpress.org/Function_Reference/paginate_links). The code is pretty self-explanatory. Just put it where you want your pagination to appear.
 
 ```php
 <?php global $wp_query;
@@ -27,7 +27,7 @@ Here is the code modified from Wordpress [Reference doc on Pagination](http://co
 
 ![CSS3 Paginateion Style)](/static/2012/css3-paginate.png)
 
-Feel free to use it this version or tweak it from the original - [Pagination Styles Demo](http://brajeshwar.github.io/paginate/) ([Source on Github](https://github.com/brajeshwar/paginate)). The source have the codes for both light and dark version.
+Feel free to use it this version or tweak it from the original - [Pagination Styles Demo](https://brajeshwar.github.io/paginate/) ([Source on Github](https://github.com/brajeshwar/paginate)). The source have the codes for both light and dark version.
 
 ```css
 ul.page-numbers {

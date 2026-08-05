@@ -1,5 +1,5 @@
 # Bug in desktop blog publishing software, Zempt
 
-This is likely a bug with one of the famous desktop blog publishing software, [Zempt 0.3](http://www.zempt.com/), every time I do an editing, like changing spellings or whatever editing of an already posted "post", it adds another entry in my archive though the display on the blog is fine. I realize this when I saw that the previous and next in the entries have the same title while I was still on the same page.
+This is likely a bug with one of the famous desktop blog publishing software, [Zempt 0.3](https://www.zempt.com/), every time I do an editing, like changing spellings or whatever editing of an already posted "post", it adds another entry in my archive though the display on the blog is fine. I realize this when I saw that the previous and next in the entries have the same title while I was still on the same page.
 
-But I will still be using this tool as there is no other tool as easy to use and cool as this yet. I had though used [w.bloggar](http://www.bloggar.com) for quite sometime, I still have no grudge against that too. Well it is still in use on my desktop when I am publishing from there. Otherwise, both tools are cool desktop blog publishing tools.
+But I will still be using this tool as there is no other tool as easy to use and cool as this yet. I had though used [w.bloggar](https://www.bloggar.com) for quite sometime, I still have no grudge against that too. Well it is still in use on my desktop when I am publishing from there. Otherwise, both tools are cool desktop blog publishing tools.

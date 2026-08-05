@@ -1,12 +1,12 @@
 # Sharpen your Startup Skills, the Harvard's Way
 
-Few days back, I read about Harvard Business School's (Working Knowledge) articles that address a number of nagging founder-issues -- ownership and change of control, resource management and getting to profitability, common legal sand traps -- via FoundRead's article on <a href="http://foundread.com/2008/02/25/harvards-kit-for-sharpening-your-startup-skills/">Sharpening Your Startup Skills</a>.
+Few days back, I read about Harvard Business School's (Working Knowledge) articles that address a number of nagging founder-issues -- ownership and change of control, resource management and getting to profitability, common legal sand traps -- via FoundRead's article on <a href="https://foundread.com/2008/02/25/harvards-kit-for-sharpening-your-startup-skills/">Sharpening Your Startup Skills</a>.
 
 I understand that the art of successfully staying alive in a startup, moving ahead with achievement of one's goal have varied ways, methodologies and beliefs depending on how and what one is involved with, nonetheless, the handy kit should be a good framework for anybody to learn from. The articles answer few very common questions that one might need to ask to "sharpen business skills".
 
 Should I keep control of my company?
 
-As a an entrepreneur, how would you decide between the two options -- become rich or be the boss -- it is very difficult to have both. Professor Noam Wasserman <a href="http://hbswk.hbs.edu/item/5543.html">discusses his research</a> into the motivations of entrepreneurs and the people who invest in them.
+As a an entrepreneur, how would you decide between the two options -- become rich or be the boss -- it is very difficult to have both. Professor Noam Wasserman <a href="https://hbswk.hbs.edu/item/5543.html">discusses his research</a> into the motivations of entrepreneurs and the people who invest in them.
 
 Key concepts include;
 
@@ -30,13 +30,13 @@ Professor Joseph Lassiter research explores entrepreneurial marketing in high-po
 
 People who have deep knowledge about the world they're going after do a better job at picking fertile places and understanding which markets can be successfully attacked. Sometimes the entrepreneur can conceive of a compelling market, but in fact can't get there. So there is an iterative process of determining if the opportunity is going to be worth it, and can I get there? Somebody who has worked in a space gets a sense that the future is going to be moving in a particular way and understands how technology, customers, money, and marketplace dynamics will come together to create a compelling reason to buy.
 
-The key lesson is you need to have enough awareness of product alternatives that come from the technology, and of customer needs that come from pressures in the marketplace, to see where opportunity will emerge. <a href="http://hbswk.hbs.edu/item/5203.html">Turning high-potential ventures into high-performance ventures</a> is always an elegant combination of know what, know-how, and know who!
+The key lesson is you need to have enough awareness of product alternatives that come from the technology, and of customer needs that come from pressures in the marketplace, to see where opportunity will emerge. <a href="https://hbswk.hbs.edu/item/5203.html">Turning high-potential ventures into high-performance ventures</a> is always an elegant combination of know what, know-how, and know who!
 
 How can a resource-challenged start-up grow?
 
 This is perhaps one of the most primary hiccup that an entrepreneur has to deal with. Every entrepreneur know for fact that 90% of the new ventures fail. Startups often lack vital resources, must compete against established companies, and have little or no track record with which to woo customers and investors.
 
-Assistant professor Mukti Khaire believes that <a href="http://hbswk.hbs.edu/item/5089.html">small companies can grow</a> by developing intangible social resources such as legitimacy, status, and reputation.
+Assistant professor Mukti Khaire believes that <a href="https://hbswk.hbs.edu/item/5089.html">small companies can grow</a> by developing intangible social resources such as legitimacy, status, and reputation.
 
 Key concepts include:
 
@@ -47,7 +47,7 @@ Key concepts include:
 
 What legal mistakes should I watch out for in starting a new company?
 
-The life of a startup can be precarious, a wrong turn disastrous. Harvard Business School professor Constance Bagley <a href="http://hbswk.hbs.edu/item/3348.html">discusses the most frequent legal flops made by entrepreneurs</a>, everything from hiring the wrong lawyer to puffing up the business plan. 
+The life of a startup can be precarious, a wrong turn disastrous. Harvard Business School professor Constance Bagley <a href="https://hbswk.hbs.edu/item/3348.html">discusses the most frequent legal flops made by entrepreneurs</a>, everything from hiring the wrong lawyer to puffing up the business plan. 
 
 * Thinking any legal problems can be solved later.
 * Starting a business while employed by a potential competitor, or hiring employees without first checking their agreements with the current employer and their knowledge of trade secrets.

@@ -1,6 +1,6 @@
 # AuthorStream's Sharing goes Mobile
 
-Just as Flickr enables you to manage and store photos, <a href="http://www.authorstream.com/">AuthorStream</a> helps you manage and share PowerPoint presentation files on internet. The service is offered free of cost. You can sign up and start your presentation sharing instantaneously. In order to fulfill the requirements of mobile segment, AuthorStream has announced a new mobile site. With the enhanced mobile version, you will be able to share presentations through social networking sites like Facebook, Twitter and Google+ or through email as well.
+Just as Flickr enables you to manage and store photos, <a href="https://www.authorstream.com/">AuthorStream</a> helps you manage and share PowerPoint presentation files on internet. The service is offered free of cost. You can sign up and start your presentation sharing instantaneously. In order to fulfill the requirements of mobile segment, AuthorStream has announced a new mobile site. With the enhanced mobile version, you will be able to share presentations through social networking sites like Facebook, Twitter and Google+ or through email as well.
 
 The distinct advantage AuthorStream provides in addition to its capacity to serve mobile community is the ability to store, retrieve and share presentations without compromising on quality. Whatever is embedded in your slides like animations, sounds and videos will not be distorted or modified from their original versions. Furthermore, users will be able to access presentations from anywhere and at anytime.
 

@@ -1,8 +1,8 @@
 # New Mobile Real Estate tool Flaretag - an interview with creator, 10-year Nokia Veteran Daniel Arroyo
 
-The smartphone revolution is bringing the power of the internet to our daily lives via the powerful apps that are integrating our online and offline worlds. And those apps are being built by techno-geek-entrepreneurs such as <a href="http://www.danielarroyo.net/">Daniel Arroyo</a>.
+The smartphone revolution is bringing the power of the internet to our daily lives via the powerful apps that are integrating our online and offline worlds. And those apps are being built by techno-geek-entrepreneurs such as <a href="https://www.danielarroyo.net/">Daniel Arroyo</a>.
 
-Daniel is a mobile-oriented entrepreneur, and creator of <a href="http://www.flaretag.com/">Flaretag</a> -- "a platform to connect web content with the world around you via your mobile phone". Like many mobile entrepreneurs -- this generation's .com-ists -- Daniel is inventing new and exciting ways of leveraging the internet with alternate devices.
+Daniel is a mobile-oriented entrepreneur, and creator of <a href="https://www.flaretag.com/">Flaretag</a> -- "a platform to connect web content with the world around you via your mobile phone". Like many mobile entrepreneurs -- this generation's .com-ists -- Daniel is inventing new and exciting ways of leveraging the internet with alternate devices.
 
 This mobile entrepreneur isn't some kid in his basement developing an app though, he has a much geekier pedigree than that. Daniel was previously a Solutions Architect, R&D Software Manager, Integration Engineer and Chief Forum Consultant at Nokia.
 

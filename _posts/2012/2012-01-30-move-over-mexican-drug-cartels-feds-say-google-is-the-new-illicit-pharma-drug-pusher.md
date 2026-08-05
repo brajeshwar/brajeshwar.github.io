@@ -2,7 +2,7 @@
 
 Before you get worried that Larry Page is prosecuted for large-scale drug trafficking, leading to a Google shutdown -- you can rest at ease -- they bought their way out of criminal charges -- to the tune of $500,000,000.
 
-The nation-wide prescription [drug ring sting](http://www.forbes.com/sites/timworstall/2011/08/25/googles-500-million-pharma-ad-fine/) setup by US authorities built websites designed to offer illicit pharmaceutical products, and then purchased ads on Google -- implicating the company, and several of its high-level executives who purportedly knew about the drug fraud. The Mexican-pharmaceutical-product selling websites were openly accepted by Google into their online advertising platform. 
+The nation-wide prescription [drug ring sting](https://www.forbes.com/sites/timworstall/2011/08/25/googles-500-million-pharma-ad-fine/) setup by US authorities built websites designed to offer illicit pharmaceutical products, and then purchased ads on Google -- implicating the company, and several of its high-level executives who purportedly knew about the drug fraud. The Mexican-pharmaceutical-product selling websites were openly accepted by Google into their online advertising platform. 
 
 The US Attorney's office reported that senior Google execs, including Larry Page, "knew about the illicit conduct" but didn't pull the ads -- thereby implicating them in nation-wide criminal drug activity.
 

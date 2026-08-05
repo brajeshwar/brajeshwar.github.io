@@ -1,6 +1,6 @@
 # Zinc - Win, Mac, Device Flash Projector Wrapper/Enhancer
 
-Once popularly known as Flash Studio Pro, Zinc in its current 2.x version have advanced way ahead in Flash Projector addition/enhancement/replacement capabilities. At the time of writing this article, [Zinc](http://www.multidmedia.com/) has implemented support for Flash Player 9, ActionScript 3.0. It may be noted that Zinc can publish to Flash Player 4, 5, 6, 7 and 8; thus enabling creation of powerful desktop applications for Windows, Mac and Pocket PC Device.
+Once popularly known as Flash Studio Pro, Zinc in its current 2.x version have advanced way ahead in Flash Projector addition/enhancement/replacement capabilities. At the time of writing this article, [Zinc](https://www.multidmedia.com/) has implemented support for Flash Player 9, ActionScript 3.0. It may be noted that Zinc can publish to Flash Player 4, 5, 6, 7 and 8; thus enabling creation of powerful desktop applications for Windows, Mac and Pocket PC Device.
 
 With a plethora of customization - skins, styles, size, icons that comes with it, Zinc can instantly bring out a rich looking Desktop Application right away even before you could get deep into it. Well, that is just the beginning of the good things - you'll be amazed by the power of the MDM Script. {mdm} Script can enhance the power of your Flash Desktop Application to a robust, powerful application.
 

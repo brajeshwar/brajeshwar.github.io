@@ -5,7 +5,7 @@
 {:.aside .right}
 It ran on stealth mode from [Oct-9](https://news.ycombinator.com/front?day=2006-10-09) to [Oct-22](https://news.ycombinator.com/front?day=2006-10-22), 2006.
 
-WebArchive has the copies of the [last of Startup News](https://web.archive.org/web/20070713212949/http://news.ycombinator.com/) and the [first of Hacker News](https://web.archive.org/web/20070830111558/http://news.ycombinator.com/).
+WebArchive has the copies of the [last of Startup News](https://web.archive.org/web/20070713212949/https://news.ycombinator.com/) and the [first of Hacker News](https://web.archive.org/web/20070830111558/https://news.ycombinator.com/).
 
 I was once an active participant on [Digg](https://brajeshwar.com/2007/im-perhaps-the-2nd-top-indian-digger/), which has a similar link aggregator vibe. However, Hacker News is in an entirely different realm. It is much easier to be simple and honest, making you stay modest and humble.
 

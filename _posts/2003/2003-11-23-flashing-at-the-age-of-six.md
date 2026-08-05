@@ -4,7 +4,7 @@ Adarsh Rao mailed me, "I want to appear for Macromedia Flash MX Designer Exam". 
 
 I am surprised with the interest and quality this little kid have. I have heard of many whizkid stories, I think he fits into one of those. In his mail, he was happy to say, "I am certified in Flash designing and computer Graphics and animation with 94% and 3D Max from institute of Image Malakpet Branch, Hyderabad. I made my website and my school website and has done several small projects.
 
-He also clarified to me, "I have already studied Flash MX Bible and Christopher Hayes Flash MX Designer study guide. I have given practice test on [Forta's](http://www.forta.com/) several times".
+He also clarified to me, "I have already studied Flash MX Bible and Christopher Hayes Flash MX Designer study guide. I have given practice test on [Forta's](https://www.forta.com/) several times".
 
 I would definitely mailed him back and tell him how to prepare for the [Macromedia Certified Designer Certification](/2003/macromedia-flash-mx-certification-designer/). I know it will be a bit difficult for me to tell him something like "If you are doing projects and working on Flash for quite sometime, then it will be easy".
 

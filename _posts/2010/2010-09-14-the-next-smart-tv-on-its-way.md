@@ -4,9 +4,9 @@ Realizing the immense demand for 3D movies among the present Gen-Y populace, how
 
 ## The Competitors
 
-There is an intense demand for LED TVs giving way to a tough competition. From <a href="http://www.google.com/tv/">Google</a> to <a href="http://www.samsung.com/">Samsung</a>, all are trying to come up with something new to woo customers. Undoubtedly, earlier TVs were brought in the market, which had internet access, but those TVs were expensive.
+There is an intense demand for LED TVs giving way to a tough competition. From <a href="https://www.google.com/tv/">Google</a> to <a href="https://www.samsung.com/">Samsung</a>, all are trying to come up with something new to woo customers. Undoubtedly, earlier TVs were brought in the market, which had internet access, but those TVs were expensive.
 
-Television manufacturers are coming up with web connected LCD TV that can access internet wirelessly. Even Apple has unveiled it's <a href="http://www.apple.com/appletv/">Apple TV</a>. Samsung also claims to have good sale of 3D LED TV that can be connected to internet. Even manufacturers like Sony and Logitech are trying to break a deal with Google to amalgamate video-on-demand services on Google TV. Google CEO Eric Schmidt in a press conference at the IFA Technology Summit in Berlin, gave a glimpse of its seamless transition from watching TV to browsing the Internet on a Sony Bravia TV and is all set to go live in US this year. 
+Television manufacturers are coming up with web connected LCD TV that can access internet wirelessly. Even Apple has unveiled it's <a href="https://www.apple.com/appletv/">Apple TV</a>. Samsung also claims to have good sale of 3D LED TV that can be connected to internet. Even manufacturers like Sony and Logitech are trying to break a deal with Google to amalgamate video-on-demand services on Google TV. Google CEO Eric Schmidt in a press conference at the IFA Technology Summit in Berlin, gave a glimpse of its seamless transition from watching TV to browsing the Internet on a Sony Bravia TV and is all set to go live in US this year. 
 
 ## What's in Store
 

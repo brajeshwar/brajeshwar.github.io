@@ -2,7 +2,7 @@
 
 Data recovery has been one of the most talked about aspects of computing, ever since we realized the importance of data storage. Irrespective of a file format or the operating system we work on, it becomes a dire need to be able to recover files which might have been deleted accidentally.
 
-While I continue to quench my thirst for softwares that make life easier on Mac, <a href="/">Brajeshwar.com</a> was given an opportunity to try out <a href="http://www.wondershare.com/pro/mac-photo-recovery.html">Wondershare Photo Recovery</a> for Mac. It's an easy-to-use and cost effective photo recovery software for mac that can recover lost, deleted, formatted and inaccessible photos, videos and music files. Just to add, it also provides recovery from iPod -- Classic, Nano & Shuffle, USB drive and even a digital camera.
+While I continue to quench my thirst for softwares that make life easier on Mac, <a href="/">Brajeshwar.com</a> was given an opportunity to try out <a href="https://www.wondershare.com/pro/mac-photo-recovery.html">Wondershare Photo Recovery</a> for Mac. It's an easy-to-use and cost effective photo recovery software for mac that can recover lost, deleted, formatted and inaccessible photos, videos and music files. Just to add, it also provides recovery from iPod -- Classic, Nano & Shuffle, USB drive and even a digital camera.
 
 I got nostalgic about the time when some of the best photographs I had, moved into drains of digital clutter when my hard disk crashed, 2 years ago. Recently, after a <a href="/2010/3g-just-not-about-speed/">trip to Japan</a>, I accidentally formatted the memory card off the new DSLR camera I bought. Wondershare came handy there as well!
 
@@ -29,4 +29,4 @@ I hope these barriers would be soon crossed in the future releases of WonderShar
 
 Win 5 FREE Licenses: Tell us a short story about your data lost and how a recovery solution will help you. Wondershare have agreed to give out 5 professional License of Wondershare Photo Recovery for FREE. Comment with a valid email.
 
-Note: For those who are willing to go beyond the GUI and into the command-line, <a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> is a powerful open-source file recovery software which works on DOS (either real or in a Windows 9x DOS-box), Windows (NT4, 2000, XP, 2003, Vista, 2008, Windows 7 (x86 & x64), Linux, FreeBSD, NetBSD, OpenBSD, SunOS and MacOS X.
+Note: For those who are willing to go beyond the GUI and into the command-line, <a href="https://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> is a powerful open-source file recovery software which works on DOS (either real or in a Windows 9x DOS-box), Windows (NT4, 2000, XP, 2003, Vista, 2008, Windows 7 (x86 & x64), Linux, FreeBSD, NetBSD, OpenBSD, SunOS and MacOS X.

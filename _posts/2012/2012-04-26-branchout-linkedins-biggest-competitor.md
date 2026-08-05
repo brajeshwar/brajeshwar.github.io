@@ -1,10 +1,10 @@
 # BranchOut – LinkedIn's Biggest Competitor
 
-<a href="http://branchout.com/">BranchOut</a> is a popular Facebook application that is used to search new jobs and can connect with professionals across the globe. The <a href="http://apps.facebook.com/branchout/">BranchOut App</a> is used to recruit employees as well. 
+<a href="https://branchout.com/">BranchOut</a> is a popular Facebook application that is used to search new jobs and can connect with professionals across the globe. The <a href="https://apps.facebook.com/branchout/">BranchOut App</a> is used to recruit employees as well. 
 
 ## About
 
-Launched in July 2010, as of now it has more than 25 million registered users to its credit.  BranchOut is backed by the dedicated team strength of 45 employees. It has grown so smart that <a href="http://www.forbes.com/sites/tomtaulli/2012/04/19/branchout-looks-to-dethrone-linkedin/">it poses a challenge</a> to a professional dedicated network that connects professionals -- LinkedIn. LinkedIn was launched in the year 2003. It has more than 200 million users which are being benefited from more than 200 countries. The site is available in 13 various languages including English.
+Launched in July 2010, as of now it has more than 25 million registered users to its credit.  BranchOut is backed by the dedicated team strength of 45 employees. It has grown so smart that <a href="https://www.forbes.com/sites/tomtaulli/2012/04/19/branchout-looks-to-dethrone-linkedin/">it poses a challenge</a> to a professional dedicated network that connects professionals -- LinkedIn. LinkedIn was launched in the year 2003. It has more than 200 million users which are being benefited from more than 200 countries. The site is available in 13 various languages including English.
 
 ## How Does BranchOut Work?
 

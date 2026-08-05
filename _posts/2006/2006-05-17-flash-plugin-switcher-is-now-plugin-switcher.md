@@ -1,6 +1,6 @@
 # Flash Plugin Switcher is now Plugin Switcher
 
-I just got an email from Alexander Blum that Flash [Plugin Switcher](http://www.pluginswitcher.de/) have been updated and is in beta. The application is currently available just for windows with the following features;
+I just got an email from Alexander Blum that Flash [Plugin Switcher](https://www.pluginswitcher.de/) have been updated and is in beta. The application is currently available just for windows with the following features;
 
 - Switching ActiveX plugins (Flash, Shockwave, SVG, Acrobat)
 - Switching Netscape plugins (Flash, Shockwave, SVG, Acrobat)

@@ -1,6 +1,6 @@
 # Progressive Disclosure by Jakob Nielsen (Usability Expert)
 
-I just read an article from Jakob Nielsen, a usability expert. The amazing article -- [Progressive Disclosure](http://www.useit.com/alertbox/progressive-disclosure.html) states that Progressive disclosure defers advanced or rarely used features to a secondary screen, making applications easier to learn and less error-prone.
+I just read an article from Jakob Nielsen, a usability expert. The amazing article -- [Progressive Disclosure](https://www.useit.com/alertbox/progressive-disclosure.html) states that Progressive disclosure defers advanced or rarely used features to a secondary screen, making applications easier to learn and less error-prone.
 
 Interaction designers face a dilemma:
 
@@ -20,7 +20,7 @@ For novice users, this helps prioritize their attention so that they only spend 
 
 For advanced users, the smaller initial display also saves them time because they avoid having to scan past a large list of features they rarely use.
 
-Progressive disclosure thus improves three of [usability's five components](http://www.useit.com/alertbox/20030825.html) -- learnability, efficiency of use, and error rate.
+Progressive disclosure thus improves three of [usability's five components](https://www.useit.com/alertbox/20030825.html) -- learnability, efficiency of use, and error rate.
 
 Usability Criteria
 

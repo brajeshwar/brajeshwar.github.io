@@ -4,7 +4,7 @@ Most of us admire free beer and free softwares? The former might not be true for
 
 But what if you are a proud owner of a software -- be it an application software, a system software or a game that's free, and may even be registered to you? This was the idea which created the first impression about Free and Open Source Softwares (FOSS) into the minds of the developers around the world who were busy working great, but under the slavery of softwares which were of closed source and high acquisition cost.
 
-<a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">FOSS</a> has risen to great prominence. Briefly, Open Source Softwares and Free Softwares are programs whose licenses give users the freedom to run the program for an indefinite time period, to study and modify the program, and to redistribute copies of either the original or modified program (without having to pay royalties to previous developers).
+<a href="https://en.wikipedia.org/wiki/Free_and_open_source_software">FOSS</a> has risen to great prominence. Briefly, Open Source Softwares and Free Softwares are programs whose licenses give users the freedom to run the program for an indefinite time period, to study and modify the program, and to redistribute copies of either the original or modified program (without having to pay royalties to previous developers).
 
 Open source is inevitable as it gives control to the customer. Bugs are more quickly discovered and fixed. And when a customer doesn't like how a vendor is serving him, he can choose another without overhauling his infrastructure. No more monopolies. No more
 technology lock-in.

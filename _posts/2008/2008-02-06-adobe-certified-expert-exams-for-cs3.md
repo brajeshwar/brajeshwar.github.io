@@ -36,19 +36,19 @@ Master Certification: Recognizes your skills in the Adobe Product Suites. To bec
 
 There is only one level of certification which is the Single Product Certification. This recognizes your proficiency in a single Adobe Product.
 
-View the current list of <a href="http://www.adobe.com/support/certification/ace_certify.html">Product exams and requirements</a> at Adobe.
+View the current list of <a href="https://www.adobe.com/support/certification/ace_certify.html">Product exams and requirements</a> at Adobe.
 
-Adobe certification exams are administered by <a href="http://www.pearsonvue.com/">Pearson VUE</a> and <a href="http://www.2test.com/">Thomson Prometric</a>, independent third-party testing companies. The exams are computer-delivered, closed-book tests consisting of 60 to 90 multiple-choice questions. Each exam takes one to two hours to complete, and results are given to you at the testing center immediately after you finish. The certification exam fee is USD $150.
+Adobe certification exams are administered by <a href="https://www.pearsonvue.com/">Pearson VUE</a> and <a href="https://www.2test.com/">Thomson Prometric</a>, independent third-party testing companies. The exams are computer-delivered, closed-book tests consisting of 60 to 90 multiple-choice questions. Each exam takes one to two hours to complete, and results are given to you at the testing center immediately after you finish. The certification exam fee is USD $150.
 
 The keys to preparing for a certification exam are experience with the product and studying using the following resources
 
 * Adobe Product User Guides
 * Adobe Press Books
 * Adobe Authorized Training Centers
-* <a href="http://adobe.elementk.com/">Adobe Online Training</a>
-* Tutorials and materials from <a href="http://www.totaltraining.com/">Total Training</a>
-* Other <a href="http://www.adobe.com/support/training.html">training resources</a> online
+* <a href="https://adobe.elementk.com/">Adobe Online Training</a>
+* Tutorials and materials from <a href="https://www.totaltraining.com/">Total Training</a>
+* Other <a href="https://www.adobe.com/support/training.html">training resources</a> online
 
-<a href="http://www.adobe.com/certified/">Adobe Certified</a> has more details. Look at the <a href="http://partners.adobe.com/public/ace/main.html">table of ACE exams</a> available from Adobe.
+<a href="https://www.adobe.com/certified/">Adobe Certified</a> has more details. Look at the <a href="https://partners.adobe.com/public/ace/main.html">table of ACE exams</a> available from Adobe.
 
-Note: If you're in India and are interested in Adobe Certifications, get in touch with <a href="http://www.teknopoint.info/">Teknopoint</a>, they are officially recognized Adobe Partners and can help you.
+Note: If you're in India and are interested in Adobe Certifications, get in touch with <a href="https://www.teknopoint.info/">Teknopoint</a>, they are officially recognized Adobe Partners and can help you.

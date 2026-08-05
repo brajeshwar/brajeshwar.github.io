@@ -1,6 +1,6 @@
 # E4X or ECMAScript for XML in Flash
 
-Somewhere around the second quarter of this year, [RichInternet.de](http://www.richinternet.de/blog/index.cfm?mode=entry&entry=EE964A78-AB13-4064-4EE3927DD33888B6) mentioned about one of their [message about E4X ](http://groups.yahoo.com/group/flexcoders/message/15305) on FlexCoders. With the announcement of Flash Player 8.5, Flex Builder 2 and eventually the next Flash IDE, version 9 that will support the much anticipated ActionScript 3.0, it is about time we look back to that topic.
+Somewhere around the second quarter of this year, [RichInternet.de](https://www.richinternet.de/blog/index.cfm?mode=entry&entry=EE964A78-AB13-4064-4EE3927DD33888B6) mentioned about one of their [message about E4X ](https://groups.yahoo.com/group/flexcoders/message/15305) on FlexCoders. With the announcement of Flash Player 8.5, Flex Builder 2 and eventually the next Flash IDE, version 9 that will support the much anticipated ActionScript 3.0, it is about time we look back to that topic.
 
 E4X Specification states, E4X adds native XML datatypes to the ECMAScript language, extends the semantics of familiar ECMAScript operators for manipulating XML objects and adds a small set of new operators for common XML operations, such as *searching and filtering*. It also adds support for *XML literals, namespaces, qualified names* and other mechanisms to facilitate XML processing.
 

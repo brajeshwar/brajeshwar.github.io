@@ -8,9 +8,9 @@ A large collection of good 3D games may probably lead to a heavy increase in its
 
 Gaming is just another pillar for Linux to increase its user base and market share.
 
-<a href="http://blog.andrewmin.com/2008/12/28/why-games-are-the-key-to-linux-adoption/">Min suggests</a> that <em>Linux gaming may be the key to beating Windows-plus-Office, in part because the demographics of gamers mesh well with the demographics of Linux users</em>. Linux servers host a lot of high-quality online games available and provide a plenty of choice. On the stand alone desktop games, the selection is still thin when compared to the MS Windows platform.
+<a href="https://blog.andrewmin.com/2008/12/28/why-games-are-the-key-to-linux-adoption/">Min suggests</a> that <em>Linux gaming may be the key to beating Windows-plus-Office, in part because the demographics of gamers mesh well with the demographics of Linux users</em>. Linux servers host a lot of high-quality online games available and provide a plenty of choice. On the stand alone desktop games, the selection is still thin when compared to the MS Windows platform.
 
-If you're an Ubuntu fan and need some help configuring your graphic cards, check out the <a href="http://ubuntu-in.info/wiki/index.php/Ubuntu_Games">Ubuntu games wiki</a>. 
+If you're an Ubuntu fan and need some help configuring your graphic cards, check out the <a href="https://ubuntu-in.info/wiki/index.php/Ubuntu_Games">Ubuntu games wiki</a>. 
 
 Shifting to the world of gaming in Linux does not imply that one has to compromise on the habits and styles of playing games. Infact Linux offers its own share of gaming experience - which is slightly different in a better sense. Linux can attract the masses by making them addictive of the programmability features i.e. the power of customization of the character, game, features and graphics. Further, the possibilities of optimizing a game are endless.
 

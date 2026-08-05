@@ -14,7 +14,7 @@ I still have my [WordPress profile](https://profiles.wordpress.org/brajeshwar/) 
 
 Every design iteraction of my Website that [ran on WordPress](/2006/brajeshwar-v70-wordpress-theme/) had a theme that were open for free downloads. They were also listed on the [WordPress Theme Viewer](https://wordpress.org/themes/). Others forked, and made [interesting changes](/2006/ajaxified-version-of-brajeshwar-v70-wordpress-theme/) to the theme.
 
-Many publication, such as the Smashing Magazine [included my themes](https://web.archive.org/web/20150802014153/http://www.smashingmagazine.com/2007/02/83-beautiful-wordpress-themes-you-probably-havent-seen/) as some of the most beautiful WordPress Themes.
+Many publication, such as the Smashing Magazine [included my themes](https://web.archive.org/web/20150802014153/https://www.smashingmagazine.com/2007/02/83-beautiful-wordpress-themes-you-probably-havent-seen/) as some of the most beautiful WordPress Themes.
 
 Another of my theme, [Nishita](/2006/nishita-photo-blog-theme/), was the craze of that time. On Oct 4, 2011, WordPress.com took over Nishita Photo WordPress Theme and have released a [Photo Theme for WordPress.com](/2011/nishita-photo-theme-on-wordpress-com-another-photography-theme-autochrome-released/).
 

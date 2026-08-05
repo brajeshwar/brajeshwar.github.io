@@ -1,6 +1,6 @@
 # Business Philosophy from Richard Branson
 
-Today morning, while reading the newspaper <a href="http://www.livemint.com/">Mint</a>, I came across an article -- Five rapid-fire questions about business philosophy from <a href="http://www.virgin.com/richard-branson/">Richard Branson</a> of the <a href="http://www.virgin.com/">Virgin</a> brand.
+Today morning, while reading the newspaper <a href="https://www.livemint.com/">Mint</a>, I came across an article -- Five rapid-fire questions about business philosophy from <a href="https://www.virgin.com/richard-branson/">Richard Branson</a> of the <a href="https://www.virgin.com/">Virgin</a> brand.
 
 What struck me were few subtle points about entrepreneurship. Let me rephrase those few points that you might find it useful, not just to your entrepreneurial journey but to the way you do things in life. Of course, we all have read, heard of many good advise; this too is one of those good ones and hope it finds its place in your heart.
 

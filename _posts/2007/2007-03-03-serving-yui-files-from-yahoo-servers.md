@@ -1,6 +1,6 @@
 # Serving YUI Files from Yahoo! Servers
 
-Why should you [serve YUI files from Yahoo! servers](http://developer.yahoo.com/yui/articles/hosting/)
+Why should you [serve YUI files from Yahoo! servers](https://developer.yahoo.com/yui/articles/hosting/)
 
 Yahoo! hosting is optimized for fast response times, good cache hit rates, and the use of gzip compression during HTTP transport.
 

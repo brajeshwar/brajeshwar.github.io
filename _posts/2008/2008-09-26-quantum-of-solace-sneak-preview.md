@@ -1,12 +1,12 @@
 # Bond will kick the living daylights out of everyone
 
-Friday is already here initiating the weekend, let's talk a bit about Entertainment (perhaps Movies). Sun UK have a sneak preview  bringing us good entertaining news -- Quantum of Solace will <a href="http://www.thesun.co.uk/sol/homepage/showbiz/film/movie_reviews/article1730883.ece">kick the living daylights</a> out of any rival action-hero franchises.
+Friday is already here initiating the weekend, let's talk a bit about Entertainment (perhaps Movies). Sun UK have a sneak preview  bringing us good entertaining news -- Quantum of Solace will <a href="https://www.thesun.co.uk/sol/homepage/showbiz/film/movie_reviews/article1730883.ece">kick the living daylights</a> out of any rival action-hero franchises.
 
 Daniel Craig's second outing as the world's most famous secret agent is something you won't forget in a hurry.
 
 A refreshed Bond was introduced in 2006 as a gritty killing machine, a trigger happy agent, alcoholic-noob, man who falls in love. Daniel Craig as James Bond in Casino Royale was an ultimate hit with the fans.
 
-Sun reports that <a href="http://www.imdb.com/title/tt0830515/">Quantum of Solace</a> kicks off with Bond in the car chase of his life as his Aston Martin DB9 is pursued through the narrow cliff-top lanes of the Italian Lakes followed by a Bourne Ultimatum-style rooftop chase, with the famous Palio Horse Race as a stunning backdrop. The stunts, glamorously dangerous for good reasons.
+Sun reports that <a href="https://www.imdb.com/title/tt0830515/">Quantum of Solace</a> kicks off with Bond in the car chase of his life as his Aston Martin DB9 is pursued through the narrow cliff-top lanes of the Italian Lakes followed by a Bourne Ultimatum-style rooftop chase, with the famous Palio Horse Race as a stunning backdrop. The stunts, glamorously dangerous for good reasons.
 
 Chase
 

@@ -6,7 +6,7 @@ The iPhone[^iPhone] has been one of the best innovations of all time. The sheer 
 
 There are more than 250,000 third-party applications officially available on the App Store. Android marketplace, for that matter, is chasing it fast!
 
-Earlier this week, I came across yet another photo-sharing app called [Instagr.am](http://instagr.am/). At first glance, it looks to be yet another Flickr[^Flickr] app clone or something that does nothing different than what the existing apps would allow me to do. Using it for 3 days, made me change notions and talk about it.
+Earlier this week, I came across yet another photo-sharing app called [Instagr.am](https://instagr.am/). At first glance, it looks to be yet another Flickr[^Flickr] app clone or something that does nothing different than what the existing apps would allow me to do. Using it for 3 days, made me change notions and talk about it.
 
 <div class="gallery" markdown="1">
 - <a href="https://www.instagram.com/p/CV5we/"><img src="/static/2010/instagram-1.jpg"></a>

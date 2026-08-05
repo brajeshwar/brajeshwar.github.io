@@ -1,10 +1,10 @@
 # New Adobe Flash Media Server 3 released
 
-Yesterday, Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200712/120407adobefms3.html">announced</a> the Flash Media Server 3 (FMS3) family of products, which provides a more efficient instant-on video experience virtually anytime, anywhere - to the Web, the desktop with Adobe Media Player and to mobile devices with Adobe Flash Lite 3.
+Yesterday, Adobe <a href="https://www.adobe.com/aboutadobe/pressroom/pressreleases/200712/120407adobefms3.html">announced</a> the Flash Media Server 3 (FMS3) family of products, which provides a more efficient instant-on video experience virtually anytime, anywhere - to the Web, the desktop with Adobe Media Player and to mobile devices with Adobe Flash Lite 3.
 
 The best part of the announcement was that of the new pricing options which gives the customers a wide array of choices for broadcasting of high quality streaming media experiences.
 
-Besides the low cost pricing, some of the other awesome changes to <a href="http://www.adobe.com/products/flashmediaserver/">FMS3</a> are;
+Besides the low cost pricing, some of the other awesome changes to <a href="https://www.adobe.com/products/flashmediaserver/">FMS3</a> are;
 
 - removal of bandwidth/connection restriction
 - improved clustering support
@@ -14,11 +14,11 @@ Besides the low cost pricing, some of the other awesome changes to <a href="http
 
 This announcements eliminate the barrier to scaling the server-side in terms of connections, bandwidth and licensing cost.
 
-<a href="http://www.onflex.org/ted/">Ted</a> have some good points when he noted;
+<a href="https://www.onflex.org/ted/">Ted</a> have some good points when he noted;
 
 > The explosive growth of web video was ushered in through the use of progressive download and Flash Player. By leveraging the ubiquity of Flash Player, sites like YouTube, VideoEgg, and BrightCove made progressive download the standard for video delivery online. As this market matured so did the demand for higher quality video and content protection. FMS3 provides content protection through encrypting streaming and includes support for streaming HD video online. In lowering the cost of secure HD streaming we will see some amazing growth in the delivery of web video.
 
-Here is another quote from <a href="http://www.readwriteweb.com/">Read/Write Web</a>;
+Here is another quote from <a href="https://www.readwriteweb.com/">Read/Write Web</a>;
 
 > FMS3 also includes significant performance increases over the previous version. Internal Adobe benchmarks show that at 20% CPU usage, Flash Media Server 3 can support more than double the number of streams as version 2.0.4. At 95% CPU usage, the performance gains become even more pronounced.
 

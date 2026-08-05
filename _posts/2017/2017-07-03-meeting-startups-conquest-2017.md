@@ -1,6 +1,6 @@
 # Meeting the Startups at Conquest, 2017
 
-Last weekend, I was invited to talk and critique some of the Startups at the <a href="http://conquest.org.in/">Conquest</a> International Startup Challenge, 2017. It was short sessions of about 20-30 minutes each with the Startups. Most of them are looking for investments. The generic suggestion I mustered up was not to limit to investors in India but to look outside too. The other key missing piece was that they need to hustle a lot.
+Last weekend, I was invited to talk and critique some of the Startups at the <a href="https://conquest.org.in/">Conquest</a> International Startup Challenge, 2017. It was short sessions of about 20-30 minutes each with the Startups. Most of them are looking for investments. The generic suggestion I mustered up was not to limit to investors in India but to look outside too. The other key missing piece was that they need to hustle a lot.
 
 Here are the Startups I talked to;
 
@@ -15,7 +15,7 @@ The team is doing a good job of hustling with the right audience, they have a re
 
 ## Organic Planet
 
-<a href="http://www.goorganicplanet.com/">Organic Planet</a> is an offline retail chain that sells organic produce. They're local and their current target is the city of Bangalore, delivering daily organic produce to their users directly. They do have few physical stores in the city.
+<a href="https://www.goorganicplanet.com/">Organic Planet</a> is an offline retail chain that sells organic produce. They're local and their current target is the city of Bangalore, delivering daily organic produce to their users directly. They do have few physical stores in the city.
 
 The major concern the founders of Organic Planet has is that people are not ordering online and their app usage has dropped. People are calling them up on phone to order.
 
@@ -33,7 +33,7 @@ The one thing I forgot to suggest the founder was to, perhaps, change the name f
 
 ## constrOConnect
 
-<a href="http://www.constroconnect.com/">constrOConnect</a> is trying to be the Salesforce for the Construction Industry. They want to be the marketplace to meet the supply-demand for Construction needs.
+<a href="https://www.constroconnect.com/">constrOConnect</a> is trying to be the Salesforce for the Construction Industry. They want to be the marketplace to meet the supply-demand for Construction needs.
 
 The unfortunate part was that they're trying to build an online tool/website first before actually connecting to anyone from the demand side. This is the typical error most new entrepreneurs fall into; so did I (a few times). I was afraid for them that they will be wasting time building something which nobody will use.
 
@@ -41,11 +41,11 @@ Construction is an industry where procurements move slow, through various stages
 
 They need to find demands. My straight and simple suggestion was - forget your website, app, and just get 10 companies that will buy from "you" in the next month or so. If you can build up a trust with those 10 companies, it will be a walk in the park to get some really good vendors for you to connect them.
 
-In the words of <a href="http://paulgraham.com/ds.html">Paul Graham</a>, "Do things that don't scale." Once they have enough buyers and demands, they can start the automation. For now, a spreadsheet should be good enough.
+In the words of <a href="https://paulgraham.com/ds.html">Paul Graham</a>, "Do things that don't scale." Once they have enough buyers and demands, they can start the automation. For now, a spreadsheet should be good enough.
 
 ## CherriPicking
 
-If they can really crack the problem they are tackling, it will be super awesome. <a href="http://cherripicking.com/">CherriPicking</a> is trying to solve one of the key criteria for hiring the right candidate for a job - the cultural fit.
+If they can really crack the problem they are tackling, it will be super awesome. <a href="https://cherripicking.com/">CherriPicking</a> is trying to solve one of the key criteria for hiring the right candidate for a job - the cultural fit.
 
 They have a good team setup of diverse background. They are trying to leverage psychological understanding of a candidate to find the most suitable candidate for a particular job but more from a cultural fit perspective. They source data from Social Media, work history, and direct interaction with the candidates to help companies find the right ones.
 
@@ -53,7 +53,7 @@ I believe this is a tough nut to crack. Honestly, I'm not sure if that is that b
 
 ## Incredible Devices
 
-<a href="http://www.incredibledevices.in/">Incredible Devices</a> was one of the Startups that I was really impressed with. Their device can reduce the cost of WHO-approved Catheters cleaning by almost 99%. They can reduce the cost per cleaning from about $13 to less than a cent.
+<a href="https://www.incredibledevices.in/">Incredible Devices</a> was one of the Startups that I was really impressed with. Their device can reduce the cost of WHO-approved Catheters cleaning by almost 99%. They can reduce the cost per cleaning from about $13 to less than a cent.
 
 They have been testing their devices in some of the major Indian hospitals for the last 2+ years. Their patented CRS is a medical-grade catheter cleaning machine. It is a fully automatic computer guided system with inbuilt self-testing and calibration. This reduces the overall treatment cost up to 55%.
 

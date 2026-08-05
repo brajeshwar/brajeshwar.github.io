@@ -2,7 +2,7 @@
 
 Every entrepreneur is preoccupied with success.  But to succeed, we must first understand failure.
 
-This is not to suggest that failure is something to strive for. On the contrary, we want to understand why failures happen so that we can better avoid them. <a href="http://techcrunch.com/2010/10/17/japan-to-fix-your-economy-honor-your-failed-entrepreneurs/">Japan: To Fix your Economy, Honor Your Failed Entrepreneurs</a> says that the reason Silicon Valley is a haven for entrepreneurship is because they have learned to accept failure and view it as progress.
+This is not to suggest that failure is something to strive for. On the contrary, we want to understand why failures happen so that we can better avoid them. <a href="https://techcrunch.com/2010/10/17/japan-to-fix-your-economy-honor-your-failed-entrepreneurs/">Japan: To Fix your Economy, Honor Your Failed Entrepreneurs</a> says that the reason Silicon Valley is a haven for entrepreneurship is because they have learned to accept failure and view it as progress.
 
 As human beings, we actually learn a lot more from our failures than our successes. This is because our failures are more memorable to us. As painful as they are, lost opportunities are constant reminders of our mistakes. When we succeed, we may become cocky and sloppy. When we realize we have screwed up, we vow not to do it again.
 

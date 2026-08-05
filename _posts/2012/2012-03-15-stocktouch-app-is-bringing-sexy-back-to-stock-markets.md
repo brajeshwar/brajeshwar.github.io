@@ -1,8 +1,8 @@
 # StockTouch app is Bringing Sexy Back to stock markets
 
-The successful build-an-app plan seems to be: take a useful service, make it intuitive and put a shiny veneer on it. Steve deBrun's <a href="http://stocktouch.com/">StockTouch</a> has done that, in spades.  Although if you ask Steve what the entrepreneurial key to app-building success is a top-notch team, the 'classic trio' as he calls it: the "designer, hacker, hustler trio". 
+The successful build-an-app plan seems to be: take a useful service, make it intuitive and put a shiny veneer on it. Steve deBrun's <a href="https://stocktouch.com/">StockTouch</a> has done that, in spades.  Although if you ask Steve what the entrepreneurial key to app-building success is a top-notch team, the 'classic trio' as he calls it: the "designer, hacker, hustler trio". 
 
-Steve is the self-proclaimed tech/art geek who designed the sharp quadrant interface for the StockTouch app. For anyone not familiar with the app, it puts gargled stock market data into an easily readable format, while breaking it down into scannable sectors. That's the quick pitch anyways; it does some other cool shiznit too, but I don't want to spoil your fun so just <a href="http://itunes.apple.com/us/app/stocktouch/id445170859?mt=8">download it</a>. If you haven't got the $4.99 for download then just keep reading.
+Steve is the self-proclaimed tech/art geek who designed the sharp quadrant interface for the StockTouch app. For anyone not familiar with the app, it puts gargled stock market data into an easily readable format, while breaking it down into scannable sectors. That's the quick pitch anyways; it does some other cool shiznit too, but I don't want to spoil your fun so just <a href="https://itunes.apple.com/us/app/stocktouch/id445170859?mt=8">download it</a>. If you haven't got the $4.99 for download then just keep reading.
 
 I got the opportunity to pick Steve's brain about the app, its features and his experiences as an app-building entrepreneur, and the results were just brilliant:
 

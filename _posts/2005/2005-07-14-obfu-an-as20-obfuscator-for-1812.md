@@ -1,6 +1,6 @@
 # Obfu, an AS2.0 obfuscator for $1812
 
-[Obfu](http://tech.motion-twin.com/obfu.html) is a tool dedicated to obfuscating ActionScript bytecode located into SWF files. It takes one SWF as input, an obfuscation key and protected variable files and create a new SWF, identical to the input SWF except that all not protected variables names have been replaced by an obfuscated name.
+[Obfu](https://tech.motion-twin.com/obfu.html) is a tool dedicated to obfuscating ActionScript bytecode located into SWF files. It takes one SWF as input, an obfuscation key and protected variable files and create a new SWF, identical to the input SWF except that all not protected variables names have been replaced by an obfuscated name.
 
 The obfuscation is mathematically irreversible and this one does not add some silly code to the SWF which makes most Decompilers think it is loading some wrong and strange file. But hold on, this one is not cheap at all, its around 1500 EUR or 1812 USD for a single license for one year.
 

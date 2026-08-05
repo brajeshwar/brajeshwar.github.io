@@ -1,12 +1,12 @@
 # Eclipse Web Tool Project
 
-Based on experience, further twisted by personal choice, I have multiple version of [Eclipse](http://www.eclipse.org/) - Default (test bed), Zorn, Flash. Very recently, I have a new addition *WTP* or the [Eclipse Web Tools Platform](http://www.eclipse.org/webtools/).
+Based on experience, further twisted by personal choice, I have multiple version of [Eclipse](https://www.eclipse.org/) - Default (test bed), Zorn, Flash. Very recently, I have a new addition *WTP* or the [Eclipse Web Tools Platform](https://www.eclipse.org/webtools/).
 
 Why not Dreamweaver?
 
 ## Personal
 
-[Dreamweaver](http://www.macromedia.com/software/dreamweaver/) is a fantastic software and is one of the best Web Development Tool. Unfortunately, looking at my own usage history, I have never used Dreamweaver ever since the MX version. Nonthless, it gets installed as a part of the Studio Package. Upon evaluation, the only tool that is used on a regular basis is [Flash](http://www.macromedia.com/software/flash/).
+[Dreamweaver](https://www.macromedia.com/software/dreamweaver/) is a fantastic software and is one of the best Web Development Tool. Unfortunately, looking at my own usage history, I have never used Dreamweaver ever since the MX version. Nonthless, it gets installed as a part of the Studio Package. Upon evaluation, the only tool that is used on a regular basis is [Flash](https://www.macromedia.com/software/flash/).
 
 
 ## Team
@@ -32,4 +32,4 @@ Some Use Cases as defined on the WTP site;
 -Explore UDDI registries and dynamically test Web services via WSDL.
 -Test Web services for WS-I compliance.
 
-Well, that is even a bit more than what is needed. If you rather code and love text editors more than a [WYSIWYG](http://en.wikipedia.org/wiki/WySiWyG) tool, WTP is not a bad choice at all. I had been a die hard fan of my Favorite Text Editor, [Textpad](http://www.textpad.com/) and had been using it since early 2003. But it has its limitations and I am now more easier, comfortable with *WTP*.
+Well, that is even a bit more than what is needed. If you rather code and love text editors more than a [WYSIWYG](https://en.wikipedia.org/wiki/WySiWyG) tool, WTP is not a bad choice at all. I had been a die hard fan of my Favorite Text Editor, [Textpad](https://www.textpad.com/) and had been using it since early 2003. But it has its limitations and I am now more easier, comfortable with *WTP*.

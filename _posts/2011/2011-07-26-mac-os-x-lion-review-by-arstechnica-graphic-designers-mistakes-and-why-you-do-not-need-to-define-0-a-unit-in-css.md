@@ -2,7 +2,7 @@
 
 ## Mac OS X Lion
 
-Arstechnica did a brilliant, detailed and exhaustive review of Apple's new <a href="http://www.apple.com/macosx/">Mac OS X</a> Lion -- <a href="http://arstechnica.com/apple/reviews/2011/07/mac-os-x-10-7.ars/">Mac OS X 10.7 Lion: the Ars Technica review</a>. Definitely worth a thorough reading.
+Arstechnica did a brilliant, detailed and exhaustive review of Apple's new <a href="https://www.apple.com/macosx/">Mac OS X</a> Lion -- <a href="https://arstechnica.com/apple/reviews/2011/07/mac-os-x-10-7.ars/">Mac OS X 10.7 Lion: the Ars Technica review</a>. Definitely worth a thorough reading.
 
 From the article, here's a tip on how to burn a bootable Lion Installation.
 
@@ -13,7 +13,7 @@ From the article, here's a tip on how to burn a bootable Lion Installation.
 
 ## 10 Mistakes a Graphic Designer Shouldn't be Making
 
-<a href="http://www.graphicdesignblog.org/">Charlie Johnson</a> shared a nice article on <a href="http://www.designtaxi.com/article/101675/10-Mistakes-a-Graphic-Designer-Shouldn-t-be-Making/">10 Mistakes a Graphic Designer Shouldn't be Making</a> at <a href="http://www.designtaxi.com/">DesignTaxi</a>.
+<a href="https://www.graphicdesignblog.org/">Charlie Johnson</a> shared a nice article on <a href="https://www.designtaxi.com/article/101675/10-Mistakes-a-Graphic-Designer-Shouldn-t-be-Making/">10 Mistakes a Graphic Designer Shouldn't be Making</a> at <a href="https://www.designtaxi.com/">DesignTaxi</a>.
 
 The Mistakes to avoid;
 
@@ -30,6 +30,6 @@ The Mistakes to avoid;
 
 ## You do not need to define "0" a unit in CSS
 
-I see quite a lot of CSS where the "0" is suffixed with a unit like "px", "em". Well, "0" do not have a unit and do not need one. The unit identifier can be omitted if the value is a <a href="http://www.w3.org/TR/CSS21/syndata.html#length-units">length</a> (<a href="http://dev.w3.org/csswg/css3-values/#ltlengthgt">CSS3 Editor Draft</a>). After a zero length, the unit identifier is optional. However, the exception is if '0' is an "angle", the unit identifier is required. You'll have to say "0deg".
+I see quite a lot of CSS where the "0" is suffixed with a unit like "px", "em". Well, "0" do not have a unit and do not need one. The unit identifier can be omitted if the value is a <a href="https://www.w3.org/TR/CSS21/syndata.html#length-units">length</a> (<a href="https://dev.w3.org/csswg/css3-values/#ltlengthgt">CSS3 Editor Draft</a>). After a zero length, the unit identifier is optional. However, the exception is if '0' is an "angle", the unit identifier is required. You'll have to say "0deg".
 
-Thanks to a <a href="http://l-c-n.com/">Philippe Wittenbergh</a>, an awesome CSS guy (When I'm stuck, he's my CSS go-to person) for clarification on this one at the <a href="http://www.css-discuss.org/">CSS-Discuss list</a>.
+Thanks to a <a href="https://l-c-n.com/">Philippe Wittenbergh</a>, an awesome CSS guy (When I'm stuck, he's my CSS go-to person) for clarification on this one at the <a href="https://www.css-discuss.org/">CSS-Discuss list</a>.

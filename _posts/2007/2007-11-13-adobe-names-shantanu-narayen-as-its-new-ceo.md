@@ -1,6 +1,6 @@
 # Adobe names Shantanu Narayen as its new CEO
 
-Adobe <a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/200711/111207NarayenNamedCEO.html">announced</a> its Board of Directors has appointed current president and chief operating officer <a href="http://www.adobe.com/aboutadobe/pressroom/executivebios/shantanunarayen.html">Shantanu Narayen</a> as its president and chief executive officer, effective December 1, 2007.
+Adobe <a href="https://www.adobe.com/aboutadobe/pressroom/pressreleases/200711/111207NarayenNamedCEO.html">announced</a> its Board of Directors has appointed current president and chief operating officer <a href="https://www.adobe.com/aboutadobe/pressroom/executivebios/shantanunarayen.html">Shantanu Narayen</a> as its president and chief executive officer, effective December 1, 2007.
 
 Narayen replaces Adobe CEO Bruce Chizen, who will serve the remainder of his term on Adobe's Board of Directors through the Spring of 2008 and continue in a strategic advisory capacity through the end of fiscal year 2008.
 

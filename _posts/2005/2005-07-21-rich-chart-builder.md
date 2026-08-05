@@ -1,6 +1,6 @@
 # Rich Chart Builder
 
-[Rich Chart Builder](http://blue-pacific.com/products/richchartbuilder/) from Blue Pacific is an easy to use chart builder which outputs to SWFs.
+[Rich Chart Builder](https://blue-pacific.com/products/richchartbuilder/) from Blue Pacific is an easy to use chart builder which outputs to SWFs.
 
 I am particularly impressed by the amount of ready-made charts it have. I can neither extend it nor does it allow me to have it in my Flash Applications. But this is a good option, if your final Charting requirement is a standalone presentation/application.
 

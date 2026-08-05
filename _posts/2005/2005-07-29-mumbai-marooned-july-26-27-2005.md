@@ -1,7 +1,7 @@
 # Mumbai Marooned (July 26-27, 2005)
 
 <figure class="large">
-  <a href="http://www.flickr.com/photos/brajeshwar/113413705/" title="Mumbai Flash Flood 2005 July 26-27"><img src="/static/2005/mumbai-flood-jul-2005.jpg" alt="Mumbai Flash Flood 2005 July 26-27" loading="lazy"></a>
+  <a href="https://www.flickr.com/photos/brajeshwar/113413705/" title="Mumbai Flash Flood 2005 July 26-27"><img src="/static/2005/mumbai-flood-jul-2005.jpg" alt="Mumbai Flash Flood 2005 July 26-27" loading="lazy"></a>
   <figcaption>The Mumbai (Bombay) Flood of July 26, 2005.</figcaption>
 </figure>
 
@@ -17,8 +17,8 @@ The next morning greeted us with hot-tea but that was not warm enough to console
 
 I waded through shoulder deep flooded road for almost 2 hours to reach home. In the un-invited adventure, the water clogging rendered my
 Mobile Phone, a [Sony Ericcson P910i](https://en.wikipedia.org/wiki/Sony_Ericsson_P910),
-pocket digital Camera, a [Sony DSC-T7](http://camera-wiki.org/wiki/Sony_DSC-T7)
-and the [Jabra Bluetooth Headset](http://www.jabra.com/JabraCMS/AP/EN/MainMenu/Products/WirelessHeadsets/JabraFS258/JabraFS258)
+pocket digital Camera, a [Sony DSC-T7](https://camera-wiki.org/wiki/Sony_DSC-T7)
+and the [Jabra Bluetooth Headset](https://www.jabra.com/JabraCMS/AP/EN/MainMenu/Products/WirelessHeadsets/JabraFS258/JabraFS258)
 useless, gone for good. Only my Citizen Eco-Drive wrist-watch lived up to tell the tale and the time.
 
 Later on, I learnt that over 500 public buses got piled up on the road, the number of other vehicles, cars were even more, over 95 cm of rainfall was the reason for all the havoc, more than 500 crore INR lost due to the rain on that day. The whole fiasco showed all human nature, some good, some bad and the undying spirit of Mumbai city. It was also learnt that the weatherman could not predict the impact of the water, the devastation even after 2 hrs of heavy downpour. The dead toll is said to be about 385 in the whole of Mumbai. Add to this tragedy was that of the Bombay High blast that killed 8 people.
@@ -27,11 +27,11 @@ Our team at `Oinam Software` are all fine, none of our datas were lost, I have m
 
 Other Mumbai Flash Flood related news.
 
-- [18 killed in Mumbai flood stampede](http://dailytelegraph.news.com.au/story.jsp?sectionid=1268&storyid=3523737)
-- [India flood death toll rises to almost 900](http://www.mg.co.za/articlePage.aspx?articleid=246692&area=/breaking_news/breaking_news__international_news/)
-- [India's heaviest rains leave 786 dead](http://www.dawn.com/2005/07/29/top4.htm)
-- [Mumbai Inc yet to press restart button](http://www.indianexpress.com/full_story.php?content_id=75257)
-- [Mumbai rains flood B'lore BPOs](http://timesofindia.indiatimes.com/articleshow/1185273.cms)
+- [18 killed in Mumbai flood stampede](https://dailytelegraph.news.com.au/story.jsp?sectionid=1268&storyid=3523737)
+- [India flood death toll rises to almost 900](https://www.mg.co.za/articlePage.aspx?articleid=246692&area=/breaking_news/breaking_news__international_news/)
+- [India's heaviest rains leave 786 dead](https://www.dawn.com/2005/07/29/top4.htm)
+- [Mumbai Inc yet to press restart button](https://www.indianexpress.com/full_story.php?content_id=75257)
+- [Mumbai rains flood B'lore BPOs](https://timesofindia.indiatimes.com/articleshow/1185273.cms)
 - 37,000 [Auto Rickshaws](https://en.wikipedia.org/wiki/Auto_rickshaw) will need repair
 - 4,000 Cabs completed jammed while 10,000 defunct
 - 2,500 Buses have problems due to marooning

@@ -4,15 +4,15 @@ Icon Fonts are a smart way to deploy scalable icons in your website and web app 
 
 You might have used some of the icon fonts, such as;
 
-- <a href="http://fontawesome.io/">Font Awesome</a>, 
-- <a href="http://www.entypo.com/">Entypo</a>, 
-- <a href="http://icomoon.io/">IcoMoon</a>, 
-- <a href="http://symbolset.com/">Symbolset</a>, 
-- <a href="http://typicons.com/">Typicons</a>, 
-- <a href="http://somerandomdude.com/work/iconic/">Iconic</a>, 
-- <a href="http://zocial.smcllns.com/">Zocial</a>, 
-- <a href="http://designmodo.com/linecons-free/">Linecons</a>, 
-- <a href="http://shoestrap.org/downloads/elusive-icons-webfont/">Elusive Icons</a>, etc.
+- <a href="https://fontawesome.io/">Font Awesome</a>, 
+- <a href="https://www.entypo.com/">Entypo</a>, 
+- <a href="https://icomoon.io/">IcoMoon</a>, 
+- <a href="https://symbolset.com/">Symbolset</a>, 
+- <a href="https://typicons.com/">Typicons</a>, 
+- <a href="https://somerandomdude.com/work/iconic/">Iconic</a>, 
+- <a href="https://zocial.smcllns.com/">Zocial</a>, 
+- <a href="https://designmodo.com/linecons-free/">Linecons</a>, 
+- <a href="https://shoestrap.org/downloads/elusive-icons-webfont/">Elusive Icons</a>, etc.
 
 The easiest and simplest way to use them is to dump the font variants, drop in the icon style classes and use them in your html with an `<i class="icon-myicon"></i>`. However, with this method, you're forcing your users to download the whole font, when you actually use just a few of the icons.
 
@@ -20,7 +20,7 @@ There is a better way of doing it. Create a custom set of icon fonts with one or
 
 Here is how you can do it. Play around and perhaps make it part of your design process.
 
-There are two good services that will help you achieve this feat - [IcoMoon App](http://icomoon.io/app/) and [Fontello](http://fontello.com/). Here are some of the salient features of both services;
+There are two good services that will help you achieve this feat - [IcoMoon App](https://icomoon.io/app/) and [Fontello](https://fontello.com/). Here are some of the salient features of both services;
 
 - Free.
 - Store Sessions for future use and update. Also to share it with your co-worker.
@@ -34,7 +34,7 @@ IcoMoon  does have the added advantage that you can upload your own custom icons
 
 <img class="small right" src="/static/2013/icomoon-icon.png" alt="IcoMoon Icon Font" loading="lazy">
 
-Let's take a look at the <a href="http://icomoon.io/app/">IconMoon App</a>. Fontello isn't that different. You should be good with whichever service you choose.
+Let's take a look at the <a href="https://icomoon.io/app/">IconMoon App</a>. Fontello isn't that different. You should be good with whichever service you choose.
 
 ## Import Icons
 

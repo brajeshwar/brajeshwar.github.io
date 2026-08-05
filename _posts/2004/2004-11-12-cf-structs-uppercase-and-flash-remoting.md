@@ -1,6 +1,6 @@
 # CF Structs, uppercase and Flash Remoting
 
-Today, I saw a post from Jesse on <a href="http://www.jessewarden.com/archives/2004/11/case_sensitivit.html" title="Case Sensitivity in Unexpected Place: XML Object">Case Sensitivity in Unexpected Place: XML Object</a>. This reminded me of a small issue that we faced while on some projects where we have used ColdFusion for Flash Remoting. This might  be helpful for some people out there;
+Today, I saw a post from Jesse on <a href="https://www.jessewarden.com/archives/2004/11/case_sensitivit.html" title="Case Sensitivity in Unexpected Place: XML Object">Case Sensitivity in Unexpected Place: XML Object</a>. This reminded me of a small issue that we faced while on some projects where we have used ColdFusion for Flash Remoting. This might  be helpful for some people out there;
 
 ColdFusion seem to have an issue when dealing with flash remoting, wherein, the names of properties in any structs returned by the remote methods, get converted to uppercase.
 

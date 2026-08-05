@@ -4,7 +4,7 @@ Ever had a new vendor let you down? Had trouble finding a company that does/sell
 
 With a continually updated list of benchmarked vendors ContractIQ advises SME business on their vendor selection -- empowering them to make  valuable growth-oriented decisions. 
 
-I got the chance to interview the brain behind the brainchild, Ashwin Ramasamy -- founder of [ContractIQ](http://contractiq.com/) and graduate of the [Founder Institute](http://fi.co/). After lead roles in several startups, and now ContractIQ, Ashwin is in a great spot to offer advice to entrepreneurs-to-be, so I asked him about ContractIQ and his entrepreneurial experiences.
+I got the chance to interview the brain behind the brainchild, Ashwin Ramasamy -- founder of [ContractIQ](https://contractiq.com/) and graduate of the [Founder Institute](https://fi.co/). After lead roles in several startups, and now ContractIQ, Ashwin is in a great spot to offer advice to entrepreneurs-to-be, so I asked him about ContractIQ and his entrepreneurial experiences.
 
 
 ## What is your educational and work background?

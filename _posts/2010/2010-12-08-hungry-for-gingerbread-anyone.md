@@ -1,6 +1,6 @@
 # Hungry for Gingerbread Anyone?
 
-<a href="http://www.google.com/nexus/">Google Nexus S</a> is the first phone to run <a href="http://developer.android.com/sdk/android-2.3.html">Gingerbread</a>, the fastest version of Android yet. Gingerbread builds on some of the most popular Android features like multi-tasking and Wi-Fi hotspot and adds a refreshed user interface, an improved keyboard, near field communication (NFC) support, and more. 
+<a href="https://www.google.com/nexus/">Google Nexus S</a> is the first phone to run <a href="https://developer.android.com/sdk/android-2.3.html">Gingerbread</a>, the fastest version of Android yet. Gingerbread builds on some of the most popular Android features like multi-tasking and Wi-Fi hotspot and adds a refreshed user interface, an improved keyboard, near field communication (NFC) support, and more. 
 
 ## Visual
 
@@ -12,7 +12,7 @@ A 1 GHz Hummingbird processor paired with 16GB of internal memory makes Nexus S 
 
 ## Display
 
-Nexus S is manufactured by <a href="http://www.samsung.com/">Samsung</a>, and it is the first smartphone to launch with a Contour Display. The curved glass screen fits comfortably in the palm of your hand and along the side of your face. A brighter screen with higher contrast means colors are incredibly vibrant, text is crisp at any size, and luminance is up to 1.5x higher than conventional LCD displays. Take Nexus S outside, there's 75% less glare than on other smartphone displays. Your videos, pictures and games look their best and the sun won't wash them out. The Contour Display uses a thin-profile glass panel, making Nexus S uniquely slim and trim. It's subtle but you'll notice.
+Nexus S is manufactured by <a href="https://www.samsung.com/">Samsung</a>, and it is the first smartphone to launch with a Contour Display. The curved glass screen fits comfortably in the palm of your hand and along the side of your face. A brighter screen with higher contrast means colors are incredibly vibrant, text is crisp at any size, and luminance is up to 1.5x higher than conventional LCD displays. Take Nexus S outside, there's 75% less glare than on other smartphone displays. Your videos, pictures and games look their best and the sun won't wash them out. The Contour Display uses a thin-profile glass panel, making Nexus S uniquely slim and trim. It's subtle but you'll notice.
 
 ## Features
 

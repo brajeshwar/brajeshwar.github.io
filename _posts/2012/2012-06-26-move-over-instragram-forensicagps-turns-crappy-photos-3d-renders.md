@@ -1,6 +1,6 @@
 # Move Over Instragram - ForensicaGPS turns crappy photos into 3D Renders
 
-Rarely are thieves, animators and illustrators frightened by the same technology -- but all of the above should be on the lookout for Animetrics' new software - [Forensica GPS](http://animetrics.com/?content=products/forensicaGPS). This new software-based technology is able to turn low-res photos into stunning 3D renders. 
+Rarely are thieves, animators and illustrators frightened by the same technology -- but all of the above should be on the lookout for Animetrics' new software - [Forensica GPS](https://animetrics.com/?content=products/forensicaGPS). This new software-based technology is able to turn low-res photos into stunning 3D renders. 
 
 While my mind is reeling with the possibilities, Animetrics specifically designed their software to help police investigators track down subjects -- without the time-consuming sketch artist process. This automation process is able to capture distinct facial features like that of the trained eye of a sketch artist, but being a machine it can do it much quicker (and cheaper?).
 
@@ -14,4 +14,4 @@ So, lookout criminals, suspects of interest, terrorists and the sketch artists w
 
 The uses of this technology goes far beyond taking surveillance photos captured during the commission of a crime to locate the suspects; the FBI and Homeland Security could combine this with conversation monitoring on social networks to turn tagged Facebook pictures into complete 3D profiles to circulate amongst law enforcement agencies.
 
-Outside of law enforcement there are a myriad of other issues that the software could be used for (if it wasn't earmarked for law enforcement only, as it is currently with Forensica GPS). We're going to see some of them quite soon as indicated by Facebook's facial recognition technology currently in the works and the recent Apple patent on 3D facial recognition, <a href="http://www.itproportal.com/2012/05/11/apple-patents-3d-rendering-system-facial-recognition/">3D Object Recognition</a>.
+Outside of law enforcement there are a myriad of other issues that the software could be used for (if it wasn't earmarked for law enforcement only, as it is currently with Forensica GPS). We're going to see some of them quite soon as indicated by Facebook's facial recognition technology currently in the works and the recent Apple patent on 3D facial recognition, <a href="https://www.itproportal.com/2012/05/11/apple-patents-3d-rendering-system-facial-recognition/">3D Object Recognition</a>.

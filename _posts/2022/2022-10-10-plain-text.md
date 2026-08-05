@@ -35,16 +35,16 @@ Here are a few tools, articles, and references that will get you started, help y
 
 - A Plain Text Personal Organizer [Archive](https://web.archive.org/web/20120205111929/https://danlucraft.com/blog/2008/04/plain-text-organizer/)
 - [A template to organise life in plain text](https://github.com/jukil/plain-text-life)
-- [Achieve a text-only work-flow](http://donlelek.github.io/2015-03-09-text-only-workflow/)
+- [Achieve a text-only work-flow](https://donlelek.github.io/2015-03-09-text-only-workflow/)
 - [Always Bet on Text](https://graydon2.dreamwidth.org/193447.html) ([archive](https://web.archive.org/web/20141001000000*/https://graydon2.dreamwidth.org/193447.html))
 - [I Still Use Plain Text for Everything, and I Love it](https://lifehacker.com/i-still-use-plain-text-for-everything-and-i-love-it-1758380840)
 - [My productivity app for the past 12 years has been a single .txt file](https://jeffhuang.com/productivity_text_file/)
-- [Note Taking, Writing and Life Organization Using Plain Text Files](http://www.markwk.com/plain-text-life.html)
+- [Note Taking, Writing and Life Organization Using Plain Text Files](https://www.markwk.com/plain-text-life.html)
 - [Plain Text Journaling System](https://georgecoghill.wordpress.com/plain-text/)
 - [Plain Text Project](https://plaintextproject.online/)
-- [PlainText Productivity](http://plaintext-productivity.net)
-- [The Plain Text Life: Note Taking, Writing and Life Organization Using Plain Text Files](http://www.markwk.com/plain-text-life.html)
-- [Todo.txt](http://todotxt.org/) is a plain text todo workflow, where one can get things done with few keystrokes and taps possible.
+- [PlainText Productivity](https://plaintext-productivity.net)
+- [The Plain Text Life: Note Taking, Writing and Life Organization Using Plain Text Files](https://www.markwk.com/plain-text-life.html)
+- [Todo.txt](https://todotxt.org/) is a plain text todo workflow, where one can get things done with few keystrokes and taps possible.
 - [Use plain text email](https://useplaintext.email)
 - [Writing Plain Text](https://sive.rs/plaintext) by Derek Sivers
 - [Zettelkasten](https://zettelkasten.de/introduction/) is a personal tool for thinking and writing. It has hypertextual features to make a web of thought possible. The difference to other systems is that you create a web of thoughts instead of notes of arbitrary size and form, and emphasize connection, not a collection.

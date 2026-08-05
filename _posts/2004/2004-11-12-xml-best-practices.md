@@ -1,6 +1,6 @@
 # XML Best Practices
 
-[David Bau](http://davidbau.com/) have a quick, crisp write-up on [XML Best Practices](http://davidbau.com/archives/2003/11/10/xml_best_practices.html).
+[David Bau](https://davidbau.com/) have a quick, crisp write-up on [XML Best Practices](https://davidbau.com/archives/2003/11/10/xml_best_practices.html).
 
 An excerpt;
 

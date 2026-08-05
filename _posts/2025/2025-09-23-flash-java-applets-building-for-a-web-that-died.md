@@ -48,7 +48,7 @@ But oh, the fun we had before the fall.
 One of my fondest memories was building tiny Flash games that spread faster than I ever expected. This was before viral loops became product strategy jargon. A silly animation or quirky interaction could go viral simply because it delighted people.  
 
 {:.aside .left}
- “In the beginning, the Web was like a toy. It was not taken seriously. Which was precisely why it grew.” — [Paul Graham](http://www.paulgraham.com/webstart.html)
+ “In the beginning, the Web was like a toy. It was not taken seriously. Which was precisely why it grew.” — [Paul Graham](https://www.paulgraham.com/webstart.html)
 
 I still remember the sound libraries, the stock “click,” the cartoon “boing,” the endless supply of swooshes and beeps. You could drag them into your timeline and instantly make something playful.  
 

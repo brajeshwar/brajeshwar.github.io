@@ -1,8 +1,8 @@
 # You might just like to be part of our Team
 
-[![Oinam team acquired by Nanocast)](/static/2006/oinam-nanocast.jpg)](http://www.flickr.com/photos/brajeshwar/sets/72057594102788334/)
+[![Oinam team acquired by Nanocast)](/static/2006/oinam-nanocast.jpg)](https://www.flickr.com/photos/brajeshwar/sets/72057594102788334/)
 
-Early morning of Apr 8, 2006 our team set out on a 2 day Team Picnic to Splendour Country, a resort on the outskirts of Pune, India. Ealier, we did our new trainee introduction to the team with a [Movie and Bowling](http://www.flickr.com/photos/brajeshwar/sets/72057594100307364/) session. It may be a small endeavor on our part but we have been pushing our work/play culture to be more in the lines of not just a working office environment but like a college/university campus where people love to hang out, chill and work in the due process. Our Work/Play Environment Motto have always been `People First` and our work ethics `What's Next`.
+Early morning of Apr 8, 2006 our team set out on a 2 day Team Picnic to Splendour Country, a resort on the outskirts of Pune, India. Ealier, we did our new trainee introduction to the team with a [Movie and Bowling](https://www.flickr.com/photos/brajeshwar/sets/72057594100307364/) session. It may be a small endeavor on our part but we have been pushing our work/play culture to be more in the lines of not just a working office environment but like a college/university campus where people love to hang out, chill and work in the due process. Our Work/Play Environment Motto have always been `People First` and our work ethics `What's Next`.
 
 ## Why People First?
 
@@ -16,7 +16,7 @@ If you good in Technology - be it in Flash/ActionScript, Flex, Flash Remoting, F
 
 ## Games
 
-We love people good with games too. Come and challenge amongst the team with [Counter Strike](http://www.counter-strike.net/), [Need for Speed](http://www.ea.com/official/nfs/) and other games.
+We love people good with games too. Come and challenge amongst the team with [Counter Strike](https://www.counter-strike.net/), [Need for Speed](https://www.ea.com/official/nfs/) and other games.
 
 ## Gadgets
 

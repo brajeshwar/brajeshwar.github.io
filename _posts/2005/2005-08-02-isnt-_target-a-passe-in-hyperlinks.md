@@ -2,7 +2,7 @@
 
 I am not really a fan of html hyperlinks spawning new windows, my reason may be particularly because I use a tabbed browser (firefox) as my primary browser and I wish to remain in one window with tabs opened if needed be. Some people say, "I want surfers to stay on my site". But why, if they want, they will come back; why are you forcing them. And technically, it is also not part of newer specs anyway, xhtml 1.1 no longer have `_target`. It is the surfer/user who should decide if the link should be a flowing link from one to the other or to open a new window. If the user wants the link to open in a new window s/he will definitely do it manually. Why should one take away the choice from the user.
 
-Jakob Nielsen's [Top 10 New Mistakes of Web Design](http://www.useit.com/alertbox/990530.html) have valid points. Quoting his Point No. 2.
+Jakob Nielsen's [Top 10 New Mistakes of Web Design](https://www.useit.com/alertbox/990530.html) have valid points. Quoting his Point No. 2.
 
 `Opening New Browser Windows.`
 

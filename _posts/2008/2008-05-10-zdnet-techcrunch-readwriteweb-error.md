@@ -1,9 +1,9 @@
 # ZDNet, TechCrunch, ReadWriteWeb; They've got it wrong
-I was willing to brush it aside as another harmless mistake by some high profile sites, "we all make mistakes". However, Mrinal's second <a href="http://twitter.com/mrinalwadhwa/statuses/807789362">tweet</a> (Mrinal's articles are <a href="http://weblog.mrinalwadhwa.com/2008/05/09/a-list-bloggers-confused-about-rich-internet-application-technologies/">here</a> and <a href="http://weblog.mrinalwadhwa.com/2008/05/10/latest-example-readwriteweb-a-list-bloggers-are-so-confused-about-ria-technologies/">here</a>) got me thinking and wanted to bring forth some clarifications for the Rich Internet Applications (RIA) realm.
+I was willing to brush it aside as another harmless mistake by some high profile sites, "we all make mistakes". However, Mrinal's second <a href="https://twitter.com/mrinalwadhwa/statuses/807789362">tweet</a> (Mrinal's articles are <a href="https://weblog.mrinalwadhwa.com/2008/05/09/a-list-bloggers-confused-about-rich-internet-application-technologies/">here</a> and <a href="https://weblog.mrinalwadhwa.com/2008/05/10/latest-example-readwriteweb-a-list-bloggers-are-so-confused-about-ria-technologies/">here</a>) got me thinking and wanted to bring forth some clarifications for the Rich Internet Applications (RIA) realm.
 
 ## ZDNet
 
-Recently, Mary Jo Foley at ZDNet wrote an article -- <a href="http://blogs.zdnet.com/microsoft/?p=1382">Microsoft Live Mesh to get more competition from Sun</a>. While talking about JavaOne where Sun unveils their future cloud-computing platform -- Hydrazine -- which will be in direct competition with similar offerings from Microsoft, Google, Amazon and others, she wrote -- 
+Recently, Mary Jo Foley at ZDNet wrote an article -- <a href="https://blogs.zdnet.com/microsoft/?p=1382">Microsoft Live Mesh to get more competition from Sun</a>. While talking about JavaOne where Sun unveils their future cloud-computing platform -- Hydrazine -- which will be in direct competition with similar offerings from Microsoft, Google, Amazon and others, she wrote -- 
 
 > "Robert Brewin, Sun Chief Technology Officer and Distinguished Engineer, described Hydrazine as a combination of Amazon's Elastic Cloud, Microsoft's Live Mesh and Google Analytics all rolled into one. It's a platform that Sun is building on top of JavaFX."
 
@@ -31,7 +31,7 @@ This is Blasphemy,
 
 ## TechCrunch
 
-Duncan Riley of TechCrunch wrote about -- <a href="http://www.techcrunch.com/2008/02/26/adobe-air-vs-microsoft-silverlight-its-all-about-numbers/">Adobe AIR Vs Microsoft Silverlight</a> -- which I believed is wrong right from the title. It could have been Adobe Flash Player vs Microsoft Silverlight!
+Duncan Riley of TechCrunch wrote about -- <a href="https://www.techcrunch.com/2008/02/26/adobe-air-vs-microsoft-silverlight-its-all-about-numbers/">Adobe AIR Vs Microsoft Silverlight</a> -- which I believed is wrong right from the title. It could have been Adobe Flash Player vs Microsoft Silverlight!
 
 ![Techcrunch's wrong interpretation on comparing Adobe AIR to Microsoft Silverlight)](/static/2008/techcrunch-wrong-on-ria.png)
 
@@ -45,7 +45,7 @@ Well, to put things in a simple way -- Adobe AIR is the platform independent Des
 
 ![ReadWriteWeb's thinks they cannot run Silverlight because they're on Macs)](/static/2008/rww-wrong-on-ria.png)
 
-Bernard Lunn of ReadWriteWeb wrote about <a href="http://www.readwriteweb.com/archives/metaaso.php">MetaASO: A Bootstrapped P2P Startup From India</a>.
+Bernard Lunn of ReadWriteWeb wrote about <a href="https://www.readwriteweb.com/archives/metaaso.php">MetaASO: A Bootstrapped P2P Startup From India</a>.
 
 "MetaASO stumbled at the first hurdle for me, which was that you need Silverlight and that means a PC (I use a Mac)."
 

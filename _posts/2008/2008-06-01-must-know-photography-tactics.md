@@ -1,6 +1,6 @@
 # 15 Must-Know Photography Tactics
 
-Photography fascinates many people and it turns out to be a good opportunity when a good blogger told me he wishes to write. Incidentally, <a href="http://www.praval.com/">Praval's</a> first article is something about Photography.
+Photography fascinates many people and it turns out to be a good opportunity when a good blogger told me he wishes to write. Incidentally, <a href="https://www.praval.com/">Praval's</a> first article is something about Photography.
 
 Digital photography is no more just a professional's job. With a consistent decline in the prices of digital cameras -- point and shoot, photography is becoming a passion. There are a large number of avenues to materialize this infatuation but information about some key concepts can let you have some crisp images.
 

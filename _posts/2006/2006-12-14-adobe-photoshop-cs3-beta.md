@@ -2,7 +2,7 @@
 
 Adobe have been working to deliver native performance to customers using Intel-based Macs as soon as possible. Now that they believed that their beta, popularly known as Red Pill, is running well on these and other systems, Adobe have decided that it is time to share it with all current Photoshop customers.
 
-So that Windows folks aren't left out, Adobe is posting both Windows and Mac (Intel & PowerPC) builds of Photoshop. Adobe Photoshop CS3 Beta popularly known as the Red Pill in its beta is now out on [Adobe Labs](http://labs.adobe.com/) as a Public Beta. The final product is expected to be launched in Spring 2007.
+So that Windows folks aren't left out, Adobe is posting both Windows and Mac (Intel & PowerPC) builds of Photoshop. Adobe Photoshop CS3 Beta popularly known as the Red Pill in its beta is now out on [Adobe Labs](https://labs.adobe.com/) as a Public Beta. The final product is expected to be launched in Spring 2007.
 
 It may be noted that *Photoshop CS3 is no substitute for Photoshop CS2*. It's unfinished, and *you need to own CS2* to use it. Adobe is releasing CS3 as an extension of CS2, as a service to Photoshop customers who've been eagerly awaiting native performance. It is done so as not to confused customers and not purchase CS2 because they think CS3 is just around the corner, or that the beta is a substitute. If you need Photoshop, CS2 is the product to buy. The beta can be downloaded and installed by anyone who creates an Adobe user ID, but to make it run beyond a 2-day trial period, you need to enter a CS3 beta serial number. The beta software is available in English only, but you can enter a serial from any language version of CS2 (including Suites, Production Studio, and Web and Video bundles).
 

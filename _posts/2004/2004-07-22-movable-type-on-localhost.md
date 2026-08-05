@@ -2,9 +2,9 @@
 
 Though the aim is to have Movable Type running on your local computer, but then we will have to go through two important (may be more) installations, namely an Apache/PHP/mySQL server and Perl. Let me tell you that this is more of my own experience, I am sure you can use your preferred installations though adhearing to the necessary requisites. This are the downloads that you will need;
 
-- <a href="http://www.wampserver.com/" title="Wamp5">Wamp5</a>
-- <a href="http://www.activestate.com/Products/ActivePerl/" title="Active Perl">Active Perl</a> and
-- <a href="http://movabletype.org/" title="Movable Type">Movable Type</a>
+- <a href="https://www.wampserver.com/" title="Wamp5">Wamp5</a>
+- <a href="https://www.activestate.com/Products/ActivePerl/" title="Active Perl">Active Perl</a> and
+- <a href="https://movabletype.org/" title="Movable Type">Movable Type</a>
 
 Wamp5, at the time of writing this article was at version 1.1. The installation was straight forward, simple, quick and very easy. Just take care that it will not clash with an already running web server like IIS, simply stop your current web server during the installation. Though it should be rather similar in most windows box, I am refering to Windows 2K/XP installation in this article.
 

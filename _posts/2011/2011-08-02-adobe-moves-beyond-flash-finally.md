@@ -1,6 +1,6 @@
 # Adobe moves beyond Flash -- finally
 
-Adobe is giving up their sole focus on Flash and entering the exciting world of HTML 5. Before you get too excited -- they are only releasing a first preview of their new HTML 5 tryout -- <a href="http://labs.adobe.com/technologies/edge/">Edge</a>. Could this be Adobe's first foray into the eccentric world of internet web standards? 
+Adobe is giving up their sole focus on Flash and entering the exciting world of HTML 5. Before you get too excited -- they are only releasing a first preview of their new HTML 5 tryout -- <a href="https://labs.adobe.com/technologies/edge/">Edge</a>. Could this be Adobe's first foray into the eccentric world of internet web standards? 
 
 Despite their efforts to push Flash on everyone -- including iOS users -- Adobe seems to be recognizing the abilities of programming, outside of their own brainchild Flash. This very likely comes after several technologists describe Adobe's clinging to Flash a "living in the past".
 
@@ -18,4 +18,4 @@ Edge must be good though; Flash creator and long-time defender Mark Anders is le
 
 Oh, and of course Edge integrates with Adobe Dreamweaver.
 
-Note: You may also like to try other HTML5 tools like <a href="http://www.sencha.com/products/animator/">Sencha Animator</a>, <a href="http://www.tumultco.com/hype/">Hype</a>, etc.
+Note: You may also like to try other HTML5 tools like <a href="https://www.sencha.com/products/animator/">Sencha Animator</a>, <a href="https://www.tumultco.com/hype/">Hype</a>, etc.

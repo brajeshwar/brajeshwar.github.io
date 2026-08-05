@@ -1,6 +1,6 @@
 # Nokia's Symbian gets OS CPR
 
-Just when we thought that Symbian had joined the technology graveyard -- buried alongside the <a href="http://en.wikipedia.org/wiki/Betamax">Betamax</a> and <a href="http://en.wikipedia.org/wiki/AmigaOS">AmigaOS</a>, it gets OS CPR.
+Just when we thought that Symbian had joined the technology graveyard -- buried alongside the <a href="https://en.wikipedia.org/wiki/Betamax">Betamax</a> and <a href="https://en.wikipedia.org/wiki/AmigaOS">AmigaOS</a>, it gets OS CPR.
 
 Symbian gets a revival even after Nokia executive Stephen Elop's internal memo was leaked, a memo in which he pronounced Symbian DOA by comparing it to a platform on fire (and not in the good way). It was expected by most analysts that Nokia would adopt Microsoft's new phone OS on future Nokia hardware.
 

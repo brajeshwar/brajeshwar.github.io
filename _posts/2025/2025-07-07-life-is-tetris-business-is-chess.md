@@ -81,7 +81,7 @@ Yet, beyond metaphors, actual achievement comes from acknowledging our human cap
 
 [^Tetris]: [Tetris](https://en.wikipedia.org/wiki/Tetris) is a puzzle video game created in 1985 by [Alexey Pajitnov](https://en.wikipedia.org/wiki/Alexey_Pajitnov), a Soviet software engineer. In Tetris, falling [tetromino](https://en.wikipedia.org/wiki/Tetromino) shapes must be neatly sorted into a pile; once a horizontal line of the game board is filled in, it disappears, granting points and preventing the pile from overflowing.
 
-[^TimUrban]: [Tim Urban](https://en.wikipedia.org/wiki/Tim_Urban_(author)) is an author and blogger popular for his website, [Wait But Why](http://waitbutwhy.com), of which Urban is the writer and illustrator.
+[^TimUrban]: [Tim Urban](https://en.wikipedia.org/wiki/Tim_Urban_(author)) is an author and blogger popular for his website, [Wait But Why](https://waitbutwhy.com), of which Urban is the writer and illustrator.
 
 [^Chess]: [Chess](https://en.wikipedia.org/wiki/Chess) is a board game for two players. It is an abstract strategy game that involves no hidden information and no elements of chance. It is played on a square board consisting of 64 squares arranged in an 8×8 grid. The players, referred to as “White” and “Black”, each control sixteen pieces: one king, one queen, two rooks, two bishops, two knights, and eight pawns, with each type of piece having a different pattern of movement. An enemy piece may be captured (removed from the board) by moving one‘s own piece onto the square it occupies. The object of the game is to “checkmate” (threaten with inescapable capture) the enemy king.
 

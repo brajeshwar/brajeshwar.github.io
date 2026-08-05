@@ -1,6 +1,6 @@
 # What are Microformats?
 
-[Microformats](http://microformats.org/) are a set of simple, open data formats built upon existing and widely adopted standards. Instead of throwing away what works today, microformats intend to solve simpler problems first by adapting to current behaviors and usage patterns. Microformats are
+[Microformats](https://microformats.org/) are a set of simple, open data formats built upon existing and widely adopted standards. Instead of throwing away what works today, microformats intend to solve simpler problems first by adapting to current behaviors and usage patterns. Microformats are
 
 - a way of thinking about data
 - design principles for formats

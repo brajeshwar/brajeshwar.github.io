@@ -1,6 +1,6 @@
 # RegExr - Free Online RegEx Testing Tool
 
-Grant Skinner [released](http://www.gskinner.com/blog/archives/2008/03/regexr_free_onl.html) a Utility Tool -- <a href="http://gskinner.com/RegExr/">RegExr</a>, built with Flex 3, and uses ActionScript 3's built in RegExp engine.
+Grant Skinner [released](https://www.gskinner.com/blog/archives/2008/03/regexr_free_onl.html) a Utility Tool -- <a href="https://gskinner.com/RegExr/">RegExr</a>, built with Flex 3, and uses ActionScript 3's built in RegExp engine.
 
 RegExr is an online tool for editing and testing Regular Expressions (RegExp / RegEx). It provides a simple interface to enter RegEx expressions, and visualize matches in real-time editable source text. It also provides a handy RegExp snippet sidebar with descriptions and usage examples to make it easier to learn Regular Expressions through trial and error.
 
