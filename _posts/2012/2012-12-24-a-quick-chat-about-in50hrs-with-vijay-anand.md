@@ -22,11 +22,11 @@ India has its own set of challenges in the early ecosystem and anything that is 
 
 _Q. What is your immediate expectation from In50Hrs and what are your long-term goals?_
 
-The short term expectation is for participants to be able to differentiate between a [hack and a prototype](//www.in50hrs.com/blog/2012/7/17/a-prototype-vs-a-hack.html). We have been constantly asking the question to ourselves as to how do we get folks to leverage this platform to be a starting point towards a venture - so the long term goal would be to enable more and more of the participating teams to launch products and startups.
+The short term expectation is for participants to be able to differentiate between a [hack and a prototype](https://www.in50hrs.com/blog/2012/7/17/a-prototype-vs-a-hack.html). We have been constantly asking the question to ourselves as to how do we get folks to leverage this platform to be a starting point towards a venture - so the long term goal would be to enable more and more of the participating teams to launch products and startups.
 
 _Q. Do the role of In50Hrs end within those 50 hours or do you want to follow-up with them and guide them forward? If you follow-up, how many such MVPs have become actual Startups? Do you have a number?_
 
-Not at all. So that's one reason why having an event where we can tweak every aspect of it makes sense because we can also manage how to do the hand-off and the follow-up support. We look at the stages of a tech startup as Idea to Prototype; Prototype to Product; and Product to Startup. As part of The Startup Centre we run a six-month hands-on program called [The Resident Program](//www.thestartupcentre.com/resident) which would be a logical progression for teams that want further support.
+Not at all. So that's one reason why having an event where we can tweak every aspect of it makes sense because we can also manage how to do the hand-off and the follow-up support. We look at the stages of a tech startup as Idea to Prototype; Prototype to Product; and Product to Startup. As part of The Startup Centre we run a six-month hands-on program called [The Resident Program](https://www.thestartupcentre.com/resident) which would be a logical progression for teams that want further support.
 
 We have spotted a bit over 20+ startups emerge out of In50hrs.
 

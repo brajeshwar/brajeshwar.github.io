@@ -13,7 +13,7 @@ The idea behind the presentation was to introduce existing WordPress Designers a
 
 ### Here are the breakdown of the slides;
 
-1. Introducing myself - I'm Brajeshwar and I tweet [@brajeshwar](//twitter.com/brajeshwar).
+1. Introducing myself - I'm Brajeshwar and I tweet [@brajeshwar](https://twitter.com/brajeshwar).
 1. In early days and even to these day, the most typical workflow of WordPress Theme Design and Development is to work on the PHP, CSS and JavaScripts on their own. Sometimes, we pick up from existing theme frameworks or a starter frame and goes on with the workflow and repeat it till we are happy with the outcome.
 1. We also have to refresh our browsers, on various permutations and combinations of Platforms, devices and browsers.
 1. Once we become good with this workflow, we even graduated to minifying the CSS, concatenate and uglify the JavaScripts to optimize our themes.

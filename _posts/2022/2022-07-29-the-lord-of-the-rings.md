@@ -6,7 +6,7 @@ This is a book that you take your time, read it slow; perhaps slower than the ti
 
 The book created an entire mythology, complete with languages, history, and cultures. The story follows the quest to destroy the One Ring, an object of immense power that threatens the very existence of the free peoples of Middle-earth[^MiddleEarth]. The [movie adaptations](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)) are also equally appealing and have a massive fan following.
 
-<a href="//lotrproject.com/map/"><img class="large" src="/static/2022/lotr-map-of-middle-earth.webp" alt="Map of Middle Earth"></a>
+<a href="https://lotrproject.com/map/"><img class="large" src="/static/2022/lotr-map-of-middle-earth.webp" alt="Map of Middle Earth"></a>
 
 ```
 “Three Rings for the Elven-kings under the sky,

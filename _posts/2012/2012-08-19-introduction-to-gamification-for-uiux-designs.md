@@ -1,8 +1,8 @@
 # Introduction to Gamification for UI/UX Designs
 
-At the [WebApp 2012](//www.siliconindia.com/events-agenda/webapps-conference-Bangalore-WebApps_Blore_2012.html), organized by [SiliconIndia](//www.siliconindia.com/), I spoke on <strong>"Gamification in UI/UX Designs"</strong>.
+At the [WebApp 2012](https://www.siliconindia.com/events-agenda/webapps-conference-Bangalore-WebApps_Blore_2012.html), organized by [SiliconIndia](https://www.siliconindia.com/), I spoke on <strong>"Gamification in UI/UX Designs"</strong>.
 
-It was not bad but I won't call that a very good one either. My gauge of the audience was off the track. I was talking to a crowd who have never heard of "Gamification" and almost all of the audience haven't heard of [CodeAcademy](//www.codecademy.com/), no clue of the recently popular and viral site [Ben the Bodyguard](//benthebodyguard.com/) and they were amusingly clueless about - [Easter Egg](<//en.wikipedia.org/wiki/Easter_egg_(media)>). Next time, I'll do more research on the audience I'll be speaking to.
+It was not bad but I won't call that a very good one either. My gauge of the audience was off the track. I was talking to a crowd who have never heard of "Gamification" and almost all of the audience haven't heard of [CodeAcademy](https://www.codecademy.com/), no clue of the recently popular and viral site [Ben the Bodyguard](https://benthebodyguard.com/) and they were amusingly clueless about - [Easter Egg](<https://en.wikipedia.org/wiki/Easter_egg_(media)>). Next time, I'll do more research on the audience I'll be speaking to.
 
 <figure>
   <a href="/static/pdf/gamification-in-ui-ux-designs.pdf">
@@ -21,7 +21,7 @@ First, Gamification is not a new thing, and more importantly, it's not new at al
 
 [![Gabe Zichermann)](/static/2012/gabe-zichermann.jpg)](https://gabezichermann.com)
 
-Talking about Gamification will be incomplete without mentioning [Gabe Zichermann](//gamification.co/gabe-zichermann/) who is regarded as one of the most prominent figure when it comes to propagating Gamification in Products Designs and Development. I was fortunate to see him speak at one of the [Founder Institute session](//fi.co/posts/353) and I must say, he is an amazing entertainer. [He's is on twitter](//twitter.com/gzicherm) and he can be found writing and speaking on behalf of [Gamification.co](//gamification.co/).
+Talking about Gamification will be incomplete without mentioning [Gabe Zichermann](https://gamification.co/gabe-zichermann/) who is regarded as one of the most prominent figure when it comes to propagating Gamification in Products Designs and Development. I was fortunate to see him speak at one of the [Founder Institute session](https://fi.co/posts/353) and I must say, he is an amazing entertainer. [He's is on twitter](https://twitter.com/gzicherm) and he can be found writing and speaking on behalf of [Gamification.co](https://gamification.co/).
 
 ## What is Gamification?
 
@@ -33,15 +33,15 @@ Let me tackle some examples as a way to introduce the art of Gamification, which
 
 Who would have thought that we will be happy with virtual achievements, digital badges, and accolades that have no material or meaningful values in our physical world! However, it's one of the most sought after and people are very happy, satisfied when they do achieve such badges, titles, achievements, and accolades. We love to show off our increasing number, varied, different badges that we earn in our digital lives.
 
-[Foursquare](//foursquare.com/) does an amazing job when it comes to virtual achievements. We love to become "mayors" of a location, earn badges, etc. Another such example is that of [CodeAcademy](//www.codecademy.com/) where you can unlock badges when you complete the courses offered there. The whole experience on CodeAcademy engages you to move forward and when you finally complete and unlock a hurdle, it's a fun and satisfied experience.
+[Foursquare](https://foursquare.com/) does an amazing job when it comes to virtual achievements. We love to become "mayors" of a location, earn badges, etc. Another such example is that of [CodeAcademy](https://www.codecademy.com/) where you can unlock badges when you complete the courses offered there. The whole experience on CodeAcademy engages you to move forward and when you finally complete and unlock a hurdle, it's a fun and satisfied experience.
 
 ## Progress as a tool for Gamification
 
-Progress status, progress bars, and progress indicators have been used by Web Designers for ages. It is one such gamification technique that's been proven very successful. [LinkedIn](//www.linkedin.com/) does a good job of enticing you to fill in more information by showing you how filled-up is your profile and how you can achieve that 100% complete profile. [Twitter](//twitter.com/) also does a nice job by asking you to follow interesting people, as soon as you sign-up. That helps you get rolling and fill your timeline with interesting tweets.
+Progress status, progress bars, and progress indicators have been used by Web Designers for ages. It is one such gamification technique that's been proven very successful. [LinkedIn](https://www.linkedin.com/) does a good job of enticing you to fill in more information by showing you how filled-up is your profile and how you can achieve that 100% complete profile. [Twitter](https://twitter.com/) also does a nice job by asking you to follow interesting people, as soon as you sign-up. That helps you get rolling and fill your timeline with interesting tweets.
 
 ## Virtual Easter Eggs
 
-A virtual Easter egg is an intentional hidden message, in-joke, or feature in a work such as a computer program, web page, video game, movie, book, or crossword. One such very well known virtual easter egg is that of the [Konami Code](//en.wikipedia.org/wiki/Konami_Code) - a cheat-sheet embedded, particularly, in computer games. For other examples, try viewing the source of [The Oat Meal](//theoatmeal.com/), try searching for "Do a barrel roll" on Google or just "tilt" it, and you can scroll to the bottom of [Kickstarter](//www.kickstarter.com/) and click the scissor till it cuts it all through.
+A virtual Easter egg is an intentional hidden message, in-joke, or feature in a work such as a computer program, web page, video game, movie, book, or crossword. One such very well known virtual easter egg is that of the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) - a cheat-sheet embedded, particularly, in computer games. For other examples, try viewing the source of [The Oat Meal](https://theoatmeal.com/), try searching for "Do a barrel roll" on Google or just "tilt" it, and you can scroll to the bottom of [Kickstarter](https://www.kickstarter.com/) and click the scissor till it cuts it all through.
 
 ## The dark side of Gamification
 
