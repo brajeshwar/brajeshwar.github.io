@@ -65,8 +65,9 @@
    rule above it is the separator doing its job. The two are no longer the same
    trick — do not "fix" one to match the other.
 
-   No `border-radius`: it runs to the window edge, and a curve against the edge
-   of the viewport reads as a rendering fault. */
+   No `border-radius` HERE: it runs to the window edge, and a curve against the
+   edge of the viewport reads as a rendering fault. Past 1600px it stops running
+   to the edge and does get one — see the media query below the caption rule. */
 photo-cover {
   display: block;
 
@@ -108,6 +109,61 @@ photo-cover__desc {
   
   font-size: smaller;
   /*text-align: center;*/
+}
+
+/* ---- ...except past 1600px, where it stops being full-bleed -----
+   Brajeshwar, 2026-08-06: *"For the cover-picture in posts, for oversized
+   viewports, say above 1600px, can we added the default image border-radius
+   to it. It makes sense when it is 1600px and below as it covers the whole
+   width of the browser but bigger than that, it would be nice to have smooth
+   rounded corners."*
+
+   This does not contradict the "no border-radius" note above; it is the same
+   argument carried one step further. A curve reads as a fault only while the
+   box is against the window. At --body-width-full the box stops growing, so
+   from the next pixel on there is page either side of it — it is a picture
+   with edges, not a bleed, and it should look like every other picture.
+
+   Which is exactly what it now does: the same `--border-radius` as
+   `main :where(img, video, iframe)` in base.css, whose own comment names
+   photo-cover as the one deliberate exclusion. That exclusion is now
+   width-gated rather than absolute; the reason given there still stands
+   verbatim for the widths it was written about.
+
+   `+ 1`, not bp.$extralarge itself: at exactly 1600 the box IS 1600 and
+   touches both edges, which is the case being excluded. Sass folds it to a
+   plain `1601px` — the arithmetic is here so the number stays tied to the
+   breakpoint instead of being a second literal that can drift.
+
+   Two things it leaves alone, checked on 2026-08-06 rather than assumed:
+
+   1. The `fixed` background is still clipped by the curve. Attachment moves
+      the positioning AREA to the viewport; it does not move the painting
+      area, which is the border box and is rounded with it. Verified on the
+      real cover with `background-attachment: fixed` forced on — the corner
+      clipped cleanly.
+
+      ⚠️ Do not expect to see `fixed` when you inspect this. base.css zeroes
+      it under `prefers-reduced-motion: reduce` (`background-attachment:
+      initial !important`), so on a machine with Reduce Motion on the cover
+      computes to `scroll`. The radius clips either way; it is the box that
+      is rounded, not the paint.
+
+   2. The 1px of header rule that the negative margin-top hides stays hidden.
+      The header is --body-width-max (1024px) and this box is 1600, both
+      centered, so the rule's ends sit (1600 - 1024) / 2 = 288px inside the
+      cover's corners at ANY width past the breakpoint — the curve is 7px and
+      nowhere near them. Rounding the top corners exposes page background in
+      the corners and nothing else.
+
+   Not verified at a true >1600px viewport: the display here tops out at
+   1512, so the rendering above was checked by narrowing the cover and
+   applying the same radius, which is the same geometry a wider window
+   produces. The breakpoint itself is arithmetic, not a judgment call. */
+@media (min-width: bp.$extralarge + 1) {
+  photo-cover {
+    border-radius: var(--border-radius);
+  }
 }
 
 .post {

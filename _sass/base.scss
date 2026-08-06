@@ -643,7 +643,9 @@ video {
    Scoped to `main`, so it cannot reach the header logo or the footer icons.
    `photo-cover` is deliberately NOT included: it is a full-bleed element that
    runs to the viewport edge, and a rounded corner against the edge of the
-   window reads as a rendering fault rather than as a curve. */
+   window reads as a rendering fault rather than as a curve. That holds only
+   while it IS full-bleed — past 1600px it stops growing and post.css gives it
+   this same radius. The exclusion is width-gated, not absolute. */
 main :where(img, video, iframe) {
   border-radius: var(--border-radius);
 }
