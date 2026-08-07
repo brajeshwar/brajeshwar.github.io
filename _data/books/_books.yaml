@@ -85,3 +85,13 @@
   url: /2024/1984/
   img: 1984.webp
   alt: The Manuscript of the book 1984
+
+- title: Leonardo da Vinci
+  author: Walter Isaacson
+  url: /2024/leonardo-da-vinci/
+  img: leonardo-da-vinci.webp
+
+- title: How to Win Friends and Influence People
+  author: Dale Carnegie
+  url: /2016/how-to-win-friends-and-influence-people/
+  img: how-to-win-friends-and-influence-people.webp
