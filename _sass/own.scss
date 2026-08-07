@@ -209,6 +209,48 @@
   color: var(--text-color-low);
 }
 
+/* ---- A monochrome wordmark, painted in the page's ink ------------
+   `-webkit-mask` as well as `mask`: Safari only unprefixed the mask
+   shorthand in 15.4, and this is one declaration, not a build step.
+
+   The mask reads the file's ALPHA and throws its colour away, so the
+   mark is drawn in `background-color` — currentColor, which on this
+   element is --text-color-low and flips with the theme. That is the
+   whole reason a logo is not an <img> here: an external SVG does not
+   inherit `currentColor` from the page, so Peak Design's mark (which
+   they author as `fill="currentcolor"`) would paint black and half
+   vanish on the dark theme.
+
+   ⚠️ MONOCHROME MARKS ONLY. A mask flattens everything it touches to
+   one ink, which is right for a wordmark and wrong for a logo that
+   means something in colour — those take `img:` instead and render as
+   a picture. It also, deliberately, matches the brief this page came
+   from: "minimal/discrete branding, display of logos" kept quiet.
+
+   `--own-logo` is set inline per item because the file is DATA, not
+   style; <photo-cover> already sets its background-image the same way.
+   The fallback keeps the box empty rather than painting a solid block
+   if the property is ever missing.
+
+   ⚠️ THE MASK IS ON A PSEUDO-ELEMENT, NOT ON THE BOX. Putting it on
+   .own__mark--logo itself clips EVERYTHING the element paints — and
+   that includes its border, so the hairline frame every other mark
+   wears silently disappeared and the logo floated free in the row.
+   Masking a child leaves the parent's border alone. Measured, not
+   guessed: the frame was simply gone in the first render. */
+.page-own .own__mark--logo::before {
+  content: "";
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: currentColor;
+
+  -webkit-mask: var(--own-logo, none) center / 84% no-repeat;
+          mask: var(--own-logo, none) center / 84% no-repeat;
+}
+
 /* When it IS a picture, the border is the picture's own edge and the
    type rules are inert — but `object-fit` is not, or a non-square logo
    would stretch. */

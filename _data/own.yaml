@@ -24,13 +24,19 @@
 #             is a feature and not a problem to solve.
 #   items     brand + name, plus:
 #               note  optional — colour, count, whatever the line needs
-#               img   optional — a logo or a picture, bare filename resolving
-#                     under /static/own/. No img renders a typeset mark
-#                     carrying the brand's initial, the same idea as the
-#                     bookplate on /books/: a designed stand-in, never a hole.
+#               logo  optional — a MONOCHROME brand mark, bare filename under
+#                     /static/own/. Drawn as a CSS mask, so it takes the
+#                     page's own ink and follows the light/dark theme. Use
+#                     this for wordmarks. See the note in own.scss.
+#               img   optional — a PICTURE: a product shot, or a logo that
+#                     needs its own colours. Bare filename under /static/own/,
+#                     rendered as a plain <img>. A mask would flatten it.
+#                     Neither one renders a typeset mark carrying the brand's
+#                     initial, the same idea as the bookplate on /books/: a
+#                     designed stand-in, never a hole.
 #               url   optional — makes the whole item a link
 #
-# FIELDS: brand (required), name, note, img, url.
+# FIELDS: brand (required), name, note, logo, img, url.
 # ===========================================================================
 
 - section: Wear
@@ -80,9 +86,11 @@
   rows:
     - label: Bags
       items:
-        - brand: Placeholder
+        - brand: Peak Design
           name: 20L daypack
           note: cabin-legal
+          logo: peak-design.svg
+          url: https://www.peakdesign.com/
         - brand: Placeholder
           name: Sling
           note: everyday
