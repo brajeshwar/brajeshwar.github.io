@@ -57,10 +57,9 @@ title: Books
   TWO SOURCES NOW, AND THAT IS THE WHOLE DESIGN (2026-08-07). Brajeshwar:
   "you can remove the highlight as my favorites into a separate YAML."
 
-  Favorites come from _data/books-favorites.yaml. Everything else comes from
-  _data/books/, a DIRECTORY of one file per initial letter — 01.yaml for
-  numbers and symbols, then a.yaml through z.yaml — split out of the single
-  _data/books.yaml at 167 books ("We have enough list of book and I haven't
+  ONE DIRECTORY, _data/books/, holding everything. `_books.yaml` is the
+  favorites; `01.yaml` is numbers and symbols; `a.yaml`–`z.yaml` are the
+  letters. Split out of the single _data/books.yaml at 167 books ("We have enough list of book and I haven't
   even started adding the ones I missed. This is also going to grow").
 
   ⚠️ THE `highlight` FLAG AND ITS `where_exp` ARE BOTH GONE. The old note here
@@ -69,6 +68,12 @@ title: Books
   favorites file IS the flag, so nothing guarantees the grids are disjoint any
   more. A book listed twice will render twice. The header of each data file
   says so.
+
+  ⚠️ `_books` IS A KEY IN THE SAME HASH and has to be skipped by hand. Jekyll
+  reads an underscore-prefixed file inside _data/ perfectly happily — verified
+  2026-08-07 with a probe page: the keys come back `01|_books|a|b|…|z`, sorting
+  it between 01 and a. Without the `key != "_books"` guard below, the page
+  grows a "_BOOKS" section duplicating the favorites grid.
 
   ⚠️ site.data.books IS A HASH, NOT AN ARRAY. Jekyll turns a data DIRECTORY
   into a hash keyed by filename, iterated in filename order — which is what
@@ -104,6 +109,8 @@ title: Books
   /2024/best-books/ contains "books/" but not "/books/", so it cannot sneak in.
 {%- endcomment -%}
 
+{%- assign favorites = site.data.books['_books'] -%}
+
 {%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
 
 {%- capture books_sub -%}
@@ -113,7 +120,7 @@ Here are some of my all-time favorite books — ones I have read and re-read, an
 {%- endcapture -%}
 
 {% include card-grid.html
-   items   = site.data.books-favorites
+   items   = favorites
    dir     = "books"
    ratio   = "3x4"
    captions = true
@@ -138,7 +145,7 @@ Here are some of my all-time favorite books — ones I have read and re-read, an
 {%- for group in site.data.books -%}
 {%- assign key = group[0] -%}
 {%- assign shelf = group[1] -%}
-{%- if shelf.size > 0 -%}
+{%- if shelf.size > 0 and key != "_books" -%}
 {% if key == "01" %}{% assign letter = "#!" %}{% else %}{% assign letter = key | upcase %}{% endif %}
 {% include card-grid.html
    items   = shelf

@@ -184,7 +184,9 @@ shows the real shape and the home strip crops to 4:3 itself with `object-fit: co
 would throw away the picture the masonry page is there to show.
 
 **Books are already split**, into `_data/books/` — `01.yaml` for numbers and symbols, then
-`a.yaml` through `z.yaml`, one file per initial letter. Jekyll turns a data directory into a hash
+`a.yaml` through `z.yaml`, one file per initial letter, and `_books.yaml` for the favourites.
+**Only `_books.yaml` carries comments** (2026-08-07: "leave the comment in just one of them… to read
+and understand and for the AI to remember"); the letter files are data and nothing else. Jekyll turns a data directory into a hash
 keyed by filename and iterates it in **filename order, not filesystem order** (verified 2026-08-01),
 which is what puts `01` first and `z` last with no sort filter. `/books/` derives its section
 headings from those filenames.
@@ -204,9 +206,9 @@ instead; see the comment in `index.html`. **Do not buy recency back with a `read
 field** — that was proposed and rejected twice, on the ground that a re-read has no single date
 worth recording.
 
-Favourites are their own file, `_data/books-favorites.yaml`, since 2026-08-07 ("you can remove
+Favourites are their own file, `_data/books/_books.yaml`, since 2026-08-07 ("you can remove
 the highlight as my favorites into a separate YAML"). There is no `highlight` key any more:
-being in that file is the flag. The trade is that nothing now guarantees the two grids are
+being in that file is the flag. It sits inside the same directory, so `_books` is a key in `site.data.books` and templates must skip it by name — Jekyll reads underscore-prefixed data files without complaint. The trade is that nothing now guarantees the two grids are
 disjoint the way `where_exp` did — a book listed in both renders twice.
 
 The cost of a directory is a flatten step wherever the whole list is wanted at once, since a

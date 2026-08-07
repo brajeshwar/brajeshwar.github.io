@@ -47,7 +47,7 @@ title: Brajeshwar Oinam
     ONE OF THESE LINES HAS A `reverse` AND THE OTHER NO LONGER DOES.
 
     ⚠️ BOOKS: THIS STRIP NO LONGER SHOWS THE NEWEST. It shows the FAVORITES,
-    from _data/books-favorites.yaml, and that changed on 2026-08-07.
+    from _data/books/_books.yaml, and that changed on 2026-08-07.
 
     _data/books.yaml became _data/books/, one file per initial letter, when the
     shelf passed 167 entries. That was asked for and is right for /books/ — but
@@ -85,7 +85,7 @@ title: Brajeshwar Oinam
   {%- assign home_books_count  = 7 -%}
   {%- assign home_album_count = 13 -%}
 
-  {%- assign books_tail = site.data.books-favorites | slice: 0, home_books_count -%}
+  {%- assign books_tail = site.data.books['_books'] | slice: 0, home_books_count -%}
   {%- comment -%}
     The Books intro paragraph was removed 2026-07-31 on request. The `intro`
     parameter is still supported by the include — nothing else passes one today.

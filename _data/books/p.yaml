@@ -1,27 +1,3 @@
-# ===========================================================================
-# The books shelf — P.
-#
-# One file per initial letter, plus 01.yaml for numbers and symbols. Split out
-# of a single _data/books.yaml on 2026-08-07, at 167 books and growing.
-#
-# ⚠️ FILED BY THE FIRST LETTER THAT IS NOT AN ARTICLE. "The Children" belongs
-# in c.yaml, not t.yaml (Brajeshwar, 2026-08-07). The rule covers "The", "A"
-# and "An" — so "A Room of One's Own" is in r.yaml. /books/ derives its section
-# headings from these FILENAMES, so a book in the wrong file gets the wrong
-# heading; there is no second place to fix it.
-#
-# Entries are alphabetical within the file by that same article-stripped
-# title. Appending to the end instead is fine and self-correcting: the book
-# simply shows last inside its own letter until someone moves it. Nothing
-# derives meaning from position any more — see the note in index.html about
-# what the home strip shows now that "newest" is no longer knowable.
-#
-# FIELDS: title (required), author, url, img, alt.
-# There is NO `highlight` any more. Favorites live in their own file,
-# _data/books-favorites.yaml, so the two grids on /books/ are disjoint because
-# they read different files rather than because a filter says so.
-# ===========================================================================
-
 - title: The Power of Future Machines
   author: Rajiv Malhotra, TN Sudarshan & Manogna Sastry
   url: /2024/books/
