@@ -23,9 +23,21 @@ style: page-own
   and nothing else. Its own CSS only ever touches `.item__cards`, `figure` and
   `figcaption`, none of which this page uses, so it is inert here.
 
-  The measure is now OPT-IN, exactly as on /film/: structure spans the band,
-  and only running prose asks for `container-ideal`. That is the one place the
-  reading width is defined site-wide, so this page no longer restates it.
+  ⚠️ AND NOTHING HERE OPTS INTO THE MEASURE. That is the second half of the
+  same request, and it took two passes to land. The first version copied
+  /film/ — structure at the band, prose at `container-ideal` — which measured
+  as "full width" but did not READ as it: everything above the fold on this
+  page is prose, so a reader sees the 665px column and nothing else until they
+  scroll to the first row. Brajeshwar, twice, and the second time after the
+  layout swap had already shipped: "What happened to making /own/ a full page
+  width design?"
+
+  So the whole page is the band now. The cost is real and worth writing down:
+  1024px of text is ~150 characters a line against the ~66 design.md asks for.
+  It is a fair trade for the lede and the section intros, which are two or
+  three lines each. It is worst for "Notes to self" at the foot, four
+  paragraphs of running prose — put `container-ideal` back on that ONE element
+  if it reads badly, and the rest of the page stays wide.
 
   ⚠️ page.html's `{{ page_edited }}` stamp does not exist on this layout. This
   page carries no `edited:` key, so nothing is lost — but adding one would
@@ -58,7 +70,7 @@ style: page-own
   along with the h1; it is kept because it is still true and says so in his own
   words.
 {%- endcomment -%}
-<blockquote class="own__wip container-ideal">
+<blockquote class="own__wip">
   <p>A thinking-out-loud, work-in-progress thing.</p>
 </blockquote>
 
@@ -70,7 +82,7 @@ style: page-own
   has to say out loud that the goal is for the list to get SHORTER. Named and
   unexplained, it would read as a brag sheet.
 {%- endcomment -%}
-<p class="own__lede container-ideal">
+<p class="own__lede">
   Everything I own that matters enough to write down: a layered modular capsule
   kept monochrome and unbranded, the bag it travels in, and the handful of
   things that stay put. The aim is for this list to get shorter every year, not
@@ -82,7 +94,7 @@ style: page-own
 <section class="own__section">
   <h2 class="own__section-title">{{ section.section }}</h2>
   {%- if section.intro %}
-  <p class="own__section-intro container-ideal">{{ section.intro }}</p>
+  <p class="own__section-intro">{{ section.intro }}</p>
   {%- endif %}
 
   {%- for row in section.rows %}
@@ -187,7 +199,7 @@ style: page-own
   page — but it is marked as notes so it does not read as published copy.
   Nothing else on the page depends on this block; delete it whole if it goes.
 {%- endcomment -%}
-<section class="own__notes container-ideal">
+<section class="own__notes">
   <h2>Notes to self</h2>
 
   <p>My life’s item should be in a single printable A4 size Paper at a readable
