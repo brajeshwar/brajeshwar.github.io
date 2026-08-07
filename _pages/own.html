@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: album
 title: Own
 style: page-own
 ---
@@ -7,12 +7,29 @@ style: page-own
 {%- comment -%}
   /own/ — an inventory, not an article.
 
-  WHY layout: page AND a style hook, rather than a layout of its own.
-  Everything this page needs from `page` it already gets — the h1, the article
-  band, the edited stamp. What it does NOT want is the reading measure clamped
-  around a row of thumbnails. `style: page-own` puts a class on <main> and
-  own.css hangs off that, which is the same deal /devices/ and /archives/
-  strike. A new layout would duplicate page.html to change nothing.
+  WHY layout: album, THE SAME ONE /film/ AND /devices/ USE.
+
+  It was `page` until 2026-08-07. Brajeshwar: "The Own page should be full
+  width of the body width, unlike the need for footnote. Like film, books."
+
+  The <main> was already the full 1024 band under either layout — measured, so
+  the container was never the problem. What page.html adds is
+  `<article class="page">`, and page.css clamps EVERY direct child of that to
+  the 665px measure: `.page > h1`, `> p`, `> blockquote`. So the heading and
+  the prose sat in a narrow column while the rows spanned the band, and the
+  page read as two different widths stitched together.
+
+  `album` is that wrapper's absence — `<main class="album {{ page.style }}">`
+  and nothing else. Its own CSS only ever touches `.item__cards`, `figure` and
+  `figcaption`, none of which this page uses, so it is inert here.
+
+  The measure is now OPT-IN, exactly as on /film/: structure spans the band,
+  and only running prose asks for `container-ideal`. That is the one place the
+  reading width is defined site-wide, so this page no longer restates it.
+
+  ⚠️ page.html's `{{ page_edited }}` stamp does not exist on this layout. This
+  page carries no `edited:` key, so nothing is lost — but adding one would
+  silently render nothing.
 
   ⚠️ THE ROWS REUSE .strip__viewport / .strip FROM home.css ON PURPOSE.
   That is the site's horizontal scroller: a native `overflow-x: auto` rail
@@ -41,7 +58,7 @@ style: page-own
   along with the h1; it is kept because it is still true and says so in his own
   words.
 {%- endcomment -%}
-<blockquote class="own__wip">
+<blockquote class="own__wip container-ideal">
   <p>A thinking-out-loud, work-in-progress thing.</p>
 </blockquote>
 
@@ -53,7 +70,7 @@ style: page-own
   has to say out loud that the goal is for the list to get SHORTER. Named and
   unexplained, it would read as a brag sheet.
 {%- endcomment -%}
-<p class="own__lede">
+<p class="own__lede container-ideal">
   Everything I own that matters enough to write down: a layered modular capsule
   kept monochrome and unbranded, the bag it travels in, and the handful of
   things that stay put. The aim is for this list to get shorter every year, not
@@ -65,7 +82,7 @@ style: page-own
 <section class="own__section">
   <h2 class="own__section-title">{{ section.section }}</h2>
   {%- if section.intro %}
-  <p class="own__section-intro">{{ section.intro }}</p>
+  <p class="own__section-intro container-ideal">{{ section.intro }}</p>
   {%- endif %}
 
   {%- for row in section.rows %}
@@ -131,7 +148,7 @@ style: page-own
               colorful photos"). A monochrome-mask version of this existed for
               a few hours and is gone; the plate behind the picture is what
               makes a brand's own colours legible on both themes, rather than
-              repainting the mark in ours. See `--mark-plate` in own.scss.
+              repainting the mark in ours. See `--logo-plate` in themes.scss.
             {%- endcomment -%}
             {%- if item.img -%}
             {%- assign first = item.img | slice: 0 -%}
@@ -170,7 +187,7 @@ style: page-own
   page — but it is marked as notes so it does not read as published copy.
   Nothing else on the page depends on this block; delete it whole if it goes.
 {%- endcomment -%}
-<section class="own__notes">
+<section class="own__notes container-ideal">
   <h2>Notes to self</h2>
 
   <p>My life’s item should be in a single printable A4 size Paper at a readable

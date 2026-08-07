@@ -19,8 +19,10 @@
    type, no fills, no shadows, no colour of its own.
    ============================================================ */
 
+/* Width comes from `container-ideal` in the markup, not from here — the
+   measure is defined in one place site-wide and /film/ opts in the same way.
+   This rule is only the colour and the space under it. */
 .page-own .own__lede {
-  max-width: var(--measure);
   margin-bottom: var(--space-l);
   color: var(--text-color-low);
 }
@@ -45,7 +47,6 @@
 }
 
 .page-own .own__section-intro {
-  max-width: var(--measure);
   margin: var(--space-3xs) 0 var(--space-s);
   font-size: var(--step--1);
   color: var(--text-color-low);
@@ -259,7 +260,6 @@
    narrow so it reads as a margin note rather than as page copy. When
    it goes, this rule goes with it. */
 .page-own .own__notes {
-  max-width: var(--measure);
   margin-top: var(--space-xl);
   padding-top: var(--space-s);
   border-top: var(--border-size) var(--border-style) var(--border-color-low);
