@@ -1,0 +1,100 @@
+# ===========================================================================
+# The books shelf — S.
+#
+# One file per initial letter, plus 01.yaml for numbers and symbols. Split out
+# of a single _data/books.yaml on 2026-08-07, at 167 books and growing.
+#
+# ⚠️ FILED BY THE FIRST LETTER THAT IS NOT AN ARTICLE. "The Children" belongs
+# in c.yaml, not t.yaml (Brajeshwar, 2026-08-07). The rule covers "The", "A"
+# and "An" — so "A Room of One's Own" is in r.yaml. /books/ derives its section
+# headings from these FILENAMES, so a book in the wrong file gets the wrong
+# heading; there is no second place to fix it.
+#
+# Entries are alphabetical within the file by that same article-stripped
+# title. Appending to the end instead is fine and self-correcting: the book
+# simply shows last inside its own letter until someone moves it. Nothing
+# derives meaning from position any more — see the note in index.html about
+# what the home strip shows now that "newest" is no longer knowable.
+#
+# FIELDS: title (required), author, url, img, alt.
+# There is NO `highlight` any more. Favorites live in their own file,
+# _data/books-favorites.yaml, so the two grids on /books/ are disjoint because
+# they read different files rather than because a filter says so.
+# ===========================================================================
+
+- title: The Sands of Time
+  author: Sidney Sheldon
+  url: /2025/books/
+  img: the-sands-of-time.webp
+
+- title: Sapiens
+  author: Yuval Noah Harari
+  url: /2022/books/
+  img: sapiens.webp
+
+- title: Saying No to Jugaad
+  author: TN Hari & MS Subramanian
+  url: /2020/books/
+  img: saying-no-to-jugaad.webp
+
+- title: The Secret of Secrets
+  author: Dan Brown
+  url: /2025/the-secret-of-secrets/
+  img: the-secret-of-secrets.webp
+
+- title: The Secret to Success
+  author: Eric Thomas
+  url: /2018/books/
+
+- title: The Selfish Gene
+  author: Richard Dawkins
+  url: /2020/books/
+  img: the-selfish-gene.webp
+
+- title: Show and Tell
+  author: Dan Roam
+  url: /2019/books/
+
+- title: Silver Spoon Kids
+  author: Eileen Gallo & Jon Gallo
+  url: /2021/books/
+  img: silver-spoon-kids.webp
+
+- title: Simplify
+  author: Joshua Becker
+  url: /2018/books/
+
+- title: Smartcuts
+  author: Shane Snow
+  url: /2018/books/
+
+- title: So Good They Can’t Ignore You
+  author: Cal Newport
+  url: /2018/books/
+  img: so-good-they-cant-ignore-you.webp
+
+- title: Start With Why
+  author: Simon Sinek
+  url: /2019/books/
+  img: start-with-why.webp
+
+- title: Stillness Is the Key
+  author: Ryan Holiday
+  url: /2019/books/
+  img: stillness-is-the-key.webp
+
+- title: The Story of My Experiments with Truth
+  author: Mohandas Karamchand Gandhi
+  url: /2021/the-story-of-my-experiments-with-truth/
+  img: mahatma-gandhi.webp
+  alt: Mahatma Gandhi
+
+- title: The Subtle Art of Not Giving a F*ck
+  author: Mark Manson
+  url: /2018/books/
+  img: the-subtle-art-of-not-giving-a-f-ck.webp
+
+- title: Superintelligence
+  author: Nick Bostrom
+  url: /2018/books/
+  img: superintelligence.webp

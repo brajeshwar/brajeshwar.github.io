@@ -46,32 +46,46 @@ title: Brajeshwar Oinam
     ⚠️ THE TWO SHELVES DISAGREE ABOUT WHERE "NEWEST" LIVES, AND THAT IS WHY
     ONE OF THESE LINES HAS A `reverse` AND THE OTHER NO LONGER DOES.
 
-    BOOKS: newest is FIRST in the file, since 2026-08-04. Brajeshwar: "We need
-    to reverse the books shown in the home page. The last one should be the
-    first in the books.yaml as I will add at the top and not at the bottom."
-    So the strip is a plain `slice` off the head — no reverse — and /books/,
-    which never had one, now agrees with it for free. What he types at the top
-    of _data/books.yaml is what appears at the left of this strip and at the
-    top of /books/, with no mental flip in between. That was the point.
+    ⚠️ BOOKS: THIS STRIP NO LONGER SHOWS THE NEWEST. It shows the FAVORITES,
+    from _data/books-favorites.yaml, and that changed on 2026-08-07.
 
-    This REVERSES the protocol recorded here on 2026-08-01, kept because it is
-    the reasoning and not just the rule — Brajeshwar then: "the latest is
-    always the last entry in the YAML file… The reason I do not want to or need
-    to record read is that I tend to re-read books a lot and honestly does not
-    matter. I do not want to maintain another record."
+    _data/books.yaml became _data/books/, one file per initial letter, when the
+    shelf passed 167 entries. That was asked for and is right for /books/ — but
+    it costs this strip the only thing it was built on. The rule below used to
+    be that position in the file IS the record of recency, so the newest seven
+    were a plain `slice` off the head. An A–Z split scatters chronology across
+    26 files and nothing left in the data encodes when a book arrived.
 
-    ALBUM: unchanged. _data/album.yaml is still newest-LAST, so that line below
-    still does reverse → take. Only the books convention moved.
+    So the choice was: a false recency claim on the front page, or a different
+    and honest one. Favorites is the only ordering the data still carries a
+    meaning for, it needs no new field, and promoting a book is moving one
+    entry between two files.
 
-    ⚠️ The half that did NOT change, and must not: do NOT add a `read:` or
-    `added:` date and sort on it. That was suggested and rejected on the good
-    ground that a re-read has no single date worth recording, and a second
-    field is a second thing to keep true. Position in the file IS the record.
+    ⚠️ IT DID NOT FAIL LOUDLY WHEN IT BROKE. `site.data.books` is a HASH once
+    it is a directory, and `slice` on a hash does not raise — the strip quietly
+    rendered ONE item instead of seven and the build stayed green. If this ever
+    reads oddly again, count the items before trusting the exit code.
+
+    THE COST, stated so it is a choice and not a surprise: these are the same
+    four books as the Personal Favorites grid at the top of /books/, so the
+    front page and that page now open with the same covers. If that repetition
+    grates, the alternatives are a random handful each build (honest, needs no
+    data) or dropping the strip. Say which.
+
+    The half that has NOT changed, and must not: do NOT add a `read:` or
+    `added:` date to win recency back. Rejected 2026-08-01 on good ground —
+    "The reason I do not want to or need to record read is that I tend to
+    re-read books a lot and honestly does not matter. I do not want to maintain
+    another record." The split traded recency away; a new field is not the way
+    to buy it back.
+
+    ALBUM: unchanged. _data/album.yaml is still a single file, still
+    newest-LAST, so its line below still does reverse then take.
   {%- endcomment -%}
   {%- assign home_books_count  = 7 -%}
   {%- assign home_album_count = 13 -%}
 
-  {%- assign books_tail = site.data.books | slice: 0, home_books_count -%}
+  {%- assign books_tail = site.data.books-favorites | slice: 0, home_books_count -%}
   {%- comment -%}
     The Books intro paragraph was removed 2026-07-31 on request. The `intro`
     parameter is still supported by the include — nothing else passes one today.

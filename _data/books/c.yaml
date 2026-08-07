@@ -1,0 +1,86 @@
+# ===========================================================================
+# The books shelf — C.
+#
+# One file per initial letter, plus 01.yaml for numbers and symbols. Split out
+# of a single _data/books.yaml on 2026-08-07, at 167 books and growing.
+#
+# ⚠️ FILED BY THE FIRST LETTER THAT IS NOT AN ARTICLE. "The Children" belongs
+# in c.yaml, not t.yaml (Brajeshwar, 2026-08-07). The rule covers "The", "A"
+# and "An" — so "A Room of One's Own" is in r.yaml. /books/ derives its section
+# headings from these FILENAMES, so a book in the wrong file gets the wrong
+# heading; there is no second place to fix it.
+#
+# Entries are alphabetical within the file by that same article-stripped
+# title. Appending to the end instead is fine and self-correcting: the book
+# simply shows last inside its own letter until someone moves it. Nothing
+# derives meaning from position any more — see the note in index.html about
+# what the home strip shows now that "newest" is no longer knowable.
+#
+# FIELDS: title (required), author, url, img, alt.
+# There is NO `highlight` any more. Favorites live in their own file,
+# _data/books-favorites.yaml, so the two grids on /books/ are disjoint because
+# they read different files rather than because a filter says so.
+# ===========================================================================
+
+- title: Can’t Hurt Me
+  author: David Goggins
+  url: /2020/books/
+  img: cant-hurt-me.webp
+
+- title: The Checklist Manifesto
+  author: Atul Gawande
+  url: /2018/books/
+  img: the-checklist-manifesto.webp
+
+- title: Chip War
+  author: Chris Miller
+  url: /2024/books/
+  img: chip-war.webp
+
+- title: The Choice
+  author: Edith Eger
+  url: /2020/books/
+  img: the-choice.webp
+
+- title: The Climate Solution
+  author: Mridula Ramesh
+  url: /2020/books/
+
+- title: The Code Breaker
+  author: Walter Isaacson
+  url: /2022/books/
+  img: the-code-breaker.webp
+
+- title: The Cold Start Problem
+  author: Andrew Chen
+  url: /2024/books/
+  img: the-cold-start-problem.webp
+
+- title: The Corn Maiden and Other Nightmares
+  author: Joyce Carol Oates
+  url: /2026/books/
+  img: the-corn-maiden-and-other-nightmares.webp
+
+- title: The Corporation in the Twenty-First Century
+  author: John Kay
+  url: /2026/books/
+
+- title: The Courage to Be Disliked
+  author: Ichiro Kishimi & Fumitake Koga
+  url: /2023/books/
+  img: the-courage-to-be-disliked.webp
+
+- title: The Creativity Code
+  author: Marcus du Sautoy
+  url: /2022/books/
+  img: the-creativity-code.webp
+
+- title: Crossing the Chasm
+  author: Geoffrey A. Moore
+  url: /2020/books/
+  img: crossing-the-chasm.webp
+
+- title: The Culture Code
+  author: Daniel Coyle
+  url: /2019/books/
+  img: the-culture-code.webp

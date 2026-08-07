@@ -1,0 +1,93 @@
+# ===========================================================================
+# The books shelf — H.
+#
+# One file per initial letter, plus 01.yaml for numbers and symbols. Split out
+# of a single _data/books.yaml on 2026-08-07, at 167 books and growing.
+#
+# ⚠️ FILED BY THE FIRST LETTER THAT IS NOT AN ARTICLE. "The Children" belongs
+# in c.yaml, not t.yaml (Brajeshwar, 2026-08-07). The rule covers "The", "A"
+# and "An" — so "A Room of One's Own" is in r.yaml. /books/ derives its section
+# headings from these FILENAMES, so a book in the wrong file gets the wrong
+# heading; there is no second place to fix it.
+#
+# Entries are alphabetical within the file by that same article-stripped
+# title. Appending to the end instead is fine and self-correcting: the book
+# simply shows last inside its own letter until someone moves it. Nothing
+# derives meaning from position any more — see the note in index.html about
+# what the home strip shows now that "newest" is no longer knowable.
+#
+# FIELDS: title (required), author, url, img, alt.
+# There is NO `highlight` any more. Favorites live in their own file,
+# _data/books-favorites.yaml, so the two grids on /books/ are disjoint because
+# they read different files rather than because a filter says so.
+# ===========================================================================
+
+- title: Hackers & Painters
+  author: Paul Graham
+  url: /2020/books/
+  img: hackers-painters.webp
+
+- title: High Growth Handbook
+  author: Elad Gil
+  url: /2020/books/
+  img: high-growth-handbook.webp
+
+- title: Hit Refresh
+  author: Satya Nadella
+  url: /2018/books/
+  img: hit-refresh.webp
+
+- title: How I Almost Blew It
+  author: Sidharth Rao
+  url: /2019/books/
+  img: how-i-almost-blew-it.webp
+
+- title: How Not to Be Wrong
+  author: Jordan Ellenberg
+  url: /2023/books/
+  img: how-not-to-be-wrong.webp
+
+- title: How the World Really Works
+  author: Vaclav Smil
+  url: /2026/books/
+  img: how-the-world-really-works.webp
+
+- title: How To
+  author: Randall Munroe
+  url: /2020/books/
+  img: how-to.webp
+
+- title: How to Avoid a Climate Disaster
+  author: Bill Gates
+  url: /2021/books/
+  img: how-to-avoid-a-climate-disaster.webp
+
+- title: How to Be Perfect
+  author: Michael Schur
+  url: /2023/books/
+  img: how-to-be-perfect.webp
+
+- title: How to Read a Book
+  author: Mortimer J. Adler & Charles Van Doren
+  url: /2026/how-to-read-a-book/
+  img: how-to-read-a-book.webp
+
+- title: How to Read a Person Like a Book
+  author: Gerard I. Nierenberg & Henry H. Calero
+  url: /2018/books/
+  img: how-to-read-a-person-like-a-book.webp
+
+- title: How to Talk So Kids Will Listen and Listen So Kids Will Talk
+  author: Adele Faber & Elaine Mazlish
+  url: /2022/books/
+  img: how-to-talk-so-kids-will-listen-and-listen-so-kids-will-talk.webp
+
+- title: How to Win Friends and Influence People
+  author: Dale Carnegie
+  url: /2016/how-to-win-friends-and-influence-people/
+  img: how-to-win-friends-and-influence-people.webp
+
+- title: How We Got to Now
+  author: Steven Johnson
+  url: /2024/how-we-got-to-now/
+  img: how-we-got-to-now.webp

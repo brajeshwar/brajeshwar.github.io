@@ -183,16 +183,34 @@ Album thumbnails are cut at their **native** aspect ratio, never pre-cropped to 
 shows the real shape and the home strip crops to 4:3 itself with `object-fit: cover`; pre-cropping
 would throw away the picture the masonry page is there to show.
 
-**When one file gets unwieldy**, split it into a directory — `_data/books/2024.yaml`,
-`2025.yaml`, and so on. Jekyll turns `_data/books/` into a hash keyed by filename and iterates
-it in **filename order, not filesystem order** (verified 2026-08-01 by creating the files out
-of sequence: 2026 → 2024 → 2025 still read back 2024 → 2025 → 2026). So "the last entry is the
-newest" still holds globally, as long as filenames sort ascending — which is why the split is
-**by year, never by letter**. An alphabetical split would scatter chronology across files and
-break the one rule the whole thing rests on.
+**Books are already split**, into `_data/books/` — `01.yaml` for numbers and symbols, then
+`a.yaml` through `z.yaml`, one file per initial letter. Jekyll turns a data directory into a hash
+keyed by filename and iterates it in **filename order, not filesystem order** (verified 2026-08-01),
+which is what puts `01` first and `z` last with no sort filter. `/books/` derives its section
+headings from those filenames.
 
-The cost is a flatten step wherever the list is used, since a directory is a hash of arrays
-rather than one array:
+⚠️ **A book is filed by the first letter that is not an article.** "The Children" belongs in
+`c.yaml`, and the rule covers *The*, *A* and *An* — so *A Room of One's Own* is in `r.yaml`
+(Brajeshwar, 2026-08-07). The filename is the only place that knows the right letter; deriving
+headings from titles instead would put every *The …* under T, which is the thing this fixes.
+
+⚠️ **This paragraph used to say "by year, never by letter."** That advice was written on
+2026-08-01 and was right for what the data then encoded: position in the file was the record of
+recency, so an alphabetical split would "scatter chronology across files and break the one rule
+the whole thing rests on." It did exactly that, deliberately, on 2026-08-07 — the shelf reached
+167 entries and an A–Z index became worth more than the ordering. The cost landed on the home
+page, whose Books strip could no longer show the newest seven and now shows the favourites
+instead; see the comment in `index.html`. **Do not buy recency back with a `read:` or `added:`
+field** — that was proposed and rejected twice, on the ground that a re-read has no single date
+worth recording.
+
+Favourites are their own file, `_data/books-favorites.yaml`, since 2026-08-07 ("you can remove
+the highlight as my favorites into a separate YAML"). There is no `highlight` key any more:
+being in that file is the flag. The trade is that nothing now guarantees the two grids are
+disjoint the way `where_exp` did — a book listed in both renders twice.
+
+The cost of a directory is a flatten step wherever the whole list is wanted at once, since a
+directory is a hash of arrays rather than one array:
 
 ```liquid
 {% raw %}{% assign books = "" | split: "" %}
@@ -201,12 +219,15 @@ rather than one array:
 
 ⚠️ That snippet is wrapped in a Liquid **raw** block in this page's source, and has to be.
 Liquid runs **before** Markdown, so a fenced code block is no protection: the example executed
-on first write and took the build down with *"concat filter requires an array argument"*,
-because `site.data.books` is still a flat array here, not a directory. Naming the tag in prose
-does it too — a bare mention of it outside a raw block reads as an unclosed opening tag and
-fails with *"'raw' tag was never closed"*. Both mistakes were made writing this paragraph.
+on first write and took the build down. Naming the tag in prose does it too — a bare mention
+outside a raw block reads as an unclosed opening tag and fails with *"'raw' tag was never
+closed"*. Both mistakes were made writing this paragraph.
 
-Not worth paying until editing one file is genuinely annoying — a few hundred entries is fine.
+⚠️ **`slice`, `where` and `where_exp` all stop working** on a directory, and `slice` does it
+**silently** — `index.html` kept building green while its Books strip rendered one item instead
+of seven. Count the items; do not trust the exit code. Inside an `include` tag, `group[0]` and
+`group[1]` are a hard error instead ("Invalid syntax for include tag"), so assign them to plain
+variables first.
 
 ### Where they go
 

@@ -1,0 +1,63 @@
+# ===========================================================================
+# The books shelf — E.
+#
+# One file per initial letter, plus 01.yaml for numbers and symbols. Split out
+# of a single _data/books.yaml on 2026-08-07, at 167 books and growing.
+#
+# ⚠️ FILED BY THE FIRST LETTER THAT IS NOT AN ARTICLE. "The Children" belongs
+# in c.yaml, not t.yaml (Brajeshwar, 2026-08-07). The rule covers "The", "A"
+# and "An" — so "A Room of One's Own" is in r.yaml. /books/ derives its section
+# headings from these FILENAMES, so a book in the wrong file gets the wrong
+# heading; there is no second place to fix it.
+#
+# Entries are alphabetical within the file by that same article-stripped
+# title. Appending to the end instead is fine and self-correcting: the book
+# simply shows last inside its own letter until someone moves it. Nothing
+# derives meaning from position any more — see the note in index.html about
+# what the home strip shows now that "newest" is no longer knowable.
+#
+# FIELDS: title (required), author, url, img, alt.
+# There is NO `highlight` any more. Favorites live in their own file,
+# _data/books-favorites.yaml, so the two grids on /books/ are disjoint because
+# they read different files rather than because a filter says so.
+# ===========================================================================
+
+- title: Early Indians
+  author: Tony Joseph
+  url: /2020/books/
+  img: early-indians.webp
+
+- title: Earthquake Boy
+  author: Leela Gour Broome
+  url: /2020/books/
+  img: earthquake-boy.webp
+
+- title: Effortless
+  author: Greg McKeown
+  url: /2022/books/
+  img: effortless.webp
+
+- title: Ego Is the Enemy
+  author: Ryan Holiday
+  url: /2018/books/
+  img: ego-is-the-enemy.webp
+
+- title: Elon Musk
+  author: Walter Isaacson
+  url: /2023/books/
+  img: elon-musk.webp
+
+- title: The End of Jobs
+  author: Taylor Pearson
+  url: /2018/books/
+  img: the-end-of-jobs.webp
+
+- title: The Entrepreneur Roller Coaster
+  author: Darren Hardy
+  url: /2018/books/
+  img: the-entrepreneur-roller-coaster.webp
+
+- title: Essentialism
+  author: Greg McKeown
+  url: /2022/books/
+  img: essentialism.webp
