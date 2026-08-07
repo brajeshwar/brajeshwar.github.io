@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Wear
-style: page-wear
+title: Own
+style: page-own
 ---
 
 {%- comment -%}
-  /wear/ — an inventory, not an article.
+  /own/ — an inventory, not an article.
 
   WHY layout: page AND a style hook, rather than a layout of its own.
   Everything this page needs from `page` it already gets — the h1, the article
   band, the edited stamp. What it does NOT want is the reading measure clamped
-  around a row of thumbnails. `style: page-wear` puts a class on <main> and
-  wear.css hangs off that, which is the same deal /devices/ and /archives/
+  around a row of thumbnails. `style: page-own` puts a class on <main> and
+  own.css hangs off that, which is the same deal /devices/ and /archives/
   strike. A new layout would duplicate page.html to change nothing.
 
   ⚠️ THE ROWS REUSE .strip__viewport / .strip FROM home.css ON PURPOSE.
@@ -21,7 +21,7 @@ style: page-wear
   accessible, and default.html gates the script on the literal string
   `class="strip__viewport"` — so that attribute must stay EXACTLY that, with
   no extra classes in it, or the arrows silently stop shipping. Page-specific
-  overrides are therefore written as `.page-wear .strip…` in wear.css.
+  overrides are therefore written as `.page-own .strip…` in own.css.
 
   Brajeshwar, 2026-08-07: "WEAR will have a line by line items of, say, pants,
   shirts, bags, etc. And the brands I wear. Some lines may be long and hence
@@ -29,38 +29,71 @@ style: page-wear
 {%- endcomment -%}
 
 {%- comment -%}
-  The h1 is emitted here rather than left to a `# Wear` in the content, because
+  The h1 is emitted here rather than left to a `# Own` in the content, because
   this file has no Markdown body for jekyll-titles-from-headings to strip one
-  out of. Change `title:` in the front matter and both the tab and the heading
-  follow — which is the point, given that Own-vs-Wear is still open.
+  out of. Change `title:` and both the tab and the heading follow.
 {%- endcomment -%}
 <h1>{{ page.title }}</h1>
 
 {%- comment -%}
-  Verbatim from the COMMITTED wear.md, which carried it under `# Own`. His
-  working copy had dropped it along with the h1; it is kept because it is still
-  true of the page and says so in his own words.
+  Verbatim from the COMMITTED wear.md, which carried it under `# Own` — the
+  title this page has now come back to. His working copy had dropped the line
+  along with the h1; it is kept because it is still true and says so in his own
+  words.
 {%- endcomment -%}
-<blockquote class="wear__wip">
+<blockquote class="own__wip">
   <p>A thinking-out-loud, work-in-progress thing.</p>
 </blockquote>
 
-<p class="wear__lede">
-  A layered modular capsule, kept monochrome and unbranded, and a short list of
-  everything else that has to fit in a bag. Each line is a category; a long one
-  scrolls sideways rather than wrapping.
+{%- comment -%}
+  ⚠️ THE LEDE HAS TO CARRY THE TENSION IN THE TITLE, or the page reads as the
+  opposite of what it is. "Own" is the only honest superset — everything here
+  is owned, and unlike "Wear" it does not break the first time a laptop or a
+  bicycle joins the list. But a page called Own, on a site about minimizing,
+  has to say out loud that the goal is for the list to get SHORTER. Named and
+  unexplained, it would read as a brag sheet.
+{%- endcomment -%}
+<p class="own__lede">
+  Everything I own that matters enough to write down: a layered modular capsule
+  kept monochrome and unbranded, the bag it travels in, and the handful of
+  things that stay put. The aim is for this list to get shorter every year, not
+  longer. Each line is a category; a long one scrolls sideways rather than
+  wrapping.
 </p>
 
-{%- for section in site.data.wear %}
-<section class="wear__section">
-  <h2 class="wear__section-title">{{ section.section }}</h2>
+{%- for section in site.data.own %}
+<section class="own__section">
+  <h2 class="own__section-title">{{ section.section }}</h2>
   {%- if section.intro %}
-  <p class="wear__section-intro">{{ section.intro }}</p>
+  <p class="own__section-intro">{{ section.intro }}</p>
   {%- endif %}
 
   {%- for row in section.rows %}
-  <div class="wear__row">
-    <h3 class="wear__label">{{ row.label }}</h3>
+  <div class="own__row">
+    {%- comment -%}
+      ⚠️ THE LABEL IS WRAPPED, even though it is usually the only thing in
+      there. The row is a two-column grid, and an optional third child
+      (the cross-link) was auto-placed into the RAIL's cell and pushed the rail
+      onto a second grid row. Pinning all three with grid-column/grid-row fixed
+      that and introduced a subtler one: the link sat at the bottom of the tall
+      spanned row, level with the last item rather than under its own label.
+
+      A wrapper is the honest fix. The grid keeps exactly two children whatever
+      the row carries, the label and its link stack normally inside it, and
+      there is no explicit placement to keep in sync with the narrow layout.
+
+      An optional cross-link, built for one case and general anyway: Devices
+      points at /devices/, which is the SAME OBJECTS IN A DIFFERENT TENSE —
+      that page is the lineage since 1999, dead hardware included; this row is
+      what is in the house today. Merging them would mean either losing the
+      history or putting retired phones on an inventory.
+    {%- endcomment -%}
+    <div class="own__labelbox">
+      <h3 class="own__label">{{ row.label }}</h3>
+      {%- if row.link %}
+      <p class="own__label-link"><a href="{{ row.link | relative_url }}">{{ row.link_text | default: "More" }}</a></p>
+      {%- endif %}
+    </div>
 
     <div class="strip__viewport">
       <button class="strip__nav strip__nav--prev" type="button"
@@ -68,9 +101,9 @@ style: page-wear
         <span aria-hidden="true">&lsaquo;</span>
       </button>
 
-      <ul class="strip wear__rail">
+      <ul class="strip own__rail">
         {%- for item in row.items %}
-        <li class="strip__item wear__item">
+        <li class="strip__item own__item">
           {%- comment -%}
             NO url YET → a <span>, not <a href="">. An empty href is not an
             inert link: it points at the current page, takes tab focus and
@@ -80,9 +113,9 @@ style: page-wear
           {%- endcomment -%}
           {%- if item.url -%}
           {%- assign proto = item.url | slice: 0, 4 -%}
-          <a class="wear__link" href="{% if proto == 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if proto == 'http' %} rel="noopener"{% endif %}>
+          <a class="own__link" href="{% if proto == 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if proto == 'http' %} rel="noopener"{% endif %}>
           {%- else -%}
-          <span class="wear__link">
+          <span class="own__link">
           {%- endif -%}
 
             {%- comment -%}
@@ -98,16 +131,16 @@ style: page-wear
             {%- if item.img -%}
             {%- assign first = item.img | slice: 0 -%}
             {%- if first == "/" -%}{%- assign src = item.img -%}
-            {%- else -%}{%- assign src = "/static/wear/" | append: item.img -%}{%- endif -%}
-            <img class="wear__mark wear__mark--img" src="{{ src | relative_url }}"
+            {%- else -%}{%- assign src = "/static/own/" | append: item.img -%}{%- endif -%}
+            <img class="own__mark own__mark--img" src="{{ src | relative_url }}"
                  alt="" loading="lazy" width="120" height="120">
             {%- else -%}
-            <span class="wear__mark" aria-hidden="true">{{ item.brand | slice: 0 }}</span>
+            <span class="own__mark" aria-hidden="true">{{ item.brand | slice: 0 }}</span>
             {%- endif -%}
 
-            <span class="wear__brand">{{ item.brand }}</span>
-            {%- if item.name %}<span class="wear__name">{{ item.name }}</span>{% endif %}
-            {%- if item.note %}<span class="wear__note">{{ item.note }}</span>{% endif %}
+            <span class="own__brand">{{ item.brand }}</span>
+            {%- if item.name %}<span class="own__name">{{ item.name }}</span>{% endif %}
+            {%- if item.note %}<span class="own__note">{{ item.note }}</span>{% endif %}
 
           {%- if item.url %}</a>{% else %}</span>{% endif -%}
         </li>
@@ -132,7 +165,7 @@ style: page-wear
   page — but it is marked as notes so it does not read as published copy.
   Nothing else on the page depends on this block; delete it whole if it goes.
 {%- endcomment -%}
-<section class="wear__notes">
+<section class="own__notes">
   <h2>Notes to self</h2>
 
   <p>My life’s item should be in a single printable A4 size Paper at a readable

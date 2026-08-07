@@ -43,11 +43,11 @@
   coupled this to three pages that want a wrapping grid, not a clipped single
   row.
 
-  /wear/ used to be in that list and is not any more (2026-08-07): it is now an
+  /own/ used to be in that list and is not any more (2026-08-07): it is now an
   inventory of scrolling rows and REUSES .strip__viewport / .strip from
   home.css rather than the grid, overriding three declarations under a
-  `.page-wear` prefix. So this component now has a second caller — keep any
-  change here anchored to what both pages need, and see _sass/wear.scss for
+  `.page-own` prefix. So this component now has a second caller — keep any
+  change here anchored to what both pages need, and see _sass/own.scss for
   which parts it deliberately undoes.
 {%- endcomment -%}
 {% if include.items %}

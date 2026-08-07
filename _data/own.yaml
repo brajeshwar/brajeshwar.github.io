@@ -1,5 +1,10 @@
 # ===========================================================================
-# /wear/ — the things owned, worn and carried.
+# /own/ — the things owned, worn and carried.
+#
+# Renamed from /wear/ on 2026-08-07. "Wear" named only the first of three
+# groups; "Own" is the honest superset and does not break the first time a
+# laptop or a bicycle joins the list. The third group was called Own and is now
+# KEEP, which frees the word for the page itself.
 #
 # ⚠️ EVERY ITEM BELOW IS A PLACEHOLDER. Not one of them is a claim about what
 # Brajeshwar actually owns — they are there so the layout has something to
@@ -12,14 +17,15 @@
 #             consider this an 'Own' or 'Wear'"). Both live on one page for
 #             now, so the decision can be made by looking at it rather than in
 #             the abstract — and if it later splits into two pages, a section
-#             lifts out whole.
+#             lifts out whole. Settled 2026-08-07: the page is Own, the groups
+#             are Wear / Carry / Keep.
 #   rows      one line of the inventory: Shirts, Bags, Devices. A row scrolls
 #             sideways on its own when it outgrows the column, so a long line
 #             is a feature and not a problem to solve.
 #   items     brand + name, plus:
 #               note  optional — colour, count, whatever the line needs
 #               img   optional — a logo or a picture, bare filename resolving
-#                     under /static/wear/. No img renders a typeset mark
+#                     under /static/own/. No img renders a typeset mark
 #                     carrying the brand's initial, the same idea as the
 #                     bookplate on /books/: a designed stand-in, never a hole.
 #               url   optional — makes the whole item a link
@@ -88,10 +94,15 @@
         - brand: Placeholder
           name: Dopp kit
 
-- section: Own
-  intro: Electronics and the rest, each with a renewal date rather than a purchase date.
+- section: Keep
+  intro: What stays put. Each line carries a renewal year rather than a purchase date.
   rows:
     - label: Devices
+      # ⚠️ /devices/ is the SAME OBJECTS IN A DIFFERENT TENSE — the lineage
+      # since 1999, dead hardware included. This row is what is in the house
+      # today. Two pages, one link, no duplication.
+      link: /devices/
+      link_text: the lineage since 1999
       items:
         - brand: Placeholder
           name: Laptop

@@ -1,13 +1,13 @@
 @use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
-   Wear — /wear/ only, via `style: page-wear` on <main>.
+   Own — /own/ only, via `style: page-own` on <main>.
    ------------------------------------------------------------
    An inventory, not an article. The page is a stack of LINES:
    a category on the left, its items running off to the right
    and scrolling when they outgrow the column.
 
-   ⚠️ EVERY SELECTOR IS ANCHORED TO .page-wear. Since 2026-07-27
+   ⚠️ EVERY SELECTOR IS ANCHORED TO .page-own. Since 2026-07-27
    every stylesheet reaches every page, and this file overrides
    .strip / .strip__viewport, which the HOME PAGE depends on.
    An unanchored rule here would rewrite the book and photo
@@ -19,29 +19,32 @@
    type, no fills, no shadows, no colour of its own.
    ============================================================ */
 
-.page-wear .wear__lede {
+.page-own .own__lede {
   max-width: var(--measure);
   margin-bottom: var(--space-l);
   color: var(--text-color-low);
 }
 
-/* ---- A section: Wear / Carry / Own ------------------------------
-   Three of them for now because the split is undecided (2026-08-07:
-   "I'm still un-decided on if I consider this an 'Own' or 'Wear'").
-   They are deliberately weak dividers — a heading and space, no rule
-   — so that merging two of them, or lifting one onto its own page,
-   is a data edit and not a visual redesign. */
-.page-wear .wear__section {
+/* ---- A section: Wear / Carry / Keep -----------------------------
+   The page was /wear/ until 2026-08-07, which named only the first of
+   the three. "Own" is the honest superset and survives the first
+   laptop or bicycle; the group that used to be called Own is now
+   KEEP, which frees the word for the page.
+
+   Deliberately weak dividers — a heading and space, no rule — so that
+   merging two of them, or lifting one onto its own page, stays a data
+   edit rather than a visual redesign. */
+.page-own .own__section {
   margin-block: var(--space-xl) 0;
 }
 
-.page-wear .wear__section-title {
+.page-own .own__section-title {
   margin: 0;
   font-size: var(--step-1);
   font-weight: 400;
 }
 
-.page-wear .wear__section-intro {
+.page-own .own__section-intro {
   max-width: var(--measure);
   margin: var(--space-3xs) 0 var(--space-s);
   font-size: var(--step--1);
@@ -59,7 +62,7 @@
    track refuses to shrink below the full width of every item laid end
    to end, the row never overflows, and the horizontal scroll — the
    entire point of this page — silently never happens. */
-.page-wear .wear__row {
+.page-own .own__row {
   display: grid;
   grid-template-columns: 7rem minmax(0, 1fr);
   gap: var(--space-xs);
@@ -69,18 +72,24 @@
   border-top: var(--border-size-hairline) var(--border-style) var(--border-color-low);
 }
 
-.page-wear .wear__row > .strip__viewport {
+.page-own .own__row > .strip__viewport {
   min-width: 0;
 }
 
 @media (max-width: bp.$medium) {
-  .page-wear .wear__row {
+  .page-own .own__row {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-2xs);
   }
 }
 
-.page-wear .wear__label {
+/* The wrapper exists so the row's grid always has exactly two children —
+   see the comment in own.html. Nothing to style but the gap it holds. */
+.page-own .own__labelbox {
+  min-width: 0;
+}
+
+.page-own .own__label {
   margin: 0;
   padding-top: 0.25rem;          /* optical: sits on the first line of the items */
 
@@ -89,6 +98,28 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-color-low);
+}
+
+/* An optional line under a label pointing somewhere fuller — /devices/ from
+   the Devices row, so far. Deliberately quiet and NOT uppercase: the label is
+   a structural marker and this is a sentence, and setting both the same way
+   would read as a two-line heading rather than a heading and a link. */
+.page-own .own__label-link {
+  margin: 0.35rem 0 0;
+  font-size: var(--step--2);
+  line-height: var(--scale-small);
+  text-wrap: balance;
+}
+
+.page-own .own__label-link a {
+  color: var(--text-color-low);
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.15em;
+}
+
+.page-own .own__label-link a:hover,
+.page-own .own__label-link a:focus-visible {
+  color: var(--text-color);
 }
 
 /* ---- The rail ---------------------------------------------------
@@ -107,11 +138,11 @@
    Everything else — the overflow, the scroll behaviour, the hidden
    scrollbar, the arrow buttons and their reduced-motion handling —
    is inherited unchanged, which is the whole reason for reusing it. */
-.page-wear .strip__viewport {
+.page-own .strip__viewport {
   --strip-bleed: 100%;
 }
 
-.page-wear .wear__rail {
+.page-own .own__rail {
   --strip-item: 9.5rem;
   justify-content: flex-start;
   gap: var(--space-xs);
@@ -120,7 +151,7 @@
 /* The arrows overlay the ends of the rail. home.css reserves
    `bottom: var(--space-l)` for its captions; there are none here, so
    the button covers the line's full height and no more. */
-.page-wear .strip__nav {
+.page-own .strip__nav {
   bottom: 0;
   width: 2.25rem;
 }
@@ -130,20 +161,20 @@
    the hover treatment is written for both. `display: block` on the
    span matters: an inline element would drop the padding's vertical
    half and the mark would sit on the text baseline. */
-.page-wear .wear__link,
-.page-wear .wear__link:visited {
+.page-own .own__link,
+.page-own .own__link:visited {
   display: block;
   color: inherit;
   text-decoration: none;
 }
 
-.page-wear a.wear__link:hover .wear__mark,
-.page-wear a.wear__link:focus-visible .wear__mark {
+.page-own a.own__link:hover .own__mark,
+.page-own a.own__link:focus-visible .own__mark {
   border-color: var(--text-color);
 }
 
-.page-wear a.wear__link:hover .wear__name,
-.page-wear a.wear__link:focus-visible .wear__name {
+.page-own a.own__link:hover .own__name,
+.page-own a.own__link:focus-visible .own__name {
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -159,7 +190,7 @@
    1:1 rather than the 3:4 of a book: logos are square-ish, and a
    product shot crops to a square more gracefully than a wordmark
    letterboxes into a portrait. */
-.page-wear .wear__mark {
+.page-own .own__mark {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,26 +212,26 @@
 /* When it IS a picture, the border is the picture's own edge and the
    type rules are inert — but `object-fit` is not, or a non-square logo
    would stretch. */
-.page-wear .wear__mark--img {
+.page-own .own__mark--img {
   object-fit: contain;
   padding: 0.2rem;
 }
 
-.page-wear .wear__brand {
+.page-own .own__brand {
   display: block;
   font-size: var(--step--1);
   letter-spacing: 0.04em;
   color: var(--text-color);
 }
 
-.page-wear .wear__name {
+.page-own .own__name {
   display: block;
   font-size: var(--step--1);
   color: var(--text-color-low);
   text-wrap: balance;
 }
 
-.page-wear .wear__note {
+.page-own .own__note {
   display: block;
   margin-top: 0.15rem;
   font-size: var(--step--2);
@@ -214,7 +245,7 @@
    so he can decide what to do with it (2026-08-07). Set back and
    narrow so it reads as a margin note rather than as page copy. When
    it goes, this rule goes with it. */
-.page-wear .wear__notes {
+.page-own .own__notes {
   max-width: var(--measure);
   margin-top: var(--space-xl);
   padding-top: var(--space-s);
@@ -224,7 +255,7 @@
   color: var(--text-color-low);
 }
 
-.page-wear .wear__notes h2 {
+.page-own .own__notes h2 {
   margin: 0 0 var(--space-2xs);
   font-size: var(--step--1);
   font-weight: 400;
