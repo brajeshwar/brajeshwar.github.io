@@ -1,0 +1,64 @@
+---
+layout: page
+title: Music
+---
+
+{%- comment -%}
+  ⚠️ WAS music.md UNTIL 2026-08-07 (Brajeshwar: "which will likely follow
+  similar styling as /film/"). Converted now so that restyling later is a
+  markup change and not a format change as well.
+
+  ⚠️ THE `# Music` H1 IS GONE ON PURPOSE. jekyll-titles-from-headings with
+  `strip_title: true` was removing it from the rendered page and using it as
+  the title — /music/ has never shown an h1. That plugin runs on Markdown
+  only, so writing <h1>Music</h1> back in would ADD a heading the page never
+  had. The rendered output is unchanged; only the file format is.
+
+  Verified against the pre-conversion build: same <title>, same headings, same
+  list structure.
+
+  ⚠️ ELTON JOHN APPEARS TWICE, at the same place he did in music.md. It is
+  content, it is not mine to tidy, and a silent de-duplication inside a
+  format conversion is exactly the kind of edit that gets noticed a year
+  later. Delete one when you are next in here.
+
+  WHEN THIS FOLLOWS /film/: that page is `layout: album` + `style: page-film`,
+  with its cards coming from _data and rendered by card-grid.html. This one is
+  still a hand-written list under letter headings, so the move is (a) the
+  artists into _data/music.yaml, (b) the layout swap, (c) a card-grid include.
+  None of that is done here — this is the rename only.
+{%- endcomment -%}
+
+<h2 id="a">A</h2>
+
+<ul>
+  <li>AC/DC</li>
+  <li>Aerosmith
+    <ul>
+      <li>Amazing</li>
+      <li>I Don’t Want to Miss a Thing</li>
+    </ul>
+  </li>
+  <li>Backstreet Boys</li>
+  <li>Bon Jovi</li>
+  <li>Bruce Springsteen</li>
+  <li>Bryan Adams</li>
+  <li>Dire Straits</li>
+  <li>Elton John</li>
+  <li>Elton John</li>
+  <li>Enrique Iglesias</li>
+  <li>George Michael</li>
+  <li>Guns N’ Roses</li>
+  <li>Madonna</li>
+  <li>Meat Loaf</li>
+  <li>Michael Bolton</li>
+  <li>Michael Jackson</li>
+  <li>Pink Floyd</li>
+  <li>Prince</li>
+  <li>Queen</li>
+  <li>Ricky Martin</li>
+  <li>Rod Stewart</li>
+  <li>Santana</li>
+  <li>Stevie Wonder</li>
+  <li>The Rolling Stones</li>
+</ul>

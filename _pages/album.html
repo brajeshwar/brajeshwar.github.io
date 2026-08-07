@@ -3,12 +3,9 @@ layout: page
 title: Album
 ---
 
-<h1>Album</h1>
-
-<div class="album" markdown="0">
 {%- comment -%}
-  Built 2026-08-01, mirroring /books/. Renamed from /photos/ on 2026-08-01 — "Follow the same ideas as the /books/
-  with photos.yml".
+  Built 2026-08-01, mirroring /books/. Renamed from /photos/ on 2026-08-01 —
+  "Follow the same ideas as the /books/ with photos.yml".
 
   Real photos since 2026-08-01. The twelve borrowed book covers that stood in
   here are gone; _data/album.yaml is the only file to touch when adding more,
@@ -21,7 +18,15 @@ title: Album
   The "All Time Favorites" split that /books/ has is deliberately absent —
   `highlight` is supported by the data shape, but there is nothing yet to
   choose between. Add the section when the shelf is big enough to rank.
+
+  ⚠️ WAS album.md UNTIL 2026-08-07. Nothing here was ever Markdown — the body
+  is a div, a comment and an include — so the conversion is a rename plus one
+  deletion: `markdown="0"` came off the div. That attribute is an instruction
+  to KRAMDOWN, telling it to leave the block alone. An .html page never runs
+  through kramdown, so nothing consumes it any more and it would have shipped
+  to the browser as a literal, meaningless attribute in the DOM.
 {%- endcomment -%}
+<div class="album">
 {% include card-grid.html
    items  = site.data.album
    dir    = "album"
