@@ -81,15 +81,6 @@ title: Books
   so the file is the only place that knows the right letter.
 {%- endcomment -%}
 
-{% include card-grid.html
-   items   = site.data.books-favorites
-   dir     = "books"
-   ratio   = "3x4"
-   captions = true
-   heading = "Personal Favorites &amp; Recommendations"
-   id      = "favorites"
-   sub     = "Here are some of my all-time favorite books — ones I have read and re-read, and would highly recommend." %}
-
 {%- comment -%}
   ⚠️ CAPTURED, not written inline as an include parameter. The inline version
   took the build down with "Invalid syntax for include tag": a Liquid string
@@ -98,6 +89,14 @@ title: Books
   as more parameters. Wrapping the outside in single quotes would also work, but
   a capture beats remembering which quote is safe — the block below can hold any
   markup, over as many lines as it likes, with nothing to escape.
+
+  That now applies to the WHOLE sub-line, not just the years. Brajeshwar,
+  2026-08-07: move the "Since 2018…" sentence out from under the first letter
+  section and put it "in front of" the favorites line. So the two sentences are
+  one paragraph under the FIRST heading on the page, and the A–Z sections carry
+  no sub at all — the page introduces itself once, at the top, where someone
+  arriving actually reads it. Under `#!` it was explaining the shelf halfway
+  down.
 
   The years are generated from the posts that actually exist rather than typed
   out, so January needs no edit and a link can never point at a year that was
@@ -110,11 +109,21 @@ title: Books
 {%- capture books_sub -%}
 Since 2018, I have listed the interesting ones I read each year:
 {% for p in yearly %}<a href="{{ p.url | relative_url }}">{{ p.date | date: '%Y' }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
+Here are some of my all-time favorite books — ones I have read and re-read, and would highly recommend.
 {%- endcapture -%}
 
+{% include card-grid.html
+   items   = site.data.books-favorites
+   dir     = "books"
+   ratio   = "3x4"
+   captions = true
+   heading = "Personal Favorites &amp; Recommendations"
+   id      = "favorites"
+   sub     = books_sub %}
+
 {%- comment -%}
-  The intro paragraph rides on the FIRST section only, so the page explains
-  itself once rather than under every letter.
+  No sub on these. The page's one intro paragraph sits under Personal
+  Favorites above, which is the first heading a reader meets.
 
   `#!` for 01.yaml, matching the marker already used at the head of the yearly
   books posts. An empty file emits nothing at all — no heading for a letter
@@ -137,9 +146,7 @@ Since 2018, I have listed the interesting ones I read each year:
    ratio   = "3x4"
    captions = true
    heading = letter
-   id      = key
-   sub     = books_sub %}
-{%- assign books_sub = nil -%}
+   id      = key %}
 {%- endif -%}
 {%- endfor -%}
 </div>
