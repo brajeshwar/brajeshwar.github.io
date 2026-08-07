@@ -542,6 +542,26 @@
      honest: a separator should out-read a hover state. */
   --bg-color-hover     : color-mix(in oklch, var(--color-bg-muted) 80%, var(--color-fg) 20%);
 
+  /* ⚠️ THE ONE TOKEN HERE THAT DOES NOT FLIP WITH THE THEME, and that is the
+     entire point of it. It is the plate a BRAND LOGO sits on, on /own/.
+
+     Brajeshwar, 2026-08-07: "it is OK to keep their original branding color
+     and logo. Just like how we have colorful photos." Right — but a photo is
+     opaque and carries its own background, and a logo is a transparent PNG or
+     SVG that carries none. Peak Design's mark is pure black; measured on the
+     dark theme it was a dark glyph on a near-black square and all but gone.
+
+     So the fix is a plate, not a repaint: the logo keeps its own colours
+     exactly, and gets the light ground it was drawn for. Near-white rather
+     than #fff so it reads as a chip rather than a hole punched in the page,
+     and warm-neutral so it does not fight the eink or nord palettes.
+
+     Deliberately NOT `var(--color-surface)` or any other semantic token: those
+     all invert in dark mode, which is exactly the behaviour being avoided
+     here. A brand's artwork has a fixed idea of its own background, and this
+     token is where that fact lives. */
+  --logo-plate         : oklch(0.985 0.002 90);
+
   --text-color-lower   : var(--color-fg-subtle);
   --text-color-low     : var(--color-fg-muted);
   --text-color         : var(--color-fg);

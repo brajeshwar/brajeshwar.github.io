@@ -119,37 +119,21 @@ style: page-own
           {%- endif -%}
 
             {%- comment -%}
-              ⚠️ THE MARK IS ALWAYS RENDERED, in one of three ways, and the box
-              is the same size in all of them. So the row never reflows when a
-              logo arrives, and a line without one reads as designed rather
-              than as a missing image — the /books/ bookplate idea applied to a
-              logo slot. All three are `aria-hidden`: the brand is spelled out
-              immediately below, so the mark is decoration, not information.
+              ⚠️ THE MARK IS ALWAYS RENDERED, with or without a picture, and
+              the box is the same size either way. So the row never reflows
+              when a logo arrives, and a line without one reads as designed
+              rather than as a missing image — the /books/ bookplate idea
+              applied to a logo slot. Both are `aria-hidden`: the brand is
+              spelled out immediately below, so the mark is decoration.
 
-                logo   a MONOCHROME wordmark, drawn as a CSS mask. The mask
-                       reads only the file's alpha, so the mark is painted in
-                       the page's own ink and follows the light/dark theme.
-                       An <img> could not: an external SVG does not inherit
-                       `currentColor`, so Peak Design's mark — which they
-                       author as `fill="currentcolor"` — would resolve to
-                       black and half-disappear on the dark theme.
-
-                       The url arrives as an inline custom property because it
-                       is per-item DATA, not style. Same move <photo-cover>
-                       already makes with its background-image.
-
-                img    a PICTURE — product shot, or a logo that needs its own
-                       colours. A mask would flatten those to one ink.
-
-                neither  the brand's initial, set in the serif.
+              LOGOS KEEP THEIR OWN COLOURS (2026-08-07: "it is OK to keep
+              their original branding color and logo. Just like how we have
+              colorful photos"). A monochrome-mask version of this existed for
+              a few hours and is gone; the plate behind the picture is what
+              makes a brand's own colours legible on both themes, rather than
+              repainting the mark in ours. See `--mark-plate` in own.scss.
             {%- endcomment -%}
-            {%- if item.logo -%}
-            {%- assign lfirst = item.logo | slice: 0 -%}
-            {%- if lfirst == "/" -%}{%- assign lsrc = item.logo -%}
-            {%- else -%}{%- assign lsrc = "/static/own/" | append: item.logo -%}{%- endif -%}
-            <span class="own__mark own__mark--logo" aria-hidden="true"
-                  style="--own-logo: url({{ lsrc | relative_url }})"></span>
-            {%- elsif item.img -%}
+            {%- if item.img -%}
             {%- assign first = item.img | slice: 0 -%}
             {%- if first == "/" -%}{%- assign src = item.img -%}
             {%- else -%}{%- assign src = "/static/own/" | append: item.img -%}{%- endif -%}
