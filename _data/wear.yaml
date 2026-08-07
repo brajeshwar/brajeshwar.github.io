@@ -1,0 +1,108 @@
+# ===========================================================================
+# /wear/ — the things owned, worn and carried.
+#
+# ⚠️ EVERY ITEM BELOW IS A PLACEHOLDER. Not one of them is a claim about what
+# Brajeshwar actually owns — they are there so the layout has something to
+# stand up, and they are all meant to be overwritten or deleted. Nothing links
+# to this page yet (2026-08-07: "Do not need to link the page yet").
+#
+# SHAPE
+#   sections  the top-level split. This exists because the Own-vs-Wear
+#             question is open (2026-08-07: "I'm still un-decided on if I
+#             consider this an 'Own' or 'Wear'"). Both live on one page for
+#             now, so the decision can be made by looking at it rather than in
+#             the abstract — and if it later splits into two pages, a section
+#             lifts out whole.
+#   rows      one line of the inventory: Shirts, Bags, Devices. A row scrolls
+#             sideways on its own when it outgrows the column, so a long line
+#             is a feature and not a problem to solve.
+#   items     brand + name, plus:
+#               note  optional — colour, count, whatever the line needs
+#               img   optional — a logo or a picture, bare filename resolving
+#                     under /static/wear/. No img renders a typeset mark
+#                     carrying the brand's initial, the same idea as the
+#                     bookplate on /books/: a designed stand-in, never a hole.
+#               url   optional — makes the whole item a link
+#
+# FIELDS: brand (required), name, note, img, url.
+# ===========================================================================
+
+- section: Wear
+  intro: The layered modular capsule — monochrome, minimal branding, no frills.
+  rows:
+    - label: Shirts
+      items:
+        - brand: Placeholder
+          name: Oxford button-down
+          note: white, 2
+        - brand: Placeholder
+          name: Linen long-sleeve
+          note: cream
+        - brand: Placeholder
+          name: Merino tee
+          note: navy, charcoal, 3
+
+    - label: Pants
+      items:
+        - brand: Placeholder
+          name: Ankle trouser
+          note: charcoal, 2
+        - brand: Placeholder
+          name: Selvedge denim
+          note: indigo
+
+    - label: Outerwear
+      items:
+        - brand: Placeholder
+          name: Unstructured blazer
+          note: navy
+        - brand: Placeholder
+          name: Packable shell
+          note: black
+
+    - label: Footwear
+      items:
+        - brand: Placeholder
+          name: Minimal leather sneaker
+          note: white
+        - brand: Placeholder
+          name: Derby
+          note: black
+
+- section: Carry
+  intro: What goes in the bag when the bag is the whole of it.
+  rows:
+    - label: Bags
+      items:
+        - brand: Placeholder
+          name: 20L daypack
+          note: cabin-legal
+        - brand: Placeholder
+          name: Sling
+          note: everyday
+
+    - label: Travel
+      items:
+        - brand: Placeholder
+          name: Packing cube set
+        - brand: Placeholder
+          name: Dopp kit
+
+- section: Own
+  intro: Electronics and the rest, each with a renewal date rather than a purchase date.
+  rows:
+    - label: Devices
+      items:
+        - brand: Placeholder
+          name: Laptop
+          note: renew 2028
+        - brand: Placeholder
+          name: Phone
+          note: renew 2027
+
+    - label: Desk
+      items:
+        - brand: Placeholder
+          name: Keyboard
+        - brand: Placeholder
+          name: Lamp

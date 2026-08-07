@@ -1,0 +1,234 @@
+@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
+
+/* ============================================================
+   Wear — /wear/ only, via `style: page-wear` on <main>.
+   ------------------------------------------------------------
+   An inventory, not an article. The page is a stack of LINES:
+   a category on the left, its items running off to the right
+   and scrolling when they outgrow the column.
+
+   ⚠️ EVERY SELECTOR IS ANCHORED TO .page-wear. Since 2026-07-27
+   every stylesheet reaches every page, and this file overrides
+   .strip / .strip__viewport, which the HOME PAGE depends on.
+   An unanchored rule here would rewrite the book and photo
+   shelves on the front page. page.scss is the cautionary tale.
+
+   The visual brief comes from the wardrobe it describes
+   (Brajeshwar's own note, carried onto the page): monochrome,
+   minimal branding, no frills. So: hairlines, one weight of
+   type, no fills, no shadows, no colour of its own.
+   ============================================================ */
+
+.page-wear .wear__lede {
+  max-width: var(--measure);
+  margin-bottom: var(--space-l);
+  color: var(--text-color-low);
+}
+
+/* ---- A section: Wear / Carry / Own ------------------------------
+   Three of them for now because the split is undecided (2026-08-07:
+   "I'm still un-decided on if I consider this an 'Own' or 'Wear'").
+   They are deliberately weak dividers — a heading and space, no rule
+   — so that merging two of them, or lifting one onto its own page,
+   is a data edit and not a visual redesign. */
+.page-wear .wear__section {
+  margin-block: var(--space-xl) 0;
+}
+
+.page-wear .wear__section-title {
+  margin: 0;
+  font-size: var(--step-1);
+  font-weight: 400;
+}
+
+.page-wear .wear__section-intro {
+  max-width: var(--measure);
+  margin: var(--space-3xs) 0 var(--space-s);
+  font-size: var(--step--1);
+  color: var(--text-color-low);
+}
+
+/* ---- One line of the inventory ----------------------------------
+   Label left, rail right, a hairline between lines. Below bp.$medium
+   the label stacks above its rail: at that width a fixed label column
+   would leave the rail about 60% of a phone, which is one and a half
+   items — the row would scroll before it had anything to say.
+
+   `min-width: 0` on the rail cell is load-bearing and easy to lose. A
+   grid item's automatic minimum size is its CONTENT, so without it the
+   track refuses to shrink below the full width of every item laid end
+   to end, the row never overflows, and the horizontal scroll — the
+   entire point of this page — silently never happens. */
+.page-wear .wear__row {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: var(--space-xs);
+  align-items: start;
+
+  padding-block: var(--space-s);
+  border-top: var(--border-size-hairline) var(--border-style) var(--border-color-low);
+}
+
+.page-wear .wear__row > .strip__viewport {
+  min-width: 0;
+}
+
+@media (max-width: bp.$medium) {
+  .page-wear .wear__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2xs);
+  }
+}
+
+.page-wear .wear__label {
+  margin: 0;
+  padding-top: 0.25rem;          /* optical: sits on the first line of the items */
+
+  font-size: var(--step--1);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color-low);
+}
+
+/* ---- The rail ---------------------------------------------------
+   ⚠️ THESE THREE DECLARATIONS EXIST TO UNDO home.css, which owns the
+   component. Read them as a diff against it, not as a design:
+
+     --strip-bleed  home makes the viewport 100vw so a shelf runs off
+                    the page. Here it lives in a grid cell beside a
+                    label, so it takes the cell — 100%, which also
+                    zeroes the negative margin computed from it.
+     justify-content  home centers a short shelf in the bleed. An
+                    inventory line starts at its label, always.
+     --strip-item   narrower than home's 12rem: these are text chips
+                    with a small mark, not book covers.
+
+   Everything else — the overflow, the scroll behaviour, the hidden
+   scrollbar, the arrow buttons and their reduced-motion handling —
+   is inherited unchanged, which is the whole reason for reusing it. */
+.page-wear .strip__viewport {
+  --strip-bleed: 100%;
+}
+
+.page-wear .wear__rail {
+  --strip-item: 9.5rem;
+  justify-content: flex-start;
+  gap: var(--space-xs);
+}
+
+/* The arrows overlay the ends of the rail. home.css reserves
+   `bottom: var(--space-l)` for its captions; there are none here, so
+   the button covers the line's full height and no more. */
+.page-wear .strip__nav {
+  bottom: 0;
+  width: 2.25rem;
+}
+
+/* ---- One item ---------------------------------------------------
+   A span or an anchor depending on whether the line has a url yet, so
+   the hover treatment is written for both. `display: block` on the
+   span matters: an inline element would drop the padding's vertical
+   half and the mark would sit on the text baseline. */
+.page-wear .wear__link,
+.page-wear .wear__link:visited {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-wear a.wear__link:hover .wear__mark,
+.page-wear a.wear__link:focus-visible .wear__mark {
+  border-color: var(--text-color);
+}
+
+.page-wear a.wear__link:hover .wear__name,
+.page-wear a.wear__link:focus-visible .wear__name {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* ---- The mark: a logo slot that is never empty -------------------
+   Same idea as .bookplate on /books/. The box is drawn whether or not
+   a picture exists, so (a) the row does not reflow the day a logo is
+   added, and (b) a line without one reads as designed rather than as
+   a broken image. Without a picture it carries the brand's initial in
+   the serif; the markup marks that `aria-hidden` because the brand is
+   spelled out on the next line.
+
+   1:1 rather than the 3:4 of a book: logos are square-ish, and a
+   product shot crops to a square more gracefully than a wordmark
+   letterboxes into a portrait. */
+.page-wear .wear__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  aspect-ratio: 1;
+  margin-bottom: var(--space-3xs);
+
+  border: var(--border-size-hairline) var(--border-style) var(--border-color-low);
+  border-radius: var(--border-radius);
+  transition: border-color 120ms ease-out;
+
+  font-family: var(--font-serif);
+  font-size: var(--step-0);
+  line-height: 1;
+  color: var(--text-color-low);
+}
+
+/* When it IS a picture, the border is the picture's own edge and the
+   type rules are inert — but `object-fit` is not, or a non-square logo
+   would stretch. */
+.page-wear .wear__mark--img {
+  object-fit: contain;
+  padding: 0.2rem;
+}
+
+.page-wear .wear__brand {
+  display: block;
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  color: var(--text-color);
+}
+
+.page-wear .wear__name {
+  display: block;
+  font-size: var(--step--1);
+  color: var(--text-color-low);
+  text-wrap: balance;
+}
+
+.page-wear .wear__note {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: var(--step--2);
+  color: var(--text-color-low);
+  opacity: var(--opacity-low);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Carried-over notes -----------------------------------------
+   Brajeshwar's own planning prose from the old wear.md, kept visible
+   so he can decide what to do with it (2026-08-07). Set back and
+   narrow so it reads as a margin note rather than as page copy. When
+   it goes, this rule goes with it. */
+.page-wear .wear__notes {
+  max-width: var(--measure);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-s);
+  border-top: var(--border-size) var(--border-style) var(--border-color-low);
+
+  font-size: var(--step--1);
+  color: var(--text-color-low);
+}
+
+.page-wear .wear__notes h2 {
+  margin: 0 0 var(--space-2xs);
+  font-size: var(--step--1);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: var(--opacity-low);
+}

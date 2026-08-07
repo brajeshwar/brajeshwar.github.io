@@ -113,6 +113,10 @@
 @use "search";
 @use "timeline";
 @use "now";
+// wear AFTER home: /wear/ reuses home's .strip scroller and overrides three of
+// its declarations. Same specificity, so the later file wins — move this above
+// home and the rows silently take the home page's full-bleed geometry.
+@use "wear";
 
 // NOT imported: bookmarks. It styles a <bookmarks-header> that no page emits
 // yet — CLAUDE.md calls it "not-yet-wired". Importing it would ship 1.2 KB to

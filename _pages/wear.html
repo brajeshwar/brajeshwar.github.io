@@ -1,0 +1,157 @@
+---
+layout: page
+title: Wear
+style: page-wear
+---
+
+{%- comment -%}
+  /wear/ — an inventory, not an article.
+
+  WHY layout: page AND a style hook, rather than a layout of its own.
+  Everything this page needs from `page` it already gets — the h1, the article
+  band, the edited stamp. What it does NOT want is the reading measure clamped
+  around a row of thumbnails. `style: page-wear` puts a class on <main> and
+  wear.css hangs off that, which is the same deal /devices/ and /archives/
+  strike. A new layout would duplicate page.html to change nothing.
+
+  ⚠️ THE ROWS REUSE .strip__viewport / .strip FROM home.css ON PURPOSE.
+  That is the site's horizontal scroller: a native `overflow-x: auto` rail
+  with arrow buttons that strip-nav.js reveals only after measuring a real
+  overflow. Writing a second one here would mean a second thing to keep
+  accessible, and default.html gates the script on the literal string
+  `class="strip__viewport"` — so that attribute must stay EXACTLY that, with
+  no extra classes in it, or the arrows silently stop shipping. Page-specific
+  overrides are therefore written as `.page-wear .strip…` in wear.css.
+
+  Brajeshwar, 2026-08-07: "WEAR will have a line by line items of, say, pants,
+  shirts, bags, etc. And the brands I wear. Some lines may be long and hence
+  should also be scrollable sideways. We will have pictures, logos, etc."
+{%- endcomment -%}
+
+{%- comment -%}
+  The h1 is emitted here rather than left to a `# Wear` in the content, because
+  this file has no Markdown body for jekyll-titles-from-headings to strip one
+  out of. Change `title:` in the front matter and both the tab and the heading
+  follow — which is the point, given that Own-vs-Wear is still open.
+{%- endcomment -%}
+<h1>{{ page.title }}</h1>
+
+{%- comment -%}
+  Verbatim from the COMMITTED wear.md, which carried it under `# Own`. His
+  working copy had dropped it along with the h1; it is kept because it is still
+  true of the page and says so in his own words.
+{%- endcomment -%}
+<blockquote class="wear__wip">
+  <p>A thinking-out-loud, work-in-progress thing.</p>
+</blockquote>
+
+<p class="wear__lede">
+  A layered modular capsule, kept monochrome and unbranded, and a short list of
+  everything else that has to fit in a bag. Each line is a category; a long one
+  scrolls sideways rather than wrapping.
+</p>
+
+{%- for section in site.data.wear %}
+<section class="wear__section">
+  <h2 class="wear__section-title">{{ section.section }}</h2>
+  {%- if section.intro %}
+  <p class="wear__section-intro">{{ section.intro }}</p>
+  {%- endif %}
+
+  {%- for row in section.rows %}
+  <div class="wear__row">
+    <h3 class="wear__label">{{ row.label }}</h3>
+
+    <div class="strip__viewport">
+      <button class="strip__nav strip__nav--prev" type="button"
+              aria-label="Scroll {{ row.label | downcase }} left" hidden>
+        <span aria-hidden="true">&lsaquo;</span>
+      </button>
+
+      <ul class="strip wear__rail">
+        {%- for item in row.items %}
+        <li class="strip__item wear__item">
+          {%- comment -%}
+            NO url YET → a <span>, not <a href="">. An empty href is not an
+            inert link: it points at the current page, takes tab focus and
+            announces as a link. Same reasoning as home-strip.html, and the
+            normal state here — an inventory line exists long before it has
+            anywhere to point.
+          {%- endcomment -%}
+          {%- if item.url -%}
+          {%- assign proto = item.url | slice: 0, 4 -%}
+          <a class="wear__link" href="{% if proto == 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if proto == 'http' %} rel="noopener"{% endif %}>
+          {%- else -%}
+          <span class="wear__link">
+          {%- endif -%}
+
+            {%- comment -%}
+              ⚠️ THE MARK IS ALWAYS RENDERED, with or without a picture.
+              An item with no `img` gets the brand's initial set in the serif
+              inside the same box — the /books/ bookplate idea applied to a
+              logo slot. Two things follow: the row does not reflow the day a
+              logo arrives, because the box was always that size; and a
+              logo-less line reads as designed rather than as a missing image.
+              `aria-hidden` because the brand is spelled out immediately below
+              it — the initial is decoration, not information.
+            {%- endcomment -%}
+            {%- if item.img -%}
+            {%- assign first = item.img | slice: 0 -%}
+            {%- if first == "/" -%}{%- assign src = item.img -%}
+            {%- else -%}{%- assign src = "/static/wear/" | append: item.img -%}{%- endif -%}
+            <img class="wear__mark wear__mark--img" src="{{ src | relative_url }}"
+                 alt="" loading="lazy" width="120" height="120">
+            {%- else -%}
+            <span class="wear__mark" aria-hidden="true">{{ item.brand | slice: 0 }}</span>
+            {%- endif -%}
+
+            <span class="wear__brand">{{ item.brand }}</span>
+            {%- if item.name %}<span class="wear__name">{{ item.name }}</span>{% endif %}
+            {%- if item.note %}<span class="wear__note">{{ item.note }}</span>{% endif %}
+
+          {%- if item.url %}</a>{% else %}</span>{% endif -%}
+        </li>
+        {%- endfor %}
+      </ul>
+
+      <button class="strip__nav strip__nav--next" type="button"
+              aria-label="Scroll {{ row.label | downcase }} right" hidden>
+        <span aria-hidden="true">&rsaquo;</span>
+      </button>
+    </div>
+  </div>
+  {%- endfor %}
+</section>
+{%- endfor %}
+
+{%- comment -%}
+  CARRIED OVER VERBATIM FROM _pages/wear.md, which this file replaces.
+  Brajeshwar, 2026-08-07: "Carry over the prose from there, I will read and
+  decide what to do with it." It renders rather than sitting in a comment,
+  because deciding what to do with prose is easier when you can see it on the
+  page — but it is marked as notes so it does not read as published copy.
+  Nothing else on the page depends on this block; delete it whole if it goes.
+{%- endcomment -%}
+<section class="wear__notes">
+  <h2>Notes to self</h2>
+
+  <p>My life’s item should be in a single printable A4 size Paper at a readable
+  font-size and perhaps even blocks of boxes to not try to cramp in too much
+  item. Create a layered modular capsule wardrobe, and stay within a monochrome
+  color, without or as minimal/discrete branding, display of logos, and
+  no-frills.</p>
+
+  <p>Stay darker; the highest color would be like dark navy blue and cream on
+  the lightest end of the palette.</p>
+
+  <p>A <a href="https://en.wikipedia.org/wiki/Capsule_wardrobe">capsule
+  wardrobe</a> is a minimalist collection of clothes that can be put together in
+  different ways to cover a variety of outfits and occasions. The aim is to have
+  an outfit suitable for any occasion without owning excessive items of
+  clothing. This is usually achieved by buying what are considered to be “key”
+  or “staple” items in coordinating colours.</p>
+
+  <p>Do for other items such as electronics that are part of my life. Plan an
+  renewal or replacement timeline. Make this part of the yearly review to plan
+  the disposal, renewal, replacement, etc.</p>
+</section>
