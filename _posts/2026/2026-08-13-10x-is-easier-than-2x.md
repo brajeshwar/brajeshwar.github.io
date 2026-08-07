@@ -1,10 +1,8 @@
----
-image: /static/2026/10x-is-easier-than-2x.webp
----
-
 # 10x Is Easier Than 2x
 
 Ten times the result, and less work than doubling. I read [10x Is Easier Than 2x](https://10xeasierbook.com) by Dan Sullivan and Benjamin Hardy[^authors] expecting motivational arithmetic but got something of an argument about subtraction.
+
+<a href="https://10xeasierbook.com"><img src="/static/2026/10x-is-easier-than-2x.webp" alt="10x Is Easier Than 2x by Dan Sullivan and Benjamin Hardy" loading="lazy"></a>
 
 You can reach 2x by doing more of what you already do. More clients, more hours, more of the same. It is a volume problem, and effort solves volume problems. That is why 2x is exhausting rather than difficult.
 
