@@ -156,10 +156,11 @@ photo-cover__desc {
       nowhere near them. Rounding the top corners exposes page background in
       the corners and nothing else.
 
-   Not verified at a true >1600px viewport: the display here tops out at
-   1512, so the rendering above was checked by narrowing the cover and
-   applying the same radius, which is the same geometry a wider window
-   produces. The breakpoint itself is arithmetic, not a judgment call. */
+   Both of those were checked at 1512, the widest display available to the
+   agent that wrote this — by narrowing the cover and applying the same
+   radius, which is the geometry a wider window produces. **Brajeshwar
+   confirmed it on a real >1600px monitor on 2026-08-07**, which is the only
+   test that counts here and the reason this paragraph is not a caveat. */
 @media (min-width: bp.$extralarge + 1) {
   photo-cover {
     border-radius: var(--border-radius);
