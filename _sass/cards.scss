@@ -41,6 +41,39 @@ ul.item__cards {
   gap: var(--space-m) var(--space-xs);
 }
 
+/* ---- /books/ runs SIX across -------------------------------------
+   Brajeshwar, 2026-08-08: "make it 6 thumbnails per column, I believe
+   this is a flex layout and they are justified so that they are
+   distributed equally to fill the width of the body-width."
+
+   Grid, not flex — but the behaviour he describes is exactly right:
+   `1fr` distributes the leftover space equally, so a row always fills
+   the band however many columns land in it.
+
+   The column count is not set directly; it falls out of --card-min,
+   because `auto-fill` fits floor((band + gap) / (card-min + gap))
+   columns. At the 1024 band with a 15px gutter that is
+   floor(1039 / (card-min + 15)), which gives SIX for any card-min
+   between 133.5px and 158.1px — below 133.5 it tips to seven, at the
+   old 176px it was five. 9.5rem (152px) sits mid-window rather than on
+   an edge, so a change to the gutter token cannot quietly flip it.
+
+   The thumbnails then render at 158.2px each — (1024 - 15×5) / 6 —
+   because 1fr stretches them past the minimum to fill the row.
+
+   ⚠️ SCOPED TO THE PAGE, not to `.card-grid--3x4`. That class is
+   books-only TODAY, which makes it a tempting hook and the wrong one:
+   it describes an aspect ratio, so a 3x4 grid added to another page
+   would silently inherit six columns it never asked for. `page-books`
+   comes from `style:` in the front matter, the same way /film/ and
+   /devices/ carry theirs.
+
+   Not a resolution problem: the cover files are 360px wide, so at
+   158 CSS px they are sharper than they were at 193. */
+.page-books ul.item__cards {
+  --card-min: 9.5rem;
+}
+
 ul.item__cards li {
 	list-style: none;
   margin: 0;
