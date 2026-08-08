@@ -58,9 +58,9 @@ style: page-books
   TWO SOURCES NOW, AND THAT IS THE WHOLE DESIGN (2026-08-07). Brajeshwar:
   "you can remove the highlight as my favorites into a separate YAML."
 
-  ONE DIRECTORY, _data/books/, holding everything. `_books.yaml` is the
-  favorites; `01.yaml` is numbers and symbols; `a.yaml`–`z.yaml` are the
-  letters. Split out of the single _data/books.yaml at 167 books ("We have enough list of book and I haven't
+  TWO SOURCES. _data/books-favorites.yaml is the favorites; _data/books/ is a
+  DIRECTORY of one file per initial letter — `01.yaml` for numbers and symbols,
+  then `a.yaml`–`z.yaml`. Split out of the single _data/books.yaml at 167 books ("We have enough list of book and I haven't
   even started adding the ones I missed. This is also going to grow").
 
   ⚠️ THE `highlight` FLAG AND ITS `where_exp` ARE BOTH GONE. The old note here
@@ -70,11 +70,12 @@ style: page-books
   more. A book listed twice will render twice. The header of each data file
   says so.
 
-  ⚠️ `_books` IS A KEY IN THE SAME HASH and has to be skipped by hand. Jekyll
-  reads an underscore-prefixed file inside _data/ perfectly happily — verified
-  2026-08-07 with a probe page: the keys come back `01|_books|a|b|…|z`, sorting
-  it between 01 and a. Without the `key != "_books"` guard below, the page
-  grows a "_BOOKS" section duplicating the favorites grid.
+  ⚠️ FAVORITES ARE OUTSIDE _data/books/ AGAIN, in _data/books-favorites.yaml.
+  They spent 2026-08-07 inside it as `_books.yaml`; Jekyll reads an
+  underscore-prefixed data file perfectly happily, so `_books` became a key in
+  site.data.books sorting between `01` and `a`, and this loop needed a guard to
+  stop the page growing a "_BOOKS" section. Moving the file out deletes both
+  the key and the guard: `site.data.books` is letters only again.
 
   ⚠️ site.data.books IS A HASH, NOT AN ARRAY. Jekyll turns a data DIRECTORY
   into a hash keyed by filename, iterated in filename order — which is what
@@ -110,7 +111,7 @@ style: page-books
   /2024/best-books/ contains "books/" but not "/books/", so it cannot sneak in.
 {%- endcomment -%}
 
-{%- assign favorites = site.data.books['_books'] -%}
+{%- assign favorites = site.data.books-favorites -%}
 
 {%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
 
@@ -120,14 +121,31 @@ Since 2018, I have listed the interesting ones I read each year:
 Here are some of my all-time favorite books — ones I have read and re-read, and would highly recommend.
 {%- endcapture -%}
 
+{%- comment -%}
+  ⚠️ THE GRID COMES FIRST HERE, and the heading and paragraph follow it —
+  the reverse of every other section on this page and of what card-grid.html
+  emits on its own. Brajeshwar, 2026-08-08: "bring up the favorite books
+  thumbnail at the top and followed by the text and paragraph that is current
+  on top now."
+
+  So the include is called with NO `heading` and NO `sub`, which makes it
+  render the grid alone, and the two are written out by hand underneath. That
+  is why they are literal markup here rather than include parameters — the
+  include has one order and this section wants the other. Adding a `reverse`
+  flag to card-grid.html would be a parameter for exactly one caller.
+
+  `container-ideal` and `card-grid__sub` are copied off what the include
+  produces, so the paragraph keeps the measure and the styling it had when it
+  sat above.
+{%- endcomment -%}
 {% include card-grid.html
    items   = favorites
    dir     = "books"
    ratio   = "3x4"
-   captions = true
-   heading = "Personal Favorites &amp; Recommendations"
-   id      = "favorites"
-   sub     = books_sub %}
+   captions = true %}
+
+<h2 id="favorites">Personal Favorites &amp; Recommendations</h2>
+<p class="container-ideal card-grid__sub">{{ books_sub }}</p>
 
 {%- comment -%}
   No sub on these. The page's one intro paragraph sits under Personal
@@ -146,7 +164,7 @@ Here are some of my all-time favorite books — ones I have read and re-read, an
 {%- for group in site.data.books -%}
 {%- assign key = group[0] -%}
 {%- assign shelf = group[1] -%}
-{%- if shelf.size > 0 and key != "_books" -%}
+{%- if shelf.size > 0 -%}
 {% if key == "01" %}{% assign letter = "#!" %}{% else %}{% assign letter = key | upcase %}{% endif %}
 {% include card-grid.html
    items   = shelf
