@@ -21,15 +21,26 @@ title: Archives
   and the list are just two blocks in normal flow now, the strip hanging off
   the header rule above them.
 {%- endcomment -%}
-<main>
+<main class="archives">
 {%- comment -%}
   Written here rather than inherited, because this is the ONE page that uses
   `layout: default` directly — page.html and album.html carry the shared title
   guard, and default.html cannot: its `{{ content }}` is the whole <main> from
   those layouts, so an h1 there would land outside main and double up for every
-  post and page on the site. One page, one line.
+  post and page on the site.
+
+  ⚠️ NOT `.page-title`, and that is the point. Brajeshwar, 2026-08-08: "Let's
+  treat some pages separately, such as the Archives. Remove the normal title at
+  the top and put it at a lower z-index with a lighter color… vertically on the
+  left side with a bigger thicker font-size."
+
+  So this page opts OUT of the shared treatment rather than overriding it: a
+  second class fighting `.page-title` on weight, size, colour, position and
+  writing-mode would be five overrides and a puzzle for the next reader. It is
+  still the page's h1 — same element, same place in the document, same thing a
+  screen reader announces first. Only the painting differs. See archives.css.
 {%- endcomment -%}
-<h1 class="page-title">{{ page.title }}</h1>
+<h1 class="archive-title">{{ page.title }}</h1>
 
   {%- comment -%}
     Sticky year jump-nav. The anchors are the <caption> ids below — those already

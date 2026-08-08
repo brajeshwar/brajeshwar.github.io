@@ -1,8 +1,94 @@
+@use "breakpoints" as bp;   // emits nothing; see _sass/breakpoints.scss
+
 /* ============================================================
    Archives — /archives/ only.
    ------------------------------------------------------------
    Loaded via the styles: key in _pages/archives.html.
    ============================================================ */
+
+/* ---- The title, set vertically down the left ---------------------
+   Brajeshwar, 2026-08-08: "Remove the normal title at the top and put it at a
+   lower z-index with a lighter color (or darker in dark mode) vertically on
+   the left side with a bigger thicker font-size."
+
+   The opposite of `.page-title` on every axis — thin becomes heavy, small
+   becomes huge, foreground becomes ground — which is why it is its own class
+   rather than an override. This page is a 26-year index, not an article; the
+   word is a marker for the column of years, not a heading to read.
+
+   ⚠️ `main.archives` CARRIES `position: relative` AND IS LOAD-BEARING.
+   I first assumed `container: main / inline-size` on `main` would already make
+   it the containing block, since container-type implies layout containment.
+   Measured, it does not: the title resolved `left: 0` against the viewport and
+   landed at x = -110, entirely off-screen and invisible. The one-line rule
+   below is what pulls it back into the gutter. Do not remove it because the
+   containment "should" be enough.
+
+   `z-index: -1` puts it behind the years. Nothing on this page paints a
+   background, so "behind" still shows through — and `pointer-events: none`
+   keeps it from swallowing clicks on the year links it sits under.
+
+   `writing-mode: vertical-rl` + `rotate(180deg)` reads BOTTOM-TO-TOP, which is
+   the convention for a spine and the one that puts the first letter nearest
+   the content it labels. `vertical-lr` alone would read top-to-bottom and sit
+   the wrong way round.
+
+   ⚠️ COLOUR IS A MIX TOWARD THE BACKGROUND, not a text token. The faintest
+   one, `--text-color-lower`, computes to oklch(0.371 0 0) — a perfectly
+   readable grey, which is right for small print and far too present for
+   something meant to sit behind the years. Mixing 14% of the foreground into
+   the page colour lands it just above the background in both modes, so
+   "lighter, or darker in dark mode" falls out of one declaration: in light
+   mode the ink is dark and the mix is a pale grey, in dark mode the ink is
+   pale and the mix is a dark grey. The relationship is the same, inverted.
+
+   Opaque rather than `transparent` on purpose. At `z-index: -1` a translucent
+   colour composites against whatever happens to be behind, which on a page
+   with striped table rows is two different greys down the length of the word. */
+.archive-title {
+  position: absolute;
+  top: var(--space-2xl);
+  left: 0;
+  z-index: -1;
+
+  margin: 0;
+  transform: translateX(-115%) rotate(180deg);
+  transform-origin: center;
+  writing-mode: vertical-rl;
+
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: color-mix(in oklch, var(--text-color) 14%, var(--bg-color-lower));
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* The positioning context. Without it the offsets resolve against the
+   viewport — see the note above. */
+main.archives {
+  position: relative;
+}
+
+/* ⚠️ SHOWN ONLY WHEN THE GUTTER IS ACTUALLY WIDE ENOUGH, and 1250 is measured
+   rather than picked. The word needs about 110px of its own, and the gutter is
+   (100vw - 1024) / 2 — so it fits from roughly 1244px up. Gating on the band
+   itself (1024) was the first attempt and is wrong: between 1025 and 1243 the
+   gutter is narrower than the word, which pushes it past the left edge and
+   gives the whole page a horizontal scrollbar.
+
+   Below that it is hidden rather than shrunk: there is nowhere for it to go
+   but on top of the years, where a bold word behind a list of links is noise
+   rather than a marker. 1250 is also the breakpoint the year strip already
+   turns on, so the page changes shape once rather than twice. */
+.archive-title { display: none; }
+
+@media (min-width: 1250px) {
+  .archive-title { display: block; }
+}
 
 /* ------------------------------------------------------------
    Year jump-nav — a horizontal strip hanging off the header rule
@@ -87,7 +173,7 @@
   font-weight: var(--font-weight-bold);
   line-height: 1;
   letter-spacing: -0.02em;
-  color: var(--text-color-lower);
+  color: color-mix(in oklch, var(--text-color) 14%, var(--bg-color-lower));
   opacity: 0.28;
 
   white-space: nowrap;
