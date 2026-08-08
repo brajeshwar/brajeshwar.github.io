@@ -28,14 +28,23 @@ Its three sections, and they are not equal:
 | `## MAYBE / LATER / ICEBOX` | thinking aloud. **Never act on these, never ask about them.** |
 | `## DONE` | the log |
 
+- **`## DO` takes plain prose as readily as list items** (2026-08-08). A `- ` bullet, a bare
+  sentence, a paragraph — all are items, and one paragraph is one item. He is typing straight
+  into this file; making him remember a bullet is friction for no gain. Do not normalise what
+  he wrote into a list.
+- **⚠️ A bare `-` on its own line is a TYPING SLOT, not work.** One is kept at the top of
+  `## DO` at all times so there is always a line waiting for him. Skip it when scanning for
+  items, and leave it there — put it back after clearing the section, and never tick it.
 - **He stacks new items at the TOP; work from the BOTTOM UP.** The bottom-most open item in
-  `## DO` is next. Dropping an item part-way down is how he pulls it forward.
+  `## DO` is next — bottom-most meaning the last line or paragraph that is neither blank nor
+  the bare `-`. Dropping an item part-way down is how he pulls it forward.
 - **One at a time**, finished — built, verified, committed — before taking the next.
 - **Never reorder, reword or delete his lines.** Position is his instruction, not ours.
 - **Never push** because a queue item is done; guardrail 7 is unchanged.
 - **Done means:** mark in place as `- [x] [HH:MM] <his original text>` (24-hour local, the time
   it was finished), then move that line under today's `- YYYY-MM-DD` root item in `## DONE` as a
-  sub-item, newest date first. Abandoned rather than finished → strike it through with a
+  sub-item, newest date first. Prose items become list items ONLY at this point — `## DONE` is
+  a log and wants one shape; `## DO` is an inbox and does not. Abandoned rather than finished → strike it through with a
   one-line reason instead of deleting it. Log history, never erase it.
 
 ⚠️ **Adding anything to the root that must not ship** — a queue, a scratch note, a TODO —
