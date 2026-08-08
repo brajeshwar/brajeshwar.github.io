@@ -1022,6 +1022,11 @@ styleguide, 404, …); only 2 use `page-full` (`_pages/film.html`, `_pages/devic
 Defaulting the merged layout to the full-bleed body would drop `container-ideal` from all 22
 and push prose edge-to-edge.
 
+*(Counts as of 2026-08-08: **20** on `page`, **3** on `album` — `/film/`, `/devices/`, `/own/` —
+and **2** on `default`. `page-full.html` is `album.html` now, and `/blogroll/` is gone: deleted
+2026-08-07 and not coming back, "I'm not doing blogroll". The paragraph above is kept as the
+record of why the two layouts were merged, not as a current inventory.)*
+
 Done 2026-07-19. The merge kept one file with a conditional wrapper, defaulting to reading
 width:
 

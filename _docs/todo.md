@@ -22,8 +22,11 @@ Originally absorbed from the 2027 planning braindump.
       card-grid include. The file is HTML now so the restyle is markup only.
 - [ ] **`_src/wear/` still says wear** — the page is `/own/` since 2026-08-07. Renaming the
       masters folder is a `git mv` (it is LFS-tracked by path, `_src/**`), left for him to say.
-- [ ] **`/blogroll/` returns 404** — deleted 2026-08-07, nothing linked to it internally, but
-      any bookmark now dead-ends. A `_redirect` entry would fix it if that matters.
+- [x] ~~**`/blogroll/` returns 404**~~ *(closed 2026-08-08 — won't do)*. Deleted 2026-08-07;
+      nothing on the site linked to it, so only an external bookmark would dead-end. Brajeshwar:
+      "I'm not doing blogroll, is there is anything, delete it." No redirect, no page. The only
+      surviving mention of the word is in a 2025 POST about the indie web, where it means the
+      general thing and not this page — that is content and stays.
 - [x] **Year jump-nav on `/archives/`** *(2026-07-26/27)* — all 26 years, always reachable.
       A horizontal strip hanging off the header rule, at every width — an auto-fit grid, so
       26 years are one row on a desktop and wrap into even rows on a phone. *(Corrected
