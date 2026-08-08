@@ -558,9 +558,10 @@ title, not `max-width`. So `main > article > h1` would have won and silently cla
 written onto the article by `page.html`, mirroring `.post` on a post.
 
 ## The files
-Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (14 today
-— `timeline.css` came with the `/about/` rework; `cards.css` was split out of the base tier on
-2026-07-27, and `code.css` was deleted the same day when Rouge was disabled). The numbering
+Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (**18 today**
+— `timeline` came with the `/about/` rework; `cards` was split out of the base tier on
+2026-07-27 and `code` was deleted the same day when Rouge was disabled; then `bookplate`,
+`own` and `cv` arrived, and `breakpoints` and `bookmarks` sit alongside them). The numbering
 (`0.0-`, `2.1-`, `9.9-`) encoded cascade order for humans; the order now lives in one place —
 `assets/styles/site.scss` — which is the only thing that actually determines it.
 
@@ -576,10 +577,21 @@ Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (
       page.css        page bundle (empty hook today)
       album.css       gallery bundle
       home.css        \
-      archives.css     |  per-page one-offs
-      search.css       |
-      now.css         /
+      archives.css     |
+      search.css       |  per-page one-offs
+      now.css          |
+      timeline.css     |  /about/ and /now/ share this one
+      own.css          |
+      cv.css          /   /cv/ (2026-08-09) — NOT the timeline component; see
+                          the note at the top of _pages/cv.html for why a CV
+                          and a story want opposite emphasis
+      breakpoints.css variables only
       bookmarks.css   not yet wired up — see below
+
+> ⚠️ The `.css` names in this tree are historical. The files are `.scss` and have been since
+> 2026-07-27 — see the note above about the move out of `_includes/css/`. The names were left
+> as written rather than silently corrected, because the rest of this document argues about
+> them under these names.
 
 ## How the one file is assembled
 
@@ -594,7 +606,7 @@ Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (
 
     Foundation      config → themes → base → chrome
     Layout          cards → album → page → post
-    Page one-offs   archives → home → now → search → timeline
+    Page one-offs   archives → home → now → search → timeline → own → cv
 
 Order is the cascade; there is no other mechanism now. Two consequences:
 

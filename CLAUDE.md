@@ -131,14 +131,17 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 9. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
-- CSS = **17 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
+- CSS = **18 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
   `cards`, `bookplate`, `post`, `page`, `album`, + per-page one-offs
-  `home`/`archives`/`search`/`now`/`timeline`/`own`, plus the variables-only `breakpoints` and
-  the not-yet-wired `bookmarks`), compiled by
+  `home`/`archives`/`search`/`now`/`timeline`/`own`/`cv`, plus the variables-only `breakpoints`
+  and the not-yet-wired `bookmarks`), compiled by
   **`assets/styles/site.scss`** into ONE external stylesheet. Flattened from 25 numbered ITCSS
   partials on 2026-07-19 — **don't reintroduce numeric prefixes**; cascade order lives in
   `site.scss`, and `config` must stay first.
-  One file, **11.5KB gzip / 60.3KB raw** (2026-08-08), fetched once and then cached.
+  One file, **11.2KB gzip / 57.4KB raw** (measured 2026-08-09), fetched once and then cached.
+  ⚠️ It got SMALLER while gaining a partial: `cv.scss` added ~0.4KB gzip and `search.scss` gave
+  back ~7KB raw when `/search/` moved to the Modular UI and its Default-UI theming stopped
+  matching anything. Re-measure rather than extrapolating — this number has been stale twice.
 - **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
   them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
   because an underscore directory is never copied to the output — sources under `assets/`

@@ -6,7 +6,7 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **ELEVEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+⚠️ **TWELVE commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
 read "everything below is pushed and live, the tree is clean", and it stopped being true partway
 through the session without anyone updating it. Check `git log origin/main..main` before
 believing any status line in this file, including this one.
@@ -217,7 +217,12 @@ their `/now/#2024` anchors are untouched.
    positioned off-screen.
 2. **Look at the pictures.** Metadata matching cannot catch a correct record with the wrong
    image attached to it.
-3. **Grep for a token's definition the way it is written, not the way you would write it.**
+3. **The live site is a different runtime from `jekyll serve`.** Cloudflare Rocket Loader
+   rewrites script tags in production and nowhere else, which is how `/search/` stayed broken
+   for months while every local check passed. Confirmed the fix the same way it should have
+   been caught: opened brajeshwar.com and used the ⌘K palette, which proves `search.js` runs to
+   completion under Rocket Loader — and `/search/` now mounts from that same guarded `init()`.
+4. **Grep for a token's definition the way it is written, not the way you would write it.**
    `config.scss` aligns its colons — `--border-size           : 1px;` — so a search for
    `--border-size:` returns nothing and every alias token looks undefined. The ground truth is
    the built `site.css`, not the source.

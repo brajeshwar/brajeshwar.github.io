@@ -105,7 +105,10 @@ jobs:
       # work but need the reference changes this step exists to avoid, and
       # under HTTP/2 the request count is not what costs. See _docs/javascript.md.
       #
-      # 36.7 KB -> 15.2 KB raw, 13.9 KB -> 6.6 KB gzipped.
+      # 46.1 KB -> 15.2 KB raw, 15.9 KB -> 5.2 KB gzipped (measured 2026-08-09).
+      # The gzipped figures FELL from 6.6 KB while the raw total rose: deleting
+      # pagefind-custom.js and pagefind-autofocus.js took 4.8 KB of code, and
+      # the raw growth is comment prose in search.js, which minifies to nothing.
       - name: Minify JavaScript
         run: npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite
 
