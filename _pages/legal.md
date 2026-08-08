@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Legal
+title_style: vertical
 ---
 
 # Legal

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Ideas
+title_style: vertical
 ---
 
 # Ideas

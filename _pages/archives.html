@@ -21,7 +21,7 @@ title: Archives
   and the list are just two blocks in normal flow now, the strip hanging off
   the header rule above them.
 {%- endcomment -%}
-<main class="archives">
+<main>
 {%- comment -%}
   Written here rather than inherited, because this is the ONE page that uses
   `layout: default` directly — page.html and album.html carry the shared title
@@ -40,7 +40,7 @@ title: Archives
   still the page's h1 — same element, same place in the document, same thing a
   screen reader announces first. Only the painting differs. See archives.css.
 {%- endcomment -%}
-<h1 class="archive-title">{{ page.title }}</h1>
+<h1 class="vertical-title">{{ page.title }}</h1>
 
   {%- comment -%}
     Sticky year jump-nav. The anchors are the <caption> ids below — those already

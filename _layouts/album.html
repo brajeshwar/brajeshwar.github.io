@@ -11,24 +11,35 @@ layout: default
 
 <main role="main" class="album {{ page.style }}">
 {%- comment -%}
-  THE TITLE, EMITTED HERE RATHER THAN PER PAGE (2026-08-08: "I want to bring
-  back titles to all of the pages. I think we should have that in the layout
-  template").
+  THE TITLE, EMITTED HERE RATHER THAN PER PAGE (2026-08-08).
 
-  Most pages had none: a Markdown page's `# Heading` is eaten by
-  jekyll-titles-from-headings, and the HTML pages simply never wrote one, so
-  /books/, /film/, /album/, /music/, /contact/ and /devices/ all rendered
-  headless with only <title> carrying the name.
+  Three decisions, in order:
 
-  ⚠️ GUARDED ON THE RENDERED CONTENT, not on a front-matter flag. A handful of
-  pages DO write their own h1 — /search/, /random/, /legal/, /now/ — and
-  /now/ writes eleven. Emitting unconditionally would give those two titles.
-  `content` is already rendered HTML by the time a layout sees it, so testing
-  it for `<h1` is exact and needs no per-page opt-out to keep in sync. Same
-  idiom page.html already uses for `class="footnotes"`.
+  1. WHETHER to emit. The default is "unless the page already rendered an h1",
+     which keeps /hire/, /random/ and /styleguide/ — pages that write their own
+     — from getting two. `content` is rendered HTML by the time a layout sees
+     it, so the test is exact and needs no per-page opt-out to keep in sync.
+
+  2. EXCEPT when the page asks explicitly. /now/ is eleven `# YYYY` sections
+     (2026-08-08: "I have used '# YYYY' for me to edit easily, we can still
+     have another on the top as the title") and /legal/ carries `# Privacy
+     Policy` and `# Terms of Use`. Both trip the content test and both still
+     want a title, so `force_title: true` or any `title_style:` overrides it.
+
+     ⚠️ That means those pages ship MORE THAN ONE h1, which is his call and
+     worth knowing: the fix that keeps the markup honest is `## YYYY` in
+     now/*.md, and he has said he prefers the single hash for editing.
+
+  3. WHICH treatment. `title_style: vertical` swaps the shared uppercase
+     `.page-title` for `.vertical-title`, the spine that runs down the left
+     gutter — a separate class rather than a modifier, because it overrides
+     essentially every property of the other one.
 {%- endcomment -%}
-{%- unless content contains '<h1' -%}
-<h1 class="page-title">{{ page.title }}</h1>
-{%- endunless -%}
+{%- assign wants_title = false -%}
+{%- unless content contains '<h1' -%}{%- assign wants_title = true -%}{%- endunless -%}
+{%- if page.title_style or page.force_title -%}{%- assign wants_title = true -%}{%- endif -%}
+{%- if wants_title -%}
+<h1 class="{% if page.title_style == 'vertical' %}vertical-title{% else %}page-title{% endif %}">{{ page.title }}</h1>
+{%- endif -%}
   {{ content }}
 </main>
