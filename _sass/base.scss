@@ -256,6 +256,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: var(--step-3); }
+
+/* ---- ONE TITLE TREATMENT, pages and posts alike -----------------
+   Brajeshwar, 2026-08-08: "Make it Uppercase, but thin and condensed.
+   Also carry over that same styling to the posts titles too. So, all
+   titles has the same style."
+
+   `.page-title` is set by page.html, album.html and post.html, so a
+   post title and a page title are the same element wearing the same
+   class — there is no second rule to keep in step.
+
+   ⚠️ CONDENSED IS TRACKING, NOT A CONDENSED CUT, and it has to be.
+   Neither self-hosted family carries a width axis — Geist ships
+   `font-weight: 100 900` and Source Serif 4 `200 700`, and there is no
+   `wdth` in either — so `font-stretch: condensed` would compute and
+   then do nothing at all. Negative tracking is the only lever that
+   moves, and on uppercase at display size it is the right one anyway:
+   caps are drawn on a wider sidebearing than lowercase, so -0.02em
+   pulls them back to a normal colour rather than actually crushing
+   them.
+
+   The size steps DOWN to --step-2. Uppercase at --step-3 set the
+   longer titles ("Genghis Khan and the Making of the Modern World")
+   over three lines, because caps run about 12% wider than the
+   lowercase the scale was tuned for. */
+.page-title {
+  font-weight: 200;
+  font-size: var(--step-2);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+/* ⚠️ THE SERIF READER GETS A HEAVIER TITLE, on purpose.
+   Brajeshwar, same message: "If we are thinning it, remember to see how
+   it looks with serif fonts - thin serif fonts don't really look
+   great." Right, and the numbers agree: Source Serif 4's variable font
+   stops at 200, so it cannot even reach the sans's weight, and what it
+   does reach is a hairline-contrast serif whose thin strokes drop out
+   at title size. 300 is the lightest that holds together.
+
+   Tracking opens back to 0 with it. Negative tracking on a serif runs
+   the serifs of adjacent caps into each other, which the sans, having
+   none, does not do. */
+[data-font="serif"] .page-title {
+  font-weight: 300;
+  letter-spacing: 0;
+}
 h2 { font-size: var(--step-2); }
 h3 { font-size: var(--step-1); }
 h4 { font-size: var(--step-0); }

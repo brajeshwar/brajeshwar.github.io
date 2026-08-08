@@ -202,8 +202,13 @@ photo-cover__desc {
   width: 100cqi;
   max-width: 100cqi;
   margin: 0;
-  font-weight: var(--font-weight);
 }
+
+/* ⚠️ `font-weight: var(--font-weight)` USED TO BE IN THE RULE ABOVE and had
+   to go. post.css loads after base.css, so it beat the shared `.page-title`
+   weight and post titles alone stayed at 400 while every page title went
+   thin — the exact split the one-class treatment exists to prevent. The
+   width breakout stays here because it IS post-specific; the type does not. */
 
 .post time {
   display: block;

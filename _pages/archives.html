@@ -22,6 +22,14 @@ title: Archives
   the header rule above them.
 {%- endcomment -%}
 <main>
+{%- comment -%}
+  Written here rather than inherited, because this is the ONE page that uses
+  `layout: default` directly — page.html and album.html carry the shared title
+  guard, and default.html cannot: its `{{ content }}` is the whole <main> from
+  those layouts, so an h1 there would land outside main and double up for every
+  post and page on the site. One page, one line.
+{%- endcomment -%}
+<h1 class="page-title">{{ page.title }}</h1>
 
   {%- comment -%}
     Sticky year jump-nav. The anchors are the <caption> ids below — those already

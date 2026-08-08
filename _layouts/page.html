@@ -73,6 +73,26 @@ layout: default
 {%- endcomment -%}
 <main role="main" class="{{ page.style }}">
   <article class="page{% if content contains 'class="footnotes"' %} container-ideal{% endif %}">
+{%- comment -%}
+  THE TITLE, EMITTED HERE RATHER THAN PER PAGE (2026-08-08: "I want to bring
+  back titles to all of the pages. I think we should have that in the layout
+  template").
+
+  Most pages had none: a Markdown page's `# Heading` is eaten by
+  jekyll-titles-from-headings, and the HTML pages simply never wrote one, so
+  /books/, /film/, /album/, /music/, /contact/ and /devices/ all rendered
+  headless with only <title> carrying the name.
+
+  ⚠️ GUARDED ON THE RENDERED CONTENT, not on a front-matter flag. A handful of
+  pages DO write their own h1 — /search/, /random/, /legal/, /now/ — and
+  /now/ writes eleven. Emitting unconditionally would give those two titles.
+  `content` is already rendered HTML by the time a layout sees it, so testing
+  it for `<h1` is exact and needs no per-page opt-out to keep in sync. Same
+  idiom page.html already uses for `class="footnotes"`.
+{%- endcomment -%}
+{%- unless content contains '<h1' -%}
+<h1 class="page-title">{{ page.title }}</h1>
+{%- endunless -%}
     {{ content }}
     {{ page_edited }}
   </article>
