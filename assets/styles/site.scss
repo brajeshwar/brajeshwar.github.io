@@ -113,6 +113,7 @@
 @use "search";
 @use "timeline";
 @use "now";
+@use "cv";
 // own AFTER home: /own/ reuses home's .strip scroller and overrides three of
 // its declarations. Same specificity, so the later file wins — move this above
 // home and the rows silently take the home page's full-bleed geometry.
