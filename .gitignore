@@ -17,7 +17,16 @@ node_modules/
 CLAUDE.local.md
 
 # Editor / tooling local state
-.claude/
+.claude/*
+# ⚠️ `.claude/*`, NOT `.claude/`, and the difference is the whole rule. Git cannot
+# re-include a file whose PARENT DIRECTORY is excluded — it never descends into it,
+# so a later `!` line is dead. Excluding the CONTENTS instead leaves the directory
+# walkable, and the negation below works.
+#
+# Why bother: the slash commands are shared tooling, not local state. `/do` has to
+# exist on every machine and in every session or the CLAUDE.local.md workflow only
+# works on this one. settings.local.json stays ignored.
+!.claude/commands/
 .impeccable/
 .obsidian/
 .ruby-lsp/

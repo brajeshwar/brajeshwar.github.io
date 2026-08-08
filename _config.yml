@@ -113,6 +113,14 @@ exclude:
   - now/
   - README.md
   - CLAUDE.md           # agent guidance — must not be published (/CLAUDE/)
+  # ⚠️ GITIGNORE DOES NOT STOP JEKYLL. CLAUDE.local.md is ignored by git, which
+  # keeps it out of the repo and therefore out of the deploy — but a local
+  # `make build` was rendering it to _site/CLAUDE.local/ all the same. One
+  # `git add -f`, or anyone cloning with their own copy, and a private work
+  # queue is a public page. Excluded here so the two do not have to agree.
+  - CLAUDE.local.md
+  - TODO.md             # was live at /TODO/ until 2026-08-08 — same class of file as the two above
+  - .claude             # slash commands and local settings, not content
   - Makefile            # dev tooling
   - scripts             # post-build scripts run from the checkout, not the published site
   # The variable TTF is the SOURCE we re-subset from, not a shipped asset. Only

@@ -12,24 +12,36 @@ are [`_docs/styles.md`](_docs/styles.md), hosting is [`_docs/hosting.md`](_docs/
 Re-read the guardrails below before any commit-worthy change.
 
 ## CLAUDE.local.md — the work queue (added 2026-08-08)
-`CLAUDE.local.md` at the repo root is Brajeshwar's running list of what to do next. It is
-**gitignored**, so it may be absent — that is normal, not an error, and it is never to be
-committed or referenced from anything the site builds.
+`CLAUDE.local.md` at the repo root is Brajeshwar's running list of what to do next. **He writes
+it by hand, so it is kept bare** — no instructions, no commentary, nothing but his own lines.
+Everything about how to handle it lives HERE instead. It is **gitignored and excluded from the
+build**, so it may be absent — that is normal, not an error.
 
-**Read it at the start of a session, after `_docs/memory.md`.** If it has open items and he
-has not asked for something else, that queue *is* the work.
+**Read it at the start of a session, after `_docs/memory.md`.** If `## DO` has items and he has
+not asked for something else, that queue *is* the work. `/do` is the shortcut for "run it".
 
-- **He stacks new items at the TOP; Claude works from the BOTTOM UP.** The bottom-most open
-  item is next. Inserting an item lower down is how he jumps it forward.
+Its three sections, and they are not equal:
+
+| | |
+|---|---|
+| `## DO` | **the only section to act on** |
+| `## MAYBE / LATER / ICEBOX` | thinking aloud. **Never act on these, never ask about them.** |
+| `## DONE` | the log |
+
+- **He stacks new items at the TOP; work from the BOTTOM UP.** The bottom-most open item in
+  `## DO` is next. Dropping an item part-way down is how he pulls it forward.
 - **One at a time**, finished — built, verified, committed — before taking the next.
 - **Never reorder, reword or delete his lines.** Position is his instruction, not ours.
 - **Never push** because a queue item is done; guardrail 7 is unchanged.
-- **Done means:** mark in place as `- [x] [HH:MM] <original text>` (24-hour local, the time it
-  was finished), then move it under today's `- YYYY-MM-DD` root item in the Done section as a
-  sub-item, newest date first. Abandoned items get struck through with a reason rather than
-  deleted — log history, never erase it.
+- **Done means:** mark in place as `- [x] [HH:MM] <his original text>` (24-hour local, the time
+  it was finished), then move that line under today's `- YYYY-MM-DD` root item in `## DONE` as a
+  sub-item, newest date first. Abandoned rather than finished → strike it through with a
+  one-line reason instead of deleting it. Log history, never erase it.
 
-The file explains its own format at the top; that is the copy to trust if the two disagree.
+⚠️ **Adding anything to the root that must not ship** — a queue, a scratch note, a TODO —
+means **two** edits: `.gitignore` keeps it out of the repo, and `_config.yml`'s `exclude:`
+keeps it out of the build. Neither implies the other. `CLAUDE.local.md` was gitignored and
+still rendering to `_site/CLAUDE.local/`.
 
 ## What this site is
 A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are
