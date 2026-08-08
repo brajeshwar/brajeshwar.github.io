@@ -4,9 +4,16 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-08, eighth session) — READ FIRST
+## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-Everything below is **pushed and live**. The tree is clean.
+⚠️ **NINE commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+read "everything below is pushed and live, the tree is clean", and it stopped being true partway
+through the session without anyone updating it. Check `git log origin/main..main` before
+believing any status line in this file, including this one.
+
+The queue is `CLAUDE.local.md`, worked with `/odo`; it is gitignored and excluded from the
+build, so it is invisible to `git status` and to `_site` both. If work seems to appear from
+nowhere between sessions, that file is where it came from.
 
 ### The books shelf was rebuilt, twice over
 
@@ -95,12 +102,75 @@ because kramdown derives them from the heading TEXT rather than its level.
 - `/own/` is **still unlinked from nav**.
 - The 10x Is Easier Than 2x post is **scheduled for 2026-08-13** and 404s until then.
 
+### The work queue: `CLAUDE.local.md` + `/odo`
+
+A hand-written queue at the repo root, worked **top-down** by the `/odo` command
+(`.claude/commands/odo.md`, tracked). `## DO` is the only section acted on; `## MAYBE / LATER /
+ICEBOX` is thinking aloud and is never touched; `## DONE` logs `- [x] [HH:MM] <his text>` under
+a `- YYYY-MM-DD` root item.
+
+⚠️ **`WIP` on an item means hands off, and it cascades to every nested item beneath it.** He is
+still writing those. Items are prose *or* bullets — do not rewrite one into the other, and leave
+`## DO` ending on a blank line rather than a bare `-`.
+
+Two gotchas that cost a build each: **gitignore does not stop Jekyll** (`_site/CLAUDE.local/`
+was being published until `_config.yml`'s `exclude:` caught it — they are separate mechanisms),
+and **git cannot re-include a file under an excluded directory**, so `.claude/*` plus
+`!.claude/commands/` is required where `.claude/` would silently keep ignoring the command.
+
+`/odo` is **project-scoped on purpose** — its body names `_docs/` and this repo's guardrails, so
+promoting it to `~/.claude/commands/` would fire it in repos with no queue. The open question of
+where the portable half should live moved out to the vault
+(`~/_/Oinam/3-Resources/AI/Claude/Claude Code - Portable Setup.md`).
+
+### `/about/` became a story, and `/cv/` took the career
+
+Two passes, either side of midnight.
+
+**First** (2026-08-08): the timeline reversed to newest-first, an example `<figure
+class="timeline-figure">` floating into the 317px of empty margin every entry already has, and a
+live footnote/sidenote example. ⚠️ That figure needed `display: flow-root` on `.timeline-entry`
+to contain it — **not `overflow: hidden`**, which would have clipped the spine's absolutely
+positioned dots. And the sidenote example needed `full: true` in `page.html` as an *opt-out*,
+because the layout adds `.container-ideal` on sight of `class="footnotes"` and that clamped the
+whole 1024px timeline to 665px.
+
+**Then** (2026-08-09): the professional history split out to **`/cv/`** — 13 roles rebuilt from
+`cv.brajeshwar.com`, dates as the separator rule, company as the heading — with **`/resume/`** a
+`layout: redirect` stub pointing at it. And `/about/` took the matching inversion: **the event is
+the `h2` now and the year is a quiet `<p>` label**, where the year had been the `h2` and the
+event an `h3` under it.
+
+⚠️ **`/cv/` deliberately does NOT use the timeline component.** The timeline makes the date loud
+and the entry subordinate, which is right for a story and backwards for a CV. Same reason the
+periods on `/about/` were *not* flattened: the two pages now agree on emphasis while keeping
+different structures, and collapsing either into the other throws that away.
+
+Three things the `/about/` inversion did not break, each worth knowing before the next change:
+the periods and their spines stayed; every shared `/about/#2005-2006` still resolves because the
+`id` changed tags and not elements; and the `§` anchor still lands on the year because
+`anchors.js` matches `.timeline-when[id]` — **a class, not a tag**. Add ids to `.timeline-title`
+and that selector needs widening or the `§` goes missing from the loud line.
+
+`.timeline-when` and `.page-now h2` were one rule and are now two. `/now/` has no events to
+promote, only years, so it kept the old treatment — verified by diffing the built `.page-now h2`
+declaration before and after, not by looking at the page.
+
+⚠️ **`/cv/` and `/about/` now contradict each other on four facts in public.** Mobisy's title,
+Oinam Software's start year (which also collides with `/about/`'s own freelancing period),
+Oinam's client list, and Razorfish's headcount wording. Neither page was normalized to the other
+— they are his claims. Listed in [`todo.md`](todo.md).
+
 ### The two habits this session kept proving
 1. **Count the items; do not trust the exit code.** A green build hid a one-item home strip, a
    lost book ("Absolute and None", from a strip pass that was not idempotent), and a title
    positioned off-screen.
 2. **Look at the pictures.** Metadata matching cannot catch a correct record with the wrong
    image attached to it.
+3. **Grep for a token's definition the way it is written, not the way you would write it.**
+   `config.scss` aligns its colons — `--border-size           : 1px;` — so a search for
+   `--border-size:` returns nothing and every alias token looks undefined. The ground truth is
+   the built `site.css`, not the source.
 
 ## Session record — 2026-08-04, seventh session (superseded as the index head, kept per the log-history rule)
 

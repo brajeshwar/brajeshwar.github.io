@@ -71,13 +71,36 @@ Originally absorbed from the 2027 planning braindump.
 - [x] **Timeline template** *(2026-07-27)* — `/about/` is now a vertical timeline with a
       CSS-only Life/Work filter and shareable `#work` / `#life` URLs, so `/about/#work` is the
       link to send instead of a CV. `_pages/about.html` + `timeline.css`; `/now/` wears the same
-      visuals. See [`timeline.md`](timeline.md). Two follow-ups are open, below: the
-      "Download Resume" PDF and retiring `cv.brajeshwar.com`.
+      visuals. See [`timeline.md`](timeline.md). ⚠️ **The claim that `/about/#work` is "the link
+      to send instead of a CV" was overtaken on 2026-08-09** — there is a real `/cv/` now, and
+      that is the link to send. The filter is still there and still works; it is no longer
+      carrying the job this line gave it.
+- [x] **`/cv/` and `/resume/`** *(2026-08-09)* — the professional history, split out of `/about/`
+      at his ask: *"I have a better idea to avoid using a YAML. Separate my professional career
+      as /cv/."* Thirteen roles rebuilt from `cv.brajeshwar.com` inside this site's chrome, dates
+      as the separator rule and the company as the heading. `/resume/` is a `layout: redirect`
+      stub pointing at it — an **alias, not a rename**: `/resume/` was never live, so unlike
+      `/photos/` it is not preserving a URL, it is catching the other word people type.
+      `_pages/cv.html` + `_sass/cv.scss` + `_redirect/resume.md`.
+      ⚠️ **`/cv/` deliberately does not use the timeline component.** That puts the date in an
+      `h2` and the event in an `h3` — right for a story, backwards for a CV. `/about/` got the
+      same inversion the same day (events as titles), which is why the two now agree on emphasis
+      while keeping different structures.
+- [ ] **`/cv/` and `/about/` disagree on four facts.** Both are live and neither was normalized
+      to the other, because these are his claims to settle, not mine:
+      Mobisy is "Head of Product" on `/cv/` and "Chief Product Officer (consulting)" on
+      `/about/`; Oinam Software starts "2003 Mar" on `/cv/` but "By 2005" on `/about/`, which
+      also collides with `/about/`'s own 2003–2004 "freelancing, full time" period; Oinam's
+      client list says Macromedia on one and Adobe on the other; Razorfish is "50+ proficient
+      designers" against "50+ product designers".
 - [ ] **"Download Resume" PDF** — the Work track as a downloadable file. Obvious home is beside
       the Life/Work pill when Work is the active view. Worth deciding then whether the PDF is
-      generated from the timeline markup or maintained separately.
-- [ ] **Retire `cv.brajeshwar.com`** once `/about/#work` has been live a while — belongs with the
-      other Cloudflare Worker redirects above.
+      generated from the timeline markup or maintained separately. **Now that `/cv/` exists it is
+      the better source** — one page, already in role order, no filter state to reason about.
+- [ ] **Retire `cv.brajeshwar.com`** — `/cv/` replaces it as of 2026-08-09, so this is now only
+      waiting on him. ⚠️ `_redirect/resume.md` does **not** cover it: a Jekyll stub can only
+      redirect a path on this domain, and that is a different host. It needs the Cloudflare
+      Worker redirect with the others above.
 - [x] **`/album/` is real** *(2026-08-01)* — eight photographs replacing the twelve borrowed
       book covers, entries sorted by `img` filename. ⚠️ Two of the eight have no `url` and
       render **unlinked by design**; both includes guard on the field rather than emitting

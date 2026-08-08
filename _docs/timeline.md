@@ -29,7 +29,10 @@ Markdown would have been parser-dependent. In HTML we write the `id` ourselves.
 ```html
 <div class="timeline">
 
-  <h1 class="timeline-title-a11y">Brajeshwar Oinam</h1>   <!-- clipped, see below -->
+  <!-- The h1 comes from the LAYOUT now, not from here. The clipped
+       .timeline-title-a11y this block used to show is gone from about.html;
+       the class survives in timeline.scss and is documented below because
+       nothing else reintroduced it, not because the page still uses it. -->
 
   <div class="timeline-intro">
     <p>The intro opens the page, and spans the full band.</p>
@@ -45,13 +48,13 @@ Markdown would have been parser-dependent. In HTML we write the `id` ourselves.
       <span class="pill__marker" aria-hidden="true"></span>Work</label>
   </fieldset>
 
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="1999-2003">1999&ndash;2003</h2>
+  <section class="timeline-period" aria-labelledby="1999-2003">
+    <p class="timeline-when" id="1999-2003">1999&ndash;2003</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Computer Graphic Designer</h3>
+        <h2 class="timeline-title">Computer Graphic Designer</h2>
         <p class="timeline-meta">Comic magazine startup &middot; Bombay</p>
         <p>Prose.</p>
       </li>
@@ -65,13 +68,38 @@ Markdown would have been parser-dependent. In HTML we write the `id` ourselves.
 |---|---|
 | `.timeline` | Wrapper. The filter's `:has()` selectors are scoped to it. |
 | `.timeline-period` | One time range. Hides itself when the filter empties it. |
-| `.timeline-when` | The range — **typed by hand**: "early 1980s", "1993-1995", anything. Give it an `id` to make it linkable. |
+| `.timeline-when` | The range — **typed by hand**: "early 1980s", "1993-1995", anything. A `<p>`, not a heading. Give it an `id` to make it linkable, and point the period's `aria-labelledby` at that same id. |
 | `.timeline-entries` | `<ol>` of entries. Carries the spine (its `border-left`). |
 | `.timeline-entry` | One event. **`data-track="life"` or `"work"` is the only thing the filter reads.** |
-| `.timeline-title` / `.timeline-meta` | Heading and the role/place/date line. |
+| `.timeline-title` / `.timeline-meta` | The event's `<h2>` — the loud line on the page — and the role/place/date line under it. |
+
+### ⚠️ The year is not the heading (changed 2026-08-09)
+
+It was until then: `.timeline-when` was an `<h2>` and `.timeline-title` an `<h3>` beneath it,
+so the page read as a list of years with events indented under each. Brajeshwar reversed the
+emphasis — *"instead of years as the focus, let's focus on events as the titles. Of course, we
+will have dates."* The event took the `<h2>`; the year became a quiet uppercase label.
+
+Three things this did **not** break, and each is the reason a tempting simplification is wrong:
+
+- **The periods stayed.** Flattening them into a flat list of events is a different change: it
+  costs one spine per group and converges `/about/` onto `/cv/`'s shape, which is deliberately
+  a different shape.
+- **Every shared `/about/#2005-2006` still resolves.** The `id` did not move elements, only
+  tags — a fragment target does not care what tag it lands on.
+- **The `§` anchor still appears on the year.** `anchors.js` matches `.timeline-when[id]`, a
+  class and not a tag. Had it matched `h2[id]` the anchor would have followed the heading to
+  the event instead; if you ever add ids to `.timeline-title`, that selector needs the entry
+  too or the `§` will be missing from the loud line.
+
+`.timeline-when` also stopped sharing its rule with `.page-now h2` at the same time. `/now/`
+has no events to promote — only years — so it kept the old treatment, and the two pages now
+differ on purpose. Change one and you are no longer changing the other.
 
 Entry style follows the CV at <https://cv.brajeshwar.com>: each role a discrete block with a
-date range, an organization, a location and a description, newest first.
+date range, an organization, a location and a description, newest first. That CV is rebuilt on
+this site at [`/cv/`](../_pages/cv.html), which does **not** use this component — see the note
+at the top of that file for why a story and a CV want opposite emphasis.
 
 ## Copy-paste templates
 
