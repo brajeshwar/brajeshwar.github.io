@@ -21,11 +21,40 @@ and is unaffected.
 
 ## Why HTML, not Markdown
 
-Brajeshwar's call: *"Markdown should be for prose in posts, others are exempt."* Each entry
-needs a machine-readable `life` / `work` tag, and Markdown can only carry that through kramdown
-IAL. That was verified to work (`{: .class}` on its own line; the inline form
-`## 1993-1995 {: .class}` does not parse) but it is awkward: it puts a class on a heading rather
-than an attribute on an entry, and periods contain mixed tracks. HTML says what it means.
+**Decided: HTML, and it stays HTML.** He asked three times — 2026-08-08 ("Will it be easier in
+Markdown instead of HTML…"), 2026-08-09 ("would it not be easier to have Markdown instead now
+that they are clean and separate"), and again the same night ("Did we took a decision to stay
+with HTML instead of Markdown?"). Recording it here so the answer stops being re-derived.
+
+Brajeshwar's older call was *"Markdown should be for prose in posts, others are exempt."* The
+reason given at the time — that each entry needed a machine-readable `life` / `work` tag —
+**is gone**, along with the filter. The decision survives on a different and stronger reason:
+
+**kramdown does not parse Markdown inside block-level HTML.** Both `/about/` and `/cv/` need a
+wrapper element per item to carry the classes the CSS targets (`.timeline-entry`,
+`.timeline-title`, `.timeline-meta`). The prose lives *inside* those wrappers — which is exactly
+where Markdown stops working. Verified 2026-08-09 against this site's own parser
+(`input: GFM`):
+
+```
+<li class="timeline-entry">
+<h2 class="timeline-title">Razorfish</h2>
+
+I led the creative design at [Razorfish](https://www.razorfish.com) and *learned* a lot.
+</li>
+```
+
+renders the link and the emphasis **literally** — `[Razorfish](…)` and `*learned*` reach the
+browser as text. Adding `markdown="1"` to every wrapper fixes it, and that is *more* markup per
+entry than the HTML it was meant to save. So a Markdown `/about/` would be a file where the
+Markdown does not work in the only places there is any prose.
+
+The third option, a YAML data file with a template, is what he ruled out himself when splitting
+`/cv/` off: *"I have a better idea to avoid using a YAML."* And he is comfortable here: *"I'm Ok
+sticking to HTML as I can edit HTML pretty well."*
+
+⚠️ **This is a fact about the parser, not a preference.** If it is ever revisited, test it
+first — the `markdown="1"` attribute is the whole question, not the file extension.
 
 Two parser facts are worth keeping, since they cost a test to establish. The site runs kramdown
 with `input: GFM` (Jekyll's default; `kramdown-parser-gfm` is in the Gemfile because of it).

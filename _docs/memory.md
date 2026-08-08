@@ -6,7 +6,7 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **THIRTEEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+⚠️ **SIXTEEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
 read "everything below is pushed and live, the tree is clean", and it stopped being true partway
 through the session without anyone updating it. Check `git log origin/main..main` before
 believing any status line in this file, including this one.
@@ -253,6 +253,53 @@ sentence is satisfied without touching markup. Dissolving the periods would have
 inventions — authoring dates onto the two entries that have none (Razorfish, Computer Graphic
 Designer), and relocating nine `#2005-2006`-style ids onto entry headings. If he wants the
 period labels gone too, that is a separate, deliberate change.
+
+### The spine, the dots, and a bug hiding behind reduced-motion
+
+Three tunings on the shared timeline, all measured in the browser rather than eyeballed:
+
+**The spine is a `::before`, not `border-left`.** A border spans its whole box and cannot begin
+partway down, so 16.5px of line hung above the first dot. ⚠️ **The list's `padding-left` grew by
+the rule's 2px to absorb what the border used to contribute** — miss that and every entry shifts
+left and the dots leave the line.
+
+**Dots are solid `--accent`.** They were a page-coloured fill with a 10%-alpha border, which at
+11px read as a gap in the line rather than a point on it. `--accent` is monochrome by default
+(chroma 0) and inverts cleanly — 0.205 on 0.97 light, 0.97 on 0.205 dark — so the page stays
+colourless unless the reader chooses otherwise.
+
+**One token now drives the dot's position, the spine's top and the progress fill's top:**
+`--timeline-dot-center`, defined as the middle of the first line of whatever leads an entry —
+an h2 on `/about/` and `/cv/`, body text on `/now/`. That is why it is a variable: his ask
+carried its own exception, *"(if there are as in the /about/)"*. The hardcoded `0.55em` it
+replaced was accidentally right for `/now/` (11px against a true 10.7px) and 2.25px high on
+`/about/`.
+
+⚠️ **NEVER PUT AN `em` IN A CUSTOM PROPERTY THAT CROSSES ELEMENTS.** A custom property inherits
+as an unresolved token, so `0.55em` set on the list resolves against the font size of whatever
+*uses* it — the spine and the dots would silently disagree. Absolute math on the scale tokens
+has no such trap.
+
+**And a latent bug found only by measuring.** `.timeline-progress` carried the DOT's `left`
+formula, which is relative to an entry, while being a child of the list — so it painted 42px
+left of the spine it fills (spine x=244–246, fill x=204). It went unseen because
+`prefers-reduced-motion: reduce` sets it to `display: none`, and that was on. **A rule you never
+see render is a rule nobody has checked**; it now takes the spine's geometry verbatim instead of
+its own arithmetic.
+
+### HTML, not Markdown — settled, and for a new reason
+
+He asked three times across two days, so it is written down in [`timeline.md`](timeline.md) now.
+The original justification — entries needing a `life`/`work` tag — **died with the filter**. The
+decision survives on something stronger and parser-level:
+
+**kramdown does not parse Markdown inside block-level HTML.** Both pages need a wrapper per item
+to carry the classes the CSS targets, and the prose lives inside those wrappers. Verified
+against this site's own parser: `[Razorfish](…)` and `*learned*` reach the browser as literal
+text. `markdown="1"` on every wrapper fixes it and is *more* markup than the HTML it would save.
+A Markdown `/about/` would be a file where Markdown fails in the only places there is prose.
+
+⚠️ It is a fact about the parser, not a preference. If it is revisited, test it first.
 
 ### The two habits this session kept proving
 1. **Count the items; do not trust the exit code.** A green build hid a one-item home strip, a
