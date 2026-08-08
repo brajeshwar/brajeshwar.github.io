@@ -20,8 +20,9 @@ Originally absorbed from the 2027 planning braindump.
       Oinam's Form service's to dictate, so nothing is scaffolded for it.
 - [ ] **`/music/` to follow `/film/`** — artists into `_data/music.yaml`, `layout: album`, a
       card-grid include. The file is HTML now so the restyle is markup only.
-- [ ] **`_src/wear/` still says wear** — the page is `/own/` since 2026-08-07. Renaming the
-      masters folder is a `git mv` (it is LFS-tracked by path, `_src/**`), left for him to say.
+- [x] ~~**`_src/wear/` still says wear**~~ *(closed 2026-08-08)* — he renamed it to `_src/own/`
+      himself. LFS tracks `_src/**` by PATH, so the rule follows the folder and no `.gitattributes`
+      change was needed; the folder holds only a `.gitkeep` so far.
 - [x] ~~**`/blogroll/` returns 404**~~ *(closed 2026-08-08 — won't do)*. Deleted 2026-08-07;
       nothing on the site linked to it, so only an external bookmark would dead-end. Brajeshwar:
       "I'm not doing blogroll, is there is anything, delete it." No redirect, no page. The only

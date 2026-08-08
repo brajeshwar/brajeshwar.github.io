@@ -117,8 +117,7 @@ template changes. There are two conventions, and they are not interchangeable.
 collection, under the same slug as the published file with no suffix:
 
 ```
-_src/books/  _src/film/  _src/album/  _src/devices/  _src/wear/   ← the page is /own/ now;
-                                                          the masters folder still says wear
+_src/books/  _src/film/  _src/album/  _src/devices/  _src/own/
 
 static/books/the-lord-of-the-rings.webp   ← published, 800px long edge, 3:4
 _src/books/the-lord-of-the-rings.jpg      ← master, whatever the source gave
