@@ -32,11 +32,11 @@ intent: the queue convention is portable, but the command's body is not — it n
 `CLAUDE.local.md`, `_docs/`, guardrail 7 and this build's verify loop, none of which exist in
 another project. A user-level copy would fire in repos with no queue to read.
 
-His call, 2026-08-08: *"Keep it here for now, I will likely be starting a Claude Code Template
-to start any project with the bare ones. I'm yet to decide if I want this as part of dotfiles
-or git versioned private under `_root` or something like that."* So the open question is where
-the PORTABLE half eventually lives — a template repo, dotfiles, or a private `_root` — not
-whether to scatter this copy. Leave it here until he decides.
+His call, 2026-08-08: *"Keep it here for now."* The open question — where the PORTABLE half
+eventually lives, a template repo vs dotfiles vs a private `_root` — is **not this repo's to
+track**, and was moved out on 2026-08-08 to his vault at
+`~/_/Oinam/3-Resources/AI/Claude/Claude Code - Portable Setup.md`. Nothing here needs to
+change when he decides; leave `/odo` where it is until he says otherwise.
 
 Its three sections, and they are not equal:
 

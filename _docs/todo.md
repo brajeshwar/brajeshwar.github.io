@@ -3,13 +3,6 @@
 Running list of site tasks. Session-by-session history is in [`memory.md`](memory.md).
 Originally absorbed from the 2027 planning braindump.
 
-## Tooling
-- [ ] **Where the portable Claude setup lives** *(raised 2026-08-08)* — `/odo` and the
-      `CLAUDE.local.md` queue convention work anywhere; the brajeshwar.com specifics do not.
-      He is weighing a Claude Code template repo, dotfiles, or a git-versioned private
-      `_root`. Until then `/odo` stays project-scoped in `.claude/commands/` — see CLAUDE.md,
-      which says explicitly not to promote it.
-
 ## Content & pages
 - [x] **Books shelf split by letter** *(2026-08-08)* — `_data/books/01.yaml` + `a`–`z`, and
       `_data/books-favorites.yaml` beside it. Filed by the first NON-ARTICLE letter, so "The
