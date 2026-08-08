@@ -138,10 +138,12 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
   **`assets/styles/site.scss`** into ONE external stylesheet. Flattened from 25 numbered ITCSS
   partials on 2026-07-19 — **don't reintroduce numeric prefixes**; cascade order lives in
   `site.scss`, and `config` must stay first.
-  One file, **11.2KB gzip / 57.4KB raw** (measured 2026-08-09), fetched once and then cached.
-  ⚠️ It got SMALLER while gaining a partial: `cv.scss` added ~0.4KB gzip and `search.scss` gave
-  back ~7KB raw when `/search/` moved to the Modular UI and its Default-UI theming stopped
-  matching anything. Re-measure rather than extrapolating — this number has been stale twice.
+  One file, **10.8KB gzip / 54.6KB raw** (measured 2026-08-09, after the Life/Work removal).
+  ⚠️ It keeps getting SMALLER while gaining partials, so do not extrapolate from a file count.
+  In one day: `cv.scss` arrived (+0.4KB gzip), `search.scss` gave back ~7KB raw when `/search/`
+  moved to the Modular UI, `timeline.scss` gave back another ~157 lines when the Life/Work
+  filter went, and `cv.scss` then shrank to one rule when `/cv/` joined the timeline.
+  **This number has now been stale three times. Re-measure it; never carry it forward.**
 - **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
   them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
   because an underscore directory is never copied to the output — sources under `assets/`
