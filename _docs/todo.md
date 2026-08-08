@@ -68,9 +68,11 @@ Originally absorbed from the 2027 planning braindump.
       these described is gone: there is ONE site width (64rem/1024px) and the reading measure is
       a constraint on prose *inside* it, not a second template. See *Standardize the site width*
       below and [`styles.md`](styles.md) §6.
-- [x] **Timeline template** *(2026-07-27)* — `/about/` is now a vertical timeline with a
-      CSS-only Life/Work filter and shareable `#work` / `#life` URLs, so `/about/#work` is the
-      link to send instead of a CV. `_pages/about.html` + `timeline.css`; `/now/` wears the same
+- [x] **Timeline template** *(2026-07-27)* — `/about/` is a vertical timeline.
+      ⚠️ **It had a CSS-only Life/Work filter with shareable `#work` / `#life` URLs; both were
+      DELETED 2026-08-09** ("The Life/Work goes away including the code that powers it"), along
+      with `timeline.js`, every `data-track`, and ~157 lines of `timeline.scss`. Those fragments
+      now match nothing, which is right for a removed feature. `_pages/about.html` + `timeline.css`; `/now/` wears the same
       visuals. See [`timeline.md`](timeline.md). ⚠️ **The claim that `/about/#work` is "the link
       to send instead of a CV" was overtaken on 2026-08-09** — there is a real `/cv/` now, and
       that is the link to send. The filter is still there and still works; it is no longer
@@ -94,7 +96,8 @@ Originally absorbed from the 2027 planning braindump.
       client list says Macromedia on one and Adobe on the other; Razorfish is "50+ proficient
       designers" against "50+ product designers".
 - [ ] **"Download Resume" PDF** — the Work track as a downloadable file. Obvious home is beside
-      the Life/Work pill when Work is the active view. Worth deciding then whether the PDF is
+      the Life/Work pill when Work is the active view — **that pill no longer exists**, so the
+      placement question is open again. Worth deciding then whether the PDF is
       generated from the timeline markup or maintained separately. **Now that `/cv/` exists it is
       the better source** — one page, already in role order, no filter state to reason about.
 - [ ] **Retire `cv.brajeshwar.com`** — `/cv/` replaces it as of 2026-08-09, so this is now only

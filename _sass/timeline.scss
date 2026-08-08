@@ -32,14 +32,18 @@
    So the grouped selectors below carry both vocabularies. Add a
    third user by adding its hooks to these groups.
 
-   THE WHOLE FILTER IS CSS (the /about/-only half of this file).
-   Two real checkboxes drive it through :has() + :checked, so it
-   works with JavaScript disabled — both start checked, so no-JS
-   shows everything and never means "no content" (guardrail 4).
+   ⚠️ THE LIFE/WORK FILTER WAS DELETED 2026-08-09, at his word:
+   "The Life/Work goes away including the code that powers it."
+   About 160 lines went from this file — a .pill-based fieldset,
+   the :has() + :checked rules that did the filtering, the
+   :target fallback that made #work and #life work with
+   JavaScript off, and the .timeline-js handover class. So did
+   assets/scripts/timeline.js and every data-track attribute.
 
-   Checkboxes, not radios, since 2026-07-27: "Merged" was dropped
-   because both-selected IS merged. Two independent toggles say
-   that directly instead of encoding it as a third state.
+   Do not reconstruct it from this note. It is recorded because
+   the :has() + :target pattern was a genuinely good no-JS
+   filter and may be worth reaching for elsewhere — not because
+   this page is coming back to it.
    ============================================================ */
 
 .timeline,
@@ -81,166 +85,10 @@
   border: 0;
 }
 
-/* ---- Filter ------------------------------------------------
-   Wears the shared .pill from chrome.css, so it is the same control as the
-   appearance panel's — one component, two users (Brajeshwar, 2026-07-27:
-   "create a pill-like component, which we will re-use where needed").
-
-   Only what the pill cannot know lives here: the checkbox mechanics. The
-   filter has to stay CSS-only (guardrail 4), so real <input type="checkbox">
-   elements drive it and the <label> is the visible segment. The pill's "on"
-   look is re-declared for `:checked + label` because a checkbox has no
-   aria-pressed to hook.
-   ------------------------------------------------------------ */
-
-/* Nothing here but the <fieldset> reset and the placement. The border, the
-   radius and the segment layout all come from .pill — deliberately not
-   repeated, so a change to the component reaches both users. */
-.timeline-filter {
-  position: relative;   /* containing block for the clipped inputs below */
-  margin: 0 0 var(--space-l);
-  padding: 0;
-  min-inline-size: 0;   /* fieldsets carry a min-content floor by default */
-}
-
-/* The group still needs a name for screen readers; it just isn't drawn.
-   Clipped rather than display:none so it stays in the accessibility tree.
-   Defined locally rather than reusing base.css's .visually-hidden, which the
-   2026-07-19 audit flagged as unreferenced and a candidate for deletion. */
-.timeline-filter legend {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
-/* Clipped, not display:none — the input must stay focusable and in the
-   accessibility tree, since it is the control and the label is only its face.
-   `.pill` sets `overflow: hidden`, so the input is positioned at its static
-   spot (no top/left) and stays inside the box: focusing it can't scroll the
-   group sideways. Verified — scrollLeft stays 0 and the page doesn't jump. */
-.timeline-filter input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Selected: the segment darkens and the marker fills — the same two signals
-   the appearance panel gives, driven off :checked instead of aria-pressed. */
-.timeline-filter input:checked + .pill__option {
-  color: var(--color-primary-fg);
-  background: var(--color-primary);
-}
-
-.timeline-filter input:checked + .pill__option .pill__marker {
-  opacity: 1;
-  background-color: currentColor;
-}
-
-/* Focus ring rides on the label, since the input itself is clipped away.
-   currentColor for the same reason as .pill__option:focus-visible — see the
-   note there; an --accent ring vanishes on a chosen segment in both modes. */
-.timeline-filter input:focus-visible + .pill__option {
-  outline: var(--border-size-small) solid currentColor;
-  outline-offset: -3px;
-}
-
-/* ---- The filter itself -------------------------------------
-   :has() reaches from the container to the checked box inside it.
-   Needs 2023+ browsers — the same bar --measure's `rch` unit
-   already set, so nothing new is excluded.
-
-   Each rule requires the OTHER track to still be checked. That is
-   deliberate: it means "neither checked" hides nothing and the
-   whole timeline shows, rather than the reader staring at an
-   empty page. See the pointer-events rule below.
-   ------------------------------------------------------------ */
-
-.timeline:has(#track-work:not(:checked)):has(#track-life:checked) .timeline-entry[data-track="work"],
-.timeline:has(#track-life:not(:checked)):has(#track-work:checked) .timeline-entry[data-track="life"] {
-  display: none;
-}
-
-/* A period whose entries have all been filtered away hides its own heading
-   too, rather than leaving an orphaned date with nothing under it. */
-.timeline:has(#track-work:not(:checked)):has(#track-life:checked) .timeline-period:not(:has(.timeline-entry[data-track="life"])),
-.timeline:has(#track-life:not(:checked)):has(#track-work:checked) .timeline-period:not(:has(.timeline-entry[data-track="work"])) {
-  display: none;
-}
-
-/* ---- Shareable URLs, without JavaScript ---------------------
-   /about/#work and /about/#life filter the page on arrival, so a
-   link sent to someone works even with scripting off — which is
-   the case that actually has to survive, since the point is to
-   send this instead of a CV.
-
-   Only active when timeline.js has NOT taken over. The script
-   adds .timeline-js to <html> and then owns the checkboxes; if
-   both mechanisms ran at once they could disagree (arrive at
-   #work, tick Life, and :target would still be hiding it).
-   A URL carries one fragment, so the three states are: no hash =
-   both, #work, #life. "#life#work" is not expressible and is not
-   needed — both IS the bare URL.
-   ------------------------------------------------------------ */
-
-html:not(.timeline-js) .timeline:has(#work:target) .timeline-entry[data-track="life"],
-html:not(.timeline-js) .timeline:has(#life:target) .timeline-entry[data-track="work"] {
-  display: none;
-}
-
-html:not(.timeline-js) .timeline:has(#work:target) .timeline-period:not(:has(.timeline-entry[data-track="work"])),
-html:not(.timeline-js) .timeline:has(#life:target) .timeline-period:not(:has(.timeline-entry[data-track="life"])) {
-  display: none;
-}
-
-/* Reflect the arrived-at state in the control too, so it doesn't contradict
-   the page. Checkboxes can't be re-checked from CSS, so this restyles the
-   segment instead: the suppressed track's pill reads as off. */
-html:not(.timeline-js) .timeline:has(#work:target) label[for="track-life"],
-html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] {
-  color: var(--text-muted);
-  background: transparent;
-}
-
-html:not(.timeline-js) .timeline:has(#work:target) label[for="track-life"] .pill__marker,
-html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill__marker {
-  opacity: 0.55;
-  background-color: transparent;
-}
-
-/* The hash targets. Zero-size, at the top of the timeline, so :target has
-   something to match without adding a visible element or a scroll jump of any
-   consequence. */
-.timeline-target {
-  display: block;
-  height: 0;
-  scroll-margin-top: var(--space-l);
-}
-
-/* "At least one always selected", enforced without JavaScript: when only one
-   box is left checked, its label stops taking clicks, so it cannot be turned
-   off. Keyboard users can still uncheck it (space on the focused input, which
-   pointer-events can't intercept) — and that lands on the both-unchecked case
-   above, which shows everything. An odd checkbox state for a moment, never an
-   empty page. */
-.timeline-filter:has(#track-work:not(:checked)) label[for="track-life"],
-.timeline-filter:has(#track-life:not(:checked)) label[for="track-work"] {
-  pointer-events: none;
-}
-
-/* Intro. Opens the page, and outside .timeline-period on purpose so the
-   Life/Work filter can never hide it — it introduces the whole page, not one
-   track.
+/* Intro. Opens the page, and sits outside .timeline-period because it
+   introduces the whole page rather than any one part of it. (It was outside
+   for a second reason until 2026-08-09 — so the Life/Work filter could never
+   hide it. That filter is gone; this placement was right regardless.)
 
    Spans the FULL content band, at Brajeshwar's request; the measure cap it
    used to carry is gone. Worth knowing what that trades: at 1024px these lines
@@ -419,13 +267,14 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
   border: var(--timeline-rule) var(--border-style) var(--rule);
 }
 
-/* Work entries read as filled, life as open — a quiet second signal so the
-   merged view is legible without reaching for color, which the monotone
-   default rules out anyway (design.md). */
-.timeline-entry[data-track="work"]::before {
-  background: var(--text-color-lower);
-  border-color: var(--text-color-lower);
-}
+/* ⚠️ THERE USED TO BE TWO MARKERS — work filled, life open — as a second,
+   colorless signal telling the two tracks apart in the merged view. With the
+   filter gone there are no tracks to tell apart, so there is ONE marker.
+
+   That is not just a deletion: the open dot above is what /now/ has always
+   rendered, so unifying on it is what makes /about/, /cv/ and /now/ read as
+   the same timeline. Item 1 of his 2026-08-09 queue ("the same visual timeline
+   treatment") falls out of item 2's work rather than needing its own change. */
 
 /* An <h2> since 2026-08-09, so base.css gives it --step-2 at light weight —
    it was an <h3> at --step-1. THE LEVEL IS THE CHANGE: the event is now the

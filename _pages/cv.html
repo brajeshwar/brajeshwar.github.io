@@ -7,27 +7,40 @@ edited: 2026-08-09
 
 {%- comment -%}
   /cv/ — the professional history, rebuilt from cv.brajeshwar.com inside this
-  site's chrome (2026-08-09: "make it the rebuild of https://cv.brajeshwar.com
-  within the brajeshwar.com chrome. Follow the typography of our current
-  website. Dates as the separator, highlight the company/job").
+  site's chrome (2026-08-09).
 
-  ⚠️ NOT the timeline component, and that is deliberate. `.timeline` puts the
-  DATE in an h2 and the event in an h3 — the range is the loud thing and the
-  entry is subordinate, which is right for a story and backwards for a CV. Here
-  the company is the heading and the date is a quiet rule above it. Everything
-  else comes from the shared scale, so the type matches the rest of the site
-  without restating it; see _sass/cv.scss, which is about 40 lines because of
-  that.
+  ⚠️ THIS PAGE USED THE TIMELINE COMPONENT FROM ITS SECOND DAY, AND DID NOT ON
+  ITS FIRST. The original build deliberately avoided it and said so at length:
+  the timeline put the DATE in an h2 and the entry in an h3, which is right for
+  a story and backwards for a CV. Brajeshwar resolved it by changing both pages
+  instead of choosing between them — /about/ now leads with events too, so the
+  objection is gone and one component serves both ("I want the same visual
+  timeline treatment of /about/ same for /cv/ and /now/").
+
+  So there is no cv-specific markup left. A role is a `.timeline-entry`:
+  the company is the `.timeline-title`, and `.timeline-meta` is the SUB-TITLE
+  carrying the date first, then the role and the place ("The Headings are
+  events and not years. Years will be a sub-title").
 
   ⚠️ Each role's id is its COMPANY, not its year — /cv/#razorfish is the link
-  worth sharing and it survives a date correction. Keep them stable.
+  worth sharing and it survives a date correction. anchors.js was widened to
+  `.timeline-title[id]` so hovering one still offers the § to copy; before that
+  it matched only `.timeline-when` and `.page-now h2`, so these ids resolved
+  but gave no visible anchor.
+
+  ⚠️ ONE FLAT `<ol>`, no `.timeline-period` wrappers. /about/ groups by period
+  because its story has eras; a CV is a single sequence of roles, and one list
+  is one continuous spine. Adding periods here would break the spine into
+  fragments for no gain.
 
   Content is his, carried over from cv.brajeshwar.com as it stood on
   2026-08-09, links included. Where that site and /about/ disagree on a fact,
-  neither was edited to match the other.
+  neither was edited to match the other — the list is in _docs/todo.md.
 {%- endcomment -%}
 
-<div class="cv-intro container-ideal">
+<div class="timeline">
+
+<div class="timeline-intro container-ideal">
   <p>I am an entrepreneur, and technologist, with a deep focus on leadership in
     products and designs. I have been a developer, designer, and creative
     product direction with a track record of building products and leading
@@ -47,11 +60,14 @@ edited: 2026-08-09
   </p>
 </div>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2021 Jan &mdash; Present</p>
-  <h2 class="cv-company" id="valinor-earth">Valinor Earth</h2>
-  <p class="cv-title">Co-Founder, CEO &middot; Remote (Worldwide)</p>
-  <p><a href="https://valinor.earth" rel="noopener">Valinor Earth</a> puts AI
+<ol class="timeline-entries">
+  <div class="timeline-progress" aria-hidden="true"></div>
+
+
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="valinor-earth">Valinor Earth</h2>
+    <p class="timeline-meta">2021 Jan &mdash; Present &middot; Co-Founder, CEO &middot; Remote (Worldwide)</p>
+    <p><a href="https://valinor.earth" rel="noopener">Valinor Earth</a> puts AI
     (artificial intelligence) into a software suite to manage carbon footprints,
     helping individuals and businesses to measure, reduce, remove, and offset
     their impact on the climate.</p>
@@ -64,12 +80,12 @@ edited: 2026-08-09
     Startup trying to fulfill the needs of commercial Farmers and Agricultural
     companies to leverage technology to track progress and enhance productivity
     in remote farmlands.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2020 Jan &mdash; 2020 Dec &middot; 1 year</p>
-  <h2 class="cv-company" id="sabbatical">Sabbatical</h2>
-  <p>I was on a break, researching with a focus on Climate Change.</p>
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="sabbatical">Sabbatical</h2>
+    <p class="timeline-meta">2020 Jan &mdash; 2020 Dec &middot; 1 year</p>
+    <p>I was on a break, researching with a focus on Climate Change.</p>
   <p>I helped a Japanese Startup establish its Indian branch. I spent time
     tinkering with Satellite data from
     <a href="https://en.wikipedia.org/wiki/JAXA">JAXA</a>,
@@ -79,13 +95,12 @@ edited: 2026-08-09
     professionals, and investors at
     <a href="https://www.beondeck.com" rel="noopener">On Deck</a>, as a Founder
     Fellow (#ODF7).</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2018 Aug &mdash; 2019 Dec &middot; 1+ years</p>
-  <h2 class="cv-company" id="mobisy">Mobisy</h2>
-  <p class="cv-title">Head of Product &middot; Bangalore (India)</p>
-  <p><a href="http://mobisy.com" rel="noopener">Mobisy</a> is a high-growth,
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="mobisy">Mobisy</h2>
+    <p class="timeline-meta">2018 Aug &mdash; 2019 Dec &middot; 1+ years &middot; Head of Product &middot; Bangalore (India)</p>
+    <p><a href="http://mobisy.com" rel="noopener">Mobisy</a> is a high-growth,
     technology company that is transforming the retail supply ecosystems in
     several markets, including India, Africa, Middle East, and Europe through
     its products <a href="https://bizom.in/" rel="noopener">Bizom</a> and
@@ -98,13 +113,12 @@ edited: 2026-08-09
     closely with the design team, and lead the effort in building a robust
     Design System for Mobisy Products, its branding, and messaging. My core
     focus is on building a team of product focused leaders at Mobisy.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2018 Jan &mdash; 2018 Dec &middot; 1 year</p>
-  <h2 class="cv-company" id="locavore">Locavore</h2>
-  <p class="cv-title">Co-Founder &middot; Bangalore (India)</p>
-  <p>I met my co-founder,
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="locavore">Locavore</h2>
+    <p class="timeline-meta">2018 Jan &mdash; 2018 Dec &middot; 1 year &middot; Co-Founder &middot; Bangalore (India)</p>
+    <p>I met my co-founder,
     <a href="https://www.linkedin.com/in/gurjot-singh-81637664/" rel="noopener">Gurjot Singh</a>,
     while he was experimenting with the idea of large-scale energy storage with
     <a href="https://en.wikipedia.org/wiki/Vanadium_redox_battery">Vanadium Redox Batteries</a>.
@@ -120,13 +134,12 @@ edited: 2026-08-09
     by the Swedish government, and a private Swedish technology company. I
     stayed behind to find solutions to the myriad of problems of Climate
     Change.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2016 Apr &mdash; 2017 Dec &middot; 2 years</p>
-  <h2 class="cv-company" id="alaris-prime">Alaris Prime</h2>
-  <p class="cv-title">Co-Founder, Advisor &middot; Remote</p>
-  <p><em>“We design and build products for beauty and performance.”</em></p>
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="alaris-prime">Alaris Prime</h2>
+    <p class="timeline-meta">2016 Apr &mdash; 2017 Dec &middot; 2 years &middot; Co-Founder, Advisor &middot; Remote</p>
+    <p><em>“We design and build products for beauty and performance.”</em></p>
   <p>At <a href="https://alarisprime.com" rel="noopener">Alaris Prime</a>, we
     believe that software should be simple to use for humans. At the same time
     bringing higher returns on investment for businesses. We help clients every
@@ -135,13 +148,12 @@ edited: 2026-08-09
     ownership of the products that we built for our clients. Generated revenue
     of over $200,000 in the first year of operation.</p>
   <p>I continue to be an advisor.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2014 Sep &mdash; 2016 Mar &middot; 1½ years</p>
-  <h2 class="cv-company" id="razorfish">Razorfish</h2>
-  <p class="cv-title">Creative Director &middot; Bangalore (India), London (UK), Austin (USA)</p>
-  <p>I led the creative design and development at
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="razorfish">Razorfish</h2>
+    <p class="timeline-meta">2014 Sep &mdash; 2016 Mar &middot; 1½ years &middot; Creative Director &middot; Bangalore (India), London (UK), Austin (USA)</p>
+    <p>I led the creative design and development at
     <a href="https://www.razorfish.com" rel="noopener">Razorfish</a>, Bangalore,
     India. In a year, I hired and trained 50+ proficient designers and
     developers. I trained them and taught best practices, standards of design,
@@ -164,25 +176,23 @@ edited: 2026-08-09
     <a href="https://www.mydeposits.co.uk" rel="noopener">MyDeposits</a> (UK),
     <a href="https://www.linkedin.com/company/phala-data/" rel="noopener">Phaladata</a> (USA),
     and <a href="https://www.zestmoney.in" rel="noopener">Zest Money</a> (India).</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2013 Jan &mdash; 2014 Mar &middot; 1+ years</p>
-  <h2 class="cv-company" id="lxidd">LxiDD</h2>
-  <p class="cv-title">Co-Founder, CEO &middot; Bangalore (India)</p>
-  <p>As an Entrepreneur-in-Residence at Kamelot Kapital Pte Ltd, Singapore, I
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="lxidd">LxiDD</h2>
+    <p class="timeline-meta">2013 Jan &mdash; 2014 Mar &middot; 1+ years &middot; Co-Founder, CEO &middot; Bangalore (India)</p>
+    <p>As an Entrepreneur-in-Residence at Kamelot Kapital Pte Ltd, Singapore, I
     worked on <a href="http://lxidd.com" rel="noopener">LxiDD</a>. I was
     responsible for the Product Interface and Experience Design, Customer &amp;
     Client Engagement.</p>
   <p>LxiDD is a network of Indie Professionals &mdash; Designers, Developers,
     and Creatives.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2010 Nov &mdash; 2012 Dec &middot; 2 years</p>
-  <h2 class="cv-company" id="levoma">Levoma</h2>
-  <p class="cv-title">Co-Founder, CEO &middot; Mountain View (USA), Bangalore (India)</p>
-  <p>Levoma is a mobile video-dating service, helping singles aged 18&ndash;30
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="levoma">Levoma</h2>
+    <p class="timeline-meta">2010 Nov &mdash; 2012 Dec &middot; 2 years &middot; Co-Founder, CEO &middot; Mountain View (USA), Bangalore (India)</p>
+    <p>Levoma is a mobile video-dating service, helping singles aged 18&ndash;30
     find partners easily, quickly, and effectively. Levoma works across and
     between multiple devices &mdash; iPhone, iPad, Android phones, and
     tablets.</p>
@@ -195,13 +205,12 @@ edited: 2026-08-09
   <p>Levoma released its beta App in January 2011. It was acquired by a
     Singapore investment firm,
     <a href="http://www.kamelotkapital.com" rel="noopener">Kamelot Kapital Pte Ltd</a>.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2009 May &mdash; 2010 Jul &middot; 1+ years</p>
-  <h2 class="cv-company" id="infinitely-beta">Infinitely Beta</h2>
-  <p class="cv-title">Co-Founder, Product and Design Chief &middot; Pune (India)</p>
-  <p>Infinitely Beta set out to build innovative products in Pune, India. Its
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="infinitely-beta">Infinitely Beta</h2>
+    <p class="timeline-meta">2009 May &mdash; 2010 Jul &middot; 1+ years &middot; Co-Founder, Product and Design Chief &middot; Pune (India)</p>
+    <p>Infinitely Beta set out to build innovative products in Pune, India. Its
     flagship product, Paisa.com, was praised by industry experts and beta
     testers for its innovative User Interface and a never-before-done-in-India
     User Experience.</p>
@@ -210,38 +219,35 @@ edited: 2026-08-09
     raised venture capital from Nexus Ventures, True Ventures, and others.</p>
   <p>I helped design and develop Paisa.com with the team that I got from the
     acquisition of my previous company, oCricket.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2007 Apr &mdash; 2009 May &middot; 2 years</p>
-  <h2 class="cv-company" id="ocricket">oCricket</h2>
-  <p class="cv-title">Co-Founder, CEO &middot; Mumbai (India)</p>
-  <p><a href="http://ocricket.com" rel="noopener">oCricket</a> was poised to be
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="ocricket">oCricket</h2>
+    <p class="timeline-meta">2007 Apr &mdash; 2009 May &middot; 2 years &middot; Co-Founder, CEO &middot; Mumbai (India)</p>
+    <p><a href="http://ocricket.com" rel="noopener">oCricket</a> was poised to be
     a dedicated network for Cricket lovers and fans. We envisioned oCricket to
     be able to get users to access Cricket related media and content more
     efficiently and at a much more affordable price.</p>
   <p>oCricket was acquired by Infinitely Beta Pvt. Ltd. in June 2009.</p>
   <p>I raised seed-funds from my previous employer (Peerless Software), and
     worked on building the product, and hiring the team.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2006 Apr &mdash; 2007 Mar &middot; 1 year</p>
-  <h2 class="cv-company" id="mixercast">Mixercast</h2>
-  <p class="cv-title">Senior Architect &middot; Pune (India), Silicon Valley (USA)</p>
-  <p><a href="https://www.crunchbase.com/organization/mixercast" rel="noopener">Mixercast</a>
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="mixercast">Mixercast</h2>
+    <p class="timeline-meta">2006 Apr &mdash; 2007 Mar &middot; 1 year &middot; Senior Architect &middot; Pune (India), Silicon Valley (USA)</p>
+    <p><a href="https://www.crunchbase.com/organization/mixercast" rel="noopener">Mixercast</a>
     allowed users to create embeddable slide show widgets. Users could mix
     together both personal and licensed content into their slide show.</p>
   <p>Mixercast was funded by Fuse Capital (erstwhile ComVentures), ONSET
     Ventures, and Intel Capital for over $12M and had clients such as YouTube,
     CBS, etc.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2003 Mar &mdash; 2006 Mar &middot; 3 years</p>
-  <h2 class="cv-company" id="oinam-software">Oinam Software</h2>
-  <p class="cv-title">Co-Founder, CEO &middot; Mumbai (India)</p>
-  <p>I gave up my lucrative career at Peerless Software to start my own Software
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="oinam-software">Oinam Software</h2>
+    <p class="timeline-meta">2003 Mar &mdash; 2006 Mar &middot; 3 years &middot; Co-Founder, CEO &middot; Mumbai (India)</p>
+    <p>I gave up my lucrative career at Peerless Software to start my own Software
     Service Company &mdash; Oinam Software Pvt. Ltd.</p>
   <p>At Oinam, we designed and developed websites, web applications, and
     applications for Pocket PC Devices. We undertook some of the most
@@ -261,13 +267,12 @@ edited: 2026-08-09
     were in fact one of the best ghost developers to many successful contractors
     and agencies.</p>
   <p>Oinam Software was acquired by Mixercast in 2006.</p>
-</section>
+  </li>
 
-<section class="cv-role container-ideal">
-  <p class="cv-when">2001 Nov &mdash; 2003 Feb &middot; 1½ years</p>
-  <h2 class="cv-company" id="peerless-software">Peerless Software</h2>
-  <p class="cv-title">Pocket PC Designer / Developer &middot; Mumbai (India)</p>
-  <p>I landed my first job as a Flash Programmer designing and developing
+  <li class="timeline-entry">
+    <h2 class="timeline-title" id="peerless-software">Peerless Software</h2>
+    <p class="timeline-meta">2001 Nov &mdash; 2003 Feb &middot; 1½ years &middot; Pocket PC Designer / Developer &middot; Mumbai (India)</p>
+    <p>I landed my first job as a Flash Programmer designing and developing
     healthcare applications for the Pocket PC devices.</p>
   <p>At <a href="http://peerlesssoft.com/" rel="noopener">Peerless Software</a>,
     I built Pocket PC Software Applications for physicians in the USA. I built
@@ -275,4 +280,7 @@ edited: 2026-08-09
     <a href="https://www.copaxone.com" rel="noopener">Copaxone</a>,
     <a href="https://www.cipla.com" rel="noopener">Cipla</a>, and many other
     Healthcare Industry leaders.</p>
-</section>
+  </li>
+</ol>
+
+</div>

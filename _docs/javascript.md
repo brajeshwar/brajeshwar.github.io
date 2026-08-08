@@ -29,7 +29,6 @@ Brajeshwar, 2026-07-27:
 | `sidenotes.js` | 11.4 KB | **87 pages** — only where footnotes exist (2026-07-27) |
 | `search.js` | 8.8 KB | every page (⌘K palette, `/`, **and the `/search/` page**) |
 | `anchors.js` | 1.4 KB | **453 posts** — only where an `h2`+ exists (2026-07-27) |
-| `timeline.js` | 2.3 KB | `/about/` |
 | `random.js` | 1.8 KB | `/random/` only (2026-07-27) |
 | `strip-nav.js` | 3.0 KB | **home page only** — arrows for the Books/Album strips (2026-08-01) |
 | `back-to-top.js` | 3.5 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |

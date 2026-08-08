@@ -24,7 +24,7 @@
   'use strict';
   var sel = 'article.post > h2[id], article.post > h3[id], article.post > h4[id], ' +
             'article.post > h5[id], article.post > h6[id], ' +
-            '.timeline-when[id], .page-now h2[id]';
+            '.timeline-when[id], .timeline-title[id], .page-now h2[id]';
   Array.prototype.forEach.call(document.querySelectorAll(sel), function (h) {
     var a = document.createElement('a');
     a.className = 'headerlink';

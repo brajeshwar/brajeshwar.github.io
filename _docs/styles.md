@@ -1386,7 +1386,7 @@ Brajeshwar, 2026-07-27: *"Create a pill-like component, which we will re-use whe
 instance, the one from the Theme Selector."*
 
 A segmented selector: one rounded track, hairline divisions, the chosen segment filled. It was
-the appearance panel's private styling until 2026-07-27, when the `/about/` Life/Work filter
+the appearance panel's private styling until 2026-07-27, when the (since-removed) `/about/` Life/Work filter
 needed the same control and the rules were extracted into `.pill` in `chrome.css`.
 
 | Class | Role |

@@ -141,8 +141,10 @@
      one on /search/ — without this, "/" could never be typed into a search
      box, which is the classic way this shortcut goes wrong.
 
-     Only text-accepting inputs count. A focused checkbox — the /about/
-     Life/Work filter — is not typing, so the shortcut still works there. */
+     Only text-accepting inputs count: a focused checkbox or button is not
+     typing, so the shortcut still works there. (The example this named was
+     the /about/ Life/Work filter, deleted 2026-08-09. The rule stands on its
+     own — the appearance panel still has focusable controls.) */
   var TEXT_INPUTS = /^(text|search|email|url|tel|password|number|date|month|week|time|datetime-local)$/;
 
   function isTyping(el) {

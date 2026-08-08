@@ -6,7 +6,7 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **TWELVE commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+⚠️ **THIRTEEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
 read "everything below is pushed and live, the tree is clean", and it stopped being true partway
 through the session without anyone updating it. Check `git log origin/main..main` before
 believing any status line in this file, including this one.
@@ -210,6 +210,49 @@ reintroduces the Rocket-Loader ordering bug above.
 `title_style: vertical`, so it wears the same left-margin title as `/film/`, `/books/`,
 `/album/`, `/own/`, `/ideas/` and `/legal/`. Nothing else changed — its `## YYYY` headings and
 their `/now/#2024` anchors are untouched.
+
+### The Life/Work filter is gone, and that is what unified the three timelines
+
+⚠️ **`/about/` no longer has a filter, and `data-track` is dead** ("The Life/Work goes away
+including the code that powers it"). Removed: the `.pill` fieldset, the `#life`/`#work` target
+spans, `data-track` on every entry, `assets/scripts/timeline.js`, and **157 lines of
+`timeline.scss`**. `/about/#work` and `/about/#life` now match nothing — correct for a feature
+removed rather than moved. The link to send instead of a CV is `/cv/`.
+
+**The unification fell out of the deletion, and this is the bit to remember.** Work entries drew
+a *filled* dot, life entries an *open* one — a colorless second signal, since the palette rules
+out color. With no tracks, there is one marker: the open dot, which is exactly what `/now/` has
+always rendered. So `/about/`, `/cv/` and `/now/` became one component by *removing* code, not
+by adding any. Verified by looking at all three at 1400px.
+
+⚠️ **`.pill` SURVIVES — do not delete it.** `appearance.js` builds the appearance panel's
+segmented controls from it at runtime, so grepping the markup for `class="pill"` finds nothing
+and is misleading.
+
+### /cv/ moved onto the timeline, reversing its own design note
+
+`/cv/` was built the previous day *deliberately not* using the timeline, with a long comment
+explaining why: the timeline made the date loud and the entry subordinate, right for a story and
+backwards for a CV. He resolved it by fixing the premise instead of choosing — `/about/` leads
+with events now, so one component serves both.
+
+So a role is a `.timeline-entry`: company as `.timeline-title`, and `.timeline-meta` as the
+**sub-title** carrying date first, then role and place ("The Headings are events and not years.
+Years will be a sub-title"). `cv.scss` went from ~40 lines to one rule. **One flat `<ol>`, no
+periods** — a CV is a single sequence, and periods would break the spine into fragments.
+
+`anchors.js` gained `.timeline-title[id]`, or the 13 `/cv/#company` ids would have resolved
+while offering no visible § to copy.
+
+**The general lesson:** a page-specific stylesheet is often a sign that a shared component is
+wrong, not that the page is special.
+
+⚠️ **`/about/`'s period labels were KEPT.** "Years will be a sub-title" reads as being about
+heading hierarchy, and every entry's `.timeline-meta` already carries its own date, so the
+sentence is satisfied without touching markup. Dissolving the periods would have forced two
+inventions — authoring dates onto the two entries that have none (Razorfish, Computer Graphic
+Designer), and relocating nine `#2005-2006`-style ids onto entry headings. If he wants the
+period labels gone too, that is a separate, deliberate change.
 
 ### The two habits this session kept proving
 1. **Count the items; do not trust the exit code.** A green build hid a one-item home strip, a

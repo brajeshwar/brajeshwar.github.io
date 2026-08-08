@@ -1,80 +1,32 @@
 /* ============================================================
    CV — /cv/ only, via `style: page-cv` on <main>.
    ------------------------------------------------------------
-   The professional history, rebuilt from cv.brajeshwar.com
-   inside this site's chrome (2026-08-09).
+   ⚠️ ALMOST NOTHING LIVES HERE ANY MORE, and that is the point.
 
-   ⚠️ EVERY SELECTOR IS ANCHORED TO .page-cv. Every stylesheet
-   reaches every page since 2026-07-27, and these class names —
-   .cv-role, .cv-when — are generic enough to collide if left
-   loose. page.scss is the cautionary tale.
+   This file was ~40 lines building a CV-specific look: a date as a border-top
+   separator (`.cv-when`), the company as the heading (`.cv-company`), a quiet
+   role line (`.cv-title`). All three are gone. /cv/ is the shared timeline
+   component now — a role is a `.timeline-entry`, the company its
+   `.timeline-title`, the date and role its `.timeline-meta` — so the look
+   comes from timeline.scss and there is nothing to keep in step here.
 
-   Deliberately short. "Follow the typography of our current
-   website" means take the shared scale and change as little as
-   possible, so there is no font-size here that base.css could
-   have supplied: the company is an h2 and takes --step-2 like
-   every other h2, the prose takes --step-0 like all prose. What
-   IS here is the arrangement — which of the three lines is loud,
-   and what separates one role from the next.
+   Worth knowing WHY it reversed, because the original reasoning was sound and
+   is still written in the git history: the timeline made the DATE loud and the
+   entry subordinate, which suits a story and not a CV. Brajeshwar fixed the
+   premise rather than the page. /about/ leads with events now too, so one
+   component fits both, and he asked for exactly that on 2026-08-09: "I want
+   the same visual timeline treatment of /about/ same for /cv/ and /now/."
+
+   The lesson to keep: a page-specific stylesheet is often a sign that a shared
+   component is wrong, not that the page is special.
+
+   Every selector stays anchored to .page-cv — every stylesheet reaches every
+   page since 2026-07-27, and page.scss is the cautionary tale.
    ============================================================ */
 
-.page-cv .cv-intro {
-  margin-bottom: var(--space-xl);
-}
-
+/* The contact line under the intro. The only thing on this page that is not
+   the timeline: a run of links that wants to sit quieter than body copy. */
 .page-cv .cv-contact {
   font-size: var(--step--1);
   color: var(--text-color-low);
 }
-
-/* ---- One role ---------------------------------------------------
-   ⚠️ THE DATE IS THE SEPARATOR, and that is the whole layout
-   (2026-08-08: "Dates as the separator, highlight the company/job").
-
-   So the rule belongs to the date line rather than to the section: the
-   border sits on .cv-when, which puts the range ON the divider instead of
-   floating above it, and a role reads as "here is where the last one ended,
-   and here is what came next".
-
-   The timeline component does the opposite — date in an h2, event in an h3 —
-   which is right for a story and backwards for a CV. That is why this page
-   does not reuse it. */
-.page-cv .cv-role {
-  margin-bottom: var(--space-xl);
-}
-
-.page-cv .cv-when {
-  margin: 0 0 var(--space-2xs);
-  padding-top: var(--space-s);
-  border-top: var(--border-size) var(--border-style) var(--border-color-low);
-
-  font-size: var(--step--2);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-color-low);
-  font-variant-numeric: tabular-nums;   /* the ranges line up down the page */
-}
-
-/* The loud line. `margin: 0` beats base.css's heading margin, which would
-   otherwise open a gap between the date and the company it belongs to —
-   they are one unit, and the space goes ABOVE the date, not inside the pair. */
-.page-cv .cv-company {
-  margin: 0;
-}
-
-.page-cv .cv-title {
-  margin: 0 0 var(--space-xs);
-  font-size: var(--step--1);
-  color: var(--text-color-low);
-}
-
-/* ⚠️ THE WIDTH IS NOT SET HERE. Each role carries `.container-ideal` in the
-   markup instead, which is base.scss's existing reading-column utility —
-   96% wide, capped at --body-width-ideal (which IS --measure), flush left.
-
-   Restating those numbers in this file was the first attempt and it was wrong
-   twice over: it duplicates a value that already has one owner, and it would
-   drift the moment the measure is retuned. Reusing the utility also keeps the
-   DATE RULE exactly as wide as the paragraph beneath it — a 1024px hairline
-   over a 66-character line reads as a layout fault, and that is what a
-   full-width .cv-role would have shipped. */

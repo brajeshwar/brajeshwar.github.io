@@ -1,7 +1,16 @@
 # Timeline — the /about/ storyline
 
-A vertical timeline with a Life/Work filter, time-range headings typed by hand, and an
-optional scroll position line.
+A vertical timeline: events as headings, dates as sub-titles, time-range labels typed by hand,
+and an optional scroll position line.
+
+⚠️ **THREE PAGES SHARE IT** since 2026-08-09 — `/about/`, `/cv/` and `/now/`. Any change to the
+spine, the marker or the entry rhythm changes all three, which is the point: *"I want the same
+visual timeline treatment of /about/ same for /cv/ and /now/."* `/cv/` uses one flat
+`<ol class="timeline-entries">` with no periods, because a CV is one sequence of roles rather
+than a story with eras.
+
+It had a Life/Work filter until 2026-08-09. That is gone — see the section below before
+looking for it.
 
 Live at `/about/` since 2026-07-27, in `_pages/about.html`. It replaced the prose
 `_pages/about.md`, which Brajeshwar archived; that deletion is in the repo's history. The
@@ -38,22 +47,12 @@ Markdown would have been parser-dependent. In HTML we write the `id` ourselves.
     <p>The intro opens the page, and spans the full band.</p>
   </div>
 
-  <fieldset class="timeline-filter pill">                 <!-- directly above what it filters -->
-    <legend>Show</legend>            <!-- clipped: named for screen readers, not drawn -->
-    <input type="checkbox" id="track-life" checked>
-    <label class="pill__option" for="track-life">
-      <span class="pill__marker" aria-hidden="true"></span>Life</label>
-    <input type="checkbox" id="track-work" checked>
-    <label class="pill__option" for="track-work">
-      <span class="pill__marker" aria-hidden="true"></span>Work</label>
-  </fieldset>
-
   <section class="timeline-period" aria-labelledby="1999-2003">
     <p class="timeline-when" id="1999-2003">1999&ndash;2003</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
-      <li class="timeline-entry" data-track="work">
+      <li class="timeline-entry">
         <h2 class="timeline-title">Computer Graphic Designer</h2>
         <p class="timeline-meta">Comic magazine startup &middot; Bombay</p>
         <p>Prose.</p>
@@ -70,7 +69,7 @@ Markdown would have been parser-dependent. In HTML we write the `id` ourselves.
 | `.timeline-period` | One time range. Hides itself when the filter empties it. |
 | `.timeline-when` | The range — **typed by hand**: "early 1980s", "1993-1995", anything. A `<p>`, not a heading. Give it an `id` to make it linkable, and point the period's `aria-labelledby` at that same id. |
 | `.timeline-entries` | `<ol>` of entries. Carries the spine (its `border-left`). |
-| `.timeline-entry` | One event. **`data-track="life"` or `"work"` is the only thing the filter reads.** |
+| `.timeline-entry` | One event. ⚠️ It took a `data-track` attribute until 2026-08-09; that is gone and nothing reads it. |
 | `.timeline-title` / `.timeline-meta` | The event's `<h2>` — the loud line on the page — and the role/place/date line under it. |
 
 ### ⚠️ The year is not the heading (changed 2026-08-09)
@@ -127,87 +126,45 @@ finds its reference, not document order.
 ⚠️ On `/about/` the wrapper matters: the timeline spans the full band, and a note hung off a
 full-width box has no margin to sit in. Wrap the footnoted prose in its own `.container-ideal`.
 
-## Renaming the tracks
+## ⚠️ The Life/Work filter was REMOVED (2026-08-09)
 
-Brajeshwar: *"I might change the terms."* Two places, no data migration:
+Three sections stood here — *Renaming the tracks*, *The filter is CSS only*, and *Shareable
+URLs — `#work` / `#life`*. They are gone because the feature is, at his word: **"The Life/Work
+goes away including the code that powers it."**
 
-1. The `<label>` text — free text, change at will.
-2. If the *values* change (not just labels), the `id`/`for` pairs, the `data-track` values, and
-   the selectors in `timeline.css` that name `#track-life` / `#track-work` must agree: the
-   `:has()` hide rules, the `pointer-events` guard, and the `:target` restyles.
+What went, so nothing is half-removed:
 
-Keeping labels and values separate is exactly why this is markup and not a YAML schema.
+| | |
+|---|---|
+| `<fieldset class="timeline-filter pill">` | the two-checkbox control |
+| `<span class="timeline-target" id="life\|work">` | the zero-size `:target` anchors |
+| `data-track="life\|work"` | on every entry — **do not reintroduce it, nothing reads it** |
+| `assets/scripts/timeline.js` | deleted; it only synced the hash with the checkboxes |
+| ~157 lines of `timeline.scss` | the `:has()` rules, the `:target` fallback, `.timeline-js` |
+| `.timeline-entry[data-track="work"]::before` | the second marker — see below |
 
-## The filter is CSS only
+**`/about/#work` and `/about/#life` now match nothing.** That is correct for a removed feature
+rather than a moved one: they degrade to ordinary fragments and the page renders in full. The
+link to send instead of a CV is **`/cv/`**, which is a real page.
 
-Two checkboxes drive it through `:has()` + `:checked`. The filtering itself uses no JavaScript
-at all: both boxes start checked, so scripting-off shows everything and no-JS never means no
-content (guardrail 4). There *is* one script on the page, `timeline.js`, but it only syncs the
-URL hash (see *Shareable URLs*); remove it and the filter still works. The inputs are clipped,
-not `display: none`, so they stay focusable; the focus ring rides on the label.
+**The marker unification is the part worth understanding.** Work entries drew a *filled* dot and
+life entries an *open* one — a colorless second signal, since the monotone palette rules out
+using color (design.md). With no tracks there is nothing to distinguish, so there is one marker:
+the open dot. That open dot is what `/now/` always rendered, which is why removing the filter is
+also what made **`/about/`, `/cv/` and `/now/` finally render as one component** — the other
+half of the same day's request, *"I want the same visual timeline treatment of /about/ same for
+/cv/ and /now/."*
 
-The control is the shared `.pill` (2026-07-27), the same segmented selector the appearance
-panel wears, at Brajeshwar's request: *"create a pill-like component, which we will re-use
-where needed."* The old square `label::before` boxes are gone; each label is a `.pill__option`
-holding a `.pill__marker`, a circle that is a ring at rest and fills when chosen, and the
-chosen segment darkens. The component lives in `chrome.css`; `timeline.css` adds only the
-checkbox mechanics, since a checkbox has no `aria-pressed` for the pill to hook. See
-[`styles.md`](styles.md) §6 → *Pill*.
+**Worth keeping even though the feature is not:** the filter was genuinely CSS-only. Two real
+checkboxes plus `:has()` did the filtering, and a `:target` fallback made shared `#work` links
+work with JavaScript disabled, with `timeline.js` adding `.timeline-js` to `<html>` to switch
+the `:target` rules off so the two mechanisms could never disagree. That pattern is a good one
+and may be worth reaching for elsewhere. It is recorded here for that reason, not as a plan to
+restore this page to it. The full implementation is in the git history.
 
-"Merged" was dropped 2026-07-27 (Brajeshwar: *"we are going to see one or the other or both
-anyways"*). Both-checked *is* merged, so two independent toggles say it directly rather than
-encoding it as a third state. That also makes the earlier radio-group reasoning moot: these are
-genuinely independent, so checkboxes are now both the right look and the right semantics.
+`.pill` survives — `appearance.js` builds the appearance panel's segmented controls from it at
+runtime, so the shared component still has a user.
 
-"At least one always selected" works without JavaScript. When only one box is left checked,
-its label gets `pointer-events: none`, so it cannot be clicked off. A keyboard user can still
-uncheck it — space on the focused input, which `pointer-events` can't intercept — so each hide
-rule additionally requires the *other* track to be checked. Neither-checked therefore hides
-nothing and shows the whole timeline. Worst case is a momentarily odd checkbox state, never an
-empty page.
-
-A period whose entries are all filtered away hides its own heading, so no orphaned date is
-left behind. Verified against the real content: both → 3 life + 12 work over 10 periods; Life
-only → 3 life, 0 work, 3 periods; Work only → 12 work, 0 life, 8 periods; neither →
-everything.
-
-`:has()` needs a 2023+ browser, the same bar `--measure`'s `rch` unit already set, so this
-excludes nothing that worked before.
-
-## Shareable URLs — `#work` / `#life`
-
-The point: send `/about/#work` instead of a CV link. Brajeshwar wants to retire
-`cv.brajeshwar.com` eventually, so this URL has to be as dependable as that site was.
-
-    /about/        both tracks   (the default — no hash)
-    /about/#work   Work only     ← the "instead of my CV" link
-    /about/#life   Life only
-
-`#life#work` is not possible, since a URL carries exactly one fragment. It is also
-unnecessary: both-tracks *is* the bare URL.
-
-Two mechanisms drive this, and only ever one is live at a time.
-
-1. CSS `:target` (`html:not(.timeline-js)`) filters on arrival with JavaScript off. Two
-   zero-height `<span class="timeline-target" id="life|work">` at the top of `.timeline` give
-   `:target` something to match. This is the case that has to survive, because the recipient's
-   setup is not ours to control. Verified: at `#work` with JS off, life entries are hidden and
-   8 of 10 periods show — *even with both checkboxes ticked*, so the link cannot be defeated
-   by stale control state. The suppressed track's segment is restyled to read as off
-   (transparent, hollow marker), so the control never contradicts the page. Re-verified after
-   the pill change.
-2. `assets/scripts/timeline.js` takes over when JS runs: it adds `.timeline-js` to `<html>`,
-   which switches the `:target` rules off, then owns the checkboxes — hash → boxes on load and
-   on `hashchange`, boxes → hash on change. Without that handover the two could disagree
-   (arrive at `#work`, tick Life, and `:target` would still be hiding it).
-
-The script uses `history.replaceState`, not `location.hash =`: assigning the hash scrolls to
-the target and pushes a history entry per click, and toggling a filter is not navigation.
-Verified the history length does not grow.
-
-This is the one piece of JavaScript on the page, and it is an enhancement only. With it
-disabled, filtering still works and shared links still work; the address bar just doesn't
-follow along as you click.
 
 ## Download Resume (not built)
 
@@ -274,12 +231,17 @@ what "I want to see where they fit" was going to reveal.
 ## Still to do
 
 - [ ] Fill out the Life track — it is thin, and the merged view is lopsided because of it.
-- [ ] Decide oldest-first (current) vs newest-first (CV order).
+- [x] ~~Decide oldest-first vs newest-first (CV order)~~ — **newest-first** since 2026-08-08.
 - [ ] The trailing `> Work-in-Progress` blockquote and the intro line sit outside the timeline;
       decide whether they stay there.
 - [ ] Decide the position-line question above, or cut it.
-- [x] ~~Move the markup into `/about/`~~ *(done 2026-07-27)*. `/about/#work` is now the link
-      worth sending.
-- [ ] "Download Resume" PDF for the Work view (see above) — not started.
-- [ ] Retiring `cv.brajeshwar.com`: once `/about/#work` is live, that redirect belongs with the
-      other Cloudflare Worker redirects already queued in [`todo.md`](todo.md).
+- [x] ~~Move the markup into `/about/`~~ *(done 2026-07-27)*. ⚠️ This said "`/about/#work` is
+      now the link worth sending" — **dead twice over** as of 2026-08-09: the filter is gone, so
+      that fragment matches nothing, and `/cv/` exists and is the link.
+- [ ] "Download Resume" PDF — was scoped to "the Work view", which no longer exists. **`/cv/`
+      is the better source now**: one page, already in role order, no filter state to reason
+      about.
+- [ ] Retiring `cv.brajeshwar.com`: `/cv/` replaces it as of 2026-08-09, so this is only waiting
+      on him. ⚠️ `_redirect/resume.md` does **not** cover it — a Jekyll stub can only redirect a
+      path on this domain. It needs the Cloudflare Worker redirect queued in
+      [`todo.md`](todo.md).
