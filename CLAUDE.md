@@ -138,12 +138,13 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
   **`assets/styles/site.scss`** into ONE external stylesheet. Flattened from 25 numbered ITCSS
   partials on 2026-07-19 — **don't reintroduce numeric prefixes**; cascade order lives in
   `site.scss`, and `config` must stay first.
-  One file, **10.8KB gzip / 54.6KB raw** (measured 2026-08-09, after the Life/Work removal).
+  One file, **10.9KB gzip / 54.9KB raw** (measured 2026-08-09, after the timeline spine work).
   ⚠️ It keeps getting SMALLER while gaining partials, so do not extrapolate from a file count.
-  In one day: `cv.scss` arrived (+0.4KB gzip), `search.scss` gave back ~7KB raw when `/search/`
-  moved to the Modular UI, `timeline.scss` gave back another ~157 lines when the Life/Work
-  filter went, and `cv.scss` then shrank to one rule when `/cv/` joined the timeline.
-  **This number has now been stale three times. Re-measure it; never carry it forward.**
+  In one day: `cv.scss` arrived, `search.scss` gave back ~7KB raw when `/search/` moved to the
+  Modular UI, `timeline.scss` gave back ~157 lines when the Life/Work filter went, `cv.scss`
+  then shrank to one rule when `/cv/` joined the timeline, and the spine rewrite added a little
+  back. **This number went stale FOUR times in that one day — measure it, never carry it
+  forward, and do not bother citing it in a commit message.**
 - **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
   them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
   because an underscore directory is never copied to the output — sources under `assets/`
