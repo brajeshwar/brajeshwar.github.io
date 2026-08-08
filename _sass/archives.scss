@@ -16,13 +16,32 @@
    rather than an override. This page is a 26-year index, not an article; the
    word is a marker for the column of years, not a heading to read.
 
-   ⚠️ `main.archives` CARRIES `position: relative` AND IS LOAD-BEARING.
-   I first assumed `container: main / inline-size` on `main` would already make
-   it the containing block, since container-type implies layout containment.
-   Measured, it does not: the title resolved `left: 0` against the viewport and
-   landed at x = -110, entirely off-screen and invisible. The one-line rule
-   below is what pulls it back into the gutter. Do not remove it because the
-   containment "should" be enough.
+   ⚠️ FIXED, NOT ABSOLUTE, so it holds its place while the years scroll past
+   (2026-08-08: "should we not keep it fixed, say, when I scroll the archives,
+   it stays"). Measured at scroll 0 and scroll 1200 — identical rect both
+   times, and the 5px gap held.
+
+   ⚠️ AND `main`'s CONTAINMENT DOES NOT TRAP IT. `container-type` is documented
+   as establishing a containing block for fixed descendants, which would have
+   made `left` resolve against `main` instead of the viewport and put the word
+   in the wrong place entirely. Tested rather than assumed: it does not — the
+   same measurement that showed `container-type` alone would not hold an
+   ABSOLUTELY positioned child either, back when this was absolute and the
+   title landed at x = -110, off-screen. `main.archives { position: relative }`
+   survives from that attempt and is now inert for this element; it is left
+   in place because it costs nothing and anything else added inside this main
+   will want it.
+
+   HORIZONTAL POSITION IS COMPUTED FROM THE BAND, since a fixed element has no
+   parent to hang off: `calc(50% - var(--body-width-max) / 2)` is the band's
+   left edge, because `main` is centred and — at every width this title is
+   visible — capped at exactly --body-width-max rather than the 96% that
+   applies on narrower screens. Below 1250px it is hidden, so the 96% case
+   never arises.
+
+   VERTICALLY CENTRED on the viewport rather than pinned near the top: the word
+   is a marker for the whole column, and anchoring it to the top would make it
+   read as a heading for whichever year happened to be beside it.
 
    `z-index: -1` puts it behind the years. Nothing on this page paints a
    background, so "behind" still shows through — and `pointer-events: none`
@@ -68,13 +87,13 @@
    colour composites against whatever happens to be behind, which on a page
    with striped table rows is two different greys down the length of the word. */
 .archive-title {
-  position: absolute;
-  top: var(--space-2xl);
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: calc(50% - var(--body-width-max) / 2);
   z-index: -1;
 
   margin: 0;
-  transform: translateX(calc(-100% - var(--space-3xs))) rotate(180deg);
+  transform: translate(calc(-100% - var(--space-3xs)), -50%) rotate(180deg);
   transform-origin: center;
   writing-mode: vertical-rl;
 
