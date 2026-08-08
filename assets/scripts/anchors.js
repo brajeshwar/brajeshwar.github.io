@@ -16,7 +16,7 @@
  *                           by hand rather than derived by kramdown — so the
  *                           anchor is what makes a period linkable and
  *                           shareable ("/about/#2005-2006").
- *   .page-now h1            the year headings on /now/, which wear the same
+ *   .page-now h2            the year headings on /now/, which wear the same
  *                           timeline visuals; ids come from kramdown here
  *                           ("/now/#2024").
  */
@@ -24,7 +24,7 @@
   'use strict';
   var sel = 'article.post > h2[id], article.post > h3[id], article.post > h4[id], ' +
             'article.post > h5[id], article.post > h6[id], ' +
-            '.timeline-when[id], .page-now h1[id]';
+            '.timeline-when[id], .page-now h2[id]';
   Array.prototype.forEach.call(document.querySelectorAll(sel), function (h) {
     var a = document.createElement('a');
     a.className = 'headerlink';

@@ -204,6 +204,24 @@ photo-cover__desc {
   margin: 0;
 }
 
+/* ⚠️ A POST TITLE IS NOT UPPERCASED, and this is the only property of the
+   shared treatment it opts out of (2026-08-08: "For posts, Let's not uppercase
+   the titles, Let it be what is in the article's title").
+
+   The reason holds up: a page title is a LABEL — Books, Album, Archives — one
+   or two words naming a thing, and caps read as a marker there. An article
+   title is a sentence, often a long one, and uppercasing it takes the author's
+   own capitalisation away: "How to Read a Book" and "BODD - Digital
+   Doppelgänger for your AI" both carry meaning in their case that caps erase.
+
+   Everything else stays — the weight, the tracking, the size step — so posts
+   and pages still read as one family. post.css loads after base.css, so this
+   wins on source order at equal specificity, the same mechanism as the note
+   below. */
+.post h1.page-title {
+  text-transform: none;
+}
+
 /* ⚠️ `font-weight: var(--font-weight)` USED TO BE IN THE RULE ABOVE and had
    to go. post.css loads after base.css, so it beat the shared `.page-title`
    weight and post titles alone stayed at 400 while every page title went

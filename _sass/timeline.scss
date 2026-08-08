@@ -23,7 +23,7 @@
    rewriting content into timeline markup. now.md include_relative's
    eleven year fragments, each `# YYYY` plus a bullet list:
 
-       # 2024   →  .page-now h1      (the period heading)
+       ## 2024  →  .page-now h2      (the period heading)
        <ul>     →  .page-now ul      (carries the spine)
        <li>     →  .page-now ul li   (dot on the spine)
 
@@ -278,7 +278,7 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
    up with, and -0.06em pulls it back. Em-based, so it tracks whatever size the
    shared scale hands it. */
 .timeline-when,
-.page-now h1 {
+.page-now h2 {
   position: relative;              /* anchor for the § headerlink */
   margin: 0 0 var(--space-xs);
   margin-left: -0.06em;
@@ -287,15 +287,23 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
   scroll-margin-top: var(--space-l);
 }
 
-/* /now/ only: its periods are <h1>, which base.css underlines. The spine
-   already separates the years, so the rule would be a second divider saying
-   the same thing. /about/'s periods are <h2> and carry no border to reset.
+/* ⚠️ THE `# 2024` -> `## 2024` CHANGE THIS NOTE USED TO ASK FOR HAPPENED on
+   2026-08-08. It said /now/'s years rendered one step larger than /about/'s
+   because they were h1 against h2, that this was the type scale behaving
+   correctly rather than a styling difference, and that matching would take a
+   content change. Brajeshwar made it: "Should we just let the years be
+   '## YYYY' and hence correct Markup hierarchy and better dealing with the
+   styles?"
 
-   ⚠️ That level difference is also why /now/'s years render one step LARGER.
-   That is the shared type scale behaving correctly on different levels, not a
-   styling difference — the fragments in now/ would have to use `##` to match,
-   and that is a content change. */
-.page-now h1 { border: 0; }
+   Three things fell out. The page now has ONE h1 — its own title — instead of
+   twelve, so `force_title: true` came off now.md and the ordinary
+   content-guard in the layout handles it. The two timeline pages agree on
+   level, so this file stops needing a per-page exception. And the border reset
+   that lived here is gone with it: base.css underlines h1, not h2, so there is
+   nothing left to undo.
+
+   The ids survive: kramdown derives them from the heading TEXT, not its level,
+   so /now/#2024 still resolves. */
 
 /* ---- Heading anchors ---------------------------------------
    MOVED TO base.css 2026-07-27. anchors.js still prepends a § link

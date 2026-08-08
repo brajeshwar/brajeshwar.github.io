@@ -2,7 +2,6 @@
 layout: page
 title: Now
 style: page-now
-force_title: true
 ---
 
 {% include_relative now/2024.md %}
