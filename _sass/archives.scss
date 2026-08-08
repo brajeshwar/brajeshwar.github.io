@@ -33,10 +33,23 @@
    the content it labels. `vertical-lr` alone would read top-to-bottom and sit
    the wrong way round.
 
+   SIZE AND OVERLAP, both tuned on 2026-08-08 from a first pass that was too
+   loud: "Too big. Reduce the size by about 30%. Decrease the color accent a
+   bit more. Let's try to push it a bit inside the content underneath it such
+   that some of its content is actually behind the main container."
+
+   So the clamp came down 30% (6rem → 4.2rem at the top, and the middle term
+   with it) and `translateX` went from -115% to -55%. At -115% the word cleared
+   `main` entirely and simply lived in the gutter; at -55% a little under half
+   of it slides under the content, where the striped table rows — which DO
+   paint a background — cut it off mid-letter. That cropping is the effect, not
+   a defect: it is what makes the word read as something the page is sitting
+   on rather than a label parked beside it.
+
    ⚠️ COLOUR IS A MIX TOWARD THE BACKGROUND, not a text token. The faintest
    one, `--text-color-lower`, computes to oklch(0.371 0 0) — a perfectly
    readable grey, which is right for small print and far too present for
-   something meant to sit behind the years. Mixing 14% of the foreground into
+   something meant to sit behind the years. Mixing 9% of the foreground into
    the page colour lands it just above the background in both modes, so
    "lighter, or darker in dark mode" falls out of one declaration: in light
    mode the ink is dark and the mix is a pale grey, in dark mode the ink is
@@ -52,16 +65,25 @@
   z-index: -1;
 
   margin: 0;
-  transform: translateX(-115%) rotate(180deg);
+  transform: translateX(-55%) rotate(180deg);
   transform-origin: center;
   writing-mode: vertical-rl;
 
-  font-size: clamp(3rem, 7vw, 6rem);
+  /* ⚠️ PINNED SANS, and it must not inherit. Brajeshwar, 2026-08-08:
+     "Remember, this is a UI element and should always be Sans-Serif."
+     Right — the reader's font switch is for READING, and a marker down the
+     gutter is chrome. Left to inherit, [data-font="serif"] would set it in
+     Source Serif 4, where a 700-weight vertical word grows serifs that catch
+     on each other down the column. `--font-family-sans-serif` is the token
+     chrome.css already uses for exactly this, so the two agree. */
+
+  font-size: clamp(2.1rem, 4.9vw, 4.2rem);
   font-weight: 700;
+  font-family: var(--font-family-sans-serif);
   letter-spacing: 0.02em;
   line-height: 1;
   text-transform: uppercase;
-  color: color-mix(in oklch, var(--text-color) 14%, var(--bg-color-lower));
+  color: color-mix(in oklch, var(--text-color) 9%, var(--bg-color-lower));
 
   pointer-events: none;
   user-select: none;
@@ -173,7 +195,7 @@ main.archives {
   font-weight: var(--font-weight-bold);
   line-height: 1;
   letter-spacing: -0.02em;
-  color: color-mix(in oklch, var(--text-color) 14%, var(--bg-color-lower));
+  color: color-mix(in oklch, var(--text-color) 9%, var(--bg-color-lower));
   opacity: 0.28;
 
   white-space: nowrap;
