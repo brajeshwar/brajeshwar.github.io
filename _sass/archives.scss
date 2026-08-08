@@ -33,18 +33,27 @@
    the content it labels. `vertical-lr` alone would read top-to-bottom and sit
    the wrong way round.
 
-   SIZE AND OVERLAP, both tuned on 2026-08-08 from a first pass that was too
-   loud: "Too big. Reduce the size by about 30%. Decrease the color accent a
-   bit more. Let's try to push it a bit inside the content underneath it such
-   that some of its content is actually behind the main container."
+   POSITION, ARRIVED AT IN THREE PASSES on 2026-08-08, and the middle one is
+   worth keeping as a record of what NOT to do.
 
-   So the clamp came down 30% (6rem → 4.2rem at the top, and the middle term
-   with it) and `translateX` went from -115% to -55%. At -115% the word cleared
-   `main` entirely and simply lived in the gutter; at -55% a little under half
-   of it slides under the content, where the striped table rows — which DO
-   paint a background — cut it off mid-letter. That cropping is the effect, not
-   a defect: it is what makes the word read as something the page is sitting
-   on rather than a label parked beside it.
+     -115%  cleared `main` entirely and floated in the gutter. Too detached.
+     -55%   slid the word under the content, so the striped rows cropped it
+            mid-letter. Tried on the theory that the cropping would read as
+            depth; it did not — "the indent isn't a good idea."
+     now    `calc(-100% - var(--space-3xs))`. -100% lands the word's right
+            edge exactly on `main`'s left edge; the token then backs it off by
+            the smallest step the spacing scale has — 5px, and the only one
+            that is FIXED rather than fluid, so the gap cannot breathe with
+            the viewport while the band beside it stays put.
+
+   "Make it real close to touching it, leave just about the least spacing
+   rhythm that we have." Writing it as `-100%` plus a token rather than a
+   tuned percentage is what makes that literal: the word can change size or
+   weight and it stays exactly one 3xs off the content.
+
+   The clamp is 10% up on the previous pass and the weight went 700 -> 800:
+   once the word is fully outside the content it has to hold the column on its
+   own, where before the crop was doing some of that work.
 
    ⚠️ COLOUR IS A MIX TOWARD THE BACKGROUND, not a text token. The faintest
    one, `--text-color-lower`, computes to oklch(0.371 0 0) — a perfectly
@@ -65,7 +74,7 @@
   z-index: -1;
 
   margin: 0;
-  transform: translateX(-55%) rotate(180deg);
+  transform: translateX(calc(-100% - var(--space-3xs))) rotate(180deg);
   transform-origin: center;
   writing-mode: vertical-rl;
 
@@ -77,8 +86,8 @@
      on each other down the column. `--font-family-sans-serif` is the token
      chrome.css already uses for exactly this, so the two agree. */
 
-  font-size: clamp(2.1rem, 4.9vw, 4.2rem);
-  font-weight: 700;
+  font-size: clamp(2.31rem, 5.4vw, 4.62rem);
+  font-weight: 800;
   font-family: var(--font-family-sans-serif);
   letter-spacing: 0.02em;
   line-height: 1;
