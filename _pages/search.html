@@ -4,12 +4,48 @@ title: Search
 style: page-search
 ---
 
+{%- comment -%}
+  ⚠️ REBUILT 2026-08-09 ON THE MODULAR UI — the same component the header's ⌘K
+  palette uses. Brajeshwar: "even on the live website, [/search/ does] not have
+  the Search Field to do the search. Bring the same Search Input that we have
+  globally."
 
-<div id="search"></div>
+  It really was dead in production while working perfectly on localhost, and
+  the cause is worth knowing because it can bite any script on this site:
+  Cloudflare Rocket Loader rewrites every <script type> and re-executes them
+  AFTER DOMContentLoaded has fired. The old pagefind-custom.js wrapped its whole
+  init in a naked `window.addEventListener('DOMContentLoaded', …)`, so it
+  registered a listener for an event that had already gone by. Nothing threw,
+  nothing 404'd, and the page shipped an empty <div> for months.
 
-<!-- Load Pagefind UI -->
-<link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
-<script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
-<!-- Load custom enhancements -->
-<script src="{{ '/assets/scripts/pagefind-custom.js' | relative_url }}"></script>
-<script src="{{ '/assets/scripts/pagefind-autofocus.js' | relative_url }}"></script>
+  Both scripts that served this page are gone with it — pagefind-custom.js and
+  pagefind-autofocus.js. search.js mounts the field and focuses it, which is
+  what those two did between them, minus the bug.
+
+  ⚠️ NO <script> OR <link> TAGS HERE ANY MORE, deliberately. search.js already
+  loads on every page and now looks for #page-search; Pagefind's bundle is
+  injected by that script when needed. Adding a tag back here reintroduces
+  exactly the Rocket-Loader-ordering problem described above.
+
+  This also finishes a migration that was declared and half-done: _docs/search.md
+  has said "UI choice — Modular UI (not the Default UI)" since the palette was
+  built, while this page quietly stayed on the ~32KB Default UI.
+{%- endcomment -%}
+
+<div id="page-search" class="page-search__ui">
+  <div id="page-search-input"></div>
+  <div id="page-search-summary" class="site-search__summary"></div>
+  <div id="page-search-results"></div>
+
+  {%- comment -%}
+    Guardrail 4: the page must say something useful with JavaScript off.
+    Pagefind cannot run at all without it, so the honest answer is a route to
+    the content rather than a search box that will never work.
+  {%- endcomment -%}
+  <noscript>
+    <p>Search needs JavaScript. You can still browse
+      <a href="/archives/">every post by year</a>, or the
+      <a href="/books/">books</a>, <a href="/film/">film</a> and
+      <a href="/album/">album</a> shelves.</p>
+  </noscript>
+</div>

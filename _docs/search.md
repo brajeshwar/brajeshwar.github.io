@@ -58,9 +58,44 @@ they work under `jekyll serve` and in production. Do not use `prepend: site.url`
 That hardcodes `https://brajeshwar.com/…`, which 404s locally and made the trigger fall
 through to a plain navigation (the "search just goes to /search/" bug).
 
-The `/search/` page (`_pages/search.html`) is a full-page Pagefind UI with an auto-focused
-input (`pagefind-autofocus.js`), serving as the JS-off fallback and a shareable search URL.
-It is unchanged.
+### The `/search/` page — same component since 2026-08-09
+
+`_pages/search.html` mounts the **same Modular UI** from the **same script**. It is three empty
+divs (`#page-search-input` / `-summary` / `-results`) inside `#page-search`; `search.js` finds
+them, mounts eagerly rather than lazily (the reader asked for this page, so there is nothing to
+defer) and focuses the input. Styling is `_sass/search.scss`, now ~4 KB where it was ~11.5 KB.
+
+The palette and the page get **one `Instance` each**, not a shared one: an Instance owns its
+query, so sharing would echo whatever was typed in the palette into the page behind it. The
+loaded bundle — the part with a cost — is shared.
+
+On `/search/`, ⌘K and `/` **focus the page's field instead of opening the palette.** A modal
+search box on top of a search page is two boxes querying one index.
+
+⚠️ **IT WAS BROKEN IN PRODUCTION AND FINE ON LOCALHOST, FOR MONTHS.** The page ran Pagefind's
+Default UI, initialised by `pagefind-custom.js`, which wrapped everything in a naked
+`window.addEventListener('DOMContentLoaded', …)`. **Cloudflare Rocket Loader rewrites every
+`<script type>` and re-executes the scripts after `DOMContentLoaded` has already fired**, so
+that listener was registered for an event already in the past. It never ran; the page shipped an
+empty `<div>`; nothing threw and nothing 404'd. Brajeshwar found it by looking: *"even on the
+live website, [/search/ does] not have the Search Field to do the search."*
+
+**This is why the ready-guard in `search.js` is load-bearing** — `readyState === 'loading' ?
+addEventListener : init()` works either way. `appearance.js` and `sidenotes.js` use it too;
+audited 2026-08-09, no script in `assets/scripts/` uses a bare listener. Do not "simplify" one:
+it will pass every local test and ship dead.
+
+⚠️ **NO `<script>` OR `<link>` TAGS IN `search.html`.** `search.js` already loads on every page
+and injects Pagefind's bundle itself. Putting a tag back on the page reintroduces exactly the
+Rocket-Loader ordering problem above.
+
+`pagefind-custom.js` and `pagefind-autofocus.js` are **deleted**. So is the ~11 KB of
+`#search .pagefind-ui__*` theming, which could no longer match anything: the Default UI's
+Svelte-hashed classes are gone with the Default UI, and the Modular UI's classes are flat,
+which is why nothing here needs ID scoping any more.
+
+This also closes a migration that had been half-done — this file has said "Modular UI (not the
+Default UI)" since the palette was built, while the page quietly stayed on the ~32 KB Default UI.
 
 Index scope: `<header>` and `<footer>` carry `data-pagefind-ignore` so the repeating chrome
 (nav, the ⌘K hint badge, footer columns) is excluded from the index. Otherwise it pollutes

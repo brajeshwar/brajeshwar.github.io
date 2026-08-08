@@ -6,7 +6,7 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **NINE commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+⚠️ **ELEVEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
 read "everything below is pushed and live, the tree is clean", and it stopped being true partway
 through the session without anyone updating it. Check `git log origin/main..main` before
 believing any status line in this file, including this one.
@@ -160,6 +160,56 @@ declaration before and after, not by looking at the page.
 Oinam Software's start year (which also collides with `/about/`'s own freelancing period),
 Oinam's client list, and Razorfish's headcount wording. Neither page was normalized to the other
 — they are his claims. Listed in [`todo.md`](todo.md).
+
+### /search/ was dead in production for months — Rocket Loader
+
+⚠️ **READ THIS BEFORE WRITING ANY SCRIPT FOR THIS SITE.** `/search/` rendered an empty `<div>`
+on brajeshwar.com while working perfectly under `jekyll serve`. Not Pagefind's fault, not a 404,
+nothing in the console:
+
+**Cloudflare Rocket Loader rewrites every `<script type>` on the live site and re-executes the
+scripts AFTER `DOMContentLoaded` has already fired.** The old `pagefind-custom.js` put its whole
+init inside a naked `window.addEventListener('DOMContentLoaded', …)` — registering a listener
+for an event already in the past. It simply never ran.
+
+The pattern that survives it, and the one every script here must use:
+
+```js
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();                       // ← the branch Rocket Loader needs
+}
+```
+
+`appearance.js`, `sidenotes.js` and `search.js` already had it. Audited 2026-08-09: nothing else
+in `assets/scripts/` uses a bare listener. **A bare listener passes every local test and ships
+broken** — this is not style, it is the only thing that works in production.
+
+### One search component, two mounts
+
+`/search/` now runs the **same Modular UI as the ⌘K palette**, mounted by the same `search.js`
+("Bring the same Search Input that we have globally"). This finished a migration that had been
+declared and half-done: `_docs/search.md` has said "Modular UI (not the Default UI)" since the
+palette was built, while the page quietly stayed on the ~32 KB Default UI.
+
+Deleted with it: `pagefind-custom.js`, `pagefind-autofocus.js`, and **~7 KB of
+`_sass/search.scss`** (11,519 → 4,342 bytes) that could no longer match anything. The result
+list was never the page's to style — `.pagefind-modular-list-*` in `chrome.scss` is unprefixed,
+so it was always global and `/search/` inherits it.
+
+Two details worth keeping: the palette and the page get **one `Instance` each**, because an
+Instance owns its query and a shared one would echo the palette's text into the page behind it;
+and on `/search/` ⌘K and `/` **focus the page's own field** rather than opening a modal over it.
+
+⚠️ **`search.html` carries no `<script>` or `<link>` tags any more.** Putting one back
+reintroduces the Rocket-Loader ordering bug above.
+
+### /now/ joined the spine
+
+`title_style: vertical`, so it wears the same left-margin title as `/film/`, `/books/`,
+`/album/`, `/own/`, `/ideas/` and `/legal/`. Nothing else changed — its `## YYYY` headings and
+their `/now/#2024` anchors are untouched.
 
 ### The two habits this session kept proving
 1. **Count the items; do not trust the exit code.** A green build hid a one-item home strip, a

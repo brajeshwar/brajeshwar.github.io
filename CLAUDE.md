@@ -64,6 +64,12 @@ Its three sections, and they are not equal:
 - **`WIP` cascades to nested lists.** A daughter list inherits from its mother: if the parent
   item is marked `WIP`, every sub-item under it is `WIP` too, whether or not each says so.
 - **One at a time**, finished — built, verified, committed — before taking the next.
+- ⚠️ **RUN THE WHOLE QUEUE WITHOUT STOPPING** (2026-08-09: *"When there are items in '## DO',
+  do it without stopping unless you need to ask me a question blocking you."*). Finish an item,
+  take the next, until `## DO` is empty. Do not report back and wait between items; do not ask
+  whether to carry on. Stop early ONLY for a genuinely blocking question — one where proceeding
+  under any assumption would be unsafe or would waste the work. A judgement call with a
+  defensible default is not blocking: choose, build, and say what you chose in the final report.
 - **Never reorder, reword or delete his lines.** Position is his instruction, not ours.
 - **Never push** because a queue item is done; guardrail 7 is unchanged.
 - **Done means:** mark in place as `- [x] [HH:MM] <his original text>` (24-hour local, the time

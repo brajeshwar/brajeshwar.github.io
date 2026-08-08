@@ -27,9 +27,7 @@ Brajeshwar, 2026-07-27:
 |---|---:|---|
 | `appearance.js` | 8.2 KB | every page (theme/font/accent panel) |
 | `sidenotes.js` | 11.4 KB | **87 pages** — only where footnotes exist (2026-07-27) |
-| `search.js` | 3.8 KB | every page (⌘K palette, and `/`) |
-| `pagefind-custom.js` | 4.4 KB | `/search/` |
-| `pagefind-autofocus.js` | 0.4 KB | `/search/` |
+| `search.js` | 8.8 KB | every page (⌘K palette, `/`, **and the `/search/` page**) |
 | `anchors.js` | 1.4 KB | **453 posts** — only where an `h2`+ exists (2026-07-27) |
 | `timeline.js` | 2.3 KB | `/about/` |
 | `random.js` | 1.8 KB | `/random/` only (2026-07-27) |
@@ -154,8 +152,10 @@ reference bundle names, which is exactly the coupling the in-place design avoids
 breaks both environments above. The gain was always in minification, not in merging: under
 HTTP/2 the request count is not what costs, the bytes are, and those are now down 52% gzipped
 without touching a reference. And one bundle for everything is a regression regardless, since
-`sidenotes.js` (4.7 KB minified) is posts-only and `pagefind-custom.js` is `/search/`-only,
-so a single bundle would put ~15 KB on a homepage that needs about 7 KB of it.
+`sidenotes.js` (4.7 KB minified) is posts-only, so a single bundle would put well over twice
+what a homepage needs onto it. *(This sentence used to cite `pagefind-custom.js` as the second
+example; that script was deleted on 2026-08-09 — see below — but the argument was never
+resting on it.)*
 
 If concatenation is ever wanted, the shape is bundle-per-layout mirroring the CSS
 ([`styles.md`](styles.md) §5), and it needs a plan for the two non-CI environments first.
@@ -181,3 +181,33 @@ and nothing more.
 - CLAUDE.md guardrail 4 (progressive enhancement) and 6 (vanilla only).
 - [`design.md`](design.md) → *Performance budget* — "only the JS a page needs".
 - [`timeline.md`](timeline.md) — the CSS-only filter, as the example of rule 3.
+
+
+## Two scripts deleted, 2026-08-09 — and the bug that took them
+
+`pagefind-custom.js` (4.4 KB) and `pagefind-autofocus.js` (0.4 KB) are gone. `/search/` now
+mounts the same Pagefind **Modular UI** the ⌘K palette uses, from `search.js`, which grew to
+8.8 KB raw / 3.0 KB minified to do both jobs — still less than the three files it replaces, and
+it drops the Default UI's ~32 KB bundle plus ~11 KB of dead CSS from `_sass/search.scss`.
+
+⚠️ **THE REASON MATTERS MORE THAN THE SAVING.** `/search/` had been shipping an empty `<div>` in
+production while working perfectly under `jekyll serve`. Cloudflare Rocket Loader rewrites every
+`<script type>` on the live site and re-executes them **after `DOMContentLoaded` has already
+fired**. `pagefind-custom.js` wrapped its whole init in a naked
+`window.addEventListener('DOMContentLoaded', …)` — a listener registered for an event that was
+already in the past. Nothing threw. Nothing 404'd. The console was silent.
+
+**So every script here must use the ready-guard:**
+
+```js
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();                       // ← the branch Rocket Loader needs
+}
+```
+
+`appearance.js`, `sidenotes.js` and `search.js` all do. Audited on 2026-08-09: no other script
+in `assets/scripts/` uses a bare listener. **A bare `DOMContentLoaded` listener will pass every
+local test and ship broken**, so this is not a style preference — it is the only pattern that
+works in production.

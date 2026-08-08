@@ -2,6 +2,7 @@
 layout: page
 title: Now
 style: page-now
+title_style: vertical
 ---
 
 {% include_relative now/2024.md %}

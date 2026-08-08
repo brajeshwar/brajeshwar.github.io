@@ -31,6 +31,15 @@ section to focus on.")*
 **How to work**
 
 - One item at a time. Finish it — built, verified, committed — before starting the next.
+- ⚠️ **DO NOT STOP BETWEEN ITEMS.** Finish one, take the next, keep going until `## DO` is
+  empty. Do not report back and wait after each item, and do not ask whether to continue —
+  the queue having items in it IS the instruction to work them. *(His words, 2026-08-09:
+  "When there are items in '## DO', do it without stopping unless you need to ask me a
+  question blocking you.")*
+- **The only reason to stop early is a genuinely blocking question** — one where proceeding
+  under any assumption would be unsafe or would waste the work if wrong. A judgement call with
+  a defensible default is not blocking: make the call, do the work, and say what you chose in
+  the report at the end.
 - Do not reorder, reword or delete his lines.
 - **Do not push.** Guardrail 7 is unchanged: commit, report, wait to be asked.
 

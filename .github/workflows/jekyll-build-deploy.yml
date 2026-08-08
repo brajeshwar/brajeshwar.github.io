@@ -98,9 +98,10 @@ jobs:
       # Pointing the layout at bundle files that only CI produces would have
       # left both of those with no JavaScript at all.
       #
-      # NOT concatenated, deliberately. sidenotes.js is posts-only and
-      # pagefind-custom.js is /search/-only, so one bundle would put ~15 KB on
-      # a homepage that needs about 7 KB of it. Per-page-type bundles would
+      # NOT concatenated, deliberately. sidenotes.js is posts-only, so one
+      # bundle would put well over twice what a homepage needs onto it.
+      # (pagefind-custom.js was the other example here until 2026-08-09, when
+      # /search/ moved onto search.js and it was deleted.) Per-page-type bundles would
       # work but need the reference changes this step exists to avoid, and
       # under HTTP/2 the request count is not what costs. See _docs/javascript.md.
       #
