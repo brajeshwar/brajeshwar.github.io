@@ -25,6 +25,19 @@ because it is a prefix of the built-in `/doctor` and he kept mis-firing it. Any 
 later takes the same `o` — it keeps his own verbs out of the built-ins' namespace, which is
 the collision that caused this.
 
+⚠️ **`/odo` is PROJECT-SCOPED on purpose — do not promote it to `~/.claude/commands/`.**
+It is tracked in this repo (`.gitignore` excludes `.claude/*` but re-includes `commands/`), so
+it travels to any clone or machine working on brajeshwar.com and nowhere else. That is the
+intent: the queue convention is portable, but the command's body is not — it names
+`CLAUDE.local.md`, `_docs/`, guardrail 7 and this build's verify loop, none of which exist in
+another project. A user-level copy would fire in repos with no queue to read.
+
+His call, 2026-08-08: *"Keep it here for now, I will likely be starting a Claude Code Template
+to start any project with the bare ones. I'm yet to decide if I want this as part of dotfiles
+or git versioned private under `_root` or something like that."* So the open question is where
+the PORTABLE half eventually lives — a template repo, dotfiles, or a private `_root` — not
+whether to scatter this copy. Leave it here until he decides.
+
 Its three sections, and they are not equal:
 
 | | |
