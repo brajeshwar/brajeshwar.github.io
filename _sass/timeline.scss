@@ -218,15 +218,61 @@
    site-wide component and now lives in exactly one place.
    ------------------------------------------------------------ */
 
-/* The spine is a border on the entry LIST, not a pseudo-element on the
-   container, so it starts and stops with the entries and no stray line hangs
-   past the last one. */
+/* ---- Where a dot sits, and therefore where the spine starts ------
+   ⚠️ ONE NUMBER DRIVES THREE THINGS: the dot's vertical position, the top of
+   the spine, and the top of the progress fill. Define it once, here, as the
+   MIDDLE OF THE FIRST LINE of whatever leads an entry, measured from the
+   entry's top.
+
+   Brajeshwar, 2026-08-09: "Vertically position the dots in the middle of the
+   title that follows it (if there are as in the /about/)". His parenthesis is
+   the whole reason this is a variable and not a constant — /about/ and /cv/
+   lead with an h2, /now/ leads with body text, and the two have different
+   first lines. Each page sets its own; everything downstream reads the token.
+
+   It replaced a hardcoded `top: 0.55em` on the dot. That happened to be right
+   for /now/ (0.55 x 20px = 11px against a true 10.7px) and 2.25px high on
+   /about/, which is exactly the kind of drift a magic number produces.
+
+   ⚠️ Not `em`. A custom property inherits as an unresolved token, so `0.55em`
+   set here would resolve against the FONT SIZE OF WHATEVER USES IT — one value
+   on the <ol>, another on the <li>. The spine and the dots would disagree.
+   Absolute math on the scale tokens has no such trap. */
+.timeline-entries { --timeline-dot-center: calc(var(--step-2) * var(--scale-small) / 2); }
+.page-now ul      { --timeline-dot-center: calc(var(--step-0) * var(--scale) / 2); }
+
+/* The spine.
+
+   ⚠️ A ::before SINCE 2026-08-09, NOT `border-left` ("For the first dot in the
+   timeline vertical line, can the line start from the dot. So, no hanging tip
+   at the top."). A border spans the whole box and cannot start partway down;
+   16.5px of line hung above the first dot. A pseudo-element can be offset, so
+   it now begins exactly at the first dot's centre.
+
+   ⚠️ THE PADDING ABSORBS THE BORDER'S 2px. With `border-left` the entries sat
+   at border(2) + padding(gutter); with no border, padding alone has to make up
+   the same 42px or every entry shifts left and the dots lose the spine. That
+   is what the `+ var(--timeline-rule)` is for — do not "simplify" it away.
+
+   It still stops with the last entry, which was the original reason for
+   putting the line on the list rather than the container. */
 .timeline-entries,
 .page-now ul {
+  position: relative;
   list-style: none;
   margin: 0;
-  padding: 0 0 0 var(--timeline-gutter);
-  border-left: var(--timeline-rule) var(--border-style) var(--rule);
+  padding: 0 0 0 calc(var(--timeline-gutter) + var(--timeline-rule));
+}
+
+.timeline-entries::before,
+.page-now ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: var(--timeline-dot-center);
+  bottom: 0;
+  width: var(--timeline-rule);
+  background: var(--rule);
 }
 
 .timeline-entry,
@@ -251,20 +297,34 @@
 .timeline-entry:last-child,
 .page-now ul li:last-child { margin-bottom: 0; }
 
-/* Marker on the spine. Sits ON the rule, centered over it. */
+/* Marker on the spine. Sits ON the rule, centred over it both ways.
+
+   ⚠️ SOLID, IN --accent, SINCE 2026-08-09 ("Make the dots solid and a little
+   more accented color"). It was an open dot — page-coloured fill with a
+   10%-alpha border — which at 11px read as a gap in the line rather than a
+   point on it.
+
+   --accent and not --text-color-lower: it is the token literally named in the
+   ask, the progress fill below already uses it, and it is monochrome by
+   default (oklch(20.5% 0 0), chroma 0), so nothing turns colourful unless the
+   reader picks an accent in the appearance panel — at which point the dots
+   picking it up is the point. Border kept at the same colour so the disc stays
+   exactly --timeline-dot across, box-sizing being border-box.
+
+   `top` is derived, not typed — see --timeline-dot-center above. */
 .timeline-entry::before,
 .page-now ul li::before {
   content: "";
   position: absolute;
-  top: 0.55em;
+  top: calc(var(--timeline-dot-center) - (var(--timeline-dot) / 2));
   left: calc((var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1);
 
   width: var(--timeline-dot);
   height: var(--timeline-dot);
   border-radius: 50%;
 
-  background: var(--bg-color-lower);
-  border: var(--timeline-rule) var(--border-style) var(--rule);
+  background: var(--accent);
+  border: var(--timeline-rule) var(--border-style) var(--accent);
 }
 
 /* ⚠️ THERE USED TO BE TWO MARKERS — work filled, life open — as a second,
@@ -373,13 +433,25 @@
 @supports (animation-timeline: scroll()) {
   .timeline-entries { position: relative; }
 
+  /* ⚠️ ITS `left` WAS WRONG AND NOBODY SAW IT. This read
+     `left: calc(var(--timeline-gutter) * -1 - var(--timeline-rule))` — the
+     dot's formula, which is relative to an ENTRY. This element is a child of
+     the list, so it painted 42px to the left of the spine it is supposed to
+     fill. Measured 2026-08-09: spine at x=244-246, fill at x=204.
+
+     It went unnoticed because `prefers-reduced-motion: reduce` sets this to
+     display:none further down, and the machine it was written on had that on.
+
+     Fixed by giving it the spine's geometry verbatim rather than its own
+     arithmetic: same left, same width, same top. If the spine moves, this
+     moves with it and cannot drift again. */
   .timeline-progress {
     display: block;
     position: absolute;
-    top: 0;
-    left: calc(var(--timeline-gutter) * -1 - var(--timeline-rule));
+    top: var(--timeline-dot-center);
+    left: 0;
     width: var(--timeline-rule);
-    height: 100%;
+    bottom: 0;
     background: var(--accent);
     transform-origin: top;
     transform: scaleY(0);
