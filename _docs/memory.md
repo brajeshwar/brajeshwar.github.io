@@ -4,7 +4,105 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-04, seventh session) — READ FIRST
+## Where we are (updated 2026-08-08, eighth session) — READ FIRST
+
+Everything below is **pushed and live**. The tree is clean.
+
+### The books shelf was rebuilt, twice over
+
+`_data/books.yaml` is gone. In its place:
+
+| | |
+|---|---|
+| `_data/books/01.yaml`, `a.yaml`…`z.yaml` | 163 books, one file per initial letter |
+| `_data/books-favorites.yaml` | the 6 favorites — being in the file IS the flag |
+
+**⚠️ A book is filed by the first letter that is NOT an article.** "The Children" is in
+`c.yaml`; the rule covers *The*, *A* and *An*, so "A Room of One's Own" is in `r.yaml` and
+"The 5 Elements of Effective Thinking" is in `01.yaml`. 58 of 167 moved when this came in.
+`/books/` takes its section headings from the FILENAME, never from the titles — there is no
+sorting code to consult and no second place to fix.
+
+**`highlight: true` is gone.** The two grids read different files now, so nothing guarantees
+they are disjoint the way `where_exp` did: a book in both renders twice.
+
+**Only `_data/books-favorites.yaml` carries comments.** The letter files are data and nothing
+else ("I think the YAML files are easy to understand for me to add more data").
+
+Three things about that split break QUIETLY and are worth re-reading before touching a
+template. `site.data.books` is a HASH keyed by filename, not an array — `slice`, `where` and
+`where_exp` all stop working, and **`slice` fails silently**: the home strip rendered one item
+instead of seven with the build still green. Inside an `include` tag, `group[0]`/`group[1]` are
+a hard error instead. And the home strip **no longer shows the newest** — an A–Z split scatters
+chronology across 27 files and nothing records when a book arrived, so it shows the favorites.
+Do NOT buy recency back with a `read:`/`added:` field; that has been rejected twice.
+
+### 146 book covers, and why the pictures had to be eyeballed
+
+137 covers came from the Open Library Covers API, then 9 more were repaired. **The repair pass
+matters more than the first pass**: "The Courage to Be Disliked" matched a record genuinely
+titled that, at ratio 1.0, and Open Library simply has the wrong artwork on that cover ID — it
+served Namita Gokhale's *Never Never Land*. No metadata check catches that.
+
+So all 144 were laid out on a contact sheet and looked at, which found eight more: *Under
+Pressure* showing a Jacqueline Wilson novel, *The Universe in a Nutshell* showing a scanned
+paper, *The Cold Start Problem* showing a "COVER TO BE REVEALED" placeholder, and four
+foreign-language editions. **21 books still have none** — recent or India-published titles Open
+Library has nothing for. Those are his manual task.
+
+### /wear/ became /own/
+
+A new page, `layout: album` + `style: page-own`, reading `_data/own.yaml`. An inventory of
+LINES: a category label left, its items scrolling right. The rows **reuse
+`.strip__viewport` / `.strip` from home.css** — the site's one horizontal scroller, arrows and
+all — overriding three declarations under a `.page-own` prefix.
+
+⚠️ `default.html` gates strip-nav.js on the literal string `class="strip__viewport"`, so that
+attribute must stay EXACTLY that, with no extra classes, or the arrows silently stop shipping.
+
+Naming: "Own" is the honest superset — it survives the first laptop or bicycle, where "Wear"
+named only one of three groups (Wear / Carry / Keep). `/devices/` stayed a separate page and is
+cross-linked, because it is the same objects in a different TENSE: a lineage since 1999 with
+dead hardware in it, against an inventory of what is in the house today.
+
+Brand logos keep their own colours and sit on `--logo-plate` — **the one token in themes.css
+that does not flip with the theme**, because a brand's artwork has a fixed idea of its own
+background. Peak Design's mark is pure black and vanished on the dark theme without it.
+
+### One title treatment, and a spine
+
+Pages had no `<h1>` at all: a Markdown page's `# Heading` is eaten by
+jekyll-titles-from-headings, and the HTML pages never wrote one. The layouts emit it now — see
+the new section in CLAUDE.md, which is the short version of the rules.
+
+`/archives/` reads its title down the left gutter, `position: fixed`, behind the years at 9% of
+the foreground. Two things about it were **wrong on the first try and only found by measuring**:
+`container-type` on `main` does NOT make it the containing block (the word landed at x = −110,
+off-screen), and gating visibility on the 1024 band rather than 1250 ships a horizontal
+scrollbar between 1025 and 1243.
+
+`/now/`'s years are `## YYYY` now, not `#`. That was a note in timeline.scss asking to be done
+and it has been: one h1 per page, the two timeline pages agree on level, and the ids survive
+because kramdown derives them from the heading TEXT rather than its level.
+
+### Pages that changed shape
+- `album.md`, `contact.md`, `music.md` → `.html`. Rendered output is byte-identical bar
+  whitespace; `/contact/`'s `<title>` changed from "Contact" to the "Contact Brajeshwar" its
+  front matter always said, because the plugin had been overriding it.
+- `/books/` runs **six thumbnails a row** (158.2px), via `--card-min: 9.5rem` scoped to
+  `.page-books`. Anything from 133.5px to 158.1px gives six at the 1024 band.
+- `/blogroll/` deleted — it was live at 200 and now 404s. Nothing on the site linked to it.
+- `/own/` is **still unlinked from nav**.
+- The 10x Is Easier Than 2x post is **scheduled for 2026-08-13** and 404s until then.
+
+### The two habits this session kept proving
+1. **Count the items; do not trust the exit code.** A green build hid a one-item home strip, a
+   lost book ("Absolute and None", from a strip pass that was not idempotent), and a title
+   positioned off-screen.
+2. **Look at the pictures.** Metadata matching cannot catch a correct record with the wrong
+   image attached to it.
+
+## Session record — 2026-08-04, seventh session (superseded as the index head, kept per the log-history rule)
 
 ### ⏸ FOUR commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.
 

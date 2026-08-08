@@ -4,6 +4,26 @@ Running list of site tasks. Session-by-session history is in [`memory.md`](memor
 Originally absorbed from the 2027 planning braindump.
 
 ## Content & pages
+- [x] **Books shelf split by letter** *(2026-08-08)* — `_data/books/01.yaml` + `a`–`z`, and
+      `_data/books-favorites.yaml` beside it. Filed by the first NON-ARTICLE letter, so "The
+      Children" is in `c.yaml`. Cost: the home strip can no longer show the newest and shows
+      the favorites instead. See [`memory.md`](memory.md).
+- [x] **146 book covers** *(2026-08-07/08)* — from Open Library, then nine repaired after
+      looking at all of them on a contact sheet. **21 books still have none** and are
+      Brajeshwar's manual task: Open Library has nothing for them.
+- [x] **`/own/`** *(2026-08-07/08)* — the inventory page, renamed from `/wear/`. Wear / Carry /
+      Keep, rows that scroll sideways, brand logos on a fixed-light plate. **Still unlinked
+      from nav** — his call when to add it.
+- [x] **Titles on every page** *(2026-08-08)* — emitted by the layouts; a left-gutter spine on
+      the index pages. See [`styles.md`](styles.md).
+- [ ] **`/contact/` as a form embed** — the page is HTML and waiting; the embed shape is
+      Oinam's Form service's to dictate, so nothing is scaffolded for it.
+- [ ] **`/music/` to follow `/film/`** — artists into `_data/music.yaml`, `layout: album`, a
+      card-grid include. The file is HTML now so the restyle is markup only.
+- [ ] **`_src/wear/` still says wear** — the page is `/own/` since 2026-08-07. Renaming the
+      masters folder is a `git mv` (it is LFS-tracked by path, `_src/**`), left for him to say.
+- [ ] **`/blogroll/` returns 404** — deleted 2026-08-07, nothing linked to it internally, but
+      any bookmark now dead-ends. A `_redirect` entry would fix it if that matters.
 - [x] **Year jump-nav on `/archives/`** *(2026-07-26/27)* — all 26 years, always reachable.
       A horizontal strip hanging off the header rule, at every width — an auto-fit grid, so
       26 years are one row on a desktop and wrap into even rows on a phone. *(Corrected

@@ -117,7 +117,8 @@ template changes. There are two conventions, and they are not interchangeable.
 collection, under the same slug as the published file with no suffix:
 
 ```
-_src/books/  _src/film/  _src/album/  _src/devices/  _src/wear/
+_src/books/  _src/film/  _src/album/  _src/devices/  _src/wear/   ← the page is /own/ now;
+                                                          the masters folder still says wear
 
 static/books/the-lord-of-the-rings.webp   ← published, 800px long edge, 3:4
 _src/books/the-lord-of-the-rings.jpg      ← master, whatever the source gave
@@ -157,13 +158,16 @@ folder; `_src/` is only for the five collections above. Meanwhile, do not add a 
 ### Adding a book or an album item
 
 Append to the end of `_data/books.yaml` or `_data/album.yaml`. **The last entry is the
-newest** — that is the whole ordering protocol, and it is why the home-page strips read
-newest-first while `/books/` keeps the file's own order. There is deliberately no date field:
-a re-read has no single date worth recording, and a second field is a second thing to keep
-true.
+newest** — that was the whole ordering protocol for the album, and it still is. **Books no
+longer work that way** *(2026-08-07)*: an A–Z split scatters chronology across 27 files, so
+nothing records when a book arrived and the home strip shows the favourites rather than the
+newest. There is still deliberately no date field: a re-read has no single date worth
+recording, and a second field is a second thing to keep true.
 
-`highlight: true` on a book puts it in *All Time Favorites* and takes it out of *More Books* —
-one flag, two grids, no entry in both. `media: video` or `media: audio` on an album item
+**There is no `highlight` flag any more** *(2026-08-08)*. Favourites live in
+`_data/books-favorites.yaml` and everything else in `_data/books/` — being in the favourites
+file *is* the flag. The trade: the two grids read different files, so nothing guarantees they
+are disjoint the way the old `where_exp` did, and a book listed in both renders twice. `media: video` or `media: audio` on an album item
 overlays the matching icon.
 
 An album entry is **three fields — `title`, `img`, `url`** — plus optional `media`. There is no

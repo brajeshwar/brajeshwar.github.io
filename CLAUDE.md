@@ -12,16 +12,18 @@ are [`_docs/styles.md`](_docs/styles.md), hosting is [`_docs/hosting.md`](_docs/
 Re-read the guardrails below before any commit-worthy change.
 
 ## What this site is
-A Jekyll site (kramdown) with **1,464 post files (2001–2026)** — 1,456 build, since 12 in
-`_posts/todo/` are dated 2099 and `future: false` holds them back — of which **1,394 have no
-YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
+A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are
+future-dated and `future: false` holds them back (the 2099-dated drafts in `_posts/todo/`, plus
+any post scheduled ahead) — of which **1,397 have no YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
 `jekyll-optional-front-matter`. Search is **Pagefind**, run as a post-build step.
 Deploy is **GitHub Pages via GitHub Actions** (`.github/workflows/jekyll-build-deploy.yml`):
 Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, daily cron, and manual.
 
 ## Hard guardrails (do not violate)
 1. **Never modify content.** No edits and no added front matter under `_posts/**`, `_drafts/**`,
-   or `_pages/**` prose bodies. Do not touch `_data/*.yaml` except `nav.yaml` (with approval).
+   or `_pages/**` prose bodies. Do not touch `_data/**` except when asked — the books shelf
+   (`_data/books/`, `_data/books-favorites.yaml`) is edited constantly and `nav.yaml` needs
+   approval.
 2. **Preserve every URL.** Permalink is `/:title/`. Do not change permalinks, slugs, or structure.
 3. **Stay on Jekyll + Pagefind + kramdown.** No new SSG, no Markdown-engine swap, no new plugins
    unless the spec calls for it. No `_plugins/` hooks (GitHub Pages-incompatible).
@@ -57,14 +59,14 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 9. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
-- CSS = **16 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
+- CSS = **17 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
   `cards`, `bookplate`, `post`, `page`, `album`, + per-page one-offs
-  `home`/`archives`/`search`/`now`/`timeline`, plus the variables-only `breakpoints` and the
-  not-yet-wired `bookmarks`), compiled by
+  `home`/`archives`/`search`/`now`/`timeline`/`own`, plus the variables-only `breakpoints` and
+  the not-yet-wired `bookmarks`), compiled by
   **`assets/styles/site.scss`** into ONE external stylesheet. Flattened from 25 numbered ITCSS
   partials on 2026-07-19 — **don't reintroduce numeric prefixes**; cascade order lives in
   `site.scss`, and `config` must stay first.
-  One file, **11.0KB gzip / 57.9KB raw** (2026-08-04), fetched once and then cached.
+  One file, **11.5KB gzip / 60.3KB raw** (2026-08-08), fetched once and then cached.
 - **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
   them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
   because an underscore directory is never copied to the output — sources under `assets/`
@@ -90,7 +92,7 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 - ⚠️ **Every stylesheet now applies to every page.** There is no layout gate any more, so a
   selector must anchor to something page-specific — a class (`.page`, `.post`) or a custom
   element (`<photo-cover>`) — never a bare `main > article > h2`. `page.scss` was the one file
-  that got this wrong; unscoped it would have clamped all ~1,456 post titles to the measure.
+  that got this wrong; unscoped it would have clamped all ~1,457 post titles to the measure.
   The `styles:` front-matter key is **gone** (`style:` = a class on `<main>` — still live, and
   the two were easily confused).
 - **All themeable values are CSS custom properties; no hardcoded colors outside `themes.scss`.**
@@ -102,6 +104,22 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
   "expected selector" pointing at `assets/styles/site.scss` — the entry point, never the
   partial with the broken comment).
 - `container-ideal` = reading width; `page.style` = full-width page hook.
+
+## Page titles (added 2026-08-08 — read before touching a layout)
+- **The layouts emit the `<h1>`, not the pages.** `page.html` and `album.html` write
+  `<h1 class="page-title">{{ page.title }}</h1>`, guarded by
+  `{% unless content contains '<h1' %}` so the handful of pages that write their own
+  (`/hire/`, `/random/`, `/styleguide/`) do not get two. `force_title: true` overrides the
+  guard; `/archives/` writes its own because it is the one page on `layout: default`.
+- **`title_style: vertical`** adds `.vertical-title` beside `.page-title`. Every spine rule
+  lives inside `@media (min-width: 1250px)`, so a narrow screen falls back to the ordinary
+  title with nothing to undo. **Do not re-write this as `display: none` below the
+  breakpoint** — that shipped once and left six pages with no title at all on a laptop.
+- `.spine-only` is for a page that must have the spine or nothing (`/archives/`, whose
+  sticky year strip owns the top of the page).
+- **Posts opt out of the uppercase only** (`.post h1.page-title { text-transform: none }`).
+  A page title is a label; an article title is a sentence and its own capitalisation carries
+  meaning.
 
 ## Quick verification before handing back
 `git diff --name-only main` should touch only layouts / includes / css / js / docs / build config —

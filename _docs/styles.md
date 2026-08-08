@@ -863,9 +863,15 @@ verbatim by the include; bare filenames resolve under `/static/<kind>/`. Replace
 wholesale when real photos land.
 
 ⚠️ **These strips do not use `ul.item__cards`.** That class is shared with the album pages
-through `album.scss` (`/devices/`, `/film/`, `/music/`, `/wear/`), which want a wrapping grid
-where these want a clipped single row. New classes, no shared surface — verified after the
-rebuild that `cards.scss` and `album.scss` were untouched and those four pages unchanged.
+through `album.scss` (`/devices/`, `/film/`, `/books/`, `/album/`), which want a wrapping grid
+where these want a clipped single row. New classes, no shared surface.
+
+⚠️ **They DO share `.strip__viewport` / `.strip` with `/own/`** (2026-08-08), which is a second
+caller of the same scroller. `/own/` overrides three declarations under a `.page-own` prefix —
+the bleed, the centring and the item width — and inherits the overflow, the scroll behaviour
+and the arrow buttons unchanged. `default.html` gates strip-nav.js on the literal string
+`class="strip__viewport"`, so that attribute must stay exactly that on both pages.
+*(`/wear/` used to be in the list above; it is `/own/` now and uses neither grid.)*
 
 ### The bookplate — a book with no cover picture (2026-08-04)
 
@@ -880,10 +886,12 @@ set shared by every plate, inside a stylesheet already fetched and cached for a 
 KB raw, +319 bytes gzip**. And SVG text does not wrap, so every long title would need a
 hand-placed line break: exactly the per-item maintenance the request is trying to shed.
 
-An entry in `_data/books.yaml` with **no `img`** renders a plain bound front board — the
+An entry in the books data with **no `img`** renders a plain bound front board — the
 spine and its hinge down the left, the title in a serif on the paper face, a short rule, the
 author in letterspaced caps. Both `card-grid.html` and `home-strip.html` emit it, so a
-coverless book cannot render fine on `/books/` and broken on the home shelf. Adding a book is
+coverless book cannot render fine on `/books/` and broken on the home shelf. *(The data moved
+on 2026-08-07: `_data/books/01.yaml` + `a`–`z`, with favorites in `_data/books-favorites.yaml`.
+The plate is unchanged — it keys off a missing `img`, wherever the entry lives.)* Adding a book is
 now a title, an author and a url.
 
 ⚠️ **A QUERY CONTAINER CANNOT READ ITS OWN CONTAINER UNITS, AND THE FAILURE IS SILENT AND
@@ -1174,8 +1182,10 @@ the timeline, that is the point to extract a real layout instead.
 
 Album is available to any page. The grid (`ul.item__cards`) lives in `base.css`; the card
 treatment is `album.css`, loaded by `_layouts/album.html`. To give a page thumbnails: switch it
-to `layout: album` and emit `<ul class="item__cards">`. `/books/`, `/album/` and `/wear/` are
-candidates when they have images — none has thumbnail data yet, so none was converted.
+to `layout: album` and emit `<ul class="item__cards">`. **Overtaken by events**: `/books/` and
+`/album/` both have thumbnails now and use the grid via `<div class="album">` rather than the
+layout, `/own/` (which is what `/wear/` became) uses the `.strip` scroller instead, and
+`/music/` is the one page still waiting for data.
 
 ## Keeping the base tier honest
 
@@ -1486,3 +1496,43 @@ from that selector list — that is how a page opts into full width: use somethi
 paragraph.
 
 `full: true` in a page's front matter is now inert; the branch it selected is gone.
+
+## Page titles (2026-08-08)
+
+Every page and post title is one element with one class, emitted by the layout rather than
+written per page. `page.html` and `album.html` carry the guard; `/archives/` writes its own
+because it is the only page on `layout: default`.
+
+| | |
+|---|---|
+| `.page-title` | uppercase, weight 200, `-0.02em`, `--step-2`. base.css |
+| `.vertical-title` | adds the left-gutter spine. base.css, inside `min-width: 1250px` |
+| `.spine-only` | spine or nothing — no fallback title. `/archives/` |
+| `.post h1.page-title` | `text-transform: none`. post.css |
+
+⚠️ **Condensed is tracking, not a condensed cut.** Neither self-hosted family carries a width
+axis — Geist ships `font-weight: 100 900`, Source Serif 4 `200 700`, and there is no `wdth` in
+either — so `font-stretch: condensed` computes and does nothing. On uppercase, negative
+tracking is the right lever anyway: caps sit on wider sidebearings than lowercase.
+
+⚠️ **The serif reader gets a heavier title** (`[data-font="serif"] .page-title`, weight 300,
+tracking 0). Source Serif 4 cannot reach the sans's 200, and what it does reach is a
+hairline-contrast serif whose thin strokes drop out at title size.
+
+⚠️ **The spine's rules live entirely inside the media query**, so a narrow screen falls back to
+`.page-title` with nothing to undo. It was written the other way first — `display: none` below
+the breakpoint — which left six pages with no title at all on a laptop. The breakpoint is the
+band plus the spine on both sides: 1024 + 2 × (74 + 5) = 1182, rounded up to the 1250 that
+`/archives/`'s year strip already uses.
+
+⚠️ **`container-type` does NOT make `main` a containing block** for absolutely or fixed
+positioned children — measured, twice. The spine is `position: fixed` and takes its horizontal
+position from the band arithmetic, `calc(50% - var(--body-width-max) / 2)`.
+
+## `--logo-plate` (2026-08-08)
+
+The one token in themes.css that does **not** flip with the theme. It is the ground a brand
+logo sits on, on `/own/`. Logos keep their own colours ("just like how we have colorful
+photos") — but a photo is opaque and a logo is transparent, so without a plate Peak Design's
+black mark was invisible on the dark theme. Near-white rather than `#fff`, and opaque rather
+than translucent: at `z-index: -1` a translucent colour composites against whatever is behind.
