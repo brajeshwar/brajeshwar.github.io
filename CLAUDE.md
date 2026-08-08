@@ -18,13 +18,18 @@ Everything about how to handle it lives HERE instead. It is **gitignored and exc
 build**, so it may be absent — that is normal, not an error.
 
 **Read it at the start of a session, after `_docs/memory.md`.** If `## DO` has items and he has
-not asked for something else, that queue *is* the work. `/do` is the shortcut for "run it".
+not asked for something else, that queue *is* the work. **`/odo`** is the shortcut for "run it".
+
+⚠️ **His custom commands all begin with `o`** (2026-08-08). `/do` was renamed to `/odo`
+because it is a prefix of the built-in `/doctor` and he kept mis-firing it. Any command added
+later takes the same `o` — it keeps his own verbs out of the built-ins' namespace, which is
+the collision that caused this.
 
 Its three sections, and they are not equal:
 
 | | |
 |---|---|
-| `## DO` | **the only section to act on** |
+| `## DO` | **the only section to act on**, top-down, skipping anything marked `WIP` |
 | `## MAYBE / LATER / ICEBOX` | thinking aloud. **Never act on these, never ask about them.** |
 | `## DONE` | the log |
 
@@ -32,12 +37,19 @@ Its three sections, and they are not equal:
   sentence, a paragraph — all are items, and one paragraph is one item. He is typing straight
   into this file; making him remember a bullet is friction for no gain. Do not normalise what
   he wrote into a list.
-- **⚠️ A bare `-` on its own line is a TYPING SLOT, not work.** One is kept at the top of
-  `## DO` at all times so there is always a line waiting for him. Skip it when scanning for
-  items, and leave it there — put it back after clearing the section, and never tick it.
-- **He stacks new items at the TOP; work from the BOTTOM UP.** The bottom-most open item in
-  `## DO` is next — bottom-most meaning the last line or paragraph that is neither blank nor
-  the bare `-`. Dropping an item part-way down is how he pulls it forward.
+- **⚠️ LEAVE `## DO` OPENING ON A BLANK LINE, not a bare `-`** (2026-08-08, superseding the
+  `-` placeholder added the same evening: "Instead of leaving a '-', just leave a blank line
+  for me to start. I will either add the list or prose"). A `-` presumes a bullet, and the
+  point of the section is that he can write either. So clear the section down to empty and
+  leave the whitespace; there is nothing to skip and nothing to tick.
+- **Work TOP-DOWN.** The first open item in `## DO` is next. *(This reversed an earlier
+  bottom-up rule on 2026-08-08. The reason is his: the dedicated `## DO` section already scopes
+  the work, so there is nothing to find by reading from the end — and top-down means he can
+  keep typing while Claude Code is mid-item without changing what is being worked on.)*
+- **⚠️ `WIP` on an item means leave it alone.** He is still writing it. Do not start it, do
+  not ask about it, do not tick it — step over it and take the next one down.
+- **`WIP` cascades to nested lists.** A daughter list inherits from its mother: if the parent
+  item is marked `WIP`, every sub-item under it is `WIP` too, whether or not each says so.
 - **One at a time**, finished — built, verified, committed — before taking the next.
 - **Never reorder, reword or delete his lines.** Position is his instruction, not ours.
 - **Never push** because a queue item is done; guardrail 7 is unchanged.
