@@ -51,6 +51,19 @@ layout: default
   Detected from the rendered content rather than a front-matter flag, so it
   cannot drift out of sync with whether the page really has footnotes.
 
+  ⚠️ `full: true` OPTS OUT, and /about/ is why (2026-08-08). That page is a
+  full-band timeline; adding ONE footnote example to it put `class="footnotes"`
+  in the content, this condition fired, and the entire timeline collapsed from
+  1024px to the 665px measure. Measured, not guessed — the entry's right edge
+  went from 1268 to 909.
+
+  The clamp exists so a sidenote has a column to hang off. A page can provide
+  that column itself instead: /about/ wraps just its notes block in a
+  `<div class="container-ideal">`, which is exactly what sidenotes.js looks
+  for, and keeps the timeline at full width. `full: true` says "I have handled
+  it" — it was a dead front-matter key from the page/page-full merge, and this
+  gives it a job again rather than inventing a second flag.
+
   ⚠️ The test is inline in the `if`, NOT hoisted into an `assign`. Liquid's
   `assign` takes a value or a filtered value — it does NOT evaluate operators
   like `contains`, and it fails silently: `assign x = content contains '…'`
@@ -72,7 +85,7 @@ layout: default
   note at the top of that rule.
 {%- endcomment -%}
 <main role="main" class="{{ page.style }}">
-  <article class="page{% if content contains 'class="footnotes"' %} container-ideal{% endif %}">
+  <article class="page{% if page.full %}{% elsif content contains 'class="footnotes"' %} container-ideal{% endif %}">
 {%- comment -%}
   THE TITLE, EMITTED HERE RATHER THAN PER PAGE (2026-08-08).
 

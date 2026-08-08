@@ -1,3 +1,5 @@
+@use "breakpoints" as bp;   // emits nothing; see _sass/breakpoints.scss
+
 /* ============================================================
    Timeline — the shared component, and the /about/ storyline.
    ------------------------------------------------------------
@@ -338,6 +340,18 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
   position: relative;
   margin: 0 0 var(--timeline-entry-gap);
   padding: 0;
+
+  /* ⚠️ CONTAINS A FLOATED .timeline-figure. Without this the picture is taller
+     than its entry's text and spills into the NEXT period — measured on the
+     Mixercast entry: the figure ran to y=490 against an entry ending at 403,
+     so it appeared beside 2003-2004 instead.
+
+     `flow-root` and not `overflow: hidden`: the dot on the spine is an
+     absolutely positioned ::before sitting OUTSIDE this box to the left, and
+     `hidden` would clip it away. flow-root establishes the block formatting
+     context that contains the float and clips nothing. `position: relative`
+     above still does the containing-block job for the dot. */
+  display: flow-root;
 }
 
 .timeline-entry:last-child,
@@ -388,6 +402,58 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
 .timeline-meta,
 .page-now ul li {
   max-width: var(--measure);
+}
+
+/* ---- A picture in an entry, flush to the band's right edge -------
+   Brajeshwar, 2026-08-08: "I also want to add some imagery in some of the
+   timeline. Add an example using any of the images from our assets and flushed
+   it all the way to the right side of the body-width."
+
+   ⚠️ NO BREAKOUT IS NEEDED, and that is the whole trick. Measured at a 1512
+   viewport: the <li> already runs 286 -> 1268, which IS the band's right edge,
+   while `.timeline-entry p` above caps prose at --measure and so stops at 951.
+   That leaves 317px of empty margin inside every entry. A plain `float: right`
+   drops the picture straight into it — no negative margins, no 100cqi, nothing
+   to keep in step with the band if it ever changes.
+
+   The prose does not reflow around it either: the paragraph's max-width is
+   already narrower than the space left beside a float this size, so the two
+   sit side by side and the float only pushes text when the window is small
+   enough to matter.
+
+   `<figure>` and not a bare <img>, for two reasons beyond the caption:
+   sidenotes.js reads `figure` in its obstacle list, so a note that would have
+   landed on top of a picture is pushed below it instead — and this margin is
+   exactly where sidenotes live. See _docs/sidenotes.md.
+
+   Below bp.$medium it stops floating and runs full width above the text: at
+   that size there is no margin to sit in, and a 40% float beside a 60% column
+   gives two things too narrow to read. */
+.timeline-figure {
+  float: right;
+  width: min(18rem, 38%);
+  margin: 0 0 var(--space-s) var(--space-m);
+}
+
+.timeline-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.timeline-figure figcaption {
+  margin-top: var(--space-3xs);
+  font-size: var(--step--2);
+  line-height: var(--scale-small);
+  color: var(--text-color-low);
+}
+
+@media (max-width: bp.$medium) {
+  .timeline-figure {
+    float: none;
+    width: 100%;
+    margin: 0 0 var(--space-s);
+  }
 }
 
 .timeline-entry p { margin: 0 0 var(--space-2xs); }
