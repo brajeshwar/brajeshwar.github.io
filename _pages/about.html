@@ -17,12 +17,31 @@ edited: 2026-07-07
   of them refer back to the one before. Flipping those too is a separate call —
   say so and it is one pass.
 
+  ⚠️ EVENTS ARE THE TITLES SINCE 2026-08-09 ("instead of years as the focus,
+  let's focus on events as the titles. Of course, we will have dates"). The
+  year used to be the <h2> and the event an <h3> beneath it; the event is the
+  <h2> now and the year is a quiet <p> label above the group.
+
+  The periods themselves did NOT go away, and flattening them would be a
+  different change: each one still owns a spine, and every /about/#2005-2006
+  link anyone has ever shared still resolves because the id did not move — it
+  is on the <p> now instead of the <h2>, and a fragment target does not care
+  what tag it lands on.
+
   AUTHORING — see _docs/timeline.md for the full convention.
-    .timeline-period   one time range; the heading is typed by hand
-    .timeline-when     the range, with an id — that id is what the § anchor
-                       links to, so /about/#2005-2006 is shareable
-    .timeline-entry    ONE event. data-track="life" or "work" is the ONLY
-                       thing the filter reads.
+    .timeline-period   one time range, aria-labelledby the label below it —
+                       a <section> whose heading was demoted needs an
+                       accessible name from somewhere, and that is the id
+    .timeline-when     the range, a <p> with an id — that id is what the §
+                       anchor links to, so /about/#2005-2006 is shareable.
+                       anchors.js matches `.timeline-when[id]`, a class and
+                       not a tag, so demoting it cost nothing.
+    .timeline-entry    ONE event; its <h2> is the loud line on the page.
+                       data-track="life" or "work" is the ONLY thing the
+                       filter reads.
+    .timeline-meta     the entry's own date/role/place. Several of these
+                       still repeat the period label above them; that is his
+                       prose and none of it was touched.
 
   Filtered views, shareable as URLs:
     /about/        both tracks (default)
@@ -64,26 +83,26 @@ edited: 2026-07-07
   </fieldset>
 
 
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2021-present">2021&ndash;present</h2>
+  <section class="timeline-period" aria-labelledby="2021-present">
+    <p class="timeline-when" id="2021-present">2021&ndash;present</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Geospatial data for climate change</h3>
+        <h2 class="timeline-title">Geospatial data for climate change</h2>
         <p class="timeline-meta">Since 2021</p>
         <p>Since 2021, I&rsquo;ve been experimenting, and building beautiful and meaningful
           products focusing on Geospatial Data producing solutions for Climate Change.</p>
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2018-2019">2018&ndash;2019</h2>
+  <section class="timeline-period" aria-labelledby="2018-2019">
+    <p class="timeline-when" id="2018-2019">2018&ndash;2019</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Energy storage, then precision farming</h3>
+        <h2 class="timeline-title">Energy storage, then precision farming</h2>
         <p class="timeline-meta">With Gurjot Singh &middot; from 2018</p>
         <p>In 2018, I met my co-founder, Gurjot Singh, while he was experimenting with the idea
           of large-scale energy storage with Vanadium Redox Batteries. He is a research
@@ -97,7 +116,7 @@ edited: 2026-07-07
       </li>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Mobisy</h3>
+        <h2 class="timeline-title">Mobisy</h2>
         <p class="timeline-meta">Chief Product Officer (consulting) &middot; 2018&ndash;2019</p>
         <p>Between 2018 and 2019, I consulted with <a href="https://mobisy.com">Mobisy</a> as
           the Chief Product Officer. Mobisy is a high-growth, technology company that is
@@ -110,13 +129,13 @@ edited: 2026-07-07
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2014-2016">2014&ndash;2016</h2>
+  <section class="timeline-period" aria-labelledby="2014-2016">
+    <p class="timeline-when" id="2014-2016">2014&ndash;2016</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Razorfish</h3>
+        <h2 class="timeline-title">Razorfish</h2>
         <p class="timeline-meta">Creative Director &middot; Bangalore, India</p>
         <p>Between 2014 to 2016, I worked at <a href="https://www.razorfish.com">Razorfish</a>
           as a Creative Director. I led the creative design and development at Razorfish,
@@ -130,13 +149,13 @@ edited: 2026-07-07
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2010-2012">2010&ndash;2012</h2>
+  <section class="timeline-period" aria-labelledby="2010-2012">
+    <p class="timeline-when" id="2010-2012">2010&ndash;2012</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Levoma</h3>
+        <h2 class="timeline-title">Levoma</h2>
         <p class="timeline-meta">Founder &middot; 2010, beta Jan 2011</p>
         <p>In 2010, I started Levoma,
           (<a href="https://web.archive.org/web/20110103192618/http://levoma.com/">Web Archive</a>)
@@ -149,13 +168,13 @@ edited: 2026-07-07
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2007-2009">2007&ndash;2009</h2>
+  <section class="timeline-period" aria-labelledby="2007-2009">
+    <p class="timeline-when" id="2007-2009">2007&ndash;2009</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">oCricket</h3>
+        <h2 class="timeline-title">oCricket</h2>
         <p class="timeline-meta">Founder &middot; 2007, acquired June 2009</p>
         <p>In 2007, I started <a href="/2023/ocricket/">oCricket</a>, a dedicated network for
           Cricket lovers and fans. We envisioned oCricket as a way to help users access
@@ -164,7 +183,7 @@ edited: 2026-07-07
       </li>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Infinitely Beta &middot; Paisa.com</h3>
+        <h2 class="timeline-title">Infinitely Beta &middot; Paisa.com</h2>
         <p class="timeline-meta">From 2009</p>
         <p>The team of oCricket went on to become the initial team of Infinitely Beta
           (<a href="https://web.archive.org/web/20101216104216/http://infinitelybeta.com/">Web Archive</a>).
@@ -177,13 +196,13 @@ edited: 2026-07-07
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2005-2006">2005&ndash;2006</h2>
+  <section class="timeline-period" aria-labelledby="2005-2006">
+    <p class="timeline-when" id="2005-2006">2005&ndash;2006</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Oinam Software</h3>
+        <h2 class="timeline-title">Oinam Software</h2>
         <p class="timeline-meta">Founder &middot; from 2005</p>
         <p>By 2005, I decided to take the plunge and started our first company, Oinam Software.
           We undertook some of the most innovative, sometimes very experimental work for
@@ -202,7 +221,7 @@ edited: 2026-07-07
       </li>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Acquired by Mixercast</h3>
+        <h2 class="timeline-title">Acquired by Mixercast</h2>
         <p class="timeline-meta">2006</p>
         <!--
           EXAMPLE — a picture in an entry, sitting in the empty right margin.
@@ -231,13 +250,13 @@ edited: 2026-07-07
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2003-2004">2003&ndash;2004</h2>
+  <section class="timeline-period" aria-labelledby="2003-2004">
+    <p class="timeline-when" id="2003-2004">2003&ndash;2004</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Freelancing, full time</h3>
+        <h2 class="timeline-title">Freelancing, full time</h2>
         <p class="timeline-meta">Early 2003</p>
         <p>In early 2003, I resigned from a very lucrative job and started freelancing
           full-time. During those freelance days, I did many exciting work and enjoyed every
@@ -246,26 +265,26 @@ edited: 2026-07-07
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="2001">2001</h2>
+  <section class="timeline-period" aria-labelledby="2001">
+    <p class="timeline-when" id="2001">2001</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="life">
-        <h3 class="timeline-title">brajeshwar.com</h3>
+        <h2 class="timeline-title">brajeshwar.com</h2>
         <p class="timeline-meta">Jun 11, 2001</p>
         <p>The domain <code>brajeshwar.com</code> was
           <a href="/about/brajeshwar.com/">registered on Jun 11, 2001</a>.</p>
       </li>
     </ol>
   </section>
-  <section class="timeline-period">
-    <h2 class="timeline-when" id="1999-2000">1999 ›</h2>
+  <section class="timeline-period" aria-labelledby="1999-2000">
+    <p class="timeline-when" id="1999-2000">1999 ›</p>
     <ol class="timeline-entries">
       <div class="timeline-progress" aria-hidden="true"></div>
 
       <li class="timeline-entry" data-track="life">
-        <h3 class="timeline-title">Landed in Bombay</h3>
+        <h2 class="timeline-title">Landed in Bombay</h2>
         <p class="timeline-meta">Aug 2, 1999</p>
         <p>I landed in <a href="/2009/bombay/">Bombay</a> on Aug 2, 1999, to kick-start my
           career. I soon fell in love with the city, the speed, and the pace at which things
@@ -273,7 +292,7 @@ edited: 2026-07-07
       </li>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Computer Graphic Designer</h3>
+        <h2 class="timeline-title">Computer Graphic Designer</h2>
         <p class="timeline-meta">Comic magazine startup &middot; Bombay</p>
         <p>After job-hunting for a month, I landed my first job as a Computer Graphic Designer
           in a Comic Magazine Startup. As part of the test for the job, they gave me a
@@ -287,7 +306,7 @@ edited: 2026-07-07
       </li>
 
       <li class="timeline-entry" data-track="work">
-        <h3 class="timeline-title">Turned to the Internet</h3>
+        <h2 class="timeline-title">Turned to the Internet</h2>
         <p class="timeline-meta">By mid-2000</p>
         <p>It was the Internet boom in India, and its proliferation was prominent. I wanted to
           be part of that world. Within six months through my first job, I shifted my focus to
@@ -362,13 +381,13 @@ edited: 2026-07-07
 
   timeline-meta is optional — a date, a role, a place, or nothing.
 
-<section class="timeline-period">
-  <h2 class="timeline-when" id="2027">2027</h2>
+<section class="timeline-period" aria-labelledby="2027">
+    <p class="timeline-when" id="2027">2027</p>
   <ol class="timeline-entries">
     <div class="timeline-progress" aria-hidden="true"></div>
 
     <li class="timeline-entry" data-track="work">
-      <h3 class="timeline-title">What happened</h3>
+      <h2 class="timeline-title">What happened</h2>
       <p class="timeline-meta">Role &middot; Place &middot; Date</p>
       <p>A paragraph. <a href="https://example.com">Links</a> work as normal,
         and so does <em>emphasis</em> and <code>code</code>.</p>
@@ -376,7 +395,7 @@ edited: 2026-07-07
     </li>
 
     <li class="timeline-entry" data-track="life">
-      <h3 class="timeline-title">Something personal</h3>
+      <h2 class="timeline-title">Something personal</h2>
       <p>Life entries render an open marker; work entries a filled one, so the
         merged view is readable without relying on color.</p>
     </li>

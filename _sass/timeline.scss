@@ -263,7 +263,54 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
   margin: 0 0 var(--space-l);
 }
 
-/* Time-range heading: "early 1980s", "1993-1995". Typed by hand.
+/* ⚠️ THIS RULE AND .page-now h2 WERE ONE RULE UNTIL 2026-08-09. They were
+   split because /about/ inverted its emphasis and /now/ did not — see below.
+   The /now/ half is byte-identical to what the shared rule produced; if you
+   are tempted to re-merge them, read both blocks first.
+
+   Time-range LABEL on /about/: "early 1980s", "1993-1995". Typed by hand.
+
+   ⚠️ NO LONGER A HEADING. It was an <h2> and is now a <p>, at his ask
+   (2026-08-09: "instead of years as the focus, let's focus on events as the
+   titles. Of course, we will have dates"). The years were the loud thing and
+   the events were subordinate <h3>s underneath them; that is now the other way
+   round, and the two changes are one change — .timeline-title took the <h2>
+   this element gave up.
+
+   Which is why this block sets type again after the 2026-07-27 note said not
+   to. That note's rule was "to change the size, change the heading LEVEL, not
+   this rule", and the level HAS changed — to no level at all. A <p> inherits
+   body copy, and a period label at body size next to an --step-2 event title
+   would read as a second sentence rather than a heading for the group. So the
+   small-caps treatment here is doing the job the h2 used to do for free.
+
+   It matches /cv/'s .cv-when deliberately: same job, same look, one visual
+   language for "a date that labels what follows". /cv/ carries a border-top
+   with it and this does not — the timeline spine already separates the groups.
+
+   The optical nudge (-0.06em) went with the h2. It corrected left side bearing
+   on LARGE digits drifting right of the spine; at --step--2 there is nothing
+   meaningful to correct, and it survives below where it still applies.
+
+   The § anchor is unaffected: anchors.js keys off `.timeline-when[id]`, a
+   class and not a tag, so the id stays here and so does the copyable link. */
+.timeline-when {
+  position: relative;              /* anchor for the § headerlink */
+  margin: 0 0 var(--space-xs);
+
+  font-size: var(--step--2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color-low);
+  font-variant-numeric: tabular-nums;
+
+  /* Clear the sticky filter bar when jumped to via #id. */
+  scroll-margin-top: var(--space-l);
+}
+
+/* /now/'s year headings, which are still headings and still the loudest thing
+   on that page — it has no events to promote, only years, so there was nothing
+   for the /about/ inversion to do here. Left exactly as the shared rule had it.
 
    TYPOGRAPHY COMES FROM base.css. It is an <h2>, so it takes --step-2 at
    --font-weight-light like every other h2 on the site. This block used to set
@@ -279,7 +326,6 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
    side bearing, so the painted glyph drifts right of the spine it should line
    up with, and -0.06em pulls it back. Em-based, so it tracks whatever size the
    shared scale hands it. */
-.timeline-when,
 .page-now h2 {
   position: relative;              /* anchor for the § headerlink */
   margin: 0 0 var(--space-xs);
@@ -381,8 +427,12 @@ html:not(.timeline-js) .timeline:has(#life:target) label[for="track-work"] .pill
   border-color: var(--text-color-lower);
 }
 
-/* An <h3>, so base.css gives it --step-1 at light weight. Spacing only here —
-   see the note on .timeline-when. */
+/* An <h2> since 2026-08-09, so base.css gives it --step-2 at light weight —
+   it was an <h3> at --step-1. THE LEVEL IS THE CHANGE: the event is now the
+   loud thing on the page and the period label above it is quiet, which is the
+   whole of "focus on events as the titles". Spacing only here — see the note
+   on .timeline-when, and note that the hierarchy still runs h1 (the page
+   title, from the layout) → h2, with no level skipped. */
 .timeline-title {
   margin: 0 0 var(--space-3xs);
 }
