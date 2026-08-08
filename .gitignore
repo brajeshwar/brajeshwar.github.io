@@ -11,6 +11,11 @@ vendor/
 node_modules/
 .pagefind-cache/
 
+# Brajeshwar's local work queue for Claude Code (see CLAUDE.md). It is an inbox
+# of what to do next, not a record of the site — the durable record is _docs/.
+# Ignored so a half-written idea never reaches a commit or the deployed site.
+CLAUDE.local.md
+
 # Editor / tooling local state
 .claude/
 .impeccable/

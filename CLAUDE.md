@@ -11,6 +11,26 @@ philosophy is [`_docs/design.md`](_docs/design.md), the visual system and CSS ar
 are [`_docs/styles.md`](_docs/styles.md), hosting is [`_docs/hosting.md`](_docs/hosting.md).
 Re-read the guardrails below before any commit-worthy change.
 
+## CLAUDE.local.md — the work queue (added 2026-08-08)
+`CLAUDE.local.md` at the repo root is Brajeshwar's running list of what to do next. It is
+**gitignored**, so it may be absent — that is normal, not an error, and it is never to be
+committed or referenced from anything the site builds.
+
+**Read it at the start of a session, after `_docs/memory.md`.** If it has open items and he
+has not asked for something else, that queue *is* the work.
+
+- **He stacks new items at the TOP; Claude works from the BOTTOM UP.** The bottom-most open
+  item is next. Inserting an item lower down is how he jumps it forward.
+- **One at a time**, finished — built, verified, committed — before taking the next.
+- **Never reorder, reword or delete his lines.** Position is his instruction, not ours.
+- **Never push** because a queue item is done; guardrail 7 is unchanged.
+- **Done means:** mark in place as `- [x] [HH:MM] <original text>` (24-hour local, the time it
+  was finished), then move it under today's `- YYYY-MM-DD` root item in the Done section as a
+  sub-item, newest date first. Abandoned items get struck through with a reason rather than
+  deleted — log history, never erase it.
+
+The file explains its own format at the top; that is the copy to trust if the two disagree.
+
 ## What this site is
 A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are
 future-dated and `future: false` holds them back (the 2099-dated drafts in `_posts/todo/`, plus
