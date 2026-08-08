@@ -2,6 +2,7 @@
 layout: page
 title: Books
 style: page-books
+title_style: vertical
 ---
 
 {%- comment -%}
@@ -88,64 +89,56 @@ style: page-books
   so the file is the only place that knows the right letter.
 {%- endcomment -%}
 
-{%- comment -%}
-  ⚠️ CAPTURED, not written inline as an include parameter. The inline version
-  took the build down with "Invalid syntax for include tag": a Liquid string
-  literal is delimited by the quote it opens with, so the first `href="` inside
-  a double-quoted `sub = "…"` ENDS the string and everything after it is parsed
-  as more parameters. Wrapping the outside in single quotes would also work, but
-  a capture beats remembering which quote is safe — the block below can hold any
-  markup, over as many lines as it likes, with nothing to escape.
-
-  That now applies to the WHOLE sub-line, not just the years. Brajeshwar,
-  2026-08-07: move the "Since 2018…" sentence out from under the first letter
-  section and put it "in front of" the favorites line. So the two sentences are
-  one paragraph under the FIRST heading on the page, and the A–Z sections carry
-  no sub at all — the page introduces itself once, at the top, where someone
-  arriving actually reads it. Under `#!` it was explaining the shelf halfway
-  down.
-
-  The years are generated from the posts that actually exist rather than typed
-  out, so January needs no edit and a link can never point at a year that was
-  never written. Matching `/books/` with both slashes is deliberate: a post at
-  /2024/best-books/ contains "books/" but not "/books/", so it cannot sneak in.
-{%- endcomment -%}
-
 {%- assign favorites = site.data.books-favorites -%}
 
-{%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
-
-{%- capture books_sub -%}
-Since 2018, I have listed the interesting ones I read each year:
-{% for p in yearly %}<a href="{{ p.url | relative_url }}">{{ p.date | date: '%Y' }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
-Here are some of my all-time favorite books — ones I have read and re-read, and would highly recommend.
-{%- endcapture -%}
-
 {%- comment -%}
-  ⚠️ THE GRID COMES FIRST HERE, and the heading and paragraph follow it —
-  the reverse of every other section on this page and of what card-grid.html
-  emits on its own. Brajeshwar, 2026-08-08: "bring up the favorite books
-  thumbnail at the top and followed by the text and paragraph that is current
-  on top now."
+  ⚠️ TWO PARAGRAPHS, EACH INTRODUCING WHAT FOLLOWS IT — the whole shape of the
+  page, and the third arrangement it has been through (2026-08-08). The order
+  is now: title, the favorites sentence, the favorites grid, the years
+  sentence, then the A-Z shelf.
 
-  So the include is called with NO `heading` and NO `sub`, which makes it
-  render the grid alone, and the two are written out by hand underneath. That
-  is why they are literal markup here rather than include parameters — the
-  include has one order and this section wants the other. Adding a `reverse`
-  flag to card-grid.html would be a parameter for exactly one caller.
+  What went, and why it is not coming back: an `<h2>Above books are my personal
+  favorites &amp; recommendations</h2>` sat under the first grid, naming what
+  was already above it. Removed on request. The two sentences had also been
+  captured into ONE paragraph carrying both jobs; split now, because each is a
+  caption for the thing directly beneath it and reading them together explained
+  neither.
 
-  `container-ideal` and `card-grid__sub` are copied off what the include
-  produces, so the paragraph keeps the measure and the styling it had when it
-  sat above.
+  The captures are still captures rather than inline `sub =` parameters, and
+  they have to be: a Liquid string literal ends at the first matching quote,
+  so the `href="` inside the year links would terminate the parameter and
+  everything after it would parse as more parameters. That took a build down
+  once already.
+
+  card-grid.html emits heading -> sub -> grid, in that order, for every caller.
+  This page wants neither heading nor sub on either grid, so both includes are
+  called bare and the paragraphs are written out here as literal markup.
+  `container-ideal card-grid__sub` is copied off what the include produces, so
+  they keep the measure and the styling they had as parameters.
 {%- endcomment -%}
+
+<p class="container-ideal card-grid__sub">Here are some of my all-time favorite books; the ones I have read and re-read, and would highly recommend.</p>
+
 {% include card-grid.html
    items   = favorites
    dir     = "books"
    ratio   = "3x4"
    captions = true %}
 
-<h2 id="favorites">Personal Favorites &amp; Recommendations</h2>
-<p class="container-ideal card-grid__sub">{{ books_sub }}</p>
+{%- comment -%}
+  The years are generated from the posts that actually exist rather than typed
+  out, so January needs no edit and a link can never point at a year that was
+  never written. Matching `/books/` with both slashes is deliberate: a post at
+  /2024/best-books/ contains "books/" but not "/books/", so it cannot sneak in.
+{%- endcomment -%}
+{%- assign yearly = site.posts | where_exp: "p", "p.url contains '/books/'" | sort: "date" -%}
+
+{%- capture years_sub -%}
+Since 2018, I have listed the interesting ones I read each year:
+{% for p in yearly %}<a href="{{ p.url | relative_url }}">{{ p.date | date: '%Y' }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.
+{%- endcapture -%}
+
+<p class="container-ideal card-grid__sub">{{ years_sub }}</p>
 
 {%- comment -%}
   No sub on these. The page's one intro paragraph sits under Personal

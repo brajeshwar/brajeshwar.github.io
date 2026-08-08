@@ -30,16 +30,16 @@ layout: default
      worth knowing: the fix that keeps the markup honest is `## YYYY` in
      now/*.md, and he has said he prefers the single hash for editing.
 
-  3. WHICH treatment. `title_style: vertical` swaps the shared uppercase
-     `.page-title` for `.vertical-title`, the spine that runs down the left
-     gutter — a separate class rather than a modifier, because it overrides
-     essentially every property of the other one.
+  3. WHICH treatment. `title_style: vertical` ADDS `.vertical-title` beside
+     `.page-title` rather than replacing it. The spine rules live entirely
+     inside a min-width query, so a narrow screen falls back to the ordinary
+     uppercase title at the top with nothing to undo. See base.css.
 {%- endcomment -%}
 {%- assign wants_title = false -%}
 {%- unless content contains '<h1' -%}{%- assign wants_title = true -%}{%- endunless -%}
 {%- if page.title_style or page.force_title -%}{%- assign wants_title = true -%}{%- endif -%}
 {%- if wants_title -%}
-<h1 class="{% if page.title_style == 'vertical' %}vertical-title{% else %}page-title{% endif %}">{{ page.title }}</h1>
+<h1 class="page-title{% if page.title_style == 'vertical' %} vertical-title{% endif %}">{{ page.title }}</h1>
 {%- endif -%}
   {{ content }}
 </main>

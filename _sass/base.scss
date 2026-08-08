@@ -306,94 +306,49 @@ h1 { font-size: var(--step-3); }
 
 
 /* ---- The spine: a title set vertically down the left gutter ------
-   Brajeshwar, 2026-08-08: "Remove the normal title at the top and put it at a
-   lower z-index with a lighter color (or darker in dark mode) vertically on
-   the left side with a bigger thicker font-size."
-
    The opposite of `.page-title` on every axis — thin becomes heavy, small
-   becomes huge, foreground becomes ground — which is why it is its own class
-   rather than a modifier on that one: a modifier would have to undo almost
-   every property it inherited.
+   becomes huge, foreground becomes ground.
 
    OPT IN WITH `title_style: vertical` in a page's front matter; the layouts
-   swap the class. Started on /archives/ 2026-08-08 and extended the same day
-   to /legal/, /ideas/, /film/, /books/, /album/ and /own/ — "Follow the same
-   Archive style title" — which is what moved it out of archives.css and into
-   here. These are all INDEXES: a shelf, a grid, a list. The word marks the
-   column rather than heading a piece of writing, which is why it can afford
-   to be huge and nearly invisible at once.
+   then emit BOTH classes on the one h1. Started on /archives/ 2026-08-08 and
+   extended the same day to /legal/, /ideas/, /film/, /books/, /album/ and
+   /own/ — "Follow the same Archive style title". These are all INDEXES: a
+   shelf, a grid, a list. The word marks the column rather than heading a piece
+   of writing, which is why it can afford to be huge and nearly invisible.
 
-   ⚠️ FIXED, NOT ABSOLUTE, so it holds its place while the years scroll past
-   (2026-08-08: "should we not keep it fixed, say, when I scroll the archives,
-   it stays"). Measured at scroll 0 and scroll 1200 — identical rect both
-   times, and the 5px gap held.
+   ⚠️ BOTH CLASSES, AND THAT IS THE WHOLE FALLBACK MECHANISM (2026-08-08:
+   "Bring it back to the normal default title at the top for smaller screens
+   that does not fit in the new spine style"). `.page-title` above is the
+   default and applies at every width; everything in the media query below
+   only exists once there is a gutter to put it in. So a narrow screen gets an
+   ordinary uppercase title at the top with no extra rule, and the spine is
+   purely additive rather than a replacement that has to be undone.
 
-   ⚠️ AND `main`'s CONTAINMENT DOES NOT TRAP IT. `container-type` is documented
-   as establishing a containing block for fixed descendants, which would have
-   made `left` resolve against `main` instead of the viewport and put the word
-   in the wrong place entirely. Tested rather than assumed: it does not — the
-   same measurement that showed `container-type` alone would not hold an
-   ABSOLUTELY positioned child either, back when this was absolute and the
-   title landed at x = -110, off-screen. `main.archives { position: relative }`
-   survives from that attempt and is now inert for this element; it is left
-   in place because it costs nothing and anything else added inside this main
-   will want it.
+   It was written the other way first — `display: none` below the breakpoint —
+   which is why /books/, /film/, /album/ and the rest rendered with NO title at
+   all on a laptop. That is the bug this replaces.
 
-   HORIZONTAL POSITION IS COMPUTED FROM THE BAND, since a fixed element has no
-   parent to hang off: `calc(50% - var(--body-width-max) / 2)` is the band's
-   left edge, because `main` is centred and — at every width this title is
-   visible — capped at exactly --body-width-max rather than the 96% that
-   applies on narrower screens. Below 1250px it is hidden, so the 96% case
-   never arises.
+   ⚠️ THE BREAKPOINT IS THE BAND PLUS THE SPINE, both sides. "I believe this
+   will then apply to anything below (1024 + the spine width)px screens" —
+   right, and the arithmetic is 1024 + 2 x (74px of word + 5px of gap) = 1182.
+   1250 is used rather than 1182 because it clears that minimum AND is the
+   number /archives/'s year strip already turns on, so that page changes shape
+   once rather than twice. Below it the word would push past the left edge and
+   give the whole page a horizontal scrollbar. */
+/* ⚠️ SPINE OR NOTHING, for the one page that cannot take the fallback.
+   /archives/ opens with a sticky year strip pinned to the header rule, and a
+   title above or below it fights for the same 40px (2026-08-08: "the yearly
+   nav sticky of the /archives/ will complain. So, for that page, do not show
+   it at all"). So its h1 carries `.spine-only` INSTEAD of `.page-title` and
+   simply is not painted until there is a gutter for it. Its own class rather
+   than a page hook, because the next index with something pinned to the top
+   will want the same thing. */
+.spine-only { display: none; }
 
-   VERTICALLY CENTRED on the viewport rather than pinned near the top: the word
-   is a marker for the whole column, and anchoring it to the top would make it
-   read as a heading for whichever year happened to be beside it.
+@media (min-width: 1250px) {
+  .spine-only { display: block; }
 
-   `z-index: -1` puts it behind the years. Nothing on this page paints a
-   background, so "behind" still shows through — and `pointer-events: none`
-   keeps it from swallowing clicks on the year links it sits under.
-
-   `writing-mode: vertical-rl` + `rotate(180deg)` reads BOTTOM-TO-TOP, which is
-   the convention for a spine and the one that puts the first letter nearest
-   the content it labels. `vertical-lr` alone would read top-to-bottom and sit
-   the wrong way round.
-
-   POSITION, ARRIVED AT IN THREE PASSES on 2026-08-08, and the middle one is
-   worth keeping as a record of what NOT to do.
-
-     -115%  cleared `main` entirely and floated in the gutter. Too detached.
-     -55%   slid the word under the content, so the striped rows cropped it
-            mid-letter. Tried on the theory that the cropping would read as
-            depth; it did not — "the indent isn't a good idea."
-     now    `calc(-100% - var(--space-3xs))`. -100% lands the word's right
-            edge exactly on `main`'s left edge; the token then backs it off by
-            the smallest step the spacing scale has — 5px, and the only one
-            that is FIXED rather than fluid, so the gap cannot breathe with
-            the viewport while the band beside it stays put.
-
-   "Make it real close to touching it, leave just about the least spacing
-   rhythm that we have." Writing it as `-100%` plus a token rather than a
-   tuned percentage is what makes that literal: the word can change size or
-   weight and it stays exactly one 3xs off the content.
-
-   The clamp is 10% up on the previous pass and the weight went 700 -> 800:
-   once the word is fully outside the content it has to hold the column on its
-   own, where before the crop was doing some of that work.
-
-   ⚠️ COLOUR IS A MIX TOWARD THE BACKGROUND, not a text token. The faintest
-   one, `--text-color-lower`, computes to oklch(0.371 0 0) — a perfectly
-   readable grey, which is right for small print and far too present for
-   something meant to sit behind the years. Mixing 9% of the foreground into
-   the page colour lands it just above the background in both modes, so
-   "lighter, or darker in dark mode" falls out of one declaration: in light
-   mode the ink is dark and the mix is a pale grey, in dark mode the ink is
-   pale and the mix is a dark grey. The relationship is the same, inverted.
-
-   Opaque rather than `transparent` on purpose. At `z-index: -1` a translucent
-   colour composites against whatever happens to be behind, which on a page
-   with striped table rows is two different greys down the length of the word. */
-.vertical-title {
+  .vertical-title {
   position: fixed;
   top: 50%;
   left: calc(50% - var(--body-width-max) / 2);
@@ -422,23 +377,7 @@ h1 { font-size: var(--step-3); }
 
   pointer-events: none;
   user-select: none;
-}
-
-/* ⚠️ SHOWN ONLY WHEN THE GUTTER IS ACTUALLY WIDE ENOUGH, and 1250 is measured
-   rather than picked. The word needs about 110px of its own, and the gutter is
-   (100vw - 1024) / 2 — so it fits from roughly 1244px up. Gating on the band
-   itself (1024) was the first attempt and is wrong: between 1025 and 1243 the
-   gutter is narrower than the word, which pushes it past the left edge and
-   gives the whole page a horizontal scrollbar.
-
-   Below that it is hidden rather than shrunk: there is nowhere for it to go
-   but on top of the years, where a bold word behind a list of links is noise
-   rather than a marker. 1250 is also the breakpoint the year strip already
-   turns on, so the page changes shape once rather than twice. */
-.vertical-title { display: none; }
-
-@media (min-width: 1250px) {
-  .vertical-title { display: block; }
+  }
 }
 h2 { font-size: var(--step-2); }
 h3 { font-size: var(--step-1); }
