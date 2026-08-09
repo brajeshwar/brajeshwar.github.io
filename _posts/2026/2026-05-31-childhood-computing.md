@@ -1,7 +1,5 @@
 # Childhood Computing
 
-`Work-in-Progress.`
-
 After reading [Childhood Computing](https://susam.net/childhood-computing.html) by Susam Pal, I decided it’s time to recollect and write about my childhood computing. It will not be as interesting as them, but I want to have it for the archives so future-me can read and have fun.
 
 Let’s start with a confession. I was no longer a child by then, but I still like to remember that as my childhood computing.

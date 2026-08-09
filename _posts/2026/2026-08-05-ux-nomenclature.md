@@ -1,7 +1,5 @@
 # User Experience of Nomenclature
 
-`work-in-progress`
-
 > “You’ve got to start with the customer experience and work backwards to the technology.”
 
 That quote is the clichéd but a true one from [Steve Jobs in his closing Q&A](https://allaboutstevejobs.com/videos/misc/wwdc_1997_closing_chat) in the Apple’s Worldwide Developers Conference in 1997.
