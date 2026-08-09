@@ -894,8 +894,21 @@ body:has(home-container) {
    them. */
 .strip__nav {
   position: absolute;
-  top: 0;
-  bottom: var(--space-l);
+  /* Measured, like the height below — the .strip <ul> has a padding-top, so
+     the picture starts lower than this button's containing block and `top: 0`
+     left the backdrop proud of the thumbnail by exactly that padding. */
+  top: var(--strip-thumb-top, 0);
+  /* ⚠️ THE THUMBNAIL'S HEIGHT, MEASURED BY strip-nav.js and published as
+     --strip-thumb-h on .strip__viewport. It was `bottom: var(--space-l)`, a
+     fixed guess at where the picture ends — wrong by whatever the caption
+     actually takes, and wrong by a DIFFERENT amount per strip, since Books is
+     3/4 and Album is 4/3. The backdrop hung past the thumbnail.
+
+     CSS cannot compute it: the height follows the column width, which follows
+     the viewport. The fallback keeps the old behaviour if the measurement has
+     not landed yet — it never renders, because the buttons are `hidden` until
+     the same function that measures reveals them. */
+  height: var(--strip-thumb-h, calc(100% - var(--space-l)));
   z-index: 2;
 
   display: flex;
@@ -923,11 +936,19 @@ body:has(home-container) {
 .strip__nav--prev { inset-inline-start: 0; }
 .strip__nav--next { inset-inline-end: 0; }
 
+/* ⚠️ A SCRIM, NOT A SURFACE COLOUR (2026-08-09: "a darker background (in light
+   mode, and vice versa), with an alpha opacity"). --bg-color-low is an opaque
+   panel tone and read as a pale box sitting on top of the photographs.
+
+   A mix of the FOREGROUND toward transparent inverts for free: dark over a
+   light page, light over a dark one, and translucent either way so the
+   thumbnail stays visible under it — which is the point of a scroll
+   affordance that overlaps content. */
 .strip__nav:hover,
 .strip__nav:focus-visible {
   opacity: 1;
   color: var(--text-color);
-  background-color: var(--bg-color-low);
+  background-color: color-mix(in oklch, var(--text-color) 22%, transparent);
 }
 
 .strip__nav[hidden] { display: none; }

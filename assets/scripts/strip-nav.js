@@ -54,11 +54,43 @@
       return strip.scrollWidth - strip.clientWidth > 2;
     }
 
+    /* ⚠️ THE ARROWS' HEIGHT IS MEASURED, NOT GUESSED (2026-08-09: "It should be
+       aligned to the height of the thumbnail").
+
+       They used to be `top: 0; bottom: var(--space-l)` — a fixed guess at
+       where the picture ends, which is wrong by however much the caption
+       actually takes, and wrong by a different amount on each strip because
+       Books is 3/4 and Album is 4/3. The backdrop hung past the thumbnail.
+
+       CSS cannot know that height: it depends on the column width, which
+       depends on the viewport. So the frame is measured and published as a
+       custom property on the viewport, and the button is simply that tall.
+       Safe to do in JS because the arrows only exist when JS runs at all —
+       they ship `hidden` and are revealed below. */
+    function measureThumb() {
+      var frame = strip.querySelector('.strip__frame');
+      if (!frame) return null;
+      var f = frame.getBoundingClientRect();
+      var v = viewport.getBoundingClientRect();
+      /* Both numbers, not just the height: the .strip <ul> carries a
+         padding-top, so the picture starts BELOW the viewport's top edge and a
+         button at `top: 0` sits proud of it by exactly that much. Measuring
+         the offset too means neither number has to be kept in step with a
+         padding declared somewhere else. */
+      return { top: f.top - v.top, height: f.height };
+    }
+
     function sync() {
       var can = overflows();
       prev.hidden = !can;
       next.hidden = !can;
       if (!can) return;
+
+      var thumb = measureThumb();
+      if (thumb && thumb.height) {
+        viewport.style.setProperty('--strip-thumb-top', thumb.top + 'px');
+        viewport.style.setProperty('--strip-thumb-h', thumb.height + 'px');
+      }
 
       var max = strip.scrollWidth - strip.clientWidth;
       prev.disabled = strip.scrollLeft <= 1;
