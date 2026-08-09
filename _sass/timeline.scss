@@ -126,43 +126,19 @@
   margin: 0 0 var(--space-l);
 }
 
-/* ---- Period label — /about/ only -----------------------------
-   ⚠️ IT IS AN <h2> WITH NO CLASS, and that is the whole point. It was
-   `<p class="timeline-when" id="...">` raw HTML, then a Markdown paragraph
-   carrying `{: .timeline-when id="..."}`, and is now just a heading:
-   "the CSS class 'timeline-when' can be the '##' … making it easy to style
-   without polluting the content" (2026-08-09).
+/* ⚠️ THE PERIOD LABEL IS GONE (2026-08-09: "we should get rid of the '##' with
+   the years"). /about/ grouped its entries under year headings; it does not any
+   more, and every entry carries its own date on the line under its title.
 
-   So the DISTINCTION IS STRUCTURAL. On a page that groups by period the h2 is
-   the label and the h3 is the entry; everywhere else the h2 IS the entry. Only
-   /about/ groups, so only /about/ needs the exception — if a second page ever
-   does, it joins these selectors and nothing else changes.
+   Removed with it: the `.page-about .timeline h2` label styling, the
+   `content: none` that suppressed that label's dot, and the
+   --timeline-spine-top offset that pushed the spine past it. The spine starts
+   at the first entry's dot again, which is the default.
 
-   ⚠️ THE ANCHORS SURVIVED BECAUSE THE LABELS ARE HYPHENATED. kramdown derives
-   a heading id from its text, so `## 2005-2006` is id="2005-2006" — byte for
-   byte what the hand-written id used to be. Written with an en dash it would
-   be `20052006` and every shared /about/#<period> link would die silently.
-   Eight of nine match this way; see the note in _pages/about.md for the ninth.
-
-   Typography is set here rather than inherited, because a heading at --step-2
-   next to an entry at --step-2 would read as a peer instead of a label. */
-.page-about .timeline h2 {
-  position: relative;              /* anchor for the § headerlink */
-  margin: 0 0 var(--space-xs);
-
-  font-size: var(--step--2);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-color-lower);
-  font-variant-numeric: tabular-nums;
-
-  scroll-margin-top: var(--space-l);
-}
-
-/* ⚠️ AND NO DOT. The entry selector above matches `.timeline h2`, which on this
-   page is the label — so its marker has to be switched off explicitly. Without
-   this every period grows a dot the spine does not run through. */
-.page-about .timeline h2::before { content: none; }
+   Do not reintroduce a label CLASS if grouping ever comes back — the heading
+   LEVEL is the mechanism (`##` group, `###` entry), and the entry selectors
+   below would need to take h3 as well.
+   ------------------------------------------------------------ */
 
 
 /* /now/'s year headings, which are still headings and still the loudest thing
@@ -279,25 +255,12 @@
   content: "";
   position: absolute;
   left: 0;
-  top: var(--timeline-spine-top, var(--timeline-dot-center));
+  top: var(--timeline-dot-center);
   bottom: 0;
   width: var(--timeline-rule);
   background: var(--border-color-high);
 }
 
-/* ⚠️ /about/ OPENS WITH A PERIOD LABEL, so the spine must start lower — at the
-   first ENTRY's dot, not at the container's top. The offset is the label's own
-   line box plus the gap below it.
-
-   That gap is a COLLAPSED margin: the label's margin-bottom (--space-xs) and
-   the entry's margin-top (--space-m) collapse to the LARGER, so it is
-   --space-m and not their sum. Treating it as a sum is a 15px error that reads
-   like a rounding bug.
-
-   ⚠️ The label is a HEADING now, so its line box is --scale-small, not the
-   --scale a paragraph would take. Getting that wrong tilts the whole spine.
-   Re-measure the tip after touching any of these three tokens; the check is
-   that a dot's centre and the spine's top share a y. */
 /* ⚠️ /about/ BREAKS OUT OF THE READING COLUMN, and that is what lets it have
    sidenotes AND a full-width timeline at once.
 
@@ -319,23 +282,18 @@
 .page-about .timeline {
   width: var(--body-width-max);
   max-width: none;
-
-  --timeline-spine-top: calc(
-    var(--step--2) * var(--scale-small) + var(--space-m) + var(--timeline-dot-center)
-  );
 }
 
 /* An entry title. `position: relative` anchors its dot; the top margin is the
    gap between entries, and is what --timeline-entry-gap used to do on the li. */
-.timeline h2,
-.page-about .timeline h3 {
+.timeline h2 {
   position: relative;
-  /* ⚠️ SIZE IS PINNED, NOT INHERITED FROM THE LEVEL. An entry renders at
-     --step-2 whether it is an h2 (/cv/, /about/brajeshwar.com/) or an h3
-     (/about/, where the h2 is taken by the period label). That is what keeps
-     --timeline-dot-center — which is derived from --step-2 — valid on every
-     page instead of needing one value per heading level. */
-  font-size: var(--step-2);
+  /* ⚠️ NO font-size HERE. An entry takes base.scss's h2 like every other
+     heading on the site — "the styling should be the default '##' styling like
+     other titles of Headings-2". It briefly carried a pin, back when /about/'s
+     entries were h3s and its h2 was a period label. --timeline-dot-center is
+     derived from --step-2, which is exactly what a default h2 renders at, so
+     the dot arithmetic still holds with nothing set here.
   margin: var(--space-m) 0 var(--space-3xs);
   max-width: var(--measure);
 
@@ -349,15 +307,14 @@
   clear: right;
 }
 
-.timeline > :is(h2, h3):first-child { margin-top: 0; }
+.timeline > h2:first-child { margin-top: 0; }
 
 /* THE SUB-TITLE — the first paragraph after a heading, and no authoring syntax
    for it. This was `<p class="timeline-meta">` in the HTML; as a Markdown page
    there is nothing to hang a class on, and nothing needs to be: "the line
    right under the title" is exactly what `h2 + p` means. Guardrail 5's spirit
    — no new authoring syntax — applied to a component rather than to notes. */
-.timeline h2 + p,
-.page-about .timeline h3 + p {
+.timeline h2 + p {
   margin: 0 0 var(--space-2xs);
   font-size: var(--step--1);
   color: var(--text-color-lower);
@@ -372,8 +329,7 @@
 
 /* The dot, hanging off the heading. Same arithmetic as the list version below
    — it has to be, since both must centre on the same spine. */
-.timeline h2::before,
-.page-about .timeline h3::before {
+.timeline h2::before {
   content: "";
   position: absolute;
   top: calc(var(--timeline-dot-center) - (var(--timeline-dot) / 2));
