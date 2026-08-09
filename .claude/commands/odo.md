@@ -9,7 +9,7 @@ Read `CLAUDE.local.md` at the repo root and work it.
 *(2026-08-09: "Do away with even the '## DO' as anything in this file is now a do. …
 Do away with the whole '## MAYBE / LATER / ICEBOX' thing.")*
 
-The finished-item log lives in **`CLAUDE-log.local.md`**. Do not read it to decide what to do —
+The finished-item log lives in **`CLAUDE.local.log.md`**. Do not read it to decide what to do —
 it is a record, not an inbox. It moved out because ~1.4k tokens of completed work were being
 read into context every session.
 
@@ -55,7 +55,7 @@ now. *(Reversed from bottom-up on 2026-08-08, at his word.)*
 
 **As each item is finished**
 
-Move it out of `CLAUDE.local.md` and into `CLAUDE-log.local.md` as
+Move it out of `CLAUDE.local.md` and into `CLAUDE.local.log.md` as
 `- [x] [HH:MM] <his original text, unchanged>`, using 24-hour local time, under today's
 `- YYYY-MM-DD` root item, newest date first. Create today's date item if it does not exist.
 

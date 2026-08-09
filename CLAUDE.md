@@ -20,7 +20,7 @@ rather than here, so they load when the command runs instead of every session.
 
 ⚠️ **THE WHOLE FILE IS THE QUEUE.** There is no `## DO` heading any more, and no
 `## MAYBE / LATER / ICEBOX` — *"anything in this file is now a do"* (2026-08-09). Everything
-below the H1 is work. The finished-item log moved out to **`CLAUDE-log.local.md`**, which is why:
+below the H1 is work. The finished-item log moved out to **`CLAUDE.local.log.md`**, which is why:
 it had grown to ~1.4k tokens of completed work being read into context every session.
 
 - **Items are prose OR bullets** — a `- ` bullet, a bare sentence, a paragraph. One paragraph is
@@ -32,7 +32,7 @@ it had grown to ~1.4k tokens of completed work being read into context every ses
   having items in it IS the instruction. Stop early only for a genuinely blocking question.
 - **Never reorder, reword or delete his lines.** Position is his instruction.
 - **Never push** because a queue item is done; guardrail 7 is unchanged.
-- **Done means:** move the line to `CLAUDE-log.local.md` as `- [x] [HH:MM] <his original text>`
+- **Done means:** move the line to `CLAUDE.local.log.md` as `- [x] [HH:MM] <his original text>`
   (24-hour local, when it was finished) under today's `- YYYY-MM-DD` root item, newest date
   first. Prose becomes a list item only at that point — the log wants one shape, the inbox does
   not. Abandoned rather than finished → strike it through with a one-line reason. Log history,

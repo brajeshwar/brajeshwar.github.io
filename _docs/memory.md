@@ -352,7 +352,7 @@ the wrong element made the footer look like it disagreed with the header. It doe
 `CLAUDE.local.md` is now **the queue and nothing else** — no `## DO`, no
 `## MAYBE / LATER / ICEBOX`, no `## DONE`. Everything below its H1 is work
 (*"anything in this file is now a do"*), and `WIP` at the START of a line marks an item as
-hands-off. The finished-item log moved to **`CLAUDE-log.local.md`**.
+hands-off. The finished-item log moved to **`CLAUDE.local.log.md`**.
 
 ⚠️ **The reason was context cost, and he found it from the `/doctor` report.** The done-log had
 grown to ~1.4k est. tokens of *completed* work being read into context every session. After the

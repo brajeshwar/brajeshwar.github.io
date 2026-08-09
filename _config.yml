@@ -119,7 +119,7 @@ exclude:
   # `git add -f`, or anyone cloning with their own copy, and a private work
   # queue is a public page. Excluded here so the two do not have to agree.
   - CLAUDE.local.md
-  - CLAUDE-log.local.md
+  - CLAUDE.local.log.md
   - TODO.md             # was live at /TODO/ until 2026-08-08 — same class of file as the two above
   - .claude             # slash commands and local settings, not content
   - Makefile            # dev tooling
