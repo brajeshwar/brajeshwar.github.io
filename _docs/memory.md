@@ -6,7 +6,7 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **SIXTEEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+⚠️ **EIGHTEEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
 read "everything below is pushed and live, the tree is clean", and it stopped being true partway
 through the session without anyone updating it. Check `git log origin/main..main` before
 believing any status line in this file, including this one.
@@ -300,6 +300,36 @@ text. `markdown="1"` on every wrapper fixes it and is *more* markup than the HTM
 A Markdown `/about/` would be a file where Markdown fails in the only places there is prose.
 
 ⚠️ It is a fact about the parser, not a preference. If it is revisited, test it first.
+
+### The spine went hairline, and reused his own number
+
+`--timeline-rule` is `var(--border-size-hairline)` (0.75px) rather than 2px, and the spine takes
+**`--rule-strong`** — the header and footer's colour, asked for by name.
+
+⚠️ **`--rule-strong` had a "these two only" note in themes.scss, and now has three users.** The
+note was amended rather than quietly broken: the spine earns it on the same logic (a structural
+line bracketing content, not a border round a box) and NEEDS it, because `--rule` at 0.75px is
+very nearly invisible. A fourth user needs an argument, not this precedent.
+
+**0.75px is his own settled number, not a new one.** It was arrived at earlier by rendering
+options for him after his first ask — 0.1pt — measured out to 0.133px, which rounds to nothing
+on any display. Reusing `--border-size-hairline` keeps the spine tied to the site's one hairline
+value instead of forking it. Renders as 1.5 device px at dpr 2, a clean 1px at dpr 1.
+
+Dots are `color-mix(in oklch, var(--accent) 75%, var(--bg))`, down from solid `--accent`, which
+read heavy against a hairline. **A mix, not a swap to `--text-color-lower`**, so they still track
+the accent he asked for a round earlier — and mixing toward `--bg` is right in both themes by
+construction, lightening on light and darkening on dark. Measured 0.396 on 0.97, and 0.779 on
+0.205.
+
+⚠️ `--timeline-rule` is **load-bearing geometry**, not just a width: it also sets the list
+padding that stops entries shifting, and half the dot's left offset. All three move together.
+After any change, re-measure that dot-centre and spine-centre share an x — all three pages came
+back 0.000 off, with 0.00 tip and 0.00 vertical offset.
+
+*(A scare that wasn't: `<footer>` itself has no border — `.footer-inner` carries it. Querying
+the wrong element made the footer look like it disagreed with the header. It does not; both are
+`--rule-strong`.)*
 
 ### The two habits this session kept proving
 1. **Count the items; do not trust the exit code.** A green build hid a one-item home strip, a
