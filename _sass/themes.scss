@@ -281,16 +281,24 @@
      what those two are for. Still a mix of the foreground rather than a solid,
      so it follows every palette and stays a rule instead of becoming a bar. */
   --color-border-structural: color-mix(in oklch, var(--color-fg) 32%, transparent);
-  /* 64% — EXACTLY TWICE -structural, and that is the whole definition.
-     Brajeshwar, 2026-08-09: "Let's make it just about 2x dark as the vertical
-     line color." The timeline spine takes -structural, so its dots take this,
-     and the relationship he asked for is the arithmetic rather than a value
-     someone matched by eye.
+  /* 46% — ONE RUNG ABOVE -structural (32%), for the timeline's dots.
 
-     ⚠️ KEEP IT AT DOUBLE. If -structural is ever retuned, retune this with it —
-     the point is the ratio, not the number. A mix of the foreground like every
-     tier above, so it follows the palette and both themes for free. */
-  --color-marker: color-mix(in oklch, var(--color-fg) 64%, transparent);
+     ⚠️ THIS WAS 64% — "exactly twice -structural" — FOR ONE BUILD, and that
+     note told the next person to KEEP IT AT DOUBLE. Wrong, and worth the
+     correction being loud: doubling read as too strong on the page
+     (Brajeshwar, 2026-08-09: "The dots accent it too high … let's try one more
+     with one step accent darker than the vertical line").
+
+     So the rule is now the LADDER'S OWN STEP, not a multiplier. The rungs above
+     go 10 -> 18 -> 32, i.e. +8 then +14; one more step of the same size is
+     32 + 14 = 46. That reads as a notch stronger than the line rather than a
+     different weight of mark, and it keeps this tier inside the same
+     progression as the three above instead of standing outside it.
+
+     If -structural moves, move this by the same absolute step, not by a ratio.
+     A mix of the foreground like every tier above, so it follows the palette
+     and both themes for free. */
+  --color-marker: color-mix(in oklch, var(--color-fg) 46%, transparent);
   --color-link: var(--color-accent);
   --color-code-bg: var(--color-gray-200);
 }

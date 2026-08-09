@@ -349,17 +349,18 @@
   height: var(--timeline-dot);
   border-radius: 50%;
 
-  /* ⚠️ DEFINED AS TWICE THE SPINE, not picked. --marker is a 64% mix of the
-     foreground where --rule-strong (the spine) is 32%, so "2x dark as the
-     vertical line color" is the arithmetic and stays true if either is
-     retuned. See themes.scss.
+  /* ⚠️ ONE RUNG ABOVE THE SPINE, not a multiple of it. --marker is a 46% mix
+     of the foreground where --rule-strong (the spine) is 32% — the same +14
+     step the ladder already takes from -strong to -structural. See themes.scss
+     for why the step and not a ratio.
 
-     This took three passes to land, and the path is worth keeping because each
-     step was a real correction, not a wobble: solid --accent ("a little more
+     This took four passes, and the path is worth keeping because each was a
+     real correction rather than a wobble: solid --accent ("a little more
      accented color") read heavy against a hairline; a 75/25 mix toward the
-     page ("reduce the darkness a bit") was still too dark; anchoring to the
-     line itself is what he actually wanted, and it is the only one of the
-     three that cannot drift out of relation to the spine.
+     page ("reduce the darkness a bit") was still too dark; twice the spine was
+     defensible arithmetic and still "too high"; one rung is where it landed.
+     The lesson is that anchoring to the spine was right and DOUBLING was the
+     wrong size of anchor — a ratio sounded principled and simply looked heavy.
 
      ⚠️ It no longer tracks --accent. That is the trade, and it is deliberate:
      a dot defined against the line cannot also follow a colour the reader

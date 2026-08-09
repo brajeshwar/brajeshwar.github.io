@@ -6,7 +6,7 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **EIGHTEEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+⚠️ **TWENTY-TWO commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
 read "everything below is pushed and live, the tree is clean", and it stopped being true partway
 through the session without anyone updating it. Check `git log origin/main..main` before
 believing any status line in this file, including this one.
@@ -316,21 +316,27 @@ options for him after his first ask — 0.1pt — measured out to 0.133px, which
 on any display. Reusing `--border-size-hairline` keeps the spine tied to the site's one hairline
 value instead of forking it. Renders as 1.5 device px at dpr 2, a clean 1px at dpr 1.
 
-**Dots are `--marker`, DEFINED as exactly twice the spine.** `--color-marker` is a 64% mix of
-the foreground where `--color-border-structural` (the spine) is 32% — so *"just about 2x dark as
-the vertical line color"* is arithmetic, not a value matched by eye, and it survives either
-being retuned. Measured by compositing both over the page and comparing distance from it:
-**2.000× in light, 1.986× in dark** (8-bit rounding).
+**Dots are `--marker`, ONE RUNG above the spine.** `--color-marker` is a **46%** mix of the
+foreground where `--color-border-structural` (the spine) is 32% — the same **+14** step the
+ladder already takes from `-strong` (18) to `-structural` (32). Measured by compositing both
+over the page: **1.44× in light, 1.43× in dark**.
 
-⚠️ It took three passes, and each was a real correction rather than a wobble: solid `--accent`
-("a little more accented color") read heavy against a hairline; a 75/25 mix toward the page
-("reduce the darkness a bit") was still too dark; anchoring to the line is what he wanted, and
-is the only one of the three that cannot drift out of relation to the spine.
+⚠️ **IT WAS 64% — "exactly twice the spine" — FOR ONE BUILD, and this file told you to keep it
+there.** That was wrong on the page: *"The dots accent it too high … let's try one more with one
+step accent darker than the vertical line."* The lesson is precise and worth keeping: anchoring
+the dot to the spine was right, and **doubling was the wrong size of anchor**. A ratio *sounded*
+principled and simply looked heavy; the ladder's own step size is the better rule because it
+keeps this tier inside the same progression as the three above it.
+
+⚠️ Four passes total, each a real correction: solid `--accent` read heavy against a hairline; a
+75/25 mix toward the page was still too dark; twice the spine was defensible arithmetic and
+still too strong; one rung is where it landed. **If `-structural` moves, move this by the same
+absolute step — not by a ratio.**
 
 ⚠️ **The dots no longer track `--accent`.** That is the deliberate trade — a dot defined against
 the line cannot also follow a colour the reader picks in the appearance panel. His instruction
 names the line, so the line wins. **If he ever asks for accented dots again, that is a genuine
-conflict with the 2× ratio, not an oversight to quietly fix.**
+conflict with the ladder anchoring, not an oversight to quietly fix.**
 
 ⚠️ `--timeline-rule` is **load-bearing geometry**, not just a width: it also sets the list
 padding that stops entries shifting, and half the dot's left offset. All three move together.
