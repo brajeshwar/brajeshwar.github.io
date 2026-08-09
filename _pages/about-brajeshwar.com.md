@@ -2,17 +2,56 @@
 layout: page
 title: About brajeshwar.com
 permalink: /about/brajeshwar.com/
+edited: 2026-08-09
 ---
+
+{%- comment -%}
+  A timeline, like /about/ and /cv/ — same component, same shape: an entry is a
+  `## Heading`, the line right under it is the sub-title, everything after is
+  prose. See _docs/timeline.md.
+
+  ⚠️ OLDEST FIRST, and that is deliberate — the opposite of /about/, /cv/ and
+  /now/. The component does not sort anything; it renders in the order the
+  Markdown is written (2026-08-09: "the timeline view is not forced in order but
+  it just follows how I edit/write them in the actual Markdown … for this page,
+  I want to start from the past to the present and not the inverse"). To reverse
+  a timeline, move the blocks — there is no setting.
+
+  ⚠️ NO `full: true` HERE, unlike /about/. This page is prose with footnotes and
+  no full-width figure, so it keeps the reading measure and the layout's
+  automatic `.container-ideal` — which is what lets kramdown's `[^Flash]` notes
+  become margin sidenotes. Adding `full: true` would widen the timeline and kill
+  the sidenotes in one move; see the note in _pages/about.md.
+
+  THE PROSE IS HIS, UNCHANGED. Converting this page added headings and moved
+  paragraphs under them; not one sentence was reworded, merged or dropped.
+{%- endcomment -%}
+
+<div class="timeline" markdown="1">
+
+## Registered on a dare
+
+Jun 11, 2001
 
 `brajeshwar.com` was registered on Jun 11, 2001.
 
 I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash[^Flash] tips, tricks, and things I was doing. That’s how it all started. My website started as a Flash-Website.
 
+## Blogspot, Movable Type, then WordPress
+
+2002 &rarr; 2003–2004
+
 I moved on to Blogspot,[^Blogspot] then to Movable Type[^MovableType] in 2002, and later to WordPress[^WordPress] by 2003-2004, ever since its early beta. [I stayed with WordPress](/2024/wordpress/) for a very long time–about 18 years.
+
+## Where it has been hosted
+
+From shared servers onward
 
 Initially, the site was hosted on few local shared servers. The site really did grew in popularity after Macromedia's recognition. Later, it was cared for by [Media Temple](https://mediatemple.net), [Medium Cube](https://mediumcube.com) (special thanks to [Tamouh Hakmi](https://www.linkedin.com/in/tamouh/)), [Pagely](https://pagely.com), and [WPEngine](https://wpengine.com).
 
 ## Writers
+
+With thanks
 
 Quite a few writers contributed to brajeshwar.com. The website is now simplified. I upgraded to as much plain-text as possible, with some minimal formatting with MarkDown. I use a simple tool to automate the conversion to HTML.
 
@@ -27,10 +66,13 @@ So, no writers are highlighted in the articles. However, I will be forever grate
 
 ## 20 Years
 
+Jun 11, 2021
+
 After being neglected for many years, I decided to rebuild my website and simplify it to be as close to plain-text as possible. On its 20th anniversary (Jun 11, 2021), the site is now as plain-text as possible, sprinkled with the spices of some [Markdown](https://en.wikipedia.org/wiki/Markdown) and translated by [Jekyll](https://jekyllrb.com). [Github](https://github.com) takes care of the Jekyll part to spit out the HTML ([view source](https://github.com/brajeshwar/brajeshwar.github.io)).
 
 I have done away with comments, and dicarded a whole lot of other metadata. I have also deleted more than 250 articles.
 
+</div>
 
 [^Flash]: Erstwhile [Macromedia](https://en.wikipedia.org/wiki/Macromedia) Flash and [FutureSplash](https://www.webdesignmuseum.org/software/futuresplash-animator-in-1996) (later, [Adobe Flash](https://en.wikipedia.org/wiki/Adobe_Flash)) is a discontinued multimedia software platform used for production of animations, rich internet applications, desktop applications, mobile apps, mobile games, and embedded web browser video players.
 

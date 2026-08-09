@@ -70,6 +70,25 @@ Three things that fell out, each worth keeping:
 wrapper you could open mid-page. Dropping `full: true` to make the whole article the reading
 column is the other option, and it is the 2026-08-08 bug: it clamps the 1024px timeline to 665px.
 
+## ⚠️ Order is DOCUMENT ORDER — the component never sorts
+
+There is no date parsing, no sort, and no `order:` setting anywhere in this component. **Entries
+render in the order they are written in the Markdown**, and that is the whole mechanism.
+
+> *"the timeline view is not forced in order but it just follows how I edit/write them in the
+> actual Markdown. If I make a mistake with the date, that is one me."* — 2026-08-09
+
+Which is why the pages differ on purpose, and why nothing needs a flag to make them:
+
+| page | order |
+|---|---|
+| `/about/`, `/cv/`, `/now/` | newest first |
+| `/about/brajeshwar.com/` | **oldest first** — *"I want to start from the past to the present"* |
+
+**To reverse a timeline, move the blocks.** Do not add sorting, and do not "correct" a page whose
+dates run the other way — check the page's own note first, because at least one runs oldest-first
+deliberately. A date that looks wrong is his to fix, not the component's to reorder.
+
 ## The markup
 
 ```html

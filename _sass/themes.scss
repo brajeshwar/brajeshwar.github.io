@@ -281,24 +281,31 @@
      what those two are for. Still a mix of the foreground rather than a solid,
      so it follows every palette and stays a rule instead of becoming a bar. */
   --color-border-structural: color-mix(in oklch, var(--color-fg) 32%, transparent);
-  /* 46% — ONE RUNG ABOVE -structural (32%), for the timeline's dots.
+  /* 60% — TWO RUNGS ABOVE -structural (32%), for the timeline dot's BORDER.
 
-     ⚠️ THIS WAS 64% — "exactly twice -structural" — FOR ONE BUILD, and that
-     note told the next person to KEEP IT AT DOUBLE. Wrong, and worth the
-     correction being loud: doubling read as too strong on the page
-     (Brajeshwar, 2026-08-09: "The dots accent it too high … let's try one more
-     with one step accent darker than the vertical line").
+     ⚠️ THIS TIER HAS MOVED TWICE AND BOTH CORRECTIONS ARE KEPT. It was 64%
+     ("exactly twice -structural") with a note telling the next person to keep
+     it at double — wrong, doubling read as too strong. Then 46%, one rung up
+     the ladder, which the rungs above justify: they go 10 -> 18 -> 32, i.e.
+     +8 then +14, so one more of the same size is 46.
 
-     So the rule is now the LADDER'S OWN STEP, not a multiplier. The rungs above
-     go 10 -> 18 -> 32, i.e. +8 then +14; one more step of the same size is
-     32 + 14 = 46. That reads as a notch stronger than the line rather than a
-     different weight of mark, and it keeps this tier inside the same
-     progression as the three above instead of standing outside it.
+     ⚠️ AND 46 STILL LOOKED TOO LIGHT, for a reason that is not about colour:
+     "now the line is darker than the disc." At 46% the border was numerically
+     darker than the 32% line and painted lighter, because the border is
+     --timeline-rule wide — 0.75px, which a browser computes to 0.5px for a
+     BORDER and antialiases to roughly half coverage. Half coverage halves the
+     effective alpha, so 46% rendered like ~23% against a line rendering at a
+     full 32%. Two rungs, 32 + 14 + 14 = 60, restores the intended order.
 
-     If -structural moves, move this by the same absolute step, not by a ratio.
-     A mix of the foreground like every tier above, so it follows the palette
-     and both themes for free. */
-  --color-marker: color-mix(in oklch, var(--color-fg) 46%, transparent);
+     ⚠️ SO DO NOT COMPARE THESE TWO TIERS BY THEIR NUMBERS. The spine is a
+     background width and paints fully; the dot's border is sub-pixel and does
+     not. Any retune has to be checked by looking, or by measuring composited
+     luminance — never by reading the percentages off this file.
+
+     If -structural moves, move this by the same absolute steps, not by a
+     ratio. A mix of the foreground like every tier above, so it follows the
+     palette and both themes for free. */
+  --color-marker: color-mix(in oklch, var(--color-fg) 60%, transparent);
   --color-link: var(--color-accent);
   --color-code-bg: var(--color-gray-200);
 }
