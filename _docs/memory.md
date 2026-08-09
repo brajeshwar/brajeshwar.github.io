@@ -6,9 +6,25 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-**Everything below is pushed and live.** ⚠️ That sentence was false for most of this session and
-nobody noticed, so: **check `git log origin/main..main` before believing any status line in this
-file, including this one.**
+**✅ Session CLOSED 2026-08-09. Everything below is pushed and live**, on his word — *"Document,
+update, ready to resume later. Commit, and Push."* Six commits went out together: the "Open in"
+bar moving to the post date line, the home-strip arrows, his own prose and home-page trims, the
+Ruby documentation correction, four posts coming off the work-in-progress shelf, and this close.
+
+⚠️ **That opening sentence was false for most of this session and nobody noticed**, so the rule
+stands regardless of what it says today: **check `git log origin/main..main` before believing any
+status line in this file, including this one.** A closed session is a claim like any other.
+
+**Where to pick up** — nothing is half-finished; the queue (`CLAUDE.local.md`) is empty and the
+tree is clean. What is *waiting* rather than pending:
+
+| | |
+|---|---|
+| **Ruby 3.4.10** | deferred at his word, fully written up — [`hosting.md`](hosting.md) → *Versions* and [`todo.md`](todo.md). ⚠️ Bump the WORKFLOW pin, never `.ruby-version` |
+| `/cv/`, `/devices/`, `/own/` | he queued these to edit himself — *"don't work on it yet"* |
+| Dead timeline CSS, ~190 lines | needs reading by hand, not a sweep |
+| Twelve HTML pages | still emit raw HTML into their `.md` twins; the Markdown conversions fixed three |
+| `/cv/` vs `/about/` | they disagree on four facts. His prose, his call |
 
 The queue is `CLAUDE.local.md`, worked with `/odo`, and the done-log is `CLAUDE.local.log.md`.
 Both are gitignored AND excluded from the build, so they are invisible to `git status` and to
