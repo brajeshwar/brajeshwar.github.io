@@ -6,14 +6,30 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **TWENTY-SEVEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
-read "everything below is pushed and live, the tree is clean", and it stopped being true partway
-through the session without anyone updating it. Check `git log origin/main..main` before
-believing any status line in this file, including this one.
+**Everything below is pushed and live.** ⚠️ That sentence was false for most of this session and
+nobody noticed, so: **check `git log origin/main..main` before believing any status line in this
+file, including this one.**
 
-The queue is `CLAUDE.local.md`, worked with `/odo`; it is gitignored and excluded from the
-build, so it is invisible to `git status` and to `_site` both. If work seems to appear from
-nowhere between sessions, that file is where it came from.
+The queue is `CLAUDE.local.md`, worked with `/odo`, and the done-log is `CLAUDE.local.log.md`.
+Both are gitignored AND excluded from the build, so they are invisible to `git status` and to
+`_site` alike. If work seems to appear from nowhere between sessions, that is where it came from.
+
+### The short version of a very long day
+
+`/about/`, `/cv/` and `/about/brajeshwar.com/` are **Markdown on one shared timeline component**;
+`/search/` was **dead in production** and is fixed; every post carries an **"Open in" bar**; and
+the local queue lost ~2k tokens of always-loaded context.
+
+⚠️ **Five things here are traps that produced green builds and broken output.** They are each
+written up below, and they are the reason this file is worth reading before touching anything:
+
+| trap | symptom |
+|---|---|
+| Cloudflare Rocket Loader re-runs scripts **after** `DOMContentLoaded` | `/search/` shipped an empty div for months; worked perfectly on localhost |
+| An **unterminated CSS comment** is valid CSS | it silently ate `margin` and `max-width` off a rule; surfaced days later as a spacing complaint |
+| This site is **plain kramdown, not GFM** | numeric headings get `id="section"`; nine shared anchors died in a green build |
+| A **sub-pixel border** paints about half its declared alpha | six colour retunes chased what was a width problem |
+| `contains` on a **captured Liquid variable** is silently truthy | would ship a per-page script to all ~1,470 pages |
 
 ### The books shelf was rebuilt, twice over
 

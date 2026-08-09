@@ -88,6 +88,22 @@ Originally absorbed from the 2027 planning braindump.
       `h2` and the event in an `h3` — right for a story, backwards for a CV. `/about/` got the
       same inversion the same day (events as titles), which is why the two now agree on emphasis
       while keeping different structures.
+- [ ] **NEXT UP: edit `/cv/`, `/devices/` and `/own/`.** ⚠️ Queued 2026-08-09 with
+      *"Don't work on it yet"* — these are his to define, not to be started on a guess. What is
+      true about each right now, so the next session does not have to re-derive it:
+
+      | page | source | state |
+      |---|---|---|
+      | `/cv/` | `_pages/cv.md` (Markdown) | on the timeline component; carries the "Open in" bar with its PDF button; 13 roles, ids from company names |
+      | `/devices/` | `_pages/devices.html` | `layout: album`, driven by `_data/devices.yaml`; the smallest of the three at 37 lines |
+      | `/own/` | `_pages/own.html` | `layout: album`, `title_style: vertical`, driven by `_data/own.yaml`; the Wear / Carry / Keep inventory |
+
+      ⚠️ **None of the three is linked from nav.** That was deliberate for `/own/` while it was
+      unfinished; worth confirming for the other two before assuming it is an oversight.
+
+      ⚠️ `/cv/` and `/about/` still disagree on four facts (see below) — worth settling in the
+      same pass, since editing `/cv/` is when those get looked at.
+
 - [ ] **Dead timeline CSS to remove.** Converting `/about/` and `/cv/` to Markdown on
       2026-08-09 orphaned most of the list-shape vocabulary in `_sass/timeline.scss`. Verified
       against the built HTML — these now match nothing: `.timeline-entries`, `.timeline-entry`,

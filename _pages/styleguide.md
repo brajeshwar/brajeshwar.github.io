@@ -5,7 +5,7 @@ title: Styleguide
 
 # Styleguide
 
-What the site actually does, so I stop guessing. Last checked against the CSS on Aug 1, 2026.
+What the site actually does, so I stop guessing. Last checked against the CSS on Aug 9, 2026.
 
 ## Widths — there is only one
 
@@ -325,6 +325,68 @@ without a per-theme rule.
 `/random/` carries the list of every post URL inline and picks one in JavaScript. With
 JavaScript off it shows a real link to a post chosen at build time, which the daily rebuild
 rotates on its own. It never sends you back to the post you came from.
+
+## Timeline
+
+Four pages wear it: `/about/`, `/cv/`, `/about/brajeshwar.com/` and `/now/`. A vertical hairline
+with a marker per entry, and it is built from ordinary Markdown — **no classes in the content**.
+
+```markdown
+<div class="timeline" markdown="1">
+
+## Razorfish
+
+2014 Sep — 2016 Mar · Creative Director
+
+Prose, with [links](/) and *emphasis* that work normally.
+
+</div>
+```
+
+`##` is an entry. The line directly under it is the **sub-title** — a date, a role, a place —
+and it is styled by position (`h2 + p`), not by a class, so there is nothing to remember. `/now/`
+is the exception: its entries are bullets under a year heading, so it keeps a `ul`/`li` shape.
+
+**Order is document order.** Nothing sorts. `/about/`, `/cv/` and `/now/` read newest-first;
+`/about/brajeshwar.com/` reads oldest-first, and needed no setting to do it — the blocks are
+simply in that order.
+
+The numbers, all measured rather than chosen:
+
+- **Line** — 0.75px, `--border-color-high`, the same value as the header's menu separator. A
+  vertical hairline shows far less of itself than a horizontal one, so it needs a darker tier
+  than a rule does.
+- **Marker** — an 11px disc, filled with the *page* colour so it masks the line, ringed in
+  `--rule-strong` at 1px. The ring is the header and footer's own colour.
+- Both centre on the line, and the line starts at the first marker rather than above it.
+
+## Open in
+
+On `/cv/` and on every post, level with the title and flush right: **OPEN IN · OpenAI · Claude
+| Markdown**. `/cv/` adds a PDF button; posts do not.
+
+The AI links do not upload anything. They open a new chat pre-filled with *"Read
+`https://brajeshwar.com/<page>.md` — I have questions about this post"*, pointing at the
+plain-text twin that exists for every page and post. **Append `.md` to any URL on this site and
+you get one**; `/llms.txt` indexes them all.
+
+PDF is the browser's own print dialog. There is no PDF generator here, and `assets/print.css`
+already makes the printed page a clean document.
+
+## Heading anchors
+
+Hover any heading with an id and a small `#` appears in the left margin. Clicking it links to
+that heading.
+
+It is `--step--1` regardless of the heading's size, sits one `--space-3xs` clear of the text,
+and its click target is the **full height of the heading** rather than the glyph — so it is
+easy to hit without being loud. Invisible until hover or keyboard focus, and hidden entirely
+below 480px where there is no margin to sit in.
+
+⚠️ ids come from kramdown, and this site runs **plain kramdown, not GFM** — so a heading that
+starts with a letter gets a real anchor (`## Razorfish` → `#razorfish`) and one that starts with
+a digit gets `section`, `section-1`, and so on. `/about/`'s date labels are in the second group,
+which is accepted.
 
 ## The reader's controls
 
