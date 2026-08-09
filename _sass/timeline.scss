@@ -294,6 +294,13 @@
      entries were h3s and its h2 was a period label. --timeline-dot-center is
      derived from --step-2, which is exactly what a default h2 renders at, so
      the dot arithmetic still holds with nothing set here.
+
+     ⚠️ THIS COMMENT LOST ITS CLOSING MARKER ONCE, on 2026-08-09, and the build
+     stayed green: an unterminated block comment is still valid CSS, it just
+     runs on and ate `margin` and `max-width` below. The symptom was the
+     sub-title drifting away from its heading, because the h2 fell back to
+     base.scss's much larger heading margin. Nothing errored, nothing warned.
+     Check the BUILT rule, not the build's exit code. */
   margin: var(--space-m) 0 var(--space-3xs);
   max-width: var(--measure);
 

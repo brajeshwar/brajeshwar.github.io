@@ -197,11 +197,17 @@ Anything claiming this site parses GFM is wrong; it cost two debugging passes.
 - **All themeable values are CSS custom properties; no hardcoded colors outside `themes.scss`.**
 - **Comment CSS generously.** `sass: style: compressed` strips block comments, so prose in
   `_sass/*.scss` costs **zero bytes** in the shipped page — verified. Explain *why*,
-  record gotchas, date non-obvious decisions. Two hard rules: **never use a bang comment**
-  (slash-star-bang survives compression and ships), and **never write a literal star-slash
+  record gotchas, date non-obvious decisions. Three hard rules: **never use a bang comment**
+  (slash-star-bang survives compression and ships); **never write a literal star-slash
   inside comment prose** (it closes the comment early; the build then fails with a misleading
   "expected selector" pointing at `assets/styles/site.scss` — the entry point, never the
-  partial with the broken comment).
+  partial with the broken comment); and ⚠️ **never leave a comment unterminated**, which is the
+  same mistake in reverse and far nastier — an unclosed block comment is VALID CSS, so the
+  build stays green while the comment runs on and swallows every declaration until the next
+  star-slash. On 2026-08-09 that silently ate `margin` and `max-width` off `.timeline h2` and
+  showed up days later as "the sub-title is too far from the heading".
+  **So verify a CSS change by grepping the BUILT rule, not by the build's exit code:**
+  `grep -o '\.your-selector{[^}]*}' _site/assets/styles/site.css`.
 - `container-ideal` = reading width; `page.style` = full-width page hook.
 
 ## Page titles (added 2026-08-08 — read before touching a layout)
