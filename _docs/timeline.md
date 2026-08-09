@@ -28,7 +28,7 @@ Markdown now.** The reversal is left loud rather than tidied away, because the m
 instructive: the *premise* was correct and the *conclusion* drawn from it was not.
 
 The premise, still true and still worth knowing: **kramdown does not parse Markdown inside
-block-level HTML.** Verified twice against this site's own GFM parser — a `[link](…)` inside a
+block-level HTML.** Verified twice against this site's own parser — a `[link](…)` inside a
 `<li>` reaches the browser as literal text.
 
 The wrong conclusion: that every entry would therefore need `markdown="1"`, which is more markup
@@ -71,6 +71,31 @@ Three things that fell out, each worth keeping:
 `.container-ideal`, and kramdown appends `.footnotes` at the very end of the document — after any
 wrapper you could open mid-page. Dropping `full: true` to make the whole article the reading
 column is the other option, and it is the 2026-08-08 bug: it clamps the 1024px timeline to 665px.
+
+## ⚠️ THIS SITE RUNS PLAIN KRAMDOWN, NOT GFM — and heading ids prove it
+
+`_config.yml` sets `markdown: kramdown` and **no `input:`**, so the GFM parser is not in play.
+That matters for exactly one thing, and it is a trap:
+
+**kramdown prefixes `section` to any auto-generated id that does not start with a letter.**
+
+| heading | plain kramdown (this site) | GFM |
+|---|---|---|
+| `## Razorfish` | `razorfish` | `razorfish` |
+| `## 2005-2006` | **`section`** | `2005-2006` |
+| `## 2021-present` | **`present`** | `2021-present` |
+
+So a letter-leading heading is safe and a date-leading one is not. Nine `/about/` period anchors
+were silently replaced by `section`, `section-1`, `section-2`… in a green build on 2026-08-09.
+
+⚠️ **AND THE BARE `{: #id}` IAL DOES NOT WORK HERE EITHER** — it is accepted and ignored, and the
+heading keeps its `section` id. **Only the quoted form works: `{: id="2005-2006"}`.** That form
+also leaves the heading TEXT alone, so a label can keep its en dash while its anchor keeps the
+hyphen it has always had.
+
+⚠️ Anything claiming this site parses GFM is wrong; that claim lived in this file and cost two
+debugging passes. Test against `Kramdown::Document.new(src).to_html` with **no** `input:` option,
+which is what Jekyll actually runs.
 
 ## ⚠️ Order is DOCUMENT ORDER — the component never sorts
 

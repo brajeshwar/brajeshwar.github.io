@@ -85,7 +85,7 @@ layout: default
   note at the top of that rule.
 {%- endcomment -%}
 <main role="main" class="{{ page.style }}">
-  <article class="page{% if page.full %}{% elsif content contains 'class="footnotes"' %} container-ideal{% endif %}">
+  <article class="page{% if page.page_full %}{% elsif content contains 'class="footnotes"' %} container-ideal{% endif %}">
 {%- comment -%}
   THE TITLE, EMITTED HERE RATHER THAN PER PAGE (2026-08-08).
 
