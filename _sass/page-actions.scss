@@ -1,32 +1,61 @@
 /* ============================================================
-   Page actions — "Open in OpenAI · Claude | [md] [pdf]"
+   Page actions — the "Open in …" bar on the title line
    ------------------------------------------------------------
-   The bar emitted by _includes/page-actions.html. Built 2026-08-09 for /cv/,
-   but written for anything: nothing here is scoped to a page, because the
-   whole point is that a post can include the same partial unchanged
+   Emitted by _includes/page-actions.html, which _layouts/page.html places
+   beside the <h1> when a page sets `page_actions: true`. Built 2026-08-09 for
+   /cv/, but nothing here is scoped to a page: a post opts in the same way
    ("prepare that we will likely have this with others such as the posts").
 
-   ⚠️ THAT MAKES `.page-actions` A GLOBAL SELECTOR, which since 2026-07-27 means
-   it reaches every page. It is safe because the class is specific and owned by
-   one include — but do not add loose descendant rules here (`a`, `svg`,
-   `button`) without the `.page-actions` prefix carrying them.
-
-   Sits quietly. It is a utility strip, not content: --step--2, muted, and it
-   only reaches full strength on hover. The page it sits above is the thing
-   worth reading.
-
-   ⚠️ --text-color-LOWER, not --text-color-low. The ladder is 14.5% / 20.5% /
-   37.1%, so `-low` is a hair off full black and reads as loud as body copy —
-   this shipped with `-low` for one build and the strip competed with the page
-   title. `-lower` is the tier .timeline-meta already uses for exactly this
-   job. Measure before assuming a name means what it sounds like.
+   ⚠️ THAT MAKES THESE GLOBAL SELECTORS, which since 2026-07-27 means they
+   reach every page. Safe because the classes are specific and owned by one
+   include — but do not add loose descendant rules (`a`, `svg`, `button`)
+   without the `.page-actions` prefix carrying them.
    ============================================================ */
 
+/* ---- The title row ------------------------------------------
+   Only exists when a page opts in; the layout emits this wrapper together with
+   the bar, so the ~1,470 pages that do not opt in keep a bare <h1> with no div
+   and no flex context.
+
+   ⚠️ `align-items: baseline`, NOT `center`. The bar is a row of 32px circles
+   next to a --step-2 title; centring hangs them visibly low against the
+   title's cap height. Baseline sits them on the title's own line, which is
+   what "at the same line as the title" asked for.
+
+   ⚠️ IT WRAPS, deliberately. Below roughly 30rem a long title and four icons
+   cannot share a line, and `flex-wrap` drops the bar underneath — still flush
+   right. Do not replace this with a media query: the breakpoint depends on the
+   title's length, which differs per page, and wrapping finds it per page for
+   free. */
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2xs) var(--space-s);
+}
+
+/* The h1 owns the row's bottom margin; the bar must not add a second one. */
+.page-head .page-title,
+.page-head .page-actions {
+  margin-bottom: 0;
+}
+
+/* ⚠️ THE SPINE TITLE IS THE EXCEPTION. `title_style: vertical` takes the h1
+   out of flow into the left margin (`position: fixed`), so it contributes no
+   width to this row and `space-between` would leave the bar alone at the LEFT
+   edge. `margin-left: auto` keeps it flush right either way, and costs nothing
+   on an ordinary page where space-between has already done the job. */
+.page-head .page-actions {
+  margin-left: auto;
+}
+
+/* ---- The bar ------------------------------------------------ */
 .page-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-2xs);
+  gap: var(--space-3xs);
 
   margin-bottom: var(--space-m);
 
@@ -36,62 +65,68 @@
   color: var(--text-color-lower);
 }
 
+/* Not a link, and should not read as one. */
 .page-actions__label {
-  /* Not a link, and should not read as one. */
   user-select: none;
 }
 
-/* The two word marks. Underlined on hover only — at this size a permanent
-   underline turns the strip into a row of links competing with the title. */
-.page-actions__link {
+/* ⚠️ `.page-actions__link` IS GONE. The two AI targets were word marks for one
+   round and are icons since 2026-08-09, so every child of the bar is now an
+   `.icon-button`. Its hover and underline rules went with it rather than
+   lingering as selectors that can never match. */
+
+/* ⚠️ EVERY BUTTON WEARS THE SHARED `.icon-button` FROM chrome.scss — the same
+   component as the header's search, RSS and appearance tools: a 32px circle
+   with a --icon-glyph-size glyph, the same hover fill and the same focus ring.
+
+   That is the answer to "Is 36px a good standard for icons?" — no, because
+   this site already standardised at 32px/17px for exactly this job, and 36
+   would be a third size doing it. Reusing the class also means these follow
+   the header if that token is ever retuned, instead of drifting from it.
+
+   All that is left here is what the header's tools do NOT want: a resting
+   colour one tier quieter, because this bar sits beside a title rather than in
+   the page furniture. Hover and focus come from .icon-button. */
+.page-actions__btn {
   color: var(--text-color-lower);
-  text-decoration: none;
 }
 
-.page-actions__link:hover {
+/* ⚠️ THE GLYPH SIZE HAS TO BE SET HERE TOO. chrome.scss scales icons with
+   `site-tools svg`, scoped to the header's custom element — so outside the
+   header an icon falls back to whatever width/height its FILE declares. That
+   is why markdown and pdf rendered visibly smaller than openai and claude for
+   one build: they were authored at 16 and the others at 20.
+
+   Both files are 20px now, matching the house convention, and this rule makes
+   the authored number irrelevant the way the header's does — same token, so
+   the bar and the chrome cannot drift. */
+.page-actions svg {
+  width: var(--icon-glyph-size);
+  height: var(--icon-glyph-size);
+}
+
+.page-actions__btn:hover {
   color: var(--text-color);
-  text-decoration: underline;
-  text-decoration-thickness: var(--border-size-hairline);   /* the standard hover hairline */
 }
 
-/* Divider between the "open in" half and the "take it with you" half —
-   his `|`. A border on an empty span rather than a `|` character, so it
-   scales with the row instead of sitting on the font's baseline. */
+/* His `|`. A border on an empty span rather than a literal pipe character, so
+   it scales with the row instead of sitting on the font's baseline. */
 .page-actions__sep {
   width: 0;
-  height: 1em;
+  height: 1.1em;
+  align-self: center;
   margin-inline: var(--space-3xs);
   border-left: var(--border-size) var(--border-style) var(--rule);
 }
 
-/* Markdown and PDF. Icons, per his spec — square targets, not text. */
-.page-actions__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--text-color-lower);
-  cursor: pointer;
-}
-
-.page-actions__btn:hover { color: var(--text-color); }
-
-.page-actions__btn:focus-visible,
-.page-actions__link:focus-visible {
-  outline: var(--border-size-small) solid var(--accent);
-  outline-offset: 2px;
-  border-radius: var(--border-radius-small);
-}
-
-/* ⚠️ The PDF button is `hidden` in the markup until page-actions.js unhides
-   it. `[hidden]` loses to `display: inline-flex` above — the attribute's UA
-   rule is only `display: none` at the same specificity as any author rule, and
-   author rules win. Without this the button would show with JavaScript off and
+/* ⚠️ The PDF button ships `hidden` until page-actions.js unhides it.
+   `[hidden]`'s UA rule is `display: none` at the same specificity as any
+   author rule, and author rules win — `.icon-button` sets `display:
+   inline-flex`, so without this the button would show with JavaScript off and
    do nothing when pressed, which is the exact thing the `hidden` was for. */
-.page-actions__btn[hidden] { display: none; }
+.page-actions__btn[hidden] {
+  display: none;
+}
 
 /* Printing the page should not print the bar that offered to print it. */
 @media print {

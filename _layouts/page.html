@@ -114,8 +114,34 @@ layout: default
 {%- assign wants_title = false -%}
 {%- unless content contains '<h1' -%}{%- assign wants_title = true -%}{%- endunless -%}
 {%- if page.title_style or page.force_title -%}{%- assign wants_title = true -%}{%- endif -%}
+{%- comment -%}
+  4. THE "Open in …" BAR RIDES THE TITLE LINE, which is why it is emitted here
+     and not from the page body (2026-08-09: "Make the whole content of the
+     'Open in' family to be at the same line as the title and flushed
+     right-aligned"). The h1 comes from this layout, so the only way the two can
+     be flex siblings on one row is for the bar to come from here too — a page
+     including it in its own body puts it in a different box, one line down,
+     and no amount of CSS reunites them without absolute positioning.
+
+     Opt in with `page_actions: true` in front matter. It works on any page, and
+     on posts, without further change.
+
+     ⚠️ The wrapper only appears WITH the bar. Without it the h1 stays a bare
+     sibling exactly as before, so none of the ~1,470 pages that do not opt in
+     gain a div or a flex context.
+{%- endcomment -%}
 {%- if wants_title -%}
+{%- capture page_title_el -%}
 <h1 class="page-title{% if page.title_style == 'vertical' %} vertical-title{% endif %}">{{ page.title }}</h1>
+{%- endcapture -%}
+{%- if page.page_actions -%}
+<div class="page-head">
+  {{ page_title_el }}
+  {% include page-actions.html %}
+</div>
+{%- else -%}
+{{ page_title_el }}
+{%- endif -%}
 {%- endif -%}
     {{ content }}
     {{ page_edited }}

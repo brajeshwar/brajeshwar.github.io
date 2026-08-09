@@ -37,10 +37,24 @@
   Do not add a local build step for it; run `node scripts/build-agent-markdown.mjs`
   after a build if you need to check them.
 
-  ⚠️ NO BRAND LOGOS, deliberately. His spec was "Open In [OpenAI] [Claude] |
-  [Icon: Markdown] [Icon: PDF]" — note that "Icon:" appears only on the last
-  two. The AI targets are word marks, which is also why there is no guessed-at
-  approximation of someone else's logo in _includes/icons/.
+  ⚠️ THE AI TARGETS ARE ICONS NOW (2026-08-09: "replace OpenAI and Claude with
+  Icons too"). They shipped one round as word marks, on the reading that his
+  original spec wrote "Icon:" only against Markdown and PDF. He wanted icons
+  throughout.
+
+  ⚠️ icons/openai.svg AND icons/claude.svg ARE HAND-DRAWN APPROXIMATIONS, not
+  the official marks — a hexagonal knot and a many-pointed burst, drawn here
+  because nothing in this repo may fetch a third-party asset at build time. If
+  the real marks are wanted, drop the official SVGs in over these two files:
+  nothing else needs to change, since the include references them by name and
+  the accessible label is carried by aria-label, not by the artwork.
+
+  SIZE — his question was "Is 36px a good standard for icons?" ANSWER: no, and
+  the reason is that this site already answered it. --icon-button-size is 32px
+  with a 17px glyph, which is what the header's search / RSS / appearance tools
+  wear. 36px would be a third size doing the same job. These buttons reuse the
+  shared `.icon-button` class outright, so the bar matches the header exactly
+  and follows it if that token is ever retuned.
 {%- endcomment -%}
 
 {%- assign pa_url = include.url | default: page.url -%}
@@ -65,14 +79,18 @@
 <div class="page-actions" role="group" aria-label="Open this {{ pa_kind }} elsewhere">
   <span class="page-actions__label">Open in</span>
 
-  <a class="page-actions__link" href="https://chatgpt.com/?q={{ pa_q }}"
-     target="_blank" rel="noopener">OpenAI</a>
-  <a class="page-actions__link" href="https://claude.ai/new?q={{ pa_q }}"
-     target="_blank" rel="noopener">Claude</a>
+  <a class="icon-button page-actions__btn" href="https://chatgpt.com/?q={{ pa_q }}"
+     target="_blank" rel="noopener" aria-label="Open in OpenAI" title="Open in OpenAI">
+    {%- include icons/openai.svg -%}
+  </a>
+  <a class="icon-button page-actions__btn" href="https://claude.ai/new?q={{ pa_q }}"
+     target="_blank" rel="noopener" aria-label="Open in Claude" title="Open in Claude">
+    {%- include icons/claude.svg -%}
+  </a>
 
   <span class="page-actions__sep" aria-hidden="true"></span>
 
-  <a class="page-actions__btn" href="{{ pa_md | relative_url }}"
+  <a class="icon-button page-actions__btn" href="{{ pa_md | relative_url }}"
      aria-label="View as Markdown" title="View as Markdown">
     {%- include icons/markdown.svg -%}
   </a>
@@ -89,7 +107,7 @@
     button — with JS off this is simply absent, and the reader's own
     Print command still works. Same idiom as the search panel.
   {%- endcomment -%}
-  <button class="page-actions__btn" type="button" data-page-actions-print hidden
+  <button class="icon-button page-actions__btn" type="button" data-page-actions-print hidden
           aria-label="Save as PDF" title="Save as PDF">
     {%- include icons/pdf.svg -%}
   </button>
