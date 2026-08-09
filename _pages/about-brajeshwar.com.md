@@ -2,34 +2,12 @@
 layout: page
 title: About brajeshwar.com
 permalink: /about/brajeshwar.com/
-edited: 2026-08-09
+edited: 2026-08-08
 ---
-
-{%- comment -%}
-  A timeline, like /about/ and /cv/ — same component, same shape: an entry is a
-  `## Heading`, the line right under it is the sub-title, everything after is
-  prose. See _docs/timeline.md.
-
-  ⚠️ OLDEST FIRST, and that is deliberate — the opposite of /about/, /cv/ and
-  /now/. The component does not sort anything; it renders in the order the
-  Markdown is written (2026-08-09: "the timeline view is not forced in order but
-  it just follows how I edit/write them in the actual Markdown … for this page,
-  I want to start from the past to the present and not the inverse"). To reverse
-  a timeline, move the blocks — there is no setting.
-
-  ⚠️ NO `full: true` HERE, unlike /about/. This page is prose with footnotes and
-  no full-width figure, so it keeps the reading measure and the layout's
-  automatic `.container-ideal` — which is what lets kramdown's `[^Flash]` notes
-  become margin sidenotes. Adding `full: true` would widen the timeline and kill
-  the sidenotes in one move; see the note in _pages/about.md.
-
-  THE PROSE IS HIS, UNCHANGED. Converting this page added headings and moved
-  paragraphs under them; not one sentence was reworded, merged or dropped.
-{%- endcomment -%}
 
 <div class="timeline" markdown="1">
 
-## Registered on a dare
+## Registration
 
 Jun 11, 2001
 
@@ -37,13 +15,13 @@ Jun 11, 2001
 
 I booked the domain on a dare. At work, I once met an expert programmer, who suggested I should write down all the Flash[^Flash] tips, tricks, and things I was doing. That’s how it all started. My website started as a Flash-Website.
 
-## Blogspot, Movable Type, then WordPress
+## Blogspot › Movable Type › WordPress
 
-2002 → 2003-2004
+2002-2004
 
 I moved on to Blogspot,[^Blogspot] then to Movable Type[^MovableType] in 2002, and later to WordPress[^WordPress] by 2003-2004, ever since its early beta. [I stayed with WordPress](/2024/wordpress/) for a very long time–about 18 years.
 
-## Where it has been hosted
+## Hosts
 
 From shared servers onward
 
@@ -64,7 +42,7 @@ So, no writers are highlighted in the articles. However, I will be forever grate
 5. [Robin Wilding](https://www.linkedin.com/in/robin-wilding-91456428/)
 6. Many other guest writers and contributors.
 
-## 20 Years
+## 20+ Years
 
 Jun 11, 2021
 
