@@ -438,12 +438,31 @@ h6 { font-size: var(--step--2); }
    about 16px out on every heading, tucking it under an --step-2 title. */
 .headerlink {
   position: absolute;
-  left: -1.5rem;
+
+  /* ⚠️ top/bottom 0 IS THE HIT AREA — it stretches the link to the FULL height
+     of the heading rather than the ~19px its own 16px line box would give
+     (2026-08-09: "Make it easier to click by making its hit area the same as
+     the height of the heading"). On an --step-2 entry that is 37.5px of target
+     instead of 19px, for a glyph that has not changed size at all.
+
+     `line-height: inherit` was the obvious way and does NOT work: this rule
+     sets its own font-size, and a unitless line-height inherits as the NUMBER,
+     so 1.2 resolved against 16px, not against the heading's 31px. */
+  top: 0;
+  bottom: 0;
+  left: -1.4rem;
   width: 1.25rem;
+
+  /* Centres the glyph in that tall box, so it sits on the heading's middle
+     rather than its top, and pins it to the RIGHT edge — which is what puts it
+     close to the words instead of adrift in the margin. Together with `left`
+     above this leaves about 2px of air. */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   font-size: var(--step--1);
   font-weight: var(--font-weight);
-  line-height: inherit;
 
   text-decoration: none;
   color: var(--text-muted);
