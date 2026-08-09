@@ -281,6 +281,16 @@
      what those two are for. Still a mix of the foreground rather than a solid,
      so it follows every palette and stays a rule instead of becoming a bar. */
   --color-border-structural: color-mix(in oklch, var(--color-fg) 32%, transparent);
+  /* 64% — EXACTLY TWICE -structural, and that is the whole definition.
+     Brajeshwar, 2026-08-09: "Let's make it just about 2x dark as the vertical
+     line color." The timeline spine takes -structural, so its dots take this,
+     and the relationship he asked for is the arithmetic rather than a value
+     someone matched by eye.
+
+     ⚠️ KEEP IT AT DOUBLE. If -structural is ever retuned, retune this with it —
+     the point is the ratio, not the number. A mix of the foreground like every
+     tier above, so it follows the palette and both themes for free. */
+  --color-marker: color-mix(in oklch, var(--color-fg) 64%, transparent);
   --color-link: var(--color-accent);
   --color-code-bg: var(--color-gray-200);
 }
@@ -580,6 +590,12 @@
   --text          : var(--color-fg);
   --text-muted    : var(--color-fg-muted);
   --rule          : var(--color-border);
+
+  /* The timeline's dots — twice --rule-strong's mix, by definition rather than
+     by eye. Sits here beside the rule tokens because that is what it is
+     measured against; see --color-marker for the ratio and why it must hold. */
+  --marker        : var(--color-marker);
+
   /* One notch up from --rule, for the site's two structural lines only.
      Added 2026-08-01: "Increase the border color one notch for the header and
      footer, so they are more prominent than the other borders on the website."

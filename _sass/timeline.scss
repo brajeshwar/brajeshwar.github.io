@@ -349,22 +349,26 @@
   height: var(--timeline-dot);
   border-radius: 50%;
 
-  /* ⚠️ NOT PLAIN --accent — mixed a quarter of the way toward the page
-     ("Reduce the darkness of the dots a bit"). Solid --accent shipped for one
-     round and read heavy against a 0.75px line.
+  /* ⚠️ DEFINED AS TWICE THE SPINE, not picked. --marker is a 64% mix of the
+     foreground where --rule-strong (the spine) is 32%, so "2x dark as the
+     vertical line color" is the arithmetic and stays true if either is
+     retuned. See themes.scss.
 
-     A mix rather than a swap to --text-color-lower, because he asked for the
-     dots to be accented one round earlier and that has to survive: this still
-     tracks the accent, so choosing one in the appearance panel still colours
-     them. And mixing toward --bg is correct in BOTH themes by construction —
-     it lightens on light and darkens on dark, since it always moves the dot
-     toward whatever the page is.
+     This took three passes to land, and the path is worth keeping because each
+     step was a real correction, not a wobble: solid --accent ("a little more
+     accented color") read heavy against a hairline; a 75/25 mix toward the
+     page ("reduce the darkness a bit") was still too dark; anchoring to the
+     line itself is what he actually wanted, and it is the only one of the
+     three that cannot drift out of relation to the spine.
 
-     The border is gone. It existed to draw the ring of an open dot; a solid
-     disc needs only a fill, and dropping it removes the last thing coupling
-     the dot's paint to --timeline-rule. Size is unaffected either way, the
-     box being border-box. */
-  background: color-mix(in oklch, var(--accent) 75%, var(--bg));
+     ⚠️ It no longer tracks --accent. That is the trade, and it is deliberate:
+     a dot defined against the line cannot also follow a colour the reader
+     picks. His last instruction names the line, so the line wins.
+
+     The border is gone. It drew the ring of an open dot; a solid disc needs
+     only a fill, and dropping it removed the last coupling between the dot's
+     paint and --timeline-rule. Size is unaffected, the box being border-box. */
+  background: var(--marker);
 }
 
 /* ⚠️ THERE USED TO BE TWO MARKERS — work filled, life open — as a second,

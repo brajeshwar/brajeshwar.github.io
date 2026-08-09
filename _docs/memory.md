@@ -316,11 +316,21 @@ options for him after his first ask — 0.1pt — measured out to 0.133px, which
 on any display. Reusing `--border-size-hairline` keeps the spine tied to the site's one hairline
 value instead of forking it. Renders as 1.5 device px at dpr 2, a clean 1px at dpr 1.
 
-Dots are `color-mix(in oklch, var(--accent) 75%, var(--bg))`, down from solid `--accent`, which
-read heavy against a hairline. **A mix, not a swap to `--text-color-lower`**, so they still track
-the accent he asked for a round earlier — and mixing toward `--bg` is right in both themes by
-construction, lightening on light and darkening on dark. Measured 0.396 on 0.97, and 0.779 on
-0.205.
+**Dots are `--marker`, DEFINED as exactly twice the spine.** `--color-marker` is a 64% mix of
+the foreground where `--color-border-structural` (the spine) is 32% — so *"just about 2x dark as
+the vertical line color"* is arithmetic, not a value matched by eye, and it survives either
+being retuned. Measured by compositing both over the page and comparing distance from it:
+**2.000× in light, 1.986× in dark** (8-bit rounding).
+
+⚠️ It took three passes, and each was a real correction rather than a wobble: solid `--accent`
+("a little more accented color") read heavy against a hairline; a 75/25 mix toward the page
+("reduce the darkness a bit") was still too dark; anchoring to the line is what he wanted, and
+is the only one of the three that cannot drift out of relation to the spine.
+
+⚠️ **The dots no longer track `--accent`.** That is the deliberate trade — a dot defined against
+the line cannot also follow a colour the reader picks in the appearance panel. His instruction
+names the line, so the line wins. **If he ever asks for accented dots again, that is a genuine
+conflict with the 2× ratio, not an oversight to quietly fix.**
 
 ⚠️ `--timeline-rule` is **load-bearing geometry**, not just a width: it also sets the list
 padding that stops entries shifting, and half the dot's left offset. All three move together.
