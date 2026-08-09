@@ -365,7 +365,7 @@
   /* A solid disc — see the note on the list-shape dot below, which carries the
      reasoning. Kept identical here: the two shapes must render the same marker
      or the three pages stop looking like one component. */
-  border: var(--timeline-rule) var(--border-style) var(--marker);
+  border: var(--timeline-rule) var(--border-style) var(--rule-strong);
   background: var(--bg-color-lower);
 }
 
@@ -499,46 +499,58 @@
   height: var(--timeline-dot);
   border-radius: 50%;
 
-  /* ⚠️ ONE RUNG ABOVE THE SPINE, not a multiple of it. --marker is a 46% mix
-     of the foreground where --rule-strong (the spine) is 32% — the same +14
-     step the ladder already takes from -strong to -structural. See themes.scss
-     for why the step and not a ratio.
+  /* ⚠️ SIX TREATMENTS ON 2026-08-09, and the sequence is kept so a seventh
+     starts from what is already ruled out — not as a war story, but because
+     four of the six were rejected for reasons that still apply:
 
-     This took four passes, and the path is worth keeping because each was a
-     real correction rather than a wobble: solid --accent ("a little more
-     accented color") read heavy against a hairline; a 75/25 mix toward the
-     page ("reduce the darkness a bit") was still too dark; twice the spine was
-     defensible arithmetic and still "too high"; one rung is where it landed.
-     The lesson is that anchoring to the spine was right and DOUBLING was the
-     wrong size of anchor — a ratio sounded principled and simply looked heavy.
+       solid --accent          read heavy against a hairline
+       75/25 mix toward page   still too dark
+       twice the spine (64%)   defensible arithmetic, "accent too high"
+       one rung up (46%)       looked LIGHTER than the line — see below
+       ring + filled centre    read as the line BREAKING at each entry
+       this                    an existing tier, opaque fill, no bespoke colour
 
-     ⚠️ It no longer tracks --accent. That is the trade, and it is deliberate:
-     a dot defined against the line cannot also follow a colour the reader
-     picks. His last instruction names the line, so the line wins.
+     ⚠️ THE 46% LESSON IS THE ONE THAT GENERALISES. It was numerically darker
+     than the 32% line and painted lighter, because a border at
+     --timeline-rule (0.75px) computes to 0.5px and antialiases to about half
+     coverage — halving its effective alpha. A background width does not.
+     **Never compare a border tier to a background tier by their numbers.**
 
-     ⚠️ THE FILL IS THE PAGE'S OWN COLOUR, AND ITS JOB IS TO MASK THE SPINE.
-     --marker is a 46% mix with TRANSPARENT, so filling the dot with it left
-     the line visible straight through the middle: "Still Wrong. Make it a
-     solid inverse color with the border color as it is now. Right now, it is
-     transparent and I can see the vertical line through it."
+     ⚠️ It no longer tracks --accent. A dot defined against the line cannot
+     also follow a colour the reader picks; his instruction named the line.
 
-     So the fill is an OPAQUE --bg-color-lower — the inverse of the ink, and
-     what the page actually paints — with the border left on --marker exactly
-     as it was. The dot reads as a node ON the line now, and the spine visibly
-     stops and restarts at its edge instead of running behind a tinted blob.
+     ⚠️ EVERY VALUE HERE IS AN EXISTING TIER — there is no bespoke colour left
+     ("We should standardize on these values"):
 
-     ⚠️ DO NOT "SIMPLIFY" THE FILL BACK TO --marker OR TO `transparent`. Both
-     render see-through, which is the defect this fixes. If it ever wants to be
-     a filled disc again, the fill must be OPAQUE — mix toward --color-bg,
-     never toward transparent.
+       border  --rule-strong        32%, the header and footer's tier
+       fill    --bg-color-lower     the page itself, OPAQUE
+       spine   --border-color-high  18%, the menu separator's tier
 
-     Five treatments so far: solid dot, open ring, ring with a filled centre,
-     solid disc, and this. The sequence is kept so a sixth starts from what has
-     already been ruled out.
+     `--color-marker`/`--marker` used to sit between them at 60% and is DELETED
+     — a tier invented for one border, retuned five times, and finally not
+     needed once the spine moved down to 18% and opened the gap.
+
+     ⚠️ THE FILL MUST STAY OPAQUE. --rule-strong and friends are mixes with
+     TRANSPARENT, so filling with one lets the spine show straight through the
+     dot — the defect that took three rounds to name. If this ever becomes a
+     filled disc again, mix toward --color-bg, never toward transparent.
+
+     ⚠️ The dot is darker than the line on purpose (32% against 18%), and the
+     line is the one that moved. Pushing the spine back up flattens the dot
+     against it again.
+
+     ⚠️ BUT THE MARGIN IS THIN, and the numbers overstate it. Measured: the
+     ring paints 0.32 alpha over a 0.5px computed border = 0.16 ink per column;
+     the spine paints 0.18 over a full 0.75px = 0.135. That is 1.19x, not the
+     1.8x the percentages suggest — the sub-pixel border eats the difference.
+     If the dot ever needs to read more distinctly, the honest lever is the
+     BORDER WIDTH, not another colour tier: --timeline-rule is what holds it at
+     0.5px computed. Five colour retunes could not fix what is a width
+     problem. */
 
      The border stays --timeline-rule wide, so the dot's edge carries exactly
      the spine's weight, and box-sizing keeps the disc at --timeline-dot. */
-  border: var(--timeline-rule) var(--border-style) var(--marker);
+  border: var(--timeline-rule) var(--border-style) var(--rule-strong);
   background: var(--bg-color-lower);
 }
 

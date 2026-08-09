@@ -281,31 +281,6 @@
      what those two are for. Still a mix of the foreground rather than a solid,
      so it follows every palette and stays a rule instead of becoming a bar. */
   --color-border-structural: color-mix(in oklch, var(--color-fg) 32%, transparent);
-  /* 60% — TWO RUNGS ABOVE -structural (32%), for the timeline dot's BORDER.
-
-     ⚠️ THIS TIER HAS MOVED TWICE AND BOTH CORRECTIONS ARE KEPT. It was 64%
-     ("exactly twice -structural") with a note telling the next person to keep
-     it at double — wrong, doubling read as too strong. Then 46%, one rung up
-     the ladder, which the rungs above justify: they go 10 -> 18 -> 32, i.e.
-     +8 then +14, so one more of the same size is 46.
-
-     ⚠️ AND 46 STILL LOOKED TOO LIGHT, for a reason that is not about colour:
-     "now the line is darker than the disc." At 46% the border was numerically
-     darker than the 32% line and painted lighter, because the border is
-     --timeline-rule wide — 0.75px, which a browser computes to 0.5px for a
-     BORDER and antialiases to roughly half coverage. Half coverage halves the
-     effective alpha, so 46% rendered like ~23% against a line rendering at a
-     full 32%. Two rungs, 32 + 14 + 14 = 60, restores the intended order.
-
-     ⚠️ SO DO NOT COMPARE THESE TWO TIERS BY THEIR NUMBERS. The spine is a
-     background width and paints fully; the dot's border is sub-pixel and does
-     not. Any retune has to be checked by looking, or by measuring composited
-     luminance — never by reading the percentages off this file.
-
-     If -structural moves, move this by the same absolute steps, not by a
-     ratio. A mix of the foreground like every tier above, so it follows the
-     palette and both themes for free. */
-  --color-marker: color-mix(in oklch, var(--color-fg) 60%, transparent);
   --color-link: var(--color-accent);
   --color-code-bg: var(--color-gray-200);
 }
@@ -606,10 +581,6 @@
   --text-muted    : var(--color-fg-muted);
   --rule          : var(--color-border);
 
-  /* The timeline's dots — twice --rule-strong's mix, by definition rather than
-     by eye. Sits here beside the rule tokens because that is what it is
-     measured against; see --color-marker for the ratio and why it must hold. */
-  --marker        : var(--color-marker);
 
   /* One notch up from --rule, for the site's two structural lines only.
      Added 2026-08-01: "Increase the border color one notch for the header and
@@ -622,14 +593,18 @@
      lines that bound the page, and the next person changing them should not
      have to reason about whether a focus outline shares the value.
 
-     ⚠️ TWO USERS ONLY: chrome.scss's header border-bottom and its footer
-     border-top. Everything else stays on --rule or --border-color-high.
+     ⚠️ THREE USERS: chrome.scss's header border-bottom, its footer border-top,
+     and the timeline dot's border in timeline.scss.
 
-     The timeline spine was briefly a third, added 2026-08-09 and removed the
-     same day — it moved to --border-color-high, the menu separator's tier,
-     which suits a vertical hairline better and made the dot read darker
-     against it. So the original constraint stands: a third user needs an
-     argument, not a precedent. */
+     ⚠️ THIS COUNT CHANGED THREE TIMES ON 2026-08-09 and the history is the
+     useful part. The timeline SPINE was added as a third user, then removed
+     when it moved to --border-color-high; then the timeline DOT's border
+     arrived here, at his ask to "standardize on these values". The dot earns
+     it where the spine did not: a dot is a discrete structural mark, the same
+     register as the two lines that bracket the page, and putting it here
+     deleted a bespoke 60% tier that had been retuned five times.
+
+     A fourth user still needs an argument, not a precedent. */
   --rule-strong   : var(--color-border-structural);
   --accent        : var(--color-accent);
   --accent-hover  : var(--color-accent-hover);
