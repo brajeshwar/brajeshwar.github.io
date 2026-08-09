@@ -108,12 +108,12 @@ Originally absorbed from the 2027 planning braindump.
 
       | `.md` twin | source | | `.md` twin | source |
       |---|---|---|---|---|
-      | `about.md` | `_pages/about.html` | | `hire.md` | `_pages/hire.html` |
+      | ~~`about.md`~~ **done** | now `_pages/about.md` | | `hire.md` | `_pages/hire.html` |
       | `album.md` | `_pages/album.html` | | `music.md` | `_pages/music.html` |
       | `archives.md` | `_pages/archives.html` | | `own.md` | `_pages/own.html` |
       | `books.md` | `_pages/books.html` | | `random.md` | `_pages/random.html` |
       | `contact.md` | `_pages/contact.html` | | `search.md` | `_pages/search.html` |
-      | `cv.md` | `_pages/cv.html` | | `styleguide.md` | `_pages/styleguide.md` |
+      | ~~`cv.md`~~ **done** | now `_pages/cv.md` | | `styleguide.md` | `_pages/styleguide.md` |
       | `devices.md` | `_pages/devices.html` | | `film.md` | `_pages/film.html` |
 
       ⚠️ This now has a reader-facing consequence: the `[md]` icon in `page-actions.html` links

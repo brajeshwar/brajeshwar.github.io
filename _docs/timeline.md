@@ -12,9 +12,11 @@ than a story with eras.
 It had a Life/Work filter until 2026-08-09. That is gone — see the section below before
 looking for it.
 
-Live at `/about/` since 2026-07-27, in `_pages/about.html`. It replaced the prose
-`_pages/about.md`, which Brajeshwar archived; that deletion is in the repo's history. The
-`_pages` collection sets `permalink: '/:name/'`, so `about.html` lands on `/about/` on its own;
+Live at `/about/` since 2026-07-27, in **`_pages/about.md`**. ⚠️ It was `about.html` from then
+until 2026-08-09, when the page went back to Markdown — so a reference to `about.html` anywhere
+is stale, not a second file. (Before 2026-07-27 there was a *different* prose `about.md`, which
+Brajeshwar archived; that deletion is in the repo's history.) The
+`_pages` collection sets `permalink: '/:name/'`, so `about.md` lands on `/about/` on its own;
 the explicit `permalink: /about/` in its front matter is belt-and-braces on a URL that must not
 move (guardrail 2). `/about/brajeshwar.com/` is a separate page with its own explicit permalink
 and is unaffected.
@@ -95,7 +97,7 @@ deliberately. A date that looks wrong is his to fix, not the component's to reor
 <div class="timeline">
 
   <!-- The h1 comes from the LAYOUT now, not from here. The clipped
-       .timeline-title-a11y this block used to show is gone from about.html;
+       .timeline-title-a11y this block used to show is gone from the page;
        the class survives in timeline.scss and is documented below because
        nothing else reintroduced it, not because the page still uses it. -->
 
@@ -158,8 +160,8 @@ at the top of that file for why a story and a CV want opposite emphasis.
 
 ## Copy-paste templates
 
-`_pages/about.html` ends with a Liquid comment holding two ready templates: a period with one
-entry of each track, and a sidenote. Copy one, paste it in place, delete the comment markers,
+`_pages/about.md` ends with a Liquid comment holding two ready templates: a period with one
+entry, and a sidenote. Copy one, paste it in place, delete the comment markers,
 edit.
 
 The comment is Liquid (`{%- comment -%}`), not HTML (`<!-- -->`), deliberately: an HTML comment
