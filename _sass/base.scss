@@ -450,8 +450,18 @@ h6 { font-size: var(--step--2); }
      so 1.2 resolved against 16px, not against the heading's 31px. */
   top: 0;
   bottom: 0;
-  left: -1.4rem;
-  width: 1.25rem;
+
+  /* ⚠️ THE GAP IS A TOKEN, NOT A MAGIC OFFSET. `left` is derived so that the
+     box's right edge lands exactly --space-3xs (5px) short of the text, which
+     is the site's smallest spacing step. Nudging this by eye is what produced
+     4px, then 2px ("too close to the titles"), then this — a distance on the
+     rhythm instead of a number someone liked.
+
+     Change --headerlink-width and the gap holds; change --space-3xs and the
+     anchor moves with every other 3xs gap on the site. */
+  --headerlink-width: 1.25rem;
+  left: calc((var(--headerlink-width) + var(--space-3xs)) * -1);
+  width: var(--headerlink-width);
 
   /* Centres the glyph in that tall box, so it sits on the heading's middle
      rather than its top, and pins it to the RIGHT edge — which is what puts it
