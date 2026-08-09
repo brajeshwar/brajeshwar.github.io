@@ -39,4 +39,5 @@ Try to be descriptive, be helpful, and be consistent.
 
 
 [^Nomenclature]: [Nomenclature](https://en.wikipedia.org/wiki/Nomenclature) is a system of names or terms, along with the rules for forming those terms within a particular field of art or science. Its principles range from the loose conventions of everyday speech to internationally agreed rules governing specialist terminology in scientific and other disciplines. Where onomastics studies names themselves, nomenclature is concerned more with the conventions by which names get made.
-[^TABLE]: The HTML `<table>` element marks up genuinely tabular data, nesting rows in `<tr>`, data cells in `<td>`, and header cells in `<th>`, optionally grouped into `<thead>`,` <tbody>`, and `<tfoot>`. A `<caption>` describes what the table holds, while scope="col" or scope="row" on header cells tells assistive technology which cells each header governs.
+
+[^TABLE]: The [<table> HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table) represents tabular data—that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.

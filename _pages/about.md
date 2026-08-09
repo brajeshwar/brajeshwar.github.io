@@ -10,7 +10,7 @@ I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https
 
 <div class="timeline" markdown="1">
 
-## 2021-present
+## 2021-2025
 
 ### Geospatial data for climate change
 
@@ -118,28 +118,24 @@ Comic magazine startup · Bombay
 
 After job-hunting for a month, I landed my first job as a Computer Graphic Designer in a Comic Magazine Startup. As part of the test for the job, they gave me a [floppy disk](https://en.wikipedia.org/wiki/Floppy_disk) which contains the files to complete a graphic editing task. In those early days, I was crashing at the Mumbai University Hostel and had no access to a computer. I went about an hour early for the Interview and finished the job at an [Internet café](https://en.wikipedia.org/wiki/Internet_caf%C3%A9) nearby. Well, they were impressed by the task and my story on how I completed it. I started work the following week.
 
-### Turned to the Internet
+### Bombay
 
-By mid-2000
+1999
 
 It was the Internet boom in India, and its proliferation was prominent. I wanted to be part of that world. Within six months through my first job, I shifted my focus to the Online World - started reading lots of books, online resources, and there was no turning back. By mid-2000, I had shifted my focus to the Internet.
 
 </div>
 
-Two decades of this is hard to compress, and some of it wants a note rather than a line in the timeline[^1]. Edit this paragraph, or delete it — nothing else depends on it.
-
-[^1]: This is the note. It can carry [links](/2026/how-to-read-a-book/) and run as long as it needs to.
-
 {%- comment -%}
-  ─────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────
   TEMPLATES — copy one, paste it in place, edit. Nothing renders.
-
   A Liquid comment and not <!-- -->: Liquid is stripped at build time and
   costs nothing shipped; an HTML comment would go out to every visitor.
-  ─────────────────────────────────────────────────────────────
-
+─────────────────────────────────────────────────────────────
   A PERIOD AND AN ENTRY
-  `##` is a period label, `###` is an entry. The heading LEVEL is the only
+  
+  - `##` is a period label.
+  - `###` is an entry. The heading LEVEL is the only
   thing telling them apart — no classes, no ids, no HTML. The line directly
   under a `###` is its sub-title, so keep the blank line between them.
 
@@ -159,8 +155,7 @@ A paragraph. [Links](https://example.com), *emphasis* and `code` all work.
 
 A sentence that needs a note[^label], and the prose carries on.
 
-[^label]: The note. It can hold [links](https://example.com) and run as long
-    as it needs to.
+[^label]: The note. It can hold [links](https://example.com) and run as long as it needs to.
 {%- endcomment -%}
 
 <script defer src="{{ '/assets/scripts/anchors.js' | relative_url }}"></script>
