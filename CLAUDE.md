@@ -64,7 +64,23 @@ that moment (`/2009/bombay/`, `/2025/people-of-the-internet/`, `/2026/books/`,
 `/2026/childhood-computing/`, `/2026/ux-nomenclature/`), and for four of them the `todo/` copy is
 the ONLY source for that URL. Moving a post there does not unpublish it; re-dating it to 2099
 does. His words: *"anything in 'todo' but with a past date is published. That is how Jekyll
-work."* — of which **1,397 have no YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
+work."*
+
+⚠️ **SO `_posts/todo/` HOLDS TWO DIFFERENT THINGS, and the date tells them apart:**
+
+| date | state | what the folder means |
+|---|---|---|
+| **2099** | not published | a genuine draft, parked until it is ready |
+| **past** | **PUBLISHED AND LIVE** | *"it is published but I want to remember to continue to work on it"* — a work-in-progress that is already public |
+
+**A past-dated file in `_posts/todo/` is not a mistake to correct.** It is his shelf for live
+articles he intends to keep editing (2026-08-09: *"when I add a published article to 'todo', it
+simply means, it is published but I want to remember to continue to work on it. The article is a
+work-in-progress but published."*).
+
+⚠️ **NEVER re-date one to 2099 to "tidy" the folder, and never move one out of it.** Either would
+unpublish a live article at a URL that is already shared — guardrail 2. If a post genuinely needs
+withdrawing, that is his call and his edit, not a cleanup. — of which **1,397 have no YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
 `jekyll-optional-front-matter`. Search is **Pagefind**, run as a post-build step.
 Deploy is **GitHub Pages via GitHub Actions** (`.github/workflows/jekyll-build-deploy.yml`):
 Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, daily cron, and manual.
