@@ -10,9 +10,16 @@
       {% include page-actions.html %}
 
   Optional overrides:
-      url    the page URL to act on          (default: page.url)
+      url    the page URL to act on            (default: page.url)
       title  used in the prompt sent to the AI (default: page.title)
-      kind   the noun in that prompt          (default: "page")
+      kind   the noun in that prompt           (default: "page")
+      pdf    set false to drop the PDF button  (default: shown)
+
+  ⚠️ `pdf=false` is what posts use. Print-to-PDF makes sense for a CV someone
+  wants to keep; it is noise on 1,457 articles, and he asked for it left off
+  until he decides whether it is wanted "along with others such as an audio in
+  the future" (2026-08-09). The button is the only optional part — everything
+  else is a plain link and costs nothing.
 
   On a post that is literally all it takes; `kind="post"` only improves the
   wording of the prompt.
@@ -95,6 +102,7 @@
     {%- include icons/markdown.svg -%}
   </a>
 
+  {%- if include.pdf != false -%}
   {%- comment -%}
     PDF is print-to-PDF, and honestly so: this is a static site with no PDF
     generator, and adding one is a much larger thing than a button. The site
@@ -111,4 +119,5 @@
           aria-label="Save as PDF" title="Save as PDF">
     {%- include icons/pdf.svg -%}
   </button>
+  {%- endif -%}
 </div>

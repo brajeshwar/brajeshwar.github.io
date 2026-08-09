@@ -17,7 +17,24 @@ layout: default
 <main role="main">
 
   <article class="post container-ideal">
-    <h1 class="page-title">{{ page.title }}</h1>
+    {%- comment -%}
+      The "Open in …" bar rides the title line, exactly as it does on /cv/ —
+      which is why the h1 and the include share a `.page-head` flex row rather
+      than sitting as siblings. See _includes/page-actions.html.
+
+      ⚠️ `pdf=false`, at his ask: print-to-PDF suits a CV someone wants to keep
+      and is noise on 1,457 articles. He is still deciding whether it belongs
+      here "along with others such as an audio in the future", so the button is
+      omitted rather than removed — one parameter brings it back.
+
+      Every post gets this with no per-post front matter: the bar derives the
+      .md twin's URL from `page.url`, and build-agent-markdown.mjs writes one
+      for every post already.
+    {%- endcomment -%}
+    <div class="page-head">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% include page-actions.html kind="post" pdf=false %}
+    </div>
     <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
     {{ content }}
   </article>

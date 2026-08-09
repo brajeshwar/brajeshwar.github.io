@@ -35,6 +35,29 @@
   gap: var(--space-2xs) var(--space-s);
 }
 
+/* ⚠️ ON A POST THE ROW MUST SPAN THE BAND, not the reading measure. `.post h1`
+   is `width: 100cqi` on purpose — "Posts titles should extend the full length
+   of the body width" (2026-07-27) — and it achieves that by overflowing the
+   `.container-ideal` article. Putting it in a flex row undid that: the flex
+   line was the article's 665px, so the title shrank to it and the bar was
+   pushed onto a second line even for a nine-character title.
+
+   So the ROW takes the breakout instead, and the title sizes to its text
+   inside it. Long titles still use the whole band; the bar still lands on the
+   band's right edge. */
+.post .page-head {
+  width: 100cqi;
+  max-width: 100cqi;
+}
+
+/* ⚠️ AND THE TITLE MUST SHRINK TO ITS TEXT. Without this it keeps `width:
+   100cqi` from post.scss, fills the row on its own and wraps the bar again.
+   (0,2,0) beats `.post h1`'s (0,1,1), so no !important is needed. */
+.page-head .page-title {
+  width: auto;
+  max-width: 100%;
+}
+
 /* The h1 owns the row's bottom margin; the bar must not add a second one. */
 .page-head .page-title,
 .page-head .page-actions {

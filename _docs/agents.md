@@ -67,9 +67,26 @@ front of them — *"Open in OpenAI · Claude | [md] [pdf]"* — modelled on
 unchanged**, since it derives everything from `page`:
 
 ```liquid
-{% include page-actions.html %}              <!-- that is the whole thing -->
-{% include page-actions.html kind="post" %}  <!-- only improves the prompt wording -->
+{% include page-actions.html %}                        <!-- a page -->
+{% include page-actions.html kind="post" pdf=false %}  <!-- what posts use -->
 ```
+
+**Every post carries it as of 2026-08-09**, from `_layouts/post.html` — no per-post front
+matter, because the bar derives the twin's URL from `page.url` and a twin already exists for all
+1,457 posts. `pdf=false` drops the print button: print-to-PDF suits a CV someone wants to keep
+and is noise on an article, and he is still deciding whether it belongs there "along with others
+such as an audio in the future".
+
+⚠️ **The script is gated on `data-page-actions-print`, not on the bar.** `page-actions.js` exists
+only to unhide the print button, so testing for `class="page-actions"` would ship it to all 1,457
+posts to do nothing.
+
+⚠️ **A post's title row breaks out to the band.** `.post h1` is `width: 100cqi` on purpose —
+"Posts titles should extend the full length of the body width" — which it achieves by
+overflowing the `.container-ideal` article. Wrapping it in a flex row undid that: the flex line
+was the article's 665px, so the title shrank and the bar wrapped underneath even for a
+nine-character title. `.post .page-head` takes the breakout instead and `.page-head .page-title`
+sizes to its text inside it.
 
 The AI links do not upload or embed anything. They open a new chat pre-filled with
 `Read <abs-url>.md — I have questions about this …`, so **the `.md` twin is the entire
