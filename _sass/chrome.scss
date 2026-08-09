@@ -172,7 +172,20 @@ site-tools {
   /* Hairline dividing the words from the glyphs. Safe to keep unconditional:
      site-nav no longer wraps at any width (the narrow rule shrinks instead of
      wrapping), so the bar can't be orphaned at the head of a second row. */
-  border-left: var(--border-size) var(--border-style) var(--rule);
+  /* ⚠️ --border-color-high (18%), NOT --rule (10%). A vertical hairline shows
+     far less of itself than a horizontal one — it is one or two device pixels
+     tall per line of text rather than spanning the page — so the tier that
+     reads correctly as a horizontal rule disappears as a pipe. Brajeshwar,
+     2026-08-09: "they are too light to be seen, use the default border color
+     (I think that is the ones lighter than the header/footer but darker than
+     the pipe separator)".
+
+     That places it exactly: darker than --rule (10%), lighter than the
+     header/footer's --rule-strong (32%). The middle rung, 18%.
+
+     ⚠️ BOTH SEPARATORS TAKE THIS — the header's and page-actions'. They do the
+     same job at the same size; if one is retuned, retune the other. */
+  border-left: var(--border-size) var(--border-style) var(--border-color-high);
   padding-left: var(--space-2xs);
   margin-left: var(--space-2xs);
 

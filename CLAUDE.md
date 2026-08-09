@@ -11,80 +11,46 @@ philosophy is [`_docs/design.md`](_docs/design.md), the visual system and CSS ar
 are [`_docs/styles.md`](_docs/styles.md), hosting is [`_docs/hosting.md`](_docs/hosting.md).
 Re-read the guardrails below before any commit-worthy change.
 
-## CLAUDE.local.md — the work queue (added 2026-08-08)
+## CLAUDE.local.md — the work queue (restructured 2026-08-09)
+
 `CLAUDE.local.md` at the repo root is Brajeshwar's running list of what to do next. **He writes
-it by hand, so it is kept bare** — no instructions, no commentary, nothing but his own lines.
-Everything about how to handle it lives HERE instead. It is **gitignored and excluded from the
-build**, so it may be absent — that is normal, not an error.
+it by hand, so it is kept bare** — no headings, no commentary, nothing but his own lines.
+**`/odo`** is the shortcut for "run it"; the full mechanics live in `.claude/commands/odo.md`
+rather than here, so they load when the command runs instead of every session.
 
-**Read it at the start of a session, after `_docs/memory.md`.** If `## DO` has items and he has
-not asked for something else, that queue *is* the work. **`/odo`** is the shortcut for "run it".
+⚠️ **THE WHOLE FILE IS THE QUEUE.** There is no `## DO` heading any more, and no
+`## MAYBE / LATER / ICEBOX` — *"anything in this file is now a do"* (2026-08-09). Everything
+below the H1 is work. The finished-item log moved out to **`CLAUDE-log.local.md`**, which is why:
+it had grown to ~1.4k tokens of completed work being read into context every session.
 
-⚠️ **His custom commands all begin with `o`** (2026-08-08). `/do` was renamed to `/odo`
-because it is a prefix of the built-in `/doctor` and he kept mis-firing it. Any command added
-later takes the same `o` — it keeps his own verbs out of the built-ins' namespace, which is
-the collision that caused this.
-
-⚠️ **`/odo` is PROJECT-SCOPED on purpose — do not promote it to `~/.claude/commands/`.**
-It is tracked in this repo (`.gitignore` excludes `.claude/*` but re-includes `commands/`), so
-it travels to any clone or machine working on brajeshwar.com and nowhere else. That is the
-intent: the queue convention is portable, but the command's body is not — it names
-`CLAUDE.local.md`, `_docs/`, guardrail 7 and this build's verify loop, none of which exist in
-another project. A user-level copy would fire in repos with no queue to read.
-
-His call, 2026-08-08: *"Keep it here for now."* The open question — where the PORTABLE half
-eventually lives, a template repo vs dotfiles vs a private `_root` — is **not this repo's to
-track**, and was moved out on 2026-08-08 to his vault at
-`~/_/Oinam/3-Resources/AI/Claude/Claude Code - Portable Setup.md`. Nothing here needs to
-change when he decides; leave `/odo` where it is until he says otherwise.
-
-Its three sections, and they are not equal:
-
-| | |
-|---|---|
-| `## DO` | **the only section to act on**, top-down, skipping anything marked `WIP` |
-| `## MAYBE / LATER / ICEBOX` | thinking aloud. **Never act on these, never ask about them.** |
-| `## DONE` | the log |
-
-- **`## DO` takes plain prose as readily as list items** (2026-08-08). A `- ` bullet, a bare
-  sentence, a paragraph — all are items, and one paragraph is one item. He is typing straight
-  into this file; making him remember a bullet is friction for no gain. Do not normalise what
-  he wrote into a list.
-- **⚠️ LEAVE `## DO` OPENING ON THREE BLANK LINES, not a bare `-`** (2026-08-08, superseding
-  the `-` placeholder added the same evening: "Instead of leaving a '-', just leave a blank line
-  for me to start. I will either add the list or prose"). A `-` presumes a bullet, and the
-  point of the section is that he can write either. So clear the section down to empty and
-  leave the whitespace; there is nothing to skip and nothing to tick.
-  **Three lines, not two** (2026-08-09: *"There was just two lines when the '## DO' item was
-  cleared. Please make it three lines, so my cursor is left in the middle one for me to start
-  writing quickly."*) — he lands on the middle one with air above and below.
-- **Work TOP-DOWN.** The first open item in `## DO` is next. *(This reversed an earlier
-  bottom-up rule on 2026-08-08. The reason is his: the dedicated `## DO` section already scopes
-  the work, so there is nothing to find by reading from the end — and top-down means he can
-  keep typing while Claude Code is mid-item without changing what is being worked on.)*
-- **⚠️ `WIP` on an item means leave it alone.** He is still writing it. Do not start it, do
-  not ask about it, do not tick it — step over it and take the next one down.
-- **`WIP` cascades to nested lists.** A daughter list inherits from its mother: if the parent
-  item is marked `WIP`, every sub-item under it is `WIP` too, whether or not each says so.
-- **One at a time**, finished — built, verified, committed — before taking the next.
-- ⚠️ **RUN THE WHOLE QUEUE WITHOUT STOPPING** (2026-08-09: *"When there are items in '## DO',
-  do it without stopping unless you need to ask me a question blocking you."*). Finish an item,
-  take the next, until `## DO` is empty. Do not report back and wait between items; do not ask
-  whether to carry on. Stop early ONLY for a genuinely blocking question — one where proceeding
-  under any assumption would be unsafe or would waste the work. A judgement call with a
-  defensible default is not blocking: choose, build, and say what you chose in the final report.
-- **Never reorder, reword or delete his lines.** Position is his instruction, not ours.
+- **Items are prose OR bullets** — a `- ` bullet, a bare sentence, a paragraph. One paragraph is
+  one item. He types straight into this file; do not normalise what he wrote into a list.
+- ⚠️ **`WIP` AT THE START OF A LINE means leave it alone.** He is still writing it — do not
+  start it, ask about it, or tick it. It cascades to anything nested beneath it.
+- **Work TOP-DOWN**, one item at a time, finished — built, verified, committed — before the next.
+- ⚠️ **Do not stop between items.** Finish one, take the next, until the file is empty. The queue
+  having items in it IS the instruction. Stop early only for a genuinely blocking question.
+- **Never reorder, reword or delete his lines.** Position is his instruction.
 - **Never push** because a queue item is done; guardrail 7 is unchanged.
-- **Done means:** mark in place as `- [x] [HH:MM] <his original text>` (24-hour local, the time
-  it was finished), then move that line under today's `- YYYY-MM-DD` root item in `## DONE` as a
-  sub-item, newest date first. Prose items become list items ONLY at this point — `## DONE` is
-  a log and wants one shape; `## DO` is an inbox and does not. Abandoned rather than finished → strike it through with a
-  one-line reason instead of deleting it. Log history, never erase it.
+- **Done means:** move the line to `CLAUDE-log.local.md` as `- [x] [HH:MM] <his original text>`
+  (24-hour local, when it was finished) under today's `- YYYY-MM-DD` root item, newest date
+  first. Prose becomes a list item only at that point — the log wants one shape, the inbox does
+  not. Abandoned rather than finished → strike it through with a one-line reason. Log history,
+  never erase it.
+- **Leave the file as the H1 plus three blank lines** when the queue is empty, so his cursor
+  lands on the middle one.
 
-⚠️ **Adding anything to the root that must not ship** — a queue, a scratch note, a TODO —
-means **two** edits: `.gitignore` keeps it out of the repo, and `_config.yml`'s `exclude:`
-keeps it out of the build. Neither implies the other. `CLAUDE.local.md` was gitignored and
-still rendering to `_site/CLAUDE.local/`.
+⚠️ **Both local files need TWO edits to stay out of the world**: `.gitignore` keeps them out of
+the repo, `_config.yml`'s `exclude:` keeps them out of the build. Neither implies the other —
+`CLAUDE.local.md` was gitignored and still rendering to `_site/CLAUDE.local/`.
+
+⚠️ **`/odo` is PROJECT-SCOPED on purpose — do not promote it to `~/.claude/commands/`.** It is
+tracked in this repo (`.gitignore` excludes `.claude/*` and re-includes `commands/`), so it
+travels to any clone of brajeshwar.com and nowhere else. Its body names `CLAUDE.local.md`,
+`_docs/`, guardrail 7 and this build's verify loop — none of which exist elsewhere. His call,
+2026-08-08: *"Keep it here for now."* Where the PORTABLE half eventually lives is not this
+repo's question; it moved to his vault at
+`~/_/Oinam/3-Resources/AI/Claude/Claude Code - Portable Setup.md`.
 
 ## What this site is
 A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are

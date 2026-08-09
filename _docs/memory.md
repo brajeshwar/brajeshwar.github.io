@@ -6,7 +6,7 @@
 
 ## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
 
-⚠️ **TWENTY-TWO commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
+⚠️ **TWENTY-SEVEN commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.** This line used to
 read "everything below is pushed and live, the tree is clean", and it stopped being true partway
 through the session without anyone updating it. Check `git log origin/main..main` before
 believing any status line in this file, including this one.
@@ -346,6 +346,42 @@ back 0.000 off, with 0.00 tip and 0.00 vertical offset.
 *(A scare that wasn't: `<footer>` itself has no border — `.footer-inner` carries it. Querying
 the wrong element made the footer look like it disagreed with the header. It does not; both are
 `--rule-strong`.)*
+
+### The local queue split in two, and why
+
+`CLAUDE.local.md` is now **the queue and nothing else** — no `## DO`, no
+`## MAYBE / LATER / ICEBOX`, no `## DONE`. Everything below its H1 is work
+(*"anything in this file is now a do"*), and `WIP` at the START of a line marks an item as
+hands-off. The finished-item log moved to **`CLAUDE-log.local.md`**.
+
+⚠️ **The reason was context cost, and he found it from the `/doctor` report.** The done-log had
+grown to ~1.4k est. tokens of *completed* work being read into context every session. After the
+split:
+
+| | before | after |
+|---|---:|---:|
+| `CLAUDE.local.md` | ~1,410 est. tokens | **~8** |
+| `CLAUDE.md`'s queue section | ~1,361 | **~735** |
+
+**~2,033 est. tokens off every session**, for guidance that was either finished or duplicated in
+`.claude/commands/odo.md`, which loads only when `/odo` runs.
+
+⚠️ **THE NEW FILE NEEDED BOTH EDITS**, the same trap as the first one: `.gitignore` keeps it out
+of the repo and `_config.yml`'s `exclude:` keeps it out of the build. Neither implies the other,
+and `CLAUDE.local.md` was gitignored while still rendering to `_site/CLAUDE.local/`. Verified
+`_site` has no `CLAUDE*` at all.
+
+### Vertical hairlines need a darker tier than horizontal ones
+
+Both pipe separators — the header's, between the nav words and the tool glyphs, and the
+`page-actions` bar's — took `--rule` (10%) and were invisible. They take `--border-color-high`
+(18%) now.
+
+The generalisable bit: **a vertical hairline shows far less of itself than a horizontal one.**
+It is one or two device pixels wide over a line or two of text, where a horizontal rule spans
+the page — so the tier that reads correctly as a rule disappears as a pipe. His placement was
+exact: *"lighter than the header/footer but darker than the pipe separator"*, which is the
+middle rung between `--rule` (10%) and `--rule-strong` (32%).
 
 ### The two habits this session kept proving
 1. **Count the items; do not trust the exit code.** A green build hid a one-item home strip, a

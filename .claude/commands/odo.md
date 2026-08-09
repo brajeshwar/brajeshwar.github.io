@@ -1,70 +1,67 @@
 ---
-description: Work the ## DO queue in CLAUDE.local.md, top-down
+description: Work the queue in CLAUDE.local.md, top-down
 ---
 
-Read `CLAUDE.local.md` at the repo root and work its **`## DO`** section.
+Read `CLAUDE.local.md` at the repo root and work it.
 
-**Order — TOP-DOWN.** Take the first open item and work down. The whole section is the work
-queue, so there is no need to hunt for the end of it: Brajeshwar keeps adding while Claude
-Code is running, and top-down means what he types next does not change what is being worked
-on right now. *(This reversed the original bottom-up rule on 2026-08-08, at his word:
-"Agree with starting from the top and not bottom up as we already ahve a dedicated '## DO'
-section to focus on.")*
+⚠️ **THE WHOLE FILE IS THE QUEUE.** There are no sections — no `## DO`, no
+`## MAYBE / LATER / ICEBOX`, no `## DONE`. Everything below the H1 is work.
+*(2026-08-09: "Do away with even the '## DO' as anything in this file is now a do. …
+Do away with the whole '## MAYBE / LATER / ICEBOX' thing.")*
+
+The finished-item log lives in **`CLAUDE-log.local.md`**. Do not read it to decide what to do —
+it is a record, not an inbox. It moved out because ~1.4k tokens of completed work were being
+read into context every session.
+
+**Order — TOP-DOWN.** Take the first open item and work down. He keeps adding while you are
+running, and top-down means what he types next does not change what is being worked on right
+now. *(Reversed from bottom-up on 2026-08-08, at his word.)*
 
 **What counts as an item**
 
-- A `- ` bullet, a bare sentence or a paragraph. All count; one paragraph is one item. He
-  types straight into this file, so do not make him remember a bullet, and do not rewrite
-  what he wrote into a list.
-- **Leave `## DO` empty when you finish — THREE blank lines, not a bare `-`.** He writes
-  either a list or prose, and a `-` presumes the bullet. Three and not two so his cursor lands
-  on the MIDDLE one and he can start typing immediately, with a line of air above and below
-  *(2026-08-09: "There was just two lines when the '## DO' item was cleared. Please make it
-  three lines, so my cursor is left in the middle one for me to start writing quickly.")*.
-
-  So the cleared section is exactly this — `## DO`, three empty lines, then the `---` rule:
+- A `- ` bullet, a bare sentence or a paragraph. All count; one paragraph is one item. He types
+  straight into this file, so do not make him remember a bullet, and do not rewrite what he
+  wrote into a list.
+- **Leave the file as its H1 plus THREE blank lines when the queue is empty** — his cursor lands
+  on the middle one, with a line of air above and below. Exactly this:
 
   ```
-  ## DO
+  # brajeshwar.com (CLAUDE.Local)
 
 
 
-  ---
   ```
 
 **What to skip**
 
-- **`WIP` on an item means leave it alone.** He is still writing it. Do not start it, do not
-  ask about it, do not tick it — step over it and take the next one down.
-- **`WIP` cascades to any nested list beneath it.** A daughter list inherits from its mother:
-  if the parent is marked `WIP`, every sub-item under it is `WIP` too, whether or not each
-  one says so.
-- **Ignore `## MAYBE / LATER / ICEBOX` entirely.** Those are not instructions.
+- ⚠️ **`WIP` AT THE START OF A LINE means leave it alone.** He is still writing it. Do not start
+  it, do not ask about it, do not tick it — step over it and take the next one down.
+  *(2026-08-09: "If I'm in a `WIP`, I will add it in the beginning of the line, anyway.")*
+- **`WIP` cascades to anything nested beneath it.** A daughter list inherits from its mother.
 
 **How to work**
 
 - One item at a time. Finish it — built, verified, committed — before starting the next.
-- ⚠️ **DO NOT STOP BETWEEN ITEMS.** Finish one, take the next, keep going until `## DO` is
-  empty. Do not report back and wait after each item, and do not ask whether to continue —
-  the queue having items in it IS the instruction to work them. *(His words, 2026-08-09:
-  "When there are items in '## DO', do it without stopping unless you need to ask me a
-  question blocking you.")*
+- ⚠️ **DO NOT STOP BETWEEN ITEMS.** Finish one, take the next, keep going until the file is
+  empty. Do not report back and wait after each item, and do not ask whether to continue — the
+  queue having items in it IS the instruction to work them. *(2026-08-09: "When there are items
+  in '## DO', do it without stopping unless you need to ask me a question blocking you.")*
 - **The only reason to stop early is a genuinely blocking question** — one where proceeding
-  under any assumption would be unsafe or would waste the work if wrong. A judgement call with
-  a defensible default is not blocking: make the call, do the work, and say what you chose in
-  the report at the end.
+  under any assumption would be unsafe or would waste the work if wrong. A judgement call with a
+  defensible default is not blocking: make the call, do the work, and say what you chose in the
+  report at the end.
 - Do not reorder, reword or delete his lines.
 - **Do not push.** Guardrail 7 is unchanged: commit, report, wait to be asked.
 
 **As each item is finished**
 
-Mark it in place as `- [x] [HH:MM] <his original text, unchanged>` using 24-hour local time,
-then move the line under today's `- YYYY-MM-DD` root item in `## DONE`, newest date first.
-Create today's date item if it does not exist. If an item is abandoned rather than finished,
-strike it through with a one-line reason instead of deleting it.
+Move it out of `CLAUDE.local.md` and into `CLAUDE-log.local.md` as
+`- [x] [HH:MM] <his original text, unchanged>`, using 24-hour local time, under today's
+`- YYYY-MM-DD` root item, newest date first. Create today's date item if it does not exist.
 
-A prose item becomes a list item only when it moves to `## DONE`, which is a log and wants one
-shape. `## DO` is an inbox and does not.
+A prose item becomes a list item only at this point — the log wants one shape, the inbox does
+not. If an item is abandoned rather than finished, strike it through with a one-line reason
+instead of deleting it. **Log history, never erase it.**
 
-If `## DO` holds nothing but blank lines and `WIP` items, it is empty for our purposes: say so
+If the file holds nothing but blank lines and `WIP` items, it is empty for our purposes: say so
 and stop — do not go looking for work elsewhere.

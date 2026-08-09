@@ -12,9 +12,12 @@ node_modules/
 .pagefind-cache/
 
 # Brajeshwar's local work queue for Claude Code (see CLAUDE.md). It is an inbox
-# of what to do next, not a record of the site — the durable record is _docs/.
-# Ignored so a half-written idea never reaches a commit or the deployed site.
+# he types into by hand, plus its done-log. Neither is anyone else's business, and
+# ⚠️ GITIGNORING THEM IS ONLY HALF THE JOB — _config.yml's `exclude:` has to list
+# them too, or Jekyll happily publishes them at /CLAUDE.local/ and
+# /CLAUDE-log.local/. That is not hypothetical; it happened.
 CLAUDE.local.md
+CLAUDE-log.local.md
 
 # Editor / tooling local state
 .claude/*
