@@ -127,9 +127,9 @@ LxiDD is a network of Indie Professionals — Designers, Developers, and Creativ
 
 2010 Nov — 2012 Dec · 2 years · Co-Founder, CEO · Mountain View (USA), Bangalore (India)
 
-Levoma is a mobile video-dating service, helping singles aged 18–30 find partners easily, quickly, and effectively. Levoma works across and between multiple devices — iPhone, iPad, Android phones, and tablets.
+Levoma is a mobile video-dating service, helping singles aged 18-30 find partners easily, quickly, and effectively. Levoma works across and between multiple devices — iPhone, iPad, Android phones, and tablets.
 
-We were the first Indian startup to graduate at the [Founder Institute](https://fi.co) in 2010–2011 Winter Silicon Valley Chapter. [Levoma](https://fi.co/companies/2884) was among the final 12 graduating companies out of its initial cohort of 50+ startups.
+We were the first Indian startup to graduate at the [Founder Institute](https://fi.co) in 2010-2011 Winter Silicon Valley Chapter. [Levoma](https://fi.co/companies/2884) was among the final 12 graduating companies out of its initial cohort of 50+ startups.
 
 Levoma released its beta App in January 2011. It was acquired by a Singapore investment firm, [Kamelot Kapital Pte Ltd](http://www.kamelotkapital.com).
 

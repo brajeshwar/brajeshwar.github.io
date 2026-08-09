@@ -11,8 +11,7 @@ I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https
 
 <div class="timeline" markdown="1">
 
-## 2021&ndash;present
-{: id="2021-present"}
+## 2021-present
 
 ### Geospatial data for climate change
 
@@ -20,8 +19,7 @@ Since 2021
 
 Since 2021, I’ve been experimenting, and building beautiful and meaningful products focusing on Geospatial Data producing solutions for Climate Change.
 
-## 2018&ndash;2019
-{: id="2018-2019"}
+## 2018-2019
 
 ### Energy storage, then precision farming
 
@@ -31,14 +29,13 @@ In 2018, I met my co-founder, Gurjot Singh, while he was experimenting with the 
 
 ### Mobisy
 
-Chief Product Officer (consulting) · 2018–2019
+Chief Product Officer (consulting) · 2018-2019
 
 Between 2018 and 2019, I consulted with [Mobisy](https://mobisy.com) as the Chief Product Officer. Mobisy is a high-growth, technology company that is transforming the retail supply ecosystems in several markets, including India, Africa, Middle East, and Europe through its products Bizom and Distiman.
 
 Mobisy’s products serve over 300 top consumer brands, including global FMCG giants such as Cargill, Unilever, Procter & Gamble, Reckitt-Benckiser, Coke, Pepsi, Mondelez, and Hershey’s. As of 2019, Mobisy’s products have over 150,000 users and reach 5 million retailers.
 
-## 2014&ndash;2016
-{: id="2014-2016"}
+## 2014-2016
 
 ### Razorfish
 
@@ -48,8 +45,7 @@ Between 2014 to 2016, I worked at [Razorfish](https://www.razorfish.com) as a Cr
 
 I helped build Aditya Birla’s ABOF.com, Johnson & Johnson Visioncare, and DMart’s eCommerce Initiative in India. I Worked with Razorfish, UK on careers.jpmorgan.com, and with Razorfish, Austin on Car2Go. I was lucky to mentor, review code and designs for MyDeposits (UK), Phaladata (USA), Zest Money (India).
 
-## 2010&ndash;2012
-{: id="2010-2012"}
+## 2010-2012
 
 ### Levoma
 
@@ -57,8 +53,7 @@ Founder · 2010, beta Jan 2011
 
 In 2010, I started Levoma, ([Web Archive](https://web.archive.org/web/20110103192618/http://levoma.com/)) a mobile video-dating service, helping singles aged 18-30, find partners easily, quickly, and effectively. We were the first Indian startup to graduate at the [Founder Institute in 2010-2011](/2011/the-founder-institute-experience/) Winter Silicon Valley Chapter. Levoma was among the final 12 graduating companies out of it’s initial cohort of 50+ startups. Levoma released its beta App in January 2011. It was acquired by a Singapore Investment firm - Kamelot Kapital Pte Ltd.
 
-## 2007&ndash;2009
-{: id="2007-2009"}
+## 2007-2009
 
 ### oCricket
 
@@ -72,8 +67,7 @@ From 2009
 
 The team of oCricket went on to become the initial team of Infinitely Beta ([Web Archive](https://web.archive.org/web/20101216104216/http://infinitelybeta.com/)). Its flagship product, Paisa.com, ([Web Archive](https://web.archive.org/web/20110707142949/http://www.paisa.com/)) was praised by industry experts and beta testers for its innovative User Interface and a never-before-done-in-India User Experience. Paisa.com was merged with [HelpShift](https://www.helpshift.com) in February 2012, which has raised venture capital from Nexus Ventures, True Ventures, and others.
 
-## 2005&ndash;2006
-{: id="2005-2006"}
+## 2005-2006
 
 ### Oinam Software
 
@@ -90,13 +84,12 @@ We also worked for many contractors who subcontracted their work to us. We were,
 <figure class="timeline-figure">
   <img src="/static/album/2006-04-08-oinam-software-acquired-by-nanocast.webp"
   alt="" width="600" height="450" loading="lazy" decoding="async">
-  <figcaption>A caption goes here &mdash; edit or delete.</figcaption>
+  <figcaption>A caption goes here — edit or delete.</figcaption>
   </figure>
 
 In 2006, Mixercast, Inc ([Web Archives](https://web.archive.org/web/20070417143812/http://www.mixercast.com/), [Crunchbase](https://www.crunchbase.com/organization/mixercast)) acquired the Oinam Team. It was an exciting experience to be part of a Startup and learn from it. Unfortunately, Mixercast was dissolved on Dec 31, 2009, after selling its IP (Intellectual Property) to erstwhile Google (now Alphabet).
 
-## 2003&ndash;2004
-{: id="2003-2004"}
+## 2003-2004
 
 ### Freelancing, full time
 
@@ -105,7 +98,6 @@ Early 2003
 In early 2003, I resigned from a very lucrative job and started freelancing full-time. During those freelance days, I did many exciting work and enjoyed every moment of it. I learned a lot from those experiences, made many friends, and hitched some of the most rewarding relationships.
 
 ## 2001
-{: id="2001"}
 
 ### brajeshwar.com
 
@@ -113,8 +105,7 @@ Jun 11, 2001
 
 The domain `brajeshwar.com` was [registered on Jun 11, 2001](/about/brajeshwar.com/).
 
-## 1999 &rsaquo;
-{: id="1999-2000"}
+## 1999 ›
 
 ### Landed in Bombay
 
@@ -156,7 +147,7 @@ It was the Internet boom in India, and its proliferation was prominent. I wanted
   <p>Two decades of this is hard to compress, and some of it wants a note rather
     than a line in the timeline<sup id="fnref:1" role="doc-noteref"><a
     href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Edit this
-    paragraph, or delete the whole block &mdash; nothing else depends on it.</p>
+    paragraph, or delete the whole block — nothing else depends on it.</p>
 
   <div class="footnotes" role="doc-endnotes">
     <ol>
@@ -186,16 +177,11 @@ It was the Internet boom in India, and its proliferation was prominent. I wanted
   Paste between two entries above and edit. This is Markdown — no
   wrappers, no classes on the entries, nothing to keep in sync.
 
-  ⚠️ THE PERIOD LABEL'S id MUST USE THE QUOTED FORM. `{: .timeline-when
-  #2003-2004}` looks right and is SILENTLY DROPPED — kramdown emits the
-  class and no id at all, which breaks /about/#2003-2004 with no error
-  anywhere. Verified 2026-08-09. Always `id="..."`.
+  A period label is just a `##`, and an entry is a `###` under it. No
+  classes, no ids, no HTML — the heading LEVEL is what tells them apart and
+  the CSS does the rest.
 
-  The id is a shareable anchor, so keep it short and stable; changing it
-  breaks any link already sent.
-
-2003&ndash;2004
-{: .timeline-when id="2003-2004"}
+2003-2004
 
 ## What happened
 

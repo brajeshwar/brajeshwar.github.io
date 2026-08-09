@@ -39,7 +39,7 @@ I booked the domain on a dare. At work, I once met an expert programmer, who sug
 
 ## Blogspot, Movable Type, then WordPress
 
-2002 &rarr; 2003–2004
+2002 → 2003-2004
 
 I moved on to Blogspot,[^Blogspot] then to Movable Type[^MovableType] in 2002, and later to WordPress[^WordPress] by 2003-2004, ever since its early beta. [I stayed with WordPress](/2024/wordpress/) for a very long time–about 18 years.
 

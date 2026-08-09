@@ -89,9 +89,14 @@ So a letter-leading heading is safe and a date-leading one is not. Nine `/about/
 were silently replaced by `section`, `section-1`, `section-2`… in a green build on 2026-08-09.
 
 ⚠️ **AND THE BARE `{: #id}` IAL DOES NOT WORK HERE EITHER** — it is accepted and ignored, and the
-heading keeps its `section` id. **Only the quoted form works: `{: id="2005-2006"}`.** That form
-also leaves the heading TEXT alone, so a label can keep its en dash while its anchor keeps the
-hyphen it has always had.
+heading keeps its `section` id. Only the quoted form works: `{: id="2005-2006"}`.
+
+**But no page uses it, deliberately.** `/about/`'s period headings ship as `section`,
+`section-1` … `section-7` and that is fine: *"do away with the ID. I don't care in this case. No
+Anchor needed … if I need to link it I will peak under the hood and what the HTML is
+generated."* (2026-08-09). ⚠️ **Do not "fix" these back into hand-written ids** — the content is
+meant to carry no ids at all. Entry headings are unaffected: they start with a letter, so
+`### Razorfish` is `razorfish` and every one of them is a usable anchor already.
 
 ⚠️ Anything claiming this site parses GFM is wrong; that claim lived in this file and cost two
 debugging passes. Test against `Kramdown::Document.new(src).to_html` with **no** `input:` option,

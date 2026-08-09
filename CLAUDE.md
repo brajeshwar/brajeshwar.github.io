@@ -103,14 +103,17 @@ paragraph beats wrapping it in `<p class="…">`. What an IAL CANNOT do, verifie
 | want | works? |
 |---|---|
 | class on a heading, paragraph or list | **yes** |
-| id — but ONLY as `id="x"` | **yes**, quoted |
-| id as bare `#x` **alongside a class** | ⚠️ **NO — silently dropped, class emitted, id absent** |
+| id — but ONLY as `id="x"` | **yes**, quoted — though no page uses it; see below |
+| id as bare `#x` | ⚠️ **NO — silently ignored, auto id kept** |
 | class on ONE list item | no — the IAL is ignored inside a list |
 | a real `<figure>` + `<figcaption>` | no — an image + IAL gives `<p class>` round an `<img>` |
 | wrapping a RANGE of blocks | no — that is what the one `markdown="1"` div is for |
 
-That third row is the dangerous one: `{: .timeline-when #2005-2006}` renders with the class and
-**no id at all**, so a shareable anchor disappears with nothing failing. Always `id="..."`.
+⚠️ **AND THIS SITE IS PLAIN KRAMDOWN, NOT GFM** — `_config.yml` sets `markdown: kramdown` with no
+`input:`. kramdown prefixes `section` to any auto id that does not start with a letter, so
+`## Razorfish` is `razorfish` but `## 2005-2006` is `section`. That is accepted on `/about/`,
+whose date headings ship as `section-1`…`section-7` by his decision — **no ids in the content**.
+Anything claiming this site parses GFM is wrong; it cost two debugging passes.
 
 ## Hard guardrails (do not violate)
 1. **Never modify content.** No edits and no added front matter under `_posts/**`, `_drafts/**`,
