@@ -50,11 +50,20 @@
   throughout.
 
   ⚠️ icons/openai.svg AND icons/claude.svg ARE HAND-DRAWN APPROXIMATIONS, not
-  the official marks — a hexagonal knot and a many-pointed burst, drawn here
-  because nothing in this repo may fetch a third-party asset at build time. If
-  the real marks are wanted, drop the official SVGs in over these two files:
-  nothing else needs to change, since the include references them by name and
-  the accessible label is carried by aria-label, not by the artwork.
+  the official marks — nothing in this repo may fetch a third-party asset at
+  build time. If the real marks are wanted, drop the official SVGs in over
+  these two files: nothing else changes, since the include references them by
+  name and the accessible label comes from aria-label, not the artwork.
+
+  ⚠️ THE OPENAI ONE IS THREE ROTATED STADIUMS, redrawn 2026-08-09 because the
+  first attempt "don't really look like one" — it was a hexagon with spokes and
+  read as a 3D box. Three rounded bars at 0/60/120 degrees give the six-lobed
+  knot with a hexagonal hole, which is the mark's actual silhouette.
+
+  Its stroke is 2.1 and the hole is deliberately large. That is tuned for 20px,
+  not for looking best in isolation: the real mark carries more internal detail
+  than survives at icon size, and thinner strokes collapsed into a blob. Judged
+  by rendering all the variants at 20px side by side, not by eye at 90px.
 
   SIZE — his question was "Is 36px a good standard for icons?" ANSWER: no, and
   the reason is that this site already answered it. --icon-button-size is 32px

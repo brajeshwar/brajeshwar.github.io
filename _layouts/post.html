@@ -18,9 +18,16 @@ layout: default
 
   <article class="post container-ideal">
     {%- comment -%}
-      The "Open in …" bar rides the title line, exactly as it does on /cv/ —
-      which is why the h1 and the include share a `.page-head` flex row rather
-      than sitting as siblings. See _includes/page-actions.html.
+      ⚠️ THE BAR SITS ON THE DATE LINE, NOT THE TITLE LINE — the opposite of
+      /cv/, and deliberately (2026-08-09: "the 'Open in' might interfere with
+      longer titles, so, let's align it in the same line as the Posted Date").
+      A post title runs long and wraps; a date never does, so the row beneath
+      is the one with room to spare.
+
+      That also puts the h1 back to being a plain sibling, which is what it
+      wants: `.post h1` is `width: 100cqi` and achieves the band breakout by
+      overflowing this .container-ideal article. Inside a flex row it could not
+      do that, and needed the row to carry the breakout instead.
 
       ⚠️ `pdf=false`, at his ask: print-to-PDF suits a CV someone wants to keep
       and is noise on 1,457 articles. He is still deciding whether it belongs
@@ -31,11 +38,11 @@ layout: default
       .md twin's URL from `page.url`, and build-agent-markdown.mjs writes one
       for every post already.
     {%- endcomment -%}
+    <h1 class="page-title">{{ page.title }}</h1>
     <div class="page-head">
-      <h1 class="page-title">{{ page.title }}</h1>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
       {% include page-actions.html kind="post" pdf=false %}
     </div>
-    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
     {{ content }}
   </article>
 

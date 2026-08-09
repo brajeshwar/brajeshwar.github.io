@@ -35,16 +35,15 @@
   gap: var(--space-2xs) var(--space-s);
 }
 
-/* ⚠️ ON A POST THE ROW MUST SPAN THE BAND, not the reading measure. `.post h1`
-   is `width: 100cqi` on purpose — "Posts titles should extend the full length
-   of the body width" (2026-07-27) — and it achieves that by overflowing the
-   `.container-ideal` article. Putting it in a flex row undid that: the flex
-   line was the article's 665px, so the title shrank to it and the bar was
-   pushed onto a second line even for a nine-character title.
+/* ⚠️ ON A POST THE ROW STILL SPANS THE BAND, even though it now carries the
+   DATE rather than the title. `.post h1` is `width: 100cqi`, so the title ends
+   on the band's right edge — and the bar has to land on that same edge or it
+   reads as misaligned with the thing above it. The row is inside the
+   .container-ideal article, so without this it would stop at 665px.
 
-   So the ROW takes the breakout instead, and the title sizes to its text
-   inside it. Long titles still use the whole band; the bar still lands on the
-   band's right edge. */
+   The title is no longer in this row at all (2026-08-09), which is the point:
+   long post titles wrap, and a wrapping title kept pushing the bar onto its
+   own line. A date never wraps. */
 .post .page-head {
   width: 100cqi;
   max-width: 100cqi;
@@ -56,6 +55,16 @@
 .page-head .page-title {
   width: auto;
   max-width: 100%;
+}
+
+/* ⚠️ `.post time` is `display: block` with `margin: … auto …`, which in a flex
+   row makes it a stretched item with auto side-margins — it would centre
+   itself and shove the bar off the end. Reset both so it sits at the row's
+   left where the prose starts. Its vertical margins are kept: they are the
+   spacing between the title, the date and the article body. */
+.page-head time {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* The h1 owns the row's bottom margin; the bar must not add a second one. */
