@@ -371,6 +371,27 @@ of the repo and `_config.yml`'s `exclude:` keeps it out of the build. Neither im
 and `CLAUDE.local.md` was gitignored while still rendering to `_site/CLAUDE.local/`. Verified
 `_site` has no `CLAUDE*` at all.
 
+### ⚠️ Sub-pixel borders lie about their own alpha — it was a WIDTH problem
+
+The timeline dot took **six colour treatments in one day** and none of them fixed it, because
+the problem was never the colour. A border declared at `--timeline-rule` (0.75px) **computes to
+0.5px** and antialiases to about half coverage, so it paints roughly half its declared alpha. A
+background width does not.
+
+Measured on the dot ring against the spine:
+
+| | alpha | computed width | ink per column | vs spine |
+|---|---|---|---|---|
+| ring at `--timeline-rule` | 0.32 | **0.5px** | 0.160 | 1.19× |
+| ring at `--border-size` | 0.32 | **1px** | 0.320 | **2.37×** |
+
+Same colour, same tier — the margin doubled on width alone. `box-sizing: border-box` keeps the
+disc at `--timeline-dot` either way, so widening the border costs no diameter.
+
+**The rule to carry forward: never compare a border tier to a background tier by their
+percentages, and when a hairline reads too weak, check the computed width before reaching for a
+darker colour.** Five retunes of `--color-marker` were spent on the wrong variable.
+
 ### The timeline spine moved to the menu separator's tier
 
 The spine is `--border-color-high` (18%) — the same token as the header's menu separator — not

@@ -365,7 +365,7 @@
   /* A solid disc — see the note on the list-shape dot below, which carries the
      reasoning. Kept identical here: the two shapes must render the same marker
      or the three pages stop looking like one component. */
-  border: var(--timeline-rule) var(--border-style) var(--rule-strong);
+  border: var(--border-size) var(--border-style) var(--rule-strong);
   background: var(--bg-color-lower);
 }
 
@@ -539,18 +539,25 @@
      line is the one that moved. Pushing the spine back up flattens the dot
      against it again.
 
-     ⚠️ BUT THE MARGIN IS THIN, and the numbers overstate it. Measured: the
-     ring paints 0.32 alpha over a 0.5px computed border = 0.16 ink per column;
-     the spine paints 0.18 over a full 0.75px = 0.135. That is 1.19x, not the
-     1.8x the percentages suggest — the sub-pixel border eats the difference.
-     If the dot ever needs to read more distinctly, the honest lever is the
-     BORDER WIDTH, not another colour tier: --timeline-rule is what holds it at
-     0.5px computed. Five colour retunes could not fix what is a width
-     problem. */
+     ⚠️ THE BORDER IS --border-size (1px), NOT --timeline-rule (0.75px), AND
+     THAT IS THE POINT. At 0.75px a border computes to 0.5px and antialiases
+     to about half coverage, so the ring painted 0.32 alpha x 0.5px = 0.16 ink
+     per column against the spine's 0.18 x 0.75px = 0.135 — a 1.19x margin
+     where the colour tiers promised 1.8x. A full 1px border keeps its alpha:
+     0.32 ink, about 2.4x the spine.
 
-     The border stays --timeline-rule wide, so the dot's edge carries exactly
-     the spine's weight, and box-sizing keeps the disc at --timeline-dot. */
-  border: var(--timeline-rule) var(--border-style) var(--rule-strong);
+     ⚠️ SO THIS WAS ALWAYS A WIDTH PROBLEM, AND FIVE COLOUR RETUNES COULD NOT
+     FIX IT. If the dot ever reads too weak or too strong again, reach for this
+     width before inventing a sixth colour tier. Sub-pixel borders lie about
+     their own alpha; background widths do not.
+
+     The dot's edge no longer matches the spine's weight, which was the reason
+     it used --timeline-rule. That tie is deliberately traded away — the dot
+     needs to out-read the line it sits on, not match it.
+
+     box-sizing keeps the disc at --timeline-dot regardless of the border,
+     so widening it costs no diameter. */
+  border: var(--border-size) var(--border-style) var(--rule-strong);
   background: var(--bg-color-lower);
 }
 
