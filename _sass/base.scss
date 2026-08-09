@@ -420,10 +420,30 @@ h6 { font-size: var(--step--2); }
    /about/ filter is built on it. */
 :is(h1, h2, h3, h4, h5, h6):has(> .headerlink) { position: relative; }
 
+/* ⚠️ SIZED IN rem, NOT INHERITED (2026-08-09: "The anchor icon is too verbose
+   now … cleaner and simpler, more subtle, smaller but still visible").
+
+   It used to be a `§` at the heading's own size, so on an --step-2 entry it
+   rendered at 31px — a bigger, louder glyph than the words it was marking. And
+   /about/ went from one anchor to twenty-three when periods and entries both
+   became headings, which is what made the size impossible to ignore.
+
+   So: a `#`, the ordinary web convention for an anchor and a simpler shape
+   than `§`; pinned to --step--1 so it is the same modest size on an h2 and an
+   h6; and positioned in rem rather than em so it sits at a constant distance
+   from the text instead of drifting with the heading it belongs to.
+
+   ⚠️ The offsets MUST be rem. In `em` they resolve against the LINK's own
+   font-size, which this rule now sets — so `left: -1em` would put the anchor
+   about 16px out on every heading, tucking it under an --step-2 title. */
 .headerlink {
   position: absolute;
-  left: -1em;
-  width: 1em;
+  left: -1.5rem;
+  width: 1.25rem;
+
+  font-size: var(--step--1);
+  font-weight: var(--font-weight);
+  line-height: inherit;
 
   text-decoration: none;
   color: var(--text-muted);
@@ -432,7 +452,7 @@ h6 { font-size: var(--step--2); }
 }
 
 :is(h1, h2, h3, h4, h5, h6):hover .headerlink,
-.headerlink:focus { opacity: 0.6; }
+.headerlink:focus { opacity: 0.45; }
 
 .headerlink:hover { opacity: 1; text-decoration: none; }
 

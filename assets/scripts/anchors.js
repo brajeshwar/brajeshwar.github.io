@@ -29,7 +29,7 @@
     var a = document.createElement('a');
     a.className = 'headerlink';
     a.href = '#' + h.id;
-    a.textContent = '§';            // §
+    a.textContent = '#';            // see .headerlink in base.scss
     a.setAttribute('aria-hidden', 'true');
     a.tabIndex = -1;
     h.insertBefore(a, h.firstChild);

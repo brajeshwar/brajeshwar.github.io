@@ -66,11 +66,17 @@ Three things that fell out, each worth keeping:
 - **Raw HTML still passes through** inside `markdown="1"`, which is how `/about/`'s period labels
   keep their shareable `id` and how the flush-right figure survives.
 
-⚠️ **One block on `/about/` stays hand-written HTML and must**: the sidenote example.
-`sidenotes.js` looks for the reference *and* the `.footnotes` list inside the same
-`.container-ideal`, and kramdown appends `.footnotes` at the very end of the document — after any
-wrapper you could open mid-page. Dropping `full: true` to make the whole article the reading
-column is the other option, and it is the 2026-08-08 bug: it clamps the 1024px timeline to 665px.
+⚠️ **`/about/` uses ordinary kramdown footnotes, and its hand-written HTML block is GONE.**
+Getting there took inverting the problem. `sidenotes.js` needs the reference *and* the
+`.footnotes` list inside one `.container-ideal`, and kramdown appends `.footnotes` at the very
+end of the document — so with `page_full: true` (which drops `.container-ideal` so the timeline
+gets the band) a `[^1]` could never become a sidenote.
+
+**So the article keeps the reading column and the TIMELINE breaks out instead** —
+`.page-about .timeline { width: var(--body-width-max); max-width: none; }`. `.container-ideal`
+is left-aligned, so a child extending right needs no negative margin; measured, the timeline's
+right edge lands exactly on `<main>`'s. Prose and notes keep the measure, the timeline gets
+1024px, the sidenote works. `page_full` still exists as a layout capability but no page uses it.
 
 ## ⚠️ THIS SITE RUNS PLAIN KRAMDOWN, NOT GFM — and heading ids prove it
 

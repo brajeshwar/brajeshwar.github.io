@@ -298,7 +298,28 @@
    --scale a paragraph would take. Getting that wrong tilts the whole spine.
    Re-measure the tip after touching any of these three tokens; the check is
    that a dot's centre and the spine's top share a y. */
+/* ⚠️ /about/ BREAKS OUT OF THE READING COLUMN, and that is what lets it have
+   sidenotes AND a full-width timeline at once.
+
+   The page used to set `page_full: true`, which drops `.container-ideal` from
+   the article so the timeline gets the whole band. But sidenotes.js needs the
+   reference and the `.footnotes` list inside a `.container-ideal`, and kramdown
+   appends `.footnotes` at the very END of the document — so with the opt-out on,
+   ordinary `[^1]` footnotes could never become sidenotes, and the page carried a
+   hand-written HTML block instead.
+
+   Inverted instead: the article IS the reading column again, and the TIMELINE
+   widens back to the band. `.container-ideal` is left-aligned, so a child simply
+   extending right needs no negative margin and overflows nothing — measured, the
+   timeline's right edge lands exactly on <main>'s. Prose and footnotes keep the
+   measure; the timeline gets 1024px; the sidenote works.
+
+   ⚠️ `max-width: none` is required. Without it the parent's cap wins and the
+   width declaration does nothing at all. */
 .page-about .timeline {
+  width: var(--body-width-max);
+  max-width: none;
+
   --timeline-spine-top: calc(
     var(--step--2) * var(--scale-small) + var(--space-m) + var(--timeline-dot-center)
   );

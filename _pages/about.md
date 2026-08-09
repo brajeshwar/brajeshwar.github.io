@@ -3,7 +3,6 @@ layout: page
 title: Brajeshwar Oinam
 permalink: /about/
 style: page-about
-page_full: true
 edited: 2026-08-09
 ---
 
@@ -127,119 +126,41 @@ It was the Internet boom in India, and its proliferation was prominent. I wanted
 
 </div>
 
-{%- comment -%}
-  ⚠️ THIS BLOCK IS HAND-WRITTEN HTML IN AN OTHERWISE-MARKDOWN FILE, and it has
-  to be. kramdown emits its `.footnotes` list at the END OF THE DOCUMENT, but
-  sidenotes.js needs the reference AND the notes list inside the SAME
-  `.container-ideal` element (it does `container.querySelector('.footnotes')`).
-  A mid-document wrapper cannot contain something kramdown appends after it.
+Two decades of this is hard to compress, and some of it wants a note rather than a line in the timeline[^1]. Edit this paragraph, or delete it — nothing else depends on it.
 
-  The alternative was dropping `full: true` so the whole article becomes the
-  reading column — which is exactly the bug fixed on 2026-08-08: it clamps the
-  1024px timeline to 665px.
-
-  So: write a real kramdown `[^1]` anywhere on this page and it renders as an
-  ordinary footnote at the foot, which works and is the documented JS-off
-  behaviour. To get the SIDENOTE treatment, add it to the block below in this
-  same form. See _docs/sidenotes.md.
-{%- endcomment -%}
-<div class="container-ideal about-notes">
-  <p>Two decades of this is hard to compress, and some of it wants a note rather
-    than a line in the timeline<sup id="fnref:1" role="doc-noteref"><a
-    href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Edit this
-    paragraph, or delete the whole block — nothing else depends on it.</p>
-
-  <div class="footnotes" role="doc-endnotes">
-    <ol>
-      <li id="fn:1" role="doc-endnote">
-        <p>This is the note. It can carry
-          <a href="/2026/how-to-read-a-book/">links</a> and run as long as it
-          needs to. <a href="#fnref:1" class="reversefootnote"
-          role="doc-backlink">&#8617;</a></p>
-      </li>
-    </ol>
-  </div>
-</div>
+[^1]: This is the note. It can carry [links](/2026/how-to-read-a-book/) and run as long as it needs to.
 
 {%- comment -%}
-     ===========================================================
-     TEMPLATES — copy one, paste it in place, delete the comment
-     markers around it, and edit. Nothing below renders.
+  ─────────────────────────────────────────────────────────────
+  TEMPLATES — copy one, paste it in place, edit. Nothing renders.
 
-     A LIQUID comment, not an HTML one, deliberately: Liquid comments are
-     stripped at build time and cost zero shipped bytes, while an
-     <!-- HTML comment --> would ship this whole block to every visitor of
-     /about/ for something only the author ever reads. Same rule the
-     layouts follow.
-     ===========================================================
+  A Liquid comment and not <!-- -->: Liquid is stripped at build time and
+  costs nothing shipped; an HTML comment would go out to every visitor.
+  ─────────────────────────────────────────────────────────────
 
-  ─── A PERIOD AND AN ENTRY ─────────────────────────────────
-  Paste between two entries above and edit. This is Markdown — no
-  wrappers, no classes on the entries, nothing to keep in sync.
+  A PERIOD AND AN ENTRY
+  `##` is a period label, `###` is an entry. The heading LEVEL is the only
+  thing telling them apart — no classes, no ids, no HTML. The line directly
+  under a `###` is its sub-title, so keep the blank line between them.
 
-  A period label is just a `##`, and an entry is a `###` under it. No
-  classes, no ids, no HTML — the heading LEVEL is what tells them apart and
-  the CSS does the rest.
+## 2003-2004
 
-2003-2004
-
-## What happened
+### What happened
 
 Role · Place · Date
 
-A paragraph. [Links](https://example.com) work as normal, and so does
-*emphasis* and `code`.
+A paragraph. [Links](https://example.com), *emphasis* and `code` all work.
 
-A second paragraph if the entry needs one.
+  A SIDENOTE
+  Ordinary kramdown footnotes. Put `[^label]` in the prose and the note
+  anywhere below; sidenotes.js moves it into the right margin on a wide
+  screen and leaves it at the foot when there is no room or no JavaScript.
+  Nothing to configure, and no HTML.
 
-  ⚠️ THE LINE DIRECTLY UNDER THE `##` IS THE SUB-TITLE — date, role, place.
-  It has no class; the CSS is `h2 + p`. Keep the blank line between them,
-  and remember a SECOND paragraph there would be styled as prose, not as
-  a second sub-title.
+A sentence that needs a note[^label], and the prose carries on.
 
-  The dot on the spine hangs off the `##`. Nothing else is needed.
-
-  ─── A SIDENOTE ───────────────────────────────────────────────
-  Sidenotes are built by assets/scripts/sidenotes.js from ordinary
-  footnote markup. In a post you would just write kramdown's [^1]; in
-  hand-written HTML like this page you emit what kramdown would have.
-
-  THREE THINGS MUST LINE UP, or nothing appears:
-    1. the wrapper carries class="container-ideal" — the script looks for
-       the reading column, and positions notes just past its right edge
-    2. the reference is <sup id="fnref:N"> containing <a href="#fn:N">
-    3. the note is <li id="fn:N"> inside <div class="footnotes">
-
-  N is any unique string; "1", "2" … is simply convention. The href and
-  the ids must match exactly — that pairing is how a note finds its
-  reference, not the order they appear in.
-
-  What you get: on a wide screen the note moves into the right margin
-  beside its reference and the block at the foot is hidden. Narrow, or
-  with JavaScript off, the footnotes stay at the foot and the links work
-  as ordinary anchors. Nothing to configure for either.
-
-  ⚠️ Put this INSIDE a .container-ideal wrapper of its own on this page —
-  the timeline itself spans the full width, and a note hung off a
-  full-width box would have no margin to sit in.
-
-<div class="container-ideal">
-  <p>A sentence that needs a note<sup id="fnref:1" role="doc-noteref"><a
-    href="#fn:1" class="footnote" rel="footnote">1</a></sup>, and the prose
-    carries on afterwards.</p>
-
-  <div class="footnotes" role="doc-endnotes">
-    <ol>
-      <li id="fn:1" role="doc-endnote">
-        <p>The note itself. It can hold <a href="https://example.com">links</a>
-          and runs as long as it needs to. <a href="#fnref:1"
-          class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-      </li>
-    </ol>
-  </div>
-</div>
-
-     ===========================================================
+[^label]: The note. It can hold [links](https://example.com) and run as long
+    as it needs to.
 {%- endcomment -%}
 
 <script defer src="{{ '/assets/scripts/anchors.js' | relative_url }}"></script>
