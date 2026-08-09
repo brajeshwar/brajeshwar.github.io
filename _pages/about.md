@@ -41,11 +41,12 @@ edited: 2026-08-09
 
 I was born in a quiet and serene, hill-surrounded green valley of [Imphal](https://en.wikipedia.org/wiki/Imphal), Manipur (INDIA), and spent all my childhood-school-life, teenage-college-life there.
 
-<pre>work-in-progress</pre>
+`work-in-progress`
 
 <div class="timeline" markdown="1">
 
-<p class="timeline-when" id="2021-present">2021&ndash;present</p>
+2021&ndash;present
+{: .timeline-when id="2021-present"}
 
 ## Geospatial data for climate change
 
@@ -53,7 +54,8 @@ Since 2021
 
 Since 2021, I’ve been experimenting, and building beautiful and meaningful products focusing on Geospatial Data producing solutions for Climate Change.
 
-<p class="timeline-when" id="2018-2019">2018&ndash;2019</p>
+2018&ndash;2019
+{: .timeline-when id="2018-2019"}
 
 ## Energy storage, then precision farming
 
@@ -69,7 +71,8 @@ Between 2018 and 2019, I consulted with [Mobisy](https://mobisy.com) as the Chie
 
 Mobisy’s products serve over 300 top consumer brands, including global FMCG giants such as Cargill, Unilever, Procter & Gamble, Reckitt-Benckiser, Coke, Pepsi, Mondelez, and Hershey’s. As of 2019, Mobisy’s products have over 150,000 users and reach 5 million retailers.
 
-<p class="timeline-when" id="2014-2016">2014&ndash;2016</p>
+2014&ndash;2016
+{: .timeline-when id="2014-2016"}
 
 ## Razorfish
 
@@ -79,7 +82,8 @@ Between 2014 to 2016, I worked at [Razorfish](https://www.razorfish.com) as a Cr
 
 I helped build Aditya Birla’s ABOF.com, Johnson & Johnson Visioncare, and DMart’s eCommerce Initiative in India. I Worked with Razorfish, UK on careers.jpmorgan.com, and with Razorfish, Austin on Car2Go. I was lucky to mentor, review code and designs for MyDeposits (UK), Phaladata (USA), Zest Money (India).
 
-<p class="timeline-when" id="2010-2012">2010&ndash;2012</p>
+2010&ndash;2012
+{: .timeline-when id="2010-2012"}
 
 ## Levoma
 
@@ -87,7 +91,8 @@ Founder · 2010, beta Jan 2011
 
 In 2010, I started Levoma, ([Web Archive](https://web.archive.org/web/20110103192618/http://levoma.com/)) a mobile video-dating service, helping singles aged 18-30, find partners easily, quickly, and effectively. We were the first Indian startup to graduate at the [Founder Institute in 2010-2011](/2011/the-founder-institute-experience/) Winter Silicon Valley Chapter. Levoma was among the final 12 graduating companies out of it’s initial cohort of 50+ startups. Levoma released its beta App in January 2011. It was acquired by a Singapore Investment firm - Kamelot Kapital Pte Ltd.
 
-<p class="timeline-when" id="2007-2009">2007&ndash;2009</p>
+2007&ndash;2009
+{: .timeline-when id="2007-2009"}
 
 ## oCricket
 
@@ -101,7 +106,8 @@ From 2009
 
 The team of oCricket went on to become the initial team of Infinitely Beta ([Web Archive](https://web.archive.org/web/20101216104216/http://infinitelybeta.com/)). Its flagship product, Paisa.com, ([Web Archive](https://web.archive.org/web/20110707142949/http://www.paisa.com/)) was praised by industry experts and beta testers for its innovative User Interface and a never-before-done-in-India User Experience. Paisa.com was merged with [HelpShift](https://www.helpshift.com) in February 2012, which has raised venture capital from Nexus Ventures, True Ventures, and others.
 
-<p class="timeline-when" id="2005-2006">2005&ndash;2006</p>
+2005&ndash;2006
+{: .timeline-when id="2005-2006"}
 
 ## Oinam Software
 
@@ -123,7 +129,8 @@ We also worked for many contractors who subcontracted their work to us. We were,
 
 In 2006, Mixercast, Inc ([Web Archives](https://web.archive.org/web/20070417143812/http://www.mixercast.com/), [Crunchbase](https://www.crunchbase.com/organization/mixercast)) acquired the Oinam Team. It was an exciting experience to be part of a Startup and learn from it. Unfortunately, Mixercast was dissolved on Dec 31, 2009, after selling its IP (Intellectual Property) to erstwhile Google (now Alphabet).
 
-<p class="timeline-when" id="2003-2004">2003&ndash;2004</p>
+2003&ndash;2004
+{: .timeline-when id="2003-2004"}
 
 ## Freelancing, full time
 
@@ -131,7 +138,8 @@ Early 2003
 
 In early 2003, I resigned from a very lucrative job and started freelancing full-time. During those freelance days, I did many exciting work and enjoyed every moment of it. I learned a lot from those experiences, made many friends, and hitched some of the most rewarding relationships.
 
-<p class="timeline-when" id="2001">2001</p>
+2001
+{: .timeline-when id="2001"}
 
 ## brajeshwar.com
 
@@ -139,7 +147,8 @@ Jun 11, 2001
 
 The domain `brajeshwar.com` was [registered on Jun 11, 2001](/about/brajeshwar.com/).
 
-<p class="timeline-when" id="1999-2000">1999 ›</p>
+1999 ›
+{: .timeline-when id="1999-2000"}
 
 ## Landed in Bombay
 
@@ -207,37 +216,36 @@ It was the Internet boom in India, and its proliferation was prominent. I wanted
      layouts follow.
      ===========================================================
 
-  ─── A PERIOD, with one entry of each track ────────────────────
-  Drop this between two <section>s above. The label text is free
-  ("early 1980s", "1993-1995", "Bangalore years" — anything). The id is
-  what /about/#the-id links to and what the hovered § copies, so keep it
-  short and stable; changing it breaks any link already shared.
+  ─── A PERIOD AND AN ENTRY ─────────────────────────────────
+  Paste between two entries above and edit. This is Markdown — no
+  wrappers, no classes on the entries, nothing to keep in sync.
 
-  timeline-meta is the entry's SUB-TITLE — the date, and whatever role or
-  place belongs with it. This is where a year goes now that the heading is
-  the event.
+  ⚠️ THE PERIOD LABEL'S id MUST USE THE QUOTED FORM. `{: .timeline-when
+  #2003-2004}` looks right and is SILENTLY DROPPED — kramdown emits the
+  class and no id at all, which breaks /about/#2003-2004 with no error
+  anywhere. Verified 2026-08-09. Always `id="..."`.
 
-<section class="timeline-period" aria-labelledby="2027">
-    <p class="timeline-when" id="2027">2027</p>
-  <ol class="timeline-entries">
-    <div class="timeline-progress" aria-hidden="true"></div>
+  The id is a shareable anchor, so keep it short and stable; changing it
+  breaks any link already sent.
 
-    <li class="timeline-entry">
-      <h2 class="timeline-title">What happened</h2>
-      <p class="timeline-meta">Role &middot; Place &middot; Date</p>
-      <p>A paragraph. <a href="https://example.com">Links</a> work as normal,
-        and so does <em>emphasis</em> and <code>code</code>.</p>
-      <p>A second paragraph if the entry needs one.</p>
-    </li>
+2003&ndash;2004
+{: .timeline-when id="2003-2004"}
 
-    <li class="timeline-entry">
-      <h2 class="timeline-title">Something personal</h2>
-      <p>Every entry renders the same marker. There were two — an open dot for
-        life, a filled one for work — until the filter went; one style is what
-        makes /about/, /cv/ and /now/ read as the same timeline.</p>
-    </li>
-  </ol>
-</section>
+## What happened
+
+Role · Place · Date
+
+A paragraph. [Links](https://example.com) work as normal, and so does
+*emphasis* and `code`.
+
+A second paragraph if the entry needs one.
+
+  ⚠️ THE LINE DIRECTLY UNDER THE `##` IS THE SUB-TITLE — date, role, place.
+  It has no class; the CSS is `h2 + p`. Keep the blank line between them,
+  and remember a SECOND paragraph there would be styled as prose, not as
+  a second sub-title.
+
+  The dot on the spine hangs off the `##`. Nothing else is needed.
 
   ─── A SIDENOTE ───────────────────────────────────────────────
   Sidenotes are built by assets/scripts/sidenotes.js from ordinary

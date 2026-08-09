@@ -87,6 +87,31 @@ work-in-progress but published."*).
 unpublish a live article at a URL that is already shared — guardrail 2. If a post genuinely needs
 withdrawing, that is his call and his edit, not a cleanup.
 
+## Content style — his standing principle (2026-08-09)
+
+> *"my idea is to be as simplified and clean as possible in the contents, be consistent there.
+> The heavy lifting is done by the CSS styles and some tiny uses of raw JavaScript that can keep
+> changing."*
+
+**So the content files are the thing to protect, and the CSS is the thing to spend on.** When a
+page can be plainer Markdown at the cost of a more complicated selector, take that trade — the
+prose outlives the stylesheet. `/about/` and `/cv/` became Markdown for exactly this reason.
+
+⚠️ **kramdown DOES take CSS classes — use an IAL, not a tag.** `{: .timeline-when}` under a
+paragraph beats wrapping it in `<p class="…">`. What an IAL CANNOT do, verified 2026-08-09:
+
+| want | works? |
+|---|---|
+| class on a heading, paragraph or list | **yes** |
+| id — but ONLY as `id="x"` | **yes**, quoted |
+| id as bare `#x` **alongside a class** | ⚠️ **NO — silently dropped, class emitted, id absent** |
+| class on ONE list item | no — the IAL is ignored inside a list |
+| a real `<figure>` + `<figcaption>` | no — an image + IAL gives `<p class>` round an `<img>` |
+| wrapping a RANGE of blocks | no — that is what the one `markdown="1"` div is for |
+
+That third row is the dangerous one: `{: .timeline-when #2005-2006}` renders with the class and
+**no id at all**, so a shareable anchor disappears with nothing failing. Always `id="..."`.
+
 ## Hard guardrails (do not violate)
 1. **Never modify content.** No edits and no added front matter under `_posts/**`, `_drafts/**`,
    or `_pages/**` prose bodies. Do not touch `_data/**` except when asked — the books shelf
