@@ -55,7 +55,16 @@ repo's question; it moved to his vault at
 ## What this site is
 A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are
 future-dated and `future: false` holds them back (the 2099-dated drafts in `_posts/todo/`, plus
-any post scheduled ahead) — of which **1,397 have no YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
+any post scheduled ahead)
+
+⚠️ **`_posts/todo/` IS JUST A FOLDER — IT PUBLISHES NOTHING AND HIDES NOTHING.** Jekyll collects
+`_posts/**` recursively, so a subdirectory namespaces nothing: **the DATE is the only thing that
+holds a post back.** Verified 2026-08-09 — five past-dated files in `_posts/todo/` were live at
+that moment (`/2009/bombay/`, `/2025/people-of-the-internet/`, `/2026/books/`,
+`/2026/childhood-computing/`, `/2026/ux-nomenclature/`), and for four of them the `todo/` copy is
+the ONLY source for that URL. Moving a post there does not unpublish it; re-dating it to 2099
+does. His words: *"anything in 'todo' but with a past date is published. That is how Jekyll
+work."* — of which **1,397 have no YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
 `jekyll-optional-front-matter`. Search is **Pagefind**, run as a post-build step.
 Deploy is **GitHub Pages via GitHub Actions** (`.github/workflows/jekyll-build-deploy.yml`):
 Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, daily cron, and manual.
@@ -100,20 +109,17 @@ Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, dai
 9. **Reviewable diffs.** Work phase by phase per the spec; don't mix refactor and redesign.
 
 ## Project shape (keep it)
-- CSS = **18 plainly-named Sass partials** in **`_sass/`** (`config`, `themes`, `base`, `chrome`,
-  `cards`, `bookplate`, `post`, `page`, `album`, + per-page one-offs
-  `home`/`archives`/`search`/`now`/`timeline`/`own`/`cv`, plus the variables-only `breakpoints`
-  and the not-yet-wired `bookmarks`), compiled by
+- CSS = **plainly-named Sass partials in `_sass/`**, compiled by
   **`assets/styles/site.scss`** into ONE external stylesheet. Flattened from 25 numbered ITCSS
   partials on 2026-07-19 — **don't reintroduce numeric prefixes**; cascade order lives in
   `site.scss`, and `config` must stay first.
-  One file, **10.9KB gzip / 54.9KB raw** (measured 2026-08-09, after the timeline spine work).
-  ⚠️ It keeps getting SMALLER while gaining partials, so do not extrapolate from a file count.
-  In one day: `cv.scss` arrived, `search.scss` gave back ~7KB raw when `/search/` moved to the
-  Modular UI, `timeline.scss` gave back ~157 lines when the Life/Work filter went, `cv.scss`
-  then shrank to one rule when `/cv/` joined the timeline, and the spine rewrite added a little
-  back. **This number went stale FOUR times in that one day — measure it, never carry it
-  forward, and do not bother citing it in a commit message.**
+  ⚠️ **The count and the byte size used to be written here and are deliberately gone.** Both are
+  one command away (`ls _sass/`, `gzip -c _site/assets/styles/site.css | wc -c`), and both went
+  stale repeatedly — the size five times in a single day, the count within an hour of being
+  corrected. A number that has to be hand-synced with the build is a number that will lie to
+  you. Measure it when you need it; never cite it in a commit message.
+  ⚠️ And do not infer size from the count: the stylesheet keeps getting SMALLER while gaining
+  partials, because most partials that arrive replace something larger.
 - **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
   them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
   because an underscore directory is never copied to the output — sources under `assets/`
