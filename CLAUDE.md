@@ -50,11 +50,14 @@ Its three sections, and they are not equal:
   sentence, a paragraph — all are items, and one paragraph is one item. He is typing straight
   into this file; making him remember a bullet is friction for no gain. Do not normalise what
   he wrote into a list.
-- **⚠️ LEAVE `## DO` OPENING ON A BLANK LINE, not a bare `-`** (2026-08-08, superseding the
-  `-` placeholder added the same evening: "Instead of leaving a '-', just leave a blank line
+- **⚠️ LEAVE `## DO` OPENING ON THREE BLANK LINES, not a bare `-`** (2026-08-08, superseding
+  the `-` placeholder added the same evening: "Instead of leaving a '-', just leave a blank line
   for me to start. I will either add the list or prose"). A `-` presumes a bullet, and the
   point of the section is that he can write either. So clear the section down to empty and
   leave the whitespace; there is nothing to skip and nothing to tick.
+  **Three lines, not two** (2026-08-09: *"There was just two lines when the '## DO' item was
+  cleared. Please make it three lines, so my cursor is left in the middle one for me to start
+  writing quickly."*) — he lands on the middle one with air above and below.
 - **Work TOP-DOWN.** The first open item in `## DO` is next. *(This reversed an earlier
   bottom-up rule on 2026-08-08. The reason is his: the dedicated `## DO` section already scopes
   the work, so there is nothing to find by reading from the end — and top-down means he can

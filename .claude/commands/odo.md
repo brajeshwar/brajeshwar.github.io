@@ -16,8 +16,21 @@ section to focus on.")*
 - A `- ` bullet, a bare sentence or a paragraph. All count; one paragraph is one item. He
   types straight into this file, so do not make him remember a bullet, and do not rewrite
   what he wrote into a list.
-- **Leave `## DO` empty when you finish — a blank line, not a bare `-`.** He writes either a
-  list or prose, and a `-` presumes the bullet. Nothing to skip, nothing to tick.
+- **Leave `## DO` empty when you finish — THREE blank lines, not a bare `-`.** He writes
+  either a list or prose, and a `-` presumes the bullet. Three and not two so his cursor lands
+  on the MIDDLE one and he can start typing immediately, with a line of air above and below
+  *(2026-08-09: "There was just two lines when the '## DO' item was cleared. Please make it
+  three lines, so my cursor is left in the middle one for me to start writing quickly.")*.
+
+  So the cleared section is exactly this — `## DO`, three empty lines, then the `---` rule:
+
+  ```
+  ## DO
+
+
+
+  ---
+  ```
 
 **What to skip**
 
