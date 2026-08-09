@@ -88,6 +88,18 @@ Originally absorbed from the 2027 planning braindump.
       `h2` and the event in an `h3` — right for a story, backwards for a CV. `/about/` got the
       same inversion the same day (events as titles), which is why the two now agree on emphasis
       while keeping different structures.
+- [ ] **Dead timeline CSS to remove.** Converting `/about/` and `/cv/` to Markdown on
+      2026-08-09 orphaned most of the list-shape vocabulary in `_sass/timeline.scss`. Verified
+      against the built HTML — these now match nothing: `.timeline-entries`, `.timeline-entry`,
+      `.timeline-title`, `.timeline-meta`, `.timeline-period`, `.timeline-progress` (with its
+      `@supports` and reduced-motion blocks), `.timeline-intro`, `.timeline-title-a11y`. Still
+      live: `.timeline-when` (9 period labels), `.timeline-figure`, and every `.page-now ul`
+      selector.
+      ⚠️ **Attempted and reverted the same day.** The shared rules pair a dead selector with a
+      live one (`.timeline-entries, .page-now ul { … }`), and a regex sweep took `.page-now ul`
+      out with them — `/now/` lost its spine. Do this by hand, one rule at a time, diffing the
+      built `.page-now` declarations after each. Roughly 190 lines.
+
 - [ ] **Twelve HTML pages still emit HTML, not Markdown, in their `.md` twins.** ⚠️ Was 14; `/cv/` and `/about/` were converted to Markdown sources on 2026-08-09 and are fixed.
       `scripts/build-agent-markdown.mjs` assumes a Markdown source — true for all 1,457 posts,
       false for every page converted to `.html` since 2026-08-01. Author-only build comments

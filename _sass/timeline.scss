@@ -361,7 +361,14 @@
   width: var(--timeline-dot);
   height: var(--timeline-dot);
   border-radius: 50%;
-  background: var(--marker);
+
+  /* A ring with a filled centre — see the note on the list-shape dot below,
+     which carries the reasoning for all three layers. Kept identical here:
+     the two shapes must render the same marker or the three pages stop
+     looking like one component. */
+  border: var(--border-size) var(--border-style) var(--marker);
+  background-color: var(--bg-color-lower);
+  background-image: radial-gradient(circle at center, var(--marker) 0 2px, transparent 2px);
 }
 
 /* --timeline-dot-center for the heading flow. Same definition the list shape
@@ -501,10 +508,28 @@
      a dot defined against the line cannot also follow a colour the reader
      picks. His last instruction names the line, so the line wins.
 
-     The border is gone. It drew the ring of an open dot; a solid disc needs
-     only a fill, and dropping it removed the last coupling between the dot's
-     paint and --timeline-rule. Size is unaffected, the box being border-box. */
-  background: var(--marker);
+     ⚠️ THE BORDER IS BACK, and so is a ring — this note said the opposite for
+     one build ("a solid disc needs only a fill"). It is a ring with a FILLED
+     CENTRE now: "For the solid dot on the vertical line, I think this is not
+     working. Can we make it a circle instead with filled center."
+
+     Three layers in one element, outside in:
+       border            the ring — --border-size of --marker
+       background-color  the gap — the PAGE colour, which is what lets the ring
+                         read as a ring rather than as a fatter dot
+       background-image  the core — a radial-gradient solid to 2px, then clear
+
+     A gradient rather than a second pseudo-element: ::before is the dot and
+     ::after is free, but it would need its own copy of the centring
+     arithmetic, and one element cannot drift from itself.
+
+     ⚠️ The gradient paints the PADDING box — --timeline-dot minus both
+     borders. Widen the ring and the gap narrows with it; the core stays 4px
+     across because its radius is absolute, which is what keeps it visible at
+     11px. */
+  border: var(--border-size) var(--border-style) var(--marker);
+  background-color: var(--bg-color-lower);
+  background-image: radial-gradient(circle at center, var(--marker) 0 2px, transparent 2px);
 }
 
 /* ⚠️ THERE USED TO BE TWO MARKERS — work filled, life open — as a second,
