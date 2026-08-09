@@ -5,7 +5,7 @@ description: Work the queue in CLAUDE.local.md, top-down
 Read `CLAUDE.local.md` at the repo root and work it.
 
 ⚠️ **THE WHOLE FILE IS THE QUEUE.** There are no sections — no `## DO`, no
-`## MAYBE / LATER / ICEBOX`, no `## DONE`. Everything below the H1 is work.
+`## MAYBE / LATER / ICEBOX`, no `## DONE`. The file has no headings at all — every line in it is work.
 *(2026-08-09: "Do away with even the '## DO' as anything in this file is now a do. …
 Do away with the whole '## MAYBE / LATER / ICEBOX' thing.")*
 
@@ -22,15 +22,13 @@ now. *(Reversed from bottom-up on 2026-08-08, at his word.)*
 - A `- ` bullet, a bare sentence or a paragraph. All count; one paragraph is one item. He types
   straight into this file, so do not make him remember a bullet, and do not rewrite what he
   wrote into a list.
-- **Leave the file as its H1 plus THREE blank lines when the queue is empty** — his cursor lands
-  on the middle one, with a line of air above and below. Exactly this:
+- ⚠️ **LEAVE THE FILE COMPLETELY EMPTY when the queue is done — no H1, no heading, nothing.**
+  Zero bytes, so his cursor is at the very first character. *(2026-08-09: "Do not add the title
+  or anything in the 'CLAUDE.local.md' file. When done and moved, it should be a clean slate. No
+  Titles, no nothing - pure plain blank, starting at the very beginning.")*
 
-  ```
-  # brajeshwar.com (CLAUDE.Local)
-
-
-
-  ```
+  This SUPERSEDES the earlier "H1 plus three blank lines" rule. Do not restore the title, and do
+  not leave placeholder newlines — both are things to delete before he can type.
 
 **What to skip**
 

@@ -19,8 +19,7 @@ it by hand, so it is kept bare** — no headings, no commentary, nothing but his
 rather than here, so they load when the command runs instead of every session.
 
 ⚠️ **THE WHOLE FILE IS THE QUEUE.** There is no `## DO` heading any more, and no
-`## MAYBE / LATER / ICEBOX` — *"anything in this file is now a do"* (2026-08-09). Everything
-below the H1 is work. The finished-item log moved out to **`CLAUDE.local.log.md`**, which is why:
+`## MAYBE / LATER / ICEBOX` — *"anything in this file is now a do"* (2026-08-09). The file has no headings at all — every line in it is work. The finished-item log moved out to **`CLAUDE.local.log.md`**, which is why:
 it had grown to ~1.4k tokens of completed work being read into context every session.
 
 - **Items are prose OR bullets** — a `- ` bullet, a bare sentence, a paragraph. One paragraph is
@@ -37,8 +36,10 @@ it had grown to ~1.4k tokens of completed work being read into context every ses
   first. Prose becomes a list item only at that point — the log wants one shape, the inbox does
   not. Abandoned rather than finished → strike it through with a one-line reason. Log history,
   never erase it.
-- **Leave the file as the H1 plus three blank lines** when the queue is empty, so his cursor
-  lands on the middle one.
+- ⚠️ **Leave the file COMPLETELY EMPTY when the queue is done** — no H1, no heading, no
+  placeholder newlines. Zero bytes, cursor at the first character (2026-08-09: *"No Titles, no
+  nothing - pure plain blank, starting at the very beginning."*). This superseded an earlier
+  "H1 plus three blank lines" rule; anything left in the file is something he has to delete.
 
 ⚠️ **Both local files need TWO edits to stay out of the world**: `.gitignore` keeps them out of
 the repo, `_config.yml`'s `exclude:` keeps them out of the build. Neither implies the other —
@@ -55,7 +56,11 @@ repo's question; it moved to his vault at
 ## What this site is
 A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are
 future-dated and `future: false` holds them back (the 2099-dated drafts in `_posts/todo/`, plus
-any post scheduled ahead)
+any post scheduled ahead) — of which **1,397 have no YAML front matter** — titles come from the
+`# H1` via `jekyll-titles-from-headings` + `jekyll-optional-front-matter`. Search is **Pagefind**,
+run as a post-build step.
+Deploy is **GitHub Pages via GitHub Actions** (`.github/workflows/jekyll-build-deploy.yml`):
+Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, daily cron, and manual.
 
 ⚠️ **`_posts/todo/` IS JUST A FOLDER — IT PUBLISHES NOTHING AND HIDES NOTHING.** Jekyll collects
 `_posts/**` recursively, so a subdirectory namespaces nothing: **the DATE is the only thing that
@@ -80,10 +85,7 @@ work-in-progress but published."*).
 
 ⚠️ **NEVER re-date one to 2099 to "tidy" the folder, and never move one out of it.** Either would
 unpublish a live article at a URL that is already shared — guardrail 2. If a post genuinely needs
-withdrawing, that is his call and his edit, not a cleanup. — of which **1,397 have no YAML front matter** — titles come from the `# H1` via `jekyll-titles-from-headings` +
-`jekyll-optional-front-matter`. Search is **Pagefind**, run as a post-build step.
-Deploy is **GitHub Pages via GitHub Actions** (`.github/workflows/jekyll-build-deploy.yml`):
-Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, daily cron, and manual.
+withdrawing, that is his call and his edit, not a cleanup.
 
 ## Hard guardrails (do not violate)
 1. **Never modify content.** No edits and no added front matter under `_posts/**`, `_drafts/**`,

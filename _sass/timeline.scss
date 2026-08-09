@@ -366,7 +366,7 @@
      reasoning. Kept identical here: the two shapes must render the same marker
      or the three pages stop looking like one component. */
   border: var(--timeline-rule) var(--border-style) var(--marker);
-  background: var(--marker);
+  background: var(--bg-color-lower);
 }
 
 /* --timeline-dot-center for the heading flow. Same definition the list shape
@@ -506,21 +506,30 @@
      a dot defined against the line cannot also follow a colour the reader
      picks. His last instruction names the line, so the line wins.
 
-     ⚠️ A SOLID DISC, and the ring is gone — this rule has now been a solid
-     dot, an open ring, a ring with a filled centre, and a solid disc again.
-     The last change: "Remove the inner dot in that solid circle … It should
-     just be one solid circle with a border (same 0.75px as the vertical line)
-     and filled." The filled centre read as the line BREAKING at each entry
-     rather than as a marker sitting on it, which is the opposite of what a
-     timeline dot is for.
+     ⚠️ THE FILL IS THE PAGE'S OWN COLOUR, AND ITS JOB IS TO MASK THE SPINE.
+     --marker is a 46% mix with TRANSPARENT, so filling the dot with it left
+     the line visible straight through the middle: "Still Wrong. Make it a
+     solid inverse color with the border color as it is now. Right now, it is
+     transparent and I can see the vertical line through it."
 
-     ⚠️ THE BORDER IS DECLARED AND IS THE SAME COLOUR AS THE FILL — that is
-     deliberate, not a leftover. It is --timeline-rule wide, so the dot's edge
-     carries exactly the spine's weight, and box-sizing keeps the disc at
-     --timeline-dot either way. Dropping it would render identically today and
-     lose the tie to the line the moment either is retuned. */
+     So the fill is an OPAQUE --bg-color-lower — the inverse of the ink, and
+     what the page actually paints — with the border left on --marker exactly
+     as it was. The dot reads as a node ON the line now, and the spine visibly
+     stops and restarts at its edge instead of running behind a tinted blob.
+
+     ⚠️ DO NOT "SIMPLIFY" THE FILL BACK TO --marker OR TO `transparent`. Both
+     render see-through, which is the defect this fixes. If it ever wants to be
+     a filled disc again, the fill must be OPAQUE — mix toward --color-bg,
+     never toward transparent.
+
+     Five treatments so far: solid dot, open ring, ring with a filled centre,
+     solid disc, and this. The sequence is kept so a sixth starts from what has
+     already been ruled out.
+
+     The border stays --timeline-rule wide, so the dot's edge carries exactly
+     the spine's weight, and box-sizing keeps the disc at --timeline-dot. */
   border: var(--timeline-rule) var(--border-style) var(--marker);
-  background: var(--marker);
+  background: var(--bg-color-lower);
 }
 
 /* ⚠️ THERE USED TO BE TWO MARKERS — work filled, life open — as a second,
