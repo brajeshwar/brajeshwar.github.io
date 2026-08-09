@@ -78,6 +78,24 @@ is left-aligned, so a child extending right needs no negative margin; measured, 
 right edge lands exactly on `<main>`'s. Prose and notes keep the measure, the timeline gets
 1024px, the sidenote works. `page_full` still exists as a layout capability but no page uses it.
 
+## ⚠️ /about/ has no period grouping any more (2026-08-09)
+
+Entries are a flat sequence of `##` headings, each carrying its own date on the line beneath.
+The year labels are gone — *"we should get rid of the '##' with the years"* — and with them the
+`.page-about .timeline h2` label styling, its `content: none` dot suppression, and the
+`--timeline-spine-top` offset that pushed the spine past the first label.
+
+**Every timeline page now has the same shape: `##` is an entry, full stop.** `/cv/`, `/about/`
+and `/about/brajeshwar.com/` are identical; `/now/` keeps its `ul`/`li` shape.
+
+An entry also takes base.scss's h2 with no local `font-size` — *"the styling should be the
+default '##' styling like other titles of Headings-2"*. `--timeline-dot-center` is derived from
+`--step-2`, which is what a default h2 renders at, so the dot arithmetic needs nothing set here.
+
+⚠️ If grouping ever returns, **the heading LEVEL is the mechanism** — `##` for the group, `###`
+for the entry — and the entry selectors in `timeline.scss` would need to take `h3` as well. Do
+not reintroduce a label class.
+
 ## ⚠️ THIS SITE RUNS PLAIN KRAMDOWN, NOT GFM — and heading ids prove it
 
 `_config.yml` sets `markdown: kramdown` and **no `input:`**, so the GFM parser is not in play.
