@@ -38,14 +38,50 @@ We build with GitHub Actions, not with GitHub Pages' own Jekyll. The Pages
 github-pages gem and no longer applies to us. Gemfile.lock is the source of truth, which is
 how we run Jekyll 4.
 
-- Ruby 3.3.5, pinned in the workflow.
+- Ruby 3.3.5 — pinned in TWO places: `.ruby-version` at the repo root and the workflow's
+  hardcoded `ruby-version: '3.3.5'`. They agree by hand, not by construction, and nothing
+  would report it if they drifted.
+
+  ⚠️ **GitHub Pages imposes no Ruby version on this site, and never did.** There is no
+  github-pages gem in the Gemfile, and the workflow hands deploy-pages a finished static
+  artifact — Pages never runs Ruby on our behalf. The Pages
+  [dependency versions](https://pages.github.com/versions/) list applies to "Deploy from a
+  branch" sites only. Any claim that it constrains us is wrong, including the one that put
+  this pin here in the first place.
+
+  **Why 3.3.5, then** — traced from the git history 2026-08-09, because the question keeps
+  coming back and the answer was not written down:
+
+  - `a49019b7` (2025-06-28) set **3.3.4** to match the Pages builder: *"Ruby version updated
+    Github Pages version of 3.3.4"*. That is the misreading above, and it was never a real
+    constraint.
+  - `4eaedc06` moved to **3.4.4**, and `f96455cc` reverted it hours later:
+    *"Cloudflare is not happy with the latest Ruby version"*. **That is the real reason we
+    are on this branch** — and it is almost certainly an image limitation, not a gem
+    incompatibility. Cloudflare was on the v2 build image, which ships Ruby 3.2.2; asking it
+    for 3.4.4 fails because the image has not got it.
+
+  Nothing in the dependency tree holds us here: sass-embedded is the strictest at `>= 3.1`,
+  Jekyll 4.4.1 asks only `>= 2.7.0`, and `logger` is already in the Gemfile — the
+  forward-compat fix for the stdlib gems that stopped shipping as defaults after 3.3.
+  ⚠️ An unbounded `>= 2.7.0` is the absence of a block, not evidence of coverage; it says
+  nothing about a Ruby released after the gem.
+
+  3.3.5 is also **seven patches behind its own branch** — 3.3.12 is current, and 3.4.10 and
+  4.0.6 are the other stable lines ruby-build offers. Revisiting the bump was **deferred on
+  2026-08-09, not rejected**. When it happens, move the WORKFLOW's value first and leave
+  `.ruby-version` alone: that is what makes it a canary rather than a simultaneous move on
+  every builder — see the Cloudflare section for why the two files are not interchangeable.
 - Jekyll 4.4.1, kramdown 2.5.1, kramdown-parser-gfm 1.1.0, Liquid 4.0.4, Rouge 4.5.2.
 - Dart Sass: jekyll-sass-converter 3.1.0, sass-embedded 1.89.2. The old Sass 3.7.4 line
   meant Ruby Sass.
 - Five plugins: jekyll-feed 0.17.0, jekyll-sitemap 1.4.0, jekyll-paginate 1.1.0,
   jekyll-optional-front-matter 0.3.2, jekyll-titles-from-headings 0.5.3.
-- Actions: checkout@v4, setup-ruby@v1, setup-node@v4, configure-pages@v5,
-  upload-pages-artifact@v3, deploy-pages@v4.
+- Actions: checkout@v7, setup-ruby@v1, setup-node@v7, configure-pages@v6,
+  upload-pages-artifact@v5, deploy-pages@v5.
+  ⚠️ Corrected 2026-08-09 — this line had gone stale at v4/v4/v5/v3/v4 and was five
+  majors wrong in one bullet. Don't trust it; read it off the workflow, which takes one
+  command: `grep -oE "uses: [^ ]+" .github/workflows/jekyll-build-deploy.yml`.
 - Node 22 LTS, to run Pagefind, scripts/build-agent-markdown.mjs, and the esbuild minify
   step. build-agent-markdown.mjs imports nothing beyond node:fs and node:path, so there is
   still no package.json and no npm dependency tree to carry. Bumped from 18 on 2026-07-27;
@@ -188,13 +224,48 @@ would also leak into local dev and into the Actions build. (Override files exist
 change our mind; the v2 image, Ruby 3.2.2 / Node 18.17.1, is deprecated on 23 Feb 2027, so
 stay on v3.)
 
-A consequence worth knowing: the two builders now run different Ruby and Node versions,
-Actions on Ruby 3.3.5 / Node 22, Cloudflare on whatever v3 ships. That is a feature here.
-The backup building green on newer versions is early warning that an upgrade on the Actions
-side would be safe.
+### ⚠️ Correction, 2026-08-09 — the paragraph above describes a repo that does not exist
 
-The old README line claimed Ruby 3.3.5 was "the one working with CloudFlare Pages." Nothing
-in the repo records why it was really picked, and it is not a Cloudflare requirement.
+The decision stands. **Two of the facts it rests on are wrong**, and they are kept above
+rather than edited away because the reasoning is worth reading — but do not act on them.
+
+**1. `.ruby-version` is in the repo, and always was.** The line *"we deliberately do not add
+a .ruby-version or .nvmrc to the repo root"* was false the day it was written (2026-07-28):
+`.ruby-version` has been tracked, containing `3.3.5`, since 2025-06-28, and it is not
+gitignored. Verify in one command — `git ls-files .ruby-version`.
+
+⚠️ **So Cloudflare very probably reads it.** Pages honours `.ruby-version` from the repo it
+clones, which means the backup is building on **3.3.5**, not on v3's 3.4.4. The paragraph's
+own caveat — *"override files exist if we ever change our mind"* — is exactly what is
+happening; nobody noticed one was already there. `.nvmrc` genuinely is absent, so the Node
+half of the claim holds.
+
+⚠️ **And that kills the "feature".** The replaced text argued that Actions and Cloudflare
+running different Rubies gave early warning that an upgrade would be safe. **There is no
+staggering and no early warning** — both builders are on 3.3.5, and the backup being green
+says nothing about a newer Ruby. Anyone reaching for it as evidence for a version bump is
+reaching for something that does not exist.
+
+**The one line that settles it** is in the Cloudflare Pages build log, which prints the Ruby
+it installs. That has not been checked; until it is, treat "the backup runs on 3.4.4" as
+unverified and probably false.
+
+**2. The repo does record why 3.3.5 was picked.** The replaced text said *"nothing in the
+repo records why it was really picked."* It does: commit `f96455cc`, *"Cloudflare is not
+happy with the latest Ruby version"*, reverting 3.4.4 the same day it was tried. The full
+trace is under **GitHub → Versions** above.
+
+The conclusion there survives intact, though: it is **not a standing Cloudflare
+requirement**. The v2 image of the time shipped Ruby 3.2.2 and could not supply 3.4.4 — an
+image limitation that v3 does not have.
+
+⚠️ **Consequence for any future bump: `.ruby-version` and the workflow pin are NOT
+interchangeable.** Editing `.ruby-version` moves local dev *and* the Cloudflare backup at
+once; editing the workflow moves production alone. Move the workflow first, so the standby
+stays on the old Ruby and is worth something if the new one breaks. And check
+`git diff Gemfile.lock` afterwards — the lock has no `RUBY VERSION` block today, and a
+newer bundler writing one would pin Cloudflare too, which is the very thing the 2026-07-26
+decision set out to avoid.
 
 Things to keep straight:
 

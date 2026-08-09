@@ -453,6 +453,51 @@ middle rung between `--rule` (10%) and `--rule-strong` (32%).
    `config.scss` aligns its colons — `--border-size           : 1px;` — so a search for
    `--border-size:` returns nothing and every alias token looks undefined. The ground truth is
    the built `site.css`, not the source.
+5. **A doc is a claim, not a fact.** `_docs/hosting.md` asserted the repo had no
+   `.ruby-version`; it has had one since 2025-06-28. Reading the doc and believing it nearly
+   produced a confidently wrong recommendation. Check the assertion, then read the doc.
+
+### Ruby 3.3.5 — why we are on it, and why the reason no longer holds (2026-08-09)
+
+Asked why the build is "stuck" on Ruby 3.3.5, and what GitHub Pages supports.
+
+⚠️ **GitHub Pages supports nothing here, because it never builds this site.** No
+github-pages gem, and the workflow hands `deploy-pages` a finished static artifact. The
+[Pages dependency versions](https://pages.github.com/versions/) list — Jekyll 3.10, and a
+Ruby of its own — governs "Deploy from a branch" sites only. **We can run any Ruby we like.**
+That answer will be needed again; it is written up in full under *GitHub → Versions* in
+[`hosting.md`](hosting.md).
+
+The pin's real origin is in the git log, all on 2025-06-28: `a49019b7` set 3.3.4 *"Github
+Pages version of 3.3.4"* (the misreading above), `4eaedc06` tried 3.4.4, and `f96455cc`
+reverted it hours later — *"Cloudflare is not happy with the latest Ruby version"*. The
+Cloudflare v2 image of the day shipped Ruby 3.2.2 and could not supply 3.4.4, so that was an
+image limitation, not a gem incompatibility. **Nothing in the dependency tree pins us:**
+sass-embedded is strictest at `>= 3.1`, Jekyll 4.4.1 asks `>= 2.7.0`, and `logger` is already
+in the Gemfile. 3.3.5 is seven patches behind its own branch (3.3.12 is current).
+
+⚠️ **Two claims in `hosting.md` were false and are now corrected in place** — the file keeps
+the original text with a dated correction beneath it, per the log-history rule:
+
+| the doc said | actually |
+|---|---|
+| *"we deliberately do not add a .ruby-version"* | it is tracked, `3.3.5`, since 2025-06-28 — and was there when that line was written |
+| *"nothing in the repo records why it was really picked"* | `f96455cc` records it verbatim |
+
+The first one matters most, because a **whole argument was built on it**: the doc claimed
+Actions and Cloudflare ran different Rubies, making the backup an early warning that an
+upgrade was safe. Cloudflare reads `.ruby-version` from the repo it clones, so **both
+builders are on 3.3.5 and that early warning does not exist.** The Cloudflare build log
+prints the Ruby it installs and would settle it in one line; that has not been checked.
+
+⚠️ **`.ruby-version` and the workflow pin are not interchangeable.** `.ruby-version` moves
+local dev *and* the backup; the workflow moves production alone. **A bump goes into the
+workflow first** — that is what keeps the standby on the old Ruby and therefore worth having.
+(This reverses a suggestion made earlier the same day to point CI at `.ruby-version` for a
+single source of truth: it is a single source of truth, and that is exactly the problem.)
+
+**The bump itself is deferred, not rejected** — his call: *"We will revisit this later."*
+3.4.10 is the target when it happens, not 4.0.6.
 
 ## Session record — 2026-08-04, seventh session (superseded as the index head, kept per the log-history rule)
 

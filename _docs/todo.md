@@ -661,7 +661,21 @@ sidenotes for the kids-smartwatch post. These are what it left open:
       which is also what the site is developed against locally. Node only runs the agent-markdown
       script and Pagefind, so nothing was broken; it was an unsupported runtime sitting in the
       deploy path. `build-agent-markdown.mjs` verified on 22 (1,479 files + llms.txt).
-      *(Ruby is on 3.3.5, which is current.)* ⚠️ Watch the first Actions run after this ships.
+      ~~*(Ruby is on 3.3.5, which is current.)*~~ ⚠️ **That parenthetical was wrong when
+      written and is wronger now** — corrected 2026-08-09. See the Ruby item below.
+      ⚠️ Watch the first Actions run after this ships.
+- [ ] **Ruby is on 3.3.5, seven patches behind its own branch** *(deferred 2026-08-09 — "we
+      will revisit this later")*. 3.3.12 is the current patch; 3.4.10 and 4.0.6 are the other
+      stable lines. **Target 3.4.10, not 4.0.6.** Nothing blocks it: sass-embedded is strictest
+      at `>= 3.1`, Jekyll 4.4.1 asks `>= 2.7.0`, and `logger` is already in the Gemfile for the
+      stdlib gems that stopped being defaults after 3.3.
+      ⚠️ **GitHub Pages is not the constraint and never was** — no github-pages gem, and Pages
+      only receives a static artifact. The pin came from a 2025-06-28 Cloudflare failure
+      (`f96455cc`) against a v2 build image that shipped Ruby 3.2.2 and could not supply 3.4.4.
+      ⚠️ **Bump the WORKFLOW value first, not `.ruby-version`** — the latter moves local dev and
+      the Cloudflare backup too, and the point of the standby is to still be on the old Ruby if
+      the new one breaks. Then `git diff Gemfile.lock`: a `RUBY VERSION` block appearing there
+      would pin Cloudflare as well. Full trace in [`hosting.md`](hosting.md) → *Versions*.
 - [ ] **Back to Top's height gate reads `scrollHeight` once, before images load.** The control is
       only built on a page taller than 2.5 viewports, measured at `DOMContentLoaded` — so a long
       gallery whose images have no intrinsic height yet can fail the test and never get one.
