@@ -88,7 +88,7 @@ Originally absorbed from the 2027 planning braindump.
       `h2` and the event in an `h3` — right for a story, backwards for a CV. `/about/` got the
       same inversion the same day (events as titles), which is why the two now agree on emphasis
       while keeping different structures.
-- [ ] **The 14 HTML pages emit HTML, not Markdown, in their `.md` twins.**
+- [ ] **Twelve HTML pages still emit HTML, not Markdown, in their `.md` twins.** ⚠️ Was 14; `/cv/` and `/about/` were converted to Markdown sources on 2026-08-09 and are fixed.
       `scripts/build-agent-markdown.mjs` assumes a Markdown source — true for all 1,457 posts,
       false for every page converted to `.html` since 2026-08-01. Author-only build comments
       were stripped on 2026-08-09 (that part is fixed and shipped), but the markup remains.

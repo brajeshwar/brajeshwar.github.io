@@ -285,10 +285,32 @@
   content: "";
   position: absolute;
   left: 0;
-  top: var(--timeline-dot-center);
+  top: var(--timeline-spine-top, var(--timeline-dot-center));
   bottom: 0;
   width: var(--timeline-rule);
   background: var(--rule-strong);
+}
+
+/* ⚠️ /about/ OPENS WITH A PERIOD LABEL, NOT A HEADING — and that put the
+   hanging tip back. The default above assumes the first child is the h2 whose
+   dot the line must start at, which is true on /cv/ and false here: a
+   `.timeline-when` sits above the first entry, so the line began 50.7px too
+   high. Measured, not guessed.
+
+   The offset is the label's own line box plus the gap to the heading below it.
+   That gap is a COLLAPSED margin — the label's `margin-bottom` (--space-xs)
+   and the heading's `margin-top` (--space-m) collapse to the larger, so it is
+   --space-m and not their sum. Getting that wrong is a 15px error that looks
+   like a rounding bug.
+
+   ⚠️ THIS CALC DEPENDS ON THREE TOKENS staying in step with the label's own
+   rule: --step--2 and --scale are its type, --space-m is the heading's top
+   margin. Re-measure the tip after touching any of them; the check is that a
+   dot's centre and the spine's top sit at the same y. */
+.timeline:has(> .timeline-when:first-child) {
+  --timeline-spine-top: calc(
+    var(--step--2) * var(--scale) + var(--space-m) + var(--timeline-dot-center)
+  );
 }
 
 /* An entry title. `position: relative` anchors its dot; the top margin is the
@@ -297,6 +319,15 @@
   position: relative;
   margin: var(--space-m) 0 var(--space-3xs);
   max-width: var(--measure);
+
+  /* ⚠️ CONTAINS THE FLOATED .timeline-figure, and this replaces the
+     `display: flow-root` the old <li> carried. With no per-entry element there
+     is nothing to establish a formatting context around the picture, so
+     containment moves to the NEXT entry instead: `clear: right` starts each
+     heading below any figure still hanging beside the one above it. Without
+     it the Mixercast picture spills into the following period, which is the
+     exact bug flow-root was added for on 2026-08-08. */
+  clear: right;
 }
 
 .timeline > h2:first-child { margin-top: 0; }

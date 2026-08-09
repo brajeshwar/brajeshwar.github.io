@@ -19,48 +19,56 @@ the explicit `permalink: /about/` in its front matter is belt-and-braces on a UR
 move (guardrail 2). `/about/brajeshwar.com/` is a separate page with its own explicit permalink
 and is unaffected.
 
-## Why HTML, not Markdown
+## ⚠️ Markdown after all — the HTML decision was REVERSED (2026-08-09)
 
-**Decided: HTML, and it stays HTML.** He asked three times — 2026-08-08 ("Will it be easier in
-Markdown instead of HTML…"), 2026-08-09 ("would it not be easier to have Markdown instead now
-that they are clean and separate"), and again the same night ("Did we took a decision to stay
-with HTML instead of Markdown?"). Recording it here so the answer stops being re-derived.
+**This section argued for HTML three times in two days and was wrong. `/about/` and `/cv/` are
+Markdown now.** The reversal is left loud rather than tidied away, because the mistake is
+instructive: the *premise* was correct and the *conclusion* drawn from it was not.
 
-Brajeshwar's older call was *"Markdown should be for prose in posts, others are exempt."* The
-reason given at the time — that each entry needed a machine-readable `life` / `work` tag —
-**is gone**, along with the filter. The decision survives on a different and stronger reason:
+The premise, still true and still worth knowing: **kramdown does not parse Markdown inside
+block-level HTML.** Verified twice against this site's own GFM parser — a `[link](…)` inside a
+`<li>` reaches the browser as literal text.
 
-**kramdown does not parse Markdown inside block-level HTML.** Both `/about/` and `/cv/` need a
-wrapper element per item to carry the classes the CSS targets (`.timeline-entry`,
-`.timeline-title`, `.timeline-meta`). The prose lives *inside* those wrappers — which is exactly
-where Markdown stops working. Verified 2026-08-09 against this site's own parser
-(`input: GFM`):
+The wrong conclusion: that every entry would therefore need `markdown="1"`, which is more markup
+than it saves. **One `markdown="1"` on the outer `<div>` makes the entire body Markdown.** The
+per-entry wrappers were never a Markdown problem at all — they were a CSS demand for
+`<li class="timeline-entry">`. Removing that demand (the heading-flow rules in `timeline.scss`)
+removed the blocker, and what is left is:
 
+```markdown
+<div class="timeline" markdown="1">
+
+## Valinor Earth
+
+2021 Jan — Present · Co-Founder, CEO
+
+Prose, with [links](https://example.com) and *emphasis* that actually work.
+
+</div>
 ```
-<li class="timeline-entry">
-<h2 class="timeline-title">Razorfish</h2>
 
-I led the creative design at [Razorfish](https://www.razorfish.com) and *learned* a lot.
-</li>
-```
+What made it worth doing was never authoring comfort — it was **`/cv.md` and `/about.md`**, the
+plain-text twins the "Open in" bar hands to an AI, which were shipping raw HTML because the
+source was HTML. His ask: *"'film' will never need a view as Markdown, hence HTML but about, cv,
+and now can definitely be just Markdown."* So the split is by PURPOSE: pages an agent might be
+asked to read are Markdown; index pages built from data (`/film/`, `/books/`, `/album/`,
+`/own/`) stay HTML, where the markup IS the page.
 
-renders the link and the emphasis **literally** — `[Razorfish](…)` and `*learned*` reach the
-browser as text. Adding `markdown="1"` to every wrapper fixes it, and that is *more* markup per
-entry than the HTML it was meant to save. So a Markdown `/about/` would be a file where the
-Markdown does not work in the only places there is any prose.
+Three things that fell out, each worth keeping:
 
-The third option, a YAML data file with a template, is what he ruled out himself when splitting
-`/cv/` off: *"I have a better idea to avoid using a YAML."* And he is comfortable here: *"I'm Ok
-sticking to HTML as I can edit HTML pretty well."*
+- **The anchors come free.** kramdown derives a heading id from its text, so `## Razorfish` is
+  `id="razorfish"`. All thirteen `/cv/#<company>` links resolve with nothing written by hand —
+  checked against the old file before converting. ⚠️ Rename a heading and you rename its anchor.
+- **Footnotes become real.** `[^1]` emits exactly the markup `sidenotes.js` expects, so guardrail
+  5 is satisfied by the parser instead of by hand-written `<sup id="fnref:1">`.
+- **Raw HTML still passes through** inside `markdown="1"`, which is how `/about/`'s period labels
+  keep their shareable `id` and how the flush-right figure survives.
 
-⚠️ **This is a fact about the parser, not a preference.** If it is ever revisited, test it
-first — the `markdown="1"` attribute is the whole question, not the file extension.
-
-Two parser facts are worth keeping, since they cost a test to establish. The site runs kramdown
-with `input: GFM` (Jekyll's default; `kramdown-parser-gfm` is in the Gemfile because of it).
-That matters for numeric headings: under GFM `## 1993-1995` gets `id="1993-1995"`, but under
-plain kramdown it collapses to `id="section"`. Any anchor scheme built on date headings in
-Markdown would have been parser-dependent. In HTML we write the `id` ourselves.
+⚠️ **One block on `/about/` stays hand-written HTML and must**: the sidenote example.
+`sidenotes.js` looks for the reference *and* the `.footnotes` list inside the same
+`.container-ideal`, and kramdown appends `.footnotes` at the very end of the document — after any
+wrapper you could open mid-page. Dropping `full: true` to make the whole article the reading
+column is the other option, and it is the 2026-08-08 bug: it clamps the 1024px timeline to 665px.
 
 ## The markup
 
