@@ -362,13 +362,11 @@
   height: var(--timeline-dot);
   border-radius: 50%;
 
-  /* A ring with a filled centre — see the note on the list-shape dot below,
-     which carries the reasoning for all three layers. Kept identical here:
-     the two shapes must render the same marker or the three pages stop
-     looking like one component. */
-  border: var(--border-size) var(--border-style) var(--marker);
-  background-color: var(--bg-color-lower);
-  background-image: radial-gradient(circle at center, var(--marker) 0 2px, transparent 2px);
+  /* A solid disc — see the note on the list-shape dot below, which carries the
+     reasoning. Kept identical here: the two shapes must render the same marker
+     or the three pages stop looking like one component. */
+  border: var(--timeline-rule) var(--border-style) var(--marker);
+  background: var(--marker);
 }
 
 /* --timeline-dot-center for the heading flow. Same definition the list shape
@@ -508,28 +506,21 @@
      a dot defined against the line cannot also follow a colour the reader
      picks. His last instruction names the line, so the line wins.
 
-     ⚠️ THE BORDER IS BACK, and so is a ring — this note said the opposite for
-     one build ("a solid disc needs only a fill"). It is a ring with a FILLED
-     CENTRE now: "For the solid dot on the vertical line, I think this is not
-     working. Can we make it a circle instead with filled center."
+     ⚠️ A SOLID DISC, and the ring is gone — this rule has now been a solid
+     dot, an open ring, a ring with a filled centre, and a solid disc again.
+     The last change: "Remove the inner dot in that solid circle … It should
+     just be one solid circle with a border (same 0.75px as the vertical line)
+     and filled." The filled centre read as the line BREAKING at each entry
+     rather than as a marker sitting on it, which is the opposite of what a
+     timeline dot is for.
 
-     Three layers in one element, outside in:
-       border            the ring — --border-size of --marker
-       background-color  the gap — the PAGE colour, which is what lets the ring
-                         read as a ring rather than as a fatter dot
-       background-image  the core — a radial-gradient solid to 2px, then clear
-
-     A gradient rather than a second pseudo-element: ::before is the dot and
-     ::after is free, but it would need its own copy of the centring
-     arithmetic, and one element cannot drift from itself.
-
-     ⚠️ The gradient paints the PADDING box — --timeline-dot minus both
-     borders. Widen the ring and the gap narrows with it; the core stays 4px
-     across because its radius is absolute, which is what keeps it visible at
-     11px. */
-  border: var(--border-size) var(--border-style) var(--marker);
-  background-color: var(--bg-color-lower);
-  background-image: radial-gradient(circle at center, var(--marker) 0 2px, transparent 2px);
+     ⚠️ THE BORDER IS DECLARED AND IS THE SAME COLOUR AS THE FILL — that is
+     deliberate, not a leftover. It is --timeline-rule wide, so the dot's edge
+     carries exactly the spine's weight, and box-sizing keeps the disc at
+     --timeline-dot either way. Dropping it would render identically today and
+     lose the tie to the line the moment either is retuned. */
+  border: var(--timeline-rule) var(--border-style) var(--marker);
+  background: var(--marker);
 }
 
 /* ⚠️ THERE USED TO BE TWO MARKERS — work filled, life open — as a second,
