@@ -233,6 +233,110 @@
    site-wide component and now lives in exactly one place.
    ------------------------------------------------------------ */
 
+/* ============================================================
+   HEADING-FLOW TIMELINE — /cv/ and /about/, from a MARKDOWN source
+   ------------------------------------------------------------
+   ⚠️ ADDED 2026-08-09, AND IT REVERSES THIS REPO'S "HTML, NOT MARKDOWN"
+   DECISION for these two pages. That decision rested on a real parser fact —
+   kramdown does not parse Markdown inside block-level HTML — and on the
+   belief that every entry therefore needed its own `markdown="1"` wrapper,
+   which is more markup than the HTML it would save.
+
+   The belief was wrong. ONE `markdown="1"` on the outer <div> makes the whole
+   body Markdown; the per-entry wrappers were only ever needed because the CSS
+   demanded `<li class="timeline-entry">`. Take that demand away and an entry
+   is just a heading followed by paragraphs, which is what Markdown is for.
+
+   His ask (2026-08-09): "will it not be better off as an original Markdown
+   file … 'film' will never need a view as Markdown, hence HTML but about, cv,
+   and now can definitely be just Markdown."
+
+   THE SHAPE, and it is all of it:
+
+       <div class="timeline" markdown="1">
+       ## Valinor Earth                     <- entry title, dot hangs off it
+       2021 Jan — Present · Co-Founder      <- FIRST paragraph = the sub-title
+       Prose…                               <- every later paragraph
+       </div>
+
+   ⚠️ THE ids COME FREE, and that is what made this safe. kramdown derives a
+   heading id from its TEXT, so `## Razorfish` is `id="razorfish"` — every one
+   of /cv/'s thirteen shared anchors resolves unchanged, with nothing written
+   by hand. Verified against all thirteen before converting.
+
+   ⚠️ /now/ DOES NOT USE THIS. It keeps the `ul`/`li` shape below, because its
+   entries are bullets with no titles. This file carries two vocabularies on
+   purpose; the older one is not dead.
+   ============================================================ */
+
+.timeline {
+  position: relative;
+  /* The rule's width is absorbed here so entries line up exactly as they did
+     under the old `.timeline-entries` padding — see the note on the spine. */
+  padding-left: calc(var(--timeline-gutter) + var(--timeline-rule));
+}
+
+/* The spine. Starts at the first dot's centre, ends with the container.
+
+   ⚠️ `top` IS THE FIRST DOT'S CENTRE, which only equals --timeline-dot-center
+   because the first heading's top margin is zeroed just below. Leave that rule
+   in place or the line detaches from the dot it is supposed to start at. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: var(--timeline-dot-center);
+  bottom: 0;
+  width: var(--timeline-rule);
+  background: var(--rule-strong);
+}
+
+/* An entry title. `position: relative` anchors its dot; the top margin is the
+   gap between entries, and is what --timeline-entry-gap used to do on the li. */
+.timeline h2 {
+  position: relative;
+  margin: var(--space-m) 0 var(--space-3xs);
+  max-width: var(--measure);
+}
+
+.timeline > h2:first-child { margin-top: 0; }
+
+/* THE SUB-TITLE — the first paragraph after a heading, and no authoring syntax
+   for it. This was `<p class="timeline-meta">` in the HTML; as a Markdown page
+   there is nothing to hang a class on, and nothing needs to be: "the line
+   right under the title" is exactly what `h2 + p` means. Guardrail 5's spirit
+   — no new authoring syntax — applied to a component rather than to notes. */
+.timeline h2 + p {
+  margin: 0 0 var(--space-2xs);
+  font-size: var(--step--1);
+  color: var(--text-color-lower);
+  max-width: var(--measure);
+}
+
+/* Prose keeps the reading measure; the spine spans the full band. */
+.timeline p,
+.timeline li {
+  max-width: var(--measure);
+}
+
+/* The dot, hanging off the heading. Same arithmetic as the list version below
+   — it has to be, since both must centre on the same spine. */
+.timeline h2::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--timeline-dot-center) - (var(--timeline-dot) / 2));
+  left: calc((var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1);
+
+  width: var(--timeline-dot);
+  height: var(--timeline-dot);
+  border-radius: 50%;
+  background: var(--marker);
+}
+
+/* --timeline-dot-center for the heading flow. Same definition the list shape
+   uses, restated because it must resolve against .timeline rather than a list. */
+.timeline { --timeline-dot-center: calc(var(--step-2) * var(--scale-small) / 2); }
+
 /* ---- Where a dot sits, and therefore where the spine starts ------
    ⚠️ ONE NUMBER DRIVES THREE THINGS: the dot's vertical position, the top of
    the spine, and the top of the progress fill. Define it once, here, as the
