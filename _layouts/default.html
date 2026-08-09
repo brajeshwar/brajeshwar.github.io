@@ -107,6 +107,14 @@
   on all ~1,484 pages while reading as correct.
 {%- endcomment -%}
 {% if content contains 'class="strip__viewport"' %}<script defer src="{{ '/assets/scripts/strip-nav.js' | relative_url }}"></script>{% endif %}
+
+{%- comment -%}
+  Page actions ("Open in …"), only where the include was used. Same literal-string
+  gate as the three above, and the same trap: keep the test inline. A captured
+  variable is a truthy Liquid object, and `contains` on one fails silently AND
+  truthily, so hoisting it would ship this script to all ~1,470 pages.
+{%- endcomment -%}
+{% if content contains 'class="page-actions"' %}<script defer src="{{ '/assets/scripts/page-actions.js' | relative_url }}"></script>{% endif %}
 {%- comment -%}
   Back to Top. Site-wide, but self-limiting: the script returns immediately on
   a page that isn't tall enough to need one, so short pages pay a parse and

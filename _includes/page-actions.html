@@ -1,0 +1,96 @@
+{%- comment -%}
+  PAGE ACTIONS — "Open in OpenAI · Claude | [md] [pdf]"
+
+  Built 2026-08-09, modelled on the bar at https://ovellum.oss.oinam.com/docs/.
+  Brajeshwar: "Start with /cv/ but prepare that we will likely have this with
+  others such as the posts."
+
+  USAGE — nothing is required; every page can include it unchanged:
+
+      {% include page-actions.html %}
+
+  Optional overrides:
+      url    the page URL to act on          (default: page.url)
+      title  used in the prompt sent to the AI (default: page.title)
+      kind   the noun in that prompt          (default: "page")
+
+  On a post that is literally all it takes; `kind="post"` only improves the
+  wording of the prompt.
+
+  ⚠️ THE .md TWIN IS THE WHOLE MECHANISM. Every link here points at
+  `<url>.md`, the plain-text twin that scripts/build-agent-markdown.mjs writes
+  for every post and page ("append .md to any page URL" — see _docs/agents.md).
+  The AI links do not upload anything or embed the page; they open a new chat
+  pre-filled with a prompt asking the model to READ that URL. That is why the
+  twin has to exist and has to be public.
+
+  ⚠️ THE URL EXPRESSION IS COPIED FROM _layouts/default.html, which emits the
+  <link rel="alternate" type="text/markdown"> for the same file. The two must
+  agree, so they are the same three filters: append a sentinel, drop the
+  trailing slash with it, then append .md. /cv/ -> /cv.md. Change one, change
+  both — a mismatch here is a link to a 404 that nothing else would catch.
+
+  ⚠️ THE TWINS ARE BUILT IN CI ONLY. `jekyll serve` never runs that script, so
+  under a local server every link in this bar 404s. That is the same pattern as
+  the esbuild and hash-assets steps — but those are invisible to a reader and
+  this is a visible link, so it is worth knowing before reporting it as broken.
+  Do not add a local build step for it; run `node scripts/build-agent-markdown.mjs`
+  after a build if you need to check them.
+
+  ⚠️ NO BRAND LOGOS, deliberately. His spec was "Open In [OpenAI] [Claude] |
+  [Icon: Markdown] [Icon: PDF]" — note that "Icon:" appears only on the last
+  two. The AI targets are word marks, which is also why there is no guessed-at
+  approximation of someone else's logo in _includes/icons/.
+{%- endcomment -%}
+
+{%- assign pa_url = include.url | default: page.url -%}
+{%- assign pa_title = include.title | default: page.title -%}
+{%- assign pa_kind = include.kind | default: 'page' -%}
+{%- assign pa_md = pa_url | append: '%%%' | replace: '/%%%', '' | append: '.md' -%}
+{%- assign pa_md_abs = pa_md | absolute_url -%}
+{%- capture pa_prompt -%}Read {{ pa_md_abs }} — I have questions about this {{ pa_kind }}{% if pa_title %} ("{{ pa_title }}"){% endif %}.{%- endcapture -%}
+{%- comment -%}
+  ⚠️ url_encode, NOT uri_escape. uri_escape leaves the reserved characters
+  alone, so the URL inside the prompt kept its `://` — legal in a query string,
+  but it makes the whole q= value depend on the receiving site parsing a bare
+  URL inside a parameter. url_encode percent-encodes everything, which is what
+  the reference bar at ovellum.oss.oinam.com sends.
+
+  The `+` → `%20` pass is because url_encode uses form encoding for spaces. A
+  literal `+` in the prompt would already have become %2B, so anything still a
+  `+` at this point is a space and nothing else.
+{%- endcomment -%}
+{%- assign pa_q = pa_prompt | url_encode | replace: '+', '%20' -%}
+
+<div class="page-actions" role="group" aria-label="Open this {{ pa_kind }} elsewhere">
+  <span class="page-actions__label">Open in</span>
+
+  <a class="page-actions__link" href="https://chatgpt.com/?q={{ pa_q }}"
+     target="_blank" rel="noopener">OpenAI</a>
+  <a class="page-actions__link" href="https://claude.ai/new?q={{ pa_q }}"
+     target="_blank" rel="noopener">Claude</a>
+
+  <span class="page-actions__sep" aria-hidden="true"></span>
+
+  <a class="page-actions__btn" href="{{ pa_md | relative_url }}"
+     aria-label="View as Markdown" title="View as Markdown">
+    {%- include icons/markdown.svg -%}
+  </a>
+
+  {%- comment -%}
+    PDF is print-to-PDF, and honestly so: this is a static site with no PDF
+    generator, and adding one is a much larger thing than a button. The site
+    already ships assets/print.css (Gutenberg-based, linked media="print" in
+    default.html, hides the header, footer and post-nav), so the printed page
+    is a clean document rather than a screenshot of the site.
+
+    ⚠️ `hidden` UNTIL page-actions.js UNHIDES IT (guardrail 4). window.print()
+    needs JavaScript, and a button that silently does nothing is worse than no
+    button — with JS off this is simply absent, and the reader's own
+    Print command still works. Same idiom as the search panel.
+  {%- endcomment -%}
+  <button class="page-actions__btn" type="button" data-page-actions-print hidden
+          aria-label="Save as PDF" title="Save as PDF">
+    {%- include icons/pdf.svg -%}
+  </button>
+</div>

@@ -88,6 +88,30 @@ Originally absorbed from the 2027 planning braindump.
       `h2` and the event in an `h3` — right for a story, backwards for a CV. `/about/` got the
       same inversion the same day (events as titles), which is why the two now agree on emphasis
       while keeping different structures.
+- [ ] **The 14 HTML pages emit HTML, not Markdown, in their `.md` twins.**
+      `scripts/build-agent-markdown.mjs` assumes a Markdown source — true for all 1,457 posts,
+      false for every page converted to `.html` since 2026-08-01. Author-only build comments
+      were stripped on 2026-08-09 (that part is fixed and shipped), but the markup remains.
+      Audited 2026-08-09, `liquid=` counts are pre-strip:
+
+      | `.md` twin | source | | `.md` twin | source |
+      |---|---|---|---|---|
+      | `about.md` | `_pages/about.html` | | `hire.md` | `_pages/hire.html` |
+      | `album.md` | `_pages/album.html` | | `music.md` | `_pages/music.html` |
+      | `archives.md` | `_pages/archives.html` | | `own.md` | `_pages/own.html` |
+      | `books.md` | `_pages/books.html` | | `random.md` | `_pages/random.html` |
+      | `contact.md` | `_pages/contact.html` | | `search.md` | `_pages/search.html` |
+      | `cv.md` | `_pages/cv.html` | | `styleguide.md` | `_pages/styleguide.md` |
+      | `devices.md` | `_pages/devices.html` | | `film.md` | `_pages/film.html` |
+
+      ⚠️ This now has a reader-facing consequence: the `[md]` icon in `page-actions.html` links
+      straight at these files, and `/cv/` is the first page carrying that bar. An LLM reads the
+      HTML fine — a person clicking the icon sees tags.
+
+      Fixing it means an HTML→Markdown step (a new dependency, against guardrail 3's spirit) or
+      per-page hand-written twins (two sources of truth). Neither is obviously right, which is
+      why it is here rather than done.
+
 - [ ] **`/cv/` and `/about/` disagree on four facts.** Both are live and neither was normalized
       to the other, because these are his claims to settle, not mine:
       Mobisy is "Head of Product" on `/cv/` and "Chief Product Officer (consulting)" on

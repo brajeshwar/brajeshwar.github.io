@@ -20,6 +20,19 @@ const { site, docs } = JSON.parse(readFileSync(MANIFEST, 'utf8'));
 const stripFrontMatter = (src) =>
   src.replace(/^﻿?---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
 
+// ⚠️ AUTHOR-ONLY BUILD NOTES MUST NOT SHIP HERE (added 2026-08-09).
+// Liquid comments are stripped by Jekyll for the HTML, but this script reads
+// the SOURCE file, so they survived into the .md twin — and the pages carry
+// long ones. /cv.md opened with 30 lines about why /cv/ stopped using the
+// timeline component, ahead of any of his actual CV. Audited across the site:
+// 14 of 24 pages were shipping them, straight into /llms.txt consumers.
+//
+// Both spellings, since the codebase uses {%- comment -%} and {% comment %}.
+const stripLiquidComments = (src) =>
+  src.replace(/\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}\s*/g, '')
+     // HTML comments too: same problem, and about.html used one until today.
+     .replace(/<!--[\s\S]*?-->\s*/g, '');
+
 // Drop a leading title heading that duplicates our prepended `# {title}`.
 function stripLeadingTitle(body, title) {
   body = body.replace(/^\s+/, '');
@@ -53,7 +66,7 @@ for (const d of docs) {
     continue;
   }
 
-  let body = stripFrontMatter(src);
+  let body = stripLiquidComments(stripFrontMatter(src));
   // Fall back to the source H1 if Jekyll gave no title (belt and suspenders).
   let title = d.title;
   if (!title) {

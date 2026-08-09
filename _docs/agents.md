@@ -58,3 +58,54 @@ build time, so the date is omitted for pages to avoid implying they were publish
   `make build` (or `bundle exec jekyll build && node scripts/build-agent-markdown.mjs`).
 - The twins are generated *after* `jekyll build`, so they are not in `sitemap.xml`; the head
   `rel=alternate` links and `/llms.txt` are the discovery path.
+
+## The reader-facing half: `_includes/page-actions.html` (2026-08-09)
+
+Everything above is machinery no reader sees. `page-actions.html` is the bar that puts it in
+front of them — *"Open in OpenAI · Claude | [md] [pdf]"* — modelled on
+<https://ovellum.oss.oinam.com/docs/>. Live on `/cv/`; **any page or post can include it
+unchanged**, since it derives everything from `page`:
+
+```liquid
+{% include page-actions.html %}              <!-- that is the whole thing -->
+{% include page-actions.html kind="post" %}  <!-- only improves the prompt wording -->
+```
+
+The AI links do not upload or embed anything. They open a new chat pre-filled with
+`Read <abs-url>.md — I have questions about this …`, so **the `.md` twin is the entire
+mechanism** and has to be public. `url_encode` (not `uri_escape`) so the nested URL is fully
+percent-encoded, matching what the reference bar sends.
+
+⚠️ The `.md` URL expression is duplicated in `_layouts/default.html`, which emits the
+`<link rel="alternate" type="text/markdown">` for the same file. Change one, change both.
+
+⚠️ **Twins are CI-only**, so every link in the bar 404s under `jekyll serve`. Run
+`node scripts/build-agent-markdown.mjs` after a build to check them locally. Not worth a local
+build step — but unlike esbuild and hash-assets, this one is *visible*, so expect it to be
+reported as broken.
+
+PDF is `window.print()`, honestly: there is no PDF generator here. `assets/print.css` is
+Gutenberg-based and linked `media="print"`, so the result is a clean document. The button ships
+`hidden` and `page-actions.js` unhides it — with JavaScript off there is no dead control, and
+the reader's own Print command still works (guardrail 4).
+
+## ⚠️ Liquid and HTML comments are stripped (2026-08-09) — and why that mattered
+
+`build-agent-markdown.mjs` reads the **source** file, so Jekyll never gets a chance to strip
+Liquid comments out of it. The pages here carry long ones: `/cv.md` opened with 30 lines about
+why `/cv/` stopped using the timeline component, ahead of any actual CV. Audited across the
+site, **14 of 24 pages were shipping author-only build notes** into `/llms.txt` consumers.
+
+`stripLiquidComments` now removes both `{% comment %}` spellings and HTML comments, next to
+`stripFrontMatter`.
+
+## ⚠️ OPEN: HTML-sourced pages emit HTML, not Markdown
+
+The script's premise is that the source is Markdown — true for all 1,457 posts, and false for
+the 14 pages converted to `.html` since 2026-08-01. Their twins are readable content (an LLM
+parses HTML fine) but they are not Markdown, and a reader clicking the `[md]` icon on `/cv/`
+gets tags.
+
+Fixing it means an HTML→Markdown conversion — a new dependency, or per-page handling — and it
+touches every page's agent output, so it is **deliberately not bundled** with the bar above.
+See [`todo.md`](todo.md) for the audit.

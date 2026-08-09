@@ -25,8 +25,13 @@
    ============================================================ */
 
 /* The contact line under the intro. The only thing on this page that is not
-   the timeline: a run of links that wants to sit quieter than body copy. */
+   the timeline: a run of links that wants to sit quieter than body copy.
+
+   ⚠️ --text-color-LOWER. This said `-low` until 2026-08-09, which is 20.5%
+   against the foreground's 14.5% — barely a step, and not the "quieter" this
+   comment claimed. `-lower` (37.1%) is the tier that actually reads as
+   secondary, and the one .timeline-meta uses. */
 .page-cv .cv-contact {
   font-size: var(--step--1);
-  color: var(--text-color-low);
+  color: var(--text-color-lower);
 }
