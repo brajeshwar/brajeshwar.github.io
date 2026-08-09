@@ -3,8 +3,6 @@ layout: page
 title: OK
 ---
 
-# OK
-
 > You’re absolutely right.
 
 Whatever you say, your idea, your points, you are absolutely right.
