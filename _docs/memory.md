@@ -371,6 +371,24 @@ of the repo and `_config.yml`'s `exclude:` keeps it out of the build. Neither im
 and `CLAUDE.local.md` was gitignored while still rendering to `_site/CLAUDE.local/`. Verified
 `_site` has no `CLAUDE*` at all.
 
+### The timeline spine moved to the menu separator's tier
+
+The spine is `--border-color-high` (18%) — the same token as the header's menu separator — not
+`--rule-strong` (32%). He offered two ways to make the dot read darker than the line: *"push the
+darkness of the dot a tad more or try doing the vertical line to the same as the vertical bar
+that separates the menu."*
+
+**Took the second, and it was better than a colour tweak for three reasons:** it matches like for
+like (both are vertical hairlines, and both now sit on the tier a vertical hairline needs); it
+**retires an exception** — `--rule-strong` is documented as the header and footer's alone, and
+the spine had been added as a third user that same morning, so it is back to two; and it widens
+the gap to the dot's 60% border without touching the dot, which had been retuned five times
+already.
+
+⚠️ **The line got LIGHTER so the dot would read darker.** Anyone later "fixing" the contrast by
+pushing the spine back toward `--rule-strong` undoes it and flattens the dot against the line
+again.
+
 ### Vertical hairlines need a darker tier than horizontal ones
 
 Both pipe separators — the header's, between the nav words and the tool glyphs, and the

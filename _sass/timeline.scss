@@ -288,7 +288,7 @@
   top: var(--timeline-spine-top, var(--timeline-dot-center));
   bottom: 0;
   width: var(--timeline-rule);
-  background: var(--rule-strong);
+  background: var(--border-color-high);
 }
 
 /* ⚠️ /about/ OPENS WITH A PERIOD LABEL, NOT A HEADING — and that put the
@@ -428,17 +428,27 @@
   bottom: 0;
   width: var(--timeline-rule);
 
-  /* ⚠️ --rule-strong, WHICH themes.scss RESERVES FOR THE HEADER AND FOOTER.
-     He asked for it by name: "For the vertical line, have it as the same color
-     as the border color of the header and footer." That token's note said only
-     those two may use it, because a third user erodes what makes them read as
-     structural — so the note has been amended rather than quietly broken.
+  /* ⚠️ --border-color-high (18%), THE SAME TIER AS THE MENU SEPARATOR — not
+     --rule-strong (32%), which is what this was until 2026-08-09.
 
-     The reasoning holds: the spine is the same KIND of line as those two. It
-     brackets a page's content the way they bracket the page, and at 0.75px it
-     needs the stronger colour to stay visible at all. --rule at hairline width
-     was very nearly nothing. */
-  background: var(--rule-strong);
+     He offered two ways to make the dot read darker than the line: "push the
+     darkness of the dot a tad more or try doing the vertical line to the same
+     as the vertical bar that separates the menu." This is the second, and it
+     is the better one for reasons past the look:
+
+       1. LIKE FOR LIKE. The menu separator is a vertical hairline; so is this.
+          Both now sit on the tier that a vertical hairline actually needs —
+          see the note on that separator in chrome.scss.
+       2. IT RETIRES AN EXCEPTION. themes.scss reserves --rule-strong for the
+          header and footer, "and no more without a reason as good"; the spine
+          was a third user added the same morning. It is back to two.
+       3. It widens the gap to the dot's border (60%) without touching the
+          dot, which has been retuned five times and did not need a sixth.
+
+     ⚠️ The line got LIGHTER to make the dot read darker. If someone later
+     "fixes" the contrast by darkening this back toward --rule-strong, they
+     undo the change and the dot goes flat against it again. */
+  background: var(--border-color-high);
 }
 
 .timeline-entry,

@@ -622,20 +622,14 @@
      lines that bound the page, and the next person changing them should not
      have to reason about whether a focus outline shares the value.
 
-     ⚠️ THREE USERS, and no more without a reason as good: chrome.scss's header
-     border-bottom, its footer border-top, and — since 2026-08-09 — the timeline
-     spine in timeline.scss. Everything else stays on --rule.
+     ⚠️ TWO USERS ONLY: chrome.scss's header border-bottom and its footer
+     border-top. Everything else stays on --rule or --border-color-high.
 
-     The timeline was added at his explicit ask ("For the vertical line, have it
-     as the same color as the border color of the header and footer"), and it
-     earns the exception on the same logic the other two do: it is a structural
-     line bracketing content rather than a border around a box. It also NEEDS
-     the stronger value — the spine went to 0.75px the same day, and --rule at
-     that width was very nearly invisible.
-
-     The original note said only two may use this because a third starts eroding
-     what makes them read as structural. That is still the risk. A fourth needs
-     an argument, not a precedent. */
+     The timeline spine was briefly a third, added 2026-08-09 and removed the
+     same day — it moved to --border-color-high, the menu separator's tier,
+     which suits a vertical hairline better and made the dot read darker
+     against it. So the original constraint stands: a third user needs an
+     argument, not a precedent. */
   --rule-strong   : var(--color-border-structural);
   --accent        : var(--color-accent);
   --accent-hover  : var(--color-accent-hover);
