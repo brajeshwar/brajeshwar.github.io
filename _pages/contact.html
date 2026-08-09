@@ -1,36 +1,7 @@
 ---
 layout: page
-title: Contact Brajeshwar
+title: Contact
 ---
-
-{%- comment -%}
-  ⚠️ WAS contact.md UNTIL 2026-08-07, converted ahead of the form
-  (Brajeshwar: "we are going to make it as a form embed with Oinam's own Form
-  service"). HTML because a form is markup, and kramdown does not parse
-  Markdown inside a block-level element anyway — every label and every hint
-  inside a <form> would have had to be hand-written HTML in a .md file, which
-  is the worst of both.
-
-  ⚠️ THE `## Contact` HEADING IS GONE ON PURPOSE, and the page looks the same
-  as before because of it. jekyll-titles-from-headings runs on Markdown only:
-  with `strip_title: true` it was eating that heading and using it as the page
-  title — which is why /contact/'s <title> read "Contact" and not the
-  "Contact Brajeshwar" this file's front matter asks for. In an .html page
-  nothing strips anything, so writing <h2>Contact</h2> back in would have put
-  a heading on a page that has not had one, AND changed the title. Neither is
-  a conversion.
-
-  Two consequences, both deliberate:
-    - the <title> is now "Contact Brajeshwar", the value that was always in
-      the front matter and was being silently overridden;
-    - the page still has no heading, matching /album/, /books/, /film/ and
-      /music/, none of which carry an h1 either.
-
-  THE FORM GOES HERE, replacing the paragraph below or sitting above it.
-  Nothing has been scaffolded for it: the embed shape is Oinam's Form
-  service's to dictate, and guessing at field names would only be something
-  to delete later.
-{%- endcomment -%}
 
 <p>Email me at brajeshwar@oinam.com or use the form on our family’s website,
 <a href="https://oinam.com/contact/">oinam.com</a>.</p>

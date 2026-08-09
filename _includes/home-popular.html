@@ -1,28 +1,6 @@
-{%- comment -%}
-  Home — Popular & Handpicked, in the same table-of-contents form as the
-  articles list above it.
-
-  Source is _data/posts-popular.yaml, which is content and not ours to edit.
-  Brajeshwar 2026-07-31: "I will likely have 13 articles later but for now,
-  just pick up what we have currently on page" — so there is no `limit` here.
-  The list is however long the data file is; add entries to the yaml and they
-  appear.
-
-  ⚠️ NO YEAR SEPARATORS HERE, and the dates keep their year — "JUL 07, 2026",
-  not the articles list's "JUL 07". The separators up there work because that
-  list is one unbroken run, newest first, so a year marker labels a real group.
-  This list is ranked and handpicked, in no date order at all, so grouping it
-  by year would invent a structure the content does not have and the year has
-  to travel with each row instead.
-
-  `upcase` rather than a CSS text-transform: the date is data here, not a
-  heading, and the string comes straight from the yaml's `time:` field. No
-  <time datetime> for the same reason — those strings are display-formatted and
-  an entry may point at something that is not a dated post at all.
-{%- endcomment -%}
 {% if site.data.posts-popular %}
 <home-toc>
-  <h2 class="toc__heading">Popular &amp; Handpicked</h2>
+  <h2 class="toc__heading">Popular & Handpicked</h2>
 
   <p class="toc__intro">
     Some ranked by the search engines, some picked by me.

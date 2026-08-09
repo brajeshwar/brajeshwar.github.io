@@ -3,18 +3,6 @@ layout: default
 title: Brajeshwar Oinam
 ---
 
-{%- comment -%}
-  Home. Rebuilt 2026-07-31 from Brajeshwar's tldraw wireframe: a reading
-  column of two table-of-contents lists, a three-part sidebar beside it, then
-  two full-bleed thumbnail strips beneath.
-
-  The two strips sit OUTSIDE <home-container> deliberately. They bleed past
-  the band, and a grid item that escapes its own grid fights the track sizing
-  it is supposed to obey — the negative margins would resolve against the
-  column, not the page. Keeping them as siblings means the grid describes the
-  banded part of the page and nothing else.
-{%- endcomment -%}
-
 <main>
   <home-container>
     <home-intro>
@@ -33,63 +21,10 @@ title: Brajeshwar Oinam
     </home-aside>
   </home-container>
 
-  {%- comment -%}
-    ============================================================
-    HOW MANY THUMBNAILS EACH STRIP SHOWS — change the two numbers.
-    ============================================================
-    Each strip shows the newest N of its shelf; the full lists live at /books/
-    and /album/ (2026-08-01: "the books list on the home page should be the
-    last xx number from the above /books/"), and both read newest-to-oldest
-    left to right (2026-08-01: "I also want the books lists in the homepage to
-    be chronological with the newest first").
-
-    ⚠️ THE TWO SHELVES DISAGREE ABOUT WHERE "NEWEST" LIVES, AND THAT IS WHY
-    ONE OF THESE LINES HAS A `reverse` AND THE OTHER NO LONGER DOES.
-
-    ⚠️ BOOKS: THIS STRIP NO LONGER SHOWS THE NEWEST. It shows the FAVORITES,
-    from _data/books-favorites.yaml, and that changed on 2026-08-07.
-
-    _data/books.yaml became _data/books/, one file per initial letter, when the
-    shelf passed 167 entries. That was asked for and is right for /books/ — but
-    it costs this strip the only thing it was built on. The rule below used to
-    be that position in the file IS the record of recency, so the newest seven
-    were a plain `slice` off the head. An A–Z split scatters chronology across
-    26 files and nothing left in the data encodes when a book arrived.
-
-    So the choice was: a false recency claim on the front page, or a different
-    and honest one. Favorites is the only ordering the data still carries a
-    meaning for, it needs no new field, and promoting a book is moving one
-    entry between two files.
-
-    ⚠️ IT DID NOT FAIL LOUDLY WHEN IT BROKE. `site.data.books` is a HASH once
-    it is a directory, and `slice` on a hash does not raise — the strip quietly
-    rendered ONE item instead of seven and the build stayed green. If this ever
-    reads oddly again, count the items before trusting the exit code.
-
-    THE COST, stated so it is a choice and not a surprise: these are the same
-    four books as the Personal Favorites grid at the top of /books/, so the
-    front page and that page now open with the same covers. If that repetition
-    grates, the alternatives are a random handful each build (honest, needs no
-    data) or dropping the strip. Say which.
-
-    The half that has NOT changed, and must not: do NOT add a `read:` or
-    `added:` date to win recency back. Rejected 2026-08-01 on good ground —
-    "The reason I do not want to or need to record read is that I tend to
-    re-read books a lot and honestly does not matter. I do not want to maintain
-    another record." The split traded recency away; a new field is not the way
-    to buy it back.
-
-    ALBUM: unchanged. _data/album.yaml is still a single file, still
-    newest-LAST, so its line below still does reverse then take.
-  {%- endcomment -%}
   {%- assign home_books_count  = 7 -%}
   {%- assign home_album_count = 13 -%}
 
   {%- assign books_tail = site.data.books-favorites | slice: 0, home_books_count -%}
-  {%- comment -%}
-    The Books intro paragraph was removed 2026-07-31 on request. The `intro`
-    parameter is still supported by the include — nothing else passes one today.
-  {%- endcomment -%}
   {% include home-strip.html
      items    = books_tail
      title    = "Books"
@@ -97,25 +32,11 @@ title: Brajeshwar Oinam
      kind     = "books"
      captions = true %}
 
-  {%- comment -%}
-    Album (renamed from Photos, 2026-08-01 — "we are likely to have videos and
-    audio too besides photos"). Commented out for a few hours the same day
-    while the section was still placeholder data, and switched back on once
-    _data/album.yaml carried a real photo instead of borrowed book covers.
-
-    The include is gated on `items`, so an empty data file renders nothing at
-    all rather than an empty heading — the strip cannot show up broken.
-  {%- endcomment -%}
-  {%- comment -%}
-    No `captions` here: the images speak for themselves, and a caption under
-    every frame turned the row into a wall of repeated text. Items carrying
-    `media: video` or `media: audio` get a small icon badge instead, which is
-    the one thing a thumbnail cannot say on its own.
-  {%- endcomment -%}
   {%- assign album_tail = site.data.album | reverse | slice: 0, home_album_count -%}
   {% include home-strip.html
      items = album_tail
      title = "Album"
      href  = "/album/"
      kind  = "album" %}
+
 </main>

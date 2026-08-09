@@ -1,36 +1,4 @@
-{%- comment -%}
-  ============================================================
-  HOW MANY ARTICLES THIS PAGE LISTS — change the number below.
-  ============================================================
-  This is the knob, and it is deliberately the first thing in the file
-  (Brajeshwar 2026-07-31: "The number of last titles to show here should be a
-  value I change in the code myself"). Nothing else needs touching: the year
-  separators regroup themselves, because they are driven by the posts that
-  actually come out of the loop rather than by a hard-coded list of years.
-{%- endcomment -%}
-
 {%- assign article_count = 21 -%}
-
-
-{%- comment -%}
-  Home — the most recent articles, as a table of contents.
-
-  Title left, date hard right, dotted leader between. The whole row is one
-  <a>: a title-only link leaves the date and the leader as dead space in a row
-  that is otherwise a 40-character target.
-
-  YEAR SEPARATORS. `date: '%Y'` on each post, compared with the previous one,
-  emits a right-aligned year marker whenever the year changes — so the marker
-  sits directly above the first date of its group, which is the only place it
-  reads as a label for that column (Brajeshwar: "by flushing on the right side,
-  let's separate by years just above the dates"). Dates then drop the year and
-  become "JUL 07", since the group already says 2026.
-
-  The marker is a real <li> inside the same <ul> rather than a heading between
-  two lists: one list is one list to a screen reader, and splitting it per year
-  would announce "list of 4 items" seven times for what is one chronological
-  run.
-{%- endcomment -%}
 
 <home-toc>
   <h2 class="toc__heading">Articles</h2>
