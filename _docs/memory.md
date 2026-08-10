@@ -4,27 +4,62 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-09, eighth session — it ran past midnight) — READ FIRST
+## Where we are (updated 2026-08-10, ninth session) — READ FIRST
 
-**✅ Session CLOSED 2026-08-09. Everything below is pushed and live**, on his word — *"Document,
-update, ready to resume later. Commit, and Push."* Six commits went out together: the "Open in"
-bar moving to the post date line, the home-strip arrows, his own prose and home-page trims, the
-Ruby documentation correction, four posts coming off the work-in-progress shelf, and this close.
+⚠️ **NOT PUSHED. Seven commits sit on local `main`** — the five below, this catch-up commit, and
+his own `6fc481b3 Phone`, a content edit already sitting unpushed when this session started. Every push
+auto-deploys, so none of it is live until he says so. **Check `git log origin/main..main` before
+believing any status line in this file, including this one** — the eighth session's opening
+sentence claimed "pushed and live" while it was false, for most of a day, and nobody noticed.
+⚠️ And note what that check just caught: the eighth session's entry says its six commits "went
+out together", which is why `Phone` being unpushed is a surprise. Trust the command.
 
-⚠️ **That opening sentence was false for most of this session and nobody noticed**, so the rule
-stands regardless of what it says today: **check `git log origin/main..main` before believing any
-status line in this file, including this one.** A closed session is a claim like any other.
+**The ninth session, worked from the vault queue:**
 
-**Where to pick up** — nothing is half-finished; the queue is empty and the tree is clean. What is
-*waiting* rather than pending:
+| commit | |
+|---|---|
+| `1d14555e` | four todo items retired at his word — `/contact/` form embed, year archives as pages, "Home = text only", "NEXT UP: edit /cv/, /devices/, /own/" |
+| `308d781a` | **130 lines of dead timeline CSS gone** — the whole list-shape vocabulary orphaned when `/about/` and `/cv/` became Markdown |
+| `3cfa1c2a` | **`.md` twins for HTML pages now convert the BUILT page**, not the Liquid source |
+| `a5e7f299` | the `/cv/` vs `/about/` audit re-checked — one live disagreement, not four |
+| `586a2e60` | the `/odo` queue moved out of this repo and into the vault |
+
+**Where to pick up** — nothing is half-finished and the tree is clean. What is *waiting* rather
+than pending:
 
 | | |
 |---|---|
 | **Ruby 3.4.10** | deferred at his word, fully written up — [`hosting.md`](hosting.md) → *Versions* and [`todo.md`](todo.md). ⚠️ Bump the WORKFLOW pin, never `.ruby-version` |
-| `/cv/`, `/devices/`, `/own/` | he queued these to edit himself — *"don't work on it yet"* |
-| Dead timeline CSS, ~190 lines | needs reading by hand, not a sweep |
-| Twelve HTML pages | still emit raw HTML into their `.md` twins; the Markdown conversions fixed three |
-| `/cv/` vs `/about/` | they disagree on four facts. His prose, his call |
+| Push, or not | **seven** unpushed commits — six from this session, plus `Phone`. His call |
+| `/cv/` vs `/about/` | **one** disagreement — when Oinam Software was founded (2003 Mar + Co-Founder CEO on `/cv/`, 2005 + Founder on `/about/`, with a 2003 Freelance entry between them). His prose, his call |
+| `/album/` says Nanocast | `_data/album.yaml` names a different acquirer for the 2006 photograph than `/about/` and `/cv/` do, and the filename agrees with the data. Renaming would change a URL |
+
+⚠️ **Three rows left this table on 2026-08-10 because the work is done**: the dead timeline CSS,
+the twelve HTML pages, and *"`/cv/`, `/devices/`, `/own/` — don't work on it yet"*, which he
+deleted from the todo outright rather than keeping parked.
+
+⚠️ **The queue left this repo the same day.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
+in his vault, worked with a now-**global** `/odo`, and the done-log is
+`~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`. Neither is visible to `git status` or `_site`,
+so if work seems to appear from nowhere between sessions, that is where it came from.
+
+### What the ninth session learned
+
+⚠️ **Three documented "facts" in `_docs/` were wrong, and each had been quoted forward.** This is
+the pattern worth carrying, not the individual corrections:
+
+- **`.timeline-when` was listed as live with "9 period labels."** The built site has zero, and
+  `_sass/timeline.scss` never carried a rule for it. The claim had already propagated into a
+  comment in that file saying `anchors.js` targets it; the script has only ever named
+  `.timeline h2[id], .timeline h3[id], .page-now h2[id]`.
+- **"An LLM reads the HTML fine" understated the twin problem by a mile.** Those pages were not
+  shipping HTML. They were shipping **Liquid that had never run** — `/books.md` contained
+  `{% include card-grid.html %}` and listed no books at all.
+- **Four `/cv/` vs `/about/` disagreements were two.** `/about/` has had no Mobisy and no
+  Razorfish entry since it became a story on 2026-08-09, so neither page can disagree about them.
+
+**All three survived because they were re-read instead of re-measured.** Every one took a single
+grep of `_site` to disprove. Verify a claim about the built site against the built site.
 
 ⚠️ **The queue left this repo on 2026-08-10.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
 in his vault, worked with a now-**global** `/odo`, and the done-log is
