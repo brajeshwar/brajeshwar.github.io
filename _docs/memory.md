@@ -6,13 +6,16 @@
 
 ## Where we are (updated 2026-08-10, ninth session) — READ FIRST
 
-⚠️ **NOT PUSHED. Seven commits sit on local `main`** — the five below, this catch-up commit, and
-his own `6fc481b3 Phone`, a content edit already sitting unpushed when this session started. Every push
-auto-deploys, so none of it is live until he says so. **Check `git log origin/main..main` before
-believing any status line in this file, including this one** — the eighth session's opening
-sentence claimed "pushed and live" while it was false, for most of a day, and nobody noticed.
-⚠️ And note what that check just caught: the eighth session's entry says its six commits "went
-out together", which is why `Phone` being unpushed is a surprise. Trust the command.
+**✅ PUSHED 2026-08-10 at his word** — *"Commit and push and stay clean."* Seven commits went out:
+the five below, the catch-up commit that carried this section, and his own `6fc481b3 Phone`, a
+content edit already sitting unpushed when the session started. Every push auto-deploys, so this
+is live.
+
+⚠️ **Check `git log origin/main..main` before believing that sentence, or any other status line
+in this file, including this one.** The eighth session's opening claimed "pushed and live" while
+it was false, for most of a day, and nobody noticed — which is how `Phone` came to be sitting
+unpushed under an entry saying its commits "went out together". A closed session is a claim like
+any other. Trust the command.
 
 **The ninth session, worked from the vault queue:**
 
@@ -30,7 +33,7 @@ than pending:
 | | |
 |---|---|
 | **Ruby 3.4.10** | deferred at his word, fully written up — [`hosting.md`](hosting.md) → *Versions* and [`todo.md`](todo.md). ⚠️ Bump the WORKFLOW pin, never `.ruby-version` |
-| Push, or not | **seven** unpushed commits — six from this session, plus `Phone`. His call |
+| The Actions run | first deploy since the twins changed shape and 130 lines left the CSS. Worth a glance |
 | `/cv/` vs `/about/` | **one** disagreement — when Oinam Software was founded (2003 Mar + Co-Founder CEO on `/cv/`, 2005 + Founder on `/about/`, with a 2003 Freelance entry between them). His prose, his call |
 | `/album/` says Nanocast | `_data/album.yaml` names a different acquirer for the 2006 photograph than `/about/` and `/cv/` do, and the filename agrees with the data. Renaming would change a URL |
 
