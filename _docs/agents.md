@@ -29,9 +29,10 @@ First, `agents-manifest.json` at the repo root is a plugin-free Jekyll template.
 the URL truth (permalinks plus `jekyll-titles-from-headings`), so the script never re-derives
 a slug. It is marked `sitemap: false`, and as a build artifact it is deleted before deploy.
 
-Then `scripts/build-agent-markdown.mjs`, Node with no dependencies, reads the manifest, opens
-each source `.md` (the clean Markdown, not rendered HTML), strips the YAML front matter, and
-writes `_site/<slug>.md`. After that it writes `_site/llms.txt`, then deletes the manifest.
+Then `scripts/build-agent-markdown.mjs`, Node with no dependencies, reads the manifest, takes
+each document's body — the source `.md` for Markdown pages and posts, the **built** page for
+the twelve HTML-sourced ones (see below) — strips the YAML front matter, and writes
+`_site/<slug>.md`. After that it writes `_site/llms.txt`, then deletes the manifest.
 
 The step runs in `.github/workflows/jekyll-build-deploy.yml` right after `jekyll build` and
 before Pagefind; Pagefind indexes HTML only, so the `.md` and `.txt` files don't interfere.
@@ -116,13 +117,61 @@ site, **14 of 24 pages were shipping author-only build notes** into `/llms.txt` 
 `stripLiquidComments` now removes both `{% comment %}` spellings and HTML comments, next to
 `stripFrontMatter`.
 
-## ⚠️ OPEN: HTML-sourced pages emit HTML, not Markdown
+## HTML-sourced pages are converted from the BUILT page (2026-08-10)
 
-The script's premise is that the source is Markdown — true for all 1,457 posts, and false for
-the 14 pages converted to `.html` since 2026-08-01. Their twins are readable content (an LLM
-parses HTML fine) but they are not Markdown, and a reader clicking the `[md]` icon on `/cv/`
-gets tags.
+The script's original premise — the source is Markdown — is true for all 1,457 posts and every
+Markdown page, and false for the **twelve** files in `_pages/*.html`. For those, reading the
+source was worse than this doc used to admit. It did not ship *HTML*; it shipped **Liquid that
+had never run**. `/books.md` contained `{% include card-grid.html %}` and listed no books at
+all; `/devices.md` shipped a `{% for phones in site.data.devices %}` loop. "An LLM parses HTML
+fine" was true and beside the point — there was no content in the file to parse.
 
-Fixing it means an HTML→Markdown conversion — a new dependency, or per-page handling — and it
-touches every page's agent output, so it is **deliberately not bundled** with the bar above.
-See [`todo.md`](todo.md) for the audit.
+So the branch is on the **source extension, from the manifest**:
+
+| source | body comes from |
+|---|---|
+| `*.md` | the source file, front matter and comments stripped — unchanged |
+| `*.html` | `_site/<url>/index.html`, after Jekyll ran the loops, converted to Markdown |
+
+Because the test is `d.path.endsWith('.html')` and not a list of page names, a page converted
+to `.html` tomorrow is handled with no edit here, and one converted back to `.md` returns to
+the source path on its own.
+
+⚠️ **The twelve are not the twelve `todo.md` listed.** That table named `styleguide` — whose
+source is `_pages/styleguide.md` and was never affected — and missed `newsletter.html`. Same
+count, one swap.
+
+**No new dependency.** A real HTML→Markdown library would mean this repo's first
+`package.json`, which the deploy workflow's comments flag as a behaviour change for
+`setup-node`'s caching. The markup is our own and narrow — about twenty tags — so the script
+carries a small parser: a tag tokenizer into a tree (nested lists and `/hire/`'s eight inner
+`<article>`s are what a flat regex pass gets wrong), then a walk that emits Markdown.
+
+Three things that were not obvious, each found by reading the output rather than the code:
+
+- **Entities must be decoded.** kramdown emits smart punctuation by name, so the first run put
+  `&hellip;` and `&mdash;` straight into `/random.md`. A twin shipping entities has traded one
+  markup for another.
+- **`aria-hidden="true"` is dropped.** A plain-text twin has the same audience a screen reader
+  does. `/own/`'s decorative brand plates are single letters, and without this they read as
+  "PPlaceholder".
+- **Adjacent element siblings need a separator.** `/own/` renders an item as four touching
+  `<span>`s, which concatenated to `PPlaceholderOxford button-downwhite, 2`. A gap goes in only
+  where the two would otherwise jam; two generic containers side by side are separate fields
+  and get an em dash.
+
+A `<script>` block is now stripped from **Markdown** sources too. Exactly one twin was
+affected — `/about.md` ended with the `anchors.js` tag and an unevaluated Liquid URL inside it
+— and it is the page most likely to be opened through the `[md]` icon.
+
+⚠️ **The build now warns instead of going quiet.** If a converted body still contains `{%`,
+`{{` or block tags, the run prints `⚠️ markup survived the conversion: <url>` and counts it.
+This class of bug lived for nine days because nothing ever looked at the output; the next
+page that grows unfamiliar markup says so in the log.
+
+**How it was verified**, since a green build proves nothing here: every twin was checksummed
+before and after. **Thirteen of 1,481 changed** — the twelve, plus `about.md` for the script
+strip — so the 1,457 posts are provably untouched. `/archives.md` is the big one at 140 KB,
+1,457 entries as `- Aug 05 — [Title](/url/)` under a heading per year; a header-less table
+becomes a list rather than a pipe table with a faked header row. Its weight is deliberate:
+*"a listing's weight is its content"* (see [`todo.md`](todo.md)).

@@ -101,29 +101,30 @@ Originally absorbed from the 2027 planning braindump.
       `.timeline-entry` with a `.timeline-title` and `.timeline-meta`, which stopped being true
       when the page became Markdown on 2026-08-09. It renders `h2` + `.timeline h2 + p`.
 
-- [ ] **Twelve HTML pages still emit HTML, not Markdown, in their `.md` twins.** ⚠️ Was 14; `/cv/` and `/about/` were converted to Markdown sources on 2026-08-09 and are fixed.
-      `scripts/build-agent-markdown.mjs` assumes a Markdown source — true for all 1,457 posts,
-      false for every page converted to `.html` since 2026-08-01. Author-only build comments
-      were stripped on 2026-08-09 (that part is fixed and shipped), but the markup remains.
-      Audited 2026-08-09, `liquid=` counts are pre-strip:
-
-      | `.md` twin | source | | `.md` twin | source |
-      |---|---|---|---|---|
-      | ~~`about.md`~~ **done** | now `_pages/about.md` | | `hire.md` | `_pages/hire.html` |
-      | `album.md` | `_pages/album.html` | | `music.md` | `_pages/music.html` |
-      | `archives.md` | `_pages/archives.html` | | `own.md` | `_pages/own.html` |
-      | `books.md` | `_pages/books.html` | | `random.md` | `_pages/random.html` |
-      | `contact.md` | `_pages/contact.html` | | `search.md` | `_pages/search.html` |
-      | ~~`cv.md`~~ **done** | now `_pages/cv.md` | | `styleguide.md` | `_pages/styleguide.md` |
-      | `devices.md` | `_pages/devices.html` | | `film.md` | `_pages/film.html` |
-
-      ⚠️ This now has a reader-facing consequence: the `[md]` icon in `page-actions.html` links
-      straight at these files, and `/cv/` is the first page carrying that bar. An LLM reads the
-      HTML fine — a person clicking the icon sees tags.
-
-      Fixing it means an HTML→Markdown step (a new dependency, against guardrail 3's spirit) or
-      per-page hand-written twins (two sources of truth). Neither is obviously right, which is
-      why it is here rather than done.
+- [x] **HTML-sourced pages now convert from the BUILT page** *(2026-08-10)* — and the problem
+      was worse than this entry described. Those twins did not ship *HTML*, which an LLM would
+      indeed parse fine. They shipped **Liquid that had never run**: `/books.md` contained
+      `{% include card-grid.html %}` and listed no books at all, `/devices.md` shipped a
+      `{% for phones in site.data.devices %}` loop. There was no content in the file to parse.
+      `scripts/build-agent-markdown.mjs` now branches on the **source extension** — `.md` reads
+      the source as before, `.html` reads `_site/<url>/index.html` and converts it — so a page
+      converted either way tomorrow is handled with no edit to the script.
+      ⚠️ **The twelve were not the twelve this table listed.** It named `styleguide`, whose
+      source is `_pages/styleguide.md` and was never affected, and missed `newsletter.html`.
+      Same count, one swap. The real set is every file in `_pages/*.html`.
+      **Neither of the two options this entry offered was taken.** No dependency: a library
+      would mean the repo's first `package.json`, which the deploy workflow's own comments flag
+      as a behaviour change for `setup-node` caching. No hand-written twins either. The markup
+      is ours and narrow — about twenty tags — so the script carries a small tokenizer-to-tree
+      parser and a walk that emits Markdown, in the same no-dependency spirit as the rest of
+      the build.
+      **Verified by checksum, not by reading:** every twin hashed before and after, **13 of
+      1,481 changed** — the twelve plus `about.md`, which ended with a `<script>` tag carrying
+      an unevaluated Liquid URL and is the page most likely to be opened via the `[md]` icon.
+      The 1,457 post twins are provably untouched. The build now also **warns** if markup
+      survives a conversion; this bug lived nine days because nothing looked at the output.
+      Details, including the three non-obvious traps (entities, `aria-hidden`, adjacent
+      `<span>`s), in [`agents.md`](agents.md).
 
 - [ ] **`/cv/` and `/about/` disagree on four facts.** Both are live and neither was normalized
       to the other, because these are his claims to settle, not mine:
