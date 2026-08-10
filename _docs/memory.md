@@ -15,8 +15,8 @@ Ruby documentation correction, four posts coming off the work-in-progress shelf,
 stands regardless of what it says today: **check `git log origin/main..main` before believing any
 status line in this file, including this one.** A closed session is a claim like any other.
 
-**Where to pick up** — nothing is half-finished; the queue (`CLAUDE.local.md`) is empty and the
-tree is clean. What is *waiting* rather than pending:
+**Where to pick up** — nothing is half-finished; the queue is empty and the tree is clean. What is
+*waiting* rather than pending:
 
 | | |
 |---|---|
@@ -26,9 +26,10 @@ tree is clean. What is *waiting* rather than pending:
 | Twelve HTML pages | still emit raw HTML into their `.md` twins; the Markdown conversions fixed three |
 | `/cv/` vs `/about/` | they disagree on four facts. His prose, his call |
 
-The queue is `CLAUDE.local.md`, worked with `/odo`, and the done-log is `CLAUDE.local.log.md`.
-Both are gitignored AND excluded from the build, so they are invisible to `git status` and to
-`_site` alike. If work seems to appear from nowhere between sessions, that is where it came from.
+⚠️ **The queue left this repo on 2026-08-10.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
+in his vault, worked with a now-**global** `/odo`, and the done-log is
+`~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`. Neither is visible to `git status` or `_site`,
+so if work seems to appear from nowhere between sessions, that is where it came from.
 
 ### The short version of a very long day
 
@@ -134,26 +135,33 @@ because kramdown derives them from the heading TEXT rather than its level.
 - `/own/` is **still unlinked from nav**.
 - The 10x Is Easier Than 2x post is **scheduled for 2026-08-13** and 404s until then.
 
-### The work queue: `CLAUDE.local.md` + `/odo`
+### The work queue: the vault + a global `/odo`
 
-A hand-written queue at the repo root, worked **top-down** by the `/odo` command
-(`.claude/commands/odo.md`, tracked). `## DO` is the only section acted on; `## MAYBE / LATER /
-ICEBOX` is thinking aloud and is never touched; `## DONE` logs `- [x] [HH:MM] <his text>` under
-a `- YYYY-MM-DD` root item.
+A hand-written queue, worked **top-down** by `/odo`. As of **2026-08-10** both files live in his
+Obsidian vault, one pair per project, and the command is global at `~/.claude/commands/odo.md`:
 
-⚠️ **`WIP` on an item means hands off, and it cascades to every nested item beneath it.** He is
-still writing those. Items are prose *or* bullets — do not rewrite one into the other, and leave
-`## DO` ending on a blank line rather than a bare `-`.
+| | |
+|---|---|
+| Queue | `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md` |
+| Log | `~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md` — `# brajeshwar.com`, then `## YYYY-MM-DD` newest-first, then `- [x] [HH:MM] <his text>` |
 
-Two gotchas that cost a build each: **gitignore does not stop Jekyll** (`_site/CLAUDE.local/`
-was being published until `_config.yml`'s `exclude:` caught it — they are separate mechanisms),
-and **git cannot re-include a file under an excluded directory**, so `.claude/*` plus
-`!.claude/commands/` is required where `.claude/` would silently keep ignoring the command.
+Everything in the queue file is work — no sections, no headings. When items are finished the file
+is cleared **except** lines beginning `WIP`, which survive verbatim; if nothing survives it is left
+at zero bytes so his cursor lands on the first character.
 
-`/odo` is **project-scoped on purpose** — its body names `_docs/` and this repo's guardrails, so
-promoting it to `~/.claude/commands/` would fire it in repos with no queue. The open question of
-where the portable half should live moved out to the vault
-(`~/_/Oinam/3-Resources/AI/Claude/Claude Code - Portable Setup.md`).
+⚠️ **`WIP` at the beginning of a line means hands off, and it cascades to every nested item
+beneath it.** He is still writing those. Items are prose *or* bullets — do not rewrite one into
+the other.
+
+⚠️ **The old `.claude/commands/odo.md` was deleted, not kept as a fallback** — a project command
+shadows the global one, so leaving it would have silently kept the old behaviour. Do not recreate
+it. `CLAUDE.local.md` / `CLAUDE.local.log.md` are gone from the repo too; their `.gitignore` and
+`_config.yml` `exclude:` entries stay as belt and braces.
+
+The two gotchas from when they lived here still hold for any local file: **gitignore does not stop
+Jekyll** (`_site/CLAUDE.local/` was being published until `_config.yml`'s `exclude:` caught it —
+separate mechanisms), and **git cannot re-include a file under an excluded directory**, so
+`.claude/*` plus `!.claude/commands/` is what made a tracked command possible at all.
 
 ### `/about/` became a story, and `/cv/` took the career
 

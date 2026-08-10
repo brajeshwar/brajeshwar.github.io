@@ -11,47 +11,35 @@ philosophy is [`_docs/design.md`](_docs/design.md), the visual system and CSS ar
 are [`_docs/styles.md`](_docs/styles.md), hosting is [`_docs/hosting.md`](_docs/hosting.md).
 Re-read the guardrails below before any commit-worthy change.
 
-## CLAUDE.local.md — the work queue (restructured 2026-08-09)
+## /odo
 
-`CLAUDE.local.md` at the repo root is Brajeshwar's running list of what to do next. **He writes
-it by hand, so it is kept bare** — no headings, no commentary, nothing but his own lines.
-**`/odo`** is the shortcut for "run it"; the full mechanics live in `.claude/commands/odo.md`
-rather than here, so they load when the command runs instead of every session.
+- Queue: `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
+- Log:   `~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`
 
-⚠️ **THE WHOLE FILE IS THE QUEUE.** There is no `## DO` heading any more, and no
-`## MAYBE / LATER / ICEBOX` — *"anything in this file is now a do"* (2026-08-09). The file has no headings at all — every line in it is work. The finished-item log moved out to **`CLAUDE.local.log.md`**, which is why:
-it had grown to ~1.4k tokens of completed work being read into context every session.
+⚠️ **These two lines are the FINAL TRUTH about which files `/odo` works** — not the basename
+default the command falls back to, and not anything left in this repo. If they ever disagree,
+these win.
 
-- **Items are prose OR bullets** — a `- ` bullet, a bare sentence, a paragraph. One paragraph is
-  one item. He types straight into this file; do not normalise what he wrote into a list.
-- ⚠️ **`WIP` AT THE START OF A LINE means leave it alone.** He is still writing it — do not
-  start it, ask about it, or tick it. It cascades to anything nested beneath it.
-- **Work TOP-DOWN**, one item at a time, finished — built, verified, committed — before the next.
-- ⚠️ **Do not stop between items.** Finish one, take the next, until the file is empty. The queue
-  having items in it IS the instruction. Stop early only for a genuinely blocking question.
-- **Never reorder, reword or delete his lines.** Position is his instruction.
-- **Never push** because a queue item is done; guardrail 7 is unchanged.
-- **Done means:** move the line to `CLAUDE.local.log.md` as `- [x] [HH:MM] <his original text>`
-  (24-hour local, when it was finished) under today's `- YYYY-MM-DD` root item, newest date
-  first. Prose becomes a list item only at that point — the log wants one shape, the inbox does
-  not. Abandoned rather than finished → strike it through with a one-line reason. Log history,
-  never erase it.
-- ⚠️ **Leave the file COMPLETELY EMPTY when the queue is done** — no H1, no heading, no
-  placeholder newlines. Zero bytes, cursor at the first character (2026-08-09: *"No Titles, no
-  nothing - pure plain blank, starting at the very beginning."*). This superseded an earlier
-  "H1 plus three blank lines" rule; anything left in the file is something he has to delete.
+### The work queue — moved to the vault 2026-08-10
 
-⚠️ **Both local files need TWO edits to stay out of the world**: `.gitignore` keeps them out of
-the repo, `_config.yml`'s `exclude:` keeps them out of the build. Neither implies the other —
-`CLAUDE.local.md` was gitignored and still rendering to `_site/CLAUDE.local/`.
+⚠️ **`CLAUDE.local.md` and `CLAUDE.local.log.md` are GONE from this repo.** The queue and its log
+moved out to Brajeshwar's Obsidian vault so one command serves every project.
 
-⚠️ **`/odo` is PROJECT-SCOPED on purpose — do not promote it to `~/.claude/commands/`.** It is
-tracked in this repo (`.gitignore` excludes `.claude/*` and re-includes `commands/`), so it
-travels to any clone of brajeshwar.com and nowhere else. Its body names `CLAUDE.local.md`,
-`_docs/`, guardrail 7 and this build's verify loop — none of which exist elsewhere. His call,
-2026-08-08: *"Keep it here for now."* Where the PORTABLE half eventually lives is not this
-repo's question; it moved to his vault at
-`~/_/Oinam/3-Resources/AI/Claude/Claude Code - Portable Setup.md`.
+**`/odo` is now GLOBAL** — `~/.claude/commands/odo.md` — and the full mechanics live there, so
+they load when the command runs instead of every session. This reverses the 2026-08-08 *"Keep it
+here for now"* call and the project-scoped rule that stood here until 2026-08-10; the
+project-local `.claude/commands/odo.md` was deleted, since a project command shadows the global
+one. Do not recreate it.
+
+The rules that matter here (the rest are in the global command): work **TOP-DOWN**, one item at a
+time, finished — built, verified, committed — before the next; **never push** because a queue item
+is done (guardrail 7 is unchanged); `WIP` at the beginning of a line means leave it alone, and it
+cascades to anything nested beneath it; never reorder, reword or delete his lines.
+
+`.gitignore` and `_config.yml`'s `exclude:` still name `CLAUDE.local.md` / `CLAUDE.local.log.md`.
+Leave both in place — belt and braces if the files ever reappear. The reason both were needed:
+`CLAUDE.local.md` was gitignored and still rendering to `_site/CLAUDE.local/`, because keeping a
+file out of the repo and keeping it out of the build are two separate switches.
 
 ## What this site is
 A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are
