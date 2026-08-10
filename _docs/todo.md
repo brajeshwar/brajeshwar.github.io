@@ -78,17 +78,28 @@ Originally absorbed from the 2027 planning braindump.
       `h2` and the event in an `h3` — right for a story, backwards for a CV. `/about/` got the
       same inversion the same day (events as titles), which is why the two now agree on emphasis
       while keeping different structures.
-- [ ] **Dead timeline CSS to remove.** Converting `/about/` and `/cv/` to Markdown on
-      2026-08-09 orphaned most of the list-shape vocabulary in `_sass/timeline.scss`. Verified
-      against the built HTML — these now match nothing: `.timeline-entries`, `.timeline-entry`,
-      `.timeline-title`, `.timeline-meta`, `.timeline-period`, `.timeline-progress` (with its
-      `@supports` and reduced-motion blocks), `.timeline-intro`, `.timeline-title-a11y`. Still
-      live: `.timeline-when` (9 period labels), `.timeline-figure`, and every `.page-now ul`
-      selector.
-      ⚠️ **Attempted and reverted the same day.** The shared rules pair a dead selector with a
-      live one (`.timeline-entries, .page-now ul { … }`), and a regex sweep took `.page-now ul`
-      out with them — `/now/` lost its spine. Do this by hand, one rule at a time, diffing the
-      built `.page-now` declarations after each. Roughly 190 lines.
+- [x] **Dead timeline CSS removed** *(2026-08-10)* — **130 lines**, not the ~190 this entry
+      estimated. Gone from `_sass/timeline.scss`: `.timeline-entries`, `.timeline-entry` (with
+      its `::before`, `:last-child` and `p` rules), `.timeline-title`, `.timeline-meta`,
+      `.timeline-period`, `.timeline-intro`, `.timeline-title-a11y`, and the whole
+      `.timeline-progress` scroll-driven experiment including its `@supports` and
+      `prefers-reduced-motion` blocks. −1,297 bytes raw / −264 gzip on the one cached
+      stylesheet.
+      ⚠️ **This entry was WRONG about `.timeline-when`** — it listed it as live with "9 period
+      labels". The built site has **zero**: it died with the period headings on 2026-08-09, and
+      `_sass/timeline.scss` never carried a rule for it at all. The stale claim had also
+      propagated into a comment in that file saying `anchors.js` targets `.timeline-when`; the
+      script has only ever named `.timeline h2[id], .timeline h3[id], .page-now h2[id]`. Both
+      corrected.
+      ⚠️ **The seven shared rules were the trap**, exactly as this entry warned. Each
+      (`.timeline-entries, .page-now ul { … }` and friends) was edited by hand, then the built
+      stylesheet was split rule-by-rule and diffed: **every `.page-now` declaration is
+      byte-identical before and after**, as is every live `.timeline` one. 420 rules → 407, and
+      the only lines the diff shows are the dead ones. That diff is the verification — a green
+      build proves nothing here, and neither does reading the source.
+      Also corrected on the way: `_sass/cv.scss`'s header still described a `/cv/` role as a
+      `.timeline-entry` with a `.timeline-title` and `.timeline-meta`, which stopped being true
+      when the page became Markdown on 2026-08-09. It renders `h2` + `.timeline h2 + p`.
 
 - [ ] **Twelve HTML pages still emit HTML, not Markdown, in their `.md` twins.** ⚠️ Was 14; `/cv/` and `/about/` were converted to Markdown sources on 2026-08-09 and are fixed.
       `scripts/build-agent-markdown.mjs` assumes a Markdown source — true for all 1,457 posts,

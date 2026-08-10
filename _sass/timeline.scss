@@ -44,6 +44,27 @@
    the :has() + :target pattern was a genuinely good no-JS
    filter and may be worth reaching for elsewhere — not because
    this page is coming back to it.
+
+   ⚠️ THE LIST-SHAPE VOCABULARY WENT ON 2026-08-10, 130 lines of it.
+   Converting /about/ and /cv/ to Markdown sources the day before
+   left every `<li class="timeline-entry">` selector matching
+   nothing; verified against the built HTML, not the source, before
+   removing. Gone: .timeline-entries, .timeline-entry (and its ::before,
+   :last-child and `p` rules), .timeline-title, .timeline-meta,
+   .timeline-period, .timeline-intro, .timeline-title-a11y, and the
+   whole scroll-driven .timeline-progress experiment with its
+   @supports and prefers-reduced-motion blocks.
+
+   ⚠️ .timeline-when WENT WITH THEM, and _docs/todo.md was wrong to
+   list it as live with "9 period labels" — the built site has zero.
+   It died with the period headings on 2026-08-09.
+
+   ⚠️ THE SHARED RULES WERE THE TRAP, and are why an earlier attempt
+   was reverted. Seven of them paired a dead selector with a live one
+   (`.timeline-entries, .page-now ul { … }`), so a regex sweep took
+   /now/'s spine out with them. Each was edited by hand and the built
+   `.page-now` declarations diffed after. If more ever goes from here,
+   do it the same way — the two vocabularies still share this file.
    ============================================================ */
 
 .timeline,
@@ -76,55 +97,6 @@
 }
 
 .page-now { --timeline-entry-gap: var(--space-s); }
-
-/* ---- Page opening ------------------------------------------
-   There is no title row any more (2026-07-27). The intro opens the page and
-   the filter sits directly above the timeline it controls. .timeline-head and
-   its bottom border are gone with it.
-
-   The h1 is kept for the accessibility tree only — clipped, not
-   display:none, so it stays announced and indexable while taking no space. A
-   page with no heading at all gives screen-reader and search users nothing to
-   anchor on.
-   ------------------------------------------------------------ */
-
-.timeline-title-a11y {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Intro. Opens the page, and sits outside .timeline-period because it
-   introduces the whole page rather than any one part of it. (It was outside
-   for a second reason until 2026-08-09 — so the Life/Work filter could never
-   hide it. That filter is gone; this placement was right regardless.)
-
-   Spans the FULL content band, at Brajeshwar's request; the measure cap it
-   used to carry is gone. Worth knowing what that trades: at 1024px these lines
-   run ~140 characters against the ~66 design.md targets. Fine for a short
-   opening, worth re-capping if it ever grows into several paragraphs. */
-.timeline-intro {
-  margin: 0 0 var(--space-m);
-}
-
-.timeline-intro p { margin: 0 0 var(--space-2xs); }
-.timeline-intro p:last-child { margin-bottom: 0; }
-
-/* ---- Periods and the spine ---------------------------------
-   The spine is a border on the entry list, not a pseudo-element
-   on the container, so it starts and stops with the entries —
-   no stray line hanging past the last item.
-   ------------------------------------------------------------ */
-
-.timeline-period {
-  margin: 0 0 var(--space-l);
-}
 
 /* ⚠️ THE PERIOD LABEL IS GONE (2026-08-09: "we should get rid of the '##' with
    the years"). /about/ grouped its entries under year headings; it does not any
@@ -188,9 +160,14 @@
 
 /* ---- Heading anchors ---------------------------------------
    MOVED TO base.css 2026-07-27. anchors.js still prepends a § link
-   to every .timeline-when[id], so hovering a period gives a
-   copyable link straight to it — "/about/#2005-2006" — but the
-   styling is no longer here.
+   — its selector is `.timeline h2[id], .timeline h3[id],
+   .page-now h2[id]`, so hovering an entry gives a copyable link
+   straight to it — but the styling is no longer here.
+
+   ⚠️ This said `.timeline-when[id]` until 2026-08-10 and had been
+   wrong for a while: anchors.js has never named that class, and
+   nothing on the built site carries it. Read the script, not this
+   comment, if the two ever disagree again.
 
    There were THREE copies of .headerlink (post.css, timeline.css,
    now.css), each justified by bundles that "are never loaded
@@ -358,9 +335,10 @@
 .timeline { --timeline-dot-center: calc(var(--step-2) * var(--scale-small) / 2); }
 
 /* ---- Where a dot sits, and therefore where the spine starts ------
-   ⚠️ ONE NUMBER DRIVES THREE THINGS: the dot's vertical position, the top of
-   the spine, and the top of the progress fill. Define it once, here, as the
-   MIDDLE OF THE FIRST LINE of whatever leads an entry, measured from the
+   ⚠️ ONE NUMBER DRIVES TWO THINGS: the dot's vertical position and the top of
+   the spine. (It drove a third — the top of the scroll-driven progress fill —
+   until that experiment was deleted on 2026-08-10.) Define it once, here, as
+   the MIDDLE OF THE FIRST LINE of whatever leads an entry, measured from the
    entry's top.
 
    Brajeshwar, 2026-08-09: "Vertically position the dots in the middle of the
@@ -377,8 +355,7 @@
    set here would resolve against the FONT SIZE OF WHATEVER USES IT — one value
    on the <ol>, another on the <li>. The spine and the dots would disagree.
    Absolute math on the scale tokens has no such trap. */
-.timeline-entries { --timeline-dot-center: calc(var(--step-2) * var(--scale-small) / 2); }
-.page-now ul      { --timeline-dot-center: calc(var(--step-0) * var(--scale) / 2); }
+.page-now ul { --timeline-dot-center: calc(var(--step-0) * var(--scale) / 2); }
 
 /* The spine.
 
@@ -395,7 +372,6 @@
 
    It still stops with the last entry, which was the original reason for
    putting the line on the list rather than the container. */
-.timeline-entries,
 .page-now ul {
   position: relative;
   list-style: none;
@@ -403,7 +379,6 @@
   padding: 0 0 0 calc(var(--timeline-gutter) + var(--timeline-rule));
 }
 
-.timeline-entries::before,
 .page-now ul::before {
   content: "";
   position: absolute;
@@ -435,7 +410,6 @@
   background: var(--border-color-high);
 }
 
-.timeline-entry,
 .page-now ul li {
   position: relative;
   margin: 0 0 var(--timeline-entry-gap);
@@ -454,7 +428,6 @@
   display: flow-root;
 }
 
-.timeline-entry:last-child,
 .page-now ul li:last-child { margin-bottom: 0; }
 
 /* Marker on the spine. Sits ON the rule, centred over it both ways.
@@ -472,7 +445,6 @@
    exactly --timeline-dot across, box-sizing being border-box.
 
    `top` is derived, not typed — see --timeline-dot-center above. */
-.timeline-entry::before,
 .page-now ul li::before {
   content: "";
   position: absolute;
@@ -554,29 +526,10 @@
    the same timeline. Item 1 of his 2026-08-09 queue ("the same visual timeline
    treatment") falls out of item 2's work rather than needing its own change. */
 
-/* An <h2> since 2026-08-09, so base.css gives it --step-2 at light weight —
-   it was an <h3> at --step-1. THE LEVEL IS THE CHANGE: the event is now the
-   loud thing on the page and the period label above it is quiet, which is the
-   whole of "focus on events as the titles". Spacing only here — see the note
-   on .timeline-when, and note that the hierarchy still runs h1 (the page
-   title, from the layout) → h2, with no level skipped. */
-.timeline-title {
-  margin: 0 0 var(--space-3xs);
-}
-
-.timeline-meta {
-  margin: 0 0 var(--space-2xs);
-  font-size: var(--step--1);
-  color: var(--text-color-lower);
-}
-
 /* The timeline SPANS the standard site width, but its prose does not: entry
    text is still capped at the reading measure, the same rule articles follow.
    Without this, a 1296px-wide entry gives ~190-character lines — the structure
    wants the width, the sentences do not. */
-.timeline-entry p,
-.timeline-title,
-.timeline-meta,
 .page-now ul li {
   max-width: var(--measure);
 }
@@ -587,8 +540,8 @@
    it all the way to the right side of the body-width."
 
    ⚠️ NO BREAKOUT IS NEEDED, and that is the whole trick. Measured at a 1512
-   viewport: the <li> already runs 286 -> 1268, which IS the band's right edge,
-   while `.timeline-entry p` above caps prose at --measure and so stops at 951.
+   viewport: the entry already runs 286 -> 1268, which IS the band's right edge,
+   while `.timeline p` above caps prose at --measure and so stops at 951.
    That leaves 317px of empty margin inside every entry. A plain `float: right`
    drops the picture straight into it — no negative margins, no 100cqi, nothing
    to keep in step with the band if it ever changes.
@@ -631,62 +584,6 @@
     width: 100%;
     margin: 0 0 var(--space-s);
   }
-}
-
-.timeline-entry p { margin: 0 0 var(--space-2xs); }
-.timeline-entry p:last-child { margin-bottom: 0; }
-
-/* ---- Experimental: position line + section stepping ---------
-   Brajeshwar flagged this one as "not sure … want to experiment",
-   so it is deliberately the most separable part of the file:
-   delete this block and the timeline still works completely.
-
-   The progress fill uses scroll-driven animation, which is
-   Chrome/Edge 115+ only. It is wrapped in @supports so every
-   other browser simply gets the plain spine — no polyfill, no JS.
-   ------------------------------------------------------------ */
-
-.timeline-progress { display: none; }
-
-@supports (animation-timeline: scroll()) {
-  .timeline-entries { position: relative; }
-
-  /* ⚠️ ITS `left` WAS WRONG AND NOBODY SAW IT. This read
-     `left: calc(var(--timeline-gutter) * -1 - var(--timeline-rule))` — the
-     dot's formula, which is relative to an ENTRY. This element is a child of
-     the list, so it painted 42px to the left of the spine it is supposed to
-     fill. Measured 2026-08-09: spine at x=244-246, fill at x=204.
-
-     It went unnoticed because `prefers-reduced-motion: reduce` sets this to
-     display:none further down, and the machine it was written on had that on.
-
-     Fixed by giving it the spine's geometry verbatim rather than its own
-     arithmetic: same left, same width, same top. If the spine moves, this
-     moves with it and cannot drift again. */
-  .timeline-progress {
-    display: block;
-    position: absolute;
-    top: var(--timeline-dot-center);
-    left: 0;
-    width: var(--timeline-rule);
-    bottom: 0;
-    background: var(--accent);
-    transform-origin: top;
-    transform: scaleY(0);
-
-    animation: timeline-fill linear both;
-    animation-timeline: scroll(root block);
-  }
-
-  @keyframes timeline-fill {
-    to { transform: scaleY(1); }
-  }
-}
-
-/* Respect the global motion kill switch: a line that races the scroll is
-   exactly the kind of motion someone may have turned off. */
-@media (prefers-reduced-motion: reduce) {
-  .timeline-progress { display: none; }
 }
 
 /* Prev/next stepping between periods. Plain anchors — they work with JS off

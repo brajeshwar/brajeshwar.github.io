@@ -6,9 +6,14 @@
    This file was ~40 lines building a CV-specific look: a date as a border-top
    separator (`.cv-when`), the company as the heading (`.cv-company`), a quiet
    role line (`.cv-title`). All three are gone. /cv/ is the shared timeline
-   component now — a role is a `.timeline-entry`, the company its
-   `.timeline-title`, the date and role its `.timeline-meta` — so the look
-   comes from timeline.scss and there is nothing to keep in step here.
+   component now — a role is an `h2` inside `.timeline`, the date and role the
+   paragraph straight after it (`.timeline h2 + p`) — so the look comes from
+   timeline.scss and there is nothing to keep in step here.
+
+   ⚠️ This named `.timeline-entry` / `.timeline-title` / `.timeline-meta` until
+   2026-08-10. Those classes belonged to the list shape /cv/ was converted OUT
+   of on 2026-08-09, and they were deleted from timeline.scss on the 10th; the
+   selectors above are what the page actually renders.
 
    Worth knowing WHY it reversed, because the original reasoning was sound and
    is still written in the git history: the timeline made the DATE loud and the
@@ -30,7 +35,7 @@
    ⚠️ --text-color-LOWER. This said `-low` until 2026-08-09, which is 20.5%
    against the foreground's 14.5% — barely a step, and not the "quieter" this
    comment claimed. `-lower` (37.1%) is the tier that actually reads as
-   secondary, and the one .timeline-meta uses. */
+   secondary, and the one the timeline's sub-title line uses. */
 .page-cv .cv-contact {
   font-size: var(--step--1);
   color: var(--text-color-lower);
