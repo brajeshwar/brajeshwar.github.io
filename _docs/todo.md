@@ -126,13 +126,34 @@ Originally absorbed from the 2027 planning braindump.
       Details, including the three non-obvious traps (entities, `aria-hidden`, adjacent
       `<span>`s), in [`agents.md`](agents.md).
 
-- [ ] **`/cv/` and `/about/` disagree on four facts.** Both are live and neither was normalized
-      to the other, because these are his claims to settle, not mine:
-      Mobisy is "Head of Product" on `/cv/` and "Chief Product Officer (consulting)" on
-      `/about/`; Oinam Software starts "2003 Mar" on `/cv/` but "By 2005" on `/about/`, which
-      also collides with `/about/`'s own 2003–2004 "freelancing, full time" period; Oinam's
-      client list says Macromedia on one and Adobe on the other; Razorfish is "50+ proficient
-      designers" against "50+ product designers".
+- [ ] **`/cv/` and `/about/` disagree — but on ONE fact, not four.** Re-checked against both
+      sources 2026-08-10. Still open because they are his claims to settle, not an agent's, but
+      the audit this entry carried was written before `/about/` became a story and **two of its
+      four items no longer exist**:
+      - ~~Mobisy "Head of Product" vs "Chief Product Officer (consulting)"~~ — **gone.**
+        `/about/` has no Mobisy entry at all. Its twelve headings run Bombay → Work → Internet
+        → brajeshwar.com → Freelance → Oinam Software → the acquisition → Marriage → Laaija →
+        Bangalore → Amara → What happened. Only `/cv/` states a Mobisy title.
+      - ~~Razorfish "50+ proficient designers" vs "50+ product designers"~~ — **gone**, same
+        reason. Razorfish is a `/cv/` heading only.
+      - **STILL LIVE — Oinam Software's founding.** `/cv/` says `2003 Mar — 2006 Mar · 3 years
+        · Co-Founder, CEO` and *"I gave up my lucrative career at Peerless Software to start my
+        own Software Service Company"*, with Peerless ending 2003 Feb, so the two run back to
+        back with nothing between. `/about/` says `2005 · Founder` and *"In 2005, I decided to
+        take the plunge, go official"*, preceded by a Freelance entry dated 2003: *"In early
+        2003, I resigned from a very lucrative job and started freelancing full-time."* Same
+        resignation, two different next steps, and the title differs too (Co-Founder, CEO vs
+        Founder). ⚠️ It is not the two-year gap this entry described ("2003–2004") — `/about/`
+        dates the freelance period 2003 flat.
+      - **The client list differs, but not as described.** `/about/` does not say Adobe *instead
+        of* Macromedia — it lists **both**. The real difference: `/about/` names Adobe, which
+        `/cv/` does not; `/cv/` names Ultrashock and Edition Interactive, which `/about/` does
+        not. Eight names against nine, seven shared.
+      - **Found while checking, and unrelated to either page:** `_data/album.yaml` titles the
+        2006 photograph *"Oinam Software acquired by **Nanocast**"* — and its filename says
+        nanocast too — while `/about/`'s caption for the same image and `/cv/`'s closing line
+        both say **Mixercast**. The `/album/` page therefore names a different acquirer from
+        every other page on the site. His call; renaming the file would also change a URL.
 - [ ] **"Download Resume" PDF** — the Work track as a downloadable file. Obvious home is beside
       the Life/Work pill when Work is the active view — **that pill no longer exists**, so the
       placement question is open again. Worth deciding then whether the PDF is
