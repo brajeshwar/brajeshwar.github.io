@@ -24,8 +24,6 @@ footer:
     url: "/books/"
   - title: Film
     url: "/film/"
-  - title: Ideas
-    url: "/ideas/"
 - links:
   - title: Legal
     url: "/legal/"
