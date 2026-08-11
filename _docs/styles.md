@@ -580,11 +580,9 @@ Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (
       archives.css     |
       search.css       |  per-page one-offs
       now.css          |
-      timeline.css     |  /about/ and /now/ share this one
+      timeline.css     |  /about/, /cv/, /about/brajeshwar.com/ and /now/
       own.css          |
-      cv.css          /   /cv/ (2026-08-09) — NOT the timeline component; see
-                          the note at the top of _pages/cv.html for why a CV
-                          and a story want opposite emphasis
+      cv.css          /   /cv/ — one rule, the contact line. See below
       breakpoints.css variables only
       bookmarks.css   not yet wired up — see below
 
@@ -1187,15 +1185,23 @@ naming them is what stops the next page inventing a sixth:
 | Pattern | Pages | How |
 |---|---|---|
 | **Reading** | posts, prose pages | `main` at the site width; prose capped at `--measure` |
-| **Timeline** | `/about/`, `/now/` | year/period heading, spine, dots, entries |
+| **Timeline** | `/about/`, `/cv/`, `/about/brajeshwar.com/`, `/now/` | spine, dots, entries |
 | **Album** | `/film/`, `/devices/` | fluid `ul.item__cards` thumbnail grid |
 | **Listing** | `/archives/` | dense rows + the year scrubber |
 
-Timeline is a shared look with no shared file. `/about/` uses `timeline.css` on hand-written
-markup; `/now/` uses `now.css` on what kramdown emits from `now/*.md`. The rules are deliberate
-copies — both are tier-2 bundles never loaded together, so sharing means promoting to
-`base.css` and charging ~1,456 pages for two. Keep them in step. If a third page ever wants
-the timeline, that is the point to extract a real layout instead.
+⚠️ **Timeline is now a shared look in ONE file, and this paragraph used to say the opposite.**
+It described `/about/` and `/now/` as deliberate copies that must be kept in step by hand,
+justified by "tier-2 bundles never loaded together, so sharing means promoting to `base.css`
+and charging ~1,456 pages for two". **That reason died on 2026-07-27 when the CSS went
+external** — every stylesheet is concatenated into one cached file now, so nothing is promoted
+and nothing is charged. The two copies were merged into `timeline.scss` the same day, and they
+were still pixel-identical when merged, which was luck.
+
+It carries **two vocabularies on purpose**: heading-flow selectors (`.timeline h2`,
+`.timeline h2 + p`) for the three Markdown pages, and list selectors (`.page-now ul li`) for
+`/now/`, whose entries are bullets with no titles. ⚠️ **Some rules pair one with the other**, so
+a regex sweep over the file will take a live selector out with a dead one — it did exactly that
+once and `/now/` lost its spine. See [`timeline.md`](timeline.md).
 
 Album is available to any page. The grid (`ul.item__cards`) lives in `base.css`; the card
 treatment is `album.css`, loaded by `_layouts/album.html`. To give a page thumbnails: switch it

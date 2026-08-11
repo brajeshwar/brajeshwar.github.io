@@ -4,12 +4,19 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-10, ninth session) — READ FIRST
+## Where we are (updated 2026-08-11, ninth session — closed) — READ FIRST
 
-**✅ PUSHED 2026-08-10 at his word** — *"Commit and push and stay clean."* Seven commits went out:
-the five below, the catch-up commit that carried this section, and his own `6fc481b3 Phone`, a
-content edit already sitting unpushed when the session started. Every push auto-deploys, so this
-is live.
+**✅ SESSION CLOSED 2026-08-11** — *"document and update everything to shut down and resume
+later."* The code went out on 2026-08-10 at his word (*"Commit and push and stay clean"*): seven
+commits, the five below plus a catch-up commit and his own `6fc481b3 Phone`, which had been
+sitting unpushed since the eighth session. The documentation pass that closes it followed on the
+11th. Every push auto-deploys, so all of it is live.
+
+**Verified on the deployed site, not just in CI** — the Actions run was green through all eight
+steps, and then: all twelve `.md` twins return zero Liquid tags and zero block markup;
+`brajeshwar.com/books.md` lists actual books; the stylesheet re-hashed to `site.88212863.css`
+(so the year-long cache busted); `.timeline-entry` appears **0** times in it as a selector; and
+`/now/`'s spine rule came back byte-identical.
 
 ⚠️ **Check `git log origin/main..main` before believing that sentence, or any other status line
 in this file, including this one.** The eighth session's opening claimed "pushed and live" while
@@ -26,6 +33,7 @@ any other. Trust the command.
 | `3cfa1c2a` | **`.md` twins for HTML pages now convert the BUILT page**, not the Liquid source |
 | `a5e7f299` | the `/cv/` vs `/about/` audit re-checked — one live disagreement, not four |
 | `586a2e60` | the `/odo` queue moved out of this repo and into the vault |
+| *(the 11th)* | **`_docs/timeline.md` rewritten** — it documented a class vocabulary that had not existed for two days; plus corrections to `CLAUDE.md`, `styles.md` and this file |
 
 **Where to pick up** — nothing is half-finished and the tree is clean. What is *waiting* rather
 than pending:
@@ -46,10 +54,30 @@ in his vault, worked with a now-**global** `/odo`, and the done-log is
 `~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`. Neither is visible to `git status` or `_site`,
 so if work seems to appear from nowhere between sessions, that is where it came from.
 
+### The documentation pass (2026-08-11) — what it found
+
+⚠️ **`_docs/timeline.md` was the worst of it and has been rewritten.** It taught an authoring
+vocabulary that no longer existed anywhere: its copy-paste markup template used
+`.timeline-period`, `.timeline-when`, `<ol class="timeline-entries">`,
+`<li class="timeline-entry">`, `.timeline-title`, `.timeline-meta` and `.timeline-progress`.
+Following it would have produced HTML that nothing styles. Six separate claims in that one file
+were false — the markup template, the hook table, the `anchors.js` selector, `/about/`'s
+ordering, whether periods still exist, and the position line's status.
+
+⚠️ **`/about/` runs OLDEST-first**, and the order table had said newest for both it and `/cv/`.
+Re-measured: `/cv/` and `/now/` are newest-first, `/about/` and `/about/brajeshwar.com/` oldest.
+
+Also corrected: `styles.md` still described the timeline as *"a shared look with no shared
+file"* kept in step by hand, a reason that died when the CSS went external on 2026-07-27 and
+the two copies were merged; and it filed `/cv/` as *"NOT the timeline component"*, pointing at
+a `_pages/cv.html` that is now `cv.md`. `CLAUDE.md`'s `_posts/todo/` inventory listed five live
+work-in-progress posts where there is now one — the four came off the shelf in `579b6e09`,
+**and all five URLs are still built**, which is the folder rule demonstrating itself.
+
 ### What the ninth session learned
 
-⚠️ **Three documented "facts" in `_docs/` were wrong, and each had been quoted forward.** This is
-the pattern worth carrying, not the individual corrections:
+⚠️ **Documented "facts" in `_docs/` were wrong in nine separate places, and each had been quoted
+forward into another file.** This is the pattern worth carrying, not the individual corrections:
 
 - **`.timeline-when` was listed as live with "9 period labels."** The built site has zero, and
   `_sass/timeline.scss` never carried a rule for it. The claim had already propagated into a
@@ -61,8 +89,21 @@ the pattern worth carrying, not the individual corrections:
 - **Four `/cv/` vs `/about/` disagreements were two.** `/about/` has had no Mobisy and no
   Razorfish entry since it became a story on 2026-08-09, so neither page can disagree about them.
 
-**All three survived because they were re-read instead of re-measured.** Every one took a single
-grep of `_site` to disprove. Verify a claim about the built site against the built site.
+**Every one of them survived because it was re-read instead of re-measured**, and not one took
+more than a single grep of `_site` to disprove. Two habits follow, and they are the whole lesson
+of this session:
+
+1. **Check a claim about the built site against the built site.** `grep -rl --include='*.html'
+   'timeline-entry' _site` answers in a second. A doc quoting another doc is not evidence.
+2. **When something is deleted, grep the docs for its name in the same pass.** Every one of these
+   was a description of a removed feature left sitting in present tense — which reads exactly
+   like a description of a live one. `timeline.md`, `styles.md` and a comment in `cv.scss` had
+   each copied the same wrong sentence from each other.
+
+⚠️ **And a green build proves none of this.** Both verifications that actually caught things this
+session were differential, not pass/fail: splitting the built stylesheet rule-by-rule to prove
+every `.page-now` declaration was byte-identical, and checksumming all 1,481 `.md` twins to prove
+exactly 13 changed. Reach for a before/after diff, not an exit code.
 
 ⚠️ **The queue left this repo on 2026-08-10.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
 in his vault, worked with a now-**global** `/odo`, and the done-log is

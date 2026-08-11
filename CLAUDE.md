@@ -59,6 +59,13 @@ the ONLY source for that URL. Moving a post there does not unpublish it; re-dati
 does. His words: *"anything in 'todo' but with a past date is published. That is how Jekyll
 work."*
 
+⚠️ **The SHELF has since changed; the RULE has not.** Re-counted 2026-08-11: `_posts/todo/` holds
+eleven files, of which **one** is past-dated and live — `/2025/people-of-the-internet/`. The
+other four came off the shelf in `579b6e09` (*"Four posts come off the work-in-progress shelf"*).
+⚠️ **All five URLs are still built** — they moved folder, they did not unpublish, which is the
+rule above demonstrating itself. Do not read the 2026-08-09 list as a current inventory; measure
+it (`ls _posts/todo/`) when it matters.
+
 ⚠️ **SO `_posts/todo/` HOLDS TWO DIFFERENT THINGS, and the date tells them apart:**
 
 | date | state | what the folder means |

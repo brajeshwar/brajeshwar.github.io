@@ -1,41 +1,26 @@
-# Timeline — the /about/ storyline
+# Timeline — the shared component
 
-A vertical timeline: events as headings, dates as sub-titles, time-range labels typed by hand,
-and an optional scroll position line.
+A vertical spine with a dot per entry. Events as headings, the date on the line beneath, and
+**no authoring syntax of its own** — you write ordinary Markdown and the CSS finds it.
 
-⚠️ **THREE PAGES SHARE IT** since 2026-08-09 — `/about/`, `/cv/` and `/now/`. Any change to the
-spine, the marker or the entry rhythm changes all three, which is the point: *"I want the same
-visual timeline treatment of /about/ same for /cv/ and /now/."* `/cv/` uses one flat
-`<ol class="timeline-entries">` with no periods, because a CV is one sequence of roles rather
-than a story with eras.
+⚠️ **FOUR PAGES WEAR IT**: `/about/`, `/cv/`, `/about/brajeshwar.com/` and `/now/`. Any change to
+the spine, the marker or the entry rhythm changes all four, which is the point — *"I want the
+same visual timeline treatment of /about/ same for /cv/ and /now/."* (2026-08-09).
 
-It had a Life/Work filter until 2026-08-09. That is gone — see the section below before
-looking for it.
+⚠️ **THIS FILE WAS SUBSTANTIALLY WRONG UNTIL 2026-08-11.** It documented a class vocabulary
+(`.timeline-period`, `.timeline-when`, `.timeline-entries`, `.timeline-entry`, `.timeline-title`,
+`.timeline-meta`, `.timeline-intro`, `.timeline-title-a11y`, `.timeline-progress`) that the
+Markdown conversion orphaned on 2026-08-09 and that was deleted from `_sass/timeline.scss` on
+2026-08-10. Following its markup template would have produced HTML that nothing styles. The
+lesson is kept at the foot; the corrections are inline.
 
-Live at `/about/` since 2026-07-27, in **`_pages/about.md`**. ⚠️ It was `about.html` from then
-until 2026-08-09, when the page went back to Markdown — so a reference to `about.html` anywhere
-is stale, not a second file. (Before 2026-07-27 there was a *different* prose `about.md`, which
-Brajeshwar archived; that deletion is in the repo's history.) The
-`_pages` collection sets `permalink: '/:name/'`, so `about.md` lands on `/about/` on its own;
-the explicit `permalink: /about/` in its front matter is belt-and-braces on a URL that must not
-move (guardrail 2). `/about/brajeshwar.com/` is a separate page with its own explicit permalink
-and is unaffected.
+## The markup — a heading, a line, and prose
 
-## ⚠️ Markdown after all — the HTML decision was REVERSED (2026-08-09)
+There are exactly two shapes.
 
-**This section argued for HTML three times in two days and was wrong. `/about/` and `/cv/` are
-Markdown now.** The reversal is left loud rather than tidied away, because the mistake is
-instructive: the *premise* was correct and the *conclusion* drawn from it was not.
+### Heading flow — `/about/`, `/cv/`, `/about/brajeshwar.com/`
 
-The premise, still true and still worth knowing: **kramdown does not parse Markdown inside
-block-level HTML.** Verified twice against this site's own parser — a `[link](…)` inside a
-`<li>` reaches the browser as literal text.
-
-The wrong conclusion: that every entry would therefore need `markdown="1"`, which is more markup
-than it saves. **One `markdown="1"` on the outer `<div>` makes the entire body Markdown.** The
-per-entry wrappers were never a Markdown problem at all — they were a CSS demand for
-`<li class="timeline-entry">`. Removing that demand (the heading-flow rules in `timeline.scss`)
-removed the blocker, and what is left is:
+One wrapper, then Markdown:
 
 ```markdown
 <div class="timeline" markdown="1">
@@ -49,48 +34,105 @@ Prose, with [links](https://example.com) and *emphasis* that actually work.
 </div>
 ```
 
-What made it worth doing was never authoring comfort — it was **`/cv.md` and `/about.md`**, the
+| what you write | what styles it |
+|---|---|
+| `<div class="timeline" markdown="1">` | `.timeline` — the spine (a `::before`), the left padding, the dot arithmetic |
+| `## Entry` | `.timeline h2` — the dot hangs off it as a `::before`. **No local `font-size`**: base.scss owns the type, *"the styling should be the default '##' styling"* |
+| the **first** paragraph after it | `.timeline h2 + p` — the sub-title. No class, and none is possible: *"the line right under the title"* is exactly what `h2 + p` means |
+| every later paragraph | `.timeline p` — capped at `--measure` while the spine spans the band |
+| `<figure class="timeline-figure">` | floats right into the margin the measure leaves |
+
+The `<h1>` comes from the **layout**, not from the page. There is no clipped a11y heading any
+more and none is needed.
+
+### List flow — `/now/` only
+
+No wrapper and no classes at all. `style: page-now` in the front matter puts `.page-now` on
+`<main>`, and the selectors hang off kramdown's ordinary output:
+
+| what you write | what styles it |
+|---|---|
+| `## 2024` | `.page-now h2` — the year |
+| a bullet list under it | `.page-now ul` — carries the spine |
+| each `- item` | `.page-now ul li` — a dot on the spine |
+
+⚠️ **`/now/` deliberately keeps this shape.** Its entries are bullets with no titles, so there is
+nothing for the heading flow to promote. `_sass/timeline.scss` carries both vocabularies on
+purpose; the older one is not dead.
+
+### What the two share
+
+Both read the same four tokens, which is what makes four pages one component:
+
+    --timeline-rule         the spine's width (--border-size-hairline, 0.75px)
+    --timeline-dot          marker diameter (11px, 9px below 600px)
+    --timeline-gutter       the space the spine lives in
+    --timeline-dot-center   THE middle of an entry's first line — see below
+
+⚠️ **`--timeline-dot-center` is the load-bearing one.** It drives the dot's vertical position
+*and* the top of the spine, and each flow sets its own because their first lines differ — the
+heading flow measures against `--step-2` (an `h2`), `/now/` against `--step-0` (body text).
+Brajeshwar's parenthesis is why it is a variable and not a constant: *"Vertically position the
+dots in the middle of the title that follows it (if there are as in the /about/)."*
+
+## ⚠️ Markdown after all — the HTML decision was REVERSED (2026-08-09)
+
+**This section argued for HTML three times in two days and was wrong.** The reversal is left loud
+rather than tidied away, because the *premise* was correct and the *conclusion* was not.
+
+The premise, still true: **kramdown does not parse Markdown inside block-level HTML.** Verified
+twice against this site's own parser — a `[link](…)` inside a `<li>` reaches the browser as
+literal text.
+
+The wrong conclusion: that every entry therefore needed `markdown="1"`, which is more markup than
+it saves. **One `markdown="1"` on the outer `<div>` makes the entire body Markdown.** The
+per-entry wrappers were never a Markdown problem — they were a CSS demand for
+`<li class="timeline-entry">`. Remove the demand and an entry is a heading followed by
+paragraphs, which is what Markdown is for.
+
+What made it worth doing was never authoring comfort. It was **`/cv.md` and `/about.md`**, the
 plain-text twins the "Open in" bar hands to an AI, which were shipping raw HTML because the
 source was HTML. His ask: *"'film' will never need a view as Markdown, hence HTML but about, cv,
-and now can definitely be just Markdown."* So the split is by PURPOSE: pages an agent might be
-asked to read are Markdown; index pages built from data (`/film/`, `/books/`, `/album/`,
-`/own/`) stay HTML, where the markup IS the page.
+and now can definitely be just Markdown."*
+
+So the split is by **purpose**: pages an agent might be asked to read are Markdown; index pages
+built from data (`/film/`, `/books/`, `/album/`, `/own/`) stay HTML, where the markup *is* the
+page. ⚠️ **Those data pages no longer pay for that choice** — since 2026-08-10 their twins are
+converted from the built page rather than the Liquid source, so `/books.md` lists actual books.
+See [`agents.md`](agents.md).
 
 Three things that fell out, each worth keeping:
 
 - **The anchors come free.** kramdown derives a heading id from its text, so `## Razorfish` is
-  `id="razorfish"`. All thirteen `/cv/#<company>` links resolve with nothing written by hand —
+  `id="razorfish"`. All thirteen `/cv/#<company>` links resolved with nothing written by hand —
   checked against the old file before converting. ⚠️ Rename a heading and you rename its anchor.
 - **Footnotes become real.** `[^1]` emits exactly the markup `sidenotes.js` expects, so guardrail
   5 is satisfied by the parser instead of by hand-written `<sup id="fnref:1">`.
-- **Raw HTML still passes through** inside `markdown="1"`, which is how `/about/`'s period labels
-  keep their shareable `id` and how the flush-right figure survives.
+- **Raw HTML still passes through** inside `markdown="1"`, which is how the flush-right figure
+  survives.
 
-⚠️ **`/about/` uses ordinary kramdown footnotes, and its hand-written HTML block is GONE.**
-Getting there took inverting the problem. `sidenotes.js` needs the reference *and* the
-`.footnotes` list inside one `.container-ideal`, and kramdown appends `.footnotes` at the very
-end of the document — so with `page_full: true` (which drops `.container-ideal` so the timeline
-gets the band) a `[^1]` could never become a sidenote.
+⚠️ **`/about/` uses ordinary kramdown footnotes and its hand-written HTML block is GONE.** Getting
+there took inverting the problem. `sidenotes.js` needs the reference *and* the `.footnotes` list
+inside one `.container-ideal`, and kramdown appends `.footnotes` at the very end of the document
+— so with `page_full: true` (which drops `.container-ideal` so the timeline gets the band) a
+`[^1]` could never become a sidenote.
 
 **So the article keeps the reading column and the TIMELINE breaks out instead** —
-`.page-about .timeline { width: var(--body-width-max); max-width: none; }`. `.container-ideal`
-is left-aligned, so a child extending right needs no negative margin; measured, the timeline's
-right edge lands exactly on `<main>`'s. Prose and notes keep the measure, the timeline gets
-1024px, the sidenote works. `page_full` still exists as a layout capability but no page uses it.
+`.page-about .timeline { width: var(--body-width-max); max-width: none; }`. `.container-ideal` is
+left-aligned, so a child extending right needs no negative margin; measured, the timeline's right
+edge lands exactly on `<main>`'s. Prose and notes keep the measure, the timeline gets 1024px, the
+sidenote works. `page_full` still exists as a layout capability but no page uses it.
 
-## ⚠️ /about/ has no period grouping any more (2026-08-09)
+## ⚠️ No period grouping anywhere (2026-08-09)
 
-Entries are a flat sequence of `##` headings, each carrying its own date on the line beneath.
-The year labels are gone — *"we should get rid of the '##' with the years"* — and with them the
+Entries are a flat sequence of `##` headings, each carrying its own date beneath. The year labels
+are gone — *"we should get rid of the '##' with the years"* — and with them
 `.page-about .timeline h2` label styling, its `content: none` dot suppression, and the
 `--timeline-spine-top` offset that pushed the spine past the first label.
 
-**Every timeline page now has the same shape: `##` is an entry, full stop.** `/cv/`, `/about/`
-and `/about/brajeshwar.com/` are identical; `/now/` keeps its `ul`/`li` shape.
-
-An entry also takes base.scss's h2 with no local `font-size` — *"the styling should be the
-default '##' styling like other titles of Headings-2"*. `--timeline-dot-center` is derived from
-`--step-2`, which is what a default h2 renders at, so the dot arithmetic needs nothing set here.
+**`##` is an entry, full stop.** ⚠️ This is also why the old *"the year is not the heading"*
+section had to go: it described `.timeline-when` as an `<h2>` and `.timeline-title` as an `<h3>`
+beneath it, and asserted *"the periods stayed"*. They did not.
 
 ⚠️ If grouping ever returns, **the heading LEVEL is the mechanism** — `##` for the group, `###`
 for the entry — and the entry selectors in `timeline.scss` would need to take `h3` as well. Do
@@ -115,12 +157,11 @@ were silently replaced by `section`, `section-1`, `section-2`… in a green buil
 ⚠️ **AND THE BARE `{: #id}` IAL DOES NOT WORK HERE EITHER** — it is accepted and ignored, and the
 heading keeps its `section` id. Only the quoted form works: `{: id="2005-2006"}`.
 
-**But no page uses it, deliberately.** `/about/`'s period headings ship as `section`,
-`section-1` … `section-7` and that is fine: *"do away with the ID. I don't care in this case. No
-Anchor needed … if I need to link it I will peak under the hood and what the HTML is
-generated."* (2026-08-09). ⚠️ **Do not "fix" these back into hand-written ids** — the content is
-meant to carry no ids at all. Entry headings are unaffected: they start with a letter, so
-`### Razorfish` is `razorfish` and every one of them is a usable anchor already.
+**But no page uses it, deliberately.** *"do away with the ID. I don't care in this case. No Anchor
+needed … if I need to link it I will peak under the hood and what the HTML is generated."*
+(2026-08-09). ⚠️ **Do not "fix" these into hand-written ids** — the content is meant to carry
+none. Entry headings are unaffected: they start with a letter, so `## Razorfish` is `razorfish`
+and is a usable anchor already.
 
 ⚠️ Anything claiming this site parses GFM is wrong; that claim lived in this file and cost two
 debugging passes. Test against `Kramdown::Document.new(src).to_html` with **no** `input:` option,
@@ -129,103 +170,62 @@ which is what Jekyll actually runs.
 ## ⚠️ Order is DOCUMENT ORDER — the component never sorts
 
 There is no date parsing, no sort, and no `order:` setting anywhere in this component. **Entries
-render in the order they are written in the Markdown**, and that is the whole mechanism.
+render in the order they are written**, and that is the whole mechanism.
 
 > *"the timeline view is not forced in order but it just follows how I edit/write them in the
 > actual Markdown. If I make a mistake with the date, that is one me."* — 2026-08-09
 
-Which is why the pages differ on purpose, and why nothing needs a flag to make them:
+Which is why the pages differ on purpose, and why nothing needs a flag to make them. Re-measured
+2026-08-11:
 
-| page | order |
-|---|---|
-| `/about/`, `/cv/`, `/now/` | newest first |
-| `/about/brajeshwar.com/` | **oldest first** — *"I want to start from the past to the present"* |
+| page | order | |
+|---|---|---|
+| `/cv/` | **newest first** | Valinor Earth 2021 → Peerless Software 2001 |
+| `/now/` | **newest first** | 2024 → 2001 |
+| `/about/` | **oldest first** | Bombay 1999 → Amara 2016 |
+| `/about/brajeshwar.com/` | **oldest first** | *"I want to start from the past to the present"* |
+
+⚠️ **This table said `/about/` was newest-first and it never was.** Two pages run each way.
 
 **To reverse a timeline, move the blocks.** Do not add sorting, and do not "correct" a page whose
-dates run the other way — check the page's own note first, because at least one runs oldest-first
-deliberately. A date that looks wrong is his to fix, not the component's to reorder.
+dates run the other way — half of them run oldest-first deliberately. A date that looks wrong is
+his to fix, not the component's to reorder.
 
-## The markup
+## Heading anchors
 
-```html
-<div class="timeline">
+`anchors.js` prepends a `§` link. Its selector, verified 2026-08-10:
 
-  <!-- The h1 comes from the LAYOUT now, not from here. The clipped
-       .timeline-title-a11y this block used to show is gone from the page;
-       the class survives in timeline.scss and is documented below because
-       nothing else reintroduced it, not because the page still uses it. -->
-
-  <div class="timeline-intro">
-    <p>The intro opens the page, and spans the full band.</p>
-  </div>
-
-  <section class="timeline-period" aria-labelledby="1999-2003">
-    <p class="timeline-when" id="1999-2003">1999&ndash;2003</p>
-    <ol class="timeline-entries">
-      <div class="timeline-progress" aria-hidden="true"></div>
-
-      <li class="timeline-entry">
-        <h2 class="timeline-title">Computer Graphic Designer</h2>
-        <p class="timeline-meta">Comic magazine startup &middot; Bombay</p>
-        <p>Prose.</p>
-      </li>
-    </ol>
-  </section>
-
-</div>
+```js
+'.timeline h2[id], .timeline h3[id], .page-now h2[id]'
 ```
 
-| Hook | Does what |
-|---|---|
-| `.timeline` | Wrapper. The filter's `:has()` selectors are scoped to it. |
-| `.timeline-period` | One time range. Hides itself when the filter empties it. |
-| `.timeline-when` | The range — **typed by hand**: "early 1980s", "1993-1995", anything. A `<p>`, not a heading. Give it an `id` to make it linkable, and point the period's `aria-labelledby` at that same id. |
-| `.timeline-entries` | `<ol>` of entries. Carries the spine (its `border-left`). |
-| `.timeline-entry` | One event. ⚠️ It took a `data-track` attribute until 2026-08-09; that is gone and nothing reads it. |
-| `.timeline-title` / `.timeline-meta` | The event's `<h2>` — the loud line on the page — and the role/place/date line under it. |
+⚠️ **This file used to say it matched `.timeline-when[id]`.** It never has, and that class has not
+existed on the built site since the period labels went. The claim had propagated into a comment
+in `_sass/timeline.scss` as well; both are corrected. Read the script, not a doc, if the two ever
+disagree again.
 
-### ⚠️ The year is not the heading (changed 2026-08-09)
-
-It was until then: `.timeline-when` was an `<h2>` and `.timeline-title` an `<h3>` beneath it,
-so the page read as a list of years with events indented under each. Brajeshwar reversed the
-emphasis — *"instead of years as the focus, let's focus on events as the titles. Of course, we
-will have dates."* The event took the `<h2>`; the year became a quiet uppercase label.
-
-Three things this did **not** break, and each is the reason a tempting simplification is wrong:
-
-- **The periods stayed.** Flattening them into a flat list of events is a different change: it
-  costs one spine per group and converges `/about/` onto `/cv/`'s shape, which is deliberately
-  a different shape.
-- **Every shared `/about/#2005-2006` still resolves.** The `id` did not move elements, only
-  tags — a fragment target does not care what tag it lands on.
-- **The `§` anchor still appears on the year.** `anchors.js` matches `.timeline-when[id]`, a
-  class and not a tag. Had it matched `h2[id]` the anchor would have followed the heading to
-  the event instead; if you ever add ids to `.timeline-title`, that selector needs the entry
-  too or the `§` will be missing from the loud line.
-
-`.timeline-when` also stopped sharing its rule with `.page-now h2` at the same time. `/now/`
-has no events to promote — only years — so it kept the old treatment, and the two pages now
-differ on purpose. Change one and you are no longer changing the other.
-
-Entry style follows the CV at <https://cv.brajeshwar.com>: each role a discrete block with a
-date range, an organization, a location and a description, newest first. That CV is rebuilt on
-this site at [`/cv/`](../_pages/cv.html), which does **not** use this component — see the note
-at the top of that file for why a story and a CV want opposite emphasis.
+The `.headerlink` styling lives in `base.scss` — one class, one script, four page types. There
+were three copies of it (post/timeline/now) until 2026-07-27, each justified by bundles that
+"are never loaded together". They all load together now.
 
 ## Copy-paste templates
 
-`_pages/about.md` ends with a Liquid comment holding two ready templates: a period with one
-entry, and a sidenote. Copy one, paste it in place, delete the comment markers,
-edit.
+`_pages/about.md` ends with a Liquid comment holding two ready templates — an entry, and a
+sidenote. Copy one, paste it in place, delete the comment markers, edit. Verified current
+2026-08-11: they show the `##` + date-line + kramdown-footnote shape, not the old classes.
 
-The comment is Liquid (`{%- comment -%}`), not HTML (`<!-- -->`), deliberately: an HTML comment
-would ship the whole block to every visitor of `/about/` for something only the author reads.
-Measured: 3,725 bytes saved on that one page.
+The comment is Liquid (`{%- comment -%}`), not HTML, deliberately: an HTML comment would ship the
+whole block to every visitor for something only the author reads. Measured: 3,725 bytes on that
+one page.
 
-## Sidenotes in hand-written HTML
+## Sidenotes
 
-Sidenotes come from ordinary footnote markup. In a post you write kramdown's `[^1]`; in HTML
-you emit what kramdown would have. Three things must line up or nothing appears:
+On the Markdown pages, write kramdown's `[^label]` and put the note anywhere below. Nothing to
+configure and no HTML — `sidenotes.js` moves it into the right margin on a wide screen and leaves
+it at the foot when there is no room or no JavaScript (guardrail 4).
+
+For a page whose source is still HTML, emit what kramdown would have. Three things must line up
+or nothing appears:
 
 1. the wrapper carries `class="container-ideal"` — `sidenotes.js` looks for the reading column
    and places notes just past its right edge;
@@ -235,14 +235,11 @@ you emit what kramdown would have. Three things must line up or nothing appears:
 `N` is any unique string; the href and the ids must match exactly. That pairing is how a note
 finds its reference, not document order.
 
-⚠️ On `/about/` the wrapper matters: the timeline spans the full band, and a note hung off a
-full-width box has no margin to sit in. Wrap the footnoted prose in its own `.container-ideal`.
-
 ## ⚠️ The Life/Work filter was REMOVED (2026-08-09)
 
-Three sections stood here — *Renaming the tracks*, *The filter is CSS only*, and *Shareable
-URLs — `#work` / `#life`*. They are gone because the feature is, at his word: **"The Life/Work
-goes away including the code that powers it."**
+Three sections stood here — *Renaming the tracks*, *The filter is CSS only*, and *Shareable URLs
+— `#work` / `#life`*. They are gone because the feature is, at his word: **"The Life/Work goes
+away including the code that powers it."**
 
 What went, so nothing is half-removed:
 
@@ -253,107 +250,85 @@ What went, so nothing is half-removed:
 | `data-track="life\|work"` | on every entry — **do not reintroduce it, nothing reads it** |
 | `assets/scripts/timeline.js` | deleted; it only synced the hash with the checkboxes |
 | ~157 lines of `timeline.scss` | the `:has()` rules, the `:target` fallback, `.timeline-js` |
-| `.timeline-entry[data-track="work"]::before` | the second marker — see below |
+| the second marker | work entries drew a filled dot, life an open one |
 
-**`/about/#work` and `/about/#life` now match nothing.** That is correct for a removed feature
-rather than a moved one: they degrade to ordinary fragments and the page renders in full. The
-link to send instead of a CV is **`/cv/`**, which is a real page.
+**`/about/#work` and `/about/#life` now match nothing.** Correct for a removed feature rather than
+a moved one: they degrade to ordinary fragments and the page renders in full. The link to send
+instead of a CV is **`/cv/`**, which is a real page.
 
-**The marker unification is the part worth understanding.** Work entries drew a *filled* dot and
-life entries an *open* one — a colorless second signal, since the monotone palette rules out
-using color (design.md). With no tracks there is nothing to distinguish, so there is one marker:
-the open dot. That open dot is what `/now/` always rendered, which is why removing the filter is
-also what made **`/about/`, `/cv/` and `/now/` finally render as one component** — the other
-half of the same day's request, *"I want the same visual timeline treatment of /about/ same for
-/cv/ and /now/."*
+**The marker unification is the part worth understanding.** With no tracks there is nothing to
+distinguish, so there is one marker — and unifying on it is what made `/about/`, `/cv/` and
+`/now/` finally render as one component, the other half of the same day's request.
 
 **Worth keeping even though the feature is not:** the filter was genuinely CSS-only. Two real
 checkboxes plus `:has()` did the filtering, and a `:target` fallback made shared `#work` links
-work with JavaScript disabled, with `timeline.js` adding `.timeline-js` to `<html>` to switch
-the `:target` rules off so the two mechanisms could never disagree. That pattern is a good one
-and may be worth reaching for elsewhere. It is recorded here for that reason, not as a plan to
-restore this page to it. The full implementation is in the git history.
+work with JavaScript disabled, with `timeline.js` adding `.timeline-js` to `<html>` to switch the
+`:target` rules off so the two mechanisms could never disagree. That pattern is a good one and
+may be worth reaching for elsewhere. Recorded for that reason, not as a plan to restore it. The
+implementation is in the git history.
 
-`.pill` survives — `appearance.js` builds the appearance panel's segmented controls from it at
-runtime, so the shared component still has a user.
+`.pill` survives — `appearance.js` builds the appearance panel's segmented controls from it.
 
+## ⚠️ The position line was CUT (2026-08-10)
 
-## Download Resume (not built)
+`.timeline-progress` — a scroll-driven accent fill on the spine, `animation-timeline: scroll()`
+inside `@supports`, suppressed under `prefers-reduced-motion` — is deleted, along with the open
+question of whether it should track the page or each period.
 
-Brajeshwar's stated direction: a downloadable PDF labeled "Download Resume", which *is* the
-Work track. Nothing has been built for this. When it is, the obvious home is the head row
-beside the toggles, shown when Work is the active view — and worth deciding then whether the
-PDF is generated from this markup or maintained separately.
+It was flagged experimental from the start (*"I'm not sure of this one but I want to experiment"*)
+and built to be separable, so removing it took nothing with it. It went as **dead code rather
+than as a decision**: it hung off `.timeline-entries`, which stopped existing when `/about/` and
+`/cv/` became Markdown, so it had already been rendering nowhere.
 
-## Page opening
+⚠️ **And it was broken the whole time it did render.** Its `left` used the dot's formula, which is
+relative to an *entry*, while the element was a child of the list — so it painted 42px left of
+the spine it was meant to fill (measured 2026-08-09: spine at x=244–246, fill at x=204). Nobody
+saw it because `prefers-reduced-motion: reduce` hid it, and the machine it was written on had
+that switched on. **A feature behind a `@supports` *and* a motion query has two ways to be
+invisible while broken.**
 
-There is no title row (removed 2026-07-27). The order is intro → filter → timeline.
-
-There is no visible `<h1>`; the intro opens the page. The heading is kept clipped in
-`.timeline-title-a11y` rather than deleted, because a document with no heading at all leaves
-screen-reader and search users nothing to anchor on, and the clipped copy costs no pixels.
-Delete the element if that is not wanted.
-
-The intro spans the full band, no measure cap. Trade-off worth knowing: ~140 characters a line
-at 1024px, against the ~66 `design.md` targets. Fine for a short opening; re-cap it if it
-grows.
-
-The filter sits directly above the timeline it controls, left-aligned, no border — a control
-belongs next to the thing it acts on. `.timeline-head` and its bottom rule are gone. The
-`<legend>` is still there for screen readers but clipped, defined locally rather than reusing
-`base.css`'s `.visually-hidden`, which the 2026-07-19 audit flagged as unreferenced.
-
-## The position line (experimental — may be cut)
-
-Brajeshwar: *"I'm not sure of this one but I want to experiment."* It is deliberately the most
-separable thing in `timeline.css`: delete the `.timeline-progress` block and the timeline
-still works completely.
-
-The fill uses `animation-timeline: scroll()`, wrapped in `@supports`. Chrome/Edge 115+ get a
-filling accent line; every other browser gets the plain spine. No polyfill, no JS. It is
-suppressed under `prefers-reduced-motion`, since a line racing the scroll is exactly the sort
-of motion someone may have switched off.
-
-~~`.timeline-step` gives plain `↑ earlier` / `↓ later` anchors between periods.~~ Removed
-2026-07-27, replaced by the site-wide Back to Top (see [`styles.md`](styles.md) §6). They were
-hand-maintained: each named a sibling `id`, so adding or reordering a period pointed them
-somewhere wrong without any error. The markup and the CSS are both gone; a tombstone comment
-remains in `timeline.css`.
-
-Open question for Brajeshwar: whether the fill should track the whole page (what it does now,
-`scroll(root block)`) or each period independently. The second reads better on a long timeline
-but needs one element per period.
+~~`.timeline-step` gave plain `↑ earlier` / `↓ later` anchors between periods.~~ Removed
+2026-07-27, replaced by the site-wide Back to Top (see [`styles.md`](styles.md) §6). Each named a
+sibling `id`, so adding or reordering a period pointed them somewhere wrong with no error.
 
 ## Content
 
-The prose came from the old `_pages/about.md`, placed into periods — Brajeshwar's wording and
-links verbatim, only reflowed into entries. He has archived that page and it is now deleted;
-the content here is his to rewrite, and he has said he will.
+The prose is Brajeshwar's, and rewriting it is his. `/about/` is a story of twelve events from
+Bombay in 1999 to Amara in 2016; `/cv/` is thirteen roles.
 
-Order is oldest-first, following the note at the foot of `about.md`: *"Do this more like a
-timeline story, from top to bottom, with years and details."* The CV at
-<https://cv.brajeshwar.com> runs newest-first; flipping is a matter of reordering the
-sections.
-
-What the merge exposed: the existing prose is almost entirely Work. Twelve work entries
-against three life ones (Imphal, landing in Bombay, registering the domain), and three of the
-ten periods vanish under a Work-only filter. The Life track is mostly empty — which is exactly
-what "I want to see where they fit" was going to reveal.
+⚠️ **The old "the Life track is thin" analysis is gone with the tracks.** It counted twelve work
+entries against three life ones and observed that three of ten periods vanished under a Work
+filter. There are no tracks, no periods and no filter, so there is nothing to be lopsided.
 
 ## Still to do
 
-- [ ] Fill out the Life track — it is thin, and the merged view is lopsided because of it.
-- [x] ~~Decide oldest-first vs newest-first (CV order)~~ — **newest-first** since 2026-08-08.
 - [ ] The trailing `> Work-in-Progress` blockquote and the intro line sit outside the timeline;
       decide whether they stay there.
-- [ ] Decide the position-line question above, or cut it.
-- [x] ~~Move the markup into `/about/`~~ *(done 2026-07-27)*. ⚠️ This said "`/about/#work` is
-      now the link worth sending" — **dead twice over** as of 2026-08-09: the filter is gone, so
-      that fragment matches nothing, and `/cv/` exists and is the link.
-- [ ] "Download Resume" PDF — was scoped to "the Work view", which no longer exists. **`/cv/`
-      is the better source now**: one page, already in role order, no filter state to reason
-      about.
-- [ ] Retiring `cv.brajeshwar.com`: `/cv/` replaces it as of 2026-08-09, so this is only waiting
-      on him. ⚠️ `_redirect/resume.md` does **not** cover it — a Jekyll stub can only redirect a
-      path on this domain. It needs the Cloudflare Worker redirect queued in
-      [`todo.md`](todo.md).
+- [ ] **"Download Resume" PDF** — was scoped to "the Work view", which no longer exists. **`/cv/`
+      is the better source**: one page, already in role order, no filter state to reason about.
+      Tracked in [`todo.md`](todo.md) too; this is the same item.
+- [ ] **Retire `cv.brajeshwar.com`** — `/cv/` replaces it as of 2026-08-09, so this waits on him.
+      ⚠️ `_redirect/resume.md` does **not** cover it: a Jekyll stub can only redirect a path on
+      this domain. It needs the Cloudflare Worker redirect queued in [`todo.md`](todo.md).
+      Same item as todo.md's; recorded in both because either is a plausible place to look.
+- [x] ~~Decide oldest-first vs newest-first~~ — settled per page, see the order table. Not one
+      answer: `/cv/` and `/now/` run newest-first, `/about/` and `/about/brajeshwar.com/` oldest.
+- [x] ~~Fill out the Life track~~ — **void 2026-08-11.** There is no Life track.
+- [x] ~~Decide the position-line question, or cut it~~ — **cut 2026-08-10**, as dead code.
+- [x] ~~Move the markup into `/about/`~~ *(2026-07-27)*. ⚠️ This said `/about/#work` is "the link
+      worth sending" — dead twice over: the filter is gone and `/cv/` is the link.
+
+## ⚠️ What this file got wrong, and why it matters
+
+Six documented facts here were false when the 2026-08-11 rewrite checked them: the markup
+template, the hook table, the `anchors.js` selector, `/about/`'s ordering, the periods, and the
+position line's status. **Not one of them took more than a single grep of `_site` to disprove.**
+
+They survived because the file was *re-read* rather than *re-measured*, and because prose about a
+deleted feature reads exactly like prose about a live one. Two habits follow:
+
+- **Check a claim about the built site against the built site**, not against the doc that made it.
+  `grep -rl --include='*.html' 'timeline-entry' _site` answers in one second.
+- **When a feature is removed, grep the docs for its class names in the same pass.** This file
+  described `.timeline-entry` for two days after the CSS stopped having it, and
+  `_sass/cv.scss` had copied the same wrong description into its own header.
