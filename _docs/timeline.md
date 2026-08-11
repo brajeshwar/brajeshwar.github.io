@@ -14,6 +14,11 @@ Markdown conversion orphaned on 2026-08-09 and that was deleted from `_sass/time
 2026-08-10. Following its markup template would have produced HTML that nothing styles. The
 lesson is kept at the foot; the corrections are inline.
 
+⚠️ **`/styleguide/` was right the whole time**, and is the other place this component is
+documented — it has shown the current `<div class="timeline" markdown="1">` + `## Entry` + date
+line shape since the conversion. It is a `_pages/**` prose body, so it is Brajeshwar's to edit
+(guardrail 1); **if the two ever disagree, trust the styleguide and fix this file.**
+
 ## The markup — a heading, a line, and prose
 
 There are exactly two shapes.
