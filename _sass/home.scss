@@ -707,6 +707,67 @@ home-support li {
 .strip--books .strip__img  { aspect-ratio: 3 / 4;  object-fit: cover; }
 .strip--album .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
 
+/* ---- The "View More Albums" tile ---------------------------------------
+   The last tile in the album row is a door rather than a picture
+   (2026-09-01: "Replace the 13th item with a big button (same size as the
+   other items) that says 'View More Albums'").
+
+   ⚠️ IT SETS NO WIDTH, WHICH IS THE POINT. It sits in a .strip__item, so
+   `--strip-item` gives it the same width as every thumbnail — 15rem on the
+   album row, 7.5rem below the small-screen breakpoint — and it cannot drift
+   out of step when either number is tuned. "Same size as the other items" is
+   therefore a property of where it lives, not a number restated here.
+
+   Only the RATIO is restated per kind, directly below and in the same shape as
+   the .strip__img rules above, because it is the one thing the image carries
+   that a box of text does not. The frame comes out 240x180 on the album row,
+   identical to the photographs beside it.
+
+   ⚠️ TWO ELEMENTS, AND THE INNER ONE IS NOT DECORATION. The outer box is a
+   flex container so the label can centre on both axes inside a fixed ratio;
+   a flex container makes each CHILD an item, so the text and the ↗ would have
+   become two items and stacked. Wrapping them in one span keeps them a single
+   line of inline content that wraps and centres as one. Grid has the same
+   trap, and `text-align` alone cannot centre vertically.
+
+   Border rather than the bookplate's board: this is a control, and the row it
+   sits in is photographs at rest with no other outline in it. --rule-strong is
+   the same hairline the plates use, so the two never disagree about what an
+   edge looks like.
+
+   The hover follows the row's own rule — "the hover color is enough" — so it
+   lifts the text and the edge one step each and paints nothing new. */
+.strip__more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs);
+
+  color: var(--text-color-low);
+  background-color: var(--bg-color-low);
+  border: var(--border-size-hairline) solid var(--rule-strong);
+  border-radius: var(--border-radius);
+
+  transition: color var(--transition-duration) ease,
+              border-color var(--transition-duration) ease;
+}
+
+.strip--books .strip__more { aspect-ratio: 3 / 4; }
+.strip--album .strip__more { aspect-ratio: 4 / 3; }
+
+.strip__more-label {
+  font-size: var(--step--1);
+  line-height: var(--scale-small);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.strip__link:hover .strip__more,
+.strip__link:focus-visible .strip__more {
+  color: var(--text-color);
+  border-color: var(--border-color-high);
+}
+
 /* A book with no cover picture gets a .bookplate here instead of an <img>
    (home-strip.html, 2026-08-04). It brings its own 3:4, its own board color
    and its own rounding, so the only thing belonging to the SHELF rather than

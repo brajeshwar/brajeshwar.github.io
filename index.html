@@ -47,11 +47,22 @@ title: Brajeshwar Oinam
     emits an absolute href verbatim with rel="noopener" — /album/ is still the
     full local mirror and is still linked from the footer.
   {%- endcomment -%}
-  {%- assign album_tail = site.data.albums | slice: 0, home_album_count -%}
+  {%- comment -%}
+    ⚠️ ONE FEWER PHOTO THAN TILES (2026-09-01). `home_album_count` is the number
+    of TILES in the row, and the last of them is the "View More Albums" button,
+    not a picture — "Replace the 13th item with a big button". So the slice
+    takes twelve and home-strip.html supplies the thirteenth. Change the 13
+    above and both halves follow; hard-code a 12 here and they stop agreeing the
+    first time it is tuned.
+  {%- endcomment -%}
+  {%- assign album_photo_count = home_album_count | minus: 1 -%}
+  {%- assign album_tail = site.data.albums | slice: 0, album_photo_count -%}
   {% include home-strip.html
-     items = album_tail
-     title = "Albums"
-     href  = "https://albums.oinam.com"
-     kind  = "album" %}
+     items      = album_tail
+     title      = "Albums"
+     href       = "https://albums.oinam.com"
+     kind       = "album"
+     more_href  = "https://albums.oinam.com"
+     more_label = "View More Albums" %}
 
 </main>

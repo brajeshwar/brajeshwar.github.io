@@ -9,6 +9,8 @@
     kind      "books" | "album" — picks the ratio class and the image folder
     intro     optional paragraph, rendered above the strip inside the band
     captions  "true" to print the item title under each thumbnail
+    more_href   optional — turns the LAST tile into a door rather than a picture
+    more_label  the words on it ("View More Albums")
 
   A data item may carry `media: video` or `media: audio`, overlaying a small
   icon so a reader can tell what the frame leads to. Omitted means a still.
@@ -188,6 +190,48 @@
         {%- if item.url -%}</a>{%- else -%}</span>{%- endif -%}
       </li>
       {%- endfor %}
+      {%- comment -%}
+        ⚠️ THE LAST TILE IS A DOOR, NOT A PHOTOGRAPH (2026-09-01: "Replace the
+        13th item with a big button (same size as the other items) that says
+        'View More Albums' that links to albums.oinam.com").
+
+        It REPLACES an item rather than being added after one — index.html
+        slices one photo fewer so the row still holds thirteen tiles. Appending
+        instead would have made the row longer, and the count in that file is
+        the number of TILES, not the number of pictures.
+
+        It reuses .strip__item and .strip__frame, so its width comes from
+        `--strip-item` and it cannot drift out of step with the thumbnails when
+        that number is tuned — including at the small-screen breakpoint, which
+        it inherits for free. Only the aspect-ratio is restated per kind, the
+        same way .strip__img already is.
+
+        ⚠️ IT MUST STAY LAST, and strip-nav.js is the reason. That script
+        measures `strip.querySelector('.strip__frame')` — the FIRST frame — to
+        size the scroll buttons' backdrop. Moving this tile to the head would
+        have it measure a button with no image in it.
+
+        Off-site gets the full treatment (new tab, rel, ↗, aria-label); an
+        internal `more_href` gets `relative_url` and no mark, exactly like the
+        heading above. The label appears twice on purpose — visibly, and inside
+        the aria-label — because `aria-label` REPLACES the accessible name, so
+        it has to carry the words a voice-control user would say.
+      {%- endcomment -%}
+      {%- if include.more_href %}
+      {%- assign more_proto = include.more_href | slice: 0, 4 -%}
+      <li class="strip__item">
+        {%- if more_proto == "http" -%}
+        <a class="strip__link" href="{{ include.more_href }}" target="_blank" rel="noopener"
+           aria-label="{{ include.more_label }} (opens in a new tab)">
+        {%- else -%}
+        <a class="strip__link" href="{{ include.more_href | relative_url }}">
+        {%- endif -%}
+          <span class="strip__frame">
+            <span class="strip__more"><span class="strip__more-label">{{ include.more_label }}{% if more_proto == "http" %}{% include icons/external.svg %}{% endif %}</span></span>
+          </span>
+        </a>
+      </li>
+      {%- endif %}
     </ul>
 
     <button class="strip__nav strip__nav--next" type="button"
