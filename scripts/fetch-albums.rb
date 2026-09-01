@@ -57,8 +57,8 @@
 # title  <title>. The caption if a caller ever passes `captions` (the strip
 #        does not), and the bookplate text if an item ever arrives with no
 #        picture. NOT the alt any more — see below.
-# url    <link>, the permalink on albums.oinam.com. Absolute, so both includes
-#        emit it verbatim with rel="noopener".
+# url    <link>, the permalink on albums.oinam.com. Absolute, so the includes
+#        emit it verbatim, into the shared `_oinam` window.
 # img    <media:thumbnail url>, absolute. ⚠️ USED EXACTLY AS GIVEN. Do not
 #        compose a new /cdn-cgi/image/ width to fit some layout: every
 #        DISTINCT transformation width is separately billed per month at

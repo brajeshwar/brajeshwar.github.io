@@ -19,7 +19,7 @@ footer:
   # ⚠️ THE ONE OFF-SITE ENTRY IN THIS NAV (2026-09-01). The album is not hosted
   # here any more — brajeshwar.com/album/ is a redirect stub, and this points
   # past it at the real thing. footer.html tests for "http" and gives it a new
-  # tab, rel="noopener" and the ↗ mark; nothing else in `footer` needs that.
+  # tab and the ↗ mark; nothing else in `footer` needs that.
   #
   # ⚠️ `target` IS A WINDOW NAME, NOT `_blank`, AND THE STRING IS SHARED. The
   # home page's album strip (index.html) and /devices/ (_pages/devices.html)
@@ -28,6 +28,11 @@ footer:
   # convention, not the album's — `/devices/` was using it first. Change it in
   # one place and you must change it in all three; nothing checks that they
   # agree.
+  #
+  # ⚠️⚠️ NO `rel="noopener"` GOES WITH A NAMED TARGET — footer.html emits it for
+  # `_blank` only. On a name it does not harden the link, it breaks the reuse:
+  # measured in Chrome 2026-09-01, ONE tab without it, TWO with it. See
+  # _includes/home-strip.html for why.
   - title: Albums
     url: "https://albums.oinam.com"
     target: "_oinam"

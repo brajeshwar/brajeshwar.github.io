@@ -44,8 +44,8 @@ title: Brajeshwar Oinam
 
     `href` goes to albums.oinam.com rather than /album/: that is where the
     photographs actually live now, and this strip is a taste of it. home-strip
-    emits an absolute href verbatim with rel="noopener" — /album/ is still the
-    full local mirror and is still linked from the footer.
+    emits an absolute href verbatim — /album/ is a redirect stub to the same
+    place, and is still linked from the footer.
   {%- endcomment -%}
   {%- comment -%}
     ⚠️ `target` IS A NAME AND NOT `_blank`, DELIBERATELY (2026-09-01: "All item
@@ -61,6 +61,11 @@ title: Brajeshwar Oinam
     same job. ⚠️ ANY NEW OFF-SITE TARGET ON THIS SITE JOINS `_oinam` — that is
     the convention, and `_pages/devices.html` and `_data/nav.yaml` are the other
     two places the string is written. Nothing checks that they agree.
+
+    ⚠️⚠️ AND DO NOT ADD `rel="noopener"` TO A NAMED TARGET. It reads like the
+    obvious hardening and it silently destroys the reuse this line exists for —
+    measured in Chrome, two links sharing a name gave ONE tab without it and
+    TWO with it. home-strip.html carries the mechanism and the numbers.
 
     ⚠️ ONE FEWER PHOTO THAN TILES (2026-09-01). `home_album_count` is the number
     of TILES in the row, and the last of them is the "View More Albums" button,

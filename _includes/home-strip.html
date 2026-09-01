@@ -63,11 +63,31 @@
   label overrides the accessible name, and it still opens with the visible word
   ("Albums …"), which is what keeps voice control working.
 
-  ⚠️ ANY `target` NEEDS `rel="noopener"`, which this branch already had for its
-  own reason. Do not drop one thinking the other covers it — noopener is about
-  the opened page's access to `window.opener`, target is about where it opens,
-  and only the pair is safe. A NAMED target is not an exception: the named
-  window still gets an opener reference without it.
+  ⚠️⚠️ `rel="noopener"` IS EMITTED ONLY FOR `_blank`, AND ADDING IT TO A NAMED
+  TARGET BREAKS THE REUSE ENTIRELY. This is the opposite of the rule everyone
+  reaches for, so it is worth the space.
+
+  MEASURED IN CHROME, 2026-09-01, two links sharing one target name, clicked in
+  turn, cross-origin:
+
+    target="_name"                  -> 2 clicks, ONE tab (reused)
+    target="_name" rel="noopener"   -> 2 clicks, TWO tabs
+
+  WHY: reuse works by looking up an existing window BY NAME, and that lookup
+  only succeeds if the two contexts are "familiar with" each other. Across
+  origins the only thing that makes them familiar IS the opener relationship.
+  `noopener` severs it — and the window it opens is put in a fresh context
+  group with no name to be found by. So the name is still on the anchor, still
+  looks right in the markup, and can never match anything.
+
+  ⚠️ SO THE TRADE IS REAL AND IT IS NOT AVOIDABLE. A reused tab means the
+  opened page keeps a `window.opener` handle. Cross-origin that handle can
+  NAVIGATE this page but cannot read it, and it is the entire mechanism the
+  reuse is built on — you cannot have both. `rel="noreferrer"` is not a way
+  out: it implies noopener.
+
+  `_blank` never reuses anything, so there is nothing to protect there and the
+  rel goes on. That is why the test is on the VALUE and not on "is it external".
 
   The label still says "opens in a new tab" — true of the first click, and the
   standard phrasing. "Opens in the albums tab" would be more accurate on the
@@ -130,7 +150,7 @@
   {%- assign href_proto = include.href | slice: 0, 4 -%}
   <h2 class="strip__heading">
     {%- if href_proto == "http" -%}
-    <a href="{{ include.href }}" target="{{ link_target }}" rel="noopener"
+    <a href="{{ include.href }}" target="{{ link_target }}"{% if link_target == "_blank" %} rel="noopener"{% endif %}
        aria-label="{{ include.title }} (opens in a new tab)">{{ include.title }}{% include icons/external.svg %}</a>
     {%- else -%}
     <a href="{{ include.href | relative_url }}">{{ include.title }}</a>
@@ -180,7 +200,7 @@
           state too, once; every feed item now carries a permalink.)
         {%- endcomment -%}
         {%- if item.url -%}
-        <a class="strip__link" href="{{ href }}"{% if ext %} target="{{ link_target }}" rel="noopener"{% endif %}>
+        <a class="strip__link" href="{{ href }}"{% if ext %} target="{{ link_target }}"{% if link_target == "_blank" %} rel="noopener"{% endif %}{% endif %}>
         {%- else -%}
         <span class="strip__link">
         {%- endif -%}
@@ -252,7 +272,7 @@
       {%- assign more_proto = include.more_href | slice: 0, 4 -%}
       <li class="strip__item">
         {%- if more_proto == "http" -%}
-        <a class="strip__link" href="{{ include.more_href }}" target="{{ link_target }}" rel="noopener"
+        <a class="strip__link" href="{{ include.more_href }}" target="{{ link_target }}"{% if link_target == "_blank" %} rel="noopener"{% endif %}
            aria-label="{{ include.more_label }} (opens in a new tab)">
         {%- else -%}
         <a class="strip__link" href="{{ include.more_href | relative_url }}">

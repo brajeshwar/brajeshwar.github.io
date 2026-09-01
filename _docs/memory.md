@@ -36,7 +36,7 @@ thumbnail — all five paths were exercised, each exiting 1 with one readable li
 
 **The external-link treatment is one decision in three parts, and all three are required.**
 `_includes/icons/external.svg` (a ↗ carrying its own `.external-mark` class, sized in `em` in
-`base.scss`), `target="_blank"` with `rel="noopener"`, and `aria-label="… (opens in a new tab)"`.
+`base.scss`), a `target`, and `aria-label="… (opens in a new tab)"`.
 ⚠️ **The glyph is `aria-hidden`, so without the label a screen-reader user gets a new tab with
 no warning; without the glyph a sighted reader gets the same surprise.** Both `home-strip.html`
 and `footer.html` test the URL for `http` and apply all three. Internal links get none of it.
@@ -45,10 +45,31 @@ and `footer.html` test the URL for `http` and apply all three. Internal links ge
 FILES** — `index.html`, `_data/nav.yaml`, `_pages/devices.html` — with nothing checking
 that they agree. `/devices/` was using it first, which is why the album's ten-minute
 `_oinam-albums` was renamed rather than kept ("if we were already using `_oinam`,
-continue to that"). ⚠️ **A named target does NOT get an implied `rel="noopener"` the way
-`_blank` does**, so every one of them carries the rel explicitly; `devices.html` had been
-missing it and was fixed when the window became shared. Verified in the built site: zero
-anchors with a target and no noopener.
+continue to that").
+
+⚠️⚠️ **NEVER PUT `rel="noopener"` ON A NAMED TARGET. It does not harden the link — it
+destroys the reuse.** It shipped as a "fix" and was reverted the same hour, once it was
+measured in Chrome rather than reasoned about — two cross-origin links sharing one name:
+
+| markup | two clicks give |
+|---|---|
+| `target="_oinam"` | **ONE tab**, reused |
+| `target="_oinam" rel="noopener"` | **TWO tabs** |
+
+Reuse finds an existing window BY NAME, and that lookup only succeeds if the two contexts
+are "familiar" — which, across origins, only the opener relationship makes them.
+`noopener` severs exactly that and puts the new window in a fresh context group with no
+name to be found by. The name stays in the markup looking correct and matches nothing,
+forever.
+
+⚠️ **The trade is real and cannot be designed around**: a reused tab keeps a
+`window.opener` handle on this page. Cross-origin it can navigate this page, not read it,
+and it IS the mechanism — no configuration gives both. `rel="noreferrer"` is not a way
+out; it implies noopener. `_blank` never reuses anything, so it keeps the rel, which is
+why both includes test the target's VALUE rather than "is this link external".
+
+⚠️ **`_pages/devices.html` has no rel on its anchor and that is CORRECT.** It was "fixed"
+and un-fixed; leave it.
 
 ⚠️ **THE "VIEW MORE ALBUMS" TILE REPLACES THE 13TH PHOTO, IT IS NOT A 14TH ITEM.**
 `home_album_count` is the number of TILES; `index.html` slices `minus: 1` photos and

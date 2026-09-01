@@ -12,7 +12,7 @@ style: page-devices
 <ul class="item__cards">
 {% for phones in site.data.devices -%}
 	<li>
-		<a href="{{ phones.url }}" target="_oinam" rel="noopener">
+		<a href="{{ phones.url }}" target="_oinam">
 			<figure>
 				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/devices/{{ phones.img }}" alt="{{ phones.title }}">
   			<figcaption>
