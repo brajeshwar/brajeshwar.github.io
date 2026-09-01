@@ -64,29 +64,24 @@
 #        DISTINCT transformation width is separately billed per month at
 #        Cloudflare, and 640x480 / 480x640 are already paid for. A "nicer" fit
 #        costs money every month for as long as it is deployed.
-# alt    The alt attribute albums.oinam.com itself put on the <img> inside
-#        <content:encoded> — its own decision, not one made here.
+# NO `alt`, AND THAT IS THE POINT (2026-09-01: "remove alt from albums
+#        images"). The thumbnails ship a bare `alt=""` — the HTML for "this
+#        picture is decorative, skip it" — and nothing here has to compute it.
 #
-#        ⚠️ AND IT IS OFTEN DELIBERATELY EMPTY. An item with no caption is
-#        titled after its file ("London — IMG_9018.jpeg") and its <description>
-#        falls back to the album name ("London") — 48 of the 50 items in the
-#        feed as measured. albums.oinam.com ships alt="" for exactly those,
-#        rather than have a screen reader announce a filename, and copying
-#        that verbatim is the point. Neither the title nor the description is
-#        a safe fallback: the title IS the filename, and the description is
-#        the album name repeated on every photo in it.
+#        ⚠️ THE FIELD USED TO EXIST AND WAS SCRAPED OUT OF <content:encoded>'s
+#        <img alt="…">, because albums.oinam.com leaves an uncaptioned photo's
+#        alt empty rather than have a screen reader announce a filename. That
+#        was 48 of 50 items empty, a regex over a CDATA'd HTML fragment, and a
+#        Liquid trap in two includes — all of it to arrive at "" almost every
+#        time. Deleting it lands in the same place with none of the machinery.
 #
-#        So when the regex below finds nothing, the answer is "" — never a
-#        guess. An empty alt on a decorative thumbnail is correct HTML; a
-#        filename read aloud is not.
+#        ⚠️ AND THE EMPTY alt STILL MATTERS, so do not go one step further and
+#        drop the ATTRIBUTE. An <img> with no alt at all is invalid HTML and
+#        sends assistive tech to the filename — "IMG_9018.jpeg" — which is the
+#        exact outcome the old scraping existed to prevent. `alt=""` is the
+#        answer; having no data to put in it is what changed.
 #
-#        ⚠️ AN EMPTY alt ONLY SURVIVES BECAUSE home-strip.html WAS FIXED. It
-#        used `item.alt | default: item.title`, and Liquid's `default` filter
-#        treats "" as empty and substitutes — so every one of these would have
-#        become its filename. It now tests `if item.alt`, which is Ruby
-#        truthiness and so true for "". Change that back and this file's whole
-#        alt policy is silently undone. card-grid.html carries the same fix and
-#        no longer has a caller that needs it; it is kept in step on purpose.
+#        home-strip.html emits it from `decorative = true`, not from this file.
 #
 # NO `w`/`h`, deliberately, decided three times and now moot: the masonry that
 # the argument was about lived on /album/, which is deleted. The strip crops
@@ -147,21 +142,6 @@ rescue SocketError, SystemCallError, IOError, Net::OpenTimeout, Net::ReadTimeout
   die "could not reach #{url}: #{e.class}: #{e.message}"
 end
 
-# The alt albums.oinam.com wrote, pulled out of the CDATA'd HTML fragment.
-#
-# ⚠️ A REGEX AND NOT AN XML PARSE, DELIBERATELY. <content:encoded> holds an
-# HTML fragment whose <img> is not self-closed, so it is not well-formed XML
-# and REXML raises on it. The fragment is machine-generated and its shape is
-# stable; a regex that misses simply yields "", which is the safe answer here
-# rather than a degraded one.
-def alt_from(item)
-  encoded = item.get_elements("content:encoded").first
-  return "" unless encoded
-
-  text = encoded.texts.map(&:value).join
-  text[/<img\b[^>]*\balt="([^"]*)"/, 1].to_s
-end
-
 def text_of(item, name)
   element = item.get_elements(name).first
   element ? element.texts.map(&:value).join.strip : nil
@@ -198,8 +178,7 @@ albums = items.each_with_index.map do |item, index|
     # legal and unreadable. Collapse to single spaces on the way in.
     "title" => title.to_s.gsub(/\s+/, " ").strip,
     "url"   => link,
-    "img"   => src,
-    "alt"   => alt_from(item).gsub(/\s+/, " ").strip
+    "img"   => src
   }
 end
 
@@ -209,7 +188,7 @@ header = <<~YAML
   # lost the next time anyone runs `make albums` and never reaches the deploy.
   #
   # To change what /album/ shows, change albums.oinam.com. The reasoning behind
-  # every field — and why `alt` is so often deliberately empty — is in the
+  # every field — and behind the ones that are deliberately absent — is in the
   # script, not here, because this file is disposable and the script is not.
   #
   # Fetched from the #{albums.length} most recent items, newest first.

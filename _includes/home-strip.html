@@ -11,6 +11,8 @@
     captions  "true" to print the item title under each thumbnail
     more_href   optional — turns the LAST tile into a door rather than a picture
     more_label  the words on it ("All Albums")
+    decorative  "true" when the pictures carry no meaning of their own, so every
+                image ships alt="" instead of falling back to the title
 
   A data item may carry `media: video` or `media: audio`, overlaying a small
   icon so a reader can tell what the frame leads to. Omitted means a still.
@@ -88,14 +90,23 @@
   stay the same shape; do not delete it as dead code without reading the note
   in that file first.
 
-  ⚠️ ALT: a bare `if item.alt` test, NEVER `item.alt | default: item.title`
-  — again identical to card-grid.html, and HERE IT IS LOAD-BEARING. The
-  `default` filter substitutes on the EMPTY STRING, and _data/albums.yaml sets
-  `alt: ""` deliberately on the photos albums.oinam.com left uncaptioned, whose
-  titles are their FILENAMES ("London — IMG_9018.jpeg"). Revert this one line
-  and the home page reads filenames aloud to a screen reader. Books carry no
-  `alt` key at all, so they are nil and still fall back to the title. See
-  scripts/fetch-albums.rb.
+  ⚠️ ALT: `decorative` WINS OVER EVERYTHING, and the album strip passes it
+  (2026-09-01: "remove alt from albums images"). Those thumbnails ship a bare
+  `alt=""` — the HTML for "decorative, skip me" — because their `title` is the
+  photograph's FILENAME ("London — IMG_9018.jpeg") on all but a couple of items,
+  and the fallback below would read filenames aloud to a screen reader.
+
+  ⚠️ THAT IS WHY THE FLAG EXISTS RATHER THAN AN EMPTY `alt` IN THE DATA.
+  _data/albums.yaml carried a scraped `alt` until 2026-09-01 and it was empty 48
+  times in 50; the flag says the same thing once, in the caller, where it is a
+  property of the SHELF rather than of every row.
+
+  ⚠️ AND THE ATTRIBUTE STILL SHIPS. `alt=""` is not the same as no alt: an <img>
+  with none is invalid HTML and sends assistive tech to the filename in the src,
+  which is the exact thing being avoided.
+
+  Books and the other shelves pass no flag, keep no `alt` key, and still fall
+  back to the title, which for a book is a real description.
 
   THE ARROWS ARE PROGRESSIVE ENHANCEMENT. They ship as real <button>s but
   carry `hidden`, and strip-nav.js removes that only once it has measured that
@@ -195,7 +206,9 @@
               _sass/bookplate.scss.
             {%- endcomment -%}
             {%- if item.img -%}
-            {%- if item.alt -%}{%- assign alt = item.alt -%}{%- else -%}{%- assign alt = item.title -%}{%- endif -%}
+            {%- if include.decorative -%}{%- assign alt = "" -%}
+            {%- elsif item.alt -%}{%- assign alt = item.alt -%}
+            {%- else -%}{%- assign alt = item.title -%}{%- endif -%}
             <img class="strip__img"
                  src="{% if img_remote %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}"
                  alt="{{ alt }}{% if item.media %} ({{ item.media }}){% endif %}"

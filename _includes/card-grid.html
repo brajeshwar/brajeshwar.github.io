@@ -25,10 +25,11 @@
   are nil, not empty, and still fall back to the title exactly as before.
 
   Like the "http" branch below, this arrived for the album data and outlived
-  it: _data/albums.yaml sets `alt: ""` on the photos albums.oinam.com left
-  uncaptioned, and that file now feeds only home-strip.html. Kept for the same
-  reason — the two includes must stay the same shape — and because a filter
-  that overrides an author's intentional empty alt is a bug wherever it sits.
+  it twice over: /album/ was deleted, and then the album's `alt` field itself
+  went on 2026-09-01, replaced by a `decorative` flag in home-strip.html that
+  emits `alt=""` for a whole shelf at once. Nothing here passes an `alt` today.
+  Kept because a filter that overrides an author's intentional empty alt is a
+  bug wherever it sits, and because the two includes are read together.
 
   ⚠️ The badge is `aria-hidden` and the word goes into the image's ALT instead
   — "… (video)". The first attempt used a `.visually-hidden` span, which this

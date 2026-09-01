@@ -86,6 +86,15 @@
   URL inside a parameter. url_encode percent-encodes everything, which is what
   the reference bar at ovellum.oss.oinam.com sends.
 
+  ⚠️ NO `target="_blank"` ON THE TWO OFF-SITE BUTTONS, since 2026-09-01: "let's
+  avoid target=_blank everywhere." These were the LAST two forced tabs on the
+  site — 2,922 anchors, two per post — and they were the strongest case for
+  keeping one, because handing a page to ChatGPT or Claude is an aside rather
+  than a departure. It went anyway: the rule is worth more than the exception,
+  and a reader who wants the aside in its own tab can middle-click for it.
+  `rel="noopener"` went with the target; with no new browsing context it had
+  nothing left to do.
+
   The `+` → `%20` pass is because url_encode uses form encoding for spaces. A
   literal `+` in the prompt would already have become %2B, so anything still a
   `+` at this point is a space and nothing else.
@@ -96,11 +105,11 @@
   <span class="page-actions__label">Open in</span>
 
   <a class="icon-button page-actions__btn" href="https://chatgpt.com/?q={{ pa_q }}"
-     target="_blank" rel="noopener" aria-label="Open in OpenAI" title="Open in OpenAI">
+     aria-label="Open in OpenAI" title="Open in OpenAI">
     {%- include icons/openai.svg -%}
   </a>
   <a class="icon-button page-actions__btn" href="https://claude.ai/new?q={{ pa_q }}"
-     target="_blank" rel="noopener" aria-label="Open in Claude" title="Open in Claude">
+     aria-label="Open in Claude" title="Open in Claude">
     {%- include icons/claude.svg -%}
   </a>
 
