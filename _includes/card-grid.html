@@ -18,15 +18,17 @@
   the default, not a third icon.
 
   ⚠️ ALT: a bare `if item.alt` test, NEVER `item.alt | default: item.title`.
-  The two disagree on exactly one value — the empty string — and that value is now
-  load-bearing. Liquid's `default` filter substitutes when the input is
-  `empty?`, so `alt: ""` became the title; a bare `if` is Ruby truthiness, so
-  "" passes through as written. _data/albums.yaml carries a deliberate `alt: ""`
-  on 48 of its 50 items (a photo albums.oinam.com left uncaptioned, whose title
-  is its FILENAME — "London — IMG_9018.jpeg"), so the filter would have read
-  filenames aloud to a screen reader on nearly every card. Items with no `alt`
-  key at all — books, film, devices — are nil and still fall back to the title,
-  unchanged. Full reasoning in scripts/fetch-albums.rb.
+  The two disagree on exactly one value — the empty string. Liquid's `default`
+  filter substitutes when the input is `empty?`, so a deliberate `alt: ""`
+  became the title; a bare `if` is Ruby truthiness, so "" passes through as
+  written. Items with no `alt` key at all — which is every caller here today —
+  are nil, not empty, and still fall back to the title exactly as before.
+
+  Like the "http" branch below, this arrived for the album data and outlived
+  it: _data/albums.yaml sets `alt: ""` on the photos albums.oinam.com left
+  uncaptioned, and that file now feeds only home-strip.html. Kept for the same
+  reason — the two includes must stay the same shape — and because a filter
+  that overrides an author's intentional empty alt is a bug wherever it sits.
 
   ⚠️ The badge is `aria-hidden` and the word goes into the image's ALT instead
   — "… (video)". The first attempt used a `.visually-hidden` span, which this
@@ -47,8 +49,8 @@
   verbatim and gets `rel="noopener"` plus an external marker; anything else is
   run through `relative_url`. That split matters — `relative_url` prepends the
   baseurl, so passing it an absolute URL is at best a no-op and at worst a
-  mangled href the moment a baseurl exists. Album items point off-site by
-  design (albums.oinam.com), books point at posts here.
+  mangled href the moment a baseurl exists. Books point at posts here; the
+  off-site case belonged to the album, which is albums.oinam.com now.
 
   IMAGE PATHS follow the same rule as the home strips, in THREE branches: an
   `img` starting with "http" is a remote file and is emitted verbatim, one
@@ -62,6 +64,16 @@
   `/static/album/https://media.oinam.com/...` — and then `relative_url` would
   prepend the baseurl to that. The `url` test below already had this split;
   `img` simply never needed it until the pictures stopped being local files.
+
+  ⚠️ AND IT IS UNEXERCISED TODAY, KEPT ON PURPOSE. /album/ was deleted hours
+  later the same day — the album is albums.oinam.com now, and the only surface
+  left here is the home strip, which uses home-strip.html, not this file. So
+  every current caller (/books/, /film/, /devices/) passes local filenames and
+  never reaches this branch. It stays because home-strip.html has the identical
+  three-way test on the identical field: the two includes get read together and
+  edited together, and one of them quietly lacking the branch is how the
+  `/static/album/https://…` bug gets reintroduced by someone who checked the
+  other file. Three lines is a cheap way to keep them the same shape.
 
   ⚠️ AND `relative_url` IS THE SECOND HALF OF IT. Skipping only the /static/
   prefix is not enough: handing an absolute URL to `relative_url` is a no-op

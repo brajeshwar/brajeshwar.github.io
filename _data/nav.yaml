@@ -16,8 +16,12 @@ footer:
 - links:
   - title: About
     url: "/about/"
-  - title: Album
-    url: "/album/"
+  # ⚠️ THE ONE OFF-SITE ENTRY IN THIS NAV (2026-09-01). The album is not hosted
+  # here any more — brajeshwar.com/album/ is a redirect stub, and this points
+  # past it at the real thing. footer.html tests for "http" and gives it a new
+  # tab, rel="noopener" and the ↗ mark; nothing else in `footer` needs that.
+  - title: Albums
+    url: "https://albums.oinam.com"
   - title: Archives
     url: "/archives/"
   - title: Books

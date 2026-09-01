@@ -1244,3 +1244,46 @@ sup[id^="fnref"].is-open a {
   background: var(--bg-color-low);
   border-radius: var(--border-radius);
 }
+
+/* ---- External-link mark ----------------------------------------------
+   A tiny ↗ appended to a link that leaves the site. Added 2026-09-01 with
+   the "albums" link, which is the first navigation label on this site that
+   points somewhere else: every other item in the footer and the home strip
+   headings go to a page here, so a reader had no reason to expect one of
+   them to open a new tab. The mark is the warning that it will.
+
+   ⚠️ THE CLASS IS ON THE SVG ITSELF, in _includes/icons/external.svg, not on
+   a wrapper. Every other glyph is sized by an ancestor selector
+   (`site-tools svg`, `.footer-social svg`) because each lives in exactly one
+   place. This one is emitted in two — the footer nav and a strip heading —
+   at two different font sizes, and wants identical treatment in both. A
+   class it carries with it is one rule instead of two, and no wrapper span.
+
+   `em`, not px, for the same reason: it is punctuation attached to a word,
+   so it should scale with the word rather than be re-specified per caller.
+   0.72em lands it a shade under cap-height, which is the "subtle" this was
+   asked for — it should be findable, not announced.
+
+   ⚠️ It is `aria-hidden` in the file, so it says NOTHING to a screen reader.
+   That is deliberate and it is only half the job: the anchors that emit it
+   carry `aria-label="… (opens in a new tab)"`, which is where the warning
+   actually lives for anyone not looking at it. Emit this glyph WITHOUT that
+   label and the new tab becomes a surprise with no announcement at all.
+
+   Opacity rather than a color token: it has to sit quietly against whatever
+   the surrounding text color is in either theme, and inheriting the text's
+   own color at half strength does that without a third variable. */
+.external-mark {
+  width: 0.72em;
+  height: 0.72em;
+  margin-inline-start: 0.3em;
+  vertical-align: -0.02em;
+  opacity: 0.5;
+}
+
+/* The pointer already has the link; the mark should answer it too, rather
+   than staying dim while the text underneath lights up. */
+a:hover .external-mark,
+a:focus-visible .external-mark {
+  opacity: 0.9;
+}

@@ -5,9 +5,15 @@
 # fetch-albums.rb — build /album/ from albums.oinam.com instead of by hand.
 #
 # Reads https://albums.oinam.com/feed.xml (RSS 2.0, the 50 most recent items)
-# and writes _data/albums.yaml, which /album/ and the home page's Album strip
-# both read. Runs in the Actions workflow BEFORE `jekyll build`, and from
-# `make albums` locally.
+# and writes _data/albums.yaml, which the home page's Albums strip reads. Runs
+# in the Actions workflow BEFORE `jekyll build`, and from `make albums` locally.
+#
+# ⚠️ IT FEEDS ONE SURFACE, NOT TWO. /album/ was deleted on 2026-09-01 — hours
+# after this script replaced its data file — and is a redirect stub to
+# albums.oinam.com now (_redirect/album.md). The strip on the home page is all
+# that is left here, and its heading is the link out. This script survived that
+# deletion because the strip still needs the feed; if the strip ever goes too,
+# so do this file, _data/albums.yaml, the workflow step and the Makefile target.
 #
 # ⚠️ RUN IT AS `ruby`, NEVER `bundle exec ruby`. Everything here is stdlib —
 # net/http, uri, rexml, yaml — which is the whole reason this is Ruby and not
@@ -21,33 +27,36 @@
 # ---------------------------------------------------------------------------
 # _data/album.yaml was a hand-maintained list of eight curated photographs cut
 # to /static/album/*.webp, sorted by filename, oldest first. It is gone: every
-# picture is served from albums.oinam.com now, and this file is generated.
+# picture is served from albums.oinam.com now, and this file is generated. The
+# eight .webp files themselves were kept — seven are referenced by nothing, and
+# /about/ still uses the eighth.
 #
 # Consequences of that, so nobody reads them as bugs:
 #
-#   ORDER FLIPPED. The feed is newest-first and this writes it in feed order,
-#   so /album/ now reads newest → oldest. The old page read forwards through
-#   time, which a rolling 50-item window cannot do anyway — the oldest entry
-#   moves every time a photo is added. index.html dropped its `reverse` to
-#   match.
+#   ORDER IS THE FEED'S. Newest first, written in feed order, and index.html
+#   takes a plain slice off the head — no `reverse`, which the old newest-LAST
+#   file needed. A rolling 50-item window has no stable other end: its oldest
+#   entry moves every time a photo is added upstream.
 #
-#   EVERY CARD IS 4:3. The thumbnails are `fit=cover` 640x480 (or 480x640 for
-#   a portrait crop), so the masonry's "each photo keeps its native shape"
-#   premise is over — that was a property of the hand-cut .webp files. Using
-#   the URLs exactly as given is deliberate; see the billing note below.
+#   EVERY THUMBNAIL IS 4:3. They are `fit=cover` 640x480 (or 480x640 for a
+#   portrait crop) rather than the hand-cut .webp files' native shapes. The
+#   strip crops to its own ratio anyway, so this only ever mattered to the
+#   masonry on /album/, which is gone. Using the URLs exactly as given is
+#   deliberate; see the billing note below.
 #
 #   NOT COMMITTED. _data/albums.yaml is gitignored and generated. A checkout
-#   with no build step has no album data and both surfaces render nothing,
-#   which is what `make albums` and the workflow step are for. ⚠️ The
-#   Cloudflare Pages backup's build command is set dashboard-side and does not
-#   run this, so its /album/ is empty until that command is updated.
+#   with no build step has no album data and the strip renders NOTHING — an
+#   absent home-page section, not an error — which is what `make albums` and
+#   the workflow step are for. ⚠️ The Cloudflare Pages backup's build command
+#   is set dashboard-side and does not run this, so the strip is missing there
+#   until that command is updated.
 #
 # ---------------------------------------------------------------------------
 # THE FIELDS, AND WHY EACH IS WHAT IT IS
 # ---------------------------------------------------------------------------
-# title  <title>. The caption if a caller ever passes `captions`, and the
-#        bookplate text if an item ever arrives with no picture. NOT the alt
-#        any more — see below.
+# title  <title>. The caption if a caller ever passes `captions` (the strip
+#        does not), and the bookplate text if an item ever arrives with no
+#        picture. NOT the alt any more — see below.
 # url    <link>, the permalink on albums.oinam.com. Absolute, so both includes
 #        emit it verbatim with rel="noopener".
 # img    <media:thumbnail url>, absolute. ⚠️ USED EXACTLY AS GIVEN. Do not
@@ -71,18 +80,19 @@
 #        guess. An empty alt on a decorative thumbnail is correct HTML; a
 #        filename read aloud is not.
 #
-#        ⚠️ AN EMPTY alt ONLY SURVIVES BECAUSE THE INCLUDES WERE FIXED. Both
-#        card-grid.html and home-strip.html used `item.alt | default:
-#        item.title`, and Liquid's `default` filter treats "" as empty and
-#        substitutes — so every one of these would have become its filename.
-#        They now test `{% if item.alt %}`, which is Ruby truthiness and so
-#        true for "". Change either back and this file's whole alt policy is
-#        silently undone.
+#        ⚠️ AN EMPTY alt ONLY SURVIVES BECAUSE home-strip.html WAS FIXED. It
+#        used `item.alt | default: item.title`, and Liquid's `default` filter
+#        treats "" as empty and substitutes — so every one of these would have
+#        become its filename. It now tests `if item.alt`, which is Ruby
+#        truthiness and so true for "". Change that back and this file's whole
+#        alt policy is silently undone. card-grid.html carries the same fix and
+#        no longer has a caller that needs it; it is kept in step on purpose.
 #
-# NO `w`/`h`, deliberately, which has now been decided three times. They would
-# do nothing: page.scss declares `aspect-ratio: auto` on masonry images, which
-# cancels the UA rule that derives a ratio from the attributes. Both halves or
-# neither — the full measurement is in _includes/card-grid.html.
+# NO `w`/`h`, deliberately, decided three times and now moot: the masonry that
+# the argument was about lived on /album/, which is deleted. The strip crops
+# every frame to its own ratio with `object-fit: cover`, so per-item dimensions
+# would change nothing there. The full measurement is in _includes/card-grid.html
+# if the question ever comes back with a new masonry page.
 #
 # ---------------------------------------------------------------------------
 # FAILURE IS LOUD, ON PURPOSE

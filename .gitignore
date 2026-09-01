@@ -12,7 +12,7 @@ node_modules/
 .pagefind-cache/
 
 # Generated at build time by scripts/fetch-albums.rb from albums.oinam.com's
-# RSS feed — the source of /album/ and the home Album strip since 2026-09-01.
+# RSS feed — the source of the home page's Albums strip since 2026-09-01.
 # Not committed, because it is a snapshot of somebody else's newest fifty
 # photographs: committing it would put a stale copy in every checkout and a
 # diff in every build. Run `make albums` (or `make build`) to get one locally.

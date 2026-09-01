@@ -23,10 +23,27 @@
   exists.
 
   ⚠️ `href` — THE HEADING LINK — TAKES THE SAME TEST, added 2026-09-01 when the
-  Album heading started pointing at https://albums.oinam.com. It had been an
+  Albums heading started pointing at https://albums.oinam.com. It had been an
   unconditional `relative_url` because both callers were internal; an absolute
   URL through that filter is the same latent bug as above, and an off-site
   heading link wants the same `rel="noopener"` every item link already gets.
+
+  ⚠️ AN OFF-SITE HEADING ALSO OPENS IN A NEW TAB, AND SAYS SO TWICE. It gets
+  `target="_blank"`, the ↗ from icons/external.svg, and an `aria-label` reading
+  "… (opens in a new tab)". The three are one decision, not three: the glyph is
+  `aria-hidden`, so without the label a screen-reader user gets a new tab with
+  no warning; without the glyph a sighted reader gets the same surprise. The
+  label overrides the accessible name, and it still opens with the visible word
+  ("Albums …"), which is what keeps voice control working.
+
+  ⚠️ `target="_blank"` NEEDS `rel="noopener"`, which this branch already had for
+  its own reason. Do not drop one thinking the other covers it — noopener is
+  about the opened page's access to `window.opener`, target is about where it
+  opens, and only the pair is safe.
+
+  The INTERNAL branch gets none of it. A link to a page on this site opening a
+  new tab is the behaviour every other link here does not have, and the mark
+  would be a lie.
 
   IMAGE PATHS, in three branches. `img` starting with "http" is a remote file
   and is emitted verbatim; one starting with "/" is site-absolute and also
@@ -35,18 +52,22 @@
   contain one too.
 
   ⚠️ THE "http" BRANCH ALSO SKIPS `relative_url`, and both halves matter — the
-  same fix, for the same reason, as _includes/card-grid.html. /album/ and this
-  strip read _data/albums.yaml, generated from albums.oinam.com's feed, where
-  every `img` is an absolute media.oinam.com URL. THE TWO INCLUDES MUST STAY IN
-  STEP: they render the same data on two pages, and fixing one alone shipped
-  `/static/album/https://media.oinam.com/...` on the other.
+  same fix, for the same reason, as _includes/card-grid.html. This strip reads
+  _data/albums.yaml, generated from albums.oinam.com's feed, where every `img`
+  is an absolute media.oinam.com URL. ⚠️ And this file is now the ONLY caller
+  that does — /album/ was deleted on 2026-09-01, so card-grid.html's copy of
+  the branch is unexercised. It is kept there deliberately, so the two includes
+  stay the same shape; do not delete it as dead code without reading the note
+  in that file first.
 
   ⚠️ ALT: a bare `if item.alt` test, NEVER `item.alt | default: item.title`
-  — again identical to card-grid.html. The `default` filter substitutes on the EMPTY
-  STRING, and _data/albums.yaml sets `alt: ""` deliberately on the photos
-  albums.oinam.com left uncaptioned, whose titles are their filenames. Books
-  and the other shelves carry no `alt` key at all, so they are nil and still
-  fall back to the title. See scripts/fetch-albums.rb.
+  — again identical to card-grid.html, and HERE IT IS LOAD-BEARING. The
+  `default` filter substitutes on the EMPTY STRING, and _data/albums.yaml sets
+  `alt: ""` deliberately on the photos albums.oinam.com left uncaptioned, whose
+  titles are their FILENAMES ("London — IMG_9018.jpeg"). Revert this one line
+  and the home page reads filenames aloud to a screen reader. Books carry no
+  `alt` key at all, so they are nil and still fall back to the title. See
+  scripts/fetch-albums.rb.
 
   THE ARROWS ARE PROGRESSIVE ENHANCEMENT. They ship as real <button>s but
   carry `hidden`, and strip-nav.js removes that only once it has measured that
@@ -76,7 +97,8 @@
   {%- assign href_proto = include.href | slice: 0, 4 -%}
   <h2 class="strip__heading">
     {%- if href_proto == "http" -%}
-    <a href="{{ include.href }}" rel="noopener">{{ include.title }}</a>
+    <a href="{{ include.href }}" target="_blank" rel="noopener"
+       aria-label="{{ include.title }} (opens in a new tab)">{{ include.title }}{% include icons/external.svg %}</a>
     {%- else -%}
     <a href="{{ include.href | relative_url }}">{{ include.title }}</a>
     {%- endif -%}
@@ -120,8 +142,9 @@
           the layout AND every hover hook — the padding, the negative margins
           that let the wash sit above the thumbnail, and the grayscale-to-colour
           transition. CSS `:hover` is not anchor-specific, so a span keeps all
-          of it and only the navigation goes away. Album entries routinely land
-          before their destinations exist, so this is the normal state here.
+          of it and only the navigation goes away. Books arrive before their
+          posts do, so this is the normal state here. (It was the album's normal
+          state too, once; every feed item now carries a permalink.)
         {%- endcomment -%}
         {%- if item.url -%}
         <a class="strip__link" href="{{ href }}"{% if ext %} rel="noopener"{% endif %}>

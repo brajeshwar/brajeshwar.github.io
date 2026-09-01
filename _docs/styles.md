@@ -867,23 +867,31 @@ word "video" under the thumbnail as visible text.
 gallery. The prose is verbatim in `_backup/books-BCK.md`, an underscore directory Jekyll never
 copies, so it cannot publish itself at `/books-BCK/`.
 
-⚠️ **Album data is GENERATED, and remote (2026-09-01).** `_data/album.yaml` is gone. Both the
-strip and `/album/` read `_data/albums.yaml`, which `scripts/fetch-albums.rb` writes at build
-time from `https://albums.oinam.com/feed.xml` — the 50 most recent items, newest first. It is
-gitignored, so **a checkout that has not run `make albums` renders no album at all**; that is
-missing data, not a broken include.
+⚠️ **Album data is GENERATED, remote, and feeds ONE surface (2026-09-01).** `_data/album.yaml`
+is gone and so is `/album/` — the page was deleted the same day and is a redirect stub to
+`https://albums.oinam.com`. What is left here is the home page's **Albums strip**, reading
+`_data/albums.yaml`, which `scripts/fetch-albums.rb` writes at build time from the site's RSS
+feed — the 50 most recent items, newest first, of which the strip shows 13. It is gitignored,
+so **a checkout that has not run `make albums` has no strip at all**; that is missing data, not
+a broken include.
 
 The `img` rule grew a third branch for it: `http…` is a remote file emitted verbatim, `/…` is
 site-absolute and also verbatim, anything else resolves under `/static/<kind>/`. ⚠️ **The
-remote branch must also skip `relative_url`** — in `card-grid.html` *and* `home-strip.html`,
-which render the same data and must stay in step.
+remote branch must also skip `relative_url`.** It is in `card-grid.html` *and*
+`home-strip.html` even though only the strip exercises it now — the two includes are read and
+edited together, and one of them silently lacking the branch is how the bug comes back.
 
 ⚠️ **`alt` is tested with a bare `if`, never `| default:`.** 48 of the 50 items carry a
 deliberate `alt: ""` (albums.oinam.com leaves uncaptioned photos' alt empty rather than
 announce a filename, and their titles ARE their filenames). Liquid's `default` filter
 substitutes on the empty string, so it would have put `London — IMG_9018.jpeg` into the alt of
-nearly every card. This is the whole reason the two includes were touched — see
-`scripts/fetch-albums.rb`, which carries the full reasoning.
+nearly every thumbnail. See `scripts/fetch-albums.rb`, which carries the full reasoning.
+
+⚠️ **`.item__cards.card-grid--masonry` in `page.scss` now has NO USER** — `/album/` was its only
+caller. It is deliberately still there: `base.scss`'s post-gallery masonry points at that block
+by name for the full reasoning and the reading-order trade-off (*"read it there rather than
+trusting a summary"*), so deleting the rules would orphan a live cross-reference. Delete the
+comment with it, or not at all.
 
 ⚠️ **These strips do not use `ul.item__cards`.** That class is shared with the album pages
 through `album.scss` (`/devices/`, `/film/`, `/books/`, `/album/`), which want a wrapping grid

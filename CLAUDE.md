@@ -117,13 +117,20 @@ Anything claiming this site parses GFM is wrong; it cost two debugging passes.
    approval.
    ⚠️ **`_data/albums.yaml` IS GENERATED — NEVER EDIT IT** (2026-09-01). `scripts/fetch-albums.rb`
    overwrites it from `https://albums.oinam.com/feed.xml` before every build, and it is
-   gitignored, so an edit is lost and never reaches the deploy. To change `/album/`, change
-   albums.oinam.com. The hand-maintained `_data/album.yaml` it replaced is deleted.
+   gitignored, so an edit is lost and never reaches the deploy. The hand-maintained
+   `_data/album.yaml` it replaced is deleted.
    ⚠️ **And run it as `ruby scripts/fetch-albums.rb`, never `bundle exec ruby`** — it is
    stdlib-only, but rexml is a *bundled gem* and bundler hides those unless the Gemfile names
-   them. **A checkout that has not run `make albums` renders no album at all**; an empty grid is
-   a missing data file, not a broken include.
+   them. **A checkout that has not run `make albums` has no Albums strip on the home page**;
+   an absent section is a missing data file, not a broken include.
 2. **Preserve every URL.** Permalink is `/:title/`. Do not change permalinks, slugs, or structure.
+   ⚠️ **A page that genuinely goes away leaves a redirect stub behind** — `_redirect/<name>.md`,
+   four lines of front matter on `layout: redirect`, `sitemap: false`. Three exist: `/photos/`,
+   `/resume/` and `/album/`, the last pointing OFF-SITE to `https://albums.oinam.com`
+   (2026-09-01, when the album moved there wholesale). ⚠️ **Do not chain them** — `/photos/`
+   was re-pointed at albums.oinam.com directly rather than left aimed at `/album/`, which had
+   itself become a stub. Deleting a page without a stub is a broken URL, and guardrail 2 does
+   not stop applying because the page was his idea to delete.
 3. **Stay on Jekyll + Pagefind + kramdown.** No new SSG, no Markdown-engine swap, no new plugins
    unless the spec calls for it. No `_plugins/` hooks (GitHub Pages-incompatible).
 4. **Progressive enhancement.** The site must fully work with JavaScript disabled — real footnotes

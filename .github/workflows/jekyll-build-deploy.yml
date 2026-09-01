@@ -80,8 +80,8 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
         
-      # /album/ and the home page's Album strip are built from
-      # albums.oinam.com's RSS feed, not from a file in this repo. This writes
+      # The home page's Albums strip is built from albums.oinam.com's RSS
+      # feed, not from a file in this repo. This writes
       # _data/albums.yaml, so it MUST run before jekyll build — Jekyll reads
       # _data once, at the start.
       #
@@ -92,7 +92,7 @@ jobs:
       #
       # IT FAILS THE BUILD ON PURPOSE if the feed is unreachable, unparseable
       # or empty: "fail the build loudly rather than shipping an empty grid".
-      # A red build is visible; a silently empty /album/ is not, and the daily
+      # A red build is visible; a silently absent strip is not, and the daily
       # cron retries at 00:01 while the last good deploy stays up.
       - name: Fetch album feed
         run: ruby scripts/fetch-albums.rb

@@ -1,7 +1,7 @@
 ---
 layout: redirect
 permalink: /photos/
-redirect_to: /album/
+redirect_to: https://albums.oinam.com
 sitemap: false
 ---
 
@@ -16,4 +16,9 @@ sitemap: false
   ⚠️ Do not delete this when the rename feels old. The cost of keeping it is one
   1 KB file; the cost of removing it is a dead URL with no way to know who still
   holds it.
+
+  ⚠️ RE-POINTED 2026-09-01, from /album/ to https://albums.oinam.com. /album/ is
+  itself a redirect stub now, so leaving this one aimed at it would have made
+  /photos/ a two-hop meta-refresh — slower, and a chain some crawlers decline to
+  follow. The target moved; the promise this file makes did not.
 -->

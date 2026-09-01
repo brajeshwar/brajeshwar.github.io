@@ -1,7 +1,7 @@
 # brajeshwar.com — local dev loop. See _docs/search.md + _docs/agents.md.
 #
 # One PRE-build step, then Jekyll, then three post-build steps (exactly like CI):
-#   0. ruby scripts/fetch-albums.rb           → _data/albums.yaml, /album/'s SOURCE
+#   0. ruby scripts/fetch-albums.rb           → _data/albums.yaml, the Albums strip
 #   1. node scripts/build-agent-markdown.mjs  → .md twins + /llms.txt for AI agents
 #   2. esbuild --minify (in place)            → JS at ~40% of its source size
 #   3. npx pagefind --site _site              → the ⌘K SEARCH INDEX
@@ -13,7 +13,7 @@
 .PHONY: albums build pagefind serve dev clean
 
 ## albums  — fetch albums.oinam.com's feed into _data/albums.yaml (generated, gitignored).
-##           /album/ and the home Album strip are EMPTY without it, so `build` runs it
+##           The home page's Albums strip is EMPTY without it, so `build` runs it
 ##           first — exactly as the Actions workflow does.
 ##           ⚠️ `ruby`, not `bundle exec ruby`: the script is stdlib-only, but rexml is a
 ##           bundled gem and bundler hides those unless the Gemfile names them.
