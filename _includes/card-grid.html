@@ -17,6 +17,17 @@
   clicking. Omitted means a still image, which needs no marker — the absence is
   the default, not a third icon.
 
+  ⚠️ ALT: a bare `if item.alt` test, NEVER `item.alt | default: item.title`.
+  The two disagree on exactly one value — the empty string — and that value is now
+  load-bearing. Liquid's `default` filter substitutes when the input is
+  `empty?`, so `alt: ""` became the title; a bare `if` is Ruby truthiness, so
+  "" passes through as written. _data/albums.yaml carries a deliberate `alt: ""`
+  on 48 of its 50 items (a photo albums.oinam.com left uncaptioned, whose title
+  is its FILENAME — "London — IMG_9018.jpeg"), so the filter would have read
+  filenames aloud to a screen reader on nearly every card. Items with no `alt`
+  key at all — books, film, devices — are nil and still fall back to the title,
+  unchanged. Full reasoning in scripts/fetch-albums.rb.
+
   ⚠️ The badge is `aria-hidden` and the word goes into the image's ALT instead
   — "… (video)". The first attempt used a `.visually-hidden` span, which this
   site does not have: base.css's copy was deleted after the 2026-07-19 audit
@@ -36,13 +47,26 @@
   verbatim and gets `rel="noopener"` plus an external marker; anything else is
   run through `relative_url`. That split matters — `relative_url` prepends the
   baseurl, so passing it an absolute URL is at best a no-op and at worst a
-  mangled href the moment a baseurl exists. Photos point off-site by design
-  (album.oinam.com), books point at posts here.
+  mangled href the moment a baseurl exists. Album items point off-site by
+  design (albums.oinam.com), books point at posts here.
 
-  IMAGE PATHS follow the same rule as the home strips: a bare filename resolves
-  under /static/<dir>/, an `img` beginning with "/" is used verbatim. That is
-  what lets the placeholder album items borrow the book covers while /static/album/
-  does not exist yet.
+  IMAGE PATHS follow the same rule as the home strips, in THREE branches: an
+  `img` starting with "http" is a remote file and is emitted verbatim, one
+  starting with "/" is a site-absolute path and is also verbatim, and anything
+  else is a bare filename resolving under /static/<dir>/.
+
+  ⚠️ THE "http" BRANCH MUST SKIP `relative_url`, WHICH IS THE WHOLE POINT OF
+  HAVING IT. Added 2026-09-01, when /album/ moved onto albums.oinam.com's feed
+  and every `img` became an absolute media.oinam.com URL. Without it a remote
+  thumbnail was concatenated onto the folder prefix and shipped as
+  `/static/album/https://media.oinam.com/...` — and then `relative_url` would
+  prepend the baseurl to that. The `url` test below already had this split;
+  `img` simply never needed it until the pictures stopped being local files.
+
+  ⚠️ AND `relative_url` IS THE SECOND HALF OF IT. Skipping only the /static/
+  prefix is not enough: handing an absolute URL to `relative_url` is a no-op
+  today and a mangled src the moment a baseurl exists, which is exactly the
+  trap documented for `url`. Both halves, or neither.
 
   NO `img` AT ALL renders a .bookplate — a bound board drawn in CSS carrying the
   title and author — rather than a broken image. Added 2026-08-04 so books can
@@ -96,10 +120,14 @@
   <ul class="item__cards {% if include.layout == "masonry" %}card-grid--masonry{% else %}card-grid--{{ include.ratio | default: "3x4" }}{% endif %}">
     {%- for item in include.items %}
     {%- assign first = item.img | slice: 0 -%}
-    {%- if first == "/" -%}
-      {%- assign src = item.img -%}
+    {%- assign img_proto = item.img | slice: 0, 4 -%}
+    {%- if img_proto == "http" -%}
+      {%- assign src = item.img -%}{%- assign img_remote = true -%}
+    {%- elsif first == "/" -%}
+      {%- assign src = item.img -%}{%- assign img_remote = false -%}
     {%- else -%}
       {%- assign src = "/static/" | append: include.dir | append: "/" | append: item.img -%}
+      {%- assign img_remote = false -%}
     {%- endif -%}
     {%- assign proto = item.url | slice: 0, 4 -%}
     {%- if proto == "http" -%}
@@ -149,9 +177,10 @@
             attribute header.html and footer.html already use, same reason.
           {%- endcomment -%}
           {%- if item.img -%}
+          {%- if item.alt -%}{%- assign alt = item.alt -%}{%- else -%}{%- assign alt = item.title -%}{%- endif -%}
           <img width="{{ iw }}" height="{{ ih }}"
-               src="{{ src | relative_url }}"
-               alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
+               src="{% if img_remote %}{{ src }}{% else %}{{ src | relative_url }}{% endif %}"
+               alt="{{ alt }}{% if item.media %} ({{ item.media }}){% endif %}"
                loading="lazy" decoding="async">
           {%- else -%}
           <span class="bookplate" aria-hidden="true" data-pagefind-ignore>

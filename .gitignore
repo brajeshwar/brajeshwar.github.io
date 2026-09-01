@@ -11,6 +11,17 @@ vendor/
 node_modules/
 .pagefind-cache/
 
+# Generated at build time by scripts/fetch-albums.rb from albums.oinam.com's
+# RSS feed — the source of /album/ and the home Album strip since 2026-09-01.
+# Not committed, because it is a snapshot of somebody else's newest fifty
+# photographs: committing it would put a stale copy in every checkout and a
+# diff in every build. Run `make albums` (or `make build`) to get one locally.
+#
+# ⚠️ Unlike CLAUDE.local.md below, this one does NOT also need a _config.yml
+# `exclude:` line — an underscore directory is never copied to the output, so
+# _data/ cannot publish itself the way a root-level file can.
+_data/albums.yaml
+
 # Brajeshwar's local work queue for Claude Code (see CLAUDE.md). It is an inbox
 # he types into by hand, plus its done-log. Neither is anyone else's business, and
 # ⚠️ GITIGNORING THEM IS ONLY HALF THE JOB — _config.yml's `exclude:` has to list

@@ -115,6 +115,14 @@ Anything claiming this site parses GFM is wrong; it cost two debugging passes.
    or `_pages/**` prose bodies. Do not touch `_data/**` except when asked — the books shelf
    (`_data/books/`, `_data/books-favorites.yaml`) is edited constantly and `nav.yaml` needs
    approval.
+   ⚠️ **`_data/albums.yaml` IS GENERATED — NEVER EDIT IT** (2026-09-01). `scripts/fetch-albums.rb`
+   overwrites it from `https://albums.oinam.com/feed.xml` before every build, and it is
+   gitignored, so an edit is lost and never reaches the deploy. To change `/album/`, change
+   albums.oinam.com. The hand-maintained `_data/album.yaml` it replaced is deleted.
+   ⚠️ **And run it as `ruby scripts/fetch-albums.rb`, never `bundle exec ruby`** — it is
+   stdlib-only, but rexml is a *bundled gem* and bundler hides those unless the Gemfile names
+   them. **A checkout that has not run `make albums` renders no album at all**; an empty grid is
+   a missing data file, not a broken include.
 2. **Preserve every URL.** Permalink is `/:title/`. Do not change permalinks, slugs, or structure.
 3. **Stay on Jekyll + Pagefind + kramdown.** No new SSG, no Markdown-engine swap, no new plugins
    unless the spec calls for it. No `_plugins/` hooks (GitHub Pages-incompatible).

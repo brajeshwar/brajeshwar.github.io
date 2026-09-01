@@ -149,11 +149,16 @@ Originally absorbed from the 2027 planning braindump.
         of* Macromedia — it lists **both**. The real difference: `/about/` names Adobe, which
         `/cv/` does not; `/cv/` names Ultrashock and Edition Interactive, which `/about/` does
         not. Eight names against nine, seven shared.
-      - **Found while checking, and unrelated to either page:** `_data/album.yaml` titles the
+      - **Found while checking, and unrelated to either page:** `_data/album.yaml` titled the
         2006 photograph *"Oinam Software acquired by **Nanocast**"* — and its filename says
         nanocast too — while `/about/`'s caption for the same image and `/cv/`'s closing line
-        both say **Mixercast**. The `/album/` page therefore names a different acquirer from
-        every other page on the site. His call; renaming the file would also change a URL.
+        both say **Mixercast**. ⚠️ **Half of this went away on 2026-09-01**: `_data/album.yaml`
+        was deleted when `/album/` moved onto albums.oinam.com's feed, so no page carries the
+        Nanocast *title* any more. What survives is the FILENAME —
+        `/static/album/2006-04-08-oinam-software-acquired-by-nanocast.webp` — still referenced
+        by `/about/`, where the visible caption says Mixercast. So the disagreement is now
+        between a caption and a URL rather than between two pages. His call; renaming the file
+        would change a URL that `/about/` points at.
 - [ ] **"Download Resume" PDF** — the Work track as a downloadable file. Obvious home is beside
       the Life/Work pill when Work is the active view — **that pill no longer exists**, so the
       placement question is open again. Worth deciding then whether the PDF is

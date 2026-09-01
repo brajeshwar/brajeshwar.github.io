@@ -3,7 +3,7 @@
   Photos, which are the same component at two aspect ratios.
 
   Parameters:
-    items     the data array (site.data.books / site.data.album)
+    items     the data array (site.data.books-favorites / site.data.albums)
     title     heading text
     href      where the heading links
     kind      "books" | "album" — picks the ratio class and the image folder
@@ -17,15 +17,36 @@
   Both the title and every item are links.
 
   LINKS may point off-site. A `url` starting with "http" is emitted verbatim
-  with `rel="noopener"`; anything else goes through `relative_url`. Photos link
-  to album.oinam.com, books to posts here — and `relative_url` prepends the
-  baseurl, so handing it an absolute URL is wrong the moment a baseurl exists.
+  with `rel="noopener"`; anything else goes through `relative_url`. Album items
+  link to albums.oinam.com, books to posts here — and `relative_url` prepends
+  the baseurl, so handing it an absolute URL is wrong the moment a baseurl
+  exists.
 
-  IMAGE PATHS. `img` is normally a bare filename and resolves under
-  /static/<kind>/. An `img` that already starts with "/" is used verbatim
-  instead — which is what lets the placeholder album items borrow the book
-  thumbnails while /static/album/ does not exist. Slice rather than
-  `contains "/"`, because a filename in a subfolder would contain one too.
+  ⚠️ `href` — THE HEADING LINK — TAKES THE SAME TEST, added 2026-09-01 when the
+  Album heading started pointing at https://albums.oinam.com. It had been an
+  unconditional `relative_url` because both callers were internal; an absolute
+  URL through that filter is the same latent bug as above, and an off-site
+  heading link wants the same `rel="noopener"` every item link already gets.
+
+  IMAGE PATHS, in three branches. `img` starting with "http" is a remote file
+  and is emitted verbatim; one starting with "/" is site-absolute and also
+  verbatim; anything else is a bare filename resolving under /static/<kind>/.
+  Slice rather than `contains "/"`, because a filename in a subfolder would
+  contain one too.
+
+  ⚠️ THE "http" BRANCH ALSO SKIPS `relative_url`, and both halves matter — the
+  same fix, for the same reason, as _includes/card-grid.html. /album/ and this
+  strip read _data/albums.yaml, generated from albums.oinam.com's feed, where
+  every `img` is an absolute media.oinam.com URL. THE TWO INCLUDES MUST STAY IN
+  STEP: they render the same data on two pages, and fixing one alone shipped
+  `/static/album/https://media.oinam.com/...` on the other.
+
+  ⚠️ ALT: a bare `if item.alt` test, NEVER `item.alt | default: item.title`
+  — again identical to card-grid.html. The `default` filter substitutes on the EMPTY
+  STRING, and _data/albums.yaml sets `alt: ""` deliberately on the photos
+  albums.oinam.com left uncaptioned, whose titles are their filenames. Books
+  and the other shelves carry no `alt` key at all, so they are nil and still
+  fall back to the title. See scripts/fetch-albums.rb.
 
   THE ARROWS ARE PROGRESSIVE ENHANCEMENT. They ship as real <button>s but
   carry `hidden`, and strip-nav.js removes that only once it has measured that
@@ -52,8 +73,13 @@
 {%- endcomment -%}
 {% if include.items %}
 <home-strip class="strip-section">
+  {%- assign href_proto = include.href | slice: 0, 4 -%}
   <h2 class="strip__heading">
+    {%- if href_proto == "http" -%}
+    <a href="{{ include.href }}" rel="noopener">{{ include.title }}</a>
+    {%- else -%}
     <a href="{{ include.href | relative_url }}">{{ include.title }}</a>
+    {%- endif -%}
   </h2>
 
   {%- if include.intro %}
@@ -69,10 +95,14 @@
     <ul class="strip strip--{{ include.kind }}{% unless include.captions %} strip--nocaption{% endunless %}">
       {%- for item in include.items %}
       {%- assign img_first = item.img | slice: 0 -%}
-      {%- if img_first == "/" -%}
-        {%- assign img_src = item.img -%}
+      {%- assign img_proto = item.img | slice: 0, 4 -%}
+      {%- if img_proto == "http" -%}
+        {%- assign img_src = item.img -%}{%- assign img_remote = true -%}
+      {%- elsif img_first == "/" -%}
+        {%- assign img_src = item.img -%}{%- assign img_remote = false -%}
       {%- else -%}
         {%- assign img_src = "/static/" | append: include.kind | append: "/" | append: item.img -%}
+        {%- assign img_remote = false -%}
       {%- endif -%}
       {%- assign proto = item.url | slice: 0, 4 -%}
       {%- if proto == "http" -%}
@@ -114,9 +144,10 @@
               _sass/bookplate.scss.
             {%- endcomment -%}
             {%- if item.img -%}
+            {%- if item.alt -%}{%- assign alt = item.alt -%}{%- else -%}{%- assign alt = item.title -%}{%- endif -%}
             <img class="strip__img"
-                 src="{{ img_src | relative_url }}"
-                 alt="{{ item.alt | default: item.title }}{% if item.media %} ({{ item.media }}){% endif %}"
+                 src="{% if img_remote %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}"
+                 alt="{{ alt }}{% if item.media %} ({{ item.media }}){% endif %}"
                  loading="lazy" decoding="async">
             {%- else -%}
             <span class="bookplate" aria-hidden="true" data-pagefind-ignore>

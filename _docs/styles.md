@@ -867,10 +867,23 @@ word "video" under the thumbnail as visible text.
 gallery. The prose is verbatim in `_backup/books-BCK.md`, an underscore directory Jekyll never
 copies, so it cannot publish itself at `/books-BCK/`.
 
-⚠️ **Album is placeholder data.** `_data/album.yaml` exists but every `img` points into
-`/static/books/` — there is no `/static/album/` yet. An `img` beginning with `/` is used
-verbatim by the include; bare filenames resolve under `/static/<kind>/`. Replace the yaml
-wholesale when real photos land.
+⚠️ **Album data is GENERATED, and remote (2026-09-01).** `_data/album.yaml` is gone. Both the
+strip and `/album/` read `_data/albums.yaml`, which `scripts/fetch-albums.rb` writes at build
+time from `https://albums.oinam.com/feed.xml` — the 50 most recent items, newest first. It is
+gitignored, so **a checkout that has not run `make albums` renders no album at all**; that is
+missing data, not a broken include.
+
+The `img` rule grew a third branch for it: `http…` is a remote file emitted verbatim, `/…` is
+site-absolute and also verbatim, anything else resolves under `/static/<kind>/`. ⚠️ **The
+remote branch must also skip `relative_url`** — in `card-grid.html` *and* `home-strip.html`,
+which render the same data and must stay in step.
+
+⚠️ **`alt` is tested with a bare `if`, never `| default:`.** 48 of the 50 items carry a
+deliberate `alt: ""` (albums.oinam.com leaves uncaptioned photos' alt empty rather than
+announce a filename, and their titles ARE their filenames). Liquid's `default` filter
+substitutes on the empty string, so it would have put `London — IMG_9018.jpeg` into the alt of
+nearly every card. This is the whole reason the two includes were touched — see
+`scripts/fetch-albums.rb`, which carries the full reasoning.
 
 ⚠️ **These strips do not use `ul.item__cards`.** That class is shared with the album pages
 through `album.scss` (`/devices/`, `/film/`, `/books/`, `/album/`), which want a wrapping grid

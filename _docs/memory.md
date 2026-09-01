@@ -4,7 +4,71 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-08-11, ninth session — closed) — READ FIRST
+## Where we are (updated 2026-09-01, tenth session — open) — READ FIRST
+
+**`/album/` IS NO LONGER A FILE IN THIS REPO.** One queue item, worked 2026-09-01: the page and
+the home strip are built from `https://albums.oinam.com/feed.xml` — the 50 most recent items —
+by `scripts/fetch-albums.rb`, which writes `_data/albums.yaml` before `jekyll build`. Stdlib
+Ruby, no new dependency. **Committed, NOT pushed.**
+
+⚠️ **`ruby scripts/fetch-albums.rb`, never `bundle exec ruby`.** rexml is a *bundled gem* in
+Ruby 3.3: bare `ruby` loads it, bundler hides it unless the Gemfile names it. The workflow step
+and the Makefile target both call it bare, deliberately.
+
+| what | where |
+|---|---|
+| the fetch | `scripts/fetch-albums.rb` — every field, and why, is documented in its header |
+| when it runs | Actions, a new step **before** `jekyll build`; locally via `make albums`, which `make build` now depends on |
+| the data | `_data/albums.yaml` — **generated and gitignored**. `_data/album.yaml` is **deleted** |
+| the includes | `card-grid.html` + `home-strip.html` — an `http` branch for `img`, and the alt fix below |
+| the callers | `_pages/album.html`, `index.html` |
+
+**Four things that will look like bugs and are not:**
+
+1. **A fresh checkout has no album.** `_data/albums.yaml` is gitignored, so `/album/` and the
+   home strip render *nothing* until `make albums` runs. Empty grid = missing data file.
+2. **`/album/` reads newest → oldest now**, where it used to read forwards through time. A
+   rolling 50-item window cannot preserve the old direction — its oldest entry moves whenever a
+   photo is added upstream. `index.html` dropped its `reverse` to match.
+3. **Every card is 4:3.** The feed's thumbnails are `fit=cover` 640×480, so the masonry's "each
+   photo keeps its native shape" premise is over. It was a property of the hand-cut `.webp`
+   files. ⚠️ **Do not "fix" it by composing new `/cdn-cgi/image/` widths** — every distinct
+   transformation width is separately billed monthly at Cloudflare, and 640×480 / 480×640 are
+   already paid for. Use the URLs exactly as given.
+4. **48 of 50 images ship `alt=""`.** Deliberate, and copied from albums.oinam.com, which leaves
+   an uncaptioned photo's alt empty rather than have a screen reader announce a filename — and
+   those items' *titles* are their filenames (`London — IMG_9018.jpeg`).
+
+⚠️ **THAT LAST ONE FORCED A CHANGE IN TWO SHARED INCLUDES, and it is the fragile part.** Both
+used `item.alt | default: item.title`. Liquid's `default` filter substitutes on the **empty
+string**, so every deliberate `alt: ""` would have become a filename. They now use a bare
+`if item.alt`, which is Ruby truthiness and lets `""` through. **Revert either one and the whole
+alt policy is silently undone.** Books, film and devices carry no `alt` key at all — nil, not
+empty — so they still fall back to the title, and `/books/`, `/film/`, `/devices/` and `/own/`
+were verified **byte-identical** before and after.
+
+**Left alone on purpose, his call:**
+
+- **Seven orphaned photographs.** `/static/album/*.webp` and their `_src/album/` masters are
+  down to **one** reference — `/about/`'s Nanocast image. The other seven are referenced by
+  nothing now. They are content and they cost nothing sitting there; deleting them is his call.
+- **`/styleguide/` still teaches the old protocol** — cut a `.webp`, add three fields, keep the
+  list sorted by filename. All of it is now false for the album (§ *Adding a book or an album
+  item*, and the album rows in the size tables). It is a `_pages/` prose body, which guardrail 1
+  puts off-limits, so it is flagged rather than edited.
+- **The Cloudflare Pages backup will show an empty `/album/`.** Its build command is set
+  dashboard-side and does not run the fetch. Nothing in this repo can fix that.
+
+⚠️ **One judgement call to confirm.** The queue said *"Update the 'albums' link to
+https://albums.oinam.com"* and there was no link anywhere labelled *albums* to update. It was
+read as the **home page's Album strip heading**, which now points off-site with `rel="noopener"`
+(`home-strip.html` grew the same `http` test for `href` that item links already had). The footer
+nav's **Album → `/album/` was left alone**, because `nav.yaml` needs his approval and an
+ambiguous reference is not approval. `/album/` therefore stays reachable either way.
+
+---
+
+## Where we were (updated 2026-08-11, ninth session — closed)
 
 **✅ SESSION CLOSED 2026-08-11** — *"document and update everything to shut down and resume
 later."* The code went out on 2026-08-10 at his word (*"Commit and push and stay clean"*): seven
@@ -43,7 +107,7 @@ than pending:
 | **Ruby 3.4.10** | deferred at his word, fully written up — [`hosting.md`](hosting.md) → *Versions* and [`todo.md`](todo.md). ⚠️ Bump the WORKFLOW pin, never `.ruby-version` |
 | The Actions run | first deploy since the twins changed shape and 130 lines left the CSS. Worth a glance |
 | `/cv/` vs `/about/` | **one** disagreement — when Oinam Software was founded (2003 Mar + Co-Founder CEO on `/cv/`, 2005 + Founder on `/about/`, with a 2003 Freelance entry between them). His prose, his call |
-| `/album/` says Nanocast | `_data/album.yaml` names a different acquirer for the 2006 photograph than `/about/` and `/cv/` do, and the filename agrees with the data. Renaming would change a URL |
+| ~~`/album/` says Nanocast~~ | **Half-resolved 2026-09-01** — `_data/album.yaml` is deleted, so no page carries the Nanocast *title*. The FILENAME still does, and `/about/` still points at it under a caption reading Mixercast. Caption vs URL now, not page vs page |
 
 ⚠️ **Three rows left this table on 2026-08-10 because the work is done**: the dead timeline CSS,
 the twelve HTML pages, and *"`/cv/`, `/devices/`, `/own/` — don't work on it yet"*, which he
@@ -738,9 +802,13 @@ Three things moved, and only one of them was code:
    file was let go. The year-marker comments were re-emitted in the new order; they are
    comments, and nothing reads them.
 2. **`index.html` dropped its `reverse` filter** — `site.data.books | slice: 0, 8`, a plain
-   take off the head. ⚠️ **The album line still has its `reverse` and must keep it**:
-   `_data/album.yaml` is still newest-LAST. The two shelves now disagree about where "newest"
-   lives, which is exactly why one line has the filter and the other does not.
+   take off the head. ⚠️ **The album line has no `reverse` either now** —
+   ~~the album line still has its `reverse` and must keep it~~. That instruction was true
+   until **2026-09-01**, when `_data/album.yaml` (newest-LAST, sorted by filename) was
+   replaced by `_data/albums.yaml`, generated from albums.oinam.com's feed and **newest-FIRST**.
+   Both shelves now take a plain slice off the head, and they agree about where "newest" lives
+   for the first time. The reasoning the old instruction protected is still correct — it was
+   about a sort order that no longer exists.
 3. **`_pages/books.html` needed no change at all**, and that is now load-bearing rather than
    incidental: it never reordered anything, so the absence of a filter there is the feature.
    Do not add one.

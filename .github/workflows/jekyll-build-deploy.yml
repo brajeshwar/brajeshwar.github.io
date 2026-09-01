@@ -80,6 +80,23 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
         
+      # /album/ and the home page's Album strip are built from
+      # albums.oinam.com's RSS feed, not from a file in this repo. This writes
+      # _data/albums.yaml, so it MUST run before jekyll build — Jekyll reads
+      # _data once, at the start.
+      #
+      # ⚠️ `ruby`, NOT `bundle exec ruby`. The script is stdlib-only, which is
+      # why it needs no new dependency — but rexml is a BUNDLED GEM in Ruby
+      # 3.3, and bundler hides bundled gems the Gemfile does not name. Under
+      # `bundle exec` this fails at `require "rexml/document"`.
+      #
+      # IT FAILS THE BUILD ON PURPOSE if the feed is unreachable, unparseable
+      # or empty: "fail the build loudly rather than shipping an empty grid".
+      # A red build is visible; a silently empty /album/ is not, and the daily
+      # cron retries at 00:01 while the last good deploy stays up.
+      - name: Fetch album feed
+        run: ruby scripts/fetch-albums.rb
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:

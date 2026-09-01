@@ -32,11 +32,26 @@ title: Brajeshwar Oinam
      kind     = "books"
      captions = true %}
 
-  {%- assign album_tail = site.data.album | reverse | slice: 0, home_album_count -%}
+  {%- comment -%}
+    ⚠️ NO `reverse`, SINCE 2026-09-01 — and its absence is the whole ordering
+    rule now. _data/albums.yaml is generated from albums.oinam.com's feed,
+    which arrives NEWEST FIRST; the curated _data/album.yaml it replaced was
+    sorted oldest-first by filename, so this line reversed it to put the newest
+    thumbnails at the head of the strip. Reversing feed order would now show
+    the thirteen OLDEST of the fifty most recent, which is the wrong end of a
+    rolling window. `slice` off the front is correct exactly because the sort
+    changed. See scripts/fetch-albums.rb.
+
+    `href` goes to albums.oinam.com rather than /album/: that is where the
+    photographs actually live now, and this strip is a taste of it. home-strip
+    emits an absolute href verbatim with rel="noopener" — /album/ is still the
+    full local mirror and is still linked from the footer.
+  {%- endcomment -%}
+  {%- assign album_tail = site.data.albums | slice: 0, home_album_count -%}
   {% include home-strip.html
      items = album_tail
      title = "Album"
-     href  = "/album/"
+     href  = "https://albums.oinam.com"
      kind  = "album" %}
 
 </main>

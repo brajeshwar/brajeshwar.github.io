@@ -8,9 +8,24 @@ title_style: vertical
   Built 2026-08-01, mirroring /books/. Renamed from /photos/ on 2026-08-01 —
   "Follow the same ideas as the /books/ with photos.yml".
 
-  Real photos since 2026-08-01. The twelve borrowed book covers that stood in
-  here are gone; _data/album.yaml is the only file to touch when adding more,
-  and this page and the home strip both fill in with no code change.
+  ⚠️ NOT A HAND-MAINTAINED SHELF ANY MORE, SINCE 2026-09-01. This page is a
+  mirror of the 50 most recent items from albums.oinam.com's RSS feed, fetched
+  at build time by scripts/fetch-albums.rb into _data/albums.yaml. There is
+  nothing to edit here or there when a photo is added — add it to
+  albums.oinam.com and the next build (or the 00:01 cron) picks it up.
+
+  The curated _data/album.yaml it replaced is gone, and with it the whole
+  protocol of cutting a .webp into /static/album/ and sorting the list by
+  filename: "everything is now served from albums.oinam.com".
+
+  ⚠️ SO A LOCAL BUILD SHOWS AN EMPTY PAGE UNTIL YOU FETCH. _data/albums.yaml is
+  generated and gitignored — run `make albums` (or `make build`, which does it
+  for you). An empty grid here means no data file, not a broken include.
+
+  ⚠️ AND IT NOW READS NEWEST → OLDEST, where it used to read forwards through
+  time. That direction cannot survive a rolling 50-item window: the oldest
+  entry changes every time a photo is added upstream. Feed order is the only
+  stable order, so it is the one used.
 
   `<div class="album">` rather than `layout: album`, for the same reason as
   /books/: the class is what album.scss's grid rules target, so the cards get
@@ -28,8 +43,21 @@ title_style: vertical
   to the browser as a literal, meaningless attribute in the DOM.
 {%- endcomment -%}
 <div class="album">
+{%- comment -%}
+  `ratio = "4x3"` is new, and it is INERT TODAY — page.scss declares
+  `aspect-ratio: auto` on masonry images, which cancels the width/height
+  attributes it sets. It is here because it stopped being a lie: this call
+  passed no ratio, so card-grid defaulted to the 3x4 book shape while every
+  feed thumbnail is a `fit=cover` 640x480 landscape. If that `aspect-ratio`
+  declaration is ever removed — the fix the masonry has twice refused — 4:3 is
+  the shape it should reserve, and now it will.
+
+  ⚠️ It does NOT change the grid. `layout: "masonry"` wins the class test in
+  card-grid outright; `ratio` only feeds the intrinsic hints.
+{%- endcomment -%}
 {% include card-grid.html
-   items  = site.data.album
+   items  = site.data.albums
    dir    = "album"
+   ratio  = "4x3"
    layout = "masonry" %}
 </div>
