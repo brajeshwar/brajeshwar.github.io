@@ -749,22 +749,62 @@ home-support li {
   border-radius: var(--border-radius);
 
   transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease,
               border-color var(--transition-duration) ease;
 }
 
 .strip--books .strip__more { aspect-ratio: 3 / 4; }
 .strip--album .strip__more { aspect-ratio: 4 / 3; }
 
+/* ⚠️ H1-SIZED, WHICH IS --step-3 AND NOT A NUMBER (2026-09-01: "Increase the
+   font size of 'View More Albums' to the size of our H1"). It reads the same
+   token base.scss gives `h1`, and the light weight and --scale-small leading
+   with it, so the tile stays a heading rather than becoming a lookalike that
+   drifts the next time the type scale moves.
+
+   ⚠️ IT IS THE ONLY THING IN THE STRIP THAT GETS BIGGER WHEN THE READER SCALES
+   TEXT, and that is fine here and would not be on a thumbnail: --step-3 is
+   multiplied by --text-scale (config.scss), while the tiles around it are sized
+   in rem by --strip-item. The box therefore stays 240x180 while the words grow
+   — which is what `balance` and the small-screen override below are for. */
 .strip__more-label {
-  font-size: var(--step--1);
+  font-size: var(--step-3);
+  font-weight: var(--font-weight-light);
   line-height: var(--scale-small);
   text-align: center;
   text-wrap: balance;
 }
 
+/* ⚠️ THE ↗ DOES NOT GROW WITH IT. The mark is 0.72em, which is right against
+   body text and becomes a 25px arrow against a 35px heading — at that size it
+   stops being punctuation and starts competing with the words. Held to the
+   label's own smaller measure, and nudged back onto the baseline it now sits
+   well above. This is the one place .external-mark is overridden; if a second
+   one appears, move the override into the mark's own block in base.scss. */
+.strip__more-label .external-mark {
+  width: 0.42em;
+  height: 0.42em;
+  vertical-align: 0.06em;
+}
+
+/* ⚠️ A FILLED HOVER, WHICH THE THUMBNAILS DELIBERATELY DO NOT HAVE
+   (2026-09-01: "Apply a different hover, say darker or more accented for this
+   item block"). The wash was removed from the picture tiles on 2026-08-04
+   because it drew a second soft border around the bookplates' hairline — see
+   the note further down. None of that applies here: this tile is a CONTROL, it
+   already owns a border, and the whole point is that it should not answer the
+   pointer the way a photograph does.
+
+   --bg-color-hover is a token themes.scss already defined and nothing had used
+   — `color-mix(… --color-bg-muted 80%, --color-fg 20%)`. Mixing toward the
+   FOREGROUND is what makes it correct in every theme without a second value:
+   it darkens in the light themes and lightens in the dark ones, which is the
+   rule he set for the strip arrows on 2026-08-09 ("a darker background (in
+   light mode, and vice versa)"). */
 .strip__link:hover .strip__more,
 .strip__link:focus-visible .strip__more {
   color: var(--text-color);
+  background-color: var(--bg-color-hover);
   border-color: var(--border-color-high);
 }
 
@@ -900,6 +940,37 @@ home-support li {
 @media only screen and (max-width: bp.$small) {
   .strip {
     --strip-item: 7.5rem;
+  }
+
+  /* ⚠️ THE "MORE" TILE CANNOT KEEP ITS H1 HERE, AND THIS IS NOT A SOFTENING OF
+     THAT INSTRUCTION — it is what makes it survive. The rule above halves the
+     tile to 120x90; --step-3 is ~32px at this width, so "Albums" alone is
+     wider than the box and three lines are twice its height. Measured at the
+     real geometry: the tile stopped being 4:3 at all and grew to about 180px
+     tall, taller than the photograph beside it, with the words hanging out of
+     both sides. `aspect-ratio` yields to min-content height, so nothing clips
+     — it just silently deforms the row.
+
+     --step-0 is the largest step that still fits two balanced lines with the
+     padding tightened, and it keeps the tile the same 4:3 box as every
+     thumbnail. The H1 is what a 240px tile can carry, not what the label
+     always is.
+
+     The ↗ goes back to its normal 0.72em with it. The 0.42em override up in
+     .strip__more-label exists only to stop a 25px arrow competing with H1
+     words; against --step-0 text there is nothing to hold it back from. */
+  .strip__more {
+    padding: var(--space-3xs);
+  }
+
+  .strip__more-label {
+    font-size: var(--step-0);
+  }
+
+  .strip__more-label .external-mark {
+    width: 0.72em;
+    height: 0.72em;
+    vertical-align: -0.02em;
   }
 }
 
