@@ -5,19 +5,21 @@
       every entry in nav.yaml's `footer` was a page here and this loop emitted a
       bare `<a href>` with no test at all.
 
-      An entry whose `url` starts with "http" gets the full off-site treatment:
-      a new tab, the ↗ from icons/external.svg,
-      and an `aria-label` saying where it goes — the glyph is `aria-hidden`, so
-      the label is the only warning a screen reader gets. Same three-part
-      decision as the strip heading in home-strip.html; keep them in step.
+      An entry whose `url` starts with "http" gets the ↗ from icons/external.svg
+      and an `aria-label` reading "… (external link)". Both, always: the glyph is
+      `aria-hidden`, so without the label the fact that the link leaves the site
+      would exist only for people who can see it.
 
-      ⚠️ `_blank` AND NOT A NAMED WINDOW, WHICH WAS TRIED AND REVERTED on
-      2026-09-01. A shared window name reuses one tab across every off-site
-      link, which is nicer — but it only works while the link carries NO
-      `rel="noopener"`, because cross-origin name lookup needs the opener
-      relationship to find the window at all. Reuse or noopener, never both.
-      His call: "If it breaks norms, just use `_blank` for new tabs."
-      home-strip.html carries the measurement.
+      ⚠️ AND NO `target`. 2026-09-01: "I don't want to break convention and force
+      a target=_blank." Where a link opens is the reader's choice — they can ask
+      for a new tab with a modifier-click on any link — and the mark is there so
+      they can make that choice knowingly, not so the page can make it for them.
+      `rel="noopener"` came off with it: with no new browsing context there is
+      nothing for it to do.
+
+      ⚠️ Same rules as the strip heading in home-strip.html, which also carries
+      the history of the shared-named-window experiment that ran for one
+      afternoon and was measured out of existence. Keep the two in step.
 
     {%- endcomment -%}
     <nav class="footer-links" aria-label="Pages">
@@ -26,7 +28,7 @@
       {% for item in group.links -%}
       {%- assign nav_proto = item.url | slice: 0, 4 -%}
       {%- if nav_proto == "http" -%}
-      <a href="{{ item.url }}" target="_blank" rel="noopener" aria-label="{{ item.title }} (opens in a new tab)">{{ item.title }}{% include icons/external.svg %}</a>
+      <a href="{{ item.url }}" aria-label="{{ item.title }} (external link)">{{ item.title }}{% include icons/external.svg %}</a>
       {%- else -%}
       <a href="{{ item.url }}">{{ item.title }}</a>
       {%- endif -%}

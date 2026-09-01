@@ -58,7 +58,7 @@
 #        does not), and the bookplate text if an item ever arrives with no
 #        picture. NOT the alt any more — see below.
 # url    <link>, the permalink on albums.oinam.com. Absolute, so the includes
-#        emit it verbatim, into a new tab (`_blank`, `rel="noopener"`).
+#        emit it verbatim, marked with the ↗ and no forced target.
 # img    <media:thumbnail url>, absolute. ⚠️ USED EXACTLY AS GIVEN. Do not
 #        compose a new /cdn-cgi/image/ width to fit some layout: every
 #        DISTINCT transformation width is separately billed per month at

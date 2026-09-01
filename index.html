@@ -48,14 +48,13 @@ title: Brajeshwar Oinam
     place, and is still linked from the footer.
   {%- endcomment -%}
   {%- comment -%}
-    ⚠️ EVERY OFF-SITE LINK HERE OPENS IN `_blank`, and for half an hour on
-    2026-09-01 they shared a named window instead — `_oinam` — so that thirteen
-    thumbnails, the heading and the button all reused ONE tab. It worked, and
-    it was given up because the price is fixed: a named target only reuses
-    while it carries NO `rel="noopener"`, since cross-origin name lookup needs
-    the opener relationship to find the window at all. Reuse or noopener, never
-    both. His call: "If it breaks norms, just use `_blank` for new tabs."
-    _includes/home-strip.html carries the measurement, so nobody re-derives it.
+    ⚠️ NOTHING HERE FORCES A NEW TAB, and it took three tries to get there.
+    The album links ran through a shared window name (`_oinam-albums`, then
+    `_oinam`) so they would reuse one tab, then `_blank`, and now no `target` at
+    all: "I don't want to break convention and force a target=_blank." The ↗
+    marks the link as leaving the site and lets the reader decide where it
+    opens. _includes/home-strip.html carries the measurement that closed the
+    named-window idea, so nobody re-derives it.
 
 
     ⚠️ ONE FEWER PHOTO THAN TILES (2026-09-01). `home_album_count` is the number

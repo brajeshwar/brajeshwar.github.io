@@ -18,16 +18,13 @@ footer:
     url: "/about/"
   # ⚠️ THE ONE OFF-SITE ENTRY IN THIS NAV (2026-09-01). The album is not hosted
   # here any more — brajeshwar.com/album/ is a redirect stub, and this points
-  # past it at the real thing. footer.html tests for "http" and gives it a new
-  # tab and the ↗ mark; nothing else in `footer` needs that.
+  # past it at the real thing. footer.html tests for "http" and gives it the ↗
+  # mark and an "(external link)" label; nothing else in `footer` needs either.
   #
-  #
-  # ⚠️ IT OPENS IN `_blank`, and carried a shared `_oinam` window name for half
-  # an hour on 2026-09-01. That reused one tab across every off-site link, which
-  # is nicer — and only works while the link carries NO `rel="noopener"`, since
-  # cross-origin name lookup needs the opener relationship to find the window.
-  # Reuse or noopener, never both. His call: "If it breaks norms, just use
-  # `_blank` for new tabs." The measurement is in _includes/home-strip.html.
+  # ⚠️ IT DOES NOT FORCE A NEW TAB. It carried `target: "_blank"` and, before
+  # that, a shared `_oinam` window name — both gone: "I don't want to break
+  # convention and force a target=_blank." There is no `target:` key here any
+  # more, and footer.html emits none. The full history is in home-strip.html.
   - title: Albums
     url: "https://albums.oinam.com"
   - title: Archives
