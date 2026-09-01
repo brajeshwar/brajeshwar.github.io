@@ -33,8 +33,8 @@
   heading link wants the same `rel="noopener"` every item link already gets.
 
   ⚠️ THE TARGET IS A NAME, NOT `_blank`, WHEREVER A STRIP PASSES ONE
-  (2026-09-01: "All item links in the albums should open in a new tab, say
-  `_oinam-albums`, so they open in the same tab"). `_blank` means A NEW TAB
+  (2026-09-01: "All item links in the albums should open in a new tab … so they
+  open in the same tab"). `_blank` means A NEW TAB
   EVERY TIME — click six photographs and you have six tabs. A NAMED target is
   a window the browser REUSES: the first click opens the albums tab, and every
   click after it lands in that same tab and brings it forward. One tab for the
@@ -45,6 +45,13 @@
   a heading left on `_blank` while the items share a name would open a seventh
   tab and defeat the arrangement. `_data/nav.yaml` passes the same name to the
   footer's Albums entry for the same reason.
+
+  ⚠️ AND THE NAME IS `_oinam` — THE SITE'S ONE OFF-SITE WINDOW, not a name per
+  section. It shipped as `_oinam-albums` and was corrected the same day: "if we
+  were already using `_oinam`, continue to that and maintain consistency."
+  `_pages/devices.html` has opened its links into `_oinam` since long before
+  this include existed, so a second name would have meant two tabs doing one
+  job. Any new off-site target on this site joins `_oinam`.
 
   The default is `_blank`, so a strip that passes nothing behaves as before.
 

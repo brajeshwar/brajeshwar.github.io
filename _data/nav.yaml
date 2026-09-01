@@ -22,13 +22,15 @@ footer:
   # tab, rel="noopener" and the ↗ mark; nothing else in `footer` needs that.
   #
   # ⚠️ `target` IS A WINDOW NAME, NOT `_blank`, AND THE STRING IS SHARED. The
-  # home page's album strip opens into `_oinam-albums` too (index.html), so
-  # every link to the album on this site lands in ONE tab and reuses it rather
-  # than opening a new one per click. Change it here and you must change it
-  # there; nothing checks that the two agree.
+  # home page's album strip (index.html) and /devices/ (_pages/devices.html)
+  # open into `_oinam` too, so every off-site link on this site lands in ONE
+  # tab and reuses it rather than opening a new one per click. It is the site's
+  # convention, not the album's — `/devices/` was using it first. Change it in
+  # one place and you must change it in all three; nothing checks that they
+  # agree.
   - title: Albums
     url: "https://albums.oinam.com"
-    target: "_oinam-albums"
+    target: "_oinam"
   - title: Archives
     url: "/archives/"
   - title: Books
