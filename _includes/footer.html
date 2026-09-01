@@ -11,25 +11,14 @@
       the label is the only warning a screen reader gets. Same three-part
       decision as the strip heading in home-strip.html; keep them in step.
 
-      ⚠️ `target:` ON THE NAV ENTRY NAMES THE WINDOW, and defaults to `_blank`.
-      Albums passes `_oinam` so this link joins the same tab /devices/ and the
-      home strip open — `_blank` means a new tab EVERY time, a name means the
-      browser reuses the window it already opened. The name has to match the one
-      index.html passes to the album strip; they are files agreeing on a string,
-      and nothing checks it for you.
+      ⚠️ `_blank` AND NOT A NAMED WINDOW, WHICH WAS TRIED AND REVERTED on
+      2026-09-01. A shared window name reuses one tab across every off-site
+      link, which is nicer — but it only works while the link carries NO
+      `rel="noopener"`, because cross-origin name lookup needs the opener
+      relationship to find the window at all. Reuse or noopener, never both.
+      His call: "If it breaks norms, just use `_blank` for new tabs."
+      home-strip.html carries the measurement.
 
-      ⚠️⚠️ `rel="noopener"` GOES ON `_blank` ONLY. On a NAMED target it does not
-      harden the link, it destroys it: measured in Chrome 2026-09-01, two links
-      sharing a name opened ONE tab without the rel and TWO with it. Name lookup
-      needs the two contexts to be "familiar", and across origins the opener
-      relationship is the only thing that makes them so. The full explanation is
-      in home-strip.html — read it before "fixing" this.
-
-      ⚠️ NO `relative_url` ON EITHER BRANCH, and that is not an oversight — this
-      loop never had one, unlike every other link on the site. Adding it to the
-      internal branch would be a behaviour change smuggled into an unrelated
-      edit; if the site ever takes a baseurl, this nav needs fixing as its own
-      change, and it needs fixing for all four groups at once.
     {%- endcomment -%}
     <nav class="footer-links" aria-label="Pages">
       {% for group in site.data.nav.footer -%}
@@ -37,8 +26,7 @@
       {% for item in group.links -%}
       {%- assign nav_proto = item.url | slice: 0, 4 -%}
       {%- if nav_proto == "http" -%}
-      {%- assign nav_target = item.target | default: "_blank" -%}
-      <a href="{{ item.url }}" target="{{ nav_target }}"{% if nav_target == "_blank" %} rel="noopener"{% endif %} aria-label="{{ item.title }} (opens in a new tab)">{{ item.title }}{% include icons/external.svg %}</a>
+      <a href="{{ item.url }}" target="_blank" rel="noopener" aria-label="{{ item.title }} (opens in a new tab)">{{ item.title }}{% include icons/external.svg %}</a>
       {%- else -%}
       <a href="{{ item.url }}">{{ item.title }}</a>
       {%- endif -%}

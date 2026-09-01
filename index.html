@@ -48,24 +48,15 @@ title: Brajeshwar Oinam
     place, and is still linked from the footer.
   {%- endcomment -%}
   {%- comment -%}
-    ⚠️ `target` IS A NAME AND NOT `_blank`, DELIBERATELY (2026-09-01: "All item
-    links in the albums should open in a new tab … so they open in the same
-    tab"). `_blank` spawns a fresh tab per click; a named window is reused, so
-    thirteen thumbnails and the heading and the button all land in ONE tab.
+    ⚠️ EVERY OFF-SITE LINK HERE OPENS IN `_blank`, and for half an hour on
+    2026-09-01 they shared a named window instead — `_oinam` — so that thirteen
+    thumbnails, the heading and the button all reused ONE tab. It worked, and
+    it was given up because the price is fixed: a named target only reuses
+    while it carries NO `rel="noopener"`, since cross-origin name lookup needs
+    the opener relationship to find the window at all. Reuse or noopener, never
+    both. His call: "If it breaks norms, just use `_blank` for new tabs."
+    _includes/home-strip.html carries the measurement, so nobody re-derives it.
 
-    ⚠️ THE NAME IS `_oinam`, THE SITE'S ONE OFF-SITE WINDOW — not a per-section
-    name. It shipped as `_oinam-albums` for about ten minutes and was corrected
-    the same day: "if we were already using `_oinam`, continue to that and
-    maintain consistency." `/devices/` has opened its links into `_oinam` since
-    long before any of this, so a second name would have meant two tabs for the
-    same job. ⚠️ ANY NEW OFF-SITE TARGET ON THIS SITE JOINS `_oinam` — that is
-    the convention, and `_pages/devices.html` and `_data/nav.yaml` are the other
-    two places the string is written. Nothing checks that they agree.
-
-    ⚠️⚠️ AND DO NOT ADD `rel="noopener"` TO A NAMED TARGET. It reads like the
-    obvious hardening and it silently destroys the reuse this line exists for —
-    measured in Chrome, two links sharing a name gave ONE tab without it and
-    TWO with it. home-strip.html carries the mechanism and the numbers.
 
     ⚠️ ONE FEWER PHOTO THAN TILES (2026-09-01). `home_album_count` is the number
     of TILES in the row, and the last of them is the "All Albums" button, not a
@@ -83,7 +74,6 @@ title: Brajeshwar Oinam
      title      = "Albums"
      href       = "https://albums.oinam.com"
      kind       = "album"
-     target     = "_oinam"
      more_href  = "https://albums.oinam.com"
      more_label = "All Albums" %}
 

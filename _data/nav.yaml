@@ -21,21 +21,15 @@ footer:
   # past it at the real thing. footer.html tests for "http" and gives it a new
   # tab and the ↗ mark; nothing else in `footer` needs that.
   #
-  # ⚠️ `target` IS A WINDOW NAME, NOT `_blank`, AND THE STRING IS SHARED. The
-  # home page's album strip (index.html) and /devices/ (_pages/devices.html)
-  # open into `_oinam` too, so every off-site link on this site lands in ONE
-  # tab and reuses it rather than opening a new one per click. It is the site's
-  # convention, not the album's — `/devices/` was using it first. Change it in
-  # one place and you must change it in all three; nothing checks that they
-  # agree.
   #
-  # ⚠️⚠️ NO `rel="noopener"` GOES WITH A NAMED TARGET — footer.html emits it for
-  # `_blank` only. On a name it does not harden the link, it breaks the reuse:
-  # measured in Chrome 2026-09-01, ONE tab without it, TWO with it. See
-  # _includes/home-strip.html for why.
+  # ⚠️ IT OPENS IN `_blank`, and carried a shared `_oinam` window name for half
+  # an hour on 2026-09-01. That reused one tab across every off-site link, which
+  # is nicer — and only works while the link carries NO `rel="noopener"`, since
+  # cross-origin name lookup needs the opener relationship to find the window.
+  # Reuse or noopener, never both. His call: "If it breaks norms, just use
+  # `_blank` for new tabs." The measurement is in _includes/home-strip.html.
   - title: Albums
     url: "https://albums.oinam.com"
-    target: "_oinam"
   - title: Archives
     url: "/archives/"
   - title: Books

@@ -11,8 +11,6 @@
     captions  "true" to print the item title under each thumbnail
     more_href   optional — turns the LAST tile into a door rather than a picture
     more_label  the words on it ("All Albums")
-    target      optional — the window name every OFF-SITE link in this strip
-                opens into. Defaults to "_blank".
 
   A data item may carry `media: video` or `media: audio`, overlaying a small
   icon so a reader can tell what the frame leads to. Omitted means a still.
@@ -32,28 +30,32 @@
   URL through that filter is the same latent bug as above, and an off-site
   heading link wants the same `rel="noopener"` every item link already gets.
 
-  ⚠️ THE TARGET IS A NAME, NOT `_blank`, WHEREVER A STRIP PASSES ONE
-  (2026-09-01: "All item links in the albums should open in a new tab … so they
-  open in the same tab"). `_blank` means A NEW TAB
-  EVERY TIME — click six photographs and you have six tabs. A NAMED target is
-  a window the browser REUSES: the first click opens the albums tab, and every
-  click after it lands in that same tab and brings it forward. One tab for the
-  album, however many links are followed.
+  ⚠️ `target="_blank"`, AND DO NOT REPLACE IT WITH A NAMED WINDOW. That was
+  tried and reverted on 2026-09-01, and the reason is worth keeping, because
+  the idea is a good one that the platform will not let you have.
 
-  ⚠️ AND IT IS ONE NAME ACROSS EVERY OFF-SITE LINK HERE — the items, the
-  heading and the "more" tile all take `link_target`. That is the whole point:
-  a heading left on `_blank` while the items share a name would open a seventh
-  tab and defeat the arrangement. `_data/nav.yaml` passes the same name to the
-  footer's Albums entry for the same reason.
+  THE IDEA: give every off-site link the SAME window name and the browser
+  reuses one tab instead of opening a dozen ("All item links in the albums
+  should open in a new tab … so they open in the same tab"). It works —
+  measured in Chrome, two cross-origin links sharing a name opened ONE tab.
 
-  ⚠️ AND THE NAME IS `_oinam` — THE SITE'S ONE OFF-SITE WINDOW, not a name per
-  section. It shipped as `_oinam-albums` and was corrected the same day: "if we
-  were already using `_oinam`, continue to that and maintain consistency."
-  `_pages/devices.html` has opened its links into `_oinam` since long before
-  this include existed, so a second name would have meant two tabs doing one
-  job. Any new off-site target on this site joins `_oinam`.
+  ⚠️ BUT A NAMED TARGET CANNOT CARRY `rel="noopener"`. Reuse finds the window
+  BY NAME, and that lookup only succeeds if the two contexts are "familiar",
+  which across origins ONLY the opener relationship provides. Measured, the
+  same two links:
 
-  The default is `_blank`, so a strip that passes nothing behaves as before.
+    target="_name"                  -> 2 clicks, ONE tab (reused)
+    target="_name" rel="noopener"   -> 2 clicks, TWO tabs
+
+  So it is reuse OR noopener, never both — and without the rel every page it
+  opens keeps a live `window.opener` on this site, which is the
+  reverse-tabnabbing shape every linter and security guide flags.
+  `rel="noreferrer"` is not a third option: it implies noopener.
+
+  His call once the trade was on the table: "If it breaks norms, just use
+  `_blank` for new tabs." It does, so `_blank` it is — a new tab per click, and
+  a `rel="noopener"` that costs nothing, because `_blank` never had any reuse
+  to lose.
 
   ⚠️ AN OFF-SITE HEADING ALSO OPENS IN A NEW TAB, AND SAYS SO TWICE. It gets
   a `target`, the ↗ from icons/external.svg, and an `aria-label` reading
@@ -145,12 +147,11 @@
   which parts it deliberately undoes.
 {%- endcomment -%}
 {% if include.items %}
-{%- assign link_target = include.target | default: "_blank" -%}
 <home-strip class="strip-section">
   {%- assign href_proto = include.href | slice: 0, 4 -%}
   <h2 class="strip__heading">
     {%- if href_proto == "http" -%}
-    <a href="{{ include.href }}" target="{{ link_target }}"{% if link_target == "_blank" %} rel="noopener"{% endif %}
+    <a href="{{ include.href }}" target="_blank" rel="noopener"
        aria-label="{{ include.title }} (opens in a new tab)">{{ include.title }}{% include icons/external.svg %}</a>
     {%- else -%}
     <a href="{{ include.href | relative_url }}">{{ include.title }}</a>
@@ -200,7 +201,7 @@
           state too, once; every feed item now carries a permalink.)
         {%- endcomment -%}
         {%- if item.url -%}
-        <a class="strip__link" href="{{ href }}"{% if ext %} target="{{ link_target }}"{% if link_target == "_blank" %} rel="noopener"{% endif %}{% endif %}>
+        <a class="strip__link" href="{{ href }}"{% if ext %} target="_blank" rel="noopener"{% endif %}>
         {%- else -%}
         <span class="strip__link">
         {%- endif -%}
@@ -272,7 +273,7 @@
       {%- assign more_proto = include.more_href | slice: 0, 4 -%}
       <li class="strip__item">
         {%- if more_proto == "http" -%}
-        <a class="strip__link" href="{{ include.more_href }}" target="{{ link_target }}"{% if link_target == "_blank" %} rel="noopener"{% endif %}
+        <a class="strip__link" href="{{ include.more_href }}" target="_blank" rel="noopener"
            aria-label="{{ include.more_label }} (opens in a new tab)">
         {%- else -%}
         <a class="strip__link" href="{{ include.more_href | relative_url }}">
