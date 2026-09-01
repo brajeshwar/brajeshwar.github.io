@@ -1,4 +1,4 @@
-# 10x Is Easier Than 2x
+# 10x is Easier Than 2x
 
 Ten times the result, and less work than doubling. I read [10x Is Easier Than 2x](https://10xeasierbook.com) by Dan Sullivan and Benjamin Hardy[^authors] expecting motivational multipliers but got something of an argument about subtraction.
 
