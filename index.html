@@ -48,6 +48,14 @@ title: Brajeshwar Oinam
     full local mirror and is still linked from the footer.
   {%- endcomment -%}
   {%- comment -%}
+    ⚠️ `target` IS A NAME AND NOT `_blank`, DELIBERATELY (2026-09-01: "All item
+    links in the albums should open in a new tab, say `_oinam-albums`, so they
+    open in the same tab"). `_blank` spawns a fresh tab per click; a named
+    window is reused, so thirteen thumbnails and the heading and the button all
+    land in ONE albums tab. `_data/nav.yaml` gives the footer's Albums entry the
+    same name — change it in one place and you must change it in the other, or
+    the footer quietly opens a fourteenth tab.
+
     ⚠️ ONE FEWER PHOTO THAN TILES (2026-09-01). `home_album_count` is the number
     of TILES in the row, and the last of them is the "View More Albums" button,
     not a picture — "Replace the 13th item with a big button". So the slice
@@ -62,6 +70,7 @@ title: Brajeshwar Oinam
      title      = "Albums"
      href       = "https://albums.oinam.com"
      kind       = "album"
+     target     = "_oinam-albums"
      more_href  = "https://albums.oinam.com"
      more_label = "View More Albums" %}
 
