@@ -881,11 +881,15 @@ remote branch must also skip `relative_url`.** It is in `card-grid.html` *and*
 `home-strip.html` even though only the strip exercises it now — the two includes are read and
 edited together, and one of them silently lacking the branch is how the bug comes back.
 
-⚠️ **`alt` is tested with a bare `if`, never `| default:`.** 48 of the 50 items carry a
-deliberate `alt: ""` (albums.oinam.com leaves uncaptioned photos' alt empty rather than
-announce a filename, and their titles ARE their filenames). Liquid's `default` filter
-substitutes on the empty string, so it would have put `London — IMG_9018.jpeg` into the alt of
-nearly every thumbnail. See `scripts/fetch-albums.rb`, which carries the full reasoning.
+⚠️ **Album thumbnails ship `alt=""`, from a `decorative = true` flag on the include** — not
+from the data. `_data/albums.yaml` carried a scraped `alt` until 2026-09-01 that came back
+empty 48 times in 50; the flag says the same thing once, in the caller, as a property of the
+shelf. The images need it because their `title` is the photograph's FILENAME
+(`London — IMG_9018.jpeg`) on all but a couple of items, and the include's usual
+fall-back-to-title would read those aloud. ⚠️ **`alt=""` is not the same as no `alt`** — an
+`<img>` with none is invalid HTML and sends assistive tech to the filename in the `src`, which
+is the whole thing being avoided. Books and the other shelves pass no flag and still use their
+titles, which are real descriptions.
 
 ⚠️ **`.item__cards.card-grid--masonry` in `page.scss` now has NO USER** — `/album/` was its only
 caller. It is deliberately still there: `base.scss`'s post-gallery masonry points at that block

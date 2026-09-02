@@ -4,18 +4,30 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-09-01, tenth session — open) — READ FIRST
+## Where we are (updated 2026-09-01, tenth session — CLOSED) — READ FIRST
 
-**THE ALBUM LEFT THIS SITE.** Two rounds on 2026-09-01, both committed, **neither pushed**.
+**✅ SESSION CLOSED 2026-09-01.** **THE ALBUM LEFT THIS SITE**, across four rounds in one
+afternoon — thirteen commits, all signed, **all pushed by him and live**. Verified on the
+deployed site, not just in CI: `brajeshwar.com/album/` returns the redirect stub to
+albums.oinam.com, `/photos/` goes straight there too, the home page carries **zero**
+`target=` attributes and three ↗ marks, and the Albums strip is 12 remote thumbnails from
+media.oinam.com plus the "All Albums" tile, every image `alt=""`. The Actions run for his
+last commit ("Book Edits") was green.
+
+⚠️ **Check `git log origin/main..main` before believing that, or any other status line in
+this file.** It is a claim like any other.
 
 **Round one** (queue item): `/album/` and the home strip stopped reading a hand-maintained
 `_data/album.yaml` and started reading `https://albums.oinam.com/feed.xml`.
 **Round two** (his follow-up): *"delete everything from brajeshwar.com album. This is now
 handled at albums.oinam.com"* — so `/album/` itself is gone.
 
-**Round three** (four more queue items): the strip's last tile became an **"All Albums"**
-button at H1 size with a filled hover, and every off-site link on the site settled on plain
-`_blank` after a shared-named-window experiment was tried, measured and unwound.
+**Round three** (four more queue items): the strip's last tile became a button — H1-sized,
+filled hover, finally reading **"All Albums"** — and the album links went through a
+shared-named-window experiment that was tried, measured and unwound.
+**Round four** (his follow-ups): **no forced targets anywhere on the site**, the ↗ kept as
+the only external marker, and the album's scraped `alt` field deleted in favour of a
+`decorative` flag.
 
 **What exists now:**
 
@@ -109,18 +121,17 @@ buttons, and that has to be a photograph. Its label is H1-sized (`--step-3`), wh
 2. **48 of 50 images ship `alt=""`.** Deliberate, copied from albums.oinam.com, which leaves an
    uncaptioned photo's alt empty rather than have a screen reader announce a filename — and
    those items' *titles* are their filenames (`London — IMG_9018.jpeg`).
-3. **`_includes/card-grid.html` carries an `http` branch and an alt fix that nothing exercises.**
-   Both arrived for `/album/` and outlived it. Kept so the two card includes stay the same
-   shape — one of them silently lacking the branch is how `/static/album/https://…` comes back.
+3. **`_includes/card-grid.html` carries an `http` branch and an alt fallback that nothing
+   exercises.** Both arrived for `/album/` and outlived it twice — the page went, then the
+   album's `alt` field went. Kept so the two card includes stay the same shape; one of them
+   silently lacking the branch is how `/static/album/https://…` comes back.
 4. **`.item__cards.card-grid--masonry` in `page.scss` has no user.** `/album/` was its only
    caller. Kept because `base.scss`'s post-gallery masonry points at that block by name for the
    full reasoning; deleting the rules orphans a live cross-reference.
 
-⚠️ **THE ALT FIX IS THE FRAGILE PART.** `home-strip.html` must test `if item.alt`, never
-`item.alt | default: item.title` — Liquid's `default` substitutes on the **empty string**, so
-that filter turns every deliberate `alt: ""` into a filename. Books, film and devices carry no
-`alt` key at all (nil, not empty) and still fall back to the title: `/books/`, `/film/`,
-`/devices/` and `/own/` were verified **byte-identical** across round one.
+⚠️ **`/books/`, `/film/`, `/devices/` and `/own/` were verified byte-identical** through the
+shared-include edits, which is the check that matters whenever those two files are touched:
+they render four other pages.
 
 **Left alone, his call, asked and answered:**
 

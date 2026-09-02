@@ -16,6 +16,21 @@ Originally absorbed from the 2027 planning braindump.
       from nav** — his call when to add it.
 - [x] **Titles on every page** *(2026-08-08)* — emitted by the layouts; a left-gutter spine on
       the index pages. See [`styles.md`](styles.md).
+- [ ] **⚠️ `/styleguide/` teaches an album protocol that no longer exists** *(found 2026-09-01)*
+      — § *Adding a book or an album item*, the album rows in the size tables, and the masonry
+      paragraphs all describe cutting a `.webp` into `/static/album/`, three hand-written
+      fields, and a `/album/` page to show them on. **None of that is true**: the album is
+      albums.oinam.com, `_data/album.yaml` is deleted, `/album/` is a redirect stub, and
+      `_data/albums.yaml` is generated. It is a `_pages/` prose body, which guardrail 1 puts
+      off-limits to an agent — **his edit, or his say-so to make it.** This is the largest
+      known-false thing on the site.
+- [ ] **Album thumbnail links have no accessible name** *(found 2026-09-01)* — the twelve
+      photographs in the home strip are links whose only content is an `alt=""` image, so a
+      screen reader announces a link with nothing in it. `alt=""` is correct (their `title` is
+      the file's own name, `London — IMG_9018.jpeg`, which is exactly what must not be read
+      aloud), so the fix is an accessible name on the ANCHOR, not on the image — and the feed
+      carries no text that would serve. The `category` element holds the album name ("London"),
+      which is the only candidate the data offers. **His call what those links should say.**
 - [ ] **`/music/` to follow `/film/`** — artists into `_data/music.yaml`, `layout: album`, a
       card-grid include. The file is HTML now so the restyle is markup only.
 - [x] ~~**`_src/wear/` still says wear**~~ *(closed 2026-08-08)* — he renamed it to `_src/own/`
@@ -181,6 +196,12 @@ Originally absorbed from the 2027 planning braindump.
 - [x] **`_redirect` collection is real now** *(2026-08-01)*. It was declared in `_config.yml`
       and completely empty — no folder, no `_layouts/redirect.html` — so the machinery existed
       on paper only. `/photos/` → `/album/` needed it: that URL was live and returning 200 in
+      production. ⚠️ **Re-pointed 2026-09-01** — `/photos/` and `/album/` BOTH go straight to
+      `https://albums.oinam.com` now, and `_pages/album.html` is deleted. `/photos/` was aimed
+      past `/album/` deliberately, so it is one meta-refresh hop and not a chain. Three stubs
+      exist: `/photos/`, `/resume/`, `/album/` — the last is the only off-site one, and it works
+      because `relative_url` returns an absolute URL untouched (verified in the built file).
+      The original 2026-08-01 reasoning follows, and still holds for the mechanism:
       production, and guardrail 2 preserves every URL. The layout is a `<meta http-equiv>`
       refresh plus a canonical to the target, `noindex, follow`, and a real visible link for
       when the refresh is blocked. No JavaScript, so it works with scripting off.
