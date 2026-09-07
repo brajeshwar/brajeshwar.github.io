@@ -40,3 +40,235 @@
   font-size: var(--step--1);
   color: var(--text-color-lower);
 }
+
+
+/* ============================================================
+   PRINT — the CV as a document (2026-09-07)
+   ------------------------------------------------------------
+   Two asks, one block. Brajeshwar, printing /cv/: "avoid the HTTPS in the
+   CV, worst case it to have a footnote and collect them separately" and
+   "the printed PDF is 9 pages, can we do this much lesser, say in about 4".
+
+   ⚠️ READ THIS BEFORE TOUCHING NUMBERS HERE. assets/print.css is Gutenberg,
+   it is linked AFTER site.css, and it is NOT part of this Sass pipeline. So
+   in print it wins every tie at equal specificity — its `p { margin-bottom:
+   1.5rem }` beat base.scss's, its `body { line-height: 1.5 }` beat the
+   golden-ratio one. Every rule below is class-scoped for exactly that
+   reason. An element selector added here will silently lose to Gutenberg
+   and look like the rule "did nothing".
+
+   ⚠️ AND VERIFY BY PRINTING, NOT BY READING. The loop that produced these
+   numbers was headless Chrome to a PDF and a page count:
+
+     (cd _site && python3 -m http.server 4311 &)
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+       --headless --no-pdf-header-footer --print-to-pdf=out.pdf \
+       http://localhost:4311/cv/
+
+   Measured before: body 19.08px on a 28.62px line, h2 32px, 24px between
+   paragraphs, column 613.8px. Eight pages.
+   ============================================================ */
+@media print {
+
+  /* ------------------------------------------------------------
+     1. NO URLS IN THE PROSE.
+
+     Gutenberg prints `a[href^=http]:after { content: " (" attr(href) ")" }`
+     — sensible on an article, where a printed link is otherwise a dead end.
+     On this page it is about forty parenthetical URLs breaking up the one
+     document that most wants to read cleanly, and they cost lines as well
+     as calm.
+
+     ⚠️ THE CONTACT LINE KEEPS ITS URL, deliberately. A printed CV whose
+     LinkedIn is the word "LinkedIn" and no address is a CV you cannot act
+     on; the email beside it is already its own address, and `/about/` is
+     relative so Gutenberg never expanded it. That leaves exactly one URL on
+     the sheet, which is the right number. Delete this second rule if even
+     that is unwanted — nothing else depends on it.
+
+     The "collect them as footnotes" fallback he offered is deliberately NOT
+     taken: CSS can number the links (a counter and a ::after) but it cannot
+     move their hrefs to the foot of the document, so the list would need
+     JavaScript to build on beforeprint — and an appendix of forty URLs
+     spends roughly half a page, which is the opposite of the second ask.
+     ------------------------------------------------------------ */
+  .page-cv a[href^="http"]::after,
+  .page-cv a[href^="ftp"]::after {
+    content: none;
+  }
+
+  .page-cv .cv-contact a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
+
+  /* ------------------------------------------------------------
+     2. THE SHEET.
+
+     Gutenberg pads the body 2.54cm top and bottom and 1.8cm at the sides.
+     The vertical inch is spent ONCE — padding on the body opens at the top
+     of the first page and closes at the foot of the last, it does not
+     repeat — so it is not the page-count problem it looks like. The sides
+     are, though: 1.8cm each is 68px of a 816px sheet, and every pixel taken
+     off them is a wider line and fewer of them.
+
+     `body:has(.page-cv)` because the padding is on the body and the CV is
+     the only page that wants this. `:has()` is already the bar this site
+     sets — base.scss and home.scss both use it.
+     ------------------------------------------------------------ */
+  body:has(.page-cv) {
+    padding: 10mm 12mm;
+  }
+
+  /* ------------------------------------------------------------
+     3. DENSITY — where the pages actually go.
+
+     ⚠️ THE FONT SIZE IS A SQUARED LEVER HERE, which is why it does most of
+     the work. The column is bound by the SHEET, not by --measure (measured:
+     the container is 652.7px wide and --measure computes to 665px, so the
+     measure never binds in print). A page-bound column means a smaller font
+     fits more characters per line AND puts them on a shorter line — line
+     count and line height both fall, so the text block shrinks with roughly
+     the SQUARE of the type size. Nine-tenths of the reduction is these six
+     numbers and the line-height below.
+
+     ⚠️ pt, NOT rem OR px. This is the one part of the site rendered on
+     paper, where a point is a real physical unit and 16px-relative rem is
+     an accident of Gutenberg's `html { font-size: 16px }`.
+
+     ⚠️ Overriding --step-* rather than font-size directly is what makes the
+     whole page follow. config.scss sets `main { font-size: var(--step-0) }`
+     and redeclares the whole scale there; .page-cv IS that main element, so
+     redefining the tokens on it re-resolves the font-size rule already
+     applied to it, and every h2, sub-title and small-print below inherits
+     the new scale with no further rules.
+     ------------------------------------------------------------ */
+  .page-cv {
+    --step--2: 7pt;
+    --step--1: 8.5pt;
+    --step-0:  10pt;
+    --step-1:  11pt;
+    --step-2:  13pt;
+    --step-3:  17pt;
+
+    /* ⚠️ KEEP THIS SCALE MONOTONIC. It briefly was not — --space-s was raised
+       to widen the gap between entries and ended up larger than --space-m,
+       which is a trap for whatever reads a token next rather than a bug you
+       can see. The gap between entries is --space-m, because that is what
+       timeline.scss already spends on `.timeline h2`'s top margin; setting
+       the token is the whole change and needs no rule of its own here. */
+    --space-3xs: 1pt;
+    --space-2xs: 4pt;
+    --space-xs:  6pt;
+    --space-s:   8pt;
+    --space-m:   11pt;
+    --space-l:   14pt;
+
+    /* ⚠️ THE READER'S THEME MUST NOT FOLLOW THE PAGE ONTO PAPER, and until
+       this block it did. print.css forces `body { background: #fff; color:
+       #000 }` with !important, but it cannot reach a rule that names a token
+       — so on the dark theme `.timeline h2 + p` kept --text-color-lower at
+       gray-300 and every sub-title printed as pale gray on white. Nearly
+       invisible, and invisible to anyone testing on the light theme.
+
+       Pinned on .page-cv rather than :root on purpose: the dark palette is
+       applied at `:root[data-theme="dark"]`, specificity (0,2,0), so a plain
+       `:root` here would lose to it. A class on the element these tokens are
+       read *through* wins for the whole subtree whatever the root says.
+
+       ⚠️ These are the site's own RAW grays, not new colours — the guardrail
+       against hardcoded colour still holds. themes.scss's dark mixin only
+       re-points the semantic aliases (--color-fg-subtle and friends); the
+       gray-N scale underneath is constant in both themes, so naming a rung
+       of it is theme-proof by construction. */
+    --text-color:        var(--color-gray-900);
+    --text-color-lower:  var(--color-gray-600);
+    --border-color-high: var(--color-gray-300);
+    --rule-strong:       var(--color-gray-400);
+
+    /* The spine is 2.5rem of gutter on screen, which is air a sheet cannot
+       afford. Small enough to stay a spine, not so small the dot collides
+       with the text. */
+    --timeline-gutter: 10pt;
+    --timeline-dot: 6px;
+
+    /* ⚠️ Set here and not left to --scale. Custom properties resolve on the
+       element that DECLARES them, so body's `line-height: var(--scale)` is
+       already the number 1.618 by the time it inherits, and redefining
+       --scale down here would not touch it. 1.35 is the number; the golden
+       ratio is a screen-reading measure, not a printing one. */
+    line-height: 1.4;
+  }
+
+  /* ------------------------------------------------------------
+     4. THE HEADINGS, WHICH IS WHERE SECTION 3 LEAKS.
+
+     ⚠️ THE TOKENS ABOVE DO NOT REACH AN h1 OR AN h2, and the first draft of
+     this block shipped with the company names printing LARGER than the name
+     at the top of the page. Gutenberg sets `h2 { font-size: 2rem }` on the
+     bare element and loads after site.css, so it beats base.scss's
+     `h2 { font-size: var(--step-2) }` at equal specificity — the token was
+     being redefined and then ignored. `.page-title` is a CLASS, so it kept
+     reading --step-2 and duly shrank. Hence the inversion.
+
+     The fix is not to chase Gutenberg with more tokens; it is to say the
+     size in a class-scoped rule, once, for each of the two headings. This is
+     the trap named at the top of this block, and it will catch the next
+     element-level property added here too.
+
+     The name is the loudest thing on the sheet, as on a CV it should be. */
+  .page-cv .page-title {
+    font-size: 19pt;
+    margin: 0 0 var(--space-2xs);
+  }
+
+  /* ⚠️ HEAVIER THAN ON SCREEN, deliberately. base.scss draws headings at
+     --font-weight-light, which is a screen aesthetic: a backlit hairline at
+     30px reads as elegant, the same hairline at 13pt of toner reads as
+     faint, and the company name is the thing a reader scans this document
+     for. Same reasoning base.scss already applies to the serif reader, whose
+     thin strokes "drop out at title size". 400 is the lightest that holds
+     its own against the body copy directly beneath it. */
+  .page-cv .timeline h2 {
+    font-size: var(--step-2);
+    font-weight: 400;
+  }
+
+  /* Gutenberg's 1.5rem paragraph gap is 24px and there are about forty-five
+     paragraphs on this page — over a thousand pixels, a page in itself.
+     Class-scoped so it outranks it. */
+  .page-cv p {
+    margin-block: 0 var(--space-2xs);
+  }
+
+  /* ------------------------------------------------------------
+     5. THE SPINE, WHICH PRINT WAS SILENTLY EATING.
+
+     ⚠️ Gutenberg opens with `*, *:before, *:after { background: rgba(0,0,0,0)
+     !important }` — a reasonable thing for a print reset to do, and it took
+     the timeline spine with it, because .timeline::before draws that line as
+     a `background` on a 0.75px-wide box. The DOTS survived, since they are
+     drawn with a border, so the printed page showed a column of small
+     circles attached to nothing. It read as a rendering fault, which is
+     exactly what it was.
+
+     Redrawn as a BORDER rather than fought with !important. A border is
+     untouched by that reset, `width: 0` hands the whole box to it, and the
+     hairline token stays the site's one hairline value instead of forking a
+     second number for paper.
+
+     ⚠️ Do not "restore" this by putting the background back with !important.
+     It would work, and it would leave the next person believing the reset is
+     something to override rather than something to draw around. */
+  .page-cv .timeline::before {
+    width: 0;
+    border-left: var(--timeline-rule) var(--border-style) var(--border-color-high);
+  }
+
+  /* Gutenberg asks for three orphans and three widows. On a dense sheet that
+     is enough to push a whole paragraph to the next page to avoid stranding
+     two lines — it buys tidiness with paper, and here paper is the point. */
+  .page-cv :is(p, li) {
+    orphans: 2;
+    widows: 2;
+  }
+}
