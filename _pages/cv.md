@@ -59,19 +59,19 @@ I’m lucky to have worked with some of the best teams, engineers, designers, fo
 
 We are building an easy-to-use interface for customers to automate their climate actions. We take care of the end-to-end climate action for them so they can focus on their business.
 
-We are an Asynchronous Remote Distributed-Team with founders from India and Canada, operating in the USA, Europe, the UK, and the Asian Region.
+We are an Asynchronous Remote Distributed-Team with founders from India and Canada, operating in the USA, Europe, and the UK.
 
-(2021) Before pivoting to Climate, Valinor Earth started off as an AgTech Startup trying to fulfill the needs of commercial Farmers and Agricultural companies to leverage technology to track progress and enhance productivity in remote farmlands.
+(2021) Before pivoting to Climate, Valinor Earth started off as an AgTech Startup trying to fulfill the needs of commercial Farmers and Agricultural companies to leverage Satellite technology to track progress and enhance productivity in remote farmlands.
 
 ## Sabbatical
 
-2020 Jan — 2020 Dec · 1 year
+2020 Jan — Dec · 1 year
 
 I was on a break, researching with a focus on Climate Change.
 
 I helped a Japanese Startup establish its Indian branch. I spent time tinkering with Satellite data from [JAXA](https://en.wikipedia.org/wiki/JAXA), [Sentinel Hub](https://www.sentinel-hub.com), and other publicly available data.
 
-I got into one of the prestigious communities of founders, entrepreneurs, professionals, and investors at [On Deck](https://www.beondeck.com), as a Founder Fellow (#ODF7).
+I got into one of the prestigious communities of founders, entrepreneurs, professionals, and investors at [On Deck](https://joinodf.com), as a Founder Fellow (#ODF7).
 
 ## Mobisy
 
@@ -81,7 +81,7 @@ I got into one of the prestigious communities of founders, entrepreneurs, profes
 
 Mobisy’s products serve over 300 top consumer brands, including global FMCG giants such as Unilever, Procter & Gamble, Reckitt-Benckiser, Coke, Pepsi, Mondelez, and Hershey’s. As of 2019, Mobisy’s products have over 150,000 users and reach 5 million retailers.
 
-I’m involved in the long-term Product Strategies at Mobisy. I worked closely with the design team, and lead the effort in building a robust Design System for Mobisy Products, its branding, and messaging. My core focus is on building a team of product focused leaders at Mobisy.
+I was involved in the long-term Product Strategies at Mobisy. I worked closely with the design team, and lead the effort in building a robust Design System for Mobisy Products, its branding, and messaging. My focus was on building a team of product focused leaders at Mobisy.
 
 ## Locavore
 
@@ -89,7 +89,7 @@ I’m involved in the long-term Product Strategies at Mobisy. I worked closely w
 
 I met my co-founder, [Gurjot Singh](https://www.linkedin.com/in/gurjot-singh-81637664/), while he was experimenting with the idea of large-scale energy storage with [Vanadium Redox Batteries](https://en.wikipedia.org/wiki/Vanadium_redox_battery). He is a research scientist who specializes in the study of energy, food, and fuel. Unfortunately, due to the high CAPEX requirements, we pivoted to Smart, and Precision farming with [Aeroponics](https://en.wikipedia.org/wiki/Aeroponics).
 
-We built a demo farm in Bangalore, India. We were invited, and interviewed at Mountain View but got rejected for the [Y Combinator](https://www.ycombinator.com) Winter 2019 Batch.
+We built a demo farm in Bangalore, India. We were invited, and interviewed at Mountain View for the [Y Combinator](https://www.ycombinator.com) Winter 2019 Batch.
 
 Gurjot moved on to a second generation Bio-fuel generation technique backed by the Swedish government, and a private Swedish technology company. I stayed behind to find solutions to the myriad of problems of Climate Change.
 
@@ -103,15 +103,13 @@ At [Alaris Prime](https://alarisprime.com), we believe that software should be s
 
 I was responsible for business development, client interaction, and ownership of the products that we built for our clients. Generated revenue of over $200,000 in the first year of operation.
 
-I continue to be an advisor.
-
 ## Razorfish
 
 2014 Sep — 2016 Mar · 1½ years · Creative Director · Bangalore (India), London (UK), Austin (USA)
 
 I led the creative design and development at [Razorfish](https://www.razorfish.com), Bangalore, India. In a year, I hired and trained 50+ proficient designers and developers. I trained them and taught best practices, standards of design, and development.
 
-I restructured, introduced tools and utilities, and started many initiatives in the company. I made it easy for employees to be more productive, spend quality time with their work. Introduced smooth communication methods, and patterns between clients and the team — made it easy to get things done.
+I restructured, introduced tools and utilities, and started many initiatives in the company. I made it easy for employees to be more productive, spend quality time with their work. Introduced smooth communication methods, and patterns between clients and the team helping get things done.
 
 I contributed to front-end designs, development, stakeholder interactions, and management of some exciting clients, and projects:
 
@@ -121,13 +119,13 @@ I contributed to front-end designs, development, stakeholder interactions, and m
 
 As an Entrepreneur-in-Residence at Kamelot Kapital Pte Ltd, Singapore, I worked on [LxiDD](http://lxidd.com). I was responsible for the Product Interface and Experience Design, Customer & Client Engagement.
 
-LxiDD is a network of Indie Professionals — Designers, Developers, and Creatives.
+LxiDD is a network of Indie Professionals such as Designers, Developers, and Creatives.
 
 ## Levoma
 
 2010 Nov — 2012 Dec · 2 years · Co-Founder, CEO · Mountain View (USA), Bangalore (India)
 
-Levoma is a mobile video-dating service, helping singles aged 18-30 find partners easily, quickly, and effectively. Levoma works across and between multiple devices — iPhone, iPad, Android phones, and tablets.
+Levoma was a mobile video-dating platform, helping singles aged 18-30 find partners easily, quickly, and effectively. Levoma works across and between multiple devices - iPhone, iPad, Android phones, and tablets.
 
 We were the first Indian startup to graduate at the [Founder Institute](https://fi.co) in 2010-2011 Winter Silicon Valley Chapter. [Levoma](https://fi.co/companies/2884) was among the final 12 graduating companies out of its initial cohort of 50+ startups.
 
@@ -165,7 +163,7 @@ Mixercast was funded by Fuse Capital (erstwhile ComVentures), ONSET Ventures, an
 
 2003 Mar — 2006 Mar · 3 years · Co-Founder, CEO · Mumbai (India)
 
-I gave up my lucrative career at Peerless Software to start my own Software Service Company — Oinam Software Pvt. Ltd.
+I gave up my lucrative career at Peerless Software to start my own Software Service Company, Oinam Software Pvt. Ltd.
 
 At Oinam, we designed and developed websites, web applications, and applications for Pocket PC Devices. We undertook some of the most innovative, sometimes very experimental work for clients, including but not limited to the likes of [Macromedia](https://en.wikipedia.org/wiki/Macromedia), [STARZ](https://www.starz.com/), [Disney](https://www.disney.com), [Obeo](https://www.obeo.com), [Ultrashock](http://www.ultrashock.com/), [Edition Interactive](http://www.editioninteractive.co.uk/), [Pearson](https://www.pearson.com/), [Cambridge University Entrepreneurs](http://www.cue.org.uk/), [Tata Consultancy Services](https://www.tcs.com), *et al*.
 
