@@ -74,42 +74,42 @@
    the numbers here were grown back up, not squeezed down, and section 6
    spends paper deliberately.
 
-   ⚠️ PAPER SIZE MOVES THIS MORE THAN ANY NUMBER IN THE BLOCK. Measured
-   through headless Chrome at default margins, 100% scale:
+   ⚠️ THESE NUMBERS ARE A BISECTED RESULT, NOT A TASTE. Measured through
+   headless Chrome with the margin pinned by section 2b, all four pages
+   counted and the last one's ink measured:
 
-                                        US Letter        A4
-     line-height 1.37, 6pt, 17pt        4pp, 67% last    4pp, 56% last
-     line-height 1.43, 8pt, 22pt        5pp, 12% last    4pp, 70% last
+                                    A4                US Letter
+     line-height 1.37, 6pt, 17pt    4pp, 49% last     4pp, 68% last
+     line-height 1.40, 7pt, 19pt    4pp, 66% last     4pp, 77% last   <- ships
+     line-height 1.41, 7pt, 20pt    4pp, 67% last     5pp, 13% last
+     line-height 1.43, 8pt, 22pt    4pp, 75% last     5pp, 13% last
+     line-height 1.46, 9pt, 24pt    5pp               5pp
 
-   The shipped numbers are the first row, because it is the only one that
-   holds four pages on BOTH. The second row fills A4 more handsomely and
-   costs a fifth page on Letter, which is the wrong trade for a document
-   whose reader chooses the paper.
+   The shipped row is the LAST one that holds four pages on both papers.
+   Letter tips at 1.41 — one hundredth of a line-height past the shipped
+   value — so there is no headroom above this and none is being saved.
 
-   ⚠️ ONE HUNDREDTH OF A LINE-HEIGHT IS THE WHOLE MARGIN at the edges here.
-   That is not fragility in the CSS, it is how paged media works: a whole
-   paragraph moves at once, so a last page is either two-thirds full or a
-   straggler, with nothing in between. Never change a number in section 3
-   without reprinting and counting.
+   ⚠️ A4 IS THE PAPER THAT MATTERS HERE (his print dialog, confirmed
+   2026-09-07), but Letter is the one that constrains, because it is shorter.
+   Anything tuned to fill A4 handsomely spills on Letter. If Letter is ever
+   declared irrelevant, 1.43/8pt/22pt fills A4 to three-quarters.
 
-   ⚠️ TWO EARLIER VERSIONS OF THIS NOTE WERE WRONG, which is why the table is
-   spelled out rather than summarised. The first claimed line-height 1.4 with
-   7pt/19pt already spilled to five pages. The second claimed A4 could not be
-   tested because headless Chrome ignored `@page { size: A4 }` — it does not
-   ignore it; the baseline CSS being copied for those runs already had the
-   declaration appended, so every run in that comparison was A4 and the two
-   columns agreeing was the bug, not the finding. A remembered result is not
-   a measurement, and two runs agreeing exactly is a reason to suspect the
-   harness.
+   ⚠️ ONE HUNDREDTH OF A LINE-HEIGHT IS THE WHOLE MARGIN, and that is how
+   paged media works rather than a weakness of this block: a whole paragraph
+   moves at once, so the last page is either two-thirds full or a straggler
+   with a line on it, never something in between. Never change a number in
+   section 3 without reprinting and counting BOTH papers.
 
-   ⚠️ AND THE MARGIN PRESET MATTERS TOO, which this cannot control from here:
-   there is no `@page { margin }` rule anywhere on the site, so the printable
-   area is whatever the reader's print dialog says. A "Minimum margins"
-   setting fits more per page than the default this was measured at, which
-   moves the page breaks and can leave the last page holding a line or two.
-   If that needs to stop varying, the fix is a `@page` margin — but `@page`
-   is document-level, so it would set the margin for every page on the site,
-   not just this one. That is a decision, not a tweak.
+   ⚠️ THREE EARLIER VERSIONS OF THIS NOTE WERE WRONG, which is why the table
+   is spelled out. (1) It claimed 1.4 with 7pt/19pt spilled to five pages —
+   that is the row that ships. (2) It claimed headless Chrome ignores
+   `@page { size: A4 }` — it does not; the baseline being copied into each
+   probe already had that line appended, so every run in that comparison was
+   A4, and the two columns agreeing exactly was the bug rather than the
+   finding. (3) Every number measured before section 2b existed described the
+   tester's own margin preset and not this stylesheet. Two runs matching to
+   the byte is a reason to distrust the harness. A remembered result is not a
+   measurement.
    ============================================================ */
 @media print {
 
@@ -159,7 +159,33 @@
      sets — base.scss and home.scss both use it.
      ------------------------------------------------------------ */
   body:has(.page-cv) {
-    padding: 10mm 12mm;
+    padding: 4mm 6mm;
+  }
+
+  /* ------------------------------------------------------------
+     2b. THE PRINTABLE AREA IS PINNED (2026-09-07, at his ask).
+
+     ⚠️ THIS IS THE RULE THAT MAKES THE PAGE COUNT MEAN ANYTHING. Until it
+     existed there was no `@page` anywhere on the site, so the printable area
+     was whatever the reader's print dialog happened to say — and the dialog
+     is the single biggest lever on where the breaks fall, bigger than any
+     type size in section 3. Tuning to "four pages" against an unpinned
+     margin is tuning against the tester's own preferences.
+
+     ⚠️ `@page` IS DOCUMENT-LEVEL AND CANNOT BE SCOPED. There is no way to
+     write "this margin, but only for /cv/" — the at-rule describes the
+     sheet, not an element — so this one declaration sets the print margin
+     for every page on the site. That is a deliberate, asked-for trade and
+     not an oversight: 12mm is close to what Chrome was already applying by
+     default, so other pages barely move, and every page gains a printable
+     area that does not depend on who is printing.
+
+     The CV's own margin is this plus the body padding above: 16mm top and
+     bottom, 18mm at the sides. Adjust the padding, not this, for the CV
+     alone — changing the number here changes every page.
+     ------------------------------------------------------------ */
+  @page {
+    margin: 12mm;
   }
 
   /* ------------------------------------------------------------
@@ -200,10 +226,10 @@
        timeline.scss already spends on `.timeline h2`'s top margin; setting
        the token is the whole change and needs no rule of its own here. */
     --space-3xs: 3pt;
-    --space-2xs: 6pt;    /* between paragraphs */
+    --space-2xs: 7pt;    /* between paragraphs */
     --space-xs:  12pt;   /* under the name */
     --space-s:   14pt;
-    --space-m:   17pt;   /* between entries */
+    --space-m:   19pt;   /* between entries */
     --space-l:   24pt;
 
     /* ⚠️ THE READER'S THEME MUST NOT FOLLOW THE PAGE ONTO PAPER, and until
@@ -242,7 +268,7 @@
        considered typographic value either. It is the last of several
        measured attempts at filling four pages without spilling onto a fifth,
        and it is one of the three numbers the note at the top warns about. */
-    line-height: 1.37;
+    line-height: 1.4;
   }
 
   /* ------------------------------------------------------------
