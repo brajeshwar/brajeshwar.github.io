@@ -218,7 +218,20 @@
      The name is the loudest thing on the sheet, as on a CV it should be. */
   .page-cv .page-title {
     font-size: 19pt;
-    margin: 0 0 var(--space-2xs);
+  }
+
+  /* ⚠️ THE GAP UNDER THE NAME GOES ON THE WRAPPER, NOT ON THE TITLE. This
+     said `margin: 0 0 var(--space-2xs)` on .page-title for one commit and
+     did nothing at all: page-actions.scss has `.page-head .page-title
+     { margin-bottom: 0 }` at the same (0,2,0) specificity, and it is @use'd
+     after cv.scss, so it lands later in site.css and wins. A media query
+     adds no specificity and does not rescue it.
+
+     .page-head is the flex wrapper round the title and the actions bar, and
+     the bar is display:none on paper — so in print this element is the name
+     and nothing else, and its margin is the air beneath it. */
+  .page-cv .page-head {
+    margin-bottom: var(--space-xs);
   }
 
   /* ⚠️ HEAVIER THAN ON SCREEN, deliberately. base.scss draws headings at

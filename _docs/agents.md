@@ -123,8 +123,15 @@ help from a label here.
 ⚠️ **`assets/print.css` is what makes that honest** — Gutenberg-based, linked `media="print"` in
 `default.html`, hiding the header, footer and post-nav, so the result is a clean document rather
 than a screenshot of the site. It also appends `(href)` after every `http` link, which on `/cv/`
-means about forty of them: the printed CV reads noisier than the screen. Changing that is a
-separate decision.
+means about forty of them: the printed CV reads noisier than the screen.
+
+⚠️ **Decided the same day.** `_sass/cv.scss` now carries a `@media print` block that suppresses
+those URLs on `/cv/` and compresses the sheet from eight pages to three — the contact line keeps
+its one URL, because a printed CV whose LinkedIn is the word "LinkedIn" is one you cannot act on.
+That block also fixes three things print was already getting wrong (the timeline spine erased by
+Gutenberg's `!important` background reset, the reader's dark theme following the page onto paper,
+and headings sized by Gutenberg's element selectors rather than the site's tokens). Read the
+comments there before changing any number in it.
 
 A **generated** PDF is a much larger thing than a button — headless Chromium in Actions, minutes
 and a few hundred MB on every build, for a file the print dialog already produces. Still open,
