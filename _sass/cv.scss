@@ -67,6 +67,19 @@
 
    Measured before: body 19.08px on a 28.62px line, h2 32px, 24px between
    paragraphs, column 613.8px. Eight pages.
+
+   ⚠️ IT LANDED ON FOUR, AND FOUR IS THE ASK — not a floor to keep pushing
+   under. An earlier pass of this block reached THREE, which was smaller than
+   he wanted: "can we avoid orphans and then use the whole of 4-pages". So
+   the numbers here were grown back up, not squeezed down, and section 6
+   spends paper deliberately.
+
+   ⚠️ AND IT SITS CLOSE TO THE EDGE. Page four is about two-thirds full, and
+   the measured tipping point is near: raising --space-2xs to 7pt, --space-m
+   to 19pt and line-height to 1.4 together — call it five per cent — spilled
+   the last entry onto a FIFTH page. Paged media is lumpy, because a whole
+   paragraph moves at once; do not assume a small increase buys a small
+   change. Reprint and count after touching anything in section 3.
    ============================================================ */
 @media print {
 
@@ -143,12 +156,12 @@
      the new scale with no further rules.
      ------------------------------------------------------------ */
   .page-cv {
-    --step--2: 7pt;
-    --step--1: 8.5pt;
-    --step-0:  10pt;
-    --step-1:  11pt;
-    --step-2:  13pt;
-    --step-3:  17pt;
+    --step--2: 8pt;
+    --step--1: 9.5pt;
+    --step-0:  11.5pt;
+    --step-1:  13pt;
+    --step-2:  15pt;
+    --step-3:  19pt;
 
     /* ⚠️ KEEP THIS SCALE MONOTONIC. It briefly was not — --space-s was raised
        to widen the gap between entries and ended up larger than --space-m,
@@ -156,12 +169,12 @@
        can see. The gap between entries is --space-m, because that is what
        timeline.scss already spends on `.timeline h2`'s top margin; setting
        the token is the whole change and needs no rule of its own here. */
-    --space-3xs: 1pt;
-    --space-2xs: 4pt;
-    --space-xs:  6pt;
-    --space-s:   8pt;
-    --space-m:   11pt;
-    --space-l:   14pt;
+    --space-3xs: 3pt;
+    --space-2xs: 6pt;    /* between paragraphs */
+    --space-xs:  12pt;   /* under the name */
+    --space-s:   14pt;
+    --space-m:   17pt;   /* between entries */
+    --space-l:   24pt;
 
     /* ⚠️ THE READER'S THEME MUST NOT FOLLOW THE PAGE ONTO PAPER, and until
        this block it did. print.css forces `body { background: #fff; color:
@@ -194,9 +207,12 @@
     /* ⚠️ Set here and not left to --scale. Custom properties resolve on the
        element that DECLARES them, so body's `line-height: var(--scale)` is
        already the number 1.618 by the time it inherits, and redefining
-       --scale down here would not touch it. 1.35 is the number; the golden
-       ratio is a screen-reading measure, not a printing one. */
-    line-height: 1.4;
+       --scale down here would not touch it. The golden ratio is a
+       screen-reading measure, not a printing one — but do not read 1.37 as a
+       considered typographic value either. It is the last of several
+       measured attempts at filling four pages without spilling onto a fifth,
+       and it is one of the three numbers the note at the top warns about. */
+    line-height: 1.37;
   }
 
   /* ------------------------------------------------------------
@@ -217,7 +233,7 @@
 
      The name is the loudest thing on the sheet, as on a CV it should be. */
   .page-cv .page-title {
-    font-size: 19pt;
+    font-size: 22pt;
   }
 
   /* ⚠️ THE GAP UNDER THE NAME GOES ON THE WRAPPER, NOT ON THE TITLE. This
@@ -277,11 +293,39 @@
     border-left: var(--timeline-rule) var(--border-style) var(--border-color-high);
   }
 
-  /* Gutenberg asks for three orphans and three widows. On a dense sheet that
-     is enough to push a whole paragraph to the next page to avoid stranding
-     two lines — it buys tidiness with paper, and here paper is the point. */
+  /* ------------------------------------------------------------
+     6. WHERE THE PAGES ARE ALLOWED TO BREAK.
+
+     This block briefly relaxed orphans and widows to 2 to buy space, and
+     buying space with stranded lines is the wrong trade on the one document
+     that is read by a person deciding something. Back to 3 — a paragraph
+     leaves at least three lines behind it and carries at least three over.
+
+     ⚠️ AND AN ENTRY'S HEAD IS NOW A UNIT: the company, the date-and-role
+     line under it, and the first paragraph of prose. Gutenberg supplies the
+     first two links of that chain — `h2 { page-break-after: avoid }` and
+     `h2 + p { page-break-before: avoid }` — which is enough to stop the
+     company name printing alone at the foot of a page, but NOT enough to
+     stop the name and its date printing alone there. `h2 + p + p` is that
+     third link, and it is the one that matters on a CV: a heading with no
+     prose under it reads as a mistake.
+
+     ⚠️ `break-before`, not `page-break-before`. The prefixed pair is what
+     Gutenberg speaks and browsers still honour it, but this file is new
+     code and the modern property is the one to write. They are aliases; do
+     not add both, and do not "fix" this one back.
+
+     There is deliberately no `break-inside: avoid` on a whole entry. It
+     would need every entry wrapped in an element, and /cv/ is flat Markdown
+     — h2 and p as siblings — so the wrapper could only come from editing
+     content. Guardrail 1. The chain above gets the part that matters
+     without touching a single word of the page. */
   .page-cv :is(p, li) {
-    orphans: 2;
-    widows: 2;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .page-cv .timeline h2 + p + p {
+    break-before: avoid;
   }
 }
