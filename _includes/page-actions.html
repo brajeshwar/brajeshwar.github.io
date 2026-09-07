@@ -1,5 +1,5 @@
 {%- comment -%}
-  PAGE ACTIONS — "Open in OpenAI · Claude | [md] [pdf]"
+  PAGE ACTIONS — "Open in OpenAI · Claude | [md] [print]"
 
   Built 2026-08-09, modelled on the bar at https://ovellum.oss.oinam.com/docs/.
   Brajeshwar: "Start with /cv/ but prepare that we will likely have this with
@@ -13,13 +13,22 @@
       url    the page URL to act on            (default: page.url)
       title  used in the prompt sent to the AI (default: page.title)
       kind   the noun in that prompt           (default: "page")
-      pdf    set false to drop the PDF button  (default: shown)
+      print  set false to drop the print button (default: shown)
 
-  ⚠️ `pdf=false` is what posts use. Print-to-PDF makes sense for a CV someone
+  ⚠️ `print=false` is what posts use. Printing makes sense for a CV someone
   wants to keep; it is noise on 1,457 articles, and he asked for it left off
   until he decides whether it is wanted "along with others such as an audio in
   the future" (2026-08-09). The button is the only optional part — everything
   else is a plain link and costs nothing.
+
+  ⚠️ THE PARAMETER WAS `pdf` UNTIL 2026-09-07 and the rename is not cosmetic:
+  a caller left saying `pdf=false` now matches nothing, so `include.print`
+  falls back to its default and the button APPEARS — on all 1,457 posts, where
+  the only visible symptom would be in the built HTML. If you ever see it on an
+  article, this is why. The check is to list the call sites —
+  `grep -rn 'include page-actions' _layouts _includes _pages` — and read the
+  parameters: none may say `pdf`. Do NOT grep for `pdf=false` on its own; it
+  matches this warning and its twins in post.html and _docs/agents.md.
 
   On a post that is literally all it takes; `kind="post"` only improves the
   wording of the prompt.
@@ -120,13 +129,25 @@
     {%- include icons/markdown.svg -%}
   </a>
 
-  {%- if include.pdf != false -%}
+  {%- if include.print != false -%}
   {%- comment -%}
-    PDF is print-to-PDF, and honestly so: this is a static site with no PDF
-    generator, and adding one is a much larger thing than a button. The site
-    already ships assets/print.css (Gutenberg-based, linked media="print" in
-    default.html, hides the header, footer and post-nav), so the printed page
-    is a clean document rather than a screenshot of the site.
+    ⚠️ THIS WAS A PDF ICON LABELLED "Save as PDF" UNTIL 2026-09-07, AND IT WAS
+    A PROMISE THE SITE COULD NOT KEEP. He asked to have the PDF updated after
+    editing /cv/ — reasonable, because a document icon says a document exists.
+    None does: there is no /cv.pdf, no PDF generator, and never was. The button
+    has only ever called window.print(). So the artwork now matches the action;
+    the browser's own print dialog is where "Save as PDF" actually lives, and
+    it needs no help from a label here.
+
+    Generating a real PDF is a much larger thing than a button — headless
+    Chromium in Actions, minutes and a few hundred MB on every build, for a
+    file the print dialog already produces. That decision stays his and stays
+    open; it is the "Download Resume PDF" item in _docs/todo.md.
+
+    What makes printing honest meanwhile is assets/print.css (Gutenberg-based,
+    linked media="print" in default.html, hides the header, footer and
+    post-nav), so the printed page is a clean document rather than a screenshot
+    of the site.
 
     ⚠️ `hidden` UNTIL page-actions.js UNHIDES IT (guardrail 4). window.print()
     needs JavaScript, and a button that silently does nothing is worse than no
@@ -134,8 +155,8 @@
     Print command still works. Same idiom as the search panel.
   {%- endcomment -%}
   <button class="icon-button page-actions__btn" type="button" data-page-actions-print hidden
-          aria-label="Save as PDF" title="Save as PDF">
-    {%- include icons/pdf.svg -%}
+          aria-label="Print" title="Print">
+    {%- include icons/print.svg -%}
   </button>
   {%- endif -%}
 </div>

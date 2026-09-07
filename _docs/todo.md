@@ -179,6 +179,12 @@ Originally absorbed from the 2027 planning braindump.
       placement question is open again. Worth deciding then whether the PDF is
       generated from the timeline markup or maintained separately. **Now that `/cv/` exists it is
       the better source** — one page, already in role order, no filter state to reason about.
+      ⚠️ **2026-09-07: this item is now ONLY the generated-file question.** The page-actions
+      button that used to wear a PDF icon is an honest printer icon labelled "Print" — it always
+      only called `window.print()`, and the document icon read as a promise that a `/cv.pdf`
+      existed. The remaining decision is whether to add headless Chromium to the Actions build
+      (minutes and a few hundred MB per run) for a file the print dialog already produces. His
+      call. See [`agents.md`](agents.md).
 - [ ] **Retire `cv.brajeshwar.com`** — `/cv/` replaces it as of 2026-08-09, so this is now only
       waiting on him. ⚠️ `_redirect/resume.md` does **not** cover it: a Jekyll stub can only
       redirect a path on this domain, and that is a different host. It needs the Cloudflare

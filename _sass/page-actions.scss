@@ -129,7 +129,13 @@
    is why markdown and pdf rendered visibly smaller than openai and claude for
    one build: they were authored at 16 and the others at 20.
 
-   Both files are 20px now, matching the house convention, and this rule makes
+   ⚠️ icons/print.svg (2026-09-07, replacing pdf.svg) was drawn to the same
+   20px envelope AND to the same ink box as markdown.svg — roughly x 3–21,
+   y 3.5–20.5. The declared size is overridden below, but the artwork's own
+   margins are not, so an icon drawn edge-to-edge inside its viewBox reads
+   bigger than its neighbours at the same rendered size.
+
+   All files are 20px now, matching the house convention, and this rule makes
    the authored number irrelevant the way the header's does — same token, so
    the bar and the chrome cannot drift. */
 .page-actions svg {
@@ -164,7 +170,7 @@
   border-left: var(--border-size) var(--border-style) var(--border-color-high);
 }
 
-/* ⚠️ The PDF button ships `hidden` until page-actions.js unhides it.
+/* ⚠️ The print button ships `hidden` until page-actions.js unhides it.
    `[hidden]`'s UA rule is `display: none` at the same specificity as any
    author rule, and author rules win — `.icon-button` sets `display:
    inline-flex`, so without this the button would show with JavaScript off and

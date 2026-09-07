@@ -29,10 +29,14 @@ layout: default
       overflowing this .container-ideal article. Inside a flex row it could not
       do that, and needed the row to carry the breakout instead.
 
-      ⚠️ `pdf=false`, at his ask: print-to-PDF suits a CV someone wants to keep
+      ⚠️ `print=false`, at his ask: printing suits a CV someone wants to keep
       and is noise on 1,457 articles. He is still deciding whether it belongs
       here "along with others such as an audio in the future", so the button is
       omitted rather than removed — one parameter brings it back.
+
+      ⚠️ The parameter was `pdf=false` until 2026-09-07, when the button became
+      an honest printer rather than a PDF that does not exist. A stale spelling
+      here does not error — it silently un-hides the button on every post.
 
       Every post gets this with no per-post front matter: the bar derives the
       .md twin's URL from `page.url`, and build-agent-markdown.mjs writes one
@@ -41,7 +45,7 @@ layout: default
     <h1 class="page-title">{{ page.title }}</h1>
     <div class="page-head">
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%a, %b %-d, %Y' }}</time>
-      {% include page-actions.html kind="post" pdf=false %}
+      {% include page-actions.html kind="post" print=false %}
     </div>
     {{ content }}
   </article>

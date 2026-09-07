@@ -63,20 +63,27 @@ build time, so the date is omitted for pages to avoid implying they were publish
 ## The reader-facing half: `_includes/page-actions.html` (2026-08-09)
 
 Everything above is machinery no reader sees. `page-actions.html` is the bar that puts it in
-front of them — *"Open in OpenAI · Claude | [md] [pdf]"* — modelled on
+front of them — *"Open in OpenAI · Claude | [md] [print]"* — modelled on
 <https://ovellum.oss.oinam.com/docs/>. Live on `/cv/`; **any page or post can include it
 unchanged**, since it derives everything from `page`:
 
 ```liquid
 {% include page-actions.html %}                        <!-- a page -->
-{% include page-actions.html kind="post" pdf=false %}  <!-- what posts use -->
+{% include page-actions.html kind="post" print=false %}  <!-- what posts use -->
 ```
 
 **Every post carries it as of 2026-08-09**, from `_layouts/post.html` — no per-post front
 matter, because the bar derives the twin's URL from `page.url` and a twin already exists for all
-1,457 posts. `pdf=false` drops the print button: print-to-PDF suits a CV someone wants to keep
+1,457 posts. `print=false` drops the print button: printing suits a CV someone wants to keep
 and is noise on an article, and he is still deciding whether it belongs there "along with others
 such as an audio in the future".
+
+⚠️ **The parameter was `pdf` until 2026-09-07.** A caller still saying `pdf=false` matches
+nothing, so the default applies and the button appears on all 1,457 posts — no error, no warning,
+visible only in the built HTML. The check is to list the call sites —
+`grep -rn 'include page-actions' _layouts _includes _pages` — and read their parameters: none may
+say `pdf`. Don't grep for `pdf=false` on its own; it matches this warning and the two beside it
+in `page-actions.html` and `post.html`.
 
 ⚠️ **The script is gated on `data-page-actions-print`, not on the bar.** `page-actions.js` exists
 only to unhide the print button, so testing for `class="page-actions"` would ship it to all 1,457
@@ -102,10 +109,29 @@ percent-encoded, matching what the reference bar sends.
 build step — but unlike esbuild and hash-assets, this one is *visible*, so expect it to be
 reported as broken.
 
-PDF is `window.print()`, honestly: there is no PDF generator here. `assets/print.css` is
-Gutenberg-based and linked `media="print"`, so the result is a clean document. The button ships
-`hidden` and `page-actions.js` unhides it — with JavaScript off there is no dead control, and
-the reader's own Print command still works (guardrail 4).
+### The PDF button became a printer (2026-09-07)
+
+It was `icons/pdf.svg` labelled *"Save as PDF"*, and it only ever called `window.print()`. That
+artwork was a promise the site could not keep: a document icon says a document exists, so after
+editing `/cv/` he asked to have the PDF updated. **There is no PDF to update** — no `/cv.pdf`, no
+generator, and never was.
+
+So the icon is `icons/print.svg` and the label is *"Print"*. `pdf.svg` is deleted; `page-actions.html`
+was its only caller. The browser's print dialog is where *"Save as PDF"* lives, and it needs no
+help from a label here.
+
+⚠️ **`assets/print.css` is what makes that honest** — Gutenberg-based, linked `media="print"` in
+`default.html`, hiding the header, footer and post-nav, so the result is a clean document rather
+than a screenshot of the site. It also appends `(href)` after every `http` link, which on `/cv/`
+means about forty of them: the printed CV reads noisier than the screen. Changing that is a
+separate decision.
+
+A **generated** PDF is a much larger thing than a button — headless Chromium in Actions, minutes
+and a few hundred MB on every build, for a file the print dialog already produces. Still open,
+still his: the *"Download Resume PDF"* item in [`todo.md`](todo.md).
+
+The button ships `hidden` and `page-actions.js` unhides it — with JavaScript off there is no dead
+control, and the reader's own Print command still works (guardrail 4).
 
 ## ⚠️ Liquid and HTML comments are stripped (2026-08-09) — and why that mattered
 
