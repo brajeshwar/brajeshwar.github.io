@@ -74,12 +74,42 @@
    the numbers here were grown back up, not squeezed down, and section 6
    spends paper deliberately.
 
-   ⚠️ AND IT SITS CLOSE TO THE EDGE. Page four is about two-thirds full, and
-   the measured tipping point is near: raising --space-2xs to 7pt, --space-m
-   to 19pt and line-height to 1.4 together — call it five per cent — spilled
-   the last entry onto a FIFTH page. Paged media is lumpy, because a whole
-   paragraph moves at once; do not assume a small increase buys a small
-   change. Reprint and count after touching anything in section 3.
+   ⚠️ PAPER SIZE MOVES THIS MORE THAN ANY NUMBER IN THE BLOCK. Measured
+   through headless Chrome at default margins, 100% scale:
+
+                                        US Letter        A4
+     line-height 1.37, 6pt, 17pt        4pp, 67% last    4pp, 56% last
+     line-height 1.43, 8pt, 22pt        5pp, 12% last    4pp, 70% last
+
+   The shipped numbers are the first row, because it is the only one that
+   holds four pages on BOTH. The second row fills A4 more handsomely and
+   costs a fifth page on Letter, which is the wrong trade for a document
+   whose reader chooses the paper.
+
+   ⚠️ ONE HUNDREDTH OF A LINE-HEIGHT IS THE WHOLE MARGIN at the edges here.
+   That is not fragility in the CSS, it is how paged media works: a whole
+   paragraph moves at once, so a last page is either two-thirds full or a
+   straggler, with nothing in between. Never change a number in section 3
+   without reprinting and counting.
+
+   ⚠️ TWO EARLIER VERSIONS OF THIS NOTE WERE WRONG, which is why the table is
+   spelled out rather than summarised. The first claimed line-height 1.4 with
+   7pt/19pt already spilled to five pages. The second claimed A4 could not be
+   tested because headless Chrome ignored `@page { size: A4 }` — it does not
+   ignore it; the baseline CSS being copied for those runs already had the
+   declaration appended, so every run in that comparison was A4 and the two
+   columns agreeing was the bug, not the finding. A remembered result is not
+   a measurement, and two runs agreeing exactly is a reason to suspect the
+   harness.
+
+   ⚠️ AND THE MARGIN PRESET MATTERS TOO, which this cannot control from here:
+   there is no `@page { margin }` rule anywhere on the site, so the printable
+   area is whatever the reader's print dialog says. A "Minimum margins"
+   setting fits more per page than the default this was measured at, which
+   moves the page breaks and can leave the last page holding a line or two.
+   If that needs to stop varying, the fix is a `@page` margin — but `@page`
+   is document-level, so it would set the margin for every page on the site,
+   not just this one. That is a decision, not a tweak.
    ============================================================ */
 @media print {
 
