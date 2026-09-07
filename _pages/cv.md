@@ -53,7 +53,7 @@ I’m lucky to have worked with some of the best teams, engineers, designers, fo
 
 ## Valinor Earth
 
-2021 Jan — Present · Co-Founder, CEO · Remote (Worldwide)
+2021 Jan — 2025 Dec · Co-Founder, CEO · Remote (Worldwide)
 
 [Valinor Earth](https://valinor.earth) puts AI (artificial intelligence) into a software suite to manage carbon footprints, helping individuals and businesses to measure, reduce, remove, and offset their impact on the climate.
 
