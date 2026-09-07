@@ -74,42 +74,46 @@
    the numbers here were grown back up, not squeezed down, and section 6
    spends paper deliberately.
 
-   ⚠️ THESE NUMBERS ARE A BISECTED RESULT, NOT A TASTE. Measured through
-   headless Chrome with the margin pinned by section 2b, all four pages
-   counted and the last one's ink measured:
+   ⚠️ THESE NUMBERS ARE A BISECTED RESULT, NOT A TASTE, and they are only
+   meaningful together with the 20mm page margin in section 2b. Measured
+   through headless Chrome WITH the print dialog's header and footer turned
+   on, which is how he prints, counting pages and measuring ink on the last
+   one inside a band that excludes the chrome:
 
-                                    A4                US Letter
-     line-height 1.37, 6pt, 17pt    4pp, 49% last     4pp, 68% last
-     line-height 1.40, 7pt, 19pt    4pp, 66% last     4pp, 77% last   <- ships
-     line-height 1.41, 7pt, 20pt    4pp, 67% last     5pp, 13% last
-     line-height 1.43, 8pt, 22pt    4pp, 75% last     5pp, 13% last
-     line-height 1.46, 9pt, 24pt    5pp               5pp
+                                    A4              US Letter
+     line-height 1.30, 4pt, 13pt    4pp, 30% last   4pp, 56% last
+     line-height 1.34, 5pt, 15pt    4pp, 57% last   4pp, 70% last
+     line-height 1.36, 6pt, 17pt    4pp, 70% last   4pp, 81% last  <- ships
+     line-height 1.40, 7pt, 19pt    4pp, 74% last   5pp
 
-   The shipped row is the LAST one that holds four pages on both papers.
-   Letter tips at 1.41 — one hundredth of a line-height past the shipped
-   value — so there is no headroom above this and none is being saved.
+   A4 is the paper he prints; Letter is the one that constrains, being
+   shorter. The shipped row is the last that holds four pages on both, and it
+   still holds on A4 if the margin is 4mm larger than modelled.
 
-   ⚠️ A4 IS THE PAPER THAT MATTERS HERE (his print dialog, confirmed
-   2026-09-07), but Letter is the one that constrains, because it is shorter.
-   Anything tuned to fill A4 handsomely spills on Letter. If Letter is ever
-   declared irrelevant, 1.43/8pt/22pt fills A4 to three-quarters.
+   ⚠️ ONE HUNDREDTH OF A LINE-HEIGHT IS THE WHOLE MARGIN at the edges, and
+   that is paged media rather than a weakness here: a whole paragraph moves
+   at once, so a last page is either well filled or a straggler with a line
+   on it, never something in between. Never change a number in section 3
+   without reprinting and counting BOTH papers WITH headers on.
 
-   ⚠️ ONE HUNDREDTH OF A LINE-HEIGHT IS THE WHOLE MARGIN, and that is how
-   paged media works rather than a weakness of this block: a whole paragraph
-   moves at once, so the last page is either two-thirds full or a straggler
-   with a line on it, never something in between. Never change a number in
-   section 3 without reprinting and counting BOTH papers.
+   ⚠️ FOUR EARLIER VERSIONS OF THIS NOTE WERE WRONG, each in a way worth
+   knowing, because every one of them was confidently written:
 
-   ⚠️ THREE EARLIER VERSIONS OF THIS NOTE WERE WRONG, which is why the table
-   is spelled out. (1) It claimed 1.4 with 7pt/19pt spilled to five pages —
-   that is the row that ships. (2) It claimed headless Chrome ignores
-   `@page { size: A4 }` — it does not; the baseline being copied into each
-   probe already had that line appended, so every run in that comparison was
-   A4, and the two columns agreeing exactly was the bug rather than the
-   finding. (3) Every number measured before section 2b existed described the
-   tester's own margin preset and not this stylesheet. Two runs matching to
-   the byte is a reason to distrust the harness. A remembered result is not a
-   measurement.
+     1. It claimed 1.4 with 7pt/19pt spilled to five pages. It did not.
+     2. It claimed headless Chrome ignores `@page { size: A4 }`. It does not
+        — the baseline CSS copied into each probe already had that line
+        appended, so every run in that comparison was A4, and the two columns
+        agreeing EXACTLY was the bug rather than the finding.
+     3. Every number taken before section 2b existed described the tester's
+        own margin preset, not this stylesheet.
+     4. Every number taken before this round was measured with the print
+        header and footer SUPPRESSED, while he prints with them on. That is
+        what produced three rounds of "four pages here, five pages there":
+        the two ends were not printing the same page box, and no amount of
+        tuning type could have reconciled them.
+
+   The lesson under all four: two runs agreeing to the byte is a reason to
+   distrust the harness, and a remembered result is not a measurement.
    ============================================================ */
 @media print {
 
@@ -159,7 +163,26 @@
      sets — base.scss and home.scss both use it.
      ------------------------------------------------------------ */
   body:has(.page-cv) {
-    padding: 4mm 6mm;
+    padding: 0;
+
+    /* ⚠️ NO TRAILING PADDING, and this is the whole reason a CONTENTLESS
+       fifth page can exist. When the last line lands near the foot of page
+       four, any box space after it — padding, a margin, a border — is still
+       box space, and the printer dutifully opens another sheet to hold it.
+       The reader then gets a page carrying nothing but the print dialog's
+       own header and footer, which looks like a bug in the document because
+       it is one. The top padding is kept; only the bottom is dangerous. */
+    padding-bottom: 0;
+  }
+
+  /* Same reasoning, one level in: nothing after the last element may carry
+     trailing space either. `.page-edited` sets margin-top and no bottom, so
+     this is belt and braces against a future rule adding one. */
+  .page-cv,
+  .page-cv > .page,
+  .page-cv .page-edited {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   /* ------------------------------------------------------------
@@ -180,12 +203,25 @@
      default, so other pages barely move, and every page gains a printable
      area that does not depend on who is printing.
 
-     The CV's own margin is this plus the body padding above: 16mm top and
-     bottom, 18mm at the sides. Adjust the padding, not this, for the CV
-     alone — changing the number here changes every page.
+     ⚠️ AND 20mm TOP/BOTTOM IS SIZED TO CONTAIN THE PRINT DIALOG'S OWN
+     HEADER AND FOOTER — the date, title, URL and page number that Chrome
+     draws when "Headers and footers" is ticked. That is not decoration; it
+     is the difference between his output and this one. With a 12mm margin
+     the chrome does not fit inside it, and the browser takes the room it
+     needs out of the content box instead — so the same stylesheet paginated
+     one way here, with headers off, and another way for him with them on,
+     and no amount of tuning the type could reconcile the two. Measured: his
+     effective box matched a ~19-20mm margin while this end was measuring
+     12mm and calling it four pages.
+
+     ⚠️ SO DO NOT SHRINK THIS TO WIN BACK A LINE. A smaller number does not
+     give the document more room, it just moves the room from the margin,
+     where it is visible and predictable, into the browser's private reserve,
+     where it is neither. The CV's margin IS this rule — `body` padding is
+     zeroed above so there is exactly one place that sets the geometry.
      ------------------------------------------------------------ */
   @page {
-    margin: 12mm;
+    margin: 20mm 16mm;
   }
 
   /* ------------------------------------------------------------
@@ -226,10 +262,10 @@
        timeline.scss already spends on `.timeline h2`'s top margin; setting
        the token is the whole change and needs no rule of its own here. */
     --space-3xs: 3pt;
-    --space-2xs: 7pt;    /* between paragraphs */
+    --space-2xs: 6pt;    /* between paragraphs */
     --space-xs:  12pt;   /* under the name */
     --space-s:   14pt;
-    --space-m:   19pt;   /* between entries */
+    --space-m:   17pt;   /* between entries */
     --space-l:   24pt;
 
     /* ⚠️ THE READER'S THEME MUST NOT FOLLOW THE PAGE ONTO PAPER, and until
@@ -268,7 +304,7 @@
        considered typographic value either. It is the last of several
        measured attempts at filling four pages without spilling onto a fifth,
        and it is one of the three numbers the note at the top warns about. */
-    line-height: 1.4;
+    line-height: 1.36;
   }
 
   /* ------------------------------------------------------------
