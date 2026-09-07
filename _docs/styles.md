@@ -503,6 +503,20 @@ for a site whose traffic is mostly first-time arrivals on a single post.~~
 The failure mode we're avoiding is CSS scattered across twenty opt-in keys where nobody can
 tell what ships where.~~
 
+## ⚠️ One rule in `_sass/cv.scss` is site-wide: the print margin (2026-09-07)
+
+`cv.scss` declares `@page { margin: 20mm 16mm }` inside its `@media print` block. **`@page` is
+document-level and cannot be scoped to a page, a class or a URL** — it describes the sheet — so
+that single declaration sets the print margin for **every page on this site**, not just `/cv/`.
+It lives in `cv.scss` because that is where the need arose, and it is the one place in `_sass/`
+where a page-named partial reaches past its own page. Deliberate and approved; not drift.
+
+The number is not taste: 20mm top and bottom is sized to contain the print dialog's own header
+and footer. When the margin is too small to hold that chrome, the browser takes the room out of
+the content box instead, and the same stylesheet paginates differently depending on a checkbox in
+the reader's print dialog. The full reasoning, and the four wrong measurements it took to find,
+are in the comments in `cv.scss` and in [`agents.md`](agents.md).
+
 ## The principle, restated (2026-07-27)
 
 Ship one external stylesheet and let it cache. `assets/styles/site.scss` compiles

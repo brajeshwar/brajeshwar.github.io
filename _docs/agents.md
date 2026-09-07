@@ -126,12 +126,28 @@ than a screenshot of the site. It also appends `(href)` after every `http` link,
 means about forty of them: the printed CV reads noisier than the screen.
 
 ⚠️ **Decided the same day.** `_sass/cv.scss` now carries a `@media print` block that suppresses
-those URLs on `/cv/` and compresses the sheet from eight pages to three — the contact line keeps
-its one URL, because a printed CV whose LinkedIn is the word "LinkedIn" is one you cannot act on.
-That block also fixes three things print was already getting wrong (the timeline spine erased by
+those URLs on `/cv/` — the contact line keeps its one URL, because a printed CV whose LinkedIn is
+the word "LinkedIn" is one you cannot act on. **The printed CV is four pages** (was eight). That
+block also fixes three things print was already getting wrong: the timeline spine erased by
 Gutenberg's `!important` background reset, the reader's dark theme following the page onto paper,
-and headings sized by Gutenberg's element selectors rather than the site's tokens). Read the
+and headings sized by Gutenberg's element selectors rather than the site's tokens. Read the
 comments there before changing any number in it.
+
+⚠️ **AND IT SETS A SITE-WIDE PRINT MARGIN, which is the one part of this that reaches beyond
+`/cv/`.** `_sass/cv.scss` declares `@page { margin: 20mm 16mm }`. `@page` is document-level and
+cannot be scoped to a URL, so **every page on this site now prints with that margin** — it lives
+in `cv.scss` only because that is where the need arose. Approved deliberately (2026-09-07); if
+print margins ever look wrong on some other page, this is why, and this is the one line to change.
+
+⚠️ **20mm top/bottom is sized to CONTAIN the print dialog's own header and footer** — the date,
+title, URL and page number Chrome draws when "Headers and footers" is ticked. When the margin is
+too small to hold that chrome, the browser takes the room out of the *content box* instead, so the
+same stylesheet paginates differently for a reader with headers on than for one with them off.
+That cost three rounds of "four pages here, five pages there" before it was found: every
+measurement had been taken with `--no-pdf-header-footer` while he printed with them on. With the
+margin at 20mm, headers on and off now paginate identically — that equality is the test. Never
+shrink it to win back a line; a smaller number does not give the document more room, it just moves
+the room from the margin into the browser's private reserve.
 
 A **generated** PDF is a much larger thing than a button — headless Chromium in Actions, minutes
 and a few hundred MB on every build, for a file the print dialog already produces. Still open,

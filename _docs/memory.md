@@ -4,7 +4,52 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-09-01, tenth session — CLOSED) — READ FIRST
+## Where we are (updated 2026-09-07, eleventh session — CLOSED) — READ FIRST
+
+**✅ SESSION CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,
+**all pushed by him**, the last at 22:40 IST. **Actions run 34146487725 went green and the
+changes were verified against the DEPLOYED site, not just CI** — `brajeshwar.com/cv/` serves
+`aria-label="Print"`, zero occurrences of "Save as PDF", and `site.32859453.css` carries both
+`@page{margin:20mm 16mm}` and the `.page-cv a[href^=http]::after{content:none}` rule.
+
+⚠️ **Check `git log origin/main..main` before believing that, or any other status line here.**
+It is a claim like any other. One later docs commit (this note) was left unpushed.
+
+**What changed, in one line each:**
+
+| | |
+|---|---|
+| the PDF button | is a **printer** icon labelled **"Print"**. There was never a `/cv.pdf`; it only ever called `window.print()`, and a document icon was a promise the site could not keep. `icons/pdf.svg` deleted |
+| the include param | `pdf=false` → **`print=false`** (`_layouts/post.html` is the one caller). A stale spelling silently un-hides the button on all 1,457 posts |
+| the printed CV | **eight pages → four**, no inline URLs, no orphans or widows, no stranded headings |
+| **every page's print** | **`@page { margin: 20mm 16mm }`** — see the warning below |
+
+⚠️ **THE ONE THING THAT REACHES BEYOND `/cv/`:** `_sass/cv.scss` declares `@page`, which is
+document-level and **cannot be scoped**, so it sets the print margin for the whole site. It lives
+in a page-named partial because that is where the need arose. Approved deliberately. Recorded in
+[`styles.md`](styles.md) and [`agents.md`](agents.md).
+
+⚠️ **AND THE LESSON THAT COST THE MOST: THE PRINT DIALOG IS PART OF THE LAYOUT.** He prints with
+"Headers and footers" on; every measurement here passed `--no-pdf-header-footer`. Chrome draws
+that chrome inside the page margin and, when the margin cannot hold it, takes the room out of the
+**content box** — so the two ends were paginating different page boxes from the same stylesheet.
+Three rounds of tuning type sizes could not have fixed it. **The test that proves it is fixed:
+with the margin at 20mm, headers on and headers off paginate identically.**
+
+⚠️ **FOUR MEASUREMENT CLAIMS WERE PUBLISHED WRONG BEFORE THAT WAS FOUND**, and three were harness
+bugs rather than CSS mistakes — a stale `@page{size:A4}` left in the probe baseline made every
+run labelled "Letter" secretly A4, and *the two columns agreeing to the byte* was the tell that
+got ignored twice. The full list is in the comments in `_sass/cv.scss`. **Two runs matching
+exactly is a reason to distrust the harness, not to trust the result.**
+
+**Still open, all one-liners, all his call:** the contact line keeps its one LinkedIn URL (the
+only one left on the sheet); every former link is still underlined on paper; `_pages/cv.md`'s
+`edited:` front matter still reads 2026-08-09, so the printed foot says so; and *"Download Resume
+PDF"* in [`todo.md`](todo.md) is now purely the generated-file question.
+
+---
+
+## Where we were (updated 2026-09-01, tenth session — CLOSED)
 
 **✅ SESSION CLOSED 2026-09-01.** **THE ALBUM LEFT THIS SITE**, across four rounds in one
 afternoon — thirteen commits, all signed, **all pushed by him and live**. Verified on the
