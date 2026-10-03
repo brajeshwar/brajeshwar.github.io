@@ -133,6 +133,29 @@ must issue its Let's Encrypt cert first. The reliable order is gray-cloud DNS, w
 Pages to show the cert and enable "Enforce HTTPS", then flip to orange-cloud with SSL =
 Full.
 
+### Decision: stay on Full (strict), do not go back to Flexible (2026-10-03)
+
+Brajeshwar asked whether to revert to Flexible "and be done with it". No — Full (strict) is
+already the simple setting, and Flexible is the one that compromises the site. Measured that
+day:
+
+- **Flexible would break the site outright.** It makes Cloudflare fetch the origin over plain
+  HTTP, and GitHub Pages answers HTTP with a `301` to HTTPS ("Enforce HTTPS" is on —
+  `curl -sSI --resolve brajeshwar.com:80:185.199.108.153 http://brajeshwar.com/`). Cloudflare
+  follows that back to itself: a redirect loop.
+- **Even without the loop, Flexible is the insecure mode.** The Cloudflare-to-GitHub leg
+  travels unencrypted while the reader's padlock says otherwise.
+- **Full (strict) costs nothing here.** The origin holds a real, publicly trusted
+  certificate — `CN=brajeshwar.com`, Let's Encrypt, valid to 2026-12-31, renewed by GitHub on
+  2026-10-02 *while proxied* — so strict validation has something genuine to check.
+
+The one thing strict mode adds is a failure mode: if GitHub ever fails to renew, Cloudflare
+returns a `526` instead of quietly serving over a stale certificate. That is the correct
+behaviour, and the check is one line:
+`echo | openssl s_client -connect 185.199.108.153:443 -servername brajeshwar.com 2>/dev/null | openssl x509 -noout -dates`.
+If it ever lapses, fix the renewal (gray-cloud briefly, let Pages re-issue) rather than
+dropping to Full or Flexible.
+
 ## Cache headers we actually get (measured 2026-07-27)
 
 Not configured by us; there is no `_headers` file in the repo. This is what the edge
