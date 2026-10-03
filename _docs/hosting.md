@@ -156,6 +156,27 @@ behaviour, and the check is one line:
 If it ever lapses, fix the renewal (gray-cloud briefly, let Pages re-issue) rather than
 dropping to Full or Flexible.
 
+⚠️ **Any future Worker or redirect rule must let `/.well-known/acme-challenge/*` through
+untouched.** That path is how Let's Encrypt validates GitHub's renewal through the proxy; so
+must Bot Fight Mode and any WAF rule. Expect the next renewal around early December 2026.
+
+### Email: the domain sends and receives none (2026-10-03)
+
+`brajeshwar.com` has no mailbox, so DNS says so on every channel. Verified against
+`ed.ns.cloudflare.com` and `1.1.1.1`:
+
+| Record | Value | Effect |
+|---|---|---|
+| `@` TXT | `v=spf1 -all` | no server may send as the domain (added 2026-10-03) |
+| `*._domainkey` TXT | `v=DKIM1; p=` | every DKIM key revoked |
+| `_dmarc` TXT | `p=reject; sp=reject; adkim=s; aspf=s` | reject failures, subdomains too |
+| MX | none | receives nothing |
+
+The DMARC reports go to a `cloudflare.net` address — Cloudflare's own lockdown for a
+non-sending domain. **If the domain ever sends mail, all three TXT records change first**,
+or every message is rejected. The `openai-domain-verification` TXT was removed the same day;
+`google-site-verification` remains.
+
 ## Cache headers we actually get (measured 2026-07-27)
 
 Not configured by us; there is no `_headers` file in the repo. This is what the edge
