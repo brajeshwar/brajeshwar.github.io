@@ -2,6 +2,12 @@
 
 > I’m on an adventure to create beautiful and meaningful products to improve the world for my daughters and their friends.
 
+## TODO
+
+- [ ] Move to Cloudflare Pages and keep Github just for the code or reduce Cloudflare Security to Flexible?
+
+-------------------------------------------------------------------------------
+
 ### Archived / Elsewhere
 
 - [Blogspot](http://brajeshwar.blogspot.com)
