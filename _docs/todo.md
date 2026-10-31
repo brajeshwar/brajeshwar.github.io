@@ -174,7 +174,12 @@ Originally absorbed from the 2027 planning braindump.
         by `/about/`, where the visible caption says Mixercast. So the disagreement is now
         between a caption and a URL rather than between two pages. His call; renaming the file
         would change a URL that `/about/` points at.
-- [ ] **"Download Resume" PDF** — the Work track as a downloadable file. Obvious home is beside
+- [x] **"Download Resume" PDF** *(2026-10-31)* — built: the Actions build prints `/cv/` to
+      **`/cv/brajeshwar-oinam.pdf`** with the preinstalled headless Chrome (`scripts/cv-pdf.sh`,
+      `make cv-pdf`). Seconds per build, nothing downloaded. **Still open:** nothing links to it,
+      and it is US Letter, not A4 — see [`agents.md`](agents.md). The history below is how it got
+      here.
+      Original item: the Work track as a downloadable file. Obvious home is beside
       the Life/Work pill when Work is the active view — **that pill no longer exists**, so the
       placement question is open again. Worth deciding then whether the PDF is
       generated from the timeline markup or maintained separately. **Now that `/cv/` exists it is

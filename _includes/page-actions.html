@@ -134,15 +134,15 @@
     ⚠️ THIS WAS A PDF ICON LABELLED "Save as PDF" UNTIL 2026-09-07, AND IT WAS
     A PROMISE THE SITE COULD NOT KEEP. He asked to have the PDF updated after
     editing /cv/ — reasonable, because a document icon says a document exists.
-    None does: there is no /cv.pdf, no PDF generator, and never was. The button
-    has only ever called window.print(). So the artwork now matches the action;
-    the browser's own print dialog is where "Save as PDF" actually lives, and
-    it needs no help from a label here.
+    None did then: there was no PDF generator, and the button has only ever
+    called window.print(). So the artwork now matches the action; the
+    browser's own print dialog is where "Save as PDF" actually lives, and it
+    needs no help from a label here.
 
-    Generating a real PDF is a much larger thing than a button — headless
-    Chromium in Actions, minutes and a few hundred MB on every build, for a
-    file the print dialog already produces. That decision stays his and stays
-    open; it is the "Download Resume PDF" item in _docs/todo.md.
+    Since 2026-10-31 a real file does exist — /cv/brajeshwar-oinam.pdf,
+    printed by scripts/cv-pdf.sh in the Actions build. This button still
+    prints whatever page it is on; it does not point at that file, and
+    nothing links to it yet.
 
     What makes printing honest meanwhile is assets/print.css (Gutenberg-based,
     linked media="print" in default.html, hides the header, footer and

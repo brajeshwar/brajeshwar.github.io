@@ -62,8 +62,14 @@
 
      (cd _site && python3 -m http.server 4311 &)
      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-       --headless --no-pdf-header-footer --print-to-pdf=out.pdf \
-       http://localhost:4311/cv/
+       --headless --no-pdf-header-footer --virtual-time-budget=10000 \
+       --print-to-pdf=out.pdf http://localhost:4311/cv/
+
+   ⚠️ --virtual-time-budget was added 2026-10-31, and the loop is wrong
+   without it, at least on Chrome 156: headless prints before it has even
+   requested the `media="print"` assets/print.css, so the PDF comes out
+   with the site's header and footer at five pages. `make cv-pdf`
+   (scripts/cv-pdf.sh) runs this same print and reports the page count.
 
    Measured before: body 19.08px on a 28.62px line, h2 32px, 24px between
    paragraphs, column 613.8px. Eight pages.

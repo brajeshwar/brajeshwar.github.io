@@ -6,6 +6,11 @@
 
 ## Where we are (updated 2026-09-07, eleventh session — CLOSED) — READ FIRST
 
+**2026-10-31 — `/cv/brajeshwar-oinam.pdf` IS GENERATED IN THE ACTIONS BUILD.** `scripts/cv-pdf.sh`
+(`make cv-pdf`) prints the built `/cv/` with the runner's preinstalled headless Chrome, after the
+hash step. Nothing links to it yet, and it is US Letter. The first CI run's log carries the page
+count and the substituted fonts — check it says four. Details in [`agents.md`](agents.md).
+
 **✅ SESSION CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,
 **all pushed by him**, the last at 22:40 IST. **Actions run 34146487725 went green and the
 changes were verified against the DEPLOYED site, not just CI** — `brajeshwar.com/cv/` serves

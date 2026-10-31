@@ -149,9 +149,24 @@ margin at 20mm, headers on and off now paginate identically — that equality is
 shrink it to win back a line; a smaller number does not give the document more room, it just moves
 the room from the margin into the browser's private reserve.
 
-A **generated** PDF is a much larger thing than a button — headless Chromium in Actions, minutes
-and a few hundred MB on every build, for a file the print dialog already produces. Still open,
-still his: the *"Download Resume PDF"* item in [`todo.md`](todo.md).
+**A generated PDF exists since 2026-10-31:** `/cv/brajeshwar-oinam.pdf`, printed in the Actions
+build by `scripts/cv-pdf.sh` (also `make cv-pdf`). It is headless Google Chrome printing the built
+`/cv/` over loopback, so it is the same document as the Print button produces, with no second CV
+to maintain. The feared cost — *"minutes and a few hundred MB on every build"* — priced in installing
+Chromium; `ubuntu-latest` ships Chrome preinstalled, so the step downloads nothing and takes
+seconds. ⚠️ Three things about it:
+
+- **`--virtual-time-budget` cannot be dropped.** Without it headless Chrome prints before it has
+  requested the `media="print"` `assets/print.css`, and the file comes out at five pages wearing the
+  site's header and footer. The verification loop in `cv.scss` had the same hole and now carries the
+  flag too.
+- **It is US Letter**, Chrome's default; he prints A4. Both hold four pages per the table in
+  `cv.scss`. Changing it means `@page { size: A4 }`, and `@page` in `cv.scss` is site-wide.
+- **The runner has no Helvetica Neue.** Gutenberg's print font stack is Mac fonts, so CI substitutes
+  (fontconfig → Liberation Sans). The script logs the page count and the embedded fonts on every run;
+  it fails only when no PDF comes out, never on page count.
+
+The Print button does not link to the file; nothing does yet.
 
 The button ships `hidden` and `page-actions.js` unhides it — with JavaScript off there is no dead
 control, and the reader's own Print command still works (guardrail 4).
