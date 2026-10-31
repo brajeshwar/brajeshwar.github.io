@@ -109,16 +109,10 @@
 {% if content contains 'class="strip__viewport"' %}<script defer src="{{ '/assets/scripts/strip-nav.js' | relative_url }}"></script>{% endif %}
 
 {%- comment -%}
-  Page actions. ⚠️ GATED ON THE PRINT BUTTON, not on the bar. The script's only
-  job is unhiding that button, and posts include the bar with `print=false` — so
-  testing for `class="page-actions"` would ship it to all 1,457 posts to do
-  nothing at all. `data-page-actions-print` appears only where there is work.
-
-  Same literal-string gate as the three above, and the same trap: keep the test
-  inline. A captured variable is a truthy Liquid object, and `contains` on one
-  fails silently AND truthily, so hoisting it would ship this everywhere.
+  Page actions needs no script. page-actions.js existed only to unhide a
+  Print button, and that button was removed on 2026-10-31 — see
+  _includes/page-actions.html.
 {%- endcomment -%}
-{% if content contains 'data-page-actions-print' %}<script defer src="{{ '/assets/scripts/page-actions.js' | relative_url }}"></script>{% endif %}
 {%- comment -%}
   Back to Top. Site-wide, but self-limiting: the script returns immediately on
   a page that isn't tall enough to need one, so short pages pay a parse and

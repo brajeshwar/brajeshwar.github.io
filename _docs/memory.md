@@ -9,7 +9,9 @@
 **2026-10-31 — THE CV HAS A STATIC A4 PDF: `/static/pdf/brajeshwar-oinam.pdf`**, linked from
 `/cv/`. ⚠️ **It is a committed file, not a build output: after any edit to `_pages/cv.md`, run
 `make cv-pdf` and commit the PDF with it**, or the PDF lags the page. The page-actions bar on
-`/cv/` now shows a PDF icon linking to it in place of the Print button (`pdf:` in front matter). `/cv/` also gained Wipro
+`/cv/` now shows a PDF icon linking to it in place of the Print button (`pdf:` in front matter).
+⚠️ **The Print button, `page-actions.js`, and `icons/print.svg` are DELETED** — once nothing
+referenced the script, `hash-assets.mjs` failed the deploy (run 41193759796) on an orphaned asset. `/cv/` also gained Wipro
 (2026 Apr — Present) the same day. Details in [`agents.md`](agents.md).
 
 **✅ SESSION CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,

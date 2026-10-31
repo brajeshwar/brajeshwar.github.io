@@ -63,31 +63,26 @@ build time, so the date is omitted for pages to avoid implying they were publish
 ## The reader-facing half: `_includes/page-actions.html` (2026-08-09)
 
 Everything above is machinery no reader sees. `page-actions.html` is the bar that puts it in
-front of them — *"Open in OpenAI · Claude | [md] [print]"* — modelled on
+front of them — *"Open in OpenAI · Claude | [md] [pdf]"* — modelled on
 <https://ovellum.oss.oinam.com/docs/>. Live on `/cv/`; **any page or post can include it
 unchanged**, since it derives everything from `page`:
 
 ```liquid
 {% include page-actions.html %}                        <!-- a page -->
-{% include page-actions.html kind="post" print=false %}  <!-- what posts use -->
+{% include page-actions.html kind="post" %}              <!-- what posts use -->
 ```
 
 **Every post carries it as of 2026-08-09**, from `_layouts/post.html` — no per-post front
 matter, because the bar derives the twin's URL from `page.url` and a twin already exists for all
-1,457 posts. `print=false` drops the print button: printing suits a CV someone wants to keep
-and is noise on an article, and he is still deciding whether it belongs there "along with others
-such as an audio in the future".
+1,457 posts.
 
-⚠️ **The parameter was `pdf` until 2026-09-07.** A caller still saying `pdf=false` matches
-nothing, so the default applies and the button appears on all 1,457 posts — no error, no warning,
-visible only in the built HTML. The check is to list the call sites —
-`grep -rn 'include page-actions' _layouts _includes _pages` — and read their parameters: none may
-say `pdf`. Don't grep for `pdf=false` on its own; it matches this warning and the two beside it
-in `page-actions.html` and `post.html`.
-
-⚠️ **The script is gated on `data-page-actions-print`, not on the bar.** `page-actions.js` exists
-only to unhide the print button, so testing for `class="page-actions"` would ship it to all 1,457
-posts to do nothing.
+⚠️ **There is no Print button since 2026-10-31**, and no `print` include parameter. It existed
+only on `/cv/` (posts dropped it with `print=false`), and the PDF link replaced it there — so
+`page-actions.js` and `icons/print.svg` were deleted with it, and the bar needs no JavaScript at
+all. A page gets a PDF link by naming the file in its front matter, `pdf: <url>`, read as
+`page.pdf`. ⚠️ **Why the deletion was forced, not tidy:** once nothing referenced
+`page-actions.js`, `scripts/hash-assets.mjs` failed the build — it treats a hashed asset with zero
+references as a mistake. That is how the first deploy of the PDF link went red.
 
 ⚠️ **A post's title row breaks out to the band.** `.post h1` is `width: 100cqi` on purpose —
 "Posts titles should extend the full length of the body width" — which it achieves by
@@ -167,14 +162,14 @@ every build existed for a few hours that day and was dropped unpushed in favor o
   `window.print()` renders on the reader's machine — their browser, their fonts (Windows has no
   Helvetica Neue), their dialog's scale and margins — so it cannot promise the same four pages; the
   file can. A page opts in with `pdf: <url>` in its FRONT MATTER (read as `page.pdf`, never as an
-  include parameter, so the old `pdf=false` trap cannot come back). Pages without one keep the
-  print button. `icons/pdf.svg` is restored from before `e50377b7`.
+  include parameter, so the old `pdf=false` trap cannot come back). The Print button itself is
+  gone site-wide; see the page-actions section above. `icons/pdf.svg` is restored from before
+  `e50377b7`.
 - **It prints under the real hostname** (`--host-resolver-rules` maps `brajeshwar.com` to the
   loopback server). Chrome writes relative links into the PDF as absolute ones, resolved against
   the URL it printed — from `127.0.0.1` the file shipped links to `http://127.0.0.1:4311/about/`.
 
-The button ships `hidden` and `page-actions.js` unhides it — with JavaScript off there is no dead
-control, and the reader's own Print command still works (guardrail 4).
+The reader's own Print command still works on every page, styled by `assets/print.css`.
 
 ## ⚠️ Liquid and HTML comments are stripped (2026-08-09) — and why that mattered
 
