@@ -16,6 +16,17 @@ Originally absorbed from the 2027 planning braindump.
       from nav** — his call when to add it.
 - [x] **Titles on every page** *(2026-08-08)* — emitted by the layouts; a left-gutter spine on
       the index pages. See [`styles.md`](styles.md).
+- [ ] **albums.oinam.com sometimes answers the build runner `403`** *(found 2026-10-31)* — twice in
+      ~60 runs (the 2026-09-19 03:02 UTC cron, a 2026-10-31 10:44 UTC push), each passing on a
+      re-run, while the feed answers 200 everywhere else. Almost certainly a Cloudflare security
+      check on the oinam.com zone refusing a datacenter IP with a non-browser User-Agent.
+      `scripts/fetch-albums.rb` now retries three times and logs `server`, `cf-ray`,
+      `cf-mitigated`, and the error page's title. **His side, in the oinam.com dashboard:** Security →
+      Events, host `albums.oinam.com`, path `/feed.xml`, at those times — the event names the
+      service. A WAF/managed rule or Security Level → a custom rule *hostname eq albums.oinam.com
+      and URI path eq /feed.xml → Skip*; a feed is for machines, and RSS readers on cloud IPs hit
+      the same wall. Bot Fight Mode → cannot be skipped by a rule on the Free plan; it is zone-wide
+      on or off.
 - [ ] **⚠️ `/styleguide/` teaches an album protocol that no longer exists** *(found 2026-09-01)*
       — § *Adding a book or an album item*, the album rows in the size tables, and the masonry
       paragraphs all describe cutting a `.webp` into `/static/album/`, three hand-written

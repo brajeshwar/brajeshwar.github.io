@@ -114,6 +114,42 @@ def die(message)
   exit 1
 end
 
+# ---------------------------------------------------------------------------
+# A 403 FROM THE RUNNER IS RETRIED, AND DESCRIBED (2026-10-31)
+# ---------------------------------------------------------------------------
+# Twice in its first two months — the 2026-09-19 cron and a 2026-10-31 push —
+# the feed answered a GitHub runner `403 Forbidden` while answering everyone
+# else 200, and a re-run minutes later went through. albums.oinam.com is
+# proxied by Cloudflare, and a runner is a datacenter IP with a non-browser
+# User-Agent: the profile Cloudflare's bot and security checks are built to
+# refuse. Which check, the log could not say — it printed the status and
+# nothing else.
+#
+# So a refusal now carries what identifies it: `server` (cloudflare or the
+# origin), `cf-ray` (look it up in the dashboard's Security Events), and
+# `cf-mitigated` (set when Cloudflare served a challenge), plus the error
+# page's <title>, which names the rule ("Attention Required!", "Access
+# denied", "Just a moment...").
+#
+# And a 403, 429, 5xx, or a network error is tried THREE times, 10s and then
+# 30s apart, before the build fails. Bot scoring is per request, so a retry
+# can pass where the first try did not; if the block is on the runner's IP it
+# will not, and the build still fails loudly — with the diagnosis attached.
+# Other statuses (404, 410…) mean the feed moved and fail at once.
+RETRY_WAITS = [10, 30].freeze
+
+class RetryableFetch < StandardError; end
+
+def describe(url, response)
+  details = ["#{url} returned #{response.code} #{response.message}"]
+  %w[server cf-ray cf-mitigated].each do |name|
+    details << "#{name}: #{response[name]}" if response[name]
+  end
+  title = response.body.to_s[%r{<title>\s*(.*?)\s*</title>}im, 1]
+  details << "page title: #{title}" if title
+  details.join(" | ")
+end
+
 # One redirect hop is followed by hand rather than with a gem. Net::HTTP does
 # not follow them at all, and albums.oinam.com is behind a CDN that could grow
 # an http->https or a trailing-slash redirect without anyone here noticing.
@@ -129,7 +165,9 @@ def fetch(url, hops = 3)
   case response
   when Net::HTTPSuccess    then response.body
   when Net::HTTPRedirection then fetch(URI.join(url, response["location"]).to_s, hops - 1)
-  else die "#{url} returned #{response.code} #{response.message}"
+  when Net::HTTPForbidden, Net::HTTPTooManyRequests, Net::HTTPServerError
+    raise RetryableFetch, describe(url, response)
+  else die describe(url, response)
   end
 # ⚠️ IOError IS IN THIS LIST FOR A REASON. A connection that times out at the
 # SOCKET raises IO::TimeoutError (an IOError), not Net::OpenTimeout — observed
@@ -139,7 +177,21 @@ def fetch(url, hops = 3)
 # readable in the Actions log.
 rescue SocketError, SystemCallError, IOError, Net::OpenTimeout, Net::ReadTimeout,
        OpenSSL::SSL::SSLError => e
-  die "could not reach #{url}: #{e.class}: #{e.message}"
+  raise RetryableFetch, "could not reach #{url}: #{e.class}: #{e.message}"
+end
+
+def fetch_with_retries(url)
+  attempt = 0
+  begin
+    attempt += 1
+    fetch(url)
+  rescue RetryableFetch => e
+    wait = RETRY_WAITS[attempt - 1]
+    die "#{e.message} (attempt #{attempt} of #{RETRY_WAITS.size + 1}, giving up)" unless wait
+    warn "fetch-albums: #{e.message} — attempt #{attempt} of #{RETRY_WAITS.size + 1}, retrying in #{wait}s"
+    sleep wait
+    retry
+  end
 end
 
 def text_of(item, name)
@@ -147,7 +199,7 @@ def text_of(item, name)
   element ? element.texts.map(&:value).join.strip : nil
 end
 
-body = fetch(FEED_URL)
+body = fetch_with_retries(FEED_URL)
 
 begin
   document = REXML::Document.new(body)
