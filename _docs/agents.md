@@ -163,6 +163,12 @@ every build existed for a few hours that day and was dropped unpushed in favor o
   requested the `media="print"` `assets/print.css`, and the file comes out at five pages wearing the
   site's header and footer. The verification loop in `cv.scss` had the same hole and now carries the
   flag too.
+- **On `/cv/` the Print button is GONE, replaced by a PDF icon linking to this file** (2026-10-31).
+  `window.print()` renders on the reader's machine — their browser, their fonts (Windows has no
+  Helvetica Neue), their dialog's scale and margins — so it cannot promise the same four pages; the
+  file can. A page opts in with `pdf: <url>` in its FRONT MATTER (read as `page.pdf`, never as an
+  include parameter, so the old `pdf=false` trap cannot come back). Pages without one keep the
+  print button. `icons/pdf.svg` is restored from before `e50377b7`.
 - **It prints under the real hostname** (`--host-resolver-rules` maps `brajeshwar.com` to the
   loopback server). Chrome writes relative links into the PDF as absolute ones, resolved against
   the URL it printed — from `127.0.0.1` the file shipped links to `http://127.0.0.1:4311/about/`.

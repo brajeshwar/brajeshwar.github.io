@@ -129,6 +129,9 @@
    is why markdown and pdf rendered visibly smaller than openai and claude for
    one build: they were authored at 16 and the others at 20.
 
+   pdf.svg came back on 2026-10-31 for the PDF link that replaces the print
+   button on /cv/, restored byte-for-byte from before e50377b7.
+
    ⚠️ icons/print.svg (2026-09-07, replacing pdf.svg) was drawn to the same
    20px envelope AND to the same ink box as markdown.svg — roughly x 3–21,
    y 3.5–20.5. The declared size is overridden below, but the artwork's own

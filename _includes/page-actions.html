@@ -1,5 +1,5 @@
 {%- comment -%}
-  PAGE ACTIONS — "Open in OpenAI · Claude | [md] [print]"
+  PAGE ACTIONS — "Open in OpenAI · Claude | [md] [pdf or print]"
 
   Built 2026-08-09, modelled on the bar at https://ovellum.oss.oinam.com/docs/.
   Brajeshwar: "Start with /cv/ but prepare that we will likely have this with
@@ -14,6 +14,15 @@
       title  used in the prompt sent to the AI (default: page.title)
       kind   the noun in that prompt           (default: "page")
       print  set false to drop the print button (default: shown)
+
+  And one from the PAGE's front matter, not the include:
+      pdf    a real PDF of this page; when set, a PDF link REPLACES the print
+             button (e.g. /cv/: `pdf: /static/pdf/brajeshwar-oinam.pdf`)
+
+  ⚠️ `pdf` IS READ AS `page.pdf`, NEVER `include.pdf` — on purpose, because of
+  the rename warning below: an include parameter called `pdf` is exactly what a
+  stale `pdf=false` caller would silently match. Front matter cannot collide
+  with it.
 
   ⚠️ `print=false` is what posts use. Printing makes sense for a CV someone
   wants to keep; it is noise on 1,457 articles, and he asked for it left off
@@ -129,7 +138,35 @@
     {%- include icons/markdown.svg -%}
   </a>
 
-  {%- if include.print != false -%}
+  {%- if page.pdf -%}
+  {%- comment -%}
+    ⚠️ A PDF LINK, NOT A PRINT BUTTON, WHEREVER A REAL PDF EXISTS (2026-10-31).
+    His question: "Should the Print not just print exactly as the PDF? If not
+    and we do not want to risk it, replace the print with a PDF icon instead
+    and link to this latest one."
+
+    It does not, and cannot be made to. window.print() renders on the
+    READER's machine: their browser (Safari and Firefox paginate differently
+    from Chrome, and their support for the named A4 page in cv.scss varies),
+    their fonts (the print stack is "Helvetica Neue", Helvetica, Arial, so
+    Windows gets Arial and different line breaks), and their dialog (scale,
+    margins, paper). The PDF is one fixed rendering. A link to it gives every
+    reader the same four pages.
+
+    So the document icon is back, and this time it keeps its promise: it is
+    an ordinary link to a file that exists. Being a plain href it needs no
+    JavaScript, so unlike the print button below it is never `hidden`, and
+    page-actions.js does not load at all on a page that has it — default.html
+    loads that script only for `data-page-actions-print`.
+
+    ⚠️ The PDF is STATIC (`make cv-pdf`, then commit). This link is only as
+    current as the last time that was run.
+  {%- endcomment -%}
+  <a class="icon-button page-actions__btn" href="{{ page.pdf | relative_url }}"
+     aria-label="View as PDF" title="View as PDF">
+    {%- include icons/pdf.svg -%}
+  </a>
+  {%- elsif include.print != false -%}
   {%- comment -%}
     ⚠️ THIS WAS A PDF ICON LABELLED "Save as PDF" UNTIL 2026-09-07, AND IT WAS
     A PROMISE THE SITE COULD NOT KEEP. He asked to have the PDF updated after
@@ -139,10 +176,8 @@
     browser's own print dialog is where "Save as PDF" actually lives, and it
     needs no help from a label here.
 
-    Since 2026-10-31 a real file does exist — static/pdf/brajeshwar-oinam.pdf,
-    an A4 print of /cv/ made by `make cv-pdf` and committed, which /cv/ links
-    from its contact line. This button still prints whatever page it is on;
-    it does not point at that file.
+    Since 2026-10-31 a real file does exist for /cv/, and on a page whose
+    front matter names one, the PDF link above takes this button's place.
 
     What makes printing honest meanwhile is assets/print.css (Gutenberg-based,
     linked media="print" in default.html, hides the header, footer and

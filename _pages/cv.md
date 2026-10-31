@@ -3,6 +3,7 @@ layout: page
 title: Brajeshwar Oinam
 style: page-cv
 page_actions: true
+pdf: /static/pdf/brajeshwar-oinam.pdf
 edited: 2026-10-31
 ---
 
