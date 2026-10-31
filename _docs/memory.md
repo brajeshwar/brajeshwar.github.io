@@ -4,10 +4,10 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-10-31, twelfth session — CLOSED) — READ FIRST
+## Where we are (updated 2026-10-31, thirteenth session — CLOSED) — READ FIRST
 
-**✅ SESSION CLOSED 2026-10-31. Everything is pushed and deployed** — last good run 41194531425
-on `63f7e368`, verified against the live site.
+**✅ SESSION CLOSED 2026-10-31. Everything is pushed and deployed** — last good run 41205032764
+on `33828948` (the Albums fetch wrote 50 items first try), verified against the live site.
 
 **THE CV HAS A STATIC A4 PDF: `/static/pdf/brajeshwar-oinam.pdf`**, linked from `/cv/` (contact
 line and the page-actions bar's PDF icon, via `pdf:` in front matter). ⚠️ **It is a committed
@@ -205,8 +205,9 @@ they render four other pages.
   body, which guardrail 1 puts off-limits, so it is flagged rather than edited. **This is the
   biggest known-stale thing on the site.**
 - **`/search/`'s prose still links to `/album/`** — works, via the stub. Same guardrail.
-- **The Cloudflare Pages backup has no Albums strip.** Its build command is set dashboard-side
-  and does not run the fetch. Nothing in this repo can fix that.
+- **The Cloudflare Pages backup has no Albums strip, and that is his decision** (2026-10-31:
+  *"I don't want brajeshwar.com to do anything additional"*). Its build command is set
+  dashboard-side and does not run the fetch. Do not propose adding it.
 
 ## Where we were (updated 2026-08-11, ninth session — closed)
 

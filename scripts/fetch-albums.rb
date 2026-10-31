@@ -50,7 +50,7 @@
 #   absent home-page section, not an error — which is what `make albums` and
 #   the workflow step are for. ⚠️ The Cloudflare Pages backup's build command
 #   is set dashboard-side and does not run this, so the strip is missing there
-#   until that command is updated.
+#   — and stays missing, by his decision (2026-10-31).
 #
 # ---------------------------------------------------------------------------
 # THE FIELDS, AND WHY EACH IS WHAT IT IS
