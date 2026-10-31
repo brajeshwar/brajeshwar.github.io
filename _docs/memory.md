@@ -4,17 +4,25 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-09-07, eleventh session — CLOSED) — READ FIRST
+## Where we are (updated 2026-10-31, twelfth session — CLOSED) — READ FIRST
 
-**2026-10-31 — THE CV HAS A STATIC A4 PDF: `/static/pdf/brajeshwar-oinam.pdf`**, linked from
-`/cv/`. ⚠️ **It is a committed file, not a build output: after any edit to `_pages/cv.md`, run
-`make cv-pdf` and commit the PDF with it**, or the PDF lags the page. The page-actions bar on
-`/cv/` now shows a PDF icon linking to it in place of the Print button (`pdf:` in front matter).
+**✅ SESSION CLOSED 2026-10-31. Everything is pushed and deployed** — last good run 41194531425
+on `63f7e368`, verified against the live site.
+
+**THE CV HAS A STATIC A4 PDF: `/static/pdf/brajeshwar-oinam.pdf`**, linked from `/cv/` (contact
+line and the page-actions bar's PDF icon, via `pdf:` in front matter). ⚠️ **It is a committed
+file, not a build output: after any edit to `_pages/cv.md`, run `make cv-pdf` and commit the PDF
+with it**, or the PDF lags the page. `/cv/` also gained Wipro (2026 Apr — Present).
+
 ⚠️ **The Print button, `page-actions.js`, and `icons/print.svg` are DELETED** — once nothing
-referenced the script, `hash-assets.mjs` failed the deploy (run 41193759796) on an orphaned asset. `/cv/` also gained Wipro
-(2026 Apr — Present) the same day. Details in [`agents.md`](agents.md).
+referenced the script, `hash-assets.mjs` failed the deploy (run 41193759796) on an orphaned
+asset. Details in [`agents.md`](agents.md).
 
-**✅ SESSION CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,
+⚠️ **albums.oinam.com occasionally answers the runner `403`** (2 of ~60 runs). The fetch now
+retries and logs who refused; the real fix is in the oinam.com Cloudflare dashboard, his side —
+see [`todo.md`](todo.md).
+
+**(Previous session) ✅ CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,
 **all pushed by him**, the last at 22:40 IST. **Actions run 34146487725 went green and the
 changes were verified against the DEPLOYED site, not just CI** — `brajeshwar.com/cv/` serves
 `aria-label="Print"`, zero occurrences of "Save as PDF", and `site.32859453.css` carries both
