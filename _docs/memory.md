@@ -18,9 +18,10 @@ with it**, or the PDF lags the page. `/cv/` also gained Wipro (2026 Apr — Pres
 referenced the script, `hash-assets.mjs` failed the deploy (run 41193759796) on an orphaned
 asset. Details in [`agents.md`](agents.md).
 
-⚠️ **albums.oinam.com occasionally answers the runner `403`** (2 of ~60 runs). The fetch now
-retries and logs who refused; the real fix is in the oinam.com Cloudflare dashboard, his side —
-see [`todo.md`](todo.md).
+⚠️ **The Albums feed is fetched from `albums-ah7.pages.dev`, not albums.oinam.com.** The
+custom domain sat behind oinam.com's Bot Fight Mode, which challenged non-US GitHub runners
+(2 of ~60 runs got a `403`). The pages.dev address serves the identical feed outside the zone.
+Details in `scripts/fetch-albums.rb` and [`todo.md`](todo.md).
 
 **(Previous session) ✅ CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,
 **all pushed by him**, the last at 22:40 IST. **Actions run 34146487725 went green and the

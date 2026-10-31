@@ -4,8 +4,9 @@
 # ---------------------------------------------------------------------------
 # fetch-albums.rb — build /album/ from albums.oinam.com instead of by hand.
 #
-# Reads https://albums.oinam.com/feed.xml (RSS 2.0, the 50 most recent items)
-# and writes _data/albums.yaml, which the home page's Albums strip reads. Runs
+# Reads albums.oinam.com's feed (RSS 2.0, the 50 most recent items) — from its
+# pages.dev address, not the custom domain; see FEED_URL — and writes
+# _data/albums.yaml, which the home page's Albums strip reads. Runs
 # in the Actions workflow BEFORE `jekyll build`, and from `make albums` locally.
 #
 # ⚠️ IT FEEDS ONE SURFACE, NOT TWO. /album/ was deleted on 2026-09-01 — hours
@@ -106,8 +107,29 @@ require "uri"
 require "rexml/document"
 require "yaml"
 
-FEED_URL = "https://albums.oinam.com/feed.xml"
-OUTPUT   = File.expand_path("../_data/albums.yaml", __dir__)
+# ---------------------------------------------------------------------------
+# THE FEED IS READ FROM pages.dev, NOT albums.oinam.com (2026-10-31)
+# ---------------------------------------------------------------------------
+# albums.oinam.com is the Cloudflare Pages project `albums`, and the same
+# deployment answers at albums-ah7.pages.dev — /feed.xml byte-identical on both,
+# checked when this changed. Its <link>s and thumbnails are absolute
+# albums.oinam.com / media.oinam.com URLs either way, so nothing downstream
+# sees the difference.
+#
+# Why: the oinam.com zone runs Bot Fight Mode. Security Events showed the
+# 2026-10-31 10:44 UTC 403 as a Managed Challenge from "Bot fight mode" on a
+# runner in Canada (Azure 20.104.167.65). Every other /feed.xml request was let
+# through by a zone IP Access rule that allows the United States, so the build
+# failed only when GitHub handed it a non-US runner. On the Free plan Bot Fight
+# Mode cannot be skipped by a WAF rule; it is zone-wide on or off. pages.dev is
+# not in the oinam.com zone, so none of that applies to it.
+#
+# ⚠️ If the `albums` project is renamed, recreated, or moved off Pages, this
+# hostname stops serving the feed and the build fails loudly on a 404 or bad
+# XML. Look the new address up under Workers & Pages → albums in the Oinam
+# account. Do not swap albums.oinam.com back in unless Bot Fight Mode is off.
+FEED_URL = "https://albums-ah7.pages.dev/feed.xml"
+OUTPUT  = File.expand_path("../_data/albums.yaml", __dir__)
 
 def die(message)
   warn "fetch-albums: #{message}"
@@ -136,6 +158,11 @@ end
 # can pass where the first try did not; if the block is on the runner's IP it
 # will not, and the build still fails loudly — with the diagnosis attached.
 # Other statuses (404, 410…) mean the feed moved and fail at once.
+#
+# The cause was found the same day — Bot Fight Mode, an IP-level challenge, so
+# the retries would not have saved those runs — and the fetch moved off the
+# custom domain; see FEED_URL. The retries and the diagnosis stay: they still
+# cover a 5xx or a network blip, and name the refuser if anything ever does.
 RETRY_WAITS = [10, 30].freeze
 
 class RetryableFetch < StandardError; end
