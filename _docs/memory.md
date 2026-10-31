@@ -21,6 +21,7 @@ asset. Details in [`agents.md`](agents.md).
 ⚠️ **The Albums feed is fetched from `albums-ah7.pages.dev`, not albums.oinam.com.** The
 custom domain sat behind oinam.com's Bot Fight Mode, which challenged non-US GitHub runners
 (2 of ~60 runs got a `403`). The pages.dev address serves the identical feed outside the zone.
+He then turned Bot Fight Mode **off** for oinam.com (2026-10-31); pages.dev stays regardless.
 Details in `scripts/fetch-albums.rb` and [`todo.md`](todo.md).
 
 **(Previous session) ✅ CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,

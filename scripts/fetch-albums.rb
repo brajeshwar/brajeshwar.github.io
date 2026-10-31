@@ -116,13 +116,17 @@ require "yaml"
 # albums.oinam.com / media.oinam.com URLs either way, so nothing downstream
 # sees the difference.
 #
-# Why: the oinam.com zone runs Bot Fight Mode. Security Events showed the
+# Why: the oinam.com zone ran Bot Fight Mode. Security Events showed the
 # 2026-10-31 10:44 UTC 403 as a Managed Challenge from "Bot fight mode" on a
 # runner in Canada (Azure 20.104.167.65). Every other /feed.xml request was let
 # through by a zone IP Access rule that allows the United States, so the build
 # failed only when GitHub handed it a non-US runner. On the Free plan Bot Fight
 # Mode cannot be skipped by a WAF rule; it is zone-wide on or off. pages.dev is
 # not in the oinam.com zone, so none of that applies to it.
+#
+# He switched Bot Fight Mode OFF for oinam.com the same day, so the custom
+# domain would work again too. pages.dev stays anyway: it holds whatever that
+# setting is, and a feed is no reason to tie the build to a zone toggle.
 #
 # ⚠️ If the `albums` project is renamed, recreated, or moved off Pages, this
 # hostname stops serving the feed and the build fails loudly on a 404 or bad

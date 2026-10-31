@@ -23,7 +23,8 @@ Originally absorbed from the 2027 planning braindump.
       Access rule that allows the United States, so only a non-US runner failed. Bot Fight Mode
       cannot be skipped by a rule on the Free plan, so `scripts/fetch-albums.rb` now reads the
       byte-identical feed from the Pages project's own address, `albums-ah7.pages.dev`, which is
-      outside the zone. The retries and the diagnostic logging stay.
+      outside the zone. The retries and the diagnostic logging stay. He then switched Bot Fight
+      Mode off for oinam.com the same day.
 - [ ] **⚠️ `/styleguide/` teaches an album protocol that no longer exists** *(found 2026-09-01)*
       — § *Adding a book or an album item*, the album rows in the size tables, and the masonry
       paragraphs all describe cutting a `.webp` into `/static/album/`, three hand-written
