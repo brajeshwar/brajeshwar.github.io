@@ -201,9 +201,10 @@
      type size in section 3. Tuning to "four pages" against an unpinned
      margin is tuning against the tester's own preferences.
 
-     ⚠️ `@page` IS DOCUMENT-LEVEL AND CANNOT BE SCOPED. There is no way to
-     write "this margin, but only for /cv/" — the at-rule describes the
-     sheet, not an element — so this one declaration sets the print margin
+     ⚠️ THIS `@page` IS UNSCOPED, so it is DOCUMENT-LEVEL. (A named page
+     can scope one; see 2c, which does exactly that for the paper size.
+     This margin stays unnamed on purpose.) Written plain, the at-rule
+     describes the sheet, not an element — so this one declaration sets the print margin
      for every page on the site. That is a deliberate, asked-for trade and
      not an oversight: 12mm is close to what Chrome was already applying by
      default, so other pages barely move, and every page gains a printable
@@ -228,6 +229,33 @@
      ------------------------------------------------------------ */
   @page {
     margin: 20mm 16mm;
+  }
+
+  /* ------------------------------------------------------------
+     2c. THE CV IS A4 (2026-10-31, at his ask: "Make it A4 as default, we
+     are unlikely to apply to USA, so no need for Letter Format").
+
+     This one IS scoped, through a NAMED page: `@page cv` describes a sheet
+     only boxes with `page: cv` are laid out on, so /cv/ prints A4 and every
+     other page keeps the reader's own paper. It still inherits the margin
+     from the unnamed `@page` above. Measured: /cv/ four A4 pages, /about/
+     still US Letter from headless Chrome's default.
+
+     ⚠️ `page: cv` GOES ON BODY, NOT ON main.page-cv. On main, the print
+     came out five sheets of mixed A4 and Letter: a change of page name
+     forces a break, and body's own boxes before and after main (the
+     "Edited" line sits outside it) stayed on the unnamed Letter page.
+     Hence the :has().
+
+     This decides the paper for static/pdf/brajeshwar-oinam.pdf too, since
+     scripts/cv-pdf.sh prints exactly this page.
+     ------------------------------------------------------------ */
+  @page cv {
+    size: A4;
+  }
+
+  body:has(> main.page-cv) {
+    page: cv;
   }
 
   /* ------------------------------------------------------------

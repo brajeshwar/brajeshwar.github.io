@@ -1,12 +1,10 @@
 # brajeshwar.com — local dev loop. See _docs/search.md + _docs/agents.md.
 #
-# One PRE-build step, then Jekyll, then four post-build steps (as in CI, except
-# that CI also content-hashes the assets, which local builds deliberately skip):
+# One PRE-build step, then Jekyll, then three post-build steps (exactly like CI):
 #   0. ruby scripts/fetch-albums.rb           → _data/albums.yaml, the Albums strip
 #   1. node scripts/build-agent-markdown.mjs  → .md twins + /llms.txt for AI agents
 #   2. esbuild --minify (in place)            → JS at ~40% of its source size
-#   3. bash scripts/cv-pdf.sh                 → /cv/brajeshwar-oinam.pdf (needs Chrome)
-#   4. npx pagefind --site _site              → the ⌘K SEARCH INDEX
+#   3. npx pagefind --site _site              → the ⌘K SEARCH INDEX
 #
 # IMPORTANT: `jekyll serve` on its own does NOT build the search index — and its
 # --watch even wipes _site/pagefind/ on every rebuild. So ⌘K search only works
@@ -27,12 +25,13 @@ build: albums
 	bundle exec jekyll build
 	node scripts/build-agent-markdown.mjs
 	npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite
-	bash scripts/cv-pdf.sh
 	npx pagefind --site _site
 
-## cv-pdf  — (re)print just /cv/ to _site/cv/brajeshwar-oinam.pdf against the current _site/.
+## cv-pdf  — re-print /cv/ to static/pdf/brajeshwar-oinam.pdf (A4), then COMMIT it.
+##           A static file, not a build step: run this whenever _pages/cv.md changes.
 ##           Uses the installed Google Chrome; set CHROME=/path/to/chrome to pick another.
 cv-pdf:
+	bundle exec jekyll build
 	bash scripts/cv-pdf.sh
 
 ## pagefind — (re)build just the search index against the current _site/

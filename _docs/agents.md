@@ -149,24 +149,23 @@ margin at 20mm, headers on and off now paginate identically — that equality is
 shrink it to win back a line; a smaller number does not give the document more room, it just moves
 the room from the margin into the browser's private reserve.
 
-**A generated PDF exists since 2026-10-31:** `/cv/brajeshwar-oinam.pdf`, printed in the Actions
-build by `scripts/cv-pdf.sh` (also `make cv-pdf`). It is headless Google Chrome printing the built
-`/cv/` over loopback, so it is the same document as the Print button produces, with no second CV
-to maintain. The feared cost — *"minutes and a few hundred MB on every build"* — priced in installing
-Chromium; `ubuntu-latest` ships Chrome preinstalled, so the step downloads nothing and takes
-seconds. ⚠️ Three things about it:
+**A real PDF exists since 2026-10-31: `static/pdf/brajeshwar-oinam.pdf`, and it is STATIC** — a
+committed file, linked from `/cv/`'s contact line. His call: *"Let's create a proper PDF and keep it
+static so I can just link to it."* `make cv-pdf` builds the site and runs `scripts/cv-pdf.sh`,
+which prints the built `/cv/` with headless Chrome over loopback — the same document the Print
+button produces, so there is no second CV to maintain. ⚠️ **But it is only as fresh as the last
+run: edit `_pages/cv.md`, run `make cv-pdf`, commit both together.** (An Actions step printing it on
+every build existed for a few hours that day and was dropped unpushed in favor of this.)
 
+- **It is A4**, at his ask, through a NAMED page in `cv.scss` (`@page cv` + `page: cv` on `body`),
+  so only `/cv/` is A4 and every other page keeps the reader's paper.
 - **`--virtual-time-budget` cannot be dropped.** Without it headless Chrome prints before it has
   requested the `media="print"` `assets/print.css`, and the file comes out at five pages wearing the
   site's header and footer. The verification loop in `cv.scss` had the same hole and now carries the
   flag too.
-- **It is US Letter**, Chrome's default; he prints A4. Both hold four pages per the table in
-  `cv.scss`. Changing it means `@page { size: A4 }`, and `@page` in `cv.scss` is site-wide.
-- **The runner has no Helvetica Neue.** Gutenberg's print font stack is Mac fonts, so CI substitutes
-  (fontconfig → Liberation Sans). The script logs the page count and the embedded fonts on every run;
-  it fails only when no PDF comes out, never on page count.
-
-The Print button does not link to the file; nothing does yet.
+- **It prints under the real hostname** (`--host-resolver-rules` maps `brajeshwar.com` to the
+  loopback server). Chrome writes relative links into the PDF as absolute ones, resolved against
+  the URL it printed — from `127.0.0.1` the file shipped links to `http://127.0.0.1:4311/about/`.
 
 The button ships `hidden` and `page-actions.js` unhides it — with JavaScript off there is no dead
 control, and the reader's own Print command still works (guardrail 4).

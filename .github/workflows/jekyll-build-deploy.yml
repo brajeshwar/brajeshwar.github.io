@@ -1,6 +1,6 @@
 # Jekyll - Build and Deploy to Github Pages
 # Pagefind, https://pagefind.app, powers the Search
-# Updated: Oct 31, 2026 (CV PDF step)
+# Updated: Jul 27, 2026
 #
 # ACTION VERSIONS — bumped 2026-07-27 to clear a GitHub deprecation warning:
 # checkout@v4, configure-pages@v5, setup-node@v4, upload-artifact@v4 (pulled in
@@ -152,24 +152,6 @@ jobs:
       # keeps the year-long staleness this fixes here.
       - name: Content-hash assets and rewrite references
         run: node scripts/hash-assets.mjs
-
-      # Print /cv/ to /cv/brajeshwar-oinam.pdf — the CV as a file to send.
-      # Added 2026-10-31.
-      #
-      # Headless Google Chrome, which ubuntu-latest ships PREINSTALLED: nothing
-      # is downloaded, and the print takes seconds. That is what retired the old
-      # objection to this step ("minutes and a few hundred MB on every build"),
-      # which priced in installing Chromium.
-      #
-      # AFTER the hash step, so the page it prints links the stylesheet that
-      # actually ships. Pagefind indexes HTML only and ignores the PDF.
-      #
-      # It FAILS THE BUILD if no PDF comes out, the same choice the album feed
-      # makes: a dead link to the CV is worse than a red build. A fifth page
-      # does not fail it — the count and the fonts are in the log. The
-      # mechanics, and the flag that cannot be dropped, are in the script.
-      - name: Print the CV to PDF
-        run: bash scripts/cv-pdf.sh
 
       - name: Install Pagefind
         run: npm install pagefind

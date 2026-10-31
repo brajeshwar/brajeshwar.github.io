@@ -139,10 +139,10 @@
     browser's own print dialog is where "Save as PDF" actually lives, and it
     needs no help from a label here.
 
-    Since 2026-10-31 a real file does exist — /cv/brajeshwar-oinam.pdf,
-    printed by scripts/cv-pdf.sh in the Actions build. This button still
-    prints whatever page it is on; it does not point at that file, and
-    nothing links to it yet.
+    Since 2026-10-31 a real file does exist — static/pdf/brajeshwar-oinam.pdf,
+    an A4 print of /cv/ made by `make cv-pdf` and committed, which /cv/ links
+    from its contact line. This button still prints whatever page it is on;
+    it does not point at that file.
 
     What makes printing honest meanwhile is assets/print.css (Gutenberg-based,
     linked media="print" in default.html, hides the header, footer and
