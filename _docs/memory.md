@@ -4,7 +4,19 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-10-31, thirteenth session — CLOSED) — READ FIRST
+## Where we are (updated 2026-11-05, fourteenth session) — READ FIRST
+
+**TRIED AND REVERTED 2026-11-05: centering the post column, Asterisk-style.** His `/odo` item:
+posts read lopsided left because the sidenote gutter sits inside the band. Built: `article.post`
+centered, band-wide media re-anchored with `--to-band: calc(50% - 50cqi)`, sidenotes in the
+viewport's right margin, tried at 60rch and then 66rch. His verdict: *"This is not working, go
+back to our default width. It works for all other pages too. We will figure something out for
+the articles."* Reverted in one commit; **posts are flush left at 66rch again, like every page.**
+The problem itself is still open. Before the next attempt, ask him what did not work; he did not
+say. One thing seen during the attempt: a band-wide title over a centered column started left of
+the prose and read lopsided in its own way.
+
+## Where we were (updated 2026-10-31, thirteenth session — CLOSED)
 
 **✅ SESSION CLOSED 2026-10-31. Everything is pushed and deployed** — last good run 41205032764
 on `33828948` (the Albums fetch wrote 50 items first try), verified against the live site.
