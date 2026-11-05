@@ -4,6 +4,11 @@ Running list of site tasks. Session-by-session history is in [`memory.md`](memor
 Originally absorbed from the 2027 planning braindump.
 
 ## Content & pages
+- [ ] **Posts with no notes read lopsided to the left** *(raised 2026-11-05, OPEN)* — the
+      sidenote gutter sits inside the band, so a post with no notes has empty space on the right.
+      A centered, Asterisk Magazine-style column was built and **reverted the same day** at his
+      word (*"This is not working, go back to our default width"*). Ask what did not work before
+      the next attempt. Details in [`memory.md`](memory.md).
 - [x] **Books shelf split by letter** *(2026-08-08)* — `_data/books/01.yaml` + `a`–`z`, and
       `_data/books-favorites.yaml` beside it. Filed by the first NON-ARTICLE letter, so "The
       Children" is in `c.yaml`. Cost: the home strip can no longer show the newest and shows

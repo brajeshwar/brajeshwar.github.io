@@ -4,7 +4,17 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-11-05, fourteenth session) — READ FIRST
+## Where we are (updated 2026-11-05, fourteenth session — CLOSED) — READ FIRST
+
+**✅ SESSION CLOSED 2026-11-05. Everything is pushed and deployed** — run 42004378335 on
+`f3d2ee15`, green, and the live `site.a72bb069.css` was checked for both fixes below.
+
+**Two fixes shipped:**
+
+| | |
+|---|---|
+| **sidenotes** | right-anchored to the band's right edge (`base.scss .sidenote`), so they end on the header/footer line instead of 47px short. Applies to pages with footnotes too |
+| **`/about/` timeline** | `width: 100cqi`, not `var(--body-width-max)` — the fixed 1024px ran 68px past the band below a ~1067px window and scrolled the page sideways |
 
 **TRIED AND REVERTED 2026-11-05: centering the post column, Asterisk-style.** His `/odo` item:
 posts read lopsided left because the sidenote gutter sits inside the band. Built: `article.post`
