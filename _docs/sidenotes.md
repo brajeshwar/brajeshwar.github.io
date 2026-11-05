@@ -18,7 +18,8 @@ markup changes: old posts get sidenotes for free. This doc is the spec.
 `band.right − article.right ≥ MIN_GUTTER_REM`, where the band is the article's container,
 not the viewport, since 2026-07-27. If it does, the script adds `.has-sidenotes` to the
 article (which hides the bottom `.footnotes` block) and, for each reference, clones its
-`li#fn:N` into an `<aside class="sidenote">` placed at `left: 100%` in the right gutter,
+`li#fn:N` into an `<aside class="sidenote">` in the right gutter, its right edge pinned to the
+band's right edge (since 2026-11-05; it hung off `left: 100%` before and stopped 47px short),
 `top` aligned to the reference. The `↩` back-link is stripped; the reference number is kept
 as `.sidenote-ref`. If the gutter lacks room, as on narrow screens, no asides are made and
 the `.footnotes` block renders normally at the foot. With JS disabled nothing runs at all:

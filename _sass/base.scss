@@ -1130,7 +1130,21 @@ body:has(.gallery) {
 
 .sidenote {
   position: absolute;
-  left: 100%;                     /* just past the reading column's right edge */
+  /* RIGHT-ANCHORED to the band's right edge (2026-11-05), not `left: 100%`.
+     Brajeshwar: "the sidenotes looks like being pushed to the left and not in
+     alignment to the right edge!" Hung off the column, a full 256px note ended
+     47px short of the band — the "breathing room" in config.scss's 1024px sum —
+     so its right edge matched nothing, while the header rule and footer rule
+     above and below it both ran on to the band's edge. Now the note ends on
+     that same line, and the spare 47px goes into the gap beside the column.
+     Where the gutter is tight the width formula below already fills it, and
+     the two placements are the same.
+     `right` is measured from the article's right edge, which sits
+     (band − 100%) inside the band's, hence the negation. With `left: auto`
+     the `margin-left` gap is ignored for placement; it still documents the
+     minimum, and gutterFits() enforces it. */
+  left: auto;
+  right: calc(100% - min(96vw, var(--body-width-max)));
   /* Fluid width: at most --sidenote-width, but never past THE CONTENT BAND.
      Measured against the band — min(96vw, --body-width-max) — not the raw
      viewport, which let notes drift into the margin outside the band where they
