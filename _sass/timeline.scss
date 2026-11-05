@@ -255,9 +255,17 @@
    measure; the timeline gets 1024px; the sidenote works.
 
    ⚠️ `max-width: none` is required. Without it the parent's cap wins and the
-   width declaration does nothing at all. */
+   width declaration does nothing at all.
+
+   ⚠️ `100cqi`, NOT `var(--body-width-max)` (fixed 2026-11-05). The token is
+   the band's CAP, 1024px, but the band is `min(96%, 1024px)`, so below a
+   ~1067px window it shrinks and the token does not: at 1000px the timeline
+   ran 68px past the band and gave the page a sideways scroll. `main` is the
+   inline-size container, so 100cqi is the band itself at every width — the
+   same idiom as the wide images. "Measured, the right edge lands on main's"
+   above was true only at the widths it was measured at. */
 .page-about .timeline {
-  width: var(--body-width-max);
+  width: 100cqi;
   max-width: none;
 }
 
