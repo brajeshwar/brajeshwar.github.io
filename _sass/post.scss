@@ -185,6 +185,15 @@ photo-cover__desc {
      in base.scss and gutterFits() in sidenotes.js). */
   margin: var(--space-s) auto;
 
+  /* A NARROWER MEASURE FOR POSTS: 60rch, about 605px, down from the site's
+     66rch (2026-11-05). He offered it in the same breath ("I'm OK reducing
+     the overall article width and hence making the reading spread easier").
+     It is also what buys the notes room: they need 17rem past the column,
+     and at 60rch that fits from roughly a 1150px window instead of 1210px.
+     Only posts. Pages keep --measure, so this overrides the token
+     .container-ideal reads rather than changing the token itself. */
+  --body-width-ideal: 60rch;
+
   /* THE BREAKOUT, in one place. Everything below that spans the band —
      the title, the date row, figures, wide images, embeds, galleries, the
      blockquote — used to rely on the article's left edge BEING the band's
