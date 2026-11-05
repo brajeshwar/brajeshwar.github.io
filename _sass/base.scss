@@ -1160,6 +1160,19 @@ body:has(.gallery) {
   hyphens: auto;
 }
 
+/* ON A POST THE GUTTER IS THE VIEWPORT'S MARGIN, not the band's (2026-11-05).
+   The post column is centered (post.scss), so the band leaves only half its
+   leftover on the right — (1024 − 605) / 2 − gap is barely 150px, too thin to
+   read. The note takes the page margin instead, Asterisk-style: half of what
+   the body (96vw) leaves beside the column, less the gap. It overhangs the
+   band's right edge, deliberately. Pages that wear .container-ideal still sit
+   flush left in the band and keep the band formula above.
+   gutterFits() in sidenotes.js makes the same split. */
+.post .sidenote {
+  width: min(var(--sidenote-width),
+             calc((96vw - 100%) / 2 - var(--sidenote-gap)));
+}
+
 .sidenote p { margin: 0; }
 .sidenote p + p { margin-top: var(--space-2xs); }
 
