@@ -8,9 +8,9 @@
 
 **POSTS ARE CENTERED, ASTERISK-STYLE — committed, NOT pushed.** His `/odo` item: articles read
 lopsided to the left because the sidenote gutter sat inside the band. Now `article.post` is
-centered at **60rch (~605px)**, band-wide media re-anchors through one offset
+centered at the site's **66rch (~665px)** (a 60rch trial was dropped the same day), band-wide media re-anchors through one offset
 (`--to-band: calc(50% - 50cqi)` in `post.scss`), and **on posts sidenotes take the viewport's
-right margin** (`gutterFits()` + `.post .sidenote`), appearing from about a 1160px window.
+right margin** (`gutterFits()` + `.post .sidenote`), appearing from about a 1220px window.
 ⚠️ **Pages are untouched**: `.container-ideal` is still flush left, because `/about/`, the grids,
 and `/own/` break out rightward from that edge. Details in [`sidenotes.md`](sidenotes.md) and
 [`styles.md`](styles.md). **His call, still open:** the title and date row still span the band

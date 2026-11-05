@@ -161,8 +161,8 @@ the active ones are aliased to `--scale`, `--scale-small`, `--scale-large`.
 
 ## Reading measure (character-based)
 
-> **Posts read at `60rch` (~605px) since 2026-11-05**, set as `.post { --body-width-ideal: 60rch }`
-> in `post.scss`; the `--measure` token (66rch) still sets every page.
+> **Posts read at `--measure` too.** A `60rch` override for posts was tried on 2026-11-05 and
+> dropped the same day; posts and pages share the one 66rch column.
 
 The reading column is sized by character count, not pixels — comfort is a function of
 characters per line (see [`design.md`](design.md) → *Comfortable measure*).
