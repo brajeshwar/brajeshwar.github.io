@@ -105,7 +105,11 @@ main {
      footer rule already draw — and the line the logo is optically aligned to.
 
      Pages with no sidenotes keep the same left edge, so prose starts in the
-     same place whatever the page. */
+     same place whatever the page.
+
+     ⚠️ POSTS NO LONGER DO (2026-11-05). post.scss centers `.post` and gives
+     its notes the viewport margin. This rule now governs the PAGES that wear
+     the class, which depend on the flush-left edge to break out rightward. */
   margin-inline: 0 auto;
 }
 

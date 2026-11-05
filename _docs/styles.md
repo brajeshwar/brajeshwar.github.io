@@ -160,6 +160,10 @@ Modular-scale ratios live in `config.css` (`--golden`, `--minor-third`, `--minor
 the active ones are aliased to `--scale`, `--scale-small`, `--scale-large`.
 
 ## Reading measure (character-based)
+
+> **Posts read at `60rch` (~605px) since 2026-11-05**, set as `.post { --body-width-ideal: 60rch }`
+> in `post.scss`; the `--measure` token (66rch) still sets every page.
+
 The reading column is sized by character count, not pixels — comfort is a function of
 characters per line (see [`design.md`](design.md) → *Comfortable measure*).
 
@@ -1320,6 +1324,16 @@ cause. Use a raw tag or describe it in prose.
 until JS creates the elements. A naive "unused CSS" tool will flag all of these. Don't.
 
 ## Breaking out of the reading column — RIGHT ONLY
+
+> ⚠️ **ON POSTS, BOTH SIDES since 2026-11-05.** The post column is centered in the band, so
+> band-wide media (title, date row, figures, `.full`/`.large`, embeds) now extends evenly
+> either side of it, via one offset: `.post { --to-band: calc(50% - 50cqi) }`, used as
+> `margin-inline: var(--to-band)`. It still never leaves the band, which was the substance of
+> the rule below (*"still within the body width"*). The **blockquote** keeps the prose's left
+> edge and grows right to the band (`width: calc(50% + 50cqi)`). Galleries center from the
+> article's midpoint (`50%`) instead of `main`'s (`50cqi`). **Pages are unchanged:** they still
+> sit flush left and break out rightward, as described below.
+
 
 Brajeshwar, 2026-07-27: *"No contents cannot go beyond the left container. If we are extending
 it, then we will do it to the right, so it is still within the body width."*

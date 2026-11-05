@@ -4,7 +4,20 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-10-31, thirteenth session — CLOSED) — READ FIRST
+## Where we are (updated 2026-11-05, fourteenth session) — READ FIRST
+
+**POSTS ARE CENTERED, ASTERISK-STYLE — committed, NOT pushed.** His `/odo` item: articles read
+lopsided to the left because the sidenote gutter sat inside the band. Now `article.post` is
+centered at **60rch (~605px)**, band-wide media re-anchors through one offset
+(`--to-band: calc(50% - 50cqi)` in `post.scss`), and **on posts sidenotes take the viewport's
+right margin** (`gutterFits()` + `.post .sidenote`), appearing from about a 1160px window.
+⚠️ **Pages are untouched**: `.container-ideal` is still flush left, because `/about/`, the grids,
+and `/own/` break out rightward from that edge. Details in [`sidenotes.md`](sidenotes.md) and
+[`styles.md`](styles.md). **His call, still open:** the title and date row still span the band
+(his 2026-07-27 rule), so they start left of the centered prose. A column-width title is a
+one-line change.
+
+## Where we were (updated 2026-10-31, thirteenth session — CLOSED)
 
 **✅ SESSION CLOSED 2026-10-31. Everything is pushed and deployed** — last good run 41205032764
 on `33828948` (the Albums fetch wrote 50 items first try), verified against the live site.

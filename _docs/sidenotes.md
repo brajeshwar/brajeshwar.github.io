@@ -12,6 +12,17 @@ markup changes: old posts get sidenotes for free. This doc is the spec.
 ```
 
 ## How it works
+
+> ⚠️ **POSTS ARE CENTERED AGAIN (2026-11-05).** `article.post` is centered in the band at
+> `60rch` (~605px), and on a post the gutter is the **viewport's** right margin, not the band's:
+> `gutterFits()` measures to `clientWidth × 0.98` (the body's edge), and `.post .sidenote` is
+> `min(--sidenote-width, (96vw − 100%) / 2 − gap)`. Notes overhang the band's right edge by
+> design (the Asterisk Magazine model he pointed at). Floor: about a **1160px** window
+> (605 + 2 × 272 ≈ 1150, plus the 2% body margins). Measured 2026-11-05: none at 1180, four
+> 254px notes at 1280, no note overlapping media at 1280/1440. **Pages** that wear
+> `.container-ideal` (`/about/`, `/legal/`) are unchanged: flush left, band gutter, ~980px
+> floor. What follows describes the band model, which pages still use.
+
 `assets/scripts/sidenotes.js` (loaded `defer` from `_layouts/default.html`) is scoped to
 `article.container-ideal`. It finds each `article` that has a `.footnotes` block and
 `sup[id^="fnref"]` references, then checks whether the gutter has room:
