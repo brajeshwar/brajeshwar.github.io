@@ -157,12 +157,6 @@
                                       or squeezing them to ~123px. Paying for the gutter once is
                                       what buys the narrower site.
 
-                                      ⚠️ POSTS ARE CENTERED AGAIN (2026-11-05) and their notes
-                                      take the VIEWPORT margin, outside the band, so this
-                                      derivation now holds for PAGES only. The band stayed
-                                      64rem: for posts it is the width of the chrome and the
-                                      wide media, not article + gutter. See post.scss `.post`.
-
                                       History: 76rem → 80rem → 81rem (all centered, 2026-07-27)
                                       → 64rem the same day, when the 81rem band read as too
                                       wide and the dead left gutter was the reason.

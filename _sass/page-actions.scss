@@ -47,7 +47,6 @@
 .post .page-head {
   width: 100cqi;
   max-width: 100cqi;
-  margin-inline: var(--to-band);   /* the post is centered — see post.scss */
 }
 
 /* ⚠️ AND THE TITLE MUST SHRINK TO ITS TEXT. Without this it keeps `width:

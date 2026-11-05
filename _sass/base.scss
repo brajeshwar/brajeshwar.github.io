@@ -105,11 +105,7 @@ main {
      footer rule already draw — and the line the logo is optically aligned to.
 
      Pages with no sidenotes keep the same left edge, so prose starts in the
-     same place whatever the page.
-
-     ⚠️ POSTS NO LONGER DO (2026-11-05). post.scss centers `.post` and gives
-     its notes the viewport margin. This rule now governs the PAGES that wear
-     the class, which depend on the flush-left edge to break out rightward. */
+     same place whatever the page. */
   margin-inline: 0 auto;
 }
 
@@ -1162,19 +1158,6 @@ body:has(.gallery) {
 
   text-align: left;
   hyphens: auto;
-}
-
-/* ON A POST THE GUTTER IS THE VIEWPORT'S MARGIN, not the band's (2026-11-05).
-   The post column is centered (post.scss), so the band leaves only half its
-   leftover on the right — (1024 − 665) / 2 − gap is barely 120px, too thin to
-   read. The note takes the page margin instead, Asterisk-style: half of what
-   the body (96vw) leaves beside the column, less the gap. It overhangs the
-   band's right edge, deliberately. Pages that wear .container-ideal still sit
-   flush left in the band and keep the band formula above.
-   gutterFits() in sidenotes.js makes the same split. */
-.post .sidenote {
-  width: min(var(--sidenote-width),
-             calc((96vw - 100%) / 2 - var(--sidenote-gap)));
 }
 
 .sidenote p { margin: 0; }

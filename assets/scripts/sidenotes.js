@@ -69,19 +69,11 @@
      just viewport margin. The column is left-aligned in the band now and the
      gutter lives INSIDE it, so the viewport says nothing useful — on a wide
      screen it would report hundreds of pixels of room that the band does not
-     actually offer, and notes would be placed and then clamped to nothing.
-
-     EXCEPT ON A POST (2026-11-05). The post column is centered again, and its
-     notes take the viewport's margin, so for a post the viewport is the
-     right answer once more: the edge is the body's (96% of the page, so 2%
-     in from the window), the same split `.post .sidenote` makes in CSS.
-     Pages keep the band. */
+     actually offer, and notes would be placed and then clamped to nothing. */
   function gutterFits(article) {
     var rect = article.getBoundingClientRect();
-    var edge = article.classList.contains('post')
-      ? document.documentElement.clientWidth * 0.98
-      : (article.parentElement || document.body).getBoundingClientRect().right;
-    var rightSpace = edge - rect.right;
+    var band = (article.parentElement || document.body).getBoundingClientRect();
+    var rightSpace = band.right - rect.right;
     return rightSpace >= rem(MIN_GUTTER_REM);
   }
 

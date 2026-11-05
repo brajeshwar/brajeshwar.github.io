@@ -168,41 +168,13 @@ photo-cover__desc {
 }
 
 .post {
-  /* CENTERED in the band (2026-11-05), overriding .container-ideal's
-     `0 auto`. post.css loads AFTER base.css at equal specificity, so whatever
-     is written here wins — which is exactly why this lives here and not on
-     .container-ideal: the PAGES that wear that class (/about/'s timeline,
-     the card grids, /own/) still sit flush left and break out rightward,
-     and flipping the shared class would have broken every one of them.
-
-     Brajeshwar, 2026-11-05: "our single articles are weirdly bounded where
-     the sidenotes are part of the bounding box. So, when there are not
-     footnotes or sidenotes, the content is lobsided to the left." The model
-     is Asterisk Magazine: the column centered, the notes taking the right
-     margin only when the window has room for them. This reverses the
-     2026-07-27 left-aligned layout; the sidenote gutter is no longer paid
-     for inside the band, it is the viewport's margin (see `.post .sidenote`
-     in base.scss and gutterFits() in sidenotes.js). */
-  margin: var(--space-s) auto;
-
-  /* NO MEASURE OF ITS OWN. Posts read at the site's --measure (66rch, about
-     665px), the same column as every page. A 60rch override was tried on
-     2026-11-05 and dropped the same day at his word ("Let's try 66rch for
-     posts then"). It bought the notes an earlier start (~1160px window
-     against ~1220px), and that was the only thing it bought. */
-
-  /* THE BREAKOUT, in one place. Everything below that spans the band —
-     the title, the date row, figures, wide images, embeds, galleries, the
-     blockquote — used to rely on the article's left edge BEING the band's
-     left edge, so `width: 100cqi` with `margin-inline: 0` landed exactly on
-     the band. Centered, the same box would overhang the band on the right
-     by half the leftover. `50% - 50cqi` is that half, negated: 50% of the
-     containing block (the article) minus half of `main`. It is 0 whenever
-     the article fills the band (narrow screens), and it self-corrects
-     inside a box that is already band-wide — an iframe in a 100cqi figure
-     computes 0. A custom property holds tokens, not a value, so the `%`
-     resolves where it is USED, against that element's containing block. */
-  --to-band: calc(50% - 50cqi);
+  /* Inline margins must mirror .container-ideal's `0 auto` (left 0, right
+     auto), because .post carries that class and post.css loads AFTER base.css
+     at equal specificity — whatever is written here wins. Getting this wrong is
+     invisible in the CSS and obvious on the page: an earlier `margin: X 0`
+     canceled the auto entirely, and `margin: X auto` re-centered the article
+     and collapsed the sidenote gutter. */
+  margin: var(--space-s) auto var(--space-s) 0;
   /* font-size removed 2026-07-27: `main` sets --step-0 for all content now, so
      this was a restatement — and being the ONLY such declaration is exactly why
      posts read larger than pages for so long. */
@@ -225,13 +197,11 @@ photo-cover__desc {
    the way a paragraph is: it is scanned once, so a longer line costs
    nothing and the extra width buys fewer wrapped lines.
 
-   `--to-band` pulls it out evenly on both sides of the centered column
-   (2026-11-05); it used to be `margin-inline: 0`, which kept the left edge
-   where the prose started while the column sat flush left. */
+   `margin-inline: 0` keeps the left edge where the prose starts. */
 .post h1 {
   width: 100cqi;
   max-width: 100cqi;
-  margin: 0 var(--to-band);
+  margin: 0;
 }
 
 /* ⚠️ A POST TITLE IS NOT UPPERCASED, and this is the only property of the
@@ -341,43 +311,21 @@ photo-cover__desc {
    base.scss sizes must be excluded here. sidenotes.js is unaffected — its
    obstacle list names `.gallery` on its own, beside `figure`. */
 .post figure:not(.gallery) {
-  margin-inline: var(--to-band);
+  margin-inline: 0;
   width: 100cqi;
   max-width: 100cqi;
-}
-
-/* The same re-anchoring for the band-wide media base.scss sizes for every
-   page (2026-11-05). base.scss sets them `margin-inline: 0`, which is right
-   for the flush-left pages and wrong for the centered post. `.large` keeps
-   its own breakpoint: below it the image is in the flow at the article's
-   width, which is the band there anyway, so --to-band computes 0. */
-.post :is(figure.full, img.full, figure.large, img.large),
-.post :where(iframe, video) {
-  margin-inline: var(--to-band);
-}
-
-/* The gallery bleeds to the viewport, centered on the page. base.scss does
-   it from `main`'s midpoint (`50cqi`), which assumes the article starts on
-   the band's left edge. A centered article shares `main`'s midpoint, so the
-   article's own half-width (`50%`) is the midpoint here. */
-.post .gallery {
-  margin-inline: calc(50% - var(--gallery-bleed) / 2);
 }
 
 
 /* ---- Blockquote breakout ---------------------------------------
    Yale e360 runs its pull quotes wider than the reading column. Adapted
    rather than copied: e360 CENTERS its quote, widening in both directions,
-   which it can do because its column is centered. Ours was not, then, and the
-   quote grew to the RIGHT only and kept the prose's left edge, which is what
+   which it can do because its column is centered. Ours is not — .container-ideal
+   is `margin-inline: 0 auto`, so the article's left edge is pinned to the
+   band edge that the header rule, the footer rule and the logo all align to.
+   So the quote grows to the RIGHT only and keeps that left edge, which is what
    Brajeshwar asked for: "constrained on the left of the article while moving
    beyond the width of the readable article."
-
-   The column IS centered now (2026-11-05) and the quote still keeps that
-   left edge — that ask was about the quote, not the column. It grows right
-   to the BAND's right edge: `50% + 50cqi` is half the article (its center)
-   plus half of `main`, measured from the article's left edge. When the
-   article fills the band, that is just 100%.
 
    ⚠️ WHY THIS IS GATED ON :not(.has-sidenotes) — the gutter it grows into is
    the SIDENOTE gutter. `.sidenote` is `position: absolute; left: 100%` with a
@@ -403,13 +351,14 @@ photo-cover__desc {
    (guardrail 4). JS off: no .has-sidenotes is ever added, the quote breaks out,
    and the footnotes render at the article foot where they always did — nothing
    to collide with. Narrow screens: gutterFits() fails, so again no class — but
-   there the band IS the column, so `50% + 50cqi` evaluates to the article's
-   own width and the breakout silently amounts to nothing.
+   there the band IS the column, so `min(96vw, --body-width-max)` evaluates to
+   the article's own width and the breakout silently amounts to nothing.
 
-   The quote ends exactly on the band's right edge, next to nothing and past
-   nothing. (Until 2026-11-05 this was `min(96vw, --body-width-max)`, the band's
-   full width, which was right only while the article's left edge was the
-   band's.) Not `--body-width-full` (1600px): that is the photo-cover bleed,
+   The width expression is deliberately the same one `.sidenote` bounds itself
+   with — min(96vw, --body-width-max) is THE band. Since the article's left edge
+   is the band's left edge, setting the quote to the band's width lands its
+   right edge exactly on the band's right edge, next to nothing and past
+   nothing. Not `--body-width-full` (1600px): that is the photo-cover bleed,
    and prose has no business out there.
 
    Stopping instead at calc(100% + var(--sidenote-gap)) was the safe-everywhere
@@ -417,7 +366,7 @@ photo-cover__desc {
    timid to read as intentional: 665px to 721px is under nine percent, which
    looks like a mistake rather than a break. */
 .post:not(.has-sidenotes) blockquote {
-  width: calc(50% + 50cqi);
+  width: min(96vw, var(--body-width-max));
 }
 
 
