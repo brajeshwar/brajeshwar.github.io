@@ -203,10 +203,9 @@ Originally absorbed from the 2027 planning braindump.
       existed. The remaining decision is whether to add headless Chromium to the Actions build
       (minutes and a few hundred MB per run) for a file the print dialog already produces. His
       call. See [`agents.md`](agents.md).
-- [ ] **Retire `cv.brajeshwar.com`** — `/cv/` replaces it as of 2026-08-09, so this is now only
-      waiting on him. ⚠️ `_redirect/resume.md` does **not** cover it: a Jekyll stub can only
-      redirect a path on this domain, and that is a different host. It needs the Cloudflare
-      Worker redirect with the others above.
+- [x] **Retire `cv.brajeshwar.com`** *(2026-11-06)* — no redirect. He removes the links himself
+      and lets the subdomain die out; it was only ever sent by hand. The Redirect Rule steps,
+      should that change, are in [`hosting.md`](hosting.md).
 - [x] **`/album/` is real** *(2026-08-01)* — eight photographs replacing the twelve borrowed
       book covers, entries sorted by `img` filename. ⚠️ Two of the eight have no `url` and
       render **unlinked by design**; both includes guard on the field rather than emitting

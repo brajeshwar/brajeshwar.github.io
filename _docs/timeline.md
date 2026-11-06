@@ -312,9 +312,8 @@ filter. There are no tracks, no periods and no filter, so there is nothing to be
 - [ ] **"Download Resume" PDF** — was scoped to "the Work view", which no longer exists. **`/cv/`
       is the better source**: one page, already in role order, no filter state to reason about.
       Tracked in [`todo.md`](todo.md) too; this is the same item.
-- [ ] **Retire `cv.brajeshwar.com`** — `/cv/` replaces it as of 2026-08-09, so this waits on him.
-      ⚠️ `_redirect/resume.md` does **not** cover it: a Jekyll stub can only redirect a path on
-      this domain. It needs the Cloudflare Worker redirect queued in [`todo.md`](todo.md).
+- [x] **Retire `cv.brajeshwar.com`** *(2026-11-06)* — no redirect; he removes the links and lets
+      it die out. See [`todo.md`](todo.md).
       Same item as todo.md's; recorded in both because either is a plausible place to look.
 - [x] ~~Decide oldest-first vs newest-first~~ — settled per page, see the order table. Not one
       answer: `/cv/` and `/now/` run newest-first, `/about/` and `/about/brajeshwar.com/` oldest.

@@ -179,6 +179,10 @@ or every message is rejected. The `openai-domain-verification` TXT was removed t
 
 ### cv.brajeshwar.com → /cv/ is a Redirect Rule, not a DNS record (2026-11-06)
 
+**Decision, same day: not doing it.** He will remove the links himself and let the subdomain
+die out — *"This is not that important and I have to send it manually anyways."* No
+redirect is planned. The steps below stay only in case that changes.
+
 DNS only resolves a name to an address; it cannot send a browser to a URL. The redirect
 has to be an HTTP `301` from Cloudflare's edge, and the edge only sees requests for a
 **proxied** (orange-cloud) record. So it takes two things: a proxied record with nothing
