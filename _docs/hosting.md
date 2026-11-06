@@ -177,6 +177,33 @@ non-sending domain. **If the domain ever sends mail, all three TXT records chang
 or every message is rejected. The `openai-domain-verification` TXT was removed the same day;
 `google-site-verification` remains.
 
+### cv.brajeshwar.com → /cv/ is a Redirect Rule, not a DNS record (2026-11-06)
+
+DNS only resolves a name to an address; it cannot send a browser to a URL. The redirect
+has to be an HTTP `301` from Cloudflare's edge, and the edge only sees requests for a
+**proxied** (orange-cloud) record. So it takes two things: a proxied record with nothing
+behind it, and a rule.
+
+On 2026-11-06 `cv.brajeshwar.com` was proxied and still answering `200` with its own copy of
+the CV. The headers (`access-control-allow-origin: *`,
+`cache-control: public, max-age=0, must-revalidate`, no GitHub headers) look like a
+**Cloudflare Pages** custom domain. If so, remove it from the Pages project first
+(Workers & Pages → project → Custom domains), or Pages keeps answering.
+
+1. **DNS → Records:** `cv` as `AAAA` → `100::`, **Proxied**. `100::` is the
+   discard-only address Cloudflare documents for exactly this — a hostname that exists only
+   for edge rules. It replaces whatever `cv` pointed at before.
+2. **Rules → Redirect Rules → Create rule:** custom filter, *Hostname equals
+   `cv.brajeshwar.com`*. Then *URL redirect*, type **Static**, URL
+   `https://brajeshwar.com/cv/`, status **301**, *Preserve query string* off. Static sends
+   every old path to the one page, which is right for a site that was a single CV.
+3. **SSL:** nothing to do. Universal SSL already covers first-level subdomains.
+4. **Check:** `curl -sI https://cv.brajeshwar.com/` should give `301` and
+   `location: https://brajeshwar.com/cv/`.
+
+A `301` is cached by browsers for a long time. To test without that, create the rule as
+`302`, confirm it with curl, then switch it to `301`.
+
 ## Cache headers we actually get (measured 2026-07-27)
 
 Not configured by us; there is no `_headers` file in the repo. This is what the edge
