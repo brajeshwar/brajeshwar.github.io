@@ -56,7 +56,7 @@ I’m lucky to have worked with some of the best teams, engineers, designers, fo
 
 2026 Apr — Present · AI Product Lead · Bangalore (India)
 
-In the last six months I added $200M+ to Wipro’s sales pipeline on my own, and a further $300M+ with the team. I work directly with Sales, GTM, and clients to understand their businesses and turn ideas into working prototypes and product portfolios, for Apple, Google, Chevron, J&J, Blackstone, Peloton, and bp, among others.
+In my first six months, I added $200M+ to Wipro’s sales pipeline on my own, and a further $300M+ with the team. I work directly with Sales, GTM, and clients to understand their businesses and turn ideas into working prototypes and product portfolios, for Apple, Google, Chevron, J&J, Blackstone, Peloton, and bp, among others.
 
 I lead a small, focused team building three internal tools: an AI-assisted prototype builder, an LLM router (similar to OpenRouter), and an IDE with a built-in knowledge graph and ontology for each project.
 
