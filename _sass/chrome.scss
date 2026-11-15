@@ -670,19 +670,43 @@ footer {
 /* ---- Theme toggle ------------------------------------------------------ */
 
 /* One button, Light or Dark, built on .icon-button like its neighbours.
-   theme-toggle.js wires it and sets aria-pressed when the page is dark. The
-   icon is a disc, half filled, and it turns over with the mode. */
+   theme-toggle.js wires it and sets aria-pressed when the page is dark.
+
+   The icon is a moon in light and a sun in dark (2026-11-15, after the
+   one on arslan.io: "I like their simplicity"). One SVG, three parts: a
+   disc, a bite taken out of it by a mask, and eight dots for rays. Going
+   dark, the bite slides off the disc, the disc shrinks to a sun, and the
+   rays come out around it. Under reduced motion it simply changes. */
 theme-toggle {
   display: inline-flex;
   align-items: center;
 }
 
-.theme-toggle svg {
-  transition: transform var(--transition-duration) ease;
+.sun-moon * {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease;
 }
 
-.theme-toggle[aria-pressed='true'] svg {
-  transform: rotate(180deg);
+.sun-moon__rays {
+  opacity: 0;
+  transform: scale(0.5) rotate(-45deg);
+  transform-box: view-box;
+}
+
+.theme-toggle[aria-pressed='true'] .sun-moon__body {
+  transform: scale(0.55);
+}
+
+.theme-toggle[aria-pressed='true'] .sun-moon__bite {
+  transform: translate(8px, -8px);
+}
+
+.theme-toggle[aria-pressed='true'] .sun-moon__rays {
+  opacity: 1;
+  transform: none;
 }
 
 /* No script, no toggle. With scripting off the site follows the system, and
