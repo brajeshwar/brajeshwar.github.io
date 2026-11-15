@@ -33,9 +33,9 @@
    laptop or bicycle; the group that used to be called Own is now
    KEEP, which frees the word for the page.
 
-   Deliberately weak dividers — a heading and space, no rule — so that
-   merging two of them, or lifting one onto its own page, stays a data
-   edit rather than a visual redesign. */
+   Deliberately weak dividers, a heading and space and no rule, so that
+   merging two of them or lifting one onto its own page is an edit to
+   the markup, not a redesign. */
 .page-own .own__section {
   margin-block: var(--space-xl) 0;
 }
@@ -44,12 +44,6 @@
   margin: 0;
   font-size: var(--step-1);
   font-weight: 400;
-}
-
-.page-own .own__section-intro {
-  margin: var(--space-3xs) 0 var(--space-s);
-  font-size: var(--step--1);
-  color: var(--text-color-low);
 }
 
 /* ---- One line of the inventory ----------------------------------
@@ -73,7 +67,7 @@
   border-top: var(--border-size-hairline) var(--border-style) var(--border-color-low);
 }
 
-.page-own .own__row > .strip__viewport {
+.page-own .own__line {
   min-width: 0;
 }
 
@@ -157,91 +151,34 @@
   width: 2.25rem;
 }
 
-/* ---- One item ---------------------------------------------------
-   A span or an anchor depending on whether the line has a url yet, so
-   the hover treatment is written for both. `display: block` on the
-   span matters: an inline element would drop the padding's vertical
-   half and the mark would sit on the text baseline. */
-.page-own .own__link,
-.page-own .own__link:visited {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.page-own a.own__link:hover .own__mark,
-.page-own a.own__link:focus-visible .own__mark {
-  border-color: var(--text-color);
-}
-
-.page-own a.own__link:hover .own__name,
-.page-own a.own__link:focus-visible .own__name {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
-/* ---- The mark: a logo slot that is never empty -------------------
-   Same idea as .bookplate on /books/. The box is drawn whether or not
-   a picture exists, so (a) the row does not reflow the day a logo is
-   added, and (b) a line without one reads as designed rather than as
-   a broken image. Without a picture it carries the brand's initial in
-   the serif; the markup marks that `aria-hidden` because the brand is
-   spelled out on the next line.
-
-   1:1 rather than the 3:4 of a book: logos are square-ish, and a
-   product shot crops to a square more gracefully than a wordmark
-   letterboxes into a portrait. */
-.page-own .own__mark {
+/* ---- One item: a drawing, its name, a note ----------------------
+   The drawings are line art in currentColor (_includes/own/), one grid
+   and one stroke, so they follow the theme and never compete with the
+   words under them. The box around each is the same hairline square
+   whatever is in it, so a row stays even. */
+.page-own .own__picture {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 2.5rem;
+  width: 4.5rem;
   aspect-ratio: 1;
   margin-bottom: var(--space-3xs);
 
   border: var(--border-size-hairline) var(--border-style) var(--border-color-low);
   border-radius: var(--border-radius);
-  transition: border-color 120ms ease-out;
-
-  font-family: var(--font-serif);
-  font-size: var(--step-0);
-  line-height: 1;
   color: var(--text-color-low);
 }
 
-/* ---- When it IS a picture ---------------------------------------
-   `object-fit: contain` or a wide wordmark stretches to the square.
-
-   [WARNING] AND IT SITS ON A PLATE. `--logo-plate` is the one token in
-   themes.css that does NOT flip with the theme, because a brand's
-   artwork has a fixed idea of its own background. Logos keep their
-   real colours here (2026-08-07: "just like how we have colorful
-   photos") — but a photo is opaque and a logo is transparent, so
-   without a ground Peak Design's black mark measured as a dark glyph
-   on a near-black square in dark mode and was all but invisible.
-
-   The plate is what makes "their own colours" actually work in both
-   themes; the alternative was repainting the mark in our ink, which
-   is what this replaced. A product PHOTO gets the plate too and does
-   not care — it covers it. */
-.page-own .own__mark--img {
-  object-fit: contain;
-  padding: 0.3rem;
-  background-color: var(--logo-plate);
-}
-
-.page-own .own__brand {
-  display: block;
-  font-size: var(--step--1);
-  letter-spacing: 0.04em;
-  color: var(--text-color);
+.page-own .own__drawing {
+  width: 75%;
+  height: 75%;
 }
 
 .page-own .own__name {
   display: block;
   font-size: var(--step--1);
-  color: var(--text-color-low);
+  color: var(--text-color);
   text-wrap: balance;
 }
 
@@ -252,6 +189,60 @@
   color: var(--text-color-low);
   opacity: var(--opacity-low);
   font-variant-numeric: tabular-nums;
+}
+
+/* ---- The brands under a line -------------------------------------
+   Present, not the point (2026-11-15: "minimal, clean, and are not the
+   focus"). A quiet row of names or logos under the items, each linking
+   to its Wikipedia page. A logo is gray and faint until it is pointed
+   at, and then shows its own colors; a name simply darkens. */
+.page-own .own__brands {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2xs) var(--space-s);
+
+  margin: var(--space-xs) 0 0;
+  padding: 0;
+  list-style: none;
+
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+}
+
+.page-own .own__brands a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-color-low);
+  opacity: var(--opacity-low);
+  text-decoration: none;
+  transition:
+    opacity 120ms ease-out,
+    color 120ms ease-out;
+}
+
+.page-own .own__logo {
+  display: block;
+  height: 1.1rem;
+  width: auto;
+  filter: grayscale(1);
+  transition: filter 120ms ease-out;
+}
+
+.page-own .own__brands a:hover,
+.page-own .own__brands a:focus-visible {
+  color: var(--text-color);
+  opacity: 1;
+}
+
+.page-own .own__brands a:hover .own__logo,
+.page-own .own__brands a:focus-visible .own__logo {
+  filter: none;
+}
+
+.page-own .own__pdf {
+  margin: calc(-1 * var(--space-s)) 0 var(--space-l);
+  font-size: var(--step--1);
 }
 
 /* ---- Carried-over notes -----------------------------------------
@@ -275,4 +266,59 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: var(--opacity-low);
+}
+
+/* ---- On paper ----------------------------------------------------
+   The inventory on one A4 sheet: the same page, printed. Rails wrap
+   instead of scrolling, the arrows and the notes stay on screen, and
+   the brand links print as names without their URLs. This is what
+   scripts/page-pdf.sh writes to static/pdf/own.pdf.
+
+   A4 through a named page, as /cv/ does it (cv.scss); the margin
+   comes from cv.scss's unnamed @page, which applies everywhere. */
+@media print {
+  @page own {
+    size: A4;
+  }
+
+  body:has(> main.page-own) {
+    page: own;
+  }
+
+  .page-own .own__wip,
+  .page-own .own__pdf,
+  .page-own .own__notes,
+  .page-own .strip__nav {
+    display: none;
+  }
+
+  .page-own .strip__viewport {
+    overflow: visible;
+  }
+
+  .page-own .own__rail {
+    flex-wrap: wrap;
+  }
+
+  .page-own .own__section {
+    margin-top: 1.2rem;
+    break-inside: avoid;
+  }
+
+  .page-own .own__row {
+    padding-block: 0.5rem;
+    break-inside: avoid;
+  }
+
+  .page-own .own__picture {
+    width: 3rem;
+  }
+
+  .page-own .own__brands a {
+    opacity: 1;
+  }
+
+  .page-own .own__brands a::after {
+    content: none;
+  }
 }

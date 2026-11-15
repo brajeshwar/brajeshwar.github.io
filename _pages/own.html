@@ -13,88 +13,283 @@ title_style: vertical
   The essential and perhaps everything I own. It is a layered and modular, kept monochrome, the bag it travels in, and the handful of things that stay put. The aim is for this list to get shorter with time.
 </p>
 
-{%- for section in site.data.own %}
-<section class="own__section">
-  <h2 class="own__section-title">{{ section.section }}</h2>
-  {%- if section.intro %}
-  <p class="own__section-intro">{{ section.intro }}</p>
-  {%- endif %}
+<p class="own__pdf"><a href="/static/pdf/own.pdf">The whole page on one A4 sheet (PDF)</a></p>
 
-  {%- for row in section.rows %}
+<section class="own__section">
+  <h2 class="own__section-title">Wear</h2>
+
   <div class="own__row">
     <div class="own__labelbox">
-      <h3 class="own__label">{{ row.label }}</h3>
-      {%- if row.link %}
-      <p class="own__label-link"><a href="{{ row.link | relative_url }}">{{ row.link_text | default: "More" }}</a></p>
-      {%- endif %}
+      <h3 class="own__label">Shirts</h3>
     </div>
 
-    <div class="strip__viewport">
-      <button class="strip__nav strip__nav--prev" type="button"
-              aria-label="Scroll {{ row.label | downcase }} left" hidden>
-        <span aria-hidden="true">&lsaquo;</span>
-      </button>
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll shirts left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
 
-      <ul class="strip own__rail">
-        {%- for item in row.items %}
-        <li class="strip__item own__item">
-          {%- comment -%}
-            NO url YET → a <span>, not <a href="">. An empty href is not an
-            inert link: it points at the current page, takes tab focus and
-            announces as a link. Same reasoning as home-strip.html, and the
-            normal state here — an inventory line exists long before it has
-            anywhere to point.
-          {%- endcomment -%}
-          {%- if item.url -%}
-          {%- assign proto = item.url | slice: 0, 4 -%}
-          <a class="own__link" href="{% if proto == 'http' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if proto == 'http' %} rel="noopener"{% endif %}>
-          {%- else -%}
-          <span class="own__link">
-          {%- endif -%}
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/shirt.svg -%}</span>
+            <span class="own__name">Oxford button-down</span>
+            <span class="own__note">white, 2</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/shirt.svg -%}</span>
+            <span class="own__name">Linen long-sleeve</span>
+            <span class="own__note">cream</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/tee.svg -%}</span>
+            <span class="own__name">Merino tee</span>
+            <span class="own__note">navy, charcoal, 3</span>
+          </li>
+        </ul>
 
-            {%- comment -%}
-              [WARNING] THE MARK IS ALWAYS RENDERED, with or without a picture, and
-              the box is the same size either way. So the row never reflows
-              when a logo arrives, and a line without one reads as designed
-              rather than as a missing image — the /books/ bookplate idea
-              applied to a logo slot. Both are `aria-hidden`: the brand is
-              spelled out immediately below, so the mark is decoration.
-
-              LOGOS KEEP THEIR OWN COLOURS (2026-08-07: "it is OK to keep
-              their original branding color and logo. Just like how we have
-              colorful photos"). A monochrome-mask version of this existed for
-              a few hours and is gone; the plate behind the picture is what
-              makes a brand's own colours legible on both themes, rather than
-              repainting the mark in ours. See `--logo-plate` in themes.scss.
-            {%- endcomment -%}
-            {%- if item.img -%}
-            {%- assign first = item.img | slice: 0 -%}
-            {%- if first == "/" -%}{%- assign src = item.img -%}
-            {%- else -%}{%- assign src = "/static/own/" | append: item.img -%}{%- endif -%}
-            <img class="own__mark own__mark--img" src="{{ src | relative_url }}"
-                 alt="" loading="lazy" width="120" height="120">
-            {%- else -%}
-            <span class="own__mark" aria-hidden="true">{{ item.brand | slice: 0 }}</span>
-            {%- endif -%}
-
-            <span class="own__brand">{{ item.brand }}</span>
-            {%- if item.name %}<span class="own__name">{{ item.name }}</span>{% endif %}
-            {%- if item.note %}<span class="own__note">{{ item.note }}</span>{% endif %}
-
-          {%- if item.url %}</a>{% else %}</span>{% endif -%}
-        </li>
-        {%- endfor %}
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll shirts right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+      <ul class="own__brands">
+        <li><a href="https://en.wikipedia.org/wiki/Bespoke_tailoring">Bespoke</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Muji">Muji</a></li>
       </ul>
-
-      <button class="strip__nav strip__nav--next" type="button"
-              aria-label="Scroll {{ row.label | downcase }} right" hidden>
-        <span aria-hidden="true">&rsaquo;</span>
-      </button>
     </div>
   </div>
-  {%- endfor %}
+
+  <div class="own__row">
+    <div class="own__labelbox">
+      <h3 class="own__label">Pants</h3>
+    </div>
+
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll pants left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/trousers.svg -%}</span>
+            <span class="own__name">Ankle trouser</span>
+            <span class="own__note">charcoal, 2</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/trousers.svg -%}</span>
+            <span class="own__name">Selvedge denim</span>
+            <span class="own__note">indigo</span>
+          </li>
+        </ul>
+
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll pants right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+      <ul class="own__brands">
+        <li><a href="https://en.wikipedia.org/wiki/Levi_Strauss_%26_Co.">Levi’s</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="own__row">
+    <div class="own__labelbox">
+      <h3 class="own__label">Outerwear</h3>
+    </div>
+
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll outerwear left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/blazer.svg -%}</span>
+            <span class="own__name">Unstructured blazer</span>
+            <span class="own__note">navy</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/jacket.svg -%}</span>
+            <span class="own__name">Packable shell</span>
+            <span class="own__note">black</span>
+          </li>
+        </ul>
+
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll outerwear right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="own__row">
+    <div class="own__labelbox">
+      <h3 class="own__label">Footwear</h3>
+    </div>
+
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll footwear left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/sneaker.svg -%}</span>
+            <span class="own__name">Minimal sneaker</span>
+            <span class="own__note">white</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/derby.svg -%}</span>
+            <span class="own__name">Derby</span>
+            <span class="own__note">black</span>
+          </li>
+        </ul>
+
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll footwear right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+      <ul class="own__brands">
+        <li><a href="https://en.wikipedia.org/wiki/On_(company)">On</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Allbirds">Allbirds</a></li>
+      </ul>
+    </div>
+  </div>
 </section>
-{%- endfor %}
+
+<section class="own__section">
+  <h2 class="own__section-title">Carry</h2>
+
+  <div class="own__row">
+    <div class="own__labelbox">
+      <h3 class="own__label">Bags</h3>
+    </div>
+
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll bags left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/backpack.svg -%}</span>
+            <span class="own__name">20L daypack</span>
+            <span class="own__note">cabin-legal</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/sling.svg -%}</span>
+            <span class="own__name">Sling</span>
+            <span class="own__note">everyday</span>
+          </li>
+        </ul>
+
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll bags right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+      <ul class="own__brands">
+        <li><a href="https://en.wikipedia.org/wiki/Peak_Design"><img class="own__logo" src="/static/own/peak-design.svg" alt="Peak Design" height="20" loading="lazy"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="own__row">
+    <div class="own__labelbox">
+      <h3 class="own__label">Travel</h3>
+    </div>
+
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll travel left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/cube.svg -%}</span>
+            <span class="own__name">Packing cubes</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/pouch.svg -%}</span>
+            <span class="own__name">Dopp kit</span>
+          </li>
+        </ul>
+
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll travel right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="own__section">
+  <h2 class="own__section-title">Keep</h2>
+
+  <div class="own__row">
+    <div class="own__labelbox">
+      <h3 class="own__label">Devices</h3>
+      <p class="own__label-link"><a href="/devices/">the lineage since 1999</a></p>
+    </div>
+
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll devices left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/laptop.svg -%}</span>
+            <span class="own__name">Laptop</span>
+            <span class="own__note">renew 2028</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/phone.svg -%}</span>
+            <span class="own__name">Phone</span>
+            <span class="own__note">renew 2027</span>
+          </li>
+        </ul>
+
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll devices right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="own__row">
+    <div class="own__labelbox">
+      <h3 class="own__label">Desk</h3>
+    </div>
+
+    <div class="own__line">
+      <div class="strip__viewport">
+        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll desk left" hidden>
+          <span aria-hidden="true">&lsaquo;</span>
+        </button>
+
+        <ul class="strip own__rail">
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/keyboard.svg -%}</span>
+            <span class="own__name">Keyboard</span>
+          </li>
+          <li class="strip__item own__item">
+            <span class="own__picture">{%- include own/lamp.svg -%}</span>
+            <span class="own__name">Lamp</span>
+          </li>
+        </ul>
+
+        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll desk right" hidden>
+          <span aria-hidden="true">&rsaquo;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="own__notes">
   <h2>Notes to Self</h2>
