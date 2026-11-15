@@ -524,7 +524,7 @@ function step(by) {
   show(current < 0 ? 0 : current + by, by > 0 ? 'next' : 'back');
 }
 
-// A small change to the view where it stands: closer, further, or turned.
+// A small change to the view where it stands: closer, further, or facing north.
 function nudge(change) {
   fly(Object.assign({}, view, change), 450);
 }
@@ -542,7 +542,6 @@ document.addEventListener('click', function (e) {
     }
     takeOver();
     if (button.dataset.step) return step(Number(button.dataset.step));
-    if (button.dataset.turn) return nudge({ heading: view.heading + Number(button.dataset.turn) });
     if ('north' in button.dataset) return nudge({ heading: 0 });
     if ('whole' in button.dataset) return fly(overview(), 1400);
     if ('closer' in button.dataset) return closer();
