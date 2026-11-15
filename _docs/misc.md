@@ -97,14 +97,19 @@ and shipped. Do not offer it again.
 | `city.json` | the model as whole numbers, 2.2 MB, and 655 KB as the live site serves it gzipped: the ground, the buildings, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
 
-**Version 0.1.0, the grayscale model, is kept** (2026-11-15, before color was
-tried): `london-southbank-v0.1.0-grayscale.html` beside `index.html`, with its
-own scripts and pictures in `v0.1.0-grayscale/`, and the git tag
-`v0.1.0-grayscale` on the commit that added it. It is marked `noindex` and its
-back link goes to the live page.
-[WARNING] The kept copy reads the live `city.json`. Whatever is added to that
-file, the layers the kept `city.js` reads have to stay as they are, or the
-copy breaks without anyone looking at it.
+**Each look is kept before the next is tried** (his word, 2026-11-15), as a
+page beside `index.html` with its own scripts and pictures in a folder of the
+same name, and a signed git tag on the commit that added it:
+
+| version | page | what it is |
+|---|---|---|
+| `v0.1.0-grayscale` | `london-southbank-v0.1.0-grayscale.html` | the model in grays |
+| `v0.2.0-tinted` | `london-southbank-v0.2.0-tinted.html` | blue river, green parks, warm ground; buildings gray |
+
+Each is marked `noindex`, and its back link goes to the live page.
+[WARNING] The kept pages read the live `city.json`. Whatever is added to that
+file, the layers a kept `city.js` reads have to stay as they are, or a kept
+page breaks without anyone looking at it. Add to the data; do not reshape it.
 
 **Without JavaScript, or without WebGL2,** the page is the picture, the pins on
 it (placed in percent, in the HTML), and the list they link to. The script adds

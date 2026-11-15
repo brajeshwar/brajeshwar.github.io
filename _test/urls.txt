@@ -1507,3 +1507,4 @@
 /styleguide/
 /misc/london-southbank/
 /misc/london-southbank/london-southbank-v0.1.0-grayscale.html
+/misc/london-southbank/london-southbank-v0.2.0-tinted.html
