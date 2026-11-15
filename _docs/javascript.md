@@ -30,8 +30,8 @@ Gzip is per file at `-9`. "Pages" is out of the 1,485 built pages that carry the
 |---|---:|---:|---:|---|
 | `theme-toggle.js` | 2.1 KB | 0.9 KB | 0.5 KB | every page (Light/Dark; replaced the 4.3 KB `appearance.js` panel, 2026-11-15) |
 | `search.js` | 9.1 KB | 3.0 KB | 1.3 KB | every page (⌘K palette, `/`, **and the `/search/` page**) |
-| `keys.js` | 3.8 KB | 1.4 KB | 0.8 KB | every page (single-key shortcuts: `h` `r` `a` `d` `w` `s` `?`, 2026-11-15) |
-| `keys-help.js` | 3.2 KB | 1.5 KB | 0.8 KB | **on demand**, the first time `?` is pressed; its URL rides on `keys.js`'s `data-help` so the hash step rewrites it |
+| `keys.js` | 4.8 KB | 1.8 KB | 0.9 KB | every page (single-key shortcuts: `h` `r` `a` `d` `w` `s` `g g` `Shift+G` `t` `?`, 2026-11-15) |
+| `keys-help.js` | 3.3 KB | 1.6 KB | 0.8 KB | **on demand**, the first time `?` is pressed; its URL rides on `keys.js`'s `data-help` so the hash step rewrites it |
 | `back-to-top.js` | 4.3 KB | 1.0 KB | 0.6 KB | every page, but **self-limiting**: returns at once unless the page is >2.5 viewports tall. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
 | `sidenotes.js` | 13.6 KB | 4.9 KB | 1.9 KB | **93 pages**, only where footnotes exist |
 | `anchors.js` | 2.1 KB | 0.5 KB | 0.3 KB | **457 pages**, only where an `h2`+ exists |

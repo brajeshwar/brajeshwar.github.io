@@ -153,6 +153,25 @@ test('keys: d and a walk the articles, and h goes home', async ({ page }) => {
   expect(new URL(page.url()).pathname).toBe('/');
 });
 
+test('keys: Shift+G goes to the end, g g to the top, and t turns the mode', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'light', reducedMotion: 'reduce' });
+  await page.goto(POST_WITH_NOTES);
+  const y = () => page.evaluate(() => window.scrollY);
+
+  await page.keyboard.press('Shift+G');
+  await expect.poll(y).toBeGreaterThan(500);
+
+  await page.keyboard.press('g');
+  await page.keyboard.press('g');
+  await expect.poll(y).toBe(0);
+
+  await page.keyboard.press('t');
+  await expect(page.getByRole('button', { name: 'Dark mode' })).toHaveAttribute(
+    'aria-pressed',
+    'true'
+  );
+});
+
 test('keys: a letter typed into search stays a letter', async ({ page }) => {
   await page.goto(POST_WITH_NOTES);
   await page.keyboard.press('/');

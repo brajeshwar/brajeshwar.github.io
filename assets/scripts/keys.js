@@ -4,6 +4,8 @@
  *   r        a random article
  *   a  d     previous and next article, on an article
  *   w  s     scroll up and down a screen
+ *   g g      the top of the page, and Shift+G the end, as in Gmail
+ *   t        light or dark, by pressing the theme button
  *   ?        the list of shortcuts, in keys-help.js
  *
  * Search keeps its own keys, / and Cmd K, in search.js.
@@ -61,12 +63,37 @@
     return a && a.href;
   }
 
+  function motion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  }
+
   function scroll(direction) {
-    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollBy({
-      top: direction * window.innerHeight * 0.8,
-      behavior: still ? 'auto' : 'smooth',
-    });
+    window.scrollBy({ top: direction * window.innerHeight * 0.8, behavior: motion() });
+  }
+
+  function scrollToEnd(end) {
+    var top = end ? document.documentElement.scrollHeight : 0;
+    window.scrollTo({ top: top, behavior: motion() });
+  }
+
+  /* g on its own does nothing. A second g within this long goes to the
+     top; any other key in between starts the count again. */
+  var G_WINDOW = 800;
+  var lastG = 0;
+
+  function pressG() {
+    var now = Date.now();
+    if (now - lastG < G_WINDOW) {
+      lastG = 0;
+      scrollToEnd(false);
+    } else {
+      lastG = now;
+    }
+  }
+
+  function pressButton(selector) {
+    var button = document.querySelector(selector);
+    if (button) button.click();
   }
 
   var KEYS = {
@@ -87,6 +114,10 @@
     },
     s: function () {
       scroll(1);
+    },
+    g: pressG,
+    t: function () {
+      pressButton('theme-toggle .theme-toggle');
     },
   };
 
@@ -118,11 +149,19 @@
       return;
     }
 
-    /* Shift is a different key, so Shift+H is left alone. Caps Lock is
-       not, and its capital H still means home. */
-    if (e.shiftKey || isOff()) return;
+    if (isOff()) return;
     var key = e.key.toLowerCase();
-    if (!Object.prototype.hasOwnProperty.call(KEYS, key)) return;
+    if (key !== 'g') lastG = 0;
+
+    if (e.shiftKey && e.key === 'G') {
+      e.preventDefault();
+      scrollToEnd(true);
+      return;
+    }
+
+    /* Otherwise Shift is a different key, so Shift+H is left alone. Caps
+       Lock is not, and its capital H still means home. */
+    if (e.shiftKey || !Object.prototype.hasOwnProperty.call(KEYS, key)) return;
     // Holding a key down scrolls on, but never navigates twice.
     if (e.repeat && key !== 'w' && key !== 's') return;
     e.preventDefault();

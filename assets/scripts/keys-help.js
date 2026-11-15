@@ -21,6 +21,9 @@
     [['d'], 'Next article'],
     [['w'], 'Scroll up'],
     [['s'], 'Scroll down'],
+    [['g g'], 'Top of the page'],
+    [['Shift G'], 'End of the page'],
+    [['t'], 'Light or dark'],
     [['?'], 'This list'],
     [['Esc'], 'Close'],
   ];
