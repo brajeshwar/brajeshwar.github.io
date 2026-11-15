@@ -142,6 +142,9 @@
   document.addEventListener('keydown', function (e) {
     if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
     if (isTyping(e.target)) return;
+    /* Search is open but its box may not have the focus yet: Pagefind
+       loads on the first keystroke. Letters typed that fast are a query. */
+    if (document.querySelector('.site-search__panel:not([hidden])')) return;
 
     if (e.key === '?') {
       e.preventDefault();
