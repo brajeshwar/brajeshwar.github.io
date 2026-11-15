@@ -354,7 +354,7 @@ export function renderer(canvas, model) {
   let depth, solid, path, city, walk;
   const camera = { matrix: null, eye: [0, 0, 0], width: 1, height: 1 };
   // The sun looks the same way all day; only the window it looks through moves.
-  const sun = { view: null, matrix: null, near: 0, far: 0, pane: '', size: 0, texel: 1 };
+  const sun = { view: null, matrix: null, near: 0, far: 0, pane: '', side: 0, size: 0, texel: 1 };
 
   // Everything the GPU holds, made here so a lost context can be made again.
   function setup() {
@@ -480,7 +480,12 @@ export function renderer(canvas, model) {
       ];
     }
     const widest = Math.max(box[1] - box[0], box[3] - box[2], 120) * 1.04;
-    const side = Math.pow(1.25, Math.ceil(Math.log(widest) / Math.log(1.25)));
+    // Grow the moment it must, but shrink only when there is plenty to
+    // spare. A window sized to fit exactly would flick between two sizes as
+    // the camera turned, and every flick is a twitch in every shadow.
+    if (widest > sun.side || widest < sun.side / 1.7)
+      sun.side = Math.pow(1.25, Math.ceil(Math.log(widest) / Math.log(1.25)));
+    const side = sun.side;
     const texel = side / sun.size;
     const left = Math.floor(((box[0] + box[1]) / 2 - side / 2) / texel) * texel;
     const bottom = Math.floor(((box[2] + box[3]) / 2 - side / 2) / texel) * texel;

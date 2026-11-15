@@ -26,7 +26,9 @@ const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const LONG = 7; // the isometric lens, in degrees
 const SHORT = 38; // the lens for flying
-const SPEED = 150; // meters a second along the walk
+const CRUISE = 150; // meters a second along the walk, on the straight
+const TURN = 40; // degrees a second the camera may turn, flying a bend
+const PUSH = 70; // meters a second it may gain or lose in a second
 
 let model, draw, view, flight, look;
 let stops = [];
@@ -34,6 +36,7 @@ let current = -1;
 let walked = 0;
 let playing = false;
 let queued = false;
+let pinSize = 0; // how wide a pin is, in pixels
 
 // ---- small helpers -----------------------------------------------------
 
@@ -44,7 +47,15 @@ const ramp = (lo, hi, t) => ease(clamp((t - lo) / (hi - lo), 0, 1));
 // The short way round from one bearing to another, in degrees either side.
 const swing = (from, to) => ((((to - from) % 360) + 540) % 360) - 180;
 
-// The view part of the way from a to b, turning the short way round.
+// Half a lens angle as a tangent, which is what the camera's distance from
+// its subject goes by, and back again.
+const reach = (lens) => Math.tan((lens * Math.PI) / 360);
+const lensOf = (tangent) => (Math.atan(tangent) * 360) / Math.PI;
+
+// The view part of the way from a to b, turning the short way round. Span
+// and lens change by ratio, not by amount: going from the long lens to the
+// short one the camera comes in three kilometers, and by amount it would do
+// most of that in the first moment.
 function between(a, b, t) {
   const turn = swing(a.heading, b.heading);
   return {
@@ -54,7 +65,7 @@ function between(a, b, t) {
     heading: a.heading + turn * t,
     pitch: mix(a.pitch, b.pitch, t),
     span: a.span * Math.pow(b.span / a.span, t),
-    lens: mix(a.lens, b.lens, t),
+    lens: lensOf(reach(a.lens) * Math.pow(reach(b.lens) / reach(a.lens), t)),
   };
 }
 
@@ -75,18 +86,69 @@ function along(distance) {
   return [mix(a[0], b[0], t), mix(a[1], b[1], t), mix(a[2], b[2], t)];
 }
 
-// The compass bearing of the walk at a distance along it, looking ahead
-// (or behind) far enough that a kink in the path does not swing the camera.
-function bearing(distance, forward) {
-  const here = along(distance);
-  let x = 0;
-  let y = 0;
-  for (const reach of [50, 100, 160]) {
-    const there = along(distance + (forward ? reach : -reach));
-    x += there[0] - here[0];
-    y += there[1] - here[1];
+// ---- the camera's line -------------------------------------------------
+//
+// The walk as drawn follows the footpath corner for corner: a hundred and
+// fifty of them sharper than sixty degrees, round kiosks, up steps, across
+// roads. A camera made to follow that lurches from side to side and swings
+// its head at every one. So the camera flies a line of its own: the walk
+// sampled every few meters and blurred, its place over thirty meters and its
+// direction over sixty. It cuts the corners a walker has to take, by a few
+// meters and at the worst dogleg by thirty. The path drawn on the ground is
+// still the true one.
+
+const STRIDE = 4; // meters between one point of the line and the next
+let line = null;
+
+// A list of numbers, each replaced by the weighted average of its neighbors
+// for a few `meters` either side. The ends stay where they are.
+function blur(values, meters) {
+  const sigma = meters / STRIDE;
+  const far = Math.ceil(sigma * 3);
+  const out = new Float32Array(values.length);
+  for (let i = 0; i < values.length; i++) {
+    let sum = 0;
+    let weight = 0;
+    for (let k = -far; k <= far; k++) {
+      const w = Math.exp((-k * k) / (2 * sigma * sigma));
+      sum += w * values[clamp(i + k, 0, values.length - 1)];
+      weight += w;
+    }
+    out[i] = sum / weight;
   }
-  return (Math.atan2(x, y) * 180) / Math.PI;
+  return out;
+}
+
+function drawLine() {
+  const count = Math.ceil(loop() / STRIDE) + 1;
+  const raw = [[], [], []];
+  for (let i = 0; i < count; i++) along(i * STRIDE).forEach((v, axis) => raw[axis].push(v));
+  const x = blur(raw[0], 30);
+  const y = blur(raw[1], 30);
+  // Which way the line runs at each point: toward the point forty meters
+  // on, unwound so that the bearing never jumps a whole turn.
+  const course = [];
+  for (let i = 0; i < count; i++) {
+    const j = Math.min(i + 10, count - 1);
+    const toward = (Math.atan2(x[j] - x[i], y[j] - y[i]) * 180) / Math.PI;
+    const stalled = Math.hypot(x[j] - x[i], y[j] - y[i]) < 2;
+    const last = i ? course[i - 1] : toward;
+    course.push(stalled ? last : last + swing(last, toward));
+  }
+  line = { x: x, y: y, z: blur(raw[2], 30), course: blur(course, 60) };
+}
+
+// The camera's line at a distance along the walk: a place, and a bearing.
+function ride(distance) {
+  const at = clamp(distance / STRIDE, 0, line.x.length - 1);
+  const i = Math.min(Math.floor(at), line.x.length - 2);
+  const t = at - i;
+  return {
+    x: mix(line.x[i], line.x[i + 1], t),
+    y: mix(line.y[i], line.y[i + 1], t),
+    z: mix(line.z[i], line.z[i + 1], t),
+    heading: mix(line.course[i], line.course[i + 1], t),
+  };
 }
 
 // ---- the look, from the page's own colors ----------------------------
@@ -186,7 +248,7 @@ function stopView(i) {
     x: stop.at[0],
     y: stop.at[1],
     z: stop.at[2],
-    heading: facing == null ? bearing(stop.at[3], true) - 32 : facing,
+    heading: facing == null ? ride(stop.at[3]).heading - 32 : facing,
     pitch: 44,
     span: 430,
     lens: LONG,
@@ -218,10 +280,12 @@ function fly(to, ms) {
   redraw();
 }
 
-// The camera low over the path at a distance along it, facing a bearing.
-function cruise(distance, heading) {
-  const p = along(distance);
-  return { x: p[0], y: p[1], z: p[2], heading: heading, pitch: 24, span: 190, lens: SHORT };
+// The camera low over its line at a distance along the walk, facing the
+// way it is going.
+function cruise(distance, forward) {
+  const at = ride(distance);
+  if (!forward) at.heading += 180;
+  return Object.assign(at, { pitch: 24, span: 190, lens: SHORT });
 }
 
 // How long the walk is, round the whole loop, in meters.
@@ -234,8 +298,67 @@ function here() {
   return walked >= loop() - 1 ? 0 : walked;
 }
 
-// To a stop along the path itself: ease down out of the view as it stands,
-// cruise low with the path ahead, ease up into the stop's own view.
+// How sharply the camera's line bends at a distance along the walk, in
+// degrees a meter.
+function bend(distance) {
+  const i = clamp(Math.floor(distance / STRIDE), 0, line.course.length - 2);
+  return Math.abs(line.course[i + 1] - line.course[i]) / STRIDE;
+}
+
+// How fast a flight goes at a distance along the walk, in meters a second,
+// on its way from one distance to another. It eases away and eases in; it
+// slows through a bend, so the camera never turns faster than TURN; and
+// the fly-by, which lingers, eases off past every stop so its name can be read.
+function pace(distance, from, to, lingering) {
+  // A long leg may go faster on the straight, or Next would be a long wait.
+  let speed = CRUISE * (lingering ? 1 : clamp(Math.abs(to - from) / 800, 1, 1.4));
+  speed *= mix(0.3, 1, ramp(0, 90, Math.abs(distance - from)));
+  speed *= mix(0.3, 1, ramp(0, 110, Math.abs(to - distance)));
+  if (lingering) {
+    let near = 0;
+    for (const stop of stops)
+      near = Math.max(near, 1 - ramp(0, 80, Math.abs(distance - stop.at[3])));
+    speed *= 1 - 0.5 * near;
+  }
+  return speed / Math.hypot(1, (speed * bend(distance)) / TURN);
+}
+
+// A timetable for a flight along the walk: the second at which it has gone
+// each few meters further. The pace comes first, then the camera's weight:
+// it cannot gain or lose speed faster than PUSH, so it starts to brake well
+// before a bend and pulls away gently after one, in place of stamping on the
+// brakes at the corner.
+function timetable(from, to, lingering) {
+  const steps = Math.max(1, Math.ceil(Math.abs(to - from) / STRIDE));
+  const step = (to - from) / steps;
+  const speed = [];
+  for (let i = 0; i < steps; i++) speed.push(pace(from + (i + 0.5) * step, from, to, lingering));
+  const most = (v) => Math.sqrt(v * v + 2 * PUSH * Math.abs(step));
+  for (let i = 1; i < steps; i++) speed[i] = Math.min(speed[i], most(speed[i - 1]));
+  for (let i = steps - 2; i >= 0; i--) speed[i] = Math.min(speed[i], most(speed[i + 1]));
+  const due = [0];
+  for (let i = 0; i < steps; i++) due.push(due[i] + Math.abs(step) / speed[i]);
+  return { from: from, step: step, due: due, seconds: due[steps] };
+}
+
+// How far along the walk a flight is at a time on its timetable.
+function reached(table, clock) {
+  const due = table.due;
+  let i = 0;
+  let j = due.length - 1;
+  while (j - i > 1) {
+    const mid = (i + j) >> 1;
+    if (due[mid] <= clock) i = mid;
+    else j = mid;
+  }
+  const part = due[j] > due[i] ? clamp((clock - due[i]) / (due[j] - due[i]), 0, 1) : 0;
+  return table.from + (i + part) * table.step;
+}
+
+// To a stop along the walk: ease down out of the view as it stands, cruise
+// low along the line, ease up into the stop's own view. A short hop does not
+// come all the way down; there is no time to, and diving for a hundred
+// meters only to climb again is all lurch.
 function travel(to, forward) {
   let d0 = here();
   let d1 = stops[to].at[3];
@@ -244,73 +367,47 @@ function travel(to, forward) {
   if (!forward && d0 <= d1) d0 = loop();
   const from = Object.assign({}, view);
   const still = stopView(to);
+  const table = timetable(d0, d1, false);
+  const dive = clamp(Math.abs(d1 - d0) / 450, 0.15, 1);
   flight = {
-    ms: clamp((Math.abs(d1 - d0) / SPEED) * 1000, 2800, 12000),
+    ms: Math.max(table.seconds, 2.8) * 1000,
     at: function (t) {
-      walked = mix(d0, d1, ease(t));
-      const low = cruise(walked, bearing(walked, forward));
-      // Join the path from wherever the reader had wandered off to.
-      const joined = ramp(0, 0.24, t);
-      low.x = mix(from.x, low.x, joined);
-      low.y = mix(from.y, low.y, joined);
-      low.z = mix(from.z, low.z, joined);
-      return between(between(from, low, joined), still, ramp(0.72, 1, t));
+      walked = reached(table, t * table.seconds);
+      const low = cruise(walked, forward);
+      const joined = ramp(0, 0.3, t);
+      const leaving = ramp(0.7, 1, t);
+      const level = between(from, still, ease(t));
+      const v = between(level, low, dive * joined * (1 - leaving));
+      // On the line in between; at each end, where that end's view looks.
+      for (const axis of ['x', 'y', 'z'])
+        v[axis] = mix(mix(from[axis], low[axis], joined), still[axis], leaving);
+      // The head turns toward the way ahead, and back, more slowly than the
+      // rest, and never by more than a glance over the shoulder: it is the
+      // turning that is felt.
+      const ahead = dive * ramp(0, 0.45, t) * (1 - ramp(0.55, 1, t));
+      v.heading = level.heading + clamp(swing(level.heading, low.heading), -75, 75) * ahead;
+      return v;
     },
   };
   flight.start = performance.now();
   redraw();
 }
 
-// How fast the fly-by goes at a distance along the walk, in meters a second:
-// easing away from where it starts, easing off past every stop so its name
-// can be read, and easing in to the end.
-function pace(distance, from) {
-  let near = 0;
-  for (const stop of stops)
-    near = Math.max(near, 1 - ramp(0, 1, Math.abs(distance - stop.at[3]) / 90));
-  const away = mix(0.3, 1, ramp(0, 90, distance - from));
-  const home = mix(0.3, 1, ramp(0, 120, loop() - distance));
-  return SPEED * 0.85 * (1 - 0.62 * near) * away * home;
-}
-
-// The whole walk in one flight: down onto the path from wherever the view
+// The whole walk in one flight: down onto the line from wherever the view
 // is, round the loop without a halt, and up into the first stop's view at
 // the end. Each stop is marked as it comes up.
 function tour() {
   const from = Object.assign({}, view);
-  const start = here();
   const end = stopView(0);
-  // A timetable: the seconds it takes to reach every fifth meter.
-  const STEP = 5;
-  const due = [0];
-  for (let d = start; d < loop(); d += STEP) due.push(due[due.length - 1] + STEP / pace(d, start));
-  const total = due[due.length - 1];
-  let facing = bearing(start, true);
-  let last = 0;
+  const table = timetable(here(), loop(), true);
   flight = {
-    ms: total * 1000,
+    ms: table.seconds * 1000,
     at: function (t) {
-      const clock = t * total;
-      let i = 0;
-      let j = due.length - 1;
-      while (j - i > 1) {
-        const mid = (i + j) >> 1;
-        if (due[mid] <= clock) i = mid;
-        else j = mid;
-      }
-      const part = due[j] > due[i] ? (clock - due[i]) / (due[j] - due[i]) : 0;
-      walked = Math.min(start + (i + part) * STEP, loop());
-      // Turn toward the way ahead a little at a time, so a kink in the path
-      // or the turn back down Peter's Hill swings the camera, not snaps it.
-      facing += swing(facing, bearing(walked, true)) * (1 - Math.exp(-(clock - last) / 0.45));
-      last = clock;
-      const low = cruise(walked, facing);
-      const joined = ramp(0, 2.2, clock);
-      low.x = mix(from.x, low.x, joined);
-      low.y = mix(from.y, low.y, joined);
-      low.z = mix(from.z, low.z, joined);
+      const clock = t * table.seconds;
+      walked = reached(table, clock);
       approach();
-      return between(between(from, low, joined), end, ramp(total - 2.6, total, clock));
+      const low = between(from, cruise(walked, true), ramp(0, 2.4, clock));
+      return between(low, end, ramp(table.seconds - 2.8, table.seconds, clock));
     },
   };
   flight.start = performance.now();
@@ -432,7 +529,7 @@ function placePins(far) {
     stop.pin.style.visibility = inside ? 'visible' : 'hidden';
     if (inside) seen.push({ pin: stop.pin, x: p.x, y: p.y });
   }
-  const room = seen.length ? seen[0].pin.offsetWidth * (far ? 0.72 : 1) + 3 : 0;
+  const room = pinSize * (far ? 0.72 : 1) + 3;
   for (let pass = 0; pass < 4; pass++)
     for (let i = 0; i < seen.length; i++)
       for (let j = i + 1; j < seen.length; j++) {
@@ -681,6 +778,7 @@ function start(city) {
     pin.title = item.querySelector('strong').textContent;
     stops.push({ item: item, pin: pin, at: places.get(item.id) });
   }
+  drawLine();
   readLook();
   view = overview();
   for (const el of stage.parentNode.querySelectorAll('.steps, .tools')) el.hidden = false;
@@ -694,7 +792,10 @@ function start(city) {
   }
   redraw();
 
-  new ResizeObserver(redraw).observe(canvas);
+  new ResizeObserver(function () {
+    pinSize = stops[0].pin.offsetWidth;
+    redraw();
+  }).observe(canvas);
   // The page's Light or Dark can change under us: the system's, or the
   // site's own toggle in another tab.
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', relight);

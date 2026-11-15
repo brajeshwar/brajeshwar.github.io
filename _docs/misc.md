@@ -51,6 +51,20 @@ is all he saw on his own Mac, where Reduce Motion is on, before asking for the
 fly-by on 2026-11-15. The setting still stops what nobody asked for: the
 carry-on after a drag, the list scrolling itself smoothly, and the fades.
 
+**The camera does not follow the path. It flies a line of its own**
+(2026-11-15, after *"The flight is cool but its janky"*). The walk as mapped
+has 150 corners sharper than sixty degrees, and a camera made to follow it was
+shoved sideways and swung its head at every one. `walk.js` blurs the walk into
+a line (its place over 30 m, its direction over 60 m), slows through bends so
+the head never turns faster than 40 degrees a second, and gives the camera
+weight, so it brakes before a bend and not at it. Flown on paper at sixty
+frames a second round the whole loop, the head's turning fell from 94 to 38
+degrees a second at the 95th percentile and from 371 to 41 at the worst, and
+the shove on the camera fell about tenfold. It cost no data and no library;
+the price is that the camera cuts corners a walker cannot, by a few meters and
+at the worst dogleg by thirty. The path drawn on the ground is still the true
+one. Drawing was never the trouble: his Mac held 8 ms a frame before and after.
+
 **Photo-real was asked for and declined, 2026-11-15.** The only photo-real 3D
 of London is Google's Photorealistic 3D Tiles, which need an API key with
 billing, load Google's script, and leave the page depending on Google for as
