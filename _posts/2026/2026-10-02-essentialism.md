@@ -22,6 +22,7 @@ This is my working list. It is not a system, and it will keep changing.
 
 **No regrets.** If I die tomorrow, I would like the family not to inherit a puzzle. No accounts to untangle, no subscriptions quietly charging, no closet of mystery boxes. Just a few good things, [in their places](/2026/avoid-losing-items-assign-places-for-them/), with [backups](/2021/backup/), that anyone can understand.
 
+
 [^rams]: “Less, but better” is [Dieter Rams](https://en.wikipedia.org/wiki/Dieter_Rams)’ *Weniger, aber besser*, the line he lived his design by at Braun. McKeown borrows it as the motto of the book.
 
 [^accounts]: Every account is one more place for my data to leak from. I would rather [assume it will](/2025/naked-on-the-internet/), and keep fewer of them.
