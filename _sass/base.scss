@@ -17,6 +17,16 @@
   font-optical-sizing: auto;
 }
 
+/* An explicit mode pins the UA's scheme too (2026-11-15). `light dark` lets
+   the browser pick from the OS, so Dark chosen on a light OS still got a
+   WHITE canvas — and the canvas is what shows between pages, so every link
+   or button click in Dark flashed white before the next page painted. The
+   no-flash snippet in default.html sets the <meta name="color-scheme"> to
+   match, for the moment before this stylesheet arrives. Auto keeps the
+   `light dark` above, which is correct for it. */
+:root[data-theme="dark"]  { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+
 *,
 ::before,
 ::after {
