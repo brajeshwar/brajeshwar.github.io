@@ -10,7 +10,7 @@
 # --watch even wipes _site/pagefind/ on every rebuild. So ⌘K search only works
 # locally when you serve a freshly indexed _site. Use `make serve` for that.
 
-.PHONY: albums build cv-pdf pagefind serve dev clean test test-site test-urls
+.PHONY: albums build cv-pdf pagefind serve dev clean test test-site test-urls lint format
 
 ## albums  — fetch albums.oinam.com's feed into _data/albums.yaml (generated, gitignored).
 ##           The home page's Albums strip is EMPTY without it, so `build` runs it
@@ -70,6 +70,15 @@ test-site:
 ##           then commit the file. It only ever adds; removing a line is a decision.
 test-urls: test-site
 	node _test/update-urls.mjs $(TEST_SITE)
+
+## lint    — ESLint + Stylelint + a Prettier check over the CODE: _sass, assets/scripts,
+##           scripts, _test. Never content, never the Liquid layouts. CI runs this too.
+lint:
+	npm run lint
+
+## format  — rewrite the same files in the house style (.prettierrc.mjs), then `make lint`
+format:
+	npm run format
 
 ## clean   — remove _site/ and Jekyll caches
 clean:

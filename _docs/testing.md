@@ -70,3 +70,37 @@ treats a missing `data-theme` as auto.
   middle of the body's 500 ms fade.
 - `_test/` starts with an underscore, so Jekyll never copies it. `package.json` and the
   lockfile are root-level and are excluded in `_config.yml`, the same as the Makefile.
+
+## Lint and format
+
+Added 2026-11-15: *"Can we lint our code and format (prettifier) them?"*
+
+    make lint      # check: ESLint, Stylelint, prettier --check. CI runs this, after the tests
+    make format    # rewrite in the house style, then run make lint
+
+**Scope is the code and nothing else:** `_sass/`, `assets/scripts/`, `scripts/` and `_test/`,
+plus the config files. Never `_posts`, `_pages`, `_drafts` or `_data` (guardrail 1), and
+never `_layouts` or `_includes`, because Prettier does not understand Liquid and would mangle it.
+The paths live in `package.json`'s `lint` and `format` scripts.
+
+| tool | config | what it holds the code to |
+|---|---|---|
+| Prettier | `.prettierrc.mjs` | layout: single quotes, 100 columns, ES5 trailing commas |
+| ESLint | `eslint.config.mjs` | `@eslint/js` recommended, correctness only. Browser globals for `assets/scripts`, Node for the rest |
+| Stylelint | `.stylelintrc.mjs` | `stylelint-config-recommended-scss`, correctness only, three rules off (each says why) |
+
+- ⚠️ **Prettier removed the hand-aligned columns** in the Sass (the `:` in `config.scss`'s
+  ratio list, the `--step-*` values). It has no option to keep them. The reformat is its own
+  commit. If the columns matter more than the tool, revert that one commit and drop the
+  `prettier --check` from `npm run lint`, or CI will fail on the unformatted code.
+- **The reformat changed no rendered value.** The built stylesheet differed in six lines across
+  three rules, all of them spelling: hex went lowercase (`#FFFCF0` → `#fffcf0`) and trailing
+  zeros dropped (`0.10` → `0.1`). The tests passed before and after.
+- What the first lint run found, fixed with no change in behavior: a variable in `search.js`
+  that was assigned and never read, a needless escape in a `sidenotes.js` regex, a raw BOM
+  character in a `build-agent-markdown.mjs` regex (now `﻿`), and two `word-wrap`
+  declarations (now `overflow-wrap`, the standard name for the same property).
+- Two ESLint rules are relaxed rather than "fixed": `catch (e) {}` around `localStorage` is
+  deliberate, since storage can throw and the right response is to carry on.
+- `eslint.config.mjs` is excluded in `_config.yml`, because ESLint will not read a dotfile name.
+  The other two configs are dotfiles, which Jekyll never copies.

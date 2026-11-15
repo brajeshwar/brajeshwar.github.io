@@ -738,7 +738,7 @@ li::marker {
 
 /* word-wrap plain-text in codes */
 .language-plaintext code {
-  word-wrap: break-word;
+  overflow-wrap: break-word;   // word-wrap is its legacy alias
   white-space: pre-wrap;
 }
 
@@ -761,7 +761,7 @@ th {
   padding: var(--space-3xs) var(--space-2xs);
   text-align: left;
   vertical-align: top;
-  word-wrap: break-word;
+  overflow-wrap: break-word;   // word-wrap is its legacy alias
 }
 
 thead {

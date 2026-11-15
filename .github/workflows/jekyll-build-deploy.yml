@@ -177,6 +177,12 @@ jobs:
         env:
           SITE: _site
 
+      # ESLint, Stylelint and `prettier --check` over the code (never content,
+      # never the Liquid layouts). Check only — CI never rewrites a file. Run
+      # `make format` locally to fix what this reports.
+      - name: Lint
+        run: npm run lint
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
 

@@ -20,7 +20,7 @@ const MANIFEST = join(SITE, 'agents-manifest.json');
 const { site, docs } = JSON.parse(readFileSync(MANIFEST, 'utf8'));
 
 const stripFrontMatter = (src) =>
-  src.replace(/^﻿?---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
+  src.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
 
 // ⚠️ AUTHOR-ONLY BUILD NOTES MUST NOT SHIP HERE (added 2026-08-09).
 // Liquid comments are stripped by Jekyll for the HTML, but this script reads

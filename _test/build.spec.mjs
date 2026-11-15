@@ -52,7 +52,7 @@ test('2099 drafts are not published', () => {
 test('no private or tooling file is published', () => {
   const top = readdirSync(SITE);
   const leaked = top.filter((n) =>
-    /^(CLAUDE|TODO|README|Makefile|Gemfile|package(-lock)?\.json|node_modules|scripts|_test|_docs|_sass|\.)/i.test(n));
+    /^(CLAUDE|TODO|README|Makefile|Gemfile|package(-lock)?\.json|[a-z]+\.config\.m?js|node_modules|scripts|_test|_docs|_sass|\.)/i.test(n));
   expect(leaked).toEqual([]);
 });
 

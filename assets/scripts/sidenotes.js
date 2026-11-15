@@ -31,7 +31,7 @@
 
   function escapeId(id) {
     if (window.CSS && CSS.escape) return CSS.escape(id);
-    return id.replace(/([:.\[\]])/g, '\\$1');
+    return id.replace(/([:.[\]])/g, '\\$1');
   }
 
   function collect() {

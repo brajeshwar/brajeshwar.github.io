@@ -31,7 +31,7 @@
   'use strict';
 
   var BUNDLE = '/pagefind/';        // baseurl is '' — Pagefind lives at the site root
-  var loading = null, instance = null, pageInstance = null;
+  var loading = null, instance = null;
   var trigger, panel, backdrop, pageRoot;
 
   function loadModular() {
@@ -109,7 +109,7 @@
     pageRoot = document.getElementById('page-search');
     if (!pageRoot) return false;
     loadModular().then(function () {
-      pageInstance = mount({
+      mount({
         input:   '#page-search-input',
         summary: '#page-search-summary',
         results: '#page-search-results'
