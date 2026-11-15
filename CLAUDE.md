@@ -16,13 +16,13 @@ Re-read the guardrails below before any commit-worthy change.
 - Queue: `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
 - Log:   `~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`
 
-⚠️ **These two lines are the FINAL TRUTH about which files `/odo` works** — not the basename
+[WARNING] **These two lines are the FINAL TRUTH about which files `/odo` works** — not the basename
 default the command falls back to, and not anything left in this repo. If they ever disagree,
 these win.
 
 ### The work queue — moved to the vault 2026-08-10
 
-⚠️ **`CLAUDE.local.md` and `CLAUDE.local.log.md` are GONE from this repo.** The queue and its log
+[WARNING] **`CLAUDE.local.md` and `CLAUDE.local.log.md` are GONE from this repo.** The queue and its log
 moved out to Brajeshwar's Obsidian vault so one command serves every project.
 
 **`/odo` is now GLOBAL** — `~/.claude/commands/odo.md` — and the full mechanics live there, so
@@ -50,7 +50,7 @@ run as a post-build step.
 Deploy is **GitHub Pages via GitHub Actions** (`.github/workflows/jekyll-build-deploy.yml`):
 Ruby → `jekyll build` → Node → `pagefind` → `deploy-pages`, on push, daily cron, and manual.
 
-⚠️ **`_posts/todo/` IS JUST A FOLDER — IT PUBLISHES NOTHING AND HIDES NOTHING.** Jekyll collects
+[WARNING] **`_posts/todo/` IS JUST A FOLDER — IT PUBLISHES NOTHING AND HIDES NOTHING.** Jekyll collects
 `_posts/**` recursively, so a subdirectory namespaces nothing: **the DATE is the only thing that
 holds a post back.** Verified 2026-08-09 — five past-dated files in `_posts/todo/` were live at
 that moment (`/2009/bombay/`, `/2025/people-of-the-internet/`, `/2026/books/`,
@@ -59,14 +59,14 @@ the ONLY source for that URL. Moving a post there does not unpublish it; re-dati
 does. His words: *"anything in 'todo' but with a past date is published. That is how Jekyll
 work."*
 
-⚠️ **The SHELF has since changed; the RULE has not.** Re-counted 2026-08-11: `_posts/todo/` holds
+[WARNING] **The SHELF has since changed; the RULE has not.** Re-counted 2026-08-11: `_posts/todo/` holds
 eleven files, of which **one** is past-dated and live — `/2025/people-of-the-internet/`. The
 other four came off the shelf in `579b6e09` (*"Four posts come off the work-in-progress shelf"*).
-⚠️ **All five URLs are still built** — they moved folder, they did not unpublish, which is the
+[WARNING] **All five URLs are still built** — they moved folder, they did not unpublish, which is the
 rule above demonstrating itself. Do not read the 2026-08-09 list as a current inventory; measure
 it (`ls _posts/todo/`) when it matters.
 
-⚠️ **SO `_posts/todo/` HOLDS TWO DIFFERENT THINGS, and the date tells them apart:**
+[WARNING] **SO `_posts/todo/` HOLDS TWO DIFFERENT THINGS, and the date tells them apart:**
 
 | date | state | what the folder means |
 |---|---|---|
@@ -78,7 +78,7 @@ articles he intends to keep editing (2026-08-09: *"when I add a published articl
 simply means, it is published but I want to remember to continue to work on it. The article is a
 work-in-progress but published."*).
 
-⚠️ **NEVER re-date one to 2099 to "tidy" the folder, and never move one out of it.** Either would
+[WARNING] **NEVER re-date one to 2099 to "tidy" the folder, and never move one out of it.** Either would
 unpublish a live article at a URL that is already shared — guardrail 2. If a post genuinely needs
 withdrawing, that is his call and his edit, not a cleanup.
 
@@ -92,33 +92,34 @@ withdrawing, that is his call and his edit, not a cleanup.
 page can be plainer Markdown at the cost of a more complicated selector, take that trade — the
 prose outlives the stylesheet. `/about/` and `/cv/` became Markdown for exactly this reason.
 
-⚠️ **kramdown DOES take CSS classes — use an IAL, not a tag.** `{: .timeline-when}` under a
+[WARNING] **kramdown DOES take CSS classes — use an IAL, not a tag.** `{: .timeline-when}` under a
 paragraph beats wrapping it in `<p class="…">`. What an IAL CANNOT do, verified 2026-08-09:
 
 | want | works? |
 |---|---|
 | class on a heading, paragraph or list | **yes** |
 | id — but ONLY as `id="x"` | **yes**, quoted — though no page uses it; see below |
-| id as bare `#x` | ⚠️ **NO — silently ignored, auto id kept** |
+| id as bare `#x` | [WARNING] **NO — silently ignored, auto id kept** |
 | class on ONE list item | no — the IAL is ignored inside a list |
 | a real `<figure>` + `<figcaption>` | no — an image + IAL gives `<p class>` round an `<img>` |
 | wrapping a RANGE of blocks | no — that is what the one `markdown="1"` div is for |
 
-⚠️ **AND THIS SITE IS PLAIN KRAMDOWN, NOT GFM** — `_config.yml` sets `markdown: kramdown` with no
+[WARNING] **AND THIS SITE IS PLAIN KRAMDOWN, NOT GFM** — `_config.yml` sets `markdown: kramdown` with no
 `input:`. kramdown prefixes `section` to any auto id that does not start with a letter, so
 `## Razorfish` is `razorfish` but `## 2005-2006` is `section`. That is accepted on `/about/`,
 whose date headings ship as `section-1`…`section-7` by his decision — **no ids in the content**.
 Anything claiming this site parses GFM is wrong; it cost two debugging passes.
 
-## No emoji in code (2026-11-15)
+## No emoji, anywhere in code or UI (2026-11-15)
 
 His words: *"Let's get rid of all the emoticons from the code. If you need a warning for
-yourself, use something like `[WARNING]`."* So a warning in a comment is `[WARNING]`, plain
-text, in every code file: Sass, JS, Ruby, shell, layouts, includes, YAML, the Makefile. All 302
-of the old warning signs were swapped on that day, and the 25 in the template comments of
-`_pages/*.html` followed at his word. Typographic symbols that name a real glyph
-(the ↗ external-link mark, the ↩ footnote return, ©) are not emoji and stay. Content is out of
-scope as always (guardrail 1).
+yourself, use something like `[WARNING]`,"* and later the same day, *"remove any form of
+emoticons anywhere in code and UI, unless/otherwise really needed."* So plain-text markers
+only: `[WARNING]`, `[DONE]`, `[PAUSED]`, `[NOTE]`. That covers code, `_data`, layouts,
+includes, the `_pages` templates and visible pages like `/styleguide/`, the redirect stubs,
+`_docs/` and this file. Typographic symbols that name a real glyph (the ↗ external-link mark,
+the ↩ footnote return, ©) are not emoji and stay. Posts are content and are left alone
+(guardrail 1). `_test/build.spec.mjs` fails on any emoji that creeps back.
 
 ## Code like poetry (2026-11-15)
 
@@ -147,19 +148,19 @@ this pass; that is a sweep for him to ask for, not a tidy-up to do unasked.
    or `_pages/**` prose bodies. Do not touch `_data/**` except when asked — the books shelf
    (`_data/books/`, `_data/books-favorites.yaml`) is edited constantly and `nav.yaml` needs
    approval.
-   ⚠️ **`_data/albums.yaml` IS GENERATED — NEVER EDIT IT** (2026-09-01). `scripts/fetch-albums.rb`
+   [WARNING] **`_data/albums.yaml` IS GENERATED — NEVER EDIT IT** (2026-09-01). `scripts/fetch-albums.rb`
    overwrites it from `https://albums.oinam.com/feed.xml` before every build, and it is
    gitignored, so an edit is lost and never reaches the deploy. The hand-maintained
    `_data/album.yaml` it replaced is deleted.
-   ⚠️ **And run it as `ruby scripts/fetch-albums.rb`, never `bundle exec ruby`** — it is
+   [WARNING] **And run it as `ruby scripts/fetch-albums.rb`, never `bundle exec ruby`** — it is
    stdlib-only, but rexml is a *bundled gem* and bundler hides those unless the Gemfile names
    them. **A checkout that has not run `make albums` has no Albums strip on the home page**;
    an absent section is a missing data file, not a broken include.
 2. **Preserve every URL.** Permalink is `/:title/`. Do not change permalinks, slugs, or structure.
-   ⚠️ **A page that genuinely goes away leaves a redirect stub behind** — `_redirect/<name>.md`,
+   [WARNING] **A page that genuinely goes away leaves a redirect stub behind** — `_redirect/<name>.md`,
    four lines of front matter on `layout: redirect`, `sitemap: false`. Three exist: `/photos/`,
    `/resume/` and `/album/`, the last pointing OFF-SITE to `https://albums.oinam.com`
-   (2026-09-01, when the album moved there wholesale). ⚠️ **Do not chain them** — `/photos/`
+   (2026-09-01, when the album moved there wholesale). [WARNING] **Do not chain them** — `/photos/`
    was re-pointed at albums.oinam.com directly rather than left aimed at `/album/`, which had
    itself become a stub. Deleting a page without a stub is a broken URL, and guardrail 2 does
    not stop applying because the page was his idea to delete.
@@ -201,12 +202,12 @@ this pass; that is a sweep for him to ask for, not a tidy-up to do unasked.
   **`assets/styles/site.scss`** into ONE external stylesheet. Flattened from 25 numbered ITCSS
   partials on 2026-07-19 — **don't reintroduce numeric prefixes**; cascade order lives in
   `site.scss`, and `config` must stay first.
-  ⚠️ **The count and the byte size used to be written here and are deliberately gone.** Both are
+  [WARNING] **The count and the byte size used to be written here and are deliberately gone.** Both are
   one command away (`ls _sass/`, `gzip -c _site/assets/styles/site.css | wc -c`), and both went
   stale repeatedly — the size five times in a single day, the count within an hour of being
   corrected. A number that has to be hand-synced with the build is a number that will lie to
   you. Measure it when you need it; never cite it in a commit message.
-  ⚠️ And do not infer size from the count: the stylesheet keeps getting SMALLER while gaining
+  [WARNING] And do not infer size from the count: the stylesheet keeps getting SMALLER while gaining
   partials, because most partials that arrive replace something larger.
 - **Moved out of `_includes/css/` on 2026-07-27.** They were Liquid includes; nothing includes
   them into HTML any more, so they are Sass partials now. `_sass/` and not `assets/styles/`
@@ -223,14 +224,14 @@ this pass; that is a sweep for him to ask for, not a tidy-up to do unasked.
   is only `max-age=600`); external is one fetch, then free. Break-even is under two page views.
   Per-layout splitting existed to keep the *inline* payload small and is now pointless: one URL
   shared by every page is one cache entry, where per-layout files would each miss separately.
-- ⚠️ **A year-long cache means filenames must change when bytes do.**
+- [WARNING] **A year-long cache means filenames must change when bytes do.**
   `scripts/hash-assets.mjs` renames CSS/JS **and fonts** to `<name>.<hash>.ext` after the build
   and rewrites every reference, in two passes — fonts first, then the CSS that points at them,
   so the stylesheet's hash covers its own font URLs. Must run AFTER the esbuild minify step.
   (A `?v=<date>` query string was the alternative and is worse: the daily cron would bust it
   every day for unchanged bytes, and some caches ignore query strings outright.) It runs in Actions only; local `jekyll serve` serves the unhashed paths and
   is internally consistent, as is the Cloudflare Pages backup.
-- ⚠️ **Every stylesheet now applies to every page.** There is no layout gate any more, so a
+- [WARNING] **Every stylesheet now applies to every page.** There is no layout gate any more, so a
   selector must anchor to something page-specific — a class (`.page`, `.post`) or a custom
   element (`<photo-cover>`) — never a bare `main > article > h2`. `page.scss` was the one file
   that got this wrong; unscoped it would have clamped all ~1,457 post titles to the measure.
@@ -243,7 +244,7 @@ this pass; that is a sweep for him to ask for, not a tidy-up to do unasked.
   (slash-star-bang survives compression and ships); **never write a literal star-slash
   inside comment prose** (it closes the comment early; the build then fails with a misleading
   "expected selector" pointing at `assets/styles/site.scss` — the entry point, never the
-  partial with the broken comment); and ⚠️ **never leave a comment unterminated**, which is the
+  partial with the broken comment); and [WARNING] **never leave a comment unterminated**, which is the
   same mistake in reverse and far nastier — an unclosed block comment is VALID CSS, so the
   build stays green while the comment runs on and swallows every declaration until the next
   star-slash. On 2026-08-09 that silently ate `margin` and `max-width` off `.timeline h2` and

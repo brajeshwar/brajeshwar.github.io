@@ -79,7 +79,7 @@ characters per line (see [`design.md`](design.md) → *Comfortable measure*).
   band, `min(96vw, --body-width-max)`: left edge stays on the band edge, right edge grows
   665px → 1024px. The accent rides `var(--color-accent)` on the left rule, so it is coral for
   a reader who opted into an accent and gray for everyone else.
-  ⚠️ Gated on `:not(.has-sidenotes)` because it grows into the sidenote gutter — sidenotes are
+  [WARNING] Gated on `:not(.has-sidenotes)` because it grows into the sidenote gutter — sidenotes are
   `position: absolute; left: 100%`, so a widened quote lands *under* them rather than pushing
   them. Measured in-browser: 13 posts / 16 pairs would overlap ungated; 0 with the gate.
   Degrades right in both directions — JS off means no `.has-sidenotes`, so the quote breaks out
@@ -154,11 +154,11 @@ over the page background:
 are a pair that brackets the page. Note the deliberate hierarchy: a separator out-reads a
 hover state, which out-reads an ordinary border.
 
-⚠️ **Only those two may use `--rule-strong`.** The point is that they outrank every other
+[WARNING] **Only those two may use `--rule-strong`.** The point is that they outrank every other
 border by exactly one tier; a third user starts eroding that. Note `chrome.scss` still uses
 plain `--rule` for the search-result separator and the tool-icon divider, which is correct.
 
-⚠️ **Measuring an `oklch()` color with alpha needs a canvas.** `getComputedStyle().color` now
+[WARNING] **Measuring an `oklch()` color with alpha needs a canvas.** `getComputedStyle().color` now
 returns `oklch(…)` rather than `rgb(…)` in Chrome, so the usual trick of parsing the computed
 string yields nonsense — it did here, reporting all three borders as identical at 1.10 and the
 change as having done nothing. Paint the background then the border onto a canvas and read the
@@ -199,13 +199,13 @@ palette × mode combinations, contrast against the page:
 **Every combination is now AAA (≥7.0)** except nord-light's 13px date at 6.40, which still
 clears AA comfortably.
 
-⚠️ **`--color-fg` could not move in two of the four blocks** — it is already at the end of
+[WARNING] **`--color-fg` could not move in two of the four blocks** — it is already at the end of
 the ramp (`gray-950` in light, `gray-50` in generic dark). The primary text was measured at
 11.98:1 *before* this change, well past AAA, so the real gain is in the two tiers under it:
 muted (intros, captions, alumni rows) and subtle (dates, year markers). Only eink dark had
 headroom on the primary tier, and it used it: base-200 → base-100.
 
-⚠️ **The eink change departs from kepano's Flexoki docs mapping** (text-1 → base-200,
+[WARNING] **The eink change departs from kepano's Flexoki docs mapping** (text-1 → base-200,
 text-2 → base-500), which the rest of that block still follows. Deliberate override for
 legibility, not a mistake to revert.
 
@@ -315,7 +315,7 @@ Theming — mode × palette × font × accent — is §2 above; the byte budget 
 Decided 2026-07-19. Supersedes the ad-hoc mix of `styles:` keys that had grown up to
 that point. Folded into this doc on 2026-07-26, from what used to be `css-architecture.md`.
 
-> 📍 Where the files live, as of 2026-07-27: `_sass/*.scss`. They were
+> [NOTE] Where the files live, as of 2026-07-27: `_sass/*.scss`. They were
 > `_includes/css/*.css` until then — Liquid includes, because the CSS was inlined into the
 > HTML. Nothing includes them into HTML any more, so they are ordinary Sass partials compiled
 > by `assets/styles/site.scss`.
@@ -327,7 +327,7 @@ that point. Folded into this doc on 2026-07-26, from what used to be `css-archit
 
 ## The principle
 
-> ⚠️ **Superseded 2026-07-27. The CSS is now ONE EXTERNAL FILE.** The two paragraphs
+> [WARNING] **Superseded 2026-07-27. The CSS is now ONE EXTERNAL FILE.** The two paragraphs
 > immediately below are the 2026-07-19 decision, kept as written. Read *The principle,
 > restated* under them for what is true today.
 
@@ -339,7 +339,7 @@ for a site whose traffic is mostly first-time arrivals on a single post.~~
 The failure mode we're avoiding is CSS scattered across twenty opt-in keys where nobody can
 tell what ships where.~~
 
-## ⚠️ One rule in `_sass/cv.scss` is site-wide: the print margin (2026-09-07)
+## [WARNING] One rule in `_sass/cv.scss` is site-wide: the print margin (2026-09-07)
 
 `cv.scss` declares `@page { margin: 20mm 16mm }` inside its `@media print` block. **`@page` is
 document-level and cannot be scoped to a page, a class or a URL** — it describes the sheet — so
@@ -436,7 +436,7 @@ Flattened 2026-07-19 from 25 numbered ITCSS partials to 12 plainly-named files (
       breakpoints.css variables only
       bookmarks.css   not yet wired up — see below
 
-> ⚠️ The `.css` names in this tree are historical. The files are `.scss` and have been since
+> [WARNING] The `.css` names in this tree are historical. The files are `.scss` and have been since
 > 2026-07-27 — see the note above about the move out of `_includes/css/`. The names were left
 > as written rather than silently corrected, because the rest of this document argues about
 > them under these names.
@@ -479,7 +479,7 @@ under inlining and is void under one shared file. All of them are gone:
 | Timeline spine, marker, period heading | `timeline.css`, `now.css` | `timeline.css`, grouped selectors carrying both vocabularies |
 | `.headerlink` (the § anchor) | `post.css`, `timeline.css`, `now.css` | `base.css`, once |
 
-⚠️ **One of those copies had already gone silently wrong.** `.headerlink` was deleted from
+[WARNING] **One of those copies had already gone silently wrong.** `.headerlink` was deleted from
 `post.css` by accident during the code/cards split, so 453 posts rendered a bare, permanently
 visible § against every heading — found only because the timeline merge went looking at the
 other two copies. Duplicated CSS does not drift apart loudly.
@@ -527,7 +527,7 @@ Six places, found by audit rather than by eye:
 | `home-books li a` | (0,0,3) | homepage book list — *retired 2026-07-31, now `.strip__link`* |
 | `.pagefind-modular-list-link` | (0,1,0) | search results |
 
-⚠️ **Do not un-wrap these, and do not "fix" a chrome link by adding `:visited` to its own
+[WARNING] **Do not un-wrap these, and do not "fix" a chrome link by adding `:visited` to its own
 rule.** The instance-level patch works and was what the random button carried for one commit,
 but it leaves the next chrome link to arrive with the same bug. A default should be the easiest
 thing in the cascade to override.
@@ -633,7 +633,7 @@ and a laptop scrolls for the rest. `--body-width-full` still means 1600px for `<
 its remaining user (joined 2026-08-02 by the in-post `.gallery` — see *The second exception*
 under §6).
 
-⚠️ **One behavior at every width: one row, scrolls, arrows on overflow.** The `$small` block
+[WARNING] **One behavior at every width: one row, scrolls, arrows on overflow.** The `$small` block
 sets only the item size. It previously also wrapped into two clipped rows, from an earlier
 instruction, and that survived the rewrite — so narrow screens were the one place the strips
 did *not* scroll, and the arrows correctly stayed hidden because a wrapped row never
@@ -648,7 +648,7 @@ middle of the bleed and a long one clips evenly at both edges. This replaced a
 strips are the one place on the site that does *not* start on that line. Deliberate, and
 asked for; the heading above still sits in the band, so the alignment is still stated.
 
-⚠️ **Items are fixed width (`flex: 0 0`) and must stay that way.** Making them elastic so a
+[WARNING] **Items are fixed width (`flex: 0 0`) and must stay that way.** Making them elastic so a
 short shelf fills the viewport was tried on 2026-07-31 and is visibly broken: with
 `max-width` capping some and not others, flex distributes free space unevenly, and because
 the ratio lives on the image, a grown item is also *taller* — three sizes on two baselines.
@@ -661,13 +661,13 @@ strip, a 15px chevron in a 56px hit area, shipped with `hidden` and revealed by
 `strip-nav.js` only once it measures a real overflow. With JS off they never appear and
 nothing is lost: the row is a native scroller for trackpad, touch and keyboard.
 
-⚠️ **`justify-content: safe center`, and the `safe` is load-bearing.** Plain `center` centers
+[WARNING] **`justify-content: safe center`, and the `safe` is load-bearing.** Plain `center` centers
 the *overflow* too, so half a long shelf lands left of the scroll origin where `scrollLeft`
 cannot reach it — measured with twelve books at 1512, the first thumbnail sat at x = −451
 with the row already fully scrolled left. `safe` falls back to `start` when content
 overflows: short shelves center, long ones start at the bleed edge and scroll.
 
-⚠️ **Two reduced-motion traps, both measured on Brajeshwar's machine** (which has the OS
+[WARNING] **Two reduced-motion traps, both measured on Brajeshwar's machine** (which has the OS
 setting on). `scrollBy({behavior:'smooth'})` does not merely degrade under reduced motion —
 it does *nothing*; the script picks `'auto'` explicitly instead. And a programmatic scroll
 does not reliably fire a `scroll` event, so the click handler re-syncs the button state
@@ -686,13 +686,13 @@ one thing masonry is actually for — every image keeps its own height and nothi
 container allows and rebalances on resize. No breakpoints. Measured: 1 column at 320–480,
 3 at 768, 4 at 1024–1512, 0 items split at any width, columns within 82px of each other.
 
-⚠️ **The selector needs two classes: `.item__cards.card-grid--masonry`.** `cards.scss` writes
+[WARNING] **The selector needs two classes: `.item__cards.card-grid--masonry`.** `cards.scss` writes
 `ul.item__cards`, which is (0,1,1); a lone `.card-grid--masonry` at (0,1,0) loses and
 `display: grid` survives. The failure is quiet — `columns` still *computes* (measured
 column-width 224px, exactly the 14rem asked for) but has no effect on a grid container, so
 the CSS reads as applied while the layout does not move.
 
-⚠️ **The trade-off is reading order, and it is the only reason to reach for JavaScript.**
+[WARNING] **The trade-off is reading order, and it is the only reason to reach for JavaScript.**
 Columns flow top-to-bottom then across: with three columns, items 1-2-3 run *down* the left,
 not across the top. For an album, browsed rather than read in sequence, that is fine. For a
 chronological feed where "next" must mean "to the right", no amount of CSS fixes it — that is
@@ -706,18 +706,18 @@ Bottom-left rather than centered, because a centered play button is the conventi
 *player* and these are links to a page that holds the media. The dark scrim is not decoration
 — the icon sits on a photograph of unknown brightness, and a single color cannot be legible
 on all of them.
-⚠️ The badge is `aria-hidden`; the word goes into the image's **alt** ("… (video)"). The first
+[WARNING] The badge is `aria-hidden`; the word goes into the image's **alt** ("… (video)"). The first
 attempt used a `.visually-hidden` span, which **this site does not have** — base.css's copy
 was deleted after the 2026-07-19 audit flagged it unreferenced, so it would have printed the
 word "video" under the thumbnail as visible text.
 
-⚠️ **`/books/` lost its prose on 2026-08-01** and with it its footnotes, so it no longer gets
+[WARNING] **`/books/` lost its prose on 2026-08-01** and with it its footnotes, so it no longer gets
 `container-ideal` from `page.html` — the article is plain `.page` at the full band. The
 `.page > .album` rule is a no-op there now and is kept for the next footnoted page with a
 gallery. The prose is verbatim in `_backup/books-BCK.md`, an underscore directory Jekyll never
 copies, so it cannot publish itself at `/books-BCK/`.
 
-⚠️ **Album data is GENERATED, remote, and feeds ONE surface (2026-09-01).** `_data/album.yaml`
+[WARNING] **Album data is GENERATED, remote, and feeds ONE surface (2026-09-01).** `_data/album.yaml`
 is gone and so is `/album/` — the page was deleted the same day and is a redirect stub to
 `https://albums.oinam.com`. What is left here is the home page's **Albums strip**, reading
 `_data/albums.yaml`, which `scripts/fetch-albums.rb` writes at build time from the site's RSS
@@ -726,32 +726,32 @@ so **a checkout that has not run `make albums` has no strip at all**; that is mi
 a broken include.
 
 The `img` rule grew a third branch for it: `http…` is a remote file emitted verbatim, `/…` is
-site-absolute and also verbatim, anything else resolves under `/static/<kind>/`. ⚠️ **The
+site-absolute and also verbatim, anything else resolves under `/static/<kind>/`. [WARNING] **The
 remote branch must also skip `relative_url`.** It is in `card-grid.html` *and*
 `home-strip.html` even though only the strip exercises it now — the two includes are read and
 edited together, and one of them silently lacking the branch is how the bug comes back.
 
-⚠️ **Album thumbnails ship `alt=""`, from a `decorative = true` flag on the include** — not
+[WARNING] **Album thumbnails ship `alt=""`, from a `decorative = true` flag on the include** — not
 from the data. `_data/albums.yaml` carried a scraped `alt` until 2026-09-01 that came back
 empty 48 times in 50; the flag says the same thing once, in the caller, as a property of the
 shelf. The images need it because their `title` is the photograph's FILENAME
 (`London — IMG_9018.jpeg`) on all but a couple of items, and the include's usual
-fall-back-to-title would read those aloud. ⚠️ **`alt=""` is not the same as no `alt`** — an
+fall-back-to-title would read those aloud. [WARNING] **`alt=""` is not the same as no `alt`** — an
 `<img>` with none is invalid HTML and sends assistive tech to the filename in the `src`, which
 is the whole thing being avoided. Books and the other shelves pass no flag and still use their
 titles, which are real descriptions.
 
-⚠️ **`.item__cards.card-grid--masonry` in `page.scss` now has NO USER** — `/album/` was its only
+[WARNING] **`.item__cards.card-grid--masonry` in `page.scss` now has NO USER** — `/album/` was its only
 caller. It is deliberately still there: `base.scss`'s post-gallery masonry points at that block
 by name for the full reasoning and the reading-order trade-off (*"read it there rather than
 trusting a summary"*), so deleting the rules would orphan a live cross-reference. Delete the
 comment with it, or not at all.
 
-⚠️ **These strips do not use `ul.item__cards`.** That class is shared with the album pages
+[WARNING] **These strips do not use `ul.item__cards`.** That class is shared with the album pages
 through `album.scss` (`/devices/`, `/film/`, `/books/`, `/album/`), which want a wrapping grid
 where these want a clipped single row. New classes, no shared surface.
 
-⚠️ **They DO share `.strip__viewport` / `.strip` with `/own/`** (2026-08-08), which is a second
+[WARNING] **They DO share `.strip__viewport` / `.strip` with `/own/`** (2026-08-08), which is a second
 caller of the same scroller. `/own/` overrides three declarations under a `.page-own` prefix —
 the bleed, the centring and the item width — and inherits the overflow, the scroll behaviour
 and the arrow buttons unchanged. `default.html` gates strip-nav.js on the literal string
@@ -779,7 +779,7 @@ on 2026-08-07: `_data/books/01.yaml` + `a`–`z`, with favorites in `_data/books
 The plate is unchanged — it keys off a missing `img`, wherever the entry lives.)* Adding a book is
 now a title, an author and a url.
 
-⚠️ **A QUERY CONTAINER CANNOT READ ITS OWN CONTAINER UNITS, AND THE FAILURE IS SILENT AND
+[WARNING] **A QUERY CONTAINER CANNOT READ ITS OWN CONTAINER UNITS, AND THE FAILURE IS SILENT AND
 BACKWARDS.** The plate is `container-type: inline-size` so its type scales in `cqi` with the
 card rather than with the viewport — 18.1px at 193px in the `/books/` grid, 13.8px at 146px
 on a phone. But a `cqi` in the container's **own** properties does not error and does not
@@ -800,22 +800,22 @@ descendants.** A padding-free container has a second virtue — its content box 
 border box, so `1cqi` is honestly 1% of the visible element and every number in the file
 reads as a percentage of the cover.
 
-⚠️ **A pseudo-element belongs to the container rather than sitting inside it** — the same
+[WARNING] **A pseudo-element belongs to the container rather than sitting inside it** — the same
 trap one layer down. `.bookplate::before { width: 7cqi }` resolves against the page. Use a
 percentage: on an absolutely-positioned box it resolves against the containing block, which
 is the element you meant.
 
-⚠️ **`.album figure span` is (0,1,2).** On `/books/` the plate sits inside a `<figure>`, so a
+[WARNING] **`.album figure span` is (0,1,2).** On `/books/` the plate sits inside a `<figure>`, so a
 lone `.bookplate__title` at (0,1,0) loses to it and the title renders at `--step--2` in
 `--text-color-low` — a second caption — with the CSS reading as applied. `.bookplate
 .bookplate__title` at (0,2,0) wins, because the class count is compared before the element
 count. Same shape as the `.item__cards.card-grid--masonry` trap above.
 
-⚠️ **Anything standing in for an image must declare `border-radius`.** base.scss carries
+[WARNING] **Anything standing in for an image must declare `border-radius`.** base.scss carries
 `main :where(img, video, iframe) { border-radius: var(--border-radius) }`, so every real
 cover is 7px rounded and a square-cornered plate is the one hard-edged card in the grid.
 
-⚠️ **`aria-hidden` means nothing to Pagefind.** The plate repeats the caption's text, so it
+[WARNING] **`aria-hidden` means nothing to Pagefind.** The plate repeats the caption's text, so it
 also carries `data-pagefind-ignore` — the same attribute, for the same reason, as
 `header.html` and `footer.html`.
 
@@ -863,7 +863,7 @@ fine, which is exactly why nobody saw it. Two causes, both mine, both invisible 
    3.6px. Now `calc(-1 * min(var(--space-2xs), (100vw - 100%) / 2))` — bleed the full amount
    when there is room, exactly the gutter when there is not, no breakpoint needed.
 
-⚠️ **`overflow-x: clip` on `body` does not reliably reach the viewport.** Unlike `hidden`, it
+[WARNING] **`overflow-x: clip` on `body` does not reliably reach the viewport.** Unlike `hidden`, it
 did not propagate: computed style on body read `clip` while the page still scrolled sideways
 2.5px. It is set on `html` **and** `body` now. Still never `hidden` — that would make the
 element a scroll container and unstick the sticky header.
@@ -891,7 +891,7 @@ Two small improvements folded in: `:focus-visible` on the card links (the origin
 `:hover`/`:active`, leaving keyboard users no affordance), and `font-size: x-small` swapped for
 the site's `--step--2` (same computed 12.8px, now on the type scale).
 
-⚠️ **Pre-existing, not fixed here:** `/devices/` renders broken images. Every entry in
+[WARNING] **Pre-existing, not fixed here:** `/devices/` renders broken images. Every entry in
 `_data/devices.yaml` has the placeholder `img: img.jpg`, and `static/devices/` contains zero
 files. That page has always shipped that way; fixing it needs real images plus a data edit
 (guardrail #1 territory).
@@ -1064,7 +1064,7 @@ naming them is what stops the next page inventing a sixth:
 | **Album** | `/film/`, `/devices/` | fluid `ul.item__cards` thumbnail grid |
 | **Listing** | `/archives/` | dense rows + the year scrubber |
 
-⚠️ **Timeline is now a shared look in ONE file, and this paragraph used to say the opposite.**
+[WARNING] **Timeline is now a shared look in ONE file, and this paragraph used to say the opposite.**
 It described `/about/` and `/now/` as deliberate copies that must be kept in step by hand,
 justified by "tier-2 bundles never loaded together, so sharing means promoting to `base.css`
 and charging ~1,456 pages for two". **That reason died on 2026-07-27 when the CSS went
@@ -1074,7 +1074,7 @@ were still pixel-identical when merged, which was luck.
 
 It carries **two vocabularies on purpose**: heading-flow selectors (`.timeline h2`,
 `.timeline h2 + p`) for the three Markdown pages, and list selectors (`.page-now ul li`) for
-`/now/`, whose entries are bullets with no titles. ⚠️ **Some rules pair one with the other**, so
+`/now/`, whose entries are bullets with no titles. [WARNING] **Some rules pair one with the other**, so
 a regex sweep over the file will take a live selector out with a dead one — it did exactly that
 once and `/now/` lost its spine. See [`timeline.md`](timeline.md).
 
@@ -1125,7 +1125,7 @@ radius, monospace and horizontal scroll — no styling is lost.
 Measured on those 55 posts: 262,286 bytes raw / 41,276 gzip, −8.9% / −5.0%, about 4.7 KB raw
 per post. Every one of the 1,456 posts now ships an identical 31,022-byte CSS bundle.
 
-⚠️ **`:not(pre) > code`, not `code.language-plaintext`.** Kramdown only adds that class while a
+[WARNING] **`:not(pre) > code`, not `code.language-plaintext`.** Kramdown only adds that class while a
 highlighter is active. With Rouge off it emits a bare `<code>`, so the old selector silently
 stopped matching and inline code lost its chip on every post that had any. Caught in the
 browser, not in the build — nothing errors.
@@ -1133,18 +1133,18 @@ browser, not in the build — nothing errors.
 Reverting is three steps, listed in the `_config.yml` comment: drop the `kramdown:` block,
 restore the stylesheet from git, re-add the conditional include.
 
-⚠️ **Never write a literal Liquid tag in a CSS comment.** These files are Liquid includes, so
+[WARNING] **Never write a literal Liquid tag in a CSS comment.** These files are Liquid includes, so
 Jekyll parses inside `/* */` too. Documenting the conditional by spelling it out in `code.css`
 broke the whole build, with the syntax error reported against `styles.html` — nowhere near the
 cause. Use a raw tag or describe it in prose.
 
-> ✅ **This trap is GONE as of 2026-07-27.** The stylesheets moved from `_includes/css/*.css`
+> [DONE] **This trap is GONE as of 2026-07-27.** The stylesheets moved from `_includes/css/*.css`
 > to `_sass/*.scss` and are no longer Liquid includes, so Jekyll does not parse inside them at
 > all. A literal Liquid tag in a comment is now just text. Kept above because the failure it
 > describes cost a build and the shape of it — an error reported against the file that *called*
 > the compiler, never the file with the bad comment — is worth recognising if it ever recurs.
 >
-> ⚠️ **Two rules DO survive the move**, because they are Sass, not Liquid: never write a bang
+> [WARNING] **Two rules DO survive the move**, because they are Sass, not Liquid: never write a bang
 > comment (slash-star-bang survives compression and ships), and never write a literal `*` `/`
 > inside comment prose. That second one still misreports, now against
 > `assets/styles/site.scss` rather than the partial at fault.
@@ -1195,7 +1195,7 @@ It is a flourish, not content; the article below still starts on the band's left
 
 - `100%`, not `100vw` — `100vw` includes the scrollbar and overflows horizontally by its
   width.
-- The negative top margin is what makes it "stick to the header border-bottom". ⚠️ Keep it in
+- The negative top margin is what makes it "stick to the header border-bottom". [WARNING] Keep it in
   step with `header`'s `margin: 0 auto var(--space-l)` in chrome.css. `.archive-strip` does the
   same trick and carries the same warning.
 - No `border-radius` — it runs to the window edge, and a curve against the edge of the
@@ -1243,7 +1243,7 @@ Verified 2026-08-02 in Chrome at 320/480/768/1024/1512: gallery fills `min(viewp
 a gallery-free post keeps `overflow-x: visible`. Above 1512px is unverified — the standing
 iframe-harness limit — but the formula is the same `min()` photo-cover ships with.
 
-⚠️ **Wide media now sits in the sidenote gutter.** `sidenotes.js` `collectObstacles()` looks for
+[WARNING] **Wide media now sits in the sidenote gutter.** `sidenotes.js` `collectObstacles()` looks for
 `.full, .large, .gallery` and pushes overlapping notes below them — see
 [`sidenotes.md`](sidenotes.md) for the timing trap that came with it.
 
@@ -1290,7 +1290,7 @@ The filter uses checkboxes rather than buttons because it has to work with JavaS
 (guardrail 4) — `:has()` and `:checked` do the filtering, so the pill had to accept a
 label-driven mechanism as well as an ARIA-driven one.
 
-⚠️ **The focus ring must be `currentColor`, not `--accent`.** `outline-offset` is negative, so
+[WARNING] **The focus ring must be `currentColor`, not `--accent`.** `outline-offset` is negative, so
 the ring is drawn inside the segment on its own fill — and a chosen segment's fill is
 `--color-primary`, which is near enough to `--accent` that the ring disappears in *both* modes.
 This shipped broken in the appearance panel until 2026-07-27. `currentColor` resolves to
@@ -1327,7 +1327,7 @@ The spacing is one `--space-m` everywhere in that seam — article→arrow, arro
 bar→footer, all 30px. `.post-nav` carries no margin at all; the row's margin does the first two
 and `main:has(.post-nav) ~ footer` does the third.
 
-⚠️ **`~`, not `+`, for that footer rule.** `post.html` emits a `<script>` between `</main>` and
+[WARNING] **`~`, not `+`, for that footer rule.** `post.html` emits a `<script>` between `</main>` and
 `<footer>`, so they are not adjacent and `+` matched nothing — the footer silently kept its 80px
 and the change looked like it had failed.
 
@@ -1372,7 +1372,7 @@ three of the four contributors were invisible in the CSS:
     32px  the control itself
     30px  this row's bottom margin
 
-⚠️ **`.post-nav`'s bottom margin did not collapse away.** `main` is
+[WARNING] **`.post-nav`'s bottom margin did not collapse away.** `main` is
 `container-type: inline-size`, which establishes an independent formatting context, so the last
 child's bottom margin is trapped inside it instead of merging with what follows — it *stacked*
 with this row's top margin instead of collapsing into it. `.post-nav` now sets
@@ -1408,22 +1408,22 @@ because it is the only page on `layout: default`.
 | `.spine-only` | spine or nothing — no fallback title. `/archives/` |
 | `.post h1.page-title` | `text-transform: none`. post.css |
 
-⚠️ **Condensed is tracking, not a condensed cut.** Neither self-hosted family carries a width
+[WARNING] **Condensed is tracking, not a condensed cut.** Neither self-hosted family carries a width
 axis — Geist ships `font-weight: 100 900`, Source Serif 4 `200 700`, and there is no `wdth` in
 either — so `font-stretch: condensed` computes and does nothing. On uppercase, negative
 tracking is the right lever anyway: caps sit on wider sidebearings than lowercase.
 
-⚠️ **The serif reader gets a heavier title** (`[data-font="serif"] .page-title`, weight 300,
+[WARNING] **The serif reader gets a heavier title** (`[data-font="serif"] .page-title`, weight 300,
 tracking 0). Source Serif 4 cannot reach the sans's 200, and what it does reach is a
 hairline-contrast serif whose thin strokes drop out at title size.
 
-⚠️ **The spine's rules live entirely inside the media query**, so a narrow screen falls back to
+[WARNING] **The spine's rules live entirely inside the media query**, so a narrow screen falls back to
 `.page-title` with nothing to undo. It was written the other way first — `display: none` below
 the breakpoint — which left six pages with no title at all on a laptop. The breakpoint is the
 band plus the spine on both sides: 1024 + 2 × (74 + 5) = 1182, rounded up to the 1250 that
 `/archives/`'s year strip already uses.
 
-⚠️ **`container-type` does NOT make `main` a containing block** for absolutely or fixed
+[WARNING] **`container-type` does NOT make `main` a containing block** for absolutely or fixed
 positioned children — measured, twice. The spine is `position: fixed` and takes its horizontal
 position from the band arithmetic, `calc(50% - var(--body-width-max) / 2)`.
 

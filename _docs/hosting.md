@@ -42,7 +42,7 @@ how we run Jekyll 4.
   hardcoded `ruby-version: '3.3.5'`. They agree by hand, not by construction, and nothing
   would report it if they drifted.
 
-  ⚠️ **GitHub Pages imposes no Ruby version on this site, and never did.** There is no
+  [WARNING] **GitHub Pages imposes no Ruby version on this site, and never did.** There is no
   github-pages gem in the Gemfile, and the workflow hands deploy-pages a finished static
   artifact — Pages never runs Ruby on our behalf. The Pages
   [dependency versions](https://pages.github.com/versions/) list applies to "Deploy from a
@@ -64,7 +64,7 @@ how we run Jekyll 4.
   Nothing in the dependency tree holds us here: sass-embedded is the strictest at `>= 3.1`,
   Jekyll 4.4.1 asks only `>= 2.7.0`, and `logger` is already in the Gemfile — the
   forward-compat fix for the stdlib gems that stopped shipping as defaults after 3.3.
-  ⚠️ An unbounded `>= 2.7.0` is the absence of a block, not evidence of coverage; it says
+  [WARNING] An unbounded `>= 2.7.0` is the absence of a block, not evidence of coverage; it says
   nothing about a Ruby released after the gem.
 
   3.3.5 is also **seven patches behind its own branch** — 3.3.12 is current, and 3.4.10 and
@@ -79,7 +79,7 @@ how we run Jekyll 4.
   jekyll-optional-front-matter 0.3.2, jekyll-titles-from-headings 0.5.3.
 - Actions: checkout@v7, setup-ruby@v1, setup-node@v7, configure-pages@v6,
   upload-pages-artifact@v5, deploy-pages@v5.
-  ⚠️ Corrected 2026-08-09 — this line had gone stale at v4/v4/v5/v3/v4 and was five
+  [WARNING] Corrected 2026-08-09 — this line had gone stale at v4/v4/v5/v3/v4 and was five
   majors wrong in one bullet. Don't trust it; read it off the workflow, which takes one
   command: `grep -oE "uses: [^ ]+" .github/workflows/jekyll-build-deploy.yml`.
 - Node 22 LTS, to run Pagefind, scripts/build-agent-markdown.mjs, and the esbuild minify
@@ -156,7 +156,7 @@ behaviour, and the check is one line:
 If it ever lapses, fix the renewal (gray-cloud briefly, let Pages re-issue) rather than
 dropping to Full or Flexible.
 
-⚠️ **Any future Worker or redirect rule must let `/.well-known/acme-challenge/*` through
+[WARNING] **Any future Worker or redirect rule must let `/.well-known/acme-challenge/*` through
 untouched.** That path is how Let's Encrypt validates GitHub's renewal through the proxy; so
 must Bot Fight Mode and any WAF rule. Expect the next renewal around early December 2026.
 
@@ -222,7 +222,7 @@ returns, and it drove the decision to externalise the CSS:
     cache-control: max-age=31536000
     content-encoding: gzip
 
-⚠️ **A year means no re-request and no revalidation.** The browser does not ask; it uses
+[WARNING] **A year means no re-request and no revalidation.** The browser does not ask; it uses
 its copy. Any asset we ship under a stable filename is therefore unreachable to a returning
 reader for up to a year, and that was quietly true of every JavaScript fix since the move to
 this host.
@@ -277,7 +277,7 @@ The settings are all dashboard-side:
 
 - Build command: `bundle exec jekyll build && node scripts/build-agent-markdown.mjs && npx
   pagefind --site _site` — three of the four steps `make build` and CI run.
-  ⚠️ It does **not** include the esbuild minify step (added to CI 2026-07-27), and that is
+  [WARNING] It does **not** include the esbuild minify step (added to CI 2026-07-27), and that is
   deliberate: the step rewrites files in place and changes no HTML reference, so the backup
   simply serves unminified JavaScript and works identically. Add
   `&& npx --yes esbuild _site/assets/scripts/*.js --minify --outdir=_site/assets/scripts --allow-overwrite`
@@ -299,7 +299,7 @@ would also leak into local dev and into the Actions build. (Override files exist
 change our mind; the v2 image, Ruby 3.2.2 / Node 18.17.1, is deprecated on 23 Feb 2027, so
 stay on v3.)
 
-### ⚠️ Correction, 2026-08-09 — the paragraph above describes a repo that does not exist
+### [WARNING] Correction, 2026-08-09 — the paragraph above describes a repo that does not exist
 
 The decision stands. **Two of the facts it rests on are wrong**, and they are kept above
 rather than edited away because the reasoning is worth reading — but do not act on them.
@@ -309,13 +309,13 @@ a .ruby-version or .nvmrc to the repo root"* was false the day it was written (2
 `.ruby-version` has been tracked, containing `3.3.5`, since 2025-06-28, and it is not
 gitignored. Verify in one command — `git ls-files .ruby-version`.
 
-⚠️ **So Cloudflare very probably reads it.** Pages honours `.ruby-version` from the repo it
+[WARNING] **So Cloudflare very probably reads it.** Pages honours `.ruby-version` from the repo it
 clones, which means the backup is building on **3.3.5**, not on v3's 3.4.4. The paragraph's
 own caveat — *"override files exist if we ever change our mind"* — is exactly what is
 happening; nobody noticed one was already there. `.nvmrc` genuinely is absent, so the Node
 half of the claim holds.
 
-⚠️ **And that kills the "feature".** The replaced text argued that Actions and Cloudflare
+[WARNING] **And that kills the "feature".** The replaced text argued that Actions and Cloudflare
 running different Rubies gave early warning that an upgrade would be safe. **There is no
 staggering and no early warning** — both builders are on 3.3.5, and the backup being green
 says nothing about a newer Ruby. Anyone reaching for it as evidence for a version bump is
@@ -334,7 +334,7 @@ The conclusion there survives intact, though: it is **not a standing Cloudflare
 requirement**. The v2 image of the time shipped Ruby 3.2.2 and could not supply 3.4.4 — an
 image limitation that v3 does not have.
 
-⚠️ **Consequence for any future bump: `.ruby-version` and the workflow pin are NOT
+[WARNING] **Consequence for any future bump: `.ruby-version` and the workflow pin are NOT
 interchangeable.** Editing `.ruby-version` moves local dev *and* the Cloudflare backup at
 once; editing the workflow moves production alone. Move the workflow first, so the standby
 stays on the old Ruby and is worth something if the new one breaks. And check

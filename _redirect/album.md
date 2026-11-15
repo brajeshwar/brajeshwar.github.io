@@ -15,13 +15,13 @@ sitemap: false
   page without it would have been a dead URL with no way to know who still
   holds one.
 
-  ⚠️ THE FIRST OFF-SITE REDIRECT ON THIS SITE. The other two (/photos/, /resume/)
+  [WARNING] THE FIRST OFF-SITE REDIRECT ON THIS SITE. The other two (/photos/, /resume/)
   point at pages here. That works because Jekyll's `relative_url` returns an
   absolute URL untouched rather than prefixing the baseurl — verified in the
   built output, not assumed — so redirect.html needs no change. If it ever
   grows a baseurl-aware rewrite, check this file still emits the bare URL.
 
-  ⚠️ /photos/ WAS RE-POINTED HERE'S TARGET, NOT AT /album/. It used to redirect
+  [WARNING] /photos/ WAS RE-POINTED HERE'S TARGET, NOT AT /album/. It used to redirect
   to /album/, which would now be a redirect to a redirect: two meta-refresh hops,
   slower for a reader and a chain some crawlers stop following. It goes straight
   to albums.oinam.com now. Both old URLs still resolve, in one hop each.

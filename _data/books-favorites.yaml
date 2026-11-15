@@ -8,7 +8,7 @@
 #
 # Being in this file IS the flag; there is no `highlight` key.
 #
-# ⚠️ A BOOK LIVES HERE OR IN _data/books/, NEVER BOTH. The two grids on /books/
+# [WARNING] A BOOK LIVES HERE OR IN _data/books/, NEVER BOTH. The two grids on /books/
 # read different files, so a duplicate renders twice and nothing catches it.
 #
 # FIELDS: title (required), author, url, img, alt.

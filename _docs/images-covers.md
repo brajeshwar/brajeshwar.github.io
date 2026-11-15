@@ -5,7 +5,7 @@
 **71 posts.** A cover means an `image:` key in the post's front matter, which
 `_layouts/post.html:5` renders as `<photo-cover>` — the full-bleed hero above the title.
 
-⚠️ **In-body openers are NOT counted.** A few posts start with a large figure right under
+[WARNING] **In-body openers are NOT counted.** A few posts start with a large figure right under
 the H1 that reads like a cover and is not one — `/2022/chatgpt/` is the clearest. If those
 matter, they are a separate sweep.
 

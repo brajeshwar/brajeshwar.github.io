@@ -65,7 +65,7 @@ content:
 
     {% if content contains 'class="footnotes"' %}…{% endif %}
 
-⚠️ **The test must be inline in the `if`.** Liquid's `assign` does not evaluate `contains`;
+[WARNING] **The test must be inline in the `if`.** Liquid's `assign` does not evaluate `contains`;
 it fails silently *and truthily*, so hoisting it to a variable ships the script everywhere
 while reading as correct. Same trap as `page.html` and the old conditional `code.css`.
 
@@ -74,7 +74,7 @@ and the template makes no cross-origin request at all — the analytics beacon w
 day. It came back briefly on 2026-07-31 and was gone again within the hour; measurement is
 Cloudflare's edge logs now, which need no script. Every script the site loads is its own.
 
-⚠️ That is a claim about the *template*, not every page. 101 of 1,484 pages reach off-origin
+[WARNING] That is a claim about the *template*, not every page. 101 of 1,484 pages reach off-origin
 for embedded media the posts themselves contain — YouTube (89 references), `cdn.oinam.com`
 images (38), Vimeo, gists (measured 2026-07-31). Those are content and stay untouched.
 
@@ -102,7 +102,7 @@ Two things it works around, both found by measurement, both documented at the ca
 `<img>` carries an `aspect-ratio`, so the geometry is settled at first layout and the arrows
 are correct before a thumbnail decodes.
 
-⚠️ **Scripts are content-hashed on publish** (`scripts/hash-assets.mjs`). `/assets/*` is
+[WARNING] **Scripts are content-hashed on publish** (`scripts/hash-assets.mjs`). `/assets/*` is
 served `max-age=31536000`, so before this every JS fix could take a year to reach a returning
 reader. See [`hosting.md`](hosting.md) → *Cache headers we actually get*.
 
@@ -208,7 +208,7 @@ mounts the same Pagefind **Modular UI** the ⌘K palette uses, from `search.js`,
 8.8 KB raw / 3.0 KB minified to do both jobs — still less than the three files it replaces, and
 it drops the Default UI's ~32 KB bundle plus ~11 KB of dead CSS from `_sass/search.scss`.
 
-⚠️ **THE REASON MATTERS MORE THAN THE SAVING.** `/search/` had been shipping an empty `<div>` in
+[WARNING] **THE REASON MATTERS MORE THAN THE SAVING.** `/search/` had been shipping an empty `<div>` in
 production while working perfectly under `jekyll serve`. Cloudflare Rocket Loader rewrites every
 `<script type>` on the live site and re-executes them **after `DOMContentLoaded` has already
 fired**. `pagefind-custom.js` wrapped its whole init in a naked

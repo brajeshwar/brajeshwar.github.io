@@ -313,7 +313,7 @@ it is not an `<img>`.
 4. **Everything else is Unknown.** The shipped `.webp` files are metadata-stripped, and
    `cdn.oinam.com` strips them too (checked), so absence of metadata proves nothing.
 
-⚠️ **Filename matches on `ai` are mostly SUBJECT, not provenance** — `mission-impossible-AI`,
+[WARNING] **Filename matches on `ai` are mostly SUBJECT, not provenance** — `mission-impossible-AI`,
 `rembrandt-painting-ai`, `ai-ml-dl-llm-gai-gpt-nlp` are all about AI, not made by it. Two
 early matches were also wrong on lineage and were dropped:
 `/2013/the-design-of-everyday-things/` and the two Gandhi posts use files that are a

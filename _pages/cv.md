@@ -10,7 +10,7 @@ edited: 2026-10-31
 {%- comment -%}
   /cv/ — the professional history, rebuilt from cv.brajeshwar.com.
 
-  ⚠️ MARKDOWN SINCE 2026-08-09, AND THAT REVERSES THIS REPO'S OWN DECISION.
+  [WARNING] MARKDOWN SINCE 2026-08-09, AND THAT REVERSES THIS REPO'S OWN DECISION.
   _docs/timeline.md argued at length for HTML on a real parser fact — kramdown
   does not parse Markdown inside block-level HTML — and concluded every entry
   would need its own `markdown="1"`, which is more markup than it saves.
@@ -25,13 +25,13 @@ edited: 2026-10-31
   definitely be just Markdown." The reason it matters is /cv.md — the plain-text
   twin the "Open in" bar hands to an AI — which was shipping raw HTML.
 
-  ⚠️ THE ANCHORS ARE NOT WRITTEN DOWN ANYWHERE, and that is correct. kramdown
+  [WARNING] THE ANCHORS ARE NOT WRITTEN DOWN ANYWHERE, and that is correct. kramdown
   derives a heading id from its TEXT, so `## Razorfish` is `id="razorfish"`.
   All thirteen of /cv/#<company> resolve exactly as before — verified against
   the old file. Rename a company and you rename its anchor: that is the one
   thing to know before editing a heading.
 
-  ⚠️ THE LINE DIRECTLY UNDER EACH `##` IS THE SUB-TITLE — date first, then role
+  [WARNING] THE LINE DIRECTLY UNDER EACH `##` IS THE SUB-TITLE — date first, then role
   and place. There is no class on it; the CSS is `h2 + p`. A blank line between
   them is required, and a second paragraph there would be styled as a sub-title
   rather than prose.

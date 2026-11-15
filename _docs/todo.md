@@ -30,7 +30,7 @@ Originally absorbed from the 2027 planning braindump.
       byte-identical feed from the Pages project's own address, `albums-ah7.pages.dev`, which is
       outside the zone. The retries and the diagnostic logging stay. He then switched Bot Fight
       Mode off for oinam.com the same day.
-- [ ] **⚠️ `/styleguide/` teaches an album protocol that no longer exists** *(found 2026-09-01)*
+- [ ] **[WARNING] `/styleguide/` teaches an album protocol that no longer exists** *(found 2026-09-01)*
       — § *Adding a book or an album item*, the album rows in the size tables, and the masonry
       paragraphs all describe cutting a `.webp` into `/static/album/`, three hand-written
       fields, and a `/album/` page to show them on. **None of that is true**: the album is
@@ -88,11 +88,11 @@ Originally absorbed from the 2027 planning braindump.
       a constraint on prose *inside* it, not a second template. See *Standardize the site width*
       below and [`styles.md`](styles.md) §6.
 - [x] **Timeline template** *(2026-07-27)* — `/about/` is a vertical timeline.
-      ⚠️ **It had a CSS-only Life/Work filter with shareable `#work` / `#life` URLs; both were
+      [WARNING] **It had a CSS-only Life/Work filter with shareable `#work` / `#life` URLs; both were
       DELETED 2026-08-09** ("The Life/Work goes away including the code that powers it"), along
       with `timeline.js`, every `data-track`, and ~157 lines of `timeline.scss`. Those fragments
       now match nothing, which is right for a removed feature. `_pages/about.html` + `timeline.css`; `/now/` wears the same
-      visuals. See [`timeline.md`](timeline.md). ⚠️ **The claim that `/about/#work` is "the link
+      visuals. See [`timeline.md`](timeline.md). [WARNING] **The claim that `/about/#work` is "the link
       to send instead of a CV" was overtaken on 2026-08-09** — there is a real `/cv/` now, and
       that is the link to send. The filter is still there and still works; it is no longer
       carrying the job this line gave it.
@@ -103,7 +103,7 @@ Originally absorbed from the 2027 planning braindump.
       stub pointing at it — an **alias, not a rename**: `/resume/` was never live, so unlike
       `/photos/` it is not preserving a URL, it is catching the other word people type.
       `_pages/cv.html` + `_sass/cv.scss` + `_redirect/resume.md`.
-      ⚠️ **`/cv/` deliberately does not use the timeline component.** That puts the date in an
+      [WARNING] **`/cv/` deliberately does not use the timeline component.** That puts the date in an
       `h2` and the event in an `h3` — right for a story, backwards for a CV. `/about/` got the
       same inversion the same day (events as titles), which is why the two now agree on emphasis
       while keeping different structures.
@@ -114,13 +114,13 @@ Originally absorbed from the 2027 planning braindump.
       `.timeline-progress` scroll-driven experiment including its `@supports` and
       `prefers-reduced-motion` blocks. −1,297 bytes raw / −264 gzip on the one cached
       stylesheet.
-      ⚠️ **This entry was WRONG about `.timeline-when`** — it listed it as live with "9 period
+      [WARNING] **This entry was WRONG about `.timeline-when`** — it listed it as live with "9 period
       labels". The built site has **zero**: it died with the period headings on 2026-08-09, and
       `_sass/timeline.scss` never carried a rule for it at all. The stale claim had also
       propagated into a comment in that file saying `anchors.js` targets `.timeline-when`; the
       script has only ever named `.timeline h2[id], .timeline h3[id], .page-now h2[id]`. Both
       corrected.
-      ⚠️ **The seven shared rules were the trap**, exactly as this entry warned. Each
+      [WARNING] **The seven shared rules were the trap**, exactly as this entry warned. Each
       (`.timeline-entries, .page-now ul { … }` and friends) was edited by hand, then the built
       stylesheet was split rule-by-rule and diffed: **every `.page-now` declaration is
       byte-identical before and after**, as is every live `.timeline` one. 420 rules → 407, and
@@ -138,7 +138,7 @@ Originally absorbed from the 2027 planning braindump.
       `scripts/build-agent-markdown.mjs` now branches on the **source extension** — `.md` reads
       the source as before, `.html` reads `_site/<url>/index.html` and converts it — so a page
       converted either way tomorrow is handled with no edit to the script.
-      ⚠️ **The twelve were not the twelve this table listed.** It named `styleguide`, whose
+      [WARNING] **The twelve were not the twelve this table listed.** It named `styleguide`, whose
       source is `_pages/styleguide.md` and was never affected, and missed `newsletter.html`.
       Same count, one swap. The real set is every file in `_pages/*.html`.
       **Neither of the two options this entry offered was taken.** No dependency: a library
@@ -172,7 +172,7 @@ Originally absorbed from the 2027 planning braindump.
         take the plunge, go official"*, preceded by a Freelance entry dated 2003: *"In early
         2003, I resigned from a very lucrative job and started freelancing full-time."* Same
         resignation, two different next steps, and the title differs too (Co-Founder, CEO vs
-        Founder). ⚠️ It is not the two-year gap this entry described ("2003–2004") — `/about/`
+        Founder). [WARNING] It is not the two-year gap this entry described ("2003–2004") — `/about/`
         dates the freelance period 2003 flat.
       - **The client list differs, but not as described.** `/about/` does not say Adobe *instead
         of* Macromedia — it lists **both**. The real difference: `/about/` names Adobe, which
@@ -181,7 +181,7 @@ Originally absorbed from the 2027 planning braindump.
       - **Found while checking, and unrelated to either page:** `_data/album.yaml` titled the
         2006 photograph *"Oinam Software acquired by **Nanocast**"* — and its filename says
         nanocast too — while `/about/`'s caption for the same image and `/cv/`'s closing line
-        both say **Mixercast**. ⚠️ **Half of this went away on 2026-09-01**: `_data/album.yaml`
+        both say **Mixercast**. [WARNING] **Half of this went away on 2026-09-01**: `_data/album.yaml`
         was deleted when `/album/` moved onto albums.oinam.com's feed, so no page carries the
         Nanocast *title* any more. What survives is the FILENAME —
         `/static/album/2006-04-08-oinam-software-acquired-by-nanocast.webp` — still referenced
@@ -197,7 +197,7 @@ Originally absorbed from the 2027 planning braindump.
       placement question is open again. Worth deciding then whether the PDF is
       generated from the timeline markup or maintained separately. **Now that `/cv/` exists it is
       the better source** — one page, already in role order, no filter state to reason about.
-      ⚠️ **2026-09-07: this item is now ONLY the generated-file question.** The page-actions
+      [WARNING] **2026-09-07: this item is now ONLY the generated-file question.** The page-actions
       button that used to wear a PDF icon is an honest printer icon labelled "Print" — it always
       only called `window.print()`, and the document icon read as a promise that a `/cv.pdf`
       existed. The remaining decision is whether to add headless Chromium to the Actions build
@@ -207,7 +207,7 @@ Originally absorbed from the 2027 planning braindump.
       and lets the subdomain die out; it was only ever sent by hand. The Redirect Rule steps,
       should that change, are in [`hosting.md`](hosting.md).
 - [x] **`/album/` is real** *(2026-08-01)* — eight photographs replacing the twelve borrowed
-      book covers, entries sorted by `img` filename. ⚠️ Two of the eight have no `url` and
+      book covers, entries sorted by `img` filename. [WARNING] Two of the eight have no `url` and
       render **unlinked by design**; both includes guard on the field rather than emitting
       `<a href="">`, which is a link to the current page, not an inert one.
 - [x] **`/books/` is now `books.html`** *(2026-08-01)* — HTML markup, Markdown reserved for
@@ -219,7 +219,7 @@ Originally absorbed from the 2027 planning braindump.
 - [x] **`_redirect` collection is real now** *(2026-08-01)*. It was declared in `_config.yml`
       and completely empty — no folder, no `_layouts/redirect.html` — so the machinery existed
       on paper only. `/photos/` → `/album/` needed it: that URL was live and returning 200 in
-      production. ⚠️ **Re-pointed 2026-09-01** — `/photos/` and `/album/` BOTH go straight to
+      production. [WARNING] **Re-pointed 2026-09-01** — `/photos/` and `/album/` BOTH go straight to
       `https://albums.oinam.com` now, and `_pages/album.html` is deleted. `/photos/` was aimed
       past `/album/` deliberately, so it is one meta-refresh hop and not a chain. Three stubs
       exist: `/photos/`, `/resume/`, `/album/` — the last is the only off-site one, and it works
@@ -228,7 +228,7 @@ Originally absorbed from the 2027 planning braindump.
       production, and guardrail 2 preserves every URL. The layout is a `<meta http-equiv>`
       refresh plus a canonical to the target, `noindex, follow`, and a real visible link for
       when the refresh is blocked. No JavaScript, so it works with scripting off.
-      ⚠️ `sitemap: false` goes on the redirecting PAGE, not the layout — layout front matter
+      [WARNING] `sitemap: false` goes on the redirecting PAGE, not the layout — layout front matter
       does not propagate, and the stub appeared in `sitemap.xml` until it was moved.
 - [ ] **Redirect** `docs.brajeshwar.com` → <https://archive.oinam.com> via Cloudflare Workers.
 - [ ] **Move Jekyll redirects** to Cloudflare / plain HTML — or drop them and give a good explanation and next step in the 404 page.
@@ -237,7 +237,7 @@ Originally absorbed from the 2027 planning braindump.
 
 ## CSS architecture (decided 2026-07-19 — see [`styles.md`](styles.md) §5)
 
-> ⚠️ **The delivery half of this was superseded 2026-07-27.** CSS is no longer inlined and no
+> [WARNING] **The delivery half of this was superseded 2026-07-27.** CSS is no longer inlined and no
 > longer split per layout: one external `assets/styles/site.css`, content-hashed, cached a
 > year. The `styles:` key is gone. Items below that talk about *what ships to which page* are
 > historical; items about *how the files are organized* still stand. [`styles.md`](styles.md)
@@ -322,7 +322,7 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       `figcaption.center/right`, the `audio.*` names in the size/float lists, `object, embed`
       (from the `iframe` group — `iframe` itself stays and is used), `aside.left/right` plus the
       `@media` reset that existed only for them, and `tfoot`. Every one measured 0.
-      ⚠️ `sidenotes.js` still lists `aside.right, .aside.right` among the wide media it dodges.
+      [WARNING] `sidenotes.js` still lists `aside.right, .aside.right` among the wide media it dodges.
       Left in on purpose: a `querySelectorAll` matching nothing costs nothing, and it is the
       right behavior if one is ever authored.
 - [x] **`html`+`body` both set `scroll-behavior`** *(done 2026-07-27)* — the `body` copy was
@@ -333,7 +333,7 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       merging them is a real refactor of live sidenote behavior, not a tidy. Worth doing with
       the sidenote work, not alongside unrelated cleanup.
 - [ ] **Two spacing systems** — ratio-derived `--space`/`--space-smaller` vs fluid Utopia
-      `--space-*`. ⚠️ **Not the 3 rules this entry claimed** — re-counted 2026-07-27: **10 call
+      `--space-*`. [WARNING] **Not the 3 rules this entry claimed** — re-counted 2026-07-27: **10 call
       sites** across `base`, `home`, `post`, `archives` and `search`. Each is a visible spacing
       value, so this is a migration with a look to re-check, not a cheap tidy. Left for its own
       pass.
@@ -364,7 +364,7 @@ Full findings and evidence in [`styles.md`](styles.md) §5 → *Audit backlog*.
       moving them into `post.css` would break sidenotes and the foot fallback on those pages.
       They stay in `base.css`.
 
-## Standardize the site width — ✅ DONE 2026-07-27
+## Standardize the site width — [DONE] DONE 2026-07-27
 **`--body-width-max` is 64rem / 1024px, and it is the only content width on the site.**
 Brajeshwar's call: *"Archives, and everything on the website should now run on the same
 width"*, then *"standardize at the size that encompasses the sidenotes too."* Header, footer,
@@ -378,7 +378,7 @@ sidenote gutter:
     + --sidenote-gap 56 + --sidenote-width 256   312px
     = 977px  → 64rem (1024px), with 47px of breathing room
 
-⚠️ **It was 81rem/1296px for part of 2026-07-27**, from the same sum with the gutter counted
+[WARNING] **It was 81rem/1296px for part of 2026-07-27**, from the same sum with the gutter counted
 **twice** — correct while the reading column was centered, because then the margin is mirrored
 and you pay for the gutter on both sides. Going asymmetric (below) deleted that doubling and
 took 272px off the site. Both numbers are kept here because the arithmetic is the point: the
@@ -459,7 +459,7 @@ at the top of this section.
       Coarser than Umami — request-level, bot noise, no session depth — and that was accepted
       as the right trade.
 
-      ⚠️ **Correction, recorded because this file argued the opposite for an hour.** The
+      [WARNING] **Correction, recorded because this file argued the opposite for an hour.** The
       earlier entry said to prefer *Cloudflare Web Analytics* since "the CDN is already in the
       path." That was wrong, and it conflated two different products. Cloudflare Web Analytics
       is a client-side beacon served from `static.cloudflareinsights.com` — a separate
@@ -485,7 +485,7 @@ at the top of this section.
       `margin-inline: calc(50% - 50vw)`, with `padding-inline-start: calc(50vw - 50%)` putting
       the first thumbnail back on the band's left edge so it lines up with the heading, the
       header rule and the logo.
-      ⚠️ `100vw` includes the scrollbar and the band does not, so the strip is a scrollbar
+      [WARNING] `100vw` includes the scrollbar and the band does not, so the strip is a scrollbar
       wider than the page can show. `body:has(home-container) { overflow-x: clip }` absorbs it
       — `clip`, not `hidden`, because `hidden` would make the body a scroll container and
       unstick the sticky header. Scoped with `:has()` so no other page is touched. The test is
@@ -519,7 +519,7 @@ unaccounted-for values are **360, 600, 768, 1250**.
 - [ ] **`$extralarge` (1600) has no media query at all** — it duplicates `--body-width-full`.
       One of the two should go.
 
-⚠️ **Do not "simplify" this by collapsing tablet and desktop into one breakpoint** without
+[WARNING] **Do not "simplify" this by collapsing tablet and desktop into one breakpoint** without
 reading the note in [`styles.md`](styles.md) → *The home page*: the site has no
 tablet-specific layout to begin with. What it has is per-component collapse points, which is
 the better pattern and is why there is no single tablet number to delete.
@@ -539,11 +539,11 @@ retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroo
       are fine in the home strip, which renders at 192.
 - [ ] 129 of 136 existing files are already 3:4, so this is a resolution pass, not a re-crop.
 - [x] **`/static/album/` cut to the template** *(2026-08-01)* — 8 photographs, native aspect,
-      every one inside the 60 KB budget. ⚠️ The home album strip is now **240px**, so the retina
+      every one inside the 60 KB budget. [WARNING] The home album strip is now **240px**, so the retina
       floor for these is 480px. The narrowest cut is 554px wide: fine today, and the ceiling is
       about **280px** before they need re-cutting.
 
-⚠️ **Keep the masters.** They are what a re-cut re-cuts from. **Two conventions since
+[WARNING] **Keep the masters.** They are what a re-cut re-cuts from. **Two conventions since
 2026-08-01** (full rules in [`/styleguide/`](../_pages/styleguide.md) § *Keep the master*):
 
 - **Collections** — masters live in **`_src/{books,film,album,devices,wear}/`** at the repo
@@ -557,14 +557,14 @@ retina screen wants 2×, so 490px is the floor and 600px-wide gives ~20% headroo
 
 - [ ] **The 86.3 MB decision — raised twice on 2026-08-01, decided neither time.** 38 of the 41 year-folder masters are referenced by nothing and
       ship on every deploy. Moving them to `_src/` would take `/static/` from 371 MB to about
-      285 MB. ⚠️ Weigh it against the **GitHub LFS free tier: 1 GB storage and 1 GB bandwidth
+      285 MB. [WARNING] Weigh it against the **GitHub LFS free tier: 1 GB storage and 1 GB bandwidth
       per month** — 86 MB is 8.6% of storage, and every CI checkout that pulls LFS spends
       bandwidth against the same quota. (`actions/checkout` does not pull LFS unless asked, and
       must not be asked: the build never reads `_src/`.) Raised, not done — Brajeshwar's call.
 
 ## Raised 2026-08-01, second half
 
-⚠️ **Three of these four were raised by me and CLOSED by Brajeshwar on 2026-08-02.** They are
+[WARNING] **Three of these four were raised by me and CLOSED by Brajeshwar on 2026-08-02.** They are
 kept, per the log-history rule, because each one still looks like a bug to anyone who finds it
 cold. They are not. Do not re-raise them.
 
@@ -573,7 +573,7 @@ cold. They are not. Do not re-raise them.
       the first crop used a 122px offset picked to keep the BOOK centred and it lands inside
       the words "How to" — and the 1280x927 original was deleted the same day on "do not worry
       about preserving the original". He has it in Apple Photos and has decided it is not worth
-      redoing. ⚠️ The lesson survives the decision and is the reason this entry stays: when
+      redoing. [WARNING] The lesson survives the decision and is the reason this entry stays: when
       cropping a cover, **measure where the SUBJECT OF THE TITLE sits, not where the object
       sits.** The two were 122px apart here and only one of them was checked.
 - [x] ~~**No `og:image` / `twitter:image` anywhere on the site.**~~ **Closed 2026-08-02: "I
@@ -603,7 +603,7 @@ sidenotes for the kids-smartwatch post. These are what it left open:
       the wire, and the revert is one line in `config.scss`. Once he has lived with Source
       Serif 4: either flip back, or delete the `libre-baskerville/` directory and its three
       `@font-face` blocks. **His call, after reading in it for a while.**
-- [ ] ⚠️ **Source Serif's `wght` axis is clamped to 200:700.** The subset covers the weights
+- [ ] [WARNING] **Source Serif's `wght` axis is clamped to 200:700.** The subset covers the weights
       the site uses (200/400/600, and 700 for `<strong>`). A future `--font-weight-*` token
       past 700 will silently flatten to 700 — the browser gives no warning. The re-subset
       recipe (instancer + pyftsubset) is in the `themes.scss` comment. Same class of trap as
@@ -642,7 +642,7 @@ sidenotes for the kids-smartwatch post. These are what it left open:
       exist rather than merely on articles: 87 of 1,483 pages, down from all of them. It is
       the largest script on the site (4.9 KB minified) and only 85 of 1,456 posts have
       footnotes, so on 94% of posts it was loading, running, finding nothing and returning.
-      `anchors.js` got the same treatment (453 posts, gated on an `h2`+). ⚠️ The `contains` test
+      `anchors.js` got the same treatment (453 posts, gated on an `h2`+). [WARNING] The `contains` test
       must be inline in the `if` — Liquid's `assign` does not evaluate it and fails silently
       *and truthily*. See [`javascript.md`](javascript.md).
 - [x] **Reading width = character-based** — `--measure: 66rch` (~60–70 chars/line); video embeds
@@ -693,7 +693,7 @@ sidenotes for the kids-smartwatch post. These are what it left open:
       anyway, and it was the only default color on a monotone site. Disabling the highlighter
       beats deleting just the CSS: the `<span>` soup is kramdown's, so the stylesheet alone would
       have left ~1.5 KB/post of markup doing nothing. −262,286 bytes raw / −41,276 gzip across
-      the 55 posts (−8.9% / −5.0%). ⚠️ Needed `:not(pre) > code` in base.css — kramdown drops
+      the 55 posts (−8.9% / −5.0%). [WARNING] Needed `:not(pre) > code` in base.css — kramdown drops
       `class="language-plaintext"` when the highlighter is off, so inline code silently lost its
       chip. Revert is three steps, documented in `_config.yml`.
 - [x] **Jekyll's "Excerpt modified" warning on `_pages/archives.html`** *(fixed 2026-07-27)* —
@@ -717,18 +717,18 @@ sidenotes for the kids-smartwatch post. These are what it left open:
       which is also what the site is developed against locally. Node only runs the agent-markdown
       script and Pagefind, so nothing was broken; it was an unsupported runtime sitting in the
       deploy path. `build-agent-markdown.mjs` verified on 22 (1,479 files + llms.txt).
-      ~~*(Ruby is on 3.3.5, which is current.)*~~ ⚠️ **That parenthetical was wrong when
+      ~~*(Ruby is on 3.3.5, which is current.)*~~ [WARNING] **That parenthetical was wrong when
       written and is wronger now** — corrected 2026-08-09. See the Ruby item below.
-      ⚠️ Watch the first Actions run after this ships.
+      [WARNING] Watch the first Actions run after this ships.
 - [ ] **Ruby is on 3.3.5, seven patches behind its own branch** *(deferred 2026-08-09 — "we
       will revisit this later")*. 3.3.12 is the current patch; 3.4.10 and 4.0.6 are the other
       stable lines. **Target 3.4.10, not 4.0.6.** Nothing blocks it: sass-embedded is strictest
       at `>= 3.1`, Jekyll 4.4.1 asks `>= 2.7.0`, and `logger` is already in the Gemfile for the
       stdlib gems that stopped being defaults after 3.3.
-      ⚠️ **GitHub Pages is not the constraint and never was** — no github-pages gem, and Pages
+      [WARNING] **GitHub Pages is not the constraint and never was** — no github-pages gem, and Pages
       only receives a static artifact. The pin came from a 2025-06-28 Cloudflare failure
       (`f96455cc`) against a v2 build image that shipped Ruby 3.2.2 and could not supply 3.4.4.
-      ⚠️ **Bump the WORKFLOW value first, not `.ruby-version`** — the latter moves local dev and
+      [WARNING] **Bump the WORKFLOW value first, not `.ruby-version`** — the latter moves local dev and
       the Cloudflare backup too, and the point of the standby is to still be on the old Ruby if
       the new one breaks. Then `git diff Gemfile.lock`: a `RUBY VERSION` block appearing there
       would pin Cloudflare as well. Full trace in [`hosting.md`](hosting.md) → *Versions*.

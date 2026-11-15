@@ -94,7 +94,7 @@ The paths live in `package.json`'s `lint` and `format` scripts.
 | ESLint | `eslint.config.mjs` | `@eslint/js` recommended, correctness only. Browser globals for `assets/scripts`, Node for the rest |
 | Stylelint | `.stylelintrc.mjs` | `stylelint-config-recommended-scss`, correctness only, three rules off (each says why) |
 
-- ⚠️ **Prettier removed the hand-aligned columns** in the Sass (the `:` in `config.scss`'s
+- [WARNING] **Prettier removed the hand-aligned columns** in the Sass (the `:` in `config.scss`'s
   ratio list, the `--step-*` values). It has no option to keep them. The reformat is its own
   commit. If the columns matter more than the tool, revert that one commit and drop the
   `prettier --check` from `npm run lint`, or CI will fail on the unformatted code.

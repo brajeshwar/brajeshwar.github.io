@@ -72,7 +72,7 @@ loaded bundle — the part with a cost — is shared.
 On `/search/`, ⌘K and `/` **focus the page's field instead of opening the palette.** A modal
 search box on top of a search page is two boxes querying one index.
 
-⚠️ **IT WAS BROKEN IN PRODUCTION AND FINE ON LOCALHOST, FOR MONTHS.** The page ran Pagefind's
+[WARNING] **IT WAS BROKEN IN PRODUCTION AND FINE ON LOCALHOST, FOR MONTHS.** The page ran Pagefind's
 Default UI, initialised by `pagefind-custom.js`, which wrapped everything in a naked
 `window.addEventListener('DOMContentLoaded', …)`. **Cloudflare Rocket Loader rewrites every
 `<script type>` and re-executes the scripts after `DOMContentLoaded` has already fired**, so
@@ -85,7 +85,7 @@ addEventListener : init()` works either way. `appearance.js` and `sidenotes.js` 
 audited 2026-08-09, no script in `assets/scripts/` uses a bare listener. Do not "simplify" one:
 it will pass every local test and ship dead.
 
-⚠️ **NO `<script>` OR `<link>` TAGS IN `search.html`.** `search.js` already loads on every page
+[WARNING] **NO `<script>` OR `<link>` TAGS IN `search.html`.** `search.js` already loads on every page
 and injects Pagefind's bundle itself. Putting a tag back on the page reintroduces exactly the
 Rocket-Loader ordering problem above.
 
@@ -115,7 +115,7 @@ are unchanged: `.github/workflows` runs `npx pagefind --site _site` after the Je
 `/` opens rather than toggles on purpose: pressing it while the palette is open should type a
 slash into the query box, not close the thing you just opened.
 
-⚠️ **Two guards make `/` safe, and both are load-bearing.**
+[WARNING] **Two guards make `/` safe, and both are load-bearing.**
 
 1. Not while typing. `isTyping()` skips the shortcut when focus is in a text-accepting
    `<input>`, a `<textarea>`, a `<select>`, or anything `contenteditable`. Without it, `/`

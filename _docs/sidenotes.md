@@ -66,7 +66,7 @@ Cross-focus uses only existing tokens: dimming via `--opacity-lower`, the active
 the global `prefers-reduced-motion` kill switch in `base.css`.
 
 `_sass/config.scss` declares `--sidenote-width` (16rem, the *maximum*) and `--sidenote-gap`
-(3.5rem). ⚠️ `--sidenote-min-gutter` was removed 2026-07-27: CSS declared a number that
+(3.5rem). [WARNING] `--sidenote-min-gutter` was removed 2026-07-27: CSS declared a number that
 only the JS read. The threshold is `MIN_GUTTER_REM` (17) in `assets/scripts/sidenotes.js`
 and nowhere else.
 
@@ -110,7 +110,7 @@ got none; it let the site width come down to 64rem / 1024px — `665 + 56 + 256 
 breathing room, instead of `665 + 2 × 312 = 1289` — and it put the prose's left edge on the
 band edge, the same line the header and footer rules draw.
 
-### ⚠️ Images without dimensions — the placement race
+### [WARNING] Images without dimensions — the placement race
 
 Notes are positioned from measured geometry, so anything that has no height *yet* is
 invisible to the math. Images here carry no `width`/`height` attributes, so at first layout

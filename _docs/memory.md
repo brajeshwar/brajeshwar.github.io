@@ -10,7 +10,7 @@
 production-parity copy into `_test/site/` and runs Playwright (build checks plus real-Chrome
 checks, JS on and off); `make lint` runs ESLint, Stylelint and `prettier --check`. CI runs both
 after Pagefind and before the upload, so a red check keeps the last good build live. Everything is
-in [`testing.md`](testing.md). ⚠️ **There is a `package.json` now** (dev tooling only, excluded
+in [`testing.md`](testing.md). [WARNING] **There is a `package.json` now** (dev tooling only, excluded
 from the build), and CI's `npm install pagefind` became `npm ci`.
 
 | | |
@@ -21,18 +21,18 @@ from the build), and CI's `npm install pagefind` became `npm ci`.
 | **Appearance panel → Light/Dark toggle** | palettes, accents, webfonts and text sizes all gone; one button, system first; browser owns text size (`body` is `1rem`). See [`styles.md`](styles.md) "Light and dark, and nothing else" |
 | **Prettier** | reformatted the code in its own commit (`650fbfe3`). The hand-aligned Sass columns are gone; that commit reverts alone if he wants them back (then drop the check from `npm run lint`) |
 
-⚠️ **`_site/` IS NOT A PRODUCTION BUILD WHILE HE IS PREVIEWING.** He runs
+[WARNING] **`_site/` IS NOT A PRODUCTION BUILD WHILE HE IS PREVIEWING.** He runs
 `jekyll serve --incremental --future --livereload`, which writes the 2099 drafts into `_site/`.
 Seeing `_site/2099/` locally is not a leak; production 404s them. That is why the tests build
 their own directory.
 
-✅ **DEPLOYED 2026-11-15, run 43668462691 on `a76c67b1`, every step green** — including
+[DONE] **DEPLOYED 2026-11-15, run 43668462691 on `a76c67b1`, every step green** — including
 the two new ones, 41/41 tests and lint, on `ubuntu-latest` = 26.04 for the first time. Verified
 against the live site, not just CI: `site.4b5dddfb.css` (byte-identical to the local test build)
 carries the color-scheme pin, the `:not([data-theme])` auto branch and the `scripting: none`
 rule, and `/2026/books/` has both new books. He ran the push himself.
 
-⚠️ **Why it had been frozen:** `ubuntu-latest` became 26.04, which carries only the newest
+[WARNING] **Why it had been frozen:** `ubuntu-latest` became 26.04, which carries only the newest
 patch of each Ruby series, and the workflow pinned `3.3.5`. Every run from 2026-11-12 to
 2026-11-15 (four crons, one push) failed at Setup Ruby, and nothing deployed after 2026-11-11.
 It now asks for `'3.3'`. **A red cron is easy to miss: check `gh run list` at the start of a
@@ -40,7 +40,7 @@ session** — nothing else announces that the site has stopped updating.
 
 ## Where we were (updated 2026-11-05, fourteenth session — CLOSED)
 
-**✅ SESSION CLOSED 2026-11-05. Everything is pushed and deployed** — run 42004378335 on
+**[DONE] SESSION CLOSED 2026-11-05. Everything is pushed and deployed** — run 42004378335 on
 `f3d2ee15`, green, and the live `site.a72bb069.css` was checked for both fixes below.
 
 **Two fixes shipped:**
@@ -62,31 +62,31 @@ the prose and read lopsided in its own way.
 
 ## Where we were (updated 2026-10-31, thirteenth session — CLOSED)
 
-**✅ SESSION CLOSED 2026-10-31. Everything is pushed and deployed** — last good run 41205032764
+**[DONE] SESSION CLOSED 2026-10-31. Everything is pushed and deployed** — last good run 41205032764
 on `33828948` (the Albums fetch wrote 50 items first try), verified against the live site.
 
 **THE CV HAS A STATIC A4 PDF: `/static/pdf/brajeshwar-oinam.pdf`**, linked from `/cv/` (contact
-line and the page-actions bar's PDF icon, via `pdf:` in front matter). ⚠️ **It is a committed
+line and the page-actions bar's PDF icon, via `pdf:` in front matter). [WARNING] **It is a committed
 file, not a build output: after any edit to `_pages/cv.md`, run `make cv-pdf` and commit the PDF
 with it**, or the PDF lags the page. `/cv/` also gained Wipro (2026 Apr — Present).
 
-⚠️ **The Print button, `page-actions.js`, and `icons/print.svg` are DELETED** — once nothing
+[WARNING] **The Print button, `page-actions.js`, and `icons/print.svg` are DELETED** — once nothing
 referenced the script, `hash-assets.mjs` failed the deploy (run 41193759796) on an orphaned
 asset. Details in [`agents.md`](agents.md).
 
-⚠️ **The Albums feed is fetched from `albums-ah7.pages.dev`, not albums.oinam.com.** The
+[WARNING] **The Albums feed is fetched from `albums-ah7.pages.dev`, not albums.oinam.com.** The
 custom domain sat behind oinam.com's Bot Fight Mode, which challenged non-US GitHub runners
 (2 of ~60 runs got a `403`). The pages.dev address serves the identical feed outside the zone.
 He then turned Bot Fight Mode **off** for oinam.com (2026-10-31); pages.dev stays regardless.
 Details in `scripts/fetch-albums.rb` and [`todo.md`](todo.md).
 
-**(Previous session) ✅ CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,
+**(Previous session) [DONE] CLOSED 2026-09-07. `/cv/` PRINTS AS A DOCUMENT NOW.** Seven commits, all signed,
 **all pushed by him**, the last at 22:40 IST. **Actions run 34146487725 went green and the
 changes were verified against the DEPLOYED site, not just CI** — `brajeshwar.com/cv/` serves
 `aria-label="Print"`, zero occurrences of "Save as PDF", and `site.32859453.css` carries both
 `@page{margin:20mm 16mm}` and the `.page-cv a[href^=http]::after{content:none}` rule.
 
-⚠️ **Check `git log origin/main..main` before believing that, or any other status line here.**
+[WARNING] **Check `git log origin/main..main` before believing that, or any other status line here.**
 It is a claim like any other. One later docs commit (this note) was left unpushed.
 
 **What changed, in one line each:**
@@ -98,19 +98,19 @@ It is a claim like any other. One later docs commit (this note) was left unpushe
 | the printed CV | **eight pages → four**, no inline URLs, no orphans or widows, no stranded headings |
 | **every page's print** | **`@page { margin: 20mm 16mm }`** — see the warning below |
 
-⚠️ **THE ONE THING THAT REACHES BEYOND `/cv/`:** `_sass/cv.scss` declares `@page`, which is
+[WARNING] **THE ONE THING THAT REACHES BEYOND `/cv/`:** `_sass/cv.scss` declares `@page`, which is
 document-level and **cannot be scoped**, so it sets the print margin for the whole site. It lives
 in a page-named partial because that is where the need arose. Approved deliberately. Recorded in
 [`styles.md`](styles.md) and [`agents.md`](agents.md).
 
-⚠️ **AND THE LESSON THAT COST THE MOST: THE PRINT DIALOG IS PART OF THE LAYOUT.** He prints with
+[WARNING] **AND THE LESSON THAT COST THE MOST: THE PRINT DIALOG IS PART OF THE LAYOUT.** He prints with
 "Headers and footers" on; every measurement here passed `--no-pdf-header-footer`. Chrome draws
 that chrome inside the page margin and, when the margin cannot hold it, takes the room out of the
 **content box** — so the two ends were paginating different page boxes from the same stylesheet.
 Three rounds of tuning type sizes could not have fixed it. **The test that proves it is fixed:
 with the margin at 20mm, headers on and headers off paginate identically.**
 
-⚠️ **FOUR MEASUREMENT CLAIMS WERE PUBLISHED WRONG BEFORE THAT WAS FOUND**, and three were harness
+[WARNING] **FOUR MEASUREMENT CLAIMS WERE PUBLISHED WRONG BEFORE THAT WAS FOUND**, and three were harness
 bugs rather than CSS mistakes — a stale `@page{size:A4}` left in the probe baseline made every
 run labelled "Letter" secretly A4, and *the two columns agreeing to the byte* was the tell that
 got ignored twice. The full list is in the comments in `_sass/cv.scss`. **Two runs matching
@@ -125,7 +125,7 @@ PDF"* in [`todo.md`](todo.md) is now purely the generated-file question.
 
 ## Where we were (updated 2026-09-01, tenth session — CLOSED)
 
-**✅ SESSION CLOSED 2026-09-01.** **THE ALBUM LEFT THIS SITE**, across four rounds in one
+**[DONE] SESSION CLOSED 2026-09-01.** **THE ALBUM LEFT THIS SITE**, across four rounds in one
 afternoon — thirteen commits, all signed, **all pushed by him and live**. Verified on the
 deployed site, not just in CI: `brajeshwar.com/album/` returns the redirect stub to
 albums.oinam.com, `/photos/` goes straight there too, the home page carries **zero**
@@ -133,7 +133,7 @@ albums.oinam.com, `/photos/` goes straight there too, the home page carries **ze
 media.oinam.com plus the "All Albums" tile, every image `alt=""`. The Actions run for his
 last commit ("Book Edits") was green.
 
-⚠️ **Check `git log origin/main..main` before believing that, or any other status line in
+[WARNING] **Check `git log origin/main..main` before believing that, or any other status line in
 this file.** It is a claim like any other.
 
 **Round one** (queue item): `/album/` and the home strip stopped reading a hand-maintained
@@ -159,7 +159,7 @@ the only external marker, and the album's scraped `alt` field deleted in favour 
 | every off-site link | **no `target` at all, site-wide** — the ↗ marks it, the reader decides where it opens |
 | the data | `_data/albums.yaml`, generated by `scripts/fetch-albums.rb`, **gitignored** |
 
-⚠️ **`ruby scripts/fetch-albums.rb`, never `bundle exec ruby`.** rexml is a *bundled gem* in
+[WARNING] **`ruby scripts/fetch-albums.rb`, never `bundle exec ruby`.** rexml is a *bundled gem* in
 Ruby 3.3: bare `ruby` loads it, bundler hides it unless the Gemfile names it. The workflow step
 (before `jekyll build`) and the `make albums` target both call it bare, deliberately. It fails
 the build loudly on a bad status, unparseable XML, zero items, or an item missing a link or
@@ -168,11 +168,11 @@ thumbnail — all five paths were exercised, each exiting 1 with one readable li
 **The external-link treatment is one decision in three parts, and all three are required.**
 `_includes/icons/external.svg` (a ↗ carrying its own `.external-mark` class, sized in `em` in
 `base.scss`), a `target`, and `aria-label="… (opens in a new tab)"`.
-⚠️ **The glyph is `aria-hidden`, so without the label a screen-reader user gets a new tab with
+[WARNING] **The glyph is `aria-hidden`, so without the label a screen-reader user gets a new tab with
 no warning; without the glyph a sighted reader gets the same surprise.** Both `home-strip.html`
 and `footer.html` test the URL for `http` and apply all three. Internal links get none of it.
 
-⚠️ **NOTHING ON THIS SITE FORCES A NEW TAB. ZERO `target` ATTRIBUTES, MEASURED IN THE BUILT
+[WARNING] **NOTHING ON THIS SITE FORCES A NEW TAB. ZERO `target` ATTRIBUTES, MEASURED IN THE BUILT
 OUTPUT.** *"I don't want to break convention and force a target=_blank … In fact, let's
 avoid target=_blank everywhere."* That took `/devices/`'s `_oinam` and, last, the two
 "Open in OpenAI / Claude" buttons on every post — 2,922 anchors that were the strongest
@@ -184,13 +184,13 @@ who can ask for a new tab with a modifier-click on any link; the mark tells them
 leaves the site so they can choose knowingly. `rel="noopener"` came off with the target —
 with no new browsing context there is nothing for it to do.
 
-⚠️ **The `aria-label` says "(external link)", not "(opens in a new tab)"**, and that is not
+[WARNING] **The `aria-label` says "(external link)", not "(opens in a new tab)"**, and that is not
 a wording preference. The ↗ is `aria-hidden`, so the label is the ONLY place the
 leaves-the-site fact exists for a screen reader — and while a target was forced the label
 said "new tab", which went false the instant the target came off. **A label that describes
 behaviour has to be re-read every time the behaviour changes.**
 
-⚠️ **THE NAMED-WINDOW IDEA IS CLOSED — keep the measurement, it is not guessable.** The
+[WARNING] **THE NAMED-WINDOW IDEA IS CLOSED — keep the measurement, it is not guessable.** The
 album links went `_oinam-albums` → `_oinam` → `_blank` → nothing in one afternoon. The idea
 was one shared window name so every off-site link reused a single tab. It works, and it
 costs `rel="noopener"`:
@@ -203,31 +203,31 @@ costs `rel="noopener"`:
 Reuse finds the window BY NAME, and that lookup only succeeds if the two contexts are
 "familiar" — which across origins ONLY the opener relationship provides. `noopener` severs
 exactly that. So it is reuse or noopener, never both; `rel="noreferrer"` is no third option
-because it implies noopener. ⚠️ **A grep over built HTML called every one of those states
+because it implies noopener. [WARNING] **A grep over built HTML called every one of those states
 correct. Only the browser saw the difference** — static verification cannot see a behaviour.
 
-⚠️ **ALBUM THUMBNAILS SHIP `alt=""` FROM A `decorative` FLAG, NOT FROM DATA** (2026-09-01:
+[WARNING] **ALBUM THUMBNAILS SHIP `alt=""` FROM A `decorative` FLAG, NOT FROM DATA** (2026-09-01:
 "remove alt from albums images"). `_data/albums.yaml` carried a scraped `alt` — pulled by
 regex out of `<content:encoded>`'s `<img alt="…">` — that came back EMPTY 48 times in 50,
 because albums.oinam.com leaves an uncaptioned photo's alt empty rather than announce a
 filename. All of that machinery is gone; `home-strip.html` takes `decorative = true` and
 says the same thing once, in the caller, as a property of the shelf.
 
-⚠️ **DO NOT GO ONE STEP FURTHER AND DROP THE ATTRIBUTE.** An `<img>` with no `alt` is
+[WARNING] **DO NOT GO ONE STEP FURTHER AND DROP THE ATTRIBUTE.** An `<img>` with no `alt` is
 invalid HTML and sends assistive tech to the filename in the `src` — the exact outcome the
 scraping existed to prevent. `alt=""` is the answer; having no data to put in it is what
 changed. Books, film and devices pass no flag and still fall back to their titles, which
 for a book is a real description.
 
-⚠️ **KNOWN AND UNADDRESSED: the 12 thumbnail links have no accessible name.** Their only
+[WARNING] **KNOWN AND UNADDRESSED: the 12 thumbnail links have no accessible name.** Their only
 content is an `alt=""` image, so a screen reader announces a link with nothing in it. It
 was flagged rather than fixed, because the only text available is the filename. Fixing it
 means deciding what those links should say — his call, not a cleanup.
 
-⚠️ **THE "ALL ALBUMS" TILE REPLACES THE 13TH PHOTO, IT IS NOT A 14TH ITEM.**
+[WARNING] **THE "ALL ALBUMS" TILE REPLACES THE 13TH PHOTO, IT IS NOT A 14TH ITEM.**
 `home_album_count` is the number of TILES; `index.html` slices `minus: 1` photos and
 `home-strip.html` supplies the tile. It reuses `.strip__item`/`.strip__frame`, so its
-width is `--strip-item` and it follows the thumbnails at every breakpoint. ⚠️ **It must
+width is `--strip-item` and it follows the thumbnails at every breakpoint. [WARNING] **It must
 stay LAST** — `strip-nav.js` measures the FIRST `.strip__frame` to size the scroll
 buttons, and that has to be a photograph. Its label is H1-sized (`--step-3`), which
 **only fits the 240px tile**: below 480px the tile halves and a media query drops it to
@@ -248,7 +248,7 @@ buttons, and that has to be a photograph. Its label is H1-sized (`--step-3`), wh
    caller. Kept because `base.scss`'s post-gallery masonry points at that block by name for the
    full reasoning; deleting the rules orphans a live cross-reference.
 
-⚠️ **`/books/`, `/film/`, `/devices/` and `/own/` were verified byte-identical** through the
+[WARNING] **`/books/`, `/film/`, `/devices/` and `/own/` were verified byte-identical** through the
 shared-include edits, which is the check that matters whenever those two files are touched:
 they render four other pages.
 
@@ -267,7 +267,7 @@ they render four other pages.
 
 ## Where we were (updated 2026-08-11, ninth session — closed)
 
-**✅ SESSION CLOSED 2026-08-11** — *"document and update everything to shut down and resume
+**[DONE] SESSION CLOSED 2026-08-11** — *"document and update everything to shut down and resume
 later."* The code went out on 2026-08-10 at his word (*"Commit and push and stay clean"*): seven
 commits, the five below plus a catch-up commit and his own `6fc481b3 Phone`, which had been
 sitting unpushed since the eighth session. The documentation pass that closes it followed on the
@@ -279,7 +279,7 @@ steps, and then: all twelve `.md` twins return zero Liquid tags and zero block m
 (so the year-long cache busted); `.timeline-entry` appears **0** times in it as a selector; and
 `/now/`'s spine rule came back byte-identical.
 
-⚠️ **Check `git log origin/main..main` before believing that sentence, or any other status line
+[WARNING] **Check `git log origin/main..main` before believing that sentence, or any other status line
 in this file, including this one.** The eighth session's opening claimed "pushed and live" while
 it was false, for most of a day, and nobody noticed — which is how `Phone` came to be sitting
 unpushed under an entry saying its commits "went out together". A closed session is a claim like
@@ -301,23 +301,23 @@ than pending:
 
 | | |
 |---|---|
-| **Ruby 3.4.10** | deferred at his word, fully written up — [`hosting.md`](hosting.md) → *Versions* and [`todo.md`](todo.md). ⚠️ Bump the WORKFLOW pin, never `.ruby-version` |
+| **Ruby 3.4.10** | deferred at his word, fully written up — [`hosting.md`](hosting.md) → *Versions* and [`todo.md`](todo.md). [WARNING] Bump the WORKFLOW pin, never `.ruby-version` |
 | The Actions run | first deploy since the twins changed shape and 130 lines left the CSS. Worth a glance |
 | `/cv/` vs `/about/` | **one** disagreement — when Oinam Software was founded (2003 Mar + Co-Founder CEO on `/cv/`, 2005 + Founder on `/about/`, with a 2003 Freelance entry between them). His prose, his call |
 | ~~`/album/` says Nanocast~~ | **Half-resolved 2026-09-01** — `_data/album.yaml` is deleted, so no page carries the Nanocast *title*. The FILENAME still does, and `/about/` still points at it under a caption reading Mixercast. Caption vs URL now, not page vs page |
 
-⚠️ **Three rows left this table on 2026-08-10 because the work is done**: the dead timeline CSS,
+[WARNING] **Three rows left this table on 2026-08-10 because the work is done**: the dead timeline CSS,
 the twelve HTML pages, and *"`/cv/`, `/devices/`, `/own/` — don't work on it yet"*, which he
 deleted from the todo outright rather than keeping parked.
 
-⚠️ **The queue left this repo the same day.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
+[WARNING] **The queue left this repo the same day.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
 in his vault, worked with a now-**global** `/odo`, and the done-log is
 `~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`. Neither is visible to `git status` or `_site`,
 so if work seems to appear from nowhere between sessions, that is where it came from.
 
 ### The documentation pass (2026-08-11) — what it found
 
-⚠️ **`_docs/timeline.md` was the worst of it and has been rewritten.** It taught an authoring
+[WARNING] **`_docs/timeline.md` was the worst of it and has been rewritten.** It taught an authoring
 vocabulary that no longer existed anywhere: its copy-paste markup template used
 `.timeline-period`, `.timeline-when`, `<ol class="timeline-entries">`,
 `<li class="timeline-entry">`, `.timeline-title`, `.timeline-meta` and `.timeline-progress`.
@@ -325,7 +325,7 @@ Following it would have produced HTML that nothing styles. Six separate claims i
 were false — the markup template, the hook table, the `anchors.js` selector, `/about/`'s
 ordering, whether periods still exist, and the position line's status.
 
-⚠️ **`/about/` runs OLDEST-first**, and the order table had said newest for both it and `/cv/`.
+[WARNING] **`/about/` runs OLDEST-first**, and the order table had said newest for both it and `/cv/`.
 Re-measured: `/cv/` and `/now/` are newest-first, `/about/` and `/about/brajeshwar.com/` oldest.
 
 Also corrected: `styles.md` still described the timeline as *"a shared look with no shared
@@ -337,7 +337,7 @@ work-in-progress posts where there is now one — the four came off the shelf in
 
 ### What the ninth session learned
 
-⚠️ **Documented "facts" in `_docs/` were wrong in nine separate places, and each had been quoted
+[WARNING] **Documented "facts" in `_docs/` were wrong in nine separate places, and each had been quoted
 forward into another file.** This is the pattern worth carrying, not the individual corrections:
 
 - **`.timeline-when` was listed as live with "9 period labels."** The built site has zero, and
@@ -361,12 +361,12 @@ of this session:
    like a description of a live one. `timeline.md`, `styles.md` and a comment in `cv.scss` had
    each copied the same wrong sentence from each other.
 
-⚠️ **And a green build proves none of this.** Both verifications that actually caught things this
+[WARNING] **And a green build proves none of this.** Both verifications that actually caught things this
 session were differential, not pass/fail: splitting the built stylesheet rule-by-rule to prove
 every `.page-now` declaration was byte-identical, and checksumming all 1,481 `.md` twins to prove
 exactly 13 changed. Reach for a before/after diff, not an exit code.
 
-⚠️ **The queue left this repo on 2026-08-10.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
+[WARNING] **The queue left this repo on 2026-08-10.** It is `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
 in his vault, worked with a now-**global** `/odo`, and the done-log is
 `~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`. Neither is visible to `git status` or `_site`,
 so if work seems to appear from nowhere between sessions, that is where it came from.
@@ -377,7 +377,7 @@ so if work seems to appear from nowhere between sessions, that is where it came 
 `/search/` was **dead in production** and is fixed; every post carries an **"Open in" bar**; and
 the local queue lost ~2k tokens of always-loaded context.
 
-⚠️ **Five things here are traps that produced green builds and broken output.** They are each
+[WARNING] **Five things here are traps that produced green builds and broken output.** They are each
 written up below, and they are the reason this file is worth reading before touching anything:
 
 | trap | symptom |
@@ -397,7 +397,7 @@ written up below, and they are the reason this file is worth reading before touc
 | `_data/books/01.yaml`, `a.yaml`…`z.yaml` | 163 books, one file per initial letter |
 | `_data/books-favorites.yaml` | the 6 favorites — being in the file IS the flag |
 
-**⚠️ A book is filed by the first letter that is NOT an article.** "The Children" is in
+**[WARNING] A book is filed by the first letter that is NOT an article.** "The Children" is in
 `c.yaml`; the rule covers *The*, *A* and *An*, so "A Room of One's Own" is in `r.yaml` and
 "The 5 Elements of Effective Thinking" is in `01.yaml`. 58 of 167 moved when this came in.
 `/books/` takes its section headings from the FILENAME, never from the titles — there is no
@@ -437,7 +437,7 @@ LINES: a category label left, its items scrolling right. The rows **reuse
 `.strip__viewport` / `.strip` from home.css** — the site's one horizontal scroller, arrows and
 all — overriding three declarations under a `.page-own` prefix.
 
-⚠️ `default.html` gates strip-nav.js on the literal string `class="strip__viewport"`, so that
+[WARNING] `default.html` gates strip-nav.js on the literal string `class="strip__viewport"`, so that
 attribute must stay EXACTLY that, with no extra classes, or the arrows silently stop shipping.
 
 Naming: "Own" is the honest superset — it survives the first laptop or bicycle, where "Wear"
@@ -489,11 +489,11 @@ Everything in the queue file is work — no sections, no headings. When items ar
 is cleared **except** lines beginning `WIP`, which survive verbatim; if nothing survives it is left
 at zero bytes so his cursor lands on the first character.
 
-⚠️ **`WIP` at the beginning of a line means hands off, and it cascades to every nested item
+[WARNING] **`WIP` at the beginning of a line means hands off, and it cascades to every nested item
 beneath it.** He is still writing those. Items are prose *or* bullets — do not rewrite one into
 the other.
 
-⚠️ **The old `.claude/commands/odo.md` was deleted, not kept as a fallback** — a project command
+[WARNING] **The old `.claude/commands/odo.md` was deleted, not kept as a fallback** — a project command
 shadows the global one, so leaving it would have silently kept the old behaviour. Do not recreate
 it. `CLAUDE.local.md` / `CLAUDE.local.log.md` are gone from the repo too; their `.gitignore` and
 `_config.yml` `exclude:` entries stay as belt and braces.
@@ -509,7 +509,7 @@ Two passes, either side of midnight.
 
 **First** (2026-08-08): the timeline reversed to newest-first, an example `<figure
 class="timeline-figure">` floating into the 317px of empty margin every entry already has, and a
-live footnote/sidenote example. ⚠️ That figure needed `display: flow-root` on `.timeline-entry`
+live footnote/sidenote example. [WARNING] That figure needed `display: flow-root` on `.timeline-entry`
 to contain it — **not `overflow: hidden`**, which would have clipped the spine's absolutely
 positioned dots. And the sidenote example needed `full: true` in `page.html` as an *opt-out*,
 because the layout adds `.container-ideal` on sight of `class="footnotes"` and that clamped the
@@ -521,7 +521,7 @@ whole 1024px timeline to 665px.
 the `h2` now and the year is a quiet `<p>` label**, where the year had been the `h2` and the
 event an `h3` under it.
 
-⚠️ **`/cv/` deliberately does NOT use the timeline component.** The timeline makes the date loud
+[WARNING] **`/cv/` deliberately does NOT use the timeline component.** The timeline makes the date loud
 and the entry subordinate, which is right for a story and backwards for a CV. Same reason the
 periods on `/about/` were *not* flattened: the two pages now agree on emphasis while keeping
 different structures, and collapsing either into the other throws that away.
@@ -536,14 +536,14 @@ and that selector needs widening or the `§` goes missing from the loud line.
 promote, only years, so it kept the old treatment — verified by diffing the built `.page-now h2`
 declaration before and after, not by looking at the page.
 
-⚠️ **`/cv/` and `/about/` now contradict each other on four facts in public.** Mobisy's title,
+[WARNING] **`/cv/` and `/about/` now contradict each other on four facts in public.** Mobisy's title,
 Oinam Software's start year (which also collides with `/about/`'s own freelancing period),
 Oinam's client list, and Razorfish's headcount wording. Neither page was normalized to the other
 — they are his claims. Listed in [`todo.md`](todo.md).
 
 ### /search/ was dead in production for months — Rocket Loader
 
-⚠️ **READ THIS BEFORE WRITING ANY SCRIPT FOR THIS SITE.** `/search/` rendered an empty `<div>`
+[WARNING] **READ THIS BEFORE WRITING ANY SCRIPT FOR THIS SITE.** `/search/` rendered an empty `<div>`
 on brajeshwar.com while working perfectly under `jekyll serve`. Not Pagefind's fault, not a 404,
 nothing in the console:
 
@@ -582,7 +582,7 @@ Two details worth keeping: the palette and the page get **one `Instance` each**,
 Instance owns its query and a shared one would echo the palette's text into the page behind it;
 and on `/search/` ⌘K and `/` **focus the page's own field** rather than opening a modal over it.
 
-⚠️ **`search.html` carries no `<script>` or `<link>` tags any more.** Putting one back
+[WARNING] **`search.html` carries no `<script>` or `<link>` tags any more.** Putting one back
 reintroduces the Rocket-Loader ordering bug above.
 
 ### /now/ joined the spine
@@ -593,7 +593,7 @@ their `/now/#2024` anchors are untouched.
 
 ### The Life/Work filter is gone, and that is what unified the three timelines
 
-⚠️ **`/about/` no longer has a filter, and `data-track` is dead** ("The Life/Work goes away
+[WARNING] **`/about/` no longer has a filter, and `data-track` is dead** ("The Life/Work goes away
 including the code that powers it"). Removed: the `.pill` fieldset, the `#life`/`#work` target
 spans, `data-track` on every entry, `assets/scripts/timeline.js`, and **157 lines of
 `timeline.scss`**. `/about/#work` and `/about/#life` now match nothing — correct for a feature
@@ -605,7 +605,7 @@ out color. With no tracks, there is one marker: the open dot, which is exactly w
 always rendered. So `/about/`, `/cv/` and `/now/` became one component by *removing* code, not
 by adding any. Verified by looking at all three at 1400px.
 
-⚠️ **`.pill` SURVIVES — do not delete it.** `appearance.js` builds the appearance panel's
+[WARNING] **`.pill` SURVIVES — do not delete it.** `appearance.js` builds the appearance panel's
 segmented controls from it at runtime, so grepping the markup for `class="pill"` finds nothing
 and is misleading.
 
@@ -627,7 +627,7 @@ while offering no visible § to copy.
 **The general lesson:** a page-specific stylesheet is often a sign that a shared component is
 wrong, not that the page is special.
 
-⚠️ **`/about/`'s period labels were KEPT.** "Years will be a sub-title" reads as being about
+[WARNING] **`/about/`'s period labels were KEPT.** "Years will be a sub-title" reads as being about
 heading hierarchy, and every entry's `.timeline-meta` already carries its own date, so the
 sentence is satisfied without touching markup. Dissolving the periods would have forced two
 inventions — authoring dates onto the two entries that have none (Razorfish, Computer Graphic
@@ -639,7 +639,7 @@ period labels gone too, that is a separate, deliberate change.
 Three tunings on the shared timeline, all measured in the browser rather than eyeballed:
 
 **The spine is a `::before`, not `border-left`.** A border spans its whole box and cannot begin
-partway down, so 16.5px of line hung above the first dot. ⚠️ **The list's `padding-left` grew by
+partway down, so 16.5px of line hung above the first dot. [WARNING] **The list's `padding-left` grew by
 the rule's 2px to absorb what the border used to contribute** — miss that and every entry shifts
 left and the dots leave the line.
 
@@ -655,7 +655,7 @@ carried its own exception, *"(if there are as in the /about/)"*. The hardcoded `
 replaced was accidentally right for `/now/` (11px against a true 10.7px) and 2.25px high on
 `/about/`.
 
-⚠️ **NEVER PUT AN `em` IN A CUSTOM PROPERTY THAT CROSSES ELEMENTS.** A custom property inherits
+[WARNING] **NEVER PUT AN `em` IN A CUSTOM PROPERTY THAT CROSSES ELEMENTS.** A custom property inherits
 as an unresolved token, so `0.55em` set on the list resolves against the font size of whatever
 *uses* it — the spine and the dots would silently disagree. Absolute math on the scale tokens
 has no such trap.
@@ -679,14 +679,14 @@ against this site's own parser: `[Razorfish](…)` and `*learned*` reach the bro
 text. `markdown="1"` on every wrapper fixes it and is *more* markup than the HTML it would save.
 A Markdown `/about/` would be a file where Markdown fails in the only places there is prose.
 
-⚠️ It is a fact about the parser, not a preference. If it is revisited, test it first.
+[WARNING] It is a fact about the parser, not a preference. If it is revisited, test it first.
 
 ### The spine went hairline, and reused his own number
 
 `--timeline-rule` is `var(--border-size-hairline)` (0.75px) rather than 2px, and the spine takes
 **`--rule-strong`** — the header and footer's colour, asked for by name.
 
-⚠️ **`--rule-strong` had a "these two only" note in themes.scss, and now has three users.** The
+[WARNING] **`--rule-strong` had a "these two only" note in themes.scss, and now has three users.** The
 note was amended rather than quietly broken: the spine earns it on the same logic (a structural
 line bracketing content, not a border round a box) and NEEDS it, because `--rule` at 0.75px is
 very nearly invisible. A fourth user needs an argument, not this precedent.
@@ -701,24 +701,24 @@ foreground where `--color-border-structural` (the spine) is 32% — the same **+
 ladder already takes from `-strong` (18) to `-structural` (32). Measured by compositing both
 over the page: **1.44× in light, 1.43× in dark**.
 
-⚠️ **IT WAS 64% — "exactly twice the spine" — FOR ONE BUILD, and this file told you to keep it
+[WARNING] **IT WAS 64% — "exactly twice the spine" — FOR ONE BUILD, and this file told you to keep it
 there.** That was wrong on the page: *"The dots accent it too high … let's try one more with one
 step accent darker than the vertical line."* The lesson is precise and worth keeping: anchoring
 the dot to the spine was right, and **doubling was the wrong size of anchor**. A ratio *sounded*
 principled and simply looked heavy; the ladder's own step size is the better rule because it
 keeps this tier inside the same progression as the three above it.
 
-⚠️ Four passes total, each a real correction: solid `--accent` read heavy against a hairline; a
+[WARNING] Four passes total, each a real correction: solid `--accent` read heavy against a hairline; a
 75/25 mix toward the page was still too dark; twice the spine was defensible arithmetic and
 still too strong; one rung is where it landed. **If `-structural` moves, move this by the same
 absolute step — not by a ratio.**
 
-⚠️ **The dots no longer track `--accent`.** That is the deliberate trade — a dot defined against
+[WARNING] **The dots no longer track `--accent`.** That is the deliberate trade — a dot defined against
 the line cannot also follow a colour the reader picks in the appearance panel. His instruction
 names the line, so the line wins. **If he ever asks for accented dots again, that is a genuine
 conflict with the ladder anchoring, not an oversight to quietly fix.**
 
-⚠️ `--timeline-rule` is **load-bearing geometry**, not just a width: it also sets the list
+[WARNING] `--timeline-rule` is **load-bearing geometry**, not just a width: it also sets the list
 padding that stops entries shifting, and half the dot's left offset. All three move together.
 After any change, re-measure that dot-centre and spine-centre share an x — all three pages came
 back 0.000 off, with 0.00 tip and 0.00 vertical offset.
@@ -734,7 +734,7 @@ the wrong element made the footer look like it disagreed with the header. It doe
 (*"anything in this file is now a do"*), and `WIP` at the START of a line marks an item as
 hands-off. The finished-item log moved to **`CLAUDE.local.log.md`**.
 
-⚠️ **The reason was context cost, and he found it from the `/doctor` report.** The done-log had
+[WARNING] **The reason was context cost, and he found it from the `/doctor` report.** The done-log had
 grown to ~1.4k est. tokens of *completed* work being read into context every session. After the
 split:
 
@@ -746,12 +746,12 @@ split:
 **~2,033 est. tokens off every session**, for guidance that was either finished or duplicated in
 `.claude/commands/odo.md`, which loads only when `/odo` runs.
 
-⚠️ **THE NEW FILE NEEDED BOTH EDITS**, the same trap as the first one: `.gitignore` keeps it out
+[WARNING] **THE NEW FILE NEEDED BOTH EDITS**, the same trap as the first one: `.gitignore` keeps it out
 of the repo and `_config.yml`'s `exclude:` keeps it out of the build. Neither implies the other,
 and `CLAUDE.local.md` was gitignored while still rendering to `_site/CLAUDE.local/`. Verified
 `_site` has no `CLAUDE*` at all.
 
-### ⚠️ Sub-pixel borders lie about their own alpha — it was a WIDTH problem
+### [WARNING] Sub-pixel borders lie about their own alpha — it was a WIDTH problem
 
 The timeline dot took **six colour treatments in one day** and none of them fixed it, because
 the problem was never the colour. A border declared at `--timeline-rule` (0.75px) **computes to
@@ -786,7 +786,7 @@ the spine had been added as a third user that same morning, so it is back to two
 the gap to the dot's 60% border without touching the dot, which had been retuned five times
 already.
 
-⚠️ **The line got LIGHTER so the dot would read darker.** Anyone later "fixing" the contrast by
+[WARNING] **The line got LIGHTER so the dot would read darker.** Anyone later "fixing" the contrast by
 pushing the spine back toward `--rule-strong` undoes it and flattens the dot against the line
 again.
 
@@ -825,7 +825,7 @@ middle rung between `--rule` (10%) and `--rule-strong` (32%).
 
 Asked why the build is "stuck" on Ruby 3.3.5, and what GitHub Pages supports.
 
-⚠️ **GitHub Pages supports nothing here, because it never builds this site.** No
+[WARNING] **GitHub Pages supports nothing here, because it never builds this site.** No
 github-pages gem, and the workflow hands `deploy-pages` a finished static artifact. The
 [Pages dependency versions](https://pages.github.com/versions/) list — Jekyll 3.10, and a
 Ruby of its own — governs "Deploy from a branch" sites only. **We can run any Ruby we like.**
@@ -840,7 +840,7 @@ image limitation, not a gem incompatibility. **Nothing in the dependency tree pi
 sass-embedded is strictest at `>= 3.1`, Jekyll 4.4.1 asks `>= 2.7.0`, and `logger` is already
 in the Gemfile. 3.3.5 is seven patches behind its own branch (3.3.12 is current).
 
-⚠️ **Two claims in `hosting.md` were false and are now corrected in place** — the file keeps
+[WARNING] **Two claims in `hosting.md` were false and are now corrected in place** — the file keeps
 the original text with a dated correction beneath it, per the log-history rule:
 
 | the doc said | actually |
@@ -854,7 +854,7 @@ upgrade was safe. Cloudflare reads `.ruby-version` from the repo it clones, so *
 builders are on 3.3.5 and that early warning does not exist.** The Cloudflare build log
 prints the Ruby it installs and would settle it in one line; that has not been checked.
 
-⚠️ **`.ruby-version` and the workflow pin are not interchangeable.** `.ruby-version` moves
+[WARNING] **`.ruby-version` and the workflow pin are not interchangeable.** `.ruby-version` moves
 local dev *and* the backup; the workflow moves production alone. **A bump goes into the
 workflow first** — that is what keeps the standby on the old Ruby and therefore worth having.
 (This reverses a suggestion made earlier the same day to point CI at `.ruby-version` for a
@@ -865,7 +865,7 @@ single source of truth: it is a single source of truth, and that is exactly the 
 
 ## Session record — 2026-08-04, seventh session (superseded as the index head, kept per the log-history rule)
 
-### ⏸ FOUR commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.
+### [PAUSED] FOUR commits sit UNPUSHED on `main`, awaiting his word — guardrail 7.
 
 `origin/main` is four behind, every one signed (`G`) and in his name. **Two of them pre-date
 this session** and were already waiting:
@@ -923,7 +923,7 @@ The Liquid was verified by building against a **copied** data directory —
 img-less fixture books went through the real includes with `_data/books.yaml` never touched.
 An entry with a title and no author renders correctly: title, rule, no empty author span.
 
-⚠️ **The spine inverts in dark mode.** It is a `color-mix` of `--text-color`, which is
+[WARNING] **The spine inverts in dark mode.** It is a `color-mix` of `--text-color`, which is
 near-white there, so the band paints LIGHTER than the board and the crease reads as a
 highlight rather than a shadow. Looked at, not reasoned about: it reads as light catching the
 binding edge of a dark book. Left alone deliberately — a mode-specific value would put a raw
@@ -931,7 +931,7 @@ color outside `themes.scss`. The warning is on the rule itself.
 
 ### Rules learned this session — these will bite again
 
-1. **⚠️ A QUERY CONTAINER CANNOT READ ITS OWN CONTAINER UNITS, AND THE FAILURE IS SILENT AND
+1. **[WARNING] A QUERY CONTAINER CANNOT READ ITS OWN CONTAINER UNITS, AND THE FAILURE IS SILENT AND
    BACKWARDS.** `container-type: inline-size` plus `padding: 10cqi` on the SAME element does
    not error and does not resolve to zero — the `cqi` falls through to the next container up,
    which on /books/ is the 1024px page. Measured: padding computed to 102px and 164px inside
@@ -972,15 +972,15 @@ books.yaml, I want to see how it looks."* Nine books from that post appended to
 and the home shelf is nine-tenths plates. `_data/*.yaml` is a guardrail-1 file and this was
 his explicit instruction, which is the only thing that opens it.
 
-⚠️ **The Design of Everyday Things is in that post and was NOT added again** — it is already
+[WARNING] **The Design of Everyday Things is in that post and was NOT added again** — it is already
 in the file with its cover and `highlight: true`. Check for a duplicate before appending; the
 two grids are disjoint views of one list, so a repeat would show up twice on the page.
 
-⚠️ **The home shelf shows no cover photographs any more.** `home_books_count = 8` takes the
+[WARNING] **The home shelf shows no cover photographs any more.** `home_books_count = 8` takes the
 eight newest entries, and all eight are coverless 2026 books. Not a bug, but if he wants a
 mix, that is the number to raise, or the books to give covers.
 
-### ⚠️ THEN THE WHOLE FILE FLIPPED: `books.yaml` IS NEWEST-**FIRST** NOW (2026-08-04)
+### [WARNING] THEN THE WHOLE FILE FLIPPED: `books.yaml` IS NEWEST-**FIRST** NOW (2026-08-04)
 
 *"We need to reverse the books shown in the home page. The last one should be the first in
 the books.yaml as I will add at the top and not at the bottom. This applies the same for
@@ -999,7 +999,7 @@ Three things moved, and only one of them was code:
    file was let go. The year-marker comments were re-emitted in the new order; they are
    comments, and nothing reads them.
 2. **`index.html` dropped its `reverse` filter** — `site.data.books | slice: 0, 8`, a plain
-   take off the head. ⚠️ **The album line has no `reverse` either now** —
+   take off the head. [WARNING] **The album line has no `reverse` either now** —
    ~~the album line still has its `reverse` and must keep it~~. That instruction was true
    until **2026-09-01**, when `_data/album.yaml` (newest-LAST, sorted by filename) was
    replaced by `_data/albums.yaml`, generated from albums.oinam.com's feed and **newest-FIRST**.
@@ -1019,7 +1019,7 @@ in the main grid, zero overlap, 176 accounted for. The split is `where highlight
 `where_exp highlight != true`, so it is disjoint by construction and a book's `highlight`
 does not move it in the file.
 
-### ⚠️ AND THEN HE SHUFFLED IT — the current order is RANDOM, and that is not damage
+### [WARNING] AND THEN HE SHUFFLED IT — the current order is RANDOM, and that is not damage
 
 *"Remove the comment separator in books.yaml. And do a random sweep of the list - make the
 items random before I do my manual edit."* Both done in one commit: the year separators are
@@ -1030,7 +1030,7 @@ records its own year in `url` (`/2019/books/`), so the separators carried nothin
 still in the data; and the shuffle was **seeded** (`20260804`), so the previous newest-first
 order is exactly recoverable from the commit before it in `git log -- _data/books.yaml`.
 
-⚠️ **The head of the file is no longer "newest", so the home strip's eight are eight random
+[WARNING] **The head of the file is no longer "newest", so the home strip's eight are eight random
 books** until he reorders — flagged to him before the change, not after. The add-at-the-top
 protocol still governs anything NEW he types; it is the existing 176 that are unsorted.
 The favorites grid shuffled too, for the same reason: it inherits the file's order and has
@@ -1061,7 +1061,7 @@ caption, which is why it worked for three days and then did not.
   a bare `a` because a url-less book renders its strip item as a `<span class="strip__link">`.
 - **`transition` is declared at REST**, not in the hover block — a transition is read from the
   state *before* the change, so hover-only gives an instant snap in and a fade out.
-- ⚠️ **Measuring it gives `transition-duration: 0s`, and nothing is wrong.** base.scss's
+- [WARNING] **Measuring it gives `transition-duration: 0s`, and nothing is wrong.** base.scss's
   global `prefers-reduced-motion: reduce` block zeroes it with `!important`, and he browses
   with reduced motion ON. The 120ms is in the compiled stylesheet; verified both ends.
 - **Do NOT reach for an underline as the replacement.** That is what the wash replaced on
@@ -1087,7 +1087,7 @@ instead, and **C**, title only with no rule and no author. A was recommended and
 because the spine is the quiet detail the ethos asks for where the inset frame is chrome,
 which [`design.md`](design.md) argues against.
 
-⚠️ **`_pages/styleguide.md` documents the thumbnail and card system and does not mention the
+[WARNING] **`_pages/styleguide.md` documents the thumbnail and card system and does not mention the
 plate.** It is a `_pages/**` prose body — guardrail 1 — so updating it is Brajeshwar's edit
 to make, not ours. Same disposition as the `.gallery` prose from the sixth session.
 
@@ -1099,7 +1099,7 @@ year-folder masters; `/static/films/` re-cuts; `/devices/`' one `<a href="">`.
 
 ## Session record — 2026-08-02, sixth session (superseded as the index head, kept per the log-history rule)
 
-### ✅ Session CLOSED 2026-08-02. Everything deployed green and verified live; ONE
+### [DONE] Session CLOSED 2026-08-02. Everything deployed green and verified live; ONE
 ### docs-only commit (this close) sits unpushed, awaiting his word — guardrail 7.
 
 Ten commits pushed across two deploys, both green, every commit signed (`G`) and in
@@ -1192,7 +1192,7 @@ All four conditions were already the architecture or became one change each:
   every other font. Sources: Adobe's official release (adobe-fonts/source-serif, 4.005R).
 - **Baskerville kept** — files and `@font-face` blocks intact, nothing references the
   family, so its faces cost zero bytes on the wire. Reverting = pointing the one
-  `config.scss` line back. ⚠️ Never chain both serifs in one stack; the `swap` interim
+  `config.scss` line back. [WARNING] Never chain both serifs in one stack; the `swap` interim
   would download the second family too (recorded in config.scss and themes.scss).
 
 The files: upstream variable TTFs are 1.2 MB (Roman) and 850 KB (Italic); shipped woff2 are
@@ -1207,7 +1207,7 @@ are inside both the cmap and the declared `unicode-range` — the Baskerville ap
 class cannot recur. In-browser: Serif renders Source Serif 4 with real 200/700 and italic,
 no Baskerville request, System default untouched.
 
-⚠️ **Two things that will bite later:**
+[WARNING] **Two things that will bite later:**
 - **A weight token past 700 will silently flatten to 700** — the clamp was cut to what the
   site uses. Re-subset wider if `--font-weight-*` ever exceeds it; recipe in themes.scss.
 - **`assets/fonts/source-serif/LICENSE.md` must STAY in `_config.yml`'s exclude** — not for
@@ -1263,7 +1263,7 @@ existing `.aside.right`, foot block hidden with JS on.
   0.5px` in config.scss — NOT the literal 0.1pt, which is 0.13px and rounds to NOTHING on a
   dpr-1 screen (reasoning recorded on the token). Applied to: link underlines (rest AND
   hover, base.scss), the header nav hover, both search-result styles, and the strip
-  headings. ⚠️ This REVERSES 2026-08-01's "1px resting, 2px hover" — safe now because the
+  headings. [WARNING] This REVERSES 2026-08-01's "1px resting, 2px hover" — safe now because the
   color jump (1.9x-5x in every palette/mode) carries the state; that decision's trap was
   equal thickness AND equal color. The archives table-row hover keeps --border-size: its
   separator exists at rest, structural, not a hover affordance.
@@ -1304,7 +1304,7 @@ sidenotes duck below galleries (`.gallery` was already in `collectObstacles()`),
 gallery-free post keeps `overflow-x: visible`, home keeps its own clip. Stylesheet cost:
 54.0 → 55.2 KB raw, 10.3 → 10.4 KB gzip (~100 bytes on the wire).
 
-### ⚠️ Things the next reader must know
+### [WARNING] Things the next reader must know
 
 - **Brajeshwar edited content mid-build, and it is his, not staged, not committed.**
   `_posts/2024/2024-05-17-phone.md` — he switched its lone captioned figure from
@@ -1328,7 +1328,7 @@ gallery-free post keeps `overflow-x: visible`, home keeps its own clip. Styleshe
 
 ## Session record — 2026-08-01, fifth session (superseded as the index head, kept per the log-history rule)
 
-### ✅ Session CLOSED 2026-08-01. Everything pushed, deployed green, tree clean.
+### [DONE] Session CLOSED 2026-08-01. Everything pushed, deployed green, tree clean.
 
 `main` and `origin/main` are in sync at `cca94c3e`. **37 commits** this session, every one
 signed (`G`) and in Brajeshwar's name, none touching `_posts/**` except where he asked for it
@@ -1371,7 +1371,7 @@ placeholder into a real, populated section and did a copy-editing pass. In order
 10. **Link states fixed.** The resting underline was nearly as dark as the text, so hover had
    nowhere to go. See *Rules learned* #8.
 
-### ⚠️ Loose ends to pick up
+### [WARNING] Loose ends to pick up
 
 - **Two of the eight album entries have no `url` and render UNLINKED by design.** Both includes
   test `item.url` and emit a plain `<figure>`, or a `<span class="strip__link">` on the home
@@ -1385,10 +1385,10 @@ placeholder into a real, populated section and did a copy-editing pass. In order
   371 MB to ~285 MB — weighed against GitHub LFS's 1 GB storage / 1 GB monthly bandwidth.
   Raised twice, decided neither time. **Brajeshwar's call, not a tidy-up.**
 - **`_backup/` is gone.** Retired 2026-08-01: `PeopleAndBlogs.md` moved to `_archives/`
-  byte-identical, the rest dropped. ⚠️ `books-BCK.md`, the 634 words of old `/books/` prose,
+  byte-identical, the rest dropped. [WARNING] `books-BCK.md`, the 634 words of old `/books/` prose,
   is recoverable from `c37d63a4` and nowhere else. `_archives/` is NOT a declared collection,
   so like `_backup/` it publishes nothing — but the repository is **public**.
-- ⚠️ **Three things that look like bugs and are decisions.** Raised by me 2026-08-01, closed
+- [WARNING] **Three things that look like bugs and are decisions.** Raised by me 2026-08-01, closed
   by Brajeshwar 2026-08-02. Written here so the next reader does not "fix" them:
   · The `how-to-read-a-book` cover is missing the top line of its title, and the original is
     deleted. *"Don't worry about the cover picture, let that be."*
@@ -1398,7 +1398,7 @@ placeholder into a real, populated section and did a copy-editing pass. In order
   · `/film/`'s "Last updated" is typed by hand and will drift from the data. *"I also want to
     maintain the last updated manually for film."* It means when he last curated the list,
     which nothing derivable can stand in for.
-  ⚠️ The cropping lesson outlives its ticket: **measure where the SUBJECT sits, not where the
+  [WARNING] The cropping lesson outlives its ticket: **measure where the SUBJECT sits, not where the
   object sits.** The book and its title were 122px apart and only the book was checked.
 - **`/devices/` still has one `<a href="">`** — its own hand-written markup, one entry with no
   `url`. Both shared includes guard on the field now; `_pages/devices.html` does not.
@@ -1414,7 +1414,7 @@ placeholder into a real, populated section and did a copy-editing pass. In order
    `git cat-file -p $(git ls-files -s <path> | awk '{print $2}') | head -1` must print
    `version https://git-lfs.github.com/spec/v1`. `git lfs status` and `git lfs ls-files` each
    lie differently here.
-2. **⚠️ `aspect-ratio: auto` on masonry images reads as a no-op and is not — DO NOT DELETE IT
+2. **[WARNING] `aspect-ratio: auto` on masonry images reads as a no-op and is not — DO NOT DELETE IT
    ALONE.** The initial value of `aspect-ratio` IS `auto`, so declaring it looks harmless; what
    it actually does is cancel the UA rule that derives a ratio from an `<img>`'s width/height
    attributes. Measured in Chrome, 244.8px container, image never loading:
@@ -1455,7 +1455,7 @@ placeholder into a real, populated section and did a copy-editing pass. In order
    `--text-color-lower` — rgb(64,64,64) against a rgb(229) page, 8.23:1 where the body text is
    15.72:1. The two states differed by **1.91:1** on a 0.8px line. Lightening rest to a 50%
    foreground mix (3.14:1, still over the 3:1 non-text threshold) roughly doubled the jump in
-   all six palette/mode combinations. ⚠️ And hover must be `--text-color`, **not**
+   all six palette/mode combinations. [WARNING] And hover must be `--text-color`, **not**
    `--color-accent`: nord's accent is a mid-tone blue at 3.31:1, so accent-on-hover would move
    1.2x there. Only `--text-color` is guaranteed to sit at the far end of every palette.
 9. **`markdown="0"` vs a `.html` file are not the same thing.** With `markdown="0"` kramdown
@@ -1482,11 +1482,11 @@ and assert both `documentElement.scrollWidth <= viewport` and that `window.scrol
 
 ## Session record — 2026-08-01, first half (superseded, kept per the log-history rule)
 
-⚠️ The status below was true when written and is not now: those 14 commits are pushed and live.
+[WARNING] The status below was true when written and is not now: those 14 commits are pushed and live.
 
 ### What it said at the time
 
-### ⏸ Session paused 2026-08-01 (fourth session). **14 commits sit UNPUSHED on `main`.**
+### [PAUSED] Session paused 2026-08-01 (fourth session). **14 commits sit UNPUSHED on `main`.**
 
 Brajeshwar: *"Commit. Do not Push. I will continue tomorrow."* Everything is committed, the
 tree is clean, every commit is signed (`G`) and in his name. `origin/main` is 14 behind.
@@ -1512,10 +1512,10 @@ verify against the live URLs, not `_site`.
 | `02261894` | Header and footer rules go one notch stronger |
 | `c6a98854` | Footer links alphabetised; 'View all articles' gets an arrow |
 
-⚠️ **Push only when Brajeshwar asks** (guardrail 7). **All commits signed and in his name** —
+[WARNING] **Push only when Brajeshwar asks** (guardrail 7). **All commits signed and in his name** —
 verify with `git log --format='%h %G?'`; `G` is the only acceptable result.
 
-⚠️ **Stage explicitly, never `git add -A`.** He edits this repo while I work — twice this
+[WARNING] **Stage explicitly, never `git add -A`.** He edits this repo while I work — twice this
 session (`nav.yaml` footer reorder, `home-articles.html` arrow). Both were committed
 *separately* so the diff reads as his. Check `git status` before every commit.
 
@@ -1539,7 +1539,7 @@ A full home-page redesign from a tldraw wireframe, then four rounds of refinemen
    for video/audio items, and CSS-only masonry.
 6. **Styleguide** gained a measured thumbnail template — long edge 800px.
 
-### ⚠️ Loose ends to pick up
+### [WARNING] Loose ends to pick up
 
 - **`_data/books.yaml` entries 7–12 are literal duplicates of 1–6**, added to preview a longer
   shelf. Marked at the top of the file. **Delete that block when real titles go in** — an
@@ -1589,20 +1589,20 @@ books, a hover state that painted nothing, a ratio that was requested and never 
 **The responsive sweep that catches layout breaks** — load each page type in an iframe at
 320 / 480 / 768 / 1024 / 1512 and assert both `documentElement.scrollWidth <= viewport` **and**
 that `window.scrollX` stays 0 after trying to scroll. Nine page types were clean at the end.
-⚠️ The harness cannot exceed the outer window width; iframes wider than the browser silently
+[WARNING] The harness cannot exceed the outer window width; iframes wider than the browser silently
 render at the browser's width and report meaningless numbers.
 
 ---
 
 ## Session record — 2026-07-27 (superseded, kept per the log-history rule)
 
-### ✅ Session closed 2026-07-27 (second session). Pushed, deployed green, tree clean.
+### [DONE] Session closed 2026-07-27 (second session). Pushed, deployed green, tree clean.
 `main` and `origin/main` are in sync. Nothing is pending.
 
-⚠️ **Push only when Brajeshwar asks** (guardrail 7). **All commits signed and in his name** —
+[WARNING] **Push only when Brajeshwar asks** (guardrail 7). **All commits signed and in his name** —
 verify with `git log --format='%h %G?'`; `G` is the only acceptable result.
 
-⚠️ **Stage explicitly, never `git add -A`.** He edits content in this repo while I work, and
+[WARNING] **Stage explicitly, never `git add -A`.** He edits content in this repo while I work, and
 `-A` swept his in-progress book notes into one of my commits. Caught and backed out with a
 snapshot taken first, but the habit is the fix: name the files.
 
@@ -1623,10 +1623,10 @@ snapshot taken first, but the habit is the fix: name the files.
    requests** (101 of 1,484 pages still do, from YouTube/Vimeo/`cdn.oinam.com` embeds inside
    the posts; that is content). It was briefly restored on 2026-07-31 and removed again the
    same day; **measurement is Cloudflare edge analytics now**, which costs the reader nothing
-   and cannot be blocked. ⚠️ Cloudflare *Web* Analytics is a different product and is not the
+   and cannot be blocked. [WARNING] Cloudflare *Web* Analytics is a different product and is not the
    answer — its beacon is a third origin and is blocked by Brajeshwar's own DNS (measured).
 5. **Random post.** A circle in the prev/next bar → `/random/` → a random post. Self-contained
-   by request. ⚠️ Its index is inlined into that page, NOT under `/assets/`, which would freeze
+   by request. [WARNING] Its index is inlined into that page, NOT under `/assets/`, which would freeze
    it for a year.
 6. **Timeline CSS merged** — `/about/` and `/now/` were the same component built twice.
    `.headerlink` went from three copies to one, and the post copy had already been deleted by
@@ -1636,11 +1636,11 @@ snapshot taken first, but the habit is the fix: name the files.
 
 ### The two rules most likely to be broken next
 
-⚠️ **Every stylesheet applies to every page.** No layout gate exists any more. Anchor selectors
+[WARNING] **Every stylesheet applies to every page.** No layout gate exists any more. Anchor selectors
 to a class (`.page`, `.post`) or a custom element — never a bare `main > article > h2`.
 `page.scss` got this wrong and would have clamped all ~1,456 post titles to 665px.
 
-⚠️ **Element defaults are `:where()`-wrapped in base.scss, link colors especially.** Unwrapped,
+[WARNING] **Element defaults are `:where()`-wrapped in base.scss, link colors especially.** Unwrapped,
 `a:visited` is (0,1,1) — higher than a plain class — so six chrome components silently lost
 their color once visited. Do not un-wrap, and do not patch a chrome link with its own
 `:visited`. [`styles.md`](styles.md) §5 → *Element defaults are `:where()`-wrapped*.
@@ -1657,7 +1657,7 @@ does). See [`hosting.md`](hosting.md) → *Why a hash and not `?v=`*.
 a decision made the day before — after measuring the live cache headers rather than assuming
 them.
 
-⚠️ **`22cb3522` shipped a regression that `c6b12e8c` fixes. Both are in this unpushed run, so
+[WARNING] **`22cb3522` shipped a regression that `c6b12e8c` fixes. Both are in this unpushed run, so
 the live site was never affected — but note the shape of it.** The code/cards split removed 225
 lines from `post.css` and took `.headerlink` (and its `position: relative`) with it, moving them
 nowhere. `anchors.js` kept inserting anchors, so **453 posts rendered a bare, permanently
@@ -1665,15 +1665,15 @@ visible, underlined § against every heading**. It was found only because the ti
 went looking at the *other two* copies of the same rules. There are no copies now — one
 `.headerlink` in `base.css`, positioned via `:is(h1..h6):has(> .headerlink)`.
 
-⚠️ **The first deploy after this exercises `scripts/hash-assets.mjs` for the first time.**
+[WARNING] **The first deploy after this exercises `scripts/hash-assets.mjs` for the first time.**
 It has been verified against a full local build (1,486 pages, 7,955 references rewritten, and
 it fails the build if anything it hashed ends up referenced by nothing), but it has never run
 in CI. Watch that first Actions run.
 
-⚠️ **Push only when Brajeshwar asks** (CLAUDE.md guardrail 7). Committing is fine; every push to
+[WARNING] **Push only when Brajeshwar asks** (CLAUDE.md guardrail 7). Committing is fine; every push to
 `main` auto-deploys.
 
-⚠️ **All commits are signed and in his name.** `commit.gpgsign` is on and the key is in the
+[WARNING] **All commits are signed and in his name.** `commit.gpgsign` is on and the key is in the
 agent, so it is automatic — but **verify** with `git log --format='%h %G?'`. A history rewrite
 already cost 882 signatures once; see the entry below before running one.
 
@@ -1726,7 +1726,7 @@ Serif) and text size, all persisted. JS is eight small vanilla files, minified o
     make build          # jekyll + agent-md + esbuild minify + pagefind — production parity
 Then serve `_site` statically and check in a browser.
 
-⚠️ **A long-running `jekyll serve` will fight you, in two ways.**
+[WARNING] **A long-running `jekyll serve` will fight you, in two ways.**
 1. It does not build the search index, and its `--watch` **wipes `_site/pagefind/`** on every
    rebuild.
 2. **It reads `_config.yml` once, at startup.** A server left running from before a config
@@ -1808,7 +1808,7 @@ using any `--bg-*` token, because none differs from the rail's own background in
 modes. Contrast measured by canvas pixel readback, not assumed: rest 12.01:1 in both
 modes, hover 12.08:1 light / 10.09:1 dark, all clear of AA at this size.
 
-⚠️ **The pill's effective corner radius is not the declared one.** `--border-radius-larger` is
+[WARNING] **The pill's effective corner radius is not the declared one.** `--border-radius-larger` is
 25px, but top-left + top-right (50px) exceed the rail's ~38px width, so the browser scales
 every radius by `width / sum` — **19px** in practice. The rail's vertical padding is
 `--space-s` (20px) to clear that, so `26` and `01` start below where the curve finishes rather
@@ -1826,7 +1826,7 @@ horizontal strip; only this last one is live. Its top edge is exactly the header
 `border-bottom` — *"the border becomes the start of the year scrubber"*. Square top with no
 top border (the header rule already draws that line; a second reads as a 2px seam), rounded
 foot only. It rises to meet the rule via `margin-top: calc(-1 * var(--space-l))`, cancelling
-the header's bottom margin — ⚠️ **keep those two in step**, or the strip detaches and floats.
+the header's bottom margin — [WARNING] **keep those two in step**, or the strip detaches and floats.
 
 - **An auto-fit grid, not a flex row.** `repeat(auto-fit, minmax(2.5rem, 1fr))` is what lets it
   *"expand to fit all the years"* on a small screen: equal tracks, as many per row as fit, all
@@ -1839,7 +1839,7 @@ the header's bottom margin — ⚠️ **keep those two in step**, or the strip d
 - **Sticky from 768px up, static below.** One or two rows are fine to follow the reader (98px
   is ~12% of a laptop viewport); three or four is not — on a phone that is a fifth of the
   screen held permanently, worse than just scrolling past it.
-- ⚠️ **`scroll-margin-top` has to track the row count.** A wrapped 2-row strip is 98px, and the
+- [WARNING] **`scroll-margin-top` has to track the row count.** A wrapped 2-row strip is 98px, and the
   original 4.5rem/72px dropped the caption *underneath* it — the same bug as the first build,
   in a new place. Now 7rem from 768px and back to 4.5rem from 1250px, both verified clearing by
   ~15px. Re-check whenever the strip's padding, font size or row count changes.
@@ -1874,7 +1874,7 @@ the header's bottom margin — ⚠️ **keep those two in step**, or the strip d
 - Verified in Chrome: build clean, Pagefind indexes the site, nav is `data-pagefind-ignore`d,
   rail and strip both jump correctly, both render in light and dark. The strip stays one
   row and scrolls sideways — it would wrap to 4 rows at 360px.
-- ⚠️ **`resize_window` does not work on this machine** (reports success, `innerWidth` never
+- [WARNING] **`resize_window` does not work on this machine** (reports success, `innerWidth` never
   changes — the OS window is maximised). To test a breakpoint, neutralise the `@media` rule
   through CSSOM (`rule.media.mediaText = '(min-width: 99999px)'`), measure, then restore it.
   That is how the narrow fallback was verified; don't waste time re-trying the resize.
@@ -1922,7 +1922,7 @@ the header's bottom margin — ⚠️ **keep those two in step**, or the strip d
 - Verified: fits in one row at 430/390/375/360/320px, all targets ≥24px, appearance panel
   and search palette still anchor inside the viewport, base CSS ~6.8 KB gzip on the homepage.
 
-⚠️ **The bug worth remembering — @media blocks lose on source order.** The narrow-header block
+[WARNING] **The bug worth remembering — @media blocks lose on source order.** The narrow-header block
 was written *before* the `site-logo` / `site-nav` / `site-tools` rules it overrides. Those are
 element selectors of equal specificity, so the later base rules won and the media block
 silently did nothing: the nav kept `--step--1` and 10px padding, and the header needed **445px
@@ -1960,7 +1960,7 @@ override**; the comment in `chrome.css` says so at both ends.
   misalignment and the duplication.
 - The reading column is unchanged (665px, `--body-width-ideal`) and is not a second site
   width — it's a reading constraint inside the band. Centers align; sidenotes still render.
-- ⚠️ The wider band does **not** improve the sidenote floor. That gutter is measured from the
+- [WARNING] The wider band does **not** improve the sidenote floor. That gutter is measured from the
   reading column, which didn't move. Going asymmetric is still the only lever there.
 
 ### The pill becomes a component; Back to Top comes in from the corner (2026-07-27, browser-verified)
@@ -2019,7 +2019,7 @@ bottom, released to 288px at the foot of a long post, settled at 80 above / 30 b
 JS decides only *whether* it shows (`scrollY > 1 viewport`, coalesced into a rAF), never
 where.
 
-⚠️ **This needed a change in `base.css`: `body { height: 100% }` → `min-height: 100%`.** The
+[WARNING] **This needed a change in `base.css`: `body { height: 100% }` → `min-height: 100%`.** The
 definite height made the body BOX exactly one viewport tall on every page — content just
 overflowed it visibly, so nothing ever looked wrong — but a sticky child is clamped to its
 containing block, so the control could not float past the first screen. Verified nothing
@@ -2046,13 +2046,13 @@ margins collapse to the larger, so the footer's own `2xl` otherwise stranded the
 mid-gap. Caught by measuring, not by looking. The hide is `visibility`/`opacity`, not
 `display`, so the row keeps its box and the footer never jumps as it fades in.
 
-⚠️ **Verified with the `computer` scroll action, not `window.scrollTo`** — see the automation
+[WARNING] **Verified with the `computer` scroll action, not `window.scrollTo`** — see the automation
 note below; programmatic scrolling fires no scroll events here, so the show/hide threshold
 would have looked broken. Full sequence checked on a 38,000px post: hidden at the top, fades
 in past one viewport, floats at the band's right edge, settles above the footer, fades out
 again on the way back up.
 
-⚠️ **The browser caches `assets/scripts/*.js` across a normal reload.** A `jekyll build` plus
+[WARNING] **The browser caches `assets/scripts/*.js` across a normal reload.** A `jekyll build` plus
 `navigate` showed the NEW inlined CSS with the OLD script still running — the arrow-only
 markup was simply absent and it read as a broken script. `cmd+shift+r` is required after
 editing a JS file; a `?cachebust` query on the page URL does not help, since it is the script
@@ -2076,7 +2076,7 @@ works with no click handler, and the global `scroll-behavior: smooth` animates i
 means it inherits the `prefers-reduced-motion` kill switch instead of needing its own check.
 JS only toggles visibility.
 
-⚠️ **Testing note: programmatic scrolling fires NO scroll events in this automation context.**
+[WARNING] **Testing note: programmatic scrolling fires NO scroll events in this automation context.**
 `window.scrollTo` moved the page 1,722px and produced **0** events, which made the control look
 broken across several checks while the logic was fine — a manually dispatched event toggled it
 correctly, and real wheel scrolling worked first time. **Verify scroll behavior with the
@@ -2087,7 +2087,7 @@ correctly, and real wheel scrolling worked first time. **Verify scroll behavior 
   they cost nothing to ship. As an HTML comment they added 3,725 bytes to `/about/` for
   something only the author reads. Verified inert: absent from the built HTML, present in source.
 
-⚠️ **Making pages full-width silently broke sidenotes on pages** (commit `54ea75e8`).
+[WARNING] **Making pages full-width silently broke sidenotes on pages** (commit `54ea75e8`).
 `sidenotes.js` looks for the reading column to hang notes off; removing `.container-ideal` from
 `page.html`'s article removed the column. `/books/` and `/about/brajeshwar.com/` lost their
 margin notes — **and nothing looked broken**, because footnotes still rendered at the foot,
@@ -2099,7 +2099,7 @@ Fixed two ways:
 2. `page.html` puts the class back when the rendered content contains a footnotes block.
    Detected from content, not a front-matter flag, so it cannot drift.
 
-⚠️⚠️ **Liquid's `assign` does NOT evaluate `contains`.** The first attempt hoisted the test into
+[WARNING][WARNING] **Liquid's `assign` does NOT evaluate `contains`.** The first attempt hoisted the test into
 `{%- assign has_footnotes = content contains '…' -%}` — which fails *silently and truthily*, so
 **all 22 pages** got the class. `contains` is only evaluated by `if` / `unless` / `case`; the
 test has to live inline in the `if`. Caught by checking a page that has no footnotes.
@@ -2117,7 +2117,7 @@ special — they were the only content on the scale. Everything else inherited 1
 **`main { font-size: var(--step-0) }`** now, which fixed a second, unreported bug at the same
 time:
 
-⚠️ **The Kindle text-size control did nothing on pages.** The A-buttons multiply `--step-*`
+[WARNING] **The Kindle text-size control did nothing on pages.** The A-buttons multiply `--step-*`
 inside `main`, but page prose was inheriting body's literal 16px, which no multiplier touches —
 **measured identical at xs/s/m/l/xl before the change**. Reading the size from `--step-0` *at
 main*, where the scaled values are defined, is what lets the control reach it. After: pages run
@@ -2145,7 +2145,7 @@ main*, where the scaled values are defined, is what lets the control reach it. A
   which packed left and left a ragged gap that grew with the window.
   `repeat(auto-fill, minmax(var(--card-min), 1fr))` now. Verified on `/film/`: 5 equal 193px
   columns spanning exactly 1024px, images filling their cards.
-  ⚠️ **auto-fill, NOT auto-fit** — auto-fit collapses empty tracks, so a two-item section would
+  [WARNING] **auto-fill, NOT auto-fit** — auto-fit collapses empty tracks, so a two-item section would
   stretch across the whole band. The archives strip wants exactly the opposite and uses
   auto-fit; the difference is whether a short row should fill or stay card-sized.
 - Card density is now one knob, `--card-min` (11rem, 8rem on phones), not a max-width per card.
@@ -2176,7 +2176,7 @@ drifts right of the spine. Being em-based it now tracks whatever size the shared
 is the whole lesson: the previous pass had reached for `--step-2` directly and produced a
 timeline whose headings agreed with nothing else on the site.
 
-⚠️ **`/now/`'s years are `h1`, `/about/`'s periods are `h2`**, so /now/ renders one step larger
+[WARNING] **`/now/`'s years are `h1`, `/about/`'s periods are `h2`**, so /now/ renders one step larger
 (step-3 vs step-2). That is the shared scale behaving correctly on different levels, not a
 style difference. Matching them means changing `#` to `##` in the `now/` fragments — a content
 edit, and Brajeshwar's call.
@@ -2214,7 +2214,7 @@ clearly doing a different job reads as a break rather than a heading.
   `h1` → `.timeline-when`, `<ul>` → `.timeline-entries` (the spine is its `border-left`),
   `<li>` → `.timeline-entry` (the dot). Year headings also gained § anchors, so `/now/#2024`
   works — `anchors.js` picked up a third selector rather than a third script.
-  ⚠️ Those visual rules are a **deliberate copy** of timeline.css's, not a shared import: both
+  [WARNING] Those visual rules are a **deliberate copy** of timeline.css's, not a shared import: both
   are tier-2 page bundles never loaded together, so sharing means promoting to base.css and
   charging ~1,456 pages for what two use. Same call as `.headerlink`. **Keep them in step.**
 
@@ -2227,7 +2227,7 @@ clearly doing a different job reads as a break rather than a heading.
   load. The comment there already warned about this; it is now cross-referenced from the JS too.
   Verified end to end: attribute set, value stored, `--font-body` resolves to Geist, and
   `document.fonts` reports the face loaded.
-- ⚠️ The file is a **169 KB unsubsetted TTF**, which is exactly why it was dropped before. Costs
+- [WARNING] The file is a **169 KB unsubsetted TTF**, which is exactly why it was dropped before. Costs
   nothing unless chosen, but a subset woff2 would be ~10× smaller — logged in `todo.md`.
 - **Every group is now label-left / options-right on one line**, matching what Accent already
   did: `buildEnumGroup` adds `appearance-group--inline`. The panel widened 15.5rem → 21rem
@@ -2235,7 +2235,7 @@ clearly doing a different job reads as a break rather than a heading.
   which is the layout the change existed to remove. Verified all five groups inline, options on
   a single row, nothing overflowing.
 
-⚠️ **`jekyll serve --incremental --future --livereload` is what put 2100 posts on the site.**
+[WARNING] **`jekyll serve --incremental --future --livereload` is what put 2100 posts on the site.**
 Brajeshwar runs that locally, and **`--future` builds the never-publish drafts in
 `_posts/todo/`** (the 2100-dated ones) into `_site` — 1,464 posts instead of 1,456, `/2100/`
 pages, and a 27th "00" year in the archives. His watcher and any `jekyll build` here share the
@@ -2274,12 +2274,12 @@ first/last-post special case, since no rule is left that needs to know how many 
 anything with an opinion overrides it, and the `main` scope keeps it off the header logo and
 footer icons.
 
-⚠️ **`photo-cover` is full-bleed again, and is now the site's ONE documented exception** to
+[WARNING] **`photo-cover` is full-bleed again, and is now the site's ONE documented exception** to
 "nothing goes past the band". It had been brought onto the band earlier the same day; that was
 wrong for this element. It is a flourish, not content. Its caption stays on the body width — the
 only caption on the site that does not match its own figure. See `styles.md` §6.
 
-### ⚠️ 882 GPG signatures lost to a history rewrite (2026-07-27)
+### [WARNING] 882 GPG signatures lost to a history rewrite (2026-07-27)
 **What happened.** Two `.afphoto` purges were run to get past GitHub's 100 MB file limit — first
 `git filter-branch` over the unpushed range, then `git filter-repo` over the whole history to
 remove `static/*.afphoto` (191 MB). Both tools **discard GPG signatures**: a signature covers the
@@ -2376,7 +2376,7 @@ filter; the appearance panel's copy was already sans only because the panel is) 
 `.back-to-top-row`. That last one had a `font-family` until it became icon-only and lost it
 silently — which is precisely the failure this list exists to prevent.
 
-⚠️ **This class of bug is invisible by default.** It only appears for readers who picked Serif
+[WARNING] **This class of bug is invisible by default.** It only appears for readers who picked Serif
 or Sans-Serif, and the default is System — so casual checking will never show it. Add to the
 list when adding a control inside `main`.
 
@@ -2432,7 +2432,7 @@ measure now sit next to things that span the band.
   was a no-op — the base rule already sets `padding: X 0`. It existed to compensate for the
   centering that is now gone.
 
-⚠️ **And a real bug the breakout change exposed: sidenotes landing on top of images.**
+[WARNING] **And a real bug the breakout change exposed: sidenotes landing on top of images.**
 `sidenotes.js` dodges wide media via `collectObstacles()`, and that logic was fine — the
 *timing* was not. Images here carry no width/height attributes, so they contribute almost no
 height at first layout. Measured on `/2005/mumbai-marooned/`: the figure was **79px tall when
@@ -2446,7 +2446,7 @@ Fixed with a `ResizeObserver` on the images, not the article: placing a note cha
 article's size, so observing the article would re-trigger the observer on its own output. An
 image's size does not depend on where a note sits, so there is no loop.
 
-⚠️ **Testing note:** `python3 -m http.server` is single-threaded and starved under a blocking
+[WARNING] **Testing note:** `python3 -m http.server` is single-threaded and starved under a blocking
 CDP eval, so images reported `complete: false` for minutes and the page looked broken in ways
 the code was not. Use `ThreadingHTTPServer` when checking anything image-dependent.
 
@@ -2467,12 +2467,12 @@ is two lines — `margin-inline: 0` to keep the left edge, `width: 100cqi` to gr
 viewport arithmetic, so it cannot drift when the site width changes and it does not have to know
 about scrollbars (100vw includes them, 100cqi does not).
 
-⚠️ **`photo-cover` cannot use it.** `post.html` emits it before `<main>`, so it is a `<body>`
+[WARNING] **`photo-cover` cannot use it.** `post.html` emits it before `<main>`, so it is a `<body>`
 child with no container ancestor and cqi falls back to the viewport — exactly the full-bleed
 being removed. It is given the band's own three lines instead (`--body-width` /
 `--body-width-max` / `margin-inline: auto`), which must be kept in step with `main` by hand.
 
-⚠️ **`.post img { width: 100% }` was silently beating `img.full`.** Both are (0,1,1) and post.css
+[WARNING] **`.post img { width: 100% }` was silently beating `img.full`.** Both are (0,1,1) and post.css
 loads after base.css, so an `img.full` measured 665px — the column — while a `figure.full` got
 the full band, because `.post img` does not match a `<figure>`. **Two authoring forms, two
 different results, no error anywhere.** Now `.post img:not(.full):not(.large)`.
@@ -2511,7 +2511,7 @@ All five done, and the markup changed to make three of them fall out rather than
   `transparent`, so the hovered half reads as a solid step rather than a translucent patch.
   Verified it differs from the bar in both modes: light 0.922 → 0.860, dark 0.269 → 0.326.
 
-⚠️ **The bar had never been aligned with the article it belongs to.** `.post-nav` carried
+[WARNING] **The bar had never been aligned with the article it belongs to.** `.post-nav` carried
 `margin: var(--space-l) auto` while also wearing `.container-ideal`, whose whole job is
 `margin-inline: 0 auto`. post.css loads after base.css at equal specificity, so `auto` won and
 the nav was **centered while the article was left-aligned — measured 179px out of step**. Fixed
@@ -2554,7 +2554,7 @@ reading `fvar` back out AND by measuring three different rendered widths at 100/
 because a naive subset flattens a variable font and every weight silently becomes 400. The
 `.ttf` was still shipping; now excluded from the build.
 
-⚠️ **And it turned up a real typographic bug.** Libre Baskerville's three faces declared
+[WARNING] **And it turned up a real typographic bug.** Libre Baskerville's three faces declared
 `unicode-range: U+000-5FF`, but the files contain `’ “ ” – — • …` — all above U+05FF. The range
 forbade the browser from using the font for exactly the characters that carry a serif's voice,
 so a reader on Serif got Libre Baskerville for the letters and the *system* serif for every
@@ -2636,7 +2636,7 @@ Verified live in both modes. Light: page `#FFFCF0`, text `#100F0F`, surface `#F2
 `#E6E4D9`. Dark: page `#100F0F`, text `#CECDC3` (11.98:1), fg-muted `#9F9D96` (7.05:1),
 fg-subtle `#878580` (5.19:1). Checked on a post and on `/archives/`.
 
-⚠️ **The attribute value stays `eink`**, not renamed to `flexoki`. Renaming it would invalidate
+[WARNING] **The attribute value stays `eink`**, not renamed to `flexoki`. Renaming it would invalidate
 every reader's saved `localStorage('palette')` for no visible gain — `read()` validates against
 the option list and would silently drop them back to Default.
 
@@ -2649,7 +2649,7 @@ uses the ROOT font size, and the reader's Text Size axis never touches the root;
 `--step-*`. Measured against the old 60px content box: XS had 8.8px spare, M was already at
 −0.2px, XL was 9.2px over. So it had been failing at the default size too, not just XL.
 
-⚠️ **The obvious fixes are dead ends here, because `base.css` sets `table-layout: fixed`.**
+[WARNING] **The obvious fixes are dead ends here, because `base.css` sets `table-layout: fixed`.**
 Under fixed layout the specified width is used literally and the cell's content is never
 consulted:
 - `width: auto` → the table just split 50/50 and gave the date **510px**.
@@ -2702,7 +2702,7 @@ The original construction, for the record:
   century `z-index: 0`, nav `z-index: 1` with its opaque background doing the masking.
 - **The wrapper took over the sticky** (was on the nav), so the mark and the tray travel
   together. Verified their centers stay within 2px when stuck.
-- ⚠️ **Capped to the tray's height.** At 3.25rem it was 52px against a 42px tray and overhung
+- [WARNING] **Capped to the tray's height.** At 3.25rem it was 52px against a 42px tray and overhung
   ~5px, invisible at rest but clipped by the viewport edge the moment the strip stuck at
   `top: 0`. Now max 2.5rem/40px inside 42px, verified unclipped when stuck.
 - Hidden below 1250px, where the margin can no longer hold the mark. Derived from
@@ -2726,7 +2726,7 @@ The original construction, for the record:
 - **Hover background verified inside the tray**: first link's left edge and last link's right
   edge sit exactly on the tray's content box, so the highlight never bleeds onto the border.
 
-⚠️ **`scroll-margin-top` needed retuning for the FOURTH time.** Re-measured row counts at the
+[WARNING] **`scroll-margin-top` needed retuning for the FOURTH time.** Re-measured row counts at the
 new sizing: band 983–1024 → 1 row / 42px · 500–900 → 2 rows / 77px · 346–400 → 3 rows / 113px ·
 307 → 4 rows / 149px. Now 4.5rem base (unstuck), **5.5rem from 768px** (clears 77), **3.5rem
 from 1024px** (clears 42) — both verified clearing by 14px and 11px. The strip's height is
@@ -2759,7 +2759,7 @@ without starving the notes. Paying for the gutter once gives:
   slanted beta reads as pushed inwards otherwise. Below that it sits in flow; no clipping.
   Verified one row and fitting at 1512/1200/1150/1100/768/430/390/360/320.
 
-⚠️ **Three things this broke, all found by measuring:**
+[WARNING] **Three things this broke, all found by measuring:**
 1. **The `/ 2` in `.sidenote`'s width** assumed a centered column splitting the leftover between
    two margins. Left in, it would have halved every note.
 2. **`gutterFits()` measured `window.innerWidth`.** Correct only while the gutter was viewport
@@ -2769,7 +2769,7 @@ without starving the notes. Paying for the gutter once gives:
    **never** be one row again, so the override was dead and wrong. Removed. *Third time this
    exact bug class has appeared; the strip's height is variable and the clearance must track it.*
 
-⚠️ **Local `_site` goes stale.** `jekyll build` does not delete output whose source stopped
+[WARNING] **Local `_site` goes stale.** `jekyll build` does not delete output whose source stopped
 qualifying, so `/2100/` pages and a 1,464 post count persisted from earlier builds and were
 briefly measured as real. `jekyll clean` restored 1,456 and 26 archive years. **CI is safe** —
 Actions builds from a fresh checkout. Run `make clean` before trusting local counts.
@@ -2790,7 +2790,7 @@ different site widths depending on where you landed. Brajeshwar: *"One Standard 
 - Timeline entry prose is capped at `--measure` too — the structure wants the width, the
   sentences don't.
 
-⚠️ **Two things this broke, both caught by measuring, both of the same class:**
+[WARNING] **Two things this broke, both caught by measuring, both of the same class:**
 1. **`sidenotes.js` queried `.container-ideal article`.** Moving the class onto the article made
    that match nothing — sidenotes would have silently vanished from every footnoted post. Now
    `article.container-ideal`. Verified 3 notes still render, inside the band, footnotes hidden.
@@ -2947,9 +2947,9 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
 8. **Reviewable diffs** — one concern per change; don't mix a refactor with a redesign.
 
 ## Architecture to honor
-- CSS = **13 plainly-named Sass partials** in **`_sass/`**, compiled by **`assets/styles/site.scss`** into ONE external stylesheet. ⚠️ **Moved out of `_includes/css/` 2026-07-27** — they were Liquid includes and nothing includes them into HTML any more. `@use`, not `@import` (Dart Sass 3.0 removes it); a module emits at FIRST load, so the order in `site.scss` is the whole cascade. **9.5 KB gzip / 50 KB raw for the whole site**, fetched once and cached. ⚠️ **Externalised 2026-07-27, reversing the inline-everything rule** — `/assets/*` is served `max-age=31536000`, so inlining re-sent ~6.6 KB gzip on every page view and could never be cached (HTML is `max-age=600`). The ≤13 KB gzip budget still holds but is now a **whole-site** number, not per-page.
-- ⚠️ **Two things the one-file model makes load-bearing.** (a) **Cache-busting**: `scripts/hash-assets.mjs` renames CSS/JS to `<name>.<hash>.ext` post-build and rewrites references — a stable filename at `max-age=31536000` strands returning readers for a year. It must run *after* the esbuild minify step. (b) **Every stylesheet applies to every page** — anchor selectors to a class (`.page`, `.post`) or custom element, never a bare `main > article > h2`. `page.css` broke this rule and would have clamped all ~1,456 post titles to 665px.
-- ⚠️ **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`styles.md`](styles.md) §5 → *Old → new filename map*. Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
+- CSS = **13 plainly-named Sass partials** in **`_sass/`**, compiled by **`assets/styles/site.scss`** into ONE external stylesheet. [WARNING] **Moved out of `_includes/css/` 2026-07-27** — they were Liquid includes and nothing includes them into HTML any more. `@use`, not `@import` (Dart Sass 3.0 removes it); a module emits at FIRST load, so the order in `site.scss` is the whole cascade. **9.5 KB gzip / 50 KB raw for the whole site**, fetched once and cached. [WARNING] **Externalised 2026-07-27, reversing the inline-everything rule** — `/assets/*` is served `max-age=31536000`, so inlining re-sent ~6.6 KB gzip on every page view and could never be cached (HTML is `max-age=600`). The ≤13 KB gzip budget still holds but is now a **whole-site** number, not per-page.
+- [WARNING] **Two things the one-file model makes load-bearing.** (a) **Cache-busting**: `scripts/hash-assets.mjs` renames CSS/JS to `<name>.<hash>.ext` post-build and rewrites references — a stable filename at `max-age=31536000` strands returning readers for a year. It must run *after* the esbuild minify step. (b) **Every stylesheet applies to every page** — anchor selectors to a class (`.page`, `.post`) or custom element, never a bare `main > article > h2`. `page.css` broke this rule and would have clamped all ~1,456 post titles to 665px.
+- [WARNING] **Filenames changed 2026-07-19.** Flattened from 25 numbered ITCSS partials (`0.0-config.css`, `2.1-code.css`, …) to `config` / `themes` / `base` / `chrome` / `post` / `page` / `album` + per-page one-offs. **Older entries below still use the numbered names** — see the old→new map in [`styles.md`](styles.md) §5 → *Old → new filename map*. Cascade order now lives only in `styles.html`; `config.css` must stay first (it defines the `$breakpoint-*` SCSS vars).
 - ~~**CSS tiering decided + implemented 2026-07-19** — stay embedded (no external stylesheet); split by **layout**, not by page: base on every page → one bundle per layout (`post`/`page`/`album`) → per-page opt-in for genuine one-offs only.~~ **Superseded 2026-07-27** — delivery is one external file for every page; the three tiers survive only as *organization* (which file to open), never as what ships where. Still shipped that day and still true: syntax highlighting fixed + tokenised onto `--code-*` (later removed entirely); new `album` layout (film + devices, **not** books — that's prose); `page-full.html` merged into `page.html`. Full rationale: [`styles.md`](styles.md) §5.
 - **Layouts are now**: `default` · `post` · `page` (reading width, `full: true` for full-bleed) · `album` (galleries) · `redirect`.
 - ~~Layouts pick a CSS bundle through the `styles:` front-matter key (`styles-posts.html`, `styles-pages.html`).~~ **The `styles:` key and all four `styles-*.html` shims were deleted 2026-07-27** — every stylesheet ships to every page, so there is nothing left to switch. `style:` (singular, a class on `<main>`) is unrelated and still live.
@@ -2986,7 +2986,7 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
   - **Browser-verified at 1440px**: footnotes → clean margin sidenotes aligned to refs (after resetting the inherited generic `aside{}` box); at 760px → fold back to foot footnotes with `↩`; sepia+serif persisted across reload with no flash; selects reflect stored state.
 - **Phase 3 done + live-verified.** Templates & chrome.
   - **Header** — already centered logo+nav with full-width rule; removed the dead `mode-toggle` CSS (now `reader-settings`).
-  - **Footer** — restructured `_data/nav.yaml` `footer` from a flat list into **4 categorised groups** (Browse / Reading / About / Connect — all 13 original links preserved); `footer.html` renders columns; `3.1-footer.css` is a responsive `auto-fit` grid + centered colophon. ⚠️ The grouping is my IA guess — easy to re-bucket; iterate freely.
+  - **Footer** — restructured `_data/nav.yaml` `footer` from a flat list into **4 categorised groups** (Browse / Reading / About / Connect — all 13 original links preserved); `footer.html` renders columns; `3.1-footer.css` is a responsive `auto-fit` grid + centered colophon. [WARNING] The grouping is my IA guess — easy to re-bucket; iterate freely.
   - **Blockquote** — Yale e360 style: quiet left rule, italic, muted; font-family follows the global `--font-body` (the reader's font choice), not a fixed serif (`1.2-typography.css`).
   - **Figures** — captions muted/restrained + caption-alignment utilities (`figcaption.center/.right`, default left) in `2.1-images.css`. Gallery already existed.
   - Browser-verified: footer columns on home + posts, header, sidenotes still work post-refactor.
@@ -2998,7 +2998,7 @@ name was retired 2026-07-26 along with `_docs/v2027/`.)
 - **Phase 5 (verification) — passing.** Builds clean; only layouts/includes/css/js/`nav.yaml` touched (no post/draft/page-body content); permalinks unchanged; 4 themes + font selector persist with no flash; sidenotes work + fold back; JS-off → real footnotes + default theme; CSS under budget; no AI-attributed commits (nothing committed — staged for review).
   - Files touched (Phases 0–4): `_data/nav.yaml`; `_includes/css/{0.0-config,0.1-color,1.2-typography,2.1-footnotes,2.1-images,3.1-header,3.1-footer,8.1-tools-theme-toggle,9.9-utils-anchorjs}.css`; deleted `4.1-search.css`; `_includes/{header,footer}.html`; `_layouts/{default,post}.html`; `assets/scripts/{reader,sidenotes,anchors}.js` (new); deleted `assets/scripts/anchor.min.js` + old `theme.js`.
 - **Header search added + live-verified.** Site-wide search via lazy-loaded Pagefind (Option 1 — zero page-load cost). See [`search.md`](search.md). `<site-search>` trigger in `header.html` (links to `/search/` as JS-off fallback) + `assets/scripts/search.js` (defer, opens an inline themed panel, lazy-loads `pagefind-ui.*` on first click) + `_includes/css/8.2-tools-search.css` (in base bundle). Browser-verified: page load injects no Pagefind; click → panel + lazy-load; "cherrapunji" → 1 highlighted result.
-  - ⚠️ **Cache gotcha (testing only):** `jekyll serve` wipes `_site/pagefind/` on regeneration and caches `search.js` hard — test with `--skip-initial-build --no-watch` after `npx pagefind --site _site`, and hard-reload. The `DOMContentLoaded` ready-guard in search.js is required (don't remove).
+  - [WARNING] **Cache gotcha (testing only):** `jekyll serve` wipes `_site/pagefind/` on regeneration and caches `search.js` hard — test with `--skip-initial-build --no-watch` after `npx pagefind --site _site`, and hard-reload. The `DOMContentLoaded` ready-guard in search.js is required (don't remove).
   - **Reworked into a ⌘K command palette (live-verified on a plain serve).** Now opens a centered in-place popup via the trigger or ⌘K / Ctrl+K; Esc/backdrop close; never navigates while JS is on (removed the auto-redirect — shows an in-panel "open the search page" message if Pagefind can't load). ⌘K hint badge in the header (platform-aware). Root cause of "search just goes to /search/": all `assets/scripts/*.js` were loaded via `prepend: site.url` → `https://brajeshwar.com/...`, which 404s under local `jekyll serve` so no JS attached. Fixed to `relative_url` (root-relative) in `default.html` + `post.html`. `/search/` page unchanged (auto-focused input, JS-off fallback).
   - **Switched to Pagefind's Modular UI (live-verified).** We're on Pagefind 1.5.2 (current — not a version bump). Default UI → Modular UI (`pagefind-modular-ui.js`): our ⌘K shell builds `PagefindModularUI.Instance` + `Input`+`Summary`+`ResultList` (`showImages:false`) into 3 mounts in the panel; same `--pagefind-ui-*` theming on `.site-search__panel`. Eager search payload ~32KB → ~5KB gz. Considered the Component UI (`<pagefind-modal>`, ~40KB, heavier/harder to theme) and rejected it. Verified: "monaco" → 2 themed text-only results.
   - **`data-pagefind-ignore` on `<header>` + `<footer>`** so repeating chrome (nav, the ⌘K hint badge, footer columns) isn't indexed — without it the header's ⌘K led every result excerpt. Verified: "bombay flood" → clean content excerpts.

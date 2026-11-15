@@ -2,7 +2,7 @@
 // rule from CLAUDE.md or a bug that already shipped once. See _docs/testing.md.
 
 import { test, expect } from '@playwright/test';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import {
   SITE,
   assertSite,
@@ -174,6 +174,48 @@ test('no hardcoded colors outside themes.scss', () => {
     )) {
       if (!ALLOWED.includes(`${f} ${m[0]}`)) found.push(`${f} ${m[0]}`);
     }
+  }
+  expect(found).toEqual([]);
+});
+
+test('no emoji in code, data, templates or docs', () => {
+  // 2026-11-15: "remove any form of emoticons anywhere in code and UI." A
+  // warning is [WARNING]. Typographic symbols that name a real glyph (the
+  // external-link arrow, the footnote return, ©) are not emoji and stay.
+  // Posts are content and are not scanned; albums.yaml is generated.
+  const ALLOWED = new Set(['↗', '↔', '↩', '©', '®', '™', '→', '←']);
+  const roots = [
+    '_sass',
+    'assets/scripts',
+    'scripts',
+    '_includes',
+    '_layouts',
+    '_data',
+    '_pages',
+    '_redirect',
+    '_docs',
+    '_test',
+    'CLAUDE.md',
+    'README.md',
+    'Makefile',
+    '_config.yml',
+    '.github/workflows',
+  ];
+  const walk = (p) =>
+    statSync(p).isDirectory()
+      ? readdirSync(p).flatMap((n) => (n === 'site' || n === 'results' ? [] : walk(`${p}/${n}`)))
+      : [p];
+  const found = [];
+  for (const f of roots.flatMap(walk)) {
+    if (
+      f.endsWith('albums.yaml') ||
+      !/\.(scss|js|mjs|rb|sh|html|ya?ml|md|txt|json)$|Makefile$/.test(f)
+    )
+      continue;
+    const hits = (readFileSync(f, 'utf8').match(/\p{Extended_Pictographic}/gu) || []).filter(
+      (c) => !ALLOWED.has(c)
+    );
+    if (hits.length) found.push(`${f} ${[...new Set(hits)].join(' ')}`);
   }
   expect(found).toEqual([]);
 });

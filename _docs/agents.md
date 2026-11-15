@@ -76,15 +76,15 @@ unchanged**, since it derives everything from `page`:
 matter, because the bar derives the twin's URL from `page.url` and a twin already exists for all
 1,457 posts.
 
-⚠️ **There is no Print button since 2026-10-31**, and no `print` include parameter. It existed
+[WARNING] **There is no Print button since 2026-10-31**, and no `print` include parameter. It existed
 only on `/cv/` (posts dropped it with `print=false`), and the PDF link replaced it there — so
 `page-actions.js` and `icons/print.svg` were deleted with it, and the bar needs no JavaScript at
 all. A page gets a PDF link by naming the file in its front matter, `pdf: <url>`, read as
-`page.pdf`. ⚠️ **Why the deletion was forced, not tidy:** once nothing referenced
+`page.pdf`. [WARNING] **Why the deletion was forced, not tidy:** once nothing referenced
 `page-actions.js`, `scripts/hash-assets.mjs` failed the build — it treats a hashed asset with zero
 references as a mistake. That is how the first deploy of the PDF link went red.
 
-⚠️ **A post's title row breaks out to the band.** `.post h1` is `width: 100cqi` on purpose —
+[WARNING] **A post's title row breaks out to the band.** `.post h1` is `width: 100cqi` on purpose —
 "Posts titles should extend the full length of the body width" — which it achieves by
 overflowing the `.container-ideal` article. Wrapping it in a flex row undid that: the flex line
 was the article's 665px, so the title shrank and the bar wrapped underneath even for a
@@ -96,10 +96,10 @@ The AI links do not upload or embed anything. They open a new chat pre-filled wi
 mechanism** and has to be public. `url_encode` (not `uri_escape`) so the nested URL is fully
 percent-encoded, matching what the reference bar sends.
 
-⚠️ The `.md` URL expression is duplicated in `_layouts/default.html`, which emits the
+[WARNING] The `.md` URL expression is duplicated in `_layouts/default.html`, which emits the
 `<link rel="alternate" type="text/markdown">` for the same file. Change one, change both.
 
-⚠️ **Twins are CI-only**, so every link in the bar 404s under `jekyll serve`. Run
+[WARNING] **Twins are CI-only**, so every link in the bar 404s under `jekyll serve`. Run
 `node scripts/build-agent-markdown.mjs` after a build to check them locally. Not worth a local
 build step — but unlike esbuild and hash-assets, this one is *visible*, so expect it to be
 reported as broken.
@@ -115,12 +115,12 @@ So the icon is `icons/print.svg` and the label is *"Print"*. `pdf.svg` is delete
 was its only caller. The browser's print dialog is where *"Save as PDF"* lives, and it needs no
 help from a label here.
 
-⚠️ **`assets/print.css` is what makes that honest** — Gutenberg-based, linked `media="print"` in
+[WARNING] **`assets/print.css` is what makes that honest** — Gutenberg-based, linked `media="print"` in
 `default.html`, hiding the header, footer and post-nav, so the result is a clean document rather
 than a screenshot of the site. It also appends `(href)` after every `http` link, which on `/cv/`
 means about forty of them: the printed CV reads noisier than the screen.
 
-⚠️ **Decided the same day.** `_sass/cv.scss` now carries a `@media print` block that suppresses
+[WARNING] **Decided the same day.** `_sass/cv.scss` now carries a `@media print` block that suppresses
 those URLs on `/cv/` — the contact line keeps its one URL, because a printed CV whose LinkedIn is
 the word "LinkedIn" is one you cannot act on. **The printed CV is four pages** (was eight). That
 block also fixes three things print was already getting wrong: the timeline spine erased by
@@ -128,13 +128,13 @@ Gutenberg's `!important` background reset, the reader's dark theme following the
 and headings sized by Gutenberg's element selectors rather than the site's tokens. Read the
 comments there before changing any number in it.
 
-⚠️ **AND IT SETS A SITE-WIDE PRINT MARGIN, which is the one part of this that reaches beyond
+[WARNING] **AND IT SETS A SITE-WIDE PRINT MARGIN, which is the one part of this that reaches beyond
 `/cv/`.** `_sass/cv.scss` declares `@page { margin: 20mm 16mm }`. `@page` is document-level and
 cannot be scoped to a URL, so **every page on this site now prints with that margin** — it lives
 in `cv.scss` only because that is where the need arose. Approved deliberately (2026-09-07); if
 print margins ever look wrong on some other page, this is why, and this is the one line to change.
 
-⚠️ **20mm top/bottom is sized to CONTAIN the print dialog's own header and footer** — the date,
+[WARNING] **20mm top/bottom is sized to CONTAIN the print dialog's own header and footer** — the date,
 title, URL and page number Chrome draws when "Headers and footers" is ticked. When the margin is
 too small to hold that chrome, the browser takes the room out of the *content box* instead, so the
 same stylesheet paginates differently for a reader with headers on than for one with them off.
@@ -148,7 +148,7 @@ the room from the margin into the browser's private reserve.
 committed file, linked from `/cv/`'s contact line. His call: *"Let's create a proper PDF and keep it
 static so I can just link to it."* `make cv-pdf` builds the site and runs `scripts/page-pdf.sh`,
 which prints the built `/cv/` with headless Chrome over loopback — the same document the Print
-button produces, so there is no second CV to maintain. ⚠️ **But it is only as fresh as the last
+button produces, so there is no second CV to maintain. [WARNING] **But it is only as fresh as the last
 run: edit `_pages/cv.md`, run `make cv-pdf`, commit both together.** (An Actions step printing it on
 every build existed for a few hours that day and was dropped unpushed in favor of this.)
 
@@ -171,7 +171,7 @@ every build existed for a few hours that day and was dropped unpushed in favor o
 
 The reader's own Print command still works on every page, styled by `assets/print.css`.
 
-## ⚠️ Liquid and HTML comments are stripped (2026-08-09) — and why that mattered
+## [WARNING] Liquid and HTML comments are stripped (2026-08-09) — and why that mattered
 
 `build-agent-markdown.mjs` reads the **source** file, so Jekyll never gets a chance to strip
 Liquid comments out of it. The pages here carry long ones: `/cv.md` opened with 30 lines about
@@ -201,7 +201,7 @@ Because the test is `d.path.endsWith('.html')` and not a list of page names, a p
 to `.html` tomorrow is handled with no edit here, and one converted back to `.md` returns to
 the source path on its own.
 
-⚠️ **The twelve are not the twelve `todo.md` listed.** That table named `styleguide` — whose
+[WARNING] **The twelve are not the twelve `todo.md` listed.** That table named `styleguide` — whose
 source is `_pages/styleguide.md` and was never affected — and missed `newsletter.html`. Same
 count, one swap.
 
@@ -228,8 +228,8 @@ A `<script>` block is now stripped from **Markdown** sources too. Exactly one tw
 affected — `/about.md` ended with the `anchors.js` tag and an unevaluated Liquid URL inside it
 — and it is the page most likely to be opened through the `[md]` icon.
 
-⚠️ **The build now warns instead of going quiet.** If a converted body still contains `{%`,
-`{{` or block tags, the run prints `⚠️ markup survived the conversion: <url>` and counts it.
+[WARNING] **The build now warns instead of going quiet.** If a converted body still contains `{%`,
+`{{` or block tags, the run prints `[WARNING] markup survived the conversion: <url>` and counts it.
 This class of bug lived for nine days because nothing ever looked at the output; the next
 page that grows unfamiliar markup says so in the log.
 

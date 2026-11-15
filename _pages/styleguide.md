@@ -83,7 +83,7 @@ and the album strip alone loads eight of them.
 - **≤ 60 KB per thumbnail**, and most should land near 25–40 KB.
 - Filename is the slug: `the-lord-of-the-rings.webp`, lowercase, hyphenated.
 
-⚠️ **When a thumbnail busts the budget, cut the long edge — not the quality.** This section
+[WARNING] **When a thumbnail busts the budget, cut the long edge — not the quality.** This section
 used to say that over 100 KB "means the quality slider is too high, not that the image is
 complicated." That is wrong, and the first real album photo disproved it: a bookshop interior,
 which is several hundred legible book spines, i.e. detail everywhere and nothing for the
@@ -100,7 +100,7 @@ Dropping from q82 to q65 at 800px saves 36 KB and visibly softens the faces. Dro
 retina floor by 22% — the headroom this page already documents. **So 800 is the template, not
 a minimum.** For a detail-dense frame, take the long edge to 600 and leave quality at 75.
 
-⚠️ **And sometimes you need both levers.** The rule above was written from one photograph; a
+[WARNING] **And sometimes you need both levers.** The rule above was written from one photograph; a
 second, a San Francisco street thick with foliage, needed 600 **and** q68 to reach 55.1 KB —
 600/q75 landed just over the line at 60.0 KB. Reach for the long edge first, then give up a
 little quality, and check the **rendered width** rather than the long edge when you do:
@@ -132,10 +132,10 @@ and are the whole reason for it:
   public URL for a 5 MB camera original.
 - **Masters are on Git LFS.** `.gitattributes` tracks `_src/**` by *path*, so the repo carries
   a 131-byte pointer per file while the same `.jpg` under `static/` stays an ordinary blob.
-  ⚠️ Track by path, never by extension — an extension rule would swallow the published files
+  [WARNING] Track by path, never by extension — an extension rule would swallow the published files
   too. `.gitkeep` is explicitly opted back out; a pointer file is not a placeholder.
 
-⚠️ **Add masters with plain `mv` + `git add`, never `git mv`.** `git mv` writes the rename
+[WARNING] **Add masters with plain `mv` + `git add`, never `git mv`.** `git mv` writes the rename
 straight into the index without running LFS's clean filter, so the real binary goes in and
 `git status` looks perfectly normal. The only check that actually proves it:
 
@@ -150,7 +150,7 @@ suffix that sat inline next to the published file (and, for a few hours, a `stat
 layout that shipped with the deploy).
 
 **Per-post images** — `static/<year>/` — keep the old `<name>-original.<ext>` suffix, in place.
-⚠️ **Do not migrate these.** 41 of them are live and three are linked *directly* from posts, so
+[WARNING] **Do not migrate these.** 41 of them are live and three are linked *directly* from posts, so
 their URLs are pinned by guardrail 2. The suffix stays the convention for anything under a year
 folder; `_src/` is only for the five collections above. Meanwhile, do not add a 700 KB master casually.
 
@@ -171,11 +171,11 @@ overlays the matching icon.
 
 An album entry is **three fields — `title`, `img`, `url`** — plus optional `media`. There is no
 `alt`: the includes emit `item.alt | default: item.title`, so the **title is the alt text**.
-⚠️ That means an album title is doing two jobs at once — the caption on the home strip and the
+[WARNING] That means an album title is doing two jobs at once — the caption on the home strip and the
 description a screen reader reads with the picture unseen. Write them to survive being read
 aloud.
 
-⚠️ **Album entries carry no `w:`/`h:` either, and that is deliberate.** Ragged heights are the
+[WARNING] **Album entries carry no `w:`/`h:` either, and that is deliberate.** Ragged heights are the
 point of a masonry page, and per-photo dimensions are two hand-maintained numbers that no build
 step can check. They were tried and removed on 2026-08-01. Anyone reaching for them again should
 know the measurement first: `page.scss` sets `aspect-ratio: auto` on masonry images, which
@@ -194,12 +194,12 @@ keyed by filename and iterates it in **filename order, not filesystem order** (v
 which is what puts `01` first and `z` last with no sort filter. `/books/` derives its section
 headings from those filenames.
 
-⚠️ **A book is filed by the first letter that is not an article.** "The Children" belongs in
+[WARNING] **A book is filed by the first letter that is not an article.** "The Children" belongs in
 `c.yaml`, and the rule covers *The*, *A* and *An* — so *A Room of One's Own* is in `r.yaml`
 (Brajeshwar, 2026-08-07). The filename is the only place that knows the right letter; deriving
 headings from titles instead would put every *The …* under T, which is the thing this fixes.
 
-⚠️ **This paragraph used to say "by year, never by letter."** That advice was written on
+[WARNING] **This paragraph used to say "by year, never by letter."** That advice was written on
 2026-08-01 and was right for what the data then encoded: position in the file was the record of
 recency, so an alphabetical split would "scatter chronology across files and break the one rule
 the whole thing rests on." It did exactly that, deliberately, on 2026-08-07 — the shelf reached
@@ -222,13 +222,13 @@ directory is a hash of arrays rather than one array:
 {% for group in site.data.books %}{% assign books = books | concat: group[1] %}{% endfor %}{% endraw %}
 ```
 
-⚠️ That snippet is wrapped in a Liquid **raw** block in this page's source, and has to be.
+[WARNING] That snippet is wrapped in a Liquid **raw** block in this page's source, and has to be.
 Liquid runs **before** Markdown, so a fenced code block is no protection: the example executed
 on first write and took the build down. Naming the tag in prose does it too — a bare mention
 outside a raw block reads as an unclosed opening tag and fails with *"'raw' tag was never
 closed"*. Both mistakes were made writing this paragraph.
 
-⚠️ **`slice`, `where` and `where_exp` all stop working** on a directory, and `slice` does it
+[WARNING] **`slice`, `where` and `where_exp` all stop working** on a directory, and `slice` does it
 **silently** — `index.html` kept building green while its Books strip rendered one item instead
 of seven. Count the items; do not trust the exit code. Inside an `include` tag, `group[0]` and
 `group[1]` are a hard error instead ("Invalid syntax for include tag"), so assign them to plain
@@ -285,7 +285,7 @@ They take the full band, keep a 16:9 box, and get the same rounded corners as im
 </video>
 ```
 
-⚠️ Images in posts carry no `width`/`height` attributes. That causes layout shift as they load,
+[WARNING] Images in posts carry no `width`/`height` attributes. That causes layout shift as they load,
 and it is why sidenotes need a `ResizeObserver` to re-place themselves once an image finally has
 a height. Worth fixing one day.
 
@@ -383,7 +383,7 @@ and its click target is the **full height of the heading** rather than the glyph
 easy to hit without being loud. Invisible until hover or keyboard focus, and hidden entirely
 below 480px where there is no margin to sit in.
 
-⚠️ ids come from kramdown, and this site runs **plain kramdown, not GFM** — so a heading that
+[WARNING] ids come from kramdown, and this site runs **plain kramdown, not GFM** — so a heading that
 starts with a letter gets a real anchor (`## Razorfish` → `#razorfish`) and one that starts with
 a digit gets `section`, `section-1`, and so on. `/about/`'s date labels are in the second group,
 which is accepted.

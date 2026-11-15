@@ -10,7 +10,7 @@ sitemap: false
   page '/resume/' with the redirect template from layout and re-direct to
   '/cv/'."
 
-  ⚠️ THIS ONE IS NOT A RENAME. /photos/ → /album/ exists because a live URL
+  [WARNING] THIS ONE IS NOT A RENAME. /photos/ → /album/ exists because a live URL
   moved and guardrail 2 says every URL is preserved. /resume/ was never live —
   it is here because "resume" is the word half the world types for this page and
   "CV" is the word the other half types. Same document, two names, one canonical.

@@ -113,7 +113,7 @@ Adapted rather than copied, in two places:
   Coloring the quote *text* was rejected: this fires on all 193 blockquotes in 176 posts
   with no per-quote opt-out (guardrail 1), where e360 uses the device a few times an article.
 
-⚠️ **The breakout is gated on `:not(.has-sidenotes)`** — the gutter it grows into is the
+[WARNING] **The breakout is gated on `:not(.has-sidenotes)`** — the gutter it grows into is the
 sidenote gutter. Verified in the browser, not by eye: forcing the breakout on collides on
 **13 posts / 16 blockquote-sidenote pairs**; with the gate, all 21 candidates are clean. A
 Markdown-proximity estimate had said 21 posts, overstating it by 60% — measure geometry, not

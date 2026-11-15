@@ -14,7 +14,7 @@ site is a link, not an asset, and is not counted; nearly every post has those.
 | `player.vimeo.com` | 6 | 6 |
 | **total** | **56** | **29** |
 
-⚠️ **YouTube is excluded by request.** For scale, it is the biggest single source: 89
+[WARNING] **YouTube is excluded by request.** For scale, it is the biggest single source: 89
 embeds, on top of everything below.
 
 ## `cdn.oinam.com` — your own CDN
@@ -64,7 +64,7 @@ Every URL, because these are the ones that can rot without warning.
 | 2012-02-10 | [`/2012/effects-of-sopa-pipa/`](https://brajeshwar.com/2012/effects-of-sopa-pipa/) | `player.vimeo.com` | `https://player.vimeo.com/video/31100268?h=4aa4de9938` |
 | 2012-02-13 | [`/2012/how-bombay-mumbai-plays-golf/`](https://brajeshwar.com/2012/how-bombay-mumbai-plays-golf/) | `player.vimeo.com` | `https://player.vimeo.com/video/22329918?h=4aa4de9938` |
 
-## ✅ No `http://` assets remain — resolved 2026-08-05
+## [DONE] No `http://` assets remain — resolved 2026-08-05
 
 There were **four**, and they were the most fragile thing in this list: the built HTML
 carried `http://` while the HTML *served* by brajeshwar.com carried `https://`, because
@@ -83,7 +83,7 @@ All four were removed at source rather than patched to `https:`:
   image linking to a self-hosted PDF under `/static/pdf/` (*"Of course, the PDF should
   be in /static/pdf/"*). Both decks were his own uploads, so re-hosting was his to do.
 
-⚠️ **Two `http://` strings survive in `_posts/**` and BOTH should.** One is a YouTube
+[WARNING] **Two `http://` strings survive in `_posts/**` and BOTH should.** One is a YouTube
 iframe in `/2011/android-honeycombs-going-gets-tough/` — excluded from this list because
 YouTube is out of scope by request, but it is the same fragility and the same one-line
 fix. The other is in `/2008/malware-site-attack-wordpress-install/` and is **inert**: an
@@ -91,7 +91,7 @@ fix. The other is in `/2008/malware-site-attack-wordpress-install/` and is **ine
 it is the malware he found on his own site and the subject of the post. Verified: zero
 live script tags on that page. Do not "fix" it.
 
-## ⚠️ Every page also loads a Cloudflare beacon, and it is not in this repo
+## [WARNING] Every page also loads a Cloudflare beacon, and it is not in this repo
 
 `static.cloudflareinsights.com/beacon.min.js` — a third origin, on **every** page, injected
 at the edge by Cloudflare Web Analytics' automatic injection.
@@ -101,7 +101,7 @@ edge adds it only for browser-shaped requests. `curl` with a real User-Agent and
 `Accept: text/html` reproduces it; so does reading `document.querySelectorAll('script[src]')`
 on the live page. That is why it never showed up in any audit run against the build.
 
-⚠️ **This contradicts a decision already on the record.** [`memory.md`](memory.md), session
+[WARNING] **This contradicts a decision already on the record.** [`memory.md`](memory.md), session
 2026-07-27: *"Cloudflare **Web** Analytics is a different product and is not the answer — its
 beacon is a third origin and is blocked by Brajeshwar's own DNS (measured)."* Analytics was
 removed from the templates for exactly this reason, with edge analytics chosen instead.
@@ -117,12 +117,12 @@ toggle — Web Analytics → automatic injection — not a repo change.
    reference an external asset**, so nothing is hidden behind `future: false`.
 2. Scanned the BUILT HTML, not the Markdown, so anything a layout or include emits is caught
    too. (Nothing does; the templates are clean.)
-3. Kept only URLs whose host is not the site itself. ⚠️ In a local build `site.url` is
+3. Kept only URLs whose host is not the site itself. [WARNING] In a local build `site.url` is
    `localhost:4000`, which appears 4,347 times and is self, not external — filtering that
    out is the whole difference between this list and a meaningless one.
 4. Excluded `youtube.com`, `youtu.be`, `youtube-nocookie.com`, `ytimg.com`.
 
-⚠️ **The `http://` finding cannot be reproduced against the live site** — the edge has
+[WARNING] **The `http://` finding cannot be reproduced against the live site** — the edge has
 already rewritten it by then. It is only visible in `_site` or in the post source. The
 beacon finding is the exact opposite: invisible in `_site`, only visible live, and only to
 a browser-shaped request. Neither audit alone would have found both.
