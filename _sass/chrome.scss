@@ -1,7 +1,7 @@
 /* ============================================================
    Chrome — site furniture on every page.
    ------------------------------------------------------------
-   Header, footer, appearance panel, search palette.
+   Header, footer, theme toggle, search palette.
    ============================================================ */
 
 header {
@@ -215,16 +215,15 @@ site-tools svg {
 }
 
 /* ---- Icon button ------------------------------------------------
-   The header's round icon controls: search, RSS, appearance. All three had
+   The header's round icon controls: search, RSS, the theme toggle. All three had
    their own copy of this — same circle, same size, same colors, differing
    only in the two or three lines an <a> needs versus a <button> (2026-07-27
    audit). A fourth would have been a fourth copy, which is how the first
    three happened.
 
    `.icon-button` is the look; the specific class beside it in the markup
-   (`.site-rss`, `.appearance-trigger`, `.site-search__trigger`) stays as the
-   JS hook and the place for anything genuinely per-button. Same split as
-   `.pill` / `.appearance-options`.
+   (`.site-rss`, `.theme-toggle`, `.site-search__trigger`) stays as the JS
+   hook and the place for anything genuinely per-button.
 
    Element-agnostic on purpose: the resets for `border`/`background`/`cursor`
    and for `text-decoration` are BOTH here, so it does not matter whether the
@@ -474,13 +473,13 @@ main:has(.post-nav) ~ footer {
 /* ---- Pill: a reusable segmented selector -------------------------
    One rounded track, hairline divisions, the chosen segment filled.
 
-   Extracted from the appearance panel 2026-07-27 so other controls can wear
-   the same shape — the /about/ Life/Work filter is the first. Lives in
+   Extracted from the old appearance panel 2026-07-27 so other controls could
+   wear the same shape. The /about/ Life/Work filter is the one left. Lives in
    chrome.css (base bundle) precisely because it is shared; a tier-2 copy would
    have to be kept in step, which is the trap .headerlink already sits in.
 
    Two mechanisms drive the "on" state, because the two users differ:
-     [aria-pressed="true"]   the appearance panel's <button>s, set by JS
+     [aria-pressed="true"]   a <button> whose state JS sets
      .pill__option--on       anything else
      :checked + label        the CSS-only checkbox filter (see timeline.css)
    All three land on the same declarations below, so the look has one source.
@@ -668,43 +667,37 @@ footer {
   color: var(--text-muted);
 }
 
-/* ---- Appearance panel ---------------------------------------------------- */
+/* ---- Theme toggle ------------------------------------------------------ */
 
-/* Appearance panel (mode + palette + font + text size + accent) — built by
-   appearance.js. UI chrome: sans-serif, semantic tokens only. Compact float. */
-appearance-settings {
+/* One button, Light or Dark, built on .icon-button like its neighbours.
+   theme-toggle.js wires it and sets aria-pressed when the page is dark. The
+   icon is a disc, half filled, and it turns over with the mode. */
+theme-toggle {
   display: inline-flex;
   align-items: center;
-
-  /* Anchor for .appearance-panel below — the panel hangs off the trigger
-     rather than off the viewport corner. */
-  position: relative;
 }
 
-/* No script, no panel, so no button (2026-11-15). appearance.js builds every
-   option inside the panel; with scripting off the trigger was the one control
-   on the site that showed and did nothing. Search needs no such rule — its
-   trigger is a real link to /search/. A browser too old for `scripting` keeps
-   the button, which is the old behavior and harmless. */
+.theme-toggle svg {
+  transition: transform var(--transition-duration) ease;
+}
+
+.theme-toggle[aria-pressed='true'] svg {
+  transform: rotate(180deg);
+}
+
+/* No script, no toggle. With scripting off the site follows the system, and
+   a button that did nothing would be the one dead control on the page.
+   Search needs no such rule: its trigger is a real link to /search/. */
 @media (scripting: none) {
-  appearance-settings {
+  theme-toggle {
     display: none;
   }
 }
 
-/* .appearance-trigger's own look is .icon-button (see above); nothing
-   button-specific is left to say here. */
+/* ---- Search overlay ------------------------------------------------------
+   A dim behind and a bordered card in front, both hidden until asked for.
+   ------------------------------------------------------------------------- */
 
-/* ---- Overlay chrome, shared by both popups ----------------------
-   The appearance panel and the search palette are the same kind of object —
-   a dim behind, a bordered card in front, both hidden until asked for — and
-   each carried its own copy. Grouped rather than given a class of their own:
-   there are exactly two, they are structurally fixed, and neither is a family
-   likely to grow. If a third overlay ever appears, promote this to a class
-   the way .icon-button was.
-   ------------------------------------------------------------------ */
-
-.appearance-backdrop,
 .site-search__backdrop {
   position: fixed;
   inset: 0;
@@ -713,11 +706,6 @@ appearance-settings {
   opacity: 0.18;
 }
 
-/* Everything the two cards agree on. What they do NOT agree on is where they
-   sit: the appearance panel hangs off its trigger (absolute), the search
-   palette is a centered command palette (fixed). That, their sizes, and their
-   shadow depths stay in the per-panel blocks below. */
-.appearance-panel,
 .site-search__panel {
   z-index: 51;
   overflow-y: auto;
@@ -728,145 +716,9 @@ appearance-settings {
   border-radius: var(--border-radius);
 }
 
-.appearance-panel[hidden],
-.appearance-backdrop[hidden],
 .site-search__panel[hidden],
 .site-search__backdrop[hidden] {
   display: none;
-}
-
-.appearance-panel {
-  /* Hangs off the trigger, not the viewport corner. It was
-     `fixed; top: 4rem; right: var(--space-s)`, which put it against the right
-     edge of the screen — fine while the header was right-aligned, but the
-     header is centered now, so the panel opened a long way from the icon that
-     spawned it. Absolute + right:0 keeps its right edge on the trigger's.
-     right:0 rather than left:0 so it opens inward, away from the viewport
-     edge, and cannot overflow off-screen on a phone. */
-  position: absolute;
-  top: calc(100% + var(--space-2xs));
-  right: 0;
-
-  /* Widened 15.5rem → 21rem on 2026-07-27, when every group moved to
-     label-and-options-on-one-line; → 24rem when the labels moved into their
-     own column (see the grid below), which takes width away from the controls.
-     "FONT  System Sans-Serif Serif" and "TEXT SIZE  A A A A A" are the two
-     that set the floor; below this they wrap, which is the layout these
-     changes were meant to remove. */
-  width: min(92vw, 24rem);
-  max-height: 80vh;
-
-  /* TWO COLUMNS: labels left, controls right (Brajeshwar, 2026-07-27). Each
-     row used to be its own flex line with `justify-content: space-between`,
-     which put the label left and the control right but let every control
-     START at a different x — the label's own width decided where its pill
-     began, so the five rows were ragged.
-
-     A grid on the PANEL fixes that: column 1 sizes to the widest label and
-     every control lines up on one edge. `max-content` rather than `auto` so
-     the label column never wins extra space when a control is narrow. */
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  align-items: center;
-  column-gap: var(--space-s);
-  row-gap: var(--space-xs);
-
-  /* Shallower than the search palette's: this one sits against the header
-     rather than floating over the page. */
-  box-shadow: 0 8px 28px -14px var(--text);
-
-  font-family: var(--font-family-sans-serif);
-}
-
-/* The group has no box of its own — it dissolves into the panel's grid so its
-   label lands in column 1 and its control in column 2. Alignment is the
-   PANEL's job; a per-group flex row could only ever align within itself, which
-   is exactly what made the rows ragged. `display: contents` is safe here
-   because the element is a plain <div> carrying no role of its own; the
-   label↔control association is `aria-labelledby`, which is id-based and does
-   not care about the box tree. */
-.appearance-group {
-  display: contents;
-}
-
-.appearance-group__label {
-  font-size: var(--step--2);
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-}
-
-/* The panel's groups ARE pills: appearance.js emits `pill appearance-options`
-   and `pill__option appearance-option` on every one, so the rounded track, the
-   hairline divisions and the filled-when-chosen state all come from the
-   component above. Only what is specific to living inside the panel is left
-   here — which is one declaration, plus the text-size row below.
-
-   The .appearance-* names are kept as the hooks for that specificity rather
-   than dropped, so a panel-only tweak never has to reach for .pill and change
-   the /about/ filter by accident. */
-.appearance-options {
-  width: 100%;
-}
-
-/* Text size — five equal cells, each an "A" that grows left → right (Kindle). */
-.appearance-options--textsize .appearance-option {
-  flex: 1 1 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding-inline: 0;
-  line-height: 1;
-}
-.appearance-options--textsize .appearance-option[data-opt='xs'] {
-  font-size: 0.75rem;
-}
-.appearance-options--textsize .appearance-option[data-opt='s'] {
-  font-size: 0.875rem;
-}
-.appearance-options--textsize .appearance-option[data-opt='m'] {
-  font-size: 1rem;
-}
-.appearance-options--textsize .appearance-option[data-opt='l'] {
-  font-size: 1.125rem;
-}
-.appearance-options--textsize .appearance-option[data-opt='xl'] {
-  font-size: 1.25rem;
-}
-
-/* Accent swatches */
-.appearance-swatches {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2xs);
-}
-
-.appearance-swatch {
-  flex: none;
-  inline-size: 1.05rem;
-  block-size: 1.05rem;
-  padding: 0;
-  border: var(--border-size) var(--border-style) var(--rule);
-  border-radius: 50%;
-  background: var(--swatch, var(--text));
-  cursor: pointer;
-}
-
-.appearance-swatch--default {
-  background: var(--text);
-}
-
-.appearance-swatch[aria-pressed='true'] {
-  box-shadow:
-    0 0 0 2px var(--bg),
-    0 0 0 3.5px var(--text-muted);
-}
-
-.appearance-swatch:focus-visible {
-  outline: var(--border-size-small) solid var(--accent);
-  outline-offset: 2px;
 }
 
 /* ---- Search palette ---------------------------------------------------- */
@@ -893,8 +745,7 @@ site-search {
   width: min(92vw, 40rem);
   max-height: 72vh;
 
-  /* Deeper than the appearance panel's: this one floats over the middle of
-     the page rather than sitting against the header. */
+  /* A deep shadow: it floats over the middle of the page. */
   box-shadow: 0 16px 48px -12px var(--text);
 
   text-align: left; /* the panel is inside the centered <header>; reset it */

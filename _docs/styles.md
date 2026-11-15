@@ -20,125 +20,20 @@ philosophy they serve — see [`design.md`](design.md).
 How type works on the site. Lives in `_sass/config.scss` (scales, families),
 `themes.css` (variable fonts), and `base.css` (headings, rhythm).
 
-## Families & the font axis (Ovellum parity)
-The reader picks the body font via the appearance panel → `[data-font]` swaps the
-`--font-body` token (one of the theming axes; see §2).
+## Families: the system's own (2026-11-15)
 
-| Token | Stack | |
-|---|---|---|
-| `--font-sans` | `ui-sans-serif, system-ui, -apple-system, …` | system sans (default) |
-| `--font-serif` | `ui-serif, Georgia, Cambria, Times, serif` | system serif (fallback for the Serif choice) |
-| `--font-mono` | `ui-monospace, SFMono-Regular, Menlo, …` | `code`, `pre` |
-| `--font-body` | `var(--font-sans)` by default | **the body font** — what `[data-font]` swaps |
+> *"Font is system fonts. Let user change the text size in their browser."*
 
-Legacy aliases kept: `--font-family-sans-serif → --font-sans`, `…-serif → --font-serif`,
-`…-monospace → --font-mono`.
+There are no webfonts. `--font-sans`, `--font-serif` and `--font-mono` in `config.scss` are
+system stacks, and `--font-body`, the face for content, is the sans. Geist, Source Serif 4 and
+the dormant Libre Baskerville were deleted with their `@font-face` rules on 2026-11-15, along
+with the `[data-font]` choice that loaded them. The header, footer and the vertical spine pin
+`--font-family-sans-serif`, so they stay sans whatever the body face becomes.
 
-Self-hosted fonts (`themes.css`, bundled `@font-face`, all `font-display: swap` so they
-download only when chosen — no default-load cost):
-- "Source Serif 4" (`assets/fonts/source-serif/SourceSerif4Variable-{Roman,Italic}.woff2`,
-  64 + 65 KB) — the reader "Serif" font (`[data-font="serif"]`) since 2026-08-02, with the
-  system serif stack as its fallback while loading / on failure. Variable: Roman carries
-  weights 200–700, Italic likewise. Cut from Adobe's 1.2 MB/850 KB upstream VF TTFs by
-  pinning `opsz` at its default 20, clamping `wght` to 200:700 and subsetting to the Geist
-  unicode set — the full recipe and the verification checklist are in the `themes.css`
-  comment. The upstream TTFs stay in the repo (full axes, for re-subsetting) and are
-  `exclude`d from the build, as is the OFL `LICENSE.md` beside them — that one because
-  jekyll-optional-front-matter would otherwise render a bare `.md` into a published page.
-- "Libre Baskerville" (`assets/fonts/libre-baskerville/*.woff2`, latin subset,
-  regular/italic/bold, `size-adjust: 98.5%`) — **dormant since 2026-08-02**; it was the
-  Serif font from the start until Source Serif 4 replaced it (*"switch the Serif option to
-  Source Serif 4 but keep Baskerville. I want to see how things are"*). Nothing references
-  the family, so its faces never download; the files and `@font-face` blocks stay so the
-  revert is one line in `config.css`.
-- "Geist" (`assets/fonts/geist/Geist-Variable.woff2`, latin subset, 47 KB) — the reader
-  "Sans-Serif" font (`[data-font="geist"]`), variable, so one file covers every weight,
-  falling back to the system sans stack. Subset from a 169 KB `.ttf` on 2026-07-27, a 72% cut;
-  the `.ttf` stays in the repo as the re-subset source and is `exclude`d from the build. The
-  regeneration command is in the `themes.css` comment. ⚠️ Any re-subset must keep the variable
-  tables — a naive subset flattens the axis and every weight silently becomes 400.
-
-Two active webfonts, both optional, plus the dormant Baskerville. Inter was removed earlier.
-⚠️ One custom family per option, system stack behind it — two custom fonts in one stack means
-the interim render during `swap` triggers the second family's download too.
-
-### The `[data-font]` axis — three panel choices
-The panel labels map to values: System = `sans` (system stack, no webfont, fast),
-Sans-Serif = `geist`, Serif = `serif` (Source Serif 4; the stored value predates the
-2026-08-02 font swap and did not change, so no reader's saved choice needed migrating).
-
-*"System" was called "Default" until 2026-07-27* (Brajeshwar: *"For the FONT, replace Default
-with System"*). It names what the option actually is — the OS UI face — where "Default" said
-only that it was the one you get without choosing, which is true of the first option on every
-axis and describes none of them. Label only: the stored value is still `sans`, so nothing
-in `config.css`, the `@font-face` blocks, or the no-flash whitelist changed and no reader's
-saved choice needed migrating.
-```css
-/* config.css */
-:root { --font-body: var(--font-sans); }   /* System — no attribute, system sans */
-[data-font="sans"]  { --font-body: var(--font-sans); }
-[data-font="geist"] { --font-body: "Geist", var(--font-sans); }              /* "Sans-Serif" */
-[data-font="serif"] { --font-body: "Source Serif 4", var(--font-serif); }    /* "Serif" */
-```
-
-Geist: dropped 2026-07-19, restored 2026-07-27. It was removed as a near-duplicate of the
-system stack shipping as a 169 KB unsubsetted `.ttf` — the heaviest asset on the site,
-against 84 KB of woff2 for all three Libre Baskerville styles. Brajeshwar re-added the file and
-asked for the option back, so the reasoning is recorded rather than deleted. *(Corrected
-2026-08-02: this paragraph still called the subsetting "an open task" — it was done the same
-day it was restored, 2026-07-27, 169 → 47 KB, as the bullet above says. The size objection is
-closed; the two claims had been contradicting each other in one section.)* It costs nothing
-unless a reader picks it.
-
-⚠️ **FOUR places must agree for any font option**, and missing the last one is the quiet failure:
-1. `AXES.font.opts` — `assets/scripts/appearance.js`
-2. the `[data-font="…"]` rule — `config.css`
-3. the `@font-face` — `themes.css`
-4. the no-flash whitelist — `_layouts/default.html`. Without it the choice is not applied
-   before first paint, so the page flashes the default font on every load.
-
-Stale preferences need no migration either way. `read()` in `appearance.js` validates against
-its own option list and falls back to `sans`, so a value no longer offered is simply ignored —
-which is why removing and restoring Geist required no migration step in either direction.
-
-### Text size (Kindle-style) — `[data-text-size]`
-Five "A" buttons in the appearance panel, growing left → right, default in the middle. Sets
-`--text-scale`, which multiplies the whole type scale for content inside `<main>` (home
-body, pages, articles) — header/footer keep the base scale. Mechanism (`config.css`): the
-raw clamps are `--step-N-base`; `:root` aliases `--step-N: var(--step-N-base)` (used by
-header/footer), and `main` redefines `--step-N: calc(var(--step-N-base) * var(--text-scale))`.
-So every element that uses `--step-*` in content scales automatically — no per-element rules.
-Values are symmetric around the middle: `xs` 0.85 · `s` 0.925 · m 1 (default, middle,
-no attribute) · `l` 1.075 · `xl` 1.15 (±0.075 / ±0.15). Persisted as
-`localStorage('textsize')`; applied before paint by the no-flash snippet.
-
-Interface vs content (Brajeshwar's model). The reader's font choice applies to prose.
-Interface is pinned to system sans — and the distinction is what the text IS, not where it
-sits: prose is the reader's to set, controls and labels are the site's. Brajeshwar, 2026-07-27:
-*"UI Elements such as the PREV | NEXT should always be in the sans-serif system fonts. Making it
-serif is weird."*
-
-- `body { font-family: var(--font-body); }` (`base.css`) — the reader's choice flows to home
-  body, pages, and articles.
-- One rule in `base.css` pins the interface. `header` and `footer` are chrome by position;
-  everything else sits inside `main`, inherits `--font-body`, and must opt out by name:
-
-      header, footer, .post-nav, .pill, .back-to-top-row { font-family: var(--font-sans); }
-
-- Sidenotes (`.sidenote`/`.sidenote-inline`), captions (`figcaption`), and post meta
-  (`.post time`) re-assert sans on top of content — they are labels *about* content, not content.
-  Blockquotes inherit context.
-- Set on `<html>` by `appearance.js`, persisted in `localStorage('font')`, applied before first
-  paint by the no-flash snippet (`sans` = no attribute = default).
-
-⚠️ **Add new controls inside `main` to that list.** The failure is silent: it only shows for
-readers who picked Serif or Sans-Serif, and the default is System, so casual checking never
-surfaces it. `.back-to-top-row` had a `font-family` until it became icon-only and lost it
-without anyone noticing — which is why the list exists rather than a rule per component.
-
-> History: `cd3227e0` made posts sans; a Phase-1 draft flipped to serif; then a Reader-style
-> Sans/Serif/Mono selector; then the Ovellum font axis (Sans/Serif/Inter/Geist) applied
-> site-wide; now scoped to article content so the interface is always sans (this section).
+**Text size belongs to the browser.** The Kindle-style `[data-text-size]` buttons and the
+`--text-scale` multiplier are gone. The scale is in `rem`, and `body` is `1rem` rather than the
+`16px` it was, because a pixel size ignores the reader's own text-size setting. Zoom and the
+browser's text size now reach everything.
 
 ## Type scale (fluid, Utopia)
 `config.css`, generated at <https://utopia.fyi> (320px @18px/1.2 → 1240px @20px/1.25).
@@ -208,62 +103,28 @@ characters per line (see [`design.md`](design.md) → *Comfortable measure*).
 
 Ported from Ovellum (ovellum.oss.oinam.com). All of this lives in `themes.css`.
 
-## Two orthogonal axes (the whole point)
-Theming is split into two independent axes, both set on `<html>`:
+## Light and dark, and nothing else (2026-11-15)
 
-| Axis | Attribute | Values | What it controls |
-|---|---|---|---|
-| **Mode** | `data-theme` | `auto` (default) · `light` · `dark` | light ↔ dark (appearance) |
-| **Palette** | `data-palette` | `default` · `nord` (Cool) · `eink` (Warm = Flexoki) | the color scheme / hue |
+> *"Let's get rid of the entire theme palette. Instead of that, just have the Light/Dark
+> toggle. Of course, pick up the system preference first."*
 
-They compose freely: every palette has a light and a dark form. "Nord + Dark",
-"Solarized + Light", "E-ink + Auto" all work. `auto` follows `prefers-color-scheme`;
-`light`/`dark` are explicit and win over the system.
+`<html data-theme>` is `auto`, `light` or `dark`. Auto, and a missing attribute (which is what a
+reader with JavaScript off gets), follow `prefers-color-scheme`. `themes.scss` holds the gray
+scale, the light semantic tokens, and one dark mixin applied twice: to `[data-theme='dark']`,
+and inside the dark media query to `:root:not([data-theme='light'])`.
 
-Plus two more axes: `data-font` (see §1) and accent (`data-accent="custom"` + an inline
-`--ov-accent`), which recolours links / nav / primary surfaces — 6 swatches
-(Blue/Purple/Green/Amber/Red/Cyan) + Default + a custom color picker.
-
-## How the two axes stay independent — token layers
-1. Raw scale — `--color-gray-50 … --color-gray-950` (+ white/black). Palettes
-   re-tint this scale (`[data-palette=nord]` etc. redefine the grays with a hue).
-2. Semantic tokens — `--color-bg`, `--color-surface`, `--color-fg`, `--color-fg-muted`,
-   `--color-accent`, `--color-border` (a `color-mix`), `--color-code-bg`, `--color-primary`
-   (inverted surface), … These map onto the scale, and mode flips them:
-   `[data-theme=dark]` (and `[data-theme=auto]` inside `@media (prefers-color-scheme: dark)`)
-   remaps `--color-bg` to `gray-900`, `--color-fg` to `gray-100`, etc.
-   - Because the dark remap references the *scale*, and the palette already re-tinted the
-     scale, each palette gets its dark form for free. Per-palette dark accent tuning
-     is the only thing defined explicitly per palette.
-3. Bridge — the site's legacy tokens (`--bg-color-*`, `--text-color-*`, `--border-color-*`,
-   `--text-color-link`) and the short-form semantic tokens (`--bg`, `--text`, `--rule`, `--accent`,
-   `--mark`, `--code-bg`, …) are aliased onto the semantic layer in one `:root` block at
-   the end of the file. So every existing component inherits palette + mode without edits.
-
-New components should use the `--color-*` semantic tokens directly.
-
-## Persistence & no-flash
-- No-flash snippet (the one inline `<head>` script, in `default.html`) applies all axes
-  before first paint:
-  ```js
-  (function(){try{var d=document.documentElement,g=localStorage,t=g.getItem('theme'),p=g.getItem('palette'),f=g.getItem('font');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(p&&p!=='default')d.dataset.palette=p;if(f&&f!=='sans')d.dataset.font=f;}catch(e){}})();
-  ```
-  `data-theme` is always set (the auto media query targets `[data-theme=auto]`);
-  palette/font drop the attribute on their default.
-- `assets/scripts/appearance.js` (`defer`) builds the appearance panel and persists
-  each axis to `localStorage` (`theme` / `palette` / `font`). [WARNING] It no longer writes
-  `<meta name="theme-color">` (removed 2026-11-15): Safari recolored its toolbar each time
-  the script added the tag after first paint, which was the Dark-mode flash on every page.
-  With no tag, Safari tints from the page background. Ready-guard on
-  `DOMContentLoaded` (required — see the search.js cache note in [`search.md`](search.md)).
-  - Accent is also persisted: `localStorage('accent')` holds the color string (oklch or
-    `#hex`); the no-flash snippet sets `--ov-accent` + `data-accent` from it. The
-    `:root[data-accent][data-accent][data-accent]` rule (in `themes.css`) maps `--ov-accent`
-    onto `--color-accent` *and* `--color-primary` (so links, nav pill, logo, primary buttons
-    all recolour); hover is a `color-mix` toward `--color-fg`.
-- UI — `<appearance-settings>` in the header: a trigger button opens a dropdown panel
-  (`chrome.css`) with four groups — Mode, Palette, Font (button groups, `aria-pressed`)
-  and Accent (swatches + custom `<input type=color>`). JS off → no panel, defaults render.
+- **The toggle** is `<theme-toggle>` in the header: one `.icon-button`, `aria-pressed` while
+  dark, wired by `assets/scripts/theme-toggle.js`. A choice is saved only while it differs from
+  the system: switch back to what the system says and `localStorage('theme')` is removed, so
+  the page follows the system again. Hidden under `@media (scripting: none)`.
+- **No flash.** The inline snippet in `default.html` sets `data-theme` from storage before
+  first paint, and for an explicit mode rewrites `<meta name="color-scheme">`; `base.scss`
+  pins `color-scheme` to match. There is no `theme-color` meta, on purpose: written late, it
+  made Safari's toolbar change color on every page.
+- **What went:** the Cool (Nord) and Warm (Flexoki) palettes, the five accents, the font
+  choice and the text sizes, with `appearance.js` and its panel. The toggle script ships at
+  under a quarter of that script's size. Stale `palette` / `font` / `textsize` / `accent`
+  keys are removed from storage on the next visit.
 
 ## Default = monotone grayscale (locked decision)
 The base `:root` palette is pure zero-chroma gray (`oklch(L 0 0)`) and the default accent
@@ -352,33 +213,6 @@ legibility, not a mistake to revert.
 every section heading are `--font-weight-light` (**200**) — very thin at 39px. That reads as
 washed out no matter what the contrast ratio says. Raising `--font-weight-light` to 300 is a
 one-token change if the type still feels light after this.
-
-## Palettes (source values in `themes.css`)
-Three panel choices (Brajeshwar trimmed from five; Flexoki + Solarized removed):
-- Default (`default`) — monotone grayscale (the base `:root`); the resting theme.
-- Cool (`nord`) — cool blue-slate (Nord).
-- Warm (`eink`) — [Flexoki](https://github.com/kepano/flexoki) since 2026-07-27, at
-  Brajeshwar's request. Ink on paper: `#FFFCF0` light, `#100F0F` dark. It replaced a
-  hand-rolled sepia ramp. The attribute value stays `eink` deliberately — changing it would
-  invalidate every reader's saved `localStorage('palette')` for no visible gain.
-
-Each tinted palette redefines `--color-gray-*` + `--color-surface` + accent; nord tunes its dark
-accent. All inherit the contrast bump above via the semantic layer.
-
-Warm is the one palette written in hex, not `oklch` — those are upstream's published values
-copied verbatim from `kepano/flexoki`, so they can be diffed against it; converting would round
-every one and lose that. The site's scale has 11 steps to Flexoki's 15, so base-150/-800/-850/
--950 get no slot; each line in `themes.css` names the step it came from.
-
-Warm needs its own dark mixin (`eink-dark-semantics`), because Flexoki's dark form is not
-the generic dark remap applied to a warm ramp — it puts the page on `black` and the text on
-base-200, where the shared mixin would have given base-900 with paper-white text. Mappings are
-kepano's own (`vitepress/index.css`): bg→black, bg-elv→base-900, tx→base-200, tx-2→base-500.
-
-One deliberate divergence, in both modes: Flexoki's `tx-3` is too faint for what this site
-spends it on. base-300 measures 2.00:1 on paper — right for the hairlines it is meant for,
-unreadable for sidenote body text. `--color-fg-subtle` is stepped one notch to base-600
-(4.97:1 light) / base-500 (5.19:1 dark), the same bump the default palette already makes.
 
 ## Verified (live, 1440px)
 - [x] Default = light, neutral, sans — bg `gray-100`, fg `gray-900`.

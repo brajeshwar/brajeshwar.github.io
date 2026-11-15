@@ -39,28 +39,22 @@
         {%- include icons/rss.svg -%}
       </a>
 
-      {%- comment -%} Theme changer (appearance: mode + palette + font + accent) — panel built by /assets/scripts/appearance.js (defer). {%- endcomment -%}
-      <appearance-settings>
-        {%- comment -%}
-          `title` AND `aria-label`, both, like every other icon-only control on
-          the site — the gear was the one that had only the label, so it was
-          also the one control a sighted reader got no hover tooltip from. The
-          two attributes are not redundant: aria-label names it for anyone not
-          looking at it, title is the same words again for the tooltip. Same
-          pairing on the search and RSS links, on Back to Top (set in
-          back-to-top.js), on the appearance panel's own option buttons (set in
-          appearance.js) and on the random button in the prev/next bar.
+      {%- comment -%}
+        Light or Dark, wired by /assets/scripts/theme-toggle.js (defer). A
+        toggle button: aria-pressed is true while the page is dark, so the
+        label stays "Dark mode" and the state carries the rest. `title` and
+        `aria-label` both, like every icon-only control here: one names it
+        for a screen reader, the other is the tooltip, which the script keeps
+        current ("Switch to light" or "Switch to dark").
 
-          [WARNING] Search's title is REPLACED at runtime by search.js, which swaps in
-          the platform-correct shortcut — "Search (⌘K or /)" on a Mac,
-          "Search (Ctrl K or /)" elsewhere. Do not hardcode a better one here.
-        {%- endcomment -%}
-        <button class="icon-button appearance-trigger" type="button" aria-label="Appearance" title="Appearance" aria-expanded="false" aria-controls="appearance-panel">
-          {%- include icons/theme.svg -%}
+        [WARNING] Search's title is replaced at runtime by search.js, which
+        writes the platform's own shortcut. Do not hardcode a better one.
+      {%- endcomment -%}
+      <theme-toggle>
+        <button class="icon-button theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Dark mode">
+          {%- include icons/contrast.svg -%}
         </button>
-        <div class="appearance-backdrop" hidden></div>
-        <div class="appearance-panel" id="appearance-panel" role="dialog" aria-label="Appearance" hidden></div>
-      </appearance-settings>
+      </theme-toggle>
     </site-tools>
   </site-menu>
 </header>

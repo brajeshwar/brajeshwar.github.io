@@ -45,7 +45,8 @@ GitHub's runner image already has Chrome, so the daily cron downloads nothing.
 **`_test/browser.spec.mjs`** runs in real Chrome on a plain static server, like Pages:
 
 - **Theme matrix**: OS light/dark × saved light/dark/auto gives the right `color-scheme`, meta
-  and page color, and switching in the panel takes effect at once.
+  and page color. The Light/Dark toggle flips at once, and switching back to the system's
+  own mode forgets the choice so the page follows the system again.
 - **No script errors** on the home page, a footnoted post, `/about/`, `/archives/`, `/books/`,
   `/cv/`, `/search/`, `/random/` and the 404.
 - **Sidenotes** appear on a wide screen.

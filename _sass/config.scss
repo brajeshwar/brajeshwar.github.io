@@ -52,26 +52,16 @@
  */
 
 :root {
-  /* Base type scale (Utopia). --step-N aliases these below; content inside <main>
-     multiplies them by --text-scale (the Kindle text-size control), while
-     header/footer keep the base scale. */
-  --step--2-base: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-  --step--1-base: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --step-0-base: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --step-1-base: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-  --step-2-base: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-  --step-3-base: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-  --step-4-base: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-  --step-5-base: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
-
-  --step--2: var(--step--2-base);
-  --step--1: var(--step--1-base);
-  --step-0: var(--step-0-base);
-  --step-1: var(--step-1-base);
-  --step-2: var(--step-2-base);
-  --step-3: var(--step-3-base);
-  --step-4: var(--step-4-base);
-  --step-5: var(--step-5-base);
+  /* The type scale (Utopia). Fluid between the two widths above, in rem, so
+     a reader who raises the browser's text size raises all of it. */
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 }
 
 /*
@@ -106,11 +96,8 @@
 */
 
 :root {
-  /* Font stacks. The reader picks the body font via the appearance panel →
-     [data-font] swaps --font-body (see _docs/styles.md). The optional
-     self-hosted fonts (Geist, Source Serif 4 — see themes.css) load only on
-     that choice; sans/serif/mono are system stacks (sans = the Default,
-     no-webfont choice). */
+  /* Font stacks: the system's own faces, and nothing to download. --font-body
+     is the face for content; it is the sans stack. */
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
@@ -130,7 +117,8 @@
   --font-weight: 400;
   --font-weight-bold: 600;
 
-  --font-size: 16px;
+  /* 1rem, not 16px: a pixel size ignores the reader's own text-size setting. */
+  --font-size: 1rem;
 
   --body-width: 96%;
   --measure: 66rch; /* reading measure — comfort is char-count, not px; ~60–70ch (see design.md).
@@ -280,86 +268,12 @@
      constant is two sources of truth pretending to be one. */
 }
 
-/* Reader font choice — overrides --font-body (applies to article content, not the
-   interface; see base.css). Panel labels:
-     Default     = the system sans stack, no webfont at all
-     Sans-Serif  = Geist (self-hosted variable woff2, see themes.css)
-     Serif       = Source Serif 4 (self-hosted variable woff2, since
-                   2026-08-02; Libre Baskerville before that, kept dormant
-                   in themes.css — reverting is this one line)
-
-   Three options again as of 2026-07-27. Geist was dropped 2026-07-19 for its
-   weight and restored at Brajeshwar's request with the file re-added; anyone
-   whose localStorage still held "geist" from before simply gets it working
-   again. No migration either way — appearance.js validates against its own
-   option list and falls back to Default for anything unrecognised. The
-   serif swap needed no migration either: the stored value is "serif", which
-   now simply resolves to the new family.
-
-   [WARNING] One family per option, system stack behind it — never two custom fonts
-   in one stack. While the first downloads (font-display: swap), the interim
-   renders in the next matching family, which would trigger that family's
-   download too and ship both fonts for one choice. */
-[data-font='sans'] {
-  --font-body: var(--font-sans);
-}
-[data-font='geist'] {
-  --font-body: 'Geist', var(--font-sans);
-}
-[data-font='serif'] {
-  --font-body: 'Source Serif 4', var(--font-serif);
-}
-
-/* Text size — Kindle-style. Multiplies the type scale for ALL content inside
-   <main> (home body, pages, articles) — header/footer stay on the base scale.
-   Default = m (no attribute); two steps smaller (s, xs) and larger (l, xl). */
-:root {
-  --text-scale: 1;
-} /* m — default, the middle button */
-[data-text-size='xs'] {
-  --text-scale: 0.85;
-} /* −2 steps */
-[data-text-size='s'] {
-  --text-scale: 0.925;
-} /* −1 step  */
-[data-text-size='l'] {
-  --text-scale: 1.075;
-} /* +1 step  */
-[data-text-size='xl'] {
-  --text-scale: 1.15;
-} /* +2 steps — symmetric ±0.075 / ±0.15 around 1 */
-
 main {
-  /* THE CONTENT BASE. Everything inside <main> starts from --step-0 (18–20px
-     fluid) rather than inheriting body's flat 16px.
-
-     Fixes two things at once, 2026-07-27 (Brajeshwar: "the font-size of the
-     articles are good, but the ones in the pages are smaller"):
-
-     1. Pages were 16px while posts were 18–20px, because .post set
-        `font-size: var(--step-0)` and nothing else did. Posts were never
-        special — they were the only thing reading the scale. Now all content
-        does, and pages match articles.
-
-     2. THE TEXT-SIZE CONTROL DID NOT WORK ON PAGES. The Kindle A-buttons
-        multiply --step-* below, but page prose was inheriting body's literal
-        16px, which no multiplier touches — measured identical at xs/s/m/l/xl.
-        Reading font-size from --step-0 *here*, where the scaled values are
-        defined, is what makes the control reach it.
-
-     Deliberately on `main`, not `body`: body is also the parent of the header
-     and footer, and raising it would inflate the chrome along with the
-     content. */
+  /* The content base. Everything inside <main> starts from --step-0 (18 to
+     20px, fluid) rather than body's 1rem, so pages and posts read at the same
+     size. It is set here and not on body because body is also the parent of
+     the header and footer, which keep the smaller interface size. */
   font-size: var(--step-0);
-
-  --step--2: calc(var(--step--2-base) * var(--text-scale));
-  --step--1: calc(var(--step--1-base) * var(--text-scale));
-  --step-0: calc(var(--step-0-base) * var(--text-scale));
-  --step-1: calc(var(--step-1-base) * var(--text-scale));
-  --step-2: calc(var(--step-2-base) * var(--text-scale));
-  --step-3: calc(var(--step-3-base) * var(--text-scale));
-  --step-4: calc(var(--step-4-base) * var(--text-scale));
-  --step-5: calc(var(--step-5-base) * var(--text-scale));
 }
 
 /* ---- Dark mode and images: we do NOTHING, deliberately -----

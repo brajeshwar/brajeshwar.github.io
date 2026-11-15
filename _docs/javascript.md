@@ -28,7 +28,7 @@ Gzip is per file at `-9`. "Pages" is out of the 1,485 built pages that carry the
 
 | Script | Source | Shipped (min) | Gzipped | Loaded on |
 |---|---:|---:|---:|---|
-| `appearance.js` | 8.8 KB | 4.3 KB | 1.6 KB | every page (theme/font/accent panel) |
+| `theme-toggle.js` | 2.1 KB | 0.9 KB | 0.5 KB | every page (Light/Dark; replaced the 4.3 KB `appearance.js` panel, 2026-11-15) |
 | `search.js` | 9.1 KB | 3.0 KB | 1.3 KB | every page (⌘K palette, `/`, **and the `/search/` page**) |
 | `back-to-top.js` | 4.3 KB | 1.0 KB | 0.6 KB | every page, but **self-limiting**: returns at once unless the page is >2.5 viewports tall. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
 | `sidenotes.js` | 13.6 KB | 4.9 KB | 1.9 KB | **93 pages**, only where footnotes exist |
@@ -36,9 +36,9 @@ Gzip is per file at `-9`. "Pages" is out of the 1,485 built pages that carry the
 | `strip-nav.js` | 6.7 KB | 1.3 KB | 0.7 KB | **2 pages** with a Books/Album strip |
 | `random.js` | 2.2 KB | 0.3 KB | 0.3 KB | `/random/` only |
 
-**All seven** are 46.9 KB of source and **15.2 KB shipped, 5.2 KB gzipped**. Most of the source
+**All seven** are 40.1 KB of source and **11.8 KB shipped, 4.3 KB gzipped** (15.2 and 5.2 before the toggle replaced the panel). Most of the source
 is comment prose, which minifies to nothing. No page loads them all: the home page loads four
-(`appearance`, `search`, `strip-nav`, `back-to-top`), a typical post three to five. Beyond those
+(`theme-toggle`, `search`, `strip-nav`, `back-to-top`), a typical post three to five. Beyond those
 files, every page carries one inline script, the no-flash snippet in `default.html` (about
 400 bytes).
 
@@ -49,7 +49,7 @@ to that ([`testing.md`](testing.md), "JavaScript off"). What each script's absen
 
 | Script | With JS off |
 |---|---|
-| `appearance.js` | No panel, **and no button**: `@media (scripting: none)` hides the trigger (chrome.scss). It was the one control that showed and did nothing. The mode follows the OS; with no `data-theme`, auto still applies (themes.scss) |
+| `theme-toggle.js` | No button: `@media (scripting: none)` hides it (chrome.scss), and the page follows the system's mode |
 | `search.js` | The header icon is a real link to `/search/`, whose `<noscript>` routes to the archives and shelves |
 | `sidenotes.js` | Footnotes stay at the article foot, numbered and linked both ways |
 | `anchors.js` | No `#` links beside headings. The headings keep their ids, so a pasted `#fragment` still lands |

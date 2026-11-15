@@ -18,7 +18,7 @@
  * [WARNING] WHICH IS WHY THE READY-GUARD AT THE FOOT OF THIS FILE IS LOAD-BEARING.
  * `readyState === 'loading' ? addEventListener : init()` survives Rocket
  * Loader because the else-branch runs immediately when the event is gone.
- * appearance.js and sidenotes.js use the same guard. Do not "simplify" any of
+ * theme-toggle.js and sidenotes.js use the same guard. Do not "simplify" any of
  * them to a bare listener — it will pass every local test and ship broken.
  *
  * The Modular UI (~4KB gz) lazy-loads on first open for the palette; the index
@@ -159,7 +159,7 @@
      Only text-accepting inputs count: a focused checkbox or button is not
      typing, so the shortcut still works there. (The example this named was
      the /about/ Life/Work filter, deleted 2026-08-09. The rule stands on its
-     own — the appearance panel still has focusable controls.) */
+     own: the theme toggle is a focusable button.) */
   var TEXT_INPUTS =
     /^(text|search|email|url|tel|password|number|date|month|week|time|datetime-local)$/;
 

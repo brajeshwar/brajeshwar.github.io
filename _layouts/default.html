@@ -24,27 +24,16 @@
 <meta name="fediverse:creator" content="@brajeshwar@margins.oinam.com">
 
 {%- comment -%}
-  No-flash: apply the reader's saved mode + palette + font + text size + accent
-  before first paint.
+  No-flash: apply the reader's saved mode before first paint. Nothing saved
+  means auto, which follows the system. An explicit light or dark also
+  rewrites the color-scheme <meta> above, so the browser's own canvas, the
+  thing that shows between pages, matches before the stylesheet loads; the
+  CSS half is in _sass/base.scss. theme-toggle.js does the rest.
 
-  The font check whitelists the non-default values rather than passing through
-  anything that isn't 'sans' — a stale localStorage value would otherwise be
-  written onto <html> as a data-font nothing matches. Keep this list in sync
-  with AXES.font.opts in assets/scripts/appearance.js: 'geist' was added back
-  on 2026-07-27 and had to be added here too, or picking Sans-Serif would have
-  flashed the default font on every page load.
-
-  NOTE: this is a Liquid comment, not an HTML one, deliberately. Liquid
-  comments are removed at build time; <!-- HTML comments --> are NOT, and ship
-  to every one of ~1,456 pages. Unlike CSS (where compression strips comments),
-  prose in a layout is not free — use {% raw %}{%- comment -%}{% endraw %} here.
-
-  An explicit light/dark also rewrites the color-scheme <meta> above, so the
-  browser's canvas matches before the stylesheet loads. Left at "light dark",
-  Dark on a light OS flashed a white canvas on every navigation (2026-11-15).
-  The CSS half is in _sass/base.scss.
+  A Liquid comment, not an HTML one: this is removed at build time, where an
+  HTML comment would ship to every page.
 {%- endcomment -%}
-<script>(function(){try{var d=document.documentElement,g=localStorage,t=g.getItem('theme'),p=g.getItem('palette'),f=g.getItem('font'),s=g.getItem('textsize'),a=g.getItem('accent');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(t==='light'||t==='dark')document.querySelector('meta[name=color-scheme]').content=t;if(p&&p!=='default')d.dataset.palette=p;if(f==='serif'||f==='geist')d.dataset.font=f;if(s&&s!=='m')d.dataset.textSize=s;if(a){d.style.setProperty('--ov-accent',a);d.dataset.accent='custom';}}catch(e){}})();</script>
+<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('theme');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(t==='light'||t==='dark')document.querySelector('meta[name=color-scheme]').content=t;}catch(e){}})();</script>
 
 <link rel="archives" href="{{ site.baseurl | prepend: site.url }}/archives/">
 <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url }}">
@@ -73,7 +62,7 @@
 {%- endcomment -%}
 <link rel="stylesheet" href="{{ '/assets/styles/site.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/print.css' | relative_url }}" media="print">
-<script defer src="{{ '/assets/scripts/appearance.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/scripts/theme-toggle.js' | relative_url }}"></script>
 {%- comment -%}
   Sidenotes, only where there are footnotes to turn into sidenotes. It is the
   largest script on the site (4.9 KB minified, 1.9 KB gzipped) and **85 of

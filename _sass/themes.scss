@@ -1,244 +1,35 @@
 /* ============================================================
-   Themes — palettes, light/dark values, webfonts.
+   Themes: the colors, in light and dark.
    ------------------------------------------------------------
-   Two orthogonal axes (mode x palette) plus font + accent.
    The only file allowed to hold raw color values.
-   ============================================================ */
 
-/* Self-hosted fonts for the reader font selector. The Default font is the
-   system sans stack (no webfont); a custom font downloads only when the
-   reader picks its option — font-display:swap → no load cost otherwise.
+   One look, grayscale, and two modes. <html> carries data-theme:
+     auto   follow the system (the default, and what a missing
+            attribute means)
+     light  the reader chose light
+     dark   the reader chose dark
+   theme-toggle.js flips between the last two; the no-flash snippet in
+   default.html applies the saved choice before first paint.
 
-   The axis is THREE options: System, Sans-Serif (Geist), Serif (Source
-   Serif 4 since 2026-08-02; Libre Baskerville before that, kept dormant
-   below). The Sans-Serif slot was removed on 2026-07-19 and restored on
-   2026-07-27 at Brajeshwar's request, so the objection is recorded rather than
-   deleted: as a neo-grotesque, Geist sits close to the system stack it offers
-   an alternative to, so picking it changes less than the other two do. The
-   other half of that objection — a 165 KB unsubsetted .ttf, the heaviest asset
-   on the site — no longer applies; it is a 47 KB subset woff2 as of
-   2026-07-27. See the standing advice a few lines down in config.css:
-   "Resist the temptation to use custom fonts."
+   The base is pure zero-chroma gray, oklch(L 0 0), and so is the accent,
+   so even links carry no hue: a link is known by its underline (base.scss).
+   The primary is near-black, gray-900, and turns near-white in dark.
 
-   If a FOURTH option is ever wanted, make it one the system stack CANNOT give —
-   Atkinson Hyperlegible is the obvious candidate for a site that hands this
-   much control to the reader. Subset to latin and ship woff2, not ttf. */
-
-/* Geist is the reader "Sans-Serif" font ([data-font="geist"] in config.css →
-   --font-body). Variable, so one file covers every weight. Self-hosted and
-   font-display:swap, so it downloads ONLY when a reader picks Sans-Serif —
-   never on a default load. Falls back to the system sans stack while loading.
-
-   Subset to woff2 on 2026-07-27: 169,056 → 47,596 bytes, a 72% cut, and the
-   reason it had been the heaviest asset on the site. `font-weight: 100 900`
-   below is a promise about the file, so the subset had to keep the variable
-   machinery — fvar, gvar, STAT, HVAR all survive and the wght axis still
-   reads 100–900. Verified by reading the axis back out of the built file, not
-   by trusting the byte count: a naive subset flattens a variable font to a
-   single instance and every weight silently becomes 400.
-
-   Regenerate with (fonttools + brotli):
-     pyftsubset assets/fonts/geist/Geist-Variable.ttf \
-       --output-file=assets/fonts/geist/Geist-Variable.woff2 \
-       --flavor=woff2 --layout-features='*' \
-       --unicodes="U+0000-024F,U+0259,U+02BB-02BC,U+02C6,U+02DA,U+02DC,\
-                   U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2074,U+20A0-20BF,\
-                   U+2122,U+2190-21FF,U+2212,U+2215,U+FEFF,U+FFFD"
-
-   The .ttf stays in the repo as the source to re-subset from; only the .woff2
-   ships. */
-@font-face {
-  font-family: 'Geist';
-  src: url('/assets/fonts/geist/Geist-Variable.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  /* Read off the subset's own cmap rather than guessed. It has to reach past
-     U+05FF: the site uses ’ (3,197 times in a 400-page sample), “ ” • – —
-     → ← ↩ … and ₹, all of which live in U+2000-21FF. See the Libre
-     Baskerville note below — that is the same mistake, found here. */
-  unicode-range:
-    U+0020-007E, U+00A0-01E9, U+0218-0237, U+0259, U+02BC-02DC, U+0300-0338, U+1E20-1E21,
-    U+1E80-1EF9, U+2013-2044, U+2074, U+20AA-20BD, U+2122, U+2190-21B5, U+21E4-21E7, U+2212;
-}
-
-/* Source Serif 4 is the reader "Serif" font ([data-font="serif"] in
-   config.css → --font-body) as of 2026-08-02, replacing Libre Baskerville:
-   "Let's switch the Serif option to Source Serif 4 but keep Baskerville.
-   I want to see how things are." Adobe's screen-first text serif, SIL OFL
-   (LICENSE.md sits beside the files). Self-hosted like everything else;
-   font-display:swap + unicode-range mean it downloads ONLY when a reader
-   picks Serif, never on a default load — the System default stays free.
-
-   TWO FILES, NOT SIX: it is a variable font, so Roman carries every weight
-   and Italic carries every italic weight. What was done to the upstream
-   1.2 MB Roman / 850 KB Italic TTFs to get 64 KB / 65 KB:
-
-   1. `opsz` PINNED AT 20, its default. The upstream font is also variable
-      in optical size (8-60), and those deltas were most of the bytes. Body
-      text renders at ~16-20px, exactly what the opsz-20 default instance
-      is drawn for; headings lose only the display-cut refinements nobody
-      asked for. Pinning at the DEFAULT means the shipped outlines are
-      byte-identical to what an unpinned font would render at body sizes.
-   2. `wght` CLAMPED TO 200:700. The site uses 200 (--font-weight-light),
-      400 (body), 600 (--font-weight-bold) and 700 (<strong>'s UA default
-      resolves 400→700). Nothing reaches past 700; those deltas are gone.
-      [WARNING] If a new weight token ever exceeds 700, re-subset with a wider
-      clamp or the browser will flatten it to 700.
-   3. Subset to the same unicode set as Geist, with pyftsubset's DEFAULT
-      layout features rather than Geist's `--layout-features='*'` — the
-      difference is ~34 KB per face of small-caps/alternate machinery the
-      CSS never invokes. What survives, verified by reading the built
-      files: GPOS kern/mark/mkmk, GSUB ccmp/dnom/frac/liga/locl/numr, and
-      the wght axis reading 200-700. `tabular-nums` (archives, home dates)
-      needs no `tnum` here: all ten default digits measure 500/1000em —
-      the default figures ARE tabular, checked in hmtx.
-
-   Regenerate with (fonttools + brotli, via uv):
-     uvx fonttools varLib.instancer -q -o /tmp/inst.ttf \
-       assets/fonts/source-serif/SourceSerif4Variable-Roman.ttf \
-       opsz=20 wght=200:700
-     uvx --with brotli fonttools subset /tmp/inst.ttf \
-       --output-file=assets/fonts/source-serif/SourceSerif4Variable-Roman.woff2 \
-       --flavor=woff2 \
-       --unicodes="U+0000-024F,U+0259,U+02BB-02BC,U+02C6,U+02DA,U+02DC,\
-                   U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2074,U+20A0-20BF,\
-                   U+2122,U+2190-21FF,U+2212,U+2215,U+FEFF,U+FFFD"
-   (same for Italic). The upstream TTFs stay in the repo as the source to
-   re-subset from — with their FULL axes, so a future subset can choose a
-   different opsz or weight range — and are excluded from the build in
-   _config.yml exactly like Geist-Variable.ttf.
-
-   The range below is a light SUPERSET of the cmap, written in coarse
-   blocks. That is safe by construction: unicode-range only gates the
-   DOWNLOAD, and per-glyph fallback is decided against the real cmap after
-   it arrives — and the family is only ever referenced once the reader has
-   picked Serif, at which point the file downloads for the ASCII anyway.
-   The characters that carry a serif's voice — ’ “ ” – — • … — sit in
-   U+2002-2049, INSIDE the range: the Baskerville bug below cannot recur.
-   One glyph the upstream font simply lacks: ↩ U+21A9, kramdown's footnote
-   backlink. It falls to the system serif — as it always has; Libre
-   Baskerville does not have it either. */
-@font-face {
-  font-family: 'Source Serif 4';
-  src: url('/assets/fonts/source-serif/SourceSerif4Variable-Roman.woff2') format('woff2');
-  font-weight: 200 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range:
-    U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC, U+01E6-01F9, U+0218-0237, U+0259,
-    U+02BB-02DC, U+0300-0331, U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF, U+2122,
-    U+2190-2199, U+2212-2215;
-}
-
-@font-face {
-  font-family: 'Source Serif 4';
-  src: url('/assets/fonts/source-serif/SourceSerif4Variable-Italic.woff2') format('woff2');
-  font-weight: 200 700;
-  font-style: italic;
-  font-display: swap;
-  unicode-range:
-    U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC, U+01E6-01F9, U+0218-0237, U+0259,
-    U+02BB-02DC, U+0300-0331, U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF, U+2122,
-    U+2190-2199, U+2212-2215;
-}
-
-/* Libre Baskerville — DORMANT since 2026-08-02, deliberately kept. It was
-   the reader "Serif" font; Source Serif 4 above holds that slot now, and
-   NOTHING references this family, which in @font-face terms means these
-   three faces cost zero bytes on the wire — a face only downloads when
-   text actually uses it. Kept, files and declarations both, because the
-   switch is an experiment ("I want to see how things are"): reverting is
-   ONE line in config.css — point [data-font="serif"] back at
-   "Libre Baskerville" — and everything below simply wakes up.
-
-   [WARNING] Do NOT put both serifs in one stack ("Source Serif 4", "Libre
-   Baskerville", serif): while the first downloads, the browser renders the
-   interim in the NEXT family that matches — which would trigger a second
-   download and ship both fonts to every Serif reader. One family per
-   option, system stack behind it.
-
-   [WARNING] These declared `U+000-5FF` until 2026-07-27, and that was a real bug,
-   not a tidy-up. The files DO contain ’ “ ” – — • … — every one of them above
-   U+05FF, so the range forbade the browser from using this font for exactly
-   the characters that carry a serif's voice. A reader on Serif got Libre
-   Baskerville for the letters and the system serif for every apostrophe: the
-   commonest non-ASCII character on the site, 3,197 times in a 400-page
-   sample. Found while choosing Geist's range, which is why all four faces are
-   corrected in one go.
-
-   The ranges below are read off each file's own cmap. All three faces are the
-   same google-fonts "latin" subset and share one range. */
-@font-face {
-  font-family: 'Libre Baskerville';
-  src: url('/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2')
-    format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range:
-    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC, U+2013-2044, U+2074, U+20AC, U+2122,
-    U+2212-2215;
-  size-adjust: 98.5%;
-}
-
-@font-face {
-  font-family: 'Libre Baskerville';
-  src: url('/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-italic.woff2')
-    format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-  unicode-range:
-    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC, U+2013-2044, U+2074, U+20AC, U+2122,
-    U+2212-2215;
-  size-adjust: 98.5%;
-}
-
-@font-face {
-  font-family: 'Libre Baskerville';
-  src: url('/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range:
-    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC, U+2013-2044, U+2074, U+20AC, U+2122,
-    U+2212-2215;
-  size-adjust: 98.5%;
-}
-
-/* ---- Color tokens ---------------------------------------------------- */
-
-/* ============================================================
-   Theming — ported from Ovellum (ovellum.oss.oinam.com).
-   See _docs/styles.md.
-   ------------------------------------------------------------
-   DEFAULT THEME = MONOTONE GRAYSCALE (by design). The base palette below is
-   pure zero-chroma gray — oklch(L 0 0) — and the default accent is gray too
-   (--color-accent: --color-gray-900), so even links carry no hue. Link
-   affordance comes from the UNDERLINE, not color (see base.css).
-   Color is strictly opt-in: pick a tinted palette (nord = Cool, eink = Warm)
-   or set an accent via the appearance panel. Keep the base monotone.
-
-   Two ORTHOGONAL axes on <html>:
-     • data-theme   : auto (default) | light | dark   — appearance MODE
-     • data-palette : default (monotone) | nord (Cool) | eink (Warm/sepia) — color SCHEME
-   Mode and palette are independent: every palette has a light and a dark
-   form. Palettes re-tint the gray SCALE; mode flips the SEMANTIC tokens
-   light↔dark. "auto" follows prefers-color-scheme.
-   Extra axis: data-accent (custom accent color — opt-in color).
+   There were three palettes, five accents, three fonts and five text
+   sizes here until 2026-11-15. He chose this instead: "Default grayscale
+   theme is good enough. Font is system fonts. Let user change the text
+   size in their browser."
 
    Token layers:
-     1. raw scale     --color-gray-50..950 (+ white/black) — palettes override
-     2. semantic      --color-bg/surface/fg/accent/border… — map to the scale,
-                      and flip for dark mode
-     3. bridge        the site's legacy tokens (--bg-color-*, --text-color-*,
-                      --border-color-*) + short-form tokens (--bg,--text,--rule,…)
-                      alias onto the semantic layer, so every component keeps
-                      working and inherits palette + mode for free.
+     1. raw scale   --color-gray-50..950 and white
+     2. semantic    --color-bg, -surface, -fg, -accent, -border… which map
+                    to the scale and flip for dark
+     3. bridge      the older names components still use (--bg-color-*,
+                    --text-color-*, --bg, --text, --rule…) alias onto the
+                    semantic layer, so every component follows the mode
    ============================================================ */
 
-/* ---- Raw scale (default palette = neutral) ------------------ */
+/* ---- Raw scale ------------------------------------------------ */
 :root {
   --color-white: oklch(100% 0 0);
   --color-gray-50: oklch(98.5% 0 0);
@@ -268,8 +59,7 @@
 
      Every tier moves one step toward the extreme. --color-fg is already at the
      end of the ramp in both light (gray-950) and generic dark (gray-50), so
-     the primary text cannot go further there — it was measured at 11.98:1 on
-     eink dark before this, which is well past AAA. What was actually low were
+     the primary text cannot go further there; it was already well past AAA. What was actually low were
      the two tiers under it: 7.05 (muted — intros, captions, alumni rows) and
      5.19 (subtle — dates, year markers). Those are what moved most.
      ------------------------------------------------------------------------ */
@@ -283,7 +73,7 @@
      darker. They should be clear separators." -strong at 18% read as a
      considered hairline; this reads as a line that divides the page, which is
      what those two are for. Still a mix of the foreground rather than a solid,
-     so it follows every palette and stays a rule instead of becoming a bar. */
+     so it follows the mode and stays a rule instead of becoming a bar. */
   --color-border-structural: color-mix(in oklch, var(--color-fg) 32%, transparent);
   --color-link: var(--color-accent);
   --color-code-bg: var(--color-gray-200);
@@ -291,7 +81,7 @@
 
 /* Removed 2026-07-19 — declared but read by nothing, and the cost was
    not trivial: --color-accent-fg alone was assigned in six places (every
-   palette and every mode block) and consumed in none. Verified across all
+   palette and mode block, when there were palettes) and consumed in none. Verified across all
    CSS and JS before deleting.
 
      --color-black          --color-primary-hover   --color-accent-fg
@@ -303,105 +93,17 @@
    reintroduce them speculatively: declarations ship on every page, and
    a semantic token nothing reads is just weight with a good name. */
 
-/* ---- Palettes (re-tint the scale + accent) ----------------- */
-
-/* WARM = Flexoki (Brajeshwar, 2026-07-27: "Our 'Warm' theme should be based on
-   https://github.com/kepano/flexoki"). An MIT-licensed palette by kepano,
-   built for reading on screens the way ink sits on paper. It replaces the
-   hand-rolled warm ramp that was here before.
-
-   [WARNING] HEX, not oklch, and deliberately so — this is the only palette in the
-   file written that way. These are upstream's published values, copied
-   verbatim from kepano/flexoki `css/flexoki.css`, and the point is that they
-   can be diffed against it. Converting to oklch would round every one of them
-   and lose that. Everything downstream (`color-mix(in oklch, …)` for the
-   borders) accepts hex without complaint.
-
-   The site's scale has 11 steps and Flexoki's has 15, so base-150/-800/-850/
-   -950 are the four that do not get a slot. Each line names the step it came
-   from, so the mapping is checkable.
-   ------------------------------------------------------------ */
-:root[data-palette='eink'] {
-  --color-gray-50: #fffcf0; /* paper    */
-  --color-gray-100: #f2f0e5; /* base-50  */
-  --color-gray-200: #e6e4d9; /* base-100 */
-  --color-gray-300: #cecdc3; /* base-200 */
-  --color-gray-400: #b7b5ac; /* base-300 */
-  --color-gray-500: #9f9d96; /* base-400 */
-  --color-gray-600: #878580; /* base-500 */
-  --color-gray-700: #6f6e69; /* base-600 */
-  --color-gray-800: #575653; /* base-700 */
-  --color-gray-900: #282726; /* base-900 */
-  --color-gray-950: #100f0f; /* black    */
-
-  /* Light. Only the three the shared defaults get wrong for this ramp — the
-     rest already land on the right Flexoki step and are left alone.
-
-     bg/surface follow kepano's own docs theme (`vitepress/index.css`): the
-     page is `paper` and raised surfaces are DARKER, not lighter. That inverts
-     the usual relationship, and it is correct here — on paper there is nothing
-     lighter than paper to raise onto. */
-  --color-bg: var(--color-gray-50); /* paper    — vp-c-bg     */
-  --color-surface: var(--color-gray-100); /* base-50  — vp-c-bg-alt */
-
-  /* fg-subtle is the one contrast compromise. Flexoki's tx-3 is base-300,
-     which measures 2.00:1 on paper — fine for the hairlines it is meant for,
-     unreadable for what this site spends it on (sidenote body text). Stepped
-     to base-600 = 4.97:1, i.e. AA. Same bump the default palette already makes
-     for the same reason; the tier above it, fg-muted, is base-700 at 7.14:1
-     and needs no help. */
-  --color-fg-subtle: var(--color-gray-800); /* base-700 — was base-600, +1 step 2026-08-01 */
-
-  /* Accent stays monotone, drawn from this ramp — color on this site is
-     opt-in through the Accent axis, not baked into a palette (design.md).
-     Flexoki ships eight accent hues if that ever changes; kepano's own docs
-     theme uses cyan-600. Left as the darkest warm neutral: 14.51:1. */
-  --color-accent: var(--color-gray-900); /* base-900 */
-  --color-accent-hover: var(--color-gray-800);
-}
-
-:root[data-palette='nord'] {
-  --color-gray-50: oklch(97.3% 0.006 265);
-  --color-gray-100: oklch(95.1% 0.007 261);
-  --color-gray-200: oklch(93.3% 0.01 262);
-  --color-gray-300: oklch(89.9% 0.016 263);
-  --color-gray-400: oklch(76.5% 0.026 263);
-  --color-gray-500: oklch(63.1% 0.036 263);
-  --color-gray-600: oklch(52.3% 0.045 263);
-  --color-gray-700: oklch(45.2% 0.035 264);
-  --color-gray-800: oklch(37.9% 0.029 266);
-  --color-gray-900: oklch(32.4% 0.023 264);
-  --color-gray-950: oklch(29.8% 0.027 267);
-  --color-surface: var(--color-gray-50);
-  --color-accent: oklch(59.4% 0.077 254);
-  --color-accent-hover: oklch(69.7% 0.059 249);
-}
-
-/* ---- Mode: dark remap of the semantic tokens --------------- */
-/* Dark has to be written twice — once for an explicit choice, once
-   inside @media for "auto" — because a media query cannot be merged
-   with a bare selector in CSS. Kept as SCSS mixins so the VALUES
-   exist once and the two branches can never drift apart. They were
-   byte-identical by luck before; now it is structural.
-
-   Selector note, and this used to be a latent bug (fixed 2026-07-19):
-   both branches must carry a [data-palette] variant. Without it the
-   auto branch is :root[data-theme="auto"] at specificity (0,2,0) —
-   exactly tied with :root[data-palette="eink"], which sets a LIGHT
-   --color-surface. It won only because it appeared later in the file.
-   Reorder the palettes below the modes (or split this file, or shuffle
-   the include list in styles.html) and eink/nord on a dark system would
-   have silently regressed to a light surface. The [data-palette]
-   variant takes it to (0,3,0) and settles it on specificity, not luck.
-   The explicit-dark branch always had this guard; auto did not. */
-
+/* ---- Dark ------------------------------------------------------ */
+/* Written once as a mixin and used twice, for the reader's choice and for
+   the system's, because a media query cannot share a rule with a bare
+   selector. */
 @mixin dark-semantic-tokens {
   --color-bg: var(--color-gray-900);
   --color-surface: var(--color-gray-800);
   --color-bg-muted: var(--color-gray-800);
-  --color-fg: var(--color-gray-50); /* ramp end — cannot go lighter */
-  --color-fg-muted: var(--color-gray-100); /* was gray-200 */
-  --color-fg-subtle: var(--color-gray-300); /* was gray-400 */
+  --color-fg: var(--color-gray-50); /* the end of the ramp */
+  --color-fg-muted: var(--color-gray-100);
+  --color-fg-subtle: var(--color-gray-300);
   --color-code-bg: var(--color-gray-950);
   --color-primary: var(--color-gray-50);
   --color-primary-fg: var(--color-gray-900);
@@ -409,80 +111,18 @@
   --color-accent-hover: var(--color-gray-300);
 }
 
-/* Nord wants a cooler accent once it is dark. */
-@mixin nord-dark-accent {
-  --color-accent: oklch(77.5% 0.062 217);
-  --color-accent-hover: oklch(76.3% 0.048 194);
-}
-
-/* Flexoki dark is not the generic dark remap applied to a warm ramp — it is
-   its own set of assignments, and they disagree with the mixin above in every
-   row that matters. Left to the shared mixin, Warm-dark would come out on
-   base-900 with paper-white text; Flexoki puts the page on `black` and the
-   text on base-200, which is the whole character of it.
-
-   Taken from kepano's own docs theme (`vitepress/index.css`), with the same
-   one-step contrast bump on the subtle tier as the light half:
-       vp-c-bg      → black     ·  vp-c-bg-elv → base-900
-       vp-c-text-1  → base-200  ·  vp-c-text-2 → base-500
-   Ratios are against the black page background. */
-@mixin eink-dark-semantics {
-  --color-bg: var(--color-gray-950); /* black            */
-  --color-surface: var(--color-gray-900); /* base-900         */
-  --color-bg-muted: var(--color-gray-900);
-  --color-code-bg: var(--color-gray-900); /* NOT gray-950 — that is the page */
-  /* [WARNING] Raised one step each 2026-08-01, which DEPARTS from kepano's Flexoki
-     docs mapping quoted above (text-1 → base-200, text-2 → base-500). That
-     mapping is still the reference for everything else in this block; these
-     three are a deliberate override for legibility, not a mistake to correct
-     back. */
-  --color-fg: var(--color-gray-200); /* base-100 — was base-200 */
-  --color-fg-muted: var(--color-gray-400); /* base-300 — was base-400 */
-  --color-fg-subtle: var(--color-gray-500); /* base-400 — was base-500 */
-  --color-primary: var(--color-gray-300);
-  --color-primary-fg: var(--color-gray-950);
-  --color-accent: var(--color-gray-300);
-  --color-accent-hover: var(--color-gray-400);
-}
-
-:root[data-theme='dark'],
-:root[data-palette][data-theme='dark'] {
+:root[data-theme='dark'] {
   @include dark-semantic-tokens;
 }
 
-:root[data-palette='nord'][data-theme='dark'] {
-  @include nord-dark-accent;
-}
-:root[data-palette='eink'][data-theme='dark'] {
-  @include eink-dark-semantics;
-}
-
-/* `:not([data-theme])` is auto too (2026-11-15). The no-flash snippet is what
-   writes data-theme="auto", and it is JavaScript, so with scripting off the
-   attribute never arrives and a dark-OS reader got the LIGHT page — the one
-   case "auto follows the OS" exists for. Same specificity as the auto branch,
-   (0,2,0) and (0,3,0), so the palette guard above holds for it as well. */
+/* On a dark system, everything but an explicit Light is dark. That covers
+   auto, and also a page with no data-theme at all, which is what a reader
+   with JavaScript off gets: the snippet that writes the attribute is a
+   script. */
 @media (prefers-color-scheme: dark) {
-  :root[data-theme='auto'],
-  :root:not([data-theme]),
-  :root[data-palette][data-theme='auto'] {
+  :root:not([data-theme='light']) {
     @include dark-semantic-tokens;
   }
-
-  :root[data-palette='nord'][data-theme='auto'] {
-    @include nord-dark-accent;
-  }
-  :root[data-palette='eink'][data-theme='auto'] {
-    @include eink-dark-semantics;
-  }
-}
-
-/* ---- Accent override (custom accent color) ----------------- */
-:root[data-accent][data-accent][data-accent] {
-  --color-accent: var(--ov-accent);
-  --color-accent-hover: color-mix(in oklch, var(--ov-accent) 78%, var(--color-fg));
-  --color-primary: var(--ov-accent);
-  --color-primary-fg: oklch(98.5% 0 0);
 }
 
 /* ---- Syntax highlighting (code blocks) --------------------- */
@@ -521,27 +161,21 @@
   --code-error: oklch(var(--code-l) calc(var(--code-c) * 1.7) 25);
 }
 
-/* Dark mode only needs the lightness flipped — hues carry over.
-   Carries the same [data-palette] guard as the semantic block above.
-   No palette sets --code-l today, so nothing is broken without it —
-   but if one ever does, the guard is why it will keep working. */
-:root[data-theme='dark'],
-:root[data-palette][data-theme='dark'] {
+/* Dark only needs the lightness flipped; the hues carry over. */
+:root[data-theme='dark'] {
   --code-l: 78%;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root[data-theme='auto'],
-  :root:not([data-theme]),
-  :root[data-palette][data-theme='auto'] {
+  :root:not([data-theme='light']) {
     --code-l: 78%;
   }
 }
 
 /* ============================================================
    Bridge — legacy + short-form token names alias onto the semantic
-   layer above. Because the semantic tokens flip for mode and
-   re-tint for palette, every existing component inherits both.
+   layer above. Because the semantic tokens flip for the mode, every
+   existing component follows it.
    ============================================================ */
 :root {
   --bg-color-lowest: var(--color-surface);
@@ -560,7 +194,8 @@
      flood the thumbnail rather than tint behind it. So this leans the muted
      background 20% toward the foreground.
 
-     20% was measured, not picked. Against the page on eink dark the ladder runs
+     20% was measured, not picked, on the Warm dark palette that has since been
+     removed. Against that page the ladder ran
      1.28 (the old --bg-color-low) → 1.50 at 8% → 1.78 at 16% → 1.96 at 20% →
      2.52 at 30% → 3.62 at 45%. 45% was the first attempt and is wrong: at 3.62
      the wash is brighter than the header rule and reads as a filled card rather
@@ -580,8 +215,8 @@
 
      So the fix is a plate, not a repaint: the logo keeps its own colours
      exactly, and gets the light ground it was drawn for. Near-white rather
-     than #fff so it reads as a chip rather than a hole punched in the page,
-     and warm-neutral so it does not fight the eink or nord palettes.
+     than #fff so it reads as a chip rather than a hole punched in the page, with a
+     whisper of warmth so it reads as paper.
 
      Deliberately NOT `var(--color-surface)` or any other semantic token: those
      all invert in dark mode, which is exactly the behaviour being avoided

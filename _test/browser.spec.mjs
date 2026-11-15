@@ -44,11 +44,14 @@ for (const [os, saved, scheme, dark] of MATRIX) {
   });
 }
 
-test('theme: switching in the panel pins color-scheme immediately', async ({ page }) => {
+test('theme: the toggle flips the mode and pins color-scheme at once', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'light' });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Appearance' }).click();
-  await page.locator('.appearance-options--theme').getByRole('button', { name: 'Dark' }).click();
+  const toggle = page.getByRole('button', { name: 'Dark mode' });
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+
+  await toggle.click();
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
   expect(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme)).toBe(
     'dark'
   );
@@ -56,6 +59,35 @@ test('theme: switching in the panel pins color-scheme immediately', async ({ pag
   await expect.poll(() => isDark(page)).toBe(true);
   await page.goto(POST_WITH_NOTES);
   expect(await isDark(page)).toBe(true);
+});
+
+test('theme: toggling back to the system forgets the choice', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'light' });
+  await page.goto('/');
+  const toggle = page.getByRole('button', { name: 'Dark mode' });
+  await toggle.click();
+  expect(await page.evaluate(() => localStorage.getItem('theme'))).toBe('dark');
+  await toggle.click();
+  expect(await page.evaluate(() => localStorage.getItem('theme'))).toBe(null);
+  expect(await page.evaluate(() => document.documentElement.dataset.theme)).toBe('auto');
+  // Following the system again: it goes dark when the system does.
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await expect.poll(() => isDark(page)).toBe(true);
+});
+
+test('theme: settings from the old appearance panel are cleared', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!sessionStorage.getItem('seeded')) {
+      sessionStorage.setItem('seeded', '1');
+      ['palette', 'font', 'textsize', 'accent'].forEach((k) => localStorage.setItem(k, 'x'));
+    }
+  });
+  await page.goto('/');
+  const left = await page.evaluate(() =>
+    ['palette', 'font', 'textsize', 'accent'].filter((k) => localStorage.getItem(k) !== null)
+  );
+  expect(left).toEqual([]);
 });
 
 // ---- JavaScript on: nothing throws ---------------------------------------
@@ -101,7 +133,7 @@ test.describe('with JavaScript disabled', () => {
 
   test('no control shows that needs a script to work', async ({ page }) => {
     // Every <button> on the site is wired by JS; links are what work without it.
-    // The Appearance trigger was the one that showed and did nothing (chrome.scss).
+    // The theme toggle is hidden without JS for this reason (chrome.scss).
     for (const path of ['/', POST_WITH_NOTES, '/archives/', '/about/']) {
       await page.goto(path);
       const visible = await page

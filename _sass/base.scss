@@ -70,7 +70,7 @@ body {
 
   font-family: var(
     --font-body
-  ); /* reader's choice — applies to all content; only header/footer are pinned to sans (chrome.css + rule below) */
+  ); /* the content face; header and footer pin the sans (chrome.scss) */
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 400;
@@ -292,11 +292,9 @@ h1 {
    post title and a page title are the same element wearing the same
    class — there is no second rule to keep in step.
 
-   [WARNING] CONDENSED IS TRACKING, NOT A CONDENSED CUT, and it has to be.
-   Neither self-hosted family carries a width axis — Geist ships
-   `font-weight: 100 900` and Source Serif 4 `200 700`, and there is no
-   `wdth` in either — so `font-stretch: condensed` would compute and
-   then do nothing at all. Negative tracking is the only lever that
+   [WARNING] Condensed is tracking, not a condensed cut, and it has to be.
+   A system face cannot be relied on to carry a width axis, so
+   `font-stretch: condensed` could compute and then do nothing at all. Negative tracking is the only lever that
    moves, and on uppercase at display size it is the right one anyway:
    caps are drawn on a wider sidebearing than lowercase, so -0.02em
    pulls them back to a normal colour rather than actually crushing
@@ -312,22 +310,6 @@ h1 {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-wrap: balance;
-}
-
-/* [WARNING] THE SERIF READER GETS A HEAVIER TITLE, on purpose.
-   Brajeshwar, same message: "If we are thinning it, remember to see how
-   it looks with serif fonts - thin serif fonts don't really look
-   great." Right, and the numbers agree: Source Serif 4's variable font
-   stops at 200, so it cannot even reach the sans's weight, and what it
-   does reach is a hairline-contrast serif whose thin strokes drop out
-   at title size. 300 is the lightest that holds together.
-
-   Tracking opens back to 0 with it. Negative tracking on a serif runs
-   the serifs of adjacent caps into each other, which the sans, having
-   none, does not do. */
-[data-font='serif'] .page-title {
-  font-weight: 300;
-  letter-spacing: 0;
 }
 
 /* ---- The spine: a title set vertically down the left gutter ------
@@ -388,13 +370,9 @@ h1 {
     transform-origin: center;
     writing-mode: vertical-rl;
 
-    /* [WARNING] PINNED SANS, and it must not inherit. Brajeshwar, 2026-08-08:
-     "Remember, this is a UI element and should always be Sans-Serif."
-     Right — the reader's font switch is for READING, and a marker down the
-     gutter is chrome. Left to inherit, [data-font="serif"] would set it in
-     Source Serif 4, where a 700-weight vertical word grows serifs that catch
-     on each other down the column. `--font-family-sans-serif` is the token
-     chrome.css already uses for exactly this, so the two agree. */
+    /* Pinned sans. Brajeshwar, 2026-08-08: "Remember, this is a UI element
+     and should always be Sans-Serif." The body face is sans today too, but
+     the spine is chrome, and it says so here rather than by coincidence. */
 
     font-size: clamp(2.31rem, 5.4vw, 4.62rem);
     font-weight: 800;
