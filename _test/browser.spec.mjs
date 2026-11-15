@@ -144,6 +144,29 @@ test('the walk settles as the model or the picture, with no errors', async ({ pa
   expect(errors.filter((e) => !e.startsWith('Failed to load resource'))).toEqual([]);
 });
 
+test('the walk is night by the clock, and its button turns it over', async ({ page }) => {
+  // Ten at night on a system that asks for light: the clock decides.
+  await page.clock.setFixedTime(new Date(2026, 10, 15, 22, 0));
+  await page.goto(WALK);
+  const html = page.locator('html');
+  await expect(html).toHaveAttribute('data-theme', 'dark');
+  const stage = page.locator('.stage');
+  await expect(stage).toHaveClass(/is-live|is-still/, { timeout: 20000 });
+  // The button comes with the model; a still picture has none.
+  if (!(await stage.evaluate((el) => el.classList.contains('is-live')))) return;
+  await page.getByRole('button', { name: 'Show by day' }).click();
+  await expect(html).toHaveAttribute('data-theme', 'light');
+  // The choice holds for the visit.
+  await page.reload();
+  await expect(html).toHaveAttribute('data-theme', 'light');
+});
+
+test('the walk is day at noon', async ({ page }) => {
+  await page.clock.setFixedTime(new Date(2026, 10, 15, 12, 0));
+  await page.goto(WALK);
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+});
+
 test('the walk without WebGL is the picture, its pins and no dead control', async ({ page }) => {
   await page.addInitScript(() => {
     HTMLCanvasElement.prototype.getContext = () => null;

@@ -63,7 +63,9 @@ for **Option 2, light and surface**, which is done too: warm sun and cool shade,
 shade in corners from a sky map made at load, six kinds of window, glass and water that mirror,
 parapets, and plant on the roofs. No data changed for it. The look before each step is kept:
 `v0.3.0-colored` and `v0.4.0-measured`, each with its own copy of the data.
-[WARNING] He has not seen Option 2 yet. It was judged in screenshots, in Chrome, on his Mac.
+He saw Option 2 and said *"This is good."* With it went two more of his: the page is night by the
+reader's own clock, seven in the evening to six in the morning, with a day and night button in
+the toolbar; and the article's picture is the board tilted, seen from an angle.
 [WARNING] The script that made `city.json` is not in the repo, by the misc rule. `misc.md` says
 how the data was made; a new route means making it again.
 The article shows the model too: `static/2026/london-southbank-walk.webp`, north up, on no

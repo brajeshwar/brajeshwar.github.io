@@ -45,9 +45,10 @@ past each stop as its name comes up; Pause leaves the camera where it has got
 to.
 
 **Every control is in one toolbar, top right, inside the model:** compass,
-home, zoom in, zoom out, then previous stop, fly the walk, and next stop. The
-last three were words on a row under the model until 2026-11-15, where a short
-window pushed them out of sight. They are pictures now, and every button names
+home, zoom in, zoom out, day or night, then previous stop, fly the walk, and
+next stop. The last three were words on a row under the model until
+2026-11-15, where a short window pushed them out of sight. They are pictures
+now, and every button names
 itself in a tooltip on hover or focus, with its key if it has one. The tooltip
 is the button's own `aria-label`, drawn by CSS, so what is shown and what a
 screen reader says are one string.
@@ -118,6 +119,26 @@ with it in the same way.
 **Without JavaScript, or without WebGL2,** the page is the picture, the pins on
 it (placed in percent, in the HTML), and the list they link to. The script adds
 `is-live` to `.stage` once the model has drawn, or `is-still` if it cannot.
+
+**The page is night by the reader's own clock** (2026-11-15: *"why not detect
+from the user's time and set it automatically. Of course, add a day/night
+toggle amongst the buttons"*). Night is the whole page gone dark, and the
+model with it: lit windows, lamps on the river. The rule is one function,
+`light.night()`, in the script in the page's head, so it is settled before
+the page paints. In order:
+
+1. what the reader chose with the button, which holds for the visit
+   (`sessionStorage`, `walk-light`) and is forgotten when the tab closes;
+2. a standing wish for dark: the system's, or the site's own saved theme.
+   Someone who asks for dark is never shown a bright page at noon;
+3. the clock: night from seven in the evening to six in the morning, by the
+   reader's own time, wherever they are.
+
+`walk.js` asks again every minute, so evening comes on with the page open.
+The button's key is N, and neither it nor the key stops a flight. [WARNING]
+The hours are fixed. It is not sunset: nothing here knows where the reader
+is, and asking would be a permission prompt for a decoration. Without
+JavaScript the page follows the system alone, as it always did.
 
 **The model is in color; the page round it is not** (2026-11-15: first *"the
 next step of the Tinted Palette"*, then *"build the next better colored
@@ -337,20 +358,25 @@ Which way the camera faces at each stop is the `FACING` table in `walk.js`.
 **The pictures** are the model's own overview, 1600 by 800, with the controls
 and caption hidden, once in each color scheme. The `--x` and `--y` on each pin
 in the HTML are where the script had put that pin in the same view. Remake
-both whenever the look or the stops change.
+both whenever the look or the stops change. [WARNING] Make them with the
+browser's clock held at noon, and the dark one by asking for a dark system.
+Made in the evening with the clock left alone, both come out night.
 
 **The article's picture**, `static/2026/london-southbank-walk.webp`, is the
-whole board with north straight up, so it lies level across the page, with the
-pins left in and no background at all, so it sits on the article in Light and
-in Dark. It is 2880 by 1200 and goes in a `<figure class="gallery">`, which
-carries it past the article to the width of the window, up to 1600 pixels
-(2026-11-15: *"north up, so it is horizontal and not slanted. And make the
-image large to extend beyond the article"*). Three things were done for that
-one render and are not in the page: WebGL was asked for a see-through canvas
-and cleared to nothing; the lens was lengthened from 7 degrees to 1.6, so the
-board's sides do not lean in; and the view was zoomed until the board filled
-95% of a 1200 by 500 frame. The page's own opening view is still turned
-fourteen degrees. Remake the picture with the other two.
+whole board seen from an angle and tipped well over, so the buildings stand
+up: turned 16 degrees, looking down at 31, through an 11 degree lens
+(2026-11-15: *"can we have a tilted image with the 3D view more visible from
+an angle"*). It replaced a north-up one he had asked for earlier the same
+day, which lay flat. The pins are left in and there is no background at all,
+so it sits on the article in Light and in Dark. It is 2880 by 1200 and goes
+in a `<figure class="gallery">`, which carries it past the article to the
+width of the window, up to 1600 pixels. Two things were done for that one
+render and are not in the page: WebGL was asked for a see-through canvas and
+cleared to nothing; and the camera was moved until the board's corners and
+its tallest tower filled 97% of a 1200 by 500 frame. [WARNING] The lens stays
+under 12 degrees. Past that the model fades into the paper's color with
+distance, which on no background is a pale smear. Remake the picture with
+the other two.
 
 ### Where realism can go from here, without Google
 

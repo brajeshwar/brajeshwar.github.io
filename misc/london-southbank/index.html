@@ -7,7 +7,16 @@
 <title>A Stroll Along the South Bank | Brajeshwar</title>
 <meta name="description" content="A model of the South Bank in London to turn, move, and fly through: the walk from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank.">
 <link rel="canonical" href="https://brajeshwar.com/misc/london-southbank/">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){d.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t;}}catch(e){}})();</script>
+<script>
+// Day or night, settled before the page paints; walk.js asks again as the
+// hours pass. It is night if the reader has said so with the button, for
+// this visit; else if they have a standing wish for dark, their system's or
+// this site's; else by their own clock, from seven in the evening to six in
+// the morning.
+var light={chosen:null,night:function(){var wish;try{wish=localStorage.getItem('theme')}catch(e){}if(light.chosen)return light.chosen==='night';if(wish==='dark'||wish!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches)return true;var hour=new Date().getHours();return hour>=19||hour<6}};
+try{light.chosen=sessionStorage.getItem('walk-light')}catch(e){}
+(function(){var d=document.documentElement,theme=light.night()?'dark':'light';d.classList.add('js');d.dataset.theme=theme;document.querySelector('meta[name=color-scheme]').content=theme})();
+</script>
 <style>
 /* A one-off, on its own (see _docs/misc.md). Everything this page needs is in
    this folder: nothing here loads the site's stylesheet or scripts, and
@@ -70,10 +79,12 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
    sit on a button. */
 .tools { position: absolute; top: .75rem; right: .75rem; z-index: 2; display: grid; gap: .35rem; }
 .tools button { position: relative; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; backdrop-filter: blur(6px); }
-/* The walk's own three buttons stand a little apart from the view's four. */
+/* The walk's own three buttons stand a little apart from the view's five. */
 .tools .tools__walk { margin-top: .4rem; }
 .tools [aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .tools [aria-pressed="false"] .pause, .tools [aria-pressed="true"] .play { display: none; }
+/* By day the button offers the night, and by night the day. */
+.tools [aria-pressed="false"] .sun, .tools [aria-pressed="true"] .moon { display: none; }
 
 /* Every button says what it is, beside it, on hover or on focus, with its
    key if it has one. The words are the button's own aria-label, so what is
@@ -151,6 +162,7 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
           <button type="button" data-whole aria-label="Reset the view" data-key="0"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.4 7.8L8 2.8l5.6 5M4 6.6V13.2h8V6.6M6.7 13.2V9.6h2.6v3.6"/></svg></button>
           <button type="button" data-closer aria-label="Zoom in" data-key="+"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
           <button type="button" data-further aria-label="Zoom out" data-key="-"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10"/></svg></button>
+          <button type="button" data-light aria-pressed="false" aria-label="Show by night" data-key="N"><svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.2 9.5A5.6 5.6 0 1 1 6.5 2.8a4.5 4.5 0 0 0 6.7 6.7z"/></svg><svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.7"/><path d="M8 1.5v1.7M8 12.8v1.7M1.5 8h1.7M12.8 8h1.7M3.4 3.4l1.2 1.2M11.4 11.4l1.2 1.2M3.4 12.6l1.2-1.2M11.4 4.6l1.2-1.2"/></svg></button>
           <button type="button" class="tools__walk" data-step="-1" aria-label="Previous stop" data-key="&larr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3.5v9M12 3.8L6.6 8l5.4 4.2z"/></svg></button>
           <button type="button" data-play aria-pressed="false" aria-label="Fly the walk"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2L12.6 8 5 12.8z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg></button>
           <button type="button" data-step="1" aria-label="Next stop" data-key="&rarr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M12 3.5v9M4 3.8L9.4 8 4 12.2z"/></svg></button>

@@ -236,6 +236,44 @@ function readLook() {
   };
 }
 
+// ---- day and night -----------------------------------------------------
+//
+// Whether it is night is the page's to say, in the script in its head: the
+// reader's choice for this visit, else a standing wish for dark, else their
+// clock. Here that answer is put everywhere it shows: the page's colors,
+// the picture that stands in for the model, the button, the model's light.
+
+function relight() {
+  const night = window.light.night();
+  const theme = night ? 'dark' : 'light';
+  root.dataset.theme = theme;
+  document.querySelector('meta[name=color-scheme]').content = theme;
+  stage.querySelector('picture source').media = night ? 'all' : 'not all';
+  const button = stage.querySelector('[data-light]');
+  button.setAttribute('aria-pressed', String(night));
+  button.setAttribute('aria-label', night ? 'Show by day' : 'Show by night');
+  if (!view) return;
+  readLook();
+  redraw();
+}
+
+// The button turns day to night and back, for the rest of this visit.
+function turnLight() {
+  window.light.chosen = window.light.night() ? 'day' : 'night';
+  try {
+    sessionStorage.setItem('walk-light', window.light.chosen);
+  } catch (e) {
+    /* no storage: the choice lasts until the page is left */
+  }
+  relight();
+}
+
+relight();
+// Evening comes on with the page open, and morning too.
+setInterval(function () {
+  if (window.light.night() !== (root.dataset.theme === 'dark')) relight();
+}, 60000);
+
 // ---- views -------------------------------------------------------------
 
 // The whole board, turned to suit the shape of the screen: north at the top
@@ -891,6 +929,7 @@ document.addEventListener('click', function (e) {
   const button = e.target.closest('button');
   if (button && stage.contains(button)) {
     if ('play' in button.dataset) return play(!playing);
+    if ('light' in button.dataset) return turnLight();
     takeOver();
     if (button.dataset.step) return step(Number(button.dataset.step));
     if ('north' in button.dataset) return nudge({ heading: 0 });
@@ -915,12 +954,14 @@ const KEYS = {
   '=': closer,
   '-': further,
   0: () => fly(overview(), 1400),
+  n: turnLight,
 };
 
 document.addEventListener('keydown', function (e) {
   if (!view || e.metaKey || e.ctrlKey || e.altKey || !KEYS[e.key]) return;
   e.preventDefault();
-  takeOver();
+  // Night can fall in mid-flight. Any other key takes the camera over.
+  if (e.key !== 'n') takeOver();
   KEYS[e.key]();
 });
 
@@ -956,19 +997,10 @@ function start(city) {
     measure();
     redraw();
   }).observe(canvas);
-  // The page's Light or Dark can change under us: the system's, or the
+  // The standing wish for dark can change under us: the system's, or the
   // site's own toggle in another tab.
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', relight);
-  window.addEventListener('storage', function () {
-    try {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'light' || saved === 'dark') root.dataset.theme = saved;
-      else delete root.dataset.theme;
-    } catch (e) {
-      /* no storage, no saved theme */
-    }
-    relight();
-  });
+  window.addEventListener('storage', relight);
   canvas.addEventListener('webglcontextlost', function (e) {
     e.preventDefault();
   });
@@ -976,11 +1008,6 @@ function start(city) {
     draw.setup();
     redraw();
   });
-}
-
-function relight() {
-  readLook();
-  redraw();
 }
 
 fetch(new URL('city.json', import.meta.url))

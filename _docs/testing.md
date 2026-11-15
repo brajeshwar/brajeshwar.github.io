@@ -60,7 +60,9 @@ to match the old favicon filter, so it had been hiding a broken image on `/about
 - **`/misc/london-southbank/`**: the page settles as the model or as the picture, with no
   errors either way. CI's Chrome may have no WebGL2, so the test accepts both and then takes
   WebGL away on purpose: the picture loads, every pin shows and leads to its stop, and no
-  button is left on show. The same holds with JavaScript off.
+  button is left on show. The same holds with JavaScript off. With the browser's clock set, the
+  page is night at ten in the evening and day at noon, and the button turns it over for the
+  visit.
 
 The JS-off theme test found a real bug the day it was written: with scripting off, `<html>`
 never gets `data-theme="auto"`, so a dark-OS reader got the light page. `themes.scss` now
