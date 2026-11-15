@@ -21,7 +21,7 @@ const { site, docs } = JSON.parse(readFileSync(MANIFEST, 'utf8'));
 
 const stripFrontMatter = (src) => src.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
 
-// ⚠️ AUTHOR-ONLY BUILD NOTES MUST NOT SHIP HERE (added 2026-08-09).
+// [WARNING] AUTHOR-ONLY BUILD NOTES MUST NOT SHIP HERE (added 2026-08-09).
 // Liquid comments are stripped by Jekyll for the HTML, but this script reads
 // the SOURCE file, so they survived into the .md twin — and the pages carry
 // long ones. /cv.md opened with 30 lines about why /cv/ stopped using the
@@ -34,7 +34,7 @@ const stripLiquidComments = (src) =>
     .replace(/\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}\s*/g, '')
     // HTML comments too: same problem, and about.html used one until today.
     .replace(/<!--[\s\S]*?-->\s*/g, '')
-    // ⚠️ And <script> (added 2026-08-10). A Markdown page may still end with a
+    // [WARNING] And <script> (added 2026-08-10). A Markdown page may still end with a
     // tag that loads its behaviour — /about/ closes with the anchors.js line —
     // which is markup with an unevaluated Liquid URL inside it, in a file whose
     // whole promise is plain text. Exactly ONE twin was affected, and it is the
@@ -46,7 +46,7 @@ const stripLiquidComments = (src) =>
 // ============================================================================
 // HTML SOURCES: convert the RENDERED page, not the source file.
 // ----------------------------------------------------------------------------
-// ⚠️ ADDED 2026-08-10. Reading the source is right for the 1,457 posts and the
+// [WARNING] ADDED 2026-08-10. Reading the source is right for the 1,457 posts and the
 // Markdown pages, and completely wrong for the twelve pages in _pages/*.html —
 // their sources are Liquid, so the twin shipped UNEVALUATED template code.
 // /books.md opened with `{% include card-grid.html %}` and listed no books at
@@ -59,7 +59,7 @@ const stripLiquidComments = (src) =>
 // the manifest, so a page converted to .html tomorrow is handled without an edit
 // here — and a page converted back to .md silently returns to the source path.
 //
-// ⚠️ NO DEPENDENCY, DELIBERATELY. A real HTML->Markdown library (turndown and
+// [WARNING] NO DEPENDENCY, DELIBERATELY. A real HTML->Markdown library (turndown and
 // friends) would mean the repo's first package.json, which the deploy workflow
 // comments call out as a behaviour change for setup-node's caching. The markup
 // being converted is our own and narrow — about twenty tags across twelve pages
@@ -125,7 +125,7 @@ const INLINE = new Set([
   'samp',
 ]);
 
-// ⚠️ Kramdown emits the SMART-PUNCTUATION entities by name, so a map of the
+// [WARNING] Kramdown emits the SMART-PUNCTUATION entities by name, so a map of the
 // five XML ones is not enough — `&rsquo;` is the commonest non-ASCII character
 // on this site and `&hellip;` / `&mdash;` shipped raw into /random.md on the
 // first run. Numeric forms are handled generically below; only named ones need
@@ -177,7 +177,7 @@ const NAMED = {
 // Generic containers, as opposed to the semantic inline formatting below them.
 const GENERIC = new Set(['span', 'div']);
 
-// ⚠️ Entities MUST be decoded. Rendered HTML is full of `&amp;` and `&#39;`, and
+// [WARNING] Entities MUST be decoded. Rendered HTML is full of `&amp;` and `&#39;`, and
 // a twin that ships them has simply traded one kind of markup for another.
 const decode = (s) =>
   s.replace(/&(#x[0-9a-fA-F]+|#[0-9]+|[a-zA-Z][a-zA-Z0-9]*);/g, (all, e) => {
@@ -237,7 +237,7 @@ const rawText = (n) => (n.tag === '#text' ? decode(n.text) : n.children.map(rawT
 
 const tidy = (s) => s.replace(/\s+/g, ' ').trim();
 
-// ⚠️ ADJACENT ELEMENT SIBLINGS NEED A SEPARATOR, and only elements do.
+// [WARNING] ADJACENT ELEMENT SIBLINGS NEED A SEPARATOR, and only elements do.
 // /own/ renders each item as four touching spans with no whitespace between
 // them — `<span>P</span><span>Placeholder</span><span>Oxford button-down</span>`
 // — which concatenated to "PPlaceholderOxford button-downwhite, 2". A gap is
@@ -317,7 +317,7 @@ function renderList(n, ordered) {
   return lines.join('\n');
 }
 
-// ⚠️ A HEADER-LESS TABLE BECOMES A LIST, not a pipe table with a faked header
+// [WARNING] A HEADER-LESS TABLE BECOMES A LIST, not a pipe table with a faked header
 // row. /archives/ is the only table among the twelve — 26 tables of
 // `<caption>YYYY</caption>` plus date/title rows and no <th> anywhere — and
 // `- Aug 05 — [Title](/url/)` is what that actually means.
@@ -482,7 +482,7 @@ for (const d of docs) {
     } else {
       body = htmlToMarkdown(rendered);
       converted++;
-      // ⚠️ THE GUARD IS THE POINT, not the conversion. This whole class of bug
+      // [WARNING] THE GUARD IS THE POINT, not the conversion. This whole class of bug
       // was invisible for nine days because nothing ever looked at the output.
       // A page that grows markup the converter does not know about now says so
       // in the build log instead of shipping tags to a reader.
@@ -490,7 +490,7 @@ for (const d of docs) {
         /\{%|\{\{/.test(body) ||
         /<(?:div|section|ul|ol|li|p|a|img|figure|table|h[1-6])\b/i.test(body)
       ) {
-        console.warn('  ⚠️ markup survived the conversion:', d.url);
+        console.warn('  [WARNING] markup survived the conversion:', d.url);
         leaked++;
       }
     }
@@ -553,5 +553,5 @@ rmSync(MANIFEST, { force: true });
 console.log(
   `agent-markdown: wrote ${written} .md files (${pages.length} pages, ${posts.length} posts) + llms.txt` +
     `, ${converted} converted from built HTML` +
-    (leaked ? `, ⚠️ ${leaked} with markup left in` : '')
+    (leaked ? `, [WARNING] ${leaked} with markup left in` : '')
 );

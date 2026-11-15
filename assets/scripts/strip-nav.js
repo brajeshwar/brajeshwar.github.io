@@ -29,7 +29,7 @@
       return Math.max(160, strip.clientWidth * 0.8);
     }
 
-    /* ⚠️ Decide `behavior` here rather than leaving it to the CSS
+    /* [WARNING] Decide `behavior` here rather than leaving it to the CSS
        `scroll-behavior` override, because `behavior: 'smooth'` is not merely
        degraded under a reduced-motion preference — it does NOTHING. Measured
        on Brajeshwar's own machine 2026-07-31, which has the OS setting on: the
@@ -52,7 +52,7 @@
       return strip.scrollWidth - strip.clientWidth > 2;
     }
 
-    /* ⚠️ THE ARROWS' HEIGHT IS MEASURED, NOT GUESSED (2026-08-09: "It should be
+    /* [WARNING] THE ARROWS' HEIGHT IS MEASURED, NOT GUESSED (2026-08-09: "It should be
        aligned to the height of the thumbnail").
 
        They used to be `top: 0; bottom: var(--space-l)` — a fixed guess at
@@ -95,7 +95,7 @@
       next.disabled = strip.scrollLeft >= max - 1;
     }
 
-    /* ⚠️ Re-sync HERE as well as on the scroll event, and do not simplify this
+    /* [WARNING] Re-sync HERE as well as on the scroll event, and do not simplify this
        back to one path. A programmatic scroll is specified to fire `scroll`,
        but measured 2026-07-31 it does not always arrive: scrollLeft moved from
        0 to 300 with a listener attached and a 400ms wait, and the listener

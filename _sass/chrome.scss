@@ -137,7 +137,7 @@ site-nav {
    the default text color"). They were --text-color-lower, the subtle tier, which
    put the primary navigation a full two steps below the prose it sits above.
 
-   ⚠️ This narrows the gap to the hover/active state below, which uses
+   [WARNING] This narrows the gap to the hover/active state below, which uses
    --text-color-higher. That is still a distinct step, and the underline is what
    actually carries hover now — the color shift was never doing the work on its
    own. Do not "restore contrast" by darkening hover further; the resting state
@@ -179,7 +179,7 @@ site-tools {
   /* Hairline dividing the words from the glyphs. Safe to keep unconditional:
      site-nav no longer wraps at any width (the narrow rule shrinks instead of
      wrapping), so the bar can't be orphaned at the head of a second row. */
-  /* ⚠️ --border-color-high (18%), NOT --rule (10%). A vertical hairline shows
+  /* [WARNING] --border-color-high (18%), NOT --rule (10%). A vertical hairline shows
      far less of itself than a horizontal one — it is one or two device pixels
      tall per line of text rather than spanning the page — so the tier that
      reads correctly as a horizontal rule disappears as a pipe. Brajeshwar,
@@ -190,7 +190,7 @@ site-tools {
      That places it exactly: darker than --rule (10%), lighter than the
      header/footer's --rule-strong (32%). The middle rung, 18%.
 
-     ⚠️ BOTH SEPARATORS TAKE THIS — the header's and page-actions'. They do the
+     [WARNING] BOTH SEPARATORS TAKE THIS — the header's and page-actions'. They do the
      same job at the same size; if one is retuned, retune the other. */
   border-left: var(--border-size) var(--border-style) var(--border-color-high);
   padding-left: var(--space-2xs);
@@ -426,7 +426,7 @@ main > .back-to-top-row {
    It also covers a short post with no arrow — the condition is the bar, not
    the arrow, so the spacing is the same either way.
 
-   ⚠️ `~`, NOT `+`. `post.html` emits `<script defer src=".../anchors.js">`
+   [WARNING] `~`, NOT `+`. `post.html` emits `<script defer src=".../anchors.js">`
    between `</main>` and `<footer>`, so main and footer are NOT adjacent and
    `+` silently matched nothing — the footer kept its 80px and the change
    looked like it had failed. The general-sibling combinator does not care what

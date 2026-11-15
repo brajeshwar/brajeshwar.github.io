@@ -80,7 +80,7 @@
   1,456 posts — 5.8% — have footnotes**; on every other page it loaded, ran,
   found nothing and returned.
 
-  ⚠️ The test must be INLINE in the `if`. Liquid's `assign` does not evaluate
+  [WARNING] The test must be INLINE in the `if`. Liquid's `assign` does not evaluate
   `contains`: it fails silently AND truthily, so binding it to a variable
   first would ship the script everywhere while reading as correct. Same trap
   as `_layouts/page.html` and the old conditional code.css.
@@ -96,7 +96,7 @@
   script does nothing without that element, and this is the same test the
   script itself makes.
 
-  ⚠️ Inline in the `if`, like the others. Liquid's `assign` does not evaluate
+  [WARNING] Inline in the `if`, like the others. Liquid's `assign` does not evaluate
   `contains` — it fails silently AND truthily, so hoisting it would ship this
   on all ~1,483 pages while reading as correct.
 {%- endcomment -%}
@@ -107,7 +107,7 @@
   the script does nothing without it, and this is the same test the script
   itself makes.
 
-  ⚠️ Inline in the `if`, like the others. Liquid's `assign` does not evaluate
+  [WARNING] Inline in the `if`, like the others. Liquid's `assign` does not evaluate
   `contains`; it fails silently AND truthily, so hoisting it would ship this
   on all ~1,484 pages while reading as correct.
 {%- endcomment -%}
@@ -138,7 +138,7 @@
     <script defer src="https://analytics.oinam.net/script.js"
             data-website-id="7cc63f26-aabf-4814-88c9-9c3e29f1c783"></script>
 
-  ⚠️ DO NOT "improve" this by adding Cloudflare WEB Analytics. That is a
+  [WARNING] DO NOT "improve" this by adding Cloudflare WEB Analytics. That is a
   different product from the edge analytics we now rely on, and it is the
   wrong trade twice over. Its beacon loads from static.cloudflareinsights.com
   — a separate hostname, so it costs the same DNS lookup and TLS handshake

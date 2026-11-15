@@ -15,7 +15,7 @@
 ## albums  — fetch albums.oinam.com's feed into _data/albums.yaml (generated, gitignored).
 ##           The home page's Albums strip is EMPTY without it, so `build` runs it
 ##           first — exactly as the Actions workflow does.
-##           ⚠️ `ruby`, not `bundle exec ruby`: the script is stdlib-only, but rexml is a
+##           [WARNING] `ruby`, not `bundle exec ruby`: the script is stdlib-only, but rexml is a
 ##           bundled gem and bundler hides those unless the Gemfile names them.
 albums:
 	ruby scripts/fetch-albums.rb

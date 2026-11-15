@@ -3,7 +3,7 @@
   the sidebar became an explicit three-part stack: Connect, Alumni, then
   Support & Endorsements.
 
-  ⚠️ The markup was <p><ul>…</ul></p> in its old home. That is invalid — a <ul>
+  [WARNING] The markup was <p><ul>…</ul></p> in its old home. That is invalid — a <ul>
   is not phrasing content, so every browser closes the <p> before the list and
   leaves a stray </p> after it, giving an empty paragraph in the DOM that CSS
   can still target. Fixed in the move: the list stands on its own. Includes are

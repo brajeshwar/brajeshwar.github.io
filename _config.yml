@@ -113,7 +113,7 @@ exclude:
   - now/
   - README.md
   - CLAUDE.md           # agent guidance — must not be published (/CLAUDE/)
-  # ⚠️ GITIGNORE DOES NOT STOP JEKYLL. CLAUDE.local.md is ignored by git, which
+  # [WARNING] GITIGNORE DOES NOT STOP JEKYLL. CLAUDE.local.md is ignored by git, which
   # keeps it out of the repo and therefore out of the deploy — but a local
   # `make build` was rendering it to _site/CLAUDE.local/ all the same. One
   # `git add -f`, or anyone cloning with their own copy, and a private work

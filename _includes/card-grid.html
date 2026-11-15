@@ -17,7 +17,7 @@
   clicking. Omitted means a still image, which needs no marker — the absence is
   the default, not a third icon.
 
-  ⚠️ ALT: a bare `if item.alt` test, NEVER `item.alt | default: item.title`.
+  [WARNING] ALT: a bare `if item.alt` test, NEVER `item.alt | default: item.title`.
   The two disagree on exactly one value — the empty string. Liquid's `default`
   filter substitutes when the input is `empty?`, so a deliberate `alt: ""`
   became the title; a bare `if` is Ruby truthiness, so "" passes through as
@@ -31,7 +31,7 @@
   Kept because a filter that overrides an author's intentional empty alt is a
   bug wherever it sits, and because the two includes are read together.
 
-  ⚠️ The badge is `aria-hidden` and the word goes into the image's ALT instead
+  [WARNING] The badge is `aria-hidden` and the word goes into the image's ALT instead
   — "… (video)". The first attempt used a `.visually-hidden` span, which this
   site does not have: base.css's copy was deleted after the 2026-07-19 audit
   flagged it unreferenced, so the span would have printed the word "video"
@@ -39,7 +39,7 @@
   rot the same way, and is where a screen reader expects to find what an image
   is anyway.
 
-  ⚠️ This uses `ul.item__cards`, the SHARED album grid, on purpose. The home
+  [WARNING] This uses `ul.item__cards`, the SHARED album grid, on purpose. The home
   page's scrolling strips deliberately do not (they want one clipped row where
   this wants a wrapping grid) — but a full listing page wants exactly what
   /film/ and /devices/ already have, so it should reuse it rather than grow a
@@ -58,7 +58,7 @@
   starting with "/" is a site-absolute path and is also verbatim, and anything
   else is a bare filename resolving under /static/<dir>/.
 
-  ⚠️ THE "http" BRANCH MUST SKIP `relative_url`, WHICH IS THE WHOLE POINT OF
+  [WARNING] THE "http" BRANCH MUST SKIP `relative_url`, WHICH IS THE WHOLE POINT OF
   HAVING IT. Added 2026-09-01, when /album/ moved onto albums.oinam.com's feed
   and every `img` became an absolute media.oinam.com URL. Without it a remote
   thumbnail was concatenated onto the folder prefix and shipped as
@@ -66,7 +66,7 @@
   prepend the baseurl to that. The `url` test below already had this split;
   `img` simply never needed it until the pictures stopped being local files.
 
-  ⚠️ AND IT IS UNEXERCISED TODAY, KEPT ON PURPOSE. /album/ was deleted hours
+  [WARNING] AND IT IS UNEXERCISED TODAY, KEPT ON PURPOSE. /album/ was deleted hours
   later the same day — the album is albums.oinam.com now, and the only surface
   left here is the home strip, which uses home-strip.html, not this file. So
   every current caller (/books/, /film/, /devices/) passes local filenames and
@@ -76,7 +76,7 @@
   `/static/album/https://…` bug gets reintroduced by someone who checked the
   other file. Three lines is a cheap way to keep them the same shape.
 
-  ⚠️ AND `relative_url` IS THE SECOND HALF OF IT. Skipping only the /static/
+  [WARNING] AND `relative_url` IS THE SECOND HALF OF IT. Skipping only the /static/
   prefix is not enough: handing an absolute URL to `relative_url` is a no-op
   today and a mangled src the moment a baseurl exists, which is exactly the
   trap documented for `url`. Both halves, or neither.
@@ -90,14 +90,14 @@
   the file lands and the page does not reflow as it loads. They are a ratio,
   not a rendered size — CSS sizes the image.
 
-  ⚠️ AND THEY DO NOT ENFORCE THE RATIO. album.scss sets `img { width: 100% }`
+  [WARNING] AND THEY DO NOT ENFORCE THE RATIO. album.scss sets `img { width: 100% }`
   with height auto, so a card renders at the file's NATURAL ratio and the
   attributes only reserve space. Measured 2026-08-01: /photos/ came out at 0.75
   (portrait) while `ratio: "4x3"` was passed, because the placeholder files are
   book covers. The `card-grid--*` class on the <ul> is what actually crops —
   see page.scss. Change the class, not these numbers.
 
-  ⚠️ AND ON THE MASONRY GRID THEY RESERVE NOTHING AT ALL, WHICH IS ACCEPTED.
+  [WARNING] AND ON THE MASONRY GRID THEY RESERVE NOTHING AT ALL, WHICH IS ACCEPTED.
   page.scss declares `aspect-ratio: auto` on masonry images, and because the
   initial value of aspect-ratio IS auto that reads like a no-op and is not — it
   cancels the UA rule that derives a ratio from these attributes. Measured in
@@ -150,7 +150,7 @@
     {%- endif -%}
     <li>
       {%- comment -%}
-        ⚠️ A URL-LESS ITEM RENDERS UNLINKED, not as an empty anchor. Without
+        [WARNING] A URL-LESS ITEM RENDERS UNLINKED, not as an empty anchor. Without
         this test an entry with no `url` emitted `<a href="">`, which is not a
         dead link — it is a link back to the CURRENT page, so it tabs, it
         announces as a link, and clicking it reloads. Album entries arrive
@@ -163,7 +163,7 @@
       {%- endif -%}
         <figure>
           {%- comment -%}
-            ⚠️ NO `img` → A TYPESET PLATE, NOT A BROKEN IMAGE. Without this test
+            [WARNING] NO `img` → A TYPESET PLATE, NOT A BROKEN IMAGE. Without this test
             an entry with no `img` resolved to `/static/<dir>/` — the folder,
             not a file — and rendered the browser's broken-image glyph with the
             alt text beside it. Brajeshwar 2026-08-04: "I want to start adding
@@ -175,7 +175,7 @@
             by the cover with no other change. The plate draws a plain bound
             board in CSS — see _sass/bookplate.scss for what and why.
 
-            ⚠️ aria-hidden, AND IT RELIES ON THE CAPTION. The plate prints the
+            [WARNING] aria-hidden, AND IT RELIES ON THE CAPTION. The plate prints the
             title, and the <figcaption> below prints it again; hiding the plate
             from assistive tech is what stops the link announcing it twice. The
             consequence is that a caption-less call would leave an img-less

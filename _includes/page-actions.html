@@ -18,7 +18,7 @@
       pdf    a real PDF of this page; when set, the bar ends in a PDF link
              (e.g. /cv/: `pdf: /static/pdf/brajeshwar-oinam.pdf`)
 
-  ⚠️ THERE IS NO PRINT BUTTON, AND NO `print` OR `pdf` INCLUDE PARAMETER, since
+  [WARNING] THERE IS NO PRINT BUTTON, AND NO `print` OR `pdf` INCLUDE PARAMETER, since
   2026-10-31. The bar had a Print button (window.print(), and a `print=false`
   parameter that posts used to drop it) which existed only on /cv/; the PDF link
   replaced it there, and the button, page-actions.js, and icons/print.svg went
@@ -29,38 +29,38 @@
   On a post that is literally all it takes; `kind="post"` only improves the
   wording of the prompt.
 
-  ⚠️ THE .md TWIN IS THE WHOLE MECHANISM. Every link here points at
+  [WARNING] THE .md TWIN IS THE WHOLE MECHANISM. Every link here points at
   `<url>.md`, the plain-text twin that scripts/build-agent-markdown.mjs writes
   for every post and page ("append .md to any page URL" — see _docs/agents.md).
   The AI links do not upload anything or embed the page; they open a new chat
   pre-filled with a prompt asking the model to READ that URL. That is why the
   twin has to exist and has to be public.
 
-  ⚠️ THE URL EXPRESSION IS COPIED FROM _layouts/default.html, which emits the
+  [WARNING] THE URL EXPRESSION IS COPIED FROM _layouts/default.html, which emits the
   <link rel="alternate" type="text/markdown"> for the same file. The two must
   agree, so they are the same three filters: append a sentinel, drop the
   trailing slash with it, then append .md. /cv/ -> /cv.md. Change one, change
   both — a mismatch here is a link to a 404 that nothing else would catch.
 
-  ⚠️ THE TWINS ARE BUILT IN CI ONLY. `jekyll serve` never runs that script, so
+  [WARNING] THE TWINS ARE BUILT IN CI ONLY. `jekyll serve` never runs that script, so
   under a local server every link in this bar 404s. That is the same pattern as
   the esbuild and hash-assets steps — but those are invisible to a reader and
   this is a visible link, so it is worth knowing before reporting it as broken.
   Do not add a local build step for it; run `node scripts/build-agent-markdown.mjs`
   after a build if you need to check them.
 
-  ⚠️ THE AI TARGETS ARE ICONS NOW (2026-08-09: "replace OpenAI and Claude with
+  [WARNING] THE AI TARGETS ARE ICONS NOW (2026-08-09: "replace OpenAI and Claude with
   Icons too"). They shipped one round as word marks, on the reading that his
   original spec wrote "Icon:" only against Markdown and PDF. He wanted icons
   throughout.
 
-  ⚠️ icons/openai.svg AND icons/claude.svg ARE HAND-DRAWN APPROXIMATIONS, not
+  [WARNING] icons/openai.svg AND icons/claude.svg ARE HAND-DRAWN APPROXIMATIONS, not
   the official marks — nothing in this repo may fetch a third-party asset at
   build time. If the real marks are wanted, drop the official SVGs in over
   these two files: nothing else changes, since the include references them by
   name and the accessible label comes from aria-label, not the artwork.
 
-  ⚠️ THE OPENAI ONE IS THREE ROTATED STADIUMS, redrawn 2026-08-09 because the
+  [WARNING] THE OPENAI ONE IS THREE ROTATED STADIUMS, redrawn 2026-08-09 because the
   first attempt "don't really look like one" — it was a hexagon with spokes and
   read as a 3D box. Three rounded bars at 0/60/120 degrees give the six-lobed
   knot with a hexagonal hole, which is the mark's actual silhouette.
@@ -85,13 +85,13 @@
 {%- assign pa_md_abs = pa_md | absolute_url -%}
 {%- capture pa_prompt -%}Read {{ pa_md_abs }} — I have questions about this {{ pa_kind }}{% if pa_title %} ("{{ pa_title }}"){% endif %}.{%- endcapture -%}
 {%- comment -%}
-  ⚠️ url_encode, NOT uri_escape. uri_escape leaves the reserved characters
+  [WARNING] url_encode, NOT uri_escape. uri_escape leaves the reserved characters
   alone, so the URL inside the prompt kept its `://` — legal in a query string,
   but it makes the whole q= value depend on the receiving site parsing a bare
   URL inside a parameter. url_encode percent-encodes everything, which is what
   the reference bar at ovellum.oss.oinam.com sends.
 
-  ⚠️ NO `target="_blank"` ON THE TWO OFF-SITE BUTTONS, since 2026-09-01: "let's
+  [WARNING] NO `target="_blank"` ON THE TWO OFF-SITE BUTTONS, since 2026-09-01: "let's
   avoid target=_blank everywhere." These were the LAST two forced tabs on the
   site — 2,922 anchors, two per post — and they were the strongest case for
   keeping one, because handing a page to ChatGPT or Claude is an aside rather
@@ -127,7 +127,7 @@
 
   {%- if page.pdf -%}
   {%- comment -%}
-    ⚠️ A PDF LINK, NOT A PRINT BUTTON, WHEREVER A REAL PDF EXISTS (2026-10-31).
+    [WARNING] A PDF LINK, NOT A PRINT BUTTON, WHEREVER A REAL PDF EXISTS (2026-10-31).
     His question: "Should the Print not just print exactly as the PDF? If not
     and we do not want to risk it, replace the print with a PDF icon instead
     and link to this latest one."
@@ -143,14 +143,14 @@
     So the document icon is back, and this time it keeps its promise: it is
     an ordinary link to a file that exists, and needs no JavaScript.
 
-    ⚠️ THE PRINT BUTTON IT REPLACED IS GONE, NOT JUST HIDDEN. It was only ever
+    [WARNING] THE PRINT BUTTON IT REPLACED IS GONE, NOT JUST HIDDEN. It was only ever
     on /cv/, so once this link took its place page-actions.js was referenced
     by no page — and scripts/hash-assets.mjs FAILS THE BUILD on a hashed asset
     nothing references. That is what the first deploy of this link hit. The
     reader's own Print command still works everywhere, styled by
     assets/print.css.
 
-    ⚠️ The PDF is STATIC (`make cv-pdf`, then commit). This link is only as
+    [WARNING] The PDF is STATIC (`make cv-pdf`, then commit). This link is only as
     current as the last time that was run.
   {%- endcomment -%}
   <a class="icon-button page-actions__btn" href="{{ page.pdf | relative_url }}"

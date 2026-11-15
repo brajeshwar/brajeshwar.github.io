@@ -83,7 +83,7 @@
    2. `wght` CLAMPED TO 200:700. The site uses 200 (--font-weight-light),
       400 (body), 600 (--font-weight-bold) and 700 (<strong>'s UA default
       resolves 400→700). Nothing reaches past 700; those deltas are gone.
-      ⚠️ If a new weight token ever exceeds 700, re-subset with a wider
+      [WARNING] If a new weight token ever exceeds 700, re-subset with a wider
       clamp or the browser will flatten it to 700.
    3. Subset to the same unicode set as Geist, with pyftsubset's DEFAULT
       layout features rather than Geist's `--layout-features='*'` — the
@@ -152,13 +152,13 @@
    ONE line in config.css — point [data-font="serif"] back at
    "Libre Baskerville" — and everything below simply wakes up.
 
-   ⚠️ Do NOT put both serifs in one stack ("Source Serif 4", "Libre
+   [WARNING] Do NOT put both serifs in one stack ("Source Serif 4", "Libre
    Baskerville", serif): while the first downloads, the browser renders the
    interim in the NEXT family that matches — which would trigger a second
    download and ship both fonts to every Serif reader. One family per
    option, system stack behind it.
 
-   ⚠️ These declared `U+000-5FF` until 2026-07-27, and that was a real bug,
+   [WARNING] These declared `U+000-5FF` until 2026-07-27, and that was a real bug,
    not a tidy-up. The files DO contain ’ “ ” – — • … — every one of them above
    U+05FF, so the range forbade the browser from using this font for exactly
    the characters that carry a serif's voice. A reader on Serif got Libre
@@ -310,7 +310,7 @@
    built for reading on screens the way ink sits on paper. It replaces the
    hand-rolled warm ramp that was here before.
 
-   ⚠️ HEX, not oklch, and deliberately so — this is the only palette in the
+   [WARNING] HEX, not oklch, and deliberately so — this is the only palette in the
    file written that way. These are upstream's published values, copied
    verbatim from kepano/flexoki `css/flexoki.css`, and the point is that they
    can be diffed against it. Converting to oklch would round every one of them
@@ -431,7 +431,7 @@
   --color-surface: var(--color-gray-900); /* base-900         */
   --color-bg-muted: var(--color-gray-900);
   --color-code-bg: var(--color-gray-900); /* NOT gray-950 — that is the page */
-  /* ⚠️ Raised one step each 2026-08-01, which DEPARTS from kepano's Flexoki
+  /* [WARNING] Raised one step each 2026-08-01, which DEPARTS from kepano's Flexoki
      docs mapping quoted above (text-1 → base-200, text-2 → base-500). That
      mapping is still the reference for everything else in this block; these
      three are a deliberate override for legibility, not a mistake to correct
@@ -553,7 +553,7 @@
   /* The hover wash for a thumbnail or a toc row. Added 2026-08-01: "increase
      the color accent one value more."
 
-     ⚠️ It has to be a MIX, not the next token along, because there is no next
+     [WARNING] It has to be a MIX, not the next token along, because there is no next
      token: --bg-color-low and --bg-color are both --color-bg-muted (identical
      values, so stepping between them changes nothing) and the one after,
      --bg-color-high, is --color-primary — near-white in dark mode, which would
@@ -569,7 +569,7 @@
      honest: a separator should out-read a hover state. */
   --bg-color-hover: color-mix(in oklch, var(--color-bg-muted) 80%, var(--color-fg) 20%);
 
-  /* ⚠️ THE ONE TOKEN HERE THAT DOES NOT FLIP WITH THE THEME, and that is the
+  /* [WARNING] THE ONE TOKEN HERE THAT DOES NOT FLIP WITH THE THEME, and that is the
      entire point of it. It is the plate a BRAND LOGO sits on, on /own/.
 
      Brajeshwar, 2026-08-07: "it is OK to keep their original branding color
@@ -619,10 +619,10 @@
      lines that bound the page, and the next person changing them should not
      have to reason about whether a focus outline shares the value.
 
-     ⚠️ THREE USERS: chrome.scss's header border-bottom, its footer border-top,
+     [WARNING] THREE USERS: chrome.scss's header border-bottom, its footer border-top,
      and the timeline dot's border in timeline.scss.
 
-     ⚠️ THIS COUNT CHANGED THREE TIMES ON 2026-08-09 and the history is the
+     [WARNING] THIS COUNT CHANGED THREE TIMES ON 2026-08-09 and the history is the
      useful part. The timeline SPINE was added as a third user, then removed
      when it moved to --border-color-high; then the timeline DOT's border
      arrived here, at his ask to "standardize on these values". The dot earns

@@ -33,7 +33,7 @@ title: Brajeshwar Oinam
      captions = true %}
 
   {%- comment -%}
-    ⚠️ NO `reverse`, SINCE 2026-09-01 — and its absence is the whole ordering
+    [WARNING] NO `reverse`, SINCE 2026-09-01 — and its absence is the whole ordering
     rule now. _data/albums.yaml is generated from albums.oinam.com's feed,
     which arrives NEWEST FIRST; the curated _data/album.yaml it replaced was
     sorted oldest-first by filename, so this line reversed it to put the newest
@@ -48,7 +48,7 @@ title: Brajeshwar Oinam
     place, and is still linked from the footer.
   {%- endcomment -%}
   {%- comment -%}
-    ⚠️ NOTHING HERE FORCES A NEW TAB, and it took three tries to get there.
+    [WARNING] NOTHING HERE FORCES A NEW TAB, and it took three tries to get there.
     The album links ran through a shared window name (`_oinam-albums`, then
     `_oinam`) so they would reuse one tab, then `_blank`, and now no `target` at
     all: "I don't want to break convention and force a target=_blank." The ↗
@@ -56,14 +56,14 @@ title: Brajeshwar Oinam
     opens. _includes/home-strip.html carries the measurement that closed the
     named-window idea, so nobody re-derives it.
 
-    ⚠️ `decorative` PUTS `alt=""` ON EVERY THUMBNAIL. These photographs carry no
+    [WARNING] `decorative` PUTS `alt=""` ON EVERY THUMBNAIL. These photographs carry no
     meaning the page needs — the link is the point — and their `title` is the
     file's own name for all but a couple of items, so the include's usual
     fall-back-to-title would read "London — IMG_9018.jpeg" aloud. The Books
     shelf above passes no flag and still uses its titles, which are real.
 
 
-    ⚠️ ONE FEWER PHOTO THAN TILES (2026-09-01). `home_album_count` is the number
+    [WARNING] ONE FEWER PHOTO THAN TILES (2026-09-01). `home_album_count` is the number
     of TILES in the row, and the last of them is the "All Albums" button, not a
     picture — "Replace the 13th item with a big button". So the slice takes
     twelve and home-strip.html supplies the thirteenth. (The button read "View

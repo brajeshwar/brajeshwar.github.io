@@ -109,7 +109,7 @@ main {
    Widen --measure if the lines should be longer; do not widen this by moving
    the class back up onto `main`, or the two-widths problem returns.
 
-   ⚠️ Moving this class off `main` broke two things that were scoped to
+   [WARNING] Moving this class off `main` broke two things that were scoped to
    `.container-ideal article` — sidenotes.js's selector and the sidenote CSS
    below. Both were repointed at `article.post, .container-ideal`. If this
    class moves again, re-check those. */
@@ -154,7 +154,7 @@ main {
                       losing it silently is the pattern this list exists for.
      figcaption, .sidenote, .post time — labels about content, not content
 
-   ⚠️ Add to this list when adding a control inside `main`. The failure is
+   [WARNING] Add to this list when adding a control inside `main`. The failure is
    silent: it only shows for readers who chose Serif or Sans-Serif, which is
    not the default, so it will not appear in casual checking. */
 header,
@@ -189,7 +189,7 @@ kbd {
   max-width: 100%;
 }
 
-/* ⚠️ NO `height` HERE, AND THAT IS A FIX, NOT AN OMISSION (2026-08-05).
+/* [WARNING] NO `height` HERE, AND THAT IS A FIX, NOT AN OMISSION (2026-08-05).
    This rule used to read `height: auto; width: 100%` and the `height: auto` was
    quietly fatal: an <audio> element's visible size comes from its shadow-DOM
    control strip, which the UA stylesheet sizes explicitly (~54px in Chrome).
@@ -205,7 +205,7 @@ kbd {
    /2007/podcast-interview-with-marissa-mayer-of-google/,
    /2009/angry-iphone-ringtone/) and nobody could play any of them.
 
-   ⚠️ This is why the sibling rule above lists img/video/iframe and NOT audio.
+   [WARNING] This is why the sibling rule above lists img/video/iframe and NOT audio.
    For those, `height: auto` is doing real work — it undoes an intrinsic or
    attribute height so `max-width: 100%` can scale them. Audio has no intrinsic
    size to undo; it only has controls, and `auto` erases them. Do not "tidy" it
@@ -292,7 +292,7 @@ h1 {
    post title and a page title are the same element wearing the same
    class — there is no second rule to keep in step.
 
-   ⚠️ CONDENSED IS TRACKING, NOT A CONDENSED CUT, and it has to be.
+   [WARNING] CONDENSED IS TRACKING, NOT A CONDENSED CUT, and it has to be.
    Neither self-hosted family carries a width axis — Geist ships
    `font-weight: 100 900` and Source Serif 4 `200 700`, and there is no
    `wdth` in either — so `font-stretch: condensed` would compute and
@@ -314,7 +314,7 @@ h1 {
   text-wrap: balance;
 }
 
-/* ⚠️ THE SERIF READER GETS A HEAVIER TITLE, on purpose.
+/* [WARNING] THE SERIF READER GETS A HEAVIER TITLE, on purpose.
    Brajeshwar, same message: "If we are thinning it, remember to see how
    it looks with serif fonts - thin serif fonts don't really look
    great." Right, and the numbers agree: Source Serif 4's variable font
@@ -341,7 +341,7 @@ h1 {
    shelf, a grid, a list. The word marks the column rather than heading a piece
    of writing, which is why it can afford to be huge and nearly invisible.
 
-   ⚠️ BOTH CLASSES, AND THAT IS THE WHOLE FALLBACK MECHANISM (2026-08-08:
+   [WARNING] BOTH CLASSES, AND THAT IS THE WHOLE FALLBACK MECHANISM (2026-08-08:
    "Bring it back to the normal default title at the top for smaller screens
    that does not fit in the new spine style"). `.page-title` above is the
    default and applies at every width; everything in the media query below
@@ -353,14 +353,14 @@ h1 {
    which is why /books/, /film/, /album/ and the rest rendered with NO title at
    all on a laptop. That is the bug this replaces.
 
-   ⚠️ THE BREAKPOINT IS THE BAND PLUS THE SPINE, both sides. "I believe this
+   [WARNING] THE BREAKPOINT IS THE BAND PLUS THE SPINE, both sides. "I believe this
    will then apply to anything below (1024 + the spine width)px screens" —
    right, and the arithmetic is 1024 + 2 x (74px of word + 5px of gap) = 1182.
    1250 is used rather than 1182 because it clears that minimum AND is the
    number /archives/'s year strip already turns on, so that page changes shape
    once rather than twice. Below it the word would push past the left edge and
    give the whole page a horizontal scrollbar. */
-/* ⚠️ SPINE OR NOTHING, for the one page that cannot take the fallback.
+/* [WARNING] SPINE OR NOTHING, for the one page that cannot take the fallback.
    /archives/ opens with a sticky year strip pinned to the header rule, and a
    title above or below it fights for the same 40px (2026-08-08: "the yearly
    nav sticky of the /archives/ will complain. So, for that page, do not show
@@ -388,7 +388,7 @@ h1 {
     transform-origin: center;
     writing-mode: vertical-rl;
 
-    /* ⚠️ PINNED SANS, and it must not inherit. Brajeshwar, 2026-08-08:
+    /* [WARNING] PINNED SANS, and it must not inherit. Brajeshwar, 2026-08-08:
      "Remember, this is a UI element and should always be Sans-Serif."
      Right — the reader's font switch is for READING, and a marker down the
      gutter is chrome. Left to inherit, [data-font="serif"] would set it in
@@ -431,14 +431,14 @@ h6 {
    itself is focused, and pulled into the left margin so it never reflows the
    text it belongs to.
 
-   ⚠️ ONE COPY, HERE, SINCE 2026-07-27 — and it belongs in base for a reason
+   [WARNING] ONE COPY, HERE, SINCE 2026-07-27 — and it belongs in base for a reason
    worth not re-litigating. There used to be three (post.css, timeline.css,
    now.css), each carrying a comment explaining that the bundles "are never
    loaded together" so a shared rule would have to be promoted to base and
    charged to all ~1,456 pages. Every stylesheet ships to every page now, so
    that cost is imaginary and the three copies were just three copies.
 
-   ⚠️ AND THE POST COPY WAS ALREADY GONE. It was deleted by accident in
+   [WARNING] AND THE POST COPY WAS ALREADY GONE. It was deleted by accident in
    22cb3522 (the code/cards split, which removed 225 lines from post.css and
    moved this nowhere), so every post with an h2 or lower rendered a bare,
    permanently visible, underlined § jammed against the heading text — 453
@@ -461,7 +461,7 @@ h6 {
   position: relative;
 }
 
-/* ⚠️ SIZED IN rem, NOT INHERITED (2026-08-09: "The anchor icon is too verbose
+/* [WARNING] SIZED IN rem, NOT INHERITED (2026-08-09: "The anchor icon is too verbose
    now … cleaner and simpler, more subtle, smaller but still visible").
 
    It used to be a `§` at the heading's own size, so on an --step-2 entry it
@@ -474,13 +474,13 @@ h6 {
    h6; and positioned in rem rather than em so it sits at a constant distance
    from the text instead of drifting with the heading it belongs to.
 
-   ⚠️ The offsets MUST be rem. In `em` they resolve against the LINK's own
+   [WARNING] The offsets MUST be rem. In `em` they resolve against the LINK's own
    font-size, which this rule now sets — so `left: -1em` would put the anchor
    about 16px out on every heading, tucking it under an --step-2 title. */
 .headerlink {
   position: absolute;
 
-  /* ⚠️ top/bottom 0 IS THE HIT AREA — it stretches the link to the FULL height
+  /* [WARNING] top/bottom 0 IS THE HIT AREA — it stretches the link to the FULL height
      of the heading rather than the ~19px its own 16px line box would give
      (2026-08-09: "Make it easier to click by making its hit area the same as
      the height of the heading"). On an --step-2 entry that is 37.5px of target
@@ -492,7 +492,7 @@ h6 {
   top: 0;
   bottom: 0;
 
-  /* ⚠️ THE GAP IS A TOKEN, NOT A MAGIC OFFSET. `left` is derived so that the
+  /* [WARNING] THE GAP IS A TOKEN, NOT A MAGIC OFFSET. `left` is derived so that the
      box's right edge lands exactly --space-3xs (5px) short of the text, which
      is the site's smallest spacing step. Nudging this by eye is what produced
      4px, then 2px ("too close to the titles"), then this — a distance on the
@@ -538,7 +538,7 @@ h6 {
   }
 }
 
-/* ⚠️ :where() IS LOAD-BEARING HERE, added 2026-07-27. It makes these rules
+/* [WARNING] :where() IS LOAD-BEARING HERE, added 2026-07-27. It makes these rules
    zero-specificity, so ANY component rule beats them.
 
    Without it these are (0,1,1) — an element plus a pseudo-class — which is
@@ -566,13 +566,13 @@ h6 {
    easiest thing in the cascade to override, which is exactly what :where()
    says.
 
-   ⚠️ Only `color` was ever affected. Browsers restrict :visited styling to a
+   [WARNING] Only `color` was ever affected. Browsers restrict :visited styling to a
    short list of color properties, so the `text-decoration` here never leaked
    into visited state — and `.post-nav__link:hover` already re-states
    `text-decoration: none` at (0,2,0), so hover was covered too. The blast
    radius of this change is color, on the rules listed above, and nothing
    else: everything at (0,1,1) or higher already won and is untouched. */
-/* ⚠️ THE UNDERLINE IS THE WHOLE AFFORDANCE ON THIS SITE, so the gap between
+/* [WARNING] THE UNDERLINE IS THE WHOLE AFFORDANCE ON THIS SITE, so the gap between
    resting and hover has to be big enough to see. Brajeshwar 2026-08-01: "I see
    no difference between the normal hyperlink and hover/active."
 
@@ -594,7 +594,7 @@ h6 {
      default dark    1.42x → 3.40x      nord dark    1.25x → 2.78x
      eink    light   2.61x → 5.19x      eink dark    2.13x → 3.43x
 
-   ⚠️ HOVER GOES TO --text-color, NOT --color-accent, AND THAT WAS TESTED.
+   [WARNING] HOVER GOES TO --text-color, NOT --color-accent, AND THAT WAS TESTED.
    Brajeshwar suggested "perhaps use the darkest accent we have", which is the
    obvious move and fails on one palette: nord's accent is a mid-tone blue at
    3.31:1 light and 5.03:1 dark, so hovering would have moved 1.2x and 1.5x
@@ -683,7 +683,7 @@ blockquote {
 
   color: var(--text-muted);
 
-  /* ⚠️ --border-size-small is 3px; --border-size is 1px. The names are INVERTED
+  /* [WARNING] --border-size-small is 3px; --border-size is 1px. The names are INVERTED
      and there is no reading of "small" that makes 3 < 1. Everything else in the
      repo uses --border-size-small for focus outlines, where thicker is the
      point, so the value is right and only the name lies. This rule wants the
@@ -721,7 +721,7 @@ pre {
 
 /* Inline code, <mark>, and the .mark utility share one chip treatment.
 
-   ⚠️ `:not(pre) > code`, not `code.language-plaintext` (changed 2026-07-27).
+   [WARNING] `:not(pre) > code`, not `code.language-plaintext` (changed 2026-07-27).
    Kramdown only adds `class="language-plaintext"` while a syntax highlighter
    is active; with Rouge disabled it emits a bare `<code>`, and the old
    selector silently stopped matching — inline code lost its chip on every
@@ -959,7 +959,7 @@ figcaption {
    equally into BOTH margins — including the left one, which on this
    asymmetric layout is the page's alignment edge.
 
-   ⚠️ These now sit in the sidenote gutter. That is already handled:
+   [WARNING] These now sit in the sidenote gutter. That is already handled:
    sidenotes.js `collectObstacles()` looks for `.full, .large, .gallery`
    and pushes any overlapping note below them.
    ------------------------------------------------------------------ */
@@ -1036,11 +1036,11 @@ img.full {
    from inside any descendant of `main` — no viewport arithmetic against
    the article's own width, which is the dance styles.md §6 retired.
 
-   ⚠️ The anchor is the article sitting FLUSH on the band's left edge —
+   [WARNING] The anchor is the article sitting FLUSH on the band's left edge —
    margin-left 0 and no padding anywhere between `main` and the gallery.
    If articles ever gain inline padding, every gallery drifts by it.
 
-   ⚠️ `100vw` INCLUDES THE SCROLLBAR; the body does not. Below 1600px the
+   [WARNING] `100vw` INCLUDES THE SCROLLBAR; the body does not. Below 1600px the
    bleed is 100vw, so the box pokes half a scrollbar past each body edge
    and would hand the whole document a sideways scroll. The html/body clip
    at the end of this block absorbs it.
@@ -1119,7 +1119,7 @@ img.full {
   margin-inline: auto;
 }
 
-/* ⚠️ The counterweight to the bleed, without which every sub-1600px
+/* [WARNING] The counterweight to the bleed, without which every sub-1600px
    viewport scrolls sideways by a scrollbar's width. `clip` and never
    `hidden`, on BOTH html and body — `hidden` creates a scroll container,
    which becomes the scroll context for the sticky site header and pins it
@@ -1320,7 +1320,7 @@ sup[id^='fnref'].is-open a {
    headings go to a page here, so a reader had no reason to expect one of
    them to open a new tab. The mark is the warning that it will.
 
-   ⚠️ THE CLASS IS ON THE SVG ITSELF, in _includes/icons/external.svg, not on
+   [WARNING] THE CLASS IS ON THE SVG ITSELF, in _includes/icons/external.svg, not on
    a wrapper. Every other glyph is sized by an ancestor selector
    (`site-tools svg`, `.footer-social svg`) because each lives in exactly one
    place. This one is emitted in two — the footer nav and a strip heading —
@@ -1332,7 +1332,7 @@ sup[id^='fnref'].is-open a {
    0.72em lands it a shade under cap-height, which is the "subtle" this was
    asked for — it should be findable, not announced.
 
-   ⚠️ It is `aria-hidden` in the file, so it says NOTHING to a screen reader.
+   [WARNING] It is `aria-hidden` in the file, so it says NOTHING to a screen reader.
    That is deliberate and it is only half the job: the anchors that emit it
    carry `aria-label="… (opens in a new tab)"`, which is where the warning
    actually lives for anyone not looking at it. Emit this glyph WITHOUT that

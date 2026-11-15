@@ -25,25 +25,25 @@
   albums.oinam.com, books to posts here — and `relative_url` prepends the
   baseurl, so handing it an absolute URL is wrong the moment a baseurl exists.
 
-  ⚠️ `href` — THE HEADING LINK — TAKES THE SAME TEST, added 2026-09-01 when the
+  [WARNING] `href` — THE HEADING LINK — TAKES THE SAME TEST, added 2026-09-01 when the
   Albums heading started pointing at https://albums.oinam.com. It had been an
   unconditional `relative_url` because both callers were internal; an absolute
   URL through that filter is the same latent bug as above. It also wants the ↗
   every off-site link on this site now carries.
 
-  ⚠️ NO `target` AT ALL — AN OFF-SITE LINK OPENS WHERE THE READER SENT IT.
+  [WARNING] NO `target` AT ALL — AN OFF-SITE LINK OPENS WHERE THE READER SENT IT.
   2026-09-01: "I don't want to break convention and force a target=_blank."
   Forcing a new tab overrides a choice that belongs to the reader, who can ask
   for one with a modifier-click or a middle-click on any link. The ↗ tells them
   the link leaves the site so they can make that choice knowingly; it does not
   make it for them.
 
-  ⚠️ AND WITH NO TARGET, `rel="noopener"` IS DEAD WEIGHT. It only means anything
+  [WARNING] AND WITH NO TARGET, `rel="noopener"` IS DEAD WEIGHT. It only means anything
   when a new browsing context is created. There is none here, so it is gone
   rather than kept "to be safe" — an attribute that does nothing still has to be
   read and reasoned about by whoever comes next.
 
-  ⚠️ THE NAMED-WINDOW IDEA IS CLOSED, and the measurement is kept because it is
+  [WARNING] THE NAMED-WINDOW IDEA IS CLOSED, and the measurement is kept because it is
   not guessable from the markup. The idea was to give every off-site link ONE
   window name so they would share a tab instead of opening a dozen. It works —
   but a named target CANNOT carry `rel="noopener"`, because reuse finds the
@@ -56,17 +56,17 @@
 
   So it was reuse or noopener, never both — and `rel="noreferrer"` is no third
   option, it implies noopener. It went `_oinam-albums` -> `_oinam` -> `_blank`
-  -> nothing, in one afternoon. ⚠️ A grep over built HTML called every one of
+  -> nothing, in one afternoon. [WARNING] A grep over built HTML called every one of
   those states correct; only the browser saw the difference.
 
-  ⚠️ AN OFF-SITE HEADING IS MARKED TWICE, AND BOTH HALVES ARE REQUIRED. It gets
+  [WARNING] AN OFF-SITE HEADING IS MARKED TWICE, AND BOTH HALVES ARE REQUIRED. It gets
   the ↗ from icons/external.svg and an `aria-label` reading "… (external link)".
   The glyph is `aria-hidden`, so WITHOUT THE LABEL the fact that the link leaves
   the site would exist only for people who can see it. The label overrides the
   accessible name and still opens with the visible word ("Albums …"), which is
   what keeps voice control working.
 
-  ⚠️ The label says "external link" and not "opens in a new tab" — it said the
+  [WARNING] The label says "external link" and not "opens in a new tab" — it said the
   latter while a `target` was forced, and the moment that came off, the sentence
   became false. An aria-label that describes behaviour has to be re-read every
   time the behaviour changes.
@@ -81,27 +81,27 @@
   Slice rather than `contains "/"`, because a filename in a subfolder would
   contain one too.
 
-  ⚠️ THE "http" BRANCH ALSO SKIPS `relative_url`, and both halves matter — the
+  [WARNING] THE "http" BRANCH ALSO SKIPS `relative_url`, and both halves matter — the
   same fix, for the same reason, as _includes/card-grid.html. This strip reads
   _data/albums.yaml, generated from albums.oinam.com's feed, where every `img`
-  is an absolute media.oinam.com URL. ⚠️ And this file is now the ONLY caller
+  is an absolute media.oinam.com URL. [WARNING] And this file is now the ONLY caller
   that does — /album/ was deleted on 2026-09-01, so card-grid.html's copy of
   the branch is unexercised. It is kept there deliberately, so the two includes
   stay the same shape; do not delete it as dead code without reading the note
   in that file first.
 
-  ⚠️ ALT: `decorative` WINS OVER EVERYTHING, and the album strip passes it
+  [WARNING] ALT: `decorative` WINS OVER EVERYTHING, and the album strip passes it
   (2026-09-01: "remove alt from albums images"). Those thumbnails ship a bare
   `alt=""` — the HTML for "decorative, skip me" — because their `title` is the
   photograph's FILENAME ("London — IMG_9018.jpeg") on all but a couple of items,
   and the fallback below would read filenames aloud to a screen reader.
 
-  ⚠️ THAT IS WHY THE FLAG EXISTS RATHER THAN AN EMPTY `alt` IN THE DATA.
+  [WARNING] THAT IS WHY THE FLAG EXISTS RATHER THAN AN EMPTY `alt` IN THE DATA.
   _data/albums.yaml carried a scraped `alt` until 2026-09-01 and it was empty 48
   times in 50; the flag says the same thing once, in the caller, where it is a
   property of the SHELF rather than of every row.
 
-  ⚠️ AND THE ATTRIBUTE STILL SHIPS. `alt=""` is not the same as no alt: an <img>
+  [WARNING] AND THE ATTRIBUTE STILL SHIPS. `alt=""` is not the same as no alt: an <img>
   with none is invalid HTML and sends assistive tech to the filename in the src,
   which is the exact thing being avoided.
 
@@ -119,7 +119,7 @@
   announced as "single left-pointing angle quotation mark", which is not what
   anyone needs to hear.
 
-  ⚠️ NOT ul.item__cards. That class is shared with the album pages
+  [WARNING] NOT ul.item__cards. That class is shared with the album pages
   (/devices/, /film/, /music/) via album.scss, and reusing it here would have
   coupled this to three pages that want a wrapping grid, not a clipped single
   row.
@@ -173,7 +173,7 @@
       {%- endif -%}
       <li class="strip__item">
         {%- comment -%}
-          ⚠️ NO URL YET → a <span>, not an <a href="">. An empty href is not an
+          [WARNING] NO URL YET → a <span>, not an <a href="">. An empty href is not an
           inert link, it points at the CURRENT page: it takes tab focus, it
           announces as a link, and clicking it reloads the home page.
 
@@ -192,7 +192,7 @@
         {%- endif -%}
           <span class="strip__frame">
             {%- comment -%}
-              ⚠️ NO `img` → THE SAME CSS PLATE /books/ USES. This shelf reads
+              [WARNING] NO `img` → THE SAME CSS PLATE /books/ USES. This shelf reads
               site.data.books, so the moment a book is added without a cover
               picture — which is the point of the plate, 2026-08-04 — the home
               page would otherwise render a broken image inside the frame.
@@ -230,7 +230,7 @@
       </li>
       {%- endfor %}
       {%- comment -%}
-        ⚠️ THE LAST TILE IS A DOOR, NOT A PHOTOGRAPH (2026-09-01: "Replace the
+        [WARNING] THE LAST TILE IS A DOOR, NOT A PHOTOGRAPH (2026-09-01: "Replace the
         13th item with a big button (same size as the other items) that says
         'View More Albums' that links to albums.oinam.com").
 
@@ -245,7 +245,7 @@
         it inherits for free. Only the aspect-ratio is restated per kind, the
         same way .strip__img already is.
 
-        ⚠️ IT MUST STAY LAST, and strip-nav.js is the reason. That script
+        [WARNING] IT MUST STAY LAST, and strip-nav.js is the reason. That script
         measures `strip.querySelector('.strip__frame')` — the FIRST frame — to
         size the scroll buttons' backdrop. Moving this tile to the head would
         have it measure a button with no image in it.

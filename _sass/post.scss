@@ -33,7 +33,7 @@
    border-bottom" — AND THEN ONE MORE --border-size, so it rises over the rule
    itself rather than stopping under it.
 
-   ⚠️ THAT SECOND TERM IS NOT A NUDGE, it is exactly the border it hides
+   [WARNING] THAT SECOND TERM IS NOT A NUDGE, it is exactly the border it hides
    (2026-08-01). Brajeshwar: *"Since the border-bottom of the header is darker,
    when there are cover pictures for articles, I can sometimes see the line on
    top of the picture. Can we move up the picture -1px to cover that up."*
@@ -55,11 +55,11 @@
    box grows 1px upward and paints there; the image content does not budge.
    Verified by forcing the border red — fully covered, no sliver.
 
-   ⚠️ Do NOT overshoot to be safe. Anything more than one border width pulls
+   [WARNING] Do NOT overshoot to be safe. Anything more than one border width pulls
    the photo up into the header's own padding, where it paints over the header
    background instead of the rule.
 
-   ⚠️ Keep the FIRST term in step with the header's margin-bottom in
+   [WARNING] Keep the FIRST term in step with the header's margin-bottom in
    chrome.css. `.archive-strip` cancels the same margin and is deliberately NOT
    getting the second term: it is a tray of year links, not a picture, so the
    rule above it is the separator doing its job. The two are no longer the same
@@ -143,7 +143,7 @@ photo-cover__desc {
       real cover with `background-attachment: fixed` forced on — the corner
       clipped cleanly.
 
-      ⚠️ Do not expect to see `fixed` when you inspect this. base.css zeroes
+      [WARNING] Do not expect to see `fixed` when you inspect this. base.css zeroes
       it under `prefers-reduced-motion: reduce` (`background-attachment:
       initial !important`), so on a machine with Reduce Motion on the cover
       computes to `scroll`. The radius clips either way; it is the box that
@@ -209,7 +209,7 @@ photo-cover__desc {
   margin: 0;
 }
 
-/* ⚠️ A POST TITLE IS NOT UPPERCASED, and this is the only property of the
+/* [WARNING] A POST TITLE IS NOT UPPERCASED, and this is the only property of the
    shared treatment it opts out of (2026-08-08: "For posts, Let's not uppercase
    the titles, Let it be what is in the article's title").
 
@@ -227,7 +227,7 @@ photo-cover__desc {
   text-transform: none;
 }
 
-/* ⚠️ `font-weight: var(--font-weight)` USED TO BE IN THE RULE ABOVE and had
+/* [WARNING] `font-weight: var(--font-weight)` USED TO BE IN THE RULE ABOVE and had
    to go. post.css loads after base.css, so it beat the shared `.page-title`
    weight and post titles alone stayed at 400 while every page title went
    thin — the exact split the one-class treatment exists to prevent. The
@@ -289,7 +289,7 @@ photo-cover__desc {
    stayed at the measure, so the video overflowed its own figure and its caption
    lined up with neither. This fixes that rather than working around it.
 
-   ⚠️ NO GATE HERE, unlike the blockquote above — and the difference is the
+   [WARNING] NO GATE HERE, unlike the blockquote above — and the difference is the
    point. A blockquote near a sidenote had to stay narrow because nothing moves
    it. Wide media does not need to: sidenotes.js `collectObstacles()` already
    measures wide elements that protrude into the gutter and pushes overlapping
@@ -305,7 +305,7 @@ photo-cover__desc {
    it would make the 555px one NARROWER than it is today, a regression to a
    shipped post that nobody asked for.
 
-   ⚠️ `:not(.gallery)` is load-bearing (2026-08-02). base.scss bleeds a
+   [WARNING] `:not(.gallery)` is load-bearing (2026-08-02). base.scss bleeds a
    gallery PAST the band — min(100vw, 1600px), centered — and this rule
    loads after base at higher specificity, so without the exclusion it
    would quietly pull a figure.gallery back to 100cqi and pin it left.
@@ -330,7 +330,7 @@ photo-cover__desc {
    Brajeshwar asked for: "constrained on the left of the article while moving
    beyond the width of the readable article."
 
-   ⚠️ WHY THIS IS GATED ON :not(.has-sidenotes) — the gutter it grows into is
+   [WARNING] WHY THIS IS GATED ON :not(.has-sidenotes) — the gutter it grows into is
    the SIDENOTE gutter. `.sidenote` is `position: absolute; left: 100%` with a
    --sidenote-gap margin, measured off the article, so it sits in exactly the
    space a full-band quote wants. A widened blockquote does not push a sidenote

@@ -12,7 +12,7 @@
    number. Only --golden and --minor-third are referenced (via
    --scale / --scale-small below).
 
-   ⚠️ These are NOT free. An earlier note here claimed unused custom
+   [WARNING] These are NOT free. An earlier note here claimed unused custom
    properties cost nothing in the shipped CSS — that is wrong, and it
    was licensing dead weight. Comments are stripped by compression;
    DECLARATIONS ARE NOT. Every custom property below ships on all
@@ -184,7 +184,7 @@
      still stop at --body-width-max. */
   --body-width-full: 1600px;
 
-  /* ⚠️ SECOND spacing system — ratio-derived, predates the Utopia
+  /* [WARNING] SECOND spacing system — ratio-derived, predates the Utopia
      --space-3xs…2xl scale defined above. Both are live and both are
      used across components. They are NOT interchangeable:
        --space        ≈ 1.618rem   (ratio × 1rem, fixed)
@@ -296,7 +296,7 @@
    serif swap needed no migration either: the stored value is "serif", which
    now simply resolves to the new family.
 
-   ⚠️ One family per option, system stack behind it — never two custom fonts
+   [WARNING] One family per option, system stack behind it — never two custom fonts
    in one stack. While the first downloads (font-display: swap), the interim
    renders in the next matching family, which would trigger that family's
    download too and ship both fonts for one choice. */

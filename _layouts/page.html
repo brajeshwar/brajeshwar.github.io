@@ -51,7 +51,7 @@ layout: default
   Detected from the rendered content rather than a front-matter flag, so it
   cannot drift out of sync with whether the page really has footnotes.
 
-  ⚠️ `full: true` OPTS OUT, and /about/ is why (2026-08-08). That page is a
+  [WARNING] `full: true` OPTS OUT, and /about/ is why (2026-08-08). That page is a
   full-band timeline; adding ONE footnote example to it put `class="footnotes"`
   in the content, this condition fired, and the entire timeline collapsed from
   1024px to the 665px measure. Measured, not guessed — the entry's right edge
@@ -64,13 +64,13 @@ layout: default
   it" — it was a dead front-matter key from the page/page-full merge, and this
   gives it a job again rather than inventing a second flag.
 
-  ⚠️ The test is inline in the `if`, NOT hoisted into an `assign`. Liquid's
+  [WARNING] The test is inline in the `if`, NOT hoisted into an `assign`. Liquid's
   `assign` takes a value or a filtered value — it does NOT evaluate operators
   like `contains`, and it fails silently: `assign x = content contains '…'`
   produced a truthy value on EVERY page, so all 22 got the class. Only `if`,
   `unless` and `case` evaluate `contains`.
 
-  ⚠️ Trade-off: such a page is measure-width throughout, so a grid or gallery
+  [WARNING] Trade-off: such a page is measure-width throughout, so a grid or gallery
   on it will not span the band. Prose pages look identical either way (the text
   is capped at the measure regardless), and both current users are pure prose.
   A page that needs both wants a .container-ideal wrapper around just the
@@ -102,7 +102,7 @@ layout: default
      Policy` and `# Terms of Use`. Both trip the content test and both still
      want a title, so `force_title: true` or any `title_style:` overrides it.
 
-     ⚠️ That means those pages ship MORE THAN ONE h1, which is his call and
+     [WARNING] That means those pages ship MORE THAN ONE h1, which is his call and
      worth knowing: the fix that keeps the markup honest is `## YYYY` in
      now/*.md, and he has said he prefers the single hash for editing.
 
@@ -126,7 +126,7 @@ layout: default
      Opt in with `page_actions: true` in front matter. It works on any page, and
      on posts, without further change.
 
-     ⚠️ The wrapper only appears WITH the bar. Without it the h1 stays a bare
+     [WARNING] The wrapper only appears WITH the bar. Without it the h1 stays a bare
      sibling exactly as before, so none of the ~1,470 pages that do not opt in
      gain a div or a flex context.
 {%- endcomment -%}

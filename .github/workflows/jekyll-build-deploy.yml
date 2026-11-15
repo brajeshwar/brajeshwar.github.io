@@ -92,7 +92,7 @@ jobs:
       # _data/albums.yaml, so it MUST run before jekyll build — Jekyll reads
       # _data once, at the start.
       #
-      # ⚠️ `ruby`, NOT `bundle exec ruby`. The script is stdlib-only, which is
+      # [WARNING] `ruby`, NOT `bundle exec ruby`. The script is stdlib-only, which is
       # why it needs no new dependency — but rexml is a BUNDLED GEM in Ruby
       # 3.3, and bundler hides bundled gems the Gemfile does not name. Under
       # `bundle exec` this fails at `require "rexml/document"`.

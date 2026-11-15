@@ -1,7 +1,7 @@
 /* ============================================================
    Search — the /search/ page, via `style: page-search` on <main>.
    ------------------------------------------------------------
-   ⚠️ THIS FILE LOST ~11 KB ON 2026-08-09 AND THAT IS THE HEADLINE.
+   [WARNING] THIS FILE LOST ~11 KB ON 2026-08-09 AND THAT IS THE HEADLINE.
    It was 11,519 bytes of `#search .pagefind-ui__*` rules theming Pagefind's
    DEFAULT UI. /search/ no longer runs the Default UI — it runs the Modular UI,
    the same component as the header's ⌘K palette — so every one of those
@@ -23,7 +23,7 @@
       `.pagefind-ui__result.svelte-4xnkmf.svelte-4xnkmf` is (0,3,0) and beat any
       plain class we wrote — and its <link> sat in the page body, so it won
       source-order ties too. Everything had to be scoped under `#search` to
-      apply at all. ⚠️ THE MODULAR UI DOES NOT DO THIS: its classes are flat and
+      apply at all. [WARNING] THE MODULAR UI DOES NOT DO THIS: its classes are flat and
       unhashed, which is why the rules below need no ID scoping.
 
    2. On 2026-07-27, with the whole file REMOVED, /search/ rendered identically
@@ -44,7 +44,7 @@
    result excerpt is prose, which wants the measure like all the other prose on
    this site.
 
-   ⚠️ ONE BLOCK PER SELECTOR — the file this replaced carried eight selectors
+   [WARNING] ONE BLOCK PER SELECTOR — the file this replaced carried eight selectors
    declared twice each, the first copy losing silently on source order. The
    Pagefind variables below belong to this same rule for that reason, not to a
    second `.page-search__ui` block further down.

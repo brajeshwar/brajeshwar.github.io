@@ -68,7 +68,7 @@
 }
 
 /* ---- A card grid on a footnoted page --------------------------
-   ⚠️ HISTORICAL AS OF 2026-08-01: /books/ no longer has footnotes — its prose
+   [WARNING] HISTORICAL AS OF 2026-08-01: /books/ no longer has footnotes — its prose
    moved to _backup/books-BCK.md — so that page's article is plain `.page` at
    the full band now and this rule is a no-op there. It is kept because the
    mechanism is real and the next footnoted page with a gallery will need it,
@@ -91,7 +91,7 @@
    is left-aligned in the band, so a child at the band's width starts on the
    same edge and simply runs to the far side.
 
-   ⚠️ Anchored to `.album`, not to `.item__cards`. The grid may want the band;
+   [WARNING] Anchored to `.album`, not to `.item__cards`. The grid may want the band;
    an arbitrary `<ul>` in prose must not. `.album` is the deliberate opt-in a
    page writes around a gallery, and it is what album.scss already keys its
    card sizing off, so one class means one decision.
@@ -112,7 +112,7 @@
 
    `object-fit: cover` fills the frame and center-crops the overflow.
 
-   ⚠️ THE COST IS PORTRAIT PHOTOS. A vertical shot in a 4:3 landscape frame
+   [WARNING] THE COST IS PORTRAIT PHOTOS. A vertical shot in a 4:3 landscape frame
    loses its top and bottom, which on a photo page is a real loss rather than a
    cosmetic one. Two ways out if that starts to hurt, both one line:
      · `1:1` — crops portrait and landscape equally rather than punishing one
@@ -154,7 +154,7 @@
    margin-bottom. `column-fill: balance` is the default and is what keeps the
    columns near-equal height rather than filling the first one completely.
 
-   ⚠️ THE REAL TRADE-OFF IS READING ORDER, and it is the reason to reach for
+   [WARNING] THE REAL TRADE-OFF IS READING ORDER, and it is the reason to reach for
    JavaScript if it ever matters. Columns flow top-to-bottom and THEN across:
    with three columns, items 1-2-3 run down the left, not across the top. For
    an album, which is browsed rather than read in sequence, that is fine and
@@ -163,11 +163,11 @@
    fixes it. That is the one case where a JS masonry earns its keep; nothing
    else here does.
 
-   ⚠️ The ratio is deliberately unset, so `aspect-ratio` from the card-grid--*
+   [WARNING] The ratio is deliberately unset, so `aspect-ratio` from the card-grid--*
    rules must NOT apply. That is why this is a separate class rather than a
    modifier stacked on top of one.
 
-   ⚠️ AND THE SELECTOR NEEDS TWO CLASSES. cards.scss writes `ul.item__cards`,
+   [WARNING] AND THE SELECTOR NEEDS TWO CLASSES. cards.scss writes `ul.item__cards`,
    which is (0,1,1) — an element plus a class — so a lone `.card-grid--masonry`
    at (0,1,0) loses and `display: grid` survives. The failure is quiet and
    confusing: `columns` still computes (measured column-width 224px, exactly
@@ -188,7 +188,7 @@
   -webkit-column-break-inside: avoid;
 }
 
-/* ⚠️ `aspect-ratio: auto` IS NOT THE NO-OP IT LOOKS LIKE — AND IT STAYS ANYWAY.
+/* [WARNING] `aspect-ratio: auto` IS NOT THE NO-OP IT LOOKS LIKE — AND IT STAYS ANYWAY.
    The initial value of `aspect-ratio` IS `auto`, so this reads as a harmless
    restatement. It is not: an AUTHOR declaration of `auto` cancels the UA rule
    that derives a ratio from an <img>'s width/height attributes, so with it
@@ -204,7 +204,7 @@
    the images land and Safari does not — so /album/'s first row is flush in
    Chrome and uneven in Safari.
 
-   ⚠️ DO NOT "FIX" THIS BY DELETING THE LINE. On its own that is WORSE than
+   [WARNING] DO NOT "FIX" THIS BY DELETING THE LINE. On its own that is WORSE than
    leaving it: with no per-item dimensions in _data/album.yaml, card-grid.html
    falls back to a 225x300 hint, so every card would reserve a 3:4 box —
    326px tall — and visibly jump to its true height on load, in every browser.
@@ -229,7 +229,7 @@
    into columns with at-least 3 columns at the current body width at the highest
    1024px."
 
-   ⚠️ `columns: 18rem 3`, NOT `column-count: 3`. The shorthand carries a width
+   [WARNING] `columns: 18rem 3`, NOT `column-count: 3`. The shorthand carries a width
    AND a count, and the count acts as a CEILING: at most three columns, each at
    least 18rem (288px). At the 1024px band that is exactly three; at 768px it
    falls to two and on a phone to one, with no breakpoint written. A bare
@@ -249,7 +249,7 @@
   column-gap: var(--space-m);
   margin-block: var(--space-s) var(--space-l);
 
-  /* ⚠️ `outside` WITH padding, not `list-style-position: inside`. The default
+  /* [WARNING] `outside` WITH padding, not `list-style-position: inside`. The default
      `outside` puts the marker in the element's left padding, and with
      `padding: 0` that is outside the column box, where it gets clipped — the
      usual reason people reach for `inside` in a multi-column list. `inside`
@@ -267,7 +267,7 @@
   margin-block-end: var(--space-2xs);
 }
 
-/* ⚠️ ONE STEP DOWN, AND IT TAKES TWO DECLARATIONS (2026-08-01: "decrease the
+/* [WARNING] ONE STEP DOWN, AND IT TAKES TWO DECLARATIONS (2026-08-01: "decrease the
    font-size one step below for this section"). Setting `font-size` on the
    section moves the list, because list text inherits — but NOT the heading:
    base.scss gives `h2 { font-size: var(--step-2) }`, an absolute value that

@@ -13,7 +13,7 @@
    `.strip` class, because every stylesheet applies to every page now — there
    is no layout gate. Nothing here may match a bare tag.
 
-   ⚠️ ul.item__cards is NO LONGER USED by this page. It is shared with the
+   [WARNING] ul.item__cards is NO LONGER USED by this page. It is shared with the
    album pages through album.scss (/devices/, /film/, /music/, /wear/), and
    this page's strip wants a clipped single row where those want a wrapping
    grid. The old home-books rules that styled it are gone; cards.scss is
@@ -64,7 +64,7 @@ home-container home-aside {
    800px the reading column is narrower than the thing beside it. */
 @media only screen and (max-width: bp.$medium) {
   home-container {
-    /* ⚠️ `minmax(0, 1fr)`, NEVER a bare `1fr` — the same trap as the two-column
+    /* [WARNING] `minmax(0, 1fr)`, NEVER a bare `1fr` — the same trap as the two-column
        rule above, and it broke the whole page for four days.
 
        `1fr` is shorthand for `minmax(auto, 1fr)`, and that automatic minimum
@@ -178,7 +178,7 @@ home-container home-intro p {
   gap: var(--space-2xs);
 
   padding: var(--space-3xs) var(--space-2xs);
-  /* ⚠️ `min()` against the page's own side gutter, not a flat negative margin.
+  /* [WARNING] `min()` against the page's own side gutter, not a flat negative margin.
      A flat -10px is fine while `main` sits inside a 1512px viewport with 244px
      to spare on each side; at 320px the band is 96% of the viewport, the
      gutter is 6.4px, and the highlight overflowed the page by 3.6px on every
@@ -216,7 +216,7 @@ home-container home-intro p {
   text-decoration: none;
 }
 
-/* ⚠️ TITLES ARE TRUNCATED, NOT WRAPPED (2026-07-31). Brajeshwar: "For longer
+/* [WARNING] TITLES ARE TRUNCATED, NOT WRAPPED (2026-07-31). Brajeshwar: "For longer
    article titles, let's trim it … so that visually, there are always good
    enough dots to separate the titles from the date."
 
@@ -248,7 +248,7 @@ home-container home-intro p {
   font-weight: var(--font-weight-light);
 }
 
-/* ⚠️ A gradient, not `border-bottom: 1px dotted`. That was the first attempt
+/* [WARNING] A gradient, not `border-bottom: 1px dotted`. That was the first attempt
    and it does not survive contact with this site: `--border-color` is a 10%
    alpha, and a 1px dotted border on a 2x display renders sub-pixel dots that
    antialias into a continuous hairline. Measured on the built page — the
@@ -272,7 +272,7 @@ home-container home-intro p {
   /* leave room for the dot row and lift it off the text baseline */
   height: 0.85em;
 
-  /* ⚠️ SMALLER, TIGHTER, CRISPER (2026-08-01). Brajeshwar: "I want the dots in
+  /* [WARNING] SMALLER, TIGHTER, CRISPER (2026-08-01). Brajeshwar: "I want the dots in
      the articles list to be clearer, smaller, and more concentrated … without
      introducing different artifacts." Same technique as before — one repeating
      radial-gradient — so nothing new can render differently per engine. Three
@@ -331,7 +331,7 @@ home-container home-intro p {
   color: var(--text-color-lower);
 }
 
-/* ⚠️ No underline on hover any more — the row background IS the hover state
+/* [WARNING] No underline on hover any more — the row background IS the hover state
    (2026-07-31). An underline plus a highlight plus a leader is three signals
    for one affordance, and the underline was the one that fought the leader
    dots sitting a few pixels above it. */
@@ -437,7 +437,7 @@ home-support li {
    Brajeshwar 2026-07-31: "thumbnails that spans the width of the browser
    viewport. The title is within our body width."
 
-   ⚠️ THIS WIDENS AN EXISTING EXCEPTION rather than inventing one.
+   [WARNING] THIS WIDENS AN EXISTING EXCEPTION rather than inventing one.
    `--body-width-full` (1600px) was never deleted — it was removed and restored
    the same day, 2026-07-27, for `<photo-cover>`, whose comment in config.scss
    said "Nothing else may use this". These two strips are now the second and
@@ -452,7 +452,7 @@ home-support li {
    the one alignment the whole site is built on. It runs off the right edge,
    which is the point.
 
-   ⚠️ `100vw` INCLUDES THE SCROLLBAR; the band does not. Below 1600px the bleed
+   [WARNING] `100vw` INCLUDES THE SCROLLBAR; the band does not. Below 1600px the bleed
    resolves to `100vw`, so the strip is a scrollbar wider than the page can
    show, and on its own that gives the whole document a horizontal scrollbar.
    `overflow-x: clip` on the body absorbs it — see the `body:has(home-container)`
@@ -568,7 +568,7 @@ home-support li {
      shelf sits in the middle of the bleed rather than hugging one end, and a
      long one clips evenly at both edges instead of only the right.
 
-     ⚠️ This replaces a `padding-inline-start` that pinned the first thumbnail
+     [WARNING] This replaces a `padding-inline-start` that pinned the first thumbnail
      to the band's left edge, so these strips are now the ONE place on the site
      that does not start on that line. That is deliberate and was asked for:
      the heading above still sits in the band, so the alignment the rest of the
@@ -576,7 +576,7 @@ home-support li {
      centered object rather than a column that overflows. */
   width: 100%;
   padding-inline: 0;
-  /* ⚠️ Room for the hover wash above the thumbnails. The links carry a negative
+  /* [WARNING] Room for the hover wash above the thumbnails. The links carry a negative
      top margin so the background extends past the image without moving it —
      but this strip is `overflow-y: hidden`, and overflow clips to the PADDING
      box, so with no padding here the link's top 10px sat outside the clip and
@@ -585,7 +585,7 @@ home-support li {
      wash exist on screen; it is not spacing for its own sake. */
   padding-block-start: var(--space-2xs);
 
-  /* ⚠️ `safe center`, and the `safe` is not optional — it is the difference
+  /* [WARNING] `safe center`, and the `safe` is not optional — it is the difference
      between a centered row and 451px of unreachable books.
 
      Plain `center` centers the overflow too, so a shelf wider than the
@@ -651,7 +651,7 @@ home-support li {
      unreachable. Now that it scrolls, the bound only ever hid thumbnails from
      people with the screens to see them.
 
-     ⚠️ --body-width-full is NOT changed and still means 1600px for
+     [WARNING] --body-width-full is NOT changed and still means 1600px for
      <photo-cover>, its remaining user. Only these strips are uncapped. */
   --strip-bleed: 100vw;
 
@@ -661,7 +661,7 @@ home-support li {
   margin-inline: calc(50% - var(--strip-bleed) / 2);
 }
 
-/* ⚠️ FIXED WIDTH, and do not "improve" this to `flex: 1 0 …` so the row fills
+/* [WARNING] FIXED WIDTH, and do not "improve" this to `flex: 1 0 …` so the row fills
    the viewport when the shelf is short. That was tried on 2026-07-31 and is
    visibly broken: with `max-width` capping some items and not others, flex
    distributes the free space unevenly, so the last two thumbnails grew to
@@ -722,7 +722,7 @@ home-support li {
    (2026-09-01: "Replace the 13th item with a big button (same size as the
    other items) that says 'View More Albums'").
 
-   ⚠️ IT SETS NO WIDTH, WHICH IS THE POINT. It sits in a .strip__item, so
+   [WARNING] IT SETS NO WIDTH, WHICH IS THE POINT. It sits in a .strip__item, so
    `--strip-item` gives it the same width as every thumbnail — 15rem on the
    album row, 7.5rem below the small-screen breakpoint — and it cannot drift
    out of step when either number is tuned. "Same size as the other items" is
@@ -733,7 +733,7 @@ home-support li {
    that a box of text does not. The frame comes out 240x180 on the album row,
    identical to the photographs beside it.
 
-   ⚠️ TWO ELEMENTS, AND THE INNER ONE IS NOT DECORATION. The outer box is a
+   [WARNING] TWO ELEMENTS, AND THE INNER ONE IS NOT DECORATION. The outer box is a
    flex container so the label can centre on both axes inside a fixed ratio;
    a flex container makes each CHILD an item, so the text and the ↗ would have
    become two items and stacked. Wrapping them in one span keeps them a single
@@ -771,13 +771,13 @@ home-support li {
   aspect-ratio: 4 / 3;
 }
 
-/* ⚠️ H1-SIZED, WHICH IS --step-3 AND NOT A NUMBER (2026-09-01: "Increase the
+/* [WARNING] H1-SIZED, WHICH IS --step-3 AND NOT A NUMBER (2026-09-01: "Increase the
    font size of 'View More Albums' to the size of our H1"). It reads the same
    token base.scss gives `h1`, and the light weight and --scale-small leading
    with it, so the tile stays a heading rather than becoming a lookalike that
    drifts the next time the type scale moves.
 
-   ⚠️ IT IS THE ONLY THING IN THE STRIP THAT GETS BIGGER WHEN THE READER SCALES
+   [WARNING] IT IS THE ONLY THING IN THE STRIP THAT GETS BIGGER WHEN THE READER SCALES
    TEXT, and that is fine here and would not be on a thumbnail: --step-3 is
    multiplied by --text-scale (config.scss), while the tiles around it are sized
    in rem by --strip-item. The box therefore stays 240x180 while the words grow
@@ -790,7 +790,7 @@ home-support li {
   text-wrap: balance;
 }
 
-/* ⚠️ THE ↗ DOES NOT GROW WITH IT. The mark is 0.72em, which is right against
+/* [WARNING] THE ↗ DOES NOT GROW WITH IT. The mark is 0.72em, which is right against
    body text and becomes a 25px arrow against a 35px heading — at that size it
    stops being punctuation and starts competing with the words. Held to the
    label's own smaller measure, and nudged back onto the baseline it now sits
@@ -802,7 +802,7 @@ home-support li {
   vertical-align: 0.06em;
 }
 
-/* ⚠️ A FILLED HOVER, WHICH THE THUMBNAILS DELIBERATELY DO NOT HAVE
+/* [WARNING] A FILLED HOVER, WHICH THE THUMBNAILS DELIBERATELY DO NOT HAVE
    (2026-09-01: "Apply a different hover, say darker or more accented for this
    item block"). The wash was removed from the picture tiles on 2026-08-04
    because it drew a second soft border around the bookplates' hairline — see
@@ -831,7 +831,7 @@ home-support li {
    desaturated covers — visible in Cool and Warm, where the surface and text
    tokens the plate is built from are tinted rather than neutral.
 
-   ⚠️ Not merged into the .strip__img block above. That block sets a
+   [WARNING] Not merged into the .strip__img block above. That block sets a
    background-color, which would paint straight over the plate's board. */
 .strip__frame .bookplate {
   filter: grayscale(1);
@@ -852,7 +852,7 @@ home-support li {
    height; at 240 it is 70%. Matching them outright would take about 340px,
    which is worth knowing as the ceiling before the row starts to dominate.
 
-   ⚠️ THIS DECLARATION MUST STAY ABOVE THE SMALL-SCREEN BLOCK at the end of
+   [WARNING] THIS DECLARATION MUST STAY ABOVE THE SMALL-SCREEN BLOCK at the end of
    this section. That block sets `--strip-item` on `.strip`, which is the same
    specificity as `.strip--album` here — so it wins on source order alone. Move
    this below it and every phone gets 240px thumbnails in a 320px viewport. */
@@ -877,7 +877,7 @@ home-support li {
   text-wrap: pretty;
 }
 
-/* ⚠️ THE HOVER BACKGROUND IS GONE (2026-08-04). Brajeshwar: "With this new
+/* [WARNING] THE HOVER BACKGROUND IS GONE (2026-08-04). Brajeshwar: "With this new
    style, the hover on the homepage looks really ugly. Remove the background
    and on hover, darken the borders of the books design."
 
@@ -939,7 +939,7 @@ home-support li {
 
 /* Mobile: smaller thumbnails, SAME single scrolling row.
    
-   ⚠️ This block used to `flex-wrap: wrap` into two clipped rows, from the
+   [WARNING] This block used to `flex-wrap: wrap` into two clipped rows, from the
    earlier instruction "In mobile, max two lines". That was superseded on
    2026-07-31 by "when the browser is narrower … allow users to scroll
    horizontally" — but the wrap survived the rewrite, so narrow screens were
@@ -957,7 +957,7 @@ home-support li {
     --strip-item: 7.5rem;
   }
 
-  /* ⚠️ THE "MORE" TILE CANNOT KEEP ITS H1 HERE, AND THIS IS NOT A SOFTENING OF
+  /* [WARNING] THE "MORE" TILE CANNOT KEEP ITS H1 HERE, AND THIS IS NOT A SOFTENING OF
      THAT INSTRUCTION — it is what makes it survive. The rule above halves the
      tile to 120x90; --step-3 is ~32px at this width, so "Albums" alone is
      wider than the box and three lines are twice its height. Measured at the
@@ -989,7 +989,7 @@ home-support li {
   }
 }
 
-/* ⚠️ The counterweight to the full-bleed strips above, and the reason the page
+/* [WARNING] The counterweight to the full-bleed strips above, and the reason the page
    does not scroll sideways.
 
    `clip`, never `hidden`. `overflow-x: hidden` makes the element a scroll
@@ -1002,7 +1002,7 @@ home-support li {
    Scoped with `:has()` so it applies to the home page alone. A blanket
    `body { overflow-x: clip }` would change the containing-block behavior of
    every other page to fix a problem only this one has. */
-/* ⚠️ BOTH html and body. `overflow-x: clip` on body alone does NOT reliably
+/* [WARNING] BOTH html and body. `overflow-x: clip` on body alone does NOT reliably
    propagate to the viewport the way `hidden` does — measured 2026-08-01, the
    computed style on body read `clip` while the page still scrolled sideways
    by 2.5px. Setting it on the root as well makes the clip unambiguous.
@@ -1044,7 +1044,7 @@ body:has(home-container) {
      the picture starts lower than this button's containing block and `top: 0`
      left the backdrop proud of the thumbnail by exactly that padding. */
   top: var(--strip-thumb-top, 0);
-  /* ⚠️ THE THUMBNAIL'S HEIGHT, MEASURED BY strip-nav.js and published as
+  /* [WARNING] THE THUMBNAIL'S HEIGHT, MEASURED BY strip-nav.js and published as
      --strip-thumb-h on .strip__viewport. It was `bottom: var(--space-l)`, a
      fixed guess at where the picture ends — wrong by whatever the caption
      actually takes, and wrong by a DIFFERENT amount per strip, since Books is
@@ -1088,7 +1088,7 @@ body:has(home-container) {
   inset-inline-end: 0;
 }
 
-/* ⚠️ A SCRIM, NOT A SURFACE COLOUR (2026-08-09: "a darker background (in light
+/* [WARNING] A SCRIM, NOT A SURFACE COLOUR (2026-08-09: "a darker background (in light
    mode, and vice versa), with an alpha opacity"). --bg-color-low is an opaque
    panel tone and read as a pale box sitting on top of the photographs.
 

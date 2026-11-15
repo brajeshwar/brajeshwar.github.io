@@ -7,7 +7,7 @@
    /now/ (the year-by-year log). Authoring convention for the
    former is documented in _docs/timeline.md.
 
-   ⚠️ MERGED 2026-07-27. now.css used to hold a deliberate COPY of
+   [WARNING] MERGED 2026-07-27. now.css used to hold a deliberate COPY of
    the spine, the marker and the period heading, and said why:
    both were tier-2 page bundles, never loaded together, so
    sharing "would mean promoting them into base.css and charging
@@ -32,7 +32,7 @@
    So the grouped selectors below carry both vocabularies. Add a
    third user by adding its hooks to these groups.
 
-   ⚠️ THE LIFE/WORK FILTER WAS DELETED 2026-08-09, at his word:
+   [WARNING] THE LIFE/WORK FILTER WAS DELETED 2026-08-09, at his word:
    "The Life/Work goes away including the code that powers it."
    About 160 lines went from this file — a .pill-based fieldset,
    the :has() + :checked rules that did the filtering, the
@@ -45,7 +45,7 @@
    filter and may be worth reaching for elsewhere — not because
    this page is coming back to it.
 
-   ⚠️ THE LIST-SHAPE VOCABULARY WENT ON 2026-08-10, 130 lines of it.
+   [WARNING] THE LIST-SHAPE VOCABULARY WENT ON 2026-08-10, 130 lines of it.
    Converting /about/ and /cv/ to Markdown sources the day before
    left every `<li class="timeline-entry">` selector matching
    nothing; verified against the built HTML, not the source, before
@@ -55,11 +55,11 @@
    whole scroll-driven .timeline-progress experiment with its
    @supports and prefers-reduced-motion blocks.
 
-   ⚠️ .timeline-when WENT WITH THEM, and _docs/todo.md was wrong to
+   [WARNING] .timeline-when WENT WITH THEM, and _docs/todo.md was wrong to
    list it as live with "9 period labels" — the built site has zero.
    It died with the period headings on 2026-08-09.
 
-   ⚠️ THE SHARED RULES WERE THE TRAP, and are why an earlier attempt
+   [WARNING] THE SHARED RULES WERE THE TRAP, and are why an earlier attempt
    was reverted. Seven of them paired a dead selector with a live one
    (`.timeline-entries, .page-now ul { … }`), so a regex sweep took
    /now/'s spine out with them. Each was edited by hand and the built
@@ -69,7 +69,7 @@
 
 .timeline,
 .page-now {
-  /* ⚠️ 0.75px SINCE 2026-08-09, down from 2px. Brajeshwar: "is it possible
+  /* [WARNING] 0.75px SINCE 2026-08-09, down from 2px. Brajeshwar: "is it possible
      that this can be about 0.75px (thin, sleek, and clean)?" — and it is his
      own number, not a new one: --border-size-hairline was settled earlier by
      rendering options for him after his first ask (0.1pt) measured out to
@@ -79,7 +79,7 @@
      Reusing the token rather than typing 0.75px keeps the spine tied to the
      site's one hairline value instead of quietly forking it.
 
-     ⚠️ THIS TOKEN IS LOAD-BEARING GEOMETRY, not just a width. It also sets the
+     [WARNING] THIS TOKEN IS LOAD-BEARING GEOMETRY, not just a width. It also sets the
      list's padding (which absorbs it so entries do not shift) and half of the
      dot's left offset (which centres the dot on the line). Change it and all
      three move together — that is the design. Verify dot-centre and
@@ -100,7 +100,7 @@
   --timeline-entry-gap: var(--space-s);
 }
 
-/* ⚠️ THE PERIOD LABEL IS GONE (2026-08-09: "we should get rid of the '##' with
+/* [WARNING] THE PERIOD LABEL IS GONE (2026-08-09: "we should get rid of the '##' with
    the years"). /about/ grouped its entries under year headings; it does not any
    more, and every entry carries its own date on the line under its title.
 
@@ -141,7 +141,7 @@
   scroll-margin-top: var(--space-l);
 }
 
-/* ⚠️ THE `# 2024` -> `## 2024` CHANGE THIS NOTE USED TO ASK FOR HAPPENED on
+/* [WARNING] THE `# 2024` -> `## 2024` CHANGE THIS NOTE USED TO ASK FOR HAPPENED on
    2026-08-08. It said /now/'s years rendered one step larger than /about/'s
    because they were h1 against h2, that this was the type scale behaving
    correctly rather than a styling difference, and that matching would take a
@@ -165,7 +165,7 @@
    .page-now h2[id]`, so hovering an entry gives a copyable link
    straight to it — but the styling is no longer here.
 
-   ⚠️ This said `.timeline-when[id]` until 2026-08-10 and had been
+   [WARNING] This said `.timeline-when[id]` until 2026-08-10 and had been
    wrong for a while: anchors.js has never named that class, and
    nothing on the built site carries it. Read the script, not this
    comment, if the two ever disagree again.
@@ -184,7 +184,7 @@
 /* ============================================================
    HEADING-FLOW TIMELINE — /cv/ and /about/, from a MARKDOWN source
    ------------------------------------------------------------
-   ⚠️ ADDED 2026-08-09, AND IT REVERSES THIS REPO'S "HTML, NOT MARKDOWN"
+   [WARNING] ADDED 2026-08-09, AND IT REVERSES THIS REPO'S "HTML, NOT MARKDOWN"
    DECISION for these two pages. That decision rested on a real parser fact —
    kramdown does not parse Markdown inside block-level HTML — and on the
    belief that every entry therefore needed its own `markdown="1"` wrapper,
@@ -207,12 +207,12 @@
        Prose…                               <- every later paragraph
        </div>
 
-   ⚠️ THE ids COME FREE, and that is what made this safe. kramdown derives a
+   [WARNING] THE ids COME FREE, and that is what made this safe. kramdown derives a
    heading id from its TEXT, so `## Razorfish` is `id="razorfish"` — every one
    of /cv/'s thirteen shared anchors resolves unchanged, with nothing written
    by hand. Verified against all thirteen before converting.
 
-   ⚠️ /now/ DOES NOT USE THIS. It keeps the `ul`/`li` shape below, because its
+   [WARNING] /now/ DOES NOT USE THIS. It keeps the `ul`/`li` shape below, because its
    entries are bullets with no titles. This file carries two vocabularies on
    purpose; the older one is not dead.
    ============================================================ */
@@ -226,7 +226,7 @@
 
 /* The spine. Starts at the first dot's centre, ends with the container.
 
-   ⚠️ `top` IS THE FIRST DOT'S CENTRE, which only equals --timeline-dot-center
+   [WARNING] `top` IS THE FIRST DOT'S CENTRE, which only equals --timeline-dot-center
    because the first heading's top margin is zeroed just below. Leave that rule
    in place or the line detaches from the dot it is supposed to start at. */
 .timeline::before {
@@ -239,7 +239,7 @@
   background: var(--border-color-high);
 }
 
-/* ⚠️ /about/ BREAKS OUT OF THE READING COLUMN, and that is what lets it have
+/* [WARNING] /about/ BREAKS OUT OF THE READING COLUMN, and that is what lets it have
    sidenotes AND a full-width timeline at once.
 
    The page used to set `page_full: true`, which drops `.container-ideal` from
@@ -255,10 +255,10 @@
    timeline's right edge lands exactly on <main>'s. Prose and footnotes keep the
    measure; the timeline gets 1024px; the sidenote works.
 
-   ⚠️ `max-width: none` is required. Without it the parent's cap wins and the
+   [WARNING] `max-width: none` is required. Without it the parent's cap wins and the
    width declaration does nothing at all.
 
-   ⚠️ `100cqi`, NOT `var(--body-width-max)` (fixed 2026-11-05). The token is
+   [WARNING] `100cqi`, NOT `var(--body-width-max)` (fixed 2026-11-05). The token is
    the band's CAP, 1024px, but the band is `min(96%, 1024px)`, so below a
    ~1067px window it shrinks and the token does not: at 1000px the timeline
    ran 68px past the band and gave the page a sideways scroll. `main` is the
@@ -274,14 +274,14 @@
    gap between entries, and is what --timeline-entry-gap used to do on the li. */
 .timeline h2 {
   position: relative;
-  /* ⚠️ NO font-size HERE. An entry takes base.scss's h2 like every other
+  /* [WARNING] NO font-size HERE. An entry takes base.scss's h2 like every other
      heading on the site — "the styling should be the default '##' styling like
      other titles of Headings-2". It briefly carried a pin, back when /about/'s
      entries were h3s and its h2 was a period label. --timeline-dot-center is
      derived from --step-2, which is exactly what a default h2 renders at, so
      the dot arithmetic still holds with nothing set here.
 
-     ⚠️ THIS COMMENT LOST ITS CLOSING MARKER ONCE, on 2026-08-09, and the build
+     [WARNING] THIS COMMENT LOST ITS CLOSING MARKER ONCE, on 2026-08-09, and the build
      stayed green: an unterminated block comment is still valid CSS, it just
      runs on and ate `margin` and `max-width` below. The symptom was the
      sub-title drifting away from its heading, because the h2 fell back to
@@ -290,7 +290,7 @@
   margin: var(--space-m) 0 var(--space-3xs);
   max-width: var(--measure);
 
-  /* ⚠️ CONTAINS THE FLOATED .timeline-figure, and this replaces the
+  /* [WARNING] CONTAINS THE FLOATED .timeline-figure, and this replaces the
      `display: flow-root` the old <li> carried. With no per-entry element there
      is nothing to establish a formatting context around the picture, so
      containment moves to the NEXT entry instead: `clear: right` starts each
@@ -350,7 +350,7 @@
 }
 
 /* ---- Where a dot sits, and therefore where the spine starts ------
-   ⚠️ ONE NUMBER DRIVES TWO THINGS: the dot's vertical position and the top of
+   [WARNING] ONE NUMBER DRIVES TWO THINGS: the dot's vertical position and the top of
    the spine. (It drove a third — the top of the scroll-driven progress fill —
    until that experiment was deleted on 2026-08-10.) Define it once, here, as
    the MIDDLE OF THE FIRST LINE of whatever leads an entry, measured from the
@@ -366,7 +366,7 @@
    for /now/ (0.55 x 20px = 11px against a true 10.7px) and 2.25px high on
    /about/, which is exactly the kind of drift a magic number produces.
 
-   ⚠️ Not `em`. A custom property inherits as an unresolved token, so `0.55em`
+   [WARNING] Not `em`. A custom property inherits as an unresolved token, so `0.55em`
    set here would resolve against the FONT SIZE OF WHATEVER USES IT — one value
    on the <ol>, another on the <li>. The spine and the dots would disagree.
    Absolute math on the scale tokens has no such trap. */
@@ -376,13 +376,13 @@
 
 /* The spine.
 
-   ⚠️ A ::before SINCE 2026-08-09, NOT `border-left` ("For the first dot in the
+   [WARNING] A ::before SINCE 2026-08-09, NOT `border-left` ("For the first dot in the
    timeline vertical line, can the line start from the dot. So, no hanging tip
    at the top."). A border spans the whole box and cannot start partway down;
    16.5px of line hung above the first dot. A pseudo-element can be offset, so
    it now begins exactly at the first dot's centre.
 
-   ⚠️ THE PADDING ABSORBS THE BORDER'S 2px. With `border-left` the entries sat
+   [WARNING] THE PADDING ABSORBS THE BORDER'S 2px. With `border-left` the entries sat
    at border(2) + padding(gutter); with no border, padding alone has to make up
    the same 42px or every entry shifts left and the dots lose the spine. That
    is what the `+ var(--timeline-rule)` is for — do not "simplify" it away.
@@ -404,7 +404,7 @@
   bottom: 0;
   width: var(--timeline-rule);
 
-  /* ⚠️ --border-color-high (18%), THE SAME TIER AS THE MENU SEPARATOR — not
+  /* [WARNING] --border-color-high (18%), THE SAME TIER AS THE MENU SEPARATOR — not
      --rule-strong (32%), which is what this was until 2026-08-09.
 
      He offered two ways to make the dot read darker than the line: "push the
@@ -421,7 +421,7 @@
        3. It widens the gap to the dot's border (60%) without touching the
           dot, which has been retuned five times and did not need a sixth.
 
-     ⚠️ The line got LIGHTER to make the dot read darker. If someone later
+     [WARNING] The line got LIGHTER to make the dot read darker. If someone later
      "fixes" the contrast by darkening this back toward --rule-strong, they
      undo the change and the dot goes flat against it again. */
   background: var(--border-color-high);
@@ -432,7 +432,7 @@
   margin: 0 0 var(--timeline-entry-gap);
   padding: 0;
 
-  /* ⚠️ CONTAINS A FLOATED .timeline-figure. Without this the picture is taller
+  /* [WARNING] CONTAINS A FLOATED .timeline-figure. Without this the picture is taller
      than its entry's text and spills into the NEXT period — measured on the
      Mixercast entry: the figure ran to y=490 against an entry ending at 403,
      so it appeared beside 2003-2004 instead.
@@ -451,7 +451,7 @@
 
 /* Marker on the spine. Sits ON the rule, centred over it both ways.
 
-   ⚠️ SOLID, IN --accent, SINCE 2026-08-09 ("Make the dots solid and a little
+   [WARNING] SOLID, IN --accent, SINCE 2026-08-09 ("Make the dots solid and a little
    more accented color"). It was an open dot — page-coloured fill with a
    10%-alpha border — which at 11px read as a gap in the line rather than a
    point on it.
@@ -476,7 +476,7 @@
   height: var(--timeline-dot);
   border-radius: 50%;
 
-  /* ⚠️ SIX TREATMENTS ON 2026-08-09, and the sequence is kept so a seventh
+  /* [WARNING] SIX TREATMENTS ON 2026-08-09, and the sequence is kept so a seventh
      starts from what is already ruled out — not as a war story, but because
      four of the six were rejected for reasons that still apply:
 
@@ -487,16 +487,16 @@
        ring + filled centre    read as the line BREAKING at each entry
        this                    an existing tier, opaque fill, no bespoke colour
 
-     ⚠️ THE 46% LESSON IS THE ONE THAT GENERALISES. It was numerically darker
+     [WARNING] THE 46% LESSON IS THE ONE THAT GENERALISES. It was numerically darker
      than the 32% line and painted lighter, because a border at
      --timeline-rule (0.75px) computes to 0.5px and antialiases to about half
      coverage — halving its effective alpha. A background width does not.
      **Never compare a border tier to a background tier by their numbers.**
 
-     ⚠️ It no longer tracks --accent. A dot defined against the line cannot
+     [WARNING] It no longer tracks --accent. A dot defined against the line cannot
      also follow a colour the reader picks; his instruction named the line.
 
-     ⚠️ EVERY VALUE HERE IS AN EXISTING TIER — there is no bespoke colour left
+     [WARNING] EVERY VALUE HERE IS AN EXISTING TIER — there is no bespoke colour left
      ("We should standardize on these values"):
 
        border  --rule-strong        32%, the header and footer's tier
@@ -507,23 +507,23 @@
      — a tier invented for one border, retuned five times, and finally not
      needed once the spine moved down to 18% and opened the gap.
 
-     ⚠️ THE FILL MUST STAY OPAQUE. --rule-strong and friends are mixes with
+     [WARNING] THE FILL MUST STAY OPAQUE. --rule-strong and friends are mixes with
      TRANSPARENT, so filling with one lets the spine show straight through the
      dot — the defect that took three rounds to name. If this ever becomes a
      filled disc again, mix toward --color-bg, never toward transparent.
 
-     ⚠️ The dot is darker than the line on purpose (32% against 18%), and the
+     [WARNING] The dot is darker than the line on purpose (32% against 18%), and the
      line is the one that moved. Pushing the spine back up flattens the dot
      against it again.
 
-     ⚠️ THE BORDER IS --border-size (1px), NOT --timeline-rule (0.75px), AND
+     [WARNING] THE BORDER IS --border-size (1px), NOT --timeline-rule (0.75px), AND
      THAT IS THE POINT. At 0.75px a border computes to 0.5px and antialiases
      to about half coverage, so the ring painted 0.32 alpha x 0.5px = 0.16 ink
      per column against the spine's 0.18 x 0.75px = 0.135 — a 1.19x margin
      where the colour tiers promised 1.8x. A full 1px border keeps its alpha:
      0.32 ink, about 2.4x the spine.
 
-     ⚠️ SO THIS WAS ALWAYS A WIDTH PROBLEM, AND FIVE COLOUR RETUNES COULD NOT
+     [WARNING] SO THIS WAS ALWAYS A WIDTH PROBLEM, AND FIVE COLOUR RETUNES COULD NOT
      FIX IT. If the dot ever reads too weak or too strong again, reach for this
      width before inventing a sixth colour tier. Sub-pixel borders lie about
      their own alpha; background widths do not.
@@ -538,7 +538,7 @@
   background: var(--bg-color-lower);
 }
 
-/* ⚠️ THERE USED TO BE TWO MARKERS — work filled, life open — as a second,
+/* [WARNING] THERE USED TO BE TWO MARKERS — work filled, life open — as a second,
    colorless signal telling the two tracks apart in the merged view. With the
    filter gone there are no tracks to tell apart, so there is ONE marker.
 
@@ -560,7 +560,7 @@
    timeline. Add an example using any of the images from our assets and flushed
    it all the way to the right side of the body-width."
 
-   ⚠️ NO BREAKOUT IS NEEDED, and that is the whole trick. Measured at a 1512
+   [WARNING] NO BREAKOUT IS NEEDED, and that is the whole trick. Measured at a 1512
    viewport: the entry already runs 286 -> 1268, which IS the band's right edge,
    while `.timeline p` above caps prose at --measure and so stops at 951.
    That leaves 317px of empty margin inside every entry. A plain `float: right`

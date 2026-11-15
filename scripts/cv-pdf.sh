@@ -5,7 +5,7 @@
 # (which builds the site first), then COMMIT the PDF. It is a static file: the
 # deploy only copies it, and /cv/ links to it at /static/pdf/brajeshwar-oinam.pdf.
 #
-# ⚠️ STATIC, NOT GENERATED IN CI — his call, 2026-10-31: "Let's create a proper
+# [WARNING] STATIC, NOT GENERATED IN CI — his call, 2026-10-31: "Let's create a proper
 # PDF and keep it static so I can just link to it." An Actions step printing it
 # on every build existed for a few hours that day and never shipped. So the PDF
 # is only as fresh as the last `make cv-pdf`: edit _pages/cv.md, re-run this,
@@ -16,25 +16,25 @@
 # which also set the paper to A4 (a named page, so only /cv/ is A4). There is
 # no second CV to maintain.
 #
-# ⚠️ IT PRINTS OVER HTTP, NOT file://. Every stylesheet, script, and font is
+# [WARNING] IT PRINTS OVER HTTP, NOT file://. Every stylesheet, script, and font is
 # linked root-relative (/assets/...), and under file:// those resolve to the
 # root of the disk. So _site is served on loopback for the length of one print.
 #
-# ⚠️ AND UNDER THE REAL HOSTNAME. Chrome resolves the page's relative links
+# [WARNING] AND UNDER THE REAL HOSTNAME. Chrome resolves the page's relative links
 # (/about/, the PDF link itself) against the URL it printed, and writes them
 # into the PDF as absolute URLs — printed from 127.0.0.1, the file shipped
 # links to http://127.0.0.1:4311/about/. --host-resolver-rules points
 # brajeshwar.com at the loopback server, so the links read
 # http://brajeshwar.com/about/, which the live site 301s to https.
 #
-# ⚠️ --virtual-time-budget IS LOAD-BEARING. Chrome fetches a `media="print"`
+# [WARNING] --virtual-time-budget IS LOAD-BEARING. Chrome fetches a `media="print"`
 # stylesheet late and at low priority, and headless --print-to-pdf does not
 # wait for it: without the budget, print.css was never even REQUESTED (the
 # server log shows it), and the result was five pages wearing the site's
 # header, footer, and gray ground. With it: four clean pages. Measured
 # 2026-10-31 on Chrome 156.
 #
-# ⚠️ THE PAGE COUNT IS LOGGED, NOT ENFORCED. The CV is meant to print on four
+# [WARNING] THE PAGE COUNT IS LOGGED, NOT ENFORCED. The CV is meant to print on four
 # pages (see cv.scss), but it is his to edit. What fails is a page that is
 # plainly not the CV: if the server never answers, or /cv/ 404s, Chrome still
 # writes a valid one-page PDF of its error page. Hence the 200 check before

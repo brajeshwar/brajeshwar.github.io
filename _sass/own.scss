@@ -7,7 +7,7 @@
    a category on the left, its items running off to the right
    and scrolling when they outgrow the column.
 
-   ⚠️ EVERY SELECTOR IS ANCHORED TO .page-own. Since 2026-07-27
+   [WARNING] EVERY SELECTOR IS ANCHORED TO .page-own. Since 2026-07-27
    every stylesheet reaches every page, and this file overrides
    .strip / .strip__viewport, which the HOME PAGE depends on.
    An unanchored rule here would rewrite the book and photo
@@ -124,7 +124,7 @@
 }
 
 /* ---- The rail ---------------------------------------------------
-   ⚠️ THESE THREE DECLARATIONS EXIST TO UNDO home.css, which owns the
+   [WARNING] THESE THREE DECLARATIONS EXIST TO UNDO home.css, which owns the
    component. Read them as a diff against it, not as a design:
 
      --strip-bleed  home makes the viewport 100vw so a shelf runs off
@@ -213,7 +213,7 @@
 /* ---- When it IS a picture ---------------------------------------
    `object-fit: contain` or a wide wordmark stretches to the square.
 
-   ⚠️ AND IT SITS ON A PLATE. `--logo-plate` is the one token in
+   [WARNING] AND IT SITS ON A PLATE. `--logo-plate` is the one token in
    themes.css that does NOT flip with the theme, because a brand's
    artwork has a fixed idea of its own background. Logos keep their
    real colours here (2026-08-07: "just like how we have colorful

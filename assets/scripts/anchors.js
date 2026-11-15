@@ -2,7 +2,7 @@
  * For each content heading that has an id (kramdown auto_ids), prepend a
  * clickable link to that id. Loaded defer, hidden until hover or focus.
  *
- * ⚠️ THE GLYPH IS `#`, NOT `§` (2026-08-09). Styling lives in ONE place,
+ * [WARNING] THE GLYPH IS `#`, NOT `§` (2026-08-09). Styling lives in ONE place,
  * base.scss — including the `position: relative` the absolutely-positioned
  * link needs, which a heading picks up via `:has(> .headerlink)` once this has
  * run, and the full-height flex box that makes the whole heading clickable.
@@ -21,7 +21,7 @@
  *                              and both are anchored
  *   .page-now h2               the year headings on /now/ ("/now/#2024")
  *
- * ⚠️ This site is PLAIN kramdown, so a heading that does not start with a
+ * [WARNING] This site is PLAIN kramdown, so a heading that does not start with a
  * letter gets `section`, `section-1` … — /about/'s date labels anchor to those
  * and that is accepted. See _docs/timeline.md.
  */

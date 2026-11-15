@@ -6,7 +6,7 @@
    /cv/, but nothing here is scoped to a page: a post opts in the same way
    ("prepare that we will likely have this with others such as the posts").
 
-   ⚠️ THAT MAKES THESE GLOBAL SELECTORS, which since 2026-07-27 means they
+   [WARNING] THAT MAKES THESE GLOBAL SELECTORS, which since 2026-07-27 means they
    reach every page. Safe because the classes are specific and owned by one
    include — but do not add loose descendant rules (`a`, `svg`, `button`)
    without the `.page-actions` prefix carrying them.
@@ -17,12 +17,12 @@
    the bar, so the ~1,470 pages that do not opt in keep a bare <h1> with no div
    and no flex context.
 
-   ⚠️ `align-items: baseline`, NOT `center`. The bar is a row of 32px circles
+   [WARNING] `align-items: baseline`, NOT `center`. The bar is a row of 32px circles
    next to a --step-2 title; centring hangs them visibly low against the
    title's cap height. Baseline sits them on the title's own line, which is
    what "at the same line as the title" asked for.
 
-   ⚠️ IT WRAPS, deliberately. Below roughly 30rem a long title and four icons
+   [WARNING] IT WRAPS, deliberately. Below roughly 30rem a long title and four icons
    cannot share a line, and `flex-wrap` drops the bar underneath — still flush
    right. Do not replace this with a media query: the breakpoint depends on the
    title's length, which differs per page, and wrapping finds it per page for
@@ -35,7 +35,7 @@
   gap: var(--space-2xs) var(--space-s);
 }
 
-/* ⚠️ ON A POST THE ROW STILL SPANS THE BAND, even though it now carries the
+/* [WARNING] ON A POST THE ROW STILL SPANS THE BAND, even though it now carries the
    DATE rather than the title. `.post h1` is `width: 100cqi`, so the title ends
    on the band's right edge — and the bar has to land on that same edge or it
    reads as misaligned with the thing above it. The row is inside the
@@ -49,7 +49,7 @@
   max-width: 100cqi;
 }
 
-/* ⚠️ AND THE TITLE MUST SHRINK TO ITS TEXT. Without this it keeps `width:
+/* [WARNING] AND THE TITLE MUST SHRINK TO ITS TEXT. Without this it keeps `width:
    100cqi` from post.scss, fills the row on its own and wraps the bar again.
    (0,2,0) beats `.post h1`'s (0,1,1), so no !important is needed. */
 .page-head .page-title {
@@ -57,7 +57,7 @@
   max-width: 100%;
 }
 
-/* ⚠️ `.post time` is `display: block` with `margin: … auto …`, which in a flex
+/* [WARNING] `.post time` is `display: block` with `margin: … auto …`, which in a flex
    row makes it a stretched item with auto side-margins — it would centre
    itself and shove the bar off the end. Reset both so it sits at the row's
    left where the prose starts. Its vertical margins are kept: they are the
@@ -73,7 +73,7 @@
   margin-bottom: 0;
 }
 
-/* ⚠️ THE SPINE TITLE IS THE EXCEPTION. `title_style: vertical` takes the h1
+/* [WARNING] THE SPINE TITLE IS THE EXCEPTION. `title_style: vertical` takes the h1
    out of flow into the left margin (`position: fixed`), so it contributes no
    width to this row and `space-between` would leave the bar alone at the LEFT
    edge. `margin-left: auto` keeps it flush right either way, and costs nothing
@@ -102,12 +102,12 @@
   user-select: none;
 }
 
-/* ⚠️ `.page-actions__link` IS GONE. The two AI targets were word marks for one
+/* [WARNING] `.page-actions__link` IS GONE. The two AI targets were word marks for one
    round and are icons since 2026-08-09, so every child of the bar is now an
    `.icon-button`. Its hover and underline rules went with it rather than
    lingering as selectors that can never match. */
 
-/* ⚠️ EVERY BUTTON WEARS THE SHARED `.icon-button` FROM chrome.scss — the same
+/* [WARNING] EVERY BUTTON WEARS THE SHARED `.icon-button` FROM chrome.scss — the same
    component as the header's search, RSS and appearance tools: a 32px circle
    with a --icon-glyph-size glyph, the same hover fill and the same focus ring.
 
@@ -123,7 +123,7 @@
   color: var(--text-color-lower);
 }
 
-/* ⚠️ THE GLYPH SIZE HAS TO BE SET HERE TOO. chrome.scss scales icons with
+/* [WARNING] THE GLYPH SIZE HAS TO BE SET HERE TOO. chrome.scss scales icons with
    `site-tools svg`, scoped to the header's custom element — so outside the
    header an icon falls back to whatever width/height its FILE declares. That
    is why markdown and pdf rendered visibly smaller than openai and claude for
@@ -132,7 +132,7 @@
    pdf.svg came back on 2026-10-31 for the PDF link that replaced the print
    button on /cv/, restored byte-for-byte from before e50377b7.
 
-   ⚠️ icons/print.svg (2026-09-07, deleted 2026-10-31) was drawn to the same
+   [WARNING] icons/print.svg (2026-09-07, deleted 2026-10-31) was drawn to the same
    20px envelope AND to the same ink box as markdown.svg — roughly x 3–21,
    y 3.5–20.5. The declared size is overridden below, but the artwork's own
    margins are not, so an icon drawn edge-to-edge inside its viewBox reads
@@ -157,7 +157,7 @@
   height: 1.1em;
   align-self: center;
   margin-inline: var(--space-3xs);
-  /* ⚠️ --border-color-high (18%), NOT --rule (10%). A vertical hairline shows
+  /* [WARNING] --border-color-high (18%), NOT --rule (10%). A vertical hairline shows
      far less of itself than a horizontal one — it is one or two device pixels
      tall per line of text rather than spanning the page — so the tier that
      reads correctly as a horizontal rule disappears as a pipe. Brajeshwar,
@@ -168,7 +168,7 @@
      That places it exactly: darker than --rule (10%), lighter than the
      header/footer's --rule-strong (32%). The middle rung, 18%.
 
-     ⚠️ BOTH SEPARATORS TAKE THIS — the header's and page-actions'. They do the
+     [WARNING] BOTH SEPARATORS TAKE THIS — the header's and page-actions'. They do the
      same job at the same size; if one is retuned, retune the other. */
   border-left: var(--border-size) var(--border-style) var(--border-color-high);
 }

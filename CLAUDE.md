@@ -110,6 +110,15 @@ paragraph beats wrapping it in `<p class="…">`. What an IAL CANNOT do, verifie
 whose date headings ship as `section-1`…`section-7` by his decision — **no ids in the content**.
 Anything claiming this site parses GFM is wrong; it cost two debugging passes.
 
+## No emoji in code (2026-11-15)
+
+His words: *"Let's get rid of all the emoticons from the code. If you need a warning for
+yourself, use something like `[WARNING]`."* So a warning in a comment is `[WARNING]`, plain
+text, in every code file: Sass, JS, Ruby, shell, layouts, includes, YAML, the Makefile. All 302
+of the old warning signs were swapped on that day. Typographic symbols that name a real glyph
+(the ↗ external-link mark, the ↩ footnote return, ©) are not emoji and stay. Content is out of
+scope as always (guardrail 1).
+
 ## Hard guardrails (do not violate)
 1. **Never modify content.** No edits and no added front matter under `_posts/**`, `_drafts/**`,
    or `_pages/**` prose bodies. Do not touch `_data/**` except when asked — the books shelf

@@ -9,14 +9,14 @@
 # _data/albums.yaml, which the home page's Albums strip reads. Runs
 # in the Actions workflow BEFORE `jekyll build`, and from `make albums` locally.
 #
-# ⚠️ IT FEEDS ONE SURFACE, NOT TWO. /album/ was deleted on 2026-09-01 — hours
+# [WARNING] IT FEEDS ONE SURFACE, NOT TWO. /album/ was deleted on 2026-09-01 — hours
 # after this script replaced its data file — and is a redirect stub to
 # albums.oinam.com now (_redirect/album.md). The strip on the home page is all
 # that is left here, and its heading is the link out. This script survived that
 # deletion because the strip still needs the feed; if the strip ever goes too,
 # so do this file, _data/albums.yaml, the workflow step and the Makefile target.
 #
-# ⚠️ RUN IT AS `ruby`, NEVER `bundle exec ruby`. Everything here is stdlib —
+# [WARNING] RUN IT AS `ruby`, NEVER `bundle exec ruby`. Everything here is stdlib —
 # net/http, uri, rexml, yaml — which is the whole reason this is Ruby and not
 # a new Node dependency. But rexml is a BUNDLED GEM in Ruby 3.3, and bundler
 # hides bundled gems that the Gemfile does not name: under `bundle exec` this
@@ -48,7 +48,7 @@
 #   NOT COMMITTED. _data/albums.yaml is gitignored and generated. A checkout
 #   with no build step has no album data and the strip renders NOTHING — an
 #   absent home-page section, not an error — which is what `make albums` and
-#   the workflow step are for. ⚠️ The Cloudflare Pages backup's build command
+#   the workflow step are for. [WARNING] The Cloudflare Pages backup's build command
 #   is set dashboard-side and does not run this, so the strip is missing there
 #   — and stays missing, by his decision (2026-10-31).
 #
@@ -60,7 +60,7 @@
 #        picture. NOT the alt any more — see below.
 # url    <link>, the permalink on albums.oinam.com. Absolute, so the includes
 #        emit it verbatim, marked with the ↗ and no forced target.
-# img    <media:thumbnail url>, absolute. ⚠️ USED EXACTLY AS GIVEN. Do not
+# img    <media:thumbnail url>, absolute. [WARNING] USED EXACTLY AS GIVEN. Do not
 #        compose a new /cdn-cgi/image/ width to fit some layout: every
 #        DISTINCT transformation width is separately billed per month at
 #        Cloudflare, and 640x480 / 480x640 are already paid for. A "nicer" fit
@@ -69,14 +69,14 @@
 #        images"). The thumbnails ship a bare `alt=""` — the HTML for "this
 #        picture is decorative, skip it" — and nothing here has to compute it.
 #
-#        ⚠️ THE FIELD USED TO EXIST AND WAS SCRAPED OUT OF <content:encoded>'s
+#        [WARNING] THE FIELD USED TO EXIST AND WAS SCRAPED OUT OF <content:encoded>'s
 #        <img alt="…">, because albums.oinam.com leaves an uncaptioned photo's
 #        alt empty rather than have a screen reader announce a filename. That
 #        was 48 of 50 items empty, a regex over a CDATA'd HTML fragment, and a
 #        Liquid trap in two includes — all of it to arrive at "" almost every
 #        time. Deleting it lands in the same place with none of the machinery.
 #
-#        ⚠️ AND THE EMPTY alt STILL MATTERS, so do not go one step further and
+#        [WARNING] AND THE EMPTY alt STILL MATTERS, so do not go one step further and
 #        drop the ATTRIBUTE. An <img> with no alt at all is invalid HTML and
 #        sends assistive tech to the filename — "IMG_9018.jpeg" — which is the
 #        exact outcome the old scraping existed to prevent. `alt=""` is the
@@ -128,7 +128,7 @@ require "yaml"
 # domain would work again too. pages.dev stays anyway: it holds whatever that
 # setting is, and a feed is no reason to tie the build to a zone toggle.
 #
-# ⚠️ If the `albums` project is renamed, recreated, or moved off Pages, this
+# [WARNING] If the `albums` project is renamed, recreated, or moved off Pages, this
 # hostname stops serving the feed and the build fails loudly on a 404 or bad
 # XML. Look the new address up under Workers & Pages → albums in the Oinam
 # account. Do not swap albums.oinam.com back in unless Bot Fight Mode is off.
@@ -200,7 +200,7 @@ def fetch(url, hops = 3)
     raise RetryableFetch, describe(url, response)
   else die describe(url, response)
   end
-# ⚠️ IOError IS IN THIS LIST FOR A REASON. A connection that times out at the
+# [WARNING] IOError IS IN THIS LIST FOR A REASON. A connection that times out at the
 # SOCKET raises IO::TimeoutError (an IOError), not Net::OpenTimeout — observed
 # 2026-09-01. Without it the script still exits non-zero, so the build still
 # fails, but it fails with a twenty-line Ruby backtrace instead of one line
@@ -266,7 +266,7 @@ albums = items.each_with_index.map do |item, index|
 end
 
 header = <<~YAML
-  # ⚠️ GENERATED — DO NOT EDIT. Overwritten by scripts/fetch-albums.rb on every
+  # [WARNING] GENERATED — DO NOT EDIT. Overwritten by scripts/fetch-albums.rb on every
   # build, from #{FEED_URL}. Gitignored, so an edit here is
   # lost the next time anyone runs `make albums` and never reaches the deploy.
   #

@@ -1,7 +1,7 @@
 /* ============================================================
    CV — /cv/ only, via `style: page-cv` on <main>.
    ------------------------------------------------------------
-   ⚠️ ALMOST NOTHING LIVES HERE ANY MORE, and that is the point.
+   [WARNING] ALMOST NOTHING LIVES HERE ANY MORE, and that is the point.
 
    This file was ~40 lines building a CV-specific look: a date as a border-top
    separator (`.cv-when`), the company as the heading (`.cv-company`), a quiet
@@ -10,7 +10,7 @@
    paragraph straight after it (`.timeline h2 + p`) — so the look comes from
    timeline.scss and there is nothing to keep in step here.
 
-   ⚠️ This named `.timeline-entry` / `.timeline-title` / `.timeline-meta` until
+   [WARNING] This named `.timeline-entry` / `.timeline-title` / `.timeline-meta` until
    2026-08-10. Those classes belonged to the list shape /cv/ was converted OUT
    of on 2026-08-09, and they were deleted from timeline.scss on the 10th; the
    selectors above are what the page actually renders.
@@ -32,7 +32,7 @@
 /* The contact line under the intro. The only thing on this page that is not
    the timeline: a run of links that wants to sit quieter than body copy.
 
-   ⚠️ --text-color-LOWER. This said `-low` until 2026-08-09, which is 20.5%
+   [WARNING] --text-color-LOWER. This said `-low` until 2026-08-09, which is 20.5%
    against the foreground's 14.5% — barely a step, and not the "quieter" this
    comment claimed. `-lower` (37.1%) is the tier that actually reads as
    secondary, and the one the timeline's sub-title line uses. */
@@ -48,7 +48,7 @@
    CV, worst case it to have a footnote and collect them separately" and
    "the printed PDF is 9 pages, can we do this much lesser, say in about 4".
 
-   ⚠️ READ THIS BEFORE TOUCHING NUMBERS HERE. assets/print.css is Gutenberg,
+   [WARNING] READ THIS BEFORE TOUCHING NUMBERS HERE. assets/print.css is Gutenberg,
    it is linked AFTER site.css, and it is NOT part of this Sass pipeline. So
    in print it wins every tie at equal specificity — its `p { margin-bottom:
    1.5rem }` beat base.scss's, its `body { line-height: 1.5 }` beat the
@@ -56,7 +56,7 @@
    reason. An element selector added here will silently lose to Gutenberg
    and look like the rule "did nothing".
 
-   ⚠️ AND VERIFY BY PRINTING, NOT BY READING. The loop that produced these
+   [WARNING] AND VERIFY BY PRINTING, NOT BY READING. The loop that produced these
    numbers was headless Chrome to a PDF and a page count:
 
      (cd _site && python3 -m http.server 4311 &)
@@ -64,7 +64,7 @@
        --headless --no-pdf-header-footer --virtual-time-budget=10000 \
        --print-to-pdf=out.pdf http://localhost:4311/cv/
 
-   ⚠️ --virtual-time-budget was added 2026-10-31, and the loop is wrong
+   [WARNING] --virtual-time-budget was added 2026-10-31, and the loop is wrong
    without it, at least on Chrome 156: headless prints before it has even
    requested the `media="print"` assets/print.css, so the PDF comes out
    with the site's header and footer at five pages. `make cv-pdf`
@@ -73,13 +73,13 @@
    Measured before: body 19.08px on a 28.62px line, h2 32px, 24px between
    paragraphs, column 613.8px. Eight pages.
 
-   ⚠️ IT LANDED ON FOUR, AND FOUR IS THE ASK — not a floor to keep pushing
+   [WARNING] IT LANDED ON FOUR, AND FOUR IS THE ASK — not a floor to keep pushing
    under. An earlier pass of this block reached THREE, which was smaller than
    he wanted: "can we avoid orphans and then use the whole of 4-pages". So
    the numbers here were grown back up, not squeezed down, and section 6
    spends paper deliberately.
 
-   ⚠️ THESE NUMBERS ARE A BISECTED RESULT, NOT A TASTE, and they are only
+   [WARNING] THESE NUMBERS ARE A BISECTED RESULT, NOT A TASTE, and they are only
    meaningful together with the 20mm page margin in section 2b. Measured
    through headless Chrome WITH the print dialog's header and footer turned
    on, which is how he prints, counting pages and measuring ink on the last
@@ -95,13 +95,13 @@
    shorter. The shipped row is the last that holds four pages on both, and it
    still holds on A4 if the margin is 4mm larger than modelled.
 
-   ⚠️ ONE HUNDREDTH OF A LINE-HEIGHT IS THE WHOLE MARGIN at the edges, and
+   [WARNING] ONE HUNDREDTH OF A LINE-HEIGHT IS THE WHOLE MARGIN at the edges, and
    that is paged media rather than a weakness here: a whole paragraph moves
    at once, so a last page is either well filled or a straggler with a line
    on it, never something in between. Never change a number in section 3
    without reprinting and counting BOTH papers WITH headers on.
 
-   ⚠️ FOUR EARLIER VERSIONS OF THIS NOTE WERE WRONG, each in a way worth
+   [WARNING] FOUR EARLIER VERSIONS OF THIS NOTE WERE WRONG, each in a way worth
    knowing, because every one of them was confidently written:
 
      1. It claimed 1.4 with 7pt/19pt spilled to five pages. It did not.
@@ -130,7 +130,7 @@
      document that most wants to read cleanly, and they cost lines as well
      as calm.
 
-     ⚠️ THE CONTACT LINE KEEPS ITS URL, deliberately. A printed CV whose
+     [WARNING] THE CONTACT LINE KEEPS ITS URL, deliberately. A printed CV whose
      LinkedIn is the word "LinkedIn" and no address is a CV you cannot act
      on; the email beside it is already its own address, and `/about/` is
      relative so Gutenberg never expanded it. That leaves exactly one URL on
@@ -169,7 +169,7 @@
   body:has(.page-cv) {
     padding: 0;
 
-    /* ⚠️ NO TRAILING PADDING, and this is the whole reason a CONTENTLESS
+    /* [WARNING] NO TRAILING PADDING, and this is the whole reason a CONTENTLESS
        fifth page can exist. When the last line lands near the foot of page
        four, any box space after it — padding, a margin, a border — is still
        box space, and the printer dutifully opens another sheet to hold it.
@@ -192,14 +192,14 @@
   /* ------------------------------------------------------------
      2b. THE PRINTABLE AREA IS PINNED (2026-09-07, at his ask).
 
-     ⚠️ THIS IS THE RULE THAT MAKES THE PAGE COUNT MEAN ANYTHING. Until it
+     [WARNING] THIS IS THE RULE THAT MAKES THE PAGE COUNT MEAN ANYTHING. Until it
      existed there was no `@page` anywhere on the site, so the printable area
      was whatever the reader's print dialog happened to say — and the dialog
      is the single biggest lever on where the breaks fall, bigger than any
      type size in section 3. Tuning to "four pages" against an unpinned
      margin is tuning against the tester's own preferences.
 
-     ⚠️ THIS `@page` IS UNSCOPED, so it is DOCUMENT-LEVEL. (A named page
+     [WARNING] THIS `@page` IS UNSCOPED, so it is DOCUMENT-LEVEL. (A named page
      can scope one; see 2c, which does exactly that for the paper size.
      This margin stays unnamed on purpose.) Written plain, the at-rule
      describes the sheet, not an element — so this one declaration sets the print margin
@@ -208,7 +208,7 @@
      default, so other pages barely move, and every page gains a printable
      area that does not depend on who is printing.
 
-     ⚠️ AND 20mm TOP/BOTTOM IS SIZED TO CONTAIN THE PRINT DIALOG'S OWN
+     [WARNING] AND 20mm TOP/BOTTOM IS SIZED TO CONTAIN THE PRINT DIALOG'S OWN
      HEADER AND FOOTER — the date, title, URL and page number that Chrome
      draws when "Headers and footers" is ticked. That is not decoration; it
      is the difference between his output and this one. With a 12mm margin
@@ -219,7 +219,7 @@
      effective box matched a ~19-20mm margin while this end was measuring
      12mm and calling it four pages.
 
-     ⚠️ SO DO NOT SHRINK THIS TO WIN BACK A LINE. A smaller number does not
+     [WARNING] SO DO NOT SHRINK THIS TO WIN BACK A LINE. A smaller number does not
      give the document more room, it just moves the room from the margin,
      where it is visible and predictable, into the browser's private reserve,
      where it is neither. The CV's margin IS this rule — `body` padding is
@@ -239,7 +239,7 @@
      from the unnamed `@page` above. Measured: /cv/ four A4 pages, /about/
      still US Letter from headless Chrome's default.
 
-     ⚠️ `page: cv` GOES ON BODY, NOT ON main.page-cv. On main, the print
+     [WARNING] `page: cv` GOES ON BODY, NOT ON main.page-cv. On main, the print
      came out five sheets of mixed A4 and Letter: a change of page name
      forces a break, and body's own boxes before and after main (the
      "Edited" line sits outside it) stayed on the unnamed Letter page.
@@ -259,7 +259,7 @@
   /* ------------------------------------------------------------
      3. DENSITY — where the pages actually go.
 
-     ⚠️ THE FONT SIZE IS A SQUARED LEVER HERE, which is why it does most of
+     [WARNING] THE FONT SIZE IS A SQUARED LEVER HERE, which is why it does most of
      the work. The column is bound by the SHEET, not by --measure (measured:
      the container is 652.7px wide and --measure computes to 665px, so the
      measure never binds in print). A page-bound column means a smaller font
@@ -268,11 +268,11 @@
      the SQUARE of the type size. Nine-tenths of the reduction is these six
      numbers and the line-height below.
 
-     ⚠️ pt, NOT rem OR px. This is the one part of the site rendered on
+     [WARNING] pt, NOT rem OR px. This is the one part of the site rendered on
      paper, where a point is a real physical unit and 16px-relative rem is
      an accident of Gutenberg's `html { font-size: 16px }`.
 
-     ⚠️ Overriding --step-* rather than font-size directly is what makes the
+     [WARNING] Overriding --step-* rather than font-size directly is what makes the
      whole page follow. config.scss sets `main { font-size: var(--step-0) }`
      and redeclares the whole scale there; .page-cv IS that main element, so
      redefining the tokens on it re-resolves the font-size rule already
@@ -287,7 +287,7 @@
     --step-2: 15pt;
     --step-3: 19pt;
 
-    /* ⚠️ KEEP THIS SCALE MONOTONIC. It briefly was not — --space-s was raised
+    /* [WARNING] KEEP THIS SCALE MONOTONIC. It briefly was not — --space-s was raised
        to widen the gap between entries and ended up larger than --space-m,
        which is a trap for whatever reads a token next rather than a bug you
        can see. The gap between entries is --space-m, because that is what
@@ -300,7 +300,7 @@
     --space-m: 17pt; /* between entries */
     --space-l: 24pt;
 
-    /* ⚠️ THE READER'S THEME MUST NOT FOLLOW THE PAGE ONTO PAPER, and until
+    /* [WARNING] THE READER'S THEME MUST NOT FOLLOW THE PAGE ONTO PAPER, and until
        this block it did. print.css forces `body { background: #fff; color:
        #000 }` with !important, but it cannot reach a rule that names a token
        — so on the dark theme `.timeline h2 + p` kept --text-color-lower at
@@ -312,7 +312,7 @@
        `:root` here would lose to it. A class on the element these tokens are
        read *through* wins for the whole subtree whatever the root says.
 
-       ⚠️ These are the site's own RAW grays, not new colours — the guardrail
+       [WARNING] These are the site's own RAW grays, not new colours — the guardrail
        against hardcoded colour still holds. themes.scss's dark mixin only
        re-points the semantic aliases (--color-fg-subtle and friends); the
        gray-N scale underneath is constant in both themes, so naming a rung
@@ -328,7 +328,7 @@
     --timeline-gutter: 10pt;
     --timeline-dot: 6px;
 
-    /* ⚠️ Set here and not left to --scale. Custom properties resolve on the
+    /* [WARNING] Set here and not left to --scale. Custom properties resolve on the
        element that DECLARES them, so body's `line-height: var(--scale)` is
        already the number 1.618 by the time it inherits, and redefining
        --scale down here would not touch it. The golden ratio is a
@@ -342,7 +342,7 @@
   /* ------------------------------------------------------------
      4. THE HEADINGS, WHICH IS WHERE SECTION 3 LEAKS.
 
-     ⚠️ THE TOKENS ABOVE DO NOT REACH AN h1 OR AN h2, and the first draft of
+     [WARNING] THE TOKENS ABOVE DO NOT REACH AN h1 OR AN h2, and the first draft of
      this block shipped with the company names printing LARGER than the name
      at the top of the page. Gutenberg sets `h2 { font-size: 2rem }` on the
      bare element and loads after site.css, so it beats base.scss's
@@ -360,7 +360,7 @@
     font-size: 22pt;
   }
 
-  /* ⚠️ THE GAP UNDER THE NAME GOES ON THE WRAPPER, NOT ON THE TITLE. This
+  /* [WARNING] THE GAP UNDER THE NAME GOES ON THE WRAPPER, NOT ON THE TITLE. This
      said `margin: 0 0 var(--space-2xs)` on .page-title for one commit and
      did nothing at all: page-actions.scss has `.page-head .page-title
      { margin-bottom: 0 }` at the same (0,2,0) specificity, and it is @use'd
@@ -374,7 +374,7 @@
     margin-bottom: var(--space-xs);
   }
 
-  /* ⚠️ HEAVIER THAN ON SCREEN, deliberately. base.scss draws headings at
+  /* [WARNING] HEAVIER THAN ON SCREEN, deliberately. base.scss draws headings at
      --font-weight-light, which is a screen aesthetic: a backlit hairline at
      30px reads as elegant, the same hairline at 13pt of toner reads as
      faint, and the company name is the thing a reader scans this document
@@ -396,7 +396,7 @@
   /* ------------------------------------------------------------
      5. THE SPINE, WHICH PRINT WAS SILENTLY EATING.
 
-     ⚠️ Gutenberg opens with `*, *:before, *:after { background: rgba(0,0,0,0)
+     [WARNING] Gutenberg opens with `*, *:before, *:after { background: rgba(0,0,0,0)
      !important }` — a reasonable thing for a print reset to do, and it took
      the timeline spine with it, because .timeline::before draws that line as
      a `background` on a 0.75px-wide box. The DOTS survived, since they are
@@ -409,7 +409,7 @@
      hairline token stays the site's one hairline value instead of forking a
      second number for paper.
 
-     ⚠️ Do not "restore" this by putting the background back with !important.
+     [WARNING] Do not "restore" this by putting the background back with !important.
      It would work, and it would leave the next person believing the reset is
      something to override rather than something to draw around. */
   .page-cv .timeline::before {
@@ -425,7 +425,7 @@
      that is read by a person deciding something. Back to 3 — a paragraph
      leaves at least three lines behind it and carries at least three over.
 
-     ⚠️ AND AN ENTRY'S HEAD IS NOW A UNIT: the company, the date-and-role
+     [WARNING] AND AN ENTRY'S HEAD IS NOW A UNIT: the company, the date-and-role
      line under it, and the first paragraph of prose. Gutenberg supplies the
      first two links of that chain — `h2 { page-break-after: avoid }` and
      `h2 + p { page-break-before: avoid }` — which is enough to stop the
@@ -434,7 +434,7 @@
      third link, and it is the one that matters on a CV: a heading with no
      prose under it reads as a mistake.
 
-     ⚠️ `break-before`, not `page-break-before`. The prefixed pair is what
+     [WARNING] `break-before`, not `page-break-before`. The prefixed pair is what
      Gutenberg speaks and browsers still honour it, but this file is new
      code and the modern property is the one to write. They are aliases; do
      not add both, and do not "fix" this one back.

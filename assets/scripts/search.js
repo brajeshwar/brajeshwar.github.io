@@ -7,7 +7,7 @@
  * live website, [/search/ does] not have the Search Field to do the search.
  * Bring the same Search Input that we have globally."
  *
- * ⚠️ /search/ USED TO RUN PAGEFIND'S *DEFAULT* UI, and it was dead in
+ * [WARNING] /search/ USED TO RUN PAGEFIND'S *DEFAULT* UI, and it was dead in
  * production while working perfectly on localhost. The cause was not Pagefind:
  * Cloudflare Rocket Loader rewrites every <script type> and re-executes them
  * AFTER DOMContentLoaded has already fired, and the old pagefind-custom.js put
@@ -15,7 +15,7 @@
  * That listener was registered on an event that had already passed, so it never
  * ran and the page rendered an empty div. Nothing logged; nothing 404'd.
  *
- * ⚠️ WHICH IS WHY THE READY-GUARD AT THE FOOT OF THIS FILE IS LOAD-BEARING.
+ * [WARNING] WHICH IS WHY THE READY-GUARD AT THE FOOT OF THIS FILE IS LOAD-BEARING.
  * `readyState === 'loading' ? addEventListener : init()` survives Rocket
  * Loader because the else-branch runs immediately when the event is gone.
  * appearance.js and sidenotes.js use the same guard. Do not "simplify" any of

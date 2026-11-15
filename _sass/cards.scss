@@ -61,7 +61,7 @@ ul.item__cards {
    The thumbnails then render at 158.2px each — (1024 - 15×5) / 6 —
    because 1fr stretches them past the minimum to fill the row.
 
-   ⚠️ SCOPED TO THE PAGE, not to `.card-grid--3x4`. That class is
+   [WARNING] SCOPED TO THE PAGE, not to `.card-grid--3x4`. That class is
    books-only TODAY, which makes it a tempting hook and the wrong one:
    it describes an aspect ratio, so a 3x4 grid added to another page
    would silently inherit six columns it never asked for. `page-books`

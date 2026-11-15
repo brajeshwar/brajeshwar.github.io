@@ -50,7 +50,7 @@
 //     so prose in _sass/*.scss never reaches the browser. Keep commenting.
 //   - Never write a bang comment. Slash-star-bang survives compression.
 //
-// ⚠️ ORDER IS THE CASCADE. There is no layout gate and no per-page opt-in; a
+// [WARNING] ORDER IS THE CASCADE. There is no layout gate and no per-page opt-in; a
 // selector must anchor to something page-specific (a class like .page or
 // .post, a custom element like <photo-cover>) and never a bare
 // `main > article > h2`. See the note atop page.scss for what that cost once.

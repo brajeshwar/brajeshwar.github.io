@@ -42,7 +42,7 @@
       // 2026-07-27 at Brajeshwar's request, with the file re-added.
       // read() validates against this list, so any stale stored value
       // falls back to 'sans' with no migration step.
-      // ⚠️ FOUR places must agree for a font option: this list, the
+      // [WARNING] FOUR places must agree for a font option: this list, the
       // [data-font] rule in config.css, the @font-face in themes.css,
       // and the no-flash whitelist in _layouts/default.html.
       // 'sans' is labeled "System" (was "Default", renamed

@@ -47,7 +47,7 @@
  *           assets/scripts/*.js    ->  <name>.<hash>.js
  *           ...and rewrite those URLs inside every built .html.
  *
- * ⚠️ MUST RUN AFTER THE ESBUILD MINIFY STEP, or the hash names bytes that are
+ * [WARNING] MUST RUN AFTER THE ESBUILD MINIFY STEP, or the hash names bytes that are
  * not the bytes we ship, and the next build — same source, differently
  * minified — would not bust the cache.
  *

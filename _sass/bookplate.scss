@@ -29,14 +29,14 @@
    plainest binding a book can have, which is the point. A shelf of these reads
    as a library's unjacketed stock rather than as a wall of missing images.
 
-   ⚠️ THE TITLE IS ALSO IN THE CAPTION, AND THAT IS DELIBERATE.
+   [WARNING] THE TITLE IS ALSO IN THE CAPTION, AND THAT IS DELIBERATE.
    card-grid.html prints a <figcaption> and the home strip prints
    .strip__caption, so an img-less card says the title twice. Checked at the
    sizes it actually renders at before shipping: the two read as different
    objects — one is the cover, one is the label — which is what every real book
    grid does. The plate is aria-hidden, so a screen reader hears it once.
 
-   ⚠️ AND THE INNER SELECTORS NEED TWO CLASSES. On /books/ the plate sits
+   [WARNING] AND THE INNER SELECTORS NEED TWO CLASSES. On /books/ the plate sits
    inside a <figure>, and album.scss carries `.album figure span`, which is
    (0,1,2) — one class and two elements. A lone `.bookplate__title` is (0,1,0)
    and LOSES to it, silently: the title would render at --step--2 in
@@ -71,7 +71,7 @@
   width: 100%;
   aspect-ratio: 3 / 4;
 
-  /* ⚠️ NO PADDING HERE, AND IT IS THE ONE RULE THIS COMPONENT CANNOT BREAK.
+  /* [WARNING] NO PADDING HERE, AND IT IS THE ONE RULE THIS COMPONENT CANNOT BREAK.
      A query container cannot read its OWN container units — that would be
      circular — so a `cqi` in the plate's own padding silently resolves against
      the NEXT container up, which on /books/ is the 1024px page. Measured
@@ -100,7 +100,7 @@
      keeps that edge honest when the two values are close, which in the default
      light palette they are (gray-100 page, white surface).
 
-     ⚠️ THE STEP IS NOT ALWAYS UPWARD, and that is not a bug to fix. Measured
+     [WARNING] THE STEP IS NOT ALWAYS UPWARD, and that is not a bug to fix. Measured
      across all six palette/mode combinations: the board is lighter than the
      page in five of them, and DARKER in Warm light, where Flexoki's page is
      paper (255,252,240) and its surface is base-50 (242,240,229). A cream page
@@ -111,7 +111,7 @@
   background-color: var(--bg-color-lowest);
   border: var(--border-size-hairline) solid var(--bookplate-rule);
 
-  /* ⚠️ MATCHES THE COVERS, and it has to be declared because the rule that
+  /* [WARNING] MATCHES THE COVERS, and it has to be declared because the rule that
      rounds them cannot reach a plate. base.scss carries
      `main :where(img, video, iframe) { border-radius: var(--border-radius) }`,
      so every real cover on the site is 7px rounded — a square-cornered plate
@@ -120,14 +120,14 @@
      as well, to the same token. */
   border-radius: var(--border-radius);
 
-  /* ⚠️ TRANSITIONS THE BORDER, AND IT MUST BE DECLARED AT REST rather than in
+  /* [WARNING] TRANSITIONS THE BORDER, AND IT MUST BE DECLARED AT REST rather than in
      the hover block at the foot of this file. A transition is read from the
      element's state BEFORE the change: put it only under :hover and the colour
      snaps on the way in and fades on the way out, which reads as a glitch.
      120ms matches what the strip's background wash used to use, so the shelf
      feels the same even though nothing about it is the same.
 
-     ⚠️ IF YOU MEASURE THIS AND GET `transition-duration: 0s`, NOTHING IS
+     [WARNING] IF YOU MEASURE THIS AND GET `transition-duration: 0s`, NOTHING IS
      WRONG. base.scss carries a global `prefers-reduced-motion: reduce` block
      that zeroes transition-duration on everything with !important, and
      Brajeshwar browses with reduced motion ON — so the reading he will get,
@@ -155,7 +155,7 @@
    palette and both modes: --text-color is the far end of the ramp everywhere,
    so a small percentage of it is always a step away from the board.
 
-   ⚠️ AND IN DARK MODE THAT STEP GOES THE OTHER WAY — CHECKED, AND KEPT.
+   [WARNING] AND IN DARK MODE THAT STEP GOES THE OTHER WAY — CHECKED, AND KEPT.
    --text-color is near-white there, so the band paints LIGHTER than the board
    and the crease reads as a highlight rather than a shadow. Looked at in the
    browser rather than reasoned about: it reads as light catching the binding
@@ -164,7 +164,7 @@
    are mixes of the same two tokens. Do not "correct" it with a mode-specific
    value — that would put a raw color outside themes.scss for no gain.
 
-   ⚠️ `width` IS A PERCENTAGE, not the cqi the text spans use, and for the same
+   [WARNING] `width` IS A PERCENTAGE, not the cqi the text spans use, and for the same
    reason the plate carries no padding: a pseudo-element belongs to the
    container rather than sitting inside it, so `7cqi` here would resolve
    against the page. A percentage on an absolutely-positioned box resolves
@@ -255,7 +255,7 @@
   color: var(--text-color-lower);
 }
 
-/* ⚠️ A CONTAINER QUERY ON THE PLATE'S OWN WIDTH, not a media query.
+/* [WARNING] A CONTAINER QUERY ON THE PLATE'S OWN WIDTH, not a media query.
    The plate's size does not follow the viewport: /books/ gives it 193px in a
    1024px band and about 146px on a 320px phone, while the home shelf gives it
    192px at every width down to 480px and 120px below that. A breakpoint would
@@ -285,7 +285,7 @@
    title all read that property, so one declaration moves three lines at once
    and they cannot drift apart.
 
-   ⚠️ THE HOVER LIVES HERE, NOT IN home.scss, AND THAT IS DELIBERATE. A plate
+   [WARNING] THE HOVER LIVES HERE, NOT IN home.scss, AND THAT IS DELIBERATE. A plate
    is hovered on /books/ too, where the card is an <a> inside the grid. Keying
    this to .strip__link would have given the same component two different hover
    states on two pages for no reason a reader could see.
@@ -304,7 +304,7 @@
    rgb(108) against rgb(176) at rest: clearly a state change, still a hairline
    and not a stroke.
 
-   ⚠️ The transition is declared on the PLATE, not here, and it has to be — a
+   [WARNING] The transition is declared on the PLATE, not here, and it has to be — a
    transition only runs if the property is already transitionable on the
    element BEFORE the state changes. Declaring it inside the hover block gives
    you an instant snap on the way in and a fade only on the way out. */

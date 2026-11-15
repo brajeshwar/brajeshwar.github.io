@@ -29,7 +29,7 @@
 .archive-strip {
   /* Hangs off the header rule: `main` begins one --space-l below the
      header's border-bottom, so cancel exactly that to rise and meet it.
-     ⚠️ Keep in step with the header's margin-bottom in chrome.css — if that
+     [WARNING] Keep in step with the header's margin-bottom in chrome.css — if that
      changes and this doesn't, the strip detaches and floats. */
   margin-top: calc(-1 * var(--space-l));
   margin-bottom: var(--space-m);
@@ -40,7 +40,7 @@
    A big "20" set in the margin to the left of the tray, reading as the common
    prefix for every 2-digit label beside it: 20|26, 20|25, 20|24.
 
-   ⚠️ It used to be the whole "2026", centered on the tray's LEFT EDGE so that
+   [WARNING] It used to be the whole "2026", centered on the tray's LEFT EDGE so that
    the opaque tray hid the second half. That looked identical but could not be
    spaced: the four digits are one string, so nudging it left to open a gap
    beside the "0" dragged the "2" of "26" out into the margin with it.
@@ -242,7 +242,7 @@ page-archives table caption {
      track that. This base value covers the un-stuck case (phones), where there
      is nothing overhead to clear at all.
 
-     ⚠️ This has now been wrong three times, each after something changed the
+     [WARNING] This has now been wrong three times, each after something changed the
      strip's height: 52px against a 57px bar, then 72px against 98px, then a
      stale one-row override against a two-row strip. It is not derivable from a
      token — measure it in a browser after touching the strip's padding, font
@@ -309,7 +309,7 @@ page-archives table:last-child tr:last-child td:last-child {
    XS had 8.8px to spare, M was already at −0.2px, XL was 9.2px over. Hence the
    two squashed lines.
 
-   ⚠️ The obvious fixes do not work here, because `base.css` sets
+   [WARNING] The obvious fixes do not work here, because `base.css` sets
    `table { table-layout: fixed }`. Under fixed layout the specified width is
    used LITERALLY — a cell's content is never consulted, so neither
    `width: auto` (which just split the table 50/50, giving the date 510px) nor
