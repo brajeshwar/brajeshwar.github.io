@@ -4,7 +4,7 @@ I read Greg McKeown’s [Essentialism](/2022/books/) in 2022, and like most good
 
 This is my working list. It is not a system, and it will keep changing.
 
-**Native, and open formats.** I prefer native apps over web apps dressed up as apps, and files over databases I cannot see. If my [notes](/2025/obsidian/), photos, and writing are in plain text, Markdown, JPEG, or PDF, I can open them in twenty years with whatever exists then. A format I can [walk away with](/2025/can-i-walk-out/) matters more to me than a feature I will use twice.
+**Native, and open formats.** I prefer native apps over web apps dressed up as apps, and files over databases I cannot see. If my [notes](/2025/obsidian/), photos, and writing are in [plain text](/2022/plain-text/), Markdown, JPEG, or PDF, I can open them in twenty years with whatever exists then. A format I can [walk away with](/2025/can-i-walk-out/) matters more to me than a feature I will use twice.
 
 **Fewer accounts.** I have been stepping away from online accounts that mean nothing to me,[^accounts] the ones I signed up for to try something once, or because everyone was. I no longer need to be an early user. If something is good, it will still be there in a year, and I will hear about it from someone I trust.
 
