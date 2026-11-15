@@ -1,4 +1,4 @@
-@use "breakpoints" as bp;   // emits nothing; see _sass/breakpoints.scss
+@use 'breakpoints' as bp; // emits nothing; see _sass/breakpoints.scss
 
 /* ============================================================
    Archives — /archives/ only.
@@ -71,7 +71,7 @@
   margin-right: 2px;
 
   transform: translateY(-50%);
-  z-index: 0;                       /* under .archive-years (z-index 1) */
+  z-index: 0; /* under .archive-years (z-index 1) */
 
   font-family: var(--font-family-monospace);
   font-variant-numeric: tabular-nums;
@@ -112,12 +112,14 @@
    the mark is simply not drawn — the labels still work, they just lose the
    flourish. */
 @media (max-width: 1250px) {
-  .archive-century { display: none; }
+  .archive-century {
+    display: none;
+  }
 }
 
 .archive-years {
   position: relative;
-  z-index: 1;                       /* paints over .archive-century */
+  z-index: 1; /* paints over .archive-century */
 
   display: grid;
   /* 2rem tracks, down from 2.5rem on 2026-07-27 when the site width came down
@@ -149,7 +151,7 @@
   padding: var(--space-3xs) var(--space-3xs);
   font-family: var(--font-family-monospace);
   font-size: var(--step--2);
-  font-variant-numeric: tabular-nums;   /* 26/25/24 line up in their tracks */
+  font-variant-numeric: tabular-nums; /* 26/25/24 line up in their tracks */
   text-align: center;
   text-decoration: none;
   border-radius: var(--border-radius-small);
@@ -162,7 +164,9 @@
      fg-muted is still the right tier for a control, so this stands.) Contrast
      is checked against the STRIP's background, not the page background. */
   color: var(--text-color-low);
-  transition: color 0.12s ease, background-color 0.12s ease;
+  transition:
+    color 0.12s ease,
+    background-color 0.12s ease;
 }
 
 /* Sticky from tablet up; static on phones.
@@ -221,7 +225,7 @@ page-archives table {
 }
 page-archives table td {
   /* a custom spacing that breaks the default spacing values */
-  padding: calc(var(--space-3xs)*0.6) var(--space-2xs);
+  padding: calc(var(--space-3xs) * 0.6) var(--space-2xs);
 }
 
 page-archives table caption {
@@ -250,14 +254,18 @@ page-archives table caption {
    underneath. Must come after the caption rule above: equal specificity means
    source order decides. */
 @media (min-width: 768px) {
-  page-archives table caption { scroll-margin-top: 5.5rem; }   /* 88px > 77px */
+  page-archives table caption {
+    scroll-margin-top: 5.5rem;
+  } /* 88px > 77px */
 }
 
 /* ONE row again from 1024px (42px strip), so the two-row clearance is now just
    wasted screen. The 2rem tracks brought this case back — at 2.5rem the strip
    could not fit one row inside a 1024px band at all. */
 @media (min-width: 1024px) {
-  page-archives table caption { scroll-margin-top: 3.5rem; }   /* 56px > 42px */
+  page-archives table caption {
+    scroll-margin-top: 3.5rem;
+  } /* 56px > 42px */
 }
 
 /* "You are here" after a jump — CSS-only, no scroll-spy JS. Marks the year you
@@ -327,6 +335,7 @@ page-archives table tr td:first-child {
   text-transform: uppercase;
 }
 
-page-archives tbody tr:hover, page-archives tbody tr:active {
+page-archives tbody tr:hover,
+page-archives tbody tr:active {
   border-bottom-color: var(--border-color-high);
 }

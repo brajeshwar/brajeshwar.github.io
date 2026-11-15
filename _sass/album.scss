@@ -1,4 +1,4 @@
-@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
+@use 'breakpoints' as bp; // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
    Album — thumbnail grid for photos, films, devices, videos.
@@ -22,7 +22,7 @@
    it is the minimum column width the auto-fill grid honors. */
 @media only screen and (max-width: bp.$small) {
   .album .item__cards {
-    --card-min: 8rem;                /* 128px — more, smaller cards on a phone */
+    --card-min: 8rem; /* 128px — more, smaller cards on a phone */
   }
 }
 

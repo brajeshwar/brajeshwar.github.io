@@ -20,14 +20,16 @@
 (function () {
   'use strict';
 
-  var MIN_GUTTER_REM = 17;   // keep in sync with --sidenote-min-gutter
-  var FLASH_MS = 1500;       // spotlight duration when a reference is clicked
+  var MIN_GUTTER_REM = 17; // keep in sync with --sidenote-min-gutter
+  var FLASH_MS = 1500; // spotlight duration when a reference is clicked
   var items = [];
 
   function rootFontPx() {
     return parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
   }
-  function rem(n) { return n * rootFontPx(); }
+  function rem(n) {
+    return n * rootFontPx();
+  }
 
   function escapeId(id) {
     if (window.CSS && CSS.escape) return CSS.escape(id);
@@ -48,15 +50,23 @@
       var refs = article.querySelectorAll('sup[id^="fnref"]');
       if (!refs.length) return;
       items.push({
-        el: article, fnBlock: fnBlock, refs: refs,
-        notes: [], byId: {}, inlines: {}, activeId: null, flashTimer: null
+        el: article,
+        fnBlock: fnBlock,
+        refs: refs,
+        notes: [],
+        byId: {},
+        inlines: {},
+        activeId: null,
+        flashTimer: null,
       });
     });
   }
 
   function clear(item) {
     deactivate(item);
-    item.notes.forEach(function (n) { n.remove(); });
+    item.notes.forEach(function (n) {
+      n.remove();
+    });
     item.notes = [];
     item.byId = {};
     item.el.classList.remove('has-sidenotes');
@@ -110,7 +120,7 @@
      Returns the vertical ranges (relative to the article top) such elements
      occupy, so placement can push overlapping notes below them. */
   function collectObstacles(item, articleRect) {
-    var edge = articleRect.right + rem(1);     // past this line = in the gutter
+    var edge = articleRect.right + rem(1); // past this line = in the gutter
     /* `figure` added 2026-07-28, when post.css sent every figure to the band.
        Safe to list unconditionally: the `r.right <= edge` test below already
        discards anything that does not actually protrude into the gutter, so a
@@ -118,21 +128,25 @@
        then ignored. Keep this selector in step with the `.post figure` rule in
        post.css — CSS widens the media, this is the only thing that moves the
        notes out of its way, and neither half is any use alone. */
-    var els = item.el.querySelectorAll('figure, .full, .large, .gallery, aside.right, .aside.right');
+    var els = item.el.querySelectorAll(
+      'figure, .full, .large, .gallery, aside.right, .aside.right'
+    );
     var list = [];
     Array.prototype.forEach.call(els, function (el) {
       var r = el.getBoundingClientRect();
       if (r.height === 0 || r.right <= edge) return;
       list.push({ top: r.top - articleRect.top, bottom: r.bottom - articleRect.top });
     });
-    list.sort(function (a, b) { return a.top - b.top; });
+    list.sort(function (a, b) {
+      return a.top - b.top;
+    });
     return list;
   }
 
   function place(item) {
     clear(item);
-    if (!gutterFits(item.el)) return;          // fold back to footnotes
-    closeAllInlines(item);                     // the margin takes over from inline reveals
+    if (!gutterFits(item.el)) return; // fold back to footnotes
+    closeAllInlines(item); // the margin takes over from inline reveals
     item.el.classList.add('has-sidenotes');
 
     var articleRect = item.el.getBoundingClientRect();
@@ -144,7 +158,7 @@
 
     Array.prototype.forEach.call(item.refs, function (ref) {
       var id = noteIdForRef(ref);
-      if (!id || seen[id]) return;             // skip repeated references
+      if (!id || seen[id]) return; // skip repeated references
       seen[id] = true;
 
       var li = item.fnBlock.querySelector('#' + escapeId(id));
@@ -158,7 +172,8 @@
       var refTop = ref.getBoundingClientRect().top - articleTop;
       var top = Math.max(refTop, lastBottom + gap);
       var height = aside.offsetHeight;
-      obstacles.forEach(function (ob) {        // dodge wide media in the gutter
+      obstacles.forEach(function (ob) {
+        // dodge wide media in the gutter
         if (top < ob.bottom && top + height > ob.top) top = ob.bottom + gap;
       });
       aside.style.top = top + 'px';
@@ -180,14 +195,18 @@
     item.activeId = id;
     item.el.classList.add('sidenote-focus');
     aside.classList.add('is-active');
-    refsForId(item, id).forEach(function (ref) { ref.classList.add('is-active'); });
+    refsForId(item, id).forEach(function (ref) {
+      ref.classList.add('is-active');
+    });
   }
 
   function deactivate(item) {
     if (!item.activeId) return;
     var aside = item.byId[item.activeId];
     if (aside) aside.classList.remove('is-active');
-    refsForId(item, item.activeId).forEach(function (ref) { ref.classList.remove('is-active'); });
+    refsForId(item, item.activeId).forEach(function (ref) {
+      ref.classList.remove('is-active');
+    });
     item.el.classList.remove('sidenote-focus');
     item.activeId = null;
   }
@@ -195,7 +214,9 @@
   function flash(item, id) {
     activate(item, id);
     clearTimeout(item.flashTimer);
-    item.flashTimer = setTimeout(function () { deactivate(item); }, FLASH_MS);
+    item.flashTimer = setTimeout(function () {
+      deactivate(item);
+    }, FLASH_MS);
   }
 
   function hoverTarget(e) {
@@ -208,9 +229,7 @@
     if (!item.el.classList.contains('has-sidenotes')) return;
     var t = hoverTarget(e);
     if (!t) return;
-    var id = t.classList.contains('sidenote')
-      ? t.getAttribute('data-note')
-      : noteIdForRef(t);
+    var id = t.classList.contains('sidenote') ? t.getAttribute('data-note') : noteIdForRef(t);
     if (id) activate(item, id);
   }
 
@@ -226,8 +245,11 @@
          jumping to the foot of the page. The foot block stays as-is. --- */
 
   function toggleInline(item, sup, id) {
-    if (item.inlines[id]) { closeInline(item, id); return; }
-    closeAllInlines(item);                     // one open note at a time
+    if (item.inlines[id]) {
+      closeInline(item, id);
+      return;
+    }
+    closeAllInlines(item); // one open note at a time
 
     var li = item.fnBlock.querySelector('#' + escapeId(id));
     if (!li) return;
@@ -236,8 +258,8 @@
     panel.setAttribute('data-note', id);
 
     // After the nearest block — never inside a list/table where <aside> is invalid.
-    var block = sup.closest('p, ul, ol, blockquote, figure, table, h1, h2, h3, h4, h5, h6')
-      || sup.parentNode;
+    var block =
+      sup.closest('p, ul, ol, blockquote, figure, table, h1, h2, h3, h4, h5, h6') || sup.parentNode;
     block.insertAdjacentElement('afterend', panel);
 
     item.inlines[id] = panel;
@@ -253,7 +275,9 @@
   }
 
   function closeAllInlines(item) {
-    Object.keys(item.inlines).forEach(function (id) { closeInline(item, id); });
+    Object.keys(item.inlines).forEach(function (id) {
+      closeInline(item, id);
+    });
   }
 
   function setOpen(item, id, open) {
@@ -268,7 +292,8 @@
     if (!e.target || !e.target.closest) return;
 
     var panel = e.target.closest('.sidenote-inline');
-    if (panel && !e.target.closest('a')) {     // tap the panel (not a link in it) to dismiss
+    if (panel && !e.target.closest('a')) {
+      // tap the panel (not a link in it) to dismiss
       closeInline(item, panel.getAttribute('data-note'));
       return;
     }
@@ -280,21 +305,33 @@
 
     e.preventDefault();
     if (item.el.classList.contains('has-sidenotes')) {
-      flash(item, id);                         // note is already in the margin — spotlight it
+      flash(item, id); // note is already in the margin — spotlight it
     } else {
       toggleInline(item, sup, id);
     }
   }
 
   function wire(item) {
-    item.el.addEventListener('mouseover', function (e) { onHoverIn(item, e); });
-    item.el.addEventListener('mouseout', function (e) { onHoverOut(item, e); });
-    item.el.addEventListener('focusin', function (e) { onHoverIn(item, e); });
-    item.el.addEventListener('focusout', function (e) { onHoverOut(item, e); });
-    item.el.addEventListener('click', function (e) { onClick(item, e); });
+    item.el.addEventListener('mouseover', function (e) {
+      onHoverIn(item, e);
+    });
+    item.el.addEventListener('mouseout', function (e) {
+      onHoverOut(item, e);
+    });
+    item.el.addEventListener('focusin', function (e) {
+      onHoverIn(item, e);
+    });
+    item.el.addEventListener('focusout', function (e) {
+      onHoverOut(item, e);
+    });
+    item.el.addEventListener('click', function (e) {
+      onClick(item, e);
+    });
   }
 
-  function render() { items.forEach(place); }
+  function render() {
+    items.forEach(place);
+  }
 
   var timer;
   function onResize() {
@@ -308,9 +345,9 @@
     items.forEach(wire);
     render();
     window.addEventListener('resize', onResize);
-    window.addEventListener('load', render);                 // images settled
+    window.addEventListener('load', render); // images settled
     if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(render);                     // fonts settled
+      document.fonts.ready.then(render); // fonts settled
     }
 
     /* Re-place when an IMAGE changes size.

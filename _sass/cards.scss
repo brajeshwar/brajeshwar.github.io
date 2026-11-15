@@ -29,7 +29,7 @@
    strip wants the opposite and uses auto-fit — the difference is whether a
    short row should fill or stay put.) */
 ul.item__cards {
-  --card-min: 11rem;                 /* 176px — the narrowest a thumbnail reads at */
+  --card-min: 11rem; /* 176px — the narrowest a thumbnail reads at */
 
   list-style: none;
   margin: 0;
@@ -75,7 +75,7 @@ ul.item__cards {
 }
 
 ul.item__cards li {
-	list-style: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   display: block;

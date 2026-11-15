@@ -27,14 +27,15 @@
  */
 (function () {
   'use strict';
-  var sel = 'article.post > h2[id], article.post > h3[id], article.post > h4[id], ' +
-            'article.post > h5[id], article.post > h6[id], ' +
-            '.timeline h2[id], .timeline h3[id], .page-now h2[id]';
+  var sel =
+    'article.post > h2[id], article.post > h3[id], article.post > h4[id], ' +
+    'article.post > h5[id], article.post > h6[id], ' +
+    '.timeline h2[id], .timeline h3[id], .page-now h2[id]';
   Array.prototype.forEach.call(document.querySelectorAll(sel), function (h) {
     var a = document.createElement('a');
     a.className = 'headerlink';
     a.href = '#' + h.id;
-    a.textContent = '#';            // see .headerlink in base.scss
+    a.textContent = '#'; // see .headerlink in base.scss
     a.setAttribute('aria-hidden', 'true');
     a.tabIndex = -1;
     h.insertBefore(a, h.firstChild);

@@ -48,8 +48,8 @@
    The .ttf stays in the repo as the source to re-subset from; only the .woff2
    ships. */
 @font-face {
-  font-family: "Geist";
-  src: url("/assets/fonts/geist/Geist-Variable.woff2") format("woff2");
+  font-family: 'Geist';
+  src: url('/assets/fonts/geist/Geist-Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -57,9 +57,9 @@
      U+05FF: the site uses ’ (3,197 times in a 400-page sample), “ ” • – —
      → ← ↩ … and ₹, all of which live in U+2000-21FF. See the Libre
      Baskerville note below — that is the same mistake, found here. */
-  unicode-range: U+0020-007E, U+00A0-01E9, U+0218-0237, U+0259, U+02BC-02DC,
-                 U+0300-0338, U+1E20-1E21, U+1E80-1EF9, U+2013-2044, U+2074,
-                 U+20AA-20BD, U+2122, U+2190-21B5, U+21E4-21E7, U+2212;
+  unicode-range:
+    U+0020-007E, U+00A0-01E9, U+0218-0237, U+0259, U+02BC-02DC, U+0300-0338, U+1E20-1E21,
+    U+1E80-1EF9, U+2013-2044, U+2074, U+20AA-20BD, U+2122, U+2190-21B5, U+21E4-21E7, U+2212;
 }
 
 /* Source Serif 4 is the reader "Serif" font ([data-font="serif"] in
@@ -120,27 +120,27 @@
    backlink. It falls to the system serif — as it always has; Libre
    Baskerville does not have it either. */
 @font-face {
-  font-family: "Source Serif 4";
-  src: url("/assets/fonts/source-serif/SourceSerif4Variable-Roman.woff2") format("woff2");
+  font-family: 'Source Serif 4';
+  src: url('/assets/fonts/source-serif/SourceSerif4Variable-Roman.woff2') format('woff2');
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC,
-                 U+01E6-01F9, U+0218-0237, U+0259, U+02BB-02DC, U+0300-0331,
-                 U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF,
-                 U+2122, U+2190-2199, U+2212-2215;
+  unicode-range:
+    U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC, U+01E6-01F9, U+0218-0237, U+0259,
+    U+02BB-02DC, U+0300-0331, U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF, U+2122,
+    U+2190-2199, U+2212-2215;
 }
 
 @font-face {
-  font-family: "Source Serif 4";
-  src: url("/assets/fonts/source-serif/SourceSerif4Variable-Italic.woff2") format("woff2");
+  font-family: 'Source Serif 4';
+  src: url('/assets/fonts/source-serif/SourceSerif4Variable-Italic.woff2') format('woff2');
   font-weight: 200 700;
   font-style: italic;
   font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC,
-                 U+01E6-01F9, U+0218-0237, U+0259, U+02BB-02DC, U+0300-0331,
-                 U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF,
-                 U+2122, U+2190-2199, U+2212-2215;
+  unicode-range:
+    U+0020-007E, U+00A0-017F, U+018F-01B0, U+01CD-01DC, U+01E6-01F9, U+0218-0237, U+0259,
+    U+02BB-02DC, U+0300-0331, U+1E0C-1E9E, U+1EA0-1EF9, U+2002-2049, U+2074, U+20A1-20BF, U+2122,
+    U+2190-2199, U+2212-2215;
 }
 
 /* Libre Baskerville — DORMANT since 2026-08-02, deliberately kept. It was
@@ -170,38 +170,42 @@
    The ranges below are read off each file's own cmap. All three faces are the
    same google-fonts "latin" subset and share one range. */
 @font-face {
-  font-family: "Libre Baskerville";
-  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2") format("woff2");
+  font-family: 'Libre Baskerville';
+  src: url('/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-regular.woff2')
+    format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC,
-                 U+2013-2044, U+2074, U+20AC, U+2122, U+2212-2215;
+  unicode-range:
+    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC, U+2013-2044, U+2074, U+20AC, U+2122,
+    U+2212-2215;
   size-adjust: 98.5%;
 }
 
 @font-face {
-  font-family: "Libre Baskerville";
-  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-italic.woff2") format("woff2");
+  font-family: 'Libre Baskerville';
+  src: url('/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-italic.woff2')
+    format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC,
-                 U+2013-2044, U+2074, U+20AC, U+2122, U+2212-2215;
+  unicode-range:
+    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC, U+2013-2044, U+2074, U+20AC, U+2122,
+    U+2212-2215;
   size-adjust: 98.5%;
 }
 
 @font-face {
-  font-family: "Libre Baskerville";
-  src: url("/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2") format("woff2");
+  font-family: 'Libre Baskerville';
+  src: url('/assets/fonts/libre-baskerville/libre-baskerville-v14-latin-bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC,
-                 U+2013-2044, U+2074, U+20AC, U+2122, U+2212-2215;
+  unicode-range:
+    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02BC-02DC, U+2013-2044, U+2074, U+20AC, U+2122,
+    U+2212-2215;
   size-adjust: 98.5%;
 }
-
 
 /* ---- Color tokens ---------------------------------------------------- */
 
@@ -237,7 +241,7 @@
 /* ---- Raw scale (default palette = neutral) ------------------ */
 :root {
   --color-white: oklch(100% 0 0);
-  --color-gray-50:  oklch(98.5% 0 0);
+  --color-gray-50: oklch(98.5% 0 0);
   --color-gray-100: oklch(97% 0 0);
   --color-gray-200: oklch(92.2% 0 0);
   --color-gray-300: oklch(87% 0 0);
@@ -269,9 +273,9 @@
      the two tiers under it: 7.05 (muted — intros, captions, alumni rows) and
      5.19 (subtle — dates, year markers). Those are what moved most.
      ------------------------------------------------------------------------ */
-  --color-fg: var(--color-gray-950);         /* ramp end — cannot go darker */
-  --color-fg-muted: var(--color-gray-900);   /* was gray-800 */
-  --color-fg-subtle: var(--color-gray-700);  /* was gray-600 */
+  --color-fg: var(--color-gray-950); /* ramp end — cannot go darker */
+  --color-fg-muted: var(--color-gray-900); /* was gray-800 */
+  --color-fg-subtle: var(--color-gray-700); /* was gray-600 */
 
   --color-border: color-mix(in oklch, var(--color-fg) 10%, transparent);
   --color-border-strong: color-mix(in oklch, var(--color-fg) 18%, transparent);
@@ -317,18 +321,18 @@
    -950 are the four that do not get a slot. Each line names the step it came
    from, so the mapping is checkable.
    ------------------------------------------------------------ */
-:root[data-palette="eink"] {
-  --color-gray-50:  #FFFCF0;   /* paper    */
-  --color-gray-100: #F2F0E5;   /* base-50  */
-  --color-gray-200: #E6E4D9;   /* base-100 */
-  --color-gray-300: #CECDC3;   /* base-200 */
-  --color-gray-400: #B7B5AC;   /* base-300 */
-  --color-gray-500: #9F9D96;   /* base-400 */
-  --color-gray-600: #878580;   /* base-500 */
-  --color-gray-700: #6F6E69;   /* base-600 */
-  --color-gray-800: #575653;   /* base-700 */
-  --color-gray-900: #282726;   /* base-900 */
-  --color-gray-950: #100F0F;   /* black    */
+:root[data-palette='eink'] {
+  --color-gray-50: #fffcf0; /* paper    */
+  --color-gray-100: #f2f0e5; /* base-50  */
+  --color-gray-200: #e6e4d9; /* base-100 */
+  --color-gray-300: #cecdc3; /* base-200 */
+  --color-gray-400: #b7b5ac; /* base-300 */
+  --color-gray-500: #9f9d96; /* base-400 */
+  --color-gray-600: #878580; /* base-500 */
+  --color-gray-700: #6f6e69; /* base-600 */
+  --color-gray-800: #575653; /* base-700 */
+  --color-gray-900: #282726; /* base-900 */
+  --color-gray-950: #100f0f; /* black    */
 
   /* Light. Only the three the shared defaults get wrong for this ramp — the
      rest already land on the right Flexoki step and are left alone.
@@ -337,8 +341,8 @@
      page is `paper` and raised surfaces are DARKER, not lighter. That inverts
      the usual relationship, and it is correct here — on paper there is nothing
      lighter than paper to raise onto. */
-  --color-bg: var(--color-gray-50);          /* paper    — vp-c-bg     */
-  --color-surface: var(--color-gray-100);    /* base-50  — vp-c-bg-alt */
+  --color-bg: var(--color-gray-50); /* paper    — vp-c-bg     */
+  --color-surface: var(--color-gray-100); /* base-50  — vp-c-bg-alt */
 
   /* fg-subtle is the one contrast compromise. Flexoki's tx-3 is base-300,
      which measures 2.00:1 on paper — fine for the hairlines it is meant for,
@@ -346,20 +350,20 @@
      to base-600 = 4.97:1, i.e. AA. Same bump the default palette already makes
      for the same reason; the tier above it, fg-muted, is base-700 at 7.14:1
      and needs no help. */
-  --color-fg-subtle: var(--color-gray-800);  /* base-700 — was base-600, +1 step 2026-08-01 */
+  --color-fg-subtle: var(--color-gray-800); /* base-700 — was base-600, +1 step 2026-08-01 */
 
   /* Accent stays monotone, drawn from this ramp — color on this site is
      opt-in through the Accent axis, not baked into a palette (design.md).
      Flexoki ships eight accent hues if that ever changes; kepano's own docs
      theme uses cyan-600. Left as the darkest warm neutral: 14.51:1. */
-  --color-accent: var(--color-gray-900);     /* base-900 */
+  --color-accent: var(--color-gray-900); /* base-900 */
   --color-accent-hover: var(--color-gray-800);
 }
 
-:root[data-palette="nord"] {
-  --color-gray-50:  oklch(97.3% 0.006 265);
+:root[data-palette='nord'] {
+  --color-gray-50: oklch(97.3% 0.006 265);
   --color-gray-100: oklch(95.1% 0.007 261);
-  --color-gray-200: oklch(93.3% 0.010 262);
+  --color-gray-200: oklch(93.3% 0.01 262);
   --color-gray-300: oklch(89.9% 0.016 263);
   --color-gray-400: oklch(76.5% 0.026 263);
   --color-gray-500: oklch(63.1% 0.036 263);
@@ -395,9 +399,9 @@
   --color-bg: var(--color-gray-900);
   --color-surface: var(--color-gray-800);
   --color-bg-muted: var(--color-gray-800);
-  --color-fg: var(--color-gray-50);          /* ramp end — cannot go lighter */
-  --color-fg-muted: var(--color-gray-100);   /* was gray-200 */
-  --color-fg-subtle: var(--color-gray-300);  /* was gray-400 */
+  --color-fg: var(--color-gray-50); /* ramp end — cannot go lighter */
+  --color-fg-muted: var(--color-gray-100); /* was gray-200 */
+  --color-fg-subtle: var(--color-gray-300); /* was gray-400 */
   --color-code-bg: var(--color-gray-950);
   --color-primary: var(--color-gray-50);
   --color-primary-fg: var(--color-gray-900);
@@ -423,29 +427,35 @@
        vp-c-text-1  → base-200  ·  vp-c-text-2 → base-500
    Ratios are against the black page background. */
 @mixin eink-dark-semantics {
-  --color-bg: var(--color-gray-950);         /* black            */
-  --color-surface: var(--color-gray-900);    /* base-900         */
+  --color-bg: var(--color-gray-950); /* black            */
+  --color-surface: var(--color-gray-900); /* base-900         */
   --color-bg-muted: var(--color-gray-900);
-  --color-code-bg: var(--color-gray-900);    /* NOT gray-950 — that is the page */
+  --color-code-bg: var(--color-gray-900); /* NOT gray-950 — that is the page */
   /* ⚠️ Raised one step each 2026-08-01, which DEPARTS from kepano's Flexoki
      docs mapping quoted above (text-1 → base-200, text-2 → base-500). That
      mapping is still the reference for everything else in this block; these
      three are a deliberate override for legibility, not a mistake to correct
      back. */
-  --color-fg: var(--color-gray-200);         /* base-100 — was base-200 */
-  --color-fg-muted: var(--color-gray-400);   /* base-300 — was base-400 */
-  --color-fg-subtle: var(--color-gray-500);  /* base-400 — was base-500 */
+  --color-fg: var(--color-gray-200); /* base-100 — was base-200 */
+  --color-fg-muted: var(--color-gray-400); /* base-300 — was base-400 */
+  --color-fg-subtle: var(--color-gray-500); /* base-400 — was base-500 */
   --color-primary: var(--color-gray-300);
   --color-primary-fg: var(--color-gray-950);
   --color-accent: var(--color-gray-300);
   --color-accent-hover: var(--color-gray-400);
 }
 
-:root[data-theme="dark"],
-:root[data-palette][data-theme="dark"] { @include dark-semantic-tokens; }
+:root[data-theme='dark'],
+:root[data-palette][data-theme='dark'] {
+  @include dark-semantic-tokens;
+}
 
-:root[data-palette="nord"][data-theme="dark"] { @include nord-dark-accent; }
-:root[data-palette="eink"][data-theme="dark"] { @include eink-dark-semantics; }
+:root[data-palette='nord'][data-theme='dark'] {
+  @include nord-dark-accent;
+}
+:root[data-palette='eink'][data-theme='dark'] {
+  @include eink-dark-semantics;
+}
 
 /* `:not([data-theme])` is auto too (2026-11-15). The no-flash snippet is what
    writes data-theme="auto", and it is JavaScript, so with scripting off the
@@ -453,12 +463,18 @@
    case "auto follows the OS" exists for. Same specificity as the auto branch,
    (0,2,0) and (0,3,0), so the palette guard above holds for it as well. */
 @media (prefers-color-scheme: dark) {
-  :root[data-theme="auto"],
+  :root[data-theme='auto'],
   :root:not([data-theme]),
-  :root[data-palette][data-theme="auto"] { @include dark-semantic-tokens; }
+  :root[data-palette][data-theme='auto'] {
+    @include dark-semantic-tokens;
+  }
 
-  :root[data-palette="nord"][data-theme="auto"] { @include nord-dark-accent; }
-  :root[data-palette="eink"][data-theme="auto"] { @include eink-dark-semantics; }
+  :root[data-palette='nord'][data-theme='auto'] {
+    @include nord-dark-accent;
+  }
+  :root[data-palette='eink'][data-theme='auto'] {
+    @include eink-dark-semantics;
+  }
 }
 
 /* ---- Accent override (custom accent color) ----------------- */
@@ -483,39 +499,43 @@
    That is the setting most in keeping with the monotone default at
    the top of this file; the restrained chroma below is the opt-in. */
 :root {
-  --code-l: 45%;    /* token lightness — light mode (dark ink on a light block) */
-  --code-c: 0.10;   /* token chroma — set to 0 for fully monotone code */
+  --code-l: 45%; /* token lightness — light mode (dark ink on a light block) */
+  --code-c: 0.1; /* token chroma — set to 0 for fully monotone code */
 
-  --code-bg      : var(--color-code-bg);
-  --code-fg      : var(--color-fg);
+  --code-bg: var(--color-code-bg);
+  --code-fg: var(--color-fg);
   --code-fg-muted: var(--color-fg-muted);
-  --code-subtle  : var(--color-fg-subtle);
-  --code-hl-bg   : color-mix(in oklch, var(--color-fg) 12%, transparent);
+  --code-subtle: var(--color-fg-subtle);
+  --code-hl-bg: color-mix(in oklch, var(--color-fg) 12%, transparent);
 
-  --code-comment  : var(--color-fg-subtle);
-  --code-keyword  : oklch(var(--code-l) var(--code-c) 145);
-  --code-string   : oklch(var(--code-l) var(--code-c) 60);
-  --code-number   : oklch(var(--code-l) var(--code-c) 250);
-  --code-function : oklch(var(--code-l) var(--code-c) 265);
-  --code-variable : oklch(var(--code-l) var(--code-c) 195);
-  --code-builtin  : oklch(var(--code-l) var(--code-c) 200);
+  --code-comment: var(--color-fg-subtle);
+  --code-keyword: oklch(var(--code-l) var(--code-c) 145);
+  --code-string: oklch(var(--code-l) var(--code-c) 60);
+  --code-number: oklch(var(--code-l) var(--code-c) 250);
+  --code-function: oklch(var(--code-l) var(--code-c) 265);
+  --code-variable: oklch(var(--code-l) var(--code-c) 195);
+  --code-builtin: oklch(var(--code-l) var(--code-c) 200);
   --code-decorator: oklch(var(--code-l) var(--code-c) 65);
-  --code-inserted : oklch(var(--code-l) var(--code-c) 145);
-  --code-deleted  : oklch(var(--code-l) calc(var(--code-c) * 1.5) 25);
-  --code-error    : oklch(var(--code-l) calc(var(--code-c) * 1.7) 25);
+  --code-inserted: oklch(var(--code-l) var(--code-c) 145);
+  --code-deleted: oklch(var(--code-l) calc(var(--code-c) * 1.5) 25);
+  --code-error: oklch(var(--code-l) calc(var(--code-c) * 1.7) 25);
 }
 
 /* Dark mode only needs the lightness flipped — hues carry over.
    Carries the same [data-palette] guard as the semantic block above.
    No palette sets --code-l today, so nothing is broken without it —
    but if one ever does, the guard is why it will keep working. */
-:root[data-theme="dark"],
-:root[data-palette][data-theme="dark"] { --code-l: 78%; }
+:root[data-theme='dark'],
+:root[data-palette][data-theme='dark'] {
+  --code-l: 78%;
+}
 
 @media (prefers-color-scheme: dark) {
-  :root[data-theme="auto"],
+  :root[data-theme='auto'],
   :root:not([data-theme]),
-  :root[data-palette][data-theme="auto"] { --code-l: 78%; }
+  :root[data-palette][data-theme='auto'] {
+    --code-l: 78%;
+  }
 }
 
 /* ============================================================
@@ -524,12 +544,12 @@
    re-tint for palette, every existing component inherits both.
    ============================================================ */
 :root {
-  --bg-color-lowest    : var(--color-surface);
-  --bg-color-lower     : var(--color-bg);
-  --bg-color-low       : var(--color-bg-muted);
-  --bg-color           : var(--color-bg-muted);
-  --bg-color-high      : var(--color-primary);
-  --bg-color-higher    : var(--color-primary);
+  --bg-color-lowest: var(--color-surface);
+  --bg-color-lower: var(--color-bg);
+  --bg-color-low: var(--color-bg-muted);
+  --bg-color: var(--color-bg-muted);
+  --bg-color-high: var(--color-primary);
+  --bg-color-higher: var(--color-primary);
   /* The hover wash for a thumbnail or a toc row. Added 2026-08-01: "increase
      the color accent one value more."
 
@@ -547,7 +567,7 @@
      than a hover. 1.96 is a genuine step — 53% more contrast than before — and
      sits just under the 2.22 of the structural rules, which keeps the hierarchy
      honest: a separator should out-read a hover state. */
-  --bg-color-hover     : color-mix(in oklch, var(--color-bg-muted) 80%, var(--color-fg) 20%);
+  --bg-color-hover: color-mix(in oklch, var(--color-bg-muted) 80%, var(--color-fg) 20%);
 
   /* ⚠️ THE ONE TOKEN HERE THAT DOES NOT FLIP WITH THE THEME, and that is the
      entire point of it. It is the plate a BRAND LOGO sits on, on /own/.
@@ -567,27 +587,26 @@
      all invert in dark mode, which is exactly the behaviour being avoided
      here. A brand's artwork has a fixed idea of its own background, and this
      token is where that fact lives. */
-  --logo-plate         : oklch(0.985 0.002 90);
+  --logo-plate: oklch(0.985 0.002 90);
 
-  --text-color-lower   : var(--color-fg-subtle);
-  --text-color-low     : var(--color-fg-muted);
-  --text-color         : var(--color-fg);
-  --text-color-higher  : var(--color-fg);
+  --text-color-lower: var(--color-fg-subtle);
+  --text-color-low: var(--color-fg-muted);
+  --text-color: var(--color-fg);
+  --text-color-higher: var(--color-fg);
 
-  --text-color-link    : var(--color-link);
+  --text-color-link: var(--color-link);
 
-  --border-color-lower : var(--color-border);
-  --border-color-low   : var(--color-border);
-  --border-color       : var(--color-border);
-  --border-color-high  : var(--color-border-strong);
+  --border-color-lower: var(--color-border);
+  --border-color-low: var(--color-border);
+  --border-color: var(--color-border);
+  --border-color-high: var(--color-border-strong);
 
   /* short-form semantic tokens */
-  --bg            : var(--color-bg);
-  --bg-subtle     : var(--color-bg-muted);
-  --text          : var(--color-fg);
-  --text-muted    : var(--color-fg-muted);
-  --rule          : var(--color-border);
-
+  --bg: var(--color-bg);
+  --bg-subtle: var(--color-bg-muted);
+  --text: var(--color-fg);
+  --text-muted: var(--color-fg-muted);
+  --rule: var(--color-border);
 
   /* One notch up from --rule, for the site's two structural lines only.
      Added 2026-08-01: "Increase the border color one notch for the header and
@@ -612,10 +631,10 @@
      deleted a bespoke 60% tier that had been retuned five times.
 
      A fourth user still needs an argument, not a precedent. */
-  --rule-strong   : var(--color-border-structural);
-  --accent        : var(--color-accent);
-  --accent-hover  : var(--color-accent-hover);
-  --mark          : var(--color-bg-muted);
-  --sidenote-text : var(--color-fg-subtle);
-  --code-bg       : var(--color-code-bg);
+  --rule-strong: var(--color-border-structural);
+  --accent: var(--color-accent);
+  --accent-hover: var(--color-accent-hover);
+  --mark: var(--color-bg-muted);
+  --sidenote-text: var(--color-fg-subtle);
+  --code-bg: var(--color-code-bg);
 }

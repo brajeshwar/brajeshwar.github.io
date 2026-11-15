@@ -1,4 +1,4 @@
-@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
+@use 'breakpoints' as bp; // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
    Own — /own/ only, via `style: page-own` on <main>.
@@ -92,7 +92,7 @@
 
 .page-own .own__label {
   margin: 0;
-  padding-top: 0.25rem;          /* optical: sits on the first line of the items */
+  padding-top: 0.25rem; /* optical: sits on the first line of the items */
 
   font-size: var(--step--1);
   font-weight: 400;

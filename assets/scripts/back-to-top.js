@@ -20,8 +20,8 @@
 (function () {
   'use strict';
 
-  var LONG_ENOUGH = 2.5;   // page must be this many viewports tall to bother
-  var SHOW_AFTER  = 1;     // ...and the reader this many viewports down
+  var LONG_ENOUGH = 2.5; // page must be this many viewports tall to bother
+  var SHOW_AFTER = 1; // ...and the reader this many viewports down
 
   if (document.documentElement.scrollHeight <= window.innerHeight * LONG_ENOUGH) return;
 
@@ -87,6 +87,6 @@
     window.requestAnimationFrame(apply);
   }
 
-  apply();                                                   // deep-linked partway down
+  apply(); // deep-linked partway down
   window.addEventListener('scroll', onScroll, { passive: true });
 })();

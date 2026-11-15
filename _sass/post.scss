@@ -1,4 +1,4 @@
-@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
+@use 'breakpoints' as bp; // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
    Post — article layout.
@@ -78,7 +78,7 @@ photo-cover {
   margin-bottom: var(--space-m);
   height: 600px;
 
-   background: no-repeat center center fixed; 
+  background: no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -106,7 +106,7 @@ photo-cover__desc {
   margin: var(--space-2xs) auto var(--space-m);
   padding: var(--space-2xs) 0;
   border-bottom: var(--border-size) var(--border-style) var(--border-color-low);
-  
+
   font-size: smaller;
   /*text-align: center;*/
 }
@@ -180,7 +180,12 @@ photo-cover__desc {
      posts read larger than pages for so long. */
 }
 
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
   margin: var(--space-m) auto 0;
   padding: 0;
   line-height: var(--scale-small);
@@ -232,7 +237,7 @@ photo-cover__desc {
   display: block;
   margin: var(--space-3xs) auto var(--space-m);
   padding: var(--space-3xs) 1px;
-  
+
   font-family: var(--font-family-sans-serif);
   font-size: var(--step--2);
 }
@@ -258,7 +263,6 @@ photo-cover__desc {
 .post img.large {
   height: auto;
 }
-
 
 /* ---- Figures take the band -------------------------------------
    Brajeshwar, 2026-07-28: "For images in posts in FIGURE tags should extend
@@ -316,7 +320,6 @@ photo-cover__desc {
   max-width: 100cqi;
 }
 
-
 /* ---- Blockquote breakout ---------------------------------------
    Yale e360 runs its pull quotes wider than the reading column. Adapted
    rather than copied: e360 CENTERS its quote, widening in both directions,
@@ -368,7 +371,6 @@ photo-cover__desc {
 .post:not(.has-sidenotes) blockquote {
   width: min(96vw, var(--body-width-max));
 }
-
 
 /* ---- Post navigation: previous / next ---------------------------
    One bar under the article. Prev sits hard left, Next hard right, and
@@ -436,14 +438,14 @@ photo-cover__desc {
   background: var(--bg-color-low);
   border-radius: var(--border-radius-larger);
 
-  overflow: hidden;                 /* clips each half's hover to the round ends */
+  overflow: hidden; /* clips each half's hover to the round ends */
 
   font-size: var(--step--1);
   text-transform: uppercase;
 }
 
 .post-nav__link {
-  flex: 1;                          /* alone → full width; together → half each */
+  flex: 1; /* alone → full width; together → half each */
   display: flex;
   align-items: center;
   gap: var(--space-3xs);
@@ -451,13 +453,18 @@ photo-cover__desc {
   padding: var(--space-2xs) var(--space-s);
   text-decoration: none;
   color: var(--text-color-low);
-  transition: color var(--transition-duration) ease,
-              background-color var(--transition-duration) ease;
+  transition:
+    color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
 }
 
 /* Flush to the outer edges: Prev opens the bar, Next closes it. */
-.post-nav__prev { justify-content: flex-start; }
-.post-nav__next { justify-content: flex-end; }
+.post-nav__prev {
+  justify-content: flex-start;
+}
+.post-nav__next {
+  justify-content: flex-end;
+}
 
 /* The per-half `border-radius` rules that briefly stood in for
    `overflow: hidden` are gone (2026-07-27). They existed only because the
@@ -592,8 +599,13 @@ photo-cover__desc {
    the PREV/NEXT labels either side that are actually short of room at this
    width, and every pixel the circle gives back goes to them. */
 @media (max-width: bp.$small) {
-  .post-nav { --post-nav-random-size: 32px; }
-  .post-nav__random svg { width: 16px; height: 16px; }
+  .post-nav {
+    --post-nav-random-size: 32px;
+  }
+  .post-nav__random svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 /* NO DIVIDER. The two halves touch (Brajeshwar, 2026-07-27: "I don't think
@@ -635,7 +647,11 @@ photo-cover__desc {
 }
 
 .post-nav__prev:hover .post-nav__arrow,
-.post-nav__prev:focus-visible .post-nav__arrow { transform: translateX(-0.25em); }
+.post-nav__prev:focus-visible .post-nav__arrow {
+  transform: translateX(-0.25em);
+}
 
 .post-nav__next:hover .post-nav__arrow,
-.post-nav__next:focus-visible .post-nav__arrow { transform: translateX(0.25em); }
+.post-nav__next:focus-visible .post-nav__arrow {
+  transform: translateX(0.25em);
+}

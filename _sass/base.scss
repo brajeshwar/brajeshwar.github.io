@@ -1,4 +1,4 @@
-@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
+@use 'breakpoints' as bp; // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
    Base — default element styling, every page.
@@ -13,7 +13,9 @@
   color-scheme: light dark;
 
   font-family: var(--font-family-sans-serif);
-  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1;
   font-optical-sizing: auto;
 }
 
@@ -24,8 +26,12 @@
    no-flash snippet in default.html sets the <meta name="color-scheme"> to
    match, for the moment before this stylesheet arrives. Auto keeps the
    `light dark` above, which is correct for it. */
-:root[data-theme="dark"]  { color-scheme: dark; }
-:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+}
 
 *,
 ::before,
@@ -62,7 +68,9 @@ body {
   /* scroll-behavior is on <html>, which is the scrolling element — the copy
      that used to sit here did nothing. Removed 2026-07-27. */
 
-  font-family: var(--font-body);    /* reader's choice — applies to all content; only header/footer are pinned to sans (chrome.css + rule below) */
+  font-family: var(
+    --font-body
+  ); /* reader's choice — applies to all content; only header/footer are pinned to sans (chrome.css + rule below) */
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 400;
@@ -72,7 +80,9 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color-lower);
 
-  transition: background 500ms ease-in-out, color 200ms ease;
+  transition:
+    background 500ms ease-in-out,
+    color 200ms ease;
 }
 
 main {
@@ -255,17 +265,23 @@ main :where(iframe, video) {
   }
 }
 
-
 /* ---- Typography ---------------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: var(--font-weight-light);
   line-height: var(--scale-small);
   text-wrap: balance;
   text-wrap: pretty;
 }
 
-h1 { font-size: var(--step-3); }
+h1 {
+  font-size: var(--step-3);
+}
 
 /* ---- ONE TITLE TREATMENT, pages and posts alike -----------------
    Brajeshwar, 2026-08-08: "Make it Uppercase, but thin and condensed.
@@ -309,11 +325,10 @@ h1 { font-size: var(--step-3); }
    Tracking opens back to 0 with it. Negative tracking on a serif runs
    the serifs of adjacent caps into each other, which the sans, having
    none, does not do. */
-[data-font="serif"] .page-title {
+[data-font='serif'] .page-title {
   font-weight: 300;
   letter-spacing: 0;
 }
-
 
 /* ---- The spine: a title set vertically down the left gutter ------
    The opposite of `.page-title` on every axis — thin becomes heavy, small
@@ -353,23 +368,27 @@ h1 { font-size: var(--step-3); }
    simply is not painted until there is a gutter for it. Its own class rather
    than a page hook, because the next index with something pinned to the top
    will want the same thing. */
-.spine-only { display: none; }
+.spine-only {
+  display: none;
+}
 
 @media (min-width: 1250px) {
-  .spine-only { display: block; }
+  .spine-only {
+    display: block;
+  }
 
   .vertical-title {
-  position: fixed;
-  top: 50%;
-  left: calc(50% - var(--body-width-max) / 2);
-  z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: calc(50% - var(--body-width-max) / 2);
+    z-index: -1;
 
-  margin: 0;
-  transform: translate(calc(-100% - var(--space-3xs)), -50%) rotate(180deg);
-  transform-origin: center;
-  writing-mode: vertical-rl;
+    margin: 0;
+    transform: translate(calc(-100% - var(--space-3xs)), -50%) rotate(180deg);
+    transform-origin: center;
+    writing-mode: vertical-rl;
 
-  /* ⚠️ PINNED SANS, and it must not inherit. Brajeshwar, 2026-08-08:
+    /* ⚠️ PINNED SANS, and it must not inherit. Brajeshwar, 2026-08-08:
      "Remember, this is a UI element and should always be Sans-Serif."
      Right — the reader's font switch is for READING, and a marker down the
      gutter is chrome. Left to inherit, [data-font="serif"] would set it in
@@ -377,23 +396,33 @@ h1 { font-size: var(--step-3); }
      on each other down the column. `--font-family-sans-serif` is the token
      chrome.css already uses for exactly this, so the two agree. */
 
-  font-size: clamp(2.31rem, 5.4vw, 4.62rem);
-  font-weight: 800;
-  font-family: var(--font-family-sans-serif);
-  letter-spacing: 0.02em;
-  line-height: 1;
-  text-transform: uppercase;
-  color: color-mix(in oklch, var(--text-color) 9%, var(--bg-color-lower));
+    font-size: clamp(2.31rem, 5.4vw, 4.62rem);
+    font-weight: 800;
+    font-family: var(--font-family-sans-serif);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: color-mix(in oklch, var(--text-color) 9%, var(--bg-color-lower));
 
-  pointer-events: none;
-  user-select: none;
+    pointer-events: none;
+    user-select: none;
   }
 }
-h2 { font-size: var(--step-2); }
-h3 { font-size: var(--step-1); }
-h4 { font-size: var(--step-0); }
-h5 { font-size: var(--step--1); }
-h6 { font-size: var(--step--2); }
+h2 {
+  font-size: var(--step-2);
+}
+h3 {
+  font-size: var(--step-1);
+}
+h4 {
+  font-size: var(--step-0);
+}
+h5 {
+  font-size: var(--step--1);
+}
+h6 {
+  font-size: var(--step--2);
+}
 
 /* ---- Heading anchors -----------------------------------------------
    assets/scripts/anchors.js prepends <a class="headerlink">§</a> to post
@@ -428,7 +457,9 @@ h6 { font-size: var(--step--2); }
    deleted in the same accident, and it would have needed a fourth entry for
    every new page type. `:has()` is already the bar this site sets — the whole
    /about/ filter is built on it. */
-:is(h1, h2, h3, h4, h5, h6):has(> .headerlink) { position: relative; }
+:is(h1, h2, h3, h4, h5, h6):has(> .headerlink) {
+  position: relative;
+}
 
 /* ⚠️ SIZED IN rem, NOT INHERITED (2026-08-09: "The anchor icon is too verbose
    now … cleaner and simpler, more subtle, smaller but still visible").
@@ -491,13 +522,20 @@ h6 { font-size: var(--step--2); }
 }
 
 :is(h1, h2, h3, h4, h5, h6):hover .headerlink,
-.headerlink:focus { opacity: 0.45; }
+.headerlink:focus {
+  opacity: 0.45;
+}
 
-.headerlink:hover { opacity: 1; text-decoration: none; }
+.headerlink:hover {
+  opacity: 1;
+  text-decoration: none;
+}
 
 /* No room in the margin on small screens. */
 @media (max-width: 480px) {
-  .headerlink { display: none; }
+  .headerlink {
+    display: none;
+  }
 }
 
 /* ⚠️ :where() IS LOAD-BEARING HERE, added 2026-07-27. It makes these rules
@@ -701,11 +739,11 @@ mark,
 
   /* fix edges of wrapped inline elements */
   -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
-
-aside, .aside {
+aside,
+.aside {
   margin: var(--space-2xs);
   padding: var(--space-s) var(--space-m);
 
@@ -738,10 +776,9 @@ li::marker {
 
 /* word-wrap plain-text in codes */
 .language-plaintext code {
-  overflow-wrap: break-word;   // word-wrap is its legacy alias
+  overflow-wrap: break-word; // word-wrap is its legacy alias
   white-space: pre-wrap;
 }
-
 
 /* ---- Tables ---------------------------------------------------- */
 
@@ -761,7 +798,7 @@ th {
   padding: var(--space-3xs) var(--space-2xs);
   text-align: left;
   vertical-align: top;
-  overflow-wrap: break-word;   // word-wrap is its legacy alias
+  overflow-wrap: break-word; // word-wrap is its legacy alias
 }
 
 thead {
@@ -794,7 +831,6 @@ tbody tr:nth-child(even) {
   background-color: var(--bg-color-low);
 }
 
-
 /* ---- Images ---------------------------------------------------- */
 
 /*
@@ -802,7 +838,6 @@ tbody tr:nth-child(even) {
  * 1. I seem have reset the size somewhere along the cascade fix them without the !important
  * 2. "media.css" —Move/combine this as part of a common media style (images, audio, and video)
  */
-
 
 video {
   object-fit: fill; /* set poster same size as video but distorts aspect-radio */
@@ -834,26 +869,26 @@ main :where(img, video, iframe) {
 
 img.small,
 video.small {
-	width: 40% !important;
-	height: auto;
+  width: 40% !important;
+  height: auto;
 }
 
 img.medium,
 video.medium {
-	width: 60% !important;
-	height: auto;
+  width: 60% !important;
+  height: auto;
 }
 
 img.left,
 video.left {
-	float: left;
-	margin: 0 var(--space-s) var(--space-s) 0;
+  float: left;
+  margin: 0 var(--space-s) var(--space-s) 0;
 }
 
 img.right,
 video.right {
   float: right;
-	margin: 0 0 var(--space-s) var(--space-s);
+  margin: 0 0 var(--space-s) var(--space-s);
 }
 
 figure {
@@ -885,14 +920,13 @@ figcaption {
 
   font-family: var(--font-family-sans-serif);
   font-size: var(--step--1);
-  color: var(--text-muted);              /* restrained, per SPEC §4.3 */
+  color: var(--text-muted); /* restrained, per SPEC §4.3 */
   border-bottom: var(--border-size) var(--border-style) var(--rule);
 }
 
 /* figcaption.center / .right were here. Removed 2026-07-27: zero uses
    across all 1,456 built pages. Left alignment is the default and the
    only one in use. */
-
 
 /* ---- Breaking out of the reading column -------------------------
    THE RULE (Brajeshwar, 2026-07-27): "no contents can go beyond the left
@@ -1045,14 +1079,14 @@ img.full {
   margin: 0;
   padding: 0;
 
-  columns: 14rem;               /* a WIDTH, not a count — see page.scss */
+  columns: 14rem; /* a WIDTH, not a count — see page.scss */
   column-gap: var(--space-xs);
 }
 
 .gallery > ul > li {
-  break-inside: avoid;                  /* never split a photo across columns */
-  -webkit-column-break-inside: avoid;   /* Safari has needed this alongside */
-  margin: 0 0 var(--space-xs);          /* the rhythm; columns have no row-gap */
+  break-inside: avoid; /* never split a photo across columns */
+  -webkit-column-break-inside: avoid; /* Safari has needed this alongside */
+  margin: 0 0 var(--space-xs); /* the rhythm; columns have no row-gap */
 }
 
 /* display: block kills the baseline gap under an inline image; 100% fills
@@ -1100,12 +1134,12 @@ body:has(.gallery) {
 /* ---- Footnotes + sidenotes ---------------------------------------------------- */
 
 .footnotes {
-	margin: var(--space-m) auto;
-	padding: var(--space-xs);
+  margin: var(--space-m) auto;
+  padding: var(--space-xs);
   padding-right: var(--space-m); /* optical alignment fix */
-	background: var(--bg-color-low);
-	border-radius: var(--border-radius);
-  
+  background: var(--bg-color-low);
+  border-radius: var(--border-radius);
+
   font-size: var(--step--1);
   hyphens: auto;
 }
@@ -1121,7 +1155,7 @@ body:has(.gallery) {
   position: absolute;
   top: 0;
   left: 0;
-  content: "\21B5";
+  content: '\21B5';
 }
 
 /* ===== Tufte sidenotes (Phase 2) — see _docs/sidenotes.md ==================
@@ -1131,11 +1165,11 @@ body:has(.gallery) {
    an <aside class="sidenote"> in the right margin aligned to each reference. */
 
 .has-sidenotes {
-  position: relative;             /* positioning context for the asides */
+  position: relative; /* positioning context for the asides */
 }
 
 .has-sidenotes .footnotes {
-  display: none;                  /* notes now live in the margin */
+  display: none; /* notes now live in the margin */
 }
 
 .sidenote {
@@ -1165,8 +1199,10 @@ body:has(.gallery) {
      so the whole leftover is the gutter: band − column − gap. Leaving the
      divide in would have starved every note to half its room.
      100% here = the reading column's width. */
-  width: min(var(--sidenote-width),
-             calc(min(96vw, var(--body-width-max)) - 100% - var(--sidenote-gap)));
+  width: min(
+    var(--sidenote-width),
+    calc(min(96vw, var(--body-width-max)) - 100% - var(--sidenote-gap))
+  );
 
   /* reset the generic `aside {}` box treatment — sidenotes are plain margin text */
   margin: 0 0 0 var(--sidenote-gap);
@@ -1175,7 +1211,7 @@ body:has(.gallery) {
   border-radius: 0;
 
   font-family: var(--font-family-sans-serif);
-  font-size: var(--step--1);      /* one step up the scale — larger, easier margin read */
+  font-size: var(--step--1); /* one step up the scale — larger, easier margin read */
   font-weight: var(--font-weight);
   line-height: var(--scale-small);
   color: var(--sidenote-text);
@@ -1184,12 +1220,16 @@ body:has(.gallery) {
   hyphens: auto;
 }
 
-.sidenote p { margin: 0; }
-.sidenote p + p { margin-top: var(--space-2xs); }
+.sidenote p {
+  margin: 0;
+}
+.sidenote p + p {
+  margin-top: var(--space-2xs);
+}
 
 .sidenote-ref {
   margin-right: var(--space-3xs);
-  font-variant-position: super;   /* small raised number where supported */
+  font-variant-position: super; /* small raised number where supported */
   color: var(--text-muted);
 }
 
@@ -1199,7 +1239,9 @@ body:has(.gallery) {
    every other sidenote dims. */
 
 .sidenote {
-  transition: opacity var(--transition-duration), color var(--transition-duration);
+  transition:
+    opacity var(--transition-duration),
+    color var(--transition-duration);
 }
 
 .sidenote-focus .sidenote:not(.is-active) {
@@ -1210,8 +1252,8 @@ body:has(.gallery) {
   color: var(--text-color);
 }
 
-sup[id^="fnref"].is-active a,
-sup[id^="fnref"].is-open a {
+sup[id^='fnref'].is-active a,
+sup[id^='fnref'].is-open a {
   color: var(--accent-hover);
   background: var(--mark);
   border-radius: var(--border-radius-tiny);
@@ -1237,10 +1279,12 @@ sup[id^="fnref"].is-open a {
   cursor: pointer;
 }
 
-.sidenote-inline p { margin: 0; }
-.sidenote-inline p + p { margin-top: var(--space-2xs); }
-
-
+.sidenote-inline p {
+  margin: 0;
+}
+.sidenote-inline p + p {
+  margin-top: var(--space-2xs);
+}
 
 /* ---- Block utilities ---------------------------------------------------- */
 
@@ -1260,7 +1304,7 @@ sup[id^="fnref"].is-open a {
 .block-info {
   margin: var(--space-xs) 0;
   padding: var(--space-xs) var(--space-s);
-  
+
   font-size: var(--step--1);
   line-height: var(--scale-small);
 

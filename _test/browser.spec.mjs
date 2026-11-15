@@ -5,16 +5,26 @@ import { test, expect } from '@playwright/test';
 // A post with footnotes (sidenotes), a post without, and the pages that run a
 // script of their own.
 const POST_WITH_NOTES = '/2026/10x-is-easier-than-2x/';
-const PAGES = ['/', POST_WITH_NOTES, '/about/', '/archives/', '/books/', '/cv/', '/search/', '/random/', '/404.html'];
+const PAGES = [
+  '/',
+  POST_WITH_NOTES,
+  '/about/',
+  '/archives/',
+  '/books/',
+  '/cv/',
+  '/search/',
+  '/random/',
+  '/404.html',
+];
 
 // ---- The theme: no flash, whatever the OS says (2026-11-15) -------------
 
 // [OS scheme, saved mode, expected color-scheme on <html>, expected dark page]
 const MATRIX = [
-  ['light', 'dark',  'dark',       true],
-  ['dark',  'light', 'light',      false],
-  ['light', null,    'light dark', false],
-  ['dark',  null,    'light dark', true],
+  ['light', 'dark', 'dark', true],
+  ['dark', 'light', 'light', false],
+  ['light', null, 'light dark', false],
+  ['dark', null, 'light dark', true],
 ];
 
 for (const [os, saved, scheme, dark] of MATRIX) {
@@ -39,7 +49,9 @@ test('theme: switching in the panel pins color-scheme immediately', async ({ pag
   await page.goto('/');
   await page.getByRole('button', { name: 'Appearance' }).click();
   await page.locator('.appearance-options--theme').getByRole('button', { name: 'Dark' }).click();
-  expect(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme)).toBe('dark');
+  expect(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme)).toBe(
+    'dark'
+  );
   // body fades its background over 500ms (base.scss), so poll for the end.
   await expect.poll(() => isDark(page)).toBe(true);
   await page.goto(POST_WITH_NOTES);
@@ -92,8 +104,13 @@ test.describe('with JavaScript disabled', () => {
     // The Appearance trigger was the one that showed and did nothing (chrome.scss).
     for (const path of ['/', POST_WITH_NOTES, '/archives/', '/about/']) {
       await page.goto(path);
-      const visible = await page.locator('button').evaluateAll(
-        (bs) => bs.filter((b) => b.checkVisibility()).map((b) => b.getAttribute('aria-label') || b.textContent.trim()));
+      const visible = await page
+        .locator('button')
+        .evaluateAll((bs) =>
+          bs
+            .filter((b) => b.checkVisibility())
+            .map((b) => b.getAttribute('aria-label') || b.textContent.trim())
+        );
       expect(visible, path).toEqual([]);
     }
   });

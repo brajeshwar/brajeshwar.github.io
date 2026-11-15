@@ -39,9 +39,7 @@
 
        So this is both the accessible choice and the only one that works: ask
        the preference, and scroll instantly when motion is unwelcome. */
-    var noMotion = window.matchMedia
-      ? window.matchMedia('(prefers-reduced-motion: reduce)')
-      : null;
+    var noMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
 
     function behavior() {
       return noMotion && noMotion.matches ? 'auto' : 'smooth';
@@ -114,8 +112,12 @@
       setTimeout(sync, 420);
     }
 
-    prev.addEventListener('click', function () { nudge(-1); });
-    next.addEventListener('click', function () { nudge(1); });
+    prev.addEventListener('click', function () {
+      nudge(-1);
+    });
+    next.addEventListener('click', function () {
+      nudge(1);
+    });
 
     /* Still listen, for the inputs that move the row without going through a
        button — trackpad, touch, keyboard, scrollbar. `passive` because this

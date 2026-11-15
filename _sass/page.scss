@@ -103,7 +103,6 @@
   max-width: 100cqi;
 }
 
-
 /* ---- Card-grid aspect ratios ----------------------------------
    The `ratio` passed to card-grid.html lands here as a class, because the
    <img width>/<height> attributes only reserve space — album.scss sets
@@ -123,9 +122,14 @@
        mixed orientations; a uniform grid is the right answer for an index.
    The home strip is a single scrolling ROW and has no such choice: ragged
    heights there would break the line, so it stays uniform whatever this does. */
-.card-grid--4x3 img { aspect-ratio: 4 / 3; object-fit: cover; }
-.card-grid--3x4 img { aspect-ratio: 3 / 4; object-fit: cover; }
-
+.card-grid--4x3 img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.card-grid--3x4 img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
 
 /* ---- Masonry, with no JavaScript ------------------------------
    /album/ only (2026-08-01: "can we introduce masonry layout to /album/. Can
@@ -171,7 +175,7 @@
    the CSS reads as applied and the layout does not move. Verified 2026-08-01
    by reading the matched rules off the element. */
 .item__cards.card-grid--masonry {
-  display: block;              /* overrides .item__cards' grid */
+  display: block; /* overrides .item__cards' grid */
   columns: 14rem;
   column-gap: var(--space-xs);
 }
@@ -259,7 +263,7 @@
 
 .link-columns li {
   break-inside: avoid;
-  -webkit-column-break-inside: avoid;   /* WebKit has needed this alongside */
+  -webkit-column-break-inside: avoid; /* WebKit has needed this alongside */
   margin-block-end: var(--space-2xs);
 }
 

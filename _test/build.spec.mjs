@@ -4,8 +4,15 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync, readdirSync } from 'node:fs';
 import {
-  SITE, assertSite, htmlFiles, read, exists, fileFor,
-  redirectStubs, SITE_CSS, stylesheetPath,
+  SITE,
+  assertSite,
+  htmlFiles,
+  read,
+  exists,
+  fileFor,
+  redirectStubs,
+  SITE_CSS,
+  stylesheetPath,
 } from './helpers.mjs';
 
 test.beforeAll(assertSite);
@@ -17,10 +24,13 @@ const ownPages = () => pages().filter((p) => SITE_CSS.test(read(p)));
 
 test('every URL in _test/urls.txt still resolves', () => {
   const urls = readFileSync('_test/urls.txt', 'utf8')
-    .split('\n').filter((l) => l.startsWith('/'));
+    .split('\n')
+    .filter((l) => l.startsWith('/'));
   expect(urls.length).toBeGreaterThan(1000);
   const missing = urls.filter((u) => !exists(fileFor(u)));
-  expect(missing, 'URLs that no longer build — restore them, or leave a _redirect/ stub').toEqual([]);
+  expect(missing, 'URLs that no longer build — restore them, or leave a _redirect/ stub').toEqual(
+    []
+  );
 });
 
 test('every redirect stub refreshes to its target', () => {
@@ -37,7 +47,8 @@ test('no stub redirects to another stub', () => {
   // Chained meta-refreshes are slow and some crawlers stop following them.
   const stubs = redirectStubs();
   const from = new Set(stubs.map((s) => s.permalink));
-  for (const s of stubs) expect(from.has(s.redirect_to), `${s.file} → ${s.redirect_to}`).toBe(false);
+  for (const s of stubs)
+    expect(from.has(s.redirect_to), `${s.file} → ${s.redirect_to}`).toBe(false);
 });
 
 // ---- What must not publish ---------------------------------------------
@@ -52,13 +63,18 @@ test('2099 drafts are not published', () => {
 test('no private or tooling file is published', () => {
   const top = readdirSync(SITE);
   const leaked = top.filter((n) =>
-    /^(CLAUDE|TODO|README|Makefile|Gemfile|package(-lock)?\.json|[a-z]+\.config\.m?js|node_modules|scripts|_test|_docs|_sass|\.)/i.test(n));
+    /^(CLAUDE|TODO|README|Makefile|Gemfile|package(-lock)?\.json|[a-z]+\.config\.m?js|node_modules|scripts|_test|_docs|_sass|\.)/i.test(
+      n
+    )
+  );
   expect(leaked).toEqual([]);
 });
 
 test('no Sass source is published', () => {
-  const walk = (d) => readdirSync(`${SITE}${d}`, { withFileTypes: true })
-    .flatMap((e) => e.isDirectory() ? walk(`${d}/${e.name}`) : [`${d}/${e.name}`]);
+  const walk = (d) =>
+    readdirSync(`${SITE}${d}`, { withFileTypes: true }).flatMap((e) =>
+      e.isDirectory() ? walk(`${d}/${e.name}`) : [`${d}/${e.name}`]
+    );
   expect(walk('/assets').filter((f) => f.endsWith('.scss'))).toEqual([]);
 });
 
@@ -81,8 +97,12 @@ test('every page applies the saved theme before first paint', () => {
     const css = head.search(SITE_CSS);
     // One meta, the no-flash snippet present, it rewrites the meta, and it
     // runs before the stylesheet link.
-    return metas.length !== 1 || snippet < 0 || css < snippet
-      || !head.includes("meta[name=color-scheme]').content=t");
+    return (
+      metas.length !== 1 ||
+      snippet < 0 ||
+      css < snippet ||
+      !head.includes("meta[name=color-scheme]').content=t")
+    );
   });
   expect(bad).toEqual([]);
 });
@@ -111,12 +131,15 @@ test('no Sass block comment is left unterminated', () => {
         if (!open) {
           const at = rest.indexOf('/*');
           if (at < 0) break;
-          open = i + 1; rest = rest.slice(at + 2);
+          open = i + 1;
+          rest = rest.slice(at + 2);
         } else {
-          if (/^\s*\/\*/.test(rest) && rest === line) problems.push(`${f}:${i + 1} opens inside the comment from line ${open}`);
+          if (/^\s*\/\*/.test(rest) && rest === line)
+            problems.push(`${f}:${i + 1} opens inside the comment from line ${open}`);
           const end = rest.indexOf('*/');
           if (end < 0) break;
-          open = 0; rest = rest.slice(end + 2);
+          open = 0;
+          rest = rest.slice(end + 2);
         }
       }
     });
@@ -133,8 +156,11 @@ test('no hardcoded colors outside themes.scss', () => {
   const found = [];
   for (const f of readdirSync('_sass').filter((n) => n.endsWith('.scss') && n !== 'themes.scss')) {
     const src = readFileSync(`_sass/${f}`, 'utf8')
-      .replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
-    for (const m of src.matchAll(/#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|oklch|oklab|lab|lch)\([^)]*\)/g)) {
+      .replace(/\/\*[\s\S]*?\*\//g, '')
+      .replace(/^\s*\/\/.*$/gm, '');
+    for (const m of src.matchAll(
+      /#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|oklch|oklab|lab|lch)\([^)]*\)/g
+    )) {
       if (!ALLOWED.includes(`${f} ${m[0]}`)) found.push(`${f} ${m[0]}`);
     }
   }
@@ -178,7 +204,8 @@ test('page-specific scripts load only where they have work', () => {
   const bad = [];
   for (const p of ownPages()) {
     const html = read(p);
-    for (const [script, needs] of gates) if (script.test(html) && !needs(html)) bad.push(`${p} ${script.source}`);
+    for (const [script, needs] of gates)
+      if (script.test(html) && !needs(html)) bad.push(`${p} ${script.source}`);
   }
   expect(bad).toEqual([]);
 });

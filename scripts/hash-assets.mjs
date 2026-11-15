@@ -173,10 +173,13 @@ const fontRenames = (await Promise.all(usedFonts.map(hashOne))).filter(Boolean);
 
 if (fontRenames.length) {
   const { hits, touched } = await rewrite(sheets, fontRenames);
-  console.log(`hash-assets: pass 1 — ${fontRenames.length} fonts, rewritten across ${touched} of ${sheets.length} stylesheets`);
+  console.log(
+    `hash-assets: pass 1 — ${fontRenames.length} fonts, rewritten across ${touched} of ${sheets.length} stylesheets`
+  );
   report('font', hits, fontRenames);
 }
-for (const f of skippedFonts) console.log(`         --  ${rel(f)}  (not referenced by any CSS, left alone)`);
+for (const f of skippedFonts)
+  console.log(`         --  ${rel(f)}  (not referenced by any CSS, left alone)`);
 
 // ---------------------------------------------------------------------------
 // PASS 2 — stylesheets and scripts, referenced from the HTML.
@@ -191,7 +194,9 @@ const targets = [
 const renames = (await Promise.all(targets.map(hashOne))).filter(Boolean);
 
 if (renames.length === 0) {
-  console.error('hash-assets: found nothing to hash under _site/assets — is this running after `jekyll build`?');
+  console.error(
+    'hash-assets: found nothing to hash under _site/assets — is this running after `jekyll build`?'
+  );
   process.exit(1);
 }
 
@@ -199,7 +204,9 @@ const pages = await walk(SITE, (f) => f.endsWith('.html'));
 const { hits, touched } = await rewrite(pages, renames);
 
 const total = [...hits.values()].reduce((a, b) => a + b, 0);
-console.log(`hash-assets: pass 2 — ${renames.length} assets, ${total} references rewritten across ${touched} of ${pages.length} pages`);
+console.log(
+  `hash-assets: pass 2 — ${renames.length} assets, ${total} references rewritten across ${touched} of ${pages.length} pages`
+);
 report('asset', hits, renames);
 
 /* A hashed asset that nothing links to is now unreachable — the old URL 404s

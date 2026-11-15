@@ -14,27 +14,66 @@
   'use strict';
 
   var AXES = {
-    theme:    { key: 'theme',    def: 'auto',    attr: 'theme',
-                opts: [['auto','Auto'], ['light','Light'], ['dark','Dark']] },
-    palette:  { key: 'palette',  def: 'default', attr: 'palette',
-                opts: [['default','Default'], ['nord','Cool'], ['eink','Warm']] },
-    font:     { key: 'font',     def: 'sans',    attr: 'font',
-                // 'geist' was dropped 2026-07-19 for its weight and restored
-                // 2026-07-27 at Brajeshwar's request, with the file re-added.
-                // read() validates against this list, so any stale stored value
-                // falls back to 'sans' with no migration step.
-                // ⚠️ FOUR places must agree for a font option: this list, the
-                // [data-font] rule in config.css, the @font-face in themes.css,
-                // and the no-flash whitelist in _layouts/default.html.
-                // 'sans' is labeled "System" (was "Default", renamed
-                // 2026-07-27): it is the OS UI face, and "Default" said only
-                // that it was the one you get without choosing, which is true
-                // of every axis's first option and describes none of them.
-                opts: [['sans','System'], ['geist','Sans-Serif'], ['serif','Serif']] },
-    textsize: { key: 'textsize', def: 'm',       attr: 'textSize',
-                opts: [['xs','A'], ['s','A'], ['m','A'], ['l','A'], ['xl','A']] }
+    theme: {
+      key: 'theme',
+      def: 'auto',
+      attr: 'theme',
+      opts: [
+        ['auto', 'Auto'],
+        ['light', 'Light'],
+        ['dark', 'Dark'],
+      ],
+    },
+    palette: {
+      key: 'palette',
+      def: 'default',
+      attr: 'palette',
+      opts: [
+        ['default', 'Default'],
+        ['nord', 'Cool'],
+        ['eink', 'Warm'],
+      ],
+    },
+    font: {
+      key: 'font',
+      def: 'sans',
+      attr: 'font',
+      // 'geist' was dropped 2026-07-19 for its weight and restored
+      // 2026-07-27 at Brajeshwar's request, with the file re-added.
+      // read() validates against this list, so any stale stored value
+      // falls back to 'sans' with no migration step.
+      // ⚠️ FOUR places must agree for a font option: this list, the
+      // [data-font] rule in config.css, the @font-face in themes.css,
+      // and the no-flash whitelist in _layouts/default.html.
+      // 'sans' is labeled "System" (was "Default", renamed
+      // 2026-07-27): it is the OS UI face, and "Default" said only
+      // that it was the one you get without choosing, which is true
+      // of every axis's first option and describes none of them.
+      opts: [
+        ['sans', 'System'],
+        ['geist', 'Sans-Serif'],
+        ['serif', 'Serif'],
+      ],
+    },
+    textsize: {
+      key: 'textsize',
+      def: 'm',
+      attr: 'textSize',
+      opts: [
+        ['xs', 'A'],
+        ['s', 'A'],
+        ['m', 'A'],
+        ['l', 'A'],
+        ['xl', 'A'],
+      ],
+    },
   };
-  var GROUPS = [['theme','Mode'], ['palette','Palette'], ['font','Font'], ['textsize','Text Size']];
+  var GROUPS = [
+    ['theme', 'Mode'],
+    ['palette', 'Palette'],
+    ['font', 'Font'],
+    ['textsize', 'Text Size'],
+  ];
 
   // Accent swatches. '' = default (use the palette/mode accent); then four hues
   // that complement the palettes. Five total, Default first.
@@ -42,34 +81,54 @@
     ['', 'Default'],
     ['oklch(57% 0.16 255)', 'Blue'],
     ['oklch(56% 0.14 150)', 'Green'],
-    ['oklch(66% 0.13 65)',  'Amber'],
-    ['oklch(60% 0.17 15)',  'Red']
+    ['oklch(66% 0.13 65)', 'Amber'],
+    ['oklch(60% 0.17 15)', 'Red'],
   ];
 
   var trigger, panel, backdrop;
 
   function read(axis) {
-    var a = AXES[axis], allowed = a.opts.map(function (o) { return o[0]; });
-    try { var v = localStorage.getItem(a.key); return allowed.indexOf(v) > -1 ? v : a.def; }
-    catch (e) { return a.def; }
+    var a = AXES[axis],
+      allowed = a.opts.map(function (o) {
+        return o[0];
+      });
+    try {
+      var v = localStorage.getItem(a.key);
+      return allowed.indexOf(v) > -1 ? v : a.def;
+    } catch (e) {
+      return a.def;
+    }
   }
   function readAccent() {
-    try { return localStorage.getItem('accent') || ''; } catch (e) { return ''; }
+    try {
+      return localStorage.getItem('accent') || '';
+    } catch (e) {
+      return '';
+    }
   }
 
   function apply(axis, val) {
-    var a = AXES[axis], root = document.documentElement;
-    if (axis === 'theme') root.dataset[a.attr] = val;        // auto media query needs it
+    var a = AXES[axis],
+      root = document.documentElement;
+    if (axis === 'theme')
+      root.dataset[a.attr] = val; // auto media query needs it
     else if (val === a.def) delete root.dataset[a.attr];
     else root.dataset[a.attr] = val;
-    try { localStorage.setItem(a.key, val); } catch (e) {}
+    try {
+      localStorage.setItem(a.key, val);
+    } catch (e) {}
     updateThemeColor();
   }
 
   function applyAccent(val) {
     var root = document.documentElement;
-    if (val) { root.style.setProperty('--ov-accent', val); root.dataset.accent = 'custom'; }
-    else { root.style.removeProperty('--ov-accent'); delete root.dataset.accent; }
+    if (val) {
+      root.style.setProperty('--ov-accent', val);
+      root.dataset.accent = 'custom';
+    } else {
+      root.style.removeProperty('--ov-accent');
+      delete root.dataset.accent;
+    }
     try {
       if (val) localStorage.setItem('accent', val);
       else localStorage.removeItem('accent');
@@ -105,7 +164,8 @@
   }
 
   function buildEnumGroup(axis, label) {
-    var a = AXES[axis], current = read(axis);
+    var a = AXES[axis],
+      current = read(axis);
     var g = makeGroup(label, 'appearance-' + axis + '-label');
 
     var opts = document.createElement('div');
@@ -158,7 +218,10 @@
       btn.title = a[1];
       if (a[0]) btn.style.setProperty('--swatch', a[0]);
       btn.setAttribute('aria-pressed', a[0] === current ? 'true' : 'false');
-      btn.addEventListener('click', function () { applyAccent(a[0]); press(btn); });
+      btn.addEventListener('click', function () {
+        applyAccent(a[0]);
+        press(btn);
+      });
       row.appendChild(btn);
     });
 
@@ -166,13 +229,17 @@
     return g.group;
   }
 
-  function isOpen() { return !panel.hidden; }
+  function isOpen() {
+    return !panel.hidden;
+  }
   function open() {
-    panel.hidden = false; backdrop.hidden = false;
+    panel.hidden = false;
+    backdrop.hidden = false;
     trigger.setAttribute('aria-expanded', 'true');
   }
   function close() {
-    panel.hidden = true; backdrop.hidden = true;
+    panel.hidden = true;
+    backdrop.hidden = true;
     trigger.setAttribute('aria-expanded', 'false');
     trigger.focus();
   }
@@ -180,12 +247,14 @@
   function init() {
     var root = document.querySelector('appearance-settings');
     if (!root) return;
-    trigger  = root.querySelector('.appearance-trigger');
-    panel    = root.querySelector('.appearance-panel');
+    trigger = root.querySelector('.appearance-trigger');
+    panel = root.querySelector('.appearance-panel');
     backdrop = root.querySelector('.appearance-backdrop');
     if (!trigger || !panel || !backdrop) return;
 
-    GROUPS.forEach(function (gr) { panel.appendChild(buildEnumGroup(gr[0], gr[1])); });
+    GROUPS.forEach(function (gr) {
+      panel.appendChild(buildEnumGroup(gr[0], gr[1]));
+    });
     panel.appendChild(buildAccentGroup());
 
     trigger.addEventListener('click', function (e) {
@@ -205,7 +274,9 @@
     applyAccent(readAccent());
 
     if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor);
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', updateThemeColor);
     }
   }
 

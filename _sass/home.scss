@@ -1,4 +1,4 @@
-@use "breakpoints" as bp;   // media queries cannot read var(--x); see _sass/breakpoints.scss
+@use 'breakpoints' as bp; // media queries cannot read var(--x); see _sass/breakpoints.scss
 
 /* ============================================================
    Home — homepage only.
@@ -42,15 +42,23 @@ home-container {
   align-items: start;
 
   grid-template-areas:
-    "intro    ."
-    "articles aside"
-    "popular  aside";
+    'intro    .'
+    'articles aside'
+    'popular  aside';
 }
 
-home-container home-intro    { grid-area: intro; }
-home-container home-articles { grid-area: articles; }
-home-container home-popular  { grid-area: popular; }
-home-container home-aside    { grid-area: aside; }
+home-container home-intro {
+  grid-area: intro;
+}
+home-container home-articles {
+  grid-area: articles;
+}
+home-container home-popular {
+  grid-area: popular;
+}
+home-container home-aside {
+  grid-area: aside;
+}
 
 /* Collapse at --medium, not --small: the sidebar is 18rem, so below roughly
    800px the reading column is narrower than the thing beside it. */
@@ -71,10 +79,10 @@ home-container home-aside    { grid-area: aside; }
        equals the viewport at each. */
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
-      "intro"
-      "articles"
-      "popular"
-      "aside";
+      'intro'
+      'articles'
+      'popular'
+      'aside';
   }
 }
 
@@ -299,11 +307,7 @@ home-container home-intro p {
      Checked in both themes: the tokens are not symmetric (light-mode `low` is
      near-black at rgb(40,39,38)) but subpixel coverage lands it as a mid grey
      there, and a soft light grey in dark. */
-  background-image: radial-gradient(
-    circle,
-    var(--text-color-low) 0.75px,
-    transparent 0.75px
-  );
+  background-image: radial-gradient(circle, var(--text-color-low) 0.75px, transparent 0.75px);
   background-position: left bottom 0.25em;
   background-size: 4px 4px;
   background-repeat: repeat-x;
@@ -323,7 +327,7 @@ home-container home-intro p {
   font-size: var(--step--2);
   font-family: var(--font-family-monospace);
   letter-spacing: 0.04em;
-  font-variant-numeric: tabular-nums;   /* dates stack in a straight edge */
+  font-variant-numeric: tabular-nums; /* dates stack in a straight edge */
   color: var(--text-color-lower);
 }
 
@@ -337,11 +341,7 @@ home-container home-intro p {
 .toc__link:hover .toc__leader,
 .toc__link:focus-visible .toc__leader,
 .toc__link:active .toc__leader {
-  background-image: radial-gradient(
-    circle,
-    var(--text-color) 0.75px,
-    transparent 0.75px
-  );
+  background-image: radial-gradient(circle, var(--text-color) 0.75px, transparent 0.75px);
 }
 
 /* Year separator — a right-aligned marker sitting directly above the first
@@ -617,14 +617,18 @@ home-support li {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: none;              /* the arrows are the affordance */
-  overscroll-behavior-x: contain;     /* no back-swipe navigation */
+  scrollbar-width: none; /* the arrows are the affordance */
+  overscroll-behavior-x: contain; /* no back-swipe navigation */
 }
 
-.strip::-webkit-scrollbar { display: none; }
+.strip::-webkit-scrollbar {
+  display: none;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .strip { scroll-behavior: auto; }
+  .strip {
+    scroll-behavior: auto;
+  }
 }
 
 /* The viewport is what carries the bleed now; the strip fills it and scrolls
@@ -687,7 +691,7 @@ home-support li {
 
 .strip__frame {
   display: block;
-  position: relative;   /* positioning context for the media badge */
+  position: relative; /* positioning context for the media badge */
 }
 
 .strip__img {
@@ -704,8 +708,14 @@ home-support li {
 
 /* 3:4 for books, 4:3 for the album — set on the image so a missing or slow file
    still reserves the right box and the row never reflows as they load. */
-.strip--books .strip__img  { aspect-ratio: 3 / 4;  object-fit: cover; }
-.strip--album .strip__img { aspect-ratio: 4 / 3;  object-fit: cover; }
+.strip--books .strip__img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+.strip--album .strip__img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
 
 /* ---- The "All Albums" tile ----------------------------------------------
    The last tile in the album row is a door rather than a picture
@@ -748,13 +758,18 @@ home-support li {
   border: var(--border-size-hairline) solid var(--rule-strong);
   border-radius: var(--border-radius);
 
-  transition: color var(--transition-duration) ease,
-              background-color var(--transition-duration) ease,
-              border-color var(--transition-duration) ease;
+  transition:
+    color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease,
+    border-color var(--transition-duration) ease;
 }
 
-.strip--books .strip__more { aspect-ratio: 3 / 4; }
-.strip--album .strip__more { aspect-ratio: 4 / 3; }
+.strip--books .strip__more {
+  aspect-ratio: 3 / 4;
+}
+.strip--album .strip__more {
+  aspect-ratio: 4 / 3;
+}
 
 /* ⚠️ H1-SIZED, WHICH IS --step-3 AND NOT A NUMBER (2026-09-01: "Increase the
    font size of 'View More Albums' to the size of our H1"). It reads the same
@@ -1006,7 +1021,6 @@ body:has(home-container) {
   overflow-x: clip;
 }
 
-
 /* ---- Strip arrows ---------------------------------------------
    Brajeshwar 2026-07-31: "a very subtle arrow '‹›' but with a big hit area to
    make it easy to hit."
@@ -1047,7 +1061,7 @@ body:has(home-container) {
   align-items: center;
   justify-content: center;
 
-  width: 3.5rem;                 /* 56px of hit area for a 15px glyph */
+  width: 3.5rem; /* 56px of hit area for a 15px glyph */
   padding: 0;
   border: 0 none;
   border-radius: var(--border-radius);
@@ -1062,11 +1076,17 @@ body:has(home-container) {
   appearance: none;
 
   opacity: var(--opacity-low);
-  transition: opacity 120ms ease-out, background-color 120ms ease-out;
+  transition:
+    opacity 120ms ease-out,
+    background-color 120ms ease-out;
 }
 
-.strip__nav--prev { inset-inline-start: 0; }
-.strip__nav--next { inset-inline-end: 0; }
+.strip__nav--prev {
+  inset-inline-start: 0;
+}
+.strip__nav--next {
+  inset-inline-end: 0;
+}
 
 /* ⚠️ A SCRIM, NOT A SURFACE COLOUR (2026-08-09: "a darker background (in light
    mode, and vice versa), with an alpha opacity"). --bg-color-low is an opaque
@@ -1083,7 +1103,9 @@ body:has(home-container) {
   background-color: color-mix(in oklch, var(--text-color) 22%, transparent);
 }
 
-.strip__nav[hidden] { display: none; }
+.strip__nav[hidden] {
+  display: none;
+}
 
 /* At the end of the run there is nothing to scroll to; the script sets this
    rather than removing the button, so the row does not reflow mid-scroll. */
@@ -1091,7 +1113,6 @@ body:has(home-container) {
   opacity: 0;
   pointer-events: none;
 }
-
 
 /* ---- Media badge ----------------------------------------------
    A small icon over the corner of a thumbnail that leads to video or audio

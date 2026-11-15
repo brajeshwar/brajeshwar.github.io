@@ -172,7 +172,7 @@
    the same 7% either way, because a padding-free plate has one width and not
    two. */
 .bookplate::before {
-  content: "";
+  content: '';
   position: absolute;
   inset-block: 0;
   inset-inline-start: 0;
@@ -210,11 +210,11 @@
 .bookplate .bookplate__title,
 .bookplate .bookplate__author {
   display: block;
-  padding-inline: 16cqi 9cqi;         /* 7cqi of spine + 9cqi of margin */
+  padding-inline: 16cqi 9cqi; /* 7cqi of spine + 9cqi of margin */
 
   font-family: var(--font-serif);
   text-align: center;
-  overflow-wrap: break-word;          /* a long single word breaks rather than escaping the board */
+  overflow-wrap: break-word; /* a long single word breaks rather than escaping the board */
 }
 
 .bookplate .bookplate__title {
@@ -238,7 +238,7 @@
    sitting between the two spans because the author disappears on the narrowest
    plates (below) and the rule must not go with it. */
 .bookplate .bookplate__title::after {
-  content: "";
+  content: '';
   display: block;
   width: 20cqi;
   margin: 6cqi auto 0;
@@ -274,7 +274,6 @@
     margin-block-start: 5cqi;
   }
 }
-
 
 /* ---- Hover -----------------------------------------------------------------
    Brajeshwar 2026-08-04: "With this new style, the hover on the homepage looks

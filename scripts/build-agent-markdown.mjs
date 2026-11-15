@@ -19,8 +19,7 @@ const MANIFEST = join(SITE, 'agents-manifest.json');
 
 const { site, docs } = JSON.parse(readFileSync(MANIFEST, 'utf8'));
 
-const stripFrontMatter = (src) =>
-  src.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
+const stripFrontMatter = (src) => src.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
 
 // ⚠️ AUTHOR-ONLY BUILD NOTES MUST NOT SHIP HERE (added 2026-08-09).
 // Liquid comments are stripped by Jekyll for the HTML, but this script reads
@@ -31,17 +30,18 @@ const stripFrontMatter = (src) =>
 //
 // Both spellings, since the codebase uses {%- comment -%} and {% comment %}.
 const stripLiquidComments = (src) =>
-  src.replace(/\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}\s*/g, '')
-     // HTML comments too: same problem, and about.html used one until today.
-     .replace(/<!--[\s\S]*?-->\s*/g, '')
-     // ⚠️ And <script> (added 2026-08-10). A Markdown page may still end with a
-     // tag that loads its behaviour — /about/ closes with the anchors.js line —
-     // which is markup with an unevaluated Liquid URL inside it, in a file whose
-     // whole promise is plain text. Exactly ONE twin was affected, and it is the
-     // page most likely to be opened through the [md] icon. Scripts are the only
-     // tag stripped here: anything else in a Markdown source was authored to be
-     // read. The HTML branch below drops far more, because there it is furniture.
-     .replace(/<script\b[\s\S]*?<\/script>\s*/gi, '');
+  src
+    .replace(/\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}\s*/g, '')
+    // HTML comments too: same problem, and about.html used one until today.
+    .replace(/<!--[\s\S]*?-->\s*/g, '')
+    // ⚠️ And <script> (added 2026-08-10). A Markdown page may still end with a
+    // tag that loads its behaviour — /about/ closes with the anchors.js line —
+    // which is markup with an unevaluated Liquid URL inside it, in a file whose
+    // whole promise is plain text. Exactly ONE twin was affected, and it is the
+    // page most likely to be opened through the [md] icon. Scripts are the only
+    // tag stripped here: anything else in a Markdown source was authored to be
+    // read. The HTML branch below drops far more, because there it is furniture.
+    .replace(/<script\b[\s\S]*?<\/script>\s*/gi, '');
 
 // ============================================================================
 // HTML SOURCES: convert the RENDERED page, not the source file.
@@ -67,18 +67,63 @@ const stripLiquidComments = (src) =>
 // a slightly plain twin is a bounded cost, a permanent dependency is not.
 // ============================================================================
 
-const VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input',
-  'link', 'meta', 'param', 'source', 'track', 'wbr']);
+const VOID = new Set([
+  'area',
+  'base',
+  'br',
+  'col',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'link',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr',
+]);
 
 // Interactive and presentational furniture with no meaning in a text twin:
 // /own/'s sixteen scroll buttons, /archives/'s year jump strip (its anchors
 // point at a page the twin is not), and every inline script.
-const DROP = new Set(['script', 'style', 'svg', 'button', 'nav', 'form',
-  'select', 'textarea', 'template']);
+const DROP = new Set([
+  'script',
+  'style',
+  'svg',
+  'button',
+  'nav',
+  'form',
+  'select',
+  'textarea',
+  'template',
+]);
 
-const INLINE = new Set(['a', 'em', 'i', 'strong', 'b', 'code', 'del', 's', 'mark',
-  'small', 'span', 'time', 'sup', 'sub', 'abbr', 'cite', 'q', 'u', 'br', 'img',
-  'var', 'kbd', 'samp']);
+const INLINE = new Set([
+  'a',
+  'em',
+  'i',
+  'strong',
+  'b',
+  'code',
+  'del',
+  's',
+  'mark',
+  'small',
+  'span',
+  'time',
+  'sup',
+  'sub',
+  'abbr',
+  'cite',
+  'q',
+  'u',
+  'br',
+  'img',
+  'var',
+  'kbd',
+  'samp',
+]);
 
 // ⚠️ Kramdown emits the SMART-PUNCTUATION entities by name, so a map of the
 // five XML ones is not enough — `&rsquo;` is the commonest non-ASCII character
@@ -86,14 +131,47 @@ const INLINE = new Set(['a', 'em', 'i', 'strong', 'b', 'code', 'del', 's', 'mark
 // first run. Numeric forms are handled generically below; only named ones need
 // a table, and this covers what the built pages actually contain.
 const NAMED = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
-  hellip: '…', mdash: '—', ndash: '–', minus: '−', shy: '',
-  lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”', sbquo: '‚', bdquo: '„',
-  laquo: '«', raquo: '»', lsaquo: '‹', rsaquo: '›',
-  bull: '•', middot: '·', times: '×', divide: '÷', deg: '°', prime: '′',
-  copy: '©', reg: '®', trade: '™', sect: '§', para: '¶', dagger: '†',
-  euro: '€', pound: '£', yen: '¥', cent: '¢', plusmn: '±',
-  frac12: '½', frac14: '¼', frac34: '¾',
+  amp: '&',
+  lt: '<',
+  gt: '>',
+  quot: '"',
+  apos: "'",
+  nbsp: ' ',
+  hellip: '…',
+  mdash: '—',
+  ndash: '–',
+  minus: '−',
+  shy: '',
+  lsquo: '‘',
+  rsquo: '’',
+  ldquo: '“',
+  rdquo: '”',
+  sbquo: '‚',
+  bdquo: '„',
+  laquo: '«',
+  raquo: '»',
+  lsaquo: '‹',
+  rsaquo: '›',
+  bull: '•',
+  middot: '·',
+  times: '×',
+  divide: '÷',
+  deg: '°',
+  prime: '′',
+  copy: '©',
+  reg: '®',
+  trade: '™',
+  sect: '§',
+  para: '¶',
+  dagger: '†',
+  euro: '€',
+  pound: '£',
+  yen: '¥',
+  cent: '¢',
+  plusmn: '±',
+  frac12: '½',
+  frac14: '¼',
+  frac34: '¾',
 };
 
 // Generic containers, as opposed to the semantic inline formatting below them.
@@ -128,8 +206,10 @@ function parseHtml(html) {
   const root = { tag: '#root', attrs: {}, children: [] };
   const stack = [root];
   const push = (node) => stack[stack.length - 1].children.push(node);
-  const re = /<!--[\s\S]*?-->|<\/([a-zA-Z][\w-]*)\s*>|<([a-zA-Z][\w-]*)((?:"[^"]*"|'[^']*'|[^>"'])*?)\/?>/g;
-  let last = 0, m;
+  const re =
+    /<!--[\s\S]*?-->|<\/([a-zA-Z][\w-]*)\s*>|<([a-zA-Z][\w-]*)((?:"[^"]*"|'[^']*'|[^>"'])*?)\/?>/g;
+  let last = 0,
+    m;
   while ((m = re.exec(html))) {
     if (m.index > last) push({ tag: '#text', text: html.slice(last, m.index) });
     last = re.lastIndex;
@@ -137,7 +217,10 @@ function parseHtml(html) {
     if (m[1]) {
       const tag = m[1].toLowerCase();
       for (let i = stack.length - 1; i > 0; i--) {
-        if (stack[i].tag === tag) { stack.length = i; break; }
+        if (stack[i].tag === tag) {
+          stack.length = i;
+          break;
+        }
       }
       continue;
     }
@@ -150,8 +233,7 @@ function parseHtml(html) {
   return root;
 }
 
-const rawText = (n) =>
-  n.tag === '#text' ? decode(n.text) : n.children.map(rawText).join('');
+const rawText = (n) => (n.tag === '#text' ? decode(n.text) : n.children.map(rawText).join(''));
 
 const tidy = (s) => s.replace(/\s+/g, ' ').trim();
 
@@ -187,7 +269,8 @@ function inline(n) {
   if (n.attrs && n.attrs['aria-hidden'] === 'true') return '';
   const kids = () => joinInline(n.children);
   switch (n.tag) {
-    case 'br': return '\n';
+    case 'br':
+      return '\n';
     case 'img': {
       const src = n.attrs.src || '';
       return src ? `![${tidy(n.attrs.alt || '')}](${src})` : '';
@@ -197,11 +280,27 @@ function inline(n) {
       const href = n.attrs.href || '';
       return href && t ? `[${t}](${href})` : t;
     }
-    case 'strong': case 'b': { const t = kids().trim(); return t ? `**${t}**` : ''; }
-    case 'em': case 'i': { const t = kids().trim(); return t ? `*${t}*` : ''; }
-    case 'code': { const t = kids().trim(); return t ? '`' + t + '`' : ''; }
-    case 'del': case 's': { const t = kids().trim(); return t ? `~~${t}~~` : ''; }
-    default: return kids();
+    case 'strong':
+    case 'b': {
+      const t = kids().trim();
+      return t ? `**${t}**` : '';
+    }
+    case 'em':
+    case 'i': {
+      const t = kids().trim();
+      return t ? `*${t}*` : '';
+    }
+    case 'code': {
+      const t = kids().trim();
+      return t ? '`' + t + '`' : '';
+    }
+    case 'del':
+    case 's': {
+      const t = kids().trim();
+      return t ? `~~${t}~~` : '';
+    }
+    default:
+      return kids();
   }
 }
 
@@ -227,7 +326,7 @@ function renderTable(n) {
   const cap = n.children.find((c) => c.tag === 'caption');
   if (cap) {
     const t = tidy(joinInline(cap.children)).replace(/^\*\*|\*\*$/g, '');
-    if (t) out.push('### ' + t, '');   // blank line so the heading stands off its list
+    if (t) out.push('### ' + t, ''); // blank line so the heading stands off its list
   }
   const rows = [];
   (function walk(x) {
@@ -237,7 +336,8 @@ function renderTable(n) {
     }
   })(n);
   const cells = (tr) =>
-    tr.children.filter((c) => c.tag === 'td' || c.tag === 'th')
+    tr.children
+      .filter((c) => c.tag === 'td' || c.tag === 'th')
       .map((c) => tidy(joinInline(c.children)));
   if (rows.some((tr) => tr.children.some((c) => c.tag === 'th'))) {
     const head = cells(rows[0]);
@@ -257,20 +357,36 @@ function renderBlock(n) {
   if (DROP.has(n.tag)) return '';
   if (n.attrs && n.attrs['aria-hidden'] === 'true') return '';
   switch (n.tag) {
-    case 'h1': case 'h2': case 'h3': case 'h4': case 'h5': case 'h6': {
+    case 'h1':
+    case 'h2':
+    case 'h3':
+    case 'h4':
+    case 'h5':
+    case 'h6': {
       const t = tidy(joinInline(n.children));
       return t ? '#'.repeat(Number(n.tag[1])) + ' ' + t : '';
     }
-    case 'hr': return '---';
-    case 'ul': return renderList(n, false);
-    case 'ol': return renderList(n, true);
-    case 'pre': return '```\n' + rawText(n).replace(/^\n+|\n+$/g, '') + '\n```';
+    case 'hr':
+      return '---';
+    case 'ul':
+      return renderList(n, false);
+    case 'ol':
+      return renderList(n, true);
+    case 'pre':
+      return '```\n' + rawText(n).replace(/^\n+|\n+$/g, '') + '\n```';
     case 'blockquote': {
       const b = renderChildren(n);
-      return b ? b.split('\n').map((l) => (l ? '> ' + l : '>')).join('\n') : '';
+      return b
+        ? b
+            .split('\n')
+            .map((l) => (l ? '> ' + l : '>'))
+            .join('\n')
+        : '';
     }
-    case 'table': return renderTable(n);
-    default: return renderChildren(n);
+    case 'table':
+      return renderTable(n);
+    default:
+      return renderChildren(n);
   }
 }
 
@@ -279,12 +395,17 @@ function renderChildren(n) {
   const out = [];
   let run = [];
   const flush = () => {
-    const t = joinInline(run).replace(/[ \t]+/g, ' ').trim();
+    const t = joinInline(run)
+      .replace(/[ \t]+/g, ' ')
+      .trim();
     run = [];
     if (t) out.push(t);
   };
   for (const c of n.children) {
-    if (c.tag === '#text' || INLINE.has(c.tag)) { run.push(c); continue; }
+    if (c.tag === '#text' || INLINE.has(c.tag)) {
+      run.push(c);
+      continue;
+    }
     flush();
     const b = renderBlock(c);
     if (b) out.push(b);
@@ -294,7 +415,9 @@ function renderChildren(n) {
 }
 
 const htmlToMarkdown = (html) =>
-  renderChildren(parseHtml(html)).replace(/\n{3,}/g, '\n\n').trim();
+  renderChildren(parseHtml(html))
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 
 // The article region of a built page. <article> when the layout wraps one —
 // which is every page except /archives/, the lone `layout: default` page — and
@@ -303,7 +426,11 @@ const htmlToMarkdown = (html) =>
 function renderedBody(url) {
   const file = join(SITE, url.replace(/^\//, ''), 'index.html');
   let html;
-  try { html = readFileSync(file, 'utf8'); } catch { return null; }
+  try {
+    html = readFileSync(file, 'utf8');
+  } catch {
+    return null;
+  }
   const main = html.match(/<main\b[^>]*>([\s\S]*)<\/main>/i);
   if (!main) return null;
   const art = main[1].match(/<article\b[^>]*>([\s\S]*)<\/article>/i);
@@ -359,7 +486,10 @@ for (const d of docs) {
       // was invisible for nine days because nothing ever looked at the output.
       // A page that grows markup the converter does not know about now says so
       // in the build log instead of shipping tags to a reader.
-      if (/\{%|\{\{/.test(body) || /<(?:div|section|ul|ol|li|p|a|img|figure|table|h[1-6])\b/i.test(body)) {
+      if (
+        /\{%|\{\{/.test(body) ||
+        /<(?:div|section|ul|ol|li|p|a|img|figure|table|h[1-6])\b/i.test(body)
+      ) {
         console.warn('  ⚠️ markup survived the conversion:', d.url);
         leaked++;
       }
@@ -377,9 +507,10 @@ for (const d of docs) {
 
   const canonical = `${site.url}${d.url}`;
   const isPost = d.collection === 'posts';
-  const meta = isPost && d.date
-    ? `> Markdown version of ${canonical} — ${d.date}`
-    : `> Markdown version of ${canonical}`;
+  const meta =
+    isPost && d.date
+      ? `> Markdown version of ${canonical} — ${d.date}`
+      : `> Markdown version of ${canonical}`;
   const out = `# ${title}\n\n${meta}\n\n${body.trimEnd()}\n`;
 
   const rel = slugPath(d.url);
@@ -421,6 +552,6 @@ rmSync(MANIFEST, { force: true });
 
 console.log(
   `agent-markdown: wrote ${written} .md files (${pages.length} pages, ${posts.length} posts) + llms.txt` +
-  `, ${converted} converted from built HTML` +
-  (leaked ? `, ⚠️ ${leaked} with markup left in` : '')
+    `, ${converted} converted from built HTML` +
+    (leaked ? `, ⚠️ ${leaked} with markup left in` : '')
 );

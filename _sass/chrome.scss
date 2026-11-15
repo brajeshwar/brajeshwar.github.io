@@ -75,8 +75,8 @@ site-logo {
    ------------------------------------------------------------ */
 site-logo {
   margin-left: calc(
-    -1 * (var(--logo-inset) +
-          (var(--logo-size) - 2 * var(--logo-inset)) * var(--logo-optical-inset))
+    -1 *
+      (var(--logo-inset) + (var(--logo-size) - 2 * var(--logo-inset)) * var(--logo-optical-inset))
   );
 }
 
@@ -100,8 +100,10 @@ site-logo a {
 }
 
 /* SVG: .logo__img and .logo__img--path */
-site-logo a .logo__img, site-logo a .logo__img--path,
-site-logo a:visited .logo__img, site-logo a:visited .logo__img--path {
+site-logo a .logo__img,
+site-logo a .logo__img--path,
+site-logo a:visited .logo__img,
+site-logo a:visited .logo__img--path {
   fill: var(--bg-color-high);
   transition: fill 0.15s ease;
 }
@@ -116,8 +118,10 @@ site-logo a:focus-visible {
   background-color: var(--bg-color-high);
 }
 
-site-logo a:hover .logo__img, site-logo a:hover .logo__img--path,
-site-logo a:focus-visible .logo__img, site-logo a:focus-visible .logo__img--path {
+site-logo a:hover .logo__img,
+site-logo a:hover .logo__img--path,
+site-logo a:focus-visible .logo__img,
+site-logo a:focus-visible .logo__img--path {
   fill: var(--bg-color-lower);
 }
 
@@ -138,7 +142,8 @@ site-nav {
    actually carries hover now — the color shift was never doing the work on its
    own. Do not "restore contrast" by darkening hover further; the resting state
    is the thing that was wrong. */
-site-nav a, site-nav a:visited {
+site-nav a,
+site-nav a:visited {
   padding: var(--space-3xs) var(--space-2xs);
   border-radius: var(--border-radius-small);
   color: var(--text-color);
@@ -149,7 +154,8 @@ site-nav a, site-nav a:visited {
 /* Hover/focus underlines — the affordance design.md asks of every link, and
    the header was the exception. Kept off .active on purpose: the current page
    should read as "you are here" (darker), not as something to click. */
-site-nav a:hover, site-nav a:focus-visible {
+site-nav a:hover,
+site-nav a:focus-visible {
   color: var(--text-color-higher);
   text-decoration: underline;
   /* Hairline, like every hover underline on the site (2026-08-02 —
@@ -158,7 +164,8 @@ site-nav a:hover, site-nav a:focus-visible {
   text-decoration-thickness: var(--border-size-hairline);
 }
 
-site-nav a:active, site-nav a.active {
+site-nav a:active,
+site-nav a.active {
   color: var(--text-color-higher);
   text-decoration: none;
 }
@@ -196,8 +203,8 @@ site-tools {
      going quieter than the text means mixing toward the background rather than
      picking a token. Measured against the page background: stays clear of the
      WCAG 1.4.11 3:1 bar for non-text UI in both light and dark. */
-  --icon-color       : color-mix(in oklch, var(--text-color-lower) 72%, var(--bg-color-lower));
-  --icon-color-hover : var(--text-color);
+  --icon-color: color-mix(in oklch, var(--text-color-lower) 72%, var(--bg-color-lower));
+  --icon-color-hover: var(--text-color);
 }
 
 /* Glyphs are authored at 20px in _includes/icons/*.svg; scale them here so the
@@ -281,7 +288,9 @@ site-tools svg {
     margin-bottom: var(--space-m);
   }
 
-  site-menu { gap: var(--space-3xs); }
+  site-menu {
+    gap: var(--space-3xs);
+  }
 
   site-nav {
     gap: 0;
@@ -290,7 +299,9 @@ site-tools svg {
 
   /* Trim padding before font size: --step--2 is already small, and the nav
      inherits the reader's font choice, so label widths are not fixed. */
-  site-nav a { padding: var(--space-3xs) 0.3rem; }
+  site-nav a {
+    padding: var(--space-3xs) 0.3rem;
+  }
 
   site-tools {
     gap: 0;
@@ -312,9 +323,10 @@ site-tools svg {
     --icon-glyph-size: 14px;
   }
 
-  site-nav a { padding: var(--space-3xs) 0.2rem; }
+  site-nav a {
+    padding: var(--space-3xs) 0.2rem;
+  }
 }
-
 
 /* ---- Back to Top ------------------------------------------------
    Built by assets/scripts/back-to-top.js, and only on a page tall enough to
@@ -344,7 +356,7 @@ site-tools svg {
 .back-to-top-row {
   position: sticky;
   bottom: var(--space-l);
-  z-index: 5;                       /* over content, under the header (50) and the search palette */
+  z-index: 5; /* over content, under the header (50) and the search palette */
 
   /* Match the band, the way `main` does — for the case where this row is a
      BODY child (every page that has no .post-nav). */
@@ -364,7 +376,7 @@ site-tools svg {
   margin: var(--space-m) auto;
 
   display: flex;
-  justify-content: flex-end;        /* band's right edge, floating and settled alike */
+  justify-content: flex-end; /* band's right edge, floating and settled alike */
 
   /* The row is a full-band-width strip. While floating it lies across the
      content, so it must not swallow clicks meant for the text underneath —
@@ -373,8 +385,9 @@ site-tools svg {
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--transition-duration) ease,
-              visibility var(--transition-duration) ease;
+  transition:
+    opacity var(--transition-duration) ease,
+    visibility var(--transition-duration) ease;
 }
 
 /* Inside <main> — on a post — the parent already IS the band, so the sizing
@@ -400,7 +413,9 @@ main > .back-to-top-row {
    would otherwise win and leave the control marooned mid-gap, further from the
    footer than from the content it belongs to. Applies on pages, where the row
    IS the last thing before the footer. */
-.back-to-top-row + footer { margin-top: 0; }
+.back-to-top-row + footer {
+  margin-top: 0;
+}
 
 /* On a POST the row is inside <main>, so the rule above cannot reach the
    footer — it would keep its --space-2xl and push the prev/next bar 80px clear
@@ -416,10 +431,12 @@ main > .back-to-top-row {
    `+` silently matched nothing — the footer kept its 80px and the change
    looked like it had failed. The general-sibling combinator does not care what
    sits between. There is exactly one footer, so it cannot over-match. */
-main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
+main:has(.post-nav) ~ footer {
+  margin-top: var(--space-m);
+}
 
 .back-to-top {
-  pointer-events: auto;             /* the one part of the strip that is clickable */
+  pointer-events: auto; /* the one part of the strip that is clickable */
 
   display: inline-flex;
   align-items: center;
@@ -437,8 +454,9 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
   color: var(--text-muted);
   text-decoration: none;
 
-  transition: color var(--transition-duration) ease,
-              background-color var(--transition-duration) ease;
+  transition:
+    color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
 }
 
 /* Darken on hover. A color-mix of the foreground rather than a --bg-* token:
@@ -452,7 +470,6 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
   background-color: color-mix(in oklch, var(--text) 10%, var(--bg-color-lower));
   text-decoration: none;
 }
-
 
 /* ---- Pill: a reusable segmented selector -------------------------
    One rounded track, hairline divisions, the chosen segment filled.
@@ -476,7 +493,7 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
 
   border: var(--border-size) var(--border-style) var(--rule);
   border-radius: 999px;
-  overflow: hidden;                 /* clips the segments to the rounded ends */
+  overflow: hidden; /* clips the segments to the rounded ends */
 }
 
 .pill__option {
@@ -503,15 +520,20 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
   cursor: pointer;
   text-decoration: none;
 
-  transition: color var(--transition-duration) ease,
-              background-color var(--transition-duration) ease;
+  transition:
+    color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
 }
 
-.pill__option:last-child { border-inline-end: 0; }
+.pill__option:last-child {
+  border-inline-end: 0;
+}
 
-.pill__option:hover { color: var(--text); }
+.pill__option:hover {
+  color: var(--text);
+}
 
-.pill__option[aria-pressed="true"],
+.pill__option[aria-pressed='true'],
 .pill__option--on {
   color: var(--color-primary-fg);
   background: var(--color-primary);
@@ -540,10 +562,10 @@ main:has(.post-nav) ~ footer { margin-top: var(--space-m); }
   border: var(--border-size) var(--border-style) currentColor;
   opacity: 0.55;
   flex: 0 0 auto;
-  transition: opacity var(--transition-duration) ease,
-              background-color var(--transition-duration) ease;
+  transition:
+    opacity var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
 }
-
 
 /* ---- Footer ---------------------------------------------------- */
 
@@ -646,7 +668,6 @@ footer {
   color: var(--text-muted);
 }
 
-
 /* ---- Appearance panel ---------------------------------------------------- */
 
 /* Appearance panel (mode + palette + font + text size + accent) — built by
@@ -666,7 +687,9 @@ appearance-settings {
    trigger is a real link to /search/. A browser too old for `scripting` keeps
    the button, which is the old behavior and harmless. */
 @media (scripting: none) {
-  appearance-settings { display: none; }
+  appearance-settings {
+    display: none;
+  }
 }
 
 /* .appearance-trigger's own look is .icon-button (see above); nothing
@@ -762,7 +785,9 @@ appearance-settings {
    because the element is a plain <div> carrying no role of its own; the
    label↔control association is `aria-labelledby`, which is id-based and does
    not care about the box tree. */
-.appearance-group { display: contents; }
+.appearance-group {
+  display: contents;
+}
 
 .appearance-group__label {
   font-size: var(--step--2);
@@ -781,7 +806,9 @@ appearance-settings {
    The .appearance-* names are kept as the hooks for that specificity rather
    than dropped, so a panel-only tweak never has to reach for .pill and change
    the /about/ filter by accident. */
-.appearance-options { width: 100%; }
+.appearance-options {
+  width: 100%;
+}
 
 /* Text size — five equal cells, each an "A" that grows left → right (Kindle). */
 .appearance-options--textsize .appearance-option {
@@ -792,11 +819,21 @@ appearance-settings {
   padding-inline: 0;
   line-height: 1;
 }
-.appearance-options--textsize .appearance-option[data-opt="xs"] { font-size: 0.75rem; }
-.appearance-options--textsize .appearance-option[data-opt="s"]  { font-size: 0.875rem; }
-.appearance-options--textsize .appearance-option[data-opt="m"]  { font-size: 1rem; }
-.appearance-options--textsize .appearance-option[data-opt="l"]  { font-size: 1.125rem; }
-.appearance-options--textsize .appearance-option[data-opt="xl"] { font-size: 1.25rem; }
+.appearance-options--textsize .appearance-option[data-opt='xs'] {
+  font-size: 0.75rem;
+}
+.appearance-options--textsize .appearance-option[data-opt='s'] {
+  font-size: 0.875rem;
+}
+.appearance-options--textsize .appearance-option[data-opt='m'] {
+  font-size: 1rem;
+}
+.appearance-options--textsize .appearance-option[data-opt='l'] {
+  font-size: 1.125rem;
+}
+.appearance-options--textsize .appearance-option[data-opt='xl'] {
+  font-size: 1.25rem;
+}
 
 /* Accent swatches */
 .appearance-swatches {
@@ -821,15 +858,16 @@ appearance-settings {
   background: var(--text);
 }
 
-.appearance-swatch[aria-pressed="true"] {
-  box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--text-muted);
+.appearance-swatch[aria-pressed='true'] {
+  box-shadow:
+    0 0 0 2px var(--bg),
+    0 0 0 3.5px var(--text-muted);
 }
 
 .appearance-swatch:focus-visible {
   outline: var(--border-size-small) solid var(--accent);
   outline-offset: 2px;
 }
-
 
 /* ---- Search palette ---------------------------------------------------- */
 
@@ -859,7 +897,7 @@ site-search {
      the page rather than sitting against the header. */
   box-shadow: 0 16px 48px -12px var(--text);
 
-  text-align: left;   /* the panel is inside the centered <header>; reset it */
+  text-align: left; /* the panel is inside the centered <header>; reset it */
 
   /* Pagefind's Modular UI, themed with our tokens so results follow the
      active mode + palette. */
@@ -876,12 +914,14 @@ site-search {
   font-size: var(--step--1);
   color: var(--text-muted);
 }
-.site-search__summary:empty { display: none; }
+.site-search__summary:empty {
+  display: none;
+}
 
 /* Result list (Modular UI classes). The whole result block is clickable via a
    stretched title link; left-aligned, with a hover affordance. */
 .pagefind-modular-list-result {
-  position: relative;                         /* anchor for the stretched link */
+  position: relative; /* anchor for the stretched link */
   padding: var(--space-2xs);
   border-radius: var(--border-radius-small);
 }
@@ -892,13 +932,21 @@ site-search {
   border-top: var(--border-size) var(--border-style) var(--rule);
 }
 
-.pagefind-modular-list-title { margin: 0 0 var(--space-3xs); }
-.pagefind-modular-list-link { color: var(--text); text-decoration: none; }
-.pagefind-modular-list-link:hover { text-decoration: underline; text-decoration-thickness: var(--border-size-hairline); }
+.pagefind-modular-list-title {
+  margin: 0 0 var(--space-3xs);
+}
+.pagefind-modular-list-link {
+  color: var(--text);
+  text-decoration: none;
+}
+.pagefind-modular-list-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-size-hairline);
+}
 
 /* Stretch the title link over the whole result so the entire block is clickable. */
 .pagefind-modular-list-link::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
 }

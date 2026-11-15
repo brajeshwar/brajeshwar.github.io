@@ -30,8 +30,9 @@
 (function () {
   'use strict';
 
-  var BUNDLE = '/pagefind/';        // baseurl is '' — Pagefind lives at the site root
-  var loading = null, instance = null;
+  var BUNDLE = '/pagefind/'; // baseurl is '' — Pagefind lives at the site root
+  var loading = null,
+    instance = null;
   var trigger, panel, backdrop, pageRoot;
 
   function loadModular() {
@@ -45,7 +46,10 @@
       var s = document.createElement('script');
       s.src = BUNDLE + 'pagefind-modular-ui.js';
       s.onload = resolve;
-      s.onerror = function () { loading = null; reject(); };   // allow a retry
+      s.onerror = function () {
+        loading = null;
+        reject();
+      }; // allow a retry
       document.head.appendChild(s);
     });
     return loading;
@@ -69,9 +73,9 @@
     return loadModular().then(function () {
       if (!instance) {
         instance = mount({
-          input:   '#header-search-input',
+          input: '#header-search-input',
           summary: '#header-search-summary',
-          results: '#header-search-results'
+          results: '#header-search-results',
         });
       }
     });
@@ -83,13 +87,18 @@
     return !!input;
   }
 
-  function focusInput() { focusIn(panel); }
+  function focusInput() {
+    focusIn(panel);
+  }
 
   function showError() {
     var results = panel.querySelector('#header-search-results');
     if (results) {
-      results.innerHTML = '<p class="site-search__error">Search isn’t available right now. ' +
-        '<a href="' + trigger.getAttribute('href') + '">Open the search page →</a></p>';
+      results.innerHTML =
+        '<p class="site-search__error">Search isn’t available right now. ' +
+        '<a href="' +
+        trigger.getAttribute('href') +
+        '">Open the search page →</a></p>';
     }
   }
 
@@ -98,7 +107,8 @@
   function showPageError() {
     var results = document.getElementById('page-search-results');
     if (results) {
-      results.innerHTML = '<p class="site-search__error">Search isn’t available right now. ' +
+      results.innerHTML =
+        '<p class="site-search__error">Search isn’t available right now. ' +
         '<a href="/archives/">Browse the archives →</a></p>';
     }
   }
@@ -110,19 +120,24 @@
     if (!pageRoot) return false;
     loadModular().then(function () {
       mount({
-        input:   '#page-search-input',
+        input: '#page-search-input',
         summary: '#page-search-summary',
-        results: '#page-search-results'
+        results: '#page-search-results',
       });
       focusIn(pageRoot);
     }, showPageError);
     return true;
   }
 
-  function isOpen() { return !panel.hidden; }
+  function isOpen() {
+    return !panel.hidden;
+  }
 
   function open() {
-    if (isOpen()) { focusInput(); return; }
+    if (isOpen()) {
+      focusInput();
+      return;
+    }
     panel.hidden = false;
     backdrop.hidden = false;
     trigger.setAttribute('aria-expanded', 'true');
@@ -145,7 +160,8 @@
      typing, so the shortcut still works there. (The example this named was
      the /about/ Life/Work filter, deleted 2026-08-09. The rule stands on its
      own — the appearance panel still has focusable controls.) */
-  var TEXT_INPUTS = /^(text|search|email|url|tel|password|number|date|month|week|time|datetime-local)$/;
+  var TEXT_INPUTS =
+    /^(text|search|email|url|tel|password|number|date|month|week|time|datetime-local)$/;
 
   function isTyping(el) {
     if (!el) return false;
@@ -175,10 +191,16 @@
        browser and the OS, and taking them would be rude. Shift is NOT
        excluded — on plenty of layouts "/" IS a shifted key, and e.key already
        reports the character produced rather than the physical key. */
-    if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey
-        && !isOpen() && !isTyping(e.target)) {
+    if (
+      e.key === '/' &&
+      !e.metaKey &&
+      !e.ctrlKey &&
+      !e.altKey &&
+      !isOpen() &&
+      !isTyping(e.target)
+    ) {
       e.preventDefault();
-      if (pageRoot && focusIn(pageRoot)) return;   // same reason as ⌘K above
+      if (pageRoot && focusIn(pageRoot)) return; // same reason as ⌘K above
       open();
       return;
     }
@@ -196,8 +218,8 @@
 
     var root = document.querySelector('site-search');
     if (!root) return;
-    trigger  = root.querySelector('.site-search__trigger');
-    panel    = root.querySelector('.site-search__panel');
+    trigger = root.querySelector('.site-search__trigger');
+    panel = root.querySelector('.site-search__panel');
     backdrop = root.querySelector('.site-search__backdrop');
     if (!trigger || !panel) return;
 
@@ -211,7 +233,10 @@
     var hint = root.querySelector('.site-search__hint');
     if (hint && !isMac) hint.textContent = 'Ctrl K';
 
-    trigger.addEventListener('click', function (e) { e.preventDefault(); open(); });
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      open();
+    });
     backdrop.addEventListener('click', close);
     document.addEventListener('keydown', onKeydown);
   }

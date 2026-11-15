@@ -175,5 +175,7 @@
 
 /* Printing the page should not print the bar. */
 @media print {
-  .page-actions { display: none; }
+  .page-actions {
+    display: none;
+  }
 }

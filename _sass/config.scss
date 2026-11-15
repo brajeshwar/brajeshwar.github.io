@@ -25,23 +25,23 @@
    are paying for them everywhere.
    ------------------------------------------------------------ */
 :root {
-  --double-octave    : 4;
-  --pi               : 3.14159265359;
-  --major-twelfth    : 3;
-  --major-eleventh   : 2.666666667;
-  --major-tenth      : 2.5;
-  --octave           : 2;
-  --major-seventh    : 1.875;
-  --major-sixth      : 1.666666667;
-  --golden           : 1.618034;
-  --minor-sixth      : 1.6;
-  --fifth            : 1.5;
-  --augmented-fourth : 1.41421;
-  --fourth           : 1.333333333;
-  --major-third      : 1.25;
-  --minor-third      : 1.2;
-  --major-second     : 1.125;
-  --minor-second     : 1.066666667;
+  --double-octave: 4;
+  --pi: 3.14159265359;
+  --major-twelfth: 3;
+  --major-eleventh: 2.666666667;
+  --major-tenth: 2.5;
+  --octave: 2;
+  --major-seventh: 1.875;
+  --major-sixth: 1.666666667;
+  --golden: 1.618034;
+  --minor-sixth: 1.6;
+  --fifth: 1.5;
+  --augmented-fourth: 1.41421;
+  --fourth: 1.333333333;
+  --major-third: 1.25;
+  --minor-third: 1.2;
+  --major-second: 1.125;
+  --minor-second: 1.066666667;
 }
 
 /*
@@ -57,23 +57,22 @@
      header/footer keep the base scale. */
   --step--2-base: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --step--1-base: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --step-0-base:  clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --step-1-base:  clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-  --step-2-base:  clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-  --step-3-base:  clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-  --step-4-base:  clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-  --step-5-base:  clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+  --step-0-base: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1-base: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2-base: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3-base: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4-base: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5-base: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 
   --step--2: var(--step--2-base);
   --step--1: var(--step--1-base);
-  --step-0:  var(--step-0-base);
-  --step-1:  var(--step-1-base);
-  --step-2:  var(--step-2-base);
-  --step-3:  var(--step-3-base);
-  --step-4:  var(--step-4-base);
-  --step-5:  var(--step-5-base);
+  --step-0: var(--step-0-base);
+  --step-1: var(--step-1-base);
+  --step-2: var(--step-2-base);
+  --step-3: var(--step-3-base);
+  --step-4: var(--step-4-base);
+  --step-5: var(--step-5-base);
 }
-
 
 /*
  * Space Scale
@@ -81,14 +80,14 @@
  */
 
 :root {
-  --space-3xs:  clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
-  --space-2xs:  clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
-  --space-xs:   clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
-  --space-s:    clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --space-m:    clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
-  --space-l:    clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
-  --space-xl:   clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
-  --space-2xl:  clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+  --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
 
   /* Utopia also generates --space-3xl and a set of "one-up pair"
      tokens (--space-s-m, --space-l-xl, …) for fluid transitions
@@ -112,31 +111,35 @@
      self-hosted fonts (Geist, Source Serif 4 — see themes.css) load only on
      that choice; sans/serif/mono are system stacks (sans = the Default,
      no-webfont choice). */
-  --font-sans : ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-mono : ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --font-body : var(--font-sans);
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  --font-body: var(--font-sans);
 
   /* Legacy aliases — keep existing components working. */
   --font-family-sans-serif: var(--font-sans);
-  --font-family-serif     : var(--font-serif);
-  --font-family-monospace : var(--font-mono);
+  --font-family-serif: var(--font-serif);
+  --font-family-monospace: var(--font-mono);
 
-  --font-weight-lighter   : 100;
-  --font-weight-light     : 200;
-  --font-weight           : 400;
-  --font-weight-bold      : 600;
-  
-  --font-size             : 16px;
+  --font-weight-lighter: 100;
+  --font-weight-light: 200;
+  --font-weight: 400;
+  --font-weight-bold: 600;
 
-  --body-width            : 96%;
-  --measure               : 66rch; /* reading measure — comfort is char-count, not px; ~60–70ch (see design.md).
+  --font-size: 16px;
+
+  --body-width: 96%;
+  --measure: 66rch; /* reading measure — comfort is char-count, not px; ~60–70ch (see design.md).
                                       rch (root ch), not ch: plain ch resolves against each element's own
                                       font-size, so the same token gave the article (--step-0) a wider column
                                       than the pages (16px) and .post-nav (smaller) a narrower one. rch pins
                                       them all to the root 16px — one consistent column everywhere. */
-  --body-width-ideal      : var(--measure); /* reading column = the measure */
-  --body-width-max        : 64rem; /* 1024px — THE site width. One number for the whole site:
+  --body-width-ideal: var(--measure); /* reading column = the measure */
+  --body-width-max: 64rem; /* 1024px — THE site width. One number for the whole site:
                                       header, footer, main, galleries.
 
                                       Derived, not chosen. The article sits at the LEFT of the
@@ -179,8 +182,7 @@
      is closed" until the gallery; it is a short list of deliberate flourishes
      Brajeshwar asked for by name, not an open door. Prose and page furniture
      still stop at --body-width-max. */
-  --body-width-full       : 1600px;
-
+  --body-width-full: 1600px;
 
   /* ⚠️ SECOND spacing system — ratio-derived, predates the Utopia
      --space-3xs…2xl scale defined above. Both are live and both are
@@ -190,27 +192,27 @@
      Prefer the Utopia --space-* scale in new code; it responds to
      viewport width. These stay because migrating every component
      off them is a bigger job than it looks. */
-  --scale                 : var(--golden);
-  --scale-small           : var(--minor-third);
+  --scale: var(--golden);
+  --scale-small: var(--minor-third);
 
-  --space                 : calc(var(--scale) * 1rem);
-  --space-smaller         : calc(var(--scale-small) * 0.5rem);
+  --space: calc(var(--scale) * 1rem);
+  --space-smaller: calc(var(--scale-small) * 0.5rem);
 
-  --opacity-reset         : 1;
-  --opacity-low           : 0.8;
-  --opacity-lower         : 0.6;
+  --opacity-reset: 1;
+  --opacity-low: 0.8;
+  --opacity-lower: 0.6;
 
-  --transition-duration   : 0.3s;
+  --transition-duration: 0.3s;
 
-  --border-radius         : 7px;
-  --border-radius-tiny    : 2px;
-  --border-radius-small   : 4px;
-  --border-radius-large   : 10px;
-  --border-radius-larger  : 25px;
+  --border-radius: 7px;
+  --border-radius-tiny: 2px;
+  --border-radius-small: 4px;
+  --border-radius-large: 10px;
+  --border-radius-larger: 25px;
 
-  --border-style          : solid;
+  --border-style: solid;
 
-  --border-size           : 1px;
+  --border-size: 1px;
   /* THE hover-affordance thickness (2026-08-02). Brajeshwar: "hover
      underlines/border… seem to be too thick. Can we have just about 0.1
      point thick and standardize across all such behavior." Every hover
@@ -234,15 +236,15 @@
      is one-and-a-half device pixels on retina (one solid row plus one at
      half alpha — visibly present, still finer than the old 1px) and still
      a clean 1 device pixel on a 1x display. */
-  --border-size-hairline  : 0.75px;
-  --border-size-small     : 3px;
+  --border-size-hairline: 0.75px;
+  --border-size-small: 3px;
 
   /* Logo. Came down from 42px on 2026-07-27 to hold its proportion against the
      tool icons, which dropped 42 → 32 in the same pass. --logo-inset is the
      padding that keeps the glyph inside its circular hover fill; it scales with
      the size at each breakpoint. */
-  --logo-size             : 40px;
-  --logo-inset            : 2px;
+  --logo-size: 40px;
+  --logo-inset: 2px;
 
   /* Where the beta's painted left edge sits inside its own viewBox, as a
      fraction. Measured from the path's bounding box in brajeshwar-logo.svg:
@@ -250,7 +252,7 @@
      box is a quarter empty on the left and reading the box edge as the glyph
      edge is what made it look pushed inwards. Used by chrome.css to nudge the
      logo out by exactly that emptiness. Re-measure if the logo art changes. */
-  --logo-optical-inset    : 0.248;
+  --logo-optical-inset: 0.248;
 
   /* Header tool icons (search, RSS, appearance). Deliberately SEPARATE from
      --logo-size, which they used to share — shrinking the icons via that token
@@ -259,8 +261,8 @@
      The glyph files are authored at 20px; --icon-glyph-size overrides that.
      Both are re-declared smaller on `header` at the narrow breakpoint, and
      inheritance carries the new values down. */
-  --icon-button-size      : 32px;
-  --icon-glyph-size       : 17px;
+  --icon-button-size: 32px;
+  --icon-glyph-size: 17px;
 
   /* --image-width-max (60rem) was here, and --body-width-medium before it.
      Removed 2026-07-27: its last reader was `.large`'s middle step, and
@@ -269,8 +271,8 @@
      intermediate to name. */
 
   /* Tufte sidenotes (Phase 2) — right-margin gutter. See _docs/sidenotes.md. */
-  --sidenote-width        : 16rem;   /* the maximum — notes shrink to fit the margin (base.css) */
-  --sidenote-gap          : 3.5rem;  /* gap between reading column and sidenote */
+  --sidenote-width: 16rem; /* the maximum — notes shrink to fit the margin (base.css) */
+  --sidenote-gap: 3.5rem; /* gap between reading column and sidenote */
   /* --sidenote-min-gutter was here (17rem). Removed 2026-07-27: it was
      declared and read by NOTHING in CSS. The real threshold is
      MIN_GUTTER_REM in assets/scripts/sidenotes.js, which is where the
@@ -298,18 +300,34 @@
    in one stack. While the first downloads (font-display: swap), the interim
    renders in the next matching family, which would trigger that family's
    download too and ship both fonts for one choice. */
-[data-font="sans"]  { --font-body: var(--font-sans); }
-[data-font="geist"] { --font-body: "Geist", var(--font-sans); }
-[data-font="serif"] { --font-body: "Source Serif 4", var(--font-serif); }
+[data-font='sans'] {
+  --font-body: var(--font-sans);
+}
+[data-font='geist'] {
+  --font-body: 'Geist', var(--font-sans);
+}
+[data-font='serif'] {
+  --font-body: 'Source Serif 4', var(--font-serif);
+}
 
 /* Text size — Kindle-style. Multiplies the type scale for ALL content inside
    <main> (home body, pages, articles) — header/footer stay on the base scale.
    Default = m (no attribute); two steps smaller (s, xs) and larger (l, xl). */
-:root                 { --text-scale: 1; }     /* m — default, the middle button */
-[data-text-size="xs"] { --text-scale: 0.85; }  /* −2 steps */
-[data-text-size="s"]  { --text-scale: 0.925; } /* −1 step  */
-[data-text-size="l"]  { --text-scale: 1.075; } /* +1 step  */
-[data-text-size="xl"] { --text-scale: 1.15; }  /* +2 steps — symmetric ±0.075 / ±0.15 around 1 */
+:root {
+  --text-scale: 1;
+} /* m — default, the middle button */
+[data-text-size='xs'] {
+  --text-scale: 0.85;
+} /* −2 steps */
+[data-text-size='s'] {
+  --text-scale: 0.925;
+} /* −1 step  */
+[data-text-size='l'] {
+  --text-scale: 1.075;
+} /* +1 step  */
+[data-text-size='xl'] {
+  --text-scale: 1.15;
+} /* +2 steps — symmetric ±0.075 / ±0.15 around 1 */
 
 main {
   /* THE CONTENT BASE. Everything inside <main> starts from --step-0 (18–20px
@@ -336,12 +354,12 @@ main {
 
   --step--2: calc(var(--step--2-base) * var(--text-scale));
   --step--1: calc(var(--step--1-base) * var(--text-scale));
-  --step-0:  calc(var(--step-0-base)  * var(--text-scale));
-  --step-1:  calc(var(--step-1-base)  * var(--text-scale));
-  --step-2:  calc(var(--step-2-base)  * var(--text-scale));
-  --step-3:  calc(var(--step-3-base)  * var(--text-scale));
-  --step-4:  calc(var(--step-4-base)  * var(--text-scale));
-  --step-5:  calc(var(--step-5-base)  * var(--text-scale));
+  --step-0: calc(var(--step-0-base) * var(--text-scale));
+  --step-1: calc(var(--step-1-base) * var(--text-scale));
+  --step-2: calc(var(--step-2-base) * var(--text-scale));
+  --step-3: calc(var(--step-3-base) * var(--text-scale));
+  --step-4: calc(var(--step-4-base) * var(--text-scale));
+  --step-5: calc(var(--step-5-base) * var(--text-scale));
 }
 
 /* ---- Dark mode and images: we do NOTHING, deliberately -----
@@ -371,7 +389,6 @@ main {
    needs it today: the logo is inline SVG on currentColor, and the
    galleries are photographs.
    ------------------------------------------------------------ */
-
 
 /* ---- Breakpoints -------------------------------------------
    SCSS variables, not custom properties — and they have to be.

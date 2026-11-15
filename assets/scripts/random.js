@@ -38,10 +38,14 @@
   var from = '';
   try {
     from = new URL(document.referrer).pathname;
-  } catch (e) { /* no usable referrer — nothing to exclude */ }
+  } catch (e) {
+    /* no usable referrer — nothing to exclude */
+  }
 
   if (from) {
-    var others = urls.filter(function (u) { return u !== from; });
+    var others = urls.filter(function (u) {
+      return u !== from;
+    });
     /* Only take the filtered list if it left us something. A single-post site
        would otherwise filter down to nothing and navigate to undefined. */
     if (others.length) urls = others;

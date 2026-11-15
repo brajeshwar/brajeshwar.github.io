@@ -28,6 +28,6 @@ export default defineConfig({
     cwd: process.cwd(),
     reuseExistingServer: false,
     stdout: 'ignore',
-    stderr: 'ignore',   // http.server logs every request to stderr
+    stderr: 'ignore', // http.server logs every request to stderr
   },
 });

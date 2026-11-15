@@ -42,7 +42,9 @@
    eleven year fragments, and without this the next year's heading crowds the
    last entry of the previous one. There is no /about/ equivalent, because a
    period heading there is never preceded by a sibling list. */
-.page-now ul + h2 { margin-top: var(--space-l); }
+.page-now ul + h2 {
+  margin-top: var(--space-l);
+}
 
 /* Inline code in a now-entry. Quieter than a post's: these are passing
    mentions of a tool or a command in a sentence, not code being read, so it

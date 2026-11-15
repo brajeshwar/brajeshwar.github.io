@@ -41,7 +41,6 @@
   color: var(--text-color-lower);
 }
 
-
 /* ============================================================
    PRINT — the CV as a document (2026-09-07)
    ------------------------------------------------------------
@@ -122,7 +121,6 @@
    distrust the harness, and a remembered result is not a measurement.
    ============================================================ */
 @media print {
-
   /* ------------------------------------------------------------
      1. NO URLS IN THE PROSE.
 
@@ -145,13 +143,13 @@
      JavaScript to build on beforeprint — and an appendix of forty URLs
      spends roughly half a page, which is the opposite of the second ask.
      ------------------------------------------------------------ */
-  .page-cv a[href^="http"]::after,
-  .page-cv a[href^="ftp"]::after {
+  .page-cv a[href^='http']::after,
+  .page-cv a[href^='ftp']::after {
     content: none;
   }
 
-  .page-cv .cv-contact a[href^="http"]::after {
-    content: " (" attr(href) ")";
+  .page-cv .cv-contact a[href^='http']::after {
+    content: ' (' attr(href) ')';
   }
 
   /* ------------------------------------------------------------
@@ -284,10 +282,10 @@
   .page-cv {
     --step--2: 8pt;
     --step--1: 9.5pt;
-    --step-0:  11.5pt;
-    --step-1:  13pt;
-    --step-2:  15pt;
-    --step-3:  19pt;
+    --step-0: 11.5pt;
+    --step-1: 13pt;
+    --step-2: 15pt;
+    --step-3: 19pt;
 
     /* ⚠️ KEEP THIS SCALE MONOTONIC. It briefly was not — --space-s was raised
        to widen the gap between entries and ended up larger than --space-m,
@@ -296,11 +294,11 @@
        timeline.scss already spends on `.timeline h2`'s top margin; setting
        the token is the whole change and needs no rule of its own here. */
     --space-3xs: 3pt;
-    --space-2xs: 6pt;    /* between paragraphs */
-    --space-xs:  12pt;   /* under the name */
-    --space-s:   14pt;
-    --space-m:   17pt;   /* between entries */
-    --space-l:   24pt;
+    --space-2xs: 6pt; /* between paragraphs */
+    --space-xs: 12pt; /* under the name */
+    --space-s: 14pt;
+    --space-m: 17pt; /* between entries */
+    --space-l: 24pt;
 
     /* ⚠️ THE READER'S THEME MUST NOT FOLLOW THE PAGE ONTO PAPER, and until
        this block it did. print.css forces `body { background: #fff; color:
@@ -319,10 +317,10 @@
        re-points the semantic aliases (--color-fg-subtle and friends); the
        gray-N scale underneath is constant in both themes, so naming a rung
        of it is theme-proof by construction. */
-    --text-color:        var(--color-gray-900);
-    --text-color-lower:  var(--color-gray-600);
+    --text-color: var(--color-gray-900);
+    --text-color-lower: var(--color-gray-600);
     --border-color-high: var(--color-gray-300);
-    --rule-strong:       var(--color-gray-400);
+    --rule-strong: var(--color-gray-400);
 
     /* The spine is 2.5rem of gutter on screen, which is air a sheet cannot
        afford. Small enough to stay a spine, not so small the dot collides

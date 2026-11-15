@@ -1,4 +1,4 @@
-@use "breakpoints" as bp;   // emits nothing; see _sass/breakpoints.scss
+@use 'breakpoints' as bp; // emits nothing; see _sass/breakpoints.scss
 
 /* ============================================================
    Timeline — the shared component, and the /about/ storyline.
@@ -85,8 +85,8 @@
      three move together — that is the design. Verify dot-centre and
      spine-centre still share an x after any change. */
   --timeline-rule: var(--border-size-hairline);
-  --timeline-dot: 11px;                  /* marker diameter */
-  --timeline-gutter: var(--space-l);     /* space the spine lives in */
+  --timeline-dot: 11px; /* marker diameter */
+  --timeline-gutter: var(--space-l); /* space the spine lives in */
 
   /* Gap between entries. The one value the two users genuinely
      disagree on, so it is a token rather than a second rule: an
@@ -96,7 +96,9 @@
   --timeline-entry-gap: var(--space-m);
 }
 
-.page-now { --timeline-entry-gap: var(--space-s); }
+.page-now {
+  --timeline-entry-gap: var(--space-s);
+}
 
 /* ⚠️ THE PERIOD LABEL IS GONE (2026-08-09: "we should get rid of the '##' with
    the years"). /about/ grouped its entries under year headings; it does not any
@@ -111,7 +113,6 @@
    LEVEL is the mechanism (`##` group, `###` entry), and the entry selectors
    below would need to take h3 as well.
    ------------------------------------------------------------ */
-
 
 /* /now/'s year headings, which are still headings and still the loudest thing
    on that page — it has no events to promote, only years, so there was nothing
@@ -132,7 +133,7 @@
    up with, and -0.06em pulls it back. Em-based, so it tracks whatever size the
    shared scale hands it. */
 .page-now h2 {
-  position: relative;              /* anchor for the § headerlink */
+  position: relative; /* anchor for the § headerlink */
   margin: 0 0 var(--space-xs);
   margin-left: -0.06em;
 
@@ -229,7 +230,7 @@
    because the first heading's top margin is zeroed just below. Leave that rule
    in place or the line detaches from the dot it is supposed to start at. */
 .timeline::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: var(--timeline-dot-center);
@@ -299,7 +300,9 @@
   clear: right;
 }
 
-.timeline > h2:first-child { margin-top: 0; }
+.timeline > h2:first-child {
+  margin-top: 0;
+}
 
 /* THE SUB-TITLE — the first paragraph after a heading, and no authoring syntax
    for it. This was `<p class="timeline-meta">` in the HTML; as a Markdown page
@@ -322,10 +325,12 @@
 /* The dot, hanging off the heading. Same arithmetic as the list version below
    — it has to be, since both must centre on the same spine. */
 .timeline h2::before {
-  content: "";
+  content: '';
   position: absolute;
   top: calc(var(--timeline-dot-center) - (var(--timeline-dot) / 2));
-  left: calc((var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1);
+  left: calc(
+    (var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1
+  );
 
   width: var(--timeline-dot);
   height: var(--timeline-dot);
@@ -340,7 +345,9 @@
 
 /* --timeline-dot-center for the heading flow. Same definition the list shape
    uses, restated because it must resolve against .timeline rather than a list. */
-.timeline { --timeline-dot-center: calc(var(--step-2) * var(--scale-small) / 2); }
+.timeline {
+  --timeline-dot-center: calc(var(--step-2) * var(--scale-small) / 2);
+}
 
 /* ---- Where a dot sits, and therefore where the spine starts ------
    ⚠️ ONE NUMBER DRIVES TWO THINGS: the dot's vertical position and the top of
@@ -363,7 +370,9 @@
    set here would resolve against the FONT SIZE OF WHATEVER USES IT — one value
    on the <ol>, another on the <li>. The spine and the dots would disagree.
    Absolute math on the scale tokens has no such trap. */
-.page-now ul { --timeline-dot-center: calc(var(--step-0) * var(--scale) / 2); }
+.page-now ul {
+  --timeline-dot-center: calc(var(--step-0) * var(--scale) / 2);
+}
 
 /* The spine.
 
@@ -388,7 +397,7 @@
 }
 
 .page-now ul::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: var(--timeline-dot-center);
@@ -436,7 +445,9 @@
   display: flow-root;
 }
 
-.page-now ul li:last-child { margin-bottom: 0; }
+.page-now ul li:last-child {
+  margin-bottom: 0;
+}
 
 /* Marker on the spine. Sits ON the rule, centred over it both ways.
 
@@ -454,10 +465,12 @@
 
    `top` is derived, not typed — see --timeline-dot-center above. */
 .page-now ul li::before {
-  content: "";
+  content: '';
   position: absolute;
   top: calc(var(--timeline-dot-center) - (var(--timeline-dot) / 2));
-  left: calc((var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1);
+  left: calc(
+    (var(--timeline-gutter) + (var(--timeline-dot) / 2) + (var(--timeline-rule) / 2)) * -1
+  );
 
   width: var(--timeline-dot);
   height: var(--timeline-dot);
