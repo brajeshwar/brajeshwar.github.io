@@ -1479,6 +1479,7 @@
 /contact/
 /cv/
 /devices/
+/devices/story/
 /feed.xml
 /film/
 /hire/
@@ -1491,6 +1492,7 @@
 /now/
 /ok/
 /own/
+/own/story/
 /photos/
 /resume/
 /robots.txt
@@ -1500,5 +1502,6 @@
 /static/2021/rethinking-climate-change.pdf
 /static/pdf/brajeshwar-oinam.pdf
 /static/pdf/gamification-in-ui-ux-designs.pdf
+/static/pdf/own.pdf
 /static/pdf/wordpress-theme-development-workflow.pdf
 /styleguide/
