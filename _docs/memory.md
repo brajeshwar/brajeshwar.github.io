@@ -15,7 +15,7 @@ from the build), and CI's `npm install pagefind` became `npm ci`.
 
 | | |
 |---|---|
-| **Dark-mode click flash** | `color-scheme` was always `light dark`, so Dark on a light OS kept a white canvas between pages. An explicit mode now pins it, in CSS and in the no-flash snippet's meta. **Pushed and deployed by him** (`324d214b`) |
+| **Dark-mode click flash** | `color-scheme` was always `light dark`, so Dark on a light OS kept a white canvas between pages. An explicit mode now pins it, in CSS and in the no-flash snippet's meta. Pushed at his ask (`324d214b`), but ⚠️ **never deployed**: see below |
 | **JS off, dark OS** | `<html>` had no `data-theme`, so auto never matched and the page was light. A missing `data-theme` now counts as auto |
 | **JS off, Appearance button** | showed and did nothing; `@media (scripting: none)` hides it |
 | **Prettier** | reformatted the code in its own commit (`650fbfe3`). The hand-aligned Sass columns are gone; that commit reverts alone if he wants them back (then drop the check from `npm run lint`) |
@@ -25,9 +25,14 @@ from the build), and CI's `npm install pagefind` became `npm ci`.
 Seeing `_site/2099/` locally is not a leak; production 404s them. That is why the tests build
 their own directory.
 
-⚠️ **The CI half is unproven until the first push.** The suite passed locally against a CI-parity
-build, but the runner-side Chrome, `npm ci` and the new steps run for the first time on push. If
-that deploy goes red, the live site stays on `2253973b`, by design.
+⚠️ **PRODUCTION HAS NOT DEPLOYED SINCE 2026-11-11.** `ubuntu-latest` became 26.04, which has
+no Ruby 3.3.5, and the workflow pinned exactly that: every run from 2026-11-12 (four crons and
+the 2026-11-15 push) failed at Setup Ruby. The workflow now asks for `'3.3'`. Until a push goes
+green, the live site is the 2026-11-11 build, without the dark-mode fix or the two new books.
+
+⚠️ **The CI half of the tests is unproven until that push**, and so is the 26.04 image: the
+runner-side Chrome, `npm ci` and the new steps run there for the first time. If that deploy goes
+red, the live site stays where it is, by design.
 
 ## Where we were (updated 2026-11-05, fourteenth session — CLOSED)
 
