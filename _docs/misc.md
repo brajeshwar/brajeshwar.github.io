@@ -92,7 +92,7 @@ and shipped. Do not offer it again.
 |---|---|
 | `index.html` | the page, its CSS, the list of stops, and a pin for each |
 | `walk.js` | the camera, the flights between stops, the controls |
-| `draw.js` | WebGL2 with no library: the shaders, the sun and its shadow map |
+| `draw.js` | WebGL2 with no library: the shaders, the sun and its shadow map, and the sky map |
 | `city.js` | reads `city.json` into one mesh |
 | `city.json` | the model as whole numbers, 2.4 MB: the ground, the buildings and their colors, the trees and their heights, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
@@ -106,7 +106,7 @@ same name, and a signed git tag on the commit that added it:
 | `v0.1.0-grayscale` | `london-southbank-v0.1.0-grayscale.html` | the model in grays |
 | `v0.2.0-tinted` | `london-southbank-v0.2.0-tinted.html` | blue river, green parks, warm ground; buildings gray |
 | `v0.3.0-colored` | `london-southbank-v0.3.0-colored.html` | the same ground, and each building in its own color |
-| `v0.4.0-measured` | `london-southbank-v0.4.0-measured.html` | the same colors, with heights, roofs, and trees measured from the survey |
+| `v0.4.0-measured` | `london-southbank-v0.4.0-measured.html` | the same colors, with heights, roofs, and trees measured from the survey; the last with hard shadows and one kind of window |
 
 Each is marked `noindex`, and its back link goes to the live page.
 **The kept pages do not read the live data.** `v0.3.0-colored/` holds a copy
@@ -233,6 +233,84 @@ measures them.
   turn of a degree and a half and a slide, to within half a meter. The
   rasters are not kept; they are more than half a gigabyte.
 
+### Light and surface
+
+Done 2026-11-15, as step 2 of the table further down, after he said of the
+survey's heights: *"I don't see much difference in the visuals but I believe
+this is better with the dimension. Do the next option 2."* No data changed;
+it is all in `draw.js`, with a little in `city.js` and the colors in
+`walk.js`.
+
+- **The light has color.** The sky's light is cool and the sun's warm, so
+  shade is blue-gray and a lit wall is not. `sky` in `DAY` and `NIGHT` is
+  the only color to choose: the renderer makes the sun whatever adds up
+  with it to white on open ground, so a tint still means what it says.
+- **Shadows are soft, and softer far from what casts them.** For each
+  pixel the shader first finds how far off the caster is (nine reads of the
+  shadow map, the same nine for every pixel), then looks over a disc whose
+  radius is 6 cm for each meter of that gap, from 30 cm to 4 m (twelve
+  reads, the disc turned by a grain of each pixel's own).
+- **The sky map puts shade in corners.** Once, at load, the model is drawn
+  from straight above into a height map, and a second pass works out for
+  every square meter how much of the sky it sees, twelve directions each.
+  A narrow street, a courtyard, the foot of a wall, and a roof under a
+  taller neighbor are darker for it, with no shadow falling there. It is one
+  texture, 4096 by 2048 (2048 by 1024 on a small screen), and took about
+  40 ms to make on his Mac. `tone[2]` in `walk.js` is how deep the shade
+  goes; 0 turns it off.
+- **Windows are of six kinds:** plain, tall sashes, two lights to a bay,
+  glass between piers, strips along each floor (every wall over 40 m), and
+  a wall of glass. A building draws its kind from its seed. Half the taller
+  ones have a shop's wide glass at street level. Up close each pane differs
+  a little, one in three has a blind part way down, and there is a sill.
+  Far off, a wall takes the even tone of all its glass, which is why the
+  whole-board view is a shade grayer than it was.
+- **Glass and water mirror a sky that is not there.** `above` in `walk.js`
+  is its three colors: overhead, the horizon, and the town below it. The
+  page behind the model is still paper. [WARNING] Looked down on, an upright
+  pane would mirror only the street, so every pane is leaned back, as if
+  seen from the pavement. That is a cheat, and it is what makes a glass
+  tower read as glass from above.
+- **The river** has four trains of waves, kept as the lean they give the
+  surface. It mirrors more of the sky toward the horizon, throws the sun
+  back when the camera faces south-west, and by night carries the lamps of
+  the banks as streaks drawn out toward the camera.
+- **Flat roofs have parapets, and these are built, not painted.** `city.js`
+  lays a flat roof 50 to 110 cm below the top of its walls, so the walls
+  stand up round it, cast a shadow on it, and show their inner face. Nothing
+  under 4.5 m has one. The wall seen from behind is the same triangles; the
+  shader turns its light round.
+- **What stands on a flat roof is painted:** plant in boxes with a shadow
+  beside each, a skylight in one lot in ten, and a lift room now and then on
+  a roof over 18 m. They sit in lots 6.5 m square, laid square to the
+  building's longest wall, and only where the sky map says the middle of
+  the lot is well back from the roof's edge. [WARNING] They have no height:
+  seen from low down they are marks on the roof.
+- Pitched roofs are laid in courses, grass is patchy, and no two trees are
+  one green.
+
+What it cost, measured on his Mac at 2880 by 1800: a frame still fits the
+display's 120 a second in the whole-board view, at a stop, and flying, as it
+did before; the page is live 40 ms later. [WARNING] Not measured on a phone
+or an old laptop. The shader does about three times the texture reads it
+did. If it drags there, the first things to cut are the twelve reads in
+`sunlit()` and the size of the sky map.
+
+Traps. All but the first drew wrong before they drew right:
+
+- [WARNING] GLSL keeps words a script does not: `cast`, `half`, `sample`,
+  `filter`, `input`, `output`, and `common` cannot be names in a shader.
+- The sky map knows heights, not slopes. On a dome it takes the upper half
+  for something overhanging the lower, so only flat surfaces read it.
+- A wall must read the open air beside it at its own height. Read at the
+  ground, the side of a tall building standing over a low neighbor came out
+  black, because the ground there is indoors.
+- A road is painted at its bridge's height past the bridge's end, where the
+  map has no surface that high. Anything with no surface under it is left
+  unshaded.
+- The map stores heights up to 127.5 m. Every roof above that is one height
+  to it, which only matters where two towers touch.
+
 **Landmarks are named as the camera comes near** (2026-11-15: *"Label the
 landmarks nearby as one goes by or fly-by"*). `places` in `city.json` holds
 sixty-three, each a name, a place, and the height of the roof at that place.
@@ -284,7 +362,7 @@ what it costs:
 | step | what it adds | from | what it costs |
 |---|---|---|---|
 | 1. True shapes. [DONE] 2026-11-15, see above | measured heights for the buildings that were guessed, real roof forms, tree heights | Environment Agency LIDAR, 1 m surface and terrain models | took an evening; the data file grew by 90 KB, 43 KB of it after gzip |
-| 2. Light and surface | softer shadows, shade in corners, sky and reflections on glass and water, more kinds of window, clutter on roofs | nothing new; shader work | a few hours; no weight |
+| 2. Light and surface. [DONE] 2026-11-15, see above | softer shadows, shade in corners, sky and reflections on glass and water, more kinds of window, clutter on roofs | nothing new; shader work | took an evening; no weight |
 | 3. Photograph from above | real roofs and ground, as seen from the air | Environment Agency vertical aerial photography, 10 to 50 cm | most of a day; several megabytes of imagery; facades stay plain |
 | 4. A painted map | a fixed view redrawn by an image model, the Tiny London method run on our own renders | our model | GPU or API money; cannot turn or fly; its detail is invented |
 | 5. Our own photographs in 3D | true photo-realism at a stop, from video he shoots there | his camera | a trip, GPU training, tens of megabytes a scene, and a renderer that is a library or a great deal of code |
@@ -301,9 +379,8 @@ what it costs:
 - **The ceiling:** photo-real facades across a whole city exist only in
   Google's and other paid photogrammetry. Open data has no pictures of walls.
   Step 5 is the only owned route to real photo-realism, one place at a time.
-- **The order to take them in:** 1 is done; 2 is next, and he asked to be
-  reminded of it. 3 wants a newer photograph than the one found. 4 is an art
-  piece, not a truer model.
+- **The order to take them in:** 1 and 2 are done. 3 wants a newer
+  photograph than the one found. 4 is an art piece, not a truer model.
 
 **The credit line under the map stays.** OpenStreetMap's license asks for
 its half, and the Open Government Licence for the Environment Agency's.

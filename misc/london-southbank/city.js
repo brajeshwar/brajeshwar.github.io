@@ -11,7 +11,8 @@
  *
  *    0  x, y        decimeters from the south-west corner of the board
  *    4  z           centimeters, counted from 12 m below the ground
- *    6  u           decimeters along the wall it belongs to
+ *    6  u           decimeters along the wall it belongs to; on a flat roof,
+ *                   which way its building lies (see cap)
  *    8  normal      three signed bytes
  *   11  tone        0-15, plus 16 for glass and 32 for a wall with no windows
  *   12  length      of that wall, decimeters
@@ -133,12 +134,15 @@ Mesh.prototype.wall = function (ax, ay, atop, bx, by, btop) {
   this.indices += 6;
 };
 
-// A flat face over corners given as x, y pairs: a roof, or the ground.
-Mesh.prototype.cap = function (xy, z, triangles, down) {
+// A flat face over corners given as x, y pairs: a roof, or the ground. A
+// roof has no use for the distance along a wall, so that place carries the
+// way its building lies instead, in tenths of a degree; or BARE, for a roof
+// with nothing standing on it.
+Mesh.prototype.cap = function (xy, z, triangles, down, lies) {
   this.reserve(xy.length / 2, triangles.length);
   const first = this.corners;
   for (let i = 0; i < xy.length; i += 2)
-    this.corner(xy[i], xy[i + 1], z, 0, 0, down ? -1 : 1, 0, z);
+    this.corner(xy[i], xy[i + 1], z, 0, 0, down ? -1 : 1, lies || 0, z);
   for (let i = 0; i < triangles.length; i += 3) {
     this.index[this.indices++] = first + triangles[i];
     this.index[this.indices++] = first + triangles[i + (down ? 2 : 1)];
@@ -167,6 +171,24 @@ Mesh.prototype.facet = function (a, b, c) {
 
 function clamp(v, low, high) {
   return Math.min(high, Math.max(low, v));
+}
+
+const BARE = 1800;
+
+// Which way a building lies: the direction of its longest wall, in tenths
+// of a degree from east, less than a half turn.
+function lie(xy) {
+  let longest = 0;
+  let angle = 0;
+  for (let j = 0; j < xy.length; j += 2) {
+    const k = (j + 2) % xy.length;
+    const length = Math.hypot(xy[k] - xy[j], xy[k + 1] - xy[j + 1]);
+    if (length > longest) {
+      longest = length;
+      angle = Math.atan2(xy[k + 1] - xy[j + 1], xy[k] - xy[j]);
+    }
+  }
+  return Math.round((((angle * 180) / Math.PI + 360) % 180) * 10) % BARE;
 }
 
 // A stable scatter of 0-255 from a whole number.
@@ -251,7 +273,12 @@ function buildings(mesh, blocks) {
     mesh.material = MATERIAL.roof;
     mesh.tone = blocks.roof[i] & 15;
     mesh.color = blocks.roofColor ? unpack(blocks.roofColor[i]) : gray(blocks.roof[i] & 15);
-    mesh.cap(all, blocks.top[i], triangles, false);
+    // A flat roof lies a little below the top of its walls, which stand up
+    // round it as a parapet, half a meter to a meter high. Nothing as low
+    // as a shed or as thin as a canopy has one, or anything on its roof.
+    const rise = blocks.top[i] - blocks.base[i];
+    const parapet = rise > 450 ? 50 + (mesh.seed % 4) * 20 : 0;
+    mesh.cap(all, blocks.top[i] - parapet, triangles, false, parapet ? lie(rings[0]) : BARE);
     if (blocks.base[i] > 100) mesh.cap(all, blocks.base[i], triangles, true);
   });
 }

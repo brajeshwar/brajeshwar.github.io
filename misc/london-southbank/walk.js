@@ -156,9 +156,9 @@ function ride(distance) {
 // ---- the look ----------------------------------------------------------
 //
 // The paper and the ink are the page's own, read from its CSS. The model's
-// colors are here: a tint for each kind of ground. A building brings its own
-// color in the data; here is only how much of it shows, and a little warmth
-// or cool laid over all of them.
+// colors are here: a tint for each kind of ground, and the light they stand
+// in. A building brings its own color in the data; here is only how much of
+// it shows, and a little warmth or cool laid over all of them.
 
 const color = (hex) => [0, 2, 4].map((i) => parseInt(hex.slice(1 + i, 3 + i), 16) / 255);
 
@@ -179,6 +179,11 @@ const DAY = {
   bridge: '#dcd7cc',
   walls: '#fffaf2',
   lamp: '#000000',
+  // The sky's light, which is the color of shade: cool, so the sun the
+  // renderer sets against it comes out warm.
+  sky: '#888f9c',
+  // What glass and water mirror: overhead, at the horizon, the town below.
+  above: ['#6f9bd3', '#c6d8ea', '#8b8d8c'],
 };
 const NIGHT = {
   land: '#22252b',
@@ -190,6 +195,9 @@ const NIGHT = {
   bridge: '#33363d',
   walls: '#eaf0ff',
   lamp: '#ffd58a',
+  // By night the shade is nearly gray, and the moon only a little warmer.
+  sky: '#80838a',
+  above: ['#0a1020', '#2a3348', '#15181e'],
 };
 
 // The sixteen tints the shader looks up by material number.
@@ -214,14 +222,16 @@ function readLook() {
     ink: shade('--ink'),
     tints: tints(set),
     lamp: color(set.lamp),
-    // Sky and sun add up to one on open ground, so a color means what it says.
-    // The last two are how dark a black building is drawn and how light a
-    // white one: a narrow range, so that neither is a hole or a glare.
-    light: night ? [0.5, 0.72, 0.16, 0.46] : [0.56, 0.64, 0.4, 1],
+    sky: color(set.sky),
+    above: new Float32Array(set.above.flatMap(color)),
+    // How dark a black building is drawn and how light a white one, a
+    // narrow range so that neither is a hole or a glare; and how deep the
+    // shade goes where buildings hide the sky, 0 for none.
+    tone: night ? [0.16, 0.46, 0.6] : [0.4, 1, 0.65],
     // How much of its own color a building keeps; the rest goes to gray.
     paint: night ? 0.55 : 0.85,
     // By day a window is a darker pane; by night one in three is lit.
-    glass: night ? [0.4, 0.34, 0.62] : [0.32, 0, 0],
+    glass: night ? [0.4, 0.34, 0.62] : [0.4, 0, 0],
     walked: walked,
   };
 }

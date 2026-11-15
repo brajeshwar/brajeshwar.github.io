@@ -58,10 +58,12 @@ its own mapped color), and the two earlier looks are kept as `v0.1.0-grayscale` 
 good. All of it is in `misc.md`.
 **And then true shapes, the same evening** (*"Then do Option 1"*): building heights, 309 roofs and
 4,035 trees are now measured, from the Environment Agency's LIDAR survey. The map had guessed 36%
-of the heights; 38 buildings are still guessed. The colored look before it is kept as
-`v0.3.0-colored`, with its own copy of the data. [WARNING] He asked to be reminded of Option 2 next
-(light and surface: softer shadows, glass and water that reflect, more kinds of window), "when
-done and we are happy". He has not yet said he is happy.
+of the heights; 38 buildings are still guessed. He saw little difference and said so, and asked
+for **Option 2, light and surface**, which is done too: warm sun and cool shade, soft shadows,
+shade in corners from a sky map made at load, six kinds of window, glass and water that mirror,
+parapets, and plant on the roofs. No data changed for it. The look before each step is kept:
+`v0.3.0-colored` and `v0.4.0-measured`, each with its own copy of the data.
+[WARNING] He has not seen Option 2 yet. It was judged in screenshots, in Chrome, on his Mac.
 [WARNING] The script that made `city.json` is not in the repo, by the misc rule. `misc.md` says
 how the data was made; a new route means making it again.
 The article shows the model too: `static/2026/london-southbank-walk.webp`, north up, on no
