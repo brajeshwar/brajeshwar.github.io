@@ -38,6 +38,7 @@ layout(location = 2) in float aTone;
 layout(location = 3) in vec2 aWall;    // its length, its base
 layout(location = 4) in vec2 aKind;    // material, seed
 layout(location = 5) in float aTop;
+layout(location = 6) in vec3 aColor;   // a building's own color
 uniform mat4 uCamera;
 uniform mat4 uSun;
 uniform vec2 uBias;    // how far to step off the surface, and how much depth to forgive
@@ -47,7 +48,9 @@ out vec3 vShadow;
 out vec3 vWall;        // meters along, meters up, meters to the top here
 flat out vec4 vLook;   // material, tone, seed, wall length in meters
 flat out vec2 vFlags;  // glass, no windows
+flat out vec3 vColor;
 void main() {
+  vColor = aColor;
   vAt = vec3(aPlace.xy * 0.1, aPlace.z * 0.01 - 12.0);
   float base = aWall.y * 0.01 - 12.0;
   vNormal = aNormal;
@@ -71,6 +74,7 @@ in vec3 vShadow;
 in vec3 vWall;
 flat in vec4 vLook;
 flat in vec2 vFlags;
+flat in vec3 vColor;
 uniform sampler2DShadow uShadow;
 uniform float uTexel;
 uniform vec3 uSunDir;
@@ -78,6 +82,7 @@ uniform vec3 uEye;
 uniform vec3 uTint[16];    // a color for each material; 0 and 1 tint the buildings
 uniform vec3 uLamp;        // the color of a lit window
 uniform vec4 uLight;   // sky, sun, darkest wall, lightest wall
+uniform float uPaint;  // how much of its own color a building keeps
 uniform vec3 uGlass;   // how dark a window is by day, how many are lit, how bright
 uniform vec4 uFog;     // the paper's color, and how much of it
 uniform vec2 uFar;     // where the haze starts, and how deep it is
@@ -108,7 +113,13 @@ void main() {
   float light = uLight.x * sky + uLight.y * direct;
 
   vec3 tone = uTint[material];
-  if (material < 2) tone *= mix(uLight.z, uLight.w, vLook.y / 15.0);
+  if (material < 2) {
+    // A building is painted its own color, calmed: some of the color is
+    // given up for gray, and black and white are pulled in toward the
+    // middle, so the model reads as a model and no one roof shouts.
+    vec3 own = mix(vec3(dot(vColor, vec3(0.299, 0.587, 0.114))), vColor, uPaint);
+    tone *= mix(vec3(uLight.z), vec3(uLight.w), own);
+  }
   float glow = 0.0;
 
   // No two buildings are quite one tone.
@@ -379,6 +390,7 @@ export function renderer(canvas, model) {
     attribute(3, 2, gl.UNSIGNED_SHORT, false, 12);
     attribute(4, 2, gl.UNSIGNED_BYTE, false, 16);
     attribute(5, 1, gl.UNSIGNED_SHORT, false, 18);
+    attribute(6, 3, gl.UNSIGNED_BYTE, true, 20);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer());
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, model.index, gl.STATIC_DRAW);
 
@@ -573,6 +585,7 @@ export function renderer(canvas, model) {
     gl.uniform3fv(solid.at.uTint, look.tints);
     gl.uniform3fv(solid.at.uLamp, look.lamp);
     gl.uniform4fv(solid.at.uLight, look.light);
+    gl.uniform1f(solid.at.uPaint, look.paint);
     gl.uniform3fv(solid.at.uGlass, look.glass);
     // Haze belongs to the short lens; the long one sees the far side as clearly as the near.
     const haze = Math.max(0, Math.min(1, (view.lens - 12) / 24)) * 0.9;

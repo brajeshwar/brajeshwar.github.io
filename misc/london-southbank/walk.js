@@ -156,8 +156,9 @@ function ride(distance) {
 // ---- the look ----------------------------------------------------------
 //
 // The paper and the ink are the page's own, read from its CSS. The model's
-// colors are here: a tint for each kind of ground, and one for the buildings,
-// which keep the tone each was given and take only a little warmth or cool.
+// colors are here: a tint for each kind of ground. A building brings its own
+// color in the data; here is only how much of it shows, and a little warmth
+// or cool laid over all of them.
 
 const color = (hex) => [0, 2, 4].map((i) => parseInt(hex.slice(1 + i, 3 + i), 16) / 255);
 
@@ -167,7 +168,7 @@ function shade(name) {
 }
 
 // By material, in city.js's order. Walls and roofs are not here; they carry
-// a tone of their own and take the `walls` tint.
+// a color of their own and take the `walls` tint over it.
 const DAY = {
   land: '#e8e4da',
   water: '#a8c5d8',
@@ -214,7 +215,11 @@ function readLook() {
     tints: tints(set),
     lamp: color(set.lamp),
     // Sky and sun add up to one on open ground, so a color means what it says.
-    light: night ? [0.5, 0.72, 0.2, 0.46] : [0.56, 0.64, 0.6, 1],
+    // The last two are how dark a black building is drawn and how light a
+    // white one: a narrow range, so that neither is a hole or a glare.
+    light: night ? [0.5, 0.72, 0.16, 0.46] : [0.56, 0.64, 0.4, 1],
+    // How much of its own color a building keeps; the rest goes to gray.
+    paint: night ? 0.55 : 0.85,
     // By day a window is a darker pane; by night one in three is lit.
     glass: night ? [0.4, 0.34, 0.62] : [0.32, 0, 0],
     walked: walked,

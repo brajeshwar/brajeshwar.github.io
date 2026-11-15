@@ -240,6 +240,12 @@ test('the South Bank walk keeps to its folder, and its list matches its model', 
   const modelled = city.stops.map((s) => s[0]).sort();
   const listed = [...html.matchAll(/<li id="([^"]+)" data-stop="\d+"/g)].map((m) => m[1]).sort();
   expect(listed).toEqual(modelled);
+  // Every building has a color for its walls and one for its roof.
+  for (const layer of [city.blocks, city.roofs]) {
+    const count = (layer.parts || layer.base).length;
+    expect(layer.wallColor.length).toBe(count);
+    expect(layer.roofColor.length).toBe(count);
+  }
   // Every landmark's name is said once, and stands somewhere on the board.
   const names = city.places.map((p) => p[0]);
   expect(names.length).toBeGreaterThan(40);

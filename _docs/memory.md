@@ -52,6 +52,10 @@ turns, right-drag moves). [WARNING] His Mac has Reduce Motion on, and the flight
 design; `misc.md` says why. The walk became a loop of 22 stops (it
 was 15): across Tower Bridge and back along the north bank. He was offered Google's photo-real
 tiles and chose the self-contained model. Everything is in [`misc.md`](misc.md).
+**Since then, unpushed when written:** the model is in color (a tinted ground, then each building
+its own mapped color), and the two earlier looks are kept as `v0.1.0-grayscale` and
+`v0.2.0-tinted`, each a page beside `index.html` and a signed tag. Google's tiles are declined for
+good. All of it is in `misc.md`.
 [WARNING] The script that made `city.json` is not in the repo, by the misc rule. `misc.md` says
 how the data was made; a new route means making it again.
 The article shows the model too: `static/2026/london-southbank-walk.webp`, north up, on no

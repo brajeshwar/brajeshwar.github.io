@@ -94,7 +94,7 @@ and shipped. Do not offer it again.
 | `walk.js` | the camera, the flights between stops, the controls |
 | `draw.js` | WebGL2 with no library: the shaders, the sun and its shadow map |
 | `city.js` | reads `city.json` into one mesh |
-| `city.json` | the model as whole numbers, 2.2 MB, and 655 KB as the live site serves it gzipped: the ground, the buildings, the walk, the stops, and the landmarks' names |
+| `city.json` | the model as whole numbers, 2.3 MB: the ground, the buildings and their colors, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
 
 **Each look is kept before the next is tried** (his word, 2026-11-15), as a
@@ -105,6 +105,52 @@ same name, and a signed git tag on the commit that added it:
 |---|---|---|
 | `v0.1.0-grayscale` | `london-southbank-v0.1.0-grayscale.html` | the model in grays |
 | `v0.2.0-tinted` | `london-southbank-v0.2.0-tinted.html` | blue river, green parks, warm ground; buildings gray |
+| not kept yet | `index.html`, the live page | the same ground, and each building in its own color |
+
+Each is marked `noindex`, and its back link goes to the live page.
+[WARNING] The kept pages read the live `city.json`. Whatever is added to that
+file, the layers a kept `city.js` reads have to stay as they are, or a kept
+page breaks without anyone looking at it. Add to the data; do not reshape it.
+
+**Without JavaScript, or without WebGL2,** the page is the picture, the pins on
+it (placed in percent, in the HTML), and the list they link to. The script adds
+`is-live` to `.stage` once the model has drawn, or `is-still` if it cannot.
+
+**The model is in color; the page round it is not** (2026-11-15: first *"the
+next step of the Tinted Palette"*, then *"build the next better colored
+one"*). This is a stated exception to the grayscale rule above, for the model
+only.
+
+- **The ground is tinted.** The river is blue, parks and trees green, the
+  ground and roads warm. `DAY` and `NIGHT` in `walk.js` hold a color for each
+  kind of ground; which set is used goes by whether the page's `--paper` is
+  light or dark. By night one window in three is lit, lamp yellow.
+- **Each building has its own color**, in `city.json` (`wallColor` and
+  `roofColor` on `blocks` and `roofs`, five bits a channel). The shader calms
+  it: `paint` in `walk.js` is how much of its color a building keeps, and the
+  last two numbers of `light` are how dark a black one and how light a white
+  one is drawn. Those three numbers are the whole of the taste; the data does
+  not need making again to change them.
+- **Where the colors come from:** the map's `building:colour` and
+  `roof:colour` where it has them, else the color of its
+  `building:material` or `roof:material`, else the building it is a part of.
+  That covers 44% of walls and 42% of roofs. [WARNING] The rest are guesses: a
+  wall borrows from one of its three nearest colored neighbors within 150 m,
+  softened almost halfway to a neutral stone; a roof takes the gray of a
+  London roof with a little of its own walls in it.
+- **The river bridges' sides are painted** by name, by hand: Westminster
+  green, Blackfriars red, Tower Bridge blue, and so on (`wallColor` on
+  `decks`).
+
+**Each look is kept before the next is tried** (his word, 2026-11-15), as a
+page beside `index.html` with its own scripts and pictures in a folder of the
+same name, and a signed git tag on the commit that added it:
+
+| version | page | what it is |
+|---|---|---|
+| `v0.1.0-grayscale` | `london-southbank-v0.1.0-grayscale.html` | the model in grays |
+| `v0.2.0-tinted` | `london-southbank-v0.2.0-tinted.html` | blue river, green parks, warm ground; buildings gray |
+| not kept yet | `index.html`, the live page | the same ground, and each building in its own color |
 
 Each is marked `noindex`, and its back link goes to the live page.
 [WARNING] The kept pages read the live `city.json`. Whatever is added to that

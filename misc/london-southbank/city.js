@@ -6,7 +6,7 @@
  * once, from OpenStreetMap, and the script that made it is not kept (see
  * _docs/misc.md); what it wrote is the source now.
  *
- * This file turns those numbers into one mesh. A corner is twenty bytes:
+ * This file turns those numbers into one mesh. A corner is twenty-four bytes:
  *
  *    0  x, y        decimeters from the south-west corner of the board
  *    4  z           centimeters, counted from 12 m below the ground
@@ -18,12 +18,13 @@
  *   16  material    one of MATERIAL below
  *   17  seed        so no two buildings light the same windows
  *   18  top         where the wall ends at this corner, as z
+ *   20  color       three bytes, the building's own; unused by the ground
  *
  * The wall fields let the fragment shader draw windows without a texture:
  * it knows how far along and how far up it is, and how big the wall is.
  */
 
-export const STRIDE = 20;
+export const STRIDE = 24;
 export const DEPTH = 1200; // z is stored from 12 m down, the foot of the board
 
 export const MATERIAL = {
@@ -37,6 +38,21 @@ export const MATERIAL = {
   bank: 12,
   bridge: 13,
 };
+
+const WHITE = [255, 255, 255];
+
+// A color as the data holds it, five bits a channel in one whole number.
+function unpack(packed) {
+  return [(packed >> 10) & 31, (packed >> 5) & 31, packed & 31].map((v) =>
+    Math.round((v * 255) / 31)
+  );
+}
+
+// For data from before the buildings had colors: the gray of a tone, 0-15.
+function gray(tone) {
+  const v = Math.round((tone * 255) / 15);
+  return [v, v, v];
+}
 
 // Road widths in decimeters, by class.
 const WIDTH = [130, 80, 60, 40, 24, 36];
@@ -54,6 +70,7 @@ function Mesh() {
   this.seed = 0;
   this.length = 0;
   this.base = 0;
+  this.color = WHITE;
 }
 
 Mesh.prototype.view = function () {
@@ -78,7 +95,7 @@ Mesh.prototype.reserve = function (corners, indices) {
 };
 
 Mesh.prototype.corner = function (x, y, z, nx, ny, nz, u, top) {
-  const w = this.corners * 10;
+  const w = (this.corners * STRIDE) / 2;
   const b = this.corners * STRIDE;
   this.u16[w] = x;
   this.u16[w + 1] = y;
@@ -93,6 +110,9 @@ Mesh.prototype.corner = function (x, y, z, nx, ny, nz, u, top) {
   this.u8[b + 16] = this.material;
   this.u8[b + 17] = this.seed;
   this.u16[w + 9] = top + DEPTH;
+  this.u8[b + 20] = this.color[0];
+  this.u8[b + 21] = this.color[1];
+  this.u8[b + 22] = this.color[2];
   return this.corners++;
 };
 
@@ -192,10 +212,11 @@ function prism(mesh, rings, triangles, base, top, sides, lid) {
   if (sides != null && base > 100) mesh.cap(all, base, triangles, true);
 }
 
-function layer(mesh, data, base, top, sides, lid, tone) {
+function layer(mesh, data, base, top, sides, lid, tone, color) {
   mesh.tone = tone;
   polygons(data, function (rings, triangles, i) {
     mesh.seed = scatter(i);
+    mesh.color = data.wallColor ? unpack(data.wallColor[i]) : color || WHITE;
     prism(
       mesh,
       rings,
@@ -215,6 +236,7 @@ function buildings(mesh, blocks) {
     mesh.base = blocks.base[i];
     mesh.material = MATERIAL.wall;
     mesh.tone = blocks.wall[i] + glass;
+    mesh.color = blocks.wallColor ? unpack(blocks.wallColor[i]) : gray(blocks.wall[i]);
     for (const xy of rings)
       for (let j = 0; j < xy.length; j += 2) {
         const k = (j + 2) % xy.length;
@@ -223,6 +245,7 @@ function buildings(mesh, blocks) {
     const all = rings.length === 1 ? rings[0] : [].concat(...rings);
     mesh.material = MATERIAL.roof;
     mesh.tone = blocks.roof[i] & 15;
+    mesh.color = blocks.roofColor ? unpack(blocks.roofColor[i]) : gray(blocks.roof[i] & 15);
     mesh.cap(all, blocks.top[i], triangles, false);
     if (blocks.base[i] > 100) mesh.cap(all, blocks.base[i], triangles, true);
   });
@@ -242,6 +265,7 @@ function roofs(mesh, data) {
     mesh.base = data.base[i];
     mesh.material = MATERIAL.wall;
     mesh.tone = data.wall[i] + (data.roof[i] & 16);
+    mesh.color = data.wallColor ? unpack(data.wallColor[i]) : gray(data.wall[i]);
     for (let r = 0; r < data.runs[i]; r++) {
       const length = data.len[run++];
       const points = [];
@@ -264,6 +288,7 @@ function roofs(mesh, data) {
     }
     mesh.material = MATERIAL.roof;
     mesh.tone = data.roof[i] & 15;
+    mesh.color = data.roofColor ? unpack(data.roofColor[i]) : gray(data.roof[i] & 15);
     for (let j = 0; j < data.nt[i]; j++, tri += 3)
       mesh.facet(points[data.tris[tri]], points[data.tris[tri + 1]], points[data.tris[tri + 2]]);
   }
@@ -375,8 +400,9 @@ export function build(city) {
   layer(mesh, city.river, -DEPTH, water, M.bank, M.water, 0);
   layer(mesh, city.piers, water, water + 130, M.bridge, M.bridge, 0);
   layer(mesh, city.legs, water, 0, M.bridge, M.bridge, 0);
-  layer(mesh, city.decks, 0, 0, M.bridge, M.bridge, 0);
-  layer(mesh, city.viaducts, 0, 650, M.wall, M.roof, 7 + 32);
+  // A bridge's sides are painted, each its own color; its deck is road.
+  layer(mesh, city.decks, 0, 0, M.wall, M.bridge, 32, [207, 201, 189]);
+  layer(mesh, city.viaducts, 0, 650, M.wall, M.roof, 7 + 32, [146, 128, 114]);
   buildings(mesh, city.blocks);
   roofs(mesh, city.roofs);
   trees(mesh, city.trees);
