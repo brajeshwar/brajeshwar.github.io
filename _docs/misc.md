@@ -81,6 +81,13 @@ renders of those tiles; it cannot turn. Offered both, he chose "Self-contained
 model, open data". If the photo-real view is ever wanted as a switch on top,
 the key comes from his Google account, with him.
 
+It came up once more the same day and was declined for good, in his words:
+*"I thought the Google API was for build, didn't realize this will load Google
+while people visiting my website. If that is the case, I do not want to depend
+on Google for something personal and experimental and lab."* There is no
+build-time route either: Google's terms do not allow its 3D tiles to be saved
+and shipped. Do not offer it again.
+
 | file | what it is |
 |---|---|
 | `index.html` | the page, its CSS, the list of stops, and a pin for each |
