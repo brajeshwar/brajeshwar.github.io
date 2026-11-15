@@ -471,9 +471,10 @@ function show(n, how) {
 // Fly the whole walk, or stop where it has got to.
 function play(on) {
   playing = on;
-  const button = document.querySelector('[data-play]');
+  const button = stage.querySelector('[data-play]');
   button.setAttribute('aria-pressed', String(on));
-  button.textContent = on ? 'Pause' : 'Fly the walk';
+  // Its picture changes with aria-pressed, in the page's CSS; its name, here.
+  button.setAttribute('aria-label', on ? 'Pause' : 'Fly the walk');
   if (on) tour();
   else land();
 }
@@ -834,7 +835,7 @@ const further = () => nudge({ span: clamp(view.span * 2, 90, 7000) });
 document.addEventListener('click', function (e) {
   if (!view) return;
   const button = e.target.closest('button');
-  if (button && stage.parentNode.contains(button)) {
+  if (button && stage.contains(button)) {
     if ('play' in button.dataset) return play(!playing);
     takeOver();
     if (button.dataset.step) return step(Number(button.dataset.step));
@@ -886,7 +887,7 @@ function start(city) {
   nameLandmarks();
   readLook();
   view = overview();
-  for (const el of stage.parentNode.querySelectorAll('.steps, .tools')) el.hidden = false;
+  stage.querySelector('.tools').hidden = false;
 
   // A link to a stop opens on that stop. The browser has already scrolled to
   // its place in the list, which on a phone is below the model; come back up.

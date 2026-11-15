@@ -44,6 +44,14 @@ the walk" is one flight round the whole loop, about two minutes, that eases off
 past each stop as its name comes up; Pause leaves the camera where it has got
 to.
 
+**Every control is in one toolbar, top right, inside the model:** compass,
+home, zoom in, zoom out, then previous stop, fly the walk, and next stop. The
+last three were words on a row under the model until 2026-11-15, where a short
+window pushed them out of sight. They are pictures now, and every button names
+itself in a tooltip on hover or focus, with its key if it has one. The tooltip
+is the button's own `aria-label`, drawn by CSS, so what is shown and what a
+screen reader says are one string.
+
 [WARNING] The flights play even when the system asks for reduced motion. Every
 flight starts at a button, a key, or a pin, so it is the thing that was asked
 for. The first version obeyed the setting and jumped from stop to stop, which

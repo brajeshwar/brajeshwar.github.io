@@ -135,7 +135,7 @@ test('the walk settles as the model or the picture, with no errors', async ({ pa
   const stage = page.locator('.stage');
   await expect(stage).toHaveClass(/is-live|is-still/, { timeout: 20000 });
   if (await stage.evaluate((el) => el.classList.contains('is-live'))) {
-    await page.getByRole('button', { name: 'Next' }).click();
+    await page.getByRole('button', { name: 'Next stop' }).click();
     await expect(page.locator('#waterloo')).toHaveClass(/is-active/);
     await expect(page.locator('.caption')).toContainText('Waterloo Station');
     // Flying in, the landmarks round the stop are named.
