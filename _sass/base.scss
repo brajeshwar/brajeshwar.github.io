@@ -312,80 +312,23 @@ h1 {
   text-wrap: balance;
 }
 
-/* ---- The spine: a title set vertically down the left gutter ------
-   The opposite of `.page-title` on every axis — thin becomes heavy, small
-   becomes huge, foreground becomes ground.
-
-   OPT IN WITH `title_style: vertical` in a page's front matter; the layouts
-   then emit BOTH classes on the one h1. Started on /archives/ 2026-08-08 and
-   extended the same day to /legal/, /ideas/, /film/, /books/, /album/ and
-   /own/ — "Follow the same Archive style title". These are all INDEXES: a
-   shelf, a grid, a list. The word marks the column rather than heading a piece
-   of writing, which is why it can afford to be huge and nearly invisible.
-
-   [WARNING] BOTH CLASSES, AND THAT IS THE WHOLE FALLBACK MECHANISM (2026-08-08:
-   "Bring it back to the normal default title at the top for smaller screens
-   that does not fit in the new spine style"). `.page-title` above is the
-   default and applies at every width; everything in the media query below
-   only exists once there is a gutter to put it in. So a narrow screen gets an
-   ordinary uppercase title at the top with no extra rule, and the spine is
-   purely additive rather than a replacement that has to be undone.
-
-   It was written the other way first — `display: none` below the breakpoint —
-   which is why /books/, /film/, /album/ and the rest rendered with NO title at
-   all on a laptop. That is the bug this replaces.
-
-   [WARNING] THE BREAKPOINT IS THE BAND PLUS THE SPINE, both sides. "I believe this
-   will then apply to anything below (1024 + the spine width)px screens" —
-   right, and the arithmetic is 1024 + 2 x (74px of word + 5px of gap) = 1182.
-   1250 is used rather than 1182 because it clears that minimum AND is the
-   number /archives/'s year strip already turns on, so that page changes shape
-   once rather than twice. Below it the word would push past the left edge and
-   give the whole page a horizontal scrollbar. */
-/* [WARNING] SPINE OR NOTHING, for the one page that cannot take the fallback.
+/* ---- A title for screen readers only ------------------------------
    /archives/ opens with a sticky year strip pinned to the header rule, and a
-   title above or below it fights for the same 40px (2026-08-08: "the yearly
-   nav sticky of the /archives/ will complain. So, for that page, do not show
-   it at all"). So its h1 carries `.spine-only` INSTEAD of `.page-title` and
-   simply is not painted until there is a gutter for it. Its own class rather
-   than a page hook, because the next index with something pinned to the top
-   will want the same thing. */
+   visible title would fight it for the same 40px (2026-08-08). Its h1 is
+   kept for the outline and for screen readers, and painted nowhere.
+
+   The class name is a fossil: this h1 used to appear as a huge vertical
+   word down the left gutter, the "spine", on wide screens. The spine went
+   on 2026-11-15 ("I'm just overdoing it"), from every page that had it. */
 .spine-only {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
-@media (min-width: 1250px) {
-  .spine-only {
-    display: block;
-  }
-
-  .vertical-title {
-    position: fixed;
-    top: 50%;
-    left: calc(50% - var(--body-width-max) / 2);
-    z-index: -1;
-
-    margin: 0;
-    transform: translate(calc(-100% - var(--space-3xs)), -50%) rotate(180deg);
-    transform-origin: center;
-    writing-mode: vertical-rl;
-
-    /* Pinned sans. Brajeshwar, 2026-08-08: "Remember, this is a UI element
-     and should always be Sans-Serif." The body face is sans today too, but
-     the spine is chrome, and it says so here rather than by coincidence. */
-
-    font-size: clamp(2.31rem, 5.4vw, 4.62rem);
-    font-weight: 800;
-    font-family: var(--font-family-sans-serif);
-    letter-spacing: 0.02em;
-    line-height: 1;
-    text-transform: uppercase;
-    color: color-mix(in oklch, var(--text-color) 9%, var(--bg-color-lower));
-
-    pointer-events: none;
-    user-select: none;
-  }
-}
 h2 {
   font-size: var(--step-2);
 }

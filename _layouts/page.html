@@ -106,10 +106,9 @@ layout: default
      worth knowing: the fix that keeps the markup honest is `## YYYY` in
      now/*.md, and he has said he prefers the single hash for editing.
 
-  3. WHICH treatment. `title_style: vertical` ADDS `.vertical-title` beside
-     `.page-title` rather than replacing it. The spine rules live entirely
-     inside a min-width query, so a narrow screen falls back to the ordinary
-     uppercase title at the top with nothing to undo. See base.css.
+  3. ONE treatment. `title_style: vertical` once added a huge vertical title
+     down the left gutter; that went on 2026-11-15. The key still sits in a
+     few pages' front matter, where it now only asks for a title, as above.
 {%- endcomment -%}
 {%- assign wants_title = false -%}
 {%- unless content contains '<h1' -%}{%- assign wants_title = true -%}{%- endunless -%}
@@ -132,7 +131,7 @@ layout: default
 {%- endcomment -%}
 {%- if wants_title -%}
 {%- capture page_title_el -%}
-<h1 class="page-title{% if page.title_style == 'vertical' %} vertical-title{% endif %}">{{ page.title }}</h1>
+<h1 class="page-title">{{ page.title }}</h1>
 {%- endcapture -%}
 {%- if page.page_actions -%}
 <div class="page-head">

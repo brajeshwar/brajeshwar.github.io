@@ -258,12 +258,12 @@ this pass; that is a sweep for him to ask for, not a tidy-up to do unasked.
   `{% unless content contains '<h1' %}` so the handful of pages that write their own
   (`/hire/`, `/random/`, `/styleguide/`) do not get two. `force_title: true` overrides the
   guard; `/archives/` writes its own because it is the one page on `layout: default`.
-- **`title_style: vertical`** adds `.vertical-title` beside `.page-title`. Every spine rule
-  lives inside `@media (min-width: 1250px)`, so a narrow screen falls back to the ordinary
-  title with nothing to undo. **Do not re-write this as `display: none` below the
-  breakpoint** — that shipped once and left six pages with no title at all on a laptop.
-- `.spine-only` is for a page that must have the spine or nothing (`/archives/`, whose
-  sticky year strip owns the top of the page).
+- **No vertical titles.** The spine (a huge uppercase word down the left gutter on wide
+  screens) was removed everywhere on 2026-11-15: *"I'm just overdoing it."* Every page title is
+  the ordinary `.page-title` at the top. `title_style: vertical` is still in a few pages' front
+  matter, left alone under guardrail 1; it now only forces a title, like `force_title`.
+- `.spine-only` is the `/archives/` h1, kept for screen readers and painted nowhere, because
+  that page's sticky year strip owns the top. The name is a fossil of the spine.
 - **Posts opt out of the uppercase only** (`.post h1.page-title { text-transform: none }`).
   A page title is a label; an article title is a sentence and its own capitalisation carries
   meaning.
