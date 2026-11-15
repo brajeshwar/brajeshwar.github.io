@@ -80,7 +80,10 @@ fi
 SANDBOX=""
 [ "$(uname -s)" = "Linux" ] && SANDBOX="--no-sandbox"
 
-python3 -m http.server "$PORT" --bind 127.0.0.1 --directory "$SITE" >/dev/null 2>&1 &
+# Node, not python3 -m http.server (2026-11-15): Python queues five
+# connections, and a page with a dozen images reset the rest, so logos and
+# even print.css went missing from the PDF at random.
+node _test/serve.mjs "$SITE" "$PORT" >/dev/null 2>&1 &
 SERVER=$!
 disown "$SERVER"   # no "Terminated" job notice when the trap kills it
 trap 'kill "$SERVER" 2>/dev/null || true' EXIT

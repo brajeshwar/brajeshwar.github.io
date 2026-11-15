@@ -138,7 +138,7 @@
 }
 
 .page-own .own__rail {
-  --strip-item: 9.5rem;
+  --strip-item: var(--own-item);
   justify-content: flex-start;
   gap: var(--space-xs);
 }
@@ -162,7 +162,11 @@
    phone that has no photograph yet. */
 .page-own,
 .page-devices {
-  --own-tile: color-mix(in oklch, var(--text-color) 6%, var(--bg-color-lower));
+  /* An item's slot and the picture centered in it. The brand row is
+     indented by the difference, so it starts at the first picture's edge. */
+  --own-item: 9.5rem;
+  --own-pic: 5.5rem;
+  --own-tile: color-mix(in oklch, var(--text-color) 4%, var(--bg-color-lower));
   --own-body: color-mix(in oklch, var(--text-color) 13%, var(--bg-color-lower));
   --own-detail: color-mix(in oklch, var(--text-color) 30%, var(--bg-color-lower));
 }
@@ -176,7 +180,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 5.5rem;
+  width: var(--own-pic);
   aspect-ratio: 1;
   margin: 0 auto var(--space-3xs);
 
@@ -228,7 +232,7 @@
   gap: var(--space-2xs) var(--space-xs);
 
   margin: var(--space-xs) 0 0;
-  padding: 0;
+  padding: 0 0 0 calc((var(--own-item) - var(--own-pic)) / 2);
   list-style: none;
 
   font-size: var(--step--2);
@@ -263,8 +267,32 @@
   display: block;
   height: 1.1rem;
   width: auto;
+  max-width: 5.5rem; /* the long wordmarks, Birkenstock and Samsonite */
+  object-fit: contain;
   filter: grayscale(1);
   transition: filter 120ms ease-out;
+}
+
+/* On a dark page a black mark (Apple, Peak Design, On) would vanish, so
+   every logo is inverted there. Pointed at, the hue is turned back half a
+   circle, which keeps a brand's color close to its own while the
+   lightness stays flipped. */
+:root[data-theme='dark'] .page-own .own__logo {
+  filter: grayscale(1) invert(1);
+}
+
+:root[data-theme='dark'] .page-own .own__brands a:is(:hover, :focus-visible) .own__logo {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .page-own .own__logo {
+    filter: grayscale(1) invert(1);
+  }
+
+  :root:not([data-theme='light']) .page-own .own__brands a:is(:hover, :focus-visible) .own__logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
 }
 
 .page-own .own__brands a:hover,
@@ -353,9 +381,9 @@
   .page-own {
     --step-2: 16pt;
     --step-1: 12pt;
-    --step-0: 9.5pt;
-    --step--1: 8pt;
-    --step--2: 7pt;
+    --step-0: 9pt;
+    --step--1: 7.5pt;
+    --step--2: 6.5pt;
   }
 
   .page-own .own__lede {
@@ -366,8 +394,12 @@
     overflow: visible;
   }
 
+  .page-own {
+    --own-item: 6.5rem;
+    --own-pic: 1.6rem;
+  }
+
   .page-own .own__rail {
-    --strip-item: 7rem;
     flex-wrap: wrap;
     gap: 0.4rem 0.6rem;
   }
@@ -390,7 +422,6 @@
   }
 
   .page-own .own__picture {
-    width: 2rem;
     margin-bottom: 0;
   }
 
@@ -400,6 +431,7 @@
 
   .page-own .own__logo {
     height: 0.8rem;
+    max-width: 3.5rem !important; /* print.css forces 100% on every img */
   }
 
   .page-own .own__brands a {
