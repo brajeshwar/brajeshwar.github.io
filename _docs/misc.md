@@ -240,6 +240,33 @@ board's sides do not lean in; and the view was zoomed until the board filled
 95% of a 1200 by 500 frame. The page's own opening view is still turned
 fourteen degrees. Remake the picture with the other two.
 
+### Where realism can go from here, without Google
+
+Asked 2026-11-15: *"is this the best possible without Google? What would be
+that next step to realism that we can generate and have it static and for us
+to own?"* It is not the best possible. In order of what each step buys for
+what it costs:
+
+| step | what it adds | from | what it costs |
+|---|---|---|---|
+| 1. True shapes | measured heights for the quarter of buildings now guessed, real roof forms, tree heights | Environment Agency LIDAR, 1 m surface and terrain models | a few hours; the data file grows a little |
+| 2. Light and surface | softer shadows, shade in corners, sky and reflections on glass and water, more kinds of window, clutter on roofs | nothing new; shader work | a few hours; no weight |
+| 3. Photograph from above | real roofs and ground, as seen from the air | Environment Agency vertical aerial photography, 10 to 50 cm | most of a day; several megabytes of imagery; facades stay plain |
+| 4. A painted map | a fixed view redrawn by an image model, the Tiny London method run on our own renders | our model | GPU or API money; cannot turn or fly; its detail is invented |
+| 5. Our own photographs in 3D | true photo-realism at a stop, from video he shoots there | his camera | a trip, GPU training, tens of megabytes a scene, and a renderer that is a library or a great deal of code |
+
+- **Checked that day:** the LIDAR composite is published with no access
+  constraints as 5 km GeoTIFF tiles and covers most of England; the aerial
+  photography is under the Open Government Licence but was flown project by
+  project, so it is patchy. No open model of London with roof shapes was found.
+- [WARNING] **Not checked:** whether either dataset covers every tile of this
+  board. Look at the survey index before promising step 1 or 3.
+- **The ceiling:** photo-real facades across a whole city exist only in
+  Google's and other paid photogrammetry. Open data has no pictures of walls.
+  Step 5 is the only owned route to real photo-realism, one place at a time.
+- **The order to take them in:** 1, then 2. Check 3's coverage before
+  deciding on it. 4 is an art piece, not a truer model.
+
 **The credit line under the map stays.** OpenStreetMap's license asks for it.
 
 **Tested** in `_test/`: the page settles as the model or the picture with no
