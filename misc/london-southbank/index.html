@@ -97,7 +97,7 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
           <source srcset="poster-dark.webp" media="(prefers-color-scheme: dark)">
           <img src="poster.webp" width="1600" height="800" alt="A model of central London along the Thames, seen from above the south: the walk runs along the South Bank from Waterloo Station to Tower Bridge and back along the north bank, with twenty-two numbered stops">
         </picture>
-        <canvas tabindex="0" aria-label="The model. Drag to move it, right-drag or Shift-drag to turn it, scroll to zoom."></canvas>
+        <canvas tabindex="0" aria-label="The model. Drag to turn it, right-drag or Shift-drag to move it, scroll to zoom."></canvas>
         <a class="pin" href="#waterloo" data-stop="1" style="--x:28.7%;--y:51.2%" aria-label="1. Waterloo Station">1</a>
         <a class="pin" href="#southbank-centre" data-stop="2" style="--x:26.1%;--y:40.2%" aria-label="2. Southbank Centre">2</a>
         <a class="pin" href="#bfi" data-stop="3" style="--x:29.2%;--y:38.0%" aria-label="3. BFI Southbank">3</a>
@@ -122,8 +122,8 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
         <a class="pin" href="#london-eye" data-stop="22" style="--x:21.4%;--y:49.3%" aria-label="22. London Eye">22</a>
         <p class="caption" aria-live="polite" hidden><b></b><strong></strong><span></span></p>
         <div class="tools" hidden>
-          <button type="button" data-zoom="0.5" aria-label="Closer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
-          <button type="button" data-zoom="2" aria-label="Further"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10"/></svg></button>
+          <button type="button" data-closer aria-label="Closer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
+          <button type="button" data-further aria-label="Further"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10"/></svg></button>
           <button type="button" data-turn="-45" aria-label="Turn left"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8a4.5 4.5 0 1 0 1.6-3.4M3 2.5v2.6h2.6"/></svg></button>
           <button type="button" data-turn="45" aria-label="Turn right"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M12.5 8a4.5 4.5 0 1 1-1.6-3.4M13 2.5v2.6h-2.6"/></svg></button>
           <button type="button" data-north aria-label="Face north"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l2.5 6.5h-5z" fill="currentColor"/><path d="M5.5 8L8 14.5 10.5 8"/></svg></button>
@@ -135,7 +135,7 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
         <button type="button" data-step="1">Next</button>
         <button type="button" data-play aria-pressed="false">Fly the walk</button>
       </div>
-      <p class="note"><span class="hint hint--mouse">Drag to move, right-drag or Shift-drag to turn and tip, scroll to zoom. The arrow keys step through the walk. </span><span class="hint hint--touch">Drag to move, twist two fingers to turn, slide two fingers to tip, pinch to zoom. </span>Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+      <p class="note"><span class="hint hint--mouse">Drag to turn and tip, right-drag or Shift-drag to move, scroll to zoom. The arrow keys step through the walk. </span><span class="hint hint--touch">Drag to turn and tip, two fingers to move and zoom. </span>Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
     </div>
     <div class="walk__list">
     <ol>

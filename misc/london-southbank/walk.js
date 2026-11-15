@@ -2,10 +2,9 @@
  *
  * Without this script the page is whole: a picture of the model, numbered
  * pins on it, and the list of stops they link to. This puts the model itself
- * where the picture was. Drag to move it; right-drag, Shift-drag, or twist
- * two fingers to turn it; slide two fingers up or down to tip it; scroll or
- * pinch to come closer. Choose a stop, or Next, and the camera flies the walk to it, low
- * along the path the way you would go.
+ * where the picture was. Drag to turn and tip it; right-drag or Shift-drag
+ * to move it; scroll or pinch to come closer. Choose a stop, or Next, and the
+ * camera flies the walk to it, low along the path the way you would go.
  *
  * The page is drawn only when something has changed, never on a timer of its
  * own, so a model left alone costs nothing.
@@ -314,6 +313,7 @@ function takeOver() {
   window.clearTimeout(pause);
   if (playing) play(false);
   land();
+  coast = null;
 }
 
 // ---- drawing -----------------------------------------------------------
@@ -335,6 +335,7 @@ function paint(now) {
       arrived();
     }
   }
+  if (coast) carryOn(now);
   view.x = clamp(view.x, 0, model.size[0]);
   view.y = clamp(view.y, 0, model.size[1]);
   look.walked = walked;
@@ -356,9 +357,38 @@ function paint(now) {
 }
 
 // ---- hands -------------------------------------------------------------
+//
+// The same hands as the Greenage map. A drag turns and tips the model; the
+// right button, or a drag with Shift, Command, Control or Option held, moves
+// it across the ground; the wheel zooms to the pointer. On a touchscreen one
+// finger turns and two move and zoom. Let go mid-move and the model carries
+// on a little and eases to rest.
 
 const fingers = new Map();
-let pair = null;
+let drift = null; // how fast the hand was moving the model when it let go
+let coast = null; // the model still moving after it
+
+function spot(e) {
+  const box = canvas.getBoundingClientRect();
+  return { x: e.clientX - box.left, y: e.clientY - box.top, at: e.timeStamp };
+}
+
+// A full turn for a drag as long as the picture is tall.
+function turn(dx, dy) {
+  const degrees = 360 / canvas.clientHeight;
+  view.heading += dx * degrees;
+  view.pitch = clamp(view.pitch + dy * degrees, 20, 82);
+}
+
+// Move the model so the ground that was under one point is under another.
+function slide(from, to) {
+  draw.place(view);
+  const a = draw.ground(from.x, from.y, view);
+  const b = draw.ground(to.x, to.y, view);
+  if (!a || !b) return;
+  view.x += a[0] - b[0];
+  view.y += a[1] - b[1];
+}
 
 function zoom(factor, x, y) {
   const before = draw.ground(x, y, view);
@@ -371,90 +401,90 @@ function zoom(factor, x, y) {
   }
 }
 
-function turn(degrees, lift) {
-  view.heading += degrees;
-  view.pitch = clamp(view.pitch + lift, 20, 82);
-}
-
-function spot(e) {
-  const box = canvas.getBoundingClientRect();
-  return { x: e.clientX - box.left, y: e.clientY - box.top };
+// What a moment of dragging did to the view, as a rate: the model keeps
+// that up for a little while once the hand is gone. One mouse event is a
+// jumpy measure of speed, so each is averaged with the one before, and a
+// wild flick is held to a third of a turn and half a screen of travel.
+function rate(before, ms, last) {
+  const turned = ((view.heading - before.heading + 540) % 360) - 180;
+  const now = {
+    heading: turned / ms,
+    pitch: (view.pitch - before.pitch) / ms,
+    x: (view.x - before.x) / ms,
+    y: (view.y - before.y) / ms,
+    at: performance.now(),
+  };
+  const most = { heading: 0.6, pitch: 0.2, x: view.span / 400, y: view.span / 400 };
+  for (const key of ['heading', 'pitch', 'x', 'y']) {
+    if (last) now[key] = mix(last[key], now[key], 0.6);
+    now[key] = clamp(now[key], -most[key], most[key]);
+  }
+  return now;
 }
 
 canvas.addEventListener('pointerdown', function (e) {
   takeOver();
   canvas.setPointerCapture(e.pointerId);
   const p = spot(e);
-  p.turning = e.button === 2 || e.shiftKey || e.ctrlKey || e.altKey || e.metaKey;
+  p.moving = e.button === 2 || e.shiftKey || e.metaKey || e.ctrlKey || e.altKey;
   fingers.set(e.pointerId, p);
-  pair = null;
+  drift = null;
 });
-
-// Where two fingers are: the gap between them, the angle of the line through
-// them, and the point halfway.
-function grip() {
-  const [a, b] = Array.from(fingers.values());
-  return {
-    gap: Math.hypot(a.x - b.x, a.y - b.y),
-    angle: Math.atan2(a.y - b.y, a.x - b.x),
-    x: (a.x + b.x) / 2,
-    y: (a.y + b.y) / 2,
-  };
-}
 
 canvas.addEventListener('pointermove', function (e) {
   const was = fingers.get(e.pointerId);
   if (!was || !view) return;
   const now = spot(e);
-  now.turning = was.turning;
-  fingers.set(e.pointerId, now);
+  now.moving = was.moving;
+  const before = Object.assign({}, view);
   if (fingers.size === 1) {
-    if (was.turning) turn((now.x - was.x) * 0.3, (now.y - was.y) * 0.25);
-    else {
-      // Keep the ground you took hold of under the finger.
-      draw.place(view);
-      const a = draw.ground(was.x, was.y, view);
-      const b = draw.ground(now.x, now.y, view);
-      if (a && b) {
-        view.x += a[0] - b[0];
-        view.y += a[1] - b[1];
-      }
-    }
-  } else if (fingers.size === 2) {
-    // Two fingers either pinch and twist, or slide up and down together to
-    // tip the model. Which it is shows in the first few pixels, and holds
-    // until a finger lifts.
-    const g = grip();
-    if (!pair) pair = { first: g, last: g, mode: '' };
-    if (!pair.mode) {
-      const spread = Math.abs(g.gap - pair.first.gap);
-      const twist = Math.abs(g.angle - pair.first.angle) * pair.first.gap;
-      if (spread > 12 || twist > 12) pair.mode = 'pinch';
-      else if (Math.abs(g.y - pair.first.y) > 14) pair.mode = 'tip';
-    }
-    if (pair.mode === 'tip') turn(0, (g.y - pair.last.y) * -0.3);
-    if (pair.mode === 'pinch') {
-      draw.place(view);
-      const a = draw.ground(pair.last.x, pair.last.y, view);
-      view.heading += ((g.angle - pair.last.angle) * 180) / Math.PI;
-      view.span = clamp((view.span * pair.last.gap) / Math.max(g.gap, 1), 90, 7000);
-      draw.place(view);
-      const b = draw.ground(g.x, g.y, view);
-      if (a && b) {
-        view.x += a[0] - b[0];
-        view.y += a[1] - b[1];
-      }
-    }
-    pair.last = g;
+    if (was.moving) slide(was, now);
+    else turn(now.x - was.x, now.y - was.y);
+    drift = rate(before, Math.max(now.at - was.at, 8), drift);
+  } else {
+    // Two fingers hold the ground between them: it follows the point halfway,
+    // and the gap between the fingers is the zoom.
+    let other;
+    for (const [id, p] of fingers) if (id !== e.pointerId) other = p;
+    const gapWas = Math.hypot(was.x - other.x, was.y - other.y);
+    const gapNow = Math.hypot(now.x - other.x, now.y - other.y);
+    const midWas = { x: (was.x + other.x) / 2, y: (was.y + other.y) / 2 };
+    const midNow = { x: (now.x + other.x) / 2, y: (now.y + other.y) / 2 };
+    if (gapWas > 10 && gapNow > 10) zoom(gapWas / gapNow, midWas.x, midWas.y);
+    slide(midWas, midNow);
+    drift = null;
   }
+  fingers.set(e.pointerId, now);
   redraw();
 });
 
 for (const type of ['pointerup', 'pointercancel'])
   canvas.addEventListener(type, function (e) {
     fingers.delete(e.pointerId);
-    pair = null;
+    // Carry on only from a hand that was still moving when it let go, and
+    // not for a reader who has asked for less motion.
+    if (fingers.size || !drift || calm.matches || performance.now() - drift.at > 80) return;
+    coast = drift;
+    redraw();
   });
+
+// One frame of carrying on: the rate applied, then eased toward nothing, a
+// fifth of a second to lose most of it.
+function carryOn(now) {
+  const ms = Math.min(now - coast.at, 50);
+  coast.at = now;
+  view.heading += coast.heading * ms;
+  view.pitch = clamp(view.pitch + coast.pitch * ms, 20, 82);
+  view.x += coast.x * ms;
+  view.y += coast.y * ms;
+  const fade = Math.exp(-ms / 200);
+  for (const key of ['heading', 'pitch', 'x', 'y']) coast[key] *= fade;
+  const moving =
+    Math.hypot(coast.heading, coast.pitch) * 1000 +
+    (Math.hypot(coast.x, coast.y) / view.span) * 1e5;
+  if (moving < 1) coast = null;
+  else redraw();
+}
 
 canvas.addEventListener('contextmenu', function (e) {
   e.preventDefault();
@@ -488,6 +518,20 @@ canvas.addEventListener('dblclick', function (e) {
   fly(closer, 500);
 });
 
+// ---- buttons and keys --------------------------------------------------
+
+function step(by) {
+  show(current < 0 ? 0 : current + by, by > 0 ? 'next' : 'back');
+}
+
+// A small change to the view where it stands: closer, further, or turned.
+function nudge(change) {
+  fly(Object.assign({}, view, change), 450);
+}
+
+const closer = () => nudge({ span: clamp(view.span / 2, 90, 7000) });
+const further = () => nudge({ span: clamp(view.span * 2, 90, 7000) });
+
 document.addEventListener('click', function (e) {
   if (!view) return;
   const button = e.target.closest('button');
@@ -497,14 +541,12 @@ document.addEventListener('click', function (e) {
       return play(!playing);
     }
     takeOver();
-    const step = Number(button.dataset.step);
-    if (step) return show(current < 0 ? 0 : current + step, step > 0 ? 'next' : 'back');
-    const to = Object.assign({}, view);
-    if (button.dataset.turn) to.heading += Number(button.dataset.turn);
-    if ('north' in button.dataset) to.heading = 0;
-    if (button.dataset.zoom) to.span = clamp(view.span * Number(button.dataset.zoom), 90, 7000);
+    if (button.dataset.step) return step(Number(button.dataset.step));
+    if (button.dataset.turn) return nudge({ heading: view.heading + Number(button.dataset.turn) });
+    if ('north' in button.dataset) return nudge({ heading: 0 });
     if ('whole' in button.dataset) return fly(overview(), 1400);
-    return fly(to, 450);
+    if ('closer' in button.dataset) return closer();
+    if ('further' in button.dataset) return further();
   }
   const owner = e.target.closest('[data-stop]');
   if (owner) {
@@ -516,12 +558,20 @@ document.addEventListener('click', function (e) {
   }
 });
 
+const KEYS = {
+  ArrowRight: () => step(1),
+  ArrowLeft: () => step(-1),
+  '+': closer,
+  '=': closer,
+  '-': further,
+  0: () => fly(overview(), 1400),
+};
+
 document.addEventListener('keydown', function (e) {
-  if (!view || e.metaKey || e.ctrlKey || e.altKey) return;
-  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+  if (!view || e.metaKey || e.ctrlKey || e.altKey || !KEYS[e.key]) return;
+  e.preventDefault();
   takeOver();
-  const step = e.key === 'ArrowRight' ? 1 : -1;
-  show(current < 0 ? 0 : current + step, step > 0 ? 'next' : 'back');
+  KEYS[e.key]();
 });
 
 // ---- start -------------------------------------------------------------

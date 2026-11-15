@@ -32,8 +32,11 @@ The rules:
 
 A model of central London along the Thames, 4.1 km by 2 km, drawn in the
 browser: about ten thousand buildings, the river and its eleven bridges, the
-railway viaducts, the roads, and 6,700 trees. Drag moves it, right-drag (or two
-fingers) turns and tips it, the wheel zooms. The walk is a loop of twenty-two
+railway viaducts, the roads, and 6,700 trees. The hands are the Greenage map's
+(`~/dev/greenage-map`), at his word: a drag turns and tips it, a right-drag or
+Shift-drag moves it, the wheel zooms to the pointer, and a model let go of
+mid-move carries on a little and eases to rest. On a touchscreen one finger
+turns and two move and zoom. The walk is a loop of twenty-two
 stops, out along the South Bank from Waterloo Station to Shad Thames, across
 Tower Bridge, back along the north bank, and across Westminster Bridge. Next
 and Previous fly the camera along the path from one stop to the other; "Fly the
