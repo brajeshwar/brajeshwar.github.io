@@ -1,29 +1,27 @@
-/* Heading anchors — vanilla replacement for the AnchorJS dependency.
- * For each content heading that has an id (kramdown auto_ids), prepend a
- * clickable link to that id. Loaded defer, hidden until hover or focus.
+/* Heading anchors.
  *
- * [WARNING] THE GLYPH IS `#`, NOT `§` (2026-08-09). Styling lives in ONE place,
- * base.scss — including the `position: relative` the absolutely-positioned
- * link needs, which a heading picks up via `:has(> .headerlink)` once this has
- * run, and the full-height flex box that makes the whole heading clickable.
- * Do not restyle it here.
+ * Every content heading with an id gets a small `#` link to itself (a `#`,
+ * not the `§` it was before 2026-08-09), so a reader can copy the address of
+ * a section. kramdown writes the ids; nothing
+ * here invents one. The link stays out of sight until the heading is hovered
+ * or focused, and out of the way of screen readers and the tab order, since
+ * the heading already says everything the mark would.
  *
- * They used to be copied into post.css, timeline.css and now.css, on the
- * grounds that those bundles were never loaded together. They all load
- * together now. The post.css copy had also been deleted by accident, so every
- * post with an h2 or lower was rendering a bare, permanently visible mark.
+ * Three places carry anchors:
+ *   article.post > h2..h6       the body of a post
+ *   .timeline h2, .timeline h3  /about/, /cv/ and /about/brajeshwar.com/,
+ *                               where a period and its entries are both linked
+ *   .page-now h2                the years on /now/, as in /now/#2024
  *
- * Three scopes, all relying on kramdown auto_ids — no id is hand-written any
- * more:
- *   article.post > h2..h6      post bodies
- *   .timeline h2, .timeline h3 /about/, /cv/, /about/brajeshwar.com/ — on
- *                              /about/ the h2 is a period and the h3 an entry,
- *                              and both are anchored
- *   .page-now h2               the year headings on /now/ ("/now/#2024")
+ * All of the styling is in base.scss, under .headerlink, including the
+ * positioning the heading picks up through :has() once this has run. Keep it
+ * there. It was once copied into three stylesheets, and when one copy was lost
+ * every post showed a bare, permanent mark.
  *
- * [WARNING] This site is PLAIN kramdown, so a heading that does not start with a
- * letter gets `section`, `section-1` … — /about/'s date labels anchor to those
- * and that is accepted. See _docs/timeline.md.
+ * [WARNING] This is plain kramdown, not GFM. A heading that does not begin
+ * with a letter gets an id of `section`, `section-1` and so on. The dates on
+ * /about/ anchor to those, and that was a deliberate choice; see
+ * _docs/timeline.md.
  */
 (function () {
   'use strict';
@@ -35,7 +33,7 @@
     var a = document.createElement('a');
     a.className = 'headerlink';
     a.href = '#' + h.id;
-    a.textContent = '#'; // see .headerlink in base.scss
+    a.textContent = '#';
     a.setAttribute('aria-hidden', 'true');
     a.tabIndex = -1;
     h.insertBefore(a, h.firstChild);

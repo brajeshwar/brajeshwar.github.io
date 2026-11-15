@@ -119,6 +119,28 @@ of the old warning signs were swapped on that day. Typographic symbols that name
 (the ↗ external-link mark, the ↩ footnote return, ©) are not emoji and stay. Content is out of
 scope as always (guardrail 1).
 
+## Code like poetry (2026-11-15)
+
+His words: *"I want our code to be like poetry, written by a veteran programmer in leisure."*
+
+This refines "comment generously" below; it does not reverse it. A veteran's comments are
+generous with reasons and sparing with words. The dated gotchas are scars worth keeping; the
+shouting and the changelog are not.
+
+- **Say why, once, where the reader meets it.** The comment holds the current truth. History
+  lives in git, so keep only the one date that explains a surprising choice.
+- **`[WARNING]` is the whole alarm.** The sentence after it is in ordinary sentence case, not
+  capitals, and not bold.
+- **Quote him only where the quote settles a decision.**
+- **Nothing repeated across files, nothing hedged.** One home per fact, with a pointer from
+  anywhere else.
+- **Calm code too:** plain names, short functions, and no cleverness the next reader has to
+  decode.
+
+The sample is `assets/scripts/anchors.js`, rewritten on that day. Its minified hash did not
+change, which is the proof that only prose moved. The rest of the code has not been through
+this pass; that is a sweep for him to ask for, not a tidy-up to do unasked.
+
 ## Hard guardrails (do not violate)
 1. **Never modify content.** No edits and no added front matter under `_posts/**`, `_drafts/**`,
    or `_pages/**` prose bodies. Do not touch `_data/**` except when asked — the books shelf
