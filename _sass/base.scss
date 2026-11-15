@@ -305,7 +305,7 @@ h1 {
    over three lines, because caps run about 12% wider than the
    lowercase the scale was tuned for. */
 .page-title {
-  font-weight: 200;
+  font-weight: var(--font-weight-light);
   font-size: var(--step-2);
   letter-spacing: -0.02em;
   text-transform: uppercase;

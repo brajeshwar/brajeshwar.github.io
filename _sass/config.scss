@@ -88,19 +88,16 @@
 
 /* CONFIG */
 
-/*
-  Resist the temptation to use custom fonts.
-  We have tried this multiple times.
-  I can do all the tricks to make it load fast and smooth.
-  But no, just stick to the defaults.
-*/
-
 :root {
-  /* Font stacks: the system's own faces, and nothing to download. --font-body
-     is the face for content; it is the sans stack. */
+  /* Font stacks. The sans is Geist, self-hosted (2026-11-15: "No complaints
+     from 99% of the audience is the target. They should not even know").
+     How it loads without a flicker is in fonts.scss. 'Geist Fallback' is
+     Arial shaped to Geist's metrics, and the system stack after it is for
+     a device with neither. Serif and mono are the system's own. */
   --font-sans:
-    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    'Geist', 'Geist Fallback', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
   --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
@@ -113,7 +110,9 @@
   --font-family-monospace: var(--font-mono);
 
   --font-weight-lighter: 100;
-  --font-weight-light: 200;
+  /* 300, not 200 (2026-11-15). Windows draws thin strokes lighter than a
+     Mac does, and 200 at heading size went washed out there. */
+  --font-weight-light: 300;
   --font-weight: 400;
   --font-weight-bold: 600;
 

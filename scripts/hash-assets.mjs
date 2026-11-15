@@ -45,7 +45,8 @@
  *   Pass 2  assets/styles/site.css ->  site.<hash>.css
  *           assets/print.css       ->  print.<hash>.css
  *           assets/scripts/*.js    ->  <name>.<hash>.js
- *           ...and rewrite those URLs inside every built .html.
+ *           ...and rewrite those URLs, and the fonts', inside every built .html.
+ *           The fonts are there for default.html's preload links.
  *
  * [WARNING] MUST RUN AFTER THE ESBUILD MINIFY STEP, or the hash names bytes that are
  * not the bytes we ship, and the next build — same source, differently
@@ -200,14 +201,16 @@ if (renames.length === 0) {
   process.exit(1);
 }
 
+/* The fonts' renames ride along: default.html preloads them, and a preload
+   left on the old name would 404 while the CSS fetched the hashed copy. */
 const pages = await walk(SITE, (f) => f.endsWith('.html'));
-const { hits, touched } = await rewrite(pages, renames);
+const { hits, touched } = await rewrite(pages, [...renames, ...fontRenames]);
 
 const total = [...hits.values()].reduce((a, b) => a + b, 0);
 console.log(
   `hash-assets: pass 2 — ${renames.length} assets, ${total} references rewritten across ${touched} of ${pages.length} pages`
 );
-report('asset', hits, renames);
+report('asset', hits, [...renames, ...fontRenames]);
 
 /* A hashed asset that nothing links to is now unreachable — the old URL 404s
    and no page points at the new one. That is either a dead file or, worse, a

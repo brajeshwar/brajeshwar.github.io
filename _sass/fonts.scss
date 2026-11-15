@@ -1,0 +1,119 @@
+/* ============================================================
+   Fonts: Geist, and a fallback shaped to match it.
+   ------------------------------------------------------------
+   Geist is the face for everything but code, from 2026-11-15.
+   The aim is that nobody notices it arriving.
+
+   How it gets there without a flicker:
+
+   1. Preloaded. default.html asks for both files before the
+      stylesheet, so the request does not wait for this CSS to be
+      parsed. hash-assets.mjs rewrites those preload URLs along with
+      the ones below.
+   2. font-display: optional. The browser waits about 100ms for the
+      font. If it is there, the page paints in Geist. If not, the
+      page stays on the fallback for its whole life with no swap,
+      and the next page has Geist from the cache. On a fast
+      connection the font always makes it.
+   3. A fallback that occupies Geist's space. 'Geist Fallback' is
+      the reader's own Arial, scaled and given Geist's vertical
+      metrics, so a page that misses the window breaks its lines
+      where Geist would, and the next page does not reflow.
+
+   The files are a year in cache once fetched, under hashed names.
+
+   Upstream: the `geist` npm package, 1.9.2, SIL OFL (LICENSE.txt
+   beside the files). Each file is clamped to wght 300-700, which
+   is every weight the site asks for, and subset to Latin, its
+   punctuation, arrows and currency. Regenerate with (fonttools +
+   brotli, via uv), for Geist-Variable.ttf and Geist-Italic[wght].ttf:
+
+     uvx fonttools varLib.instancer -o inst.ttf Geist-Variable.ttf wght=300:700
+     uvx --with brotli fonttools subset inst.ttf \
+       --output-file=assets/fonts/geist/Geist.woff2 --flavor=woff2 \
+       --layout-features+=tnum,case,zero \
+       --unicodes="U+0000-024F,U+0259,U+02BB-02BC,U+02C6,U+02DA,U+02DC,\
+                   U+0300-036F,U+1E00-1EFF,U+2000-206F,U+2074,U+20A0-20BF,\
+                   U+2122,U+2190-21FF,U+2212,U+2215,U+FEFF,U+FFFD"
+
+   tnum has to be named: the archives and the home page's dates use
+   tabular-nums, and Geist's default figures are proportional.
+
+   [WARNING] If a weight token ever goes below 300 or above 700,
+   re-subset with a wider clamp. The browser will otherwise quietly
+   draw the nearest end of the range.
+
+   No unicode-range. The face is first in the stack and every page
+   has ASCII, so a range could never save the download; it could only
+   hide characters if it were written wrong, which happened here once
+   to every apostrophe. A glyph Geist lacks falls back per character.
+   ============================================================ */
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/assets/fonts/geist/Geist.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/assets/fonts/geist/Geist-Italic.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: optional;
+}
+
+/* The fallback. size-adjust matches Geist's average width in running
+   English text (letter frequencies, measured against Arial's hmtx), and
+   the overrides are Geist's ascent 1005 and descent 295 per 1000, divided
+   by that size-adjust because the overrides apply after scaling. Italic
+   is measured separately; Geist's italic runs narrower than its roman.
+
+   Four faces, so bold and italic in the fallback are Arial's real cuts
+   and not ones the browser fakes. Arial is on every Windows and Mac; a
+   device without it skips this family and goes on down the stack. */
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local('Arial'), local('ArialMT');
+  font-weight: 100 549;
+  font-style: normal;
+  size-adjust: 105.85%;
+  ascent-override: 94.94%;
+  descent-override: 27.87%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local('Arial Bold'), local('Arial-BoldMT');
+  font-weight: 550 900;
+  font-style: normal;
+  size-adjust: 105.85%;
+  ascent-override: 94.94%;
+  descent-override: 27.87%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local('Arial Italic'), local('Arial-ItalicMT');
+  font-weight: 100 549;
+  font-style: italic;
+  size-adjust: 104.16%;
+  ascent-override: 96.49%;
+  descent-override: 28.32%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local('Arial Bold Italic'), local('Arial-BoldItalicMT');
+  font-weight: 550 900;
+  font-style: italic;
+  size-adjust: 104.16%;
+  ascent-override: 96.49%;
+  descent-override: 28.32%;
+  line-gap-override: 0%;
+}

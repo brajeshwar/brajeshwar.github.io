@@ -18,6 +18,7 @@ from the build), and CI's `npm install pagefind` became `npm ci`.
 | **Dark-mode click flash** | `color-scheme` was always `light dark`, so Dark on a light OS kept a white canvas between pages. An explicit mode now pins it, in CSS and in the no-flash snippet's meta. **Live** since run 43668462691 (see below) |
 | **JS off, dark OS** | `<html>` had no `data-theme`, so auto never matched and the page was light. A missing `data-theme` now counts as auto |
 | **JS off, Appearance button** | showed and did nothing; `@media (scripting: none)` hides it |
+| **Geist is back, for everything but code** | the same evening, reversing the morning's system fonts: preloaded, `font-display: optional`, an Arial fallback shaped to Geist's metrics so a miss does not reflow. `--font-weight-light` 200 → 300 for Windows. See [`styles.md`](styles.md) "Families" |
 | **Appearance panel → Light/Dark toggle** | palettes, accents, webfonts and text sizes all gone; one button, system first; browser owns text size (`body` is `1rem`). See [`styles.md`](styles.md) "Light and dark, and nothing else" |
 | **Prettier** | reformatted the code in its own commit (`650fbfe3`). The hand-aligned Sass columns are gone; that commit reverts alone if he wants them back (then drop the check from `npm run lint`) |
 

@@ -88,6 +88,25 @@ test('an explicit mode pins color-scheme in the stylesheet', () => {
   expect(css).toMatch(/:root\[data-theme="?light"?\]\{color-scheme:light\}/);
 });
 
+test('every page preloads the fonts the stylesheet uses', () => {
+  // A preload on a name the CSS does not use is a wasted download, and one
+  // without crossorigin is fetched twice. Either way the font misses
+  // font-display: optional's window and the reader gets the fallback.
+  const css = read(stylesheetPath());
+  const faces = [...css.matchAll(/url\("?(\/assets\/fonts\/[^")]+\.woff2)/g)].map((m) => m[1]);
+  expect(faces.length).toBe(2);
+  const bad = [];
+  for (const p of ownPages()) {
+    const preloads = [...read(p).matchAll(/<link rel="preload"[^>]*>/g)].map((m) => m[0]);
+    for (const face of faces) {
+      const tag = preloads.find((t) => t.includes(`href="${face}"`));
+      if (!tag || !/\bcrossorigin\b/.test(tag)) bad.push(`${p} ${face}`);
+    }
+  }
+  expect(bad).toEqual([]);
+  expect(faces.filter((f) => !exists(f))).toEqual([]);
+});
+
 test('every page applies the saved theme before first paint', () => {
   const bad = ownPages().filter((p) => {
     const html = read(p);

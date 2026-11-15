@@ -45,6 +45,20 @@
 {%- endif -%}
 
 {%- comment -%}
+  Geist, asked for before the stylesheet so the download starts now rather
+  than once the CSS has been parsed. Without this, font-display: optional
+  would miss its window on most first visits. Both faces, because a third of
+  the posts have italics, and Geist upright beside a system italic is the
+  mismatch a reader would see. Why it cannot flicker is in _sass/fonts.scss.
+
+  [WARNING] `crossorigin` is required even on our own origin: fonts are
+  fetched in CORS mode, and a preload without it is a second download. The
+  hrefs are rewritten to hashed names by scripts/hash-assets.mjs.
+{%- endcomment -%}
+<link rel="preload" href="{{ '/assets/fonts/geist/Geist.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/geist/Geist-Italic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+
+{%- comment -%}
   One external stylesheet for the whole site, replacing the inlined <style>
   on 2026-07-27. /assets/* is served `cache-control: max-age=31536000`
   gzipped, so this is fetched once and is then free on every page for a year;

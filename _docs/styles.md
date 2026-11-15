@@ -20,15 +20,29 @@ philosophy they serve — see [`design.md`](design.md).
 How type works on the site. Lives in `_sass/config.scss` (scales, families),
 `themes.css` (variable fonts), and `base.css` (headings, rhythm).
 
-## Families: the system's own (2026-11-15)
+## Families: Geist, and the system's own (2026-11-15)
 
-> *"Font is system fonts. Let user change the text size in their browser."*
+> *"No complaints from 99% of the audience is the target. They should not even know."*
 
-There are no webfonts. `--font-sans`, `--font-serif` and `--font-mono` in `config.scss` are
-system stacks, and `--font-body`, the face for content, is the sans. Geist, Source Serif 4 and
-the dormant Libre Baskerville were deleted with their `@font-face` rules on 2026-11-15, along
-with the `[data-font]` choice that loaded them. The header, footer and the vertical spine pin
-`--font-family-sans-serif`, so they stay sans whatever the body face becomes.
+`--font-sans`, the face for everything but code, is **Geist**, self-hosted. Serif and mono are
+system stacks. This reverses the morning of the same day, when every webfont was deleted
+(*"Font is system fonts"*); he weighed the costs and chose Geist back, on the condition that
+nobody notices it load. How that holds, and how to regenerate the files, is in
+`_sass/fonts.scss`. In short:
+
+- **Two files, ~37 KB roman and ~39 KB italic**, variable, clamped to wght 300-700 and subset to
+  Latin. Cached a year under hashed names, so a reader pays once.
+- **Preloaded in `default.html`**, with `crossorigin`, and **`font-display: optional`**: Geist
+  paints first or not at all on that page. There is no swap, so there is no flicker.
+- **`'Geist Fallback'`** is Arial with `size-adjust` and the vertical overrides set to Geist's
+  metrics. Measured on a post: Geist and the fallback lay out to the same 94 lines and the same
+  height, where plain Arial ran four lines longer. A page that misses the window looks right,
+  and the next page does not reflow.
+- `hash-assets.mjs` rewrites the preload URLs along with the CSS's, and a build test fails if a
+  page's preloads and the stylesheet's fonts ever disagree.
+
+The header and footer pin `--font-family-sans-serif`, so they stay sans whatever
+the body face becomes.
 
 **Text size belongs to the browser.** The Kindle-style `[data-text-size]` buttons and the
 `--text-scale` multiplier are gone. The scale is in `rem`, and `body` is `1rem` rather than the
@@ -95,7 +109,7 @@ characters per line (see [`design.md`](design.md) → *Comfortable measure*).
   ([`sidenotes.md`](sidenotes.md)).
 
 ## Weights
-`--font-weight-lighter` 100 · `--font-weight-light` 200 · `--font-weight` 400 · `--font-weight-bold` 600 · `--font-weight-bolder` 700.
+`--font-weight-lighter` 100 · `--font-weight-light` 300 (200 until 2026-11-15; washed out on Windows) · `--font-weight` 400 · `--font-weight-bold` 600 · `--font-weight-bolder` 700.
 
 ---
 
@@ -210,9 +224,9 @@ text-2 → base-500), which the rest of that block still follows. Deliberate ove
 legibility, not a mistake to revert.
 
 **The other half of "more accented" is weight, not colour.** The h1, the intro paragraph and
-every section heading are `--font-weight-light` (**200**) — very thin at 39px. That reads as
-washed out no matter what the contrast ratio says. Raising `--font-weight-light` to 300 is a
-one-token change if the type still feels light after this.
+every section heading are `--font-weight-light`, which was **200** — very thin at 39px, and
+washed out no matter what the contrast ratio says. It became 300 on 2026-11-15, with Geist,
+because Windows drew it thinner still.
 
 ## Verified (live, 1440px)
 - [x] Default = light, neutral, sans — bg `gray-100`, fg `gray-900`.
