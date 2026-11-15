@@ -968,8 +968,9 @@ function relight() {
   redraw();
 }
 
-// This is the kept copy of the tinted model; it shares the live page's data.
-fetch(new URL('../city.json', import.meta.url))
+// A kept copy reads the data as it was kept with version 0.3.0, not the live
+// file, which goes on changing.
+fetch(new URL('../v0.3.0-colored/city.json', import.meta.url))
   .then(function (response) {
     if (!response.ok) throw new Error('city.json: ' + response.status);
     return response.json();

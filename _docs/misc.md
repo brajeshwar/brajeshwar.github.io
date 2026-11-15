@@ -105,12 +105,13 @@ same name, and a signed git tag on the commit that added it:
 |---|---|---|
 | `v0.1.0-grayscale` | `london-southbank-v0.1.0-grayscale.html` | the model in grays |
 | `v0.2.0-tinted` | `london-southbank-v0.2.0-tinted.html` | blue river, green parks, warm ground; buildings gray |
-| not kept yet | `index.html`, the live page | the same ground, and each building in its own color |
+| `v0.3.0-colored` | `london-southbank-v0.3.0-colored.html` | the same ground, and each building in its own color |
 
 Each is marked `noindex`, and its back link goes to the live page.
-[WARNING] The kept pages read the live `city.json`. Whatever is added to that
-file, the layers a kept `city.js` reads have to stay as they are, or a kept
-page breaks without anyone looking at it. Add to the data; do not reshape it.
+**The kept pages do not read the live data.** `v0.3.0-colored/` holds a copy
+of `city.json` as it was that day, and all three kept pages read that one. So
+the live `city.json` is free to be remade; a later kept version brings its own
+copy with it in the same way.
 
 **Without JavaScript, or without WebGL2,** the page is the picture, the pins on
 it (placed in percent, in the HTML), and the list they link to. The script adds
