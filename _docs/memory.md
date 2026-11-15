@@ -4,7 +4,32 @@
 > working memory: what we're building, the rules, and where things stand. Read it
 > first each session; keep it current.
 
-## Where we are (updated 2026-11-05, fourteenth session — CLOSED) — READ FIRST
+## Where we are (updated 2026-11-15, fifteenth session) — READ FIRST
+
+**THE SITE HAS A TEST SUITE AND A LINTER, AND BOTH GATE THE DEPLOY.** `make test` builds a
+production-parity copy into `_test/site/` and runs Playwright (build checks plus real-Chrome
+checks, JS on and off); `make lint` runs ESLint, Stylelint and `prettier --check`. CI runs both
+after Pagefind and before the upload, so a red check keeps the last good build live. Everything is
+in [`testing.md`](testing.md). ⚠️ **There is a `package.json` now** (dev tooling only, excluded
+from the build), and CI's `npm install pagefind` became `npm ci`.
+
+| | |
+|---|---|
+| **Dark-mode click flash** | `color-scheme` was always `light dark`, so Dark on a light OS kept a white canvas between pages. An explicit mode now pins it, in CSS and in the no-flash snippet's meta. **Pushed and deployed by him** (`324d214b`) |
+| **JS off, dark OS** | `<html>` had no `data-theme`, so auto never matched and the page was light. A missing `data-theme` now counts as auto |
+| **JS off, Appearance button** | showed and did nothing; `@media (scripting: none)` hides it |
+| **Prettier** | reformatted the code in its own commit (`650fbfe3`). The hand-aligned Sass columns are gone; that commit reverts alone if he wants them back (then drop the check from `npm run lint`) |
+
+⚠️ **`_site/` IS NOT A PRODUCTION BUILD WHILE HE IS PREVIEWING.** He runs
+`jekyll serve --incremental --future --livereload`, which writes the 2099 drafts into `_site/`.
+Seeing `_site/2099/` locally is not a leak; production 404s them. That is why the tests build
+their own directory.
+
+⚠️ **The CI half is unproven until the first push.** The suite passed locally against a CI-parity
+build, but the runner-side Chrome, `npm ci` and the new steps run for the first time on push. If
+that deploy goes red, the live site stays on `2253973b`, by design.
+
+## Where we were (updated 2026-11-05, fourteenth session — CLOSED)
 
 **✅ SESSION CLOSED 2026-11-05. Everything is pushed and deployed** — run 42004378335 on
 `f3d2ee15`, green, and the live `site.a72bb069.css` was checked for both fixes below.
