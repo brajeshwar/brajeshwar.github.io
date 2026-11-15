@@ -152,24 +152,47 @@
 }
 
 /* ---- One item: a drawing, its name, a note ----------------------
-   The drawings are line art in currentColor (_includes/own/), one grid
-   and one stroke, so they follow the theme and never compete with the
-   words under them. No box around them (2026-11-15); each sits in the
-   same square of space, so a row stays even. */
+   The drawings (_includes/own/) are drawn on one grid in three tones: an
+   outline in the text color, a body (.f) and its darker details (.s). All
+   three are mixed from the theme's own tokens, so they follow light and
+   dark, and each sits on a gray tile that is neither the page nor white
+   (2026-11-15: "a bit of gray and not total white or the same color as the
+   website background"). Name and note sit centered under the picture. */
+.page-own {
+  --own-tile: color-mix(in oklch, var(--text-color) 6%, var(--bg-color-lower));
+  --own-body: color-mix(in oklch, var(--text-color) 13%, var(--bg-color-lower));
+  --own-detail: color-mix(in oklch, var(--text-color) 30%, var(--bg-color-lower));
+}
+
+.page-own .own__item {
+  text-align: center;
+}
+
 .page-own .own__picture {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 4.5rem;
+  width: 5.5rem;
   aspect-ratio: 1;
-  margin-bottom: var(--space-3xs);
-  color: var(--text-color-low);
+  margin: 0 auto var(--space-3xs);
+
+  border-radius: var(--border-radius);
+  background-color: var(--own-tile);
+  color: color-mix(in oklch, var(--text-color) 80%, var(--bg-color-lower));
 }
 
 .page-own .own__drawing {
-  width: 85%;
-  height: 85%;
+  width: 80%;
+  height: 80%;
+}
+
+.page-own .own__drawing .f {
+  fill: var(--own-body);
+}
+
+.page-own .own__drawing .s {
+  fill: var(--own-detail);
 }
 
 .page-own .own__name {
@@ -292,7 +315,13 @@
   }
 
   /* The @page margin is the only margin, as on /cv/: print.css also pads
-     the body by 2.54cm, which on one sheet is a row of the inventory. */
+     the body by 2.54cm, which on one sheet is a row of the inventory.
+
+     [WARNING] Chrome lays out the FIRST page of a named page at the default
+     paper's height (Letter, 18mm shorter than A4) and then paints it onto
+     A4: page one shows an 18mm band on top and the same short of the foot.
+     Measured 2026-11-15 on Chrome 157. So the sheet has about 900px, not
+     the 970 that A4 promises; keep the inventory under that or it spills. */
   body:has(> main.page-own) {
     page: own;
     padding: 0;
@@ -313,9 +342,9 @@
   .page-own {
     --step-2: 16pt;
     --step-1: 12pt;
-    --step-0: 10pt;
-    --step--1: 8.5pt;
-    --step--2: 7.5pt;
+    --step-0: 9.5pt;
+    --step--1: 8pt;
+    --step--2: 7pt;
   }
 
   .page-own .own__lede {
@@ -333,7 +362,7 @@
   }
 
   .page-own .own__section {
-    margin-top: 0.6rem;
+    margin-top: 0.3rem;
   }
 
   /* Label beside its items again: the sheet is narrower than the
@@ -341,7 +370,7 @@
   .page-own .own__row {
     grid-template-columns: 5.5rem minmax(0, 1fr);
     gap: 0.5rem;
-    padding-block: 0.3rem;
+    padding-block: 0.1rem;
     break-inside: avoid;
   }
 
@@ -350,12 +379,12 @@
   }
 
   .page-own .own__picture {
-    width: 1.9rem;
-    margin-bottom: 0.1rem;
+    width: 2rem;
+    margin-bottom: 0;
   }
 
   .page-own .own__brands {
-    margin-top: 0.25rem;
+    margin-top: 0.1rem;
   }
 
   .page-own .own__logo {
