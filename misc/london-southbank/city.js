@@ -3,8 +3,9 @@
  * city.json holds the whole model as whole numbers: positions across the
  * ground in decimeters, heights in centimeters, every coordinate the
  * difference from the one before it so the file compresses well. It was made
- * once, from OpenStreetMap, and the script that made it is not kept (see
- * _docs/misc.md); what it wrote is the source now.
+ * from OpenStreetMap, with heights from the Environment Agency's LIDAR
+ * survey, and the script that made it is not kept (see _docs/misc.md); what
+ * it wrote is the source now.
  *
  * This file turns those numbers into one mesh. A corner is twenty-four bytes:
  *
@@ -163,6 +164,10 @@ Mesh.prototype.facet = function (a, b, c) {
   this.index.set([i, i + 1, i + 2], this.indices);
   this.indices += 3;
 };
+
+function clamp(v, low, high) {
+  return Math.min(high, Math.max(low, v));
+}
 
 // A stable scatter of 0-255 from a whole number.
 function scatter(n) {
@@ -334,7 +339,7 @@ function ribbon(mesh, ax, ay, bx, by, half, z) {
 }
 
 // A tree is a cut gem on a short stem: six sides, two points.
-function trees(mesh, xy) {
+function trees(mesh, xy, tops) {
   let x = 0;
   let y = 0;
   mesh.material = MATERIAL.tree;
@@ -342,10 +347,12 @@ function trees(mesh, xy) {
     x += xy[i];
     y += xy[i + 1];
     const size = scatter(i);
-    const r = 26 + size / 12; // decimeters
-    const foot = 180;
-    const waist = foot + r * 9;
-    const head = foot + r * 22;
+    // A tree stands as tall as the survey found it (treeTops, decimeters).
+    // Where the survey found none, it is a young tree, five to eight meters.
+    const head = ((tops && tops[i / 2]) || 50 + size / 8) * 10; // centimeters
+    const foot = clamp(head * 0.2, 120, 500);
+    const r = clamp((head - foot) * 0.042, 12, 65); // decimeters
+    const waist = foot + (head - foot) * 0.41;
     const turn = size / 40;
     mesh.tone = size & 15;
     mesh.seed = size;
@@ -405,7 +412,7 @@ export function build(city) {
   layer(mesh, city.viaducts, 0, 650, M.wall, M.roof, 7 + 32, [146, 128, 114]);
   buildings(mesh, city.blocks);
   roofs(mesh, city.roofs);
-  trees(mesh, city.trees);
+  trees(mesh, city.trees, city.treeTops);
   const solid = mesh.indices;
   layer(mesh, city.green, 0, 3, null, M.green, 0);
   layer(mesh, city.squares, 0, 5, null, M.road + 2, 0);

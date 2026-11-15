@@ -246,6 +246,10 @@ test('the South Bank walk keeps to its folder, and its list matches its model', 
     expect(layer.wallColor.length).toBe(count);
     expect(layer.roofColor.length).toBe(count);
   }
+  // Every tree has a surveyed height, or a 0 where the survey has none; and
+  // the page credits the survey the heights came from.
+  expect(city.treeTops.length).toBe(city.trees.length / 2);
+  expect(html).toContain('Environment Agency');
   // Every landmark's name is said once, and stands somewhere on the board.
   const names = city.places.map((p) => p[0]);
   expect(names.length).toBeGreaterThan(40);

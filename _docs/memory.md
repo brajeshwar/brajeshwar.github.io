@@ -56,6 +56,12 @@ tiles and chose the self-contained model. Everything is in [`misc.md`](misc.md).
 its own mapped color), and the two earlier looks are kept as `v0.1.0-grayscale` and
 `v0.2.0-tinted`, each a page beside `index.html` and a signed tag. Google's tiles are declined for
 good. All of it is in `misc.md`.
+**And then true shapes, the same evening** (*"Then do Option 1"*): building heights, 309 roofs and
+4,035 trees are now measured, from the Environment Agency's LIDAR survey. The map had guessed 36%
+of the heights; 38 buildings are still guessed. The colored look before it is kept as
+`v0.3.0-colored`, with its own copy of the data. [WARNING] He asked to be reminded of Option 2 next
+(light and surface: softer shadows, glass and water that reflect, more kinds of window), "when
+done and we are happy". He has not yet said he is happy.
 [WARNING] The script that made `city.json` is not in the repo, by the misc rule. `misc.md` says
 how the data was made; a new route means making it again.
 The article shows the model too: `static/2026/london-southbank-walk.webp`, north up, on no

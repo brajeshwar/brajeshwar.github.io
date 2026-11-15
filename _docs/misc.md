@@ -94,7 +94,7 @@ and shipped. Do not offer it again.
 | `walk.js` | the camera, the flights between stops, the controls |
 | `draw.js` | WebGL2 with no library: the shaders, the sun and its shadow map |
 | `city.js` | reads `city.json` into one mesh |
-| `city.json` | the model as whole numbers, 2.3 MB: the ground, the buildings and their colors, the walk, the stops, and the landmarks' names |
+| `city.json` | the model as whole numbers, 2.4 MB: the ground, the buildings and their colors, the trees and their heights, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
 
 **Each look is kept before the next is tried** (his word, 2026-11-15), as a
@@ -143,52 +143,21 @@ only.
   green, Blackfriars red, Tower Bridge blue, and so on (`wallColor` on
   `decks`).
 
-**Each look is kept before the next is tried** (his word, 2026-11-15), as a
-page beside `index.html` with its own scripts and pictures in a folder of the
-same name, and a signed git tag on the commit that added it:
-
-| version | page | what it is |
-|---|---|---|
-| `v0.1.0-grayscale` | `london-southbank-v0.1.0-grayscale.html` | the model in grays |
-| `v0.2.0-tinted` | `london-southbank-v0.2.0-tinted.html` | blue river, green parks, warm ground; buildings gray |
-| not kept yet | `index.html`, the live page | the same ground, and each building in its own color |
-
-Each is marked `noindex`, and its back link goes to the live page.
-[WARNING] The kept pages read the live `city.json`. Whatever is added to that
-file, the layers a kept `city.js` reads have to stay as they are, or a kept
-page breaks without anyone looking at it. Add to the data; do not reshape it.
-
-**Without JavaScript, or without WebGL2,** the page is the picture, the pins on
-it (placed in percent, in the HTML), and the list they link to. The script adds
-`is-live` to `.stage` once the model has drawn, or `is-still` if it cannot.
-
-**The model is tinted; the page round it is not** (2026-11-15: *"Let's do the
-next step of the Tinted Palette and let's see how that goes"*). This is a
-stated exception to the grayscale rule above, for the model only. The river is
-blue, parks and trees green, the ground and roads warm; `DAY` and `NIGHT` in
-`walk.js` hold a color for each kind of ground, and which set is used goes by
-whether the page's `--paper` is light or dark. By night one window in three is
-lit, lamp yellow. Buildings are still gray: each keeps the luminance of its
-mapped color or material, so brick is darker than stone, and takes only a
-little warmth by day and cool by night. Giving each building its own mapped
-color is the step after this one and needs the data made again. The grayscale
-model is kept as version 0.1.0, below.
-
 ### How city.json was made
 
-Once, on 2026-11-15, from OpenStreetMap through the Overpass API, for the box
-51.4972 to 51.5152 N, 0.1292 to 0.0698 W. The script is not kept. What it did:
+On 2026-11-15, from OpenStreetMap through the Overpass API, for the box
+51.4972 to 51.5152 N, 0.1292 to 0.0698 W, and made again the same day with
+heights from the Environment Agency's LIDAR survey (below). The script is not
+kept. What it did:
 
 - **Buildings** are `building` and `building:part` outlines, pulled up to
-  their `height`, or to 3.2 m for each of `building:levels`. Where a building
-  has parts, the parts are drawn and the outline only where they leave it
-  uncovered. Roof shapes that are mapped are built: pyramids, domes, gables,
-  hips, lean-tos, and barrel vaults. That is why Tower Bridge, St Paul's, the
-  Houses of Parliament, and the London Eye look like themselves: someone
-  mapped them piece by piece.
-- [WARNING] About a quarter of the buildings have no mapped height. Each of
-  those takes the median of the nine nearest that do, within 160 m. They are
-  plausible, not measured.
+  their height. Where a building has parts, the parts are drawn and the
+  outline only where they leave it uncovered. Roof shapes that are mapped are
+  built: pyramids, domes, gables, hips, lean-tos, and barrel vaults. That is
+  why Tower Bridge, St Paul's, the Houses of Parliament, and the London Eye
+  look like themselves: someone mapped them piece by piece.
+- **A height is the map's `height` where it has one, and the survey's
+  otherwise.** The next section says how, and what is still a guess.
 - **The river** is the mapped water, cut out of the board 4.5 m down. Ships
   (HMS Belfast, the Golden Hinde) sit at the waterline. Bridge decks are the
   mapped `man_made=bridge` outlines at a height given by hand for each bridge;
@@ -199,6 +168,68 @@ Once, on 2026-11-15, from OpenStreetMap through the Overpass API, for the box
 - Positions are in decimeters and heights in centimeters, each coordinate the
   difference from the one before. The layout of every layer is in the comment
   at the top of `city.js`.
+
+### Heights from the survey
+
+Done 2026-11-15, as step 1 of the table further down (*"Then do Option 1"*).
+The map knew the height of a third of the buildings. Another third it gave
+only as a count of floors, and the rest, 36%, were guesses. The survey
+measures them.
+
+- **The survey** is the Environment Agency's LIDAR Composite 2022 at 1 m: the
+  first-return surface model less the terrain model is the height of whatever
+  stands on each square meter. Four 5 km tiles cover the board (TQ27ne,
+  TQ28se, TQ37nw, TQ38sw), and every cell of it has both surfaces. It is
+  under the Open Government Licence, which asks for the credit that is now
+  under the map and in `city.json`'s `about`.
+- **Lined up with the map** by sliding one over the other until the most
+  footprints sat on tall cells: 2 m west and half a meter south, which took
+  the share from 89.6% to 92.9%.
+- **Which reading is the roof** was settled against the 746 heights people
+  have mapped by hand. A flat roof stands at the middle height of its
+  footprint (5% over the mapped height, at the median), and a shaped one is
+  measured to its ridge (1% over).
+
+| what the map says of a building | what is drawn | how many |
+|---|---|---|
+| a `height` | the map's height. The survey can be older than the building, and it reads glass badly: over most of one of the Shard's parts it sees nothing at all | 3,080 |
+| a count of floors | the survey, unless the two differ by more than about two to one, when they are not looking at the same building and the floors stay at 3.2 m each | 2,859 measured, 496 kept |
+| nothing | the survey | 3,381 |
+| nothing, and the survey finds nothing standing | 3 m, or the little the survey shows. These are pontoons, yards, and kiosks, which used to be drawn as tall as their neighbors | 150 |
+| nothing, and too small for the survey to measure | the median of the nine nearest known heights within 160 m, as before | 38 |
+
+- [WARNING] **Floors were the surprise.** A count of floors at 3.2 m each
+  came out 19% low at the median, so the survey replaces it wherever the two
+  are plausibly the same building. Of the 6,240 buildings it measured, 3,455
+  moved by more than 3 m and 712 by more than 10 m.
+- **A part that starts above the ground keeps the map's word.** The survey
+  sees only the top of whatever is highest at a spot.
+- **Roofs:** where the map names no roof shape and the footprint is one plain
+  building, a gable, a hip, a pyramid, and a lean-to are each fitted to the
+  survey, and the best is built if it is believable: close to the survey,
+  much better than a flat roof would be, and at a slope real roofs have. That
+  gave 309 roofs (266 gables, 34 hips, 9 lean-tos). Tested on the roofs the
+  map does name, it calls 5 of 1,081 flat roofs pitched, and finds 87 of 709
+  pitched ones. [WARNING] So most pitched roofs on small houses are still
+  drawn flat: a house here is five meters wide and the survey has one reading
+  a meter. That is the price of not inventing any. The first thresholds, set
+  by eye, built 203 lean-tos, half of them rising more than 5 m: buildings
+  with a tall half and a low half, not roofs. Do not loosen them without
+  running that test again.
+- **Trees:** each mapped tree takes the tallest reading within 4 m of it that
+  is not on a building, if that is between 4.5 and 38 m. That measured 4,035
+  of the 6,744, at a median of 11 m and up to 34 m; the planes along the
+  river are the tall ones. `treeTops` in `city.json` holds them in
+  decimeters, in the order of `trees`, with 0 for a tree the survey did not
+  find, which `city.js` draws as a young one of 5 to 8 m. The survey is
+  flown mostly in winter, when the leaves are off, so a thin tree can be
+  missed.
+- **To do it again:** the tiles come from the survey catalogue at
+  `environment.data.gov.uk` (search by a polygon, then two zips a tile, the
+  surface and the terrain, about 70 MB each, GeoTIFF). Positions go from
+  latitude and longitude to the National Grid, which over this board is a
+  turn of a degree and a half and a slide, to within half a meter. The
+  rasters are not kept; they are more than half a gigabyte.
 
 **Landmarks are named as the camera comes near** (2026-11-15: *"Label the
 landmarks nearby as one goes by or fly-by"*). `places` in `city.json` holds
@@ -250,7 +281,7 @@ what it costs:
 
 | step | what it adds | from | what it costs |
 |---|---|---|---|
-| 1. True shapes | measured heights for the quarter of buildings now guessed, real roof forms, tree heights | Environment Agency LIDAR, 1 m surface and terrain models | a few hours; the data file grows a little |
+| 1. True shapes. [DONE] 2026-11-15, see above | measured heights for the buildings that were guessed, real roof forms, tree heights | Environment Agency LIDAR, 1 m surface and terrain models | took an evening; the data file grew by 90 KB, 43 KB of it after gzip |
 | 2. Light and surface | softer shadows, shade in corners, sky and reflections on glass and water, more kinds of window, clutter on roofs | nothing new; shader work | a few hours; no weight |
 | 3. Photograph from above | real roofs and ground, as seen from the air | Environment Agency vertical aerial photography, 10 to 50 cm | most of a day; several megabytes of imagery; facades stay plain |
 | 4. A painted map | a fixed view redrawn by an image model, the Tiny London method run on our own renders | our model | GPU or API money; cannot turn or fly; its detail is invented |
@@ -260,15 +291,20 @@ what it costs:
   constraints as 5 km GeoTIFF tiles and covers most of England; the aerial
   photography is under the Open Government Licence but was flown project by
   project, so it is patchy. No open model of London with roof shapes was found.
-- [WARNING] **Not checked:** whether either dataset covers every tile of this
-  board. Look at the survey index before promising step 1 or 3.
+- **Checked since:** the LIDAR covers every cell of the board. For step 3,
+  the same catalogue lists vertical aerial photography for all four tiles,
+  but the only one it lists for them is from 2008, at 40 cm. [WARNING] That
+  is eighteen years old: no Shard, no Blackfriars station roof. Look for a
+  newer flight before building on it.
 - **The ceiling:** photo-real facades across a whole city exist only in
   Google's and other paid photogrammetry. Open data has no pictures of walls.
   Step 5 is the only owned route to real photo-realism, one place at a time.
-- **The order to take them in:** 1, then 2. Check 3's coverage before
-  deciding on it. 4 is an art piece, not a truer model.
+- **The order to take them in:** 1 is done; 2 is next, and he asked to be
+  reminded of it. 3 wants a newer photograph than the one found. 4 is an art
+  piece, not a truer model.
 
-**The credit line under the map stays.** OpenStreetMap's license asks for it.
+**The credit line under the map stays.** OpenStreetMap's license asks for
+its half, and the Open Government Licence for the Environment Agency's.
 
 **Tested** in `_test/`: the page settles as the model or the picture with no
 errors, the picture and its pins work with WebGL taken away and with JavaScript
