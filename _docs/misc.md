@@ -154,11 +154,17 @@ in the HTML are where the script had put that pin in the same view. Remake
 both whenever the look or the stops change.
 
 **The article's picture**, `static/2026/london-southbank-walk.webp`, is the
-same overview with the pins left in and no background at all, so it sits on
-the article's page in Light and in Dark. WebGL was asked for a see-through
-canvas and cleared to nothing for that one render; the page itself is never
-see-through. It replaced an earlier drawing of fifteen stops. Remake it with
-the other two.
+whole board with north straight up, so it lies level across the page, with the
+pins left in and no background at all, so it sits on the article in Light and
+in Dark. It is 2880 by 1200 and goes in a `<figure class="gallery">`, which
+carries it past the article to the width of the window, up to 1600 pixels
+(2026-11-15: *"north up, so it is horizontal and not slanted. And make the
+image large to extend beyond the article"*). Three things were done for that
+one render and are not in the page: WebGL was asked for a see-through canvas
+and cleared to nothing; the lens was lengthened from 7 degrees to 1.6, so the
+board's sides do not lean in; and the view was zoomed until the board filled
+95% of a 1200 by 500 frame. The page's own opening view is still turned
+fourteen degrees. Remake the picture with the other two.
 
 **The credit line under the map stays.** OpenStreetMap's license asks for it.
 

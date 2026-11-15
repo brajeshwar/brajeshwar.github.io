@@ -47,7 +47,8 @@ was 15): across Tower Bridge and back along the north bank. He was offered Googl
 tiles and chose the self-contained model. Everything is in [`misc.md`](misc.md).
 [WARNING] The script that made `city.json` is not in the repo, by the misc rule. `misc.md` says
 how the data was made; a new route means making it again.
-The article shows the model too: `static/2026/london-southbank-walk.webp`, on no background, and
+The article shows the model too: `static/2026/london-southbank-walk.webp`, north up, on no
+background, in a `figure.gallery` that bleeds past the article; and
 a "The Way Back" list of the seven stops on the return (his word, 2026-11-15: "Update the article
 and the correct image with this better rendered image"). The prose is his to rewrite.
 

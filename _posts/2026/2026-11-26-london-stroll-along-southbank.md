@@ -4,7 +4,7 @@ Every time I am in London, I walk the South Bank. It has been that way since my 
 
 I start at Waterloo Station, find the river, and keep it on my left all the way to Tower Bridge. That is the whole plan. No tickets to book, nothing to queue for, unless I want to. It is a few kilometers of London at walking pace.
 
-<a href="/misc/london-southbank/"><img class="full" src="/static/2026/london-southbank-walk.webp" alt="A model of central London along the Thames, with the walk marked on it: along the South Bank from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank, with twenty-two numbered stops"></a>
+<figure class="gallery"><a href="/misc/london-southbank/"><img src="/static/2026/london-southbank-walk.webp" width="2880" height="1200" alt="A model of central London along the Thames, north at the top, with the walk marked on it: along the South Bank from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank, with twenty-two numbered stops"></a></figure>
 
 The picture is a model. [Open it](/misc/london-southbank/) to turn it, tip it, and fly the walk from stop to stop, with the landmarks named as you pass.
 
