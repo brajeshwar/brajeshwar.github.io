@@ -40,13 +40,16 @@ session** — nothing else announces that the site has stopped updating.
 
 **`/misc/london-southbank/` IS A 3D MODEL NOW (2026-11-15, not yet pushed when written).** The
 whole of the Thames from Westminster to Tower Bridge, from OpenStreetMap, drawn by WebGL2 with no
-library: turn it, move it, and fly the walk stop to stop. The walk became a loop of 22 stops (it
+library: turn it, move it, and fly the walk stop to stop. The hands are the Greenage map's (drag
+turns, right-drag moves). [WARNING] His Mac has Reduce Motion on, and the flights play anyway, by
+design; `misc.md` says why. The walk became a loop of 22 stops (it
 was 15): across Tower Bridge and back along the north bank. He was offered Google's photo-real
 tiles and chose the self-contained model. Everything is in [`misc.md`](misc.md).
 [WARNING] The script that made `city.json` is not in the repo, by the misc rule. `misc.md` says
 how the data was made; a new route means making it again.
-[WARNING] The article still shows the older 15-stop drawing (`static/2026/london-southbank-walk.svg`).
-That is content and another session's work; it was left alone.
+The article shows the model too: `static/2026/london-southbank-walk.webp`, on no background, and
+a "The Way Back" list of the seven stops on the return (his word, 2026-11-15: "Update the article
+and the correct image with this better rendered image"). The prose is his to rewrite.
 
 ## Where we were (updated 2026-11-05, fourteenth session — CLOSED)
 

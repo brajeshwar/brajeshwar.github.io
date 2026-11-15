@@ -109,10 +109,17 @@ the same number) and a pair in `city.json`'s `stops`, the id and an index into
 existing path is a change to that index; a new path needs the data made again.
 Which way the camera faces at each stop is the `FACING` table in `walk.js`.
 
-**The pictures** are the model's own overview, 1600 by 800, with the pins,
-controls, and caption hidden, once in each color scheme. The `--x` and `--y` on
-each pin in the HTML are where the script had put that pin in the same view.
-Remake both whenever the look or the stops change.
+**The pictures** are the model's own overview, 1600 by 800, with the controls
+and caption hidden, once in each color scheme. The `--x` and `--y` on each pin
+in the HTML are where the script had put that pin in the same view. Remake
+both whenever the look or the stops change.
+
+**The article's picture**, `static/2026/london-southbank-walk.webp`, is the
+same overview with the pins left in and no background at all, so it sits on
+the article's page in Light and in Dark. WebGL was asked for a see-through
+canvas and cleared to nothing for that one render; the page itself is never
+see-through. It replaced an earlier drawing of fifteen stops. Remake it with
+the other two.
 
 **The credit line under the map stays.** OpenStreetMap's license asks for it.
 

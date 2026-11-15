@@ -4,7 +4,7 @@ Every time I am in London, I walk the South Bank. It has been that way since my 
 
 I start at Waterloo Station, find the river, and keep it on my left all the way to Tower Bridge. That is the whole plan. No tickets to book, nothing to queue for, unless I want to. It is a few kilometers of London at walking pace.
 
-<a href="/misc/london-southbank/"><img class="full" src="/static/2026/london-southbank-walk.svg" alt="An isometric map of the walk along the South Bank, from Waterloo Station to Shad Thames, with fifteen numbered stops"></a>
+<a href="/misc/london-southbank/"><img class="full" src="/static/2026/london-southbank-walk.webp" alt="A model of central London along the Thames, with the walk marked on it: along the South Bank from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank, with twenty-two numbered stops"></a>
 
 [Walk it on the map](/misc/london-southbank/), stop by stop, or take the [route on Google Maps](https://maps.app.goo.gl/pcuHCeuadnmsn9Fh6) with you.
 
@@ -25,3 +25,16 @@ I start at Waterloo Station, find the river, and keep it on my left all the way 
 13. **HMS Belfast.** A Second World War cruiser, moored for good.
 14. **Tower Bridge.** The one everyone pictures. Walk across, or just stand and look.
 15. **Shad Thames.** Old warehouses, cobbles, and walkways overhead. The end of the walk.
+
+## The Way Back
+
+Or keep going: across Tower Bridge, and back along the north bank to where it started.
+
+16. **Tower of London.** Nearly a thousand years old, and a fortress, a palace, and a prison in its time.
+17. **The Monument.** Christopher Wren’s column to the Great Fire of 1666.
+18. **St Paul’s Cathedral.** Up Peter’s Hill from the river, with the dome at the end of the street.
+19. **Somerset House.** A courtyard that becomes an ice rink in winter.
+20. **Cleopatra’s Needle.** An Egyptian obelisk, about 3,500 years old. It has nothing to do with Cleopatra.
+21. **Big Ben.** The clock tower of the Houses of Parliament. Cross Westminster Bridge here.
+22. **London Eye.** Waterloo Station is a few minutes away, and the loop is closed.
+{: start="16"}
