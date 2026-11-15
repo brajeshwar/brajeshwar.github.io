@@ -23,21 +23,40 @@ Brajeshwar, 2026-07-27:
 
 ## What exists today
 
-| Script | Raw | Loaded on |
-|---|---:|---|
-| `appearance.js` | 8.2 KB | every page (theme/font/accent panel) |
-| `sidenotes.js` | 11.4 KB | **87 pages** — only where footnotes exist (2026-07-27) |
-| `search.js` | 8.8 KB | every page (⌘K palette, `/`, **and the `/search/` page**) |
-| `anchors.js` | 1.4 KB | **453 posts** — only where an `h2`+ exists (2026-07-27) |
-| `random.js` | 1.8 KB | `/random/` only (2026-07-27) |
-| `strip-nav.js` | 3.0 KB | **home page only** — arrows for the Books/Album strips (2026-08-01) |
-| `back-to-top.js` | 3.5 KB | every page, but **self-limiting** — returns immediately unless the page is >2.5 viewports tall, so a short page pays a parse and nothing else. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
+Re-measured 2026-11-15 from a `make test-site` build, which runs the same minify step as CI.
+Gzip is per file at `-9`. "Pages" is out of the 1,485 built pages that carry the layout.
 
-**All ten together** are ~47.6 KB raw source, **16.7 KB minified / 7.5 KB gzipped** as shipped
-(re-measured 2026-08-01 by running the same `esbuild --minify` step Actions runs — the local
-build skips it, so the files on disk after `jekyll build` are roughly double what ships). The
-table is source size. Each is a separate request, and **no page loads all of them**: the home
-page loads four (`appearance`, `back-to-top`, `search`, `strip-nav`), a typical post three.
+| Script | Source | Shipped (min) | Gzipped | Loaded on |
+|---|---:|---:|---:|---|
+| `appearance.js` | 8.8 KB | 4.3 KB | 1.6 KB | every page (theme/font/accent panel) |
+| `search.js` | 9.1 KB | 3.0 KB | 1.3 KB | every page (⌘K palette, `/`, **and the `/search/` page**) |
+| `back-to-top.js` | 4.3 KB | 1.0 KB | 0.6 KB | every page, but **self-limiting**: returns at once unless the page is >2.5 viewports tall. Its only job is a show/hide threshold; the float-then-settle is CSS `position: sticky` ([`styles.md`](styles.md) §6) |
+| `sidenotes.js` | 13.6 KB | 4.9 KB | 1.9 KB | **93 pages**, only where footnotes exist |
+| `anchors.js` | 2.1 KB | 0.5 KB | 0.3 KB | **457 pages**, only where an `h2`+ exists |
+| `strip-nav.js` | 6.7 KB | 1.3 KB | 0.7 KB | **2 pages** with a Books/Album strip |
+| `random.js` | 2.2 KB | 0.3 KB | 0.3 KB | `/random/` only |
+
+**All seven** are 46.9 KB of source and **15.2 KB shipped, 5.2 KB gzipped**. Most of the source
+is comment prose, which minifies to nothing. No page loads them all: the home page loads four
+(`appearance`, `search`, `strip-nav`, `back-to-top`), a typical post three to five. Beyond those
+files, every page carries one inline script, the no-flash snippet in `default.html` (about
+400 bytes).
+
+### Without any of it (checked 2026-11-15)
+
+Everything is readable and navigable with JavaScript off, and the test suite now holds the site
+to that ([`testing.md`](testing.md), "JavaScript off"). What each script's absence costs:
+
+| Script | With JS off |
+|---|---|
+| `appearance.js` | No panel, **and no button**: `@media (scripting: none)` hides the trigger (chrome.scss). It was the one control that showed and did nothing. The mode follows the OS; with no `data-theme`, auto still applies (themes.scss) |
+| `search.js` | The header icon is a real link to `/search/`, whose `<noscript>` routes to the archives and shelves |
+| `sidenotes.js` | Footnotes stay at the article foot, numbered and linked both ways |
+| `anchors.js` | No `#` links beside headings. The headings keep their ids, so a pasted `#fragment` still lands |
+| `strip-nav.js` | The strips are native horizontal scrollers, and the arrows ship `hidden` |
+| `back-to-top.js` | The link is never inserted, so there is no dead control; scrolling up still works |
+| `random.js` | `/random/` shows its link to the build's chosen post instead of following it |
+| no-flash snippet | The saved mode is not applied; the OS mode is. Only a saved choice is lost |
 
 Since 2026-07-27, scripts load only where there is work to do. `sidenotes.js` is the largest
 script on the site, and only 85 of 1,456 posts have footnotes; on every other page it loaded,

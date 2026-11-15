@@ -87,6 +87,17 @@ test.describe('with JavaScript disabled', () => {
     });
   }
 
+  test('no control shows that needs a script to work', async ({ page }) => {
+    // Every <button> on the site is wired by JS; links are what work without it.
+    // The Appearance trigger was the one that showed and did nothing (chrome.scss).
+    for (const path of ['/', POST_WITH_NOTES, '/archives/', '/about/']) {
+      await page.goto(path);
+      const visible = await page.locator('button').evaluateAll(
+        (bs) => bs.filter((b) => b.checkVisibility()).map((b) => b.getAttribute('aria-label') || b.textContent.trim()));
+      expect(visible, path).toEqual([]);
+    }
+  });
+
   test('footnotes stay real footnotes at the article foot', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(POST_WITH_NOTES);

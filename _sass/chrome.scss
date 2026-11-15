@@ -660,6 +660,15 @@ appearance-settings {
   position: relative;
 }
 
+/* No script, no panel, so no button (2026-11-15). appearance.js builds every
+   option inside the panel; with scripting off the trigger was the one control
+   on the site that showed and did nothing. Search needs no such rule — its
+   trigger is a real link to /search/. A browser too old for `scripting` keeps
+   the button, which is the old behavior and harmless. */
+@media (scripting: none) {
+  appearance-settings { display: none; }
+}
+
 /* .appearance-trigger's own look is .icon-button (see above); nothing
    button-specific is left to say here. */
 
