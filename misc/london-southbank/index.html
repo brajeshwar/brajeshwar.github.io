@@ -85,6 +85,11 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .walk__n { display: inline-grid; place-items: center; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: .7rem; font-weight: 600; margin-right: .3rem; }
 .walk__list li.is-active strong { text-decoration: underline; text-underline-offset: .2em; }
 .walk__turn { margin: 0; padding: .9rem 0 .5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
+
+/* A reader who asks for less motion still gets the flights, which only ever
+   start at their own word; what goes is the motion nobody asked for. Last in
+   the sheet, so it outranks the transitions set above. */
+@media (prefers-reduced-motion: reduce) { .stage canvas, .pin { transition: none; } }
 </style>
 </head>
 <body>

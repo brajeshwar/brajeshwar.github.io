@@ -39,8 +39,17 @@ mid-move carries on a little and eases to rest. On a touchscreen one finger
 turns and two move and zoom. The walk is a loop of twenty-two
 stops, out along the South Bank from Waterloo Station to Shad Thames, across
 Tower Bridge, back along the north bank, and across Westminster Bridge. Next
-and Previous fly the camera along the path from one stop to the other; "Fly the
-walk" does the whole loop.
+and Previous fly the camera low along the path to the neighboring stop. "Fly
+the walk" is one flight round the whole loop, about two minutes, that eases off
+past each stop as its name comes up; Pause leaves the camera where it has got
+to.
+
+[WARNING] The flights play even when the system asks for reduced motion. Every
+flight starts at a button, a key, or a pin, so it is the thing that was asked
+for. The first version obeyed the setting and jumped from stop to stop, which
+is all he saw on his own Mac, where Reduce Motion is on, before asking for the
+fly-by on 2026-11-15. The setting still stops what nobody asked for: the
+carry-on after a drag, the list scrolling itself smoothly, and the fades.
 
 **Photo-real was asked for and declined, 2026-11-15.** The only photo-real 3D
 of London is Google's Photorealistic 3D Tiles, which need an API key with

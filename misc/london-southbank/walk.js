@@ -33,7 +33,6 @@ let stops = [];
 let current = -1;
 let walked = 0;
 let playing = false;
-let pause = 0;
 let queued = false;
 
 // ---- small helpers -----------------------------------------------------
@@ -42,10 +41,12 @@ const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const mix = (a, b, t) => a + (b - a) * t;
 const ease = (t) => t * t * t * (t * (t * 6 - 15) + 10);
 const ramp = (lo, hi, t) => ease(clamp((t - lo) / (hi - lo), 0, 1));
+// The short way round from one bearing to another, in degrees either side.
+const swing = (from, to) => ((((to - from) % 360) + 540) % 360) - 180;
 
 // The view part of the way from a to b, turning the short way round.
 function between(a, b, t) {
-  const turn = ((b.heading - a.heading + 540) % 360) - 180;
+  const turn = swing(a.heading, b.heading);
   return {
     x: mix(a.x, b.x, t),
     y: mix(a.y, b.y, t),
@@ -193,6 +194,12 @@ function stopView(i) {
 }
 
 // ---- flights -----------------------------------------------------------
+//
+// Every flight is one the reader asked for, with a button, a key or a pin,
+// so every flight plays. A system set to reduce motion still gets them: the
+// flight is what the button is for. That setting stops only what nobody
+// asked for, the model carrying on after a drag and the list scrolling
+// itself smoothly.
 
 function fly(to, ms) {
   const from = view;
@@ -200,7 +207,7 @@ function fly(to, ms) {
   // A long hop rises on the way, so both ends are in the picture mid-flight.
   const rise = clamp(far / Math.max(from.span, to.span) - 1, 0, 3) * 0.45;
   flight = {
-    ms: calm.matches ? 0 : ms,
+    ms: ms,
     at: function (t) {
       const v = between(from, to, ease(t));
       v.span *= 1 + rise * Math.sin(Math.PI * t);
@@ -211,41 +218,111 @@ function fly(to, ms) {
   redraw();
 }
 
-// From one stop to the next along the path itself: ease out of the still
-// view, cruise low with the path ahead, ease into the still view at the end.
-function travel(from, to, forward) {
-  const end = model.route[model.route.length - 1][3];
-  let d0 = stops[from].at[3];
+// The camera low over the path at a distance along it, facing a bearing.
+function cruise(distance, heading) {
+  const p = along(distance);
+  return { x: p[0], y: p[1], z: p[2], heading: heading, pitch: 24, span: 190, lens: SHORT };
+}
+
+// How long the walk is, round the whole loop, in meters.
+function loop() {
+  return model.route[model.route.length - 1][3];
+}
+
+// Where the walk has got to, counting the end of the loop as its start.
+function here() {
+  return walked >= loop() - 1 ? 0 : walked;
+}
+
+// To a stop along the path itself: ease down out of the view as it stands,
+// cruise low with the path ahead, ease up into the stop's own view.
+function travel(to, forward) {
+  let d0 = here();
   let d1 = stops[to].at[3];
   // The first stop is also the last: it closes the loop.
-  if (forward && d1 <= d0) d1 = end;
-  if (!forward && d0 <= d1) d0 = end;
-  const a = stopView(from);
-  const b = stopView(to);
+  if (forward && d1 <= d0) d1 = loop();
+  if (!forward && d0 <= d1) d0 = loop();
+  const from = Object.assign({}, view);
+  const still = stopView(to);
   flight = {
-    ms: calm.matches ? 0 : clamp((Math.abs(d1 - d0) / SPEED) * 1000, 2800, 12000),
+    ms: clamp((Math.abs(d1 - d0) / SPEED) * 1000, 2800, 12000),
     at: function (t) {
-      const e = ease(t);
-      walked = mix(d0, d1, e);
-      const p = along(walked);
-      const still = between(a, b, e);
-      still.x = p[0];
-      still.y = p[1];
-      still.z = p[2];
-      const cruise = {
-        x: p[0],
-        y: p[1],
-        z: p[2],
-        heading: bearing(walked, forward),
-        pitch: 24,
-        span: 190,
-        lens: SHORT,
-      };
-      return between(still, cruise, ramp(0, 0.24, t) * (1 - ramp(0.72, 1, t)));
+      walked = mix(d0, d1, ease(t));
+      const low = cruise(walked, bearing(walked, forward));
+      // Join the path from wherever the reader had wandered off to.
+      const joined = ramp(0, 0.24, t);
+      low.x = mix(from.x, low.x, joined);
+      low.y = mix(from.y, low.y, joined);
+      low.z = mix(from.z, low.z, joined);
+      return between(between(from, low, joined), still, ramp(0.72, 1, t));
     },
   };
   flight.start = performance.now();
   redraw();
+}
+
+// How fast the fly-by goes at a distance along the walk, in meters a second:
+// easing away from where it starts, easing off past every stop so its name
+// can be read, and easing in to the end.
+function pace(distance, from) {
+  let near = 0;
+  for (const stop of stops)
+    near = Math.max(near, 1 - ramp(0, 1, Math.abs(distance - stop.at[3]) / 90));
+  const away = mix(0.3, 1, ramp(0, 90, distance - from));
+  const home = mix(0.3, 1, ramp(0, 120, loop() - distance));
+  return SPEED * 0.85 * (1 - 0.62 * near) * away * home;
+}
+
+// The whole walk in one flight: down onto the path from wherever the view
+// is, round the loop without a halt, and up into the first stop's view at
+// the end. Each stop is marked as it comes up.
+function tour() {
+  const from = Object.assign({}, view);
+  const start = here();
+  const end = stopView(0);
+  // A timetable: the seconds it takes to reach every fifth meter.
+  const STEP = 5;
+  const due = [0];
+  for (let d = start; d < loop(); d += STEP) due.push(due[due.length - 1] + STEP / pace(d, start));
+  const total = due[due.length - 1];
+  let facing = bearing(start, true);
+  let last = 0;
+  flight = {
+    ms: total * 1000,
+    at: function (t) {
+      const clock = t * total;
+      let i = 0;
+      let j = due.length - 1;
+      while (j - i > 1) {
+        const mid = (i + j) >> 1;
+        if (due[mid] <= clock) i = mid;
+        else j = mid;
+      }
+      const part = due[j] > due[i] ? (clock - due[i]) / (due[j] - due[i]) : 0;
+      walked = Math.min(start + (i + part) * STEP, loop());
+      // Turn toward the way ahead a little at a time, so a kink in the path
+      // or the turn back down Peter's Hill swings the camera, not snaps it.
+      facing += swing(facing, bearing(walked, true)) * (1 - Math.exp(-(clock - last) / 0.45));
+      last = clock;
+      const low = cruise(walked, facing);
+      const joined = ramp(0, 2.2, clock);
+      low.x = mix(from.x, low.x, joined);
+      low.y = mix(from.y, low.y, joined);
+      low.z = mix(from.z, low.z, joined);
+      approach();
+      return between(between(from, low, joined), end, ramp(total - 2.6, total, clock));
+    },
+  };
+  flight.start = performance.now();
+  redraw();
+}
+
+// The stop the fly-by is coming up to or has just passed.
+function approach() {
+  let n = 0;
+  for (let i = 0; i < stops.length; i++) if (walked >= stops[i].at[3] - 70) n = i;
+  if (walked >= loop() - 70) n = 0;
+  if (n !== current) mark(n);
 }
 
 function land() {
@@ -254,12 +331,10 @@ function land() {
 
 // ---- stops -------------------------------------------------------------
 
-function show(n, how) {
-  const next = ((n % stops.length) + stops.length) % stops.length;
-  const forward = how !== 'back';
-  const adjacent = current >= 0 && (how === 'next' || how === 'back');
-  const from = current;
-  current = next;
+// Make a stop the current one on the page: its pin, its place in the list,
+// the caption, and the address.
+function mark(n) {
+  current = n;
   for (const el of document.querySelectorAll('.is-active')) el.classList.remove('is-active');
   const stop = stops[current];
   stop.item.classList.add('is-active');
@@ -274,43 +349,37 @@ function show(n, how) {
   caption.querySelector('span').textContent = stop.item.querySelector('p').textContent;
   caption.hidden = false;
   history.replaceState(null, '', '#' + stop.item.id);
+}
 
+// Go to a stop: at once, along the path from its neighbor, or through the air.
+function show(n, how) {
+  const walking = current >= 0 && (how === 'next' || how === 'back');
+  mark(((n % stops.length) + stops.length) % stops.length);
   if (how === 'jump') {
-    walked = stop.at[3];
+    walked = stops[current].at[3];
     view = stopView(current);
     land();
     redraw();
-  } else if (adjacent) {
-    travel(from, current, forward);
+  } else if (walking) {
+    travel(current, how === 'next');
   } else {
-    walked = stop.at[3];
+    walked = stops[current].at[3];
     fly(stopView(current), 2200);
   }
 }
 
-// Fly the whole walk: every stop in turn, a breath at each, once round.
+// Fly the whole walk, or stop where it has got to.
 function play(on) {
   playing = on;
   const button = document.querySelector('[data-play]');
   button.setAttribute('aria-pressed', String(on));
   button.textContent = on ? 'Pause' : 'Fly the walk';
-  if (!on) return;
-  if (current < 0) show(0);
-  else show(current + 1, 'next');
-}
-
-function arrived() {
-  if (!playing) return;
-  // Back at Waterloo with the loop walked: the flight is over.
-  if (current === 0 && walked > 0) return play(false);
-  pause = window.setTimeout(function () {
-    if (playing) show(current + 1, 'next');
-  }, 2400);
+  if (on) tour();
+  else land();
 }
 
 // Anything the reader does by hand ends whatever the camera was doing.
 function takeOver() {
-  window.clearTimeout(pause);
   if (playing) play(false);
   land();
   coast = null;
@@ -332,7 +401,7 @@ function paint(now) {
     if (t < 1) redraw();
     else {
       land();
-      arrived();
+      if (playing) play(false);
     }
   }
   if (coast) carryOn(now);
@@ -406,9 +475,8 @@ function zoom(factor, x, y) {
 // jumpy measure of speed, so each is averaged with the one before, and a
 // wild flick is held to a third of a turn and half a screen of travel.
 function rate(before, ms, last) {
-  const turned = ((view.heading - before.heading + 540) % 360) - 180;
   const now = {
-    heading: turned / ms,
+    heading: swing(before.heading, view.heading) / ms,
     pitch: (view.pitch - before.pitch) / ms,
     x: (view.x - before.x) / ms,
     y: (view.y - before.y) / ms,
@@ -520,8 +588,11 @@ canvas.addEventListener('dblclick', function (e) {
 
 // ---- buttons and keys --------------------------------------------------
 
+// Next and Previous. Part way along a leg, Previous is the stop just passed.
 function step(by) {
-  show(current < 0 ? 0 : current + by, by > 0 ? 'next' : 'back');
+  if (current < 0) return show(0);
+  const passed = by < 0 && here() - stops[current].at[3] > 30;
+  show(passed ? current : current + by, by > 0 ? 'next' : 'back');
 }
 
 // A small change to the view where it stands: closer, further, or facing north.
@@ -536,10 +607,7 @@ document.addEventListener('click', function (e) {
   if (!view) return;
   const button = e.target.closest('button');
   if (button && stage.parentNode.contains(button)) {
-    if ('play' in button.dataset) {
-      window.clearTimeout(pause);
-      return play(!playing);
-    }
+    if ('play' in button.dataset) return play(!playing);
     takeOver();
     if (button.dataset.step) return step(Number(button.dataset.step));
     if ('north' in button.dataset) return nudge({ heading: 0 });
