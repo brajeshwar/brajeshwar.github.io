@@ -38,7 +38,14 @@ patch of each Ruby series, and the workflow pinned `3.3.5`. Every run from 2026-
 It now asks for `'3.3'`. **A red cron is easy to miss: check `gh run list` at the start of a
 session** — nothing else announces that the site has stopped updating.
 
-**`/misc/london-southbank/` IS A 3D MODEL NOW (2026-11-15, not yet pushed when written).** The
+**`/misc/london-southbank/` IS A 3D MODEL NOW, AND LIVE (2026-11-15).** Pushed at his word and
+deployed by run 43718658955 on `9359ca85`, every step green, 50 tests and lint. Checked against
+the live site: the page, its three scripts, `city.json` (22 stops, 63 names) and both pictures
+all answer 200.
+[WARNING] The article it goes with is dated 2026-11-26, so `/2026/london-stroll-along-southbank/`
+is a 404 until then, and the model page's back link points at it. He was told; it is his call
+whether that matters for eleven days. The article's picture is already up.
+The
 whole of the Thames from Westminster to Tower Bridge, from OpenStreetMap, drawn by WebGL2 with no
 library: turn it, move it, and fly the walk stop to stop. The hands are the Greenage map's (drag
 turns, right-drag moves). [WARNING] His Mac has Reduce Motion on, and the flights play anyway, by

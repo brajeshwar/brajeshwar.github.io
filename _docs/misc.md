@@ -87,7 +87,7 @@ the key comes from his Google account, with him.
 | `walk.js` | the camera, the flights between stops, the controls |
 | `draw.js` | WebGL2 with no library: the shaders, the sun and its shadow map |
 | `city.js` | reads `city.json` into one mesh |
-| `city.json` | the model as whole numbers, 2.2 MB, about 615 KB gzipped: the ground, the buildings, the walk, the stops, and the landmarks' names |
+| `city.json` | the model as whole numbers, 2.2 MB, and 655 KB as the live site serves it gzipped: the ground, the buildings, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
 
 **Without JavaScript, or without WebGL2,** the page is the picture, the pins on
