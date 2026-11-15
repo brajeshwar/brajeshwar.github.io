@@ -115,7 +115,8 @@ Anything claiming this site parses GFM is wrong; it cost two debugging passes.
 His words: *"Let's get rid of all the emoticons from the code. If you need a warning for
 yourself, use something like `[WARNING]`."* So a warning in a comment is `[WARNING]`, plain
 text, in every code file: Sass, JS, Ruby, shell, layouts, includes, YAML, the Makefile. All 302
-of the old warning signs were swapped on that day. Typographic symbols that name a real glyph
+of the old warning signs were swapped on that day, and the 25 in the template comments of
+`_pages/*.html` followed at his word. Typographic symbols that name a real glyph
 (the ↗ external-link mark, the ↩ footnote return, ©) are not emoji and stay. Content is out of
 scope as always (guardrail 1).
 

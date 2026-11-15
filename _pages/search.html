@@ -5,7 +5,7 @@ style: page-search
 ---
 
 {%- comment -%}
-  ⚠️ REBUILT 2026-08-09 ON THE MODULAR UI — the same component the header's ⌘K
+  [WARNING] REBUILT 2026-08-09 ON THE MODULAR UI — the same component the header's ⌘K
   palette uses. Brajeshwar: "even on the live website, [/search/ does] not have
   the Search Field to do the search. Bring the same Search Input that we have
   globally."
@@ -22,7 +22,7 @@ style: page-search
   pagefind-autofocus.js. search.js mounts the field and focuses it, which is
   what those two did between them, minus the bug.
 
-  ⚠️ NO <script> OR <link> TAGS HERE ANY MORE, deliberately. search.js already
+  [WARNING] NO <script> OR <link> TAGS HERE ANY MORE, deliberately. search.js already
   loads on every page and now looks for #page-search; Pagefind's bundle is
   injected by that script when needed. Adding a tag back here reintroduces
   exactly the Rocket-Loader-ordering problem described above.

@@ -6,7 +6,7 @@ title_style: vertical
 ---
 
 {%- comment -%}
-  ⚠️ THIS IS `.html`, NOT `.md`, AND THAT CHANGES ONE THING ABSOLUTELY.
+  [WARNING] THIS IS `.html`, NOT `.md`, AND THAT CHANGES ONE THING ABSOLUTELY.
   Renamed 2026-08-01: "if books.html would be the easier one to play with the
   HTML markup instead of the Markdown (Markdown for more prose), then let's
   change that to a HTML file."
@@ -27,7 +27,7 @@ title_style: vertical
   the same reason `film.html` and `devices.html` have clean URLs. (It applies to any
   extension — `about.md` lands on `/about/` the same way.)
 
-  ⚠️ THE <h1> IS NOW REAL MARKUP, AND THAT IS A VISIBLE CHANGE. As Markdown,
+  [WARNING] THE <h1> IS NOW REAL MARKUP, AND THAT IS A VISIBLE CHANGE. As Markdown,
   `# Books` was eaten by jekyll-titles-from-headings: the plugin lifts the first
   H1 into the page title and removes it from the body, which is why /books/
   rendered with no heading while /album/ — whose `<h1>` is hand-written HTML —
@@ -42,13 +42,13 @@ title_style: vertical
   get their sizing and figure resets without the layout deciding anything about
   the page.
 
-  ⚠️ This page has no footnotes, and page.html keys `container-ideal` off
+  [WARNING] This page has no footnotes, and page.html keys `container-ideal` off
   `content contains 'class="footnotes"'` — so `.page` is the full band here
   rather than the 665px measure. The grids do not care either way, because
   `.page > .album` takes 100cqi, which is the band in both cases.
 {%- endcomment -%}
 {%- comment -%}
-  ⚠️ NO SORT, NO REVERSE, AND THAT IS NOW LOAD-BEARING RATHER THAN INCIDENTAL.
+  [WARNING] NO SORT, NO REVERSE, AND THAT IS NOW LOAD-BEARING RATHER THAN INCIDENTAL.
   Both grids render `_data/books.yaml` in its own order, which since 2026-08-04
   is newest-FIRST (Brajeshwar: "The last one should be the first in the
   books.yaml as I will add at the top and not at the bottom… This applies the
@@ -65,26 +65,26 @@ title_style: vertical
   then `a.yaml`–`z.yaml`. Split out of the single _data/books.yaml at 167 books ("We have enough list of book and I haven't
   even started adding the ones I missed. This is also going to grow").
 
-  ⚠️ THE `highlight` FLAG AND ITS `where_exp` ARE BOTH GONE. The old note here
+  [WARNING] THE `highlight` FLAG AND ITS `where_exp` ARE BOTH GONE. The old note here
   argued for one file and a flag, because two files meant a book could end up
   in both or neither. That risk is real and is now the trade: being in the
   favorites file IS the flag, so nothing guarantees the grids are disjoint any
   more. A book listed twice will render twice. The header of each data file
   says so.
 
-  ⚠️ FAVORITES ARE OUTSIDE _data/books/ AGAIN, in _data/books-favorites.yaml.
+  [WARNING] FAVORITES ARE OUTSIDE _data/books/ AGAIN, in _data/books-favorites.yaml.
   They spent 2026-08-07 inside it as `_books.yaml`; Jekyll reads an
   underscore-prefixed data file perfectly happily, so `_books` became a key in
   site.data.books sorting between `01` and `a`, and this loop needed a guard to
   stop the page growing a "_BOOKS" section. Moving the file out deletes both
   the key and the guard: `site.data.books` is letters only again.
 
-  ⚠️ site.data.books IS A HASH, NOT AN ARRAY. Jekyll turns a data DIRECTORY
+  [WARNING] site.data.books IS A HASH, NOT AN ARRAY. Jekyll turns a data DIRECTORY
   into a hash keyed by filename, iterated in filename order — which is what
   puts 01 first and z last with no sort filter. `slice`, `where` and `where_exp`
   all fail on it; index.html hit exactly that and is fixed the same way.
 
-  ⚠️ SECTION HEADINGS COME FROM THE FILENAME, never from the titles. Deriving
+  [WARNING] SECTION HEADINGS COME FROM THE FILENAME, never from the titles. Deriving
   them from the first letter of each title would put "The Children" under T,
   which is the thing being fixed: articles are stripped when a book is FILED,
   so the file is the only place that knows the right letter.
@@ -93,7 +93,7 @@ title_style: vertical
 {%- assign favorites = site.data.books-favorites -%}
 
 {%- comment -%}
-  ⚠️ TWO PARAGRAPHS, EACH INTRODUCING WHAT FOLLOWS IT — the whole shape of the
+  [WARNING] TWO PARAGRAPHS, EACH INTRODUCING WHAT FOLLOWS IT — the whole shape of the
   page, and the third arrangement it has been through (2026-08-08). The order
   is now: title, the favorites sentence, the favorites grid, the years
   sentence, then the A-Z shelf.
@@ -150,7 +150,7 @@ Since 2018, I have listed the interesting ones I read each year:
   with no books, which is why there is no x.yaml and no stray "X" on the page.
 {%- endcomment -%}
 {%- comment -%}
-  ⚠️ `group[0]` / `group[1]` CANNOT GO STRAIGHT INTO AN INCLUDE. Jekyll's
+  [WARNING] `group[0]` / `group[1]` CANNOT GO STRAIGHT INTO AN INCLUDE. Jekyll's
   include tag validates its parameters against a simple-variable pattern and
   rejects a bracket lookup with "Invalid syntax for include tag" — which is a
   parse error, so the whole build stops. Assign them out first.
@@ -172,7 +172,7 @@ Since 2018, I have listed the interesting ones I read each year:
 </div>
 
 {%- comment -%}
-  ⚠️ THE LINK LISTS SIT AFTER THE GRIDS, NOT BETWEEN THEM (2026-08-01: "the
+  [WARNING] THE LINK LISTS SIT AFTER THE GRIDS, NOT BETWEEN THEM (2026-08-01: "the
   prose in the middle is not working, move it to the bottom after the books").
   They were briefly in the middle, where they cut the page in half: two grids
   that belong together read as one shelf, and a wall of links dropped between
@@ -185,13 +185,13 @@ Since 2018, I have listed the interesting ones I read each year:
   their own. A bare `column-count: 3` would have forced three columns onto a
   phone.
 
-  ⚠️ DELIBERATELY NOT `container-ideal`. These sit outside the reading measure:
+  [WARNING] DELIBERATELY NOT `container-ideal`. These sit outside the reading measure:
   665px is right for sentences and wrong for three columns of links. They take
   the band, which is where the 1024px in the request comes from.
 {%- endcomment -%}
 
 {%- comment -%}
-  ⚠️ ONE LIST, NOT TWO (2026-08-01: "combine Free and Open Source Books and
+  [WARNING] ONE LIST, NOT TWO (2026-08-01: "combine Free and Open Source Books and
   References into a single one, don't separate them. Let them flow across the
   column"). Two lists meant two column blocks stacked, each balancing its own
   items — ten across three columns, then a heading, then six across three more.

@@ -24,7 +24,7 @@ title_style: vertical
   and nothing else. Its own CSS only ever touches `.item__cards`, `figure` and
   `figcaption`, none of which this page uses, so it is inert here.
 
-  ⚠️ AND NOTHING HERE OPTS INTO THE MEASURE. That is the second half of the
+  [WARNING] AND NOTHING HERE OPTS INTO THE MEASURE. That is the second half of the
   same request, and it took two passes to land. The first version copied
   /film/ — structure at the band, prose at `container-ideal` — which measured
   as "full width" but did not READ as it: everything above the fold on this
@@ -40,11 +40,11 @@ title_style: vertical
   paragraphs of running prose — put `container-ideal` back on that ONE element
   if it reads badly, and the rest of the page stays wide.
 
-  ⚠️ page.html's `{{ page_edited }}` stamp does not exist on this layout. This
+  [WARNING] page.html's `{{ page_edited }}` stamp does not exist on this layout. This
   page carries no `edited:` key, so nothing is lost — but adding one would
   silently render nothing.
 
-  ⚠️ THE ROWS REUSE .strip__viewport / .strip FROM home.css ON PURPOSE.
+  [WARNING] THE ROWS REUSE .strip__viewport / .strip FROM home.css ON PURPOSE.
   That is the site's horizontal scroller: a native `overflow-x: auto` rail
   with arrow buttons that strip-nav.js reveals only after measuring a real
   overflow. Writing a second one here would mean a second thing to keep
@@ -69,7 +69,7 @@ title_style: vertical
 </blockquote>
 
 {%- comment -%}
-  ⚠️ THE LEDE HAS TO CARRY THE TENSION IN THE TITLE, or the page reads as the
+  [WARNING] THE LEDE HAS TO CARRY THE TENSION IN THE TITLE, or the page reads as the
   opposite of what it is. "Own" is the only honest superset — everything here
   is owned, and unlike "Wear" it does not break the first time a laptop or a
   bicycle joins the list. But a page called Own, on a site about minimizing,
@@ -94,7 +94,7 @@ title_style: vertical
   {%- for row in section.rows %}
   <div class="own__row">
     {%- comment -%}
-      ⚠️ THE LABEL IS WRAPPED, even though it is usually the only thing in
+      [WARNING] THE LABEL IS WRAPPED, even though it is usually the only thing in
       there. The row is a two-column grid, and an optional third child
       (the cross-link) was auto-placed into the RAIL's cell and pushed the rail
       onto a second grid row. Pinning all three with grid-column/grid-row fixed
@@ -142,7 +142,7 @@ title_style: vertical
           {%- endif -%}
 
             {%- comment -%}
-              ⚠️ THE MARK IS ALWAYS RENDERED, with or without a picture, and
+              [WARNING] THE MARK IS ALWAYS RENDERED, with or without a picture, and
               the box is the same size either way. So the row never reflows
               when a logo arrives, and a line without one reads as designed
               rather than as a missing image — the /books/ bookplate idea
