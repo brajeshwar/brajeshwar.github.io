@@ -221,6 +221,28 @@ test('no emoji in code, data, templates or docs', () => {
   expect(found).toEqual([]);
 });
 
+// ---- One-off pages (_docs/misc.md) -------------------------------------
+
+test('the South Bank walk keeps to its folder, and its list matches its model', () => {
+  const dir = '/misc/london-southbank/';
+  const html = read(dir + 'index.html');
+  // Nothing of the site's, and nothing fetched from anywhere else: every
+  // file the page names is in the folder beside it.
+  expect(html).not.toContain('/assets/');
+  const named = [...html.matchAll(/<(?:script|img|source)\b[^>]*?\s(?:src|srcset)="([^"]+)"/g)];
+  expect(named.length).toBeGreaterThan(2);
+  for (const [, file] of named) expect(exists(dir + file), file).toBe(true);
+  for (const file of ['city.js', 'draw.js', 'city.json'])
+    expect(exists(dir + file), file).toBe(true);
+  // A stop is in two places, the list in the page and the model's data. One
+  // without the other is a pin that goes nowhere or a stop with no pin.
+  const modelled = JSON.parse(read(dir + 'city.json'))
+    .stops.map((s) => s[0])
+    .sort();
+  const listed = [...html.matchAll(/<li id="([^"]+)" data-stop="\d+"/g)].map((m) => m[1]).sort();
+  expect(listed).toEqual(modelled);
+});
+
 // ---- Pages and assets --------------------------------------------------
 
 test('every page has a title and a language', () => {

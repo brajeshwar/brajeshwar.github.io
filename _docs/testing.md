@@ -41,6 +41,7 @@ GitHub's runner image already has Chrome, so the daily cron downloads nothing.
 | every `/assets/` reference exists | hash renaming |
 | `sidenotes.js`, `anchors.js` and `strip-nav.js` load only where they have work | the Liquid `assign … contains` trap |
 | the Pagefind index exists | search |
+| the South Bank walk names no file outside its folder, and its list of stops matches its model | [`misc.md`](misc.md): a one-off is self-contained, and a stop lives in two files |
 
 **`_test/browser.spec.mjs`** runs in real Chrome on a plain static server, like Pages. The
 server is `_test/serve.mjs`, about forty lines of Node. Python's `http.server` did the job
@@ -56,6 +57,10 @@ to match the old favicon filter, so it had been hiding a broken image on `/about
 - **Sidenotes** appear on a wide screen.
 - **JavaScript off** (guardrail 4): every page above renders its content, footnotes stay
   footnotes, `/search/` shows its `<noscript>` way out, and auto still follows a dark OS.
+- **`/misc/london-southbank/`**: the page settles as the model or as the picture, with no
+  errors either way. CI's Chrome may have no WebGL2, so the test accepts both and then takes
+  WebGL away on purpose: the picture loads, every pin shows and leads to its stop, and no
+  button is left on show. The same holds with JavaScript off.
 
 The JS-off theme test found a real bug the day it was written: with scripting off, `<html>`
 never gets `data-theme="auto"`, so a dark-OS reader got the light page. `themes.scss` now
@@ -83,15 +88,15 @@ Added 2026-11-15: *"Can we lint our code and format (prettifier) them?"*
     make lint      # check: ESLint, Stylelint, prettier --check. CI runs this, after the tests
     make format    # rewrite in the house style, then run make lint
 
-**Scope is the code and nothing else:** `_sass/`, `assets/scripts/`, `scripts/` and `_test/`,
-plus the config files. Never `_posts`, `_pages`, `_drafts` or `_data` (guardrail 1), and
+**Scope is the code and nothing else:** `_sass/`, `assets/scripts/`, `misc/**/*.js`,
+`scripts/` and `_test/`, plus the config files. Never `_posts`, `_pages`, `_drafts` or `_data` (guardrail 1), and
 never `_layouts` or `_includes`, because Prettier does not understand Liquid and would mangle it.
 The paths live in `package.json`'s `lint` and `format` scripts.
 
 | tool | config | what it holds the code to |
 |---|---|---|
 | Prettier | `.prettierrc.mjs` | layout: single quotes, 100 columns, ES5 trailing commas |
-| ESLint | `eslint.config.mjs` | `@eslint/js` recommended, correctness only. Browser globals for `assets/scripts`, Node for the rest |
+| ESLint | `eslint.config.mjs` | `@eslint/js` recommended, correctness only. Browser globals for `assets/scripts` and `misc` (whose scripts are modules), Node for the rest |
 | Stylelint | `.stylelintrc.mjs` | `stylelint-config-recommended-scss`, correctness only, three rules off (each says why) |
 
 - [WARNING] **Prettier removed the hand-aligned columns** in the Sass (the `:` in `config.scss`'s

@@ -4,8 +4,8 @@
   "description": "Dev tooling only. Nothing here ships to the site; see _docs/testing.md.",
   "scripts": {
     "test": "playwright test -c _test/playwright.config.mjs",
-    "lint": "eslint assets/scripts scripts _test eslint.config.mjs .prettierrc.mjs .stylelintrc.mjs && stylelint \"_sass/**/*.scss\" && prettier --check \"_sass/**/*.scss\" \"assets/scripts/**/*.js\" \"scripts/**/*.mjs\" \"_test/*.mjs\" \"*.mjs\" \".*.mjs\"",
-    "format": "prettier --write \"_sass/**/*.scss\" \"assets/scripts/**/*.js\" \"scripts/**/*.mjs\" \"_test/*.mjs\" \"*.mjs\" \".*.mjs\""
+    "lint": "eslint assets/scripts misc scripts _test eslint.config.mjs .prettierrc.mjs .stylelintrc.mjs && stylelint \"_sass/**/*.scss\" && prettier --check \"_sass/**/*.scss\" \"assets/scripts/**/*.js\" \"misc/**/*.js\" \"scripts/**/*.mjs\" \"_test/*.mjs\" \"*.mjs\" \".*.mjs\"",
+    "format": "prettier --write \"_sass/**/*.scss\" \"assets/scripts/**/*.js\" \"misc/**/*.js\" \"scripts/**/*.mjs\" \"_test/*.mjs\" \"*.mjs\" \".*.mjs\""
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

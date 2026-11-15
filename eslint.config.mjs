@@ -22,6 +22,11 @@ export default [
     languageOptions: { sourceType: 'script', globals: globals.browser },
   },
   {
+    // A one-off under misc/ may split its script into native modules.
+    files: ['misc/**/*.js'],
+    languageOptions: { sourceType: 'module', globals: globals.browser },
+  },
+  {
     // Build scripts and tests run in Node.
     files: ['scripts/**/*.mjs', '_test/**/*.mjs', '*.mjs'],
     languageOptions: { sourceType: 'module', globals: globals.node },

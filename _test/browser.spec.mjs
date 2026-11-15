@@ -121,6 +121,56 @@ test('footnotes become sidenotes on a wide screen', async ({ page }) => {
   await expect(page.locator('.sidenote').first()).toBeVisible();
 });
 
+// ---- /misc/london-southbank/: the model, or the picture ------------------
+
+const WALK = '/misc/london-southbank/';
+
+test('the walk settles as the model or the picture, with no errors', async ({ page }) => {
+  // Not every Chrome has WebGL2 (CI's may not). Either end is right; hanging
+  // between them, or throwing on the way, is not.
+  const errors = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+  await page.goto(WALK);
+  const stage = page.locator('.stage');
+  await expect(stage).toHaveClass(/is-live|is-still/, { timeout: 20000 });
+  if (await stage.evaluate((el) => el.classList.contains('is-live'))) {
+    await page.getByRole('button', { name: 'Next' }).click();
+    await expect(page.locator('#waterloo')).toHaveClass(/is-active/);
+    await expect(page.locator('.caption')).toContainText('Waterloo Station');
+  }
+  expect(errors.filter((e) => !e.startsWith('Failed to load resource'))).toEqual([]);
+});
+
+test('the walk without WebGL is the picture, its pins and no dead control', async ({ page }) => {
+  await page.addInitScript(() => {
+    HTMLCanvasElement.prototype.getContext = () => null;
+  });
+  await page.goto(WALK);
+  await expect(page.locator('.stage')).toHaveClass(/is-still/);
+  await expectStill(page);
+});
+
+// The walk with no model: the picture has loaded, every pin shows and leads
+// to a stop in the list, and no button is on show that could do nothing.
+async function expectStill(page) {
+  const picture = page.locator('.stage img');
+  await expect(picture).toBeVisible();
+  await expect
+    .poll(() => picture.evaluate((img) => img.complete && img.naturalWidth > 0))
+    .toBe(true);
+  const pins = await page.locator('.stage .pin').all();
+  expect(pins.length).toBeGreaterThan(10);
+  for (const pin of pins) {
+    await expect(pin).toBeVisible();
+    await expect(page.locator(await pin.getAttribute('href'))).toBeVisible();
+  }
+  const buttons = await page
+    .locator('button')
+    .evaluateAll((bs) => bs.filter((b) => b.checkVisibility()).length);
+  expect(buttons).toBe(0);
+}
+
 // ---- JavaScript off: the site still works (guardrail 4) -----------------
 
 test.describe('with JavaScript disabled', () => {
@@ -156,6 +206,11 @@ test.describe('with JavaScript disabled', () => {
         );
       expect(visible, path).toEqual([]);
     }
+  });
+
+  test('the walk is a picture whose pins lead to the list', async ({ page }) => {
+    await page.goto(WALK);
+    await expectStill(page);
   });
 
   test('footnotes stay real footnotes at the article foot', async ({ page }) => {
