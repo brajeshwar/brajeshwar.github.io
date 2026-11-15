@@ -42,7 +42,11 @@ GitHub's runner image already has Chrome, so the daily cron downloads nothing.
 | `sidenotes.js`, `anchors.js` and `strip-nav.js` load only where they have work | the Liquid `assign … contains` trap |
 | the Pagefind index exists | search |
 
-**`_test/browser.spec.mjs`** runs in real Chrome on a plain static server, like Pages:
+**`_test/browser.spec.mjs`** runs in real Chrome on a plain static server, like Pages. The
+server is `_test/serve.mjs`, about forty lines of Node. Python's `http.server` did the job
+until 2026-11-15, but it queues only five connections, and parallel workers on macOS got
+reset ("Failed to load resource" in tests with nothing wrong). Its 404 message also happened
+to match the old favicon filter, so it had been hiding a broken image on `/about/`:
 
 - **Theme matrix**: OS light/dark × saved light/dark/auto gives the right `color-scheme`, meta
   and page color. The Light/Dark toggle flips at once, and switching back to the system's

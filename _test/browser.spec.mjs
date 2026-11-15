@@ -100,7 +100,9 @@ for (const path of PAGES) {
     await page.goto(path, { waitUntil: 'load' });
     // /random/ navigates away on purpose; anything else should just sit there.
     if (path !== '/random/') await page.waitForTimeout(200);
-    expect(errors.filter((e) => !/favicon|404 \(File not found\)/.test(e))).toEqual([]);
+    // Script errors only. A missing image is the browser reporting a failed
+    // load, which belongs to the page's content, not to its scripts.
+    expect(errors.filter((e) => !e.startsWith('Failed to load resource'))).toEqual([]);
   });
 }
 

@@ -22,12 +22,11 @@ export default defineConfig({
   },
   // A static host and nothing more, like GitHub Pages: /x/ serves x/index.html.
   webServer: {
-    command: `python3 -m http.server ${PORT} --bind 127.0.0.1 --directory ${SITE}`,
+    command: `node _test/serve.mjs ${SITE} ${PORT}`,
     url: `http://127.0.0.1:${PORT}/`,
     // Relative to the repo root, like SITE; Playwright would default to _test/.
     cwd: process.cwd(),
     reuseExistingServer: false,
     stdout: 'ignore',
-    stderr: 'ignore', // http.server logs every request to stderr
   },
 });
