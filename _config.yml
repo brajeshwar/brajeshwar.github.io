@@ -1,5 +1,9 @@
 title: 'Brajeshwar'
 description: 'I’m on an adventure to create beautiful, meaningful products that improve the world for my daughters and their friends.'
+# The home page's greeting: this line, then the description above. Moved here
+# from _data/ui.yaml on 2026-11-15, which held only these two lines; the
+# second was the description word for word, so it is read from there now.
+intro: 'Hi, my name is Brajeshwar.'
 
 url: 'https://brajeshwar.com'
 baseurl: ''
