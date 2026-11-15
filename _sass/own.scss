@@ -395,13 +395,18 @@
   }
 
   .page-own {
-    --own-item: 6.5rem;
+    --own-item: 5.75rem;
     --own-pic: 1.6rem;
   }
 
   .page-own .own__rail {
     flex-wrap: wrap;
     gap: 0.4rem 0.6rem;
+    line-height: 1.25;
+  }
+
+  .page-own .own__note {
+    margin-top: 0;
   }
 
   .page-own .own__section {
