@@ -153,28 +153,67 @@ function ride(distance) {
   };
 }
 
-// ---- the look, from the page's own colors ----------------------------
+// ---- the look ----------------------------------------------------------
+//
+// The paper and the ink are the page's own, read from its CSS. The model's
+// colors are here: a tint for each kind of ground, and one for the buildings,
+// which keep the tone each was given and take only a little warmth or cool.
+
+const color = (hex) => [0, 2, 4].map((i) => parseInt(hex.slice(1 + i, 3 + i), 16) / 255);
 
 function shade(name) {
   const hex = getComputedStyle(root).getPropertyValue(name).trim().replace('#', '');
-  const full = hex.length === 3 ? hex.replace(/./g, '$&$&') : hex;
-  return [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16) / 255);
+  return color('#' + (hex.length === 3 ? hex.replace(/./g, '$&$&') : hex));
 }
 
-// Tones for the materials in city.js, in its order: wall and roof (unused
-// here, they carry their own), land, water, six kinds of road, green, tree,
-// river wall, bridge.
-const DAY = [0, 0, 0.9, 0.73, 0.985, 0.965, 0.95, 0.94, 0.945, 0.62, 0.82, 0.6, 0.8, 0.86, 0, 0];
-const NIGHT = [0, 0, 0.13, 0.05, 0.2, 0.18, 0.165, 0.155, 0.16, 0.28, 0.105, 0.19, 0.09, 0.2, 0, 0];
+// By material, in city.js's order. Walls and roofs are not here; they carry
+// a tone of their own and take the `walls` tint.
+const DAY = {
+  land: '#e8e4da',
+  water: '#a8c5d8',
+  roads: ['#fbf9f4', '#f6f3ec', '#f0ebe0', '#eeeae1', '#efebe2', '#9c9790'],
+  green: '#c3d6ae',
+  tree: '#7da06b',
+  bank: '#cdc7ba',
+  bridge: '#dcd7cc',
+  walls: '#fffaf2',
+  lamp: '#000000',
+};
+const NIGHT = {
+  land: '#22252b',
+  water: '#0c1a28',
+  roads: ['#353941', '#30343b', '#2c3036', '#2a2d33', '#2b2e34', '#4b4a48'],
+  green: '#1e2b22',
+  tree: '#2e4735',
+  bank: '#171a20',
+  bridge: '#33363d',
+  walls: '#eaf0ff',
+  lamp: '#ffd58a',
+};
+
+// The sixteen tints the shader looks up by material number.
+function tints(set) {
+  const list = [set.walls, set.walls, set.land, set.water].concat(set.roads, [
+    set.green,
+    set.tree,
+    set.bank,
+    set.bridge,
+    '#000000',
+    '#000000',
+  ]);
+  return new Float32Array(list.flatMap(color));
+}
 
 function readLook() {
   const paper = shade('--paper');
   const night = paper[0] < 0.5;
+  const set = night ? NIGHT : DAY;
   look = {
     paper: paper,
     ink: shade('--ink'),
-    shade: new Float32Array(night ? NIGHT : DAY),
-    // Sky and sun add up to one on open ground, so a tone means what it says.
+    tints: tints(set),
+    lamp: color(set.lamp),
+    // Sky and sun add up to one on open ground, so a color means what it says.
     light: night ? [0.5, 0.72, 0.2, 0.46] : [0.56, 0.64, 0.6, 1],
     // By day a window is a darker pane; by night one in three is lit.
     glass: night ? [0.4, 0.34, 0.62] : [0.32, 0, 0],

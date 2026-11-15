@@ -3,7 +3,7 @@
  * Three small programs. `depth` draws the city from the sun's side into a
  * shadow map, fitted round whatever the camera can see so a close view gets
  * sharp shadows and a far one gets all of them. `solid` draws it from the camera:
- * a tone for every surface, the sun and the sky on it, the shadow map for
+ * a color for every surface, the sun and the sky on it, the shadow map for
  * what the sun cannot reach, and windows worked out from how far along a
  * wall a point is. `path` draws the walk as a line a few pixels wide however
  * far away it is.
@@ -75,7 +75,8 @@ uniform sampler2DShadow uShadow;
 uniform float uTexel;
 uniform vec3 uSunDir;
 uniform vec3 uEye;
-uniform float uShade[16];
+uniform vec3 uTint[16];    // a color for each material; 0 and 1 tint the buildings
+uniform vec3 uLamp;        // the color of a lit window
 uniform vec4 uLight;   // sky, sun, darkest wall, lightest wall
 uniform vec3 uGlass;   // how dark a window is by day, how many are lit, how bright
 uniform vec4 uFog;     // the paper's color, and how much of it
@@ -106,7 +107,8 @@ void main() {
   float sky = mix(0.74, 1.0, n.z * 0.5 + 0.5) + 0.07 * max(dot(n.xy, -normalize(uSunDir.xy)), 0.0);
   float light = uLight.x * sky + uLight.y * direct;
 
-  float tone = material < 2 ? mix(uLight.z, uLight.w, vLook.y / 15.0) : uShade[material];
+  vec3 tone = uTint[material];
+  if (material < 2) tone *= mix(uLight.z, uLight.w, vLook.y / 15.0);
   float glow = 0.0;
 
   // No two buildings are quite one tone.
@@ -151,9 +153,10 @@ void main() {
     tone *= 0.88 + 0.24 * (vLook.y / 15.0);
   }
 
-  float value = tone * light + glow;
+  // A lit window is lamp-colored by night; by day the glow is the sun on glass.
+  vec3 value = tone * light + glow * (uGlass.y > 0.001 ? uLamp : vec3(1.0));
   float haze = uFog.a * smoothstep(uFar.x, uFar.x + uFar.y, distance(vAt, uEye));
-  color = vec4(mix(vec3(value), uFog.rgb, haze), 1.0);
+  color = vec4(mix(value, uFog.rgb, haze), 1.0);
 }`;
 
 const PATH_VERTEX = `#version 300 es
@@ -567,7 +570,8 @@ export function renderer(canvas, model) {
     gl.uniform2f(solid.at.uBias, sun.texel * 1.6, (sun.texel * 1.2) / (sun.far - sun.near));
     gl.uniform3fv(solid.at.uSunDir, normalize(SUN));
     gl.uniform3fv(solid.at.uEye, camera.eye);
-    gl.uniform1fv(solid.at.uShade, look.shade);
+    gl.uniform3fv(solid.at.uTint, look.tints);
+    gl.uniform3fv(solid.at.uLamp, look.lamp);
     gl.uniform4fv(solid.at.uLight, look.light);
     gl.uniform3fv(solid.at.uGlass, look.glass);
     // Haze belongs to the short lens; the long one sees the far side as clearly as the near.

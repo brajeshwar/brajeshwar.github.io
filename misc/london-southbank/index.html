@@ -11,9 +11,9 @@
 <style>
 /* A one-off, on its own (see _docs/misc.md). Everything this page needs is in
    this folder: nothing here loads the site's stylesheet or scripts, and
-   nothing of it reaches any other page. Grayscale and system fonts, like the
-   site. The model's own colors are in walk.js, which reads --paper and --ink
-   from here so the two cannot drift apart. */
+   nothing of it reaches any other page. The page is the site's grayscale and
+   system fonts; the model alone is tinted, and its colors are in walk.js,
+   which reads --paper and --ink from here for the rest. */
 :root { --paper:#fafafa;--ink:#1a1a1a;--ink-2:#555;--muted:#777;--rule:#d4d4d4;--panel:rgba(250,250,250,.86);--stage:min(76vh,48rem); }
 :root[data-theme="dark"] { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--rule:#3a3a3a;--panel:rgba(22,22,22,.82); color-scheme: dark; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--rule:#3a3a3a;--panel:rgba(22,22,22,.82); } }

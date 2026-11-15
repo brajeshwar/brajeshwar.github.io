@@ -103,10 +103,17 @@ copy breaks without anyone looking at it.
 it (placed in percent, in the HTML), and the list they link to. The script adds
 `is-live` to `.stage` once the model has drawn, or `is-still` if it cannot.
 
-**The look is the page's own.** `walk.js` reads `--paper` and `--ink` from the
-page's CSS and picks a day or a night set of tones by which is darker. By night
-one window in three is lit. Each building's tone is the luminance of its mapped
-color or material, so brick is darker than stone, and still gray.
+**The model is tinted; the page round it is not** (2026-11-15: *"Let's do the
+next step of the Tinted Palette and let's see how that goes"*). This is a
+stated exception to the grayscale rule above, for the model only. The river is
+blue, parks and trees green, the ground and roads warm; `DAY` and `NIGHT` in
+`walk.js` hold a color for each kind of ground, and which set is used goes by
+whether the page's `--paper` is light or dark. By night one window in three is
+lit, lamp yellow. Buildings are still gray: each keeps the luminance of its
+mapped color or material, so brick is darker than stone, and takes only a
+little warmth by day and cool by night. Giving each building its own mapped
+color is the step after this one and needs the data made again. The grayscale
+model is kept as version 0.1.0, below.
 
 ### How city.json was made
 
