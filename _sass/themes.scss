@@ -447,8 +447,14 @@
 :root[data-palette="nord"][data-theme="dark"] { @include nord-dark-accent; }
 :root[data-palette="eink"][data-theme="dark"] { @include eink-dark-semantics; }
 
+/* `:not([data-theme])` is auto too (2026-11-15). The no-flash snippet is what
+   writes data-theme="auto", and it is JavaScript, so with scripting off the
+   attribute never arrives and a dark-OS reader got the LIGHT page — the one
+   case "auto follows the OS" exists for. Same specificity as the auto branch,
+   (0,2,0) and (0,3,0), so the palette guard above holds for it as well. */
 @media (prefers-color-scheme: dark) {
   :root[data-theme="auto"],
+  :root:not([data-theme]),
   :root[data-palette][data-theme="auto"] { @include dark-semantic-tokens; }
 
   :root[data-palette="nord"][data-theme="auto"] { @include nord-dark-accent; }
@@ -508,6 +514,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root[data-theme="auto"],
+  :root:not([data-theme]),
   :root[data-palette][data-theme="auto"] { --code-l: 78%; }
 }
 
