@@ -250,13 +250,18 @@ test('flying the walk brings out its speeds, and they go when it stops', async (
   await expect(speeds).toBeHidden();
   await page.getByRole('button', { name: 'Fly the walk' }).click();
   await expect(speeds).toBeVisible();
+  /* Mid-flight the clicks are dispatched, not performed. A real click
+     first waits for the button to hold still over consecutive frames, and
+     on CI, with no GPU, every frame of a flight is long enough that the
+     wait ran out (2026-11-15, twice). What is tested is what the buttons
+     do, not that a pointer can reach them. */
   // Choosing a speed changes the flight; it does not end it.
   const twice = page.getByRole('button', { name: '2×', exact: true });
-  await twice.click();
+  await twice.dispatchEvent('click');
   await expect(twice).toHaveAttribute('aria-pressed', 'true');
   const pause = page.getByRole('button', { name: 'Pause' });
   await expect(pause).toHaveAttribute('aria-pressed', 'true');
-  await pause.click();
+  await pause.dispatchEvent('click');
   await expect(speeds).toBeHidden();
 });
 
