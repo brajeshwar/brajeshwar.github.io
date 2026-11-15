@@ -238,4 +238,6 @@ Anything claiming this site parses GFM is wrong; it cost two debugging passes.
 
 ## Quick verification before handing back
 `git diff --name-only main` should touch only layouts / includes / css / js / docs / build config —
-never content. Permalinks unchanged. Jekyll builds clean and Pagefind still indexes.
+never content. Permalinks unchanged. **`make test` passes** — it builds its own copy into
+`_test/site/` and runs the suite there, never against the `_site/` a `jekyll serve --future`
+may be writing; CI runs the same suite before deploying ([`_docs/testing.md`](_docs/testing.md)).

@@ -17,9 +17,10 @@
 #
 # Two behavior changes that DON'T bite here, worth knowing if that ever changes:
 #   - setup-node v5+ auto-enables package-manager caching when package.json has
-#     a `packageManager` field. This repo has no package.json at all, so it
-#     cannot engage. If one is ever added, set `package-manager-cache: false`
-#     or make sure a lockfile exists.
+#     a `packageManager` field. A package.json arrived 2026-11-15 (dev tooling,
+#     with a committed lockfile) and deliberately has NO such field, so it
+#     still cannot engage. If one is ever added, set `package-manager-cache:
+#     false` or keep the lockfile.
 #   - upload-pages-artifact v5 defaults include-hidden-files to false. Nothing
 #     shipped is hidden — the only dotfiles in a local _site are .DS_Store,
 #     which are untracked and so never exist in a CI checkout.
@@ -153,12 +154,29 @@ jobs:
       - name: Content-hash assets and rewrite references
         run: node scripts/hash-assets.mjs
 
-      - name: Install Pagefind
-        run: npm install pagefind
-        
+      # package.json + package-lock.json pin the dev tooling (Pagefind, and
+      # Playwright for the tests below) since 2026-11-15; this was a bare
+      # `npm install pagefind`, which took whatever was newest on every run.
+      # Neither package ships to the site — _config.yml excludes both files.
+      - name: Install Node tooling
+        run: npm ci
+
       - name: Build Pagefind index
         run: npx pagefind --site _site
-        
+
+      # The test suite, against the artifact about to deploy (_docs/testing.md).
+      # A failure here stops the deploy, so the live site stays on the last
+      # good build — the same bargain as the album fetch above. Offline and
+      # deterministic on purpose: it gates the daily cron, so nothing in it
+      # may depend on the network or the clock beyond the build's own date.
+      #
+      # Real Chrome via `channel: 'chrome'` — the runner image ships Google
+      # Chrome, so there is no `playwright install` download on every run.
+      - name: Test the build
+        run: npx playwright test -c _test/playwright.config.mjs
+        env:
+          SITE: _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
 

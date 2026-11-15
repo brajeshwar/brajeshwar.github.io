@@ -123,6 +123,8 @@ exclude:
   - TODO.md             # was live at /TODO/ until 2026-08-08 — same class of file as the two above
   - .claude             # slash commands and local settings, not content
   - Makefile            # dev tooling
+  - package.json        # dev tooling (tests, Pagefind) — see _docs/testing.md
+  - package-lock.json
   - scripts             # post-build scripts run from the checkout, not the published site
   # The variable TTF is the SOURCE we re-subset from, not a shipped asset. Only
   # Geist-Variable.woff2 is referenced by themes.css, and the ttf is 169 KB

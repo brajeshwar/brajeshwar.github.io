@@ -12,7 +12,9 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
-const SITE = '_site';
+// Destination defaults to _site; `make test` passes its own build dir, the
+// same override hash-assets.mjs takes.
+const SITE = process.argv[2] || '_site';
 const MANIFEST = join(SITE, 'agents-manifest.json');
 
 const { site, docs } = JSON.parse(readFileSync(MANIFEST, 'utf8'));

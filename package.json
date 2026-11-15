@@ -1,0 +1,12 @@
+{
+  "name": "brajeshwar.com",
+  "private": true,
+  "description": "Dev tooling only. Nothing here ships to the site; see _docs/testing.md.",
+  "scripts": {
+    "test": "playwright test -c _test/playwright.config.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "pagefind": "1.6.0"
+  }
+}

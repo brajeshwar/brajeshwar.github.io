@@ -11,6 +11,11 @@ vendor/
 node_modules/
 .pagefind-cache/
 
+# Test build + Playwright output (make test). _test/ itself is committed.
+_test/site/
+_test/results/
+_test/report/
+
 # Generated at build time by scripts/fetch-albums.rb from albums.oinam.com's
 # RSS feed — the source of the home page's Albums strip since 2026-09-01.
 # Not committed, because it is a snapshot of somebody else's newest fifty

@@ -10,7 +10,7 @@
 # --watch even wipes _site/pagefind/ on every rebuild. So ⌘K search only works
 # locally when you serve a freshly indexed _site. Use `make serve` for that.
 
-.PHONY: albums build cv-pdf pagefind serve dev clean
+.PHONY: albums build cv-pdf pagefind serve dev clean test test-site test-urls
 
 ## albums  — fetch albums.oinam.com's feed into _data/albums.yaml (generated, gitignored).
 ##           The home page's Albums strip is EMPTY without it, so `build` runs it
@@ -47,6 +47,29 @@ serve: build
 ##           shows its "open the search page" fallback). For content/layout work.
 dev:
 	bundle exec jekyll serve
+
+## test    — build a production-parity copy into _test/site, then run every check
+##           against it (_docs/testing.md). Its OWN directory, not _site: a running
+##           `jekyll serve --future` writes 2099 drafts into _site, and the tests
+##           must see what deploys, not the preview. No album fetch — tests stay
+##           offline, and nothing asserts on the Albums strip.
+TEST_SITE := _test/site
+test: test-site
+	SITE=$(TEST_SITE) npx playwright test -c _test/playwright.config.mjs
+
+## test-site — just the build half of `test`, the same steps CI runs, in CI's order
+test-site:
+	JEKYLL_ENV=production bundle exec jekyll build -q -d $(TEST_SITE)
+	node scripts/build-agent-markdown.mjs $(TEST_SITE)
+	npx --yes esbuild $(TEST_SITE)/assets/scripts/*.js --minify --outdir=$(TEST_SITE)/assets/scripts --allow-overwrite --log-level=warning
+	node scripts/hash-assets.mjs $(TEST_SITE)
+	npx pagefind --site $(TEST_SITE) --quiet
+
+## test-urls — ADD every URL in the current test build to _test/urls.txt, the list
+##           the URL-preservation test holds the site to. Run after publishing,
+##           then commit the file. It only ever adds; removing a line is a decision.
+test-urls: test-site
+	node _test/update-urls.mjs $(TEST_SITE)
 
 ## clean   — remove _site/ and Jekyll caches
 clean:
