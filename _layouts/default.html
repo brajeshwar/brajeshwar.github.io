@@ -128,6 +128,13 @@
 {%- endcomment -%}
 <script defer src="{{ '/assets/scripts/back-to-top.js' | relative_url }}"></script>
 {%- comment -%}
+  Keyboard shortcuts, site-wide. The list behind ? is a second file fetched
+  only when asked for; its URL is a data attribute here, not a string in the
+  script, so hash-assets.mjs rewrites it with the rest of the page. Home and
+  random go through relative_url for the same reason as every other link.
+{%- endcomment -%}
+<script defer src="{{ '/assets/scripts/keys.js' | relative_url }}" data-help="{{ '/assets/scripts/keys-help.js' | relative_url }}" data-home="{{ '/' | relative_url }}" data-random="{{ '/random/' | relative_url }}"></script>
+{%- comment -%}
   NO ANALYTICS SCRIPT, AND NOTHING TO ADD HERE. Measurement is Cloudflare's,
   taken server-side at the edge from requests this site already makes — so it
   costs the reader nothing, cannot be blocked, and needs no markup. Settled

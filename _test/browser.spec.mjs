@@ -121,6 +121,60 @@ test('footnotes become sidenotes on a wide screen', async ({ page }) => {
   await expect(page.locator('.sidenote').first()).toBeVisible();
 });
 
+// ---- Keyboard shortcuts (2026-11-15) -------------------------------------
+
+test('keys: ? opens the list, fetched only then, and Escape closes it', async ({ page }) => {
+  const fetched = [];
+  page.on('request', (r) => r.url().includes('keys-help') && fetched.push(r.url()));
+  await page.goto(POST_WITH_NOTES);
+  expect(fetched).toEqual([]);
+
+  await page.keyboard.press('?');
+  const list = page.getByRole('dialog', { name: 'Keyboard shortcuts' });
+  await expect(list).toBeVisible();
+  expect(fetched.length).toBe(1);
+
+  await page.keyboard.press('Escape');
+  await expect(list).toBeHidden();
+});
+
+test('keys: d and a walk the articles, and h goes home', async ({ page }) => {
+  await page.goto(POST_WITH_NOTES);
+  const next = await page.locator('.post-nav__next').getAttribute('href');
+  await page.keyboard.press('d');
+  await expect(page).toHaveURL(new RegExp(next + '$'));
+
+  const prev = await page.locator('.post-nav__prev').getAttribute('href');
+  await page.keyboard.press('a');
+  await expect(page).toHaveURL(new RegExp(prev + '$'));
+
+  await page.keyboard.press('h');
+  await expect(page).toHaveURL(/\/$/);
+  expect(new URL(page.url()).pathname).toBe('/');
+});
+
+test('keys: a letter typed into search stays a letter', async ({ page }) => {
+  await page.goto(POST_WITH_NOTES);
+  await page.keyboard.press('/');
+  await page.keyboard.type('hard');
+  expect(new URL(page.url()).pathname).toBe(POST_WITH_NOTES);
+});
+
+test('keys: switched off, the letters do nothing and ? still answers', async ({ page }) => {
+  await page.goto(POST_WITH_NOTES);
+  await page.keyboard.press('?');
+  await page.getByRole('button', { name: 'Turn off' }).click();
+  await page.keyboard.press('Escape');
+
+  await page.reload();
+  await page.keyboard.press('h');
+  await page.waitForTimeout(300);
+  expect(new URL(page.url()).pathname).toBe(POST_WITH_NOTES);
+
+  await page.keyboard.press('?');
+  await expect(page.getByRole('button', { name: 'Turn on' })).toBeVisible();
+});
+
 // ---- /misc/london-southbank/: the model, or the picture ------------------
 
 const WALK = '/misc/london-southbank/';
