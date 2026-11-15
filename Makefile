@@ -10,7 +10,7 @@
 # --watch even wipes _site/pagefind/ on every rebuild. So ⌘K search only works
 # locally when you serve a freshly indexed _site. Use `make serve` for that.
 
-.PHONY: albums build cv-pdf pagefind serve dev clean test test-site test-urls lint format
+.PHONY: albums build cv-pdf own-pdf pagefind serve dev clean test test-site test-urls lint format
 
 ## albums  — fetch albums.oinam.com's feed into _data/albums.yaml (generated, gitignored).
 ##           The home page's Albums strip is EMPTY without it, so `build` runs it
@@ -29,11 +29,14 @@ build: albums
 
 ## cv-pdf  — re-print /cv/ to static/pdf/brajeshwar-oinam.pdf (A4), then COMMIT it.
 ##           A static file, not a build step: run this whenever _pages/cv.md changes.
-##           Uses the installed Google Chrome; set CHROME=/path/to/chrome to pick another.
-cv-pdf:
-	bundle exec jekyll build
-	bash scripts/cv-pdf.sh
+##           Prints from the test build, so a running `jekyll serve --future` cannot
+##           interfere. Uses the installed Google Chrome; CHROME=/path picks another.
+cv-pdf: test-site
+	SITE=$(TEST_SITE) bash scripts/page-pdf.sh /cv/ static/pdf/brajeshwar-oinam.pdf 2
 
+## own-pdf — the same for /own/, one A4 sheet, to static/pdf/own.pdf. COMMIT it too.
+own-pdf: test-site
+	SITE=$(TEST_SITE) bash scripts/page-pdf.sh /own/ static/pdf/own.pdf
 ## pagefind — (re)build just the search index against the current _site/
 pagefind:
 	npx pagefind --site _site

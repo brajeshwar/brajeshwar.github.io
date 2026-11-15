@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
-# cv-pdf.sh — print the built /cv/ to static/pdf/brajeshwar-oinam.pdf
+# page-pdf.sh — print one built page to a static PDF.
 #
-# Run by hand, from the repo root, after /cv/ changes:  make cv-pdf
-# (which builds the site first), then COMMIT the PDF. It is a static file: the
-# deploy only copies it, and /cv/ links to it at /static/pdf/brajeshwar-oinam.pdf.
+#   bash scripts/page-pdf.sh <path> <out.pdf> [min-pages]
+#
+# Two pages use it: `make cv-pdf` prints /cv/ to static/pdf/brajeshwar-oinam.pdf,
+# and `make own-pdf` prints /own/ to static/pdf/own.pdf. Both build the site
+# first; then COMMIT the PDF. It is a static file: the deploy only copies it.
+# Each page's A4 comes from its own named @page (cv.scss, own.scss). This was
+# cv-pdf.sh, for the CV alone, until 2026-11-15.
 #
 # [WARNING] STATIC, NOT GENERATED IN CI — his call, 2026-10-31: "Let's create a proper
 # PDF and keep it static so I can just link to it." An Actions step printing it
@@ -34,23 +38,25 @@
 # header, footer, and gray ground. With it: four clean pages. Measured
 # 2026-10-31 on Chrome 156.
 #
-# [WARNING] THE PAGE COUNT IS LOGGED, NOT ENFORCED. The CV is meant to print on four
-# pages (see cv.scss), but it is his to edit. What fails is a page that is
-# plainly not the CV: if the server never answers, or /cv/ 404s, Chrome still
-# writes a valid one-page PDF of its error page. Hence the 200 check before
-# printing and a floor of two pages after: an error page is always one, the
-# CV never fewer than three.
+# [WARNING] The page count is logged, not enforced. What fails is a print that is
+# plainly not the page: if the server never answers, or the path 404s, Chrome
+# still writes a valid one-page PDF of its error page. Hence the 200 check
+# before printing, and the optional floor after it: the CV passes 2, since an
+# error page is always one and the CV never fewer than three. /own/ is meant
+# to be one sheet, so it relies on the 200 check alone.
 
 set -euo pipefail
 
-SITE="_site"
-OUT="static/pdf/brajeshwar-oinam.pdf"
-PORT="${CV_PDF_PORT:-4311}"
+PAGE="${1:?usage: page-pdf.sh <path> <out.pdf> [min-pages]}"
+OUT="${2:?usage: page-pdf.sh <path> <out.pdf> [min-pages]}"
+MIN_PAGES="${3:-1}"
+SITE="${SITE:-_site}"
+PORT="${PDF_PORT:-4311}"
 HOST="brajeshwar.com"
-URL="http://$HOST/cv/"
+URL="http://$HOST$PAGE"
 
-if [ ! -f "$SITE/cv/index.html" ]; then
-  echo "cv-pdf: $SITE/cv/index.html not found; build the site first" >&2
+if [ ! -f "$SITE${PAGE}index.html" ]; then
+  echo "page-pdf: $SITE${PAGE}index.html not found; build the site first" >&2
   exit 1
 fi
 
@@ -63,7 +69,7 @@ if [ -z "$CHROME" ]; then
   done
 fi
 if [ -z "$CHROME" ]; then
-  echo "cv-pdf: no Chrome or Chromium found; set CHROME=/path/to/chrome" >&2
+  echo "page-pdf: no Chrome or Chromium found; set CHROME=/path/to/chrome" >&2
   exit 1
 fi
 "$CHROME" --version
@@ -79,18 +85,22 @@ SERVER=$!
 disown "$SERVER"   # no "Terminated" job notice when the trap kills it
 trap 'kill "$SERVER" 2>/dev/null || true' EXIT
 
-LOCAL="http://127.0.0.1:$PORT/cv/"
+LOCAL="http://127.0.0.1:$PORT$PAGE"
 for _ in $(seq 1 50); do
   curl -fs -o /dev/null "$LOCAL" && break
   sleep 0.2
 done
-curl -fs -o /dev/null "$LOCAL" || { echo "cv-pdf: $LOCAL never answered 200" >&2; exit 1; }
+curl -fs -o /dev/null "$LOCAL" || { echo "page-pdf: $LOCAL never answered 200" >&2; exit 1; }
 
 # Print to a temporary file and move it into place only once it checks out,
 # so a failed run never leaves the committed PDF half-written or deleted.
-TMP="$(mktemp -t cv-pdf.XXXXXX)"
+TMP="$(mktemp -t page-pdf.XXXXXX)"
 trap 'kill "$SERVER" 2>/dev/null || true; rm -f "$TMP"' EXIT
 
+# --disable-features=HttpsUpgrades…: Chrome 157 upgrades an http:// address
+# to https:// before loading it, and the loopback server speaks only http, so
+# every print failed with ERR_BLOCKED_BY_CLIENT (found 2026-11-15; Chrome 156
+# printed the CV without it).
 # --no-pdf-header-footer: a file to send is not a print-out, so no date, URL,
 # or page numbers in the margin. The 20mm @page margin paginates the same
 # with or without them (cv.scss), so this changes the chrome, not the pages.
@@ -98,22 +108,23 @@ trap 'kill "$SERVER" 2>/dev/null || true; rm -f "$TMP"' EXIT
 # (Not an array — macOS bash 3.2 calls an empty one unbound under set -u.)
 "$CHROME" --headless $SANDBOX --disable-gpu \
   --no-pdf-header-footer --virtual-time-budget=10000 \
+  --disable-features=HttpsUpgrades,HttpsFirstBalancedModeAutoEnable \
   --host-resolver-rules="MAP $HOST 127.0.0.1:$PORT" \
   --print-to-pdf="$TMP" "$URL"
 
 if [ ! -s "$TMP" ] || [ "$(head -c 5 "$TMP")" != "%PDF-" ]; then
-  echo "cv-pdf: Chrome wrote no PDF" >&2
+  echo "page-pdf: Chrome wrote no PDF" >&2
   exit 1
 fi
 
 # Each page is one `/Type /Page` object; `/Type /Pages` is the tree above them.
 PAGES=$(python3 -c 'import re,sys; print(len(re.findall(rb"/Type\s*/Page(?!s)", open(sys.argv[1],"rb").read())))' "$TMP")
-if [ "$PAGES" -lt 2 ]; then
-  echo "cv-pdf: the print has $PAGES page(s); that is an error page, not the CV" >&2
+if [ "$PAGES" -lt "$MIN_PAGES" ]; then
+  echo "page-pdf: the print has $PAGES page(s), fewer than $MIN_PAGES; not the page it should be" >&2
   exit 1
 fi
 
 mkdir -p "$(dirname "$OUT")"
 mv "$TMP" "$OUT"
 chmod 644 "$OUT"   # mktemp makes it 0600
-echo "cv-pdf: wrote $OUT — $PAGES pages, $(wc -c < "$OUT" | tr -d ' ') bytes"
+echo "page-pdf: wrote $OUT — $PAGES pages, $(wc -c < "$OUT" | tr -d ' ') bytes"

@@ -281,8 +281,15 @@
     size: A4;
   }
 
+  /* The @page margin is the only margin, as on /cv/: print.css also pads
+     the body by 2.54cm, which on one sheet is a row of the inventory. */
   body:has(> main.page-own) {
     page: own;
+    padding: 0;
+  }
+
+  .page-own > .page-title {
+    margin-top: 0;
   }
 
   .page-own .own__wip,
@@ -292,26 +299,57 @@
     display: none;
   }
 
+  /* Type in points, as on /cv/: on paper a point is a real size. */
+  .page-own {
+    --step-2: 16pt;
+    --step-1: 12pt;
+    --step-0: 10pt;
+    --step--1: 8.5pt;
+    --step--2: 7.5pt;
+  }
+
+  .page-own .own__lede {
+    margin-bottom: 0.6rem;
+  }
+
   .page-own .strip__viewport {
     overflow: visible;
   }
 
   .page-own .own__rail {
+    --strip-item: 7rem;
     flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
   }
 
   .page-own .own__section {
-    margin-top: 1.2rem;
+    margin-top: 0.6rem;
+  }
+
+  /* Label beside its items again: the sheet is narrower than the
+     breakpoint that stacks them on a phone. */
+  .page-own .own__row {
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    gap: 0.5rem;
+    padding-block: 0.3rem;
     break-inside: avoid;
   }
 
-  .page-own .own__row {
-    padding-block: 0.5rem;
-    break-inside: avoid;
+  .page-own .own__label {
+    padding-top: 0;
   }
 
   .page-own .own__picture {
-    width: 3rem;
+    width: 1.9rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .page-own .own__brands {
+    margin-top: 0.25rem;
+  }
+
+  .page-own .own__logo {
+    height: 0.8rem;
   }
 
   .page-own .own__brands a {

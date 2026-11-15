@@ -146,7 +146,7 @@ the room from the margin into the browser's private reserve.
 
 **A real PDF exists since 2026-10-31: `static/pdf/brajeshwar-oinam.pdf`, and it is STATIC** — a
 committed file, linked from `/cv/`'s contact line. His call: *"Let's create a proper PDF and keep it
-static so I can just link to it."* `make cv-pdf` builds the site and runs `scripts/cv-pdf.sh`,
+static so I can just link to it."* `make cv-pdf` builds the site and runs `scripts/page-pdf.sh`,
 which prints the built `/cv/` with headless Chrome over loopback — the same document the Print
 button produces, so there is no second CV to maintain. ⚠️ **But it is only as fresh as the last
 run: edit `_pages/cv.md`, run `make cv-pdf`, commit both together.** (An Actions step printing it on

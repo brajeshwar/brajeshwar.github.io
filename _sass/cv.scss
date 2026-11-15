@@ -68,7 +68,7 @@
    without it, at least on Chrome 156: headless prints before it has even
    requested the `media="print"` assets/print.css, so the PDF comes out
    with the site's header and footer at five pages. `make cv-pdf`
-   (scripts/cv-pdf.sh) runs this same print and reports the page count.
+   (scripts/page-pdf.sh) runs this same print and reports the page count.
 
    Measured before: body 19.08px on a 28.62px line, h2 32px, 24px between
    paragraphs, column 613.8px. Eight pages.
@@ -246,7 +246,7 @@
      Hence the :has().
 
      This decides the paper for static/pdf/brajeshwar-oinam.pdf too, since
-     scripts/cv-pdf.sh prints exactly this page.
+     scripts/page-pdf.sh prints exactly this page.
      ------------------------------------------------------------ */
   @page cv {
     size: A4;
