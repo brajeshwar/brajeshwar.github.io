@@ -229,7 +229,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-2xs) var(--space-xs);
+  gap: var(--space-2xs) var(--space-m); /* space alone parts them: no separator */
 
   margin: var(--space-xs) 0 0;
   padding: 0 0 0 calc((var(--own-item) - var(--own-pic)) / 2);
@@ -237,19 +237,6 @@
 
   font-size: var(--step--2);
   letter-spacing: 0.04em;
-}
-
-/* A middle dot between brands, fainter than the names it separates. */
-.page-own .own__brands li {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-}
-
-.page-own .own__brands li + li::before {
-  content: '·';
-  color: var(--text-color-low);
-  opacity: 0.5;
 }
 
 .page-own .own__brands a {
