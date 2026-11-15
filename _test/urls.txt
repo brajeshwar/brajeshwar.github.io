@@ -1506,3 +1506,4 @@
 /static/pdf/wordpress-theme-development-workflow.pdf
 /styleguide/
 /misc/london-southbank/
+/misc/london-southbank/london-southbank-v0.1.0-grayscale.html

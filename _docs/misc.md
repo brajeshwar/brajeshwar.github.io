@@ -90,6 +90,15 @@ the key comes from his Google account, with him.
 | `city.json` | the model as whole numbers, 2.2 MB, and 655 KB as the live site serves it gzipped: the ground, the buildings, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
 
+**Version 0.1.0, the grayscale model, is kept** (2026-11-15, before color was
+tried): `london-southbank-v0.1.0-grayscale.html` beside `index.html`, with its
+own scripts and pictures in `v0.1.0-grayscale/`, and the git tag
+`v0.1.0-grayscale` on the commit that added it. It is marked `noindex` and its
+back link goes to the live page.
+[WARNING] The kept copy reads the live `city.json`. Whatever is added to that
+file, the layers the kept `city.js` reads have to stay as they are, or the
+copy breaks without anyone looking at it.
+
 **Without JavaScript, or without WebGL2,** the page is the picture, the pins on
 it (placed in percent, in the HTML), and the list they link to. The script adds
 `is-live` to `.stage` once the model has drawn, or `is-still` if it cannot.
