@@ -158,7 +158,10 @@
    dark, and each sits on a gray tile that is neither the page nor white
    (2026-11-15: "a bit of gray and not total white or the same color as the
    website background"). Name and note sit centered under the picture. */
-.page-own {
+/* /devices/ borrows the phone drawing, and these tokens with it, for a
+   phone that has no photograph yet. */
+.page-own,
+.page-devices {
   --own-tile: color-mix(in oklch, var(--text-color) 6%, var(--bg-color-lower));
   --own-body: color-mix(in oklch, var(--text-color) 13%, var(--bg-color-lower));
   --own-detail: color-mix(in oklch, var(--text-color) 30%, var(--bg-color-lower));
@@ -187,11 +190,13 @@
   height: 80%;
 }
 
-.page-own .own__drawing .f {
+.page-own .own__drawing .f,
+.page-devices .own__drawing .f {
   fill: var(--own-body);
 }
 
-.page-own .own__drawing .s {
+.page-own .own__drawing .s,
+.page-devices .own__drawing .s {
   fill: var(--own-detail);
 }
 
@@ -398,4 +403,22 @@
   .page-own .own__brands a::after {
     content: none;
   }
+}
+
+/* ---- /devices/: a phone without a photograph ---------------------
+   The same 3:4 box a photo fills, on the tile, with the drawn phone. */
+.page-devices .device__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background-color: var(--own-tile);
+  color: color-mix(in oklch, var(--text-color) 80%, var(--bg-color-lower));
+}
+
+.page-devices .device__tile .own__drawing {
+  width: 45%;
+  height: 45%;
 }

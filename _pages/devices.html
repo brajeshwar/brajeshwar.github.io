@@ -14,7 +14,11 @@ style: page-devices
 	<li>
 		<a href="{{ phones.url }}">
 			<figure>
-				<img width="225" height="300" src="{{ site.baseurl | prepend: site.url }}/static/devices/{{ phones.img }}" alt="{{ phones.title }}">
+				{%- if phones.img %}
+				<img width="225" height="300" src="{{ '/static/devices/' | append: phones.img | relative_url }}" alt="{{ phones.title }}" loading="lazy">
+				{%- else %}
+				<span class="device__tile">{%- include own/phone.svg -%}</span>
+				{%- endif %}
   			<figcaption>
   				{{ phones.title }} ({{ phones.released }})
   				<span>Used: {{ phones.years }}</span>
