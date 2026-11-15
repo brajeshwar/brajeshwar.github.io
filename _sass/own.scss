@@ -256,6 +256,7 @@
   width: auto;
   max-width: 5.5rem; /* the long wordmarks, Birkenstock and Samsonite */
   object-fit: contain;
+  border-radius: 0; /* base.scss rounds every img in main, and a logo is cropped tight */
   filter: grayscale(1);
   transition: filter 120ms ease-out;
 }
