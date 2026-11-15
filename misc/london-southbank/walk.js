@@ -409,20 +409,47 @@ function paint(now) {
   view.y = clamp(view.y, 0, model.size[1]);
   look.walked = walked;
   draw.frame(view, look);
+  const far = view.span / canvas.clientHeight > 7;
+  stage.classList.toggle('is-far', far);
+  placePins(far);
+  needle.style.rotate = -view.heading + 'deg';
+  if (!stage.classList.contains('is-live')) stage.classList.add('is-live');
+}
+
+// Put each pin over its stop. Where stops are so close that their pins would
+// cover one another (the Tate, the Millennium Bridge and the Globe are a
+// minute apart), the pins are eased apart until every number can be read.
+function placePins(far) {
+  const seen = [];
   for (const stop of stops) {
     const p = draw.screen([stop.at[0], stop.at[1], stop.at[2] + 2]);
-    const seen =
+    const inside =
       p.ahead &&
       p.x > -20 &&
       p.y > -20 &&
       p.x < canvas.clientWidth + 20 &&
       p.y < canvas.clientHeight + 20;
-    stop.pin.style.visibility = seen ? 'visible' : 'hidden';
-    if (seen) stop.pin.style.translate = p.x.toFixed(1) + 'px ' + p.y.toFixed(1) + 'px';
+    stop.pin.style.visibility = inside ? 'visible' : 'hidden';
+    if (inside) seen.push({ pin: stop.pin, x: p.x, y: p.y });
   }
-  needle.style.rotate = -view.heading + 'deg';
-  stage.classList.toggle('is-far', view.span / canvas.clientHeight > 7);
-  if (!stage.classList.contains('is-live')) stage.classList.add('is-live');
+  const room = seen.length ? seen[0].pin.offsetWidth * (far ? 0.72 : 1) + 3 : 0;
+  for (let pass = 0; pass < 4; pass++)
+    for (let i = 0; i < seen.length; i++)
+      for (let j = i + 1; j < seen.length; j++) {
+        const a = seen[i];
+        const b = seen[j];
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const gap = Math.hypot(dx, dy) || 0.01;
+        if (gap >= room) continue;
+        // Each gives up half of what they are short of.
+        const push = (room - gap) / 2 / gap;
+        a.x -= dx * push;
+        a.y -= dy * push;
+        b.x += dx * push;
+        b.y += dy * push;
+      }
+  for (const p of seen) p.pin.style.translate = p.x.toFixed(1) + 'px ' + p.y.toFixed(1) + 'px';
 }
 
 // ---- hands -------------------------------------------------------------
