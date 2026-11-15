@@ -79,7 +79,7 @@ the key comes from his Google account, with him.
 | `walk.js` | the camera, the flights between stops, the controls |
 | `draw.js` | WebGL2 with no library: the shaders, the sun and its shadow map |
 | `city.js` | reads `city.json` into one mesh |
-| `city.json` | the model as whole numbers, 2.2 MB, about 615 KB gzipped |
+| `city.json` | the model as whole numbers, 2.2 MB, about 615 KB gzipped: the ground, the buildings, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
 
 **Without JavaScript, or without WebGL2,** the page is the picture, the pins on
@@ -116,6 +116,23 @@ Once, on 2026-11-15, from OpenStreetMap through the Overpass API, for the box
 - Positions are in decimeters and heights in centimeters, each coordinate the
   difference from the one before. The layout of every layer is in the comment
   at the top of `city.js`.
+
+**Landmarks are named as the camera comes near** (2026-11-15: *"Label the
+landmarks nearby as one goes by or fly-by"*). `places` in `city.json` holds
+sixty-three, each a name, a place, and the height of the roof at that place.
+A name shows while its landmark is near where the camera looks: within 210 to
+380 m by how far the view stands back, 300 m more through the flying lens, and
+2.2 m more for every meter the landmark is tall. At most eight show, nearest
+first, and never one that would cover a pin, the toolbar, the caption, or
+another name. The whole-board view names nothing.
+
+- The names are the page's, not always the map's: the map's "Sky Garden" is
+  "20 Fenchurch Street" here, and its "City Hall" is "Old City Hall", the
+  Assembly having moved out.
+- To add one by hand, append `[name, x, y, height]` to `places`: x and y in
+  decimeters from the board's south-west corner, height in centimeters. From
+  a latitude and longitude, x is (longitude + 0.1292) x 694244 and y is
+  (latitude - 51.4972) x 1112579.
 
 **A stop is in two places:** an `<li id>` in the page's list (with a `.pin` of
 the same number) and a pair in `city.json`'s `stops`, the id and an index into

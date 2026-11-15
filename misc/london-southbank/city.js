@@ -395,5 +395,9 @@ export function build(city) {
     stops: city.stops.map(function (s) {
       return { id: s[0], at: line[s[1]] };
     }),
+    // Landmarks to name: where each stands, and the height of its roof there.
+    places: (city.places || []).map(function (p) {
+      return { name: p[0], at: [p[1] / 10, p[2] / 10, p[3] / 100] };
+    }),
   };
 }

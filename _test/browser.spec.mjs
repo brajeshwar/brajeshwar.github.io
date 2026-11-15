@@ -138,6 +138,8 @@ test('the walk settles as the model or the picture, with no errors', async ({ pa
     await page.getByRole('button', { name: 'Next' }).click();
     await expect(page.locator('#waterloo')).toHaveClass(/is-active/);
     await expect(page.locator('.caption')).toContainText('Waterloo Station');
+    // Flying in, the landmarks round the stop are named.
+    await expect(page.locator('.place.is-near').first()).toBeVisible({ timeout: 10000 });
   }
   expect(errors.filter((e) => !e.startsWith('Failed to load resource'))).toEqual([]);
 });

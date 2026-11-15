@@ -41,7 +41,7 @@ GitHub's runner image already has Chrome, so the daily cron downloads nothing.
 | every `/assets/` reference exists | hash renaming |
 | `sidenotes.js`, `anchors.js` and `strip-nav.js` load only where they have work | the Liquid `assign … contains` trap |
 | the Pagefind index exists | search |
-| the South Bank walk names no file outside its folder, and its list of stops matches its model | [`misc.md`](misc.md): a one-off is self-contained, and a stop lives in two files |
+| the South Bank walk names no file outside its folder, its list of stops matches its model, and every landmark it names is on the board, once | [`misc.md`](misc.md): a one-off is self-contained, and a stop lives in two files |
 
 **`_test/browser.spec.mjs`** runs in real Chrome on a plain static server, like Pages. The
 server is `_test/serve.mjs`, about forty lines of Node. Python's `http.server` did the job

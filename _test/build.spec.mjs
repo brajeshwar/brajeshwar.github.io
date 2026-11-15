@@ -236,11 +236,18 @@ test('the South Bank walk keeps to its folder, and its list matches its model', 
     expect(exists(dir + file), file).toBe(true);
   // A stop is in two places, the list in the page and the model's data. One
   // without the other is a pin that goes nowhere or a stop with no pin.
-  const modelled = JSON.parse(read(dir + 'city.json'))
-    .stops.map((s) => s[0])
-    .sort();
+  const city = JSON.parse(read(dir + 'city.json'));
+  const modelled = city.stops.map((s) => s[0]).sort();
   const listed = [...html.matchAll(/<li id="([^"]+)" data-stop="\d+"/g)].map((m) => m[1]).sort();
   expect(listed).toEqual(modelled);
+  // Every landmark's name is said once, and stands somewhere on the board.
+  const names = city.places.map((p) => p[0]);
+  expect(names.length).toBeGreaterThan(40);
+  expect(new Set(names).size).toBe(names.length);
+  const lost = city.places.filter(
+    ([, x, y]) => x < 0 || y < 0 || x > city.size[0] || y > city.size[1]
+  );
+  expect(lost).toEqual([]);
 });
 
 // ---- Pages and assets --------------------------------------------------

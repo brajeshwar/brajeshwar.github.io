@@ -37,6 +37,8 @@ let walked = 0;
 let playing = false;
 let queued = false;
 let pinSize = 0; // how wide a pin is, in pixels
+let names = []; // the landmarks' labels
+let fixtures = []; // where the toolbar and the caption sit, for the names to keep clear of
 
 // ---- small helpers -----------------------------------------------------
 
@@ -446,6 +448,7 @@ function mark(n) {
   caption.querySelector('span').textContent = stop.item.querySelector('p').textContent;
   caption.hidden = false;
   history.replaceState(null, '', '#' + stop.item.id);
+  measure();
 }
 
 // Go to a stop: at once, along the path from its neighbor, or through the air.
@@ -508,7 +511,7 @@ function paint(now) {
   draw.frame(view, look);
   const far = view.span / canvas.clientHeight > 7;
   stage.classList.toggle('is-far', far);
-  placePins(far);
+  placeNames(placePins(far).concat(fixtures));
   needle.style.rotate = -view.heading + 'deg';
   if (!stage.classList.contains('is-live')) stage.classList.add('is-live');
 }
@@ -547,6 +550,107 @@ function placePins(far) {
         b.y += dy * push;
       }
   for (const p of seen) p.pin.style.translate = p.x.toFixed(1) + 'px ' + p.y.toFixed(1) + 'px';
+  // The room the pins take, for the names to keep out of.
+  return seen.map((p) => [p.x - room / 2, p.y - room / 2, p.x + room / 2, p.y + room / 2]);
+}
+
+// ---- names -------------------------------------------------------------
+//
+// The landmarks near where the camera is looking are named, over their
+// roofs, a few at a time: they come up as a flight approaches and go as it
+// passes. A tall one counts as near from further off, as it does on foot.
+// From far away nothing is named; sixty names will not fit on the whole board.
+
+// What only changes when the page does: how big a pin is, and where the
+// toolbar and the caption are. Read here, not in every frame.
+function measure() {
+  pinSize = stops[0].pin.offsetWidth;
+  fixtures = [];
+  for (const el of stage.querySelectorAll('.tools, .caption')) {
+    if (el.hidden) continue;
+    fixtures.push([
+      el.offsetLeft - 6,
+      el.offsetTop - 6,
+      el.offsetLeft + el.offsetWidth + 6,
+      el.offsetTop + el.offsetHeight + 6,
+    ]);
+  }
+}
+
+function nameLandmarks() {
+  const before = stage.querySelector('.pin');
+  for (const place of model.places) {
+    const el = document.createElement('span');
+    el.className = 'place';
+    el.textContent = place.name;
+    // The stops and their captions say this in words that stay put.
+    el.setAttribute('aria-hidden', 'true');
+    stage.insertBefore(el, before);
+    names.push({ el: el, at: place.at, shown: false });
+  }
+  for (const name of names) {
+    name.wide = name.el.offsetWidth;
+    name.tall = name.el.offsetHeight;
+  }
+}
+
+function placeNames(taken) {
+  // Near is a matter of how much is in view: more when standing back, and
+  // more again through the short lens, which sees a long way down the path.
+  const flying = clamp((view.lens - LONG) / (SHORT - LONG), 0, 1);
+  const within = clamp(view.span * 0.85, 210, 380) + 300 * flying;
+  const near = [];
+  if (view.span < 1100)
+    for (const name of names) {
+      const far = Math.hypot(name.at[0] - view.x, name.at[1] - view.y);
+      if (far > within + name.at[2] * 2.2) continue;
+      let p = draw.screen([name.at[0], name.at[1], name.at[2] + 4]);
+      // A tower's top is often out of the picture from close by. Its name
+      // then goes lower down it, at the height where it comes into view.
+      const least = name.tall + 8;
+      if (p.ahead && p.y < least) {
+        const foot = draw.screen([name.at[0], name.at[1], 0]);
+        if (foot.ahead && foot.y > least) {
+          const down = (least - p.y) / (foot.y - p.y);
+          p = { ahead: true, x: mix(p.x, foot.x, down), y: least };
+        }
+      }
+      // All of the name has to be in the picture; half a name is worse than none.
+      const inside =
+        p.ahead &&
+        p.x > name.wide / 2 + 6 &&
+        p.x < canvas.clientWidth - name.wide / 2 - 6 &&
+        p.y > name.tall + 6 &&
+        p.y < canvas.clientHeight;
+      // One already showing keeps its place against a newcomer a little
+      // nearer, or two names would trade places all the way down a street.
+      if (inside) near.push({ name: name, x: p.x, y: p.y, rank: far - (name.shown ? 80 : 0) });
+    }
+  near.sort((a, b) => a.rank - b.rank);
+  const showing = new Map();
+  for (const n of near) {
+    if (showing.size === 8) break;
+    const box = [
+      n.x - n.name.wide / 2 - 4,
+      n.y - n.name.tall - 2,
+      n.x + n.name.wide / 2 + 4,
+      n.y + 2,
+    ];
+    const clear = taken.every(
+      (t) => box[2] < t[0] || box[0] > t[2] || box[3] < t[1] || box[1] > t[3]
+    );
+    if (!clear) continue;
+    taken.push(box);
+    showing.set(n.name, n);
+  }
+  for (const name of names) {
+    const at = showing.get(name);
+    if (name.shown !== !!at) name.el.classList.toggle('is-near', !!at);
+    name.shown = !!at;
+    if (at)
+      name.el.style.translate =
+        (at.x - name.wide / 2).toFixed(1) + 'px ' + (at.y - name.tall).toFixed(1) + 'px';
+  }
 }
 
 // ---- hands -------------------------------------------------------------
@@ -779,6 +883,7 @@ function start(city) {
     stops.push({ item: item, pin: pin, at: places.get(item.id) });
   }
   drawLine();
+  nameLandmarks();
   readLook();
   view = overview();
   for (const el of stage.parentNode.querySelectorAll('.steps, .tools')) el.hidden = false;
@@ -793,7 +898,7 @@ function start(city) {
   redraw();
 
   new ResizeObserver(function () {
-    pinSize = stops[0].pin.offsetWidth;
+    measure();
     redraw();
   }).observe(canvas);
   // The page's Light or Dark can change under us: the system's, or the
