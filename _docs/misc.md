@@ -53,6 +53,18 @@ itself in a tooltip on hover or focus, with its key if it has one. The tooltip
 is the button's own `aria-label`, drawn by CSS, so what is shown and what a
 screen reader says are one string.
 
+**While the walk is being flown, its speeds fly out beside the button:** a
+quarter, a half, 1, 1.5, and 2 times (2026-11-15: *"when it is active, fly
+out an option menu on the side of the button"*). Choosing one does not stop
+the flight; it runs the same flight's clock at another rate from where it has
+got to. The speed is kept until the page is left, and is the fly-by's alone:
+Next and Previous fly at their own pace. [WARNING] At twice the speed the
+camera turns at up to 80 degrees a second, twice what the flight was smoothed
+to, so 2 times is jerkier through the bends. That is the reader's choice.
+The menu is 14.75rem wide in the CSS, and the button's tooltip is set that
+much further out so the two do not cover each other; change one with the
+other.
+
 [WARNING] The flights play even when the system asks for reduced motion. Every
 flight starts at a button, a key, or a pin, so it is the thing that was asked
 for. The first version obeyed the setting and jumped from stop to stop, which

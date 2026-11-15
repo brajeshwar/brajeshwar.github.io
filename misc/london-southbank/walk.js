@@ -35,6 +35,7 @@ let stops = [];
 let current = -1;
 let walked = 0;
 let playing = false;
+let speed = 1; // how fast the fly-by goes; 1 is its own pace
 let queued = false;
 let pinSize = 0; // how wide a pin is, in pixels
 let names = []; // the landmarks' labels
@@ -495,7 +496,7 @@ function tour() {
   const end = stopView(0);
   const table = timetable(here(), loop(), true);
   flight = {
-    ms: table.seconds * 1000,
+    ms: (table.seconds * 1000) / speed,
     at: function (t) {
       const clock = t * table.seconds;
       walked = reached(table, clock);
@@ -567,8 +568,25 @@ function play(on) {
   button.setAttribute('aria-pressed', String(on));
   // Its picture changes with aria-pressed, in the page's CSS; its name, here.
   button.setAttribute('aria-label', on ? 'Pause' : 'Fly the walk');
+  // The speeds are out beside it for as long as the flight lasts.
+  button.parentNode.classList.toggle('is-flying', on);
+  measure();
   if (on) tour();
   else land();
+}
+
+// The fly-by faster or slower, from where it has got to: the same flight,
+// with its clock run at another rate.
+function setSpeed(next) {
+  if (playing && flight) {
+    const now = performance.now();
+    const done = (now - flight.start) / flight.ms;
+    flight.ms *= speed / next;
+    flight.start = now - done * flight.ms;
+  }
+  speed = next;
+  for (const button of stage.querySelectorAll('[data-speed]'))
+    button.setAttribute('aria-pressed', String(Number(button.dataset.speed) === speed));
 }
 
 // Anything the reader does by hand ends whatever the camera was doing.
@@ -658,14 +676,16 @@ function placePins(far) {
 // toolbar and the caption are. Read here, not in every frame.
 function measure() {
   pinSize = stops[0].pin.offsetWidth;
+  const frame = stage.getBoundingClientRect();
   fixtures = [];
-  for (const el of stage.querySelectorAll('.tools, .caption')) {
+  for (const el of stage.querySelectorAll('.tools, .caption, .is-flying .speeds')) {
     if (el.hidden) continue;
+    const box = el.getBoundingClientRect();
     fixtures.push([
-      el.offsetLeft - 6,
-      el.offsetTop - 6,
-      el.offsetLeft + el.offsetWidth + 6,
-      el.offsetTop + el.offsetHeight + 6,
+      box.left - frame.left - 6,
+      box.top - frame.top - 6,
+      box.right - frame.left + 6,
+      box.bottom - frame.top + 6,
     ]);
   }
 }
@@ -930,6 +950,7 @@ document.addEventListener('click', function (e) {
   if (button && stage.contains(button)) {
     if ('play' in button.dataset) return play(!playing);
     if ('light' in button.dataset) return turnLight();
+    if (button.dataset.speed) return setSpeed(Number(button.dataset.speed));
     takeOver();
     if (button.dataset.step) return step(Number(button.dataset.step));
     if ('north' in button.dataset) return nudge({ heading: 0 });

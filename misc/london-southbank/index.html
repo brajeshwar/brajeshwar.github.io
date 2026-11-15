@@ -95,6 +95,15 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 /* A finger has no hover, only one that sticks after a tap. */
 @media (hover: hover) { .tools button:hover::after { opacity: 1; transition-delay: 200ms; } }
 .tools svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+/* While the walk is being flown, its speeds fly out beside the button, and
+   the button's own name stands clear of them, further out. Five buttons of
+   2.75rem and the four gaps between them are the 14.75rem. */
+.tools__fly { position: relative; display: grid; }
+.speeds { position: absolute; right: calc(100% + .35rem); top: 0; display: flex; gap: .25rem; opacity: 0; visibility: hidden; translate: .6rem 0; transition: opacity 160ms, translate 160ms, visibility 0s 160ms; }
+.is-flying .speeds { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+.speeds button { width: 2.75rem; font-size: .8rem; font-variant-numeric: tabular-nums; }
+.speeds button::after { content: none; }
+.is-flying [data-play]::after { right: calc(100% + 15.6rem); }
 /* The compass is a dial: round, and its needle turns to keep pointing north. */
 .tools .compass { border-radius: 50%; }
 .note { margin: .75rem 0 0; color: var(--muted); font-size: .8rem; }
@@ -118,7 +127,7 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 /* A reader who asks for less motion still gets the flights, which only ever
    start at their own word; what goes is the motion nobody asked for. Last in
    the sheet, so it outranks the transitions set above. */
-@media (prefers-reduced-motion: reduce) { .stage canvas, .pin, .place, .tools button::after { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .stage canvas, .pin, .place, .speeds, .tools button::after { transition: none; } }
 </style>
 </head>
 <body>
@@ -164,7 +173,16 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
           <button type="button" data-further aria-label="Zoom out" data-key="-"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10"/></svg></button>
           <button type="button" data-light aria-pressed="false" aria-label="Show by night" data-key="N"><svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.2 9.5A5.6 5.6 0 1 1 6.5 2.8a4.5 4.5 0 0 0 6.7 6.7z"/></svg><svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.7"/><path d="M8 1.5v1.7M8 12.8v1.7M1.5 8h1.7M12.8 8h1.7M3.4 3.4l1.2 1.2M11.4 11.4l1.2 1.2M3.4 12.6l1.2-1.2M11.4 4.6l1.2-1.2"/></svg></button>
           <button type="button" class="tools__walk" data-step="-1" aria-label="Previous stop" data-key="&larr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3.5v9M12 3.8L6.6 8l5.4 4.2z"/></svg></button>
-          <button type="button" data-play aria-pressed="false" aria-label="Fly the walk"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2L12.6 8 5 12.8z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg></button>
+          <div class="tools__fly">
+            <button type="button" data-play aria-pressed="false" aria-label="Fly the walk"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2L12.6 8 5 12.8z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg></button>
+            <div class="speeds" role="group" aria-label="Speed">
+              <button type="button" data-speed="0.25" aria-pressed="false">0.25&times;</button>
+              <button type="button" data-speed="0.5" aria-pressed="false">0.5&times;</button>
+              <button type="button" data-speed="1" aria-pressed="true">1&times;</button>
+              <button type="button" data-speed="1.5" aria-pressed="false">1.5&times;</button>
+              <button type="button" data-speed="2" aria-pressed="false">2&times;</button>
+            </div>
+          </div>
           <button type="button" data-step="1" aria-label="Next stop" data-key="&rarr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M12 3.5v9M4 3.8L9.4 8 4 12.2z"/></svg></button>
         </div>
       </div>

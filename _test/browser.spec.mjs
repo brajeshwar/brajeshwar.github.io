@@ -161,6 +161,25 @@ test('the walk is night by the clock, and its button turns it over', async ({ pa
   await expect(html).toHaveAttribute('data-theme', 'light');
 });
 
+test('flying the walk brings out its speeds, and they go when it stops', async ({ page }) => {
+  await page.goto(WALK);
+  const stage = page.locator('.stage');
+  await expect(stage).toHaveClass(/is-live|is-still/, { timeout: 20000 });
+  if (!(await stage.evaluate((el) => el.classList.contains('is-live')))) return;
+  const speeds = page.locator('.speeds');
+  await expect(speeds).toBeHidden();
+  await page.getByRole('button', { name: 'Fly the walk' }).click();
+  await expect(speeds).toBeVisible();
+  // Choosing a speed changes the flight; it does not end it.
+  const twice = page.getByRole('button', { name: '2×', exact: true });
+  await twice.click();
+  await expect(twice).toHaveAttribute('aria-pressed', 'true');
+  const pause = page.getByRole('button', { name: 'Pause' });
+  await expect(pause).toHaveAttribute('aria-pressed', 'true');
+  await pause.click();
+  await expect(speeds).toBeHidden();
+});
+
 test('the walk is day at noon', async ({ page }) => {
   await page.clock.setFixedTime(new Date(2026, 10, 15, 12, 0));
   await page.goto(WALK);
