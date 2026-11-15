@@ -106,6 +106,15 @@ for (const path of PAGES) {
   });
 }
 
+test('the logo keeps its size before the stylesheet arrives', async ({ page }) => {
+  // Safari can paint before a slow stylesheet lands. The logo SVG once said
+  // width="100%", and in that moment it filled the page (2026-11-15).
+  await page.route('**/*.css', (route) => route.abort());
+  await page.goto('/');
+  const box = await page.locator('.logo__img').boundingBox();
+  expect(box.width).toBeLessThanOrEqual(40);
+});
+
 test('footnotes become sidenotes on a wide screen', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(POST_WITH_NOTES);

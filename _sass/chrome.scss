@@ -99,6 +99,16 @@ site-logo a {
   transition: background-color 0.15s ease;
 }
 
+/* The glyph fills the link's inset box. The SVG itself says 40 by 40, so a
+   page painted before this stylesheet arrives shows a logo of the right size;
+   it said 100% until 2026-11-15, and on a slow load Safari would paint it as
+   wide as the page, then snap it down when the CSS landed. */
+site-logo .logo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* SVG: .logo__img and .logo__img--path */
 site-logo a .logo__img,
 site-logo a .logo__img--path,
