@@ -107,6 +107,17 @@ test('every page applies the saved theme before first paint', () => {
   expect(bad).toEqual([]);
 });
 
+test('nothing sets a theme-color', () => {
+  // Safari tints its toolbar from <meta name="theme-color">. Written by a
+  // script after first paint, it recolored the toolbar on every page in Dark;
+  // with none, Safari follows the page background from the start.
+  const offenders = ownPages().filter((p) => read(p).includes('theme-color'));
+  const scripts = readdirSync(`${SITE}/assets/scripts`).filter((f) =>
+    read(`/assets/scripts/${f}`).includes('theme-color')
+  );
+  expect([...offenders, ...scripts]).toEqual([]);
+});
+
 // ---- CSS hygiene (CLAUDE.md "Project shape") ---------------------------
 
 test('the built stylesheet carries no bang comment', () => {

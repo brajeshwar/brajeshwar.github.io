@@ -251,8 +251,10 @@ New components should use the `--color-*` semantic tokens directly.
   `data-theme` is always set (the auto media query targets `[data-theme=auto]`);
   palette/font drop the attribute on their default.
 - `assets/scripts/appearance.js` (`defer`) builds the appearance panel and persists
-  each axis to `localStorage` (`theme` / `palette` / `font`). It also updates
-  `<meta name="theme-color">` from the computed `body` background. Ready-guard on
+  each axis to `localStorage` (`theme` / `palette` / `font`). [WARNING] It no longer writes
+  `<meta name="theme-color">` (removed 2026-11-15): Safari recolored its toolbar each time
+  the script added the tag after first paint, which was the Dark-mode flash on every page.
+  With no tag, Safari tints from the page background. Ready-guard on
   `DOMContentLoaded` (required — see the search.js cache note in [`search.md`](search.md)).
   - Accent is also persisted: `localStorage('accent')` holds the color string (oklch or
     `#hex`); the no-flash snippet sets `--ov-accent` + `data-accent` from it. The

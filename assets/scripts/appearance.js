@@ -117,7 +117,6 @@
     try {
       localStorage.setItem(a.key, val);
     } catch (e) {}
-    updateThemeColor();
   }
 
   function applyAccent(val) {
@@ -133,20 +132,14 @@
       if (val) localStorage.setItem('accent', val);
       else localStorage.removeItem('accent');
     } catch (e) {}
-    updateThemeColor();
   }
 
-  function updateThemeColor() {
-    var bg = getComputedStyle(document.body).backgroundColor;
-    if (!bg) return;
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('name', 'theme-color');
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', bg);
-  }
+  /* There is no <meta name="theme-color">, on purpose (2026-11-15). Safari
+     tints its toolbar from that tag, and this file used to add one after
+     every page had painted, so in Dark the toolbar changed color on each
+     load. It also read the body's background in the middle of its 500ms
+     fade, and could leave the toolbar a shade behind the page. With no tag,
+     Safari takes the color from the page itself, from the first paint. */
 
   /* One row of the panel: a label and whatever control the caller appends.
      The wrapper is `display: contents` in CSS, so these two become items of
@@ -272,12 +265,6 @@
     apply('font', read('font'));
     apply('textsize', read('textsize'));
     applyAccent(readAccent());
-
-    if (window.matchMedia) {
-      window
-        .matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', updateThemeColor);
-    }
   }
 
   if (document.readyState === 'loading') {
