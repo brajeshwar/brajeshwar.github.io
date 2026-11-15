@@ -5,6 +5,8 @@ style: page-now
 title_style: vertical
 ---
 
+{% include_relative now/2026.md %}
+
 {% include_relative now/2025.md %}
 
 {% include_relative now/2024.md %}

@@ -1,6 +1,6 @@
 # London - Stroll along Southbank
 
-Every time I am in London, I walk the South Bank. It has been that way since [my first visit in 2015](https://albums.oinam.com/album/london-2015may-jul/).
+Every time I am in London, I walk the South Bank. It started unknowingly and missing a lot of spots, since [my first visit in 2015](https://albums.oinam.com/album/london-2015may-jul/). I’d still like to repeat the walks with new addition of places and spend more time whenever I get opportunities in future.
 
 I start at Waterloo Station, find the river, and keep it on my left all the way to Tower Bridge. That is the whole plan. No tickets to book, nothing to queue for, unless I want to. It is a few kilometers of London at walking pace.
 
