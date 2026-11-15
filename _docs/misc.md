@@ -106,12 +106,14 @@ same name, and a signed git tag on the commit that added it:
 | `v0.1.0-grayscale` | `london-southbank-v0.1.0-grayscale.html` | the model in grays |
 | `v0.2.0-tinted` | `london-southbank-v0.2.0-tinted.html` | blue river, green parks, warm ground; buildings gray |
 | `v0.3.0-colored` | `london-southbank-v0.3.0-colored.html` | the same ground, and each building in its own color |
+| `v0.4.0-measured` | `london-southbank-v0.4.0-measured.html` | the same colors, with heights, roofs, and trees measured from the survey |
 
 Each is marked `noindex`, and its back link goes to the live page.
 **The kept pages do not read the live data.** `v0.3.0-colored/` holds a copy
-of `city.json` as it was that day, and all three kept pages read that one. So
-the live `city.json` is free to be remade; a later kept version brings its own
-copy with it in the same way.
+of `city.json` as it was before the survey, and the first three kept pages
+read that one; `v0.4.0-measured/` holds the measured one. So the live
+`city.json` is free to be remade; a later kept version brings its own copy
+with it in the same way.
 
 **Without JavaScript, or without WebGL2,** the page is the picture, the pins on
 it (placed in percent, in the HTML), and the list they link to. The script adds

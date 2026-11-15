@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>A Stroll Along the South Bank, v0.4.0 measured | Brajeshwar</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="A model of the South Bank in London to turn, move, and fly through: the walk from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank.">
+<link rel="canonical" href="https://brajeshwar.com/misc/london-southbank/">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){d.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t;}}catch(e){}})();</script>
+<style>
+/* A one-off, on its own (see _docs/misc.md). Everything this page needs is in
+   this folder: nothing here loads the site's stylesheet or scripts, and
+   nothing of it reaches any other page. The page is the site's grayscale and
+   system fonts; the model alone is tinted, and its colors are in walk.js,
+   which reads --paper and --ink from here for the rest. */
+:root { --paper:#fafafa;--ink:#1a1a1a;--ink-2:#555;--muted:#777;--rule:#d4d4d4;--panel:rgba(250,250,250,.86);--stage:min(76vh,48rem); }
+:root[data-theme="dark"] { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--rule:#3a3a3a;--panel:rgba(22,22,22,.82); color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--rule:#3a3a3a;--panel:rgba(22,22,22,.82); } }
+* { box-sizing: border-box; }
+/* The controls ship hidden and the script reveals them; without this, giving
+   one a display of its own would show it to a reader who cannot use it. */
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.55 system-ui, -apple-system, sans-serif; }
+main { max-width: 110rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+a { color: inherit; }
+.back { color: var(--muted); font-size: .9rem; }
+h1 { font-weight: 400; font-size: 1.6rem; margin: .75rem 0 .25rem; }
+.lede { color: var(--ink-2); margin: 0 0 1rem; max-width: 44rem; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+@media (max-width: 60rem) { :root { --stage: min(62vh, 34rem); } }
+@media (min-width: 60rem) { .layout { grid-template-columns: minmax(0, 1fr) 20rem; align-items: start; } }
+
+/* The stage is the picture's own shape until the model is ready to take its
+   place; then it is as tall as the window allows. */
+.stage { position: relative; aspect-ratio: 2 / 1; overflow: hidden; container-type: inline-size; }
+.js .stage { aspect-ratio: auto; height: var(--stage); min-height: 20rem; }
+.js .stage.is-still { aspect-ratio: 2 / 1; height: auto; min-height: 0; }
+.stage img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 400ms ease-out; touch-action: none; cursor: grab; outline-offset: -2px; }
+.stage canvas:active { cursor: grabbing; }
+.stage.is-live canvas { opacity: 1; }
+
+/* A pin sits where the picture has its stop, in percent; once the model is
+   live, the script moves it with the camera instead. */
+.pin { --d: 1.4rem; position: absolute; left: var(--x); top: var(--y); display: grid; place-items: center; width: var(--d); height: var(--d); margin: calc(var(--d) / -2) 0 0 calc(var(--d) / -2); border-radius: 50%; background: var(--ink); color: var(--paper); font-size: calc(var(--d) / 2); font-weight: 600; text-decoration: none; box-shadow: 0 0 0 2px var(--paper); transition: scale 120ms ease-out; }
+/* On the picture the pins are sized to it, since a phone shows it small. */
+.stage:not(.is-live) .pin { --d: clamp(.8rem, 2.6cqw, 1.4rem); }
+.pin.is-active { scale: 1.4; z-index: 1; }
+/* From far off the pins crowd each other, so they shrink. */
+.stage.is-far .pin { scale: .72; }
+.stage.is-far .pin.is-active { scale: 1; }
+.pin:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.js .stage:not(.is-live):not(.is-still) .pin { visibility: hidden; }
+.stage.is-live .pin { left: 0; top: 0; will-change: translate; }
+
+/* A landmark's name, over its roof on a short stem, while the camera is near.
+   The script makes these; there are none on the still picture. */
+.place { position: absolute; left: 0; top: 0; padding-bottom: .5rem; font-size: .72rem; font-weight: 600; line-height: 1.2; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity 220ms ease-out; text-shadow: 0 0 2px var(--paper), 0 0 2px var(--paper), 0 0 5px var(--paper), 0 0 5px var(--paper); }
+.place::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: .4rem; background: currentColor; opacity: .6; }
+.place.is-near { opacity: 1; }
+
+.caption { position: absolute; left: .75rem; bottom: .75rem; z-index: 2; max-width: min(26rem, calc(100% - 1.5rem)); margin: 0; padding: .5rem .75rem; border-radius: 8px; background: var(--panel); backdrop-filter: blur(6px); font-size: .9rem; line-height: 1.4; }
+.caption b { display: inline-grid; place-items: center; width: 1.4rem; height: 1.4rem; margin-right: .3rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: .7rem; }
+.caption span { display: block; margin-top: .15rem; color: var(--ink-2); }
+
+button { font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--muted); border-radius: 6px; cursor: pointer; }
+button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+/* Above the pins, so the active one (which rises over its neighbors) cannot
+   sit on a button. */
+.tools { position: absolute; top: .75rem; right: .75rem; z-index: 2; display: grid; gap: .35rem; }
+.tools button { position: relative; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; backdrop-filter: blur(6px); }
+/* The walk's own three buttons stand a little apart from the view's four. */
+.tools .tools__walk { margin-top: .4rem; }
+.tools [aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tools [aria-pressed="false"] .pause, .tools [aria-pressed="true"] .play { display: none; }
+
+/* Every button says what it is, beside it, on hover or on focus, with its
+   key if it has one. The words are the button's own aria-label, so what is
+   shown and what is read out cannot drift apart. */
+.tools button::after { content: attr(aria-label); position: absolute; right: calc(100% + .5rem); top: 50%; translate: 0 -50%; padding: .2rem .5rem; border-radius: 4px; background: var(--ink); color: var(--paper); font-size: .75rem; font-weight: 400; line-height: 1.3; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 120ms ease-out; }
+.tools button[data-key]::after { content: attr(aria-label) "  (" attr(data-key) ")"; }
+.tools button:focus-visible::after { opacity: 1; }
+/* A finger has no hover, only one that sticks after a tap. */
+@media (hover: hover) { .tools button:hover::after { opacity: 1; transition-delay: 200ms; } }
+.tools svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+/* The compass is a dial: round, and its needle turns to keep pointing north. */
+.tools .compass { border-radius: 50%; }
+.note { margin: .75rem 0 0; color: var(--muted); font-size: .8rem; }
+.hint { display: none; }
+.stage.is-live ~ .note .hint--mouse { display: inline; }
+@media (pointer: coarse) {
+  .stage.is-live ~ .note .hint--mouse { display: none; }
+  .stage.is-live ~ .note .hint--touch { display: inline; }
+}
+
+.walk__list { position: relative; }
+.walk__list ol { list-style: none; margin: 0; padding: 0; }
+@media (min-width: 60rem) { .js .walk__list { max-height: var(--stage); overflow-y: auto; overscroll-behavior: contain; padding-right: .5rem; } }
+.walk__list li { padding: .5rem 0; border-top: 1px solid var(--rule); }
+.walk__list a { text-decoration: none; }
+.walk__list p { margin: .2rem 0 0 1.9rem; color: var(--ink-2); font-size: .9rem; }
+.walk__n { display: inline-grid; place-items: center; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: .7rem; font-weight: 600; margin-right: .3rem; }
+.walk__list li.is-active strong { text-decoration: underline; text-underline-offset: .2em; }
+.walk__turn { margin: 0; padding: .9rem 0 .5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
+
+/* A reader who asks for less motion still gets the flights, which only ever
+   start at their own word; what goes is the motion nobody asked for. Last in
+   the sheet, so it outranks the transitions set above. */
+@media (prefers-reduced-motion: reduce) { .stage canvas, .pin, .place, .tools button::after { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./">&larr; The walk as it is now</a>
+  <h1>A Stroll Along the South Bank</h1>
+  <p class="lede">This is version 0.4.0, the model with its heights, roofs, and trees measured from a survey, kept as it was on 2026-11-15, before its light and surfaces were reworked.</p>
+  <p class="lede">From Waterloo Station along the river to Shad Thames, across Tower Bridge, and back along the north bank to where it started. Choose a stop on the model or in the list.</p>
+  <div class="layout">
+    <div class="map">
+      <div class="stage">
+        <picture>
+          <source srcset="v0.4.0-measured/poster-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="v0.4.0-measured/poster.webp" width="1600" height="800" alt="A model of central London along the Thames, seen from above the south: the walk runs along the South Bank from Waterloo Station to Tower Bridge and back along the north bank, with twenty-two numbered stops">
+        </picture>
+        <canvas tabindex="0" aria-label="The model. Drag to turn it, right-drag or Shift-drag to move it, scroll to zoom."></canvas>
+        <a class="pin" href="#waterloo" data-stop="1" style="--x:28.7%;--y:51.2%" aria-label="1. Waterloo Station">1</a>
+        <a class="pin" href="#southbank-centre" data-stop="2" style="--x:26.1%;--y:40.2%" aria-label="2. Southbank Centre">2</a>
+        <a class="pin" href="#bfi" data-stop="3" style="--x:29.2%;--y:38.0%" aria-label="3. BFI Southbank">3</a>
+        <a class="pin" href="#national-theatre" data-stop="4" style="--x:31.9%;--y:37.3%" aria-label="4. National Theatre">4</a>
+        <a class="pin" href="#gabriels-wharf" data-stop="5" style="--x:37.0%;--y:38.3%" aria-label="5. Gabriel’s Wharf">5</a>
+        <a class="pin" href="#oxo-tower" data-stop="6" style="--x:39.5%;--y:38.3%" aria-label="6. Oxo Tower Wharf">6</a>
+        <a class="pin" href="#tate-modern" data-stop="7" style="--x:50.4%;--y:42.2%" aria-label="7. Tate Modern">7</a>
+        <a class="pin" href="#millennium-bridge" data-stop="8" style="--x:52.8%;--y:43.3%" aria-label="8. Millennium Bridge">8</a>
+        <a class="pin" href="#globe" data-stop="9" style="--x:55.2%;--y:44.4%" aria-label="9. Shakespeare’s Globe">9</a>
+        <a class="pin" href="#golden-hinde" data-stop="10" style="--x:62.4%;--y:50.8%" aria-label="10. Golden Hinde">10</a>
+        <a class="pin" href="#southwark-cathedral" data-stop="11" style="--x:63.3%;--y:55.5%" aria-label="11. Southwark Cathedral">11</a>
+        <a class="pin" href="#borough-market" data-stop="12" style="--x:60.9%;--y:56.8%" aria-label="12. Borough Market">12</a>
+        <a class="pin" href="#hms-belfast" data-stop="13" style="--x:74.5%;--y:59.9%" aria-label="13. HMS Belfast">13</a>
+        <a class="pin" href="#tower-bridge" data-stop="14" style="--x:80.6%;--y:66.9%" aria-label="14. Tower Bridge">14</a>
+        <a class="pin" href="#shad-thames" data-stop="15" style="--x:84.5%;--y:72.3%" aria-label="15. Shad Thames">15</a>
+        <a class="pin" href="#tower-of-london" data-stop="16" style="--x:81.8%;--y:58.1%" aria-label="16. Tower of London">16</a>
+        <a class="pin" href="#monument" data-stop="17" style="--x:70.4%;--y:44.3%" aria-label="17. The Monument">17</a>
+        <a class="pin" href="#st-pauls" data-stop="18" style="--x:55.2%;--y:28.7%" aria-label="18. St Paul’s Cathedral">18</a>
+        <a class="pin" href="#somerset-house" data-stop="19" style="--x:27.9%;--y:28.0%" aria-label="19. Somerset House">19</a>
+        <a class="pin" href="#cleopatras-needle" data-stop="20" style="--x:23.4%;--y:32.1%" aria-label="20. Cleopatra’s Needle">20</a>
+        <a class="pin" href="#big-ben" data-stop="21" style="--x:13.9%;--y:55.1%" aria-label="21. Big Ben">21</a>
+        <a class="pin" href="#london-eye" data-stop="22" style="--x:21.4%;--y:49.3%" aria-label="22. London Eye">22</a>
+        <p class="caption" aria-live="polite" hidden><b></b><strong></strong><span></span></p>
+        <div class="tools" hidden>
+          <button type="button" class="compass" data-north aria-label="Face north"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l2.5 6.5h-5z" fill="currentColor"/><path d="M5.5 8L8 14.5 10.5 8"/></svg></button>
+          <button type="button" data-whole aria-label="Reset the view" data-key="0"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.4 7.8L8 2.8l5.6 5M4 6.6V13.2h8V6.6M6.7 13.2V9.6h2.6v3.6"/></svg></button>
+          <button type="button" data-closer aria-label="Zoom in" data-key="+"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
+          <button type="button" data-further aria-label="Zoom out" data-key="-"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10"/></svg></button>
+          <button type="button" class="tools__walk" data-step="-1" aria-label="Previous stop" data-key="&larr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3.5v9M12 3.8L6.6 8l5.4 4.2z"/></svg></button>
+          <button type="button" data-play aria-pressed="false" aria-label="Fly the walk"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2L12.6 8 5 12.8z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg></button>
+          <button type="button" data-step="1" aria-label="Next stop" data-key="&rarr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M12 3.5v9M4 3.8L9.4 8 4 12.2z"/></svg></button>
+        </div>
+      </div>
+      <p class="note"><span class="hint hint--mouse">Drag to turn and tip, right-drag or Shift-drag to move, scroll to zoom. The arrow keys step through the walk. </span><span class="hint hint--touch">Drag to turn and tip, two fingers to move and zoom. </span>Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Heights of buildings and trees &copy; Environment Agency 2022, under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a>.</p>
+    </div>
+    <div class="walk__list">
+    <ol>
+      <li id="waterloo" data-stop="1"><a href="#waterloo"><span class="walk__n">1</span> <strong>Waterloo Station</strong></a><p>Where the walk starts. Out of the station, and follow the signs to the river.</p></li>
+      <li id="southbank-centre" data-stop="2"><a href="#southbank-centre"><span class="walk__n">2</span> <strong>Southbank Centre</strong></a><p>The Royal Festival Hall, from the 1951 Festival of Britain, and the skaters in the Undercroft beneath Queen Elizabeth Hall.</p></li>
+      <li id="bfi" data-stop="3"><a href="#bfi"><span class="walk__n">3</span> <strong>BFI Southbank</strong></a><p>The cinema, and the second-hand book tables under Waterloo Bridge.</p></li>
+      <li id="national-theatre" data-stop="4"><a href="#national-theatre"><span class="walk__n">4</span> <strong>National Theatre</strong></a><p>Denys Lasdun’s concrete terraces, from 1976. Loved and hated in about equal measure.</p></li>
+      <li id="gabriels-wharf" data-stop="5"><a href="#gabriels-wharf"><span class="walk__n">5</span> <strong>Gabriel’s Wharf</strong></a><p>A little cluster of shops and cafés right on the river.</p></li>
+      <li id="oxo-tower" data-stop="6"><a href="#oxo-tower"><span class="walk__n">6</span> <strong>Oxo Tower Wharf</strong></a><p>Look up for the letters O, X, O in the tower’s windows.</p></li>
+      <li id="tate-modern" data-stop="7"><a href="#tate-modern"><span class="walk__n">7</span> <strong>Tate Modern</strong></a><p>The old Bankside Power Station, an art gallery since 2000.</p></li>
+      <li id="millennium-bridge" data-stop="8"><a href="#millennium-bridge"><span class="walk__n">8</span> <strong>Millennium Bridge</strong></a><p>The footbridge, with St Paul’s Cathedral straight across. It wobbled when it opened in 2000.</p></li>
+      <li id="globe" data-stop="9"><a href="#globe"><span class="walk__n">9</span> <strong>Shakespeare’s Globe</strong></a><p>A reconstruction of Shakespeare’s theater, open since 1997, a short walk from where the original stood.</p></li>
+      <li id="golden-hinde" data-stop="10"><a href="#golden-hinde"><span class="walk__n">10</span> <strong>Golden Hinde</strong></a><p>A full-size replica of Sir Francis Drake’s ship, tucked into its own little dock.</p></li>
+      <li id="southwark-cathedral" data-stop="11"><a href="#southwark-cathedral"><span class="walk__n">11</span> <strong>Southwark Cathedral</strong></a><p>One of the oldest churches in London, right next to the market.</p></li>
+      <li id="borough-market" data-stop="12"><a href="#borough-market"><span class="walk__n">12</span> <strong>Borough Market</strong></a><p>One of London’s oldest food markets. Come hungry.</p></li>
+      <li id="hms-belfast" data-stop="13"><a href="#hms-belfast"><span class="walk__n">13</span> <strong>HMS Belfast</strong></a><p>A Second World War cruiser, moored for good as a museum.</p></li>
+      <li id="tower-bridge" data-stop="14"><a href="#tower-bridge"><span class="walk__n">14</span> <strong>Tower Bridge</strong></a><p>The one everyone pictures. Walk across, or just stand and look.</p></li>
+      <li id="shad-thames" data-stop="15"><a href="#shad-thames"><span class="walk__n">15</span> <strong>Shad Thames</strong></a><p>Old warehouses, cobbles, and walkways overhead. The Design Museum was here until 2016.</p></li>
+    </ol>
+    <p class="walk__turn">Across Tower Bridge, and back along the north bank</p>
+    <ol start="16">
+      <li id="tower-of-london" data-stop="16"><a href="#tower-of-london"><span class="walk__n">16</span> <strong>Tower of London</strong></a><p>Nearly a thousand years old, and a fortress, a palace, and a prison in its time. The Crown Jewels are kept here.</p></li>
+      <li id="monument" data-stop="17"><a href="#monument"><span class="walk__n">17</span> <strong>The Monument</strong></a><p>Christopher Wren’s column to the Great Fire of 1666. It is 61 meters tall, and stands 61 meters from where the fire started.</p></li>
+      <li id="st-pauls" data-stop="18"><a href="#st-pauls"><span class="walk__n">18</span> <strong>St Paul’s Cathedral</strong></a><p>Wren again, finished in 1710. Up Peter’s Hill from the river, the dome fills the end of the street.</p></li>
+      <li id="somerset-house" data-stop="19"><a href="#somerset-house"><span class="walk__n">19</span> <strong>Somerset House</strong></a><p>A palace of government offices from the 1770s, around a courtyard that becomes an ice rink in winter.</p></li>
+      <li id="cleopatras-needle" data-stop="20"><a href="#cleopatras-needle"><span class="walk__n">20</span> <strong>Cleopatra’s Needle</strong></a><p>An Egyptian obelisk about 3,500 years old, on the Embankment since 1878. It has nothing to do with Cleopatra.</p></li>
+      <li id="big-ben" data-stop="21"><a href="#big-ben"><span class="walk__n">21</span> <strong>Big Ben</strong></a><p>The clock tower of the Houses of Parliament. Big Ben is the bell; the tower is the Elizabeth Tower. Cross Westminster Bridge here.</p></li>
+      <li id="london-eye" data-stop="22"><a href="#london-eye"><span class="walk__n">22</span> <strong>London Eye</strong></a><p>A wheel 135 meters tall, turning since 2000. Waterloo Station is a few minutes from here, and the loop is closed.</p></li>
+    </ol>
+    </div>
+  </div>
+</main>
+<script type="module" src="v0.4.0-measured/walk.js"></script>
+</body>
+</html>
