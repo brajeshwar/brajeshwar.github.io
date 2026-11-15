@@ -38,6 +38,16 @@ patch of each Ruby series, and the workflow pinned `3.3.5`. Every run from 2026-
 It now asks for `'3.3'`. **A red cron is easy to miss: check `gh run list` at the start of a
 session** — nothing else announces that the site has stopped updating.
 
+**`/misc/london-southbank/` IS A 3D MODEL NOW (2026-11-15, not yet pushed when written).** The
+whole of the Thames from Westminster to Tower Bridge, from OpenStreetMap, drawn by WebGL2 with no
+library: turn it, move it, and fly the walk stop to stop. The walk became a loop of 22 stops (it
+was 15): across Tower Bridge and back along the north bank. He was offered Google's photo-real
+tiles and chose the self-contained model. Everything is in [`misc.md`](misc.md).
+[WARNING] The script that made `city.json` is not in the repo, by the misc rule. `misc.md` says
+how the data was made; a new route means making it again.
+[WARNING] The article still shows the older 15-stop drawing (`static/2026/london-southbank-walk.svg`).
+That is content and another session's work; it was left alone.
+
 ## Where we were (updated 2026-11-05, fourteenth session — CLOSED)
 
 **[DONE] SESSION CLOSED 2026-11-05. Everything is pushed and deployed** — run 42004378335 on
