@@ -193,6 +193,7 @@ test('no emoji in code, data, templates or docs', () => {
     '_data',
     '_pages',
     '_redirect',
+    'misc',
     '_docs',
     '_test',
     'CLAUDE.md',

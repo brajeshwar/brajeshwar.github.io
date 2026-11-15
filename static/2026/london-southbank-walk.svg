@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-521 -307 911 608" role="img" aria-label="An isometric map of the walk along the South Bank, from Waterloo Station to Shad Thames, with fifteen numbered stops">
+<style>
+:root { --paper:#fafafa;--ink:#1a1a1a;--ink-2:#555;--muted:#777;--river:#dadada;--bank:#c4c4c4;--bridge:#9a9a9a;--top:#f4f4f4;--side-a:#c2c2c2;--side-b:#a2a2a2;--edge:#555;--hi:#000; }
+@media (prefers-color-scheme: dark) { :root { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--river:#2c2c2c;--bank:#3a3a3a;--bridge:#5a5a5a;--top:#3a3a3a;--side-a:#2a2a2a;--side-b:#222;--edge:#8a8a8a;--hi:#fff; } }
+
+.river { fill: var(--river); }
+.bank { fill: none; stroke: var(--bank); stroke-width: 1; }
+.bridge { fill: none; stroke: var(--bridge); stroke-width: 3; stroke-linecap: round; }
+.bridge--stop { stroke: var(--ink-2); stroke-width: 4; }
+.walk { fill: none; stroke: var(--ink); stroke-width: 2; stroke-dasharray: 5 4; stroke-linecap: round; stroke-linejoin: round; }
+.top { fill: var(--top); stroke: var(--edge); stroke-width: .7; }
+.side-a { fill: var(--side-a); stroke: var(--edge); stroke-width: .7; }
+.side-b { fill: var(--side-b); stroke: var(--edge); stroke-width: .7; }
+.stop circle { fill: var(--ink); }
+.stop__n { fill: var(--paper); font: 600 7px system-ui, sans-serif; text-anchor: middle; }
+.north line { stroke: var(--ink-2); stroke-width: 1.5; }
+.north text, .river-name { font: italic 12px system-ui, sans-serif; fill: var(--muted); }
+</style>
+<polygon class="river" points="-448.1,-136.2 -375.9,-150.2 -320.8,-158.5 -272.2,-161.6 -228.9,-158.9 -161.6,-142.3 -107.8,-117.9 -61.7,-89.1 -3.7,-53.3 50.6,-15.3 107.1,35.1 169.5,82.3 188.4,119.9 210.6,152.8 231.7,185.0 266.2,220.5 329.8,183.7 287.6,152.7 249.2,119.4 228.7,89.7 201.9,49.8 149.3,3.8 94.9,-40.9 48.4,-83.4 -19.8,-127.2 -93.7,-167.6 -163.3,-196.7 -216.7,-207.5 -279.5,-205.9 -367.3,-189.8 -461.2,-166.1"/>
+<polyline class="bank" points="-448.1,-136.2 -375.9,-150.2 -320.8,-158.5 -272.2,-161.6 -228.9,-158.9 -161.6,-142.3 -107.8,-117.9 -61.7,-89.1 -3.7,-53.3 50.6,-15.3 107.1,35.1 169.5,82.3 188.4,119.9 210.6,152.8 231.7,185.0 266.2,220.5"/>
+<polyline class="bridge" points="-403.6,-143.9 -452.6,-154.4"><title>Westminster Bridge</title></polyline>
+<polyline class="bridge" points="-305.9,-158.8 -314.4,-203.8"><title>Hungerford Bridge</title></polyline>
+<polyline class="bridge" points="-224.6,-158.6 -198.9,-203.9"><title>Waterloo Bridge</title></polyline>
+<polyline class="bridge" points="-68.9,-93.2 -11.3,-122.3"><title>Blackfriars Bridge</title></polyline>
+<polyline class="bridge" points="48.2,-16.7 97.3,-39.6"><title>Southwark Bridge</title></polyline>
+<polyline class="bridge" points="109.5,36.5 155.3,7.3"><title>London Bridge</title></polyline>
+<polyline class="bridge bridge--stop" points="0.4,-48.7 56.8,-78.5"/>
+<polyline class="bridge bridge--stop" points="202.4,154.7 251.6,120.8"/>
+<polygon class="side-a" points="217.0,143.3 221.1,145.7 221.1,132.7 217.0,130.3"/><polygon class="side-b" points="221.1,145.7 225.3,143.3 225.3,130.3 221.1,132.7"/><polygon class="top" points="217.0,130.3 221.1,132.7 225.3,130.3 221.1,127.9"/>
+<polygon class="side-a" points="231.9,131.8 236.1,134.2 236.1,121.2 231.9,118.8"/><polygon class="side-b" points="236.1,134.2 240.2,131.8 240.2,118.8 236.1,121.2"/><polygon class="top" points="231.9,118.8 236.1,121.2 240.2,118.8 236.1,116.4"/>
+<polyline class="walk" points="-274.8,-96.3 -268.9,-121.9 -256.8,-148.3 -247.7,-156.3 -234.2,-153.0 -202.0,-152.2 -139.5,-127.3 -117.2,-116.6 -67.5,-85.7 -14.2,-52.8 -1.5,-47.6 10.2,-36.4 56.8,-5.1 69.2,15.5 71.3,32.3 46.3,35.6 87.9,46.3 139.7,71.8 170.9,89.8 180.7,124.3 202.4,154.7 200.2,182.4 192.2,202.2"/>
+<g class="landmark"><polygon class="side-a" points="-291.3,-98.8 -270.5,-86.8 -270.5,-94.8 -291.3,-106.8"/><polygon class="side-b" points="-270.5,-86.8 -258.4,-93.8 -258.4,-101.8 -270.5,-94.8"/><polygon class="top" points="-291.3,-106.8 -270.5,-94.8 -258.4,-101.8 -279.1,-113.8"/></g>
+<g class="landmark"><polygon class="side-a" points="-273.3,-150.8 -252.5,-138.8 -252.5,-146.8 -273.3,-158.8"/><polygon class="side-b" points="-252.5,-138.8 -240.4,-145.8 -240.4,-153.8 -252.5,-146.8"/><polygon class="top" points="-273.3,-158.8 -252.5,-146.8 -240.4,-153.8 -261.2,-165.8"/></g>
+<g class="landmark"><polygon class="side-a" points="-250.2,-152.8 -234.6,-143.8 -234.6,-146.6 -250.2,-155.6"/><polygon class="side-b" points="-234.6,-143.8 -225.9,-148.8 -225.9,-151.6 -234.6,-146.6"/><polygon class="top" points="-250.2,-155.6 -234.6,-146.6 -225.9,-151.6 -241.5,-160.6"/></g>
+<g class="landmark"><polygon class="side-a" points="-226.1,-150.3 -205.4,-138.3 -205.4,-146.3 -226.1,-158.3"/><polygon class="side-b" points="-205.4,-138.3 -193.2,-145.3 -193.2,-153.3 -205.4,-146.3"/><polygon class="top" points="-226.1,-158.3 -205.4,-146.3 -193.2,-153.3 -214.0,-165.3"/></g>
+<g class="landmark"><polygon class="side-a" points="-153.6,-128.2 -138.0,-119.2 -138.0,-122.0 -153.6,-131.0"/><polygon class="side-b" points="-138.0,-119.2 -129.3,-124.2 -129.3,-127.0 -138.0,-122.0"/><polygon class="top" points="-153.6,-131.0 -138.0,-122.0 -129.3,-127.0 -144.9,-136.0"/></g>
+<g class="landmark"><polygon class="side-a" points="-131.4,-115.4 -119.3,-108.4 -119.3,-112.4 -131.4,-119.4"/><polygon class="side-b" points="-119.3,-108.4 -110.7,-113.4 -110.7,-117.4 -119.3,-112.4"/><polygon class="top" points="-131.4,-119.4 -119.3,-112.4 -110.7,-117.4 -122.8,-124.4"/><polygon class="side-a" points="-124.2,-114.4 -121.1,-112.6 -121.1,-127.6 -124.2,-129.4"/><polygon class="side-b" points="-121.1,-112.6 -117.9,-114.4 -117.9,-129.4 -121.1,-127.6"/><polygon class="top" points="-124.2,-129.4 -121.1,-127.6 -117.9,-129.4 -121.1,-131.2"/></g>
+<g class="landmark"><polygon class="side-a" points="-41.9,-51.8 -15.9,-36.8 -15.9,-45.8 -41.9,-60.8"/><polygon class="side-b" points="-15.9,-36.8 -2.0,-44.8 -2.0,-53.8 -15.9,-45.8"/><polygon class="top" points="-41.9,-60.8 -15.9,-45.8 -2.0,-53.8 -28.0,-68.8"/><polygon class="side-a" points="-23.8,-49.4 -20.0,-47.2 -20.0,-75.2 -23.8,-77.4"/><polygon class="side-b" points="-20.0,-47.2 -16.2,-49.4 -16.2,-77.4 -20.0,-75.2"/><polygon class="top" points="-23.8,-77.4 -20.0,-75.2 -16.2,-77.4 -20.0,-79.6"/></g>
+<g class="landmark"></g>
+<g class="landmark"><polygon class="side-a" points="3.7,-38.6 14.1,-32.6 14.1,-37.0 3.7,-43.0"/><polygon class="side-b" points="14.1,-32.6 24.5,-38.6 24.5,-43.0 14.1,-37.0"/><polygon class="top" points="3.7,-43.0 14.1,-37.0 24.5,-43.0 14.1,-49.0"/></g>
+<g class="landmark"><polygon class="side-a" points="60.9,11.2 76.5,20.2 76.5,17.4 60.9,8.4"/><polygon class="side-b" points="76.5,20.2 85.2,15.2 85.2,12.4 76.5,17.4"/><polygon class="top" points="60.9,8.4 76.5,17.4 85.2,12.4 69.6,3.4"/></g>
+<g class="landmark"><polygon class="side-a" points="55.1,34.6 67.3,41.6 67.3,37.6 55.1,30.6"/><polygon class="side-b" points="67.3,41.6 75.9,36.6 75.9,32.6 67.3,37.6"/><polygon class="top" points="55.1,30.6 67.3,37.6 75.9,32.6 63.8,25.6"/><polygon class="side-a" points="62.4,35.6 65.5,37.4 65.5,22.4 62.4,20.6"/><polygon class="side-b" points="65.5,37.4 68.7,35.6 68.7,20.6 65.5,22.4"/><polygon class="top" points="62.4,20.6 65.5,22.4 68.7,20.6 65.5,18.8"/></g>
+<g class="landmark"><polygon class="side-a" points="34.2,33.6 49.8,42.6 49.8,39.8 34.2,30.8"/><polygon class="side-b" points="49.8,42.6 58.4,37.6 58.4,34.8 49.8,39.8"/><polygon class="top" points="34.2,30.8 49.8,39.8 58.4,34.8 42.8,25.8"/></g>
+<g class="landmark"><polygon class="side-a" points="168.3,75.3 196.0,91.3 196.0,89.3 168.3,73.3"/><polygon class="side-b" points="196.0,91.3 200.5,88.7 200.5,86.7 196.0,89.3"/><polygon class="top" points="168.3,73.3 196.0,89.3 200.5,86.7 172.8,70.7"/><polygon class="side-a" points="179.6,80.8 186.5,84.8 186.5,78.4 179.6,74.4"/><polygon class="side-b" points="186.5,84.8 189.3,83.2 189.3,76.8 186.5,78.4"/><polygon class="top" points="179.6,74.4 186.5,78.4 189.3,76.8 182.3,72.8"/></g>
+<g class="landmark"></g>
+<g class="landmark"><polygon class="side-a" points="175.7,199.7 196.5,211.7 196.5,203.7 175.7,191.7"/><polygon class="side-b" points="196.5,211.7 208.6,204.7 208.6,196.7 196.5,203.7"/><polygon class="top" points="175.7,191.7 196.5,203.7 208.6,196.7 187.8,184.7"/></g>
+<a class="stop" id="map-waterloo" href="#waterloo" data-stop="1"><title>1. Waterloo Station</title><circle cx="-274.8" cy="-96.3" r="5.5"/><text class="stop__n" x="-274.8" y="-93.7">1</text></a>
+<a class="stop" id="map-southbank-centre" href="#southbank-centre" data-stop="2"><title>2. Southbank Centre</title><circle cx="-256.8" cy="-148.3" r="5.5"/><text class="stop__n" x="-256.8" y="-145.7">2</text></a>
+<a class="stop" id="map-bfi" href="#bfi" data-stop="3"><title>3. BFI Southbank</title><circle cx="-238.1" cy="-150.8" r="5.5"/><text class="stop__n" x="-238.1" y="-148.2">3</text></a>
+<a class="stop" id="map-national-theatre" href="#national-theatre" data-stop="4"><title>4. National Theatre</title><circle cx="-209.7" cy="-147.8" r="5.5"/><text class="stop__n" x="-209.7" y="-145.2">4</text></a>
+<a class="stop" id="map-gabriels-wharf" href="#gabriels-wharf" data-stop="5"><title>5. Gabriel’s Wharf</title><circle cx="-141.5" cy="-126.2" r="5.5"/><text class="stop__n" x="-141.5" y="-123.6">5</text></a>
+<a class="stop" id="map-oxo-tower" href="#oxo-tower" data-stop="6"><title>6. Oxo Tower Wharf</title><circle cx="-121.1" cy="-114.4" r="5.5"/><text class="stop__n" x="-121.1" y="-111.8">6</text></a>
+<a class="stop" id="map-tate-modern" href="#tate-modern" data-stop="7"><title>7. Tate Modern</title><circle cx="-22.0" cy="-48.3" r="5.5"/><text class="stop__n" x="-22.0" y="-45.7">7</text></a>
+<a class="stop" id="map-millennium-bridge" href="#millennium-bridge" data-stop="8"><title>8. Millennium Bridge</title><circle cx="4.3" cy="-51.0" r="5.5"/><text class="stop__n" x="4.3" y="-48.4">8</text></a>
+<a class="stop" id="map-globe" href="#globe" data-stop="9"><title>9. Shakespeare’s Globe</title><circle cx="14.1" cy="-38.6" r="5.5"/><text class="stop__n" x="14.1" y="-36.0">9</text></a>
+<a class="stop" id="map-golden-hinde" href="#golden-hinde" data-stop="10"><title>10. Golden Hinde</title><circle cx="73.1" cy="13.2" r="5.5"/><text class="stop__n" x="73.1" y="15.8">10</text></a>
+<a class="stop" id="map-southwark-cathedral" href="#southwark-cathedral" data-stop="11"><title>11. Southwark Cathedral</title><circle cx="65.5" cy="35.6" r="5.5"/><text class="stop__n" x="65.5" y="38.2">11</text></a>
+<a class="stop" id="map-borough-market" href="#borough-market" data-stop="12"><title>12. Borough Market</title><circle cx="46.3" cy="35.6" r="5.5"/><text class="stop__n" x="46.3" y="38.2">12</text></a>
+<a class="stop" id="map-hms-belfast" href="#hms-belfast" data-stop="13"><title>13. HMS Belfast</title><circle cx="184.4" cy="82.0" r="5.5"/><text class="stop__n" x="184.4" y="84.6">13</text></a>
+<a class="stop" id="map-tower-bridge" href="#tower-bridge" data-stop="14"><title>14. Tower Bridge</title><circle cx="208.2" cy="151.4" r="5.5"/><text class="stop__n" x="208.2" y="154.0">14</text></a>
+<a class="stop" id="map-shad-thames" href="#shad-thames" data-stop="15"><title>15. Shad Thames</title><circle cx="192.2" cy="202.2" r="5.5"/><text class="stop__n" x="192.2" y="204.8">15</text></a>
+<g class="north"><line x1="-449.4" y1="-114.7" x2="-430.1" y2="-125.9"/><text x="-426.1" y="-129.9">N</text></g>
+<text class="river-name" x="-90.9" y="-141.5">River Thames</text>
+</svg>

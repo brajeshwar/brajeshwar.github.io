@@ -252,6 +252,8 @@ this pass; that is a sweep for him to ask for, not a tidy-up to do unasked.
   **So verify a CSS change by grepping the BUILT rule, not by the build's exit code:**
   `grep -o '\.your-selector{[^}]*}' _site/assets/styles/site.css`.
 - `container-ideal` = reading width; `page.style` = full-width page hook.
+- **One-off pages live in `misc/<name>/`**, each a self-contained `index.html` that never
+  loads the site's CSS or JS. The rules are in [`_docs/misc.md`](_docs/misc.md).
 
 ## Page titles (added 2026-08-08 — read before touching a layout)
 - **The layouts emit the `<h1>`, not the pages.** `page.html` and `album.html` write

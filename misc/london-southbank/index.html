@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>A Stroll Along the South Bank | Brajeshwar</title>
+<meta name="description" content="An isometric map of a walk along the South Bank in London, from Waterloo Station to Shad Thames.">
+<link rel="canonical" href="https://brajeshwar.com/misc/london-southbank/">
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t;}}catch(e){}})();</script>
+<style>
+/* A one-off, on its own (see _docs/misc.md). Everything this page needs is in
+   this file: nothing here loads the site's stylesheet or scripts, and nothing
+   of it reaches any other page. Grayscale and system fonts, like the site. */
+:root { --paper:#fafafa;--ink:#1a1a1a;--ink-2:#555;--muted:#777;--river:#dadada;--bank:#c4c4c4;--bridge:#9a9a9a;--top:#f4f4f4;--side-a:#c2c2c2;--side-b:#a2a2a2;--edge:#555;--hi:#000; }
+:root[data-theme="dark"] { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--river:#2c2c2c;--bank:#3a3a3a;--bridge:#5a5a5a;--top:#3a3a3a;--side-a:#2a2a2a;--side-b:#222;--edge:#8a8a8a;--hi:#fff; color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--river:#2c2c2c;--bank:#3a3a3a;--bridge:#5a5a5a;--top:#3a3a3a;--side-a:#2a2a2a;--side-b:#222;--edge:#8a8a8a;--hi:#fff; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.55 system-ui, -apple-system, sans-serif; }
+main { max-width: 72rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+.back { color: var(--muted); font-size: .9rem; }
+h1 { font-weight: 400; font-size: 1.6rem; margin: .75rem 0 .25rem; }
+.lede { color: var(--ink-2); margin: 0 0 1rem; max-width: 40rem; }
+.layout { display: grid; gap: 1.5rem; }
+@media (min-width: 60rem) { .layout { grid-template-columns: minmax(0, 1fr) 19rem; align-items: start; } }
+.map svg { display: block; width: 100%; height: auto; }
+
+.river { fill: var(--river); }
+.bank { fill: none; stroke: var(--bank); stroke-width: 1; }
+.bridge { fill: none; stroke: var(--bridge); stroke-width: 3; stroke-linecap: round; }
+.bridge--stop { stroke: var(--ink-2); stroke-width: 4; }
+.walk { fill: none; stroke: var(--ink); stroke-width: 2; stroke-dasharray: 5 4; stroke-linecap: round; stroke-linejoin: round; }
+.top { fill: var(--top); stroke: var(--edge); stroke-width: .7; }
+.side-a { fill: var(--side-a); stroke: var(--edge); stroke-width: .7; }
+.side-b { fill: var(--side-b); stroke: var(--edge); stroke-width: .7; }
+.stop circle { fill: var(--ink); }
+.stop__n { fill: var(--paper); font: 600 7px system-ui, sans-serif; text-anchor: middle; }
+.north line { stroke: var(--ink-2); stroke-width: 1.5; }
+.north text, .river-name { font: italic 12px system-ui, sans-serif; fill: var(--muted); }
+.stop { cursor: pointer; }
+.stop circle { transition: r 120ms ease-out; }
+.stop.is-active circle { r: 8; fill: var(--hi); }
+.stop:focus-visible circle { stroke: var(--ink); stroke-width: 2; }
+.walk__list { list-style: none; margin: 0; padding: 0; }
+.walk__list li { padding: .5rem 0; border-top: 1px solid var(--bank); }
+.walk__list a { color: inherit; text-decoration: none; }
+.walk__list p { margin: .2rem 0 0 1.9rem; color: var(--ink-2); font-size: .9rem; }
+.walk__n { display: inline-grid; place-items: center; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: .7rem; font-weight: 600; margin-right: .3rem; }
+.walk__list li.is-active strong { text-decoration: underline; text-underline-offset: .2em; }
+.steps { display: flex; gap: .5rem; margin-top: .75rem; }
+.steps button { font: inherit; font-size: .9rem; padding: .35rem .8rem; border: 1px solid var(--edge); border-radius: 6px; background: transparent; color: inherit; cursor: pointer; }
+@media (scripting: none) { .steps { display: none; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/2026/london-stroll-along-southbank/">&larr; London - Stroll along Southbank</a>
+  <h1>A Stroll Along the South Bank</h1>
+  <p class="lede">From Waterloo Station to Shad Thames, along the river. Choose a stop on the map or in the list.</p>
+  <div class="layout">
+    <div class="map">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-521 -307 911 608" role="img" aria-label="An isometric map of the walk, with fifteen numbered stops">
+<polygon class="river" points="-448.1,-136.2 -375.9,-150.2 -320.8,-158.5 -272.2,-161.6 -228.9,-158.9 -161.6,-142.3 -107.8,-117.9 -61.7,-89.1 -3.7,-53.3 50.6,-15.3 107.1,35.1 169.5,82.3 188.4,119.9 210.6,152.8 231.7,185.0 266.2,220.5 329.8,183.7 287.6,152.7 249.2,119.4 228.7,89.7 201.9,49.8 149.3,3.8 94.9,-40.9 48.4,-83.4 -19.8,-127.2 -93.7,-167.6 -163.3,-196.7 -216.7,-207.5 -279.5,-205.9 -367.3,-189.8 -461.2,-166.1"/>
+<polyline class="bank" points="-448.1,-136.2 -375.9,-150.2 -320.8,-158.5 -272.2,-161.6 -228.9,-158.9 -161.6,-142.3 -107.8,-117.9 -61.7,-89.1 -3.7,-53.3 50.6,-15.3 107.1,35.1 169.5,82.3 188.4,119.9 210.6,152.8 231.7,185.0 266.2,220.5"/>
+<polyline class="bridge" points="-403.6,-143.9 -452.6,-154.4"><title>Westminster Bridge</title></polyline>
+<polyline class="bridge" points="-305.9,-158.8 -314.4,-203.8"><title>Hungerford Bridge</title></polyline>
+<polyline class="bridge" points="-224.6,-158.6 -198.9,-203.9"><title>Waterloo Bridge</title></polyline>
+<polyline class="bridge" points="-68.9,-93.2 -11.3,-122.3"><title>Blackfriars Bridge</title></polyline>
+<polyline class="bridge" points="48.2,-16.7 97.3,-39.6"><title>Southwark Bridge</title></polyline>
+<polyline class="bridge" points="109.5,36.5 155.3,7.3"><title>London Bridge</title></polyline>
+<polyline class="bridge bridge--stop" points="0.4,-48.7 56.8,-78.5"/>
+<polyline class="bridge bridge--stop" points="202.4,154.7 251.6,120.8"/>
+<polygon class="side-a" points="217.0,143.3 221.1,145.7 221.1,132.7 217.0,130.3"/><polygon class="side-b" points="221.1,145.7 225.3,143.3 225.3,130.3 221.1,132.7"/><polygon class="top" points="217.0,130.3 221.1,132.7 225.3,130.3 221.1,127.9"/>
+<polygon class="side-a" points="231.9,131.8 236.1,134.2 236.1,121.2 231.9,118.8"/><polygon class="side-b" points="236.1,134.2 240.2,131.8 240.2,118.8 236.1,121.2"/><polygon class="top" points="231.9,118.8 236.1,121.2 240.2,118.8 236.1,116.4"/>
+<polyline class="walk" points="-274.8,-96.3 -268.9,-121.9 -256.8,-148.3 -247.7,-156.3 -234.2,-153.0 -202.0,-152.2 -139.5,-127.3 -117.2,-116.6 -67.5,-85.7 -14.2,-52.8 -1.5,-47.6 10.2,-36.4 56.8,-5.1 69.2,15.5 71.3,32.3 46.3,35.6 87.9,46.3 139.7,71.8 170.9,89.8 180.7,124.3 202.4,154.7 200.2,182.4 192.2,202.2"/>
+<g class="landmark"><polygon class="side-a" points="-291.3,-98.8 -270.5,-86.8 -270.5,-94.8 -291.3,-106.8"/><polygon class="side-b" points="-270.5,-86.8 -258.4,-93.8 -258.4,-101.8 -270.5,-94.8"/><polygon class="top" points="-291.3,-106.8 -270.5,-94.8 -258.4,-101.8 -279.1,-113.8"/></g>
+<g class="landmark"><polygon class="side-a" points="-273.3,-150.8 -252.5,-138.8 -252.5,-146.8 -273.3,-158.8"/><polygon class="side-b" points="-252.5,-138.8 -240.4,-145.8 -240.4,-153.8 -252.5,-146.8"/><polygon class="top" points="-273.3,-158.8 -252.5,-146.8 -240.4,-153.8 -261.2,-165.8"/></g>
+<g class="landmark"><polygon class="side-a" points="-250.2,-152.8 -234.6,-143.8 -234.6,-146.6 -250.2,-155.6"/><polygon class="side-b" points="-234.6,-143.8 -225.9,-148.8 -225.9,-151.6 -234.6,-146.6"/><polygon class="top" points="-250.2,-155.6 -234.6,-146.6 -225.9,-151.6 -241.5,-160.6"/></g>
+<g class="landmark"><polygon class="side-a" points="-226.1,-150.3 -205.4,-138.3 -205.4,-146.3 -226.1,-158.3"/><polygon class="side-b" points="-205.4,-138.3 -193.2,-145.3 -193.2,-153.3 -205.4,-146.3"/><polygon class="top" points="-226.1,-158.3 -205.4,-146.3 -193.2,-153.3 -214.0,-165.3"/></g>
+<g class="landmark"><polygon class="side-a" points="-153.6,-128.2 -138.0,-119.2 -138.0,-122.0 -153.6,-131.0"/><polygon class="side-b" points="-138.0,-119.2 -129.3,-124.2 -129.3,-127.0 -138.0,-122.0"/><polygon class="top" points="-153.6,-131.0 -138.0,-122.0 -129.3,-127.0 -144.9,-136.0"/></g>
+<g class="landmark"><polygon class="side-a" points="-131.4,-115.4 -119.3,-108.4 -119.3,-112.4 -131.4,-119.4"/><polygon class="side-b" points="-119.3,-108.4 -110.7,-113.4 -110.7,-117.4 -119.3,-112.4"/><polygon class="top" points="-131.4,-119.4 -119.3,-112.4 -110.7,-117.4 -122.8,-124.4"/><polygon class="side-a" points="-124.2,-114.4 -121.1,-112.6 -121.1,-127.6 -124.2,-129.4"/><polygon class="side-b" points="-121.1,-112.6 -117.9,-114.4 -117.9,-129.4 -121.1,-127.6"/><polygon class="top" points="-124.2,-129.4 -121.1,-127.6 -117.9,-129.4 -121.1,-131.2"/></g>
+<g class="landmark"><polygon class="side-a" points="-41.9,-51.8 -15.9,-36.8 -15.9,-45.8 -41.9,-60.8"/><polygon class="side-b" points="-15.9,-36.8 -2.0,-44.8 -2.0,-53.8 -15.9,-45.8"/><polygon class="top" points="-41.9,-60.8 -15.9,-45.8 -2.0,-53.8 -28.0,-68.8"/><polygon class="side-a" points="-23.8,-49.4 -20.0,-47.2 -20.0,-75.2 -23.8,-77.4"/><polygon class="side-b" points="-20.0,-47.2 -16.2,-49.4 -16.2,-77.4 -20.0,-75.2"/><polygon class="top" points="-23.8,-77.4 -20.0,-75.2 -16.2,-77.4 -20.0,-79.6"/></g>
+<g class="landmark"></g>
+<g class="landmark"><polygon class="side-a" points="3.7,-38.6 14.1,-32.6 14.1,-37.0 3.7,-43.0"/><polygon class="side-b" points="14.1,-32.6 24.5,-38.6 24.5,-43.0 14.1,-37.0"/><polygon class="top" points="3.7,-43.0 14.1,-37.0 24.5,-43.0 14.1,-49.0"/></g>
+<g class="landmark"><polygon class="side-a" points="60.9,11.2 76.5,20.2 76.5,17.4 60.9,8.4"/><polygon class="side-b" points="76.5,20.2 85.2,15.2 85.2,12.4 76.5,17.4"/><polygon class="top" points="60.9,8.4 76.5,17.4 85.2,12.4 69.6,3.4"/></g>
+<g class="landmark"><polygon class="side-a" points="55.1,34.6 67.3,41.6 67.3,37.6 55.1,30.6"/><polygon class="side-b" points="67.3,41.6 75.9,36.6 75.9,32.6 67.3,37.6"/><polygon class="top" points="55.1,30.6 67.3,37.6 75.9,32.6 63.8,25.6"/><polygon class="side-a" points="62.4,35.6 65.5,37.4 65.5,22.4 62.4,20.6"/><polygon class="side-b" points="65.5,37.4 68.7,35.6 68.7,20.6 65.5,22.4"/><polygon class="top" points="62.4,20.6 65.5,22.4 68.7,20.6 65.5,18.8"/></g>
+<g class="landmark"><polygon class="side-a" points="34.2,33.6 49.8,42.6 49.8,39.8 34.2,30.8"/><polygon class="side-b" points="49.8,42.6 58.4,37.6 58.4,34.8 49.8,39.8"/><polygon class="top" points="34.2,30.8 49.8,39.8 58.4,34.8 42.8,25.8"/></g>
+<g class="landmark"><polygon class="side-a" points="168.3,75.3 196.0,91.3 196.0,89.3 168.3,73.3"/><polygon class="side-b" points="196.0,91.3 200.5,88.7 200.5,86.7 196.0,89.3"/><polygon class="top" points="168.3,73.3 196.0,89.3 200.5,86.7 172.8,70.7"/><polygon class="side-a" points="179.6,80.8 186.5,84.8 186.5,78.4 179.6,74.4"/><polygon class="side-b" points="186.5,84.8 189.3,83.2 189.3,76.8 186.5,78.4"/><polygon class="top" points="179.6,74.4 186.5,78.4 189.3,76.8 182.3,72.8"/></g>
+<g class="landmark"></g>
+<g class="landmark"><polygon class="side-a" points="175.7,199.7 196.5,211.7 196.5,203.7 175.7,191.7"/><polygon class="side-b" points="196.5,211.7 208.6,204.7 208.6,196.7 196.5,203.7"/><polygon class="top" points="175.7,191.7 196.5,203.7 208.6,196.7 187.8,184.7"/></g>
+<a class="stop" id="map-waterloo" href="#waterloo" data-stop="1"><title>1. Waterloo Station</title><circle cx="-274.8" cy="-96.3" r="5.5"/><text class="stop__n" x="-274.8" y="-93.7">1</text></a>
+<a class="stop" id="map-southbank-centre" href="#southbank-centre" data-stop="2"><title>2. Southbank Centre</title><circle cx="-256.8" cy="-148.3" r="5.5"/><text class="stop__n" x="-256.8" y="-145.7">2</text></a>
+<a class="stop" id="map-bfi" href="#bfi" data-stop="3"><title>3. BFI Southbank</title><circle cx="-238.1" cy="-150.8" r="5.5"/><text class="stop__n" x="-238.1" y="-148.2">3</text></a>
+<a class="stop" id="map-national-theatre" href="#national-theatre" data-stop="4"><title>4. National Theatre</title><circle cx="-209.7" cy="-147.8" r="5.5"/><text class="stop__n" x="-209.7" y="-145.2">4</text></a>
+<a class="stop" id="map-gabriels-wharf" href="#gabriels-wharf" data-stop="5"><title>5. Gabriel’s Wharf</title><circle cx="-141.5" cy="-126.2" r="5.5"/><text class="stop__n" x="-141.5" y="-123.6">5</text></a>
+<a class="stop" id="map-oxo-tower" href="#oxo-tower" data-stop="6"><title>6. Oxo Tower Wharf</title><circle cx="-121.1" cy="-114.4" r="5.5"/><text class="stop__n" x="-121.1" y="-111.8">6</text></a>
+<a class="stop" id="map-tate-modern" href="#tate-modern" data-stop="7"><title>7. Tate Modern</title><circle cx="-22.0" cy="-48.3" r="5.5"/><text class="stop__n" x="-22.0" y="-45.7">7</text></a>
+<a class="stop" id="map-millennium-bridge" href="#millennium-bridge" data-stop="8"><title>8. Millennium Bridge</title><circle cx="4.3" cy="-51.0" r="5.5"/><text class="stop__n" x="4.3" y="-48.4">8</text></a>
+<a class="stop" id="map-globe" href="#globe" data-stop="9"><title>9. Shakespeare’s Globe</title><circle cx="14.1" cy="-38.6" r="5.5"/><text class="stop__n" x="14.1" y="-36.0">9</text></a>
+<a class="stop" id="map-golden-hinde" href="#golden-hinde" data-stop="10"><title>10. Golden Hinde</title><circle cx="73.1" cy="13.2" r="5.5"/><text class="stop__n" x="73.1" y="15.8">10</text></a>
+<a class="stop" id="map-southwark-cathedral" href="#southwark-cathedral" data-stop="11"><title>11. Southwark Cathedral</title><circle cx="65.5" cy="35.6" r="5.5"/><text class="stop__n" x="65.5" y="38.2">11</text></a>
+<a class="stop" id="map-borough-market" href="#borough-market" data-stop="12"><title>12. Borough Market</title><circle cx="46.3" cy="35.6" r="5.5"/><text class="stop__n" x="46.3" y="38.2">12</text></a>
+<a class="stop" id="map-hms-belfast" href="#hms-belfast" data-stop="13"><title>13. HMS Belfast</title><circle cx="184.4" cy="82.0" r="5.5"/><text class="stop__n" x="184.4" y="84.6">13</text></a>
+<a class="stop" id="map-tower-bridge" href="#tower-bridge" data-stop="14"><title>14. Tower Bridge</title><circle cx="208.2" cy="151.4" r="5.5"/><text class="stop__n" x="208.2" y="154.0">14</text></a>
+<a class="stop" id="map-shad-thames" href="#shad-thames" data-stop="15"><title>15. Shad Thames</title><circle cx="192.2" cy="202.2" r="5.5"/><text class="stop__n" x="192.2" y="204.8">15</text></a>
+<g class="north"><line x1="-449.4" y1="-114.7" x2="-430.1" y2="-125.9"/><text x="-426.1" y="-129.9">N</text></g>
+<text class="river-name" x="-90.9" y="-141.5">River Thames</text>
+      </svg>
+      <div class="steps" hidden>
+        <button type="button" data-step="-1">Previous</button>
+        <button type="button" data-step="1">Next</button>
+      </div>
+    </div>
+    <ol class="walk__list">
+      <li id="waterloo" data-stop="1"><a href="#waterloo"><span class="walk__n">1</span> <strong>Waterloo Station</strong></a><p>Where the walk starts. Out of the station, and follow the signs to the river.</p></li>
+      <li id="southbank-centre" data-stop="2"><a href="#southbank-centre"><span class="walk__n">2</span> <strong>Southbank Centre</strong></a><p>The Royal Festival Hall, from the 1951 Festival of Britain, and the skaters in the Undercroft beneath Queen Elizabeth Hall.</p></li>
+      <li id="bfi" data-stop="3"><a href="#bfi"><span class="walk__n">3</span> <strong>BFI Southbank</strong></a><p>The cinema, and the second-hand book tables under Waterloo Bridge.</p></li>
+      <li id="national-theatre" data-stop="4"><a href="#national-theatre"><span class="walk__n">4</span> <strong>National Theatre</strong></a><p>Denys Lasdun’s concrete terraces, from 1976. Loved and hated in about equal measure.</p></li>
+      <li id="gabriels-wharf" data-stop="5"><a href="#gabriels-wharf"><span class="walk__n">5</span> <strong>Gabriel’s Wharf</strong></a><p>A little cluster of shops and cafés right on the river.</p></li>
+      <li id="oxo-tower" data-stop="6"><a href="#oxo-tower"><span class="walk__n">6</span> <strong>Oxo Tower Wharf</strong></a><p>Look up for the letters O, X, O in the tower’s windows.</p></li>
+      <li id="tate-modern" data-stop="7"><a href="#tate-modern"><span class="walk__n">7</span> <strong>Tate Modern</strong></a><p>The old Bankside Power Station, an art gallery since 2000.</p></li>
+      <li id="millennium-bridge" data-stop="8"><a href="#millennium-bridge"><span class="walk__n">8</span> <strong>Millennium Bridge</strong></a><p>The footbridge, with St Paul’s Cathedral straight across. It wobbled when it opened in 2000.</p></li>
+      <li id="globe" data-stop="9"><a href="#globe"><span class="walk__n">9</span> <strong>Shakespeare’s Globe</strong></a><p>A reconstruction of Shakespeare’s theater, open since 1997, a short walk from where the original stood.</p></li>
+      <li id="golden-hinde" data-stop="10"><a href="#golden-hinde"><span class="walk__n">10</span> <strong>Golden Hinde</strong></a><p>A full-size replica of Sir Francis Drake’s ship, tucked into its own little dock.</p></li>
+      <li id="southwark-cathedral" data-stop="11"><a href="#southwark-cathedral"><span class="walk__n">11</span> <strong>Southwark Cathedral</strong></a><p>One of the oldest churches in London, right next to the market.</p></li>
+      <li id="borough-market" data-stop="12"><a href="#borough-market"><span class="walk__n">12</span> <strong>Borough Market</strong></a><p>One of London’s oldest food markets. Come hungry.</p></li>
+      <li id="hms-belfast" data-stop="13"><a href="#hms-belfast"><span class="walk__n">13</span> <strong>HMS Belfast</strong></a><p>A Second World War cruiser, moored for good as a museum.</p></li>
+      <li id="tower-bridge" data-stop="14"><a href="#tower-bridge"><span class="walk__n">14</span> <strong>Tower Bridge</strong></a><p>The one everyone pictures. Walk across, or just stand and look.</p></li>
+      <li id="shad-thames" data-stop="15"><a href="#shad-thames"><span class="walk__n">15</span> <strong>Shad Thames</strong></a><p>Old warehouses, cobbles, and walkways overhead. The Design Museum was here until 2016.</p></li>
+    </ol>
+  </div>
+</main>
+<script>
+/* Without this the page is still whole: every marker and list item is a plain
+   link to its stop. This only adds the stepping, and keeps map and list in step. */
+(function () {
+  'use strict';
+  var stops = document.querySelectorAll('.walk__list li');
+  var count = stops.length;
+  var current = 0;
+  document.querySelector('.steps').hidden = false;
+
+  function show(n) {
+    current = Math.max(1, Math.min(count, n));
+    document.querySelectorAll('.is-active').forEach(function (el) { el.classList.remove('is-active'); });
+    var item = document.querySelector('.walk__list li[data-stop="' + current + '"]');
+    item.classList.add('is-active');
+    document.querySelector('.stop[data-stop="' + current + '"]').classList.add('is-active');
+    item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    history.replaceState(null, '', '#' + item.id);
+  }
+
+  document.addEventListener('click', function (e) {
+    var step = e.target.closest('[data-step]');
+    if (step) return show((current || 0) + Number(step.dataset.step));
+    var owner = e.target.closest('[data-stop]');
+    if (owner) { e.preventDefault(); show(Number(owner.dataset.stop)); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') show(current + 1);
+    if (e.key === 'ArrowLeft') show(current - 1);
+  });
+
+  var start = document.getElementById(location.hash.slice(1));
+  if (start && start.dataset.stop) show(Number(start.dataset.stop));
+})();
+</script>
+</body>
+</html>

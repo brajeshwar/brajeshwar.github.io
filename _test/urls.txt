@@ -1505,3 +1505,4 @@
 /static/pdf/own.pdf
 /static/pdf/wordpress-theme-development-workflow.pdf
 /styleguide/
+/misc/london-southbank/
