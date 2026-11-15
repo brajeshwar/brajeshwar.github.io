@@ -6,7 +6,7 @@ I start at Waterloo Station, find the river, and keep it on my left all the way 
 
 <a href="/misc/london-southbank/"><img class="full" src="/static/2026/london-southbank-walk.webp" alt="A model of central London along the Thames, with the walk marked on it: along the South Bank from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank, with twenty-two numbered stops"></a>
 
-The picture is a model. [Open it](/misc/london-southbank/) to turn it, tip it, and fly the walk from stop to stop, with the landmarks named as you pass. Or take the [route on Google Maps](https://maps.app.goo.gl/pcuHCeuadnmsn9Fh6) with you.
+The picture is a model. [Open it](/misc/london-southbank/) to turn it, tip it, and fly the walk from stop to stop, with the landmarks named as you pass.
 
 ## The Walk
 
