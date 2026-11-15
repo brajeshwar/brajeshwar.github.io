@@ -59,6 +59,27 @@
     return node;
   }
 
+  /* A click outside the panel closes it, like Escape. Browsers that know
+     closedby="any" do this themselves. For the rest, a click counts only
+     when it both starts and ends outside the panel's box, so selecting
+     text and letting go past the edge does not throw the list away. */
+  function lightDismiss() {
+    dialog.setAttribute('closedby', 'any');
+    var downOutside = false;
+
+    function outside(e) {
+      var r = dialog.getBoundingClientRect();
+      return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    }
+
+    dialog.addEventListener('pointerdown', function (e) {
+      downOutside = outside(e);
+    });
+    dialog.addEventListener('click', function (e) {
+      if (downOutside && outside(e)) dialog.close();
+    });
+  }
+
   function build() {
     dialog = el('dialog', 'keys-help');
     dialog.setAttribute('aria-labelledby', 'keys-help-title');
@@ -92,11 +113,7 @@
     body.appendChild(foot);
 
     dialog.appendChild(body);
-    // The body fills the dialog, so a click that lands on the dialog itself
-    // came through the backdrop.
-    dialog.addEventListener('click', function (e) {
-      if (e.target === dialog) dialog.close();
-    });
+    lightDismiss();
     document.body.appendChild(dialog);
   }
 

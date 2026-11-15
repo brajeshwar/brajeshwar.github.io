@@ -46,8 +46,6 @@
   }
 }
 
-/* The body fills the dialog, so a click on the dialog itself is a
-   click on the backdrop. keys-help.js closes on that. */
 .keys-help__body {
   padding: var(--space-m);
 }

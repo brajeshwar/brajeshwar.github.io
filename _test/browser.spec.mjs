@@ -136,6 +136,13 @@ test('keys: ? opens the list, fetched only then, and Escape closes it', async ({
 
   await page.keyboard.press('Escape');
   await expect(list).toBeHidden();
+
+  // A click outside closes it too; one on the panel itself does not.
+  await page.keyboard.press('?');
+  await list.click({ position: { x: 4, y: 4 } });
+  await expect(list).toBeVisible();
+  await page.mouse.click(5, 5);
+  await expect(list).toBeHidden();
 });
 
 test('keys: d and a walk the articles, and h goes home', async ({ page }) => {
