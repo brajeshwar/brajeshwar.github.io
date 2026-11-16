@@ -30,10 +30,16 @@
   thing that shows between pages, matches before the stylesheet loads; the
   CSS half is in _sass/base.scss. theme-toggle.js does the rest.
 
+  [WARNING] `data-cfasync="false"` keeps Cloudflare's Rocket Loader off it.
+  Rocket Loader holds back every script on the live site until the page has
+  loaded, so without it a reader with Dark chosen on a light system saw each
+  page paint white and fade to dark. jekyll serve has no Rocket Loader, so
+  it never showed there.
+
   A Liquid comment, not an HTML one: this is removed at build time, where an
   HTML comment would ship to every page.
 {%- endcomment -%}
-<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('theme');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(t==='light'||t==='dark')document.querySelector('meta[name=color-scheme]').content=t;}catch(e){}})();</script>
+<script data-cfasync="false">(function(){try{var d=document.documentElement,t=localStorage.getItem('theme');d.dataset.theme=(t==='light'||t==='dark')?t:'auto';if(t==='light'||t==='dark')document.querySelector('meta[name=color-scheme]').content=t;}catch(e){}})();</script>
 
 <link rel="archives" href="{{ site.baseurl | prepend: site.url }}/archives/">
 <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}{{ page.url }}">

@@ -7,9 +7,10 @@
 <title>A Stroll Along the South Bank | Brajeshwar</title>
 <meta name="description" content="A model of the South Bank in London to turn, move, and fly through: the walk from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank.">
 <link rel="canonical" href="https://brajeshwar.com/misc/london-southbank/">
-<script>
+<script data-cfasync="false">
 // Day or night, settled before the page paints; walk.js asks again as the
-// hours pass. It is night if the reader has said so with the button, for
+// hours pass. data-cfasync keeps Cloudflare's Rocket Loader from holding it
+// back until after the page has painted. It is night if the reader has said so with the button, for
 // this visit; else if they have a standing wish for dark, their system's or
 // this site's; else by their own clock, from seven in the evening to six in
 // the morning.

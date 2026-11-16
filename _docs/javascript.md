@@ -232,3 +232,9 @@ if (document.readyState === 'loading') {
 in `assets/scripts/` uses a bare listener. **A bare `DOMContentLoaded` listener will pass every
 local test and ship broken**, so this is not a style preference — it is the only pattern that
 works in production.
+
+[WARNING] **A script that must run before first paint opts out with `data-cfasync="false"`.**
+Rocket Loader holds back inline scripts too, so the no-flash theme snippet in
+`_layouts/default.html` ran after the page had painted: in Dark on a light system every page
+showed white and faded to dark (fixed 2026-11-16). The South Bank page's day-or-night snippet
+carries the same attribute, and the build tests check both.

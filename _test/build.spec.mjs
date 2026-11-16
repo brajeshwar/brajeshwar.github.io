@@ -116,10 +116,12 @@ test('every page applies the saved theme before first paint', () => {
     const snippet = head.indexOf('d.dataset.theme=');
     const css = head.search(SITE_CSS);
     // One meta, the no-flash snippet present, it rewrites the meta, and it
-    // runs before the stylesheet link.
+    // runs before the stylesheet link. data-cfasync="false" keeps Rocket
+    // Loader from running it after the page has painted.
     return (
       metas.length !== 1 ||
       snippet < 0 ||
+      !/<script data-cfasync="false">[^<]*$/.test(head.slice(0, snippet)) ||
       css < snippet ||
       !head.includes("meta[name=color-scheme]').content=t")
     );
@@ -249,6 +251,8 @@ test('the South Bank walk keeps to its folder, and its list matches its model', 
   // Nothing of the site's, and nothing fetched from anywhere else: every
   // file the page names is in the folder beside it.
   expect(html).not.toContain('/assets/');
+  // Day or night is settled before paint, so Rocket Loader must leave it be.
+  expect(html).toContain('<script data-cfasync="false">\n// Day or night');
   const named = [...html.matchAll(/<(?:script|img|source)\b[^>]*?\s(?:src|srcset)="([^"]+)"/g)];
   expect(named.length).toBeGreaterThan(2);
   for (const [, file] of named) expect(exists(dir + file), file).toBe(true);
