@@ -1148,6 +1148,33 @@ body:has(.gallery) {
   margin-top: var(--space-2xs);
 }
 
+/* No chips in the margin. The code and <mark> chip pads above and below the
+   line, which body text has room for; at a sidenote's tight line-height the
+   chips run into each other and into the lines around them. So code here is
+   told apart by its typeface alone, a touch smaller because monospace runs
+   large, and never hyphenated, since a path broken at a hyphen reads as a
+   different path. It may break anywhere instead, or a long path would run
+   out of the note. A highlight has the same problem and becomes italic. */
+.sidenote code,
+.sidenote mark,
+.sidenote .mark {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.sidenote code {
+  font-size: 0.9em;
+  hyphens: manual;
+  overflow-wrap: anywhere;
+}
+
+.sidenote mark,
+.sidenote .mark {
+  color: inherit;
+  font-style: italic;
+}
+
 .sidenote-ref {
   margin-right: var(--space-3xs);
   font-variant-position: super; /* small raised number where supported */
