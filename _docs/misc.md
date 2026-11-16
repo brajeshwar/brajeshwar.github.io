@@ -22,6 +22,10 @@ The rules:
   split into native modules (`<script type="module">`), which need no build
   step; `make lint` holds `misc/**/*.js` to the same ESLint and Prettier as
   the site's own.
+- **A foot that owns up.** Each says it was made with AI and may not be
+  accurate, gives a last-updated date, and links home to brajeshwar.com,
+  since none of the site's own header or footer is there. The date is written
+  by hand; `_test/build.spec.mjs` holds it to the folder's last commit.
 - **Its URL is permanent once pushed**, like any other (guardrail 2), so it
   goes into `_test/urls.txt` by hand.
 - **Generators stay out of the repo.** If a drawing or a data file was made by

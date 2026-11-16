@@ -107,6 +107,10 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 /* The compass is a dial: round, and its needle turns to keep pointing north. */
 .tools .compass { border-radius: 50%; }
 .note { margin: .75rem 0 0; color: var(--muted); font-size: .8rem; }
+/* The page's foot: what it is, how old it is, and the way home. The date
+   is written by hand; the build tests hold it to the folder's last commit. */
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; }
+.foot p { margin: 0; }
 .hint { display: none; }
 .stage.is-live ~ .note .hint--mouse { display: inline; }
 @media (pointer: coarse) {
@@ -218,6 +222,10 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
     </ol>
     </div>
   </div>
+  <footer class="foot">
+    <p>Made with AI, so the model and its notes may not be accurate. Last updated <time datetime="2026-11-16">November 16, 2026</time>.</p>
+    <p><a href="/">&larr; brajeshwar.com</a></p>
+  </footer>
 </main>
 <script type="module" src="walk.js"></script>
 </body>

@@ -3,6 +3,7 @@
 
 import { test, expect } from '@playwright/test';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import {
   SITE,
   assertSite,
@@ -277,6 +278,26 @@ test('the South Bank walk keeps to its folder, and its list matches its model', 
     ([, x, y]) => x < 0 || y < 0 || x > city.size[0] || y > city.size[1]
   );
   expect(lost).toEqual([]);
+});
+
+test('the South Bank walk says when it was last updated, and it is not older', () => {
+  // The date in its foot is written by hand, so it is held to the last
+  // commit of the live page's own files; the kept versions beside it do not
+  // count. A shallow checkout (CI) has no history to ask, and skips this.
+  const git = (...args) => execFileSync('git', args, { encoding: 'utf8' }).trim();
+  test.skip(git('rev-parse', '--is-shallow-repository') === 'true', 'no history');
+  const html = read('/misc/london-southbank/index.html');
+  const stated = html.match(/Last updated <time datetime="(\d{4}-\d{2}-\d{2})">/)?.[1];
+  expect(stated).toBeTruthy();
+  const live = ['index.html', 'walk.js', 'city.js', 'draw.js', 'city.json'];
+  const committed = git(
+    'log',
+    '-1',
+    '--format=%cs',
+    '--',
+    ...live.map((f) => `misc/london-southbank/${f}`)
+  );
+  expect(stated >= committed, `${stated} is older than ${committed}`).toBe(true);
 });
 
 // ---- Pages and assets --------------------------------------------------
