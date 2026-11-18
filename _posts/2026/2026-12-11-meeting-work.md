@@ -6,7 +6,7 @@ The workarounds are glorious. Passwords on sticky notes stuck to the very device
 
 The authors are careful to say these are not villains. “These are not terrorists or black hat hackers, but rather clinicians trying to use the computer system for conventional healthcare activities.” The rules were in the way of the work, and the work won, because “the medical mission trumps the security mission.”
 
-That story was an instant reminder while reading a recent Hacker News thread, [“Why do we have so many meetings?”](https://news.ycombinator.com/item?id=50167732), on an NBER paper simply titled [Meetings](https://www.nber.org/papers/w35706).[^nber] Because most of us do not work in hospitals, and nobody dies when the meeting runs long. But the shape is the same; a ritual that was supposed to serve the work has quietly started to replace it.
+That story was an instant reminder while reading a recent Hacker News thread, [“Why do we have so many meetings?”](https://news.ycombinator.com/item?id=50167732), on an NBER paper simply titled [Meetings](https://www.nber.org/papers/w35706). Because most of us do not work in hospitals, and nobody dies when the meeting runs long. But the shape is the same; a ritual that was supposed to serve the work has quietly started to replace it.
 
 > “Do you Want a Meeting, or do you Want the Work Done?”
 
@@ -22,7 +22,7 @@ The thread also reminded me of Wadge’s Law, which I had not heard named before
 
 ## The uncomfortable part: it works
 
-Here is where it stops being funny. The NBER paper, surveying over nine thousand workers, found that meetings take about 12% of working hours and around 14% of a firm’s wage bill. It also found that people who spend more time in meetings see faster wage growth. You can read that as meetings being where knowledge moves from senior people to junior ones, which is what the authors suggest and which is sometimes true. You can also read it the way a few of the commenters did: meetings are the most powerful channel for being noticed, and being noticed is, unfortunately, half of a career.
+Here is where it stops being funny. The NBER paper, surveying over nine thousand workers, found that meetings take about 12% of working hours and around 14% of a firm’s wage bill.[^nber] It also found that people who spend more time in meetings see faster wage growth. You can read that as meetings being where knowledge moves from senior people to junior ones, which is what the authors suggest and which is sometimes true. You can also read it the way a few of the commenters did: meetings are the most powerful channel for being noticed, and being noticed is, unfortunately, half of a career.
 
 That is the Styrofoam cup again. When the system rewards being visible over being useful, people will route around the work to be visible.
 
@@ -48,4 +48,4 @@ So, do you want the meeting, or do you want the work done?
 
 [^paper]: Ross Koppel, Sean Smith, Jim Blythe, and Vijay Kothari, published in *Studies in Health Technology and Informatics*, volume 208, 2015. The original lives on [Dartmouth’s site](https://www.cs.dartmouth.edu/~sws/pubs/ksbk15-draft.pdf), and the Internet Archive keeps a copy for the days it does not answer.
 
-[^nber]: David J. Deming, Katrine V. Løken, Alexander Willén, and Yaling Xu, NBER Working Paper 35706, September 2026.
+[^nber]: [*Meetings*](https://www.nber.org/papers/w35706), NBER Working Paper 35706, September 2026, by [David J. Deming](https://en.wikipedia.org/wiki/David_Deming_(economist)), Katrine V. Løken, Alexander Willén, and Yaling Xu, for the [National Bureau of Economic Research](https://en.wikipedia.org/wiki/National_Bureau_of_Economic_Research). The numbers come from a survey of more than 9,000 Norwegian workers, matched against their employers’ records. Meetings eat about 12% of work hours and about 14% of the wage bill, mostly for planning, problem-solving, sharing information, and coordinating projects. Firms that pay more, and earn more, hold more meetings, even though their people’s time costs more. And workers who meet more often see faster wage growth and say they learn more on the job, mostly from senior colleagues.
