@@ -399,15 +399,19 @@ photo-cover__desc {
      gray-900, a near-black disc in a quiet gray bar, which shouts on a page
      whose whole argument is restraint.
 
-     Eased 22% toward the bar it sits in, rather than swapped for a fixed
+     Eased 45% toward the bar it sits in, rather than swapped for a fixed
      gray. That keeps it derived from the same token the selected pill uses,
      and it stays correct in every theme without a second rule: in light it
-     lands around gray-700, in dark it steps the light disc down to a soft
-     off-white. A hardcoded gray would have had to be re-picked per palette.
+     lands between gray-500 and gray-600, in dark just under gray-400. A hardcoded
+     gray would have had to be re-picked per palette.
+
+     It was 22% until 2026-11-18, when the disc still stood out from PREV
+     and NEXT, most of all in dark mode, where it was a near-white circle in
+     a dark bar. The icon keeps better than 5:1 against the disc in both.
 
      The full --color-primary is still used — on hover, where the extra weight
      now reads as activation instead of as the default state. */
-  --post-nav-random-bg: color-mix(in oklab, var(--color-primary) 78%, var(--bg-color-low));
+  --post-nav-random-bg: color-mix(in oklab, var(--color-primary) 55%, var(--bg-color-low));
 
   /* The nav spans the CONTENT BAND — it is a direct child of `main` and
      carries no width of its own, so it fills it. It used to wear
