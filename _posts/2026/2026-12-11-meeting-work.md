@@ -40,6 +40,10 @@ The cure is not a policy. Every “No Meeting Wednesday” I have seen survives 
 
 The cure is people who can manage themselves. Who read the note. Who reply with an answer instead of an invitation. Who write down what they are doing, so nobody needs a status meeting to find out. Who make the small decisions they are allowed to make, and own them when they are wrong. A lot of meetings exist only because someone, somewhere, is not sure they are allowed to decide, so they gather everyone who might have an opinion and wait for the room to decide for them.
 
+That is the quiet beauty of async work. Nobody has to be in the same place, or awake at the same hour, for the work to move. You write the problem down, someone across the world picks it up after their breakfast, and by the time you are back at your desk there is an answer, a question, or simply the work, done. The thinking happens when each person thinks best, not when the calendar says so. And what is written down stays written down; the next person does not need a meeting to catch up, only a link.
+
+But async has one condition, and it is not the tool. It works only when people can manage themselves. When they read what was written, reply when they said they would, and finish what they picked up without someone checking in. Take that away and async does not fail quietly. It fails straight back into a meeting, called to find out why nothing happened.
+
 And then, manage others the same way. Being a team player is not attending everything. It is being the person others can count on without having to schedule you. It is unblocking a colleague with a two-line reply before lunch, so they do not need to book your Thursday. A good team rarely meets because it rarely needs to; everyone already knows what everyone else is doing, because they wrote it down.
 
 The doctors in that paper did not stick passwords on monitors because they were careless. They did it because they had patients to treat, and the system had forgotten that. Most of our work is not life or death. But it is still work, and somebody still has to do it.
