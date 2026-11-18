@@ -130,11 +130,13 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 /* His own photos, from the walk in June 2026, under the stops they show. They
    keep their color on a gray page, as the model does. Under the words, never
    inside them: walk.js fills the caption from the stop's strong and p. A
-   click on a photo is a click on its stop, and flies there. Two or three to a
-   stop sit side by side, cropped square; one is shown whole. */
-.walk__photos { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .3rem; margin: .5rem 0 .2rem 1.9rem; }
-.walk__photos img { display: block; width: 100%; height: auto; border-radius: 4px; cursor: pointer; }
-.walk__photos:has(img + img) img { aspect-ratio: 1; height: 100%; object-fit: cover; }
+   click on a photo is a click on its stop, and flies there. They are tiles,
+   cropped to 4:3, two to a row, so one alone is half the list's width
+   (2026-11-18: shown whole at full width, they took too much room). Three
+   share a row. */
+.walk__photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: .3rem; margin: .5rem 0 .2rem 1.9rem; }
+.walk__photos:has(img + img + img) { grid-template-columns: repeat(3, 1fr); }
+.walk__photos img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; cursor: pointer; }
 .walk__turn { margin: 0; padding: .9rem 0 .5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
 
 /* A reader who asks for less motion still gets the flights, which only ever
