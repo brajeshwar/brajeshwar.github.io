@@ -10,12 +10,17 @@
 <script data-cfasync="false">
 // Day or night, settled before the page paints; walk.js asks again as the
 // hours pass. data-cfasync keeps Cloudflare's Rocket Loader from holding it
-// back until after the page has painted. It is night if the reader has said so with the button, for
-// this visit; else if they have a standing wish for dark, their system's or
-// this site's; else by their own clock, from seven in the evening to six in
-// the morning.
-var light={chosen:null,night:function(){var wish;try{wish=localStorage.getItem('theme')}catch(e){}if(light.chosen)return light.chosen==='night';if(wish==='dark'||wish!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches)return true;var hour=new Date().getHours();return hour>=19||hour<6}};
-try{light.chosen=sessionStorage.getItem('walk-light')}catch(e){}
+// back until after the page has painted. The hour is the one the reader has
+// chosen on the slider, for this visit, or else their own clock. This page
+// stands on its own, so neither the site's theme nor the system's has a say.
+// Daylight comes up from five to seven and goes from six to eight, so it is
+// night from seven in the evening to six in the morning.
+var light={chosen:null,
+now:function(){var d=new Date();return d.getHours()+d.getMinutes()/60},
+at:function(){return light.chosen===null?light.now():light.chosen},
+daylight:function(h){var up=Math.min(Math.max((h-5)/2,0),1),down=Math.min(Math.max((20-h)/2,0),1),t=Math.min(up,down);return t*t*(3-2*t)},
+night:function(){return light.daylight(light.at())<0.5}};
+try{var kept=parseInt(sessionStorage.getItem('walk-hour'),10);if(kept>=0&&kept<1440)light.chosen=kept/60}catch(e){}
 (function(){var d=document.documentElement,theme=light.night()?'dark':'light';d.classList.add('js');d.dataset.theme=theme;document.querySelector('meta[name=color-scheme]').content=theme})();
 </script>
 <style>

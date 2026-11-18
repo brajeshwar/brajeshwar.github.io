@@ -16,8 +16,14 @@ The rules:
   Liquid, no hashing, no minifying. The build tests that check every site page
   (theme snippet, title, `<h1>`) pick pages by the site stylesheet, so they
   skip these by design.
-- **Still the site's manners:** grayscale, system fonts, the saved Light or
-  Dark from `localStorage.theme`, whole without JavaScript, and no emoji (the
+- **Not tied to the site's light and dark** (2026-11-18: *"Independent pages
+  such as this, which are self-contained, should not be tied to the likes of
+  the main site's light/dark theme. Let's follow the clock of the user"*).
+  Neither the site's saved theme nor the system's decides; the reader's
+  clock does, with a control to change it. Without JavaScript there is no
+  clock, so the page falls back to the system's.
+- **Still the site's manners:** grayscale, system fonts, whole without
+  JavaScript, and no emoji (the
   emoji test scans `misc/`). Plain JavaScript, no libraries. A script may be
   split into native modules (`<script type="module">`), which need no build
   step; `make lint` holds `misc/**/*.js` to the same ESLint and Prettier as
@@ -145,17 +151,20 @@ model with it: lit windows, lamps on the river. The rule is one function,
 the page paints. In order:
 
 1. what the reader chose with the button, which holds for the visit
-   (`sessionStorage`, `walk-light`) and is forgotten when the tab closes;
-2. a standing wish for dark: the system's, or the site's own saved theme.
-   Someone who asks for dark is never shown a bright page at noon;
-3. the clock: night from seven in the evening to six in the morning, by the
+   (`sessionStorage`, `walk-hour`, in minutes after midnight) and is
+   forgotten when the tab closes;
+2. the clock: night from seven in the evening to six in the morning, by the
    reader's own time, wherever they are.
+
+Until 2026-11-18 a standing wish for dark came between the two, the system's
+or the site's saved theme, so a Mac in Dark Mode saw the page dark at noon.
+He asked for it to go (see the rule at the top of this file).
 
 `walk.js` asks again every minute, so evening comes on with the page open.
 The button's key is N, and neither it nor the key stops a flight. [WARNING]
 The hours are fixed. It is not sunset: nothing here knows where the reader
 is, and asking would be a permission prompt for a decoration. Without
-JavaScript the page follows the system alone, as it always did.
+JavaScript the page follows the system, having no clock to go by.
 
 **The model is in color; the page round it is not** (2026-11-15: first *"the
 next step of the Tinted Palette"*, then *"build the next better colored

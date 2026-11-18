@@ -240,9 +240,9 @@ function readLook() {
 // ---- day and night -----------------------------------------------------
 //
 // Whether it is night is the page's to say, in the script in its head: the
-// reader's choice for this visit, else a standing wish for dark, else their
-// clock. Here that answer is put everywhere it shows: the page's colors,
-// the picture that stands in for the model, the button, the model's light.
+// hour the reader has chosen for this visit, else their own clock. Here that
+// answer is put everywhere it shows: the page's colors, the picture that
+// stands in for the model, the button, the model's light.
 
 function relight() {
   const night = window.light.night();
@@ -258,15 +258,21 @@ function relight() {
   redraw();
 }
 
-// The button turns day to night and back, for the rest of this visit.
-function turnLight() {
-  window.light.chosen = window.light.night() ? 'day' : 'night';
+// Keep an hour for the rest of this visit, or null to go back to the clock.
+function chooseHour(hour) {
+  window.light.chosen = hour;
   try {
-    sessionStorage.setItem('walk-light', window.light.chosen);
+    if (hour === null) sessionStorage.removeItem('walk-hour');
+    else sessionStorage.setItem('walk-hour', String(Math.round(hour * 60)));
   } catch (e) {
     /* no storage: the choice lasts until the page is left */
   }
   relight();
+}
+
+// The button turns day to night and back: one in the afternoon, or ten at night.
+function turnLight() {
+  chooseHour(window.light.night() ? 13 : 22);
 }
 
 relight();
@@ -1018,10 +1024,6 @@ function start(city) {
     measure();
     redraw();
   }).observe(canvas);
-  // The standing wish for dark can change under us: the system's, or the
-  // site's own toggle in another tab.
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', relight);
-  window.addEventListener('storage', relight);
   canvas.addEventListener('webglcontextlost', function (e) {
     e.preventDefault();
   });
