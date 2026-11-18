@@ -18,7 +18,7 @@ One commenter on that thread put it plain and simple: some people “refuse to d
 
 And then there are the attendees who are not there to decide anything. They are there to be seen to be there. A full calendar is the corporate equivalent of a peacock’s tail: expensive, impractical, and entirely for display. If you want to see real anger in an office, it is about a meeting someone was not invited to.
 
-The thread also reminded me of Wadge’s Law, which I had not heard named before: before every formal meeting there is a smaller, more exclusive, less formal meeting where the important decisions are made. Sometimes there is a pre-pre-meeting. It is meetings all the way down, and the one on your calendar is the one where everybody performs the decision that was already made.
+The thread also reminded me of Wadge’s Law,[^wadge] which I had not heard named before: before every formal meeting there is a smaller, more exclusive, less formal meeting where the important decisions are made. Sometimes there is a pre-pre-meeting. It is meetings all the way down, and the one on your calendar is the one where everybody performs the decision that was already made.
 
 ## The uncomfortable part: it works
 
@@ -46,6 +46,8 @@ The doctors in that paper did not stick passwords on monitors because they were 
 
 So, do you want the meeting, or do you want the work done?
 
-[^paper]: Ross Koppel, Sean Smith, Jim Blythe, and Vijay Kothari, published in *Studies in Health Technology and Informatics*, volume 208, 2015. The original lives on [Dartmouth’s site](https://www.cs.dartmouth.edu/~sws/pubs/ksbk15-draft.pdf), and the Internet Archive keeps a copy for the days it does not answer.
+[^paper]: [Ross Koppel](https://en.wikipedia.org/wiki/Ross_Koppel), Sean Smith, Jim Blythe, and Vijay Kothari, published in *Studies in Health Technology and Informatics*, volume 208, 2015. The original lives on [Dartmouth’s site](https://www.cs.dartmouth.edu/~sws/pubs/ksbk15-draft.pdf), and the [Internet Archive](https://en.wikipedia.org/wiki/Internet_Archive) keeps a copy for the days it does not answer.
+
+[^wadge]: Named by [Bill Wadge](https://billwadge.com/2015/10/28/wadges-laws/), a computer scientist at the University of Victoria and co-creator of the [Lucid](https://en.wikipedia.org/wiki/Lucid_(programming_language)) programming language, on his blog in 2015, among a handful of “Wadge’s Laws” that he admits are called that only by him. His version goes on past the pre-pre-meeting, all the way down to “some guy deciding everything in the shower.”
 
 [^nber]: [*Meetings*](https://www.nber.org/papers/w35706), NBER Working Paper 35706, September 2026, by [David J. Deming](https://en.wikipedia.org/wiki/David_Deming_(economist)), Katrine V. Løken, Alexander Willén, and Yaling Xu, for the [National Bureau of Economic Research](https://en.wikipedia.org/wiki/National_Bureau_of_Economic_Research). The numbers come from a survey of more than 9,000 Norwegian workers, matched against their employers’ records. Meetings eat about 12% of work hours and about 14% of the wage bill, mostly for planning, problem-solving, sharing information, and coordinating projects. Firms that pay more, and earn more, hold more meetings, even though their people’s time costs more. And workers who meet more often see faster wage growth and say they learn more on the job, mostly from senior colleagues.
