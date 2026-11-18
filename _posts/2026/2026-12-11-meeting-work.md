@@ -48,7 +48,7 @@ And then, manage others the same way. Being a team player is not attending every
 
 The doctors in that paper did not stick passwords on monitors because they were careless. They did it because they had patients to treat, and the system had forgotten that. Most of our work is not life or death. But it is still work, and somebody still has to do it.
 
-So, do you want the meeting, or do you want the work done?
+**So, do you want the meeting, or do you want the work done?**
 
 
 [^paper_password_patient]: [Ross Koppel](https://en.wikipedia.org/wiki/Ross_Koppel), Sean Smith, Jim Blythe, and Vijay Kothari, published in *Studies in Health Technology and Informatics*, volume 208, 2015. The original lives on [Dartmouth’s site](https://www.cs.dartmouth.edu/~sws/pubs/ksbk15-draft.pdf), and the [Internet Archive](https://en.wikipedia.org/wiki/Internet_Archive) keeps a copy for the days it does not answer.
