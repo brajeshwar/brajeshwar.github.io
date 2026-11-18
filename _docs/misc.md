@@ -113,6 +113,7 @@ and shipped. Do not offer it again.
 | `city.js` | reads `city.json` into one mesh |
 | `city.json` | the model as whole numbers, 2.4 MB: the ground, the buildings and their colors, the trees and their heights, the walk, the stops, and the landmarks' names |
 | `poster.webp`, `poster-dark.webp` | the picture that stands in for the model |
+| `photos/` | his photos from the walk, under the stops they show |
 
 **Each look is kept before the next is tried** (his word, 2026-11-15), as a
 page beside `index.html` with its own scripts and pictures in a folder of the
@@ -370,6 +371,25 @@ the same number) and a pair in `city.json`'s `stops`, the id and an index into
 `route`. The build test fails if the two lists differ. Moving a stop along the
 existing path is a change to that index; a new path needs the data made again.
 Which way the camera faces at each stop is the `FACING` table in `walk.js`.
+
+**The photos** are his own, taken on the walk on June 18 to 21, 2026
+(2026-11-18: *"make it better if you can reference my photos"*). Fourteen of
+the twenty-three he gave show a stop, and they sit under its words in the
+list, named for it (`bfi-1.webp`). The other nine were taken between stops:
+the Frida Kahlo mural near Blackfriars, the river from the north bank, the
+lanes behind it, a telephone box on the Embankment. They were left out, not
+hung on a stop they do not show. Which stop a photo belongs to was settled by
+its GPS against the walk's stops, then by looking at it.
+
+- Made with `sips -Z 960` and `cwebp -q 72 -metadata none`, about 75 KB each.
+  [WARNING] `-metadata none` is what strips the GPS and the time from the
+  originals. Keep it if a photo is ever added.
+- They keep their color, a second stated exception to the grayscale rule,
+  with the model.
+- A click on a photo is a click on its stop: `walk.js` takes any click inside
+  a `[data-stop]` and flies there. So there is no link to the full size.
+- Under the stop's `<p>`, never inside it, and with no `<p>` or `<strong>` of
+  their own, because `walk.js` fills the caption from the first of each.
 
 **The pictures** are the model's own overview, 1600 by 800, with the controls
 and caption hidden, once in each color scheme. The `--x` and `--y` on each pin
