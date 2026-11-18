@@ -14,7 +14,7 @@
  */
 
 import { build } from './city.js';
-import { renderer } from './draw.js';
+import { renderer, SUN } from './draw.js';
 
 const root = document.documentElement;
 const stage = document.querySelector('.stage');
@@ -214,27 +214,60 @@ function tints(set) {
   return new Float32Array(list.flatMap(color));
 }
 
+// The look at an hour of the day. Daylight runs from 0 at night to 1 by
+// day (light.daylight, in the page's head), and every color is that far
+// from NIGHT to DAY. Dawn and dusk add their own warmth to the sky's light
+// and to what the glass and water mirror, most at the turn, none at noon or
+// midnight.
+const WARM = { sky: '#a0907e', above: ['#d0987a', '#f0c8a0', '#8f8478'] };
+
+const blend = (a, b, t) => a.map((v, i) => v + (b[i] - v) * t);
+
 function readLook() {
-  const paper = shade('--paper');
-  const night = paper[0] < 0.5;
-  const set = night ? NIGHT : DAY;
+  const day = window.light.daylight(window.light.at());
+  const warm = 4 * day * (1 - day) * 0.6;
+  const pair = (name) => blend(color(NIGHT[name]), color(DAY[name]), day);
+  const above = [0, 1, 2].map((i) =>
+    blend(blend(color(NIGHT.above[i]), color(DAY.above[i]), day), color(WARM.above[i]), warm)
+  );
+  // The windows light up only once the day is well on its way out: the
+  // shader takes any lit share at all as night, and turns off the sun's
+  // glints and turns on the river's lamps, so that must come after the turn.
+  const dark = Math.max(0, 1 - day / 0.6);
   look = {
-    paper: paper,
+    paper: shade('--paper'),
     ink: shade('--ink'),
-    tints: tints(set),
-    lamp: color(set.lamp),
-    sky: color(set.sky),
-    above: new Float32Array(set.above.flatMap(color)),
+    tints: new Float32Array(blend(tints(NIGHT), tints(DAY), day)),
+    lamp: pair('lamp'),
+    sky: blend(pair('sky'), color(WARM.sky), warm),
+    above: new Float32Array(above.flat()),
     // How dark a black building is drawn and how light a white one, a
     // narrow range so that neither is a hole or a glare; and how deep the
     // shade goes where buildings hide the sky, 0 for none.
-    tone: night ? [0.16, 0.46, 0.6] : [0.4, 1, 0.65],
+    tone: blend([0.16, 0.46, 0.6], [0.4, 1, 0.65], day),
     // How much of its own color a building keeps; the rest goes to gray.
-    paint: night ? 0.55 : 0.85,
+    paint: 0.55 + (0.85 - 0.55) * day,
     // By day a window is a darker pane; by night one in three is lit.
-    glass: night ? [0.4, 0.34, 0.62] : [0.4, 0, 0],
+    glass: [0.4, 0.34 * dark, 0.62 * dark],
     walked: walked,
   };
+}
+
+// Where the sun stands at an hour, as the direction toward it: up in the
+// east-north-east at six, due south at one, down in the west-north-west at
+// eight, as in a London summer. Never lower than 12 degrees, where the
+// light that makes open ground white would make a sunlit wall glare. By
+// night the moon stands where the afternoon sun was drawn before, and stays.
+function sunAt(hour) {
+  if (window.light.daylight(hour) < 0.5) return SUN;
+  const t = Math.min(Math.max((hour - 6) / 14, 0), 1);
+  const bearing = (70 + 220 * t) * (Math.PI / 180);
+  const height = (12 + 48 * Math.sin(Math.PI * t)) * (Math.PI / 180);
+  return [
+    Math.sin(bearing) * Math.cos(height),
+    Math.cos(bearing) * Math.cos(height),
+    Math.sin(height),
+  ];
 }
 
 // ---- day and night -----------------------------------------------------
@@ -244,16 +277,28 @@ function readLook() {
 // answer is put everywhere it shows: the page's colors, the picture that
 // stands in for the model, the button, the model's light.
 
+const hours = stage.querySelector('.hours');
+
+// Hours as the clock shows them, 13:05.
+function clock(hour) {
+  const minutes = Math.round(hour * 60) % 1440;
+  return (
+    String(Math.floor(minutes / 60)).padStart(2, '0') + ':' + String(minutes % 60).padStart(2, '0')
+  );
+}
+
 function relight() {
+  const hour = window.light.at();
   const night = window.light.night();
   const theme = night ? 'dark' : 'light';
   root.dataset.theme = theme;
   document.querySelector('meta[name=color-scheme]').content = theme;
   stage.querySelector('picture source').media = night ? 'all' : 'not all';
-  const button = stage.querySelector('[data-light]');
-  button.setAttribute('aria-pressed', String(night));
-  button.setAttribute('aria-label', night ? 'Show by day' : 'Show by night');
+  hours.querySelector('input').value = String(Math.round(hour * 60));
+  hours.querySelector('output').textContent = clock(hour);
+  hours.querySelector('[data-now]').disabled = window.light.chosen === null;
   if (!view) return;
+  draw.aim(sunAt(hour));
   readLook();
   redraw();
 }
@@ -270,15 +315,26 @@ function chooseHour(hour) {
   relight();
 }
 
-// The button turns day to night and back: one in the afternoon, or ten at night.
+// N turns day to night and back: one in the afternoon, or ten at night.
 function turnLight() {
   chooseHour(window.light.night() ? 13 : 22);
 }
 
+// The light button opens the hours beside it, and closes them.
+function openHours(open) {
+  hours.parentNode.classList.toggle('is-open', open);
+  stage.querySelector('[data-light]').setAttribute('aria-expanded', String(open));
+  measure();
+}
+
+hours.querySelector('input').addEventListener('input', function (e) {
+  chooseHour(Number(e.target.value) / 60);
+});
+
 relight();
-// Evening comes on with the page open, and morning too.
+// On the reader's clock the sun moves, so the light is redrawn every minute.
 setInterval(function () {
-  if (window.light.night() !== (root.dataset.theme === 'dark')) relight();
+  if (window.light.chosen === null) relight();
 }, 60000);
 
 // ---- views -------------------------------------------------------------
@@ -684,7 +740,9 @@ function measure() {
   pinSize = stops[0].pin.offsetWidth;
   const frame = stage.getBoundingClientRect();
   fixtures = [];
-  for (const el of stage.querySelectorAll('.tools, .caption, .is-flying .speeds')) {
+  for (const el of stage.querySelectorAll(
+    '.tools, .caption, .is-flying .speeds, .is-open .hours'
+  )) {
     if (el.hidden) continue;
     const box = el.getBoundingClientRect();
     fixtures.push([
@@ -955,7 +1013,9 @@ document.addEventListener('click', function (e) {
   const button = e.target.closest('button');
   if (button && stage.contains(button)) {
     if ('play' in button.dataset) return play(!playing);
-    if ('light' in button.dataset) return turnLight();
+    if ('light' in button.dataset)
+      return openHours(button.getAttribute('aria-expanded') !== 'true');
+    if ('now' in button.dataset) return chooseHour(null);
     if (button.dataset.speed) return setSpeed(Number(button.dataset.speed));
     takeOver();
     if (button.dataset.step) return step(Number(button.dataset.step));
@@ -985,6 +1045,9 @@ const KEYS = {
 };
 
 document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && hours.parentNode.classList.contains('is-open')) return openHours(false);
+  // On the slider the arrow keys move the hour, not the walk.
+  if (e.target.matches('input')) return;
   if (!view || e.metaKey || e.ctrlKey || e.altKey || !KEYS[e.key]) return;
   e.preventDefault();
   // Night can fall in mid-flight. Any other key takes the camera over.

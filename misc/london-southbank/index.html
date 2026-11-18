@@ -89,8 +89,9 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .tools .tools__walk { margin-top: .4rem; }
 .tools [aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .tools [aria-pressed="false"] .pause, .tools [aria-pressed="true"] .play { display: none; }
-/* By day the button offers the night, and by night the day. */
-.tools [aria-pressed="false"] .sun, .tools [aria-pressed="true"] .moon { display: none; }
+/* The light button shows the hour the model is in: a sun by day, a moon by night. */
+:root:not([data-theme="dark"]) [data-light] .moon, :root[data-theme="dark"] [data-light] .sun { display: none; }
+.tools [aria-expanded="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
 /* Every button says what it is, beside it, on hover or on focus, with its
    key if it has one. The words are the button's own aria-label, so what is
@@ -110,6 +111,19 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .speeds button { width: 2.75rem; font-size: .8rem; font-variant-numeric: tabular-nums; }
 .speeds button::after { content: none; }
 .is-flying [data-play]::after { right: calc(100% + 15.6rem); }
+/* The hours fly out beside the light button when it is pressed: a slider
+   round the clock, the time it is set to, and Now, which goes back to the
+   reader's own clock. 16rem wide; the button's name is not shown while it
+   is open, as the panel stands where the name would. */
+.tools__light { position: relative; display: grid; }
+.hours { position: absolute; right: calc(100% + .35rem); top: 0; display: flex; align-items: center; gap: .5rem; width: 16rem; height: 2.25rem; padding: 0 .3rem 0 .6rem; border: 1px solid var(--muted); border-radius: 6px; background: var(--panel); backdrop-filter: blur(6px); opacity: 0; visibility: hidden; translate: .6rem 0; transition: opacity 160ms, translate 160ms, visibility 0s 160ms; }
+.is-open .hours { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+.is-open [data-light]::after { content: none; }
+.hours input { flex: 1; min-width: 0; margin: 0; accent-color: var(--ink); cursor: pointer; }
+.hours output { width: 2.8rem; font-size: .8rem; font-variant-numeric: tabular-nums; text-align: right; }
+.tools .hours button { width: 3rem; height: 1.7rem; font-size: .75rem; }
+.hours button::after { content: none; }
+.hours button:disabled { opacity: .45; cursor: default; }
 /* The compass is a dial: round, and its needle turns to keep pointing north. */
 .tools .compass { border-radius: 50%; }
 .note { margin: .75rem 0 0; color: var(--muted); font-size: .8rem; }
@@ -147,7 +161,7 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 /* A reader who asks for less motion still gets the flights, which only ever
    start at their own word; what goes is the motion nobody asked for. Last in
    the sheet, so it outranks the transitions set above. */
-@media (prefers-reduced-motion: reduce) { .stage canvas, .pin, .place, .speeds, .tools button::after { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .stage canvas, .pin, .place, .speeds, .hours, .tools button::after { transition: none; } }
 </style>
 </head>
 <body>
@@ -191,7 +205,14 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
           <button type="button" data-whole aria-label="Reset the view" data-key="0"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.4 7.8L8 2.8l5.6 5M4 6.6V13.2h8V6.6M6.7 13.2V9.6h2.6v3.6"/></svg></button>
           <button type="button" data-closer aria-label="Zoom in" data-key="+"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
           <button type="button" data-further aria-label="Zoom out" data-key="-"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10"/></svg></button>
-          <button type="button" data-light aria-pressed="false" aria-label="Show by night" data-key="N"><svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.2 9.5A5.6 5.6 0 1 1 6.5 2.8a4.5 4.5 0 0 0 6.7 6.7z"/></svg><svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.7"/><path d="M8 1.5v1.7M8 12.8v1.7M1.5 8h1.7M12.8 8h1.7M3.4 3.4l1.2 1.2M11.4 11.4l1.2 1.2M3.4 12.6l1.2-1.2M11.4 4.6l1.2-1.2"/></svg></button>
+          <div class="tools__light">
+            <button type="button" data-light aria-expanded="false" aria-controls="hours" aria-label="Time of day"><svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.2 9.5A5.6 5.6 0 1 1 6.5 2.8a4.5 4.5 0 0 0 6.7 6.7z"/></svg><svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.7"/><path d="M8 1.5v1.7M8 12.8v1.7M1.5 8h1.7M12.8 8h1.7M3.4 3.4l1.2 1.2M11.4 11.4l1.2 1.2M3.4 12.6l1.2-1.2M11.4 4.6l1.2-1.2"/></svg></button>
+            <div class="hours" id="hours" role="group" aria-label="Time of day">
+              <input type="range" min="0" max="1439" step="15" value="780" data-hour aria-label="Hour">
+              <output aria-hidden="true">13:00</output>
+              <button type="button" data-now>Now</button>
+            </div>
+          </div>
           <button type="button" class="tools__walk" data-step="-1" aria-label="Previous stop" data-key="&larr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3.5v9M12 3.8L6.6 8l5.4 4.2z"/></svg></button>
           <div class="tools__fly">
             <button type="button" data-play aria-pressed="false" aria-label="Fly the walk"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2L12.6 8 5 12.8z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg></button>

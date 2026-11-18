@@ -160,9 +160,43 @@ Until 2026-11-18 a standing wish for dark came between the two, the system's
 or the site's saved theme, so a Mac in Dark Mode saw the page dark at noon.
 He asked for it to go (see the rule at the top of this file).
 
-`walk.js` asks again every minute, so evening comes on with the page open.
-The button's key is N, and neither it nor the key stops a flight. [WARNING]
-The hours are fixed. It is not sunset: nothing here knows where the reader
+**The light button opens the hours** (2026-11-18: *"make a slide flies out
+from that button and make it a draggable 24-hour day/night slider, so people
+can see some color change depending on the time of the day, the default or
+reset button goes to the time at that instant"*). Beside it fly out a slider
+round the clock in quarter hours, the time it is set to, and Now, which goes
+back to the reader's clock and is greyed out while it is already there.
+Dragging keeps the hour for the visit (`walk-hour`). The button shows a sun by
+day and a moon by night, and is dark while the hours are open. N still flips
+straight to one in the afternoon or ten at night. Escape closes the hours; on
+the slider the arrow keys move the hour, not the walk. The panel is 16rem
+wide, and the button's own name is not shown while it is open.
+
+**The look is a mix, by daylight.** `light.daylight(hour)` in the page's head
+runs from 0 at night to 1 by day, coming up from five to seven and going from
+six to eight, eased at both ends. `readLook()` in `walk.js` takes every color
+that far from `NIGHT` to `DAY`, and warms the sky's light and what the glass
+mirrors toward `WARM`, most at the turn and not at all at noon or midnight.
+The page itself is still only light or dark, and turns at a daylight of half.
+On the reader's clock it is all redrawn every minute, so the sun moves with
+the page open.
+
+- **The sun moves.** `sunAt(hour)` in `walk.js` puts it in the east-north-east
+  at six, due south at one, and in the west-north-west at eight, up to 60
+  degrees: a London summer's day, drawn every day of the year. It is not an
+  ephemeris; nothing here knows the date or where the reader is. `draw.aim()`
+  turns the shadow map to it, and the next frame draws the shadows again.
+- [WARNING] **Never below 12 degrees.** The sun's light is set so that it and
+  the sky's add up to white on open ground, which divides by the sun's
+  height; a low sun would make every wall facing it glare.
+- **By night the moon stands still**, where the afternoon sun used to be drawn,
+  so the shadows do not swing about all night.
+- [WARNING] **The windows light at a daylight of 0.6, not gradually from 1.**
+  The shader takes any lit share of windows at all as night, and with it turns
+  off the sun's glints and turns on the lamps on the river. So the lit share
+  starts only once the day is well on its way out, and grows from there.
+
+[WARNING] The hours of the day are fixed. It is not sunset: nothing here knows where the reader
 is, and asking would be a permission prompt for a decoration. Without
 JavaScript the page follows the system, having no clock to go by.
 

@@ -224,7 +224,7 @@ test('the walk settles as the model or the picture, with no errors', async ({ pa
   expect(errors.filter((e) => !e.startsWith('Failed to load resource'))).toEqual([]);
 });
 
-test('the walk is night by the clock, and its button turns it over', async ({ page }) => {
+test('the walk is night by the clock, and its hours turn it over', async ({ page }) => {
   // Ten at night on a system that asks for light: the clock decides.
   await page.clock.setFixedTime(new Date(2026, 10, 15, 22, 0));
   await page.goto(WALK);
@@ -234,11 +234,26 @@ test('the walk is night by the clock, and its button turns it over', async ({ pa
   await expect(stage).toHaveClass(/is-live|is-still/, { timeout: 20000 });
   // The button comes with the model; a still picture has none.
   if (!(await stage.evaluate((el) => el.classList.contains('is-live')))) return;
-  await page.getByRole('button', { name: 'Show by day' }).click();
+  await page.getByRole('button', { name: 'Time of day' }).click();
+  const hour = page.getByRole('slider', { name: 'Hour' });
+  await expect(hour).toBeVisible();
+  await hour.fill('780');
   await expect(html).toHaveAttribute('data-theme', 'light');
-  // The choice holds for the visit.
+  // The hour holds for the visit, and Now goes back to the clock.
   await page.reload();
   await expect(html).toHaveAttribute('data-theme', 'light');
+  await expect(stage).toHaveClass(/is-live/, { timeout: 20000 });
+  await page.getByRole('button', { name: 'Time of day' }).click();
+  await page.getByRole('button', { name: 'Now' }).click();
+  await expect(html).toHaveAttribute('data-theme', 'dark');
+});
+
+test('the walk is day at noon, even on a system that asks for dark', async ({ page }) => {
+  // It stands on its own: neither the system's theme nor the site's decides.
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.clock.setFixedTime(new Date(2026, 10, 15, 12, 0));
+  await page.goto(WALK);
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 });
 
 test('flying the walk brings out its speeds, and they go when it stops', async ({ page }) => {

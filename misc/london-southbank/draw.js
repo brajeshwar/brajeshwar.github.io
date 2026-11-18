@@ -21,9 +21,10 @@
 import { STRIDE } from './city.js';
 
 const RAD = Math.PI / 180;
-// Where the sun stands: south-west and 43 degrees up, a London afternoon.
-// Looking north, the faces you see are the lit ones.
-const SUN = [-0.52, -0.5, 0.69];
+// Where the sun stands until walk.js says otherwise: south-west and 43
+// degrees up, a London afternoon. Looking north, the faces you see are the
+// lit ones. It is also where the moon stands, all night.
+export const SUN = [-0.52, -0.5, 0.69];
 const TALLEST = 320;
 
 const DEPTH_VERTEX = `#version 300 es
@@ -751,8 +752,19 @@ export function renderer(canvas, model) {
 
   let depth, solid, path, city, walk, sky;
   const camera = { matrix: null, eye: [0, 0, 0], width: 1, height: 1 };
-  // The sun looks the same way all day; only the window it looks through moves.
-  const sun = { view: null, matrix: null, near: 0, far: 0, pane: '', side: 0, size: 0, texel: 1 };
+  // The window the sun looks through moves with the camera; which way it
+  // looks moves only when the hour does (aim).
+  const sun = {
+    to: normalize(SUN),
+    view: null,
+    matrix: null,
+    near: 0,
+    far: 0,
+    pane: '',
+    side: 0,
+    size: 0,
+    texel: 1,
+  };
 
   // Everything the GPU holds, made here so a lost context can be made again.
   function setup() {
@@ -792,8 +804,37 @@ export function renderer(canvas, model) {
   }
 
   function shadowMap() {
+    face();
+    // A phone gets a quarter of the texels: the picture is smaller, and so is its memory.
+    const wanted = Math.max(canvas.width, canvas.height) > 1400 ? 4096 : 2048;
+    sun.size = Math.min(wanted, gl.getParameter(gl.MAX_TEXTURE_SIZE));
+
+    sun.texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, sun.texture);
+    gl.texStorage2D(gl.TEXTURE_2D, 1, gl.DEPTH_COMPONENT24, sun.size, sun.size);
+    // One map, read two ways: asked whether a point is lit, with the answer
+    // smoothed; and asked how far off the nearest thing is, as it stands.
+    sun.asked = sampler(gl.LINEAR, gl.COMPARE_REF_TO_TEXTURE);
+    sun.read = sampler(gl.NEAREST, gl.NONE);
+    sun.target = gl.createFramebuffer();
+    gl.bindFramebuffer(gl.FRAMEBUFFER, sun.target);
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.TEXTURE_2D, sun.texture, 0);
+    gl.drawBuffers([gl.NONE]);
+    gl.readBuffer(gl.NONE);
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+  }
+
+  // Turn the sun to a new direction. Emptying the pane makes the next frame
+  // draw the shadows again, from there.
+  function aim(direction) {
+    sun.to = normalize(direction);
+    face();
+  }
+
+  // Where the sun stands, and how deep the board is as it sees it.
+  function face() {
     const [w, h] = model.size;
-    const to = normalize(SUN);
+    const to = sun.to;
     const middle = [w / 2, h / 2, 0];
     sun.view = lookAt(
       [middle[0] + to[0] * 4000, middle[1] + to[1] * 4000, to[2] * 4000],
@@ -820,23 +861,6 @@ export function renderer(canvas, model) {
       [w, h],
       [0, h],
     ]);
-    // A phone gets a quarter of the texels: the picture is smaller, and so is its memory.
-    const wanted = Math.max(canvas.width, canvas.height) > 1400 ? 4096 : 2048;
-    sun.size = Math.min(wanted, gl.getParameter(gl.MAX_TEXTURE_SIZE));
-
-    sun.texture = gl.createTexture();
-    gl.bindTexture(gl.TEXTURE_2D, sun.texture);
-    gl.texStorage2D(gl.TEXTURE_2D, 1, gl.DEPTH_COMPONENT24, sun.size, sun.size);
-    // One map, read two ways: asked whether a point is lit, with the answer
-    // smoothed; and asked how far off the nearest thing is, as it stands.
-    sun.asked = sampler(gl.LINEAR, gl.COMPARE_REF_TO_TEXTURE);
-    sun.read = sampler(gl.NEAREST, gl.NONE);
-    sun.target = gl.createFramebuffer();
-    gl.bindFramebuffer(gl.FRAMEBUFFER, sun.target);
-    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.TEXTURE_2D, sun.texture, 0);
-    gl.drawBuffers([gl.NONE]);
-    gl.readBuffer(gl.NONE);
-    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
   }
 
   function sampler(filter, compare) {
@@ -1053,7 +1077,7 @@ export function renderer(canvas, model) {
     gl.uniformMatrix4fv(solid.at.uCamera, false, camera.matrix);
     gl.uniformMatrix4fv(solid.at.uSun, false, sun.matrix);
     gl.uniform2f(solid.at.uBias, sun.texel * 1.6, (sun.texel * 1.2) / (sun.far - sun.near));
-    const toSun = normalize(SUN);
+    const toSun = sun.to;
     gl.uniform3fv(solid.at.uSunDir, toSun);
     gl.uniform3fv(solid.at.uEye, camera.eye);
     gl.uniform3fv(solid.at.uTint, look.tints);
@@ -1159,5 +1183,5 @@ export function renderer(canvas, model) {
 
   fit();
   setup();
-  return { frame: frame, place: place, screen: screen, ground: ground, setup: setup };
+  return { frame: frame, place: place, screen: screen, ground: ground, setup: setup, aim: aim };
 }
