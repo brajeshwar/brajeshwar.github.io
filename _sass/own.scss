@@ -334,6 +334,58 @@
   font-size: var(--step--1);
 }
 
+/* ---- Old: what I no longer use ----------------------------------
+   Kept for posterity, out of the way: a thin bar that opens onto the
+   things, dulled and struck through. A <details>, so it opens without
+   JavaScript and stays shut on the A4 sheet. The items wrap instead of
+   riding a .strip rail; a rail inside a closed <details> has no width
+   to measure, and a short shelf needs no arrows. */
+.page-own .own__old {
+  margin-top: var(--space-m);
+}
+
+.page-own .own__old > summary {
+  padding-block: var(--space-3xs);
+  border-block: var(--border-size-hairline) var(--border-style) var(--border-color-low);
+
+  font-size: var(--step--2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color-low);
+  cursor: pointer;
+}
+
+.page-own .own__old > summary:hover,
+.page-own .own__old > summary:focus-visible {
+  color: var(--text-color);
+}
+
+.page-own .own__old-lede {
+  margin: var(--space-xs) 0;
+  font-size: var(--step--1);
+  color: var(--text-color-low);
+}
+
+.page-own .own__old-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: var(--opacity-low);
+}
+
+.page-own .own__old-list .own__item {
+  width: var(--own-item);
+}
+
+.page-own .own__old-list .own__name {
+  text-decoration: line-through;
+  text-decoration-thickness: from-font;
+  color: var(--text-color-low);
+}
+
 /* ---- Carried-over notes -----------------------------------------
    Brajeshwar's own planning prose from the old wear.md, kept visible
    so he can decide what to do with it (2026-08-07). Set back and
@@ -391,6 +443,7 @@
   .page-own .own__story,
   .page-own .own__pdf,
   .page-own .own__notes,
+  .page-own .own__old,
   .page-own .strip__nav {
     display: none;
   }
