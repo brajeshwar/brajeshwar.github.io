@@ -335,36 +335,58 @@
   font-size: var(--step--1);
 }
 
-/* ---- Old: what I no longer use ----------------------------------
-   Kept for posterity, out of the way: a thin bar that opens onto the
-   things, dulled and struck through. A <details>, so it opens without
-   JavaScript and stays shut on the A4 sheet. The items wrap instead of
-   riding a .strip rail; a rail inside a closed <details> has no width
-   to measure, and a short shelf needs no arrows. */
-.page-own .own__old {
-  margin-top: var(--space-m);
+/* ---- Old: what a line used to hold ------------------------------
+   A row that has a past carries a tall, thin bar down its right edge,
+   marked OLD. Open, the bar swaps the line for what used to be there,
+   items and brands, dulled and struck through, sliding in beside a
+   label that stays put. Open again, and the present comes back.
+
+   A <details> per row, so it works without JavaScript and stays shut on
+   the A4 sheet. The bar is the <summary>, lifted out of the flow onto
+   the line's right edge, so a closed <details> takes no room at all.
+   The old items wrap instead of riding a .strip rail: a rail inside a
+   closed <details> has no width to measure, and a short shelf needs no
+   arrows. */
+.page-own .own__line:has(> .own__old) {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.page-own .own__line:has(> .own__old[open]) > :not(.own__old) {
+  display: none;
 }
 
 .page-own .own__old > summary {
-  padding-block: var(--space-3xs);
-  border-block: var(--border-size-hairline) var(--border-style) var(--border-color-low);
+  position: absolute;
+  inset: 0 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
 
+  border-radius: var(--border-radius);
+  background-color: var(--own-tile);
+  list-style: none;
+
+  writing-mode: vertical-rl;
   font-size: var(--step--2);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-color-low);
+  opacity: var(--opacity-low);
   cursor: pointer;
+  transition: opacity 120ms ease-out;
+}
+
+.page-own .own__old > summary::-webkit-details-marker {
+  display: none;
 }
 
 .page-own .own__old > summary:hover,
-.page-own .own__old > summary:focus-visible {
+.page-own .own__old > summary:focus-visible,
+.page-own .own__old[open] > summary {
   color: var(--text-color);
-}
-
-.page-own .own__old-lede {
-  margin: var(--space-xs) 0;
-  font-size: var(--step--1);
-  color: var(--text-color-low);
+  opacity: 1;
 }
 
 .page-own .own__old-list {
@@ -385,6 +407,31 @@
   text-decoration: line-through;
   text-decoration-thickness: from-font;
   color: var(--text-color-low);
+}
+
+/* The slide plays whenever the old line appears, since display: none to
+   visible restarts an animation. With Reduce Motion on, it only fades. */
+.page-own .own__old[open] > :not(summary) {
+  animation: own-old-in 240ms ease-out;
+}
+
+@keyframes own-old-in {
+  from {
+    opacity: 0;
+    transform: translateX(var(--space-l));
+  }
+}
+
+@keyframes own-old-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-own .own__old[open] > :not(summary) {
+    animation-name: own-old-fade;
+  }
 }
 
 /* ---- Carried-over notes -----------------------------------------
