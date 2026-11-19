@@ -284,24 +284,59 @@ test('the South Bank walk keeps to its folder, and its list matches its model', 
   expect(lost).toEqual([]);
 });
 
-test('the South Bank walk says when it was last updated, and it is not older', () => {
-  // The date in its foot is written by hand, so it is held to the last
+test('the Dubai Marina walk keeps to its folder, and its list matches its model', () => {
+  const dir = '/misc/dubai-marina/';
+  const html = read(dir + 'index.html');
+  expect(html).not.toContain('/assets/');
+  expect(html).toContain('<script data-cfasync="false">\n// Day or night');
+  const named = [...html.matchAll(/<(?:script|img|source)\b[^>]*?\s(?:src|srcset)="([^"]+)"/g)];
+  expect(named.length).toBeGreaterThan(2);
+  for (const [, file] of named) expect(exists(dir + file), file).toBe(true);
+  const city = JSON.parse(read(dir + 'city.json'));
+  const modelled = city.stops.map((s) => s[0]).sort();
+  const listed = [...html.matchAll(/<li id="([^"]+)" data-stop="\d+"/g)].map((m) => m[1]).sort();
+  expect(listed).toEqual(modelled);
+  expect(city.blocks.wallColor.length).toBe(city.blocks.parts.length);
+  expect(city.blocks.roofColor.length).toBe(city.blocks.parts.length);
+  // The reader stores positions as unsigned numbers, so a corner past the
+  // board's edge wraps round and draws a sliver across the whole model.
+  const [w, h] = city.size;
+  for (const name of ['land', 'river', 'green', 'squares', 'piers', 'decks', 'legs', 'blocks']) {
+    let x = 0;
+    let y = 0;
+    let off = 0;
+    const xy = city[name].xy;
+    for (let i = 0; i < xy.length; i += 2) {
+      x += xy[i];
+      y += xy[i + 1];
+      if (x < 0 || y < 0 || x > w || y > h) off++;
+    }
+    expect(off, name).toBe(0);
+  }
+  // The script that made the data is kept, beside the site's others.
+  expect(statSync('scripts/dubai-marina-city.mjs').isFile()).toBe(true);
+});
+
+test('the one-off pages say when they were last updated, and it is not older', () => {
+  // The date in each foot is written by hand, so it is held to the last
   // commit of the live page's own files; the kept versions beside it do not
   // count. A shallow checkout (CI) has no history to ask, and skips this.
   const git = (...args) => execFileSync('git', args, { encoding: 'utf8' }).trim();
   test.skip(git('rev-parse', '--is-shallow-repository') === 'true', 'no history');
-  const html = read('/misc/london-southbank/index.html');
-  const stated = html.match(/Last updated <time datetime="(\d{4}-\d{2}-\d{2})">/)?.[1];
-  expect(stated).toBeTruthy();
-  const live = ['index.html', 'walk.js', 'city.js', 'draw.js', 'city.json'];
-  const committed = git(
-    'log',
-    '-1',
-    '--format=%cs',
-    '--',
-    ...live.map((f) => `misc/london-southbank/${f}`)
-  );
-  expect(stated >= committed, `${stated} is older than ${committed}`).toBe(true);
+  for (const folder of ['london-southbank', 'dubai-marina']) {
+    const html = read(`/misc/${folder}/index.html`);
+    const stated = html.match(/Last updated <time datetime="(\d{4}-\d{2}-\d{2})">/)?.[1];
+    expect(stated, folder).toBeTruthy();
+    const live = ['index.html', 'walk.js', 'city.js', 'draw.js', 'city.json'];
+    const committed = git(
+      'log',
+      '-1',
+      '--format=%cs',
+      '--',
+      ...live.map((f) => `misc/${folder}/${f}`)
+    );
+    expect(stated >= committed, `${folder}: ${stated} is older than ${committed}`).toBe(true);
+  }
 });
 
 // ---- Pages and assets --------------------------------------------------

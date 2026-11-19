@@ -256,6 +256,35 @@ test('the walk is day at noon, even on a system that asks for dark', async ({ pa
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 });
 
+// ---- /misc/dubai-marina/: the same, on Dubai's clock ---------------------
+
+const MARINA = '/misc/dubai-marina/';
+
+test('the Marina settles as the model or the picture, with no errors', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+  await page.goto(MARINA);
+  const stage = page.locator('.stage');
+  await expect(stage).toHaveClass(/is-live|is-still/, { timeout: 20000 });
+  if (await stage.evaluate((el) => el.classList.contains('is-live'))) {
+    await page.getByRole('button', { name: 'Next stop' }).click();
+    await expect(page.locator('#the-beach')).toHaveClass(/is-active/);
+  }
+  expect(errors.filter((e) => !e.startsWith('Failed to load resource'))).toEqual([]);
+});
+
+test('the Marina keeps Dubai’s hours, wherever the reader is', async ({ page }) => {
+  // Instants, not local times, so the runner's own zone cannot matter:
+  // 18:00 UTC is ten at night in Dubai, and 08:00 UTC is noon there.
+  await page.clock.setFixedTime(new Date('2026-11-15T18:00:00Z'));
+  await page.goto(MARINA);
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await page.clock.setFixedTime(new Date('2026-11-15T08:00:00Z'));
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+});
+
 test('flying the walk brings out its speeds, and they go when it stops', async ({ page }) => {
   await page.goto(WALK);
   const stage = page.locator('.stage');

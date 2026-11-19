@@ -1,7 +1,7 @@
 # /misc/ — one-off pages
 
-A home for pieces that go with an article but stand on their own: an interactive
-map, a small tool, a visual essay. Chosen 2026-11-15 over `/etc/` (a Unix joke
+A home for pieces that go with an article, or may one day, but stand on their
+own: an interactive map, a small tool, a visual essay. Chosen 2026-11-15 over `/etc/` (a Unix joke
 that tells a reader nothing) and `/lab/` (kept for later, if experiments ever
 need a section of their own). The first is `/misc/london-southbank/`, the walk
 that goes with `/2026/london-south-bank-stroll/`.
@@ -21,7 +21,10 @@ The rules:
   the main site's light/dark theme. Let's follow the clock of the user"*).
   Neither the site's saved theme nor the system's decides; the reader's
   clock does, with a control to change it. Without JavaScript there is no
-  clock, so the page falls back to the system's.
+  clock, so the page falls back to the system's. **The Marina is the
+  exception:** its hours are Dubai's, wherever the reader is, because the
+  page is about where the shade falls there, and that goes by the sun over
+  Dubai, not by the reader's evening.
 - **Still the site's manners:** grayscale, system fonts, whole without
   JavaScript, and no emoji (the
   emoji test scans `misc/`). Plain JavaScript, no libraries. A script may be
@@ -34,9 +37,93 @@ The rules:
   by hand; `_test/build.spec.mjs` holds it to the folder's last commit.
 - **Its URL is permanent once pushed**, like any other (guardrail 2), so it
   goes into `_test/urls.txt` by hand.
-- **Generators stay out of the repo.** If a drawing or a data file was made by
-  a script, the script was one-time; the output is what ships. Say here how it
-  was made, so it can be made again.
+- **A script that makes a page's data is kept**, in `scripts/`, which the
+  build leaves out (2026-11-19: *"What's stopping us from keeping the data
+  script? If it cost nothing, let's keep it."*). It reverses the earlier rule
+  that generators were one-time. Nothing stopped it but that rule: a script
+  in `scripts/` never ships, and it is linted with the rest. It reads the
+  map from a cache folder named on its command line, so remaking the data
+  never asks the server twice. The South Bank's script was not kept and is
+  gone; the Marina's is `scripts/dubai-marina-city.mjs`.
+- [WARNING] **Nothing that names him goes to a map server**, not his email in
+  a user agent, not anything (2026-11-19, his standing order). A generic
+  `brajeshwar.com-misc/1.0` is enough for Overpass.
+
+## /misc/dubai-marina/ — the model
+
+Built 2026-11-19 from his queue: *"this should not be just about my walk but
+the walkable path around the Dubai Marina, loops and bifurcations. I'm with
+the shade idea as Dubai is hot most of the time."* No article goes with it
+yet (*"Don't worry about the article yet"*), so its back link goes home.
+
+It is the South Bank's page and renderer, copied into the folder, not shared
+(the one-folder rule above), with these differences:
+
+- **The sun is the real one.** `light.solar()` in the page's head works out
+  today's declination, solar noon, sunrise, and sunset for 25.08 N, 55.14 E,
+  and `sunAt()` in `walk.js` turns an hour into the sun's direction from
+  them. The hours are Dubai's (UTC+4, no daylight saving). Daylight comes up
+  over the two hours round sunrise and goes over the two round sunset. The
+  slider's choice is kept as `marina-hour`, not `walk-hour`, since both
+  pages share the site's storage.
+- [WARNING] **The sun goes as low as two degrees**, where London's stopped at
+  twelve. The glare that the twelve guarded against is guarded in `draw.js`
+  instead: the sun's light is divided by its height, but never by less than
+  0.34, so a morning is dimmer than noon rather than a wall of white.
+- **`TALLEST` is 440 m**, for Marina 101 (432 m in the map).
+- **The overview frames the walk**, with 450 m round it, not the whole board;
+  the board is bigger so that shadows fall in from the towers round it.
+- **The footpaths are the warm color of the paving** (`DAY.roads[4]`), so
+  every branch and loop of them shows against the streets. That is the
+  network he asked for; the numbered walk is one loop through it.
+- `start()` aims the sun as soon as the model is built. [WARNING] The South
+  Bank's does not: its sun stands at the default until the clock's next
+  minute, or until the slider moves if an hour was chosen in the visit.
+
+### How its city.json is made
+
+`node scripts/dubai-marina-city.mjs <cache-folder>`. It fetches two Overpass
+queries into the folder the first time (the map in the box 25.060 to 25.097
+N, 55.112 to 55.156 E, and the coastline from further out) and reads them
+from there after. Delete the folder for a fresher map. What it does:
+
+- **Water is one sheet under the whole board**, 1.5 m down, and the land
+  stands over it: the mainland, closed off far to the south-east of the
+  coastline line that bounds it, and the islands the coastline draws whole.
+  JBR is one of them: the map's coastline runs up one bank of the Marina and
+  down the other. Inland lakes are holes in the land. So nothing is cut out
+  of anything, and no polygon library is needed beyond `earcut`, a dev
+  dependency, for the triangles.
+- **Heights:** the map's `height` where it has one (508 of 2,072 buildings),
+  else its floors at 3.4 m (116), else a guess by kind and size (1,489,
+  mostly villas, podiums, and sheds). The towers that make the shade are
+  mostly measured. A building drawn in parts is drawn as its parts.
+- **Colors:** the map's where it has them; else glass for anything over
+  90 m, and the sand and cream of the older blocks for the rest.
+- **Ain Dubai** is mapped as a building, a thin outline 210 m tall, which
+  would stand as a wall. It is drawn as a rim of 72 blocks in the wheel's
+  plane and two legs to the hub, 250 m to the top, the wheel's own height.
+- **Bridges** are lifted by their `layer`, 5.5 m a layer, with a deck under
+  the road and legs every 40 m, so they stand and cast shadows.
+- **The jetties** are the map's piers, outlines or lines a couple of meters
+  wide, just above the water.
+- [WARNING] **Everything is cut to the board.** The reader keeps positions as
+  unsigned numbers, so a corner a meter past the edge wraps round and draws
+  a sliver across the whole model; the first render had a dozen. Strips are
+  clipped to the board and roads kept 15 m inside it. `make test` checks.
+- **The walk** is a loop of twelve stops, the shortest way over the mapped
+  footways through them in order, a footway costing a third of a street.
+  The stops are where his photographs were taken (`STOPS` in the script,
+  by latitude and longitude); their names were checked against what the map
+  names within 120 m of each.
+
+**The photos** are 27 of the 71 he took between 14 and 19 September 2026,
+two or three a stop, chosen from contact sheets; none of the selfies. Made as
+London's were, `sips -Z 960` and `cwebp -q 72 -metadata none`, and checked
+with `exiftool` that no GPS survives. **The posters** are the overview at
+08:30 and at 22:00, rendered in headless Chrome with SwiftShader at exactly
+1600 by 800, the pins hidden; the pins' places in the HTML were read off the
+same render.
 
 ## /misc/london-southbank/ — the model
 

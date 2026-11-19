@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>A Walk Round Dubai Marina | Brajeshwar</title>
+<meta name="description" content="A model of Dubai Marina to turn, move, and fly through: the walk along the beach at JBR and round the Marina on both banks, with the sun where it stands today, to find the shade.">
+<link rel="canonical" href="https://brajeshwar.com/misc/dubai-marina/">
+<script data-cfasync="false">
+// Day or night, settled before the page paints; walk.js asks again as the
+// hours pass. data-cfasync keeps Cloudflare's Rocket Loader from holding it
+// back until after the page has painted. This page is about where the shade
+// falls on the Marina, so its hours are Dubai's, wherever the reader is: the
+// hour chosen on the slider for this visit, or else the time in Dubai now.
+// The sun is today's over the Marina (light.solar), and daylight comes up
+// over the two hours round sunrise and goes over the two round sunset.
+var light={chosen:null,
+now:function(){var d=new Date();return (d.getUTCHours()+4)%24+d.getUTCMinutes()/60},
+solar:function(){var d=new Date(Date.now()+144e5),n=(Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate())-Date.UTC(d.getUTCFullYear(),0,0))/864e5,r=Math.PI/180,b=360/365*(n-81)*r,e=9.87*Math.sin(2*b)-7.53*Math.cos(b)-1.5*Math.sin(b),dec=23.44*r*Math.sin(b),lat=25.08*r,w=Math.acos((Math.sin(-0.833*r)-Math.sin(lat)*Math.sin(dec))/(Math.cos(lat)*Math.cos(dec)))/r/15,noon=12+(60-55.14)/15-e/60;return {declination:dec,noon:noon,rise:noon-w,set:noon+w}},
+at:function(){return light.chosen===null?light.now():light.chosen},
+daylight:function(h){var s=light.solar(),up=Math.min(Math.max((h-s.rise+1)/2,0),1),down=Math.min(Math.max((s.set+1-h)/2,0),1),t=Math.min(up,down);return t*t*(3-2*t)},
+night:function(){return light.daylight(light.at())<0.5}};
+try{var kept=parseInt(sessionStorage.getItem('marina-hour'),10);if(kept>=0&&kept<1440)light.chosen=kept/60}catch(e){}
+(function(){var d=document.documentElement,theme=light.night()?'dark':'light';d.classList.add('js');d.dataset.theme=theme;document.querySelector('meta[name=color-scheme]').content=theme})();
+</script>
+<style>
+/* A one-off, on its own (see _docs/misc.md). Everything this page needs is in
+   this folder: nothing here loads the site's stylesheet or scripts, and
+   nothing of it reaches any other page. The page is the site's grayscale and
+   system fonts; the model alone is tinted, and its colors are in walk.js,
+   which reads --paper and --ink from here for the rest. */
+:root { --paper:#fafafa;--ink:#1a1a1a;--ink-2:#555;--muted:#777;--rule:#d4d4d4;--panel:rgba(250,250,250,.86);--stage:min(76vh,48rem); }
+:root[data-theme="dark"] { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--rule:#3a3a3a;--panel:rgba(22,22,22,.82); color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#161616;--ink:#e8e8e8;--ink-2:#aaa;--muted:#8a8a8a;--rule:#3a3a3a;--panel:rgba(22,22,22,.82); } }
+* { box-sizing: border-box; }
+/* The controls ship hidden and the script reveals them; without this, giving
+   one a display of its own would show it to a reader who cannot use it. */
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.55 system-ui, -apple-system, sans-serif; }
+main { max-width: 110rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+a { color: inherit; }
+.back { color: var(--muted); font-size: .9rem; }
+h1 { font-weight: 400; font-size: 1.6rem; margin: .75rem 0 .25rem; }
+.lede { color: var(--ink-2); margin: 0 0 1rem; max-width: 44rem; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+@media (max-width: 60rem) { :root { --stage: min(62vh, 34rem); } }
+@media (min-width: 60rem) { .layout { grid-template-columns: minmax(0, 1fr) 20rem; align-items: start; } }
+
+/* The stage is the picture's own shape until the model is ready to take its
+   place; then it is as tall as the window allows. */
+.stage { position: relative; aspect-ratio: 2 / 1; overflow: hidden; container-type: inline-size; }
+.js .stage { aspect-ratio: auto; height: var(--stage); min-height: 20rem; }
+.js .stage.is-still { aspect-ratio: 2 / 1; height: auto; min-height: 0; }
+.stage img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 400ms ease-out; touch-action: none; cursor: grab; outline-offset: -2px; }
+.stage canvas:active { cursor: grabbing; }
+.stage.is-live canvas { opacity: 1; }
+
+/* A pin sits where the picture has its stop, in percent; once the model is
+   live, the script moves it with the camera instead. */
+.pin { --d: 1.4rem; position: absolute; left: var(--x); top: var(--y); display: grid; place-items: center; width: var(--d); height: var(--d); margin: calc(var(--d) / -2) 0 0 calc(var(--d) / -2); border-radius: 50%; background: var(--ink); color: var(--paper); font-size: calc(var(--d) / 2); font-weight: 600; text-decoration: none; box-shadow: 0 0 0 2px var(--paper); transition: scale 120ms ease-out; }
+/* On the picture the pins are sized to it, since a phone shows it small. */
+.stage:not(.is-live) .pin { --d: clamp(.8rem, 2.6cqw, 1.4rem); }
+.pin.is-active { scale: 1.4; z-index: 1; }
+/* From far off the pins crowd each other, so they shrink. */
+.stage.is-far .pin { scale: .72; }
+.stage.is-far .pin.is-active { scale: 1; }
+.pin:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.js .stage:not(.is-live):not(.is-still) .pin { visibility: hidden; }
+.stage.is-live .pin { left: 0; top: 0; will-change: translate; }
+
+/* A landmark's name, over its roof on a short stem, while the camera is near.
+   The script makes these; there are none on the still picture. */
+.place { position: absolute; left: 0; top: 0; padding-bottom: .5rem; font-size: .72rem; font-weight: 600; line-height: 1.2; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity 220ms ease-out; text-shadow: 0 0 2px var(--paper), 0 0 2px var(--paper), 0 0 5px var(--paper), 0 0 5px var(--paper); }
+.place::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: .4rem; background: currentColor; opacity: .6; }
+.place.is-near { opacity: 1; }
+
+.caption { position: absolute; left: .75rem; bottom: .75rem; z-index: 2; max-width: min(26rem, calc(100% - 1.5rem)); margin: 0; padding: .5rem .75rem; border-radius: 8px; background: var(--panel); backdrop-filter: blur(6px); font-size: .9rem; line-height: 1.4; }
+.caption b { display: inline-grid; place-items: center; width: 1.4rem; height: 1.4rem; margin-right: .3rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: .7rem; }
+.caption span { display: block; margin-top: .15rem; color: var(--ink-2); }
+
+button { font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--muted); border-radius: 6px; cursor: pointer; }
+button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+/* Above the pins, so the active one (which rises over its neighbors) cannot
+   sit on a button. */
+.tools { position: absolute; top: .75rem; right: .75rem; z-index: 2; display: grid; gap: .35rem; }
+.tools button { position: relative; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; backdrop-filter: blur(6px); }
+/* The walk's own three buttons stand a little apart from the view's five. */
+.tools .tools__walk { margin-top: .4rem; }
+.tools [aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tools [aria-pressed="false"] .pause, .tools [aria-pressed="true"] .play { display: none; }
+/* The light button shows the hour the model is in: a sun by day, a moon by night. */
+:root:not([data-theme="dark"]) [data-light] .moon, :root[data-theme="dark"] [data-light] .sun { display: none; }
+.tools [aria-expanded="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* Every button says what it is, beside it, on hover or on focus, with its
+   key if it has one. The words are the button's own aria-label, so what is
+   shown and what is read out cannot drift apart. */
+.tools button::after { content: attr(aria-label); position: absolute; right: calc(100% + .5rem); top: 50%; translate: 0 -50%; padding: .2rem .5rem; border-radius: 4px; background: var(--ink); color: var(--paper); font-size: .75rem; font-weight: 400; line-height: 1.3; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 120ms ease-out; }
+.tools button[data-key]::after { content: attr(aria-label) "  (" attr(data-key) ")"; }
+.tools button:focus-visible::after { opacity: 1; }
+/* A finger has no hover, only one that sticks after a tap. */
+@media (hover: hover) { .tools button:hover::after { opacity: 1; transition-delay: 200ms; } }
+.tools svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+/* While the walk is being flown, its speeds fly out beside the button, and
+   the button's own name stands clear of them, further out. Five buttons of
+   2.75rem and the four gaps between them are the 14.75rem. */
+.tools__fly { position: relative; display: grid; }
+.speeds { position: absolute; right: calc(100% + .35rem); top: 0; display: flex; gap: .25rem; opacity: 0; visibility: hidden; translate: .6rem 0; transition: opacity 160ms, translate 160ms, visibility 0s 160ms; }
+.is-flying .speeds { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+.speeds button { width: 2.75rem; font-size: .8rem; font-variant-numeric: tabular-nums; }
+.speeds button::after { content: none; }
+.is-flying [data-play]::after { right: calc(100% + 15.6rem); }
+/* The hours fly out beside the light button when it is pressed: a slider
+   round the clock, the time it is set to, and Now, which goes back to the
+   reader's own clock. 16rem wide; the button's name is not shown while it
+   is open, as the panel stands where the name would. */
+.tools__light { position: relative; display: grid; }
+.hours { position: absolute; right: calc(100% + .35rem); top: 0; display: flex; align-items: center; gap: .5rem; width: 16rem; height: 2.25rem; padding: 0 .3rem 0 .6rem; border: 1px solid var(--muted); border-radius: 6px; background: var(--panel); backdrop-filter: blur(6px); opacity: 0; visibility: hidden; translate: .6rem 0; transition: opacity 160ms, translate 160ms, visibility 0s 160ms; }
+.is-open .hours { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+.is-open [data-light]::after { content: none; }
+.hours input { flex: 1; min-width: 0; margin: 0; accent-color: var(--ink); cursor: pointer; }
+.hours output { width: 2.8rem; font-size: .8rem; font-variant-numeric: tabular-nums; text-align: right; }
+.tools .hours button { width: 3rem; height: 1.7rem; font-size: .75rem; }
+.hours button::after { content: none; }
+.hours button:disabled { opacity: .45; cursor: default; }
+/* The compass is a dial: round, and its needle turns to keep pointing north. */
+.tools .compass { border-radius: 50%; }
+.note { margin: .75rem 0 0; color: var(--muted); font-size: .8rem; }
+/* The page's foot: what it is, how old it is, and the way home. The date
+   is written by hand; the build tests hold it to the folder's last commit. */
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; }
+.foot p { margin: 0; }
+.hint { display: none; }
+.stage.is-live ~ .note .hint--mouse { display: inline; }
+@media (pointer: coarse) {
+  .stage.is-live ~ .note .hint--mouse { display: none; }
+  .stage.is-live ~ .note .hint--touch { display: inline; }
+}
+
+.walk__list { position: relative; }
+.walk__list ol { list-style: none; margin: 0; padding: 0; }
+@media (min-width: 60rem) { .js .walk__list { max-height: var(--stage); overflow-y: auto; overscroll-behavior: contain; padding-right: .5rem; } }
+.walk__list li { padding: .5rem 0; border-top: 1px solid var(--rule); }
+.walk__list a { text-decoration: none; }
+.walk__list p { margin: .2rem 0 0 1.9rem; color: var(--ink-2); font-size: .9rem; }
+.walk__n { display: inline-grid; place-items: center; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: .7rem; font-weight: 600; margin-right: .3rem; }
+.walk__list li.is-active strong { text-decoration: underline; text-underline-offset: .2em; }
+/* His own photos, from the walk in June 2026, under the stops they show. They
+   keep their color on a gray page, as the model does. Under the words, never
+   inside them: walk.js fills the caption from the stop's strong and p. A
+   click on a photo is a click on its stop, and flies there. They are tiles,
+   cropped to 4:3, two to a row, so one alone is half the list's width
+   (2026-11-18: shown whole at full width, they took too much room). Three
+   share a row. */
+.walk__photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: .3rem; margin: .5rem 0 .2rem 1.9rem; }
+.walk__photos:has(img + img + img) { grid-template-columns: repeat(3, 1fr); }
+.walk__photos img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; cursor: pointer; }
+.walk__turn { margin: 0; padding: .9rem 0 .5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
+
+/* A reader who asks for less motion still gets the flights, which only ever
+   start at their own word; what goes is the motion nobody asked for. Last in
+   the sheet, so it outranks the transitions set above. */
+@media (prefers-reduced-motion: reduce) { .stage canvas, .pin, .place, .speeds, .hours, .tools button::after { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="https://brajeshwar.com/">&larr; brajeshwar.com</a>
+  <h1>A Walk Round Dubai Marina</h1>
+  <p class="lede">Along the beach at JBR, across the Marina’s mouth, up one bank and back down the other. Dubai is hot most of the year, so the walk is a choice of hour and of side: slide the time of day to see where the towers throw their shade. Choose a stop on the model or in the list.</p>
+  <div class="layout">
+    <div class="map">
+      <div class="stage">
+        <picture>
+          <source srcset="poster-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="poster.webp" width="1600" height="800" alt="A model of Dubai Marina seen from above: the canal winding between its towers, JBR between it and the sea, and the walk round it with twelve numbered stops">
+        </picture>
+        <canvas tabindex="0" aria-label="The model. Drag to turn it, right-drag or Shift-drag to move it, scroll to zoom."></canvas>
+        <a class="pin" href="#the-beach" data-stop="1" style="--x:51.3%;--y:44.5%" aria-label="1. The Beach, JBR">1</a>
+        <a class="pin" href="#beach" data-stop="2" style="--x:40.1%;--y:43.8%" aria-label="2. The beach">2</a>
+        <a class="pin" href="#marina-mouth" data-stop="3" style="--x:34.8%;--y:42.9%" aria-label="3. The Marina’s mouth">3</a>
+        <a class="pin" href="#the-jewels" data-stop="4" style="--x:38.1%;--y:56.2%" aria-label="4. The south end">4</a>
+        <a class="pin" href="#yacht-club" data-stop="5" style="--x:47.5%;--y:61.3%" aria-label="5. Dubai Marina Yacht Club">5</a>
+        <a class="pin" href="#moorings" data-stop="6" style="--x:52.4%;--y:57.6%" aria-label="6. The moorings">6</a>
+        <a class="pin" href="#marina-mall" data-stop="7" style="--x:59.0%;--y:56.7%" aria-label="7. Dubai Marina Mall">7</a>
+        <a class="pin" href="#marina-walk" data-stop="8" style="--x:61.2%;--y:54.8%" aria-label="8. The Marina Walk">8</a>
+        <a class="pin" href="#the-bend" data-stop="9" style="--x:63.8%;--y:52.2%" aria-label="9. The bend">9</a>
+        <a class="pin" href="#bay-central" data-stop="10" style="--x:59.2%;--y:52.6%" aria-label="10. Bay Central">10</a>
+        <a class="pin" href="#the-bridge" data-stop="11" style="--x:53.3%;--y:53.4%" aria-label="11. Under the bridge">11</a>
+        <a class="pin" href="#the-walk" data-stop="12" style="--x:53.9%;--y:47.8%" aria-label="12. The Walk, JBR">12</a>
+        <p class="caption" aria-live="polite" hidden><b></b><strong></strong><span></span></p>
+        <div class="tools" hidden>
+          <button type="button" class="compass" data-north aria-label="Face north"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l2.5 6.5h-5z" fill="currentColor"/><path d="M5.5 8L8 14.5 10.5 8"/></svg></button>
+          <button type="button" data-whole aria-label="Reset the view" data-key="0"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.4 7.8L8 2.8l5.6 5M4 6.6V13.2h8V6.6M6.7 13.2V9.6h2.6v3.6"/></svg></button>
+          <button type="button" data-closer aria-label="Zoom in" data-key="+"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
+          <button type="button" data-further aria-label="Zoom out" data-key="-"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10"/></svg></button>
+          <div class="tools__light">
+            <button type="button" data-light aria-expanded="false" aria-controls="hours" aria-label="Time of day"><svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.2 9.5A5.6 5.6 0 1 1 6.5 2.8a4.5 4.5 0 0 0 6.7 6.7z"/></svg><svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.7"/><path d="M8 1.5v1.7M8 12.8v1.7M1.5 8h1.7M12.8 8h1.7M3.4 3.4l1.2 1.2M11.4 11.4l1.2 1.2M3.4 12.6l1.2-1.2M11.4 4.6l1.2-1.2"/></svg></button>
+            <div class="hours" id="hours" role="group" aria-label="Time of day">
+              <input type="range" min="0" max="1439" step="15" value="780" data-hour aria-label="Hour">
+              <output aria-hidden="true">13:00</output>
+              <button type="button" data-now>Now</button>
+            </div>
+          </div>
+          <button type="button" class="tools__walk" data-step="-1" aria-label="Previous stop" data-key="&larr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3.5v9M12 3.8L6.6 8l5.4 4.2z"/></svg></button>
+          <div class="tools__fly">
+            <button type="button" data-play aria-pressed="false" aria-label="Fly the walk"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2L12.6 8 5 12.8z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg></button>
+            <div class="speeds" role="group" aria-label="Speed">
+              <button type="button" data-speed="0.25" aria-pressed="false">0.25&times;</button>
+              <button type="button" data-speed="0.5" aria-pressed="false">0.5&times;</button>
+              <button type="button" data-speed="1" aria-pressed="true">1&times;</button>
+              <button type="button" data-speed="1.5" aria-pressed="false">1.5&times;</button>
+              <button type="button" data-speed="2" aria-pressed="false">2&times;</button>
+            </div>
+          </div>
+          <button type="button" data-step="1" aria-label="Next stop" data-key="&rarr;"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M12 3.5v9M4 3.8L9.4 8 4 12.2z"/></svg></button>
+        </div>
+      </div>
+      <p class="note"><span class="hint hint--mouse">Drag to turn and tip, right-drag or Shift-drag to move, scroll to zoom. The arrow keys step through the walk. </span><span class="hint hint--touch">Drag to turn and tip, two fingers to move and zoom. </span>The hours are Dubai’s, and the sun is where it stands over the Marina today. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Heights are the map’s where it has them, and guessed where it does not.</p>
+    </div>
+    <div class="walk__list">
+    <ol>
+      <li id="the-beach" data-stop="1"><a href="#the-beach"><span class="walk__n">1</span> <strong>The Beach, JBR</strong></a><p>Where the walk starts and ends: the open square at The Beach, with the towers of JBR behind it and the sand a few steps away.</p><div class="walk__photos"><img src="photos/the-beach-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="The black letters THE BEACH standing in a paved square, with the sand-colored towers of JBR behind them"><img src="photos/the-beach-2.webp" width="960" height="712" loading="lazy" decoding="async" alt="Steps down toward the beach between palm trees, with Ain Dubai standing on Bluewaters across the water"></div></li>
+      <li id="beach" data-stop="2"><a href="#beach"><span class="walk__n">2</span> <strong>The beach</strong></a><p>The sand runs south to the Marina’s mouth, with Ain Dubai across the water on Bluewaters. There is little shade out here once the sun is up; go early, before it clears the towers behind you.</p><div class="walk__photos"><img src="photos/beach-1.webp" width="896" height="960" loading="lazy" decoding="async" alt="Ain Dubai over empty white sand, with sun loungers at the water’s edge"><img src="photos/beach-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="A wooden boardwalk over the sand, and the towers of JBR and the Marina along the beach in a morning haze"><img src="photos/beach-3.webp" width="960" height="667" loading="lazy" decoding="async" alt="Ain Dubai lit red at night, seen across the dark beach"></div></li>
+      <li id="marina-mouth" data-stop="3"><a href="#marina-mouth"><span class="walk__n">3</span> <strong>The Marina’s mouth</strong></a><p>Where the canal meets the sea. A paved path between hedges runs back toward the beach; the bridge over the mouth takes you across to the far bank.</p><div class="walk__photos"><img src="photos/marina-mouth-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="A paved path between green hedges, with Ain Dubai at the end of it"><img src="photos/marina-mouth-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="Two towers going up, cranes on their tops, beyond a railing near the Marina’s mouth"></div></li>
+    </ol>
+    <p class="walk__turn">Across the Marina’s mouth, and up the far bank</p>
+    <ol start="4">
+      <li id="the-jewels" data-stop="4"><a href="#the-jewels"><span class="walk__n">4</span> <strong>The south end</strong></a><p>The Marina Walk begins its run up the far bank, past The Jewels. Here the path forks: along the water, or up to the street behind.</p><div class="walk__photos"><img src="photos/the-jewels-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="The promenade in the morning, the sun behind a tall tower and a row of towers along the water"><img src="photos/the-jewels-2.webp" width="960" height="300" loading="lazy" decoding="async" alt="A wide view over the south end of the Marina, boats moored in front and the towers reflected in still water"></div></li>
+      <li id="yacht-club" data-stop="5"><a href="#yacht-club"><span class="walk__n">5</span> <strong>Dubai Marina Yacht Club</strong></a><p>Yachts moored three deep below the towers, and on a still morning all of it twice.</p><div class="walk__photos"><img src="photos/yacht-club.webp" width="960" height="698" loading="lazy" decoding="async" alt="Yachts moored in front of a row of towers, all of it mirrored in the water"></div></li>
+      <li id="moorings" data-stop="6"><a href="#moorings"><span class="walk__n">6</span> <strong>The moorings</strong></a><p>The Marina Walk at its busiest: charter boats, jet skis, and cafés along the water. At night the towers light up and their lights lie broken on the water.</p><div class="walk__photos"><img src="photos/moorings-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="A railing with a red Xclusive Yachts banner, and a crowd of towers rising beyond the water"><img src="photos/moorings-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="The canal running north between towers, with a jetty and jet skis tied up in the foreground"><img src="photos/moorings-3.webp" width="960" height="549" loading="lazy" decoding="async" alt="The Marina at night, the towers lit and their lights scattered on the water"></div></li>
+      <li id="marina-mall" data-stop="7"><a href="#marina-mall"><span class="walk__n">7</span> <strong>Dubai Marina Mall</strong></a><p>The mall on the water, and the stop for the water bus. Inside is the shade there is at noon.</p><div class="walk__photos"><img src="photos/marina-mall-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="The curved front of Dubai Marina Mall, with a tower and a palm beside it"><img src="photos/marina-mall-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="Boats moored below towers on the far bank"></div></li>
+      <li id="marina-walk" data-stop="8"><a href="#marina-walk"><span class="walk__n">8</span> <strong>The Marina Walk</strong></a><p>The promenade curls round the bays here, and the towers stand in the water upside down.</p><div class="walk__photos"><img src="photos/marina-walk-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="A curving rail on the left and a white boat on the water, with the towers mirrored in the canal"><img src="photos/marina-walk-2.webp" width="960" height="398" loading="lazy" decoding="async" alt="A wide view of the towers on the far bank, from the water’s edge"></div></li>
+      <li id="the-bend" data-stop="9"><a href="#the-bend"><span class="walk__n">9</span> <strong>The bend</strong></a><p>The canal turns north toward Dubai Harbour. The walk crosses here and comes back down the other side.</p><div class="walk__photos"><img src="photos/the-bend-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="The canal turning between tall glass towers, a promenade along the right-hand bank"><img src="photos/the-bend-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="Low white buildings along the water and the towers above them, doubled in the canal"></div></li>
+    </ol>
+    <p class="walk__turn">Over the water at the bend, and back down the JBR side</p>
+    <ol start="10">
+      <li id="bay-central" data-stop="10"><a href="#bay-central"><span class="walk__n">10</span> <strong>Bay Central</strong></a><p>Back down the JBR side. The towers across the water are the ones you walked under; the footbridge ahead is the next way over.</p><div class="walk__photos"><img src="photos/bay-central-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="Glass towers on the far bank, the water still as a mirror under them"><img src="photos/bay-central-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="Looking down the canal to a footbridge, with towers on both banks"></div></li>
+      <li id="the-bridge" data-stop="11"><a href="#the-bridge"><span class="walk__n">11</span> <strong>Under the bridge</strong></a><p>The road bridge crosses low over the water, and its underside is the one deep shade on the walk at any hour.</p><div class="walk__photos"><img src="photos/the-bridge-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="The underside of a road bridge curving over the water, and an old wooden dhow moored beyond it"><img src="photos/the-bridge-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="A footbridge between the towers of JBR, in black and white"><img src="photos/the-bridge-3.webp" width="960" height="837" loading="lazy" decoding="async" alt="The Marina at night from high up, the towers lit gold and the water full of their light"></div></li>
+      <li id="the-walk" data-stop="12"><a href="#the-walk"><span class="walk__n">12</span> <strong>The Walk, JBR</strong></a><p>The street between the towers of JBR, a block in from the beach. A few steps more and the loop is closed at The Beach.</p><div class="walk__photos"><img src="photos/the-walk-1.webp" width="960" height="570" loading="lazy" decoding="async" alt="The Sheraton’s entrance on a paved plaza between the sand-colored towers of JBR, with a tree in a round planter"><img src="photos/the-walk-2.webp" width="960" height="885" loading="lazy" decoding="async" alt="Ain Dubai beyond a hotel block and its garden, seen from JBR"><img src="photos/the-walk-3.webp" width="960" height="720" loading="lazy" decoding="async" alt="The Marina from high up in a morning haze, the canal bending between the towers"></div></li>
+    </ol>
+    </div>
+  </div>
+  <footer class="foot">
+    <p>Made with AI, so the model and its notes may not be accurate. Last updated <time datetime="2026-11-19">November 19, 2026</time>.</p>
+    <p><a href="https://brajeshwar.com/">&larr; brajeshwar.com</a></p>
+  </footer>
+</main>
+<script type="module" src="walk.js"></script>
+</body>
+</html>
