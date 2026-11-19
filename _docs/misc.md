@@ -4,7 +4,7 @@ A home for pieces that go with an article but stand on their own: an interactive
 map, a small tool, a visual essay. Chosen 2026-11-15 over `/etc/` (a Unix joke
 that tells a reader nothing) and `/lab/` (kept for later, if experiments ever
 need a section of their own). The first is `/misc/london-southbank/`, the walk
-that goes with `/2026/london-stroll-along-southbank/`.
+that goes with `/2026/london-south-bank-stroll/`.
 
 The rules:
 

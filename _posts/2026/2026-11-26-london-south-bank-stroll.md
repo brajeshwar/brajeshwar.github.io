@@ -1,12 +1,12 @@
-# London - Stroll along Southbank
+# London - Stroll along South Bank
 
-Every time I am in London, I walk the South Bank. It started unknowingly and missing a lot of spots, since [my first visit in 2015](https://albums.oinam.com/album/london-2015may-jul/). I’d still like to repeat the walks with new addition of places and spend more time whenever I get opportunities in future.
+When in London, I like to walk along the South Bank. It started unknowingly and missing a lot of spots, since [my first visit in 2015](https://albums.oinam.com/album/london-2015may-jul/). I’d like to repeat the walks with new addition of places and spend more time whenever I get opportunities in future.
 
-I start at Waterloo Station, find the river, and keep it on my left all the way to Tower Bridge. That is the whole plan. No tickets to book, nothing to queue for, unless I want to. It is a few kilometers of London at walking pace.
+I like to start at the Waterloo Station, find the river, and keep it on my left all the way to Tower Bridge. That is the whole plan. No tickets to book, nothing to queue for, unless I want to. It is a few kilometers of London at walking pace.
 
 <figure class="gallery"><a href="/misc/london-southbank/"><img src="/static/2026/london-southbank-walk.webp" width="2880" height="1200" alt="A model of central London along the Thames, seen at an angle from above the south, with the walk marked on it: along the South Bank from Waterloo Station to Shad Thames, across Tower Bridge, and back along the north bank, with twenty-two numbered stops"></a></figure>
 
-The picture is a model. [Open it](/misc/london-southbank/) to turn it, tip it, and fly the walk from stop to stop, with the landmarks named as you pass.
+I have [create a simple virtual walk](/misc/london-southbank/) for you to check it out, turn it, tip it, and fly the walk from stop to stop, with the landmarks named as you pass.
 
 ## The Walk
 
@@ -37,4 +37,3 @@ Or keep going: across Tower Bridge, and back along the north bank to where it st
 20. **Cleopatra’s Needle.** An Egyptian obelisk, about 3,500 years old. It has nothing to do with Cleopatra.
 21. **Big Ben.** The clock tower of the Houses of Parliament. Cross Westminster Bridge here.
 22. **London Eye.** Waterloo Station is a few minutes away, and the loop is closed.
-{: start="16"}

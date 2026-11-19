@@ -44,7 +44,7 @@ session** — nothing else announces that the site has stopped updating.
 deployed by run 43718658955 on `9359ca85`, every step green, 50 tests and lint. Checked against
 the live site: the page, its three scripts, `city.json` (22 stops, 63 names) and both pictures
 all answer 200.
-[WARNING] The article it goes with is dated 2026-11-26, so `/2026/london-stroll-along-southbank/`
+[WARNING] The article it goes with is dated 2026-11-26, so `/2026/london-south-bank-stroll/`
 is a 404 until then, and the model page's back link points at it. He was told; it is his call
 whether that matters for eleven days. The article's picture is already up.
 The
