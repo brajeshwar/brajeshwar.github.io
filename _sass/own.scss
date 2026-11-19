@@ -172,6 +172,16 @@
   --own-detail: color-mix(in oklch, var(--text-color) 30%, var(--bg-color-lower));
 }
 
+/* On a phone the full-size tiles show two items and a sliver, which hides
+   most of a line and barely says it scrolls. Smaller tiles show three and
+   a half: more of the line at once, and a cut-off one that invites a swipe. */
+@media (max-width: bp.$small) {
+  .page-own {
+    --own-item: 6.25rem;
+    --own-pic: 4.5rem;
+  }
+}
+
 .page-own .own__item {
   text-align: center;
 }
@@ -352,6 +362,16 @@
   padding-right: 2rem;
 }
 
+@media (max-width: bp.$small) {
+  .page-own .own__inventory {
+    padding-right: 1.5rem;
+  }
+
+  .page-own .own__old-bar {
+    width: 1rem;
+  }
+}
+
 /* Off the screen but still in the tab order, so the bar is reachable
    from the keyboard and announced as a switch with its label. */
 .page-own .own__old-toggle {
@@ -386,7 +406,7 @@
 .page-own .own__old-bar span {
   position: sticky;
   top: 40vh;
-  padding-block: var(--space-s);
+  padding-inline: var(--space-s); /* vertical text: inline runs down the bar */
   writing-mode: vertical-rl;
 }
 
