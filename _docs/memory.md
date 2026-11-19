@@ -40,14 +40,14 @@ patch of each Ruby series, and the workflow pinned `3.3.5`. Every run from 2026-
 It now asks for `'3.3'`. **A red cron is easy to miss: check `gh run list` at the start of a
 session** — nothing else announces that the site has stopped updating.
 
-**`/misc/dubai-marina/` IS BUILT, NOT PUSHED (2026-11-19).** The Marina as a model like the
+**`/misc/dubai-marina/` IS LIVE (2026-11-19).** The Marina as a model like the
 South Bank's: the whole footpath network, five walks through it (his own, twelve stops through
 his photos, and four more added the same evening: the far end, end to end, Bluewaters, and a
 short loop), a note on why the hour matters in the heat, and the real sun over Dubai on Dubai's
 clock, to show where the shade falls. Two rules changed with it:
 the script that makes the data is now kept (`scripts/dubai-marina-city.mjs`), and this page's
-hours are Dubai's, not the reader's. Everything else is in [`misc.md`](misc.md). Pushing makes
-the URL permanent (guardrail 2), so it waits for him to look.
+hours are Dubai's, not the reader's. Everything else is in [`misc.md`](misc.md). Pushed at his word
+the same night; the URL is permanent now (guardrail 2).
 
 **`/misc/london-southbank/` IS A 3D MODEL NOW, AND LIVE (2026-11-15).** Pushed at his word and
 deployed by run 43718658955 on `9359ca85`, every step green, 50 tests and lint. Checked against
