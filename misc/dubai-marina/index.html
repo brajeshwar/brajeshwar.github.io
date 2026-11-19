@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>A Walk Round Dubai Marina | Brajeshwar</title>
-<meta name="description" content="A model of Dubai Marina to turn, move, and fly through: the walk along the beach at JBR and round the Marina on both banks, with the sun where it stands today, to find the shade.">
+<title>Walks Round Dubai Marina | Brajeshwar</title>
+<meta name="description" content="A model of Dubai Marina to turn, move, and fly through, with five walks round it: mine along the beach and round the south of the Marina, and four more, with the sun where it stands today, to find the shade.">
 <link rel="canonical" href="https://brajeshwar.com/misc/dubai-marina/">
 <script data-cfasync="false">
 // Day or night, settled before the page paints; walk.js asks again as the
@@ -43,6 +43,16 @@ a { color: inherit; }
 .back { color: var(--muted); font-size: .9rem; }
 h1 { font-weight: 400; font-size: 1.6rem; margin: .75rem 0 .25rem; }
 .lede { color: var(--ink-2); margin: 0 0 1rem; max-width: 44rem; }
+/* The five walks, a row of links over the model. Without the script they
+   jump down the page to each walk; with it they choose the one the model
+   draws and the list shows, and that one is marked. */
+.walks { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1rem; }
+.walks a { padding: .3rem .75rem; border: 1px solid var(--rule); border-radius: 999px; font-size: .9rem; text-decoration: none; white-space: nowrap; }
+.walks a:hover { border-color: var(--muted); }
+.walks a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.walks span { margin-left: .2rem; color: var(--muted); font-size: .8rem; }
+.walks [aria-current="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.walks [aria-current="true"] span { color: inherit; opacity: .7; }
 .layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
 @media (max-width: 60rem) { :root { --stage: min(62vh, 34rem); } }
 @media (min-width: 60rem) { .layout { grid-template-columns: minmax(0, 1fr) 20rem; align-items: start; } }
@@ -147,7 +157,7 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .walk__list p { margin: .2rem 0 0 1.9rem; color: var(--ink-2); font-size: .9rem; }
 .walk__n { display: inline-grid; place-items: center; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: .7rem; font-weight: 600; margin-right: .3rem; }
 .walk__list li.is-active strong { text-decoration: underline; text-underline-offset: .2em; }
-/* His own photos, from the walk in June 2026, under the stops they show. They
+/* His own photos, from the walks in September 2026, under the stops they show. They
    keep their color on a gray page, as the model does. Under the words, never
    inside them: walk.js fills the caption from the stop's strong and p. A
    click on a photo is a click on its stop, and flies there. They are tiles,
@@ -157,7 +167,16 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .walk__photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: .3rem; margin: .5rem 0 .2rem 1.9rem; }
 .walk__photos:has(img + img + img) { grid-template-columns: repeat(3, 1fr); }
 .walk__photos img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; cursor: pointer; }
+.walk__name { margin: 0 0 .25rem; font-size: 1.1rem; font-weight: 400; }
+.walk__list .walk__about { margin: 0 0 .75rem; color: var(--ink-2); font-size: .9rem; }
+/* Listed one after another, the walks stand apart; chosen, one is shown. */
+.walk + .walk { margin-top: 2.5rem; }
+.is-choosing .walk { margin-top: 0; }
 .walk__turn { margin: 0; padding: .9rem 0 .5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
+
+.why { max-width: 44rem; margin-top: 2.5rem; }
+.why h2 { margin: 0 0 .5rem; font-size: 1.1rem; font-weight: 400; }
+.why p { margin: 0 0 .75rem; color: var(--ink-2); }
 
 /* A reader who asks for less motion still gets the flights, which only ever
    start at their own word; what goes is the motion nobody asked for. Last in
@@ -168,8 +187,15 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 <body>
 <main>
   <a class="back" href="https://brajeshwar.com/">&larr; brajeshwar.com</a>
-  <h1>A Walk Round Dubai Marina</h1>
-  <p class="lede">Along the beach at JBR, across the Marina’s mouth, up one bank and back down the other. Dubai is hot most of the year, so the walk is a choice of hour and of side: slide the time of day to see where the towers throw their shade. Choose a stop on the model or in the list.</p>
+  <h1>Walks Round Dubai Marina</h1>
+  <p class="lede">Five walks round Dubai Marina: the one I walked, and four more for next time, to the far end, from end to end, out to Bluewaters, and a short loop for the heat. Dubai is hot most of the year, so a walk here is a choice of hour and of side: slide the time of day to see where the towers throw their shade. Choose a walk, then a stop on the model or in the list, or fly the whole of it.</p>
+  <nav class="walks" aria-label="Walks">
+    <a href="#walk-mine" data-walk="mine">My walk <span>7.5&nbsp;km</span></a>
+    <a href="#walk-far-end" data-walk="far-end">The far end <span>6.0&nbsp;km</span></a>
+    <a href="#walk-whole" data-walk="whole">End to end <span>10.6&nbsp;km</span></a>
+    <a href="#walk-bluewaters" data-walk="bluewaters">Bluewaters <span>5.4&nbsp;km</span></a>
+    <a href="#walk-short" data-walk="short">A short loop <span>3.9&nbsp;km</span></a>
+  </nav>
   <div class="layout">
     <div class="map">
       <div class="stage">
@@ -178,18 +204,18 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
           <img src="poster.webp" width="1600" height="800" alt="A model of Dubai Marina seen from above: the canal winding between its towers, JBR between it and the sea, and the walk round it with twelve numbered stops">
         </picture>
         <canvas tabindex="0" aria-label="The model. Drag to turn it, right-drag or Shift-drag to move it, scroll to zoom."></canvas>
-        <a class="pin" href="#the-beach" data-stop="1" style="--x:51.3%;--y:44.5%" aria-label="1. The Beach, JBR">1</a>
-        <a class="pin" href="#beach" data-stop="2" style="--x:40.1%;--y:43.8%" aria-label="2. The beach">2</a>
-        <a class="pin" href="#marina-mouth" data-stop="3" style="--x:34.8%;--y:42.9%" aria-label="3. The Marina’s mouth">3</a>
-        <a class="pin" href="#the-jewels" data-stop="4" style="--x:38.1%;--y:56.2%" aria-label="4. The south end">4</a>
-        <a class="pin" href="#yacht-club" data-stop="5" style="--x:47.5%;--y:61.3%" aria-label="5. Dubai Marina Yacht Club">5</a>
-        <a class="pin" href="#moorings" data-stop="6" style="--x:52.4%;--y:57.6%" aria-label="6. The moorings">6</a>
-        <a class="pin" href="#marina-mall" data-stop="7" style="--x:59.0%;--y:56.7%" aria-label="7. Dubai Marina Mall">7</a>
-        <a class="pin" href="#marina-walk" data-stop="8" style="--x:61.2%;--y:54.8%" aria-label="8. The Marina Walk">8</a>
-        <a class="pin" href="#the-bend" data-stop="9" style="--x:63.8%;--y:52.2%" aria-label="9. The bend">9</a>
-        <a class="pin" href="#bay-central" data-stop="10" style="--x:59.2%;--y:52.6%" aria-label="10. Bay Central">10</a>
-        <a class="pin" href="#the-bridge" data-stop="11" style="--x:53.3%;--y:53.4%" aria-label="11. Under the bridge">11</a>
-        <a class="pin" href="#the-walk" data-stop="12" style="--x:53.9%;--y:47.8%" aria-label="12. The Walk, JBR">12</a>
+        <a class="pin" href="#the-beach" data-walk="mine" data-stop="1" style="--x:51.3%;--y:44.5%" aria-label="1. The Beach, JBR">1</a>
+        <a class="pin" href="#beach" data-walk="mine" data-stop="2" style="--x:40.1%;--y:43.8%" aria-label="2. The beach">2</a>
+        <a class="pin" href="#marina-mouth" data-walk="mine" data-stop="3" style="--x:34.8%;--y:42.9%" aria-label="3. The Marina’s mouth">3</a>
+        <a class="pin" href="#the-jewels" data-walk="mine" data-stop="4" style="--x:38.1%;--y:56.2%" aria-label="4. The south end">4</a>
+        <a class="pin" href="#yacht-club" data-walk="mine" data-stop="5" style="--x:47.5%;--y:61.3%" aria-label="5. Dubai Marina Yacht Club">5</a>
+        <a class="pin" href="#moorings" data-walk="mine" data-stop="6" style="--x:52.4%;--y:57.6%" aria-label="6. The moorings">6</a>
+        <a class="pin" href="#marina-mall" data-walk="mine" data-stop="7" style="--x:59.0%;--y:56.7%" aria-label="7. Dubai Marina Mall">7</a>
+        <a class="pin" href="#marina-walk" data-walk="mine" data-stop="8" style="--x:61.2%;--y:54.8%" aria-label="8. The Marina Walk">8</a>
+        <a class="pin" href="#the-bend" data-walk="mine" data-stop="9" style="--x:63.8%;--y:52.2%" aria-label="9. The bend">9</a>
+        <a class="pin" href="#bay-central" data-walk="mine" data-stop="10" style="--x:59.2%;--y:52.6%" aria-label="10. Bay Central">10</a>
+        <a class="pin" href="#the-bridge" data-walk="mine" data-stop="11" style="--x:53.3%;--y:53.4%" aria-label="11. Under the bridge">11</a>
+        <a class="pin" href="#the-walk" data-walk="mine" data-stop="12" style="--x:53.9%;--y:47.8%" aria-label="12. The Walk, JBR">12</a>
         <p class="caption" aria-live="polite" hidden><b></b><strong></strong><span></span></p>
         <div class="tools" hidden>
           <button type="button" class="compass" data-north aria-label="Face north"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l2.5 6.5h-5z" fill="currentColor"/><path d="M5.5 8L8 14.5 10.5 8"/></svg></button>
@@ -221,6 +247,9 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
       <p class="note"><span class="hint hint--mouse">Drag to turn and tip, right-drag or Shift-drag to move, scroll to zoom. The arrow keys step through the walk. </span><span class="hint hint--touch">Drag to turn and tip, two fingers to move and zoom. </span>The hours are Dubai’s, and the sun is where it stands over the Marina today. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Heights are the map’s where it has them, and guessed where it does not.</p>
     </div>
     <div class="walk__list">
+    <section class="walk" id="walk-mine" data-walk="mine">
+    <h2 class="walk__name">My walk</h2>
+    <p class="walk__about">The one I walked, in September 2026: along the beach, across the Marina’s mouth, up the far bank, and back down the JBR side. 7.5&nbsp;km. The photographs are mine.</p>
     <ol>
       <li id="the-beach" data-stop="1"><a href="#the-beach"><span class="walk__n">1</span> <strong>The Beach, JBR</strong></a><p>Where the walk starts and ends: the open square at The Beach, with the towers of JBR behind it and the sand a few steps away.</p><div class="walk__photos"><img src="photos/the-beach-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="The black letters THE BEACH standing in a paved square, with the sand-colored towers of JBR behind them"><img src="photos/the-beach-2.webp" width="960" height="712" loading="lazy" decoding="async" alt="Steps down toward the beach between palm trees, with Ain Dubai standing on Bluewaters across the water"></div></li>
       <li id="beach" data-stop="2"><a href="#beach"><span class="walk__n">2</span> <strong>The beach</strong></a><p>The sand runs south to the Marina’s mouth, with Ain Dubai across the water on Bluewaters. There is little shade out here once the sun is up; go early, before it clears the towers behind you.</p><div class="walk__photos"><img src="photos/beach-1.webp" width="896" height="960" loading="lazy" decoding="async" alt="Ain Dubai over empty white sand, with sun loungers at the water’s edge"><img src="photos/beach-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="A wooden boardwalk over the sand, and the towers of JBR and the Marina along the beach in a morning haze"><img src="photos/beach-3.webp" width="960" height="667" loading="lazy" decoding="async" alt="Ain Dubai lit red at night, seen across the dark beach"></div></li>
@@ -241,8 +270,68 @@ button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
       <li id="the-bridge" data-stop="11"><a href="#the-bridge"><span class="walk__n">11</span> <strong>Under the bridge</strong></a><p>The road bridge crosses low over the water, and its underside is the one deep shade on the walk at any hour.</p><div class="walk__photos"><img src="photos/the-bridge-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="The underside of a road bridge curving over the water, and an old wooden dhow moored beyond it"><img src="photos/the-bridge-2.webp" width="960" height="720" loading="lazy" decoding="async" alt="A footbridge between the towers of JBR, in black and white"><img src="photos/the-bridge-3.webp" width="960" height="837" loading="lazy" decoding="async" alt="The Marina at night from high up, the towers lit gold and the water full of their light"></div></li>
       <li id="the-walk" data-stop="12"><a href="#the-walk"><span class="walk__n">12</span> <strong>The Walk, JBR</strong></a><p>The street between the towers of JBR, a block in from the beach. A few steps more and the loop is closed at The Beach.</p><div class="walk__photos"><img src="photos/the-walk-1.webp" width="960" height="570" loading="lazy" decoding="async" alt="The Sheraton’s entrance on a paved plaza between the sand-colored towers of JBR, with a tree in a round planter"><img src="photos/the-walk-2.webp" width="960" height="885" loading="lazy" decoding="async" alt="Ain Dubai beyond a hotel block and its garden, seen from JBR"><img src="photos/the-walk-3.webp" width="960" height="720" loading="lazy" decoding="async" alt="The Marina from high up in a morning haze, the canal bending between the towers"></div></li>
     </ol>
+    </section>
+    <section class="walk" id="walk-far-end" data-walk="far-end">
+    <h2 class="walk__name">The far end</h2>
+    <p class="walk__about">The half I did not walk: round the basin at the Marina’s north end, past Marina Gate and Cayan Tower, over the north mouth, and back down the JBR side. 6.0&nbsp;km. Go out along the Marina Walk early, while its towers still shade it.</p>
+    <ol>
+      <li id="far-mall" data-stop="1"><a href="#far-mall"><span class="walk__n">1</span> <strong>Dubai Marina Mall</strong></a><p>Start at the mall, by the stop for the water bus, and walk north up the Marina Walk.</p></li>
+      <li id="far-diamonds" data-stop="2"><a href="#far-diamonds"><span class="walk__n">2</span> <strong>The Marina Diamonds</strong></a><p>The promenade passes the six Marina Diamonds, low towers for this bank, of fifteen to twenty floors.</p></li>
+      <li id="far-loop" data-stop="3"><a href="#far-loop"><span class="walk__n">3</span> <strong>Round the basin</strong></a><p>The Marina Walk bends round a basin of jetties, with cafés along it and another stop for the water bus.</p></li>
+      <li id="far-gate" data-stop="4"><a href="#far-gate"><span class="walk__n">4</span> <strong>Marina Gate</strong></a><p>The three towers of Marina Gate stand at the top of the basin.</p></li>
+      <li id="far-cayan" data-stop="5"><a href="#far-cayan"><span class="walk__n">5</span> <strong>Cayan Tower</strong></a><p>The tower that turns through ninety degrees from its foot to its top, where the Marina narrows toward the sea.</p></li>
+      <li id="far-mouth" data-stop="6"><a href="#far-mouth"><span class="walk__n">6</span> <strong>Over the north mouth</strong></a><p>The road bridge over the channel out to Dubai Harbour has a footway. Cross here to the JBR side.</p></li>
+      <li id="far-terrace" data-stop="7"><a href="#far-terrace"><span class="walk__n">7</span> <strong>Marina Terrace</strong></a><p>Down the other side of the basin, past the water bus at Marina Terrace, with Marina Gate across the water.</p></li>
+      <li id="far-island" data-stop="8"><a href="#far-island"><span class="walk__n">8</span> <strong>Park Island</strong></a><p>Round the four towers of Park Island, then over the footbridge at the bend and back to the mall.</p></li>
+    </ol>
+    </section>
+    <section class="walk" id="walk-whole" data-walk="whole">
+    <h2 class="walk__name">End to end</h2>
+    <p class="walk__about">Both of the Marina’s mouths and both its banks, in one loop from The Beach. 10.6&nbsp;km, two and a half hours on foot. Start at first light: the beach comes first, and by the time the sun is high you are among the towers.</p>
+    <ol>
+      <li id="whole-beach" data-stop="1"><a href="#whole-beach"><span class="walk__n">1</span> <strong>The Beach, JBR</strong></a><p>Start and end on the square at The Beach, and go south along the sand.</p></li>
+      <li id="whole-mouth" data-stop="2"><a href="#whole-mouth"><span class="walk__n">2</span> <strong>The Marina’s mouth</strong></a><p>Where the canal meets the sea. Cross by the bridge over the mouth to the Marina Walk side.</p></li>
+      <li id="whole-jewels" data-stop="3"><a href="#whole-jewels"><span class="walk__n">3</span> <strong>The south end</strong></a><p>The Marina Walk begins its run up the bank, past The Jewels.</p></li>
+      <li id="whole-yacht" data-stop="4"><a href="#whole-yacht"><span class="walk__n">4</span> <strong>Dubai Marina Yacht Club</strong></a><p>Yachts moored three deep below the towers.</p></li>
+      <li id="whole-mall" data-stop="5"><a href="#whole-mall"><span class="walk__n">5</span> <strong>Dubai Marina Mall</strong></a><p>Halfway up the Marina Walk. Inside is the shade there is at noon.</p></li>
+      <li id="whole-diamonds" data-stop="6"><a href="#whole-diamonds"><span class="walk__n">6</span> <strong>The Marina Diamonds</strong></a><p>On up the promenade, past six lower towers.</p></li>
+      <li id="whole-loop" data-stop="7"><a href="#whole-loop"><span class="walk__n">7</span> <strong>Round the basin</strong></a><p>The Marina Walk bends round the basin at the north end, past the jetties and the water bus.</p></li>
+      <li id="whole-cayan" data-stop="8"><a href="#whole-cayan"><span class="walk__n">8</span> <strong>Cayan Tower</strong></a><p>The twisting tower, at the top of the Marina. Over the road bridge beyond it to the JBR side.</p></li>
+      <li id="whole-terrace" data-stop="9"><a href="#whole-terrace"><span class="walk__n">9</span> <strong>Marina Terrace</strong></a><p>Down the other side of the basin.</p></li>
+      <li id="whole-island" data-stop="10"><a href="#whole-island"><span class="walk__n">10</span> <strong>Park Island</strong></a><p>Round Park Island’s towers, and on down the JBR side.</p></li>
+      <li id="whole-bay" data-stop="11"><a href="#whole-bay"><span class="walk__n">11</span> <strong>Bay Central</strong></a><p>The towers across the water are the ones you walked under in the morning.</p></li>
+      <li id="whole-bridge" data-stop="12"><a href="#whole-bridge"><span class="walk__n">12</span> <strong>Under the bridge</strong></a><p>The road bridge’s underside is deep shade at any hour. From here The Walk at JBR takes you back to The Beach.</p></li>
+    </ol>
+    </section>
+    <section class="walk" id="walk-bluewaters" data-walk="bluewaters">
+    <h2 class="walk__name">Bluewaters</h2>
+    <p class="walk__about">Along the beach and over the footbridge to Bluewaters, round the island under Ain Dubai, and back the way you came. 5.4&nbsp;km. There is little shade on the sand or the bridge; go early, or after the sun is down.</p>
+    <ol>
+      <li id="blue-beach" data-stop="1"><a href="#blue-beach"><span class="walk__n">1</span> <strong>The Beach, JBR</strong></a><p>Start on the square at The Beach, and go south along the sand.</p></li>
+      <li id="blue-bridge" data-stop="2"><a href="#blue-bridge"><span class="walk__n">2</span> <strong>The bridge to Bluewaters</strong></a><p>A footbridge goes out from the beach over the water to the island.</p></li>
+      <li id="blue-wharf" data-stop="3"><a href="#blue-wharf"><span class="walk__n">3</span> <strong>The Wharf</strong></a><p>The island’s shops and restaurants, along its edge facing JBR.</p></li>
+      <li id="blue-wheel" data-stop="4"><a href="#blue-wheel"><span class="walk__n">4</span> <strong>Ain Dubai</strong></a><p>The wheel, 250&nbsp;m tall, standing over the island.</p></li>
+      <li id="blue-caesars" data-stop="5"><a href="#blue-caesars"><span class="walk__n">5</span> <strong>The far side</strong></a><p>Past the Caesars hotels, on the side of the island that faces the open sea. Then back over the bridge.</p></li>
+    </ol>
+    </section>
+    <section class="walk" id="walk-short" data-walk="short">
+    <h2 class="walk__name">A short loop</h2>
+    <p class="walk__about">For the hot months, or the hour before dinner: up one bank from Marina Mall, over a footbridge, and back down the other. 3.9&nbsp;km, under an hour.</p>
+    <ol>
+      <li id="short-mall" data-stop="1"><a href="#short-mall"><span class="walk__n">1</span> <strong>Dubai Marina Mall</strong></a><p>Start at the mall and walk north up the Marina Walk.</p></li>
+      <li id="short-diamonds" data-stop="2"><a href="#short-diamonds"><span class="walk__n">2</span> <strong>The Marina Diamonds</strong></a><p>On past the Marina Diamonds to the footbridge, and over it.</p></li>
+      <li id="short-island" data-stop="3"><a href="#short-island"><span class="walk__n">3</span> <strong>Park Island</strong></a><p>Back down the JBR side, round Park Island.</p></li>
+      <li id="short-bay" data-stop="4"><a href="#short-bay"><span class="walk__n">4</span> <strong>Bay Central</strong></a><p>Past Bay Central to the footbridge at the bend, and over it to the mall.</p></li>
+    </ol>
+    </section>
     </div>
   </div>
+  <section class="why">
+    <h2>Why the hour matters</h2>
+    <p>Dubai is hot for most of the year. From June to September the afternoons often pass 40&nbsp;°C, and by the sea the air is wet as well. On foot, the hour you go matters as much as the way you go.</p>
+    <p>Early in the morning the sun is low in the east, and the towers throw shadows hundreds of meters long across the promenades and the water. As it climbs, the shadows draw in. In June the noon sun stands almost straight overhead, and a tower’s shade is no wider than its foot: that is the hour to be indoors, in the mall, or under the road bridge. In the late afternoon the shadows come back, falling the other way.</p>
+    <p>So the side matters too. On the Marina Walk side the towers stand behind the promenade to the east, and shade it in the morning. On the JBR side they stand to the west, and shade it in the afternoon. The beach has no shade but the first hour’s, before the sun clears the towers of JBR, and the bridge to Bluewaters has none at all. Slide the hour on the model to see where the shade lies, with today’s sun.</p>
+  </section>
   <footer class="foot">
     <p>Made with AI, so the model and its notes may not be accurate. Last updated <time datetime="2026-11-19">November 19, 2026</time>.</p>
     <p><a href="https://brajeshwar.com/">&larr; brajeshwar.com</a></p>

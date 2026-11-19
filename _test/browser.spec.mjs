@@ -274,6 +274,30 @@ test('the Marina settles as the model or the picture, with no errors', async ({ 
   expect(errors.filter((e) => !e.startsWith('Failed to load resource'))).toEqual([]);
 });
 
+test('a Marina walk chosen is the one the list shows and the model draws', async ({ page }) => {
+  await page.goto(MARINA);
+  const stage = page.locator('.stage');
+  await expect(stage).toHaveClass(/is-live|is-still/, { timeout: 20000 });
+  await page.locator('.walks a[data-walk="far-end"]').click();
+  await expect(page.locator('#walk-far-end')).toBeVisible();
+  await expect(page.locator('#walk-mine')).toBeHidden();
+  await expect(page.locator('.walks a[data-walk="far-end"]')).toHaveAttribute(
+    'aria-current',
+    'true'
+  );
+  if (await stage.evaluate((el) => el.classList.contains('is-live'))) {
+    await expect(page.locator('.pin[data-walk="mine"]').first()).toBeHidden();
+    await page.getByRole('button', { name: 'Next stop' }).click();
+    await expect(page.locator('#far-mall')).toHaveClass(/is-active/);
+  }
+});
+
+test('a link to a stop on another Marina walk opens that walk', async ({ page }) => {
+  await page.goto(MARINA + '#blue-wharf');
+  await expect(page.locator('#walk-bluewaters')).toBeVisible();
+  await expect(page.locator('#walk-mine')).toBeHidden();
+});
+
 test('the Marina keeps Dubai’s hours, wherever the reader is', async ({ page }) => {
   // Instants, not local times, so the runner's own zone cannot matter:
   // 18:00 UTC is ten at night in Dubai, and 08:00 UTC is noon there.

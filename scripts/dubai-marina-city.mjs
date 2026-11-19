@@ -735,30 +735,78 @@ for (const p of spots) {
   at = q;
 }
 
-// ---- the walk --------------------------------------------------------------------
+// ---- the walks -------------------------------------------------------------------
 //
-// Not one path but a loop round the water, crossing where the bridges cross.
-// It is the shortest way over the mapped footways through the stops in
-// order, a footway costing a third of a street; the stops are where his
-// photographs were taken. The other footways stay on the map as they are,
-// every branch and loop of them.
+// Five loops, each the shortest way over the mapped footways through its
+// stops in order, a footway costing a third of a street. The first is his
+// own, in June 2026, its stops where his photographs were taken; the other
+// four go where he did not, to the far end of the Marina, along its whole
+// length, out to Bluewaters, and along the beach. Paths the map marks
+// private, or closed to people on foot, are left out of the reckoning: a
+// hotel's gardens are no way to walk. They stay on the map as they are, as
+// does every other branch and loop.
 
-const STOPS = [
-  ['the-beach', 25.07805, 55.13325],
-  ['beach', 25.0744, 55.1282],
-  ['marina-mouth', 25.0729, 55.1256],
-  ['the-jewels', 25.07055, 55.1304],
-  ['yacht-club', 25.0723, 55.1356],
-  ['moorings', 25.0748, 55.1369],
-  ['marina-mall', 25.0772, 55.1394],
-  ['marina-walk', 25.0785, 55.14],
-  ['the-bend', 25.08, 55.1406],
-  ['bay-central', 25.0784, 55.1385],
-  ['the-bridge', 25.0762, 55.1362],
-  ['the-walk', 25.0779, 55.1354],
+const WALKS = [
+  [
+    'mine',
+    ['the-beach', 25.07805, 55.13325],
+    ['beach', 25.0744, 55.1282],
+    ['marina-mouth', 25.0729, 55.1256],
+    ['the-jewels', 25.07055, 55.1304],
+    ['yacht-club', 25.0723, 55.1356],
+    ['moorings', 25.0748, 55.1369],
+    ['marina-mall', 25.0772, 55.1394],
+    ['marina-walk', 25.0785, 55.14],
+    ['the-bend', 25.08, 55.1406],
+    ['bay-central', 25.0784, 55.1385],
+    ['the-bridge', 25.0762, 55.1362],
+    ['the-walk', 25.0779, 55.1354],
+  ],
+  [
+    'far-end',
+    ['far-mall', 25.0778, 55.14],
+    ['far-diamonds', 25.0808, 55.144],
+    ['far-loop', 25.0853, 55.1476],
+    ['far-gate', 25.0864, 55.1467],
+    ['far-cayan', 25.0881, 55.1456],
+    ['far-mouth', 25.0873, 55.1429],
+    ['far-terrace', 25.085, 55.1453],
+    ['far-island', 25.08166, 55.1423],
+  ],
+  [
+    'whole',
+    ['whole-beach', 25.07805, 55.13325],
+    ['whole-mouth', 25.0729, 55.1256],
+    ['whole-jewels', 25.07055, 55.1304],
+    ['whole-yacht', 25.0723, 55.1356],
+    ['whole-mall', 25.0778, 55.14],
+    ['whole-diamonds', 25.0808, 55.144],
+    ['whole-loop', 25.0853, 55.1476],
+    ['whole-cayan', 25.0881, 55.1456],
+    ['whole-terrace', 25.085, 55.1453],
+    ['whole-island', 25.08166, 55.1423],
+    ['whole-bay', 25.0784, 55.1385],
+    ['whole-bridge', 25.0762, 55.1362],
+  ],
+  [
+    'bluewaters',
+    ['blue-beach', 25.07805, 55.13325],
+    ['blue-bridge', 25.0752, 55.1252],
+    ['blue-wharf', 25.079, 55.124],
+    ['blue-wheel', 25.0812, 55.1228],
+    ['blue-caesars', 25.0815, 55.12],
+  ],
+  [
+    'short',
+    ['short-mall', 25.0778, 55.14],
+    ['short-diamonds', 25.0808, 55.144],
+    ['short-island', 25.08166, 55.1423],
+    ['short-bay', 25.0784, 55.1385],
+  ],
 ];
 
 const COST = [4, 3, 1.2, 3, 1, 50];
+const SHUT = /^(private|no)$/;
 const nodes = new Map();
 function node(p, z) {
   const k = dm(p[0]) + ',' + dm(p[1]) + ',' + z;
@@ -767,6 +815,7 @@ function node(p, z) {
 }
 for (const l of lines) {
   if (l.cls === 5 || l.cls === 0) continue;
+  if (SHUT.test(l.tags.access || '') || SHUT.test(l.tags.foot || '')) continue;
   const z = l.z;
   for (let i = 1; i < l.run.length; i++) {
     const a = node(l.run[i - 1], z);
@@ -796,9 +845,27 @@ for (const n of nodes.values()) {
       }
 }
 
-// Only nodes on footways, so a stop is never put on a road.
+// The paths that join up with the rest: the largest piece of the network.
+// A courtyard's paths that reach the street only through a gate are an
+// island of their own, and a stop put there could never be walked to.
+let joined = new Set();
+const reached = new Set();
+for (const n of nodes.values()) {
+  if (reached.has(n)) continue;
+  const piece = new Set([n]);
+  const todo = [n];
+  while (todo.length)
+    for (const [m] of todo.pop().edges) if (!piece.has(m)) (piece.add(m), todo.push(m));
+  for (const m of piece) reached.add(m);
+  if (piece.size > joined.size) joined = piece;
+}
+
+// Only nodes on open footways that join up, so a stop is never put on a
+// road or behind a gate.
 const foot = new Set();
-for (const l of lines) if (l.cls === 4) for (const p of l.run) foot.add(node(p, l.z));
+for (const l of lines)
+  if (l.cls === 4 && !SHUT.test(l.tags.access || '') && !SHUT.test(l.tags.foot || ''))
+    for (const p of l.run) if (joined.has(node(p, l.z))) foot.add(node(p, l.z));
 
 function nearest(lat, lon) {
   const [x, y] = project(lat, lon);
@@ -841,28 +908,34 @@ function shortest(from, to) {
   return path;
 }
 
-const ends = STOPS.map(([id, lat, lon]) => {
-  const found = nearest(lat, lon);
-  if (found.off > 60) console.warn(`stop ${id} is ${Math.round(found.off)} m from a footway`);
-  return found.node;
-});
-const walk = [ends[0]];
-const stopAt = [[STOPS[0][0], 0]];
-for (let i = 1; i <= STOPS.length; i++) {
-  const leg = shortest(ends[i - 1], ends[i % STOPS.length]);
-  for (const n of leg.slice(1)) walk.push(n);
-  if (i < STOPS.length) stopAt.push([STOPS[i][0], walk.length - 1]);
+// One walk: round its stops and back to the first, as the route's points
+// delta-coded in decimeters with their heights, and where each stop falls.
+function walkOf([id, ...stops]) {
+  const ends = stops.map(([name, lat, lon]) => {
+    const found = nearest(lat, lon);
+    if (found.off > 60) console.warn(`stop ${name} is ${Math.round(found.off)} m from a footway`);
+    return found.node;
+  });
+  const walk = [ends[0]];
+  const stopAt = [[stops[0][0], 0]];
+  for (let i = 1; i <= stops.length; i++) {
+    const leg = shortest(ends[i - 1], ends[i % stops.length]);
+    for (const n of leg.slice(1)) walk.push(n);
+    if (i < stops.length) stopAt.push([stops[i][0], walk.length - 1]);
+  }
+  const route = [];
+  let last = [0, 0];
+  let length = 0;
+  for (let i = 0; i < walk.length; i++) {
+    const q = [dm(walk[i].p[0]), dm(walk[i].p[1])];
+    if (i) length += Math.hypot(walk[i].p[0] - walk[i - 1].p[0], walk[i].p[1] - walk[i - 1].p[1]);
+    route.push(q[0] - last[0], q[1] - last[1], walk[i].z);
+    last = q;
+  }
+  return { id, route, stops: stopAt, length };
 }
 
-const route = [];
-at = [0, 0];
-let walked = 0;
-for (let i = 0; i < walk.length; i++) {
-  const q = [dm(walk[i].p[0]), dm(walk[i].p[1])];
-  if (i) walked += Math.hypot(walk[i].p[0] - walk[i - 1].p[0], walk[i].p[1] - walk[i - 1].p[1]);
-  route.push(q[0] - at[0], q[1] - at[1], walk[i].z);
-  at = q;
-}
+const walks = WALKS.map(walkOf);
 
 // ---- landmarks to name --------------------------------------------------------------
 
@@ -922,8 +995,7 @@ const city = {
   roads,
   trees,
   treeTops: [],
-  route,
-  stops: stopAt,
+  walks: walks.map(({ id, route, stops }) => ({ id, route, stops })),
   places,
 };
 
@@ -933,6 +1005,6 @@ console.log(
   `${kb} KB: ${landCount} pieces of land, ${blocks.parts.length} buildings ` +
     `(${measured} measured, ${counted} by floors, ${guessed} guessed), ` +
     `${roads.len.length} roads and paths, ${trees.length / 2} trees, ` +
-    `${piers.parts.length} jetties, a walk of ${(walked / 1000).toFixed(1)} km ` +
-    `through ${stopAt.length} stops, ${places.length} names`
+    `${piers.parts.length} jetties, ${places.length} names; the walks: ` +
+    walks.map((w) => `${w.id} ${(w.length / 1000).toFixed(1)} km`).join(', ')
 );

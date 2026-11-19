@@ -444,16 +444,25 @@ export function build(city) {
   layer(mesh, city.squares, 0, 5, null, M.road + 2, 0);
   roads(mesh, city.roads);
 
-  const line = route(city.route);
+  // The walks, each a loop: its line, and where each of its stops falls.
+  const walks = city.walks.map(function (walk) {
+    const line = route(walk.route);
+    return {
+      id: walk.id,
+      route: line,
+      stops: walk.stops.map(function (s) {
+        return { id: s[0], at: line[s[1]] };
+      }),
+    };
+  });
   return {
     corners: new Uint8Array(mesh.bytes, 0, mesh.corners * STRIDE),
     index: mesh.index.subarray(0, mesh.indices),
     solid: solid,
     size: [city.size[0] / 10, city.size[1] / 10],
-    route: line,
-    stops: city.stops.map(function (s) {
-      return { id: s[0], at: line[s[1]] };
-    }),
+    walks: walks,
+    // The walk drawn: the first, until walk.js chooses another.
+    route: walks[0].route,
     // Landmarks to name: where each stands, and the height of its roof there.
     places: (city.places || []).map(function (p) {
       return { name: p[0], at: [p[1] / 10, p[2] / 10, p[3] / 100] };

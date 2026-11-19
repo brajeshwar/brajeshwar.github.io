@@ -749,7 +749,7 @@ export function renderer(canvas, model) {
   const gl = canvas.getContext('webgl2', { antialias: true, alpha: false });
   if (!gl) return null;
 
-  let depth, solid, path, city, walk, sky;
+  let depth, solid, path, city, walk, walkBuffer, sky;
   const camera = { matrix: null, eye: [0, 0, 0], width: 1, height: 1 };
   // The window the sun looks through moves with the camera; which way it
   // looks moves only when the hour does (aim).
@@ -791,13 +791,13 @@ export function renderer(canvas, model) {
 
     walk = gl.createVertexArray();
     gl.bindVertexArray(walk);
-    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-    gl.bufferData(gl.ARRAY_BUFFER, pathCorners(model.route), gl.STATIC_DRAW);
+    walkBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, walkBuffer);
     for (let i = 0; i < 3; i++) {
       gl.enableVertexAttribArray(i);
       gl.vertexAttribPointer(i, 3, gl.FLOAT, false, 36, i * 12);
     }
-    gl.bindVertexArray(null);
+    trace();
     shadowMap();
     skyMap();
   }
@@ -1152,6 +1152,14 @@ export function renderer(canvas, model) {
     gl.bindVertexArray(null);
   }
 
+  // The walk to draw is whichever model.route holds; this hands it to the
+  // GPU, and is called again whenever another walk is chosen.
+  function trace() {
+    gl.bindBuffer(gl.ARRAY_BUFFER, walkBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, pathCorners(model.route), gl.STATIC_DRAW);
+    gl.bindVertexArray(null);
+  }
+
   // Where a point of the model falls on the canvas, in CSS pixels.
   function screen(point) {
     const p = transform(camera.matrix, point);
@@ -1185,5 +1193,13 @@ export function renderer(canvas, model) {
 
   fit();
   setup();
-  return { frame: frame, place: place, screen: screen, ground: ground, setup: setup, aim: aim };
+  return {
+    frame: frame,
+    place: place,
+    screen: screen,
+    ground: ground,
+    setup: setup,
+    aim: aim,
+    trace: trace,
+  };
 }

@@ -1,8 +1,9 @@
-/* A walk round Dubai Marina, as a model you can turn in your hands.
+/* Walks round Dubai Marina, on a model you can turn in your hands.
  *
  * Without this script the page is whole: a picture of the model, numbered
- * pins on it, and the list of stops they link to. This puts the model itself
- * where the picture was. Drag to turn and tip it; right-drag or Shift-drag
+ * pins on it for his own walk, and the five walks listed one after another.
+ * This shows one walk at a time, and puts the model itself where the
+ * picture was. Drag to turn and tip it; right-drag or Shift-drag
  * to move it; scroll or pinch to come closer. Choose a stop, or Next, and the
  * camera flies the walk to it, low along the path the way you would go.
  *
@@ -31,7 +32,9 @@ const TURN = 40; // degrees a second the camera may turn, flying a bend
 const PUSH = 70; // meters a second it may gain or lose in a second
 
 let model, draw, view, flight, look;
-let stops = [];
+let walks = []; // the five, each with its route, its stops, and its pins
+let walk = null; // the one being shown
+let stops = []; // its stops
 let current = -1;
 let walked = 0;
 let playing = false;
@@ -343,6 +346,40 @@ relight();
 setInterval(function () {
   if (window.light.chosen === null) relight();
 }, 60000);
+
+// ---- the walks ---------------------------------------------------------
+//
+// The list shows one walk at a time, and the model draws it. The links over
+// the model choose which; without this script they jump down the page to a
+// walk, and the page lists all five.
+
+const picker = document.querySelector('.walks');
+list.classList.add('is-choosing');
+
+function choose(id) {
+  for (const section of list.querySelectorAll('.walk'))
+    section.hidden = section.dataset.walk !== id;
+  for (const link of picker.querySelectorAll('a'))
+    if (link.dataset.walk === id) link.setAttribute('aria-current', 'true');
+    else link.removeAttribute('aria-current');
+  for (const pin of stage.querySelectorAll('.pin')) pin.hidden = pin.dataset.walk !== id;
+  list.scrollTop = 0;
+  if (!model) return;
+  takeOver();
+  walk = walks.find((w) => w.id === id);
+  stops = walk.stops;
+  model.route = walk.route;
+  draw.trace();
+  drawLine();
+  current = -1;
+  walked = 0;
+  for (const el of document.querySelectorAll('.is-active')) el.classList.remove('is-active');
+  caption.hidden = true;
+  measure();
+}
+
+// The walk a link, a pin, or a stop in the list belongs to.
+const walkOf = (el) => el.closest('[data-walk]').dataset.walk;
 
 // ---- views -------------------------------------------------------------
 
@@ -1002,6 +1039,14 @@ const closer = () => nudge({ span: clamp(view.span / 2, 90, 7000) });
 const further = () => nudge({ span: clamp(view.span * 2, 90, 7000) });
 
 document.addEventListener('click', function (e) {
+  const pick = e.target.closest('.walks a');
+  if (pick) {
+    e.preventDefault();
+    choose(pick.dataset.walk);
+    history.replaceState(null, '', pick.hash);
+    if (view) fly(overview(), 1400);
+    return;
+  }
   if (!view) return;
   const button = e.target.closest('button');
   if (button && stage.contains(button)) {
@@ -1020,6 +1065,7 @@ document.addEventListener('click', function (e) {
   const owner = e.target.closest('[data-stop]');
   if (owner) {
     e.preventDefault();
+    if (walkOf(owner) !== walk.id) choose(walkOf(owner));
     takeOver();
     // The stop before or after this one is reached by walking; any other, by air.
     const n = Number(owner.dataset.stop) - 1;
@@ -1054,29 +1100,47 @@ function start(city) {
   model = build(city);
   draw = renderer(canvas, model);
   if (!draw) throw new Error('no WebGL2');
-  const places = new Map(model.stops.map((s) => [s.id, s.at]));
-  for (const item of list.querySelectorAll('li[data-stop]')) {
-    const pin = stage.querySelector('.pin[data-stop="' + item.dataset.stop + '"]');
-    if (!places.has(item.id) || !pin) continue;
-    pin.title = item.querySelector('strong').textContent;
-    stops.push({ item: item, pin: pin, at: places.get(item.id) });
+  // Each walk's stops, from the list, and a pin for each. His own walk's
+  // pins are in the page, placed for the picture; the others' are made here.
+  for (const one of model.walks) {
+    const places = new Map(one.stops.map((s) => [s.id, s.at]));
+    const section = list.querySelector('.walk[data-walk="' + one.id + '"]');
+    const mine = { id: one.id, route: one.route, stops: [] };
+    for (const item of section ? section.querySelectorAll('li[data-stop]') : []) {
+      if (!places.has(item.id)) continue;
+      const n = item.dataset.stop;
+      const name = item.querySelector('strong').textContent;
+      let pin = stage.querySelector('.pin[data-walk="' + one.id + '"][data-stop="' + n + '"]');
+      if (!pin) {
+        pin = document.createElement('a');
+        pin.className = 'pin';
+        pin.href = '#' + item.id;
+        pin.dataset.walk = one.id;
+        pin.dataset.stop = n;
+        pin.setAttribute('aria-label', n + '. ' + name);
+        pin.textContent = n;
+        stage.insertBefore(pin, caption);
+      }
+      pin.title = name;
+      mine.stops.push({ item: item, pin: pin, at: places.get(item.id) });
+    }
+    if (mine.stops.length) walks.push(mine);
   }
-  drawLine();
   nameLandmarks();
   // The sun for the hour it is now, or the one chosen: relight() could not
   // aim it before the model was here, and the hour may not change again.
   draw.aim(sunAt(window.light.at()));
   readLook();
+  // A link to a walk opens on that walk, and a link to a stop on that stop.
+  // The browser has already scrolled to it in the list, which on a phone is
+  // below the model; come back up.
+  const named = document.getElementById(location.hash.slice(1));
+  const asked = named && named.closest('[data-walk]');
+  choose(asked && walks.some((w) => w.id === walkOf(named)) ? walkOf(named) : walks[0].id);
   view = overview();
   stage.querySelector('.tools').hidden = false;
-
-  // A link to a stop opens on that stop. The browser has already scrolled to
-  // its place in the list, which on a phone is below the model; come back up.
-  const named = document.getElementById(location.hash.slice(1));
-  if (named && named.dataset.stop) {
-    show(Number(named.dataset.stop) - 1, 'jump');
-    stage.scrollIntoView({ block: 'nearest' });
-  }
+  if (asked) stage.scrollIntoView({ block: 'nearest' });
+  if (named && named.dataset.stop) show(Number(named.dataset.stop) - 1, 'jump');
   redraw();
 
   new ResizeObserver(function () {
@@ -1090,6 +1154,13 @@ function start(city) {
     draw.setup();
     redraw();
   });
+}
+
+// The list shows the walk asked for, or his own, before the model is here,
+// and whether or not it ever is.
+{
+  const named = document.getElementById(location.hash.slice(1));
+  choose(named && named.closest('[data-walk]') ? walkOf(named) : 'mine');
 }
 
 fetch(new URL('city.json', import.meta.url))

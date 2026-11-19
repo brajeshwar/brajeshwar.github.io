@@ -111,11 +111,29 @@ from there after. Delete the folder for a fresher map. What it does:
   unsigned numbers, so a corner a meter past the edge wraps round and draws
   a sliver across the whole model; the first render had a dozen. Strips are
   clipped to the board and roads kept 15 m inside it. `make test` checks.
-- **The walk** is a loop of twelve stops, the shortest way over the mapped
-  footways through them in order, a footway costing a third of a street.
-  The stops are where his photographs were taken (`STOPS` in the script,
-  by latitude and longitude); their names were checked against what the map
-  names within 120 m of each.
+- **The walks** are five loops (`WALKS` in the script, stops by latitude
+  and longitude), each the shortest way over the mapped footways through its
+  stops in order, a footway costing a third of a street. His own comes
+  first, its twelve stops where his photographs were taken; their names were
+  checked against what the map names within 120 m of each. The other four
+  were added 2026-11-19 at his word (*"we have a few options and let people
+  fly around in a more continuous walk ... about 5 walk variants around the
+  Marina"*): the far end, end to end, Bluewaters, and a short loop.
+- [WARNING] **Paths marked `access` or `foot` private or no are left out of
+  the routing**, and stops snap only to the largest joined-up piece of the
+  network. The map has 739 private paths, mostly hotel grounds and
+  courtyards; routing through them drew walks no one can take. It shortened
+  his own loop from 8.1 to 7.5 km, keeping it on the promenade between the
+  Yacht Club and the moorings. They are still drawn.
+- **Where a footbridge meets the ground only at its ends**, a walk goes to
+  the end and back; the map draws no stairs part way. Bluewaters is out and
+  back over its bridge, with a loop on the island.
+- **The page** has a link per walk over the model, each with its length,
+  which `make test` holds to the model's. Without the script the five are
+  listed one after another and the links jump to them; with it, one is
+  shown and drawn (`choose()` in `walk.js`, `trace()` in `draw.js`). His
+  walk's pins are in the HTML, placed for the poster; the others' are made
+  by the script, since the poster shows only his.
 
 **The photos** are 27 of the 71 he took between 14 and 19 September 2026,
 two or three a stop, chosen from contact sheets; none of the selfies. Made as

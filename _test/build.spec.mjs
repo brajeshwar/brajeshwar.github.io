@@ -284,7 +284,7 @@ test('the South Bank walk keeps to its folder, and its list matches its model', 
   expect(lost).toEqual([]);
 });
 
-test('the Dubai Marina walk keeps to its folder, and its list matches its model', () => {
+test('the Dubai Marina walks keep to their folder, and their lists match the model', () => {
   const dir = '/misc/dubai-marina/';
   const html = read(dir + 'index.html');
   expect(html).not.toContain('/assets/');
@@ -293,9 +293,27 @@ test('the Dubai Marina walk keeps to its folder, and its list matches its model'
   expect(named.length).toBeGreaterThan(2);
   for (const [, file] of named) expect(exists(dir + file), file).toBe(true);
   const city = JSON.parse(read(dir + 'city.json'));
-  const modelled = city.stops.map((s) => s[0]).sort();
-  const listed = [...html.matchAll(/<li id="([^"]+)" data-stop="\d+"/g)].map((m) => m[1]).sort();
-  expect(listed).toEqual(modelled);
+  // Each walk in the model has its section in the list, with the same stops
+  // in the same order, and the length its link gives is the model's own.
+  for (const walk of city.walks) {
+    const section = html.match(
+      new RegExp('<section class="walk" id="walk-' + walk.id + '"[^]*?</section>')
+    );
+    expect(section, walk.id).not.toBeNull();
+    const listed = [...section[0].matchAll(/<li id="([^"]+)" data-stop="\d+"/g)].map((m) => m[1]);
+    expect(listed).toEqual(walk.stops.map((s) => s[0]));
+    let length = 0;
+    for (let i = 3; i < walk.route.length; i += 3)
+      length += Math.hypot(walk.route[i], walk.route[i + 1]) / 10;
+    const link = html.match(
+      new RegExp(
+        '<a href="#walk-' + walk.id + '" data-walk="' + walk.id + '">[^<]*<span>([^<]+)</span>'
+      )
+    );
+    expect(link, walk.id).not.toBeNull();
+    expect(link[1]).toBe((length / 1000).toFixed(1) + '&nbsp;km');
+  }
+  expect((html.match(/<section class="walk"/g) || []).length).toBe(city.walks.length);
   expect(city.blocks.wallColor.length).toBe(city.blocks.parts.length);
   expect(city.blocks.roofColor.length).toBe(city.blocks.parts.length);
   // The reader stores positions as unsigned numbers, so a corner past the
