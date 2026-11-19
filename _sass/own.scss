@@ -345,15 +345,15 @@
   font-size: var(--step--1);
 }
 
-/* ---- Old: what the lines used to hold ----------------------------
-   One tall, thin bar down the right of the whole inventory, marked OLD.
-   Pressed, every line swaps what it holds now for what it used to hold,
-   items and brands, dulled and struck through, sliding in beside labels
+/* ---- Retired: what the lines used to hold ------------------------
+   One tall, thin bar down the right of the whole inventory, marked
+   RETIRED. Pressed, every line swaps what it holds now for what it used
+   to hold, items and brands, grayed and faint, sliding in beside labels
    that stay put. Pressed again, the present comes back. A line with no
    past shows a dash.
 
    The bar is the <label> of a checkbox, so it works without JavaScript.
-   The old lines are plain blocks inside each row, hidden until the box
+   The retired lines are plain blocks inside each row, hidden until the box
    is ticked; they wrap instead of riding a .strip rail, since a rail
    hidden at load has no width to measure and a short shelf needs no
    arrows. The swap is screen-only, so paper always gets the present. */
@@ -367,21 +367,21 @@
     padding-right: 1.5rem;
   }
 
-  .page-own .own__old-bar {
+  .page-own .own__retired-bar {
     width: 1rem;
   }
 }
 
 /* Off the screen but still in the tab order, so the bar is reachable
    from the keyboard and announced as a switch with its label. */
-.page-own .own__old-toggle {
+.page-own .own__retired-toggle {
   position: absolute;
   width: 1px;
   height: 1px;
   opacity: 0;
 }
 
-.page-own .own__old-bar {
+.page-own .own__retired-bar {
   position: absolute;
   inset: var(--space-xl) 0 0 auto;
   width: 1.25rem;
@@ -403,21 +403,21 @@
 
 /* The word rides down the bar as the page scrolls, so it is in view
    wherever the reader is in a long inventory. */
-.page-own .own__old-bar span {
+.page-own .own__retired-bar span {
   position: sticky;
   top: 40vh;
   padding-inline: var(--space-s); /* vertical text: inline runs down the bar */
   writing-mode: vertical-rl;
 }
 
-.page-own .own__old-bar:hover,
-.page-own .own__old-toggle:focus-visible + .own__old-bar,
-.page-own .own__old-toggle:checked + .own__old-bar {
+.page-own .own__retired-bar:hover,
+.page-own .own__retired-toggle:focus-visible + .own__retired-bar,
+.page-own .own__retired-toggle:checked + .own__retired-bar {
   color: var(--text-color);
   opacity: 1;
 }
 
-.page-own .own__old-toggle:focus-visible + .own__old-bar {
+.page-own .own__retired-toggle:focus-visible + .own__retired-bar {
   outline: var(--border-size) solid var(--text-color);
   outline-offset: 2px;
 }
@@ -427,17 +427,17 @@
 }
 
 @media screen {
-  .page-own .own__inventory:has(> .own__old-toggle:checked) .own__line > :not(.own__then) {
+  .page-own .own__inventory:has(> .own__retired-toggle:checked) .own__line > :not(.own__then) {
     display: none;
   }
 
-  .page-own .own__inventory:has(> .own__old-toggle:checked) .own__then {
+  .page-own .own__inventory:has(> .own__retired-toggle:checked) .own__then {
     display: block;
-    animation: own-old-in 240ms ease-out;
+    animation: own-retired-in 240ms ease-out;
   }
 
   .page-own
-    .own__inventory:has(> .own__old-toggle:checked)
+    .own__inventory:has(> .own__retired-toggle:checked)
     .own__line:not(:has(> .own__then))::before {
     content: '\2014';
     color: var(--text-color-low);
@@ -445,44 +445,47 @@
   }
 }
 
-.page-own .own__old-list {
+.page-own .own__retired-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
   margin: 0;
   padding: 0;
   list-style: none;
-  opacity: var(--opacity-low);
 }
 
-.page-own .own__old-list .own__item {
+/* Grayed and faint, logos too: there, but plainly not in use. */
+.page-own .own__then {
+  opacity: var(--opacity-lower);
+  filter: grayscale(1);
+}
+
+.page-own .own__retired-list .own__item {
   width: var(--own-item);
 }
 
-.page-own .own__old-list .own__name {
-  text-decoration: line-through;
-  text-decoration-thickness: from-font;
+.page-own .own__retired-list .own__name {
   color: var(--text-color-low);
 }
 
-/* The slide plays each time the old lines appear, since display: none to
+/* The slide plays each time the retired lines appear, since display: none to
    visible restarts an animation. With Reduce Motion on, it only fades. */
-@keyframes own-old-in {
+@keyframes own-retired-in {
   from {
     opacity: 0;
     transform: translateX(var(--space-l));
   }
 }
 
-@keyframes own-old-fade {
+@keyframes own-retired-fade {
   from {
     opacity: 0;
   }
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .page-own .own__inventory:has(> .own__old-toggle:checked) .own__then {
-    animation-name: own-old-fade;
+  .page-own .own__inventory:has(> .own__retired-toggle:checked) .own__then {
+    animation-name: own-retired-fade;
   }
 }
 
@@ -543,7 +546,7 @@
   .page-own .own__story,
   .page-own .own__pdf,
   .page-own .own__notes,
-  .page-own .own__old-bar,
+  .page-own .own__retired-bar,
   .page-own .strip__nav {
     display: none;
   }
