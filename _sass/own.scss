@@ -300,6 +300,24 @@
   filter: none;
 }
 
+/* An asterisk after a brand points at a note at the foot of the
+   inventory. It is its own link, so it sits tight against the name
+   rather than taking the space that parts one brand from the next. */
+.page-own .own__brands .own__mark {
+  margin-left: 0.1em;
+  align-self: flex-start;
+}
+
+.page-own .own__footnote {
+  margin-top: var(--space-l);
+  font-size: var(--step--2);
+  color: var(--text-color-low);
+}
+
+.page-own .own__footnote + .own__aside {
+  margin-top: var(--space-2xs);
+}
+
 .page-own .own__story {
   margin: calc(-1 * var(--space-s)) 0 var(--space-s);
   color: var(--text-color-low);
@@ -392,6 +410,14 @@
 
   .page-own .own__aside {
     margin: 0.6rem 0 0;
+  }
+
+  .page-own .own__footnote {
+    margin: 0.6rem 0 0;
+  }
+
+  .page-own .own__footnote + .own__aside {
+    margin-top: 0;
   }
 
   .page-own .strip__viewport {
