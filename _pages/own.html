@@ -13,453 +13,456 @@ title_style: vertical
 
 <p class="own__pdf"><a href="/static/pdf/own.pdf">The whole page on one A4 sheet (PDF)</a></p>
 
-<section class="own__section">
-  <h2 class="own__section-title">Wear</h2>
+<div class="own__inventory">
+  <input class="own__old-toggle" type="checkbox" id="own-old">
+  <label class="own__old-bar" for="own-old"><span>Old</span></label>
 
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Shirts</h3>
-    </div>
+  <section class="own__section">
+    <h2 class="own__section-title">Wear</h2>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll shirts left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
-
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/shirt.svg -%}</span>
-            <span class="own__name">Dress shirt</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/casual-shirt.svg -%}</span>
-            <span class="own__name">Casual shirt</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/henley.svg -%}</span>
-            <span class="own__name">Henley</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/tee.svg -%}</span>
-            <span class="own__name">T-shirt</span>
-          </li>
-        </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll shirts right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Shirts</h3>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Bespoke_tailoring">Bespoke</a><a class="own__mark" href="#bespoke" aria-label="Note on bespoke">*</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Muji"><img class="own__logo" src="/static/own/muji.svg" alt="Muji" height="20"></a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Pants</h3>
-    </div>
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll shirts left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll pants left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/shirt.svg -%}</span>
+              <span class="own__name">Dress shirt</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/casual-shirt.svg -%}</span>
+              <span class="own__name">Casual shirt</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/henley.svg -%}</span>
+              <span class="own__name">Henley</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/tee.svg -%}</span>
+              <span class="own__name">T-shirt</span>
+            </li>
+          </ul>
 
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/trousers.svg -%}</span>
-            <span class="own__name">Dress pants</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/jeans.svg -%}</span>
-            <span class="own__name">Denim</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/shorts.svg -%}</span>
-            <span class="own__name">Shorts</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/belt.svg -%}</span>
-            <span class="own__name">Belt</span>
-          </li>
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll shirts right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Bespoke_tailoring">Bespoke</a><a class="own__mark" href="#bespoke" aria-label="Note on bespoke">*</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Muji"><img class="own__logo" src="/static/own/muji.svg" alt="Muji" height="20"></a></li>
         </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll pants right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Bespoke_tailoring">Bespoke</a><a class="own__mark" href="#bespoke" aria-label="Note on bespoke">*</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Levi_Strauss_%26_Co."><img class="own__logo" src="/static/own/levis.svg" alt="Levi’s" height="20"></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Underwear</h3>
     </div>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll underwear left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
-
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/undershirt.svg -%}</span>
-            <span class="own__name">Undershirt</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/briefs.svg -%}</span>
-            <span class="own__name">Briefs</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/socks.svg -%}</span>
-            <span class="own__name">Socks</span>
-          </li>
-        </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll underwear right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Pants</h3>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Jockey_International">Jockey</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Outerwear</h3>
-    </div>
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll pants left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll outerwear left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/trousers.svg -%}</span>
+              <span class="own__name">Dress pants</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/jeans.svg -%}</span>
+              <span class="own__name">Denim</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/shorts.svg -%}</span>
+              <span class="own__name">Shorts</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/belt.svg -%}</span>
+              <span class="own__name">Belt</span>
+            </li>
+          </ul>
 
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/blazer.svg -%}</span>
-            <span class="own__name">Suit jacket</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/jacket.svg -%}</span>
-            <span class="own__name">Casual jacket</span>
-          </li>
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll pants right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Bespoke_tailoring">Bespoke</a><a class="own__mark" href="#bespoke" aria-label="Note on bespoke">*</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Levi_Strauss_%26_Co."><img class="own__logo" src="/static/own/levis.svg" alt="Levi’s" height="20"></a></li>
         </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll outerwear right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Bespoke_tailoring">Bespoke</a><a class="own__mark" href="#bespoke" aria-label="Note on bespoke">*</a></li>
-      </ul>
-      <details class="own__old">
-        <summary aria-label="Old outerwear">Old</summary>
-        <ul class="own__old-list">
-          <li class="own__item">
-            <span class="own__picture">{%- include own/umbrella.svg -%}</span>
-            <span class="own__name">Umbrella</span>
-          </li>
-        </ul>
-      </details>
-    </div>
-  </div>
-
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Footwear</h3>
     </div>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll footwear left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
-
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/sneaker.svg -%}</span>
-            <span class="own__name">Sneaker</span>
-            <span class="own__note">black</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/derby.svg -%}</span>
-            <span class="own__name">Derby</span>
-            <span class="own__note">dark brown</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/slides.svg -%}</span>
-            <span class="own__name">Slides</span>
-            <span class="own__note">oiled leather, black</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/clogs.svg -%}</span>
-            <span class="own__name">Clogs</span>
-            <span class="own__note">the beach, and lazy days</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/flip-flops.svg -%}</span>
-            <span class="own__name">Flip-flops</span>
-          </li>
-        </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll footwear right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Underwear</h3>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/On_(company)"><img class="own__logo" src="/static/own/on.svg" alt="On" height="20"></a></li>
-        <li><a href="https://bridlen.com">Bridlen</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Birkenstock"><img class="own__logo" src="/static/own/birkenstock.svg" alt="Birkenstock" height="20"></a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Crocs"><img class="own__logo" src="/static/own/crocs.svg" alt="Crocs" height="20"></a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Bata_Corporation"><img class="own__logo" src="/static/own/bata.svg" alt="Bata" height="20"></a></li>
-      </ul>
-    </div>
-  </div>
-</section>
 
-<section class="own__section">
-  <h2 class="own__section-title">Carry</h2>
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll underwear left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
 
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Everyday</h3>
-    </div>
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/undershirt.svg -%}</span>
+              <span class="own__name">Undershirt</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/briefs.svg -%}</span>
+              <span class="own__name">Briefs</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/socks.svg -%}</span>
+              <span class="own__name">Socks</span>
+            </li>
+          </ul>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll everyday left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
-
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/glasses.svg -%}</span>
-            <span class="own__name">Glasses</span>
-            <span class="own__note">prescription</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/wallet.svg -%}</span>
-            <span class="own__name">Wallet</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/keychain.svg -%}</span>
-            <span class="own__name">Keychain</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/airtag.svg -%}</span>
-            <span class="own__name">AirTag</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/edc-pouch.svg -%}</span>
-            <span class="own__name">EDC pouch</span>
-          </li>
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll underwear right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Jockey_International">Jockey</a></li>
         </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll everyday right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Apple_Inc."><img class="own__logo" src="/static/own/apple.svg" alt="Apple" height="20"></a></li>
-        <li><a href="https://www.orbitkey.com">Orbitkey</a></li>
-        <li><a href="https://bellroy.com">Bellroy</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Bags</h3>
     </div>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll bags left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
-
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/briefcase.svg -%}</span>
-            <span class="own__name">Briefcase</span>
-            <span class="own__note">leather, work</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/backpack.svg -%}</span>
-            <span class="own__name">Backpack</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/sling.svg -%}</span>
-            <span class="own__name">Sling</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/tech-pouch.svg -%}</span>
-            <span class="own__name">Tech pouch</span>
-          </li>
-        </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll bags right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Outerwear</h3>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Peak_Design"><img class="own__logo" src="/static/own/peak-design.svg" alt="Peak Design" height="20"></a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Tumi_Inc."><img class="own__logo" src="/static/own/tumi.png" alt="Tumi" height="20"></a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Travel</h3>
-    </div>
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll outerwear left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll travel left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/blazer.svg -%}</span>
+              <span class="own__name">Suit jacket</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/jacket.svg -%}</span>
+              <span class="own__name">Casual jacket</span>
+            </li>
+          </ul>
 
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/check-in.svg -%}</span>
-            <span class="own__name">Luggage</span>
-            <span class="own__note">check-in</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/carry-on.svg -%}</span>
-            <span class="own__name">Luggage</span>
-            <span class="own__note">carry-on</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/cube.svg -%}</span>
-            <span class="own__name">Packing cubes</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/pouch.svg -%}</span>
-            <span class="own__name">Dopp kit</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/passport.svg -%}</span>
-            <span class="own__name">Passport holder</span>
-          </li>
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll outerwear right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Bespoke_tailoring">Bespoke</a><a class="own__mark" href="#bespoke" aria-label="Note on bespoke">*</a></li>
         </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll travel right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
+        <div class="own__then">
+          <ul class="own__old-list">
+            <li class="own__item">
+              <span class="own__picture">{%- include own/umbrella.svg -%}</span>
+              <span class="own__name">Umbrella</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Peak_Design"><img class="own__logo" src="/static/own/peak-design.svg" alt="Peak Design" height="20"></a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Samsonite"><img class="own__logo" src="/static/own/samsonite.svg" alt="Samsonite" height="20"></a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="own__section">
-  <h2 class="own__section-title">Keep</h2>
-
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Devices</h3>
-      <p class="own__label-link"><a href="/devices/">the lineage since 1999</a></p>
     </div>
 
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll devices left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
-
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/laptop.svg -%}</span>
-            <span class="own__name">MacBook</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/phone.svg -%}</span>
-            <span class="own__name">iPhone</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/watch.svg -%}</span>
-            <span class="own__name">Watch</span>
-          </li>
-        </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll devices right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Footwear</h3>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Apple_Inc."><img class="own__logo" src="/static/own/apple.svg" alt="Apple" height="20"></a></li>
-      </ul>
-      <details class="own__old">
-        <summary aria-label="Old devices">Old</summary>
-        <ul class="own__old-list">
-          <li class="own__item">
-            <span class="own__picture">{%- include own/tablet.svg -%}</span>
-            <span class="own__name">iPad</span>
-          </li>
-          <li class="own__item">
-            <span class="own__picture">{%- include own/e-reader.svg -%}</span>
-            <span class="own__name">E-reader</span>
-          </li>
+
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll footwear left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/sneaker.svg -%}</span>
+              <span class="own__name">Sneaker</span>
+              <span class="own__note">black</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/derby.svg -%}</span>
+              <span class="own__name">Derby</span>
+              <span class="own__note">dark brown</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/slides.svg -%}</span>
+              <span class="own__name">Slides</span>
+              <span class="own__note">oiled leather, black</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/clogs.svg -%}</span>
+              <span class="own__name">Clogs</span>
+              <span class="own__note">the beach, and lazy days</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/flip-flops.svg -%}</span>
+              <span class="own__name">Flip-flops</span>
+            </li>
+          </ul>
+
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll footwear right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/On_(company)"><img class="own__logo" src="/static/own/on.svg" alt="On" height="20"></a></li>
+          <li><a href="https://bridlen.com">Bridlen</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Birkenstock"><img class="own__logo" src="/static/own/birkenstock.svg" alt="Birkenstock" height="20"></a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Crocs"><img class="own__logo" src="/static/own/crocs.svg" alt="Crocs" height="20"></a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Bata_Corporation"><img class="own__logo" src="/static/own/bata.svg" alt="Bata" height="20"></a></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="own__section">
+    <h2 class="own__section-title">Carry</h2>
+
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Everyday</h3>
+      </div>
+
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll everyday left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/glasses.svg -%}</span>
+              <span class="own__name">Glasses</span>
+              <span class="own__note">prescription</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/wallet.svg -%}</span>
+              <span class="own__name">Wallet</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/keychain.svg -%}</span>
+              <span class="own__name">Keychain</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/airtag.svg -%}</span>
+              <span class="own__name">AirTag</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/edc-pouch.svg -%}</span>
+              <span class="own__name">EDC pouch</span>
+            </li>
+          </ul>
+
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll everyday right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Apple_Inc."><img class="own__logo" src="/static/own/apple.svg" alt="Apple" height="20"></a></li>
+          <li><a href="https://www.orbitkey.com">Orbitkey</a></li>
+          <li><a href="https://bellroy.com">Bellroy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Bags</h3>
+      </div>
+
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll bags left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/briefcase.svg -%}</span>
+              <span class="own__name">Briefcase</span>
+              <span class="own__note">leather, work</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/backpack.svg -%}</span>
+              <span class="own__name">Backpack</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/sling.svg -%}</span>
+              <span class="own__name">Sling</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/tech-pouch.svg -%}</span>
+              <span class="own__name">Tech pouch</span>
+            </li>
+          </ul>
+
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll bags right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Peak_Design"><img class="own__logo" src="/static/own/peak-design.svg" alt="Peak Design" height="20"></a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Tumi_Inc."><img class="own__logo" src="/static/own/tumi.png" alt="Tumi" height="20"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Travel</h3>
+      </div>
+
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll travel left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/check-in.svg -%}</span>
+              <span class="own__name">Luggage</span>
+              <span class="own__note">check-in</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/carry-on.svg -%}</span>
+              <span class="own__name">Luggage</span>
+              <span class="own__note">carry-on</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/cube.svg -%}</span>
+              <span class="own__name">Packing cubes</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/pouch.svg -%}</span>
+              <span class="own__name">Dopp kit</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/passport.svg -%}</span>
+              <span class="own__name">Passport holder</span>
+            </li>
+          </ul>
+
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll travel right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Peak_Design"><img class="own__logo" src="/static/own/peak-design.svg" alt="Peak Design" height="20"></a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Samsonite"><img class="own__logo" src="/static/own/samsonite.svg" alt="Samsonite" height="20"></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="own__section">
+    <h2 class="own__section-title">Keep</h2>
+
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Devices</h3>
+        <p class="own__label-link"><a href="/devices/">the lineage since 1999</a></p>
+      </div>
+
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll devices left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/laptop.svg -%}</span>
+              <span class="own__name">MacBook</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/phone.svg -%}</span>
+              <span class="own__name">iPhone</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/watch.svg -%}</span>
+              <span class="own__name">Watch</span>
+            </li>
+          </ul>
+
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll devices right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
         <ul class="own__brands">
           <li><a href="https://en.wikipedia.org/wiki/Apple_Inc."><img class="own__logo" src="/static/own/apple.svg" alt="Apple" height="20"></a></li>
         </ul>
-      </details>
-    </div>
-  </div>
-
-  <div class="own__row">
-    <div class="own__labelbox">
-      <h3 class="own__label">Desk</h3>
-    </div>
-
-    <div class="own__line">
-      <div class="strip__viewport">
-        <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll desk left" hidden>
-          <span aria-hidden="true">&lsaquo;</span>
-        </button>
-
-        <ul class="strip own__rail">
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/keyboard.svg -%}</span>
-            <span class="own__name">Keyboard</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/mouse.svg -%}</span>
-            <span class="own__name">Mouse</span>
-          </li>
-          <li class="strip__item own__item">
-            <span class="own__picture">{%- include own/monitor.svg -%}</span>
-            <span class="own__name">Monitors</span>
-          </li>
-        </ul>
-
-        <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll desk right" hidden>
-          <span aria-hidden="true">&rsaquo;</span>
-        </button>
+        <div class="own__then">
+          <ul class="own__old-list">
+            <li class="own__item">
+              <span class="own__picture">{%- include own/tablet.svg -%}</span>
+              <span class="own__name">iPad</span>
+            </li>
+            <li class="own__item">
+              <span class="own__picture">{%- include own/e-reader.svg -%}</span>
+              <span class="own__name">E-reader</span>
+            </li>
+          </ul>
+          <ul class="own__brands">
+            <li><a href="https://en.wikipedia.org/wiki/Apple_Inc."><img class="own__logo" src="/static/own/apple.svg" alt="Apple" height="20"></a></li>
+          </ul>
+        </div>
       </div>
-      <ul class="own__brands">
-        <li><a href="https://en.wikipedia.org/wiki/Apple_Inc."><img class="own__logo" src="/static/own/apple.svg" alt="Apple" height="20"></a></li>
-      </ul>
     </div>
-  </div>
-</section>
+
+    <div class="own__row">
+      <div class="own__labelbox">
+        <h3 class="own__label">Desk</h3>
+      </div>
+
+      <div class="own__line">
+        <div class="strip__viewport">
+          <button class="strip__nav strip__nav--prev" type="button" aria-label="Scroll desk left" hidden>
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+
+          <ul class="strip own__rail">
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/keyboard.svg -%}</span>
+              <span class="own__name">Keyboard</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/mouse.svg -%}</span>
+              <span class="own__name">Mouse</span>
+            </li>
+            <li class="strip__item own__item">
+              <span class="own__picture">{%- include own/monitor.svg -%}</span>
+              <span class="own__name">Monitors</span>
+            </li>
+          </ul>
+
+          <button class="strip__nav strip__nav--next" type="button" aria-label="Scroll desk right" hidden>
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <ul class="own__brands">
+          <li><a href="https://en.wikipedia.org/wiki/Apple_Inc."><img class="own__logo" src="/static/own/apple.svg" alt="Apple" height="20"></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
 
 <p class="own__footnote" id="bespoke">* India is an economical place to go bespoke.</p>
 

@@ -335,40 +335,43 @@
   font-size: var(--step--1);
 }
 
-/* ---- Old: what a line used to hold ------------------------------
-   A row that has a past carries a tall, thin bar down its right edge,
-   marked OLD. Open, the bar swaps the line for what used to be there,
-   items and brands, dulled and struck through, sliding in beside a
-   label that stays put. Open again, and the present comes back.
+/* ---- Old: what the lines used to hold ----------------------------
+   One tall, thin bar down the right of the whole inventory, marked OLD.
+   Pressed, every line swaps what it holds now for what it used to hold,
+   items and brands, dulled and struck through, sliding in beside labels
+   that stay put. Pressed again, the present comes back. A line with no
+   past shows a dash.
 
-   A <details> per row, so it works without JavaScript and stays shut on
-   the A4 sheet. The bar is the <summary>, lifted out of the flow onto
-   the line's right edge, so a closed <details> takes no room at all.
-   The old items wrap instead of riding a .strip rail: a rail inside a
-   closed <details> has no width to measure, and a short shelf needs no
-   arrows. */
-.page-own .own__line:has(> .own__old) {
+   The bar is the <label> of a checkbox, so it works without JavaScript.
+   The old lines are plain blocks inside each row, hidden until the box
+   is ticked; they wrap instead of riding a .strip rail, since a rail
+   hidden at load has no width to measure and a short shelf needs no
+   arrows. The swap is screen-only, so paper always gets the present. */
+.page-own .own__inventory {
   position: relative;
   padding-right: 2rem;
 }
 
-.page-own .own__line:has(> .own__old[open]) > :not(.own__old) {
-  display: none;
+/* Off the screen but still in the tab order, so the bar is reachable
+   from the keyboard and announced as a switch with its label. */
+.page-own .own__old-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
-.page-own .own__old > summary {
+.page-own .own__old-bar {
   position: absolute;
-  inset: 0 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  inset: var(--space-xl) 0 0 auto;
   width: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 
   border-radius: var(--border-radius);
   background-color: var(--own-tile);
-  list-style: none;
 
-  writing-mode: vertical-rl;
   font-size: var(--step--2);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -378,15 +381,48 @@
   transition: opacity 120ms ease-out;
 }
 
-.page-own .own__old > summary::-webkit-details-marker {
+/* The word rides down the bar as the page scrolls, so it is in view
+   wherever the reader is in a long inventory. */
+.page-own .own__old-bar span {
+  position: sticky;
+  top: 40vh;
+  padding-block: var(--space-s);
+  writing-mode: vertical-rl;
+}
+
+.page-own .own__old-bar:hover,
+.page-own .own__old-toggle:focus-visible + .own__old-bar,
+.page-own .own__old-toggle:checked + .own__old-bar {
+  color: var(--text-color);
+  opacity: 1;
+}
+
+.page-own .own__old-toggle:focus-visible + .own__old-bar {
+  outline: var(--border-size) solid var(--text-color);
+  outline-offset: 2px;
+}
+
+.page-own .own__then {
   display: none;
 }
 
-.page-own .own__old > summary:hover,
-.page-own .own__old > summary:focus-visible,
-.page-own .own__old[open] > summary {
-  color: var(--text-color);
-  opacity: 1;
+@media screen {
+  .page-own .own__inventory:has(> .own__old-toggle:checked) .own__line > :not(.own__then) {
+    display: none;
+  }
+
+  .page-own .own__inventory:has(> .own__old-toggle:checked) .own__then {
+    display: block;
+    animation: own-old-in 240ms ease-out;
+  }
+
+  .page-own
+    .own__inventory:has(> .own__old-toggle:checked)
+    .own__line:not(:has(> .own__then))::before {
+    content: '\2014';
+    color: var(--text-color-low);
+    opacity: var(--opacity-low);
+  }
 }
 
 .page-own .own__old-list {
@@ -409,12 +445,8 @@
   color: var(--text-color-low);
 }
 
-/* The slide plays whenever the old line appears, since display: none to
+/* The slide plays each time the old lines appear, since display: none to
    visible restarts an animation. With Reduce Motion on, it only fades. */
-.page-own .own__old[open] > :not(summary) {
-  animation: own-old-in 240ms ease-out;
-}
-
 @keyframes own-old-in {
   from {
     opacity: 0;
@@ -428,8 +460,8 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .page-own .own__old[open] > :not(summary) {
+@media screen and (prefers-reduced-motion: reduce) {
+  .page-own .own__inventory:has(> .own__old-toggle:checked) .own__then {
     animation-name: own-old-fade;
   }
 }
@@ -491,7 +523,7 @@
   .page-own .own__story,
   .page-own .own__pdf,
   .page-own .own__notes,
-  .page-own .own__old,
+  .page-own .own__old-bar,
   .page-own .strip__nav {
     display: none;
   }
@@ -507,6 +539,10 @@
 
   .page-own .own__lede {
     margin-bottom: 0.6rem;
+  }
+
+  .page-own .own__inventory {
+    padding-right: 0;
   }
 
   .page-own .own__aside {
