@@ -382,7 +382,10 @@ test('the jj lesson steps to its end and back, with no errors', async ({ page })
   const last = Number((await count.textContent()).split('/')[1]);
   for (let i = 1; i < last; i++) await page.keyboard.press('ArrowRight');
   await expect(count).toHaveText(`${last} / ${last}`);
-  await expect(page.getByRole('button', { name: 'Start again' })).toBeVisible();
+  // The end is the end: Next stops there, and so do the keys.
+  await expect(page.locator('#next')).toBeDisabled();
+  await page.keyboard.press('ArrowRight');
+  await expect(count).toHaveText(`${last} / ${last}`);
   for (let i = 1; i < last; i++) await page.keyboard.press('ArrowLeft');
   await expect(count).toHaveText(`1 / ${last}`);
   await expect(page.locator('#back')).toBeDisabled();

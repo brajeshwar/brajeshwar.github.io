@@ -62,7 +62,8 @@
     document.querySelector('.lesson').scrollTop = 0;
 
     find('back').disabled = current === 0;
-    find('next').textContent = current === steps.length - 1 ? 'Start again' : 'Next';
+    // The lesson stops at its last step; the progress bar is the way back to the first.
+    find('next').disabled = current === steps.length - 1;
     [...find('progress').children].forEach((item, i) => {
       item.firstChild.classList.toggle('done', i < current);
       item.firstChild.toggleAttribute('aria-current', i === current);
@@ -73,7 +74,7 @@
   }
 
   function forward() {
-    showStep(current === steps.length - 1 ? 0 : current + 1);
+    if (current < steps.length - 1) showStep(current + 1);
   }
 
   function buildProgress() {
