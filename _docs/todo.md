@@ -233,6 +233,9 @@ Originally absorbed from the 2027 planning braindump.
 - [ ] **Redirect** `docs.brajeshwar.com` → <https://archive.oinam.com> via Cloudflare Workers.
 - [ ] **Move Jekyll redirects** to Cloudflare / plain HTML — or drop them and give a good explanation and next step in the 404 page.
 - [ ] **Migrate `cdn.oinam.com`** remnants to `brajeshwar.com`.
+- [ ] **Hosting: GitHub Pages stays, for now** *(decided 2026-11-20)*. Serving from Cloudflare,
+      and perhaps leaving Jekyll for a platform Cloudflare builds end to end, are for another
+      day. The weighing and the way to move are in [`hosting.md`](hosting.md).
 - [ ] **YouTube videos** — move to `brajeshwar.com`, or embed and ignore, or self-host (PeerTube for Oinam or similar).
 
 ## CSS architecture (decided 2026-07-19 — see [`styles.md`](styles.md) §5)

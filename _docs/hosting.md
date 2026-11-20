@@ -358,6 +358,47 @@ Things to keep straight:
   not being retired and existing projects stay supported, but it is in maintenance and new
   features land on Workers first. Fine for a backup; revisit if it ever becomes primary.
 
+## Decision: GitHub Pages stays the host, for now (2026-11-20)
+
+Weighed: letting Cloudflare serve the site itself, with GitHub kept only for the code. Since
+Cloudflare already runs the DNS and the CDN, and already builds the site as a standby, the
+move would mean Cloudflare serving the files instead of fetching them from GitHub Pages.
+
+What the move would gain:
+
+- **Real redirects and headers.** A `_redirects` file gives true 301s in place of the
+  meta-refresh stubs in `_redirect/`, and a `_headers` file puts caching and security headers
+  under our control. Today GitHub decides the headers (see the cache table above).
+- **One hop fewer.** The edge serves the files instead of fetching them from the origin, and
+  each deploy replaces the cache at once.
+- **A preview URL** for every branch or pull request.
+- **Room.** The build is about 5,850 files and 447 MB, the Pagefind index 1,585 of them
+  (measured 2026-11-20). That is far under Cloudflare's 20,000-file limit and well within GitHub
+  Pages' 1 GB guideline, but Cloudflare sets no bandwidth guideline to watch.
+
+What it would cost:
+
+- **Cloudflare's own build is the weak link.** Its image is why Ruby is pinned to 3.3.5 (see
+  Versions above), it has no schedule, and the daily rebuild is what publishes future-dated
+  posts. It would also deploy without the test suite in front of it.
+- **One vendor for everything.** DNS, CDN, and hosting would all be Cloudflare's. GitHub Pages
+  is the independent fallback today.
+- **Pages is in maintenance.** Cloudflare steers new projects to Workers static assets, so a
+  move to Pages now could mean another move later.
+- **The gain is modest.** The site is small, works, and already caches well.
+
+The call: stay. The setup works, and none of the gains is needed yet.
+
+**If it is revisited, the way to move** is to keep the build in GitHub Actions, with its test
+gate, its daily cron, and its Ruby version, and change only the last step: upload `_site` to
+Workers static assets with `wrangler` in place of `deploy-pages`. Cloudflare's own build
+would then retire, and GitHub Pages could stay switched on as the fallback, a DNS change away.
+
+**A larger change may come first.** He may move off Jekyll altogether, to something Cloudflare
+builds and serves end to end, with the content kept as it is (Markdown, data files, and
+images) and the HTML made by the platform. Nothing is chosen. When that day comes, it carries
+the same rules as now: every URL kept (guardrail 2), and the site whole without JavaScript.
+
 ## Guardrail: don't publish dev files (fixed 2026-07-05)
 
 _config.yml `exclude:` replaces Jekyll's default excludes, so it must re-list the important
