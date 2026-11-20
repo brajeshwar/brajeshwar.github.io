@@ -13,33 +13,10 @@ Re-read the guardrails below before any commit-worthy change.
 
 ## /odo
 
-- Queue: `~/_/Oinam/1-Projects/devCommands/brajeshwar.com.md`
-- Log:   `~/_/Oinam/1-Projects/devLogs/brajeshwar.com.md`
-
-[WARNING] **These two lines are the FINAL TRUTH about which files `/odo` works** — not the basename
-default the command falls back to, and not anything left in this repo. If they ever disagree,
-these win.
-
-### The work queue — moved to the vault 2026-08-10
-
-[WARNING] **`CLAUDE.local.md` and `CLAUDE.local.log.md` are GONE from this repo.** The queue and its log
-moved out to Brajeshwar's Obsidian vault so one command serves every project.
-
-**`/odo` is now GLOBAL** — `~/.claude/commands/odo.md` — and the full mechanics live there, so
-they load when the command runs instead of every session. This reverses the 2026-08-08 *"Keep it
-here for now"* call and the project-scoped rule that stood here until 2026-08-10; the
-project-local `.claude/commands/odo.md` was deleted, since a project command shadows the global
-one. Do not recreate it.
-
-The rules that matter here (the rest are in the global command): work **TOP-DOWN**, one item at a
-time, finished — built, verified, committed — before the next; **never push** because a queue item
-is done (guardrail 7 is unchanged); `WIP` at the beginning of a line means leave it alone, and it
-cascades to anything nested beneath it; never reorder, reword or delete his lines.
-
-`.gitignore` and `_config.yml`'s `exclude:` still name `CLAUDE.local.md` / `CLAUDE.local.log.md`.
-Leave both in place — belt and braces if the files ever reappear. The reason both were needed:
-`CLAUDE.local.md` was gitignored and still rendering to `_site/CLAUDE.local/`, because keeping a
-file out of the repo and keeping it out of the build are two separate switches.
+The work queue follows the global `~/.claude/CLAUDE.md`; nothing about it lives here.
+`.gitignore` and `_config.yml`'s `exclude:` still name `CLAUDE.local.md` and
+`CLAUDE.local.log.md`, where the queue used to be. Leave both: keeping a file out of the repo
+and keeping it out of the build are two separate switches.
 
 ## What this site is
 A Jekyll site (kramdown) with **1,468 post files (2001–2026)** — 1,457 publish, since 11 are
@@ -156,8 +133,7 @@ for a stranger who will read it.
 - **Nothing private.** No personal details (his or anyone's), no paths from his machine
   beyond the repo, no account or device IDs, no secrets, and nothing about other projects or
   his private folders. A command that needs a local path says `<cache-folder>`, not the
-  path. The `/odo` block above is the one exception: it names where his queue lives, and
-  nothing of what is in it.
+  path.
 - **Docs record decisions, not sessions.** Say what is true and why. A chat is not a
   changelog: quote him only where the quote settles a decision, as above. Never fix a
   quote's spelling; pick a line that reads well, or say it in your own words.
