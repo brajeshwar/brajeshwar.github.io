@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>jj in 3D | Brajeshwar</title>
+    <meta
+      name="description"
+      content="Jujutsu, the version control system, one command at a time: a small repository drawn in 3D through 24 steps, with how Git does each one."
+    />
+    <link rel="canonical" href="https://brajeshwar.com/misc/jj/" />
+    <script data-cfasync="false">
+// Day or night, settled before the page paints. data-cfasync keeps Cloudflare's
+// Rocket Loader from holding it back until after the page has painted. The theme
+// is the one chosen on the page for this visit, or ?theme= in the address, or
+// else the reader's own clock: dark from seven in the evening to six in the
+// morning, as on the other pages in /misc/.
+(function(){var d=document.documentElement,h=new Date().getHours(),t=h>=19||h<6?'dark':'light',q=/[?&]theme=(light|dark)/.exec(location.search);try{t=sessionStorage.getItem('jj-theme')||t}catch(e){}if(q)t=q[1];d.classList.add('js');d.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t})();
+    </script>
+    <style>
+/* A one-off, on its own (see _docs/misc.md): nothing here loads the site's
+   stylesheet or scripts. Unlike the site, it is in color, because color
+   carries meaning in the picture. */
+/* Colors. The canvas reads these too, so they stay plain six-digit hex. */
+:root {
+  --bg: #0b0e14;
+  --bg-glow: #18213a;
+  --ink: #e7eaf2;
+  --ink-dim: #8a93a8;
+  --line: #48526a;
+  --panel: rgba(17, 22, 34, 0.84);
+  --panel-line: #263046;
+  --terminal: #080a10;
+  --wc: #ffb84d;
+  --commit: #5ab4ff;
+  --immutable: #8590a8;
+  --conflict: #ff5f5f;
+  --chg: #e58dff;
+  --cid: #6fa8ff;
+  --ok: #6fd68a;
+  --bm: #58d1c9;
+  --sheet: #7aa2ff;
+  --on-orb: #1a1304;
+  --file-app: #c3a6ff;
+  --file-style: #ff8fc7;
+  --file-readme: #5fe3b5;
+
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --bg: #f4f1e8;
+    --bg-glow: #fffdf6;
+    --ink: #1c2230;
+    --ink-dim: #687186;
+    --line: #aab1c0;
+    --panel: rgba(255, 253, 247, 0.9);
+    --panel-line: #d8d2c2;
+    --terminal: #1b2030;
+    --wc: #f0a020;
+    --commit: #3d9be6;
+    --immutable: #8a93a6;
+    --conflict: #e04848;
+    --chg: #a43ccb;
+    --cid: #2f62d9;
+    --ok: #1f9d55;
+    --bm: #0e8f87;
+    --sheet: #3b6fd9;
+    --on-orb: #241903;
+    --file-app: #8e6be0;
+    --file-style: #e0569a;
+    --file-readme: #17a886;
+    color-scheme: light;
+  }
+}
+
+:root[data-theme='light'] {
+  --bg: #f4f1e8;
+  --bg-glow: #fffdf6;
+  --ink: #1c2230;
+  --ink-dim: #687186;
+  --line: #aab1c0;
+  --panel: rgba(255, 253, 247, 0.9);
+  --panel-line: #d8d2c2;
+  --terminal: #1b2030;
+  --wc: #f0a020;
+  --commit: #3d9be6;
+  --immutable: #8a93a6;
+  --conflict: #e04848;
+  --chg: #a43ccb;
+  --cid: #2f62d9;
+  --ok: #1f9d55;
+  --bm: #0e8f87;
+  --sheet: #3b6fd9;
+  --on-orb: #241903;
+  --file-app: #8e6be0;
+  --file-style: #e0569a;
+  --file-readme: #17a886;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: radial-gradient(120% 90% at 68% 38%, var(--bg-glow), var(--bg) 62%);
+  color: var(--ink);
+  font: 16px/1.55 var(--sans);
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+
+#stage:active {
+  cursor: grabbing;
+}
+
+code,
+.terminal {
+  font-family: var(--mono);
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.08em 0.32em;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--ink) 9%, transparent);
+}
+
+/* The text panel: a column on wide screens, a sheet along the bottom on narrow ones. */
+.panel {
+  position: fixed;
+  inset: 20px auto 20px 20px;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid var(--panel-line);
+  border-radius: 16px;
+  background: var(--panel);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.masthead p {
+  margin: 0;
+}
+
+.brand {
+  font: 700 15px/1.2 var(--mono);
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  color: var(--ink-dim);
+  font-size: 13px;
+}
+
+/* The lesson scrolls by itself when it is long, so the controls below it never move. */
+.lesson {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* When the panel is short, the terminal gives up height first and scrolls inside itself,
+   so the Git comparison under it stays in view. */
+.lesson > * {
+  flex-shrink: 0;
+}
+
+.lesson > .terminal {
+  flex-shrink: 1;
+  min-height: 62px;
+}
+
+.chapter {
+  margin: 0 0 6px;
+  color: var(--wc);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.body {
+  font-size: 15.5px;
+}
+
+.body ul {
+  margin: 0 0 10px;
+  padding-left: 1.15em;
+}
+
+.body li {
+  margin-bottom: 4px;
+}
+
+.terminal {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  overflow: auto;
+  border-radius: 10px;
+  background: var(--terminal);
+  color: #c5cbd9;
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+
+/* Long lines wrap, indented under their first character, as a narrow terminal would show. */
+.terminal div {
+  padding-left: 2ch;
+  text-indent: -2ch;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* The terminal stays dark in both themes, so its colors do not follow the page's. */
+.terminal .prompt {
+  color: #6b7488;
+}
+
+.terminal .typed {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.terminal .chg {
+  color: #8f7a99;
+}
+
+.terminal .chg b {
+  color: #e58dff;
+}
+
+.terminal .cid {
+  color: #6c7a96;
+}
+
+.terminal .cid b {
+  color: #6fa8ff;
+}
+
+.terminal .bm {
+  color: #58d1c9;
+}
+
+.terminal .ok {
+  color: #6fd68a;
+}
+
+.terminal .bad {
+  color: #ff6b6b;
+}
+
+.terminal .dim {
+  color: #7c8598;
+}
+
+/* The Git comparison: set apart from the jj terminal, and quieter than it. */
+.git {
+  margin-top: 14px;
+  padding: 11px 14px 12px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+}
+
+.git p {
+  margin: 0;
+}
+
+.git-label {
+  color: var(--ink-dim);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.git-commands {
+  margin: 6px 0;
+  font: 600 12px/1.6 var(--mono);
+  overflow-wrap: anywhere;
+}
+
+.git-commands:empty {
+  display: none;
+}
+
+.git-commands .prompt,
+.git-commands .none {
+  color: var(--ink-dim);
+}
+
+.git-commands .none {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.git-picture {
+  display: block;
+  width: 100%;
+  margin: 8px 0 10px;
+}
+
+.git-note {
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.body a {
+  color: var(--cid);
+}
+
+.body .chg {
+  color: var(--chg);
+  font-weight: 600;
+}
+
+.body .cid {
+  color: var(--cid);
+  font-weight: 600;
+}
+
+/* Controls */
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons button,
+.quiet {
+  padding: 8px 16px;
+  border: 1px solid var(--panel-line);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.buttons button:hover:not(:disabled),
+.quiet:hover {
+  border-color: var(--ink-dim);
+}
+
+.buttons button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.buttons .primary {
+  min-width: 108px;
+  border-color: var(--wc);
+  background: var(--wc);
+  color: var(--on-orb);
+}
+
+.buttons .primary:hover {
+  filter: brightness(1.08);
+}
+
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--commit);
+  outline-offset: 2px;
+}
+
+.count {
+  margin-left: auto;
+  color: var(--ink-dim);
+  font: 13px var(--mono);
+}
+
+/* One segment per step; a wider gap where a new chapter starts. */
+.progress {
+  display: flex;
+  gap: 3px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.progress li {
+  flex: 1;
+}
+
+.progress .opens-chapter {
+  margin-left: 6px;
+}
+
+.progress button {
+  display: block;
+  width: 100%;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background: linear-gradient(var(--line), var(--line)) center / 100% 4px no-repeat;
+  border-radius: 2px;
+  opacity: 0.55;
+}
+
+.progress button.done {
+  background-image: linear-gradient(var(--ink-dim), var(--ink-dim));
+  opacity: 1;
+}
+
+.progress button[aria-current] {
+  background-image: linear-gradient(var(--wc), var(--wc));
+  background-size: 100% 8px;
+  opacity: 1;
+}
+
+.progress button:hover {
+  opacity: 1;
+}
+
+/* The theme switch sits top right. The key to the shapes runs along the bottom of a wide
+   screen, and folds into a menu under the switch on a narrow one. */
+.corner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.quiet {
+  padding: 5px 13px;
+  background: var(--panel);
+  font-size: 13px;
+}
+
+.key {
+  position: fixed;
+  left: 460px;
+  right: 20px;
+  bottom: 16px;
+  color: var(--ink-dim);
+  text-align: center;
+}
+
+.key summary {
+  display: none;
+}
+
+.key ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12.5px;
+}
+
+.key li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.key .hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.key i {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  font: 700 10px/1 var(--mono);
+  color: var(--on-orb);
+}
+
+.key .orb {
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #ffffff, var(--commit) 46%);
+}
+
+.key .orb.wc {
+  background: radial-gradient(circle at 34% 30%, #ffffff, var(--wc) 46%);
+}
+
+.key .orb.conflict {
+  background: radial-gradient(circle at 34% 30%, #ffffff, var(--conflict) 46%);
+}
+
+.key .gem {
+  width: 13px;
+  height: 13px;
+  margin: 0 1.5px;
+  background: var(--immutable);
+  transform: rotate(45deg);
+}
+
+.key .shell {
+  border: 1.5px dashed var(--ink-dim);
+  border-radius: 50%;
+}
+
+.key .block {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.key .block.app {
+  background: var(--file-app);
+}
+
+.key .block.style {
+  background: var(--file-style);
+}
+
+.key .block.readme {
+  background: var(--file-readme);
+}
+
+.key .tag {
+  height: 11px;
+  border: 1px solid var(--bm);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bm) 18%, transparent);
+}
+
+@media (max-width: 899px) {
+  .panel {
+    inset: auto 0 0 0;
+    width: auto;
+    max-height: 47vh;
+    gap: 12px;
+    padding: 16px 16px max(16px, env(safe-area-inset-bottom));
+    border-width: 1px 0 0;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .masthead {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .body {
+    font-size: 14.5px;
+  }
+
+  .terminal {
+    font-size: 10.5px;
+  }
+
+  .corner {
+    top: 10px;
+    right: 12px;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  .key {
+    position: static;
+    max-width: 230px;
+    padding: 6px 12px;
+    border: 1px solid var(--panel-line);
+    border-radius: 12px;
+    background: var(--panel);
+    color: var(--ink);
+    text-align: left;
+  }
+
+  .key summary {
+    display: list-item;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .key ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+
+  .key li {
+    flex-wrap: wrap;
+  }
+
+  .key .hint {
+    display: none;
+  }
+}
+
+/* With JavaScript the page is the stage and its panel, and nothing scrolls.
+   Without it, the lesson is one long page of text under a picture of the
+   model, which scripts/jj-lesson.mjs writes from lessons.js. */
+:root:not(.js) #stage,
+:root:not(.js) .panel,
+:root:not(.js) .corner,
+.js .still {
+  display: none;
+}
+
+.js,
+.js body {
+  height: 100%;
+}
+
+.js body {
+  overflow: hidden;
+}
+
+.still {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.still > header p {
+  margin: 0 0 20px;
+  color: var(--ink-dim);
+}
+
+.still figure {
+  margin: 0 0 32px;
+}
+
+.still img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--panel-line);
+  border-radius: 12px;
+}
+
+.still figcaption {
+  margin-top: 10px;
+  color: var(--ink-dim);
+  font-size: 14px;
+}
+
+.still h2 {
+  margin: 40px 0 0;
+  color: var(--wc);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.still h3 {
+  margin: 20px 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.still .step {
+  margin-bottom: 28px;
+}
+
+/* What it is, how old it is, and the way home. With JavaScript it is a line
+   under the panel on a wide screen, and over the stage on a narrow one. */
+.foot {
+  color: var(--ink-dim);
+  font-size: 12px;
+}
+
+.foot p {
+  margin: 0;
+}
+
+.foot a {
+  color: inherit;
+}
+
+:root:not(.js) .foot {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 16px 20px 32px;
+  border-top: 1px solid var(--panel-line);
+}
+
+.js .foot {
+  position: fixed;
+  left: 20px;
+  bottom: 6px;
+  width: 420px;
+  font-size: 11px;
+}
+
+.js .panel {
+  bottom: 44px;
+}
+
+@media (max-width: 899px) {
+  .js .foot {
+    top: 10px;
+    bottom: auto;
+    left: 12px;
+    width: auto;
+    max-width: calc(100% - 175px);
+    font-size: 10px;
+  }
+
+  .js .panel {
+    bottom: 0;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <canvas
+      id="stage"
+      aria-label="A three-dimensional picture of the repository described in the panel"
+    ></canvas>
+
+    <main class="panel" id="panel">
+      <header class="masthead">
+        <p class="brand">jj in 3D</p>
+        <p class="tagline">Jujutsu version control, one command at a time</p>
+      </header>
+
+      <section class="lesson" aria-live="polite">
+        <p class="chapter" id="chapter"></p>
+        <h1 id="title"></h1>
+        <div class="body" id="body"></div>
+        <div class="terminal" id="terminal"></div>
+        <aside class="git">
+          <p class="git-label" id="git-label"></p>
+          <div class="git-commands" id="git-commands"></div>
+          <canvas
+            class="git-picture"
+            id="git-picture"
+            aria-label="Where Git stands after the same step: its commits and branches, the working tree, and the index"
+          ></canvas>
+          <p class="git-note" id="git-note"></p>
+        </aside>
+      </section>
+
+      <nav class="controls" aria-label="Lesson steps">
+        <div class="buttons">
+          <button type="button" id="back">Back</button>
+          <button type="button" id="next" class="primary">Next</button>
+          <span class="count" id="count"></span>
+        </div>
+        <ol class="progress" id="progress"></ol>
+      </nav>
+    </main>
+
+    <aside class="corner">
+      <button type="button" id="theme" class="quiet"></button>
+      <details class="key" id="key" open>
+        <summary>Key</summary>
+        <ul>
+          <li><i class="orb wc">@</i>Working copy</li>
+          <li><i class="orb"></i>Commit</li>
+          <li><i class="gem"></i>Shared, immutable</li>
+          <li><i class="orb conflict">×</i>Conflict</li>
+          <li><i class="shell"></i>Older version, kept</li>
+          <li><i class="tag"></i>Bookmark</li>
+          <li><i class="block app"></i>app.js</li>
+          <li><i class="block style"></i>style.css</li>
+          <li><i class="block readme"></i>README.md</li>
+        </ul>
+        <p class="hint">Drag to orbit. Scroll to zoom. Double-click to reset. Arrow keys step.</p>
+      </details>
+    </aside>
+
+    <div class="still">
+      <header>
+        <h1>jj in 3D</h1>
+        <p>Jujutsu version control, one command at a time</p>
+      </header>
+      <figure>
+        <picture>
+          <source srcset="poster-dark.webp" media="(prefers-color-scheme: dark)" />
+          <img
+            src="poster.webp"
+            width="1120"
+            height="700"
+            alt="A small repository drawn in 3D: a column of commits rising from the root, three of them red with conflicts, and pale rings behind them where their older versions are kept"
+          />
+        </picture>
+        <figcaption>
+          With JavaScript, this picture moves through the lesson below one step at a time. Orbs
+          are commits: amber with <code>@</code> for the working copy, red with a cross for a
+          conflict. Diamonds are shared commits that jj will not rewrite. Dashed rings are older
+          versions, kept. The small cubes are the files a commit changes, and the pills are
+          bookmarks.
+        </figcaption>
+      </figure>
+      <!-- lesson: written by scripts/jj-lesson.mjs -->
+<section class="chapter-text"><h2>The working copy is a commit</h2>
+<article class="step" id="1">
+<h3>1. A repository, standing up</h3>
+<div class="body">Each shape is a commit, and newer work sits higher. The diamonds are commits already shared with others, which jj will not rewrite. The orb marked <code>@</code> is your working copy. In jj the working copy is a real commit, not a staging area off to the side.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj log</span></div><div>@  <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>1</b>e89af9e</span></div><div>│  <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>◆  <span class="chg"><b>r</b>ovxnrwu</span> <span class="cid"><b>00f</b>b8673</span> <span class="bm">main</span></div><div>│  Start the timer app</div><div>◆  <span class="chg"><b>z</b>zzzzzzz</span> root() <span class="cid"><b>000</b>00000</span></div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git log --oneline --graph</div></div>
+<p class="git-note">Git's log shows commits only. Your unsaved edits live outside it, in the working tree and the index, and the log cannot show them.</p>
+</aside>
+</article>
+<article class="step" id="2">
+<h3>2. Edit files. That is all</h3>
+<div class="body">You change <code>app.js</code> and <code>style.css</code>. There is no <code>add</code> and no staging. The next jj command you run snapshots your files straight into <code>@</code>. The small blocks circling a commit are the file changes it holds.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj st</span></div><div>Working copy changes:</div><div><span class="ok">M app.js</span></div><div><span class="ok">M style.css</span></div><div>Working copy  (@) : <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>3</b>a50ae8d</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-): <span class="chg"><b>r</b>ovxnrwu</span> <span class="cid"><b>00f</b>b8673</span> <span class="bm">main</span> | Start the timer app</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git add app.js style.css</div></div>
+<p class="git-note">Git records nothing until you stage the files and then commit them. Until then the edits exist only as files on disk.</p>
+</aside>
+</article>
+<article class="step" id="3">
+<h3>3. Describe it whenever you like</h3>
+<div class="body">A commit can get its message at any point: before the work, after it, or five rewrites later. Nothing forces you to name a thing before you understand it.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj describe -m "Add pause button"</span></div><div>Working copy  (@) now at: <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>d</b>085b8cf</span> Add pause button</div><div>Parent commit (@-)      : <span class="chg"><b>r</b>ovxnrwu</span> <span class="cid"><b>00f</b>b8673</span> <span class="bm">main</span> | Start the timer app</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git commit -m "Add pause button"</div></div>
+<p class="git-note">In Git the message and the commit arrive together. Changing a message later means amending the commit or rebasing.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>Changes and commits</h2>
+<article class="step" id="4">
+<h3>4. Two IDs, two jobs</h3>
+<div class="body">Every commit carries two IDs. The <span class="chg">change ID</span>, in letters, names the piece of work and never changes. The <span class="cid">commit ID</span>, in hex, names one exact snapshot, so every rewrite gets a new one. The pale shells trailing behind the orb are the earlier snapshots of this same change. Nothing was overwritten.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj evolog</span></div><div>@  <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>d</b>085b8cf</span> Add pause button</div><div>○  <span class="chg"><b></b>mzxutzyn</span> <span class="cid"><b></b>3a50ae8d</span> <span class="dim">(no description set)</span></div><div>○  <span class="chg"><b></b>mzxutzyn</span> <span class="cid"><b></b>1e89af9e</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git reflog</div></div>
+<p class="git-note">Git has no change ID. An amended commit is simply a different commit, and nothing ties it to the one it replaced. The reflog, a list of where <code>HEAD</code> has been, is the closest thing.</p>
+</aside>
+</article>
+<article class="step" id="5">
+<h3>5. Start the next change</h3>
+<div class="body"><code>jj new</code> starts a fresh, empty change on top. The one below is done for now, but it is never locked. You can come back to it at any time.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj new</span></div><div>Working copy  (@) now at: <span class="chg"><b>p</b>nqmxkrq</span> <span class="cid"><b>a</b>099bf4f</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-)      : <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>d</b>085b8cf</span> Add pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="none">Nothing to type</span></div></div>
+<p class="git-note"><code>git commit</code> already left you ready for the next commit. The jj command that describes and starts anew in one go is <code>jj commit</code>.</p>
+</aside>
+</article>
+<article class="step" id="6">
+<h3>6. Work, then describe</h3>
+<div class="body">Edit <code>README.md</code>, then describe the change. jj snapshots your files first and sets the message second: two operations from one command, and two shells left behind.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj describe -m "Document the pause button"</span></div><div>Working copy  (@) now at: <span class="chg"><b>p</b>nqmxkrq</span> <span class="cid"><b>2</b>67b55cb</span> Document the pause button</div><div>Parent commit (@-)      : <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>d</b>085b8cf</span> Add pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git commit -am "Document the pause button"</div></div>
+<p class="git-note">One command in Git too, though <code>-a</code> only picks up files Git already tracks. A new file still needs <code>git add</code>.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>Edit anywhere</h2>
+<article class="step" id="7">
+<h3>7. Go back to an older change</h3>
+<div class="body">You spot a bug in the pause button. Go back to that change. There is no stash and no detached state to worry about: <code>@</code> simply moves there, and the work above it stays where it is.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj edit mz</span></div><div>Working copy  (@) now at: <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>d</b>085b8cf</span> Add pause button</div><div>Parent commit (@-)      : <span class="chg"><b>r</b>ovxnrwu</span> <span class="cid"><b>00f</b>b8673</span> <span class="bm">main</span> | Start the timer app</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git rebase -i origin/main</div></div>
+<p class="git-note">In Git you start an interactive rebase and mark the commit <code>edit</code>, after stashing any unsaved work. Until the rebase ends, the checkout sits in a special in-between state.</p>
+</aside>
+</article>
+<article class="step" id="8">
+<h3>8. What sits above follows along</h3>
+<div class="body">Fix <code>app.js</code>. The pause change gets a new snapshot, and jj <strong>rebases the change above it automatically</strong>. Both commit IDs are new. Both change IDs are the same as before.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj st</span></div><div>Rebased 1 descendant commits onto updated working copy</div><div>Working copy changes:</div><div><span class="ok">M app.js</span></div><div><span class="ok">M style.css</span></div><div>Working copy  (@) : <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>5</b>84e9fd7</span> Add pause button</div><div>Parent commit (@-): <span class="chg"><b>r</b>ovxnrwu</span> <span class="cid"><b>00f</b>b8673</span> <span class="bm">main</span> | Start the timer app</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git commit -a --amend</div><div><span class="prompt">$</span> git rebase --continue</div></div>
+<p class="git-note">Git replays the later commits only because you are inside that rebase. Any other branch stacked on the old commit is left pointing at it, and has to be rebased by hand.</p>
+</aside>
+</article>
+<article class="step" id="9">
+<h3>9. Return to the top</h3>
+<div class="body">To carry on where you left off, start a new change on the newest one.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj new pn</span></div><div>Working copy  (@) now at: <span class="chg"><b>t</b>onqoqqv</span> <span class="cid"><b>e</b>cdf3f48</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-)      : <span class="chg"><b>p</b>nqmxkrq</span> <span class="cid"><b>6</b>be8a2b6</span> Document the pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="none">Nothing to type</span></div></div>
+<p class="git-note">When the rebase finishes, Git puts you back at the tip of the branch.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>Move work between commits</h2>
+<article class="step" id="10">
+<h3>10. A fix that belongs elsewhere</h3>
+<div class="body">You notice a typo in the README. The fix belongs in the change below, not in a commit of its own. Make the edit anyway, right where you are.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj st</span></div><div>Working copy changes:</div><div><span class="ok">M README.md</span></div><div>Working copy  (@) : <span class="chg"><b>t</b>onqoqqv</span> <span class="cid"><b>8</b>6ed8e47</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-): <span class="chg"><b>p</b>nqmxkrq</span> <span class="cid"><b>6</b>be8a2b6</span> Document the pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git add README.md</div></div>
+<p class="git-note">The same edit. In Git it waits in the index until you say which commit should get it.</p>
+</aside>
+</article>
+<article class="step" id="11">
+<h3>11. Squash it down</h3>
+<div class="body"><code>jj squash</code> moves what is in <code>@</code> into its parent. Watch the block travel. <code>@</code> is empty again and ready for the next thing. <code>jj split</code> does the reverse, and <code>jj squash --into</code> can send the work to any commit.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj squash</span></div><div>Working copy  (@) now at: <span class="chg"><b>y</b>strxnvo</span> <span class="cid"><b>f</b>116cb47</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-)      : <span class="chg"><b>p</b>nqmxkrq</span> <span class="cid"><b>e</b>494cb07</span> Document the pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git commit --amend --no-edit</div></div>
+<p class="git-note">This is easy in Git because the target is the newest commit. For an older one, Git needs a fixup commit and an autosquash rebase.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>A rebase always finishes</h2>
+<article class="step" id="12">
+<h3>12. Meanwhile, on main</h3>
+<div class="body">A teammate pushed to <code>main</code>. After a fetch, <code>main</code> has moved up, and your two changes now hang off the old spot.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj git fetch</span></div><div>bookmark: main@origin [updated] tracked</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git fetch</div></div>
+<p class="git-note">The same in both. In Git only <code>origin/main</code> moves; your local <code>main</code> waits for a pull.</p>
+</aside>
+</article>
+<article class="step" id="13">
+<h3>13. Move the stack, conflicts and all</h3>
+<div class="body">Move your work onto the new <code>main</code>. The teammate changed the same lines of <code>app.js</code>, so there is a conflict. In jj the rebase <strong>still finishes</strong>. The conflict is recorded inside the commit, shown in red, and everything above carries it until it is fixed.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj rebase -s mz -o main</span></div><div>Rebased 3 commits to destination</div><div><span class="bad">New conflicts appeared in 3 commits:</span></div><div>  <span class="chg"><b>y</b>strxnvo</span> <span class="cid"><b>4</b>6a5379a</span> <span class="bad">(conflict)</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>  <span class="chg"><b>p</b>nqmxkrq</span> <span class="cid"><b>d</b>dcbdabb</span> <span class="bad">(conflict)</span> Document the pause button</div><div>  <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>5</b>0e4245c</span> <span class="bad">(conflict)</span> Add pause button</div><div><span class="dim">Hint: To resolve the conflicts, start by creating a commit</span></div><div><span class="dim">on top of the first conflicted commit: jj new mz</span></div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git rebase origin/main</div></div>
+<p class="git-note">Git stops at the first commit that conflicts. The branch is left half-moved until you resolve it and run <code>git rebase --continue</code>, or give up with <code>git rebase --abort</code>.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>Conflicts can wait</h2>
+<article class="step" id="14">
+<h3>14. Fix it when you are ready</h3>
+<div class="body">Nothing is blocked. When you choose to deal with it, start a change on top of the first red commit. The empty <code>@</code> you leave behind held nothing, so jj drops it for you.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj new mz</span></div><div>Working copy  (@) now at: <span class="chg"><b>k</b>ynswswm</span> <span class="cid"><b>a</b>16fb8b5</span> <span class="bad">(conflict)</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-)      : <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>5</b>0e4245c</span> <span class="bad">(conflict)</span> Add pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="none">No equivalent</span></div></div>
+<p class="git-note">In Git there is no “later”. The rebase is paused on the conflict, and the checkout can do little else until you deal with it.</p>
+</aside>
+</article>
+<article class="step" id="15">
+<h3>15. Resolve in a commit of its own</h3>
+<div class="body">Edit the conflict markers in <code>app.js</code>, or run <code>jj resolve</code>. Your new change is clean. The red commits are still waiting for the fix to reach them.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj st</span></div><div>Working copy changes:</div><div><span class="ok">M app.js</span></div><div>Working copy  (@) : <span class="chg"><b>k</b>ynswswm</span> <span class="cid"><b>a</b>48f48b4</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-): <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>5</b>0e4245c</span> <span class="bad">(conflict)</span> Add pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git add app.js</div></div>
+<p class="git-note">The same edit to the same kind of markers. In Git, staging the file is how you say it is resolved.</p>
+</aside>
+</article>
+<article class="step" id="16">
+<h3>16. Squash the fix into place</h3>
+<div class="body">Squash the fix into the conflicted commit. It turns clean, jj rebases the change above it, and that one turns clean too.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj squash</span></div><div>Rebased 1 descendant commits</div><div>Working copy  (@) now at: <span class="chg"><b>u</b>yvkyxvo</span> <span class="cid"><b>b8</b>d425ba</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-)      : <span class="chg"><b>m</b>zxutzyn</span> <span class="cid"><b>9</b>99acbed</span> Add pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git rebase --continue</div></div>
+<p class="git-note">Git then carries on to the next commit, and may stop again there. In jj the whole stack had already moved, so one fix settles it.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>Side work needs no name</h2>
+<article class="step" id="17">
+<h3>17. Try an idea on the side</h3>
+<div class="body">Want to try something else? Start a change on <code>main</code>. A second line of work grows beside the first. It has no branch name and does not need one.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj new main -m "Try a dark theme"</span></div><div>Working copy  (@) now at: <span class="chg"><b>w</b>nxuyull</span> <span class="cid"><b>c</b>8b69316</span> <span class="ok">(empty)</span> Try a dark theme</div><div>Parent commit (@-)      : <span class="chg"><b>o</b>xwwlzzk</span> <span class="cid"><b>b</b>48186c2</span> <span class="bm">main</span> | Rename start to play</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git switch -c dark-theme origin/main</div></div>
+<p class="git-note">Git wants a branch name first, and a stash or a commit if you have unsaved work. A commit that no branch points to drops out of the log and is deleted in time.</p>
+</aside>
+</article>
+<article class="step" id="18">
+<h3>18. Both lines stay in view</h3>
+<div class="body">Edit <code>style.css</code>. Both lines of work are visible in <code>jj log</code> at once, and you move between them with <code>jj edit</code> or <code>jj new</code>. There is no “current branch” to switch.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj st</span></div><div>Working copy changes:</div><div><span class="ok">M style.css</span></div><div>Working copy  (@) : <span class="chg"><b>w</b>nxuyull</span> <span class="cid"><b>0a</b>6407cd</span> Try a dark theme</div><div>Parent commit (@-): <span class="chg"><b>o</b>xwwlzzk</span> <span class="cid"><b>b</b>48186c2</span> <span class="bm">main</span> | Rename start to play</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git commit -am "Try a dark theme"</div></div>
+<p class="git-note">To get back to the other line of work in Git, you switch branches, after stashing or committing whatever is unfinished.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>Bookmarks and Git</h2>
+<article class="step" id="19">
+<h3>19. A name, only when you need one</h3>
+<div class="body">Git needs a branch name to receive a push. jj calls these <strong>bookmarks</strong>: plain labels on a commit. A bookmark does not creep forward when you add commits above it, but it does follow its commit through every rewrite.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj bookmark set pause-button -r pn</span></div><div>Created 1 bookmarks pointing to <span class="chg"><b>p</b>nqmxkrq</span> <span class="cid"><b>a</b>a24f3e0</span> <span class="bm">pause-button</span> | Document the pause button</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git branch pause-button main</div></div>
+<p class="git-note">A Git branch moves forward with every commit you make while it is checked out. A jj bookmark stays where you put it until you move it.</p>
+</aside>
+</article>
+<article class="step" id="20">
+<h3>20. Push to Git</h3>
+<div class="body">Underneath, this is an ordinary Git repository. Push the bookmark and your teammates see a normal branch. They never need to know you used jj.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj git push --bookmark pause-button</span></div><div>Changes to push to origin:</div><div>  Add bookmark pause-button to aa24f3e0</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git push origin pause-button</div></div>
+<p class="git-note">The same result on the remote. After a rewrite Git needs <code>--force-with-lease</code>; jj makes that safety check on every push.</p>
+</aside>
+</article>
+</section>
+<section class="chapter-text"><h2>Nothing is lost</h2>
+<article class="step" id="21">
+<h3>21. The operation log</h3>
+<div class="body">Every command you ran was recorded as an <strong>operation</strong>. Each sheet reaching back is the whole repository as it stood after one command. The pale shells you have been seeing live on those sheets.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj op log</span></div><div>@  <span class="cid">0970062abccc</span> push bookmark pause-button to git remote origin</div><div>○  <span class="cid">4c5c09937ae4</span> point bookmark pause-button to commit aa24f3e0</div><div>○  <span class="cid">8bff5ddcebb5</span> snapshot working copy</div><div>○  <span class="cid">9bd033672750</span> new empty commit</div><div>○  <span class="cid">0b0f8f96c45a</span> squash commits into 50e4245c</div><div>○  <span class="cid">1a187adb9c8c</span> snapshot working copy</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git reflog</div></div>
+<p class="git-note">Git keeps a separate reflog for <code>HEAD</code> and for each branch. None of them records the repository as a whole, so there is no single list of what you did.</p>
+</aside>
+</article>
+<article class="step" id="22">
+<h3>22. A mistake</h3>
+<div class="body">Now you throw away the dark theme, and a minute later you wish you had not.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj abandon @</span></div><div>Abandoned 1 commits:</div><div>  <span class="chg"><b>w</b>nxuyull</span> <span class="cid"><b>0a</b>6407cd</span> Try a dark theme</div><div>Working copy  (@) now at: <span class="chg"><b>n</b>stvskou</span> <span class="cid"><b>8</b>ee8fe5e</span> <span class="ok">(empty)</span> <span class="dim">(no description set)</span></div><div>Parent commit (@-)      : <span class="chg"><b>o</b>xwwlzzk</span> <span class="cid"><b>b</b>48186c2</span> <span class="bm">main</span> | Rename start to play</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git switch main</div><div><span class="prompt">$</span> git branch -D dark-theme</div></div>
+<p class="git-note">In Git the commit is not destroyed yet, but nothing points to it any more, and garbage collection will remove it in time.</p>
+</aside>
+</article>
+<article class="step" id="23">
+<h3>23. Undo</h3>
+<div class="body"><code>jj undo</code> puts the repository back as it was one sheet ago. The dark theme returns, exactly as you left it. The undo is itself a new operation, so even that can be undone.</div>
+<div class="terminal"><div><span class="prompt">$</span> <span class="typed">jj undo</span></div><div>Restored to operation: 0970062abccc push bookmark pause-button to git remote origin</div><div>Working copy  (@) now at: <span class="chg"><b>w</b>nxuyull</span> <span class="cid"><b>0a</b>6407cd</span> Try a dark theme</div><div>Parent commit (@-)      : <span class="chg"><b>o</b>xwwlzzk</span> <span class="cid"><b>b</b>48186c2</span> <span class="bm">main</span> | Rename start to play</div></div>
+<aside class="git">
+<p class="git-label">The same step in Git</p>
+<div class="git-commands"><div><span class="prompt">$</span> git reflog</div><div><span class="prompt">$</span> git branch dark-theme &lt;hash></div></div>
+<p class="git-note">Git has no undo. You search the reflog for the lost commit's hash and point a new branch at it, provided garbage collection has not run first.</p>
+</aside>
+</article>
+<article class="step" id="24">
+<h3>24. The shape of jj</h3>
+<div class="body"><ul> <li>The working copy is a commit, snapshotted for you.</li> <li>A change keeps its ID while its commits come and go.</li> <li>Rewrite anything, and what sits above follows.</li> <li>Conflicts are saved in commits and can wait.</li> <li>Every command is an operation, and <code>jj undo</code> walks back.</li> </ul> Drag the picture to look around. To read more: <a href="https://docs.jj-vcs.dev/latest/" target="_blank" rel="noopener">the jj documentation</a>, <a href="https://github.com/jj-vcs/jj/blob/main/docs/git-comparison.md" target="_blank" rel="noopener">its comparison with Git</a>, <a href="https://sarthakag.bearblog.dev/from-git-to-jj-jujutsu/" target="_blank" rel="noopener">From Git to jj</a>, and <a href="https://ethanlowman.com/posts/jj-primer/" target="_blank" rel="noopener">a jj primer</a>.</div>
+<aside class="git">
+<p class="git-label">Next to Git</p>
+<div class="git-commands"></div>
+<p class="git-note">What jj does without: the index, the stash, a current branch, and a rebase that stops halfway. What it adds: one log of everything you did, and an undo for all of it.</p>
+</aside>
+</article>
+</section>
+<!-- /lesson -->
+    </div>
+
+    <footer class="foot">
+      <p>
+        Made with AI, so the picture and its notes may not be accurate. Last updated
+        <time datetime="2026-11-20">November 20, 2026</time>.
+        <a href="https://brajeshwar.com/">&larr; brajeshwar.com</a>
+      </p>
+    </footer>
+
+    <script src="js/sim.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/git.js"></script>
+    <script src="js/lessons.js"></script>
+    <script src="js/stage.js"></script>
+    <script src="js/git-picture.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

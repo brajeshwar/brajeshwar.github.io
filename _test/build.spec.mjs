@@ -335,23 +335,43 @@ test('the Dubai Marina walks keep to their folder, and their lists match the mod
   expect(statSync('scripts/dubai-marina-city.mjs').isFile()).toBe(true);
 });
 
+test('jj keeps to its folder, and its script-free lesson is the one lessons.js tells', async () => {
+  const dir = '/misc/jj/';
+  const html = read(dir + 'index.html');
+  expect(html).not.toContain('/assets/');
+  expect(html).toContain('<script data-cfasync="false">\n// Day or night');
+  const named = [...html.matchAll(/<(?:script|img|source)\b[^>]*?\s(?:src|srcset)="([^"]+)"/g)];
+  expect(named.length).toBeGreaterThan(5);
+  for (const [, file] of named) expect(exists(dir + file), file).toBe(true);
+  // The copy for readers without JavaScript is written by a script; when the
+  // lesson changes, run `node scripts/jj-lesson.mjs` again.
+  const { pages } = await import('../scripts/jj-lesson.mjs');
+  const { html: source, made } = pages();
+  expect(source === made, 'run node scripts/jj-lesson.mjs').toBe(true);
+});
+
 test('the one-off pages say when they were last updated, and it is not older', () => {
   // The date in each foot is written by hand, so it is held to the last
   // commit of the live page's own files; the kept versions beside it do not
   // count. A shallow checkout (CI) has no history to ask, and skips this.
   const git = (...args) => execFileSync('git', args, { encoding: 'utf8' }).trim();
   test.skip(git('rev-parse', '--is-shallow-repository') === 'true', 'no history');
-  for (const folder of ['london-southbank', 'dubai-marina']) {
+  const walk = ['index.html', 'walk.js', 'city.js', 'draw.js', 'city.json'];
+  const live = {
+    'london-southbank': walk,
+    'dubai-marina': walk,
+    jj: ['index.html', 'js', 'poster.webp', 'poster-dark.webp'],
+  };
+  for (const [folder, files] of Object.entries(live)) {
     const html = read(`/misc/${folder}/index.html`);
-    const stated = html.match(/Last updated <time datetime="(\d{4}-\d{2}-\d{2})">/)?.[1];
+    const stated = html.match(/Last updated\s+<time datetime="(\d{4}-\d{2}-\d{2})">/)?.[1];
     expect(stated, folder).toBeTruthy();
-    const live = ['index.html', 'walk.js', 'city.js', 'draw.js', 'city.json'];
     const committed = git(
       'log',
       '-1',
       '--format=%cs',
       '--',
-      ...live.map((f) => `misc/${folder}/${f}`)
+      ...files.map((f) => `misc/${folder}/${f}`)
     );
     expect(stated >= committed, `${folder}: ${stated} is older than ${committed}`).toBe(true);
   }

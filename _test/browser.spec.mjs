@@ -368,6 +368,46 @@ async function expectStill(page) {
   expect(buttons).toBe(0);
 }
 
+// ---- /misc/jj/: the lesson, one step at a time --------------------------
+
+const JJ = '/misc/jj/';
+
+test('the jj lesson steps to its end and back, with no errors', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+  await page.goto(JJ);
+  await expect(page.locator('#title')).toHaveText('A repository, standing up');
+  const count = page.locator('#count');
+  const last = Number((await count.textContent()).split('/')[1]);
+  for (let i = 1; i < last; i++) await page.keyboard.press('ArrowRight');
+  await expect(count).toHaveText(`${last} / ${last}`);
+  await expect(page.getByRole('button', { name: 'Start again' })).toBeVisible();
+  for (let i = 1; i < last; i++) await page.keyboard.press('ArrowLeft');
+  await expect(count).toHaveText(`1 / ${last}`);
+  await expect(page.locator('#back')).toBeDisabled();
+  // The step is in the address, so a link can open the lesson part way.
+  await page.goto(JJ + '?k=1#13');
+  await expect(count).toHaveText(`13 / ${last}`);
+  // Beside it, Git's rebase has stopped, and the picture of it is drawn.
+  const picture = page.locator('.panel .git-picture');
+  await expect(picture).toBeVisible();
+  expect(await picture.evaluate((canvas) => canvas.height)).toBeGreaterThan(100);
+  expect(errors).toEqual([]);
+});
+
+test('jj goes by the clock, and its button turns it for the visit', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'light' });
+  await page.clock.setFixedTime(new Date(2026, 10, 15, 22, 0));
+  await page.goto(JJ);
+  const html = page.locator('html');
+  await expect(html).toHaveAttribute('data-theme', 'dark');
+  await page.getByRole('button', { name: 'Light' }).click();
+  await expect(html).toHaveAttribute('data-theme', 'light');
+  await page.reload();
+  await expect(html).toHaveAttribute('data-theme', 'light');
+});
+
 // ---- JavaScript off: the site still works (guardrail 4) -----------------
 
 test.describe('with JavaScript disabled', () => {
@@ -408,6 +448,23 @@ test.describe('with JavaScript disabled', () => {
   test('the walk is a picture whose pins lead to the list', async ({ page }) => {
     await page.goto(WALK);
     await expectStill(page);
+  });
+
+  test('jj is the whole lesson as text, under a picture', async ({ page }) => {
+    await page.goto(JJ);
+    await expect(page.locator('#stage')).toBeHidden();
+    const picture = page.locator('.still img');
+    await expect(picture).toBeVisible();
+    await expect
+      .poll(() => picture.evaluate((img) => img.complete && img.naturalWidth > 0))
+      .toBe(true);
+    expect(await page.locator('.still .step').count()).toBeGreaterThan(20);
+    await expect(page.locator('.still .step').first().locator('.terminal')).toContainText('jj log');
+    await expect(page.locator('.foot')).toBeVisible();
+    const buttons = await page
+      .locator('button')
+      .evaluateAll((bs) => bs.filter((b) => b.checkVisibility()).length);
+    expect(buttons).toBe(0);
   });
 
   test('footnotes stay real footnotes at the article foot', async ({ page }) => {

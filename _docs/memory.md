@@ -40,6 +40,11 @@ patch of each Ruby series, and the workflow pinned `3.3.5`. Every run from 2026-
 It now asks for `'3.3'`. **A red cron is easy to miss: check `gh run list` at the start of a
 session** — nothing else announces that the site has stopped updating.
 
+**`/misc/jj/` IS BUILT, NOT PUSHED (2026-11-20).** "jj in 3D": Jujutsu taken through 24
+steps on a 3D stage, with a small Git model playing the same story and drawn in the panel's
+Git box. Drafted in another project and brought under the `/misc/` rules here; in color, since
+he ruled that `/misc/` pages are free of the site's look. Everything is in [`misc.md`](misc.md).
+
 **`/misc/dubai-marina/` IS LIVE (2026-11-19).** The Marina as a model like the
 South Bank's: the whole footpath network, five walks through it (his own, twelve stops through
 his photos, and four more added the same evening: the far end, end to end, Bluewaters, and a

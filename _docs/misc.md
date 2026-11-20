@@ -25,7 +25,11 @@ The rules:
   exception:** its hours are Dubai's, wherever the reader is, because the
   page is about where the shade falls there, and that goes by the sun over
   Dubai, not by the reader's evening.
-- **Still the site's manners:** grayscale, system fonts, whole without
+- **Free of the site's look** (2026-11-20: *"Anything in `/misc/` folder is
+  exception from the default rules of `brajeshwar.com`, go ahead with full
+  color and the right ones that makes sense."*). A page may be in color; the
+  grayscale is the site's, not theirs.
+- **Still the site's manners:** system fonts, whole without
   JavaScript, and no emoji (the
   emoji test scans `misc/`). Plain JavaScript, no libraries. A script may be
   split into native modules (`<script type="module">`), which need no build
@@ -48,6 +52,113 @@ The rules:
 - [WARNING] **Nothing that names him goes to a map server**, not his email in
   a user agent, not anything (2026-11-19, his standing order). A generic
   `brajeshwar.com-misc/1.0` is enough for Overpass.
+
+## /misc/jj/ — jj in 3D
+
+Jujutsu, the version control system, one command at a time. Drafted
+2026-11-20 in another project from his *"I want to create a visually
+appealing 3D diagrammatic animated rendition to understand jj"*, with a
+comparison to Git asked for from the start, and moved here the same day. No
+article goes with it yet, so its foot links home.
+
+One small repository is taken through 24 steps in 9 chapters. A panel gives
+each step's text, the `jj` command and a shortened copy of what jj prints,
+and under it "The same step in Git". Beside it a canvas draws the repository
+in 3D and eases from each state to the next. The three directions each carry
+one idea:
+
+| Direction | Meaning |
+|---|---|
+| Up | History: a commit sits a row above its parent. |
+| Across | Lines of work: the trunk on the right, side work in lanes to the left. |
+| Back | Time: every command pushes older versions one sheet further away. |
+
+The third is why it is 3D. A rewritten commit is not destroyed: it stays as
+a pale shell a sheet back, tied to its successor by a dotted thread. In the
+last chapter the sheets themselves are drawn, and `jj undo` steps back
+through them. Orbs are commits (amber with `@` for the working copy, red with
+a cross for a conflict), diamonds are immutable, cubes are a commit's file
+changes, and pills are bookmarks. The colors carry those meanings, and the
+terminal keeps jj's own.
+
+| File | Job |
+|---|---|
+| `index.html` | The page, its CSS, and the lesson written out for readers without JavaScript |
+| `js/sim.js` | A small model of a jj repository: commits, changes, rewrites, conflicts, bookmarks, and the operation log |
+| `js/layout.js` | Places the visible commits in rows and lanes |
+| `js/git.js` | A small model of a Git repository: commits by hash, branches, HEAD, the working tree, the index, and a rebase that stops |
+| `js/lessons.js` | The story: each step's text, its command, what it does to both models, and its Git comparison |
+| `js/stage.js` | Draws the model in 3D on a 2D canvas, with hand-written perspective |
+| `js/git-picture.js` | Draws where Git stands after each step, in the panel's Git box |
+| `js/app.js` | Wires the panel, the controls, and the stage |
+
+- **The lesson is played, not drawn by hand.** `lessons.js` runs real
+  commands against the model in `sim.js`, once, as the page loads. Each step
+  keeps the operation it ended on, and the stage draws the repository after
+  that operation, so stepping back needs no undo of its own. To change the
+  story, change `lessons.js`; the picture and the terminal follow.
+- **The scripts are classic `<script>` tags sharing `window.JJ`**, not
+  modules, so the page opens from the file system and Node can play them in
+  a `vm` context. No WebGL: project each point, sort by depth, paint far to
+  near.
+- **IDs come from a fixed seed** (`SEED` in `app.js`), so every load shows the
+  same ones. A change to the story changes the IDs after it.
+- **The trunk keeps lane 0 on the right**, and labels sit to the right of
+  their commit, which is why the lanes are far apart.
+- **A commit's depth** is the sheet of the last operation that could still see
+  it. That one rule gives the trails, the sheets, and undo.
+- **Without JavaScript** the page is the poster and the whole lesson as text.
+  `scripts/jj-lesson.mjs` plays the lesson in Node with the page's seed and
+  writes it between the lesson markers in `index.html` (the Git picture is
+  the panel's alone, and not in this copy); the terminal and Git
+  boxes come from `JJ.terminalLines` and `JJ.gitLines`, which the panel uses
+  too. [WARNING] Change `lessons.js` and run it again: `make test` fails when
+  the two disagree.
+- **The theme** is the reader's clock, as on the other two, by a snippet in
+  the head. The button turns it for the visit (`jj-theme` in session
+  storage); `?theme=light` or `?theme=dark` forces it, and `?still` stops
+  all motion, as a reduced-motion setting does.
+- **The posters** are step 13, the conflicted rebase, at 1120 by 700: the
+  page in headless Chrome at 2040 by 1000 with `?still&theme=`, the panel
+  hidden, cropped to the model, and `cwebp -q 80 -metadata none`.
+
+What is simplified, and should stay honest:
+
+- **The terminal output is shortened.** Commands and flags were checked
+  against `jj 0.45.1`; the replies have jj's shape and colors, with fewer
+  lines and eight-character commit IDs.
+- **Conflicts follow a simple rule:** two commits conflict when they change
+  the same named region of a file. Real jj merges contents.
+- **The Git side is a second, smaller model.** Each step's Git commands
+  follow the
+  [Git command table](https://docs.jj-vcs.dev/latest/git-command-table/)
+  where it has a row, and each also runs against `git.js`, so the Git box
+  draws where Git stands: its commits and branches, `HEAD`, the working tree
+  and the index under them, a banner while a rebase is stopped, and commits
+  the step left unreachable, dashed, for that one step. Built 2026-11-20 at
+  his word (*"Continue and finish it off"*), after he looked for the
+  comparison and missed the text. Its conflicts follow the same region rule;
+  it has no stash, since the story never needs one.
+- **The Git story is the Git user's own**, on a local `main` that tracks
+  `origin/main`, so a few of the drafted commands were made to match what
+  the model showed: `git rebase -i origin/main` (on `main` itself, `-i main`
+  does nothing), `git switch -c dark-theme origin/main` (local `main` holds
+  the pause work by then), and `git branch pause-button main`.
+- **Not modeled:** merge commits, `jj split` (named in the text only),
+  workspaces, and revsets.
+
+Untested: Safari, Firefox, a real phone, and a screen reader. Pinch-to-zoom
+is not built.
+
+**Unbuilt, from his references:** stacked branches and pull requests,
+`jj absorb`, and merges as commits with two parents.
+
+The references: [the jj documentation](https://docs.jj-vcs.dev/latest/),
+whose tutorial set the lesson's order;
+[its comparison with Git](https://github.com/jj-vcs/jj/blob/main/docs/git-comparison.md);
+[From Git to jj](https://sarthakag.bearblog.dev/from-git-to-jj-jujutsu/);
+and Ethan Lowman's [jj primer](https://ethanlowman.com/posts/jj-primer/),
+whose way of fixing a conflict is the one chapter 6 shows.
 
 ## /misc/dubai-marina/ — the model
 
