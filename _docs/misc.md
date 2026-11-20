@@ -115,8 +115,11 @@ terminal keeps jj's own.
   too. [WARNING] Change `lessons.js` and run it again: `make test` fails when
   the two disagree.
 - **The theme** is the reader's clock, as on the other two, by a snippet in
-  the head. The button turns it for the visit (`jj-theme` in session
-  storage); `?theme=light` or `?theme=dark` forces it, and `?still` stops
+  the head, unless the reader has chosen with the button (2026-11-20: *"the
+  dark or light should recall if a user set it"*). The choice is kept in
+  local storage as `jj-theme`, across visits; choosing what the clock says
+  forgets it, which is the way back to the clock. `?theme=light` or
+  `?theme=dark` forces it, and `?still` stops
   all motion, as a reduced-motion setting does.
 - **The posters** are step 13, the conflicted rebase, at 1120 by 700: the
   page in headless Chrome at 2040 by 1000 with `?still&theme=`, the panel

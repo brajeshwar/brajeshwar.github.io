@@ -13,10 +13,11 @@
     <script data-cfasync="false">
 // Day or night, settled before the page paints. data-cfasync keeps Cloudflare's
 // Rocket Loader from holding it back until after the page has painted. The theme
-// is the one chosen on the page for this visit, or ?theme= in the address, or
-// else the reader's own clock: dark from seven in the evening to six in the
-// morning, as on the other pages in /misc/.
-(function(){var d=document.documentElement,h=new Date().getHours(),t=h>=19||h<6?'dark':'light',q=/[?&]theme=(light|dark)/.exec(location.search);try{t=sessionStorage.getItem('jj-theme')||t}catch(e){}if(q)t=q[1];d.classList.add('js');d.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t})();
+// is ?theme= in the address, or the one the reader chose with the button, kept
+// across visits, or else their own clock: dark from seven in the evening to six
+// in the morning, as on the other pages in /misc/. data-clock keeps the clock's
+// answer for the button.
+(function(){var d=document.documentElement,h=new Date().getHours(),c=h>=19||h<6?'dark':'light',t=c,q=/[?&]theme=(light|dark)/.exec(location.search);try{t=localStorage.getItem('jj-theme')||t}catch(e){}if(q)t=q[1];d.classList.add('js');d.dataset.clock=c;d.dataset.theme=t;document.querySelector('meta[name=color-scheme]').content=t})();
     </script>
     <style>
 /* A one-off, on its own (see _docs/misc.md): nothing here loads the site's

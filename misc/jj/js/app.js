@@ -14,8 +14,9 @@
   let current = 0;
 
   // ---- Theme ---------------------------------------------------------------------------
-  // The page's head settles day or night before paint. The button swaps it for this
-  // visit; the next visit goes by the clock again.
+  // The page's head settles day or night before paint. The button's choice is kept
+  // for later visits, unless it is what the clock would say anyway: choosing that
+  // hands the page back to the clock.
 
   function activeTheme() {
     return document.documentElement.dataset.theme;
@@ -32,7 +33,8 @@
   find('theme').addEventListener('click', () => {
     const theme = activeTheme() === 'dark' ? 'light' : 'dark';
     try {
-      sessionStorage.setItem('jj-theme', theme);
+      if (theme === document.documentElement.dataset.clock) localStorage.removeItem('jj-theme');
+      else localStorage.setItem('jj-theme', theme);
     } catch (error) {
       // Private windows may refuse storage; the choice then lasts for this page only.
     }

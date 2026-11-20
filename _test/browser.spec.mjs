@@ -399,7 +399,7 @@ test('the jj lesson steps to its end and back, with no errors', async ({ page })
   expect(errors).toEqual([]);
 });
 
-test('jj goes by the clock, and its button turns it for the visit', async ({ page }) => {
+test('jj goes by the clock, and remembers the button until it agrees again', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'light' });
   await page.clock.setFixedTime(new Date(2026, 10, 15, 22, 0));
   await page.goto(JJ);
@@ -407,8 +407,19 @@ test('jj goes by the clock, and its button turns it for the visit', async ({ pag
   await expect(html).toHaveAttribute('data-theme', 'dark');
   await page.getByRole('button', { name: 'Light' }).click();
   await expect(html).toHaveAttribute('data-theme', 'light');
-  await page.reload();
-  await expect(html).toHaveAttribute('data-theme', 'light');
+  // A later visit, in a new tab, keeps the choice.
+  const later = await page.context().newPage();
+  await later.clock.setFixedTime(new Date(2026, 10, 16, 23, 0));
+  await later.goto(JJ);
+  await expect(later.locator('html')).toHaveAttribute('data-theme', 'light');
+  // Choosing what the clock says forgets it, and noon is light again.
+  await later.getByRole('button', { name: 'Dark' }).click();
+  await later.clock.setFixedTime(new Date(2026, 10, 17, 12, 0));
+  await later.reload();
+  await expect(later.locator('html')).toHaveAttribute('data-theme', 'light');
+  await later.clock.setFixedTime(new Date(2026, 10, 17, 22, 0));
+  await later.reload();
+  await expect(later.locator('html')).toHaveAttribute('data-theme', 'dark');
 });
 
 // ---- JavaScript off: the site still works (guardrail 4) -----------------
