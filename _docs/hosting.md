@@ -210,8 +210,10 @@ A `301` is cached by browsers for a long time. To test without that, create the 
 
 ## Cache headers we actually get (measured 2026-07-27)
 
-Not configured by us; there is no `_headers` file in the repo. This is what the edge
-returns, and it drove the decision to externalise the CSS:
+There is no `_headers` file in the repo. GitHub Pages sends `max-age=600`; the year on
+assets is Cloudflare's zone-wide Browser Cache TTL (Caching → Configuration), which rewrites
+the header on anything Cloudflare caches. This is what the edge returns, and it drove the
+decision to externalise the CSS:
 
 | Path | `Cache-Control` | Effect |
 |---|---|---|
@@ -262,6 +264,49 @@ filenames are stable and you are hedging against staleness. Hashing removes the 
 so shortening it only makes returning readers re-fetch identical files more often for no
 benefit. `max-age=31536000` on an immutable URL is the standard pairing. The knob, if it is
 ever wanted, is Cloudflare → Caching → Configuration → Browser Cache TTL.
+
+### Pages are cached at the edge (2026-11-21)
+
+Until this date Cloudflare cached only static files, so every page view and every crawl
+went through to GitHub Pages (`cf-cache-status: DYNAMIC`, 11% of requests cached). One
+Cache Rule, *Cache pages at the edge*, now makes pages eligible:
+
+    (http.host eq "brajeshwar.com"
+     and not starts_with(http.request.uri.path, "/.well-known/")
+     and (ends_with(http.request.uri.path, "/") or ends_with(http.request.uri.path, ".html")
+          or ends_with(http.request.uri.path, ".xml") or ends_with(http.request.uri.path, ".md")))
+
+with **Browser TTL: Respect origin TTL**. The edge keeps each page for GitHub's 10 minutes,
+so a deploy is live everywhere within 10 minutes, as before.
+
+[WARNING] **The Browser TTL setting is not optional.** Without it, the zone's one-year
+Browser Cache TTL applies to anything the rule makes cacheable, and pages went out as
+`max-age=31536000` for the few minutes it took to notice. A reader's browser would then
+never ask for a newer page. The rule matches page-like paths only, so `/assets/` keeps its
+year.
+
+`/.well-known/` stays out, so GitHub's certificate renewal reaches the origin untouched
+(see Full (strict) above). Check after any change to the rule:
+
+    curl -sI https://brajeshwar.com/ | grep -iE 'cache-control|cf-cache-status'
+    # cache-control: max-age=600, cf-cache-status: HIT on the second request
+
+### AI crawlers: search yes, training no (2026-11-21)
+
+A custom security rule, *Block AI Scrapers and Crawlers rule*, blocks
+`cf.verified_bot_category eq "AI Crawler"`: the bots that gather training data, such as
+GPTBot and ClaudeBot. Search and answer bots (OAI-SearchBot, PerplexityBot,
+Claude-SearchBot, Googlebot, Bingbot) are in other categories and get through, so the site
+can still be found and cited in AI answers. The rule is the decision; the "AI Crawler and
+Agent access policies" page, which shows everything allowed, does not override it.
+
+`robots.txt` says the same in words, with a `Content-Signal` line
+([contentsignals.org](https://contentsignals.org)): `search=yes, ai-input=yes, ai-train=no`.
+Crawler Hints (Caching → Configuration) is on, which pings IndexNow (Bing, Yandex) when a
+cached page changes. Bing's index feeds ChatGPT search and Copilot.
+
+Left as they are: Bot Fight Mode is on, and Markdown for Agents needs the Pro plan; the
+site already serves its own `.md` copy of every page ([`agents.md`](agents.md)).
 
 Conditional requests still work when they are reached: an `If-None-Match` against the weak
 ETag returns `304` with zero bytes. That is the fallback, not the mechanism.

@@ -218,8 +218,8 @@ for a stranger who will read it.
 - One trap **went away** with it: a literal Liquid tag in a CSS comment used to break the
   build. These are no longer parsed as Liquid, so a stray tag in a comment is just text.
 - **Externalised 2026-07-27, reversing the inlining.** `/assets/*` is served
-  `cache-control: max-age=31536000` — a year, gzipped, no `_headers` file, just what the host
-  does. Inlining re-sent ~6.6KB gzip on *every* page view and could never be cached (the HTML
+  `cache-control: max-age=31536000` — a year, gzipped, no `_headers` file; the year is Cloudflare's
+  zone Browser Cache TTL (see [`_docs/hosting.md`](_docs/hosting.md)). Inlining re-sent ~6.6KB gzip on *every* page view and could never be cached (the HTML
   is only `max-age=600`); external is one fetch, then free. Break-even is under two page views.
   Per-layout splitting existed to keep the *inline* payload small and is now pointless: one URL
   shared by every page is one cache entry, where per-layout files would each miss separately.

@@ -1,4 +1,7 @@
+# Search and AI answers may use this site; training models on it may not.
+# The signals follow contentsignals.org; Cloudflare enforces the training half.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 Sitemap: https://brajeshwar.com/sitemap.xml
