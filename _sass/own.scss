@@ -586,7 +586,7 @@
 
   .page-own {
     --own-item: 6.25rem;
-    --own-pic: 1.4rem;
+    --own-pic: 1.2rem;
   }
 
   .page-own .own__rail {
@@ -608,7 +608,7 @@
   .page-own .own__row {
     grid-template-columns: 5.5rem minmax(0, 1fr);
     gap: 0.5rem;
-    padding-block: 0.1rem;
+    padding-block: 0;
     break-inside: avoid;
   }
 
@@ -621,7 +621,7 @@
   }
 
   .page-own .own__brands {
-    margin-top: 0.1rem;
+    margin-top: 0;
   }
 
   .page-own .own__logo {
